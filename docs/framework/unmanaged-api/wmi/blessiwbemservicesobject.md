@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d1bc31a4f074891149783dec647a592683564ba0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457923"
 ---
 # <a name="blessiwbemservicesobject-function"></a><span data-ttu-id="97492-103">Функция BlessIWbemServicesObject</span><span class="sxs-lookup"><span data-stu-id="97492-103">BlessIWbemServicesObject function</span></span>
 <span data-ttu-id="97492-104">Указывает, разрешить ли учетные данные пользователя доступ к определенному [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) объекта.</span><span class="sxs-lookup"><span data-stu-id="97492-104">Indicates whether the user credentials permit access to a specified [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) object.</span></span>   

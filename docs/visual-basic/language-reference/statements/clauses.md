@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596597"
 ---
 # <a name="clauses-visual-basic"></a><span data-ttu-id="b9b33-102">Предложения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b9b33-102">Clauses (Visual Basic)</span></span>
 <span data-ttu-id="b9b33-103">В подразделах этого раздела документа предложения среды выполнения Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="b9b33-103">The topics in this section document Visual Basic run-time clauses.</span></span>  

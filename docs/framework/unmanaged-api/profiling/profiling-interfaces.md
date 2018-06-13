@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 059fadc5607e76b871083682136fda542ae9bacf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462056"
 ---
 # <a name="profiling-interfaces"></a><span data-ttu-id="a3f45-102">Профилирующие интерфейсы</span><span class="sxs-lookup"><span data-stu-id="a3f45-102">Profiling Interfaces</span></span>
 <span data-ttu-id="a3f45-103">В этом разделе описываются неуправляемые интерфейсы, позволяющие профилировать программу, выполняемую в среде CLR.</span><span class="sxs-lookup"><span data-stu-id="a3f45-103">This section describes the unmanaged interfaces that enable you to profile a program that is being executed by the common language runtime (CLR).</span></span>  

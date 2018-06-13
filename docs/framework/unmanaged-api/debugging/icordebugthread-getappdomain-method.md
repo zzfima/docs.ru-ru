@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51878f0334afe52608b60ca540e49c86fded148e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418049"
 ---
 # <a name="icordebugthreadgetappdomain-method"></a><span data-ttu-id="6192c-102">Метод ICorDebugThread::GetAppDomain</span><span class="sxs-lookup"><span data-stu-id="6192c-102">ICorDebugThread::GetAppDomain Method</span></span>
 <span data-ttu-id="6192c-103">Получает указатель интерфейса на домен приложения, в котором в настоящее время выполняется ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="6192c-103">Gets an interface pointer to the application domain in which this ICorDebugThread is currently executing.</span></span>  

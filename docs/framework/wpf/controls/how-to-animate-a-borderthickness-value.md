@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551343"
 ---
 # <a name="how-to-animate-a-borderthickness-value"></a><span data-ttu-id="f0a4e-102">Практическое руководство. Анимирование значения BorderThickness</span><span class="sxs-lookup"><span data-stu-id="f0a4e-102">How to: Animate a BorderThickness Value</span></span>
 <span data-ttu-id="f0a4e-103">В этом примере показано, как анимировать изменения толщины границы с помощью <xref:System.Windows.Media.Animation.ThicknessAnimation> класса.</span><span class="sxs-lookup"><span data-stu-id="f0a4e-103">This example shows how to animate changes to the thickness of a border by using the <xref:System.Windows.Media.Animation.ThicknessAnimation> class.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639777"
 ---
 # <a name="this-system-does-not-contain-support-for-the-locale-specified"></a><span data-ttu-id="c0439-102">Эта система не предусматривает поддержки для указанного языкового стандарта.</span><span class="sxs-lookup"><span data-stu-id="c0439-102">This system does not contain support for the Locale specified</span></span>
 <span data-ttu-id="c0439-103">Предпринята попытка использования перечисления `VbStrConv` , но система не поддерживает указанный языковой стандарт.</span><span class="sxs-lookup"><span data-stu-id="c0439-103">You are attempting to use the `VbStrConv` enumeration, but your system does not support the specified locale.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591993"
 ---
 # <a name="how-to-change-user-settings-in-visual-basic"></a><span data-ttu-id="e7891-102">Практическое руководство. Изменение пользовательских параметров в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e7891-102">How to: Change User Settings in Visual Basic</span></span>
 <span data-ttu-id="e7891-103">Пользовательские параметры можно изменять, присваивая новое значение свойству объекта параметров `My.Settings`.</span><span class="sxs-lookup"><span data-stu-id="e7891-103">You can change a user setting by assigning a new value to the setting's property on the `My.Settings` object.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0735e4c59ba609ed87d61aca737c4f8a4dab757a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453490"
 ---
 # <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a><span data-ttu-id="c51d7-102">Метод ICorProfilerCallback::ManagedToUnmanagedTransition</span><span class="sxs-lookup"><span data-stu-id="c51d7-102">ICorProfilerCallback::ManagedToUnmanagedTransition Method</span></span>
 <span data-ttu-id="c51d7-103">Уведомляет профилировщик о переходе из управляемого кода в неуправляемый код.</span><span class="sxs-lookup"><span data-stu-id="c51d7-103">Notifies the profiler that a transition from managed code to unmanaged code has occurred.</span></span>  

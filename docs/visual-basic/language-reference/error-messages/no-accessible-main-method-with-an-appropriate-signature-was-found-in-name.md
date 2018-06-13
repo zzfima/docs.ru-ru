@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593224"
 ---
 # <a name="no-accessible-39main39-method-with-an-appropriate-signature-was-found-in-39ltnamegt39"></a><span data-ttu-id="a747f-102">Ни один из доступных &#39;Main&#39; найден метод с соответствующей сигнатурой в &#39; &lt;имя&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="a747f-102">No accessible &#39;Main&#39; method with an appropriate signature was found in &#39;&lt;name&gt;&#39;</span></span>
 <span data-ttu-id="a747f-103">Приложения командной строки должны иметь `Sub Main` определен.</span><span class="sxs-lookup"><span data-stu-id="a747f-103">Command-line applications must have a `Sub Main` defined.</span></span> <span data-ttu-id="a747f-104">`Main` должен быть объявлен как `Public Shared` , если оно определено в классе или как `Public` , если определено в модуле.</span><span class="sxs-lookup"><span data-stu-id="a747f-104">`Main` must be declared as `Public Shared` if it is defined in a class, or as `Public` if defined in a module.</span></span>  

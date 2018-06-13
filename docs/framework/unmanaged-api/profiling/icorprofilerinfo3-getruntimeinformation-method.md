@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 67e1d20f7faf38fa37083f1a5b1cc0c1060b7a32
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461572"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a><span data-ttu-id="620ef-102">Метод ICorProfilerInfo3::GetRuntimeInformation</span><span class="sxs-lookup"><span data-stu-id="620ef-102">ICorProfilerInfo3::GetRuntimeInformation Method</span></span>
 <span data-ttu-id="620ef-103">Предоставляет сведения о среде (CLR) профилируемым версии.</span><span class="sxs-lookup"><span data-stu-id="620ef-103">Provides version information about the common language runtime (CLR) that is being profiled.</span></span>  

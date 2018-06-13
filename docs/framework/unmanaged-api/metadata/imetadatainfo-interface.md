@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a42a97a659676fc086ed9f4620f2e9d821f057e8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449029"
 ---
 # <a name="imetadatainfo-interface"></a><span data-ttu-id="826f8-102">Интерфейс IMetaDataInfo</span><span class="sxs-lookup"><span data-stu-id="826f8-102">IMetaDataInfo Interface</span></span>
 <span data-ttu-id="826f8-103">Предоставляет метод, который получает сведения о сопоставлении метаданных из файла на диске с памятью.</span><span class="sxs-lookup"><span data-stu-id="826f8-103">Provides a method that gets information about the mapping of metadata from an on-disk file into memory.</span></span>  

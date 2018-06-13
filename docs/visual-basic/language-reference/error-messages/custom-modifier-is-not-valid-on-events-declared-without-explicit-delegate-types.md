@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587528"
 ---
 # <a name="39custom39-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a><span data-ttu-id="e2565-102">&#39;Настраиваемый&#39; модификатор недопустим для событий, объявленных без явных делегируемых типов</span><span class="sxs-lookup"><span data-stu-id="e2565-102">&#39;Custom&#39; modifier is not valid on events declared without explicit delegate types</span></span>
 <span data-ttu-id="e2565-103">В отличие от событий от обычного `Custom Event` объявления требуется `As` предложение после имени события, которое явно указывает тип делегата для события.</span><span class="sxs-lookup"><span data-stu-id="e2565-103">Unlike a non-custom event, a `Custom Event` declaration requires an `As` clause following the event name that explicitly specifies the delegate type for the event.</span></span>  

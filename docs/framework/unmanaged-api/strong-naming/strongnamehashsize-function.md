@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 92b9d9b5baee856f09dd24a62767aff604728997
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454086"
 ---
 # <a name="strongnamehashsize-function"></a><span data-ttu-id="89e06-102">Функция StrongNameHashSize</span><span class="sxs-lookup"><span data-stu-id="89e06-102">StrongNameHashSize Function</span></span>
 <span data-ttu-id="89e06-103">Возвращает размер буфера, необходимый для хэша, с помощью указанного хэш-алгоритма.</span><span class="sxs-lookup"><span data-stu-id="89e06-103">Gets the buffer size required for a hash, using the specified hash algorithm.</span></span>  

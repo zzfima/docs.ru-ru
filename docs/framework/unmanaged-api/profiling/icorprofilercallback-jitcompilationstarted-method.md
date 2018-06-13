@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1fa1081afc77c8116d8858c187401555409b4dcd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453985"
 ---
 # <a name="icorprofilercallbackjitcompilationstarted-method"></a><span data-ttu-id="0344c-102">Метод ICorProfilerCallback::JITCompilationStarted</span><span class="sxs-lookup"><span data-stu-id="0344c-102">ICorProfilerCallback::JITCompilationStarted Method</span></span>
 <span data-ttu-id="0344c-103">Уведомляет профилировщик о начале just-in-time (JIT) компилятор для компиляции функции.</span><span class="sxs-lookup"><span data-stu-id="0344c-103">Notifies the profiler that the just-in-time (JIT) compiler has started to compile a function.</span></span>  

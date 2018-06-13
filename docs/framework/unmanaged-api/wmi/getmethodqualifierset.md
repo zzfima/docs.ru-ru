@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b1f73e999738fbb59342aeab391132ac454c8dd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459115"
 ---
 # <a name="getmethodqualifierset-function"></a><span data-ttu-id="d477a-103">Функция GetMethodQualifierSet</span><span class="sxs-lookup"><span data-stu-id="d477a-103">GetMethodQualifierSet function</span></span>
 <span data-ttu-id="d477a-104">Извлекает квалификатор для конкретного метода.</span><span class="sxs-lookup"><span data-stu-id="d477a-104">Retrieves the qualifier set for a particular method.</span></span>

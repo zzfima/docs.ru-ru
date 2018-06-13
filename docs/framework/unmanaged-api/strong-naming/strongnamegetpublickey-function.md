@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c3ace4a3103231f776d4e2b034f8e18ce861ee97
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461017"
 ---
 # <a name="strongnamegetpublickey-function"></a><span data-ttu-id="3fa67-102">Функция StrongNameGetPublicKey</span><span class="sxs-lookup"><span data-stu-id="3fa67-102">StrongNameGetPublicKey Function</span></span>
 <span data-ttu-id="3fa67-103">Возвращает открытый ключ из пары закрытого и открытого ключей.</span><span class="sxs-lookup"><span data-stu-id="3fa67-103">Gets the public key from a private/public key pair.</span></span> <span data-ttu-id="3fa67-104">Пара ключей может предоставляться в виде имени контейнера ключей в поставщике служб шифрования (CSP) или как коллекция необработанных байтов.</span><span class="sxs-lookup"><span data-stu-id="3fa67-104">The key pair can be supplied either as a key container name within a cryptographic service provider (CSP) or as a raw collection of bytes.</span></span>  

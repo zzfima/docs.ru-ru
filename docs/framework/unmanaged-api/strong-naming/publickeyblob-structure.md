@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d7577a24a023c38370f5ac1f8c471ce31409e75d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459343"
 ---
 # <a name="publickeyblob-structure"></a><span data-ttu-id="9acdd-102">Структура PublicKeyBlob</span><span class="sxs-lookup"><span data-stu-id="9acdd-102">PublicKeyBlob Structure</span></span>
 <span data-ttu-id="9acdd-103">Представляет открытый ключ из пары открытого и закрытого ключей в двоичном формате.</span><span class="sxs-lookup"><span data-stu-id="9acdd-103">Represents, in binary format, the public key of a public/private key pair.</span></span>  

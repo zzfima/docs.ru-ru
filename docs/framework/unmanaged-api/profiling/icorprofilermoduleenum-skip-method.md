@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 35256a25ed793ffee6ddc1b26088e0988fea5af2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454351"
 ---
 # <a name="icorprofilermoduleenumskip-method"></a><span data-ttu-id="4e23e-102">Метод ICorProfilerModuleEnum::Skip</span><span class="sxs-lookup"><span data-stu-id="4e23e-102">ICorProfilerModuleEnum::Skip Method</span></span>
 <span data-ttu-id="4e23e-103">Перемещает курсор перечислителя из текущей позиции, пропуская указанное число элементов.</span><span class="sxs-lookup"><span data-stu-id="4e23e-103">Advances the enumerator's cursor from its current position so that the specified number of elements are skipped.</span></span>  

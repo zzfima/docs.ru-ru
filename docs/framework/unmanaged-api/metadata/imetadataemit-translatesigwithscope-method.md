@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ddaddbbd050dc079fcf20551e90c895d2f4ef59
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446347"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a><span data-ttu-id="12e5c-102">Метод IMetaDataEmit::TranslateSigWithScope</span><span class="sxs-lookup"><span data-stu-id="12e5c-102">IMetaDataEmit::TranslateSigWithScope Method</span></span>
 <span data-ttu-id="12e5c-103">Импортирует сборку в текущую область и получает новую подпись метаданных для объединяемой области.</span><span class="sxs-lookup"><span data-stu-id="12e5c-103">Imports an assembly into the current scope and gets a new metadata signature for the merged scope.</span></span>  

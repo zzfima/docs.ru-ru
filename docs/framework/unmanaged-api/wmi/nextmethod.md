@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cd4559663194cb845fb0cc040e1f6739e38caa0e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461147"
 ---
 # <a name="nextmethod-function"></a><span data-ttu-id="c0f05-103">Функция NextMethod</span><span class="sxs-lookup"><span data-stu-id="c0f05-103">NextMethod function</span></span>
 <span data-ttu-id="c0f05-104">Извлекает следующий метод в перечисление, которое начинается с вызова [BeginMethodEnumeration](beginmethodenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="c0f05-104">Retrieves the next method in an enumeration that begins with a call to [BeginMethodEnumeration](beginmethodenumeration.md).</span></span>  

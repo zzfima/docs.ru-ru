@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 29709a4297d53cc5e40daf732ac89751ead95152
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449045"
 ---
 # <a name="imetadataconverter-interface"></a><span data-ttu-id="cdd79-102">Интерфейс IMetaDataConverter</span><span class="sxs-lookup"><span data-stu-id="cdd79-102">IMetaDataConverter Interface</span></span>
 <span data-ttu-id="cdd79-103">Предоставляет методы для сопоставления библиотек типов с их сигнатурами метаданных и для преобразования из одних в другие.</span><span class="sxs-lookup"><span data-stu-id="cdd79-103">Provides methods to map type libraries to their metadata signatures, and to convert from one to the other.</span></span>  

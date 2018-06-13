@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorProfilerInfo::ForceGC"
-ms.custom: 
+title: Метод ICorProfilerInfo::ForceGC
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorProfilerInfo.ForceGC
 api_location:
@@ -23,38 +15,35 @@ helpviewer_keywords:
 ms.assetid: 0da1ef80-d242-4636-87d0-43e0470b342a
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 89e0e9534b5e074e5a22ceaec4e04467f752281e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 06601b1aa675dd9ecf023a9f83d881ba1591ac52
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454477"
 ---
-# <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="e1bad-102">Метод ICorProfilerInfo::ForceGC</span><span class="sxs-lookup"><span data-stu-id="e1bad-102">ICorProfilerInfo::ForceGC Method</span></span>
-<span data-ttu-id="e1bad-103">Принудительно начинает сборку мусора в общеязыковой среде выполнения (CLR).</span><span class="sxs-lookup"><span data-stu-id="e1bad-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
+# <a name="icorprofilerinfoforcegc-method"></a><span data-ttu-id="2c491-102">Метод ICorProfilerInfo::ForceGC</span><span class="sxs-lookup"><span data-stu-id="2c491-102">ICorProfilerInfo::ForceGC Method</span></span>
+<span data-ttu-id="2c491-103">Принудительно начинает сборку мусора в общеязыковой среде выполнения (CLR).</span><span class="sxs-lookup"><span data-stu-id="2c491-103">Forces garbage collection to occur within the common language runtime (CLR).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e1bad-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e1bad-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2c491-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2c491-104">Syntax</span></span>  
   
 ```  
 HRESULT ForceGC();  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="e1bad-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="e1bad-105">Remarks</span></span>  
- <span data-ttu-id="e1bad-106">`ForceGC` Метод должен вызываться только из потока, который имеет не выполнял управляемый код и не имеет обратные вызовы профилировщика его стека.</span><span class="sxs-lookup"><span data-stu-id="e1bad-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span></span> <span data-ttu-id="e1bad-107">Наиболее удобным реализация заключается в создании отдельного потока в профилировщике, который вызывает `ForceGC` при получении сигнала.</span><span class="sxs-lookup"><span data-stu-id="e1bad-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2c491-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="2c491-105">Remarks</span></span>  
+ <span data-ttu-id="2c491-106">`ForceGC` Метод должен вызываться только из потока, который имеет не выполнял управляемый код и не имеет обратные вызовы профилировщика его стека.</span><span class="sxs-lookup"><span data-stu-id="2c491-106">The `ForceGC` method must be called only from a thread that has never run managed code and does not have any profiler callbacks on its stack.</span></span> <span data-ttu-id="2c491-107">Наиболее удобным реализация заключается в создании отдельного потока в профилировщике, который вызывает `ForceGC` при получении сигнала.</span><span class="sxs-lookup"><span data-stu-id="2c491-107">The most convenient implementation is to create a separate thread within the profiler that calls `ForceGC` when signaled.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e1bad-108">Требования</span><span class="sxs-lookup"><span data-stu-id="e1bad-108">Requirements</span></span>  
- <span data-ttu-id="e1bad-109">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e1bad-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2c491-108">Требования</span><span class="sxs-lookup"><span data-stu-id="2c491-108">Requirements</span></span>  
+ <span data-ttu-id="2c491-109">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2c491-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e1bad-110">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e1bad-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2c491-110">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2c491-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="e1bad-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e1bad-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2c491-111">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2c491-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e1bad-112">**Версии платформы .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1bad-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="2c491-112">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c491-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e1bad-113">См. также</span><span class="sxs-lookup"><span data-stu-id="e1bad-113">See Also</span></span>  
- [<span data-ttu-id="e1bad-114">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="e1bad-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="2c491-113">См. также</span><span class="sxs-lookup"><span data-stu-id="2c491-113">See Also</span></span>  
+ [<span data-ttu-id="2c491-114">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="2c491-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

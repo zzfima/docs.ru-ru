@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbaba00e029729fff5ad478a50134ff1e1858c0c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443460"
 ---
 # <a name="modulebindinfo-structure"></a><span data-ttu-id="4a109-102">Структура ModuleBindInfo</span><span class="sxs-lookup"><span data-stu-id="4a109-102">ModuleBindInfo Structure</span></span>
 <span data-ttu-id="4a109-103">Предоставляет подробные сведения о модуле, на который указывает ссылка и сборки, содержащей его.</span><span class="sxs-lookup"><span data-stu-id="4a109-103">Provides detailed information about the referenced module and the assembly that contains it.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548270"
 ---
 # <a name="relativesource-markupextension"></a><span data-ttu-id="92b7a-102">Расширение разметки RelativeSource</span><span class="sxs-lookup"><span data-stu-id="92b7a-102">RelativeSource MarkupExtension</span></span>
 <span data-ttu-id="92b7a-103">Задает свойства <xref:System.Windows.Data.RelativeSource> источника привязки, которые должны использоваться в [расширение разметки со связыванием](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), или при задании <xref:System.Windows.Data.Binding.RelativeSource%2A> свойство <xref:System.Windows.Data.Binding> элемента установлено в XAML.</span><span class="sxs-lookup"><span data-stu-id="92b7a-103">Specifies properties of a <xref:System.Windows.Data.RelativeSource> binding source, to be used within a [Binding Markup Extension](../../../../docs/framework/wpf/advanced/binding-markup-extension.md), or when setting the <xref:System.Windows.Data.Binding.RelativeSource%2A> property of a <xref:System.Windows.Data.Binding> element established in XAML.</span></span>  

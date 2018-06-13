@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541902"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a><span data-ttu-id="8fd1b-102">Более безопасный доступ к файлам и данным в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="8fd1b-102">More Secure File and Data Access in Windows Forms</span></span>
 <span data-ttu-id="8fd1b-103">В [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] для защиты ресурсов и данных используются разрешения.</span><span class="sxs-lookup"><span data-stu-id="8fd1b-103">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] uses permissions to help protect resources and data.</span></span> <span data-ttu-id="8fd1b-104">То, какие данные может считывать или записывать приложение, зависит от предоставленных ему разрешений.</span><span class="sxs-lookup"><span data-stu-id="8fd1b-104">Where your application can read or write data depends on the permissions granted to the application.</span></span> <span data-ttu-id="8fd1b-105">Когда приложение работает в среде с частичным доверием, то доступ к данным может быть запрещен или может быть необходимо изменить способ доступа к данным.</span><span class="sxs-lookup"><span data-stu-id="8fd1b-105">When your application runs in a partial trust environment, you might not have access to your data or you might have to change the way you access the data.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524587"
 ---
 # <a name="regions-in-gdi"></a><span data-ttu-id="282c0-102">Области в GDI+</span><span class="sxs-lookup"><span data-stu-id="282c0-102">Regions in GDI+</span></span>
 <span data-ttu-id="282c0-103">Область — это часть области отображения устройство вывода.</span><span class="sxs-lookup"><span data-stu-id="282c0-103">A region is a portion of the display area of an output device.</span></span> <span data-ttu-id="282c0-104">Области могут быть простой (один прямоугольник) или сложными (набор многоугольников и замкнутых кривых).</span><span class="sxs-lookup"><span data-stu-id="282c0-104">Regions can be simple (a single rectangle) or complex (a combination of polygons and closed curves).</span></span> <span data-ttu-id="282c0-105">На следующем рисунке показано две области: один из них образована прямоугольником, а другая образована путь.</span><span class="sxs-lookup"><span data-stu-id="282c0-105">The following illustration shows two regions: one constructed from a rectangle, and the other constructed from a path.</span></span>  

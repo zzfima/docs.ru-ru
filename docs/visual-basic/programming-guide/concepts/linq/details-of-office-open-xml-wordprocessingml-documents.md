@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641200"
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a><span data-ttu-id="46eeb-102">Сведения об Office открывать документы WordprocessingML XML (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="46eeb-102">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>
 <span data-ttu-id="46eeb-103">В этом разделе содержатся сведения о деталях документов Office Open XML WordprocessingML.</span><span class="sxs-lookup"><span data-stu-id="46eeb-103">This section provides information about the details of Office Open XML WordprocessingML documents.</span></span> <span data-ttu-id="46eeb-104">В нем представлены примеры документов и элементы стиля документов Open XML.</span><span class="sxs-lookup"><span data-stu-id="46eeb-104">It shows examples of the document and style parts of an Open XML document.</span></span>  

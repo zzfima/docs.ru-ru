@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4cf2e1be735150dfb006e2274c79c25649d0271d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455361"
 ---
 # <a name="icorprofilercallback4rejitcompilationfinished-method"></a><span data-ttu-id="140ff-102">Метод ICorProfilerCallback4::ReJITCompilationFinished</span><span class="sxs-lookup"><span data-stu-id="140ff-102">ICorProfilerCallback4::ReJITCompilationFinished Method</span></span>
 <span data-ttu-id="140ff-103">Уведомляет профилировщик о завершении повторной компиляции функции компилятор just-in-time (JIT).</span><span class="sxs-lookup"><span data-stu-id="140ff-103">Notifies the profiler that the just-in-time (JIT) compiler has finished recompiling a function.</span></span>  

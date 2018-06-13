@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587336"
 ---
 # <a name="39lteventnamegt39-is-an-event-and-cannot-be-called-directly"></a><span data-ttu-id="1801a-102">&#39;&lt;EventName&gt; &#39; является событием и не может вызываться напрямую</span><span class="sxs-lookup"><span data-stu-id="1801a-102">&#39;&lt;eventname&gt;&#39; is an event, and cannot be called directly</span></span>
 <span data-ttu-id="1801a-103">"<`eventname`>" является событием и поэтому не может вызываться напрямую.</span><span class="sxs-lookup"><span data-stu-id="1801a-103">'<`eventname`>' is an event, and so cannot be called directly.</span></span> <span data-ttu-id="1801a-104">Используйте `RaiseEvent` оператор для вызова события.</span><span class="sxs-lookup"><span data-stu-id="1801a-104">Use a `RaiseEvent` statement to raise an event.</span></span>  

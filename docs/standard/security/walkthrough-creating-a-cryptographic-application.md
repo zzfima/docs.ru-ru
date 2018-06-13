@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591968"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a><span data-ttu-id="6c9dc-102">Пошаговое руководство. Создание криптографического приложения</span><span class="sxs-lookup"><span data-stu-id="6c9dc-102">Walkthrough: Creating a Cryptographic Application</span></span>
 <span data-ttu-id="6c9dc-103">В этом пошаговом руководстве показано, как зашифровать и расшифровать содержимое.</span><span class="sxs-lookup"><span data-stu-id="6c9dc-103">This walkthrough demonstrates how to encrypt and decrypt content.</span></span> <span data-ttu-id="6c9dc-104">Пример кода предназначен для приложения Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="6c9dc-104">The code examples are designed for a Windows Forms application.</span></span> <span data-ttu-id="6c9dc-105">Это приложение не демонстрирует реальные сценарии, такие как использование смарт-карт.</span><span class="sxs-lookup"><span data-stu-id="6c9dc-105">This application does not demonstrate real world scenarios, such as using smart cards.</span></span> <span data-ttu-id="6c9dc-106">Вместо этого оно демонстрирует основные принципы шифрования и расшифровки.</span><span class="sxs-lookup"><span data-stu-id="6c9dc-106">Instead, it demonstrates the fundamentals of encryption and decryption.</span></span>  

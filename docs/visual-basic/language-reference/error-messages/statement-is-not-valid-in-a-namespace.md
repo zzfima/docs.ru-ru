@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594771"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a><span data-ttu-id="3bcf1-102">Недопустимый оператор для пространства имен</span><span class="sxs-lookup"><span data-stu-id="3bcf1-102">Statement is not valid in a namespace</span></span>
 <span data-ttu-id="3bcf1-103">Оператор не может находиться на уровне пространства имен.</span><span class="sxs-lookup"><span data-stu-id="3bcf1-103">The statement cannot appear at the level of a namespace.</span></span> <span data-ttu-id="3bcf1-104">На уровне пространства имен разрешены только объявления являются модуль, интерфейс, класс, делегат, перечисление и объявления структуры.</span><span class="sxs-lookup"><span data-stu-id="3bcf1-104">The only declarations allowed at namespace level are module, interface, class, delegate, enumeration, and structure declarations.</span></span>  

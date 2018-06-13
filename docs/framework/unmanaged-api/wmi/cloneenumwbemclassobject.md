@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 71e881eca541d6a987fa7d27e1d73903f843e26a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460610"
 ---
 # <a name="cloneenumwbemclassobject-function"></a><span data-ttu-id="9c6ce-103">Функция CloneEnumWbemClassObject</span><span class="sxs-lookup"><span data-stu-id="9c6ce-103">CloneEnumWbemClassObject function</span></span>
 <span data-ttu-id="9c6ce-104">Создается копия логического перечислителя, сохраняя его текущую позицию в перечислении.</span><span class="sxs-lookup"><span data-stu-id="9c6ce-104">Makes a logical copy of an enumerator, retaining its current position in an enumeration.</span></span>  

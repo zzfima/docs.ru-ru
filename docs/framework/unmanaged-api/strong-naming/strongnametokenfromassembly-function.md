@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5f04d71e1709eed6c3a9f1af400f79b4722f4433
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457705"
 ---
 # <a name="strongnametokenfromassembly-function"></a><span data-ttu-id="e6d38-102">Функция StrongNameTokenFromAssembly</span><span class="sxs-lookup"><span data-stu-id="e6d38-102">StrongNameTokenFromAssembly Function</span></span>
 <span data-ttu-id="e6d38-103">Создает маркер строгого имени из указанного файла сборки.</span><span class="sxs-lookup"><span data-stu-id="e6d38-103">Creates a strong name token from the specified assembly file.</span></span>  

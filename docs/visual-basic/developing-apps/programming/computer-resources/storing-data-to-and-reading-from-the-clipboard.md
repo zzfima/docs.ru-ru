@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591383"
 ---
 # <a name="storing-data-to-and-reading-from-the-clipboard-visual-basic"></a><span data-ttu-id="d3461-102">Запись данных в буфер обмена и чтение их оттуда (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d3461-102">Storing data to and reading from the Clipboard (Visual Basic)</span></span>
 <span data-ttu-id="d3461-103">Буфер обмена можно использовать для хранения данных, таких как текст и изображения.</span><span class="sxs-lookup"><span data-stu-id="d3461-103">The Clipboard can be used to store data, such as text and images.</span></span> <span data-ttu-id="d3461-104">Поскольку буфер обмена используется всеми активными процессами, с его помощью можно передавать данные из одного процесса в другой.</span><span class="sxs-lookup"><span data-stu-id="d3461-104">Because the Clipboard is shared by all active processes, it can be used to transfer data between them.</span></span> <span data-ttu-id="d3461-105">Объект `My.Computer.Clipboard` позволяет легко обращаться к буферу обмена, считывать из него данные и выполнять в него запись.</span><span class="sxs-lookup"><span data-stu-id="d3461-105">The `My.Computer.Clipboard` object allows you to easily access the Clipboard and to read from and write to it.</span></span>  

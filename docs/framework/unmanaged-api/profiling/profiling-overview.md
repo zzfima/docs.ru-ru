@@ -31,9 +31,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461917"
 ---
 # <a name="profiling-overview"></a><span data-ttu-id="a6546-102">Общие сведения о профилировании</span><span class="sxs-lookup"><span data-stu-id="a6546-102">Profiling Overview</span></span>
 <a name="top"></a> <span data-ttu-id="a6546-103">Профилировщик — это средство, которое наблюдает за выполнением другого приложения.</span><span class="sxs-lookup"><span data-stu-id="a6546-103">A profiler is a tool that monitors the execution of another application.</span></span> <span data-ttu-id="a6546-104">Профилировщик среды CLR — это библиотека DLL, содержащая функции, которые получают сообщения из среды CLR и отправляют сообщения в среду CLR с помощью API профилирования.</span><span class="sxs-lookup"><span data-stu-id="a6546-104">A common language runtime (CLR) profiler is a dynamic link library (DLL) that consists of functions that receive messages from, and send messages to, the CLR by using the profiling API.</span></span> <span data-ttu-id="a6546-105">Библиотека DLL профилировщика загружается средой CLR во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="a6546-105">The profiler DLL is loaded by the CLR at run time.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588152"
 ---
 # <a name="39elseif39-must-be-preceded-by-a-matching-39if39-or-39elseif39"></a><span data-ttu-id="04403-102">&#39;#ElseIf&#39; должен предшествовать соответствующий &#39;#If&#39; или &#39;#ElseIf&#39;</span><span class="sxs-lookup"><span data-stu-id="04403-102">&#39;#ElseIf&#39; must be preceded by a matching &#39;#If&#39; or &#39;#ElseIf&#39;</span></span>
 <span data-ttu-id="04403-103">`#ElseIf` является директивой условной компиляции.</span><span class="sxs-lookup"><span data-stu-id="04403-103">`#ElseIf` is a conditional compilation directive.</span></span> <span data-ttu-id="04403-104">`#ElseIf` Предложение должен предшествовать соответствующий `#If` или `#ElseIf` предложения.</span><span class="sxs-lookup"><span data-stu-id="04403-104">An `#ElseIf` clause must be preceded by a matching `#If` or `#ElseIf` clause.</span></span>  

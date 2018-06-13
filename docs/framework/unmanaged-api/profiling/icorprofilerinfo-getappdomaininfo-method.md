@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af83fbeb64ad33910b45d49f987ffae130a2179e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455387"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a><span data-ttu-id="73061-102">Метод ICorProfilerInfo::GetAppDomainInfo</span><span class="sxs-lookup"><span data-stu-id="73061-102">ICorProfilerInfo::GetAppDomainInfo Method</span></span>
 <span data-ttu-id="73061-103">Принимает идентификатор домена приложения.</span><span class="sxs-lookup"><span data-stu-id="73061-103">Accepts an application domain ID.</span></span> <span data-ttu-id="73061-104">Возвращает имя домена приложения и идентификатор процесса, который его содержит.</span><span class="sxs-lookup"><span data-stu-id="73061-104">Returns an application domain name and the ID of the process that contains it.</span></span>  

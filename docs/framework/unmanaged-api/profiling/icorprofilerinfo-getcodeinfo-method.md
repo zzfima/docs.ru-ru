@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 21dc937bef2bbe197a5dc4af72ff50dff64dbbbd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454147"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a><span data-ttu-id="049f6-102">Метод ICorProfilerInfo::GetCodeInfo</span><span class="sxs-lookup"><span data-stu-id="049f6-102">ICorProfilerInfo::GetCodeInfo Method</span></span>
 <span data-ttu-id="049f6-103">Получает экстент машинного кода, связанного с указанным идентификатором функции.</span><span class="sxs-lookup"><span data-stu-id="049f6-103">Gets the extent of native code associated with the specified function ID.</span></span>  

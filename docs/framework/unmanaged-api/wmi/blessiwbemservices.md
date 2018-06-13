@@ -1,11 +1,7 @@
 ---
-title: "Функция BlessIWbemServices (Справочник по неуправляемым API)"
-description: "Функция BlessIWbemServices указывает ли учетные данные разрешают доступ к классу IWbemServices."
+title: Функция BlessIWbemServices (Справочник по неуправляемым API)
+description: Функция BlessIWbemServices указывает ли учетные данные разрешают доступ к классу IWbemServices.
 ms.date: 11/06/2017
-ms.prod: .net-framework
-ms.technology:
-- dotnet-clr
-ms.topic: reference
 api_name:
 - BlessIWbemServices
 api_location:
@@ -20,21 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f384e8d045dd7a6f2f864f0991f8caf4a674408b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 59cb20f7ccfbd0b8f9d6026c9805468613818130
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458166"
 ---
-# <a name="blessiwbemservices-function"></a><span data-ttu-id="d7f18-103">Функция BlessIWbemServices</span><span class="sxs-lookup"><span data-stu-id="d7f18-103">BlessIWbemServices function</span></span>
-<span data-ttu-id="d7f18-104">Указывает, разрешить ли учетные данные пользователя доступ к указанным [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) класса.</span><span class="sxs-lookup"><span data-stu-id="d7f18-104">Indicates whether the user credentials permit access to the specified [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) class.</span></span>   
+# <a name="blessiwbemservices-function"></a><span data-ttu-id="d1937-103">Функция BlessIWbemServices</span><span class="sxs-lookup"><span data-stu-id="d1937-103">BlessIWbemServices function</span></span>
+<span data-ttu-id="d1937-104">Указывает, разрешить ли учетные данные пользователя доступ к указанным [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) класса.</span><span class="sxs-lookup"><span data-stu-id="d1937-104">Indicates whether the user credentials permit access to the specified [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) class.</span></span>   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="d7f18-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d7f18-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d1937-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d1937-105">Syntax</span></span>  
   
 ```  
 HRESULT BlessIWbemServices (
@@ -47,41 +41,41 @@ HRESULT BlessIWbemServices (
 );
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="d7f18-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="d7f18-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="d1937-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="d1937-106">Parameters</span></span>
 
 `pIWbemServices`  
-<span data-ttu-id="d7f18-107">[in] Указатель на [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) объекта, для которого требуются разрешения.</span><span class="sxs-lookup"><span data-stu-id="d7f18-107">[in] A pointer to the [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) object for which permissions are required.</span></span>
+<span data-ttu-id="d1937-107">[in] Указатель на [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) объекта, для которого требуются разрешения.</span><span class="sxs-lookup"><span data-stu-id="d1937-107">[in] A pointer to the [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) object for which permissions are required.</span></span>
 
 `strUser`  
-<span data-ttu-id="d7f18-108">[in] Имя пользователя.</span><span class="sxs-lookup"><span data-stu-id="d7f18-108">[in] The user name.</span></span>
+<span data-ttu-id="d1937-108">[in] Имя пользователя.</span><span class="sxs-lookup"><span data-stu-id="d1937-108">[in] The user name.</span></span>
 
 `strPassword`  
-<span data-ttu-id="d7f18-109">[in] Пароль, связанный с `strUser`.</span><span class="sxs-lookup"><span data-stu-id="d7f18-109">[in] The password associated with `strUser`.</span></span>
+<span data-ttu-id="d1937-109">[in] Пароль, связанный с `strUser`.</span><span class="sxs-lookup"><span data-stu-id="d1937-109">[in] The password associated with `strUser`.</span></span>
 
-<span data-ttu-id="d7f18-110">`strAuthority`[in] Имя домена пользователя.</span><span class="sxs-lookup"><span data-stu-id="d7f18-110">`strAuthority` [in] The domain name of the user.</span></span> <span data-ttu-id="d7f18-111">В разделе [ConnectServerWmi](connectserverwmi.md) функции для получения дополнительной информации.</span><span class="sxs-lookup"><span data-stu-id="d7f18-111">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
+<span data-ttu-id="d1937-110">`strAuthority` [in] Имя домена пользователя.</span><span class="sxs-lookup"><span data-stu-id="d1937-110">`strAuthority` [in] The domain name of the user.</span></span> <span data-ttu-id="d1937-111">В разделе [ConnectServerWmi](connectserverwmi.md) функции для получения дополнительной информации.</span><span class="sxs-lookup"><span data-stu-id="d1937-111">See the [ConnectServerWmi](connectserverwmi.md) function for more information.</span></span>
 
-<span data-ttu-id="d7f18-112">`impLevel`[in] Уровень олицетворения.</span><span class="sxs-lookup"><span data-stu-id="d7f18-112">`impLevel` [in] The impersonation level.</span></span>
+<span data-ttu-id="d1937-112">`impLevel` [in] Уровень олицетворения.</span><span class="sxs-lookup"><span data-stu-id="d1937-112">`impLevel` [in] The impersonation level.</span></span>
 
-<span data-ttu-id="d7f18-113">`authnLevel`[in] Уровень авторизации.</span><span class="sxs-lookup"><span data-stu-id="d7f18-113">`authnLevel` [in] The authorization level.</span></span>
+<span data-ttu-id="d1937-113">`authnLevel` [in] Уровень авторизации.</span><span class="sxs-lookup"><span data-stu-id="d1937-113">`authnLevel` [in] The authorization level.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="d7f18-114">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="d7f18-114">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="d1937-114">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="d1937-114">Return value</span></span>
 
-<span data-ttu-id="d7f18-115">Следующие значения, возвращаемые этой функцией, определяются в *WinError.h* заголовочный файл, или их можно определить как константы в коде:</span><span class="sxs-lookup"><span data-stu-id="d7f18-115">The following values returned by this function are defined in the *WinError.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="d1937-115">Следующие значения, возвращаемые этой функцией, определяются в *WinError.h* заголовочный файл, или их можно определить как константы в коде:</span><span class="sxs-lookup"><span data-stu-id="d1937-115">The following values returned by this function are defined in the *WinError.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="d7f18-116">Константа</span><span class="sxs-lookup"><span data-stu-id="d7f18-116">Constant</span></span>  |<span data-ttu-id="d7f18-117">Значение</span><span class="sxs-lookup"><span data-stu-id="d7f18-117">Value</span></span>  |<span data-ttu-id="d7f18-118">Описание:</span><span class="sxs-lookup"><span data-stu-id="d7f18-118">Description</span></span>  |
+|<span data-ttu-id="d1937-116">Константа</span><span class="sxs-lookup"><span data-stu-id="d1937-116">Constant</span></span>  |<span data-ttu-id="d1937-117">Значение</span><span class="sxs-lookup"><span data-stu-id="d1937-117">Value</span></span>  |<span data-ttu-id="d1937-118">Описание</span><span class="sxs-lookup"><span data-stu-id="d1937-118">Description</span></span>  |
 |---------|---------|---------|
-| `E_INVALIDARG` | <span data-ttu-id="d7f18-119">0x80070057</span><span class="sxs-lookup"><span data-stu-id="d7f18-119">0x80070057</span></span> | <span data-ttu-id="d7f18-120">Один или несколько аргументов являются недопустимыми.</span><span class="sxs-lookup"><span data-stu-id="d7f18-120">One or more arguments are invalid.</span></span> |
-| `E_POINTER` | <span data-ttu-id="d7f18-121">отметкой 0x80004003</span><span class="sxs-lookup"><span data-stu-id="d7f18-121">0x80004003</span></span> | <span data-ttu-id="d7f18-122">Свойство `pIWbemServices` имеет значение `null`.</span><span class="sxs-lookup"><span data-stu-id="d7f18-122">`pIWbemServices` is `null`.</span></span> | 
-| `E_FAIL` | <span data-ttu-id="d7f18-123">0x80000008</span><span class="sxs-lookup"><span data-stu-id="d7f18-123">0x80000008</span></span> | <span data-ttu-id="d7f18-124">Произошла неизвестная ошибка.</span><span class="sxs-lookup"><span data-stu-id="d7f18-124">An unspecified error has occurred.</span></span> |
-| `E_OUTOFMEMORY` | <span data-ttu-id="d7f18-125">0x80000002</span><span class="sxs-lookup"><span data-stu-id="d7f18-125">0x80000002</span></span> | <span data-ttu-id="d7f18-126">Недостаточно памяти для выполнения операции.</span><span class="sxs-lookup"><span data-stu-id="d7f18-126">Insufficient memory is available to perform the operation.</span></span> | 
-| `S_OK` | <span data-ttu-id="d7f18-127">0</span><span class="sxs-lookup"><span data-stu-id="d7f18-127">0</span></span> | <span data-ttu-id="d7f18-128">Успешный вызов функции.</span><span class="sxs-lookup"><span data-stu-id="d7f18-128">The function call was successful.</span></span> | 
+| `E_INVALIDARG` | <span data-ttu-id="d1937-119">0x80070057</span><span class="sxs-lookup"><span data-stu-id="d1937-119">0x80070057</span></span> | <span data-ttu-id="d1937-120">Один или несколько аргументов являются недопустимыми.</span><span class="sxs-lookup"><span data-stu-id="d1937-120">One or more arguments are invalid.</span></span> |
+| `E_POINTER` | <span data-ttu-id="d1937-121">отметкой 0x80004003</span><span class="sxs-lookup"><span data-stu-id="d1937-121">0x80004003</span></span> | <span data-ttu-id="d1937-122">Свойство `pIWbemServices` имеет значение `null`.</span><span class="sxs-lookup"><span data-stu-id="d1937-122">`pIWbemServices` is `null`.</span></span> | 
+| `E_FAIL` | <span data-ttu-id="d1937-123">0x80000008</span><span class="sxs-lookup"><span data-stu-id="d1937-123">0x80000008</span></span> | <span data-ttu-id="d1937-124">Произошла неизвестная ошибка.</span><span class="sxs-lookup"><span data-stu-id="d1937-124">An unspecified error has occurred.</span></span> |
+| `E_OUTOFMEMORY` | <span data-ttu-id="d1937-125">0x80000002</span><span class="sxs-lookup"><span data-stu-id="d1937-125">0x80000002</span></span> | <span data-ttu-id="d1937-126">Недостаточно памяти для выполнения операции.</span><span class="sxs-lookup"><span data-stu-id="d1937-126">Insufficient memory is available to perform the operation.</span></span> | 
+| `S_OK` | <span data-ttu-id="d1937-127">0</span><span class="sxs-lookup"><span data-stu-id="d1937-127">0</span></span> | <span data-ttu-id="d1937-128">Успешный вызов функции.</span><span class="sxs-lookup"><span data-stu-id="d1937-128">The function call was successful.</span></span> | 
 
-## <a name="requirements"></a><span data-ttu-id="d7f18-129">Требования</span><span class="sxs-lookup"><span data-stu-id="d7f18-129">Requirements</span></span>  
- <span data-ttu-id="d7f18-130">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d7f18-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d1937-129">Требования</span><span class="sxs-lookup"><span data-stu-id="d1937-129">Requirements</span></span>  
+ <span data-ttu-id="d1937-130">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d1937-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d7f18-131">**Заголовок:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="d7f18-131">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="d1937-131">**Заголовок:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="d1937-131">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="d7f18-132">**Версии платформы .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="d7f18-132">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="d1937-132">**Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="d1937-132">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d7f18-133">См. также</span><span class="sxs-lookup"><span data-stu-id="d7f18-133">See also</span></span>  
-[<span data-ttu-id="d7f18-134">WMI и счетчиков производительности (Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="d7f18-134">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="d1937-133">См. также</span><span class="sxs-lookup"><span data-stu-id="d1937-133">See also</span></span>  
+[<span data-ttu-id="d1937-134">WMI и счетчиков производительности (Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="d1937-134">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

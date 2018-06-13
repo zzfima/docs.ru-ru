@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2f4382c7fa85008de9e67ad21c467402bae4ac90
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451286"
 ---
 # <a name="corprfsuspendreason-enumeration"></a><span data-ttu-id="44271-102">Перечисление COR_PRF_SUSPEND_REASON</span><span class="sxs-lookup"><span data-stu-id="44271-102">COR_PRF_SUSPEND_REASON Enumeration</span></span>
 <span data-ttu-id="44271-103">Указывает причину приостановки среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="44271-103">Indicates the reason that the runtime is suspended.</span></span>  

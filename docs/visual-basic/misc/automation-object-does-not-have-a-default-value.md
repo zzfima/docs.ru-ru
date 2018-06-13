@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599240"
 ---
 # <a name="automation-object-does-not-have-a-default-value"></a><span data-ttu-id="a324d-102">Объект автоматизации не имеет значение по умолчанию</span><span class="sxs-lookup"><span data-stu-id="a324d-102">Automation object does not have a default value</span></span>
 <span data-ttu-id="a324d-103">Visual Basic не может определить элемент по умолчанию для указанного объекта.</span><span class="sxs-lookup"><span data-stu-id="a324d-103">Visual Basic cannot determine the default member for the specified object.</span></span>  

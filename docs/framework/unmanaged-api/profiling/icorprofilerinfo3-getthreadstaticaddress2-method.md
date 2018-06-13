@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a51d88af20b3abbbe2f80134473ec1ba1b7a4b17
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454552"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a><span data-ttu-id="7e556-102">Метод ICorProfilerInfo3::GetThreadStaticAddress2</span><span class="sxs-lookup"><span data-stu-id="7e556-102">ICorProfilerInfo3::GetThreadStaticAddress2 Method</span></span>
 <span data-ttu-id="7e556-103">Возвращает адрес указанного поля статического потока, которое находится в области действия заданного потока и домена приложения.</span><span class="sxs-lookup"><span data-stu-id="7e556-103">Gets the address of the specified thread-static field that is in the scope of the specified thread and application domain.</span></span>  

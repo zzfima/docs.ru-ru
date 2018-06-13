@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386643"
 ---
 # <a name="retargeting-changes-in-the-net-framework"></a><span data-ttu-id="78095-102">Изменения целевой платформы в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="78095-102">Retargeting Changes in the .NET Framework</span></span>
 

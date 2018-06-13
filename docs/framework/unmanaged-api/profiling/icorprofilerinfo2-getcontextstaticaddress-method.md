@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d787e3eae59218c46a95c327a0f93502c3833d9b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456239"
 ---
 # <a name="icorprofilerinfo2getcontextstaticaddress-method"></a><span data-ttu-id="b58be-102">Метод ICorProfilerInfo2::GetContextStaticAddress</span><span class="sxs-lookup"><span data-stu-id="b58be-102">ICorProfilerInfo2::GetContextStaticAddress Method</span></span>
 <span data-ttu-id="b58be-103">Возвращает адрес для указанного поля статического контекста, который находится в области заданного контекста.</span><span class="sxs-lookup"><span data-stu-id="b58be-103">Gets the address for the specified context-static field that is in the scope of the specified context.</span></span>  

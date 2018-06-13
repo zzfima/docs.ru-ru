@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9715738931d1b6a91ad9fae7e00ba607905d380f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449068"
 ---
 # <a name="ihosttaskmanager-interface"></a><span data-ttu-id="701c3-102">Интерфейс IHostTaskManager</span><span class="sxs-lookup"><span data-stu-id="701c3-102">IHostTaskManager Interface</span></span>
 <span data-ttu-id="701c3-103">Предоставляет методы, позволяющие общеязыковой среды выполнения (CLR), для работы с задачами через узел, вместо того чтобы использовать функции работы с потоками или волокон стандартной операционной системе.</span><span class="sxs-lookup"><span data-stu-id="701c3-103">Provides methods that allow the common language runtime (CLR) to work with tasks through the host instead of using the standard operating system threading or fiber functions.</span></span>  

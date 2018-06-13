@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3cb4bfdf90099719e2584c3767965a53186ca8ef
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453262"
 ---
 # <a name="icorprofilerfunctioncontrolsetilinstrumentedcodemap-method"></a><span data-ttu-id="cdfc0-102">Метод ICorProfilerFunctionControl::SetILInstrumentedCodeMap</span><span class="sxs-lookup"><span data-stu-id="cdfc0-102">ICorProfilerFunctionControl::SetILInstrumentedCodeMap Method</span></span>
 <span data-ttu-id="cdfc0-103">Устанавливает карту кода для указанной функции с помощью указанных записей карты языка CIL.</span><span class="sxs-lookup"><span data-stu-id="cdfc0-103">Sets a code map for the specified function by using the specified Common Intermediate Language (CIL) map entries.</span></span>  

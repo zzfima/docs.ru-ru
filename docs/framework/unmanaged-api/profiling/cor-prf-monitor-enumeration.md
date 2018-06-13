@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7a12f3ffb14de9dcacdb4873d1c03ad1d096d7cd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33462120"
 ---
 # <a name="corprfmonitor-enumeration"></a><span data-ttu-id="9ba92-102">Перечисление COR_PRF_MONITOR</span><span class="sxs-lookup"><span data-stu-id="9ba92-102">COR_PRF_MONITOR Enumeration</span></span>
 <span data-ttu-id="9ba92-103">Содержит значения, используемые для указания поведения, возможностей или событий, на которые желает подписаться профилировщик.</span><span class="sxs-lookup"><span data-stu-id="9ba92-103">Contains values that are used to specify behavior, capabilities, or events to which the profiler wishes to subscribe.</span></span>  

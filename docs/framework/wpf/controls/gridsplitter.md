@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550898"
 ---
 # <a name="gridsplitter"></a><span data-ttu-id="e6237-102">GridSplitter</span><span class="sxs-lookup"><span data-stu-id="e6237-102">GridSplitter</span></span>
 <span data-ttu-id="e6237-103"><xref:System.Windows.Controls.GridSplitter> Распределяющий пространство между столбцами или строками элемента <xref:System.Windows.Controls.Grid> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="e6237-103">The <xref:System.Windows.Controls.GridSplitter> redistributes space between columns or rows of a <xref:System.Windows.Controls.Grid> control.</span></span>  

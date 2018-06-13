@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550882"
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a><span data-ttu-id="b8ed6-102">Практическое руководство. Настройка делений на ползунке</span><span class="sxs-lookup"><span data-stu-id="b8ed6-102">How to: Customize the Ticks on a Slider</span></span>
 <span data-ttu-id="b8ed6-103">В этом примере показано, как создать <xref:System.Windows.Controls.Slider> элемента управления, содержащего деления.</span><span class="sxs-lookup"><span data-stu-id="b8ed6-103">This example shows how to create a <xref:System.Windows.Controls.Slider> control that has tick marks.</span></span>  

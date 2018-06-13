@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596854"
 ---
 # <a name="a-delimiter-cannot-be-nothing-or-an-empty-string"></a><span data-ttu-id="595dd-102">Разделитель не может принимать значение Nothing или быть пустой строкой.</span><span class="sxs-lookup"><span data-stu-id="595dd-102">A delimiter cannot be Nothing or an empty String</span></span>
 <span data-ttu-id="595dd-103">`TextFieldParser` не удалось выполнить чтение из файла, поскольку свойство `Delimiters` имеет значение `Nothing` или является пустым `String` ("").</span><span class="sxs-lookup"><span data-stu-id="595dd-103">The `TextFieldParser` is unable to read from the file because the `Delimiters` property is set to `Nothing` or is an empty `String` ("").</span></span>  

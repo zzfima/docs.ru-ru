@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5ea53e02cc20964a43bc4784b4354d429e238295
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450860"
 ---
 # <a name="icorprofilercallbackexceptioncatcherleave-method"></a><span data-ttu-id="0825f-102">Метод ICorProfilerCallback::ExceptionCatcherLeave</span><span class="sxs-lookup"><span data-stu-id="0825f-102">ICorProfilerCallback::ExceptionCatcherLeave Method</span></span>
 <span data-ttu-id="0825f-103">Уведомляет профилировщик, управление передается за пределы соответствующего `catch` блока.</span><span class="sxs-lookup"><span data-stu-id="0825f-103">Notifies the profiler that control is being passed out of the appropriate `catch` block.</span></span>  

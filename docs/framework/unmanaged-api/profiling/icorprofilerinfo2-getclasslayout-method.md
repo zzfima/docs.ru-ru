@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2b826e9c30fbf7007ac6b0093608ab7d926cc499
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459157"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a><span data-ttu-id="60f32-102">Метод ICorProfilerInfo2::GetClassLayout</span><span class="sxs-lookup"><span data-stu-id="60f32-102">ICorProfilerInfo2::GetClassLayout Method</span></span>
 <span data-ttu-id="60f32-103">Получает сведения о макете в памяти полей, определенных с помощью указанного класса.</span><span class="sxs-lookup"><span data-stu-id="60f32-103">Gets information about the layout, in memory, of the fields defined by the specified class.</span></span> <span data-ttu-id="60f32-104">То есть этот метод получает смещения полей класса.</span><span class="sxs-lookup"><span data-stu-id="60f32-104">That is, this method gets the offsets of the class's fields.</span></span>  

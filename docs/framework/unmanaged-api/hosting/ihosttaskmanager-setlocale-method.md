@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: af9a8939c2ff50eb41b4f5c14097751fdc92ff83
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33443145"
 ---
 # <a name="ihosttaskmanagersetlocale-method"></a><span data-ttu-id="404f0-102">Метод IHostTaskManager::SetLocale</span><span class="sxs-lookup"><span data-stu-id="404f0-102">IHostTaskManager::SetLocale Method</span></span>
 <span data-ttu-id="404f0-103">Уведомляет основное приложение об изменении общеязыковой среды выполнения (CLR) языкового стандарта или языка и региональных параметров в текущей выполняемой задаче.</span><span class="sxs-lookup"><span data-stu-id="404f0-103">Notifies the host that the common language runtime (CLR) has changed the locale, or culture, on the currently executing task.</span></span>  

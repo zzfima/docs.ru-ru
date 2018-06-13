@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6057593362e75044a9b2db32ad5dafe439a551d2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451146"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a><span data-ttu-id="6e887-102">Метод ICorProfilerCallback::ExceptionCLRCatcherExecute</span><span class="sxs-lookup"><span data-stu-id="6e887-102">ICorProfilerCallback::ExceptionCLRCatcherExecute Method</span></span>
 <span data-ttu-id="6e887-103">Вызывается, когда `catch` блока исключения, выполненного в общеязыковой среде выполнения (CLR), сам.</span><span class="sxs-lookup"><span data-stu-id="6e887-103">Called when a `catch` block for an exception is executed inside the common language runtime (CLR) itself.</span></span> <span data-ttu-id="6e887-104">Этот метод является устаревшим в .NET Framework версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="6e887-104">This method is obsolete in the .NET Framework version 2.0.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6ac1ecb73257782888c963082953ed243177a86b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448808"
 ---
 # <a name="imetadataimportgeteventprops-method"></a><span data-ttu-id="bf1ef-102">Метод IMetaDataImport::GetEventProps</span><span class="sxs-lookup"><span data-stu-id="bf1ef-102">IMetaDataImport::GetEventProps Method</span></span>
 <span data-ttu-id="bf1ef-103">Возвращает сведения о метаданных для события, представленного указанным токеном события, включая объявляющий тип, добавления и методы удаления для делегатов и всевозможные флаги и другие связанные с ними данные.</span><span class="sxs-lookup"><span data-stu-id="bf1ef-103">Gets metadata information for the event represented by the specified event token, including the declaring type, the add and remove methods for delegates, and any flags and other associated data.</span></span>  

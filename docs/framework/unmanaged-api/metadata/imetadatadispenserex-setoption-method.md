@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cfe600b54eb03a07ea01375355c5ff94190e5d9d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449472"
 ---
 # <a name="imetadatadispenserexsetoption-method"></a><span data-ttu-id="e5150-102">Метод IMetaDataDispenserEx::SetOption</span><span class="sxs-lookup"><span data-stu-id="e5150-102">IMetaDataDispenserEx::SetOption Method</span></span>
 <span data-ttu-id="e5150-103">Устанавливает для указанного параметра заданное значение для текущей области метаданных.</span><span class="sxs-lookup"><span data-stu-id="e5150-103">Sets the specified option to a given value for the current metadata scope.</span></span> <span data-ttu-id="e5150-104">Параметр определяет способ обработки вызовов текущей области метаданных.</span><span class="sxs-lookup"><span data-stu-id="e5150-104">The option controls how calls to the current metadata scope are handled.</span></span>  

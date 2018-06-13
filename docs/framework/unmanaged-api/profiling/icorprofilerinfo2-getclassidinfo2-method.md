@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2af0eacbff8220be7f2286f7f345f14126972261
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458527"
 ---
 # <a name="icorprofilerinfo2getclassidinfo2-method"></a><span data-ttu-id="9b34f-102">Метод ICorProfilerInfo2::GetClassIDInfo2</span><span class="sxs-lookup"><span data-stu-id="9b34f-102">ICorProfilerInfo2::GetClassIDInfo2 Method</span></span>
 <span data-ttu-id="9b34f-103">Получает родительский модуль и токен метаданных для Открыть определение универсального указанного класса `ClassID` его родительского класса и `ClassID` для каждого аргумента типа, если имеется этого класса.</span><span class="sxs-lookup"><span data-stu-id="9b34f-103">Gets the parent module and metadata token for the open generic definition of the specified class, the `ClassID` of its parent class, and the `ClassID` for each type argument, if present, of the class.</span></span>  

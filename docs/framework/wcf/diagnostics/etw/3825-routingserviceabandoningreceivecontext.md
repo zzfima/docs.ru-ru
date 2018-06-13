@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33465995"
 ---
 # <a name="3825---routingserviceabandoningreceivecontext"></a><span data-ttu-id="75417-102">3825 - RoutingServiceAbandoningReceiveContext</span><span class="sxs-lookup"><span data-stu-id="75417-102">3825 - RoutingServiceAbandoningReceiveContext</span></span>
 ## <a name="properties"></a><span data-ttu-id="75417-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="75417-103">Properties</span></span>  

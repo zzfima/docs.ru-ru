@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33458111"
 ---
 # <a name="configuring-client-behaviors"></a><span data-ttu-id="f7024-102">Настройка поведений клиентов</span><span class="sxs-lookup"><span data-stu-id="f7024-102">Configuring Client Behaviors</span></span>
 <span data-ttu-id="f7024-103">Windows Communication Foundation (WCF) настраивает поведение двумя способами: путем ссылки на конфигурации поведения, определенных в `<behavior>` раздел файла конфигурации приложения клиента — или программно в вызывающем приложение.</span><span class="sxs-lookup"><span data-stu-id="f7024-103">Windows Communication Foundation (WCF) configures behaviors in two ways: either by referring to behavior configurations -- which are defined in the `<behavior>` section of a client application configuration file – or programmatically in the calling application.</span></span> <span data-ttu-id="f7024-104">В этом разделе описываются оба подхода.</span><span class="sxs-lookup"><span data-stu-id="f7024-104">This topic describes both approaches.</span></span>  

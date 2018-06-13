@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e5d06988330b9ec83463165661ea5425d8563c60
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33459060"
 ---
 # <a name="icorprofilerinfo3getfunctionenter3info-method"></a><span data-ttu-id="e1522-102">Метод ICorProfilerInfo3::GetFunctionEnter3Info</span><span class="sxs-lookup"><span data-stu-id="e1522-102">ICorProfilerInfo3::GetFunctionEnter3Info Method</span></span>
 <span data-ttu-id="e1522-103">Предоставляет кадр и сведения стека функции, которая сообщается профилировщику [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) функции.</span><span class="sxs-lookup"><span data-stu-id="e1522-103">Provides the stack frame and argument information of the function that is being reported to the profiler by the [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md) function.</span></span> <span data-ttu-id="e1522-104">Этот метод может быть вызван только во время обратного вызова `FunctionEnter3WithInfo`.</span><span class="sxs-lookup"><span data-stu-id="e1522-104">This method can be called only during the `FunctionEnter3WithInfo` callback.</span></span>  
