@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401334"
 ---
 # <a name="use-caching-in-ui-automation"></a><span data-ttu-id="685d7-102">Использование кэширования в модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="685d7-102">Use Caching in UI Automation</span></span>
 > [!NOTE]

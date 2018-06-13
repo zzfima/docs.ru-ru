@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3db8124f32a03180ef640194534b587f0152f778
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404892"
 ---
 # <a name="iclrdataenummemoryregions-interface"></a><span data-ttu-id="60cba-102">Интерфейс ICLRDataEnumMemoryRegions</span><span class="sxs-lookup"><span data-stu-id="60cba-102">ICLRDataEnumMemoryRegions Interface</span></span>
 <span data-ttu-id="60cba-103">Предоставляет метод, выполняющий перечисление областей памяти, заданной вызовами.</span><span class="sxs-lookup"><span data-stu-id="60cba-103">Provides a method to enumerate regions of memory that are specified by callers.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33324214"
 ---
 # <a name="modifying-xml-trees-linq-to-xml-c"></a><span data-ttu-id="fdc4d-102">Изменение деревьев XML (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="fdc4d-102">Modifying XML Trees (LINQ to XML) (C#)</span></span>
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]<span data-ttu-id="fdc4d-103"> служит для хранения XML-дерева в памяти.</span><span class="sxs-lookup"><span data-stu-id="fdc4d-103"> is an in-memory store for an XML tree.</span></span> <span data-ttu-id="fdc4d-104">После загрузки или синтаксического анализа XML-дерева из источника [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] позволяет изменить это дерево, после чего его можно сериализовать, сохранив, например, в файл или отправив на удаленный сервер.</span><span class="sxs-lookup"><span data-stu-id="fdc4d-104">After you load or parse an XML tree from a source, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] lets you modify that tree in place, and then serialize the tree, perhaps saving it to a file or sending it to a remote server.</span></span>  

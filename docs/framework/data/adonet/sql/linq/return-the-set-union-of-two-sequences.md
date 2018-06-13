@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358081"
 ---
 # <a name="return-the-set-union-of-two-sequences"></a><span data-ttu-id="94085-102">Возврат объединения наборов двух последовательностей.</span><span class="sxs-lookup"><span data-stu-id="94085-102">Return the Set Union of Two Sequences</span></span>
 <span data-ttu-id="94085-103">Оператор <xref:System.Linq.Queryable.Union%2A> используется для возвращения объединения наборов двух последовательностей.</span><span class="sxs-lookup"><span data-stu-id="94085-103">Use the <xref:System.Linq.Queryable.Union%2A> operator to return the set union of two sequences.</span></span>  

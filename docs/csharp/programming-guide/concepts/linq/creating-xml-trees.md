@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33318592"
 ---
 # <a name="creating-xml-trees-c"></a><span data-ttu-id="f182a-102">Создание деревьев XML (C#)</span><span class="sxs-lookup"><span data-stu-id="f182a-102">Creating XML Trees (C#)</span></span>
 <span data-ttu-id="f182a-103">Одна из самых распространенных задач при работе с XML состоит в построении XML-дерева.</span><span class="sxs-lookup"><span data-stu-id="f182a-103">One of the most common XML tasks is constructing an XML tree.</span></span> <span data-ttu-id="f182a-104">В этом разделе описывается несколько способов создания таких деревьев.</span><span class="sxs-lookup"><span data-stu-id="f182a-104">This section describes several ways to create them.</span></span>  

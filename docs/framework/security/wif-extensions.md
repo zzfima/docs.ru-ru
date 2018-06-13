@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402006"
 ---
 # <a name="wif-extensions"></a><span data-ttu-id="e3f9c-102">расширения WIF</span><span class="sxs-lookup"><span data-stu-id="e3f9c-102">WIF Extensions</span></span>
 <span data-ttu-id="e3f9c-103">В этом разделе описываются расширения для Windows Identity Foundation.</span><span class="sxs-lookup"><span data-stu-id="e3f9c-103">This section describes the extensions for Windows Identity Foundation.</span></span>  

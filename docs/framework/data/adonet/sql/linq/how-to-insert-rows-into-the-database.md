@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33361738"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a><span data-ttu-id="18d03-102">Практическое руководство. Вставка строк в базу данных</span><span class="sxs-lookup"><span data-stu-id="18d03-102">How to: Insert Rows Into the Database</span></span>
 <span data-ttu-id="18d03-103">Строки в базу данных можно вставить, добавив объекты в связанные [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> коллекции и затем отправив эти изменения в базу данных.</span><span class="sxs-lookup"><span data-stu-id="18d03-103">You insert rows into a database by adding objects to the associated [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601> collection and then submitting the changes to the database.</span></span> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<span data-ttu-id="18d03-104"> Преобразует изменения в соответствующие SQL `INSERT` команд.</span><span class="sxs-lookup"><span data-stu-id="18d03-104"> translates your changes into the appropriate SQL `INSERT` commands.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329885"
 ---
 # <a name="preserving-white-space-while-serializing"></a><span data-ttu-id="d7f5c-102">Сохранение пробелов при сериализации</span><span class="sxs-lookup"><span data-stu-id="d7f5c-102">Preserving White Space While Serializing</span></span>
 <span data-ttu-id="d7f5c-103">В этом разделе описывается управление пробелами при сериализации XML-дерева.</span><span class="sxs-lookup"><span data-stu-id="d7f5c-103">This topic describes how to control white space when serializing an XML tree.</span></span>  

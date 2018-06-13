@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugCode::GetCode"
-ms.custom: 
+title: Метод ICorDebugCode::GetCode
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugCode.GetCode
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: f906fddf8073a00d2a3741613aae537b8604af67
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: d09681f97829f88bedf53af229298d5d57d764df
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402693"
 ---
-# <a name="icordebugcodegetcode-method"></a><span data-ttu-id="c2fdc-102">Метод ICorDebugCode::GetCode</span><span class="sxs-lookup"><span data-stu-id="c2fdc-102">ICorDebugCode::GetCode Method</span></span>
-<span data-ttu-id="c2fdc-103">Возвращает весь код для заданной функции, отформатированной для дизассемблирования.</span><span class="sxs-lookup"><span data-stu-id="c2fdc-103">Gets all the code for the specified function, formatted for disassembly.</span></span> <span data-ttu-id="c2fdc-104">Этот метод является устаревшим в .NET Framework версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="c2fdc-104">This method has been deprecated in the .NET Framework version 2.0.</span></span> <span data-ttu-id="c2fdc-105">Используйте [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) вместо него.</span><span class="sxs-lookup"><span data-stu-id="c2fdc-105">Use [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) instead.</span></span>  
+# <a name="icordebugcodegetcode-method"></a><span data-ttu-id="d4dbd-102">Метод ICorDebugCode::GetCode</span><span class="sxs-lookup"><span data-stu-id="d4dbd-102">ICorDebugCode::GetCode Method</span></span>
+<span data-ttu-id="d4dbd-103">Возвращает весь код для заданной функции, отформатированной для дизассемблирования.</span><span class="sxs-lookup"><span data-stu-id="d4dbd-103">Gets all the code for the specified function, formatted for disassembly.</span></span> <span data-ttu-id="d4dbd-104">Этот метод является устаревшим в .NET Framework версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="d4dbd-104">This method has been deprecated in the .NET Framework version 2.0.</span></span> <span data-ttu-id="d4dbd-105">Используйте [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) вместо него.</span><span class="sxs-lookup"><span data-stu-id="d4dbd-105">Use [ICorDebugCode2::GetCodeChunks](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md) instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c2fdc-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c2fdc-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d4dbd-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d4dbd-106">Syntax</span></span>  
   
 ```  
 HRESULT GetCode (  
@@ -51,34 +40,34 @@ HRESULT GetCode (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c2fdc-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="c2fdc-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d4dbd-107">Параметры</span><span class="sxs-lookup"><span data-stu-id="d4dbd-107">Parameters</span></span>  
  `startOffset`  
- <span data-ttu-id="c2fdc-108">[in] Смещение начала функции.</span><span class="sxs-lookup"><span data-stu-id="c2fdc-108">[in] The offset of the beginning of the function.</span></span>  
+ <span data-ttu-id="d4dbd-108">[in] Смещение начала функции.</span><span class="sxs-lookup"><span data-stu-id="d4dbd-108">[in] The offset of the beginning of the function.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="c2fdc-109">[in] Смещение конца функции.</span><span class="sxs-lookup"><span data-stu-id="c2fdc-109">[in] The offset of the end of the function.</span></span>  
+ <span data-ttu-id="d4dbd-109">[in] Смещение конца функции.</span><span class="sxs-lookup"><span data-stu-id="d4dbd-109">[in] The offset of the end of the function.</span></span>  
   
  `cBufferAlloc`  
- <span data-ttu-id="c2fdc-110">[in] Размер `buffer` массива, в которой будет возвращаться код.</span><span class="sxs-lookup"><span data-stu-id="c2fdc-110">[in] The size of the `buffer` array into which the code will be returned.</span></span>  
+ <span data-ttu-id="d4dbd-110">[in] Размер `buffer` массива, в которой будет возвращаться код.</span><span class="sxs-lookup"><span data-stu-id="d4dbd-110">[in] The size of the `buffer` array into which the code will be returned.</span></span>  
   
  `buffer`  
- <span data-ttu-id="c2fdc-111">[out] Массив, в который будет возвращаться код.</span><span class="sxs-lookup"><span data-stu-id="c2fdc-111">[out] The array into which the code will be returned.</span></span>  
+ <span data-ttu-id="d4dbd-111">[out] Массив, в который будет возвращаться код.</span><span class="sxs-lookup"><span data-stu-id="d4dbd-111">[out] The array into which the code will be returned.</span></span>  
   
  `pcBufferSize`  
- <span data-ttu-id="c2fdc-112">[out] Число байтов, возвращенных.</span><span class="sxs-lookup"><span data-stu-id="c2fdc-112">[out] The number of bytes returned.</span></span>  
+ <span data-ttu-id="d4dbd-112">[out] Число байтов, возвращенных.</span><span class="sxs-lookup"><span data-stu-id="d4dbd-112">[out] The number of bytes returned.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c2fdc-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="c2fdc-113">Remarks</span></span>  
- <span data-ttu-id="c2fdc-114">Если код функции поделен на несколько блоков, они объединяются в порядке возрастания смещения машинного кода.</span><span class="sxs-lookup"><span data-stu-id="c2fdc-114">If the function's code has been divided into multiple chunks, they are concatenated in order of increasing native offset.</span></span> <span data-ttu-id="c2fdc-115">Границы инструкций не проверяются.</span><span class="sxs-lookup"><span data-stu-id="c2fdc-115">Instruction boundaries are not checked.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d4dbd-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="d4dbd-113">Remarks</span></span>  
+ <span data-ttu-id="d4dbd-114">Если код функции поделен на несколько блоков, они объединяются в порядке возрастания смещения машинного кода.</span><span class="sxs-lookup"><span data-stu-id="d4dbd-114">If the function's code has been divided into multiple chunks, they are concatenated in order of increasing native offset.</span></span> <span data-ttu-id="d4dbd-115">Границы инструкций не проверяются.</span><span class="sxs-lookup"><span data-stu-id="d4dbd-115">Instruction boundaries are not checked.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c2fdc-116">Требования</span><span class="sxs-lookup"><span data-stu-id="c2fdc-116">Requirements</span></span>  
- <span data-ttu-id="c2fdc-117">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c2fdc-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d4dbd-116">Требования</span><span class="sxs-lookup"><span data-stu-id="d4dbd-116">Requirements</span></span>  
+ <span data-ttu-id="d4dbd-117">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d4dbd-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c2fdc-118">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c2fdc-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="d4dbd-118">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d4dbd-118">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c2fdc-119">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c2fdc-119">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d4dbd-119">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d4dbd-119">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c2fdc-120">**Версии платформы .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="c2fdc-120">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="d4dbd-120">**Версии платформы .NET framework:** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="d4dbd-120">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c2fdc-121">См. также</span><span class="sxs-lookup"><span data-stu-id="c2fdc-121">See Also</span></span>  
- [<span data-ttu-id="c2fdc-122">Метод GetCodeChunks</span><span class="sxs-lookup"><span data-stu-id="c2fdc-122">GetCodeChunks Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
+## <a name="see-also"></a><span data-ttu-id="d4dbd-121">См. также</span><span class="sxs-lookup"><span data-stu-id="d4dbd-121">See Also</span></span>  
+ [<span data-ttu-id="d4dbd-122">Метод GetCodeChunks</span><span class="sxs-lookup"><span data-stu-id="d4dbd-122">GetCodeChunks Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)  
  

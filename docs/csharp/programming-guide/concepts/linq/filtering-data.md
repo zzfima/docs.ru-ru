@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321497"
 ---
 # <a name="filtering-data-c"></a><span data-ttu-id="c3315-102">Фильтрация данных (C#)</span><span class="sxs-lookup"><span data-stu-id="c3315-102">Filtering Data (C#)</span></span>
 <span data-ttu-id="c3315-103">Фильтрация — это операция по ограничению значений в результирующем наборе только элементами, соответствующими указанному условию.</span><span class="sxs-lookup"><span data-stu-id="c3315-103">Filtering refers to the operation of restricting the result set to contain only those elements that satisfy a specified condition.</span></span> <span data-ttu-id="c3315-104">Это также называется выборкой.</span><span class="sxs-lookup"><span data-stu-id="c3315-104">It is also known as selection.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33355764"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a><span data-ttu-id="58a0c-102">Практическое руководство. Перехват сообщений службы данных (службы данных WCF)</span><span class="sxs-lookup"><span data-stu-id="58a0c-102">How to: Intercept Data Service Messages (WCF Data Services)</span></span>
 <span data-ttu-id="58a0c-103">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет приложению перехватывать сообщения запросов, что дает возможность добавить в операцию специализированную логику.</span><span class="sxs-lookup"><span data-stu-id="58a0c-103">With [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], you can intercept request messages so that you can add custom logic to an operation.</span></span> <span data-ttu-id="58a0c-104">Для перехвата сообщений, можно использовать со специальными атрибутами методы в службе данных.</span><span class="sxs-lookup"><span data-stu-id="58a0c-104">To intercept a message, you use specially attributed methods in the data service.</span></span> <span data-ttu-id="58a0c-105">Дополнительные сведения см. в разделе [перехватчики](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="58a0c-105">For more information, see [Interceptors](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md).</span></span>  

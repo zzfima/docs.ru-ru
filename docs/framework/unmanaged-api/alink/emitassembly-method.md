@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1cd1c077a8f2a5fe3b2b46c2e1da2e92b5a797a6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402061"
 ---
 # <a name="emitassembly-method"></a><span data-ttu-id="36833-102">Метод EmitAssembly</span><span class="sxs-lookup"><span data-stu-id="36833-102">EmitAssembly Method</span></span>
 <span data-ttu-id="36833-103">Создает сборку.</span><span class="sxs-lookup"><span data-stu-id="36833-103">Creates the assembly.</span></span> <span data-ttu-id="36833-104">Этот метод следует вызывайте после закрытия всех остальных файлов за исключением файла сборки.</span><span class="sxs-lookup"><span data-stu-id="36833-104">Call this method after all other files are closed except for the assembly file.</span></span> <span data-ttu-id="36833-105">Не вызывайте этот метод при создании непривязанных модулей.</span><span class="sxs-lookup"><span data-stu-id="36833-105">Do not call this method when producing unbound modules.</span></span>  

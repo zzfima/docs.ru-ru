@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399300"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a><span data-ttu-id="198c8-102">Рекомендации по миграции приложения, созданного с использованием WIF 3.5, в WIF 4.5</span><span class="sxs-lookup"><span data-stu-id="198c8-102">Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5</span></span>
 ## <a name="applies-to"></a><span data-ttu-id="198c8-103">Применение</span><span class="sxs-lookup"><span data-stu-id="198c8-103">Applies To</span></span>  

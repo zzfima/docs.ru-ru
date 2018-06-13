@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403810"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a><span data-ttu-id="4f0f5-102">Реализация шаблона элемента управления ExpandCollapse модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="4f0f5-102">Implementing the UI Automation ExpandCollapse Control Pattern</span></span>
 > [!NOTE]

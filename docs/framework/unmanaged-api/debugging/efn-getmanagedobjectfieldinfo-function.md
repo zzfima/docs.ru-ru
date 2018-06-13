@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c6195d9666afa8fba3f77322366e4709634e53bb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405250"
 ---
 # <a name="efngetmanagedobjectfieldinfo-function"></a><span data-ttu-id="19e06-102">Функция _EFN_GetManagedObjectFieldInfo</span><span class="sxs-lookup"><span data-stu-id="19e06-102">_EFN_GetManagedObjectFieldInfo Function</span></span>
 <span data-ttu-id="19e06-103">Возвращает смещение от начала объекта до поля и значение поля, используя предоставленный указатель объекта и имя поля.</span><span class="sxs-lookup"><span data-stu-id="19e06-103">Gets the offset from the start of an object to a field and the field's value, using the provided object pointer and field name.</span></span>  

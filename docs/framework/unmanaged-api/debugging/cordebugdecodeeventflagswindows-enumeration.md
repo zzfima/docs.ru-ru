@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fa8bbcf4d8e5aadee6a4250d23842187d6c2af09
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33405490"
 ---
 # <a name="cordebugdecodeeventflagswindows-enumeration"></a><span data-ttu-id="59d07-102">Перечисление CorDebugDecodeEventFlagsWindows</span><span class="sxs-lookup"><span data-stu-id="59d07-102">CorDebugDecodeEventFlagsWindows Enumeration</span></span>
 <span data-ttu-id="59d07-103">Предоставляет дополнительную информацию о событиях отладки на платформе Windows.</span><span class="sxs-lookup"><span data-stu-id="59d07-103">Provides additional information about debug events on the Windows platform.</span></span>  

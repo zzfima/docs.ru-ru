@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 48b15429d40d3a69db52615592fc1697f385d319
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33403735"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a><span data-ttu-id="c3ac4-102">Структура CorDebugExceptionObjectStackFrame</span><span class="sxs-lookup"><span data-stu-id="c3ac4-102">CorDebugExceptionObjectStackFrame Structure</span></span>
 <span data-ttu-id="c3ac4-103">Представляет сведения о кадре стека из объекта исключения.</span><span class="sxs-lookup"><span data-stu-id="c3ac4-103">Represents stack frame information from an exception object.</span></span>  

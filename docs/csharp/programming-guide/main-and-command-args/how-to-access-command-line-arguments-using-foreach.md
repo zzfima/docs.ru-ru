@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332511"
 ---
 # <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a><span data-ttu-id="af6f8-102">Практическое руководство. Доступ к аргументам командной строки с помощью оператора foreach (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="af6f8-102">How to: Access Command-Line Arguments Using foreach (C# Programming Guide)</span></span>
 <span data-ttu-id="af6f8-103">Другим методом итерации всех элементов массива является использование оператора [foreach](../../../csharp/language-reference/keywords/foreach-in.md), как показано в приведенном ниже примере.</span><span class="sxs-lookup"><span data-stu-id="af6f8-103">Another approach to iterating over the array is to use the [foreach](../../../csharp/language-reference/keywords/foreach-in.md) statement as shown in this example.</span></span> <span data-ttu-id="af6f8-104">Оператор `foreach` можно использовать для итерации всех элементов массива, класса коллекции .NET Framework либо любого класса или структуры, реализующих интерфейс <xref:System.Collections.IEnumerable>.</span><span class="sxs-lookup"><span data-stu-id="af6f8-104">The `foreach` statement can be used to iterate over an array, a .NET Framework collection class, or any class or struct that implements the <xref:System.Collections.IEnumerable> interface.</span></span>  

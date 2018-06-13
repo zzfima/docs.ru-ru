@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 226f8c431b90d53366aa5e504101e7de581ec570
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33402474"
 ---
 # <a name="icordebugchaingetstackrange-method"></a><span data-ttu-id="35121-102">Метод ICorDebugChain::GetStackRange</span><span class="sxs-lookup"><span data-stu-id="35121-102">ICorDebugChain::GetStackRange Method</span></span>
 <span data-ttu-id="35121-103">Возвращает диапазон адресов сегмента стека для этой цепи.</span><span class="sxs-lookup"><span data-stu-id="35121-103">Gets the address range of the stack segment for this chain.</span></span>  

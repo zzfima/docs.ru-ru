@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326401"
 ---
 # <a name="generation-operations-c"></a><span data-ttu-id="7bd7b-102">Операции создания (C#)</span><span class="sxs-lookup"><span data-stu-id="7bd7b-102">Generation Operations (C#)</span></span>
 <span data-ttu-id="7bd7b-103">Под созданием понимается формирование новых последовательностей значений.</span><span class="sxs-lookup"><span data-stu-id="7bd7b-103">Generation refers to creating a new sequence of values.</span></span>  

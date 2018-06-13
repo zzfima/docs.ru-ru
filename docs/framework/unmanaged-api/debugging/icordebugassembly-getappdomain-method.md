@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e22d112d1414b13033f73723821e5e4b5764e1c8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33401983"
 ---
 # <a name="icordebugassemblygetappdomain-method"></a><span data-ttu-id="f9f96-102">Метод ICorDebugAssembly::GetAppDomain</span><span class="sxs-lookup"><span data-stu-id="f9f96-102">ICorDebugAssembly::GetAppDomain Method</span></span>
 <span data-ttu-id="f9f96-103">Получает указатель интерфейса на домен приложения, который содержит это `ICorDebugAssembly` экземпляра.</span><span class="sxs-lookup"><span data-stu-id="f9f96-103">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>  

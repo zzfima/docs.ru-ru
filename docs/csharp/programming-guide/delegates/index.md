@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335285"
 ---
 # <a name="delegates-c-programming-guide"></a><span data-ttu-id="d39c8-102">Делегаты (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="d39c8-102">Delegates (C# Programming Guide)</span></span>
 <span data-ttu-id="d39c8-103">[Делегат](../../../csharp/language-reference/keywords/delegate.md) — это тип, который представляет ссылки на методы с определенным списком параметров и типом возвращаемого значения.</span><span class="sxs-lookup"><span data-stu-id="d39c8-103">A [delegate](../../../csharp/language-reference/keywords/delegate.md) is a type that represents references to methods with a particular parameter list and return type.</span></span> <span data-ttu-id="d39c8-104">При создании экземпляра делегата этот экземпляр можно связать с любым методом с совместимой сигнатурой и типом возвращаемого значения.</span><span class="sxs-lookup"><span data-stu-id="d39c8-104">When you instantiate a delegate, you can associate its instance with any method with a compatible signature and return type.</span></span> <span data-ttu-id="d39c8-105">Метод можно вызвать (активировать) с помощью экземпляра делегата.</span><span class="sxs-lookup"><span data-stu-id="d39c8-105">You can invoke (or call) the method through the delegate instance.</span></span>  

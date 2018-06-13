@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340324"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a><span data-ttu-id="d83d6-102">Допустимое содержимое объектов XElement и XDocument</span><span class="sxs-lookup"><span data-stu-id="d83d6-102">Valid Content of XElement and XDocument Objects</span></span>
 <span data-ttu-id="d83d6-103">В этом разделе описываются допустимые аргументы, которые можно передавать конструкторам, а также методы, которые можно использовать для добавления содержимого в элементы и документы.</span><span class="sxs-lookup"><span data-stu-id="d83d6-103">This topic describes the valid arguments that can be passed to constructors and methods that you use to add content to elements and documents.</span></span>  

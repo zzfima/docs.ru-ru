@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 44f3604e3c12cd4b9781876d2d412d942353061e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33404158"
 ---
 # <a name="efngetmanagedexcepstack-function"></a><span data-ttu-id="ddbbc-102">Функция _EFN_GetManagedExcepStack</span><span class="sxs-lookup"><span data-stu-id="ddbbc-102">_EFN_GetManagedExcepStack Function</span></span>
 <span data-ttu-id="ddbbc-103">Учитывая адрес объекта управляемого исключения, возвращает строковую версию трассировки стека, содержащейся внутри.</span><span class="sxs-lookup"><span data-stu-id="ddbbc-103">Given a managed exception object address, returns a string version of the stack trace contained inside.</span></span>  

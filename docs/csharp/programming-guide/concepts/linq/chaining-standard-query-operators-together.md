@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33326154"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a><span data-ttu-id="40bc7-102">Связывание стандартных операторов запросов (C#)</span><span class="sxs-lookup"><span data-stu-id="40bc7-102">Chaining Standard Query Operators Together (C#)</span></span>
 <span data-ttu-id="40bc7-103">Это последний раздел учебника [Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md).</span><span class="sxs-lookup"><span data-stu-id="40bc7-103">This is the final topic in the [Tutorial: Chaining Queries Together (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) tutorial.</span></span>  

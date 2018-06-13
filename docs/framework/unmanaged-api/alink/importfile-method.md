@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 54b0a02af7f22e775e3f9567de79664c9805b4e2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33400654"
 ---
 # <a name="importfile-method"></a><span data-ttu-id="d5bb8-102">Метод ImportFile</span><span class="sxs-lookup"><span data-stu-id="d5bb8-102">ImportFile Method</span></span>
 <span data-ttu-id="d5bb8-103">Импортирует сборок и несвязанных модулей.</span><span class="sxs-lookup"><span data-stu-id="d5bb8-103">Imports assemblies and unbound modules.</span></span>  

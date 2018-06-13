@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33364883"
 ---
 # <a name="enabling-multiple-active-result-sets"></a><span data-ttu-id="fbdf9-102">Включение нескольких активных результирующих наборов</span><span class="sxs-lookup"><span data-stu-id="fbdf9-102">Enabling Multiple Active Result Sets</span></span>
 <span data-ttu-id="fbdf9-103">Режим MARS - это новая возможность, которая в SQL Server используется для выполнения нескольких пакетов по одному соединению.</span><span class="sxs-lookup"><span data-stu-id="fbdf9-103">Multiple Active Result Sets (MARS) is a feature that works with SQL Server to allow the execution of multiple batches on a single connection.</span></span> <span data-ttu-id="fbdf9-104">Если для работы с SQL Server включен режим MARS, каждый используемый объект команды добавляет сеанс к соединению.</span><span class="sxs-lookup"><span data-stu-id="fbdf9-104">When MARS is enabled for use with SQL Server, each command object used adds a session to the connection.</span></span>  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c6b8fa9304296765fcdb6ebe42db5523e5ff387d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33399075"
 ---
 # <a name="icordebugassemblyenum-interface1"></a><span data-ttu-id="a3dc9-102">ICorDebugAssemblyEnum интерфейс1</span><span class="sxs-lookup"><span data-stu-id="a3dc9-102">ICorDebugAssemblyEnum Interface1</span></span>
 <span data-ttu-id="a3dc9-103">Реализует методы ICorDebugEnum и выполняет перечисление массивов ICorDebugAssembly.</span><span class="sxs-lookup"><span data-stu-id="a3dc9-103">Implements ICorDebugEnum methods and enumerates ICorDebugAssembly arrays.</span></span>  

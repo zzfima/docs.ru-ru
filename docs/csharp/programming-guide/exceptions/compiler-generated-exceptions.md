@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33331445"
 ---
 # <a name="compiler-generated-exceptions-c-programming-guide"></a><span data-ttu-id="2871e-102">Исключения, создаваемые компилятором (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="2871e-102">Compiler-Generated Exceptions (C# Programming Guide)</span></span>
 <span data-ttu-id="2871e-103">Некоторые исключения создаются средой .NET Framework CLR (CLR) автоматически, когда происходит сбой основной операции.</span><span class="sxs-lookup"><span data-stu-id="2871e-103">Some exceptions are thrown automatically by the .NET Framework's common language runtime (CLR) when basic operations fail.</span></span> <span data-ttu-id="2871e-104">В следующей таблице перечислены эти исключения и условия возникновения ошибок.</span><span class="sxs-lookup"><span data-stu-id="2871e-104">These exceptions and their error conditions are listed in the following table.</span></span>  

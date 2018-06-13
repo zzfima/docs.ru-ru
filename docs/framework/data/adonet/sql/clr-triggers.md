@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352868"
 ---
 # <a name="clr-triggers"></a><span data-ttu-id="d622c-102">Триггеры CLR</span><span class="sxs-lookup"><span data-stu-id="d622c-102">CLR Triggers</span></span>
 <span data-ttu-id="d622c-103">Триггер представляет собой специальный тип хранимой процедуры, которая запускается автоматически при возникновении определенного языкового события.</span><span class="sxs-lookup"><span data-stu-id="d622c-103">A trigger is a special type of stored procedure that automatically runs when a language event executes.</span></span> <span data-ttu-id="d622c-104">Благодаря интеграции Microsoft SQL Server со средой CLR инфраструктуры .NET Framework обеспечивается возможность использовать любой язык .NET Framework для создания триггеров CLR.</span><span class="sxs-lookup"><span data-stu-id="d622c-104">Because of the Microsoft SQL Server integration with the .NET Framework common language runtime (CLR), you can use any .NET Framework language to create CLR triggers.</span></span>  

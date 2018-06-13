@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337214"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a><span data-ttu-id="42aa9-102">Пример XML-файла. Клиенты и заказы в пространстве имен</span><span class="sxs-lookup"><span data-stu-id="42aa9-102">Sample XML File: Customers and Orders in a Namespace</span></span>
 <span data-ttu-id="42aa9-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="42aa9-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="42aa9-104">Этот файл содержит сведения о заказчиках и заказах.</span><span class="sxs-lookup"><span data-stu-id="42aa9-104">This file contains customers and orders.</span></span> <span data-ttu-id="42aa9-105">XML располагается в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="42aa9-105">The XML is in a namespace.</span></span>  

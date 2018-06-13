@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320655"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a><span data-ttu-id="c92c5-102">Сравнение запросов к XML-документам Запросы к XElement (C#)</span><span class="sxs-lookup"><span data-stu-id="c92c5-102">Querying an XDocument vs. Querying an XElement (C#)</span></span>
 <span data-ttu-id="c92c5-103">При загрузке документа через <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> обратите внимание на то, что запросы придется составлять не так, как при загрузке через <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c92c5-103">When you load a document via <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>, you will notice that you have to write queries slightly differently than when you load via <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>.</span></span>  
