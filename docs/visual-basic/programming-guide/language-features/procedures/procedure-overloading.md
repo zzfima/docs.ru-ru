@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653918"
 ---
 # <a name="procedure-overloading-visual-basic"></a><span data-ttu-id="5fdf2-102">Перегрузка процедур (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5fdf2-102">Procedure Overloading (Visual Basic)</span></span>
 <span data-ttu-id="5fdf2-103">*Перегрузка* процедуры означает определение ее в нескольких версиях с помощью тем же именем, но различными списками параметров.</span><span class="sxs-lookup"><span data-stu-id="5fdf2-103">*Overloading* a procedure means defining it in multiple versions, using the same name but different parameter lists.</span></span> <span data-ttu-id="5fdf2-104">Перегрузка предназначена для определения несколько взаимосвязанных версий процедуры, не различая их по имени.</span><span class="sxs-lookup"><span data-stu-id="5fdf2-104">The purpose of overloading is to define several closely related versions of a procedure without having to differentiate them by name.</span></span> <span data-ttu-id="5fdf2-105">Это делается путем изменения списка параметров.</span><span class="sxs-lookup"><span data-stu-id="5fdf2-105">You do this by varying the parameter list.</span></span>  

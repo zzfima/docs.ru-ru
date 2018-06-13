@@ -16,6 +16,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457511"
 ---
 # <a name="throw-c-reference"></a><span data-ttu-id="557e4-102">throw (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="557e4-102">throw (C# Reference)</span></span>
 <span data-ttu-id="557e4-103">Сообщает о возникновении исключения во время выполнения программы.</span><span class="sxs-lookup"><span data-stu-id="557e4-103">Signals the occurrence of an exception during program execution.</span></span>  

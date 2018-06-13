@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803696"
 ---
 # <a name="basic-programming-lifecycle"></a><span data-ttu-id="9d516-102">Базовый жизненный цикл программирования</span><span class="sxs-lookup"><span data-stu-id="9d516-102">Basic Programming Lifecycle</span></span>
 <span data-ttu-id="9d516-103">Windows Communication Foundation (WCF) позволяет приложениям обмениваться информацией, ли они на том же компьютере через Интернет или на других платформах приложений.</span><span class="sxs-lookup"><span data-stu-id="9d516-103">Windows Communication Foundation (WCF) enables applications to communicate whether they are on the same computer, across the Internet, or on different application platforms.</span></span> <span data-ttu-id="9d516-104">В этом разделе описаны задачи, которые необходимы для построения приложения WCF.</span><span class="sxs-lookup"><span data-stu-id="9d516-104">This topic outlines the tasks that are required to build a WCF application.</span></span> <span data-ttu-id="9d516-105">Рабочий пример приложения см. в разделе [учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md).</span><span class="sxs-lookup"><span data-stu-id="9d516-105">For a working sample application, see [Getting Started Tutorial](../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>  

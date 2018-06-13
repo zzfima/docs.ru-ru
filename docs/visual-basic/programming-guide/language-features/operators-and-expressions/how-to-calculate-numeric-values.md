@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649790"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a><span data-ttu-id="95b98-102">Практическое руководство. Вычисление числовых значений (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="95b98-102">How to: Calculate Numeric Values (Visual Basic)</span></span>
 <span data-ttu-id="95b98-103">Можно вычислить числовые значения с помощью числовых выражений.</span><span class="sxs-lookup"><span data-stu-id="95b98-103">You can calculate numeric values through the use of numeric expressions.</span></span> <span data-ttu-id="95b98-104">Объект *числовое выражение* является выражение, которое содержит литералы, константы и переменные, представляющие числовые значения и операторы, выполняющие действия с этими значениями.</span><span class="sxs-lookup"><span data-stu-id="95b98-104">A *numeric expression* is an expression that contains literals, constants, and variables representing numeric values, and operators that act on those values.</span></span>  

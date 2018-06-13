@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641145"
 ---
 # <a name="wrong-number-of-arguments-or-property-assignment-not-valid"></a><span data-ttu-id="44483-102">Неверное число аргументов или недопустимое назначение свойства</span><span class="sxs-lookup"><span data-stu-id="44483-102">Wrong number of arguments or property assignment not valid</span></span>
 <span data-ttu-id="44483-103">Предпринята попытка выполнить недопустимое назначение.</span><span class="sxs-lookup"><span data-stu-id="44483-103">An assignment has been attempted that is not valid.</span></span>  

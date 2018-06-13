@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33807372"
 ---
 # <a name="configuring-tracing"></a><span data-ttu-id="8a19d-102">Настройка трассировки</span><span class="sxs-lookup"><span data-stu-id="8a19d-102">Configuring Tracing</span></span>
 <span data-ttu-id="8a19d-103">В этом разделе описывается, как включить трассировку, настроить создание трассировки источниками трассировки и задать уровни трассировки, задать распространение и трассировку действий для поддержки сквозной корреляции трассировки, а также настроить доступ прослушивателей трассировки к трассировкам.</span><span class="sxs-lookup"><span data-stu-id="8a19d-103">This topic describes how you can enable tracing, configure trace sources to emit traces and set trace levels, set activity tracing and propagation to support end-to-end trace correlation, and set trace listeners to access traces.</span></span>  

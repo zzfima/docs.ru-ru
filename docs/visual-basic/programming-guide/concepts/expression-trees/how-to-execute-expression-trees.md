@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33643657"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a><span data-ttu-id="3fe9e-102">Как: выполнение деревьев выражений (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3fe9e-102">How to: Execute Expression Trees (Visual Basic)</span></span>
 <span data-ttu-id="3fe9e-103">В этом разделе показано, как выполнить дерево выражения.</span><span class="sxs-lookup"><span data-stu-id="3fe9e-103">This topic shows you how to execute an expression tree.</span></span> <span data-ttu-id="3fe9e-104">В результате выполнения дерева выражения может возвращаться значение или просто выполняться действие, такое как вызов метода.</span><span class="sxs-lookup"><span data-stu-id="3fe9e-104">Executing an expression tree may return a value, or it may just perform an action such as calling a method.</span></span>  

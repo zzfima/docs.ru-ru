@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33804717"
 ---
 # <a name="significant-traces"></a><span data-ttu-id="90b62-102">Значимые трассировки</span><span class="sxs-lookup"><span data-stu-id="90b62-102">Significant Traces</span></span>
 <span data-ttu-id="90b62-103">В этом разделе перечислены некоторые основные трассировки, создаваемые Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="90b62-103">This topic lists some of the major traces emitted by Windows Communication Foundation (WCF).</span></span>  

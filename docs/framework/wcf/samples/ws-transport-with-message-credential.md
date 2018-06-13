@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33810152"
 ---
 # <a name="ws-transport-with-message-credential"></a><span data-ttu-id="30abc-102">Транспорт WS с учетными данными сообщения</span><span class="sxs-lookup"><span data-stu-id="30abc-102">WS Transport With Message Credential</span></span>
 <span data-ttu-id="30abc-103">В этом примере показано использовании безопасности транспорта SSL в сочетании с передаваемыми в сообщении учетными данными клиента.</span><span class="sxs-lookup"><span data-stu-id="30abc-103">This sample demonstrates the use of SSL transport security in combination with client credential being carried in the message.</span></span> <span data-ttu-id="30abc-104">В этом примере используется привязка `wsHttpBinding`.</span><span class="sxs-lookup"><span data-stu-id="30abc-104">This sample uses the `wsHttpBinding` binding.</span></span>  

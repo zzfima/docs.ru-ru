@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636517"
 ---
 # <a name="division-by-zero-visual-basic-run-time-error"></a><span data-ttu-id="33921-102">Деление на ноль (ошибка времени выполнения Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="33921-102">Division by zero (Visual Basic Run-Time Error)</span></span>
 <span data-ttu-id="33921-103">Выражение, используемое в качестве делителя, имеет нулевое значение.</span><span class="sxs-lookup"><span data-stu-id="33921-103">An expression being used as a divisor has a value of zero.</span></span>  

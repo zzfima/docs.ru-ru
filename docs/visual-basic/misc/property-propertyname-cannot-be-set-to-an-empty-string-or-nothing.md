@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639276"
 ---
 # <a name="property-ltpropertynamegt-cannot-be-set-to-an-empty-string-or-nothing"></a><span data-ttu-id="1ed64-102">Свойство &lt;propertyname&gt; нельзя присвоить значение является пустой строкой или Nothing</span><span class="sxs-lookup"><span data-stu-id="1ed64-102">Property &lt;propertyname&gt; cannot be set to an empty string or Nothing</span></span>
 <span data-ttu-id="1ed64-103">Для свойства требуется значение, отличное от пустой строки ("") или `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="1ed64-103">The property requires a value other than an empty string ("") or `Nothing`.</span></span> <span data-ttu-id="1ed64-104">Это может быть результатом неправильного вычисления значения.</span><span class="sxs-lookup"><span data-stu-id="1ed64-104">This may be a result of incorrectly calculating the value.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640323"
 ---
 # <a name="stop-statement-encountered"></a><span data-ttu-id="4cb73-102">Обнаружен оператор Stop</span><span class="sxs-lookup"><span data-stu-id="4cb73-102">Stop statement encountered</span></span>
 <span data-ttu-id="4cb73-103">Обнаружен оператор `Stop` , который приостанавливает выполнение.</span><span class="sxs-lookup"><span data-stu-id="4cb73-103">A `Stop` statement, which suspends execution, was encountered.</span></span>  

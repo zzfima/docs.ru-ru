@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603539"
 ---
 # <a name="sub-expression-visual-basic"></a><span data-ttu-id="bfa84-102">Часть выражения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="bfa84-102">Sub Expression (Visual Basic)</span></span>
 <span data-ttu-id="bfa84-103">Объявляет параметры и код, определяющий подпрограммы лямбда-выражения.</span><span class="sxs-lookup"><span data-stu-id="bfa84-103">Declares the parameters and code that define a subroutine lambda expression.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602831"
 ---
 # <a name="skip-clause-visual-basic"></a><span data-ttu-id="5db64-102">Предложение Skip (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5db64-102">Skip Clause (Visual Basic)</span></span>
 <span data-ttu-id="5db64-103">Пропускает заданное число элементов в коллекции и возвращает остальные элементы.</span><span class="sxs-lookup"><span data-stu-id="5db64-103">Bypasses a specified number of elements in a collection and then returns the remaining elements.</span></span>  

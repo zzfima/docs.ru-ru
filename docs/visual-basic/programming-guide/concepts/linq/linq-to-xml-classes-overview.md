@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649182"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a><span data-ttu-id="25bcb-102">LINQ to XML-обзор классов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="25bcb-102">LINQ to XML Classes Overview (Visual Basic)</span></span>
 <span data-ttu-id="25bcb-103">В этом разделе приведен список классов [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] в пространстве имен <xref:System.Xml.Linq> с кратким описанием каждого из них.</span><span class="sxs-lookup"><span data-stu-id="25bcb-103">This topic provides a list of the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes in the <xref:System.Xml.Linq> namespace, and a short description of each.</span></span>  

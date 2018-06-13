@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653882"
 ---
 # <a name="-libpath"></a><span data-ttu-id="e1991-102">-libpath</span><span class="sxs-lookup"><span data-stu-id="e1991-102">-libpath</span></span>
 <span data-ttu-id="e1991-103">Указывает расположение сборок, на которую указывает ссылка.</span><span class="sxs-lookup"><span data-stu-id="e1991-103">Specifies the location of referenced assemblies.</span></span>  

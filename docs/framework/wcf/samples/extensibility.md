@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33805386"
 ---
 # <a name="extensibility"></a><span data-ttu-id="e1eaf-102">Расширение среды</span><span class="sxs-lookup"><span data-stu-id="e1eaf-102">Extensibility</span></span>
 <span data-ttu-id="e1eaf-103">В этом разделе содержатся образцы, которые имеют дело с настраиваемой расширяемостью и другими функциями Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="e1eaf-103">This section contains samples that deal with custom extensibility and other features of Windows Communication Foundation (WCF).</span></span>  

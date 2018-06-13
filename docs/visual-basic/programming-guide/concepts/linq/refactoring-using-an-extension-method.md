@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647908"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a><span data-ttu-id="0a07b-102">Рефакторинг с использованием метода расширения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0a07b-102">Refactoring Using an Extension Method (Visual Basic)</span></span>
 <span data-ttu-id="0a07b-103">Этот пример основан на предыдущем примере [извлечение текста абзацев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), путем оптимизации кода объединения строк с помощью чистой функции, которая реализуется как метод расширения.</span><span class="sxs-lookup"><span data-stu-id="0a07b-103">This example builds on the previous example, [Retrieving the Text of the Paragraphs (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), by refactoring the concatenation of strings using a pure function that is implemented as an extension method.</span></span>  

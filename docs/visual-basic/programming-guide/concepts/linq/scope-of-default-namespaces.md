@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645747"
 ---
 # <a name="scope-of-default-namespaces-in-visual-basic"></a><span data-ttu-id="fba38-102">Область действия пространств имен по умолчанию в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fba38-102">Scope of Default Namespaces in Visual Basic</span></span>
 <span data-ttu-id="fba38-103">Применяемые по умолчанию пространства имен, представленные в XML-дереве, находятся вне области запросов.</span><span class="sxs-lookup"><span data-stu-id="fba38-103">Default namespaces as represented in the XML tree are not in scope for queries.</span></span> <span data-ttu-id="fba38-104">Если имеется XML, расположенный в используемом по умолчанию пространстве имен, для получения полного имени, которое может быть применено в запросе, то необходимо объявить переменную <xref:System.Xml.Linq.XNamespace> и использовать ее в сочетании с локальным именем.</span><span class="sxs-lookup"><span data-stu-id="fba38-104">If you have XML that is in a default namespace, you still must declare an <xref:System.Xml.Linq.XNamespace> variable, and combine it with the local name to make a qualified name to be used in the query.</span></span>  

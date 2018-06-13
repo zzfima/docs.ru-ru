@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638427"
 ---
 # <a name="registry-key-39ltkeynamegt39-could-not-be-created"></a><span data-ttu-id="818da-102">Раздел реестра &#39; &lt;keyname&gt; &#39; не удалось создать</span><span class="sxs-lookup"><span data-stu-id="818da-102">Registry key &#39;&lt;keyname&gt;&#39; could not be created</span></span>
 <span data-ttu-id="818da-103">Указанный раздел реестра не может быть создан, возможно из-за недостаточных разрешений.</span><span class="sxs-lookup"><span data-stu-id="818da-103">The specified registry key could not be created, possibly because of insufficient security permissions.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640372"
 ---
 # <a name="the-source-folder-does-not-exist"></a><span data-ttu-id="b1114-102">Исходная папка не существует</span><span class="sxs-lookup"><span data-stu-id="b1114-102">The source folder does not exist</span></span>
 <span data-ttu-id="b1114-103">Попытка выполнить операцию, которая ссылается на несуществующую исходную папку.</span><span class="sxs-lookup"><span data-stu-id="b1114-103">You attempted an operation that references a source folder that does not exist.</span></span> <span data-ttu-id="b1114-104">Это может быть результатом указания неправильного пути к файлу.</span><span class="sxs-lookup"><span data-stu-id="b1114-104">This may be the result of supplying an incorrect file path.</span></span>  

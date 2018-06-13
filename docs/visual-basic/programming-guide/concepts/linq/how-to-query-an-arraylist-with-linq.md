@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642855"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a><span data-ttu-id="e8f8a-102">Как: запроса к ArrayList с помощью LINQ (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e8f8a-102">How to: Query an ArrayList with LINQ (Visual Basic)</span></span>
 <span data-ttu-id="e8f8a-103">При использовании LINQ для запросов к неуниверсальным коллекциям <xref:System.Collections.IEnumerable>, таким как <xref:System.Collections.ArrayList>, необходимо явно объявить тип переменной диапазона, чтобы отразить конкретный тип объектов в коллекции.</span><span class="sxs-lookup"><span data-stu-id="e8f8a-103">When using LINQ to query non-generic <xref:System.Collections.IEnumerable> collections such as <xref:System.Collections.ArrayList>, you must explicitly declare the type of the range variable to reflect the specific type of the objects in the collection.</span></span> <span data-ttu-id="e8f8a-104">Например, если у вас есть <xref:System.Collections.ArrayList> из `Student` объектов, к [предложения From](../../../../visual-basic/language-reference/queries/from-clause.md) должен выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="e8f8a-104">For example, if you have an <xref:System.Collections.ArrayList> of `Student` objects, your [From Clause](../../../../visual-basic/language-reference/queries/from-clause.md) should look like this:</span></span>  

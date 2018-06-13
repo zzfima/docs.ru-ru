@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809996"
 ---
 # <a name="routing-services"></a><span data-ttu-id="82d60-102">Службы маршрутизации</span><span class="sxs-lookup"><span data-stu-id="82d60-102">Routing Services</span></span>
 <span data-ttu-id="82d60-103">Этот раздел содержит образцы, демонстрирующие способы использования этих маршрутизаторов Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="82d60-103">This section includes samples that demonstrate how to use the Windows Communication Foundation (WCF) Router.</span></span>  

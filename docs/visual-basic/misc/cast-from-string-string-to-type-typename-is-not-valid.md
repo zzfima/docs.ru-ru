@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635721"
 ---
 # <a name="cast-from-string-quotltstringgtquot-to-type-39lttypenamegt39-is-not-valid"></a><span data-ttu-id="93bcf-102">Преобразование из строки &quot; &lt;строка&gt; &quot; ввода &#39; &lt;typename&gt; &#39; является недопустимым</span><span class="sxs-lookup"><span data-stu-id="93bcf-102">Cast from string &quot;&lt;string&gt;&quot; to type &#39;&lt;typename&gt;&#39; is not valid</span></span>
 <span data-ttu-id="93bcf-103">Предпринята попытка недопустимого преобразования строковой переменной в другой тип.</span><span class="sxs-lookup"><span data-stu-id="93bcf-103">An attempt to convert a string variable to another type is not valid.</span></span>  

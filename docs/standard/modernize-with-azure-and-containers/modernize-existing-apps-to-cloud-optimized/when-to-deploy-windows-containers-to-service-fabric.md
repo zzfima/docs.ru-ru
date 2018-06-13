@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33957914"
 ---
 # <a name="when-to-deploy-windows-containers-to-service-fabric"></a><span data-ttu-id="76ed1-103">Когда следует развернуть контейнеры Windows Service Fabric</span><span class="sxs-lookup"><span data-stu-id="76ed1-103">When to deploy Windows Containers to Service Fabric</span></span>
 

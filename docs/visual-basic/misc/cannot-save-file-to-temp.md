@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637886"
 ---
 # <a name="cannot-save-file-to-temp"></a><span data-ttu-id="f3eb1-102">Невозможно сохранить файл в TEMP</span><span class="sxs-lookup"><span data-stu-id="f3eb1-102">Cannot save file to TEMP</span></span>
 <span data-ttu-id="f3eb1-103">Не удается найти каталог с именем TEMP, либо на диске или в разделе, содержащем каталог TEMP, недостаточно места для сохранения информации.</span><span class="sxs-lookup"><span data-stu-id="f3eb1-103">Either a component cannot find a directory named TEMP, or the drive or partition containing the TEMP directory lacks sufficient space to save information.</span></span>  

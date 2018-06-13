@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649637"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a><span data-ttu-id="96c53-102">Различия между сокрытием и переопределением (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96c53-102">Differences Between Shadowing and Overriding (Visual Basic)</span></span>
 <span data-ttu-id="96c53-103">При определении класса, который наследует от базового класса, иногда требуется переопределить один или несколько элементов базового класса в производном классе.</span><span class="sxs-lookup"><span data-stu-id="96c53-103">When you define a class that inherits from a base class, you sometimes want to redefine one or more of the base class elements in the derived class.</span></span> <span data-ttu-id="96c53-104">Сокрытием и переопределением будут доступны для этой цели.</span><span class="sxs-lookup"><span data-stu-id="96c53-104">Shadowing and overriding are both available for this purpose.</span></span>  

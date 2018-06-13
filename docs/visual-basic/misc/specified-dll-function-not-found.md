@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639759"
 ---
 # <a name="specified-dll-function-not-found"></a><span data-ttu-id="94db0-102">Указанная функция DLL не найдена.</span><span class="sxs-lookup"><span data-stu-id="94db0-102">Specified DLL function not found</span></span>
 <span data-ttu-id="94db0-103">Библиотека динамической компоновки (DLL) в справочнике пользовательских библиотек найдена, но указанная функция не найдена в этой библиотеке DLL.</span><span class="sxs-lookup"><span data-stu-id="94db0-103">The dynamic-link library (DLL) in a user library reference was found, but the DLL function specified was not found within the DLL.</span></span>  

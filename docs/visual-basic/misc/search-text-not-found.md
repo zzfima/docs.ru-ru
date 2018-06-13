@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636048"
 ---
 # <a name="search-text-not-found"></a><span data-ttu-id="c8e5b-102">Искомый текст не найден</span><span class="sxs-lookup"><span data-stu-id="c8e5b-102">Search text not found</span></span>
 <span data-ttu-id="c8e5b-103">Указанный текст не найден.</span><span class="sxs-lookup"><span data-stu-id="c8e5b-103">The text you specified was not found.</span></span>  

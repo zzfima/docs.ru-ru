@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641361"
 ---
 # <a name="path-39ltpathnamegt39-not-found"></a><span data-ttu-id="4c814-102">Путь &#39; &lt;pathname&gt; &#39; не найден</span><span class="sxs-lookup"><span data-stu-id="4c814-102">Path &#39;&lt;pathname&gt;&#39; not found</span></span>
 <span data-ttu-id="4c814-103">Операционной системе не удалось найти указанный путь во время операции доступа к файлам или доступа к диску.</span><span class="sxs-lookup"><span data-stu-id="4c814-103">The operating system is unable to find the path specified path during a file-access or disk-access operation.</span></span> <span data-ttu-id="4c814-104">Путь к файлу должен включать спецификацию диска, а также каталоги и подкаталоги, через которые нужно пройти, чтобы найти файл.</span><span class="sxs-lookup"><span data-stu-id="4c814-104">The path to a file must include the drive specification and the directories and subdirectories that must be traversed to locate the file.</span></span> <span data-ttu-id="4c814-105">Путь может быть как относительным, так и абсолютным.</span><span class="sxs-lookup"><span data-stu-id="4c814-105">A path can be relative or absolute.</span></span>  

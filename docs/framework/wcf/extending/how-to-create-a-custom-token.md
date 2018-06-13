@@ -15,6 +15,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809213"
 ---
 # <a name="how-to-create-a-custom-token"></a><span data-ttu-id="fc6f1-102">Практическое руководство. Создание пользовательского маркера</span><span class="sxs-lookup"><span data-stu-id="fc6f1-102">How to: Create a Custom Token</span></span>
 <span data-ttu-id="fc6f1-103">В этом разделе показано, как создать пользовательский маркер безопасности с помощью класса <xref:System.IdentityModel.Tokens.SecurityToken> и интегрировать его с поставщиком пользовательских маркеров безопасности и структурой проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="fc6f1-103">This topic shows how to create a custom security token using the <xref:System.IdentityModel.Tokens.SecurityToken> class, and how to integrate it with a custom security token provider and authenticator.</span></span> <span data-ttu-id="fc6f1-104">Полный пример кода см. [пользовательского маркера](../../../../docs/framework/wcf/samples/custom-token.md) образца.</span><span class="sxs-lookup"><span data-stu-id="fc6f1-104">For a complete code example see the [Custom Token](../../../../docs/framework/wcf/samples/custom-token.md) sample.</span></span>  

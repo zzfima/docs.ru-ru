@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641057"
 ---
 # <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a><span data-ttu-id="6fa2e-102">Чтение полей фиксированной ширины невозможно: параметр FieldWidths имеет значение Nothing или не определен.</span><span class="sxs-lookup"><span data-stu-id="6fa2e-102">Unable to read fixed width fields because FieldWidths is Nothing or empty</span></span>
 <span data-ttu-id="6fa2e-103">`TextFieldParser` не удалось прочесть поля фиксированной ширины, поскольку свойство `FieldWidths` имеет значение `Nothing` или оно пустое.</span><span class="sxs-lookup"><span data-stu-id="6fa2e-103">The `TextFieldParser` is unable to read fixed-width fields because the `FieldWidths` property is set to `Nothing` or is empty.</span></span>  

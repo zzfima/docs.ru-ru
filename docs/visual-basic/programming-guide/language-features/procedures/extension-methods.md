@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655288"
 ---
 # <a name="extension-methods-visual-basic"></a><span data-ttu-id="f9e73-102">Методы расширения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f9e73-102">Extension Methods (Visual Basic)</span></span>
 <span data-ttu-id="f9e73-103">Методы расширения позволяют разработчикам добавлять пользовательские функциональные возможности для типов данных, которые уже определены без создания нового производного типа.</span><span class="sxs-lookup"><span data-stu-id="f9e73-103">Extension methods enable developers to add custom functionality to data types that are already defined without creating a new derived type.</span></span> <span data-ttu-id="f9e73-104">Методы расширения позволяют написать метод, который может вызываться, как если бы это был метод экземпляра существующего типа.</span><span class="sxs-lookup"><span data-stu-id="f9e73-104">Extension methods make it possible to write a method that can be called as if it were an instance method of the existing type.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172520"
 ---
 # <a name="double-c-reference"></a><span data-ttu-id="d706c-102">double (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="d706c-102">double (C# Reference)</span></span>
 <span data-ttu-id="d706c-103">Ключевое слово `double` обозначает простой тип, используемый для хранения 64-разрядных значений с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="d706c-103">The `double` keyword signifies a simple type that stores 64-bit floating-point values.</span></span> <span data-ttu-id="d706c-104">В приведенной ниже таблице представлен точный и приблизительный диапазон значений для типа `double`.</span><span class="sxs-lookup"><span data-stu-id="d706c-104">The following table shows the precision and approximate range for the `double` type.</span></span>  

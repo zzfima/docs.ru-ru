@@ -7,6 +7,7 @@ ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/11/2018
+ms.locfileid: "34059034"
 ---
 # <a name="ltservicegt"></a><span data-ttu-id="5256c-102">&lt;Службы&gt;</span><span class="sxs-lookup"><span data-stu-id="5256c-102">&lt;service&gt;</span></span>
 <span data-ttu-id="5256c-103">Элемент `service` содержит параметры для службы Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="5256c-103">The `service` element contains the settings for a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="5256c-104">Он также содержит конечные точки, предоставляющие доступ к службе.</span><span class="sxs-lookup"><span data-stu-id="5256c-104">It also contains endpoints that expose the service.</span></span>  

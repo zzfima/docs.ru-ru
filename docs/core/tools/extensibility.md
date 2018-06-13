@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956199"
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a><span data-ttu-id="d3010-103">Модель расширяемости средств интерфейса командной строки .NET Core</span><span class="sxs-lookup"><span data-stu-id="d3010-103">.NET Core CLI tools extensibility model</span></span>
 

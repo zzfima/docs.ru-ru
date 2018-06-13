@@ -9,6 +9,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33803398"
 ---
 # <a name="windows-communication-foundation-endpoints"></a><span data-ttu-id="ec333-102">Конечные точки Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="ec333-102">Windows Communication Foundation Endpoints</span></span>
 <span data-ttu-id="ec333-103">Весь обмен данными со службой Windows Communication Foundation (WCF) осуществляется через *конечные точки* службы.</span><span class="sxs-lookup"><span data-stu-id="ec333-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="ec333-104">Конечные точки предоставляют клиентам доступ к функциям, который предлагает службы WCF.</span><span class="sxs-lookup"><span data-stu-id="ec333-104">Endpoints provide clients access to the functionality that a WCF service offers.</span></span>  
