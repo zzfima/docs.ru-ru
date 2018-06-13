@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650573"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a><span data-ttu-id="5416f-102">Преобразование значений между строковыми и другими типами (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5416f-102">Conversions Between Strings and Other Types (Visual Basic)</span></span>
 <span data-ttu-id="5416f-103">Можно преобразовать числовые, `Boolean`, или значение даты и времени `String`.</span><span class="sxs-lookup"><span data-stu-id="5416f-103">You can convert a numeric, `Boolean`, or date/time value to a `String`.</span></span> <span data-ttu-id="5416f-104">Также можно преобразовать в обратном направлении — от строковых значений к числовым, `Boolean`, или `Date` — интерпретацией содержимое строки как допустимое значение целевого типа данных.</span><span class="sxs-lookup"><span data-stu-id="5416f-104">You can also convert in the reverse direction — from a string value to numeric, `Boolean`, or `Date` — provided the contents of the string can be interpreted as a valid value of the destination data type.</span></span> <span data-ttu-id="5416f-105">Если это невозможно, возникает ошибка времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="5416f-105">If they cannot, a run-time error occurs.</span></span>  

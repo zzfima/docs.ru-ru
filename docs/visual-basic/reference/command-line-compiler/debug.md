@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654152"
 ---
 # <a name="-debug-visual-basic"></a><span data-ttu-id="e43c1-102">-debug (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e43c1-102">-debug (Visual Basic)</span></span>
 <span data-ttu-id="e43c1-103">Указывает компилятору создавать отладочную информацию и поместить ее в выходных файлах.</span><span class="sxs-lookup"><span data-stu-id="e43c1-103">Causes the compiler to generate debugging information and place it in the output file(s).</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651922"
 ---
 # <a name="visual-basic-naming-conventions"></a><span data-ttu-id="b836f-102">Соглашения об именах Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b836f-102">Visual Basic Naming Conventions</span></span>
 <span data-ttu-id="b836f-103">При задании имени элемента в приложении Visual Basic, первый символ с тем же именем необходимо буквы алфавита или знака подчеркивания.</span><span class="sxs-lookup"><span data-stu-id="b836f-103">When you name an element in your Visual Basic application, the first character of that name must be an alphabetic character or an underscore.</span></span> <span data-ttu-id="b836f-104">Обратите внимание, что имена, начинающиеся с символа подчеркивания, не совместимы с [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS).</span><span class="sxs-lookup"><span data-stu-id="b836f-104">Note, however, that names beginning with an underscore are not compliant with the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS).</span></span>  

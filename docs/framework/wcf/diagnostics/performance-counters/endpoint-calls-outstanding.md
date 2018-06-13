@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470469"
 ---
 # <a name="endpoint-calls-outstanding"></a><span data-ttu-id="7231c-102">Конечная точка: количество незавершенных вызовов</span><span class="sxs-lookup"><span data-stu-id="7231c-102">Endpoint: Calls Outstanding</span></span>
 <span data-ttu-id="7231c-103">Имя счетчика: Calls Outstanding</span><span class="sxs-lookup"><span data-stu-id="7231c-103">Counter Name: Calls Outstanding</span></span>  

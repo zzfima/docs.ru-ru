@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33475557"
 ---
 # <a name="microsofttransactionstransactionbridgeregistercoordinator"></a><span data-ttu-id="0de1f-102">Microsoft.Transactions.TransactionBridge.RegisterCoordinator</span><span class="sxs-lookup"><span data-stu-id="0de1f-102">Microsoft.Transactions.TransactionBridge.RegisterCoordinator</span></span>
 <span data-ttu-id="0de1f-103">Служба протокола WS-AT успешно зарегистрирована своим координатором для протокола управления.</span><span class="sxs-lookup"><span data-stu-id="0de1f-103">The WS-Atomic Transaction protocol service successfully registered with its coordinator for a control protocol.</span></span>  

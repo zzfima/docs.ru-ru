@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636719"
 ---
 # <a name="one-or-more-folders-in-the-target-path-do-not-exist"></a><span data-ttu-id="11cb1-102">Одна или несколько папок в целевом пути не существует.</span><span class="sxs-lookup"><span data-stu-id="11cb1-102">One or more folders in the target path do not exist</span></span>
 <span data-ttu-id="11cb1-103">Один или несколько каталогов, представленных в целевом пути, не существует.</span><span class="sxs-lookup"><span data-stu-id="11cb1-103">One or more of the directories supplied in the target path do not exist.</span></span> <span data-ttu-id="11cb1-104">Это может быть результатом неправильного синтаксического анализа пути, особенно при указании относительного пути.</span><span class="sxs-lookup"><span data-stu-id="11cb1-104">This may be a result of an incorrectly parsed path, particularly if supplying a relative path.</span></span>  

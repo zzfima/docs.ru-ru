@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652777"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a><span data-ttu-id="81c24-102">LINQ to XML или DOM (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="81c24-102">LINQ to XML vs. DOM (Visual Basic)</span></span>
 <span data-ttu-id="81c24-103">В этом разделе описываются некоторые основные различия между [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] и текущим преобладающим программным интерфейсом API XML, а именно моделью DOM консорциума W3C.</span><span class="sxs-lookup"><span data-stu-id="81c24-103">This section describes some key differences between [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] and the current predominant XML programming API, the W3C Document Object Model (DOM).</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655929"
 ---
 # <a name="-optioninfer"></a><span data-ttu-id="94041-102">-optioninfer</span><span class="sxs-lookup"><span data-stu-id="94041-102">-optioninfer</span></span>
 <span data-ttu-id="94041-103">Включает использование локального определения типов в различных объявлениях.</span><span class="sxs-lookup"><span data-stu-id="94041-103">Enables the use of local type inference in variable declarations.</span></span>  

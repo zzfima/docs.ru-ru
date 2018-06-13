@@ -11,6 +11,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172377"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="4494b-102">Оператор ^= (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="4494b-102">^= Operator (C# Reference)</span></span>
 <span data-ttu-id="4494b-103">Оператор присваивания исключающего ИЛИ.</span><span class="sxs-lookup"><span data-stu-id="4494b-103">The exclusive-OR assignment operator.</span></span>  

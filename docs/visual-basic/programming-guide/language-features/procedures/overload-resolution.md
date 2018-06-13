@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653433"
 ---
 # <a name="overload-resolution-visual-basic"></a><span data-ttu-id="9632d-102">Разрешение перегрузки (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9632d-102">Overload Resolution (Visual Basic)</span></span>
 <span data-ttu-id="9632d-103">Когда компилятор Visual Basic обнаруживает вызов процедуры, которая определена в нескольких перегруженных версиях, компилятор должен решить, какую из перегрузок метода для вызова.</span><span class="sxs-lookup"><span data-stu-id="9632d-103">When the Visual Basic compiler encounters a call to a procedure that is defined in several overloaded versions, the compiler must decide which of the overloads to call.</span></span> <span data-ttu-id="9632d-104">Это делается путем выполнения следующих шагов:</span><span class="sxs-lookup"><span data-stu-id="9632d-104">It does this by performing the following steps:</span></span>  

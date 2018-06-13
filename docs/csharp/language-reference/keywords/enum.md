@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172232"
 ---
 # <a name="enum-c-reference"></a><span data-ttu-id="0947b-102">enum (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="0947b-102">enum (C# Reference)</span></span>
 <span data-ttu-id="0947b-103">Ключевое слово `enum` используется для объявления перечисления — отдельного типа, который состоит из набора именованных констант, называемого списком перечислителей.</span><span class="sxs-lookup"><span data-stu-id="0947b-103">The `enum` keyword is used to declare an enumeration, a distinct type that consists of a set of named constants called the enumerator list.</span></span>  

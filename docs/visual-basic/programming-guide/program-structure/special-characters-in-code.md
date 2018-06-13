@@ -35,6 +35,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654360"
 ---
 # <a name="special-characters-in-code-visual-basic"></a><span data-ttu-id="f485d-102">Специальные символы в коде (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f485d-102">Special Characters in Code (Visual Basic)</span></span>
 <span data-ttu-id="f485d-103">Иногда необходимо использовать специальные символы в коде, то есть символы, которые не являются буквой или цифрой.</span><span class="sxs-lookup"><span data-stu-id="f485d-103">Sometimes you have to use special characters in your code, that is, characters that are not alphabetical or numeric.</span></span> <span data-ttu-id="f485d-104">Знаки пунктуации и специальные символы в кодировке Visual Basic имеют различные применения, от организации текста программы до определения задач, выполняемых компилятором или скомпилированной программой.</span><span class="sxs-lookup"><span data-stu-id="f485d-104">The punctuation and special characters in the Visual Basic character set have various uses, from organizing program text to defining the tasks that the compiler or the compiled program performs.</span></span> <span data-ttu-id="f485d-105">Эти знаки не определяют операции, подлежащие выполнению.</span><span class="sxs-lookup"><span data-stu-id="f485d-105">They do not specify an operation to be performed.</span></span>  

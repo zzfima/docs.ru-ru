@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172052"
 ---
 # <a name="amp-operator-c-reference"></a><span data-ttu-id="4b6c5-102">Оператор &amp;= (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="4b6c5-102">&amp;= Operator (C# Reference)</span></span>
 <span data-ttu-id="4b6c5-103">Оператор присваивания И.</span><span class="sxs-lookup"><span data-stu-id="4b6c5-103">The AND assignment operator.</span></span>  

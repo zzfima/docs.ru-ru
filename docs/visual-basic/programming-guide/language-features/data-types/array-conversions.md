@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651470"
 ---
 # <a name="array-conversions-visual-basic"></a><span data-ttu-id="f4c6c-102">Преобразование массивов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f4c6c-102">Array Conversions (Visual Basic)</span></span>
 <span data-ttu-id="f4c6c-103">Тип массива можно преобразовать в другой тип массива при соблюдении следующих условий:</span><span class="sxs-lookup"><span data-stu-id="f4c6c-103">You can convert an array type to a different array type provided you meet the following conditions:</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171422"
 ---
 # <a name="gtgt-operator-c-reference"></a><span data-ttu-id="039eb-102">Оператор &gt;&gt;= (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="039eb-102">&gt;&gt;= Operator (C# Reference)</span></span>
 <span data-ttu-id="039eb-103">Оператор присваивания сдвига вправо.</span><span class="sxs-lookup"><span data-stu-id="039eb-103">The right-shift assignment operator.</span></span>  

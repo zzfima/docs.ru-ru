@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650287"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a><span data-ttu-id="459cc-102">Пошаговое руководство. Проверка паролей на сложность (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="459cc-102">Walkthrough: Validating That Passwords Are Complex (Visual Basic)</span></span>
 <span data-ttu-id="459cc-103">Этот метод проверяет некоторые характеристики надежного пароля и обновляет строковый параметр с информацией о том, какие проверки пароля завершается ошибкой.</span><span class="sxs-lookup"><span data-stu-id="459cc-103">This method checks for some strong-password characteristics and updates a string parameter with information about which checks the password fails.</span></span>  

@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656156"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a><span data-ttu-id="7ce72-102">Логические и побитовые операторы в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="7ce72-102">Logical and Bitwise Operators in Visual Basic</span></span>
 <span data-ttu-id="7ce72-103">Логические операторы сравнения `Boolean` выражения и возвращают `Boolean` результат.</span><span class="sxs-lookup"><span data-stu-id="7ce72-103">Logical operators compare `Boolean` expressions and return a `Boolean` result.</span></span> <span data-ttu-id="7ce72-104">`And`, `Or`, `AndAlso`, `OrElse`, И `Xor` операторы являются *двоичных* , так как они принимают два операнда, а `Not` оператор *унарный* , так как он принимает один операнд.</span><span class="sxs-lookup"><span data-stu-id="7ce72-104">The `And`, `Or`, `AndAlso`, `OrElse`, and `Xor` operators are *binary* because they take two operands, while the `Not` operator is *unary* because it takes a single operand.</span></span> <span data-ttu-id="7ce72-105">Некоторые из этих операторов можно также выполнять побитовые логические операции над целыми значениями.</span><span class="sxs-lookup"><span data-stu-id="7ce72-105">Some of these operators can also perform bitwise logical operations on integral values.</span></span>  

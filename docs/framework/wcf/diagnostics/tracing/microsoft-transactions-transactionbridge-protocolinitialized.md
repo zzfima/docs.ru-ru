@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474250"
 ---
 # <a name="microsofttransactionstransactionbridgeprotocolinitialized"></a><span data-ttu-id="92490-102">Microsoft.Transactions.TransactionBridge.ProtocolInitialized</span><span class="sxs-lookup"><span data-stu-id="92490-102">Microsoft.Transactions.TransactionBridge.ProtocolInitialized</span></span>
 <span data-ttu-id="92490-103">Была инициализирована служба протокола WS-Atomic Transaction.</span><span class="sxs-lookup"><span data-stu-id="92490-103">The WS-Atomic Transaction protocol service was initialized.</span></span>  

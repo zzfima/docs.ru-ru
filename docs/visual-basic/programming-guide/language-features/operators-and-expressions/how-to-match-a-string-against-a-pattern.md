@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655216"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a><span data-ttu-id="d7c7d-102">Практическое руководство. Сравнение строки на соответствие с шаблоном (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d7c7d-102">How to: Match a String against a Pattern (Visual Basic)</span></span>
 <span data-ttu-id="d7c7d-103">Если вы хотите определить выражение [строкового типа данных](../../../../visual-basic/language-reference/data-types/string-data-type.md) соответствует шаблону, можно использовать [оператор Like](../../../../visual-basic/language-reference/operators/like-operator.md).</span><span class="sxs-lookup"><span data-stu-id="d7c7d-103">If you want to find out if an expression of the [String Data Type](../../../../visual-basic/language-reference/data-types/string-data-type.md) satisfies a pattern, then you can use the [Like Operator](../../../../visual-basic/language-reference/operators/like-operator.md).</span></span>  

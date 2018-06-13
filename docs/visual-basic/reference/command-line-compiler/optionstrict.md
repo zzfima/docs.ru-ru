@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652913"
 ---
 # <a name="-optionstrict"></a><span data-ttu-id="473ab-102">-optionstrict</span><span class="sxs-lookup"><span data-stu-id="473ab-102">-optionstrict</span></span>
 <span data-ttu-id="473ab-103">Требовать строгой семантики для ограничения неявного преобразования типов.</span><span class="sxs-lookup"><span data-stu-id="473ab-103">Enforces strict type semantics to restrict implicit type conversions.</span></span>  

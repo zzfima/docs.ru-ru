@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653498"
 ---
 # <a name="-bugreport"></a><span data-ttu-id="3582e-102">-bugreport</span><span class="sxs-lookup"><span data-stu-id="3582e-102">-bugreport</span></span>
 <span data-ttu-id="3582e-103">Создает файл, который можно использовать, если файл отчета об ошибке.</span><span class="sxs-lookup"><span data-stu-id="3582e-103">Creates a file that you can use when you file a bug report.</span></span>  

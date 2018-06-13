@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653021"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a><span data-ttu-id="00051-102">Условная компиляция в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="00051-102">Conditional Compilation in Visual Basic</span></span>
 <span data-ttu-id="00051-103">В *условной компиляции*, определенной блоки кода в программе компилируются, пока другие атрибуты игнорируются.</span><span class="sxs-lookup"><span data-stu-id="00051-103">In *conditional compilation*, particular blocks of code in a program are compiled selectively while others are ignored.</span></span>  

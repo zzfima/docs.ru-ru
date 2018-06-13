@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651854"
 ---
 # <a name="references-and-the-imports-statement-visual-basic"></a><span data-ttu-id="110f3-102">Ссылки и оператор Imports (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="110f3-102">References and the Imports Statement (Visual Basic)</span></span>
 <span data-ttu-id="110f3-103">Вы внешние объекты можно сделать доступными для проекта, выбрав **добавить ссылку** на **проекта** меню.</span><span class="sxs-lookup"><span data-stu-id="110f3-103">You can make external objects available to your project by choosing the **Add Reference** command on the **Project** menu.</span></span> <span data-ttu-id="110f3-104">Ссылки в Visual Basic могут указывать на сборки, которые подобны библиотеки типов, но содержат больше сведений.</span><span class="sxs-lookup"><span data-stu-id="110f3-104">References in Visual Basic can point to assemblies, which are like type libraries but contain more information.</span></span>  

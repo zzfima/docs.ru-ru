@@ -9,6 +9,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234318"
 ---
 # <a name="unsupported-expressions"></a><span data-ttu-id="9483c-102">Неподдерживаемые выражения</span><span class="sxs-lookup"><span data-stu-id="9483c-102">Unsupported expressions</span></span>
 

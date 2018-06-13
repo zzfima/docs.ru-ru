@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652133"
 ---
 # <a name="-verbose"></a><span data-ttu-id="1764b-102">-verbose</span><span class="sxs-lookup"><span data-stu-id="1764b-102">-verbose</span></span>
 <span data-ttu-id="1764b-103">Указывает компилятору создавать подробные сообщения о состоянии и ошибки.</span><span class="sxs-lookup"><span data-stu-id="1764b-103">Causes the compiler to produce verbose status and error messages.</span></span>  

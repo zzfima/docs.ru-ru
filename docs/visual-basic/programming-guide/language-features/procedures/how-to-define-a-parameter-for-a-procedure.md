@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651117"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a><span data-ttu-id="0e9fa-102">Практическое руководство. Объявление параметра для процедуры (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0e9fa-102">How to: Define a Parameter for a Procedure (Visual Basic)</span></span>
 <span data-ttu-id="0e9fa-103">Объект *параметр* позволяет вызывающему коду значение передается в процедуру при ее вызове.</span><span class="sxs-lookup"><span data-stu-id="0e9fa-103">A *parameter* allows the calling code to pass a value to the procedure when it calls it.</span></span> <span data-ttu-id="0e9fa-104">Каждый параметр процедуры объявляется так же, как объявить переменную, указав его имя и тип данных.</span><span class="sxs-lookup"><span data-stu-id="0e9fa-104">You declare each parameter for a procedure the same way you declare a variable, specifying its name and data type.</span></span> <span data-ttu-id="0e9fa-105">Можно также задать способ передачи, и параметр является необязательным.</span><span class="sxs-lookup"><span data-stu-id="0e9fa-105">You also specify the passing mechanism, and whether the parameter is optional.</span></span>  

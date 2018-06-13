@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172507"
 ---
 # <a name="regular-expression-examples"></a><span data-ttu-id="8cd15-102">Примеры регулярных выражений</span><span class="sxs-lookup"><span data-stu-id="8cd15-102">Regular Expression Examples</span></span>
 <span data-ttu-id="8cd15-103">В этом разделе представлены примеры кодов, иллюстрирующих использование регулярных выражений в обычных приложениях.</span><span class="sxs-lookup"><span data-stu-id="8cd15-103">This section contains code examples that illustrate the use of regular expressions in common applications.</span></span>  

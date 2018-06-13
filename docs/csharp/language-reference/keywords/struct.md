@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172153"
 ---
 # <a name="struct-c-reference"></a><span data-ttu-id="f2d34-102">struct (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="f2d34-102">struct (C# Reference)</span></span>
 <span data-ttu-id="f2d34-103">Тип `struct` представляет собой тип значения, который обычно используется для инкапсуляции небольших групп связанных переменных, например координат прямоугольника или характеристик элемента в инвентаризации.</span><span class="sxs-lookup"><span data-stu-id="f2d34-103">A `struct` type is a value type that is typically used to encapsulate small groups of related variables, such as the coordinates of a rectangle or the characteristics of an item in an inventory.</span></span> <span data-ttu-id="f2d34-104">В следующем примере показано простое объявление структуры:</span><span class="sxs-lookup"><span data-stu-id="f2d34-104">The following example shows a simple struct declaration:</span></span>  

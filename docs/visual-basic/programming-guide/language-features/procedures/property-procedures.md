@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656091"
 ---
 # <a name="property-procedures-visual-basic"></a><span data-ttu-id="6a76a-102">Процедуры свойств (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6a76a-102">Property Procedures (Visual Basic)</span></span>
 <span data-ttu-id="6a76a-103">Процедура свойства — это последовательность операторов Visual Basic, которые позволяют управлять пользовательским свойством модуля, класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="6a76a-103">A property procedure is a series of Visual Basic statements that manipulate a custom property on a module, class, or structure.</span></span> <span data-ttu-id="6a76a-104">Процедуры свойств также называются *свойствам*.</span><span class="sxs-lookup"><span data-stu-id="6a76a-104">Property procedures are also known as *property accessors*.</span></span>  

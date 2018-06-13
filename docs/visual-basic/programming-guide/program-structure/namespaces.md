@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655562"
 ---
 # <a name="namespaces-in-visual-basic"></a><span data-ttu-id="e6d83-102">Пространства имен в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e6d83-102">Namespaces in Visual Basic</span></span>
 <span data-ttu-id="e6d83-103">Пространства имен упорядочивают объекты, определенные в сборке.</span><span class="sxs-lookup"><span data-stu-id="e6d83-103">Namespaces organize the objects defined in an assembly.</span></span> <span data-ttu-id="e6d83-104">Сборки могут содержать несколько пространств имен, которые, в свою очередь, могут содержать другие пространства имен.</span><span class="sxs-lookup"><span data-stu-id="e6d83-104">Assemblies can contain multiple namespaces, which can in turn contain other namespaces.</span></span> <span data-ttu-id="e6d83-105">Пространства имен предотвращают неоднозначность и упрощают ссылки при использовании больших групп объектов, таких как библиотеки классов.</span><span class="sxs-lookup"><span data-stu-id="e6d83-105">Namespaces prevent ambiguity and simplify references when using large groups of objects such as class libraries.</span></span>  

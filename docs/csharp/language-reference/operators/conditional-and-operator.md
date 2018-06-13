@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171919"
 ---
 # <a name="ampamp-operator-c-reference"></a><span data-ttu-id="f85dd-102">Оператор &amp;&amp; (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="f85dd-102">&amp;&amp; Operator (C# Reference)</span></span>
 <span data-ttu-id="f85dd-103">Условный оператор И (`&&`) выполняет логическую операцию И применительно к своим операндам типа `bool`, но вычисляет только второй операнд при необходимости.</span><span class="sxs-lookup"><span data-stu-id="f85dd-103">The conditional-AND operator (`&&`) performs a logical-AND of its `bool` operands, but only evaluates its second operand if necessary.</span></span>  

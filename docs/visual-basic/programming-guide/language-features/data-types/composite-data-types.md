@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650443"
 ---
 # <a name="composite-data-types-visual-basic"></a><span data-ttu-id="03326-102">Составные типы данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="03326-102">Composite Data Types (Visual Basic)</span></span>
 <span data-ttu-id="03326-103">В дополнение к данных простые типы Visual Basic, можно создавать из элементов различных типов, чтобы создать *составные типы данных* как структуры, массивы и классы.</span><span class="sxs-lookup"><span data-stu-id="03326-103">In addition to the elementary data types Visual Basic supplies, you can also assemble items of different types to create *composite data types* such as structures, arrays, and classes.</span></span> <span data-ttu-id="03326-104">Можно создавать составные типы данных из простых типов или из других составных типов.</span><span class="sxs-lookup"><span data-stu-id="03326-104">You can build composite data types from elementary types and from other composite types.</span></span> <span data-ttu-id="03326-105">Например можно определить массив элементов структуры или структуру с членами массива.</span><span class="sxs-lookup"><span data-stu-id="03326-105">For example, you can define an array of structure elements, or a structure with array members.</span></span>  

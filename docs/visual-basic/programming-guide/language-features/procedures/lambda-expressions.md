@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654798"
 ---
 # <a name="lambda-expressions-visual-basic"></a><span data-ttu-id="5567a-102">Лямбда-выражения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5567a-102">Lambda Expressions (Visual Basic)</span></span>
 <span data-ttu-id="5567a-103">Объект *лямбда-выражение* — это функция или подпрограмма без имени, которую можно использовать везде, где допустим делегат.</span><span class="sxs-lookup"><span data-stu-id="5567a-103">A *lambda expression* is a function or subroutine without a name that can be used wherever a delegate is valid.</span></span> <span data-ttu-id="5567a-104">Лямбда-выражения могут быть функции или подпрограммы и может быть одной или нескольких строк.</span><span class="sxs-lookup"><span data-stu-id="5567a-104">Lambda expressions can be functions or subroutines and can be single-line or multi-line.</span></span> <span data-ttu-id="5567a-105">Лямбда-выражение можно передавать значения из текущей области.</span><span class="sxs-lookup"><span data-stu-id="5567a-105">You can pass values from the current scope to a lambda expression.</span></span>  

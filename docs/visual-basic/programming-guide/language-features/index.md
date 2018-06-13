@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652016"
 ---
 # <a name="visual-basic-language-features"></a><span data-ttu-id="27d35-102">Возможности и элементы языка Visual Basic</span><span class="sxs-lookup"><span data-stu-id="27d35-102">Visual Basic Language Features</span></span>
 <span data-ttu-id="27d35-103">Следующих разделах описываются и обсуждаются основные компоненты объектно ориентированный язык программирования Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="27d35-103">The following topics introduce and discuss the essential components of Visual Basic, an object-oriented programming language.</span></span> <span data-ttu-id="27d35-104">После того, как вы подготовите пользовательский интерфейс для вашего приложения с помощью форм и элементов управления, необходимо написать код, определяющий поведение приложения.</span><span class="sxs-lookup"><span data-stu-id="27d35-104">After creating the user interface for your application using forms and controls, you need to write the code that defines the application's behavior.</span></span> <span data-ttu-id="27d35-105">Как и любой современный язык программирования Visual Basic поддерживает ряд общих программных конструкций и элементов языка.</span><span class="sxs-lookup"><span data-stu-id="27d35-105">As with any modern programming language, Visual Basic supports a number of common programming constructs and language elements.</span></span>  

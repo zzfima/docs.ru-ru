@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652553"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a><span data-ttu-id="a467f-102">Как: запись данных объекта в XML-файл (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a467f-102">How to: Write Object Data to an XML File (Visual Basic)</span></span>
 <span data-ttu-id="a467f-103">Показывает, как записать объект из класса в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="a467f-103">This example writes the object from a class to an XML file using the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650833"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a><span data-ttu-id="24b5a-102">Неявное преобразование делегата (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="24b5a-102">Relaxed Delegate Conversion (Visual Basic)</span></span>
 <span data-ttu-id="24b5a-103">Неявное преобразование делегата позволяет присваивать делегатам обработчики, подпрограммы и функции, даже в том случае, если их подписи не совпадают.</span><span class="sxs-lookup"><span data-stu-id="24b5a-103">Relaxed delegate conversion enables you to assign subs and functions to delegates or handlers even when their signatures are not identical.</span></span> <span data-ttu-id="24b5a-104">Таким образом привязка к делегату становится согласованной с привязкой уже разрешенной в вызове метода.</span><span class="sxs-lookup"><span data-stu-id="24b5a-104">Therefore, binding to delegates becomes consistent with the binding already allowed for method invocations.</span></span>  

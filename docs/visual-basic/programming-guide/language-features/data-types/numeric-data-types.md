@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654207"
 ---
 # <a name="numeric-data-types-visual-basic"></a><span data-ttu-id="a0d38-102">Числовые типы данных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a0d38-102">Numeric Data Types (Visual Basic)</span></span>
 <span data-ttu-id="a0d38-103">Visual Basic предоставляет несколько *числовых типов данных* для обработки чисел в различных представлениях.</span><span class="sxs-lookup"><span data-stu-id="a0d38-103">Visual Basic supplies several *numeric data types* for handling numbers in various representations.</span></span> <span data-ttu-id="a0d38-104">*Целочисленный* типам относятся только целые числа (положительные, отрицательные и ноль), и *нецелочисленным* — с целую и дробную части числа.</span><span class="sxs-lookup"><span data-stu-id="a0d38-104">*Integral* types represent only whole numbers (positive, negative, and zero), and *nonintegral* types represent numbers with both integer and fractional parts.</span></span>  

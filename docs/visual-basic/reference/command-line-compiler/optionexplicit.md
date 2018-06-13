@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653602"
 ---
 # <a name="-optionexplicit"></a><span data-ttu-id="84109-102">-optionexplicit</span><span class="sxs-lookup"><span data-stu-id="84109-102">-optionexplicit</span></span>
 <span data-ttu-id="84109-103">Указывает компилятору на отправку отчетов об ошибках, если переменная не объявлена до их использования.</span><span class="sxs-lookup"><span data-stu-id="84109-103">Causes the compiler to report errors if variables are not declared before they are used.</span></span>  

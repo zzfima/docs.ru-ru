@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653485"
 ---
 # <a name="-keyfile"></a><span data-ttu-id="003d2-102">-keyfile</span><span class="sxs-lookup"><span data-stu-id="003d2-102">-keyfile</span></span>
 <span data-ttu-id="003d2-103">Указывает файл, содержащий ключ или пару ключей, чтобы задать для сборки строгое имя.</span><span class="sxs-lookup"><span data-stu-id="003d2-103">Specifies a file containing a key or key pair to give an assembly a strong name.</span></span>  

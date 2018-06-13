@@ -30,6 +30,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654334"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a><span data-ttu-id="94a16-102">Вопросы, связанные с перегрузкой процедур (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="94a16-102">Considerations in Overloading Procedures (Visual Basic)</span></span>
 <span data-ttu-id="94a16-103">При перегрузке процедур необходимо использовать другой *подписи* для каждой из перегруженных версий.</span><span class="sxs-lookup"><span data-stu-id="94a16-103">When you overload a procedure, you must use a different *signature* for each overloaded version.</span></span> <span data-ttu-id="94a16-104">Обычно это означает, что каждой версии необходимо указать другим списком параметров.</span><span class="sxs-lookup"><span data-stu-id="94a16-104">This usually means each version must specify a different parameter list.</span></span> <span data-ttu-id="94a16-105">Дополнительные сведения см. в разделе «Сигнатура» в [перегрузка процедур](./procedure-overloading.md).</span><span class="sxs-lookup"><span data-stu-id="94a16-105">For more information, see "Different Signature" in [Procedure Overloading](./procedure-overloading.md).</span></span>  

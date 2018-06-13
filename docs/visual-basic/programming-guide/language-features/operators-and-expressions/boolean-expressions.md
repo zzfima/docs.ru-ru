@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655802"
 ---
 # <a name="boolean-expressions-visual-basic"></a><span data-ttu-id="5b096-102">Логические выражения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="5b096-102">Boolean Expressions (Visual Basic)</span></span>
 <span data-ttu-id="5b096-103">Объект *логическое выражение* — это выражение, результатом которого является значение из [тип данных Boolean](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` или `False`.</span><span class="sxs-lookup"><span data-stu-id="5b096-103">A *Boolean expression* is an expression that evaluates to a value of the [Boolean Data Type](../../../../visual-basic/language-reference/data-types/boolean-data-type.md): `True` or `False`.</span></span> <span data-ttu-id="5b096-104">`Boolean` выражения могут принимать различные формы.</span><span class="sxs-lookup"><span data-stu-id="5b096-104">`Boolean` expressions can take several forms.</span></span> <span data-ttu-id="5b096-105">Самым простым является прямое сравнение значения `Boolean` переменной `Boolean` литерал, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="5b096-105">The simplest is the direct comparison of the value of a `Boolean` variable to a `Boolean` literal, as shown in the following example.</span></span>  

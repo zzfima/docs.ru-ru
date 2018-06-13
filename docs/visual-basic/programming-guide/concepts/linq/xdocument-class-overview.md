@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651188"
 ---
 # <a name="xdocument-class-overview-visual-basic"></a><span data-ttu-id="26ae1-102">Обзор класса XDocument (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="26ae1-102">XDocument Class Overview (Visual Basic)</span></span>
 <span data-ttu-id="26ae1-103">В этом разделе представлен класс <xref:System.Xml.Linq.XDocument>.</span><span class="sxs-lookup"><span data-stu-id="26ae1-103">This topic introduces the <xref:System.Xml.Linq.XDocument> class.</span></span>  

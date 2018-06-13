@@ -26,6 +26,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651022"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a><span data-ttu-id="3cfb1-102">Практическое руководство. Разбиение и объединение инструкций в коде (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3cfb1-102">How to: Break and Combine Statements in Code (Visual Basic)</span></span>
 <span data-ttu-id="3cfb1-103">При написании кода, в некоторых случаях может создать длинный оператор, требующий горизонтальной прокрутки в окне редактора кода.</span><span class="sxs-lookup"><span data-stu-id="3cfb1-103">When writing your code, you might at times create lengthy statements that necessitate horizontal scrolling in the Code Editor.</span></span> <span data-ttu-id="3cfb1-104">Несмотря на то, что это не влияет на внешний код выполняется, он создает сложности при или кто-то еще чтение кода, как он отображается на мониторе.</span><span class="sxs-lookup"><span data-stu-id="3cfb1-104">Although this doesn't affect the way your code runs, it makes it difficult for you or anyone else to read the code as it appears on the monitor.</span></span> <span data-ttu-id="3cfb1-105">В таких случаях следует разбивает один длинный оператор на несколько строк.</span><span class="sxs-lookup"><span data-stu-id="3cfb1-105">In such cases, you should consider breaking the single long statement into several lines.</span></span>  

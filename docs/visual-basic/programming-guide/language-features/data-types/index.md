@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650456"
 ---
 # <a name="data-types-in-visual-basic"></a><span data-ttu-id="1220a-102">Типы данных в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1220a-102">Data Types in Visual Basic</span></span>
 <span data-ttu-id="1220a-103">*Тип данных* программного элемента определяет данные, которые он может содержать, а также способ их хранения.</span><span class="sxs-lookup"><span data-stu-id="1220a-103">The *data type* of a programming element refers to what kind of data it can hold and how it stores that data.</span></span> <span data-ttu-id="1220a-104">Типы данных применяются ко всем значениям, которые могут храниться в памяти компьютера или участвовать в вычислении выражения.</span><span class="sxs-lookup"><span data-stu-id="1220a-104">Data types apply to all values that can be stored in computer memory or participate in the evaluation of an expression.</span></span> <span data-ttu-id="1220a-105">Все переменные, литералы, константы, перечисления, свойства, параметры и аргументы процедуры, а также возвращаемые значения процедуры относятся к определенному типу данных.</span><span class="sxs-lookup"><span data-stu-id="1220a-105">Every variable, literal, constant, enumeration, property, procedure parameter, procedure argument, and procedure return value has a data type.</span></span>  

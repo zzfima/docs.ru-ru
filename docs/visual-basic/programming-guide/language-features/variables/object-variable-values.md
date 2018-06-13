@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652120"
 ---
 # <a name="object-variable-values-visual-basic"></a><span data-ttu-id="03b10-102">Значения объектных переменных (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="03b10-102">Object Variable Values (Visual Basic)</span></span>
 <span data-ttu-id="03b10-103">Переменная [тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md) может ссылаться на данные любого типа.</span><span class="sxs-lookup"><span data-stu-id="03b10-103">A variable of the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md) can refer to data of any type.</span></span> <span data-ttu-id="03b10-104">Значение, сохраненное в `Object` переменной хранится в памяти, а сама переменная содержит указатель на данные.</span><span class="sxs-lookup"><span data-stu-id="03b10-104">The value you store in an `Object` variable is kept elsewhere in memory, while the variable itself holds a pointer to the data.</span></span>  

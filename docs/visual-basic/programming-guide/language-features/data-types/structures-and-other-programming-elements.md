@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652029"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a><span data-ttu-id="547e6-102">Структуры и другие элементы программирования (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="547e6-102">Structures and Other Programming Elements (Visual Basic)</span></span>
 <span data-ttu-id="547e6-103">Структуры можно использовать в сочетании с массивов, объектов и процедуры, а также друг с другом.</span><span class="sxs-lookup"><span data-stu-id="547e6-103">You can use structures in conjunction with arrays, objects, and procedures, as well as with each other.</span></span> <span data-ttu-id="547e6-104">При взаимодействии применяется тот же синтаксис, который используется этими элементами по отдельности.</span><span class="sxs-lookup"><span data-stu-id="547e6-104">The interactions use the same syntax as these elements use individually.</span></span>  

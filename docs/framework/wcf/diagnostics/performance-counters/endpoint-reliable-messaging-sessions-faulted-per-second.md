@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33472775"
 ---
 # <a name="endpoint-reliable-messaging-sessions-faulted-per-second"></a><span data-ttu-id="5ef7f-102">Конечная точка: количество надежных сеансов обмена сообщениями, в которых произошел сбой, в секунду</span><span class="sxs-lookup"><span data-stu-id="5ef7f-102">Endpoint: Reliable Messaging Sessions Faulted Per Second</span></span>
 <span data-ttu-id="5ef7f-103">Имя счетчика: Reliable Messaging Sessions Faulted Per Second.</span><span class="sxs-lookup"><span data-stu-id="5ef7f-103">Counter Name: Reliable Messaging Sessions Faulted Per Second.</span></span>  

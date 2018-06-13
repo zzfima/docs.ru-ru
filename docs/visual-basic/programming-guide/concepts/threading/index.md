@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651869"
 ---
 # <a name="threading-visual-basic"></a><span data-ttu-id="30a20-102">Работа с потоками (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="30a20-102">Threading (Visual Basic)</span></span>
 <span data-ttu-id="30a20-103">Потоки позволяют программе на Visual Basic осуществлять параллельную обработку, то есть вы можете выполнять несколько операций одновременно.</span><span class="sxs-lookup"><span data-stu-id="30a20-103">Threading enables your Visual Basic program to perform concurrent processing so that you can do more than one operation at a time.</span></span> <span data-ttu-id="30a20-104">Например, потоки можно использовать для отслеживания пользовательского ввода, выполнения фоновых задач и одновременной обработки нескольких потоков ввода.</span><span class="sxs-lookup"><span data-stu-id="30a20-104">For example, you can use threading to monitor input from the user, perform background tasks, and handle simultaneous streams of input.</span></span>  

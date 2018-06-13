@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650417"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a><span data-ttu-id="14188-102">Обработка XML в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="14188-102">Manipulating XML in Visual Basic</span></span>
 <span data-ttu-id="14188-103">Можно использовать *XML-литералы* для загрузки XML из внешнего источника, таких как строка, файл или поток.</span><span class="sxs-lookup"><span data-stu-id="14188-103">You can use *XML literals* to load XML from an external source such as a string, file, or stream.</span></span> <span data-ttu-id="14188-104">Затем можно использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] для управления XML и использования [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] для составления запросов XML.</span><span class="sxs-lookup"><span data-stu-id="14188-104">You can then use [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] to manipulate the XML and use [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] to query the XML.</span></span>  

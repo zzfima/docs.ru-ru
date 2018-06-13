@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653274"
 ---
 # <a name="serialization-visual-basic"></a><span data-ttu-id="f0d34-102">Сериализация (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f0d34-102">Serialization (Visual Basic)</span></span>
 <span data-ttu-id="f0d34-103">Сериализация — это процесс преобразования объекта в поток байтов для сохранения или передачи в память, в базу данных или в файл.</span><span class="sxs-lookup"><span data-stu-id="f0d34-103">Serialization is the process of converting an object into a stream of bytes in order to store the object or transmit it to memory, a database, or a file.</span></span> <span data-ttu-id="f0d34-104">Эта операция предназначена для того, чтобы сохранить состояния объекта для последующего воссоздания при необходимости.</span><span class="sxs-lookup"><span data-stu-id="f0d34-104">Its main purpose is to save the state of an object in order to be able to recreate it when needed.</span></span> <span data-ttu-id="f0d34-105">Обратный процесс называется десериализацией.</span><span class="sxs-lookup"><span data-stu-id="f0d34-105">The reverse process is called deserialization.</span></span>  

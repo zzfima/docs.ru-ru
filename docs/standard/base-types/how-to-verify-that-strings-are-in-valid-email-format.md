@@ -25,6 +25,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172345"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a><span data-ttu-id="73577-102">Практическое руководство. Проверка строк на соответствие формату электронной почты</span><span class="sxs-lookup"><span data-stu-id="73577-102">How to: Verify that Strings Are in Valid Email Format</span></span>
 <span data-ttu-id="73577-103">В следующем примере регулярное выражение используется, чтобы проверить, имеет ли строка допустимый формат адреса электронной почты.</span><span class="sxs-lookup"><span data-stu-id="73577-103">The following example uses a regular expression to verify that a string is in valid email format.</span></span>  

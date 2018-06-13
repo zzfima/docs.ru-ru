@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635843"
 ---
 # <a name="could-not-obtain-memory-information-due-to-internal-error"></a><span data-ttu-id="7355c-102">Не удается получить сведения о памяти из-за внутренней ошибки.</span><span class="sxs-lookup"><span data-stu-id="7355c-102">Could not obtain memory information due to internal error</span></span>
 <span data-ttu-id="7355c-103">Вызов одного из свойств сведений о памяти объекта `My.Computer.Info` завершился неудачно.</span><span class="sxs-lookup"><span data-stu-id="7355c-103">A call to one of the memory-information properties of the `My.Computer.Info` object failed.</span></span>  

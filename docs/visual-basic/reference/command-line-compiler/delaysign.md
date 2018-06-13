@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654246"
 ---
 # <a name="-delaysign"></a><span data-ttu-id="c173f-102">-delaysign</span><span class="sxs-lookup"><span data-stu-id="c173f-102">-delaysign</span></span>
 <span data-ttu-id="c173f-103">Указывает, будет ли сборка полностью или частично подписана.</span><span class="sxs-lookup"><span data-stu-id="c173f-103">Specifies whether the assembly will be fully or partially signed.</span></span>  

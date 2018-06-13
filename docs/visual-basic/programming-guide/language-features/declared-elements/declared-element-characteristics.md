@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650898"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a><span data-ttu-id="414fa-102">Характеристики объявленных элементов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="414fa-102">Declared Element Characteristics (Visual Basic)</span></span>
 <span data-ttu-id="414fa-103">Объект *характеристика* объявленного элемента называется свойство этого элемента, определяющее, как код может взаимодействовать с ним.</span><span class="sxs-lookup"><span data-stu-id="414fa-103">A *characteristic* of a declared element is an aspect of that element that affects how code can interact with it.</span></span> <span data-ttu-id="414fa-104">У каждого объявленного элемента имеется один или несколько из следующих характеристик, связанные с ним:</span><span class="sxs-lookup"><span data-stu-id="414fa-104">Every declared element has one or more of the following characteristics associated with it:</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33653628"
 ---
 # <a name="-specify-response-file-visual-basic"></a><span data-ttu-id="88864-102">@ (указание файла ответа) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="88864-102">@ (Specify Response File) (Visual Basic)</span></span>
 <span data-ttu-id="88864-103">Указывает файл, содержащий параметры компилятора и файлы исходного кода для компиляции.</span><span class="sxs-lookup"><span data-stu-id="88864-103">Specifies a file that contains compiler options and source-code files to compile.</span></span>  

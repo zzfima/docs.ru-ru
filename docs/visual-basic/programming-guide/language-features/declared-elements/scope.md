@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656299"
 ---
 # <a name="scope-in-visual-basic"></a><span data-ttu-id="da16a-102">Область видимости в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="da16a-102">Scope in Visual Basic</span></span>
 <span data-ttu-id="da16a-103">*Область* объявленного элемента — это набор всех элементов кода, на него можно ссылаться без уточнения его имени или получения его с помощью [оператор Imports (пространство имен .NET и тип)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span><span class="sxs-lookup"><span data-stu-id="da16a-103">The *scope* of a declared element is the set of all code that can refer to it without qualifying its name or making it available through an [Imports Statement (.NET Namespace and Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).</span></span> <span data-ttu-id="da16a-104">Элемент может иметь область на одном из следующих уровней:</span><span class="sxs-lookup"><span data-stu-id="da16a-104">An element can have scope at one of the following levels:</span></span>  

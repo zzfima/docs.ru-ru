@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651457"
 ---
 # <a name="-help---visual-basic"></a><span data-ttu-id="7ef00-103">-help, -?</span><span class="sxs-lookup"><span data-stu-id="7ef00-103">-help, -?</span></span> <span data-ttu-id="7ef00-104">(Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7ef00-104">(Visual Basic)</span></span>
 <span data-ttu-id="7ef00-105">Отображает параметры компилятора.</span><span class="sxs-lookup"><span data-stu-id="7ef00-105">Displays the compiler options.</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650973"
 ---
 # <a name="comments-in-code-visual-basic"></a><span data-ttu-id="1132b-102">Комментарии в коде (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="1132b-102">Comments in Code (Visual Basic)</span></span>
 <span data-ttu-id="1132b-103">В примерах кодов часто встречается символ начала комментария (`'`).</span><span class="sxs-lookup"><span data-stu-id="1132b-103">As you read the code examples, you often encounter the comment symbol (`'`).</span></span> <span data-ttu-id="1132b-104">Этот символ дает компилятору Visual Basic проигнорировать последующий текст, или *комментарий*.</span><span class="sxs-lookup"><span data-stu-id="1132b-104">This symbol tells the Visual Basic compiler to ignore the text following it, or the *comment*.</span></span> <span data-ttu-id="1132b-105">Комментарии — это краткие заметки, внесенные в код, чтобы сделать чтение кода более легким.</span><span class="sxs-lookup"><span data-stu-id="1132b-105">Comments are brief explanatory notes added to code for the benefit of those reading it.</span></span>  

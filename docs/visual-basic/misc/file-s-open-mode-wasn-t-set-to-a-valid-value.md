@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635910"
 ---
 # <a name="file39s-open-mode-wasn39t-set-to-a-valid-value"></a><span data-ttu-id="c0515-102">Файл&#39;s открыть нельзя считать режим&#39;задано допустимое значение</span><span class="sxs-lookup"><span data-stu-id="c0515-102">File&#39;s open mode wasn&#39;t set to a valid value</span></span>
 <span data-ttu-id="c0515-103">Значение, указанное для режима открытия файла, недопустимо.</span><span class="sxs-lookup"><span data-stu-id="c0515-103">The value supplied for the file's open mode was not valid.</span></span> <span data-ttu-id="c0515-104">В следующей таблице показаны допустимые значения перечисления <xref:Microsoft.VisualBasic.OpenMode> .</span><span class="sxs-lookup"><span data-stu-id="c0515-104">The following table shows valid values for the <xref:Microsoft.VisualBasic.OpenMode> enumeration.</span></span>  

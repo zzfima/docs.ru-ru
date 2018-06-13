@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33654113"
 ---
 # <a name="other-control-structures-visual-basic"></a><span data-ttu-id="82def-102">Другие структуры управления (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="82def-102">Other Control Structures (Visual Basic)</span></span>
 <span data-ttu-id="82def-103">Visual Basic предоставляет структур управления, которые помогают удаления ресурсов или уменьшите число повторений ссылок на объект.</span><span class="sxs-lookup"><span data-stu-id="82def-103">Visual Basic provides control structures that help you dispose of a resource or reduce the number of times you have to repeat an object reference.</span></span>  
