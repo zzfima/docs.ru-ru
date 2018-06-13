@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566903"
 ---
 # <a name="storyboards-overview"></a>Общие сведения о Storyboard
 В этом разделе показано, как использовать <xref:System.Windows.Media.Animation.Storyboard> объектов для организации и применения анимации. Описывает интерактивно использовать <xref:System.Windows.Media.Animation.Storyboard> объектов и описывает синтаксис косвенного выбора свойств.  

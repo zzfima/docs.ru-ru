@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758361"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>Добавление существующих ограничений к набору данных
 **Заполнения** метод **DataAdapter** заполняет <xref:System.Data.DataSet> только со столбцами таблицы и строки из источника данных; Однако обычно устанавливают ограничения по источнику данных **заполнения** метод не добавляет эти данные схемы к **DataSet** по умолчанию. Для заполнения **DataSet** с существующие ограничения первичного ключа сведения из источника данных, можно вызвать **FillSchema** метод **DataAdapter**, или задать **MissingSchemaAction** свойство **DataAdapter** для **AddWithKey** перед вызовом **заполнения**. Это позволит гарантировать, что первичный ключ ограничений в **DataSet** отражаются в источнике данных. Ограничение внешнего ключа сведения не включено и должны создаваться явно, как показано в [ограничения таблиц данных](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md).  

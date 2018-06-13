@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568060"
 ---
 # <a name="changing-namespace-declarations-in-an-xml-document"></a>Изменение деклараций пространств имен в XML-документе
 Класс **XmlDocument** представляет декларацию пространств имен и атрибуты **xmlns** как часть модели DOM. Они хранятся в объекте **XmlDocument**, поэтому при сохранении документа он может сохранить расположение этих атрибутов. Изменение этих атрибутов не влияет на свойства **Name**, **NamespaceURI** и **Prefix** других узлов, уже находящихся в дереве. Например, при загрузке следующего документа свойство `test`NamespaceURI**элемента** будет иметь значение `123.`  
