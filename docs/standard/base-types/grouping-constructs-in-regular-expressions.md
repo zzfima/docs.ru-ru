@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579825"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a><span data-ttu-id="2fd4c-102">Конструкции группировки в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="2fd4c-102">Grouping Constructs in Regular Expressions</span></span>
 <span data-ttu-id="2fd4c-103">Конструкции группирования отображают части выражений регулярных выражений и захватывают части строки входной строки.</span><span class="sxs-lookup"><span data-stu-id="2fd4c-103">Grouping constructs delineate the subexpressions of a regular expression and capture the substrings of an input string.</span></span> <span data-ttu-id="2fd4c-104">Конструкции группирования можно использовать в следующих целях.</span><span class="sxs-lookup"><span data-stu-id="2fd4c-104">You can use grouping constructs to do the following:</span></span>  

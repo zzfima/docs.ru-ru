@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595856"
 ---
 # <a name="39set39-accessor-of-property-39ltpropertynamegt39-is-not-accessible"></a><span data-ttu-id="cd614-102">&#39;Задать&#39; метод доступа свойства &#39; &lt;propertyname&gt; &#39; недоступен</span><span class="sxs-lookup"><span data-stu-id="cd614-102">&#39;Set&#39; accessor of property &#39;&lt;propertyname&gt;&#39; is not accessible</span></span>
 <span data-ttu-id="cd614-103">Оператор пытается сохранить значение свойства, если он не имеет доступа к свойству `Set` процедуры.</span><span class="sxs-lookup"><span data-stu-id="cd614-103">A statement attempts to store the value of a property when it does not have access to the property's `Set` procedure.</span></span>  

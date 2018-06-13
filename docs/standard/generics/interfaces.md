@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575977"
 ---
 # <a name="generic-interfaces"></a><span data-ttu-id="c4c2f-102">Универсальные интерфейсы</span><span class="sxs-lookup"><span data-stu-id="c4c2f-102">Generic Interfaces</span></span>
 <span data-ttu-id="c4c2f-103">В этом разделе приводится обзор универсальных интерфейсов, которые предоставляют общие функциональные возможности для различных семейств универсальных типов.</span><span class="sxs-lookup"><span data-stu-id="c4c2f-103">This topic provides an overview of generic interfaces that provide common functionality across families of generic types.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599887"
 ---
 # <a name="argument-cannot-be-less-than-zero"></a><span data-ttu-id="8e389-102">Аргумент не может быть меньше нуля</span><span class="sxs-lookup"><span data-stu-id="8e389-102">Argument cannot be less than zero</span></span>
 <span data-ttu-id="8e389-103">Использовано значение меньше нуля, но аргумент не может быть меньше нуля.</span><span class="sxs-lookup"><span data-stu-id="8e389-103">A value that is less than zero has been supplied, but the argument cannot be less than zero.</span></span>  

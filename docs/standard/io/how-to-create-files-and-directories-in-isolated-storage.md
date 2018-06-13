@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575191"
 ---
 # <a name="how-to-create-files-and-directories-in-isolated-storage"></a><span data-ttu-id="77f70-102">Практическое руководство. Создание файлов и каталогов в изолированном хранилище</span><span class="sxs-lookup"><span data-stu-id="77f70-102">How to: Create Files and Directories in Isolated Storage</span></span>
 <span data-ttu-id="77f70-103">Получив изолированное хранилище, в нем можно создавать файлы и папки для хранения данных.</span><span class="sxs-lookup"><span data-stu-id="77f70-103">After you have obtained an isolated store, you can create directories and files for storing data.</span></span> <span data-ttu-id="77f70-104">В хранилище имена файлов и каталогов указываются относительно корня виртуальной файловой системы.</span><span class="sxs-lookup"><span data-stu-id="77f70-104">Within a store, file and directory names are specified with respect to the root of the virtual file system.</span></span>  

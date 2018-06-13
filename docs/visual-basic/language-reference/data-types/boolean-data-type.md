@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590281"
 ---
 # <a name="boolean-data-type-visual-basic"></a><span data-ttu-id="cc5ac-102">Тип данных Boolean (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cc5ac-102">Boolean Data Type (Visual Basic)</span></span>
 <span data-ttu-id="cc5ac-103">Содержит значения, которые могут быть только `True` или `False`.</span><span class="sxs-lookup"><span data-stu-id="cc5ac-103">Holds values that can be only `True` or `False`.</span></span> <span data-ttu-id="cc5ac-104">Ключевые слова `True` и `False` соответствуют двух состояний `Boolean` переменных.</span><span class="sxs-lookup"><span data-stu-id="cc5ac-104">The keywords `True` and `False` correspond to the two states of `Boolean` variables.</span></span>  

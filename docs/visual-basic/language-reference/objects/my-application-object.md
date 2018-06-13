@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595229"
 ---
 # <a name="myapplication-object"></a><span data-ttu-id="dc419-102">Объект My.Application</span><span class="sxs-lookup"><span data-stu-id="dc419-102">My.Application Object</span></span>
 <span data-ttu-id="dc419-103">Предоставляет свойства, методы и события, связанные с текущим приложением.</span><span class="sxs-lookup"><span data-stu-id="dc419-103">Provides properties, methods, and events related to the current application.</span></span>  

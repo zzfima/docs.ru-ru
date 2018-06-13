@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592462"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a><span data-ttu-id="5c5fb-102">XML Schema Definition Tool (Xsd.exe)</span><span class="sxs-lookup"><span data-stu-id="5c5fb-102">XML Schema Definition Tool (Xsd.exe)</span></span>
 <span data-ttu-id="5c5fb-103">Инструмент определения схемы XML (Xsd.exe) создает схему XML или классы CLR из файлов XDR, XML и XSD либо из классов в сборке среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="5c5fb-103">The XML Schema Definition (Xsd.exe) tool generates XML schema or common language runtime classes from XDR, XML, and XSD files, or from classes in a runtime assembly.</span></span>  

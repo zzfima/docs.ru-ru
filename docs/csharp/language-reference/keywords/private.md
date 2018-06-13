@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171867"
 ---
 # <a name="private-c-reference"></a><span data-ttu-id="156da-102">private (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="156da-102">private (C# Reference)</span></span>
 <span data-ttu-id="156da-103">Ключевое слово `private` является модификатором доступа к члену.</span><span class="sxs-lookup"><span data-stu-id="156da-103">The `private` keyword is a member access modifier.</span></span> 

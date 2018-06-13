@@ -10,6 +10,7 @@ ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/25/2018
+ms.locfileid: "34549595"
 ---
 # <a name="iteration-statements-c-reference"></a><span data-ttu-id="a0ecd-102">Операторы перебора (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="a0ecd-102">Iteration Statements (C# Reference)</span></span>
 

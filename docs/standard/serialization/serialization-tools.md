@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581411"
 ---
 # <a name="serialization-tools"></a><span data-ttu-id="2f992-102">Инструменты сериализации</span><span class="sxs-lookup"><span data-stu-id="2f992-102">Serialization Tools</span></span>
 <span data-ttu-id="2f992-103">Данный раздел содержит подробные сведения об инструментах сериализации.</span><span class="sxs-lookup"><span data-stu-id="2f992-103">This section contains detailed information about the serialization tools.</span></span> <span data-ttu-id="2f992-104">Все инструменты можно запускать из командной строки.</span><span class="sxs-lookup"><span data-stu-id="2f992-104">You can run all the tools from the command line.</span></span>  

@@ -23,6 +23,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457612"
 ---
 # <a name="c-operators"></a><span data-ttu-id="e4ef4-102">Операторы C#</span><span class="sxs-lookup"><span data-stu-id="e4ef4-102">C# Operators</span></span>
 <span data-ttu-id="e4ef4-103">C# предоставляет множество операторов, которые являются символами, указывающими, какие операции (математические операции, индексирование, вызов функции и т. д.) следует выполнять в выражении.</span><span class="sxs-lookup"><span data-stu-id="e4ef4-103">C# provides many operators, which are symbols that specify which operations (math, indexing, function call, etc.) to perform in an expression.</span></span> <span data-ttu-id="e4ef4-104">Вы можете [перегрузить](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) многие операторы, то есть изменить их значение при применении к некоторому пользовательскому типу.</span><span class="sxs-lookup"><span data-stu-id="e4ef4-104">You can [overload](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) many operators to change their meaning when applied to a user-defined type.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589858"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a><span data-ttu-id="b0bc4-102">Локальное хранилище потока: статические поля потока и области данных</span><span class="sxs-lookup"><span data-stu-id="b0bc4-102">Thread Local Storage: Thread-Relative Static Fields and Data Slots</span></span>
 <span data-ttu-id="b0bc4-103">Вы можете использовать управляемую локальную память потока для хранения данных, которые являются уникальными для потока и домена приложения.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-103">You can use managed thread local storage (TLS) to store data that is unique to a thread and application domain.</span></span> <span data-ttu-id="b0bc4-104">Платформа .NET Framework предоставляет два способа работы с локальной памятью: статические поля потоков и ячейки данных.</span><span class="sxs-lookup"><span data-stu-id="b0bc4-104">The .NET Framework provides two ways to use managed TLS: thread-relative static fields and data slots.</span></span>  

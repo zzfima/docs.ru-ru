@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599597"
 ---
 # <a name="argument-39ltargumentnamegt39-cannot-be-a-multidimensional-array"></a><span data-ttu-id="99a32-102">Аргумент &#39; &lt;имя_аргумента&gt; &#39; не может быть многомерным массивом</span><span class="sxs-lookup"><span data-stu-id="99a32-102">Argument &#39;&lt;argumentname&gt;&#39; cannot be a multidimensional array</span></span>
 <span data-ttu-id="99a32-103">Ранг аргумента массива больше единицы, однако массив может быть только одномерным.</span><span class="sxs-lookup"><span data-stu-id="99a32-103">The rank of an array argument is greater than 1, but it can only be a one-dimensional array.</span></span>  

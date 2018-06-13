@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570436"
 ---
 # <a name="names-of-assemblies-and-dlls"></a><span data-ttu-id="1b6e4-102">Имена сборок и библиотек DLL</span><span class="sxs-lookup"><span data-stu-id="1b6e4-102">Names of Assemblies and DLLs</span></span>
 <span data-ttu-id="1b6e4-103">Сборка является единицей развертывания и удостоверение для управляемого кода программы.</span><span class="sxs-lookup"><span data-stu-id="1b6e4-103">An assembly is the unit of deployment and identity for managed code programs.</span></span> <span data-ttu-id="1b6e4-104">Несмотря на то, что сборки могут охватывать один или несколько файлов, обычно сборки однозначное сопоставление с библиотекой DLL.</span><span class="sxs-lookup"><span data-stu-id="1b6e4-104">Although assemblies can span one or more files, typically an assembly maps one-to-one with a DLL.</span></span> <span data-ttu-id="1b6e4-105">Таким образом в этом разделе описаны только DLL соглашения об именовании, которые затем можно сопоставить соглашения об именовании сборок.</span><span class="sxs-lookup"><span data-stu-id="1b6e4-105">Therefore, this section describes only DLL naming conventions, which then can be mapped to assembly naming conventions.</span></span>  

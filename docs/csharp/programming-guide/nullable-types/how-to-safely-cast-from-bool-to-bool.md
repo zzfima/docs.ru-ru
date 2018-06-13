@@ -10,6 +10,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457506"
 ---
 # <a name="how-to-safely-cast-from-bool-to-bool-c-programming-guide"></a><span data-ttu-id="7ac73-102">Практическое руководство. Безопасное приведение bool? к bool (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="7ac73-102">How to: Safely Cast from bool? to bool (C# Programming Guide)</span></span>
 <span data-ttu-id="7ac73-103">Тип `bool?`, допускающий значение NULL, может содержать три разных значения: `true`, `false` и `null`.</span><span class="sxs-lookup"><span data-stu-id="7ac73-103">The `bool?` nullable type can contain three different values: `true`, `false`, and `null`.</span></span> <span data-ttu-id="7ac73-104">Следовательно, тип `bool?` невозможно использовать в условных операторах, например с `if`, `for` или `while`.</span><span class="sxs-lookup"><span data-stu-id="7ac73-104">Therefore, the `bool?` type cannot be used in conditionals such as with `if`, `for`, or `while`.</span></span> <span data-ttu-id="7ac73-105">Так, следующий код вызовет ошибку компиляции.</span><span class="sxs-lookup"><span data-stu-id="7ac73-105">For example, the following code causes a compiler error.</span></span>  

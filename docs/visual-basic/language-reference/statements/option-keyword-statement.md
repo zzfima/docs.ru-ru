@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598234"
 ---
 # <a name="option-ltkeywordgt-statement"></a><span data-ttu-id="069e2-102">Параметр &lt;ключевое слово&gt; инструкции</span><span class="sxs-lookup"><span data-stu-id="069e2-102">Option &lt;keyword&gt; Statement</span></span>
 <span data-ttu-id="069e2-103">Вводит оператор, который указывает параметр компилятора, который применяется для всего исходного файла.</span><span class="sxs-lookup"><span data-stu-id="069e2-103">Introduces a statement that specifies a compiler option that applies to the entire source file.</span></span>  

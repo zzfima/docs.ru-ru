@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579214"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a><span data-ttu-id="a0003-103">Внутренний цикл разработки рабочего процесса для Docker приложений</span><span class="sxs-lookup"><span data-stu-id="a0003-103">Inner-loop development workflow for Docker apps</span></span>
 

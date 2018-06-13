@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f98f888280090bfa613acf6ae37bc60ab63c371e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456518"
 ---
 # <a name="gethashfromfile-function"></a><span data-ttu-id="87a01-102">Функция GetHashFromFile</span><span class="sxs-lookup"><span data-stu-id="87a01-102">GetHashFromFile Function</span></span>
 <span data-ttu-id="87a01-103">Создает хэш содержимого указанного файла.</span><span class="sxs-lookup"><span data-stu-id="87a01-103">Generates a hash over the contents of the specified file.</span></span>  

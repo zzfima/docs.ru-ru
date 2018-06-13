@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589048"
 ---
 # <a name="troubleshooting-log-listeners-visual-basic"></a><span data-ttu-id="b73b6-102">Устранение неполадок, связанных с прослушивателями журнала (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b73b6-102">Troubleshooting: Log Listeners (Visual Basic)</span></span>
 <span data-ttu-id="b73b6-103">Объекты `My.Application.Log` и `My.Log` можно использовать для записи в журнал информации о событиях, происходящих в приложении.</span><span class="sxs-lookup"><span data-stu-id="b73b6-103">You can use the `My.Application.Log` and `My.Log` objects to log information about events that occur in your application.</span></span>  

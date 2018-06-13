@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572727"
 ---
 # <a name="how-to-raise-and-consume-events"></a><span data-ttu-id="dd36b-102">Практическое руководство. Вызов и прием событий</span><span class="sxs-lookup"><span data-stu-id="dd36b-102">How to: Raise and Consume Events</span></span>
 <span data-ttu-id="dd36b-103">В примерах в этом разделе показано, как работать с событиями.</span><span class="sxs-lookup"><span data-stu-id="dd36b-103">The examples in this topic show how to work with events.</span></span> <span data-ttu-id="dd36b-104">Даны примеры делегата <xref:System.EventHandler>, делегата <xref:System.EventHandler%601> и пользовательского делегата, иллюстрирующие события как с данными, так и без.</span><span class="sxs-lookup"><span data-stu-id="dd36b-104">They include examples of the <xref:System.EventHandler> delegate, the <xref:System.EventHandler%601> delegate, and a custom delegate, to illustrate events with and without data.</span></span>  

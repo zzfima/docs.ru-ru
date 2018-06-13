@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593289"
 ---
 # <a name="out-of-stack-space-visual-basic"></a><span data-ttu-id="fe83d-102">Отсутствует место в стеке (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fe83d-102">Out of stack space (Visual Basic)</span></span>
 <span data-ttu-id="fe83d-103">Стек — это рабочая область памяти, который увеличивается и уменьшается динамически с запросами большого количества выполняемой программы.</span><span class="sxs-lookup"><span data-stu-id="fe83d-103">The stack is a working area of memory that grows and shrinks dynamically with the demands of your executing program.</span></span> <span data-ttu-id="fe83d-104">Предел был превышен.</span><span class="sxs-lookup"><span data-stu-id="fe83d-104">Its limits have been exceeded.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593734"
 ---
 # <a name="39ltmethodnamegt39-has-multiple-definitions-with-identical-signatures"></a><span data-ttu-id="fab2d-102">&#39;&lt;имя_метода&gt; &#39; имеет несколько определений с одинаковыми сигнатурами</span><span class="sxs-lookup"><span data-stu-id="fab2d-102">&#39;&lt;methodname&gt;&#39; has multiple definitions with identical signatures</span></span>
 <span data-ttu-id="fab2d-103">Объект `Function` или `Sub` в объявлении процедуры используются процедуры одинаковые имя и список аргументов, как и в предыдущем объявлении.</span><span class="sxs-lookup"><span data-stu-id="fab2d-103">A `Function` or `Sub` procedure declaration uses the identical procedure name and argument list as a previous declaration.</span></span> <span data-ttu-id="fab2d-104">Возможной причиной этого может быть попытка перегрузки исходной процедуры.</span><span class="sxs-lookup"><span data-stu-id="fab2d-104">One possible cause is an attempt to overload the original procedure.</span></span> <span data-ttu-id="fab2d-105">Перегруженные процедуры должны иметь разные списки аргументов.</span><span class="sxs-lookup"><span data-stu-id="fab2d-105">Overloaded procedures must have different argument lists.</span></span>  

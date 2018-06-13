@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33575828"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a><span data-ttu-id="3da65-102">Практическое руководство. Определение и использование настраиваемых поставщиков числовых форматов</span><span class="sxs-lookup"><span data-stu-id="3da65-102">How to: Define and Use Custom Numeric Format Providers</span></span>
 <span data-ttu-id="3da65-103">Платформа [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] дает широкие возможности контроля над строковым представлением числовых значений.</span><span class="sxs-lookup"><span data-stu-id="3da65-103">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] gives you extensive control over the string representation of numeric values.</span></span> <span data-ttu-id="3da65-104">Эта платформа поддерживает указанные далее возможности для настройки форматов числовых значений.</span><span class="sxs-lookup"><span data-stu-id="3da65-104">It supports the following features for customizing the format of numeric values:</span></span>  
