@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 05339787b112ad029cb9870e8c6ffca37e55e631
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445193"
 ---
 # <a name="imetadataemitdefinepermissionset-method"></a><span data-ttu-id="0dc21-102">Метод IMetaDataEmit::DefinePermissionSet</span><span class="sxs-lookup"><span data-stu-id="0dc21-102">IMetaDataEmit::DefinePermissionSet Method</span></span>
 <span data-ttu-id="0dc21-103">Создает определение для набора разрешений с заданной подписью метаданных и получает маркер для этого определения набора разрешений.</span><span class="sxs-lookup"><span data-stu-id="0dc21-103">Creates a definition for a permission set with the specified metadata signature, and gets a token to that permission set definition.</span></span>  

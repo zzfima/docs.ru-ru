@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f9995fda70d1d5a3c19c30496de6c32f20015d47
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449394"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a><span data-ttu-id="10e42-102">Метод IMetaDataEmit::DefineImportMember</span><span class="sxs-lookup"><span data-stu-id="10e42-102">IMetaDataEmit::DefineImportMember Method</span></span>
 <span data-ttu-id="10e42-103">Создает ссылку на указанный член типа или модуля, определенные вне текущей области видимости, а также определяет маркер для этой ссылки.</span><span class="sxs-lookup"><span data-stu-id="10e42-103">Creates a reference to the specified member of a type or module that is defined outside the current scope, and defines a token for that reference.</span></span>  

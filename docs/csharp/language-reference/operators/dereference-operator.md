@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34171984"
 ---
 # <a name="-gt-operator-c-reference"></a><span data-ttu-id="731ee-102">Оператор -&gt; (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="731ee-102">-&gt; Operator (C# Reference)</span></span>
 <span data-ttu-id="731ee-103">Оператор `->` объединяет операции разыменования указателя и доступа к члену.</span><span class="sxs-lookup"><span data-stu-id="731ee-103">The `->` operator combines pointer dereferencing and member access.</span></span>  

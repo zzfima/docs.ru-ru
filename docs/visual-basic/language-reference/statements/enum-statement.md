@@ -16,6 +16,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234020"
 ---
 # <a name="enum-statement-visual-basic"></a><span data-ttu-id="3d9f6-102">Оператор Enum (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3d9f6-102">Enum Statement (Visual Basic)</span></span>
 <span data-ttu-id="3d9f6-103">Объявляет перечисление и определяет значения его членов.</span><span class="sxs-lookup"><span data-stu-id="3d9f6-103">Declares an enumeration and defines the values of its members.</span></span>  

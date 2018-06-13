@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eea43e5eaa037a3b70f482b0602d8d8d3d594f75
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449853"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a><span data-ttu-id="54464-102">Метод IMetaDataTables::GetNextString</span><span class="sxs-lookup"><span data-stu-id="54464-102">IMetaDataTables::GetNextString Method</span></span>
 <span data-ttu-id="54464-103">Возвращает индекс следующей строки в текущем столбце таблицы.</span><span class="sxs-lookup"><span data-stu-id="54464-103">Gets the index of the next string in the current table column.</span></span>  

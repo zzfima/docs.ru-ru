@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470715"
 ---
 # <a name="messagequeueduplicatedsocketleak"></a><span data-ttu-id="d4074-102">MessageQueueDuplicatedSocketLeak</span><span class="sxs-lookup"><span data-stu-id="d4074-102">MessageQueueDuplicatedSocketLeak</span></span>
 <span data-ttu-id="d4074-103">Идентификатор: 165</span><span class="sxs-lookup"><span data-stu-id="d4074-103">Id: 165</span></span>  

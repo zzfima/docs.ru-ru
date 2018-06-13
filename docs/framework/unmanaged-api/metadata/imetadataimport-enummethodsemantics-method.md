@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 00a28e0f7ab03af8d5f2fc0dda5274f9aaa4dca2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449099"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a><span data-ttu-id="4fb1e-102">Метод IMetaDataImport::EnumMethodSemantics</span><span class="sxs-lookup"><span data-stu-id="4fb1e-102">IMetaDataImport::EnumMethodSemantics Method</span></span>
 <span data-ttu-id="4fb1e-103">Перечисляет свойства и события их изменения, с которыми связан указанный метод.</span><span class="sxs-lookup"><span data-stu-id="4fb1e-103">Enumerates the properties and the property-change events to which the specified method is related.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33464043"
 ---
 # <a name="3357---securityidentityverificationfailure"></a><span data-ttu-id="8773d-102">3357 - SecurityIdentityVerificationFailure</span><span class="sxs-lookup"><span data-stu-id="8773d-102">3357 - SecurityIdentityVerificationFailure</span></span>
 ## <a name="properties"></a><span data-ttu-id="8773d-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="8773d-103">Properties</span></span>  

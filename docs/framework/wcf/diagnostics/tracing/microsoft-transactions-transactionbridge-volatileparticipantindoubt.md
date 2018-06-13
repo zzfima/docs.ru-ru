@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476041"
 ---
 # <a name="microsofttransactionstransactionbridgevolatileparticipantindoubt"></a><span data-ttu-id="67a3c-102">Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt</span><span class="sxs-lookup"><span data-stu-id="67a3c-102">Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt</span></span>
 <span data-ttu-id="67a3c-103">Служба протокола WS-AT получила сообщение "Готово" или "Повторная отправка" от неопознанного неустойчивого участника.</span><span class="sxs-lookup"><span data-stu-id="67a3c-103">The WS-AT protocol service received a Prepared or Replay message from an unrecognized volatile participant.</span></span> <span data-ttu-id="67a3c-104">Ошибка, возвращенная участнику, оповещает о том, что результат транзакции не известен.</span><span class="sxs-lookup"><span data-stu-id="67a3c-104">A fault was returned to the participant, declares that the transaction's outcome is in doubt.</span></span>  

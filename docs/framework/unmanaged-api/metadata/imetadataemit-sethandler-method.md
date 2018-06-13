@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 60c9266806ef6b5d7e2e1c3a219a4485bc22d7f3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445524"
 ---
 # <a name="imetadataemitsethandler-method"></a><span data-ttu-id="e4b2e-102">Метод IMetaDataEmit::SetHandler</span><span class="sxs-lookup"><span data-stu-id="e4b2e-102">IMetaDataEmit::SetHandler Method</span></span>
 <span data-ttu-id="e4b2e-103">Задает метод, который ссылается заданный дескриптор `IUnknown` указатель в виде обратного вызова уведомления для повторного сопоставления маркера.</span><span class="sxs-lookup"><span data-stu-id="e4b2e-103">Sets the method referenced by the specified `IUnknown` pointer as a notification callback for token remaps.</span></span>  

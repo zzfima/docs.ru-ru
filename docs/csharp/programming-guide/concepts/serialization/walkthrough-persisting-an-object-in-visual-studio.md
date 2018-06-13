@@ -6,6 +6,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956186"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a><span data-ttu-id="ce962-102">Пошаговое руководство. Сохранение объекта с помощью C#</span><span class="sxs-lookup"><span data-stu-id="ce962-102">Walkthrough: persisting an object using C#</span></span> #
 

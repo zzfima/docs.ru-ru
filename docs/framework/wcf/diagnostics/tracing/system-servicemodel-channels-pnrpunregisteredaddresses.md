@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33477936"
 ---
 # <a name="systemservicemodelchannelspnrpunregisteredaddresses"></a><span data-ttu-id="8c03c-102">System.ServiceModel.Channels.PnrpUnregisteredAddresses</span><span class="sxs-lookup"><span data-stu-id="8c03c-102">System.ServiceModel.Channels.PnrpUnregisteredAddresses</span></span>
 <span data-ttu-id="8c03c-103">Распознаватель Pnrp отменил регистрацию адресов локального узла.</span><span class="sxs-lookup"><span data-stu-id="8c03c-103">The Pnrp Resolver has unregistered the local node's addresses.</span></span>  

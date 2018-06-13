@@ -14,6 +14,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172114"
 ---
 # <a name="delegate-c-reference"></a><span data-ttu-id="4d676-102">delegate (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="4d676-102">delegate (C# Reference)</span></span>
 <span data-ttu-id="4d676-103">Объявление типа делегата аналогично сигнатуре метода.</span><span class="sxs-lookup"><span data-stu-id="4d676-103">The declaration of a delegate type is similar to a method signature.</span></span> <span data-ttu-id="4d676-104">Оно имеет возвращаемое значение и любое число параметров любого типа:</span><span class="sxs-lookup"><span data-stu-id="4d676-104">It has a return value and any number of parameters of any type:</span></span>  

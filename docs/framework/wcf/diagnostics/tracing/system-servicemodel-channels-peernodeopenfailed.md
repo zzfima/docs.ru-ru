@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33480045"
 ---
 # <a name="systemservicemodelchannelspeernodeopenfailed"></a><span data-ttu-id="3dbb1-102">System.ServiceModel.Channels.PeerNodeOpenFailed</span><span class="sxs-lookup"><span data-stu-id="3dbb1-102">System.ServiceModel.Channels.PeerNodeOpenFailed</span></span>
 <span data-ttu-id="3dbb1-103">Сбой при попытке соединения с соседним узлом.</span><span class="sxs-lookup"><span data-stu-id="3dbb1-103">An attempt to open a neighbor connection failed.</span></span>  

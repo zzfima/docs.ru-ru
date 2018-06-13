@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172127"
 ---
 # <a name="sealed-c-reference"></a><span data-ttu-id="a0a20-102">sealed (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="a0a20-102">sealed (C# Reference)</span></span>
 <span data-ttu-id="a0a20-103">При применении к классу модификатор `sealed` запрещает другим классам наследовать от этого класса.</span><span class="sxs-lookup"><span data-stu-id="a0a20-103">When applied to a class, the `sealed` modifier prevents other classes from inheriting from it.</span></span> <span data-ttu-id="a0a20-104">В следующем примере класс `B` наследует от класса `A`, но никакие классы не могут наследовать от класса `B`.</span><span class="sxs-lookup"><span data-stu-id="a0a20-104">In the following example, class `B` inherits from class `A`, but no class can inherit from class `B`.</span></span>  

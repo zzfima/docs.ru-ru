@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567722"
 ---
 # <a name="thread-safety-in-regular-expressions"></a><span data-ttu-id="1cdc1-102">Потокобезопасность в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="1cdc1-102">Thread Safety in Regular Expressions</span></span>
 <span data-ttu-id="1cdc1-103">Сам по себе класс <xref:System.Text.RegularExpressions.Regex> является потокобезопасным и неизменяемым (предназначенным только для чтения).</span><span class="sxs-lookup"><span data-stu-id="1cdc1-103">The <xref:System.Text.RegularExpressions.Regex> class itself is thread safe and immutable (read-only).</span></span> <span data-ttu-id="1cdc1-104">Это означает, что объекты **Regex** могут создаваться в любом потоке и совместно использоваться несколькими потоками. Одни и те же методы могут вызываться из любого потока, никак не изменяя при этом глобальное состояние.</span><span class="sxs-lookup"><span data-stu-id="1cdc1-104">That is, **Regex** objects can be created on any thread and shared between threads; matching methods can be called from any thread and never alter any global state.</span></span>  

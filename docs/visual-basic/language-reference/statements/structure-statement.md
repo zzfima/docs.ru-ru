@@ -17,6 +17,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234469"
 ---
 # <a name="structure-statement"></a><span data-ttu-id="31c53-102">Оператор Structure</span><span class="sxs-lookup"><span data-stu-id="31c53-102">Structure Statement</span></span>
 <span data-ttu-id="31c53-103">Объявляет имя структуры и вводит определение переменных, свойств, событий и процедур, которые в структуру.</span><span class="sxs-lookup"><span data-stu-id="31c53-103">Declares the name of a structure and introduces the definition of the variables, properties, events, and procedures that the structure comprises.</span></span>  

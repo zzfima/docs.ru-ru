@@ -12,6 +12,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172180"
 ---
 # <a name="byte-c-reference"></a><span data-ttu-id="c9cf0-102">byte (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="c9cf0-102">byte (C# Reference)</span></span>
 

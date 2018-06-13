@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234682"
 ---
 # <a name="delegate-statement"></a><span data-ttu-id="e3e0f-102">Оператор Delegate</span><span class="sxs-lookup"><span data-stu-id="e3e0f-102">Delegate Statement</span></span>
 <span data-ttu-id="e3e0f-103">Используется для объявления делегата.</span><span class="sxs-lookup"><span data-stu-id="e3e0f-103">Used to declare a delegate.</span></span> <span data-ttu-id="e3e0f-104">Делегат — это ссылочный тип, который ссылается на `Shared` метод типа или метода экземпляра объекта.</span><span class="sxs-lookup"><span data-stu-id="e3e0f-104">A delegate is a reference type that refers to a `Shared` method of a type or to an instance method of an object.</span></span> <span data-ttu-id="e3e0f-105">Для создания экземпляра этого класса делегата можно использовать любую процедуру с соответствующими типами параметров и возвращаемых.</span><span class="sxs-lookup"><span data-stu-id="e3e0f-105">Any procedure with matching parameter and return types can be used to create an instance of this delegate class.</span></span> <span data-ttu-id="e3e0f-106">Процедура может затем быть вызвана через экземпляр делегата.</span><span class="sxs-lookup"><span data-stu-id="e3e0f-106">The procedure can then later be invoked by means of the delegate instance.</span></span>  

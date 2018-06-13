@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33488807"
 ---
 # <a name="clients"></a><span data-ttu-id="1894b-102">Клиенты</span><span class="sxs-lookup"><span data-stu-id="1894b-102">Clients</span></span>
 <span data-ttu-id="1894b-103">В подразделах этого раздела описывается архитектура клиента, как получить доступ к службы Windows Communication Foundation (WCF), как настроить клиент WCF и ряд вопросов безопасности для клиентов WCF.</span><span class="sxs-lookup"><span data-stu-id="1894b-103">The topics in this section cover the client architecture, how to access a Windows Communication Foundation (WCF) service, how to configure a WCF client, and some security consideration for WCF clients.</span></span>  
