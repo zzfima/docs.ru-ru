@@ -9,6 +9,7 @@ ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/10/2018
+ms.locfileid: "33956490"
 ---
 # <a name="configuring-http-and-https"></a>Настройка HTTP и HTTPS
 Службы и клиенты WCF могут взаимодействовать по протоколам HTTP и HTTPS. Параметры HTTP/HTTPS задаются с помощью служб IIS или посредством использования средства командной строки. Когда служба WCF размещается в службах IIS, параметры HTTP или HTTPS можно задать в службах IIS (с помощью средства inetmgr.exe). Если служба WCF является резидентной, параметры HTTP или HTTPS задаются с помощью средства командной строки.  

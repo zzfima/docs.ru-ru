@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c11de99359701bb6c3198a0b1dc18ba4318c8bc1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461205"
 ---
 # <a name="strongnamesignaturesize-function"></a>Функция StrongNameSignatureSize
 Возвращает размер подписи строгого имени. `StrongNameSignatureSize` обычно используется компиляторами, чтобы определить, сколько места для резервирования в файле, при создании сборки с отложенной подписью.  

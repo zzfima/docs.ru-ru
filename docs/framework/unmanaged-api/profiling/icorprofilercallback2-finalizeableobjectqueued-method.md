@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e4d10b313adc60e2b851d32aeea70e2993480b0a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451812"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>Метод ICorProfilerCallback2::FinalizeableObjectQueued
 Уведомляет профилировщик кода, что объект с методом завершения поставлен в очередь на поток метода завершения для выполнения его `Finalize` метод.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571401"
 ---
 # <a name="member-design-guidelines"></a>Правила разработки членов
 Методы, свойства, события, конструкторы и поля называются членами. Члены могут в конечном счете средства, с помощью которого framework функциональность предоставляется пользователям платформы.  

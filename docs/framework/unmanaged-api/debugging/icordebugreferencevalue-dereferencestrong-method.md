@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f994dfb2b72eacce0b53ae6f49a8173749dd96f9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418582"
 ---
 # <a name="icordebugreferencevaluedereferencestrong-method"></a>Метод ICorDebugReferenceValue::DereferenceStrong
 `DereferenceStrong` не реализовано. Не вызывайте этот метод.  
