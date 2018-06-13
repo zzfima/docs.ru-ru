@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763700"
 ---
 # <a name="-not-equal-to-entity-sql"></a>!= (не равно) (Entity SQL)
 Сравнивает два выражения, чтобы определить, является ли значение левого выражения не равным значению правого выражения. Действие оператора != (не равно) эквивалентно действию оператора <>.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562272"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>Практическое руководство. Установка свойства после его анимации с помощью раскадровки
 В некоторых случаях может оказаться, что не удается изменить значение свойства после его анимации.  

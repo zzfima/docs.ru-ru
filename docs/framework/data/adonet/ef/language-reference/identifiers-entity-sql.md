@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765884"
 ---
 # <a name="identifiers-entity-sql"></a>Идентификаторы (Entity SQL)
 В языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)] идентификаторы используются для представления псевдонимов выражений запросов, ссылок на переменные, свойств объектов, функций и т. д. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] предоставляет два вида идентификаторов: простые идентификаторы и заключенные в кавычки идентификаторы.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340480"
 ---
 # <a name="how-to-use-a-thread-pool-c"></a>Практическое руководство. Использование пула потоков (C#)
 *Группировка потоков в пул* — это форма многопоточности, при которой задачи добавляются в очередь и при создании новых потоков запускаются автоматически. Дополнительные сведения см. в разделе [Группировка потоков в пул (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md).  

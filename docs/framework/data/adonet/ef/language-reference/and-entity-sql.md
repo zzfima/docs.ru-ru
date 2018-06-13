@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32763791"
 ---
 # <a name="ampamp-and-entity-sql"></a>&amp;&amp; (И) (Язык entity SQL)
 Возвращает значение `true` если оба выражения `true`; в противном случае возвращает значение `false` или `NULL`.  

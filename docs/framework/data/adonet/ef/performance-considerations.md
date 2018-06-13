@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766817"
 ---
 # <a name="performance-considerations-entity-framework"></a>Сведения о производительности (Entity Framework)
 В этом подразделе описаны характеристики производительности платформы ADO.NET Entity Framework, а также приведены соображения по повышению производительности приложений платформы Entity Framework.  

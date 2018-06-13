@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644359"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>Пошаговое руководство. Вызов API Windows (Visual Basic)
 API-интерфейсов Windows являются библиотек динамической компоновки (DLL), которые являются частью операционной системы Windows. Вы используете их для выполнения задач, когда сложно написать собственную соответствующую процедуру. Например, в Windows есть функция с именем `FlashWindowEx` , позволяющий изменять строку заголовка приложения от светлые и темные оттенки.  

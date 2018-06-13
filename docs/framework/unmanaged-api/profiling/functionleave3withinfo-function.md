@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bd87709a9e8b0e943bcf89aa528872d465526218
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454289"
 ---
 # <a name="functionleave3withinfo-function"></a>Функция FunctionLeave3WithInfo
 Уведомляет профилировщик о том, что элемент управления возвращается из функции и предоставляет маркер, который может быть передан [метод ICorProfilerInfo3::GetFunctionLeave3Info](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md) для извлечения кадра стека и возвращаемое значение.  
