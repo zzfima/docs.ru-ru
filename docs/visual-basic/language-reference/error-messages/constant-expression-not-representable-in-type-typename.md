@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585773"
 ---
 # <a name="constant-expression-not-representable-in-type-39lttypenamegt39"></a><span data-ttu-id="fe40f-102">Константное выражение не может быть представлен в типе &#39; &lt;typename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="fe40f-102">Constant expression not representable in type &#39;&lt;typename&gt;&#39;</span></span>
 <span data-ttu-id="fe40f-103">Вы пытаетесь оценки константу, которая не соответствует конечному типу, обычно из-за переполнения диапазона.</span><span class="sxs-lookup"><span data-stu-id="fe40f-103">You are trying to evaluate a constant that will not fit into the target type, usually because it is overflowing the range.</span></span>  

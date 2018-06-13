@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586494"
 ---
 # <a name="class-39ltclassnamegt39-cannot-be-found"></a><span data-ttu-id="c8082-102">Класс &#39; &lt;classname&gt; &#39; не найден</span><span class="sxs-lookup"><span data-stu-id="c8082-102">Class &#39;&lt;classname&gt;&#39; cannot be found</span></span>
 <span data-ttu-id="c8082-103">Класс\<имя_класса > "не найден.</span><span class="sxs-lookup"><span data-stu-id="c8082-103">Class '\<classname>' cannot be found.</span></span> <span data-ttu-id="c8082-104">Это состояние, как правило, является результатом использования несоответствующей библиотеки "Microsoft.VisualBasic.dll".</span><span class="sxs-lookup"><span data-stu-id="c8082-104">This condition is usually the result of a mismatched 'Microsoft.VisualBasic.dll'.</span></span>  

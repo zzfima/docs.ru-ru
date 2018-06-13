@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765325"
 ---
 # <a name="entity-type"></a><span data-ttu-id="a802e-102">тип сущности</span><span class="sxs-lookup"><span data-stu-id="a802e-102">entity type</span></span>
 <span data-ttu-id="a802e-103">*Тип сущности* это фундаментальный блок построения для описания структуры данных с помощью модели данных сущности (EDM).</span><span class="sxs-lookup"><span data-stu-id="a802e-103">The *entity type* is the fundamental building block for describing the structure of data with the Entity Data Model (EDM).</span></span> <span data-ttu-id="a802e-104">В концептуальной модели тип сущности представляет структуру основных концептуальных элементов верхнего уровня, таких как клиенты или заказы.</span><span class="sxs-lookup"><span data-stu-id="a802e-104">In a conceptual model, an entity type represents the structure of top-level concepts, such as customers or orders.</span></span> <span data-ttu-id="a802e-105">Тип сущности - это шаблон для экземпляров типов сущностей.</span><span class="sxs-lookup"><span data-stu-id="a802e-105">An entity type is a template for entity type instances.</span></span> <span data-ttu-id="a802e-106">Каждый шаблон содержит следующие сведения.</span><span class="sxs-lookup"><span data-stu-id="a802e-106">Each template contains the following information:</span></span>  

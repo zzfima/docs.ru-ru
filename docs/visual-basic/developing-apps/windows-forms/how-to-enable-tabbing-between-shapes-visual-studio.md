@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589551"
 ---
 # <a name="how-to-enable-tabbing-between-shapes-visual-studio"></a><span data-ttu-id="4d2f9-102">Пошаговое руководство. Разрешение переходов между фигурами (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="4d2f9-102">How to: Enable Tabbing Between Shapes (Visual Studio)</span></span>
 <span data-ttu-id="4d2f9-103">Элементы управления Line и shape не имеют `TabStop` или `TabIndex` свойства, но вы по-прежнему можно включить переход между ними.</span><span class="sxs-lookup"><span data-stu-id="4d2f9-103">Line and shape controls do not have `TabStop` or `TabIndex` properties, but you can still enable tabbing among them.</span></span> <span data-ttu-id="4d2f9-104">В следующем примере нажав клавишу CTRL и клавиша TAB приведет к переключению между фигурами; Нажатие клавиши TAB только приведет к переключению между кнопками.</span><span class="sxs-lookup"><span data-stu-id="4d2f9-104">In the following example, pressing both the CTRL and the TAB keys will tab between shapes; pressing only the TAB key will tab between the buttons.</span></span>  

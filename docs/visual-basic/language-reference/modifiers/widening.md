@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595317"
 ---
 # <a name="widening-visual-basic"></a><span data-ttu-id="e53fb-102">Widening (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e53fb-102">Widening (Visual Basic)</span></span>
 <span data-ttu-id="e53fb-103">Указывает, что оператор преобразования (`CType`) преобразует класс или структуру к типу, который может содержать все возможные значения исходного класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="e53fb-103">Indicates that a conversion operator (`CType`) converts a class or structure to a type that can hold all possible values of the original class or structure.</span></span>  

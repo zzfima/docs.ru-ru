@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585718"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a><span data-ttu-id="212c7-102">Практическое руководство. Квалификация элемента XML и имен атрибутов XML</span><span class="sxs-lookup"><span data-stu-id="212c7-102">How to: Qualify XML Element and XML Attribute Names</span></span>
 [<span data-ttu-id="212c7-103">Пример кода</span><span class="sxs-lookup"><span data-stu-id="212c7-103">Code Example</span></span>](#cpconworkingwithxmlnamespacesanchor1)  

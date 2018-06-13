@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409548"
 ---
 # <a name="ui-automation-support-for-the-tab-control-type"></a><span data-ttu-id="e82fa-102">Поддержка UI Automation для типа элемента управления Tab</span><span class="sxs-lookup"><span data-stu-id="e82fa-102">UI Automation Support for the Tab Control Type</span></span>
 > [!NOTE]

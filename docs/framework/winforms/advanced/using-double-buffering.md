@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523914"
 ---
 # <a name="using-double-buffering"></a><span data-ttu-id="0e496-102">Двойная буферизация графики</span><span class="sxs-lookup"><span data-stu-id="0e496-102">Using Double Buffering</span></span>
 <span data-ttu-id="0e496-103">Двойная буферизация графики можно использовать для уменьшения мерцания в приложениях, которые содержат сложных операций рисования.</span><span class="sxs-lookup"><span data-stu-id="0e496-103">You can use double-buffered graphics to reduce flicker in your applications that contain complex painting operations.</span></span> <span data-ttu-id="0e496-104">Платформа .NET Framework содержит встроенную поддержку двойной буферизации или можно управлять и отображения графики вручную.</span><span class="sxs-lookup"><span data-stu-id="0e496-104">The .NET Framework contains built-in support for double-buffering or you can manage and render graphics manually.</span></span>  

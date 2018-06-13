@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586745"
 ---
 # <a name="input-past-end-of-file"></a><span data-ttu-id="80b70-102">Оператор Input обнаружил конец файла</span><span class="sxs-lookup"><span data-stu-id="80b70-102">Input past end of file</span></span>
 <span data-ttu-id="80b70-103">Либо `Input` инструкция выполняет чтение из файла, который является пустым или в котором используются все данные, или была использована `EOF` функции с помощью файла открытого для двоичного доступа.</span><span class="sxs-lookup"><span data-stu-id="80b70-103">Either an `Input` statement is reading from a file that is empty or one in which all the data is used, or you used the `EOF` function with a file opened for binary access.</span></span>  

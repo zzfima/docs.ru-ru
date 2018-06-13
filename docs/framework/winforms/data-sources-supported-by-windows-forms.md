@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541181"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a><span data-ttu-id="a67a6-102">Источники данных, поддерживаемые Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a67a6-102">Data Sources Supported by Windows Forms</span></span>
 <span data-ttu-id="a67a6-103">В большинстве случаев привязка данных использовалась в приложениях для использования данных, хранящихся в базах данных.</span><span class="sxs-lookup"><span data-stu-id="a67a6-103">Traditionally, data binding has been used within applications to take advantage of data stored in databases.</span></span> <span data-ttu-id="a67a6-104">Привязки данных Windows Forms, предоставляет доступ к данным из баз данных, а также данные в другие структуры, таких как массивы и коллекции, при условии, что выполнены определенные минимальные требования.</span><span class="sxs-lookup"><span data-stu-id="a67a6-104">With Windows Forms data binding, you can access data from databases as well as data in other structures, such as arrays and collections, so long as certain minimum requirements have been met.</span></span>  

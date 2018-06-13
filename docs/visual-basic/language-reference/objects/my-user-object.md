@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594524"
 ---
 # <a name="myuser-object"></a><span data-ttu-id="d942f-102">Объект My.User</span><span class="sxs-lookup"><span data-stu-id="d942f-102">My.User Object</span></span>
 <span data-ttu-id="d942f-103">Предоставляет доступ к сведениям о текущем пользователе.</span><span class="sxs-lookup"><span data-stu-id="d942f-103">Provides access to information about the current user.</span></span>  

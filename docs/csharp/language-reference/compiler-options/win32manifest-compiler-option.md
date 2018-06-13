@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33214962"
 ---
 # <a name="-win32manifest-c-compiler-options"></a><span data-ttu-id="a9ed9-102">-win32manifest (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="a9ed9-102">-win32manifest (C# Compiler Options)</span></span>
 <span data-ttu-id="a9ed9-103">Параметр **-win32manifest** позволяет указать пользовательский файл манифеста приложения win32manifest для внедрения в переносимый исполняемый файл проекта (PE-файл).</span><span class="sxs-lookup"><span data-stu-id="a9ed9-103">Use the **-win32manifest** option to specify a user-defined Win32 application manifest file to be embedded into a project's portable executable (PE) file.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524148"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a><span data-ttu-id="4997a-102">Общие сведения об элементе управления CheckBox (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="4997a-102">CheckBox Control Overview (Windows Forms)</span></span>
 <span data-ttu-id="4997a-103">Элемент управления <xref:System.Windows.Forms.CheckBox> Windows Forms указывает, включено или отключено какое-либо условие.</span><span class="sxs-lookup"><span data-stu-id="4997a-103">The Windows Forms <xref:System.Windows.Forms.CheckBox> control indicates whether a particular condition is on or off.</span></span> <span data-ttu-id="4997a-104">Обычно он используется для предоставления пользователю выбора типа "Да/Нет" или "Истина/Ложь".</span><span class="sxs-lookup"><span data-stu-id="4997a-104">It is commonly used to present a Yes/No or True/False selection to the user.</span></span> <span data-ttu-id="4997a-105">Элементы управления типа "флажок" можно объединять в группы для предоставления нескольких вариантов ответа, из которых пользователь может выбрать один или несколько.</span><span class="sxs-lookup"><span data-stu-id="4997a-105">You can use check box controls in groups to display multiple choices from which the user can select one or more.</span></span>  

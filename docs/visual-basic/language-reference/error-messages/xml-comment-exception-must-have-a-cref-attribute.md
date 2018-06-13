@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597387"
 ---
 # <a name="xml-comment-exception-must-have-a-39cref39-attribute"></a><span data-ttu-id="bf4d5-102">Исключение комментария XML должно содержать &#39;cref&#39; атрибута</span><span class="sxs-lookup"><span data-stu-id="bf4d5-102">XML comment exception must have a &#39;cref&#39; attribute</span></span>
 <span data-ttu-id="bf4d5-103">\<Исключение > тег предоставляет способ документирования исключений, которые могут быть созданы с помощью метода.</span><span class="sxs-lookup"><span data-stu-id="bf4d5-103">The \<exception> tag provides a way to document the exceptions that may be thrown by a method.</span></span> <span data-ttu-id="bf4d5-104">Необходимая `cref` атрибут назначает имя элемента, которое проверяется генератором документации.</span><span class="sxs-lookup"><span data-stu-id="bf4d5-104">The required `cref` attribute designates the name of a member, which is checked by the documentation generator.</span></span> <span data-ttu-id="bf4d5-105">Если элемент существует, он преобразуется в каноническое имя элемента в файле документации.</span><span class="sxs-lookup"><span data-stu-id="bf4d5-105">If the member exists, it is translated to the canonical element name in the documentation file.</span></span>  

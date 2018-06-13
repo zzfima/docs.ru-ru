@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593705"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a><span data-ttu-id="175eb-102">Sub или Function не определена (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="175eb-102">Sub or Function not defined (Visual Basic)</span></span>
 <span data-ttu-id="175eb-103">Объект `Sub` или `Function` должен быть определен для вызываться.</span><span class="sxs-lookup"><span data-stu-id="175eb-103">A `Sub` or `Function` must be defined in order to be called.</span></span> <span data-ttu-id="175eb-104">Возможные причины этой ошибки:</span><span class="sxs-lookup"><span data-stu-id="175eb-104">Possible causes of this error include:</span></span>  

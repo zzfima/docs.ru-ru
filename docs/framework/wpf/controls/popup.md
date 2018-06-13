@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551756"
 ---
 # <a name="popup"></a><span data-ttu-id="b9bdd-102">Контекстное меню</span><span class="sxs-lookup"><span data-stu-id="b9bdd-102">Popup</span></span>
 <span data-ttu-id="b9bdd-103"><xref:System.Windows.Controls.Primitives.Popup> Элемент управления отображает содержимое в отдельном окне, расположенном поверх текущего окна приложения.</span><span class="sxs-lookup"><span data-stu-id="b9bdd-103">The <xref:System.Windows.Controls.Primitives.Popup> control displays content in a separate window that floats over the current application window.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588627"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a><span data-ttu-id="378c4-102">Практическое руководство. Удаление файла в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="378c4-102">How to: Delete a File in Visual Basic</span></span>
 <span data-ttu-id="378c4-103">Метод `DeleteFile` объекта `My.Computer.FileSystem` позволяет удалить файл.</span><span class="sxs-lookup"><span data-stu-id="378c4-103">The `DeleteFile` method of the `My.Computer.FileSystem` object allows you to delete a file.</span></span> <span data-ttu-id="378c4-104">Параметры метода позволяют указать, следует ли отправлять удаленный файл в **корзину**, следует ли запрашивать у пользователя подтверждение удаления файла и что делать при отмене пользователем операции.</span><span class="sxs-lookup"><span data-stu-id="378c4-104">Among the options it offers are: whether to send the deleted file to the **Recycle Bin**, whether to ask the user to confirm that the file should be deleted, and what to do when the user cancels the operation.</span></span>  

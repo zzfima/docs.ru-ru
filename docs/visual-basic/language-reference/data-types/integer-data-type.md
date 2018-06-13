@@ -28,6 +28,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33591733"
 ---
 # <a name="integer-data-type-visual-basic"></a><span data-ttu-id="f199b-102">Тип данных Integer (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f199b-102">Integer data type (Visual Basic)</span></span>
 <span data-ttu-id="f199b-103">Содержит 32-разрядные (4-байтовые) целые числа со знаком в диапазоне от -2 147 483 648 до 2 147 483 647.</span><span class="sxs-lookup"><span data-stu-id="f199b-103">Holds signed 32-bit (4-byte) integers that range in value from -2,147,483,648 through 2,147,483,647.</span></span>  

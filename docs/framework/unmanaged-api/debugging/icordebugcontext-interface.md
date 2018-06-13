@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3c9c57f7184221ab963798e97e117a6aa4810705
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411945"
 ---
 # <a name="icordebugcontext-interface1"></a><span data-ttu-id="a9603-102">Интерфейс1 ICorDebugContext</span><span class="sxs-lookup"><span data-stu-id="a9603-102">ICorDebugContext Interface1</span></span>
 <span data-ttu-id="a9603-103">Представляет объект контекста.</span><span class="sxs-lookup"><span data-stu-id="a9603-103">Represents a context object.</span></span> <span data-ttu-id="a9603-104">Этот интерфейс еще не реализован.</span><span class="sxs-lookup"><span data-stu-id="a9603-104">This interface has not been implemented yet.</span></span>  

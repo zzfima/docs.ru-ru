@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589674"
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a><span data-ttu-id="a1844-102">Практическое руководство. Запись текста в файлы в каталоге "Мои документы" в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="a1844-102">How to: Write Text to Files in the My Documents Directory in Visual Basic</span></span>
 <span data-ttu-id="a1844-103">Объект `My.Computer.FileSystem.SpecialDirectories` позволяет получить доступ к специальным каталогам, таким как каталог **Мои документы**.</span><span class="sxs-lookup"><span data-stu-id="a1844-103">The `My.Computer.FileSystem.SpecialDirectories` object allows you to access special directories, such as the **MyDocuments** directory.</span></span>  

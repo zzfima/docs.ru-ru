@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536765"
 ---
 # <a name="tabcontrol-control-windows-forms"></a><span data-ttu-id="21ce3-102">Элемент управления TabControl (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="21ce3-102">TabControl Control (Windows Forms)</span></span>
 <span data-ttu-id="21ce3-103">Элемент управления `TabControl` Windows Forms используется для отображения нескольких вкладок, аналогичных разделителям в записной книжке или меткам в наборе папок в картотеке.</span><span class="sxs-lookup"><span data-stu-id="21ce3-103">The Windows Forms `TabControl` displays multiple tabs, like dividers in a notebook or labels in a set of folders in a filing cabinet.</span></span> <span data-ttu-id="21ce3-104">Вкладки могут содержать изображения и другие элементы управления.</span><span class="sxs-lookup"><span data-stu-id="21ce3-104">The tabs can contain pictures and other controls.</span></span> <span data-ttu-id="21ce3-105">Используйте элемент управления `TabControl` для создания страниц свойств.</span><span class="sxs-lookup"><span data-stu-id="21ce3-105">Use the `TabControl` to create property pages.</span></span>  

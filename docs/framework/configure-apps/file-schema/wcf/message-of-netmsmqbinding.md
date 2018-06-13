@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358561"
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a><span data-ttu-id="1cbf8-102">&lt;message&gt; для &lt;netMsmqBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="1cbf8-102">&lt;message&gt; of &lt;netMsmqBinding&gt;</span></span>
 <span data-ttu-id="1cbf8-103">Определяет параметры безопасности сообщений SOAP для данной привязки `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="1cbf8-103">Defines the SOAP message security settings on this `netMsmqBinding` binding.</span></span>  

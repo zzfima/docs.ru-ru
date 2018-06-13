@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33408064"
 ---
 # <a name="how-to-enable-token-replay-detection"></a><span data-ttu-id="ee6b0-102">Практическое руководство. Включение обнаружения воспроизведения маркеров</span><span class="sxs-lookup"><span data-stu-id="ee6b0-102">How To: Enable Token Replay Detection</span></span>
 ## <a name="applies-to"></a><span data-ttu-id="ee6b0-103">Применение</span><span class="sxs-lookup"><span data-stu-id="ee6b0-103">Applies To</span></span>  

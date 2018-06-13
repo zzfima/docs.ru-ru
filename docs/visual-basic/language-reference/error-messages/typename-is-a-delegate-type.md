@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595652"
 ---
 # <a name="39lttypenamegt39-is-a-delegate-type"></a><span data-ttu-id="1e9d6-102">&#39;&lt;TypeName&gt; &#39; является типом делегата</span><span class="sxs-lookup"><span data-stu-id="1e9d6-102">&#39;&lt;typename&gt;&#39; is a delegate type</span></span>
 <span data-ttu-id="1e9d6-103">"\<typename >" является типом делегата.</span><span class="sxs-lookup"><span data-stu-id="1e9d6-103">'\<typename>' is a delegate type.</span></span> <span data-ttu-id="1e9d6-104">Конструкция делегата позволяет использовать только одно выражение AddressOf как список аргументов.</span><span class="sxs-lookup"><span data-stu-id="1e9d6-104">Delegate construction permits only a single AddressOf expression as an argument list.</span></span> <span data-ttu-id="1e9d6-105">Часто выражение AddressOf может использоваться вместо конструкции делегата.</span><span class="sxs-lookup"><span data-stu-id="1e9d6-105">Often an AddressOf expression can be used instead of a delegate construction.</span></span>  

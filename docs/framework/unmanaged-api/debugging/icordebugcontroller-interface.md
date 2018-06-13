@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 230488201b637c5a53f41dd4c3f204b37e8984fd
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411474"
 ---
 # <a name="icordebugcontroller-interface1"></a><span data-ttu-id="0bf05-102">ICorDebugController интерфейс1</span><span class="sxs-lookup"><span data-stu-id="0bf05-102">ICorDebugController Interface1</span></span>
 <span data-ttu-id="0bf05-103">Представляет область (<xref:System.Diagnostics.Process> или <xref:System.AppDomain>), в которой можно осуществлять управление контекстом выполнения кода.</span><span class="sxs-lookup"><span data-stu-id="0bf05-103">Represents a scope, either a <xref:System.Diagnostics.Process> or an <xref:System.AppDomain>, in which code execution context can be controlled.</span></span>  

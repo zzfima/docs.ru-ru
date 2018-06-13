@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397638"
 ---
 # <a name="using-udp-services"></a><span data-ttu-id="a6845-102">Использование служб UDP</span><span class="sxs-lookup"><span data-stu-id="a6845-102">Using UDP Services</span></span>
 <span data-ttu-id="a6845-103">Класс <xref:System.Net.Sockets.UdpClient> взаимодействует с сетевыми службами по протоколу UDP.</span><span class="sxs-lookup"><span data-stu-id="a6845-103">The <xref:System.Net.Sockets.UdpClient> class communicates with network services using UDP.</span></span> <span data-ttu-id="a6845-104">Методы и свойства класса <xref:System.Net.Sockets.UdpClient> абстрагируют сведения о создании <xref:System.Net.Sockets.Socket> для запроса и получения данных по протоколу UDP.</span><span class="sxs-lookup"><span data-stu-id="a6845-104">The properties and methods of the <xref:System.Net.Sockets.UdpClient> class abstract the details of creating a <xref:System.Net.Sockets.Socket> for requesting and receiving data using UDP.</span></span>  

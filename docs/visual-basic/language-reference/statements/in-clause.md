@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597400"
 ---
 # <a name="in-clause-visual-basic"></a><span data-ttu-id="2592c-102">Предложение In (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2592c-102">In Clause (Visual Basic)</span></span>
 <span data-ttu-id="2592c-103">Определяет группу, которую будет проходить переменная цикла `For Each` цикл или коллекцию для запроса в `From`, `Join`, или `Group Join` предложения.</span><span class="sxs-lookup"><span data-stu-id="2592c-103">Specifies the group that the loop variable is to traverse in a `For Each` loop, or specifies the collection to query in a `From`, `Join`, or `Group Join` clause.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587727"
 ---
 # <a name="managed-thread-states"></a><span data-ttu-id="407d0-102">Состояния управляемых потоков</span><span class="sxs-lookup"><span data-stu-id="407d0-102">Managed Thread States</span></span>
 <span data-ttu-id="407d0-103">Свойство <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> предоставляет битовую маску, которая указывает текущее состояние потока.</span><span class="sxs-lookup"><span data-stu-id="407d0-103">The property <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> provides a bit mask that indicates the thread's current state.</span></span> <span data-ttu-id="407d0-104">Поток постоянно находится по крайней мере в одном из возможных состояний, указанных в перечислении <xref:System.Threading.ThreadState> , и может иметь несколько состояний одновременно.</span><span class="sxs-lookup"><span data-stu-id="407d0-104">A thread is always in at least one of the possible states in the <xref:System.Threading.ThreadState> enumeration, and can be in multiple states at the same time.</span></span>  

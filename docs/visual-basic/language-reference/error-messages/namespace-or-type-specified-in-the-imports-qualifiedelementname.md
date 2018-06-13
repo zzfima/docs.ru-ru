@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595109"
 ---
 # <a name="namespace-or-type-specified-in-the-imports-39ltqualifiedelementnamegt39-doesn39t-contain-any-public-member-or-cannot-be-found"></a><span data-ttu-id="02383-102">Пространство имен или тип, указанный в Imports &#39; &lt;qualifiedelementname&gt; &#39; &#39;t содержат публичных членов или не найден</span><span class="sxs-lookup"><span data-stu-id="02383-102">Namespace or type specified in the Imports &#39;&lt;qualifiedelementname&gt;&#39; doesn&#39;t contain any public member or cannot be found</span></span>
 <span data-ttu-id="02383-103">Пространство имен или тип, указанный в Imports\<qualifiedelementname > "не содержат публичных членов или не найден.</span><span class="sxs-lookup"><span data-stu-id="02383-103">Namespace or type specified in the Imports '\<qualifiedelementname>' doesn't contain any public member or cannot be found.</span></span> <span data-ttu-id="02383-104">Убедитесь, что пространство имен или тип определены и содержат хотя бы один открытый член.</span><span class="sxs-lookup"><span data-stu-id="02383-104">Make sure the namespace or the type is defined and contains at least one public member.</span></span> <span data-ttu-id="02383-105">Убедитесь, что имя псевдонима не содержит других псевдонимов.</span><span class="sxs-lookup"><span data-stu-id="02383-105">Make sure the alias name doesn't contain other aliases.</span></span>  

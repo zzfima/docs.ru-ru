@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594846"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a><span data-ttu-id="ada0f-102">XML литералы и XML свойства не поддерживаются во встроенном в ASP.NET коде</span><span class="sxs-lookup"><span data-stu-id="ada0f-102">XML literals and XML properties are not supported in embedded code within ASP.NET</span></span>
 <span data-ttu-id="ada0f-103">XML литералы и XML свойства не поддерживаются во встроенном в ASP.NET коде.</span><span class="sxs-lookup"><span data-stu-id="ada0f-103">XML literals and XML properties are not supported in embedded code within ASP.NET.</span></span> <span data-ttu-id="ada0f-104">Чтобы использовать функции XML, переместите код для кода.</span><span class="sxs-lookup"><span data-stu-id="ada0f-104">To use XML features, move the code to code-behind.</span></span>  

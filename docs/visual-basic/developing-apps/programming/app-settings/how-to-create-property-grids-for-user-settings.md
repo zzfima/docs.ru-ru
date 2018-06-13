@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590989"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a><span data-ttu-id="dac65-102">Практическое руководство. Создание таблицы свойств для пользовательских параметров в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="dac65-102">How to: Create Property Grids for User Settings in Visual Basic</span></span>
 <span data-ttu-id="dac65-103">Вы можете создать таблицу свойств для параметров пользователя, заполнив элемент управления <xref:System.Windows.Forms.PropertyGrid> свойствами параметров пользователей для объекта `My.Settings`.</span><span class="sxs-lookup"><span data-stu-id="dac65-103">You can create a property grid for user settings by populating a <xref:System.Windows.Forms.PropertyGrid> control with the user setting properties of the `My.Settings` object.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570573"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a><span data-ttu-id="4c640-102">Удаление атрибутов из узла элемента в DOM</span><span class="sxs-lookup"><span data-stu-id="4c640-102">Removing Attributes from an Element Node in the DOM</span></span>
 <span data-ttu-id="4c640-103">Существует много способов удаления атрибутов.</span><span class="sxs-lookup"><span data-stu-id="4c640-103">There are many ways to remove attributes.</span></span> <span data-ttu-id="4c640-104">Один из них заключается в их удалении из коллекции атрибутов.</span><span class="sxs-lookup"><span data-stu-id="4c640-104">One technique is to remove them from the attribute collection.</span></span> <span data-ttu-id="4c640-105">Для этого выполняются следующие шаги.</span><span class="sxs-lookup"><span data-stu-id="4c640-105">To do this, the following steps are performed:</span></span>  

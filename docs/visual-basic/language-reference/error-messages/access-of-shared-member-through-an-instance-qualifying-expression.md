@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588987"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a><span data-ttu-id="d3b1b-102">Доступ к общему члену через экземпляр; выражение уточнения не вычисляется</span><span class="sxs-lookup"><span data-stu-id="d3b1b-102">Access of shared member through an instance; qualifying expression will not be evaluated</span></span>
 <span data-ttu-id="d3b1b-103">Переменная экземпляра класса или структуры используется для доступа к `Shared` переменная, свойство, процедура или событие, определенное в классе или структуре.</span><span class="sxs-lookup"><span data-stu-id="d3b1b-103">An instance variable of a class or structure is used to access a `Shared` variable, property, procedure, or event defined in that class or structure.</span></span> <span data-ttu-id="d3b1b-104">Это предупреждение также может возникнуть, если переменная экземпляра используется для доступа к неявному общему члену класса или структуры, например константу перечисления или вложенного класса или структуры.</span><span class="sxs-lookup"><span data-stu-id="d3b1b-104">This warning can also occur if an instance variable is used to access an implicitly shared member of a class or structure, such as a constant or enumeration, or a nested class or structure.</span></span>  

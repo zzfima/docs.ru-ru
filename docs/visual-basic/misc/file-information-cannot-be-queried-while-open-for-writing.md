@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636375"
 ---
 # <a name="file-information-cannot-be-queried-while-open-for-writing"></a><span data-ttu-id="038fd-102">Данные о файле не могут быть получены, когда файл открыт для записи.</span><span class="sxs-lookup"><span data-stu-id="038fd-102">File information cannot be queried while open for writing</span></span>
 <span data-ttu-id="038fd-103">Предпринята попытка получить сведения о файле, который в данный момент открыт для записи.</span><span class="sxs-lookup"><span data-stu-id="038fd-103">An attempt was made to obtain information about a file that is currently open for writing.</span></span>  

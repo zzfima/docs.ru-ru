@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398239"
 ---
 # <a name="specifying-a-character-set"></a><span data-ttu-id="60e4a-102">Определение кодировки</span><span class="sxs-lookup"><span data-stu-id="60e4a-102">Specifying a Character Set</span></span>
 <span data-ttu-id="60e4a-103">Поле <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> управляет маршалингом строк и определяет, каким образом при вызове неуправляемого кода будут обнаруживаться имена функций в библиотеке DLL.</span><span class="sxs-lookup"><span data-stu-id="60e4a-103">The <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field controls string marshaling and determines how platform invoke finds function names in a DLL.</span></span> <span data-ttu-id="60e4a-104">В этом разделе описываются оба механизма.</span><span class="sxs-lookup"><span data-stu-id="60e4a-104">This topic describes both behaviors.</span></span>  

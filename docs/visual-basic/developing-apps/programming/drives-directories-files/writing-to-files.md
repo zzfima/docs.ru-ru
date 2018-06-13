@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588123"
 ---
 # <a name="writing-to-files-in-visual-basic"></a><span data-ttu-id="48172-102">Запись в файлы в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="48172-102">Writing to Files in Visual Basic</span></span>
 <span data-ttu-id="48172-103">В этом разделе рассказывается, как выполнять задачи, включающие запись в файлы.</span><span class="sxs-lookup"><span data-stu-id="48172-103">This section explains how to perform tasks that involve writing to files.</span></span>  

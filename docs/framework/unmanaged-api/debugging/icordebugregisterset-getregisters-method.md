@@ -1,14 +1,6 @@
 ---
-title: "Метод ICorDebugRegisterSet::GetRegisters"
-ms.custom: 
+title: Метод ICorDebugRegisterSet::GetRegisters
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ICorDebugRegisterSet.GetRegisters
 api_location:
@@ -23,22 +15,19 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: ddefb1ac5694bf1f213dd77e0ffc7f746b7e62cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: deaeb4e244a4f9c1e8582d9bea26c2ae5cfde818
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421355"
 ---
-# <a name="icordebugregistersetgetregisters-method"></a><span data-ttu-id="e2b89-102">Метод ICorDebugRegisterSet::GetRegisters</span><span class="sxs-lookup"><span data-stu-id="e2b89-102">ICorDebugRegisterSet::GetRegisters Method</span></span>
-<span data-ttu-id="e2b89-103">Получает значение каждого регистра (на компьютере, который в данный момент выполняется код), который указан битовой маской.</span><span class="sxs-lookup"><span data-stu-id="e2b89-103">Gets the value of each register (on the computer that is currently executing code) that is specified by the bit mask.</span></span>  
+# <a name="icordebugregistersetgetregisters-method"></a><span data-ttu-id="81843-102">Метод ICorDebugRegisterSet::GetRegisters</span><span class="sxs-lookup"><span data-stu-id="81843-102">ICorDebugRegisterSet::GetRegisters Method</span></span>
+<span data-ttu-id="81843-103">Получает значение каждого регистра (на компьютере, который в данный момент выполняется код), который указан битовой маской.</span><span class="sxs-lookup"><span data-stu-id="81843-103">Gets the value of each register (on the computer that is currently executing code) that is specified by the bit mask.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e2b89-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e2b89-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="81843-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="81843-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRegisters (  
@@ -49,30 +38,30 @@ HRESULT GetRegisters (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e2b89-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="e2b89-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="81843-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="81843-105">Parameters</span></span>  
  `mask`  
- <span data-ttu-id="e2b89-106">[in] Битовая маска, указывающая регистра, какие значения должны быть получены.</span><span class="sxs-lookup"><span data-stu-id="e2b89-106">[in] A bit mask that specifies which register values are to be retrieved.</span></span> <span data-ttu-id="e2b89-107">Каждый бит соответствует регистру.</span><span class="sxs-lookup"><span data-stu-id="e2b89-107">Each bit corresponds to a register.</span></span> <span data-ttu-id="e2b89-108">Если бит присваивается одно, извлекается значение регистра; в противном случае — значение регистра не извлекается.</span><span class="sxs-lookup"><span data-stu-id="e2b89-108">If a bit is set to one, the register's value is retrieved; otherwise, the register's value is not retrieved.</span></span>  
+ <span data-ttu-id="81843-106">[in] Битовая маска, указывающая регистра, какие значения должны быть получены.</span><span class="sxs-lookup"><span data-stu-id="81843-106">[in] A bit mask that specifies which register values are to be retrieved.</span></span> <span data-ttu-id="81843-107">Каждый бит соответствует регистру.</span><span class="sxs-lookup"><span data-stu-id="81843-107">Each bit corresponds to a register.</span></span> <span data-ttu-id="81843-108">Если бит присваивается одно, извлекается значение регистра; в противном случае — значение регистра не извлекается.</span><span class="sxs-lookup"><span data-stu-id="81843-108">If a bit is set to one, the register's value is retrieved; otherwise, the register's value is not retrieved.</span></span>  
   
  `regCount`  
- <span data-ttu-id="e2b89-109">[in] Количество значений регистра требуется получить.</span><span class="sxs-lookup"><span data-stu-id="e2b89-109">[in] The number of register values to be retrieved.</span></span>  
+ <span data-ttu-id="81843-109">[in] Количество значений регистра требуется получить.</span><span class="sxs-lookup"><span data-stu-id="81843-109">[in] The number of register values to be retrieved.</span></span>  
   
  `regBuffer`  
- <span data-ttu-id="e2b89-110">[out] Массив `CORDB_REGISTER` объектов, каждый из которых получает значение регистра.</span><span class="sxs-lookup"><span data-stu-id="e2b89-110">[out] An array of `CORDB_REGISTER` objects, each of which receives a value of a register.</span></span>  
+ <span data-ttu-id="81843-110">[out] Массив `CORDB_REGISTER` объектов, каждый из которых получает значение регистра.</span><span class="sxs-lookup"><span data-stu-id="81843-110">[out] An array of `CORDB_REGISTER` objects, each of which receives a value of a register.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e2b89-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="e2b89-111">Remarks</span></span>  
- <span data-ttu-id="e2b89-112">Размер массива должно быть равно числу битов, значение в битовой маске.</span><span class="sxs-lookup"><span data-stu-id="e2b89-112">The size of the array should be equal to the number of bits set to one in the bit mask.</span></span> <span data-ttu-id="e2b89-113">`regCount` Указывает количество элементов в буфере, которые будут получать значения регистра.</span><span class="sxs-lookup"><span data-stu-id="e2b89-113">The `regCount` parameter specifies the number of elements in the buffer that will receive the register values.</span></span> <span data-ttu-id="e2b89-114">Если `regCount` значение слишком мало для количества регистров, указанного маской, регистры с более будут отброшены из набора.</span><span class="sxs-lookup"><span data-stu-id="e2b89-114">If the `regCount` value is too small for the number of registers indicated by the mask, the higher numbered registers will be truncated from the set.</span></span> <span data-ttu-id="e2b89-115">Если `regCount` значение слишком велико, неиспользуемые `regBuffer` элементы будут изменены.</span><span class="sxs-lookup"><span data-stu-id="e2b89-115">If the `regCount` value is too large, the unused `regBuffer` elements will be unmodified.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="81843-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="81843-111">Remarks</span></span>  
+ <span data-ttu-id="81843-112">Размер массива должно быть равно числу битов, значение в битовой маске.</span><span class="sxs-lookup"><span data-stu-id="81843-112">The size of the array should be equal to the number of bits set to one in the bit mask.</span></span> <span data-ttu-id="81843-113">`regCount` Указывает количество элементов в буфере, которые будут получать значения регистра.</span><span class="sxs-lookup"><span data-stu-id="81843-113">The `regCount` parameter specifies the number of elements in the buffer that will receive the register values.</span></span> <span data-ttu-id="81843-114">Если `regCount` значение слишком мало для количества регистров, указанного маской, регистры с более будут отброшены из набора.</span><span class="sxs-lookup"><span data-stu-id="81843-114">If the `regCount` value is too small for the number of registers indicated by the mask, the higher numbered registers will be truncated from the set.</span></span> <span data-ttu-id="81843-115">Если `regCount` значение слишком велико, неиспользуемые `regBuffer` элементы будут изменены.</span><span class="sxs-lookup"><span data-stu-id="81843-115">If the `regCount` value is too large, the unused `regBuffer` elements will be unmodified.</span></span>  
   
- <span data-ttu-id="e2b89-116">Если битовая маска указывает недоступный регистр, `GetRegisters` возвращает неопределенное значение для данного регистра.</span><span class="sxs-lookup"><span data-stu-id="e2b89-116">If the bit mask specifies a register that is unavailable, `GetRegisters` returns an indeterminate value for that register.</span></span>  
+ <span data-ttu-id="81843-116">Если битовая маска указывает недоступный регистр, `GetRegisters` возвращает неопределенное значение для данного регистра.</span><span class="sxs-lookup"><span data-stu-id="81843-116">If the bit mask specifies a register that is unavailable, `GetRegisters` returns an indeterminate value for that register.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e2b89-117">Требования</span><span class="sxs-lookup"><span data-stu-id="e2b89-117">Requirements</span></span>  
- <span data-ttu-id="e2b89-118">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e2b89-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="81843-117">Требования</span><span class="sxs-lookup"><span data-stu-id="81843-117">Requirements</span></span>  
+ <span data-ttu-id="81843-118">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="81843-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e2b89-119">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e2b89-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="81843-119">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="81843-119">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e2b89-120">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e2b89-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="81843-120">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="81843-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e2b89-121">**Версии платформы .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e2b89-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="81843-121">**Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="81843-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e2b89-122">См. также</span><span class="sxs-lookup"><span data-stu-id="e2b89-122">See Also</span></span>  
- [<span data-ttu-id="e2b89-123">Интерфейс ICorDebugRegisterSet</span><span class="sxs-lookup"><span data-stu-id="e2b89-123">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [<span data-ttu-id="e2b89-124">Интерфейс ICorDebugRegisterSet2</span><span class="sxs-lookup"><span data-stu-id="e2b89-124">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="81843-122">См. также</span><span class="sxs-lookup"><span data-stu-id="81843-122">See Also</span></span>  
+ [<span data-ttu-id="81843-123">Интерфейс ICorDebugRegisterSet</span><span class="sxs-lookup"><span data-stu-id="81843-123">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
+ [<span data-ttu-id="81843-124">Интерфейс ICorDebugRegisterSet2</span><span class="sxs-lookup"><span data-stu-id="81843-124">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

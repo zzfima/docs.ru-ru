@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33409371"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a><span data-ttu-id="3b778-102">Mgmtclassgen.exe (генератор строго типизированных классов управления)</span><span class="sxs-lookup"><span data-stu-id="3b778-102">Mgmtclassgen.exe (Management Strongly Typed Class Generator)</span></span>
 <span data-ttu-id="3b778-103">Генератор классов управления со строгим типом позволяет быстро создавать управляемые классы с ранней привязкой для указанного класса инструментария управления Windows (WMI).</span><span class="sxs-lookup"><span data-stu-id="3b778-103">The Management Strongly Typed Class Generator tool enables you to quickly generate an early-bound managed class for a specified Windows Management Instrumentation (WMI) class.</span></span> <span data-ttu-id="3b778-104">Создаваемый класс упрощает код, необходимый для доступа к экземпляру класса WMI.</span><span class="sxs-lookup"><span data-stu-id="3b778-104">The generated class simplifies the code you must write to access an instance of the WMI class.</span></span>  

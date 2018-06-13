@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586790"
 ---
 # <a name="a-startup-form-has-not-been-specified"></a><span data-ttu-id="b7a18-102">Начальная форма не указана</span><span class="sxs-lookup"><span data-stu-id="b7a18-102">A startup form has not been specified</span></span>
 <span data-ttu-id="b7a18-103">Приложение использует <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> класса, но не указывает начальную форму.</span><span class="sxs-lookup"><span data-stu-id="b7a18-103">The application uses the <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> class but does not specify the startup form.</span></span>  

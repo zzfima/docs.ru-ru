@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33337029"
 ---
 # <a name="cref-attribute-c-programming-guide"></a><span data-ttu-id="24d18-102">Атрибут cref (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="24d18-102">cref Attribute (C# Programming Guide)</span></span>
 <span data-ttu-id="24d18-103">Атрибут `cref` в теге XML-документации означает "кодовая ссылка".</span><span class="sxs-lookup"><span data-stu-id="24d18-103">The `cref` attribute in an XML documentation tag means "code reference."</span></span> <span data-ttu-id="24d18-104">Он указывает, что текст внутри тега представляет собой элемент кода, например тип, метод или свойство.</span><span class="sxs-lookup"><span data-stu-id="24d18-104">It specifies that the inner text of the tag is a code element, such as a type, method, or property.</span></span> <span data-ttu-id="24d18-105">Средства создания документации, такие как [Sandcastle](https://github.com/EWSoftware/SHFB), используют атрибуты `cref` для автоматического создания гиперссылок на страницу, где документирован тип или член.</span><span class="sxs-lookup"><span data-stu-id="24d18-105">Documentation tools like [Sandcastle](https://github.com/EWSoftware/SHFB) use the `cref` attributes to automatically generate hyperlinks to the page where the type or member is documented.</span></span>  

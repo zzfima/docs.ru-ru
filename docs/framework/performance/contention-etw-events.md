@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397524"
 ---
 # <a name="contention-etw-events"></a><span data-ttu-id="d7d1e-102">События конфликтов (трассировка событий Windows)</span><span class="sxs-lookup"><span data-stu-id="d7d1e-102">Contention ETW Events</span></span>
 <span data-ttu-id="d7d1e-103">События конфликтов возникают каждый раз при обнаружении конфликта за блокировки <xref:System.Threading.Monitor?displayProperty=nameWithType> или блокировки машинного кода, используемые средой выполнения.</span><span class="sxs-lookup"><span data-stu-id="d7d1e-103">Contention events are raised whenever there is contention for <xref:System.Threading.Monitor?displayProperty=nameWithType> locks or native locks used by the runtime.</span></span> <span data-ttu-id="d7d1e-104">Конфликт происходит, когда поток ожидает блокировку, которая обрабатывается другим потоком.</span><span class="sxs-lookup"><span data-stu-id="d7d1e-104">Contention occurs when a thread is waiting for a lock while another thread possesses the lock.</span></span>  

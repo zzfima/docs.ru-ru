@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335190"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a><span data-ttu-id="d66ce-102">Универсальные типы и отражение (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="d66ce-102">Generics and Reflection (C# Programming Guide)</span></span>
 <span data-ttu-id="d66ce-103">Поскольку среда CLR имеет доступ к данным универсальных типов во время выполнения, вы можете использовать отражение для получения сведений об универсальных типах точно так же, как и для неуниверсальных типов.</span><span class="sxs-lookup"><span data-stu-id="d66ce-103">Because the Common Language Runtime (CLR) has access to generic type information at run time, you can use reflection to obtain information about generic types in the same way as for non-generic types.</span></span> <span data-ttu-id="d66ce-104">Дополнительные сведения см. в разделе [Универсальные типы во время выполнения](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).</span><span class="sxs-lookup"><span data-stu-id="d66ce-104">For more information, see [Generics in the Run Time](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).</span></span>  

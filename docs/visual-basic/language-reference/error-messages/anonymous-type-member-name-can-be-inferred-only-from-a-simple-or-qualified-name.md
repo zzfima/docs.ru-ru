@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587473"
 ---
 # <a name="anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a><span data-ttu-id="2ec3e-102">Имя члена анонимного типа может быть определено только из простого или уточненного имени без аргументов</span><span class="sxs-lookup"><span data-stu-id="2ec3e-102">Anonymous type member name can be inferred only from a simple or qualified name with no arguments</span></span>
 <span data-ttu-id="2ec3e-103">Нельзя вывести имя члена анонимного типа из сложного выражения.</span><span class="sxs-lookup"><span data-stu-id="2ec3e-103">You cannot infer an anonymous type member name from a complex expression.</span></span>  

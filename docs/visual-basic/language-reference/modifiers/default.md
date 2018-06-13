@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595152"
 ---
 # <a name="default-visual-basic"></a><span data-ttu-id="92a4d-102">Default (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="92a4d-102">Default (Visual Basic)</span></span>
 <span data-ttu-id="92a4d-103">Определяет свойство как свойство по умолчанию для класса, структуры или интерфейса.</span><span class="sxs-lookup"><span data-stu-id="92a4d-103">Identifies a property as the default property of its class, structure, or interface.</span></span>  

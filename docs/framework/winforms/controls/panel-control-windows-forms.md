@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536726"
 ---
 # <a name="panel-control-windows-forms"></a><span data-ttu-id="62956-102">Элемент управления Panel (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="62956-102">Panel Control (Windows Forms)</span></span>
 <span data-ttu-id="62956-103">Windows Forms `Panel` элементы управления используются для предоставления возможность группировки других элементов управления.</span><span class="sxs-lookup"><span data-stu-id="62956-103">Windows Forms `Panel` controls are used to provide an identifiable grouping for other controls.</span></span> <span data-ttu-id="62956-104">Как правило панели используются для разделения формы по функциям.</span><span class="sxs-lookup"><span data-stu-id="62956-104">Typically, you use panels to subdivide a form by function.</span></span> <span data-ttu-id="62956-105">`Panel` Управления аналогичен <xref:System.Windows.Forms.GroupBox> управления; Однако только `Panel` управления можно использовать полосы прокрутки и только <xref:System.Windows.Forms.GroupBox> управления отображается заголовок.</span><span class="sxs-lookup"><span data-stu-id="62956-105">The `Panel` control is similar to the <xref:System.Windows.Forms.GroupBox> control; however, only the `Panel` control can have scroll bars, and only the <xref:System.Windows.Forms.GroupBox> control displays a caption.</span></span>  

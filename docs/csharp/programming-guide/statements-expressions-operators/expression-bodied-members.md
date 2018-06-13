@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332758"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a><span data-ttu-id="68c3d-102">Члены, воплощающие выражения (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="68c3d-102">Expression-bodied members (C# programming guide)</span></span>
 <span data-ttu-id="68c3d-103">Определения тела выражений позволяют предоставлять реализацию члена самым быстрым и удобочитаемым способом.</span><span class="sxs-lookup"><span data-stu-id="68c3d-103">Expression body definitions let you provide a member's implementation in a very concise, readable form.</span></span> <span data-ttu-id="68c3d-104">Определение тела выражения можно использовать, когда логика для любого поддерживаемого члена, такого как метод или свойство, состоит из одного выражения.</span><span class="sxs-lookup"><span data-stu-id="68c3d-104">You can use an expression body definition whenever the logic for any supported member, such as a method or property, consists of a single expression.</span></span> <span data-ttu-id="68c3d-105">Определение тела выражения имеет следующий общий синтаксис:</span><span class="sxs-lookup"><span data-stu-id="68c3d-105">An expression body definition has the following general syntax:</span></span>

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33590138"
 ---
 # <a name="error-messages-visual-basic"></a><span data-ttu-id="9d4a3-102">Сообщения об ошибке (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9d4a3-102">Error Messages (Visual Basic)</span></span>
 <span data-ttu-id="9d4a3-103">При записи, компиляции или выполнении приложения Visual Basic возможны ошибки следующих типов.</span><span class="sxs-lookup"><span data-stu-id="9d4a3-103">When you write, compile, or run a Visual Basic application, the following types of errors can occur:</span></span>  

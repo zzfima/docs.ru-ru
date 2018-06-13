@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595024"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not-ltlt-gtgt"></a><span data-ttu-id="053d0-102">Объявлением оператора должен быть один из: +,-, \*,\,/, ^, &amp;, такие как остаток от деления и, Or, Xor, не, &lt; &lt;, &gt; &gt;...</span><span class="sxs-lookup"><span data-stu-id="053d0-102">Operator declaration must be one of:  +,-,\*,\,/,^, &amp;, Like, Mod, And, Or, Xor, Not, &lt;&lt;, &gt;&gt;...</span></span>
 <span data-ttu-id="053d0-103">Можно объявить только оператор, который подходит для перегрузки.</span><span class="sxs-lookup"><span data-stu-id="053d0-103">You can declare only an operator that is eligible for overloading.</span></span> <span data-ttu-id="053d0-104">В следующей таблице перечислены операторы, которые могут быть объявлены.</span><span class="sxs-lookup"><span data-stu-id="053d0-104">The following table lists the operators you can declare.</span></span>  

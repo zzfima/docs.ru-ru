@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589884"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-39ltprocedurenamegt39-because-the-accessing-instance-is-an-interface-type"></a><span data-ttu-id="8ba10-102">Разрешение перегрузки не может применяться к &#39; &lt;имя_процедуры&gt; &#39; , поскольку доступ осуществляется из типа интерфейса</span><span class="sxs-lookup"><span data-stu-id="8ba10-102">Latebound overload resolution cannot be applied to &#39;&lt;procedurename&gt;&#39; because the accessing instance is an interface type</span></span>
 <span data-ttu-id="8ba10-103">Компилятор пытается разрешить ссылку на перегруженного свойства или процедуры, но не выполняется, так как тип аргумента `Object` и ссылающийся объект имеет тип интерфейса.</span><span class="sxs-lookup"><span data-stu-id="8ba10-103">The compiler is attempting to resolve a reference to an overloaded property or procedure, but the reference fails because an argument is of type `Object` and the referring object has the data type of an interface.</span></span> <span data-ttu-id="8ba10-104">`Object` Аргумент указывает компилятору разрешить ссылку с поздней привязкой.</span><span class="sxs-lookup"><span data-stu-id="8ba10-104">The `Object` argument forces the compiler to resolve the reference as late-bound.</span></span>  

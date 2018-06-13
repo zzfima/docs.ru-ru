@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338134"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a><span data-ttu-id="3e9c6-102">Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await (C#)</span><span class="sxs-lookup"><span data-stu-id="3e9c6-102">Walkthrough: Accessing the Web by Using async and await (C#)</span></span>
 <span data-ttu-id="3e9c6-103">Возможности Async и Await упрощают создание асинхронных программ.</span><span class="sxs-lookup"><span data-stu-id="3e9c6-103">You can write asynchronous programs more easily and intuitively by using async/await features.</span></span> <span data-ttu-id="3e9c6-104">Можно написать асинхронный код, который выглядит как синхронный, и позволить компилятору обрабатывать трудные функции обратного вызова и продолжения, которые обычно включает асинхронный код.</span><span class="sxs-lookup"><span data-stu-id="3e9c6-104">You can write asynchronous code that looks like synchronous code and let the compiler handle the difficult callback functions and continuations that asynchronous code usually entails.</span></span>  

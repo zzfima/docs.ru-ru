@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586674"
 ---
 # <a name="file-already-open"></a><span data-ttu-id="cd2d7-102">Файл уже открыт</span><span class="sxs-lookup"><span data-stu-id="cd2d7-102">File already open</span></span>
 <span data-ttu-id="cd2d7-103">В некоторых случаях файл необходимо закрыть перед другим `FileOpen` или другую операцию.</span><span class="sxs-lookup"><span data-stu-id="cd2d7-103">Sometimes a file must be closed before another `FileOpen` or other operation can occur.</span></span> <span data-ttu-id="cd2d7-104">Некоторые из возможных причин этой ошибки:</span><span class="sxs-lookup"><span data-stu-id="cd2d7-104">Among the possible causes of this error are:</span></span>  

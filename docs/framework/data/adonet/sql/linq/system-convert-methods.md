@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357378"
 ---
 # <a name="systemconvert-methods"></a><span data-ttu-id="35593-102">Методы System.Convert</span><span class="sxs-lookup"><span data-stu-id="35593-102">System.Convert Methods</span></span>
 <span data-ttu-id="35593-103">Ниже перечислены методы [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], не поддерживаемые технологией <xref:System.Convert>.</span><span class="sxs-lookup"><span data-stu-id="35593-103">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] does not support the following <xref:System.Convert> methods.</span></span>  

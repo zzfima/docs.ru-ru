@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540648"
 ---
 # <a name="windows-forms-data-binding"></a><span data-ttu-id="b6e6d-102">Привязка данных Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b6e6d-102">Windows Forms Data Binding</span></span>
 <span data-ttu-id="b6e6d-103">Привязка данных в Windows Forms дает возможность отображать и изменять информацию из источника данных в элементах управления в форме.</span><span class="sxs-lookup"><span data-stu-id="b6e6d-103">Data binding in Windows Forms gives you the means to display and make changes to information from a data source in controls on the form.</span></span> <span data-ttu-id="b6e6d-104">В Windows Forms можно выполнить привязку не только к традиционным источникам данных, но и к практически к любой структуре, содержащий данные.</span><span class="sxs-lookup"><span data-stu-id="b6e6d-104">You can bind to both traditional data sources as well as almost any structure that contains data.</span></span>  

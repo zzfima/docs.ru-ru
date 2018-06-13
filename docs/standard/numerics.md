@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588701"
 ---
 # <a name="numerics-in-the-net-framework"></a><span data-ttu-id="2e322-102">Числовые значения в платформе .NET Framework</span><span class="sxs-lookup"><span data-stu-id="2e322-102">Numerics in the .NET Framework</span></span>
 <span data-ttu-id="2e322-103">Платформа .NET Framework поддерживает стандартные числовые примитивные типы (целочисленные и с плавающей запятой), а также <xref:System.Numerics.BigInteger> (целочисленный тип, не имеющий теоретических верхних и нижних границ), <xref:System.Numerics.Complex> (тип для представления комплексных чисел), а также набор векторных типов с поддержкой SIMD в пространстве имен <xref:System.Numerics>.</span><span class="sxs-lookup"><span data-stu-id="2e322-103">The .NET Framework supports the standard numeric integral and floating-point primitives, as well as <xref:System.Numerics.BigInteger>, an integral type with no theoretical upper or lower bound, <xref:System.Numerics.Complex>, a type that represents complex numbers, and a set of SIMD-enabled vector types in the <xref:System.Numerics> namespace.</span></span>  

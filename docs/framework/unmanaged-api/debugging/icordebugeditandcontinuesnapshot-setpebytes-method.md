@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1408c3aa064cf6db641c2f14b61e4a93bca34b1d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411510"
 ---
 # <a name="icordebugeditandcontinuesnapshotsetpebytes-method"></a><span data-ttu-id="a4057-102">Метод ICorDebugEditAndContinueSnapshot::SetPEBytes</span><span class="sxs-lookup"><span data-stu-id="a4057-102">ICorDebugEditAndContinueSnapshot::SetPEBytes Method</span></span>
 <span data-ttu-id="a4057-103">`SetPEBytes` устарел.</span><span class="sxs-lookup"><span data-stu-id="a4057-103">`SetPEBytes` is obsolete.</span></span> <span data-ttu-id="a4057-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="a4057-104">Do not call this method.</span></span>  

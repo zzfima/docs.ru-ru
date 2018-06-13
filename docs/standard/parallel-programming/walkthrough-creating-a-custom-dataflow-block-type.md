@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592154"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a><span data-ttu-id="9121d-102">Пошаговое руководство. Создание пользовательского типа блока потока данных</span><span class="sxs-lookup"><span data-stu-id="9121d-102">Walkthrough: Creating a Custom Dataflow Block Type</span></span>
 <span data-ttu-id="9121d-103">Хотя библиотека потоков данных предоставляет несколько типов блоков потоков данных, которые позволяют использовать различные функции, можно также создавать пользовательские типы блоков.</span><span class="sxs-lookup"><span data-stu-id="9121d-103">Although the TPL Dataflow Library provides several dataflow block types that enable a variety of functionality, you can also create custom block types.</span></span> <span data-ttu-id="9121d-104">В этом документе описано, как создать тип блока потока данных, который реализует пользовательское поведение.</span><span class="sxs-lookup"><span data-stu-id="9121d-104">This document describes how to create a dataflow block type that implements custom behavior.</span></span>  

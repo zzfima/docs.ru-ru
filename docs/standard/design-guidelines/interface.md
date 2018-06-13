@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573043"
 ---
 # <a name="interface-design"></a><span data-ttu-id="b0d95-102">Разработка интерфейса</span><span class="sxs-lookup"><span data-stu-id="b0d95-102">Interface Design</span></span>
 <span data-ttu-id="b0d95-103">Несмотря на то, что большинство интерфейсов API, лучше всего моделируются с помощью классов и структур, существуют случаи, когда интерфейсы больше подходят или могут использоваться только.</span><span class="sxs-lookup"><span data-stu-id="b0d95-103">Although most APIs are best modeled using classes and structs, there are cases in which interfaces are more appropriate or are the only option.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522386"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a><span data-ttu-id="3fd2d-102">Практическое руководство. Установка цвета фона для пера</span><span class="sxs-lookup"><span data-stu-id="3fd2d-102">How to: Set the Color of a Pen</span></span>
 <span data-ttu-id="3fd2d-103">В этом примере изменяется цвет существующем <xref:System.Drawing.Pen> объекта</span><span class="sxs-lookup"><span data-stu-id="3fd2d-103">This example changes the color of a pre-existing <xref:System.Drawing.Pen> object</span></span>  

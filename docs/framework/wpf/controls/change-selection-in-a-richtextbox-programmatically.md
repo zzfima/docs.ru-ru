@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551007"
 ---
 # <a name="change-selection-in-a-richtextbox-programmatically"></a><span data-ttu-id="c3d3a-102">Изменение выделения в RichTextBox программными средствами</span><span class="sxs-lookup"><span data-stu-id="c3d3a-102">Change Selection in a RichTextBox Programmatically</span></span>
 <span data-ttu-id="c3d3a-103">В этом примере показано, как программно изменить текущее выделение в <xref:System.Windows.Controls.RichTextBox>.</span><span class="sxs-lookup"><span data-stu-id="c3d3a-103">This example shows how to programmatically change the current selection in a <xref:System.Windows.Controls.RichTextBox>.</span></span> <span data-ttu-id="c3d3a-104">Этот параметр является таким же, как если бы пользователь выделил содержимое с помощью пользовательского интерфейса.</span><span class="sxs-lookup"><span data-stu-id="c3d3a-104">This selection is the same as if the user had selected the content by using the user interface.</span></span>  

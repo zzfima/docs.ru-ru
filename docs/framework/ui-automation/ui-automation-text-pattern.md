@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406413"
 ---
 # <a name="ui-automation-text-pattern"></a><span data-ttu-id="d5a82-102">Шаблон текста модели автоматизации пользовательского интерфейса</span><span class="sxs-lookup"><span data-stu-id="d5a82-102">UI Automation Text Pattern</span></span>
 > [!NOTE]

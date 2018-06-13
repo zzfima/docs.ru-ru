@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33551873"
 ---
 # <a name="how-to-create-a-custom-view-mode-for-a-listview"></a><span data-ttu-id="925cd-102">Практическое руководство. Создание пользовательского режима представления для ListView</span><span class="sxs-lookup"><span data-stu-id="925cd-102">How to: Create a Custom View Mode for a ListView</span></span>
 <span data-ttu-id="925cd-103">В этом примере показано, как создать настраиваемый <xref:System.Windows.Controls.ListView.View%2A> режим для <xref:System.Windows.Controls.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="925cd-103">This example shows how to create a custom <xref:System.Windows.Controls.ListView.View%2A> mode for a <xref:System.Windows.Controls.ListView> control.</span></span>  

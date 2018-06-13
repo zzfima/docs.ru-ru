@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594166"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a><span data-ttu-id="61fcb-102">Использование переменной итератора в лямбда-выражении может привести к неожиданным результатам</span><span class="sxs-lookup"><span data-stu-id="61fcb-102">Using the iteration variable in a lambda expression may have unexpected results</span></span>
 <span data-ttu-id="61fcb-103">Использование переменной итерации в лямбда-выражение может иметь непредвиденные результаты.</span><span class="sxs-lookup"><span data-stu-id="61fcb-103">Using the iteration variable in a lambda expression may have unexpected results.</span></span> <span data-ttu-id="61fcb-104">Вместо этого создайте локальную переменную в цикле и присвойте ей значение переменной итерации.</span><span class="sxs-lookup"><span data-stu-id="61fcb-104">Instead, create a local variable within the loop and assign it the value of the iteration variable.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586403"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a><span data-ttu-id="145b6-102">Производные классы не могут вызывать события базового класса</span><span class="sxs-lookup"><span data-stu-id="145b6-102">Derived classes cannot raise base class events</span></span>
 <span data-ttu-id="145b6-103">Событие можно вызвать только из области объявления, в котором она объявлена.</span><span class="sxs-lookup"><span data-stu-id="145b6-103">An event can be raised only from the declaration space in which it is declared.</span></span> <span data-ttu-id="145b6-104">Таким образом класс не может вызвать событие из другого класса, хотя бы один из которого он является производным.</span><span class="sxs-lookup"><span data-stu-id="145b6-104">Therefore, a class cannot raise events from any other class, even one from which it is derived.</span></span>  

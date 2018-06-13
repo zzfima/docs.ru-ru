@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358411"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a><span data-ttu-id="3239e-102">Владение и отделение пользователей от схем в SQL Server</span><span class="sxs-lookup"><span data-stu-id="3239e-102">Ownership and User-Schema Separation in SQL Server</span></span>
 <span data-ttu-id="3239e-103">Основным принципом безопасности SQL Server является то, что владельцы объектов имеют неотзываемые разрешения на их администрирование.</span><span class="sxs-lookup"><span data-stu-id="3239e-103">A core concept of SQL Server security is that owners of objects have irrevocable permissions to administer them.</span></span> <span data-ttu-id="3239e-104">Нельзя удалять права доступа у владельцев объектов. Также нельзя удалять пользователей из базы данных, если они владеют в ней объектами.</span><span class="sxs-lookup"><span data-stu-id="3239e-104">You cannot remove privileges from an object owner, and you cannot drop users from a database if they own objects in it.</span></span>  

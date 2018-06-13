@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33594504"
 ---
 # <a name="structure-39ltstructurenamegt39-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-39custom39"></a><span data-ttu-id="42100-102">Структура &#39; &lt;имя_структуры&gt; &#39; должен содержать по крайней мере один экземпляр переменной-члена или объявление события по крайней мере один экземпляр не помечен &#39;Custom&#39;</span><span class="sxs-lookup"><span data-stu-id="42100-102">Structure &#39;&lt;structurename&gt;&#39; must contain at least one instance member variable or at least one instance event declaration not marked &#39;Custom&#39;</span></span>
 <span data-ttu-id="42100-103">Определение структуры не включает неиспользуемые совместно переменные или обычные события.</span><span class="sxs-lookup"><span data-stu-id="42100-103">A structure definition does not include any nonshared variables or nonshared noncustom events.</span></span>  

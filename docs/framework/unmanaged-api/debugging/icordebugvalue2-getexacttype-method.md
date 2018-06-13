@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1f8292a6964a6b25e228fcd07ab21a7ee5f5a04
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423336"
 ---
 # <a name="icordebugvalue2getexacttype-method"></a><span data-ttu-id="563bf-102">Метод ICorDebugValue2::GetExactType</span><span class="sxs-lookup"><span data-stu-id="563bf-102">ICorDebugValue2::GetExactType Method</span></span>
 <span data-ttu-id="563bf-103">Возвращает указатель на интерфейс для объекта «ICorDebugType», который представляет <xref:System.Type> этого значения.</span><span class="sxs-lookup"><span data-stu-id="563bf-103">Gets an interface pointer to an "ICorDebugType" object that represents the <xref:System.Type> of this value.</span></span>  

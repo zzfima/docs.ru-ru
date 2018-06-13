@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586390"
 ---
 # <a name="initializer-expected"></a><span data-ttu-id="00d57-102">Ожидается инициализатор</span><span class="sxs-lookup"><span data-stu-id="00d57-102">Initializer expected</span></span>
 <span data-ttu-id="00d57-103">Предпринята попытка объявить экземпляр класса с помощью инициализатора объекта, в котором список инициализации пуст, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="00d57-103">You have tried to declare an instance of a class by using an object initializer in which the initialization list is empty, as shown in the following example.</span></span>  

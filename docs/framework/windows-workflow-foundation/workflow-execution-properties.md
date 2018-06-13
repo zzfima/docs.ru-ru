@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518648"
 ---
 # <a name="workflow-execution-properties"></a><span data-ttu-id="f4b48-102">Свойства выполнения рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="f4b48-102">Workflow Execution Properties</span></span>
 <span data-ttu-id="f4b48-103">Через локальную память потока (TLS) CLR поддерживает контекст выполнения для каждого потока.</span><span class="sxs-lookup"><span data-stu-id="f4b48-103">Through thread local storage (TLS), the CLR maintains an execution context for each thread.</span></span> <span data-ttu-id="f4b48-104">Этот контекст выполнения управляет хорошо известными свойствами потоков, например идентификатором потока, внешней транзакцией и текущим набором разрешений, а также пользовательскими свойствами потока, например именованными областями.</span><span class="sxs-lookup"><span data-stu-id="f4b48-104">This execution context governs well-known thread properties such as the thread identity, the ambient transaction, and the current permission set in addition to user-defined thread properties like named slots.</span></span>  

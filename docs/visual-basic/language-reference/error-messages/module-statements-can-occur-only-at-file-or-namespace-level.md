@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593169"
 ---
 # <a name="39module39-statements-can-occur-only-at-file-or-namespace-level"></a><span data-ttu-id="7cf11-102">&#39;Модуль&#39; операторы могут использоваться только на уровне файлов и пространств имен</span><span class="sxs-lookup"><span data-stu-id="7cf11-102">&#39;Module&#39; statements can occur only at file or namespace level</span></span>
 <span data-ttu-id="7cf11-103">`Module` операторы должны находиться в верхней части файла исходного кода сразу после `Option` и `Imports` инструкции, глобальных атрибутов и объявлений пространств имен, но перед всеми остальными объявлениями.</span><span class="sxs-lookup"><span data-stu-id="7cf11-103">`Module` statements must appear at the top of your source file immediately after `Option` and `Imports` statements, global attributes, and namespace declarations, but before all other declarations.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593971"
 ---
 # <a name="too-many-files"></a><span data-ttu-id="d077f-102">Слишком много файлов</span><span class="sxs-lookup"><span data-stu-id="d077f-102">Too many files</span></span>
 <span data-ttu-id="d077f-103">Дополнительные файлы были созданы в корневом каталоге превышает операционной системы либо открытых файлов превышает число, заданное в **файлов =** в файле CONFIG. Файл SYS.</span><span class="sxs-lookup"><span data-stu-id="d077f-103">Either more files have been created in the root directory than the operating system permits, or more files have been opened than the number specified in the **files=** setting in your CONFIG.SYS file.</span></span>  

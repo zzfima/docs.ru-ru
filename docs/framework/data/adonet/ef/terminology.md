@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766531"
 ---
 # <a name="entity-framework-terminology"></a><span data-ttu-id="ac150-102">Терминология платформы Entity Framework</span><span class="sxs-lookup"><span data-stu-id="ac150-102">Entity Framework Terminology</span></span>
 <span data-ttu-id="ac150-103">В этом разделе определены термины, которые часто встречаются в [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] документации.</span><span class="sxs-lookup"><span data-stu-id="ac150-103">This topic defines terms frequently referenced in [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] documentation.</span></span> <span data-ttu-id="ac150-104">Даны ссылки на соответствующие разделы, содержащие дополнительные сведения.</span><span class="sxs-lookup"><span data-stu-id="ac150-104">Links are provided to relevant topics where additional information is available.</span></span>  

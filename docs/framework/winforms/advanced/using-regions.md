@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522614"
 ---
 # <a name="using-regions"></a><span data-ttu-id="6c42e-102">Использование областей</span><span class="sxs-lookup"><span data-stu-id="6c42e-102">Using Regions</span></span>
 <span data-ttu-id="6c42e-103">[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> Позволяет определить собственную фигуру.</span><span class="sxs-lookup"><span data-stu-id="6c42e-103">The [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Region> class allows you to define a custom shape.</span></span> <span data-ttu-id="6c42e-104">Фигуры могут состоять из линий, многоугольников и кривых.</span><span class="sxs-lookup"><span data-stu-id="6c42e-104">The shape can be made up of lines, polygons, and curves.</span></span>  

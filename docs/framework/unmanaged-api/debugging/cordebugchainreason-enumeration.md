@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e19897015a00d82da30fd670efcdd97c4d06f56f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33406322"
 ---
 # <a name="cordebugchainreason-enumeration"></a><span data-ttu-id="67c4f-102">Перечисление CorDebugChainReason</span><span class="sxs-lookup"><span data-stu-id="67c4f-102">CorDebugChainReason Enumeration</span></span>
 <span data-ttu-id="67c4f-103">Указывает причину или причины запуска цепочки вызовов.</span><span class="sxs-lookup"><span data-stu-id="67c4f-103">Indicates the reason or reasons for the initiation of a call chain.</span></span>  

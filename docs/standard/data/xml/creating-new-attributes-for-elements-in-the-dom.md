@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570388"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a><span data-ttu-id="f4478-102">Создание новых атрибутов для элементов в модели DOM</span><span class="sxs-lookup"><span data-stu-id="f4478-102">Creating New Attributes for Elements in the DOM</span></span>
 <span data-ttu-id="f4478-103">Создание новых атрибутов отличается от создания других типов узлов, поскольку атрибуты являются не узлами, а свойствами узла элемента, и содержатся в связанной с этим элементом коллекции **XmlAttributeCollection**.</span><span class="sxs-lookup"><span data-stu-id="f4478-103">Creating new attributes is different than creating other node types, because attributes are not nodes, but are properties of an element node and are contained in an **XmlAttributeCollection** associated with the element.</span></span> <span data-ttu-id="f4478-104">Есть несколько способов создания атрибута и присоединения его к элементу:</span><span class="sxs-lookup"><span data-stu-id="f4478-104">There are multiple ways to create an attribute and attach it to an element:</span></span>  

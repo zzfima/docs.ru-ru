@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598131"
 ---
 # <a name="argument-ltargumentnamegt-cannot-be-an-empty-string-or-nothing"></a><span data-ttu-id="6d8c7-102">Аргумент &lt;имя_аргумента&gt; не может быть пустой строкой или Nothing</span><span class="sxs-lookup"><span data-stu-id="6d8c7-102">Argument &lt;argumentname&gt; cannot be an empty string or Nothing</span></span>
 <span data-ttu-id="6d8c7-103">Этот аргумент требует значение, отличное от пустой строки ("") или `Nothing`.</span><span class="sxs-lookup"><span data-stu-id="6d8c7-103">The argument requires a value other than an empty string ("") or `Nothing`.</span></span> <span data-ttu-id="6d8c7-104">Это может быть результатом неправильного вычисления значения.</span><span class="sxs-lookup"><span data-stu-id="6d8c7-104">This may be a result of incorrectly calculating the value.</span></span>  

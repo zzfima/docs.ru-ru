@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569912"
 ---
 # <a name="character-escapes-in-regular-expressions"></a><span data-ttu-id="bf369-102">Escape-знаки в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="bf369-102">Character Escapes in Regular Expressions</span></span>
 <span data-ttu-id="bf369-103">Обратная косая черта (\\) в регулярном выражении может означать следующее.</span><span class="sxs-lookup"><span data-stu-id="bf369-103">The backslash (\\) in a regular expression indicates one of the following:</span></span>  

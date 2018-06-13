@@ -9,6 +9,7 @@ ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/15/2018
+ms.locfileid: "34172663"
 ---
 # <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a><span data-ttu-id="0a083-102">Практическое руководство. Возвращение поднаборов свойств элементов в запросе (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="0a083-102">How to: Return Subsets of Element Properties in a Query (C# Programming Guide)</span></span>
 <span data-ttu-id="0a083-103">Используйте анонимный тип в выражении запроса, если выполняются оба следующих условия:</span><span class="sxs-lookup"><span data-stu-id="0a083-103">Use an anonymous type in a query expression when both of these conditions apply:</span></span>  

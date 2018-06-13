@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586377"
 ---
 # <a name="reader-writer-locks"></a><span data-ttu-id="53d99-102">Блокировки чтения и записи</span><span class="sxs-lookup"><span data-stu-id="53d99-102">Reader-Writer Locks</span></span>
 <span data-ttu-id="53d99-103">Класс <xref:System.Threading.ReaderWriterLockSlim> позволяет нескольким потокам одновременно считывать данные из одного ресурса, но требует предоставить потоку монопольную блокировку для записи в этот ресурс.</span><span class="sxs-lookup"><span data-stu-id="53d99-103">The <xref:System.Threading.ReaderWriterLockSlim> class enables multiple threads to read a resource concurrently, but requires a thread to wait for an exclusive lock in order to write to the resource.</span></span>  

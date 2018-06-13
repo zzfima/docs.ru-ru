@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550141"
 ---
 # <a name="window-management-how-to-topics"></a><span data-ttu-id="66def-102">Инструкции по управлению окна</span><span class="sxs-lookup"><span data-stu-id="66def-102">Window Management How-to Topics</span></span>
 <span data-ttu-id="66def-103">В следующих темах управление [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span><span class="sxs-lookup"><span data-stu-id="66def-103">The following topics show how to manage [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.</span></span>  

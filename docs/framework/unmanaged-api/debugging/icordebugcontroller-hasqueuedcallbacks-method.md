@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eba265b727d00690ab77c6ae831e954d59df7c50
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411614"
 ---
 # <a name="icordebugcontrollerhasqueuedcallbacks-method"></a><span data-ttu-id="931b3-102">Метод ICorDebugController::HasQueuedCallbacks</span><span class="sxs-lookup"><span data-stu-id="931b3-102">ICorDebugController::HasQueuedCallbacks Method</span></span>
 <span data-ttu-id="931b3-103">Возвращает значение, указывающее ли любого управляемого обратных вызовов в настоящее время в очереди для заданного потока.</span><span class="sxs-lookup"><span data-stu-id="931b3-103">Gets a value that indicates whether any managed callbacks are currently queued for the specified thread.</span></span>  

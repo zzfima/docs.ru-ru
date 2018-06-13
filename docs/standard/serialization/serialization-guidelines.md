@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592097"
 ---
 # <a name="serialization-guidelines"></a><span data-ttu-id="9a5f0-102">Правила сериализации</span><span class="sxs-lookup"><span data-stu-id="9a5f0-102">Serialization guidelines</span></span>
 <span data-ttu-id="9a5f0-103">В настоящем документе перечислены рекомендации, которые следует учитывать при разработке сериализуемого API.</span><span class="sxs-lookup"><span data-stu-id="9a5f0-103">This document lists the guidelines to consider when designing an API to be serialized.</span></span>  

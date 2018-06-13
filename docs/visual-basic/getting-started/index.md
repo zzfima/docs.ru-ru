@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33589845"
 ---
 # <a name="get-started-with-visual-basic"></a><span data-ttu-id="3b3bd-102">Начало работы с Visual Basic</span><span class="sxs-lookup"><span data-stu-id="3b3bd-102">Get started with Visual Basic</span></span>
 <span data-ttu-id="3b3bd-103">Этот раздел документации помогает начать разработку приложений на Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="3b3bd-103">This section of the documentation helps you get started with Visual Basic application development.</span></span>  

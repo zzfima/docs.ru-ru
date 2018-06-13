@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592593"
 ---
 # <a name="task-based-asynchronous-programming"></a><span data-ttu-id="8c465-102">Асинхронное программирование на основе задач</span><span class="sxs-lookup"><span data-stu-id="8c465-102">Task-based Asynchronous Programming</span></span>
 <span data-ttu-id="8c465-103">Библиотека параллельных задач (TPL) основана на концепции *задач*, представляющих асинхронные операции.</span><span class="sxs-lookup"><span data-stu-id="8c465-103">The Task Parallel Library (TPL) is based on the concept of a *task*, which represents an asynchronous operation.</span></span> <span data-ttu-id="8c465-104">В некотором смысле задача похожа на поток или рабочий элемент <xref:System.Threading.ThreadPool>, но на более высоком уровне абстракции.</span><span class="sxs-lookup"><span data-stu-id="8c465-104">In some ways, a task resembles a thread or <xref:System.Threading.ThreadPool> work item, but at a higher level of abstraction.</span></span> <span data-ttu-id="8c465-105">Термин *параллелизм задач* означает одновременное выполнение одной или нескольких разных задач.</span><span class="sxs-lookup"><span data-stu-id="8c465-105">The term *task parallelism* refers to one or more independent tasks running concurrently.</span></span> <span data-ttu-id="8c465-106">Задачи предоставляют два основных преимущества.</span><span class="sxs-lookup"><span data-stu-id="8c465-106">Tasks provide two primary benefits:</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334760"
 ---
 # <a name="boxing-nullable-types-c-programming-guide"></a><span data-ttu-id="e32a7-102">Упаковка-преобразование типов, допускающих значение NULL (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="e32a7-102">Boxing Nullable Types (C# Programming Guide)</span></span>
 <span data-ttu-id="e32a7-103">Объекты на основе типов, допускающих значения NULL, могут быть упакованы, только если объект имеет значение, отличное от NULL.</span><span class="sxs-lookup"><span data-stu-id="e32a7-103">Objects based on nullable types are only boxed if the object is non-null.</span></span> <span data-ttu-id="e32a7-104">Если <xref:System.Nullable%601.HasValue%2A> имеет значение `false`, ссылке на объект присваивается `null` и упаковка-преобразование не выполняется.</span><span class="sxs-lookup"><span data-stu-id="e32a7-104">If <xref:System.Nullable%601.HasValue%2A> is `false`, the object reference is assigned to `null` instead of boxing.</span></span> <span data-ttu-id="e32a7-105">Пример:</span><span class="sxs-lookup"><span data-stu-id="e32a7-105">For example:</span></span>  
