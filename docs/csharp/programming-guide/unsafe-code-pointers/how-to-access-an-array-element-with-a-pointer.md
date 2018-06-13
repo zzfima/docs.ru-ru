@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332043"
 ---
 # <a name="how-to-access-an-array-element-with-a-pointer-c-programming-guide"></a><span data-ttu-id="8a159-102">Практическое руководство. Доступ к элементу массива с использованием указателя (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="8a159-102">How to: Access an Array Element with a Pointer (C# Programming Guide)</span></span>
 <span data-ttu-id="8a159-103">В небезопасном контексте для доступа к элементу в памяти можно использовать доступ к элементу указателя, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="8a159-103">In an unsafe context, you can access an element in memory by using pointer element access, as shown in the following example:</span></span>  

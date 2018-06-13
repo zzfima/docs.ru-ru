@@ -14,9 +14,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ffb891e61fcb34e6d33a069fc32e68865739b86b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450886"
 ---
 # <a name="icorprofilerassemblyreferenceprovider-interface"></a><span data-ttu-id="137e8-102">Интерфейс ICorProfilerAssemblyReferenceProvider</span><span class="sxs-lookup"><span data-stu-id="137e8-102">ICorProfilerAssemblyReferenceProvider Interface</span></span>
 <span data-ttu-id="137e8-103">[Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="137e8-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  

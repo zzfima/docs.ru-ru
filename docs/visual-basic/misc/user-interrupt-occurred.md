@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33640351"
 ---
 # <a name="user-interrupt-occurred"></a><span data-ttu-id="705e2-102">Прерывание со стороны пользователя</span><span class="sxs-lookup"><span data-stu-id="705e2-102">User interrupt occurred</span></span>
 <span data-ttu-id="705e2-103">Пользователь нажал клавиши CTRL+BREAK или другую клавишу прерывания.</span><span class="sxs-lookup"><span data-stu-id="705e2-103">A user pressed CTRL+BREAK or another interrupt key.</span></span>  

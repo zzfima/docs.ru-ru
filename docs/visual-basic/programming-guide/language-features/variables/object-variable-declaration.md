@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33656286"
 ---
 # <a name="object-variable-declaration-visual-basic"></a><span data-ttu-id="c73ce-102">Объявление переменных объектов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c73ce-102">Object Variable Declaration (Visual Basic)</span></span>
 <span data-ttu-id="c73ce-103">Используйте обычный оператор объявления для объявления переменной объекта.</span><span class="sxs-lookup"><span data-stu-id="c73ce-103">You use a normal declaration statement to declare an object variable.</span></span> <span data-ttu-id="c73ce-104">Для типа данных, либо указать `Object` (то есть [тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)) или более определенный класс, из которого будет создан объект.</span><span class="sxs-lookup"><span data-stu-id="c73ce-104">For the data type, you specify either `Object` (that is, the [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)) or a more specific class from which the object is to be created.</span></span>  

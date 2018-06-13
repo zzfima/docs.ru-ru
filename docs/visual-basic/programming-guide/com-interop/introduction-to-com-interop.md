@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644401"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a><span data-ttu-id="801e0-102">Знакомство с COM-взаимодействием (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="801e0-102">Introduction to COM Interop (Visual Basic)</span></span>
 <span data-ttu-id="801e0-103">Модель объектов компонентов (COM) позволяет объекту предоставлять его функциональность другим компонентам и приложениям хоста.</span><span class="sxs-lookup"><span data-stu-id="801e0-103">The Component Object Model (COM) lets an object expose its functionality to other components and to host applications.</span></span> <span data-ttu-id="801e0-104">Хотя COM-объекты были основой программирования в течение многих лет в Windows, приложений, предназначенных для общеязыковой среды выполнения (CLR), имеют много преимуществ.</span><span class="sxs-lookup"><span data-stu-id="801e0-104">While COM objects have been fundamental to Windows programming for many years, applications designed for the common language runtime (CLR) offer many advantages.</span></span>  

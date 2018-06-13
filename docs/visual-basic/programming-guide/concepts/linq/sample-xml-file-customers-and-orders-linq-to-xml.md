@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647749"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a><span data-ttu-id="863df-102">Пример XML-файла. Клиенты и заказы в пространстве имен (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="863df-102">Sample XML File: Customers and Orders (LINQ to XML)</span></span>
 <span data-ttu-id="863df-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="863df-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="863df-104">Этот файл содержит сведения о заказчиках и заказах.</span><span class="sxs-lookup"><span data-stu-id="863df-104">This file contains customers and orders.</span></span>  

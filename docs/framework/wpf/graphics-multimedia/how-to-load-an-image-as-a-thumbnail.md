@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562327"
 ---
 # <a name="how-to-load-an-image-as-a-thumbnail"></a><span data-ttu-id="05ccd-102">Как загрузить изображение в виде эскиза</span><span class="sxs-lookup"><span data-stu-id="05ccd-102">How to: Load an Image as a Thumbnail</span></span>
 <span data-ttu-id="05ccd-103">Следующие примеры показывают, как загрузить <xref:System.Windows.Controls.Image> виде эскиза для экономии памяти приложения.</span><span class="sxs-lookup"><span data-stu-id="05ccd-103">The following examples show how to load an <xref:System.Windows.Controls.Image> as a thumbnail to conserve application memory.</span></span>  

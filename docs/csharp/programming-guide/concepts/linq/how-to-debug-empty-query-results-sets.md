@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329765"
 ---
 # <a name="how-to-debug-empty-query-results-sets-c"></a><span data-ttu-id="7577b-102">Практическое руководство. Отладка пустых наборов результатов запроса (C#)</span><span class="sxs-lookup"><span data-stu-id="7577b-102">How to: Debug Empty Query Results Sets (C#)</span></span>
 <span data-ttu-id="7577b-103">Одной из наиболее типичных проблем при запросах к XML-деревьям является то, что, если XML-дерево содержит пространство имен по умолчанию, разработчик иногда пишет запрос так, как если бы XML-код не располагался в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="7577b-103">One of the most common problems when querying XML trees is that if the XML tree has a default namespace, the developer sometimes writes the query as though the XML were not in a namespace.</span></span>  

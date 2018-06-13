@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33335329"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a><span data-ttu-id="76389-102">Аргументы командной строки (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="76389-102">Command-Line Arguments (C# Programming Guide)</span></span>
 <span data-ttu-id="76389-103">Вы можете передавать аргументы в метод `Main`, определив метод одним из следующих способов:</span><span class="sxs-lookup"><span data-stu-id="76389-103">You can send arguments to the `Main` method by defining the method in one of the following ways:</span></span>  

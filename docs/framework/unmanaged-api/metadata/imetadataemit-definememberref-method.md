@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 881c0b1f755e750efcc74ca61a60bbd97bc5dba7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444468"
 ---
 # <a name="imetadataemitdefinememberref-method"></a><span data-ttu-id="4f3aa-102">Метод IMetaDataEmit::DefineMemberRef</span><span class="sxs-lookup"><span data-stu-id="4f3aa-102">IMetaDataEmit::DefineMemberRef Method</span></span>
 <span data-ttu-id="4f3aa-103">Определяет ссылку на член модуля вне текущей области и получает маркер для этого определения ссылки.</span><span class="sxs-lookup"><span data-stu-id="4f3aa-103">Defines a reference to a member of a module outside the current scope, and gets a token to that reference definition.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646556"
 ---
 # <a name="control-flow-in-visual-basic"></a><span data-ttu-id="1cfdc-102">Управление ходом выполнения в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="1cfdc-102">Control Flow in Visual Basic</span></span>
 <span data-ttu-id="1cfdc-103">При отсутствии вмешательства извне программа последовательно выполняет все свои инструкции от начала до конца.</span><span class="sxs-lookup"><span data-stu-id="1cfdc-103">Left unregulated, a program proceeds through its statements from beginning to end.</span></span> <span data-ttu-id="1cfdc-104">Некоторые очень простые программы могут быть написаны только с таким однонаправленным потоком.</span><span class="sxs-lookup"><span data-stu-id="1cfdc-104">Some very simple programs can be written with only this unidirectional flow.</span></span> <span data-ttu-id="1cfdc-105">Но мощь и преимущества любого языка программирования в значительной степени связаны с возможностями изменения порядка выполнения с помощью операторов управления и циклов.</span><span class="sxs-lookup"><span data-stu-id="1cfdc-105">However, much of the power and utility of any programming language comes from the ability to change execution order with control statements and loops.</span></span>  

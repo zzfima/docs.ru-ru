@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561980"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a><span data-ttu-id="4f464-102">Практические руководства, посвященные программированию уровня визуализации</span><span class="sxs-lookup"><span data-stu-id="4f464-102">Visual Layer Programming How-to Topics</span></span>
 <span data-ttu-id="4f464-103">В подразделах этого раздела демонстрируется использование слоя визуализации для проверки попадания и низкоуровневой композиции.</span><span class="sxs-lookup"><span data-stu-id="4f464-103">The topics in this section demonstrate how to use the visual layer for hit-testing and low-level composition.</span></span>  

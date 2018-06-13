@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33215502"
 ---
 # <a name="-target-c-compiler-options"></a><span data-ttu-id="f0cb8-102">-target (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="f0cb8-102">-target (C# Compiler Options)</span></span>
 <span data-ttu-id="f0cb8-103">Параметр компилятора **-target** можно задать в одной из четырех форм:</span><span class="sxs-lookup"><span data-stu-id="f0cb8-103">The **-target** compiler option can be specified in one of four forms:</span></span>  

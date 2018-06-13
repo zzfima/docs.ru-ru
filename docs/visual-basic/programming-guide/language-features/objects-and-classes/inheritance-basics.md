@@ -25,6 +25,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33655193"
 ---
 # <a name="inheritance-basics-visual-basic"></a><span data-ttu-id="9c4b7-102">Основы наследования (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9c4b7-102">Inheritance Basics (Visual Basic)</span></span>
 <span data-ttu-id="9c4b7-103">`Inherits` Оператор используется для объявления нового класса, называемого *производного класса*, основываясь на существующий класс, называемый *базового класса*.</span><span class="sxs-lookup"><span data-stu-id="9c4b7-103">The `Inherits` statement is used to declare a new class, called a *derived class*, based on an existing class, known as a *base class*.</span></span> <span data-ttu-id="9c4b7-104">Производные классы наследуют и могут расширять свойства, методы, события, поля и константы, определенные в базовом классе.</span><span class="sxs-lookup"><span data-stu-id="9c4b7-104">Derived classes inherit, and can extend, the properties, methods, events, fields, and constants defined in the base class.</span></span> <span data-ttu-id="9c4b7-105">Далее описываются некоторые правила наследования и модификаторов, которые можно использовать, чтобы изменить способ классы наследуют или наследования:</span><span class="sxs-lookup"><span data-stu-id="9c4b7-105">The following section describes some of the rules for inheritance, and the modifiers you can use to change the way classes inherit or are inherited:</span></span>  

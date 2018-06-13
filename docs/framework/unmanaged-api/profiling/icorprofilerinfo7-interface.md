@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 79a722cd3318def36c20a49c1567c6f0d4989d39
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455410"
 ---
 # <a name="icorprofilerinfo7-interface"></a><span data-ttu-id="d989c-102">Интерфейс ICorProfilerInfo7</span><span class="sxs-lookup"><span data-stu-id="d989c-102">ICorProfilerInfo7 Interface</span></span>
 <span data-ttu-id="d989c-103">[Поддерживается в [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] и более поздних версиях]</span><span class="sxs-lookup"><span data-stu-id="d989c-103">[Supported in the [!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] and later versions]</span></span>  

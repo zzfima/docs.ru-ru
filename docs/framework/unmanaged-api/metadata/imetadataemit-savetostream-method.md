@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 656f5ee20e50ea9ac5c03711adfd0b8264fbcca0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444962"
 ---
 # <a name="imetadataemitsavetostream-method"></a><span data-ttu-id="fbd8a-102">Метод IMetaDataEmit::SaveToStream</span><span class="sxs-lookup"><span data-stu-id="fbd8a-102">IMetaDataEmit::SaveToStream Method</span></span>
 <span data-ttu-id="fbd8a-103">Сохраняет все метаданные в текущей области в указанный `IStream`.</span><span class="sxs-lookup"><span data-stu-id="fbd8a-103">Saves all metadata in the current scope to the specified `IStream`.</span></span>  

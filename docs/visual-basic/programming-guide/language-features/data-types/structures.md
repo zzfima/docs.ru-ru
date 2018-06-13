@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647269"
 ---
 # <a name="structures-visual-basic"></a><span data-ttu-id="4939e-102">Структуры (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="4939e-102">Structures (Visual Basic)</span></span>
 <span data-ttu-id="4939e-103">Объект *структура* представляет собой обобщение определяемых пользователем типов (UDT), поддерживается в предыдущих версиях Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="4939e-103">A *structure* is a generalization of the user-defined type (UDT) supported by previous versions of Visual Basic.</span></span> <span data-ttu-id="4939e-104">Дополнение к полям структуры могут предоставлять свойства, методы и события.</span><span class="sxs-lookup"><span data-stu-id="4939e-104">In addition to fields, structures can expose properties, methods, and events.</span></span> <span data-ttu-id="4939e-105">Структура может реализовать один или несколько интерфейсов, и можно объявлять индивидуальные уровни доступа для каждого поля.</span><span class="sxs-lookup"><span data-stu-id="4939e-105">A structure can implement one or more interfaces, and you can declare individual access levels for each field.</span></span>  

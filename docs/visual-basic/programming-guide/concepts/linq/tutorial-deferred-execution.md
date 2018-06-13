@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645880"
 ---
 # <a name="tutorial-deferred-execution-visual-basic"></a><span data-ttu-id="989c0-102">Учебник: Отложенного выполнения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="989c0-102">Tutorial: Deferred Execution (Visual Basic)</span></span>
 <span data-ttu-id="989c0-103">В этом учебнике приводится модель обработки, при которой запросы объединяются в цепочку.</span><span class="sxs-lookup"><span data-stu-id="989c0-103">This tutorial illustrates the processing model when you chain queries together.</span></span> <span data-ttu-id="989c0-104">Объединение запросов в цепочку - ключевая часть написания функциональных преобразований.</span><span class="sxs-lookup"><span data-stu-id="989c0-104">Chaining queries together is a key part of writing functional transformations.</span></span> <span data-ttu-id="989c0-105">Необходимо полностью понимать принцип работы запросов, объединенных в цепочку.</span><span class="sxs-lookup"><span data-stu-id="989c0-105">It is important to understand exactly how chained queries work.</span></span>  

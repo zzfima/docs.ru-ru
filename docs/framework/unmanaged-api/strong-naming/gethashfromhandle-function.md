@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 30aad6fc62c8fee7448163ca69117b804203d505
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456486"
 ---
 # <a name="gethashfromhandle-function"></a><span data-ttu-id="24bfa-102">Функция GetHashFromHandle</span><span class="sxs-lookup"><span data-stu-id="24bfa-102">GetHashFromHandle Function</span></span>
 <span data-ttu-id="24bfa-103">Создает хэш содержимого файла с помощью заданного дескриптора файла, с помощью указанного хэш-алгоритма.</span><span class="sxs-lookup"><span data-stu-id="24bfa-103">Generates a hash over the contents of the file with the specified file handle, using the specified hash algorithm.</span></span>  

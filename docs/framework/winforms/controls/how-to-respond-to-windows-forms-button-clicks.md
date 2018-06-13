@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534255"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a><span data-ttu-id="6de66-102">Практическое руководство. Обработка события нажатия кнопки в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6de66-102">How to: Respond to Windows Forms Button Clicks</span></span>
 <span data-ttu-id="6de66-103">Чаще всего в Windows Forms <xref:System.Windows.Forms.Button> элемент управления должен выполнять определенный код, при нажатии кнопки.</span><span class="sxs-lookup"><span data-stu-id="6de66-103">The most basic use of a Windows Forms <xref:System.Windows.Forms.Button> control is to run some code when the button is clicked.</span></span>  

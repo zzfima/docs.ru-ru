@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648503"
 ---
 # <a name="structure-variables-visual-basic"></a><span data-ttu-id="b44eb-102">Переменные структуры (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b44eb-102">Structure Variables (Visual Basic)</span></span>
 <span data-ttu-id="b44eb-103">После создания структуры можно объявить переменные уровня модуля и процедуры для определенного типа.</span><span class="sxs-lookup"><span data-stu-id="b44eb-103">Once you have created a structure, you can declare procedure-level and module-level variables as that type.</span></span> <span data-ttu-id="b44eb-104">Например можно создать структуру, которая записывает сведения о системе компьютера.</span><span class="sxs-lookup"><span data-stu-id="b44eb-104">For example, you can create a structure that records information about a computer system.</span></span> <span data-ttu-id="b44eb-105">В следующем примере это показано.</span><span class="sxs-lookup"><span data-stu-id="b44eb-105">The following example demonstrates this.</span></span>  

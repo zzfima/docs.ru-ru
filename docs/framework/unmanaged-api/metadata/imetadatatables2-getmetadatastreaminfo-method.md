@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 756b0ff726c31bf096a1c1b70004c3ff82fe9979
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450041"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a><span data-ttu-id="dd827-102">Метод IMetaDataTables2::GetMetaDataStreamInfo</span><span class="sxs-lookup"><span data-stu-id="dd827-102">IMetaDataTables2::GetMetaDataStreamInfo Method</span></span>
 <span data-ttu-id="dd827-103">Возвращает имя, размер и содержимое потока метаданных по указанному индексу.</span><span class="sxs-lookup"><span data-stu-id="dd827-103">Gets the name, size, and contents of the metadata stream at the specified index.</span></span>  

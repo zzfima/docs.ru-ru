@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641018"
 ---
 # <a name="you-must-specify-a-file-name"></a><span data-ttu-id="7de2a-102">Необходимо указать имя файла</span><span class="sxs-lookup"><span data-stu-id="7de2a-102">You must specify a file name</span></span>
 <span data-ttu-id="7de2a-103">Вы попытались выполнить операцию (например, перемещение или копирование файла), для которой необходимо указать имя файла.</span><span class="sxs-lookup"><span data-stu-id="7de2a-103">You attempted an operation, such as moving or copying a file, which requires supplying a file name.</span></span>  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: de467c98dfa7ad3eac69502f2afe311b301e1ec5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33444813"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a><span data-ttu-id="f3941-102">Перечисление CorMethodSemanticsAttr</span><span class="sxs-lookup"><span data-stu-id="f3941-102">CorMethodSemanticsAttr Enumeration</span></span>
 <span data-ttu-id="f3941-103">Содержит значения, описывающие связь между методом и соответствующим свойством или событием.</span><span class="sxs-lookup"><span data-stu-id="f3941-103">Contains values that describe the relationship between a method and an associated property or event.</span></span>  

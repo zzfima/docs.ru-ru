@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470559"
 ---
 # <a name="reliable-messaging-messages-dropped"></a><span data-ttu-id="55a31-102">Количество сброшенных сообщений, передаваемых по надежным каналам</span><span class="sxs-lookup"><span data-stu-id="55a31-102">Reliable Messaging Messages Dropped</span></span>
 <span data-ttu-id="55a31-103">Имя счетчика: Reliable Messaging Sessions Dropped.</span><span class="sxs-lookup"><span data-stu-id="55a31-103">Counter Name: Reliable Messaging Sessions Dropped.</span></span>  

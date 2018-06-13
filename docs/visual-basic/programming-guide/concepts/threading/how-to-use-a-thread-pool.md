@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648155"
 ---
 # <a name="how-to-use-a-thread-pool-visual-basic"></a><span data-ttu-id="3c7b5-102">Как: использование пула потоков (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3c7b5-102">How to: Use a Thread Pool (Visual Basic)</span></span>
 <span data-ttu-id="3c7b5-103">*Группировка потоков в пул* — это форма многопоточности, при которой задачи добавляются в очередь и при создании новых потоков запускаются автоматически.</span><span class="sxs-lookup"><span data-stu-id="3c7b5-103">*Thread pooling* is a form of multithreading in which tasks are added to a queue and automatically started when threads are created.</span></span> <span data-ttu-id="3c7b5-104">Дополнительные сведения см. в разделе [потоков пула (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md).</span><span class="sxs-lookup"><span data-stu-id="3c7b5-104">For more information, see [Thread Pooling (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md).</span></span>  

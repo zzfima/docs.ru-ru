@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645893"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a><span data-ttu-id="d243b-102">Обзор пространств имен (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="d243b-102">Namespaces Overview (LINQ to XML)</span></span>
 <span data-ttu-id="d243b-103">Этот раздел знакомит с пространствами имен, классом <xref:System.Xml.Linq.XName> и классом <xref:System.Xml.Linq.XNamespace>.</span><span class="sxs-lookup"><span data-stu-id="d243b-103">This topic introduces namespaces, the <xref:System.Xml.Linq.XName> class, and the <xref:System.Xml.Linq.XNamespace> class.</span></span>  

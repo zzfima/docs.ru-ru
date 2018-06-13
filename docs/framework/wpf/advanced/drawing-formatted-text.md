@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548770"
 ---
 # <a name="drawing-formatted-text"></a><span data-ttu-id="48072-102">Рисование форматированного текста</span><span class="sxs-lookup"><span data-stu-id="48072-102">Drawing Formatted Text</span></span>
 <span data-ttu-id="48072-103">В этом разделе содержится обзор возможностей <xref:System.Windows.Media.FormattedText> объекта.</span><span class="sxs-lookup"><span data-stu-id="48072-103">This topic provides an overview of the features of the <xref:System.Windows.Media.FormattedText> object.</span></span> <span data-ttu-id="48072-104">Этот объект предоставляет низкоуровневый элемент управления для рисования текста в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="48072-104">This object provides low-level control for drawing text in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  

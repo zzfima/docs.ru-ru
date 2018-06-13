@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33546319"
 ---
 # <a name="typography-how-to-topics"></a><span data-ttu-id="67103-102">Разделы руководства, посвященные разметке текста</span><span class="sxs-lookup"><span data-stu-id="67103-102">Typography How-to Topics</span></span>
 <span data-ttu-id="67103-103">В подразделах этого раздела описывается использование [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] поддержка форматированного представления текста в приложениях.</span><span class="sxs-lookup"><span data-stu-id="67103-103">The topics in this section describe how to use [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] support for rich presentation of text in your applications.</span></span>  
