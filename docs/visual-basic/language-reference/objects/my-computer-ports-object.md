@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595944"
 ---
 # <a name="mycomputerports-object"></a><span data-ttu-id="551f1-102">Объект My.Computer.Ports</span><span class="sxs-lookup"><span data-stu-id="551f1-102">My.Computer.Ports Object</span></span>
 <span data-ttu-id="551f1-103">Предлагает свойство и метод для доступа к последовательным портам компьютера.</span><span class="sxs-lookup"><span data-stu-id="551f1-103">Provides a property and a method for accessing the computer's serial ports.</span></span>  

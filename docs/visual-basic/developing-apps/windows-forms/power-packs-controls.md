@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584213"
 ---
 # <a name="visual-basic-power-packs-controls"></a><span data-ttu-id="60547-102">Элементы управления Visual Basic Power Packs</span><span class="sxs-lookup"><span data-stu-id="60547-102">Visual Basic Power Packs Controls</span></span>
 <span data-ttu-id="60547-103">Элементы управления Visual Basic Power Packs представляют собой дополнительные элементы управления Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="60547-103">Visual Basic Power Packs controls are additional Windows Forms controls.</span></span> <span data-ttu-id="60547-104">Они не входят в состав Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="60547-104">They are not included in Visual Studio.</span></span>  <span data-ttu-id="60547-105">Вы можете [загружать их](http://go.microsoft.com/fwlink/?LinkId=321343), но они предоставляются в виде-есть, без поддержки.</span><span class="sxs-lookup"><span data-stu-id="60547-105">You can [download them](http://go.microsoft.com/fwlink/?LinkId=321343), but they are provided as-is, without support.</span></span>  

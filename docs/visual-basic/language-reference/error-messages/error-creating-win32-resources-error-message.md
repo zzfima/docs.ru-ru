@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584583"
 ---
 # <a name="error-creating-win32-resources-lterror-messagegt"></a><span data-ttu-id="a8906-102">Ошибка при создании ресурсов Win32: &lt;сообщение об ошибке&gt;</span><span class="sxs-lookup"><span data-stu-id="a8906-102">Error creating Win32 resources: &lt;error message&gt;</span></span>
 <span data-ttu-id="a8906-103">Компилятор Visual Basic вызывает компоновщик сборок (Al.exe, который также называется Alink) для создания сборки с манифестом.</span><span class="sxs-lookup"><span data-stu-id="a8906-103">The Visual Basic compiler calls the Assembly Linker (Al.exe, also known as Alink) to generate an assembly with a manifest.</span></span> <span data-ttu-id="a8906-104">Компоновщик сообщил об ошибке при создании ресурса, обрабатываемого в памяти.</span><span class="sxs-lookup"><span data-stu-id="a8906-104">The linker has reported an error creating an in-memory resource.</span></span> <span data-ttu-id="a8906-105">Причиной может быть проблема со средой или нехватка памяти на компьютере.</span><span class="sxs-lookup"><span data-stu-id="a8906-105">This might be a problem with the environment, or your computer might be low on memory.</span></span>  

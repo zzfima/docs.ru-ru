@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33598496"
 ---
 # <a name="into-clause-visual-basic"></a><span data-ttu-id="94e7c-102">Предложение Into (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="94e7c-102">Into Clause (Visual Basic)</span></span>
 <span data-ttu-id="94e7c-103">Определяет статистические функции или группирования, применяемые к коллекции.</span><span class="sxs-lookup"><span data-stu-id="94e7c-103">Identifies aggregate functions or groupings to apply to a collection.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33584286"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a><span data-ttu-id="db35a-102">Практическое руководство. Отмена запроса PLINQ</span><span class="sxs-lookup"><span data-stu-id="db35a-102">How to: Cancel a PLINQ Query</span></span>
 <span data-ttu-id="db35a-103">В приведенных ниже примерах показаны два способа отмены запроса PLINQ.</span><span class="sxs-lookup"><span data-stu-id="db35a-103">The following examples show two ways to cancel a PLINQ query.</span></span> <span data-ttu-id="db35a-104">В первом примере отменяется запрос, который состоит в основном из обхода данных.</span><span class="sxs-lookup"><span data-stu-id="db35a-104">The first example shows how to cancel a query that consists mostly of data traversal.</span></span> <span data-ttu-id="db35a-105">Во втором примере отменяется запрос, который содержит ресурсоемкую функцию.</span><span class="sxs-lookup"><span data-stu-id="db35a-105">The second example shows how to cancel a query that contains a user function that is computationally expensive.</span></span>  

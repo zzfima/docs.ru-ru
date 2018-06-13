@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583868"
 ---
 # <a name="array-subscript-expression-missing"></a><span data-ttu-id="7872d-102">Отсутствует выражение с индексами для массива</span><span class="sxs-lookup"><span data-stu-id="7872d-102">Array subscript expression missing</span></span>
 <span data-ttu-id="7872d-103">Инициализация массива пропущен один или несколько индексов, определяющих границы массива.</span><span class="sxs-lookup"><span data-stu-id="7872d-103">An array initialization leaves out one or more of the subscripts that define the array bounds.</span></span> <span data-ttu-id="7872d-104">Например, инструкция может содержать выражение `myArray (5,5,,10)`, который пропущен третий индекс.</span><span class="sxs-lookup"><span data-stu-id="7872d-104">For example, the statement might contain the expression `myArray (5,5,,10)`, which leaves out the third subscript.</span></span>  

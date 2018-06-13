@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599194"
 ---
 # <a name="argument-value-39ltpathnamegt39-contains-characters-that-are-not-valid-in-a-path-name"></a><span data-ttu-id="cb04d-102">Значение аргумента &#39; &lt;pathname&gt; &#39; содержит символы, недопустимые в имени пути</span><span class="sxs-lookup"><span data-stu-id="cb04d-102">Argument value &#39;&lt;pathname&gt;&#39; contains characters that are not valid in a path name</span></span>
 <span data-ttu-id="cb04d-103">Путь содержит недопустимые символы.</span><span class="sxs-lookup"><span data-stu-id="cb04d-103">A path name contains one or more characters that are not valid.</span></span>  
