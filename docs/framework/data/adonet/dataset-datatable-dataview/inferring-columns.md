@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761081"
 ---
 # <a name="inferring-columns"></a><span data-ttu-id="76167-102">Определение столбцов</span><span class="sxs-lookup"><span data-stu-id="76167-102">Inferring Columns</span></span>
 <span data-ttu-id="76167-103">ADO.NET определяет по XML-документу, какие элементы выводятся как таблицы для <xref:System.Data.DataSet>, а затем выводятся столбцы для этих таблиц.</span><span class="sxs-lookup"><span data-stu-id="76167-103">After ADO.NET has determined from an XML document which elements to infer as tables for a <xref:System.Data.DataSet>, it then infers the columns for those tables.</span></span> <span data-ttu-id="76167-104">В ADO.NET 2.0 появился новый механизм вывода схемы, который выводит строго типизированный тип данных для каждого **simpleType** элемента.</span><span class="sxs-lookup"><span data-stu-id="76167-104">ADO.NET 2.0 introduced a new schema inference engine that infers a strongly typed data type for each **simpleType** element.</span></span> <span data-ttu-id="76167-105">В предыдущих версиях выводимый тип данных **simpleType** элемент всегда была **xsd: String**.</span><span class="sxs-lookup"><span data-stu-id="76167-105">In previous versions, the data type of an inferred **simpleType** element was always **xsd:string**.</span></span>  

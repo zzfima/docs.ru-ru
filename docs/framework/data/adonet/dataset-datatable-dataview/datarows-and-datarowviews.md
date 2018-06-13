@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32762875"
 ---
 # <a name="datarows-and-datarowviews"></a><span data-ttu-id="37b65-102">Объекты DataRow и DataRowView</span><span class="sxs-lookup"><span data-stu-id="37b65-102">DataRows and DataRowViews</span></span>
 <span data-ttu-id="37b65-103">Представление <xref:System.Data.DataView> предоставляет перечисляемую коллекцию объектов <xref:System.Data.DataRowView>.</span><span class="sxs-lookup"><span data-stu-id="37b65-103">A <xref:System.Data.DataView> exposes an enumerable collection of <xref:System.Data.DataRowView> objects.</span></span> <span data-ttu-id="37b65-104">**DataRowView** объекты предоставляют значения в виде массивов объектов, которые индексируются по имени или порядковому номеру столбца в базовой таблице.</span><span class="sxs-lookup"><span data-stu-id="37b65-104">The **DataRowView** objects expose values as object arrays that are indexed by either the name or the ordinal reference of the column in the underlying table.</span></span> <span data-ttu-id="37b65-105">Вы можете получить доступ к <xref:System.Data.DataRow> , представленного **DataRowView** с помощью <xref:System.Data.DataRowView.Row%2A> свойство **DataRowView**.</span><span class="sxs-lookup"><span data-stu-id="37b65-105">You can access the <xref:System.Data.DataRow> that is exposed by the **DataRowView** by using the <xref:System.Data.DataRowView.Row%2A> property of the **DataRowView**.</span></span>  
