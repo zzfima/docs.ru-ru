@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497286"
 ---
 # <a name="schema-import-and-export"></a>Импорт и экспорт схемы
 Windows Communication Foundation (WCF) включает новый модуль сериализации, <xref:System.Runtime.Serialization.DataContractSerializer>. Объект `DataContractSerializer` осуществляет преобразование объектов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в формат XML и обратно. Помимо собственно сериализатора WCF включает связанные механизмы импорта и схемы экспорта. *Схемы* формальное, точное и обрабатываемое компьютером описание формата XML-данных, которые создаются сериализатором или могут десериализатором. WCF использует язык определения World Wide Web Consortium (W3C) XML-схемы (XSD) в качестве представления схемы, которая поддерживает возможность взаимодействия с многочисленными платформами сторонних разработчиков.  

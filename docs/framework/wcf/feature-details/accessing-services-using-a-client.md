@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496000"
 ---
 # <a name="accessing-services-using-a-client"></a>Обращение к службам с использованием клиента
 Клиентские приложения необходимо создать, настроить и использовать объекты клиента или каналов WCF для взаимодействия со службами. [Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md) разделе представлен обзор объектов и шаги, необходимые для создания основных объектов клиента и канала и их использование.  

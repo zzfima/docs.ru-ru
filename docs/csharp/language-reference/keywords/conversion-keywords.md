@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33213952"
 ---
 # <a name="conversion-keywords-c-reference"></a>Ключевые слова преобразований (Справочник по C#)
 В этом разделе описываются ключевые слова, используемые в преобразованиях типов:  
