@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809021"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Программа Service Trace Viewer (SvcTraceViewer.exe)
 Средство просмотра трассировки службы Windows Communication Foundation (WCF) позволяет анализировать диагностические трассировки, созданными с помощью WCF. Service Trace Viewer предоставляет возможность легко слияния, просмотра и фильтрации сообщений трассировки в журнале, чтобы диагностировать, восстановления и проверки неисправностей службы WCF.  

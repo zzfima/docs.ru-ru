@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647908"
 ---
 # <a name="refactoring-using-an-extension-method-visual-basic"></a>Рефакторинг с использованием метода расширения (Visual Basic)
 Этот пример основан на предыдущем примере [извлечение текста абзацев (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), путем оптимизации кода объединения строк с помощью чистой функции, которая реализуется как метод расширения.  

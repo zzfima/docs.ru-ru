@@ -7,6 +7,7 @@ ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/07/2018
+ms.locfileid: "33809307"
 ---
 # <a name="custom-lifetime"></a>Пользовательские службы времени существования
 В этом примере показано, как написать расширение Windows Communication Foundation (WCF) для предоставления пользовательских служб времени существования для общих экземпляров службы WCF.  
