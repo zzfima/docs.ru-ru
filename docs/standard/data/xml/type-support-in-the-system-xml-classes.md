@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569698"
 ---
 # <a name="type-support-in-the-systemxml-classes"></a><span data-ttu-id="c3bfc-102">Поддержка типов в классах System.Xml</span><span class="sxs-lookup"><span data-stu-id="c3bfc-102">Type Support in the System.Xml Classes</span></span>
 <span data-ttu-id="c3bfc-103">На платформе .NET Framework версии 2.0 основные классы XML были улучшены, чтобы включить возможности поддержки типов.</span><span class="sxs-lookup"><span data-stu-id="c3bfc-103">In the .NET Framework version 2.0, the core XML classes have been enhanced to include type support features.</span></span> <span data-ttu-id="c3bfc-104">Классы <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter> и <xref:System.Xml.XPath.XPathNavigator> включают функции поддержки типов, включая возможность преобразования между собой типов схемы XML и типов CLR.</span><span class="sxs-lookup"><span data-stu-id="c3bfc-104">The <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, and <xref:System.Xml.XPath.XPathNavigator> classes include type support features including the ability to convert between XML Schema types and common language runtime (CLR) types.</span></span>  

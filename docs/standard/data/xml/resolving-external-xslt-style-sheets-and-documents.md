@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574765"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a><span data-ttu-id="cfaa4-102">Разрешение внешних таблиц стилей XSLT и документов</span><span class="sxs-lookup"><span data-stu-id="cfaa4-102">Resolving External XSLT Style Sheets and Documents</span></span>
 <span data-ttu-id="cfaa4-103">В некоторых случаях в процессе преобразования может потребоваться разрешение внешних ресурсов.</span><span class="sxs-lookup"><span data-stu-id="cfaa4-103">There are several times during a transformation when you may need to resolve external resources.</span></span>  

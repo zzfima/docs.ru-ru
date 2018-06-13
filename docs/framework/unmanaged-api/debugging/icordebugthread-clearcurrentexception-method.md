@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1875badfb27b005d63c5b5104c17b87ec7fd51d6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423459"
 ---
 # <a name="icordebugthreadclearcurrentexception-method"></a><span data-ttu-id="bbd71-102">Метод ICorDebugThread::ClearCurrentException</span><span class="sxs-lookup"><span data-stu-id="bbd71-102">ICorDebugThread::ClearCurrentException Method</span></span>
 <span data-ttu-id="bbd71-103">Этот метод не реализован.</span><span class="sxs-lookup"><span data-stu-id="bbd71-103">This method is not implemented.</span></span> <span data-ttu-id="bbd71-104">Не используйте его.</span><span class="sxs-lookup"><span data-stu-id="bbd71-104">Do not use it.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585305"
 ---
 # <a name="39ltmembernamegt39-is-ambiguous-across-the-inherited-interfaces-39ltinterfacename1gt39-and-39ltinterfacename2gt39"></a><span data-ttu-id="60de1-102">&#39;&lt;имя пользователя&gt; &#39; является неоднозначным к наследуемому интерфейсу &#39; &lt;имя_интерфейса1&gt; &#39; и &#39; &lt;имя_интерфейса2&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="60de1-102">&#39;&lt;membername&gt;&#39; is ambiguous across the inherited interfaces &#39;&lt;interfacename1&gt;&#39; and &#39;&lt;interfacename2&gt;&#39;</span></span>
 <span data-ttu-id="60de1-103">Этот интерфейс наследует нескольких интерфейсов два или более членов с тем же именем.</span><span class="sxs-lookup"><span data-stu-id="60de1-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  

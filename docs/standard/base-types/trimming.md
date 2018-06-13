@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569893"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a><span data-ttu-id="d2ed2-102">Сокращение и удаление символов из строк в .NET</span><span class="sxs-lookup"><span data-stu-id="d2ed2-102">Trimming and Removing Characters from Strings in .NET</span></span>
 <span data-ttu-id="d2ed2-103">При разборе предложения на отдельные слова может оказаться, что в начале или в конце некоторых слов стоят пробелы.</span><span class="sxs-lookup"><span data-stu-id="d2ed2-103">If you are parsing a sentence into individual words, you might end up with words that have blank spaces (also called white spaces) on either end of the word.</span></span> <span data-ttu-id="d2ed2-104">В этом случае можно воспользоваться методами сокращения в классе **System.String**, чтобы удалить любое количество пробелов или других символов из указанной позиции в строке.</span><span class="sxs-lookup"><span data-stu-id="d2ed2-104">In this situation, you can use one of the trim methods in the **System.String** class to remove any number of spaces or other characters from a specified position in the string.</span></span> <span data-ttu-id="d2ed2-105">В таблице ниже описаны доступны методы сокращения.</span><span class="sxs-lookup"><span data-stu-id="d2ed2-105">The following table describes the available trim methods.</span></span>  

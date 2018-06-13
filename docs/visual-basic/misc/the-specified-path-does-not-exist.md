@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637899"
 ---
 # <a name="the-specified-path-does-not-exist"></a><span data-ttu-id="47807-102">Указанного пути не существует</span><span class="sxs-lookup"><span data-stu-id="47807-102">The specified path does not exist</span></span>
 <span data-ttu-id="47807-103">Указанный путь не существует, возможно из-за ошибки объединения строк.</span><span class="sxs-lookup"><span data-stu-id="47807-103">A specified path does not exist, perhaps due to an error combining strings.</span></span>  

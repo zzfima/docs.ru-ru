@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c1a11c0b697a32b184a2c4a60c2f2c88a4b47aaf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451540"
 ---
 # <a name="imetadatatables-interface"></a><span data-ttu-id="78ba9-102">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="78ba9-102">IMetaDataTables Interface</span></span>
 <span data-ttu-id="78ba9-103">Предоставляет методы для хранения и извлечения сведений о метаданных в таблицах.</span><span class="sxs-lookup"><span data-stu-id="78ba9-103">Provides methods for the storage and retrieval of metadata information in tables.</span></span>  

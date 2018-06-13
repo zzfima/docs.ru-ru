@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519438"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a><span data-ttu-id="84d16-102">Как включить сохраняемость SQL для рабочих процессов и служб рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="84d16-102">How to: Enable SQL Persistence for Workflows and Workflow Services</span></span>
 <span data-ttu-id="84d16-103">В данном разделе описано, как настроить возможность хранилища экземпляров рабочих процессов SQL для включения сохраняемости рабочих процессов и служб рабочих процессов программно и с помощью файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="84d16-103">This topic describes how to configure the SQL Workflow Instance Store feature to enable persistence for your workflows and workflow services both programmatically and by using a configuration file.</span></span>  

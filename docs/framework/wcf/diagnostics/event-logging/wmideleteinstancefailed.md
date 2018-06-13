@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470811"
 ---
 # <a name="wmideleteinstancefailed"></a><span data-ttu-id="7ca83-102">WmiDeleteInstanceFailed</span><span class="sxs-lookup"><span data-stu-id="7ca83-102">WmiDeleteInstanceFailed</span></span>
 <span data-ttu-id="7ca83-103">Идентификатор: 122</span><span class="sxs-lookup"><span data-stu-id="7ca83-103">Id: 122</span></span>  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: de2871b406bb9da84d20d7c526ad4a703baae409
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422875"
 ---
 # <a name="icordebugtype-interface1"></a><span data-ttu-id="b880d-102">ICorDebugType интерфейс1</span><span class="sxs-lookup"><span data-stu-id="b880d-102">ICorDebugType Interface1</span></span>
 <span data-ttu-id="b880d-103">Представляет тип, либо простой или сложной (который определяемый пользователем).</span><span class="sxs-lookup"><span data-stu-id="b880d-103">Represents a type, either basic or complex (that is, user-defined).</span></span> <span data-ttu-id="b880d-104">Если тип универсален, интерфейс `ICorDebugType` представляет универсальный тип с экземплярами.</span><span class="sxs-lookup"><span data-stu-id="b880d-104">If the type is generic, `ICorDebugType` represents the instantiated generic type.</span></span>  

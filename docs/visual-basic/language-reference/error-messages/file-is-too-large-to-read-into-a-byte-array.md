@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585929"
 ---
 # <a name="file-is-too-large-to-read-into-a-byte-array"></a><span data-ttu-id="ca8b6-102">Файл слишком велик для чтения в массив байтов</span><span class="sxs-lookup"><span data-stu-id="ca8b6-102">File is too large to read into a byte array</span></span>
 <span data-ttu-id="ca8b6-103">Размер файла, который вы пытаетесь считать в массив байтов превышает 4 ГБ.</span><span class="sxs-lookup"><span data-stu-id="ca8b6-103">The size of the file you are attempting to read into a byte array exceeds 4 GB.</span></span> <span data-ttu-id="ca8b6-104">`My.Computer.FileSystem.ReadAllBytes` Метод не может считать файл большего размера.</span><span class="sxs-lookup"><span data-stu-id="ca8b6-104">The `My.Computer.FileSystem.ReadAllBytes` method cannot read a file that exceeds this size.</span></span>  

@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573585"
 ---
 # <a name="choosing-between-class-and-struct"></a><span data-ttu-id="ed7fb-102">Выбор между классом и структурой</span><span class="sxs-lookup"><span data-stu-id="ed7fb-102">Choosing Between Class and Struct</span></span>
 <span data-ttu-id="ed7fb-103">Одним из основных проектных решений сталкивается каждый конструктор framework является разработки тип как класс (ссылочный тип) или как структура (тип значения).</span><span class="sxs-lookup"><span data-stu-id="ed7fb-103">One of the basic design decisions every framework designer faces is whether to design a type as a class (a reference type) or as a struct (a value type).</span></span> <span data-ttu-id="ed7fb-104">При этом важно понять различия в поведении ссылочных типов и типов значений.</span><span class="sxs-lookup"><span data-stu-id="ed7fb-104">Good understanding of the differences in the behavior of reference types and value types is crucial in making this choice.</span></span>  

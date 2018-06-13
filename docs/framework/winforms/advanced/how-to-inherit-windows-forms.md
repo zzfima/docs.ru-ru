@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522906"
 ---
 # <a name="how-to-inherit-windows-forms"></a><span data-ttu-id="a1177-102">Практическое руководство. Наследование форм Windows Forms</span><span class="sxs-lookup"><span data-stu-id="a1177-102">How to: Inherit Windows Forms</span></span>
 <span data-ttu-id="a1177-103">Создание новых форм Windows Forms путем наследования базовых форм является удобным способом для дублирования уже созданного, минуя процесс повторного создания формы с нуля каждый раз, когда она необходима.</span><span class="sxs-lookup"><span data-stu-id="a1177-103">Creating new Windows Forms by inheriting from base forms is a handy way to duplicate your best efforts without going through the process of entirely recreating a form every time you require it.</span></span>  

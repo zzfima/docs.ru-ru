@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33477263"
 ---
 # <a name="systemservicemodelchannelssystemtimeresolution"></a><span data-ttu-id="73aff-102">System.ServiceModel.Channels.SystemTimeResolution</span><span class="sxs-lookup"><span data-stu-id="73aff-102">System.ServiceModel.Channels.SystemTimeResolution</span></span>
 <span data-ttu-id="73aff-103">System.ServiceModel.Channels.SystemTimeResolution</span><span class="sxs-lookup"><span data-stu-id="73aff-103">System.ServiceModel.Channels.SystemTimeResolution</span></span>  

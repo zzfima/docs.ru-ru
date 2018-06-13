@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471708"
 ---
 # <a name="endpoint-security-calls-not-authorized-per-second"></a><span data-ttu-id="fd705-102">Конечная точка: количество неавторизованных вызовов системы безопасности в секунду</span><span class="sxs-lookup"><span data-stu-id="fd705-102">Endpoint: Security Calls Not Authorized Per Second</span></span>
 <span data-ttu-id="fd705-103">Имя счетчика: Security Calls Not Authorized Per Second.</span><span class="sxs-lookup"><span data-stu-id="fd705-103">Counter Name: Security Calls Not Authorized Per Second.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637922"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a><span data-ttu-id="fb680-102">Строки &lt;номер&gt; не может быть проанализирована с помощью текущего параметра FieldWidths</span><span class="sxs-lookup"><span data-stu-id="fb680-102">Line &lt;number&gt; cannot be parsed using the current FieldWidths</span></span>
 <span data-ttu-id="fb680-103">Указанная строка не может быть проанализирована, так как ее поля имеют ширину, отличную от указанной.</span><span class="sxs-lookup"><span data-stu-id="fb680-103">The specified line cannot be parsed because its fields have widths other than those specified.</span></span>  

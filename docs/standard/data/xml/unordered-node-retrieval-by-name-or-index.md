@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572945"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a><span data-ttu-id="6832b-102">Неупорядоченное извлечение узлов по имени или индексу</span><span class="sxs-lookup"><span data-stu-id="6832b-102">Unordered Node Retrieval by Name or Index</span></span>
 <span data-ttu-id="6832b-103">Класс **XmlNamedNodeMap** описан в спецификации консорциума W3C как NamedNodeMap. Он нужен для обработки неупорядоченного набора узлов с возможностью ссылаться на узлы по их именам и индексам.</span><span class="sxs-lookup"><span data-stu-id="6832b-103">The **XmlNamedNodeMap** is described in the World Wide Web Consortium (W3C) specification as the NamedNodeMap and is required to handle an unordered set of nodes with the ability to reference nodes by their name or index.</span></span> <span data-ttu-id="6832b-104">Единственный способ доступа к классу **XmlNamedNodeMap** — возврат **XmlNamedNodeMap** через метод или свойство.</span><span class="sxs-lookup"><span data-stu-id="6832b-104">The only way you have access to an **XmlNamedNodeMap** is when an **XmlNamedNodeMap** is returned through a method or property.</span></span> <span data-ttu-id="6832b-105">Есть три метода или свойства, возвращающих класс **XmlNamedNodeMap**:</span><span class="sxs-lookup"><span data-stu-id="6832b-105">There are three methods or properties that return an **XmlNamedNodeMap**:</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33471358"
 ---
 # <a name="events-general-reference"></a><span data-ttu-id="438c0-102">Общие справочные сведения о событиях</span><span class="sxs-lookup"><span data-stu-id="438c0-102">Events General Reference</span></span>
 <span data-ttu-id="438c0-103">В этом разделе перечислены все события, создаваемые в Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="438c0-103">This section lists all the events that are emitted by Windows Communication Foundation (WCF).</span></span>

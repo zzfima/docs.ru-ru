@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476929"
 ---
 # <a name="systemservicemodelchannelsfailedpipeconnect"></a><span data-ttu-id="f62e8-102">System.ServiceModel.Channels.FailedPipeConnect</span><span class="sxs-lookup"><span data-stu-id="f62e8-102">System.ServiceModel.Channels.FailedPipeConnect</span></span>
 <span data-ttu-id="f62e8-103">Сбой попытки соединения с конечной точкой именованного канала.</span><span class="sxs-lookup"><span data-stu-id="f62e8-103">An attempt to connect to the named pipe endpoint failed.</span></span> <span data-ttu-id="f62e8-104">По истечении заданного промежутка времени выполнена еще одна попытка.</span><span class="sxs-lookup"><span data-stu-id="f62e8-104">Another attempt is made within the specified timeout period.</span></span>  

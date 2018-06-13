@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a4bacbd9ef11f6f6cb6d9952290c00f1b8ce50aa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423433"
 ---
 # <a name="icordebugvirtualunwindernext-method"></a><span data-ttu-id="7a4cd-102">Метод ICorDebugVirtualUnwinder::Next</span><span class="sxs-lookup"><span data-stu-id="7a4cd-102">ICorDebugVirtualUnwinder::Next Method</span></span>
 <span data-ttu-id="7a4cd-103">Переходит в контекст вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="7a4cd-103">Advances to the caller's context.</span></span>  

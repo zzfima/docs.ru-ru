@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a9bd144717decd16a84d2f005d84a22b4ef824d8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452235"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a><span data-ttu-id="fde40-102">Метод ICorProfilerCallback::ExceptionUnwindFinallyEnter</span><span class="sxs-lookup"><span data-stu-id="fde40-102">ICorProfilerCallback::ExceptionUnwindFinallyEnter Method</span></span>
 <span data-ttu-id="fde40-103">Уведомляет профилировщик, фазы перемотки исключения входит обработка `finally` предложение, содержащегося в указанной функции.</span><span class="sxs-lookup"><span data-stu-id="fde40-103">Notifies the profiler that the unwind phase of exception handling is entering a `finally` clause contained in the specified function.</span></span>  

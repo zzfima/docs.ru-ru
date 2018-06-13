@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33466724"
 ---
 # <a name="3431---websocketcreateclientwebsocketwithfactory"></a><span data-ttu-id="9a777-102">3431 - WebSocketCreateClientWebSocketWithFactory</span><span class="sxs-lookup"><span data-stu-id="9a777-102">3431 - WebSocketCreateClientWebSocketWithFactory</span></span>
 ## <a name="properties"></a><span data-ttu-id="9a777-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="9a777-103">Properties</span></span>  

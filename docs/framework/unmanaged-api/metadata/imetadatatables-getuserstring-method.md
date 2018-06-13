@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0d7dee3da1967f8a958ea95ab4555f279c962f51
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451799"
 ---
 # <a name="imetadatatablesgetuserstring-method"></a><span data-ttu-id="99628-102">Метод IMetaDataTables::GetUserString</span><span class="sxs-lookup"><span data-stu-id="99628-102">IMetaDataTables::GetUserString Method</span></span>
 <span data-ttu-id="99628-103">Получает жестко заданная строка в столбце строки в текущей области по указанному индексу.</span><span class="sxs-lookup"><span data-stu-id="99628-103">Gets the hard-coded string at the specified index in the string column in the current scope.</span></span>  

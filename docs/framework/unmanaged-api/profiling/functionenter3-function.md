@@ -1,14 +1,6 @@
 ---
-title: "Функция FunctionEnter3"
-ms.custom: 
+title: Функция FunctionEnter3
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - FunctionEnter3
 api_location:
@@ -22,59 +14,56 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 4bbdfa608f1ea60462dc432a7c2b98cafe66d7be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 466b90f814d267fb289b2804beccd58fc442e341
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451884"
 ---
-# <a name="functionenter3-function"></a><span data-ttu-id="d9399-102">Функция FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="d9399-102">FunctionEnter3 Function</span></span>
-<span data-ttu-id="d9399-103">Уведомляет профилировщик о передаче управления функции.</span><span class="sxs-lookup"><span data-stu-id="d9399-103">Notifies the profiler that control is being passed to a function.</span></span>  
+# <a name="functionenter3-function"></a><span data-ttu-id="79248-102">Функция FunctionEnter3</span><span class="sxs-lookup"><span data-stu-id="79248-102">FunctionEnter3 Function</span></span>
+<span data-ttu-id="79248-103">Уведомляет профилировщик о передаче управления функции.</span><span class="sxs-lookup"><span data-stu-id="79248-103">Notifies the profiler that control is being passed to a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d9399-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d9399-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="79248-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="79248-104">Syntax</span></span>  
   
 ```  
 void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d9399-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="d9399-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="79248-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="79248-105">Parameters</span></span>  
  `functionOrRemappedID`  
- <span data-ttu-id="d9399-106">[in] Идентификатор функции, в которую передается элемента управления.</span><span class="sxs-lookup"><span data-stu-id="d9399-106">[in] The identifier of the function to which control is passed.</span></span>  
+ <span data-ttu-id="79248-106">[in] Идентификатор функции, в которую передается элемента управления.</span><span class="sxs-lookup"><span data-stu-id="79248-106">[in] The identifier of the function to which control is passed.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d9399-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="d9399-107">Remarks</span></span>  
- <span data-ttu-id="d9399-108">`FunctionEnter3` Функция обратного вызова Уведомляет профилировщик, как функции вызываются, но не поддержки проверку аргументов.</span><span class="sxs-lookup"><span data-stu-id="d9399-108">The `FunctionEnter3` callback function notifies the profiler as functions are being called, but does not support argument inspection.</span></span> <span data-ttu-id="d9399-109">Используйте [метод ICorProfilerInfo3::SetEnterLeaveFunctionHooks3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) для регистрации реализации этой функции.</span><span class="sxs-lookup"><span data-stu-id="d9399-109">Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="79248-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="79248-107">Remarks</span></span>  
+ <span data-ttu-id="79248-108">`FunctionEnter3` Функция обратного вызова Уведомляет профилировщик, как функции вызываются, но не поддержки проверку аргументов.</span><span class="sxs-lookup"><span data-stu-id="79248-108">The `FunctionEnter3` callback function notifies the profiler as functions are being called, but does not support argument inspection.</span></span> <span data-ttu-id="79248-109">Используйте [метод ICorProfilerInfo3::SetEnterLeaveFunctionHooks3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) для регистрации реализации этой функции.</span><span class="sxs-lookup"><span data-stu-id="79248-109">Use the [ICorProfilerInfo3::SetEnterLeaveFunctionHooks3 method](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md) to register your implementation of this function.</span></span>  
   
- <span data-ttu-id="d9399-110">`FunctionEnter3` Функция является обратным вызовом, необходимо произвести его.</span><span class="sxs-lookup"><span data-stu-id="d9399-110">The `FunctionEnter3` function is a callback; you must implement it.</span></span> <span data-ttu-id="d9399-111">В реализации должен использоваться `__declspec(naked)` атрибут класса хранения.</span><span class="sxs-lookup"><span data-stu-id="d9399-111">The implementation must use the `__declspec(naked)` storage-class attribute.</span></span>  
+ <span data-ttu-id="79248-110">`FunctionEnter3` Функция является обратным вызовом, необходимо произвести его.</span><span class="sxs-lookup"><span data-stu-id="79248-110">The `FunctionEnter3` function is a callback; you must implement it.</span></span> <span data-ttu-id="79248-111">В реализации должен использоваться `__declspec(naked)` атрибут класса хранения.</span><span class="sxs-lookup"><span data-stu-id="79248-111">The implementation must use the `__declspec(naked)` storage-class attribute.</span></span>  
   
- <span data-ttu-id="d9399-112">Перед вызовом этой функции ядро выполнения не сохраняет значения регистров.</span><span class="sxs-lookup"><span data-stu-id="d9399-112">The execution engine does not save any registers before calling this function.</span></span>  
+ <span data-ttu-id="79248-112">Перед вызовом этой функции ядро выполнения не сохраняет значения регистров.</span><span class="sxs-lookup"><span data-stu-id="79248-112">The execution engine does not save any registers before calling this function.</span></span>  
   
--   <span data-ttu-id="d9399-113">При входе необходимо сохранить все используемые регистры, включая те, в единицах измерения с плавающей запятой (FPU).</span><span class="sxs-lookup"><span data-stu-id="d9399-113">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
+-   <span data-ttu-id="79248-113">При входе необходимо сохранить все используемые регистры, включая те, в единицах измерения с плавающей запятой (FPU).</span><span class="sxs-lookup"><span data-stu-id="79248-113">On entry, you must save all registers that you use, including those in the floating-point unit (FPU).</span></span>  
   
--   <span data-ttu-id="d9399-114">При выходе необходимо восстановить стек путем выталкивания из всех параметров, переведенных вызывающим кодом.</span><span class="sxs-lookup"><span data-stu-id="d9399-114">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
+-   <span data-ttu-id="79248-114">При выходе необходимо восстановить стек путем выталкивания из всех параметров, переведенных вызывающим кодом.</span><span class="sxs-lookup"><span data-stu-id="79248-114">On exit, you must restore the stack by popping off all the parameters that were pushed by its caller.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d9399-115">Требования</span><span class="sxs-lookup"><span data-stu-id="d9399-115">Requirements</span></span>  
- <span data-ttu-id="d9399-116">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="d9399-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="79248-115">Требования</span><span class="sxs-lookup"><span data-stu-id="79248-115">Requirements</span></span>  
+ <span data-ttu-id="79248-116">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="79248-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d9399-117">**Заголовок:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="d9399-117">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="79248-117">**Заголовок:** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="79248-117">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="d9399-118">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d9399-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="79248-118">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="79248-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d9399-119">**Версии платформы .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d9399-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="79248-119">**Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="79248-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d9399-120">См. также</span><span class="sxs-lookup"><span data-stu-id="d9399-120">See Also</span></span>  
- [<span data-ttu-id="d9399-121">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="d9399-121">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)  
- [<span data-ttu-id="d9399-122">FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="d9399-122">FunctionTailcall3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)  
- [<span data-ttu-id="d9399-123">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="d9399-123">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
- [<span data-ttu-id="d9399-124">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="d9399-124">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
- [<span data-ttu-id="d9399-125">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="d9399-125">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
- [<span data-ttu-id="d9399-126">SetEnterLeaveFunctionHooks3</span><span class="sxs-lookup"><span data-stu-id="d9399-126">SetEnterLeaveFunctionHooks3</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)  
- [<span data-ttu-id="d9399-127">SetEnterLeaveFunctionHooks3WithInfo</span><span class="sxs-lookup"><span data-stu-id="d9399-127">SetEnterLeaveFunctionHooks3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)  
- [<span data-ttu-id="d9399-128">SetFunctionIDMapper</span><span class="sxs-lookup"><span data-stu-id="d9399-128">SetFunctionIDMapper</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)  
- [<span data-ttu-id="d9399-129">SetFunctionIDMapper2</span><span class="sxs-lookup"><span data-stu-id="d9399-129">SetFunctionIDMapper2</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)  
- [<span data-ttu-id="d9399-130">Глобальные статические функции профилирования</span><span class="sxs-lookup"><span data-stu-id="d9399-130">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+## <a name="see-also"></a><span data-ttu-id="79248-120">См. также</span><span class="sxs-lookup"><span data-stu-id="79248-120">See Also</span></span>  
+ [<span data-ttu-id="79248-121">FunctionLeave3</span><span class="sxs-lookup"><span data-stu-id="79248-121">FunctionLeave3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)  
+ [<span data-ttu-id="79248-122">FunctionTailcall3</span><span class="sxs-lookup"><span data-stu-id="79248-122">FunctionTailcall3</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)  
+ [<span data-ttu-id="79248-123">FunctionEnter3WithInfo</span><span class="sxs-lookup"><span data-stu-id="79248-123">FunctionEnter3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)  
+ [<span data-ttu-id="79248-124">FunctionLeave3WithInfo</span><span class="sxs-lookup"><span data-stu-id="79248-124">FunctionLeave3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)  
+ [<span data-ttu-id="79248-125">FunctionTailcall3WithInfo</span><span class="sxs-lookup"><span data-stu-id="79248-125">FunctionTailcall3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)  
+ [<span data-ttu-id="79248-126">SetEnterLeaveFunctionHooks3</span><span class="sxs-lookup"><span data-stu-id="79248-126">SetEnterLeaveFunctionHooks3</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)  
+ [<span data-ttu-id="79248-127">SetEnterLeaveFunctionHooks3WithInfo</span><span class="sxs-lookup"><span data-stu-id="79248-127">SetEnterLeaveFunctionHooks3WithInfo</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)  
+ [<span data-ttu-id="79248-128">SetFunctionIDMapper</span><span class="sxs-lookup"><span data-stu-id="79248-128">SetFunctionIDMapper</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)  
+ [<span data-ttu-id="79248-129">SetFunctionIDMapper2</span><span class="sxs-lookup"><span data-stu-id="79248-129">SetFunctionIDMapper2</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)  
+ [<span data-ttu-id="79248-130">Глобальные статические функции профилирования</span><span class="sxs-lookup"><span data-stu-id="79248-130">Profiling Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)

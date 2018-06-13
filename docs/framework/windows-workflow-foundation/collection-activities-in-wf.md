@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516731"
 ---
 # <a name="collection-activities-in-wf"></a><span data-ttu-id="7a3c9-102">Действия коллекции в WF</span><span class="sxs-lookup"><span data-stu-id="7a3c9-102">Collection Activities in WF</span></span>
 <span data-ttu-id="7a3c9-103">Действия коллекции используются для работы с объектами коллекции в рамках рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="7a3c9-103">Collection activities are used to work with collection objects in a workflow.</span></span> [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="7a3c9-104"> имеет системные действия для добавления элементов в коллекцию и удаления из нее, тестирования на наличие элемента в коллекции и очистки коллекции.</span><span class="sxs-lookup"><span data-stu-id="7a3c9-104"> has system-provided activities for adding and removing items from a collection, testing for the existence of an item in a collection, and clearing a collection.</span></span> <span data-ttu-id="7a3c9-105">`ExistsInCollection` и `RemoveFromCollection` имеют <xref:System.Activities.OutArgument%601> типа <xref:System.Boolean>, который определяет результат.</span><span class="sxs-lookup"><span data-stu-id="7a3c9-105">`ExistsInCollection` and `RemoveFromCollection` have an <xref:System.Activities.OutArgument%601> of type <xref:System.Boolean>, which indicates the result.</span></span>  

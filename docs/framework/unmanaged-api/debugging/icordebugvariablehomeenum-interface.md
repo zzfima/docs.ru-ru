@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a80a334d1b586aec30c6cf2715d7fb841bc76929
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423264"
 ---
 # <a name="icordebugvariablehomeenum-interface"></a><span data-ttu-id="70385-102">Интерфейс ICorDebugVariableHomeEnum</span><span class="sxs-lookup"><span data-stu-id="70385-102">ICorDebugVariableHomeEnum Interface</span></span>
 <span data-ttu-id="70385-103">Предоставляет перечислитель для локальных переменных и аргументов в функции.</span><span class="sxs-lookup"><span data-stu-id="70385-103">Provides an enumerator to the local variables and arguments in a function.</span></span>  

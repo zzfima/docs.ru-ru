@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33466786"
 ---
 # <a name="3417---websocketconnectionacceptstart"></a><span data-ttu-id="ff873-102">3417 - WebSocketConnectionAcceptStart</span><span class="sxs-lookup"><span data-stu-id="ff873-102">3417 - WebSocketConnectionAcceptStart</span></span>
 ## <a name="properties"></a><span data-ttu-id="ff873-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="ff873-103">Properties</span></span>  

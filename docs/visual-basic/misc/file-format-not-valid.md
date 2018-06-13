@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637378"
 ---
 # <a name="file-format-not-valid"></a><span data-ttu-id="b5644-102">Недопустимый формат файла</span><span class="sxs-lookup"><span data-stu-id="b5644-102">File format not valid</span></span>
 <span data-ttu-id="b5644-103">Вы попытались загрузить файл в компонент, но формат данных файла оказался несовместимым с компонентом, либо попытались сохранить в файл данные компонента, формат которых оказался несовместимым с форматом файла.</span><span class="sxs-lookup"><span data-stu-id="b5644-103">Either you tried to load a file into a component, but the format of the data in the file was incompatible with the component, or you tried to save component data to a file, but the format of the data was incompatible with the format of the file.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600051"
 ---
 # <a name="isfalse-operator-visual-basic"></a><span data-ttu-id="65660-102">Оператор IsFalse (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="65660-102">IsFalse Operator (Visual Basic)</span></span>
 <span data-ttu-id="65660-103">Определяет, является ли выражение `False`.</span><span class="sxs-lookup"><span data-stu-id="65660-103">Determines whether an expression is `False`.</span></span>  

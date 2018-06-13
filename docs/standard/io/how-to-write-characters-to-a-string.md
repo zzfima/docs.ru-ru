@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572038"
 ---
 # <a name="how-to-write-characters-to-a-string"></a><span data-ttu-id="b546a-102">Практическое руководство. Запись символов в строку</span><span class="sxs-lookup"><span data-stu-id="b546a-102">How to: Write Characters to a String</span></span>
 <span data-ttu-id="b546a-103">Следующий пример кода демонстрирует синхронную и асинхронную запись символов из массива символов в строку.</span><span class="sxs-lookup"><span data-stu-id="b546a-103">The following code examples write characters synchronously and asynchronously from a character array into a string.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521619"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a><span data-ttu-id="1d58c-102">Практическое руководство. Рисование пользовательских пунктирных линий</span><span class="sxs-lookup"><span data-stu-id="1d58c-102">How to: Draw a Custom Dashed Line</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="1d58c-103"> предоставляет несколько стили штрихов, которые перечислены в <xref:System.Drawing.Drawing2D.DashStyle> перечисления.</span><span class="sxs-lookup"><span data-stu-id="1d58c-103"> provides several dash styles that are listed in the <xref:System.Drawing.Drawing2D.DashStyle> enumeration.</span></span> <span data-ttu-id="1d58c-104">Если эти стандартные стили пунктирных линий не подходят, можно создать пользовательский шаблон пунктирной линии.</span><span class="sxs-lookup"><span data-stu-id="1d58c-104">If those standard dash styles do not suit your needs, you can create a custom dash pattern.</span></span>  

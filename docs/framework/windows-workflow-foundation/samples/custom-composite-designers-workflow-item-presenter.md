@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33517122"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a><span data-ttu-id="e52ed-102">Пользовательские составные конструкторы - средство представления элементов рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="e52ed-102">Custom Composite Designers - Workflow Item Presenter</span></span>
 <span data-ttu-id="e52ed-103"><xref:System.Activities.Presentation.WorkflowItemPresenter> Является ключевым типом в модели программирования конструктора WF, позволяющей создавать «зону сброса» где могут размещаться произвольные действия.</span><span class="sxs-lookup"><span data-stu-id="e52ed-103">The <xref:System.Activities.Presentation.WorkflowItemPresenter> is a key type in the WF designer programming model that allows for the creation of a "drop zone" where an arbitrary activity can be placed.</span></span> <span data-ttu-id="e52ed-104">В этом примере показано, как построить конструктор действий, который предоставляет доступ к «зону перетаскивания.»</span><span class="sxs-lookup"><span data-stu-id="e52ed-104">This sample shows how to build an activity designer that surfaces such a "drop zone."</span></span>  

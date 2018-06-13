@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576686"
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a><span data-ttu-id="69076-102">Практическое руководство. Получение хранилищ для изолированного хранения</span><span class="sxs-lookup"><span data-stu-id="69076-102">How to: Obtain Stores for Isolated Storage</span></span>
 <span data-ttu-id="69076-103">Изолированное хранилище предоставляет виртуальную файловую систему в секции данных.</span><span class="sxs-lookup"><span data-stu-id="69076-103">An isolated store exposes a virtual file system within a data compartment.</span></span> <span data-ttu-id="69076-104">Класс <xref:System.IO.IsolatedStorage.IsolatedStorageFile> предоставляет ряд методов для взаимодействия с изолированным хранилищем.</span><span class="sxs-lookup"><span data-stu-id="69076-104">The <xref:System.IO.IsolatedStorage.IsolatedStorageFile> class supplies a number of methods for interacting with an isolated store.</span></span> <span data-ttu-id="69076-105"><xref:System.IO.IsolatedStorage.IsolatedStorageFile> содержит три статических метода, позволяющих создать и получить хранилище:</span><span class="sxs-lookup"><span data-stu-id="69076-105">To create and retrieve stores, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> provides three static methods:</span></span>  

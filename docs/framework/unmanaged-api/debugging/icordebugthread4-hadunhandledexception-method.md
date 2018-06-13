@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8215ddfd0f59f835d0b0dcd278b8cae9c12027d2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422114"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a><span data-ttu-id="6177c-102">Метод ICorDebugThread4::HadUnhandledException</span><span class="sxs-lookup"><span data-stu-id="6177c-102">ICorDebugThread4::HadUnhandledException Method</span></span>
 <span data-ttu-id="6177c-103">Указывает, является ли поток возникало необработанное исключение.</span><span class="sxs-lookup"><span data-stu-id="6177c-103">Indicates whether the thread has ever had an unhandled exception.</span></span>  

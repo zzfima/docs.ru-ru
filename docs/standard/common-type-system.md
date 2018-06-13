@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569552"
 ---
 # <a name="common-type-system--common-language-specification"></a><span data-ttu-id="21c73-103">Система общих типов CTS и спецификация CLS</span><span class="sxs-lookup"><span data-stu-id="21c73-103">Common Type System & Common Language Specification</span></span>
 

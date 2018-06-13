@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 47654d7ad1803e57f5db846ea0370d1f736deaa5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452277"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a><span data-ttu-id="97275-102">Метод ICorProfilerCallback2::HandleCreated</span><span class="sxs-lookup"><span data-stu-id="97275-102">ICorProfilerCallback2::HandleCreated Method</span></span>
 <span data-ttu-id="97275-103">Уведомляет профилировщик кода, что был создан дескриптор сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="97275-103">Notifies the code profiler that a garbage collection handle has been created.</span></span>  

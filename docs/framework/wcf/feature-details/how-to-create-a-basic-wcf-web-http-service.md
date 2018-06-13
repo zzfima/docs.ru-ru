@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493482"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a><span data-ttu-id="c3814-102">Как создать простую веб-службу WCF HTTP</span><span class="sxs-lookup"><span data-stu-id="c3814-102">How to: Create a Basic WCF Web HTTP Service</span></span>
 <span data-ttu-id="c3814-103">Windows Communication Foundation (WCF) позволяет создавать службу, предоставляющую сетевую конечную точку.</span><span class="sxs-lookup"><span data-stu-id="c3814-103">Windows Communication Foundation (WCF) allows you to create a service that exposes a Web endpoint.</span></span> <span data-ttu-id="c3814-104">Сетевые конечные точки отправляют данные в виде XML-кода или JSON, без конверта SOAP.</span><span class="sxs-lookup"><span data-stu-id="c3814-104">Web endpoints send data by XML or JSON, there is no SOAP envelope.</span></span> <span data-ttu-id="c3814-105">В этом разделе показано, как предоставить такую конечную точку.</span><span class="sxs-lookup"><span data-stu-id="c3814-105">This topic demonstrates how to expose such an endpoint.</span></span>  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567823"
 ---
 # <a name="creating-new-strings-in-net"></a><span data-ttu-id="3709d-102">Создание новых строк в .NET</span><span class="sxs-lookup"><span data-stu-id="3709d-102">Creating New Strings in .NET</span></span>
 <span data-ttu-id="3709d-103">[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] позволяет создавать строки с помощью простой операции присваивания, а также перегружать конструктор класса для создания строк с помощью различных параметров.</span><span class="sxs-lookup"><span data-stu-id="3709d-103">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] allows strings to be created using simple assignment, and also overloads a class constructor to support string creation using a number of different parameters.</span></span> <span data-ttu-id="3709d-104">Кроме того, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] предоставляет в классе <xref:System.String?displayProperty=nameWithType> несколько методов для создания строковых объектов путем объединения строк, массивов строк или объектов.</span><span class="sxs-lookup"><span data-stu-id="3709d-104">The [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] also provides several methods in the <xref:System.String?displayProperty=nameWithType> class that create new string objects by combining several strings, arrays of strings, or objects.</span></span>  

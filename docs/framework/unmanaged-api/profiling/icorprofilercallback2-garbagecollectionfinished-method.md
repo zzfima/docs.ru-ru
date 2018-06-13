@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 21f7e9fa0e567063c49caa390ace09c43454b092
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451686"
 ---
 # <a name="icorprofilercallback2garbagecollectionfinished-method"></a><span data-ttu-id="2028a-102">Метод ICorProfilerCallback2::GarbageCollectionFinished</span><span class="sxs-lookup"><span data-stu-id="2028a-102">ICorProfilerCallback2::GarbageCollectionFinished Method</span></span>
 <span data-ttu-id="2028a-103">Уведомляет профилировщик о сборки мусора и всех обратных вызовов, выданные для него.</span><span class="sxs-lookup"><span data-stu-id="2028a-103">Notifies the profiler that garbage collection has completed and all garbage collection callbacks have been issued for it.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 50d9ac08b01a67df68ff077721ff5421fbc27707
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424278"
 ---
 # <a name="isymunmanagedencupdateupdatemethodlines-method"></a><span data-ttu-id="0a265-102">Метод ISymUnmanagedENCUpdate::UpdateMethodLines</span><span class="sxs-lookup"><span data-stu-id="0a265-102">ISymUnmanagedENCUpdate::UpdateMethodLines Method</span></span>
 <span data-ttu-id="0a265-103">Позволяет обновить строки для метода, который не был повторно скомпилирован, но его строки были перемещены независимо друг от друга.</span><span class="sxs-lookup"><span data-stu-id="0a265-103">Allows updating the line information for a method that has not been recompiled, but whose lines have moved independently.</span></span> <span data-ttu-id="0a265-104">Допускается разницы для каждой инструкции.</span><span class="sxs-lookup"><span data-stu-id="0a265-104">A delta for each statement is allowed.</span></span>  

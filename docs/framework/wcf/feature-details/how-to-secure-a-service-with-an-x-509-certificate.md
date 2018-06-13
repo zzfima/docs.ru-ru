@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493046"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a><span data-ttu-id="2bbbb-102">Практическое руководство. Защита службы с использованием сертификата X.509</span><span class="sxs-lookup"><span data-stu-id="2bbbb-102">How to: Secure a Service with an X.509 Certificate</span></span>
 <span data-ttu-id="2bbbb-103">Защита службы с помощью сертификата X.509-стандартный прием, используемый в большинстве привязок в Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="2bbbb-103">Securing a service with an X.509 certificate is a basic technique that most bindings in Windows Communication Foundation (WCF) use.</span></span> <span data-ttu-id="2bbbb-104">В этом разделе описывается порядок настройки резидентной службы с сертификатом X.509.</span><span class="sxs-lookup"><span data-stu-id="2bbbb-104">This topic walks through the steps of configuring a self-hosted service with an X.509 certificate.</span></span>  

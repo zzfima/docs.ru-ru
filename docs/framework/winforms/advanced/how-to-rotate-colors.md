@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522399"
 ---
 # <a name="how-to-rotate-colors"></a><span data-ttu-id="e12d4-102">Практическое руководство. Поворот цветов</span><span class="sxs-lookup"><span data-stu-id="e12d4-102">How to: Rotate Colors</span></span>
 <span data-ttu-id="e12d4-103">Угол поворота в четырехмерный цветовое пространство сложно визуализировать.</span><span class="sxs-lookup"><span data-stu-id="e12d4-103">Rotation in a four-dimensional color space is difficult to visualize.</span></span> <span data-ttu-id="e12d4-104">Мы можно упростить, если договориться сохранять один из компонентов цвета неизменным.</span><span class="sxs-lookup"><span data-stu-id="e12d4-104">We can make it easier to visualize rotation by agreeing to keep one of the color components fixed.</span></span> <span data-ttu-id="e12d4-105">Предположим, нам требуется сохранить альфа-компонент неизменным и равным 1 (полная непрозрачность).</span><span class="sxs-lookup"><span data-stu-id="e12d4-105">Suppose we agree to keep the alpha component fixed at 1 (fully opaque).</span></span> <span data-ttu-id="e12d4-106">Тогда можно представить трехмерное цветовое пространство с осями красного, зеленого и синего как показано на следующем рисунке.</span><span class="sxs-lookup"><span data-stu-id="e12d4-106">Then we can visualize a three-dimensional color space with red, green, and blue axes as shown in the following illustration.</span></span>  

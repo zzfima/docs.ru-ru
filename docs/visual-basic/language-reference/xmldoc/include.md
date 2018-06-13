@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602740"
 ---
 # <a name="ltincludegt-visual-basic"></a><span data-ttu-id="43db6-102">&lt;включить&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="43db6-102">&lt;include&gt; (Visual Basic)</span></span>
 <span data-ttu-id="43db6-103">Ссылается на другой файл, описывающий типы и члены в исходном коде.</span><span class="sxs-lookup"><span data-stu-id="43db6-103">Refers to another file that describes the types and members in your source code.</span></span>  

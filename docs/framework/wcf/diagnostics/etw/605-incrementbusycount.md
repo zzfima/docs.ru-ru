@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470241"
 ---
 # <a name="605---incrementbusycount"></a><span data-ttu-id="34f9b-102">605 - IncrementBusyCount</span><span class="sxs-lookup"><span data-stu-id="34f9b-102">605 - IncrementBusyCount</span></span>
 ## <a name="properties"></a><span data-ttu-id="34f9b-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="34f9b-103">Properties</span></span>  

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493752"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a><span data-ttu-id="e285a-102">Конечные точки: адреса, привязки и контракты</span><span class="sxs-lookup"><span data-stu-id="e285a-102">Endpoints: Addresses, Bindings, and Contracts</span></span>
 <span data-ttu-id="e285a-103">Весь обмен данными со службой Windows Communication Foundation (WCF) осуществляется через *конечные точки* службы.</span><span class="sxs-lookup"><span data-stu-id="e285a-103">All communication with a Windows Communication Foundation (WCF) service occurs through the *endpoints* of the service.</span></span> <span data-ttu-id="e285a-104">Конечные точки предоставляют клиентам доступ к функциональным возможностям службой WCF.</span><span class="sxs-lookup"><span data-stu-id="e285a-104">Endpoints provide clients access to the functionality offered by a WCF service.</span></span>  

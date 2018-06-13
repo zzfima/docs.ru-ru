@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548474"
 ---
 # <a name="freezable-objects-overview"></a><span data-ttu-id="5455a-102">Общие сведения об объектах класса Freezable</span><span class="sxs-lookup"><span data-stu-id="5455a-102">Freezable Objects Overview</span></span>
 <span data-ttu-id="5455a-103">Описывается, как эффективно использовать и создавать <xref:System.Windows.Freezable> объекты, которые обеспечивают специальные возможности, которые могут помочь повысить производительность приложения.</span><span class="sxs-lookup"><span data-stu-id="5455a-103">This topic describes how to effectively use and create <xref:System.Windows.Freezable> objects, which provide special features that can help improve application performance.</span></span> <span data-ttu-id="5455a-104">Объекты freezable примеры кисти, перья, преобразования, геометрии и анимации.</span><span class="sxs-lookup"><span data-stu-id="5455a-104">Examples of freezable objects include brushes, pens, transformations, geometries, and animations.</span></span>  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b3536184fa7798ac8eabe851221ec692c126460b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424018"
 ---
 # <a name="icorpublishenum-interface"></a><span data-ttu-id="b791e-102">Интерфейс ICorPublishEnum</span><span class="sxs-lookup"><span data-stu-id="b791e-102">ICorPublishEnum Interface</span></span>
 <span data-ttu-id="b791e-103">Служит абстрактным базовым интерфейсом для перечислителей, которые используются в публикации сведений о процессах и доменах приложения.</span><span class="sxs-lookup"><span data-stu-id="b791e-103">Serves as the abstract base interface for the enumerators that are used in the publishing of information about processes and application domains.</span></span>  

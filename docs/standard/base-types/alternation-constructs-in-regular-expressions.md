@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574739"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a><span data-ttu-id="1c616-102">Конструкции изменения в регулярных выражениях</span><span class="sxs-lookup"><span data-stu-id="1c616-102">Alternation Constructs in Regular Expressions</span></span>
 <a name="top"></a> <span data-ttu-id="1c616-103">Конструкции изменения модифицируют регулярное выражение, включая сопоставление по принципу «либо/или» или условное сопоставление.</span><span class="sxs-lookup"><span data-stu-id="1c616-103">Alternation constructs modify a regular expression to enable either/or or conditional matching.</span></span> <span data-ttu-id="1c616-104">Платформа .NET поддерживает три указанные далее конструкции изменения.</span><span class="sxs-lookup"><span data-stu-id="1c616-104">.NET supports three alternation constructs:</span></span>  

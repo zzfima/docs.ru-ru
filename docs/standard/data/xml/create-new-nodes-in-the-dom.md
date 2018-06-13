@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569308"
 ---
 # <a name="create-new-nodes-in-the-dom"></a><span data-ttu-id="be5b2-102">Создание новых узлов в модели DOM</span><span class="sxs-lookup"><span data-stu-id="be5b2-102">Create New Nodes in the DOM</span></span>
 <span data-ttu-id="be5b2-103">К классе <xref:System.Xml.XmlDocument> доступен метод для создания всех типов узлов.</span><span class="sxs-lookup"><span data-stu-id="be5b2-103">The <xref:System.Xml.XmlDocument> has a create method for all of the node types.</span></span> <span data-ttu-id="be5b2-104">Для создания узла методу нужно передать имя (если необходимо) и содержимое или другие параметры для узлов, имеющих содержимое (например, текстовый узел).</span><span class="sxs-lookup"><span data-stu-id="be5b2-104">Supply the method with a name when required, and content or other parameters for those nodes that have content (for example, a text node), and the node is created.</span></span> <span data-ttu-id="be5b2-105">Далее представлены методы, которым необходимо передать имя и некоторые другие параметры для создания нужного узла.</span><span class="sxs-lookup"><span data-stu-id="be5b2-105">The following methods are ones that need a name and a few other parameters filled to create an appropriate node.</span></span>  

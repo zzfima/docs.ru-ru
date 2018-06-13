@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573095"
 ---
 # <a name="virtual-members"></a><span data-ttu-id="befef-102">Виртуальные члены</span><span class="sxs-lookup"><span data-stu-id="befef-102">Virtual Members</span></span>
 <span data-ttu-id="befef-103">Виртуальные члены могут быть переопределены, таким образом, изменения поведения подкласса.</span><span class="sxs-lookup"><span data-stu-id="befef-103">Virtual members can be overridden, thus changing the behavior of the subclass.</span></span> <span data-ttu-id="befef-104">Они похожи на обратные вызовы с точки зрения расширения, предоставляемых ими, но они являются более высокую производительность выполнения и потребления памяти.</span><span class="sxs-lookup"><span data-stu-id="befef-104">They are quite similar to callbacks in terms of the extensibility they provide, but they are better in terms of execution performance and memory consumption.</span></span> <span data-ttu-id="befef-105">Кроме того виртуальные члены более естественным в случаях, когда требуется создавать специальный вид существующего типа (специализации).</span><span class="sxs-lookup"><span data-stu-id="befef-105">Also, virtual members feel more natural in scenarios that require creating a special kind of an existing type (specialization).</span></span>  

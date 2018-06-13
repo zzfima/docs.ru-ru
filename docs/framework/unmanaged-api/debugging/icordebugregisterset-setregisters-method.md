@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6f577302c9b75f3f6cbe3f7ca8d551c9186c397
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33420320"
 ---
 # <a name="icordebugregistersetsetregisters-method"></a><span data-ttu-id="bd8ad-102">Метод ICorDebugRegisterSet::SetRegisters</span><span class="sxs-lookup"><span data-stu-id="bd8ad-102">ICorDebugRegisterSet::SetRegisters Method</span></span>
 <span data-ttu-id="bd8ad-103">`SetRegisters` не реализован в .NET Framework версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="bd8ad-103">`SetRegisters` is not implemented in the .NET Framework version 2.0.</span></span> <span data-ttu-id="bd8ad-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="bd8ad-104">Do not call this method.</span></span>  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3d6486a90d952208af89428423867a3daa4e8618
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453363"
 ---
 # <a name="functionleave2-function"></a><span data-ttu-id="edd4f-102">Функция FunctionLeave2</span><span class="sxs-lookup"><span data-stu-id="edd4f-102">FunctionLeave2 Function</span></span>
 <span data-ttu-id="edd4f-103">Уведомляет профилировщик, функция вернет вызывающему объекту, а также сведения о стека фрейма и функция возвращаемое значение.</span><span class="sxs-lookup"><span data-stu-id="edd4f-103">Notifies the profiler that a function is about to return to the caller and provides information about the stack frame and function return value.</span></span>  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570550"
 ---
 # <a name="changing-case-in-net"></a><span data-ttu-id="4721f-102">Смена регистра в .NET</span><span class="sxs-lookup"><span data-stu-id="4721f-102">Changing Case in .NET</span></span>
 <span data-ttu-id="4721f-103">При написании приложения, которое принимает входные данные от пользователя, невозможно предугадать, какой регистр будет использоваться для ввода данных.</span><span class="sxs-lookup"><span data-stu-id="4721f-103">If you write an application that accepts input from a user, you can never be sure what case he or she will use to enter the data.</span></span> <span data-ttu-id="4721f-104">Часто требуется обеспечить согласованность регистра строк, особенно если они отображаются в пользовательском интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="4721f-104">Often, you want strings to be cased consistently, particularly if you are displaying them in the user interface.</span></span> <span data-ttu-id="4721f-105">В таблице ниже описаны три метода изменения регистра.</span><span class="sxs-lookup"><span data-stu-id="4721f-105">The following table describes three case-changing methods.</span></span> <span data-ttu-id="4721f-106">Для первых двух методов имеются перегруженные варианты, учитывающие язык и региональные параметры.</span><span class="sxs-lookup"><span data-stu-id="4721f-106">The first two methods provide an overload that accepts a culture.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f68565977551a54244f3caf6a0250f67005a6ecf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452886"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a><span data-ttu-id="bb71a-102">Метод ICorProfilerInfo::GetThreadInfo</span><span class="sxs-lookup"><span data-stu-id="bb71a-102">ICorProfilerInfo::GetThreadInfo Method</span></span>
 <span data-ttu-id="bb71a-103">Получает текущую идентификацию потока Win32 для указанного потока.</span><span class="sxs-lookup"><span data-stu-id="bb71a-103">Gets the current Win32 thread identity for the specified thread.</span></span>  

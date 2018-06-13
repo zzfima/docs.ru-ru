@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522477"
 ---
 # <a name="how-to-use-a-color-remap-table"></a><span data-ttu-id="ce863-102">Практическое руководство. Использование таблицы преобразования цветов</span><span class="sxs-lookup"><span data-stu-id="ce863-102">How to: Use a Color Remap Table</span></span>
 <span data-ttu-id="ce863-103">Преобразование — это процесс преобразования цветов в изображении в соответствии с таблицей сопоставления цветов.</span><span class="sxs-lookup"><span data-stu-id="ce863-103">Remapping is the process of converting the colors in an image according to a color remap table.</span></span> <span data-ttu-id="ce863-104">Таблицы преобразования цветов представляет собой массив <xref:System.Drawing.Imaging.ColorMap> объектов.</span><span class="sxs-lookup"><span data-stu-id="ce863-104">The color remap table is an array of <xref:System.Drawing.Imaging.ColorMap> objects.</span></span> <span data-ttu-id="ce863-105">Каждый <xref:System.Drawing.Imaging.ColorMap> объект в массиве имеет <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> свойство и <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="ce863-105">Each <xref:System.Drawing.Imaging.ColorMap> object in the array has an <xref:System.Drawing.Imaging.ColorMap.OldColor%2A> property and a <xref:System.Drawing.Imaging.ColorMap.NewColor%2A> property.</span></span>  

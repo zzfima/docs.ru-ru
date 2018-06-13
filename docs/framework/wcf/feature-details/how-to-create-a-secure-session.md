@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493224"
 ---
 # <a name="how-to-create-a-secure-session"></a><span data-ttu-id="095f0-102">Практическое руководство. Создание сеанса безопасности</span><span class="sxs-lookup"><span data-stu-id="095f0-102">How to: Create a Secure Session</span></span>
 <span data-ttu-id="095f0-103">За исключением элемента [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) привязки, предоставляемые системой привязки в Windows Communication Foundation (WCF) автоматически использовать безопасные сеансы, если включена безопасность сообщений.</span><span class="sxs-lookup"><span data-stu-id="095f0-103">With the exception of the [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md) binding, the system-provided bindings in Windows Communication Foundation (WCF) automatically use secure sessions when message security is enabled.</span></span>  

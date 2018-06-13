@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6aafb918616d27cf6289a8747f3336b2e813beb6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461088"
 ---
 # <a name="writepropertyvalue-function"></a><span data-ttu-id="675f9-103">Функция WritePropertyValue</span><span class="sxs-lookup"><span data-stu-id="675f9-103">WritePropertyValue function</span></span>
 <span data-ttu-id="675f9-104">Записывает указанное число байтов в свойство, идентифицируемое дескриптор свойства.</span><span class="sxs-lookup"><span data-stu-id="675f9-104">Writes a specified number of bytes to a property identified by a property handle.</span></span>
