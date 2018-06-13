@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33332314"
 ---
 # <a name="using-conversion-operators-c-programming-guide"></a><span data-ttu-id="72de2-102">Использование операторов преобразования (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="72de2-102">Using Conversion Operators (C# Programming Guide)</span></span>
 <span data-ttu-id="72de2-103">Вы можете использовать более удобные операторы преобразования `implicit` или операторы преобразования `explicit`, которые четко указывают на то, что выполняется преобразование типа.</span><span class="sxs-lookup"><span data-stu-id="72de2-103">You can use `implicit` conversion operators, which are easier to use, or `explicit` conversion operators, which clearly indicate to anyone reading the code that you're converting a type.</span></span> <span data-ttu-id="72de2-104">В этом разделе демонстрируется применение обоих типов операторов преобразования.</span><span class="sxs-lookup"><span data-stu-id="72de2-104">This topic demonstrates both types of conversion operator.</span></span>  

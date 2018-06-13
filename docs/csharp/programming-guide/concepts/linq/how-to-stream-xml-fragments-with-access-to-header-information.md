@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33325036"
 ---
 # <a name="how-to-stream-xml-fragments-with-access-to-header-information-c"></a><span data-ttu-id="a4779-102">Практическое руководство. Потоковая передача фрагментов XML с доступом к сведениям заголовка (C#)</span><span class="sxs-lookup"><span data-stu-id="a4779-102">How to: Stream XML Fragments with Access to Header Information (C#)</span></span>
 <span data-ttu-id="a4779-103">Иногда приходится считывать достаточно большие XML-файлы и разрабатывать приложения таким образом, чтобы объем памяти, используемой этим приложением, был прогнозируемым.</span><span class="sxs-lookup"><span data-stu-id="a4779-103">Sometimes you have to read arbitrarily large XML files, and write your application so that the memory footprint of the application is predictable.</span></span> <span data-ttu-id="a4779-104">Если попытаться заполнить XML-дерево большим XML-файлом, используемый объем памяти будет пропорционален размеру файла, то есть излишним.</span><span class="sxs-lookup"><span data-stu-id="a4779-104">If you attempt to populate an XML tree with a large XML file, your memory usage will be proportional to the size of the file—that is, excessive.</span></span> <span data-ttu-id="a4779-105">Поэтому следует вместо этого использовать потоки.</span><span class="sxs-lookup"><span data-stu-id="a4779-105">Therefore, you should use a streaming technique instead.</span></span>  

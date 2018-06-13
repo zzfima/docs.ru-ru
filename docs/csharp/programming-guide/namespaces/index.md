@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334354"
 ---
 # <a name="namespaces-c-programming-guide"></a><span data-ttu-id="905ef-102">Пространства имен (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="905ef-102">Namespaces (C# Programming Guide)</span></span>
 <span data-ttu-id="905ef-103">Пространства имен часто используются в программировании на C# двумя способами.</span><span class="sxs-lookup"><span data-stu-id="905ef-103">Namespaces are heavily used in C# programming in two ways.</span></span> <span data-ttu-id="905ef-104">Первый способ — платформа .NET Framework использует пространства имен для упорядочения множества ее классов следующим образом:</span><span class="sxs-lookup"><span data-stu-id="905ef-104">First, the .NET Framework uses namespaces to organize its many classes, as follows:</span></span>  

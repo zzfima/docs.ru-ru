@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327363"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a><span data-ttu-id="88376-103">Классы и структуры (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="88376-103">Classes and Structs (C# Programming Guide)</span></span>
 <span data-ttu-id="88376-104">Классы и структуры являются двумя основными конструкциями системы общих типов CTS, используемой в платформе .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="88376-104">Classes and structs are two of the basic constructs of the common type system in the .NET Framework.</span></span> <span data-ttu-id="88376-105">Оба они являются структурами данных, которые инкапсулируют набор данных и поведений в одной логической сущности.</span><span class="sxs-lookup"><span data-stu-id="88376-105">Each is essentially a data structure that encapsulates a set of data and behaviors that belong together as a logical unit.</span></span> <span data-ttu-id="88376-106">Данные и поведение являются *членами* класса или структуры. К ним относятся методы, свойства, события и другие элементы, которые описаны далее в этой статье.</span><span class="sxs-lookup"><span data-stu-id="88376-106">The data and behaviors are the *members* of the class or struct, and they include its methods, properties, and events, and so on, as listed later in this topic.</span></span>  

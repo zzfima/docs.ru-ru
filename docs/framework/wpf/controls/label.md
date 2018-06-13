@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553732"
 ---
 # <a name="label"></a><span data-ttu-id="6425d-102">Метка</span><span class="sxs-lookup"><span data-stu-id="6425d-102">Label</span></span>
 <span data-ttu-id="6425d-103"><xref:System.Windows.Controls.Label> элементы управления обычно предоставляют информацию в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].</span><span class="sxs-lookup"><span data-stu-id="6425d-103"><xref:System.Windows.Controls.Label> controls usually provide information in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].</span></span>  <span data-ttu-id="6425d-104">Исторически <xref:System.Windows.Controls.Label> содержал только текст, но поскольку <xref:System.Windows.Controls.Label> , которая поставляется с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] — <xref:System.Windows.Controls.ContentControl>, он может содержать текст или <xref:System.Windows.UIElement>.</span><span class="sxs-lookup"><span data-stu-id="6425d-104">Historically, a <xref:System.Windows.Controls.Label> has contained only text, but because the <xref:System.Windows.Controls.Label> that ships with [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] is a <xref:System.Windows.Controls.ContentControl>, it can contain either text or a <xref:System.Windows.UIElement>.</span></span>  

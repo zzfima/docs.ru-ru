@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33330769"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a><span data-ttu-id="310b2-102">Делегаты с именованными методами и Анонимные методы (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="310b2-102">Delegates with Named vs. Anonymous Methods (C# Programming Guide)</span></span>
 <span data-ttu-id="310b2-103">[Делегат](../../../csharp/language-reference/keywords/delegate.md) можно связать с именованным методом.</span><span class="sxs-lookup"><span data-stu-id="310b2-103">A [delegate](../../../csharp/language-reference/keywords/delegate.md) can be associated with a named method.</span></span> <span data-ttu-id="310b2-104">При создании экземпляра делегата с использованием именованного метода этот метод передается в качестве параметра, например:</span><span class="sxs-lookup"><span data-stu-id="310b2-104">When you instantiate a delegate by using a named method, the method is passed as a parameter, for example:</span></span>  

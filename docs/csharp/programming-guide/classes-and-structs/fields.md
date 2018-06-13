@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314331"
 ---
 # <a name="fields-c-programming-guide"></a><span data-ttu-id="6d4ae-102">Поля (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="6d4ae-102">Fields (C# Programming Guide)</span></span>
 <span data-ttu-id="6d4ae-103">*Поле* является переменной любого типа, которая объявлена непосредственно в [классе](../../../csharp/language-reference/keywords/class.md) или [структуре](../../../csharp/language-reference/keywords/struct.md).</span><span class="sxs-lookup"><span data-stu-id="6d4ae-103">A *field* is a variable of any type that is declared directly in a [class](../../../csharp/language-reference/keywords/class.md) or [struct](../../../csharp/language-reference/keywords/struct.md).</span></span> <span data-ttu-id="6d4ae-104">Поля являются *членами* содержащих их типов.</span><span class="sxs-lookup"><span data-stu-id="6d4ae-104">Fields are *members* of their containing type.</span></span>  

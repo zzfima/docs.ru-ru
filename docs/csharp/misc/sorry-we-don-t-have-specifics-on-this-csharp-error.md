@@ -884,9 +884,10 @@ helpviewer_keywords:
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
 ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33314074"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a><span data-ttu-id="a5940-102">К сожалению, мы не хотите&#39;t имеют подробные сведения об этой ошибке C#</span><span class="sxs-lookup"><span data-stu-id="a5940-102">Sorry, we don&#39;t have specifics on this C# error</span></span>
 <span data-ttu-id="a5940-103">Подробные сведения об этой ошибке отсутствуют.</span><span class="sxs-lookup"><span data-stu-id="a5940-103">We’re sorry, but we don’t have any specific information about this error.</span></span> <span data-ttu-id="a5940-104">Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете.</span><span class="sxs-lookup"><span data-stu-id="a5940-104">You can search for the error number and message text to find information on the web.</span></span> <span data-ttu-id="a5940-105">Или вы можете запросить другим разработчикам на следующих форумах:</span><span class="sxs-lookup"><span data-stu-id="a5940-105">Or you can ask other developers using one of these forums:</span></span>  

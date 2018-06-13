@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549546"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a><span data-ttu-id="c2a98-102">Сопоставление свойств Windows Forms и WPF</span><span class="sxs-lookup"><span data-stu-id="c2a98-102">Windows Forms and WPF Property Mapping</span></span>
 <span data-ttu-id="c2a98-103">[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] И [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] технологии имеют две модели похожие, но различные свойства.</span><span class="sxs-lookup"><span data-stu-id="c2a98-103">The [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] and [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] technologies have two similar but different property models.</span></span> <span data-ttu-id="c2a98-104">*Сопоставление свойств* поддерживает взаимодействие между этими двумя архитектурами и предоставляет следующие возможности:</span><span class="sxs-lookup"><span data-stu-id="c2a98-104">*Property mapping* supports interoperation between the two architectures and provides the following capabilities:</span></span>  

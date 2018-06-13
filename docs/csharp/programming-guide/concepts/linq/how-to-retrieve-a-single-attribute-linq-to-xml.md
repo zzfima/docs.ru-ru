@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33321292"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a><span data-ttu-id="d7771-102">Практическое руководство. Извлечение одного атрибута (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="d7771-102">How to: Retrieve a Single Attribute (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="d7771-103">В этом разделе приведены объяснения способа получения одного атрибута элемента при условии, что название атрибута известно.</span><span class="sxs-lookup"><span data-stu-id="d7771-103">This topic explains how to retrieve a single attribute of an element, given the attribute name.</span></span> <span data-ttu-id="d7771-104">Это полезно для составления выражений запросов, при которых требуется найти элемент с определенным атрибутом.</span><span class="sxs-lookup"><span data-stu-id="d7771-104">This is useful for writing query expressions where you want to find an element that has a particular attribute.</span></span>  

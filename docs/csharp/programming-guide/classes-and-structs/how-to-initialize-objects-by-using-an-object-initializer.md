@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320912"
 ---
 # <a name="how-to-initialize-objects-by-using-an-object-initializer-c-programming-guide"></a><span data-ttu-id="02571-102">Практическое руководство. Инициализация объектов с помощью инициализатора объектов (Руководство по программированию на C#).</span><span class="sxs-lookup"><span data-stu-id="02571-102">How to: Initialize Objects by Using an Object Initializer (C# Programming Guide)</span></span>
 <span data-ttu-id="02571-103">Инициализаторы объектов можно использовать для декларативной инициализации объектов типов без явного вызова конструктора для типа.</span><span class="sxs-lookup"><span data-stu-id="02571-103">You can use object initializers to initialize type objects in a declarative manner without explicitly invoking a constructor for the type.</span></span>  

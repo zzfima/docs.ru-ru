@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548903"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a><span data-ttu-id="e6d34-102">Пошаговое руководство. Кэширование данных приложения WPF</span><span class="sxs-lookup"><span data-stu-id="e6d34-102">Walkthrough: Caching Application Data in a WPF Application</span></span>
 <span data-ttu-id="e6d34-103">Кэширование позволяет хранить данные в памяти для быстрого доступа.</span><span class="sxs-lookup"><span data-stu-id="e6d34-103">Caching enables you to store data in memory for rapid access.</span></span> <span data-ttu-id="e6d34-104">При повторном доступе к данным приложения могут получать данные из кэша вместо их извлечения из исходного источника.</span><span class="sxs-lookup"><span data-stu-id="e6d34-104">When the data is accessed again, applications can get the data from the cache instead retrieving it from the original source.</span></span> <span data-ttu-id="e6d34-105">Это может повысить производительность и масштабируемость.</span><span class="sxs-lookup"><span data-stu-id="e6d34-105">This can improve performance and scalability.</span></span> <span data-ttu-id="e6d34-106">Кроме того, кэширование обеспечивает доступность данных при временной недоступности источника данных.</span><span class="sxs-lookup"><span data-stu-id="e6d34-106">In addition, caching makes data available when the data source is temporarily unavailable.</span></span>  

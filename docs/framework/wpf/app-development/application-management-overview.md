@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549715"
 ---
 # <a name="application-management-overview"></a><span data-ttu-id="30579-102">Общие сведения об управлении приложением</span><span class="sxs-lookup"><span data-stu-id="30579-102">Application Management Overview</span></span>
 <span data-ttu-id="30579-103">Все приложения имеют тенденцию совместно использовать общий набор функциональных возможностей, который применяется к реализации приложения и управлению им.</span><span class="sxs-lookup"><span data-stu-id="30579-103">All applications tend to share a common set of functionality that applies to application implementation and management.</span></span> <span data-ttu-id="30579-104">Этот раздел содержит обзор функций в <xref:System.Windows.Application> класс для создания и управления приложениями.</span><span class="sxs-lookup"><span data-stu-id="30579-104">This topic provides an overview of the functionality in the <xref:System.Windows.Application> class for creating and managing applications.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548943"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a><span data-ttu-id="32cc1-102">Вопросы, связанные с макетом элемента WindowsFormsHost</span><span class="sxs-lookup"><span data-stu-id="32cc1-102">Layout Considerations for the WindowsFormsHost Element</span></span>
 <span data-ttu-id="32cc1-103">В этом разделе описывается как <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент взаимодействует с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] система макета.</span><span class="sxs-lookup"><span data-stu-id="32cc1-103">This topic describes how the <xref:System.Windows.Forms.Integration.WindowsFormsHost> element interacts with the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] layout system.</span></span>  

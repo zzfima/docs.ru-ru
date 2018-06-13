@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217780"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a><span data-ttu-id="92a06-103">Модульное тестирование библиотек .NET Core в Visual Basic с использованием dotnet test и NUnit</span><span class="sxs-lookup"><span data-stu-id="92a06-103">Unit testing Visual Basic .NET Core libraries using dotnet test and NUnit</span></span>
 

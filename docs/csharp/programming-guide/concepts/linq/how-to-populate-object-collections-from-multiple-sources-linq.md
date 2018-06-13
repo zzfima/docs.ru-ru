@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323356"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a><span data-ttu-id="35d00-102">Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="35d00-102">How to: Populate Object Collections from Multiple Sources (LINQ) (C#)</span></span>
 <span data-ttu-id="35d00-103">В этом примере показано, как объединить данные из разных источников в последовательность новых типов.</span><span class="sxs-lookup"><span data-stu-id="35d00-103">This example shows how to merge data from different sources into a sequence of new types.</span></span>  

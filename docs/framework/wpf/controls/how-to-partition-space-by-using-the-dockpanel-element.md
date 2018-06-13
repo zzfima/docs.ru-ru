@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553888"
 ---
 # <a name="how-to-partition-space-by-using-the-dockpanel-element"></a><span data-ttu-id="c6060-102">Практическое руководство. Разделение пространства с помощью элемента DockPanel</span><span class="sxs-lookup"><span data-stu-id="c6060-102">How to: Partition Space by Using the DockPanel Element</span></span>
 <span data-ttu-id="c6060-103">В следующем примере создается простой [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] framework с помощью <xref:System.Windows.Controls.DockPanel> элемента.</span><span class="sxs-lookup"><span data-stu-id="c6060-103">The following example creates a simple [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] framework using a <xref:System.Windows.Controls.DockPanel> element.</span></span> <span data-ttu-id="c6060-104"><xref:System.Windows.Controls.DockPanel> Разделяет доступное пространство его дочерним элементам.</span><span class="sxs-lookup"><span data-stu-id="c6060-104">The <xref:System.Windows.Controls.DockPanel> partitions available space to its child elements.</span></span>  

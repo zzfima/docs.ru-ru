@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322095"
 ---
 # <a name="how-to-execute-expression-trees-c"></a><span data-ttu-id="c8c17-102">Практическое руководство. Выполнение деревьев выражений (C#)</span><span class="sxs-lookup"><span data-stu-id="c8c17-102">How to: Execute Expression Trees (C#)</span></span>
 <span data-ttu-id="c8c17-103">В этом разделе показано, как выполнить дерево выражения.</span><span class="sxs-lookup"><span data-stu-id="c8c17-103">This topic shows you how to execute an expression tree.</span></span> <span data-ttu-id="c8c17-104">В результате выполнения дерева выражения может возвращаться значение или просто выполняться действие, такое как вызов метода.</span><span class="sxs-lookup"><span data-stu-id="c8c17-104">Executing an expression tree may return a value, or it may just perform an action such as calling a method.</span></span>  

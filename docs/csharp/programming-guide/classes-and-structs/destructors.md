@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313970"
 ---
 # <a name="finalizers-c-programming-guide"></a><span data-ttu-id="88fc0-102">Методы завершения (руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="88fc0-102">Finalizers (C# Programming Guide)</span></span>
 <span data-ttu-id="88fc0-103">Методы завершения используются для уничтожения экземпляров классов.</span><span class="sxs-lookup"><span data-stu-id="88fc0-103">Finalizers are used to destruct instances of classes.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320993"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a><span data-ttu-id="f36ec-102">Практическое руководство. Поиск элементов-потомков (XPath-LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="f36ec-102">How to: Find Descendant Elements (XPath-LINQ to XML) (C#)</span></span>
 <span data-ttu-id="f36ec-103">В этом разделе рассказывается, как возвращать элементы-потомки с определенным именем.</span><span class="sxs-lookup"><span data-stu-id="f36ec-103">This topic shows how to get the descendant elements with a particular name.</span></span>  

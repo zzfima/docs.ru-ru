@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33316326"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a><span data-ttu-id="abb7e-102">Добавление элементов, атрибутов и узлов в дерево XML (C#)</span><span class="sxs-lookup"><span data-stu-id="abb7e-102">Adding Elements, Attributes, and Nodes to an XML Tree (C#)</span></span>
 <span data-ttu-id="abb7e-103">Можно добавлять содержимое (элементы, атрибуты, комментарии, инструкции по обработке, текст и CDATA) к существующему XML-дереву.</span><span class="sxs-lookup"><span data-stu-id="abb7e-103">You can add content (elements, attributes, comments, processing instructions, text, and CDATA) to an existing XML tree.</span></span>  

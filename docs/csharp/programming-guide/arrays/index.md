@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313505"
 ---
 # <a name="arrays-c-programming-guide"></a><span data-ttu-id="f98fc-102">Массивы (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="f98fc-102">Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="f98fc-103">В структуре данных массива можно хранить несколько переменных одного типа.</span><span class="sxs-lookup"><span data-stu-id="f98fc-103">You can store multiple variables of the same type in an array data structure.</span></span> <span data-ttu-id="f98fc-104">Чтобы объявить массив, следует указать тип его элементов.</span><span class="sxs-lookup"><span data-stu-id="f98fc-104">You declare an array by specifying the type of its elements.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33323714"
 ---
 # <a name="tutorial-chaining-queries-together-c"></a><span data-ttu-id="04125-102">Учебник. Объединение запросов в цепочки (C#)</span><span class="sxs-lookup"><span data-stu-id="04125-102">Tutorial: Chaining Queries Together (C#)</span></span>
 <span data-ttu-id="04125-103">В этом учебнике приводится модель обработки, при которой запросы объединяются в цепочку.</span><span class="sxs-lookup"><span data-stu-id="04125-103">This tutorial illustrates the processing model when you chain queries together.</span></span> <span data-ttu-id="04125-104">Объединение запросов в цепочку - ключевая часть написания функциональных преобразований.</span><span class="sxs-lookup"><span data-stu-id="04125-104">Chaining queries together is a key part of writing functional transformations.</span></span> <span data-ttu-id="04125-105">Необходимо полностью понимать принцип работы запросов, объединенных в цепочку.</span><span class="sxs-lookup"><span data-stu-id="04125-105">It is important to understand exactly how chained queries work.</span></span>  

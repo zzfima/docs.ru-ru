@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320578"
 ---
 # <a name="how-to-sort-elements-on-multiple-keys-c"></a><span data-ttu-id="69ae8-102">Практическое руководство. Сортировка элементов по множеству ключей (C#)</span><span class="sxs-lookup"><span data-stu-id="69ae8-102">How to: Sort Elements on Multiple Keys (C#)</span></span>
 <span data-ttu-id="69ae8-103">В этом разделе показана сортировка элементов по нескольким ключам.</span><span class="sxs-lookup"><span data-stu-id="69ae8-103">This topic shows how to sort on multiple keys.</span></span>  

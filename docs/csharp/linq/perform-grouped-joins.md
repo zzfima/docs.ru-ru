@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33288181"
 ---
 # <a name="perform-grouped-joins"></a><span data-ttu-id="189f2-103">Выполнение групповых соединений</span><span class="sxs-lookup"><span data-stu-id="189f2-103">Perform grouped joins</span></span>
 

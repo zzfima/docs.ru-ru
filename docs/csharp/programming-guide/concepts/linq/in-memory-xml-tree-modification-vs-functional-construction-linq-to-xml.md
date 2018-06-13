@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33333740"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-c"></a><span data-ttu-id="60ce4-102">Сравнение изменения XML-дерева в памяти с Функциональное построение (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="60ce4-102">In-Memory XML Tree Modification vs. Functional Construction (LINQ to XML) (C#)</span></span>
 <span data-ttu-id="60ce4-103">Изменение XML-дерева на месте является традиционным подходом к изменению формы XML-документа.</span><span class="sxs-lookup"><span data-stu-id="60ce4-103">Modifying an XML tree in place is a traditional approach to changing the shape of an XML document.</span></span> <span data-ttu-id="60ce4-104">Стандартное приложение загружает документ в источник данных, например DOM или [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], при помощи интерфейса программирования вставляет, удаляет узлы или изменяет их содержимое, а затем сохраняет XML в файл или передает по сети.</span><span class="sxs-lookup"><span data-stu-id="60ce4-104">A typical application loads a document into a data store such as DOM or [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]; uses a programming interface to insert nodes, delete nodes, or change the content of nodes; and then saves the XML to a file or transmits it over a network.</span></span>  

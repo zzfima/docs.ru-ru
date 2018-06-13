@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313957"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a><span data-ttu-id="69c0e-102">Одномерные массивы (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="69c0e-102">Single-Dimensional Arrays (C# Programming Guide)</span></span>
 <span data-ttu-id="69c0e-103">Вы можете объявить одномерный массив, содержащий пять целых чисел, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="69c0e-103">You can declare a single-dimensional array of five integers as shown in the following example:</span></span>  

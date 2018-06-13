@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319155"
 ---
 # <a name="applicability-of-functional-transformation-c"></a><span data-ttu-id="e5f1f-102">Применимость функциональных преобразований (C#)</span><span class="sxs-lookup"><span data-stu-id="e5f1f-102">Applicability of Functional Transformation (C#)</span></span>
 <span data-ttu-id="e5f1f-103">Чисто функциональные преобразования применяются в самых разнообразных ситуациях.</span><span class="sxs-lookup"><span data-stu-id="e5f1f-103">Pure functional transformations are applicable in a wide variety of situations.</span></span>  

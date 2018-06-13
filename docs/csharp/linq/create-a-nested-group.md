@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33273147"
 ---
 # <a name="create-a-nested-group"></a><span data-ttu-id="c22bd-103">Создание вложенной группы</span><span class="sxs-lookup"><span data-stu-id="c22bd-103">Create a nested group</span></span>
 

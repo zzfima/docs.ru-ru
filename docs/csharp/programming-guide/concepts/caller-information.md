@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33320694"
 ---
 # <a name="caller-information-c"></a><span data-ttu-id="35be8-102">Сведения о вызывающем объекте (C#)</span><span class="sxs-lookup"><span data-stu-id="35be8-102">Caller Information (C#)</span></span>
 <span data-ttu-id="35be8-103">С помощью информационных атрибутов вызывающего объекта можно получить сведения о вызывающем объекте метода.</span><span class="sxs-lookup"><span data-stu-id="35be8-103">By using Caller Info attributes, you can obtain information about the caller to a method.</span></span> <span data-ttu-id="35be8-104">Можно получить путь к файлу исходного кода, номер строки в исходном коде и имя вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="35be8-104">You can obtain file path of the source code, the line number in the source code, and the member name of the caller.</span></span> <span data-ttu-id="35be8-105">Эти сведения полезны для трассировки, отладки и создания средств диагностики.</span><span class="sxs-lookup"><span data-stu-id="35be8-105">This information is helpful for tracing, debugging, and creating diagnostic tools.</span></span>  

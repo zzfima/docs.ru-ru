@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33329791"
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a><span data-ttu-id="c2c93-102">Сериализация с помощью объявления XML (C#)</span><span class="sxs-lookup"><span data-stu-id="c2c93-102">Serializing with an XML Declaration (C#)</span></span>
 <span data-ttu-id="c2c93-103">В этом разделе описывается, как указывать, должна ли при сериализации формироваться XML-декларация.</span><span class="sxs-lookup"><span data-stu-id="c2c93-103">This topic describes how to control whether serialization generates an XML declaration.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33322345"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a><span data-ttu-id="7289e-102">Практическое руководство. Тестирование на равенство (идентичность) ссылок (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="7289e-102">How to: Test for Reference Equality (Identity) (C# Programming Guide)</span></span>
 <span data-ttu-id="7289e-103">Вам не требуется реализовывать настраиваемую логику, чтобы обеспечить поддержку проверки ссылок на равенство в типах.</span><span class="sxs-lookup"><span data-stu-id="7289e-103">You do not have to implement any custom logic to support reference equality comparisons in your types.</span></span> <span data-ttu-id="7289e-104">Эту возможность для всех типов реализует метод <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="7289e-104">This functionality is provided for all types by the static <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> method.</span></span>  

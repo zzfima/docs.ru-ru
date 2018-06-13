@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33319888"
 ---
 # <a name="how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq-c"></a><span data-ttu-id="d5d1a-102">Практическое руководство. Запрос к предложениям, содержащим указанный набор слов (LINQ) (C#)</span><span class="sxs-lookup"><span data-stu-id="d5d1a-102">How to: Query for Sentences that Contain a Specified Set of Words (LINQ) (C#)</span></span>
 <span data-ttu-id="d5d1a-103">В этом примере показан поиск предложений, содержащих совпадения для каждого из указанного набора слов в текстовом файле.</span><span class="sxs-lookup"><span data-stu-id="d5d1a-103">This example shows how to find sentences in a text file that contain matches for each of a specified set of words.</span></span> <span data-ttu-id="d5d1a-104">Хотя массив терминов для поиска в этом примере жестко закодирован, его можно заполнять динамически во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="d5d1a-104">Although the array of search terms is hard-coded in this example, it could also be populated dynamically at runtime.</span></span> <span data-ttu-id="d5d1a-105">В этом примере запрос возвращает предложения, которые содержат слова "Historically", "data" и "integrated".</span><span class="sxs-lookup"><span data-stu-id="d5d1a-105">In this example, the query returns the sentences that contain the words "Historically," "data," and "integrated."</span></span>  

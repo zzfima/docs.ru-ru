@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313918"
 ---
 # <a name="abstract-and-sealed-classes-and-class-members-c-programming-guide"></a><span data-ttu-id="9bdd6-102">Абстрактные и запечатанные классы и члены классов (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="9bdd6-102">Abstract and Sealed Classes and Class Members (C# Programming Guide)</span></span>
 <span data-ttu-id="9bdd6-103">Ключевое слово [abstract](../../../csharp/language-reference/keywords/abstract.md) позволяет создавать классы и члены [классов](../../../csharp/language-reference/keywords/class.md), которые являются неполными и должны быть реализованы в производном классе.</span><span class="sxs-lookup"><span data-stu-id="9bdd6-103">The [abstract](../../../csharp/language-reference/keywords/abstract.md) keyword enables you to create classes and [class](../../../csharp/language-reference/keywords/class.md) members that are incomplete and must be implemented in a derived class.</span></span>  
