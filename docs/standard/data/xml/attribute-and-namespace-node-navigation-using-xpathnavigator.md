@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577024"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>Навигация по узлам атрибутов и пространств имен с помощью XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет два набора методов навигации. Методы первого набора, описанные в руководстве по [навигации в наборах узлов с помощью XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md), используются для навигации в *наборах узлов* в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument>. Методы второго набора, рассматриваемые в этом разделе, используются для навигации в *узлах атрибутов и пространств имен* в объекте <xref:System.Xml.XPath.XPathDocument> или <xref:System.Xml.XmlDocument>.  

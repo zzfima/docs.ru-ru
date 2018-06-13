@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650926"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>Практическое руководство. Доступ к членам объекта (Visual Basic)
 При наличии объектную переменную, которая ссылается на объект, часто требуется работать с членами этого объекта, например методы, свойства, поля и события. Например, после создания нового <xref:System.Windows.Forms.Form> объекта, может потребоваться установить его <xref:System.Windows.Forms.Control.Text%2A> свойства или вызов его <xref:System.Windows.Forms.Control.Focus%2A> метод.  

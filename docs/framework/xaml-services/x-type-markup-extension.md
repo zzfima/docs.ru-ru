@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33563124"
 ---
 # <a name="xtype-markup-extension"></a>Расширение разметки x:Type
 Среда CLR предоставляет <xref:System.Type> объект, который является базовым типом для указанного типа XAML.  

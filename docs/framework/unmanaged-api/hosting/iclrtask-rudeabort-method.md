@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a99bda7a6d21fea159c8f616f2db7d12b1f27579
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435418"
 ---
 # <a name="iclrtaskrudeabort-method"></a>Метод ICLRTask::RudeAbort
 Указывает, что общеязыковой среды выполнения (CLR), чтобы прервать задачу, представленную текущим [ICLRTask-интерфейс](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) экземпляра немедленно и безусловно.  

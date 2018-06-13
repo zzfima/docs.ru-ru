@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 59b4c832a4bbc915749aadf435b204e084828698
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434350"
 ---
 # <a name="identityattributeblob-structure"></a>Структура IDENTITY_ATTRIBUTE_BLOB
 Содержит сведения об одном атрибуте в сборке и состоит из трех `DWORD`s. Каждый `DWORD` — это смещение в буфер символов, полученных при `CurrentIntoBuffer` метод [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) интерфейса  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573427"
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries"></a>Практическое руководство. Добавление или удаление записей списка управления доступом
 Для добавления записей списка управления доступом (ACL) в файл или удаления из него необходимо получить объект <xref:System.Security.AccessControl.FileSecurity> или <xref:System.Security.AccessControl.DirectorySecurity> из файла или каталога, изменить его и затем применить обратно к файлу или каталогу.  

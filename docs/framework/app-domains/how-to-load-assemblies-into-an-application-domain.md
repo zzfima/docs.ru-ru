@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32741910"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Практическое руководство. Загрузка сборок в домен приложения
 Существует несколько способов загрузки сборки в домен приложения. Рекомендуется использовать метод <xref:System.Reflection.Assembly.Load%2A> `static` (`Shared` в Visual Basic) класса <xref:System.Reflection.Assembly?displayProperty=nameWithType>. Другими способами загрузки сборок являются:  

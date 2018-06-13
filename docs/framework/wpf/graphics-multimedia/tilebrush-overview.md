@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566341"
 ---
 # <a name="tilebrush-overview"></a>Общие сведения о TileBrush
 <xref:System.Windows.Media.TileBrush> объекты предоставляют значительные возможности контроля над способ рисования области с изображением, <xref:System.Windows.Media.Drawing>, или <xref:System.Windows.Media.Visual>. В этом разделе описывается использование <xref:System.Windows.Media.TileBrush> функции для большего контроля над тем, как <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, или <xref:System.Windows.Media.VisualBrush> закрашивает область.  

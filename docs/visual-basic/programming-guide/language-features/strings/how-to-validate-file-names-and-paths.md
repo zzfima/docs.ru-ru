@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33647808"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>Практическое руководство. Проверка имен файлов и путей в Visual Basic
 Этот пример возвращает `Boolean` значение, указывающее, представляет ли строка имя файла или путь. Проверяется, если имя содержит символы, которые не разрешены в файловой системе.  

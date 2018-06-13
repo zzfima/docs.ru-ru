@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572792"
 ---
 # <a name="xml-document-creation"></a>Создание XML-документа
 XML-документ можно создать двумя способами. Один из них заключается в создании объекта **XmlDocument** без параметров. Второй включает создание объекта **XmlDocument**, которому нужно в качестве параметра передать XmlNameTable. В следующем примере показано создание пустого объекта **XmlDocument** без параметров.  

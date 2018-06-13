@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565063"
 ---
 # <a name="xfieldmodifier-directive"></a>Директива x:FieldModifier
 Изменяет поведение компиляции XAML таким образом, чтобы определенных полей для ссылки на именованный объект с <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> доступа вместо <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> поведение по умолчанию.  

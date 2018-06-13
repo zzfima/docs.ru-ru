@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522670"
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Практическое руководство. Извлечение связанного с файлом значка в Windows Forms
 Число файлов с внедренными значки, которые предоставляют визуальное представление типа связанного файла. Например документы Microsoft Word содержат значок, который определяет их как документы Word. При отображении файлов в списке элементов управления, или таблицы, может потребоваться отображать значок, представляющий тип файла рядом с каждым именем файла. Легко сделать это с помощью <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> метод.  

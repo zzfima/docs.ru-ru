@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651227"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>Пошаговое руководство. Шифрование и расшифровка строк в Visual Basic
 В этом пошаговом руководстве показано, как использовать <xref:System.Security.Cryptography.DESCryptoServiceProvider> класса для шифрования и дешифрования строк с помощью служб шифрования (CSP) версии тройного шифрования данных (<xref:System.Security.Cryptography.TripleDES>) алгоритма. Первым шагом является создание простой программы-оболочки класс, который инкапсулирует алгоритм 3DES и сохраняет зашифрованные данные в виде строки в кодировке base-64. Затем эту оболочку используется для безопасного хранения личных данных пользователя в общедоступном текстовом файле.  

@@ -11,9 +11,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9f41a233e9b5338bdb0a324ff9af267a97821d4e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455877"
 ---
 # <a name="tlbexp-helper-functions-unmanaged-api-reference"></a>Вспомогательные функции Tlbexp (справочник по неуправляемым API)
 [Средство экспорта библиотек типов](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) (Tlbexp.exe) загружает библиотеку динамической компоновки экспорта библиотек. Эта библиотека DLL содержит две вспомогательные функции и интерфейс, который использует средство экспорта во время преобразования сборки типа библиотеки.  

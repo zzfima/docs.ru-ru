@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565929"
 ---
 # <a name="security-wpf"></a>Безопасность (WPF)
 <a name="introduction"></a> При разработке Windows Presentation Foundation (WPF) автономных приложений и приложений, размещенных в веб-браузере, необходимо учитывать модели безопасности. [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] Автономные приложения выполняются с неограниченными разрешениями ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust** набор разрешений) независимо от способа развертывания с помощью установщика Windows (.msi) XCopy, или [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]. Развертывание автономных приложений WPF с частичным доверием с помощью ClickOnce не поддерживается. Тем не менее, ведущее приложение с полным доверием можно создать с частичным доверием <xref:System.AppDomain> с помощью модели надстроек .NET Framework. Дополнительные сведения см. в разделе [Общие сведения о надстройках WPF](../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md).  

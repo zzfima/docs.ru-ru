@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520413"
 ---
 # <a name="database-access-activities"></a>Действия доступа к базе данных
 Действия доступа к базе данных позволяют обращаться к базе данных из рабочего процесса. Эти действия позволяют доступ к базам данных, чтобы вернуть или изменить сведения, а также использовать [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) для доступа к базе данных.  

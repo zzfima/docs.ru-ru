@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33651444"
 ---
 # <a name="linq-to-xml-axes-overview-visual-basic"></a>Общие сведения об осях LINQ to XML (Visual Basic)
 После создания XML-дерева или загрузки XML-документа в XML-дерево можно опросить его для поиска элементов и атрибутов и извлечения их значений. Коллекции получают с помощью *методов оси*, называемых также *осями*. Некоторые оси являются методами в классах <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XDocument>, которые возвращают коллекции <xref:System.Collections.Generic.IEnumerable%601>. Некоторые оси являются методами расширений в классе <xref:System.Xml.Linq.Extensions>. Оси, которые реализованы как методы расширений, работают с коллекциями и возвращают коллекции.  

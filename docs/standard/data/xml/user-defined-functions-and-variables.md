@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570475"
 ---
 # <a name="user-defined-functions-and-variables"></a>Определяемые пользователем функции и переменные
 Класс <xref:System.Xml.XPath.XPathNavigator> содержит ряд методов, используемых для взаимодействия с данными <xref:System.Xml.XPath.XPathDocument>. Можно дополнить стандартные функции XPath, реализовав функции и переменные расширения для использования в выражениях запросов XPath. Метод <xref:System.Xml.XPath.XPathExpression.SetContext%2A> может принимать определяемый пользователем контекст, производный от <xref:System.Xml.Xsl.XsltContext>. Определяемые пользователем функции разрешаются в пользовательском контексте.  

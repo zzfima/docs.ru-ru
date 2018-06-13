@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33574664"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Выполнение смены регистра независимо от языка и региональных параметров
 Методы <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> и <xref:System.Char.ToLower%2A?displayProperty=nameWithType> предоставляют перегрузки, которые не принимают параметры. По умолчанию эти перегрузки без параметров выполняют изменения регистра на основе значения <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Результат преобразования чувствителен к регистру и может быть разным для языков и региональных параметров. Чтобы четко указать, нужно ли учитывать язык и региональные параметры при изменении регистра, используйте перегрузки этих методов, принимающие параметр `culture` явным образом. Чтобы изменить регистр с учетом языка и региональных параметров, укажите значение `CultureInfo.CurrentCulture` для параметра `culture`. Чтобы изменить регистр без учета языка и региональных параметров, укажите значение `CultureInfo.InvariantCulture` для параметра `culture`.  

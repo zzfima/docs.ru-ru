@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33645380"
 ---
 # <a name="how-to-validate-using-xsd-linq-to-xml-visual-basic"></a>Как: проверка с использованием XSD (LINQ to XML) (Visual Basic)
 Пространство имен <xref:System.Xml.Schema> содержит методы расширения, облегчающие проверку правильности XML-дерева по XSD-файлу. Дополнительные сведения см. в документации метода <xref:System.Xml.Schema.Extensions.Validate%2A>.  

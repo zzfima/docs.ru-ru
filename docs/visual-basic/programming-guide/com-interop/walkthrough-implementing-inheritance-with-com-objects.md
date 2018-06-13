@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33644307"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>Пошаговое руководство. Реализация наследования с использованием COM-объектов (Visual Basic)
 Можно наследовать классы Visual Basic из `Public` классов в COM-объектами, даже тех, которые созданы в более ранних версиях Visual Basic. Свойства и методы классов, унаследованных от объектов COM можно переопределить или перегрузить только как свойства и методы базового класса можно переопределить или перегружен. Наследование от объектов COM полезно при наличии существующей библиотеки класса, не требуется повторной компиляции.  

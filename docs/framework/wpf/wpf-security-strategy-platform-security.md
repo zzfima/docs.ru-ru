@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566682"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Стратегия безопасности WPF — безопасность платформы
 Windows Presentation Foundation (WPF) обеспечивает широкий набор служб безопасности, он также использует функции безопасности от базовой платформы, включая операционную систему, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], и [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Эти уровни объединяются для обеспечения в [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] надежной модели безопасности с глубокой защитой, которая пытается исключить любые точки сбоя, как показано на следующем рисунке.  

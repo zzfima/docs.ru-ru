@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 29267d032f5e38e352592edc50dbded68aaa9f61
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33435946"
 ---
 # <a name="iclrtaskreset-method"></a>Метод ICLRTask::Reset
 Информирует общеязыковой среды выполнения (CLR), узел завершения задачи что позволяет повторно использовать текущий CLR [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) экземпляра для представления другой задачи.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33566315"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Обзор фигур и базовых средств рисования в приложении WPF
 В этом разделе содержится обзор рисования с помощью <xref:System.Windows.Shapes.Shape> объектов. Объект <xref:System.Windows.Shapes.Shape> — это тип <xref:System.Windows.UIElement> , позволяющий нарисовать фигуру на экране. Так как они являются элементами пользовательского интерфейса, <xref:System.Windows.Shapes.Shape> объекты могут использоваться внутри <xref:System.Windows.Controls.Panel> элементы и элементы управления.  

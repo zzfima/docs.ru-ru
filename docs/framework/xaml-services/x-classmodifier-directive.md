@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564382"
 ---
 # <a name="xclassmodifier-directive"></a>Директива x:ClassModifier
 Изменяет поведение компиляции XAML при `x:Class` также предоставляется. В частности, вместо создания частичной `class` с `Public` (по умолчанию), уровень доступа указанных `x:Class` создается с `NotPublic` уровень доступа. Это поведение влияет на уровень доступа для класса в созданные сборки.  

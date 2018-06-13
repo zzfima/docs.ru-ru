@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521860"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>Практическое руководство. Создание изображений из прямых и кривых линий и геометрических фигур
 Чтобы создать изображение, построить <xref:System.Drawing.Drawing2D.GraphicsPath>и затем вызывать методы, такие как <xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A> и <xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>, для добавления в путь примитивов.  

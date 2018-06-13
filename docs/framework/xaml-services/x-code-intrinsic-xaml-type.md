@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564317"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>Встроенный тип XAML x:Code
 Позволяет помещать код в пределах рабочей среды XAML. Такой код может быть скомпилирован либо с любой реализацией процессора XAML, который компилирует код XAML, либо слева в создании XAML для использования в дальнейшем например интерпретацию средой выполнения.  

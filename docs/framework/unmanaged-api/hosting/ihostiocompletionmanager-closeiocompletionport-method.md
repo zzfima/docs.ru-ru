@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 761e3b22014bdd628ffc6763615a285a16a86309
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441773"
 ---
 # <a name="ihostiocompletionmanagercloseiocompletionport-method"></a>Метод IHostIoCompletionManager::CloseIoCompletionPort
 Запросы, что узел закрыть порт, который был открыт по предыдущим вызовом [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md).  

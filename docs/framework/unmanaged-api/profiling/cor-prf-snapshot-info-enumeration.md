@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9d6713a7f54f6a6d8dbf261ad45304e6ddbe24c0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450721"
 ---
 # <a name="corprfsnapshotinfo-enumeration"></a>Перечисление COR_PRF_SNAPSHOT_INFO
 Указывает, какой объем данных для обратной передачи со снимком стека в каждом вызове функции профилировщика [StackSnapshotCallback](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md) функции.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7078b2eb98c15b7229132076da8af4691032bb08
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33441796"
 ---
 # <a name="corimportoptions-enumeration"></a>Перечисление CorImportOptions
 Содержит значения флага, управляющие поведением во время импорта сборки за пределы текущей области.  

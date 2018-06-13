@@ -10,9 +10,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec2fd3b309820f2bfb7f6091cc3db720db497408
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434897"
 ---
 # <a name="fusion-interfaces"></a>Fusion-интерфейсы
 В этом разделе описываются неуправляемые интерфейсы, используемые API Fusion для доступа к свойствам ресурсов приложения и найти правильные версии этих ресурсов для приложения.  

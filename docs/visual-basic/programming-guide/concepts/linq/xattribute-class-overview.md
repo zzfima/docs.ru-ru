@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646969"
 ---
 # <a name="xattribute-class-overview-visual-basic"></a>Общие сведения о классе XAttribute (Visual Basic)
 Атрибуты - это пары «имя-значение», ассоциированные с элементом. Класс <xref:System.Xml.Linq.XAttribute> представляет XML-атрибуты.  

@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33572701"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>Практическое руководство. Считывание из нового файла данных и запись в этот файл
 Классы <xref:System.IO.BinaryWriter> И <xref:System.IO.BinaryReader?displayProperty=nameWithType> используются для записи и чтения данных вместо строк символов. Следующий пример демонстрирует запись данных в новый пустой файловый поток с именем `Test.data` и чтение данных из него. Этот код создает файл данных в текущем каталоге, создает связанные с ним объекты <xref:System.IO.BinaryWriter> и <xref:System.IO.BinaryReader>, а затем применяет объект <xref:System.IO.BinaryWriter> для записи в `Test.data` целых чисел с 0 до 10. По завершении этих действий указатель файла остается в конце файла. Затем пример кода возвращает указатель файла в начало и через объект <xref:System.IO.BinaryReader> считывает его содержимое.  

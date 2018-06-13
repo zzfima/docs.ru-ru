@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514056"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>Как десериализовать свойства данных экземпляра
 Могут возникнуть ситуации, когда пользователю или администратору рабочего процесса потребуется вручную проанализировать состояние сохраненного экземпляра рабочего процесса. <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> содержит представление по таблицам экземпляров, предоставляющее следующие четыре столбца:  

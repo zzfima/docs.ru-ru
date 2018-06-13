@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33573070"
 ---
 # <a name="including-or-importing-xml-schemas"></a>Включение или импорт XML-схем
 Схема XML может содержать элементы `<xs:import />`, `<xs:include />` и `<xs:redefine />`. Эти элементы схемы ссылаются на другие схемы XML, которые можно использовать в дополнение к структуре схемы, их включающей или импортирующей. Классы <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> и <xref:System.Xml.Schema.XmlSchemaRedefine> сопоставляются с этими элементами в API модели SOM.  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33218720"
 ---
 # <a name="-define-c-compiler-options"></a>-define (параметры компилятора C#)
 Параметр **-define** определяет `name` как символ во всех файлах исходного кода программы.  

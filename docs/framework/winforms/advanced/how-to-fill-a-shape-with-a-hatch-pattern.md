@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33521746"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>Практическое руководство. Штриховая заливка фигуры
 Шаблон штриховки, состоящее из двух цветов: один для фона и один для строк, формирующих шаблон на фоне. Чтобы залить замкнутую фигуру штриховая, используйте <xref:System.Drawing.Drawing2D.HatchBrush> объекта. Следующий пример демонстрирует Штриховая заливка эллипса:  

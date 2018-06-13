@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759183"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>Создание объекта DataView (LINQ to DataSet)
 Объект <xref:System.Data.DataView> в контексте [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] можно создать двумя способами. Можно создать объект <xref:System.Data.DataView> на основе запроса [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] к таблице <xref:System.Data.DataTable> или на основе типизированной или нетипизированной таблицы <xref:System.Data.DataTable>. В обоих случаях создается <xref:System.Data.DataView> с помощью одного из <xref:System.Data.DataTableExtensions.AsDataView%2A> методов расширения. <xref:System.Data.DataView> не напрямую создать в [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] контекста.  
