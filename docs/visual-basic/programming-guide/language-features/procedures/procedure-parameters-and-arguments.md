@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33652504"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a><span data-ttu-id="24d08-102">Параметры и аргументы процедуры (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="24d08-102">Procedure Parameters and Arguments (Visual Basic)</span></span>
 <span data-ttu-id="24d08-103">В большинстве случаев процедуре требуется некоторая информация о ситуациях, в которых она была вызвана.</span><span class="sxs-lookup"><span data-stu-id="24d08-103">In most cases, a procedure needs some information about the circumstances in which it has been called.</span></span> <span data-ttu-id="24d08-104">Процедура, которая выполняет повторяющуюся задачу использует различные сведения для каждого вызова.</span><span class="sxs-lookup"><span data-stu-id="24d08-104">A procedure that performs repeated or shared tasks uses different information for each call.</span></span> <span data-ttu-id="24d08-105">Эта информация состоит из переменных, констант и выражений, которые передаются процедуре при ее вызове.</span><span class="sxs-lookup"><span data-stu-id="24d08-105">This information consists of variables, constants, and expressions that you pass to the procedure when you call it.</span></span>  

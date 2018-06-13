@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d97b40412b6999000a601b72904a03edf2acd08
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454044"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a><span data-ttu-id="cb73e-102">Метод ICorProfilerCallback::JITCachedFunctionSearchStarted</span><span class="sxs-lookup"><span data-stu-id="cb73e-102">ICorProfilerCallback::JITCachedFunctionSearchStarted Method</span></span>
 <span data-ttu-id="cb73e-103">Уведомляет профилировщик о начале поиска для функции, скомпилированной ранее с помощью генератором образов в машинном коде (NGen.exe).</span><span class="sxs-lookup"><span data-stu-id="cb73e-103">Notifies the profiler that a search has started for a function that was compiled previously using the Native Image Generator (NGen.exe).</span></span>  

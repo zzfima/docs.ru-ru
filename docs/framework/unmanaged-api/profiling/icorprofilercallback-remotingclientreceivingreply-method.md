@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 04956fb5519c66141f4bd7330367f6c78b4e7bc4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453962"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a><span data-ttu-id="9fb94-102">Метод ICorProfilerCallback::RemotingClientReceivingReply</span><span class="sxs-lookup"><span data-stu-id="9fb94-102">ICorProfilerCallback::RemotingClientReceivingReply Method</span></span>
 <span data-ttu-id="9fb94-103">Уведомляет профилировщик, серверную часть вызова удаленного взаимодействия завершена, и теперь получает клиента и сведения для обработки ответа.</span><span class="sxs-lookup"><span data-stu-id="9fb94-103">Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.</span></span>  

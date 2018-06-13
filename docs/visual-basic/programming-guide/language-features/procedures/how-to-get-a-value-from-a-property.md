@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648412"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a><span data-ttu-id="dde7b-102">Практическое руководство. Получение значения из свойства (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="dde7b-102">How to: Get a Value from a Property (Visual Basic)</span></span>
 <span data-ttu-id="dde7b-103">Получить значение свойства, включая имя свойства в выражении.</span><span class="sxs-lookup"><span data-stu-id="dde7b-103">You retrieve a property's value by including the property name in an expression.</span></span>  

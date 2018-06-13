@@ -15,6 +15,7 @@ ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/24/2018
+ms.locfileid: "34472520"
 ---
 # <a name="c-compiler-options"></a><span data-ttu-id="5d339-102">Параметры компилятора C#</span><span class="sxs-lookup"><span data-stu-id="5d339-102">C# Compiler Options</span></span>
 <span data-ttu-id="5d339-103">Компилятор создает исполняемые файлы (EXE-файлы), библиотеки динамической компоновки (DLL-файлы) или модули кода (.netmodule).</span><span class="sxs-lookup"><span data-stu-id="5d339-103">The compiler produces executable (.exe) files, dynamic-link libraries (.dll), or code modules (.netmodule).</span></span>  

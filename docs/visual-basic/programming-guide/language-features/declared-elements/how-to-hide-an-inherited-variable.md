@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649143"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a><span data-ttu-id="188c0-102">Практическое руководство. Сокрытие наследуемой переменной (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="188c0-102">How to: Hide an Inherited Variable (Visual Basic)</span></span>
 <span data-ttu-id="188c0-103">Производный класс наследует все определения его базового класса.</span><span class="sxs-lookup"><span data-stu-id="188c0-103">A derived class inherits all the definitions of its base class.</span></span> <span data-ttu-id="188c0-104">Если необходимо определить переменную с тем же именем, что элемент базового класса, можно скрыть, или *тени*, что элемент базового класса при определении переменной в производном классе.</span><span class="sxs-lookup"><span data-stu-id="188c0-104">If you want to define a variable using the same name as an element of the base class, you can hide, or *shadow*, that base class element when you define your variable in the derived class.</span></span> <span data-ttu-id="188c0-105">После этого код в производном классе получает доступ к переменной, если явно не обходится механизм затенения.</span><span class="sxs-lookup"><span data-stu-id="188c0-105">If you do this, code in the derived class accesses your variable unless it explicitly bypasses the shadowing mechanism.</span></span>  

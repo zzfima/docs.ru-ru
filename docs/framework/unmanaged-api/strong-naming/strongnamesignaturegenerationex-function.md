@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8ac2dd50b26137ee4cf06f0545f1f8cf1bfabf80
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461647"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a><span data-ttu-id="0a0ad-102">Функция StrongNameSignatureGenerationEx</span><span class="sxs-lookup"><span data-stu-id="0a0ad-102">StrongNameSignatureGenerationEx Function</span></span>
 <span data-ttu-id="0a0ad-103">Создает подпись со строгим именем для указанной сборки в соответствии с заданными флагами.</span><span class="sxs-lookup"><span data-stu-id="0a0ad-103">Generates a strong name signature for the specified assembly, according to the specified flags.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33649852"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a><span data-ttu-id="fca7b-102">Типы данных констант и литералов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fca7b-102">Constant and Literal Data Types (Visual Basic)</span></span>
 <span data-ttu-id="fca7b-103">Литерал — это значение, выраженное самостоятельно, а не как значение переменной или результата выражения, например число 3 или строка «Hello».</span><span class="sxs-lookup"><span data-stu-id="fca7b-103">A literal is a value that is expressed as itself rather than as a variable's value or the result of an expression, such as the number 3 or the string "Hello".</span></span> <span data-ttu-id="fca7b-104">Константа — это понятное имя, которое занимает место литерал и сохраняет это же значение для программы, в отличие от переменной, значение которого может измениться.</span><span class="sxs-lookup"><span data-stu-id="fca7b-104">A constant is a meaningful name that takes the place of a literal and retains this same value throughout the program, as opposed to a variable, whose value may change.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397472"
 ---
 # <a name="network-programming-samples"></a><span data-ttu-id="17a72-102">Примеры сетевого программирования</span><span class="sxs-lookup"><span data-stu-id="17a72-102">Network Programming Samples</span></span>
 <span data-ttu-id="17a72-103">В этом разделе приводятся описание и ссылки для скачивания примеров сетевого программирования, в которых используются классы из <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets> и связанных с ними пространств имен.</span><span class="sxs-lookup"><span data-stu-id="17a72-103">This section contains descriptions and links to downloadable network programming samples that use classes in the <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.Security>, <xref:System.Net.Sockets>, and related namespaces.</span></span> 

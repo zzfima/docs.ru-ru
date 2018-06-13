@@ -13,6 +13,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458108"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="0b46c-103">??</span><span class="sxs-lookup"><span data-stu-id="0b46c-103">??</span></span> <span data-ttu-id="0b46c-104">Оператор (ссылка C#)</span><span class="sxs-lookup"><span data-stu-id="0b46c-104">Operator (C# Reference)</span></span>
 <span data-ttu-id="0b46c-105">Оператор `??` называется оператором объединения со значением NULL.</span><span class="sxs-lookup"><span data-stu-id="0b46c-105">The `??` operator is called the null-coalescing operator.</span></span>  <span data-ttu-id="0b46c-106">Он возвращает левый операнд, если этот операнд не имеет значение NULL; в противном случае возвращается правый операнд.</span><span class="sxs-lookup"><span data-stu-id="0b46c-106">It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.</span></span>  

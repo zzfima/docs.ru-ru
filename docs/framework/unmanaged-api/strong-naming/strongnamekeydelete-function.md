@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a35ec4e3c3110616ac20cd31db134371838deda0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461933"
 ---
 # <a name="strongnamekeydelete-function"></a><span data-ttu-id="591ac-102">Функция StrongNameKeyDelete</span><span class="sxs-lookup"><span data-stu-id="591ac-102">StrongNameKeyDelete Function</span></span>
 <span data-ttu-id="591ac-103">Удаляет указанный контейнер ключей.</span><span class="sxs-lookup"><span data-stu-id="591ac-103">Deletes the specified key container.</span></span>  

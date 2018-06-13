@@ -14,6 +14,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/18/2018
+ms.locfileid: "34234377"
 ---
 # <a name="checked-and-unchecked-c-reference"></a><span data-ttu-id="f94d8-102">Checked и Unchecked (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="f94d8-102">Checked and Unchecked (C# Reference)</span></span>
 <span data-ttu-id="f94d8-103">Строка кода C# может выполняться как в проверенном, так и в непроверенном контексте.</span><span class="sxs-lookup"><span data-stu-id="f94d8-103">C# statements can execute in either checked or unchecked context.</span></span> <span data-ttu-id="f94d8-104">В проверенном контексте арифметическое переполнение создает исключение.</span><span class="sxs-lookup"><span data-stu-id="f94d8-104">In a checked context, arithmetic overflow raises an exception.</span></span> <span data-ttu-id="f94d8-105">В непроверяемом контексте арифметическое переполнение игнорируется и результат усекается путем удаления старших разрядов, которые не помещаются в целевой тип данных.</span><span class="sxs-lookup"><span data-stu-id="f94d8-105">In an unchecked context, arithmetic overflow is ignored and the result is truncated by discarding any high-order bits that don't fit in the destination type.</span></span>  

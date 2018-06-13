@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 85b17199ad40d8b3fbf4e1a0271828e5a5ac7991
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33445264"
 ---
 # <a name="imetadataemit2definemethodspec-method"></a><span data-ttu-id="e63fb-102">Метод IMetaDataEmit2::DefineMethodSpec</span><span class="sxs-lookup"><span data-stu-id="e63fb-102">IMetaDataEmit2::DefineMethodSpec Method</span></span>
 <span data-ttu-id="e63fb-103">Создает экземпляр универсального метода и возвращает маркер для определения.</span><span class="sxs-lookup"><span data-stu-id="e63fb-103">Creates a generic instance of a method, and gets a token to the definition.</span></span>  

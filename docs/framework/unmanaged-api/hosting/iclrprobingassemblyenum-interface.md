@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c295a5633dedf1f0c85a9a697fea5524ee03fafc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432702"
 ---
 # <a name="iclrprobingassemblyenum-interface"></a><span data-ttu-id="fb4aa-102">Интерфейс ICLRProbingAssemblyEnum</span><span class="sxs-lookup"><span data-stu-id="fb4aa-102">ICLRProbingAssemblyEnum Interface</span></span>
 <span data-ttu-id="fb4aa-103">Предоставляет методы, позволяющие основному приложению получить проверочные идентификаторы сборки с использованием данных удостоверение сборки, является внутренним для общеязыковой среды выполнения (CLR), без необходимости создания или понять их подлинность.</span><span class="sxs-lookup"><span data-stu-id="fb4aa-103">Provides methods that enable the host to get the probing identities of an assembly by using the assembly's identity information that is internal to the common language runtime (CLR), without needing to create or understand that identity.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33642886"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="95cf5-102">Как: поиск одноуровневых узлов (XPath-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="95cf5-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)</span></span>
 <span data-ttu-id="95cf5-103">Допустим, что требуется найти все одноуровневые элементы с указанным именем.</span><span class="sxs-lookup"><span data-stu-id="95cf5-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="95cf5-104">Полученная в результате коллекция может содержать контекстный узел, если этот контекстный узел также имеет указанное имя.</span><span class="sxs-lookup"><span data-stu-id="95cf5-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  

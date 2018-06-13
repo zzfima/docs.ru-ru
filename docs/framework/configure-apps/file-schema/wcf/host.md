@@ -7,6 +7,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34233734"
 ---
 # <a name="lthostgt"></a><span data-ttu-id="be880-102">&lt;Узел&gt;</span><span class="sxs-lookup"><span data-stu-id="be880-102">&lt;host&gt;</span></span>
 <span data-ttu-id="be880-103">Задает параметры узла службы.</span><span class="sxs-lookup"><span data-stu-id="be880-103">Specifies settings for a service host.</span></span>  

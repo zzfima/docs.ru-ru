@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33646687"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a><span data-ttu-id="0135b-102">Практическое руководство. Хранение нескольких значений в переменной (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="0135b-102">How to: Hold More Than One Value in a Variable (Visual Basic)</span></span>
 <span data-ttu-id="0135b-103">Переменная содержит более одного значения, если объявить ее из *составной тип данных*.</span><span class="sxs-lookup"><span data-stu-id="0135b-103">A variable holds more than one value if you declare it to be of a *composite data type*.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33492291"
 ---
 # <a name="configuring-discovery-in-a-configuration-file"></a><span data-ttu-id="078b0-102">Настройка обнаружения в файле конфигурации</span><span class="sxs-lookup"><span data-stu-id="078b0-102">Configuring Discovery in a Configuration File</span></span>
 <span data-ttu-id="078b0-103">При обнаружении используются четыре основные группы параметров конфигурации.</span><span class="sxs-lookup"><span data-stu-id="078b0-103">There are four major groups of configuration settings used in discovery.</span></span> <span data-ttu-id="078b0-104">В этом разделе кратко описана каждая из них, а также приведены примеры их настройки.</span><span class="sxs-lookup"><span data-stu-id="078b0-104">This topic will briefly describe each and show examples of how to configure them.</span></span> <span data-ttu-id="078b0-105">В конце каждого раздела имеется ссылка на более подробную документацию о каждой области.</span><span class="sxs-lookup"><span data-stu-id="078b0-105">Following each section will be a link to more in-depth documentation about each area.</span></span>  

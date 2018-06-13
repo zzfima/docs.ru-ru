@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650375"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a><span data-ttu-id="982ff-102">Практическое руководство. Запись значения в свойство (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="982ff-102">How to: Put a Value in a Property (Visual Basic)</span></span>
 <span data-ttu-id="982ff-103">Для сохранения значения в свойство, помещая имя свойства слева от оператора присваивания.</span><span class="sxs-lookup"><span data-stu-id="982ff-103">You store a value in a property by putting the property name on the left side of an assignment statement.</span></span>  

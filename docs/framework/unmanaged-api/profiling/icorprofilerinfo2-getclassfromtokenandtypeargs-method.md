@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 04be252092732296354cfec102cf8fe648ed2dd6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456642"
 ---
 # <a name="icorprofilerinfo2getclassfromtokenandtypeargs-method"></a><span data-ttu-id="8ab51-102">Метод ICorProfilerInfo2::GetClassFromTokenAndTypeArgs</span><span class="sxs-lookup"><span data-stu-id="8ab51-102">ICorProfilerInfo2::GetClassFromTokenAndTypeArgs Method</span></span>
 <span data-ttu-id="8ab51-103">Возвращает `ClassID` типа, используя указанный токен метаданных и `ClassID` значения любого типа аргументов.</span><span class="sxs-lookup"><span data-stu-id="8ab51-103">Gets the `ClassID` of a type by using the specified metadata token and the `ClassID` values of any type arguments.</span></span>  

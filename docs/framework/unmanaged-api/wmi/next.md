@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e945930a9a668d0a1c1e4c26bf3add9cc574c261
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461432"
 ---
 # <a name="next-function"></a><span data-ttu-id="15226-103">Функция Next</span><span class="sxs-lookup"><span data-stu-id="15226-103">Next function</span></span>
 <span data-ttu-id="15226-104">Извлекает свойство next в перечисление, которое начинается с вызова [BeginEnumeration](beginenumeration.md).</span><span class="sxs-lookup"><span data-stu-id="15226-104">Retrieves the next property in an enumeration that begins with a call to [BeginEnumeration](beginenumeration.md).</span></span>  

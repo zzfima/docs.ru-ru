@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33467569"
 ---
 # <a name="fatalunexpectedstatemachineevent"></a><span data-ttu-id="aa883-102">FatalUnexpectedStateMachineEvent</span><span class="sxs-lookup"><span data-stu-id="aa883-102">FatalUnexpectedStateMachineEvent</span></span>
 <span data-ttu-id="aa883-103">Идентификатор: 137</span><span class="sxs-lookup"><span data-stu-id="aa883-103">Id: 137</span></span>  

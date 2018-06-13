@@ -12,6 +12,7 @@ ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/17/2018
+ms.locfileid: "34234559"
 ---
 # <a name="private-visual-basic"></a><span data-ttu-id="8e6a4-102">Private (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8e6a4-102">Private (Visual Basic)</span></span>
 <span data-ttu-id="8e6a4-103">Указывает, что один или несколько элементов доступны только внутри контекста, включая из любых вложенных типов.</span><span class="sxs-lookup"><span data-stu-id="8e6a4-103">Specifies that one or more declared programming elements are accessible only from within their declaration context, including from within any contained types.</span></span>  

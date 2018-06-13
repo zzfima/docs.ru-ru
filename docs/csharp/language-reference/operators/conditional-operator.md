@@ -14,6 +14,7 @@ ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34457220"
 ---
 # <a name="-operator-c-reference"></a><span data-ttu-id="ac726-102">Оператор ?: (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="ac726-102">?: Operator (C# Reference)</span></span>
 <span data-ttu-id="ac726-103">Условный оператор (`?:`), известный как тернарный условный оператор, возвращает одно из двух значений в зависимости от значения логического выражения.</span><span class="sxs-lookup"><span data-stu-id="ac726-103">The conditional operator (`?:`), commonly known as the ternary conditional operator, returns one of two values depending on the value of a Boolean expression.</span></span> <span data-ttu-id="ac726-104">Для условного оператора используется следующий синтаксис.</span><span class="sxs-lookup"><span data-stu-id="ac726-104">Following is the syntax for the conditional operator.</span></span>  

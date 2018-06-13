@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e64eeff8ef80aa264c9c49bd12a0cc45e0da18a9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461891"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a><span data-ttu-id="e77b2-102">Метод ICorProfilerCallback::ObjectReferences</span><span class="sxs-lookup"><span data-stu-id="e77b2-102">ICorProfilerCallback::ObjectReferences Method</span></span>
 <span data-ttu-id="e77b2-103">Уведомляет профилировщик об объектах в памяти, на которые ссылаются заданным объектом.</span><span class="sxs-lookup"><span data-stu-id="e77b2-103">Notifies the profiler about objects in memory that are being referenced by the specified object.</span></span>  

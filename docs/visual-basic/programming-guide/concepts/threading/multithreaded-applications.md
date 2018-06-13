@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650482"
 ---
 # <a name="multithreaded-applications-visual-basic"></a><span data-ttu-id="d841b-102">Многопоточные приложения (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d841b-102">Multithreaded Applications (Visual Basic)</span></span>
 <span data-ttu-id="d841b-103">С помощью Visual Basic можно писать приложения, которые выполняют несколько задач одновременно.</span><span class="sxs-lookup"><span data-stu-id="d841b-103">With Visual Basic, you can write applications that perform multiple tasks at the same time.</span></span> <span data-ttu-id="d841b-104">Задачи, которые потенциально могут задержать выполнение других задач, выполняются в отдельных потоках; такой способ организации работы приложения называется *многопоточностью* или *свободным созданием потоков*.</span><span class="sxs-lookup"><span data-stu-id="d841b-104">Tasks with the potential of holding up other tasks can execute on separate threads, a process known as *multithreading* or *free threading*.</span></span>  

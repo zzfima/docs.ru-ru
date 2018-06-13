@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33641239"
 ---
 # <a name="textfieldparser-does-not-support-comment-tokens-that-contain-whitespace"></a><span data-ttu-id="e79bc-102">TextFieldParser не поддерживает токены комментариев, содержащие пробелы.</span><span class="sxs-lookup"><span data-stu-id="e79bc-102">TextFieldParser does not support comment tokens that contain whitespace</span></span>
 <span data-ttu-id="e79bc-103">Представлен токен комментария, содержащий пробел.</span><span class="sxs-lookup"><span data-stu-id="e79bc-103">A comment token that contains white space has been supplied.</span></span> <span data-ttu-id="e79bc-104">`TextFieldParser` не поддерживает токены комментариев, содержащие пробелы, если это не пробел в начале токена.</span><span class="sxs-lookup"><span data-stu-id="e79bc-104">The `TextFieldParser` does not support comment tokens that contain white space unless the white space occurs at the beginning of the token.</span></span> <span data-ttu-id="e79bc-105">Пробелы в начале токена игнорируются.</span><span class="sxs-lookup"><span data-stu-id="e79bc-105">White space occurring at the beginning of a token is ignored.</span></span>  

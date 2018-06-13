@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568021"
 ---
 # <a name="copying-document-fragments"></a><span data-ttu-id="64148-102">Копирование фрагментов документа</span><span class="sxs-lookup"><span data-stu-id="64148-102">Copying Document Fragments</span></span>
 <span data-ttu-id="64148-103">Можно создать узел **XmlDocumentFragment**, а затем добавлять к нему нижележащие узлы.</span><span class="sxs-lookup"><span data-stu-id="64148-103">You can create an **XmlDocumentFragment** node and then add nodes under it.</span></span> <span data-ttu-id="64148-104">При вставке узла **XmlDocumentFragment** с помощью метода **InsertNode** узел **XmlDocumentFragment** не копируется, но его дочерние узлы вставляются в модель XML DOM.</span><span class="sxs-lookup"><span data-stu-id="64148-104">When the **XmlDocumentFragment** is inserted with the **InsertNode** method, the **XmlDocumentFragment** node is not copied, but its child nodes are inserted in the XML Document Object Model (DOM).</span></span>  

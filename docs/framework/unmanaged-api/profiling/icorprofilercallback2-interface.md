@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6a218b58ed2ab40505204768f7d6071dea6db5e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461054"
 ---
 # <a name="icorprofilercallback2-interface"></a><span data-ttu-id="89357-102">Интерфейс ICorProfilerCallback2</span><span class="sxs-lookup"><span data-stu-id="89357-102">ICorProfilerCallback2 Interface</span></span>
 <span data-ttu-id="89357-103">Предоставляет методы, используемые средой CLR (CLR) для уведомления профилировщика кода при событиях, на которые подписан профилировщик.</span><span class="sxs-lookup"><span data-stu-id="89357-103">Provides methods that are used by the common language runtime (CLR) to notify a code profiler when the events to which the profiler has subscribed occur.</span></span> <span data-ttu-id="89357-104">`ICorProfilerCallback2` Интерфейс является расширением [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) интерфейса.</span><span class="sxs-lookup"><span data-stu-id="89357-104">The `ICorProfilerCallback2` interface is an extension of the [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interface.</span></span> <span data-ttu-id="89357-105">Таким образом предоставляются новые обратные вызовы, представленные в платформе .NET Framework версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="89357-105">That is, it provides new callbacks introduced in the .NET Framework version 2.0.</span></span>  

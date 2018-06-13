@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33648766"
 ---
 # <a name="-nowin32manifest-visual-basic"></a><span data-ttu-id="3b352-102">-nowin32manifest (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3b352-102">-nowin32manifest (Visual Basic)</span></span>
 <span data-ttu-id="3b352-103">Указывает компилятору не внедрять манифест приложения в исполняемый файл.</span><span class="sxs-lookup"><span data-stu-id="3b352-103">Instructs the compiler not to embed any application manifest into the executable file.</span></span>  

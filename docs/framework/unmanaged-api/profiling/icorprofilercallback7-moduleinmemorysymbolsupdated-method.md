@@ -13,9 +13,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9aa690378a32ffee2def672f02dc8b5582647a5e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455818"
 ---
 # <a name="icorprofilercallback7moduleinmemorysymbolsupdated-method"></a><span data-ttu-id="5a2b1-102">Метод ICorProfilerCallback7::ModuleInMemorySymbolsUpdated</span><span class="sxs-lookup"><span data-stu-id="5a2b1-102">ICorProfilerCallback7::ModuleInMemorySymbolsUpdated Method</span></span>
 <span data-ttu-id="5a2b1-103">[Поддерживается в .NET Framework 4.6.1 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="5a2b1-103">[Supported in the .NET Framework 4.6.1 and later versions]</span></span>  
