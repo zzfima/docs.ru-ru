@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33217234"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a><span data-ttu-id="25127-102">-moduleassemblyname (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="25127-102">-moduleassemblyname (C# Compiler Option)</span></span>
 <span data-ttu-id="25127-103">Указывает сборку, к неоткрытым типам которой может обращаться .netmodule.</span><span class="sxs-lookup"><span data-stu-id="25127-103">Specifies an assembly whose non-public types a .netmodule can access.</span></span>  

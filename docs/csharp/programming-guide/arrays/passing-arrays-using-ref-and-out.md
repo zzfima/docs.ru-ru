@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313574"
 ---
 # <a name="passing-arrays-using-ref-and-out-c-programming-guide"></a><span data-ttu-id="fdb1e-102">Передача массивов при помощи параметров ref и out (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="fdb1e-102">Passing Arrays Using ref and out (C# Programming Guide)</span></span>
 <span data-ttu-id="fdb1e-103">Как и все параметры [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md), параметр `out` типа массива перед использованием необходимо присвоить, то есть он должен быть присвоен вызываемым объектом.</span><span class="sxs-lookup"><span data-stu-id="fdb1e-103">Like all [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parameters, an `out` parameter of an array type must be assigned before it is used; that is, it must be assigned by the callee.</span></span> <span data-ttu-id="fdb1e-104">Пример:</span><span class="sxs-lookup"><span data-stu-id="fdb1e-104">For example:</span></span>  

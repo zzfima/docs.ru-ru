@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552744"
 ---
 # <a name="how-to-get-a-collection-of-lines-from-a-textbox"></a><span data-ttu-id="49dde-102">Практическое руководство. Получение коллекции строк из элемента TextBox</span><span class="sxs-lookup"><span data-stu-id="49dde-102">How to: Get a Collection of Lines from a TextBox</span></span>
 <span data-ttu-id="49dde-103">В этом примере показано, как получить коллекцию строк текста из <xref:System.Windows.Controls.TextBox>.</span><span class="sxs-lookup"><span data-stu-id="49dde-103">This example shows how to get a collection of lines of text from a <xref:System.Windows.Controls.TextBox>.</span></span>  

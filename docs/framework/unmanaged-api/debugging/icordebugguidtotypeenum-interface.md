@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91d653587d5b7c35a2a43c7eed7c4bf33e5401f6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416755"
 ---
 # <a name="icordebugguidtotypeenum-interface"></a><span data-ttu-id="adf92-102">Интерфейс ICorDebugGuidToTypeEnum</span><span class="sxs-lookup"><span data-stu-id="adf92-102">ICorDebugGuidToTypeEnum Interface</span></span>
 <span data-ttu-id="adf92-103">Предоставляет перечислитель, который определяет сопоставление между набор идентификаторов GUID и соответствующие им типы, которые представлены экземплярами ICorDebugType.</span><span class="sxs-lookup"><span data-stu-id="adf92-103">Provides an enumerator that defines the mapping between a set of GUIDs and their corresponding types, which are represented by ICorDebugType instances.</span></span> <span data-ttu-id="adf92-104">Этот интерфейс наследует интерфейс ICorDebugEnum методы.</span><span class="sxs-lookup"><span data-stu-id="adf92-104">This interface inherits the methods from the ICorDebugEnum interface.</span></span>  

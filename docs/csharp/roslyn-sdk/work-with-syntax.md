@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353303"
 ---
 # <a name="work-with-syntax"></a><span data-ttu-id="b967f-103">Работа с синтаксисом</span><span class="sxs-lookup"><span data-stu-id="b967f-103">Work with syntax</span></span>
 

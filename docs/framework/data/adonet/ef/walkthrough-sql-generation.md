@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766326"
 ---
 # <a name="walkthrough-sql-generation"></a><span data-ttu-id="54949-102">Пошаговое руководство. Создание кода SQL</span><span class="sxs-lookup"><span data-stu-id="54949-102">Walkthrough: SQL Generation</span></span>
 <span data-ttu-id="54949-103">В этом разделе показано, как происходит создание кода SQL в [образец поставщика](http://go.microsoft.com/fwlink/?LinkId=180616).</span><span class="sxs-lookup"><span data-stu-id="54949-103">This topic illustrates how SQL generation occurs in the [Sample Provider](http://go.microsoft.com/fwlink/?LinkId=180616).</span></span> <span data-ttu-id="54949-104">В следующем запросе Entity SQL используется модель, которая прилагается к образцу поставщика.</span><span class="sxs-lookup"><span data-stu-id="54949-104">The following Entity SQL query uses the model that is included with the sample provider:</span></span>  

@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 64b09c173e2f66d4c650083cc12f8a0ac2c92007
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33417232"
 ---
 # <a name="icordebugmanagedcallback2mdanotification-method"></a><span data-ttu-id="6d636-102">Метод ICorDebugManagedCallback2::MDANotification</span><span class="sxs-lookup"><span data-stu-id="6d636-102">ICorDebugManagedCallback2::MDANotification Method</span></span>
 <span data-ttu-id="6d636-103">Предоставляет уведомление о том, что выполнение кода обнаружил помощник по отладке управляемого (кода MDA) в отлаживаемом приложении.</span><span class="sxs-lookup"><span data-stu-id="6d636-103">Provides notification that code execution has encountered a managed debugging assistant (MDA) in the application that is being debugged.</span></span>  

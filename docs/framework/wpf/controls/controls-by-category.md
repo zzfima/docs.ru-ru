@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552003"
 ---
 # <a name="controls-by-category"></a><span data-ttu-id="84269-102">Категории элементов управления</span><span class="sxs-lookup"><span data-stu-id="84269-102">Controls by Category</span></span>
 <span data-ttu-id="84269-103">Элементы управления Windows Presentation Foundation (WPF) может быть логически сгруппированы в несколько категорий.</span><span class="sxs-lookup"><span data-stu-id="84269-103">Windows Presentation Foundation (WPF) controls can be logically grouped into several categories.</span></span> <span data-ttu-id="84269-104">Эти категории можно использовать для выбора соответствующего элемента управления для сценария, что поможет увидеть, какие элементы управления имеют схожие шаблоны использования или функциональные возможности.</span><span class="sxs-lookup"><span data-stu-id="84269-104">These categories can be used to select the appropriate control for your scenario by helping you see which controls have similar usage patterns or functionality.</span></span>  

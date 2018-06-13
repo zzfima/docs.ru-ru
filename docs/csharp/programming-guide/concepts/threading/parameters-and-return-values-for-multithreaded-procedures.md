@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340220"
 ---
 # <a name="parameters-and-return-values-for-multithreaded-procedures-c"></a><span data-ttu-id="3c0f7-102">Параметры и возвращаемые значения для многопоточных процедур (C#)</span><span class="sxs-lookup"><span data-stu-id="3c0f7-102">Parameters and Return Values for Multithreaded Procedures (C#)</span></span>
 <span data-ttu-id="3c0f7-103">Предоставлять и возвращать значения в многопоточном приложении сложно, поскольку в конструктор для класса потока должна передаваться ссылка на процедуру, которая принимает аргумент и не возвращает никакое значение.</span><span class="sxs-lookup"><span data-stu-id="3c0f7-103">Supplying and returning values in a multithreaded application is complicated because the constructor for the thread class must be passed a reference to a procedure that takes no arguments and returns no value.</span></span> <span data-ttu-id="3c0f7-104">В следующих разделах показано несколько простых способов предоставления параметров и возвращения значений из процедур в отдельных потоках.</span><span class="sxs-lookup"><span data-stu-id="3c0f7-104">The following sections show some simple ways to supply parameters and return values from procedures on separate threads.</span></span>  

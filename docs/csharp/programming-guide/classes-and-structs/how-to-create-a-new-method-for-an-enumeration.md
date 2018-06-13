@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33313037"
 ---
 # <a name="how-to-create-a-new-method-for-an-enumeration-c-programming-guide"></a><span data-ttu-id="0a478-102">Практическое руководство. Создание нового метода для перечисления (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="0a478-102">How to: Create a New Method for an Enumeration (C# Programming Guide)</span></span>
 <span data-ttu-id="0a478-103">Методы расширения позволяют добавить функциональные возможности, характерные для определенного типа перечисления.</span><span class="sxs-lookup"><span data-stu-id="0a478-103">You can use extension methods to add functionality specific to a particular enum type.</span></span>  

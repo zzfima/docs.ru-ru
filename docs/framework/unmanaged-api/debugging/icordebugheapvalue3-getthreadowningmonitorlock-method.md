@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ba09991e9452a86c6b7a1cbb08a38a71ba2aeaa
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416768"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a><span data-ttu-id="9e9b5-102">Метод ICorDebugHeapValue3::GetThreadOwningMonitorLock</span><span class="sxs-lookup"><span data-stu-id="9e9b5-102">ICorDebugHeapValue3::GetThreadOwningMonitorLock Method</span></span>
 <span data-ttu-id="9e9b5-103">Возвращает управляемый поток, который владеет блокировкой монитора на этот объект.</span><span class="sxs-lookup"><span data-stu-id="9e9b5-103">Returns the managed thread that owns the monitor lock on this object.</span></span>  

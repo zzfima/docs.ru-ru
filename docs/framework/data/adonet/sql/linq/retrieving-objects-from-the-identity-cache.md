@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33357612"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a><span data-ttu-id="4e651-102">Извлечение объектов из кэша идентификации</span><span class="sxs-lookup"><span data-stu-id="4e651-102">Retrieving Objects from the Identity Cache</span></span>
 <span data-ttu-id="4e651-103">В этом разделе описаны типы запросов LINQ to SQL, которые возвращают объект из кэша идентификаторов, управляемого <xref:System.Data.Linq.DataContext>.</span><span class="sxs-lookup"><span data-stu-id="4e651-103">This topic describes the types of LINQ to SQL queries that return an object from the identity cache that is managed by the <xref:System.Data.Linq.DataContext>.</span></span>  

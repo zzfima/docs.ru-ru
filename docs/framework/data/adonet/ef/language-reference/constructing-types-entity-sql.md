@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765260"
 ---
 # <a name="constructing-types-entity-sql"></a><span data-ttu-id="19c66-102">Сборка типов (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="19c66-102">Constructing Types (Entity SQL)</span></span>
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]<span data-ttu-id="19c66-103"> предоставляет три типа конструкторов: конструкторы строк, конструкторы именованных типов и конструкторы коллекций.</span><span class="sxs-lookup"><span data-stu-id="19c66-103"> provides three kinds of constructors: row constructors, named type constructors, and collection constructors.</span></span>  

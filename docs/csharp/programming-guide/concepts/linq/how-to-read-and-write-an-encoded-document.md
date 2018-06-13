@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33317162"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a><span data-ttu-id="4956c-102">Практическое руководство. Чтение и запись закодированного документа (C#)</span><span class="sxs-lookup"><span data-stu-id="4956c-102">How to: Read and Write an Encoded Document (C#)</span></span>
 <span data-ttu-id="4956c-103">Чтобы создать закодированный XML-документ, следует добавить объект <xref:System.Xml.Linq.XDeclaration> в XML-дерево, задав требуемое имя кодовой страницы для кодировки.</span><span class="sxs-lookup"><span data-stu-id="4956c-103">To create an encoded XML document, you add an <xref:System.Xml.Linq.XDeclaration> to the XML tree, setting the encoding to the desired code page name.</span></span>  

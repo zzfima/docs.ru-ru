@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526824"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="ebcd0-102">Ввод данных с помощью элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ebcd0-102">Data Entry in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="ebcd0-103">`DataGridView` Управления предоставляет несколько функций, позволяющих настраивать способ добавления или изменения данных в элементе управления.</span><span class="sxs-lookup"><span data-stu-id="ebcd0-103">The `DataGridView` control provides several features that let you change how users add or modify data in the control.</span></span> <span data-ttu-id="ebcd0-104">Например ввод данных можно сделать более эффективным, путем предоставления значения по умолчанию для новых строк и уведомления пользователей о времени этой ошибки.</span><span class="sxs-lookup"><span data-stu-id="ebcd0-104">For example, you can make data entry more efficient by providing default values for new rows and by alerting users when errors occur.</span></span>  

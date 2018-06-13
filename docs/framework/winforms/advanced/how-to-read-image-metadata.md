@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526582"
 ---
 # <a name="how-to-read-image-metadata"></a><span data-ttu-id="9704d-102">Практическое руководство. Чтение метаданных изображения</span><span class="sxs-lookup"><span data-stu-id="9704d-102">How to: Read Image Metadata</span></span>
 <span data-ttu-id="9704d-103">Некоторые файлы изображений содержат метаданные, которые могут прочитать, чтобы определить возможности изображения.</span><span class="sxs-lookup"><span data-stu-id="9704d-103">Some image files contain metadata that you can read to determine features of the image.</span></span> <span data-ttu-id="9704d-104">Например цифровая фотография может содержать метаданные, которые могут прочитать, чтобы определить Марка и модель камеры, использованной для создания образа.</span><span class="sxs-lookup"><span data-stu-id="9704d-104">For example, a digital photograph might contain metadata that you can read to determine the make and model of the camera used to capture the image.</span></span> <span data-ttu-id="9704d-105">С [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], можно считывать существующие метаданные и файлы изображений, также могут записывать новые метаданные.</span><span class="sxs-lookup"><span data-stu-id="9704d-105">With [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], you can read existing metadata, and you can also write new metadata to image files.</span></span>  

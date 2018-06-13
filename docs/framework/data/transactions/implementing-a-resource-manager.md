@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363267"
 ---
 # <a name="implementing-a-resource-manager"></a><span data-ttu-id="2d2fc-102">Реализация диспетчера ресурсов</span><span class="sxs-lookup"><span data-stu-id="2d2fc-102">Implementing a Resource Manager</span></span>
 <span data-ttu-id="2d2fc-103">Каждым используемым в транзакции ресурсом управляет диспетчер ресурсов, действия которого координируются диспетчером транзакций.</span><span class="sxs-lookup"><span data-stu-id="2d2fc-103">Each resource used in a transaction is managed by a resource manager, whose actions are coordinated by a transaction manager.</span></span> <span data-ttu-id="2d2fc-104">Диспетчеры ресурсов работают совместно с диспетчером транзакций для предоставления приложения, гарантирующего атомарность и изоляцию.</span><span class="sxs-lookup"><span data-stu-id="2d2fc-104">Resource managers work in cooperation with the transaction manager to provide the application with a guarantee of atomicity and isolation.</span></span> <span data-ttu-id="2d2fc-105">Примерами диспетчеров ресурсов являются Microsoft SQL Server, устойчивые очереди сообщений и расположенные в оперативной памяти хэш-таблицы.</span><span class="sxs-lookup"><span data-stu-id="2d2fc-105">Microsoft SQL Server, durable message queues, in-memory hash tables are all examples of resource managers.</span></span>  

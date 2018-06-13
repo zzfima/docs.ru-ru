@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766664"
 ---
 # <a name="modification-sql-generation"></a><span data-ttu-id="8c1d7-102">Создание кода SQL для изменения данных</span><span class="sxs-lookup"><span data-stu-id="8c1d7-102">Modification SQL Generation</span></span>
 <span data-ttu-id="8c1d7-103">В этом разделе приведено описание разработки модуля создания кода SQL для изменения данных для конкретного поставщика (базы данных, совместимой с SQL:1999).</span><span class="sxs-lookup"><span data-stu-id="8c1d7-103">This section discusses how to develop a modification SQL generation module for your (SQL:1999-compliant database) provider.</span></span> <span data-ttu-id="8c1d7-104">Этот модуль обеспечивает преобразование дерева команд изменения в соответствующие инструкции INSERT, UPDATE или DELETE языка SQL.</span><span class="sxs-lookup"><span data-stu-id="8c1d7-104">This module is responsible for translating a modification command tree into the appropriate SQL INSERT, UPDATE or DELETE statements.</span></span>  

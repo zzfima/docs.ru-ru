@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32767587"
 ---
 # <a name="lttransportgt-of-ltwshttpbindinggt"></a><span data-ttu-id="c4cad-102">&lt;transport&gt; для &lt;wsHttpBinding&gt;</span><span class="sxs-lookup"><span data-stu-id="c4cad-102">&lt;transport&gt; of &lt;wsHttpBinding&gt;</span></span>
 <span data-ttu-id="c4cad-103">Определяет параметры проверки подлинности для HTTP-транспорта.</span><span class="sxs-lookup"><span data-stu-id="c4cad-103">Defines authentication settings for the HTTP transport.</span></span>  

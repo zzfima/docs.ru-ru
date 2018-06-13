@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a3d4609d79bb424cabc011122480f952f0f877f1
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411238"
 ---
 # <a name="icordebugcodegetversionnumber-method"></a><span data-ttu-id="e30e5-102">Метод ICorDebugCode::GetVersionNumber</span><span class="sxs-lookup"><span data-stu-id="e30e5-102">ICorDebugCode::GetVersionNumber Method</span></span>
 <span data-ttu-id="e30e5-103">Возвращает номер от единицы, определяющий версию кода, который представляет «ICorDebugCode».</span><span class="sxs-lookup"><span data-stu-id="e30e5-103">Gets the one-based number that identifies the version of the code that this "ICorDebugCode" represents.</span></span>  

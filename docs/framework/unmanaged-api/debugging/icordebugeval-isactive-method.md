@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2fe29b3e35d2fbd42fac2d9ec1d1c594abe1239c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33411162"
 ---
 # <a name="icordebugevalisactive-method"></a><span data-ttu-id="1b4f4-102">Метод ICorDebugEval::IsActive</span><span class="sxs-lookup"><span data-stu-id="1b4f4-102">ICorDebugEval::IsActive Method</span></span>
 <span data-ttu-id="1b4f4-103">Возвращает значение, указывающее, является ли этот объект ICorDebugEval в данный момент.</span><span class="sxs-lookup"><span data-stu-id="1b4f4-103">Gets a value that indicates whether this ICorDebugEval object is currently executing.</span></span>  

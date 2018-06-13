@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340688"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a><span data-ttu-id="0d012-102">Рефакторинг с использованием чистых функций (C#)</span><span class="sxs-lookup"><span data-stu-id="0d012-102">Refactoring Using a Pure Function (C#)</span></span>
 <span data-ttu-id="0d012-103">В приведенном ниже примере выполняется оптимизация кода предыдущего примера [Рефакторинг с использованием метода расширения (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md) для использования чистой функции. При этом код, предназначенный для поиска текста абзаца, перемещен в чисто статический метод `ParagraphText`.</span><span class="sxs-lookup"><span data-stu-id="0d012-103">The following example refactors the previous example, [Refactoring Using an Extension Method (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md), to use a pure function In this example, the code to find the text of a paragraph is moved to the pure static method `ParagraphText`.</span></span>  

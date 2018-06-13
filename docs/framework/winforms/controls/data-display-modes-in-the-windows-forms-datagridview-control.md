@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528607"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="6b5a0-102">Режимы отображения данных в элементе управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="6b5a0-102">Data Display Modes in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="6b5a0-103"><xref:System.Windows.Forms.DataGridView> Элемент управления может отображать данные в трех разных режимах: связанном, свободных и виртуальном.</span><span class="sxs-lookup"><span data-stu-id="6b5a0-103">The <xref:System.Windows.Forms.DataGridView> control can display data in three distinct modes: bound, unbound, and virtual.</span></span> <span data-ttu-id="6b5a0-104">Выберите наиболее подходящий режим, в зависимости от требований.</span><span class="sxs-lookup"><span data-stu-id="6b5a0-104">Choose the most suitable mode based on your requirements.</span></span>  

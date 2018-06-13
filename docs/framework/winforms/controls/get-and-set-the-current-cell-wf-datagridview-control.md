@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527551"
 ---
 # <a name="how-to-get-and-set-the-current-cell-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="811ca-102">Практическое руководство. Считывание и установка значения текущей ячейки элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="811ca-102">How to: Get and Set the Current Cell in the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="811ca-103">Взаимодействие с <xref:System.Windows.Forms.DataGridView> часто требуется программно найденные ячейки, которая в данный момент активна.</span><span class="sxs-lookup"><span data-stu-id="811ca-103">Interaction with the <xref:System.Windows.Forms.DataGridView> often requires that you programmatically discover which cell is currently active.</span></span> <span data-ttu-id="811ca-104">Кроме того, может потребоваться изменить текущую ячейку.</span><span class="sxs-lookup"><span data-stu-id="811ca-104">You may also need to change the current cell.</span></span> <span data-ttu-id="811ca-105">Можно выполнять эти задачи с <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> свойство.</span><span class="sxs-lookup"><span data-stu-id="811ca-105">You can perform these tasks with the <xref:System.Windows.Forms.DataGridView.CurrentCell%2A> property.</span></span>  

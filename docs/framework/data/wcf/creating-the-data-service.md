@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33362841"
 ---
 # <a name="creating-the-data-service"></a><span data-ttu-id="c2d04-102">Создание службы данных</span><span class="sxs-lookup"><span data-stu-id="c2d04-102">Creating the Data Service</span></span>
 <span data-ttu-id="c2d04-103">В этой задаче вы создадите образца службы данных, который использует [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для предоставления [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] канала, который основан на образце базы данных "Борей".</span><span class="sxs-lookup"><span data-stu-id="c2d04-103">In this task, you will create a sample data service that uses [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] to expose an [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] feed that is based on the Northwind sample database.</span></span> <span data-ttu-id="c2d04-104">Задача включает следующие основные шаги.</span><span class="sxs-lookup"><span data-stu-id="c2d04-104">The task involves the following basic steps:</span></span>  

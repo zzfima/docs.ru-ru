@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33327696"
 ---
 # <a name="chaining-queries-example-c"></a><span data-ttu-id="879ea-102">Пример связывания запросов (C#)</span><span class="sxs-lookup"><span data-stu-id="879ea-102">Chaining Queries Example (C#)</span></span>
 <span data-ttu-id="879ea-103">Этот пример основан на предыдущем примере и показывает, что происходит при соединении в цепочку двух запросов, использующих отложенное выполнение и отложенное вычисление.</span><span class="sxs-lookup"><span data-stu-id="879ea-103">This example builds on the previous example and shows what happens when you chain together two queries that both use deferred execution and lazy evaluation.</span></span>  

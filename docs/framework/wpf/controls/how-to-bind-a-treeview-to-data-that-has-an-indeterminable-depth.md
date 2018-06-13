@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554381"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a><span data-ttu-id="8c9fd-102">Практическое руководство. Привязка элемента управления TreeView к данным неопределенной глубины</span><span class="sxs-lookup"><span data-stu-id="8c9fd-102">How to: Bind a TreeView to Data That Has an Indeterminable Depth</span></span>
 <span data-ttu-id="8c9fd-103">Возможны ситуации, когда вы хотите привязать <xref:System.Windows.Controls.TreeView> к источнику данных, глубина которого неизвестен.</span><span class="sxs-lookup"><span data-stu-id="8c9fd-103">There might be times when you want to bind a <xref:System.Windows.Controls.TreeView> to a data source whose depth is not known.</span></span>  <span data-ttu-id="8c9fd-104">Это может произойти, когда данные рекурсивных по своей природе, например в файловой системе, где папок может содержать папки, или организационной структуры компании, где сотрудники имеют других сотрудников в качестве подчиненных.</span><span class="sxs-lookup"><span data-stu-id="8c9fd-104">This can occur when the data is recursive in nature, such as a file system, where folders can contain folders, or a company's organizational structure, where employees have other employees as direct reports.</span></span>  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33553940"
 ---
 # <a name="how-to-extract-the-text-content-from-a-richtextbox"></a><span data-ttu-id="6d0bb-102">Практическое руководство. Извлечение текстового содержимого из элемента управления RichTextBox</span><span class="sxs-lookup"><span data-stu-id="6d0bb-102">How to: Extract the Text Content from a RichTextBox</span></span>
 <span data-ttu-id="6d0bb-103">В этом примере показано, как извлечь содержимое <xref:System.Windows.Controls.RichTextBox> как обычный текст.</span><span class="sxs-lookup"><span data-stu-id="6d0bb-103">This example shows how to extract the contents of a <xref:System.Windows.Controls.RichTextBox> as plain text.</span></span>  

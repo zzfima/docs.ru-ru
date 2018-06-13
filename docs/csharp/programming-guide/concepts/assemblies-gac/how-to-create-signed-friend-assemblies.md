@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340662"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a><span data-ttu-id="e1d20-102">Практическое руководство. Создание подписанных дружественных сборок (C#)</span><span class="sxs-lookup"><span data-stu-id="e1d20-102">How to: Create Signed Friend Assemblies (C#)</span></span>
 <span data-ttu-id="e1d20-103">В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена.</span><span class="sxs-lookup"><span data-stu-id="e1d20-103">This example shows how to use friend assemblies with assemblies that have strong names.</span></span> <span data-ttu-id="e1d20-104">Обе сборки должны иметь строгое имя.</span><span class="sxs-lookup"><span data-stu-id="e1d20-104">Both assemblies must be strong named.</span></span> <span data-ttu-id="e1d20-105">Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.</span><span class="sxs-lookup"><span data-stu-id="e1d20-105">Although both assemblies in this example use the same keys, you could use different keys for two assemblies.</span></span>  

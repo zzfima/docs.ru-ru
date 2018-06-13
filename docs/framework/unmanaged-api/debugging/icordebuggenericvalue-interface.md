@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0081f020da673023e2c35f9599e9682215e2c9d4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415068"
 ---
 # <a name="icordebuggenericvalue-interface1"></a><span data-ttu-id="53abd-102">ICorDebugGenericValue интерфейс1</span><span class="sxs-lookup"><span data-stu-id="53abd-102">ICorDebugGenericValue Interface1</span></span>
 <span data-ttu-id="53abd-103">Подкласс «ICorDebugValue», которая применяется ко всем значениям.</span><span class="sxs-lookup"><span data-stu-id="53abd-103">A subclass of "ICorDebugValue" that applies to all values.</span></span> <span data-ttu-id="53abd-104">Этот интерфейс предоставляет для значения методы Get и Set.</span><span class="sxs-lookup"><span data-stu-id="53abd-104">This interface provides Get and Set methods for the value.</span></span>  

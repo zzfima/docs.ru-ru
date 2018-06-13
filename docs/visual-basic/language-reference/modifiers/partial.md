@@ -19,6 +19,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604618"
 ---
 # <a name="partial-visual-basic"></a><span data-ttu-id="f96b1-102">Partial (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f96b1-102">Partial (Visual Basic)</span></span>
 <span data-ttu-id="f96b1-103">Указывает, что объявление типа — это частичное определение типа.</span><span class="sxs-lookup"><span data-stu-id="f96b1-103">Indicates that a type declaration is a partial definition of the type.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339684"
 ---
 # <a name="manipulating-pointers-c-programming-guide"></a><span data-ttu-id="81284-102">Управление указателями. (Руководство по программированию в C#)</span><span class="sxs-lookup"><span data-stu-id="81284-102">Manipulating Pointers (C# Programming Guide)</span></span>
 <span data-ttu-id="81284-103">В этом разделе описываются следующие операции с указателем:</span><span class="sxs-lookup"><span data-stu-id="81284-103">This section includes the following pointer operations:</span></span>  

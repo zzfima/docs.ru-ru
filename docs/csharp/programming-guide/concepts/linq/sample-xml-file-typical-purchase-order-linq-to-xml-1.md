@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339427"
 ---
 # <a name="sample-xml-file-typical-purchase-order-linq-to-xml"></a><span data-ttu-id="dd167-102">Пример XML-файла. Стандартный заказ на покупку (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="dd167-102">Sample XML File: Typical Purchase Order (LINQ to XML)</span></span>
 <span data-ttu-id="dd167-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="dd167-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="dd167-104">Этот файл представляет собой типичный заказ на покупку.</span><span class="sxs-lookup"><span data-stu-id="dd167-104">This file is a typical purchase order.</span></span>  

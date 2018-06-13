@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32766739"
 ---
 # <a name="entity-sql-reference"></a><span data-ttu-id="fba9b-102">Справочник по Entity SQL</span><span class="sxs-lookup"><span data-stu-id="fba9b-102">Entity SQL Reference</span></span>
 <span data-ttu-id="fba9b-103">В этом разделе представлена справочная документация по [!INCLUDE[esql](../../../../../../includes/esql-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fba9b-103">This section contains [!INCLUDE[esql](../../../../../../includes/esql-md.md)] reference topics.</span></span> <span data-ttu-id="fba9b-104">В этом разделе операторы [!INCLUDE[esql](../../../../../../includes/esql-md.md)] сведены и сгруппированы по категориям.</span><span class="sxs-lookup"><span data-stu-id="fba9b-104">This topic summarizes and groups the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operators by category.</span></span>  
