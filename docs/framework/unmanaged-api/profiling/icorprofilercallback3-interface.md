@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cc63a0a42c1da11daa5d38ecce505296a893616b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33453939"
 ---
 # <a name="icorprofilercallback3-interface"></a>Интерфейс ICorProfilerCallback3
 Предоставляет методы обратного вызова общеязыковой среды выполнения (CLR), используемые для связи, присоединение и отсоединение профилировщику сведений о состоянии.  

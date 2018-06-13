@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d73fe16720248d541bac64a432bb6f35d6873b6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454985"
 ---
 # <a name="imethodmallocalloc-method"></a>Метод IMethodMalloc::Alloc
 Пытается выделить указанный объем памяти для нового тела функции промежуточного языка MSIL.  

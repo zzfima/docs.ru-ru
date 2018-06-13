@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33650430"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Имена объявляемых элементов и атрибутов XML (Visual Basic)
 В этом разделе приведены рекомендации Visual Basic по именованию XML-элементов и атрибутов в XML-литералов.  В литерале XML можно указать локальное имя или полное имя. Полное имя состоит из префикса пространства имен XML, двоеточия и локального имени. Дополнительные сведения о префиксы пространства имен XML см. в разделе [литерала элемента XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
