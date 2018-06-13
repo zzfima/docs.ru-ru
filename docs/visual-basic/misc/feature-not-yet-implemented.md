@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33634902"
 ---
 # <a name="feature-not-yet-implemented"></a><span data-ttu-id="d9445-102">Данная функциональная возможность еще не реализована</span><span class="sxs-lookup"><span data-stu-id="d9445-102">Feature not yet implemented</span></span>
 <span data-ttu-id="d9445-103">Предпринята попытка доступа к функции, которая еще не реализована в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="d9445-103">You have tried to access a feature that is currently not implemented in Visual Basic.</span></span>  

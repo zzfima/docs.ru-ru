@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636657"
 ---
 # <a name="file-already-exists"></a><span data-ttu-id="8298a-102">Файл уже существует</span><span class="sxs-lookup"><span data-stu-id="8298a-102">File already exists</span></span>
 <span data-ttu-id="8298a-103">Эта ошибка возникает в результате назначения новому файлу имени существующего файла или использования команды **Сохранить как** для сохранения загруженного проекта с именем, которое уже используется.</span><span class="sxs-lookup"><span data-stu-id="8298a-103">This error occurs as a result of either naming a new file with the name of an existing file or using the **Save As** command to save a currently loaded project with a name that already exists.</span></span>  
