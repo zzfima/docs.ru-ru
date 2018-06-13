@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 562b6fcd015441ce5eb6b5f0ab7a4f361bb229c3
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449433"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>Метод IMetaDataInfo::GetFileMapping
 Возвращает область памяти сопоставленных файлов и тип сопоставления.  

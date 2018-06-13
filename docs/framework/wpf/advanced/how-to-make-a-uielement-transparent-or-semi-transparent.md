@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545315"
 ---
 # <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>Практическое руководство. Как сделать UIElement прозрачным или полупрозрачным
 В этом примере показано, как сделать <xref:System.Windows.UIElement> прозрачным или полупрозрачным. Чтобы сделать элемент прозрачным или полупрозрачным, задайте его <xref:System.Windows.UIElement.Opacity%2A> свойство. Значение `0.0` делает элемент полностью прозрачной, а значение `1.0` делает элемент полностью непрозрачным. Значение `0.5` делает элемент 50% непрозрачный и т. д. Элемент <xref:System.Windows.UIElement.Opacity%2A> равно `1.0` по умолчанию.  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4c77edfff640f796dd3f345eaeb4728830c5f4c6
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33449148"
 ---
 # <a name="imetadataemit-interface"></a>Интерфейс IMetaDataEmit
 Предоставляет методы для создания, изменения и сохранить метаданные о сборке в текущей заданной области. Метаданные можно хранить в памяти или на жестком диске.  

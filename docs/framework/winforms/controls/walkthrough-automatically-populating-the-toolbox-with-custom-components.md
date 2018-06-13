@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540050"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Пример. Автоматическое заполнение панели элементов пользовательскими компонентами
 Если компоненты определяются проектом в текущем открытом решении, они автоматически будут отображаться в **элементов**, с без дополнительных действий не требуется. Можно также вручную заполнять **элементов** компонентами с помощью [выберите Toolbox Items Dialog Box (Visual Studio)](http://msdn.microsoft.com/library/bd07835f-18a8-433e-bccc-7141f65263bb), но **элементов** принимает учетной записи элементов в вашем решении выходным данным построения со следующими характеристиками:  

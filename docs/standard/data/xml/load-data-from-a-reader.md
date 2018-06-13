@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33569978"
 ---
 # <a name="load-data-from-a-reader"></a>Загрузка данных из модуля чтения
 Если XML-документ загружен с помощью метода <xref:System.Xml.XmlDocument.Load%2A> и параметра <xref:System.Xml.XmlReader>, его поведение отличается от поведения загруженных данных других форматов. Если модуль чтения находится в начальном состоянии, метод <xref:System.Xml.XmlDocument.Load%2A> получает все его содержимое и строит модель XML DOM на основе всех данных модуля чтения.  

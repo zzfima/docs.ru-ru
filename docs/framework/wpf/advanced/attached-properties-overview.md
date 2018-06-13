@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542175"
 ---
 # <a name="attached-properties-overview"></a>Общие сведения о вложенных свойствах зависимостей
 Присоединенное свойство — это понятие, определяемое языком XAML. Присоединенное свойство предназначено для использования в качестве типа глобального свойства, которое может быть задано для любого объекта. В [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] присоединенные свойства обычно определяются как особая форма свойства зависимости, не имеющего обычной "оболочки" свойства.  

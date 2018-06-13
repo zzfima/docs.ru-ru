@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568889"
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Типы коллекций Hashtable и Dictionary
 Класс <xref:System.Collections.Hashtable?displayProperty=nameWithType> и универсальные классы <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> и <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> реализуют интерфейс <xref:System.Collections.IDictionary?displayProperty=nameWithType>. Универсальный класс <xref:System.Collections.Generic.Dictionary%602> также реализует универсальный интерфейс <xref:System.Collections.Generic.IDictionary%602>. Таким образом, каждый элемент в этих коллекциях является парой "ключ-значение".  

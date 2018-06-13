@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 25482ee81d5210e5ab69007767aecf01435602d7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448600"
 ---
 # <a name="imetadataimportgettyperefprops-method"></a>Метод IMetaDataImport::GetTypeRefProps
 Возвращает метаданные, связанные с <xref:System.Type> ссылается указанный токен TypeRef.  

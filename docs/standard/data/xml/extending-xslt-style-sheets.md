@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568827"
 ---
 # <a name="extending-xslt-style-sheets"></a>Расширение таблиц стилей XSLT
 В этом разделе описаны различные методы расширения функциональных возможностей XSLT. С помощью класса <xref:System.Xml.Xsl.XsltArgumentList> можно добавлять объекты расширения или параметры. Затем объекты расширения или параметры можно вызывать из таблицы стилей. Кроме того, можно внедрять в таблицу стилей блоки скрипта с помощью элемента `msxsl:script`.  

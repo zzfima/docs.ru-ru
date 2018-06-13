@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562184"
 ---
 # <a name="how-to-use-system-colors-in-a-gradient"></a>Практическое руководство. Использование системных цветов в градиенте
 Чтобы использовать системный цвет в градиенте, используйте  *\<SystemColor >* цвета и  *\<SystemColor >* ColorKey статических свойств <xref:System.Windows.SystemColors> для получения ссылки на цвет, где  *\<SystemColor >* имя необходимого системного цвета. Используйте  *\<SystemColor >* ColorKey свойства, если вы хотите создать динамическую ссылку, которая обновляется автоматически по мере изменения темы системы. В противном случае используйте  *\<SystemColor >* свойства цветов.  

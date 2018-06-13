@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33542214"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Практическое руководство. Создание связанного элемента управления и форматирование отображаемых данных
 Благодаря функции привязки данных Windows Forms можно форматировать данные, отображаемые в элементе управления с привязкой к данным с помощью **форматирование и дополнительная привязка** диалоговое окно.  

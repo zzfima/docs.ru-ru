@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539754"
 ---
 # <a name="windows-forms-controls-used-to-list-options"></a>Создание списка для выбора элементов в Windows Forms
 Если вы хотите предоставить пользователям список параметров для выбора можно добавить различные элементы управления в форму Windows Forms. В зависимости от того сколько вы хотите ограничить пользователей входных данных, можно добавить <xref:System.Windows.Forms.ListBox> управления <xref:System.Windows.Forms.ComboBox> управления, или <xref:System.Windows.Forms.CheckedListBox> элемента управления. Используйте следующие ссылки, чтобы определить, какой элемент управления следует соответствует вашим потребностям.  

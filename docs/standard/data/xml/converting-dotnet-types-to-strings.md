@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33568775"
 ---
 # <a name="converting-net-framework-types-to-strings"></a>Преобразование типов .NET Framework в строки
 Чтобы преобразовать тип .NET Framework в строку, используйте метод **ToString**. Метод **ToString** возвращает символьное представление переданного типа. В следующей таблице приведен список типов платформы .NET Framework, которые возвращают строку в формате, сопоставленном со спецификациями XSD.  
