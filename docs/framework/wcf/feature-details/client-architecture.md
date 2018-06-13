@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494095"
 ---
 # <a name="client-architecture"></a>Клиентская архитектура
 Приложения используют объекты клиента Windows Communication Foundation (WCF) для вызова операций службы. В этом разделе рассматриваются объекты клиента WCF, клиентских каналов WCF и их связи с базовой архитектурой каналов. Общий обзор объектов клиента WCF. в разделе [Общие сведения о клиенте WCF](../../../../docs/framework/wcf/wcf-client-overview.md). Дополнительные сведения о уровень канала см. в разделе [расширение уровня каналов](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  

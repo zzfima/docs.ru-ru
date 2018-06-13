@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33493482"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>Как создать простую веб-службу WCF HTTP
 Windows Communication Foundation (WCF) позволяет создавать службу, предоставляющую сетевую конечную точку. Сетевые конечные точки отправляют данные в виде XML-кода или JSON, без конверта SOAP. В этом разделе показано, как предоставить такую конечную точку.  

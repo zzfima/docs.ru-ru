@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578278"
 ---
 # <a name="parameter-design"></a>Разработка параметров
 В этом разделе приведены общие рекомендации по разработке параметра, включая разделы с рекомендациями по проверке аргументов. Кроме того, вы должны обращаться к инструкциям, описанным в [именования параметров](../../../docs/standard/design-guidelines/naming-parameters.md).  

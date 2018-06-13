@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571665"
 ---
 # <a name="unsealed-classes"></a>Незапечатанные классы
 Невозможно наследовать запечатанные классы и не позволяют расширяемости. В противоположность этому классы, которые могут наследоваться от называются незапечатанных классов.  

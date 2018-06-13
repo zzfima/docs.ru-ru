@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496592"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Очереди в Windows Communication Foundation
 В этом разделе описывается поддержка очередей в Windows Communication Foundation (WCF). WCF обеспечивает поддержку организации очереди, путем использования очереди сообщений Microsoft (ранее известный как MSMQ) как транспорт и включает следующие сценарии:  

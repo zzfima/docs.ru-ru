@@ -20,6 +20,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33567823"
 ---
 # <a name="creating-new-strings-in-net"></a>Создание новых строк в .NET
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] позволяет создавать строки с помощью простой операции присваивания, а также перегружать конструктор класса для создания строк с помощью различных параметров. Кроме того, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] предоставляет в классе <xref:System.String?displayProperty=nameWithType> несколько методов для создания строковых объектов путем объединения строк, массивов строк или объектов.  

@@ -12,9 +12,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 488af069e7798fde650abb1473df256eed2d692f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452381"
 ---
 # <a name="icorprofilercallback9-interface"></a>Интерфейс ICorProfilerCallback9
 [Поддерживается в .NET Framework 4.7.2 и более поздних версиях]  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33470969"
 ---
 # <a name="configuration"></a>Конфигурация
 В этом разделе перечислены все исключения, вызываемые конфигурации Windows Communication Foundation (WCF).  

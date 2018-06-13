@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33548474"
 ---
 # <a name="freezable-objects-overview"></a>Общие сведения об объектах класса Freezable
 Описывается, как эффективно использовать и создавать <xref:System.Windows.Freezable> объекты, которые обеспечивают специальные возможности, которые могут помочь повысить производительность приложения. Объекты freezable примеры кисти, перья, преобразования, геометрии и анимации.  

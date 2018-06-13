@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637922"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>Строки &lt;номер&gt; не может быть проанализирована с помощью текущего параметра FieldWidths
 Указанная строка не может быть проанализирована, так как ее поля имеют ширину, отличную от указанной.  
