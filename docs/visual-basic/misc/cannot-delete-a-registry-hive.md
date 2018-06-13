@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635191"
 ---
 # <a name="cannot-delete-a-registry-hive"></a><span data-ttu-id="edf7e-102">Невозможно удалить куст реестра</span><span class="sxs-lookup"><span data-stu-id="edf7e-102">Cannot delete a registry hive</span></span>
 <span data-ttu-id="edf7e-103">Предпринята попытка удалить куст реестра.</span><span class="sxs-lookup"><span data-stu-id="edf7e-103">An attempt has been made to delete a registry hive.</span></span> <span data-ttu-id="edf7e-104">Кусты — это разделы реестра верхнего уровня, такие как `HKEY_CURRENT_USER` и `HKEY_LOCAL_MACHINE`, и они не могут быть удалены.</span><span class="sxs-lookup"><span data-stu-id="edf7e-104">Hives are top-level registry keys, such as `HKEY_CURRENT_USER` and `HKEY_LOCAL_MACHINE`, and cannot be deleted.</span></span>  

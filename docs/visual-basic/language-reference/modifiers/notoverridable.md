@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33600757"
 ---
 # <a name="notoverridable-visual-basic"></a><span data-ttu-id="632c4-102">NotOverridable (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="632c4-102">NotOverridable (Visual Basic)</span></span>
 <span data-ttu-id="632c4-103">Указывает, что свойство или процедура не может переопределяться в производном классе.</span><span class="sxs-lookup"><span data-stu-id="632c4-103">Specifies that a property or procedure cannot be overridden in a derived class.</span></span>  

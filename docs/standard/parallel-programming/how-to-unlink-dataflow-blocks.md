@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33581554"
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a><span data-ttu-id="fa6ef-102">Практическое руководство. Удаление связей с блоками потоков данных</span><span class="sxs-lookup"><span data-stu-id="fa6ef-102">How to: Unlink Dataflow Blocks</span></span>
 <span data-ttu-id="fa6ef-103">В этом документе описан способ отсоединения целевого блока потока данных от его источника.</span><span class="sxs-lookup"><span data-stu-id="fa6ef-103">This document describes how to unlink a target dataflow block from its source.</span></span>

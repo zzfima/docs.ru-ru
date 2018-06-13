@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585857"
 ---
 # <a name="arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size"></a><span data-ttu-id="82012-102">Массивы, объявленные как члены структуры, не могут быть объявлены с указанием начального размера</span><span class="sxs-lookup"><span data-stu-id="82012-102">Arrays declared as structure members cannot be declared with an initial size</span></span>
 <span data-ttu-id="82012-103">Массив в структуре объявлен с указанием начального размера.</span><span class="sxs-lookup"><span data-stu-id="82012-103">An array in a structure is declared with an initial size.</span></span> <span data-ttu-id="82012-104">Не удается инициализировать любой элемент структуры и объявить размер массива является одной форме инициализации.</span><span class="sxs-lookup"><span data-stu-id="82012-104">You cannot initialize any structure element, and declaring an array size is one form of initialization.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578993"
 ---
 # <a name="dispose-pattern"></a><span data-ttu-id="bef0f-102">Шаблон ликвидации</span><span class="sxs-lookup"><span data-stu-id="bef0f-102">Dispose Pattern</span></span>
 <span data-ttu-id="bef0f-103">Все программы получить один или несколько системных ресурсов, таких как память, дескрипторы системы или подключения к базе данных в процессе их выполнения.</span><span class="sxs-lookup"><span data-stu-id="bef0f-103">All programs acquire one or more system resources, such as memory, system handles, or database connections, during the course of their execution.</span></span> <span data-ttu-id="bef0f-104">Разработчикам нужно соблюдать осторожность при использовании таких системных ресурсов, так как они должны быть освобождены после их получения и использования.</span><span class="sxs-lookup"><span data-stu-id="bef0f-104">Developers have to be careful when using such system resources, because they must be released after they have been acquired and used.</span></span>  

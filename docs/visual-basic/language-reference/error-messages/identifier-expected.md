@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586134"
 ---
 # <a name="identifier-expected"></a><span data-ttu-id="eb515-102">Требуется идентификатор</span><span class="sxs-lookup"><span data-stu-id="eb515-102">Identifier expected</span></span>
 <span data-ttu-id="eb515-103">Программный элемент, который не является распознаваемым именем объявленного элемента происходит в контексте требуется имя элемента.</span><span class="sxs-lookup"><span data-stu-id="eb515-103">A programming element that is not a recognizable declared element name occurs where the context requires an element name.</span></span> <span data-ttu-id="eb515-104">Одной из возможных причин — что атрибут был указан не в начале инструкции.</span><span class="sxs-lookup"><span data-stu-id="eb515-104">One possible cause is that an attribute has been specified somewhere other than at the beginning of the statement.</span></span>  

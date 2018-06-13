@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33636929"
 ---
 # <a name="for-loop-not-initialized-visual-basic"></a><span data-ttu-id="cb795-102">Не инициализирован цикл For (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="cb795-102">For loop not initialized (Visual Basic)</span></span>
 <span data-ttu-id="cb795-103">Был осуществлен переход в середину цикла `For...Next` .</span><span class="sxs-lookup"><span data-stu-id="cb795-103">You jumped into the middle of a `For...Next` loop.</span></span>  

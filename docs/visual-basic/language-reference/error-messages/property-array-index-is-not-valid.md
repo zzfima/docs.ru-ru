@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593143"
 ---
 # <a name="property-array-index-is-not-valid"></a><span data-ttu-id="c73da-102">Недопустимый индекс массива свойства</span><span class="sxs-lookup"><span data-stu-id="c73da-102">Property array index is not valid</span></span>
 <span data-ttu-id="c73da-103">Указанное значение не является допустимым для индекса массива свойства.</span><span class="sxs-lookup"><span data-stu-id="c73da-103">The supplied value is not valid for a property array index.</span></span>  

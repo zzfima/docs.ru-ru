@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595830"
 ---
 # <a name="xml-entity-references-are-not-supported"></a><span data-ttu-id="b3487-102">Ссылки на XML-сущности не поддерживаются</span><span class="sxs-lookup"><span data-stu-id="b3487-102">XML entity references are not supported</span></span>
 <span data-ttu-id="b3487-103">Ссылка на сущность (например, `©`), не определенные в XML 1.0 спецификация включена как значение XML-литерала.</span><span class="sxs-lookup"><span data-stu-id="b3487-103">An entity reference (for example, `©`) that is not defined in the XML 1.0 specification is included as a value for an XML literal.</span></span> <span data-ttu-id="b3487-104">Только `&`, `"`, `<`, `>`, и `'` в XML-литералах поддерживаются ссылки на объект XML.</span><span class="sxs-lookup"><span data-stu-id="b3487-104">Only `&`, `"`, `<`, `>`, and `'` XML entity references are supported in XML literals.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33639315"
 ---
 # <a name="targetfilepath-specifies-an-existing-folder"></a><span data-ttu-id="0bf42-102">TargetFilePath указывает существующую папку</span><span class="sxs-lookup"><span data-stu-id="0bf42-102">TargetFilePath specifies an existing folder</span></span>
 <span data-ttu-id="0bf42-103">Параметр `TargetFilePath` указывает существующий каталог, но должен предоставить имя нового каталога.</span><span class="sxs-lookup"><span data-stu-id="0bf42-103">The parameter `TargetFilePath` specifies an existing directory but must specify the new directory's name.</span></span>  

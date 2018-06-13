@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587437"
 ---
 # <a name="handles-clause-requires-a-withevents-variable-defined-in-the-containing-type-or-one-of-its-base-types"></a><span data-ttu-id="96565-102">Для предложения Handles требуется переменная WithEvents, определенная в содержащем типе или одном из его базовых типов</span><span class="sxs-lookup"><span data-stu-id="96565-102">Handles clause requires a WithEvents variable defined in the containing type or one of its base types</span></span>
 <span data-ttu-id="96565-103">Не была предоставлена `WithEvents` переменных в вашей `Handles` предложения.</span><span class="sxs-lookup"><span data-stu-id="96565-103">You did not supply a `WithEvents` variable in your `Handles` clause.</span></span> <span data-ttu-id="96565-104">`Handles` Вызывает обработки событий, вызванных объектной переменной, объявленной с помощью ключевого слова в конце объявления процедуры `WithEvents` ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="96565-104">The `Handles` keyword at the end of a procedure declaration causes it to handle events raised by an object variable declared using the `WithEvents` keyword.</span></span>  

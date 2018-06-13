@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599779"
 ---
 # <a name="add-failed-duplicate-key-value-supplied"></a><span data-ttu-id="2dc34-103">Сбой при добавлении.</span><span class="sxs-lookup"><span data-stu-id="2dc34-103">Add failed.</span></span> <span data-ttu-id="2dc34-104">Указано повторяющееся значение ключа</span><span class="sxs-lookup"><span data-stu-id="2dc34-104">Duplicate key value supplied</span></span>
 <span data-ttu-id="2dc34-105">Не удалось выполнить операцию `Add` , так как значение ключа совпадает с другим значением ключа.</span><span class="sxs-lookup"><span data-stu-id="2dc34-105">An `Add` operation failed because the key value is the same as another key value.</span></span> <span data-ttu-id="2dc34-106">Значения ключей должны быть уникальными.</span><span class="sxs-lookup"><span data-stu-id="2dc34-106">Key values must be unique.</span></span>  

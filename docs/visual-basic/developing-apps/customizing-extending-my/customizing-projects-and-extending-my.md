@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586842"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a><span data-ttu-id="cdb76-102">Настройка проектов и расширение объекта My в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="cdb76-102">Customizing Projects and Extending My with Visual Basic</span></span>
 <span data-ttu-id="cdb76-103">Шаблоны проектов для предоставления дополнительных `My` объектов.</span><span class="sxs-lookup"><span data-stu-id="cdb76-103">You can customize project templates to provide additional `My` objects.</span></span> <span data-ttu-id="cdb76-104">Это упрощает поиск и использование ваших объектов другими разработчиками.</span><span class="sxs-lookup"><span data-stu-id="cdb76-104">This makes it easy for other developers to find and use your objects.</span></span>  

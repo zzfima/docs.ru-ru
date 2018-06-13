@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597156"
 ---
 # <a name="type-of-39ltvariablenamegt39-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a><span data-ttu-id="04ce9-102">Тип &#39; &lt;variablename&gt; &#39; невозможно вывести, поскольку границы цикла и переменной шага нет расширяющего преобразования к одному типу</span><span class="sxs-lookup"><span data-stu-id="04ce9-102">Type of &#39;&lt;variablename&gt;&#39; cannot be inferred because the loop bounds and the step variable do not widen to the same type</span></span>
 <span data-ttu-id="04ce9-103">Вы написали `For...Next` цикл, в котором компилятор не может вывести тип данных для управляющей переменной цикла, из-за следующих условий:</span><span class="sxs-lookup"><span data-stu-id="04ce9-103">You have written a `For...Next` loop in which the compiler cannot infer a data type for the loop control variable because the following conditions are true:</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577206"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a><span data-ttu-id="e0a38-102">Сопоставление объектной иерархии с XML-данными</span><span class="sxs-lookup"><span data-stu-id="e0a38-102">Mapping the Object Hierarchy to XML Data</span></span>
 <span data-ttu-id="e0a38-103">Когда XML-документ находится в памяти, его концептуальным представлением является дерево.</span><span class="sxs-lookup"><span data-stu-id="e0a38-103">When an XML document is in memory, the conceptual representation is a tree.</span></span> <span data-ttu-id="e0a38-104">В распоряжении программиста имеется объектная иерархия для доступа к узлам этого дерева.</span><span class="sxs-lookup"><span data-stu-id="e0a38-104">For programming, you have an object hierarchy to access the nodes of the tree.</span></span> <span data-ttu-id="e0a38-105">Следующий пример показывает, как XML-содержимое становится узлами.</span><span class="sxs-lookup"><span data-stu-id="e0a38-105">The following example shows you how the XML content becomes nodes.</span></span>  

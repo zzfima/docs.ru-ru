@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583972"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a><span data-ttu-id="35270-102">Безопасность и создание кода "на лету"</span><span class="sxs-lookup"><span data-stu-id="35270-102">Security and On-the-Fly Code Generation</span></span>
 <span data-ttu-id="35270-103">Некоторые библиотеки создают и запускают код, выполняя определенную операцию для вызывающего объекта.</span><span class="sxs-lookup"><span data-stu-id="35270-103">Some libraries operate by generating code and running it to perform some operation for the caller.</span></span> <span data-ttu-id="35270-104">Основная проблема заключается в создании кода от имени кода с более низким уровнем доверия и его выполнении в среде с более высоким доверием.</span><span class="sxs-lookup"><span data-stu-id="35270-104">The basic problem is generating code on behalf of lesser-trust code and running it at a higher trust.</span></span> <span data-ttu-id="35270-105">Проблема усугубляется, если вызывающий объект может влиять на создание кода. Поэтому необходимо убедиться в том, что создается только код, который вы считаете безопасным.</span><span class="sxs-lookup"><span data-stu-id="35270-105">The problem worsens when the caller can influence code generation, so you must ensure that only code you consider safe is generated.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33635163"
 ---
 # <a name="line-ltnumbergt-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a><span data-ttu-id="6e396-102">Строки &lt;номер&gt; не удается прочитать из-за превышения максимального размера строки.</span><span class="sxs-lookup"><span data-stu-id="6e396-102">Line &lt;number&gt; cannot be read because it exceeds the maximum line size.</span></span>
 <span data-ttu-id="6e396-103">Чтение строки невозможно из-за превышения максимального размера строки.</span><span class="sxs-lookup"><span data-stu-id="6e396-103">The line cannot be read because it exceeds the maximum line size.</span></span> <span data-ttu-id="6e396-104">Обычно это означает, что в файле есть открывающие кавычки, но нет закрывающих.</span><span class="sxs-lookup"><span data-stu-id="6e396-104">Usually this means that there is an opening quotation mark in the file, but no closing quotation mark.</span></span>  

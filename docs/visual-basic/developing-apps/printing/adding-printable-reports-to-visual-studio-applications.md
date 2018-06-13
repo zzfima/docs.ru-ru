@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33592058"
 ---
 # <a name="adding-printable-reports-to-visual-studio-applications"></a><span data-ttu-id="21e62-102">Добавление печатаемых отчетов в приложения Visual Studio</span><span class="sxs-lookup"><span data-stu-id="21e62-102">Adding Printable Reports to Visual Studio Applications</span></span>
 <span data-ttu-id="21e62-103">Visual Studio поддерживает широкий набор решений для составления отчетов для добавления сложных данных отчетов в приложения Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="21e62-103">Visual Studio supports a variety of reporting solutions to help you add rich data reporting to your Visual Basic applications.</span></span> <span data-ttu-id="21e62-104">Можно создавать и добавлять отчеты, с помощью элементов управления ReportViewer, Crystal Reports или SQL Server Reporting Services.</span><span class="sxs-lookup"><span data-stu-id="21e62-104">You can create and add reports using ReportViewer controls, Crystal Reports, or SQL Server Reporting Services.</span></span>  

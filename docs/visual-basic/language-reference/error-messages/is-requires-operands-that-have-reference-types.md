@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585584"
 ---
 # <a name="39is39-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-39lttypenamegt39"></a><span data-ttu-id="f7393-102">&#39;—&#39; Требуются операнды, имеющие ссылочные типы, но этот операнд имеет тип значения &#39; &lt;typename&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="f7393-102">&#39;Is&#39; requires operands that have reference types, but this operand has the value type &#39;&lt;typename&gt;&#39;</span></span>
 <span data-ttu-id="f7393-103">`Is` Оператор сравнения определяет, ссылаются ли две объектные переменные с тем же экземпляром.</span><span class="sxs-lookup"><span data-stu-id="f7393-103">The `Is` comparison operator determines whether two object variables refer to the same instance.</span></span> <span data-ttu-id="f7393-104">Это сравнение не определен для типов значений.</span><span class="sxs-lookup"><span data-stu-id="f7393-104">This comparison is not defined for value types.</span></span>  

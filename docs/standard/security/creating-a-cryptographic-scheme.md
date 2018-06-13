@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580761"
 ---
 # <a name="creating-a-cryptographic-scheme"></a><span data-ttu-id="7b8b5-102">Создание криптографической схемы</span><span class="sxs-lookup"><span data-stu-id="7b8b5-102">Creating a Cryptographic Scheme</span></span>
 <span data-ttu-id="7b8b5-103">Криптографические компоненты платформы .NET Framework можно объединить для создания различных схем шифрования и расшифровки данных.</span><span class="sxs-lookup"><span data-stu-id="7b8b5-103">The cryptographic components of the .NET Framework can be combined to create different schemes to encrypt and decrypt data.</span></span>  

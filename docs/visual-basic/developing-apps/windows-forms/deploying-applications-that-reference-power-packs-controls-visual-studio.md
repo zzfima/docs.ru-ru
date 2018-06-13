@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33587509"
 ---
 # <a name="deploying-applications-that-reference-power-packs-controls-visual-studio"></a><span data-ttu-id="591a6-102">Развертывание приложений, ссылающихся на элементы управления пакетов Power Packs (Visual Studio)</span><span class="sxs-lookup"><span data-stu-id="591a6-102">Deploying applications that reference Power Packs controls (Visual Studio)</span></span>
 <span data-ttu-id="591a6-103">Если вы хотите развернуть приложение, которое ссылается на элементы управления пакетов Power Packs (<xref:Microsoft.VisualBasic.PowerPacks.LineShape>, <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>, <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>, или <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>), элементы управления необходимо установить на конечном компьютере.</span><span class="sxs-lookup"><span data-stu-id="591a6-103">If you want to deploy an application that references the Power Packs controls (<xref:Microsoft.VisualBasic.PowerPacks.LineShape>, <xref:Microsoft.VisualBasic.PowerPacks.OvalShape>, <xref:Microsoft.VisualBasic.PowerPacks.RectangleShape>, or <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater>), the controls must be installed on the destination computer.</span></span>  

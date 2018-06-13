@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593536"
 ---
 # <a name="reference-required-to-assembly-39ltassemblynamegt39-containing-the-base-class-39ltclassnamegt39"></a><span data-ttu-id="ac1c8-102">Требуется ссылка на сборку &#39; &lt;assemblyname&gt; &#39; содержит базовый класс &#39; &lt;classname&gt;&#39;</span><span class="sxs-lookup"><span data-stu-id="ac1c8-102">Reference required to assembly &#39;&lt;assemblyname&gt;&#39; containing the base class &#39;&lt;classname&gt;&#39;</span></span>
 <span data-ttu-id="ac1c8-103">Требуется ссылка на сборку "\<имя_сборки >" содержит базовый класс\<имя_класса > ".</span><span class="sxs-lookup"><span data-stu-id="ac1c8-103">Reference required to assembly '\<assemblyname>' containing the base class '\<classname>'.</span></span> <span data-ttu-id="ac1c8-104">Добавьте эту ссылку в проект.</span><span class="sxs-lookup"><span data-stu-id="ac1c8-104">Add one to your project.</span></span>  

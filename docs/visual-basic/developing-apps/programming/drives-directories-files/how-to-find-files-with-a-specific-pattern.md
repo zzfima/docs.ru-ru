@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33588045"
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a><span data-ttu-id="b8c41-102">Практическое руководство. Поиск файлов по конкретному шаблону в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b8c41-102">How to: Find Files with a Specific Pattern in Visual Basic</span></span>
 <span data-ttu-id="b8c41-103">Метод <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> возвращает доступную только для чтения коллекцию строк, представляющих имена путей для файлов.</span><span class="sxs-lookup"><span data-stu-id="b8c41-103">The <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> method returns a read-only collection of strings representing the path names for the files.</span></span> <span data-ttu-id="b8c41-104">Для указания определенного шаблона можно использовать параметр `wildCards` .</span><span class="sxs-lookup"><span data-stu-id="b8c41-104">You can use the `wildCards` parameter to specify a specific pattern.</span></span> <span data-ttu-id="b8c41-105">Если требуется включить подкаталоги в поиск, присвойте параметру `searchType` значение `SearchOption.SearchAllSubDirectories`.</span><span class="sxs-lookup"><span data-stu-id="b8c41-105">If you would like to include subdirectories in the search, set the `searchType` parameter to `SearchOption.SearchAllSubDirectories`.</span></span>  

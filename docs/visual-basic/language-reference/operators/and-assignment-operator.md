@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601885"
 ---
 # <a name="amp-operator-visual-basic"></a><span data-ttu-id="e56ae-102">&amp;= Оператор (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e56ae-102">&amp;= Operator (Visual Basic)</span></span>
 <span data-ttu-id="e56ae-103">Сцепляет `String` выражение `String` переменной или свойства и присваивает результат переменной или свойству.</span><span class="sxs-lookup"><span data-stu-id="e56ae-103">Concatenates a `String` expression to a `String` variable or property and assigns the result to the variable or property.</span></span>  

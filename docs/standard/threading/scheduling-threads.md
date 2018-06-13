@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582812"
 ---
 # <a name="scheduling-threads"></a><span data-ttu-id="80a96-102">Расписание потоков</span><span class="sxs-lookup"><span data-stu-id="80a96-102">Scheduling Threads</span></span>
 <span data-ttu-id="80a96-103">Каждому потоку назначается определенный приоритет.</span><span class="sxs-lookup"><span data-stu-id="80a96-103">Every thread has a thread priority assigned to it.</span></span> <span data-ttu-id="80a96-104">Потокам, созданным в общеязыковой среде выполнения, изначально назначается приоритет **ThreadPriority.Normal**.</span><span class="sxs-lookup"><span data-stu-id="80a96-104">Threads created within the common language runtime are initially assigned the priority of **ThreadPriority.Normal**.</span></span> <span data-ttu-id="80a96-105">Потоки, созданные за пределами среды выполнения, сохраняют приоритет, который они имели до входа в управляемую среду.</span><span class="sxs-lookup"><span data-stu-id="80a96-105">Threads created outside the runtime retain the priority they had before they entered the managed environment.</span></span> <span data-ttu-id="80a96-106">Вы можете получить или задать приоритет для любого потока, используя свойство **Thread.Priority**.</span><span class="sxs-lookup"><span data-stu-id="80a96-106">You can get or set the priority of any thread with the **Thread.Priority** property.</span></span>  

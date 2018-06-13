@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576351"
 ---
 # <a name="how-to-implement-a-provider"></a><span data-ttu-id="14822-102">Практическое руководство. Реализация поставщика</span><span class="sxs-lookup"><span data-stu-id="14822-102">How to: Implement a Provider</span></span>
 <span data-ttu-id="14822-103">Шаблон разработки наблюдателя подразумевает разделение ролей поставщика, который отслеживает данные и отправляет уведомления, и одного или нескольких наблюдателей, которые получают от поставщика уведомления (обратные вызовы).</span><span class="sxs-lookup"><span data-stu-id="14822-103">The observer design pattern requires a division between a provider, which monitors data and sends notifications, and one or more observers, which receive notifications (callbacks) from the provider.</span></span> <span data-ttu-id="14822-104">В этой статье описан процесс создания поставщика.</span><span class="sxs-lookup"><span data-stu-id="14822-104">This topic discusses how to create a provider.</span></span> <span data-ttu-id="14822-105">Создание наблюдателя рассматривается в схожей статье [Практическое руководство. Реализация объекта Observer](../../../docs/standard/events/how-to-implement-an-observer.md).</span><span class="sxs-lookup"><span data-stu-id="14822-105">A related topic, [How to: Implement an Observer](../../../docs/standard/events/how-to-implement-an-observer.md), discusses how to create an observer.</span></span>  

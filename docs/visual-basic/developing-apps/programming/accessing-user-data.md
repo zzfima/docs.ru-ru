@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582848"
 ---
 # <a name="accessing-user-data-visual-basic"></a><span data-ttu-id="a778a-102">Доступ к пользователя (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a778a-102">Accessing User Data (Visual Basic)</span></span>
 <span data-ttu-id="a778a-103">В этом разделе рассматриваются вопросы, связанные с объектом `My.User` и задачами, которые можно выполнять с его помощью.</span><span class="sxs-lookup"><span data-stu-id="a778a-103">This section contains topics dealing with the `My.User` object and tasks that you can accomplish with it.</span></span>  

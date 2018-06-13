@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577050"
 ---
 # <a name="applying-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a><span data-ttu-id="f9b4a-103">Применение упрощенных шаблонов CQRS и DDD в микрослужбах</span><span class="sxs-lookup"><span data-stu-id="f9b4a-103">Applying simplified CQRS and DDD patterns in a microservice</span></span>
 

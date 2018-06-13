@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582126"
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a><span data-ttu-id="f9978-102">Практическое руководство. Управление сериализацией производных классов</span><span class="sxs-lookup"><span data-stu-id="f9978-102">How to: Control Serialization of Derived Classes</span></span>
 <span data-ttu-id="f9978-103">Использование атрибута **XmlElementAttribute** для изменения имени элемента XML — не единственный способ изменения сериализации объекта.</span><span class="sxs-lookup"><span data-stu-id="f9978-103">Using the **XmlElementAttribute** attribute to change the name of an XML element is not the only way to customize object serialization.</span></span> <span data-ttu-id="f9978-104">Поток XML также можно настроить путем наследования из существующего класса и передачи в экземпляр <xref:System.Xml.Serialization.XmlSerializer> инструкций по сериализации нового класса.</span><span class="sxs-lookup"><span data-stu-id="f9978-104">You can also customize the XML stream by deriving from an existing class and instructing the <xref:System.Xml.Serialization.XmlSerializer> instance how to serialize the new class.</span></span>  

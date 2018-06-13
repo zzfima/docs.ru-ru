@@ -22,6 +22,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579591"
 ---
 # <a name="common-type-system"></a><span data-ttu-id="6b704-102">Система общих типов CTS</span><span class="sxs-lookup"><span data-stu-id="6b704-102">Common Type System</span></span>
 <span data-ttu-id="6b704-103">Система общих типов CTS определяет способ объявления, использования и управления типами в среде CLR, а также является важной составной частью поддержки межъязыковой интеграции в среде выполнения.</span><span class="sxs-lookup"><span data-stu-id="6b704-103">The common type system defines how types are declared, used, and managed in the common language runtime, and is also an important part of the runtime's support for cross-language integration.</span></span> <span data-ttu-id="6b704-104">Система общих типов выполняет следующие функции.</span><span class="sxs-lookup"><span data-stu-id="6b704-104">The common type system performs the following functions:</span></span>  

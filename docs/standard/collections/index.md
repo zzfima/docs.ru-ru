@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33577232"
 ---
 # <a name="collections-and-data-structures"></a><span data-ttu-id="2501b-102">Коллекции и структуры данных</span><span class="sxs-lookup"><span data-stu-id="2501b-102">Collections and Data Structures</span></span>
 <span data-ttu-id="2501b-103">Связанные данные могут обрабатываться более эффективно, если они объединены в коллекцию.</span><span class="sxs-lookup"><span data-stu-id="2501b-103">Similar data can often be handled more efficiently when stored and manipulated as a collection.</span></span> <span data-ttu-id="2501b-104">Вы можете использовать класс <xref:System.Array?displayProperty=nameWithType> или классы в пространствах имен <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent> и System.Collections.Immutable, чтобы добавлять, удалять и изменять отдельные элементы или диапазон элементов в коллекции.</span><span class="sxs-lookup"><span data-stu-id="2501b-104">You can use the <xref:System.Array?displayProperty=nameWithType> class or the classes in the <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable namespaces to add, remove, and modify either individual elements or a range of elements in a collection.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604475"
 ---
 # <a name="let-clause-visual-basic"></a><span data-ttu-id="9b122-102">Предложение Let (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9b122-102">Let Clause (Visual Basic)</span></span>
 <span data-ttu-id="9b122-103">Вычисляет значение и присваивает его новой переменной в запросе.</span><span class="sxs-lookup"><span data-stu-id="9b122-103">Computes a value and assigns it to a new variable within the query.</span></span>  

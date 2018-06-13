@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586729"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a><span data-ttu-id="c702a-102">Практическое руководство. Отображение доступных последовательных портов в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c702a-102">How to: Show Available Serial Ports in Visual Basic</span></span>
 <span data-ttu-id="c702a-103">В этом разделе описывается использование объекта `My.Computer.Ports` для отображения доступных последовательных портов компьютера в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="c702a-103">This topic describes how to use `My.Computer.Ports` to show the available serial ports of the computer in Visual Basic.</span></span>  

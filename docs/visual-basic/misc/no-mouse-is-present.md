@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33637871"
 ---
 # <a name="no-mouse-is-present"></a><span data-ttu-id="29322-102">Не обнаружена мышь.</span><span class="sxs-lookup"><span data-stu-id="29322-102">No mouse is present</span></span>
 <span data-ttu-id="29322-103">Было вызвано одно из свойств объекта `My.Computer.Mouse` , но на компьютере отсутствует установленная мышь или порт мыши.</span><span class="sxs-lookup"><span data-stu-id="29322-103">One of the properties of the `My.Computer.Mouse` object was called, but the computer has no mouse or mouse port installed.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585571"
 ---
 # <a name="bad-file-name-or-number"></a><span data-ttu-id="b42d5-102">Недопустимое имя файла или номер</span><span class="sxs-lookup"><span data-stu-id="b42d5-102">Bad file name or number</span></span>
 <span data-ttu-id="b42d5-103">Произошла ошибка при попытке доступа к указанному файлу.</span><span class="sxs-lookup"><span data-stu-id="b42d5-103">An error occurred while trying to access the specified file.</span></span> <span data-ttu-id="b42d5-104">Среди возможных причин этой ошибки являются:</span><span class="sxs-lookup"><span data-stu-id="b42d5-104">Among the possible causes for this error are:</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586468"
 ---
 # <a name="events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type"></a><span data-ttu-id="66d01-102">События не могут быть объявлены с делегирующим типом, у которого есть тип возвращаемого значения</span><span class="sxs-lookup"><span data-stu-id="66d01-102">Events cannot be declared with a delegate type that has a return type</span></span>
 <span data-ttu-id="66d01-103">Для процедуры функции указан делегат.</span><span class="sxs-lookup"><span data-stu-id="66d01-103">A delegate was specified for a function procedure.</span></span>  

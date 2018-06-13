@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33585464"
 ---
 # <a name="39dir39-function-must-first-be-called-with-a-39pathname39-argument"></a><span data-ttu-id="2b909-102">&#39;Dir&#39; функция должна первый раз вызываться с &#39;PathName&#39; аргумент</span><span class="sxs-lookup"><span data-stu-id="2b909-102">&#39;Dir&#39; function must first be called with a &#39;PathName&#39; argument</span></span>
 <span data-ttu-id="2b909-103">Исходный вызов `Dir` не включает функцию `PathName` аргумент.</span><span class="sxs-lookup"><span data-stu-id="2b909-103">An initial call to the `Dir` function does not include the `PathName` argument.</span></span> <span data-ttu-id="2b909-104">Первый вызов `Dir` должен включать `PathName`, но последующие вызовы `Dir` необязательно должны включать параметры для извлечения следующего элемента.</span><span class="sxs-lookup"><span data-stu-id="2b909-104">The first call to `Dir` must include a `PathName`, but subsequent calls to `Dir` do not need to include parameters to retrieve the next item.</span></span>  

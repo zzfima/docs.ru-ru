@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33586364"
 ---
 # <a name="39ltkeywordgt39-is-valid-only-within-an-instance-method"></a><span data-ttu-id="bb84d-102">&#39;&lt;Ключевое слово&gt; &#39; допустимо только в методах экземпляров</span><span class="sxs-lookup"><span data-stu-id="bb84d-102">&#39;&lt;keyword&gt;&#39; is valid only within an instance method</span></span>
 <span data-ttu-id="bb84d-103">`Me`, `MyClass`, И `MyBase` ключевые слова ссылаются на конкретные экземпляры класса.</span><span class="sxs-lookup"><span data-stu-id="bb84d-103">The `Me`, `MyClass`, and `MyBase` keywords refer to specific class instances.</span></span> <span data-ttu-id="bb84d-104">Их нельзя использовать внутри совместно используемого `Function` или `Sub` процедуры.</span><span class="sxs-lookup"><span data-stu-id="bb84d-104">You cannot use them inside a shared `Function` or `Sub` procedure.</span></span>  

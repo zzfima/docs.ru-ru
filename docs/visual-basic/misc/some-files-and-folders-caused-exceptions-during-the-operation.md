@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638686"
 ---
 # <a name="some-files-and-folders-caused-exceptions-during-the-operation"></a><span data-ttu-id="f58df-102">Некоторые файлы и папки вызвали исключения во время операции</span><span class="sxs-lookup"><span data-stu-id="f58df-102">Some files and folders caused exceptions during the operation</span></span>
 <span data-ttu-id="f58df-103">Каталоги и файлы могут вызывать исключения при попытке выполнить операцию, когда пользователь не имеет необходимых разрешений.</span><span class="sxs-lookup"><span data-stu-id="f58df-103">Directories and files may cause exceptions when an operation is attempted but the user lacks necessary permissions.</span></span>  

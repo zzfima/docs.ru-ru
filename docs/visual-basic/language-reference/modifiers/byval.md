@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33602987"
 ---
 # <a name="byval-visual-basic"></a><span data-ttu-id="3b5c3-102">ByVal (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3b5c3-102">ByVal (Visual Basic)</span></span>
 <span data-ttu-id="3b5c3-103">Указывает, что аргумент передается таким образом, вызванная процедура или свойство не может изменить значение переменной, представляющей аргумент в вызывающем коде.</span><span class="sxs-lookup"><span data-stu-id="3b5c3-103">Specifies that an argument is passed in such a way that the called procedure or property cannot change the value of a variable underlying the argument in the calling code.</span></span>  

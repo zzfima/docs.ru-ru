@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33603994"
 ---
 # <a name="nothing-visual-basic"></a><span data-ttu-id="3246a-102">Nothing (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3246a-102">Nothing (Visual Basic)</span></span>
 <span data-ttu-id="3246a-103">Представляет значение по умолчанию для любого типа данных.</span><span class="sxs-lookup"><span data-stu-id="3246a-103">Represents the default value of any data type.</span></span> <span data-ttu-id="3246a-104">Для ссылочных типов значение по умолчанию — `null` ссылки.</span><span class="sxs-lookup"><span data-stu-id="3246a-104">For reference types, the default value is the `null` reference.</span></span> <span data-ttu-id="3246a-105">Для типов значений значение по умолчанию зависит от того, является ли тип значения допускает значения NULL.</span><span class="sxs-lookup"><span data-stu-id="3246a-105">For value types, the default value depends on whether the value type is nullable.</span></span>  

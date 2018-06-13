@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604761"
 ---
 # <a name="group-join-clause-visual-basic"></a><span data-ttu-id="c0dd7-102">Предложение Group Join (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c0dd7-102">Group Join Clause (Visual Basic)</span></span>
 <span data-ttu-id="c0dd7-103">Объединяет две коллекции в одну иерархическую коллекцию.</span><span class="sxs-lookup"><span data-stu-id="c0dd7-103">Combines two collections into a single hierarchical collection.</span></span> <span data-ttu-id="c0dd7-104">Операция соединения основана на сопоставлении ключей.</span><span class="sxs-lookup"><span data-stu-id="c0dd7-104">The join operation is based on matching keys.</span></span>  

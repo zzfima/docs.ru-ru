@@ -23,6 +23,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33578252"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a><span data-ttu-id="5c10a-102">Взаимное преобразование структур DateTime и DateTimeOffset</span><span class="sxs-lookup"><span data-stu-id="5c10a-102">Converting between DateTime and DateTimeOffset</span></span>
 

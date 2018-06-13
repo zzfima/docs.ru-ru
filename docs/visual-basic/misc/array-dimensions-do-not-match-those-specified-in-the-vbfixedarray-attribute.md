@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599295"
 ---
 # <a name="array-dimensions-do-not-match-those-specified-in-the-39vbfixedarray39-attribute"></a><span data-ttu-id="78529-102">Размерности массивов не соответствуют алгоритмам, заданным в &#39;VBFixedArray&#39; атрибута</span><span class="sxs-lookup"><span data-stu-id="78529-102">Array dimensions do not match those specified in the &#39;VBFixedArray&#39; attribute</span></span>
 <span data-ttu-id="78529-103">Размерность массива не соответствует размерности, указанной в атрибуте `VBFixedArray` .</span><span class="sxs-lookup"><span data-stu-id="78529-103">Your array's dimensions do not match the dimensions you have specified in the `VBFixedArray` attribute.</span></span>  

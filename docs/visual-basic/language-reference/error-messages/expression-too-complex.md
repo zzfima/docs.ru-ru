@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33583423"
 ---
 # <a name="expression-too-complex"></a><span data-ttu-id="19fc5-102">Слишком сложное выражение</span><span class="sxs-lookup"><span data-stu-id="19fc5-102">Expression too complex</span></span>
 <span data-ttu-id="19fc5-103">Выражение с плавающей запятой содержит слишком много вложенных подвыражений.</span><span class="sxs-lookup"><span data-stu-id="19fc5-103">A floating-point expression contains too many nested subexpressions.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579669"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a><span data-ttu-id="0906f-102">Кроссплатформенная разработка с переносной библиотекой классов</span><span class="sxs-lookup"><span data-stu-id="0906f-102">Cross-Platform Development with the Portable Class Library</span></span>
 <span data-ttu-id="0906f-103">Тип проекта "Переносимая библиотека классов .NET Framework" в Visual Studio позволяет быстро и легко создавать межплатформенные приложения и библиотеки для платформ Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="0906f-103">The .NET Framework Portable Class Library project type in Visual Studio helps you build cross-platform apps and libraries for Microsoft platforms quickly and easily.</span></span>  

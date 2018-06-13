@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33593897"
 ---
 # <a name="path-not-found"></a><span data-ttu-id="d0d1b-102">Путь не найден</span><span class="sxs-lookup"><span data-stu-id="d0d1b-102">Path not found</span></span>
 <span data-ttu-id="d0d1b-103">Во время операции доступа к файлам или доступа к диску операционной системы не удалось найти указанный путь.</span><span class="sxs-lookup"><span data-stu-id="d0d1b-103">During a file-access or disk-access operation, the operating system was unable to find the specified path.</span></span> <span data-ttu-id="d0d1b-104">Путь к файлу содержит спецификацию диска, а также каталоги и подкаталоги, которые нужно пройти, чтобы найти файл.</span><span class="sxs-lookup"><span data-stu-id="d0d1b-104">The path to a file includes the drive specification plus the directories and subdirectories that must be traversed to locate the file.</span></span> <span data-ttu-id="d0d1b-105">Путь может быть как относительным, так и абсолютным.</span><span class="sxs-lookup"><span data-stu-id="d0d1b-105">A path can be relative or absolute.</span></span>  

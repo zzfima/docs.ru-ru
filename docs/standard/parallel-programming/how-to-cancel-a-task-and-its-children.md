@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33580230"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a><span data-ttu-id="e96a5-102">Практическое руководство. Отмена задачи и ее дочерних элементов</span><span class="sxs-lookup"><span data-stu-id="e96a5-102">How to: Cancel a Task and Its Children</span></span>
 <span data-ttu-id="e96a5-103">В следующих примерах показано выполнение таких задач:</span><span class="sxs-lookup"><span data-stu-id="e96a5-103">These examples show how to perform the following tasks:</span></span>  
