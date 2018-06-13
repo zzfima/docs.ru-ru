@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33352881"
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
 Содержит коллекцию элементов конфигурации, которые задают пользователя учетные записи для процессов, на которых размещаются службы Windows Communication Foundation (WCF) и имеют доступ к совместно используемой службе.  

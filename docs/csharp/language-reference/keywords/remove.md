@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33269123"
 ---
 # <a name="remove-c-reference"></a>remove (Справочник по C#)
 Контекстное ключевое слово `remove` определяет метод доступа настраиваемого события, который вызывается, когда клиентский код отменяет подписку на [событие](../../../csharp/language-reference/keywords/event.md). Если указан настраиваемый метод доступа `remove`, также необходимо указать метод доступа [add](../../../csharp/language-reference/keywords/add.md).  

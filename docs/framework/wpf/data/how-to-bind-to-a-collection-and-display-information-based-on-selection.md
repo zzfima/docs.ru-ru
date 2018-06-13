@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557414"
 ---
 # <a name="how-to-bind-to-a-collection-and-display-information-based-on-selection"></a>Практическое руководство. Выполнение привязки к коллекции и вывод сведений в зависимости от выделенного элемента
 В простом сценарии подробный имеют привязкой к данным <xref:System.Windows.Controls.ItemsControl> например <xref:System.Windows.Controls.ListBox>. На основе выбора пользователя, можно отобразить дополнительные сведения о выбранном элементе. В этом примере показано, как реализовать этот сценарий.  

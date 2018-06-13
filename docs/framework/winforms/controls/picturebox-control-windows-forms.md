@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535214"
 ---
 # <a name="picturebox-control-windows-forms"></a>Элемент управления PictureBox (Windows Forms)
 Windows Forms `PictureBox` элемент управления используется для отображения графических объектов в формат растрового изображения, GIF, JPEG, метафайла или значок.  

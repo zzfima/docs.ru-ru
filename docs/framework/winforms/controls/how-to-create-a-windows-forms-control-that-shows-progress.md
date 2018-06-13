@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33531434"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms
 В следующем примере кода показан пользовательский элемент управления `FlashTrackBar`, который позволяет показывать пользователю уровень или ход выполнения приложения. Ход выполнения отображается с помощью градиента.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526492"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Практическое руководство. Создание объектов Graphics для рисования
 Перед тем как выводить линий и фигур, отображения текста или отображения и управлять ими с [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], необходимо создать <xref:System.Drawing.Graphics> объекта. <xref:System.Drawing.Graphics> Представляет [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] поверхности для рисования и является объектом, который используется для создания графических изображений.  

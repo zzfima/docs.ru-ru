@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534791"
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel"></a>Практическое руководство. Установка фона панели Windows Forms
 Windows Forms <xref:System.Windows.Forms.Panel> элемент управления может отображать цвет фона и фоновое изображение. <xref:System.Windows.Forms.Control.BackColor%2A> Свойство задает цвет фона для вложенные элементы управления, такие как метки и переключатели. Если <xref:System.Windows.Forms.Control.BackgroundImage%2A> свойство не задано, <xref:System.Windows.Forms.Control.BackColor%2A> выбора заполнит всей панели. Если <xref:System.Windows.Forms.Control.BackgroundImage%2A> имеет значение, будет отображаться изображение за вложенные элементы управления.  

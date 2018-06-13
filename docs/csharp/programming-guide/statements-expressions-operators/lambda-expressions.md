@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340649"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Лямбда-выражения (Руководство по программированию в C#)
 Лямбда-выражение — это [анонимная функция](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) , с помощью которой можно создавать типы [делегатов](../../../csharp/programming-guide/delegates/using-delegates.md) или [деревьев выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) . С помощью лямбда-выражений можно писать локальные функции, которые можно передавать в качестве аргументов или возвращать в качестве значений из вызовов функций. Лямбда-выражения особенно полезны при написании выражений запросов LINQ.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526081"
 ---
 # <a name="why-transformation-order-is-significant"></a>Значение порядка преобразований
 Один <xref:System.Drawing.Drawing2D.Matrix> объект может хранить одно преобразование или последовательность преобразований. Называется составное преобразование. Матрица составного преобразования вычисляется путем умножения матриц отдельных преобразований.  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536489"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Практическое руководство. Определение значков для элемента управления TreeView в Windows Forms
 Windows Forms <xref:System.Windows.Forms.TreeView> элемент управления может отображать значки рядом с каждым узлом. Значки располагаются непосредственно слева от текста узла. Чтобы отобразить эти значки, необходимо связать дерево с <xref:System.Windows.Forms.ImageList> элемента управления. Дополнительные сведения о списках изображений см. в разделе [компонент ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) и [как: Добавление и удаление изображений с помощью компонента ImageList в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  

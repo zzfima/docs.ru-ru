@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33540307"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>Практическое руководство. Применение фонового потока для поиска файлов
 <xref:System.ComponentModel.BackgroundWorker> Компонент заменяет и расширяет его функциональные возможности <xref:System.Threading> пространства имен, однако <xref:System.Threading> пространство имен сохраняется для обеспечения обратной совместимости и использования в будущем при выборе. Дополнительные сведения см. в разделе [Общие сведения о компоненте BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md).  

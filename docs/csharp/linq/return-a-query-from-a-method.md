@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33274954"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Практическое руководство. Возврат запроса из метода (Руководство по программированию на C#)
 В этом примере показан способ возврата запроса из метода в качестве возвращаемого значения и параметра `out`.  

@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532776"
 ---
 # <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Работа со столбцами изображений в элементе управления DataGridView в Windows Forms
 В примере кода ниже показано, как использовать столбцы изображений <xref:System.Windows.Forms.DataGridView> в интерактивном пользовательском интерфейсе. В примере также демонстрируются возможности изменения размера и расположения изображения с помощью <xref:System.Windows.Forms.DataGridViewImageColumn>.  

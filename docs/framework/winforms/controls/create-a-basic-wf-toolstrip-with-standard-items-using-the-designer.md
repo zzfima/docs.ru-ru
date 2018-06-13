@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33526644"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Практическое руководство. Создание в форме Windows Forms базового элемента управления ToolStrip со стандартными элементами с помощью конструктора
 Следующая процедура демонстрирует создание <xref:System.Windows.Forms.ToolStrip> и добавление семи <xref:System.Windows.Forms.ToolStripButton> элементов управления, которые представляют типичные задачи.  

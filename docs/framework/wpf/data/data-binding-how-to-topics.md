@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557697"
 ---
 # <a name="data-binding-how-to-topics"></a>Практические руководства по привязке данных
 В подразделах этого раздела описывается использование привязки данных для привязки элементов к данным из различных источников данных в виде объекта (CLR) среды CLR и XML.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339323"
 ---
 # <a name="getting-started-with-linq-in-c"></a>Приступая к работе с LINQ в C#
 Этот раздел содержит основные сведения, которые необходимы для понимания остальной документации по LINQ и примеров.  

@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527288"
 ---
 # <a name="matrix-representation-of-transformations"></a>Матричное представление преобразований
 Матрица m n × — это набор чисел, распределенных по строкам m и n столбцам. На следующем рисунке несколько матрицы.  

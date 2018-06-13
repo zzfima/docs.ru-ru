@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532611"
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Практическое руководство. Отображение ссылок веб-типа с помощью элемента управления RichTextBox в Windows Forms
 Windows Forms <xref:System.Windows.Forms.RichTextBox> элемент управления может отображать веб-ссылки цветом и подчеркиванием. Можно написать код, который открывает окно браузера веб-сайт, указанный в тексте ссылки, при щелчке ссылки.  

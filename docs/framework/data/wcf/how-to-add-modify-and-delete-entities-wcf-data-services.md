@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356519"
 ---
 # <a name="how-to-add-modify-and-delete-entities-wcf-data-services"></a>Практическое руководство. Добавление, изменение и удаление сущностей (службы данных WCF)
 С [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] клиентские библиотеки можно создать, обновить и удаление данных сущности в службе данных путем выполнения эквивалентных действий над объектами в <xref:System.Data.Services.Client.DataServiceContext>. Дополнительные сведения см. в разделе [обновление службы данных](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md).  

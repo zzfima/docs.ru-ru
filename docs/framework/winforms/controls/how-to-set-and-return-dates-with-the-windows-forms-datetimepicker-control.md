@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535673"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Практическое руководство. Отображение и ввод дат с помощью элемента управления DateTimePicker в Windows Forms
 Текущая выбранная дата или время в элементе управления Windows Forms <xref:System.Windows.Forms.DateTimePicker> определяется свойством <xref:System.Windows.Forms.DateTimePicker.Value%2A>. Перед отображением элемента управления можно задать свойство <xref:System.Windows.Forms.DateTimePicker.Value%2A> (например, во время разработки или в виде событий <xref:System.Windows.Forms.Form.Load>) для определения даты, которая изначально будет выбрана в элементе управления. По умолчанию в свойстве <xref:System.Windows.Forms.DateTimePicker.Value%2A> элемента управления установлена текущая дата. Если свойство <xref:System.Windows.Forms.DateTimePicker.Value%2A> элемента управления изменяется в коде, элемент управления автоматически обновляется, отображая новое значение в форме.  

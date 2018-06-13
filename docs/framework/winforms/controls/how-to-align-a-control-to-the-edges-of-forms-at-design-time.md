@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528724"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения
 Можно сделать элемент управления Выровнять по границе формы, задав <xref:System.Windows.Forms.Control.Dock%2A>. Это свойство определяет, в каком месте формы будет размещаться элемент управления. Свойство <xref:System.Windows.Forms.Control.Dock%2A> может принимать указанные ниже значения.  

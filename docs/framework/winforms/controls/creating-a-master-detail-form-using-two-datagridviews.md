@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529445"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Пример. Создание главного и подчиненного представлений данных с использованием двух элементов управления DataGridView в Windows Forms
 Одним из наиболее распространенных сценариев использования <xref:System.Windows.Forms.DataGridView> управления *иерархического* формы, в котором отображается отношение "родители потомки" между двумя таблицами базы данных. Выбор строк в главной таблице приводит таблицы сведений, чтобы обновить соответствующие дочерние данные.  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358769"
 ---
 # <a name="query-expression-examples-linq-to-dataset"></a>Примеры выражений запроса (LINQ to DataSet)
 В этом разделе приведены примеры программирования [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] с использованием синтаксиса выражений запросов, в которых используются стандартные операторы запросов. <xref:System.Data.DataSet> Используется в этих примерах заполняется с помощью `FillDataSet` метод, который указывается в [загрузка данных в наборе данных](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md). Дополнительные сведения см. в разделе [Общие сведения о стандартных операторах запроса](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  

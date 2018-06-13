@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33353896"
 ---
 # <a name="how-to-project-query-results-wcf-data-services"></a>Практическое руководство. Проекция результатов запроса (WCF Data Services)
 Проекция представляет собой механизм уменьшения объема возвращаемых запросом данных путем указания того, что в ответе возвращаются только определенные свойства сущности. Можно выполнить проекции результатов [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] запросов или с помощью `$select` параметра запроса или с помощью [выберите](~/docs/csharp/language-reference/keywords/select-clause.md) предложение ([выберите](~/docs/visual-basic/language-reference/queries/select-clause.md) в Visual Basic) в запросе LINQ. Дополнительные сведения см. в разделе [запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
