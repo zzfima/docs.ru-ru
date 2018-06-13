@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557073"
 ---
 # <a name="how-to-animate-a-3-d-rotation-using-key-frames-quaternionanimationusingkeyframes"></a>Как анимировать 3-D поворот с помощью ключевых кадров (QuaternionAnimationUsingKeyFrames)
 В следующем примере <xref:System.Windows.Media.Animation.QuaternionAnimationUsingKeyFrames> используются, чтобы сделать трехмерный поворот объекта. Эта анимация использует следующие ключевые кадры:  

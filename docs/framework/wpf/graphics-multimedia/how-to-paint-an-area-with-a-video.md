@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560781"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>Как раскрасить область с видео
 В этом примере показано, как Закраска области с носителя. Один способ заполнения области с мультимедиа является использование <xref:System.Windows.Controls.MediaElement> вместе с <xref:System.Windows.Media.VisualBrush>. Используйте <xref:System.Windows.Controls.MediaElement> для загрузки и воспроизведения файлов мультимедиа и затем использовать его для задания <xref:System.Windows.Media.VisualBrush.Visual%2A> свойство <xref:System.Windows.Media.VisualBrush>. Затем можно использовать <xref:System.Windows.Media.VisualBrush> для закрашивания области с загруженным мультимедиа.  

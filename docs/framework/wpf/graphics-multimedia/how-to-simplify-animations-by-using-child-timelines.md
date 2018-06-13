@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561677"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Практическое руководство. Упрощение анимации с помощью дочерних шкал времени
 В этом примере показано, как упростить анимации с помощью дочерних <xref:System.Windows.Media.Animation.ParallelTimeline> объектов. Объект <xref:System.Windows.Media.Animation.Storyboard> — это тип <xref:System.Windows.Media.Animation.Timeline> , предоставляющий сведения о содержащихся в нем шкалах. Используйте <xref:System.Windows.Media.Animation.Storyboard> для предоставления данных, включая объект и свойство сведения о шкале времени.  

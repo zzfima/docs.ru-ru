@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398109"
 ---
 # <a name="method-etw-events"></a>События методов (трассировка событий Windows)
 <a name="top"></a> Эти события собирают сведения, связанные с методами. Полезные данные этих событий необходимы для разрешения символов. Кроме того, эти события содержат полезные сведения, например сколько раз вызывался метод.  

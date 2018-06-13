@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556007"
 ---
 # <a name="scrollbar"></a>ScrollBar
 Объект <xref:System.Windows.Controls.Primitives.ScrollBar> позволяет просматривать содержимое, выходящее за пределы текущей области видимости, перемещая <xref:System.Windows.Controls.Primitives.Thumb> для отображения содержимого.  

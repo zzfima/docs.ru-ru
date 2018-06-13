@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33397849"
 ---
 # <a name="install-the-net-framework-on-windows-vista-and-windows-server-2008"></a>Установка .NET Framework в Windows Vista и Windows Server 2008
 
