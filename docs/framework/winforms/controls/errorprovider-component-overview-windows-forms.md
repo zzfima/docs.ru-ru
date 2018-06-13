@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528890"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>Общие сведения о компоненте ErrorProvider (Windows Forms)
 Windows Forms [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md) компонент используется для проверки пользовательского ввода в форме или элементе управления. Обычно используется в сочетании с проверка пользовательского ввода в форме или отображение ошибок в наборе данных. Использование поставщика ошибок — лучшую альтернативу по сравнению с сообщением об ошибке в окне сообщения, так как после закрытия этого окна сообщения сообщение об ошибке больше не отображается. <xref:System.Windows.Forms.ErrorProvider> Компонент отображает значок ошибки (![значок ErrorProvider](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) рядом с соответствующим элементом управления, например текстовое поле; при наведении указателя мыши на значок ошибки появляется подсказка, показывающая строка сообщения об ошибке.  

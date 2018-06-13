@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33547489"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Практическое руководство. Событие ContextMenuOpening
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> Событие может быть обработано в приложении либо для корректировки существующего контекстного меню перед для отображения или подавления меню, которое будет отображаться в противном случае, задав <xref:System.Windows.RoutedEventArgs.Handled%2A> свойства `true` в данных события. Обычно причиной задания для <xref:System.Windows.RoutedEventArgs.Handled%2A> для `true` событий данных является замена меню полностью новый <xref:System.Windows.Controls.ContextMenu> объекта, который иногда требует отмены операции и запуска нового открытия. При записи дескрипторов для <xref:System.Windows.FrameworkElement.ContextMenuOpening> события, которые необходимо учитывать проблемы синхронизации между <xref:System.Windows.Controls.ContextMenu> управления и службу, которая отвечает за открытие и позиционирование контекстных меню для элементов управления в целом. В этом разделе рассмотрены некоторые способы кода для различных скриптов открытия контекстного меню и демонстрирует ситуацию, где ошибки синхронизации вступает в действие.  

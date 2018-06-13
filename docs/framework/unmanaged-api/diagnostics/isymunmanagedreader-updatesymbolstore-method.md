@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81f9db872e9904d2297221e266be710837d0fb66
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427386"
 ---
 # <a name="isymunmanagedreaderupdatesymbolstore-method"></a>Метод ISymUnmanagedReader::UpdateSymbolStore
 Обновляет существующее хранилище символов разностным хранилищем символов. Этот метод используется в сценариях edit and continue для обновления хранилища символов в соответствии с изменениями в исходном переносимом исполняемом (PE) файле.  

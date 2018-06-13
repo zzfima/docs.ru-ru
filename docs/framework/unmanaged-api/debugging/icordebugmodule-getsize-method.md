@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d741bda5426dee1292df0e6fd9107cc2f44c8a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33413323"
 ---
 # <a name="icordebugmodulegetsize-method"></a>Метод ICorDebugModule::GetSize
 Возвращает размер в байтах модуля.  

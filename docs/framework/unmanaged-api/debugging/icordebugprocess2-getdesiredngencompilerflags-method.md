@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 77ffb53e3a2b3802d3fcc1319397c8f51c5b127c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416115"
 ---
 # <a name="icordebugprocess2getdesiredngencompilerflags-method"></a>Метод ICorDebugProcess2::GetDesiredNGENCompilerFlags
 Возвращает текущий компилятор общеязыковой среды выполнения (CLR) использует для выбора корректного предварительно скомпилированного параметры флага (т. е собственного) образа для загрузки этого процесса.  

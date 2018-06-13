@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33528717"
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Различия элементов управления DataGridView и DataGrid в Windows Forms
 <xref:System.Windows.Forms.DataGridView> Управления имеет элемент управления, который заменяет <xref:System.Windows.Forms.DataGrid> элемента управления. <xref:System.Windows.Forms.DataGridView> Управления предоставляет множество основных и дополнительных компонентов, отсутствующих в <xref:System.Windows.Forms.DataGrid> элемента управления. Кроме того, архитектура <xref:System.Windows.Forms.DataGridView> управления позволяет легко можно расширять и настраивать чем <xref:System.Windows.Forms.DataGrid> элемента управления.  

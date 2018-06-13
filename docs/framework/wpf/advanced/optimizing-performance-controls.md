@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549267"
 ---
 # <a name="optimizing-performance-controls"></a>Оптимизация производительности: элементы управления
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] включает множество общих компонентов пользовательского интерфейса (UI), которые используются в большинстве приложений Windows. В этом разделе описываются методы повышения производительности пользовательского интерфейса.  

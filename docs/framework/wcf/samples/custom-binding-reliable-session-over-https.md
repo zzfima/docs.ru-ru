@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502951"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Надежный сеанс по протоколу HTTPS с использованием пользовательской привязки
 В этом образце показано использование безопасности транспорта SSL с надежными сеансами. Надежные сеансы реализуют протокол WS-ReliableMessaging. Чтобы создать безопасный надежный сеанс, можно объединить протокол WS-Security с надежными сеансами. Но в некоторых случаях может потребоваться использовать безопасность транспорта HTTP с протоколом SSL.  

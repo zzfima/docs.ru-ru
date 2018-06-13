@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498027"
 ---
 # <a name="systemwebrouting-integration"></a>Интеграция с System.Web.Routing
 При размещении службы Windows Communication Foundation (WCF) в Internet Information Service (IIS) можно разместить SVC-файла в виртуальном каталоге. Этот SVC-файл указывает фабрику узла службы, которую необходимо использовать, а также класс, реализующий эту службу. При выполнении запросов к службе указывается SVC-файла в URI, например: http://contoso.com/EmployeeServce.svc. Для разработчиков служб REST такой тип URI не является оптимальным. URI для служб REST указывают определенный ресурс и обычно не имеют модулей. <xref:System.Web.Routing> Средство интеграции позволяет разместить службу WCF REST, соответствующую URI-адресам без расширения. Дополнительные сведения о маршрутизации см. в разделе [маршрутизации ASP.NET](http://go.microsoft.com/fwlink/?LinkId=184660) и [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) образца.  
