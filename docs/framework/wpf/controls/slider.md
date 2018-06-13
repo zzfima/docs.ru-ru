@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554412"
 ---
 # <a name="slider"></a><span data-ttu-id="9b944-102">Slider</span><span class="sxs-lookup"><span data-stu-id="9b944-102">Slider</span></span>
 <span data-ttu-id="9b944-103"><xref:System.Windows.Controls.Slider> Позволяет выбрать из диапазона значений путем перемещения <xref:System.Windows.Controls.Primitives.Thumb> вдоль <xref:System.Windows.Controls.Primitives.Track>.</span><span class="sxs-lookup"><span data-stu-id="9b944-103">The <xref:System.Windows.Controls.Slider> allows you select from a range of values by moving a <xref:System.Windows.Controls.Primitives.Thumb> along a <xref:System.Windows.Controls.Primitives.Track>.</span></span>  

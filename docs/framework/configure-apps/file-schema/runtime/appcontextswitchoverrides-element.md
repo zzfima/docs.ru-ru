@@ -15,6 +15,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747529"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a><span data-ttu-id="1d5fe-102">&lt;AppContextSwitchOverrides&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="1d5fe-102">&lt;AppContextSwitchOverrides&gt; Element</span></span>
 <span data-ttu-id="1d5fe-103">Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.</span><span class="sxs-lookup"><span data-stu-id="1d5fe-103">Defines one or more switches used by the <xref:System.AppContext> class to provide an opt-out mechanism for new functionality.</span></span>  

@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576299"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a><span data-ttu-id="86559-102">Универсальные делегаты для управления массивами и списками</span><span class="sxs-lookup"><span data-stu-id="86559-102">Generic Delegates for Manipulating Arrays and Lists</span></span>
 <span data-ttu-id="86559-103">В этом разделе содержится обзор универсальных делегатов для преобразований, предикатов поиска и действий, осуществляемых с элементами массива или коллекции.</span><span class="sxs-lookup"><span data-stu-id="86559-103">This topic provides an overview of generic delegates for conversions, search predicates, and actions to be taken on elements of an array or collection.</span></span>  

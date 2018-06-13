@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32756700"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a><span data-ttu-id="07771-102">Сопоставление отношений, заданных для вложенных элементов</span><span class="sxs-lookup"><span data-stu-id="07771-102">Map Relations Specified for Nested Elements</span></span>
 <span data-ttu-id="07771-103">Схема может включать **msdata: Relationship** заметки, чтобы явно указать сопоставление между двумя элементами схемы.</span><span class="sxs-lookup"><span data-stu-id="07771-103">A schema can include an **msdata:Relationship** annotation to explicitly specify the mapping between any two elements in the schema.</span></span> <span data-ttu-id="07771-104">Два элемента, указанного в **msdata: Relationship** могут быть вложенными в схеме, но не обязательно.</span><span class="sxs-lookup"><span data-stu-id="07771-104">The two elements specified in **msdata:Relationship** can be nested in the schema, but do not have to be.</span></span> <span data-ttu-id="07771-105">Процесс сопоставления использует **msdata: Relationship** в схеме для создания первичного ключа и внешнего ключа связи между двумя столбцами.</span><span class="sxs-lookup"><span data-stu-id="07771-105">The mapping process uses **msdata:Relationship** in the schema to generate the primary key/foreign key relationship between the two columns.</span></span>  

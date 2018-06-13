@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33336925"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a><span data-ttu-id="e6819-102">Использование допускающих значение NULL типов (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="e6819-102">Using Nullable Types (C# Programming Guide)</span></span>
 <span data-ttu-id="e6819-103">Типы, допускающие значение NULL, могут представлять все значения своего основного типа, а также само значение [NULL](../../../csharp/language-reference/keywords/null.md).</span><span class="sxs-lookup"><span data-stu-id="e6819-103">Nullable types can represent all the values of an underlying type, and an additional [null](../../../csharp/language-reference/keywords/null.md) value.</span></span> <span data-ttu-id="e6819-104">Типы, допускающие значение null, объявляются одним из следующих двух способов:</span><span class="sxs-lookup"><span data-stu-id="e6819-104">Nullable types are declared in one of two ways:</span></span>  

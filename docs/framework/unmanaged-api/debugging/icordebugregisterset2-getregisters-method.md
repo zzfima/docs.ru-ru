@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aca83a66520531074f376a47a7f2994cda237f9b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423238"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a><span data-ttu-id="4f115-102">Метод ICorDebugRegisterSet2::GetRegisters</span><span class="sxs-lookup"><span data-stu-id="4f115-102">ICorDebugRegisterSet2::GetRegisters Method</span></span>
 <span data-ttu-id="4f115-103">Получает значение каждого регистра (для платформы, на котором в данный момент выполняется код), указанное данной битовой маской.</span><span class="sxs-lookup"><span data-stu-id="4f115-103">Gets the value of each register (for the platform on which code is currently executing) that is specified by the given bit mask.</span></span>  

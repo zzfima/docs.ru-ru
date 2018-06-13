@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33358834"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a><span data-ttu-id="542fa-102">Нахождение минимального значения в числовой последовательности</span><span class="sxs-lookup"><span data-stu-id="542fa-102">Find the Minimum Value in a Numeric Sequence</span></span>
 <span data-ttu-id="542fa-103">Для возвращения минимального значения из последовательности числовых значений используется оператор <xref:System.Linq.Enumerable.Min%2A>.</span><span class="sxs-lookup"><span data-stu-id="542fa-103">Use the <xref:System.Linq.Enumerable.Min%2A> operator to return the minimum value from a sequence of numeric values.</span></span>  

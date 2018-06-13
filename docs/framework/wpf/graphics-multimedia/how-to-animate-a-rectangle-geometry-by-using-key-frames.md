@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559286"
 ---
 # <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a><span data-ttu-id="f0c30-102">Практическое руководство. Анимация прямоугольника с помощью ключевых кадров</span><span class="sxs-lookup"><span data-stu-id="f0c30-102">How to: Animate a Rectangle Geometry by Using Key Frames</span></span>
 <span data-ttu-id="f0c30-103">В этом примере демонстрируется анимация <xref:System.Windows.Media.RectangleGeometry.Rect%2A> свойство <xref:System.Windows.Media.RectangleGeometry> с помощью ключевых кадров.</span><span class="sxs-lookup"><span data-stu-id="f0c30-103">This example shows how to animate the <xref:System.Windows.Media.RectangleGeometry.Rect%2A> property of a <xref:System.Windows.Media.RectangleGeometry> by using key frames.</span></span>  

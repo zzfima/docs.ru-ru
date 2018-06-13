@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496628"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a><span data-ttu-id="c77ee-102">Практическое руководство. Публикация метаданных для службы с использованием кода</span><span class="sxs-lookup"><span data-stu-id="c77ee-102">How to: Publish Metadata for a Service Using Code</span></span>
 <span data-ttu-id="c77ee-103">Это один из двух практических руководств, в которых рассматривается публикация метаданных для службы Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="c77ee-103">This is one of two how-to topics that discuss publishing metadata for a Windows Communication Foundation (WCF) service.</span></span> <span data-ttu-id="c77ee-104">Существуют два способа указать, как служба должна публиковать метаданные: с помощью файла конфигурации и с помощью кода.</span><span class="sxs-lookup"><span data-stu-id="c77ee-104">There are two ways to specify how a service should publish metadata, using a configuration file and using code.</span></span> <span data-ttu-id="c77ee-105">В этом разделе показано, как публиковать метаданные для службы с помощью кода.</span><span class="sxs-lookup"><span data-stu-id="c77ee-105">This topic shows how to publish metadata for a service using a code.</span></span>  

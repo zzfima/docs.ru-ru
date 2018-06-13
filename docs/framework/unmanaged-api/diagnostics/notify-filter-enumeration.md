@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 98c3e1ed3da209cbded5d76d938d2420fce606be
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431023"
 ---
 # <a name="notifyfilter-enumeration"></a><span data-ttu-id="cc0e2-102">Перечисление NOTIFY_FILTER</span><span class="sxs-lookup"><span data-stu-id="cc0e2-102">NOTIFY_FILTER Enumeration</span></span>
 <span data-ttu-id="cc0e2-103">Определяет обратные вызовы для функций отладчика.</span><span class="sxs-lookup"><span data-stu-id="cc0e2-103">Identifies callbacks for debugger functions.</span></span> <span data-ttu-id="cc0e2-104">Дополнительные сведения см. в разделе [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="cc0e2-104">For more information, see the [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) method.</span></span>  

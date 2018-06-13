@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: faefff879142d66c4c596f1b30a25e349a4014b9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421805"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a><span data-ttu-id="b5821-102">Метод ICorDebugManagedCallback2::Exception</span><span class="sxs-lookup"><span data-stu-id="b5821-102">ICorDebugManagedCallback2::Exception Method</span></span>
 <span data-ttu-id="b5821-103">Уведомляет отладчик о начале поиска для обработчика исключений.</span><span class="sxs-lookup"><span data-stu-id="b5821-103">Notifies the debugger that a search for an exception handler has started.</span></span>  

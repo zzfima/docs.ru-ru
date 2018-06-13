@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4b395bc4d199738b309be74868243b61f924878c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431237"
 ---
 # <a name="cormarkthreadinthreadpool-function"></a><span data-ttu-id="23065-102">Функция CorMarkThreadInThreadPool</span><span class="sxs-lookup"><span data-stu-id="23065-102">CorMarkThreadInThreadPool Function</span></span>
 <span data-ttu-id="23065-103">Помечает текущий выполняемый поток из пула потоков для выполнения управляемого кода.</span><span class="sxs-lookup"><span data-stu-id="23065-103">Marks the currently executing thread-pool thread for the execution of managed code.</span></span> <span data-ttu-id="23065-104">Начиная с .NET Framework версии 2.0, эта функция не делает ничего.</span><span class="sxs-lookup"><span data-stu-id="23065-104">Starting with the .NET Framework version 2.0, this function has no effect.</span></span> <span data-ttu-id="23065-105">Он не является обязательным и может быть удален из кода. Эта функция устарела в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="23065-105">It is not required, and can be removed from your code.This function is deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  

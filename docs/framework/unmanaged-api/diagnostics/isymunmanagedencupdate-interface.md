@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 05cbe098b73dd817546dd72f0fc98ad548f75386
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33425422"
 ---
 # <a name="isymunmanagedencupdate-interface"></a><span data-ttu-id="bca77-102">Интерфейс ISymUnmanagedENCUpdate</span><span class="sxs-lookup"><span data-stu-id="bca77-102">ISymUnmanagedENCUpdate Interface</span></span>
 <span data-ttu-id="bca77-103">Предоставляет функции для "Изменить и продолжить".</span><span class="sxs-lookup"><span data-stu-id="bca77-103">Provides functions for the Edit and Continue feature.</span></span>  

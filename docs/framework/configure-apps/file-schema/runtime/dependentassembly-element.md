@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744916"
 ---
 # <a name="ltdependentassemblygt-element"></a><span data-ttu-id="377dd-102">&lt;dependentAssembly&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="377dd-102">&lt;dependentAssembly&gt; Element</span></span>
 <span data-ttu-id="377dd-103">Инкапсулирует политику привязки и расположение каждой сборки.</span><span class="sxs-lookup"><span data-stu-id="377dd-103">Encapsulates binding policy and assembly location for each assembly.</span></span> <span data-ttu-id="377dd-104">Используйте один `dependentAssembly` элемент для каждой сборки.</span><span class="sxs-lookup"><span data-stu-id="377dd-104">Use one `dependentAssembly` element for each assembly.</span></span>  

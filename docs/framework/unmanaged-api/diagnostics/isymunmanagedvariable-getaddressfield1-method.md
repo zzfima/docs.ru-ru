@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f9e0e234a8f77ef35ad93302fe8fc676cf9dbaeb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33427494"
 ---
 # <a name="isymunmanagedvariablegetaddressfield1-method"></a><span data-ttu-id="4d7e4-102">Метод ISymUnmanagedVariable::GetAddressField1</span><span class="sxs-lookup"><span data-stu-id="4d7e4-102">ISymUnmanagedVariable::GetAddressField1 Method</span></span>
 <span data-ttu-id="4d7e4-103">Получает поле первого адреса для данной переменной.</span><span class="sxs-lookup"><span data-stu-id="4d7e4-103">Gets the first address field for this variable.</span></span> <span data-ttu-id="4d7e4-104">Его значение зависит от типа адреса.</span><span class="sxs-lookup"><span data-stu-id="4d7e4-104">Its meaning depends on the kind of address.</span></span>  

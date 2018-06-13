@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502836"
 ---
 # <a name="http-acknowledgement-channel"></a><span data-ttu-id="cd875-102">Канал подтверждений HTTP</span><span class="sxs-lookup"><span data-stu-id="cd875-102">HTTP Acknowledgement Channel</span></span>
 <span data-ttu-id="cd875-103">Канал подтверждения HTTP - это пример многоуровневого канала, который изменяет односторонний шаблон обмена сообщениями, позволяя службе подтверждать получение сообщений или повторно использовать входящие сообщения, а не отправлять подтверждение автоматически при получении.</span><span class="sxs-lookup"><span data-stu-id="cd875-103">The HTTP Acknowledgement Channel is an example of a layered channel that changes the one-way messaging pattern, allowing a service to acknowledge or refuse incoming messages rather than automatically sending an acknowledgement on receipt.</span></span> <span data-ttu-id="cd875-104">Канал подтверждения HTTP также позволяет службе задерживать подтверждение до получения гарантии обработки сообщения на уровне бизнеса.</span><span class="sxs-lookup"><span data-stu-id="cd875-104">The HTTP Acknowledgement Channel also allows the service to delay acknowledgement until it can make a business-level guarantee that the message will be processed.</span></span>  

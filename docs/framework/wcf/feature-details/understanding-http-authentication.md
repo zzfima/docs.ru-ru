@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500146"
 ---
 # <a name="understanding-http-authentication"></a><span data-ttu-id="5e034-102">Основные сведения о проверке подлинности HTTP</span><span class="sxs-lookup"><span data-stu-id="5e034-102">Understanding HTTP Authentication</span></span>
 <span data-ttu-id="5e034-103">Проверка подлинности - это процесс проверки наличия у клиента права доступа к ресурсу.</span><span class="sxs-lookup"><span data-stu-id="5e034-103">Authentication is the process of identifying whether a client is eligible to access a resource.</span></span> <span data-ttu-id="5e034-104">Протокол HTTP поддерживает проверку подлинности как средство согласования доступа к защищенному ресурсу.</span><span class="sxs-lookup"><span data-stu-id="5e034-104">The HTTP protocol supports authentication as a means of negotiating access to a secure resource.</span></span>  

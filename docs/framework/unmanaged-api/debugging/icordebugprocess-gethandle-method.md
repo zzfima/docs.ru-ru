@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60bd7567f541a0bbaa3591d2f2905d13064dec3c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423446"
 ---
 # <a name="icordebugprocessgethandle-method"></a><span data-ttu-id="ed983-102">Метод ICorDebugProcess::GetHandle</span><span class="sxs-lookup"><span data-stu-id="ed983-102">ICorDebugProcess::GetHandle Method</span></span>
 <span data-ttu-id="ed983-103">Получает дескриптор процесса.</span><span class="sxs-lookup"><span data-stu-id="ed983-103">Gets a handle to the process.</span></span>  

@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a78616ea1dccdf82c4e00d23d2ff630c98cb4e38
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431907"
 ---
 # <a name="isymunmanagedreader-interface"></a><span data-ttu-id="f590e-102">Интерфейс ISymUnmanagedReader</span><span class="sxs-lookup"><span data-stu-id="f590e-102">ISymUnmanagedReader Interface</span></span>
 <span data-ttu-id="f590e-103">Представляет средство чтения символов, который предоставляет доступ к документам, методам и переменным в хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="f590e-103">Represents a symbol reader that provides access to documents, methods, and variables within a symbol store.</span></span>  

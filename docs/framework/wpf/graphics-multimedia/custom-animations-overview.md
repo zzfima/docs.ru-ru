@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558035"
 ---
 # <a name="custom-animations-overview"></a><span data-ttu-id="d304e-102">Общие сведения о пользовательской анимации</span><span class="sxs-lookup"><span data-stu-id="d304e-102">Custom Animations Overview</span></span>
 <span data-ttu-id="d304e-103">В этом разделе описывается, как и когда расширять систему анимации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] путем создания пользовательских ключевых кадров и классов анимации или путем использования покадрового обратного вызова, чтобы пропустить ее.</span><span class="sxs-lookup"><span data-stu-id="d304e-103">This topic describes how and when to extend the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] animation system by creating custom key frames, animation classes, or by using per-frame callback to bypass it.</span></span>  

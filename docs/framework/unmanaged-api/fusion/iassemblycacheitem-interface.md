@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3c6da86ce2d86a6842d2d7d8de860e9a8621bdaf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429599"
 ---
 # <a name="iassemblycacheitem-interface"></a><span data-ttu-id="c5206-102">Интерфейс IAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="c5206-102">IAssemblyCacheItem Interface</span></span>
 <span data-ttu-id="c5206-103">Представляет одну сборку в глобальный кэш сборок.</span><span class="sxs-lookup"><span data-stu-id="c5206-103">Represents a single assembly in the global assembly cache.</span></span>  

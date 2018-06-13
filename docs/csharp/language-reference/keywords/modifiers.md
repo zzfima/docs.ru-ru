@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33272686"
 ---
 # <a name="modifiers-c-reference"></a><span data-ttu-id="1922c-102">Модификаторы (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="1922c-102">Modifiers (C# Reference)</span></span>
 <span data-ttu-id="1922c-103">Модификаторы служат для изменения объявлений типов и их членов.</span><span class="sxs-lookup"><span data-stu-id="1922c-103">Modifiers are used to modify declarations of types and type members.</span></span> <span data-ttu-id="1922c-104">В этом разделе описаны модификаторы C#.</span><span class="sxs-lookup"><span data-stu-id="1922c-104">This section introduces the C# modifiers.</span></span>  

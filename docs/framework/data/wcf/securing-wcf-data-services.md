@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33359266"
 ---
 # <a name="securing-wcf-data-services"></a><span data-ttu-id="9ed0d-102">Защита служб WCF Data Services</span><span class="sxs-lookup"><span data-stu-id="9ed0d-102">Securing WCF Data Services</span></span>
 <span data-ttu-id="9ed0d-103">В этом разделе приведены сведения по безопасности, связанные с разработкой, развертыванием и запуском [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] и приложений, которые обращаются к службам, поддерживающим [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9ed0d-103">This topic describes security considerations that are specific to developing, deploying, and running [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] and applications that access services that support the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)].</span></span> <span data-ttu-id="9ed0d-104">Необходимо также следовать инструкциям по созданию безопасных приложений [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9ed0d-104">You should also follow recommendations for creating secure [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] applications.</span></span>  

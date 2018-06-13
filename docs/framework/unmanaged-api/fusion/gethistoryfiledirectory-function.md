@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: bba40acf7bfd20897ece4de285fe7a9175be83e0
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431767"
 ---
 # <a name="gethistoryfiledirectory-function"></a><span data-ttu-id="b3af4-102">Функция GetHistoryFileDirectory</span><span class="sxs-lookup"><span data-stu-id="b3af4-102">GetHistoryFileDirectory Function</span></span>
 <span data-ttu-id="b3af4-103">Возвращает путь к каталогу журнала приложения.</span><span class="sxs-lookup"><span data-stu-id="b3af4-103">Retrieves the path of the application history directory.</span></span>  

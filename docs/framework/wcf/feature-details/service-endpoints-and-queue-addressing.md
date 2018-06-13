@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504946"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a><span data-ttu-id="b92ee-102">Конечные точки служб и адресация очереди</span><span class="sxs-lookup"><span data-stu-id="b92ee-102">Service Endpoints and Queue Addressing</span></span>
 <span data-ttu-id="b92ee-103">В этом разделе рассматриваются принципы обращения клиентов к службам, выполняющим чтение из очередей, и сопоставления конечных точек служб с очередями.</span><span class="sxs-lookup"><span data-stu-id="b92ee-103">This topic discusses how clients address services that read from queues and how service endpoints map to queues.</span></span> <span data-ttu-id="b92ee-104">Напоминаем на следующем рисунке классической Windows Communication Foundation (WCF) в очереди развертывания приложения.</span><span class="sxs-lookup"><span data-stu-id="b92ee-104">As a reminder, the following illustration shows the classic Windows Communication Foundation (WCF) queued application deployment.</span></span>  

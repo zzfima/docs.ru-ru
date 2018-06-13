@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33334201"
 ---
 # <a name="thread-pooling-c"></a><span data-ttu-id="11719-102">Группировка потоков в пул (C#)</span><span class="sxs-lookup"><span data-stu-id="11719-102">Thread Pooling (C#)</span></span>
 <span data-ttu-id="11719-103">*Пул потоков* — это коллекция потоков, которые могут использоваться для выполнения нескольких задач в фоновом режиме.</span><span class="sxs-lookup"><span data-stu-id="11719-103">A *thread pool* is a collection of threads that can be used to perform several tasks in the background.</span></span> <span data-ttu-id="11719-104">(Базовые сведения см. в разделе [Работа с потоками (C#)](../../../../csharp/programming-guide/concepts/threading/index.md).) Это позволяет разгрузить главный поток для асинхронного выполнения других задач.</span><span class="sxs-lookup"><span data-stu-id="11719-104">(See [Threading (C#)](../../../../csharp/programming-guide/concepts/threading/index.md) for background information.) This leaves the primary thread free to perform other tasks asynchronously.</span></span>  

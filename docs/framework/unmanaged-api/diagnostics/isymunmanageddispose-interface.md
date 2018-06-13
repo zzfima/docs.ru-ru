@@ -1,14 +1,6 @@
 ---
-title: "Интерфейс ISymUnmanagedDispose"
-ms.custom: 
+title: Интерфейс ISymUnmanagedDispose
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: reference
 api_name:
 - ISymUnmanagedDispose
 api_location:
@@ -22,29 +14,26 @@ helpviewer_keywords:
 ms.assetid: b1d74e83-a200-4d00-8fbd-27918808616d
 topic_type:
 - apiref
-caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
-manager: wpickett
-ms.workload:
-- dotnet
-ms.openlocfilehash: 2c7431e7c0e40fe631cf525a961f8bc2710e716d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
+ms.openlocfilehash: 973fc35bb99bea6b3302760763069b9df6c548e4
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33424408"
 ---
-# <a name="isymunmanageddispose-interface"></a><span data-ttu-id="56847-102">Интерфейс ISymUnmanagedDispose</span><span class="sxs-lookup"><span data-stu-id="56847-102">ISymUnmanagedDispose Interface</span></span>
-<span data-ttu-id="56847-103">Освобождает неуправляемые ресурсы.</span><span class="sxs-lookup"><span data-stu-id="56847-103">Disposes of unmanaged resources.</span></span>  
+# <a name="isymunmanageddispose-interface"></a><span data-ttu-id="2a9af-102">Интерфейс ISymUnmanagedDispose</span><span class="sxs-lookup"><span data-stu-id="2a9af-102">ISymUnmanagedDispose Interface</span></span>
+<span data-ttu-id="2a9af-103">Освобождает неуправляемые ресурсы.</span><span class="sxs-lookup"><span data-stu-id="2a9af-103">Disposes of unmanaged resources.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="56847-104">Методы</span><span class="sxs-lookup"><span data-stu-id="56847-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="2a9af-104">Методы</span><span class="sxs-lookup"><span data-stu-id="2a9af-104">Methods</span></span>  
   
-|<span data-ttu-id="56847-105">Метод</span><span class="sxs-lookup"><span data-stu-id="56847-105">Method</span></span>|<span data-ttu-id="56847-106">Описание:</span><span class="sxs-lookup"><span data-stu-id="56847-106">Description</span></span>|  
+|<span data-ttu-id="2a9af-105">Метод</span><span class="sxs-lookup"><span data-stu-id="2a9af-105">Method</span></span>|<span data-ttu-id="2a9af-106">Описание</span><span class="sxs-lookup"><span data-stu-id="2a9af-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="56847-107">Метод Destroy</span><span class="sxs-lookup"><span data-stu-id="56847-107">Destroy Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|<span data-ttu-id="56847-108">Вызывает базовый объект освободить все внутренние ссылки и возврата сбоя на каждом последующем вызове метода.</span><span class="sxs-lookup"><span data-stu-id="56847-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>|  
+|[<span data-ttu-id="2a9af-107">Метод Destroy</span><span class="sxs-lookup"><span data-stu-id="2a9af-107">Destroy Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddispose-destroy-method.md)|<span data-ttu-id="2a9af-108">Вызывает базовый объект освободить все внутренние ссылки и возврата сбоя на каждом последующем вызове метода.</span><span class="sxs-lookup"><span data-stu-id="2a9af-108">Causes the underlying object to release all internal references and return failure on any subsequent method calls.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="56847-109">Требования</span><span class="sxs-lookup"><span data-stu-id="56847-109">Requirements</span></span>  
- <span data-ttu-id="56847-110">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="56847-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2a9af-109">Требования</span><span class="sxs-lookup"><span data-stu-id="2a9af-109">Requirements</span></span>  
+ <span data-ttu-id="2a9af-110">**Заголовок:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2a9af-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="56847-111">См. также</span><span class="sxs-lookup"><span data-stu-id="56847-111">See Also</span></span>  
- [<span data-ttu-id="56847-112">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="56847-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="2a9af-111">См. также</span><span class="sxs-lookup"><span data-stu-id="2a9af-111">See Also</span></span>  
+ [<span data-ttu-id="2a9af-112">Интерфейсы хранилища символов диагностики</span><span class="sxs-lookup"><span data-stu-id="2a9af-112">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

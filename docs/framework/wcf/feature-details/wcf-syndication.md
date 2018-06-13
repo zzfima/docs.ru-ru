@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499171"
 ---
 # <a name="wcf-syndication"></a><span data-ttu-id="d946a-102">Синдикация WCF</span><span class="sxs-lookup"><span data-stu-id="d946a-102">WCF Syndication</span></span>
 <span data-ttu-id="d946a-103">Windows Communication Foundation (WCF) обеспечивает поддержку для удобной работы с веб-каналами синдикации в форматах Atom, RSS и других нестандартных форматах, что позволяет обрабатывать и создавать их, а также предоставлять к ним доступ в конечной точке службы.</span><span class="sxs-lookup"><span data-stu-id="d946a-103">Windows Communication Foundation (WCF) provides support to easily work with syndication feeds in Atom, RSS or other custom formats, which allows you to read and create them as well as expose them on a service endpoint.</span></span> <span data-ttu-id="d946a-104">В подразделах этого раздела подробно описывается модель программирования синдикации.</span><span class="sxs-lookup"><span data-stu-id="d946a-104">The topics in this section describe this programming model for syndication in detail.</span></span>  

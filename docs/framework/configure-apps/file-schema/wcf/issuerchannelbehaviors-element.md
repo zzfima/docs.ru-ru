@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747061"
 ---
 # <a name="ltissuerchannelbehaviorsgt-element"></a><span data-ttu-id="aac6f-102">Элемент &lt;issuerChannelBehaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="aac6f-102">&lt;issuerChannelBehaviors&gt; Element</span></span>
 <span data-ttu-id="aac6f-103">Содержит коллекцию поведений конечной точки клиента Windows Communication Foundation (WCF), (определенных в конфигурации) для использования при взаимодействии с заданными службами маркеров.</span><span class="sxs-lookup"><span data-stu-id="aac6f-103">Contains a collection of Windows Communication Foundation (WCF) client endpoint behaviors (defined in the configuration) to be used when communicating with the specified Service Token Services.</span></span> <span data-ttu-id="aac6f-104">Не могут содержать заданные поведения [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элементов.</span><span class="sxs-lookup"><span data-stu-id="aac6f-104">The defined behaviors cannot include any [\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) elements.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556644"
 ---
 # <a name="how-to-convert-bound-data"></a><span data-ttu-id="fd8c6-102">Практическое руководство. Преобразование привязанных данных</span><span class="sxs-lookup"><span data-stu-id="fd8c6-102">How to: Convert Bound Data</span></span>
 <span data-ttu-id="fd8c6-103">В этом примере показано, как применить преобразования к данным, используемым в привязках.</span><span class="sxs-lookup"><span data-stu-id="fd8c6-103">This example shows how to apply conversion to data that is used in bindings.</span></span>  

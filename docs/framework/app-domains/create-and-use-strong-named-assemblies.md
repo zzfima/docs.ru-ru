@@ -19,6 +19,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744646"
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a><span data-ttu-id="eb288-102">Создание и использование сборок со строгими именами</span><span class="sxs-lookup"><span data-stu-id="eb288-102">Creating and Using Strong-Named Assemblies</span></span>
 <a name="top"></a> <span data-ttu-id="eb288-103">Строгое имя состоит из удостоверения сборки, включающего ее простое текстовое имя, номер версии и сведения о языке и региональных параметрах (если они имеются), а также открытый ключ и цифровую подпись.</span><span class="sxs-lookup"><span data-stu-id="eb288-103">A strong name consists of the assembly's identity—its simple text name, version number, and culture information (if provided)—plus a public key and a digital signature.</span></span> <span data-ttu-id="eb288-104">Оно создается из файла сборки с использованием соответствующего закрытого ключа.</span><span class="sxs-lookup"><span data-stu-id="eb288-104">It is generated from an assembly file using the corresponding private key.</span></span> <span data-ttu-id="eb288-105">(В файле сборки содержится манифест сборки, в котором указаны имена и хэши всех файлов, составляющих эту сборку.)</span><span class="sxs-lookup"><span data-stu-id="eb288-105">(The assembly file contains the assembly manifest, which contains the names and hashes of all the files that make up the assembly.)</span></span>  

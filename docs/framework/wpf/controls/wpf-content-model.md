@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558204"
 ---
 # <a name="wpf-content-model"></a><span data-ttu-id="d0c1b-102">Модель содержимого WPF</span><span class="sxs-lookup"><span data-stu-id="d0c1b-102">WPF Content Model</span></span>
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<span data-ttu-id="d0c1b-103"> — это презентационная платформа, которая предоставляет множество элементов и типов, схожих с элементами управления, основное предназначение которых — отображение различных типов содержимого.</span><span class="sxs-lookup"><span data-stu-id="d0c1b-103"> is a presentation platform that provides many controls and control-like types whose primary purpose is to display different types of content.</span></span> <span data-ttu-id="d0c1b-104">Чтобы определить, какой элемент управления использовать или от какого элемента управления выполнять наследование, вы должны понимать, какие виды объектов лучше всего может отображать конкретный элемент управления.</span><span class="sxs-lookup"><span data-stu-id="d0c1b-104">To determine which control to use or which control to derive from, you should understand the kinds of objects a particular control can best display.</span></span>  

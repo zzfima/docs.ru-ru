@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1da1d368725ab0a2334080c1caa7d4e25f5f3bab
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431127"
 ---
 # <a name="ebindpolicylevels-enumeration"></a><span data-ttu-id="f005e-102">Перечисление EBindPolicyLevels</span><span class="sxs-lookup"><span data-stu-id="f005e-102">EBindPolicyLevels Enumeration</span></span>
 <span data-ttu-id="f005e-103">Предоставляет флаги, чтобы задать уровень, на котором следует применять или изменять политику сборки.</span><span class="sxs-lookup"><span data-stu-id="f005e-103">Provides flags to specify the level at which to apply or modify assembly policy.</span></span>  

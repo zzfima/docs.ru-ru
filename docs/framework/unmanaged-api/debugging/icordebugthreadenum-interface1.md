@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ca683e5925325fae2470aca3cd67be39c12a055d
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423277"
 ---
 # <a name="icordebugthreadenum-interface1"></a><span data-ttu-id="b4a43-102">ICorDebugThreadEnum интерфейс1</span><span class="sxs-lookup"><span data-stu-id="b4a43-102">ICorDebugThreadEnum Interface1</span></span>
 <span data-ttu-id="b4a43-103">Реализует методы ICorDebugEnum и выполняет перечисление массивов ICorDebugThread.</span><span class="sxs-lookup"><span data-stu-id="b4a43-103">Implements ICorDebugEnum methods and enumerates ICorDebugThread arrays.</span></span>  

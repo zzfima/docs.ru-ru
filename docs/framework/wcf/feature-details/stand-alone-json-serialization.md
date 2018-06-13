@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509122"
 ---
 # <a name="stand-alone-json-serialization"></a><span data-ttu-id="f0c04-102">Автономная сериализация JSON</span><span class="sxs-lookup"><span data-stu-id="f0c04-102">Stand-Alone JSON Serialization</span></span>
 <span data-ttu-id="f0c04-103">JSON (JavaScript Object Notation, объектная нотация JavaScript) - формат данных, предназначенный специально для использования JavaScript-кодом, выполняемым на веб-страницах внутри браузера.</span><span class="sxs-lookup"><span data-stu-id="f0c04-103">JSON (JavaScript Object Notation) is a data format that is specifically designed to be used by JavaScript code running on Web pages inside the browser.</span></span> <span data-ttu-id="f0c04-104">Это формат данных по умолчанию, используемый службами ASP.NET AJAX, созданные в Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="f0c04-104">It is the default data format used by ASP.NET AJAX services created in Windows Communication Foundation (WCF).</span></span>  

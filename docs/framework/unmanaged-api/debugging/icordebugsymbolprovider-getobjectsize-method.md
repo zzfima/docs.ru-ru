@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1da526ac133604fa43081f86988459c4238517c9
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33421507"
 ---
 # <a name="icordebugsymbolprovidergetobjectsize-method"></a><span data-ttu-id="8c35b-102">Метод ICorDebugSymbolProvider::GetObjectSize</span><span class="sxs-lookup"><span data-stu-id="8c35b-102">ICorDebugSymbolProvider::GetObjectSize Method</span></span>
 <span data-ttu-id="8c35b-103">Возвращает размер объекта для объекта на основе его сигнатуры TypeSpec.</span><span class="sxs-lookup"><span data-stu-id="8c35b-103">Returns the object size for an object based on its typespec signature.</span></span>  

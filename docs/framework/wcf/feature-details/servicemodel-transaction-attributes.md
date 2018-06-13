@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500835"
 ---
 # <a name="servicemodel-transaction-attributes"></a><span data-ttu-id="fa3c4-102">Атрибуты транзакции ServiceModel</span><span class="sxs-lookup"><span data-stu-id="fa3c4-102">ServiceModel Transaction Attributes</span></span>
 <span data-ttu-id="fa3c4-103">Windows Communication Foundation (WCF) предоставляет свойства в трех стандартных <xref:System.ServiceModel> атрибутов, которые позволяют настраивать поведение транзакций для службы WCF:</span><span class="sxs-lookup"><span data-stu-id="fa3c4-103">Windows Communication Foundation (WCF) provides properties on three standard <xref:System.ServiceModel> attributes that enable you to configure the behavior of transactions for a WCF service:</span></span>  

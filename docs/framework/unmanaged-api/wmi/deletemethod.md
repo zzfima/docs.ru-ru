@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd862910d0c9bb0274158c2c516211cef598a553
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457812"
 ---
 # <a name="deletemethod-function"></a><span data-ttu-id="63500-103">Функция DeleteMethod</span><span class="sxs-lookup"><span data-stu-id="63500-103">DeleteMethod function</span></span>
 <span data-ttu-id="63500-104">Удаляет указанный метод из определения класса CIM.</span><span class="sxs-lookup"><span data-stu-id="63500-104">Deletes the specified method from a CIM class definition.</span></span>

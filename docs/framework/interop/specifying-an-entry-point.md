@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33388837"
 ---
 # <a name="specifying-an-entry-point"></a><span data-ttu-id="c99e1-102">Задание точки входа</span><span class="sxs-lookup"><span data-stu-id="c99e1-102">Specifying an Entry Point</span></span>
 <span data-ttu-id="c99e1-103">Точка входа определяет расположение функции в библиотеке DLL.</span><span class="sxs-lookup"><span data-stu-id="c99e1-103">An entry point identifies the location of a function in a DLL.</span></span> <span data-ttu-id="c99e1-104">В управляемом проекте исходное имя или порядковый номер точки входа целевой функции определяет эту функцию в границах взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="c99e1-104">Within a managed project, the original name or ordinal entry point of a target function identifies that function across the interoperation boundary.</span></span> <span data-ttu-id="c99e1-105">Вы можете сопоставить точку входа с другим именем, чтобы фактически переименовать функцию.</span><span class="sxs-lookup"><span data-stu-id="c99e1-105">Further, you can map the entry point to a different name, effectively renaming the function.</span></span>  

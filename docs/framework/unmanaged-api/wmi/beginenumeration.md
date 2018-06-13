@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9699f0cfc4e9fdb989337681b164cc1e703c1e60
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33461264"
 ---
 # <a name="beginenumeration-function"></a><span data-ttu-id="7639c-103">Функция BeginEnumeration</span><span class="sxs-lookup"><span data-stu-id="7639c-103">BeginEnumeration function</span></span>
 <span data-ttu-id="7639c-104">Сбрасывает перечислитель в начало перечисления.</span><span class="sxs-lookup"><span data-stu-id="7639c-104">Resets an enumerator back to the beginning of the enumeration.</span></span>  

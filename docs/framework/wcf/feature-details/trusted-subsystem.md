@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500374"
 ---
 # <a name="trusted-subsystem"></a><span data-ttu-id="bcbaf-102">Доверенная подсистема</span><span class="sxs-lookup"><span data-stu-id="bcbaf-102">Trusted Subsystem</span></span>
 <span data-ttu-id="bcbaf-103">Клиент обращается к одной или нескольким веб-службам, распределенным по сети.</span><span class="sxs-lookup"><span data-stu-id="bcbaf-103">A client accesses one or more Web services that are distributed across a network.</span></span> <span data-ttu-id="bcbaf-104">Веб-службы устроены так, что доступ к дополнительным ресурсам (таким как базы данных или другие веб-службы) инкапсулируется в бизнес-логике веб-службы.</span><span class="sxs-lookup"><span data-stu-id="bcbaf-104">The Web services are designed so that access to additional resources (such as databases or other Web services) is encapsulated in the business logic of the Web service.</span></span> <span data-ttu-id="bcbaf-105">Эти ресурсы должны быть защищены от несанкционированного доступа.</span><span class="sxs-lookup"><span data-stu-id="bcbaf-105">These resources must be protected against unauthorized access.</span></span> <span data-ttu-id="bcbaf-106">На следующем рисунке показан процесс доверенной подсистемы.</span><span class="sxs-lookup"><span data-stu-id="bcbaf-106">The following illustration depicts a trusted subsystem process.</span></span>  

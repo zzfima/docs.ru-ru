@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33338290"
 ---
 # <a name="generic-classes-c-programming-guide"></a><span data-ttu-id="4bbeb-102">Универсальные классы (Руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="4bbeb-102">Generic Classes (C# Programming Guide)</span></span>
 <span data-ttu-id="4bbeb-103">Универсальные классы инкапсулируют операции, которые не относятся к конкретному типу данных.</span><span class="sxs-lookup"><span data-stu-id="4bbeb-103">Generic classes encapsulate operations that are not specific to a particular data type.</span></span> <span data-ttu-id="4bbeb-104">Универсальные классы чаще всего используются для работы с коллекциями, такими как связанные списки, хэш-таблицы, стеки, очереди, деревья и т. д.</span><span class="sxs-lookup"><span data-stu-id="4bbeb-104">The most common use for generic classes is with collections like linked lists, hash tables, stacks, queues, trees, and so on.</span></span> <span data-ttu-id="4bbeb-105">Такие операции, как добавление и удаление элементов коллекции, по существу выполняются одинаково, независимо от типа хранимых данных.</span><span class="sxs-lookup"><span data-stu-id="4bbeb-105">Operations such as adding and removing items from the collection are performed in basically the same way regardless of the type of data being stored.</span></span>  

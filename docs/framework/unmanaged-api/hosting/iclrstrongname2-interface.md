@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bf9e3d2df8f507e118b393007c3958358a830cc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432977"
 ---
 # <a name="iclrstrongname2-interface"></a><span data-ttu-id="7135c-102">Интерфейс ICLRStrongName2</span><span class="sxs-lookup"><span data-stu-id="7135c-102">ICLRStrongName2 Interface</span></span>
 <span data-ttu-id="7135c-103">Предоставляет возможность создавать с помощью группы SHA-2 (SHA-256, SHA-384 и SHA-512) хэш-алгоритмов Secure строгие имена.</span><span class="sxs-lookup"><span data-stu-id="7135c-103">Provides the ability to create strong names using the SHA-2 group of Secure Hash Algorithms (SHA-256, SHA-384, and SHA-512).</span></span>  

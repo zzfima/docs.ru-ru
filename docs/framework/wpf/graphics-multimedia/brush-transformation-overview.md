@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557658"
 ---
 # <a name="brush-transformation-overview"></a><span data-ttu-id="f486a-102">Общие сведения о преобразованиях объекта Brush</span><span class="sxs-lookup"><span data-stu-id="f486a-102">Brush Transformation Overview</span></span>
 <span data-ttu-id="f486a-103">Класс кисти предоставляет два свойства преобразования: <xref:System.Windows.Media.Brush.Transform%2A> и <xref:System.Windows.Media.Brush.RelativeTransform%2A>.</span><span class="sxs-lookup"><span data-stu-id="f486a-103">The Brush class provides two transformation properties: <xref:System.Windows.Media.Brush.Transform%2A> and <xref:System.Windows.Media.Brush.RelativeTransform%2A>.</span></span> <span data-ttu-id="f486a-104">Эти свойства позволяют выполнять поворот, масштабирование, наклон и преобразовывать содержимое кисти.</span><span class="sxs-lookup"><span data-stu-id="f486a-104">The properties enable you to rotate, scale, skew, and translate a brush's contents.</span></span> <span data-ttu-id="f486a-105">В этом разделе описываются различия между этими двумя свойствами и приводятся примеры их использования.</span><span class="sxs-lookup"><span data-stu-id="f486a-105">This topic describes the differences between these two properties and provides examples of their usage.</span></span>  

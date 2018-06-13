@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b6d0ba3f722f63650a3db6a8f633189993db0716
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431412"
 ---
 # <a name="ecustomdumpflavor-enumeration"></a><span data-ttu-id="4c15d-102">Перечисление ECustomDumpFlavor</span><span class="sxs-lookup"><span data-stu-id="4c15d-102">ECustomDumpFlavor Enumeration</span></span>
 <span data-ttu-id="4c15d-103">Содержит значения, указывающие, какие элементы будут включены в пользовательское подмножество кучи дампа при сообщении об ошибках.</span><span class="sxs-lookup"><span data-stu-id="4c15d-103">Contains values that indicate which items to include in a custom subset of a heap dump when reporting errors.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498261"
 ---
 # <a name="using-ws-atomictransaction"></a><span data-ttu-id="cad11-102">Использование WS-AtomicTransaction</span><span class="sxs-lookup"><span data-stu-id="cad11-102">Using WS-AtomicTransaction</span></span>
 <span data-ttu-id="cad11-103">WS-AtomicTransaction (WS-AT) - это протокол передачи транзакций с возможностью взаимодействия.</span><span class="sxs-lookup"><span data-stu-id="cad11-103">WS-AtomicTransaction (WS-AT) is an interoperable transaction protocol.</span></span> <span data-ttu-id="cad11-104">Он позволяет передавать распределенные транзакции, используя сообщения веб-служб, и обеспечивать взаимодействие между разнородными инфраструктурами транзакций.</span><span class="sxs-lookup"><span data-stu-id="cad11-104">It enables you to flow distributed transactions by using Web service messages, and coordinate in an interoperable manner between heterogeneous transaction infrastructures.</span></span> <span data-ttu-id="cad11-105">WS-AT использует протокол двухфазной фиксации для передачи атомарного результата между распределенными приложениями, диспетчерами транзакций и диспетчерами ресурсов.</span><span class="sxs-lookup"><span data-stu-id="cad11-105">WS-AT uses the two-phase commit protocol to drive an atomic outcome between distributed applications, transaction managers, and resource managers.</span></span>  

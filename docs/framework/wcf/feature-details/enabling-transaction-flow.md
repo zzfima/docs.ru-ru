@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497095"
 ---
 # <a name="enabling-transaction-flow"></a><span data-ttu-id="4be00-102">Включение потока транзакций</span><span class="sxs-lookup"><span data-stu-id="4be00-102">Enabling Transaction Flow</span></span>
 <span data-ttu-id="4be00-103">Windows Communication Foundation (WCF) предоставляет очень гибкие средства контроля над потоком транзакций.</span><span class="sxs-lookup"><span data-stu-id="4be00-103">Windows Communication Foundation (WCF) provides highly flexible options for controlling transaction flow.</span></span> <span data-ttu-id="4be00-104">Параметры потока транзакций службы могут быть выражены посредством комбинации атрибутов и конфигурации.</span><span class="sxs-lookup"><span data-stu-id="4be00-104">A service's transaction flow settings can be expressed using a combination of attributes and configuration.</span></span>  

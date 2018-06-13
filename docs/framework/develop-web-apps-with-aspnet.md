@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33386952"
 ---
 # <a name="developing-web-applications-with-aspnet"></a><span data-ttu-id="eb318-102">Разработка веб-приложений с помощью ASP.NET</span><span class="sxs-lookup"><span data-stu-id="eb318-102">Developing Web Applications with ASP.NET</span></span>
 <span data-ttu-id="eb318-103">ASP.NET представляет собой технологию .NET Framework для создания веб-приложений.</span><span class="sxs-lookup"><span data-stu-id="eb318-103">ASP.NET is a .NET Framework technology for creating web apps.</span></span> <span data-ttu-id="eb318-104">Для удобства представлены ссылки на следующие разделы.</span><span class="sxs-lookup"><span data-stu-id="eb318-104">The following links are provided for your convenience:</span></span>  

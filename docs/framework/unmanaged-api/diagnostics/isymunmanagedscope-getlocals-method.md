@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 781111db30ae664c9dd45744f88387e161f2716f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426803"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a><span data-ttu-id="bb1f1-102">Метод ISymUnmanagedScope::GetLocals</span><span class="sxs-lookup"><span data-stu-id="bb1f1-102">ISymUnmanagedScope::GetLocals Method</span></span>
 <span data-ttu-id="bb1f1-103">Возвращает локальные переменные, определенные в этой области.</span><span class="sxs-lookup"><span data-stu-id="bb1f1-103">Gets the local variables defined within this scope.</span></span>  

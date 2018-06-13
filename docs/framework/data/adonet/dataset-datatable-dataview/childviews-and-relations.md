@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755387"
 ---
 # <a name="childviews-and-relations"></a><span data-ttu-id="d434c-102">ChildView и отношения</span><span class="sxs-lookup"><span data-stu-id="d434c-102">ChildViews and Relations</span></span>
 <span data-ttu-id="d434c-103">Если какая-то связь существует между таблицами в <xref:System.Data.DataSet>, то можно создать объект <xref:System.Data.DataView>, содержащий строки из связанной дочерней таблицы, с применением метода <xref:System.Data.DataRowView.CreateChildView%2A> объекта <xref:System.Data.DataRowView> по отношению к строкам в родительской таблице.</span><span class="sxs-lookup"><span data-stu-id="d434c-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="d434c-104">Например, следующий код отображает **категории** и связанных с ними **продуктов** в алфавитном порядке, отсортированных по **CategoryName** и **ProductName** .</span><span class="sxs-lookup"><span data-stu-id="d434c-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  

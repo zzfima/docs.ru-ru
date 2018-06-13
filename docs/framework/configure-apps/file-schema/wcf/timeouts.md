@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32753005"
 ---
 # <a name="lttimeoutsgt"></a><span data-ttu-id="0e8fc-102">&lt;время ожидания&gt;</span><span class="sxs-lookup"><span data-stu-id="0e8fc-102">&lt;timeOuts&gt;</span></span>
 <span data-ttu-id="0e8fc-103">Элемент конфигурации, который задает допустимый интервал времени для открытия или закрытия узла службы.</span><span class="sxs-lookup"><span data-stu-id="0e8fc-103">Represents a configuration element that specifies the interval of time allowed for the service host to open or close.</span></span>  

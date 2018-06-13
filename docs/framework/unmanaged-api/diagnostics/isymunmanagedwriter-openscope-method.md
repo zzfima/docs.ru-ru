@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6aad2df19ec5563d8d48b0c286ab888a727c21ac
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428164"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a><span data-ttu-id="6f6ee-102">Метод ISymUnmanagedWriter::OpenScope</span><span class="sxs-lookup"><span data-stu-id="6f6ee-102">ISymUnmanagedWriter::OpenScope Method</span></span>
 <span data-ttu-id="6f6ee-103">Открывает новую лексическую область видимости в текущем методе.</span><span class="sxs-lookup"><span data-stu-id="6f6ee-103">Opens a new lexical scope in the current method.</span></span> <span data-ttu-id="6f6ee-104">Область становится новой текущей областью и помещается в стек областей.</span><span class="sxs-lookup"><span data-stu-id="6f6ee-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="6f6ee-105">Области должны образовывать иерархию.</span><span class="sxs-lookup"><span data-stu-id="6f6ee-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="6f6ee-106">Перекрытие элементов с общим родителем запрещено.</span><span class="sxs-lookup"><span data-stu-id="6f6ee-106">Siblings are not allowed to overlap.</span></span>  

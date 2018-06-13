@@ -6,9 +6,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73aa5a9ca6625ab58e451449fab4c98f8b83014e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33422444"
 ---
 # <a name="icordebugvariablesymbolgetname-method"></a><span data-ttu-id="3d014-102">Метод ICorDebugVariableSymbol::GetName</span><span class="sxs-lookup"><span data-stu-id="3d014-102">ICorDebugVariableSymbol::GetName Method</span></span>
 <span data-ttu-id="3d014-103">Получает имя переменной.</span><span class="sxs-lookup"><span data-stu-id="3d014-103">Gets the name of a variable.</span></span>  

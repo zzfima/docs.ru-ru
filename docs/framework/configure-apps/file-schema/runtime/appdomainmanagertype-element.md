@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743489"
 ---
 # <a name="ltappdomainmanagertypegt-element"></a><span data-ttu-id="ce2f4-102">&lt;appDomainManagerType&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="ce2f4-102">&lt;appDomainManagerType&gt; Element</span></span>
 <span data-ttu-id="ce2f4-103">Указывает тип, который служит диспетчером домена приложения для домена приложения, используемого по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="ce2f4-103">Specifies the type that serves as the application domain manager for the default application domain.</span></span>  

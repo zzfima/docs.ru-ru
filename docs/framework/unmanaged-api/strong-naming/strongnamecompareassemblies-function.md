@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4bd1d098f21a3d5ba43b6251c87c36df4347a924
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457565"
 ---
 # <a name="strongnamecompareassemblies-function"></a><span data-ttu-id="d5282-102">Функция StrongNameCompareAssemblies</span><span class="sxs-lookup"><span data-stu-id="d5282-102">StrongNameCompareAssemblies Function</span></span>
 <span data-ttu-id="d5282-103">Определяет, является ли две сборки отличаются только по их подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="d5282-103">Determines whether two assemblies differ only by their strong name signatures.</span></span>  

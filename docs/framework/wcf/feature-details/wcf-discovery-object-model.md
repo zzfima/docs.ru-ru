@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509038"
 ---
 # <a name="wcf-discovery-object-model"></a><span data-ttu-id="3a3a1-102">Модель объектов обнаружения WCF</span><span class="sxs-lookup"><span data-stu-id="3a3a1-102">WCF Discovery Object Model</span></span>
 <span data-ttu-id="3a3a1-103">Обнаружение WCF включает в себя набор типов, обеспечивающих унифицированную модель программирования, которая позволяет создавать службы, доступные для обнаружения во время выполнения, а также клиентов, которые могут находить и использовать их.</span><span class="sxs-lookup"><span data-stu-id="3a3a1-103">WCF Discovery consists of a set of types that provide a unified programming model that allows you to write services that are discoverable at runtime and clients that find and use these services.</span></span>  

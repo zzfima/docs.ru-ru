@@ -8,6 +8,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33275630"
 ---
 # <a name="linq-in-c"></a><span data-ttu-id="fb0f8-103">LINQ в C#</span><span class="sxs-lookup"><span data-stu-id="fb0f8-103">LINQ in C#</span></span>
 <span data-ttu-id="fb0f8-104">Этот раздел включает ссылки на разделы, содержащие более подробные сведения о LINQ.</span><span class="sxs-lookup"><span data-stu-id="fb0f8-104">This section contains links to topics that provide more detailed information about LINQ.</span></span>  
