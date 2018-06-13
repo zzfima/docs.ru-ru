@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538161"
 ---
 # <a name="event-handlers-overview-windows-forms"></a><span data-ttu-id="e62e5-102">Обзор обработчиков событий (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="e62e5-102">Event Handlers Overview (Windows Forms)</span></span>
 <span data-ttu-id="e62e5-103">Обработчик событий — метод, связанный с событием.</span><span class="sxs-lookup"><span data-stu-id="e62e5-103">An event handler is a method that is bound to an event.</span></span> <span data-ttu-id="e62e5-104">При возникновении события выполняется код в обработчик событий.</span><span class="sxs-lookup"><span data-stu-id="e62e5-104">When the event is raised, the code within the event handler is executed.</span></span> <span data-ttu-id="e62e5-105">Каждый обработчик событий предоставляет два параметра, которые дают возможность правильно обработать событие.</span><span class="sxs-lookup"><span data-stu-id="e62e5-105">Each event handler provides two parameters that allow you to handle the event properly.</span></span> <span data-ttu-id="e62e5-106">В примере показан обработчик событий для <xref:System.Windows.Forms.Button> элемента управления <xref:System.Windows.Forms.Control.Click> событий.</span><span class="sxs-lookup"><span data-stu-id="e62e5-106">The following example shows an event handler for a <xref:System.Windows.Forms.Button> control's <xref:System.Windows.Forms.Control.Click> event.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502938"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a><span data-ttu-id="8afb6-102">Каналы WCF с поддержкой ReceiveContext</span><span class="sxs-lookup"><span data-stu-id="8afb6-102">ReceiveContext-Enabled WCF Channels</span></span>
 <span data-ttu-id="8afb6-103">Данный образец демонстрирует применение каналов WCF с поддержкой <xref:System.ServiceModel.Channels.ReceiveContext>.</span><span class="sxs-lookup"><span data-stu-id="8afb6-103">This sample demonstrates the usefulness of <xref:System.ServiceModel.Channels.ReceiveContext>-enabled WCF channels.</span></span> <span data-ttu-id="8afb6-104">Образец реализует службу для нахождения произведения двух чисел с помощью канала NetMSMQ.</span><span class="sxs-lookup"><span data-stu-id="8afb6-104">The sample implements a service to find the product of two numbers using a NetMSMQ channel.</span></span>  

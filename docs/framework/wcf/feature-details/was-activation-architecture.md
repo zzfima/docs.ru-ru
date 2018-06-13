@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498001"
 ---
 # <a name="was-activation-architecture"></a><span data-ttu-id="57f74-102">Архитектура активации WAS</span><span class="sxs-lookup"><span data-stu-id="57f74-102">WAS Activation Architecture</span></span>
 <span data-ttu-id="57f74-103">В настоящем разделе перечисляются и обсуждаются компоненты службы активации процесса Windows (также известной как WAS).</span><span class="sxs-lookup"><span data-stu-id="57f74-103">This topic itemizes and discusses the components of the Windows Process Activation Service (also known as WAS).</span></span>  

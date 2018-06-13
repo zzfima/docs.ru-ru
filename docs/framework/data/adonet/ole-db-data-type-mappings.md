@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32758936"
 ---
 # <a name="ole-db-data-type-mappings"></a><span data-ttu-id="938e5-102">Сопоставления типов данных OLE DB</span><span class="sxs-lookup"><span data-stu-id="938e5-102">OLE DB Data Type Mappings</span></span>
 <span data-ttu-id="938e5-103">В приведенной ниже таблице показаны выводимые типы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для типов данных поставщика данных .NET Framework для ADO и OLE DB (<xref:System.Data.OleDb>).</span><span class="sxs-lookup"><span data-stu-id="938e5-103">The following table shows the inferred [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type for data types from the .NET Framework Data Provider for ADO and OLE DB (<xref:System.Data.OleDb>).</span></span> <span data-ttu-id="938e5-104">Приведены также типизированные методы доступа для <xref:System.Data.OleDb.OleDbDataReader>.</span><span class="sxs-lookup"><span data-stu-id="938e5-104">The typed accessor methods for the <xref:System.Data.OleDb.OleDbDataReader> are also listed.</span></span>  

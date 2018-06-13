@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500068"
 ---
 # <a name="web-extensibility"></a><span data-ttu-id="d8c50-102">Веб-расширяемость</span><span class="sxs-lookup"><span data-stu-id="d8c50-102">Web Extensibility</span></span>
 <span data-ttu-id="d8c50-103">Этот раздел содержит образцы, демонстрирующие пользовательские веб-функций в Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="d8c50-103">This section contains samples that demonstrate custom Web functionality in Windows Communication Foundation (WCF).</span></span>  

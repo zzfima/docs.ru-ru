@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499684"
 ---
 # <a name="bytestream-encoder"></a><span data-ttu-id="d7f70-102">Кодировщик ByteStream</span><span class="sxs-lookup"><span data-stu-id="d7f70-102">ByteStream Encoder</span></span>
 <span data-ttu-id="d7f70-103">В этом образце показано, как создать привязку `ByteStreamHttpBinding`, которая имеет тип <xref:System.ServiceModel.Channels.Binding> и демонстрирует функциональные возможности кодировщика байтового потока.</span><span class="sxs-lookup"><span data-stu-id="d7f70-103">This sample demonstrates how to create a `ByteStreamHttpBinding`, a <xref:System.ServiceModel.Channels.Binding> that demonstrates the functionality of the byte stream encoder.</span></span>  

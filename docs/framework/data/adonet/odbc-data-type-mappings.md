@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32765429"
 ---
 # <a name="odbc-data-type-mappings"></a><span data-ttu-id="8575a-102">Сопоставления типов данных ODBC</span><span class="sxs-lookup"><span data-stu-id="8575a-102">ODBC Data Type Mappings</span></span>
 <span data-ttu-id="8575a-103">В приведенной ниже таблице показаны выводимые типы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для типов данных поставщика данных .NET Framework для ODBC (<xref:System.Data.Odbc>).</span><span class="sxs-lookup"><span data-stu-id="8575a-103">The following table shows the inferred [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] type for data types from the .NET Framework Data Provider for ODBC (<xref:System.Data.Odbc>).</span></span> <span data-ttu-id="8575a-104">Приведены также типизированные методы доступа для <xref:System.Data.Odbc.OdbcDataReader>.</span><span class="sxs-lookup"><span data-stu-id="8575a-104">The typed accessor methods for the <xref:System.Data.Odbc.OdbcDataReader> are also listed.</span></span>  

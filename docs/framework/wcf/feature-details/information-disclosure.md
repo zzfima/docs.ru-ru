@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495987"
 ---
 # <a name="information-disclosure"></a><span data-ttu-id="75841-102">Раскрытие информации</span><span class="sxs-lookup"><span data-stu-id="75841-102">Information Disclosure</span></span>
 <span data-ttu-id="75841-103">Раскрытие информации позволяет злоумышленнику получить ценную информацию о системе.</span><span class="sxs-lookup"><span data-stu-id="75841-103">Information disclosure enables an attacker to gain valuable information about a system.</span></span> <span data-ttu-id="75841-104">Следовательно, всегда обращайте внимание на то, какая информация раскрывается, и может ли ее использовать злоумышленник.</span><span class="sxs-lookup"><span data-stu-id="75841-104">Therefore, always consider what information you are revealing and whether it can be used by a malicious user.</span></span> <span data-ttu-id="75841-105">Далее перечислены возможные атаки, связанные с раскрытием информации, и способы устранения рисков.</span><span class="sxs-lookup"><span data-stu-id="75841-105">The following lists possible information disclosure attacks and provides mitigations for each.</span></span>  

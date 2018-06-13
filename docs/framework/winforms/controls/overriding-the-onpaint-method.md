@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537220"
 ---
 # <a name="overriding-the-onpaint-method"></a><span data-ttu-id="ad3f2-102">Переопределение метода OnPaint</span><span class="sxs-lookup"><span data-stu-id="ad3f2-102">Overriding the OnPaint Method</span></span>
 <span data-ttu-id="ad3f2-103">Основные шаги для переопределения любого события, определенного в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] идентичны и обобщены в следующем списке.</span><span class="sxs-lookup"><span data-stu-id="ad3f2-103">The basic steps for overriding any event defined in the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] are identical and are summarized in the following list.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507903"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a><span data-ttu-id="995d4-102">Оснастка консоли MMC для конфигурации WS-AtomicTransaction</span><span class="sxs-lookup"><span data-stu-id="995d4-102">WS-AtomicTransaction Configuration MMC Snap-in</span></span>
 <span data-ttu-id="995d4-103">Оснастка консоли MMC для настройки WS-AtomicTransaction позволяет настраивать параметры WS-AtomicTransaction как на локальном, так и на удаленном компьютерах.</span><span class="sxs-lookup"><span data-stu-id="995d4-103">The WS-AtomicTransaction Configuration MMC Snap-in is used to configure a portion of the WS-AtomicTransaction settings on both local and remote machines.</span></span>  

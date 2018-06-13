@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33340467"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-c"></a><span data-ttu-id="f2645-102">Использование вариативности в интерфейсах для универсальных коллекций (C#)</span><span class="sxs-lookup"><span data-stu-id="f2645-102">Using Variance in Interfaces for Generic Collections (C#)</span></span>
 <span data-ttu-id="f2645-103">Ковариантный интерфейс позволяет его методам возвращать более производные типы, чем указанные в интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="f2645-103">A covariant interface allows its methods to return more derived types than those specified in the interface.</span></span> <span data-ttu-id="f2645-104">Контравариантный интерфейс позволяет его методам принимать параметры менее производных типов, чем указанные в интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="f2645-104">A contravariant interface allows its methods to accept parameters of less derived types than those specified in the interface.</span></span>  

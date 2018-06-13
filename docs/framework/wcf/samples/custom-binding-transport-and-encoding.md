@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500910"
 ---
 # <a name="custom-binding-transport-and-encoding"></a><span data-ttu-id="1fa21-102">Транспорт и кодировка пользовательской привязки</span><span class="sxs-lookup"><span data-stu-id="1fa21-102">Custom Binding Transport and Encoding</span></span>
 <span data-ttu-id="1fa21-103">Пользовательская привязка определяется упорядоченным списком отдельных элементов привязки.</span><span class="sxs-lookup"><span data-stu-id="1fa21-103">A custom binding is defined by an ordered list of discrete binding elements.</span></span> <span data-ttu-id="1fa21-104">Этот образец демонстрирует, как настроить пользовательскую привязку с различными элементами транспорта и кодирования сообщений.</span><span class="sxs-lookup"><span data-stu-id="1fa21-104">This sample demonstrates how to configure a custom binding with various transport and message encoding elements.</span></span>  

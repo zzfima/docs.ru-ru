@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749001"
 ---
 # <a name="ltnetfx40pinvokestackresiliencegt-element"></a><span data-ttu-id="836d1-102">&lt;NetFx40_PInvokeStackResilience&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="836d1-102">&lt;NetFx40_PInvokeStackResilience&gt; Element</span></span>
 <span data-ttu-id="836d1-103">Указывает, исправляет ли автоматически среда выполнения неправильные объявления вызова неуправляемого кода во время выполнения за счет скорости перехода между управляемыми и неуправляемым кодом.</span><span class="sxs-lookup"><span data-stu-id="836d1-103">Specifies whether the runtime automatically fixes incorrect platform invoke declarations at run time, at the cost of slower transitions between managed and unmanaged code.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550944"
 ---
 # <a name="how-to-create-a-button-that-has-an-image"></a><span data-ttu-id="fa6a7-102">Практическое руководство. Создание кнопки, содержащей изображение</span><span class="sxs-lookup"><span data-stu-id="fa6a7-102">How to: Create a Button That Has an Image</span></span>
 <span data-ttu-id="fa6a7-103">В этом примере показано, как включить изображение в <xref:System.Windows.Controls.Button>.</span><span class="sxs-lookup"><span data-stu-id="fa6a7-103">This example shows how to include an image on a <xref:System.Windows.Controls.Button>.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32761211"
 ---
 # <a name="other-canonical-functions"></a><span data-ttu-id="6fb5c-102">Прочие канонические функции</span><span class="sxs-lookup"><span data-stu-id="6fb5c-102">Other Canonical Functions</span></span>
 <span data-ttu-id="6fb5c-103">Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] включает канонические функции, которые не относятся к побитовым, статистическим, математическим, даты-времени или строковым.</span><span class="sxs-lookup"><span data-stu-id="6fb5c-103">[!INCLUDE[esql](../../../../../../includes/esql-md.md)] includes canonical functions not classified as bitwise, aggregate, math, date/time, or string.</span></span>  

@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498053"
 ---
 # <a name="using-servicethrottlingbehavior-to-control-wcf-service-performance"></a><span data-ttu-id="b7b69-102">Использование ServiceThrottlingBehavior для управления производительностью службы WCF</span><span class="sxs-lookup"><span data-stu-id="b7b69-102">Using ServiceThrottlingBehavior to Control WCF Service Performance</span></span>
 <span data-ttu-id="b7b69-103">Класс <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> представляет свойства, которые можно использовать для ограничения количества экземпляров или сеансов, создаваемых на уровне приложения.</span><span class="sxs-lookup"><span data-stu-id="b7b69-103">The <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> class exposes properties that you can use to limit how many instances or sessions are created at the application level.</span></span> <span data-ttu-id="b7b69-104">С помощью этого поведения, можно оптимизировать производительность приложения Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="b7b69-104">Using this behavior, you can fine-tune the performance of your Windows Communication Foundation (WCF) application.</span></span>  

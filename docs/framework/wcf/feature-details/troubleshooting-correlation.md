@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508388"
 ---
 # <a name="troubleshooting-correlation"></a><span data-ttu-id="139b9-102">Устранение неполадок корреляции</span><span class="sxs-lookup"><span data-stu-id="139b9-102">Troubleshooting Correlation</span></span>
 <span data-ttu-id="139b9-103">Корреляция позволяет сопоставлять сообщения службы рабочего процесса друг с другом и с нужным экземпляром рабочего процесса. Если же корреляция настроена неправильно, то сообщения не будут приниматься и приложения будут работать неправильно.</span><span class="sxs-lookup"><span data-stu-id="139b9-103">Correlation is used to relate workflow service messages to each other and to the correct workflow instance, but if it is not configured correctly, messages will not be received and applications will not work correctly.</span></span> <span data-ttu-id="139b9-104">В этом разделе даны общие сведения о нескольких методах устранения неполадок корреляции, а также перечислен ряд распространенных проблем, которые возникают при использовании корреляции.</span><span class="sxs-lookup"><span data-stu-id="139b9-104">This topic provides an overview of several methods for troubleshooting correlation issues, and also lists some common issues that can occur when you use correlation.</span></span>  

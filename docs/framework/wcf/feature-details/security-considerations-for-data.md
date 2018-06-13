@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509083"
 ---
 # <a name="security-considerations-for-data"></a><span data-ttu-id="55f9a-102">Вопросы безопасности для данных</span><span class="sxs-lookup"><span data-stu-id="55f9a-102">Security Considerations for Data</span></span>
 <span data-ttu-id="55f9a-103">При работе с данными в Windows Communication Foundation (WCF), необходимо учитывать ряд категорий угроз.</span><span class="sxs-lookup"><span data-stu-id="55f9a-103">When dealing with data in Windows Communication Foundation (WCF), you must consider a number of threat categories.</span></span> <span data-ttu-id="55f9a-104">В следующей таблице представлен список наиболее важных классов угроз, относящихся к обработке данных.</span><span class="sxs-lookup"><span data-stu-id="55f9a-104">The following table lists the most important threat classes that relate to data processing.</span></span> <span data-ttu-id="55f9a-105">WCF предоставляет средства для борьбы с такими угрозами.</span><span class="sxs-lookup"><span data-stu-id="55f9a-105">WCF provides tools to mitigate these threats.</span></span>  

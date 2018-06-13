@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503685"
 ---
 # <a name="service-debug-behavior"></a><span data-ttu-id="7d1d4-102">Поведение отладки службы</span><span class="sxs-lookup"><span data-stu-id="7d1d4-102">Service Debug Behavior</span></span>
 <span data-ttu-id="7d1d4-103">В этом образце показано, как могут настраиваться параметры поведения отладки службы.</span><span class="sxs-lookup"><span data-stu-id="7d1d4-103">This sample demonstrates how service debug behavior settings can be configured.</span></span> <span data-ttu-id="7d1d4-104">Пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует `ICalculator` контракт службы.</span><span class="sxs-lookup"><span data-stu-id="7d1d4-104">The sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md), which implements the `ICalculator` service contract.</span></span> <span data-ttu-id="7d1d4-105">Этот образец явно определяет поведение отладки службы в файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="7d1d4-105">This sample explicitly defines service debug behavior in the configuration file.</span></span> <span data-ttu-id="7d1d4-106">Это также можно выполнить императивно в коде.</span><span class="sxs-lookup"><span data-stu-id="7d1d4-106">It can also be done imperatively in code.</span></span>  

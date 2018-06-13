@@ -16,6 +16,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32754162"
 ---
 # <a name="ltperformancecountersgt-element"></a><span data-ttu-id="22436-102">&lt;performanceCounters&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="22436-102">&lt;performanceCounters&gt; Element</span></span>
 <span data-ttu-id="22436-103">Задает размер глобальной памяти, совместно используемой счетчиками производительности.</span><span class="sxs-lookup"><span data-stu-id="22436-103">Specifies the size of the global memory shared by performance counters.</span></span>  

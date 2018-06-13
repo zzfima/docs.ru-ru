@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539057"
 ---
 # <a name="activate-function-wpf-unmanaged-api-reference"></a><span data-ttu-id="e1ea8-102">Активировать функции (WPF Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="e1ea8-102">Activate Function (WPF Unmanaged API Reference)</span></span>
 <span data-ttu-id="e1ea8-103">Этот API поддерживает инфраструктуру Windows Presentation Foundation (WPF) и не предназначен для использования непосредственно из программного кода.</span><span class="sxs-lookup"><span data-stu-id="e1ea8-103">This API supports the Windows Presentation Foundation (WPF) infrastructure and is not intended to be used directly from your code.</span></span>  

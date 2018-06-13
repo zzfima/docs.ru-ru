@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32751354"
 ---
 # <a name="ltmsmqtransportgt"></a><span data-ttu-id="d7932-102">&lt;msmqTransport&gt;</span><span class="sxs-lookup"><span data-stu-id="d7932-102">&lt;msmqTransport&gt;</span></span>
 <span data-ttu-id="d7932-103">Заставляет канал передавать сообщения через транспорт MSMQ, если он включен в пользовательскую привязку.</span><span class="sxs-lookup"><span data-stu-id="d7932-103">Causes a channel to transfers messages on the MSMQ transport when it is included in a custom binding.</span></span>  

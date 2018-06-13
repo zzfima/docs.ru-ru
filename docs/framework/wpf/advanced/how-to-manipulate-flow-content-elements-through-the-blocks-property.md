@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33544554"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a><span data-ttu-id="eb615-102">Практическое руководство. Управление элементами потокового содержимого через свойство Blocks</span><span class="sxs-lookup"><span data-stu-id="eb615-102">How to: Manipulate Flow Content Elements through the Blocks Property</span></span>
 <span data-ttu-id="eb615-103">Эти примеры демонстрируют некоторые из наиболее распространенных операций, которые могут быть выполнены в элементах потока содержимого с помощью **блоки** свойство.</span><span class="sxs-lookup"><span data-stu-id="eb615-103">These examples demonstrate some of the more common operations that can be performed on flow content elements through the **Blocks** property.</span></span> <span data-ttu-id="eb615-104">Это свойство используется для добавления и удаления элементов из <xref:System.Windows.Documents.BlockCollection>.</span><span class="sxs-lookup"><span data-stu-id="eb615-104">This property is used to add and remove items from <xref:System.Windows.Documents.BlockCollection>.</span></span> <span data-ttu-id="eb615-105">Элементы содержимого на поток, эта функция **блоки** свойства включают:</span><span class="sxs-lookup"><span data-stu-id="eb615-105">Flow content elements that feature a **Blocks** property include:</span></span>  

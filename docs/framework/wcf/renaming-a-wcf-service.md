@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498991"
 ---
 # <a name="renaming-a-wcf-service"></a><span data-ttu-id="84754-102">Переименование службы WCF</span><span class="sxs-lookup"><span data-stu-id="84754-102">Renaming a WCF Service</span></span>
 <span data-ttu-id="84754-103">Описывается, как переименовать службы Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="84754-103">This topic describes how you can rename a Windows Communication Foundation (WCF) service.</span></span>  

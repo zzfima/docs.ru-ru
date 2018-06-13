@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511271"
 ---
 # <a name="4212---lockretrytimeout"></a><span data-ttu-id="ff4d3-102">4212 - LockRetryTimeout</span><span class="sxs-lookup"><span data-stu-id="ff4d3-102">4212 - LockRetryTimeout</span></span>
 ## <a name="properties"></a><span data-ttu-id="ff4d3-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="ff4d3-103">Properties</span></span>  

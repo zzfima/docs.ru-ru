@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538009"
 ---
 # <a name="how-to-create-event-handlers-at-run-time-for-windows-forms"></a><span data-ttu-id="9e77f-102">Практическое руководство. Создание обработчиков событий для Windows Forms во время выполнения</span><span class="sxs-lookup"><span data-stu-id="9e77f-102">How to: Create Event Handlers at Run Time for Windows Forms</span></span>
 <span data-ttu-id="9e77f-103">Помимо создания событий с помощью конструктора Windows Forms можно также создать обработчик событий во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="9e77f-103">In addition to creating events using the Windows Forms Designer, you can also create an event handler at run time.</span></span> <span data-ttu-id="9e77f-104">Это позволит подключать обработчики событий в зависимости от условий в коде во время выполнения, а не при начальном запуске программы.</span><span class="sxs-lookup"><span data-stu-id="9e77f-104">This action allows you to connect event handlers based on conditions in code at run time as opposed to having them connected when the program initially starts.</span></span>  

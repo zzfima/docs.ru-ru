@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561752"
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a><span data-ttu-id="d5722-102">Как установить размер мозаики для TileBrush</span><span class="sxs-lookup"><span data-stu-id="d5722-102">How to: Set the Tile Size for a TileBrush</span></span>
 <span data-ttu-id="d5722-103">В этом примере показано, как установить размер мозаики для <xref:System.Windows.Media.TileBrush>.</span><span class="sxs-lookup"><span data-stu-id="d5722-103">This example shows how to set the tile size for a <xref:System.Windows.Media.TileBrush>.</span></span> <span data-ttu-id="d5722-104">По умолчанию <xref:System.Windows.Media.TileBrush> создает один фрагмент, который полностью заполняет область раскрашивания.</span><span class="sxs-lookup"><span data-stu-id="d5722-104">By default, a <xref:System.Windows.Media.TileBrush> produces a single tile that completely fills the area that you are painting.</span></span> <span data-ttu-id="d5722-105">Это поведение можно переопределить, задав <xref:System.Windows.Media.TileBrush.Viewport%2A> и <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> свойства.</span><span class="sxs-lookup"><span data-stu-id="d5722-105">You can override this behavior by setting the <xref:System.Windows.Media.TileBrush.Viewport%2A> and <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> properties.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503214"
 ---
 # <a name="custom-find-criteria"></a><span data-ttu-id="5e270-102">Пользовательские критерии поиска</span><span class="sxs-lookup"><span data-stu-id="5e270-102">Custom Find Criteria</span></span>
 <span data-ttu-id="5e270-103">В этом образце показано, как создать логику сопоставления пользовательских областей и реализовать пользовательскую службу обнаружения.</span><span class="sxs-lookup"><span data-stu-id="5e270-103">This sample demonstrates how to create a custom scope match using logic and how to implement a custom discovery service.</span></span> <span data-ttu-id="5e270-104">Клиенты используют функции сопоставления пользовательских областей, чтобы расширить функции поиска, предоставляемые системой WCF Discovery.</span><span class="sxs-lookup"><span data-stu-id="5e270-104">Clients use custom scope matching functionality to refine and further build on top of the system-provided find functionality of WCF Discovery.</span></span> <span data-ttu-id="5e270-105">В этом образце реализован следующий сценарий.</span><span class="sxs-lookup"><span data-stu-id="5e270-105">The scenario this sample covers is as follows:</span></span>  

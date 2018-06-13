@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501511"
 ---
 # <a name="local-channel"></a><span data-ttu-id="43c60-102">Локальный канал</span><span class="sxs-lookup"><span data-stu-id="43c60-102">Local Channel</span></span>
 <span data-ttu-id="43c60-103">Локальный канал находится канал транспорта Windows Communication Foundation (WCF), используемый для обмена данными в том же домене приложения.</span><span class="sxs-lookup"><span data-stu-id="43c60-103">Local Channel is a Windows Communication Foundation (WCF) transport channel that is used for communication within the same application domain.</span></span> <span data-ttu-id="43c60-104">Это полезно в случаях, когда клиент и служба работают на одном домене приложения и требуется избежать увеличения расхода ресурсов типичного WCF-канала (сериализация и десериализация сообщений).</span><span class="sxs-lookup"><span data-stu-id="43c60-104">This is useful for scenarios where the client and the service are running in the same application domain and the overhead of the typical WCF channel stack (serialization and deserialization of messages) must be avoided.</span></span>  

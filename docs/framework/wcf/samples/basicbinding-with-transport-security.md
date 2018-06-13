@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502693"
 ---
 # <a name="basicbinding-with-transport-security"></a><span data-ttu-id="be88c-102">BasicBinding с обеспечением безопасности транспорта</span><span class="sxs-lookup"><span data-stu-id="be88c-102">BasicBinding with Transport Security</span></span>
 <span data-ttu-id="be88c-103">Этот образец демонстрирует использование безопасности транспорта SSL с использованием основной привязки.</span><span class="sxs-lookup"><span data-stu-id="be88c-103">This sample demonstrates the use of SSL transport security with the basic binding.</span></span> <span data-ttu-id="be88c-104">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора.</span><span class="sxs-lookup"><span data-stu-id="be88c-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  

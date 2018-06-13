@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496735"
 ---
 # <a name="how-to-set-a-max-clock-skew"></a><span data-ttu-id="598a6-102">Практическое руководство. Установка максимальной разницы в показаниях часов</span><span class="sxs-lookup"><span data-stu-id="598a6-102">How to: Set a Max Clock Skew</span></span>
 <span data-ttu-id="598a6-103">Если настройки времени в двух компьютерах различаются, возможен сбой критичных по времени функций.</span><span class="sxs-lookup"><span data-stu-id="598a6-103">Time-critical functions can be derailed if the clock settings on two computers are different.</span></span> <span data-ttu-id="598a6-104">Чтобы устранить такую возможность, можно задать для свойства `MaxClockSkew` значение <xref:System.TimeSpan>.</span><span class="sxs-lookup"><span data-stu-id="598a6-104">To mitigate this possibility, you can set the `MaxClockSkew` property to a <xref:System.TimeSpan>.</span></span> <span data-ttu-id="598a6-105">Это свойство предусмотрено в двух классах.</span><span class="sxs-lookup"><span data-stu-id="598a6-105">This property is available on two classes:</span></span>  

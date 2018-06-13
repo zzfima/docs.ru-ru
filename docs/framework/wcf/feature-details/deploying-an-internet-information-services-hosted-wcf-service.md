@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496384"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a><span data-ttu-id="76c1d-102">Развертывание службы WCF, размещенной в IIS</span><span class="sxs-lookup"><span data-stu-id="76c1d-102">Deploying an Internet Information Services-Hosted WCF Service</span></span>
 <span data-ttu-id="76c1d-103">Разработка и развертывание службы Windows Communication Foundation (WCF), размещенного в Internet Information Services (IIS) состоит из следующих задач:</span><span class="sxs-lookup"><span data-stu-id="76c1d-103">Developing and deploying a Windows Communication Foundation (WCF) service that is hosted in Internet Information Services (IIS) consists of the following tasks:</span></span>  

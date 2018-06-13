@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507985"
 ---
 # <a name="dead-letter-queues"></a><span data-ttu-id="3bb83-102">Очереди недоставленных сообщений</span><span class="sxs-lookup"><span data-stu-id="3bb83-102">Dead Letter Queues</span></span>
 <span data-ttu-id="3bb83-103">В этом образце показано, как обрабатывать недоставленные сообщения.</span><span class="sxs-lookup"><span data-stu-id="3bb83-103">This sample demonstrates how to handle and process messages that have failed delivery.</span></span> <span data-ttu-id="3bb83-104">Он основан на [транзакции привязки MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) образца.</span><span class="sxs-lookup"><span data-stu-id="3bb83-104">It is based on the [Transacted MSMQ Binding](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) sample.</span></span> <span data-ttu-id="3bb83-105">В этом примере используется привязка `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="3bb83-105">This sample uses the `netMsmqBinding` binding.</span></span> <span data-ttu-id="3bb83-106">Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди.</span><span class="sxs-lookup"><span data-stu-id="3bb83-106">The service is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

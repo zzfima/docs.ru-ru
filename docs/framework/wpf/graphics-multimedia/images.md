@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561703"
 ---
 # <a name="images"></a><span data-ttu-id="2cec4-102">Изображения</span><span class="sxs-lookup"><span data-stu-id="2cec4-102">Images</span></span>
 <span data-ttu-id="2cec4-103">Платформа [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обеспечивает встроенную поддержку большого числа разных форматов изображений, отрисовку изображений высокого качества и расширяемость кодеков.</span><span class="sxs-lookup"><span data-stu-id="2cec4-103">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides built-in support for multiple image formats, high fidelity image rendering, and codec extensibility.</span></span>  

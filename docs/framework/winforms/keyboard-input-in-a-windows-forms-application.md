@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33537077"
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a><span data-ttu-id="1e0ca-102">Ввод с клавиатуры в приложении Windows Forms</span><span class="sxs-lookup"><span data-stu-id="1e0ca-102">Keyboard Input in a Windows Forms Application</span></span>
 <span data-ttu-id="1e0ca-103">Windows Forms содержит стандартные события клавиатуры, которые позволяют реагировать на нажатия определенных клавиш, а также предоставляет способы для перехвата, изменить и получения нажатий клавиш на уровне приложения, формы, и управлять уровнем.</span><span class="sxs-lookup"><span data-stu-id="1e0ca-103">Windows Forms includes standard keyboard events that allow you to respond to specific key presses, and also provides ways for you to intercept, modify, and consume key presses at the application, form, and control level.</span></span>  

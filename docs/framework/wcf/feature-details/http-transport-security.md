@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33495926"
 ---
 # <a name="http-transport-security"></a><span data-ttu-id="0426e-102">Безопасность транспорта HTTP</span><span class="sxs-lookup"><span data-stu-id="0426e-102">HTTP Transport Security</span></span>
 <span data-ttu-id="0426e-103">Если в качестве транспорта используется протокол HTTP, безопасность обеспечивается реализацией протокола SSL (Secure Sockets Layer).</span><span class="sxs-lookup"><span data-stu-id="0426e-103">When using HTTP as the transport, security is provided by a Secure Sockets Layer (SSL) implementation.</span></span> <span data-ttu-id="0426e-104">Протокол SSL широко используется в Интернете для проверки подлинности службы при подключении клиента, а затем и для обеспечения конфиденциальности (шифрования) канала.</span><span class="sxs-lookup"><span data-stu-id="0426e-104">SSL is widely used on the Internet to authenticate a service to a client, and then to provide confidentiality (encryption) to the channel.</span></span> <span data-ttu-id="0426e-105">В этом разделе объясняется, как работает SSL и как она реализована в Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="0426e-105">This topic explains how SSL works and how it is implemented in Windows Communication Foundation (WCF).</span></span>  

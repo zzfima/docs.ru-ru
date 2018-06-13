@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499145"
 ---
 # <a name="streaming-message-transfer"></a><span data-ttu-id="89c3e-102">Потоковая передача сообщений</span><span class="sxs-lookup"><span data-stu-id="89c3e-102">Streaming Message Transfer</span></span>
 <span data-ttu-id="89c3e-103">Windows Communication Foundation (WCF) транспорты поддерживают два режима передачи сообщений:</span><span class="sxs-lookup"><span data-stu-id="89c3e-103">Windows Communication Foundation (WCF) transports support two modes for transferring messages:</span></span>  

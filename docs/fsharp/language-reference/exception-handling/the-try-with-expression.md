@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33565292"
 ---
 # <a name="exceptions-the-trywith-expression"></a><span data-ttu-id="11fc8-103">Исключения: выражение try...with</span><span class="sxs-lookup"><span data-stu-id="11fc8-103">Exceptions: The try...with Expression</span></span>
 

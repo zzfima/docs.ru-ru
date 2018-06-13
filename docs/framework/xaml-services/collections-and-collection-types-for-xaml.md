@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562980"
 ---
 # <a name="collections-and-collection-types-for-xaml"></a><span data-ttu-id="1f142-102">Коллекции и типы коллекций для XAML</span><span class="sxs-lookup"><span data-stu-id="1f142-102">Collections and Collection Types for XAML</span></span>
 <span data-ttu-id="1f142-103">В этом разделе описывается определение свойства типов, которые предназначены для поддержки коллекции, которые поддерживают синтаксис XAML для создания экземпляров элементов коллекции как дочерние элементы родительского элемента объекта или свойства элемента.</span><span class="sxs-lookup"><span data-stu-id="1f142-103">This topic describes how to define properties of types that are intended to support a collection, and to support the XAML syntax for instantiating collection items as element children of a parent object element or property element.</span></span>  

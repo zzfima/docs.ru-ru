@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33538597"
 ---
 # <a name="webbrowser-control-windows-forms"></a><span data-ttu-id="b26fb-102">Общие сведения об элементе управления WebBrowser (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="b26fb-102">WebBrowser Control (Windows Forms)</span></span>
 <span data-ttu-id="b26fb-103">Windows Forms `WebBrowser` элемент управления содержит веб-страницы и предоставляет приложению возможности работы в Интернете.</span><span class="sxs-lookup"><span data-stu-id="b26fb-103">The Windows Forms `WebBrowser` control hosts Web pages and provides Web browsing capabilities to your application.</span></span>  

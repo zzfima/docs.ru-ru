@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506578"
 ---
 # <a name="sessions-instancing-and-concurrency"></a><span data-ttu-id="6e374-102">Сеансы, экземпляры и параллелизм</span><span class="sxs-lookup"><span data-stu-id="6e374-102">Sessions, Instancing, and Concurrency</span></span>
 <span data-ttu-id="6e374-103">Под *сеансом* понимается скоррелированный набор всех сообщений, переданных между двумя конечными точками.</span><span class="sxs-lookup"><span data-stu-id="6e374-103">A *session* is a correlation of all messages sent between two endpoints.</span></span> <span data-ttu-id="6e374-104">*Создание экземпляров* означает управление временем жизни определенных пользователем объектов службы и связанных с ними объектов <xref:System.ServiceModel.InstanceContext> .</span><span class="sxs-lookup"><span data-stu-id="6e374-104">*Instancing* refers to controlling the lifetime of user-defined service objects and their related <xref:System.ServiceModel.InstanceContext> objects.</span></span> <span data-ttu-id="6e374-105">Термин*параллелизм* означает управление количеством потоков, одновременно выполняющихся в некотором контексте <xref:System.ServiceModel.InstanceContext> .</span><span class="sxs-lookup"><span data-stu-id="6e374-105">*Concurrency* is the term given to the control of the number of threads executing in an <xref:System.ServiceModel.InstanceContext> at the same time.</span></span>  

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541337"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a><span data-ttu-id="9804e-102">Проверка и обратные вызовы свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="9804e-102">Dependency Property Callbacks and Validation</span></span>
 <span data-ttu-id="9804e-103">В этом разделе описывается создание свойства зависимостей с помощью альтернативных пользовательских реализаций функций, связанных со свойствами, таких как определение проверки, обратные вызовы, которые совершаются при каждом изменении эффективного значения свойства, и переопределение возможных внешних влияний на определение значения.</span><span class="sxs-lookup"><span data-stu-id="9804e-103">This topic describes how to create dependency properties using alternative custom implementations for property-related features such as validation determination, callbacks that are invoked whenever the property's effective value is changed, and overriding possible outside influences on value determination.</span></span> <span data-ttu-id="9804e-104">В этом разделе также рассматриваются сценарии, в которых подходит расширение стандартных правил для системы свойств с помощью этих методов.</span><span class="sxs-lookup"><span data-stu-id="9804e-104">This topic also discusses scenarios where expanding on the default property system behaviors by using these techniques is appropriate.</span></span>  

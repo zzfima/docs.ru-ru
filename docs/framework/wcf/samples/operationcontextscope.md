@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505148"
 ---
 # <a name="operationcontextscope"></a><span data-ttu-id="20ed4-102">OperationContextScope</span><span class="sxs-lookup"><span data-stu-id="20ed4-102">OperationContextScope</span></span>
 <span data-ttu-id="20ed4-103">В образце OperationContextScope показано, как способ отправки дополнительной информации во время вызова Windows Communication Foundation (WCF), с помощью заголовков.</span><span class="sxs-lookup"><span data-stu-id="20ed4-103">The OperationContextScope sample demonstrates how to send extra information on a Windows Communication Foundation (WCF) call using headers.</span></span> <span data-ttu-id="20ed4-104">В этом образце сервер и клиент являются консольными приложениями.</span><span class="sxs-lookup"><span data-stu-id="20ed4-104">In this sample, both the server and client are console applications.</span></span>  

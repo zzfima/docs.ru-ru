@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536817"
 ---
 # <a name="notifyicon-component-overview-windows-forms"></a><span data-ttu-id="e28ff-102">Общие сведения о компоненте NotifyIcon (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="e28ff-102">NotifyIcon Component Overview (Windows Forms)</span></span>
 <span data-ttu-id="e28ff-103">Компонент <xref:System.Windows.Forms.NotifyIcon> Windows Forms обычно используется для отображения значков процессов, выполняемых в фоновом режиме и большую часть времени не выводящих пользовательский интерфейс.</span><span class="sxs-lookup"><span data-stu-id="e28ff-103">The Windows Forms <xref:System.Windows.Forms.NotifyIcon> component is typically used to display icons for processes that run in the background and do not show a user interface much of the time.</span></span> <span data-ttu-id="e28ff-104">Примером такого процесса является антивирусная программа, доступ к которой можно получить, щелкнув значок в области уведомлений о состоянии на панели задач.</span><span class="sxs-lookup"><span data-stu-id="e28ff-104">An example would be a virus protection program that can be accessed by clicking an icon in the status notification area of the taskbar.</span></span>  

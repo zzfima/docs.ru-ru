@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500982"
 ---
 # <a name="wcf-and-net-framework-client-profile"></a><span data-ttu-id="a8b37-102">WCF и профиль клиента .NET Framework</span><span class="sxs-lookup"><span data-stu-id="a8b37-102">WCF and .NET Framework Client Profile</span></span>
 [!INCLUDE[arrowhead](../../../includes/arrowhead-md.md)]<span data-ttu-id="a8b37-103"> - это облегченная версия полной версии платформы .Net Framework, созданная для клиентов, которым не требуются все возможности платформы.</span><span class="sxs-lookup"><span data-stu-id="a8b37-103"> is a lightweight version of the full .Net Framework designed for clients that don’t need the entire framework.</span></span> <span data-ttu-id="a8b37-104">Платформа клиента поддерживает не все функции Windows Communication Foundation.</span><span class="sxs-lookup"><span data-stu-id="a8b37-104">Not all of Windows Communication Foundation is supported by the client framework.</span></span>  

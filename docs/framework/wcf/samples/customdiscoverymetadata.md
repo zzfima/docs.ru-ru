@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501053"
 ---
 # <a name="customdiscoverymetadata"></a><span data-ttu-id="bb7e5-102">Метаданные CustomDiscoveryMetadata</span><span class="sxs-lookup"><span data-stu-id="bb7e5-102">CustomDiscoveryMetadata</span></span>
 <span data-ttu-id="bb7e5-103">В этом образце показано, как вставить пользовательские метаданные XML в метаданные обнаружения для конечной точки, которая предоставляется службой и поддерживает обнаружение.</span><span class="sxs-lookup"><span data-stu-id="bb7e5-103">This sample shows how to insert custom XML metadata into the discovery metadata for a discoverable endpoint exposed by a service.</span></span> <span data-ttu-id="bb7e5-104">Затем в образце показано, как клиент может найти службу и извлечь эти пользовательские данные.</span><span class="sxs-lookup"><span data-stu-id="bb7e5-104">The sample then shows how a client can search for the service and extract this custom data.</span></span> <span data-ttu-id="bb7e5-105">Этот образец состоит из двух проектов: служба и клиент.</span><span class="sxs-lookup"><span data-stu-id="bb7e5-105">This sample consists of two projects, service and client.</span></span>  

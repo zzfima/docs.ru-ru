@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32747363"
 ---
 # <a name="ltfaultpropagationquerygt-of-wcf"></a><span data-ttu-id="e767c-102">&lt;faultPropagationQuery&gt; (WCF)</span><span class="sxs-lookup"><span data-stu-id="e767c-102">&lt;faultPropagationQuery&gt; of WCF</span></span>
 <span data-ttu-id="e767c-103">Представляет запрос, который используется для отслеживания обработки ошибок, возникающих в рамках действия.</span><span class="sxs-lookup"><span data-stu-id="e767c-103">Represents a query that is used to track the handling of faults that occur within an activity.</span></span>  <span data-ttu-id="e767c-104">Это событие возникает каждый раз, когда FaultHandler обрабатывает ошибку.</span><span class="sxs-lookup"><span data-stu-id="e767c-104">This event occurs each time a FaultHandler processes a fault.</span></span> <span data-ttu-id="e767c-105">Такой запрос следует использовать для отслеживания обработки ошибок, возникающих в рамках действия.</span><span class="sxs-lookup"><span data-stu-id="e767c-105">You should use such query to track the handling of faults that occur within an activity.</span></span> <span data-ttu-id="e767c-106">Этот запрос необходим, чтобы участник отслеживания подписался на записи распространения ошибок.</span><span class="sxs-lookup"><span data-stu-id="e767c-106">The query is necessary for a  tracking participant to subscribe to fault propagation records.</span></span>  

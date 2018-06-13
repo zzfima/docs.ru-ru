@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501420"
 ---
 # <a name="mtom-encoding"></a><span data-ttu-id="4356a-102">Кодирование MTOM</span><span class="sxs-lookup"><span data-stu-id="4356a-102">MTOM Encoding</span></span>
 <span data-ttu-id="4356a-103">В данном образце демонстрируется использование кодирования сообщений с помощью механизма оптимизации передачи сообщений (MTOM) с WSHttpBinding.</span><span class="sxs-lookup"><span data-stu-id="4356a-103">This sample demonstrates the use of the Message Transmission Optimization Mechanism (MTOM) message encoding with a WSHttpBinding.</span></span> <span data-ttu-id="4356a-104">MTOM — это механизм передачи больших вложений в двоичном формате с сообщениями SOAP как необработанных байтов, допустимых для меньших сообщений.</span><span class="sxs-lookup"><span data-stu-id="4356a-104">MTOM is a mechanism for transmitting large binary attachments with SOAP messages as raw bytes, allowing for smaller messages.</span></span>  

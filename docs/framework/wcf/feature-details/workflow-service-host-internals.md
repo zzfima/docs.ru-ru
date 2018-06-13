@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33505509"
 ---
 # <a name="workflow-service-host-internals"></a><span data-ttu-id="cbef4-102">Внутренние особенности размещения службы рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="cbef4-102">Workflow Service Host Internals</span></span>
 <span data-ttu-id="cbef4-103">Объект <xref:System.ServiceModel.WorkflowServiceHost> предоставляет возможность размещения служб рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="cbef4-103"><xref:System.ServiceModel.WorkflowServiceHost> provides a host for workflow services.</span></span> <span data-ttu-id="cbef4-104">Он отвечает за прослушивание входящих сообщений и перенаправление их соответствующему экземпляру службы рабочего процесса, управляет выгрузкой и сохранением бездействующих рабочих процессов, а также выполняет другие функции.</span><span class="sxs-lookup"><span data-stu-id="cbef4-104">It is responsible for listening for incoming messages and routing them to the appropriate workflow service instance, it controls unloading and persisting of idle workflows, and more.</span></span> <span data-ttu-id="cbef4-105">В этом разделе описано, как объект WorkflowServiceHost обрабатывает входящие сообщения.</span><span class="sxs-lookup"><span data-stu-id="cbef4-105">This topic describes how WorkflowServiceHost processes incoming messages.</span></span>  

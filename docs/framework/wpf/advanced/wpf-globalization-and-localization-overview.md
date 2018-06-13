@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549621"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a><span data-ttu-id="767f4-102">Общие сведения о глобализации и локализации WPF</span><span class="sxs-lookup"><span data-stu-id="767f4-102">WPF Globalization and Localization Overview</span></span>
 <span data-ttu-id="767f4-103">Если доступность продукта ограничена только одним языком, то таким образом ограничивается потенциальная база клиентов до некоторой части всего 6,5-миллиардного мирового населения.</span><span class="sxs-lookup"><span data-stu-id="767f4-103">When you limit your product's availability to only one language, you limit your potential customer base to a fraction of our world’s 6.5 billion population.</span></span> <span data-ttu-id="767f4-104">Чтобы созданные приложения были доступны мировой аудитории, одним из лучших и наиболее экономичных способов охватить большее количество клиентов является экономически эффективная локализация продукта.</span><span class="sxs-lookup"><span data-stu-id="767f4-104">If you want your applications to reach a global audience, cost-effective localization of your product is one of the best and most economical ways to reach more customers.</span></span>  

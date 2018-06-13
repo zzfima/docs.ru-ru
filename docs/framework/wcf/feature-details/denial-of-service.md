@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496117"
 ---
 # <a name="denial-of-service"></a><span data-ttu-id="7b66b-102">Отказ в обслуживании</span><span class="sxs-lookup"><span data-stu-id="7b66b-102">Denial of Service</span></span>
 <span data-ttu-id="7b66b-103">Если система перегружена так, что не удается обрабатывать сообщения, или сообщения обрабатываются слишком медленно, происходит отказ в обслуживании.</span><span class="sxs-lookup"><span data-stu-id="7b66b-103">Denial of service occurs when a system is overwhelmed in such a way that messages cannot be processed, or they are processed extremely slowly.</span></span>  

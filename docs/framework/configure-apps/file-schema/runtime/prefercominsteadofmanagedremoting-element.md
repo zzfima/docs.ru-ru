@@ -12,6 +12,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745478"
 ---
 # <a name="ltprefercominsteadofmanagedremotinggt-element"></a><span data-ttu-id="50e8c-102">&lt;PreferComInsteadOfManagedRemoting&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="50e8c-102">&lt;PreferComInsteadOfManagedRemoting&gt; Element</span></span>
 <span data-ttu-id="50e8c-103">Указывает, использует ли среда выполнения COM-взаимодействие вместо удаленного взаимодействия для всех вызовов через границы домена приложения.</span><span class="sxs-lookup"><span data-stu-id="50e8c-103">Specifies whether the runtime will use COM interop instead of remoting for all calls across application domain boundaries.</span></span>  

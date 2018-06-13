@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33552969"
 ---
 # <a name="how-to-implement-an-adorner"></a><span data-ttu-id="6d6f1-102">Практическое руководство. Реализация декоративного элемента</span><span class="sxs-lookup"><span data-stu-id="6d6f1-102">How to: Implement an Adorner</span></span>
 <span data-ttu-id="6d6f1-103">В этом примере показана реализация минимальной графических элементов.</span><span class="sxs-lookup"><span data-stu-id="6d6f1-103">This example shows a minimal adorner implementation.</span></span>  

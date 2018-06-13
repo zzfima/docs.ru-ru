@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498560"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a><span data-ttu-id="e3347-102">Общие сведения о транзакциях Windows Communication Foundation</span><span class="sxs-lookup"><span data-stu-id="e3347-102">Windows Communication Foundation Transactions Overview</span></span>
 <span data-ttu-id="e3347-103">Транзакции обеспечивают способ группировки набора действий или операций в одну неделимую единицу выполнения.</span><span class="sxs-lookup"><span data-stu-id="e3347-103">Transactions provide a way to group a set of actions or operations into a single indivisible unit of execution.</span></span> <span data-ttu-id="e3347-104">Транзакция является коллекцией операций с перечисленными ниже свойствами.</span><span class="sxs-lookup"><span data-stu-id="e3347-104">A transaction is a collection of operations with the following properties:</span></span>  

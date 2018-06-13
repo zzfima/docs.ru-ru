@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33509645"
 ---
 # <a name="1024---createbookmarkscope"></a><span data-ttu-id="674b8-102">1024 - CreateBookmarkScope</span><span class="sxs-lookup"><span data-stu-id="674b8-102">1024 - CreateBookmarkScope</span></span>
 ## <a name="properties"></a><span data-ttu-id="674b8-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="674b8-103">Properties</span></span>  

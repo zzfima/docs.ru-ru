@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498284"
 ---
 # <a name="serializable-types"></a><span data-ttu-id="12998-102">Сериализуемые типы</span><span class="sxs-lookup"><span data-stu-id="12998-102">Serializable Types</span></span>
 <span data-ttu-id="12998-103">По умолчанию <xref:System.Runtime.Serialization.DataContractSerializer> сериализует все открытые типы.</span><span class="sxs-lookup"><span data-stu-id="12998-103">By default, the <xref:System.Runtime.Serialization.DataContractSerializer> serializes all publicly visible types.</span></span> <span data-ttu-id="12998-104">Все открытые свойства чтения/записи и поля типа сериализуются.</span><span class="sxs-lookup"><span data-stu-id="12998-104">All public read/write properties and fields of the type are serialized.</span></span>  

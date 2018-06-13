@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33550830"
 ---
 # <a name="flowdocumentscrollviewer"></a><span data-ttu-id="0832e-102">FlowDocumentScrollViewer</span><span class="sxs-lookup"><span data-stu-id="0832e-102">FlowDocumentScrollViewer</span></span>
 <span data-ttu-id="0832e-103"><xref:System.Windows.Controls.FlowDocumentScrollViewer> Управления используется для просмотра <xref:System.Windows.Documents.FlowDocument> содержимого в контейнере прокрутки.</span><span class="sxs-lookup"><span data-stu-id="0832e-103">The <xref:System.Windows.Controls.FlowDocumentScrollViewer> control is used to view <xref:System.Windows.Documents.FlowDocument> content in a scrolling container.</span></span> <span data-ttu-id="0832e-104">Этот метод противоположен <xref:System.Windows.Controls.FlowDocumentPageViewer>, который отображает содержимое по страницам.</span><span class="sxs-lookup"><span data-stu-id="0832e-104">Contrast with <xref:System.Windows.Controls.FlowDocumentPageViewer>, which views content on a per page basis.</span></span>  

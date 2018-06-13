@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502255"
 ---
 # <a name="interoperating-with-asmx-web-services"></a><span data-ttu-id="58f56-102">Взаимодействие с веб-службами ASMX</span><span class="sxs-lookup"><span data-stu-id="58f56-102">Interoperating with ASMX Web Services</span></span>
 <span data-ttu-id="58f56-103">В этом примере показано, как интегрировать клиентское приложение Windows Communication Foundation (WCF) с существующей службой ASMX.</span><span class="sxs-lookup"><span data-stu-id="58f56-103">This sample demonstrates how to integrate a Windows Communication Foundation (WCF) client application with an existing ASMX Web service.</span></span>  

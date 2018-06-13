@@ -1,13 +1,6 @@
 ---
-title: "Практическое руководство. Загрузка результатов, разбитых на страницы (службы данных WCF)"
-ms.custom: 
+title: Практическое руководство. Загрузка результатов, разбитых на страницы (службы данных WCF)
 ms.date: 03/30/2017
-ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 dev_langs:
 - csharp
 - vb
@@ -15,34 +8,30 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: bb786ea4-f3ef-4ad3-9a41-3a0b7feb6a1f
-caps.latest.revision: "2"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 405bea18b03ba695dcb952d10a193decc124841d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6706ad2eb6821c2c30b5d2482f709ba849b59f32
+ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 05/04/2018
+ms.locfileid: "33356594"
 ---
-# <a name="how-to-load-paged-results-wcf-data-services"></a><span data-ttu-id="02e8e-102">Практическое руководство. Загрузка результатов, разбитых на страницы (службы данных WCF)</span><span class="sxs-lookup"><span data-stu-id="02e8e-102">How to: Load Paged Results (WCF Data Services)</span></span>
-<span data-ttu-id="02e8e-103">Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют службе данных ограничить количество сущностей, возвращаемых в отдельном канале ответа.</span><span class="sxs-lookup"><span data-stu-id="02e8e-103">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] enables the data service to limit the number of entities that are returned in a single response feed.</span></span> <span data-ttu-id="02e8e-104">Если это происходит, последняя запись в канале содержит ссылку на следующую страницу данных.</span><span class="sxs-lookup"><span data-stu-id="02e8e-104">When this happens, the final entry in the feed contains a link to the next page of data.</span></span> <span data-ttu-id="02e8e-105">Получить URI для следующей страницы можно, вызвав метод <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> объекта <xref:System.Data.Services.Client.QueryOperationResponse%601>, возвращенного при выполнении запроса <xref:System.Data.Services.Client.DataServiceQuery%601>.</span><span class="sxs-lookup"><span data-stu-id="02e8e-105">The URI for the next page of data is obtained by calling the <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> method of the <xref:System.Data.Services.Client.QueryOperationResponse%601>, which is returned when the <xref:System.Data.Services.Client.DataServiceQuery%601> is executed.</span></span> <span data-ttu-id="02e8e-106">URI, представленный этим объектом, можно затем использовать для загрузки следующей страницы результатов.</span><span class="sxs-lookup"><span data-stu-id="02e8e-106">The URI represented by this object is then used to load the next page of results.</span></span> <span data-ttu-id="02e8e-107">Дополнительные сведения см. в разделе [загрузка отложенного содержимого](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="02e8e-107">For more information, see [Loading Deferred Content](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).</span></span>  
+# <a name="how-to-load-paged-results-wcf-data-services"></a><span data-ttu-id="5d04f-102">Практическое руководство. Загрузка результатов, разбитых на страницы (службы данных WCF)</span><span class="sxs-lookup"><span data-stu-id="5d04f-102">How to: Load Paged Results (WCF Data Services)</span></span>
+<span data-ttu-id="5d04f-103">Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяют службе данных ограничить количество сущностей, возвращаемых в отдельном канале ответа.</span><span class="sxs-lookup"><span data-stu-id="5d04f-103">[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] enables the data service to limit the number of entities that are returned in a single response feed.</span></span> <span data-ttu-id="5d04f-104">Если это происходит, последняя запись в канале содержит ссылку на следующую страницу данных.</span><span class="sxs-lookup"><span data-stu-id="5d04f-104">When this happens, the final entry in the feed contains a link to the next page of data.</span></span> <span data-ttu-id="5d04f-105">Получить URI для следующей страницы можно, вызвав метод <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> объекта <xref:System.Data.Services.Client.QueryOperationResponse%601>, возвращенного при выполнении запроса <xref:System.Data.Services.Client.DataServiceQuery%601>.</span><span class="sxs-lookup"><span data-stu-id="5d04f-105">The URI for the next page of data is obtained by calling the <xref:System.Data.Services.Client.QueryOperationResponse%601.GetContinuation%2A> method of the <xref:System.Data.Services.Client.QueryOperationResponse%601>, which is returned when the <xref:System.Data.Services.Client.DataServiceQuery%601> is executed.</span></span> <span data-ttu-id="5d04f-106">URI, представленный этим объектом, можно затем использовать для загрузки следующей страницы результатов.</span><span class="sxs-lookup"><span data-stu-id="5d04f-106">The URI represented by this object is then used to load the next page of results.</span></span> <span data-ttu-id="5d04f-107">Дополнительные сведения см. в разделе [загрузка отложенного содержимого](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="5d04f-107">For more information, see [Loading Deferred Content](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md).</span></span>  
   
- <span data-ttu-id="02e8e-108">Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных.</span><span class="sxs-lookup"><span data-stu-id="02e8e-108">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="02e8e-109">Эта служба и клиентские классы данных создаются после выполнения [краткое руководство по службам WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="02e8e-109">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
+ <span data-ttu-id="5d04f-108">Пример в этом разделе использует образец службы данных Northwind и автоматически сформированные клиентские классы службы данных.</span><span class="sxs-lookup"><span data-stu-id="5d04f-108">The example in this topic uses the Northwind sample data service and autogenerated client data service classes.</span></span> <span data-ttu-id="5d04f-109">Эта служба и клиентские классы данных создаются после выполнения [краткое руководство по службам WCF Data Services](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span><span class="sxs-lookup"><span data-stu-id="5d04f-109">This service and the client data classes are created when you complete the [WCF Data Services quickstart](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="02e8e-110">Пример</span><span class="sxs-lookup"><span data-stu-id="02e8e-110">Example</span></span>  
- <span data-ttu-id="02e8e-111">Этот пример использует цикл `do…while` для загрузки сущностей `Customers` из разбитых на страницы результатов службы данных.</span><span class="sxs-lookup"><span data-stu-id="02e8e-111">This example uses a `do…while` loop to load `Customers` entities from a paged results from the data service.</span></span>  
+## <a name="example"></a><span data-ttu-id="5d04f-110">Пример</span><span class="sxs-lookup"><span data-stu-id="5d04f-110">Example</span></span>  
+ <span data-ttu-id="5d04f-111">Этот пример использует цикл `do…while` для загрузки сущностей `Customers` из разбитых на страницы результатов службы данных.</span><span class="sxs-lookup"><span data-stu-id="5d04f-111">This example uses a `do…while` loop to load `Customers` entities from a paged results from the data service.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetCustomersPaged](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getcustomerspaged)]
  [!code-vb[Astoria Northwind Client#GetCustomersPaged](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getcustomerspaged)]  
   
-## <a name="example"></a><span data-ttu-id="02e8e-112">Пример</span><span class="sxs-lookup"><span data-stu-id="02e8e-112">Example</span></span>  
- <span data-ttu-id="02e8e-113">Этот пример возвращает связанные сущности `Orders` вместе с каждой сущностью `Customers` и использует цикл `do…while` для загрузки страниц сущностей `Customers`, а также вложенный цикл `while` для загрузки страниц связанных сущностей `Orders` из службы данных.</span><span class="sxs-lookup"><span data-stu-id="02e8e-113">This example returns related `Orders` entities with each `Customers` entity and uses a `do…while` loop to load `Customers` entities pages and a nested `while` loop to load pages of related `Orders` entities from the data service.</span></span>  
+## <a name="example"></a><span data-ttu-id="5d04f-112">Пример</span><span class="sxs-lookup"><span data-stu-id="5d04f-112">Example</span></span>  
+ <span data-ttu-id="5d04f-113">Этот пример возвращает связанные сущности `Orders` вместе с каждой сущностью `Customers` и использует цикл `do…while` для загрузки страниц сущностей `Customers`, а также вложенный цикл `while` для загрузки страниц связанных сущностей `Orders` из службы данных.</span><span class="sxs-lookup"><span data-stu-id="5d04f-113">This example returns related `Orders` entities with each `Customers` entity and uses a `do…while` loop to load `Customers` entities pages and a nested `while` loop to load pages of related `Orders` entities from the data service.</span></span>  
   
  [!code-csharp[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getcustomerspagednested)]
  [!code-vb[Astoria Northwind Client#GetCustomersPagedNested](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getcustomerspagednested)]  
   
-## <a name="see-also"></a><span data-ttu-id="02e8e-114">См. также</span><span class="sxs-lookup"><span data-stu-id="02e8e-114">See Also</span></span>  
- [<span data-ttu-id="02e8e-115">Загрузка отложенного содержимого</span><span class="sxs-lookup"><span data-stu-id="02e8e-115">Loading Deferred Content</span></span>](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
- [<span data-ttu-id="02e8e-116">Практическое руководство. Загрузка связанных сущностей</span><span class="sxs-lookup"><span data-stu-id="02e8e-116">How to: Load Related Entities</span></span>](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md)
+## <a name="see-also"></a><span data-ttu-id="5d04f-114">См. также</span><span class="sxs-lookup"><span data-stu-id="5d04f-114">See Also</span></span>  
+ [<span data-ttu-id="5d04f-115">Загрузка отложенного содержимого</span><span class="sxs-lookup"><span data-stu-id="5d04f-115">Loading Deferred Content</span></span>](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
+ [<span data-ttu-id="5d04f-116">Практическое руководство. Загрузка связанных сущностей</span><span class="sxs-lookup"><span data-stu-id="5d04f-116">How to: Load Related Entities</span></span>](../../../../docs/framework/data/wcf/how-to-load-related-entities-wcf-data-services.md)

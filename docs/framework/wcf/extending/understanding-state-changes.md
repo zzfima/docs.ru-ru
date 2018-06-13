@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496667"
 ---
 # <a name="understanding-state-changes"></a><span data-ttu-id="e7379-102">Основные сведения об изменении состояния</span><span class="sxs-lookup"><span data-stu-id="e7379-102">Understanding State Changes</span></span>
 <span data-ttu-id="e7379-103">В данном разделе рассматриваются состояния и переходы каналов, а также типы, используемые для структуризации каналов, и способы их реализации.</span><span class="sxs-lookup"><span data-stu-id="e7379-103">This topic discusses the states and transitions that channels have, the types used to structure channel states, and how to implement them.</span></span>  

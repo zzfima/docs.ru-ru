@@ -9,6 +9,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755218"
 ---
 # <a name="ltcachesgt"></a><span data-ttu-id="3cac5-102">&lt;Кэши&gt;</span><span class="sxs-lookup"><span data-stu-id="3cac5-102">&lt;caches&gt;</span></span>
 <span data-ttu-id="3cac5-103">Регистрирует кэши, используемый для маркеров сеансов и обнаружение воспроизведения токенов.</span><span class="sxs-lookup"><span data-stu-id="3cac5-103">Registers the caches used for session tokens and token replay detection.</span></span>  

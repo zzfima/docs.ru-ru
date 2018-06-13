@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497520"
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a><span data-ttu-id="98364-102">Поддержка JSON и других форматов передачи данных</span><span class="sxs-lookup"><span data-stu-id="98364-102">Support for JSON and Other Data Transfer Formats</span></span>
 <span data-ttu-id="98364-103">JSON (JavaScript Object Notation) - эффективный формат кодирования данных, обеспечивающий быстрый обмен небольшими объемами данных между клиентскими браузерами и веб-службами с поддержкой асинхронных сценариев JavaScript и XML (AJAX).</span><span class="sxs-lookup"><span data-stu-id="98364-103">JSON (JavaScript Object Notation) is an efficient data encoding format that enables fast exchanges of small amounts of data between client browsers and AJAX (Asynchronous JavaScript and XML)-enabled Web services.</span></span>  

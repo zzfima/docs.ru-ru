@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33510355"
 ---
 # <a name="4202---startsqlcommandexecute"></a><span data-ttu-id="01b45-102">4202 - StartSqlCommandExecute</span><span class="sxs-lookup"><span data-stu-id="01b45-102">4202 - StartSqlCommandExecute</span></span>
 ## <a name="properties"></a><span data-ttu-id="01b45-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="01b45-103">Properties</span></span>  

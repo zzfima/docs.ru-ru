@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504362"
 ---
 # <a name="extended-protection-policy"></a><span data-ttu-id="fa625-102">Расширенная политика защиты</span><span class="sxs-lookup"><span data-stu-id="fa625-102">Extended Protection Policy</span></span>
 <span data-ttu-id="fa625-103">Расширенная защита - это инициатива, направленная на отражение атак типа «злоумышленник в середине» (MITM).</span><span class="sxs-lookup"><span data-stu-id="fa625-103">Extended Protection is a security initiative for protecting against man-in-the-middle (MITM) attacks.</span></span> <span data-ttu-id="fa625-104">Атака MITM - это угроза безопасности, при которой злоумышленник перехватывает учетные данные клиента и переправляет их на сервер.</span><span class="sxs-lookup"><span data-stu-id="fa625-104">A MITM attack is a security threat in which a MITM takes a client’s credentials and forwards it to a server.</span></span>  

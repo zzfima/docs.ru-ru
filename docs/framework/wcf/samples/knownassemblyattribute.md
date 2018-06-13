@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33506216"
 ---
 # <a name="knownassemblyattribute"></a><span data-ttu-id="db30a-102">Атрибут KnownAssemblyAttribute</span><span class="sxs-lookup"><span data-stu-id="db30a-102">KnownAssemblyAttribute</span></span>
 <span data-ttu-id="db30a-103">В этом образце показано, как можно настроить процессы сериализации и десериализации с помощью класса <xref:System.Runtime.Serialization.DataContractResolver>.</span><span class="sxs-lookup"><span data-stu-id="db30a-103">This sample demonstrates how the serialization and deserialization processes can be customized by using the <xref:System.Runtime.Serialization.DataContractResolver> class.</span></span> <span data-ttu-id="db30a-104">В этом образце показано, как динамически добавлять известные типы во время сериализации и десериализации.</span><span class="sxs-lookup"><span data-stu-id="db30a-104">This sample shows how to dynamically add known types during serialization and deserialization.</span></span>  

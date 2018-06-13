@@ -17,6 +17,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32752706"
 ---
 # <a name="ltsourcesgt-element"></a><span data-ttu-id="cc5cb-102">&lt;источники&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="cc5cb-102">&lt;sources&gt; Element</span></span>
 <span data-ttu-id="cc5cb-103">Задает источники трассировки, инициирующие сообщения трассировки.</span><span class="sxs-lookup"><span data-stu-id="cc5cb-103">Specifies trace sources that initiate tracing messages.</span></span>  

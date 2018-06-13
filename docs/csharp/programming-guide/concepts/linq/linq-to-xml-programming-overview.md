@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33339804"
 ---
 # <a name="linq-to-xml-programming-overview-c"></a><span data-ttu-id="f42b7-102">Общие сведения о программировании LINQ to XML (C#)</span><span class="sxs-lookup"><span data-stu-id="f42b7-102">LINQ to XML Programming Overview (C#)</span></span>
 <span data-ttu-id="f42b7-103">В этих подразделах содержится обзор высокого уровня о классах [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], а также подробные сведения о трех наиболее важных классах.</span><span class="sxs-lookup"><span data-stu-id="f42b7-103">These topics provide high-level overview information about the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] classes, as well as detailed information about three of the most important classes.</span></span>  

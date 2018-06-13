@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33543775"
 ---
 # <a name="how-to-use-flowdocument-column-separating-attributes"></a><span data-ttu-id="8ba44-102">Практическое руководство. Использование атрибутов разделения столбцов FlowDocument</span><span class="sxs-lookup"><span data-stu-id="8ba44-102">How to: Use FlowDocument Column-Separating Attributes</span></span>
 <span data-ttu-id="8ba44-103">В этом примере показано, как использовать возможности разделения столбцов <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="8ba44-103">This example shows how to use the column-separating features of a <xref:System.Windows.Documents.FlowDocument>.</span></span>  

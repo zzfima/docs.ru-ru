@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498583"
 ---
 # <a name="syndication-extensibility"></a><span data-ttu-id="7e621-102">Расширяемость синдикации</span><span class="sxs-lookup"><span data-stu-id="7e621-102">Syndication Extensibility</span></span>
 <span data-ttu-id="7e621-103">API синдикации предназначен для обеспечения независимой от формата модели программирования, которая позволяет передавать сводный контент по каналам связи в различных форматах.</span><span class="sxs-lookup"><span data-stu-id="7e621-103">The Syndication API is designed to provide a format-neutral programming model that allows syndicated content to be written to the wire in a variety of formats.</span></span> <span data-ttu-id="7e621-104">Абстрактная модель данных состоит из следующих классов:</span><span class="sxs-lookup"><span data-stu-id="7e621-104">The abstract data model consists of the following classes:</span></span>  

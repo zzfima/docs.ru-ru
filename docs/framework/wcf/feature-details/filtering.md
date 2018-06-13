@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497247"
 ---
 # <a name="filtering"></a><span data-ttu-id="b56c8-102">Фильтрация</span><span class="sxs-lookup"><span data-stu-id="b56c8-102">Filtering</span></span>
 <span data-ttu-id="b56c8-103">Windows Communication Foundation (WCF) система фильтрации можно использовать декларативные фильтры для поиска сообщений и принятия операционных решений.</span><span class="sxs-lookup"><span data-stu-id="b56c8-103">The Windows Communication Foundation (WCF) filtering system can use declarative filters to match messages and make operational decisions.</span></span> <span data-ttu-id="b56c8-104">Фильтры можно использовать для определения того, что делать с сообщением, основываясь на проверке части сообщения.</span><span class="sxs-lookup"><span data-stu-id="b56c8-104">You can use filters to determine what to do with a message by examining part of the message.</span></span> <span data-ttu-id="b56c8-105">Процесс организации очереди, например, может использовать запрос XPath 1.0 для проверки элемента приоритета заданного заголовка, чтобы определить, требуется ли переместить сообщение вперед по очереди.</span><span class="sxs-lookup"><span data-stu-id="b56c8-105">A queuing process, for example, can use an XPath 1.0 query to check the priority element of a known header to determine whether to move a message to the front of the queue.</span></span>  

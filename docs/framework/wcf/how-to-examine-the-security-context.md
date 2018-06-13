@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499480"
 ---
 # <a name="how-to-examine-the-security-context"></a><span data-ttu-id="28e69-102">Практическое руководство. Анализ контекста безопасности</span><span class="sxs-lookup"><span data-stu-id="28e69-102">How to: Examine the Security Context</span></span>
 <span data-ttu-id="28e69-103">При программировании служб Windows Communication Foundation (WCF), контекст безопасности службы позволяет определить сведения об учетных данных клиента и утверждения, используемые для проверки подлинности в службе.</span><span class="sxs-lookup"><span data-stu-id="28e69-103">When programming Windows Communication Foundation (WCF) services, the service security context enables you to determine details about the client credentials and claims used to authenticate with the service.</span></span> <span data-ttu-id="28e69-104">Это осуществляется с помощью свойств класса <xref:System.ServiceModel.ServiceSecurityContext>.</span><span class="sxs-lookup"><span data-stu-id="28e69-104">This is done by using the properties of the <xref:System.ServiceModel.ServiceSecurityContext> class.</span></span>  

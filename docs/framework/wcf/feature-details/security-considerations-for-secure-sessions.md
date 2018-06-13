@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497494"
 ---
 # <a name="security-considerations-for-secure-sessions"></a><span data-ttu-id="51358-102">Соображения о защите безопасных сеансов</span><span class="sxs-lookup"><span data-stu-id="51358-102">Security Considerations for Secure Sessions</span></span>
 <span data-ttu-id="51358-103">Необходимо принять во внимание следующие элементы, влияющие на безопасность при реализации безопасных сеансов.</span><span class="sxs-lookup"><span data-stu-id="51358-103">You should consider the following items that affect security when implementing secure sessions.</span></span> <span data-ttu-id="51358-104">Дополнительные сведения о вопросах безопасности см. в разделе [вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) и [рекомендации по безопасности](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).</span><span class="sxs-lookup"><span data-stu-id="51358-104">For more information about security considerations, see [Security Considerations](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md) and [Best Practices for Security](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md).</span></span>  

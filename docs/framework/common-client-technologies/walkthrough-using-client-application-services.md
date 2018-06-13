@@ -13,6 +13,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32745374"
 ---
 # <a name="walkthrough-using-client-application-services"></a><span data-ttu-id="91696-102">Пошаговое руководство. Использование служб клиентских приложений</span><span class="sxs-lookup"><span data-stu-id="91696-102">Walkthrough: Using Client Application Services</span></span>
 <span data-ttu-id="91696-103">В этой статье описывается создание приложения Windows, в котором для проверки подлинности пользователей и извлечения их ролей и параметров используются службы клиентских приложений.</span><span class="sxs-lookup"><span data-stu-id="91696-103">This topic describes how to create a Windows application that uses client application services to authenticate users and retrieve user roles and settings.</span></span>  

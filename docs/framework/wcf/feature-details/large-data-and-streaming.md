@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496566"
 ---
 # <a name="large-data-and-streaming"></a><span data-ttu-id="9b8d2-102">Большие наборы данных и потоковая передача</span><span class="sxs-lookup"><span data-stu-id="9b8d2-102">Large Data and Streaming</span></span>
 <span data-ttu-id="9b8d2-103">Windows Communication Foundation (WCF) — это инфраструктура связь на основе XML.</span><span class="sxs-lookup"><span data-stu-id="9b8d2-103">Windows Communication Foundation (WCF) is an XML-based communications infrastructure.</span></span> <span data-ttu-id="9b8d2-104">Так как XML-данных часто закодирован в формате стандартного текста, определенного в [спецификации XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838), подключенных систем разработчикам и архитекторам обычно беспокоит занимаемое место в сети (или размер) сообщений, отправляемых через к сети, а также текстовых кодировку XML непростой специальные для эффективной передачи двоичных данных.</span><span class="sxs-lookup"><span data-stu-id="9b8d2-104">Because XML data is commonly encoded in the standard text format defined in the [XML 1.0 specification](http://go.microsoft.com/fwlink/?LinkId=94838), connected systems developers and architects are typically concerned about the wire footprint (or size) of messages sent across the network, and the text-based encoding of XML poses special challenges for the efficient transfer of binary data.</span></span>  

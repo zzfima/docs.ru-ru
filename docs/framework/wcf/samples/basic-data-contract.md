@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33501220"
 ---
 # <a name="basic-data-contract"></a><span data-ttu-id="32545-102">Базовый контракт данных</span><span class="sxs-lookup"><span data-stu-id="32545-102">Basic Data Contract</span></span>
 <span data-ttu-id="32545-103">Этот образец демонстрирует реализацию контракта данных.</span><span class="sxs-lookup"><span data-stu-id="32545-103">This sample demonstrates how to implement a data contract.</span></span> <span data-ttu-id="32545-104">Контракты данных позволяют передавать структурированные данные в службы и из служб.</span><span class="sxs-lookup"><span data-stu-id="32545-104">Data contracts allow you to pass structured data to and from services.</span></span> <span data-ttu-id="32545-105">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , но использует комплексные числа вместо базовых числовых типов.</span><span class="sxs-lookup"><span data-stu-id="32545-105">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) but uses complex numbers instead of basic numeric types.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562874"
 ---
 # <a name="shapes-how-to-topics"></a><span data-ttu-id="3a4f0-102">Разделы практического руководства, посвященные объектам класса Shape</span><span class="sxs-lookup"><span data-stu-id="3a4f0-102">Shapes How-to Topics</span></span>
 <span data-ttu-id="3a4f0-103">В этом разделе демонстрируется использование <xref:System.Windows.Shapes.Shape> объектов для рисования основных фигур на экране.</span><span class="sxs-lookup"><span data-stu-id="3a4f0-103">The topics in this section demonstrate how to use <xref:System.Windows.Shapes.Shape> objects to draw basic shapes to the screen.</span></span>  

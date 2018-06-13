@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549335"
 ---
 # <a name="how-to-localize-an-application"></a><span data-ttu-id="bf2d7-102">Практическое руководство. Локализация приложения</span><span class="sxs-lookup"><span data-stu-id="bf2d7-102">How to: Localize an Application</span></span>
 <span data-ttu-id="bf2d7-103">В этом учебнике рассматривается создание локализованного приложения с помощью средства LocBaml.</span><span class="sxs-lookup"><span data-stu-id="bf2d7-103">This tutorial explains how to create a localized application by using the LocBaml tool.</span></span>  

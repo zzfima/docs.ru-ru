@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33504920"
 ---
 # <a name="wcf-error-handling"></a><span data-ttu-id="e3f05-102">Обработка ошибок WCF</span><span class="sxs-lookup"><span data-stu-id="e3f05-102">WCF Error Handling</span></span>
 <span data-ttu-id="e3f05-103">Ошибки, с которыми столкнулось приложение WCF, относится к одной из трех групп:</span><span class="sxs-lookup"><span data-stu-id="e3f05-103">The errors encountered by a WCF application belong to one of three groups:</span></span>  

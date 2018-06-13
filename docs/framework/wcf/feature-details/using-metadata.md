@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497949"
 ---
 # <a name="using-metadata"></a><span data-ttu-id="98b6e-102">Использование метаданных</span><span class="sxs-lookup"><span data-stu-id="98b6e-102">Using Metadata</span></span>
 <span data-ttu-id="98b6e-103">Метаданные службы содержат читаемое компьютером описание службы.</span><span class="sxs-lookup"><span data-stu-id="98b6e-103">Service metadata contains a machine-readable description of the service.</span></span> <span data-ttu-id="98b6e-104">Они содержат описание конечных точек, привязок, контрактов, операций и сообщений службы.</span><span class="sxs-lookup"><span data-stu-id="98b6e-104">Service metadata includes descriptions of the service endpoints, bindings, contracts, operations, and messages.</span></span> <span data-ttu-id="98b6e-105">Метаданными службы можно пользоваться для множества целей, включая автоматическое создание клиента для использования службы, реализацию описания службы и динамическое обновление привязки для клиента.</span><span class="sxs-lookup"><span data-stu-id="98b6e-105">You can use service metadata for a variety of purposes, including automatically generating a client for consuming the service, implementing the service description, and dynamically updating the binding for a client.</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33216769"
 ---
 # <a name="-win32res-c-compiler-options"></a><span data-ttu-id="67512-102">-win32res (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="67512-102">-win32res (C# Compiler Options)</span></span>
 <span data-ttu-id="67512-103">Параметр **-win32res** вставляет ресурс Win32 в выходной файл.</span><span class="sxs-lookup"><span data-stu-id="67512-103">The **-win32res** option inserts a Win32 resource in the output file.</span></span>  

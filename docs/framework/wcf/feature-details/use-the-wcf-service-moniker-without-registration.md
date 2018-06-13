@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497975"
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a><span data-ttu-id="460b8-102">Практическое руководство. Использование моникера службы Windows Communication Foundation без регистрации</span><span class="sxs-lookup"><span data-stu-id="460b8-102">How to: Use the Windows Communication Foundation Service Moniker without Registration</span></span>
 <span data-ttu-id="460b8-103">Для подключения и взаимодействия со службой Windows Communication Foundation (WCF), клиентское приложение WCF необходимо располагать сведениями об адресе службы, конфигурацию привязки и контракта службы.</span><span class="sxs-lookup"><span data-stu-id="460b8-103">To connect to and communicate with a Windows Communication Foundation (WCF) service, a WCF client application must have the details of the service address, the binding configuration, and the service contract.</span></span>  

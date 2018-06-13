@@ -17,6 +17,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549468"
 ---
 # <a name="drag-and-drop-overview"></a><span data-ttu-id="f7101-102">Общие сведения о перетаскивании</span><span class="sxs-lookup"><span data-stu-id="f7101-102">Drag and Drop Overview</span></span>
 <span data-ttu-id="f7101-103">В этой статье приведены общие сведения о поддержке перетаскивания в приложениях [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f7101-103">This topic provides an overview of drag-and-drop support in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span> <span data-ttu-id="f7101-104">Перетаскиванием обычно называют метод передачи данных, который реализуется с помощью мыши (или другого указывающего устройства) для выбора одного или нескольких объектов и перетаскивания их в цель перетаскивания в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].</span><span class="sxs-lookup"><span data-stu-id="f7101-104">Drag-and-drop commonly refers to a method of data transfer that involves using a mouse (or some other pointing device) to select one or more objects, dragging these objects over some desired drop target in the [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)], and dropping them.</span></span>  

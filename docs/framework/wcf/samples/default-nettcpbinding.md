@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502281"
 ---
 # <a name="default-nettcpbinding"></a><span data-ttu-id="9f65d-102">Привязка NetTcpBinding по умолчанию</span><span class="sxs-lookup"><span data-stu-id="9f65d-102">Default NetTcpBinding</span></span>
 <span data-ttu-id="9f65d-103">В этом образце демонстрируется использование привязки <xref:System.ServiceModel.NetTcpBinding>.</span><span class="sxs-lookup"><span data-stu-id="9f65d-103">This sample demonstrates the use of the <xref:System.ServiceModel.NetTcpBinding> binding.</span></span> <span data-ttu-id="9f65d-104">Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора.</span><span class="sxs-lookup"><span data-stu-id="9f65d-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span> <span data-ttu-id="9f65d-105">В этом образце служба является резидентной.</span><span class="sxs-lookup"><span data-stu-id="9f65d-105">In this sample, the service is self-hosted.</span></span> <span data-ttu-id="9f65d-106">И клиент, и служба являются консольными приложениями.</span><span class="sxs-lookup"><span data-stu-id="9f65d-106">Both the client and service are console applications.</span></span>  

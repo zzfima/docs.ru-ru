@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33507617"
 ---
 # <a name="strongly-typed-extensions-sample"></a><span data-ttu-id="37965-102">Пример строго типизированных расширений</span><span class="sxs-lookup"><span data-stu-id="37965-102">Strongly-Typed Extensions Sample</span></span>
 <span data-ttu-id="37965-103">В этом примере используется класс <xref:System.ServiceModel.Syndication.SyndicationFeed>.</span><span class="sxs-lookup"><span data-stu-id="37965-103">The sample uses the <xref:System.ServiceModel.Syndication.SyndicationFeed> class for the purposes of the example.</span></span> <span data-ttu-id="37965-104">Однако показанные в примере шаблоны можно использовать со всеми классами Syndication, которые поддерживают данные расширения.</span><span class="sxs-lookup"><span data-stu-id="37965-104">However, the patterns demonstrated in this sample can be used with all of the Syndication classes that support extension data.</span></span>  

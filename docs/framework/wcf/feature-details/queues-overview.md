@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33497017"
 ---
 # <a name="queues-overview"></a><span data-ttu-id="e5300-102">Общие сведения об очередях</span><span class="sxs-lookup"><span data-stu-id="e5300-102">Queues Overview</span></span>
 <span data-ttu-id="e5300-103">В этом разделе описаны общие и основные принципы, лежащие в основе взаимодействия с использованием очередей.</span><span class="sxs-lookup"><span data-stu-id="e5300-103">This section introduces the general and core concepts behind queued communication.</span></span> <span data-ttu-id="e5300-104">В последующих подразделах сведения о том, как описанные здесь принципы очередей объявленное в Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="e5300-104">Subsequent sections go into details about how the queuing concepts described here are manifested in Windows Communication Foundation (WCF).</span></span>  

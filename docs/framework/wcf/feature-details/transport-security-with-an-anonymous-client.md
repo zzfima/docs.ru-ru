@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499184"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a><span data-ttu-id="3f07a-102">Безопасность транспорта с анонимным клиентом</span><span class="sxs-lookup"><span data-stu-id="3f07a-102">Transport Security with an Anonymous Client</span></span>
 <span data-ttu-id="3f07a-103">В этом сценарии Windows Communication Foundation (WCF) используется механизм обеспечения безопасности транспорта (HTTPS) для обеспечения конфиденциальности и целостности.</span><span class="sxs-lookup"><span data-stu-id="3f07a-103">This Windows Communication Foundation (WCF) scenario uses transport security (HTTPS) to ensure confidentiality and integrity.</span></span> <span data-ttu-id="3f07a-104">Сервер должен пройти проверку подлинности с использованием сертификата SSL, и клиенты должны доверять сертификату сервера.</span><span class="sxs-lookup"><span data-stu-id="3f07a-104">The server must be authenticated with a Secure Sockets Layer (SSL) certificate, and the clients must trust the server's certificate.</span></span> <span data-ttu-id="3f07a-105">Проверка подлинности клиента не выполняется никаким механизмом и, следовательно, клиент является анонимным.</span><span class="sxs-lookup"><span data-stu-id="3f07a-105">The client is not authenticated by any mechanism and is, therefore, anonymous.</span></span>  

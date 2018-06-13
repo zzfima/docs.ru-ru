@@ -14,6 +14,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32744659"
 ---
 # <a name="ltnamedcachesgt-element-cache-settings"></a><span data-ttu-id="42229-102">&lt;namedCaches&gt; элемент (параметры кэша)</span><span class="sxs-lookup"><span data-stu-id="42229-102">&lt;namedCaches&gt; Element (Cache Settings)</span></span>
 <span data-ttu-id="42229-103">Задает коллекцию параметров конфигурации для именованного <xref:System.Runtime.Caching.MemoryCache> экземпляров.</span><span class="sxs-lookup"><span data-stu-id="42229-103">Specifies a collection of configuration settings for the named <xref:System.Runtime.Caching.MemoryCache> instances.</span></span> <span data-ttu-id="42229-104"><xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> Свойство ссылается на коллекцию параметров конфигурации из одного или нескольких `namedCaches` элементы файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="42229-104">The <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A> property references the collection of configuration settings from one or more `namedCaches` elements of the configuration file.</span></span>  

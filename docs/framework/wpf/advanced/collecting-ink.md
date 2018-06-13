@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541074"
 ---
 # <a name="collecting-ink"></a><span data-ttu-id="9cd64-102">Сбор рукописных данных</span><span class="sxs-lookup"><span data-stu-id="9cd64-102">Collecting Ink</span></span>
 <span data-ttu-id="9cd64-103">Платформа [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) выполняет сбор цифровых рукописных фрагментов, что является одной из основных ее функций.</span><span class="sxs-lookup"><span data-stu-id="9cd64-103">The [Windows Presentation Foundation](../../../../docs/framework/wpf/index.md) platform collects digital ink as a core part of its functionality.</span></span> <span data-ttu-id="9cd64-104">В этом разделе обсуждаются методы сбора рукописного ввода в Windows Presentation Foundation (WPF).</span><span class="sxs-lookup"><span data-stu-id="9cd64-104">This topic discusses methods for collection of ink in Windows Presentation Foundation (WPF).</span></span>  

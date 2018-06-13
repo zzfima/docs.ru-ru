@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564512"
 ---
 # <a name="exceptions-the-invalidarg-function"></a><span data-ttu-id="b757a-103">Исключения: функция invalidArg</span><span class="sxs-lookup"><span data-stu-id="b757a-103">Exceptions: The invalidArg Function</span></span>
 

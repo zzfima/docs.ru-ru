@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32743307"
 ---
 # <a name="ltiriparsinggt-element-uri-settings"></a><span data-ttu-id="b7fd6-102">&lt;iriParsing&gt; элемент (параметры Uri)</span><span class="sxs-lookup"><span data-stu-id="b7fd6-102">&lt;iriParsing&gt; Element (Uri Settings)</span></span>
 <span data-ttu-id="b7fd6-103">Определяет, применяется ли к <xref:System.Uri> анализ международных идентификаторов ресурсов (IRI) и применяются ли правила анализа IRI.</span><span class="sxs-lookup"><span data-stu-id="b7fd6-103">Specifies if International Resource Identifier (IRI) parsing is applied to a <xref:System.Uri> and whether IRI parsing rules should be applied.</span></span>  

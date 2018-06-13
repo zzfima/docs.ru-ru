@@ -10,6 +10,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32755969"
 ---
 # <a name="creating-a-dataset"></a><span data-ttu-id="73e70-102">Создание набора данных</span><span class="sxs-lookup"><span data-stu-id="73e70-102">Creating a DataSet</span></span>
 <span data-ttu-id="73e70-103">Экземпляр объекта <xref:System.Data.DataSet> создается путем вызова конструктора <xref:System.Data.DataSet>.</span><span class="sxs-lookup"><span data-stu-id="73e70-103">You create an instance of a <xref:System.Data.DataSet> by calling the <xref:System.Data.DataSet> constructor.</span></span> <span data-ttu-id="73e70-104">Кроме того, можно задать аргумент имени.</span><span class="sxs-lookup"><span data-stu-id="73e70-104">Optionally specify a name argument.</span></span> <span data-ttu-id="73e70-105">Если имя для объекта <xref:System.Data.DataSet> не задано, то ему присваивается имя «NewDataSet».</span><span class="sxs-lookup"><span data-stu-id="73e70-105">If you do not specify a name for the <xref:System.Data.DataSet>, the name is set to "NewDataSet".</span></span>  

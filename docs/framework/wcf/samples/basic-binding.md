@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33498946"
 ---
 # <a name="basic-binding"></a><span data-ttu-id="5bd84-102">Простая привязка</span><span class="sxs-lookup"><span data-stu-id="5bd84-102">Basic Binding</span></span>
 <span data-ttu-id="5bd84-103">Этот раздел содержит базовые образцы, которые демонстрируют использование атрибутов пользовательской привязки элемента конечной точки.</span><span class="sxs-lookup"><span data-stu-id="5bd84-103">This section contains basic samples that demonstrate using the binding attribute of an endpoint element.</span></span>  

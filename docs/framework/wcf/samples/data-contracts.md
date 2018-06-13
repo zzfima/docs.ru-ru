@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33499840"
 ---
 # <a name="data-contracts"></a><span data-ttu-id="c20a7-102">Контракты данных</span><span class="sxs-lookup"><span data-stu-id="c20a7-102">Data Contracts</span></span>
 <span data-ttu-id="c20a7-103">В этом разделе содержатся образцы, которые демонстрируют контракты данных в Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="c20a7-103">This section contains samples that demonstrate data contracts in Windows Communication Foundation (WCF).</span></span>  

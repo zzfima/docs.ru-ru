@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33562548"
 ---
 # <a name="getting-started-with-f"></a><span data-ttu-id="7a2ab-103">Начало работы с F #</span><span class="sxs-lookup"><span data-stu-id="7a2ab-103">Getting Started with F#</span></span> #
 

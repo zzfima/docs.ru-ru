@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508040"
 ---
 # <a name="volatile-queued-communication"></a><span data-ttu-id="c9cb9-102">Неустойчивое взаимодействие с использованием очереди</span><span class="sxs-lookup"><span data-stu-id="c9cb9-102">Volatile Queued Communication</span></span>
 <span data-ttu-id="c9cb9-103">В этом образце показано, как осуществлять неустойчивое взаимодействие с использованием очередей с помощью транспорта очереди сообщений (MSMQ).</span><span class="sxs-lookup"><span data-stu-id="c9cb9-103">This sample demonstrates how to perform volatile queued communication over the Message Queuing (MSMQ) transport.</span></span> <span data-ttu-id="c9cb9-104">В этом образце используется привязка <xref:System.ServiceModel.NetMsmqBinding>.</span><span class="sxs-lookup"><span data-stu-id="c9cb9-104">This sample uses <xref:System.ServiceModel.NetMsmqBinding>.</span></span> <span data-ttu-id="c9cb9-105">В данном случае служба представляет собой резидентное консольное приложение, позволяющее наблюдать за тем, как служба получает сообщения из очереди.</span><span class="sxs-lookup"><span data-stu-id="c9cb9-105">The service in this case is a self-hosted console application to enable you to observe the service receiving queued messages.</span></span>  

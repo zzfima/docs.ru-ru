@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33503443"
 ---
 # <a name="workflow-discovery-sample"></a><span data-ttu-id="e92ff-102">Образец обнаружения рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="e92ff-102">Workflow Discovery Sample</span></span>
 <span data-ttu-id="e92ff-103">В этом образце показано, как сделать службу рабочего процесса обнаруживаемой, а также как создать настраиваемое действие кода, используемое для поиска определенной службы.</span><span class="sxs-lookup"><span data-stu-id="e92ff-103">This sample demonstrates how to make a workflow service discoverable and how to author a custom code activity that searches for a particular service.</span></span>  

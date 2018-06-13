@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536277"
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a><span data-ttu-id="64957-102">Практическое руководство. Определение режима редактирования для элемента управления DataGridView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="64957-102">How to: Specify the Edit Mode for the Windows Forms DataGridView Control</span></span>
 <span data-ttu-id="64957-103">По умолчанию пользователи могут редактировать содержимое текущего <xref:System.Windows.Forms.DataGridView> ячейки текстового поля, введя в него или нажав клавишу F2.</span><span class="sxs-lookup"><span data-stu-id="64957-103">By default, users can edit the contents of the current <xref:System.Windows.Forms.DataGridView> text box cell by typing in it or pressing F2.</span></span> <span data-ttu-id="64957-104">Ячейка переключается в режим редактирования при выполнении всех следующих условий:</span><span class="sxs-lookup"><span data-stu-id="64957-104">This puts the cell in edit mode if all of the following conditions are met:</span></span>  

@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33496771"
 ---
 # <a name="bindings-and-security"></a><span data-ttu-id="b436f-102">Привязки и безопасность</span><span class="sxs-lookup"><span data-stu-id="b436f-102">Bindings and Security</span></span>
 <span data-ttu-id="b436f-103">Предоставляемые системой привязки, включенные с Windows Communication Foundation (WCF) обеспечивают быстрый способ программировании приложений WCF.</span><span class="sxs-lookup"><span data-stu-id="b436f-103">The system-provided bindings included with Windows Communication Foundation (WCF) offer a quick way to program WCF applications.</span></span> <span data-ttu-id="b436f-104">За одним исключением, во всех привязках включена схема безопасности по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="b436f-104">With one exception, all the bindings have a default security scheme enabled.</span></span> <span data-ttu-id="b436f-105">Этот раздел поможет выбрать привязку, соответствующую требованиям к безопасности.</span><span class="sxs-lookup"><span data-stu-id="b436f-105">This topic helps you select the right binding for your security needs.</span></span>  
