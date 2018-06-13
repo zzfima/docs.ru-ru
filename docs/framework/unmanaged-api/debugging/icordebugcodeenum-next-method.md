@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 711c85b930617632d69497e4a9cf0a74360d27f7
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415111"
 ---
 # <a name="icordebugcodeenumnext-method"></a><span data-ttu-id="e6caf-102">Метод ICorDebugCodeEnum::Next</span><span class="sxs-lookup"><span data-stu-id="e6caf-102">ICorDebugCodeEnum::Next Method</span></span>
 <span data-ttu-id="e6caf-103">Получает заданное число экземпляров «ICorDebugCode» из перечисления, начиная с текущей позиции.</span><span class="sxs-lookup"><span data-stu-id="e6caf-103">Gets the specified number of "ICorDebugCode" instances from the enumeration, starting at the current position.</span></span>  

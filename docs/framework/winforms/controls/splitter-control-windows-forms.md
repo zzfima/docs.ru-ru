@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33534642"
 ---
 # <a name="splitter-control-windows-forms"></a><span data-ttu-id="2849e-102">Элемент управления Splitter (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="2849e-102">Splitter Control (Windows Forms)</span></span>
 <span data-ttu-id="2849e-103">Windows Forms `Splitter` элементы управления используются для изменения размера закрепленных элементов управления во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="2849e-103">Windows Forms `Splitter` controls are used to resize docked controls at run time.</span></span> <span data-ttu-id="2849e-104">`Splitter` Управления часто используется в формах с элементами управления, в которых представлены, например в проводнике Windows, где области данных содержат сведения о разных размеров в разное время данные переменной длины.</span><span class="sxs-lookup"><span data-stu-id="2849e-104">The `Splitter` control is often used on forms with controls that have varying lengths of data to present, like Windows Explorer, whose data panes contain information of varying widths at different times.</span></span>  

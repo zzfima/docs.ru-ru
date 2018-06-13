@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eb6a3e65b1f1d59cde3bff99e491bcf09816c8ad
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33428062"
 ---
 # <a name="isymunmanagedwriterabort-method"></a><span data-ttu-id="0a7cf-102">Метод ISymUnmanagedWriter::Abort</span><span class="sxs-lookup"><span data-stu-id="0a7cf-102">ISymUnmanagedWriter::Abort Method</span></span>
 <span data-ttu-id="0a7cf-103">Закрывает средство записи символов без передачи символов в хранилище символов.</span><span class="sxs-lookup"><span data-stu-id="0a7cf-103">Closes the symbol writer without committing the symbols to the symbol store.</span></span> <span data-ttu-id="0a7cf-104">После этого вызова модуля записи символов становится недействительным для дальнейших обновлений.</span><span class="sxs-lookup"><span data-stu-id="0a7cf-104">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="0a7cf-105">Чтобы зафиксировать символы и закрыть модуль записи символов, используйте [ISymUnmanagedWriter::Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) метод вместо него.</span><span class="sxs-lookup"><span data-stu-id="0a7cf-105">To commit the symbols and close the symbol writer, use the [ISymUnmanagedWriter::Close](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-close-method.md) method instead.</span></span>  

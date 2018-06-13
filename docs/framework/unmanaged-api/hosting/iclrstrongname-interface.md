@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 92ae4c2f4a6fb126f5d86cee216e5b2bb6170e66
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436115"
 ---
 # <a name="iclrstrongname-interface"></a><span data-ttu-id="0f96c-102">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="0f96c-102">ICLRStrongName Interface</span></span>
 <span data-ttu-id="0f96c-103">Предоставляет базовые глобальные статические функции для подписи сборки со строгими именами.</span><span class="sxs-lookup"><span data-stu-id="0f96c-103">Provides basic global static functions for signing assemblies with strong names.</span></span> <span data-ttu-id="0f96c-104">Все `ICLRStrongName` методы возвращают стандартные результаты COM HRESULT.</span><span class="sxs-lookup"><span data-stu-id="0f96c-104">All `ICLRStrongName` methods return standard COM HRESULTs.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32759872"
 ---
 # <a name="adonet-architecture"></a><span data-ttu-id="b0ef1-102">Архитектура ADO.NET</span><span class="sxs-lookup"><span data-stu-id="b0ef1-102">ADO.NET Architecture</span></span>
 <span data-ttu-id="b0ef1-103">Обработка данных традиционно полагалась в основном на двухуровневую модель, основанную на сетевом соединении.</span><span class="sxs-lookup"><span data-stu-id="b0ef1-103">Data processing has traditionally relied primarily on a connection-based, two-tier model.</span></span> <span data-ttu-id="b0ef1-104">Так как при обработке данных все больше используется многоуровневая архитектура, программисты переходят на метод, не использующий подключение, чтобы обеспечить лучшую масштабируемость для их приложений.</span><span class="sxs-lookup"><span data-stu-id="b0ef1-104">As data processing increasingly uses multi-tier architectures, programmers are switching to a disconnected approach to provide better scalability for their applications.</span></span>  

@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33533511"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a><span data-ttu-id="80b73-102">Практическое руководство. Изменение столбцов и строк в элементе управления TableLayoutPanel</span><span class="sxs-lookup"><span data-stu-id="80b73-102">How to: Edit Columns and Rows in a TableLayoutPanel Control</span></span>
 <span data-ttu-id="80b73-103">Можно использовать редактор коллекций элемента <xref:System.Windows.Forms.TableLayoutPanel> элемент управления с именем **стили столбцов и строк** диалоговое окно для редактирования строк и столбцов элементов управления.</span><span class="sxs-lookup"><span data-stu-id="80b73-103">You can use the collection editor of the <xref:System.Windows.Forms.TableLayoutPanel> control, called the **Column and Row Styles** dialog box, to edit the rows and columns of your controls.</span></span>  

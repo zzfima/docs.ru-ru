@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f1d920a97338bba3e90ec8f0c440f6dd2a93e722
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33416209"
 ---
 # <a name="icordebugmanagedcallbackloadclass-method"></a><span data-ttu-id="3ee88-102">Метод ICorDebugManagedCallback::LoadClass</span><span class="sxs-lookup"><span data-stu-id="3ee88-102">ICorDebugManagedCallback::LoadClass Method</span></span>
 <span data-ttu-id="3ee88-103">Уведомляет отладчик о том, что класс был загружен.</span><span class="sxs-lookup"><span data-stu-id="3ee88-103">Notifies the debugger that a class has been loaded.</span></span>  

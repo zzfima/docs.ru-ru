@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91315e8af0cc46a3450a7515b885988cffe34927
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33429992"
 ---
 # <a name="coinitializecor-function"></a><span data-ttu-id="29bac-102">Функция CoInitializeCor</span><span class="sxs-lookup"><span data-stu-id="29bac-102">CoInitializeCor Function</span></span>
 <span data-ttu-id="29bac-103">`CoInitializeCor` устарел.</span><span class="sxs-lookup"><span data-stu-id="29bac-103">`CoInitializeCor` is obsolete.</span></span>  

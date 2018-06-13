@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eeff8aa0336c0c497e306825c6c77f4f8745ca7c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431809"
 ---
 # <a name="eclrunhandledexception-enumeration"></a><span data-ttu-id="3c349-102">Перечисление EClrUnhandledException</span><span class="sxs-lookup"><span data-stu-id="3c349-102">EClrUnhandledException Enumeration</span></span>
 <span data-ttu-id="3c349-103">Описывает доступные параметры для управления исключениями, которые обрабатываются в пользовательском коде.</span><span class="sxs-lookup"><span data-stu-id="3c349-103">Describes the available options for managing exceptions that are unhandled in user code.</span></span>  

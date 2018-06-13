@@ -16,6 +16,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33535201"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a><span data-ttu-id="46103-102">Практическое руководство. Генерирование событий меню для кнопок элемента управления Toolbar</span><span class="sxs-lookup"><span data-stu-id="46103-102">How to: Trigger Menu Events for Toolbar Buttons</span></span>
 > [!NOTE]

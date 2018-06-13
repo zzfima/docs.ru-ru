@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536150"
 ---
 # <a name="label-control-windows-forms"></a><span data-ttu-id="75713-102">Элемент управления Label (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="75713-102">Label Control (Windows Forms)</span></span>
 > [!IMPORTANT]

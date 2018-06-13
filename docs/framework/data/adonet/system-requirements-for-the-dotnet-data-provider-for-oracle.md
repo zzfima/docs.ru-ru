@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33363522"
 ---
 # <a name="system-requirements-for-the-net-framework-data-provider-for-oracle"></a><span data-ttu-id="b11c1-102">Требования к системе для поставщика данных платформы .NET Framework для Oracle</span><span class="sxs-lookup"><span data-stu-id="b11c1-102">System Requirements for the .NET Framework Data Provider for Oracle</span></span>
 <span data-ttu-id="b11c1-103">Поставщику данных платформы .NET Framework для Oracle требуются компоненты Microsoft Data Access Components (MDAC) версии 2.6 или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="b11c1-103">The .NET Framework Data Provider for Oracle requires Microsoft Data Access Components (MDAC) version 2.6 or later.</span></span> <span data-ttu-id="b11c1-104">Рекомендуется MDAC 2.8 с пакетом обновления 2 (SP1).</span><span class="sxs-lookup"><span data-stu-id="b11c1-104">MDAC 2.8 SP1 is recommended.</span></span>  

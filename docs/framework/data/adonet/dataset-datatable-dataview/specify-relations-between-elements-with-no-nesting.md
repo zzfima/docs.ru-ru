@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32760093"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a><span data-ttu-id="70969-102">Указание отношений между элементами без вложенности</span><span class="sxs-lookup"><span data-stu-id="70969-102">Specify Relations Between Elements with No Nesting</span></span>
 <span data-ttu-id="70969-103">Если элементы не вложены, какие-либо неявные связи не создаются.</span><span class="sxs-lookup"><span data-stu-id="70969-103">When elements are not nested, no implicit relations are created.</span></span> <span data-ttu-id="70969-104">Однако, можно явно указать связей между элементами, которые не являются вложенными с помощью **msdata: Relationship** заметки.</span><span class="sxs-lookup"><span data-stu-id="70969-104">You can, however, explicitly specify relations between elements that are not nested by using the **msdata:Relationship** annotation.</span></span>  

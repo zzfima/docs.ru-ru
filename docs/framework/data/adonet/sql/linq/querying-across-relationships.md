@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360469"
 ---
 # <a name="querying-across-relationships"></a><span data-ttu-id="b2e79-102">Выполнение запросов в связях</span><span class="sxs-lookup"><span data-stu-id="b2e79-102">Querying Across Relationships</span></span>
 <span data-ttu-id="b2e79-103">Ссылки на другие объекты или коллекции других объектов в определениях классов указывают непосредственно на связи внешнего ключа в базе данных.</span><span class="sxs-lookup"><span data-stu-id="b2e79-103">References to other objects or collections of other objects in your class definitions directly correspond to foreign-key relationships in the database.</span></span> <span data-ttu-id="b2e79-104">Эти связи можно использовать при осуществлении запроса с помощью точечной нотации для доступа к свойствам связей и перехода от одного объекта к другому.</span><span class="sxs-lookup"><span data-stu-id="b2e79-104">You can use these relationships when you query by using dot notation to access the relationship properties and navigate from one object to another.</span></span> <span data-ttu-id="b2e79-105">Эти операции доступа преобразуются в более сложные соединения или коррелированные подзапросы в эквивалентном SQL.</span><span class="sxs-lookup"><span data-stu-id="b2e79-105">These access operations translate to more complex joins or correlated subqueries in the equivalent SQL.</span></span>  

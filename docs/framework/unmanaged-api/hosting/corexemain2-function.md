@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 573336b32040f44ff1b59fcbb75b59aa00976b5c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430183"
 ---
 # <a name="corexemain2-function"></a><span data-ttu-id="a59dc-102">Функция _CorExeMain2</span><span class="sxs-lookup"><span data-stu-id="a59dc-102">_CorExeMain2 Function</span></span>
 <span data-ttu-id="a59dc-103">Выполняет точка входа в заданный код, размещенный в памяти.</span><span class="sxs-lookup"><span data-stu-id="a59dc-103">Executes the entry point in the specified memory-mapped code.</span></span> <span data-ttu-id="a59dc-104">Эта функция вызывается загрузчиком операционной системы.</span><span class="sxs-lookup"><span data-stu-id="a59dc-104">This function is called by the operating system loader.</span></span>  

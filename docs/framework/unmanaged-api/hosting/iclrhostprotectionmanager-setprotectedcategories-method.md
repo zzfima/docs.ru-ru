@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c6c93566d0909f1dbef46862760d47ede478d51a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33434542"
 ---
 # <a name="iclrhostprotectionmanagersetprotectedcategories-method"></a><span data-ttu-id="302e5-102">Метод ICLRHostProtectionManager::SetProtectedCategories</span><span class="sxs-lookup"><span data-stu-id="302e5-102">ICLRHostProtectionManager::SetProtectedCategories Method</span></span>
 <span data-ttu-id="302e5-103">Указывает, какие категории управляемых типов и членов должны блокироваться в частично доверенном коде.</span><span class="sxs-lookup"><span data-stu-id="302e5-103">Specifies which categories of managed types and members should be blocked from running in partially trusted code.</span></span>  

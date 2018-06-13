@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33529170"
 ---
 # <a name="how-to-create-a-path-gradient"></a><span data-ttu-id="dcc25-102">Практическое руководство. Создание градиента вдоль контура</span><span class="sxs-lookup"><span data-stu-id="dcc25-102">How to: Create a Path Gradient</span></span>
 <span data-ttu-id="dcc25-103"><xref:System.Drawing.Drawing2D.PathGradientBrush> Позволяет настроить способ заливки фигуры плавно меняющимися цветами.</span><span class="sxs-lookup"><span data-stu-id="dcc25-103">The <xref:System.Drawing.Drawing2D.PathGradientBrush> class allows you to customize the way you fill a shape with gradually changing colors.</span></span> <span data-ttu-id="dcc25-104">Например можно указать один цвет для центра пути, а другой — для границы пути.</span><span class="sxs-lookup"><span data-stu-id="dcc25-104">For example, you can specify one color for the center of a path and another color for the boundary of a path.</span></span> <span data-ttu-id="dcc25-105">Можно также определить отдельные цвета для каждой из нескольких точек на границе пути.</span><span class="sxs-lookup"><span data-stu-id="dcc25-105">You can also specify separate colors for each of several points along the boundary of a path.</span></span>  

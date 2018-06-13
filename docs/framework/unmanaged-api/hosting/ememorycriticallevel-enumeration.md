@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: acf4f3f582e417c5e7b814622986427f996796ce
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432535"
 ---
 # <a name="ememorycriticallevel-enumeration"></a><span data-ttu-id="2abc1-102">Перечисление EMemoryCriticalLevel</span><span class="sxs-lookup"><span data-stu-id="2abc1-102">EMemoryCriticalLevel Enumeration</span></span>
 <span data-ttu-id="2abc1-103">Содержит значения, указывающие влияние сбоя в случае, когда был запрошен определенного выделения памяти, но не может быть удовлетворен.</span><span class="sxs-lookup"><span data-stu-id="2abc1-103">Contains values that indicate the impact of a failure when a specific memory allocation has been requested but cannot be satisfied.</span></span>  

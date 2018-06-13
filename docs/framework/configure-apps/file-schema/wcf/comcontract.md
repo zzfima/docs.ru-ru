@@ -7,6 +7,7 @@ ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
+ms.locfileid: "32749066"
 ---
 # <a name="ltcomcontractgt"></a><span data-ttu-id="5501a-102">&lt;comContract&gt;</span><span class="sxs-lookup"><span data-stu-id="5501a-102">&lt;comContract&gt;</span></span>
 <span data-ttu-id="5501a-103">Указывает контракт службы интеграции COM+.</span><span class="sxs-lookup"><span data-stu-id="5501a-103">Specifies a COM+ integration service contract.</span></span>  

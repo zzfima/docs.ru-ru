@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536750"
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a><span data-ttu-id="0ee2c-102">Практическое руководство. Применение шаблона PropertyNameChanged</span><span class="sxs-lookup"><span data-stu-id="0ee2c-102">How to: Apply the PropertyNameChanged Pattern</span></span>
 <span data-ttu-id="0ee2c-103">В следующем примере кода демонстрируется применение *PropertyName*шаблон Changed к пользовательскому элементу управления.</span><span class="sxs-lookup"><span data-stu-id="0ee2c-103">The following code example demonstrates how to apply the *PropertyName*Changed pattern to a custom control.</span></span> <span data-ttu-id="0ee2c-104">Применяйте этот шаблон при реализации пользовательских элементов управления, которые используются с механизм привязки данных Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="0ee2c-104">Apply this pattern when you implement custom controls that are used with the Windows Forms data binding engine.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33536622"
 ---
 # <a name="printdocument-component-windows-forms"></a><span data-ttu-id="393e9-102">Компонент PrintDocument (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="393e9-102">PrintDocument Component (Windows Forms)</span></span>
 <span data-ttu-id="393e9-103">Компонент `PrintDocument` Windows Forms используется для задания свойств, описывающих печатаемое содержимое, и для печати документа в приложениях Windows.</span><span class="sxs-lookup"><span data-stu-id="393e9-103">The Windows Forms `PrintDocument` component is used to set the properties that describe what to print and then to print the document within Windows-based applications.</span></span> <span data-ttu-id="393e9-104">Его можно использовать в сочетании с компонентом <xref:System.Windows.Forms.PrintDialog> для управления всеми аспектами печати документа.</span><span class="sxs-lookup"><span data-stu-id="393e9-104">It can be used in conjunction with the <xref:System.Windows.Forms.PrintDialog> component to be in command of all aspects of document printing.</span></span>  

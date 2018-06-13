@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33360704"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a><span data-ttu-id="cc9e8-102">Практическое руководство. Получение сведений как доступных только для чтения</span><span class="sxs-lookup"><span data-stu-id="cc9e8-102">How to: Retrieve Information As Read-Only</span></span>
 <span data-ttu-id="cc9e8-103">Если не планируется изменять данные, можно повысить производительность запросов за счет поиска результатов, предназначенных только для чтения.</span><span class="sxs-lookup"><span data-stu-id="cc9e8-103">When you do not intend to change the data, you can increase the performance of queries by seeking read-only results.</span></span>  

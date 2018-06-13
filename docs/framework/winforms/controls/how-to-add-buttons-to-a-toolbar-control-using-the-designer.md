@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33527538"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a><span data-ttu-id="c53d7-102">Практическое руководство. Добавление кнопок в элемент управления ToolBar с помощью конструктора</span><span class="sxs-lookup"><span data-stu-id="c53d7-102">How to: Add Buttons to a ToolBar Control Using the Designer</span></span>
 > [!NOTE]

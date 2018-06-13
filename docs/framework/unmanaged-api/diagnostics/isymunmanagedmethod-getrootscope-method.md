@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 417ce67d807fddd3b99ceff4b05f1524db3044e5
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33430532"
 ---
 # <a name="isymunmanagedmethodgetrootscope-method"></a><span data-ttu-id="1a8dc-102">Метод ISymUnmanagedMethod::GetRootScope</span><span class="sxs-lookup"><span data-stu-id="1a8dc-102">ISymUnmanagedMethod::GetRootScope Method</span></span>
 <span data-ttu-id="1a8dc-103">Возвращает корневую лексическую область в этом методе.</span><span class="sxs-lookup"><span data-stu-id="1a8dc-103">Gets the root lexical scope within this method.</span></span> <span data-ttu-id="1a8dc-104">Эта область включает весь метод.</span><span class="sxs-lookup"><span data-stu-id="1a8dc-104">This scope encloses the entire method.</span></span>  

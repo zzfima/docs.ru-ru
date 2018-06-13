@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fa8c3160dc779b2475dec63be896af5283cf5346
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33418169"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a><span data-ttu-id="e8cc7-102">Интерфейс ICorDebugGCReferenceEnum</span><span class="sxs-lookup"><span data-stu-id="e8cc7-102">ICorDebugGCReferenceEnum Interface</span></span>
 <span data-ttu-id="e8cc7-103">Предоставляет перечислитель для объектов, для которых будет выполнена сборка мусора.</span><span class="sxs-lookup"><span data-stu-id="e8cc7-103">Provides an enumerator for objects that will be garbage-collected.</span></span>  

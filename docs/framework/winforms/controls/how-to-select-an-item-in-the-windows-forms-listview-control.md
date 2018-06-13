@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33532825"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a><span data-ttu-id="ba30d-102">Практическое руководство. Выделение строки элемента управления ListView в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ba30d-102">How to: Select an Item in the Windows Forms ListView Control</span></span>
 <span data-ttu-id="ba30d-103">В этом примере показано, как программно выбрать элемент в Windows Forms <xref:System.Windows.Forms.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="ba30d-103">This example demonstrates how to programmatically select an item in a Windows Forms <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="ba30d-104">Программным путем выбора элемента не изменяется автоматически фокуса на <xref:System.Windows.Forms.ListView> элемента управления.</span><span class="sxs-lookup"><span data-stu-id="ba30d-104">Selecting an item programmatically does not automatically change the focus to the <xref:System.Windows.Forms.ListView> control.</span></span> <span data-ttu-id="ba30d-105">По этой причине обычно также требуется задать его как с фокусом ввода при выделении элемента.</span><span class="sxs-lookup"><span data-stu-id="ba30d-105">For this reason, you will typically also want to set the item as focused when selecting an item.</span></span>  
