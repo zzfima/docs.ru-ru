@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514668"
 ---
 # <a name="sql-server-persistence-database"></a><span data-ttu-id="9837c-102">База данных постоянного хранения SQL Server</span><span class="sxs-lookup"><span data-stu-id="9837c-102">SQL Server Persistence Database</span></span>
 <span data-ttu-id="9837c-103">В этом разделе приведены сведения об общих представлениях базы данных, поддерживаемых хранилищем экземпляров рабочих процессов SQL, и показано, как проводить десериализацию примитивных свойств данных экземпляров и как обращаться с запросами к несохраняемым экземплярам.</span><span class="sxs-lookup"><span data-stu-id="9837c-103">This section provides details about public database views supported by the SQL Workflow Instance Store and shows how to de-serialize primitive instance data properties and how to query for non-persisted instances.</span></span>  

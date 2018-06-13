@@ -21,6 +21,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579877"
 ---
 # <a name="regular-expression-language---quick-reference"></a><span data-ttu-id="b4c49-102">Элементы языка регулярных выражений — краткий справочник</span><span class="sxs-lookup"><span data-stu-id="b4c49-102">Regular Expression Language - Quick Reference</span></span>
 <a name="top"></a> <span data-ttu-id="b4c49-103">Регулярное выражение — это шаблон, который обработчик регулярных выражений пытается сопоставить с введенным текстом.</span><span class="sxs-lookup"><span data-stu-id="b4c49-103">A regular expression is a pattern that the regular expression engine attempts to match in input text.</span></span> <span data-ttu-id="b4c49-104">Шаблон состоит из односимвольных или многосимвольных литералов, операторов или конструкций.</span><span class="sxs-lookup"><span data-stu-id="b4c49-104">A pattern consists of one or more character literals, operators, or constructs.</span></span>  <span data-ttu-id="b4c49-105">См. краткое описание [регулярных выражений .NET](../../../docs/standard/base-types/regular-expressions.md).</span><span class="sxs-lookup"><span data-stu-id="b4c49-105">For a brief introduction, see [.NET Regular Expressions](../../../docs/standard/base-types/regular-expressions.md).</span></span>  

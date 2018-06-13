@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474263"
 ---
 # <a name="security-validation-and-authentication-failures"></a><span data-ttu-id="819ff-102">Сбои при проверке безопасности и проверке подлинности</span><span class="sxs-lookup"><span data-stu-id="819ff-102">Security Validation and Authentication Failures</span></span>
 <span data-ttu-id="819ff-103">Имя счетчика: Security Validation and Authentication Failures</span><span class="sxs-lookup"><span data-stu-id="819ff-103">Counter name: Security Validation and Authentication Failures</span></span>  

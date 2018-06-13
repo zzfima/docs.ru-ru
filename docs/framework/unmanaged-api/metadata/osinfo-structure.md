@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6c5bc63da7ebe86b653c9bef7caeb1cf28d3a7f8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450054"
 ---
 # <a name="osinfo-structure"></a><span data-ttu-id="da44b-102">Структура OSINFO</span><span class="sxs-lookup"><span data-stu-id="da44b-102">OSINFO Structure</span></span>
 <span data-ttu-id="da44b-103">Содержит сведения об операционной системе для сборки или модуля.</span><span class="sxs-lookup"><span data-stu-id="da44b-103">Contains details about the operating system for an assembly or module.</span></span>  

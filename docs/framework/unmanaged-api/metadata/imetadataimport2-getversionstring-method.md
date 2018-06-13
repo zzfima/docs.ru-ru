@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 112ddcf51a5637bb89df9479850c2a4a70d2e1d8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33448730"
 ---
 # <a name="imetadataimport2getversionstring-method"></a><span data-ttu-id="896cc-102">Метод IMetaDataImport2::GetVersionString</span><span class="sxs-lookup"><span data-stu-id="896cc-102">IMetaDataImport2::GetVersionString Method</span></span>
 <span data-ttu-id="896cc-103">Получает номер версии среды выполнения, который использовался для создания сборки.</span><span class="sxs-lookup"><span data-stu-id="896cc-103">Gets the version number of the runtime that was used to build the assembly.</span></span>  

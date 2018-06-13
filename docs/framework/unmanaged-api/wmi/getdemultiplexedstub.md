@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6b195d3a512c537ca409bd2039add9e69abaf4df
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456366"
 ---
 # <a name="getdemultiplexedstub-function"></a><span data-ttu-id="2c81d-103">Функция GetDemultiplexedStub</span><span class="sxs-lookup"><span data-stu-id="2c81d-103">GetDemultiplexedStub function</span></span>
 <span data-ttu-id="2c81d-104">Создает приемник объект сервера пересылки для клиента при получении асинхронные вызовы от управления Windows.</span><span class="sxs-lookup"><span data-stu-id="2c81d-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>

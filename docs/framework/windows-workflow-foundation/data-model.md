@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512045"
 ---
 # <a name="windows-workflow-foundation-data-model"></a><span data-ttu-id="a23c4-102">Модель данных Windows Workflow Foundation</span><span class="sxs-lookup"><span data-stu-id="a23c4-102">Windows Workflow Foundation Data Model</span></span>
 <span data-ttu-id="a23c4-103">Модель данных Windows Workflow Foundation состоит из трех понятий: переменные, аргументы и выражения.</span><span class="sxs-lookup"><span data-stu-id="a23c4-103">The Windows Workflow Foundation data model is composed of three concepts: variables, arguments, and expressions.</span></span> <span data-ttu-id="a23c4-104">Переменные представляют хранилище данных, а аргументы представляют поток данных в действие и из действия.</span><span class="sxs-lookup"><span data-stu-id="a23c4-104">Variables represent the storage of data and arguments represent the flow of data into and out of an activity.</span></span> <span data-ttu-id="a23c4-105">Аргументы привязываются (им присваивается значение) с помощью выражений, которые могут ссылаться на переменные.</span><span class="sxs-lookup"><span data-stu-id="a23c4-105">Arguments are bound (assigned a value) using expressions that may reference variables.</span></span>  

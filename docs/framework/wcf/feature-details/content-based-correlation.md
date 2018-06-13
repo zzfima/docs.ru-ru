@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33494219"
 ---
 # <a name="content-based-correlation"></a><span data-ttu-id="001b7-102">Корреляция по содержимому</span><span class="sxs-lookup"><span data-stu-id="001b7-102">Content Based Correlation</span></span>
 <span data-ttu-id="001b7-103">Когда службы рабочего процесса обмениваются данными с клиентами и другими службами, в сообщениях часто встречаются данные, уникальным образом направляющие сообщение в определенный экземпляр.</span><span class="sxs-lookup"><span data-stu-id="001b7-103">When workflow services communicate with clients and other services, often there is some data in the exchanged messages that uniquely relates a message to a particular instance.</span></span> <span data-ttu-id="001b7-104">При корреляции на основе содержимого эти данные в сообщении, например номер заказчика или идентификатор заказа, используются для маршрутизации сообщения в определенный экземпляр рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="001b7-104">Content-based correlation uses this data in the message, such as a customer number or order ID, to route messages to the proper workflow instance.</span></span> <span data-ttu-id="001b7-105">В этом разделе описывается использование корреляции на основе содержимого в рабочих процессах.</span><span class="sxs-lookup"><span data-stu-id="001b7-105">This topic explains how to use content-based correlation in workflows.</span></span>  

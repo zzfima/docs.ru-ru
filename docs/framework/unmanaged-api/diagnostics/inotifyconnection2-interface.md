@@ -18,9 +18,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d0f67b1be58da82c2096c355ba5334b3bfd73611
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33426513"
 ---
 # <a name="inotifyconnection2-interface"></a><span data-ttu-id="a07c8-102">Интерфейс INotifyConnection2</span><span class="sxs-lookup"><span data-stu-id="a07c8-102">INotifyConnection2 Interface</span></span>
 <span data-ttu-id="a07c8-103">Объявляет методы для регистрации и отмены регистрации источника уведомления соединения.</span><span class="sxs-lookup"><span data-stu-id="a07c8-103">Declares methods for registering and unregistering a connection notification source.</span></span>  

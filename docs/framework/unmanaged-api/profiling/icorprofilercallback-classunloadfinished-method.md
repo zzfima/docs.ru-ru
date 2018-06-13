@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ebf72fe4f9fae5b3d791e6eed2e9421b9f4e3296
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450821"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a><span data-ttu-id="3050d-102">Метод ICorProfilerCallback::ClassUnloadFinished</span><span class="sxs-lookup"><span data-stu-id="3050d-102">ICorProfilerCallback::ClassUnloadFinished Method</span></span>
 <span data-ttu-id="3050d-103">Уведомляет профилировщик о завершении выгрузки класса.</span><span class="sxs-lookup"><span data-stu-id="3050d-103">Notifies the profiler that a class has finished unloading.</span></span>  

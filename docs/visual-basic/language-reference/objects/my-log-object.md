@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596025"
 ---
 # <a name="mylog-object"></a><span data-ttu-id="ff3d2-102">Объект My.Log</span><span class="sxs-lookup"><span data-stu-id="ff3d2-102">My.Log Object</span></span>
 <span data-ttu-id="ff3d2-103">Предоставляет свойства и методы для записи информации о событиях и исключениях в журнал приложения.</span><span class="sxs-lookup"><span data-stu-id="ff3d2-103">Provides a property and methods for writing event and exception information to the application's log listeners.</span></span>  

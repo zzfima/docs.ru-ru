@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33558243"
 ---
 # <a name="panels-overview"></a><span data-ttu-id="cb998-102">Общие сведения о панелях</span><span class="sxs-lookup"><span data-stu-id="cb998-102">Panels Overview</span></span>
 <span data-ttu-id="cb998-103"><xref:System.Windows.Controls.Panel> элементы являются компонентами, которые управляют отображением элементов — их размер и измерения, их положение и расположение их дочернего содержимого.</span><span class="sxs-lookup"><span data-stu-id="cb998-103"><xref:System.Windows.Controls.Panel> elements are components that control the rendering of elements—their size and dimensions, their position, and the arrangement of their child content.</span></span> <span data-ttu-id="cb998-104">[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Предоставляет ряд предопределенных <xref:System.Windows.Controls.Panel> элементы, а также возможность создания пользовательских <xref:System.Windows.Controls.Panel> элементов.</span><span class="sxs-lookup"><span data-stu-id="cb998-104">The [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] provides a number of predefined <xref:System.Windows.Controls.Panel> elements as well as the ability to construct custom <xref:System.Windows.Controls.Panel> elements.</span></span>  

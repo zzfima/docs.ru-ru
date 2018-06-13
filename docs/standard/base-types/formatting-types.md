@@ -32,6 +32,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33579851"
 ---
 # <a name="formatting-types-in-net"></a><span data-ttu-id="bafdc-102">Типы форматирования в .NET</span><span class="sxs-lookup"><span data-stu-id="bafdc-102">Formatting Types in .NET</span></span>
 <a name="Introduction"></a> <span data-ttu-id="bafdc-103">Форматирование — это процесс преобразования экземпляра класса, структуры или значения перечисления в строковое представление. Результирующая строка затем демонстрируется пользователям или десериализуется для последующего восстановления значения с исходным типом данных.</span><span class="sxs-lookup"><span data-stu-id="bafdc-103">Formatting is the process of converting an instance of a class, structure, or enumeration value to its string representation, often so that the resulting string can be displayed to users or deserialized to restore the original data type.</span></span> <span data-ttu-id="bafdc-104">Преобразование может быть связано с рядом проблем:</span><span class="sxs-lookup"><span data-stu-id="bafdc-104">This conversion can pose a number of challenges:</span></span>  

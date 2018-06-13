@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33515112"
 ---
 # <a name="activity-relationships-validation"></a><span data-ttu-id="b854a-102">Проверка связей действий</span><span class="sxs-lookup"><span data-stu-id="b854a-102">Activity Relationships Validation</span></span>
 <span data-ttu-id="b854a-103">Этот образец состоит из трех действий: `CreateCity`, `CreateState` и `CreateCountry`.</span><span class="sxs-lookup"><span data-stu-id="b854a-103">This sample consists of three activities, `CreateCity`, `CreateState`, and `CreateCountry`.</span></span> <span data-ttu-id="b854a-104">Действие `CreateCity` должно быть внутри действия `CreateState`, а `CreateState` должно быть внутри действия `CreateCountry`.</span><span class="sxs-lookup"><span data-stu-id="b854a-104">`CreateCity` must be inside a `CreateState` activity, and `CreateState` must be inside a `CreateCountry` activity.</span></span> <span data-ttu-id="b854a-105">Для этого образца логика проверки реализуется в коде для действия `CreateState` и в XAML для действия `CreateCity`.</span><span class="sxs-lookup"><span data-stu-id="b854a-105">For the purpose of this sample, the validation logic is in code for the `CreateState` activity, and in XAML for the `CreateCity` activity.</span></span> <span data-ttu-id="b854a-106">Оба ограничения имеют одинаковое поведение.</span><span class="sxs-lookup"><span data-stu-id="b854a-106">Both constraints have the same behavior.</span></span>  

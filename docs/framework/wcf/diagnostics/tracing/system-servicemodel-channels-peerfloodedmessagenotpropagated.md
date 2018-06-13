@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478196"
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagenotpropagated"></a><span data-ttu-id="7e9ab-102">System.ServiceModel.Channels.PeerFloodedMessageNotPropagated</span><span class="sxs-lookup"><span data-stu-id="7e9ab-102">System.ServiceModel.Channels.PeerFloodedMessageNotPropagated</span></span>
 <span data-ttu-id="7e9ab-103">Сообщение получено равноправным узлом, но не распространено на соседние узлы.</span><span class="sxs-lookup"><span data-stu-id="7e9ab-103">A message was received by the PeerNode, but not propagated to neighbors.</span></span>  

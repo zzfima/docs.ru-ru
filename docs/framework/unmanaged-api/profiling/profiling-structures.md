@@ -10,9 +10,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 229218cb15963846da91f688b0d2faacb20031c8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33456502"
 ---
 # <a name="profiling-structures"></a><span data-ttu-id="4f83a-102">Структуры профилирования</span><span class="sxs-lookup"><span data-stu-id="4f83a-102">Profiling Structures</span></span>
 <span data-ttu-id="4f83a-103">В этом разделе описаны неуправляемые структуры, которые использует API профилирования.</span><span class="sxs-lookup"><span data-stu-id="4f83a-103">This section describes the unmanaged structures that the profiling API uses.</span></span>  

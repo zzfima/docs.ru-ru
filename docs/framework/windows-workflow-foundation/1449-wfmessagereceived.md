@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33511872"
 ---
 # <a name="1449---wfmessagereceived"></a><span data-ttu-id="c9168-102">1449 - WfMessageReceived</span><span class="sxs-lookup"><span data-stu-id="c9168-102">1449 - WfMessageReceived</span></span>
 ## <a name="properties"></a><span data-ttu-id="c9168-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="c9168-103">Properties</span></span>  

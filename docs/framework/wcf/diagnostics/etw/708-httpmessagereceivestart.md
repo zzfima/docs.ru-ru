@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474484"
 ---
 # <a name="708---httpmessagereceivestart"></a><span data-ttu-id="025da-102">708 - HttpMessageReceiveStart</span><span class="sxs-lookup"><span data-stu-id="025da-102">708 - HttpMessageReceiveStart</span></span>
 ## <a name="properties"></a><span data-ttu-id="025da-103">Свойства</span><span class="sxs-lookup"><span data-stu-id="025da-103">Properties</span></span>  

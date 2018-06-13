@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a39eac88537d47535844d1f05e0741cc94142f0a
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447257"
 ---
 # <a name="imetadataimportgetnamefromtoken-method"></a><span data-ttu-id="ae020-102">Метод IMetaDataImport::GetNameFromToken</span><span class="sxs-lookup"><span data-stu-id="ae020-102">IMetaDataImport::GetNameFromToken Method</span></span>
 <span data-ttu-id="ae020-103">Возвращает имя объекта, на который ссылается указанный токен метаданных, в формате UTF-8.</span><span class="sxs-lookup"><span data-stu-id="ae020-103">Gets the UTF-8 name of the object referenced by the specified metadata token.</span></span> <span data-ttu-id="ae020-104">Этот метод устарел.</span><span class="sxs-lookup"><span data-stu-id="ae020-104">This method is obsolete.</span></span>  

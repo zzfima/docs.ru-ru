@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33597879"
 ---
 # <a name="resume-without-error"></a><span data-ttu-id="27a87-102">Выполнение оператора Resume без ошибки</span><span class="sxs-lookup"><span data-stu-id="27a87-102">Resume without error</span></span>
 <span data-ttu-id="27a87-103">Объект `Resume` инструкции обнаружен вне кода обработки ошибок, или код выполнил переход в обработчик ошибок, даже если ошибок не было.</span><span class="sxs-lookup"><span data-stu-id="27a87-103">A `Resume` statement appeared outside error-handling code, or the code jumped into an error handler even though there was no error.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 57a21a3e4c1324e15a8418dacb8cfe7c5163f334
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33454419"
 ---
 # <a name="icorprofilerinfo3getstringlayout2-method"></a><span data-ttu-id="481ab-102">Метод ICorProfilerInfo3::GetStringLayout2</span><span class="sxs-lookup"><span data-stu-id="481ab-102">ICorProfilerInfo3::GetStringLayout2 Method</span></span>
 <span data-ttu-id="481ab-103">Получает сведения о структуре строкового объекта.</span><span class="sxs-lookup"><span data-stu-id="481ab-103">Gets information about the layout of a string object.</span></span> <span data-ttu-id="481ab-104">Этот метод заменяет [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) метод.</span><span class="sxs-lookup"><span data-stu-id="481ab-104">This method supersedes the [ICorProfilerInfo2::GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md) method.</span></span>  

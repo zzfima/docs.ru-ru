@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 14717b67db03b941d33b5df61c64b5df078adaa2
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33451432"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a><span data-ttu-id="41551-102">Метод ICorProfilerCallback::RemotingClientSendingMessage</span><span class="sxs-lookup"><span data-stu-id="41551-102">ICorProfilerCallback::RemotingClientSendingMessage Method</span></span>
 <span data-ttu-id="41551-103">Уведомляет профилировщик о том, что клиент отправляет запрос на сервер.</span><span class="sxs-lookup"><span data-stu-id="41551-103">Notifies the profiler that the client is sending a request to the server.</span></span>  

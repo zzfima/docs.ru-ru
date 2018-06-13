@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33555186"
 ---
 # <a name="textbox"></a><span data-ttu-id="af606-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="af606-102">TextBox</span></span>
 <span data-ttu-id="af606-103"><xref:System.Windows.Controls.TextBox> Управления обеспечивает поддержку для базового ввода текста в приложениях WPF.</span><span class="sxs-lookup"><span data-stu-id="af606-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  

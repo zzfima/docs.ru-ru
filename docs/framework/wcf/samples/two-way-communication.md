@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33508349"
 ---
 # <a name="two-way-communication"></a><span data-ttu-id="a00a1-102">Двусторонний обмен данными</span><span class="sxs-lookup"><span data-stu-id="a00a1-102">Two-Way Communication</span></span>
 <span data-ttu-id="a00a1-103">В этом образце показано, как осуществлять транзакционное двустороннее взаимодействие с использованием очередей с помощью MSMQ.</span><span class="sxs-lookup"><span data-stu-id="a00a1-103">This sample demonstrates how to perform transacted two-way queued communication over MSMQ.</span></span> <span data-ttu-id="a00a1-104">В этом примере используется привязка `netMsmqBinding`.</span><span class="sxs-lookup"><span data-stu-id="a00a1-104">This sample uses the `netMsmqBinding` binding.</span></span> <span data-ttu-id="a00a1-105">В данном случае служба представляет собой резидентное консольное приложение, позволяющее наблюдать за тем, как служба получает сообщения из очереди.</span><span class="sxs-lookup"><span data-stu-id="a00a1-105">In this case, the service is a self-hosted console application that allows you to observe the service receiving queued messages.</span></span>  

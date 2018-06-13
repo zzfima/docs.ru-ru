@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33512214"
 ---
 # <a name="exceptions-transactions-and-compensation"></a><span data-ttu-id="8d07a-102">Исключения, транзакции и компенсация</span><span class="sxs-lookup"><span data-stu-id="8d07a-102">Exceptions, Transactions, and Compensation</span></span>
 [!INCLUDE[wf1](../../../includes/wf1-md.md)]<span data-ttu-id="8d07a-103"> предоставляет несколько различных механизмов обработки состояний ошибок времени выполнения в рабочих процессах.</span><span class="sxs-lookup"><span data-stu-id="8d07a-103"> provides several different mechanisms for handling run-time error conditions in workflows.</span></span> <span data-ttu-id="8d07a-104">Рабочие процессы могут использовать сочетание обработчиков исключений, транзакций, отмены и компенсации для обработки ошибочных состояний и верного возобновления работы.</span><span class="sxs-lookup"><span data-stu-id="8d07a-104">Workflows can use a combination of exception handlers, transactions, cancellation, and compensation to handle and recover gracefully from error conditions.</span></span>  

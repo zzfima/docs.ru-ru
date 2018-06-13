@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33476054"
 ---
 # <a name="microsofttransactionstransactionbridgeregisterparticipant"></a><span data-ttu-id="486de-102">Microsoft.Transactions.TransactionBridge.RegisterParticipant</span><span class="sxs-lookup"><span data-stu-id="486de-102">Microsoft.Transactions.TransactionBridge.RegisterParticipant</span></span>
 <span data-ttu-id="486de-103">Служба протокола WS-Atomic Transaction успешно зарегистрировала участника для протокола управления.</span><span class="sxs-lookup"><span data-stu-id="486de-103">The WS-Atomic Transaction protocol service successfully registered a participant for a control protocol.</span></span>  

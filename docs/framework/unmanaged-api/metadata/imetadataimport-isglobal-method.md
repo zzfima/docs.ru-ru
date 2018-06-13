@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4156c3507ccbd21d59893c5e03e15fe9b7322e48
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33447802"
 ---
 # <a name="imetadataimportisglobal-method"></a><span data-ttu-id="2355c-102">Метод IMetaDataImport::IsGlobal</span><span class="sxs-lookup"><span data-stu-id="2355c-102">IMetaDataImport::IsGlobal Method</span></span>
 <span data-ttu-id="2355c-103">Возвращает значение, указывающее на наличие глобальной области у поля, метода или типа, представленного заданным токеном метаданных.</span><span class="sxs-lookup"><span data-stu-id="2355c-103">Gets a value indicating whether the field, method, or type represented by the specified metadata token has global scope.</span></span>  

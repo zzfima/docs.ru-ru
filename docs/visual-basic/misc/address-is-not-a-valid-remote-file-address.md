@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33599903"
 ---
 # <a name="ltaddressgt-is-not-a-valid-remote-file-address"></a><span data-ttu-id="9b3ac-102">&lt;адрес&gt; не является недопустимым адресом удаленного файла</span><span class="sxs-lookup"><span data-stu-id="9b3ac-102">&lt;address&gt; is not a valid remote file address</span></span>
 <span data-ttu-id="9b3ac-103">\<адрес > не является недопустимым адресом удаленного файла.</span><span class="sxs-lookup"><span data-stu-id="9b3ac-103">\<address> is not a valid remote file address.</span></span> <span data-ttu-id="9b3ac-104">Допустимый адрес должен включать протокол, путь и имя файла.</span><span class="sxs-lookup"><span data-stu-id="9b3ac-104">A valid address should include a protocol, a path and a filename.</span></span>  

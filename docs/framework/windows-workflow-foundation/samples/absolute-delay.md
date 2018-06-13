@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518389"
 ---
 # <a name="absolute-delay"></a><span data-ttu-id="7a30f-102">Абсолютная задержка</span><span class="sxs-lookup"><span data-stu-id="7a30f-102">Absolute Delay</span></span>
 <span data-ttu-id="7a30f-103">Основной сценарий в этом образце - задержка до указанного значения <xref:System.DateTime> с помощью устойчивых таймеров в приложении рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="7a30f-103">The main scenario for this sample is to delay until a specified <xref:System.DateTime> using durable timers in a workflow application.</span></span> <span data-ttu-id="7a30f-104">Эффект будет отличаться от применения встроенного действия <xref:System.Activities.Statements.Delay>, так как в этом случае задержка возможна только в течение заданного значения <xref:System.TimeSpan> (или количества минут и секунд).</span><span class="sxs-lookup"><span data-stu-id="7a30f-104">This is different from using the built-in <xref:System.Activities.Statements.Delay> activity as this will only allow you to delay for a given <xref:System.TimeSpan> (or number of minutes/seconds).</span></span>  

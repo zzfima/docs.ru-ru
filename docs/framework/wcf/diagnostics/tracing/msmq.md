@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33475290"
 ---
 # <a name="msmq"></a><span data-ttu-id="5d517-102">MSMQ</span><span class="sxs-lookup"><span data-stu-id="5d517-102">MSMQ</span></span>
 <span data-ttu-id="5d517-103">В приложениях MSMQ никакие дополнительные действия не передаются из очереди канала в MSMQ и обратно.</span><span class="sxs-lookup"><span data-stu-id="5d517-103">In an MSMQ application, no additional activity is transferred from the queued channel to MSMQ and from MSMQ to the queued channel.</span></span>  

@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: db3e9cfa73672920ff70d9128541a8f513fca00f
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33432660"
 ---
 # <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a><span data-ttu-id="6aa34-102">Метод ISymENCUnmanagedMethod::GetFileNameFromOffset</span><span class="sxs-lookup"><span data-stu-id="6aa34-102">ISymENCUnmanagedMethod::GetFileNameFromOffset Method</span></span>
 <span data-ttu-id="6aa34-103">Получает имя файла для строки, связанной со смещением.</span><span class="sxs-lookup"><span data-stu-id="6aa34-103">Gets the file name for the line associated with an offset.</span></span>  

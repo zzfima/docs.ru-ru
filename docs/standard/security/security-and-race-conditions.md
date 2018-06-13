@@ -18,6 +18,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33582139"
 ---
 # <a name="security-and-race-conditions"></a><span data-ttu-id="b89cc-102">Безопасность и конфликты</span><span class="sxs-lookup"><span data-stu-id="b89cc-102">Security and Race Conditions</span></span>
 <span data-ttu-id="b89cc-103">Другой областью проблемных является возможность бреши в гонки безопасности.</span><span class="sxs-lookup"><span data-stu-id="b89cc-103">Another area of concern is the potential for security holes exploited by race conditions.</span></span> <span data-ttu-id="b89cc-104">Существует несколько способов, в которых это может произойти.</span><span class="sxs-lookup"><span data-stu-id="b89cc-104">There are several ways in which this might happen.</span></span> <span data-ttu-id="b89cc-105">Нижеследующие подразделы описывают некоторые основные ловушки, которые разработчик должен обойти.</span><span class="sxs-lookup"><span data-stu-id="b89cc-105">The subtopics that follow outline some of the major pitfalls that the developer must avoid.</span></span>  

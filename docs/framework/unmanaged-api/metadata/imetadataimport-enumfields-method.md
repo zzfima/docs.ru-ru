@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bd8a2d373b801bd8238d50eecb388ef511bc34bc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446206"
 ---
 # <a name="imetadataimportenumfields-method"></a><span data-ttu-id="381f1-102">Метод IMetaDataImport::EnumFields</span><span class="sxs-lookup"><span data-stu-id="381f1-102">IMetaDataImport::EnumFields Method</span></span>
 <span data-ttu-id="381f1-103">Перечисляет токены FieldDef для типа, на который ссылается указанный токен TypeDef.</span><span class="sxs-lookup"><span data-stu-id="381f1-103">Enumerates FieldDef tokens for the type referenced by the specified TypeDef token.</span></span>  

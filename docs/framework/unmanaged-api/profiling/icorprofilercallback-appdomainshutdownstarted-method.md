@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fd1e5daada8793e94980afc5f0cf509915bd288e
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33450933"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a><span data-ttu-id="ddb9a-102">Метод ICorProfilerCallback::AppDomainShutdownStarted</span><span class="sxs-lookup"><span data-stu-id="ddb9a-102">ICorProfilerCallback::AppDomainShutdownStarted Method</span></span>
 <span data-ttu-id="ddb9a-103">Уведомляет профилировщик о том, что домен приложения выгружается из процесса.</span><span class="sxs-lookup"><span data-stu-id="ddb9a-103">Notifies the profiler that an application domain is being unloaded from a process.</span></span>  

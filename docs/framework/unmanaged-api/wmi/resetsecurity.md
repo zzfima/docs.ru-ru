@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 31e42b9e39ddb43025e18888572c394d742e38cf
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33457910"
 ---
 # <a name="resetsecurity-function"></a><span data-ttu-id="bec75-103">Функция ResetSecurity</span><span class="sxs-lookup"><span data-stu-id="bec75-103">ResetSecurity function</span></span>
 <span data-ttu-id="bec75-104">Присваивает указанный олицетворения текущего потока.</span><span class="sxs-lookup"><span data-stu-id="bec75-104">Assigns the supplied impersonation token to the current thread.</span></span>   

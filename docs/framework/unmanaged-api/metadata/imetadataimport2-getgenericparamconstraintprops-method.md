@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c1d76dcd581b54d54d6b44505e09476993b2930c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33446821"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a><span data-ttu-id="37125-102">Метод IMetaDataImport2::GetGenericParamConstraintProps</span><span class="sxs-lookup"><span data-stu-id="37125-102">IMetaDataImport2::GetGenericParamConstraintProps Method</span></span>
 <span data-ttu-id="37125-103">Возвращает метаданные, связанные с ограничением параметра универсального типа, представленного маркером указанное ограничение.</span><span class="sxs-lookup"><span data-stu-id="37125-103">Gets the metadata associated with the generic parameter constraint represented by the specified constraint token.</span></span>  

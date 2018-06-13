@@ -20,9 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ea151417a1cb53104ec29fff1e76e21f82ec9bb
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33431647"
 ---
 # <a name="getassemblyidentityfromfile-function"></a><span data-ttu-id="65ed6-102">Функция GetAssemblyIdentityFromFile</span><span class="sxs-lookup"><span data-stu-id="65ed6-102">GetAssemblyIdentityFromFile Function</span></span>
 <span data-ttu-id="65ed6-103">Возвращает указатель на `IUnknown` объект с указанным `IID` сборки по указанному пути.</span><span class="sxs-lookup"><span data-stu-id="65ed6-103">Gets a pointer to an `IUnknown` object with the specified `IID` in the assembly at the specified file path.</span></span>  

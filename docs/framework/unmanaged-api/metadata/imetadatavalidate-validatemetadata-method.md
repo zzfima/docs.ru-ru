@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 113c228fd0a160ef6d8dd593891a6f9dd053a28c
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33452671"
 ---
 # <a name="imetadatavalidatevalidatemetadata-method"></a><span data-ttu-id="b843d-102">Метод IMetaDataValidate::ValidateMetaData</span><span class="sxs-lookup"><span data-stu-id="b843d-102">IMetaDataValidate::ValidateMetaData Method</span></span>
 <span data-ttu-id="b843d-103">Проверяет сигнатуры метаданных объектов в текущей области метаданных.</span><span class="sxs-lookup"><span data-stu-id="b843d-103">Validates the metadata signatures of the objects in the current metadata scope.</span></span>  

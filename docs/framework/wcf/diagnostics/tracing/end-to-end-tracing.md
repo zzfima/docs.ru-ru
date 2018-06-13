@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33474224"
 ---
 # <a name="end-to-end-tracing"></a><span data-ttu-id="7627e-102">Сквозная трассировка</span><span class="sxs-lookup"><span data-stu-id="7627e-102">End-to-End Tracing</span></span>
 <span data-ttu-id="7627e-103">Сквозная (e2e) Трассировка позволяет разработчикам следить за выполнением кода в инфраструктуре Windows Communication Foundation (WCF) для изучения причин сбоя в ветви кода, или для получения подробной трассировки для анализ производительности и планирования емкости.</span><span class="sxs-lookup"><span data-stu-id="7627e-103">End to End (e2e) Tracing allows developers to follow the execution of code in the Windows Communication Foundation (WCF) infrastructure to investigate why a code path has failed, or to provide detailed tracing for capacity planning and performance analysis.</span></span> <span data-ttu-id="7627e-104">Windows Communication Foundation (WCF) обеспечивает три механизма корреляции для определения причины ошибки: действия, перенаправления и распространение.</span><span class="sxs-lookup"><span data-stu-id="7627e-104">Windows Communication Foundation (WCF) provides three correlation mechanisms to help diagnose the cause of an error: activities, transfers, and propagation.</span></span>  

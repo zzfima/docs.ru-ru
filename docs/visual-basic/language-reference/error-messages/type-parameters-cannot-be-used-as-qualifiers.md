@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33595149"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a><span data-ttu-id="d8ad2-102">Параметры типа нельзя использовать в качестве квалификаторов</span><span class="sxs-lookup"><span data-stu-id="d8ad2-102">Type parameters cannot be used as qualifiers</span></span>
 <span data-ttu-id="d8ad2-103">Программный элемент квалифицировался уточняющей строки, которая содержит параметр типа.</span><span class="sxs-lookup"><span data-stu-id="d8ad2-103">A programming element is qualified with a qualification string that includes a type parameter.</span></span>  

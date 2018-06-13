@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33556878"
 ---
 # <a name="how-to-specify-the-binding-source"></a><span data-ttu-id="5c044-102">Практическое руководство. Указание источника привязки</span><span class="sxs-lookup"><span data-stu-id="5c044-102">How to: Specify the Binding Source</span></span>
 <span data-ttu-id="5c044-103">В привязке данных объект источника привязки означает объект, из которого вы получаете данные.</span><span class="sxs-lookup"><span data-stu-id="5c044-103">In data binding, the binding source object refers to the object you obtain your data from.</span></span> <span data-ttu-id="5c044-104">В этом разделе описываются различные способы указания источника привязки.</span><span class="sxs-lookup"><span data-stu-id="5c044-104">This topic describes the different ways of specifying the binding source.</span></span>  

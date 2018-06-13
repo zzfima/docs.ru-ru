@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33554915"
 ---
 # <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a><span data-ttu-id="49fd6-102">Практическое руководство. Применение триггеров для определения стиля выбранных элементов в ListView</span><span class="sxs-lookup"><span data-stu-id="49fd6-102">How to: Use Triggers to Style Selected Items in a ListView</span></span>
 <span data-ttu-id="49fd6-103">В этом примере показан способ определения <xref:System.Windows.Style.Triggers%2A> для <xref:System.Windows.Controls.ListViewItem> управления, чтобы при изменении значения свойства из <xref:System.Windows.Controls.ListViewItem> изменений, <xref:System.Windows.Style> из <xref:System.Windows.Controls.ListViewItem> изменениях в ответ.</span><span class="sxs-lookup"><span data-stu-id="49fd6-103">This example shows how to define <xref:System.Windows.Style.Triggers%2A> for a <xref:System.Windows.Controls.ListViewItem> control so that when a property value of a <xref:System.Windows.Controls.ListViewItem> changes, the <xref:System.Windows.Style> of the <xref:System.Windows.Controls.ListViewItem> changes in response.</span></span>  

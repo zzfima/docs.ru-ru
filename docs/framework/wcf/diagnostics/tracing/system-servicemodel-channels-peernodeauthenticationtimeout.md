@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33478414"
 ---
 # <a name="systemservicemodelchannelspeernodeauthenticationtimeout"></a><span data-ttu-id="62032-102">System.ServiceModel.Channels.PeerNodeAuthenticationTimeout</span><span class="sxs-lookup"><span data-stu-id="62032-102">System.ServiceModel.Channels.PeerNodeAuthenticationTimeout</span></span>
 <span data-ttu-id="62032-103">Подтверждение безопасности не было успешно завершено в течение заданного времени.</span><span class="sxs-lookup"><span data-stu-id="62032-103">The security handshake did not succeed within the specified time limit.</span></span>  

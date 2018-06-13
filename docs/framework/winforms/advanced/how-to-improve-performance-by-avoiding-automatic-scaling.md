@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33523046"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a><span data-ttu-id="e989e-102">Практическое руководство. Повышение производительности за счет отключения автоматического масштабирования</span><span class="sxs-lookup"><span data-stu-id="e989e-102">How to: Improve Performance by Avoiding Automatic Scaling</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="e989e-103"> Автоматическое масштабирование образа при рисовании, снижает производительность.</span><span class="sxs-lookup"><span data-stu-id="e989e-103"> may automatically scale an image as you draw it, which would decrease performance.</span></span> <span data-ttu-id="e989e-104">Кроме того, можно управлять масштабирования изображения, передав размеры прямоугольника назначения <xref:System.Drawing.Graphics.DrawImage%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="e989e-104">Alternatively, you can control the scaling of the image by passing the dimensions of the destination rectangle to the <xref:System.Drawing.Graphics.DrawImage%2A> method.</span></span>  

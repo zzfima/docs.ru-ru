@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514586"
 ---
 # <a name="persistence"></a><span data-ttu-id="173e3-102">Сохраняемость</span><span class="sxs-lookup"><span data-stu-id="173e3-102">Persistence</span></span>
 <span data-ttu-id="173e3-103">Этот раздел содержит образцы, показывающие сохранение рабочих процессов на постоянном носителе в Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="173e3-103">This section contains samples that demonstrate persisting workflows to a durable medium in Windows Workflow Foundation (WF).</span></span>  

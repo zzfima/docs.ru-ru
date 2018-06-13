@@ -19,9 +19,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 28fa18535cce50a62f6aca7ae6f013628698c6dc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33455539"
 ---
 # <a name="icorprofilercallbackmovedreferences-method"></a><span data-ttu-id="1bdf4-102">Метод ICorProfilerCallback::MovedReferences</span><span class="sxs-lookup"><span data-stu-id="1bdf4-102">ICorProfilerCallback::MovedReferences Method</span></span>
 <span data-ttu-id="1bdf4-103">Вызывается для предоставления сведений о структуре объектов в куче в результате сжатия сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="1bdf4-103">Called to report the new layout of objects in the heap as a result of a compacting garbage collection.</span></span>  

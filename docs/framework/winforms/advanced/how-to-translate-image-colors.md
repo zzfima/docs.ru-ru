@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522540"
 ---
 # <a name="how-to-translate-image-colors"></a><span data-ttu-id="a59f2-102">Практическое руководство. Преобразование цветов изображения</span><span class="sxs-lookup"><span data-stu-id="a59f2-102">How to: Translate Image Colors</span></span>
 <span data-ttu-id="a59f2-103">Перевод добавляет значение к одному или нескольким из четырех компонентов цвета.</span><span class="sxs-lookup"><span data-stu-id="a59f2-103">A translation adds a value to one or more of the four color components.</span></span> <span data-ttu-id="a59f2-104">В следующей таблице приведены элементы матрицы цветов, представляющих переводы.</span><span class="sxs-lookup"><span data-stu-id="a59f2-104">The color matrix entries that represent translations are given in the following table.</span></span>  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33596688"
 ---
 # <a name="statement-cannot-end-a-block-outside-of-a-line-39if39-statement"></a><span data-ttu-id="56ede-102">Оператор не может завершить блок за пределами &#39;Если&#39; инструкции</span><span class="sxs-lookup"><span data-stu-id="56ede-102">Statement cannot end a block outside of a line &#39;If&#39; statement</span></span>
 <span data-ttu-id="56ede-103">Однострочный `If` инструкция содержит несколько операторов, разделенных двоеточием (:), один из которых является `End` инструкции для блока управления за пределами однострочного `If`.</span><span class="sxs-lookup"><span data-stu-id="56ede-103">A single-line `If` statement contains several statements separated by colons (:), one of which is an `End` statement for a control block outside the single-line `If`.</span></span> <span data-ttu-id="56ede-104">Однострочный `If` не используйте инструкции `End If` инструкции.</span><span class="sxs-lookup"><span data-stu-id="56ede-104">Single-line `If` statements do not use the `End If` statement.</span></span>  

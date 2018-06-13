@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33525851"
 ---
 # <a name="polygons-in-gdi"></a><span data-ttu-id="6e816-102">Многоугольники в GDI+</span><span class="sxs-lookup"><span data-stu-id="6e816-102">Polygons in GDI+</span></span>
 <span data-ttu-id="6e816-103">Многоугольник — замкнутую фигуру с тремя или более прямые стороны.</span><span class="sxs-lookup"><span data-stu-id="6e816-103">A polygon is a closed shape with three or more straight sides.</span></span> <span data-ttu-id="6e816-104">Например треугольник — многоугольник с тремя сторонами, прямоугольник — это многоугольник с четырех сторон и пятиугольник — это многоугольник с пятью сторонами.</span><span class="sxs-lookup"><span data-stu-id="6e816-104">For example, a triangle is a polygon with three sides, a rectangle is a polygon with four sides, and a pentagon is a polygon with five sides.</span></span> <span data-ttu-id="6e816-105">На следующем рисунке несколько многоугольников.</span><span class="sxs-lookup"><span data-stu-id="6e816-105">The following illustration shows several polygons.</span></span>  
