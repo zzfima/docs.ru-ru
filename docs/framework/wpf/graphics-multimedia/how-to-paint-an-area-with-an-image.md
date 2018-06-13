@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560962"
 ---
 # <a name="how-to-paint-an-area-with-an-image"></a>Инструкция по закрашиванию области с изображением
 В этом примере показано, как использовать <xref:System.Windows.Media.ImageBrush> класса Закраска области с изображением. <xref:System.Windows.Media.ImageBrush> Отображает одно изображение, которое определяется его <xref:System.Windows.Media.ImageBrush.ImageSource%2A> свойство.  

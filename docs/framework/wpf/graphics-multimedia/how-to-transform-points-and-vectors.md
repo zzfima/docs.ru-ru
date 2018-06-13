@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559980"
 ---
 # <a name="how-to-transform-points-and-vectors"></a>Практическое руководство. Преобразование объектов Point и Vector
 В этом примере показано, как использовать <xref:System.Windows.Media.Matrix> для преобразования <xref:System.Windows.Point> и <xref:System.Windows.Vector> объектов.  

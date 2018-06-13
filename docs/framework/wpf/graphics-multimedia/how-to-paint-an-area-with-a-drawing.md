@@ -14,6 +14,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560907"
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>Практическое руководство. Закраска области рисованием
 Этот пример показывает, как можно закрасить область рисунком. Закраска области с помощью drawing, использовании <xref:System.Windows.Media.DrawingBrush> и один или несколько <xref:System.Windows.Media.Drawing> объектов.   В следующем примере используется <xref:System.Windows.Media.DrawingBrush> для рисования объекта рисованием двух эллипсов.  

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33561466"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>Как управлять раскадровкой после ее запуска
 В этом примере показано, как использовать код для управления <xref:System.Windows.Media.Animation.Storyboard> после его начала. Для управления раскадровки в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], используйте <xref:System.Windows.Trigger> и <xref:System.Windows.TriggerAction> объектов; например, в разделе [использование триггеров событий для управления раскадровкой после ее запуска](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md).  

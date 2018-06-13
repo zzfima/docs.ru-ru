@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560881"
 ---
 # <a name="how-to-paint-an-area-with-a-linear-gradient"></a>Как закрасить область с линейным градиентом
 В этом примере показано, как использовать <xref:System.Windows.Media.LinearGradientBrush> класса Закраска области с линейным градиентом. В следующем примере <xref:System.Windows.Shapes.Shape.Fill%2A> из <xref:System.Windows.Shapes.Rectangle> отрисовывается с диагонального линейного градиента, которая переходит с желтого на красный цвет на синий и зеленого.  

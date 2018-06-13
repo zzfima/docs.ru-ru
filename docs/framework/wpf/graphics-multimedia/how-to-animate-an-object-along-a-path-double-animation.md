@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33559909"
 ---
 # <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Практическое руководство. Анимация объекта вдоль пути (двойная анимация)
 В этом примере показано, как использовать <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> класса для перемещения объекта вдоль пути, заданного с <xref:System.Windows.Media.PathGeometry>.  

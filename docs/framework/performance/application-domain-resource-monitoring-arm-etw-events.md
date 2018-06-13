@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33398187"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>События отслеживания ресурсов домена приложения (трассировка событий Windows)
 <a name="top"></a> Эти события предоставляют подробные диагностические сведения о состоянии домена приложения. Эти события и функция отслеживания ресурсов домена приложения позволяют получить одни и те же сведения.  

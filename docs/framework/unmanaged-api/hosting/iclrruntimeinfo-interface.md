@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cc8225b6612c7bf07d220b20d515f64a346b9691
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33436472"
 ---
 # <a name="iclrruntimeinfo-interface"></a>Интерфейс ICLRRuntimeInfo
 Предоставляет методы, возвращающие сведения о конкретных общеязыковая среда выполнения (CLR), включая версию, каталог и состояние загрузки. Этот интерфейс также предоставляет функциональные возможности среды выполнения без инициализации среды выполнения. Он включает относительный среды выполнения [LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) метод, специфичная для модуля среды выполнения [GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md) метод и интерфейсов предоставляемые средой выполнения с помощью [GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)метод.  

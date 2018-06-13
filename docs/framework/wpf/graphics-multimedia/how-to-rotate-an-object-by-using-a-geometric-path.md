@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33560720"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path"></a>Практическое руководство. Поворот объекта с использованием геометрического пути
 В этом примере показано, как поворот (вращение) объекта вдоль геометрического пути, который определяется <xref:System.Windows.Media.PathGeometry> объекта.  

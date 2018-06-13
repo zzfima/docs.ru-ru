@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33557853"
 ---
 # <a name="sizing-options-in-the-datagrid-control"></a>Параметры изменения размеров элемента управления DataGrid
 Различные параметры, доступные для управления как <xref:System.Windows.Controls.DataGrid> изменяет свой размер. <xref:System.Windows.Controls.DataGrid>И отдельных строк и столбцов в <xref:System.Windows.Controls.DataGrid>, можно задать размер автоматически в соответствии с содержимым, или могут быть присвоены определенные значения. По умолчанию <xref:System.Windows.Controls.DataGrid> будет увеличиваться или уменьшаться в соответствии с размером его содержимого.  

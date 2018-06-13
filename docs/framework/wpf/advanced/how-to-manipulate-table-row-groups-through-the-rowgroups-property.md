@@ -15,6 +15,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33545169"
 ---
 # <a name="how-to-manipulate-a-table39s-row-groups-through-the-rowgroups-property"></a>Как: управлять таблицы&#39;группы строк s свойства RowGroups
 В этом примере показаны некоторые из наиболее распространенных операций, которые могут выполняться над группами строк таблицы <xref:System.Windows.Documents.Table.RowGroups%2A> свойство.  
