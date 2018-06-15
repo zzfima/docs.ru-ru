@@ -3044,25 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 44bc5647fe740a4900b99794fe7af907e6328665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
+ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35231467"
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>К сожалению, мы не хотите&#39;t имеют подробные сведения об этой ошибке Visual Basic
 Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Также можно обратиться с вопросом к другим разработчикам на следующих форумах:  
   
- [Язык Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)  
+ [Язык Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
  Форум для вопросов и общих обсуждений синтаксиса языка Visual Basic и компилятора.  
   
- [Взаимодействие и обновление Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ [Взаимодействие и обновление Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
  Форум для вопросов о и проблемы, связанные с обновлением до Visual Basic и возможностями взаимодействия.  
   
- [Среда IDE Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145971)  
+ [Среда IDE Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
  Форум для вопросов о работе в среде Visual Studio.  
   
- [Общие вопросы Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ [Общие вопросы Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
  Форум для вопросов о и проблемы, связанные с Visual Basic, которые не обсуждаются на других форумах.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
