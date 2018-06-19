@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520894"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a><span data-ttu-id="916b8-102">Практическое руководство. Разработка шрифтов и их семейств</span><span class="sxs-lookup"><span data-stu-id="916b8-102">How to: Construct Font Families and Fonts</span></span>
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<span data-ttu-id="916b8-103"> шрифты с же гарнитуры, но разными стилями группируются в семейства шрифтов.</span><span class="sxs-lookup"><span data-stu-id="916b8-103"> groups fonts with the same typeface but different styles into font families.</span></span> <span data-ttu-id="916b8-104">Например семейство шрифтов Arial содержит следующие шрифты:</span><span class="sxs-lookup"><span data-stu-id="916b8-104">For example, the Arial font family contains the following fonts:</span></span>  

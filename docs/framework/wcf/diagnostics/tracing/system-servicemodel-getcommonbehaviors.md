@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33481537"
 ---
 # <a name="systemservicemodelgetcommonbehaviors"></a><span data-ttu-id="cfaef-102">System.ServiceModel.GetCommonBehaviors</span><span class="sxs-lookup"><span data-stu-id="cfaef-102">System.ServiceModel.GetCommonBehaviors</span></span>
 <span data-ttu-id="cfaef-103">System.ServiceModel.GetCommonBehaviors</span><span class="sxs-lookup"><span data-stu-id="cfaef-103">System.ServiceModel.GetCommonBehaviors</span></span>  

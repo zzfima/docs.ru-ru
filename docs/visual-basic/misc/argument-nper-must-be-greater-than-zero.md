@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601196"
 ---
 # <a name="argument-39nper39-must-be-greater-than-zero"></a><span data-ttu-id="2f7c8-102">Аргумент &#39;NPer&#39; должно быть больше нуля</span><span class="sxs-lookup"><span data-stu-id="2f7c8-102">Argument &#39;NPer&#39; must be greater than zero</span></span>
 <span data-ttu-id="2f7c8-103">Функция `NPer` , которая возвращает значение `Double` , определяющее количество периодов для ежегодного дохода на основе периодических фиксированных выплат и фиксированной процентной ставки, требует аргумент, значение которого больше нуля.</span><span class="sxs-lookup"><span data-stu-id="2f7c8-103">The `NPer` function, which returns a `Double` specifying the number of periods for an annuity based on periodic fixed payments and a fixed interest rate, requires an argument greater than zero.</span></span>  

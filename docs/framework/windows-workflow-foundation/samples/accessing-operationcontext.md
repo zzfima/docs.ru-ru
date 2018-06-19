@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516637"
 ---
 # <a name="accessing-operationcontext"></a><span data-ttu-id="f3aac-102">Доступ к контексту OperationContext</span><span class="sxs-lookup"><span data-stu-id="f3aac-102">Accessing OperationContext</span></span>
 <span data-ttu-id="f3aac-103">В этом примере показано, как действия обмена сообщениями (<xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.Send>) может использоваться посредством действий пользовательской области для доступа к <xref:System.ServiceModel.OperationContext.Current%2A> и присоединения или получить пользовательского заголовка сообщения исходящего или входящего сообщения.</span><span class="sxs-lookup"><span data-stu-id="f3aac-103">This sample demonstrates how the messaging activities (<xref:System.ServiceModel.Activities.Receive> and <xref:System.ServiceModel.Activities.Send>) can be used with a custom scope activity to access <xref:System.ServiceModel.OperationContext.Current%2A> and attach or retrieve a custom message header within an outgoing or incoming message.</span></span>  

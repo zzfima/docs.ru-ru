@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33518715"
 ---
 # <a name="buffered-receive"></a><span data-ttu-id="727d5-102">Прием через буфер</span><span class="sxs-lookup"><span data-stu-id="727d5-102">Buffered Receive</span></span>
 <span data-ttu-id="727d5-103">В этом примере показано, как настроить и сконфигурировать функцию буфера получения в Windows Workflow Foundation (WF).</span><span class="sxs-lookup"><span data-stu-id="727d5-103">This sample demonstrates how to set up and configure the buffered receive feature in Windows Workflow Foundation (WF).</span></span> <span data-ttu-id="727d5-104">Функция буфера получения позволяет автору рабочего процесса создавать рабочий процесс, не заботясь о том, в каком порядке получаются сообщения.</span><span class="sxs-lookup"><span data-stu-id="727d5-104">Buffered receive allows the workflow author to create a workflow without having to worry about the order in which messages are received.</span></span> <span data-ttu-id="727d5-105">Возможность буфера получения осуществляет буферизацию сообщений на локальном уровне и доставляет их, как только рабочий процесс готов к их получению.</span><span class="sxs-lookup"><span data-stu-id="727d5-105">The buffered receive feature buffers messages locally and delivers them when the workflow is ready to receive them.</span></span>  
