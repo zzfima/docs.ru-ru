@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 14c2c9b70ac2e57983ea4b16772add6a1dff5ff4
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438071"
 ---
 # <a name="iclrtaskmanager-interface"></a><span data-ttu-id="b5a3e-102">Интерфейс ICLRTaskManager</span><span class="sxs-lookup"><span data-stu-id="b5a3e-102">ICLRTaskManager Interface</span></span>
 <span data-ttu-id="b5a3e-103">Предоставляет методы, позволяющие основному приложению явным образом запросить общеязыковой среды выполнения (CLR) создайте новую задачу, выполняемую задачу и задать географического язык и региональные параметры для задачи.</span><span class="sxs-lookup"><span data-stu-id="b5a3e-103">Provides methods that allow the host to request explicitly that the common language runtime (CLR) create a new task, get the currently executing task, and set the geographic language and culture for the task.</span></span>  

@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33480816"
 ---
 # <a name="systemservicemodelchannelspeerchannelmessagesent"></a><span data-ttu-id="f37f2-102">System.ServiceModel.Channels.PeerChannelMessageSent</span><span class="sxs-lookup"><span data-stu-id="f37f2-102">System.ServiceModel.Channels.PeerChannelMessageSent</span></span>
 <span data-ttu-id="f37f2-103">Выполняется отправка нового сообщения PeerChannel.</span><span class="sxs-lookup"><span data-stu-id="f37f2-103">A new PeerChannel message is being sent.</span></span>  

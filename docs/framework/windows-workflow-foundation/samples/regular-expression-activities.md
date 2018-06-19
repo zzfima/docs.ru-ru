@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33519838"
 ---
 # <a name="regular-expression-activities"></a><span data-ttu-id="f0b93-102">Действия с регулярными выражениями</span><span class="sxs-lookup"><span data-stu-id="f0b93-102">Regular Expression Activities</span></span>
 <span data-ttu-id="f0b93-103">Этот образец демонстрирует способ создания набора действий, которые представляют функциональные возможности регулярного выражения пространства имен <xref:System.Text.RegularExpressions>.</span><span class="sxs-lookup"><span data-stu-id="f0b93-103">This sample demonstrates how to create a set of activities that expose the regular expression functionality of the <xref:System.Text.RegularExpressions> namespace.</span></span> <span data-ttu-id="f0b93-104">Такие пользовательские действия можно использовать в приложении рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="f0b93-104">These custom activities can be used within a workflow application.</span></span> <span data-ttu-id="f0b93-105">Дополнительные сведения о регулярных выражениях см. в разделе [N:System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) пространства имен.</span><span class="sxs-lookup"><span data-stu-id="f0b93-105">For more information about regular expressions, see [N:System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) Namespace.</span></span>  

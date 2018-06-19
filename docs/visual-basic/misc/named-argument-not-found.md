@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33638876"
 ---
 # <a name="named-argument-not-found-visual-basic"></a><span data-ttu-id="7de39-102">Именованный аргумент не найден (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="7de39-102">Named argument not found (Visual Basic)</span></span>
 <span data-ttu-id="7de39-103">Именованный аргумент не может использоваться в вызове процедуры, если он не содержится в определении процедуры.</span><span class="sxs-lookup"><span data-stu-id="7de39-103">A named argument can not be used in a procedure invocation unless it appears in the procedure definition.</span></span> <span data-ttu-id="7de39-104">Вы указали именованный аргумент, однако процедура не была определена для принятия аргумента по этому имени.</span><span class="sxs-lookup"><span data-stu-id="7de39-104">You specified a named argument, but the procedure was not defined to accept an argument by that name.</span></span>  

@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 88f2ef8299911905d651ad5c3076dc9c74f397f8
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33438923"
 ---
 # <a name="ihostcrst-interface"></a><span data-ttu-id="e910a-102">Интерфейс IHostCrst</span><span class="sxs-lookup"><span data-stu-id="e910a-102">IHostCrst Interface</span></span>
 <span data-ttu-id="e910a-103">Служит в качестве узла представления критической секции для работы с потоками.</span><span class="sxs-lookup"><span data-stu-id="e910a-103">Serves as the host's representation of a critical section for threading.</span></span>  

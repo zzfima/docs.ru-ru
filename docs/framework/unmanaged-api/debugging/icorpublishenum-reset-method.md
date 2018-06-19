@@ -19,9 +19,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb0e70bffe5bf895fedbfde559674e161757ee48
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33423693"
 ---
 # <a name="icorpublishenumreset-method"></a><span data-ttu-id="974c7-102">Метод ICorPublishEnum::Reset</span><span class="sxs-lookup"><span data-stu-id="974c7-102">ICorPublishEnum::Reset Method</span></span>
 <span data-ttu-id="974c7-103">Перемещает курсор в начало перечисления.</span><span class="sxs-lookup"><span data-stu-id="974c7-103">Moves the cursor of to the beginning of the enumeration.</span></span>  

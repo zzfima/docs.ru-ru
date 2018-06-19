@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33520231"
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a><span data-ttu-id="6b47d-102">Использование действия «Interop» в рабочем процессе платформы .NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="6b47d-102">Using the Interop Activity in a .NET Framework 4 Workflow</span></span>
 <span data-ttu-id="6b47d-103">Действия, созданные в [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] или в [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], могут использоваться в рабочем процессе [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] посредством использования действия <xref:System.Activities.Statements.Interop>.</span><span class="sxs-lookup"><span data-stu-id="6b47d-103">Activities created using [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] or [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] can be used in a [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] workflow by using the <xref:System.Activities.Statements.Interop> activity.</span></span> <span data-ttu-id="6b47d-104">В этом разделе приведены общие сведения об использовании действия <xref:System.Activities.Statements.Interop>.</span><span class="sxs-lookup"><span data-stu-id="6b47d-104">This topic provides an overview of using the <xref:System.Activities.Statements.Interop> activity.</span></span>  

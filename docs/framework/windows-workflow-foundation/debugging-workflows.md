@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33514269"
 ---
 # <a name="debugging-workflows"></a><span data-ttu-id="e1d23-102">Отладка рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="e1d23-102">Debugging Workflows</span></span>
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]<span data-ttu-id="e1d23-103"> обеспечивает несколько возможностей отладки выполняемых рабочих процессов из среды разработки.</span><span class="sxs-lookup"><span data-stu-id="e1d23-103"> offers several options for debugging running workflows from the development environment.</span></span> <span data-ttu-id="e1d23-104">Отладку рабочих процессов можно выполнять в конструкторе, XAML или в коде.</span><span class="sxs-lookup"><span data-stu-id="e1d23-104">Workflows can be debugged in the designer, in XAML, and in code.</span></span>  

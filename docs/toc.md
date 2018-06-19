@@ -72,6 +72,8 @@
 ## [Предварительные требования для macOS](core/macos-prerequisites.md)
 ## [Предварительные условия (и необходимые компоненты) для Linux](core/linux-prerequisites.md)
 ## [Новые возможности .NET Core](core/whats-new/index.md)
+### [Новые возможности .NET Core 2.1](core/whats-new/dotnet-core-2-1.md)
+### [Новые возможности .NET Core 2.0](core/whats-new/dotnet-core-2-0.md)
 ## [Учебники](core/tutorials/index.md)
 ### [Создание полного решения .NET Core в Windows с помощью Visual Studio 2017](core/tutorials/using-on-windows-full-solution.md)
 ### [Начало работы с .NET Core в Mac OS](core/tutorials/using-on-macos.md)
@@ -96,6 +98,7 @@
 ### [Развертывание приложений с помощью средств командной строки](core/deploying/deploy-with-cli.md)
 ### [Развертывание приложений с помощью Visual Studio](core/deploying/deploy-with-vs.md)
 ### [Создание пакета NuGet с помощью кроссплатформенных средств](core/deploying/creating-nuget-packages.md)
+### [Обновление версии среды выполнения автономного развертывания](core/deploying/runtime-patch-selection.md)
 ### [Хранилище пакетов среды выполнения](core/deploying/runtime-store.md)
 ## [Docker](core/docker/index.md)
 ### [Общие сведения о .NET и Docker](core/docker/intro-net-docker.md)
@@ -122,20 +125,23 @@
 ## [Обзор пакета SDK для .NET Core](core/sdk.md)
 ## [Средства интерфейса командной строки .NET Core](core/tools/index.md)
 ### [Телеметрия](core/tools/telemetry.md)
+### [Глобальные инструменты](core/tools/global-tools.md)
 ### [Модель расширяемости](core/tools/extensibility.md)
 ### [Непрерывная интеграция](core/tools/using-ci-with-cli.md)
 ### [Пользовательские шаблоны](core/tools/custom-templates.md)
 ### [dotnet](core/tools/dotnet.md)
 ### [dotnet build](core/tools/dotnet-build.md)
+### [dotnet build-server](core/tools/dotnet-build-server.md)
 ### [dotnet clean](core/tools/dotnet-clean.md)
 ### [dotnet help](core/tools/dotnet-help.md)
 ### [dotnet install-script](core/tools/dotnet-install-script.md)
 ### [dotnet migrate](core/tools/dotnet-migrate.md)
 ### [dotnet msbuild](core/tools/dotnet-msbuild.md)
 ### [dotnet new](core/tools/dotnet-new.md)
-### [dotnet nuget delete](core/tools/dotnet-nuget-delete.md)
-### [dotnet nuget locals](core/tools/dotnet-nuget-locals.md)
-### [dotnet nuget push](core/tools/dotnet-nuget-push.md)
+### dotnet nuget
+#### [dotnet nuget delete](core/tools/dotnet-nuget-delete.md)
+#### [dotnet nuget locals](core/tools/dotnet-nuget-locals.md)
+#### [dotnet nuget push](core/tools/dotnet-nuget-push.md)
 ### [dotnet pack](core/tools/dotnet-pack.md)
 ### [dotnet publish](core/tools/dotnet-publish.md)
 ### [dotnet restore](core/tools/dotnet-restore.md)
@@ -143,6 +149,11 @@
 ### [dotnet sln](core/tools/dotnet-sln.md)
 ### [dotnet store](core/tools/dotnet-store.md)
 ### [dotnet test](core/tools/dotnet-test.md)
+### dotnet tool
+#### [dotnet tool install](core/tools/dotnet-tool-install.md)
+#### [dotnet tool list](core/tools/dotnet-tool-list.md)
+#### [dotnet tool uninstall](core/tools/dotnet-tool-uninstall.md)
+#### [dotnet tool update](core/tools/dotnet-tool-update.md)
 ### [dotnet vstest](core/tools/dotnet-vstest.md)
 ### Команды для изменения проекта
 #### Ссылки
@@ -155,6 +166,7 @@
 ### [global.json](core/tools/global-json.md)
 ## [Дополнительные инструменты .NET Core](core/additional-tools/index.md)
 ### [поставщик WCF Web Service Reference](core/additional-tools/wcf-web-service-reference-guide.md)
+### [dotnet-svcutil](core/additional-tools/dotnet-svcutil-guide.md)
 ### [Генератор сериализации XML](core/additional-tools/xml-serializer-generator.md)
 ## [Перенос из .NET Framework](core/porting/index.md)
 ### [Организация проектов для .NET Core](core/porting/project-structure.md)
@@ -215,10 +227,11 @@
 <!-- The "What's New" section is short, and one level
     deep, so leave it in the main TOC -->
 ## [Новые возможности C#](csharp/whats-new/index.md)
-### [Новые возможности C# 7.2](csharp/whats-new/csharp-7-2.md)
-### [Новые возможности C# 7.1](csharp/whats-new/csharp-7-1.md)
-### [Новые возможности C# 7.0](csharp/whats-new/csharp-7.md)
-### [Новые возможности C# 6](csharp/whats-new/csharp-6.md)
+### [C# 7.3](csharp/whats-new/csharp-7-3.md)
+### [C# 7.2](csharp/whats-new/csharp-7-2.md)
+### [C# 7.1](csharp/whats-new/csharp-7-1.md)
+### [C# 7.0](csharp/whats-new/csharp-7.md)
+### [C# 6](csharp/whats-new/csharp-6.md)
 ### [Журнал версий C#](csharp/whats-new/csharp-version-history.md)
 ### [Связи между языком и платформой](csharp/whats-new/relationships-between-language-and-library.md)
 <!-- End What's New -->
@@ -549,6 +562,7 @@
 ### [Пошаговое руководство. Реализация наследования с использованием COM-объектов](visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
 
 ## [Справочник по языку](visual-basic/language-reference/index.md)
+### [Настройка версии языка](visual-basic/language-reference/configure-language-version.md)
 ### [Условные обозначения и соглашения о коде](visual-basic/language-reference/typographic-and-code-conventions.md)
 ### [Члены библиотеки времени выполнения Visual Basic](visual-basic/language-reference/runtime-library-members.md)
 ### [Ключевые слова](visual-basic/language-reference/keywords/index.md)
@@ -1117,11 +1131,12 @@
 <!-- ML.NET Content -->
 # [Руководство по ML.NET](machine-learning/index.md)
 ## [Учебники](machine-learning/tutorials/index.md)
-### [Анализ тональности (классификация)](machine-learning/tutorials/sentiment-analysis.md)
-### [Прогнозирование тарифа такси (регрессия)](machine-learning/tutorials/taxi-fare.md)
+### [Анализ тональности (двоичная классификация)](machine-learning/tutorials/sentiment-analysis.md)
+### [Прогнозирование платы за такси (регрессия)](machine-learning/tutorials/taxi-fare.md)
 ## [Ресурсы](machine-learning/resources/index.md)
 ### [Глоссарий по машинному обучению](machine-learning/resources/glossary.md)
 ### [Основы машинного обучения](machine-learning/resources/basics.md)
+### [Задачи машинного обучения](machine-learning/resources/tasks.md)
 
 <!-- End ML.NET Content -->
 

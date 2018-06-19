@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e6df9c7e24e2303571b7cb3b80ff4bf07dc59ccc
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33415669"
 ---
 # <a name="icordebugexceptionobjectcallstackenum-interface"></a><span data-ttu-id="f80fd-102">Интерфейс ICorDebugExceptionObjectCallStackEnum</span><span class="sxs-lookup"><span data-stu-id="f80fd-102">ICorDebugExceptionObjectCallStackEnum Interface</span></span>
 <span data-ttu-id="f80fd-103">Предоставляет перечислитель для сведений стека вызовов, встроенных в объект исключения.</span><span class="sxs-lookup"><span data-stu-id="f80fd-103">Provides an enumerator for call stack information that is embedded in an exception object.</span></span> <span data-ttu-id="f80fd-104">Этот интерфейс является подклассом ICorDebugEnum-интерфейс.</span><span class="sxs-lookup"><span data-stu-id="f80fd-104">This interface is a subclass of the ICorDebugEnum interface.</span></span>  

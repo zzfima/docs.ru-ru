@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33516026"
 ---
 # <a name="durable-delay"></a><span data-ttu-id="81804-102">Сохраняемая задержка</span><span class="sxs-lookup"><span data-stu-id="81804-102">Durable Delay</span></span>
 <span data-ttu-id="81804-103">В этом образце показано, как использовать сохраняемую задержку, при которой рабочий процесс сохраняется на физическом устройстве.</span><span class="sxs-lookup"><span data-stu-id="81804-103">This sample demonstrates how to use a durable delay, which is a delay that persists the workflow to a durable device during the delay.</span></span> <span data-ttu-id="81804-104">Образец рабочего процесса содержит два сообщения на консоль, разделенных задержкой.</span><span class="sxs-lookup"><span data-stu-id="81804-104">The sample workflow contains two messages to the console that are separated by a delay.</span></span> <span data-ttu-id="81804-105">Когда запускается задержка, рабочий процесс выгружается и в течение 5 секунд хранится в хранилище экземпляров рабочих процессов, а затем снова загружается в память.</span><span class="sxs-lookup"><span data-stu-id="81804-105">When the delay is triggered, the workflow is unloaded and waits 5 seconds in the workflow instance store before being reloaded in memory.</span></span>  
