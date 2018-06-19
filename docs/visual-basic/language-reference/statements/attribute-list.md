@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33604078"
 ---
 # <a name="attribute-list-visual-basic"></a><span data-ttu-id="321d3-102">Список атрибутов (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="321d3-102">Attribute List (Visual Basic)</span></span>
 <span data-ttu-id="321d3-103">Указывает атрибуты, применяемые к объявленных программных элементов.</span><span class="sxs-lookup"><span data-stu-id="321d3-103">Specifies the attributes to be applied to a declared programming element.</span></span> <span data-ttu-id="321d3-104">Несколько атрибутов разделяются запятыми.</span><span class="sxs-lookup"><span data-stu-id="321d3-104">Multiple attributes are separated by commas.</span></span> <span data-ttu-id="321d3-105">Ниже приведен синтаксис для одного атрибута.</span><span class="sxs-lookup"><span data-stu-id="321d3-105">Following is the syntax for one attribute.</span></span>  

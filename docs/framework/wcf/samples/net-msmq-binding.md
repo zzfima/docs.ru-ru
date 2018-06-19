@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500884"
 ---
 # <a name="net-msmq-binding"></a><span data-ttu-id="b365c-102">Привязка MSMQ на платформе .NET</span><span class="sxs-lookup"><span data-stu-id="b365c-102">Net MSMQ Binding</span></span>
 <span data-ttu-id="b365c-103">Этот раздел содержит образцы, которые демонстрируют использование привязки атрибутов MSMQ элемента конечной точки.</span><span class="sxs-lookup"><span data-stu-id="b365c-103">This section contains samples that demonstrate using MSMQ binding attributes of an endpoint element.</span></span>  

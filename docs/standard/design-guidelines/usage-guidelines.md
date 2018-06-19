@@ -12,6 +12,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33571037"
 ---
 # <a name="usage-guidelines"></a><span data-ttu-id="4a327-102">Правила использования</span><span class="sxs-lookup"><span data-stu-id="4a327-102">Usage Guidelines</span></span>
 <span data-ttu-id="4a327-103">Этот раздел содержит рекомендации по использованию общих типов в общедоступный API.</span><span class="sxs-lookup"><span data-stu-id="4a327-103">This section contains guidelines for using common types in publicly accessible APIs.</span></span> <span data-ttu-id="4a327-104">Он обрабатывает прямое использование встроенных типов (например, атрибуты сериализации) и Framework перегрузка общих операторов.</span><span class="sxs-lookup"><span data-stu-id="4a327-104">It deals with direct usage of built-in Framework types (e.g., serialization attributes) and overloading common operators.</span></span>  

@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33576120"
 ---
 # <a name="dependency-properties"></a><span data-ttu-id="967b6-102">Свойства зависимостей</span><span class="sxs-lookup"><span data-stu-id="967b6-102">Dependency Properties</span></span>
 <span data-ttu-id="967b6-103">Свойство зависимости (DP) является обычным свойством, его значение сохраняется в хранилище свойств, вместо сохранения его в переменную типа (поле), например.</span><span class="sxs-lookup"><span data-stu-id="967b6-103">A dependency property (DP) is a regular property that stores its value in a property store instead of storing it in a type variable (field), for example.</span></span>  

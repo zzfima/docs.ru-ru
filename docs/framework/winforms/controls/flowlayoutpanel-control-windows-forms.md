@@ -11,6 +11,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33524404"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a><span data-ttu-id="a09b4-102">Элемент управления FlowLayoutPanel (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="a09b4-102">FlowLayoutPanel Control (Windows Forms)</span></span>
 <span data-ttu-id="a09b4-103">Элемент управления `FlowLayoutPanel` упорядочивает содержимое в горизонтальном или вертикальном направлении.</span><span class="sxs-lookup"><span data-stu-id="a09b4-103">The `FlowLayoutPanel` control arranges its contents in a horizontal or vertical flow direction.</span></span> <span data-ttu-id="a09b4-104">Его содержимое может быть перенесено из одной строки в следующую или из одного столбца в следующий.</span><span class="sxs-lookup"><span data-stu-id="a09b4-104">Its contents can be wrapped from one row to the next, or from one column to the next.</span></span> <span data-ttu-id="a09b4-105">Кроме того, вместо переноса содержимое может обрезаться.</span><span class="sxs-lookup"><span data-stu-id="a09b4-105">Alternately, its contents can be clipped instead of wrapped.</span></span>  

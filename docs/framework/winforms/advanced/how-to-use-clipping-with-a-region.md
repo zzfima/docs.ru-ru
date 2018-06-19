@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33522100"
 ---
 # <a name="how-to-use-clipping-with-a-region"></a><span data-ttu-id="cc45d-102">Практическое руководство. Обрезка изображения по границам области обрезки</span><span class="sxs-lookup"><span data-stu-id="cc45d-102">How to: Use Clipping with a Region</span></span>
 <span data-ttu-id="cc45d-103">Одно из свойств объекта <xref:System.Drawing.Graphics> класс является отсеченную область.</span><span class="sxs-lookup"><span data-stu-id="cc45d-103">One of the properties of the <xref:System.Drawing.Graphics> class is the clip region.</span></span> <span data-ttu-id="cc45d-104">Все операции рисования, выполняемые данного <xref:System.Drawing.Graphics> ограничены областью обрезки данного объекта <xref:System.Drawing.Graphics> объекта.</span><span class="sxs-lookup"><span data-stu-id="cc45d-104">All drawing done by a given <xref:System.Drawing.Graphics> object is restricted to the clip region of that <xref:System.Drawing.Graphics> object.</span></span> <span data-ttu-id="cc45d-105">Можно задать отсеченную область, вызвав <xref:System.Drawing.Graphics.SetClip%2A> метод.</span><span class="sxs-lookup"><span data-stu-id="cc45d-105">You can set the clip region by calling the <xref:System.Drawing.Graphics.SetClip%2A> method.</span></span>  

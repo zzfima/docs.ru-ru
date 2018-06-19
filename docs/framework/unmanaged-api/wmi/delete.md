@@ -18,9 +18,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7fcf5cff9f95b06a834d73df4090bd1edfca61b
 ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33460247"
 ---
 # <a name="delete-function"></a><span data-ttu-id="c3ee4-103">Удаление функции</span><span class="sxs-lookup"><span data-stu-id="c3ee4-103">Delete function</span></span>
 <span data-ttu-id="c3ee4-104">Удаляет указанное свойство и все его квалификаторов из определения класса CIM.</span><span class="sxs-lookup"><span data-stu-id="c3ee4-104">Deletes the specified property and all of its qualifiers from a CIM class definition.</span></span>

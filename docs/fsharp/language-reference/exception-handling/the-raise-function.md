@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33564763"
 ---
 # <a name="exceptions-the-raise-function"></a><span data-ttu-id="eca8d-103">Исключения: функция raise</span><span class="sxs-lookup"><span data-stu-id="eca8d-103">Exceptions: the raise Function</span></span>
 

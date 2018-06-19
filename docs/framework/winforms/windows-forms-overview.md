@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33541730"
 ---
 # <a name="windows-forms-overview"></a><span data-ttu-id="d748c-102">Общие сведения о Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d748c-102">Windows Forms Overview</span></span>
 <span data-ttu-id="d748c-103">В этом обзоре рассматриваются преимущества интеллектуальных клиентских приложений, основные возможности программирования Windows Forms, а также использование Windows Forms для разработки интеллектуальных клиентов, удовлетворяющих запросам современных предприятий и конечных пользователей.</span><span class="sxs-lookup"><span data-stu-id="d748c-103">The following overview discusses the advantages of smart client applications, the main features of Windows Forms programming, and how you can use Windows Forms to build smart clients that meet the needs of today's enterprises and end users.</span></span>  

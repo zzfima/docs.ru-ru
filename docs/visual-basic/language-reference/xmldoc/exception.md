@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33601157"
 ---
 # <a name="ltexceptiongt-visual-basic"></a><span data-ttu-id="d6419-102">&lt;исключение&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d6419-102">&lt;exception&gt; (Visual Basic)</span></span>
 <span data-ttu-id="d6419-103">Указывает, какие исключения.</span><span class="sxs-lookup"><span data-stu-id="d6419-103">Specifies which exceptions can be thrown.</span></span>  

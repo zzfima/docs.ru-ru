@@ -10,6 +10,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33549176"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a><span data-ttu-id="4e1a7-102">Пример локализации гибридного приложения</span><span class="sxs-lookup"><span data-stu-id="4e1a7-102">Walkthrough: Localizing a Hybrid Application</span></span>
 <span data-ttu-id="4e1a7-103">В этом пошаговом руководстве показано, как для локализации [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-на основе гибридного приложения.</span><span class="sxs-lookup"><span data-stu-id="4e1a7-103">This walkthrough shows you how to localize [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elements in a [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-based hybrid application.</span></span>  

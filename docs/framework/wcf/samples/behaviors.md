@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33500361"
 ---
 # <a name="behaviors"></a><span data-ttu-id="68ffc-102">поведения</span><span class="sxs-lookup"><span data-stu-id="68ffc-102">Behaviors</span></span>
 <span data-ttu-id="68ffc-103">Этот раздел содержит образцы, демонстрирующие поведения службы Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="68ffc-103">This section contains samples that demonstrate Windows Communication Foundation (WCF) service behaviors.</span></span>  

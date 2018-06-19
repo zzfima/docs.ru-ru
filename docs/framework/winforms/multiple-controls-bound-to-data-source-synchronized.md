@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33539544"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a><span data-ttu-id="9b5a9-102">Практическое руководство. Синхронизация элементов управления, связанных с одним источником данных</span><span class="sxs-lookup"><span data-stu-id="9b5a9-102">How to: Ensure Multiple Controls Bound to the Same Data Source Remain Synchronized</span></span>
 <span data-ttu-id="9b5a9-103">Зачастую при работе с привязкой к данным в формах Windows Forms, несколько элементов управления привязаны к одному источнику данных.</span><span class="sxs-lookup"><span data-stu-id="9b5a9-103">Oftentimes when working with data binding in Windows Forms, multiple controls are bound to the same data source.</span></span> <span data-ttu-id="9b5a9-104">В некоторых случаях может потребоваться выполнить дополнительные действия для обеспечения синхронизация друг с другом и с источником данных связанных свойств элементов управления.</span><span class="sxs-lookup"><span data-stu-id="9b5a9-104">In some cases, it may be necessary to take extra steps to ensure that the bound properties of the controls remain synchronized with each other and the data source.</span></span> <span data-ttu-id="9b5a9-105">Эти шаги необходимы в двух случаях:</span><span class="sxs-lookup"><span data-stu-id="9b5a9-105">These steps are necessary in two situations:</span></span>  
