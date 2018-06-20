@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: a9bd6bb730ff84a48c180c7f1ac435afbf75fbc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b48a93cef2ea8fd2d39f58d8f458c4b287a10154
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525521"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207512"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Доступ к фреймам с использованием управляемой объектной модели HTML-документов
 Некоторые HTML-документы состоят из *кадров*, или windows, которые могут содержать другие документы HTML. Использование фреймов упрощает создание HTML-страниц, в которых одна или несколько частей страницы остаются статичными, например панель навигации, а в остальных фреймах содержимое постоянно изменяется.  
@@ -38,7 +38,7 @@ ms.locfileid: "33525521"
   
  Это правило также применяется к окнам, которые можно открыть с помощью методов <xref:System.Windows.Forms.HtmlWindow.Open%2A> и <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>. Если открываемое окно относится к другому домену, отличающемуся от домена страницы, размещенной в элементе управления <xref:System.Windows.Forms.WebBrowser>, то перемещение окна или доступ к его содержимому невозможны. Эти ограничения также применяются принудительно при использовании элемента управления <xref:System.Windows.Forms.WebBrowser> для отображения веб-сайта, который отличается от веб-сайта, на котором развернуто приложение Windows Forms. Если используется технология развертывания [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] для установки приложения с веб-сайта A и используется <xref:System.Windows.Forms.WebBrowser> для отображения веб-сайта Б, то доступ к данным веб-сайта Б будет отсутствовать.  
   
- Дополнительные сведения о межсайтовых сценариев см. в разделе[о межсайтовых сценариев и безопасности](http://msdn.microsoft.com/library/ms533028.aspx).  
+ Дополнительные сведения о межсайтовых сценариев см. в разделе [о межсайтовых сценариев и безопасности](http://msdn.microsoft.com/library/ms533028.aspx).  
   
 ## <a name="see-also"></a>См. также  
  [Элемент КАДРА &#124; объект frame](http://msdn.microsoft.com/library/ms535250.aspx)  

@@ -19,11 +19,12 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: e610b4fc5506043835377bf9f5750550d8aec694
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9257a6b725839d8f433988ab76c4ce9ae349d950
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208606"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>Кодировка и глобализация Windows Forms
 Приложения Windows Forms полностью поддерживают Юникод, т. е. каждый символ представлен уникальным числом независимо от платформы, программы или языка. Дополнительные сведения о Юникоде см. в разделе [веб-сайте консорциума Юникода](http://www.unicode.org).  
@@ -35,5 +36,6 @@ ms.lasthandoff: 05/04/2018
   
  В качестве альтернативы элементам управления <xref:System.Windows.Forms.ToolBar> и <xref:System.Windows.Forms.StatusBar> можно использовать элементы управления <xref:System.Windows.Forms.ToolStrip> и <xref:System.Windows.Forms.StatusStrip>, поддерживающие Юникод. Чтобы добиться схожего внешнего вида элементов в приложении, используйте для отрисовки меню элемент управления <xref:System.Windows.Forms.MenuStrip> вместо <xref:System.Windows.Forms.MainMenu>. Подобно элементам <xref:System.Windows.Forms.ToolStrip> и <xref:System.Windows.Forms.StatusStrip>, элемент <xref:System.Windows.Forms.MenuStrip> также может обрабатывать и отображать символы Юникода.  
   
-## <a name="see-also"></a>См. также  
- [Глобализация Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+## <a name="see-also"></a>См. также
+
+[Глобализация приложений Windows Forms](globalizing-windows-forms.md)

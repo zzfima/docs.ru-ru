@@ -5,15 +5,15 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 5014891b4edfa062f16d2c4b97c4d162d014fcd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed0f638975c232638de4a46db5db82bb1e85668c
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563562"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207473"
 ---
 # <a name="xaml-2009-language-features"></a>Возможности языка XAML 2009
-XAML 2009 — это сокращение для новых компонентов языка XAML, которые расширяют существующую спецификацию языка XAML. XAML 2009 содержит ряд новых директив и конструкций. В частности, это[x:Arguments Directive](../../../docs/framework/xaml-services/x-arguments-directive.md); [x:FactoryMethod Directive](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [x:Reference Markup Extension](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [x:TypeArguments Directive](../../../docs/framework/xaml-services/x-typearguments-directive.md); и встроенные типы для общих примитивов языка (например `x:Char`).  
+XAML 2009 — это сокращение для новых компонентов языка XAML, которые расширяют существующую спецификацию языка XAML. XAML 2009 содержит ряд новых директив и конструкций. К ним относятся [директива x: Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md); [директива x: FactoryMethod](../../../docs/framework/xaml-services/x-factorymethod-directive.md); [расширение разметки x: Reference](../../../docs/framework/xaml-services/x-reference-markup-extension.md); [директива x: TypeArguments ](../../../docs/framework/xaml-services/x-typearguments-directive.md); встроенные типы общих примитивов языка (например `x:Char`).  
   
 <a name="xaml_2009_support_in_wpf_and_visual_studio"></a>   
 ## <a name="xaml-2009-support-in-wpf-and-visual-studio"></a>Поддержка XAML 2009 в WPF и Visual Studio  

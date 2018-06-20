@@ -2,12 +2,12 @@
 title: Конфигурация клиента
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 0fd3d1a15164447275ef488ac91b9a8bd240032d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26557b6cbbe33626152878eccab62de11d22660d
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493135"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207421"
 ---
 # <a name="client-configuration"></a>Конфигурация клиента
 Конфигурация клиента Windows Communication Foundation (WCF) можно использовать для указания адреса, привязки, поведения и контракта, «ABC» свойства конечной точки клиента, которые используются клиентами для подключения к конечным точкам службы. [ \<Клиента >](../../../../docs/framework/configure-apps/file-schema/wcf/client.md) элемент имеет [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент, атрибуты которого используются для настройки основополагающих свойств конечной точки. Эти атрибуты обсуждаются в подразделе "Настройка конечных точек" данного раздела.  
@@ -91,7 +91,7 @@ ms.locfileid: "33493135"
  Атрибут `contract` задает контракт, который предоставляет данная конечная точка. Это значение соответствует свойству <xref:System.ServiceModel.ServiceContractAttribute.ConfigurationName%2A> атрибута <xref:System.ServiceModel.ServiceContractAttribute>. Значение по умолчанию - это полное имя типа класса, реализующего службу.  
   
 ### <a name="configuring-metadata"></a>Настройка метаданных  
- [ \<Метаданных >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) элемент используется для задания параметров, используемых для регистрации метаданных расширений импорта. Дополнительные сведения о расширении системы метаданных см. в разделе[расширение системы метаданных](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
+ [ \<Метаданных >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md) элемент используется для задания параметров, используемых для регистрации метаданных расширений импорта. Дополнительные сведения о расширении системы метаданных см. в разделе [расширение системы метаданных](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md).  
   
 ## <a name="see-also"></a>См. также  
  [Конечные точки: адреса, привязки и контракты](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  

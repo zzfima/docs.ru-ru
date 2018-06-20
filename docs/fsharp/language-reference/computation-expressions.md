@@ -2,12 +2,12 @@
 title: Выражения вычисления (F#)
 description: 'Описание способов создания удобный синтаксис для записи вычислений в F #, который можно упорядочивать и комбинировать с помощью конструкций потока управления и привязок.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a4ddb3fde284452bc901c5270551611e43742c1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4995efc757d99a575ee9fad3abf0465a32398c44
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566617"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207437"
 ---
 # <a name="computation-expressions"></a>Выражения вычисления
 
@@ -15,6 +15,7 @@ ms.locfileid: "33566617"
 
 
 ## <a name="built-in-workflows"></a>Встроенные рабочие процессы
+
 Выражения последовательностей являются Примером вычислительного выражения асинхронные рабочие потоки и выражения запроса. Дополнительные сведения см. в разделе [последовательности](sequences.md), [асинхронные рабочие потоки](asynchronous-workflows.md), и [выражения запросов](query-expressions.md).
 
 Некоторые функции являются общими для выражения последовательностей и асинхронные рабочие процессы и иллюстрируют базовый синтаксис для вычислительного выражения:

@@ -9,11 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1a15477e858a77ee7829f1d4a9d052457cd30f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbe14e6c05fd6ef155b564e499157e00c5d809e5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208612"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Поддержка двунаправленного письма для приложений Windows Forms
 Visual Studio можно использовать для создания приложений Windows, которые поддерживают двунаправленным письмом (справа налево), например арабский или иврит. Сюда входят стандартные формы, диалоговые окна, MDI-формы и все элементы управления, с которыми можно работать в этих формах, то есть все объекты в пространстве имен <xref:System.Windows.Forms.Control>.  
@@ -116,6 +117,7 @@ Visual Studio можно использовать для создания при
   
  Некоторые элементы управления запечатаны. Как следствие, из них нельзя наследовать новый элемент управления. К ним относятся элементы управления <xref:System.Windows.Forms.ImageList> и <xref:System.Windows.Forms.ProgressBar>.  
   
-## <a name="see-also"></a>См. также  
- [Двухсторонний режим для веб-приложений ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
- [Глобализация Windows Forms](../../../../docs/framework/winforms/advanced/globalizing-windows-forms.md)
+## <a name="see-also"></a>См. также
+
+[Двухсторонний режим для веб-приложений ASP.NET](http://msdn.microsoft.com/library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+[Глобализация приложений Windows Forms](globalizing-windows-forms.md)

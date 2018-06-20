@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: 511721c3ffffb3b80b339c4671ad99e16bafda93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53e89b664b3885bea7d2da8633505488438a1af5
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33565903"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207551"
 ---
 # <a name="xkey-directive"></a>Директива x:Key
 Однозначно определяет элементы, которые создаются и ссылки в словаре, определенные в XAML. Добавление `x:Key` значение элемента объекта XAML является наиболее распространенным способом для идентификации ресурса в словаре ресурсов, например в WPF <xref:System.Windows.ResourceDictionary>.  
@@ -73,7 +73,7 @@ ms.locfileid: "33565903"
   
  Ключи и имена используют различные директивы и языковые элементы (`x:Key` и `x:Name`) в базовом определении XAML. Ключи и имена также используются в различных ситуациях определением WPF и приложением этих концепций. Дополнительные сведения см. в разделе [области имен XAML WPF](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md).  
   
- Как уже говорилось ранее, значение ключа может предоставляться через расширения разметки и может принимать строковое значение. Примером WPF является ситуация, что значение `x:Key` может быть[ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md). Некоторые элементы управления предоставляют ключ стиля такого типа для пользовательского ресурса стиля, которые влияют частью внешнего вида и поведения элемента управления без полной замены стиля. Примером такого ключа является <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
+ Как уже говорилось ранее, значение ключа может предоставляться через расширения разметки и может принимать строковое значение. Примером WPF является ситуация, что значение `x:Key` может быть [ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md). Некоторые элементы управления предоставляют ключ стиля такого типа для пользовательского ресурса стиля, которые влияют частью внешнего вида и поведения элемента управления без полной замены стиля. Примером такого ключа является <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>.  
   
  Функция объединенного словаря WPF ряд дополнительных вопросов для поведения поиска ключа и уникальности. Подробнее см. в разделе [Объединенные словари ресурсов](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md).  
   

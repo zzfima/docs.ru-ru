@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net Profile Named Pipe
 ms.assetid: e78e845f-c325-46e2-927d-81616f97f7d5
-ms.openlocfilehash: 7b64bcc1625fb5d0c7ca4af29e1b883b39141a52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d07350dc8b999dfeb47dc1f61049d90a3faf874b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503201"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207294"
 ---
 # <a name="netnamedpipebinding"></a>NetNamedPipeBinding
 В этом образце показана привязка `netNamedPipeBinding`, обеспечивающая обмен данными между процессами одного компьютера. Использование именованных каналов для обмена данными между компьютерами не поддерживается. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) службы калькулятора.  
@@ -19,7 +19,7 @@ ms.locfileid: "33503201"
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
- Привязка задается в файлах конфигурации для клиента и службы. Тип привязки указывается в `binding` атрибут[\<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемента, как показано в следующем образце конфигурации:  
+ Привязка задается в файлах конфигурации для клиента и службы. Тип привязки указывается в `binding` атрибут [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемента, как показано в следующем образце конфигурации:  
   
 ```xml  
 <endpoint address="net.pipe://localhost/ServiceModelSamples/service"  
