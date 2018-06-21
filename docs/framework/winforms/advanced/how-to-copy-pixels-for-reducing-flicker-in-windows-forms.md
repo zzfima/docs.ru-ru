@@ -13,12 +13,12 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: 65428132c885191b62c3b4a76c8937bf8f3f6732
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc5f05ff4ea9f3c2b828cbe37860e1bd241fc604
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522048"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270439"
 ---
 # <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>Практическое руководство. Копирование пикселов для уменьшения эффекта дрожания изображения в Windows Forms
 При создании простых анимированных могут появиться мерцание или другие нежелательные визуальные эффекты. Ограничить эту проблему можно использовать процесс «bitblt» на рисунок. BitBlt является «перемещение набора битов» данных о цвете из исходного прямоугольника пикселей в прямоугольник назначения пикселей.  
@@ -28,7 +28,7 @@ ms.locfileid: "33522048"
  В следующем примере рисование фигуры на форме в его <xref:System.Windows.Forms.Control.Paint> обработчика событий. Затем <xref:System.Drawing.Graphics.CopyFromScreen%2A> метод используется для копирования фигуры.  
   
 > [!NOTE]
->  Свойства формы <xref:System.Windows.Forms.Control.DoubleBuffered%2A> свойства `true` сделает графическим интерфейсом кода в <xref:System.Windows.Forms.Control.Paint> событие быть двойная буферизация. Пока это не будет иметь выигрыш в производительности заметно при использовании в приведенном ниже коде, ее стоит помнить при работе с кодом более сложных манипуляций с графикой.  
+>  Свойства формы <xref:System.Windows.Forms.Control.DoubleBuffered%2A> свойства `true` сделает графическим интерфейсом кода в <xref:System.Windows.Forms.Control.Paint> событие быть двойная буферизация. Пока это не будет иметь выигрыш в производительности ощутимого при использовании в приведенном ниже коде, ее стоит помнить при работе с кодом более сложных манипуляций с графикой.  
   
 ## <a name="example"></a>Пример  
   
