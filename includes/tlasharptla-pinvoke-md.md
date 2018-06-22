@@ -1,1 +1,1 @@
-<span data-ttu-id="cc70f-101">Службы PInvoke (Platform Invocation Services)</span><span class="sxs-lookup"><span data-stu-id="cc70f-101">Platform Invocation Services (PInvoke)</span></span>
+<span data-ttu-id="c06d9-101">Службы PInvoke (Platform Invocation Services)</span><span class="sxs-lookup"><span data-stu-id="c06d9-101">Platform Invocation Services (PInvoke)</span></span>
