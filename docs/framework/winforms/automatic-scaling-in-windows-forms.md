@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: e27c56d9a6d745c7d1ff83986e7996aa1bebc879
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0018b9f8644ec7d222a416bb5f71a7c61671009e
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529887"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314767"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Автоматическое масштабирование в Windows Forms
 Автоматическое масштабирование позволяет форме и ее элементам управления, разработанным на одном компьютере с использованием определенного разрешения или системных шрифтов, правильно отображаться на другом компьютере с другим разрешением или системным шрифтом. Оно гарантирует, что размеры формы и ее элементов управления будут изменяться автоматически в соответствии с приложениями Windows и другими приложениями на компьютерах пользователя и разработчика. Поддержка автоматического масштабирования и стилей оформления в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] позволяет приложениям [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] сохранять согласованный внешний вид и поведение на различных компьютерах пользователей, так же как в случае с обычными приложениями Windows.
@@ -42,14 +42,6 @@ ms.locfileid: "33529887"
 - Автоматическое масштабирование было реализовано только в классе <xref:System.Windows.Forms.Form>, но не в классе <xref:System.Windows.Forms.ContainerControl>. В результате пользовательский элемент управления масштабировался корректно, только если он был разработан с тем же разрешением, что и форма, и был помещен в форму во время разработки.
 
 - Несколько разработчиков могли параллельно разрабатывать формы и их дочерние элементы управления, только если разрешение экрана на их компьютерах совпадало. Аналогичным образом наследование форм зависело от разрешения родительской формы.
-
-> [!NOTE]
-> Extreme различий в отображении DPI, особенно в современных устройств 2-в-1 по-прежнему возможно, с текущими версиями Visual Studio и .NET Framework. Для решения этой команды, с помощью разных дисплеях, убедитесь, что Visual Studio всегда начинается в режиме, не поддерживающими DPI, поэтому конструктор Windows Forms всегда оснований расчет макета на 96 точек на ДЮЙМ. Для этого нужно просто установите следующий раздел реестра для отключения учета HighDPI Visual Studio:
->
-> ```
-> [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\devenv.exe]
-> "dpiAwareness"=dword:00000000
-> ```
 
 - Механизм несовместим с новыми диспетчерами макетов, добавленными в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] версии 2.0, такими как <xref:System.Windows.Forms.FlowLayoutPanel> и <xref:System.Windows.Forms.TableLayoutPanel>.
 

@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 05db5cf8e8dc073dd341fbffab619c326b48f136
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62da6a3ff595422e42450cb1341976424acc5a52
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569295"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314715"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>С помощью средств Visual Studio для Docker (Visual Studio в Windows)
 
@@ -23,7 +23,7 @@ ms.locfileid: "33569295"
 
 Если вы используете Visual Studio 2015, необходимо иметь обновления 3 или более поздней версии, а также средств Visual Studio для Docker.
 
-**Дополнительные сведения:** инструкции по установке Visual Studio перейдите к [ https://www.visualstudio.com/\ продуктов или vs-2015--выпуски продукта](https://www.visualstudio.com/products/vs-2015-product-editions).
+**Дополнительные сведения:** инструкции по установке Visual Studio перейдите к [ https://visualstudio.microsoft.com/\ продуктов или vs-2015--выпуски продукта](https://visualstudio.microsoft.com/products/vs-2015-product-editions).
 
 Для просмотра дополнительных сведений об установке набора средств Visual Studio для Docker, воспользуйтесь <http://aka.ms/vstoolsfordocker> и <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
 
