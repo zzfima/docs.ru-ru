@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: b1925397fb7cad5e55f992feaa5be2e2d837aac8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592266"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314647"
 ---
 # <a name="tour-of-net"></a>Обзор .NET
 
@@ -25,7 +25,7 @@ ms.locfileid: "33592266"
 
 ## <a name="programming-languages"></a>Языки программирования
 
-Архитектура .NET поддерживает различные языки программирования. Реализации .NET реализуют [инфраструктуру CLI (Common Language Infrastructure)](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/), которая, среди прочего, указывает среду выполнения, не зависящую от языка, а также взаимодействие языков. Это означает, что для создания приложений и служб на платформе .NET можно выбрать любой язык .NET.
+Архитектура .NET поддерживает различные языки программирования. Реализации .NET реализуют [инфраструктуру CLI (Common Language Infrastructure)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/), которая, среди прочего, указывает среду выполнения, не зависящую от языка, а также взаимодействие языков. Это означает, что для создания приложений и служб на платформе .NET можно выбрать любой язык .NET.
 
 Корпорация Майкрософт активно занимается разработкой и поддержкой трех языков .NET: C#, F# и Visual Basic (VB). 
 

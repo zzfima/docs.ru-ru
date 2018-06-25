@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 2ded01ef3192e0f34d586cd63d93b894b5347e7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82dfc2e11d6a8a025aa9b7557255a13b69ffa508
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275029"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208124"
 ---
 # <a name="-operator-c-reference"></a>Оператор () (Справочник по C#)
 Помимо использования для указания порядка операций в выражении круглые скобки используются для выполнения следующих задач:  
@@ -32,8 +32,6 @@ ms.locfileid: "33275029"
  Оператор `()` перегрузить нельзя.  
   
  Дополнительные сведения см. в разделе [Приведение и преобразование типов](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
-  
- Выражение приведения может обуславливать неоднозначный синтаксис. Например, выражение `(x)–y` может интерпретироваться как выражение приведения (приведение –y к типу x) или как выражение добавления в сочетании с выражением в скобках, которое вычисляет значение x – y.  
   
  Дополнительные сведения о вызове методов см. в разделе [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md).  
   

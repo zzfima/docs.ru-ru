@@ -3,12 +3,12 @@ title: Начало работы с семантическим анализом
 description: В этом учебнике содержатся общие сведения о работе с семантическим анализом с помощью пакета SDK для компилятора .NET.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 360d31b86a677adfe51ebd6752fca8475814fd89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b021ed2a27da754e2ac5af01716868e41e72738
+ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358756"
+ms.lasthandoff: 06/20/2018
+ms.locfileid: "36270465"
 ---
 # <a name="get-started-with-semantic-analysis"></a>Начало работы с семантическим анализом
 
@@ -131,7 +131,7 @@ Press any key to continue . . .
 
 Можно также создать полный запрос с помощью синтаксиса запросов LINQ и затем отобразить имена всех методов в консоли:
 
-[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#12 "Build and display the results of the query.")]
+[!code-csharp[build and display the results of this query.](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#13 "Build and display the results of the query.")]
 
 Постройте и запустите программу. Должны выводиться следующие данные:
 

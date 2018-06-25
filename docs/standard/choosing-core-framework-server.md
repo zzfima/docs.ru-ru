@@ -3,13 +3,13 @@ title: Выбор между .NET Core и .NET Framework для серверны
 description: Рекомендации по использованию реализации .NET для создания серверных приложений на платформе .NET.
 author: cartermp
 ms.author: mairaw
-ms.date: 03/15/2018
-ms.openlocfilehash: 39d07417a3e901c68dbbd8e9e217fb716edec881
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 06/19/2018
+ms.openlocfilehash: a9eaeae515041ee1d99ede5b004ecc85e453de2d
+ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728723"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36298192"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
 
@@ -88,8 +88,6 @@ ms.locfileid: "34728723"
 * Приложения веб-форм ASP.NET. Веб-формы ASP.NET доступны только в среде .NET Framework. ASP.NET Core не может использоваться для веб-форм ASP.NET. Добавление веб-форм ASP.NET в среду .NET Core не планируется.
 
 * Приложения веб-страниц ASP.NET. Веб-страницы ASP.NET не добавлены в среду ASP.NET Core. [Страницы Razor](/aspnet/core/mvc/razor-pages/) ASP.NET Core имеют много общего с веб-страницами.
-
-* Реализация сервера и клиента ASP.NET SignalR. На данный момент [ASP.NET SignalR](https://github.com/aspnet/SignalR) предлагается в виде предварительной версии с ASP.NET Core 2.1.
 
 * Реализация служб WCF. Хотя в среду .NET Core и добавлена [библиотека клиента WCF](https://github.com/dotnet/wcf), позволяющая использовать службы WCF, сервер WCF можно реализовать только в среде .NET Framework. Этот сценарий не входит в текущий план для .NET Core, но он будет рассмотрен в будущем.
 
