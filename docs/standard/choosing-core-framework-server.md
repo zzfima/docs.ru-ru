@@ -4,11 +4,12 @@ description: Рекомендации по использованию реали
 author: cartermp
 ms.author: mairaw
 ms.date: 03/15/2018
-ms.openlocfilehash: 1bed9bd2ed709907323123ad6658bbf0503ff1fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39d07417a3e901c68dbbd8e9e217fb716edec881
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728723"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
 
@@ -65,7 +66,7 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="when-to-choose-net-framework"></a>Случаи использования .NET Framework
 
-Среда .NET Core предоставляет значительные преимущества для новых приложений и шаблонов приложений. Но .NET Framework продолжает оставаться естественным выбором во многих существующих сценариях. Исходя из этого, NET Framework не заменяется на .NET Core для всех серверных приложениях.
+Среда .NET Core предоставляет значительные преимущества для новых приложений и шаблонов приложений. Но платформа .NET Framework остается оптимальным выбором во многих ситуациях, поэтому .NET Core не заменит .NET Framework для всех серверных приложений.
 
 ### <a name="current-net-framework-applications"></a>Готовые приложения .NET Framework
 
@@ -93,8 +94,6 @@ ms.lasthandoff: 05/04/2018
 * Реализация служб WCF. Хотя в среду .NET Core и добавлена [библиотека клиента WCF](https://github.com/dotnet/wcf), позволяющая использовать службы WCF, сервер WCF можно реализовать только в среде .NET Framework. Этот сценарий не входит в текущий план для .NET Core, но он будет рассмотрен в будущем.
 
 * Службы, связанные с рабочим процессом. Службы Windows Workflow Foundation (WF), Workflow Services (WCF и WF в одной службе) и WCF Data Services (ранее службы данных ADO.NET) доступны только в среде .NET Framework.  Добавление служб WF, WCF и WF, WCF Data Services в .NET Core не планируется.
-
-* Windows Presentation Foundation (WPF) и Windows Forms: приложения WPF и Windows Forms доступны только на платформе .NET Framework. Переносить их в .NET Core не планируется.
 
 * Поддержка языков.Сейчас в среде .NET Core поддерживаются Visual Basic и F#, но не для всех типов проектов. Список поддерживаемых шаблонов проектов см. в статье о [параметрах шаблона для dotnet new](../core/tools/dotnet-new.md#arguments).
 

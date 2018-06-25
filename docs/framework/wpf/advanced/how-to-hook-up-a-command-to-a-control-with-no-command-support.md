@@ -10,35 +10,36 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: dad08f64-700b-46fb-ad3f-fbfee95f0dfe
-ms.openlocfilehash: 4dd4f4acc3a4a944411c0b39ef91fcd12a4cf5b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6ef78cd7e1578745f0bde5c0e9e799bb5e641a9
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805611"
 ---
 # <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>Практическое руководство. Подключение команды к элементу управления, не поддерживающему команды
-Следующий пример показывает, как подключить <xref:System.Windows.Input.RoutedCommand> для <xref:System.Windows.Controls.Control> которого отсутствует встроенная поддержка команды.  Полный пример подключения команд к нескольким источникам см. в примере [Создание примера настраиваемой команды RoutedCommand](http://go.microsoft.com/fwlink/?LinkID=159980).  
+В следующем примере показано, как подключить <xref:System.Windows.Input.RoutedCommand> к <xref:System.Windows.Controls.Control> без встроенной поддержки команды.  Полный пример подключения команд к нескольким источникам см. в примере [Создание примера настраиваемой команды RoutedCommand](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand).  
   
 ## <a name="example"></a>Пример  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет библиотеку стандартных команд, с которыми регулярно работают при программировании приложений.  Классы, составляющие библиотеку команд являются: <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands>, и <xref:System.Windows.Documents.EditingCommands>.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет библиотеку стандартных команд, с которыми регулярно работают при программировании приложений.  Классы, составляющие библиотеку команд : <xref:System.Windows.Input.ApplicationCommands>, <xref:System.Windows.Input.ComponentCommands>, <xref:System.Windows.Input.NavigationCommands>, <xref:System.Windows.Input.MediaCommands> и <xref:System.Windows.Documents.EditingCommands>.  
   
- Статический <xref:System.Windows.Input.RoutedCommand> объекты, составляющие эти классы не предоставляют логику команд.  Логика команды связан с командой <xref:System.Windows.Input.CommandBinding>.  Многие элементы управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] есть встроенная поддержка некоторых команд из библиотеки команд.  <xref:System.Windows.Controls.TextBox>, например, такие как поддерживает многие команды редактирования приложения <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A>, и <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.  Разработчику приложения не нужно выполнять никаких особых действий, чтобы эти команды заработали с этими элементами управления.  Если <xref:System.Windows.Controls.TextBox> является целевой объект команды при выполнении команды, он будет обрабатывать команду с помощью <xref:System.Windows.Input.CommandBinding> встраивается в элементе управления.  
+ Статические объекты <xref:System.Windows.Input.RoutedCommand>, формирующие эти классы, не поддерживают командную логику.  Логика команды связана с командой с <xref:System.Windows.Input.CommandBinding>.  Многие элементы управления в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] имеют встроенную поддержку определенных команд в библиотеке команд.  <xref:System.Windows.Controls.TextBox>, например, поддерживает многие команды редактирования приложения, такие как <xref:System.Windows.Input.ApplicationCommands.Paste%2A>, <xref:System.Windows.Input.ApplicationCommands.Copy%2A>, <xref:System.Windows.Input.ApplicationCommands.Cut%2A>, <xref:System.Windows.Input.ApplicationCommands.Redo%2A> и <xref:System.Windows.Input.ApplicationCommands.Undo%2A>.  Разработчику приложения не нужно выполнять никаких особых действий, чтобы эти команды заработали с этими элементами управления.  Если <xref:System.Windows.Controls.TextBox> является целевым объектом команды при выполнении команды, он будет обрабатывать команду с помощью класса <xref:System.Windows.Input.CommandBinding>, встроенного в элемент управления.  
   
- В следующем примере показано использование <xref:System.Windows.Controls.Button> как источника команды для <xref:System.Windows.Input.ApplicationCommands.Open%2A> команды.  Объект <xref:System.Windows.Input.CommandBinding> создается, связывает указанный <xref:System.Windows.Input.CanExecuteRoutedEventHandler> и <xref:System.Windows.Input.CanExecuteRoutedEventHandler> с <xref:System.Windows.Input.RoutedCommand>.  
+ В следующем примере показано, как использовать <xref:System.Windows.Controls.Button> в качестве источника команды для команды <xref:System.Windows.Input.ApplicationCommands.Open%2A>.  Создается класс <xref:System.Windows.Input.CommandBinding>, который связывает указанный <xref:System.Windows.Input.CanExecuteRoutedEventHandler> и <xref:System.Windows.Input.CanExecuteRoutedEventHandler> с <xref:System.Windows.Input.RoutedCommand>.  
   
- Во-первых создается источника команды.  Объект <xref:System.Windows.Controls.Button> используется в качестве источника команды.  
+ Сначала создается источник команды.  В качестве источника команды используется <xref:System.Windows.Controls.Button>.  
   
  [!code-xaml[commandWithHandler#CommandHandlerCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandsource)]  
   
  [!code-csharp[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CommandHandlerProcedural/CSharp/Window1.xaml.cs#commandhandlerbuttoncommandsource)]
  [!code-vb[CommandHandlerProcedural#CommandHandlerButtonCommandSource](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbuttoncommandsource)]  
   
- Далее, <xref:System.Windows.Input.ExecutedRoutedEventHandler> и <xref:System.Windows.Input.CanExecuteRoutedEventHandler> создаются.  <xref:System.Windows.Input.ExecutedRoutedEventHandler> Просто открывает <xref:System.Windows.MessageBox> для обозначения того, что выполнена команда.  <xref:System.Windows.Input.CanExecuteRoutedEventHandler> Задает <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> свойства `true`.  Как правило, оно может выполнять обработчик выполнит более надежными проверяет, если выполнить команды на текущей цели команды.  
+ Затем создаются объекты <xref:System.Windows.Input.ExecutedRoutedEventHandler> и <xref:System.Windows.Input.CanExecuteRoutedEventHandler>.  <xref:System.Windows.Input.ExecutedRoutedEventHandler> просто открывает <xref:System.Windows.MessageBox>, чтобы подтвердить выполнение команды.  <xref:System.Windows.Input.CanExecuteRoutedEventHandler> задает для свойства <xref:System.Windows.Input.CanExecuteRoutedEventArgs.CanExecute%2A> значение `true`.  Как правило, обработчик CanExecute проводит более строгую проверку возможности выполнения команды с текущим целевым объектом команды.  
   
  [!code-csharp[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml.cs#commandhandlerbothhandlers)]
  [!code-vb[commandWithHandler#CommandHandlerBothHandlers](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/commandWithHandler/VisualBasic/Window1.xaml.vb#commandhandlerbothhandlers)]  
   
- Наконец <xref:System.Windows.Input.CommandBinding> создается в корневом каталоге <xref:System.Windows.Window> приложения, которое связывает обработчик маршрутизируемых событий для <xref:System.Windows.Input.ApplicationCommands.Open%2A> команды.  
+ Наконец, создается класс <xref:System.Windows.Input.CommandBinding> в корневом каталоге <xref:System.Windows.Window> приложения, который связывает обработчик перенаправленных событий с командой <xref:System.Windows.Input.ApplicationCommands.Open%2A>.  
   
  [!code-xaml[commandWithHandler#CommandHandlerCommandBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/commandWithHandler/CSharp/Window1.xaml#commandhandlercommandbinding)]  
   

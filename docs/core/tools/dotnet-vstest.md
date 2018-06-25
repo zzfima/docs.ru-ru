@@ -3,12 +3,13 @@ title: Команда dotnet vstest — CLI .NET Core
 description: Команда dotnet vstest выполняет сборку проекта и всех его зависимостей.
 author: guardrex
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: 981b56aa46afd5ca313ee0be0ca10843ef70e939
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/30/2018
+ms.openlocfilehash: 84b9d9eebfbf20fefe8153dd3ae9bec0f34986c8
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696342"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -20,7 +21,26 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Краткий обзор
 
-`dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger] [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]`
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+```
+dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
+    [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger]
+    [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [--Blame|/Blame] [--InIsolation|/InIsolation]
+    [[--] <args>...]] [-?|--Help|/?|/Help]
+```
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] 
+    [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger]
+    [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]
+```
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+```
+dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
+    [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger] 
+    [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]
+```
+---
 
 ## <a name="description"></a>Описание:
 
@@ -33,6 +53,8 @@ ms.lasthandoff: 05/04/2018
 Запустите тесты из указанных сборок. Для разделения имен тестовых сборок используйте пробелы.
 
 ## <a name="options"></a>Параметры
+
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--Settings|/Settings:<Settings File>`
 
@@ -52,7 +74,7 @@ ms.lasthandoff: 05/04/2018
 
 `--Framework|/Framework:<Framework Version>`
 
-Целевая версия платформы .NET Framework, используемая для выполнения тестов. Примеры допустимых значений: `.NETFramework,Version=v4.6`, `.NETCoreApp,Version=v1.0` и т. п. Другие поддерживаемые значения: `Framework35`, `Framework40`, `Framework45` и `FrameworkCore10`.
+Целевая версия платформы .NET Framework, используемая для выполнения тестов. Примеры допустимых значений: `.NETFramework,Version=v4.6` или `.NETCoreApp,Version=v1.0`. Другие поддерживаемые значения: `Framework35`, `Framework40`, `Framework45`, `FrameworkCore10` и `FrameworkUap10`.
 
 `--Parallel|/Parallel`
 
@@ -60,7 +82,7 @@ ms.lasthandoff: 05/04/2018
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
-Запуск тестов, соответствующих заданному выражению. `<Expression>` имеет формат `<property>Operator<value>[|&<Expression>]`, где Operator принимает одно из следующих значений: `=`, `!=` или `~`.  Оператор `~` имеет семантику "содержит" и применяется для строковых свойств, таких как `DisplayName`. Скобки `()` используются для группировки частей выражений.
+Запуск тестов, соответствующих заданному выражению. `<Expression>` имеет формат `<property>Operator<value>[|&<Expression>]`, где Operator принимает одно из следующих значений: `=`, `!=` или `~`. Оператор `~` имеет семантику "содержит" и применяется для строковых свойств, таких как `DisplayName`. Скобки `()` используются для группировки частей выражений.
 
 `-?|--Help|/?|/Help`
 
@@ -68,7 +90,7 @@ ms.lasthandoff: 05/04/2018
 
 `--logger|/logger:<Logger Uri/FriendlyName>`
 
-Укажите средство ведения журнала результатов тестирования.  
+Укажите средство ведения журнала результатов тестирования.
 
 * Чтобы опубликовать результаты теста в Team Foundation Server, используйте поставщик средства ведения журнала `TfsPublisher`:
 
@@ -90,7 +112,96 @@ ms.lasthandoff: 05/04/2018
 
 `-lt|--ListTests|/lt|/ListTests:<File Name>`
 
-Перечисление обнаруженных тестов из указанного контейнера тестов.
+Перечисление всех обнаруженных тестов из указанного контейнера тестов.
+
+`--ParentProcessId|/ParentProcessId:<ParentProcessId>`
+
+Идентификатор родительского процесса, отвечающего за запуск текущего процесса.
+
+`--Port|/Port:<Port>`
+
+Указывает порт для подключения сокета и получения сообщений о событиях.
+
+`--Diag|/Diag:<Path to log file>`
+
+Включает ведение подробных журналов для платформы тестирования. Журналы записываются в указанный файл.
+
+`--Blame|/Blame`
+
+Выполнение тестов в режиме обвинения. Этот параметр полезен при изоляции проблемных тестов, которые приводят к аварийному завершению хоста для тестов. Он создает в текущем каталоге выходной файл *Sequence.xml*, который записывает порядок выполнения тестов перед сбоем.
+
+`--InIsolation|/InIsolation`
+
+Запуск тестов в изолированном процессе. Это снижает вероятность остановки процесса *vstest.console.exe* при возникновении ошибки в тестах, однако тесты могут выполняться медленнее.
+
+`@<file>`
+
+Считывает файл ответов с дополнительными параметрами.
+
+
+`args`
+
+Задает дополнительные аргументы, передаваемые адаптеру. Аргументы указываются как пары имя-значение в формате `<n>=<v>`, где `<n>` является именем аргумента, а `<v>` — значением аргумента. Для разделения аргументов используйте пробел.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+`--Settings|/Settings:<Settings File>`
+
+Параметры, используемые при выполнении тестов.
+
+`--Tests|/Tests:<Test Names>`
+
+Выполните тесты с именами, которые соответствуют предусмотренным значениям. Для разделения значений используйте запятые.
+
+`--TestAdapterPath|/TestAdapterPath`
+
+Используйте пользовательские адаптеры теста из указанного пути (при наличии) в тестовом запуске.
+
+`--Platform|/Platform:<Platform type>`
+
+Архитектура целевой платформы, используемая для выполнения тестов. Допустимые значения: `x86`, `x64` и `ARM`.
+
+`--Framework|/Framework:<Framework Version>`
+
+Целевая версия платформы .NET Framework, используемая для выполнения тестов. Примеры допустимых значений: `.NETFramework,Version=v4.6` или `.NETCoreApp,Version=v1.0`. Другие поддерживаемые значения: `Framework35`, `Framework40`, `Framework45` и `FrameworkCore10`.
+
+`--Parallel|/Parallel`
+
+Выполняйте тесты в параллельном режиме. По умолчанию для использования все доступные на компьютере ядра. Задайте явное число ядер с помощью файла параметров.
+
+`--TestCaseFilter|/TestCaseFilter:<Expression>`
+
+Запуск тестов, соответствующих заданному выражению. `<Expression>` имеет формат `<property>Operator<value>[|&<Expression>]`, где Operator принимает одно из следующих значений: `=`, `!=` или `~`. Оператор `~` имеет семантику "содержит" и применяется для строковых свойств, таких как `DisplayName`. Скобки `()` используются для группировки частей выражений.
+
+`-?|--Help|/?|/Help`
+
+Выводит краткую справку по команде.
+
+`--logger|/logger:<Logger Uri/FriendlyName>`
+
+Укажите средство ведения журнала результатов тестирования.
+
+* Чтобы опубликовать результаты теста в Team Foundation Server, используйте поставщик средства ведения журнала `TfsPublisher`:
+
+  ```
+  /logger:TfsPublisher;
+      Collection=<team project collection url>;
+      BuildName=<build name>;
+      TeamProject=<team project name>
+      [;Platform=<Defaults to "Any CPU">]
+      [;Flavor=<Defaults to "Debug">]
+      [;RunTitle=<title>]
+  ```
+
+* Чтобы записать результаты в файл результатов теста Visual Studio (TRX), используйте поставщик средства ведения журнала `trx`. Этот параметр создает файл журнала с заданным именем в каталоге результатов теста. Если `LogFileName` не указан, для хранения результатов теста создается уникальное имя файла.
+
+  ```
+  /logger:trx [;LogFileName=<Defaults to unique file name>]
+  ```
+
+`-lt|--ListTests|/lt|/ListTests:<File Name>`
+
+Перечисление всех обнаруженных тестов из указанного контейнера тестов.
 
 `--ParentProcessId|/ParentProcessId:<ParentProcessId>`
 
@@ -107,6 +218,84 @@ ms.lasthandoff: 05/04/2018
 `args`
 
 Задает дополнительные аргументы, передаваемые адаптеру. Аргументы указываются как пары имя-значение в формате `<n>=<v>`, где `<n>` является именем аргумента, а `<v>` — значением аргумента. Для разделения аргументов используйте пробел.
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`--Settings|/Settings:<Settings File>`
+
+Параметры, используемые при выполнении тестов.
+
+`--Tests|/Tests:<Test Names>`
+
+Выполните тесты с именами, которые соответствуют предусмотренным значениям. Для разделения значений используйте запятые.
+
+`--TestAdapterPath|/TestAdapterPath`
+
+Используйте пользовательские адаптеры теста из указанного пути (при наличии) в тестовом запуске.
+
+`--Platform|/Platform:<Platform type>`
+
+Архитектура целевой платформы, используемая для выполнения тестов. Допустимые значения: `x86`, `x64` и `ARM`.
+
+`--Framework|/Framework:<Framework Version>`
+
+Целевая версия платформы .NET Framework, используемая для выполнения тестов. Примеры допустимых значений: `.NETFramework,Version=v4.6` или `.NETCoreApp,Version=v1.0`. Другие поддерживаемые значения: `Framework35`, `Framework40`, `Framework45` и `FrameworkCore10`.
+
+`--Parallel|/Parallel`
+
+Выполняйте тесты в параллельном режиме. По умолчанию для использования все доступные на компьютере ядра. Задайте явное число ядер с помощью файла параметров.
+
+`--TestCaseFilter|/TestCaseFilter:<Expression>`
+
+Запуск тестов, соответствующих заданному выражению. `<Expression>` имеет формат `<property>Operator<value>[|&<Expression>]`, где Operator принимает одно из следующих значений: `=`, `!=` или `~`. Оператор `~` имеет семантику "содержит" и применяется для строковых свойств, таких как `DisplayName`. Скобки `()` используются для группировки частей выражений.
+
+`-?|--Help|/?|/Help`
+
+Выводит краткую справку по команде.
+
+`--logger|/logger:<Logger Uri/FriendlyName>`
+
+Укажите средство ведения журнала результатов тестирования.
+
+* Чтобы опубликовать результаты теста в Team Foundation Server, используйте поставщик средства ведения журнала `TfsPublisher`:
+
+  ```
+  /logger:TfsPublisher;
+      Collection=<team project collection url>;
+      BuildName=<build name>;
+      TeamProject=<team project name>
+      [;Platform=<Defaults to "Any CPU">]
+      [;Flavor=<Defaults to "Debug">]
+      [;RunTitle=<title>]
+  ```
+
+* Чтобы записать результаты в файл результатов теста Visual Studio (TRX), используйте поставщик средства ведения журнала `trx`. Этот параметр создает файл журнала с заданным именем в каталоге результатов теста. Если `LogFileName` не указан, для хранения результатов теста создается уникальное имя файла.
+
+  ```
+  /logger:trx [;LogFileName=<Defaults to unique file name>]
+  ```
+
+`-lt|--ListTests|/lt|/ListTests:<File Name>`
+
+Перечисление всех обнаруженных тестов из указанного контейнера тестов.
+
+`--ParentProcessId|/ParentProcessId:<ParentProcessId>`
+
+Идентификатор родительского процесса, отвечающего за запуск текущего процесса.
+
+`--Port|/Port:<Port>`
+
+Указывает порт для подключения сокета и получения сообщений о событиях.
+
+`--Diag|/Diag:<Path to log file>`
+
+Включает ведение подробных журналов для платформы тестирования. Журналы записываются в указанный файл.
+
+`args`
+
+Задает дополнительные аргументы, передаваемые адаптеру. Аргументы указываются как пары имя-значение в формате `<n>=<v>`, где `<n>` является именем аргумента, а `<v>` — значением аргумента. Для разделения аргументов используйте пробел.
+
+---
 
 ## <a name="examples"></a>Примеры
 
@@ -129,4 +318,3 @@ ms.lasthandoff: 05/04/2018
 Запуск тестов `TestMethod1` и `TestMethod2`:
 
 `dotnet vstest /Tests:TestMethod1,TestMethod2`
-

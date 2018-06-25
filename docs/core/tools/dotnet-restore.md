@@ -3,12 +3,13 @@ title: Команда dotnet restore — CLI .NET Core
 description: Вы узнаете, как восстановить зависимости и связанные с проектом средства при помощи команды dotnet restore.
 author: mairaw
 ms.author: mairaw
-ms.date: 11/30/2017
-ms.openlocfilehash: 6f8aaa2060ab7e6b2e9b99ce4d35588c2bf54d36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: fcfa3f2f7133c3add2b02823937dd26fce690453
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696589"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -21,19 +22,17 @@ ms.lasthandoff: 05/04/2018
 ## <a name="synopsis"></a>Краткий обзор
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache] [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
+dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--force] [--ignore-failed-sources] [--no-cache]
+    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
 dotnet restore [-h|--help]
 ```
-
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
 ```
-dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache] [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
+dotnet restore [<ROOT>] [--configfile] [--disable-parallel] [--ignore-failed-sources] [--no-cache]
+    [--no-dependencies] [--packages] [-r|--runtime] [-s|--source] [-v|--verbosity]
 dotnet restore [-h|--help]
 ```
-
 ---
 
 ## <a name="description"></a>Описание:
@@ -44,7 +43,7 @@ dotnet restore [-h|--help]
 
 Для восстановления зависимостей NuGet требуются каналы, где находятся пакеты. Каналы обычно предоставляются посредством файла конфигурации *NuGet.config*. Файл конфигурации по умолчанию предоставляется при установке средств CLI. Вы можете указать дополнительные веб-каналы, создав собственный файл *NuGet.config* в каталоге проекта. Можно также указать дополнительные веб-каналы на вызов из командной строки.
 
-Для зависимостей можно указать, куда помещаются восстанавливаемые пакеты во время операции восстановления, с помощью аргумента `--packages`. Если значение не указано, используется кэш пакетов NuGet по умолчанию. Он находится в каталоге `.nuget/packages` в домашнем каталоге пользователя во всех операционных системах (например, */home/user1* в Linux или *C:\Users\user1* в Windows).
+Для зависимостей можно указать, куда помещаются восстанавливаемые пакеты во время операции восстановления, с помощью аргумента `--packages`. Если значение не указано, используется кэш пакетов NuGet по умолчанию. Он находится в каталоге `.nuget/packages` в домашнем каталоге пользователя во всех операционных системах. Например, */home/user1* на Linux или *C:\Users\user1* в Windows.
 
 Для связанных с проектом средств `dotnet restore` сначала восстанавливает пакет, в котором упаковано средство, а затем — зависимости средства, указанные в файле проекта.
 
@@ -56,14 +55,15 @@ dotnet restore [-h|--help]
 
 - [`dotnet new`](dotnet-new.md)
 - [`dotnet build`](dotnet-build.md)
+- [`dotnet build server`](dotnet-build-server.md)
 - [`dotnet run`](dotnet-run.md)
 - [`dotnet test`](dotnet-test.md)
 - [`dotnet publish`](dotnet-publish.md)
 - [`dotnet pack`](dotnet-pack.md)
 
-В большинстве случаев использовать команду `dotnet restore` явным образом не требуется. 
+В большинстве случаев использовать команду `dotnet restore` явным образом не требуется.
 
-В некоторых случаях выполнять команду `dotnet restore` явным образом неудобно. Например, некоторые автоматизированные системы, такие как системы сборки, должны явно вызывать `dotnet restore`, чтобы контролировать процесс восстановления и, следовательно, отслеживать использование сетевых ресурсов. Чтобы избежать неявного выполнения команды `dotnet restore`, с любой из приведенных выше команд можно использовать параметр `--no-restore` для отключения неявного восстановления.
+Иногда неудобно запускать `dotnet restore` неявным образом. Например, некоторые автоматизированные системы, такие как системы сборки, должны явно вызывать `dotnet restore`, чтобы контролировать процесс восстановления и, следовательно, отслеживать использование сетевых ресурсов. Чтобы избежать неявного выполнения команды `dotnet restore`, с любой из приведенных выше команд можно использовать флаг `--no-restore` для отключения неявного восстановления.
 
 ## <a name="arguments"></a>Аргументы
 
@@ -85,7 +85,7 @@ dotnet restore [-h|--help]
 
 `--force`
 
-Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Равносильно удалению файла *project.assets.json*.
+Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Указание этого флага дает тот же результат, что удаление файла *project.assets.json*.
 
 `-h|--help`
 
@@ -113,7 +113,7 @@ dotnet restore [-h|--help]
 
 `-s|--source <SOURCE>`
 
-Указывает источник пакета NuGet для использования во время операции восстановления. Переопределяет все источники, указанные в файлах *NuGet.config*. Чтобы указать несколько источников, задайте этот параметр несколько раз.
+Указывает источник пакета NuGet для использования во время операции восстановления. Этот параметр переопределяет все источники, указанные в файлах *NuGet.config*. Чтобы указать несколько источников, задайте этот параметр несколько раз.
 
 `--verbosity <LEVEL>`
 

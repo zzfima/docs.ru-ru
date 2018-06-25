@@ -3,12 +3,13 @@ title: Команда dotnet pack — CLI .NET Core
 description: Команда dotnet pack создает пакеты NuGet для проекта .NET Core.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: 6e6136e22c4bac201cfa0e4af321329432c04936
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 8c2569ec7598b21fe9b673176143d0e54b9eb065
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696823"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -21,16 +22,15 @@ ms.lasthandoff: 05/04/2018
 ## <a name="synopsis"></a>Краткий обзор
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
     [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
-
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output]
+    [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 ---
@@ -41,7 +41,7 @@ dotnet pack [-h|--help]
 
 Зависимости NuGet упакованного проекта добавляются в файл *NUSPEC*, чтобы их можно было разрешить при установке пакета. Межпроектные ссылки не упаковываются в проекте. Сейчас при наличии межпроектных зависимостей требуется один пакет на каждый проект.
 
-`dotnet pack` по умолчанию сначала выполняет сборку проекта. Чтобы избежать этого, передайте параметр `--no-build`. Это часто бывает полезно, например, в сценариях сборки с непрерывной интеграцией (CI), когда вы знаете, что код был собран недавно.
+`dotnet pack` по умолчанию сначала выполняет сборку проекта. Чтобы избежать этого, передайте параметр `--no-build`. Этот вариант часто бывает полезен, например в сценариях сборки с непрерывной интеграцией (CI), когда вы знаете, что код был собран недавно.
 
 Может предоставлять свойства MSBuild команде `dotnet pack` для процесса упаковки. Дополнительные сведения см. в разделах [Свойства метаданных NuGet](csproj.md#nuget-metadata-properties) и [Справочник по командной строке MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). В разделе [Примеры](#examples) показано, как использовать параметр MSBuild /p в различных сценариях.
 
@@ -61,7 +61,9 @@ dotnet pack [-h|--help]
 
 Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
 
-`--force` — принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Равносильно удалению файла *project.assets.json*.
+`--force`
+
+Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Указание этого флага дает тот же результат, что удаление файла *project.assets.json*.
 
 `-h|--help`
 
@@ -77,7 +79,7 @@ dotnet pack [-h|--help]
 
 `--no-build`
 
-Не выполняет сборку проекта перед упаковкой.
+Не выполняет сборку проекта перед упаковкой. Он также неявно задает флаг `--no-restore`.
 
 `--no-dependencies`
 
@@ -91,7 +93,7 @@ dotnet pack [-h|--help]
 
 Собранные пакеты помещаются в указанный каталог.
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+`--runtime <RUNTIME_IDENTIFIER>`
 
 Задает целевую среду выполнения для восстановления пакетов. Список идентификаторов сред выполнения (RID) см. в [каталоге RID](../rid-catalog.md).
 

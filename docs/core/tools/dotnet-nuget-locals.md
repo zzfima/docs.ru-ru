@@ -3,12 +3,13 @@ title: Команда dotnet nuget locals — CLI .NET Core
 description: Команда dotnet nuget locals очищает или перечисляет локальные ресурсы NuGet, например кэш HTTP-запросов, временный кэш или папку глобальных пакетов, используемую на уровне компьютера.
 author: karann-msft
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: d0c900a06b00fd5e6b7ad66527c6582483222c45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 799acb92d6ab7439e15c23c9f0b7b572c966adda
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696875"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
@@ -20,7 +21,10 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Краткий обзор
 
-`dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output] [-h|--help]`
+```
+dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english-output]
+dotnet nuget locals [-h|--help]
+```
 
 ## <a name="description"></a>Описание:
 
@@ -30,7 +34,7 @@ ms.lasthandoff: 05/04/2018
 
 `CACHE_LOCATION`
 
-Одно из следующих значений:
+Расположение кэша для вывода или очищения. Принимает одно из следующих значений:
 
 * `all` — указывает, что определенная операция применяется ко всем типам кэша, то есть к кэшу HTTP-запросов, глобальному кэшу пакетов и временному кэшу.
 * `http-cache` — указывает, что определенная операция применяется только к кэшу HTTP-запросов. Другие расположения кэша не затрагиваются.
@@ -38,6 +42,10 @@ ms.lasthandoff: 05/04/2018
 * `temp` — указывает, что определенная операция применяется только к временному кэшу. Другие расположения кэша не затрагиваются.
 
 ## <a name="options"></a>Параметры
+
+`--force-english-output`
+
+Принудительно запускает приложение с использованием инвариантного английского языка и региональных параметров.
 
 `-h|--help`
 
@@ -49,11 +57,7 @@ ms.lasthandoff: 05/04/2018
 
 `-l|--list`
 
-Параметр list используется для отображения расположения кэша указанного типа. 
-
-`--force-english-output`
-
-Принудительно отображает выходные данные командной строки на английском языке.
+Параметр list используется для отображения расположения кэша указанного типа.
 
 ## <a name="examples"></a>Примеры
 

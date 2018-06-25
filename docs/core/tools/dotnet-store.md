@@ -3,12 +3,13 @@ title: Команда dotnet store
 description: Команда dotnet store сохраняет указанные сборки в хранилище пакетов среды выполнения.
 author: bleroy
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: f819444c92afde0e1a5349a58918f993868a0143
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 54654522207157f7d49bb86223b7986acccf51ee
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696329"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
 
 `-m|--manifest <PATH_TO_MANIFEST_FILE>`
 
-*Файл манифеста хранилища пакетов* — это XML-файл, содержащий список сохраняемых пакетов. Формат файла манифеста совместим с форматом *CSPROJ*. Поэтому файл проекта *CSPROJ*, ссылающийся на требуемые пакеты, можно использовать с параметром `-m|--manifest` для сохранения сборок в хранилище пакетов среды выполнения. Чтобы указать несколько файлов манифеста, добавьте параметр и путь для каждого из них: `--manifest packages1.csproj --manifest packages2.csproj`.
+*Файл манифеста хранилища пакетов* — это XML-файл, содержащий список сохраняемых пакетов. Формат файла манифеста совместим с форматом проекта в стиле SDK. Поэтому файл проекта, ссылающийся на требуемые пакеты, можно использовать с параметром `-m|--manifest` для сохранения сборок в хранилище пакетов среды выполнения. Чтобы указать несколько файлов манифеста, добавьте параметр и путь для каждого из них. Например, `--manifest packages1.csproj --manifest packages2.csproj`.
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
@@ -82,4 +83,4 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="see-also"></a>См. также
 
-[Хранилище пакетов среды выполнения](../deploying/runtime-store.md)   
+[Хранилище пакетов среды выполнения](../deploying/runtime-store.md)

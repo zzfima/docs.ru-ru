@@ -3,13 +3,13 @@ title: Необходимые компоненты для .NET Core в Linux
 description: Поддерживаемые версии Linux и зависимости .NET Core для разработки, развертывания и запуска приложений .NET Core на компьютерах с Linux.
 author: jralexander
 ms.author: johalex
-ms.date: 05/08/2018
-ms.openlocfilehash: 4890f682ee2d0b55dc5059d8f1d3091def07a8a5
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.date: 06/01/2018
+ms.openlocfilehash: 30448d84a8377e27b0606b3bdabdcbac96c048aa
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483506"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728551"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Необходимые компоненты для .NET Core в Linux
 
@@ -27,19 +27,39 @@ ms.locfileid: "34483506"
 
 .NET Core 2.x воспринимает Linux как отдельную операционную систему. Существует отдельная сборка для Linux (на основе архитектуры микросхемы) с поддержкой дистрибутивов Linux.
 
-.NET Core 2.x поддерживается в следующих дистрибутивах и версиях 64-разрядной версии Linux (`x86_64` или `amd64`):
+**NET Core 2.1**
+
+.NET Core 2.1 поддерживается в следующих дистрибутивах и версиях 64-разрядной версии Linux (`x86_64` или `amd64`):
+
+
+* Red Hat Enterprise Linux 7, 6
+* CentOS 7
+* Oracle Linux 7
+* Fedora 27
+* Debian 9, 8.7 или более поздней версии
+* Ubuntu 18.04, 17.10, 16.04, 14.04
+* Linux Mint 18, 17
+* openSUSE 42.3 или более поздней версии
+* SUSE Enterprise Linux (SLES) 12 с пакетом обновления 2 (SP2) или более поздней версии
+* Alpine Linux 3.7 или более поздней версии
+
+Полный список операционных систем, дистрибутивов и версий, поддерживаемых .NET Core 2.0, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на странице [Версии ОС, поддерживаемые .NET Core 2.0](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md).
+
+**NET Core 2.0**
+
+.NET Core 2.0 поддерживается в следующих дистрибутивах и версиях 64-разрядной версии Linux (`x86_64` или `amd64`):
 
 * Red Hat Enterprise Linux 7
 * CentOS 7
 * Oracle Linux 7
-* Fedora 27, 26
+* Fedora 27
 * Debian 9, 8.7 или более поздней версии
 * Ubuntu 18.04, 17.10, 16.04, 14.04
 * Linux Mint 18, 17
 * openSUSE 42.3 или более поздней версии
 * SUSE Enterprise Linux (SLES) 12 с пакетом обновления 2 (SP2) или более поздней версии
 
-Полный список операционных систем, дистрибутивов и версий, поддерживаемых .NET Core 2.x, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на странице [Версии ОС, поддерживаемые .NET Core 2.x](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md).
+Полный список операционных систем, дистрибутивов и версий, поддерживаемых .NET Core 2.0, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на странице [Версии ОС, поддерживаемые .NET Core 2.0](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md).
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -120,7 +140,19 @@ ms.locfileid: "34483506"
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-Чтобы обеспечить наличие актуальных сведений об установке, выполните [инструкции для пакета SDK для .NET Core 2.x и установщика среды выполнения](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-current) для поддерживаемых версий RHEL.
+**.NET Core 2.0**
+
+ Установите .NET Core 2.0 в поддерживаемых версиях RHEL:
+
+* Среда выполнения .NET Core 2.0.8: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/rhel/runtime-2.0.8)
+* Среда выполнения .NET Core 2.0.7: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/rhel/runtime-2.0.7)
+* Среда выполнения .NET Core 2.0.6: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/rhel/runtime-2.0.6)
+* Среда выполнения .NET Core 2.0.5: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/rhel/runtime-2.0.5)
+* Пакет SDK для .NET Core 2.1.200: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.1.200)
+* Пакет SDK для .NET Core 2.1.105: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.1.105)
+* Пакет SDK для .NET Core 2.1.103: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.1.103)
+* Пакет SDK для .NET Core 2.0.3: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.0.3)
+* Пакет SDK для .NET Core 2.0.0: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/rhel/sdk-2.0.0)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -152,9 +184,11 @@ ms.locfileid: "34483506"
 
 |Среды выполнения и пакеты SDK          |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04 и Linux Mint 18|Ubuntu 14.04 и Linux Mint 17|
 |-------------------------|----------------|----------------|----------------------------|----------------------------|
+|Среда выполнения .NET Core 2.0.8  |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.8)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.8)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.8)          |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.8)            |
 |Среда выполнения .NET Core 2.0.7  |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.7)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.7)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.7)          |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.7)            |
 |Среда выполнения .NET Core 2.0.6  |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.6)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.6)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.6)          |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.6)            |
 |Среда выполнения .NET Core 2.0.5  |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.5)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.5)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.5)          |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.5)            |
+|Пакет SDK для .NET Core 2.1.200    |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.200)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.200)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.200)            |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.200)            |
 |Пакет SDK для .NET Core 2.1.105    |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.105)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.105)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.105)            |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.105)            |
 |Пакет SDK для .NET Core 2.1.103    |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.103)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.103)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.103)            |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.103)            |
 |Пакет SDK для .NET Core 2.0.3      |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.0.3)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.3)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.3)          |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.3)            |
@@ -167,13 +201,8 @@ ms.locfileid: "34483506"
 
 |Среды выполнения и пакеты SDK                  |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04 и Linux Mint 18|Ubuntu 14.04 и Linux Mint 17|
 |---------------------------------|----------------|----------------|----------------------------|----------------------------|
-|Среда выполнения .NET Core 2.1.0-rc1      |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-rc1)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-rc1)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-rc1)            |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-rc1)            |
-|Среда выполнения .NET Core 2.1.0-preview2 |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-preview2)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview2)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview2)            |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview2)            |
-|Среда выполнения .NET Core 2.1.0-preview1 |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0-preview1)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0-preview1)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0-preview1)            |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0-preview1)            |
-|Пакет SDK для .NET Core 2.1.300-rc1  |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-rc1)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-rc1)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-rc1)            |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-rc1)            |
-|Пакет SDK для .NET Core 2.1.300-preview2   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-preview2)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview2)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview2)            |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview2)            |
-|Пакет SDK для .NET Core 2.1.300-preview1   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300-preview1)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300-preview1)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300-preview1)            |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300-preview1)            |
-
+|Среда выполнения .NET Core 2.1.0          |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0)            |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0)            |
+|Пакет SDK для .NET Core 2.1.300     |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300)|[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300)            |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300)            |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -211,9 +240,11 @@ ms.locfileid: "34483506"
 
 |Среды выполнения и пакеты SDK          |Debian 9       |Debian 8       |
 |-------------------------|---------------|---------------|
+|Среда выполнения .NET Core 2.0.8  |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.8)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.8)   |
 |Среда выполнения .NET Core 2.0.7  |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.7)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.7)   |
 |Среда выполнения .NET Core 2.0.6  |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.6)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.6)   |
 |Среда выполнения .NET Core 2.0.5  |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.5)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.5)   |
+|Пакет SDK для .NET Core 2.1.200    |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.200)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.200)   |
 |Пакет SDK для .NET Core 2.1.105    |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.105)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.105)   |
 |Пакет SDK для .NET Core 2.1.103    |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.103)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.103)   |
 |Пакет SDK для .NET Core 2.0.3      |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.0.3)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.0.3)   |
@@ -226,12 +257,8 @@ ms.locfileid: "34483506"
 
 |Среды выполнения и пакеты SDK                  |Debian 9       |Debian 8       |
 |---------------------------------|---------------|---------------|
-|Среда выполнения .NET Core 2.1.0-rc1      |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-rc1)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-rc1)   |
-|Среда выполнения .NET Core 2.1.0-preview2 |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview2)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview2)   |
-|Среда выполнения .NET Core 2.1.0-preview1 |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0-preview1)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0-preview1)   |
-|Пакет SDK для .NET Core 2.1.300-rc1        |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-rc1)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-rc1)        |
-|Пакет SDK для .NET Core 2.1.300-preview2   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview2)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview2)   |
-|Пакет SDK для .NET Core 2.1.300-preview1   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300-preview1)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300-preview1)   |
+|Среда выполнения .NET Core 2.1.0          |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0)   |
+|Пакет SDK для .NET Core 2.1.300        |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300)   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300)        |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -267,9 +294,11 @@ ms.locfileid: "34483506"
 
 |Среды выполнения и пакеты SDK          |Fedora 26 или более поздней версии |Fedora 25 или более ранней версии |
 |-------------------------|-------------------|----------------------|
+|Среда выполнения .NET Core 2.0.8  |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.8)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.8)           |
 |Среда выполнения .NET Core 2.0.7  |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.7)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.7)           |
 |Среда выполнения .NET Core 2.0.6  |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.6)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.6)           |
 |Среда выполнения .NET Core 2.0.5  |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.5)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.5)           |
+|Пакет SDK для .NET Core 2.1.200    |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.200)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.200)           |
 |Пакет SDK для .NET Core 2.1.105    |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.105)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.105)           |
 |Пакет SDK для .NET Core 2.1.103    |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.103)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.103)           |
 |Пакет SDK для .NET Core 2.0.3      |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.0.3)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.0.3)           |
@@ -281,12 +310,8 @@ ms.locfileid: "34483506"
 
 |Среды выполнения и пакеты SDK                  |Fedora 27          |Fedora 26             |
 |---------------------------------|-------------------|----------------------|
-|Среда выполнения .NET Core 2.1.0-rc1      |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-rc1)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-rc1)           |
-|Среда выполнения .NET Core 2.1.0-preview2 |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview2)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview2)           |
-|Среда выполнения .NET Core 2.1.0-preview1 |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview1)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)           |
-|Пакет SDK для .NET Core 2.1.300-rc1        |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.300-rc1)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-rc1)           |
-|Пакет SDK для .NET Core 2.1.300-preview2   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.300-preview2)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300-preview2))           |
-|Пакет SDK для .NET Core 2.1.300-preview1   |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0-preview1)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0-preview1)           |
+|Среда выполнения .NET Core 2.1.0          |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.1.0)           |
+|Пакет SDK для .NET Core 2.1.300          |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.300)       |[Ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.300)           |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -325,9 +350,11 @@ ms.locfileid: "34483506"
 
 **.NET Core 2.0**
 
-* Среда выполнения .NET Core 2.0.7: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6)
+* Среда выполнения .NET Core 2.0.8: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.8)
+* Среда выполнения .NET Core 2.0.7: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.7)
 * Среда выполнения .NET Core 2.0.6: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6)
 * Среда выполнения .NET Core 2.0.5: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.5)
+* Пакет SDK для .NET Core 2.1.200: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.200)
 * Пакет SDK для .NET Core 2.1.105: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.105)
 * Пакет SDK для .NET Core 2.1.103: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.103)
 * Пакет SDK для .NET Core 2.0.3: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.3)
@@ -338,12 +365,8 @@ ms.locfileid: "34483506"
 >[!IMPORTANT]
 > Чтобы использовать .NET Core 2.1 с Visual Studio, необходимо [установить предварительную версию 1 Visual Studio 2017 15.7 или более позднюю](https://www.visualstudio.com/vs/preview/).
 
-* Среда выполнения .NET Core 2.1.0-rc1: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-rc1)
-* Среда выполнения .NET Core 2.1.0-preview2: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview2)
-* Среда выполнения .NET Core 2.1.0-preview1: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0-preview1)
-* Пакет SDK для .NET Core 2.1.300-rc1: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-rc1)
-* Пакет SDK для .NET Core 2.1.300-preview2: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview2)
-* Пакет SDK для .NET Core 2.1.300-preview1: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview1)
+* Среда выполнения .NET Core 2.1.0: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0)
+* Пакет SDK для .NET Core 2.1.300: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -376,9 +399,11 @@ ms.locfileid: "34483506"
 
 **SUSE Linux Enterprise Server**
 
+* Среда выполнения .NET Core 2.0.8: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.8)
 * Среда выполнения .NET Core 2.0.7: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.7)
 * Среда выполнения .NET Core 2.0.6: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.6)
 * Среда выполнения .NET Core 2.0.5: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.5)
+* Пакет SDK для .NET Core 2.1.200: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.200)
 * Пакет SDK для .NET Core 2.1.105: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.105)
 * Пакет SDK для .NET Core 2.1.103: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.103)
 * Пакет SDK для .NET Core 2.0.3: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.0.3)
@@ -386,6 +411,7 @@ ms.locfileid: "34483506"
 
 **openSUSE**
 
+* Среда выполнения .NET Core 2.0.8: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.8)
 * Среда выполнения .NET Core 2.0.7: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.7)
 * Среда выполнения .NET Core 2.0.6: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.6)
 * Среда выполнения .NET Core 2.0.5: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.5)
@@ -401,21 +427,13 @@ ms.locfileid: "34483506"
 
 **SUSE Linux Enterprise Server**
 
-* Среда выполнения .NET Core 2.1.0-rc1: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-rc1)
-* Среда выполнения .NET Core 2.1.0-preview2: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-preview2)
-* Среда выполнения .NET Core 2.1.0-preview1: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0-preview1)
-* Пакет SDK для .NET Core 2.1.300-rc1: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-rc1)
-* Пакет SDK для .NET Core 2.1.300-preview2: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-preview2)
-* Пакет SDK для .NET Core 2.1.300-preview1: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300-preview1)
+* Среда выполнения .NET Core 2.1.0: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0)
+* Пакет SDK для .NET Core 2.1.300: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300)
 
 **openSUSE**
 
-* Среда выполнения .NET Core 2.1.0-rc1: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-rc1)
-* Среда выполнения .NET Core 2.1.0-preview2: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview2)
-* Среда выполнения .NET Core 2.1.0-preview1: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0-preview1)
-* Пакет SDK для .NET Core 2.1.300-rc1: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-rc1)
-* Пакет SDK для .NET Core 2.1.300-preview2: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview2)
-* Пакет SDK для .NET Core 2.1.300-preview1: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300-preview1)
+* Среда выполнения .NET Core 2.1.0: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0)
+* Пакет SDK для .NET Core 2.1.300: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300)
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -435,6 +453,16 @@ ms.locfileid: "34483506"
 * Пакет SDK для .NET Core 1.0.1: [ссылка для установки](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-opensuse-24-x64-binaries)
 
 ---
+
+## <a name="install-net-core-for-supported-alpine-linux-versions-64-bit"></a>Установка .NET Core для поддерживаемых версий Alpine Linux (64-разрядных)
+
+> [!NOTE]
+> Чтобы установить систему Linux из архива TAR.GZ, требуется пользовательский каталог.
+
+Загрузите и выполните инструкции по установке .NET Core 2.1 для поддерживаемых версий Alpine Linux (64-разрядная версия) по следующим ссылкам:
+
+* Среды выполнения .NET core 2.1.0: [ссылка для загрузки](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0)
+* Пакет SDK для .NET Core 2.1.300: [ссылка для загрузки](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300)
 
 > [!IMPORTANT]
 > Если при установке .NET Core в поддерживаемом дистрибутиве и версии Linux возникают проблемы, обратитесь к статье для используемого дистрибутива и версии:

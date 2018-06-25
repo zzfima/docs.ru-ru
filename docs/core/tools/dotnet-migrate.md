@@ -3,12 +3,13 @@ title: Команда dotnet migrate — CLI .NET Core
 description: Команда dotnet migrate переносит проект и все его зависимости.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: bdc1da5c1b70fdceac0170b2f002059a66ca5880
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 67a845f7604dededd00746fa6b74a320b3e134fa
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697109"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
@@ -20,15 +21,18 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Краткий обзор
 
-`dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file] [-s|--skip-project-references] [-r|--report-file] [--format-report-file-json] [--skip-backup] [-h|--help]`
+```
+dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--report-file] [-s|--skip-project-references] [--skip-backup] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file]
+dotnet migrate [-h|--help]
+```
 
 ## <a name="description"></a>Описание:
 
-Команда `dotnet migrate` переносит действительный проект предварительной версии 2 на основе *project.json* в действительный проект *CSPROJ* пакета SDK для .NET Core 1.0. 
+Команда `dotnet migrate` переносит действительный проект предварительной версии 2 на основе *project.json* в действительный проект *CSPROJ* пакета SDK для .NET Core 1.0.
 
-По умолчанию команда переносит корневой проект и все ссылки, которые он содержит. Это поведение можно отключить в среде выполнения с помощью параметра `--skip-project-references`. 
+По умолчанию команда переносит корневой проект и все ссылки, которые он содержит. Это поведение можно отключить в среде выполнения с помощью параметра `--skip-project-references`.
 
-Миграция выполняется для следующих объектов:
+Миграция выполняется для следующих ресурсов:
 
 * Отдельный проект посредством указания нужного файла *project.json*.
 * Все каталоги, указанные в файле *global.json*, посредством передачи пути в файл *global.json*.
@@ -37,7 +41,7 @@ ms.lasthandoff: 05/04/2018
 
 Команда `dotnet migrate` сохраняет перенесенный файл *project.json* в каталоге `backup` (создается, если не существует). Это поведение можно переопределить с помощью параметра `--skip-backup`.
 
-По умолчанию операция миграции выводит состояние процесса миграции в стандартный вывод (STDOUT). Если вы используете параметр `--report-file <REPORT_FILE>`, выходные данные сохраняются в указанном файле. 
+По умолчанию операция миграции выводит состояние процесса миграции в стандартный вывод (STDOUT). Если вы используете параметр `--report-file <REPORT_FILE>`, выходные данные сохраняются в указанном файле.
 
 Команда `dotnet migrate` поддерживает только допустимые проекты предварительной версии 2 на основе *project.json*. Это означает, что она не позволяет перенести проекты DNX или проекты предварительной версии 1 на базе *project.json* непосредственно в проекты MSBuild/CSPROJ. Сначала нужно вручную перенести проект в проект версии 2 на основе *project.json*, а затем воспользоваться командой `dotnet migrate` для переноса проекта.
 
@@ -48,17 +52,33 @@ ms.lasthandoff: 05/04/2018
 Путь к одному из следующих объектов:
 
 * переносимый файл *project.json*;
-* файл *global.json*, куда переносятся папки, указанные в *global.json*;
-* файл *solution.sln*, куда переносятся проекты, на которые ссылается решение;
-* каталог для миграции, где выполняется рекурсивный поиск переносимых файлов *project.json*.
+* файл *global.json*: переносятся папки, указанные в *global.json*;
+* файл *solution.sln*: переносятся проекты, на которые ссылается решение;
+* каталог для миграции: выполняется рекурсивный поиск переносимых файлов *project.json* в указанном каталоге.
 
 Если значение не задано, по умолчанию используется текущий каталог.
 
 ## <a name="options"></a>Параметры
 
+`--format-report-file-json <REPORT_FILE>`
+
+Вывод отчета о миграции в файл JSON вместо отправки сообщений пользователю.
+
 `-h|--help`
 
 Выводит краткую справку по команде.
+
+`-r|--report-file <REPORT_FILE>`
+
+Вывод отчета о миграции в файл наряду с выводом в консоль.
+
+`-s|--skip-project-references [Debug|Release]`
+
+Пропуск ссылок проекта для миграции. По умолчанию ссылки проекта переносятся рекурсивно.
+
+`--skip-backup`
+
+Пропуск перемещения *project.json*, *global.json* и *\*.xproj* в каталог `backup` после успешной миграции.
 
 `-t|--template-file <TEMPLATE_FILE>`
 
@@ -71,22 +91,6 @@ ms.lasthandoff: 05/04/2018
 `-x|--xproj-file <FILE>`
 
 Путь к файлу XPROJ, который будет использоваться. Требуется, если в каталоге проекта несколько файлов XPROJ.
-
-`-s|--skip-project-references [Debug|Release]`
-
-Пропуск ссылок проекта для миграции. По умолчанию ссылки проекта переносятся рекурсивно.
-
-`-r|--report-file <REPORT_FILE>`
-
-Вывод отчета о миграции в файл наряду с выводом в консоль.
-
-`--format-report-file-json <REPORT_FILE>`
-
-Вывод отчета о миграции в файл JSON вместо отправки сообщений пользователю.
-
-`--skip-backup`
-
-Пропуск перемещения *project.json*, *global.json* и *\*.xproj* в каталог `backup` после успешной миграции.
 
 ## <a name="examples"></a>Примеры
 

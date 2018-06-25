@@ -3,12 +3,13 @@ title: Команда dotnet run — CLI .NET Core
 description: Команда dotnet run — это удобное средство для запуска приложения из исходного кода.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/10/2018
-ms.openlocfilehash: b45d6772cabd6be90ea8e8b5da57c16692b20322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/29/2018
+ms.openlocfilehash: 82c6e44e52aa6af7044edf72fd6e57b7614a70f3
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696316"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -20,20 +21,23 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Краткий обзор
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 ```
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+```
+dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
+    [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
+dotnet run [-h|--help]
+```
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
 ```
 dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
-
 ---
 
 ## <a name="description"></a>Описание:
@@ -46,7 +50,7 @@ dotnet run [-h|--help]
 
 Команда `dotnet run` используется в контексте проектов, а не созданных сборок. Если вместо этого вы пытаетесь запустить библиотеку DLL платформозависимого приложения, следует использовать [dotnet](dotnet.md) без команды. Например, для выполнения `myapp.dll` используйте:
 
-```
+```console
 dotnet myapp.dll
 ```
 
@@ -58,11 +62,11 @@ dotnet myapp.dll
 
 ## <a name="options"></a>Параметры
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--`
 
-Отделяет аргументы, предназначенные для `dotnet run`, от аргументов для выполняемого приложения. Все аргументы после этого передаются выполняемому приложению.
+Отделяет аргументы, предназначенные для `dotnet run`, от аргументов для выполняемого приложения. Все аргументы после разделителя передаются выполняемому приложению.
 
 `-c|--configuration {Debug|Release}`
 
@@ -74,7 +78,7 @@ dotnet myapp.dll
 
 `--force`
 
-Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Равносильно удалению файла *project.assets.json*.
+Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Указание этого флага дает тот же результат, что удаление файла *project.assets.json*.
 
 `-h|--help`
 
@@ -86,7 +90,61 @@ dotnet myapp.dll
 
 `--no-build`
 
-Не выполняет сборку проекта перед запуском.
+Не выполняет сборку проекта перед запуском. Он также неявно задает флаг `--no-restore`.
+
+`--no-dependencies`
+
+При восстановлении проекта с перекрестными ссылками между проектами восстанавливает только корневой проект, но не ссылки.
+
+`--no-launch-profile`
+
+Не пытается использовать файл *launchSettings.json* для настройки приложения.
+
+`--no-restore`
+
+Не выполняет неявное восстановление при выполнении команды.
+
+`-p|--project <PATH>`
+
+Задает путь к запускаемому файлу проекта (имя папки или полный путь). Если значение не задано, по умолчанию используется текущий каталог.
+
+`--runtime <RUNTIME_IDENTIFIER>`
+
+Задает целевую среду выполнения для восстановления пакетов. Список идентификаторов сред выполнения (RID) см. в [каталоге RID](../rid-catalog.md).
+
+`-v|--verbosity <LEVEL>`
+
+Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+`--`
+
+Отделяет аргументы, предназначенные для `dotnet run`, от аргументов для выполняемого приложения. Все аргументы после разделителя передаются выполняемому приложению.
+
+`-c|--configuration {Debug|Release}`
+
+Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
+
+`-f|--framework <FRAMEWORK>`
+
+Выполняет сборку и запуск приложения с использованием указанной [платформы](../../standard/frameworks.md). Эта платформа должна быть указана в файле проекта.
+
+`--force`
+
+Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Указание этого флага дает тот же результат, что удаление файла *project.assets.json*.
+
+`-h|--help`
+
+Выводит краткую справку по команде.
+
+`--launch-profile <NAME>`
+
+Имя профиля запуска (при его наличии), который следует использовать при запуске приложения. Профили запуска обычно определяются в файле *launchSettings.json* и, как правило, называются `Development`, `Staging` и `Production`. Дополнительные сведения см. в разделе [Работа с несколькими средами](/aspnet/core/fundamentals/environments).
+
+`--no-build`
+
+Не выполняет сборку проекта перед запуском. Он также неявно задает флаг `--no-restore`.
 
 `--no-dependencies`
 
@@ -112,7 +170,7 @@ dotnet myapp.dll
 
 `--`
 
-Отделяет аргументы, предназначенные для `dotnet run`, от аргументов для выполняемого приложения. Все аргументы после этого передаются выполняемому приложению.
+Отделяет аргументы, предназначенные для `dotnet run`, от аргументов для выполняемого приложения. Все аргументы после разделителя передаются выполняемому приложению.
 
 `-c|--configuration {Debug|Release}`
 

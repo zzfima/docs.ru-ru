@@ -1,18 +1,18 @@
 ---
 title: Версии и зависимости платформы .NET Framework
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 05/31/2018
 helpviewer_keywords:
 - versions, .NET Framework
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b3a32e21573ae7f2e59655b191278e4aec7c4ab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: 7c2c3ca038508b63533a7e17f6ceb6ebf1ad6842
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457619"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34728619"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Версии и зависимости платформы .NET Framework
 В каждую версию платформы .NET Framework входит среда CLR, библиотеки базовых классов и другие управляемые библиотеки. В этом разделе описаны основные особенности различных версий платформы .NET Framework, приведены сведения о базовых версиях среды CLR и соответствующих средах разработки, а также указаны версии, устанавливаемые системой Windows.  
@@ -45,9 +45,13 @@ ms.locfileid: "34457619"
 |2.0|2.0|– Универсальные шаблоны<br />– Добавления ASP.NET<br />-   [Подробнее...](http://msdn.microsoft.com/library/t357fb32\(v=vs.80\).aspx)|2005|-|✓ 2008 R2 с пакетом обновления 1 (SP1)<br />✓ 2008 с пакетом обновления 2 (SP2)<br />✓ 2003|См. [инструкции](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.1|1.1|– Обновления ASP.NET и ADO.NET<br />– Параллельное выполнение<br />-   [Подробнее...](http://msdn.microsoft.com/library/9wtde3k4\(v=vs.80\).aspx)|2003|-|✓ 2003|См. [инструкции](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
 |1.0|1.0|Первая версия .NET Framework.|Visual Studio .NET|-|-|См. [инструкции](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)|  
-  
- Как правило, не требуется удалять какие-либо версии .NET Framework, уже установленные на вашем компьютере, потому что используемое приложение может зависеть от конкретной версии. В случае удаления какой-либо версии его исполнение может завершиться ошибкой. Можно загружать несколько версий платформы .NET Framework на одном компьютере одновременно. Это значит, что можно установить платформу .NET Framework, не удаляя предыдущие версии. Дополнительные сведения см. в разделе [Начало работы](../../../docs/framework/get-started/index.md).  
-  
+
+**Примечания**
+
+<sup>\*</sup>&nbsp;&nbsp;В этой операционной системе необходимо включить платформу .NET Framework с помощью [панели управления (для Windows) или диспетчера сервера (для Windows Server)](../install/dotnet-35-windows-10.md#enable-the-net-framework-35-in-control-panel).
+
+ Как правило, не требуется удалять какие-либо версии .NET Framework, уже установленные на вашем компьютере, потому что используемое приложение может зависеть от конкретной версии. В случае удаления какой-либо версии его исполнение может завершиться ошибкой. Можно загружать несколько версий платформы .NET Framework на одном компьютере одновременно. Это значит, что можно установить платформу .NET Framework, не удаляя предыдущие версии. Дополнительные сведения см. в разделе [Начало работы](../../../docs/framework/get-started/index.md).
+
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>Выбор целевой платформы и запуск приложений .NET Framework для версии 4.5 и более поздних  
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] — это обновление на месте, которое заменяет [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] на компьютере, и аналогично [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 и 4.7.1 — это обновления на месте для [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Это означает, что они используют ту же версию среды выполнения, но версии сборок обновлены и содержат новые типы и члены. После установки одного из этих обновлений приложения [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], .NET Framework 4.6 и .NET Framework 4.7 должны продолжать работу без повторной компиляции. Однако обратное неверно. Не рекомендуется запускать приложения, предназначенные для более поздней версии .NET Framework, в более ранней версии .NET Framework. Например, не рекомендуется запускать приложение, предназначенное для [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], на [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Применяются следующие правила.  
   

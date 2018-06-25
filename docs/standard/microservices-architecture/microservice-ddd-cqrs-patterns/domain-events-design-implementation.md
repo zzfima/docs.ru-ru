@@ -4,11 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 424408ca095eadeda33690277dcf38bac923e29f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6af18b1154759677c7749632eace30bad752591
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34697200"
 ---
 # <a name="domain-events-design-and-implementation"></a>События предметной области: проектирование и реализация
 
@@ -339,7 +340,7 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 -   **Джимми Богард (Jimmy Bogard). Улучшенный шаблон событий предметной области**
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
--   **Вон Вернон (Vaughn Vernon). Эффективная разработка агрегатов. Часть II: организация совместной работы агрегатов**
+-   **Вон Вернон (Vaughn Vernon). Эффективное агрегатное проектирование. Часть II. Организация совместной работы агрегатов**
     [*http://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf*](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 -   **Джимми Богард (Jimmy Bogard). Усиление предметной области: события предметной области**

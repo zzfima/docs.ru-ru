@@ -3,12 +3,13 @@ title: Команда dotnet msbuild — CLI .NET Core
 description: Команда dotnet msbuild обеспечивает доступ к командной строке MSBuild.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
-ms.openlocfilehash: c51c058391de4925afd4339fe84e28500d692e1a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 05/25/2018
+ms.openlocfilehash: 58aac2a5314758b8711c0b014154022168fb671c
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34696849"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/04/2018
 
 Команда `dotnet msbuild` предоставляет доступ к полнофункциональной системе MSBuild.
 
-Команда имеет точно такие же возможности, как и существующий клиент с интерфейсом командной строки MSBuild. Все параметры одинаковы. Для получения сведений о различных параметрах см. раздел [Справочник по командной строке MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). 
+Команда имеет точно такие же возможности, как и существующий клиент с интерфейсом командной строки MSBuild. Все параметры одинаковы. Дополнительные сведения о доступных параметрах см. в [справочнике по командной строке MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
 
 ## <a name="examples"></a>Примеры
 
