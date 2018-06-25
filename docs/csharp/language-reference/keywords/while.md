@@ -1,40 +1,44 @@
 ---
 title: while (Справочник по C#)
-ms.date: 07/20/2015
+ms.date: 05/28/2018
 f1_keywords:
 - while_CSharpKeyword
 - while
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: 23c5ca3bb7dc401a894a6c3918fbaec9a9306153
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c082107472ac53d05b3b43dd4d9d8afc508a16cb
+ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34565869"
 ---
-# <a name="while-c-reference"></a><span data-ttu-id="f4145-102">while (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="f4145-102">while (C# Reference)</span></span>
-<span data-ttu-id="f4145-103">Оператор `while` выполняет оператор или блок операторов, пока определенное выражение не примет значение `false`.</span><span class="sxs-lookup"><span data-stu-id="f4145-103">The `while` statement executes a statement or a block of statements until a specified expression evaluates to `false`.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="f4145-104">Пример</span><span class="sxs-lookup"><span data-stu-id="f4145-104">Example</span></span>  
- [!code-csharp[csrefKeywordsIteration#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_1.cs)]  
-  
-## <a name="example"></a><span data-ttu-id="f4145-105">Пример</span><span class="sxs-lookup"><span data-stu-id="f4145-105">Example</span></span>  
- [!code-csharp[csrefKeywordsIteration#6](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_2.cs)]  
-  
-## <a name="example"></a><span data-ttu-id="f4145-106">Пример</span><span class="sxs-lookup"><span data-stu-id="f4145-106">Example</span></span>  
- <span data-ttu-id="f4145-107">Значение выражения `while` проверяется перед каждым выполнением цикла, поэтому цикл `while` выполняется ноль или несколько раз.</span><span class="sxs-lookup"><span data-stu-id="f4145-107">Because the test of the `while` expression takes place before each execution of the loop, a `while` loop executes zero or more times.</span></span> <span data-ttu-id="f4145-108">Это отличает его от цикла [do](../../../csharp/language-reference/keywords/do.md), который выполняется от одного до нескольких раз.</span><span class="sxs-lookup"><span data-stu-id="f4145-108">This differs from the [do](../../../csharp/language-reference/keywords/do.md) loop, which executes one or more times.</span></span>  
-  
- <span data-ttu-id="f4145-109">Цикл `while` может быть завершен, если оператор [break](../../../csharp/language-reference/keywords/break.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md) или [throw](../../../csharp/language-reference/keywords/throw.md) передает управление за пределы цикла.</span><span class="sxs-lookup"><span data-stu-id="f4145-109">A `while` loop can be terminated when a [break](../../../csharp/language-reference/keywords/break.md), [goto](../../../csharp/language-reference/keywords/goto.md), [return](../../../csharp/language-reference/keywords/return.md), or [throw](../../../csharp/language-reference/keywords/throw.md) statement transfers control outside the loop.</span></span> <span data-ttu-id="f4145-110">Чтобы передать управление в следующую итерацию без выхода из цикла, используйте оператор [continue](../../../csharp/language-reference/keywords/continue.md).</span><span class="sxs-lookup"><span data-stu-id="f4145-110">To pass control to the next iteration without exiting the loop, use the [continue](../../../csharp/language-reference/keywords/continue.md) statement.</span></span> <span data-ttu-id="f4145-111">Обратите внимание на разницу в результатах трех предыдущих примеров, которые зависят от места увеличения `int n`.</span><span class="sxs-lookup"><span data-stu-id="f4145-111">Notice the difference in output in the three previous examples, depending on where `int n` is incremented.</span></span> <span data-ttu-id="f4145-112">В приведенном ниже примере результат отсутствует.</span><span class="sxs-lookup"><span data-stu-id="f4145-112">In the example below no output is generated.</span></span>  
-  
- [!code-csharp[csrefKeywordsIteration#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/while_3.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="f4145-113">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="f4145-113">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="f4145-114">См. также</span><span class="sxs-lookup"><span data-stu-id="f4145-114">See Also</span></span>  
- [<span data-ttu-id="f4145-115">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="f4145-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="f4145-116">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="f4145-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="f4145-117">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="f4145-117">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="f4145-118">Оператор while (C++)</span><span class="sxs-lookup"><span data-stu-id="f4145-118">while Statement (C++)</span></span>](/cpp/cpp/while-statement-cpp)  
- [<span data-ttu-id="f4145-119">Операторы итерации</span><span class="sxs-lookup"><span data-stu-id="f4145-119">Iteration Statements</span></span>](../../../csharp/language-reference/keywords/iteration-statements.md)
+# <a name="while-c-reference"></a><span data-ttu-id="f79ae-102">while (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="f79ae-102">while (C# Reference)</span></span>
+
+<span data-ttu-id="f79ae-103">Оператор `while` выполняет оператор или блок операторов, пока определенное логическое выражение не примет значение `true`.</span><span class="sxs-lookup"><span data-stu-id="f79ae-103">The `while` statement executes a statement or a block of statements while a specified boolean expression evaluates to `true`.</span></span> <span data-ttu-id="f79ae-104">Так как это выражение оценивается перед каждым выполнением цикла, цикл `while` выполняется ноль или несколько раз.</span><span class="sxs-lookup"><span data-stu-id="f79ae-104">Because that expression is evaluated before each execution of the loop, a `while` loop executes zero or more times.</span></span> <span data-ttu-id="f79ae-105">Это отличает его от цикла [do](do.md), который выполняется от одного до нескольких раз.</span><span class="sxs-lookup"><span data-stu-id="f79ae-105">This differs from the [do](do.md) loop, which executes one or more times.</span></span>
+
+<span data-ttu-id="f79ae-106">В любой точке блока операторов `while` можно разорвать цикл с помощью оператора [break](break.md).</span><span class="sxs-lookup"><span data-stu-id="f79ae-106">At any point within the `while` statement block, you can break out of the loop by using the [break](break.md) statement.</span></span>
+
+<span data-ttu-id="f79ae-107">Можно перейти непосредственно к оценке выражения `while`, воспользовавшись оператором [continue](continue.md).</span><span class="sxs-lookup"><span data-stu-id="f79ae-107">You can step directly to the evaluation of the `while` expression by using the [continue](continue.md) statement.</span></span> <span data-ttu-id="f79ae-108">Если значение выражения оценивается как `true`, выполнение продолжается с первого оператора цикла.</span><span class="sxs-lookup"><span data-stu-id="f79ae-108">If the expression evaluates to `true`, execution continues at the first statement in the loop.</span></span> <span data-ttu-id="f79ae-109">В противном случае выполнение продолжается с первого оператора после цикла.</span><span class="sxs-lookup"><span data-stu-id="f79ae-109">Otherwise, execution continues at the first statement after the loop.</span></span>
+
+<span data-ttu-id="f79ae-110">Также можно выйти из цикла `while` с помощью операторов [goto](goto.md), [return](return.md) или [throw](throw.md).</span><span class="sxs-lookup"><span data-stu-id="f79ae-110">You also can exit a `while` loop by the [goto](goto.md), [return](return.md), or [throw](throw.md) statements.</span></span>
+
+## <a name="example"></a><span data-ttu-id="f79ae-111">Пример</span><span class="sxs-lookup"><span data-stu-id="f79ae-111">Example</span></span>
+
+<span data-ttu-id="f79ae-112">В следующем примере показано применение оператора `while`.</span><span class="sxs-lookup"><span data-stu-id="f79ae-112">The following example shows the usage of the `while` statement.</span></span> <span data-ttu-id="f79ae-113">Нажмите **Запустить** для выполнения примера кода.</span><span class="sxs-lookup"><span data-stu-id="f79ae-113">Select **Run** to run the example code.</span></span> <span data-ttu-id="f79ae-114">После этого можно изменить код и запустить его еще раз.</span><span class="sxs-lookup"><span data-stu-id="f79ae-114">After that you can modify the code and run it again.</span></span>
+
+[!code-csharp-interactive[while loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#3)]
+
+## <a name="c-language-specification"></a><span data-ttu-id="f79ae-115">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="f79ae-115">C# language specification</span></span>
+
+ [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a><span data-ttu-id="f79ae-116">См. также</span><span class="sxs-lookup"><span data-stu-id="f79ae-116">See also</span></span>
+
+ [<span data-ttu-id="f79ae-117">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="f79ae-117">C# Reference</span></span>](../index.md)  
+ [<span data-ttu-id="f79ae-118">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="f79ae-118">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+ [<span data-ttu-id="f79ae-119">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="f79ae-119">C# Keywords</span></span>](index.md)  
+ [<span data-ttu-id="f79ae-120">Оператор while (C++)</span><span class="sxs-lookup"><span data-stu-id="f79ae-120">while Statement (C++)</span></span>](/cpp/cpp/while-statement-cpp)  
+ [<span data-ttu-id="f79ae-121">Операторы итерации</span><span class="sxs-lookup"><span data-stu-id="f79ae-121">Iteration Statements</span></span>](iteration-statements.md)  
+ [<span data-ttu-id="f79ae-122">Оператор do</span><span class="sxs-lookup"><span data-stu-id="f79ae-122">do statement</span></span>](do.md)  
