@@ -4,12 +4,12 @@ description: Этот раздел описывает, как сборку ре�
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
-ms.openlocfilehash: 7423e9aaa861b767c3f3d21c628e17936feacca4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f8dfbb712957d22e5b4aa16920e7b003a79c4444
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33219096"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314702"
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac
 
@@ -26,7 +26,7 @@ Visual Studio для Mac предоставляет полнофункциона
 
 - OpenSSL (при выполнении в .NET Core 1.1). См. статью [Необходимые компоненты для .NET Core в Mac](../macos-prerequisites.md).
 - [Пакет SDK для .NET Core 1.1.или более поздней версии](https://www.microsoft.com/net/core#macos).
-- [Visual Studio 2017 для Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
+- [Visual Studio 2017 для Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)
 
 Дополнительные сведения о необходимых компонентах см. в разделе [Необходимые компоненты для .NET Core на Mac](../../core/macos-prerequisites.md). Полный список требований к Visual Studio 2017 для Mac см. в статье [Требования к системе Visual Studio 2017 для Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
