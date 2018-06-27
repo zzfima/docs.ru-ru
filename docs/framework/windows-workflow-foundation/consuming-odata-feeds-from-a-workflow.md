@@ -119,7 +119,7 @@ ms.locfileid: "33520504"
  **xmlns:m =»http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"**  
  **xmlns =»http://www.w3.org/2005/Atom«>**  
  **\<Тип Title = «text» > заказы \< /title >**  
- **\<Идентификатор >http://services.odata.org/Northwind/Northwind.svc/Customers(«ALFKI») и упорядочивает\</id >**  
+ **\<Идентификатор>http://services.odata.org/Northwind/Northwind.svc/Customers(«ALFKI»)иупорядочивает\</id >**  
  **\<Обновить > 2010-05-19T19:37:07Z\</ обновить >**  
  **\<связать rel = «self» title = «Orders» href = «Orders» / >**  
  **\<запись >**  
