@@ -2,133 +2,144 @@
 title: Справочник по Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: a114bf9b58da255f560564d3fedfee598adb22b2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 79cdf35128ac35920797060b09ff2fc5999708a7
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766739"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028023"
 ---
 # <a name="entity-sql-reference"></a>Справочник по Entity SQL
-В этом разделе представлена справочная документация по [!INCLUDE[esql](../../../../../../includes/esql-md.md)]. В этом разделе операторы [!INCLUDE[esql](../../../../../../includes/esql-md.md)] сведены и сгруппированы по категориям.  
-  
-## <a name="arithmetic-operators"></a>Арифметические операторы  
- Арифметические операторы предназначены для выполнения математических операций над двумя выражениями с одним или несколькими числовыми типами данных. Арифметические операторы [!INCLUDE[esql](../../../../../../includes/esql-md.md)] приведены в следующей таблице.  
-  
-|Оператор|Использовать|  
-|--------------|---------|  
-|[+ (сложение)](../../../../../../docs/framework/data/adonet/ef/language-reference/add.md)|Сложение.|  
-|«/ (Деление)»|Деление.|  
-|[% (Остаток от деления)](../../../../../../docs/framework/data/adonet/ef/language-reference/modulo-entity-sql.md)|Возвращает остаток от отделения.|  
-|[* (умножение)](../../../../../../docs/framework/data/adonet/ef/language-reference/multiply-entity-sql.md)|Умножение.|  
-|[- (отрицательное)](../../../../../../docs/framework/data/adonet/ef/language-reference/negative-entity-sql.md)|Отрицание.|  
-|[- (вычитание)](../../../../../../docs/framework/data/adonet/ef/language-reference/subtract-entity-sql.md)|Вычитание.|  
-  
-## <a name="canonical-functions"></a>Канонические функции  
- Канонические функции поддерживаются всеми поставщиками данных и могут использоваться всеми технологиями запросов. В следующей таблице приведены канонические функции.  
-  
-|Функция|Тип|  
-|--------------|----------|  
-|[Сущности, статистические канонические функции языка SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)|Обсуждаются статистические канонические функции языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
-|[Математические канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/math-canonical-functions.md)|Обсуждаются математические канонические функции языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
-|[Строковые канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)|Обсуждаются строковые канонические функции языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
-|[Канонические функции даты и времени](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)|Обсуждаются канонические функции даты и времени в языке [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
-|[Битовые канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)|Обсуждаются побитовые канонические функции языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
-|[Прочие канонические функции](../../../../../../docs/framework/data/adonet/ef/language-reference/other-canonical-functions.md)|Обсуждаются функции, которые не являются побитовыми, строковыми, математическими, статистическими или функциями даты-времени.|  
-  
-## <a name="comparison-operators"></a>Операторы сравнения  
- Операторы сравнения определены для следующих типов: `Byte`, `Int16`, `Int32`, `Int64`, `Double`, `Single`, `Decimal`, `String`, `DateTime`, `Date`, `Time`, `DateTimeOffset`. Неявное повышение типов операндов происходит до применения оператора сравнения. Результатом действия операторов сравнения всегда являются логические значения. Если один из операндов принимает значение `null`, результат также принимает значение `null`.  
-  
- Равенство и неравенство определяются для всех типов объектов, имеющих свойство идентификатора, например для типа `Boolean`. Объекты, которые не относятся к типам-примитивам, но обладают свойством идентификатора, считаются равными, если имеют одинаковое значение свойства идентификатора. Операторы сравнения [!INCLUDE[esql](../../../../../../includes/esql-md.md)] приведены в следующей таблице.  
-  
-|Оператор|Описание|  
-|--------------|-----------------|  
-|[= (равно)](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|Проверяет равенство двух выражений.|  
-|[> (больше)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|Сравнивает два выражения и определяет, имеет ли левое выражение значение больше значения правого выражения.|  
-|[>= (больше или равно)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|Сравнивает два выражения и определяет, имеет ли левое выражение значение, большее или равное значению правого выражения.|  
-|[— &AMP;#91;НЕ&AMP;#93; ЗНАЧЕНИЕ NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Определяет, имеет ли выражение запроса значение null.|  
-|[< (меньше)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|Сравнивает два выражения, чтобы определить, является ли значение левого выражения меньшим, чем значение правого выражения.|  
-|[<= (меньше или равно)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|Сравнивает два выражения и определяет, имеет ли левое выражение значение, меньшее или равное значению правого выражения.|  
-|[&AMP;#91;НЕ&AMP;#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Определяет, находится ли значение выражения в указанном диапазоне.|  
-|[!= (не равно)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Сравнивает два выражения, чтобы определить, является ли значение левого выражения не равным значению правого выражения.|  
-|[&AMP;#91;НЕ&AMP;#93; КАК](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Определяет, совпадает ли указанная символьная строка с заданным шаблоном.|  
-  
-## <a name="logical-and-case-expression-operators"></a>Логические операторы, операторы с выражением CASE  
- Логические операторы проверяют истинность некоторого условия. Выражение CASE для определения результата вычисляет набор логических выражений. Логические операторы и операторы с выражением CASE приведены в следующей таблице.  
-  
-|Оператор|Описание|  
-|--------------|-----------------|  
-|[& & (Логическое и)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|Логическое И.|  
-|[! (Логическое НЕ)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|Логическое НЕ.|  
-|[&#124;&#124;(Логическое или)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|Логическое ИЛИ.|  
-|[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|Вычисляет набор логических выражений для определения результата.|  
-|[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|Результат [при](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) предложения, если значение равно true.|  
-  
-## <a name="query-operators"></a>Операторы запроса  
- С помощью операторов запросов определяются выражения запроса, возвращающие данные сущности. Операторы запросов приведены в следующей таблице.  
-  
-|Оператор|Использовать|  
-|--------------|---------|  
-|[FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)|Указывает коллекцию, которая используется в [ВЫБЕРИТЕ](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) инструкции.|  
-|[GROUP BY](../../../../../../docs/framework/data/adonet/ef/language-reference/group-by-entity-sql.md)|Определяет группы, в которой объекты, возвращаемые выражением запроса ([ВЫБЕРИТЕ](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)) должны быть помещены выражения.|  
-|[GroupPartition](../../../../../../docs/framework/data/adonet/ef/language-reference/grouppartition-entity-sql.md)|Возвращает коллекцию значений аргумента, проекция которых получена из раздела группы, с которой связано статистическое выражение.|  
-|[HAVING](../../../../../../docs/framework/data/adonet/ef/language-reference/having-entity-sql.md)|Задает условие поиска для группы или статистического выражения.|  
-|[LIMIT](../../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)|При использовании [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) предложения выполнено физическое разбиение на страницы.|  
-|[ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md)|Указывает порядок сортировки, используемый для объектов, возвращаемых в [ВЫБЕРИТЕ](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) инструкции.|  
-|[SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)|Указывает элементы в проекции, возвращаемые запросом.|  
-|[SKIP](../../../../../../docs/framework/data/adonet/ef/language-reference/skip-entity-sql.md)|При использовании [ORDER BY](../../../../../../docs/framework/data/adonet/ef/language-reference/order-by-entity-sql.md) предложения выполнено физическое разбиение на страницы.|  
-|[TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)|Указывает на то, что будет возвращен только первый набор строк из результата запроса.|  
-|[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|Выполняет условную фильтрацию данных, возвращаемых запросом.|  
-  
-## <a name="reference-operators"></a>Ссылочные операторы  
- Ссылка — это логический указатель (внешний ключ) на отдельную сущность в определенном наборе сущностей. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] поддерживает следующие операторы для конструирования, деконструирования и перехода по ссылкам.  
-  
-|Оператор|Использовать|  
-|--------------|---------|  
-|[CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)|Создает ссылки на сущность в наборе сущностей.|  
-|[DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)|Разыменовывает значение ссылки и выдает результат разыменования.|  
-|[KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)|Извлекает ключ ссылки или выражение сущности.|  
-|[NAVIGATE](../../../../../../docs/framework/data/adonet/ef/language-reference/navigate-entity-sql.md)|Позволяет переходить по связям от одного типа сущности к другому.|  
-|[REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)|Возвращает ссылку на экземпляр сущности.|  
-  
-## <a name="set-operators"></a>Операторы набора  
- Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] предоставляет целый ряд мощных операторов работы с наборами. Сюда входят операторы работы с наборами аналогично операторов Transact-SQL, таких как UNION, INTERSECT, EXCEPT и EXISTS. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] также поддерживает операторы для исключения повторяющихся значений (SET), проверки членства (IN) и соединения (JOIN). Операторы [!INCLUDE[esql](../../../../../../includes/esql-md.md)] работы с множествами приведены в следующей таблице.  
-  
-|Оператор|Использовать|  
-|--------------|---------|  
-|[ANYELEMENT](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|Извлекает элемент из многозначной коллекции.|  
-|[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|Возвращает коллекцию различных значений из выражения запроса, расположенного левее операнда EXCEPT, за исключением тех, которые были возвращены выражением запроса, расположенного правее операнда EXCEPT.|  
-|[&AMP;#91;НЕ&AMP;#93; EXISTS](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|Определяет, является ли коллекция пустой.|  
-|[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|Преобразовывает коллекцию коллекций в плоскую коллекцию.|  
-|[&AMP;#91;НЕ&AMP;#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Определяет, совпадает ли значение с каким-либо значением в коллекции.|  
-|[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|Возвращает коллекцию различных значений, возвращаемых выражениями запроса, указанных как слева, так и справа от операнда INTERSECT.|  
-|[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|Определяет, содержат ли две коллекции общие элементы.|  
-|[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|Используется для преобразования коллекции объектов во множество путем получения новой коллекции, в которой удалены все повторяющиеся элементы.|  
-|[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|Сводит результаты двух или более запросов в одну коллекцию.|  
-  
-## <a name="type-operators"></a>Операторы работы с типами  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Предусмотрены операции, позволяющие тип выражения (значение) для создания, запрашивать и обрабатывать. В следующей таблице перечислены операторы, предназначенные для работы с типами.  
-  
-|Оператор|Использовать|  
-|--------------|---------|  
-|[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|Преобразует выражение одного типа данных в другой.|  
-|[COLLECTION](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|Используется в [ФУНКЦИЯ](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) для объявления коллекции типов сущности или сложных типов.|  
-|[— &AMP;#91;НЕ&AMP;#93; OF](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|Определяет, относится ли тип выражения к указанному типу или одному из его подтипов.|  
-|[OFTYPE](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|Возвращает коллекцию объектов из выражения запроса, которое относится к заданному типу.|  
-|[Конструктор именованных типов](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|Используется для создания экземпляров типов сущности или сложных типов.|  
-|[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|Создает экземпляр мультинабора из списка значений.|  
-|[ROW](../../../../../../docs/framework/data/adonet/ef/language-reference/row-entity-sql.md)|Создает анонимные структурно типизированные записи из одного или нескольких значений.|  
-|[TREAT](../../../../../../docs/framework/data/adonet/ef/language-reference/treat-entity-sql.md)|Обрабатывает объект некоторого базового типа, как объект указанного производного типа.|  
-  
-## <a name="other-operators"></a>Другие операторы  
- В следующей таблице перечислены другие [!INCLUDE[esql](../../../../../../includes/esql-md.md)] операторы.  
-  
-|Оператор|Использовать|  
-|--------------|---------|  
-|[+ (объединение строк)](../../../../../../docs/framework/data/adonet/ef/language-reference/string-concatenation-entity-sql.md)|Используется для объединения строк в [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
-|[. (Доступ к членам)](../../../../../../docs/framework/data/adonet/ef/language-reference/member-access-entity-sql.md)|Используется для доступа к значению свойства или полю экземпляра структурного типа концептуальной модели.|  
-|[-- (комментарий)](../../../../../../docs/framework/data/adonet/ef/language-reference/comment-entity-sql.md)|Включить комментарии [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
-|[FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)|Определяет встраиваемую функцию, которая может выполняться в запросе Entity SQL.|  
-  
-## <a name="see-also"></a>См. также  
- [Язык Entity SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)
+
+Этот раздел содержит справочные статьи по Entity SQL. В этой статье приведена сводка и группирует Entity SQL операторы по категориям.
+
+## <a name="arithmetic-operators"></a>Арифметические операторы
+
+Арифметические операторы предназначены для выполнения математических операций над двумя выражениями с одним или несколькими числовыми типами данных. В следующей таблице перечислены Entity SQL арифметические операторы:
+
+|Оператор|Использовать|
+|--------------|---------|
+|[+ (сложение)](add.md)|Сложение.|
+|[/ (деление)](divide-entity-sql.md)|Деление.|
+|[% (Остаток от деления)](modulo-entity-sql.md)|Возвращает остаток от отделения.|
+|[* (умножение)](multiply-entity-sql.md)|Умножение.|
+|[- (отрицательное)](negative-entity-sql.md)|Отрицание.|
+|[- (вычитание)](subtract-entity-sql.md)|Вычитание.|
+
+## <a name="canonical-functions"></a>Канонические функции
+
+Канонические функции поддерживаются всеми поставщиками данных и могут использоваться всеми технологиями запросов. В следующей таблице перечислены канонические функции:
+
+|Функция|Тип|
+|--------------|----------|
+|[Сущности, статистические канонические функции языка SQL](aggregate-canonical-functions.md)|Обсуждаются статистические канонические функции Entity SQL.|
+|[Математические канонические функции](math-canonical-functions.md)|Обсуждаются математические канонические функции Entity SQL.|
+|[Строковые канонические функции](string-canonical-functions.md)|Обсуждаются строковые канонические функции Entity SQL.|
+|[Канонические функции даты и времени](date-and-time-canonical-functions.md)|Обсуждаются канонические функции Entity SQL даты и времени.|
+|[Битовые канонические функции](bitwise-canonical-functions.md)|Обсуждаются побитовые канонические функции Entity SQL.|
+|[Прочие канонические функции](other-canonical-functions.md)|Обсуждаются функции, которые не являются побитовыми, строковыми, математическими, статистическими или функциями даты-времени.|
+
+## <a name="comparison-operators"></a>Операторы сравнения
+
+Операторы сравнения определены для следующих типов: `Byte`, `Int16`, `Int32`, `Int64`, `Double`, `Single`, `Decimal`, `String`, `DateTime`, `Date`, `Time`, `DateTimeOffset`. Неявное повышение типов операндов происходит до применения оператора сравнения. Результатом действия операторов сравнения всегда являются логические значения. Если один из операндов принимает значение `null`, результат также принимает значение `null`.
+
+Равенство и неравенство определяются для всех типов объектов, имеющих свойство идентификатора, например для типа `Boolean`. Объекты, которые не относятся к типам-примитивам, но обладают свойством идентификатора, считаются равными, если имеют одинаковое значение свойства идентификатора. В следующей таблице перечислены операторы сравнения Entity SQL:
+
+|Оператор|Описание:|
+|--------------|-----------------|
+|[= (равно)](equals-entity-sql.md)|Проверяет равенство двух выражений.|
+|[> (больше)](greater-than-entity-sql.md)|Сравнивает два выражения и определяет, имеет ли левое выражение значение больше значения правого выражения.|
+|[>= (больше или равно)](greater-than-or-equal-to-entity-sql.md)|Сравнивает два выражения и определяет, имеет ли левое выражение значение, большее или равное значению правого выражения.|
+|[— &AMP;#91;НЕ&AMP;#93; ЗНАЧЕНИЕ NULL](isnull-entity-sql.md)|Определяет, имеет ли выражение запроса значение null.|
+|[< (меньше)](less-than-entity-sql.md)|Сравнивает два выражения, чтобы определить, является ли значение левого выражения меньшим, чем значение правого выражения.|
+|[<= (меньше или равно)](less-than-or-equal-to-entity-sql.md)|Сравнивает два выражения и определяет, имеет ли левое выражение значение, меньшее или равное значению правого выражения.|
+|[&AMP;#91;НЕ&AMP;#93; BETWEEN](between-entity-sql.md)|Определяет, находится ли значение выражения в указанном диапазоне.|
+|[!= (не равно)](not-equal-to-entity-sql.md)|Сравнивает два выражения и определяет, является ли значение левого выражения не равно значению правого выражения.|
+|[&AMP;#91;НЕ&AMP;#93; КАК](like-entity-sql.md)|Определяет, совпадает ли указанная символьная строка с заданным шаблоном.|
+
+## <a name="logical-and-case-expression-operators"></a>Операторы выражений логического и case
+
+Логические операторы проверяют истинность некоторого условия. Выражение CASE для определения результата вычисляет набор логических выражений. В следующей таблице перечислены операторы ВАРИАНТОВ и логических выражений:
+
+|Оператор|Описание:|
+|--------------|-----------------|
+|[& & (Логическое и)](and-entity-sql.md)|Логическое И.|
+|[! (Логическое НЕ)](not-entity-sql.md)|Логическое НЕ.|
+|[&#124;&#124;(Логическое или)](or-entity-sql.md)|Логическое ИЛИ.|
+|[CASE](case-entity-sql.md)|Вычисляет набор логических выражений для определения результата.|
+|[THEN](then-entity-sql.md)|Результат [при](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) предложения, если значение равно true.|
+
+## <a name="query-operators"></a>Операторы запроса
+
+С помощью операторов запросов определяются выражения запроса, возвращающие данные сущности. В следующей таблице перечислены операторы запросов:
+
+|Оператор|Использовать|
+|--------------|---------|
+|[FROM](from-entity-sql.md)|Указывает коллекцию, которая используется в [ВЫБЕРИТЕ](select-entity-sql.md) инструкции.|
+|[GROUP BY](group-by-entity-sql.md)|Определяет группы, в которой объекты, возвращаемые выражением запроса ([ВЫБЕРИТЕ](select-entity-sql.md)) должны быть помещены выражения.|
+|[GroupPartition](grouppartition-entity-sql.md)|Возвращает коллекцию значений аргумента, проекция которых получена из раздела группы, с которой связано статистическое выражение.|
+|[HAVING](having-entity-sql.md)|Задает условие поиска для группы или статистического выражения.|
+|[LIMIT](limit-entity-sql.md)|При использовании [ORDER BY](order-by-entity-sql.md) предложения выполнено физическое разбиение на страницы.|
+|[ORDER BY](order-by-entity-sql.md)|Указывает порядок сортировки, используемый для объектов, возвращаемых в [ВЫБЕРИТЕ](select-entity-sql.md) инструкции.|
+|[SELECT](select-entity-sql.md)|Указывает элементы в проекции, возвращаемые запросом.|
+|[SKIP](skip-entity-sql.md)|При использовании [ORDER BY](order-by-entity-sql.md) предложения выполнено физическое разбиение на страницы.|
+|[TOP](top-entity-sql.md)|Указывает на то, что будет возвращен только первый набор строк из результата запроса.|
+|[WHERE](where-entity-sql.md)|Выполняет условную фильтрацию данных, возвращаемых запросом.|
+
+## <a name="reference-operators"></a>Операторы ссылки
+
+Ссылка — это логический указатель (внешний ключ) на отдельную сущность в определенном наборе сущностей. Язык Entity SQL поддерживает следующие операторы для конструирования, деконструирования и перехода по ссылкам:
+
+|Оператор|Использовать|
+|--------------|---------|
+|[CREATEREF](createref-entity-sql.md)|Создает ссылки на сущность в наборе сущностей.|
+|[DEREF](deref-entity-sql.md)|Разыменовывает значение ссылки и выдает результат разыменования.|
+|[KEY](key-entity-sql.md)|Извлекает ключ ссылки или выражение сущности.|
+|[NAVIGATE](navigate-entity-sql.md)|Позволяет переходить по связям от одного типа сущности к другому.|
+|[REF](ref-entity-sql.md)|Возвращает ссылку на экземпляр сущности.|
+
+## <a name="set-operators"></a>Операторы набора
+
+Язык Entity SQL предоставляет мощный набор операций. Сюда входят операторы работы с наборами аналогично операторов Transact-SQL, таких как UNION, INTERSECT, EXCEPT и EXISTS. Язык Entity SQL поддерживает также операторы исключение повторяющихся значений (SET), проверки членства (IN) и соединения (JOIN). В следующей таблице перечислены операторы наборов Entity SQL:
+
+|Оператор|Использовать|
+|--------------|---------|
+|[ANYELEMENT](anyelement-entity-sql.md)|Извлекает элемент из многозначной коллекции.|
+|[EXCEPT](except-entity-sql.md)|Возвращает коллекцию различных значений из выражения запроса слева от оператора EXCEPT, не возвращены выражением запроса правее операнда EXCEPT.|
+|[&AMP;#91;НЕ&AMP;#93; EXISTS](exists-entity-sql.md)|Определяет, является ли коллекция пустой.|
+|[FLATTEN](flatten-entity-sql.md)|Преобразовывает коллекцию коллекций в плоскую коллекцию.|
+|[&AMP;#91;НЕ&AMP;#93; IN](in-entity-sql.md)|Определяет, совпадает ли значение с каким-либо значением в коллекции.|
+|[INTERSECT](intersect-entity-sql.md)|Возвращает коллекцию различных значений, возвращаемых выражениями запроса, указанных как слева, так и справа от операнда INTERSECT.|
+|[OVERLAPS](overlaps-entity-sql.md)|Определяет, содержат ли две коллекции общие элементы.|
+|[SET](set-entity-sql.md)|Используется для преобразования коллекции объектов во множество путем получения новой коллекции, в которой удалены все повторяющиеся элементы.|
+|[UNION](union-entity-sql.md)|Сводит результаты двух или более запросов в одну коллекцию.|
+
+## <a name="type-operators"></a>Операторы работы с типами
+
+Язык Entity SQL предусмотрены операции, позволяющие тип выражения (значение) для создания, запрашивать и обрабатывать. В следующей таблице перечислены операторы, которые используются для работы с типами:
+
+|Оператор|Использовать|
+|--------------|---------|
+|[CAST](cast-entity-sql.md)|Преобразует выражение одного типа данных в другой.|
+|[COLLECTION](collection-entity-sql.md)|Используется в [ФУНКЦИЯ](function-entity-sql.md) для объявления коллекции типов сущности или сложных типов.|
+|[— &AMP;#91;НЕ&AMP;#93; OF](isof-entity-sql.md)|Определяет, относится ли тип выражения к указанному типу или одному из его подтипов.|
+|[OFTYPE](oftype-entity-sql.md)|Возвращает коллекцию объектов из выражения запроса, которое относится к заданному типу.|
+|[Конструктор именованных типов](named-type-constructor-entity-sql.md)|Используется для создания экземпляров типов сущности или сложных типов.|
+|[MULTISET](multiset-entity-sql.md)|Создает экземпляр мультинабора из списка значений.|
+|[ROW](row-entity-sql.md)|Создает анонимные структурно типизированные записи из одного или нескольких значений.|
+|[TREAT](treat-entity-sql.md)|Обрабатывает объект некоторого базового типа, как объект указанного производного типа.|
+
+## <a name="other-operators"></a>Другие операторы
+
+В следующей таблице перечислены другие операторы Entity SQL:
+
+|Оператор|Использовать|
+|--------------|---------|
+|[+ (объединение строк)](string-concatenation-entity-sql.md)|Используется для объединения строк в Entity SQL.|
+|[. (Доступ к членам)](member-access-entity-sql.md)|Используется для доступа к значению свойства или полю экземпляра структурного типа концептуальной модели.|
+|[-- (комментарий)](comment-entity-sql.md)|Включить комментарии Entity SQL.|
+|[FUNCTION](function-entity-sql.md)|Определяет встраиваемую функцию, которая может выполняться в запросе Entity SQL.|
+
+## <a name="see-also"></a>См. также
+
+[Язык Entity SQL](entity-sql-language.md)
