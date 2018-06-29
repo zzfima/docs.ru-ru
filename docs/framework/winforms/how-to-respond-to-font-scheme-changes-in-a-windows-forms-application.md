@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 455609ea602f450803718f5be34618b087560d21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2451885c673515eb6690b0784fd5bd22de629209
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539456"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071150"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Практическое руководство. Реагирование на изменения схемы шрифтов в приложениях Windows Forms
 В операционных системах Windows пользователь может изменить параметры шрифта во всей системе, чтобы проверить шрифт по умолчанию отображаются, больше или меньше. Изменение этих параметров шрифтов особенно важно для пользователей с нарушениями зрения и требуется больший тип для чтения текста на экране компьютера. Можно настроить приложение Windows Forms реагировать на изменения путем увеличения или уменьшения размера формы и все содержащиеся в нем текста при каждом изменении шрифтовой схемы. Если вы хотите формы в соответствии с изменением размеров шрифта динамически, можно добавить код в форму.  
@@ -40,13 +40,13 @@ ms.locfileid: "33539456"
   
 5.  Наконец, Реализуйте обработчик <xref:System.Windows.Forms.Form.FormClosing> событие, отсоединяет <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> обработчика событий.  
   
-> [!IMPORTANT]
->  Если не добавить этот код вызовет утечка памяти.  
+     > [!IMPORTANT]
+     > Если не добавить этот код вызовет утечка памяти.  
   
- [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
- [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
+     [!code-csharp[WinFormsAutoScaling#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#5)]
+     [!code-vb[WinFormsAutoScaling#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#5)]  
   
-1.  Скомпилируйте и запустите код.  
+6.  Скомпилируйте и запустите код.  
   
 ### <a name="to-manually-change-the-font-scheme-in-windows-xp"></a>Чтобы вручную изменить схему шрифта в Windows XP  
   
@@ -56,7 +56,7 @@ ms.locfileid: "33539456"
   
 3.  Из **размер шрифта** раскрывающемся списке выберите новый размер шрифта.  
   
-     Обратите внимание, что форма теперь реагирует для запуска время изменения схемы шрифтов рабочего стола. Когда пользователь изменяет между **обычный**, **крупный шрифт**, и **Огромный шрифт**, форма изменяет шрифт и корректно масштабируется.  
+     Вы заметите, что форма теперь реагирует на изменения схемы шрифтов рабочего стола во время выполнения. Когда пользователь изменяет между **обычный**, **крупный шрифт**, и **Огромный шрифт**, форма изменяет шрифт и корректно масштабируется.  
   
 ## <a name="example"></a>Пример  
  [!code-csharp[WinFormsAutoScaling#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]

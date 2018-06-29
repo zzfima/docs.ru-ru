@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 31c9ce2774d6c6182403885a4438c4aa6bf143ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 927158f940d9b96cd06873c7d3e710be91b887e9
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604189"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071623"
 ---
 # <a name="xml-value-property-visual-basic"></a>Свойство значения XML (Visual Basic)
 Предоставляет доступ к значению первого элемента из коллекции <xref:System.Xml.Linq.XElement> объектов.  
@@ -38,7 +38,7 @@ object.Value
  <xref:System.Xml.Linq.XElement.Value%2A> Свойство позволяет легко обращаться к значению первого элемента в коллекции <xref:System.Xml.Linq.XElement> объектов. Это свойство сначала проверяет, содержит ли коллекция хотя бы один объект. Если коллекция пуста, это свойство возвращает `Nothing`. В противном случае это свойство возвращает значение <xref:System.Xml.Linq.XElement.Value%2A> свойства первого элемента в коллекции.  
   
 > [!NOTE]
->  При доступе к значение атрибута XML с помощью "@", значение атрибута возвращается идентификатор как `String` и вам не нужно явно указать <xref:System.Xml.Linq.XAttribute.Value%2A> свойство.  
+>  При доступе к значение атрибута XML с помощью "\@" идентификатор, значение атрибута возвращается в виде `String` и вам не нужно явно указать <xref:System.Xml.Linq.XAttribute.Value%2A> свойство.  
   
  Чтобы получить доступ к другим элементам в коллекции, можно использовать свойство-индексатор расширения XML. Дополнительные сведения см. в разделе [свойство-индексатор расширения](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
   

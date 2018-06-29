@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a826121a7f22d1db7287171c5add28e5fcd690cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88092c22e763e427203350065ff62b7c5e040b97
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398031"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37073220"
 ---
 # <a name="lazy-initialization"></a>Отложенная инициализация
 *Отложенная инициализация* объекта означает, что его создание откладывается до первого использования. (В этом разделе термины *отложенная инициализация* и *отложенное создание экземпляра* являются синонимами.) Отложенная инициализация в основном используется, чтобы повысить быстродействие, избежать ресурсоемких вычислений и уменьшить требования к памяти программы. Ниже приведены наиболее распространенные сценарии.  
@@ -27,7 +27,7 @@ ms.locfileid: "33398031"
   
  В таблице ниже приведены типы, предоставляемые в .NET Framework версии 4 для поддержки отложенной инициализации в различных сценариях.  
   
-|Тип|Описание|  
+|Тип|Описание:|  
 |----------|-----------------|  
 |<xref:System.Lazy%601>|Класс-оболочка, предоставляющий семантику отложенной инициализации для любого типа из библиотеки классов или пользовательского типа.|  
 |<xref:System.Threading.ThreadLocal%601>|Похож на тип <xref:System.Lazy%601> за исключением того, что предоставляет семантику отложенной инициализации на основе локального потока. У каждого потока есть доступ к собственному уникальному значению.|  
@@ -140,7 +140,7 @@ ms.locfileid: "33398031"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Локальные по отношению к потоку переменные в методах Parallel.For и ForEach  
- При использовании метода <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> или метода <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> для параллельной итерации источников данных можно применить перегруженные версии со встроенной поддержкой локальных по отношению к потоку данных. В этих методах локальность по отношению к потоку достигается с помощью локальных делегатов, используемых для создания данных, доступа к ним и их очистки. Дополнительные сведения см. в разделах [Практическое руководство. Написание цикла Parallel.For и локальными переменными потока](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) и [Практическое руководство. Написание цикла Parallel.ForEach и локальными переменными потока](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md).  
+ При использовании метода <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> или метода <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> для параллельной итерации источников данных можно применить перегруженные версии со встроенной поддержкой локальных по отношению к потоку данных. В этих методах локальность по отношению к потоку достигается с помощью локальных делегатов, используемых для создания данных, доступа к ним и их очистки. Дополнительные сведения см. в разделе [как: написание цикла Parallel.For локальными переменными потока](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md) и [как: написание цикла Parallel.ForEach секции и локальными переменными](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md).  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>Использование отложенной инициализации для сценариев с низкими издержками  
  Если необходимо использовать отложенную инициализацию для большого числа объектов, может оказаться, что заключение каждого объекта в оболочку <xref:System.Lazy%601> требует слишком много памяти или вычислительных ресурсов. Либо могут предъявляться строгие требования к предоставлению отложенной инициализации. В таких случаях можно использовать методы `static` (`Shared` в Visual Basic) класса <xref:System.Threading.LazyInitializer?displayProperty=nameWithType>, чтобы выполнить отложенную инициализацию каждого объекта, не заключая его в экземпляр <xref:System.Lazy%601>.  

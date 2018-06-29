@@ -11,12 +11,12 @@ ms.assetid: 37a548d8-fade-4ac5-82ec-b49b6c6cb22a
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: b5ae716994f9b8222a633699367c94480179c97b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8d2e224f710a1f344623440f29c2c6e0e9bd661e
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744451"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072518"
 ---
 # <a name="ltproxygt-element-network-settings"></a>&lt;прокси-сервер&gt; элемент (параметры сети)
 Определяет прокси-сервер.  
@@ -46,7 +46,7 @@ ms.locfileid: "32744451"
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
 |`autoDetect`|Указывает, обнаруживается ли прокси-сервер автоматически. Значение по умолчанию — `unspecified`.|  
-|`bypassonlocal`|Указывает, пропускает ли прокси-сервер для локальных ресурсов. Локальные ресурсы включают локальный сервер (http://localhost, http://loopback, или http://127.0.0.1) и URI без точки (http://webserver). Значение по умолчанию — `unspecified`.|  
+|`bypassonlocal`|Указывает, пропускает ли прокси-сервер для локальных ресурсов. Локальные ресурсы включают локальный сервер (`http://localhost`, `http://loopback`, или `http://127.0.0.1`) и URI без точки (`http://webserver`). Значение по умолчанию — `unspecified`.|  
 |`proxyaddress`|Указывает URI, который используется прокси-сервер.|  
 |`scriptLocation`|Указывает расположение скрипта конфигурации.|  
 |`usesystemdefault`|Указывает, следует ли использовать параметры прокси-сервера обозревателя Internet Explorer. Если значение `true`, следующие атрибуты переопределят параметры прокси Internet Explorer. Значение по умолчанию — `unspecified`.|  

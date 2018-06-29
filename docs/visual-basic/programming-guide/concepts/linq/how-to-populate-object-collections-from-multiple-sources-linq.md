@@ -2,12 +2,12 @@
 title: 'Как: заполнение коллекций объектов из нескольких источников (LINQ) (Visual Basic)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 097a41614b4e7fb48c3ef3903faec8ed9ee3d5b6
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 6560f853874f9b9a9aeb53bd0678540004fdfcc1
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948453"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070867"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>Как: заполнение коллекций объектов из нескольких источников (LINQ) (Visual Basic)
 
@@ -25,7 +25,6 @@ ms.locfileid: "36948453"
 Следующий пример демонстрирует использование именованного типа `Student` для хранения объединенных данных из двух коллекций строк в памяти, которые имитируют данные электронной таблицы в формате CSV. Первая коллекция строк представляет имена и идентификаторы учащихся, а вторая коллекция — идентификатор учащегося (в первом столбце) и результаты четырех экзаменов. Идентификатор используется в качестве внешнего ключа.
 
 ```vb
-Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 
@@ -133,7 +132,8 @@ Next
 
 Создание и компиляция проекте, ориентированном на один из следующих вариантов:
 
-- Платформа .NET framework версии 3.5 или более поздней версии с ссылку на библиотеку System.Core.dll.
+- .NET framework версии 3.5 и ссылки на библиотеку System.Core.dll.
+- .NET framework 4.0 или более поздней версии.
 - .NET core версии 1.0 или более поздней версии.
 
 ## <a name="see-also"></a>См. также

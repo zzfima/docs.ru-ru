@@ -2,12 +2,12 @@
 title: Создание кода SQL для изменения данных
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: b7bb390fd4e221c70d5ed8da5873c557fcde3c98
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766664"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071956"
 ---
 # <a name="modification-sql-generation"></a>Создание кода SQL для изменения данных
 В этом разделе приведено описание разработки модуля создания кода SQL для изменения данных для конкретного поставщика (базы данных, совместимой с SQL:1999). Этот модуль обеспечивает преобразование дерева команд изменения в соответствующие инструкции INSERT, UPDATE или DELETE языка SQL.  
@@ -104,7 +104,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Создание команд INSERT языка SQL  
  Для каждого конкретного объекта DbInsertCommandTree из образца поставщика созданная команда INSERT соответствует одному из двух приведенных далее шаблонов INSERT.  
   
- Первый шаблон имеет команду для выполнения оператора INSERT с учетом значений из списка SetClauses и инструкции SELECT для возврата свойств, указанных в свойстве Returning для вставленной строки, если свойство Returning не имело значение null. Элемент предиката «@@ROWCOUNT > 0» имеет значение true, если строка была вставлена. Элемент предиката «keyMemberI = keyValueI &#124; scope_identity()» принимает форму «keyMemberI = scope_identity()» только если keyMemeberI представляет ключ, поскольку функция scope_identity() возвращает последнее значение идентификатора, вставленное в (удостоверение) столбец, созданных хранилищем).  
+ Первый шаблон имеет команду для выполнения оператора INSERT с учетом значений из списка SetClauses и инструкции SELECT для возврата свойств, указанных в свойстве Returning для вставленной строки, если свойство Returning не имело значение null. Элемент предиката «\@ @ROWCOUNT > 0» имеет значение true, если строка была вставлена. Элемент предиката «keyMemberI = keyValueI &#124; scope_identity()» принимает форму «keyMemberI = scope_identity()» только если keyMemeberI представляет ключ, поскольку функция scope_identity() возвращает последнее значение идентификатора, вставленное в (удостоверение) столбец, созданных хранилищем).  
   
 ```  
 -- first insert Template  
