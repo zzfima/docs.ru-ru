@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: 3a505e10b2a37032a7ccfefdf4a6f4bb64d65486
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c7016fa8b731170a63f5d0f9d9bed3b72090be4
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579552"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106383"
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Оркестрация микрослужбами и multicontainer приложений высокий уровень масштабируемости и доступности
 
@@ -37,7 +37,7 @@ ms.locfileid: "33579552"
 
 Таблица 4-1: платформы программное обеспечение для кластеризации контейнера, управление и планирование
 
-| Platform | Описание |
+| Platform | Описание: |
 |---|---|
 | Docker Swarm<br/> ![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image7.png) | Docker группу мелких объектов дает возможность кластера и запланировать контейнеры Docker. С помощью Swarm можно превратить пул узлов Docker в единый виртуальный узел Docker. Клиенты могут выполнять запросы API для группу мелких объектов, таким же образом, как и на узлах, это означает, что группу мелких объектов позволяет масштабировать приложения с несколькими узлами. <br /><br /> Решение Docker Swarm предоставляется компанией Docker. <br /><br /> В Docker 1.12 или более поздней версии имеется встроенный режим Swarm. |
 | Mesosphere DC/OS<br/>![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image8.png) |  Mesosphere Enterprise DC/OS (на основе Apache Mesos) — это готовая к использованию в рабочей среде платформа для выполнения контейнеров и распределенных приложений. <br /><br /> DC/OS абстрагирует коллекцию ресурсов, доступных в кластере, и предоставляет доступ к ним компонентам, построенным на базе платформы. В качестве планировщика, интегрированного с DC/OS, обычно используется Marathon. |
@@ -181,4 +181,5 @@ Service Fabric предоставляет два масштабных решен
 
 
 >[!div class="step-by-step"]
-[Предыдущие] (soa-applications.md) [Далее] (docker приложения development-environment.md)
+[Назад](soa-applications.md)
+[Вперед](docker-apps-development-environment.md)

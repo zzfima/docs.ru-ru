@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3877767117d8292644782fc07df6667931688be2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 368d99e92f80cf37965139cb67fc5f22b44f40cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575548"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106139"
 ---
 # <a name="monitor-containerized-application-services"></a>Монитор контейнерных приложений служб
 
@@ -97,4 +97,5 @@ Operations Management Suite, реализованные в виде облачн
 **Дополнительные сведения о** для поиска сведений об установке и настройке Docker решение контейнера в [Operations Management Suite](http://microsoft.com/oms), перейдите в меню <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
-[Предыдущие] (Управление производственного docker-environments.md) [Далее] (.. /Key-takeaways/index.MD)
+[Назад](manage-production-docker-environments.md)
+[Вперед](../key-takeaways/index.md)

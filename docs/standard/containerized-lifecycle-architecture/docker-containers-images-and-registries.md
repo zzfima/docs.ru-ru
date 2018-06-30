@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 43b76f738fa4b7c89423a5b9fac7ef91f40880c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff5a1f3e4b09ac9f7ea600d3f127523b96fcce55
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568736"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106367"
 ---
 # <a name="docker-containers-images-and-registries"></a>Контейнеры, образы и реестры Docker
 
@@ -34,4 +34,5 @@ ms.locfileid: "33568736"
 -   Вам необходимо обеспечить минимальную сетевую задержку между образами и выбранной средой развертывания. Например если вашей рабочей среде Azure, может потребоваться хранения рисунков в реестре контейнера Azure, чтобы сетевая задержка будет минимальной. Точно так же, если рабочая среда является локальной, вы можете развернуть локальный доверенный реестр Docker в той же локальной сети.
 
 >[!div class="step-by-step"]
-[Предыдущие] docker (terminology.md) [Далее] (Docker приложения-жизненного цикла/index.md)
+[Назад](docker-terminology.md)
+[Вперед](Docker-application-lifecycle/index.md)

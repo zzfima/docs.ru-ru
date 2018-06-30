@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 0fa43263e789bba5b720792e7e8dc5321af795b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c7de61f421cf2c45cd3c5ee9afc5a388e985b52
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576224"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105567"
 ---
 # <a name="containers-as-the-foundation-for-devops-collaboration"></a>Контейнеры как основу для совместной работы DevOps
 
@@ -68,4 +68,5 @@ DevOps следует рассматривать пути, а не место н
 -   Plug and play с многие существующие DevOps инвестиции в инфраструктуру, включая вложения в открытым исходным кодом
 
 >[!div class="step-by-step"]
-[Предыдущие] (index.md) [Далее] (.. /Microsoft-Platform-Tools-containerized-Apps/index.MD)
+[Назад](index.md)
+[Вперед](../Microsoft-platform-tools-containerized-apps/index.md)

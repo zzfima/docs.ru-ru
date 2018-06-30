@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 198313c260b36d3f3025606e73e220c361a7ebb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b88eb5637bf266ab2e0a6d255f2e83f6aadc8af2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579006"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106166"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Действия в рабочем процессе DevOps внешний цикл для Docker приложения
 
@@ -234,4 +234,5 @@ Mesosphere DC/OS: <https://mesosphere.com/product/>
 Только в том случае, если наблюдение и диагностику заполнены на 100% в пределах области DevOps являются мониторинга процессов и analytics, выполняемые команды разработчиков средах тестирования или бета-версии. Это делается путем выполнения нагрузочного тестирования или просто отслеживая бета-версии или QA средах, где тест-инженеров бета-версии пытаетесь новых версий.
 
 >[!div class="step-by-step"]
-[Предыдущие] (index.md) [Далее] (.. /Run-Manage-Monitor-docker-Environments/index.MD)
+[Назад](index.md)
+[Вперед](../run-manage-monitor-docker-environments/index.md)

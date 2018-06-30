@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: f429bc0c6e76c2be2e4f491768a15ab36ecb0d34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 662e1af8595c074ee1aeba5ad4d83660b667c1cd
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591098"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105531"
 ---
 # <a name="deploying-single-container-based-net-core-web-applications-on-linux-or-windows-nano-server-hosts"></a>Развертывание одноконтейнерных веб-приложений .NET Core на узлах Linux или Windows Nano Server
 
@@ -142,4 +142,5 @@ services:
 Мастер добавления поддержки Docker взаимодействует с выполняющимся процессом Docker. Если при запуске мастера средство Docker не выполняется, мастер будет работать неправильно. Кроме того, мастер проверяет выбранные контейнеры, чтобы правильно реализовать поддержку Docker. Чтобы добавить поддержку контейнеров Windows, при запуске мастера должно выполняться средство Docker с настроенными контейнерами Windows. Чтобы добавить поддержку контейнеров Linux, при запуске мастера должно выполняться средство Docker с настроенными контейнерами Linux.
 
 >[!div class="step-by-step"]
-[Назад] (../docker-application-development-process/docker-app-development-workflow.md) [Далее] (../containerize-net-framework-applications/index.md)
+[Назад](../docker-application-development-process/docker-app-development-workflow.md)
+[Вперед](../containerize-net-framework-applications/index.md)

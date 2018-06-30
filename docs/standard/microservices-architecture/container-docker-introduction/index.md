@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c1f78a8904270123188367a01bddbcac3f7f1b7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d9334785b2f3ee770c5f0e6bd2e13faa995b6f2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572279"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106831"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Общие сведения о контейнерах и Docker
 
@@ -31,4 +31,5 @@ ms.locfileid: "33572279"
 
 
 >[!div class="step-by-step"]
-[Назад] (../index.md) [Далее] (docker-defined.md)
+[Назад](../index.md)
+[Вперед](docker-defined.md)

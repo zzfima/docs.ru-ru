@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 6525e5f80ebb0551e4f85904a467d862aa4133ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f4a3b7675365aa4d1e33328f756439398f3a4de
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567735"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105241"
 ---
 # <a name="design-docker-applications"></a>Проектирование приложений Docker
 
@@ -19,4 +19,5 @@ ms.locfileid: "33567735"
 
 
 >[!div class="step-by-step"]
-[Предыдущие] (index.md) [Далее] (общий контейнера конструктора principles.md)
+[Назад](index.md)
+[Вперед](common-container-design-principles.md)

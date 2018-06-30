@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: cda9aa77ca033dced8b6b30538f19f28a5fa63a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e578599c61053704202946772c43bdb5ef895c2
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579214"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105593"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Внутренний цикл разработки рабочего процесса для Docker приложений
 
@@ -122,7 +122,7 @@ ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 
 **Дополнительные сведения о** сведения о создании образов Docker для приложений .NET Core, перейдите к <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
-Дополнительные сведения о создании собственных образов, перейдите к [ https://docs.docker.com/engine/\учебники/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
+Дополнительные сведения о создании собственных образов, перейдите к [ https://docs.docker.com/engine/\ учебники/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
 **Репозитории многоплатформенного изображения**
 
@@ -259,4 +259,5 @@ cesardl/netcore-webapi-microservice-docker:first
 
 
 >[!div class="step-by-step"]
-[Предыдущие] (docker приложения development-environment.md) [Далее] (visual средств studio для docker.md)
+[Назад](docker-apps-development-environment.md)
+[Вперед](visual-studio-tools-for-docker.md)

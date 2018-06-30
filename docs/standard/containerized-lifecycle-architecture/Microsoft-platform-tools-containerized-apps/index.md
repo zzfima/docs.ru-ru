@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 02bd144f5bfd64ab3a0b0d30aad642c5c3099c7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b14d361fb93b98de68b828514c7ea72811075fb8
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576247"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106195"
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Общие сведения о платформе и средствах Майкрософт для контейнерных приложений
 
@@ -59,4 +59,5 @@ ms.locfileid: "33576247"
 Таким образом, корпорация Майкрософт предлагает комплексную платформу для всего жизненного цикла контейнерного приложения Docker. Она представляет собой *коллекцию продуктов и технологий, которые позволяют при необходимости выбирать и интегрировать существующие средства и процессы*. Благодаря гибкости широкого подхода, а также мощи и глубине возможностей корпорация Майкрософт занимает надежную позицию в области разработки контейнерных приложений Docker.
 
 >[!div class="step-by-step"]
-[Назад] (../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md) [Next] (../design-develop-containerized-apps/index.md)
+[Назад](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
+[Вперед](../design-develop-containerized-apps/index.md)

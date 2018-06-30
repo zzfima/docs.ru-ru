@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 5ecf1fbc164ff4170951894abc071908f45178d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 169ffa7ba61fa5dff09229410adb534f8e34a35c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573885"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104589"
 ---
 # <a name="manage-production-docker-environments"></a>Управление Docker рабочих сред
 
@@ -26,7 +26,7 @@ ms.locfileid: "33573885"
 Средства управления Docker таблица 6-1.
 
 
-| Средства управления      | Описание           | Связанные orchestrators |
+| Средства управления      | Описание:           | Связанные orchestrators |
 |-----------------------|-----------------------|-----------------------|
 | Контейнер службы\(управления пользовательского интерфейса на портале Azure) | [Контейнер службы](https://azure.microsoft.com/en-us/services/container-service/) предоставляет удобно получать способ работы [развернуть кластер контейнера в Azure](https://docs.microsoft.com/azure/container-service/dcos-swarm/container-service-deployment) основании популярных orchestrators как Mesosphere DC/OS, Kubernetes и помощью Docker Swarm. <br /><br /> Контейнер службы оптимизирует конфигурацию этих платформ. Необходимо выбрать размер, количество узлов, а также инструменты orchestrator и контейнер службы обрабатывает все остальное. | Mesosphere DC/OS <br /><br /> Kubernetes <br /><br /> Docker Swarm |
 | Docker универсальной плоскости управления\(локально или в облаке) | [Docker универсальной плоскости управления](https://docs.docker.com/v1.11/ucp/overview/) — решение управления кластера корпоративного уровня с Docker. Он позволяет управлять весь кластер из одного места. <br /><br /> Docker универсальной плоскости управления включен в состав коммерческого продукт с именем Docker центра обработки данных, который предоставляет помощью Docker Swarm, универсальной плоскости управления Docker и доверенный реестр Docker. <br /><br /> Docker центра обработки данных может быть установленный в локальной или подготовить из общедоступного облака, таких как Azure. | Помощью docker Swarm\(поддерживается службой контейнера) |
@@ -46,4 +46,5 @@ ms.locfileid: "33573885"
 
 
 >[!div class="step-by-step"]
-[Предыдущие] (run-microservices-based-applications-in-production.md) [Далее] (монитор контейнерных приложения services.md)
+[Назад](run-microservices-based-applications-in-production.md)
+[Вперед](monitor-containerized-application-services.md)
