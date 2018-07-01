@@ -9,12 +9,12 @@ ms.assetid: 110cceea-5932-4955-a1a6-13afc51422b2
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: c8eb7bfc56b4dddaf352477e3817864700460db7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aaafe77a71713b24752ed7db7ec016bfc14eb406
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409985"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140246"
 ---
 # <a name="ui-automation-support-for-the-hyperlink-control-type"></a>Поддержка автоматизированного пользовательского интерфейса для элемента управления типа Hyperlink
 > [!NOTE]
@@ -60,7 +60,7 @@ ms.locfileid: "33409985"
 |---------------------------------------|--------------------|-----------|  
 |<xref:System.Windows.Automation.Provider.IInvokeProvider>|Да|Все элементы управления "Гиперссылка" должны поддерживать шаблон Invoke.|  
 |<xref:System.Windows.Automation.Provider.IValueProvider>|Зависит от обстоятельств|Элементы управления "Гиперссылка должны поддерживать шаблон элемента управления Value, когда ссылка содержит информацию, применимую и значимую для пользователя.|  
-|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Например «http://www....»|URL-адрес для адреса в Интернете или интрасети адреса является примером гиперссылки, содержащей значимую для пользователя информацию. Однако программная ссылка имеет смысл только для приложения и не рекомендуется для свойства Value.|  
+|<xref:System.Windows.Automation.Provider.IValueProvider.Value>|Например `"http://www...."`.|URL-адрес для адреса в Интернете или интрасети адреса является примером гиперссылки, содержащей значимую для пользователя информацию. Однако программная ссылка имеет смысл только для приложения и не рекомендуется для свойства Value.|  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>Необходимые события модели автоматизации пользовательского интерфейса  

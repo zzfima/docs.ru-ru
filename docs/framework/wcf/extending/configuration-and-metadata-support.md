@@ -2,12 +2,12 @@
 title: Конфигурация и поддержка метаданных
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 4dfeeba6db220e03ad981b13e2bb093bedcd43c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d316e373177d86b7ba2b715f29fe3dace9082e8b
+ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33486728"
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37140155"
 ---
 # <a name="configuration-and-metadata-support"></a>Конфигурация и поддержка метаданных
 В этом разделе описывается, как включить поддержку конфигурации и метаданных для привязки и элементов привязки.  
@@ -182,7 +182,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  Пользовательский элемент привязки может экспортировать утверждения политики в привязке WSDL для конечной точки службы, чтобы показать возможности этого элемента привязки. В следующем примере кода берется из [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.  
   
 #### <a name="policy-export"></a>Экспорт политики  
- `UdpTransportBindingElement` Тип реализует ''<xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> для добавления поддержки экспорт политики. В результате класс <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> включает элемент `UdpTransportBindingElement` при формировании политики для любой привязки, в которую он входит.  
+ `UdpTransportBindingElement` Тип реализует <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> для добавления поддержки экспорт политики. В результате класс <xref:System.ServiceModel.Description.MetadataExporter?displayProperty=nameWithType> включает элемент `UdpTransportBindingElement` при формировании политики для любой привязки, в которую он входит.  
   
  В методе <xref:System.ServiceModel.Description.IPolicyExportExtension.ExportPolicy%2A?displayProperty=nameWithType> добавьте утверждение для UDP и еще одно утверждение, если канал находится в режиме многоадресной рассылки. Это связано с тем, что режим многоадресной рассылки влияет на построение стека связи и, следовательно, должен быть согласован обеими сторонами.  
   
