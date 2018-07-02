@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c2c7d692517c6a46225542936e05656db915bf0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ccdf6ecc30979e953d42a403c2c988780394df96
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591980"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106701"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>Обеспечение безопасности веб-приложений и микрослужб .NET
 
@@ -250,4 +250,5 @@ app.UseJwtBearerAuthentication(new JwtBearerOptions()
 
 
 >[!div class="step-by-step"]
-[Назад] (../implement-resilient-applications/monitor-app-health.md) [Далее] (authorization-net-microservices-web-applications.md)
+[Назад](../implement-resilient-applications/monitor-app-health.md)
+[Вперед](authorization-net-microservices-web-applications.md)

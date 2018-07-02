@@ -6,18 +6,20 @@ ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 01eb2e94b57da5e5dad0fa355246bcbcbc153dab
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: cbe08d87e90d319c074e85d0157e62fe023cce8c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457015"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105176"
 ---
 # <a name="net-guide"></a>Руководство по .NET
 
 Руководство по .NET содержит большой объем информации о .NET.  В зависимости от вашего уровня знаний в области .NET вы можете изучить различные разделы данного руководства, а также другие разделы документации по .NET.
 
 ## <a name="new-to-net"></a>Не знакомы с .NET?
+
+Общие сведения о .NET см. в разделе [Что такое .NET?](https://www.microsoft.com/net/learn/what-is-dotnet)
 
 Если вы не знакомы с .NET, прочтите статью [Начало работы](get-started.md).
 
