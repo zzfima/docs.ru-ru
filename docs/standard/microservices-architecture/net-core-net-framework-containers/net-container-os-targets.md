@@ -4,11 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 0b06f64027a736ead148ea5511cf20e900b8b39a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 53b279a3325ae0fb662cd91a6f7f454b765196ff
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251016"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>Для какой ОС использовать контейнеры .NET
 
@@ -28,19 +29,22 @@ ms.lasthandoff: 05/04/2018
 
 При добавлении имени образа в файл Dockerfile можно выбрать операционную систему и версию в зависимости от используемого тега, как показано в следующих примерах:
 
--   microsoft/**dotnet:2.0.0-runtime-jessie**
+-   microsoft/**dotnet:2.1-runtime**
 
-        .NET Core 2.0 runtime-only on Linux
+        .NET Core 2.1 multi-architecture: Supports Linux and Windows Nano Server depending on the Docker host.
 
--   microsoft/**dotnet:2.0.0-runtime-nanoserver-1709** 
-
-        .NET Core 2.0 runtime-only on Windows Nano Server (Windows Server 2016 Fall Creators Update version 1709)
-
--   microsoft/**aspnetcore:2.0**
+-   microsoft/**dotnet:2.1-aspnetcore-runtime**
     
-        .NET Core 2.0 multi-architecture: Supports Linux and Windows Nano Server depending on the Docker host.
+        ASP.NET Core 2.1 multi-architecture: Supports Linux and Windows Nano Server depending on the Docker host.
         The aspnetcore image has a few optimizations for ASP.NET Core. 
 
+-   microsoft/**dotnet:2.1-aspnetcore-runtime-alpine** 
+
+        .NET Core 2.1 runtime-only on Linux Alpine distro
+
+-   microsoft/**dotnet:2.1-aspnetcore-runtime-nanoserver-1803** 
+
+        .NET Core 2.1 runtime-only on Windows Nano Server (Windows Server version 1803)
 
 
 

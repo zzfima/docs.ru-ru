@@ -3,12 +3,13 @@ title: Команда dotnet — CLI .NET Core
 description: Сведения о команде dotnet (универсальном драйвере для средств CLI .NET Core) и ее использовании.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/20/2018
-ms.openlocfilehash: c56ed032ccef6c6fd19a13214b04b384ffff28d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/04/2018
+ms.openlocfilehash: 788dc746705f9328683019ab3ad9836204a1ea63
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805663"
 ---
 # <a name="dotnet-command"></a>Команда dotnet
 
@@ -20,7 +21,12 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="synopsis"></a>Краткий обзор
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+```
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
+    [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+```
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 ```
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
     [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
@@ -36,13 +42,59 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `dotnet` — это универсальный драйвер для цепочки инструментов интерфейса командной строки (CLI). Если вызвать его без указания команды, выводятся краткие инструкции по использованию.
 
-Каждая отдельная функция реализуется в виде команды. Для использования функции необходимо указать команду после `dotnet`, например [`dotnet build`](dotnet-build.md). Все аргументы после команды относятся именно к ней.
+Каждая отдельная функция реализуется в виде команды. Чтобы использовать эту функцию, введите команду после `dotnet`, вот так: [`dotnet build`](dotnet-build.md). Все аргументы после команды относятся именно к ней.
 
 Единственный случай, когда `dotnet` используется в качестве команды самостоятельно, — это запуск [платформозависимых приложений](../deploying/index.md). Просто укажите библиотеку DLL приложения после команды `dotnet`, чтобы выполнить приложение (Например, `dotnet myapp.dll`).
 
 ## <a name="options"></a>Параметры
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+`--additional-deps <PATH>`
+
+Путь к дополнительному файлу *deps.json*.
+
+`--additionalprobingpath <PATH>`
+
+Путь, содержащий политику проверки и проверяемые сборки.
+
+`-d|--diagnostics`
+
+Включает вывод диагностических данных.
+
+`--fx-version <VERSION>`
+
+Версия установленной среды выполнения .NET Core, используемой для запуска приложения.
+
+`-h|--help`
+
+Выводит краткую справку по команде. При использовании с `dotnet` также выводится список доступных команд.
+
+`--info`
+
+Выводит подробные сведения о средствах CLI и окружении, например текущую операционную систему, фиксацию SHA для версии и т. д.
+
+`--list-runtimes`
+
+Отображает установленные среды выполнения .NET Core.
+
+`--list-sdks`
+
+Отображает установленные пакеты SDK для .NET Core.
+
+`--roll-forward-on-no-candidate-fx`
+
+ Выполняет накат при отсутствии подходящей общей платформы.
+
+`-v|--verbosity <LEVEL>`
+
+Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`. Поддерживается не во всех командах. Дополнительную информацию см. на странице определенной команды.
+
+`--version`
+
+Выводит версию используемого пакета SDK для .NET Core.
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--additional-deps <PATH>`
 
@@ -116,7 +168,26 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ### <a name="general"></a>Общие
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+| Команда                                       | Функция                                                            |
+| --------------------------------------------- | ------------------------------------------------------------------- |
+| [dotnet build](dotnet-build.md)               | Выполняет сборку приложения .NET Core.                                     |
+| [dotnet build-server](dotnet-build-server.md) | Взаимодействует с серверами, запущенными сборкой.                          |
+| [dotnet clean](dotnet-clean.md)               | Очищает выходные данные сборки.                                                |
+| [dotnet help](dotnet-help.md)                 | Выводит более подробную документацию из Интернета для команды.           |
+| [dotnet migrate](dotnet-migrate.md)           | Переносит допустимый проект предварительной версии 2 в проект пакета SDK .NET Core 1.0.  |
+| [dotnet msbuild](dotnet-msbuild.md)           | Обеспечивает доступ к командной строке MSBuild.                        |
+| [dotnet new](dotnet-new.md)                   | Инициализирует проект C# или F# для заданного шаблона.                |
+| [dotnet pack](dotnet-pack.md)                 | Создает пакет NuGet с кодом.                               |
+| [dotnet publish](dotnet-publish.md)           | Публикует платформозависимое или автономное приложение .NET. |
+| [dotnet restore](dotnet-restore.md)           | Восстанавливает зависимости для данного приложения.                  |
+| [dotnet run](dotnet-run.md)                   | Запускает приложение из источника.                                   |
+| [dotnet sln](dotnet-sln.md)                   | Параметры для добавления, удаления и перечисления проектов в файле решения.       |
+| [dotnet store](dotnet-store.md)               | Сохраняет сборки в хранилище пакетов среды выполнения.                     |
+| [dotnet test](dotnet-test.md)                 | Выполняет тесты с помощью средства запуска тестов.                                     |
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
 | Команда                             | Функция                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -156,16 +227,16 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 Команда | Функция
 --- | ---
-[dotnet add reference](dotnet-add-reference.md) | Добавление ссылки на проект.
-[dotnet list reference](dotnet-list-reference.md) | Перечисление ссылок на проект.
-[dotnet remove reference](dotnet-remove-reference.md) | Удаление ссылки на проект.
+[dotnet add reference](dotnet-add-reference.md) | Добавляет ссылку на проект.
+[dotnet list reference](dotnet-list-reference.md) | Перечисляет ссылки на проекты.
+[dotnet remove reference](dotnet-remove-reference.md) | Удаляет ссылку на проект.
 
 ### <a name="nuget-packages"></a>Пакеты NuGet
 
 Команда | Функция
 --- | ---
-[dotnet add package](dotnet-add-package.md) | Добавление пакета NuGet.
-[dotnet remove package](dotnet-remove-package.md) | Удаление пакета NuGet.
+[dotnet add package](dotnet-add-package.md) | Добавляет пакет NuGet.
+[dotnet remove package](dotnet-remove-package.md) | Удаляет пакет NuGet.
 
 ### <a name="nuget-commands"></a>Команды NuGet
 
@@ -175,9 +246,34 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 [dotnet nuget locals](dotnet-nuget-locals.md) | Очищает или перечисляет локальные ресурсы NuGet в кэше HTTP-запросов, временном кэше или папке пакетов, используемой на уровне компьютера.
 [dotnet nuget push](dotnet-nuget-push.md) | Отправляет пакет на сервер и публикует его.
 
+### <a name="global-tools-commands"></a>Команды глобальных средств
+
+[Глобальные средства .NET Core](global-tools.md) появились в пакете SDK для .NET Core, начиная с версии 2.1.300:
+
+Команда | Функция
+--- | ---
+[dotnet tool install](dotnet-tool-install.md) | Устанавливает глобальное средство на локальном компьютере.
+[dotnet tool list](dotnet-tool-list.md) | Перечисляет выводит все глобальные средства, установленные на компьютере в каталоге по умолчанию или по указанному пути.
+[dotnet tool uninstall](dotnet-tool-uninstall.md) | Удаляет глобальное средство с компьютера.
+[dotnet tool update](dotnet-tool-update.md) | Обновляет глобальное средство на локальном компьютере.
+
+### <a name="additional-tools"></a>Дополнительные инструменты
+
+Ряд средств, которые ранее были доступны только для отдельных проектов через `DotnetCliToolReference`, стали частью пакета SDK для .NET начиная с версии 2.1.300. К ним относятся следующие средства:
+
+| Средство                                              | Функция                                                     |
+| ------------------------------------------------- | ------------------------------------------------------------ |
+| dev-certs                                         | Создает сертификаты разработки и управляет ими.                |
+| [ef](/ef/core/miscellaneous/cli/dotnet)           | Средства командной строки для Entity Framework Core.                    |
+| sql-cache                                         | Средства командной строки для кэша SQL Server.                         |
+| [user-secrets](/aspnet/core/security/app-secrets) | Управляет секретами пользователей для разработки.                            |
+| [watch](/aspnet/core/tutorials/dotnet-watch)      | Запускает наблюдатель за файлами, который выполняет команду при изменении файлов. |
+
+Дополнительные сведения о каждом средстве можно получить с помощью команды `dotnet <tool-name> --help`.
+
 ## <a name="examples"></a>Примеры
 
-Инициализация образца консольного приложения .NET Core, которое можно скомпилировать и запустить:
+Создание проекта консольного приложения .NET Core:
 
 `dotnet new console`
 
@@ -197,7 +293,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="environment-variables"></a>Переменные среды
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `DOTNET_PACKAGES`
 
@@ -209,11 +305,33 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-Указывает, собираются ли данные по использованию средств .NET Core для отправки в корпорацию Майкрософт. Задайте значение `true`, чтобы отказаться от функции телеметрии (принимаются значения `true`, `1` или `yes`), в противном случае задайте значение `false`, чтобы согласиться на функции телеметрии (принимаются значения `false`, `0` или `no`). Если значение не задано, то по умолчанию используется `false` и функция телеметрии включена.
+Указывает, собираются ли данные по использованию средств .NET Core для отправки в корпорацию Майкрософт. Установите значение `true`, чтобы отказаться от функций телеметрии (поддерживаются значения `true`, `1` или `yes`). Также можно установить значение `false`, чтобы согласиться на функции телеметрии (поддерживаются значения `false`, `0` или `no`). Если значение не задано, то по умолчанию используется `false`, то есть функция телеметрии включена.
 
 `DOTNET_MULTILEVEL_LOOKUP`
 
-Указывает, разрешается ли среда выполнения .NET Core, общая платформа или пакет SDK из глобального расположения. Если не задано, используется значение по умолчанию `true`. Задайте значение `false`, чтобы не разрешать эти сущности из глобального расположения и использовать изолированные установки .NET Core (принимаются значения `0` или `false`). Дополнительные сведения о многоуровневом поиске см. в разделе [Многоуровневый поиск SharedFX](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+Указывает, разрешается ли из глобального расположения среда выполнения .NET Core, общая платформа или пакет SDK. Если не задано, используется значение по умолчанию `true`. Задайте значение `false`, чтобы не разрешать эти сущности из глобального расположения и использовать изолированные установки .NET Core (принимаются значения `0` или `false`). Дополнительные сведения о многоуровневом поиске см. в разделе [Многоуровневый поиск SharedFX](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+
+`DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX`
+
+Отключает накат дополнительных версий. Дополнительные сведения о накате можно найти в [этой статье](../whats-new/dotnet-core-2-1.md#roll-forward).
+
+# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+`DOTNET_PACKAGES`
+
+Основной кэш пакетов. Если значение не задано, то по умолчанию в Unix используется `$HOME/.nuget/packages`, а в Windows — `%HOME%\NuGet\Packages`.
+
+`DOTNET_SERVICING`
+
+Задает расположение служебного индекса, который будет использоваться общим узлом при загрузке среды выполнения.
+
+`DOTNET_CLI_TELEMETRY_OPTOUT`
+
+Указывает, собираются ли данные по использованию средств .NET Core для отправки в корпорацию Майкрософт. Установите значение `true`, чтобы отказаться от функций телеметрии (поддерживаются значения `true`, `1` или `yes`). Также можно установить значение `false`, чтобы согласиться на функции телеметрии (поддерживаются значения `false`, `0` или `no`). Если значение не задано, то по умолчанию используется `false`, то есть функция телеметрии включена.
+
+`DOTNET_MULTILEVEL_LOOKUP`
+
+Указывает, разрешается ли из глобального расположения среда выполнения .NET Core, общая платформа или пакет SDK. Если не задано, используется значение по умолчанию `true`. Задайте значение `false`, чтобы не разрешать эти сущности из глобального расположения и использовать изолированные установки .NET Core (принимаются значения `0` или `false`). Дополнительные сведения о многоуровневом поиске см. в разделе [Многоуровневый поиск SharedFX](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -227,6 +345,6 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
-Указывает, собираются ли данные по использованию средств .NET Core для отправки в корпорацию Майкрософт. Задайте значение `true`, чтобы отказаться от функции телеметрии (принимаются значения `true`, `1` или `yes`), в противном случае задайте значение `false`, чтобы согласиться на функции телеметрии (принимаются значения `false`, `0` или `no`). Если значение не задано, то по умолчанию используется `false` и функция телеметрии включена.
+Указывает, собираются ли данные по использованию средств .NET Core для отправки в корпорацию Майкрософт. Установите значение `true`, чтобы отказаться от функций телеметрии (поддерживаются значения `true`, `1` или `yes`). Также можно установить значение `false`, чтобы согласиться на функции телеметрии (поддерживаются значения `false`, `0` или `no`). Если значение не задано, то по умолчанию используется `false`, то есть функция телеметрии включена.
 
 ---

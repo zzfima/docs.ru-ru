@@ -5,11 +5,12 @@ helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d454621f82e499960af4af16b17ac68f3cb5f70f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 208ac3d4a7b803dd081edfd9f5227a779f7cf211
+ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34805624"
 ---
 # <a name="local-functions-c-programming-guide"></a>Локальные функции (руководство по программированию на C#)
 
@@ -73,7 +74,7 @@ ms.lasthandoff: 05/04/2018
 
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
 
-Как и в случае с итератором метода, можно выполнить рефакторинг кода из этого примера таким образом, чтобы реализовать проверку перед вызовом асинхронного метода. Как видно из результатов следующего примера, <xref:System.ArgumentOutOfRangeException> не инкапсулируется в <x:System.AggregateException>.
+Как и в случае с итератором метода, можно выполнить рефакторинг кода из этого примера таким образом, чтобы реализовать проверку перед вызовом асинхронного метода. Как видно из результатов следующего примера, <xref:System.ArgumentOutOfRangeException> не инкапсулируется в <xref:System.AggregateException>.
 
 [!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 

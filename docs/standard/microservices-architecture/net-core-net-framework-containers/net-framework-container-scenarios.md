@@ -3,12 +3,13 @@ title: Выбор .NET Framework для контейнеров Docker
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Выбор .NET Framework для контейнеров Docker
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: e707c8f0e721915e829e41628891928594010b92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/07/2018
+ms.openlocfilehash: 06b67f702b38202f598745826fa48f1ca97b7282
+ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/09/2018
+ms.locfileid: "35251039"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Выбор .NET Framework для контейнеров Docker
 
@@ -22,15 +23,15 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Использование сторонних библиотек .NET и пакетов NuGet, недоступных для .NET Core
 
-Сторонние библиотеки [.NET Standard](../../net-standard.md) позволяют совместно использовать код в различных средах выполнения .NET, в том числе в .NET Core. Использование библиотеки Standard .NET 2.0 и API позволяет существенно улучшить совместимость различных платформ. В .NET Core 2.0 приложения могут напрямую обращаться к существующим библиотекам .NET Framework (см. [Модификатор совместимости](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
+Сторонние библиотеки [.NET Standard](../../net-standard.md) позволяют совместно использовать код в различных средах выполнения .NET, в том числе в .NET Core. Использование библиотеки .NET Standard 2.0 (и более поздних версий) и API позволяет существенно улучшить совместимость различных платформ. В .NET Core 2.x приложения могут напрямую обращаться к существующим библиотекам .NET Framework (см. раздел о [модификаторе совместимости](https://github.com/dotnet/standard/blob/master/docs/faq.md#how-does-net-standard-versioning-work)).
 
 Несмотря на значительный прогресс, достигнутый после выхода .NET Standard 2.0 и .NET Core 2.0, могут возникнуть ситуации, когда для запуска определенных пакетов NuGet требуется Windows и эти пакеты могут не поддерживать .NET Core. Если эти пакеты имеют важное значение для вашего приложения, необходимо использовать .NET Framework в контейнерах Windows.
 
 ## <a name="using-net-technologies-not-available-for-net-core"></a>Использование технологий .NET, недоступных для .NET Core 
 
-Некоторые технологии .NET Framework отсутствуют в текущей версии .NET Core (версии 2.0 на момент написания этой статьи). Поддержка некоторых из них будет добавлена в последующих выпусках .NET Core (.NET Core 2.x), однако остальные технологии не применяются к новым шаблонам приложений, используемым в среде .NET Core, и будут недоступными всегда.
+Некоторые технологии .NET Framework отсутствуют в текущей версии .NET Core (версии 2.1 на момент написания этой статьи). Поддержка некоторых из них будет добавлена в последующих выпусках .NET Core (.NET Core 2.x), однако остальные технологии не применяются к новым шаблонам приложений, используемым в среде .NET Core, и будут недоступными всегда.
 
-В следующем списке указано большинство технологий, недоступных в .NET Core 2.0.
+В следующем списке указано большинство технологий, недоступных в .NET Core 2.1.
 
 -   Веб-формы ASP.NET. Эта технология доступна только в .NET Framework. В настоящее время добавление веб-форм ASP.NET в среду .NET Core не планируется.
 

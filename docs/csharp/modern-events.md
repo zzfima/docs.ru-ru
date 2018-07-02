@@ -3,11 +3,12 @@ title: Обновленный шаблон событий .NET Core
 description: Сведения о том, за счет чего шаблон событий .NET Core обеспечивает гибкость и обратную совместимость, а также о способах реализации безопасной обработки событий с использованием асинхронных подписчиков.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: d0ad85479265041d895039d6c72f1f9909ea5fa8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f28c3ea9d8cf3e8fc68953c79def5744eb5abe4
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34827184"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>Обновленный шаблон событий .NET Core
 
@@ -20,24 +21,9 @@ ms.lasthandoff: 05/04/2018
 На самом деле, можно изменить определения `FileFoundArgs` и `SearchDirectoryArgs` так, чтобы они не были производными от `EventArgs`.
 Программа будет работать точно так же.
 
-Можно также изменить `SearchDirectoryArgs` на структуру, если выполнить дополнительное изменение.
+Вместо `SearchDirectoryArgs` можно также использовать структуру, внеся дополнительное изменение.
 
-```csharp  
-internal struct SearchDirectoryArgs  
-{  
-    internal string CurrentSearchDirectory { get; }  
-    internal int TotalDirs { get; }  
-    internal int CompletedDirs { get; }  
-    
-    internal SearchDirectoryArgs(string dir, int totalDirs, 
-        int completedDirs) : this()  
-    {  
-        CurrentSearchDirectory = dir;  
-        TotalDirs = totalDirs;  
-        CompletedDirs = completedDirs;  
-    }  
-}  
-```   
+[!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
 
 Оно заключается в вызове конструктора по умолчанию перед открытием конструктора, который инициализирует все поля. Без этого согласно правилам языка C# будет выведено сообщение о получении доступа к свойствам до их назначения.
 

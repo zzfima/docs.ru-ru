@@ -3,11 +3,12 @@ title: Делегаты и события
 description: Ссылки на информацию о делегатах и событиях в документации по .NET Core.
 ms.date: 06/20/2016
 ms.assetid: 4e80e053-8022-4987-a8a0-209caec0315d
-ms.openlocfilehash: 939bb0f441e5a18b1ae8d48fe9a8021bd2dad3f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b802a7aa8ef3e9ab0c05af23186d124dcc07bdb5
+ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34826832"
 ---
 # <a name="delegates--events"></a>Делегаты и события
 
@@ -45,3 +46,4 @@ ms.lasthandoff: 05/04/2018
 
     В этой статье описываются критерии выбора событий или делегатов для проекта.
  
+Вы можете скачать [пример делегатов](https://github.com/dotnet/samples/tree/master/csharp/delegates-and-events) и [пример событий](https://github.com/dotnet/samples/tree/master/csharp/events) из нашего репозитория примеров на GitHub.
