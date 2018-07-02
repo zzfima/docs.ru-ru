@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 26e3d6b4cd1df051c00cef4ee8370ca9c213363e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 957a0b1b8b4d217fac591db54e4ee053098bc7da
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577268"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105199"
 ---
 # <a name="handling-partial-failure"></a>Обработка частичного сбоя
 
@@ -41,4 +41,5 @@ ms.locfileid: "33577268"
 
 
 >[!div class="step-by-step"]
-[Назад] (index.md) [Далее] (partial-failure-strategies.md)
+[Назад](index.md)
+[Вперед](partial-failure-strategies.md)

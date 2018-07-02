@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce2c47b172afee8745cdf5f68323d64dd550ea59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6db9d2e1e075b9908e4c6db3d327f446980e98a5
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579149"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37072960"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Использование класса StringBuilder в .NET
 Объект <xref:System.String> является неизменяемым. Каждый раз при использовании одного из методов в классе <xref:System.String?displayProperty=nameWithType> вы создаете объект строки в памяти, для которого требуется выделение нового пространства. В случаях, когда необходимо выполнять повторяющиеся изменения строки, издержки, связанные с созданием объекта <xref:System.String>, могут оказаться значительными. Чтобы изменять строку без создания нового объекта, можно использовать класс <xref:System.Text.StringBuilder?displayProperty=nameWithType>. Например, использование класса <xref:System.Text.StringBuilder> может повысить производительность при соединении большого количества строк в цикле.  
@@ -43,7 +43,7 @@ ms.locfileid: "33579149"
  [!code-vb[Conceptual.StringBuilder#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.StringBuilder/vb/Example.vb#1)]  
   
 ## <a name="setting-the-capacity-and-length"></a>Настройка емкости и длины  
- Хотя <xref:System.Text.StringBuilder> является динамическим объектом, который позволяет вам развернуть ряд символов в строке, которые она инкапсулирует, вы можете указать максимальное число содержащихся в ней символов. Это значение называется емкостью объекта, и его не следует путать с длиной строки, которую содержит текущий объект <xref:System.Text.StringBuilder>. Например, вы можете создать экземпляр класса <xref:System.Text.StringBuilder> со строкой Hello, длина которой составляет 5 символов, указав при этом максимальную емкость объекта 25 символов. При изменении значения <xref:System.Text.StringBuilder> размер не перераспределяется, если не достигнута максимальная емкость. Когда это происходит, новое пространство выделяется автоматически, а емкость удваивается. Вы можете указать емкость класса <xref:System.Text.StringBuilder> с помощью одного из перегруженных конструкторов. В следующем примере показано, что объект `MyStringBuilder` можно развернуть максимум на 25 позиций.  
+ Хотя <xref:System.Text.StringBuilder> является динамическим объектом, который позволяет вам развернуть ряд символов в строке, которые она инкапсулирует, вы можете указать максимальное число содержащихся в ней символов. Это значение называется емкостью объекта, и его не следует путать с длиной строки, которую содержит текущий объект <xref:System.Text.StringBuilder>. Например, вы можете создать экземпляр класса <xref:System.Text.StringBuilder> со строкой Hello, длина которой составляет 5 символов, указав при этом максимальную емкость объекта 25 символов. При изменении значения <xref:System.Text.StringBuilder> размер не перераспределяется, если не достигнута максимальная емкость. Когда это происходит, новое пространство выделяется автоматически, а емкость удваивается. Вы можете указать емкость класса <xref:System.Text.StringBuilder> с помощью одного из перегруженных конструкторов. В следующем примере показано, что объект `myStringBuilder` можно развернуть максимум на 25 позиций.  
   
  [!code-cpp[Conceptual.StringBuilder#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.StringBuilder/cpp/example.cpp#2)]
  [!code-csharp[Conceptual.StringBuilder#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.StringBuilder/cs/Example.cs#2)]

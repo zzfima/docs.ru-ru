@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 81c4fc7662212bb3c6586a590d87e731220b7b7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62d4e9a26710a5c4b191287bf76192972f7e991b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578876"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106545"
 ---
 # <a name="health-monitoring"></a>Мониторинг работоспособности
 
@@ -196,4 +196,5 @@ checks.AddUrlCheck(Configuration["CatalogUrl"],1); // 1 min as cache duration
     [*https://www.microsoft.com/en-us/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
 
 >[!div class="step-by-step"]
-[Назад] (implement-circuit-breaker-pattern.md) [Далее] (../secure-net-microservices-web-applications/index.md)
+[Назад](implement-circuit-breaker-pattern.md)
+[Вперед](../secure-net-microservices-web-applications/index.md)

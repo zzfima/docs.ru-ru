@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
-ms.openlocfilehash: 59f0d46dadb736ad55e53f6715b7ca1b62e9cec4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a90f88e117965aec1550a45f114cabfda5204468
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592409"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106597"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Разработка приложений MVC ASP.NET Core
 
@@ -552,4 +552,5 @@ public class Program
 > <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
-[Назад] (common-client-side-web-technologies.md) [Далее] (work-with-data-in-asp-net-core-apps.md)
+[Назад](common-client-side-web-technologies.md)
+[Вперед](work-with-data-in-asp-net-core-apps.md)

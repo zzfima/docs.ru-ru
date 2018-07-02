@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: e6af18b1154759677c7749632eace30bad752591
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 44fbe79c9ed7cfd4a79daf6ee9b3d39afd33a910
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697200"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106029"
 ---
 # <a name="domain-events-design-and-implementation"></a>События предметной области: проектирование и реализация
 
@@ -366,4 +366,5 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 
 
 >[!div class="step-by-step"]
-[Назад] (client-side-validation.md) [Вперед] (infrastructure-persistence-layer-design.md)
+[Назад](client-side-validation.md)
+[Вперед](infrastructure-persistence-layer-design.md)

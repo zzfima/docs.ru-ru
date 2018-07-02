@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: b3aa0d50ba3ab64440ef51201d611177fea78ce4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e06f582677e61209d0b226fc68bca81dfe593e5
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582679"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104404"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Тестирование служб и веб-приложений ASP.NET Core
 
@@ -124,4 +124,5 @@ public class PrimeWebDefaultRequestShould
 После того как приложение Compose будет установлено и запущено, вы сможете воспользоваться преимуществами точек останова и исключений, если используется Visual Studio. Интеграционные тесты можно выполнять автоматически в конвейере CI в Visual Studio Team Services или в любой другой системе CI/CD, которая поддерживает контейнеры Docker.
 
 >[!div class="step-by-step"]
-[Предыдущий] (subscribe-events.md) [Следующий] (../microservice-ddd-cqrs-patterns/index.md)
+[Назад](subscribe-events.md)
+[Вперед](../microservice-ddd-cqrs-patterns/index.md)

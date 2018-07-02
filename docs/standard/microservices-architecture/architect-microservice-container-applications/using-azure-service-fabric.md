@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: d65968e3d37f53cceee55120110ad4bb3c13d304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5058023aa7cbb42bcf39d061a3273b30e0e9b74c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577682"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105824"
 ---
 # <a name="using-azure-service-fabric"></a>Использование Azure Service Fabric
 
@@ -89,4 +89,5 @@ Service Fabric — это хороший пример платформы, ко�
 Учтите, что контейнеры Docker сами по себе не поддерживают отслеживание состояния. Чтобы реализовать службу с отслеживанием состояния, вам потребуется одна из высокоуровневых платформ, указанных выше. 
 
 >[!div class="step-by-step"]
-[Назад] (scalable-available-multi-container-microservice-applications.md) [Далее] (../docker-application-development-process/index.md)
+[Назад](scalable-available-multi-container-microservice-applications.md)
+[Вперед](../docker-application-development-process/index.md)

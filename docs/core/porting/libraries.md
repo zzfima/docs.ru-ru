@@ -4,12 +4,12 @@ description: Узнайте, как перенести проекты библи
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
-ms.openlocfilehash: 88513eaee35a82d6424fc2218f8cbbe635a8e02c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f1d79623b4ece836732010e76a3c93fbbf8099f
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218362"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028049"
 ---
 # <a name="porting-to-net-core---libraries"></a>Перенос в .NET Core — библиотеки
 
@@ -72,18 +72,6 @@ ms.locfileid: "33218362"
 Аналогично CAS, прозрачность безопасности позволяет декларативно отделить изолированный код от кода, критически важного с точки зрения безопасности, но [больше не поддерживается, как и ограничение безопасности](~/docs/framework/misc/security-transparent-code.md). Эта функция часто используется в Silverlight. 
 
 Чтобы свести к минимуму требуемый набор прав, применяйте ограничения безопасности, предусмотренные в операционной системе, например виртуализацию, контейнеры или учетные записи пользователей.
-
-### <a name="globaljson"></a>global.json
-
-*global.json* — это необязательный файл, который позволяет задать версию средств .NET Core для проекта. Если вы используете ночные сборки .NET Core и вам нужно указать определенную версию пакета SDK, воспользуйтесь файлом *global.json*. Как правило, он хранится в текущей рабочей папке или в одной из ее родительских папок. 
-
-```json
-{
-  "sdk": {
-    "version": "2.1.0-preview1-006491"
-  }
-}
-```
 
 ## <a name="converting-a-pcl-project"></a>Преобразование проекта PCL
 

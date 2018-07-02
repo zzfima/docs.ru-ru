@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: bbb217b2f11901658fa70a5e5cff6521d157952c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208195"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104770"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Выбор между традиционными веб-приложениями и одностраничными приложениями
 
@@ -92,4 +92,5 @@ ms.locfileid: "36208195"
   | Сложный полнофункциональный пользовательский интерфейс | **Ограниченное** | **Хорошо подходит** |
 
 >[!div class="step-by-step"]
-[Назад] (modern-web-applications-characteristics.md) [Далее](architectural-principles.md)
+[Назад](modern-web-applications-characteristics.md)
+[Вперед](architectural-principles.md)

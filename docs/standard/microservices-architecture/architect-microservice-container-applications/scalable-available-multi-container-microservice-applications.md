@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: e8552f79a4196c161ec70d7ea46156215e52db26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aab939af29849ceeef76d6f61b3d4f59d701094c
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578889"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105466"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Управление микрослужбами и многоконтейнерными приложениями для обеспечения высокого уровня масштабируемости и доступности
 
@@ -135,4 +135,5 @@ Azure Service Fabric
 
 
 >[!div class="step-by-step"]
-[Назад] (resilient-high-availability-microservices.md) [Далее] (using-azure-service-fabric.md)
+[Назад](resilient-high-availability-microservices.md)
+[Вперед](using-azure-service-fabric.md)

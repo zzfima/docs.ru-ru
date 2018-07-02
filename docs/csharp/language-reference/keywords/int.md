@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - int keyword [C#]
 ms.assetid: 212447b4-5d2a-41aa-88ab-84fe710bdb52
-ms.openlocfilehash: c7d9bb0ee3d59ef3e0cf56d26e73a925fcfb4206
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 41ee5ecdae815eaddf8652a4873c060fb8f92bc3
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33275295"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028270"
 ---
 # <a name="int-c-reference"></a>int (справочник по C#)
 
 `int` обозначает целочисленный тип данных, в котором хранятся значения, размер и диапазон которых приведен в следующей таблице.  
   
-|Тип|Диапазон|Размер|Тип платформы .NET Framework|Значение по умолчанию|  
-|----------|-----------|----------|-------------------------|-------------------|  
-|`int`|От -2 147 483 648 до 2 147 483 647|32-разрядное целое число со знаком|<xref:System.Int32?displayProperty=nameWithType>|0|  
+|Тип|Диапазон|Размер|Тип .NET|  
+|----------|-----------|----------|-------------------------|  
+|`int`|От -2 147 483 648 до 2 147 483 647|32-разрядное целое число со знаком|<xref:System.Int32?displayProperty=nameWithType>|  
   
 ## <a name="literals"></a>Литералы  
  

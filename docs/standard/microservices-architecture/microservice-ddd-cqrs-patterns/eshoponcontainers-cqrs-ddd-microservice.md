@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: fa26aa86e09f7a5d390336e460fa0272f76e17a4
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.openlocfilehash: fdca8d38157d5c5b62bd077e5d715ca22ac9780f
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34805478"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106753"
 ---
 # <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Применение подходов CQRS и CQS в микрослужбе DDD в eShopOnContainers
 
@@ -64,4 +64,5 @@ ms.locfileid: "34805478"
 
 
 >[!div class="step-by-step"]
-[Назад] (apply-simplified-microservice-cqrs-ddd-patterns.md) [Далее] (cqrs-microservice-reads.md)
+[Назад](apply-simplified-microservice-cqrs-ddd-patterns.md)
+[Вперед](cqrs-microservice-reads.md)

@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 4b57a0ed8c4e8a4cd36ef5cef4b40de0595f1284
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2ec577a12cf677c2ec5e20a6f3e862911c82fbb
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575880"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105697"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Создание, развитие и управление версиями API-интерфейсов и контрактов микрослужб
 
@@ -38,4 +38,5 @@ API микрослужбы представляет собой контракт 
 
 
 >[!div class="step-by-step"]
-[Назад] (asynchronous-message-based-communication.md) [Далее] (microservices-addressability-service-registry.md)
+[Назад](asynchronous-message-based-communication.md)
+[Вперед](microservices-addressability-service-registry.md)

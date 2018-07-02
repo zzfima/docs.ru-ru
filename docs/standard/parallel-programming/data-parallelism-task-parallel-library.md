@@ -10,11 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65084296cd4fb462670d0c4927b741a698a59da9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bf162a3ef9f66e7c7d74c96f13c055857818a2b
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37070958"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Параллелизм данных (библиотека параллельных задач)
 Понятие *Параллелизм данных* относится к сценариям, в которых одна и та же операция выполняется одновременно (то есть параллельно) для элементов в исходной коллекции или массиве. В параллельных операциях с данными исходная коллекция секционируются таким образом, чтобы несколько потоков могли одновременно работать в разных сегментах.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 05/04/2018
 |[Практическое руководство. Написание простого цикла Parallel.ForEach](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|Описание способа написания цикла <xref:System.Threading.Tasks.Parallel.ForEach%2A> по какой-либо исходной коллекции <xref:System.Collections.Generic.IEnumerable%601>.|  
 |[Практическое руководство. Остановка цикла Parallel.For или выход из этого цикла](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|В этом руководстве описывается, как остановить или приостановить параллельный цикл, чтобы все потоки были информированы об этом действии.|  
 |[Практическое руководство. Написание цикла Parallel.For и локальными переменными потока](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|В этом руководстве рассматривается написание цикла <xref:System.Threading.Tasks.Parallel.For%2A>, в котором каждый поток поддерживает частную переменную, которая не видна другим потокам, и синхронизация результатов из всех потоков после завершения цикла.|  
-|[Практическое руководство. Написание цикла Parallel.ForEach и локальными переменными потока](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|В этом руководстве рассматривается написание цикла <xref:System.Threading.Tasks.Parallel.ForEach%2A>, в котором каждый поток поддерживает частную переменную, которая не видна другим потокам, и синхронизация результатов из всех потоков после завершения цикла.|  
+|[Практическое руководство. Написание цикла Parallel.ForEach локальными переменными раздела](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)|В этом руководстве рассматривается написание цикла <xref:System.Threading.Tasks.Parallel.ForEach%2A>, в котором каждый поток поддерживает частную переменную, которая не видна другим потокам, и синхронизация результатов из всех потоков после завершения цикла.|  
 |[Практическое руководство. Отмена цикла Parallel.For или Parallel.ForEach](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|В этом руководстве описывается, как отменить параллельный цикл с помощью <xref:System.Threading.CancellationToken?displayProperty=nameWithType>|  
 |[Практическое руководство. Повышение скорости выполнения небольших тел циклов](../../../docs/standard/parallel-programming/how-to-speed-up-small-loop-bodies.md)|В этом руководстве описывается один из способов увеличения скорости выполнения, когда тело цикла очень мало.|  
 |[Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Общие сведения о библиотеке параллельных задач.|  

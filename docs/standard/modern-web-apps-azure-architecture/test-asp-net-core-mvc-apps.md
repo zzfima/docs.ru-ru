@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: e27cdb4b785253edd27e9854d6f977e3ede02266
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b22e0e109144b4abd04cd4199cfdec244d8fa7af
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208204"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106506"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Тестирование приложений MVC ASP.NET Core
 
@@ -273,4 +273,5 @@ public class CatalogControllerGetImage : BaseWebTest
 Этот функциональный тест выполняет полный стек приложения MVC ASP.NET Core, включая все существующие фильтры, связыватели, ПО промежуточного слоя и т. д. Он проверяет, что указанный маршрут ("/catalog/pic/1") возвращает ожидаемый массив байтов для файла, расположенного в известном месте. Для этого не настраивается реальный веб-сервер, что позволяет избежать большинства недостатков, связанных с тестированием на реальном веб-сервере (например, проблем с настройкой брандмауэра). Функциональные тесты, выполняемые в отношении TestServer, как правило, медленнее интеграционных и модульных тестов, однако значительно быстрее тестов, которые проводятся по сети с использованием тестового веб-сервера.
 
 >[!div class="step-by-step"]
-[Назад] (work-with-data-in-asp-net-core-apps.md) [Далее] (development-process-for-azure.md)
+[Назад](work-with-data-in-asp-net-core-apps.md)
+[Вперед](development-process-for-azure.md)
