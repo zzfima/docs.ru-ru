@@ -31,3 +31,4 @@
 ### [Безопасность и ввод данных пользователем](security-and-user-input.md)
 ### [Безопасность и конфликты](security-and-race-conditions.md)
 ### [Безопасность и создание кода "на лету"](security-and-on-the-fly-code-generation.md)
+### [Timing vulnerabilities with CBC-mode symmetric decryption using padding](vulnerabilities-cbc-mode.md) (Уязвимости в учете времени при симметричной расшифровке в режиме CBC с использованием заполнения).

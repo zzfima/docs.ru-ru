@@ -91,6 +91,7 @@
 ### [Управление зависимостями](core/tools/dependencies.md)
 ### [Дополнения к формату CSPROJ](core/tools/csproj.md)
 ## Миграция
+### [Переход с ASP.NET Core 2.0 на 2.1](core/migration/20-21.md)
 ### [Миграция на формат CSPROJ](core/migration/index.md)
 ### [Сопоставление между project.json и CSPROJ](core/tools/project-json-to-csproj.md)
 ### [Миграция из DNX](core/migration/from-dnx.md)
@@ -414,7 +415,7 @@
 ### [Пространства имен](fsharp/language-reference/namespaces.md)
 ### [Модули](fsharp/language-reference/modules.md)
 ### [Объявления импорта: ключевое слово open](fsharp/language-reference/import-declarations-the-open-keyword.md)
-### [Сигнатуры](fsharp/language-reference/signatures.md)
+### [Файлы подписи](fsharp/language-reference/signature-files.md)
 ### [Единицы измерения](fsharp/language-reference/units-of-measure.md)
 ### [Документация XML](fsharp/language-reference/xml-documentation.md)
 ### [Отложенные вычисления](fsharp/language-reference/lazy-computations.md)
