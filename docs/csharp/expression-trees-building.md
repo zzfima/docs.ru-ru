@@ -3,12 +3,12 @@ title: Построение деревьев выражений
 description: Сведения о способах построения деревьев выражений.
 ms.date: 06/20/2016
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: 52e03bd1ea2635d75da6d70af6918b33b64622b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7751af17aafa8e2d1a14125da43352108b1c1f95
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216318"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207193"
 ---
 # <a name="building-expression-trees"></a>Построение деревьев выражений
 
@@ -43,7 +43,7 @@ var addition = Expression.Add(one, two);
 После этого можно создать лямбда-выражение:
 
 ```csharp
-var lamdba = Expression.Lambda(addition);
+var lambda = Expression.Lambda(addition);
 ```
 
 Это очень простое лямбда-выражение, так как оно не содержит аргументов.

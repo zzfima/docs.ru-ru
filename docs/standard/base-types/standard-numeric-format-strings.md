@@ -1,6 +1,6 @@
 ---
 title: Строки стандартных числовых форматов
-ms.date: 09/10/2017
+ms.date: 06/10/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -18,13 +18,15 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1cad76c234ce73772d3b65b11596ab0e4e0ae3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208207"
 ---
 # <a name="standard-numeric-format-strings"></a>Строки стандартных числовых форматов
+
 Строки стандартных числовых форматов служат для форматирования стандартных числовых типов. Строка стандартных числовых форматов использует формат `Axx`, где:  
   
 -   `A` — это один буквенный символ, который называют *описателем формата*. Любая строка числового формата, содержащая более одной буквы, включая пробелы, интерпретируется как строка настраиваемого числового формата. Дополнительные сведения см. в разделе [Строки настраиваемых числовых форматов](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
@@ -64,24 +66,27 @@ ms.lasthandoff: 05/04/2018
   
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>Использование строк стандартных числовых форматов  
- Строку стандартного числового формата можно использовать для определения форматирования числового значения одним из двух следующих способов:  
+
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+
+Строку стандартного числового формата можно использовать для определения форматирования числового значения одним из двух следующих способов:  
   
 -   Ее можно передать перегруженному методу `ToString`, у которого есть параметр `format`. В следующем примере осуществляется форматирование числового значения в качестве строки со значением валюты для текущего языка и региональных параметров (en-US).  
   
      [!code-cpp[Formatting.Numeric.Standard#10](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#10)]
-     [!code-csharp[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#10)]
      [!code-vb[Formatting.Numeric.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#10)]  
   
 -   Эту строку можно передать в качестве аргумента `formatString` в элемент форматирования, используемый с методами <xref:System.String.Format%2A?displayProperty=nameWithType>, <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> и <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Составное форматирование](../../../docs/standard/base-types/composite-formatting.md). В следующем примере элемент форматирования используется для вставки значения валюты в строку.  
   
      [!code-cpp[Formatting.Numeric.Standard#11](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#11)]
-     [!code-csharp[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#11)]
      [!code-vb[Formatting.Numeric.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#11)]  
   
      При желании вы можете передать аргумент `alignment`, чтобы указать ширину числового поля и установить выравнивание по правому или левому краю. В следующем примере денежное значение в поле длиной 28 символов выравнивается по левому краю, а денежное значение в поле длиной 14 символов выравнивается по правому краю.  
   
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
-     [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
+     [!code-csharp-interactive[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
   
 -   Его можно предоставить в виде аргумента `formatString` в элементе интерполированного выражения интерполированной строки. Дополнительные сведения см. в разделе [Интерполяция строк](../../csharp/language-reference/tokens/interpolated.md) справочника по C# или разделе [Интерполяция строк](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) справочника по Visual Basic.  
@@ -110,7 +115,7 @@ ms.lasthandoff: 05/04/2018
  В следующем примере значение <xref:System.Double> форматируется с помощью спецификатора денежного формата.  
   
  [!code-cpp[Formatting.Numeric.Standard#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#1)]
- [!code-csharp[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#1)]
  [!code-vb[Formatting.Numeric.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#1)]  
   
  [К таблице](#table)  
@@ -130,7 +135,7 @@ ms.lasthandoff: 05/04/2018
  В следующем примере значение <xref:System.Int32> форматируется с помощью описателя десятичного формата.  
   
  [!code-cpp[Formatting.Numeric.Standard#2](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#2)]
- [!code-csharp[Formatting.Numeric.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#2)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#2)]
  [!code-vb[Formatting.Numeric.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#2)]  
   
  [К таблице](#table)  
@@ -154,7 +159,7 @@ ms.lasthandoff: 05/04/2018
  В следующем примере значение <xref:System.Double> форматируется с помощью описателя экспоненциального формата.  
   
  [!code-cpp[Formatting.Numeric.Standard#3](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#3)]
- [!code-csharp[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#3)]
  [!code-vb[Formatting.Numeric.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#3)]  
   
  [К таблице](#table)  
@@ -176,7 +181,7 @@ ms.lasthandoff: 05/04/2018
  В следующем примере значение <xref:System.Double> и значение <xref:System.Int32> форматируются с помощью спецификатора формата с фиксированной точкой.  
   
  [!code-cpp[Formatting.Numeric.Standard#4](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#4)]
- [!code-csharp[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#4)]
  [!code-vb[Formatting.Numeric.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#4)]  
   
  [К таблице](#table)  
@@ -205,10 +210,10 @@ ms.lasthandoff: 05/04/2018
  
 Обратите внимание, что при использовании совместно со значением <xref:System.Double> описатель формата G17 гарантирует обратимость преобразования исходного значения <xref:System.Double>. Это связано с тем, что <xref:System.Double> совместим со стандартом IEEE 754-2008 для чисел двойной точности (`binary64`) с плавающей запятой, в котором определена точность до 17 значащих цифр. Мы рекомендуем использовать этот формат вместо [описателя формата "R"](#RFormatString), который в некоторых случаях не гарантирует обратимость преобразования чисел двойной точности с плавающей запятой. В следующем примере представлен один такой случай.
 
-[!code-csharp[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
+[!code-csharp-interactive[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/csharp/g17.cs)]   
 [!code-vb[Round-tripping a Double](../../../samples/snippets/standard/base-types/format-strings/vb/g17.vb)]   
 
-При использовании со значением <xref:System.Single> описатель формата G9 гарантирует обратимость преобразования исходного значения <xref:System.Single>. Это связано с тем, что <xref:System.Single> совместим со стандартом IEEE 754-2008 для чисел одиночной точности (`binary32`) с плавающей запятой, в котором определена точность до 9 значащих цифр. Мы рекомендуем использовать этот формат вместо [описателя формата "R"](#RFormatString), который в некоторых случаях не гарантирует обратимость преобразования чисел одиночной точности с плавающей запятой.
+При использовании со значением <xref:System.Single> описатель формата G9 гарантирует обратимость преобразования исходного значения <xref:System.Single>. Это связано с тем, что <xref:System.Single> совместим со стандартом IEEE 754-2008 для чисел одиночной точности (`binary32`) с плавающей запятой, в котором определена точность до 9 значащих цифр. Из соображений производительности рекомендуется использовать его вместо [описателя формата "R"](#RFormatString).
 
  Форматирование результирующей строки определяется сведениями о форматировании в текущем объекте <xref:System.Globalization.NumberFormatInfo>. В следующей таблице представлены свойства <xref:System.Globalization.NumberFormatInfo>, обеспечивающие управление форматированием результирующей строки.  
   
@@ -221,7 +226,7 @@ ms.lasthandoff: 05/04/2018
  В следующем примере различные значения с плавающей запятой форматируются с помощью спецификатора общего формата.  
   
  [!code-cpp[Formatting.Numeric.Standard#5](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#5)]
- [!code-csharp[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#5)]
  [!code-vb[Formatting.Numeric.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#5)]  
   
  [К таблице](#table)  
@@ -244,7 +249,7 @@ ms.lasthandoff: 05/04/2018
  В следующем примере различные значения с плавающей запятой форматируются с помощью спецификатора числового формата.  
   
  [!code-cpp[Formatting.Numeric.Standard#6](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#6)]
- [!code-csharp[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#6)]
  [!code-vb[Formatting.Numeric.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#6)]  
   
  [К таблице](#table)  
@@ -269,7 +274,7 @@ ms.lasthandoff: 05/04/2018
  В следующем примере значения с плавающей запятой форматируются с помощью спецификатора процентного формата.  
   
  [!code-cpp[Formatting.Numeric.Standard#7](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#7)]
- [!code-csharp[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#7)]
  [!code-vb[Formatting.Numeric.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#7)]  
   
  [К таблице](#table)  
@@ -278,7 +283,7 @@ ms.lasthandoff: 05/04/2018
 ## <a name="the-round-trip-r-format-specifier"></a>Описатель формата обратного преобразования ("R")  
  Описатель формата обратного преобразования ("R") пытается выполнить преобразование числового значения в строку так, чтобы при обратном преобразовании этой строки можно было получить то же самое числовое значение. Этот формат поддерживается только для типов <xref:System.Single>, <xref:System.Double> и <xref:System.Numerics.BigInteger>.  
 
-Для значений <xref:System.Double> и <xref:System.Single> описатель формата "R" в некоторых случаях не может гарантировать правильное обратное преобразование, а также он имеет относительно низкую производительность. Вместо него мы рекомендуем использовать описатель формата [G17](#GFormatString) для значений <xref:System.Double> и описатель формата [G9](#GFormatString) для значений <xref:System.Single>, которые гарантируют правильное обратное преобразование.
+Для значений <xref:System.Double> описатель формата "R" в некоторых случаях не может гарантировать правильное обратное преобразование. Для значений <xref:System.Double> и <xref:System.Single> он также обеспечивает относительно низкую производительность. Вместо него мы рекомендуем использовать описатель формата [G17](#GFormatString) для значений <xref:System.Double> и описатель формата [G9](#GFormatString) для значений <xref:System.Single>, которые гарантируют правильное обратное преобразование.
 
  Если с помощью этого описателя форматируется значение типа <xref:System.Numerics.BigInteger>, то его строковое представление будет содержать все значащие цифры <xref:System.Numerics.BigInteger>.  
   
@@ -294,7 +299,7 @@ ms.lasthandoff: 05/04/2018
  В следующем примере форматируется значение <xref:System.Numerics.BigInteger> с применением спецификатора формата обратного преобразования.  
   
  [!code-cpp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cpp)]
- [!code-csharp[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
+ [!code-csharp-interactive[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.cs)]
  [!code-vb[R format specifier with a BigInteger](../../../samples/snippets/standard/base-types/format-strings/biginteger-r.vb)]  
   
 > [!IMPORTANT]
@@ -302,7 +307,7 @@ ms.lasthandoff: 05/04/2018
   
  Чтобы избежать проблемы со значениями <xref:System.Double>, отформатированными с использованием строки стандартного числового формата R, для которых не удалось выполнить обратное преобразование при компиляции с использованием параметра `/platform:x64` или `/platform:anycpu` в 64-разрядных системах, можно отформатировать значения <xref:System.Double> с помощью строки стандартного числового формата G17. В примере ниже используется строка формата "R" со значением <xref:System.Double>, для которого не удается выполнить обратное преобразование, а также строка формата "G17" для успешного обратного преобразования исходного значения.  
   
- [!code-csharp[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
+ [!code-csharp-interactive[System.Double.ToString#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Double.ToString/cs/roundtripex1.cs#5)]
  [!code-vb[System.Double.ToString#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Double.ToString/vb/roundtripex1.vb#5)]  
   
  [К таблице](#table)  
@@ -318,7 +323,7 @@ ms.lasthandoff: 05/04/2018
  В следующем примере значения <xref:System.Int32> форматируются с помощью спецификатора шестнадцатеричного формата.  
   
  [!code-cpp[Formatting.Numeric.Standard#9](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/Standard.cpp#9)]
- [!code-csharp[Formatting.Numeric.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#9)]
+ [!code-csharp-interactive[Formatting.Numeric.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/Standard.cs#9)]
  [!code-vb[Formatting.Numeric.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/Standard.vb#9)]  
   
  [К таблице](#table)  
@@ -343,11 +348,13 @@ ms.lasthandoff: 05/04/2018
 ### <a name="floating-point-infinities-and-nan"></a>Бесконечности действительных чисел с плавающей запятой и NaN  
  Если, вне зависимости от строки формата, значение типа с плавающей запятой <xref:System.Single> или <xref:System.Double> является положительной бесконечностью, отрицательной бесконечностью или не является числом (NaN), отформатированная строка будет содержать значение соответствующего свойства (<xref:System.Globalization.NumberFormatInfo.PositiveInfinitySymbol%2A>, <xref:System.Globalization.NumberFormatInfo.NegativeInfinitySymbol%2A> или <xref:System.Globalization.NumberFormatInfo.NaNSymbol%2A>) применимого в настоящий момент объекта <xref:System.Globalization.NumberFormatInfo>.  
   
-<a name="example"></a>   
 ## <a name="example"></a>Пример  
+ 
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+ 
  В следующем примере с помощью языка и региональных параметров "en-US" и всех описателей стандартных числовых форматов форматируется целочисленное значение и числовое значение с плавающей запятой. В этом примере используются два числовых типа (<xref:System.Double> и <xref:System.Int32>), но аналогичные результаты были бы получены для любых других числовых типов (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal> и <xref:System.Single>).  
   
- [!code-csharp[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
+ [!code-csharp-interactive[system.x.tostring-and-culture#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.X.ToString-and-Culture/cs/xts.cs#1)]
  [!code-vb[system.x.tostring-and-culture#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.X.ToString-and-Culture/vb/xts.vb#1)]  
   
 ## <a name="see-also"></a>См. также  

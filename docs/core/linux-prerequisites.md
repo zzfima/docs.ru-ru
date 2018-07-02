@@ -4,12 +4,12 @@ description: Поддерживаемые версии Linux и зависимо
 author: jralexander
 ms.author: johalex
 ms.date: 06/01/2018
-ms.openlocfilehash: 30448d84a8377e27b0606b3bdabdcbac96c048aa
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 62493d45bd5839119fd98adb6db52d8d53ce4de5
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728551"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314826"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Необходимые компоненты для .NET Core в Linux
 
@@ -197,7 +197,7 @@ ms.locfileid: "34728551"
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Чтобы использовать .NET Core 2.1 с Visual Studio, необходимо [установить предварительную версию 1 Visual Studio 2017 15.7 или более позднюю](https://www.visualstudio.com/vs/preview).
+> Чтобы использовать .NET Core 2.1 с Visual Studio, необходимо [установить Visual Studio 2017 15.7 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 |Среды выполнения и пакеты SDK                  |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04 и Linux Mint 18|Ubuntu 14.04 и Linux Mint 17|
 |---------------------------------|----------------|----------------|----------------------------|----------------------------|
@@ -253,7 +253,7 @@ ms.locfileid: "34728551"
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Чтобы использовать .NET Core 2.1 с Visual Studio, необходимо [установить предварительную версию 1 Visual Studio 2017 15.7 или более позднюю](https://www.visualstudio.com/vs/preview).
+> Чтобы использовать .NET Core 2.1 с Visual Studio, необходимо [установить Visual Studio 2017 15.7 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 |Среды выполнения и пакеты SDK                  |Debian 9       |Debian 8       |
 |---------------------------------|---------------|---------------|
@@ -306,7 +306,7 @@ ms.locfileid: "34728551"
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Чтобы использовать .NET Core 2.1 с Visual Studio, необходимо [установить предварительную версию 1 Visual Studio 2017 15.7 или более позднюю](https://www.visualstudio.com/vs/preview).
+> Чтобы использовать .NET Core 2.1 с Visual Studio, необходимо [установить Visual Studio 2017 15.7 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 |Среды выполнения и пакеты SDK                  |Fedora 27          |Fedora 26             |
 |---------------------------------|-------------------|----------------------|
@@ -363,7 +363,7 @@ ms.locfileid: "34728551"
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Чтобы использовать .NET Core 2.1 с Visual Studio, необходимо [установить предварительную версию 1 Visual Studio 2017 15.7 или более позднюю](https://www.visualstudio.com/vs/preview/).
+> Чтобы использовать .NET Core 2.1 с Visual Studio, необходимо [установить Visual Studio 2017 15.7 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 * Среда выполнения .NET Core 2.1.0: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0)
 * Пакет SDK для .NET Core 2.1.300: [ссылка для установки](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300)
@@ -423,7 +423,7 @@ ms.locfileid: "34728551"
 **.NET Core 2.1**
 
 >[!IMPORTANT]
-> Чтобы использовать .NET Core 2.1 с Visual Studio, необходимо [установить предварительную версию 1 Visual Studio 2017 15.7 или более позднюю](https://www.visualstudio.com/vs/preview).
+> Чтобы использовать .NET Core 2.1 с Visual Studio, необходимо [установить Visual Studio 2017 15.7 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).
 
 **SUSE Linux Enterprise Server**
 

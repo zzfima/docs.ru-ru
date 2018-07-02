@@ -1,21 +1,21 @@
 ---
-title: Телеметрия средств интерфейса командной строки для .NET Core
-description: Сведения о функциях телеметрии средств .NET Core, позволяющих собирать сведения об использовании для анализа, а также о собираемых данных и способе отключения этих функций.
+title: Телеметрия пакета SDK для .NET Core
+description: Сведения о функциях телеметрии пакета SDK для .NET Core, позволяющих собирать сведения об использовании для анализа, а также о собираемых данных и способе отключения этих функций.
 author: richlander
 ms.author: mairaw
-ms.date: 08/04/2017
-ms.openlocfilehash: 4c04867f5db512ef53c23ec41ea66db570a82021
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 06/20/2018
+ms.openlocfilehash: f60a1eaa7b869676dfbb67529e7878ca9b9ca34a
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216087"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314881"
 ---
-# <a name="net-core-cli-tools-telemetry"></a>Телеметрия средств интерфейса командной строки для .NET Core
+# <a name="net-core-sdk-telemetry"></a>Телеметрия пакета SDK для .NET Core
 
-[Пакет SDK для .NET Core](index.md) включает в себя [функцию телеметрии](https://github.com/dotnet/cli/pull/2145), которая собирает сведения об использовании. Команде разработчиков .NET важно знать, как используются эти средства, чтобы иметь возможность улучшить их. Дополнительные сведения см. в разделе [Что мы узнали благодаря данным телеметрии пакета SDK для .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/).
+[Пакет SDK для .NET Core](index.md) включает в себя [функцию телеметрии](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry), которая собирает сведения об использовании. Команде разработчиков .NET важно знать, как используются эти средства, чтобы их можно было улучшить. Дополнительные сведения см. в разделе [Что мы узнали благодаря данным телеметрии пакета SDK для .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/).
 
-Данные собираются анонимно и публикуются в сводной форме для использования корпорацией Майкрософт и сообществом по [лицензии Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/). 
+Данные собираются анонимно и публикуются в сводной форме для использования корпорацией Майкрософт и сообществом по [лицензии Creative Commons Attribution](https://creativecommons.org/licenses/by/4.0/).
 
 ## <a name="scope"></a>Область
 
@@ -33,10 +33,9 @@ ms.locfileid: "33216087"
 - `dotnet restore`
 - `dotnet run`
 
+## <a name="how-to-opt-out"></a>Как отключить функцию
 
-## <a name="behavior"></a>Поведение
-
-Функция телеметрии средств интерфейса командной строки .NET Core по умолчанию включена. Чтобы отключить ее, присвойте переменной среды `DOTNET_CLI_TELEMETRY_OPTOUT` значение `1` или `true`.
+Функция телеметрии пакета SDK для .NET Core по умолчанию включена. Чтобы отключить ее, присвойте переменной среды `DOTNET_CLI_TELEMETRY_OPTOUT` значение `1` или `true`.
 
 ## <a name="data-points"></a>Точки данных
 
@@ -63,11 +62,12 @@ ms.locfileid: "33216087"
 
 Функция не собирает личные данные, например имена пользователей и их адреса электронной почты. Она не проверяет код и не извлекает конфиденциальные данные уровня проекта, например имена и репозиторий. Данные отправляются по защищенному протоколу на серверы Майкрософт с помощью технологии [Microsoft Azure Application Insights](https://azure.microsoft.com/services/application-insights/), хранятся в режиме ограниченного доступа и публикуются из защищенных систем [хранилища Azure](https://azure.microsoft.com/services/storage/) с соблюдением строгих мер безопасности.
 
-Мы хотим узнать, как используются средства и правильно ли они работают, а не что вы создаете с их помощью. Если у вас есть подозрения, что функция телеметрии собирает конфиденциальные данные или что мы обрабатываем данные небезопасным либо неподобающим образом, [отправьте сообщение о проблеме в репозитории dotnet/cli](https://github.com/dotnet/cli/issues) для изучения.
+Команда разработчиков .NET хочет узнать, как используются средства и правильно ли они работают, а не что вы создаете с их помощью. Если у вас есть подозрения, что функция телеметрии собирает конфиденциальные данные или что мы обрабатываем данные небезопасным либо неподобающим образом, отправьте сообщение о проблеме в репозитории [dotnet/cli](https://github.com/dotnet/cli/issues) для изучения.
 
 ## <a name="published-data"></a>Опубликованные данные
 
 Данные публикуются ежеквартально и доступны на странице [данных по использованию пакета SDK для .NET](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md). Файл данных содержит следующие столбцы:
+
 - Метка времени
 - Occurrences&#8224;
 - Команда
@@ -77,7 +77,7 @@ ms.locfileid: "33216087"
 - OSVersion
 - SDKVersion
 
-&#8224;В столбце *Occurrences* приводится совокупное число раз, которое команда использовалась для метрики соответствующей строки в указанный день. 
+&#8224;В столбце *Occurrences* приводится совокупное число раз, которое команда использовалась для метрики соответствующей строки в указанный день.
 
 &#8225;В столбце *Geography*, как правило, содержится название страны. В некоторых случаях в этом столбце может указываться Антарктида, либо потому что исследователи используют .NET Core в Антарктиде, либо из-за неправильных сведений о расположении.
 
@@ -92,13 +92,13 @@ ms.locfileid: "33216087"
 [2016 — КВ3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)  
 [2016 — КВ4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)  
 [2017 — КВ1](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)  
-[2017 — КВ2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)
+[2017 — КВ2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)  
+[2017 — КВ3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)  
+[2017 — КВ4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)  
 
-Дополнительные наборы данных публикуются с помощью стандартного формата URL-адресов. Замените `<YEAR>` на год, а `<QUARTER>` — на квартал (используйте `1`, `2`, `3` или `4`). Файлы имеют формат значений с разделением знаками табуляции (*TSV*). 
+Дополнительные наборы данных публикуются с помощью стандартного формата URL-адресов. Замените `<YEAR>` на год, а `<QUARTER>` — на квартал (используйте `1`, `2`, `3` или `4`). Файлы имеют формат значений с разделением знаками табуляции (*TSV*).
 
-```
-https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUARTER>.tsv
-```
+`https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUARTER>.tsv`
 
 ## <a name="license"></a>Лицензия
 
@@ -110,22 +110,26 @@ https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-<YEAR>-q<QUAR
 
 ## <a name="disclosure"></a>Раскрытие информации
 
-При первом выполнении одной из команд (например, `dotnet restore`) средства интерфейса командной строки .NET Core выводят приведенный ниже текст. Он может немного отличаться в зависимости от используемой версии пакета SDK. Именно таким образом корпорация Майкрософт уведомляет вас о сборе данных.
+При первом выполнении одной из [команд .NET Core CLI](index.md) (например, `dotnet restore`) пакет SDK для .NET Core выводит следующий текст. Он может немного отличаться в зависимости от используемой версии пакета SDK. Именно таким образом корпорация Майкрософт уведомляет вас о сборе данных.
 
 ```console
 Welcome to .NET Core!
 ---------------------
-Learn more about .NET Core @ https://aka.ms/dotnet-docs. Use dotnet --help to see available commands or go to https://aka.ms/dotnet-cli-docs.
- 
+Learn more about .NET Core: https://aka.ms/dotnet-docs
+Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli-docs
+
 Telemetry
---------------
-The .NET Core tools collect usage data in order to improve your experience. The data is anonymous and does not include command-line arguments. The data is collected by Microsoft and shared with the community.
-You can opt out of telemetry by setting a DOTNET_CLI_TELEMETRY_OPTOUT environment variable to 1 using your favorite shell.
-You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-telemetry.
+---------
+The .NET Core tools collect usage data in order to help us improve your experience. 
+The data is anonymous and doesn't include command-line arguments. 
+The data is collected by Microsoft and shared with the community. 
+You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
+
+Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
 ```
 
 ## <a name="see-also"></a>См. также
 
 [Что мы узнали благодаря данным телеметрии пакета SDK для .NET Core](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)  
-[Справочные материалы по телеметрии (репозиторий dotnet/cli; ветвь release/2.0.0)](https://github.com/dotnet/cli/tree/release/2.0.0/src/dotnet/Telemetry)   
-[Данные по использованию пакета SDK для .NET Core](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)
+[Справочные материалы по телеметрии (репозиторий dotnet/cli)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)  
+[Данные по использованию пакета SDK для .NET Core](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)  

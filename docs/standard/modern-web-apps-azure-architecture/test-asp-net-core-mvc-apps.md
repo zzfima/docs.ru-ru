@@ -4,17 +4,17 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/08/2017
-ms.openlocfilehash: 7b4bcb1c39ddbbc104820558532b03bc9341804e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e27cdb4b785253edd27e9854d6f977e3ede02266
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592565"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208204"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>Тестирование приложений MVC ASP.NET Core
 
 > _"Если вы не хотите выполнять модульное тестирование своего продукта, ваши заказчики также вряд ли захотят делать это"._
-> _-Аноним-
+>  _-Аноним-_
 
 ## <a name="summary"></a>Сводка
 
@@ -38,7 +38,7 @@ ms.locfileid: "33592565"
 
 Класс реализации LocalFileImageService реализует логику получения и возврата байтов файла изображения из конкретной папки по заданному идентификатору:
 
-```cs
+```csharp
 public class LocalFileImageService : IImageService
 {
     private readonly IHostingEnvironment _env;
@@ -53,6 +53,13 @@ public class LocalFileImageService : IImageService
             var contentRoot = _env.ContentRootPath + "//Pics";
             var path = Path.Combine(contentRoot, id + ".png");
             return File.ReadAllBytes(path);
+        }
+        catch (FileNotFoundException ex)
+        {
+            throw new CatalogImageMissingException(ex);
+        }
+    }
+}
 ```
 
 ### <a name="functional-tests"></a>Функциональные тесты
@@ -101,19 +108,19 @@ public class LocalFileImageService : IImageService
 
 Тестам следует присваивать единообразные имена, которые указывают на выполняемые ими задачи. Я могу порекомендовать успешно проверенный на практике подход, при котором имена тестовых классов задаются на основе проверяемого ими класса и метода. В этом случае получается множество небольших тестовых классов, однако можно легко определить, для чего предназначен каждый из них. Таким образом, имена тестовых классов определяют проверяемый класс и метод. С помощью имени тестового метода можно указать, какое поведение он проверяет. Это имя должно определять ожидаемое поведение, а также любые принимаемые входные данные и допущения. Примеры имен тестов:
 
--   CatalogControllerGetImage.CallsImageServiceWithId
+- CatalogControllerGetImage.CallsImageServiceWithId
 
--   CatalogControllerGetImage.LogsWarningGivenImageMissingException
+- CatalogControllerGetImage.LogsWarningGivenImageMissingException
 
--   CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess
+- CatalogControllerGetImage.ReturnsFileResultWithBytesGivenSuccess
 
--   CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
+- CatalogControllerGetImage.ReturnsNotFoundResultGivenImageMissingException
 
 В качестве варианта можно добавить в конец имени тестового класса слово "Should" (Должен) и слегка изменить формулировку:
 
--   CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
+- CatalogControllerGetImage**Should**.**Call**ImageServiceWithId
 
--   CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
+- CatalogControllerGetImage**Should**.**Log**WarningGivenImageMissingException
 
 Некоторые разработчики считают второй подход более понятным, несмотря на более длинные имена. В любом случае постарайтесь выбрать соглашение об именовании, которое позволит легко определять поведение теста. Благодаря этому в случае неудачного завершения одного или нескольких тестов вы сможете легко определить, что именно не удалось сделать. Не рекомендуется присваивать тестам слишком размытые имена, например ControllerTests.Test1, поскольку по ним вы не сможете определить, на что указывают результаты теста.
 
@@ -131,7 +138,7 @@ public class LocalFileImageService : IImageService
 
 В некоторых случаях, чтобы провести модульное тестирование кода, требуется выполнить его рефакторинг. Зачастую для этого требуется определить абстракции и использовать внедрение зависимостей для доступа к абстракции в коде, который требуется протестировать, вместо того, чтобы писать код непосредственно для работы с инфраструктурой. Например, рассмотрим простой метод действия для показа изображений:
 
-```cs
+```csharp
 [HttpGet("[controller]/pic/{id}")]
 public IActionResult GetImage(int id)
 {
@@ -146,7 +153,7 @@ public IActionResult GetImage(int id)
 
 Что следует проверять, если вы не можете напрямую протестировать поведение файловой системы или маршрут с помощью модульного теста? После рефакторинга, который позволит провести модульное тестирование, вы можете заметить отсутствие некоторых тестовых случаев и функционального поведения, например обработки ошибок. Что делает метод в том случае, если файл не найден? Что он должен делать в такой ситуации? В этом примере после рефакторинга метод будет выглядеть следующим образом:
 
-```cs
+```csharp
 [HttpGet("[controller]/pic/{id}")\]
 public IActionResult GetImage(int id)
 {
@@ -168,21 +175,11 @@ public IActionResult GetImage(int id)
 
 ## <a name="integration-testing-aspnet-core-apps"></a>Интеграционное тестирование приложений ASP.NET Core
 
-```cs
-    }
-        catch (FileNotFoundException ex)
-        {
-            throw new CatalogImageMissingException(ex);
-        }
-    }
-}
-```
-
 Эта служба использует интерфейс IHostingEnvironment, так же, как было в коде CatalogController до того, как он был вынесен в отдельную службу посредством рефакторинга. Поскольку интерфейс IHostingEnvironment использовался только в этом коде контроллера, эта зависимость была удалена из конструктора CatalogController.
 
 Чтобы проверить корректность работы этой службы, вам необходимо создать известный тестовый файл изображения и убедиться, что служба возвращает его при вводе соответствующих данных. Обратите внимание, что не следует использовать макеты объектов для поведения, которое вы хотите проверить (в этом случае считывание из файловой системы). Тем не менее макеты объектов по-прежнему могут быть полезны при настройке интеграционных тестов. В этом случае вы можете создать макет IHostingEnvironment таким образом, чтобы его атрибут ContentRootPath указывал на папку, которая будет использоваться для тестового изображения. Полностью рабочий класс интеграционного теста показан здесь:
 
-```cs
+```csharp
 public class LocalFileImageServiceGetImageBytesById
 {
     private byte[] _testBytes = new byte[] { 0x01, 0x02, 0x03 };
@@ -224,7 +221,7 @@ public class LocalFileImageServiceGetImageBytesById
 
 Для удобства функционального тестирования приложений ASP.NET Core используется класс TestServer. Настройка TestServer осуществляется с помощью WebHostBuilder так же, как и в обычном случае для приложения. WebHostBuilder необходимо настроить так же, как реальный хост вашего приложения, однако при необходимости вы можете изменять любые его аспекты, чтобы упростить тестирование. В большинстве случаев для тестирования можно использовать один и тот же TestServer, поэтому вы можете инкапсулировать его в повторно используемый метод (например, в базовый класс):
 
-```cs
+```csharp
 public abstract class BaseWebTest
 {
     protected readonly HttpClient _client;
@@ -234,14 +231,14 @@ public abstract class BaseWebTest
     {
         _client = GetClient();
     }
-    
+
     protected HttpClient GetClient()
     {
         var startupAssembly = typeof(Startup).GetTypeInfo().Assembly;
         _contentRoot = GetProjectPath("src", startupAssembly);
         var builder = new WebHostBuilder()
         .UseContentRoot(_contentRoot)
-        .UseStartup&lt;Startup&gt;();
+        .UseStartup<Startup>();
         var server = new TestServer(builder);
         var client = server.CreateClient();
         return client;
@@ -251,7 +248,7 @@ public abstract class BaseWebTest
 
 Метод GetProjectPath просто возвращает физический путь к веб-проекту (скачивание примера решения). В этом случае WebHostBuilder задает корень содержимого для веб-приложения и ссылку на тот же класс Startup, который используется реальным веб-приложением. Для работы с TestServer и отправки запросов к нему вы можете использовать стандартный тип System.Net.HttpClient. TestServer содержит полезный метод CreateClient, который предоставляет предварительно настроенный клиент, готовый для выполнения запросов к приложению, выполняемому на TestServer. Этот клиент (для приведенного выше базового теста задан защищенный элемент \_client) используется при написании функциональных тестов для приложения ASP.NET Core:
 
-```cs
+```csharp
 public class CatalogControllerGetImage : BaseWebTest
 {
     [Fact]

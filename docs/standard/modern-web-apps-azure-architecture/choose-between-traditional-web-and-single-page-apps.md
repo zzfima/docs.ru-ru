@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
-ms.openlocfilehash: 834c71b92cb1bfd19bdc7fec8a19d3b2a87b74bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8c6a3b6c9c934cd44eb4fa402c8d792006ac560
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582903"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36208195"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Выбор между традиционными веб-приложениями и одностраничными приложениями
 
@@ -71,10 +71,10 @@ ms.locfileid: "33582903"
 Для создания одностраничных приложений требуется знакомство с библиотеками и принципами программирования на стороне клиента с применением JavaScript или TypeScript. Ваша команда должна быть знакома с принципами написания современных приложений на JavaScript на основе платформы одностраничных приложений, такой как Angular.
 
 > ### <a name="references--spa-frameworks"></a>Ссылки — платформы одностраничных приложений
-> - **AngularJS**  
-> <https://angularjs.org/>
-> - **Сравнение четырех популярных платформ JavaScript**  
-> <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
+> - **Angular**  
+> <https://angular.io>
+> - **Сравнение платформ JavaScript**  
+> <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
 
 **В вашем приложении должен предоставляться API для других внутренних или общедоступных клиентов**
 

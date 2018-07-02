@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b816087f54e652f07dc791b7d66eb1af8f52f55e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: deea4e6128eace0ffa539d77bb63f7629eb72354
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406511"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207408"
 ---
 # <a name="corsegment-structure"></a>Структура COR_SEGMENT
 Содержит сведения об области памяти в управляемой куче.  
@@ -39,26 +39,26 @@ typedef struct _COR_SEGMENT {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`start`|Начальный адрес области памяти.|  
 |`end`|Конечный адрес области памяти.|  
-|`gen`|Объект [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md) член перечисления, указывающее, создание области памяти.|  
-|`heap`|Номер кучи, в которой находится в области памяти. Дополнительные сведения см. в разделе "Примечания".|  
+|`gen`|Элемент перечисления [CorDebugGenerationTypes](../../../../docs/framework/unmanaged-api/debugging/cordebuggenerationtypes-enumeration.md), который указывает на создание области памяти.|  
+|`heap`|Номер кучи, в которой находится область памяти. Дополнительные сведения см. в разделе "Примечания".|  
   
 ## <a name="remarks"></a>Примечания  
- `COR_SEGMENTS` Структура представляет области памяти в управляемой куче.  `COR_SEGMENTS` объекты являются элементами [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) объекта коллекции, который заполняется путем вызова[ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) метод.  
+ Структура `COR_SEGMENTS` представляет область памяти в управляемой куче.  Объекты `COR_SEGMENTS` являются членами объекта коллекции [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md), которая заполняется путем вызова метода [ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md).  
   
- `heap` Поле является число процессоров, соответствующее кучи формируется отчет. Для сборщиков мусора рабочей станции его значение всегда равно нулю, так как рабочие станции имеют только один кучи сборщика мусора. Для сборщиков мусора сервера его значение соответствует кучи, подключенный к процессору. Обратите внимание, что может больше или меньше мусора кучи чем фактическое процессоров из-за особенностей реализации сборщика мусора.  
+ В поле `heap` указан номер обработчика, который соответствует определенной куче. Для сборщиков мусора на рабочей станции это значение всегда равно нулю, ведь на рабочих станциях только одна куча сборки мусора. Для сборщиков мусора на сервере это значение соответствует обработчику, к которому привязана куча. Куч сборки мусора может быть больше или меньше фактического числа обработчиков в связи с особенностями реализации сборщика мусора.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Структуры отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  

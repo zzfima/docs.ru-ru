@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: c01152d016a852c15ffa1d1c82c16d6795965f31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16d318c1c1a5d8e560b97d9e996f1165a4566c6a
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289221"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207996"
 ---
 # <a name="is-c-reference"></a>is (Справочник по C#) #
 
@@ -75,7 +75,7 @@ ms.locfileid: "33289221"
 
 где *expr* — это выражение, значением которого является экземпляр какого-либо типа, *type* — это имя типа, в который должен быть преобразован результат *expr*, *varname* — это объект, в который преобразуется результат *expr*, если проверка `is` возвращает значение `true`. 
 
-Выражение `is` имеет значение `true`, если выполняется одно из следующих условий:
+Выражение `is` имеет значение `true`, если *expr* не имеет значение `null` и выполняется одно из следующих условий:
 
 - *expr* представляет собой экземпляр того же типа, что и *type*;
 
@@ -85,7 +85,7 @@ ms.locfileid: "33289221"
 
 - *expr* является экземпляром типа, который реализует интерфейс *type*.
 
-Если *exp* имеет значение `true` и `is` используется с оператором `if`, назначается *varname* и получает локальную область видимости в пределах только оператора `if`.
+Если *expr* имеет значение `true` и `is` используется с оператором `if`, назначается *varname*, который действует только в пределах оператора `if`.
 
 В следующем примере используется шаблон типа `is`, который обеспечивает реализацию метода <xref:System.IComparable.CompareTo(System.Object)?displayProperty=nameWithType> типа.
 
