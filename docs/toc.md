@@ -120,7 +120,6 @@
 ### [Модульное тестирование опубликованных выходных данных](core/testing/unit-testing-published-output.md)
 ### [Live Unit Testing в проектах .NET Core с использованием Visual Studio](/visualstudio/test/live-unit-testing-start)
 ## [Управление версиями](core/versions/index.md)
-### [Поддержка .NET Core](core/versions/lts-current.md)
 <!--### [🔧 Servicing](core/versions/servicing.md)-->
 ## [Каталог идентификаторов сред выполнения](core/rid-catalog.md)
 ## [Обзор пакета SDK для .NET Core](core/sdk.md)

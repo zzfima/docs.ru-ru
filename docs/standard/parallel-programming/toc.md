@@ -4,7 +4,7 @@
 #### [Практическое руководство. Написание простого цикла Parallel.For](how-to-write-a-simple-parallel-for-loop.md)
 #### [Практическое руководство. Написание простого цикла Parallel.ForEach](how-to-write-a-simple-parallel-foreach-loop.md)
 #### [Практическое руководство. Написание цикла Parallel.For и локальными переменными потока](how-to-write-a-parallel-for-loop-with-thread-local-variables.md)
-#### [Практическое руководство. Написание цикла Parallel.ForEach и локальными переменными потока](how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)
+#### [Практическое руководство. Написание цикла Parallel.ForEach локальными переменными раздела](how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)
 #### [Практическое руководство. Отмена цикла Parallel.For или Parallel.ForEach](how-to-cancel-a-parallel-for-or-foreach-loop.md)
 #### [Практическое руководство. Обработка исключений в параллельных циклах](how-to-handle-exceptions-in-parallel-loops.md)
 #### [Практическое руководство. Повышение скорости выполнения небольших тел циклов](how-to-speed-up-small-loop-bodies.md)
