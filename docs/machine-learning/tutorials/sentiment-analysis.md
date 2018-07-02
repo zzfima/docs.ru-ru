@@ -4,12 +4,12 @@ description: На примере двоичной классификации с 
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: e6c9ae0eb91fcb570209ce25d4a18a4dcd104724
-ms.sourcegitcommit: 5b0802832fb9ad684d34e69b8644a16a5b7c4810
+ms.openlocfilehash: 898b4664120b6eeb0ef18aac3acdc94b0ca0bacd
+ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34860710"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36314842"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Руководство. Использование ML.NET для анализа тональности методом двоичной классификации
 
@@ -21,11 +21,11 @@ ms.locfileid: "34860710"
 В этом руководстве вы узнаете, как:
 > [!div class="checklist"]
 > * Определение проблемы
-> * выбирать подходящую задачу машинного обучения;
+> * Выбор подходящей задачи машинного обучения
 > * подготавливать данные;
 > * создавать конвейеры обучения;
 > * загружать классификатор;
-> * обучать модель;
+> * обучить модель;
 > * проводить оценку модели по другому набору данных;
 > * прогнозировать результаты для тестовых данных с помощью модели.
 
@@ -35,7 +35,7 @@ ms.locfileid: "34860710"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* [Visual Studio 2017 15.6 или более поздней версии](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
+* [Visual Studio 2017 15.6 или более поздней версии](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) с установленной рабочей нагрузкой "Кроссплатформенная разработка .NET Core".
 
 * [Файл с рабочими данными в формате строк, разделенных знаками табуляции из Wikipedia detox (wikiPedia-detox-250-line-data.tsv)](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv).
 * [Файл с тестовыми данными в формате строк, разделенных знаками табуляции из Wikipedia detox (wikiPedia-detox-250-line-test.tsv)](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-test.tsv).
@@ -167,7 +167,7 @@ static async Task Main(string[] args)
 Создайте метод `Train` сразу после метода `Main`, вставив в него следующий код:
 
 ```csharp
-public static PredictionModel<SentimentData, SentimentPrediction> Train()
+public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Train()
 {
 
 }
@@ -179,7 +179,7 @@ public static PredictionModel<SentimentData, SentimentPrediction> Train()
 
 [!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
 
-Объект <xref:Microsoft.ML.TextLoader%601> является первой частью конвейера. Этот объект загружает файл с обучающими данными.
+Объект <xref:Microsoft.ML.Data.TextLoader> является первой частью конвейера. Этот объект загружает файл с обучающими данными.
 
 [!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
 
@@ -239,7 +239,7 @@ public static void Evaluate(PredictionModel<SentimentData, SentimentPrediction> 
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
 
-Класс <xref:Microsoft.ML.TextLoader%601> загружает новый тестовый набор данных с той же схемой. С помощью этого набора данных вы можете оценить модели для проверки ее качества. Добавьте следующий код в метод `Evaluate`:
+Класс <xref:Microsoft.ML.Data.TextLoader> загружает новый тестовый набор данных с той же схемой. С помощью этого набора данных вы можете оценить модели для проверки ее качества. Добавьте следующий код в метод `Evaluate`:
 
 [!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
 
@@ -330,7 +330,7 @@ Sentiment: He is the best, and the article should say that. | Prediction: Positi
 В этом руководстве вы узнали, как:
 > [!div class="checklist"]
 > * Определение проблемы
-> * выбирать подходящую задачу машинного обучения;
+> * Выбор подходящей задачи машинного обучения
 > * подготавливать данные;
 > * создавать конвейеры обучения;
 > * загружать классификатор;

@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86ed48361e0868d9e2fa2b79b1c5fa8955018bef
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 809385bda48c6fb8dae125fe348228aaee375a6c
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32768779"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071309"
 ---
 # <a name="asynchronous-programming-patterns"></a>Шаблоны асинхронного программирования
 
 Платформа .NET Framework предоставляет три шаблона для выполнения асинхронных операций:  
   
-- шаблон асинхронной модели программирования (АРМ) (также называемый шаблон <xref:System.IAsyncResult>), где асинхронные операции требуют методов `Begin` и `End` (например, асинхронные операции записи `BeginWrite` и `EndWrite`). Этот шаблон не рекомендуется использовать для разработки новых приложений. Дополнительные сведения см. в статье [Асинхронная модель программирования (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).  
+- Шаблон **асинхронной модели программирования (АРМ)** (также называемый шаблоном <xref:System.IAsyncResult>), где асинхронные операции требуют методов `Begin` и `End` (например, асинхронные операции записи `BeginWrite` и `EndWrite`). Этот шаблон не рекомендуется использовать для разработки новых приложений. Дополнительные сведения см. в статье [Асинхронная модель программирования (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).  
   
-- На основе событий асинхронного шаблона (EAP), который требует метод с суффиксом `Async`, а также требует одного или нескольких событий, типов делегата обработчика событий и производных типов `EventArg`. Протокол EAP был введен в платформа.NET Framework 2.0. Не рекомендуется для новых разработок. Дополнительные сведения см. в разделе [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+- **Асинхронный шаблон на основе событий (EAP)**, который требует метод с суффиксом `Async`, а также одно или несколько событий, типов делегата обработчика событий и производных типов `EventArg`. Протокол EAP был введен в платформа.NET Framework 2.0. Не рекомендуется для новых разработок. Дополнительные сведения см. в разделе [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
   
-- Асинхронный шаблон на основе задач (TAP), который использует один метод для запуска и завершения асинхронной операции. Шаблон ТАР был введен в платформа.NET Framework 4 и рекомендуется для асинхронного программирования в платформа.NET Framework. Ключевые слова [async](~/docs/csharp/language-reference/keywords/async.md) и [await](~/docs/csharp/language-reference/keywords/await.md) в C#, а также операторы [Async](~/docs/visual-basic/language-reference/modifiers/async.md) и [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) в языке Visual Basic добавляют поддержку языка для ТАР. Дополнительные сведения см. в разделе [Асинхронный шаблон, основанный на задачах (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
+- **Асинхронный шаблон на основе задач (TAP)**, который использует один метод для запуска и завершения асинхронной операции. Шаблон ТАР был введен в платформа.NET Framework 4 и рекомендуется для асинхронного программирования в платформа.NET Framework. Ключевые слова [async](~/docs/csharp/language-reference/keywords/async.md) и [await](~/docs/csharp/language-reference/keywords/await.md) в C#, а также операторы [Async](~/docs/visual-basic/language-reference/modifiers/async.md) и [Await](~/docs/visual-basic/language-reference/operators/await-operator.md) в языке Visual Basic добавляют поддержку языка для ТАР. Дополнительные сведения см. в разделе [Асинхронный шаблон, основанный на задачах (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md).  
   
 ## <a name="comparing-patterns"></a>Сравнение шаблонов  
 
