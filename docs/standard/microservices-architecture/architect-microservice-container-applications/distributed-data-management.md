@@ -4,12 +4,12 @@ description: 'Архитектура микрослужб .NET для упако
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7d173133ab7c803c7ab48b39c50b02ee4f3b1721
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d079dc7eef2f4abfbdec5a01b4233c8504d449d
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578941"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106493"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Распределенное управление данными: проблемы и решения
 
@@ -109,4 +109,5 @@ ms.locfileid: "33578941"
 
 
 >[!div class="step-by-step"]
-[Назад] (logical-versus-physical-architecture.md) [Далее] (identify-microservice-domain-model-boundaries.md)
+[Назад](logical-versus-physical-architecture.md)
+[Вперед](identify-microservice-domain-model-boundaries.md)

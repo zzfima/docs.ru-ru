@@ -1,5 +1,5 @@
 ---
-title: класс (Справочник по C#)
+title: Ключевое слово class (справочник по C#)
 ms.date: 07/18/2017
 f1_keywords:
 - class_CSharpKeyword
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 20968d2f72195db6d16de1b726c6e946b91ffcd5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04e64e825e4297ceb432393c7bd145a6cf4fcb2c
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216756"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948515"
 ---
 # <a name="class-c-reference"></a>класс (Справочник по C#)
 
@@ -21,12 +21,13 @@ ms.locfileid: "33216756"
 ```csharp
 class TestClass
 {
-    // Methods, properties, fields, events, delegates 
+    // Methods, properties, fields, events, delegates
     // and nested classes go here.
 }
 ```
 
 ## <a name="remarks"></a>Примечания
+
 В C# допускается только одиночное наследование. Другими словами, класс может наследовать реализацию только от одного базового класса. Однако класс может реализовывать несколько интерфейсов. В таблице ниже приведены примеры наследования класса и реализации интерфейса.
 
 |Наследование|Пример|
@@ -73,11 +74,13 @@ class TestClass
 - [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md)
 
 ## <a name="example"></a>Пример
+
 В приведенном ниже примере показано объявление полей, конструкторов и методов класса. В нем также демонстрируется создание экземпляра объекта и печать данных экземпляра. В этом примере объявляются два класса. Первый класс, `Child`, содержит два частных поля (`name` и `age`), два общих конструктора и один общий метод. Второй класс, `StringTest`, используется для хранения `Main`.
 
-[!code-csharp[csrefKeywordsTypes#5](../../../csharp/language-reference/keywords/codesnippet/CSharp/class_1.cs)]
+[!code-csharp[csrefKeywordsTypes#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#5)]
 
 ## <a name="comments"></a>Комментарии
+
 Обратите внимание, что в предыдущем примере доступ к частным полям (`name` и `age`) возможен только с помощью общих методов класса `Child`. Например, имя ребенка нельзя напечатать из метода `Main` с помощью следующего оператора:
 
 ```csharp
@@ -91,10 +94,12 @@ Console.Write(child1.name);   // Error
 Наконец, обратите внимание, что для объекта, созданного с помощью конструктора по умолчанию (`child3`), поле age по умолчанию было инициализировано с нулевым значением.
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
+
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>См. также
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)
+
+[Справочник по C#](../../../csharp/language-reference/index.md)  
+[Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+[Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+[Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)

@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
-ms.openlocfilehash: 2776412b96d4ed141f48814d19d2deaa1a71520d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e672685666c846ea63bcd9cdb713af58f5e6fb1b
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579461"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106256"
 ---
 # <a name="designing-a-microservice-domain-model"></a>Проектирование модели предметной области микрослужбы
 
@@ -133,7 +133,7 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Вон Вернон (Vaughn Vernon). Эффективное агрегатное проектирование. Часть I. Моделирование одного агрегата**
+-   **Вон Вернон (Vaughn Vernon). Эффективное агрегатное проектирование. Часть I. Моделирование одного агрегата**
     [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
 -   **Вон Вернон (Vaughn Vernon). Эффективное агрегатное проектирование. Часть II. Организация совместной работы агрегатов**
@@ -153,4 +153,5 @@ public class Order : Entity, IAggregateRoot
 
 
 >[!div class="step-by-step"]
-[Назад] (ddd-oriented-microservice.md) [Далее] (net-core-microservice-domain-model.md)
+[Назад](ddd-oriented-microservice.md)
+[Вперед](net-core-microservice-domain-model.md)

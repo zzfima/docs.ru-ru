@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 5ad5686909c29eba5916cbcc4b7115a16108a004
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 171d9120e4817065ddafc9dfa9caa362694ddeb3
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580407"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37105288"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Использование Azure Key Vault для защиты секретов в рабочей среде
 
@@ -68,11 +68,12 @@ var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(asyn
 -   **Настройка защиты данных**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview)
 
--   **Управление ключами и время существования ключей**
+-   **Управление ключами и время их существования**
     [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings\#data-protection-default-settings*](https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings#data-protection-default-settings)
 
 -   **Microsoft.Extensions.Configuration.DockerSecrets.** Репозиторий GitHub.
     [*https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets*](https://github.com/aspnet/Configuration/tree/dev/src/Microsoft.Extensions.Configuration.DockerSecrets)
 
 >[!div class="step-by-step"]
-[Назад] (developer-app-secrets-storage.md) [Далее] (../key-takeaways.md)
+[Назад](developer-app-secrets-storage.md)
+[Вперед](../key-takeaways.md)

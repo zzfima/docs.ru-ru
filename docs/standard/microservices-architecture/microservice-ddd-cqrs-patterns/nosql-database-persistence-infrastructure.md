@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 2618e8c068ec538f5bfed2f8243d1c594478fcb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf43f9914a05c2745f914a6e36fcab13fb7feffa
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578967"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106649"
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>Использование баз данных NoSQL в качестве инфраструктуры сохраняемости
 
@@ -330,4 +330,5 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=<YourDockerHostIP>
 
 
 >[!div class="step-by-step"]
-[Назад] (infrastructure-persistence-layer-implemenation-entity-framework-core.md) [Далее] (microservice-application-layer-web-api-design.md)
+[Назад](infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+[Вперед](microservice-application-layer-web-api-design.md)

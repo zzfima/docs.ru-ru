@@ -1,37 +1,40 @@
 ---
-title: Оператор false (Справочник по C#)
+title: Оператор false (справочник по C#)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - false operator keyword [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: f2001d92e99476131d6f03e13f0bc12104f638b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e1c6da604f35031dd9d712125356243e1735f452
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218262"
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37027841"
 ---
-# <a name="false-operator-c-reference"></a>Оператор false (Справочник по C#)
-Возвращает [логическое](../../../csharp/language-reference/keywords/bool.md) значение `true`, чтобы указать, что операнд является `false`, и возвращает значение `false` в противном случае.  
-  
- До версии C# 2.0 операторы `true` и `false` использовались для создания пользовательских типов значений, допускающих значение NULL, которые были совместимы с такими типами, как `SqlBool`. Однако теперь язык предоставляет встроенную поддержку для типов, допускающих значение NULL, и по возможности следует использовать их вместо перегрузки операторов `true` и `false`. Дополнительные сведения см. в разделе [Типы, допускающие значение NULL](../../../csharp/programming-guide/nullable-types/index.md).  
-  
- С логическими значениями, допускающими значение NULL, выражение `a != b` не обязательно равно `!(a == b)`, так как одно или оба значений могут иметь значение NULL. Необходимо перегрузить оба оператора `true` и `false` отдельно, чтобы правильно обработать значения NULL в выражении. В следующем примере демонстрируется перегрузка и использование операторов `true` и `false`.  
-  
- [!code-csharp[csrefKeywordsOperator#16](../../../csharp/language-reference/keywords/codesnippet/CSharp/false-operator_1.cs)]  
-  
- Тип, который перегружает операторы `true` и `false`, может использоваться для выражений управления в операторах [if](../../../csharp/language-reference/keywords/if-else.md), [do](../../../csharp/language-reference/keywords/do.md), [while](../../../csharp/language-reference/keywords/while.md) и [for](../../../csharp/language-reference/keywords/for.md) и в [условных выражениях](../../../csharp/language-reference/operators/conditional-operator.md).  
-  
- Если тип определяет оператор `false`, он должен также определять оператор [true](../../../csharp/language-reference/keywords/true.md).  
-  
- Тип не может непосредственно перегрузить условные логические операторы [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) и [||](../../../csharp/language-reference/operators/conditional-or-operator.md), однако такой же результат может быть достигнут путем перегрузки обычных логических операторов и операторов `true` и `false`.  
-  
-## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Операторы в C#](../../../csharp/language-reference/operators/index.md)  
- [true](../../../csharp/language-reference/keywords/true.md)
+# <a name="false-operator-c-reference"></a>Оператор false (справочник по C#)
+
+Возвращает [логическое](bool.md) значение `true`, чтобы указать, что операнд является `false`, и возвращает значение `false` в противном случае.
+
+До версии C# 2.0 операторы `true` и `false` использовались для создания пользовательских типов значений, допускающих значение NULL, которые были совместимы с такими типами, как `SqlBool`. Однако теперь язык предоставляет встроенную поддержку для типов, допускающих значение NULL, и по возможности следует использовать их вместо перегрузки операторов `true` и `false`. Дополнительные сведения см. в разделе [Типы, допускающие значение NULL](../../programming-guide/nullable-types/index.md).
+
+С логическими значениями, допускающими значение NULL, выражение `a != b` не обязательно равно `!(a == b)`, так как одно или оба значений могут иметь значение NULL. Необходимо перегрузить оба оператора `true` и `false` отдельно, чтобы правильно обработать значения NULL в выражении. В следующем примере демонстрируется перегрузка и использование операторов `true` и `false`.
+
+[!code-csharp[csrefKeywordsOperator#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#16)]
+
+Тип, который перегружает операторы `true` и `false`, может использоваться для выражений управления в операторах [if](if-else.md), [do](do.md), [while](while.md) и [for](for.md) и в [условных выражениях](../operators/conditional-operator.md).
+
+Если тип определяет оператор `false`, он должен также определять оператор [true](true.md).
+
+Тип не может непосредственно перегрузить условные логические операторы [&&](../operators/conditional-and-operator.md) и [||](../operators/conditional-or-operator.md), однако такой же результат может быть достигнут путем перегрузки обычных логических операторов и операторов `true` и `false`.
+
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>См. также
+
+[Справочник по C#](../index.md)  
+[Руководство по программированию на C#](../../programming-guide/index.md)  
+[Ключевые слова в C#](index.md)  
+[Операторы в C#](../operators/index.md)  
+[true](true.md)  

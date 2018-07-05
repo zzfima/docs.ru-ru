@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 2adce39561dd2b97910155ebed595a2df7785c11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c61a08566492a59090b19f99aaf97b5f6082c1fb
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574677"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37104573"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Проверка на стороне клиента (проверка на уровнях представления)
 
@@ -29,7 +29,7 @@ ms.locfileid: "33574677"
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Проверка в мобильных приложениях Xamarin
 
--   **Проверка введенного текста и отображение ошибок**
+-   **Проверка текстового ввода и отображение ошибок**
     [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
 -   **Ответный вызов проверки**
@@ -65,4 +65,5 @@ ms.locfileid: "33574677"
 
 
 >[!div class="step-by-step"]
-[Назад] (domain-model-layer-validations.md) [Далее] (domain-events-design-implementation.md)
+[Назад](domain-model-layer-validations.md)
+[Вперед](domain-events-design-implementation.md)

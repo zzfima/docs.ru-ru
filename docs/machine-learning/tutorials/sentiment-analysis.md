@@ -4,12 +4,12 @@ description: На примере двоичной классификации с 
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 898b4664120b6eeb0ef18aac3acdc94b0ca0bacd
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 727718c00b9270e2bbbe0840879b3a7e164a02d8
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314842"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948622"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Руководство. Использование ML.NET для анализа тональности методом двоичной классификации
 
@@ -113,13 +113,13 @@ ms.locfileid: "36314842"
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#1 "Add necessary usings")]
 
-Также нужно создать три глобальные переменные для хранения путей к недавно скачанным файлам:
+Также нужно создать три глобальных поля для хранения путей к недавно скачанным файлам:
 
 * `_dataPath` содержит путь к набору данных, используемому для обучения модели;
 * `_testDataPath` содержит путь к набору данных, используемому для оценки модели;
 * `_modelPath` содержит путь, по которому сохраняется обученная модель.
 
-Добавьте следующий код прямо перед методом `Main`, чтобы указать ссылки на скачанные файлы:
+Добавьте следующий код в строку прямо перед методом `Main`, чтобы указать эти пути:
 
 [!code-csharp[Declare file variables](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#2 "Declare variables to store data files")]
 

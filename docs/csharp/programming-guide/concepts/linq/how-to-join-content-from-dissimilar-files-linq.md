@@ -1,20 +1,21 @@
 ---
 title: Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)
-ms.date: 07/20/2015
+ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: c6af2c0f90d3ebb69438b670a4f0cecb10d8d2fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 444276f6ad68e988b2dbc2cd7401248a6f5da072
+ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319173"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37071839"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)
+
 В этом примере показано, как объединить данные из двух файлов с разделителями-запятыми, которые имеют общее значение, используемое в качестве совпадающего ключа. Этот способ может оказаться полезным, если необходимо объединить данные из двух электронных таблиц или из электронной таблицы и файла, имеющего другой формат, в новый файл. Можно изменить пример для обработки любого типа структурированного текста.  
   
-### <a name="to-create-the-data-files"></a>Создание файлов данных  
+## <a name="to-create-the-data-files"></a>Создание файлов данных
   
-1.  Скопируйте следующие строки в файл с именем scores.csv и сохраните его в папке проекта. Этот файл представляет данные электронной таблицы. Первый столбец представляет идентификатор учащегося, а столбцы со второго по пятый представляют результаты тестирования.  
+1.  Скопируйте следующие строки в файл с именем *scores.csv* и сохраните его в папке проекта. Этот файл представляет данные электронной таблицы. Первый столбец представляет идентификатор учащегося, а столбцы со второго по пятый представляют результаты тестирования.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -31,7 +32,7 @@ ms.locfileid: "33319173"
     122, 94, 92, 91, 91  
     ```  
   
-2.  Скопируйте следующие строки в файл с именем names.csv и сохраните его в папке проекта. Этот файл представляет электронную таблицу, содержащую фамилию, имя и идентификатор учащегося.  
+2.  Скопируйте следующие строки в файл с именем *names.csv* и сохраните его в папке проекта. Этот файл представляет электронную таблицу, содержащую фамилию, имя и идентификатор учащегося.  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -49,8 +50,12 @@ ms.locfileid: "33319173"
     ```  
   
 ## <a name="example"></a>Пример  
-  
-```csharp  
+
+```csharp
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
 class JoinStrings  
 {  
     static void Main()  
@@ -78,7 +83,7 @@ class JoinStrings
             let nameFields = name.Split(',')  
             from id in scores  
             let scoreFields = id.Split(',')  
-            where nameFields[2] == scoreFields[0]  
+            where Convert.ToInt32(nameFields[2]) == Convert.ToInt32(scoreFields[0])
             select nameFields[0] + "," + scoreFields[1] + "," + scoreFields[2]   
                    + "," + scoreFields[3] + "," + scoreFields[4];  
   
@@ -102,26 +107,32 @@ class JoinStrings
     }  
 }  
 /* Output:  
-Merge two spreadsheets:  
-Adams, 99, 82, 81, 79  
-Fakhouri, 99, 86, 90, 94  
-Feng, 93, 92, 80, 87  
-Garcia, 97, 89, 85, 82  
-Garcia, 35, 72, 91, 70  
-Garcia, 92, 90, 83, 78  
-Mortensen, 88, 94, 65, 91  
-O'Donnell, 75, 84, 91, 39  
-Omelchenko, 97, 92, 81, 60  
-Tucker, 68, 79, 88, 92  
-Tucker, 94, 92, 91, 91  
-Zabokritski, 96, 85, 91, 60  
-12 total names in list  
+Merge two spreadsheets:
+Omelchenko, 97, 92, 81, 60
+O'Donnell, 75, 84, 91, 39
+Mortensen, 88, 94, 65, 91
+Garcia, 97, 89, 85, 82
+Garcia, 35, 72, 91, 70
+Fakhouri, 99, 86, 90, 94
+Feng, 93, 92, 80, 87
+Garcia, 92, 90, 83, 78
+Tucker, 68, 79, 88, 92
+Adams, 99, 82, 81, 79
+Zabokritski, 96, 85, 91, 60
+Tucker, 94, 92, 91, 91
+12 total names in list
  */  
-```  
+```
+
+## <a name="compiling-the-code"></a>Компиляция кода
+
+Создайте и скомпилируйте проект, который ориентирован на один из следующих вариантов:
+
+- Платформа .NET Framework версии 3.5 со ссылкой на библиотеку System.Core.dll.
+- .NET Framework версии 4.0 или более поздней.
+- .NET Core версии 1.0 или более поздней.
   
-## <a name="compiling-the-code"></a>Компиляция кода  
- Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.  
-  
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также
+
  [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
  [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

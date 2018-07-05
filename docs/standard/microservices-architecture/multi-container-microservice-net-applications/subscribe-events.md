@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 8ef9f39b0d99db32438e7dcf83318a1aa9054967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
+ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592448"
+ms.lasthandoff: 06/29/2018
+ms.locfileid: "37106581"
 ---
 # <a name="subscribing-to-events"></a>Подписка на события
 
@@ -378,4 +378,5 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 
 >[!div class="step-by-step"]
-[Назад] (rabbitmq-event-bus-development-test-environment.md) [Далее] (test-aspnet-core-services-web-apps.md)
+[Назад](rabbitmq-event-bus-development-test-environment.md)
+[Вперед](test-aspnet-core-services-web-apps.md)

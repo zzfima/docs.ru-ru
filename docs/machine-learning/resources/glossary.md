@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: dotnet-ml
 ms.devlang: dotnet
 manager: wpickett
-ms.openlocfilehash: 332d9e14bea165992f9f00b048286e185269ea79
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: b7690eb6931f4a491b1a03812fe3f2d8a64cfcd4
+ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/02/2018
-ms.locfileid: "34860691"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36207744"
 ---
 # <a name="machine-learning-glossary"></a>Глоссарий по машинному обучению
 
@@ -33,7 +33,7 @@ ms.locfileid: "34860691"
 
 ## <a name="binary-classification"></a>Двоичная классификация
 
-Сценарий [классификации](#classification), в котором значение [метки](#label) может быть только одним из двух классов. Дополнительные сведения см. в [статье о двоичной классификации](https://en.wikipedia.org/wiki/Binary_classification) в Википедии.
+Сценарий [классификации](#classification), в котором значение [метки](#label) может быть только одним из двух классов. Дополнительные сведения см. в разделе [Двоичная классификация](tasks.md#binary-classification) в теме [Задачи машинного обучения](tasks.md).
 
 ## <a name="classification"></a>Классификация
 
@@ -45,7 +45,7 @@ ms.locfileid: "34860691"
 
 Соответствующий API ML.NET: <xref:Microsoft.ML.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
 
-## <a name="feature"></a>Признак
+## <a name="feature"></a>Функция
 
 Измеримое свойство измеряемого явления, обычно имеющее числовое значение (двойной точности). Несколько признаков называются **вектором компонента** и сохраняются в виде `double[]`. Признаки определяют важные характеристики измеряемого явления. Дополнительные сведения см. в [статье о признаках](https://en.wikipedia.org/wiki/Feature_(machine_learning)) в Википедии.
 
@@ -85,7 +85,7 @@ ms.locfileid: "34860691"
 
 ## <a name="multiclass-classification"></a>Многоклассовая классификация
 
-Сценарий [классификации](#classification), в котором значение [метки](#label) может быть только одним из трех или больше классов. Дополнительные сведения см. в [статье о многоклассовой классификации](https://en.wikipedia.org/wiki/Multiclass_classification) в Википедии.
+Сценарий [классификации](#classification), в котором значение [метки](#label) может быть только одним из трех или больше классов. Дополнительные сведения см. в разделе [Многоклассовая классификация](tasks.md#multiclass-classification) в теме [Задачи машинного обучения](tasks.md).
 
 ## <a name="n-gram"></a>N-грамм
 
@@ -113,7 +113,7 @@ ms.locfileid: "34860691"
 
 ## <a name="regression"></a>Возвращение
 
-Задача [контролируемого машинного обучения](#supervised-machine-learning), которая выводит реальное значение, например в формате двойной точности. В качестве примера можно привести прогнозирование цен на акции.
+Задача [контролируемого машинного обучения](#supervised-machine-learning), которая выводит реальное значение, например в формате двойной точности. В качестве примера можно привести прогнозирование цен на акции. Дополнительные сведения см. в разделе [Регрессия](tasks.md#regression) в теме [Задачи машинного обучения](tasks.md).
 
 ## <a name="relative-absolute-error"></a>Относительная абсолютная погрешность
 
