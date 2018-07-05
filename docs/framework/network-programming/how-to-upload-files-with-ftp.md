@@ -1,47 +1,50 @@
 ---
 title: Практическое руководство. Отправка файлов с использованием FTP
-ms.date: 03/30/2017
+description: В этой статье приводится пример, в котором показано, как отправить файл на FTP-сервер.
+ms.date: 06/26/2018
+dev_langs:
+- csharp
+- vb
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
-author: mcleblanc
-ms.author: markl
-manager: markl
-ms.openlocfilehash: d032c171188f8a9536276c3cfe46392f90567bb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1f067462361bb123c9d61a1d099c900a6641d6b
+ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/27/2018
+ms.locfileid: "37028205"
 ---
-# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="1b729-102">Практическое руководство. Отправка файлов с использованием FTP</span><span class="sxs-lookup"><span data-stu-id="1b729-102">How to: Upload Files with FTP</span></span>
-<span data-ttu-id="1b729-103">В этом примере показано, как отправить файл на FTP-сервер.</span><span class="sxs-lookup"><span data-stu-id="1b729-103">This sample shows how to upload a file to an FTP server.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="1b729-104">Пример</span><span class="sxs-lookup"><span data-stu-id="1b729-104">Example</span></span>  
-  
-```csharp  
-using System;  
-using System.IO;  
-using System.Net;  
-using System.Text;  
-  
-namespace Examples.System.Net  
-{  
-    public class WebRequestGetExample  
-    {  
-        public static void Main ()  
-        {  
-            // Get the object used to communicate with the server.  
+# <a name="how-to-upload-files-with-ftp"></a><span data-ttu-id="fbdc2-103">Практическое руководство. Отправка файлов с использованием FTP</span><span class="sxs-lookup"><span data-stu-id="fbdc2-103">How to: Upload files with FTP</span></span>
+
+<span data-ttu-id="fbdc2-104">В этом примере показано, как отправить файл на FTP-сервер.</span><span class="sxs-lookup"><span data-stu-id="fbdc2-104">This sample shows how to upload a file to an FTP server.</span></span>
+
+## <a name="example"></a><span data-ttu-id="fbdc2-105">Пример</span><span class="sxs-lookup"><span data-stu-id="fbdc2-105">Example</span></span>
+
+```csharp
+using System;
+using System.IO;
+using System.Net;
+using System.Text;
+
+namespace Examples.System.Net
+{
+    public class WebRequestGetExample
+    {
+        public static void Main ()
+        {
+            // Get the object used to communicate with the server.
             FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://www.contoso.com/test.htm");
             request.Method = WebRequestMethods.Ftp.UploadFile;
 
-            // This example assumes the FTP site uses anonymous logon.  
+            // This example assumes the FTP site uses anonymous logon.
             request.Credentials = new NetworkCredential("anonymous", "janeDoe@contoso.com");
 
-            // Copy the contents of the file to the request stream.  
+            // Copy the contents of the file to the request stream.
             byte[] fileContents;
             using (StreamReader sourceStream = new StreamReader("testfile.txt"))
             {
                 fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd());
             }
-            
+
             request.ContentLength = fileContents.Length;
 
             using (Stream requestStream = request.GetRequestStream())
@@ -51,18 +54,45 @@ namespace Examples.System.Net
 
             using (FtpWebResponse response = (FtpWebResponse)request.GetResponse())
             {
-                Console.WriteLine("Upload File Complete, status {0}", response.StatusDescription);
+                Console.WriteLine($"Upload File Complete, status {response.StatusDescription}");
             }
-        }  
-    }  
-}  
-```  
-  
-## <a name="compiling-the-code"></a><span data-ttu-id="1b729-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="1b729-105">Compiling the Code</span></span>  
- <span data-ttu-id="1b729-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="1b729-106">This example requires:</span></span>  
-  
--   <span data-ttu-id="1b729-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="1b729-107">References to the **System.Net** namespace.</span></span>  
-  
-## <a name="robust-programming"></a><span data-ttu-id="1b729-108">Отказоустойчивость</span><span class="sxs-lookup"><span data-stu-id="1b729-108">Robust Programming</span></span>  
-  
-## <a name="net-framework-security"></a><span data-ttu-id="1b729-109">Безопасность платформы .NET Framework</span><span class="sxs-lookup"><span data-stu-id="1b729-109">.NET Framework Security</span></span>
+        }
+    }
+}
+```
+
+```vb
+Imports System.IO
+Imports System.Net
+Imports System.Text
+
+Namespace Examples.System.Net
+    Public Module WebRequestGetExample
+        Public Sub Main()
+            ' Get the object used to communicate with the server.
+            Dim request As FtpWebRequest = CType(WebRequest.Create("ftp://www.contoso.com/test.htm"), FtpWebRequest)
+            request.Method = WebRequestMethods.Ftp.UploadFile
+
+            ' This example assumes the FTP site uses anonymous logon.
+            request.Credentials = New NetworkCredential("anonymous", "janeDoe@contoso.com")
+
+            ' Copy the contents of the file to the request stream.
+            Dim fileContents As Byte()
+
+            Using sourceStream As StreamReader = New StreamReader("testfile.txt")
+                fileContents = Encoding.UTF8.GetBytes(sourceStream.ReadToEnd())
+            End Using
+
+            request.ContentLength = fileContents.Length
+
+            Using requestStream As Stream = request.GetRequestStream()
+                requestStream.Write(fileContents, 0, fileContents.Length)
+            End Using
+
+            Using response As FtpWebResponse = CType(request.GetResponse(), FtpWebResponse)
+                Console.WriteLine($"Upload File Complete, status {response.StatusDescription}")
+            End Using
+        End Sub
+    End Module
+End Namespace
+```
