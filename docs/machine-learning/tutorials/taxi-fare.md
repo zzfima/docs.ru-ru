@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 06/18/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 690e39dcbd02d81b8d4afe918a74795aa02f7fc6
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 9706dad0a8e32651496e0404be4501c2c70e9d75
+ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314969"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36948635"
 ---
 # <a name="tutorial-use-mlnet-to-predict-new-york-taxi-fares-regression"></a>Руководство. Использование ML.NET для прогнозирования платы за проезд в такси в Нью-Йорке (регрессия)
 
@@ -82,7 +82,7 @@ ms.locfileid: "36314969"
 
 1. В **обозревателе решений** щелкните проект правой кнопкой мыши и выберите пункты **Добавить** > **Новый элемент**.
 1. В диалоговом окне **Добавление нового элемента** выберите **Класс** и измените значение поля **Имя** на *TaxiTrip.cs*. Теперь нажмите кнопку **Добавить**.
-1. Добавьте в новый файл следующие операторы `using`:
+1. Добавьте следующие директивы `using` в новый файл.
 
    [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/TaxiTrip.cs#1 "Add necessary usings")]
 
@@ -96,19 +96,23 @@ ms.locfileid: "36314969"
 
 ## <a name="define-data-and-model-paths"></a>Определение путей к данным и модели
 
-Вернитесь к файлу *Program.cs* и создайте три глобальных константы, которые будут содержать пути к файлам с наборами данных и будут также использоваться при сохранении модели:
+Вернитесь к файлу *Program.cs* и добавьте три поля, которые будут содержать пути к файлам с наборами данных и к файлу для сохранения модели.
 
-* `_datapath` содержит путь к набору данных, который используется для обучения модели;
-* `_testdatapath` содержит путь к набору данных, который используется для оценки модели;
-* `_modelpath` содержит путь к сохраненной обученной модели.
+* `_datapath` содержит путь к файлу с набором данных, используемым для обучения модели.
+* `_testdatapath` содержит путь к файлу с набором данных, используемым для оценки модели.
+* `_modelpath` содержит путь к файлу для сохранения обучаемой модели.
 
-Добавьте следующий код в строку прямо перед методом `Main`, чтобы указать эти пути:
+Добавьте прямо перед методом `Main` следующий код, чтобы указать эти пути.
 
 [!code-csharp[InitializePaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#2 "Define variables to store the data file paths")]
 
+Чтобы этот код компилировался, добавьте следующие директивы `using` вверху файла *Program.cs*.
+
+[!code-csharp[AddUsingsForPaths](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#17 "Using statements for path definitions")]
+
 ## <a name="create-a-learning-pipeline"></a>Создание конвейера обучения
 
-Добавьте следующие новые операторы `using` в начало файла *Program.cs*:
+Добавьте дополнительные директивы `using` в начало файла *Program.cs*.
 
 [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
@@ -135,7 +139,7 @@ var pipeline = new LearningPipeline();
 
 ## <a name="load-and-transform-data"></a>Загрузка и преобразование данных
 
-На первом этапе конвейера обучения выполняется загрузка данных из набора данных для обучения. В нашем случае набор данных для обучения хранится в текстовом файле, путь к которому определяется константой `_datapath`. Этот файл содержит заголовок с именами столбцов, поэтому при загрузке данных первую строку следует игнорировать. Для разделения столбцов в этом файле используется запятая (","). Добавьте в метод `Train` следующий код:
+На первом этапе конвейера обучения выполняется загрузка данных из набора данных для обучения. В нашем случае набор данных для обучения хранится в текстовом файле, путь к которому задан в поле `_datapath`. Этот файл содержит заголовок с именами столбцов, поэтому при загрузке данных первую строку следует игнорировать. Для разделения столбцов в этом файле используется запятая (","). Добавьте в метод `Train` следующий код:
 
 ```csharp
 pipeline.Add(new TextLoader(_datapath).CreateFrom<TaxiTrip>(useHeader: true, separator: ','));
@@ -215,7 +219,7 @@ pipeline.Add(new FastTreeRegressor());
 
 [!code-csharp[AsyncMain](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#8 "Make the Main method async and return a task.")]
 
-Также добавьте следующую инструкцию `using` в самое начало файла:
+Также добавьте следующую директиву `using` в самое начало файла.
 
 [!code-csharp[UsingTasks](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#9 "Add System.Threading.Tasks. to your usings.")]
 
