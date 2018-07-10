@@ -9,6 +9,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33389958"
 ---
 # <a name="mitigation-pool-blocking-period"></a><span data-ttu-id="7a94d-102">Устранение рисков: период блокировки пула</span><span class="sxs-lookup"><span data-stu-id="7a94d-102">Mitigation: Pool Blocking Period</span></span>
 <span data-ttu-id="7a94d-103">Период блокировки пула подключений был удален для подключений к базам данных Azure SQL.</span><span class="sxs-lookup"><span data-stu-id="7a94d-103">The connection pool blocking period has been removed for connections to Azure SQL databases.</span></span>  
