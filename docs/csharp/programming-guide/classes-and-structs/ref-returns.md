@@ -35,10 +35,10 @@ ms.locfileid: "33339622"
  
 ## <a name="defining-a-ref-return-value"></a>Определение возвращаемого ссылочного значения
 
-Чтобы определить возвращаемое ссылочное значение, необходимо добавить ключевое слово [ref](../../language-reference/keywords/ref.md) к типу возвращаемого значения в сигнатуре метода. Например, следующая сигнатура указывает, что свойство `GetContactInformation` возвращает вызывающему объекту ссылку на объект `Person`:
+Чтобы определить возвращаемое ссылочное значение, необходимо добавить ключевое слово [ref](../../language-reference/keywords/ref.md) к типу возвращаемого значения в сигнатуре метода. Например, следующая сигнатура указывает, что метод `GetContactInformation` возвращает вызывающему объекту ссылку на объект `Person`:
 
 ```csharp
-public ref Person GetContactInformation(string fname, string lname);
+public ref Person GetContactInformation(string fname, string lname)
 ```
 
 Кроме того, имени объекта, возвращаемого каждой инструкцией [return](../../language-reference/keywords/return.md) в теле метода, должно предшествовать ключевое слово [ref](../../language-reference/keywords/ref.md). Например, следующая инструкция `return` возвращает ссылку на объект `Person` с именем `p`:
