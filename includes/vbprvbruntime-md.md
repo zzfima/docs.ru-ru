@@ -1,1 +1,1 @@
-<span data-ttu-id="0e0e5-101">Visual Basic (библиотека времени выполнения, в Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="0e0e5-101">Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>
+<span data-ttu-id="3b2ca-101">Visual Basic (библиотека времени выполнения, в Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="3b2ca-101">Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>
