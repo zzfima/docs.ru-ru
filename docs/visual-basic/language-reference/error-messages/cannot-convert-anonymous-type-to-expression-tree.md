@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
-ms.openlocfilehash: d43f6ef19591af326d06a4ce21194d8f9fa58c2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f97a0de74428ce42a088644580a78bf8fd99945
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33585480"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936806"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>Не удается преобразовать анонимный тип в дерево выражений, поскольку он содержит поле, которое было использовано в инициализации другого поля
-Компилятор не принимает преобразование анонимных в дерево выражения, если одно свойство анонимного типа используется для инициализации другого свойства анонимного типа. Например, в следующем коде `Prop1` объявлена в списке инициализации, а затем используется в качестве начального значения для `Prop2`.  
+Компилятор не принимает преобразование анонимных в дерево выражения, когда одно свойство анонимного типа используется для инициализации другого свойства анонимного типа. Например, в следующем коде `Prop1` объявлена в списке инициализации, а затем используется в качестве начального значения для `Prop2`.  
   
 ```vb  
 Module M2  
@@ -35,7 +35,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
--   Присвойте начальное значение для `Prop1` локальной переменной. Назначьте этой переменной как `Prop1` и `Prop2`, как показано в следующем коде.  
+-   Назначать начальное значение для `Prop1` локальной переменной. Назначьте этой переменной к обоим `Prop1` и `Prop2`, как показано в следующем коде.  
   
     ```  
     Sub Main()  
@@ -46,7 +46,8 @@ End Module
     End Sub  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Деревья выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
- [Практическое руководство. Использование деревьев выражений для построения динамических запросов](http://msdn.microsoft.com/library/1e37e0cc-eef3-48bb-8b69-3adabf322735)
+## <a name="see-also"></a>См. также
+
+[Анонимные типы (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+[Expression Trees (Visual Basic)](../../programming-guide/concepts/expression-trees/index.md) (Деревья выражений (Visual Basic))  
+[Практическое: использование деревьев выражений для построения динамических запросов (Visual Basic)](../../programming-guide/concepts/expression-trees/how-to-use-expression-trees-to-build-dynamic-queries.md)  

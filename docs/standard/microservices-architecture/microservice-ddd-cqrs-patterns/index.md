@@ -3,13 +3,13 @@ title: Использование микрослужб с шаблонами DDD
 description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Использование микрослужб с шаблонами DDD и CQRS для решения сложных бизнес-задач
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: af67f94b2c56f6a1ec794abbf7d3dad0d78033ec
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/06/2018
+ms.openlocfilehash: bc8ff6262436af6eb49a4ef8635d502e80b74b5a
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105762"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874391"
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Использование микрослужб с шаблонами DDD и CQRS для решения сложных бизнес-задач
 
@@ -70,5 +70,5 @@ DDD — это обширная тема, по которой доступно 
 
 
 >[!div class="step-by-step"]
-[Назад](../multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
+[Назад](../multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md)
 [Вперед](apply-simplified-microservice-cqrs-ddd-patterns.md)

@@ -3,11 +3,11 @@ title: protected internal (справочник по C#)
 ms.date: 11/15/2017
 author: sputier
 ms.openlocfilehash: 5ba2c811a1a4f095bcee65ed6678a7dc50fe94db
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172245"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244862"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (справочник по C#)
 Комбинация ключевых слов `protected internal` является модификатором доступа к члену. Доступ к членам с модификатором доступа protected internal может осуществляться из текущей сборки или типов, которые являются производными от содержащего класса. Сравнение модификатора `protected internal` с другими модификаторами доступа см. в разделе [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md). 

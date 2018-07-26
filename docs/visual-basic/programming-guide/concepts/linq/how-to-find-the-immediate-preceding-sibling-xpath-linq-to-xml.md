@@ -1,15 +1,15 @@
 ---
-title: 'Как: найти ближайший предшествующий одноуровневый элемент (XPath-LINQ to XML) (Visual Basic)'
+title: 'Практическое: найти ближайший предшествующий одноуровневый элемент (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ec046283-9fe2-4440-b295-860bf700099d
 ms.openlocfilehash: 47ba557343d0f691c2ee0f2c56102df313ecfb30
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641119"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220926"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>Как: найти ближайший предшествующий одноуровневый элемент (XPath-LINQ to XML) (Visual Basic)
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>Практическое: найти ближайший предшествующий одноуровневый элемент (XPath-LINQ to XML) (Visual Basic)
 Иногда требуется найти ближайший предшествующий одноуровневый элемент узла. Из-за разности в семантике позиционных предикатов для осей предшествующих одноуровневых элементов в XPath и в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] это сравнение является одним из наиболее интересных.  
   
 ## <a name="example"></a>Пример  

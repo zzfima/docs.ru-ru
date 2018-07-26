@@ -5,11 +5,11 @@ author: mairaw
 ms.author: mairaw
 ms.date: 05/25/2018
 ms.openlocfilehash: 6b0b7bc11b560d8632b38f1dfa4e7eb3ce6c54d2
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697135"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961463"
 ---
 # <a name="dotnet-build"></a>dotnet-build
 
@@ -71,7 +71,7 @@ dotnet build [-h|--help]
 
 `-c|--configuration {Debug|Release}`
 
-Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
+Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 
@@ -117,7 +117,7 @@ dotnet build [-h|--help]
 
 `-c|--configuration {Debug|Release}`
 
-Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
+Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
 
 `-f|--framework <FRAMEWORK>`
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
 ms.openlocfilehash: cd99ce43ad359c58c855748dff9a01abb6dbd453
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33268124"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961174"
 ---
 # <a name="null-c-reference"></a>null (справочник по C#)
 Ключевое слово `null` является литералом, представляющим пустую ссылку, которая не ссылается на объект. `null` является значением по умолчанию для переменных ссылочного типа. Обычные типы значений не могут принимать значение NULL. Однако в C# 2.0 представлены типы значений, допускающие значение NULL. См. раздел [Типы, допускающие значения NULL](../../../csharp/programming-guide/nullable-types/index.md).  

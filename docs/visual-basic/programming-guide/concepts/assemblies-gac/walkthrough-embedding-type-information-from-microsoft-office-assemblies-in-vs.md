@@ -1,15 +1,15 @@
 ---
-title: 'Пошаговое руководство: Внедрение сведений о типах из сборок Microsoft Office в Visual Studio (Visual Basic)'
+title: 'Пошаговое руководство: Внедрение данных о типе из сборок Microsoft Office в Visual Studio (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 26b44286-5066-4ad4-8e6a-c24902be347c
 ms.openlocfilehash: 6a28e95f9c3cfcc2481c8f4f9f83303648df43cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643826"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244058"
 ---
-# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Пошаговое руководство: Внедрение сведений о типах из сборок Microsoft Office в Visual Studio (Visual Basic)
+# <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-visual-basic"></a>Пошаговое руководство: Внедрение данных о типе из сборок Microsoft Office в Visual Studio (Visual Basic)
 Если в приложение, имеющее ссылки на COM-объекты, внедрены данные о типе, можно исключить необходимость использования основной сборки взаимодействия (PIA). Кроме того внедренные данные о типах позволяют создать приложение, не зависящее от версии. Это означает, что в программе можно использовать типы из нескольких версий библиотеки COM, т. е. необходимость использования конкретной основной сборки взаимодействия для каждой версии библиотеки COM отпадает. Это стандартный сценарий для приложений, использующих объекты из библиотек Microsoft Office. Внедрение данных о типе позволяет одной сборке программы работать с разными версиями приложения Microsoft Office на разных компьютерах без необходимости повторного развертывания программы или основной сборки взаимодействия для каждой версии приложения Microsoft Office.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
@@ -29,7 +29,7 @@ ms.locfileid: "33643826"
   
 3.  Убедитесь, что в диалоговом окне **Создание проекта** в области **Типы проектов** выбран пункт **Windows**. В области **Шаблоны** выберите пункт **Консольное приложение**. В поле **Имя** введите `CreateExcelWorkbook`, а затем нажмите кнопку **ОК**. Проект создан.  
   
-4.  Откройте контекстное меню для проекта CreateExcelWorkbook, а затем выберите **свойства**. Выберите **ссылки** вкладки. Нажмите кнопку **Добавить** .  
+4.  Откройте контекстное меню для проекта CreateExcelWorkbook и выберите **свойства**. Выберите **ссылки** вкладки. Нажмите кнопку **Добавить** .  
   
 5.  На вкладке **.NET** выберите самую последнюю версию `Microsoft.Office.Interop.Excel`. Например, **Microsoft.Office.Interop.Excel 14.0.0.0**. Нажмите кнопку **ОК** .  
   

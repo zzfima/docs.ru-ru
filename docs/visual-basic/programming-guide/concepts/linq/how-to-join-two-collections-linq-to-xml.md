@@ -1,15 +1,15 @@
 ---
-title: 'Как: объединение двух коллекций (LINQ to XML) (Visual Basic)'
+title: 'Практическое: объединение двух коллекций (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5a5758d4-906b-4285-908d-5b930db192e6
 ms.openlocfilehash: 3ceb9cf7dfdd1d18a07e93d15624fd8fac045d07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643696"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245704"
 ---
-# <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Как: объединение двух коллекций (LINQ to XML) (Visual Basic)
+# <a name="how-to-join-two-collections-linq-to-xml-visual-basic"></a>Практическое: объединение двух коллекций (LINQ to XML) (Visual Basic)
 Элемент или атрибут в XML-документе может иногда относиться к другому элементу или атрибуту. Например, XML-документ [Пример XML-файла. Клиенты и заказы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md) содержит список клиентов и список заказов. Каждый элемент `Customer` содержит атрибут `CustomerID`. Каждый элемент `Order` содержит элемент `CustomerID`. Элемент `CustomerID` для каждого заказа ссылается на атрибут `CustomerID`, присвоенный также и клиенту.  
   
  Раздел [Пример XSD-файла. Клиенты и заказы](../../../../visual-basic/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders.md) содержит XSD, с помощью которого можно проверить этот документ. Здесь используются функции XSD `xs:key` и `xs:keyref` для установления того, что атрибут `CustomerID` элемента `Customer` является ключом, а также для установления связи между элементом `CustomerID` каждого из элементов `Order` и атрибутом `CustomerID` каждого из элементов `Customer`.  
@@ -18,7 +18,7 @@ ms.locfileid: "33643696"
   
  Обратите внимание, что, поскольку индекс недоступен, такое соединение будет сильно загружать среду.  
   
- Для получения дополнительных сведений о `Join`, в разделе [операции Join (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md).  
+ Более подробные сведения о `Join`, см. в разделе [операции соединения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере выполняется соединение элементов `Customer` с элементами `Order` и создается новый XML-документ, который включает элемент `CompanyName` в заказы.  

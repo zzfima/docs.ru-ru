@@ -6,26 +6,26 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
 ms.openlocfilehash: f437166bc5206b4145d6508aa2131ec94d6eca95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653550"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39244902"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>Практическое руководство. Создание лямбда-выражения (Visual Basic)
-Объект *лямбда-выражение* функцию или подпрограмму, которая не имеет имени. Лямбда-выражение можно использовать везде, где допустим тип делегата.  
+Объект *лямбда-выражение* функцию или подпрограмму, которая не имеет имени. Лямбда-выражение может использоваться везде, где допустим тип делегата.  
   
-### <a name="to-create-a-single-line-lambda-expression-function"></a>Чтобы создать функцию Однострочные лямбда-выражения  
+### <a name="to-create-a-single-line-lambda-expression-function"></a>Чтобы создать функцию однострочное лямбда-выражения  
   
 1.  В любой ситуации, когда можно использовать тип делегата, введите ключевое слово `Function`, как показано в следующем примере:  
   
      `Dim add1 =`   `Function`  
   
-2.  В круглых скобках непосредственно после `Function`, введите параметры функции. Обратите внимание, что вы не задавать имя после `Function`.  
+2.  В скобках сразу после `Function`, введите параметры функции. Обратите внимание на то, что не нужно указывать имя после `Function`.  
   
      `Dim add1 = Function`   `(num As Integer)`  
   
-3.  Вслед за списком параметров введите одно выражение как тело функции. Значение, выражение, результатом вычисления которого является значение, возвращаемое функцией. Не используйте `As` предложений, чтобы указать тип возвращаемого значения.  
+3.  Список параметров введите одно выражение в теле функции. Выражение, результатом которого является значение является значением, возвращаемым функцией. Вы не используете `As` предложение, чтобы указать тип возвращаемого значения.  
   
      [!code-vb[VbVbalrLambdas#1](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_1.vb)]  
   
@@ -37,37 +37,37 @@ ms.locfileid: "33653550"
   
      [!code-vb[VbVbalrLambdas#3](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_3.vb)]  
   
-### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>Создание подпрограммы Однострочные лямбда-выражения  
+### <a name="to-create-a-single-line-lambda-expression-subroutine"></a>Создание подпрограммы однострочное лямбда-выражения  
   
 1.  В любой ситуации, когда можно использовать тип делегата, введите ключевое слово `Sub`, как показано в следующем примере.  
   
      `Dim add1 =`   `Sub`  
   
-2.  В круглых скобках непосредственно после `Sub`, введите параметры подпрограммы. Обратите внимание, что вы не задавать имя после `Sub`.  
+2.  В скобках сразу после `Sub`, введите параметры подпрограммы. Обратите внимание на то, что не нужно указывать имя после `Sub`.  
   
      `Dim add1 = Sub`   `(msg As String)`  
   
-3.  Вслед за списком параметров введите один оператор как тело подпрограммы.  
+3.  Список параметров введите одной инструкции в теле подпрограммы.  
   
      [!code-vb[VbVbalrLambdas#17](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_4.vb)]  
   
-     Лямбда-выражение вызывается передачи строкового аргумента.  
+     Лямбда-выражение вызывается путем передачи аргумента строки.  
   
      [!code-vb[VbVbalrLambdas#18](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_5.vb)]  
   
-### <a name="to-create-a-multiline-lambda-expression-function"></a>Для создания многострочного лямбда-функцией, выражение  
+### <a name="to-create-a-multiline-lambda-expression-function"></a>Для создания многострочных лямбда-выражение функции  
   
 1.  В любой ситуации, когда можно использовать тип делегата, введите ключевое слово `Function`, как показано в следующем примере.  
   
      `Dim add1 =`   `Function`  
   
-2.  В круглых скобках непосредственно после `Function`, введите параметры функции. Обратите внимание, что вы не задавать имя после `Function`.  
+2.  В скобках сразу после `Function`, введите параметры функции. Обратите внимание на то, что не нужно указывать имя после `Function`.  
   
      `Dim add1 = Function`   `(index As Integer)`  
   
 3.  Нажмите клавишу ВВОД. `End Function` Автоматически добавляется инструкция.  
   
-4.  В теле функции добавьте следующий код для создания выражения и возвращают значение. Не используйте `As` предложений, чтобы указать тип возвращаемого значения.  
+4.  В теле функции добавьте следующий код, чтобы создать выражение и возвращают значение. Вы не используете `As` предложение, чтобы указать тип возвращаемого значения.  
   
      [!code-vb[VbVbalrLambdas#19](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_6.vb)]  
   
@@ -81,7 +81,7 @@ ms.locfileid: "33653550"
   
      `Dim add1 =`   `Sub`  
   
-2.  В круглых скобках непосредственно после `Sub`, введите параметры подпрограммы. Обратите внимание, что вы не задавать имя после `Sub`.  
+2.  В скобках сразу после `Sub`, введите параметры подпрограммы. Обратите внимание на то, что не нужно указывать имя после `Sub`.  
   
      `Dim add1 = Sub`  `(msg As String)`  
   
@@ -91,16 +91,16 @@ ms.locfileid: "33653550"
   
      [!code-vb[VbVbalrLambdas#21](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_8.vb)]  
   
-     Лямбда-выражение вызывается передачи строкового аргумента.  
+     Лямбда-выражение вызывается путем передачи аргумента строки.  
   
      [!code-vb[VbVbalrLambdas#22](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_9.vb)]  
   
 ## <a name="example"></a>Пример  
- Обычно лямбда-выражений используется для определения функции, который можно передать в качестве аргумента для параметра, тип которого является `Delegate`. В следующем примере <xref:System.Diagnostics.Process.GetProcesses%2A> метод возвращает массив процессов, запущенных на локальном компьютере. <xref:System.Linq.Enumerable.Where%2A> Метод <xref:System.Linq.Enumerable> класс требует `Boolean` делегат в качестве аргумента. Лямбда-выражения в примере используется для этой цели. Он возвращает `True` для каждого процесса, который имеет только один поток, а те, выбранных в `filteredList`.  
+ Обычно лямбда-выражений используется для определения функции, который может передаваться в качестве аргумента для параметра, тип которого является `Delegate`. В следующем примере <xref:System.Diagnostics.Process.GetProcesses%2A> метод возвращает массив процессов, запущенных на локальном компьютере. <xref:System.Linq.Enumerable.Where%2A> Метода из <xref:System.Linq.Enumerable> классу `Boolean` делегат в качестве аргумента. Лямбда-выражение в примере используется для этой цели. Он возвращает `True` каждого процесса, у которой есть только один поток, а те, выбранные в `filteredList`.  
   
  [!code-vb[VbVbalrLambdas#10](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_10.vb)]  
   
- Предыдущий пример эквивалентно следующему коду, написанному в [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] синтаксис:  
+ Предыдущий пример эквивалентен следующий код, написанный на [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] синтаксис:  
   
  [!code-vb[VbVbalrLambdas#11](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-a-lambda-expression_11.vb)]  
   

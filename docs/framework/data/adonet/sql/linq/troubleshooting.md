@@ -2,12 +2,12 @@
 title: Устранение неполадок
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 24c7ddd42a4e66785921d9c63a6a757d9806503d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fe4f789ca64c0646b77fdb66b0c6e2b73763293
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364828"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198821"
 ---
 # <a name="troubleshooting"></a>Устранение неполадок
 В данном материале представлен ряд проблем, которые могут возникнуть в приложениях [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], и даны рекомендации, как их избежать или, по крайней мере, снизить их негативное влияние.  
@@ -18,7 +18,7 @@ ms.locfileid: "33364828"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] не поддерживает никакие методы стандартных операторов запросов (например, <xref:System.Linq.Enumerable.ElementAt%2A>). В результате компилируемых проектов могут по-прежнему возникать ошибки во время выполнения. Дополнительные сведения см. в разделе [преобразование стандартного оператора запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
 ## <a name="memory-issues"></a>Проблемы с использованием памяти  
- Если запрос использует находящуюся в памяти коллекцию и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, запрос может быть выполнен в памяти, в зависимости от порядка, в котором указаны двух коллекций. Если запрос следует выполнить в памяти, извлекать данные из таблицы базы данных нет необходимости.  
+ Если запрос включает в себя коллекцию в памяти и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, запрос может быть выполнен в памяти, в зависимости от порядка, в котором указаны две коллекции. Если запрос следует выполнить в памяти, извлекать данные из таблицы базы данных нет необходимости.  
   
  Этот способ неэффективен и может привести к потреблению значительных ресурсов памяти и процессора. Попытайтесь исключить подобные мультидоменные запросы.  
   
@@ -40,27 +40,27 @@ ms.locfileid: "33364828"
  Дополнительные сведения см. в разделе [как: удаление строк из базы данных](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
 ## <a name="expression-not-queryable"></a>Выражение, не подходящее для запроса  
- Если вы получаете «выражение [выражение] незапрашиваемое; Возможно, отсутствует ссылка на сборку?» Ошибка, убедитесь, что из следующих действий:  
+ Если вы получаете «выражение [выражение] не поддерживает запросы; Возможно, отсутствует ссылка на сборку?» Ошибка, убедитесь, что из следующих:  
   
 -   Приложение предназначено для выполнения в [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)].  
   
 -   Наличие ссылки на `System.Core.dll` и `System.Data.Linq.dll`.  
   
--   У вас есть `Imports` (Visual Basic) или `using` директивы (C#) для <xref:System.Linq> и <xref:System.Data.Linq>.  
+-   У вас есть `Imports` (Visual Basic) или `using` директива (C#) для <xref:System.Linq> и <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
- Во время отладки [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проекта, можно переходить через отношения сущности. Таким образом этом элементы попадают в кэш, и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] становится их наличие. Если после этого предпринимается попытка выполнения метода <xref:System.Data.Linq.Table%601.Attach%2A>, или <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>, или аналогичного, результатом которого являются несколько строк с одинаковым ключом, создается исключение <xref:System.Data.Linq.DuplicateKeyException>.  
+ Во время отладки [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] проекта, можно переходить через отношения сущности. Таким образом должен связать эти элементы в кэш, и [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] узнает о своем присутствии. Если после этого предпринимается попытка выполнения метода <xref:System.Data.Linq.Table%601.Attach%2A>, или <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A>, или аналогичного, результатом которого являются несколько строк с одинаковым ключом, создается исключение <xref:System.Data.Linq.DuplicateKeyException>.  
   
 ## <a name="string-concatenation-exceptions"></a>Исключения при объединении строк  
  Объединение в операндах, сопоставленных с `[n]text` и другими `[n][var]char`, не поддерживается. При объединении строк, сопоставленных двум разным наборам типов, возникает исключение. Дополнительные сведения см. в разделе [методы System.String](../../../../../../docs/framework/data/adonet/sql/linq/system-string-methods.md).  
   
 ## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>Исключения методов "Skip" и "Take" в SQL Server 2000  
- При использовании <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> или <xref:System.Linq.Queryable.Take%2A> в базе данных SQL Server 2000 необходимо применять члены идентификации (<xref:System.Linq.Queryable.Skip%2A>) Запрос должен быть выполнен в одной таблице (без объединения) либо он должен представлять операцию <xref:System.Linq.Queryable.Distinct%2A>, <xref:System.Linq.Queryable.Except%2A>, <xref:System.Linq.Queryable.Intersect%2A> или <xref:System.Linq.Queryable.Union%2A> и не включать операцию <xref:System.Linq.Queryable.Concat%2A> operation. Дополнительные сведения см. в подразделе «Поддержка SQL Server 2000» [преобразование стандартного оператора запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+ При использовании <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> или <xref:System.Linq.Queryable.Take%2A> в базе данных SQL Server 2000 необходимо применять члены идентификации (<xref:System.Linq.Queryable.Skip%2A>) Запрос должен быть выполнен в одной таблице (без объединения) либо он должен представлять операцию <xref:System.Linq.Queryable.Distinct%2A>, <xref:System.Linq.Queryable.Except%2A>, <xref:System.Linq.Queryable.Intersect%2A> или <xref:System.Linq.Queryable.Union%2A> и не включать операцию <xref:System.Linq.Queryable.Concat%2A> operation. Дополнительные сведения см. в разделе «Поддержка SQL Server 2000» [преобразование стандартного оператора запросов](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
  Это требование не относится к [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)].  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
- Данное исключение возникает, если в запросе <xref:System.Linq.Enumerable.GroupBy%2A>, выполняющем группировку по выражению `boolean`, например `group x by (Phone==@phone)`, столбец имеет значение NULL. Поскольку выражение является `boolean`, ключ определяется как `boolean`, а не `nullable``boolean`. Если в результате преобразованного сравнения выводится значение null, предпринимается попытка назначить `nullable``boolean` для `boolean`, и исключение создается.  
+ Данное исключение возникает, если в запросе <xref:System.Linq.Enumerable.GroupBy%2A>, выполняющем группировку по выражению `boolean`, например `group x by (Phone==@phone)`, столбец имеет значение NULL. Поскольку выражение имеет тип `boolean`, ключ определяется как `boolean`, а не как `nullable` `boolean`. Если в результате преобразованного сравнения выводится значение NULL, предпринимается попытка назначить `nullable` `boolean` для `boolean` и вызывается исключение.  
   
  Чтобы избежать такой ситуации (предполагается, что значения NULL оцениваются как ложные), воспользуйтесь следующим способом.  
   

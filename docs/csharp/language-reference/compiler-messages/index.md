@@ -7,11 +7,11 @@ helpviewer_keywords:
 - errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
 ms.openlocfilehash: e67e568b67400807ba7a1668acb6b3a36b4c7f22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213214"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39220793"
 ---
 # <a name="c-compiler-errors"></a>Ошибки компилятора C#
 Для некоторых ошибок компилятора C# существуют отдельные статьи, которые описывают причины этих ошибок, а иногда и методы их устранения. Используйте один из следующих вариантов действий, чтобы проверить наличие справки по конкретному сообщению об ошибке.  

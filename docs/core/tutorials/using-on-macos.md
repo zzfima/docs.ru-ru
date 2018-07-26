@@ -5,11 +5,11 @@ author: bleroy
 ms.author: mairaw
 ms.date: 03/23/2017
 ms.openlocfilehash: 5a4b2734137f59b29535f302dd17fb94329d676f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218290"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245597"
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Начало работы с .NET Core в Mac OS
 

@@ -1,6 +1,6 @@
 ---
 title: Ресурсы приложений для библиотек, предназначенных для нескольких платформ
-ms.date: 03/30/2017
+ms.date: 07/18/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,26 +14,28 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f4682b9ffcb0edb4e54c427968c3d40c0de134d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 11b9bde41e2209a88a042eb6c61de37def9da787
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578226"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39245502"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Ресурсы приложений для библиотек, предназначенных для нескольких платформ
 Можно использовать .NET Framework [переносимой библиотеки классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) тип, чтобы убедиться, что ресурсы в библиотеках классов может осуществляться из нескольких платформ проекта. Проект этого типа доступен в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] и нацелен на переносимое подмножество библиотеки классов .NET Framework. Использование [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] гарантирует доступность библиотеки из настольных приложений, приложений Silverlight, Windows Phone и [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+
+[!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
   
  Проект [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] предоставляет приложению только очень ограниченное подмножество типов в пространстве имен <xref:System.Resources>, но позволяет использовать класс <xref:System.Resources.ResourceManager> для извлечения ресурсов. Однако при создании приложения с помощью Visual Studio необходимо использовать строго типизированную оболочку, созданную Visual Studio, а не класс <xref:System.Resources.ResourceManager> непосредственно.  
   
- Для создания строго типизированной оболочки в Visual Studio, установите основного файла ресурсов в **модификатор доступа** в конструкторе ресурсов Visual Studio для **открытый**. При этом создастся файл [имя_файла_ресурсов].designer.cs или [имя_файла_ресурсов].designer.vb, содержащий строго типизированную оболочку ResourceManager. Дополнительные сведения об использовании строго типизированной оболочки ресурсов см. в подразделе «Создание ресурса класса со строгой типизацией» [Resgen.exe (генератор файлов ресурсов)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) раздела.  
+ Для создания строго типизированной оболочки в Visual Studio установите основного файла ресурсов **модификатор доступа** в конструкторе ресурсов Visual Studio для **открытый**. При этом создастся файл [имя_файла_ресурсов].designer.cs или [имя_файла_ресурсов].designer.vb, содержащий строго типизированную оболочку ResourceManager. Дополнительные сведения об использовании строго типизированной оболочки ресурсов см. в разделе «Создание строго типизированного класса ресурсов» в [Resgen.exe (генератор файлов ресурсов)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) раздела.  
   
 ## <a name="resource-manager-in-the-includenetportableincludesnet-portable-mdmd"></a>Диспетчер ресурсов в [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
  В проекте [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] весь доступ к ресурсам обрабатывается классом <xref:System.Resources.ResourceManager>. Поскольку типы в пространстве имен <xref:System.Resources>, в частности <xref:System.Resources.ResourceReader> и <xref:System.Resources.ResourceSet>, не доступны из проекта [!INCLUDE[net_portable](../../../includes/net-portable-md.md)], их нельзя использовать для доступа к ресурсам.  
   
  Проект [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] содержит четыре члена <xref:System.Resources.ResourceManager>, перечисленных в представленной ниже таблице. Эти конструкторы и методы позволяют создать экземпляр объекта <xref:System.Resources.ResourceManager> и извлечь строковые ресурсы.  
   
-|Член `ResourceManager`|Описание|  
+|Член `ResourceManager`|Описание:|  
 |------------------------------|-----------------|  
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|Создает экземпляр <xref:System.Resources.ResourceManager> для доступа к именованному файлу ресурсов, найденному в заданной сборке.|  
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|Создает экземпляр <xref:System.Resources.ResourceManager>, соответствующий указанному типу.|  
@@ -80,7 +82,7 @@ ms.locfileid: "33578226"
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]  
   
 ## <a name="example-localized-includenetportableincludesnet-portable-mdmd"></a>Пример: локализованная [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]  
- Следующий пример локализованной [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] содержит ресурсы французского (Франция) и английского (США) языков и региональных параметров. Английский (США) язык и региональные параметры являются приложения по умолчанию; Эти ресурсы показаны в таблице в [предыдущего раздела](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). Файл ресурсов для французского (Франция) языка и региональных параметров называется LibResources.fr-FR.resx и состоит из строковых ресурсов, перечисленных в представленной ниже таблице. Исходный код для класса `UILibrary` такой же, как и в предыдущем разделе.  
+ Следующий пример локализованной [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] содержит ресурсы французского (Франция) и английского (США) языков и региональных параметров. Английского языка (США) является языком по умолчанию приложения; его ресурсы показаны в таблице в [выше](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md#NonLoc). Файл ресурсов для французского (Франция) языка и региональных параметров называется LibResources.fr-FR.resx и состоит из строковых ресурсов, перечисленных в представленной ниже таблице. Исходный код для класса `UILibrary` такой же, как и в предыдущем разделе.  
   
 |Имя ресурса|Значение ресурса|  
 |-------------------|--------------------|  

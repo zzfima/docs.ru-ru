@@ -1,5 +1,5 @@
 ---
-title: '&lt;SMTP&gt; элемент (параметры сети)'
+title: '&lt;SMTP&gt; (сетевые параметры)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp
@@ -11,15 +11,15 @@ ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 56912e09d24fc83e93a91cc42b1d96dcc68210f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b6e01906c31316cfa8f148ed96944f309517f95
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741897"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874927"
 ---
-# <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; элемент (параметры сети)
-Настраивает формат доставки инструкций, метод доставки и адрес отправителя для отправки сообщений электронной почты.  
+# <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; (сетевые параметры)
+Настраивает формат и способ доставки и адрес отправителя для отправки сообщений электронной почты.  
   
  \<configuration>  
 \<System.NET >  
@@ -43,17 +43,17 @@ ms.locfileid: "32741897"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
-|`deliveryFormat`|Указывает формат доставки для исходящих сообщений электронной почты. Допустимые значения: SevenBit и International.|  
-|`deliveryMethod`|Указывает способ доставки сообщений электронной почты. Допустимые значения: сеть, pickupDirectoryFromIis и specifiedPickupDirectory.|  
+|`deliveryFormat`|Задает формат доставки для исходящих сообщений электронной почты. Допустимые значения: SevenBit и International.|  
+|`deliveryMethod`|Задает метод доставки для сообщений электронной почты. Допустимые значения: сети, PickupDirectoryFromIis и SpecifiedPickupDirectory.|  
 |`from`|Указывает адрес отправителя для исходящих сообщений электронной почты.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|Настраивает локальный каталог для сервера Simple Mail Transport Protocol (SMTP).|  
+|`specifiedPickupDirectory`|Настраивает локальный каталог для сервера транспортного протокола SMTP (Simple Mail).|  
 |`network`|Настройка сетевых параметров для внешнего сервера SMTP.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
@@ -69,7 +69,7 @@ ms.locfileid: "32741897"
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
+      <smtp deliveryMethod="Network" deliveryFormat="SevenBit"  from="ben@contoso.com">  
         <network  
           host="localhost"  
           port="25"  

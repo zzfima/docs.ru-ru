@@ -3,12 +3,12 @@ title: Возврат запроса из метода
 description: Как возвратить запрос.
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
-ms.openlocfilehash: 6a1d581c46c7b0b2062859fd60701dd25ea54eea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 13f0839f712cb76b34c98157a30315787d300109
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33274954"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404162"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Практическое руководство. Возврат запроса из метода (Руководство по программированию на C#)
 В этом примере показан способ возврата запроса из метода в качестве возвращаемого значения и параметра `out`.  
@@ -18,7 +18,7 @@ ms.locfileid: "33274954"
 ## <a name="example"></a>Пример  
  В следующем примере первый метод возвращает запрос в качестве возвращаемого значения, а второй метод возвращает запрос в качестве параметра `out`. Обратите внимание, что в обоих случаях возвращается запрос, а не его результаты.  
   
- [!code-csharp[csProgGuideLINQ#80](../../../samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#80](~/samples/snippets/csharp/concepts/linq/how-to-return-a-query-from-a-method_1.cs)]  
 
 ## <a name="see-also"></a>См. также  
- [Выражения запросов LINQ](index.md)
+ [LINQ](index.md)

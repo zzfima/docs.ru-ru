@@ -6,12 +6,12 @@ helpviewer_keywords:
 - anonymous functions [C#]
 - anonymous methods [C#]
 ms.assetid: 6ce3f04d-0c71-4728-9127-634c7e9a8365
-ms.openlocfilehash: 51a3c2e8399fdaae19ebe33f0d9ecc4bfd598799
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e368105c090f95435a4529470bdf1b41346d039c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321851"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936754"
 ---
 # <a name="anonymous-functions-c-programming-guide"></a>Анонимные функции (Руководство по программированию на C#)
 Анонимная функция — это "встроенный" оператор или выражение, которое может использоваться, когда тип делегата неизвестен. Ее можно использовать для инициализации именованного делегата или передать вместо типа именованного делегата в качестве параметра метода.  
@@ -35,8 +35,9 @@ ms.locfileid: "33321851"
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Инструкции, выражения и операторы](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
- [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Делегаты](../../../csharp/programming-guide/delegates/index.md)  
- [Деревья выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)
+## <a name="see-also"></a>См. также
+
+[Инструкции, выражения и операторы](../../../csharp/programming-guide/statements-expressions-operators/index.md)  
+[Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+[Делегаты](../../../csharp/programming-guide/delegates/index.md)  
+[Expression Trees (C#)](../concepts/expression-trees/index.md) (Деревья выражений (C#))  

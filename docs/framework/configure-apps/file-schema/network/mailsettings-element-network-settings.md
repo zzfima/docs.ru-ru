@@ -1,5 +1,5 @@
 ---
-title: '&lt;mailSettings&gt; элемент (параметры сети)'
+title: '&lt;mailSettings&gt; (сетевые параметры)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mailSettings
@@ -11,14 +11,14 @@ ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 5bc7cc649b18a5330d056bbddfe96db4ecca2ec8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a9afd992a12392ae0ad1c27eea305cb7e367686d
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746427"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874420"
 ---
-# <a name="ltmailsettingsgt-element-network-settings"></a>&lt;mailSettings&gt; элемент (параметры сети)
+# <a name="ltmailsettingsgt-element-network-settings"></a>&lt;mailSettings&gt; (сетевые параметры)
 Настраивает параметры отправки сообщений.  
 
 \<configuration>  
@@ -41,9 +41,9 @@ ms.locfileid: "32746427"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
-|[\<SMTP > Element (Network Settings)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Настраивает параметры простой протокол передачи почты.|  
+|[\<SMTP > (сетевые параметры)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|Служит для настройки параметров простой протокол транспорта почты.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
@@ -58,7 +58,7 @@ ms.locfileid: "32746427"
 <configuration>  
   <system.net>  
     <mailSettings>  
-      <smtp deliveryMethod="network">  
+      <smtp deliveryMethod="Network">  
         <network  
           host="localhost"  
           port="25"  

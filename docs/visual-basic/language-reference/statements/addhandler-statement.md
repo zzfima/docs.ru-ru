@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
-ms.openlocfilehash: db8131dc82aed40e725c9375efef274fb6917d41
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc0dce442db9d62b9fbee857b6e711696ad87fb8
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603656"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37936819"
 ---
 # <a name="addhandler-statement"></a>Оператор AddHandler
 Связывает событие с обработчиком событий во время выполнения.  
@@ -25,21 +25,21 @@ AddHandler event, AddressOf eventhandler
 ```  
   
 ## <a name="parts"></a>Части  
- `event`  
- Имя события для обработки.  
-  
- `eventhandler`  
- Имя процедуры, которая обрабатывает событие.  
+|||
+|---|---|
+|событие|Имя события для обработки.|  
+|`eventhandler`|Имя процедуры, которая обрабатывает событие.|
+|||
   
 ## <a name="remarks"></a>Примечания  
- `AddHandler` И `RemoveHandler` инструкции позволяют запускать и останавливать обработку события в любое время во время выполнения программы.  
+ `AddHandler` И `RemoveHandler` операторы позволяют запускать и останавливать обработку событий в любое время, во время выполнения программы.  
   
- Подпись `eventhandler` процедуры должна соответствовать сигнатуре события `event`.  
+ Подпись `eventhandler` процедура должна соответствовать сигнатуре события `event`.  
   
  Как ключевое слово `Handles` так и оператор `AddHandler` позволяют задать обработку определенных событий конкретными процедурами, но между ними существуют различия. Оператор `AddHandler` подключает процедуры к событиям во время выполнения. Используйте ключевое слово `Handles` при определении процедуры, чтобы указать, что она обрабатывает определенное событие. Дополнительные сведения см. в разделе [обрабатывает](../../../visual-basic/language-reference/statements/handles-clause.md).  
   
 > [!NOTE]
->  Для пользовательских событий `AddHandler` инструкция вызывает событие `AddHandler` метода доступа. Дополнительные сведения о пользовательских событиях см. в разделе [оператор Event](../../../visual-basic/language-reference/statements/event-statement.md).  
+>  Для пользовательских событий `AddHandler` инструкция вызывает события `AddHandler` метода доступа. Дополнительные сведения о пользовательских событиях см. в разделе [оператор Event](../../../visual-basic/language-reference/statements/event-statement.md).  
   
 ## <a name="example"></a>Пример  
  [!code-vb[VbVbalrEvents#17](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/addhandler-statement_1.vb)]  

@@ -6,14 +6,14 @@ helpviewer_keywords:
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
 ms.openlocfilehash: f9005a25b99b0a17f8e00f350547aa4bc313c4ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652848"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961025"
 ---
 # <a name="reference-visual-basic"></a>Справочник по Visual Basic
-Этот раздел содержит ссылки на справочные сведения о различных аспектах программирования Visual Basic.  
+Этот раздел содержит ссылки на сведения о различных аспектах программирования на Visual Basic.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Справочник по языку Visual Basic](../../visual-basic/language-reference/index.md)  
@@ -26,7 +26,7 @@ ms.locfileid: "33652848"
  Ссылки на сведения о работе с библиотекой класса [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
  [Спецификация языка Visual Basic](../../visual-basic/reference/language-specification/index.md)  
- Ссылки на полные спецификация языка Visual Basic, который содержит подробные сведения о всех аспектах языка.  
+ Ссылки на полный спецификации языка Visual Basic, который содержит подробные сведения о всех аспектах языка.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
@@ -37,10 +37,10 @@ ms.locfileid: "33652848"
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Общие элементы пользовательского интерфейса (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- Разделы по диалоговым окнам и окнам, используемым в Visual Studio.  
+ Содержит разделы, посвященные и диалоговые окна, используемый в Visual Studio.  
   
  [Средства XML в Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  Ссылки на разделы, посвященные разным средствам XML в Visual Studio.  
   
  [Справочник по автоматизации и возможностям расширения среды](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
- Ссылки на разделы, посвященные автоматизации и расширению в Visual Studio, как общие и зависящие от языка компонентов.
+ Содержит ссылки на разделы, посвященные автоматизации и расширяемости в Visual Studio для общих и языковых компонентов.
