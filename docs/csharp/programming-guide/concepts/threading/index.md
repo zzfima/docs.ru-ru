@@ -2,12 +2,12 @@
 title: Работа с потоками (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: 8325132a359c8b65572943bb79c9f02a485eb290
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f9ba0793876f38b3ada2f65c4594562ea1a66983
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874670"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296186"
 ---
 # <a name="threading-c"></a>Работа с потоками (C#)
 Потоки позволяют программе на C# осуществлять параллельную обработку, то есть вы можете выполнять несколько операций одновременно. Например, потоки можно использовать для отслеживания пользовательского ввода, выполнения фоновых задач и одновременной обработки нескольких потоков ввода.  
@@ -38,8 +38,6 @@ ms.locfileid: "37874670"
 |Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Многопоточные приложения(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)|Описание создания и использования потоков.|  
-|[Параметры и возвращаемые значения для многопоточных процедур (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|Описание передачи и возвращения параметров в многопоточных приложениях.|  
-|[Пошаговое руководство. Многопоточность с помощью компонента BackgroundWorker (C#)](../../../../csharp/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|Пример создания простого многопоточного приложения.|  
 |[Синхронизация потоков (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|Описание управления взаимодействием потоков.|  
 |[Группировка потоков в пул (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|Описание использования пула рабочих потоков, управляемых системой.|  
 |[Практическое руководство. Использование пула потоков (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Демонстрация синхронизированного использования нескольких потоков в пуле.|  
