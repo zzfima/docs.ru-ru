@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: ccdf6ecc30979e953d42a403c2c988780394df96
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 0e55a68432dfd44c7a73ae51512f50d481ae100c
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106701"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37937037"
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>Обеспечение безопасности веб-приложений и микрослужб .NET
 
@@ -43,7 +43,7 @@ services.AddDbContext<ApplicationDbContext>(options =>
 
 После настройки удостоверения ASP.NET Core его необходимо включить, вызвав app.UseIdentity в методе Startup.Configure службы.
 
-Использование удостоверения ASP.NET Code обеспечивает несколько сценариев.
+Использование удостоверения ASP.NET Core обеспечивает несколько сценариев.
 
 -   Создание сведений о пользователе с помощью типа UserManager (userManager.CreateAsync).
 

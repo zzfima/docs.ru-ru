@@ -4,12 +4,12 @@ description: Развертывание приложения .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 27f9260166f7e7899501e1798333b982fb728152
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
+ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212679"
+ms.lasthandoff: 07/04/2018
+ms.locfileid: "37792430"
 ---
 # <a name="net-core-application-deployment"></a>Развертывание приложений .NET Core
 
@@ -41,7 +41,7 @@ ms.locfileid: "33212679"
 
 ## <a name="self-contained-deployments-scd"></a>Автономные развертывания
 
-В случае с автономным развертыванием приложение и зависимости сторонних разработчиков развертываются вместе с версией .NET Core, с помощью которой создавалось приложение. Процесс создания автономного развертывания не включает [собственные зависимости .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) для различных платформ, поэтому их нужно установить перед запуском приложения.
+В случае с автономным развертыванием приложение и зависимости сторонних разработчиков развертываются вместе с версией .NET Core, с помощью которой создавалось приложение. Процесс создания автономного развертывания не включает [собственные зависимости .NET Core](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md) для различных платформ, поэтому их нужно установить перед запуском приложения. Дополнительные сведения о привязке версий во время выполнения см. в статье о [привязке версий в .NET Core](../versions/selection.md)
 
 Для автономного и зависимого от платформы развертываний создаются разные исполняемые файлы. Поэтому вы можете подписать исполняемый файл, созданный для автономного развертывания, своей подписью издателя.
 
