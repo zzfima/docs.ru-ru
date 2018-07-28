@@ -1,15 +1,15 @@
 ---
-title: Функциональное сборка (LINQ to XML) (Visual Basic)
+title: Функциональное построение (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
 ms.openlocfilehash: 360c321f993c8adb17767987060a0edcccad082a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644294"
+ms.lasthandoff: 07/28/2018
+ms.locfileid: "39333017"
 ---
-# <a name="functional-construction-linq-to-xml-visual-basic"></a>Функциональное сборка (LINQ to XML) (Visual Basic)
+# <a name="functional-construction-linq-to-xml-visual-basic"></a>Функциональное построение (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] предоставляет эффективный способ создания XML-элементов, который называется *функциональным построением*. Функциональное построение — это возможность создать XML-дерево одной инструкцией.  
   
  Существует несколько основных функций интерфейса программирования [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], обеспечивающих функциональное построение.  
@@ -22,7 +22,7 @@ ms.locfileid: "33644294"
   
  Ниже представлен пример такого кода.  
   
- Эти функции позволяют создавать код с помощью литералов XML для создания XML-дерева, а также написать код, использующий результаты [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запросов при создании XML-дерева:  
+ Эти функции позволяют писать код, с помощью литералов XML для создания XML-дерева, а также для написания кода, использующего результаты [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запрашивает при создании XML-дерева:  
   
 ```vb  
 Dim srcTree As XElement = _  
