@@ -1,28 +1,28 @@
 ---
-title: Объект My.Computer
+title: Объект My.Computer (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer object
 ms.assetid: cc814d79-6f7f-4e54-8b9d-5ecfdd77a0b8
-ms.openlocfilehash: c3af674bf56694d1ccf589033f97421faafd8c46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0518a380ee8b1e33a9b1ceeac7db6c0251c48edf
+ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33597351"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39323044"
 ---
 # <a name="mycomputer-object"></a>Объект My.Computer
 Включает свойства для управления компонентами компьютера, такими как звук, часы, клавиатура, файловая система и т. д.  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о методах и свойствах `My.Computer` см. в разделе <xref:Microsoft.VisualBasic.Devices.Computer>. Базовый класс <xref:Microsoft.VisualBasic.Devices.ServerComputer> содержит члены, которые доступны во всех проектах.  
+ Сведения о методах и свойствах `My.Computer` объекта, см. в разделе <xref:Microsoft.VisualBasic.Devices.Computer>. Базовый класс <xref:Microsoft.VisualBasic.Devices.ServerComputer> предоставляет элементы, которые доступны во всех проектах.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.Devices>  
   
- **Класс:** <xref:Microsoft.VisualBasic.Devices.Computer> (базовый класс <xref:Microsoft.VisualBasic.Devices.ServerComputer> содержит члены, которые доступны во всех проектах).  
+ **Класс:** <xref:Microsoft.VisualBasic.Devices.Computer> (базовый класс <xref:Microsoft.VisualBasic.Devices.ServerComputer> предоставляет элементы, которые доступны во всех проектах).  
   
- **Сборка:** Visual Basic Runtime Library (Microsoft.VisualBasic.dll)  
+ **Сборка:** библиотеки времени выполнения Visual Basic (в Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>См. также  
  [Объект My.Computer.Audio](../../../visual-basic/language-reference/objects/my-computer-audio-object.md)  
