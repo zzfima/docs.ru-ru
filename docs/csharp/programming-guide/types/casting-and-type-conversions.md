@@ -10,11 +10,11 @@ helpviewer_keywords:
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
 ms.openlocfilehash: 0c17fc89d93bdbb01bdef7935e72f8a7d96b0a55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336561"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39296147"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Приведение и преобразование типов (Руководство по программированию на C#)
 Поскольку код C# является статически типизированным во время компиляции, после объявления переменной ее нельзя объявить повторно или использовать для хранения значений другого типа, если этот тип не преобразуется в тип переменной. Например, отсутствует преобразование из целого числа в произвольную строку. Поэтому после объявления `i` как целого числа нельзя назначить ей строку "Hello", как показано в следующем коде.  
