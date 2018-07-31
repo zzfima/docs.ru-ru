@@ -1,5 +1,5 @@
 ---
-title: Имена элементов типа
+title: Имена членов типа
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -15,13 +15,13 @@ ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25fe93b63c518f54ee72300f26dfcb3f3ad21d76
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
-ms.translationtype: HT
+ms.sourcegitcommit: b6baf91310f6867223f0f32d596b451592b917b5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/26/2018
+ms.lasthandoff: 07/31/2018
 ms.locfileid: "33575353"
 ---
-# <a name="names-of-type-members"></a>Имена элементов типа
+# <a name="names-of-type-members"></a>Имена членов типа
 Типы состоят из элементов: методов, свойств, событий, конструкторов и полей. В следующих разделах приведены рекомендации по именованию элементов типа.  
   
 ## <a name="names-of-methods"></a>Имена методов  
