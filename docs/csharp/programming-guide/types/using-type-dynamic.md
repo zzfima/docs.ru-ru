@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: 67eb39fd6f2077d2adf1d38d001e801b815d687d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 296b9c80b4ea8b09e8efce71e3b388f7e453850b
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336642"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404380"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Использование типа dynamic (Руководство по программированию на C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] добавляет новый тип `dynamic`. Этот тип является статическим, но объект типа `dynamic` обходит проверку статического типа. В большинстве случаев он работает как тип `object`. Во время компиляции предполагается, что элемент, типизированный как `dynamic`, поддерживает любые операции. Это значит, что вам не придется задумываться о том, получает ли объект значение из API COM, из динамического языка, такого как IronPython, из модели DOM HTML, из отражения или из другой части программы. При этом если код недопустимый, ошибки перехватываются во время выполнения.  
@@ -27,7 +27,12 @@ ms.locfileid: "33336642"
   
  [!code-csharp[CsProgGuideTypes#51](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_3.cs)]  
   
- Операции, в которых результатом не является `dynamic`, включают преобразования из `dynamic` в другой тип, а также вызовы конструктора, которые включают аргументы типа `dynamic`. Например, `testInstance` в следующих объявлениях имеет тип `ExampleClass`, а не `dynamic`.  
+ Операции, в которых результатом не является `dynamic`:
+ 
+* Преобразования из `dynamic` в другой тип. 
+* Вызовы конструктора, которые включают аргументы типа `dynamic`. 
+
+Например, `testInstance` в следующих объявлениях имеет тип `ExampleClass`, а не `dynamic`:
   
  [!code-csharp[CsProgGuideTypes#52](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-type-dynamic_4.cs)]  
   

@@ -1,64 +1,103 @@
 ---
-title: readonly (Справочник по C#)
-ms.date: 07/20/2015
+title: Ключевое слово readonly (справочник по C#)
+ms.date: 06/21/2018
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: d2f8a2f192dc319ad806aeef4bfbaeecc44b07a3
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 96607f1dd7f019169446e29a08496fb54e1ed493
+ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172637"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37961187"
 ---
 # <a name="readonly-c-reference"></a>readonly (Справочник по C#)
-Ключевое слово `readonly` — это модификатор, который можно использовать для полей. Если объявление поля содержит модификатор `readonly`, присвоение значений таким полям может происходить только как часть объявления или в конструкторе в том же классе.  
-  
+
+Ключевое слово `readonly` — это модификатор, который может использоваться в трех контекстах:
+
+- В [объявлении поля](#readonly-field-example) `readonly` указывает на то, что присвоение значения полю может происходить только при объявлении или в конструкторе этого класса.
+- В [определении `readonly struct`](#readonly-struct-example) `readonly` указывает на то, что `struct` является неизменяемым.
+- В [возврате метода](#ref-readonly-return-example) `ref readonly` модификатор `readonly` указывает, что метод возвращает ссылку, и записи для этой ссылки не допускаются.
+
+Последние два контекста были добавлены в C# 7.2.
+
 ## <a name="readonly-field-example"></a>Пример поля только для чтения  
- В этом примере значение поля `year` нельзя изменить в методе `ChangeYear`, несмотря на то, что в конструкторе класса ему присваивается значение:  
+
+В этом примере значение поля `year` нельзя изменить в методе `ChangeYear`, несмотря на то, что в конструкторе класса ему присваивается значение:  
   
- [!code-csharp[csrefKeywordsModifiers#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_1.cs)]  
+[!code-csharp[Readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyField)]  
   
- Можно присвоить значение полю `readonly` только в следующих контекстах:  
+Можно присвоить значение полю `readonly` только в следующих контекстах:  
   
--   Когда переменная инициализируется в объявлении, например:  
-  
-    ```csharp  
-    public readonly int y = 5;  
-    ```  
-  
--   Для поля экземпляра — в конструкторах экземпляров класса, содержащего объявление поля, или, для статического поля, — в статическом конструкторе класса, содержащего объявление поля. Это единственно возможные контексты, в которых можно передавать поле `readonly` в качестве параметра [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) или [ref](../../../csharp/language-reference/keywords/ref.md).  
+- Когда переменная инициализируется в объявлении, например:  
+
+```csharp
+public readonly int y = 5;  
+```
+
+- В конструкторе экземпляра класса, содержащего объявление поля экземпляра.
+- В статическом конструкторе класса, содержащего объявление статического поля.
+
+Эти контексты конструктора являются единственными, в которых можно передавать поле `readonly` в качестве параметра [out](out-parameter-modifier.md) или [ref](ref.md).  
   
 > [!NOTE]
->  Ключевое слово `readonly` отличается от ключевого слова [const](../../../csharp/language-reference/keywords/const.md). Поле `const` может быть инициализировано только при объявлении поля. Поле `readonly` может быть инициализировано при объявлении или в конструкторе. Таким образом, поля `readonly` могут иметь разные значения в зависимости от использованного конструктора. К тому же, в то время как поле `const` является константой во время компиляции, поле `readonly` можно использовать для констант во время выполнения, как в следующем примере:  
-  
-```csharp  
+> Ключевое слово `readonly` отличается от ключевого слова [const](const.md). Поле `const` может быть инициализировано только при объявлении поля. Поле `readonly` может быть инициализировано при объявлении или в конструкторе. Таким образом, поля `readonly` могут иметь разные значения в зависимости от использованного конструктора. К тому же, в то время как поле `const` является константой во время компиляции, поле `readonly` можно использовать для констант во время выполнения, как в следующем примере:  
+
+```csharp
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;  
-```  
+```
+
+[!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]  
   
-## <a name="comparing-readonly-and-non-readonly-instance-fields"></a>Сравнение полей экземпляров, доступных только для чтения и не только для чтения  
- [!code-csharp[csrefKeywordsModifiers#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/readonly_2.cs)]  
+В предыдущем примере при использовании такого оператора:  
   
- В предыдущем примере при использовании такого оператора:  
+`p2.y = 66;        // Error`  
   
- `p2.y = 66;        // Error`  
+будет отображено сообщение об ошибке компилятора:  
   
- будет отображено сообщение об ошибке компилятора:  
+`The left-hand side of an assignment must be an l-value`  
   
- `The left-hand side of an assignment must be an l-value`  
-  
- Это такая же ошибка, которая возникает при попытке присвоить значение константе.  
-  
+Это такая же ошибка, которая возникает при попытке присвоить значение константе.  
+
+## <a name="readonly-struct-example"></a>Пример структуры только для чтения
+
+Модификатор `readonly` в определении `struct` объявляет, что структура является **неизменяемой**. Каждое поле экземпляра `struct` должно быть помечено `readonly`, как показано в следующем примере:
+
+[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]  
+
+В предыдущем примере используются [автоматические свойства только для чтения](../../properties.md#read-only) для объявления хранилища. Это указывает компилятору на необходимость создания резервных полей `readonly` для этих свойств. Можно также объявить поля `readonly` напрямую:
+
+```csharp
+public readonly struct Point
+{
+    public readonly double X;
+    public readonly double Y;
+
+    public Point(double x, double y) => (X, Y) = (x, y);
+
+    public override string ToString() => $"({X}, {Y})";
+}
+```
+
+При добавлении поля без пометки `readonly` возникает ошибка компилятора `CS8340`: "Поля экземпляров структур только для чтения должны быть только для чтения".
+
+## <a name="ref-readonly-return-example"></a>Пример возвращаемой ссылки только для чтения
+
+Модификатор `readonly` в `ref return` указывает, что возвращаемую ссылку нельзя изменить. Следующий пример возвращает ссылку на источник. Он использует модификатор `readonly`, чтобы указать, что вызывающие объекты не могут изменять источник:
+
+[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]  
+Необязательно должен возвращаться тип `readonly struct`. Любой тип, возвращаемый `ref`, может возвращаться `ref readonly`
+
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)  
- [const](../../../csharp/language-reference/keywords/const.md)  
- [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)
+[Справочник по C#](../../../csharp/language-reference/index.md)  
+[Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+[Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+[Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)  
+[const](../../../csharp/language-reference/keywords/const.md)  
+[Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)

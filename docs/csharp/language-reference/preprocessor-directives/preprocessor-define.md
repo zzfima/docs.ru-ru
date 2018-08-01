@@ -1,17 +1,17 @@
 ---
 title: '##define (справочник по C#)'
-ms.date: 07/20/2015
+ms.date: 06/30/2018
 f1_keywords:
 - '#define'
 helpviewer_keywords:
 - '#define directive [C#]'
 ms.assetid: 23638b8f-779c-450e-b600-d55682de7d01
-ms.openlocfilehash: 1903b96de5f9dfa4efc252897a4a4bd18ed64924
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f40c32a89641256e4f8fe30cd24f523b898139d5
+ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286738"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37143483"
 ---
 # <a name="define-c-reference"></a>#define (Справочник по C#)
 `#define` позволяет определить символ. При использовании символа в качестве выражения, которое передается директиве [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), выражение будет иметь значение `true`, как показано в следующем примере:  
@@ -29,9 +29,9 @@ ms.locfileid: "33286738"
   
  Можно определить символ, но нельзя назначить символу значение. Директива `#define` должна находиться в файле перед использованием любых инструкций, которые также не являются директивами препроцессора.  
   
- Можно также определить символ с помощью параметра компилятора [/define](../../../csharp/language-reference/compiler-options/define-compiler-option.md). Для отмены определения символа служит директива [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
+ Также символ можно определить с помощью параметра компилятора [-define](../../../csharp/language-reference/compiler-options/define-compiler-option.md). Для отмены определения символа служит директива [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
   
- Символ, определенный с помощью `/define` или `#define`, не конфликтует с одноименной переменной. Имя переменной не должно передаваться директиве препроцессора, а символ может вычисляться только директивой препроцессора.  
+ Символ, определенный с помощью `-define` или `#define`, не конфликтует с одноименной переменной. Имя переменной не должно передаваться директиве препроцессора, а символ может вычисляться только директивой препроцессора.  
   
  Область символа, которая была создана с помощью директивы `#define`, — это файл, в котором был определен символ.  
   

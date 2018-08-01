@@ -2,12 +2,12 @@
 title: Асинхронные типы возвращаемых значений (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 07aefcf3149b2210e3dc97713647fa3a0133a535
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 02e3cdd433d5d6d4d58667d56592b9fc2bf374c4
+ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334188"
+ms.lasthandoff: 07/02/2018
+ms.locfileid: "37143561"
 ---
 # <a name="async-return-types-c"></a>Асинхронные типы возвращаемых значений (C#)
 Асинхронные методы могут иметь следующие типы возвращаемых значений:
@@ -24,7 +24,7 @@ ms.locfileid: "33334188"
   
 Каждый тип возвращаемого значения рассматривается в одном из следующих разделов, а полный пример, в котором используются все три типа, вы найдете в конце этого раздела.  
   
-##  <a name="BKMK_TaskTReturnType"></a> Тип возвращаемого значения Task(T)  
+##  <a name="BKMK_TaskTReturnType"></a> Задача\<TResult\> Тип возвращаемого значения  
 Тип возвращаемого значения <xref:System.Threading.Tasks.Task%601> используется для асинхронного метода, содержащего инструкцию [return](../../../../csharp/language-reference/keywords/return.md) (C#), в которой операнд имеет тип `TResult`.  
   
 В следующем примере асинхронный метод `GetLeisureHours` содержит инструкцию `return`, которая возвращает целое число. Поэтому в объявлении метода должен указываться тип возвращаемого значения `Task<int>`.  Асинхронный метод <xref:System.Threading.Tasks.Task.FromResult%2A> представляет собой заполнитель для операции, которая возвращает строку.
@@ -33,7 +33,7 @@ ms.locfileid: "33334188"
 
 При вызове `GetLeisureHours` из выражения await в методе `ShowTodaysInfo` это выражение await извлекает целочисленное значение (значение `leisureHours`), хранящееся в задаче, которая возвращается методом `GetLeisureHours`. Дополнительные сведения о выражениях await см. в разделе [await](../../../../csharp/language-reference/keywords/await.md).  
   
-Чтобы лучше понять, как это происходит, отделите вызов метода `GetLeisureHours` от применения `await`, как показано в следующем коде. Вызов метода `GetLeisureHours`, который не ожидается немедленно, возвращает `Task<int>`, как и следовало ожидать из объявления метода. В данном примере эта задача назначается переменной `integerTask`. Поскольку `integerTask` является <xref:System.Threading.Tasks.Task%601>, она содержит свойство <xref:System.Threading.Tasks.Task%601.Result> типа `TResult`. В этом примере TResult представляет собой целочисленный тип. Если выражение `await` применяется к `integerTask`, выражение await вычисляется как содержимое свойства <xref:System.Threading.Tasks.Task%601.Result%2A> объекта `integerTask`. Это значение присваивается переменной `ret`.  
+Чтобы лучше понять, как это происходит, отделите вызов метода `GetLeisureHours` от применения `await`, как показано в следующем коде. Вызов метода `TaskOfT_MethodAsync`, который не ожидается немедленно, возвращает `Task<int>`, как и следовало ожидать из объявления метода. В данном примере эта задача назначается переменной `integerTask`. Поскольку `integerTask` является <xref:System.Threading.Tasks.Task%601>, она содержит свойство <xref:System.Threading.Tasks.Task%601.Result> типа `TResult`. В этом примере TResult представляет собой целочисленный тип. Если выражение `await` применяется к `integerTask`, выражение await вычисляется как содержимое свойства <xref:System.Threading.Tasks.Task%601.Result%2A> объекта `integerTask`. Это значение присваивается переменной `result2`.  
   
 > [!IMPORTANT]
 >  Свойство <xref:System.Threading.Tasks.Task%601.Result%2A> является блокирующим свойством. При попытке доступа к нему до завершения его задачи поток, который в текущий момент активен, блокируется до того момента, пока задача не будет завершена, а ее значение не станет доступным. В большинстве случаев следует получать доступ к этому значению с помощью `await` вместо прямого обращения к свойству. <br/> В предыдущем примере извлекалось значение свойства <xref:System.Threading.Tasks.Task%601.Result%2A> для блокировки основного потока. Это позволяет закончить выполнение метода `ShowTodaysInfo` до того, как завершится работа приложения.  
@@ -60,13 +60,13 @@ ms.locfileid: "33334188"
   
 Вызывающий объект асинхронного метода, возвращающего void, не может перехватывать исключения, создаваемые методом, и такие необработанные исключения могут привести к сбою приложения. Если исключение возникает в асинхронном методе, который возвращает <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>, исключение хранится в возвращенной задаче и повторно вызывается при ожидании задачи. Поэтому убедитесь, что любой асинхронный метод, который может вызвать исключение, имеет тип возвращаемого значения <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601> и что вызовы метода являются ожидаемыми.  
   
-Дополнительные сведения о перехвате исключений в асинхронных методах см. в разделе [try-catch](../../../../csharp/language-reference/keywords/try-catch.md).  
+Дополнительные сведения о перехвате исключений в асинхронных методах см. в разделе [Исключения в асинхронных методах](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods) в статье о [try-catch](../../../language-reference/keywords/try-catch.md).  
   
 Следующий фрагмент кода определяет асинхронный обработчик событий.  
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
  
-## <a name="generalized-async-return-types-and-valuetaskt"></a>Обобщенные асинхронные типы возвращаемых значений и ValueTask<T>
+## <a name="generalized-async-return-types-and-valuetasktresult"></a>Обобщенные асинхронные типы возвращаемых значений и ValueTask\<TResult\>
 
 Начиная с C# 7.0 асинхронные методы могут возвращать любой тип, имеющий доступный метод `GetAwaiter`.
  

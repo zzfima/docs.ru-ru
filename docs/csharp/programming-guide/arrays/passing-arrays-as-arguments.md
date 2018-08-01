@@ -1,64 +1,64 @@
 ---
-title: Передача массивов в качестве аргументов (Руководство по программированию на C#)
-ms.date: 07/20/2015
+title: Передача массивов в качестве аргументов (руководство по программированию на C#)
+ms.date: 07/05/2018
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-ms.openlocfilehash: d863cdc33a8a1a844aabbea9ba5876614e6e8dba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0289297be9d7b4989cc95d2b50b92dae9ee831f7
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33315520"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39199235"
 ---
-# <a name="passing-arrays-as-arguments-c-programming-guide"></a>Передача массивов в качестве аргументов (Руководство по программированию на C#)
-Массивы можно передавать в качестве аргументов в параметры метода. Поскольку массивы представляют собой ссылочные типы, метод может изменять значения элементов.  
-  
-## <a name="passing-single-dimensional-arrays-as-arguments"></a>Передача одномерных массивов в качестве аргументов  
- Инициализированный одномерный массив можно передать в метод. Например, следующий оператор передает массив в метод печати.  
-  
- [!code-csharp[csProgGuideArrays#34](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_1.cs)]  
-  
- В следующем примере кода показана разделяемая реализация метода печати.  
-  
- [!code-csharp[csProgGuideArrays#33](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_2.cs)]  
-  
- Новый массив можно инициализировать и передать за один шаг, как показано в следующем примере.  
-  
- [!code-csharp[CsProgGuideArrays#35](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_3.cs)]  
-  
-## <a name="example"></a>Пример  
-  
-### <a name="description"></a>Описание:  
- В следующем примере массив строк инициализируется и передается в качестве аргумента в метод `PrintArray` для строк. Этот метод отображает элементы массива. Далее вызываются методы `ChangeArray` и `ChangeArrayElement`. Это позволяет продемонстрировать, что передача аргумента массива по значению не позволяет предотвратить изменение элементов массива.  
-  
-### <a name="code"></a>Код  
- [!code-csharp[csProgGuideArrays#30](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_4.cs)]  
-  
-## <a name="passing-multidimensional-arrays-as-arguments"></a>Передача многомерных массивов в качестве аргументов  
- Инициализированный многомерный массив можно передать в метод так же, как и одномерный массив.  
-  
- [!code-csharp[csProgGuideArrays#41](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_5.cs)]  
-  
- В следующем коде показано разделяемое объявление метода печати, который принимает в качестве аргумента двухмерный массив.  
-  
- [!code-csharp[csProgGuideArrays#36](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_6.cs)]  
-  
- Новый массив можно инициализировать и передать за один шаг, как показано в следующем примере.  
-  
- [!code-csharp[csProgGuideArrays#32](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_7.cs)]  
-  
-## <a name="example"></a>Пример  
-  
-### <a name="description"></a>Описание:  
- В следующем примере инициализируется двухмерный массив целых чисел, который передается в метод `Print2DArray`. Этот метод отображает элементы массива.  
-  
-### <a name="code"></a>Код  
- [!code-csharp[csProgGuideArrays#31](../../../csharp/programming-guide/arrays/codesnippet/CSharp/passing-arrays-as-arguments_8.cs)]  
-  
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Массивы](../../../csharp/programming-guide/arrays/index.md)  
- [Одномерные массивы](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [Многомерные массивы](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [Массивы массивов](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+# <a name="passing-arrays-as-arguments-c-programming-guide"></a>Передача массивов в качестве аргументов (руководство по программированию на C#)
+
+Массивы можно передавать в качестве аргументов в параметры метода. Поскольку массивы представляют собой ссылочные типы, метод может изменять значения элементов.
+
+## <a name="passing-single-dimensional-arrays-as-arguments"></a>Передача одномерных массивов в качестве аргументов
+
+Инициализированный одномерный массив можно передать в метод. Например, следующий оператор передает массив в метод печати.
+
+[!code-csharp[csProgGuideArrays#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#34)]
+
+В следующем примере кода показана разделяемая реализация метода печати.
+
+[!code-csharp[csProgGuideArrays#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#33)]
+
+Новый массив можно инициализировать и передать за один шаг, как показано в следующем примере.
+
+[!code-csharp[CsProgGuideArrays#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#35)]
+
+### <a name="example"></a>Пример
+
+В следующем примере массив строк инициализируется и передается в качестве аргумента в метод `DisplayArray` для строк. Этот метод отображает элементы массива. Затем метод `ChangeArray` размещает элементы массива в обратном порядке, а метод `ChangeArrayElements` изменяет первые три элемента массива. После возврата каждого метода метод `DisplayArray` показывает, что передача массива по значению не препятствует изменению элементов массива.
+
+[!code-csharp[csProgGuideArrays#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/ArrayExample.cs)]
+
+## <a name="passing-multidimensional-arrays-as-arguments"></a>Передача многомерных массивов в качестве аргументов
+
+Инициализированный многомерный массив можно передать в метод так же, как и одномерный массив.
+
+[!code-csharp[csProgGuideArrays#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#41)]
+
+В следующем коде показано разделяемое объявление метода печати, который принимает в качестве аргумента двухмерный массив.
+
+[!code-csharp[csProgGuideArrays#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#36)]
+
+Новый массив можно инициализировать и передать за один шаг, как показано в следующем примере.
+
+[!code-csharp[csProgGuideArrays#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#32)]
+
+### <a name="example"></a>Пример
+
+В следующем примере инициализируется двухмерный массив целых чисел, который передается в метод `Print2DArray`. Этот метод отображает элементы массива.
+
+[!code-csharp[csProgGuideArrays#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#31)]
+
+## <a name="see-also"></a>См. также
+
+[Руководство по программированию на C#](../index.md)  
+[Массивы](index.md)  
+[Одномерные массивы](single-dimensional-arrays.md)  
+[Многомерные массивы](multidimensional-arrays.md)  
+[Массивы массивов](jagged-arrays.md)  

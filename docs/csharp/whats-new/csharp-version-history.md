@@ -3,12 +3,12 @@ title: История языка C# (руководство по C#)
 description: На что был похож этот язык в ранних версиях и во что он превратился сейчас?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 3e3bf98d1435b237b2941758b8ed245baa970237
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207538"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37404597"
 ---
 # <a name="the-history-of-c"></a>История языка C# #
 
@@ -73,7 +73,7 @@ C# версии 3.0 был выпущен в конце 2007 года вмест
 - [Методы расширения](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 - [Неявно типизированные локальные переменные](../language-reference/keywords/var.md)
 - [Разделяемые методы](../language-reference/keywords/partial-method.md)
-- Инициализаторы объектов и коллекций
+- [Инициализаторы объектов и коллекций](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
 
 Если оглянуться назад, становится ясно, что многие из этих возможностей не могли не появиться или появиться отдельно друг от друга. Все они образуют единый и стратегически значимый набор. Принято считать, что уникальным преимуществом C# было выражение запроса, которое также называется LINQ.
 

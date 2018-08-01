@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02f88faab6ddbaa026e73ad61bc63fbe8e5e00ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d689aeb91ad79b776c3b93c1809ec46947ea60b
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591332"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874791"
 ---
 # <a name="threading-objects-and-features"></a>Объекты и функциональные возможности работы с потоками
 Платформа .NET Framework предоставляет ряд объектов, которые помогают создавать многопоточные приложения и управлять ими. Управляемые потоки представлены классом <xref:System.Threading.Thread>. Класс <xref:System.Threading.ThreadPool> позволяет легко создавать многопоточные фоновые задачи и управлять ими. Класс <xref:System.ComponentModel.BackgroundWorker> используется в тех же целях для задач, которые взаимодействуют с пользовательским интерфейсом. Класс <xref:System.Threading.Timer> выполняет фоновые задачи через определенные интервалы.  
@@ -25,7 +25,7 @@ ms.locfileid: "33591332"
  Описывается класс **ThreadPool**, который позволяет запросить выполнение задачи потоком без необходимости управлять потоком самостоятельно.  
   
  [Таймеры](../../../docs/standard/threading/timers.md)  
- Описывается использование объекта **Timer** для указания делегата, вызываемого в указанное время.  
+ Описывает таймеры, которые можно использовать в многопоточной среде.  
   
  [Мониторы](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  Описывается использование класса **Monitor** для синхронизации доступа к члену или создания собственных типов управления потоками.  

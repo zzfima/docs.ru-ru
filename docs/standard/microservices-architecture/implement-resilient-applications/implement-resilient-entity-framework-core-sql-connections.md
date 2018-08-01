@@ -1,17 +1,17 @@
 ---
 title: Реализация устойчивых SQL-подключений Entity Framework Core
-description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Реализация устойчивых SQL-подключений Entity Framework Core
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Реализация устойчивых SQL-подключений Entity Framework Core. Этот прием особенно важен при использовании базы данных SQL Azure в облаке.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 79f115a2d897463c213eda6f4d6951ff0cbeb3ca
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/08/2018
+ms.openlocfilehash: c1324eafc9dc0286128e8e942f95ad7c4c0a5d98
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105479"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874940"
 ---
-# <a name="implementing-resilient-entity-framework-core-sql-connections"></a>Реализация устойчивых SQL-подключений Entity Framework Core
+# <a name="implement-resilient-entity-framework-core-sql-connections"></a>Реализация устойчивых SQL-подключений Entity Framework Core
 
 Для баз данных Azure SQL платформа Entity Framework Core уже предоставляет логику устойчивости и повторного выполнения при подключении к внутренним базам данных. Но вам необходимо применить стратегию выполнения Entity Framework к каждому подключению DbContext, если вы хотите иметь [устойчивое подключение к EF Core](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency).
 
@@ -25,13 +25,13 @@ public class Startup
     public IServiceProvider ConfigureServices(IServiceCollection services)
     {
         // ...
-        services.AddDbContext<OrderingContext>(options =>
+        services.AddDbContext<CatalogContext>(options =>
         {
             options.UseSqlServer(Configuration["ConnectionString"],
             sqlServerOptionsAction: sqlOptions =>
             {
                 sqlOptions.EnableRetryOnFailure(
-                maxRetryCount: 5,
+                maxRetryCount: 10,
                 maxRetryDelay: TimeSpan.FromSeconds(30),
                 errorNumbersToAdd: null);
             });
@@ -85,13 +85,13 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
+-   **Устойчивость подключений EF** (Entity Framework Core) [*https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency*](https://docs.microsoft.com/ef/core/miscellaneous/connection-resiliency)
+
 -   **Устойчивость подключений и перехват команд в Entity Framework**
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
 -   **Сезар де ла Торре (Cesar de la Torre). Использование устойчивых SQL-подключений Entity Framework Core и транзакций**
     <https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
-
 >[!div class="step-by-step"]
-[Назад](implement-retries-exponential-backoff.md)
-[Вперед](implement-custom-http-call-retries-exponential-backoff.md)
+[Назад](implement-retries-exponential-backoff.md) [Далее]explore-custom-http-call-retries-exponential-backoff.md)

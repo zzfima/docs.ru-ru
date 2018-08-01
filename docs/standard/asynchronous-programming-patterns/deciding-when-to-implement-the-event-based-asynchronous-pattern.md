@@ -12,17 +12,17 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: 3f9b18b3362155e256c922a84f3f1cdb6d255a4b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b00b01cb82f7fa2f1d9af42438c37592bb1e8181
+ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570982"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39198883"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Определение, когда следует реализовать асинхронную модель, основанную на событиях
 Асинхронная модель на основе событий применяется для предоставления асинхронного поведения класса. С момента ее появления [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] определяет две модели для предоставления асинхронного поведения: на основе интерфейса <xref:System.IAsyncResult?displayProperty=nameWithType> и на основе событий. Эта статья описывает ситуации, в которых вам следует применять ту или иную модель.  
   
- Дополнительные сведения об асинхронном программировании для интерфейса <xref:System.IAsyncResult> вы найдете в статье об [асинхронной модели на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md).  
+ Дополнительные сведения об асинхронном программировании для интерфейса <xref:System.IAsyncResult> вы найдете в статье об [асинхронной модели программирования (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md).  
   
 ## <a name="general-principles"></a>Общие принципы  
  Обычно для всех асинхронных функций лучше применять асинхронную модель на основе событий. Но есть несколько требований, которым она не полностью соответствует. Если они применимы в вашей ситуации, в дополнение к модели на основе событий следует реализовать модель <xref:System.IAsyncResult>.  
