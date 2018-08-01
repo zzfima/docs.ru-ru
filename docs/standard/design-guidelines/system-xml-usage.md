@@ -15,13 +15,13 @@ ms.locfileid: "33572818"
 # <a name="systemxml-usage"></a>Использование System.Xml
 В этом разделе рассказывается об использовании нескольких типов, хранящихся в <xref:System.Xml?displayProperty=nameWithType> пространства имен, который может использоваться для представления XML-данных.  
   
- **X не** использовать <xref:System.Xml.XmlNode> или <xref:System.Xml.XmlDocument> для представления XML-данных. Предпочтительнее использовать экземпляры <xref:System.Xml.XPath.IXPathNavigable>, <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, или подтип <xref:System.Xml.Linq.XNode> вместо него. `XmlNode` и `XmlDocument` не предназначены для предоставления в открытых интерфейсах API.  
+ **X DO NOT** использовать <xref:System.Xml.XmlNode> или <xref:System.Xml.XmlDocument> для представления XML-данных. Предпочтительнее использовать экземпляры <xref:System.Xml.XPath.IXPathNavigable>, <xref:System.Xml.XmlReader>, <xref:System.Xml.XmlWriter>, или подтип <xref:System.Xml.Linq.XNode> вместо него. `XmlNode` и `XmlDocument` не предназначены для предоставления в открытых интерфейсах API.  
   
- **СДЕЛАТЬ ✓** использовать `XmlReader`, `IXPathNavigable`, или подтип `XNode` как входной или выходной членов, которые принимают или возвращают XML-данные.  
+ **✓ DO** использовать `XmlReader`, `IXPathNavigable`, или подтип `XNode` как входной или выходной членов, которые принимают или возвращают XML-данные.  
   
  Используйте эти абстракции, а не `XmlDocument`, `XmlNode`, или <xref:System.Xml.XPath.XPathDocument>, так как это отделяет методов из определенных реализаций XML-документа в памяти и их можно работать с виртуальной источники XML-данных, которые предоставляют `XNode` , `XmlReader`, или <xref:System.Xml.XPath.XPathNavigator>.  
   
- **X не** подкласс `XmlDocument` требуется создать тип, представляющий XML-представление базового источника данных или модели объекта.  
+ **X DO NOT** подкласс `XmlDocument` требуется создать тип, представляющий XML-представление базового источника данных или модели объекта.  
   
  *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
   
