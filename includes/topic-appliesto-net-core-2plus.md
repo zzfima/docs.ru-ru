@@ -1,1 +1,1 @@
-<span data-ttu-id="ae78a-101">**Этот раздел применим к: ✓** .NET Core SDK 2.0</span><span class="sxs-lookup"><span data-stu-id="ae78a-101">**This topic applies to: ✓** .NET Core SDK 2.0</span></span>
+<span data-ttu-id="8d5f9-101">**Этот раздел применим к: ✓** .NET Core SDK 2.0 и более поздних версий</span><span class="sxs-lookup"><span data-stu-id="8d5f9-101">**This topic applies to: ✓** .NET Core SDK 2.0 and later versions</span></span>

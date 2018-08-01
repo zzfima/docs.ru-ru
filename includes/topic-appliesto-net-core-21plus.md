@@ -1,0 +1,1 @@
+<span data-ttu-id="a04f3-101">**Этот раздел применим к: ✓** .NET Core SDK 2.1.300 и более поздних версий</span><span class="sxs-lookup"><span data-stu-id="a04f3-101">**This topic applies to: ✓** .NET Core SDK 2.1.300 and later versions</span></span>

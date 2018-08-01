@@ -1,176 +1,95 @@
 ---
 title: Реализация повторных попыток вызова HTTP с экспоненциальной выдержкой с помощью библиотеки Polly
-description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Реализация повторных попыток вызова HTTP с экспоненциальной выдержкой с помощью библиотеки Polly
+description: Узнайте, как обрабатывать сбои HTTP-запросов с помощью Polly и HttpClientFactory
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: cce1392bb381859e7cad89c9f2518113241ae724
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 06/10/2018
+ms.openlocfilehash: c16f4c0f2ef09f346c8b46ff8089883cedcf0c7e
+ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106935"
+ms.lasthandoff: 07/06/2018
+ms.locfileid: "37874901"
 ---
-# <a name="implementing-http-call-retries-with-exponential-backoff-with-polly"></a><span data-ttu-id="f77d2-103">Реализация повторных попыток вызова HTTP с экспоненциальной выдержкой с помощью библиотеки Polly</span><span class="sxs-lookup"><span data-stu-id="f77d2-103">Implementing HTTP call retries with exponential backoff with Polly</span></span>
+# <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a><span data-ttu-id="2a841-103">Реализация повторных попыток вызова HTTP с экспоненциальной выдержкой с помощью HttpClientFactory и политик Polly</span><span class="sxs-lookup"><span data-stu-id="2a841-103">Implement HTTP call retries with exponential backoff with HttpClientFactory and Polly policies</span></span>
 
-<span data-ttu-id="f77d2-104">Рекомендуемый подход к выполнению повторных попыток с экспоненциальной выдержкой заключается в использовании расширенных библиотек .NET, таких как библиотека [Polly](https://github.com/App-vNext/Polly) с открытым кодом.</span><span class="sxs-lookup"><span data-stu-id="f77d2-104">The recommended approach for retries with exponential backoff is to take advantage of more advanced .NET libraries like the open source [Polly](https://github.com/App-vNext/Polly) library.</span></span>
+<span data-ttu-id="2a841-104">Рекомендуемый подход к выполнению повторных попыток с экспоненциальной выдержкой заключается в использовании расширенных библиотек .NET, таких как [библиотека Polly](https://github.com/App-vNext/Polly) с открытым кодом.</span><span class="sxs-lookup"><span data-stu-id="2a841-104">The recommended approach for retries with exponential backoff is to take advantage of more advanced .NET libraries like the open-source [Polly library](https://github.com/App-vNext/Polly).</span></span>
 
-<span data-ttu-id="f77d2-105">Polly — это библиотека .NET, которая предоставляет возможности обеспечения отказоустойчивости и обработки временных сбоев.</span><span class="sxs-lookup"><span data-stu-id="f77d2-105">Polly is a .NET library that provides resilience and transient-fault handling capabilities.</span></span> <span data-ttu-id="f77d2-106">Эти возможности можно легко реализовать путем применения политик Polly, таких как политики повтора, размыкателя цепи, изоляции отсеков, времени ожидания и отката.</span><span class="sxs-lookup"><span data-stu-id="f77d2-106">You can implement those capabilities easily by applying Polly policies such as Retry, Circuit Breaker, Bulkhead Isolation, Timeout, and Fallback.</span></span> <span data-ttu-id="f77d2-107">Библиотека Polly предназначена для .NET 4.x и .NET Standard версии 1.0 (поддерживает .NET Core).</span><span class="sxs-lookup"><span data-stu-id="f77d2-107">Polly targets .NET 4.x and the .NET Standard version 1.0 (which supports .NET Core).</span></span>
+<span data-ttu-id="2a841-105">Polly — это библиотека .NET, которая предоставляет возможности обеспечения отказоустойчивости и обработки временных сбоев.</span><span class="sxs-lookup"><span data-stu-id="2a841-105">Polly is a .NET library that provides resilience and transient-fault handling capabilities.</span></span> <span data-ttu-id="2a841-106">Эти возможности можно реализовать путем применения политик Polly, таких как политики повтора, размыкателя цепи, изоляции отсеков, времени ожидания и отката.</span><span class="sxs-lookup"><span data-stu-id="2a841-106">You can implement those capabilities by applying Polly policies such as Retry, Circuit Breaker, Bulkhead Isolation, Timeout, and Fallback.</span></span> <span data-ttu-id="2a841-107">Polly предназначена для .NET 4.x и библиотеки .NET Standard 1.0 (поддерживает .NET Core).</span><span class="sxs-lookup"><span data-stu-id="2a841-107">Polly targets .NET 4.x and the .NET Standard Library 1.0 (which supports .NET Core).</span></span>
 
-<span data-ttu-id="f77d2-108">Политика повтора из библиотеки Polly используется в приложении eShopOnContainers при реализации повторных попыток вызова HTTP.</span><span class="sxs-lookup"><span data-stu-id="f77d2-108">The Retry policy in Polly is the approach used in eShopOnContainers when implementing HTTP retries.</span></span> <span data-ttu-id="f77d2-109">С помощью Polly можно реализовать интерфейс для внедрения стандартной функциональности HttpClient или отказоустойчивой версии HttpClient в зависимости от требуемой конфигурации политики повтора.</span><span class="sxs-lookup"><span data-stu-id="f77d2-109">You can implement an interface so you can inject either standard HttpClient functionality or a resilient version of HttpClient using Polly, depending on what retry policy configuration you want to use.</span></span>
+<span data-ttu-id="2a841-108">Тем не менее использовать библиотеку Polly с вашим кодом с помощью HttpClient может быть довольно сложно.</span><span class="sxs-lookup"><span data-stu-id="2a841-108">However, using Polly’s library with your own custom code with HttpClient can be significantly complex.</span></span> <span data-ttu-id="2a841-109">В исходной версии eShopOnContainers существовал [стандартный блок ResilientHttpClient](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/Resilience/Resilience.Http/ResilientHttpClient.cs) на базе Polly.</span><span class="sxs-lookup"><span data-stu-id="2a841-109">In the original version of eShopOnContainers, there was a [ResilientHttpClient building-block](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/Resilience/Resilience.Http/ResilientHttpClient.cs) based on Polly.</span></span> <span data-ttu-id="2a841-110">Но с появлением HttpClientFactory стало гораздо проще реализовывать устойчивое соединение по протоколу HTTP, так что этот стандартный блок был исключен из eShopOnContainers.</span><span class="sxs-lookup"><span data-stu-id="2a841-110">But with the release of HttpClientFactory, resilient Http communication has become much simpler to implement, so that building-block was deprecated from eShopOnContainers.</span></span> 
 
-<span data-ttu-id="f77d2-110">В приведенном ниже примере показан интерфейс, реализованный в eShopOnContainers.</span><span class="sxs-lookup"><span data-stu-id="f77d2-110">The following example shows the interface implemented in eShopOnContainers.</span></span>
+<span data-ttu-id="2a841-111">Ниже показано, как можно использовать повторные HTTP-запросы через Polly с интеграцией HttpClientFactory, как описано в предыдущем разделе.</span><span class="sxs-lookup"><span data-stu-id="2a841-111">The following steps show how you can use Http retries with Polly integrated into HttpClientFactory, which is explained in the previous section.</span></span>
+
+<span data-ttu-id="2a841-112">**Ссылка на пакеты ASP.NET Core 2.1**</span><span class="sxs-lookup"><span data-stu-id="2a841-112">**Reference the ASP.NET Core 2.1 packages**</span></span>
+
+<span data-ttu-id="2a841-113">В проекте должны использоваться пакеты NuGet ASP.NET Core 2.1.</span><span class="sxs-lookup"><span data-stu-id="2a841-113">Your project has to be using the ASP.NET Core 2.1 packages from NuGet.</span></span> <span data-ttu-id="2a841-114">Обычно вам нужен метапакет `AspNetCore` и пакет расширений `Microsoft.Extensions.Http.Polly`.</span><span class="sxs-lookup"><span data-stu-id="2a841-114">You typically need the `AspNetCore` metapackage, and the extension package `Microsoft.Extensions.Http.Polly`.</span></span>
+
+<span data-ttu-id="2a841-115">**Настройка клиента с помощью политики повтора Polly в параметрах запуска**</span><span class="sxs-lookup"><span data-stu-id="2a841-115">**Configure a client with Polly’s Retry policy, in Startup**</span></span>
+
+<span data-ttu-id="2a841-116">Как показано в предыдущих разделах, необходимо определить конфигурацию HttpClient именованного или типизированного клиента в стандартном методе Startup.ConfigureServices(...), но теперь вам потребуется добавочный код, указывающий политику для повторных HTTP-запросов с экспоненциальной выдержкой, как показано ниже:</span><span class="sxs-lookup"><span data-stu-id="2a841-116">As shown in previous sections, you need to define a named or typed client HttpClient configuration in your standard Startup.ConfigureServices(...) method, but now, you add incremental code specifying the policy for the Http retries with exponential backoff, as below:</span></span>
 
 ```csharp
-public interface IHttpClient
+//ConfigureServices()  - Startup.cs
+services.AddHttpClient<IBasketService, BasketService>()
+        .SetHandlerLifetime(TimeSpan.FromMinutes(5))  //Set lifetime to five minutes
+        .AddPolicyHandler(GetRetryPolicy());
+```
+
+<span data-ttu-id="2a841-117">Метод **AddPolicyHandler()** добавляет политики для объектов `HttpClient`, которые вы будете использовать.</span><span class="sxs-lookup"><span data-stu-id="2a841-117">The **AddPolicyHandler()** method is what adds policies to the `HttpClient` objects you will use.</span></span> <span data-ttu-id="2a841-118">В этом случае он добавляет политику Polly для повторных HTTP-запросов с экспоненциальной выдержкой.</span><span class="sxs-lookup"><span data-stu-id="2a841-118">In this case, it is adding a Polly’s policy for Http Retries with exponential backoff.</span></span>
+
+<span data-ttu-id="2a841-119">Для более модульного подхода политику повтора HTTP-запросов можно определить в отдельном методе в методе ConfigureServices(), как в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="2a841-119">In order to have a more modular approach, the Http Retry Policy can be defined in a separate method within the ConfigureServices() method, as the following code.</span></span>
+
+```csharp
+static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
 {
-    Task<string> GetStringAsync(string uri, string authorizationToken = null,
-        string authorizationMethod = "Bearer");
-        Task<HttpResponseMessage> PostAsync<T>(string uri, T item,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer");
-
-    Task<HttpResponseMessage> DeleteAsync(string uri,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer");
-
-    // Other methods ...
+    return HttpPolicyExtensions
+        .HandleTransientHttpError()
+        .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
+        .WaitAndRetryAsync(6, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2,
+                                                                    retryAttempt)));
 }
 ```
 
-<span data-ttu-id="f77d2-111">Вы можете использовать стандартную реализацию, если вам не нужен механизм отказоустойчивости, например при разработке или тестировании простых решений.</span><span class="sxs-lookup"><span data-stu-id="f77d2-111">You can use the standard implementation if you do not want to use a resilient mechanism, as when you are developing or testing simpler approaches.</span></span> <span data-ttu-id="f77d2-112">В приведенном ниже коде показана стандартная реализация HttpClient, допускающая при необходимости запросы с токенами проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="f77d2-112">The following code shows the standard HttpClient implementation allowing requests with authentication tokens as an optional case.</span></span>
+<span data-ttu-id="2a841-120">С помощью Polly вы определяете политику повтора с числом повторных попыток, конфигурацией экспоненциальной выдержки и действиями, которые необходимо выполнить в случае исключения HTTP (например, запись ошибки в журнал).</span><span class="sxs-lookup"><span data-stu-id="2a841-120">With Polly, you can define a Retry policy with the number of retries, the exponential backoff configuration, and the actions to take when there is an HTTP exception, such as logging the error.</span></span> <span data-ttu-id="2a841-121">В этом случае политика настроена на шесть попыток с экспоненциальной выдержкой, начиная с двух секунд.</span><span class="sxs-lookup"><span data-stu-id="2a841-121">In this case, the policy is configured to try six times with an exponential retry, starting at two seconds.</span></span> 
+
+<span data-ttu-id="2a841-122">Будет предпринято шесть попыток, и период между попытками будет экспоненциально возрастать начиная с двух секунд.</span><span class="sxs-lookup"><span data-stu-id="2a841-122">so it will try six times and the seconds between each retry will be exponential, starting on two seconds.</span></span>
+
+### <a name="adding-a-jitter-strategy-to-the-retry-policy"></a><span data-ttu-id="2a841-123">Добавление стратегии в отношении колебания задержки в политику повтора</span><span class="sxs-lookup"><span data-stu-id="2a841-123">Adding a jitter strategy to the retry policy</span></span>
+
+<span data-ttu-id="2a841-124">Обычная политика повтора может влиять на работу системы в случае высокого уровня параллелизма и масштабируемости, а также в условиях интенсивного состязания за ресурсы.</span><span class="sxs-lookup"><span data-stu-id="2a841-124">A regular Retry policy can impact your system in cases of high concurrency and scalability and under high contention.</span></span> <span data-ttu-id="2a841-125">Чтобы решить проблему с большим числом повторных запросов, поступающих от множества клиентов в случае частичного отказа системы, можно добавить стратегию в отношении колебания задержки в алгоритм или политику повтора.</span><span class="sxs-lookup"><span data-stu-id="2a841-125">To overcome peaks of similar retries coming from many clients in case of partial outages, a good workaround is to add a jitter strategy to the retry algorithm/policy.</span></span> <span data-ttu-id="2a841-126">Это может повысить общую производительность всей системы благодаря тому, что экспоненциальная задержка становится более случайной.</span><span class="sxs-lookup"><span data-stu-id="2a841-126">This can improve the overall performance of the end-to-end system by adding randomness to the exponential backoff.</span></span> <span data-ttu-id="2a841-127">При возникновении проблем пики размываются.</span><span class="sxs-lookup"><span data-stu-id="2a841-127">This spreads out the spikes when issues arise.</span></span> <span data-ttu-id="2a841-128">При использовании простой политики Polly код для реализации колебания задержки может выглядеть следующим образом:</span><span class="sxs-lookup"><span data-stu-id="2a841-128">When you use a plain Polly policy, code to implement jitter could look like the following example:</span></span>
 
 ```csharp
-public class StandardHttpClient : IHttpClient
-{
-    private HttpClient _client;
-    private ILogger<StandardHttpClient> _logger;
-
-    public StandardHttpClient(ILogger<StandardHttpClient> logger)
-    {
-        _client = new HttpClient();
-        _logger = logger;
-    }
-
-    public async Task<string> GetStringAsync(string uri,
-        string authorizationToken = null,
-        string authorizationMethod = "Bearer")
-    {
-        var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
-        if (authorizationToken != null)
-        {
-            requestMessage.Headers.Authorization =
-                new AuthenticationHeaderValue(authorizationMethod, authorizationToken);
-        }
-        var response = await _client.SendAsync(requestMessage);
-        return await response.Content.ReadAsStringAsync();
-    }
-
-    public async Task<HttpResponseMessage> PostAsync<T>(string uri, T item,
-        string authorizationToken = null, string requestId = null,
-        string authorizationMethod = "Bearer")
-    {
-        // Rest of the code and other Http methods ...
+Random jitterer = new Random(); 
+Policy
+  .Handle<HttpResponseException>() // etc
+  .WaitAndRetry(5,    // exponential back-off plus some jitter
+      retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt))  
+                    + TimeSpan.FromMilliseconds(jitterer.Next(0, 100)) 
+  );
 ```
 
-<span data-ttu-id="f77d2-113">Интересным вариантом реализации является написание другого простого класса и использование Polly для реализации требуемых механизмов отказоустойчивости. В приведенном ниже примере это повторные попытки с экспоненциальной выдержкой.</span><span class="sxs-lookup"><span data-stu-id="f77d2-113">The interesting implementation is to code another, similar class, but using Polly to implement the resilient mechanisms you want to use—in the following example, retries with exponential backoff.</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="2a841-129">Дополнительные ресурсы</span><span class="sxs-lookup"><span data-stu-id="2a841-129">Additional resources</span></span>
 
-```csharp
-public class ResilientHttpClient : IHttpClient
-{
-    private HttpClient _client;
-    private PolicyWrap _policyWrapper;
-    private ILogger<ResilientHttpClient> _logger;
+-   <span data-ttu-id="2a841-130">**Шаблон повтора**
+    [*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)</span><span class="sxs-lookup"><span data-stu-id="2a841-130">**Retry pattern**
+[*https://docs.microsoft.com/azure/architecture/patterns/retry*](https://docs.microsoft.com/azure/architecture/patterns/retry)</span></span>
 
-    public ResilientHttpClient(Policy[] policies,
-        ILogger<ResilientHttpClient> logger)
-    {
-        _client = new HttpClient();
-        _logger = logger;
-        // Add Policies to be applied
-        _policyWrapper = Policy.WrapAsync(policies);
-    }
+-   <span data-ttu-id="2a841-131">**Polly и HttpClientFactory**
+    [*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)</span><span class="sxs-lookup"><span data-stu-id="2a841-131">**Polly and HttpClientFactory**
+[*https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory*](https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory)</span></span>
 
-    private Task<T> HttpInvoker<T>(Func<Task<T>> action)
-    {
-        // Executes the action applying all
-        // the policies defined in the wrapper
-        return _policyWrapper.ExecuteAsync(() => action());
-    }
+-   <span data-ttu-id="2a841-132">**Polly (библиотека для обеспечения отказоустойчивости .NET и обработки временных сбоев)**</span><span class="sxs-lookup"><span data-stu-id="2a841-132">**Polly (.NET resilience and transient-fault-handling library)**</span></span>
 
-    public Task<string> GetStringAsync(string uri,
-        string authorizationToken = null,
-        string authorizationMethod = "Bearer")
-    {
-        return HttpInvoker(async () =>
-        {
-            var requestMessage = new HttpRequestMessage(HttpMethod.Get, uri);
-            // The Token's related code eliminated for clarity in code snippet
-            var response = await _client.SendAsync(requestMessage);
-            return await response.Content.ReadAsStringAsync();
-        });
-    }
-    // Other Http methods executed through HttpInvoker so it applies Polly policies
-    // ...
-}
-```
+    [*https://github.com/App-vNext/Polly*](https://github.com/App-vNext/Polly)
 
-<span data-ttu-id="f77d2-114">С помощью Polly вы определяете политику повтора с числом повторных попыток, конфигурацией экспоненциальной выдержки и действиями, которые необходимо выполнить в случае исключения HTTP (например, запись ошибки в журнал).</span><span class="sxs-lookup"><span data-stu-id="f77d2-114">With Polly, you define a Retry policy with the number of retries, the exponential backoff configuration, and the actions to take when there is an HTTP exception, such as logging the error.</span></span> <span data-ttu-id="f77d2-115">В этом случае политика настроена так, что она будет выполнять указанное число попыток при регистрации типов в контейнере IoC.</span><span class="sxs-lookup"><span data-stu-id="f77d2-115">In this case, the policy is configured so it will try the number of times specified when registering the types in the IoC container.</span></span> <span data-ttu-id="f77d2-116">В соответствии с конфигурацией экспоненциальной выдержки при обнаружении кодом исключения HttpRequest он будет повторно выполнять HTTP-запрос через промежуток времени, который увеличивается экспоненциально в зависимости от того, как настроена политика.</span><span class="sxs-lookup"><span data-stu-id="f77d2-116">Because of the exponential backoff configuration, whenever the code detects an HttpRequest exception, it retries the Http request after waiting an amount of time that increases exponentially depending on how the policy was configured.</span></span>
+-   <span data-ttu-id="2a841-133">**Марк Брукер (Marc Brooker). Дрожание. Оптимизация с помощью случайности**</span><span class="sxs-lookup"><span data-stu-id="2a841-133">**Marc Brooker. Jitter: Making Things Better With Randomness**</span></span>
 
-<span data-ttu-id="f77d2-117">Здесь важен метод HttpInvoker. Именно он выполняет HTTP-запросы в этом служебном классе.</span><span class="sxs-lookup"><span data-stu-id="f77d2-117">The important method is HttpInvoker, which is what makes HTTP requests throughout this utility class.</span></span> <span data-ttu-id="f77d2-118">Этот метод выполняет HTTP-запрос с помощью \_policyWrapper.ExecuteAsync с учетом политики повтора.</span><span class="sxs-lookup"><span data-stu-id="f77d2-118">That method internally executes the HTTP request with \_policyWrapper.ExecuteAsync, which takes into account the retry policy.</span></span>
+    [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
-<span data-ttu-id="f77d2-119">В приложении eShopOnContainers политики Polly задаются при регистрации типов в контейнере IoC, как в приведенном ниже коде из класса [веб-приложения MVC в файле startup.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Web/WebMVC/Startup.cs).</span><span class="sxs-lookup"><span data-stu-id="f77d2-119">In eShopOnContainers you specify Polly policies when registering the types at the IoC container, as in the following code from the [MVC web app at the startup.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Web/WebMVC/Startup.cs) class.</span></span>
-
-```csharp
-// Startup.cs class
-if (Configuration.GetValue<string>("UseResilientHttp") == bool.TrueString)
-{
-    services.AddTransient<IResilientHttpClientFactory,
-        ResilientHttpClientFactory>();
-    services.AddSingleton<IHttpClient,
-        ResilientHttpClient>(sp =>
-            sp.GetService<IResilientHttpClientFactory>().
-            CreateResilientHttpClient());
-}
-else
-{
-    services.AddSingleton<IHttpClient, StandardHttpClient>();
-}
-```
-
-<span data-ttu-id="f77d2-120">Обратите внимание на то, что объекты IHttpClient создаются как одноэлементные, а не как временные, чтобы подключения TCP эффективно использовались службой и не возникало [проблемы с сокетами](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/).</span><span class="sxs-lookup"><span data-stu-id="f77d2-120">Note that the IHttpClient objects are instantiated as singleton instead of as transient so that TCP connections are used efficiently by the service and [an issue with sockets](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/) will not occur.</span></span>
-
-<span data-ttu-id="f77d2-121">Важным моментом, касающимся отказоустойчивости, является то, что политика WaitAndRetryAsync из библиотеки Polly применяется в объекте ResilientHttpClientFactory в методе CreateResilientHttpClient, как показано в следующем коде:</span><span class="sxs-lookup"><span data-stu-id="f77d2-121">But the important point about resiliency is that you apply the Polly WaitAndRetryAsync policy within ResilientHttpClientFactory in the CreateResilientHttpClient method, as shown in the following code:</span></span>
-
-```csharp
-public ResilientHttpClient CreateResilientHttpClient()
-    => new ResilientHttpClient(CreatePolicies(), _logger);
-
-// Other code
-private Policy[] CreatePolicies()
-    => new Policy[]
-    {
-        Policy.Handle<HttpRequestException>()
-            .WaitAndRetryAsync(
-        // number of retries
-        6,
-        // exponential backoff
-        retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)),
-        // on retry
-        (exception, timeSpan, retryCount, context) =>
-        {
-            var msg = $"Retry {retryCount} implemented with Pollys RetryPolicy " +
-            $"of {context.PolicyKey} " +
-            $"at {context.ExecutionKey}, " +
-            $"due to: {exception}.";
-            _logger.LogWarning(msg);
-            _logger.LogDebug(msg);
-        }),
-    }
-```
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="f77d2-122">[Назад](implement-custom-http-call-retries-exponential-backoff.md)
-[Вперед](implement-circuit-breaker-pattern.md)</span><span class="sxs-lookup"><span data-stu-id="f77d2-122">[Previous](implement-custom-http-call-retries-exponential-backoff.md)
+<span data-ttu-id="2a841-134">[Назад](explore-custom-http-call-retries-exponential-backoff.md)
+[Вперед](implement-circuit-breaker-pattern.md)</span><span class="sxs-lookup"><span data-stu-id="2a841-134">[Previous](explore-custom-http-call-retries-exponential-backoff.md)
 [Next](implement-circuit-breaker-pattern.md)</span></span>
