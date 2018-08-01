@@ -13,6 +13,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33570354"
 ---
 # <a name="common-design-patterns"></a><span data-ttu-id="82b92-102">Обычные шаблоны разработки</span><span class="sxs-lookup"><span data-stu-id="82b92-102">Common Design Patterns</span></span>
 <span data-ttu-id="82b92-103">Существует большое количество книг на шаблонов программного обеспечения, шаблон языки и antipatterns, которые касаются очень широкий субъекта шаблонов.</span><span class="sxs-lookup"><span data-stu-id="82b92-103">There are numerous books on software patterns, pattern languages, and antipatterns that address the very broad subject of patterns.</span></span> <span data-ttu-id="82b92-104">Таким образом этот раздел предоставляет рекомендации и относящееся лишь ограниченный набор шаблонов, которые часто используются при разработке API платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="82b92-104">Thus, this chapter provides guidelines and discussion related to a very limited set of patterns that are used frequently in the design of the .NET Framework APIs.</span></span>  
