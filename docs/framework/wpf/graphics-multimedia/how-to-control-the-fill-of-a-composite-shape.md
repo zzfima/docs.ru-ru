@@ -8,18 +8,18 @@ helpviewer_keywords:
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
 ms.openlocfilehash: a9a17434f11f432f6446e09bd853ed0d2f23fbe8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33563047"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Практическое руководство. Управление заливкой составных фигур
-<xref:System.Windows.Media.GeometryGroup.FillRule%2A> Свойство <xref:System.Windows.Media.GeometryGroup> или <xref:System.Windows.Media.PathGeometry>, указывает «правило», использующий составные фигуры, чтобы определить, является ли заданная точка частью геометрии. Существует два возможных значения <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> и <xref:System.Windows.Media.FillRule.Nonzero>. Следующие разделы описывают использование этих двух правил.  
+<xref:System.Windows.Media.GeometryGroup.FillRule%2A> Свойство <xref:System.Windows.Media.GeometryGroup> или <xref:System.Windows.Media.PathGeometry>, указывает «правило», которое Составная фигура использует для определения, является ли заданная точка частью геометрии. Существует два возможных значения для <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> и <xref:System.Windows.Media.FillRule.Nonzero>. Следующие разделы описывают использование этих двух правил.  
   
  **EvenOdd:** правило, определяющее, находится ли точка в области заполнения, с помощью рисования луча от этой точки до бесконечности в любом направлении и подсчета числа сегментов пути в пределах заданной фигуры, которые пересекает луч. Если это число нечетное, точка находится внутри; если четное — точка находится снаружи.  
   
- Например, приведенный ниже код XAML создает составного фигуру, состоящую из ряда концентрических колец (цель) с <xref:System.Windows.Media.GeometryGroup.FillRule%2A> значение <xref:System.Windows.Media.FillRule.EvenOdd>.  
+ Например, ниже XAML создает составной фигуры, состоящий из ряда концентрических колец (мишень) с <xref:System.Windows.Media.GeometryGroup.FillRule%2A> присвоено <xref:System.Windows.Media.FillRule.EvenOdd>.  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleEvenOddValue](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillruleevenoddvalue)]  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33563047"
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValueEllipseGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovalueellipsegeometry)]  
   
- В примере выше значение <xref:System.Windows.Media.FillRule.Nonzero> для <xref:System.Windows.Media.GeometryGroup.FillRule%2A> в результате дает ниже:  
+ В примере выше, значение <xref:System.Windows.Media.FillRule.Nonzero> для <xref:System.Windows.Media.GeometryGroup.FillRule%2A> дает в результате следующий рисунок:  
   
  ![Снимок экрана: FillRule со значением NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero1.png "FillRuleNonZero1")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33563047"
   
  ![Схема: FillRule со значением NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero2.png "FillRuleNonZero2")  
   
- Для лучшей демонстрации поведения <xref:System.Windows.Media.FillRule.Nonzero> требуется правило более сложные фигуры с сегментами в другом направлении. Приведенный ниже код XAML создает фигуру, аналогичную аналогичен предыдущему примеру, за исключением того, что она создана с <xref:System.Windows.Media.PathGeometry> а затем <xref:System.Windows.Media.EllipseGeometry> создает четыре концентрических дуги а не полностью замкнутые концентрических окружностей.  
+ Чтобы лучше продемонстрировать поведение <xref:System.Windows.Media.FillRule.Nonzero> правило требуется более сложная фигура с сегментами, идущими в разных направлениях является обязательным. Приведенный ниже код XAML создает фигуру, аналогичную аналогичен предыдущему примеру, за исключением того, что она создается с <xref:System.Windows.Media.PathGeometry> а не <xref:System.Windows.Media.EllipseGeometry> которого создаются четыре концентрических дуги а не полностью замкнутые концентрические окружности.  
   
  [!code-xaml[GeometriesMiscSnippets_snip#FillRuleNonZeroValuePathGeometry](../../../../samples/snippets/xaml/VS_Snippets_Wpf/GeometriesMiscSnippets_snip/XAML/FillRuleExample.xaml#fillrulenonzerovaluepathgeometry)]  
   
@@ -55,7 +55,7 @@ ms.locfileid: "33563047"
   
  ![Схема: FillRule со значением NonZero](../../../../docs/framework/wpf/graphics-multimedia/media/fillrulenonzero4.png "FillRuleNonZero4")  
   
- **Примечание:** в целях <xref:System.Windows.Media.FillRule>, все фигуры считаются замкнутыми. Если в сегменте есть разрыв, нарисуйте воображаемую линию, чтобы его закрыть. В приведенном выше примере имеются небольшие разрывы в кольцах. Учитывая это, можно предположить, что луч, проходящий через разрыв, даст другой результат, чем луч, проходящий в другом направлении. Ниже приведен увеличенный рисунок одного из этих разрывов и «мнимой сегмент» (сегмент, который рисуется для применения <xref:System.Windows.Media.FillRule>), закрывает его.  
+ **Примечание:** в рамках <xref:System.Windows.Media.FillRule>, все фигуры считаются замкнутыми. Если в сегменте есть разрыв, нарисуйте воображаемую линию, чтобы его закрыть. В приведенном выше примере имеются небольшие разрывы в кольцах. Учитывая это, можно предположить, что луч, проходящий через разрыв, даст другой результат, чем луч, проходящий в другом направлении. Ниже приведен увеличенный рисунок одного из этих разрывов и «воображаемый сегмент» (сегмент, нарисованный для применения <xref:System.Windows.Media.FillRule>), закрывает его.  
   
  ![Схема: для FillRule сегменты всегда считаются замкнутыми](../../../../docs/framework/wpf/graphics-multimedia/media/fillruleclosedshapes.png "FillRuleClosedShapes")  
   

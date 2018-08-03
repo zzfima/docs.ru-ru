@@ -17,10 +17,10 @@ ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cfa44187d846c72f0dfd4fb131cacbe41648dd32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "33579812"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Строки стандартных форматов даты и времени
@@ -29,12 +29,14 @@ ms.locfileid: "33579812"
 -   Для определения строки, являющейся результатом операции форматирования.  
   
 -   Для определения текстового представления значения даты и времени, которое можно преобразовать в значение <xref:System.DateTime> или <xref:System.DateTimeOffset> с помощью операции синтаксического анализа.  
-  
- Строки стандартного формата даты и времени могут использоваться как со значением <xref:System.DateTime>, так и со значением <xref:System.DateTimeOffset>.  
-  
+
 > [!TIP]
 >  Вы можете загрузить [Служебную программу форматирования](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), которая применяет строки формата к значениям даты и времени или числовым значениям и отображает результирующую строку.  
+
+Строки стандартного формата даты и времени могут использоваться как со значением <xref:System.DateTime>, так и со значением <xref:System.DateTimeOffset>.  
   
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-note.md)] 
+
 <a name="table"></a> В следующей таблице описаны спецификаторы стандартных форматов даты и времени. Если не указано иное, то описатель стандартного формата даты и времени выдает одинаковое строковое представление независимо от того, используется ли он со значением <xref:System.DateTime> или со значением <xref:System.DateTimeOffset>. Дополнительные сведения об использовании стандартных строк формата даты и времени см. в подразделе [Примечания](#Notes).  
   
 |Описатель формата|Описание:|Примеры|  
@@ -63,17 +65,17 @@ ms.locfileid: "33579812"
   
 -   Можно использовать региональные параметры по умолчанию (или текущие). Следующий пример отображает дату в формате короткой даты, соответствующем текущим региональным параметрам. В этом случае текущими региональными параметрами являются en-US.  
   
-     [!code-csharp[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
+     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
 -   Можно передать объект <xref:System.Globalization.CultureInfo>, представляющий язык и региональные параметры, соответствующее которым форматирование будет использоваться методом с параметром <xref:System.IFormatProvider>. Следующий пример отображает дату в формате короткой даты, соответствующем региональным параметрам pt-BR.  
   
-     [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
+     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
 -   Можно передать объект <xref:System.Globalization.DateTimeFormatInfo>, предоставляющий данные форматирования методу с параметром <xref:System.IFormatProvider>. В следующем примере дата отображается с помощью короткого формата даты из объекта <xref:System.Globalization.DateTimeFormatInfo>, соответствующего региональным параметрам hr-HR.  
   
-     [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
+     [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
   
 > [!NOTE]
@@ -90,7 +92,7 @@ ms.locfileid: "33579812"
   
  Строки стандартного формата также можно использовать в операциях синтаксического анализа с методами <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> и <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>, которые требуют для успешного выполнения операции синтаксического анализа, чтобы входная строка строго соответствовала определенному шаблону. Многие строки стандартного формата сопоставляются с несколькими строками пользовательского формата, поэтому значение даты и времени может быть представлено в разных форматах, при этом операция синтаксического анализа пройдет успешно. Определить одну или несколько строк пользовательского формата, соответствующих строке стандартного формата, можно, вызвав метод <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=nameWithType>. В следующем примере показаны строки пользовательского формата, сопоставленные со строкой стандартного формата "d" (шаблон короткого формата даты).  
   
- [!code-csharp[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Standard#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/stdandparsing1.vb#17)]  
   
  В следующих разделах представлены описатели стандартных форматов для значений <xref:System.DateTime> и <xref:System.DateTimeOffset>.  
@@ -108,7 +110,7 @@ ms.locfileid: "33579812"
   
  В следующем примере описатель формата "d" используется для отображения значения даты и времени.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#1)]
  [!code-vb[Formatting.DateAndTime.Standard#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#1)]  
   
  [К таблице](#table)  
@@ -127,7 +129,7 @@ ms.locfileid: "33579812"
   
  В следующем примере описатель формата "D" используется для отображения значения даты и времени.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#2)]
  [!code-vb[Formatting.DateAndTime.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#2)]  
   
  [К таблице](#table)  
@@ -150,7 +152,7 @@ ms.locfileid: "33579812"
   
  В следующем примере описатель формата "f" используется для отображения значения даты и времени.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#3](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#3)]
  [!code-vb[Formatting.DateAndTime.Standard#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#3)]  
   
  [К таблице](#table)  
@@ -172,7 +174,7 @@ ms.locfileid: "33579812"
   
  В следующем примере описатель формата "F" используется для отображения значения даты и времени.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#4)]
  [!code-vb[Formatting.DateAndTime.Standard#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#4)]  
   
  [К таблице](#table)  
@@ -194,7 +196,7 @@ ms.locfileid: "33579812"
   
  В следующем примере описатель формата "g" используется для отображения значения даты и времени.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#5)]
  [!code-vb[Formatting.DateAndTime.Standard#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#5)]  
   
  [К таблице](#table)  
@@ -216,7 +218,7 @@ ms.locfileid: "33579812"
   
  В следующем примере описатель формата "G" используется для отображения значения даты и времени.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#6)]
  [!code-vb[Formatting.DateAndTime.Standard#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#6)]  
   
  [К таблице](#table)  
@@ -234,7 +236,7 @@ ms.locfileid: "33579812"
   
  В следующем примере описатель формата "m" используется для отображения значения даты и времени.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#7](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#7)]
  [!code-vb[Formatting.DateAndTime.Standard#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#7)]  
   
  [К таблице](#table)  
@@ -259,12 +261,12 @@ ms.locfileid: "33579812"
   
  В следующем примере используется описатель формата "o" для отображения ряда значений <xref:System.DateTime> и <xref:System.DateTimeOffset> на компьютере в тихоокеанском стандартном часовом поясе США.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
   
  В следующем примере описатель формата "o" используется для создания форматированной строки, а затем для восстановления первоначальных значений даты и времени путем вызова метода `Parse`.  
   
- [!code-csharp[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
+ [!code-csharp-interactive[Formatting.DateandTime.Standard#16](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Roundtrip1.cs#16)]
  [!code-vb[Formatting.DateandTime.Standard#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/RoundTrip1.vb#16)]  
   
  [К таблице](#table)  
@@ -285,7 +287,7 @@ ms.locfileid: "33579812"
   
  В следующем примере используется описатель формата "r" для отображения значений <xref:System.DateTime> и <xref:System.DateTimeOffset> на компьютере в тихоокеанском стандартном часовом поясе США.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
  [!code-vb[Formatting.DateAndTime.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#9)]  
   
  [К таблице](#table)  
@@ -300,7 +302,7 @@ ms.locfileid: "33579812"
   
  В следующем примере используется описатель формата "s" для отображения значений <xref:System.DateTime> и <xref:System.DateTimeOffset> на компьютере в тихоокеанском стандартном часовом поясе США.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
  [!code-vb[Formatting.DateAndTime.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#10)]  
   
  [К таблице](#table)  
@@ -320,7 +322,7 @@ ms.locfileid: "33579812"
   
  В следующем примере описатель формата "t" используется для отображения значения даты и времени.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#11)]
  [!code-vb[Formatting.DateAndTime.Standard#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#11)]  
   
  [К таблице](#table)  
@@ -340,7 +342,7 @@ ms.locfileid: "33579812"
   
  В следующем примере описатель формата "T" используется для отображения значения даты и времени.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#12)]
  [!code-vb[Formatting.DateAndTime.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#12)]  
   
  [К таблице](#table)  
@@ -353,7 +355,7 @@ ms.locfileid: "33579812"
   
  В следующем примере описатель формата "u" используется для отображения значения даты и времени.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#13)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#13)]
  [!code-vb[Formatting.DateAndTime.Standard#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#13)]  
   
  [К таблице](#table)  
@@ -377,7 +379,7 @@ ms.locfileid: "33579812"
   
  В следующем примере описатель формата "U" используется для отображения значения даты и времени.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#14](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#14)]
  [!code-vb[Formatting.DateAndTime.Standard#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#14)]  
   
  [К таблице](#table)  
@@ -395,7 +397,7 @@ ms.locfileid: "33579812"
   
  В следующем примере описатель формата "y" используется для отображения значения даты и времени.  
   
- [!code-csharp[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
+ [!code-csharp-interactive[Formatting.DateAndTime.Standard#15](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#15)]
  [!code-vb[Formatting.DateAndTime.Standard#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#15)]  
   
  [К таблице](#table)  
