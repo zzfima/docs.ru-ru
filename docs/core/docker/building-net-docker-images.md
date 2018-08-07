@@ -7,10 +7,10 @@ ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e48a263334ebb93a5d281032336aeb4073d8467c
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "34827343"
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Создание образов Docker для приложений .NET Core
@@ -83,6 +83,17 @@ ms.locfileid: "34827343"
 * [В этом примере Docker для ASP.NET Core](https://github.com/dotnet/dotnet-docker/tree/master/samples/aspnetapp) демонстрируется рекомендуемый шаблон создания образов Docker для приложений ASP.NET Core в рабочей среде. Этот пример поддерживается в контейнерах Linux и Windows.
 
 * В этом примере Docker для .NET Core демонстрируется рекомендуемый шаблон [создания образов Docker для приложений .NET Core в рабочей среде](https://github.com/dotnet/dotnet-docker/tree/master/samples/dotnetapp).
+
+## <a name="forward-the-request-scheme-and-original-ip-address"></a>Пересылка схемы запроса и исходного IP-адреса
+
+Прокси-серверы, подсистемы балансировки нагрузки и другие сетевые устройства часто скрывают сведения о запросах, еще не достигших контейнерного приложения.
+
+* Если прокси-сервер передает HTTPS-запросы через протокол HTTP, исходная схема (HTTPS) теряется и ее нужно дополнительно передать в заголовке.
+* Так как приложение получает запрос от прокси-сервера, а не от правильного источника в Интернете или корпоративной сети, исходный IP-адрес клиента также нужно передать в заголовке.
+
+Эти сведения могут быть важны при обработке запросов, например для перенаправления, аутентификации, создания ссылок, оценки политик и геолокации клиентов.
+
+Для перенаправления схемы и исходного IP-адреса контейнерному приложению ASP.NET Core используйте ПО промежуточного слоя перенаправленных заголовков. Дополнительные сведения см. в разделе [Настройка ASP.NET Core для работы с прокси-серверами и подсистемами балансировки нагрузки](/aspnet/core/host-and-deploy/proxy-load-balancer).
 
 ## <a name="your-first-aspnet-core-docker-app"></a>Ваше первое приложение Docker для ASP.NET Core
 
@@ -258,7 +269,6 @@ dotnet published/aspnetapp.dll
 > * запустили пример приложения ASP.NET локально;
 > * создали и запустили пример с Docker для контейнеров Linux;
 > * создали и запустили пример с Docker для контейнеров Windows.
-
 
 **Следующие шаги**
 

@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f471d62ca31096b955dd6f703c70faabe91cb55b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
+ms.lasthandoff: 08/03/2018
 ms.locfileid: "36208207"
 ---
 # <a name="standard-numeric-format-strings"></a>Строки стандартных числовых форматов
@@ -67,7 +67,7 @@ ms.locfileid: "36208207"
 <a name="Using"></a>   
 ## <a name="using-standard-numeric-format-strings"></a>Использование строк стандартных числовых форматов  
 
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 Строку стандартного числового формата можно использовать для определения форматирования числового значения одним из двух следующих способов:  
   
@@ -166,7 +166,7 @@ ms.locfileid: "36208207"
   
 <a name="FFormatString"></a>   
 ## <a name="the-fixed-point-f-format-specifier"></a>Описатель формата с фиксированной запятой ("F")  
- При использовании описателя формата с фиксированной точкой ("F") число преобразуется в строку формата "-ddd.ddd…", где каждое "d" обозначает цифру (0–9). Если число отрицательное, в начале строки ставится отрицательный знак.  
+ При использовании описателя формата с фиксированной запятой ("F") число преобразуется в строку вида "-ddd.ddd…", где каждый символ "d" обозначает цифру (0–9). Если число отрицательное, в начале строки ставится отрицательный знак.  
   
  Требуемое число знаков дробной части задается спецификатором точности. Если описатель точности отсутствует, то используется численная точность, определяемая текущим значением свойства <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.  
   
@@ -350,7 +350,7 @@ ms.locfileid: "36208207"
   
 ## <a name="example"></a>Пример  
  
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-with-culture-note.md)]
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
  
  В следующем примере с помощью языка и региональных параметров "en-US" и всех описателей стандартных числовых форматов форматируется целочисленное значение и числовое значение с плавающей запятой. В этом примере используются два числовых типа (<xref:System.Double> и <xref:System.Int32>), но аналогичные результаты были бы получены для любых других числовых типов (<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>, <xref:System.Numerics.BigInteger>, <xref:System.Decimal> и <xref:System.Single>).  
   
