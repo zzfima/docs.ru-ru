@@ -7,6 +7,7 @@ ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/04/2018
+ms.locfileid: "33502951"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a><span data-ttu-id="f69d5-102">Надежный сеанс по протоколу HTTPS с использованием пользовательской привязки</span><span class="sxs-lookup"><span data-stu-id="f69d5-102">Custom Binding Reliable Session over HTTPS</span></span>
 <span data-ttu-id="f69d5-103">В этом образце показано использование безопасности транспорта SSL с надежными сеансами.</span><span class="sxs-lookup"><span data-stu-id="f69d5-103">This sample demonstrates the use of SSL transport security with Reliable Sessions.</span></span> <span data-ttu-id="f69d5-104">Надежные сеансы реализуют протокол WS-ReliableMessaging.</span><span class="sxs-lookup"><span data-stu-id="f69d5-104">Reliable Sessions implements the WS-Reliable Messaging protocol.</span></span> <span data-ttu-id="f69d5-105">Чтобы создать безопасный надежный сеанс, можно объединить протокол WS-Security с надежными сеансами.</span><span class="sxs-lookup"><span data-stu-id="f69d5-105">You can have a secure reliable session by composing WS-Security over Reliable Sessions.</span></span> <span data-ttu-id="f69d5-106">Но в некоторых случаях может потребоваться использовать безопасность транспорта HTTP с протоколом SSL.</span><span class="sxs-lookup"><span data-stu-id="f69d5-106">But sometimes, you may choose to instead use HTTP transport security with SSL.</span></span>  
