@@ -5,10 +5,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
 ms.openlocfilehash: e749b9c9309a4b1a737a0c1d0b5e1cfe5748114a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33339622"
 ---
 # <a name="ref-returns-and-ref-locals"></a>Возвращаемые ссылочные значения и ссылочные локальные переменные
@@ -35,16 +35,19 @@ ms.locfileid: "33339622"
  
 ## <a name="defining-a-ref-return-value"></a>Определение возвращаемого ссылочного значения
 
-Чтобы определить возвращаемое ссылочное значение, необходимо добавить ключевое слово [ref](../../language-reference/keywords/ref.md) к типу возвращаемого значения в сигнатуре метода. Например, следующая сигнатура указывает, что метод `GetContactInformation` возвращает вызывающему объекту ссылку на объект `Person`:
+Метод, который возвращает *возвращаемое значение ссылки*, должен удовлетворять следующим двум условиям:
+
+- Сигнатура метода включает ключевое слово [ref](../../language-reference/keywords/ref.md) перед типом возвращаемого значения.
+- Каждый оператор [return](../../language-reference/keywords/return.md) в теле метода включает ключевое слово [ref](../../language-reference/keywords/ref.md) перед именем возвращаемого экземпляра.
+
+В следующем примере показан метод, который удовлетворяет указанным условиям и возвращает ссылку на объект `Person` с именем `p`:
 
 ```csharp
 public ref Person GetContactInformation(string fname, string lname)
-```
-
-Кроме того, имени объекта, возвращаемого каждой инструкцией [return](../../language-reference/keywords/return.md) в теле метода, должно предшествовать ключевое слово [ref](../../language-reference/keywords/ref.md). Например, следующая инструкция `return` возвращает ссылку на объект `Person` с именем `p`:
-
-```csharp
-return ref p;
+{
+    // ...method implementation...
+    return ref p;
+}
 ```
 
 ## <a name="consuming-a-ref-return-value"></a>Использование возвращаемого ссылочного значения
