@@ -1,105 +1,174 @@
 ---
 title: Расширения типов (F#)
-description: 'Узнайте, как расширения типов F # позволяют добавить новые элементы в ранее определенный тип объекта.'
-ms.date: 05/16/2016
+description: 'Узнайте, как разрешить расширения типов F #, добавлять новые члены в ранее определенный тип объекта.'
+ms.date: 07/20/2018
 ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/08/2018
 ms.locfileid: "33566890"
 ---
-# <a name="type-extensions"></a><span data-ttu-id="b1e35-103">Расширения типов</span><span class="sxs-lookup"><span data-stu-id="b1e35-103">Type Extensions</span></span>
+# <a name="type-extensions"></a><span data-ttu-id="2b73a-103">Расширения типов</span><span class="sxs-lookup"><span data-stu-id="2b73a-103">Type extensions</span></span>
 
-<span data-ttu-id="b1e35-104">Расширения типов позволяют добавлять новые элементы на ранее определенный тип объекта.</span><span class="sxs-lookup"><span data-stu-id="b1e35-104">Type extensions let you add new members to a previously defined object type.</span></span>
+<span data-ttu-id="2b73a-104">Расширения типа (также называется _дополнения_) — это семейство функций, которые позволяют добавлять новые члены в ранее определенный тип объекта.</span><span class="sxs-lookup"><span data-stu-id="2b73a-104">Type extensions (also called _augmentations_) are a family of features that let you add new members to a previously defined object type.</span></span> <span data-ttu-id="2b73a-105">Ниже перечислены три возможности.</span><span class="sxs-lookup"><span data-stu-id="2b73a-105">The three features are:</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="b1e35-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b1e35-105">Syntax</span></span>
+* <span data-ttu-id="2b73a-106">Встроенных расширений типа</span><span class="sxs-lookup"><span data-stu-id="2b73a-106">Intrinsic type extensions</span></span>
+* <span data-ttu-id="2b73a-107">В дополнительных расширениях</span><span class="sxs-lookup"><span data-stu-id="2b73a-107">Optional type extensions</span></span>
+* <span data-ttu-id="2b73a-108">Методы расширения</span><span class="sxs-lookup"><span data-stu-id="2b73a-108">Extension methods</span></span>
+
+<span data-ttu-id="2b73a-109">Каждый может использоваться в различных сценариях и имеет различные компромиссы.</span><span class="sxs-lookup"><span data-stu-id="2b73a-109">Each can be used in different scenarios and has different tradeoffs.</span></span>
+
+## <a name="syntax"></a><span data-ttu-id="2b73a-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2b73a-110">Syntax</span></span>
 
 ```fsharp
-// Intrinsic extension.
+// Intrinsic and optional extensions
 type typename with
     member self-identifier.member-name =
         body
     ...
-[ end ]
 
-// Optional extension.
-type typename with
-    member self-identifier.member-name =
+// Extension methods
+open System.Runtime.CompilerServices
+
+[<Extension>]
+type Extensions() =
+    [static] member self-identifier.extension-name (ty: typename, [args]) =
         body
     ...
-[ end ]
 ```
 
-## <a name="remarks"></a><span data-ttu-id="b1e35-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="b1e35-106">Remarks</span></span>
-<span data-ttu-id="b1e35-107">Существует два вида типов расширений, которые имеют различный синтаксис и поведение.</span><span class="sxs-lookup"><span data-stu-id="b1e35-107">There are two forms of type extensions that have slightly different syntax and behavior.</span></span> <span data-ttu-id="b1e35-108">*Встроенное расширение* — это расширение, отображается в том же пространстве имен или модуль, в том же исходном файле и в той же сборки (DLL или исполняемом файле) как расширяемый тип.</span><span class="sxs-lookup"><span data-stu-id="b1e35-108">An *intrinsic extension* is an extension that appears in the same namespace or module, in the same source file, and in the same assembly (DLL or executable file) as the type being extended.</span></span> <span data-ttu-id="b1e35-109">*Дополнительное расширение* — это расширение, которое находится за пределами исходного модуля, пространства имен или сборке расширяемого типа.</span><span class="sxs-lookup"><span data-stu-id="b1e35-109">An *optional extension* is an extension that appears outside the original module, namespace, or assembly of the type being extended.</span></span> <span data-ttu-id="b1e35-110">Встроенные расширения отображаются на тип, при проверке этого типа с помощью отражения, но дополнительные не.</span><span class="sxs-lookup"><span data-stu-id="b1e35-110">Intrinsic extensions appear on the type when the type is examined by reflection, but optional extensions do not.</span></span> <span data-ttu-id="b1e35-111">Дополнительное расширение должно содержаться в модулях и они содержат только в области, если модуль, содержащий его модуль открыт.</span><span class="sxs-lookup"><span data-stu-id="b1e35-111">Optional extensions must be in modules, and they are only in scope when the module that contains the extension is open.</span></span>
+## <a name="intrinsic-type-extensions"></a><span data-ttu-id="2b73a-111">Встроенных расширений типа</span><span class="sxs-lookup"><span data-stu-id="2b73a-111">Intrinsic type extensions</span></span>
 
-<span data-ttu-id="b1e35-112">В предыдущем синтаксисе *typename* представляет тип, который расширяется.</span><span class="sxs-lookup"><span data-stu-id="b1e35-112">In the previous syntax, *typename* represents the type that is being extended.</span></span> <span data-ttu-id="b1e35-113">Любой тип, который может осуществляться могут быть расширены, но имя типа должно быть фактическое имя типа, не сокращенная форма типа.</span><span class="sxs-lookup"><span data-stu-id="b1e35-113">Any type that can be accessed can be extended, but the type name must be an actual type name, not a type abbreviation.</span></span> <span data-ttu-id="b1e35-114">Можно определить несколько элементов в один тип расширения.</span><span class="sxs-lookup"><span data-stu-id="b1e35-114">You can define multiple members in one type extension.</span></span> <span data-ttu-id="b1e35-115">*Собственный идентификатор* представляет экземпляр вызываемого объекта, как и обычные элементы.</span><span class="sxs-lookup"><span data-stu-id="b1e35-115">The *self-identifier* represents the instance of the object being invoked, just as in ordinary members.</span></span>
+<span data-ttu-id="2b73a-112">Встроенное расширение типа является расширением типа, который расширяет определяемого пользователем типа.</span><span class="sxs-lookup"><span data-stu-id="2b73a-112">An intrinsic type extension is a type extension that extends a user-defined type.</span></span>
 
-<span data-ttu-id="b1e35-116">`end` Ключевое слово является обязательным в упрощенный синтаксис.</span><span class="sxs-lookup"><span data-stu-id="b1e35-116">The `end` keyword is optional in lightweight syntax.</span></span>
+<span data-ttu-id="2b73a-113">Встроенных расширений типа должен быть определен в том же файле **и** в том же пространстве имен или модуль в качестве типа, они расширяемых.</span><span class="sxs-lookup"><span data-stu-id="2b73a-113">Intrinsic type extensions must be defined in the same file **and** in the same namespace or module as the type they're extending.</span></span> <span data-ttu-id="2b73a-114">Все другие определения приведет к их, [дополнительных расширениях](type-extensions.md#optional-type-extensions).</span><span class="sxs-lookup"><span data-stu-id="2b73a-114">Any other definition will result in them being [optional type extensions](type-extensions.md#optional-type-extensions).</span></span>
 
-<span data-ttu-id="b1e35-117">Члены, определенные в расширениях типов можно использовать так же, как и других членов в типе класса.</span><span class="sxs-lookup"><span data-stu-id="b1e35-117">Members defined in type extensions can be used just like other members on a class type.</span></span> <span data-ttu-id="b1e35-118">Как и другие члены они быть статическим или члены экземпляров.</span><span class="sxs-lookup"><span data-stu-id="b1e35-118">Like other members, they can be static or instance members.</span></span> <span data-ttu-id="b1e35-119">Эти методы также называются *методы расширения*; свойства называются *свойства расширения*, и т. д.</span><span class="sxs-lookup"><span data-stu-id="b1e35-119">These methods are also known as *extension methods*; properties are known as *extension properties*, and so on.</span></span> <span data-ttu-id="b1e35-120">Члены дополнительных расширений компилируются на статические члены, для которых экземпляр объекта неявно передается как первый параметр.</span><span class="sxs-lookup"><span data-stu-id="b1e35-120">Optional extension members are compiled to static members for which the object instance is passed implicitly as the first parameter.</span></span> <span data-ttu-id="b1e35-121">Тем не менее они работать, как если бы они были экземпляра и статических членов в соответствии с каким образом они объявлены.</span><span class="sxs-lookup"><span data-stu-id="b1e35-121">However, they act as if they were instance members or static members according to how they are declared.</span></span> <span data-ttu-id="b1e35-122">Неявное расширением элементы включены в качестве членов типа и может использоваться без ограничений.</span><span class="sxs-lookup"><span data-stu-id="b1e35-122">Implicit extension members are included as members of the type and can be used without restriction.</span></span>
-
-<span data-ttu-id="b1e35-123">Методы расширения не может быть виртуальным или абстрактным методам.</span><span class="sxs-lookup"><span data-stu-id="b1e35-123">Extension methods cannot be virtual or abstract methods.</span></span> <span data-ttu-id="b1e35-124">Они могут перегружать другие методы с тем же именем, но компилятор отдает предпочтение методам без расширения, в случае возникнет Неоднозначный вызов.</span><span class="sxs-lookup"><span data-stu-id="b1e35-124">They can overload other methods of the same name, but the compiler gives preference to non-extension methods in the case of an ambiguous call.</span></span>
-
-<span data-ttu-id="b1e35-125">Если для одного типа имеется несколько встроенных расширений типа, все члены должны быть уникальными.</span><span class="sxs-lookup"><span data-stu-id="b1e35-125">If multiple intrinsic type extensions exist for one type, all members must be unique.</span></span> <span data-ttu-id="b1e35-126">Для дополнительных расширениях члены различных расширений того же типа могут иметь одинаковые имена.</span><span class="sxs-lookup"><span data-stu-id="b1e35-126">For optional type extensions, members in different type extensions to the same type can have the same names.</span></span> <span data-ttu-id="b1e35-127">Неоднозначность происходят только в том случае, если код клиента открывает две различные области, определяющие одинаковые имена членов.</span><span class="sxs-lookup"><span data-stu-id="b1e35-127">Ambiguity errors occur only if client code opens two different scopes that define the same member names.</span></span>
-
-<span data-ttu-id="b1e35-128">В следующем примере тип в модуле с расширением внутреннего типа.</span><span class="sxs-lookup"><span data-stu-id="b1e35-128">In the following example, a type in a module has an intrinsic type extension.</span></span> <span data-ttu-id="b1e35-129">Клиентскому коду за пределами модуля расширение типа выглядит как обычный член типа во всех отношениях.</span><span class="sxs-lookup"><span data-stu-id="b1e35-129">To client code outside the module, the type extension appears as a regular member of the type in all respects.</span></span>
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3701.fs)]
-
-<span data-ttu-id="b1e35-130">Можно использовать встроенных расширений типа можно разделить определение типа на несколько разделов.</span><span class="sxs-lookup"><span data-stu-id="b1e35-130">You can use intrinsic type extensions to separate the definition of a type into sections.</span></span> <span data-ttu-id="b1e35-131">Это может быть полезно при управлении большими определениями типов, например, для отделения кода, созданного компилятором и разрабатываемого кода или сгруппировать код, созданный разными людьми или связанные с различные функциональные возможности.</span><span class="sxs-lookup"><span data-stu-id="b1e35-131">This can be useful in managing large type definitions, for example, to keep compiler-generated code and authored code separate or to group together code created by different people or associated with different functionality.</span></span>
-
-<span data-ttu-id="b1e35-132">В следующем примере дополнительное расширение типа `System.Int32` типа с методом расширения `FromString` статический член, которая вызывает `Parse`.</span><span class="sxs-lookup"><span data-stu-id="b1e35-132">In the following example, an optional type extension extends the `System.Int32` type with an extension method `FromString` that calls the static member `Parse`.</span></span> <span data-ttu-id="b1e35-133">`testFromString` Метод показывает, что новый член вызывается так же, как и любой другой член экземпляра.</span><span class="sxs-lookup"><span data-stu-id="b1e35-133">The `testFromString` method demonstrates that the new member is called just like any instance member.</span></span>
-
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet3702.fs)]
-
-<span data-ttu-id="b1e35-134">Новый член экземпляра будет отображаться как любой другой метод `Int32` типа в IntelliSense, но только в том случае, если модуль, содержащий расширение находится в открытом или в противном случае в области видимости.</span><span class="sxs-lookup"><span data-stu-id="b1e35-134">The new instance member will appear like any other method of the `Int32` type in IntelliSense, but only when the module that contains the extension is open or otherwise in scope.</span></span>
-
-## <a name="generic-extension-methods"></a><span data-ttu-id="b1e35-135">Методы расширения</span><span class="sxs-lookup"><span data-stu-id="b1e35-135">Generic Extension Methods</span></span>
-<span data-ttu-id="b1e35-136">Прежде чем F # 3.1, компилятор F # не поддерживает использование C#-стиля методы расширения с переменной универсального типа, тип массива, тип кортежа или тип функции F #, как параметр «this».</span><span class="sxs-lookup"><span data-stu-id="b1e35-136">Before F# 3.1, the F# compiler didn't support the use of C#-style extension methods with a generic type variable, array type, tuple type, or an F# function type as the "this" parameter.</span></span> <span data-ttu-id="b1e35-137">3.1 языка F # поддерживает использование этих элементов расширения.</span><span class="sxs-lookup"><span data-stu-id="b1e35-137">F# 3.1 supports the use of these extension members.</span></span>
-
-<span data-ttu-id="b1e35-138">Например в коде F # 3.1, можно использовать методы расширения с подписями, похожим на следующий синтаксис в C#:</span><span class="sxs-lookup"><span data-stu-id="b1e35-138">For example, in F# 3.1 code, you can use extension methods with signatures that resemble the following syntax in C#:</span></span>
-
-```csharp
-static member Method<T>(this T input, T other)
-```
-
-<span data-ttu-id="b1e35-139">Этот подход особенно полезен, если параметр универсального типа ограничен.</span><span class="sxs-lookup"><span data-stu-id="b1e35-139">This approach is particularly useful when the generic type parameter is constrained.</span></span> <span data-ttu-id="b1e35-140">Кроме того теперь можно объявить члены расширений следующим образом в коде F # и определяют дополнительные, семантически широкий набор методов расширения.</span><span class="sxs-lookup"><span data-stu-id="b1e35-140">Further, you can now declare extension members like this in F# code and define an additional, semantically rich set of extension methods.</span></span> <span data-ttu-id="b1e35-141">В языке F # обычно определяются элементы расширения как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="b1e35-141">In F#, you usually define extension members as the following example shows:</span></span>
+<span data-ttu-id="2b73a-115">Встроенных расширений типа иногда являются более точный способ отделяют функции из объявления типа.</span><span class="sxs-lookup"><span data-stu-id="2b73a-115">Intrinsic type extensions are sometimes a cleaner way to separate functionality from the type declaration.</span></span> <span data-ttu-id="2b73a-116">В следующем примере показано, как определить встроенное расширение типа:</span><span class="sxs-lookup"><span data-stu-id="2b73a-116">The following example shows how to define an intrinsic type extension:</span></span>
 
 ```fsharp
+namespace Example
+
+type Variant =
+    | Num of int
+    | Str of string
+  
+module Variant =
+    let print v =
+        match v with
+        | Num n -> printf "Num %d" n
+        | Str s -> printf "Str %s" s
+
+// Add a member to Variant as an extension
+type Variant with
+    member x.Print() = Variant.print x
+```
+
+<span data-ttu-id="2b73a-117">С помощью расширения типа позволяет отделить каждое из перечисленных ниже:</span><span class="sxs-lookup"><span data-stu-id="2b73a-117">Using a type extension allows you to separate each of the following:</span></span>
+
+* <span data-ttu-id="2b73a-118">Объявление `Variant` типа</span><span class="sxs-lookup"><span data-stu-id="2b73a-118">The declaration of a `Variant` type</span></span>
+* <span data-ttu-id="2b73a-119">Функциональные возможности для печати `Variant` класс в зависимости от его «фигуры»</span><span class="sxs-lookup"><span data-stu-id="2b73a-119">Functionality to print the `Variant` class depending on its "shape"</span></span>
+* <span data-ttu-id="2b73a-120">Способ доступа к функциональность печати с помощью стиля объекта `.`-нотация</span><span class="sxs-lookup"><span data-stu-id="2b73a-120">A way to access the printing functionality with object-style `.`-notation</span></span>
+
+<span data-ttu-id="2b73a-121">Это является альтернативой для определения всех объектов, как член на `Variant`.</span><span class="sxs-lookup"><span data-stu-id="2b73a-121">This is an alternative to defining everything as a member on `Variant`.</span></span> <span data-ttu-id="2b73a-122">Несмотря на то, что он не является по своей сути эффективнее, он может быть очистки представлением функциональные возможности, в некоторых ситуациях.</span><span class="sxs-lookup"><span data-stu-id="2b73a-122">Although it is not an inherently better approach, it can be a cleaner representation of functionality in some situations.</span></span>
+
+<span data-ttu-id="2b73a-123">Встроенных расширений типа компилируются как члены типа, они дополнения и типа отображаются при проверке этого типа с путем отражения.</span><span class="sxs-lookup"><span data-stu-id="2b73a-123">Intrinsic type extensions are compiled as members of the type they augment, and appear on the type when the type is examined by reflection.</span></span>
+
+## <a name="optional-type-extensions"></a><span data-ttu-id="2b73a-124">В дополнительных расширениях</span><span class="sxs-lookup"><span data-stu-id="2b73a-124">Optional type extensions</span></span>
+
+<span data-ttu-id="2b73a-125">Необязательный тип расширения — это расширение, которое находится за пределами исходного модуля, пространства имен или сборке расширяемого типа.</span><span class="sxs-lookup"><span data-stu-id="2b73a-125">An optional type extension is an extension that appears outside the original module, namespace, or assembly of the type being extended.</span></span>
+
+<span data-ttu-id="2b73a-126">В дополнительных расширениях полезны для расширения типа, который вы не определили самостоятельно.</span><span class="sxs-lookup"><span data-stu-id="2b73a-126">Optional type extensions are useful for extending a type that you have not defined yourself.</span></span> <span data-ttu-id="2b73a-127">Пример:</span><span class="sxs-lookup"><span data-stu-id="2b73a-127">For example:</span></span>
+
+```fsharp
+module Extensions
+
 open System.Collections.Generic
 
 type IEnumerable<'T> with
     /// Repeat each element of the sequence n times
     member xs.RepeatElements(n: int) =
-        seq { for x in xs do for i in 1 .. n do yield x }
+        seq {
+            for x in xs do
+                for i in 1 .. n do
+                    yield x
+        }
 ```
 
-<span data-ttu-id="b1e35-142">Тем не менее для универсального типа, переменная типа может не быть ограничен.</span><span class="sxs-lookup"><span data-stu-id="b1e35-142">However, for a generic type, the type variable may not be constrained.</span></span> <span data-ttu-id="b1e35-143">Можно объявить C#-расширение элементу стиля в F #, чтобы обойти это ограничение.</span><span class="sxs-lookup"><span data-stu-id="b1e35-143">You can now declare a C#-style extension member in F# to work around this limitation.</span></span> <span data-ttu-id="b1e35-144">При объединении этого типа объявления с встроенное средство F # универсальные алгоритмы можно представить как члены расширений.</span><span class="sxs-lookup"><span data-stu-id="b1e35-144">When you combine this kind of declaration with the inline feature of F#, you can present generic algorithms as extension members.</span></span>
+<span data-ttu-id="2b73a-128">Теперь вы можете открывать `RepeatElements` как, если он является членом <xref:System.Collections.Generic.IEnumerable%601> , пока `Extensions` модуль открыт в области, в которой вы работаете.</span><span class="sxs-lookup"><span data-stu-id="2b73a-128">You can now access `RepeatElements` as if it's a member of <xref:System.Collections.Generic.IEnumerable%601> as long as the `Extensions` module is opened in the scope that you are working in.</span></span>
 
-<span data-ttu-id="b1e35-145">Рассмотрим следующее объявление:</span><span class="sxs-lookup"><span data-stu-id="b1e35-145">Consider the following declaration:</span></span>
+<span data-ttu-id="2b73a-129">Дополнительные расширения не отображаются в расширенном типе при проверке с помощью отражения.</span><span class="sxs-lookup"><span data-stu-id="2b73a-129">Optional extensions do not appear on the extended type when examined by reflection.</span></span> <span data-ttu-id="2b73a-130">Дополнительное расширение должно содержаться в модулях, и они только в области, когда модуль, содержащий его модуль открыт или область — в противном случае.</span><span class="sxs-lookup"><span data-stu-id="2b73a-130">Optional extensions must be in modules, and they're only in scope when the module that contains the extension is open or is otherwise in scope.</span></span>
+
+<span data-ttu-id="2b73a-131">Члены дополнительных расширений компилируются в статические члены, для которых экземпляр объекта неявно передается как первый параметр.</span><span class="sxs-lookup"><span data-stu-id="2b73a-131">Optional extension members are compiled to static members for which the object instance is passed implicitly as the first parameter.</span></span> <span data-ttu-id="2b73a-132">Тем не менее они действуют как будто они являются членами экземпляра или статические члены в соответствии с, как они определены.</span><span class="sxs-lookup"><span data-stu-id="2b73a-132">However, they act as if they're instance members or static members according to how they're declared.</span></span>
+
+## <a name="generic-limitation-of-intrinsic-and-optional-type-extensions"></a><span data-ttu-id="2b73a-133">Ограничение универсального типа встроенных и необязательных расширений</span><span class="sxs-lookup"><span data-stu-id="2b73a-133">Generic limitation of intrinsic and optional type extensions</span></span>
+
+<span data-ttu-id="2b73a-134">Можно объявить в расширение типа для универсального типа, где переменной типа ограничен.</span><span class="sxs-lookup"><span data-stu-id="2b73a-134">It's possible to declare a type extension on a generic type where the type variable is constrained.</span></span> <span data-ttu-id="2b73a-135">Требование относится, что ограничение объявления расширение соответствует ограничению объявленного типа.</span><span class="sxs-lookup"><span data-stu-id="2b73a-135">The requirement is that the constraint of the extension declaration matches the constraint of the declared type.</span></span>
+
+<span data-ttu-id="2b73a-136">Тем не менее даже в том случае, если ограничения сопоставляются между объявленным типом и расширение типа, это возможно для ограничения могут выводиться в теле расширенный элемент, который накладывает различные требование параметра типа, чем объявленного типа.</span><span class="sxs-lookup"><span data-stu-id="2b73a-136">However, even when constraints are matched between a declared type and a type extension, it's possible for a constraint to be inferred by the body of an extended member that imposes a different requirement on the type parameter than the declared type.</span></span> <span data-ttu-id="2b73a-137">Пример:</span><span class="sxs-lookup"><span data-stu-id="2b73a-137">For example:</span></span>
 
 ```fsharp
+open System.Collections.Generic
+
+// NOT POSSIBLE AND FAILS TO COMPILE!
+//
+// The member 'Sum' has a different requirement on 'T than the type IEnumerable<'T>
+type IEnumerable<'T> with
+    member this.Sum() = Seq.sum this
+```
+
+<span data-ttu-id="2b73a-138">Не существует способа получить этот код для работы с расширением необязательный тип:</span><span class="sxs-lookup"><span data-stu-id="2b73a-138">There is no way to get this code to work with an optional type extension:</span></span>
+
+* <span data-ttu-id="2b73a-139">Как, `Sum` член имеет различные ограничения `'T` (`static member get_Zero` и `static member (+)`), чем то, что определяет расширение типа.</span><span class="sxs-lookup"><span data-stu-id="2b73a-139">As is, the `Sum` member has a different constraint on `'T` (`static member get_Zero` and `static member (+)`) than what the type extension defines.</span></span>
+* <span data-ttu-id="2b73a-140">Изменение расширения типа иметь такое же ограничение как `Sum` больше не будут соответствовать определенные ограничения на `IEnumerable<'T>`.</span><span class="sxs-lookup"><span data-stu-id="2b73a-140">Modifying the type extension to have the same constraint as `Sum` will no longer match the defined constraint on `IEnumerable<'T>`.</span></span>
+* <span data-ttu-id="2b73a-141">Создание, изменение члена `member inline Sum` вызывает эту ошибку, что ограничения типов совпадают</span><span class="sxs-lookup"><span data-stu-id="2b73a-141">Making changing the member to `member inline Sum` will give an error that type constraints are mismatched</span></span>
+
+<span data-ttu-id="2b73a-142">Что требуется являются статических методов, которые могут быть представлены так, как если бы они расширение типа «float в пространстве».</span><span class="sxs-lookup"><span data-stu-id="2b73a-142">What is desired are static methods that "float in space" and can be presented as if they're extending a type.</span></span> <span data-ttu-id="2b73a-143">Это, где методы расширения возникает необходимость.</span><span class="sxs-lookup"><span data-stu-id="2b73a-143">This is where extension methods become necessary.</span></span>
+
+## <a name="extension-methods"></a><span data-ttu-id="2b73a-144">Методы расширения</span><span class="sxs-lookup"><span data-stu-id="2b73a-144">Extension methods</span></span>
+
+<span data-ttu-id="2b73a-145">Наконец методы расширения (иногда называется «расширение члены стиля C#») могут быть объявлены в F # метод статический член класса.</span><span class="sxs-lookup"><span data-stu-id="2b73a-145">Finally, extension methods (sometimes called "C# style extension members") can be declared in F# as a static member method on a class.</span></span>
+
+<span data-ttu-id="2b73a-146">Методы расширения полезны для когда нужно определять расширения на универсальный тип, который будет ограничивать тип переменной.</span><span class="sxs-lookup"><span data-stu-id="2b73a-146">Extension methods are useful for when you wish to define extensions on a generic type that will constrain the type variable.</span></span> <span data-ttu-id="2b73a-147">Пример:</span><span class="sxs-lookup"><span data-stu-id="2b73a-147">For example:</span></span>
+
+```fsharp
+namespace Extensions
+
+open System.Runtime.CompilerServices
+
 [<Extension>]
-type ExtraCSharpStyleExtensionMethodsInFSharp () =
+type IEnumerableExtensions() =
     [<Extension>]
     static member inline Sum(xs: IEnumerable<'T>) = Seq.sum xs
 ```
 
-<span data-ttu-id="b1e35-146">Используя это объявление, можно написать код, подобный приведенному в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="b1e35-146">By using this declaration, you can write code that resembles the following sample.</span></span>
+<span data-ttu-id="2b73a-148">При использовании этого кода поможет вам отображаются так, как если `Sum` определен на <xref:System.Collections.Generic.IEnumerable%601>, при условии что `Extensions` был открыт или находится в области.</span><span class="sxs-lookup"><span data-stu-id="2b73a-148">When used, this code will make it appear as if `Sum` is defined on <xref:System.Collections.Generic.IEnumerable%601>, so long as `Extensions` has been opened or is in scope.</span></span>
 
-```fsharp
-let listOfIntegers = [ 1 .. 100 ]
-let listOfBigIntegers = [ 1I to 100I ]
-let sum1 = listOfIntegers.Sum()
-let sum2 = listOfBigIntegers.Sum()
-```
+## <a name="other-remarks"></a><span data-ttu-id="2b73a-149">Другие примечания</span><span class="sxs-lookup"><span data-stu-id="2b73a-149">Other remarks</span></span>
 
-<span data-ttu-id="b1e35-147">В этом коде тот же универсальный код арифметические применяется к спискам два типа без перегрузки, определяя элемент одно расширение.</span><span class="sxs-lookup"><span data-stu-id="b1e35-147">In this code, the same generic arithmetic code is applied to lists of two types without overloading, by defining a single extension member.</span></span>
+<span data-ttu-id="2b73a-150">Расширения типов также иметь следующие атрибуты:</span><span class="sxs-lookup"><span data-stu-id="2b73a-150">Type extensions also have the following attributes:</span></span>
 
+* <span data-ttu-id="2b73a-151">Любой тип, который может осуществляться можно расширить.</span><span class="sxs-lookup"><span data-stu-id="2b73a-151">Any type that can be accessed can be extended.</span></span>
+* <span data-ttu-id="2b73a-152">Можно определить внутренние и необязательный тип расширения _любой_ тип члена, не только методы.</span><span class="sxs-lookup"><span data-stu-id="2b73a-152">Intrinsic and optional type extensions can define _any_ member type, not just methods.</span></span> <span data-ttu-id="2b73a-153">Поэтому свойства расширения возможны также, например.</span><span class="sxs-lookup"><span data-stu-id="2b73a-153">So extension properties are also possible, for example.</span></span>
+* <span data-ttu-id="2b73a-154">`self-identifier` Маркера в [синтаксис](type-extensions.md#syntax) представляет экземпляр типа, вызываемого так же, как обычные элементы.</span><span class="sxs-lookup"><span data-stu-id="2b73a-154">The `self-identifier` token in the [syntax](type-extensions.md#syntax) represents the instance of the type being invoked, just like ordinary members.</span></span>
+* <span data-ttu-id="2b73a-155">Расширенные элементы могут быть статическими или члены экземпляров.</span><span class="sxs-lookup"><span data-stu-id="2b73a-155">Extended members can be static or instance members.</span></span>
+* <span data-ttu-id="2b73a-156">Переменные типа в расширении типа должны соответствовать ограничениям объявленного типа.</span><span class="sxs-lookup"><span data-stu-id="2b73a-156">Type variables on a type extension must match the constraints of the declared type.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="b1e35-148">См. также</span><span class="sxs-lookup"><span data-stu-id="b1e35-148">See Also</span></span>
-[<span data-ttu-id="b1e35-149">Справочник по языку F#</span><span class="sxs-lookup"><span data-stu-id="b1e35-149">F# Language Reference</span></span>](index.md)
+<span data-ttu-id="2b73a-157">Для расширения типов также имеются следующие ограничения:</span><span class="sxs-lookup"><span data-stu-id="2b73a-157">The following limitations also exist for type extensions:</span></span>
 
-[<span data-ttu-id="b1e35-150">Члены</span><span class="sxs-lookup"><span data-stu-id="b1e35-150">Members</span></span>](members/index.md)
+* <span data-ttu-id="2b73a-158">Тип расширения не поддерживают виртуальные и абстрактные методы.</span><span class="sxs-lookup"><span data-stu-id="2b73a-158">Type extensions do not support virtual or abstract methods.</span></span>
+* <span data-ttu-id="2b73a-159">Тип расширения не поддерживают методы переопределения в качестве дополнения.</span><span class="sxs-lookup"><span data-stu-id="2b73a-159">Type extensions do not support override methods as augmentations.</span></span>
+* <span data-ttu-id="2b73a-160">Тип расширения не поддерживают [статически разрешаемые параметры типов](generics/statically-resolved-type-parameters.md).</span><span class="sxs-lookup"><span data-stu-id="2b73a-160">Type extensions do not support [Statically Resolved Type Parameters](generics/statically-resolved-type-parameters.md).</span></span>
+* <span data-ttu-id="2b73a-161">Необязательный тип расширения не поддерживают конструкторы в качестве дополнения.</span><span class="sxs-lookup"><span data-stu-id="2b73a-161">Optional Type extensions do not support constructors as augmentations.</span></span>
+* <span data-ttu-id="2b73a-162">Расширения типов нельзя определить для [аббревиатуры типов](type-abbreviations.md).</span><span class="sxs-lookup"><span data-stu-id="2b73a-162">Type extensions cannot be defined on [type abbreviations](type-abbreviations.md).</span></span>
+* <span data-ttu-id="2b73a-163">Тип расширения не являются допустимыми для `byref<'T>` (хотя они могут быть объявлены).</span><span class="sxs-lookup"><span data-stu-id="2b73a-163">Type extensions are not valid for `byref<'T>` (though they can be declared).</span></span>
+* <span data-ttu-id="2b73a-164">Расширения типов не допускаются для атрибутов (хотя они могут быть объявлены).</span><span class="sxs-lookup"><span data-stu-id="2b73a-164">Type extensions are not valid for attributes (though they can be declared).</span></span>
+* <span data-ttu-id="2b73a-165">Можно определять расширения, которые перегружать другие методы с тем же именем, но компилятор F # отдает предпочтение методам, не являющийся расширением методы при возникновении неоднозначного вызова.</span><span class="sxs-lookup"><span data-stu-id="2b73a-165">You can define extensions that overload other methods of the same name, but the F# compiler gives preference to non-extension methods if there is an ambiguous call.</span></span>
+
+<span data-ttu-id="2b73a-166">Наконец Если для одного типа имеется несколько встроенных расширений типа, все члены должно быть уникальным.</span><span class="sxs-lookup"><span data-stu-id="2b73a-166">Finally, if multiple intrinsic type extensions exist for one type, all members must be unique.</span></span> <span data-ttu-id="2b73a-167">Для дополнительных расширениях члены различных расширений типов в тот же тип может иметь одинаковые имена.</span><span class="sxs-lookup"><span data-stu-id="2b73a-167">For optional type extensions, members in different type extensions to the same type can have the same names.</span></span> <span data-ttu-id="2b73a-168">Ошибок неоднозначности возникают, только в том случае, если код клиента открывает две различные области, определяющие одинаковые имена членов.</span><span class="sxs-lookup"><span data-stu-id="2b73a-168">Ambiguity errors occur only if client code opens two different scopes that define the same member names.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="2b73a-169">См. также</span><span class="sxs-lookup"><span data-stu-id="2b73a-169">See also</span></span>
+
+[<span data-ttu-id="2b73a-170">Справочник по языку F#</span><span class="sxs-lookup"><span data-stu-id="2b73a-170">F# Language Reference</span></span>](index.md)
+
+[<span data-ttu-id="2b73a-171">Члены</span><span class="sxs-lookup"><span data-stu-id="2b73a-171">Members</span></span>](members/index.md)
