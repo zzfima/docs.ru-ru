@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 053c94bc540b130510f155506b6fad32f032a475
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/14/2018
 ms.locfileid: "33449550"
 ---
 # <a name="imetadatavalidatevalidatorinit-method"></a>Метод IMetaDataValidate::ValidatorInit
@@ -38,19 +38,19 @@ HRESULT ValidatorInit (
   
 #### <a name="parameters"></a>Параметры  
  `dwModule`  
- [in] Значение [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) перечисления, которое указывает тип модуля в текущей области метаданных.  
+ [in] Значение [CorValidatorModuleType](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md) перечисления, указывающее тип модуля в текущей области метаданных.  
   
  `pUnk`  
- [in] Указатель на <<!--zzxref:IUnknown --> `IUnknown`> экземпляр, который служит в качестве функции обратного вызова для ошибок проверки.  
+ [in] Указатель на [IUnknown](/cpp/atl/iunknown) экземпляр, который служит в качестве функцию обратного вызова для ошибок проверки.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** Cor.h  
   
  **Библиотека:** используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md)
