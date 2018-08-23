@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8e585942cf6b7e368351fde3181402990201d6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 889456f08c967c807b4d3d09508af000035ebdaf
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426284"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42755084"
 ---
-# <a name="ibindingdisplaygetcurrentdisplay-method"></a><span data-ttu-id="8d1e0-102">Метод IBindingDisplay::GetCurrentDisplay</span><span class="sxs-lookup"><span data-stu-id="8d1e0-102">IBindingDisplay::GetCurrentDisplay Method</span></span>
-<span data-ttu-id="8d1e0-103">Возвращает сведения об отображении текущей привязки.</span><span class="sxs-lookup"><span data-stu-id="8d1e0-103">Returns the current binding display information.</span></span>  
+# <a name="ibindingdisplaygetcurrentdisplay-method"></a><span data-ttu-id="cbf5e-102">Метод IBindingDisplay::GetCurrentDisplay</span><span class="sxs-lookup"><span data-stu-id="cbf5e-102">IBindingDisplay::GetCurrentDisplay Method</span></span>
+<span data-ttu-id="cbf5e-103">Возвращает данные для отображения текущей привязки.</span><span class="sxs-lookup"><span data-stu-id="cbf5e-103">Returns the current binding display information.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8d1e0-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8d1e0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cbf5e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cbf5e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentDisplay (  
@@ -35,24 +35,24 @@ HRESULT GetCurrentDisplay (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8d1e0-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="8d1e0-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="cbf5e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="cbf5e-105">Parameters</span></span>  
  `display`  
- <span data-ttu-id="8d1e0-106">[out, retval] Указатель на массив safearray, содержащий сведения об отображении привязки.</span><span class="sxs-lookup"><span data-stu-id="8d1e0-106">[out, retval] A pointer to a safearray containing the binding display information.</span></span>  
+ <span data-ttu-id="cbf5e-106">[out, retval] Указатель на массив safearray, содержащий сведения об отображении привязки.</span><span class="sxs-lookup"><span data-stu-id="cbf5e-106">[out, retval] A pointer to a safearray containing the binding display information.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8d1e0-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="8d1e0-107">Remarks</span></span>  
- <span data-ttu-id="8d1e0-108">[IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) метод должен ранее успешно завершена, и программа должна быть остановлена с помощью отладчика.</span><span class="sxs-lookup"><span data-stu-id="8d1e0-108">The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cbf5e-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="cbf5e-107">Remarks</span></span>  
+ <span data-ttu-id="cbf5e-108">[IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) метод должен ранее успешно и программа должна быть остановлена с помощью отладчика.</span><span class="sxs-lookup"><span data-stu-id="cbf5e-108">The [IBindingDisplay::InitializeForProcess](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md) method must have previously succeeded, and the program must be stopped by a debugger.</span></span>  
   
- <span data-ttu-id="8d1e0-109">Вызывающий объект должен освободить возвращаемый `SAFEARRAY` памяти с помощью [SafeArrayDestroy](http://msdn.microsoft.com/library/fc94f7e7-b903-4c78-905c-54df1f8d13fa).</span><span class="sxs-lookup"><span data-stu-id="8d1e0-109">The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](http://msdn.microsoft.com/library/fc94f7e7-b903-4c78-905c-54df1f8d13fa).</span></span>  
+ <span data-ttu-id="cbf5e-109">Вызывающий объект должен освободить возвращенного `SAFEARRAY` памяти с помощью [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).</span><span class="sxs-lookup"><span data-stu-id="cbf5e-109">The caller must deallocate the returned `SAFEARRAY` memory by using [SafeArrayDestroy](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraydestroy).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8d1e0-110">Требования</span><span class="sxs-lookup"><span data-stu-id="8d1e0-110">Requirements</span></span>  
- <span data-ttu-id="8d1e0-111">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8d1e0-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cbf5e-110">Требования</span><span class="sxs-lookup"><span data-stu-id="cbf5e-110">Requirements</span></span>  
+ <span data-ttu-id="cbf5e-111">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="cbf5e-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8d1e0-112">**Заголовок:** BindingDisplay.h</span><span class="sxs-lookup"><span data-stu-id="8d1e0-112">**Header:** BindingDisplay.h</span></span>  
+ <span data-ttu-id="cbf5e-112">**Заголовок:** BindingDisplay.h</span><span class="sxs-lookup"><span data-stu-id="cbf5e-112">**Header:** BindingDisplay.h</span></span>  
   
- <span data-ttu-id="8d1e0-113">**Библиотека:** BindingDisplay.idl</span><span class="sxs-lookup"><span data-stu-id="8d1e0-113">**Library:** BindingDisplay.idl</span></span>  
+ <span data-ttu-id="cbf5e-113">**Библиотека:** BindingDisplay.idl</span><span class="sxs-lookup"><span data-stu-id="cbf5e-113">**Library:** BindingDisplay.idl</span></span>  
   
- <span data-ttu-id="8d1e0-114">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8d1e0-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="cbf5e-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cbf5e-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8d1e0-115">См. также</span><span class="sxs-lookup"><span data-stu-id="8d1e0-115">See Also</span></span>  
- [<span data-ttu-id="8d1e0-116">Интерфейс IBindingDisplay</span><span class="sxs-lookup"><span data-stu-id="8d1e0-116">IBindingDisplay Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)  
- [<span data-ttu-id="8d1e0-117">Метод InitializeForProcess</span><span class="sxs-lookup"><span data-stu-id="8d1e0-117">InitializeForProcess Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)
+## <a name="see-also"></a><span data-ttu-id="cbf5e-115">См. также</span><span class="sxs-lookup"><span data-stu-id="cbf5e-115">See Also</span></span>  
+ [<span data-ttu-id="cbf5e-116">Интерфейс IBindingDisplay</span><span class="sxs-lookup"><span data-stu-id="cbf5e-116">IBindingDisplay Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-interface.md)  
+ [<span data-ttu-id="cbf5e-117">Метод InitializeForProcess</span><span class="sxs-lookup"><span data-stu-id="cbf5e-117">InitializeForProcess Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/ibindingdisplay-initializeforprocess-method.md)

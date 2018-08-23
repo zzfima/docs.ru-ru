@@ -9,83 +9,87 @@ helpviewer_keywords:
 - XML serialization
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
-ms.openlocfilehash: 4ca812c03949cb6a2cb903ae041e54311e9486bb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ca3b31c1d60770a6b9db5e92275d9840036ee0b0
+ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591522"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42753912"
 ---
-# <a name="xml-and-soap-serialization"></a><span data-ttu-id="8d01f-102">Сериализация XML и SOAP</span><span class="sxs-lookup"><span data-stu-id="8d01f-102">XML and SOAP Serialization</span></span>
-<span data-ttu-id="8d01f-103">При сериализации XML открытые поля и свойства объекта или параметры и возвращаемые значения методов преобразуются (сериализуются) в поток XML в соответствии со специальным документом, составленном на языке XSD (язык определения схемы XML).</span><span class="sxs-lookup"><span data-stu-id="8d01f-103">XML serialization converts (serializes) the public fields and properties of an object, or the parameters and return values of methods, into an XML stream that conforms to a specific XML Schema definition language (XSD) document.</span></span> <span data-ttu-id="8d01f-104">XML-сериализация приводит к образованию строго типизированных классов с открытыми свойствами и полями, которые преобразуются в серийный формат (в данном случае - XML) для хранения и передачи.</span><span class="sxs-lookup"><span data-stu-id="8d01f-104">XML serialization results in strongly typed classes with public properties and fields that are converted to a serial format (in this case, XML) for storage or transport.</span></span>  
-  
- <span data-ttu-id="8d01f-105">Поскольку стандарт XML является открытым, поток XML может обработать любое необходимое приложение независимо от платформы.</span><span class="sxs-lookup"><span data-stu-id="8d01f-105">Because XML is an open standard, the XML stream can be processed by any application, as needed, regardless of platform.</span></span> <span data-ttu-id="8d01f-106">Например, XML-веб-службы, созданные с помощью ASP.NET, используют класс <xref:System.Xml.Serialization.XmlSerializer>, чтобы создавать потоки XML, которые передают данные между приложениями веб-службы XML через Интернет или интрасети.</span><span class="sxs-lookup"><span data-stu-id="8d01f-106">For example, XML Web services created using ASP.NET use the <xref:System.Xml.Serialization.XmlSerializer> class to create XML streams that pass data between XML Web service applications throughout the Internet or on intranets.</span></span> <span data-ttu-id="8d01f-107">И наоборот, при десериализации используется такой поток и воссоздается объект.</span><span class="sxs-lookup"><span data-stu-id="8d01f-107">Conversely, deserialization takes such an XML stream and reconstructs the object.</span></span>  
-  
- <span data-ttu-id="8d01f-108">XML-сериализация может также использоваться для сериализации объектов в потоки XML, которые соответствуют спецификации SOAP.</span><span class="sxs-lookup"><span data-stu-id="8d01f-108">XML serialization can also be used to serialize objects into XML streams that conform to the SOAP specification.</span></span> <span data-ttu-id="8d01f-109">SOAP - это протокол, основанный на XML и созданный специально для передачи вызовов процедур с использованием XML.</span><span class="sxs-lookup"><span data-stu-id="8d01f-109">SOAP is a protocol based on XML, designed specifically to transport procedure calls using XML.</span></span>  
-  
- <span data-ttu-id="8d01f-110">Чтобы сериализовать и десериализовать объекты, используйте класс <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="8d01f-110">To serialize or deserialize objects, use the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span> <span data-ttu-id="8d01f-111">Чтобы создать классы для их последующей сериализации, используйте инструмент определения схемы XML.</span><span class="sxs-lookup"><span data-stu-id="8d01f-111">To create the classes to be serialized, use the XML Schema Definition tool.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="8d01f-112">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="8d01f-112">In This Section</span></span>  
- [<span data-ttu-id="8d01f-113">Введение в сериализацию XML</span><span class="sxs-lookup"><span data-stu-id="8d01f-113">Introducing XML Serialization</span></span>](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- <span data-ttu-id="8d01f-114">Содержит общее определение сериализации, в особенности, XML-сериализации.</span><span class="sxs-lookup"><span data-stu-id="8d01f-114">Provides a general definition of serialization, particularly XML serialization.</span></span>  
-  
- [<span data-ttu-id="8d01f-115">Практическое руководство. Сериализация объекта</span><span class="sxs-lookup"><span data-stu-id="8d01f-115">How to: Serialize an Object</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- <span data-ttu-id="8d01f-116">Содержит пошаговые инструкции по сериализации объекта.</span><span class="sxs-lookup"><span data-stu-id="8d01f-116">Provides step-by-step instructions for serializing an object.</span></span>  
-  
- [<span data-ttu-id="8d01f-117">Практическое руководство. Десериализация объекта</span><span class="sxs-lookup"><span data-stu-id="8d01f-117">How to: Deserialize an Object</span></span>](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
- <span data-ttu-id="8d01f-118">Содержит пошаговые инструкции по десериализации объекта.</span><span class="sxs-lookup"><span data-stu-id="8d01f-118">Provides step-by-step instructions for deserializing an object.</span></span>  
-  
- [<span data-ttu-id="8d01f-119">Примеры сериализации XML</span><span class="sxs-lookup"><span data-stu-id="8d01f-119">Examples of XML Serialization</span></span>](../../../docs/standard/serialization/examples-of-xml-serialization.md)  
- <span data-ttu-id="8d01f-120">Содержит примеры, демонстрирующие основные возможности XML-сериализации .</span><span class="sxs-lookup"><span data-stu-id="8d01f-120">Provides examples that demonstrate the basics of XML serialization.</span></span>  
-  
- [<span data-ttu-id="8d01f-121">Инструмент определения схемы XML и сериализация XML</span><span class="sxs-lookup"><span data-stu-id="8d01f-121">The XML Schema Definition Tool and XML Serialization</span></span>](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)  
- <span data-ttu-id="8d01f-122">Содержит описание правил использования инструмента определения схемы XML для создания классов, которые соответствуют определенной схеме языка определения схемы XML (XSD), или создания схемы XML из файла DLL.</span><span class="sxs-lookup"><span data-stu-id="8d01f-122">Describes how to use the XML Schema Definition tool to create classes that adhere to a particular XML Schema definition language (XSD) schema, or to generate an XML Schema from a .dll file.</span></span>  
-  
- [<span data-ttu-id="8d01f-123">Управление сериализацией XML с использованием атрибутов</span><span class="sxs-lookup"><span data-stu-id="8d01f-123">Controlling XML Serialization Using Attributes</span></span>](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
- <span data-ttu-id="8d01f-124">Содержит описание, как управлять сериализацией с помощью атрибутов.</span><span class="sxs-lookup"><span data-stu-id="8d01f-124">Describes how to control serialization by using attributes.</span></span>  
-  
- [<span data-ttu-id="8d01f-125">Атрибуты управления сериализацией XML</span><span class="sxs-lookup"><span data-stu-id="8d01f-125">Attributes That Control XML Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
- <span data-ttu-id="8d01f-126">Содержит список атрибутов, используемых для управления XML-сериализацией.</span><span class="sxs-lookup"><span data-stu-id="8d01f-126">Lists the attributes that are used to control XML serialization.</span></span>  
-  
- [<span data-ttu-id="8d01f-127">Практическое руководство. Указание имени альтернативного элемента для потока XML</span><span class="sxs-lookup"><span data-stu-id="8d01f-127">How to: Specify an Alternate Element Name for an XML Stream</span></span>](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
- <span data-ttu-id="8d01f-128">Содержит сложный сценарий, в котором описывается, как создавать несколько потоков XML путем переопределения сериализации.</span><span class="sxs-lookup"><span data-stu-id="8d01f-128">Presents an advanced scenario showing how to generate multiple XML streams by overriding the serialization.</span></span>  
-  
- [<span data-ttu-id="8d01f-129">Практическое руководство. Управление сериализацией производных классов</span><span class="sxs-lookup"><span data-stu-id="8d01f-129">How to: Control Serialization of Derived Classes</span></span>](../../../docs/standard/serialization/how-to-control-serialization-of-derived-classes.md)  
- <span data-ttu-id="8d01f-130">Содержит пример, в котором показан способ управления сериализацией производных классов.</span><span class="sxs-lookup"><span data-stu-id="8d01f-130">Provides an example of how to control the serialization of derived classes.</span></span>  
-  
- [<span data-ttu-id="8d01f-131">Практическое руководство. Квалификация элемента XML и имен атрибутов XML</span><span class="sxs-lookup"><span data-stu-id="8d01f-131">How to: Qualify XML Element and XML Attribute Names</span></span>](../../../docs/standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md)  
- <span data-ttu-id="8d01f-132">Содержит описание, как определять и управлять способом, с помощью которого в потоке XML используются пространства имен XML.</span><span class="sxs-lookup"><span data-stu-id="8d01f-132">Describes how to define and control the way in which XML namespaces are used in the XML stream.</span></span>  
-  
- [<span data-ttu-id="8d01f-133">Сериализация XML с использованием XML-веб-служб</span><span class="sxs-lookup"><span data-stu-id="8d01f-133">XML Serialization with XML Web Services</span></span>](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
- <span data-ttu-id="8d01f-134">Содержит объяснение способов использования XML-сериализации в веб-службах XML.</span><span class="sxs-lookup"><span data-stu-id="8d01f-134">Explains how XML serialization is used in XML Web services.</span></span>  
-  
- [<span data-ttu-id="8d01f-135">Практическое руководство. Сериализация объекта как потока XML с кодировкой SOAP</span><span class="sxs-lookup"><span data-stu-id="8d01f-135">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
- <span data-ttu-id="8d01f-136">Содержит описание, как использовать класс <xref:System.Xml.Serialization.XmlSerializer> для создания потоков XML с кодировкой SOAP, соответствующих разделу 5 документа "Simple Object Access Protocol (SOAP) 1.1" консорциума World Wide Web Consortium (www.w3.org).</span><span class="sxs-lookup"><span data-stu-id="8d01f-136">Describes how to use the <xref:System.Xml.Serialization.XmlSerializer> class to create encoded SOAP XML streams that conform to section 5 of the World Wide Web Consortium (www.w3.org) document titled "Simple Object Access Protocol (SOAP) 1.1."</span></span>  
-  
- [<span data-ttu-id="8d01f-137">Практическое руководство. Переопределение сериализации XML с кодировкой SOAP</span><span class="sxs-lookup"><span data-stu-id="8d01f-137">How to: Override Encoded SOAP XML Serialization</span></span>](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  
- <span data-ttu-id="8d01f-138">Содержит описание процесса переопределения XML-сериализации объектов как сообщений SOAP.</span><span class="sxs-lookup"><span data-stu-id="8d01f-138">Describes the process for overriding XML serialization of objects as SOAP messages.</span></span>  
-  
- [<span data-ttu-id="8d01f-139">Атрибуты управления сериализацией с кодировкой SOAP</span><span class="sxs-lookup"><span data-stu-id="8d01f-139">Attributes That Control Encoded SOAP Serialization</span></span>](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
- <span data-ttu-id="8d01f-140">Содержит список атрибутов, используемых для управления сериализацией с кодировкой SOAP.</span><span class="sxs-lookup"><span data-stu-id="8d01f-140">Lists the attributes that are used to control SOAP-encoded serialization.</span></span>  
-  
- [<span data-ttu-id="8d01f-141">Элемент \<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="8d01f-141">\<system.xml.serialization> Element</span></span>](../../../docs/standard/serialization/system-xml-serialization-element.md)  
- <span data-ttu-id="8d01f-142">Элемент конфигурации верхнего уровня для управления XML-сериализацией.</span><span class="sxs-lookup"><span data-stu-id="8d01f-142">The top-level configuration element for controlling XML serialization.</span></span>  
-  
- [<span data-ttu-id="8d01f-143">Элемент \<dateTimeSerialization></span><span class="sxs-lookup"><span data-stu-id="8d01f-143">\<dateTimeSerialization> Element</span></span>](../../../docs/standard/serialization/datetimeserialization-element.md)  
- <span data-ttu-id="8d01f-144">Содержит информацию об управлении режимом сериализации объектов <xref:System.DateTime>.</span><span class="sxs-lookup"><span data-stu-id="8d01f-144">Controls the serialization mode of <xref:System.DateTime> objects.</span></span>  
-  
- [<span data-ttu-id="8d01f-145">Элемент \<schemaImporterExtensions></span><span class="sxs-lookup"><span data-stu-id="8d01f-145">\<schemaImporterExtensions> Element</span></span>](../../../docs/standard/serialization/schemaimporterextensions-element.md)  
- <span data-ttu-id="8d01f-146">Содержит типы, используемые классом <xref:System.Xml.Serialization.XmlSchemaImporter>.</span><span class="sxs-lookup"><span data-stu-id="8d01f-146">Contains types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> class.</span></span>  
-  
- [<span data-ttu-id="8d01f-147">Элемент \<add> для элемента \<xmlSchemaImporterExtensions></span><span class="sxs-lookup"><span data-stu-id="8d01f-147">\<add> Element for \<xmlSchemaImporterExtensions></span></span>](../../../docs/standard/serialization/add-element-for-xmlschemaimporterextensions.md)  
- <span data-ttu-id="8d01f-148">Добавляет типы, используемые классом <xref:System.Xml.Serialization.XmlSchemaImporter>.</span><span class="sxs-lookup"><span data-stu-id="8d01f-148">Adds types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> class.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="8d01f-149">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="8d01f-149">Related Sections</span></span>  
- [<span data-ttu-id="8d01f-150">Расширенные технологии разработки</span><span class="sxs-lookup"><span data-stu-id="8d01f-150">Advanced Development Technologies</span></span>](https://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
- <span data-ttu-id="8d01f-151">Содержит ссылки на дополнительные сведения о сложных задачах и методиках разработки приложений в платформе .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="8d01f-151">Provides links to more information on sophisticated development tasks and techniques in the .NET Framework.</span></span>  
-  
- [<span data-ttu-id="8d01f-152">Веб-службы XML, созданные с помощью ASP.NET, и клиенты веб-служб с поддержкой XML</span><span class="sxs-lookup"><span data-stu-id="8d01f-152">XML Web Services Created Using ASP.NET and XML Web Service Clients</span></span>](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
- <span data-ttu-id="8d01f-153">Содержит разделы с описаниями и объяснением программирования XML-веб-служб с помощью ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="8d01f-153">Provides topics that describe and explain how to program XML Web services using ASP.NET.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="8d01f-154">См. также</span><span class="sxs-lookup"><span data-stu-id="8d01f-154">See Also</span></span>  
- [<span data-ttu-id="8d01f-155">Двоичная сериализация</span><span class="sxs-lookup"><span data-stu-id="8d01f-155">Binary Serialization</span></span>](../../../docs/standard/serialization/binary-serialization.md)
+# <a name="xml-and-soap-serialization"></a><span data-ttu-id="e2d0a-102">Сериализация XML и SOAP</span><span class="sxs-lookup"><span data-stu-id="e2d0a-102">XML and SOAP Serialization</span></span>
+
+<span data-ttu-id="e2d0a-103">При сериализации XML открытые поля и свойства объекта или параметры и возвращаемые значения методов преобразуются (сериализуются) в поток XML в соответствии со специальным документом, составленном на языке XSD (язык определения схемы XML).</span><span class="sxs-lookup"><span data-stu-id="e2d0a-103">XML serialization converts (serializes) the public fields and properties of an object, or the parameters and return values of methods, into an XML stream that conforms to a specific XML Schema definition language (XSD) document.</span></span> <span data-ttu-id="e2d0a-104">XML-сериализация приводит к образованию строго типизированных классов с открытыми свойствами и полями, которые преобразуются в серийный формат (в данном случае - XML) для хранения и передачи.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-104">XML serialization results in strongly typed classes with public properties and fields that are converted to a serial format (in this case, XML) for storage or transport.</span></span>
+
+<span data-ttu-id="e2d0a-105">Поскольку стандарт XML является открытым, поток XML может обработать любое необходимое приложение независимо от платформы.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-105">Because XML is an open standard, the XML stream can be processed by any application, as needed, regardless of platform.</span></span> <span data-ttu-id="e2d0a-106">Например, XML-веб-службы, созданные с помощью ASP.NET, используют класс <xref:System.Xml.Serialization.XmlSerializer>, чтобы создавать потоки XML, которые передают данные между приложениями веб-службы XML через Интернет или интрасети.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-106">For example, XML Web services created using ASP.NET use the <xref:System.Xml.Serialization.XmlSerializer> class to create XML streams that pass data between XML Web service applications throughout the Internet or on intranets.</span></span> <span data-ttu-id="e2d0a-107">И наоборот, при десериализации используется такой поток и воссоздается объект.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-107">Conversely, deserialization takes such an XML stream and reconstructs the object.</span></span>
+
+<span data-ttu-id="e2d0a-108">XML-сериализация может также использоваться для сериализации объектов в потоки XML, которые соответствуют спецификации SOAP.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-108">XML serialization can also be used to serialize objects into XML streams that conform to the SOAP specification.</span></span> <span data-ttu-id="e2d0a-109">SOAP - это протокол, основанный на XML и созданный специально для передачи вызовов процедур с использованием XML.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-109">SOAP is a protocol based on XML, designed specifically to transport procedure calls using XML.</span></span>
+
+<span data-ttu-id="e2d0a-110">Чтобы сериализовать и десериализовать объекты, используйте класс <xref:System.Xml.Serialization.XmlSerializer>.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-110">To serialize or deserialize objects, use the <xref:System.Xml.Serialization.XmlSerializer> class.</span></span> <span data-ttu-id="e2d0a-111">Чтобы создать классы для их последующей сериализации, используйте инструмент определения схемы XML.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-111">To create the classes to be serialized, use the XML Schema Definition tool.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="e2d0a-112">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="e2d0a-112">In This Section</span></span>
+
+[<span data-ttu-id="e2d0a-113">Введение в сериализацию XML</span><span class="sxs-lookup"><span data-stu-id="e2d0a-113">Introducing XML Serialization</span></span>](introducing-xml-serialization.md)  
+<span data-ttu-id="e2d0a-114">Содержит общее определение сериализации, в особенности, XML-сериализации.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-114">Provides a general definition of serialization, particularly XML serialization.</span></span>
+
+[<span data-ttu-id="e2d0a-115">Практическое руководство. Сериализация объекта</span><span class="sxs-lookup"><span data-stu-id="e2d0a-115">How to: Serialize an Object</span></span>](how-to-serialize-an-object.md)  
+<span data-ttu-id="e2d0a-116">Содержит пошаговые инструкции по сериализации объекта.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-116">Provides step-by-step instructions for serializing an object.</span></span>
+
+[<span data-ttu-id="e2d0a-117">Практическое руководство. Десериализация объекта</span><span class="sxs-lookup"><span data-stu-id="e2d0a-117">How to: Deserialize an Object</span></span>](how-to-deserialize-an-object.md)  
+<span data-ttu-id="e2d0a-118">Содержит пошаговые инструкции по десериализации объекта.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-118">Provides step-by-step instructions for deserializing an object.</span></span>
+
+[<span data-ttu-id="e2d0a-119">Примеры сериализации XML</span><span class="sxs-lookup"><span data-stu-id="e2d0a-119">Examples of XML Serialization</span></span>](examples-of-xml-serialization.md)  
+<span data-ttu-id="e2d0a-120">Содержит примеры, демонстрирующие основные возможности XML-сериализации .</span><span class="sxs-lookup"><span data-stu-id="e2d0a-120">Provides examples that demonstrate the basics of XML serialization.</span></span>
+
+[<span data-ttu-id="e2d0a-121">Инструмент определения схемы XML и сериализация XML</span><span class="sxs-lookup"><span data-stu-id="e2d0a-121">The XML Schema Definition Tool and XML Serialization</span></span>](the-xml-schema-definition-tool-and-xml-serialization.md)  
+<span data-ttu-id="e2d0a-122">Содержит описание правил использования инструмента определения схемы XML для создания классов, которые соответствуют определенной схеме языка определения схемы XML (XSD), или создания схемы XML из файла DLL.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-122">Describes how to use the XML Schema Definition tool to create classes that adhere to a particular XML Schema definition language (XSD) schema, or to generate an XML Schema from a .dll file.</span></span>
+
+[<span data-ttu-id="e2d0a-123">Управление сериализацией XML с использованием атрибутов</span><span class="sxs-lookup"><span data-stu-id="e2d0a-123">Controlling XML Serialization Using Attributes</span></span>](controlling-xml-serialization-using-attributes.md)  
+<span data-ttu-id="e2d0a-124">Содержит описание, как управлять сериализацией с помощью атрибутов.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-124">Describes how to control serialization by using attributes.</span></span>
+
+[<span data-ttu-id="e2d0a-125">Атрибуты управления сериализацией XML</span><span class="sxs-lookup"><span data-stu-id="e2d0a-125">Attributes That Control XML Serialization</span></span>](attributes-that-control-xml-serialization.md)  
+<span data-ttu-id="e2d0a-126">Содержит список атрибутов, используемых для управления XML-сериализацией.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-126">Lists the attributes that are used to control XML serialization.</span></span>
+
+[<span data-ttu-id="e2d0a-127">Практическое руководство. Указание имени альтернативного элемента для потока XML</span><span class="sxs-lookup"><span data-stu-id="e2d0a-127">How to: Specify an Alternate Element Name for an XML Stream</span></span>](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+<span data-ttu-id="e2d0a-128">Содержит сложный сценарий, в котором описывается, как создавать несколько потоков XML путем переопределения сериализации.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-128">Presents an advanced scenario showing how to generate multiple XML streams by overriding the serialization.</span></span>
+
+[<span data-ttu-id="e2d0a-129">Практическое руководство. Управление сериализацией производных классов</span><span class="sxs-lookup"><span data-stu-id="e2d0a-129">How to: Control Serialization of Derived Classes</span></span>](how-to-control-serialization-of-derived-classes.md)  
+<span data-ttu-id="e2d0a-130">Содержит пример, в котором показан способ управления сериализацией производных классов.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-130">Provides an example of how to control the serialization of derived classes.</span></span>
+
+[<span data-ttu-id="e2d0a-131">Практическое руководство. Квалификация элемента XML и имен атрибутов XML</span><span class="sxs-lookup"><span data-stu-id="e2d0a-131">How to: Qualify XML Element and XML Attribute Names</span></span>](how-to-qualify-xml-element-and-xml-attribute-names.md)  
+<span data-ttu-id="e2d0a-132">Содержит описание, как определять и управлять способом, с помощью которого в потоке XML используются пространства имен XML.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-132">Describes how to define and control the way in which XML namespaces are used in the XML stream.</span></span>
+
+[<span data-ttu-id="e2d0a-133">Сериализация XML с использованием XML-веб-служб</span><span class="sxs-lookup"><span data-stu-id="e2d0a-133">XML Serialization with XML Web Services</span></span>](xml-serialization-with-xml-web-services.md)  
+<span data-ttu-id="e2d0a-134">Содержит объяснение способов использования XML-сериализации в веб-службах XML.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-134">Explains how XML serialization is used in XML Web services.</span></span>
+
+[<span data-ttu-id="e2d0a-135">Практическое руководство. Сериализация объекта как потока XML с кодировкой SOAP</span><span class="sxs-lookup"><span data-stu-id="e2d0a-135">How to: Serialize an Object as a SOAP-Encoded XML Stream</span></span>](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+<span data-ttu-id="e2d0a-136">Описывает использование <xref:System.Xml.Serialization.XmlSerializer> класс, чтобы создать закодированный SOAP XML потоки, которые соответствуют раздела 5 документа консорциума World Wide Web (W3C) [Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/).</span><span class="sxs-lookup"><span data-stu-id="e2d0a-136">Describes how to use the <xref:System.Xml.Serialization.XmlSerializer> class to create encoded SOAP XML streams that conform to section 5 of the World Wide Web Consortium (W3C) document titled [Simple Object Access Protocol (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/).</span></span>
+
+[<span data-ttu-id="e2d0a-137">Практическое руководство. Переопределение сериализации XML с кодировкой SOAP</span><span class="sxs-lookup"><span data-stu-id="e2d0a-137">How to: Override Encoded SOAP XML Serialization</span></span>](how-to-override-encoded-soap-xml-serialization.md)  
+<span data-ttu-id="e2d0a-138">Содержит описание процесса переопределения XML-сериализации объектов как сообщений SOAP.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-138">Describes the process for overriding XML serialization of objects as SOAP messages.</span></span>
+
+[<span data-ttu-id="e2d0a-139">Атрибуты управления сериализацией с кодировкой SOAP</span><span class="sxs-lookup"><span data-stu-id="e2d0a-139">Attributes That Control Encoded SOAP Serialization</span></span>](attributes-that-control-encoded-soap-serialization.md)  
+<span data-ttu-id="e2d0a-140">Содержит список атрибутов, используемых для управления сериализацией с кодировкой SOAP.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-140">Lists the attributes that are used to control SOAP-encoded serialization.</span></span>
+
+[<span data-ttu-id="e2d0a-141">Элемент \<system.xml.serialization></span><span class="sxs-lookup"><span data-stu-id="e2d0a-141">\<system.xml.serialization> Element</span></span>](system-xml-serialization-element.md)  
+<span data-ttu-id="e2d0a-142">Элемент конфигурации верхнего уровня для управления XML-сериализацией.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-142">The top-level configuration element for controlling XML serialization.</span></span>
+
+[<span data-ttu-id="e2d0a-143">Элемент \<dateTimeSerialization></span><span class="sxs-lookup"><span data-stu-id="e2d0a-143">\<dateTimeSerialization> Element</span></span>](datetimeserialization-element.md)  
+<span data-ttu-id="e2d0a-144">Содержит информацию об управлении режимом сериализации объектов <xref:System.DateTime>.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-144">Controls the serialization mode of <xref:System.DateTime> objects.</span></span>
+
+[<span data-ttu-id="e2d0a-145">Элемент \<schemaImporterExtensions></span><span class="sxs-lookup"><span data-stu-id="e2d0a-145">\<schemaImporterExtensions> Element</span></span>](schemaimporterextensions-element.md)  
+<span data-ttu-id="e2d0a-146">Содержит типы, используемые классом <xref:System.Xml.Serialization.XmlSchemaImporter>.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-146">Contains types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> class.</span></span>
+
+[<span data-ttu-id="e2d0a-147">\<Добавить > элемент для \<schemaImporterExtensions ></span><span class="sxs-lookup"><span data-stu-id="e2d0a-147">\<add> Element for \<schemaImporterExtensions></span></span>](add-element-for-schemaimporterextensions.md)  
+<span data-ttu-id="e2d0a-148">Добавляет типы, используемые классом <xref:System.Xml.Serialization.XmlSchemaImporter>.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-148">Adds types that are used by the <xref:System.Xml.Serialization.XmlSchemaImporter> class.</span></span>
+
+## <a name="related-sections"></a><span data-ttu-id="e2d0a-149">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="e2d0a-149">Related Sections</span></span>
+
+[<span data-ttu-id="e2d0a-150">Расширенные технологии разработки</span><span class="sxs-lookup"><span data-stu-id="e2d0a-150">Advanced Development Technologies</span></span>](https://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
+<span data-ttu-id="e2d0a-151">Содержит ссылки на дополнительные сведения о сложных задачах и методиках разработки приложений в платформе .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-151">Provides links to more information on sophisticated development tasks and techniques in the .NET Framework.</span></span>
+
+[<span data-ttu-id="e2d0a-152">Веб-службы XML, созданные с помощью ASP.NET, и клиенты веб-служб с поддержкой XML</span><span class="sxs-lookup"><span data-stu-id="e2d0a-152">XML Web Services Created Using ASP.NET and XML Web Service Clients</span></span>](https://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
+<span data-ttu-id="e2d0a-153">Содержит разделы с описаниями и объяснением программирования XML-веб-служб с помощью ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="e2d0a-153">Provides topics that describe and explain how to program XML Web services using ASP.NET.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="e2d0a-154">См. также</span><span class="sxs-lookup"><span data-stu-id="e2d0a-154">See Also</span></span>
+
+[<span data-ttu-id="e2d0a-155">Двоичная сериализация</span><span class="sxs-lookup"><span data-stu-id="e2d0a-155">Binary Serialization</span></span>](binary-serialization.md)  

@@ -2,22 +2,22 @@
 title: Триггеры CLR
 ms.date: 03/30/2017
 ms.assetid: defe379c-30c7-487f-9abd-9c5e12ff49be
-ms.openlocfilehash: f7a009af7a343a0dbc2003eb76b30318f4d2830a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c526e16949c76272ba6c6e17233c86daf9d0d1d2
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352868"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754522"
 ---
-# <a name="clr-triggers"></a><span data-ttu-id="d622c-102">Триггеры CLR</span><span class="sxs-lookup"><span data-stu-id="d622c-102">CLR Triggers</span></span>
-<span data-ttu-id="d622c-103">Триггер представляет собой специальный тип хранимой процедуры, которая запускается автоматически при возникновении определенного языкового события.</span><span class="sxs-lookup"><span data-stu-id="d622c-103">A trigger is a special type of stored procedure that automatically runs when a language event executes.</span></span> <span data-ttu-id="d622c-104">Благодаря интеграции Microsoft SQL Server со средой CLR инфраструктуры .NET Framework обеспечивается возможность использовать любой язык .NET Framework для создания триггеров CLR.</span><span class="sxs-lookup"><span data-stu-id="d622c-104">Because of the Microsoft SQL Server integration with the .NET Framework common language runtime (CLR), you can use any .NET Framework language to create CLR triggers.</span></span>  
+# <a name="clr-triggers"></a><span data-ttu-id="a60d1-102">Триггеры CLR</span><span class="sxs-lookup"><span data-stu-id="a60d1-102">CLR Triggers</span></span>
+<span data-ttu-id="a60d1-103">Триггер представляет собой специальный тип хранимой процедуры, которая запускается автоматически при возникновении определенного языкового события.</span><span class="sxs-lookup"><span data-stu-id="a60d1-103">A trigger is a special type of stored procedure that automatically runs when a language event executes.</span></span> <span data-ttu-id="a60d1-104">Благодаря интеграции Microsoft SQL Server со средой CLR инфраструктуры .NET Framework обеспечивается возможность использовать любой язык .NET Framework для создания триггеров CLR.</span><span class="sxs-lookup"><span data-stu-id="a60d1-104">Because of the Microsoft SQL Server integration with the .NET Framework common language runtime (CLR), you can use any .NET Framework language to create CLR triggers.</span></span>  
   
- <span data-ttu-id="d622c-105">Более подробные сведения см. в электронной документации по SQL Server для используемой версии SQL Server.</span><span class="sxs-lookup"><span data-stu-id="d622c-105">For more detailed information, see the version of SQL Server Books Online for the version of SQL Server you are using.</span></span>  
+ <span data-ttu-id="a60d1-105">Дополнительные сведения см. в разделе [документации по SQL Server](/sql) для версии SQL Server, вы используете.</span><span class="sxs-lookup"><span data-stu-id="a60d1-105">For more detailed information, see the [SQL Server documentation](/sql) for the version of SQL Server you're using.</span></span>
   
- <span data-ttu-id="d622c-106">**Электронная документация по SQL Server**</span><span class="sxs-lookup"><span data-stu-id="d622c-106">**SQL Server Books Online**</span></span>  
+ <span data-ttu-id="a60d1-106">**Документация по SQL Server**</span><span class="sxs-lookup"><span data-stu-id="a60d1-106">**SQL Server documentation**</span></span>
   
-1.  [<span data-ttu-id="d622c-107">Триггеры CLR</span><span class="sxs-lookup"><span data-stu-id="d622c-107">CLR Triggers</span></span>](http://go.microsoft.com/fwlink/?LinkId=115397)  
+1. [<span data-ttu-id="a60d1-107">Триггеры CLR</span><span class="sxs-lookup"><span data-stu-id="a60d1-107">CLR Triggers</span></span>](/sql/database-engine/dev-guide/clr-triggers)
   
-## <a name="see-also"></a><span data-ttu-id="d622c-108">См. также</span><span class="sxs-lookup"><span data-stu-id="d622c-108">See Also</span></span>  
- [<span data-ttu-id="d622c-109">Создание объектов SQL Server 2005 в управляемом коде</span><span class="sxs-lookup"><span data-stu-id="d622c-109">Creating SQL Server 2005 Objects In Managed Code</span></span>](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [<span data-ttu-id="d622c-110">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="d622c-110">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="a60d1-108">См. также</span><span class="sxs-lookup"><span data-stu-id="a60d1-108">See Also</span></span>  
+ [<span data-ttu-id="a60d1-109">Создание объектов SQL Server 2005 в управляемом коде</span><span class="sxs-lookup"><span data-stu-id="a60d1-109">Creating SQL Server 2005 Objects In Managed Code</span></span>](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [<span data-ttu-id="a60d1-110">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="a60d1-110">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

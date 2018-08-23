@@ -1,27 +1,27 @@
 ---
-title: Объект My.Log
+title: Объект My.Log (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Log object
 ms.assetid: 309b14b4-8875-4b2f-9661-a734b8cbff07
-ms.openlocfilehash: d37c42bc7d67c66a3aa29a425a86a7fd7cd0349c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c36382db2918952a9c84c25fb4319f7006d73d2
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596025"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754127"
 ---
-# <a name="mylog-object"></a><span data-ttu-id="ff3d2-102">Объект My.Log</span><span class="sxs-lookup"><span data-stu-id="ff3d2-102">My.Log Object</span></span>
-<span data-ttu-id="ff3d2-103">Предоставляет свойства и методы для записи информации о событиях и исключениях в журнал приложения.</span><span class="sxs-lookup"><span data-stu-id="ff3d2-103">Provides a property and methods for writing event and exception information to the application's log listeners.</span></span>  
+# <a name="mylog-object"></a><span data-ttu-id="e431e-102">Объект My.Log</span><span class="sxs-lookup"><span data-stu-id="e431e-102">My.Log Object</span></span>
+<span data-ttu-id="e431e-103">Предоставляет свойства и методы для записи сведений о событиях и исключениях в прослушиватели журнала приложения.</span><span class="sxs-lookup"><span data-stu-id="e431e-103">Provides a property and methods for writing event and exception information to the application's log listeners.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ff3d2-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="ff3d2-104">Remarks</span></span>  
- <span data-ttu-id="ff3d2-105">Дополнительные сведения о методах и свойствах `My.Log` см. в разделе <xref:Microsoft.VisualBasic.Logging.AspLog>.</span><span class="sxs-lookup"><span data-stu-id="ff3d2-105">For information about the methods and properties of the `My.Log` object, see <xref:Microsoft.VisualBasic.Logging.AspLog>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e431e-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="e431e-104">Remarks</span></span>  
+ <span data-ttu-id="e431e-105">Сведения о методах и свойствах `My.Log` объекта, см. в разделе <xref:Microsoft.VisualBasic.Logging.AspLog>.</span><span class="sxs-lookup"><span data-stu-id="e431e-105">For information about the methods and properties of the `My.Log` object, see <xref:Microsoft.VisualBasic.Logging.AspLog>.</span></span>  
   
- <span data-ttu-id="ff3d2-106">`My.Log` Объект доступен только для приложений ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="ff3d2-106">The `My.Log` object is available for ASP.NET applications only.</span></span> <span data-ttu-id="ff3d2-107">Для клиентских приложений, используйте [объекта My.Application.Log](../../../visual-basic/language-reference/objects/my-application-log-object.md).</span><span class="sxs-lookup"><span data-stu-id="ff3d2-107">For client applications, use [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).</span></span>  
+ <span data-ttu-id="e431e-106">`My.Log` Объект доступен только для приложений ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="e431e-106">The `My.Log` object is available for ASP.NET applications only.</span></span> <span data-ttu-id="e431e-107">Для клиентских приложений, используйте [объекта My.Application.Log](../../../visual-basic/language-reference/objects/my-application-log-object.md).</span><span class="sxs-lookup"><span data-stu-id="e431e-107">For client applications, use [My.Application.Log Object](../../../visual-basic/language-reference/objects/my-application-log-object.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ff3d2-108">Требования</span><span class="sxs-lookup"><span data-stu-id="ff3d2-108">Requirements</span></span>  
- <span data-ttu-id="ff3d2-109">**Пространство имен:** <xref:Microsoft.VisualBasic.Logging></span><span class="sxs-lookup"><span data-stu-id="ff3d2-109">**Namespace:** <xref:Microsoft.VisualBasic.Logging></span></span>  
+## <a name="requirements"></a><span data-ttu-id="e431e-108">Требования</span><span class="sxs-lookup"><span data-stu-id="e431e-108">Requirements</span></span>  
+ <span data-ttu-id="e431e-109">**Пространство имен:** <xref:Microsoft.VisualBasic.Logging></span><span class="sxs-lookup"><span data-stu-id="e431e-109">**Namespace:** <xref:Microsoft.VisualBasic.Logging></span></span>  
   
- <span data-ttu-id="ff3d2-110">**Класс:** <xref:Microsoft.VisualBasic.Logging.AspLog></span><span class="sxs-lookup"><span data-stu-id="ff3d2-110">**Class:** <xref:Microsoft.VisualBasic.Logging.AspLog></span></span>  
+ <span data-ttu-id="e431e-110">**Класс:** <xref:Microsoft.VisualBasic.Logging.AspLog></span><span class="sxs-lookup"><span data-stu-id="e431e-110">**Class:** <xref:Microsoft.VisualBasic.Logging.AspLog></span></span>  
   
- <span data-ttu-id="ff3d2-111">**Сборка:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ff3d2-111">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>
+ <span data-ttu-id="e431e-111">**Сборка:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e431e-111">**Assembly:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]</span></span>
