@@ -3,11 +3,11 @@ title: Практическое руководство. Создание док�
 ms.date: 07/20/2015
 ms.assetid: cc5b0d4d-360c-4ada-94fa-2d2916e989be
 ms.openlocfilehash: 204d8a9cbb6ce47c6334c7309d27910c75b90ae0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643082"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754199"
 ---
 # <a name="how-to-create-a-document-with-namespaces-linq-to-xml-visual-basic"></a>Практическое руководство. Создание документа с пространствами имен (LINQ to XML) (Visual Basic)
 В этом разделе описано, как создать документ с пространствами имен в Visual Basic.  

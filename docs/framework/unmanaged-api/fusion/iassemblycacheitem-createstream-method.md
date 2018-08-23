@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8057406552525be19f8e6457de9faf841edc6e68
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3a0b3242e8ae29b9d21dc50d3ea0476967e9746f
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429505"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754498"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>Метод IAssemblyCacheItem::CreateStream
 Создает поток с указанным именем и формат.  
@@ -51,20 +51,20 @@ HRESULT CreateStream (
  [in] Формат файла для потоковой передачи.  
   
  `dwFormatFlags`  
- [in] Флаги определенного формата, определенных в Fusion.idl.  
+ [in] Флаги определенного формата, определенного в Fusion.idl.  
   
  `ppIStream`  
- [out] Указатель на адрес возвращаемого [IStream](https://msdn.microsoft.com/library/aa380034.aspx) экземпляра.  
+ [out] Указатель на адрес возвращаемого [IStream](/windows/desktop/api/objidl/nn-objidl-istream) экземпляра.  
   
  `puliMaxSize`  
- [in, необязательно] Максимальный размер потока ссылается `ppIStream`.  
+ [in, optional] Максимальный размер потока, который ссылается `ppIStream`.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** Fusion.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)

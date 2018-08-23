@@ -3,11 +3,11 @@ title: Пример XML-файла. Числовые данные (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 5faef812-0006-4d84-9cf2-5746070e7fbf
 ms.openlocfilehash: fb7bdb93aa63d430ba9371ed754616e39ea03487
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644684"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754172"
 ---
 # <a name="sample-xml-file-numerical-data-linq-to-xml"></a>Пример XML-файла. Числовые данные (LINQ to XML)
 Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит числовые данные для суммирования, вычисления средних значений и группирования.  

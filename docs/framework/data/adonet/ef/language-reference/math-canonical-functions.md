@@ -2,27 +2,139 @@
 title: Математические канонические функции
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: c61db6d977614b95ea507b38c3890f2da8228158
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 0fc9f4942c3f76f139ab7e4400005f0bfe80204e
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199308"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754448"
 ---
 # <a name="math-canonical-functions"></a>Математические канонические функции
-Язык [!INCLUDE[esql](../../../../../../includes/esql-md.md)] включает математические канонические функции.  
+
+Язык Entity SQL включает в себя следующие математические канонические функции:
   
- В следующей таблице приведены математические канонические функции языка [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
-  
-|Функция|Описание|  
-|--------------|-----------------|  
-|`Abs(value)`|Возвращает абсолютное значение `value`.<br /><br /> **Аргументы**<br /><br /> `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, И `Decimal`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `value`.<br /><br /> **Пример**<br /><br /> `Abs(-2)`|  
-|`Ceiling(value)`|Возвращает наименьшее целое число, которое не меньше значения `value`.<br /><br /> **Аргументы**<br /><br /> Объект `Single`, `Double`, и `Decimal`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `value`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)] <br /><br /> [!code-sql[DP EntityServices Concepts#EDM_CEILING](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]|  
-|`Floor(value)`|Возвращает наибольшее целое число, которое не больше значения `value`.<br /><br /> **Аргументы**<br /><br /> Объект `Single`, `Double`, и `Decimal`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `value`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)] <br /><br /> [!code-sql[DP EntityServices Concepts#EDM_FLOOR](../../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]|  
-|`Power(value, exponent)`|Возвращает результат для заданного значения `value` по заданному показателю `exponent`.<br /><br /> **Аргументы**<br /><br /> `value`: `Int32, Int64, Double`, Или `Decimal`.<br /><br /> `exponent`: `Int64`, `Double`, Или `Decimal`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `value`.<br /><br /> **Пример**<br /><br /> `Power(748.58,2)`|  
-|`Round(value)`|Возвращает целую часть `value`, округленную до ближайшего целого значения.<br /><br /> **Аргументы**<br /><br /> Объект `Single`, `Double`, и `Decimal`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `value`.<br /><br /> **Пример**<br /><br /> `Round(748.58)`|  
-|`Round(value, digits)`|Возвращает значение `value`, округленное до ближайшего указанного знака `digits`.<br /><br /> **Аргументы**<br /><br /> `value`: `Double` или `Decimal`.<br /><br /> `digits`: `Int16` или `Int32`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `value`.<br /><br /> **Пример**<br /><br /> `Round(748.58,1)`|  
-|`Truncate(value, digits)`|Возвращает значение `value`, усеченное до ближайшего указанного знака `digits`.<br /><br /> **Аргументы**<br /><br /> `value`: `Double` или `Decimal`.<br /><br /> `digits`: `Int16` или `Int32`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `value`.<br /><br /> **Пример**<br /><br /> `Truncate(748.58,1)`|  
+## <a name="absvalue"></a>Abs(значение)
+
+Возвращает абсолютное значение `value`.
+
+**Аргументы**
+
+`Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, И `Decimal`.
+
+**Возвращаемое значение**
+
+Тип параметра `value`.
+
+**Пример**
+
+`Abs(-2)`
+
+## <a name="ceilingvalue"></a>Ceiling(value)
+
+Возвращает наименьшее целое число, которое не меньше значения `value`.
+
+**Аргументы**
+
+Объект `Single`, `Double`, и `Decimal`.
+
+**Возвращаемое значение**
+
+Тип параметра `value`.
+
+**Пример**
+
+[!code-csharp[DP EntityServices Concepts#EDM_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_ceiling)]
+[!code-sql[DP EntityServices Concepts#EDM_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_ceiling)]
+
+## <a name="floorvalue"></a>Floor(value)
+
+Возвращает наибольшее целое число, которое не больше значения `value`.
+
+**Аргументы**
+
+Объект `Single`, `Double`, и `Decimal`.
+
+**Возвращаемое значение**
+
+Тип параметра `value`.
+
+**Пример**
+
+[!code-csharp[DP EntityServices Concepts#EDM_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_floor)]
+[!code-sql[DP EntityServices Concepts#EDM_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_floor)]
+
+## <a name="powervalue-exponent"></a>Power(значение, показатель степени)
+
+Возвращает результат для заданного значения `value` по заданному показателю `exponent`.
+
+**Аргументы**
+
+|  |  |
+|--|--|
+|`value` | `Int32, Int64, Double`, Или `Decimal`. |
+|`exponent` | `Int64`, `Double`, Или `Decimal`. |
+
+**Возвращаемое значение**
+
+Тип параметра `value`.
+
+**Пример**
+
+`Power(748.58,2)`
+
+## <a name="roundvalue"></a>Round(value)
+
+Возвращает целую часть `value`, округленную до ближайшего целого значения.
+
+**Аргументы**
+
+Объект `Single`, `Double`, и `Decimal`.
+
+**Возвращаемое значение**
+
+Тип параметра `value`.
+
+**Пример**
+
+`Round(748.58)`
+
+## <a name="roundvalue-digits"></a>Round(значение, количество знаков)
+
+Возвращает значение `value`, округленное до ближайшего указанного знака `digits`.
+
+**Аргументы**
+
+|  |  |
+|--|--|
+|`value`|`Double` или `Decimal`.|
+|`digits`|`Int16` или `Int32`.|
+
+**Возвращаемое значение**
+
+Тип параметра `value`.
+
+**Пример**
+
+`Round(748.58,1)`
+
+## <a name="truncatevalue-digits"></a>Truncate(значение, количество знаков)
+
+Возвращает значение `value`, усеченное до ближайшего указанного знака `digits`.
+
+**Аргументы**
+
+|  |  |
+|--|--|
+|`value`|`Double` или `Decimal`.|
+|`digits`|`Int16` или `Int32`.|
+
+**Возвращаемое значение**
+
+Тип параметра `value`.
+
+**Пример**
+
+`Truncate(748.58,1)`  
   
  Эти функции возвращают `null` при получении на входе `null`.  
   

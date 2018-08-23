@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 103e81dfa0e455157cfce5914b711347b15b578d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460587"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754623"
 ---
 # <a name="getpropertyhandle-function"></a>Функция GetPropertyHandle
 Возвращает уникальный дескриптор, который определяет свойство.
@@ -46,42 +46,42 @@ HRESULT GetPropertyHandle (
 [in] Этот параметр не используется.
 
 `ptr`  
-[in] Указатель на [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) экземпляра.
+[in] Указатель на [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) экземпляра.
 
 `wszPropertyName`  
-[in] Нулем строка кодировки UTF16 знака, содержащее имя свойства.   
+[in] Завершающаяся нулем строка кодировке UTF16 знака, содержащее имя свойства.   
 
 `pType`  
-[out] Указатель на [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) член перечисления, представляющее CIM-тип свойства.
+[out] Указатель на [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) член перечисления, представляющее тип CIM данного свойства.
 
 `pHandle`   
-[out] Указатель на целое число, содержащее дескриптор свойства.
+[out] Указатель на целое число, которое содержит дескриптор свойства.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
+Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
-|`WBEM_E_NOT_FOUND` | 0x80041002 | Указанное имя свойства не найден. |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | Свойство с указанным именем не найден. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
 |`WBEM_E_NOT_SUPPORTED` | 0x8004100c | Запрошенное свойство имеет тип, `CIM_OBJECT` или `CIM_ARRAY`. |
-|`WBEM_S_NO_ERROR` | 0 | Успешный вызов функции.  |
+|`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
   
 ## <a name="remarks"></a>Примечания
 
-Эта функция создает оболочку для вызова [IWbemClassObject::GetPropertyHandle](https://msdn.microsoft.com/library/aa391771(v=vs.85).aspx) метод.
+Эта функция создает оболочку для вызова [IWbemClassObject::GetPropertyHandle](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemobjectaccess-getpropertyhandle) метод.
 
-Этот дескриптор можно использовать для идентификации свойств, при использовании [IWbemObjectAccess](https://msdn.microsoft.com/library/aa391770(v=vs.85).aspx) методы для чтения или записи значения свойств.
+Вы можете использовать этот дескриптор для идентификации свойств, при использовании [IWbemObjectAccess](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectaccess) методы для чтения или записи значения свойств.
 
-Дескрипторы может быть извлечен для свойства всех типов данных, отличный от `CIM_OBJECT` и `CIM_ARRAY`. Возвращенная работу дескрипторы для всех экземпляров класса.
+Дескрипторы может быть извлечен для свойства всех типов данных, отличных от `CIM_OBJECT` и `CIM_ARRAY`. Возвращаемые дескрипторы работы для всех экземпляров класса.
 
 ## <a name="requirements"></a>Требования  
-**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
-[WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)
+[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

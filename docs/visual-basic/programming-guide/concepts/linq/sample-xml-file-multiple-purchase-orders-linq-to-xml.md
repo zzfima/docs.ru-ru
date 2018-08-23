@@ -3,11 +3,11 @@ title: Пример XML-файла. Несколько заказов на по�
 ms.date: 07/20/2015
 ms.assetid: 08e148ff-4070-4bb4-b089-306f4a9a7641
 ms.openlocfilehash: 62faa39f66eb3d0f7f23e298c416a0ab14f406af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645945"
+ms.lasthandoff: 08/12/2018
+ms.locfileid: "42754168"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>Пример XML-файла. Несколько заказов на покупку (LINQ to XML)
 Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит несколько заказов на покупку.  

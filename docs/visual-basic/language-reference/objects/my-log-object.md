@@ -1,21 +1,21 @@
 ---
-title: Объект My.Log
+title: Объект My.Log (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Log object
 ms.assetid: 309b14b4-8875-4b2f-9661-a734b8cbff07
-ms.openlocfilehash: d37c42bc7d67c66a3aa29a425a86a7fd7cd0349c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c36382db2918952a9c84c25fb4319f7006d73d2
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596025"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42754127"
 ---
 # <a name="mylog-object"></a>Объект My.Log
-Предоставляет свойства и методы для записи информации о событиях и исключениях в журнал приложения.  
+Предоставляет свойства и методы для записи сведений о событиях и исключениях в прослушиватели журнала приложения.  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о методах и свойствах `My.Log` см. в разделе <xref:Microsoft.VisualBasic.Logging.AspLog>.  
+ Сведения о методах и свойствах `My.Log` объекта, см. в разделе <xref:Microsoft.VisualBasic.Logging.AspLog>.  
   
  `My.Log` Объект доступен только для приложений ASP.NET. Для клиентских приложений, используйте [объекта My.Application.Log](../../../visual-basic/language-reference/objects/my-application-log-object.md).  
   
