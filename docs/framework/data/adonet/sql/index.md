@@ -2,12 +2,12 @@
 title: SQL Server и ADO.NET
 ms.date: 03/30/2017
 ms.assetid: c18b1fb1-2af1-4de7-80a4-95e56fd976cb
-ms.openlocfilehash: 87e46ad9e83929e40daecc3e3af2eb1281c5ced9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb24be22ebec9a49c489ddcbff4824c4cd3cf34
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360717"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935088"
 ---
 # <a name="sql-server-and-adonet"></a>SQL Server и ADO.NET
 В данном разделе описываются возможности и поведение, характерное для поставщика данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>).  
@@ -38,7 +38,7 @@ ms.locfileid: "33360717"
   
  Полную документацию по ядру СУБД SQL Server см. в электронной документации по SQL Server для используемой версии SQL Server.  
   
- [Электронная документация по SQL Server](http://msdn.microsoft.com/library/ms130214.aspx)  
+ [Электронная документация по SQL Server](/sql/sql-server/sql-server-technical-documentation)  
   
 ## <a name="see-also"></a>См. также  
  [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

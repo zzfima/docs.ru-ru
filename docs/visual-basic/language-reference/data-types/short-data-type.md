@@ -18,37 +18,37 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: ef99743828d8d80844486b651178622ff45fd554
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb218a9b72208b13700ebd18dbf588066839203d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590716"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930156"
 ---
 # <a name="short-data-type-visual-basic"></a>Тип данных Short (Visual Basic)
-Содержит знаком 16-разрядное (2-байтовые) целые числа в диапазоне от-32 768 до 32 767.  
+Содержит знаком 16-разрядных целых чисел (2-байтовое), которые могут меняться в диапазоне от-32 768 до 32 767.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `Short` тип данных для хранения целых значений, которые не требуют полного размера `Integer`. В некоторых случаях можно упаковать общеязыковая среда выполнения вашей `Short` переменные тесном контакте и снизить потребление памяти.  
+ Используйте `Short` тип данных для хранения целых значений, которые не требуют полного размера `Integer`. В некоторых случаях среда CLR может с пакетом обновления вашей `Short` переменные в тесном контакте и снизить потребление памяти.  
   
  Значение по умолчанию для типа `Short` — 0.  
   
-## <a name="literal-assignments"></a>Литерал назначения
+## <a name="literal-assignments"></a>Назначения литералов
 
-Можно объявить и инициализировать `Short` переменной, назначив его десятичное литералом, Шестнадцатеричный литерал восьмеричного литерала, или (начиная с Visual Basic 2017 г) двоичный литерал. Если целочисленный литерал выходит за пределы диапазона `Short` (то есть, если он меньше <xref:System.Int16.MinValue?displayProperty=nameWithType> или больше <xref:System.Int16.MaxValue?displayProperty=nameWithType>), возникает ошибка компиляции.
+Можно объявить и инициализировать `Short` переменной, назначив ей десятичный литерал, шестнадцатеричный восьмеричный литерал, или (начиная с Visual Basic 2017) двоичный литерал. Если целочисленный литерал выходит за пределы диапазона `Short` (то есть, если он меньше <xref:System.Int16.MinValue?displayProperty=nameWithType> или больше <xref:System.Int16.MaxValue?displayProperty=nameWithType>), возникает ошибка компиляции.
 
-В следующем примере целых чисел, равные 1,034, представленное в десятичном, шестнадцатеричном виде, и двоичные литералы производится неявное преобразование из [целое](integer-data-type.md) для `Short` значения.
+В следующем примере целые числа, равные 1034 представляются в виде десятичного, шестнадцатеричного и двоичного литерала, неявно преобразуются из [целое число](integer-data-type.md) для `Short` значения.
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Short)]
 
 > [!NOTE]
-> Используйте префикс `&h` или `&H` для обозначения Шестнадцатеричный литерал префиксом `&b` или `&B` для обозначения двоичный литерал и префикс `&o` или `&O` для обозначения восьмеричного литерала. У десятичных литералов префиксов нет.
+> Используйте префикс `&h` или `&H` для обозначения шестнадцатеричного литерала, префикс `&b` или `&B` для обозначения двоичного литерала, а также префикс `&o` или `&O` для обозначения восьмеричный литерал. У десятичных литералов префиксов нет.
 
-Начиная с Visual Basic 2017 г., можно также использовать знак подчеркивания `_`, как разделитель для повышения удобства чтения, как в следующем примере показано.
+Начиная с Visual Basic 2017, можно также использовать символ подчеркивания, `_`, в качестве разделителя разрядов для повышения удобства чтения, как в примере ниже показан.
 
 [!code-vb[Short](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ShortS)]
 
-Начиная с Visual Basic 15,5, можно также использовать символ подчеркивания (`_`) в качестве начальных разделителя между префиксом и двоичное, шестнадцатеричное или восьмеричное цифры. Пример:
+Начиная с Visual Basic 15.5, можно также использовать символ подчеркивания (`_`) в качестве начального разделителя между префиксом и двоичное, шестнадцатеричное или восьмеричное цифры. Пример:
 
 ```vb
 Dim number As Short = &H_3264
@@ -56,7 +56,7 @@ Dim number As Short = &H_3264
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Можно также включать числовые литералы `S` [символ типа](../../programming-guide\language-features\data-types/type-characters.md) для обозначения `Short` тип данных, как показано в следующем примере.
+Числовые литералы могут содержать `S` [символ типа](../../programming-guide\language-features\data-types/type-characters.md) для обозначения `Short` тип данных, как показано в следующем примере.
 
 ```vb
 Dim number = &H_3264S
@@ -64,16 +64,16 @@ Dim number = &H_3264S
 
 ## <a name="programming-tips"></a>Советы по программированию
 
--   **Расширяющие.** `Short` Тип данных может быть расширен до `Integer`, `Long`, `Decimal`, `Single`, или `Double`. Это означает, что тип `Short` можно преобразовать в любой из этих типов без возникновения ошибки <xref:System.OverflowException?displayProperty=nameWithType>.  
+-   **Расширяющие.** `Short` Тип данных можно расширить до `Integer`, `Long`, `Decimal`, `Single`, или `Double`. Это означает, что тип `Short` можно преобразовать в любой из этих типов без возникновения ошибки <xref:System.OverflowException?displayProperty=nameWithType>.  
   
--   **Символы типов.** При добавлении к литералу символа типа литерала `S` производится принудительное приведение литерала к типу данных `Short`. `Short` не имеет типа символа идентификатора.  
+-   **Символы типа.** При добавлении к литералу символа типа литерала `S` производится принудительное приведение литерала к типу данных `Short`. `Short` не имеет тип символа идентификатора.  
   
 -   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.Int16?displayProperty=nameWithType>.  
   
 ## <a name="see-also"></a>См. также
 
  <xref:System.Int16?displayProperty=nameWithType>  
- [Типы данных](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Типы данных](../../../visual-basic/language-reference/data-types/index.md)  
  [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Сводка по преобразованию](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Тип данных Integer](../../../visual-basic/language-reference/data-types/integer-data-type.md)  

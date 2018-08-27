@@ -3,11 +3,11 @@ title: Пример XML-файла. Клиенты и заказы в прост
 ms.date: 07/20/2015
 ms.assetid: 2da1c474-f658-4dca-a457-c35ef5ba4aff
 ms.openlocfilehash: 53ad3633361772dc4a9be337df7ae2e1b8a60a5a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337214"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929720"
 ---
 # <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>Пример XML-файла. Клиенты и заказы в пространстве имен
 Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит сведения о заказчиках и заказах. XML располагается в пространстве имен.  

@@ -6,24 +6,24 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
 ms.openlocfilehash: 41dc6ef8d2ec2ffd6cd1cf793911f2e09f1a1e77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652273"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929520"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>Практическое руководство. Внедрение выражений в XML-литералы (Visual Basic)
-XML-литералов можно объединить с внедренными выражениями для создания XML документ, фрагмент или элемент, который содержит содержимое, созданное во время выполнения. Следующие примеры демонстрируют, как использовать внедренные выражения для заполнения содержимого элемента, атрибутов и имен элементов во время выполнения.  
+XML-литералов можно объединить с внедренными выражениями для создания документа XML, фрагмент или элемент, содержащий содержимое, созданное во время выполнения. Следующие примеры демонстрируют, как использовать внедренные выражения для заполнения содержимого элемента, атрибутов и имена элементов во время выполнения.  
   
- Для внедренного выражения используется синтаксис `<%=` `exp` `%>`, который имеет тот же синтаксис, [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] использует. Дополнительные сведения см. в разделе [встроенные выражения в XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
+ Для внедренного выражения используется синтаксис `<%=` `exp` `%>`, который является такой же синтаксис, [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] использует. Дополнительные сведения см. в разделе [встроенные выражения в XML](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md).  
   
- Можно также использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API для создания [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объектов. Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XElement>.  
+ Можно также использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API-интерфейсы для создания [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объектов. Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XElement>.  
   
 ## <a name="procedures"></a>Процедуры  
   
-#### <a name="to-insert-text-as-element-content"></a>Вставка текста в качестве содержимого элемента  
+#### <a name="to-insert-text-as-element-content"></a>Для вставки текста в качестве содержимого элемента  
   
--   В следующем примере показано, как вставить текст, содержащийся в `contactName` между открывающим и закрывающим элементами имя переменной.  
+-   В следующем примере показано, как вставить текст, содержащийся в `contactName` переменной между открывающей и закрывающей имен элементов.  
   
      [!code-vb[VbXMLSamples#39](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_1.vb)]  
   
@@ -35,9 +35,9 @@ XML-литералов можно объединить с внедренными
     </contact>  
     ```  
   
-#### <a name="to-insert-text-as-an-attribute-value"></a>Вставка текста в качестве значения атрибута  
+#### <a name="to-insert-text-as-an-attribute-value"></a>Для вставки текста в качестве значения атрибута  
   
--   В следующем примере показано, как вставить текст, содержащийся в `phoneType` в качестве значения переменной `type` атрибута.  
+-   В следующем примере показано, как вставить текст, содержащийся в `phoneType` переменной в качестве значения `type` атрибута.  
   
      [!code-vb[VbXMLSamples#40](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_2.vb)]  
   
@@ -49,11 +49,11 @@ XML-литералов можно объединить с внедренными
     </contact>  
     ```  
   
-#### <a name="to-insert-text-for-an-element-name"></a>Вставка текста для имени элемента  
+#### <a name="to-insert-text-for-an-element-name"></a>Для вставки текста для имени элемента  
   
 -   В следующем примере показано, как вставить текст, содержащийся в `elementName` переменной в качестве имени элемента.  
   
-     При создании элементов с помощью данного метода, необходимо закрыть их с \</ > тег.  
+     При создании элементов при использовании этого метода, необходимо закрыть их с помощью \</ > тег.  
   
      [!code-vb[VbXMLSamples#41](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-embed-expressions-in-xml-literals_3.vb)]  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 ms.openlocfilehash: e2e63953e130dc83ce83bcdd2f8e9a2ffc7fe5f3
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172611"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000132"
 ---
 # <a name="extension-methods-c-programming-guide"></a>Методы расширения (Руководство по программированию в C#)
 Методы расширения позволяют "добавлять" методы в существующие типы без создания нового производного типа, перекомпиляции и иного изменения первоначального типа. Методы расширения представляют собой особую разновидность статического метода, но вызываются так же, как методы экземпляра в расширенном типе. Для клиентского кода, написанного на языках C#, F# и Visual Basic, нет видимого различия между вызовом метода расширения и вызовом методов, фактически определенных в типе.  

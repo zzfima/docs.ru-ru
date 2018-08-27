@@ -2,14 +2,14 @@
 title: '@ServiceHost'
 ms.date: 03/30/2017
 ms.assetid: 96ba6967-00f2-422f-9aa7-15de4d33ebf3
-ms.openlocfilehash: 5498c300ab126bbc4e08cd228e3e7b48e905932e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 730b1188a95d0e35d7431d43884e867e5520585e
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352548"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930180"
 ---
-# <a name="servicehost"></a>@ServiceHost
+# <a name="servicehost"></a>\@ServiceHost
 Связывает фабрику, используемую для создания узла службы, с размещаемой службой и другими элементами программирования, необходимыми для доступа или компиляции кода размещения, представленного в SVC-файле.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -32,7 +32,7 @@ CodeBehind = "CodeBehind"%>
  Имя типа CLR фабрики узла службы, используемой для создания узла службы. Этот атрибут является необязательным. Если данный атрибут не задан, по умолчанию используется значение <xref:System.ServiceModel.Activation.ServiceHostFactory>, которое возвращает экземпляр <xref:System.ServiceModel.ServiceHost>.  
   
 #### <a name="debug"></a>Отладка  
- Указывает, следует ли компилировать с использованием символов отладки службы Windows Communication Foundation (WCF). `true` Если служба WCF должна компилироваться с отладочными символами. в противном случае `false`.  
+ Указывает, должны ли службы Windows Communication Foundation (WCF) компилироваться с отладочными символами. `true` Если службы WCF должны компилироваться с отладочными символами. в противном случае `false`.  
   
 #### <a name="language"></a>Язык  
  Задает язык, используемый при компиляции всего встроенного кода в файле (SVC). Значения данного атрибута могут представлять любой язык, поддерживаемый .NET, включая C#, VB и JS, что соответствует языкам C#, Visual Basic .NET и JScript .NET. Этот атрибут является необязательным.  
@@ -43,9 +43,9 @@ CodeBehind = "CodeBehind"%>
 ## <a name="remarks"></a>Примечания  
  <xref:System.ServiceModel.ServiceHost> Используется для размещения службы — это точка расширения в модели программирования Windows Communication Foundation (WCF). Для создания узла службы <xref:System.ServiceModel.ServiceHost> используется шаблон фабрики, поскольку он, возможно, имеет полиморфный тип, экземпляр которого среда размещения не должна создавать явно.  
   
- В реализации по умолчанию используется фабрика <xref:System.ServiceModel.Activation.ServiceHostFactory> для создания экземпляра узла службы <xref:System.ServiceModel.ServiceHost>. Но можно предоставить собственную фабрику (той, которая возвращает унаследованный узел), указав имя типа CLR реализации фабрики в [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) директивы.  
+ В реализации по умолчанию используется фабрика <xref:System.ServiceModel.Activation.ServiceHostFactory> для создания экземпляра узла службы <xref:System.ServiceModel.ServiceHost>. Но можно предоставить собственную фабрику (один, которая возвращает производный узел), указав имя типа CLR реализации фабрики в [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) директива.  
   
- Для использования собственной настраиваемой фабрики узла службы вместо фабрики по умолчанию, просто укажите имя типа в [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) директива следующим образом:  
+ Чтобы использовать собственный настраиваемой фабрики узла службы вместо фабрики по умолчанию, просто предоставить имя типа в [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) директива следующим образом:  
   
 ```xml  
 <% @ServiceHost Factory="DerivedFactory" Service="MyService" %>  
@@ -53,7 +53,7 @@ CodeBehind = "CodeBehind"%>
   
  Создавайте реализацию фабрики в наиболее простом виде. Если имеется значительный объем пользовательской логики, то можно увеличить возможность повторного использования кода, если разместить эту логику на узле, а не в фабрике.  
   
- Например, чтобы включить конечную точку с поддержкой AJAX для `MyService`, укажите <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> значение `Factory` атрибута, а не значение по умолчанию <xref:System.ServiceModel.Activation.ServiceHostFactory>в [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) директив как в следующем примере показана.  
+ Например, чтобы включить конечную точку с поддержкой AJAX для `MyService`, укажите <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> значения `Factory` атрибута, а не значение по умолчанию <xref:System.ServiceModel.Activation.ServiceHostFactory>в [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) директив как показано в следующем примере.  
   
 ## <a name="example"></a>Пример  
   

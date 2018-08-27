@@ -1,17 +1,17 @@
 ---
 title: '#Директива препроцессора if (справочник по C#)'
-ms.date: 02/13/2017
+ms.date: 06/30/2018
 f1_keywords:
 - '#if'
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 2ae0af6971dbf549b52e8168e035d8582bdab61d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c54a1fe0dba5f6d57b03b2ffeb4f1737fadfe039
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33287687"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000941"
 ---
 # <a name="if-c-reference"></a>#if (Справочник по C#)
 
@@ -33,9 +33,9 @@ ms.locfileid: "33287687"
 
 `#define` позволяет определить символ, чтобы директива `#if`, которой передается этот символ, возвращала значение `true`.
 
-Также символ можно определить с помощью параметра компилятора [/define](../compiler-options/define-compiler-option.md). Для отмены определения символа служит директива [#undef](preprocessor-undef.md).
+Также символ можно определить с помощью параметра компилятора [-define](../compiler-options/define-compiler-option.md). Для отмены определения символа служит директива [#undef](preprocessor-undef.md).
 
-Символ, определенный с помощью `/define` или `#define`, не конфликтует с одноименной переменной. Соответственно, имя переменной не должно передаваться директиве препроцессора, а символ может использоваться только в директиве препроцессора.
+Символ, определенный с помощью `-define` или `#define`, не конфликтует с одноименной переменной. Соответственно, имя переменной не должно передаваться директиве препроцессора, а символ может использоваться только в директиве препроцессора.
 
 Символ, создаваемый с помощью `#define`, будет определен в пределах того файл, в котором он определен.
 
@@ -88,7 +88,7 @@ public class MyClass
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по C#](../../../csharp/language-reference/index.md)  
-[Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-[Директивы препроцессора C#](index.md)  
-[Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Директивы препроцессора C#](index.md)  
+- [Практическое руководство. Условная компиляция с использованием атрибутов Trace и Debug](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md).

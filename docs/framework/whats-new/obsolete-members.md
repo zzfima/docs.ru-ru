@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94401a97a1be9453caa36259dfc5901f438eee40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b39962d2d716d88d139ccaba5f4c445dad9ef6c
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508778"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999485"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Устаревшие члены в платформе .NET Framework
 В таблицах этой статьи перечислены устаревшие в .NET Framework 4.5 и более поздних версий члены типов, упорядоченные по сборкам. Перейдите по следующим ссылкам, чтобы просмотреть список устаревших членов и рекомендованных альтернативных вариантов в каждой сборке. В этом разделе не перечисляются члены устаревших типов. Список устаревших типов см. в разделе [Устаревшие типы](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -593,7 +593,7 @@ ms.locfileid: "33508778"
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
-|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Это свойство устарело. Чтобы включить <xref:System.Net.CookieContainer> для HTTP, используйте вместо него свойство <!----zz <xref:System.ServiceModel.BasicHttpBinding.AllowCookies%2A?displayProperty=nameWithType> --> `System.ServiceModel.BasicHttpBinding.AllowCookies`.|  
+|<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>|<xref:System.ServiceModel.BasicHttpBinding.EnableHttpCookieContainer%2A>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Это свойство устарело. Чтобы включить HTTP <xref:System.Net.CookieContainer>, используйте вместо этого свойство <xref:System.ServiceModel.HttpBindingBase.AllowCookies%2A?displayProperty=nameWithType>.|  
 |<xref:System.ServiceModel.Configuration.BindingsSection?displayProperty=nameWithType>|<xref:System.ServiceModel.Configuration.BindingsSection.NetPeerTcpBinding%2A>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Функция одноранговых каналов является устаревшей и будет удалена в будущем.|  
 |<xref:System.ServiceModel.Dispatcher.ClientOperationCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientOperationCompatBase.ParameterInspectors%2A>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Использование данного типа создает ошибку компилятора.<br /><br /> Данный API поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из кода.|  
 |<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase?displayProperty=nameWithType>|<xref:System.ServiceModel.Dispatcher.ClientRuntimeCompatBase.MessageInspectors%2A>|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Использование данного типа создает ошибку компилятора.<br /><br /> Данный API поддерживает инфраструктуру .NET Framework и не предназначен для использования непосредственно из кода.|  
@@ -778,7 +778,7 @@ ms.locfileid: "33508778"
   
 |Тип|Член|Сообщение|  
 |----------|------------|-------------|  
-|<!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy?displayProperty=nameWithType> --> `Microsoft.Data.Entity.Build.Tasks.EntityDeploy`| <!--zz <xref:Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources%2A>  -->`Microsoft.Data.Entity.Build.Tasks.EntityDeploy.EntityDataModelEmbeddedResources`|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Используется только для обратной совместимости с версией 3.5.|  
+|`Microsoft.Data.Entity.Build.Tasks.EntityDeploy`|`EntityDataModelEmbeddedResources`|Первое не рекомендуется на платформе .NET Framework 4.5.<br /><br /> Используется только для обратной совместимости с версией 3.5.|  
   
 <a name="visualbasic"></a>   
 ### <a name="assembly-microsoftvisualbasicdll"></a>Сборка: Microsoft.VisualBasic.dll  

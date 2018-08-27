@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: d6b0cb91dd9b8159919b0d155bb2f9773e7ba534
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 2041182dffa0330ea601b30e047c0b09731618f2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315112"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929773"
 ---
 # <a name="bool-c-reference"></a>bool (Справочник по C#)
 
@@ -51,10 +51,10 @@ ms.locfileid: "36315112"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по C#](../../../csharp/language-reference/index.md)  
-[Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-[Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
-[Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
-[Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  

@@ -9,22 +9,22 @@ helpviewer_keywords:
 ms.assetid: cf2d9006-b631-4e5d-81cd-20aab78c60f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdba02feb8cacc6ab1886c12f88716184aa2a81a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 049268c29946e95ca7bb194f6cae38baf8f060f6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752433"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933534"
 ---
 # <a name="additional-class-libraries-and-apis"></a>Дополнительные библиотеки классов и интерфейсы API
 
-Платформа .NET Framework постоянно развивается. С целью совершенствования кроссплатформенной разработки и оперативного предоставления новых функциональных возможностей нашим клиентам мы выпускаем новые возможности в виде внештатных выпусков. В этом разделе перечислены внештатные проекты, для которых мы предоставляем документацию.  
+.NET Framework постоянно развивается. Для улучшения кросс платформенной разработки и добавления новых функциональных возможностей раньше, новых функций представлены в виде внештатных выпусков (OOB). В этом разделе перечислены внештатные проекты, для которых мы предоставляем документацию.  
   
-Кроме того, некоторые библиотеки предназначены для конкретных платформ или реализаций .NET Framework. Например <xref:System.Text.CodePagesEncodingProvider> класса делает доступными для приложений UWP, разработанных с помощью .NET Framework кодировок кодовых страниц. В этой статье эти библиотеки перечислены тоже.  
+Кроме того, некоторые библиотеки предназначены для конкретных платформ или реализаций .NET Framework. Например <xref:System.Text.CodePagesEncodingProvider> класс делает кодировок кодовых страниц доступными для приложений универсальной платформы Windows, разработанных с помощью .NET Framework. В этой статье эти библиотеки перечислены тоже.  
   
 ## <a name="oob-projects"></a>Встроенные проекты
   
-| Проект | Описание |  
+| Проект | Описание: |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Предоставляет потокобезопасные коллекции, содержимое которых никогда не меняется. |
 | <xref:System.Net.Http.WinHttpHandler> | Предоставляет обработчик сообщений для <xref:System.Net.Http.HttpClient> на основе интерфейса WinHTTP ОС Windows. |
@@ -33,9 +33,9 @@ ms.locfileid: "32752433"
 
 ## <a name="platform-specific-libraries"></a>Библиотеки для конкретных платформ
   
-| Проект | Описание |  
+| Проект | Описание: |  
 | ------- | ----------- |  
-| <xref:System.Text.CodePagesEncodingProvider> | Расширяет <xref:System.Text.EncodingProvider> класса, чтобы сделать доступными для приложений, предназначенных для универсальной платформы Windows кодировок кодовых страниц. |  
+| <xref:System.Text.CodePagesEncodingProvider> | Расширяет <xref:System.Text.EncodingProvider> класса, чтобы сделать кодировки кодовых страниц доступными для приложений, предназначенных для универсальной платформы Windows. |  
   
 ## <a name="private-apis"></a>Частные интерфейсы API  
 
@@ -49,7 +49,7 @@ ms.locfileid: "32752433"
 | [System.Net.ConnectionGroup.m\_ConnectionList поля](../../../docs/framework/additional-apis/m_connectionlist.md) |
 | [Класс System.Net.CoreResponseData](../../../docs/framework/additional-apis/coreresponsedata.md) |
 | [System.Net.CoreResponseData.m\_ResponseHeaders поля](../../../docs/framework/additional-apis/coreresponsedata_m_responseheaders.md) |
-| [System.Net.CoreResponseData.m\_StatusCode поля](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
+| [System.Net.CoreResponseData.m\_поле StatusCode](../../../docs/framework/additional-apis/coreresponsedata_m_statuscode.md) |
 | [System.Net.HttpWebRequest. \_AutoRedirects поля](../../../docs/framework/additional-apis/_autoredirects.md) |
 | [System.Net.HttpWebRequest. \_CoreResponse поля](../../../docs/framework/additional-apis/httpwebrequest__coreresponse.md) |
 | [System.Net.HttpWebRequest. \_HttpResponse поля](../../../docs/framework/additional-apis/_httpresponse.md) |

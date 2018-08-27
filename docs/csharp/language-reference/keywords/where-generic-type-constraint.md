@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 94db10c81af55030dfcf6e210a86658c84868e42
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 34246824fb8ff28e47ea424c78eca38e999a30b6
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961086"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931880"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (ограничение универсального типа) (справочник по C#)
 
@@ -64,8 +64,8 @@ ms.locfileid: "37961086"
 
 ## <a name="see-also"></a>См. также
 
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Ограничение new](../../../csharp/language-reference/keywords/new-constraint.md)  
- [Ограничения параметров типа](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Ограничение new](../../../csharp/language-reference/keywords/new-constraint.md)  
+- [Ограничения параметров типа](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)  

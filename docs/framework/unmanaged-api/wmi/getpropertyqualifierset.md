@@ -1,6 +1,6 @@
 ---
 title: Функция GetPropertyQualifierSet (Справочник по неуправляемым API)
-description: Функция GetPropertyQualifierSet получает квалификатор для свойства.
+description: Функция GetPropertyQualifierSet получает квалификатор устанавливаемое для свойства.
 ms.date: 11/06/2017
 api_name:
 - GetPropertyQualifierSet
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2951733211737f06cd737b20bd1537277be1be1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fcddca2e435a3f5bf4b8d083784613254d9801a4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461481"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935704"
 ---
 # <a name="getpropertyqualifierset-function"></a>Функция GetPropertyQualifierSet
-Извлекает квалификатор для конкретного свойства.
+Извлекает значение определенного свойства квалификатор.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -45,43 +45,43 @@ HRESULT GetPropertyQualifierSet (
 [in] Этот параметр не используется.
 
 `ptr`  
-[in] Указатель на [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) экземпляра.
+[in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.
 
 `wszMethod`  
 [in] Имя свойства. `wszProperty` должен указывать на допустимый `LPCWSTR`. 
 
 `ppQualSet`  
-[out] Получает указатель интерфейса, обеспечивающего доступ к квалификаторы свойства. Параметр `ppQualSet` не может иметь значение `null`. Если возникает ошибка не возвращается новый объект и указатель устанавливается на `null`. 
+[out] Получает указатель интерфейса, обеспечивающий доступ к квалификаторы свойства. Параметр `ppQualSet` не может иметь значение `null`. Если возникает ошибка, не возвращается новый объект и указатель имеет значение для указания `null`. 
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
+Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 | `WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не существует. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр — `null`. |
 | `WBEM_E_SYSTEM_PROPERTY` | 0x80041030 | Функция пытается получить квалификаторы для системного свойства. |
-|`WBEM_S_NO_ERROR` | 0 | Успешный вызов функции.  |
+|`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
   
 ## <a name="remarks"></a>Примечания
 
-Эта функция создает оболочку для вызова [IWbemClassObject::GetPropertyQualifierSet](https://msdn.microsoft.com/library/aa391450(v=vs.85).aspx) метод. 
+Эта функция создает оболочку для вызова [IWbemClassObject::GetPropertyQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getpropertyqualifierset) метод. 
 
-Вызов эта функция поддерживается только в том случае, если текущий объект является определение класса CIM. Метод обработки не доступен для [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) ponters, указывают на экземпляры CIM.
+Вызов этой функции поддерживается только в том случае, если текущий объект является определение класса CIM. Метод манипуляции не доступен для [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters, указывают на экземпляры CIM.
 
-Так как каждый метод может иметь свой собственный квалификаторы [IWbemQualifierSet указатель](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) позволяет вызывающему объекту добавить, изменить или удалить эти квалификаторы.
+Так как каждый метод может иметь свой собственный квалификаторы [IWbemQualifierSet указатель](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) позволяет вызывающему объекту добавить, изменить или удалить эти квалификаторы.
 
-Поскольку свойства системы без квалификаторов, функция возвращает `WBEM_E_SYSTEM_PROPERTY` при попытке получить [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) указатель для системного свойства.
+Поскольку системные свойства без квалификаторов, функция возвращает `WBEM_E_SYSTEM_PROPERTY` при попытке получить [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) указатель для системного свойства.
 
 ## <a name="requirements"></a>Требования  
-**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
-[WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)
+[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

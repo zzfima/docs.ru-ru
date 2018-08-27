@@ -12,12 +12,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 407ca9e4744ea9be45867a08e87c502821226472
-ms.sourcegitcommit: ff1d40507b3eb6e2185478e37c66c66be6de46f1
+ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/11/2018
-ms.locfileid: "34058840"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43000980"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ — интерполяция строк (справочник по C#)
 
@@ -88,12 +88,13 @@ ms.locfileid: "34058840"
 
 Если вы не знакомы с интерполяцией строк, ознакомьтесь с кратким руководством [по интерполяции строк в C#](../../quick-starts/interpolated-strings.yml). Дополнительные сведения см. в руководстве [Интерполяция строк в C#](../../tutorials/string-interpolation.md).
 
-## <a name="see-also"></a>См. также  
- <xref:System.String.Format%2A?displayProperty=nameWithType>  
- <xref:System.FormattableString?displayProperty=nameWithType>  
- <xref:System.IFormattable?displayProperty=nameWithType>  
- [Составное форматирование](../../../standard/base-types/composite-formatting.md)  
- [Строки](../../programming-guide/strings/index.md)  
- [Руководство по программированию на C#](../../programming-guide/index.md)  
- [Специальные символы в C#](index.md)  
- [Справочник по C#](../index.md)  
+## <a name="see-also"></a>См. также
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- [Составное форматирование](../../../standard/base-types/composite-formatting.md)
+- [Строки](../../programming-guide/strings/index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Специальные символы в C#](index.md)
+- [Справочник по C#](../index.md)

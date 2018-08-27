@@ -6,12 +6,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 28c8e9bd078e07a185f541214aa5b5ff79018ff5
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 021fc3bd63922394bd70495bd4335b068fc51cdd
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34826998"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929303"
 ---
 # <a name="fixed-statement-c-reference"></a>Оператор fixed (Справочник по C#)
 
@@ -73,8 +73,8 @@ fixed (byte* ps = srcarray, pd = dstarray)
 
 ## <a name="see-also"></a>См. также
 
- [Справочник по C#](../index.md)  
- [Руководство по программированию на C#](../../programming-guide/index.md)  
- [Ключевые слова в C#](index.md)  
- [unsafe](unsafe.md)  
- [Буферы фиксированного размера](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)
+- [Справочник по C#](../index.md)  
+- [Руководство по программированию на C#](../../programming-guide/index.md)  
+- [Ключевые слова в C#](index.md)  
+- [unsafe](unsafe.md)  
+- [Буферы фиксированного размера](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

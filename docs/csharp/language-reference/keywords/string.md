@@ -10,11 +10,12 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-ms.openlocfilehash: f92a44283e59bd80421758a63b40bc5289c3628b
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 8b70f1c1dcb39dcdde6ba24a1bdcdfc3084cfc97
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929277"
 ---
 # <a name="string-c-reference"></a>string (Справочник по C#)
 Тип `string` представляет последовательность, состоящую из нуля или более символов в кодировке Юникод. `string` является псевдонимом для <xref:System.String> в .NET.  
@@ -98,14 +99,15 @@ Console.WriteLine(a);
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Рекомендации по использованию строк](../../../standard/base-types/best-practices-strings.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)  
- [Типы значений](../../../csharp/language-reference/keywords/value-types.md)  
- [Базовые операции со строками в .NET Framework](../../../standard/base-types/basic-string-operations.md)  
- [Создание строк](../../../standard/base-types/creating-new.md)  
- [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Рекомендации по использованию строк](../../../standard/base-types/best-practices-strings.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Типы значений](../../../csharp/language-reference/keywords/value-types.md)  
+- [Базовые операции со строками в .NET Framework](../../../standard/base-types/basic-string-operations.md)  
+- [Создание строк](../../../standard/base-types/creating-new.md)  
+- [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)

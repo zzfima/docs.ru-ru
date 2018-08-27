@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: a9d78ecfc3911cf959333c098a66614239609c4e
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: f5fd156ba25352fb1f816349c5e130267f7da8c2
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457960"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925848"
 ---
 # <a name="methods"></a>Методы #
 
@@ -40,7 +40,7 @@ ms.locfileid: "34457960"
 
 Методы объявляются в `class` или `struct`, для чего указывается следующее:
 
-- Уровень доступа (необязательно), например `public` или `private`. Значение по умолчанию — `private`.
+- Уровень доступа (необязательно), например `public` или `private`. Значение по умолчанию — `private`.
 - Необязательные модификаторы, например `abstract` или `sealed`.
 - Возвращаемое значение или `void`, если у метода его нет.
 - Имя метода.
@@ -296,12 +296,12 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 ## <a name="see-also"></a>См. также ##
 
-[Модификаторы доступа](language-reference/keywords/access-modifiers.md)   
-[Статические классы и члены статических классов](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
-[Наследование](programming-guide/classes-and-structs/inheritance.md)   
-[Абстрактные и запечатанные классы и члены классов](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
-[params](language-reference/keywords/params.md)   
-[out](language-reference/keywords/out-parameter-modifier.md)   
-[ref](language-reference/keywords/ref.md)   
-[in](language-reference/keywords/in-parameter-modifier.md)   
-[Передача параметров](programming-guide/classes-and-structs/passing-parameters.md)
+- [Модификаторы доступа](language-reference/keywords/access-modifiers.md)   
+- [Статические классы и члены статических классов](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
+- [Наследование](programming-guide/classes-and-structs/inheritance.md)   
+- [Абстрактные и запечатанные классы и члены классов](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
+- [params](language-reference/keywords/params.md)   
+- [out](language-reference/keywords/out-parameter-modifier.md)   
+- [ref](language-reference/keywords/ref.md)   
+- [in](language-reference/keywords/in-parameter-modifier.md)   
+- [Передача параметров](programming-guide/classes-and-structs/passing-parameters.md)

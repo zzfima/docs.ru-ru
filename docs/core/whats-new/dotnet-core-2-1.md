@@ -4,12 +4,12 @@ description: Дополнительные сведения о новых воз�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 06/06/2018
-ms.openlocfilehash: 52fe2d47dbca9bc43c2f1274b0d9e535ba9f9abc
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec9a8d238dc47f604a1ac0ee7628bf079e89b9c2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874576"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42935583"
 ---
 # <a name="whats-new-in-net-core-21"></a>Новые возможности .NET Core 2.1
 
@@ -123,7 +123,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="windows-compatibility-pack"></a>Пакет обеспечения совместимости с Windows
 
-При переносе существующего кода с платформы .NET Framework на .NET Core вы можете использовать [пакет обеспечения совместимости с Windows](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Он предоставляет доступ к 20 000 дополнительных интерфейсов API, которые не поддерживаются в .NET Core. Сюда входят такие API-интерфейсы, как пространство имен <xref:System.Drawing?displayProperty="nameWithType">, класс <xref:System.Diagnostics.EventLog>, инструментарий WMI, счетчики производительности, службы Windows, типы и члены реестра Windows.
+При переносе существующего кода с платформы .NET Framework на .NET Core вы можете использовать [пакет обеспечения совместимости с Windows](https://www.nuget.org/packages/Microsoft.Windows.Compatibility). Он предоставляет доступ к 20 000 дополнительных интерфейсов API, которые не поддерживаются в .NET Core. Сюда входят такие API-интерфейсы, как пространство имен <xref:System.Drawing?displayProperty=nameWithType>, класс <xref:System.Diagnostics.EventLog>, инструментарий WMI, счетчики производительности, службы Windows, типы и члены реестра Windows.
 
 ## <a name="jit-compiler-improvements"></a>Усовершенствования JIT-компилятора
 
@@ -195,7 +195,7 @@ dotnet tool install -g dotnetsay
 
   - Процедура <xref:System.Security.Cryptography.CryptographicOperations.ZeroMemory%2A> выполняет очистку памяти и не может быть оптимизирована.
 
-- Статический метод <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=fullName> заполняет <xref:System.Span%601> случайными значениями.
+- Статический метод <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> заполняет <xref:System.Span%601> случайными значениями.
 
 - Теперь <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType> поддерживается в maxOS и Linux.
 
@@ -215,7 +215,7 @@ dotnet tool install -g dotnetsay
 
 - Согласованное поведение на всех платформах .NET Core.
 
-<xref:System.Net.Http.SocketsHttpHandler> является реализацией по умолчанию в .NET Core 2.1. Но вы можете настроить в приложении использование более старой версии класса <xref:System.Net.Http.HttpClientHandler>, вызвав метод <xref:System.AppContext.SetSwitch%2A?displayProperty="nameWithType">:
+<xref:System.Net.Http.SocketsHttpHandler> является реализацией по умолчанию в .NET Core 2.1. Но вы можете настроить в приложении использование более старой версии класса <xref:System.Net.Http.HttpClientHandler>, вызвав метод <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType>:
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);

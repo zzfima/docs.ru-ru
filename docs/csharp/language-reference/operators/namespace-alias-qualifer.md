@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 668799a2d846d0f0bf1b3743e202602250a57ae5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 480ed224d1994dac926dfc78d59e227c8d1e8f36
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271777"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934999"
 ---
 # <a name="-operator-c-reference"></a>Оператор :: (Справочник по C#)
 Квалификатор псевдонима пространства имен (`::`) служит для поиска идентификаторов. Он всегда размещается между двумя идентификаторами, как показано в следующем примере.  
@@ -31,10 +31,11 @@ ms.locfileid: "33271777"
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Операторы в C#](../../../csharp/language-reference/operators/index.md)  
- [Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [. Оператор](../../../csharp/language-reference/operators/member-access-operator.md)  
- [Псевдоним extern](../../../csharp/language-reference/keywords/extern-alias.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Операторы в C#](../../../csharp/language-reference/operators/index.md)  
+- [Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [. Оператор](../../../csharp/language-reference/operators/member-access-operator.md)  
+- [Псевдоним extern](../../../csharp/language-reference/keywords/extern-alias.md)

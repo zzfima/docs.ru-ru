@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: 1407a3315d8971895b70893af9d85c8bb428c3be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b504a9e368e5179d5f91faf7256445d7da47b1d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603864"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929617"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Свойство дочерней оси XML (Visual Basic)
 Предоставляет доступ к дочерним элементам одного из следующих: объекта <xref:System.Xml.Linq.XElement>, объекта <xref:System.Xml.Linq.XDocument>, коллекции объектов <xref:System.Xml.Linq.XElement> или коллекции объектов <xref:System.Xml.Linq.XDocument>.  
@@ -32,7 +32,7 @@ object.<child>
 |---|---|  
 |`object`|Обязательно. Объект <xref:System.Xml.Linq.XElement>, объект <xref:System.Xml.Linq.XDocument>, коллекция объектов <xref:System.Xml.Linq.XElement> или коллекция объектов <xref:System.Xml.Linq.XDocument>.|  
 |.<|Обязательно. Обозначает начало свойства дочерней оси.|  
-|`child`|Обязательно. Имя дочерних узлов для доступа, формы [`prefix``:`]`name`.<br /><br /> -   `Prefix` — Необязательный параметр. Префикс пространства имен XML для дочернего узла. Должно быть глобальным пространством имен XML, определенным с помощью оператора `Imports`.<br />-   `Name` -Обязательно. Имя локального дочернего узла. В разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|`child`|Обязательно. Имя дочерних узлов для доступа к формы [`prefix``:`]`name`.<br /><br /> -   `Prefix` -Необязательно. Префикс пространства имен XML для дочернего узла. Должно быть глобальным пространством имен XML, определенным с помощью оператора `Imports`.<br />-   `Name` -Required. Имя локального дочернего узла. См. в разделе [имена объявленных элементов и атрибутов](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
 |>|Обязательно. Обозначает конец свойства дочерней оси.|  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -75,7 +75,7 @@ object.<child>
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Xml.Linq.XElement>  
- [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/index.md)  
  [XML-литералы](../../../visual-basic/language-reference/xml-literals/index.md)  
  [Создание XML в Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
  [Имена объявленных элементов и атрибутов XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

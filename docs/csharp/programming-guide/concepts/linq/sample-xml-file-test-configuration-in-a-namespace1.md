@@ -3,11 +3,11 @@ title: Пример XML-файла. Конфигурация тестирова�
 ms.date: 07/20/2015
 ms.assetid: e75ad1bc-5636-4623-9a34-a286a8c485d6
 ms.openlocfilehash: 04d66eaa7fd134fdf368614ca94261b80c16d4d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333057"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932084"
 ---
 # <a name="sample-xml-file-test-configuration-in-a-namespace"></a>Пример XML-файла. Конфигурация тестирования в пространстве имен
 Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Это тестовый файл конфигурации. XML располагается в пространстве имен.  

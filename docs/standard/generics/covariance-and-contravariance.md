@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c50d79f402d55a2fb5e859da4d61b04eeeb6931
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80c3a772ae4dfba53982ed28c0bd54f500c50b08
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579747"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932952"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Ковариация и контравариация в универсальных шаблонах
 <a name="top"></a> Термины "ковариантность" и "контрвариантность" относятся к возможности использовать более производный (более конкретный) или менее производный (менее конкретный) тип, чем задано изначально. Параметры универсальных типов поддерживают ковариантность и контравариантность и обеспечивают большую гибкость в назначении и использовании универсальных типов. Ниже приведены определения терминов "ковариантность", "контравариантность" и "инвариантность" в контексте системы типов. В этом примере предполагается наличие базового класса с именем `Base` и производного класса с именем `Derived`.  
@@ -33,13 +33,13 @@ ms.locfileid: "33579747"
   
      Позволяет использовать более универсальный тип (с меньшей глубиной наследования), чем заданный изначально.  
   
-     Экземпляр `IEnumerable<Base>` (`IEnumerable(Of Base)` в Visual Basic) можно присвоить переменной типа `IEnumerable<Derived>`.  
+     Экземпляр `Action<Base>` (`Action(Of Base)` в Visual Basic) можно присвоить переменной типа `Action<Derived>`.  
   
 -   `Invariance`  
   
      Означает, что можно использовать только изначально заданный тип. Таким образом, параметр инвариантного универсального типа не является ни ковариантным, ни контравариантным.  
   
-     Экземпляр `IEnumerable<Base>` (`IEnumerable(Of Base)` в Visual Basic) нельзя присвоить переменной типа `IEnumerable<Derived>`, и наоборот.  
+     Экземпляр `List<Base>` (`List(Of Base)` в Visual Basic) нельзя присвоить переменной типа `List<Derived>`, и наоборот.  
   
  Параметры ковариантного типа позволяют создавать назначения, которые выглядят очень похоже на обычный [полиморфизм](~/docs/csharp/programming-guide/classes-and-structs/polymorphism.md), как показывает следующий код.  
   

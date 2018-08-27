@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f231c4f9782518e30cbaa89c6b085c72aafcc92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa9e7a4dacceb492dfe037b4b64f22f231323de5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445449"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933226"
 ---
 # <a name="coropenflags-enumeration"></a>Перечисление CorOpenFlags
 Содержит значения флага, которые управляют поведением метаданных при открытии файлов манифеста.  
@@ -59,19 +59,19 @@ typedef enum CorOpenFlags
 |`ofCacheImage`|Является устаревшей. Этот флаг отклонен.|  
 |`ofManifestMetadata`|Является устаревшей. Этот флаг отклонен.|  
 |`ofReadOnly`|Указывает, что файл должен быть открыт для чтения, а вызов `QueryInterface` для [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) нельзя сделать.|  
-|`ofTakeOwnership`|Указывает, что память была выделена с помощью вызова [CoTaskMemAlloc](http://msdn.microsoft.com/library/c4cb588d-9482-4f90-a92e-75b604540d5c) и будет освобождена метаданными.|  
+|`ofTakeOwnership`|Указывает, что память была выделена с помощью вызова [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) и будет освобождена метаданными.|  
 |`ofNoTypeLib`|Является устаревшей. Этот флаг отклонен.|  
-|`ofNoTransform`|Указывает, что автоматические преобразования из файла .WINMD следует отключить. Другими словами, проекцию типа среды выполнения Windows на тип платформы .NET Framework следует отключить. Дополнительные сведения см. в разделе [под изнутри .NET и среды выполнения Windows](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
+|`ofNoTransform`|Указывает, что автоматические преобразования из файла .WINMD следует отключить. Другими словами, проекцию типа среды выполнения Windows на тип платформы .NET Framework следует отключить. Дополнительные сведения см. в разделе [под представление о внутренней работе с .NET и среды выполнения Windows](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|Зарезервировано для внутреннего использования.|  
 |`ofReserved2`|Зарезервировано для внутреннего использования.|  
 |`ofReserved`|Зарезервировано для внутреннего использования.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

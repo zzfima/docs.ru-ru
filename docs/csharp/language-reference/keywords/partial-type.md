@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial types [C#]
 ms.assetid: 27320743-a22e-4c7b-b0b3-53afe3607334
-ms.openlocfilehash: 4f57149dd18deb08aa11b72d0a6d5f71b3838bd1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 362a02815cb249d57c0bd19706714df1d71644f4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960301"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929667"
 ---
 # <a name="partial-type-c-reference"></a>разделяемый (тип) (Справочник по C#)
 Определения разделяемых типов позволяют разделять определения классов, структур и интерфейсов на несколько файлов.  
@@ -31,8 +31,9 @@ ms.locfileid: "37960301"
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)  
- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)  
+- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)

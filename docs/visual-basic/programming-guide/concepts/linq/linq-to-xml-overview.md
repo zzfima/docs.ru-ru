@@ -1,15 +1,15 @@
 ---
-title: LINQ to XML Обзор (Visual Basic)
+title: Обзор LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
 ms.openlocfilehash: 3818177c2ed14b1159b8e63e324894d7e89b72b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33649091"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932407"
 ---
-# <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML Обзор (Visual Basic)
+# <a name="linq-to-xml-overview-visual-basic"></a>Обзор LINQ to XML (Visual Basic)
 XML широко используется для форматирования данных в целом ряде контекстов. Примеры XML можно обнаружить в веб-среде, в файлах конфигурации, в файлах Microsoft Office Word и в базах данных.  
   
  В [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] реализован современный пересмотренный подход к программированию средствами XML. Кроме того, реализованы встроенные в память возможности модификации документов модели DOM, поддерживаются выражения запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Хотя в синтаксическом отношении эти выражения запросов отличаются от XPath, они предоставляют аналогичные функциональные возможности.  
@@ -22,7 +22,7 @@ XML широко используется для форматирования д
 ## <a name="what-is-linq-to-xml"></a>Что такое LINQ to XML?  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] - это оснащенный средствами LINQ и встроенный в память программный интерфейс XML, позволяющий работать с XML-файлами внутри языков программирования [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] подобен модели DOM в том отношении, что загружает XML-документ в память. К такому документу можно направить запрос, его можно изменить, а после изменения его можно сохранить в файле или сериализовать и передать через Интернет. Тем не менее [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] моделью DOM существуют отличия: предоставляет модель объектов, легкую и простую в работе, и в нем используются преимущества возможностей языка в Visual Basic.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] подобен модели DOM в том отношении, что загружает XML-документ в память. К такому документу можно направить запрос, его можно изменить, а после изменения его можно сохранить в файле или сериализовать и передать через Интернет. Тем не менее [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] моделью DOM существуют отличия: он предоставляет модель объектов, легкую и простую в работе, и в нем используются преимущества функций языка в Visual Basic.  
   
  Важнейшее достоинство [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] состоит в его интеграции с [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Эта интеграция дает возможность создавать запросы к загруженному в память XML-документу с целью получения коллекций элементов и атрибутов. По своей функциональности (но не по синтаксису) реализованные в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] возможности формирования запросов сопоставимы с возможностями XPath и XQuery. Интеграция [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] в Visual Basic обеспечивается более строгая типизация, компиляции время проверки и улучшенная поддержка отладчика.  
   
@@ -64,7 +64,7 @@ Select item
 -   Использование сочетания этих функций для преобразования XML-деревьев из одной формы в другую.  
   
 ## <a name="creating-xml-trees"></a>Создание деревьев XML  
- Одним из наиболее важных преимуществ программирования с использованием [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] является простота создания XML-деревьев. Например для создания небольшого XML-дерева, можно написать код следующим образом:  
+ Одним из наиболее важных преимуществ программирования с использованием [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] является простота создания XML-деревьев. Например для создания небольшого дерева XML, можно написать код следующим образом:  
   
 ```vb  
 Dim contacts = _  

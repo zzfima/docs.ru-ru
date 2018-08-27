@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b38b64e1c86174bea11086e722ed86b0a0046e2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6d7b12004efce76f9ac591f18fd0f4e06fdd7fd0
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33461917"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934955"
 ---
 # <a name="profiling-overview"></a>Общие сведения о профилировании
 <a name="top"></a> Профилировщик — это средство, которое наблюдает за выполнением другого приложения. Профилировщик среды CLR — это библиотека DLL, содержащая функции, которые получают сообщения из среды CLR и отправляют сообщения в среду CLR с помощью API профилирования. Библиотека DLL профилировщика загружается средой CLR во время выполнения.  
@@ -55,11 +55,11 @@ ms.locfileid: "33461917"
   
 -   [Безопасность](#security)  
   
--   [Объединение управляемого и неуправляемого кода в коде профилировщика](#combining_managed_unmanaged)  
+-   [Объединение управляемого и неуправляемого кода в Profiler кода](#combining_managed_unmanaged)  
   
 -   [Профилирование неуправляемого кода](#unmanaged)  
   
--   [Использование модели COM](#com)  
+-   [С помощью COM](#com)  
   
 -   [Стеки вызовов](#call_stacks)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "33461917"
 ## <a name="the-profiling-api"></a>API профилирования  
  Как правило, API профилирования используется для записи *профилировщик кода*, который представляет собой программу, осуществляющую мониторинг выполнения управляемого приложения.  
   
- API профилирования используется библиотекой DLL профилировщика, которая загружается в один процесс с профилируемым приложением. Библиотека DLL профилировщика реализует интерфейс обратного вызова ([ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) в .NET Framework версий 1.0 и 1.1, [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) в версии 2.0 и более поздней версии). Среда CLR вызывает методы этого интерфейса для уведомления профилировщика о событиях в процессе профилирования. Профилировщик может вызвать обратно в среду выполнения с помощью методов [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) и [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) интерфейсы для получения сведений о состоянии профилируемого приложения.  
+ API профилирования используется библиотекой DLL профилировщика, которая загружается в один процесс с профилируемым приложением. Библиотека DLL профилировщика реализует интерфейс обратного вызова ([ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) в .NET Framework версий 1.0 и 1.1, [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) в версии 2.0 и более поздние версии). Среда CLR вызывает методы этого интерфейса для уведомления профилировщика о событиях в процессе профилирования. Профилировщик может выполнять обратный вызов в среду выполнения с помощью методов в [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) и [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md) интерфейсов для получения сведений о состоянии профилируемого приложения.  
   
 > [!NOTE]
 >  В одном процессе с профилируемым приложением должна запускаться только часть решения профилировщика, отвечающая за сбор данных. Весь анализ пользовательского интерфейса и данных должен выполняться в отдельном процессе.  
@@ -82,12 +82,12 @@ ms.locfileid: "33461917"
 Архитектура профилирования  
   
 ### <a name="the-notification-interfaces"></a>Интерфейсы уведомлений  
- [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) и [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) можно считать интерфейсами уведомлений. Эти интерфейсы содержат методов, таких как [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md), и [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md). Каждый раз, когда среда CLR загружает или выгружает класс, компилирует функцию и т. д., она вызывает соответствующий метод в интерфейсе `ICorProfilerCallback` или `ICorProfilerCallback2` профилировщика.  
+ [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) и [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) можно считать интерфейсами уведомлений. Эти интерфейсы содержат методы, такие как [ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md), [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md), и [JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md). Каждый раз, когда среда CLR загружает или выгружает класс, компилирует функцию и т. д., она вызывает соответствующий метод в интерфейсе `ICorProfilerCallback` или `ICorProfilerCallback2` профилировщика.  
   
  Например, профилировщик может измерять производительность кода с помощью двух функций уведомлений: [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) и [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md). Он просто устанавливает метки времени для каждого уведомления, собирает результаты и выводит список, в котором указывается, на какие функции было затрачено больше ресурсов ЦП или физического времени во время выполнения приложения.  
   
 ### <a name="the-information-retrieval-interfaces"></a>Интерфейсы для извлечения сведений  
- Другие основных интерфейсов, необходимых для профилирования, [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) и [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md). Профилировщик вызывает эти интерфейсы по мере необходимости для получения дополнительных сведений, помогающих выполнить анализ. Например, каждый раз, когда среда CLR вызывает [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) функция, она предоставляет ее идентификатор. Профилировщик может получить дополнительные сведения об этой функции, вызвав [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) метод для нахождения родительского класса функции, ее имя и т. д.  
+ Других основных интерфейсов, необходимых для профилирования, [ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md) и [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md). Профилировщик вызывает эти интерфейсы по мере необходимости для получения дополнительных сведений, помогающих выполнить анализ. Например, каждый раз, когда среда CLR вызывает [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md) функция, она предоставляет ее идентификатор. Профилировщик может получить дополнительные сведения о функции путем вызова [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) метод обнаружения родительский класс функции, ее имя и т. д.  
   
  [К началу](#top)  
   
@@ -129,7 +129,7 @@ ms.locfileid: "33461917"
   
  Этот API является эффективным с точки зрения потребления ресурсов ЦП и памяти. Профилирование не влечет за собой изменения профилируемого приложения, которые могут привести к недостоверным результатам.  
   
- API профилирования полезен для профилировщиков как с выборкой, так и без выборки. Объект *выборки профилировщика* проверяет профиль через регулярные интервалы, например, через каждые 5 миллисекунд. Объект *профилировщик без выборки* информируется о событии синхронно с потоком, который вызывает события.  
+ API профилирования полезен для профилировщиков как с выборкой, так и без выборки. Объект *выборки профилировщик* проверяет профиль через регулярные интервалы, скажем, через каждые 5 миллисекунд. Объект *профилировщик без выборки* информируется о событии синхронно с потоком, который вызывает событие.  
   
 ### <a name="unsupported-functionality"></a>Неподдерживаемые функциональные возможности  
  API профилирования не поддерживает следующие функциональные возможности.  
@@ -154,7 +154,7 @@ ms.locfileid: "33461917"
 ## <a name="notification-threads"></a>Потоки уведомлений  
  В большинстве случаев поток, который создает событие, также выполняет уведомления. Такие уведомления (например, [FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md) и [FunctionLeave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)) не требуется предоставлять явные `ThreadID`. Кроме того, профилировщик может использовать локальное хранилище потока для хранения и обновления своих блоков анализа вместо индексирования этих блоков в глобальном хранилище на основе `ThreadID` затронутого потока.  
   
- Обратите внимание, что эти обратные вызовы не сериализуются. Пользователи должны защищать свой код, путем создания потокобезопасных структур данных и путем блокировки кода профилировщика в тех случаях, когда необходимо предотвратить параллельный доступ из нескольких потоков. Таким образом, в некоторых случаях можно получить необычную последовательность обратных вызовов. Например, предположим, что управляемое приложение порождает два потока, выполняющие идентичный код. В этом случае можно получать [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) для некоторой функции из одного потока и `FunctionEnter` от другого потока до получения обратного вызова [ ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) обратного вызова. В этом случае пользователь получит обратный вызов `FunctionEnter` для функции, которая могла быть не полностью JIT-скомпилирована.  
+ Обратите внимание, что эти обратные вызовы не сериализуются. Пользователи должны защищать свой код, путем создания потокобезопасных структур данных и путем блокировки кода профилировщика в тех случаях, когда необходимо предотвратить параллельный доступ из нескольких потоков. Таким образом, в некоторых случаях можно получить необычную последовательность обратных вызовов. Например, предположим, что управляемое приложение порождает два потока, выполняющие идентичный код. В этом случае можно получать [ICorProfilerCallback::JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md) событий для некоторой функции из одного потока и `FunctionEnter` обратного вызова из другого потока до получения [ ICorProfilerCallback::JITCompilationFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationfinished-method.md) обратного вызова. В этом случае пользователь получит обратный вызов `FunctionEnter` для функции, которая могла быть не полностью JIT-скомпилирована.  
   
  [К началу](#top)  
   
@@ -174,9 +174,9 @@ ms.locfileid: "33461917"
   
  Хотя это возможно с точки зрения проектирования, API профилирования не поддерживает управляемые компоненты. Профилировщик среды CLR должен быть полностью неуправляемым. Попытки объединить управляемый и неуправляемый код в профилировщике среды CLR могут привести к нарушениям прав доступа, сбоям программы или взаимоблокировкам. Управляемые компоненты профилировщика будут возвращать события обратно их неуправляемым компонентам, что будет затем вызывать управляемые компоненты снова, и таким образом будут создаваться циклические ссылки.  
   
- Единственное место, где профилировщик CLR может безопасно вызывать управляемый код, это текст MSIL в теле метода. Для изменения текста MSIL рекомендуется использовать методы JIT-перекомпиляции в [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) интерфейса.  
+ Единственное место, где профилировщик CLR может безопасно вызывать управляемый код, это текст MSIL в теле метода. Для изменения текста MSIL рекомендуется использовать методы JIT-перекомпиляции в [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) интерфейс.  
   
- Кроме того, для изменения MSIL можно использовать старые методы инструментирования. До завершения just-in-time (JIT) компиляции функции профилировщик может вставить управляемые вызовы в текст MSIL метода, а затем выполнить их JIT-компиляцию его (см. [ICorProfilerInfo::GetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md) метода). Этот способ можно успешно использовать для выборочного инструментирования управляемого кода или для сбора статистики и данных производительности касательно JIT.  
+ Кроме того, для изменения MSIL можно использовать старые методы инструментирования. До завершения just-in-time (JIT) компиляции функции профилировщик может вставить управляемые вызовы в текст MSIL метода, а затем JIT-компиляцию его (см. в разделе [ICorProfilerInfo::GetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbody-method.md) метод). Этот способ можно успешно использовать для выборочного инструментирования управляемого кода или для сбора статистики и данных производительности касательно JIT.  
   
  Кроме того, профилировщик кода может вставлять собственные обработчики в текст MSIL любой управляемой функции, которая вызывает неуправляемый код. Этот способ можно использовать для инструментирования и покрытия. Например, профилировщик кода может вставить обработчики инструментирования после каждого блока MSIL для обеспечения выполнения блока. Изменение текста MSIL метода следует выполнять очень аккуратно и принимать во внимание множество факторов.  
   
@@ -192,13 +192,13 @@ ms.locfileid: "33461917"
   
  В .NET Framework версий 1.0 и 1.1 эти методы доступны через внутрипроцессное подмножество API отладки среды CLR. Они определяются в файле CorDebug.idl.  
   
- В .NET Framework 2.0 и более поздних версиях можно использовать [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) для этой функциональности.  
+ В .NET Framework 2.0 и более поздних версиях можно использовать [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) метод для использования этой функции.  
   
  [К началу](#top)  
   
 <a name="com"></a>   
 ## <a name="using-com"></a>Использование модели COM  
- Хотя интерфейсы профилирования определяются как COM-интерфейсы, среда CLR в действительности не инициализирует модель COM для использования этих интерфейсов. Причина заключается в том, чтобы избежать необходимости установки потоковой модели с помощью [CoInitialize](http://msdn.microsoft.com/library/windows/desktop/ms678543\(v=vs.85\).aspx) функции до того, как управляемое приложение возможность задать нужный такую модель. Аналогично, сам профилировщик не должен вызывать `CoInitialize`, поскольку он может выбрать потоковую модель, несовместимую с профилируемым приложением, что может привести к сбою приложения.  
+ Хотя интерфейсы профилирования определяются как COM-интерфейсы, среда CLR в действительности не инициализирует модель COM для использования этих интерфейсов. Причина заключается в том, чтобы избежать необходимости установки потоковой модели с помощью [CoInitialize](/windows/desktop/api/objbase/nf-objbase-coinitialize) функционировать до того, как управляемое приложение возможность задать нужный такую модель. Аналогично, сам профилировщик не должен вызывать `CoInitialize`, поскольку он может выбрать потоковую модель, несовместимую с профилируемым приложением, что может привести к сбою приложения.  
   
  [К началу](#top)  
   
@@ -209,10 +209,10 @@ ms.locfileid: "33461917"
 ### <a name="stack-snapshot"></a>Моментальный снимок стека  
  Моментальный снимок стека — это трассировка стека потока в момент времени. API профилирования поддерживает трассировку управляемых функций в стеке, но оставляет трассировку неуправляемых функций собственному обходчику стека профилировщика.  
   
- Дополнительные сведения о программировании профилировщика для обхода управляемых стеков см. в разделе [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) метод в этот набор документации и [проверка стека профилировщика в .NET Framework 2.0: Основы и другие сведения](http://go.microsoft.com/fwlink/?LinkId=73638).
+ Дополнительные сведения о программировании профилировщика для обхода управляемых стеков см. в разделе [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) метод в этом комплекте документации и [Profiler, анализ стека в .NET Framework 2.0: Основы и за его пределами](http://go.microsoft.com/fwlink/?LinkId=73638).
   
 ### <a name="shadow-stack"></a>Теневой стек  
- Слишком частое использование метода моментального снимка может быстро создавать проблемы производительности. Если вы хотите часто получать трассировки стека, ваш профилировщик вместо этого следует построить теневой стек с помощью [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md), и [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) обратных вызовов исключения. Теневой стек всегда является текущим, и его можно быстро скопировать в хранилище каждый раз, когда требуется моментальный снимок стека.  
+ Слишком частое использование метода моментального снимка может быстро создавать проблемы производительности. Если вы хотите часто получать трассировки стека, ваш профилировщик должен вместо этого построить теневой стек с помощью [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md), и [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) обратных вызовов исключения. Теневой стек всегда является текущим, и его можно быстро скопировать в хранилище каждый раз, когда требуется моментальный снимок стека.  
   
  Теневой стек может получать аргументы функций, возвращать значения и сведения об универсальных экземплярах. Эти сведения доступны только посредством теневого стека и могут быть получены, когда управление передается в функцию. Однако эти сведения могут оказаться недоступны позднее, во время выполнения функции.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "33461917"
 <a name="related_topics"></a>   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Настройка среды профилирования](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|В этом разделе объясняется, как можно инициализировать профилировщик, установить уведомления о событиях и профилировать службу Windows.|  
 |[Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|В этом разделе описываются неуправляемые интерфейсы, которые использует API профилирования.|  

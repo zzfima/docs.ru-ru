@@ -1,6 +1,6 @@
 ---
-title: Get-функция (Справочник по неуправляемым API)
-description: Функция Get возвращает значение указанного свойства.
+title: Получить функцию (Справочник по неуправляемым API)
+description: Функция Get получает значение указанного свойства.
 ms.date: 11/06/2017
 api_name:
 - Get
@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f837a526879f80177bc9979e1d7671edfcd8d4f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cb7475623961fe2ee5fc821c5f237f0a2acfae1a
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460152"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933337"
 ---
 # <a name="get-function"></a>Функция get
 Получает значение указанного свойства, если он существует.
@@ -48,51 +48,51 @@ HRESULT Get (
 [in] Этот параметр не используется.
 
 `ptr`  
-[in] Указатель на [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) экземпляра.
+[in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.
 
 `wszName`  
 [in] Имя свойства.
 
 `lFlags` [in] Зарезервировано. Этот параметр должен быть 0.
 
-`pVal` [out] Если функция возвращает успешно, содержит значение `wszName` свойства. `pval` Аргумент назначен правильный тип и значение квалификатора.
+`pVal` [out] Если функция возвращает успешно, содержит значение `wszName` свойства. `pval` Аргумент назначается правильный тип и значение квалификатора.
 
-`pvtType` [out] Если функция возвращает успешно, содержит [тип CIM константа](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) , указывающее тип свойства. Его значение может быть также `null`. 
+`pvtType` [out] Если функция возвращает успешно, содержит [тип CIM константа](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) , указывающее тип свойства. Его значение может также быть `null`. 
 
-`plFlavor` [out] Если функция возвращает успешно, получает информацию о происхождении свойства. Его значение может быть `null`, или один из следующих WBEM_FLAVOR_TYPE констант, определенных в *WbemCli.h* файл заголовка: 
+`plFlavor` [out] Если функция возвращает успешно, получает сведения о происхождении свойства. Его значение может быть `null`, или один из следующих WBEM_FLAVOR_TYPE констант, определенных в *WbemCli.h* заголовочный файл: 
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Свойство является свойством стандартной системы. |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Для класса: свойство наследуется от родительского класса. </br> Для экземпляра: свойство, пока наследуется от родительского класса, не был изменен в экземпляре.  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Для класса: свойство принадлежит производного класса. </br> Для экземпляра: свойство изменяется в экземпляре; то есть указано значение или квалификатор была добавлена или изменена. |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Для класса: свойство наследуется от родительского класса. </br> Для экземпляра: свойство, хотя наследуется от родительского класса, не был изменен в экземпляре.  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | Для класса: свойство принадлежит к производному классу. </br> Для экземпляра: свойство изменяется в экземпляре; то есть значение было предоставлено или квалификатор был добавлен или изменен. |
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
+Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Один или несколько параметров недопустимы. |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | Указанное свойство не найдено. |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | Указанное свойство не найден. |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | Недостаточно памяти для завершения операции. |
-|`WBEM_S_NO_ERROR` | 0 | Успешный вызов функции.  |
+|`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
   
 ## <a name="remarks"></a>Примечания
 
-Эта функция создает оболочку для вызова [IWbemClassObject::Get](https://msdn.microsoft.com/library/aa391442(v=vs.85).aspx) метод.
+Эта функция создает оболочку для вызова [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get) метод.
 
 `Get` Функция также может возвращать свойства системы.
 
-`pVal` Аргумент назначен правильный тип и значение для квалификатора и COM [VariantInit](https://msdn.microsoft.com/library/ms221402(v=vs.85).aspx) функции
+`pVal` Аргумент назначается правильный тип и значение для квалификатора и COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit) функции
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
-[WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)
+[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

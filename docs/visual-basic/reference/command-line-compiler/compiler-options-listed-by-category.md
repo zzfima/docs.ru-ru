@@ -7,14 +7,14 @@ ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 13aeab52cfd43aa8dfd7fda69e2eb9be798473e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655828"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932171"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Параметры компилятора Visual Basic, упорядоченные по категориям
-Компилятор командной строки Visual Basic предоставляется в качестве альтернативы компилятору в среде разработки Visual Studio (IDE). Ниже приведен список параметров компилятора командной строки Visual Basic, отсортированных по функциональной категории.  
+Компилятор командной строки Visual Basic предоставляется в качестве альтернативы компиляции программ из Интегрированной среды разработки Visual Studio. Ниже приведен список параметров компилятора командной строки Visual Basic, отсортированных по функциональной категории.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -43,8 +43,8 @@ ms.locfileid: "33655828"
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Указывает компилятору на необходимость вывода сборки, чье двоичное содержимое идентично в разных компиляциях, если входные данные идентичны.|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Задает для компилятора целевой объект [!INCLUDE[Compact](~/includes/compact-md.md)].|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Задает выходной файл.|  
-|[/refonly](refonly-compiler-option.md)|Выводит ссылочную сборку.|
-|[/refout](refout-compiler-option.md)|Задает выходной путь сборки ссылки.|
+|[/refonly](refonly-compiler-option.md)|Выводит только базовая сборка.|
+|[/refout](refout-compiler-option.md)|Указывает выходной путь для ссылочной сборки.|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Задает формат выходного файла.|  
   
 ## <a name="net-assemblies"></a>Сборки .NET  
@@ -56,7 +56,7 @@ ms.locfileid: "33655828"
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Импортирует пространство имен из указанной сборки.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Указывает имя контейнера для пары ключей, чтобы задать для сборки строгое имя.|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|Указывает файл, содержащий ключ или пару ключей, чтобы задать для сборки строгое имя.|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Указывает расположение ссылок на сборки с [-ссылка](../../../visual-basic/reference/command-line-compiler/reference.md) параметр.|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|Указывает расположение сборок, на который указывает [-ссылка](../../../visual-basic/reference/command-line-compiler/reference.md) параметр.|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Импортирует метаданные из сборки.|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|Указывает имя сборки, частью которого будет данный модуль.|  
 |`-analyzer`|Запускает анализаторы из этой сборки (краткая форма: -a)|  

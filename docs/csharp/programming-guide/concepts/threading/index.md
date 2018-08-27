@@ -2,12 +2,12 @@
 title: Работа с потоками (C#)
 ms.date: 07/20/2015
 ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
-ms.openlocfilehash: f9ba0793876f38b3ada2f65c4594562ea1a66983
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 35f0ee3bfd67104d9eaab7c4dde7e35a28a374c5
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/27/2018
-ms.locfileid: "39296186"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934705"
 ---
 # <a name="threading-c"></a>Работа с потоками (C#)
 Потоки позволяют программе на C# осуществлять параллельную обработку, то есть вы можете выполнять несколько операций одновременно. Например, потоки можно использовать для отслеживания пользовательского ввода, выполнения фоновых задач и одновременной обработки нескольких потоков ввода.  
@@ -37,8 +37,5 @@ ms.locfileid: "39296186"
   
 |Заголовок|Описание:|  
 |-----------|-----------------|  
-|[Многопоточные приложения(C#)](../../../../csharp/programming-guide/concepts/threading/multithreaded-applications.md)|Описание создания и использования потоков.|  
 |[Синхронизация потоков (C#)](../../../../csharp/programming-guide/concepts/threading/thread-synchronization.md)|Описание управления взаимодействием потоков.|  
-|[Группировка потоков в пул (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|Описание использования пула рабочих потоков, управляемых системой.|  
-|[Практическое руководство. Использование пула потоков (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Демонстрация синхронизированного использования нескольких потоков в пуле.|  
 |[Работа с потоками](../../../../../docs/standard/threading/index.md)|Описание реализации работы с потоками на платформе .NET Framework.|

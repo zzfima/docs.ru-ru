@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - implicit keyword [C#]
 ms.assetid: 34db590e-eb3a-4f11-88d0-ffb3cd753dab
-ms.openlocfilehash: c731799fd51397b2bbbb190efcec63321ebae940
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 70379136fd4b14403eac919ac15590250b17b416
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243739"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932735"
 ---
 # <a name="implicit-c-reference"></a>implicit (Справочник по C#)
 
@@ -30,9 +30,9 @@ ms.locfileid: "39243739"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по C#](../index.md)  
-[Руководство по программированию на C#](../../programming-guide/index.md)  
-[Ключевые слова в C#](index.md)  
-[explicit](explicit.md)  
-[operator (справочник по C#)](operator.md)  
-[Практическое руководство. Реализация определенных пользователем преобразований между структурами](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
+- [Справочник по C#](../index.md)  
+- [Руководство по программированию на C#](../../programming-guide/index.md)  
+- [Ключевые слова в C#](index.md)  
+- [explicit](explicit.md)  
+- [operator (справочник по C#)](operator.md)  
+- [Практическое руководство. Реализация определенных пользователем преобразований между структурами](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
