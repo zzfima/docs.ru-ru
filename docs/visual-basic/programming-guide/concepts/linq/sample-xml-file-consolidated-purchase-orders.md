@@ -3,11 +3,11 @@ title: 'Пример XML-файла: Объединенные Orders3 покуп
 ms.date: 07/20/2015
 ms.assetid: 7203da90-a514-415a-b978-6980e89f3e9c
 ms.openlocfilehash: 4de74aab208b3ee09a49210dd1f97c13af273789
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754089"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924815"
 ---
 # <a name="sample-xml-file-consolidated-purchase-orders"></a>Пример XML-файла. Объединенные заказы на покупку
 Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл представляет собой набор заказов на покупку в различных формах от нескольких компаний. Заказы на покупку от каждой компании располагаются в отдельном пространстве имен.  

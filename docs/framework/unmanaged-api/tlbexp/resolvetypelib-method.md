@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96a9672ee05cb1fe2573620bd1dea23e57339c93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: be2558e760be8519e528baeff438273c8871f320
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460845"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924473"
 ---
 # <a name="resolvetypelib-method"></a>Метод ResolveTypeLib
 Разрешает простое имя библиотеки типов путем возвращения ее полного пути.  
@@ -40,13 +40,13 @@ HRESULT ResolveTypeLib(
   
 #### <a name="parameters"></a>Параметры  
  `bstrSimpleName`  
- [in] Объект [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , содержащий простое имя библиотеки типов.  
+ [in] Объект [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) , содержащий простое имя библиотеки типов.  
   
  `tlbid`  
  [in] Идентификатор GUID, назначенный в библиотеку типов в реестре.  
   
  `lcid`  
- [in] Локализация идентификатор библиотеки типов.  
+ [in] Идентификатор локализации библиотеки типов.  
   
  `wMajorVersion`  
  [in] Основной номер версии библиотеки типов. Например, для версии *x.y*, основной номер версии — *x*.  
@@ -55,25 +55,25 @@ HRESULT ResolveTypeLib(
  [in] Дополнительный номер версии библиотеки типов. Например, для версии *x.y*, дополнительный номер версии — *y*.  
   
  `syskind`  
- [in] Объект [SYSKIND](http://msdn.microsoft.com/library/662048b2-59a8-48ca-9e4f-2f9a5306faa1) флаг, определяющий операционная среда. Общие значения: SYS_WIN32 и SYS_WIN64.  
+ [in] Объект [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind) флаг, определяющий операционной среде. Обычные значения: SYS_WIN32 и SYS_WIN64.  
   
  `pbstrResolvedTlbName`  
- [out] Указатель на [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , содержащее полный путь к библиотеке типов в `bstrSimpleName` параметра.  
+ [out] Указатель на [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) , содержащее полный путь к библиотеке типов, с именем в `bstrSimpleName` параметра.  
   
 ## <a name="remarks"></a>Примечания  
- `ResolveTypeLib` Метод вызывается методом [функция LoadTypeLibWithResolver](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) во время [Tlbexp.exe (программа экспорта библиотек типов)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) обработки.  
+ `ResolveTypeLib` Вызывается метод [функция LoadTypeLibWithResolver](../../../../docs/framework/unmanaged-api/tlbexp/loadtypelibwithresolver-function.md) во время [Tlbexp.exe (программа экспорта библиотек типов)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) обработки.  
   
- Пользовательские реализации этого интерфейса должны возвращать [BSTR](http://msdn.microsoft.com/library/1b2d7d2c-47af-4389-a6b6-b01b7e915228) , содержащее полный путь к библиотеке типов в `bstrSimpleName` параметра.  
+ Пользовательские реализации этого интерфейса должны возвращать [BSTR](https://docs.microsoft.com/previous-versions/windows/desktop/automat/bstr) , содержащее полный путь к библиотеке типов, с именем в `bstrSimpleName` параметра.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** TlbRef.idl, TlbRef.h  
   
  **Библиотека:** TlbRef.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Вспомогательные функции Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [LoadTypeLibEx](http://msdn.microsoft.com/library/56a7f9e1-810b-4a42-aa4d-691f4304f5ef)
+ [LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

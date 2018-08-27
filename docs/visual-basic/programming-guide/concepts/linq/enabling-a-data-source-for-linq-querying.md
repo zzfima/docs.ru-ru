@@ -3,11 +3,11 @@ title: Включение источника данных для LINQ Querying2
 ms.date: 07/20/2015
 ms.assetid: c412f0cf-ff0e-4993-ab3d-1b49e23f00f8
 ms.openlocfilehash: 0904d646014fa6a0525e624bc3466dee12b3cc02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643800"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911897"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>Включение источника данных для запросов LINQ
 Существуют различные способы расширения [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] для поддержки запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] к любому источнику данных. Источник данных может быть, например, структурой данных, веб-службой, файловой системой или базой данных. Шаблон [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] упрощает для клиентов осуществление запросов к источникам данных, для которых задействована поддержка запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], поскольку синтаксис и шаблон запроса не меняется. Далее перечислены способы, с помощью которых [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] может быть расширен для этих источников данных.  

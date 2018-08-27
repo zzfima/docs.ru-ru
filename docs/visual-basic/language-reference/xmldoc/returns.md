@@ -5,12 +5,12 @@ helpviewer_keywords:
 - returns XML tag
 - <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
-ms.openlocfilehash: effc55bd65ae6c54575b7931529499505a9523cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47debcef2c6ce56fda4c4a0818c8e813b41ebad1
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598369"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925022"
 ---
 # <a name="ltreturnsgt-visual-basic"></a>&lt;Возвращает&gt; (Visual Basic)
 Указывает возвращаемое значение свойства или функции.  
@@ -26,14 +26,14 @@ ms.locfileid: "33598369"
  Описание возвращаемого значения.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `<returns>` тег в комментарий для объявления метода для описания возвращаемого значения.  
+ Используйте `<returns>` тег в комментариях к объявлению метода для описания возвращаемого значения.  
   
  Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере используется `<returns>` тег объясняется, что такое `DoesRecordExist` возврата функцией.  
+ В этом примере используется `<returns>` тег, чтобы объяснить, что `DoesRecordExist` возврата функции.  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/returns_1.vb)]  
   
 ## <a name="see-also"></a>См. также  
- [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)

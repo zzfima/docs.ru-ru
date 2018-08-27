@@ -9,12 +9,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: bcf5e9c3-a236-4399-9a7f-3991eca7cf56
-ms.openlocfilehash: f17e0dc6956c5465f8269562705eb0f754f1585c
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 75f3d71e76c81a016a4e2c6fac754b91db31873e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960479"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42924881"
 ---
 # <a name="how-to-query-a-database-by-using-linq-visual-basic"></a>Практическое руководство. Выполнение запросов к базе данных с помощью LINQ (Visual Basic)
 Language-Integrated Query (LINQ) позволяет легко получить доступ к информации базы данных и выполнения запросов.  
@@ -78,6 +78,6 @@ Language-Integrated Query (LINQ) позволяет легко получить 
   
 ## <a name="see-also"></a>См. также  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Запросы](../../../../visual-basic/language-reference/queries/queries.md)  
+ [Запросы](../../../../visual-basic/language-reference/queries/index.md)  
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  [Методы DataContext (реляционный конструктор объектов)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

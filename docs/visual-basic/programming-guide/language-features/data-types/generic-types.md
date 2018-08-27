@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: f86819f9bd3cbcceb4be696852655018868f4a56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a33e058b41629a2f01f2162dadd7a5f965a82548
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655601"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925557"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Универсальные типы в Visual Basic (Visual Basic)
 *Универсальный тип* является одиночным элементом программирования, который используется для выполнения одинаковой функциональности для различных типов данных. При определении универсальных классов или процедур не нужно определять отдельную версию для каждого типа данных, для которых может потребоваться выполнение этой функциональности.  
@@ -53,7 +53,7 @@ ms.locfileid: "33655601"
   
  При определении универсального типа его можно параметризовать с помощью одного или нескольких типов данных. Это позволяет использовать код, чтобы адаптировать типы данных к его требованиям. В коде можно объявить несколько различных элементов программирования из универсального элемента, каждый из которых действует для разных наборов типов данных. Но все объявленные элементы подчиняются одинаковой логике, независимо от того, какие типы данных они используют.  
   
- Допустим, вам нужно создать и использовать класс очереди, который работает с определенным типом данных, например `String`. Можно объявить класс из <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, как показано в следующем примере.  
+ Допустим, вам нужно создать и использовать класс очереди, который работает с определенным типом данных, например `String`. Можно объявить такой класс из <xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>, как показано в следующем примере.  
   
  [!code-vb[VbVbalrDataTypes#1](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_1.vb)]  
   
@@ -74,10 +74,10 @@ ms.locfileid: "33655601"
   
  [!code-vb[VbVbalrDataTypes#4](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/generic-types_4.vb)]  
   
- Более полный пример см. в разделе [как: определение класса, можно предоставить одинаковую функциональность для различных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
+ Более полный пример, см. в разделе [как: определить класс, можно указать одинаковые функциональные возможности для различных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md).  
   
 ## <a name="eligible-programming-elements"></a>Допустимые элементы программирования  
- Можно определять и использовать универсальные классы, структуры, интерфейсы, процедуры и делегаты. Обратите внимание, что [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] определяет несколько универсальных классов, структур и интерфейсов, которые представляют собой часто используемые универсальные элементы. <xref:System.Collections.Generic?displayProperty=nameWithType> Пространство имен предоставляет словари, списки, очереди и стеки. Перед определением собственного универсального элемента, если он уже находится в разделе <xref:System.Collections.Generic?displayProperty=nameWithType>.  
+ Можно определять и использовать универсальные классы, структуры, интерфейсы, процедуры и делегаты. Обратите внимание, что [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] определяет несколько универсальных классов, структур и интерфейсов, которые представляют собой часто используемые универсальные элементы. <xref:System.Collections.Generic?displayProperty=nameWithType> Пространство имен предоставляет словари, списки, очереди и стеки. Перед определением собственного универсального элемента, проверьте, если он уже находится в <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
  Процедуры не являются типами, но можно определять и использовать универсальные процедуры. См. раздел [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md).  
   
@@ -151,9 +151,9 @@ ms.locfileid: "33655601"
  [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
  [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
  [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)  
  [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
  [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
  [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
