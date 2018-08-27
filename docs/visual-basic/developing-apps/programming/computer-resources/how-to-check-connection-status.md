@@ -8,25 +8,25 @@ helpviewer_keywords:
 - connection status [Visual Basic]
 ms.assetid: 4d9ee8ab-9a6f-4279-ace4-b75afc976a74
 ms.openlocfilehash: 4a6cb67474d03ada5e0a73d94f65da7a381c44a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582468"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911945"
 ---
-# <a name="how-to-check-connection-status-in-visual-basic"></a><span data-ttu-id="6242a-102">Практическое руководство. Проверка состояния подключения в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="6242a-102">How to: Check Connection Status in Visual Basic</span></span>
-<span data-ttu-id="6242a-103">Свойство <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> можно использовать, чтобы проверить наличие на компьютере подключения к действующей сети или Интернету.</span><span class="sxs-lookup"><span data-stu-id="6242a-103">The <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> property can be used to determine whether the computer has a working network or Internet connection.</span></span>  
+# <a name="how-to-check-connection-status-in-visual-basic"></a><span data-ttu-id="c15eb-102">Практическое руководство. Проверка состояния подключения в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="c15eb-102">How to: Check Connection Status in Visual Basic</span></span>
+<span data-ttu-id="c15eb-103">Свойство <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> можно использовать, чтобы проверить наличие на компьютере подключения к действующей сети или Интернету.</span><span class="sxs-lookup"><span data-stu-id="c15eb-103">The <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable> property can be used to determine whether the computer has a working network or Internet connection.</span></span>  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-check-whether-a-computer-has-a-working-connection"></a><span data-ttu-id="6242a-104">Проверка наличия на компьютере рабочего подключения</span><span class="sxs-lookup"><span data-stu-id="6242a-104">To check whether a computer has a working connection</span></span>  
+### <a name="to-check-whether-a-computer-has-a-working-connection"></a><span data-ttu-id="c15eb-104">Проверка наличия на компьютере рабочего подключения</span><span class="sxs-lookup"><span data-stu-id="c15eb-104">To check whether a computer has a working connection</span></span>  
   
--   <span data-ttu-id="6242a-105">Определите, имеет ли свойство `IsAvailable` значение `True` или `False`.</span><span class="sxs-lookup"><span data-stu-id="6242a-105">Determine whether the `IsAvailable` property is `True` or `False`.</span></span> <span data-ttu-id="6242a-106">Следующий код проверяет состояние свойства и сообщает его:</span><span class="sxs-lookup"><span data-stu-id="6242a-106">The following code checks the property's status and reports it:</span></span>  
+-   <span data-ttu-id="c15eb-105">Определите, имеет ли свойство `IsAvailable` значение `True` или `False`.</span><span class="sxs-lookup"><span data-stu-id="c15eb-105">Determine whether the `IsAvailable` property is `True` or `False`.</span></span> <span data-ttu-id="c15eb-106">Следующий код проверяет состояние свойства и сообщает его:</span><span class="sxs-lookup"><span data-stu-id="c15eb-106">The following code checks the property's status and reports it:</span></span>  
   
      [!code-vb[VbResourceTasks#3](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-check-connection-status_1.vb)]  
   
-     <span data-ttu-id="6242a-107">Этот пример кода также доступен в качестве фрагмента кода IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="6242a-107">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="6242a-108">В средстве выбора фрагмента кода он расположен в разделе **Связь и сеть**.</span><span class="sxs-lookup"><span data-stu-id="6242a-108">In the code snippet picker, it is located in **Connectivity and Networking**.</span></span> <span data-ttu-id="6242a-109">Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).</span><span class="sxs-lookup"><span data-stu-id="6242a-109">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
+     <span data-ttu-id="c15eb-107">Этот пример кода также доступен в качестве фрагмента кода IntelliSense.</span><span class="sxs-lookup"><span data-stu-id="c15eb-107">This code example is also available as an IntelliSense code snippet.</span></span> <span data-ttu-id="c15eb-108">В средстве выбора фрагмента кода он расположен в разделе **Связь и сеть**.</span><span class="sxs-lookup"><span data-stu-id="c15eb-108">In the code snippet picker, it is located in **Connectivity and Networking**.</span></span> <span data-ttu-id="c15eb-109">Дополнительные сведения см. в статье [Фрагменты кода](/visualstudio/ide/code-snippets).</span><span class="sxs-lookup"><span data-stu-id="c15eb-109">For more information, see [Code Snippets](/visualstudio/ide/code-snippets).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6242a-110">См. также</span><span class="sxs-lookup"><span data-stu-id="6242a-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c15eb-110">См. также</span><span class="sxs-lookup"><span data-stu-id="c15eb-110">See Also</span></span>  
  <xref:Microsoft.VisualBasic.Devices.Network?displayProperty=nameWithType>  
  <xref:Microsoft.VisualBasic.Devices.Network.IsAvailable>

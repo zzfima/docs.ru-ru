@@ -3,20 +3,20 @@ title: Соединение с помощью составных ключей (L
 description: Узнайте, как выполнять соединение с помощью составных ключей в LINQ.
 ms.date: 12/1/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
-ms.openlocfilehash: dd3f5e949b5c1bc6abc592dc135e73a91be801e9
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: ae37d03f996f0b0cc184a86663f16d62e6c29c69
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404032"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932338"
 ---
-# <a name="join-by-using-composite-keys"></a><span data-ttu-id="d8bd6-103">Соединение с помощью составных ключей</span><span class="sxs-lookup"><span data-stu-id="d8bd6-103">Join by using composite keys</span></span>
+# <a name="join-by-using-composite-keys"></a><span data-ttu-id="1995e-103">Соединение с помощью составных ключей</span><span class="sxs-lookup"><span data-stu-id="1995e-103">Join by using composite keys</span></span>
 
-<span data-ttu-id="d8bd6-104">В этом примере показано, как выполнить операции соединения, в которых требуется использовать более одного ключа для определения соответствия.</span><span class="sxs-lookup"><span data-stu-id="d8bd6-104">This example shows how to perform join operations in which you want to use more than one key to define a match.</span></span> <span data-ttu-id="d8bd6-105">Для этих целей используется составной ключ.</span><span class="sxs-lookup"><span data-stu-id="d8bd6-105">This is accomplished by using a composite key.</span></span> <span data-ttu-id="d8bd6-106">Составной ключ создается как анонимный тип или именованный тип со значениями, которые нужно сравнить.</span><span class="sxs-lookup"><span data-stu-id="d8bd6-106">You create a composite key as an anonymous type or named typed with the values that you want to compare.</span></span> <span data-ttu-id="d8bd6-107">Если переменная запроса будет передаваться за пределы метода, необходимо использовать именованный тип, который переопределяет <xref:System.Object.Equals%2A> и <xref:System.Object.GetHashCode%2A> для ключа.</span><span class="sxs-lookup"><span data-stu-id="d8bd6-107">If the query variable will be passed across method boundaries, use a named type that overrides <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> for the key.</span></span> <span data-ttu-id="d8bd6-108">Имена свойств и порядок, в котором они возникают, должны совпадать в каждом ключе.</span><span class="sxs-lookup"><span data-stu-id="d8bd6-108">The names of the properties, and the order in which they occur, must be identical in each key.</span></span>
+<span data-ttu-id="1995e-104">В этом примере показано, как выполнить операции соединения, в которых требуется использовать более одного ключа для определения соответствия.</span><span class="sxs-lookup"><span data-stu-id="1995e-104">This example shows how to perform join operations in which you want to use more than one key to define a match.</span></span> <span data-ttu-id="1995e-105">Для этих целей используется составной ключ.</span><span class="sxs-lookup"><span data-stu-id="1995e-105">This is accomplished by using a composite key.</span></span> <span data-ttu-id="1995e-106">Составной ключ создается как анонимный тип или именованный тип со значениями, которые нужно сравнить.</span><span class="sxs-lookup"><span data-stu-id="1995e-106">You create a composite key as an anonymous type or named typed with the values that you want to compare.</span></span> <span data-ttu-id="1995e-107">Если переменная запроса будет передаваться за пределы метода, необходимо использовать именованный тип, который переопределяет <xref:System.Object.Equals%2A> и <xref:System.Object.GetHashCode%2A> для ключа.</span><span class="sxs-lookup"><span data-stu-id="1995e-107">If the query variable will be passed across method boundaries, use a named type that overrides <xref:System.Object.Equals%2A> and <xref:System.Object.GetHashCode%2A> for the key.</span></span> <span data-ttu-id="1995e-108">Имена свойств и порядок, в котором они возникают, должны совпадать в каждом ключе.</span><span class="sxs-lookup"><span data-stu-id="1995e-108">The names of the properties, and the order in which they occur, must be identical in each key.</span></span>
 
-## <a name="example"></a><span data-ttu-id="d8bd6-109">Пример</span><span class="sxs-lookup"><span data-stu-id="d8bd6-109">Example</span></span>
+## <a name="example"></a><span data-ttu-id="1995e-109">Пример</span><span class="sxs-lookup"><span data-stu-id="1995e-109">Example</span></span>
 
-<span data-ttu-id="d8bd6-110">В следующем примере демонстрируется использование составного ключа для объединения данных из трех таблиц:</span><span class="sxs-lookup"><span data-stu-id="d8bd6-110">The following example demonstrates how to use a composite key to join data from three tables:</span></span>
+<span data-ttu-id="1995e-110">В следующем примере демонстрируется использование составного ключа для объединения данных из трех таблиц:</span><span class="sxs-lookup"><span data-stu-id="1995e-110">The following example demonstrates how to use a composite key to join data from three tables:</span></span>
 
 ```csharp
 var query = from o in db.Orders
@@ -27,17 +27,17 @@ var query = from o in db.Orders
         select new {o.OrderID, p.ProductID, d.UnitPrice};
 ```
 
-<span data-ttu-id="d8bd6-111">Определение типа в составных ключах зависит от имен свойств в ключах и порядка, в котором они возникают.</span><span class="sxs-lookup"><span data-stu-id="d8bd6-111">Type inference on composite keys depends on the names of the properties in the keys, and the order in which they occur.</span></span> <span data-ttu-id="d8bd6-112">Если свойства в исходных последовательностях имеют другие имена, в ключах им необходимо присвоить новые имена.</span><span class="sxs-lookup"><span data-stu-id="d8bd6-112">If the properties in the source sequences don't have the same names, you must assign new names in the keys.</span></span> <span data-ttu-id="d8bd6-113">Например, если в таблицах `Orders` и `OrderDetails` используются разные имена столбцов, можно создать составные ключи, назначив одинаковые имена в анонимных типах:</span><span class="sxs-lookup"><span data-stu-id="d8bd6-113">For example, if the `Orders` table and `OrderDetails` table each used different names for their columns, you could create composite keys by assigning identical names in the anonymous types:</span></span>
+<span data-ttu-id="1995e-111">Определение типа в составных ключах зависит от имен свойств в ключах и порядка, в котором они возникают.</span><span class="sxs-lookup"><span data-stu-id="1995e-111">Type inference on composite keys depends on the names of the properties in the keys, and the order in which they occur.</span></span> <span data-ttu-id="1995e-112">Если свойства в исходных последовательностях имеют другие имена, в ключах им необходимо присвоить новые имена.</span><span class="sxs-lookup"><span data-stu-id="1995e-112">If the properties in the source sequences don't have the same names, you must assign new names in the keys.</span></span> <span data-ttu-id="1995e-113">Например, если в таблицах `Orders` и `OrderDetails` используются разные имена столбцов, можно создать составные ключи, назначив одинаковые имена в анонимных типах:</span><span class="sxs-lookup"><span data-stu-id="1995e-113">For example, if the `Orders` table and `OrderDetails` table each used different names for their columns, you could create composite keys by assigning identical names in the anonymous types:</span></span>
 
 ```csharp
 join...on new {Name = o.CustomerName, ID = o.CustID} equals
     new {Name = d.CustName, ID = d.CustID }
 ```
 
-<span data-ttu-id="d8bd6-114">Составные ключи можно также использовать в предложении `group`.</span><span class="sxs-lookup"><span data-stu-id="d8bd6-114">Composite keys can be also used in a `group` clause.</span></span>
+<span data-ttu-id="1995e-114">Составные ключи можно также использовать в предложении `group`.</span><span class="sxs-lookup"><span data-stu-id="1995e-114">Composite keys can be also used in a `group` clause.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="d8bd6-115">См. также</span><span class="sxs-lookup"><span data-stu-id="d8bd6-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1995e-115">См. также</span><span class="sxs-lookup"><span data-stu-id="1995e-115">See also</span></span>
 
-[<span data-ttu-id="d8bd6-116">LINQ</span><span class="sxs-lookup"><span data-stu-id="d8bd6-116">Language Integrated Query (LINQ)</span></span>](index.md)  
-[<span data-ttu-id="d8bd6-117">предложение join</span><span class="sxs-lookup"><span data-stu-id="d8bd6-117">join clause</span></span>](../language-reference/keywords/join-clause.md)  
-[<span data-ttu-id="d8bd6-118">предложение group</span><span class="sxs-lookup"><span data-stu-id="d8bd6-118">group clause</span></span>](../language-reference/keywords/group-clause.md)  
+- [<span data-ttu-id="1995e-116">LINQ</span><span class="sxs-lookup"><span data-stu-id="1995e-116">Language Integrated Query (LINQ)</span></span>](index.md)  
+- [<span data-ttu-id="1995e-117">предложение join</span><span class="sxs-lookup"><span data-stu-id="1995e-117">join clause</span></span>](../language-reference/keywords/join-clause.md)  
+- [<span data-ttu-id="1995e-118">предложение group</span><span class="sxs-lookup"><span data-stu-id="1995e-118">group clause</span></span>](../language-reference/keywords/group-clause.md)  

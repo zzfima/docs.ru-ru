@@ -16,18 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0e96ba458edfe7261fd5857b7bcb8486f4a6636
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ca4cc9fb65d1a4bd8713f969bbda5551ce5a2e2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929786"
 ---
-# <a name="qualifiersetdelete-function"></a><span data-ttu-id="8975e-103">Функция QualifierSet_Delete</span><span class="sxs-lookup"><span data-stu-id="8975e-103">QualifierSet_Delete function</span></span>
-<span data-ttu-id="8975e-104">Удаляет указанный квалификатор по имени.</span><span class="sxs-lookup"><span data-stu-id="8975e-104">Deletes a specified qualifier by name.</span></span>  
+# <a name="qualifiersetdelete-function"></a><span data-ttu-id="0f863-103">Функция QualifierSet_Delete</span><span class="sxs-lookup"><span data-stu-id="0f863-103">QualifierSet_Delete function</span></span>
+<span data-ttu-id="0f863-104">Удаление заданного квалификатора по имени.</span><span class="sxs-lookup"><span data-stu-id="0f863-104">Deletes a specified qualifier by name.</span></span>  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="8975e-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8975e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0f863-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0f863-105">Syntax</span></span>  
   
 ```  
 HRESULT QualifierSet_Delete (
@@ -37,41 +38,41 @@ HRESULT QualifierSet_Delete (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="8975e-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="8975e-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="0f863-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="0f863-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="8975e-107">[in] Этот параметр не используется.</span><span class="sxs-lookup"><span data-stu-id="8975e-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="0f863-107">[in] Этот параметр не используется.</span><span class="sxs-lookup"><span data-stu-id="0f863-107">[in] This parameter is unused.</span></span>
 
 `ptr`   
-<span data-ttu-id="8975e-108">[in] Указатель на [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) экземпляра.</span><span class="sxs-lookup"><span data-stu-id="8975e-108">[in] A pointer to an [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) instance.</span></span>
+<span data-ttu-id="0f863-108">[in] Указатель на [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) экземпляра.</span><span class="sxs-lookup"><span data-stu-id="0f863-108">[in] A pointer to an [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) instance.</span></span>
 
 `wszName`   
-<span data-ttu-id="8975e-109">[in] Имя квалификатора, которое необходимо удалить.</span><span class="sxs-lookup"><span data-stu-id="8975e-109">[in] The name of the qualifier to delete.</span></span>
+<span data-ttu-id="0f863-109">[in] Имя квалификатора, которое необходимо удалить.</span><span class="sxs-lookup"><span data-stu-id="0f863-109">[in] The name of the qualifier to delete.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="8975e-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="8975e-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="0f863-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="0f863-110">Return value</span></span>
 
-<span data-ttu-id="8975e-111">Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:</span><span class="sxs-lookup"><span data-stu-id="8975e-111">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="0f863-111">Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:</span><span class="sxs-lookup"><span data-stu-id="0f863-111">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="8975e-112">Константа</span><span class="sxs-lookup"><span data-stu-id="8975e-112">Constant</span></span>  |<span data-ttu-id="8975e-113">Значение</span><span class="sxs-lookup"><span data-stu-id="8975e-113">Value</span></span>  |<span data-ttu-id="8975e-114">Описание</span><span class="sxs-lookup"><span data-stu-id="8975e-114">Description</span></span>  |
+|<span data-ttu-id="0f863-112">Константа</span><span class="sxs-lookup"><span data-stu-id="0f863-112">Constant</span></span>  |<span data-ttu-id="0f863-113">Значение</span><span class="sxs-lookup"><span data-stu-id="0f863-113">Value</span></span>  |<span data-ttu-id="0f863-114">Описание:</span><span class="sxs-lookup"><span data-stu-id="0f863-114">Description</span></span>  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="8975e-115">0x80041008</span><span class="sxs-lookup"><span data-stu-id="8975e-115">0x80041008</span></span> | <span data-ttu-id="8975e-116">`wszName` Недопустимый параметр.</span><span class="sxs-lookup"><span data-stu-id="8975e-116">The `wszName` parameter is not valid.</span></span> |
-|`WBEM_E_INVALID_OPERATION` | <span data-ttu-id="8975e-117">0x80041016</span><span class="sxs-lookup"><span data-stu-id="8975e-117">0x80041016</span></span> | <span data-ttu-id="8975e-118">Удаление этого квалификатор, недопустимо.</span><span class="sxs-lookup"><span data-stu-id="8975e-118">Deleting this qualifier is illegal.</span></span> |
-|`WBEM_E_NOT_FOUND` | <span data-ttu-id="8975e-119">0x80041002</span><span class="sxs-lookup"><span data-stu-id="8975e-119">0x80041002</span></span> | <span data-ttu-id="8975e-120">Не найден указанный квалификатор.</span><span class="sxs-lookup"><span data-stu-id="8975e-120">The specified qualifier was not found.</span></span> |
-|`WBEM_S_NO_ERROR` | <span data-ttu-id="8975e-121">0</span><span class="sxs-lookup"><span data-stu-id="8975e-121">0</span></span> | <span data-ttu-id="8975e-122">Успешный вызов функции.</span><span class="sxs-lookup"><span data-stu-id="8975e-122">The function call was successful.</span></span>  |
-| `WBEM_S_RESET_TO_DEFAULT` | <span data-ttu-id="8975e-123">0x40002</span><span class="sxs-lookup"><span data-stu-id="8975e-123">0x40002</span></span> | <span data-ttu-id="8975e-124">Переопределение локальной был удален и исходный квалификатор из родительского объекта возобновил области.</span><span class="sxs-lookup"><span data-stu-id="8975e-124">The local override was deleted and the original qualifier from the parent object has resumed scope.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="0f863-115">0x80041008</span><span class="sxs-lookup"><span data-stu-id="0f863-115">0x80041008</span></span> | <span data-ttu-id="0f863-116">`wszName` Недопустимый параметр.</span><span class="sxs-lookup"><span data-stu-id="0f863-116">The `wszName` parameter is not valid.</span></span> |
+|`WBEM_E_INVALID_OPERATION` | <span data-ttu-id="0f863-117">0x80041016</span><span class="sxs-lookup"><span data-stu-id="0f863-117">0x80041016</span></span> | <span data-ttu-id="0f863-118">Удаление этот квалификатор является недопустимым.</span><span class="sxs-lookup"><span data-stu-id="0f863-118">Deleting this qualifier is illegal.</span></span> |
+|`WBEM_E_NOT_FOUND` | <span data-ttu-id="0f863-119">0x80041002</span><span class="sxs-lookup"><span data-stu-id="0f863-119">0x80041002</span></span> | <span data-ttu-id="0f863-120">Не удалось найти заданного квалификатора.</span><span class="sxs-lookup"><span data-stu-id="0f863-120">The specified qualifier was not found.</span></span> |
+|`WBEM_S_NO_ERROR` | <span data-ttu-id="0f863-121">0</span><span class="sxs-lookup"><span data-stu-id="0f863-121">0</span></span> | <span data-ttu-id="0f863-122">Вызов функции был успешным.</span><span class="sxs-lookup"><span data-stu-id="0f863-122">The function call was successful.</span></span>  |
+| `WBEM_S_RESET_TO_DEFAULT` | <span data-ttu-id="0f863-123">0x40002</span><span class="sxs-lookup"><span data-stu-id="0f863-123">0x40002</span></span> | <span data-ttu-id="0f863-124">Локальное переопределение был удален, и исходный квалификатор из родительского объекта была возобновлена области.</span><span class="sxs-lookup"><span data-stu-id="0f863-124">The local override was deleted and the original qualifier from the parent object has resumed scope.</span></span> |
 
-## <a name="remarks"></a><span data-ttu-id="8975e-125">Примечания</span><span class="sxs-lookup"><span data-stu-id="8975e-125">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="0f863-125">Примечания</span><span class="sxs-lookup"><span data-stu-id="0f863-125">Remarks</span></span>
 
-<span data-ttu-id="8975e-126">Эта функция создает оболочку для вызова [IWbemQualifierSet::Delete](https://msdn.microsoft.com/library/aa391864(v=vs.85).aspx) метод.</span><span class="sxs-lookup"><span data-stu-id="8975e-126">This function wraps a call to the [IWbemQualifierSet::Delete](https://msdn.microsoft.com/library/aa391864(v=vs.85).aspx) method.</span></span>
+<span data-ttu-id="0f863-126">Эта функция создает оболочку для вызова [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) метод.</span><span class="sxs-lookup"><span data-stu-id="0f863-126">This function wraps a call to the [IWbemQualifierSet::Delete](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-delete) method.</span></span>
 
-<span data-ttu-id="8975e-127">Из-за правила распространения квалификатор квалификатор определенного может были наследуется от другого объекта и просто переопределен в текущего класса или экземпляра.</span><span class="sxs-lookup"><span data-stu-id="8975e-127">Due to qualifier propagation rules, a particular qualifier may have been inherited from another object and merely overridden in the current class or instance.</span></span> <span data-ttu-id="8975e-128">В этом случае `QualifierSet_Delete` метод сбрасывает квалификатор наследуемые исходное значение.</span><span class="sxs-lookup"><span data-stu-id="8975e-128">In this case, the `QualifierSet_Delete` method resets the qualifier to its original inherited value.</span></span> <span data-ttu-id="8975e-129">В этом случае, функция возвращает код состояния `WBEM_S_RESET_TO_DEFAULT`.</span><span class="sxs-lookup"><span data-stu-id="8975e-129">The function in this case returns the status code `WBEM_S_RESET_TO_DEFAULT`.</span></span>
+<span data-ttu-id="0f863-127">Из-за правила распространения квалификатор определенного квалификатор может были унаследованную от другого объекта и просто переопределен в текущем классе или экземпляре.</span><span class="sxs-lookup"><span data-stu-id="0f863-127">Due to qualifier propagation rules, a particular qualifier may have been inherited from another object and merely overridden in the current class or instance.</span></span> <span data-ttu-id="0f863-128">В этом случае `QualifierSet_Delete` метод сбрасывает квалификатор унаследованные исходное значение.</span><span class="sxs-lookup"><span data-stu-id="0f863-128">In this case, the `QualifierSet_Delete` method resets the qualifier to its original inherited value.</span></span> <span data-ttu-id="0f863-129">В этом случае, функция возвращает код состояния `WBEM_S_RESET_TO_DEFAULT`.</span><span class="sxs-lookup"><span data-stu-id="0f863-129">The function in this case returns the status code `WBEM_S_RESET_TO_DEFAULT`.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="8975e-130">Требования</span><span class="sxs-lookup"><span data-stu-id="8975e-130">Requirements</span></span>  
- <span data-ttu-id="8975e-131">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8975e-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0f863-130">Требования</span><span class="sxs-lookup"><span data-stu-id="0f863-130">Requirements</span></span>  
+ <span data-ttu-id="0f863-131">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0f863-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8975e-132">**Заголовок:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="8975e-132">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="0f863-132">**Заголовок:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="0f863-132">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="8975e-133">**Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="8975e-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="0f863-133">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="0f863-133">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8975e-134">См. также</span><span class="sxs-lookup"><span data-stu-id="8975e-134">See also</span></span>  
-[<span data-ttu-id="8975e-135">WMI и счетчиков производительности (Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="8975e-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="0f863-134">См. также</span><span class="sxs-lookup"><span data-stu-id="0f863-134">See also</span></span>  
+[<span data-ttu-id="0f863-135">WMI и счетчики производительности (Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="0f863-135">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

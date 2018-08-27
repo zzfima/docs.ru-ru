@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 9bef5d076d9ab84aa15e2cdec2d176db8d1ac82b
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 853f9c9ebe36345a897337d4e793d3c88059e068
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960248"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998731"
 ---
-# <a name="public-c-reference"></a><span data-ttu-id="94487-102">public (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="94487-102">public (C# Reference)</span></span>
-<span data-ttu-id="94487-103">Ключевое слово `public` является модификатором доступа для типов и членов типов.</span><span class="sxs-lookup"><span data-stu-id="94487-103">The `public` keyword is an access modifier for types and type members.</span></span> <span data-ttu-id="94487-104">Общий доступ является уровнем доступа с максимальными правами.</span><span class="sxs-lookup"><span data-stu-id="94487-104">Public access is the most permissive access level.</span></span> <span data-ttu-id="94487-105">Ограничений доступа к общим членам не существует, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="94487-105">There are no restrictions on accessing public members, as in this example:</span></span>  
+# <a name="public-c-reference"></a><span data-ttu-id="c0d2b-102">public (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="c0d2b-102">public (C# Reference)</span></span>
+<span data-ttu-id="c0d2b-103">Ключевое слово `public` является модификатором доступа для типов и членов типов.</span><span class="sxs-lookup"><span data-stu-id="c0d2b-103">The `public` keyword is an access modifier for types and type members.</span></span> <span data-ttu-id="c0d2b-104">Общий доступ является уровнем доступа с максимальными правами.</span><span class="sxs-lookup"><span data-stu-id="c0d2b-104">Public access is the most permissive access level.</span></span> <span data-ttu-id="c0d2b-105">Ограничений доступа к общим членам не существует, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="c0d2b-105">There are no restrictions on accessing public members, as in this example:</span></span>  
   
 ```csharp  
 class SampleClass  
@@ -24,28 +24,29 @@ class SampleClass
 }  
 ```  
   
- <span data-ttu-id="94487-106">Дополнительные сведения см. в разделах [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) и [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md).</span><span class="sxs-lookup"><span data-stu-id="94487-106">See [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) and [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md) for more information.</span></span>  
+ <span data-ttu-id="c0d2b-106">Дополнительные сведения см. в разделах [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) и [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md).</span><span class="sxs-lookup"><span data-stu-id="c0d2b-106">See [Access Modifiers](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md) and [Accessibility Levels](../../../csharp/language-reference/keywords/accessibility-levels.md) for more information.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="94487-107">Пример</span><span class="sxs-lookup"><span data-stu-id="94487-107">Example</span></span>  
- <span data-ttu-id="94487-108">В следующем примере объявляются два класса: `PointTest` и `MainClass`.</span><span class="sxs-lookup"><span data-stu-id="94487-108">In the following example, two classes are declared, `PointTest` and `MainClass`.</span></span> <span data-ttu-id="94487-109">Доступ к открытым членам `x` и `y` класса `PointTest` осуществляется непосредственно из класса `MainClass`.</span><span class="sxs-lookup"><span data-stu-id="94487-109">The public members `x` and `y` of `PointTest` are accessed directly from `MainClass`.</span></span>  
+## <a name="example"></a><span data-ttu-id="c0d2b-107">Пример</span><span class="sxs-lookup"><span data-stu-id="c0d2b-107">Example</span></span>  
+ <span data-ttu-id="c0d2b-108">В следующем примере объявляются два класса: `PointTest` и `MainClass`.</span><span class="sxs-lookup"><span data-stu-id="c0d2b-108">In the following example, two classes are declared, `PointTest` and `MainClass`.</span></span> <span data-ttu-id="c0d2b-109">Доступ к открытым членам `x` и `y` класса `PointTest` осуществляется непосредственно из класса `MainClass`.</span><span class="sxs-lookup"><span data-stu-id="c0d2b-109">The public members `x` and `y` of `PointTest` are accessed directly from `MainClass`.</span></span>  
   
  [!code-csharp[csrefKeywordsModifiers#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/public_1.cs)]  
   
- <span data-ttu-id="94487-110">Если уровень доступа `public` изменить на [private](../../../csharp/language-reference/keywords/private.md) или [protected](../../../csharp/language-reference/keywords/protected.md), будет выводится следующее сообщение об ошибке:</span><span class="sxs-lookup"><span data-stu-id="94487-110">If you change the `public` access level to [private](../../../csharp/language-reference/keywords/private.md) or [protected](../../../csharp/language-reference/keywords/protected.md), you will get the error message:</span></span>  
+ <span data-ttu-id="c0d2b-110">Если уровень доступа `public` изменить на [private](../../../csharp/language-reference/keywords/private.md) или [protected](../../../csharp/language-reference/keywords/protected.md), будет выводится следующее сообщение об ошибке:</span><span class="sxs-lookup"><span data-stu-id="c0d2b-110">If you change the `public` access level to [private](../../../csharp/language-reference/keywords/private.md) or [protected](../../../csharp/language-reference/keywords/protected.md), you will get the error message:</span></span>  
   
- <span data-ttu-id="94487-111">"PointTest.y" недоступен из-за его уровня защиты.</span><span class="sxs-lookup"><span data-stu-id="94487-111">'PointTest.y' is inaccessible due to its protection level.</span></span>  
+ <span data-ttu-id="c0d2b-111">"PointTest.y" недоступен из-за его уровня защиты.</span><span class="sxs-lookup"><span data-stu-id="c0d2b-111">'PointTest.y' is inaccessible due to its protection level.</span></span>  
   
-## <a name="c-language-specification"></a><span data-ttu-id="94487-112">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="94487-112">C# Language Specification</span></span>  
+## <a name="c-language-specification"></a><span data-ttu-id="c0d2b-112">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="c0d2b-112">C# Language Specification</span></span>  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="94487-113">См. также</span><span class="sxs-lookup"><span data-stu-id="94487-113">See Also</span></span>  
- [<span data-ttu-id="94487-114">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="94487-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="94487-115">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="94487-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="94487-116">Модификаторы доступа</span><span class="sxs-lookup"><span data-stu-id="94487-116">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [<span data-ttu-id="94487-117">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="94487-117">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
- [<span data-ttu-id="94487-118">Модификаторы доступа</span><span class="sxs-lookup"><span data-stu-id="94487-118">Access Modifiers</span></span>](../../../csharp/language-reference/keywords/access-modifiers.md)  
- [<span data-ttu-id="94487-119">Уровни доступности</span><span class="sxs-lookup"><span data-stu-id="94487-119">Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/accessibility-levels.md)  
- [<span data-ttu-id="94487-120">Модификаторы</span><span class="sxs-lookup"><span data-stu-id="94487-120">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
- [<span data-ttu-id="94487-121">private</span><span class="sxs-lookup"><span data-stu-id="94487-121">private</span></span>](../../../csharp/language-reference/keywords/private.md)  
- [<span data-ttu-id="94487-122">protected</span><span class="sxs-lookup"><span data-stu-id="94487-122">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)  
- [<span data-ttu-id="94487-123">internal</span><span class="sxs-lookup"><span data-stu-id="94487-123">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)
+## <a name="see-also"></a><span data-ttu-id="c0d2b-113">См. также</span><span class="sxs-lookup"><span data-stu-id="c0d2b-113">See Also</span></span>
+
+- [<span data-ttu-id="c0d2b-114">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="c0d2b-114">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="c0d2b-115">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="c0d2b-115">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="c0d2b-116">Модификаторы доступа</span><span class="sxs-lookup"><span data-stu-id="c0d2b-116">Access Modifiers</span></span>](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
+- [<span data-ttu-id="c0d2b-117">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="c0d2b-117">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="c0d2b-118">Модификаторы доступа</span><span class="sxs-lookup"><span data-stu-id="c0d2b-118">Access Modifiers</span></span>](../../../csharp/language-reference/keywords/access-modifiers.md)  
+- [<span data-ttu-id="c0d2b-119">Уровни доступности</span><span class="sxs-lookup"><span data-stu-id="c0d2b-119">Accessibility Levels</span></span>](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+- [<span data-ttu-id="c0d2b-120">Модификаторы</span><span class="sxs-lookup"><span data-stu-id="c0d2b-120">Modifiers</span></span>](../../../csharp/language-reference/keywords/modifiers.md)  
+- [<span data-ttu-id="c0d2b-121">private</span><span class="sxs-lookup"><span data-stu-id="c0d2b-121">private</span></span>](../../../csharp/language-reference/keywords/private.md)  
+- [<span data-ttu-id="c0d2b-122">protected</span><span class="sxs-lookup"><span data-stu-id="c0d2b-122">protected</span></span>](../../../csharp/language-reference/keywords/protected.md)  
+- [<span data-ttu-id="c0d2b-123">internal</span><span class="sxs-lookup"><span data-stu-id="c0d2b-123">internal</span></span>](../../../csharp/language-reference/keywords/internal.md)
