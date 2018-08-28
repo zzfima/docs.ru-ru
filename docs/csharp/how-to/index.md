@@ -2,12 +2,12 @@
 title: Статьи с практическими руководствами (руководств по языку C#)
 description: Коллекция советов и кратких конкретных примеров кода
 ms.date: 12/20/2017
-ms.openlocfilehash: 209af8858de1a791997d254f5a2ddd5dd1803bff
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549396"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999567"
 ---
 # <a name="how-to-c"></a>Практическое руководство (C#)
 
@@ -68,7 +68,7 @@ ms.locfileid: "34549396"
 - [Использование `as` и `is` для безопасного приведения к другому типу](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).
 - [Определение операторов преобразования для типов `struct`](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
 - [Определение того, допускает ли тип значения NULL](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
-- [Преобразование между типами значений, допускающие значения NULL, и типами, не допускающими значения NULL](../programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md).
+- [Преобразование между типами значений, допускающие значения NULL, и типами, не допускающими значения NULL](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
 
 ## <a name="equality-and-ordering-comparisons"></a>Упорядочение и сравнение на равенство
 
@@ -126,7 +126,7 @@ LINQ позволяет создавать код для запросов к л�
 
 - [Повышение производительности асинхронных операций с помощью `System.Threading.Tasks.Task.WhenAll`](../programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).
 - [Параллельное выполнение нескольких веб-запросов с помощью `async` и `await`](../programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md).
-- [Использование пула потоков](../programming-guide/concepts/threading/how-to-use-a-thread-pool.md).
+- [Использование пула потоков](../../standard/threading/the-managed-thread-pool.md#using-the-thread-pool).
 
 ## <a name="command-line-args-to-your-program"></a>Аргументы командной строки для программы
 
