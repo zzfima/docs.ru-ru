@@ -4,24 +4,24 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: eff87dbfad84ba5521f029064115a5fc54ee574b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: f1b88d160d6532c2a768684b55cd236417699322
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106114"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933392"
 ---
-# <a name="using-enumeration-classes-instead-of-enum-types"></a><span data-ttu-id="58b61-103">Использование классов перечисления вместо типов перечисления</span><span class="sxs-lookup"><span data-stu-id="58b61-103">Using enumeration classes instead of enum types</span></span>
+# <a name="using-enumeration-classes-instead-of-enum-types"></a><span data-ttu-id="0dac6-103">Использование классов перечисления вместо типов перечисления</span><span class="sxs-lookup"><span data-stu-id="0dac6-103">Using enumeration classes instead of enum types</span></span>
 
-<span data-ttu-id="58b61-104">[Перечисления](../../../../docs/csharp/language-reference/keywords/enum.md) (или *типы перечисления*) — это тонкая языковая оболочка вокруг целочисленного типа.</span><span class="sxs-lookup"><span data-stu-id="58b61-104">[Enumerations](../../../../docs/csharp/language-reference/keywords/enum.md) (or *enum types* for short) are a thin language wrapper around an integral type.</span></span> <span data-ttu-id="58b61-105">Лучше всего использовать их при сохранении одного значения из закрытого набора значений.</span><span class="sxs-lookup"><span data-stu-id="58b61-105">You might want to limit their use to when you are storing one value from a closed set of values.</span></span> <span data-ttu-id="58b61-106">Хорошим примером является классификация, основанная на размерах (небольшой, средний, большой).</span><span class="sxs-lookup"><span data-stu-id="58b61-106">Classification based on sizes (small, medium, large) is a good example.</span></span> <span data-ttu-id="58b61-107">Использование перечислений для потока управления или более устойчивых абстракций может быть [признаком плохого кода](http://deviq.com/code-smells/).</span><span class="sxs-lookup"><span data-stu-id="58b61-107">Using enums for control flow or more robust abstractions can be a [code smell](http://deviq.com/code-smells/).</span></span> <span data-ttu-id="58b61-108">При таком использовании код будет недолговечным, поскольку множество операторов потока управления будут проверять значения перечисления.</span><span class="sxs-lookup"><span data-stu-id="58b61-108">This type of usage leads to fragile code with many control flow statements checking values of the enum.</span></span>
+<span data-ttu-id="0dac6-104">[Перечисления](../../../../docs/csharp/language-reference/keywords/enum.md) (или *типы перечисления*) — это тонкая языковая оболочка вокруг целочисленного типа.</span><span class="sxs-lookup"><span data-stu-id="0dac6-104">[Enumerations](../../../../docs/csharp/language-reference/keywords/enum.md) (or *enum types* for short) are a thin language wrapper around an integral type.</span></span> <span data-ttu-id="0dac6-105">Лучше всего использовать их при сохранении одного значения из закрытого набора значений.</span><span class="sxs-lookup"><span data-stu-id="0dac6-105">You might want to limit their use to when you are storing one value from a closed set of values.</span></span> <span data-ttu-id="0dac6-106">Хорошим примером является классификация, основанная на размерах (небольшой, средний, большой).</span><span class="sxs-lookup"><span data-stu-id="0dac6-106">Classification based on sizes (small, medium, large) is a good example.</span></span> <span data-ttu-id="0dac6-107">Использование перечислений для потока управления или более устойчивых абстракций может быть [признаком плохого кода](http://deviq.com/code-smells/).</span><span class="sxs-lookup"><span data-stu-id="0dac6-107">Using enums for control flow or more robust abstractions can be a [code smell](http://deviq.com/code-smells/).</span></span> <span data-ttu-id="0dac6-108">При таком использовании код будет недолговечным, поскольку множество операторов потока управления будут проверять значения перечисления.</span><span class="sxs-lookup"><span data-stu-id="0dac6-108">This type of usage leads to fragile code with many control flow statements checking values of the enum.</span></span>
 
-<span data-ttu-id="58b61-109">Вместо этого можно создавать классы перечисления, позволяющие использовать широкие возможности объектно-ориентированного языка.</span><span class="sxs-lookup"><span data-stu-id="58b61-109">Instead, you can create Enumeration classes that enable all the rich features of an object-oriented language.</span></span>
+<span data-ttu-id="0dac6-109">Вместо этого можно создавать классы перечисления, позволяющие использовать широкие возможности объектно-ориентированного языка.</span><span class="sxs-lookup"><span data-stu-id="0dac6-109">Instead, you can create Enumeration classes that enable all the rich features of an object-oriented language.</span></span>
 
-<span data-ttu-id="58b61-110">Как правило, это не критично, и для простоты вы можете по-прежнему использовать обычные [типы перечисления](../../../../docs/csharp/language-reference/keywords/enum.md), если вам так удобно.</span><span class="sxs-lookup"><span data-stu-id="58b61-110">However, this isn't a critical topic and in many cases, for simplicity, you can still use regular [enum types](../../../../docs/csharp/language-reference/keywords/enum.md) if that's your preference.</span></span>
+<span data-ttu-id="0dac6-110">Как правило, это не критично, и для простоты вы можете по-прежнему использовать обычные [типы перечисления](../../../../docs/csharp/language-reference/keywords/enum.md), если вам так удобно.</span><span class="sxs-lookup"><span data-stu-id="0dac6-110">However, this isn't a critical topic and in many cases, for simplicity, you can still use regular [enum types](../../../../docs/csharp/language-reference/keywords/enum.md) if that's your preference.</span></span>
 
-## <a name="implementing-an-enumeration-base-class"></a><span data-ttu-id="58b61-111">Применение базового класса перечисления</span><span class="sxs-lookup"><span data-stu-id="58b61-111">Implementing an Enumeration base class</span></span>
+## <a name="implementing-an-enumeration-base-class"></a><span data-ttu-id="0dac6-111">Применение базового класса перечисления</span><span class="sxs-lookup"><span data-stu-id="0dac6-111">Implementing an Enumeration base class</span></span>
 
-<span data-ttu-id="58b61-112">Микрослужба для заказа в eShopOnContainers содержит образец базового класса перечисления, как показано на следующем примере:</span><span class="sxs-lookup"><span data-stu-id="58b61-112">The ordering microservice in eShopOnContainers provides a sample Enumeration base class implementation, as shown in the following example:</span></span>
+<span data-ttu-id="0dac6-112">Микрослужба для заказа в eShopOnContainers содержит образец базового класса перечисления, как показано на следующем примере:</span><span class="sxs-lookup"><span data-stu-id="0dac6-112">The ordering microservice in eShopOnContainers provides a sample Enumeration base class implementation, as shown in the following example:</span></span>
 
 ```csharp
 public abstract class Enumeration : IComparable
@@ -43,22 +43,12 @@ public abstract class Enumeration : IComparable
     {
         return Name;
     }
-
-    public static IEnumerable<T> GetAll<T>() where T : Enumeration, new()
+    
+    public static IEnumerable<T> GetAll<T>() where T : Enumeration
     {
-        var type = typeof(T);
-        var fields = type.GetTypeInfo().GetFields(BindingFlags.Public |
-            BindingFlags.Static |
-            BindingFlags.DeclaredOnly);
-        foreach (var info in fields)
-        {
-            var instance = new T();
-            var locatedValue = info.GetValue(instance) as T;
-            if (locatedValue != null)
-            {
-                yield return locatedValue;
-            }
-        }
+        var fields = typeof(T).GetFields(BindingFlags.Public | BindingFlags.Static | BindingFlags.DeclaredOnly);
+
+        return fields.Select(f => f.GetValue(null)).Cast<T>();
     }
 
     public override bool Equals(object obj)
@@ -82,55 +72,65 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-<span data-ttu-id="58b61-113">Этот класс можно использовать как тип в любой сущности или объекте значения, как в следующем классе перечисления CardType:</span><span class="sxs-lookup"><span data-stu-id="58b61-113">You can use this class as a type in any entity or value object, as for the following CardType Enumeration class:</span></span>
+<span data-ttu-id="0dac6-113">Этот класс можно использовать как тип в любой сущности или объекте значения, как в следующем классе перечисления CardType:</span><span class="sxs-lookup"><span data-stu-id="0dac6-113">You can use this class as a type in any entity or value object, as for the following CardType Enumeration class:</span></span>
 
 ```csharp
-public class CardType : Enumeration
+public abstract class CardType : Enumeration
 {
-    public static CardType Amex = new CardType(1, "Amex");
-    public static CardType Visa = new CardType(2, "Visa");
-    public static CardType MasterCard = new CardType(3, "MasterCard");
+    public static CardType Amex = new AmexCardType();
+    public static CardType Visa = new VisaCardType();
+    public static CardType MasterCard = new MasterCardType();
 
-    protected CardType() { }
-
-    public CardType(int id, string name)
+    protected CardType(int id, string name)
         : base(id, name)
     {
     }
 
-    public static IEnumerable<CardType> List()
+    private class AmexCardType : CardType
     {
-        return new[] { Amex, Visa, MasterCard };
+        public AmexCardType(): base(1, "Amex")
+        { }
     }
-    // Other util methods
+    
+    private class VisaCardType : CardType
+    {
+        public VisaCardType(): base(2, "Visa")
+        { }
+    }
+    
+    private class MasterCardType : CardType
+    {
+        public MasterCardType(): base(3, "MasterCard")
+        { }
+    }
 }
 ```
 
-## <a name="additional-resources"></a><span data-ttu-id="58b61-114">Дополнительные ресурсы</span><span class="sxs-lookup"><span data-stu-id="58b61-114">Additional resources</span></span>
+## <a name="additional-resources"></a><span data-ttu-id="0dac6-114">Дополнительные ресурсы</span><span class="sxs-lookup"><span data-stu-id="0dac6-114">Additional resources</span></span>
 
--   <span data-ttu-id="58b61-115">**Перечисления нам не друзья (обновление)**
-    [*https://www.planetgeek.ch/2009/07/01/enums-are-evil/*](https://www.planetgeek.ch/2009/07/01/enums-are-evil/)</span><span class="sxs-lookup"><span data-stu-id="58b61-115">**Enum’s are evil—update**
+-   <span data-ttu-id="0dac6-115">**Перечисления нам не друзья (обновление)**
+    [*https://www.planetgeek.ch/2009/07/01/enums-are-evil/*](https://www.planetgeek.ch/2009/07/01/enums-are-evil/)</span><span class="sxs-lookup"><span data-stu-id="0dac6-115">**Enum’s are evil—update**
 [*https://www.planetgeek.ch/2009/07/01/enums-are-evil/*](https://www.planetgeek.ch/2009/07/01/enums-are-evil/)</span></span>
 
--   <span data-ttu-id="58b61-116">**Дэниэл Хардман (Daniel Hardman). Какие болезни переносят перечисления и как их вылечить**
-    [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)</span><span class="sxs-lookup"><span data-stu-id="58b61-116">**Daniel Hardman. How Enums Spread Disease — And How To Cure It**
+-   <span data-ttu-id="0dac6-116">**Дэниэл Хардман (Daniel Hardman). Какие болезни переносят перечисления и как их вылечить**
+    [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)</span><span class="sxs-lookup"><span data-stu-id="0dac6-116">**Daniel Hardman. How Enums Spread Disease — And How To Cure It**
 [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)</span></span>
 
--   <span data-ttu-id="58b61-117">**Джимми Богард (Jimmy Bogard). Классы перечислений**
-    [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)</span><span class="sxs-lookup"><span data-stu-id="58b61-117">**Jimmy Bogard. Enumeration classes**
+-   <span data-ttu-id="0dac6-117">**Джимми Богард (Jimmy Bogard). Классы перечислений**
+    [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)</span><span class="sxs-lookup"><span data-stu-id="0dac6-117">**Jimmy Bogard. Enumeration classes**
 [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)</span></span>
 
--   <span data-ttu-id="58b61-118">**Стив Смит (Steve Smith). Альтернативы перечислениям в C#**
-    [*https://ardalis.com/enum-alternatives-in-c*](https://ardalis.com/enum-alternatives-in-c)</span><span class="sxs-lookup"><span data-stu-id="58b61-118">**Steve Smith. Enum Alternatives in C#**
+-   <span data-ttu-id="0dac6-118">**Стив Смит (Steve Smith). Альтернативы перечислениям в C#**
+    [*https://ardalis.com/enum-alternatives-in-c*](https://ardalis.com/enum-alternatives-in-c)</span><span class="sxs-lookup"><span data-stu-id="0dac6-118">**Steve Smith. Enum Alternatives in C#**
 [*https://ardalis.com/enum-alternatives-in-c*](https://ardalis.com/enum-alternatives-in-c)</span></span>
 
--   <span data-ttu-id="58b61-119">**Enumeration.cs.**</span><span class="sxs-lookup"><span data-stu-id="58b61-119">**Enumeration.cs.**</span></span> <span data-ttu-id="58b61-120">Базовый класс перечисления в eShopOnContainers [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)</span><span class="sxs-lookup"><span data-stu-id="58b61-120">Base Enumeration class in eShopOnContainers [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)</span></span>
+-   <span data-ttu-id="0dac6-119">**Enumeration.cs.**</span><span class="sxs-lookup"><span data-stu-id="0dac6-119">**Enumeration.cs.**</span></span> <span data-ttu-id="0dac6-120">Базовый класс перечисления в eShopOnContainers [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)</span><span class="sxs-lookup"><span data-stu-id="0dac6-120">Base Enumeration class in eShopOnContainers [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)</span></span>
 
--   <span data-ttu-id="58b61-121">**CardType.cs**.</span><span class="sxs-lookup"><span data-stu-id="58b61-121">**CardType.cs**.</span></span> <span data-ttu-id="58b61-122">Пример класса перечисления в eShopOnContainers.</span><span class="sxs-lookup"><span data-stu-id="58b61-122">Sample Enumeration class in eShopOnContainers.</span></span>
+-   <span data-ttu-id="0dac6-121">**CardType.cs**.</span><span class="sxs-lookup"><span data-stu-id="0dac6-121">**CardType.cs**.</span></span> <span data-ttu-id="0dac6-122">Пример класса перечисления в eShopOnContainers.</span><span class="sxs-lookup"><span data-stu-id="0dac6-122">Sample Enumeration class in eShopOnContainers.</span></span>
     [*https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
 
 
 >[!div class="step-by-step"]
-<span data-ttu-id="58b61-123">[Назад](implement-value-objects.md)
-[Вперед](domain-model-layer-validations.md)</span><span class="sxs-lookup"><span data-stu-id="58b61-123">[Previous](implement-value-objects.md)
+<span data-ttu-id="0dac6-123">[Назад](implement-value-objects.md)
+[Вперед](domain-model-layer-validations.md)</span><span class="sxs-lookup"><span data-stu-id="0dac6-123">[Previous](implement-value-objects.md)
 [Next](domain-model-layer-validations.md)</span></span>
