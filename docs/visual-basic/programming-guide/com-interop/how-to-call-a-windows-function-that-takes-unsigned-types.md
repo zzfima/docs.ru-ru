@@ -14,27 +14,27 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: afec9965c4ff728094e901eb4924ac94c432b300
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44c67470def430a9ba924483899f0db6a9c798a2
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643030"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999913"
 ---
-# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a><span data-ttu-id="eca00-102">Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="eca00-102">How to: Call a Windows Function that Takes Unsigned Types (Visual Basic)</span></span>
-<span data-ttu-id="eca00-103">При использовании класса, модуля или структуры, имеющих члены беззнаковых целых типов можно получить доступ к этим членам с помощью Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="eca00-103">If you are consuming a class, module, or structure that has members of unsigned integer types, you can access these members with Visual Basic.</span></span>  
+# <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a><span data-ttu-id="2af55-102">Практическое руководство. Вызов функции Windows, принимающей значение беззнакового типа (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="2af55-102">How to: Call a Windows Function that Takes Unsigned Types (Visual Basic)</span></span>
+<span data-ttu-id="2af55-103">При использовании класса, модуля или структура, которая содержит члены типов целое число без знака, можно получить доступ к этим членам с помощью Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="2af55-103">If you are consuming a class, module, or structure that has members of unsigned integer types, you can access these members with Visual Basic.</span></span>  
   
-### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a><span data-ttu-id="eca00-104">Для вызова функции Windows, которая принимает тип без знака</span><span class="sxs-lookup"><span data-stu-id="eca00-104">To call a Windows function that takes an unsigned type</span></span>  
+### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a><span data-ttu-id="2af55-104">Для вызова функции Windows, принимающей тип без знака</span><span class="sxs-lookup"><span data-stu-id="2af55-104">To call a Windows function that takes an unsigned type</span></span>  
   
-1.  <span data-ttu-id="eca00-105">Используйте [инструкции Declare](../../../visual-basic/language-reference/statements/declare-statement.md) нужно сообщить Visual Basic, какая из библиотек содержит функцию его имя, что последовательность вызова и как преобразовать строки при его вызове.</span><span class="sxs-lookup"><span data-stu-id="eca00-105">Use a [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) to tell Visual Basic which library holds the function, what its name is in that library, what its calling sequence is, and how to convert strings when calling it.</span></span>  
+1.  <span data-ttu-id="2af55-105">Используйте [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) сообщить Visual Basic, какая из библиотек содержит функцию его имя, что последовательность вызова и как преобразовать строки, при его вызове.</span><span class="sxs-lookup"><span data-stu-id="2af55-105">Use a [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) to tell Visual Basic which library holds the function, what its name is in that library, what its calling sequence is, and how to convert strings when calling it.</span></span>  
   
-2.  <span data-ttu-id="eca00-106">В `Declare` инструкции, используйте `UInteger`, `ULong`, `UShort`, или `Byte` соответствующим образом для каждого параметра с типом без знака.</span><span class="sxs-lookup"><span data-stu-id="eca00-106">In the `Declare` statement, use `UInteger`, `ULong`, `UShort`, or `Byte` as appropriate for each parameter with an unsigned type.</span></span>  
+2.  <span data-ttu-id="2af55-106">В `Declare` выражение use `UInteger`, `ULong`, `UShort`, или `Byte` соответствующим образом для каждого параметра с типом без знака.</span><span class="sxs-lookup"><span data-stu-id="2af55-106">In the `Declare` statement, use `UInteger`, `ULong`, `UShort`, or `Byte` as appropriate for each parameter with an unsigned type.</span></span>  
   
-3.  <span data-ttu-id="eca00-107">Обратитесь к документации для вызова, чтобы найти имена и значения констант, которые он использует функции Windows.</span><span class="sxs-lookup"><span data-stu-id="eca00-107">Consult the documentation for the Windows function you are calling to find the names and values of the constants it uses.</span></span> <span data-ttu-id="eca00-108">Многие из них определены в файле WinUser.h.</span><span class="sxs-lookup"><span data-stu-id="eca00-108">Many of these are defined in the WinUser.h file.</span></span>  
+3.  <span data-ttu-id="2af55-107">См. в документации для функции Windows, чтобы найти имена и значения констант, используемых при вызове.</span><span class="sxs-lookup"><span data-stu-id="2af55-107">Consult the documentation for the Windows function you are calling to find the names and values of the constants it uses.</span></span> <span data-ttu-id="2af55-108">Многие из них определяются в файле WinUser.h.</span><span class="sxs-lookup"><span data-stu-id="2af55-108">Many of these are defined in the WinUser.h file.</span></span>  
   
-4.  <span data-ttu-id="eca00-109">Объявите необходимые константы в коде.</span><span class="sxs-lookup"><span data-stu-id="eca00-109">Declare the necessary constants in your code.</span></span> <span data-ttu-id="eca00-110">Многие константы Windows-32-разрядных беззнаковых значений и следует объявлять `As``UInteger`.</span><span class="sxs-lookup"><span data-stu-id="eca00-110">Many Windows constants are 32-bit unsigned values, and you should declare these `As``UInteger`.</span></span>  
+4.  <span data-ttu-id="2af55-109">Объявите необходимые константы в коде.</span><span class="sxs-lookup"><span data-stu-id="2af55-109">Declare the necessary constants in your code.</span></span> <span data-ttu-id="2af55-110">Многие константы Windows-32-разрядных неподписанных значений, их следует объявлять `As``UInteger`.</span><span class="sxs-lookup"><span data-stu-id="2af55-110">Many Windows constants are 32-bit unsigned values, and you should declare these `As``UInteger`.</span></span>  
   
-5.  <span data-ttu-id="eca00-111">Вызовите функцию обычным способом.</span><span class="sxs-lookup"><span data-stu-id="eca00-111">Call the function in the normal way.</span></span> <span data-ttu-id="eca00-112">В следующем примере вызывается функция Windows `MessageBox`, которая принимает аргументы целое число без знака.</span><span class="sxs-lookup"><span data-stu-id="eca00-112">The following example calls the Windows function `MessageBox`, which takes an unsigned integer argument.</span></span>  
+5.  <span data-ttu-id="2af55-111">Вызовите функцию обычным способом.</span><span class="sxs-lookup"><span data-stu-id="2af55-111">Call the function in the normal way.</span></span> <span data-ttu-id="2af55-112">В следующем примере вызывается функция Windows `MessageBox`, который принимает в качестве аргумента целого числа без знака.</span><span class="sxs-lookup"><span data-stu-id="2af55-112">The following example calls the Windows function `MessageBox`, which takes an unsigned integer argument.</span></span>  
   
     ```  
     Public Class windowsMessage  
@@ -59,7 +59,7 @@ ms.locfileid: "33643030"
     End Class  
     ```  
   
-     <span data-ttu-id="eca00-113">Можно проверить функцию `messageThroughWindows` следующим кодом.</span><span class="sxs-lookup"><span data-stu-id="eca00-113">You can test the function `messageThroughWindows` with the following code.</span></span>  
+     <span data-ttu-id="2af55-113">Можно протестировать функцию `messageThroughWindows` следующим кодом.</span><span class="sxs-lookup"><span data-stu-id="2af55-113">You can test the function `messageThroughWindows` with the following code.</span></span>  
   
     ```  
     Public Sub consumeWindowsMessage()  
@@ -69,17 +69,17 @@ ms.locfileid: "33643030"
     ```  
   
     > [!CAUTION]
-    >  <span data-ttu-id="eca00-114">`UInteger`, `ULong`, `UShort`, И `SByte` типы данных не являются частью [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS), поэтому CLS-совместимом коде нельзя использовать компонент, который они используются.</span><span class="sxs-lookup"><span data-stu-id="eca00-114">The `UInteger`, `ULong`, `UShort`, and `SByte` data types are not part of the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot consume a component that uses them.</span></span>  
+    >  <span data-ttu-id="2af55-114">`UInteger`, `ULong`, `UShort`, И `SByte` типы данных не являются частью [независимость от языка и независимые от языка компоненты](../../../standard/language-independence-and-language-independent-components.md) (CLS), поэтому CLS-совместимого кода нельзя использовать компонент, который они используются.</span><span class="sxs-lookup"><span data-stu-id="2af55-114">The `UInteger`, `ULong`, `UShort`, and `SByte` data types are not part of the [Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS), so CLS-compliant code cannot consume a component that uses them.</span></span>  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="eca00-115">Вызов неуправляемого кода, такие как интерфейс (API), Windows предоставляет код, чтобы потенциальные угрозы безопасности.</span><span class="sxs-lookup"><span data-stu-id="eca00-115">Making a call to unmanaged code, such as the Windows application programming interface (API), exposes your code to potential security risks.</span></span>  
+    >  <span data-ttu-id="2af55-115">Вызов неуправляемого кода, таких как интерфейс (API), Windows предоставляет код, чтобы потенциальные угрозы безопасности.</span><span class="sxs-lookup"><span data-stu-id="2af55-115">Making a call to unmanaged code, such as the Windows application programming interface (API), exposes your code to potential security risks.</span></span>  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="eca00-116">Вызов Windows API требует разрешение неуправляемого кода, что может повлиять на его выполнение в случаях частичного доверия.</span><span class="sxs-lookup"><span data-stu-id="eca00-116">Calling the Windows API requires unmanaged code permission, which might affect its execution in partial-trust situations.</span></span> <span data-ttu-id="eca00-117">Дополнительные сведения см. в разделе <xref:System.Security.Permissions.SecurityPermission> и [разрешений доступа к коду](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).</span><span class="sxs-lookup"><span data-stu-id="eca00-117">For more information, see <xref:System.Security.Permissions.SecurityPermission> and [Code Access Permissions](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).</span></span>  
+    >  <span data-ttu-id="2af55-116">Вызов Windows API требует разрешение неуправляемого кода, которое может повлиять на выполнение в ситуациях частичного доверия.</span><span class="sxs-lookup"><span data-stu-id="2af55-116">Calling the Windows API requires unmanaged code permission, which might affect its execution in partial-trust situations.</span></span> <span data-ttu-id="2af55-117">Дополнительные сведения см. в разделе <xref:System.Security.Permissions.SecurityPermission> и [разрешений доступа к коду](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).</span><span class="sxs-lookup"><span data-stu-id="2af55-117">For more information, see <xref:System.Security.Permissions.SecurityPermission> and [Code Access Permissions](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eca00-118">См. также</span><span class="sxs-lookup"><span data-stu-id="eca00-118">See Also</span></span>  
- [<span data-ttu-id="eca00-119">Типы данных</span><span class="sxs-lookup"><span data-stu-id="eca00-119">Data Types</span></span>](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [<span data-ttu-id="eca00-120">Тип данных Integer</span><span class="sxs-lookup"><span data-stu-id="eca00-120">Integer Data Type</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [<span data-ttu-id="eca00-121">Тип данных UInteger</span><span class="sxs-lookup"><span data-stu-id="eca00-121">UInteger Data Type</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
- [<span data-ttu-id="eca00-122">Оператор Declare</span><span class="sxs-lookup"><span data-stu-id="eca00-122">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [<span data-ttu-id="eca00-123">Пошаговое руководство. Вызов API-интерфейсов Windows</span><span class="sxs-lookup"><span data-stu-id="eca00-123">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+## <a name="see-also"></a><span data-ttu-id="2af55-118">См. также</span><span class="sxs-lookup"><span data-stu-id="2af55-118">See Also</span></span>  
+ [<span data-ttu-id="2af55-119">Типы данных</span><span class="sxs-lookup"><span data-stu-id="2af55-119">Data Types</span></span>](../../../visual-basic/language-reference/data-types/index.md)  
+ [<span data-ttu-id="2af55-120">Тип данных Integer</span><span class="sxs-lookup"><span data-stu-id="2af55-120">Integer Data Type</span></span>](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [<span data-ttu-id="2af55-121">Тип данных UInteger</span><span class="sxs-lookup"><span data-stu-id="2af55-121">UInteger Data Type</span></span>](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+ [<span data-ttu-id="2af55-122">Оператор Declare</span><span class="sxs-lookup"><span data-stu-id="2af55-122">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [<span data-ttu-id="2af55-123">Пошаговое руководство. Вызов API-интерфейсов Windows</span><span class="sxs-lookup"><span data-stu-id="2af55-123">Walkthrough: Calling Windows APIs</span></span>](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
