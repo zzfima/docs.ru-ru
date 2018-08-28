@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bb1d9bdbd0874875939010ea5503fe791a2cd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 271042fc167331def9e427cd4fc8b510e5f2f32e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579838"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925728"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Рекомендации по использованию регулярных выражений в .NET
 <a name="top"></a> Обработчик регулярных выражений в .NET — мощное полнофункциональное средство для обработки текста на основе сопоставления шаблонов, которое не сравнивает текст напрямую. В большинстве случаев сопоставление шаблонов выполняется быстро и эффективно. Однако в некоторых случаях обработчик регулярных выражений может работать очень медленно. В крайних случаях он даже может перестать отвечать, обрабатывая относительно небольшой объем входной информации в течение часов или даже дней.  
@@ -190,7 +190,7 @@ ms.locfileid: "33579838"
   
  Поскольку граница слова не является символом слова (или подмножеством символов слова), нет шанса, что регулярное выражение перейдет границу слова, сопоставляя символы слова. Это значит, что для этого регулярного выражения поиск с возвратом не принесет никакой пользы, а только снизит производительность, поскольку обработчик регулярных выражений вынужден сохранять свое состояние для каждого возможного совпадения.  
   
- Если вы понимаете, что нет необходимости использовать поиск с возвратом, его можно отключить с помощью языкового элемента `(?>``subexpression``)`. В следующем примере производится анализ входной строки с использованием двух регулярных выражений. Функционирование первого регулярного выражения, `\b\p{Lu}\w*\b`, основано на поиске с возвратом. Второе регулярное выражение, `\b\p{Lu}(?>\w*)\b`, отключает поиск с возвратом. Как видно по выводу, выражения дают одинаковый результат.  
+ Если вы понимаете, что нет необходимости использовать поиск с возвратом, его можно отключить с помощью языкового элемента `(?>subexpression)`. В следующем примере производится анализ входной строки с использованием двух регулярных выражений. Функционирование первого регулярного выражения, `\b\p{Lu}\w*\b`, основано на поиске с возвратом. Второе регулярное выражение, `\b\p{Lu}(?>\w*)\b`, отключает поиск с возвратом. Как видно по выводу, выражения дают одинаковый результат.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack2.cs#10)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack2.vb#10)]  
@@ -272,20 +272,20 @@ ms.locfileid: "33579838"
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group1.cs#8)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group1.vb#8)]  
   
- Если части выражения используются только для применения к ним квантификаторов и захваченный текст не нужен, следует отменить захваты групп. Например, языковой элемент `(?:``subexpression``)` запрещает группе, к которой он применен, захватывать совпавшие подстроки. В следующем примере шаблон регулярного выражения из предыдущего примера изменен на `\b(?:\w+[;,]?\s?)+[.?!]`. Как показывает вывод, обработчик регулярных выражений не заполняет коллекции <xref:System.Text.RegularExpressions.GroupCollection> и <xref:System.Text.RegularExpressions.CaptureCollection>.  
+ Если части выражения используются только для применения к ним квантификаторов и захваченный текст не нужен, следует отменить захваты групп. Например, языковой элемент `(?:subexpression)` запрещает группе, к которой он применен, захватывать совпавшие подстроки. В следующем примере шаблон регулярного выражения из предыдущего примера изменен на `\b(?:\w+[;,]?\s?)+[.?!]`. Как показывает вывод, обработчик регулярных выражений не заполняет коллекции <xref:System.Text.RegularExpressions.GroupCollection> и <xref:System.Text.RegularExpressions.CaptureCollection>.  
   
  [!code-csharp[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/group2.cs#9)]
  [!code-vb[Conceptual.RegularExpressions.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/group2.vb#9)]  
   
  Отключить захват можно одним из следующих способов:  
   
--   Используйте языковой элемент `(?:``subexpression``)`. Этот элемент отключает захват совпавших подстрок в группе, к которой он применен. Во вложенных группах захват подстрок не отключается.  
+-   Используйте языковой элемент `(?:subexpression)`. Этот элемент отключает захват совпавших подстрок в группе, к которой он применен. Во вложенных группах захват подстрок не отключается.  
   
--   Использовать параметр <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Он отключает все неименованные и неявные захваты для шаблона регулярных выражений. При использовании этого параметра захват выполняется только для тех подстрок, которые совпадают с именованными группами, определенными с помощью языкового элемента `(?<``name``>``subexpression``)`. Флажок <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> можно передать в параметр `options` конструктора класса <xref:System.Text.RegularExpressions.Regex> или в параметр `options` статического метода поиска совпадения <xref:System.Text.RegularExpressions.Regex>.  
+-   Использовать параметр <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>. Он отключает все неименованные и неявные захваты для шаблона регулярных выражений. При использовании этого параметра захват выполняется только для тех подстрок, которые совпадают с именованными группами, определенными с помощью языкового элемента `(?<name>subexpression)`. Флажок <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> можно передать в параметр `options` конструктора класса <xref:System.Text.RegularExpressions.Regex> или в параметр `options` статического метода поиска совпадения <xref:System.Text.RegularExpressions.Regex>.  
   
 -   Использовать параметр `n` в языковом элементе `(?imnsx)`. Этот параметр отключает все неименованные или неявные захваты, начиная с того места, на котором находится этот элемент в шаблоне регулярного выражения. Захват отключается либо до конца шаблона, либо пока захват для неименованных и неявных объектов не будет включен параметром `(-n)`. Дополнительные сведения см. в разделе [Прочие конструкции](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md).  
   
--   Использовать параметр `n` в языковом элементе `(?imnsx:``subexpression``)`. Этот параметр отключает все неименованные и неявные захваты в части выражения `subexpression`. Захваты для всех вложенных неименованных и неявных групп также отключаются.  
+-   Использовать параметр `n` в языковом элементе `(?imnsx:subexpression)`. Этот параметр отключает все неименованные и неявные захваты в части выражения `subexpression`. Захваты для всех вложенных неименованных и неявных групп также отключаются.  
   
  [К началу](#top)  
   

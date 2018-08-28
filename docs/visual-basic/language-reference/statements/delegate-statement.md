@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Delegate statement [Visual Basic]
 ms.assetid: f799c518-0817-40cc-ad0b-4da846fdba57
 ms.openlocfilehash: 4718c0a6e332d644a7f54c79246df95f841058d0
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244245"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42999825"
 ---
 # <a name="delegate-statement"></a>Оператор Delegate
 Используется для объявления делегата. Делегат — это ссылочный тип, который ссылается на `Shared` метод типа или метода экземпляра объекта. Любую процедуру с соответствующими типами параметров и возвращаемого значения можно использовать для создания экземпляра этого класса делегата. Процедура может затем быть вызвана через экземпляр делегата.  

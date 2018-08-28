@@ -1,6 +1,6 @@
 ---
 title: Функция GetMethodQualifierSet (Справочник по неуправляемым API)
-description: Функция GetMethodQualifierSet получает набор описателей этого метода.
+description: Функция GetMethodQualifierSet извлекает набор описателей метода.
 ms.date: 11/06/2017
 api_name:
 - GetMethodQualifierSet
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b1f73e999738fbb59342aeab391132ac454c8dd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a363591f5db7a2dbcba1147df35d8c023c9b0707
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459115"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001413"
 ---
 # <a name="getmethodqualifierset-function"></a>Функция GetMethodQualifierSet
-Извлекает квалификатор для конкретного метода.
+Извлекает значение для конкретного метода квалификатор.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -45,38 +45,38 @@ HRESULT GetMethodQualifierSet (
 [in] Этот параметр не используется.
 
 `ptr`  
-[in] Указатель на [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) экземпляра.
+[in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.
 
 `wszMethod`  
 [in] Имя метода. `wszMethod` должен указывать на допустимый `LPCWSTR`. 
 
 `ppQualSet`  
-[out] Получает указатель интерфейса, обеспечивающего доступ к квалификаторы метода. Параметр `ppQualSet` не может иметь значение `null`. Если возникает ошибка не возвращается новый объект и указатель устанавливается на `null`. 
+[out] Получает указатель интерфейса, которое разрешает доступ к квалификаторы метода. Параметр `ppQualSet` не может иметь значение `null`. Если возникает ошибка, не возвращается новый объект и указатель имеет значение для указания `null`. 
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файла заголовка, или их можно определить как константы в коде:
+Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не существует. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр — `null`. |
-|`WBEM_S_NO_ERROR` | 0 | Успешный вызов функции.  |
+|`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
   
 ## <a name="remarks"></a>Примечания
 
-Эта функция создает оболочку для вызова [IWbemClassObject::GetMethodQualifierSet](https://msdn.microsoft.com/library/aa391446(v=vs.85).aspx) метод. 
+Эта функция создает оболочку для вызова [IWbemClassObject::GetMethodQualifierSet](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethodqualifierset) метод. 
 
-Вызов эта функция поддерживается только в том случае, если текущий объект является определение класса CIM. Метод обработки не доступен для [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx) ponters, указывают на экземпляры CIM.
+Вызов этой функции поддерживается только в том случае, если текущий объект является определение класса CIM. Метод манипуляции не доступен для [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) ponters, указывают на экземпляры CIM.
 
-Так как каждый метод может иметь свой собственный квалификаторы [IWbemQualifierSet указатель](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) позволяет вызывающему объекту добавить, изменить или удалить эти квалификаторы.
+Так как каждый метод может иметь свой собственный квалификаторы [IWbemQualifierSet указатель](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) позволяет вызывающему объекту добавить, изменить или удалить эти квалификаторы.
 
 ## <a name="requirements"></a>Требования  
-**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
-[WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)
+[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

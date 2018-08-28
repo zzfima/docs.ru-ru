@@ -3,11 +3,11 @@ title: Общие сведения о классе XDocument (C#)
 ms.date: 07/20/2015
 ms.assetid: 63305603-ab54-49fc-84e4-f76eecc59549
 ms.openlocfilehash: 999d570725acbf328858b0ef6c69f709317f10fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333353"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003178"
 ---
 # <a name="xdocument-class-overview-c"></a>Общие сведения о классе XDocument (C#)
 В этом разделе представлен класс <xref:System.Xml.Linq.XDocument>.  

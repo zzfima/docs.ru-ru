@@ -1,15 +1,15 @@
 ---
-title: My.Application.Log - объект
+title: Объект My.Application.Log (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
-ms.openlocfilehash: 4a4fbb2b823436a16f9f0646632e66f66fe62fdd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a7bf4d26129e488226a562e1fe25149abc1dbe1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595804"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43001324"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log - объект
 Предоставляет свойство и методы для записи сведений о событиях и исключениях в прослушиватели журнала приложения.  
@@ -17,7 +17,7 @@ ms.locfileid: "33595804"
 ## <a name="remarks"></a>Примечания  
  Сведения о методах и свойствах объекта `My.Application.Log` см. в разделе <xref:Microsoft.VisualBasic.Logging.Log>.  
   
- Дополнительные сведения см. в разделе [входа сведения из приложения](../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md).  
+ Дополнительные сведения см. в разделе [сведений о ведении журнала из приложения](../../../visual-basic/developing-apps/programming/log-info/index.md).  
   
 > [!NOTE]
 >  Для записи сведений в журнал из приложения можно также использовать классы платформы .NET Framework. Дополнительные сведения см. в разделе [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md).  

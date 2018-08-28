@@ -3,12 +3,12 @@ title: Пакет SDK для платформы компилятора .NET (API
 description: Узнайте, как использовать пакет SDK для .NET Compiler Platform (другое название — API-интерфейсы Roslyn), чтобы анализировать код .NET, находить ошибки и исправлять их.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: e524cb8f2fcb5c59550932243b6586019ea7139b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4fb67b1d7ff963a01696ce163fdcef0b7944dcee
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358985"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925035"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>Пакет SDK для .NET Compiler Platform
 

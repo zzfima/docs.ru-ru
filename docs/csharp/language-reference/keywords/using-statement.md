@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 7bf9138721ecee63c65c2e39922aee96b1dfaa41
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ec4849dda0f28ad1f0e0ebb2c493a33005107db4
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960957"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003116"
 ---
 # <a name="using-statement-c-reference"></a>Оператор using (Справочник по C#)
 Предоставляет удобный синтаксис, обеспечивающий правильное использование объектов <xref:System.IDisposable>.  
@@ -43,11 +43,12 @@ ms.locfileid: "37960957"
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Директива using](../../../csharp/language-reference/keywords/using-directive.md)  
- [Сборка мусора](../../../standard/garbage-collection/index.md)  
- [Использование объектов, реализующих IDisposable](../../../standard/garbage-collection/using-objects.md)  
- [Интерфейс IDisposable](xref:System.IDisposable)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Директива using](../../../csharp/language-reference/keywords/using-directive.md)  
+- [Сборка мусора](../../../standard/garbage-collection/index.md)  
+- [Использование объектов, реализующих IDisposable](../../../standard/garbage-collection/using-objects.md)  
+- [Интерфейс IDisposable](xref:System.IDisposable)

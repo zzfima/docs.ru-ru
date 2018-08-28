@@ -11,12 +11,12 @@ ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 995bc2075a7df5c9a37cc68e812f62c9de2e53c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8842bb47ad32ae1e26eaa503398ea91afb7fd1dd
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397121"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "43003207"
 ---
 # <a name="internet-protocol-version-6"></a>протокол IP версии 6
 Протокол IP версии 6 (IPv6) — это новый набор стандартных протоколов для сетевого уровня Интернета. IPv6 позволяет устранить множество проблем текущей версии набора интернет-протоколов (известного как IPv4), связанных с нехваткой адресов, безопасностью, автоматической настройкой, расширяемостью и т. д. IPv6 расширяет возможности Интернета для активации новых видов приложений, включая приложения для одноранговой сети и мобильных устройств. Ниже приведены основные проблемы текущего протокола IPv4.  
@@ -61,6 +61,6 @@ ms.locfileid: "33397121"
  Сведения, относящиеся к IPv6, можно также найти в [разделе о IPv6 на сайте Technet](http://go.microsoft.com/fwlink/?LinkID=179658).  
   
 ## <a name="see-also"></a>См. также  
- [Пример сокетов IPv6](http://go.microsoft.com/fwlink/?LinkID=179568)  
+ [Пример сокетов IPv6](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)  
  [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Сокеты](../../../docs/framework/network-programming/sockets.md)
