@@ -1,15 +1,15 @@
 ---
-title: 'Как: проецирование графа объекта (Visual Basic)'
+title: 'Практическое: проецирование графа объекта (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
 ms.openlocfilehash: 0a8bf33075ada306cf639006ab099115aad43348
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643787"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43238468"
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a>Как: проецирование графа объекта (Visual Basic)
+# <a name="how-to-project-an-object-graph-visual-basic"></a>Практическое: проецирование графа объекта (Visual Basic)
 Данный раздел иллюстрирует способ проецирования, или наполнения, из XML графа объектов.  
   
 ## <a name="example"></a>Пример  
