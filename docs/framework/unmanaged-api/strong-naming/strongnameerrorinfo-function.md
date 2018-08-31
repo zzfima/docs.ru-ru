@@ -20,17 +20,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db818f638898da6379ce4dadfada8eccc3adeb12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455423"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332751"
 ---
 # <a name="strongnameerrorinfo-function"></a>Функция StrongNameErrorInfo
-Возвращает последний код ошибки, вызванной одной из функций строгого имени.  
+Возвращает код последней ошибки, которое было вызвано одной из функций строгого имени.  
   
- Эта функция устарела.  
+ Эта функция является устаревшей.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,16 +42,16 @@ HRESULT StrongNameErrorInfo ();
  Последний код ошибки COM, заданный одной из функций строгого имени.  
   
 ## <a name="remarks"></a>Примечания  
- Большинство методов строгим именем возвращает простой `true` или `false` , указывающее успешное завершение. Используйте `StrongNameErrorInfo` функцию, чтобы извлечь значение HRESULT, указывающее последней ошибки, возникающие из функций строгого имени.  
+ Большинство методов строгого имени возврата простой `true` или `false` значение, указывающее на успешное завершение. Используйте `StrongNameErrorInfo` функции для получения значение HRESULT, указывающее последней ошибки, возникшей при функций строгого имени.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** StrongName.h  
   
  **Библиотека:** включена как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Строгое именование глобальные статические функции](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)
+ [Строгое именование глобальные статические функции](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)

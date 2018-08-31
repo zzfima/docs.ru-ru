@@ -2,12 +2,12 @@
 title: Практическое руководство. Использование поставщика ролей диспетчера авторизации ASP.NET со службой
 ms.date: 03/30/2017
 ms.assetid: f21deb81-91ef-49ef-94d6-494785143271
-ms.openlocfilehash: 39103e86090ed57354efaf9c410a2733a58f06bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c21c1a80468bd81f2df69009afd2be86ee714250
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490874"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331713"
 ---
 # <a name="how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service"></a>Практическое руководство. Использование поставщика ролей диспетчера авторизации ASP.NET со службой
 При размещении веб-службы в [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] можно интегрировать в приложение диспетчер авторизации, чтобы обеспечить службу возможностью авторизации. Диспетчер авторизации позволяет разработчику приложения определить отдельные операции, которые можно сгруппировать для образования задач. Администратор затем может авторизовать роли на выполнение определенных задач или отдельных операций. Диспетчер авторизации предоставляет средство администрирования в виде оснастки консоли управления (MMC) для управления ролями, задачами, операциями и пользователями. Администратор может настроить хранилище политик диспетчера авторизации в XML-файле, Active Directory или в хранилище Active Directory Application Mode (ADAM).  
@@ -29,7 +29,7 @@ ms.locfileid: "33490874"
 </system.web>  
 ```  
   
- Дополнительные сведения об интеграции [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] поставщика ролей в приложениях WCF, в разделе [как: использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md). Дополнительные сведения об использовании диспетчера авторизации с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], в разделе [как: использовать диспетчер авторизации (AzMan) с ASP.NET 2.0](http://go.microsoft.com/fwlink/?LinkId=71303).  
+ Дополнительные сведения об интеграции [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] поставщик ролей с помощью приложения WCF, см. в разделе [как: использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md). Дополнительные сведения об использовании диспетчера авторизации с [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], см. в разделе [как: использовать диспетчер авторизации (AzMan) с ASP.NET 2.0](https://go.microsoft.com/fwlink/?LinkId=71303).  
   
 ## <a name="see-also"></a>См. также  
  [Практическое руководство. Использование поставщика ролей ASP.NET со службой](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)

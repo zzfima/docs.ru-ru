@@ -5,12 +5,12 @@ helpviewer_keywords:
 - buttons
 - Button control [Windows Forms]
 ms.assetid: d38bc40c-8040-4f19-9e88-2c665b0ab80b
-ms.openlocfilehash: d7eef53967962804033334750b9f3230b95a949d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2f421afe8e64b38851b3063c7091d9ee105ade9
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525093"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43332023"
 ---
 # <a name="button-control-windows-forms"></a>Элемент управления Button (Windows Forms)
 Элемент управления Windows Forms `Button` позволяет пользователю щелкнуть его для выполнения действия. На элементе управления `Button` могут отображаться текст и изображения. При щелчке кнопки мышью элемент управления выглядит так, как будто его нажимают и отпускают.  
@@ -31,7 +31,7 @@ ms.locfileid: "33525093"
  [Способы активации элемента управления Button в Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
  Список методов выбора кнопки.  
   
- См. также [как: создание Windows Forms принять кнопки с помощью конструктора](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) и [как: создание Windows Forms Отмена кнопки с помощью конструктора](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
+ Также см. в разделе [как: создание в Windows Forms как принять кнопки с помощью конструктора](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md) и [как: создание в Windows Forms как отмена кнопки с помощью конструктора](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md).  
   
 ## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.Button>  
@@ -41,4 +41,4 @@ ms.locfileid: "33525093"
  [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
- См. также [ввод данных пользователем в диалоговые окна](http://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55) и [как: закрыть диалоговые окна и сохранение введенных пользователем данных](http://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).
+ Также см. в разделе [ввод пользовательских данных в диалоговые окна](https://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55) и [как: закрыть диалоговых окон и сохранение введенных пользователем данных](https://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).
