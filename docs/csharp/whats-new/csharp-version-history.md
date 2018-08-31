@@ -3,12 +3,12 @@ title: История языка C# (руководство по C#)
 description: На что был похож этот язык в ранних версиях и во что он превратился сейчас?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 227cb2899a509d56910a2a07533a2178f53ef818
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404597"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752034"
 ---
 # <a name="the-history-of-c"></a>История языка C# #
 
@@ -105,7 +105,11 @@ C# версии 3.0 был выпущен в конце 2007 года вмест
 Версия C# 5.0 была крайне целенаправленной. Практически все нововведения в этой версии касались другой инновационной концепции: модели `async` и `await` для асинхронного программирования.  Ниже приведен список основных функций:
 
 - [Асинхронные члены](../async.md)
-- [Информационные атрибуты вызывающего объекта](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [Информационные атрибуты вызывающего объекта](../programming-guide/concepts/caller-information.md)
+
+### <a name="see-also"></a>См. также
+
+* [Проект кода. Информационные атрибуты вызывающего объекта в C# 5.0](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 Информационный атрибут вызывающего объекта позволяет легко получать сведения о контексте, в котором выполняется работа, не прибегая к массивному стандартному коду отражения. Он находит обширное применение в задачах диагностики и ведения журнала.
 

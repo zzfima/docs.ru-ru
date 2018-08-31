@@ -1,5 +1,5 @@
 ---
-title: Пошаговое руководство. Создание приложения-службы Windows в конструкторе компонентов
+title: Пошаговое руководство. Создание приложения служб Windows в конструкторе компонентов
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
-ms.openlocfilehash: c33b8badcacd4e228d70f8e770d4bf27144c29eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 73f61ee3358edf50c11ae10ee53650c66b1c1400
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520517"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925806"
 ---
-# <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Пошаговое руководство. Создание приложения-службы Windows в конструкторе компонентов
-В этой статье описывается процедура создания простого приложения-службы Windows в Visual Studio, которое записывает сообщения в журнал событий. Ниже приведены основные шаги, которые необходимо выполнить для создания и использования службы.  
+# <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Пошаговое руководство. Создание приложения служб Windows в конструкторе компонентов
+В этой статье описывается процедура создания простого приложения службы Windows в Visual Studio, которое записывает сообщения в журнал событий. Ниже приведены основные шаги, которые необходимо выполнить для создания и использования службы.  
   
 1.  [Создание службы](#BK_CreateProject) с помощью шаблона проекта **службы Windows** и выполните необходимую настройку. Этот шаблон создает класс, производный от класса <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>, и формирует основную часть кода службы, например код, необходимый для ее запуска.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "33520517"
   
 3.  [Установка состояния службы](#BK_SetStatus). По умолчанию службы, созданные с помощью метода <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>, реализуют только подмножество доступных флагов состояния. Если операции запуска, приостановки или остановки службы выполняются медленно, то можно реализовать значения состояния, например, "Ожидание запуска" или "Ожидание остановки", которые указывают, что служба выполняет операцию.  
   
-4.  [Добавление установщиков в службу](#BK_AddInstallers) для приложения-службы.  
+4.  [Добавление установщиков в службу](#BK_AddInstallers) для приложения службы.  
   
 5.  (Необязательно.) [Установка параметров запуска](#BK_StartupParameters), задайте аргументы запуска по умолчанию и разрешите пользователям переопределять параметры по умолчанию, когда они запускают вашу службу вручную.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "33520517"
      [!code-csharp[VbRadconService#3](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#3)]
      [!code-vb[VbRadconService#3](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#3)]  
   
-     Приложение-служба предполагает длительное время выполнения, поэтому оно обычно опрашивает или отслеживает что-либо в системе. Отслеживание настраивается в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Тем не менее, метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> не отвечает за фактическое отслеживание. После начала работы службы метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> должен возвращать управление операционной системе. Он не должен уходить в бесконечный цикл или блокироваться. Для простого механизма опроса можно использовать компонент <xref:System.Timers.Timer?displayProperty=nameWithType> следующим образом: в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A> задайте параметры компонента, а затем установите для свойства <xref:System.Timers.Timer.Enabled%2A> значение `true`. Таймер периодическую генерирует события в вашем коде, при возникновении которых служба сможет выполнять отслеживание. Для этого можно использовать следующий код:  
+     Приложение службы предполагает длительное время выполнения, поэтому оно обычно опрашивает или отслеживает что-либо в системе. Отслеживание настраивается в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A> . Тем не менее, метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> не отвечает за фактическое отслеживание. После начала работы службы метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> должен возвращать управление операционной системе. Он не должен уходить в бесконечный цикл или блокироваться. Для простого механизма опроса можно использовать компонент <xref:System.Timers.Timer?displayProperty=nameWithType> следующим образом: в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A> задайте параметры компонента, а затем установите для свойства <xref:System.Timers.Timer.Enabled%2A> значение `true`. Таймер периодическую генерирует события в вашем коде, при возникновении которых служба сможет выполнять отслеживание. Для этого можно использовать следующий код:  
   
     ```csharp  
     // Set up a timer to trigger every minute.  
@@ -161,7 +161,7 @@ ms.locfileid: "33520517"
   
 <a name="BK_SetStatus"></a>   
 ## <a name="setting-service-status"></a>Установка состояния службы  
- Службы сообщают о своем состоянии диспетчеру управления службами, чтобы пользователи могли определить, работает ли служба корректно. По умолчанию, службы, которые наследуют из <xref:System.ServiceProcess.ServiceBase> , сообщают ограниченный набор параметров состояния, включая "Остановлена", Приостановлена" и "Выполняется". Если служба сразу не запускается, то может быть полезно обеспечить индикацию состояния "Ожидание запуска". Параметры состояния ожидания запуска и ожидания остановки также можно реализовать путем добавления кода, вызывающего функцию Windows [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx).  
+ Службы сообщают о своем состоянии диспетчеру управления службами, чтобы пользователи могли определить, работает ли служба корректно. По умолчанию, службы, которые наследуют из <xref:System.ServiceProcess.ServiceBase> , сообщают ограниченный набор параметров состояния, включая "Остановлена", Приостановлена" и "Выполняется". Если служба сразу не запускается, то может быть полезно обеспечить индикацию состояния "Ожидание запуска". Параметры состояния ожидания запуска и ожидания остановки также можно реализовать путем добавления кода, вызывающего функцию Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus).  
   
 #### <a name="to-implement-service-pending-status"></a>Реализация состояния ожидания службы  
   
@@ -225,7 +225,7 @@ ms.locfileid: "33520517"
     End Structure  
     ```  
   
-3.  Теперь в классе `MyNewService` объявите функцию [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) с помощью вызова неуправляемого кода.  
+3.  Теперь в классе `MyNewService` объявите [функцию SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) с помощью вызова неуправляемого кода:  
   
     ```csharp  
     [DllImport("advapi32.dll", SetLastError=true)]  
@@ -271,11 +271,11 @@ ms.locfileid: "33520517"
 6.  (Необязательно) Повторите данную процедуру для метода <xref:System.ServiceProcess.ServiceBase.OnStop%2A> .  
   
 > [!CAUTION]
->  [Диспетчер служб](http://msdn.microsoft.com/library/windows/desktop/ms685150.aspx) использует члены `dwWaitHint` и `dwCheckpoint` [структуры SERVICE_STATUS](http://msdn.microsoft.com/library/windows/desktop/ms685996.aspx), чтобы определить время, в течение которого нужно ожидать запуск или завершение работы службы Windows. Если ваши методы <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A> выполняются долго, ваша служба может запросить больше времени, повторно вызвав функцию [SetServiceStatus](http://msdn.microsoft.com/library/windows/desktop/ms686241.aspx) с увеличенным значением `dwCheckPoint` .  
+>  [Диспетчер служб](/windows/desktop/Services/service-control-manager) использует члены `dwWaitHint` и `dwCheckpoint` [структуры SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-_service_status), чтобы определить время, в течение которого нужно ожидать запуск или завершение работы службы Windows. Если ваши методы <xref:System.ServiceProcess.ServiceBase.OnStart%2A> и <xref:System.ServiceProcess.ServiceBase.OnStop%2A> выполняются долго, ваша служба может запросить больше времени, повторно вызвав функцию [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) с увеличенным значением `dwCheckPoint`.  
   
 <a name="BK_AddInstallers"></a>   
 ## <a name="adding-installers-to-the-service"></a>Добавление установщиков в службу  
- Перед запуском службы Windows ее необходимо установить (при этом служба будет зарегистрирована с помощью диспетчера управления службами. В проект можно добавить установщики, которые обрабатывают сведения о регистрации.  
+ Перед запуском службы Windows ее необходимо установить (при этом служба будет зарегистрирована с помощью диспетчера управления службами. В проект можно добавить установщики, которые обрабатывают  сведения о регистрации.  
   
 #### <a name="to-create-the-installers-for-your-service"></a>Чтобы создать установщики для службы, выполните следующие действия:  
   
@@ -304,7 +304,7 @@ ms.locfileid: "33520517"
     > [!IMPORTANT]
     >  У учетной записи <xref:System.ServiceProcess.ServiceAccount.LocalSystem> имеется множество разрешений, включая разрешение на запись в журнал событий. Эту учетную запись следует использовать с осторожностью, поскольку это может увеличить риск атак с помощью вредоносных программ. Для других задач следует рассмотреть возможность использования учетной записи <xref:System.ServiceProcess.ServiceAccount.LocalService>, которая аналогична учетной записи непривилегированного пользователя локального компьютера. Удаленным серверам при этом передаются учетные данные анонимного пользователя. В этом примере произойдет ошибка, если вы попытаетесь использовать учетную запись <xref:System.ServiceProcess.ServiceAccount.LocalService>, так как для нее требуется разрешение на запись в журнал событий.  
   
-     Дополнительные сведения об установщиках см. в [руководстве по добавлению установщиков в приложение-службу](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
+     Дополнительные сведения об установщиках см. в разделе [How to: Add Installers to Your Service Application](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md).  
   
 <a name="BK_StartupParameters"></a>   
 ## <a name="set-startup-parameters"></a>Установка параметров запуска  
@@ -484,7 +484,7 @@ End Sub
  Для создания журнала событий при установке приложения можно воспользоваться установщиком, а не создавать журнал после запуска приложения. Кроме того, в этом случае журнал событий будет удален установщиком при удалении приложения. Дополнительные сведения см. на странице <xref:System.Diagnostics.EventLogInstaller> .  
   
 ## <a name="see-also"></a>См. также  
- [Приложения-службы Windows](../../../docs/framework/windows-services/index.md)  
- [Знакомство с приложениями-службами Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Практическое руководство. Отладка приложений-служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [Приложения служб Windows](../../../docs/framework/windows-services/index.md)  
+ [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
+ [Практическое руководство. Отладка приложений служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
  [Службы (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)

@@ -1,6 +1,6 @@
 ---
 title: Маршалинг данных при вызове неуправляемого кода
-ms.date: 03/30/2017
+ms.date: 07/31/2018
 dev_langs:
 - cpp
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2eb55d8490eae64e909ada68223983c570ef9afa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0501bb2b67c6bbe23c46dc350aedea7d7be09ba1
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391320"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42911735"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Маршалинг данных при вызове неуправляемого кода
 Для вызова функций, экспортированных из неуправляемой библиотеки, приложению .NET Framework требуется прототип функции в управляемом коде, представляющий неуправляемую функцию. Чтобы создать прототип, который допускает вызов неуправляемого кода для правильного маршалинга данных, необходимо выполнить указанные ниже действия.  
@@ -33,7 +33,8 @@ ms.locfileid: "33391320"
   
 |Неуправляемый тип в Wtypes.h|Неуправляемый тип языка C|Имя управляемого класса|Описание:|  
 |--------------------------------|-------------------------------|------------------------|-----------------|  
-|**HANDLE**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|32 бита в 32-разрядных операционных системах Windows, 64 бита в 64-разрядных операционных системах Windows.|  
+|**VOID**|**void**|<xref:System.Void?displayProperty=nameWithType>|Применяется к функции, которая не возвращает значение.|
+|**HANDLE**|**void \***|<xref:System.IntPtr?displayProperty=nameWithType>|32 бита в 32-разрядных операционных системах Windows, 64 бита в 64-разрядных операционных системах Windows.|  
 |**BYTE**|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|8 бит|  
 |**SHORT**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 бит|  
 |**WORD**|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|16 бит|  
@@ -45,10 +46,10 @@ ms.locfileid: "33391320"
 |**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 бита|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|В кодировке ANSI.|  
 |**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|В кодировке Юникод.|  
-|**LPSTR**|**char\***|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|  
+|**LPSTR**|**char \***|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|  
 |**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|  
-|**LPWSTR**|**wchar_t\***|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|  
-|**LPCWSTR**|**Const wchar_t\***|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|  
+|**LPWSTR**|**wchar_t \***|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|  
+|**LPCWSTR**|**Const wchar_t \***|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|  
 |**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32 бита|  
 |**DOUBLE**|**Double**|<xref:System.Double?displayProperty=nameWithType>|64 бита|  
   

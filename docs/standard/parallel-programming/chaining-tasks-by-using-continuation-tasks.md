@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27d97d38c903cbb33097db0e109758d98527e00f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 14c046094db52f2db55bb095839d354c7e6c691e
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591941"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42912046"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Создание цепочки задач с помощью задач продолжения
 В асинхронном программировании очень распространено при завершении одной асинхронной операции вызывать вторую операцию и передавать в нее данные. В большинстве случаев это делается с помощью методов обратного вызова. В библиотеке параллельных задач эта функциональность обеспечивается *задачами продолжения*. Задача продолжения (также называемая просто продолжением) — это асинхронная задача, вызываемая другой задачей, которая называется *предшествующей*, при завершении этой предшествующей задачи.  
@@ -44,7 +44,7 @@ ms.locfileid: "33591941"
  Продолжение по сути является <xref:System.Threading.Tasks.Task> и не блокирует поток, в котором она запущена. Вызовите метод <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> для блокирования до завершения задачи продолжения.  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>Создание продолжения для одной предшествующей задачи  
- Продолжение, которое выполняется, когда завершается предшествующая задача, создается путем вызова метода <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. В следующем примере показан базовый шаблон (для ясности в нем опущена обработка исключений). Он выполняет предшествующую задачу `taskA`, которая возвращает объект <xref:System.DayOfWeek> , указывающий название текущего дня недели. После завершения предшествующей задачи задача продолжения `taskB`передается предшествующей задаче и отображает строку, содержащую результат ее выполнения.  
+ Продолжение, которое выполняется, когда завершается предшествующая задача, создается путем вызова метода <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. В следующем примере показан базовый шаблон (для ясности в нем опущена обработка исключений). Он выполняет предшествующую задачу `taskA`, которая возвращает объект <xref:System.DayOfWeek> , указывающий название текущего дня недели. После завершения предшествующей задачи задача продолжения `continuation` передается предшествующей задаче и отображает строку, содержащую результат ее выполнения.  
   
  [!code-csharp[TPL_Continuations#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/simple1.cs#1)]
  [!code-vb[TPL_Continuations#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/simple1.vb#1)]  

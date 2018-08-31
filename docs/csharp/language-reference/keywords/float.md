@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float keyword [C#]
 - floating-point numbers [C#], float keyword
 ms.assetid: 1e77db7b-dedb-48b7-8dd1-b055e96a9258
-ms.openlocfilehash: 9500aceed62904e68d6b7ee8bec569d12103bb18
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 98f89ba3d79f7679b69ce10fd875b3caf69c5257
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028244"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932914"
 ---
 # <a name="float-c-reference"></a>float (Справочник по C#)
 
@@ -21,7 +21,7 @@ ms.locfileid: "37028244"
 
 |Тип|Приблизительный диапазон значений|Точность|Тип .NET|  
 |----------|-----------------------|---------------|-------------------------|  
-|`float`|От –3,4 × 10<sup>38</sup> до +3,4 × 10<sup>38</sup>|7 знака|<xref:System.Single?displayProperty=nameWithType>|  
+|`float`|От ±1,5 x 10<sup>−45</sup> до ±3,4 x 10<sup>38</sup>|7 знака|<xref:System.Single?displayProperty=nameWithType>|  
 
 ## <a name="literals"></a>Литералы
 
@@ -37,9 +37,9 @@ float x = 3.5F;
 
 В одном и том же выражении можно сочетать и числовые целочисленные типы и типы с плавающей запятой. В этом случае целочисленные типы преобразуются в типы с плавающей запятой. Выражение вычисляется по следующим правилам:
 
-- Если одним из типов с плавающей запятой является [double](double.md), то выражение оценивается в реляционных или логических выражениях как [double](double.md) или [bool](bool.md).
+- Если одним из типов с плавающей запятой является [double](double.md), то выражение оценивается как [double](double.md) или [bool](bool.md) в реляционных сравнениях или сравнениях на равенство.
 
-- Если в выражении нет типа [double](double.md), выражение оценивается в реляционных или логических выражениях как `float` или [bool](bool.md).
+- Если в выражении нет типа [double](double.md), выражение оценивается как `float` или [bool](bool.md) в реляционных сравнениях или сравнениях на равенство.
 
 Выражение с плавающей запятой может содержать следующие наборы значений:
 
@@ -65,12 +65,12 @@ float x = 3.5F;
 
 ## <a name="see-also"></a>См. также
 
-<xref:System.Single>  
-[Справочник по C#](../index.md)  
-[Руководство по программированию на C#](../../programming-guide/index.md)  
-[Приведение и преобразование типов](../../programming-guide/types/casting-and-type-conversions.md)  
-[Ключевые слова в C#](index.md)  
-[Таблица целых типов](integral-types-table.md)  
-[Таблица встроенных типов](built-in-types-table.md)  
-[Таблица неявных числовых преобразований](implicit-numeric-conversions-table.md)  
-[Таблица явных числовых преобразований](explicit-numeric-conversions-table.md)  
+- <xref:System.Single>  
+- [Справочник по C#](../index.md)  
+- [Руководство по программированию на C#](../../programming-guide/index.md)  
+- [Приведение и преобразование типов](../../programming-guide/types/casting-and-type-conversions.md)  
+- [Ключевые слова в C#](index.md)  
+- [Таблица целых типов](integral-types-table.md)  
+- [Таблица встроенных типов](built-in-types-table.md)  
+- [Таблица неявных числовых преобразований](implicit-numeric-conversions-table.md)  
+- [Таблица явных числовых преобразований](explicit-numeric-conversions-table.md)  

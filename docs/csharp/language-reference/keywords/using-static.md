@@ -6,24 +6,24 @@ helpviewer_keywords:
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9b7508c6e751f83fdc16a700ad68aa7de36e497
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04e7368a6b6a4453f2dd07c7afdc0bffa7473ed1
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33285139"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42929682"
 ---
 # <a name="using-static-directive-c-reference"></a>Директива using static (справочник по C#)
 
-Директива `using static` обозначает тип, доступ к статическим членам которого можно получить, не указывая имя типа. Он имеет следующий синтаксис:
+Директива `using static` обозначает тип, доступ к статическим членам и вложенным типам которого можно получить, не указывая имя типа. Он имеет следующий синтаксис:
 
 ```csharp
-using static <fully-qualified-type-name>
+using static <fully-qualified-type-name>;
 ```
 
-здесь *полное имя типа* — это имя типа, на статические члены которого можно ссылаться, не указывая имя типа. Если полное имя (полное имя пространства имен вместе с именем типа) не указано, C# создает ошибку компилятора CS0246: "Тип или пространство имен '<type-name>' не найдены".
+здесь *полное имя типа* — это имя типа, на статические члены и вложенные типы которого можно ссылаться, не указывая имя типа. Если полное имя (полное имя пространства имен вместе с именем типа) не указано, C# создает ошибку компилятора [CS0246](../compiler-messages/cs0246.md): "Тип или пространство имен 'type/namespace' не найдены (отсутствует директива using или ссылка сборки)".
 
-Директива `using static` применяется к каждому типу, у которого есть статические члены, даже если при этом у него также имеются члены экземпляров. При этом для вызова членов экземпляров можно использовать только экземпляр типа.
+Директива `using static` применяется к каждому типу, у которого есть статические члены (или вложенные типы), даже если при этом у него также имеются члены экземпляров. При этом для вызова членов экземпляров можно использовать только экземпляр типа.
 
 Директива `using static` была представлена в C# версии 6.
 
@@ -53,9 +53,9 @@ using static <fully-qualified-type-name>
 
 ## <a name="see-also"></a>См. также
 
-[Директива using](using-directive.md)   
-[Справочник по C#](../../../csharp/language-reference/index.md)   
-[Ключевые слова C#](../../../csharp/language-reference/keywords/index.md)   
-[Использование пространств имен](../../../csharp/programming-guide/namespaces/using-namespaces.md)   
-[Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)   
-[Пространства имен](../../../csharp/programming-guide/namespaces/index.md)   
+- [Директива using](using-directive.md)
+- [Справочник по C#](../../../csharp/language-reference/index.md)
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
+- [Использование пространств имен](../../../csharp/programming-guide/namespaces/using-namespaces.md)
+- [Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)
+- [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)

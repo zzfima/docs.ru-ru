@@ -4,12 +4,12 @@ description: 'Архитектура микрослужб .NET для упако
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 1d079dc7eef2f4abfbdec5a01b4233c8504d449d
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: aeafaa8e618e02cab127593a19dda1d72780e091
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106493"
+ms.lasthandoff: 08/27/2018
+ms.locfileid: "42998688"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Распределенное управление данными: проблемы и решения
 

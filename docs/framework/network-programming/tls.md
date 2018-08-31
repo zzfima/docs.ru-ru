@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: 41814129d038f8cb1ab98db0c7a4e0cbd7e7cd54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397264"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925508"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Рекомендации по использованию протокола TLS с .NET Framework
 
@@ -119,7 +119,7 @@ WCF использует тот же сетевой стек, что вся пл
 
 Платформа WCF автоматически выбирает протокол последней версии до TLS 1.2, если версия протокола не указана явно. Дополнительные сведения см. в предыдущем разделе [Для TCP-транспорта WCF с использованием защиты транспорта с помощью учетных данных сертификата](#wcf-tcp-cert).
 
-### <a name="for-net-framework-35---451-and-not-wcf"></a>Для .NET Framework 3.5–4.5.1 (не для WFC)
+### <a name="for-net-framework-35---452-and-not-wcf"></a>Для .NET Framework 3.5–4.5.2 (не для WFC)
 
 Мы рекомендуем обновить приложение до .NET Framework 4.7 или более поздней версии. Если это невозможно, выполните приведенные ниже действия. Если не выполнить обновление до .NET Framework 4.7 или более поздней версии, в будущем работа приложения может завершаться сбоем.
 

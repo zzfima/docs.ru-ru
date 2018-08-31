@@ -1,5 +1,5 @@
 ---
-title: for (Справочник по C#)
+title: Оператор for (C#)
 ms.date: 06/13/2018
 f1_keywords:
 - for
@@ -7,26 +7,26 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: beac7727c8ce83d8ea20f0fc578f80ceef3053e7
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: c6ef926d6fb2c79b7b7f71c3b24b86a7ab057c88
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208006"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42930954"
 ---
 # <a name="for-c-reference"></a>for (справочник по C#)
 
-Оператор `for` выполняет оператор или блок операторов, пока определенное логическое выражение не примет значение `true`.
+Оператор `for` выполняет оператор или блок операторов, пока определенное логическое выражение равно значению `true`.
 
 В любой момент в блоке операторов `for` вы можете прервать цикл с помощью оператора [break](break.md) или перейти к следующей итерации в цикле с помощью оператора [continue](continue.md). Также можно выйти из цикла `for` с помощью операторов [goto](goto.md), [return](return.md) или [throw](throw.md).
-  
+
 ## <a name="structure-of-the-for-statement"></a>Структура оператора `for`
 
 Оператор `for` определяет разделы *инициализатора*, *условия* и *итератора*:
-  
+
 ```csharp
-for (initializer; condition; iterator)  
-    body  
+for (initializer; condition; iterator)
+    body
 ```
 
 Все три раздела добавляются по желанию. Тело цикла является оператором или блоком операторов.
@@ -45,11 +45,11 @@ for (initializer; condition; iterator)
 
   - оператор [присваивания](../operators/assignment-operator.md)
 
-  - вызов метода  
+  - вызов метода
 
-  - префиксное или постфиксное выражение [приращения](../operators/increment-operator.md), такое как `++i` или `i++`  
+  - префиксное или постфиксное выражение [приращения](../operators/increment-operator.md), такое как `++i` или `i++`
 
-  - префиксное или постфиксное выражение [декремента](../operators/decrement-operator.md), такое как `--i` или `i--`  
+  - префиксное или постфиксное выражение [декремента](../operators/decrement-operator.md), такое как `--i` или `i--`
 
   - создание объекта с помощью ключевого слова [new](new-operator.md)
 
@@ -73,15 +73,15 @@ i < 5
 
 ### <a name="the-iterator-section"></a>Раздел *итератора*
 
-Раздел *итератора* определяет, что происходит после каждой итерации тела цикла. Раздел *итератора* содержит ноль или более следующих выражений оператора, разделенных запятыми:  
+Раздел *итератора* определяет, что происходит после каждой итерации тела цикла. Раздел *итератора* содержит ноль или более следующих выражений оператора, разделенных запятыми:
 
 - оператор [присваивания](../operators/assignment-operator.md)
 
-- вызов метода  
+- вызов метода
 
-- префиксное или постфиксное выражение [приращения](../operators/increment-operator.md), такое как `++i` или `i++`  
+- префиксное или постфиксное выражение [приращения](../operators/increment-operator.md), такое как `++i` или `i++`
 
-- префиксное или постфиксное выражение [декремента](../operators/decrement-operator.md), такое как `--i` или `i--`  
+- префиксное или постфиксное выражение [декремента](../operators/decrement-operator.md), такое как `--i` или `i--`
 
 - создание объекта с помощью ключевого слова [new](new-operator.md)
 
@@ -96,23 +96,23 @@ i++
 ## <a name="examples"></a>Примеры
 
 В следующем примере показано несколько менее распространенных вариантов использования разделов оператора `for`: присваивание значения внешней переменной цикла в разделе *инициализатора*, вызов метода в разделах *инициализатора* и *итератора* и изменение значения двух переменных в разделе *итератора*. Нажмите **Запустить** для выполнения примера кода. После этого можно изменить код и запустить его еще раз.
-  
+
 [!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
-  
+
 В следующем примере определен бесконечный цикл `for`:
-  
+
 [!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
-  
-## <a name="c-language-specification"></a>Спецификация языка C#  
+
+## <a name="c-language-specification"></a>Спецификация языка C#
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-  
+
 ## <a name="see-also"></a>См. также
 
-[Оператор for (спецификация языка C#)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)  
-[Справочник по C#](../index.md)  
-[Руководство по программированию на C#](../../programming-guide/index.md)  
-[Ключевые слова в C#](index.md)  
-[foreach, in](foreach-in.md)  
-[Оператор for (C++)](/cpp/cpp/for-statement-cpp)  
-[Операторы итерации](iteration-statements.md)
+- [Оператор for (спецификация языка C#)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](index.md)
+- [foreach, in](foreach-in.md)
+- [Оператор for (C++)](/cpp/cpp/for-statement-cpp)
+- [Операторы итерации](iteration-statements.md)

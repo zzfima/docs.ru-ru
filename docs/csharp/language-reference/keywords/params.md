@@ -8,12 +8,12 @@ helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: d7e0094d0f60aa201ae7229983f3e4b9764d2cbc
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 692c2f61ae99f1c1c8e04a5a1bcad08814d286fe
+ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960199"
+ms.lasthandoff: 08/21/2018
+ms.locfileid: "42752001"
 ---
 # <a name="params-c-reference"></a>params (справочник по C#)
 С помощью ключевого слова `params` можно указать [параметр метода](../../../csharp/language-reference/keywords/method-parameters.md), принимающий переменное число аргументов.  
@@ -21,6 +21,8 @@ ms.locfileid: "37960199"
  Можно отправить список аргументов типа, указанного в объявлении параметра, с разделителями-запятыми, или массив аргументов указанного типа. Можно также не отправлять аргументы. Если аргументы не отправляются, длина списка `params` равна нулю.  
   
  В объявлении метода после ключевого слова `params` дополнительные параметры не допускаются, и в объявлении метода допускается только одно ключевое слово `params`.  
+ 
+ Объявленный тип параметра `params` должен быть одномерным массивом, как показано в следующем примере. В противном случае возникает ошибка компилятора [CS0225](../../../csharp/misc/cs0225.md).
   
 ## <a name="example"></a>Пример  
  В следующем примере показаны различные способы оправки аргументов параметру `params`.  

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: de5ff06e660d3c4e976c10043a7ebc72d102cff5
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314647"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42931557"
 ---
 # <a name="tour-of-net"></a>Обзор .NET
 
@@ -79,7 +79,7 @@ ms.locfileid: "36314647"
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
-Языки C#, Visual Basic и F# поддерживают *вывод локального типа*. Определение типа означает, что компилятор выводит тип выражения в левой части из выражения в правой части. Это не значит, что безопасность типа нарушается или исключается. Результирующий тип имеет строгий тип со всем, что подразумевается. В предыдущем примере `dog` и `cat` перезаписываются для представления вывода типа, а оставшаяся часть примера остается без изменений:
+Языки C#, Visual Basic и F# поддерживают *вывод локального типа*. Определение типа означает, что компилятор выводит тип выражения в левой части из выражения в правой части. Это не значит, что безопасность типа нарушается или исключается. Результирующий тип имеет строгий тип со всем, что подразумевается. В предыдущем примере `dog` перезаписывается для представления вывода типа, а оставшаяся часть примера остается без изменений:
 
 [!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 

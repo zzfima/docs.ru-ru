@@ -1,103 +1,101 @@
 ---
-title: Использование допускающих значение NULL типов (Руководство по программированию на C#)
-ms.date: 07/20/2015
+title: Использование допускающих значение NULL типов (руководство по программированию на C#)
+description: Узнайте, как в C# использовать типы, допускающие значение NULL
+ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: d2fe0f34c45d3de0516a71ca5ed4dc807df4bf93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 600a18cc4dc9d3eda5577336f209c5814a7edb88
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336925"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42933136"
 ---
-# <a name="using-nullable-types-c-programming-guide"></a>Использование допускающих значение NULL типов (Руководство по программированию на C#)
-Типы, допускающие значение NULL, могут представлять все значения своего основного типа, а также само значение [NULL](../../../csharp/language-reference/keywords/null.md). Типы, допускающие значение null, объявляются одним из следующих двух способов:  
+# <a name="using-nullable-types-c-programming-guide"></a>Использование допускающих значение NULL типов (руководство по программированию на C#)
+
+Типы, допускающие значение NULL, могут представлять все значения своего базового типа `T`, а также дополнительное значение [NULL](../../language-reference/keywords/null.md). Дополнительные сведения см. в разделе [Типы, допускающие значение NULL](index.md).
+
+Вы можете ссылаться на тип, допускающий значение NULL, в любой из следующих форм: `Nullable<T>` или `T?`. Эти две формы записи являются взаимозаменяемыми.  
   
- `System.Nullable<T> variable`  
+## <a name="declaration-and-assignment"></a>Назначение и объявление
+
+Поскольку тип значения может быть неявно преобразован в соответствующий тип, допускающий значение NULL, вы назначаете значение такому типу так же, как его базовому типу значения. Вы также можете присвоить значение `null`.  Пример:
   
- - или -  
+[!code-csharp[declare and assign](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#1)]
+
+## <a name="examination-of-a-nullable-type-value"></a>Изучение значение типа, допускающего значение NULL
+
+Используйте следующие свойства только для чтения, чтобы изучить экземпляр типа, допускающего значение NULL, со значением NULL и извлечь значение базового типа:  
   
- `T? variable`  
+- <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> указывает, имеет ли экземпляр типа, допускающего значение NULL, значение своего базового типа.
   
- `T` — это основной тип для типа, допускающего значение NULL. `T` может быть значением любого типа, включая `struct`, но не ссылочным типом.  
+- <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> возвращает значение базового типа, если <xref:System.Nullable%601.HasValue%2A> имеет значение `true`. Если <xref:System.Nullable%601.HasValue%2A> имеет значение `false`, свойство <xref:System.Nullable%601.Value%2A> выдает исключение <xref:System.InvalidOperationException>.
   
- В качестве примера того, когда можно использовать тип, допускающий значение null, рассмотрим обычную переменную типа Boolean, которая может иметь два значения: true и false. У этого типа нет значения, обозначающего "не определено". Во многих приложениях, в первую очередь взаимодействующих с базами данных, переменные могут оказаться в неопределенном состоянии. Например, поле в базе данных может содержать значение true или false, но оно также может вообще не содержать никакого значения. Подобным образом для ссылочных типов можно установить значение `null`, чтобы обозначить тот факт, что они не инициализированы.  
+В коде в следующем примере используется свойство `HasValue`, чтобы проверить, содержит ли переменная значение, перед его отображением:
   
- Это несоответствие может создавать лишнюю работу по программированию, в частности, приводить к использованию дополнительных переменных для хранения информации о состоянии, применению специальных значений, и т. п. Модификатор, указывающий, что данный тип допускает значения null, позволяет в языке C# создавать переменные значащего типа, позволяющие указывать для них неопределенное значение.  
+[!code-csharp-interactive[use HasValue](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#2)]
   
-## <a name="examples-of-nullable-types"></a>Примеры типов, допускающих значение NULL  
- Любой значащий тип может использоваться как основной для типа, допускающего значение null. Пример:  
+Вы также можете сравнить тип, допускающий значение NULL, с `null` вместо использования свойства `HasValue`, как показано в следующем примере:  
   
- [!code-csharp[csProgGuideTypes#4](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_1.cs)]  
+[!code-csharp-interactive[use comparison with null](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#3)]
+
+Начиная с версии C# 7.0 для проверки и получения значения типа, допускающего значение NULL, можно использовать [сопоставление шаблонов](../../pattern-matching.md).
+
+[!code-csharp-interactive[use pattern matching](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#4)]
+
+## <a name="conversion-from-a-nullable-type-to-an-underlying-type"></a>Преобразование из типа, допускающего значение NULL, в базовый тип
+
+Если вам нужно присвоить значение типа, допускающего значение NULL, типу, не допускающему значение NULL, используйте [оператор объединения с NULL`??`](../../language-reference/operators/null-coalescing-operator.md), чтобы указать значение для присваивания, если значение типа, допускающего значение NULL, равно NULL (вы также можете использовать метод <xref:System.Nullable%601.GetValueOrDefault(%600)?displayProperty=nameWithType>):
   
-## <a name="the-members-of-nullable-types"></a>Члены типов, допускающих значение NULL  
- Каждый объект типа, допускающего значение null, имеет два открытых свойства, доступных только для чтения:  
+[!code-csharp-interactive[?? operator](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#5)]
+
+Используйте метод <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>, если значение, которое будет использоваться, когда значение типа, допускающего значение NULL, равно NULL, должно быть значением по умолчанию базового типа.
   
--   `HasValue`  
+Вы можете явно привести тип, допускающий значение NULL, к типу, не допускающему значение NULL. Пример:  
   
-     `HasValue` имеет тип `bool`. Для него устанавливается значение `true`, если переменная содержит значение, не равное NULL.  
+[!code-csharp[explicit cast](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#6)]
+
+Во время выполнения, если значение типа, допускающего значение NULL, равно NULL, явное приведение вызывает исключение <xref:System.InvalidOperationException>.
+
+Тип, не допускающий значение NULL, неявно преобразуется в соответствующий тип, допускающий значение NULL.
   
--   `Value`  
+## <a name="operators"></a>Операторы
+
+Предопределенные унарные и бинарные операции, а также любые операции, определенные программистом, которые существуют для значащих типов, также можно использовать и с типами, допускающими значение null. Эти операции возвращают значение NULL, если один или оба операнда имеют значение NULL; в противном случае операция использует содержащееся значение для вычисления результата. Пример:  
   
-     `Value` имеет тот же тип, что и базовый тип. Если `HasValue` равно `true`, то свойство `Value` содержит полезное значение. Если `HasValue` имеет значение `false`, доступ к свойству `Value` вызовет исключение <xref:System.InvalidOperationException>.  
+[!code-csharp[operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#7)]
   
- В этом примере член `HasValue` используется для проверки того, содержит ли переменная какое-либо значение, прежде чем пытаться его показать.  
+Для операторов отношения (`<`, `>`, `<=`, `>=`), если один или оба операнда имеют значение NULL, результатом будет `false`. Тут важно не полагать, что если какая-то операция сравнения (например, `<=`) возвращает `false`, то противоположное сравнение (`>`) обязательно вернет `true`. В следующем примере показано, что 10
+
+- не больше и не равно значению NULL
+- и не меньше, чем значение NULL.
   
- [!code-csharp[csProgGuideTypes#5](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_2.cs)]  
+[!code-csharp-interactive[relational and equality operators](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#8)]
   
- Проверку на наличие полезного значения можно также выполнить, как показано в следующем примере:  
+В приведенном выше примере видно, что проверка на равенство двух типов, допускающих значение NULL, которые оба равны NULL, всегда даст `true`.
+
+## <a name="boxing-and-unboxing"></a>Упаковка-преобразование и распаковка-преобразование
+
+Тип, допускающий значение NULL, [упакован](../types/boxing-and-unboxing.md) по следующим правилам:
+
+- Если <xref:System.Nullable%601.HasValue%2A> возвращает `false`, создается пустая ссылка.  
+- Если <xref:System.Nullable%601.HasValue%2A> возвращает `true`, упаковывается значение базового типа `T`, а не экземпляр <xref:System.Nullable%601>.
+
+Можно распаковать упакованный тип значения в соответствующий тип, допускающий значение NULL, как показано в следующем примере:
+
+[!code-csharp-interactive[boxing and unboxing](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#9)]
+
+## <a name="the-bool-type"></a>Тип bool?
+
+Тип `bool?`, допускающий значение NULL, может содержать три разных значения: [true](../../language-reference/keywords/true-literal.md), [false](../../language-reference/keywords/false-literal.md) и [null](../../language-reference/keywords/null.md). Тип `bool?` подобен типу Boolean в SQL. Чтобы убедиться, что результаты операторов `&` и `|` согласуются с трехзначным типом Boolean в SQL, предусмотрены следующие предопределенные операторы:
+
+- `bool? operator &(bool? x, bool? y)`  
+- `bool? operator |(bool? x, bool? y)`  
   
- [!code-csharp[csProgGuideTypes#6](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_3.cs)]  
+Семантика этих операторов определяется по следующей таблице:  
   
-## <a name="explicit-conversions"></a>Явные преобразования  
- Тип, допускающий значение NULL, может быть приведен к своему основному типу либо явно, путем приведения типа, либо при помощи свойства `Value`. Пример:  
-  
- [!code-csharp[csProgGuideTypes#7](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_4.cs)]  
-  
- Если между двумя типами данных определено пользовательское преобразование типов, то это же преобразование можно также использовать с версиями этих типов, допускающими значение null.  
-  
-## <a name="implicit-conversions"></a>Неявные преобразования  
- Для переменной типа, допускающего значение NULL, можно установить значение NULL с помощью ключевого слова `null`, как показано в следующем примере:  
-  
- [!code-csharp[csProgGuideTypes#8](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_5.cs)]  
-  
- Преобразование из обычного типа в тип, допускающий значение null, является неявным.  
-  
- [!code-csharp[csProgGuideTypes#9](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_6.cs)]  
-  
-## <a name="operators"></a>Операторы  
- Предопределенные унарные и бинарные операции, а также любые операции, определенные программистом, которые существуют для значащих типов, также можно использовать и с типами, допускающими значение null. Эти операции возвращают значение null, если операнды имеют значение null; в противном случае операция использует содержащееся значение для вычисления результата. Пример:  
-  
- [!code-csharp[csProgGuideTypes#10](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_7.cs)]  
-  
- Если при сравнении с допускающими значение NULL типами значение одного из таких типов равно NULL, а второй тип содержит другое значение, то результатом сравнения всегда является `false` , за исключением использования оператора `!=` (не равно). Тут важно не полагать, что если какая-то операция сравнения возвращает `false`, то противоположная ей операция обязательно вернет `true`. В следующем примере число 10 не больше, не меньше и не равно null. Только `num1 != num2` даст `true`.  
-  
- [!code-csharp[csProgGuideTypes#11](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_8.cs)]  
-  
- Проверка на равенство двух типов, допускающих значение NULL, которые оба равны NULL, всегда даст `true`.  
-  
-## <a name="the--operator"></a>?? Оператор  
- Оператор `??` определяет значение по умолчанию, которое используется, когда значение типа, допускающего NULL, присваивается значению типа, не допускающего NULL.  
-  
- [!code-csharp[csProgGuideTypes#12](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_9.cs)]  
-  
- Эту операцию также можно использовать с несколькими значениями типа, допускающего null. Пример:  
-  
- [!code-csharp[csProgGuideTypes#13](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/using-nullable-types_10.cs)]  
-  
-## <a name="the-bool-type"></a>Тип bool?  
- Тип `bool?`, допускающий значение NULL, может содержать три разных значения: [true](../../../csharp/language-reference/keywords/true.md), [false](../../../csharp/language-reference/keywords/false.md) и [null](../../../csharp/language-reference/keywords/null.md). Сведения о приведении bool? к bool см. в разделе [Практическое руководство. Безопасное приведение bool? к bool](../../../csharp/programming-guide/nullable-types/how-to-safely-cast-from-bool-to-bool.md).  
-  
- Тип Boolean, допускающий значение null, подобен типу Boolean в SQL. Чтобы убедиться, что результаты операторов `&` и `|` согласуются с трехзначным типом Boolean в SQL, предусмотрены следующие предопределенные операторы:  
-  
- `bool? operator &(bool? x, bool? y)`  
-  
- `bool? operator |(bool? x, bool? y)`  
-  
- Результаты этих операций приведены в следующей таблице:  
-  
-|X|y|x&y|x&#124;y|  
+|x|y|x&y|x&#124;y|  
 |-------|-------|---------|--------------|  
 |true|true|true|true|  
 |true|False|false|true|  
@@ -108,9 +106,11 @@ ms.locfileid: "33336925"
 |null|true|null|true|  
 |null|False|False|null|  
 |null|null|null|null|  
+
+Обратите внимание, что эти два оператора не следуют правилам, описанным в разделе [Операторы](#operators): результат вычисления оператора может быть отличным от NULL, даже если один из операндов имеет значение NULL.
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Типы, допускающие значения NULL](../../../csharp/programming-guide/nullable-types/index.md)  
- [Упаковка-преобразование типов, допускающих значение NULL](../../../csharp/programming-guide/nullable-types/boxing-nullable-types.md)  
- [Типы значений, допускающие значение NULL](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+## <a name="see-also"></a>См. также
+
+ [Типы, допускающие значения NULL](index.md)  
+ [Руководство по программированию на C#](../../programming-guide/index.md)  
+ [What exactly does 'lifted' mean?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/) (Что означает термин "расширенные"?)  

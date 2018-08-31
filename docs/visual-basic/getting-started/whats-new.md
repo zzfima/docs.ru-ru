@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09a113130d29336ecabb52095ca7f5809f5f0ade
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
+ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592552"
+ms.lasthandoff: 08/25/2018
+ms.locfileid: "42925615"
 ---
 # <a name="whats-new-for-visual-basic"></a>Новые возможности Visual Basic
 
@@ -23,33 +23,33 @@ ms.locfileid: "33592552"
   
 ## <a name="current-version"></a>Текущая версия
 
-Visual Basic 15.5   
+Visual Basic 15.5 / Visual Studio 2017 версии 15.5  
 Описание новых функций см. в статье [Visual Basic 15.5](#visual-basic-155)
 
 ## <a name="previous-versions"></a>Предыдущие версии
 
-Visual Basic 15.3   
+Visual Basic 15.3 / Visual Studio 2017 версии 15.3  
 Описание новых функций см. в статье [Visual Basic 15.3](#visual-basic-153)
 
-Visual Basic 2017   
+Visual Basic 2017 / Visual Studio 2017  
 Описание новых функций см. в статье [Visual Basic 2017](#visual-basic-2017)
 
-Visual Basic/Visual Studio .NET 2015   
+Visual Basic / Visual Studio 2015   
 Описание новых функций см. в статье [Visual Basic 14](#visual-basic-14)
 
-Visual Basic/Visual Studio .NET 2013  
+Visual Basic / Visual Studio 2013  
 CTP-версии платформы компиляции .NET (Roslyn)
 
-Visual Basic/Visual Studio .NET 2012   
+Visual Basic / Visual Studio 2012   
 Ключевые слова `Async` и `await`, итераторы, атрибуты сведений о вызывающем объекте
 
-Visual Basic/Visual Studio .NET 2010   
+Visual Basic, Visual Studio 2010   
 Автоматически реализуемые свойства, инициализаторы коллекций, неявное продолжение строки, динамические типы, универсальная ковариантность и контрвариантность, доступ к глобальному пространству имен
 
-Visual Basic/Visual Studio .NET 2008   
+Visual Basic / Visual Studio 2008   
 Интегрированные запросы языка (LINQ), XML-литералы, определение локального типа, инициализаторы объектов, анонимные типы, методы расширений, определение локального типа `var`, лямбда-выражения, оператор `if`, типы значений, допускающие значение NULL  
 
-Visual Basic/Visual Studio .NET 2005   
+Visual Basic / Visual Studio 2005   
 Тип `My` и вспомогательные типы (доступ к приложению, компьютеру, файловой системе, сети)
 
 Visual Basic/Visual Studio .NET 2003   
@@ -123,7 +123,7 @@ Dim number As Integer = &H_C305_F860
 
 Дополнительные сведения см. в разделе "Назначения литералов" статей, посвященных типам данных [Byte](../language-reference/data-types/byte-data-type.md#literal-assignments), [Integer](../language-reference/data-types/integer-data-type.md#literal-assignments), [Long](../language-reference/data-types/long-data-type.md#literal-assignments), [Short](../language-reference/data-types/short-data-type.md#literal-assignments), [SByte](../language-reference/data-types/sbyte-data-type.md#literal-assignments), [UInteger](../language-reference/data-types/uinteger-data-type.md#literal-assignments), [ULong](../language-reference/data-types/ulong-data-type.md#literal-assignments) и [UShort](../language-reference/data-types/ushort-data-type.md#literal-assignments).
 
-**Поддержка значений C#, возвращаемых по ссылке**
+[**Поддержка значений C#, возвращаемых по ссылке**](../programming-guide/language-features/procedures/ref-return-values.md)
 
 Начиная с версии 7.0 C# поддерживает значения, возвращаемые по ссылке. Это значит, что в случае, если вызывающий метод получает значение, возвращаемое по ссылке, он может изменить значение ссылки. Visual Basic не позволяет создавать методы со значениями, возвращаемыми по ссылке, но разрешает получать и изменять такие значения.
 
@@ -159,25 +159,25 @@ Dim number As Integer = &H_C305_F860
 [Многострочные строковые литералы](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
  Строковые литералы могут содержать последовательности новых строк.  Прежний обходной путь, связанный с использованием `<xml><![CDATA[...text with newlines...]]></xml>.Value`, больше не потребуется.  
   
-Комментарии  
+**Комментарии**  
 Комментарии можно поместить после неявных продолжений строк, внутри выражений инициализатора и среди условий выражения LINQ.  
   
- Оптимизированное разрешение полных доменных имен  
+**Оптимизированное разрешение полных доменных имен**  
  Имея код, например `Threading.Thread.Sleep(1000)`, Visual Basic выполняла поиск пространства имен «Потоки», обнаруживала, что это пространство имен было неоднозначным в потоках System.Threading и System.Windows.Threading, и сообщала об ошибке.  Теперь Visual Basic рассматривает оба возможных пространства имен одновременно.  При отображении списка завершения редактор Visual Studio отображает в нем элементы обоих типов.  
   
- Литералы даты первого года  
+ **Литералы даты с годом на первом месте**  
  Литералы даты могут быть указаны в формате гггг-мм-дд, `#2015-03-17 16:10 PM#`.  
   
- Свойства интерфейса Readonly  
+ **Свойства интерфейса Readonly**  
  С помощью свойства readwrite можно реализовать свойства интерфейса readonly.  Интерфейс гарантирует минимальную функциональность и не препятствует функционированию реализующего класса, который разрешает задавать значения для свойства.  
   
  [TypeOf \<выражение> IsNot \<тип>](../../visual-basic/language-reference/operators/typeof-operator.md)  
  Для удобства чтения кода `TypeOf` теперь можно использовать с `IsNot`.  
   
- [#Disable Warning \<ИД> и #Enable Warning \<ИД>](../../visual-basic/language-reference/directives/directives.md)  
+ [#Disable Warning \<ИД> и #Enable Warning \<ИД>](../../visual-basic/language-reference/directives/index.md)  
  Можно отключить и включить конкретные предупреждения для областей в исходном файле.  
   
- Усовершенствования комментариев в документации XML  
+ **Усовершенствования комментариев XML-документации**  
  При написании комментариев к документу разработчик получает доступ к интеллектуальному редактору и поддержку при сборке, что позволяет проверять названия параметров, грамотно обрабатывать `crefs` (универсальные типы, операторы и т. д.), выделение цветом и рефакторинг.  
   
  [Определения частичных модулей и интерфейсов](../../visual-basic/language-reference/modifiers/partial.md)  
@@ -189,10 +189,10 @@ Dim number As Integer = &H_C305_F860
  [Определения переопределений являются неявными перегрузками](../../visual-basic/language-reference/modifiers/overrides.md)  
  Если добавить в определение модификатор `Overrides`, компилятор неявно добавляет `Overloads`, чтобы в общих случаях можно было вводить меньше кода.  
   
- В аргументах атрибутов можно использовать объекты CObj.  
+ **В аргументах атрибутов можно использовать объекты CObj**  
  Компилятор, используемый для вывода ошибки, связанной с тем, что при использовании в конструкциях атрибутов CObj(...) не являлся константой.  
   
- Объявление и использование неоднозначных методов из разных интерфейсов  
+ **Объявление и использование неоднозначных методов из разных интерфейсов**  
  Ранее следующий код выдавал ошибки, которые не позволяли объявить `IMock` или вызвать `GetDetails` (если эти значения были объявлены в C#).  
   
 ```vb  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14bb5cd242a45b98a23a9d807b22aa4487d2591e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 869d64902c53e20667907b99276b9f8c6f3a2e20
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392194"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42932853"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Руководство по развертыванию .NET Framework для разработчиков
 В этом разделе приводятся сведения для разработчиков, которые планируют установить любую версию платформы с NET Framework 4.5 по [!INCLUDE[net_current](../../../includes/net-current-version.md)] вместе со своими приложениями.
@@ -47,7 +47,7 @@ ms.locfileid: "33392194"
 
 - [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и ее точечные выпуски представляют собой инкрементные расширения возможностей [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. При установке [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или доработанных выпусков в системе, где уже установлена платформа [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], сборки версии 4 заменяются более новыми версиями.
 
-- Если вы ссылаетесь на [внештатный пакет](http://msdn.microsoft.com/library/dn151288\(v=vs.110\).aspx) Майкрософт в своем приложении, сборка будет включена в пакет приложения.
+- Если вы ссылаетесь на [внештатный пакет](../get-started/the-net-framework-and-out-of-band-releases.md) Майкрософт в своем приложении, сборка будет включена в пакет приложения.
 
 - Для установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и ее точечных выпусков требуются права администратора.
 
@@ -80,7 +80,7 @@ ms.locfileid: "33392194"
 |Размер загрузки|Меньший (включает только установщик для целевой платформы) *|Больший*|
 |Языковые пакеты|Включены**|[Устанавливаются отдельно](#chain_langpack), если только не используется пакет, предназначенный для всех ОС|
 |Метод развертывания|Поддерживает все методы:<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Установка вручную](#installing_manually)<br />- [Пользовательская установка (привязка)](#chaining)|Поддерживает все методы:<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows Installer XML (WiX)](#wix)<br />- [Установка вручную](#installing_manually)<br />- [Пользовательская установка (привязка)](#chaining)|
-|Расположение загрузки для развертывания ClickOnce|Центр загрузки Майкрософт:<br /><br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4,5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Собственный сервер или Центр загрузки Майкрософт:<br /><br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
+|Расположение загрузки для развертывания ClickOnce|Центр загрузки Майкрософт:<br /><br /> - [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4,5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Собственный сервер или Центр загрузки Майкрософт:<br /><br /> - [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET Framework 4.7.1](http://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](http://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](http://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](http://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](http://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](http://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](http://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
  \* Автономный установщик больше, так как он содержит компоненты для всех целевых платформ. По завершении работы программы установки операционная система Windows кэширует только использовавшийся установщик. Если удалить автономный установщик после установки, используемое место на диске будет таким же, как при использовании веб-установщика. Если средство, используемое для создания программы установки приложения (например, [InstallAware](#installaware-deployment) или [InstallShield](#installshield-deployment)), предусматривает папку для файлов установки, которая удаляется после установки, автономный установщик может быть удален автоматически путем помещения его в папку установки.
 
@@ -247,14 +247,14 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Версия|Значение DWORD "Release"|
 |-------------|--------------------------------|
-|Платформа .NET Framework 4.7.2, установленная в Windows 10 с обновлением за апрель 2018 г.|461808|
-|.NET Framework 4.7.2, установленная во всех версиях ОС, за исключением обновления Windows 10 за апрель 2018 г.|461814|
-|Платформа .NET Framework 4.7.1 установлена в обновлении Windows 10 Creators Update|461308|
-|Платформа .NET Framework 4.7.1 установлена во всех версиях ОС, за исключением обновления Windows 10 Creators Update|461310|
+|Платформа .NET Framework 4.7.2, установленная в Windows 10 с обновлением за апрель 2018 г. и в Windows Server, версия 1803|461808|
+|Платформа .NET Framework 4.7.2, установленная на остальных версиях ОС, кроме Windows 10 с обновлением за апрель 2018 г. и Windows Server, версия 1803|461814|
+|Платформа .NET Framework 4.7.1, установленная в Windows 10 Fall Creators Update и в Windows Server, версия 1709|461308|
+|Платформа .NET Framework 4.7.1, установленная на остальных версиях ОС, кроме Windows 10 Fall Creators Update и Windows Server, версия 1709|461310|
 |.NET Framework 4.7 установлена в обновлении Windows 10 Creators Update|460798|
 |.NET Framework 4.7 установлена во всех версиях ОС, за исключением обновления Windows 10 Creators Update|460805|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] установлена в выпуске Windows 10 Anniversary Edition|394802|
-|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] установлена во всех версиях операционной системы, отличных от Windows 10 Anniversary Edition|394806|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] установлена в выпуске Windows 10 Anniversary Edition и Windows Server 2016|394802|
+|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] установлена во всех версиях операционной системы, отличных от Windows 10 Anniversary Edition и Windows Server 2016|394806|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] установлено в Windows 10 с ноябрьским обновлением|394254|
 |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] установлена во всех версиях ОС, за исключением Windows 10 с ноябрьским обновлением|394271|
 |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] установлена в Windows 10|393295|

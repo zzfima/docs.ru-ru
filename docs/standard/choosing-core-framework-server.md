@@ -4,12 +4,12 @@ description: Рекомендации по использованию реали
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: a9eaeae515041ee1d99ede5b004ecc85e453de2d
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 541bcdf69d658fd37271169c028fb64611a35655
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298192"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42934537"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
 
@@ -102,8 +102,8 @@ ms.locfileid: "36298192"
 Некоторые платформы Майкрософт и платформы сторонних поставщиков не поддерживают среду .NET Core. Например, для некоторых служб Azure, таких как Service Fabric Reliable Services с отслеживанием состояния и Service Fabric Reliable Actors, требуется среда .NET Framework. Некоторые другие службы предоставляют пакеты SDK, недоступные в среде .NET Core. Это временные обстоятельства, так как все службы Azure используют среду .NET Core. В то же время в качестве альтернативы клиентскому пакету SDK всегда можно использовать REST API.
 
 ## <a name="see-also"></a>См. также
- [Выбор между ASP.NET и ASP.NET Core](/aspnet/core/choose-aspnet-framework)  
- [Руководство по .NET Core](../core/index.md)  
+
+ [Выбор между ASP.NET и ASP.NET Core](/aspnet/core/choose-aspnet-framework) [Целевые платформы](frameworks.md) [Руководство по .NET Core](../core/index.md)  
  [Перенос кода в .NET Core из .NET Framework](../core/porting/index.md)  
  [Руководство по Docker в .NET Framework](../framework/docker/index.md)  
  [Общие сведения о компонентах .NET](components.md)  
