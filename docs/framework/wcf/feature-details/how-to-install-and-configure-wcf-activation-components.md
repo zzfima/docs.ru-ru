@@ -4,33 +4,33 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: f362bd1e4a644488e85cdeca674d46ca340bde05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd792c2c26898cd3dfd7b52d865fa83636c426eb
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491752"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253977"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Практическое руководство. Установка и настройка компонентов активации WCF
-В этом разделе описываются шаги, необходимые для настройки служба активации Windows (WAS) на [!INCLUDE[wv](../../../../includes/wv-md.md)] для размещения службы Windows Communication Foundation (WCF) служб, которые не поддерживают связь по протоколу HTTP сетевых протоколов. Настройка предполагает следующие шаги.  
+В этом разделе описываются шаги, необходимые для настройки службы активации Windows (WAS) на [!INCLUDE[wv](../../../../includes/wv-md.md)] для размещения Windows Communication Foundation (WCF) служб, которые не поддерживают связь по протоколу HTTP сетевые протоколы. Настройка предполагает следующие шаги.  
   
--   Установите (или проверьте, установлены ли) компоненты активации WCF.  
+-   Установите (или подтвердить установку) компонентов активации WCF.  
   
 -   Настройте WAS на поддержку отличных от HTTP протоколов. Выполнение описанных ниже действий позволяет настроить [!INCLUDE[wv](../../../../includes/wv-md.md)] для активации TCP.  
   
- После установки и настройки WAS, в разделе [как: размещение службы WCF в WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) процедуры для создания службы WCF, предоставляющей конечную точку отличные от HTTP, которая использует WAS.  
+ После установки и настройки WAS, см. в разделе [как: размещение службы WCF в WAS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md) для процедуры создания службы WCF, которая предоставляет конечную точку, отличные от HTTP, использующую WAS.  
   
 ### <a name="to-install-the-wcf-non-http-activation-components"></a>Установка компонентов активации WCF, работающих по отличному от HTTP протоколу  
   
-1.  Нажмите кнопку **запустить** , а затем нажмите **панели управления**.  
+1.  Нажмите кнопку **запустить** , а затем нажмите кнопку **панели управления**.  
   
 2.  Нажмите кнопку **программы**, а затем нажмите кнопку **программы и компоненты**.  
   
-3.  На **задачи** меню, нажмите кнопку **Включение или отключение компонентов**.  
+3.  На **задачи** меню, щелкните **или отключение компонентов Windows включить**.  
   
 4.  Найдите узел [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)], затем выберите и разверните его.  
   
-5.  Выберите **компоненты активации WCF не-Http** и сохраните параметр.  
+5.  Выберите **компонентов активации WCF не-Http** поле и сохранить настройки.  
   
 ### <a name="to-configure-the-was-to-support-tcp-activation"></a>Настройка WAS на поддержку протокола TCP  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33491752"
     ```  
   
     > [!NOTE]
-    >  Эта команда представляет собой одну строку текста. Эта команда включает /\<*приложения WCF*> приложение было доступно при использовании обоих http://localhost  */ \<приложения WCF >* и net.tcp:// localhost /*\<приложения WCF >*.  
+    >  Эта команда представляет собой одну строку текста. Эта команда включает /\<*приложения WCF*> осуществлять доступ к использование обеих `http://localhost/<WCF Application>` и `net.tcp://localhost/<WCF Application>`.
   
      Удалите привязку сайта к протоколу net.tcp, добавленную ранее для данного образца.  
   
@@ -104,4 +104,4 @@ ms.locfileid: "33491752"
  [Активация TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
  [Активация MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)  
  [Активация NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- [Функции размещения Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Функции размещения фабрики приложений Windows Server](http://go.microsoft.com/fwlink/?LinkId=201276)

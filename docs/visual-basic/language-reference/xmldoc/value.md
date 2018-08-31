@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <value> XML tag
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-ms.openlocfilehash: f33a4ec32b45d8996bd39f0cc49097b5fd9252e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef14836c438cf6a1de300270d9882c1e53e716ee
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602463"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43258047"
 ---
 # <a name="ltvaluegt-visual-basic"></a>&lt;значение&gt; (Visual Basic)
-Задает описание свойства.  
+Указывает описание свойства.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -26,7 +26,7 @@ ms.locfileid: "33602463"
  Описание свойства.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `<value>` тегов для описания свойства. Обратите внимание, что при добавлении свойства с помощью мастера кода в среде разработки Visual Studio добавит [ \<сводки >](../../../visual-basic/language-reference/xmldoc/summary.md) тег для нового свойства. Следует затем вручную добавить `<value>` тегов для описания значение, представляющее свойство.  
+ Используйте `<value>` тегов для описания свойства. Обратите внимание, что при добавлении свойства с помощью мастера кода в среде разработки Visual Studio добавит [ \<summary >](../../../visual-basic/language-reference/xmldoc/summary.md) тег для нового свойства. Затем следует вручную добавить `<value>` тегов для описания значения, которое представляется свойством.  
   
  Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
@@ -36,4 +36,4 @@ ms.locfileid: "33602463"
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/value_1.vb)]  
   
 ## <a name="see-also"></a>См. также  
- [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)

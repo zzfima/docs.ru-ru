@@ -15,11 +15,11 @@ ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 64b971e71019359cebc1493a410e748a1fd7b7cb
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933502"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257348"
 ---
 # <a name="converting-times-between-time-zones"></a>Преобразование времени из одного часового пояса в другой
 

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 751794746e26bd8f0ec2cd6db2f62876e78674e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b6a217e2212bb900d7ba83ccdd9cb00d30454baf
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460279"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253058"
 ---
 # <a name="loadtypelibwithresolver-function"></a>Функция LoadTypeLibWithResolver
 Загружает библиотеку типов и использует предоставленный [интерфейс ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) для разрешения любых типов, на которые библиотек.  
@@ -41,19 +41,19 @@ HRESULT LoadTypeLibWithResolver(
  [in] Путь к файлу библиотеки типов.  
   
  `regkind`  
- [in] Объект [REGKIND перечисления](https://msdn.microsoft.com/library/windows/desktop/ms221159.aspx) флаг, который определяет, как библиотека типов зарегистрирована. Его возможными значениями являются:  
+ [in] Объект [REGKIND перечисления](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind) флаг, который определяет, как библиотека типов зарегистрирована. Его возможными значениями являются:  
   
 -   `REGKIND_DEFAULT`: Используется поведение по умолчанию при регистрации.  
   
 -   `REGKIND_REGISTER`: Регистрации этой библиотеки типов.  
   
--   `REGKIND_NONE`: Не Регистрируйте Эта библиотека типов.  
+-   `REGKIND_NONE`: Не Регистрируйте этой библиотеки типов.  
   
  `pTlbResolver`  
  [in] Указатель на реализацию [интерфейс ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md).  
   
  `pptlib`  
- [out] Ссылка на библиотеку типов, которая загружается.  
+ [out] Ссылка на библиотеку типов, который загружается.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Одно из значений HRESULT, перечисленных в следующей таблице.  
@@ -67,32 +67,32 @@ HRESULT LoadTypeLibWithResolver(
 |`TYPE_E_IOERROR`|Функция не удалось записать в файл.|  
 |`TYPE_E_REGISTRYACCESS`|Не удалось открыть системную базу данных регистрации.|  
 |`TYPE_E_INVALIDSTATE`|Не удалось открыть библиотеку типов.|  
-|`TYPE_E_CANTLOADLIBRARY`|Не удалось загрузить библиотеку типов или DLL.|  
+|`TYPE_E_CANTLOADLIBRARY`|Не удается загрузить библиотеку типов или библиотеку DLL.|  
   
 ## <a name="remarks"></a>Примечания  
- [Tlbexp.exe (программа экспорта библиотек типов)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) вызовы `LoadTypeLibWithResolver` функции во время преобразования сборки типа библиотеки.  
+ [Tlbexp.exe (программа экспорта библиотек типов)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md) вызовы `LoadTypeLibWithResolver` функции во время преобразования сборки для типа библиотеки.  
   
- Эта функция загружает заданную библиотеку типов с минимальным доступом к реестру. Затем она анализирует библиотеки типов для библиотеки типов, на которые, каждый из которых необходимо загрузить и добавлены в родительскую библиотеку типов.  
+ Эта функция загружает указанной библиотеки типов с минимальным доступом к реестру. Затем функция проверяет библиотеку типов для библиотеки типов, на которые, каждый из которых необходимо загрузить и добавить в библиотеку типов родительского.  
   
- Перед загрузкой к указанной библиотеке типов, пути к файлу ссылки должны разрешаться в полный путь к файлу. Это обеспечивается за счет [метод ResolveTypeLib](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) , предоставляемая [интерфейс ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), который передается в `pTlbResolver` параметра.  
+ Прежде чем можно загрузить библиотеку типов, на которую указывает ссылка, пути к файлу ссылки должны разрешаться в полный путь к файлу. Это обеспечивается за счет [метод ResolveTypeLib](../../../../docs/framework/unmanaged-api/tlbexp/resolvetypelib-method.md) , предоставляемая [интерфейс ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md), который передается в `pTlbResolver` параметра.  
   
- Если известен полный путь к файлу библиотеки типов, на которую указывает ссылка, `LoadTypeLibWithResolver` функция загружает и добавляет эту библиотеку в родительскую библиотеку типов, создание библиотеки объединенный тип master.  
+ Если известно, полный путь к файлу библиотеки типов, на которую указывает ссылка, `LoadTypeLibWithResolver` функция загружает и добавляет эту библиотеку в родительскую библиотеку типов, Создание объединенного главную библиотеку типов.  
   
- После функции разрешается и загружает все библиотеки типов, на которые, он возвращает ссылку на библиотеку master разрешенный тип в `pptlib` параметра.  
+ После того как функция разрешает и загружает все библиотеки типов, на которые, он возвращает ссылку на библиотеку master разрешенный тип в `pptlib` параметра.  
   
- `LoadTypeLibWithResolver` Обычно вызывается функция [Tlbexp.exe (программа экспорта библиотек типов)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), который предоставляет собственный внутренний [интерфейс ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) реализацию в `pTlbResolver` параметр.  
+ `LoadTypeLibWithResolver` Обычно вызывается функция [Tlbexp.exe (программа экспорта библиотек типов)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md), который предоставляет свой собственный внутренний [интерфейс ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) реализации в `pTlbResolver` параметр.  
   
  При вызове метода `LoadTypeLibWithResolver` напрямую, необходимо создать собственные [интерфейс ITypeLibResolver](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md) реализации.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** TlbRef.h  
   
  **Библиотека:** TlbRef.lib  
   
- **Версия платформы .NET framework:** 3.5, 3.0, 2.0  
+ **Версии платформы .NET framework:** 3.5, 3.0, 2.0  
   
 ## <a name="see-also"></a>См. также  
  [Вспомогательные функции Tlbexp](../../../../docs/framework/unmanaged-api/tlbexp/index.md)  
- [Функция LoadTypeLibEx](https://msdn.microsoft.com/library/windows/desktop/ms221249\(v=vs.85\).aspx)
+ [Функция LoadTypeLibEx](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

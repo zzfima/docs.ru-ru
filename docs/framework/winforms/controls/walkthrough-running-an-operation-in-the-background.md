@@ -13,50 +13,50 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 59447bb589eb019f81beb1db2ea254a9fe3a889e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09019f24248985c0a1057873f0226ee69a30ca9d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541009"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254758"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Пример. Фоновое выполнение операции
 Если какая-либо операция будет выполняться в течение долгого времени и при этом требуется не допустить задержек в работе пользовательского интерфейса, можно использовать класс <xref:System.ComponentModel.BackgroundWorker> для выполнения операции в другом потоке.  
   
- Полный код, используемый в этом примере, в разделе [как: выполнение операции в фоновом режиме](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
+ Полный код, используемый в этом примере, см. в разделе [как: выполнение операции в фоновом режиме](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-run-an-operation-in-the-background"></a>Для запуска операции в фоновом режиме  
   
-1.  Форма будет открыта в конструкторе Windows Forms, перетащите два <xref:System.Windows.Forms.Button> управляет из **элементов** форму, а затем присвойте `Name` и <xref:System.Windows.Forms.Control.Text%2A> свойства кнопок согласно следующей таблице.  
+1.  Форма будет открыта в конструкторе Windows Forms, перетащите два <xref:System.Windows.Forms.Button> управляет из **элементов** форму, а затем задайте `Name` и <xref:System.Windows.Forms.Control.Text%2A> свойства кнопок согласно следующей таблице.  
   
     |Кнопка|Имя|Text|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**Start**|  
     |`button2`|`cancelBtn`|**Отмена**|  
   
-2.  Откройте **элементов**, нажмите кнопку **компоненты** , а затем перетащите <xref:System.ComponentModel.BackgroundWorker> в форму компонент.  
+2.  Откройте **элементов**, нажмите кнопку **компоненты** вкладке, а затем перетащите <xref:System.ComponentModel.BackgroundWorker> в форму компонент.  
   
      `backgroundWorker1` Компонент появится в **область компонентов**.  
   
-3.  В **свойства** задайте <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> свойства `true`.  
+3.  В **свойства** окне <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> свойства `true`.  
   
-4.  В **свойства** щелкните на **событий** кнопку, а затем дважды щелкните <xref:System.ComponentModel.BackgroundWorker.DoWork> и <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> событий для создания обработчиков событий.  
+4.  В **свойства** щелкните **события** кнопку, а затем дважды щелкните <xref:System.ComponentModel.BackgroundWorker.DoWork> и <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> событий, чтобы создать обработчики событий.  
   
-5.  Вставка кода требует много времени в <xref:System.ComponentModel.BackgroundWorker.DoWork> обработчика событий.  
+5.  Вставьте код требует много времени в <xref:System.ComponentModel.BackgroundWorker.DoWork> обработчик событий.  
   
-6.  Параметры, необходимые для операции с <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> свойство <xref:System.ComponentModel.DoWorkEventArgs> параметр.  
+6.  Извлечение всех параметров, необходимые для операции из <xref:System.ComponentModel.DoWorkEventArgs.Argument%2A> свойство <xref:System.ComponentModel.DoWorkEventArgs> параметр.  
   
-7.  Присвойте результат вычисления <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> свойство <xref:System.ComponentModel.DoWorkEventArgs>.  
+7.  Присвоить результат вычисления <xref:System.ComponentModel.DoWorkEventArgs.Result%2A> свойство <xref:System.ComponentModel.DoWorkEventArgs>.  
   
-     Это будет доступен для <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> обработчика событий.  
+     Это будет предоставляться <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> обработчик событий.  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#2)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#2)]  
   
-8.  Вставьте код для получения результата операции в <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> обработчика событий.  
+8.  Вставьте код для получения результата операции в <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> обработчик событий.  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#3)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#3)]  
@@ -66,14 +66,14 @@ ms.locfileid: "33541009"
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#4)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#4)]  
   
-10. В конструкторе Windows Forms дважды щелкните `startButton` для создания <xref:System.Windows.Forms.Control.Click> обработчика событий.  
+10. В конструкторе Windows Forms дважды щелкните `startButton` для создания <xref:System.Windows.Forms.Control.Click> обработчик событий.  
   
 11. Вызовите <xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> метод в <xref:System.Windows.Forms.Control.Click> обработчик событий для `startButton`.  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#5)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#5)]  
   
-12. В конструкторе Windows Forms дважды щелкните `cancelButton` для создания <xref:System.Windows.Forms.Control.Click> обработчика событий.  
+12. В конструкторе Windows Forms дважды щелкните `cancelButton` для создания <xref:System.Windows.Forms.Control.Click> обработчик событий.  
   
 13. Вызовите <xref:System.ComponentModel.BackgroundWorker.CancelAsync%2A> метод в <xref:System.Windows.Forms.Control.Click> обработчик событий для `cancelButton`.  
   
@@ -85,20 +85,20 @@ ms.locfileid: "33541009"
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#7](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#7)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#7](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#7)]  
   
-15. Нажмите клавишу F6 для построения решения и нажмите клавиши CTRL-F5 для запуска приложения вне отладчика.  
+15. Нажмите клавишу F6 для построения решения и нажмите клавишу CTRL + F5, чтобы запустить приложение вне отладчика.  
   
 > [!NOTE]
 >  Если нажать клавишу F5 для запуска приложения в отладчике, то исключение, возникающее в `TimeConsumingOperation` метод перехватывается и отображается отладчиком. При запуске приложения вне отладчика, <xref:System.ComponentModel.BackgroundWorker> обрабатывает исключение и кэширует его в <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> свойство <xref:System.ComponentModel.RunWorkerCompletedEventArgs>.  
   
-1.  Нажмите кнопку **запустить** для запуска асинхронной операции, а затем нажмите **отменить** кнопку для остановки асинхронной операции.  
+1.  Нажмите кнопку **запустить** для запуска асинхронной операции, а затем нажмите кнопку **отменить** кнопка для остановки асинхронной операции.  
   
      Результат каждой операции выводится в элементе <xref:System.Windows.Forms.MessageBox>.  
   
 ## <a name="next-steps"></a>Следующие шаги  
   
--   Реализация формы, в которой отображается ход выполнения асинхронной операции. Дополнительные сведения см. в разделе [как: реализация формы, в которой выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
+-   Реализация формы, в которой отображается ход выполнения асинхронной операции. Дополнительные сведения см. в разделе [как: реализация формы, в который выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md).  
   
--   Реализуйте класс, поддерживающий асинхронную модель для компонентов. Дополнительные сведения см. в разделе [реализации асинхронной модели, основанной на событиях](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
+-   Реализуйте класс, поддерживающий асинхронную модель для компонентов. Дополнительные сведения см. в разделе [реализации асинхронной модели на основе событий](../../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ComponentModel.BackgroundWorker>  

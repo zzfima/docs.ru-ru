@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 846d41c31687df98b019f103e42cf586a23d8ff1
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457573"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254357"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Разработка больших, быстро реагирующих приложений .NET Framework
 В этой статье приведены советы по повышению производительности крупных приложений .NET Framework или приложений, обрабатывающих большой объем данных, например файлов или баз данных. Эти советы выработаны во время перевода компиляторов C# и Visual Basic на управляемый код, кроме того, здесь приведено несколько реальных примеров из компилятора C#.  
@@ -23,7 +23,7 @@ ms.locfileid: "34457573"
   
  Когда конечные пользователи взаимодействуют с приложением, они ожидают, что оно отреагирует на их действия.  Ввод кода или обработка команд не должны блокироваться ни в каких ситуациях.  Справка должна отображаться быстро или пропадать, если пользователь продолжает ввод.  Ваше приложение не должно блокировать поток пользовательского интерфейса длительными вычислительными операциями, так как пользователь воспринимает такое приложение как работающее медленно.  
   
- Дополнительные сведения о компиляторах Roslyn [dotnet/roslyn](https://github.com/dotnet/roslyn) репозитория в GitHub.
+ Дополнительные сведения о компиляторах Roslyn [dotnet/roslyn](https://github.com/dotnet/roslyn) на сайте GitHub.
  <!-- TODO: replace with link to Roslyn conceptual docs once that's published -->
   
 ## <a name="just-the-facts"></a>Только факты  
@@ -196,7 +196,7 @@ private bool TrimmedStringStartsWith(string text, int start, string prefix) {
 // etc...  
 ```  
   
- Первая версия `WriteFormattedDocComment()` выделяла массив, несколько подстрок и усеченную подстроку, а также пустой массив `params`.  Она также выполняла проверку на наличие `"///"`.  Переработанный код использует только индексирование и ничего не выделяет.  Он находит первый символ, не являющийся пробелом, и выполняет посимвольную проверку, чтобы узнать, начинается ли строка с `"///"`.  Новый код использует `IndexOfFirstNonWhiteSpaceChar` вместо <xref:System.String.TrimStart%2A> для возврата первого индекса (после указанного начального индекса), в котором имеется символ, отличный от пробела.  Такое исправление нельзя назвать окончательным, но из него можно понять, как применять аналогичные исправления для всего решения.  Используя такой подход для всего кода, можно удалить все выделения в `WriteFormattedDocComment()`.  
+ Первая версия `WriteFormattedDocComment()` выделяла массив, несколько подстрок и усеченную подстроку, а также пустой массив `params`.  Она также выполняла проверку на наличие `"///"`.  Переработанный код использует только индексирование и ничего не выделяет.  Он находит первый символ, не являющийся пробелом, и выполняет посимвольную проверку, чтобы узнать, начинается ли строка с `"///"`.  Новый код использует `IndexOfFirstNonWhiteSpaceChar` вместо <xref:System.String.TrimStart%2A> для возврата первого индекса (после указанного начального индекса), где встречается символ без пробелов.  Такое исправление нельзя назвать окончательным, но из него можно понять, как применять аналогичные исправления для всего решения.  Используя такой подход для всего кода, можно удалить все выделения в `WriteFormattedDocComment()`.  
   
  **Пример 4: StringBuilder**  
   
@@ -277,7 +277,7 @@ private static string GetStringAndReleaseBuilder(StringBuilder sb)
  Эта простая стратегия кэширования придерживается разумного подхода к кэшированию из-за наличия ограничения размера.  Однако теперь объем кода увеличился, что требует больше затрат на обслуживание.  Вам следует внедрять стратегию кэширования только в том случае, если обнаружена проблема с производительностью, а PerfView показал, что одной из основных причин являются выделения <xref:System.Text.StringBuilder>.  
   
 ### <a name="linq-and-lambdas"></a>LINQ и лямбда-выражения  
- Использование LINQ и лямбда-выражений является отличным примером эффективных возможностей, которые позднее вам может потребоваться переписать из-за сильного негативного влияния на производительность.  
+Language-Integrated Query (LINQ), в сочетании с лямбда-выражения является примером возможностью повышения производительности. Тем не менее его использование может иметь значительное влияние на производительность со временем, и может оказаться, что вам нужно переписывать код.
   
  **Пример 5: лямбда-выражения, List\<T> и IEnumerable\<T>**  
   
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- В первой строке [лямбда-выражение](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)`s => s.Name == name`[удерживает](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) локальную переменную `name`.  Это означает, что в дополнение к выделению объекта для [делегата](~/docs/csharp/language-reference/keywords/delegate.md), содержащегося в `predicate`, код выделяет статический класс для среды, которая перехватывает значение `name`.  Компилятор формирует код, аналогичный следующему:  
+ В первой строке [лямбда-выражение](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [удерживает](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) локальной переменной `name`.  Это означает, что в дополнение к выделению объекта для [делегата](~/docs/csharp/language-reference/keywords/delegate.md), содержащегося в `predicate`, код выделяет статический класс для среды, которая перехватывает значение `name`.  Компилятор формирует код, аналогичный следующему:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -412,7 +412,7 @@ class Compilation { /*...*/
   
  **Исправление для примера 6**  
   
- Чтобы удалить завершенное <xref:System.Threading.Tasks.Task> распределения, которые можно кэшировать объект задачи с завершенным результатом:  
+ Чтобы удалить завершенное <xref:System.Threading.Tasks.Task> распределения, можно кэшировать объект задачи с завершенным результатом:  
   
 ```csharp  
 class Compilation { /*...*/  
@@ -462,12 +462,12 @@ class Compilation { /*...*/
 -   Выделения памяти значат больше всего — именно на них команда разработчиков платформы компиляторов потратила больше всего времени, стремясь повысить производительность новых компиляторов.  
   
 ## <a name="see-also"></a>См. также  
- [Видео представления этого раздела](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
+ [Видеозапись презентации по данному разделу](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [Руководство по профилированию производительности для начинающих](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [Производительность](../../../docs/framework/performance/index.md)  
  [Советы по повышению производительности .NET](http://msdn.microsoft.com/library/ms973839.aspx)  
- [Средство анализа производительности для Windows Phone](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Поиск ограничений приложений с профилировщиком Visual Studio](http://msdn.microsoft.com/magazine/cc337887.aspx)  
- [Канал 9 учебники по](http://channel9.msdn.com/Series/PerfView-Tutorial)  
+ [Средство анализа производительности Windows Phone](http://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Поиск ограничений приложений с Visual Studio Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Channel 9 учебники по PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial)  
  [Советы по повышению производительности высокого уровня](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
- [DotNet/roslyn репозитория в GitHub](https://github.com/dotnet/roslyn)
+ [репозиторий DotNet/roslyn на GitHub](https://github.com/dotnet/roslyn)

@@ -1,18 +1,18 @@
 ---
-title: '&lt;в разделе&gt; (Visual Basic)'
+title: '&lt;см. в разделе&gt; (Visual Basic)'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: e790f8abd216e198ff5077beab6f857e39981d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78311651593d3d4a47c723f64a9a74d4660f7c90
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602084"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254066"
 ---
-# <a name="ltseegt-visual-basic"></a>&lt;в разделе&gt; (Visual Basic)
+# <a name="ltseegt-visual-basic"></a>&lt;см. в разделе&gt; (Visual Basic)
 Указывает ссылку на другой член.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -26,14 +26,14 @@ ms.locfileid: "33602084"
  Ссылка на член или поле, которые доступны для вызова из текущей среды компиляции. Компилятор проверяет, что данный элемент кода существует и передает `member` имени элемента в выходных данных XML. `member` необходимо заключать в двойные кавычки (" ").  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `<see>` тег, чтобы указать ссылку в тексте. Используйте [ \<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md) для указания текста, который может отображаться в разделе «См. также».  
+ Используйте `<see>` тег, чтобы указать ссылку из текста. Используйте [ \<seealso >](../../../visual-basic/language-reference/xmldoc/seealso.md) для указания текста, который может отображаться в разделе «См. также».  
   
  Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере используется `<see>` тегом `UpdateRecord` раздел для обращения к примечаний `DoesRecordExist` метод.  
+ В этом примере используется `<see>` тегом `UpdateRecord` раздел для ссылки на примечаний `DoesRecordExist` метод.  
   
  [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/see_1.vb)]  
   
 ## <a name="see-also"></a>См. также  
- [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)

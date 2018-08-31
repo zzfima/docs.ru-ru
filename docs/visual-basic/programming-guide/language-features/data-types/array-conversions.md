@@ -12,28 +12,28 @@ helpviewer_keywords:
 - conversions [Visual Basic], array types
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
-ms.openlocfilehash: a179b7cf5b82132db88fb5412f0ca4be207f0987
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93e6365a70f52f730b016cd4d4ac9382baeeba55
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33651470"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255154"
 ---
 # <a name="array-conversions-visual-basic"></a>Преобразование массивов (Visual Basic)
 Тип массива можно преобразовать в другой тип массива при соблюдении следующих условий:  
   
--   **Равенство ранга.** Ранги двух массивов должны быть одинаковыми, то есть они должны иметь одинаковое число измерений. Однако длины соответствующих измерений не обязательно должны быть одинаковыми.  
+-   **Равенство ранга.** Ранги двух массивов должны быть одинаковыми, то есть они должны иметь одинаковое количество измерений. Однако длины соответствующих измерений не обязательно должны быть одинаковыми.  
   
--   **Тип данных элемента.** Типы данных элементов обоих массивов должны быть ссылочными типами. Не удается преобразовать `Integer` массив `Long` или даже к `Object` массива, так как тип по крайней мере одно значение. Дополнительные сведения см. в разделе [типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
+-   **Тип данных элемента.** Типы данных элементов обоих массивов должны быть ссылочными типами. Не удается преобразовать `Integer` массив `Long` или даже для `Object` массива, так как тип по крайней мере одно значение. Дополнительные сведения см. в разделе [типов значений и ссылочных типов](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md).  
   
--   **Возможность преобразования.** Необходимо, расширяющее или сужающее преобразование между типами элементов двух массивов. Пример, который не соответствует этим требованиям — попытка преобразования между `String` массива и массив класса, производного от <xref:System.Attribute?displayProperty=nameWithType>. Эти два типа не имеют ничего общего, и преобразование любого типа, не существует между ними.  
+-   **Возможность преобразования.** Расширяющее или сужающее преобразование должно быть возможно между типами элементов двух массивов. Например, не соответствует этим требованиям, попытка преобразования между `String` массива, а также массив класс производным от <xref:System.Attribute?displayProperty=nameWithType>. Эти два типа не имеют ничего общего и преобразование любого типа не существует между ними.  
   
- Преобразование одного типа массива в другой расширяющее или сужающее в зависимости от ли расширяющее или сужающее преобразование соответствующих элементов. Для получения дополнительной информации см. [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Это преобразование одного типа массива в другой расширяющего или сужающего в зависимости от ли расширяющее или сужающее преобразование соответствующих элементов. Для получения дополнительной информации см. [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
 ## <a name="conversion-to-an-object-array"></a>Преобразование в массив объектов  
- При объявлении `Object` массив без инициализации, его тип элемента — `Object` до тех пор, пока он не будет инициализирован. При установке в массив определенного класса, он принимает тип этого класса. Однако его базовому типу по-прежнему `Object`, и можно позднее задать для него значение массива несвязанного класса. Поскольку все классы являются производными от `Object`, можно изменить тип элемента массива из любого класса для любого другого класса.  
+ При объявлении `Object` массива без инициализации, его тип элемента — `Object` до тех пор, пока он не будет инициализирован. При установке его на массив определенного класса, он принимает тип этого класса. Тем не менее, его базовым типом является по-прежнему `Object`, и можно впоследствии разместить его в другой массив несвязанного класса. Так как все классы являются производными от `Object`, можно изменить тип элемента массива из любого класса к любому другому классу.  
   
- В следующем примере, не существует преобразования между типами `student` и `String`, но оба является производным от `Object`, поэтому все присвоения являются допустимыми.  
+ В следующем примере, не существует преобразования между типами `student` и `String`, но оба являются производными от `Object`, поэтому все назначения являются допустимыми.  
   
 ```  
 ' Assume student has already been defined as a class.  
@@ -47,9 +47,9 @@ testArray = names
 ```  
   
 ### <a name="underlying-type-of-an-array"></a>Базовый тип массива  
- Если изначально объявить массив с определенным классом, что класс является его базовый тип элемента. Если в дальнейшем массив другого класса, необходимо выполнить преобразование между двумя классами.  
+ Если изначально объявляется массив с определенным классом, его базовый тип элемента является этот класс. Если в дальнейшем массив другого класса, необходимо выполнить преобразование между двумя классами.  
   
- В следующем примере `students` — `student` массива. Так как не существует преобразования между `String` и `student`, последний оператор завершается с ошибкой.  
+ В следующем примере `students` является `student` массива. Так как не существует преобразования между `String` и `student`, последняя инструкция завершается неудачно.  
   
 ```  
 Dim students() As student  
@@ -61,10 +61,10 @@ students = names
   
 ## <a name="see-also"></a>См. также  
  [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Преобразования типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+ [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Явные и неявные преобразования](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
  [Преобразования значений между строковыми и другими типами](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
- [Как: преобразование объекта к другому типу в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [Типы данных](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Практическое: преобразование объекта в другой тип в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
+ [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)  
  [Функции преобразования типов](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)

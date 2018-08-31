@@ -1,15 +1,15 @@
 ---
-title: 'Как: извлечение значения элемента (LINQ to XML) (Visual Basic)'
+title: 'Практическое: извлечение значений элемента (LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 76b9b2a5-b3ba-49da-ba74-82100e1bd21c
 ms.openlocfilehash: ff2a1712a79bdedd74fe51391f01dd900ae585e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643839"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254231"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Как: извлечение значения элемента (LINQ to XML) (Visual Basic)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-visual-basic"></a>Практическое: извлечение значений элемента (LINQ to XML) (Visual Basic)
 В этом разделе показано получение значений элементов. Это можно сделать двумя основными способами. Первый способ состоит в приведении <xref:System.Xml.Linq.XElement> или <xref:System.Xml.Linq.XAttribute> к желаемому типу. Оператор явного преобразования, который преобразует содержимое элемента или атрибута в указанный тип и присваивает полученное значение указанной переменной. Иначе можно использовать свойство <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> или <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType>.  
   
  При использовании Visual Basic лучшим подходом является использование свойства <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType>.  

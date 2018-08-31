@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: b7827206d6e145b559d9716df5ec4a98ac4ea0b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32bd0912b0bae3340cffed010fc67431d0efb376
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591824"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43252951"
 ---
 # <a name="date-data-type-visual-basic"></a>Тип данных Date (Visual Basic)
 Содержит 64-разрядные (8-байтные) значения IEEE, представляющие даты в диапазоне от 1 января 0001 года до 31 декабря 9999 года и время от 00:00:00 (полночь) до 23:59:9999999. Каждое приращение представляет 100 наносекунд затраченного времени с начала 1 января 1 года по григорианскому календарю. Максимальное значение представляет 100 наносекунд перед началом 1 января 10 000 года.  
@@ -63,7 +63,7 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 -   **Вопросы взаимодействия.** При взаимодействие с компонентами, которые не написаны для платформы .NET Framework (например, автоматизация или COM-объекты), необходимо помнить, что в других средах типы даты и времени несовместимы с типом `Date` Visual Basic. Если вы передаете аргумент даты и времени такому компоненту, объявите его `Double`, а не как `Date` в новом коде Visual Basic и используйте методы преобразования <xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> и <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType>.  
   
--   **Символы типов.** `Date` не имеет знак типа литерала или знак типа идентификатора. Однако компилятор обрабатывает литералы, заключенные в решетки (`# #`), как `Date`.  
+-   **Символы типа.** `Date` не имеет знак типа литерала или знак типа идентификатора. Однако компилятор обрабатывает литералы, заключенные в решетки (`# #`), как `Date`.  
   
 -   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.DateTime?displayProperty=nameWithType>.  
   
@@ -76,7 +76,7 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
   
 ## <a name="see-also"></a>См. также  
  <xref:System.DateTime?displayProperty=nameWithType>  
- [Типы данных](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Типы данных](../../../visual-basic/language-reference/data-types/index.md)  
  [Строки стандартных форматов даты и времени](../../../standard/base-types/standard-date-and-time-format-strings.md)  
  [Строки настраиваемых форматов даты и времени](../../../standard/base-types/custom-date-and-time-format-strings.md)  
  [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

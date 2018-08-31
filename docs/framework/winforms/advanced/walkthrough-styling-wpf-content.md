@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: d02e48daad705b29cb7e179417f665c34857896e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f33ce76e8c14fc84f6429bc48d34437b4f0d97d0
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529208"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257413"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Пошаговое руководство. Применение стилей к содержимому WPF
 В этом пошаговом руководстве показано, как применить стили к элементу управления Windows Presentation Foundation (WPF), размещенному на форме Windows Forms.  
@@ -25,7 +25,7 @@ ms.locfileid: "33529208"
 -   применение стиля к элементу управления WPF.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
@@ -40,22 +40,22 @@ ms.locfileid: "33529208"
   
 #### <a name="to-create-the-project"></a>Создание проекта  
   
--   Создайте новый проект приложения Windows Forms в Visual Basic или Visual C# с именем `StylingWpfContent`.  
+-   Создание нового проекта приложения Windows Forms в Visual Basic или Visual C# с именем `StylingWpfContent`.  
   
 ## <a name="creating-the-wpf-control-types"></a>Создание типов элемента управления WPF  
  После добавления в проект типа элемента управления WPF можно разместить его в элементе управления <xref:System.Windows.Forms.Integration.ElementHost>.  
   
 #### <a name="to-create-wpf-control-types"></a>Создание типов элемента управления WPF  
   
-1.  Добавьте в решение новый проект WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового WPF содержимого в формах Windows Forms во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Добавьте в решение новый проект WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового содержимого WPF в формах Windows Forms во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
 2.  Убедитесь в том, что элемент `UserControl1` выбран в представлении конструирования. Дополнительные сведения см. в разделе [как: Выбор и перемещение элементов в рабочей области конструирования](http://msdn.microsoft.com/library/54cb70b6-b35b-46e4-a0cc-65189399c474).  
   
-3.  В **свойства** задайте значение <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства `200`.  
+3.  В **свойства** окна, установите для параметра <xref:System.Windows.FrameworkElement.Width%2A> и <xref:System.Windows.FrameworkElement.Height%2A> свойства `200`.  
   
-4.  Добавить <xref:System.Windows.Controls.Button?displayProperty=nameWithType> управления <xref:System.Windows.Controls.UserControl> и задать значение <xref:System.Windows.Controls.ContentControl.Content%2A> свойства **отменить**.  
+4.  Добавить <xref:System.Windows.Controls.Button?displayProperty=nameWithType> управления <xref:System.Windows.Controls.UserControl> и установите для параметра <xref:System.Windows.Controls.ContentControl.Content%2A> свойства **отменить**.  
   
-5.  Добавьте второй <xref:System.Windows.Controls.Button?displayProperty=nameWithType> управления <xref:System.Windows.Controls.UserControl> и задать значение <xref:System.Windows.Controls.ContentControl.Content%2A> свойства **ОК**.  
+5.  Добавьте второй <xref:System.Windows.Controls.Button?displayProperty=nameWithType> управления <xref:System.Windows.Controls.UserControl> и установите для параметра <xref:System.Windows.Controls.ContentControl.Content%2A> свойства **ОК**.  
   
 6.  Выполните построение проекта.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "33529208"
   
 3.  Новый стиль применяется для элемента управления button.  
   
-4.  Из **отладки** последовательно выберите пункты **начать отладку** для запуска приложения.  
+4.  Из **Отладка** меню, выберите **начать отладку** для запуска приложения.  
   
 5.  Нажмите кнопки OK и Отмена и просмотрите  различия.  
   
@@ -154,6 +154,6 @@ ms.locfileid: "33529208"
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [Миграция и взаимодействие систем](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [Использование элементов управления WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [Конструктор WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
  [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [Стилизация и использование шаблонов](../../../../docs/framework/wpf/controls/styling-and-templating.md)

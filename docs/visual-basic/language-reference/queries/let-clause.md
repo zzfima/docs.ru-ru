@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Let clause [Visual Basic]
 - Let statement [Visual Basic]
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
-ms.openlocfilehash: 6484da5329c8240735b7c35f506637dd01cbeda4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34c0fd239d9e08dab4a107cb8447941e7ab3ecbe
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604475"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255825"
 ---
 # <a name="let-clause-visual-basic"></a>Предложение Let (Visual Basic)
 Вычисляет значение и присваивает его новой переменной в запросе.  
@@ -29,21 +29,21 @@ Let variable = expression [, ...]
 |Термин|Определение|  
 |---|---|  
 |`variable`|Обязательно. Псевдоним, который может использоваться для ссылки на результаты предоставленного выражения.|  
-|`expression`|Обязательно. Выражение, оценивается и назначен переменной.|  
+|`expression`|Обязательно. Выражение, будут вычисляются и присваиваются переменной.|  
   
 ## <a name="remarks"></a>Примечания  
- `Let` Предложение позволяет вычислить значения для каждого результата запроса и ссылаться на них с помощью псевдонима. Псевдоним может использоваться в других предложениях, таких как `Where` предложения. `Let` Предложение позволяет создавать инструкции запроса, который является более удобным для чтения, поскольку можно указать псевдоним для условия выражения, включенного в запрос и заменять этот псевдоним при каждом условия выражения.  
+ `Let` Предложение позволяет вычислить значения для каждого результат запроса и ссылаться на них с помощью псевдонима. Псевдоним может использоваться в других предложениях, таких как `Where` предложение. `Let` Предложение позволяет создать оператор запроса, который является более удобным для чтения, поскольку можно указать псевдоним для условия выражения, включенного в запрос и заменять этот псевдоним каждый раз, используется предложение выражения.  
   
- Можно включить любое количество `variable` и `expression` назначения в `Let` предложения. Каждое назначение разделяются точкой с запятой (,).  
+ Можно включить любое число `variable` и `expression` назначения в `Let` предложение. После каждого назначения следует разделяйте запятыми (,).  
   
 ## <a name="example"></a>Пример  
- Следующий пример кода использует `Let` предложение для вычисления 10% скидки на продукты.  
+ В следующем примере кода используется `Let` предложение для вычисления скидку 10% на продукты.  
   
  [!code-vb[VbSimpleQuerySamples#16](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/let-clause_1.vb)]  
   
 ## <a name="see-also"></a>См. также  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
- [Запросы](../../../visual-basic/language-reference/queries/queries.md)  
+ [Запросы](../../../visual-basic/language-reference/queries/index.md)  
  [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)  
  [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)

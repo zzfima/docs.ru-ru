@@ -3,11 +3,11 @@ title: 'Параметры значения (F #)'
 description: 'Дополнительные сведения о типе параметра значения F #, — версии структуры типа параметра.'
 ms.date: 06/16/2018
 ms.openlocfilehash: 4c255cbbcfd9cb480230de09cd370a401c87343a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42936579"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43257059"
 ---
 # <a name="value-options"></a>Параметры значения
 

@@ -1,5 +1,5 @@
 ---
-title: 'Как: перейти назад по истории навигации'
+title: 'Практическое: перейти назад по журналу навигации'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - history [WPF], navigating back
 - navigation [WPF], through navigation history (back)
 ms.assetid: 9343234b-d864-441d-b8a7-d895cba80a87
-ms.openlocfilehash: 9acbc5d3388a8df0ec7d7b5326f449f092f0cb03
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7266c9486524e962a859c34c9be5ab8f6d7bf7d5
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546679"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256701"
 ---
-# <a name="how-to-navigate-back-through-navigation-history"></a>Как: перейти назад по истории навигации
-В этом примере показано, как перейти к записям журнала переходов.  
+# <a name="how-to-navigate-back-through-navigation-history"></a>Практическое: перейти назад по журналу навигации
+В этом примере показано, как для перехода к записям журнала переходов.  
   
 ## <a name="example"></a>Пример  
- Код, который запускается из содержимого, размещенного в <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame> использовать <xref:System.Windows.Navigation.NavigationService>, или [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)] можно перейти назад по истории навигации, одной записи за раз.  
+ Код, выполняемый из содержимого, размещенного в <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame> с помощью <xref:System.Windows.Navigation.NavigationService>, или [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)] можно перейти назад по журналу навигации, одной записи за раз.  
   
- Навигация на одну запись требуется сначала проверить наличие записей в журнале переходов назад путем проверки **CanGoBack** свойства перед переходом назад на одну запись вызвать **GoBack** метод. Это показано в следующем примере:  
+ Навигация влево на одну запись сначала требуется выполнить проверку, записи в журнале переходов назад, проверяя **CanGoBack** свойства, прежде чем переход назад на одну запись, вызвав **GoBack** метод. Это показано в следующем примере:  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
  [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
@@ -29,4 +29,4 @@ ms.locfileid: "33546679"
  **CanGoBack** и **GoBack** реализуются <xref:System.Windows.Navigation.NavigationWindow>, <xref:System.Windows.Controls.Frame>, и <xref:System.Windows.Navigation.NavigationService>.  
   
 > [!NOTE]
->  При вызове метода **GoBack**, и нет ни одной записи в журнале переходов назад <xref:System.InvalidOperationException> возникает.
+>  При вызове метода **GoBack**, и нет записей в журнале переходов назад, <xref:System.InvalidOperationException> возникает.
