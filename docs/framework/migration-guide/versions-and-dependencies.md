@@ -8,11 +8,11 @@ ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2575d6fbc5e8a26da301826ef8f7b0611a84871e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
-ms.translationtype: MT
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000119"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255565"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Версии и зависимости платформы .NET Framework
 В каждую версию платформы .NET Framework входит среда CLR, библиотеки базовых классов и другие управляемые библиотеки. В этом разделе описаны основные особенности различных версий платформы .NET Framework, приведены сведения о базовых версиях среды CLR и соответствующих средах разработки, а также указаны версии, устанавливаемые системой Windows.  
