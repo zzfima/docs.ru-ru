@@ -4,24 +4,24 @@ description: Узнайте, как протестировать опублик�
 author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
-ms.openlocfilehash: dbce1b6e616916e60e56318b773e8fcecbc55580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e99000996f5dfa9f9d4f9b823e36ecbe325da835
+ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210257"
+ms.lasthandoff: 08/26/2018
+ms.locfileid: "42936030"
 ---
-# <a name="test-published-output-with-dotnet-vstest"></a><span data-ttu-id="f8b6e-103">Проверка опубликованных выходных данных с помощью dotnet vstest</span><span class="sxs-lookup"><span data-stu-id="f8b6e-103">Test published output with dotnet vstest</span></span>
+# <a name="test-published-output-with-dotnet-vstest"></a><span data-ttu-id="849b4-103">Проверка опубликованных выходных данных с помощью dotnet vstest</span><span class="sxs-lookup"><span data-stu-id="849b4-103">Test published output with dotnet vstest</span></span>
 
-<span data-ttu-id="f8b6e-104">Чтобы проверить опубликованные выходные данные, выполните команду `dotnet vstest`.</span><span class="sxs-lookup"><span data-stu-id="f8b6e-104">You can run tests on already published output by using the `dotnet vstest` command.</span></span> <span data-ttu-id="f8b6e-105">Эту команду можно использовать в проверках xUnit, MSTest и NUnit.</span><span class="sxs-lookup"><span data-stu-id="f8b6e-105">This will work on xUnit, MSTest, and NUnit tests.</span></span> <span data-ttu-id="f8b6e-106">Найдите DLL-файл, который является частью опубликованных выходных данных, и выполните эту команду:</span><span class="sxs-lookup"><span data-stu-id="f8b6e-106">Simply locate the DLL file that was part of your published output and run:</span></span>
+<span data-ttu-id="849b4-104">Чтобы проверить опубликованные выходные данные, выполните команду `dotnet vstest`.</span><span class="sxs-lookup"><span data-stu-id="849b4-104">You can run tests on already published output by using the `dotnet vstest` command.</span></span> <span data-ttu-id="849b4-105">Эту команду можно использовать в проверках xUnit, MSTest и NUnit.</span><span class="sxs-lookup"><span data-stu-id="849b4-105">This will work on xUnit, MSTest, and NUnit tests.</span></span> <span data-ttu-id="849b4-106">Найдите DLL-файл, который является частью опубликованных выходных данных, и выполните эту команду:</span><span class="sxs-lookup"><span data-stu-id="849b4-106">Simply locate the DLL file that was part of your published output and run:</span></span>
 
 ```
 dotnet vstest <MyPublishedTests>.dll
 ```
 
-<span data-ttu-id="f8b6e-107">`<MyPublishedTests>` — это имя опубликованного тестового проекта.</span><span class="sxs-lookup"><span data-stu-id="f8b6e-107">where `<MyPublishedTests>` is the name of your published test project.</span></span>
+<span data-ttu-id="849b4-107">`<MyPublishedTests>` — это имя опубликованного тестового проекта.</span><span class="sxs-lookup"><span data-stu-id="849b4-107">where `<MyPublishedTests>` is the name of your published test project.</span></span>
 
-## <a name="example-of-running-tests-on-a-published-dll"></a><span data-ttu-id="f8b6e-108">Пример тестирования опубликованного DLL-файла</span><span class="sxs-lookup"><span data-stu-id="f8b6e-108">Example of running tests on a published DLL</span></span>
+## <a name="example-of-running-tests-on-a-published-dll"></a><span data-ttu-id="849b4-108">Пример тестирования опубликованного DLL-файла</span><span class="sxs-lookup"><span data-stu-id="849b4-108">Example of running tests on a published DLL</span></span>
 
 ```
 dotnet new mstest -o MyProject.Tests
@@ -31,8 +31,9 @@ dotnet vstest out/MyProject.Tests.dll
 ```
 
 > [!NOTE]
-> <span data-ttu-id="f8b6e-109">Примечание. Если приложение не предназначено для платформы `netcoreapp`, вы все равно можете выполнить команду `dotnet vstest`, передав требуемую версию .NET Framework с помощью флага платформы.</span><span class="sxs-lookup"><span data-stu-id="f8b6e-109">Note: If your app is targeting a framework other than `netcoreapp` you can still run the `dotnet vstest` command by passing in the targeted framework with a framework flag.</span></span> <span data-ttu-id="f8b6e-110">Например, `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`.</span><span class="sxs-lookup"><span data-stu-id="f8b6e-110">For example, `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`.</span></span> <span data-ttu-id="f8b6e-111">В обновлении 5 для Visual Studio 2017 нужная платформа определяется автоматически.</span><span class="sxs-lookup"><span data-stu-id="f8b6e-111">In Visual Studio 2017 Update 5 the desired framework is automatically detected.</span></span>
+> <span data-ttu-id="849b4-109">Примечание. Если приложение не предназначено для платформы `netcoreapp`, вы все равно можете выполнить команду `dotnet vstest`, передав требуемую версию .NET Framework с помощью флага платформы.</span><span class="sxs-lookup"><span data-stu-id="849b4-109">Note: If your app is targeting a framework other than `netcoreapp` you can still run the `dotnet vstest` command by passing in the targeted framework with a framework flag.</span></span> <span data-ttu-id="849b4-110">Например, `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`.</span><span class="sxs-lookup"><span data-stu-id="849b4-110">For example, `dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`.</span></span> <span data-ttu-id="849b4-111">В обновлении 5 для Visual Studio 2017 нужная платформа определяется автоматически.</span><span class="sxs-lookup"><span data-stu-id="849b4-111">In Visual Studio 2017 Update 5 the desired framework is automatically detected.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="f8b6e-112">См. также</span><span class="sxs-lookup"><span data-stu-id="f8b6e-112">See also</span></span>
- [<span data-ttu-id="f8b6e-113">Модульное тестирование C# в .NET Core с использованием dotnet test и xUnit</span><span class="sxs-lookup"><span data-stu-id="f8b6e-113">Unit Testing with dotnet test and xUnit</span></span>](unit-testing-with-dotnet-test.md)  
- [<span data-ttu-id="f8b6e-114">Модульное тестирование кода C# с использованием MSTest и .NET Core</span><span class="sxs-lookup"><span data-stu-id="f8b6e-114">Unit Testing with dotnet test and MSTest</span></span>](unit-testing-with-mstest.md)  
+## <a name="see-also"></a><span data-ttu-id="849b4-112">См. также</span><span class="sxs-lookup"><span data-stu-id="849b4-112">See also</span></span>
+- [<span data-ttu-id="849b4-113">Модульное тестирование C# в .NET Core с использованием dotnet test и xUnit</span><span class="sxs-lookup"><span data-stu-id="849b4-113">Unit Testing with dotnet test and xUnit</span></span>](unit-testing-with-dotnet-test.md)
+- [<span data-ttu-id="849b4-114">Модульное тестирование с использованием dotnet test и xUnit</span><span class="sxs-lookup"><span data-stu-id="849b4-114">Unit Testing with dotnet test and NUnit</span></span>](unit-testing-with-nunit.md)
+- [<span data-ttu-id="849b4-115">Модульное тестирование кода C# с использованием MSTest и .NET Core</span><span class="sxs-lookup"><span data-stu-id="849b4-115">Unit Testing with dotnet test and MSTest</span></span>](unit-testing-with-mstest.md)
