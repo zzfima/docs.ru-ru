@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40eeeab159bdef9fc286374fde8c1c1d3a9f5c2b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 7aacb6ca64a8b45a9b54b3f9d8785c7c61a07e09
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105658"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254316"
 ---
 # <a name="file-and-stream-io"></a>Файловый и потоковый ввод-вывод
 Файловый и потоковый ввод-вывод относятся к передаче данных с носителя информации или на него. В .NET Framework пространства имен `System.IO` содержат типы, которые обеспечивают как синхронные, так и асинхронные операции чтения и записи для потоков и файлов. Кроме того, эти пространства имен содержат типы, выполняющие сжатие и распаковку файлов, а также типы, которые обеспечивают взаимодействие через каналы и последовательные порты.  
@@ -120,7 +120,7 @@ ms.locfileid: "37105658"
 ## <a name="isolated-storage"></a>Изолированное хранилище  
  Изолированное хранилище — это механизм хранения данных, обеспечивающий изоляцию и безопасность путем определения стандартизованных способов сопоставления кода с хранимыми данными. Хранилище предоставляет виртуальную файловую систему, изолированную по пользователю, сборке и (необязательно) домену. Изолированное хранилище особенно полезно в том случае, когда приложение не имеет разрешения на доступ к файлам пользователя. Можно сохранить параметры или файлы для приложения таким способом, который контролируется политикой безопасности компьютера.  
   
- Изолированное хранилище недоступно для приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]; вместо этого используйте классы данных приложения в пространстве имен [Windows.Storage](/uwp/api/Windows.Storage). Дополнительные сведения см. в статье [Данные приложения](/previous-versions/windows/apps/hh464917(v=win.10)) в Центре разработки для Windows.  
+ Изолированное хранилище недоступно для приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]; вместо этого используйте классы данных приложения в пространстве имен [Windows.Storage](/uwp/api/Windows.Storage). Дополнительные сведения см. в статье [Данные приложения](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) в Центре разработки для Windows.  
   
  Часто используются следующие классы, реализующие изолированное хранилище:  
   
@@ -139,7 +139,7 @@ ms.locfileid: "37105658"
   
 -   Специальные типы, относящиеся к операциям с файлами, такие как <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> и <xref:System.IO.DirectoryInfo>, не включены в [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Вместо этого используйте типы в пространстве имен [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) [!INCLUDE[wrt](../../../includes/wrt-md.md)], например [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) и [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
--   Изолированное хранилище недоступно; вместо этого используйте [данные приложения](/previous-versions/windows/apps/hh464917(v=win.10)).  
+-   Изолированное хранилище недоступно; вместо этого используйте [данные приложения](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Используйте асинхронные методы, такие как <xref:System.IO.Stream.ReadAsync%2A> и <xref:System.IO.Stream.WriteAsync%2A>, чтобы предотвратить блокировку потока пользовательского интерфейса.  
   
@@ -147,12 +147,12 @@ ms.locfileid: "37105658"
   
  При необходимости можно осуществлять преобразование между потоками .NET Framework и потоками среды выполнения Windows. Дополнительные сведениях см. в статьях [Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) и [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
- Дополнительные сведения об операциях ввода-вывода в приложении [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] см. в статье [Краткое руководство: чтение и запись файла](/previous-versions/windows/apps/hh758325(v=win.10)).  
+ Дополнительные сведения об операциях ввода-вывода в приложении [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] см. в статье [Краткое руководство: чтение и запись файла](https://docs.microsoft.com/previous-versions/windows/apps/hh758325(v=win.10)).  
   
 ## <a name="io-and-security"></a>Ввод-вывод и безопасность  
  При использовании классов в пространстве имен <xref:System.IO?displayProperty=nameWithType> необходимо выполнить требования безопасности операционной системы, такие как списки управления доступом для контроля доступа к файлам и каталогам. Это требование дополняет остальные требования <xref:System.Security.Permissions.FileIOPermission>. Списками управления доступом можно управлять программно. Дополнительные сведения см. в разделе [Практическое руководство. Добавление или удаление записей списка управления доступом](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
   
- По умолчанию политика безопасности не позволяет обращаться к файлам на компьютере пользователя через Интернет или из приложений интрасети. Поэтому при составлении кода не используйте классы ввода-вывода, которым нужен путь к физическому файлу, загружаемому через Интернет или интрасеть. Вместо этого используйте [изолированное хранилище](../../../docs/standard/io/isolated-storage.md) для обычных приложений .NET Framework или [данные приложения](/previous-versions/windows/apps/hh464917(v=win.10)) для приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+ По умолчанию политика безопасности не позволяет обращаться к файлам на компьютере пользователя через Интернет или из приложений интрасети. Поэтому при составлении кода не используйте классы ввода-вывода, которым нужен путь к физическому файлу, загружаемому через Интернет или интрасеть. Вместо этого используйте [изолированное хранилище](../../../docs/standard/io/isolated-storage.md) для обычных приложений .NET Framework или [данные приложения](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) для приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
  Проверка безопасности выполняется только при создании потока. Поэтому не рекомендуется открывать поток, а затем передавать его коду с меньшим уровнем доверия или доменам приложений.  
   

@@ -5,21 +5,21 @@ helpviewer_keywords:
 - programming [Visual Basic], Visual Basic
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
-ms.openlocfilehash: 74fd333b97f2e5fbbee3771f6715cc36bbd12037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ffe44545e60bb74563180a6a5c87c78526ab566
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587414"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43255206"
 ---
 # <a name="programming-in-visual-basic"></a>Программирование в Visual Basic
 В этом разделе рассматриваются задачи программирования, о которых вам может понадобиться дополнительная информация при создании приложения Visual Basic.  
   
 ## <a name="in-this-section"></a>Содержание раздела  
- [Доступ к ресурсам компьютера](../../../visual-basic/developing-apps/programming/computer-resources/computer-resources.md)  
+ [Доступ к ресурсам компьютера](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
  Содержит документацию по использованию объекта `My.Computer` для доступа к сведениям о компьютере, на котором выполняется приложение, и для управления компьютером.  
   
- [Запись сведений в журнал из приложения](../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)  
+ [Запись сведений в журнал из приложения](../../../visual-basic/developing-apps/programming/log-info/index.md)  
  Содержит документацию о записи в журнал информации из приложения с помощью объектов `My.Application.Log` и `My.Log`, а также о расширении возможностей ведения журнала в приложении.  
   
  [Доступ к данным пользователя](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "33587414"
  [Доступ к веб-службам приложения](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  Содержит документацию о том, как с помощью объекта `My.WebServices` обращаться к веб-службам, ссылки на которые есть в приложении.  
   
- [Доступ к параметрам приложения](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)  
+ [Доступ к параметрам приложения](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  Содержит документацию по доступу к настройкам приложения с помощью объекта `My.Settings`.  
   
  [Операции с дисками, каталогами и файлами](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
