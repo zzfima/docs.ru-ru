@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 954b4df6b341e18c5a995b57541a72e236278c45
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d24dbcbdd8b0ed0736f7b59564cf72dffaa5a8f8
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449599"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331337"
 ---
-# <a name="imetadatatablesgetrow-method"></a><span data-ttu-id="f8381-102">Метод IMetaDataTables::GetRow</span><span class="sxs-lookup"><span data-stu-id="f8381-102">IMetaDataTables::GetRow Method</span></span>
-<span data-ttu-id="f8381-103">Возвращает строку с указанной строки индекса, в таблице с заданным индексом таблицы.</span><span class="sxs-lookup"><span data-stu-id="f8381-103">Gets the row at the specified row index, in the table at the specified table index.</span></span>  
+# <a name="imetadatatablesgetrow-method"></a><span data-ttu-id="25a28-102">Метод IMetaDataTables::GetRow</span><span class="sxs-lookup"><span data-stu-id="25a28-102">IMetaDataTables::GetRow Method</span></span>
+<span data-ttu-id="25a28-103">Возвращает строку по указанному индексу строки, в таблице с индексом указанной таблицы.</span><span class="sxs-lookup"><span data-stu-id="25a28-103">Gets the row at the specified row index, in the table at the specified table index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8381-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f8381-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="25a28-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="25a28-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRow (   
@@ -37,28 +37,28 @@ HRESULT GetRow (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f8381-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f8381-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="25a28-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="25a28-105">Parameters</span></span>  
  `ixTbl`  
- <span data-ttu-id="f8381-106">[in] Индекс таблицы, из которого требуется извлечь строку.</span><span class="sxs-lookup"><span data-stu-id="f8381-106">[in] The index of the table from which the row will be retrieved.</span></span>  
+ <span data-ttu-id="25a28-106">[in] Индекс таблицы, из которого извлекается строка.</span><span class="sxs-lookup"><span data-stu-id="25a28-106">[in] The index of the table from which the row will be retrieved.</span></span>  
   
  `rid`  
- <span data-ttu-id="f8381-107">[in] Индекс строки для получения.</span><span class="sxs-lookup"><span data-stu-id="f8381-107">[in] The index of the row to get.</span></span>  
+ <span data-ttu-id="25a28-107">[in] Индекс строки для получения.</span><span class="sxs-lookup"><span data-stu-id="25a28-107">[in] The index of the row to get.</span></span>  
   
  `ppRow`  
- <span data-ttu-id="f8381-108">[out] Указатель на указатель на строку.</span><span class="sxs-lookup"><span data-stu-id="f8381-108">[out] A pointer to a pointer to the row.</span></span>  
+ <span data-ttu-id="25a28-108">[out] Указатель на указатель на строку.</span><span class="sxs-lookup"><span data-stu-id="25a28-108">[out] A pointer to a pointer to the row.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f8381-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="f8381-109">Remarks</span></span>  
- <span data-ttu-id="f8381-110">Не рекомендуется для использования этого метода, так как он не возвращает согласованные результаты.</span><span class="sxs-lookup"><span data-stu-id="f8381-110">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="f8381-111">Сведения о таблице см. в документации Common Language Infrastructure (CLI), особенно «раздел II: определение метаданных и семантика».</span><span class="sxs-lookup"><span data-stu-id="f8381-111">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="f8381-112">Документация доступна в Интернете; см. страницы [ECMAC# и стандарты Common Language Infrastructure](http://go.microsoft.com/fwlink/?LinkID=99212) на сайте MSDN и [Стандарт ECMA-335 — общеязыковая инфраструктура (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) на международном веб-сайте организации ECMA.</span><span class="sxs-lookup"><span data-stu-id="f8381-112">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](http://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="25a28-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="25a28-109">Remarks</span></span>  
+ <span data-ttu-id="25a28-110">Не рекомендуется использование этого метода, так как он не возвращает согласованные результаты.</span><span class="sxs-lookup"><span data-stu-id="25a28-110">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="25a28-111">Сведения о таблице см. в документации по Common Language Infrastructure (CLI), особенно «раздел II: определение метаданных и семантика».</span><span class="sxs-lookup"><span data-stu-id="25a28-111">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="25a28-112">Документация доступна в Интернете; см. страницы [ECMAC# и стандарты Common Language Infrastructure](https://go.microsoft.com/fwlink/?LinkID=99212) на сайте MSDN и [Стандарт ECMA-335 — общеязыковая инфраструктура (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) на международном веб-сайте организации ECMA.</span><span class="sxs-lookup"><span data-stu-id="25a28-112">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f8381-113">Требования</span><span class="sxs-lookup"><span data-stu-id="f8381-113">Requirements</span></span>  
- <span data-ttu-id="f8381-114">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f8381-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="25a28-113">Требования</span><span class="sxs-lookup"><span data-stu-id="25a28-113">Requirements</span></span>  
+ <span data-ttu-id="25a28-114">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="25a28-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f8381-115">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="f8381-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="25a28-115">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="25a28-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="f8381-116">**Библиотека:** используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="f8381-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="25a28-116">**Библиотека:** используется как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="25a28-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="f8381-117">**Версии платформы .NET framework**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8381-117">**.NET Framework Versions**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="25a28-117">**Версии платформы .NET framework**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="25a28-117">**.NET Framework Versions**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8381-118">См. также</span><span class="sxs-lookup"><span data-stu-id="f8381-118">See Also</span></span>  
- [<span data-ttu-id="f8381-119">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="f8381-119">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [<span data-ttu-id="f8381-120">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="f8381-120">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="25a28-118">См. также</span><span class="sxs-lookup"><span data-stu-id="25a28-118">See Also</span></span>  
+ [<span data-ttu-id="25a28-119">Интерфейс IMetaDataTables</span><span class="sxs-lookup"><span data-stu-id="25a28-119">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
+ [<span data-ttu-id="25a28-120">Интерфейс IMetaDataTables2</span><span class="sxs-lookup"><span data-stu-id="25a28-120">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
