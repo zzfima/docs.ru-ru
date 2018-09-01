@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6c86870bf0089c25d402cf8f28a513e953ef28f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 628c571ce645710482a29c813adb4fe1a59fd349
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933707"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400186"
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Кроссплатформенная разработка с переносной библиотекой классов
 Тип проекта "Переносимая библиотека классов .NET Framework" в Visual Studio позволяет быстро и легко создавать межплатформенные приложения и библиотеки для платформ Майкрософт.  
@@ -25,7 +25,7 @@ ms.locfileid: "42933707"
   
  Даже после создания проекта переносимой библиотеки классов в Visual Studio и начала работы над проектом вы сможете изменить целевые платформы. Visual Studio скомпилирует вашу библиотеку с новыми сборками, что поможет определить, какие изменения следует внести в код.  
   
- В этой статье описывается разработка в Visual Studio, но корпорация Майкрософт также предоставляет ссылочные сборки переносимых библиотек классов, с помощью которые можно разрабатывать приложения и библиотеки в других средствах, таких как Xamarin. Их можно использовать в любой среде выполнения на основе .NET Framework даже на платформах других поставщиков. Дополнительные сведения о ссылочных сборок см. в записи блога [переносимой библиотеки классов (PCL) теперь доступна на всех платформах](http://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx). Чтобы загрузить сборки, см. в разделе [ссылочные сборки Microsoft .NET переносимой библиотеки](http://www.microsoft.com/download/details.aspx?id=40727) в центре загрузки Майкрософт. Дополнительные сведения о том, как использовать сборки с помощью Xamarin см. в записи блога [PCL и библиотеки .NET NuGet теперь доступны для Xamarin](http://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx).  
+ В этой статье описывается разработка в Visual Studio, но корпорация Майкрософт также предоставляет ссылочные сборки переносимых библиотек классов, с помощью которые можно разрабатывать приложения и библиотеки в других средствах, таких как Xamarin. Их можно использовать в любой среде выполнения на основе .NET Framework даже на платформах других поставщиков. Дополнительные сведения о ссылочных сборок см. в записи блога [переносимой библиотеки классов (PCL) теперь доступна на всех платформах](https://blogs.msdn.com/b/dotnet/archive/2013/10/14/portable-class-library-pcl-now-available-on-all-platforms.aspx). Чтобы загрузить сборки, см. в разделе [ссылочные сборки Microsoft .NET переносимой библиотеки](https://www.microsoft.com/download/details.aspx?id=40727) в центре загрузки Майкрософт. Дополнительные сведения о том, как использовать сборки с помощью Xamarin см. в записи блога [PCL и библиотеки .NET NuGet теперь доступны для Xamarin](https://blogs.msdn.com/b/dotnet/archive/2013/11/13/pcl-and-net-nuget-libraries-are-now-enabled-for-xamarin.aspx).  
   
  Visual Studio предоставляет шаблоны, которые облегчают разработку с использованием переносимой библиотеки классов. В зависимости от используемой версии Visual Studio доступные шаблоны и меню могут отличаться от тех, что описаны в этой статье.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "42933707"
   
  При изменении целевых платформ API-интерфейсы, доступные для разработки проекта, изменятся в соответствии с выбранными платформами. Visual Studio отображает ошибки и предупреждения после изменения целевых платформ.  
   
- Если вы хотите оценить переносимость сборки до можно внести изменения в Visual Studio, можно использовать [анализатор переносимости .NET](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).  
+ Если вы хотите оценить переносимость сборки до можно внести изменения в Visual Studio, можно использовать [анализатор переносимости .NET](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b).  
   
  Пункты меню зависят от используемой версии Visual Studio.  
   
@@ -224,6 +224,6 @@ ms.locfileid: "42933707"
 ## <a name="see-also"></a>См. также  
  [Использование переносимой библиотеки классов с MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
  [Ресурсы приложений для библиотек, предназначенных для нескольких платформ](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
- [Анализатор переносимости .NET](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
+ [Анализатор переносимости .NET](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
  [Поддержка платформы .NET Framework для приложений магазина Windows и среды выполнения Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [Развертывание](../../../docs/framework/deployment/net-framework-applications.md)

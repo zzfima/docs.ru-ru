@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09cd345daffa2418b33f032e8bab47c81e2a8526
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: 5a4645efc9276429cbdb0812f1ca501c89ea5dbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33397290"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393771"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Общие сведения о среде DLR
 *Среда DLR* представляет собой среду выполнения, которая добавляет набор служб для динамических языков в среду CLR. Среда DLR упрощает разработку динамических языков, используемых в .NET Framework, и добавление динамических функций в языки со статической типизацией.  
@@ -52,7 +52,7 @@ ms.locfileid: "33397290"
   
 -   IronPython. Доступен в качестве программного обеспечения с открытым исходным кодом на веб-сайте [GitHub](https://github.com/IronLanguages/ironpython2).  
   
--   IronRuby. Доступен в качестве программного обеспечения с открытым исходным кодом на веб-сайте [RubyForge](http://go.microsoft.com/fwlink/?LinkId=141044).  
+-   IronRuby. Доступен в качестве программного обеспечения с открытым исходным кодом на веб-сайте [RubyForge](https://go.microsoft.com/fwlink/?LinkId=141044).  
   
 ## <a name="primary-dlr-advantages"></a>Основные преимущества среды DLR  
  Среда DLR предоставляет следующие преимущества.  
@@ -80,7 +80,7 @@ ms.locfileid: "33397290"
   
  Среда DLR добавляет в среду CLR ряд служб для лучшей поддержки динамических языков. К ним относятся перечисленные ниже службы.  
   
--   Деревья выражений. Среда DLR использует деревья выражений для представления семантики языка. С этой целью в среде DLR имеются расширенные деревья выражений LINQ, включающие в себя поток управления, назначение и другие узлы моделирования языков. Дополнительные сведения см. в статье [Деревья выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
+-   Деревья выражений. Среда DLR использует деревья выражений для представления семантики языка. С этой целью в среде DLR имеются расширенные деревья выражений LINQ, включающие в себя поток управления, назначение и другие узлы моделирования языков. Дополнительные сведения см. в статье [Деревья выражений](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b).  
   
 -   Кэширование места вызова. *Динамическое место вызова* — это часть кода, в которой выполняется такая операция с динамическими объектами, как `a + b` или `a.b()`. Среда DLR кэширует характеристики `a` и `b` (как правило, типы этих объектов) и сведения об операции. Если такая операция выполнялась ранее, среда DLR извлекает всю необходимую информацию из кэша для быстрой отправки.  
   
@@ -95,5 +95,5 @@ ms.locfileid: "33397290"
  <xref:System.Dynamic.ExpandoObject>  
  <xref:System.Dynamic.DynamicObject>  
  [Общеязыковая среда выполнения](../../../docs/standard/clr.md)  
- [Деревья выражений](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [Деревья выражений](https://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
  [Пошаговое руководство. Создание и использование динамических объектов](~/docs/csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)
