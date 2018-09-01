@@ -2,12 +2,12 @@
 title: Статьи с практическими руководствами (руководств по языку C#)
 description: Коллекция советов и кратких конкретных примеров кода
 ms.date: 12/20/2017
-ms.openlocfilehash: db3ba1982a26097c3d69ba91493164c8f2371be9
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 86e245873c8316cc4ddd52fe59a06f2cac648e6c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42999567"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421201"
 ---
 # <a name="how-to-c"></a>Практическое руководство (C#)
 
@@ -21,7 +21,7 @@ ms.locfileid: "42999567"
 - [Различия между передачей структуры и класса в метод](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
 - [Использование лямбда-выражений](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).
 - [Устранение конфликтов имен типов с помощью псевдонима глобального пространства имен](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
-- [Использование перегрузки операторов](../programming-guide/statements-expressions-operators/how-to-use-operator-overloading-to-create-a-complex-number-class.md).
+- [Использование перегрузки операторов](../language-reference/keywords/operator.md).
 - [Реализация и вызов пользовательского метода расширения](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - Даже программистам на C# может потребоваться [использовать пространство имен `My` из VB](../programming-guide/namespaces/how-to-use-the-my-namespace.md).
 - [Создание метода для типа `enum` с помощью методов расширения](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).

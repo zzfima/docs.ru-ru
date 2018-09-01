@@ -2,12 +2,12 @@
 title: Основные понятия программирования (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: a557812ff99f09f20d3eb17ea7ff4dd80483a4a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 965ce386bcf6ff8d11c9e20616c1ca44640ddaf2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335643"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403027"
 ---
 # <a name="programming-concepts-c"></a>Основные понятия программирования (C#)
 Этот раздел описывает концепции программирования на языке C#.  
@@ -34,4 +34,4 @@ ms.locfileid: "33335643"
   
 |||  
 |---|---|  
-|[Performance Tips](https://msdn.microsoft.com/library/ms173196(VS.110).aspx) (Советы по производительности) | Описывает нескольких основных правил, которые помогают повысить производительность приложения.|
+|[Performance Tips](../../../../docs/framework/performance/performance-tips.md) (Советы по производительности) | Описывает нескольких основных правил, которые помогают повысить производительность приложения.|

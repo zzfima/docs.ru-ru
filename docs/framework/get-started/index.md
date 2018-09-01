@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 07b19c062d314fe3280d9ebed818b484ff9d1b13
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: aef77e6f2ec572ec0969166770aaf617cc933d67
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314754"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387777"
 ---
 # <a name="get-started-with-the-net-framework"></a>Начало работы с .NET Framework
 
@@ -69,7 +69,7 @@ ms.locfileid: "36314754"
 
 1. Если платформа не предустановлена в операционной системе, установите версию платформы .NET Framework, на которой будет работать ваше приложение. Последней рабочей версией является .NET Framework 4.7.2, которая предустановлена в Windows 10, обновление за апрель 2018 года, и доступна для скачивания в более ранних версиях операционной системы Windows. Требования к системе для .NET Framework см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md). Сведения об установке других версий .NET Framework см. в [руководстве по установке](../../../docs/framework/install/guide-for-developers.md). Дополнительные пакеты .NET Framework выпускаются внештатно. Это значит, что они выпускаются по очереди, нерегулярно. Дополнительные сведения об этих пакетах см. в разделе [.NET Framework и отдельные выпуски](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).
 
-2. Выберите язык или языки, поддерживаемые платформой .NET Framework, которые вы хотите использовать для разработки приложений. Поддерживается целый ряд языков, в том числе [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) и C++/CLI от Майкрософт. (Язык программирования, позволяющий разрабатывать приложения для .NET Framework, соответствует [спецификации Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkId=199862).)
+2. Выберите язык или языки, поддерживаемые платформой .NET Framework, которые вы хотите использовать для разработки приложений. Поддерживается целый ряд языков, в том числе [Visual Basic](../../visual-basic/index.md), [C#](../../csharp/index.md), [F#](../../fsharp/index.md) и C++/CLI от Майкрософт. (Язык программирования, позволяющий разрабатывать приложения для .NET Framework, соответствует [спецификации Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkId=199862).)
 
 3. Выберите и установите среду разработки, которая будет использоваться для создания приложений и которая поддерживает выбранные язык или языки программирования. Интегрированной средой разработки Майкрософт для приложений .NET Framework является [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017). Доступны разные выпуски.
 

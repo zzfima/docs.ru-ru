@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2765d7bf98c8e22e0bf495ac91ab1c15327bae42
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 372ffd7e17f60b8045cd5f89d52456c5f9655de1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42907983"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408166"
 ---
 # <a name="parallel-programming-in-net"></a>Параллельное программирование в .NET
 
@@ -29,7 +29,7 @@ ms.locfileid: "42907983"
 |[Структуры данных для параллельного программирования](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|Предоставляет ссылки на документацию для потокобезопасные классы коллекций, упрощенные типы синхронизации, типы для "ленивой" инициализации.|
 |[Средства диагностики параллельного выполнения](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|Предоставляет ссылки на документацию для окон отладчика Visual Studio для задач и параллельных стеков, а также для [Визуализатора параллелизма](/visualstudio/profiling/concurrency-visualizer).|
 |[Пользовательские разделители для PLINQ и TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|Описывает работу модулей разделения, порядок настройки модулей разделения по умолчанию, порядок создания нового модуля разделения.|
-|[Планировщики задач](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|Описывает порядок работы модуля планирования и порядок их настройки.|
+|[Планировщики задач](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|Описывает порядок работы модуля планирования и порядок их настройки.|
 |[Лямбда-выражения в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|Предоставляет краткие общие сведения по лямбда выражениям в C# и Visual Basic, показывает, как они используются в PLINQ и в библиотеке параллельных задач.|
 |[Дополнительные сведения](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|Предоставляет ссылки на дополнительные сведения и примеры ресурсов для параллельного программирования с помощью .NET.|
 

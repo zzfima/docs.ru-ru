@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7aacb6ca64a8b45a9b54b3f9d8785c7c61a07e09
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254316"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394338"
 ---
 # <a name="file-and-stream-io"></a>Файловый и потоковый ввод-вывод
 Файловый и потоковый ввод-вывод относятся к передаче данных с носителя информации или на него. В .NET Framework пространства имен `System.IO` содержат типы, которые обеспечивают как синхронные, так и асинхронные операции чтения и записи для потоков и файлов. Кроме того, эти пространства имен содержат типы, выполняющие сжатие и распаковку файлов, а также типы, которые обеспечивают взаимодействие через каналы и последовательные порты.  
@@ -137,13 +137,13 @@ ms.locfileid: "43254316"
   
  Следует отметить некоторые важные различия в использовании операций ввода-вывода для приложений в стиле [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]:  
   
--   Специальные типы, относящиеся к операциям с файлами, такие как <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> и <xref:System.IO.DirectoryInfo>, не включены в [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Вместо этого используйте типы в пространстве имен [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) [!INCLUDE[wrt](../../../includes/wrt-md.md)], например [StorageFile](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) и [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
+-   Специальные типы, относящиеся к операциям с файлами, такие как <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> и <xref:System.IO.DirectoryInfo>, не включены в [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Вместо этого используйте типы в пространстве имен [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) [!INCLUDE[wrt](../../../includes/wrt-md.md)], например [StorageFile](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) и [StorageFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
 -   Изолированное хранилище недоступно; вместо этого используйте [данные приложения](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Используйте асинхронные методы, такие как <xref:System.IO.Stream.ReadAsync%2A> и <xref:System.IO.Stream.WriteAsync%2A>, чтобы предотвратить блокировку потока пользовательского интерфейса.  
   
--   Типы сжатия на основе пути <xref:System.IO.Compression.ZipFile> и <xref:System.IO.Compression.ZipFileExtensions> недоступны. Вместо этого используйте типы в пространстве имен [Windows.Storage.Compression](http://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx).  
+-   Типы сжатия на основе пути <xref:System.IO.Compression.ZipFile> и <xref:System.IO.Compression.ZipFileExtensions> недоступны. Вместо этого используйте типы в пространстве имен [Windows.Storage.Compression](https://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx).  
   
  При необходимости можно осуществлять преобразование между потоками .NET Framework и потоками среды выполнения Windows. Дополнительные сведениях см. в статьях [Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) и [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   

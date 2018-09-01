@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: f14cac08a2f110d97b8f9f660eb3dd1e664165c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5926da78a470911af3d8b068107f637406cb0eb9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33289156"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391156"
 ---
 # <a name="c-keywords"></a>Ключевые слова C#
 Ключевые слова — это предварительно определенные зарезервированные идентификаторы, которые имеют специальные значения для компилятора. Их нельзя использовать как идентификаторы в программах без префикса `@`. Например, допустимым идентификатором является `@if`, но не `if`, поскольку `if` является ключевым словом.  
@@ -59,6 +59,7 @@ ms.locfileid: "33289156"
 |[value](../../../csharp/language-reference/keywords/value.md)|[var](../../../csharp/language-reference/keywords/var.md)|[when (условие фильтра)](when.md)|   
 |[where (ограничение универсального типа)](../../../csharp/language-reference/keywords/where-generic-type-constraint.md)|[where (предложение запроса)](../../../csharp/language-reference/keywords/where-clause.md)|[yield](../../../csharp/language-reference/keywords/yield.md)|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)

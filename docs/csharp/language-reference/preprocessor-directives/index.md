@@ -7,12 +7,12 @@ helpviewer_keywords:
 - preprocessor directives [C#]
 - keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
-ms.openlocfilehash: 63a7bdb6d36794e0380ca84443926338fe926e4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0a97cabce347be0bc9367f3d090a1fc699db19
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279923"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422005"
 ---
 # <a name="c-preprocessor-directives"></a>Директивы препроцессора C#
 В этом разделе содержатся сведения о следующих директивах препроцессора C#:
@@ -39,5 +39,6 @@ ms.locfileid: "33279923"
 Директива препроцессора должна быть единственной инструкцией в строке.
 
 ## <a name="see-also"></a>См. также
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)

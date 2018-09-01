@@ -2,12 +2,12 @@
 title: Асинхронное программирование с использованием ключевых слов Async и Await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: b1797a6d37728021820f5dfa5c01a7ee0c972f1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f38247969260fecd2fe527efb1ddb0c097fa2a47
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339103"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390237"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Асинхронное программирование с использованием ключевых слов Async и Await (C#)
 Асинхронное программирование позволяет избежать появления узких мест производительности и увеличить общую скорость реагирования приложения. Однако традиционные методы создания асинхронных приложений могут оказаться сложными, как в плане написания кода, так и в плане отладки и обслуживания.  
@@ -140,7 +140,7 @@ string urlContents = await client.GetStringAsync();
 ##  <a name="BKMK_APIAsyncMethods"></a> Async-методы API-интерфейсов  
  Где же найти методы для асинхронного программирования (такие как `GetStringAsync`)? Платформа .NET Framework 4.5 и более поздние версии, а также .NET Core содержат большое количество элементов, совместимых с `async` и `await`. Они содержат суффикс Async в имени элемента и возвращают тип <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>. Например, класс `System.IO.Stream` имеет такие методы, как <xref:System.IO.Stream.CopyToAsync%2A>, <xref:System.IO.Stream.ReadAsync%2A> и <xref:System.IO.Stream.WriteAsync%2A>, наряду с синхронными методами <xref:System.IO.Stream.CopyTo%2A>, <xref:System.IO.Stream.Read%2A> и <xref:System.IO.Stream.Write%2A>.  
   
- Среда выполнения Windows также содержит множество методов, которые можно использовать в сочетании с `async` и `await` в приложениях Windows. См. дополнительные сведения о [потоковом и асинхронном программировании](/windows/uwp/threading-async/) для разработки UWP, [асинхронном программировании (приложение Магазина Windows)](/previous-versions/windows/apps/hh464924(v=win.10)), а также [краткое руководство по вызову асинхронных API в C# или Visual Basic](/previous-versions/windows/apps/hh452713(v=win.10)), если вы используете предыдущие версии среды выполнения Windows.  
+ Среда выполнения Windows также содержит множество методов, которые можно использовать в сочетании с `async` и `await` в приложениях Windows. См. дополнительные сведения о [потоковом и асинхронном программировании](/windows/uwp/threading-async/) для разработки UWP, [асинхронном программировании (приложение Магазина Windows)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10)), а также [краткое руководство по вызову асинхронных API в C# или Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10)), если вы используете предыдущие версии среды выполнения Windows.  
   
 ##  <a name="BKMK_Threads"></a> Потоки  
 Асинхронные методы используются для неблокирующих операций. Выражение `await` в асинхронном методе не блокирует текущий поток на время выполнения ожидаемой задачи. Вместо этого выражение регистрирует остальную часть метода как продолжение и возвращает управление вызывающему объекту асинхронного метода.  

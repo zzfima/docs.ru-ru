@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 238d8284-6042-4a38-a7f6-1ee8efd719da
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2686d0db966192606656167d6e505f34ded333f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f38ed31748560292753789e38595a5e30f6ea08a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396533"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404612"
 ---
 # <a name="deploying-the-net-framework-and-applications"></a>Развертывание .NET Framework и приложений
 Эта статья поможет приступить к развертыванию платформы .NET Framework с приложением. Большая часть информации предназначена для разработчиков, изготовителей оборудования и администраторов предприятия. Пользователям, которые хотят установить .NET Framework на своих компьютерах, следует прочитать статью [Установка .NET Framework](~/docs/framework/install/index.md).  
@@ -58,13 +58,13 @@ ms.locfileid: "33396533"
   
 -   Развертывание .NET Framework (для изготовителей оборудования и администраторов):  
   
-    -   [Комплект средств для развертывания и оценки Windows (ADK)](http://go.microsoft.com/fwlink/p/?LinkId=254976).  
+    -   [Комплект средств для развертывания и оценки Windows (ADK)](https://go.microsoft.com/fwlink/p/?LinkId=254976).  
   
     -   [Руководство администратора](../../../docs/framework/deployment/guide-for-administrators.md).  
   
  **Обслуживание**.  
   
--   Общие сведения см. в [блоге по .NET Framework](http://go.microsoft.com/fwlink/p/?LinkId=254977).  
+-   Общие сведения см. в [блоге по .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=254977).  
   
 -   [Обнаружение версий](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
   

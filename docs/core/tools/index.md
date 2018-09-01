@@ -4,12 +4,12 @@ description: Обзор средств и возможностей интерф�
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
-ms.openlocfilehash: e6519ef560026899344c7fc36d91c2409cf1df9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0ef69f98171da98b50aae4cdd2f5f88f37ad0c63
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217936"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403410"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Средства интерфейса командной строки (CLI) .NET Core
 
@@ -119,7 +119,6 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
-
 ---
 
 ### <a name="driver"></a>Драйвер
@@ -140,7 +139,7 @@ dotnet /build_output/my_app.dll
 
 ### <a name="options"></a>Параметры
 
-Параметры, указываемые в командной строке, передаются непосредственно в вызываемую команду. Например, при выполнении `dotnet publish --output /build_output` параметр `--output` и его значение передаются в команду `publish`. 
+Параметры, указываемые в командной строке, передаются непосредственно в вызываемую команду. Например, при выполнении `dotnet publish --output /build_output` параметр `--output` и его значение передаются в команду `publish`.
 
 ## <a name="migration-from-projectjson"></a>Перенос из проекта project.json
 
@@ -148,5 +147,5 @@ dotnet /build_output/my_app.dll
 
 ## <a name="see-also"></a>См. также
 
- [Репозиторий dotnet/CLI на сайте GitHub](https://github.com/dotnet/cli/)  
- [Руководство по установке .NET Core](https://aka.ms/dotnetcoregs)  
+* [Репозиторий dotnet/CLI на сайте GitHub](https://github.com/dotnet/cli/)  
+* [Руководство по установке .NET Core](https://aka.ms/dotnetcoregs)  
