@@ -2,20 +2,21 @@
 title: Образец прокси-сервера обнаружения
 ms.date: 03/30/2017
 ms.assetid: 1dfa02df-15b1-4e97-9c8e-f5f2772711b0
-ms.openlocfilehash: e9cbfcb717f502a849d4d508d13df6c00b95db58
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6fc0680bc6b61a6fe1b4b141c8b1e5081df5a124
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393025"
 ---
 # <a name="discovery-proxy-sample"></a>Образец прокси-сервера обнаружения
 Этот образец демонстрирует создание реализации прокси-сервера обнаружения для хранения сведений о существующих службах, а также то, как клиенты могут запрашивать сведения у этого прокси-сервера. Этот образец состоит из трех проектов.  
   
--   **Служба**: простой службы калькулятора Windows Communication Foundation (WCF), которая регистрирует себя с прокси-сервера обнаружения.  
+-   **Служба**: простую службу калькулятора Windows Communication Foundation (WCF), регистрирует сам прокси-сервере обнаружения.  
   
 -   **Прокси-сервер обнаружения**: реализация службы прокси-сервера обнаружения.  
   
--   **Клиент**: клиентское приложение WCF, который вызывает прокси-сервер обнаружения для поиска служб.  
+-   **Клиент**: клиентское приложение WCF, которое вызывает прокси-сервер обнаружения для поиска служб.  
   
 ## <a name="demonstrates"></a>Демонстрации  
  Реализация прокси-сервера обнаружения  
@@ -25,7 +26,7 @@ ms.lasthandoff: 05/04/2018
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryProxy`  
   

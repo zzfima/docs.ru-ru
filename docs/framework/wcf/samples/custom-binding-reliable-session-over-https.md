@@ -2,12 +2,12 @@
 title: Надежный сеанс по протоколу HTTPS с использованием пользовательской привязки
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: d470a4e0af655a8a7895c1db6c2699796f3db933
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb23dc6e6e2e13d759d29584ed6a990ae769ac8b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502951"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389898"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>Надежный сеанс по протоколу HTTPS с использованием пользовательской привязки
 В этом образце показано использование безопасности транспорта SSL с надежными сеансами. Надежные сеансы реализуют протокол WS-ReliableMessaging. Чтобы создать безопасный надежный сеанс, можно объединить протокол WS-Security с надежными сеансами. Но в некоторых случаях может потребоваться использовать безопасность транспорта HTTP с протоколом SSL.  
@@ -17,14 +17,14 @@ ms.locfileid: "33502951"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSessionOverHttps`  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
  Протокол SSL гарантирует защищенность пакетов. Важно отметить, что этот подход отличается от защиты надежных сеансов с помощью протокола WS-SecureConversation.  
   
- Чтобы использовать надежные сеансы поверх протокола HTTPS, необходимо создать пользовательскую привязку. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора. Создать пользовательскую привязку с помощью элемента привязки надежного сеанса и [ \<httpsTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md). Ниже представлена конфигурация пользовательской привязки.  
+ Чтобы использовать надежные сеансы поверх протокола HTTPS, необходимо создать пользовательскую привязку. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора. Создать пользовательскую привязку с помощью элемента привязки надежного сеанса и [ \<httpsTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md). Ниже представлена конфигурация пользовательской привязки.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -70,7 +70,7 @@ ms.locfileid: "33502951"
 </configuration>  
 ```  
   
- В образце кода программы, идентичной [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) службы. Перед построением и запуском примера необходимо с помощью мастера сертификатов веб-сервера создать и назначить сертификат. Определения конечной точки и привязки в файле конфигурации включают использование пользовательской привязки, как показано в следующем образце файла конфигурации клиента.  
+ Код программы в образце идентична [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) службы. Перед построением и запуском примера необходимо с помощью мастера сертификатов веб-сервера создать и назначить сертификат. Определения конечной точки и привязки в файле конфигурации включают использование пользовательской привязки, как показано в следующем образце файла конфигурации клиента.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -102,7 +102,7 @@ ms.locfileid: "33502951"
   
  Заданный адрес использует схему https://.  
   
- Так как сертификат, используемый в этом примере является тестовым сертификатом, созданным Makecert.exe, появляется предупреждение системы безопасности появляется при попытке получить доступ к https: адреса, такие как https://localhost/servicemodelsamples/service.svc, из браузера. Чтобы разрешить клиента Windows Communication Foundation (WCF) для работы с тестовым сертификатом, в месте, был добавлен дополнительный код клиенту, чтобы подавить появление предупреждения системы безопасности. При использовании рабочих сертификатов этот код и соответствующие классы не требуются.  
+ Так как сертификат, используемый в этом примере является тестовым сертификатом, созданным с помощью Makecert.exe, оповещение системы безопасности отображается при попытке доступа к https: адрес, такие как https://localhost/servicemodelsamples/service.svc, в браузере. Чтобы позволить клиенту службы Windows Communication Foundation (WCF) для работы с тестовым сертификатом, в месте, клиенту, чтобы подавлять предупреждения системы безопасности был добавлен дополнительный код. При использовании рабочих сертификатов этот код и соответствующие классы не требуются.  
 
 ```csharp
 // This code is required only for test certificates like those created by Makecert.exe.  
@@ -134,6 +134,6 @@ Press <ENTER> to terminate client.
   
 4.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>См. также

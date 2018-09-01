@@ -1,5 +1,5 @@
 ---
-title: Оператор Option Compare
+title: Оператор Option Compare (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Compare
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 675ad649650d9fbc6f2c0f1dc689aa682ca6103c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32664dc3be98a9d5a2e6a7d61790c18ae5d3795d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605307"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385111"
 ---
 # <a name="option-compare-statement"></a>Оператор Option Compare
 Объявляет метод сравнения по умолчанию для использования при сравнении строковых данных.  
@@ -59,7 +59,7 @@ Option Compare { Binary | Text }
  `(A=a) < (À = à) < (B=b) < (E=e) < (Ê = ê) < (Z=z) < (Ø = ø)`  
   
 ## <a name="when-an-option-compare-statement-is-not-present"></a>Если оператор Option Compare отсутствует  
- Если исходный код не содержит `Option Compare` инструкции **Option Compare** на [компиляция, конструктора проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) используется. При использовании компилятора командной строки, заданные параметр [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) используется параметр компилятора.  
+ Если исходный код не содержит `Option Compare` инструкции **Option Compare** на [компиляция, конструктор проектов (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) используется. При использовании компилятора командной строки, параметр указан [дополнительные](../../../visual-basic/reference/command-line-compiler/optioncompare.md) используется параметр компилятора.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -71,11 +71,11 @@ Option Compare { Binary | Text }
   
 3.  Задайте значение в **Option Compare** поле.  
   
- При создании проекта, **Option Compare** на **компиляции** набор вкладок **Option Compare** в **параметры** диалоговое окно. Чтобы изменить этот параметр, в **средства** меню, нажмите кнопку **параметры**. В диалоговом окне **Параметры** разверните узел **Проекты и решения** и выберите пункт **Параметры Visual Basic по умолчанию**. Начальный параметр по умолчанию в **VB значения по умолчанию** — **двоичных**.  
+ При создании проекта, **Option Compare** на **компиляции** набор вкладок **Option Compare** в **параметры** диалоговое окно. Чтобы изменить этот параметр, в **средства** меню, щелкните **параметры**. В диалоговом окне **Параметры** разверните узел **Проекты и решения** и выберите пункт **Параметры Visual Basic по умолчанию**. Начальная настройка по умолчанию в **параметры Visualbasic по умолчанию** — **двоичных**.  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>Чтобы включить Option Compare в командной строке  
   
--   Включить [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) параметра компилятора в **vbc** команды.  
+-   Включить [дополнительные](../../../visual-basic/reference/command-line-compiler/optioncompare.md) параметр компилятора в **vbc** команды.  
   
 ## <a name="example"></a>Пример  
  В следующем примере оператор `Option Compare` используется, чтобы задать двоичное сравнение в качестве метода сравнения строк по умолчанию. Чтобы использовать этот код, раскомментируйте оператор `Option Compare Binary` и поместите его в начало файла исходного кода.  

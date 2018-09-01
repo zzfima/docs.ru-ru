@@ -2,12 +2,12 @@
 title: Удаление добавляемого конструктором в файл XAML состояния просмотра
 ms.date: 03/30/2017
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
-ms.openlocfilehash: f63723c29c76854602308ba3e8d7e6dd65d9fb94
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed2fda0bb66b2c8fe58c60acc6f80b9e9c8e984e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517840"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386937"
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Удаление добавляемого конструктором в файл XAML состояния просмотра
 Этот образец демонстрирует создание класса, производного от <xref:System.Windows.Markup.XamlWriter>, и удаление состояния представления из файла XAML. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] записывает сведения в документ XAML, который известен как состояние представления. Состоянием представления называются сведения, которые требуются во время разработки, такие как расположение макета, и не требуются во время выполнения. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] вставляет эти сведения в документ XAML в ходе внесения в него изменений. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)] записывает состояние представления в файл XAML с атрибутом `mc:Ignorable`, поэтому эти сведения не загружаются, когда среда выполнения загружает файл XAML. Этот образец демонстрирует, как создать класс, который удаляет указанные сведения о состоянии представления при обработке узлов XAML.  
@@ -15,7 +15,7 @@ ms.locfileid: "33517840"
 ## <a name="discussion"></a>Обсуждение  
  Этот образец демонстрирует создание пользовательского модуля записи.  
   
- Чтобы сформировать пользовательский модуль записи XAML, создайте класс, который наследует от <xref:System.Windows.Markup.XamlWriter>. Как средства записи XAML часто бывают вложенными, типично для отслеживания «внутренний» модуль записи XAML. Эти «внутренний "модули записи могут рассматриваться как ссылка на стек остальных модулей записи XAML, что позволяет иметь несколько точек входа для выполнения работы, а затем делегировать обработку остальной части стека.  
+ Чтобы сформировать пользовательский модуль записи XAML, создайте класс, который наследует от <xref:System.Windows.Markup.XamlWriter>. Как модули записи XAML часто бывают вложенными, он является типичным для отслеживания записи XAML «внутренние». Эти «внутреннее "модули записи могут рассматриваться как ссылка на стек остальных модулей записи XAML, что позволяет иметь несколько точек входа для выполнения работы, а затем делегировать обработку остальной части стека.  
   
  В этом образце есть несколько особенностей, представляющих интерес. Одна из них состоит в том, что проводится проверка для определения принадлежности записываемого элемента пространству имен конструктора. Обратите внимание на то, что при этом исключается также использование других типов из пространства имен конструктора в рабочем процессе.  
   
@@ -39,7 +39,7 @@ XamlWriter InnerWriter {get; set; }
 Stack<XamlMember> MemberStack {get; set; }  
 ```  
   
- Кроме того, при этом создается стек элементов XAML, которые используются при прохождении потока узла. Оставшаяся работа данного образца в основном выполняется в <!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>--> `System.Windows.Markup.XamlWriter.WriteStartMember` метод.  
+ Кроме того, при этом создается стек элементов XAML, которые используются при прохождении потока узла. Остальная часть работы в этом образце во многом содержится в <!--zz  <xref:System.Windows.Markup.XamlWriter.WriteStartMember%2A>--> `System.Windows.Markup.XamlWriter.WriteStartMember` метод.  
   
 ```csharp
 public override void WriteStartMember(XamlMember xamlMember)  
@@ -97,7 +97,7 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
    ViewStateCleaningWriter.exe [input file] [output file]
    ```
    
-   При этом происходит вывод файла XAML в \[выходной_файл], содержит все его данные о состоянии просмотра удалены.  
+   Это вывод файла XAML \[выходной_файл], который имеет все свои сведения о состоянии представления удалены.  
   
 > [!NOTE]
 > Что касается рабочего процесса <xref:System.Activities.Statements.Sequence>, то удаляется целый ряд подсказок виртуализации. Это вынуждает конструктор повторно вычислять макет при его следующей загрузке. При использовании этого образца для <xref:System.Activities.Statements.Flowchart> удаляется вся информация о расположении и маршрутизации линий, а при последующей загрузке в конструктор все действия отображаются в левой стороне экрана с наложением друг на друга.  
@@ -119,6 +119,6 @@ XamlServices.Save(new ViewStateCleaningWriter(ActivityXamlServices.CreateBuilder
 >   
 > `<InstallDrive>:\WF_WCF_Samples`  
 >   
-> Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+> Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\ViewStateCleaningWriter`

@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
-ms.openlocfilehash: 3b5b6f2f267f19b3ea42c352a8a1e3721a1ceb86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3cbf4fa0eb0b261bb752370c95cdfb2bca0b7e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359319"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387468"
 ---
 # <a name="inserting-an-image-from-a-file"></a>Вставка изображения из файла
 Большой двоичный объект (BLOB) можно записывать в базу данных в виде двоичных или символьных данных в зависимости от типа поля источника данных. BLOB - это общий термин для типов данных `text`, `ntext` и `image`, используемых, как правило, для хранения документов и изображений.  
   
- Запись значения большого двоичного ОБЪЕКТА для базы данных, выполните соответствующие инструкции INSERT или UPDATE и передать значение BLOB-ОБЪЕКТОВ в качестве входного параметра (в разделе [Настройка параметров и типов данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)). Если объект BLOB хранится как текст, например поле SQL Server `text`, можно передать значение BLOB в виде строкового параметра. Если объект BLOB хранится в двоичном формате, например поле SQL Server `image`, в качестве двоичного параметра можно передать массив с типом данных `byte`.  
+ Для записи значения BLOB-ОБЪЕКТОВ к базе данных, выполните соответствующую инструкцию INSERT или UPDATE и передав значение BLOB в качестве входного параметра (см. в разделе [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)). Если объект BLOB хранится как текст, например поле SQL Server `text`, можно передать значение BLOB в виде строкового параметра. Если объект BLOB хранится в двоичном формате, например поле SQL Server `image`, в качестве двоичного параметра можно передать массив с типом данных `byte`.  
   
 ## <a name="example"></a>Пример  
  Следующий пример кода добавляет сведения о сотрудниках в таблицу Employees базы данных Northwind. Фотографии сотрудников считываются из файла и добавляются в поле Photo в таблице, имеющей тип данных image.  
@@ -135,4 +135,4 @@ public static byte[] GetPhoto(string filePath)
  [Извлечение двоичных данных](../../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

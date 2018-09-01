@@ -5,12 +5,12 @@ helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: 8c09ab934ee7457fdff39a63c58f2546cda4d643
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2de91d828fd9706b66f4c810486e54e2d3062de0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598554"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384235"
 ---
 # <a name="ltexamplegt-visual-basic"></a>&lt;Пример&gt; (Visual Basic)
 Задает пример для элемента.  
@@ -26,14 +26,14 @@ ms.locfileid: "33598554"
  Описание примера кода.  
   
 ## <a name="remarks"></a>Примечания  
- `<example>` Тег позволяет указывать пример того, как использовать метод или другой элемент библиотеки. Вместе с ним часто применяется тег [\<code>](../../../visual-basic/language-reference/xmldoc/code.md).  
+ `<example>` Тег позволяет указать пример демонстрирует использование метода или другого элемента библиотеки. Вместе с ним часто применяется тег [\<code>](../../../visual-basic/language-reference/xmldoc/code.md).  
   
  Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере используется `<example>` тег, чтобы включить пример с использованием `ID` поля.  
+ В этом примере используется `<example>` тега для включения примера использования `ID` поля.  
   
  [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/example_1.vb)]  
   
 ## <a name="see-also"></a>См. также  
- [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)

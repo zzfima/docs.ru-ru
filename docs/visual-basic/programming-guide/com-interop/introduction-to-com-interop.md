@@ -5,19 +5,19 @@ helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-ms.openlocfilehash: 639b621215f25bc1042274a92a21fca2985e5918
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: ecd514231c36cf3b65b1f0dd05f26d05f3c9c88d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244118"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389748"
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Знакомство с COM-взаимодействием (Visual Basic)
 Модель объектов компонентов (COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. Хотя COM-объектов, стали основой для Windows, программирования в течение многих лет, приложений, предназначенных для общеязыковой среды выполнения (CLR) предоставляют множество преимуществ.  
   
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения будут заменят, разработанные с использованием модели COM. До этого времени может потребоваться использовать или создать COM-объектов с помощью Visual Studio. Взаимодействие с COM, или *COM-взаимодействия*, позволяет использовать существующие COM-объекты при переходе к [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] в своем собственном темпе.  
   
- С помощью [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для создания COM-компонентов, можно использовать COM-взаимодействия без регистрации. Это дает возможность контролировать, какая версия DLL включена в том случае, если более одной версии устанавливается на компьютере и позволяет конечным пользователям использовать XCOPY или FTP скопировать приложение в соответствующий каталог на своем компьютере где ее можно запустить. Дополнительные сведения см. в разделе [COM-взаимодействия без регистрации](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
+ С помощью [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для создания COM-компонентов, можно использовать COM-взаимодействия без регистрации. Это дает возможность контролировать, какая версия DLL включена в том случае, если более одной версии устанавливается на компьютере и позволяет конечным пользователям использовать XCOPY или FTP скопировать приложение в соответствующий каталог на своем компьютере где ее можно запустить. Дополнительные сведения см. в разделе [COM-взаимодействия без регистрации](https://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
   
 ## <a name="managed-code-and-data"></a>Управляемый код и данные  
  Код, разработанный для [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] называется *управляемого кода*и содержит метаданные, используемые средой CLR. Данные, используемые [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложений называется *данных управляемых* так, как среда выполнения управляет задачи, связанные с данными, такие как выделение и освобождение памяти и проверка типов. По умолчанию Visual Basic .NET использует управляемый код и данные, но можно получить доступ к неуправляемому коду, а также данные COM-объектов с помощью сборок взаимодействия (описанным ниже на этой странице).  
@@ -43,7 +43,7 @@ ms.locfileid: "39244118"
 ### <a name="importing-and-exporting-type-libraries"></a>Импорт и экспорт библиотеки типов  
  Visual Studio содержит программу Tlbimp, которая позволяет импортировать информацию из библиотеки типов в [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] приложения. Можно создавать библиотеки типов из сборки с помощью программы Tlbexp.  
   
- Сведения о Tlbimp и Tlbexp, см. в разделе [Tlbimp.exe (программа импорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md) и [Tlbexp.exe (программа экспорта библиотек типов)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
+ Сведения о Tlbimp и Tlbexp, см. в разделе [Tlbimp.exe (программа импорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md) и [Tlbexp.exe (программа экспорта библиотек типов)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
   
 ## <a name="interop-assemblies"></a>Сборки взаимодействия  
  Сборки взаимодействия являются [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] сборки, мост между управляемым и неуправляемым кода, отображая члены объекта COM в эквивалент [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] управляемых элементов. Сборки взаимодействия, созданные в Visual Basic .NET обрабатывать большую часть особенностей работы с объектами COM, такие как маршалинг взаимодействия.  
@@ -58,6 +58,6 @@ ms.locfileid: "39244118"
  [Устранение неполадок взаимодействия](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
  [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Tlbimp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (программа экспорта библиотек типов)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
+ [Tlbexp.exe (программа экспорта библиотек типов)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
  [Маршалинг взаимодействия](../../../framework/interop/interop-marshaling.md)  
- [COM-взаимодействие без регистрации](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)
+ [COM-взаимодействие без регистрации](https://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)

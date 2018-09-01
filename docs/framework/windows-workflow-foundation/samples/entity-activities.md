@@ -2,24 +2,24 @@
 title: Действия с сущностями
 ms.date: 03/30/2017
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-ms.openlocfilehash: 96301c15b849749299e744a435068c3ec9be2e3a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03bd0e42c70f1226558d492bcb3b2cfa5c7010f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519140"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385808"
 ---
 # <a name="entity-activities"></a>Действия с сущностями
-В этом примере показано, как использовать ADO.NET Entity Framework с Windows Workflow Foundation для упрощения доступа к данным.  
+В этом примере показано, как использовать ADO.NET Entity Framework в Windows Workflow Foundation для упрощения доступа к данным.  
   
- С помощью платформы ADO.NET Entity Framework разработчики могут работать с данными в форме объектов, свойств и связей определенного домена, например клиентов, заказов, подробных сведений о заказах и связей между этими сущностями. На платформе ADO.NET Entity Framework это достигается за счет уровня абстракции, позволяющего осуществлять программирование по концептуальной модели приложения, а не напрямую по схеме реляционного хранилища. Дополнительные сведения о ADO.NET Entity Framework см. [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ С помощью платформы ADO.NET Entity Framework разработчики могут работать с данными в форме объектов, свойств и связей определенного домена, например клиентов, заказов, подробных сведений о заказах и связей между этими сущностями. На платформе ADO.NET Entity Framework это достигается за счет уровня абстракции, позволяющего осуществлять программирование по концептуальной модели приложения, а не напрямую по схеме реляционного хранилища. Дополнительные сведения о ADO.NET Entity Framework см. [ADO.NET Entity Framework](https://go.microsoft.com/fwlink/?LinkId=165549).  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
  В этом образце используется база данных `Northwind`, в него входят скрипты для создания и удаления базы данных `Northwind` (Setup.cmd и Cleanup.cmd). Среди проектов этого образца имеется модель EDM, основанная на базе данных `Northwind`. Модель можно найти, открыв файл `Northwind.edmx`, который включен в проект. Именно эта модель определяет форму объектов, к которым может осуществляться доступ из платформы ADO.NET Entity Framework.  
   
  В данный образец включены следующие действия:  
   
--   `EntitySQLQuery`: действие `EntitySQLQuery` позволяет получать объекты из базы данных на основе строки запроса Entity SQL. Entity SQL - это независимый от хранилища язык, сходный с SQL, который позволяет задавать запросы на основе концептуальной модели и сущностей, являющихся частью модели или домена. Дополнительные сведения о языке Entity SQL см. в разделе [язык Entity SQL](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   `EntitySQLQuery`: действие `EntitySQLQuery` позволяет получать объекты из базы данных на основе строки запроса Entity SQL. Entity SQL - это независимый от хранилища язык, сходный с SQL, который позволяет задавать запросы на основе концептуальной модели и сущностей, являющихся частью модели или домена. Дополнительные сведения о языке Entity SQL, см. в разделе [язык Entity SQL](https://go.microsoft.com/fwlink/?LinkId=165646).  
   
 -   `EntityLinqQuery`: это действие позволяет получать объекты из базы данных на основе запроса LINQ или предиката.  
   
@@ -252,6 +252,6 @@ return new ObjectContextScope
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\EntityActivities`

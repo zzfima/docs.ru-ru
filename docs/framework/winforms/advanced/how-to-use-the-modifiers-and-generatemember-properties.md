@@ -15,26 +15,26 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 451c54bf6272b4fbff46b5298ba5b6a9290656e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bb6e6568822f3edcabf50a4fceb7cc6386f05ef
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523998"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388008"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>Практическое руководство. Использование свойств Modifiers и GenerateMember
-При размещении компонента в форме Windows Forms, два свойства предоставляются средой разработки: `GenerateMember` и `Modifiers`. `GenerateMember` Свойство указывает, когда конструктор Windows Forms создает переменную-член для компонента. `Modifiers` Свойство имеет модификатор доступа, назначенный этой переменной-члена. Если значение `GenerateMember` свойство `false`, значение `Modifiers` свойство не имеет значения.  
+При размещении компонента в форму Windows, в среде разработки предоставляются два свойства: `GenerateMember` и `Modifiers`. `GenerateMember` Свойство указывает, когда конструктор Windows Forms создает переменную-член для компонента. `Modifiers` Свойство — это модификатор доступа, назначенный этой переменной члена. Если значение `GenerateMember` свойство `false`, значение `Modifiers` не оказывает никакого влияния.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>Чтобы указать, является ли компонент элементом формы  
+### <a name="to-specify-whether-a-component-is-a-member-of-the-form"></a>Для указания, является ли компонент членом формы  
   
 1.  В конструкторе Windows Forms откройте форму.  
   
-2.  Откройте **элементов**и поместите в форме три <xref:System.Windows.Forms.Button> элементов управления.  
+2.  Откройте **элементов**и в форме, поместите три <xref:System.Windows.Forms.Button> элементов управления.  
   
-3.  Задать `GenerateMember` и `Modifiers` свойства для каждого <xref:System.Windows.Forms.Button> управления согласно следующей таблице.  
+3.  Задайте `GenerateMember` и `Modifiers` свойства для каждого <xref:System.Windows.Forms.Button> управления согласно следующей таблице.  
   
     |Имя кнопки|Значение GenerateMember|Значение модификаторов|  
     |-----------------|--------------------------|---------------------|  
@@ -46,9 +46,9 @@ ms.locfileid: "33523998"
   
 5.  В **обозревателе решений** нажмите кнопку **Показать все файлы**.  
   
-6.  Откройте **Form1** узел и в **редактор кода**откройте **Form1.Designer.vb** или **Form1.Designer.cs** файла. Этот файл содержит код, созданный конструктором Windows Forms.  
+6.  Откройте **Form1** узел и в **редактор кода**откройте **Form1.Designer.vb** или **Form1.Designer.cs** файл. Этот файл содержит код, созданный конструктором Windows Forms.  
   
-7.  Найдите объявления для трех кнопок. В следующем примере кода показаны различия, указанные `GenerateMember` и `Modifiers` свойства.  
+7.  Найдите объявления для содержатся три кнопки. В следующем примере кода показаны различия, определяемое `GenerateMember` и `Modifiers` свойства.  
   
      [!code-csharp[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.GenerateMember#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#3)]  
@@ -57,7 +57,7 @@ ms.locfileid: "33523998"
      [!code-vb[System.Windows.Forms.GenerateMember#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.GenerateMember/VB/Form1.vb#2)]  
   
 > [!NOTE]
->  По умолчанию, конструктор Windows Forms присваивает `private` (`Friend` в Visual Basic) модификатор контейнерных элементов управления, таких как <xref:System.Windows.Forms.Panel>. Если с основным <xref:System.Windows.Forms.UserControl> или <xref:System.Windows.Forms.Form> имеет контейнерный элемент управления не будет принимать новые дочерние элементы в наследуемых элементов управления и форм. Рекомендуется изменить модификатор элемента управления базового контейнера для `protected` или `public`.  
+>  По умолчанию назначается в конструкторе Windows Forms `private` (`Friend` в Visual Basic) модификатор контейнерные элементы управления, такие как <xref:System.Windows.Forms.Panel>. Если с основным <xref:System.Windows.Forms.UserControl> или <xref:System.Windows.Forms.Form> имеет контейнерного элемента управления, он не принимает новые дочерние объекты в наследуемых элементов управления и форм. Решение заключается в изменить модификатор элемента управления базового контейнера для `protected` или `public`.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Forms.Button>  

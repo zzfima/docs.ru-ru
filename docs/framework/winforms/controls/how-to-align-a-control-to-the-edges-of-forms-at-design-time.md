@@ -5,41 +5,41 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: 5b36879413442ff99da034fcbee6bf6388affa6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 513029c1bd5cc4af52fcee97f7fab961729e613c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33528724"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389059"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения
-Можно сделать элемент управления Выровнять по границе формы, задав <xref:System.Windows.Forms.Control.Dock%2A>. Это свойство определяет, в каком месте формы будет размещаться элемент управления. Свойство <xref:System.Windows.Forms.Control.Dock%2A> может принимать указанные ниже значения.  
+Чтобы выровнять по границе формы, задав элемент управления <xref:System.Windows.Forms.Control.Dock%2A>. Это свойство определяет, в каком месте формы будет размещаться элемент управления. Свойство <xref:System.Windows.Forms.Control.Dock%2A> может принимать указанные ниже значения.  
   
 |Параметр|Влияние на элемент управления|  
 |-------------|----------------------------|  
 |<xref:System.Windows.Forms.DockStyle.Bottom>|Фиксирует элемент управления у нижнего края формы.|  
 |<xref:System.Windows.Forms.DockStyle.Fill>|Заполняет все свободное пространство формы.|  
 |<xref:System.Windows.Forms.DockStyle.Left>|Фиксирует элемент управления у левого края формы.|  
-|<xref:System.Windows.Forms.DockStyle.None>|Не фиксирует элемент нигде, он отображается в месте, указанном в его <xref:System.Windows.Forms.Control.Location%2A>.|  
+|<xref:System.Windows.Forms.DockStyle.None>|Не фиксирует элемент нигде; он отображается в расположении, указанном путем его <xref:System.Windows.Forms.Control.Location%2A>.|  
 |<xref:System.Windows.Forms.DockStyle.Right>|Фиксирует элемент управления у правого края формы.|  
 |<xref:System.Windows.Forms.DockStyle.Top>|Фиксирует элемент управления у верхнего края формы.|  
   
  Эти значения можно также задать в коде. Дополнительные сведения см. в разделе [как: выравнивание элементов управления на границы формы](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms.md).  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>Чтобы задать свойства Dock для элемента управления во время разработки  
   
 1.  В конструкторе Windows Forms выберите элемент управления.  
   
-2.  В **свойства** окно, щелкните раскрывающийся список полю <xref:System.Windows.Forms.Control.Dock%2A> свойство.  
+2.  В **свойства** окно, щелкните в раскрывающемся поле рядом с <xref:System.Windows.Forms.Control.Dock%2A> свойство.  
   
      Графический интерфейс с шестью возможными <xref:System.Windows.Forms.Control.Dock%2A> параметров отображается.  
   
 3.  Выберите соответствующий параметр.  
   
-4.  Элемент управления будет зафиксировано в соответствии с параметр.  
+4.  Элемент управления будет зафиксировано в отношении, определенном с помощью параметра.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>  

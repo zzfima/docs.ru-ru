@@ -1,29 +1,29 @@
 ---
-title: Что&#39;новые возможности ADO.NET
+title: Что&#39;возможности в ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: eb06681a55f1bd2abffb2e7169fa3bf892cd7313
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a94833a513fa6ceef02b5ec64f0a7995779d323a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33366038"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385438"
 ---
-# <a name="what39s-new-in-adonet"></a>Что&#39;новые возможности ADO.NET
+# <a name="what39s-new-in-adonet"></a>Что&#39;возможности в ADO.NET
 В [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] предоставляются следующие новые возможности.  
   
 ## <a name="sqlclient-data-provider"></a>Поставщик данных SqlClient  
- Ниже перечислены новые возможности в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщик данных для SQL Server в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:  
+ Следующие функции добавлены в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] поставщик данных для SQL Server в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:  
   
 -   Ключевые слова строки подключения ConnectRetryCount и ConnectRetryInterval (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) позволяют управлять функцией устойчивости бездействующего соединения.  
   
--   Поддержка потоков из SQL Server в приложение поддерживает сценарии, где неструктурированные данные на сервере.  В разделе [поддержка потоковой передачи SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) для получения дополнительной информации.  
+-   Поддержка потоков из SQL Server в приложение поддерживает сценарии, где неструктурированные данные на сервере.  См. в разделе [поддержка потоковой передачи SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) Дополнительные сведения.  
   
--   Добавлена поддержка для асинхронного программирования.  В разделе [асинхронное программирование](../../../../docs/framework/data/adonet/asynchronous-programming.md) для получения дополнительной информации.  
+-   Добавлена поддержка для асинхронного программирования.  См. в разделе [асинхронное программирование](../../../../docs/framework/data/adonet/asynchronous-programming.md) Дополнительные сведения.  
   
 -   Ошибки соединения теперь будут отображаться в журнале расширенных событий. Дополнительные сведения см. в разделе [Трассировка данных в ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md).  
   
--   SqlClient теперь имеет поддержка SQL Server высокой доступности и возможности аварийного восстановления и AlwaysOn. Дополнительные сведения см. в разделе [поддержка SqlClient для высокого уровня доступности и аварийного восстановления](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).  
+-   SqlClient теперь имеет поддержку для SQL Server высокой доступности, аварийного восстановления, AlwaysOn. Дополнительные сведения см. в разделе [поддержка SqlClient для высокого уровня доступности и аварийного восстановления](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).  
   
 -   Пароль может быть передан как <xref:System.Security.SecureString> при использовании проверки подлинности SQL Server. Дополнительные сведения см. в разделе <xref:System.Data.SqlClient.SqlCredential>.  
   
@@ -37,22 +37,22 @@ ms.locfileid: "33366038"
   
     -   Использовать полное имя домена в строке подключения.  
   
--   SqlClient поддерживает расширенную защиту. Дополнительные сведения о расширенной защите см. в разделе [соединиться с компонентом Database Engine с помощью расширенной защиты](http://go.microsoft.com/fwlink/?LinkId=219978).  
+-   SqlClient поддерживает расширенную защиту. Дополнительные сведения о расширенной защите см. в разделе [подключение к Database Engine с помощью расширенной защиты](https://go.microsoft.com/fwlink/?LinkId=219978).  
   
--   SqlClient поддерживает соединения с базами данных LocalDB. Дополнительные сведения см. в разделе [поддержка SqlClient LocalDB](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md).  
+-   SqlClient поддерживает соединения с базами данных LocalDB. Дополнительные сведения см. в разделе [поддержка SqlClient для LocalDB](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md).  
   
 -   `Type System Version=SQL Server 2012;` - это новое значение, которое должно быть передано в свойство соединения `Type System Version`. Значение `Type System Version=Latest;` теперь устарело и заменено эквивалентным `Type System Version=SQL Server 2008;`. Для получения дополнительной информации см. <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
--   SqlClient обеспечивает дополнительную поддержку разреженных столбцов - средство, которое было добавлено в SQL Server 2008. Если приложение уже имеет доступ к данным в таблице, в которой используется поддержка разреженных столбцов, должно быть обнаружено повышение производительности. Столбец IsColumnSet в <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> указывает, является ли столбец разреженным столбцом, который является элементом набора столбцов. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Указывает, является ли столбец разреженным столбцом (в разделе [коллекций схем SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) для получения дополнительной информации). Дополнительные сведения о разреженных столбцах см. в разделе [Использование разреженных столбцов](http://go.microsoft.com/fwlink/?LinkId=224244).  
+-   SqlClient обеспечивает дополнительную поддержку разреженных столбцов - средство, которое было добавлено в SQL Server 2008. Если приложение уже имеет доступ к данным в таблице, в которой используется поддержка разреженных столбцов, должно быть обнаружено повышение производительности. Столбец IsColumnSet в <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> указывает, является ли столбец разреженным столбцом, который является элементом набора столбцов. <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> Указывает, является ли столбец разреженным (см. в разделе [коллекции схемы SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md) Дополнительные сведения). Дополнительные сведения о разреженных столбцах см. в разделе [Использование разреженных столбцов](https://go.microsoft.com/fwlink/?LinkId=224244).  
   
--   Сборка Microsoft.SqlServer.Types.dll, содержащая типы пространственных данных, была обновлена с переходом от версии 10.0 к версии 11.0. Работа приложений, которые ссылаются на эту сборку, может оканчиваться сбоем. Дополнительные сведения см. в разделе [критические изменения в функциях ядра СУБД](http://go.microsoft.com/fwlink/?LinkId=224367).  
+-   Сборка Microsoft.SqlServer.Types.dll, содержащая типы пространственных данных, была обновлена с переходом от версии 10.0 к версии 11.0. Работа приложений, которые ссылаются на эту сборку, может оканчиваться сбоем. Дополнительные сведения см. в разделе [критические изменения в функциях ядра СУБД](https://go.microsoft.com/fwlink/?LinkId=224367).  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
- В [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] добавлены новые интерфейсы API, которые позволяют реализовывать новые сценарии при работе с бета-версией платформы Entity Framework 5.0. Дополнительные сведения об улучшениях и возможностях, которые были добавлены в Entity Framework 5.0 см. в следующих разделах: [новые](http://go.microsoft.com/fwlink/?LinkID=251106) и [Entity Framework выпуски и управление версиями](http://go.microsoft.com/fwlink/?LinkId=234899).  
+ В [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] добавлены новые интерфейсы API, которые позволяют реализовывать новые сценарии при работе с бета-версией платформы Entity Framework 5.0. Дополнительные сведения об улучшениях и функциях, добавленных в Entity Framework 5.0 см. в следующих разделах: [новые](https://go.microsoft.com/fwlink/?LinkID=251106) и [Entity Framework выпуски и управление версиями](https://go.microsoft.com/fwlink/?LinkId=234899).  
   
 ## <a name="see-also"></a>См. также  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [SQL Server и ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
- [Новые возможности служб данных WCF](http://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Новые возможности служб данных WCF](https://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

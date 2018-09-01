@@ -7,17 +7,17 @@ dev_langs:
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: b8cab1762a8c8c672d557c7bcccc2f339cbaefe9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d3e8269fc05caf70f4329ce8f13a3633a8982c0b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495058"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389923"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Безопасность сообщений с анонимным клиентом
-В следующем сценарии показаны клиент и служба, защищенные механизмом безопасности сообщений Windows Communication Foundation (WCF). Задача, поставленная при разработке, заключается в использовании безопасности сообщений, а не безопасности транспорта, чтобы в будущем возможно было использование более глубокой модели, использующей утверждения. Дополнительные сведения об использовании форматированного утверждений для авторизации см. в разделе [управление утверждениями и авторизацией с помощью модели удостоверения](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
+В следующем сценарии показаны клиент и служба, защищенные механизмом безопасности сообщений Windows Communication Foundation (WCF). Задача, поставленная при разработке, заключается в использовании безопасности сообщений, а не безопасности транспорта, чтобы в будущем возможно было использование более глубокой модели, использующей утверждения. Дополнительные сведения об использовании сложные утверждения для авторизации см. в разделе [управление утверждениями и авторизацией с моделью идентификации](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  
   
- Пример приложения см. в разделе [анонимной безопасности сообщения](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
+ Образец приложения, см. в разделе [сообщения безопасности Анонимный](../../../../docs/framework/wcf/samples/message-security-anonymous.md).  
   
  ![Безопасность с анонимным клиентом сообщений](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")  
   
@@ -138,4 +138,4 @@ ms.locfileid: "33495058"
  [Защита распределенных приложений](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
  [Безопасность сообщений с возможностью анонимного доступа](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
  [Идентификация и проверка подлинности службы](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

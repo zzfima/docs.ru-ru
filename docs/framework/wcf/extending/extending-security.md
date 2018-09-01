@@ -6,19 +6,19 @@ helpviewer_keywords:
 ms.assetid: a015a040-9fdf-4147-9ea9-f83b570be1d4
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 94aefe80674c5b4ec6fcce6a41d9b68e093f4262
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a16416e580dabd6a9057e11a8183437529ca83e8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809405"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384416"
 ---
 # <a name="extending-security"></a>Расширение безопасности
-Для размещения новых типов утверждений и пользовательских маркеров, можно расширить инфраструктуру безопасности Windows Communication Foundation (WCF). Это подробно описывается в следующих подразделах.  
+Чтобы адаптировать новые типы утверждений и пользовательские маркеры, можно расширить инфраструктуру безопасности Windows Communication Foundation (WCF). Это подробно описывается в следующих подразделах.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Архитектура безопасности](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
- Пошаговое руководство по архитектуре системы безопасности WCF.  
+ [Архитектура безопасности](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)  
+ Пошаговое рассмотрение архитектуры системы безопасности WCF.  
   
  [Пользовательские учетные данные и проверка учетных данных](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)  
  Рассматривается, как модель удостоверения используется при проверке пользовательских учетных данных.  
@@ -39,7 +39,7 @@ ms.locfileid: "33809405"
  Обычно сообщения подписываются и шифруются одним сертификатом. В этом разделе объясняется, как при необходимости использовать два сертификата.  
   
  [Практическое руководство. Изменение поставщика служб шифрования для закрытого ключа сертификата X.509](../../../../docs/framework/wcf/extending/change-cryptographic-provider-x509-certificate-private-key.md)  
- Объясняется, как изменить поставщика служб шифрования, используемый для предоставления закрытый ключ сертификата X.509 и как интегрировать поставщика в платформу Windows Communication Foundation (WCF).  
+ Объясняет, как изменить поставщика служб шифрования, используемый для предоставления закрытый ключ сертификата X.509 и как интегрировать поставщика в платформу Windows Communication Foundation (WCF).  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.ServiceModel.ServiceAuthorizationManager>  

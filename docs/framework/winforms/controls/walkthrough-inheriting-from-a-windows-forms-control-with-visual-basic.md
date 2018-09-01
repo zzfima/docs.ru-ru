@@ -10,18 +10,18 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: a6b1e78d17d952590510bdda80bf802ccc094285
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c70de1bf6a5340b6f5b2c652110ed9be5536665
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541441"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389984"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Пример. Наследование элементов управления форм Windows Forms с помощью Visual Basic
-С помощью Visual Basic можно создавать эффективные пользовательские элементы управления *наследования*. Наследование позволяет создавать элементы управления, сохраняющие все унаследованные функциональные возможности элементов управления Windows Forms и в то же время обладающие дополнительными функциями. В этом пошаговом руководстве вы создадите простой производный элемент управления с именем `ValueButton`. Эта кнопка наследует функциональные возможности стандартных форм Windows <xref:System.Windows.Forms.Button> управления и предоставляет настраиваемое свойство `ButtonValue`.  
+Visual Basic позволяет создавать эффективные настраиваемые элементы управления *наследования*. Наследование позволяет создавать элементы управления, сохраняющие все унаследованные функциональные возможности элементов управления Windows Forms и в то же время обладающие дополнительными функциями. В этом пошаговом руководстве вы создадите простой производный элемент управления с именем `ValueButton`. Эта кнопка наследует функциональные возможности стандартных форм Windows <xref:System.Windows.Forms.Button> управления и предоставляет настраиваемое свойство `ButtonValue`.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-project"></a>Создание проекта  
  Создавая проект, вы указываете для него имя, чтобы задать корневое пространство имен, имя сборки и имя проекта, и необходимо убедиться в том, что компонент по умолчанию попадет в нужное пространство имен.  
@@ -30,7 +30,7 @@ ms.locfileid: "33541441"
   
 1.  В меню **Файл** наведите указатель мыши на пункт **Создать** и выберите **Проект**, чтобы открыть диалоговое окно **Создание проекта**.  
   
-2.  Выберите **Библиотека элементов управления Windows Forms** шаблон проекта из списка проектов Visual Basic, а также тип `ValueButtonLib` в **имя** поле.  
+2.  Выберите **Библиотека элементов управления Windows Forms** шаблон проекта из списка проектов Visual Basic и тип `ValueButtonLib` в **имя** поле.  
   
      Имя проекта, `ValueButtonLib`, по умолчанию также назначается корневому пространству имен. Корневое пространство имен используется для определения имен компонентов в сборке. Например, если в двух сборках содержатся компоненты с именем `ValueButton`, можно указать компонент `ValueButton`, используя `ValueButtonLib.ValueButton`. Дополнительные сведения см. в разделе [Пространства имен в Visual Basic](~/docs/visual-basic/programming-guide/program-structure/namespaces.md).  
   
@@ -40,13 +40,13 @@ ms.locfileid: "33541441"
   
 5.  Откройте узел **ValueButton.vb**, чтобы отобразить сформированный конструктором файл кода **ValueButton.Designer.vb**. Откройте этот файл в **редакторе кода**.  
   
-6.  Найдите `Class` инструкции `Partial Public Class ValueButton`и измените тип, от которого наследует этот элемент управления <xref:System.Windows.Forms.UserControl> для <xref:System.Windows.Forms.Button>. Это позволит элементу управления могут наследовать все функциональные возможности <xref:System.Windows.Forms.Button> элемента управления.  
+6.  Найдите `Class` инструкции `Partial Public Class ValueButton`и измените тип, из которого наследуется этот элемент управления из <xref:System.Windows.Forms.UserControl> для <xref:System.Windows.Forms.Button>. Это позволяет элементу управления унаследовать все функции из <xref:System.Windows.Forms.Button> элемента управления.  
   
-7.  Найдите `InitializeComponent` метод и удалите строку, которая присваивает <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> свойство. Это свойство не существует в <xref:System.Windows.Forms.Button> элемента управления.  
+7.  Найдите `InitializeComponent` метод и удалить строку, назначающую <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> свойство. Это свойство не существует в <xref:System.Windows.Forms.Button> элемента управления.  
   
 8.  Сохраните проект, выбрав в меню **Файл** команду **Сохранить все**.  
   
-     Обратите внимание, что визуальный конструктор больше не доступен. Поскольку <xref:System.Windows.Forms.Button> управления обладает своим собственным оформлением, их нельзя изменить в конструкторе. Визуальное представление будет иметь точно таким же, что он наследуется от класса (то есть, <xref:System.Windows.Forms.Button>), если в коде.  
+     Обратите внимание, что визуальный конструктор больше не доступен. Так как <xref:System.Windows.Forms.Button> элемент управления имеет собственное оформление, вы не сможете изменить его внешний вид в конструкторе. Визуальное представление будет иметь точно так же, как он наследует от класса (то есть <xref:System.Windows.Forms.Button>) Если изменения в код.  
   
 > [!NOTE]
 >  В область конструктора по-прежнему можно добавлять компоненты, не имеющие элементов пользовательского интерфейса.  
@@ -151,4 +151,4 @@ ms.locfileid: "33541441"
  [Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  [Разработка пользовательских элементов управления Windows Forms в .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
  [Основы наследования (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
- [Примеры создания компонентов](http://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)
+ [Примеры создания компонентов](https://msdn.microsoft.com/library/c414cca9-2489-4208-8b38-954586d91c13)

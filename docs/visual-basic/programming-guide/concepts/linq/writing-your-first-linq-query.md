@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 44fbf35ee4ab5a0c4763269808f0817a33d05b40
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998441"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387638"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Написание первого запроса LINQ (Visual Basic)
 *Запрос* представляет собой выражение, извлекающее данные из источника данных. Запросы выражаются на языке запросов выделенного. Со временем различных языков были разработаны для различных типов источников данных, например, SQL для реляционных баз данных и XQuery для XML. Поэтому для разработчиков приложений изучать новый язык запросов для каждого типа источника данных или формата данных, который поддерживается.  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- Дополнительные сведения о способах создания определенных типов источников данных см. в документации для различных поставщиков [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Список этих поставщиков, см. в разделе [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) Общее правило очень просто: [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] источник данных — это любой объект, который поддерживает универсальный <xref:System.Collections.Generic.IEnumerable%601> интерфейс или интерфейс, наследуемый от него.  
+ Дополнительные сведения о способах создания определенных типов источников данных см. в документации для различных поставщиков [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Список этих поставщиков, см. в разделе [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) Общее правило очень просто: [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] источник данных — это любой объект, который поддерживает универсальный <xref:System.Collections.Generic.IEnumerable%601> интерфейс или интерфейс, наследуемый от него.  
   
 > [!NOTE]
 >  Типы, такие как <xref:System.Collections.ArrayList> , которые поддерживают неуниверсальный <xref:System.Collections.IEnumerable> интерфейс может также использоваться как [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] источников данных. Пример, использующий <xref:System.Collections.ArrayList>, см. в разделе [как: выполнение запроса к ArrayList с помощью LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  

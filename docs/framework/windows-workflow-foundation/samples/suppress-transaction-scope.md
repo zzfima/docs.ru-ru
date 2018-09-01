@@ -2,12 +2,12 @@
 title: Область подавления транзакции
 ms.date: 03/30/2017
 ms.assetid: 49fb6dd4-30d4-4067-925c-c5de44c8c740
-ms.openlocfilehash: b38d168e7da4510b75ebeda7f4984c26fb68898d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 44814d66a4de4b3e72bb33eb46019eb1088ab040
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518464"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385198"
 ---
 # <a name="suppress-transaction-scope"></a>Область подавления транзакции
 В этом образце показывается создание пользовательского действия `SuppressTransactionScope`, блокирующего внешнюю транзакцию среды выполнения при ее наличии.  
@@ -17,7 +17,7 @@ ms.locfileid: "33518464"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\SuppressTransactionScope`  
   
@@ -36,9 +36,9 @@ ms.locfileid: "33518464"
   
 2.  Чтобы построить решение, нажмите клавиши CTRL + SHIFT + B или выберите **построить решение** из **построения** меню.  
   
-3.  После успешного построения щелкните решение правой кнопкой мыши и выберите **назначить запускаемые проекты**. В диалоговом окне выберите **несколько запускаемых проектов** и убедитесь, что для обоих проектов задано действие **запустить**.  
+3.  После успешного построения щелкните решение правой кнопкой мыши и выберите **назначить запускаемые проекты**. В диалоговом окне выберите **несколько запускаемых проектов** , причем для обоих проектов задано действие **запустить**.  
   
-4.  Нажмите клавишу F5 или выберите **начать отладку** из **отладки** меню. Кроме того, нажмите клавиши CTRL + F5 или выберите **Запуск без отладки** из **отладки** меню для запуска без отладки.  
+4.  Нажмите клавишу F5 или выберите **начать отладку** из **Отладка** меню. Кроме того, можно нажать CTRL + F5 или выбрать **Запуск без отладки** из **Отладка** меню для запуска без отладки.  
   
     > [!NOTE]
     >  Перед запуском клиента необходимо запустить сервер. Данные, выводимые в окне консоли, в котором размещена служба, указывают время начала работы службы.  
@@ -48,6 +48,6 @@ ms.locfileid: "33518464"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\SuppressTransactionScope`

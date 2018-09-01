@@ -11,19 +11,19 @@ ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: fa3410cc2c8812c59528676bfad6cd7e887c5f73
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 75cc2003a88cc7be467b9062c37b6b5d9eb82f53
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746401"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43388488"
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;providerOption&gt; элемент
 Задает атрибуты версии компилятора для поставщика языка.  
   
- \<Элемент конфигурации >  
-\<System.CodeDom-элемент >  
-\<компиляторы элемент >  
+ \<Элемент Configuration >  
+\<Элемент System.CodeDom >  
+\<Элемент compilers >  
 \<Компилятор > элемент  
 \<providerOption > элемент  
   
@@ -43,7 +43,7 @@ ms.locfileid: "32746401"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`name`|Обязательный атрибут.<br /><br /> Указывает имя параметра; Например, «CompilerVersion».|  
+|`name`|Обязательный атрибут.<br /><br /> Задает имя параметра; Например, «CompilerVersion».|  
 |`value`|Обязательный атрибут.<br /><br /> Указывает значение для параметра; Например «v3.5».|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
@@ -51,7 +51,7 @@ ms.locfileid: "32746401"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[Элемент \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Корневой элемент в любом файле конфигурации, который используется средой CLR и приложениями .NET Framework.|  
 |[\<System.CodeDom > элемент](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Задает параметры конфигурации компилятора для доступных поставщиков языков.|  
@@ -59,16 +59,16 @@ ms.locfileid: "32746401"
 |[Элемент \<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Задает атрибуты конфигурации компилятора для поставщика языка.|  
   
 ## <a name="remarks"></a>Примечания  
- В платформе .NET Framework версии 3.5 поставщики кода в объектной модели документов кода (CodeDOM) поддерживают параметры поставщика с использованием `<providerOption>` элемента.  
+ В .NET Framework версии 3.5, поставщики код объектной модели документов кода (CodeDOM) могут поддерживать параметры поставщика с помощью `<providerOption>` элемент.  
   
- .NET Framework 3.5 включает обновленные сборки .NET Framework 2.0 и обеспечивает новые сборки версии 3.5, которые содержат новые типы. Поставщики кода Microsoft C# и Visual Basic находятся в сборках .NET Framework 2.0, но были обновлены для поддержки компиляторов версии 3.5. По умолчанию обновленные поставщики кода создать код для компиляторов версии 2.0. Можно использовать `<providerOption>` элемент для изменения целевой версии компилятора 3.5. Чтобы сделать это, укажите «CompilerVersion» для `name` атрибут и «v3.5» для `value` атрибута. Номер версии с прописной буквы «v» должно предшествовать.  
+ .NET Framework 3.5, включает обновленные сборки .NET Framework 2.0 и предоставляет новые сборки версии 3.5, которые содержат новые типы. Поставщики кода Microsoft C# и Visual Basic, находятся в сборках .NET Framework 2.0, но были обновлены для поддержки компиляторы версии 3.5. По умолчанию поставщики обновленный код создания кода для компиляторов версии 2.0. Можно использовать `<providerOption>` элемент для изменения целевой версии компилятора 3.5. Чтобы сделать это, укажите «Версию компилятора» для `name` атрибут и «v3.5» для `value` атрибута. Должен предшествовать номер версии с прописной буквы «v».  
   
- Версии спецификации можно сделать глобальный путем добавления `<providerOption>` элемент для .NET Framework 2.0 Machine.config или корневом файле Web.config. При обновлении версии компилятора по умолчанию 3.5 в файле Machine.config, можно изменить его обратно в 2.0 на основе каждого приложения с помощью `<providerOption>` в файле конфигурации приложения.  
+ Спецификация версии можно сделать глобальным путем добавления `<providerOption>` элемент в .NET Framework 2.0 Machine.config или корневом файле Web.config. Если вы не обновите версию компилятора по умолчанию 3.5 в файле Machine.config, можно изменить его обратно в 2.0 на основе каждого приложения с помощью `<providerOption>` элемент в файле конфигурации приложения.  
   
- Исполнители поставщик codeDOM кода можно обрабатывать пользовательские параметры, предоставляющий конструктор, который принимает `providerOptions` параметр типа <xref:System.Collections.Generic.IDictionary%602>.  
+ Реализации поставщика кода codeDOM может обрабатывать настраиваемых параметров, предоставляя конструктор, принимающий `providerOptions` параметр типа <xref:System.Collections.Generic.IDictionary%602>.  
   
 ## <a name="example"></a>Пример  
- Ниже приведен пример, как указать, следует использовать версии 3.5 поставщика кода C#.  
+ Ниже приведен пример, как указать, следует использовать поставщика кода C# версии 3.5.  
   
 ```xml  
 <configuration>  
@@ -98,4 +98,4 @@ ms.locfileid: "32746401"
  [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<компиляторы > элемент](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
  [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
- [Компилятор элемент для компиляторов для компиляции (схема параметров ASP.NET)](http://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
+ [Элемент Compiler для компиляторов для compilation (схема параметров ASP.NET)](https://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)

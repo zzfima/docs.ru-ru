@@ -2,12 +2,12 @@
 title: Форматирование сообщений в службах рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: 6d15d44b-20f8-4cb7-bd4f-598c32781ebc
-ms.openlocfilehash: eac9f7042dbcbd31f9a8c7d5e56c7b7d2ab62156
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb9a6b3a83a28154dc968bd4c1c41d34028bdd41
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513790"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389141"
 ---
 # <a name="formatting-messages-in-workflow-services"></a>Форматирование сообщений в службах рабочего процесса
 В этом образце показано, как использовать различные пользовательские типы в действиях обмена сообщениями (в службах WF). Образец показывает простую службу утверждения затрат. Он представляет три операции. `ApproveExpense` принимает значение типа контракта данных и показывает, как использовать известные типы. Операция возвращает значение `true` или `false` в зависимости от суммы затрат. `ApprovePO` принимает значение типа XmlSerializer и возвращает `true` или `false` зависимости от суммы затрат.`ApprovedVendor` Получает тип контракта сообщения и возвращает `true` или `false` Если поставщик имеется в списке утвержденных поставщиков или если запрос прибыл из финансового отдела (финансовый отдел может использовать любого поставщика).  
@@ -27,6 +27,6 @@ ms.locfileid: "33513790"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\Formatter`

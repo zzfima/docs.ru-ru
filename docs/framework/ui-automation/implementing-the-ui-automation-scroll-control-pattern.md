@@ -9,22 +9,22 @@ ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 8553bbf192a619ab5877e362b1642007432c8c64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a32d0684aa42eb5d12f200541f6daf22d3989cc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399558"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389332"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>Реализация шаблона элемента управления Scroll для автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IScrollProvider>, включая сведения о событиях и свойствах. Ссылки на дополнительные материалы перечислены в конце раздела.  
   
  Шаблон элемента управления <xref:System.Windows.Automation.ScrollPattern> используется для поддержки элемента управления, который выступает в качестве прокручиваемого контейнера для коллекции дочерних объектов. Этому элементу управления не обязательно использовать полосы прокрутки для поддержки функции прокрутки, хотя обычно это делается.  
   
- ![Элемент управления прокруткой без полос прокрутки. ] (../../../docs/framework/ui-automation/media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
+ ![Элемент управления прокруткой без полос прокрутки. ](../../../docs/framework/ui-automation/media/uia-scrollpattern-without-scrollbars.PNG "UIA_ScrollPattern_Without_Scrollbars")  
 Пример элемента управления прокрутки, не использующего полосы прокрутки  
   
  Примеры элементов управления, реализующих данный шаблон элемента управления, см. в разделе [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "33399558"
   
 -   Свойства<xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> и <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> не зависят от <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>.  
   
--   Если свойство <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` , то свойство <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> должно иметь значение 100 %, а свойство <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> должно иметь значение <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Аналогично, если свойство <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` , то свойство <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> должно иметь значение 100 %, а свойство <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> должно иметь значение <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Это позволяет клиенту автоматизации пользовательского интерфейса использовать эти значения свойств в методе <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> , избегая [состояния гонки](http://support.microsoft.com/default.aspx?scid=kb;en-us;317723) , если клиент не заинтересован в активации прокрутки.  
+-   Если свойство <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` , то свойство <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> должно иметь значение 100 %, а свойство <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> должно иметь значение <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Аналогично, если свойство <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` , то свойство <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> должно иметь значение 100 %, а свойство <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> должно иметь значение <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>. Это позволяет клиенту автоматизации пользовательского интерфейса использовать эти значения свойств в <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> метод избегая [гонки](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) если направление клиент не заинтересован в активации прокрутки.  
   
 -   <xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A> зависит от конкретного языка. Установка HorizontalScrollPercent = 100.0 должна задавать расположение прокрутки элемента управления в крайней правой позиции для таких языков, как английский, где чтение выполняется слева направо. И наоборот, для таких языков, как арабский, где чтение выполняется справа налево, установка HorizontalScrollPercent = 100.0 должен задавать расположение прокрутки в крайней левой позиции.  
   

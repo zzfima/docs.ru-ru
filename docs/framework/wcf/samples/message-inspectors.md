@@ -2,12 +2,12 @@
 title: Инспекторы сообщений
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 05dbee820a002feb1f2a1672220be0c4a397f952
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 253be4d13649d4f6394aad1bb002f5cd555d8af2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508999"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385848"
 ---
 # <a name="message-inspectors"></a>Инспекторы сообщений
 В этом образце демонстрируется, как реализовать и настроить инспекторы сообщений клиента и службы.  
@@ -259,7 +259,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
 >  Данное конкретное поведение не дублируется как атрибут, поэтому его нельзя декларативно добавить в тип контракта типа службы. Это решение было принято намеренно, поскольку коллекцию схем нельзя загрузить в объявление атрибута, а обращение к размещению дополнительной конфигурации (например, к параметрам приложения) в этом атрибуте означает создание элемента конфигурации, не согласованного с остальной конфигурацией модели служб. Поэтому данное поведение можно добавить только императивно посредством кода и посредством расширения конфигурации модели служб.  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>Добавление инспектора сообщений с помощью конфигурации  
- Для настройки пользовательского поведения в конечной точке в файле конфигурации приложения, в модели службы требуется разработчику создать конфигурацию *элемент расширения* представленный классом, производным от <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>. Это расширение затем необходимо добавить в раздел конфигурации модели служб для расширений, как показано для следующего расширения, рассматриваемого в данном разделе.  
+ Для настройки пользовательского поведения в конечной точке в файле конфигурации приложения, модель службы требует разработчиков для создания конфигурации *элемент расширения* представленный класс, производный от <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>. Это расширение затем необходимо добавить в раздел конфигурации модели служб для расширений, как показано для следующего расширения, рассматриваемого в данном разделе.  
   
 ```xml  
 <system.serviceModel>  
@@ -402,14 +402,14 @@ catch (Exception e)
   
 2.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
   

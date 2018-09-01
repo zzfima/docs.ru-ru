@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5bb3d48d33333e888200bc607d3a193482f0336
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 00e425b56ae555b153685b5af0ac58b6ab4c335b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433657"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43391650"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassemblyex-method"></a>Метод ICLRStrongName::StrongNameTokenFromAssemblyEx
-Создает маркер строгого имени из указанного файла сборки и возвращает открытый ключ, представляющий маркер.  
+Создает маркер строгого имени из указанного файла сборки и возвращает открытый ключ, представляющий токен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,36 +41,36 @@ HRESULT StrongNameTokenFromAssemblyEx (
   
 #### <a name="parameters"></a>Параметры  
  `wszFilePath`  
- [in] Путь к файлу переносимого исполняемого (PE) для сборки.  
+ [in] Путь к переносимого исполняемого (PE) файла для сборки.  
   
  `ppbStrongNameToken`  
- [out] Возвращаемый строгое имя маркера.  
+ [out] Токен, возвращенный строгого имени.  
   
  `pcbStrongNameToken`  
- [out] Размер в байтах строгое имя маркера.  
+ [out] Размер в байтах, строгое имя маркера.  
   
  `ppbPublicKeyBlob`  
  [out] Возвращаемый открытый ключ.  
   
  `pcbPublicKeyBlob`  
- [out] Размер в байтах для открытого ключа.  
+ [out] Размер в байтах, открытого ключа.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (в разделе [часто встречающихся значений HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
   
 ## <a name="remarks"></a>Примечания  
- Маркер строгого имени — это сокращенная форма открытого ключа. Маркер является 64-разрядный хэш, который создается из открытого ключа, используемого для подписания сборки. Маркер является частью строгого имени для сборки и может быть считано из метаданных сборки.  
+ Маркер строгого имени — это сокращенная форма открытого ключа. Токен является 64-разрядный хэш, который создается из открытого ключа, используемого для подписания сборки. Маркер является частью строгого имени для сборки и может быть считано из метаданных сборки.  
   
- После получения ключа и создания маркера, необходимо вызвать [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод для освобождения выделенной памяти.  
+ После извлечения ключа и создания маркера, необходимо вызвать [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод для освобождения выделенной памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** MetaHost.h  
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Метод StrongNameTokenFromAssembly](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)  

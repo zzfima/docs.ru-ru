@@ -2,12 +2,12 @@
 title: Дополнительная политика
 ms.date: 03/30/2017
 ms.assetid: 75a22c88-5e54-4ae8-84cb-fbb22a612f0a
-ms.openlocfilehash: 81cf2fb428833d4ca8cccf197011b69f2ccf3108
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: becdc28affd877239474d6f0f007a480297bccb8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515559"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387893"
 ---
 # <a name="advanced-policy"></a>Дополнительная политика
 Данный образец выступает как дополнение образца простой политики. К правилам для скидок на жилье и коммерческих скидок, описанных в примере простой политики, добавлены несколько новых правил.  
@@ -48,7 +48,7 @@ ms.locfileid: "33515559"
   
  ELSE Total = OrderValue  
   
- **Errortotalrule повторное вычисление:**  
+ **ErrorTotalRule:**  
   
  Если общее \< 0  
   
@@ -73,7 +73,7 @@ ms.locfileid: "33515559"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец находится в следующем каталоге:  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец находится в следующем каталоге:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\AdvancedPolicy`  
   

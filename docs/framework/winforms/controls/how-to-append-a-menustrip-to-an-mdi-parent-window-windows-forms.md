@@ -9,19 +9,19 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: 048add340a81856cd30482c52c93c76bbf6181f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfce2e5c787bd18321d1203286e98d8f75cbf173
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529559"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43386082"
 ---
 # <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>Практическое руководство. Добавление элемента управления в родительское окно MDI-приложения (Windows Forms)
 В некоторых приложениях вид дочернего окна многодокументного интерфейса (MDI) может отличаться от родительского окна MDI. Например, родительским окном MDI может быть электронная таблица, а дочерним окном MDI — диаграмма. В этом случае может потребоваться дополнить содержимое меню родительского окна MDI содержимым меню дочерней MDI-формы, по мере того как активируются дочерние окна MDI различных типов.  
   
  В следующей процедуре используются свойства <xref:System.Windows.Forms.Form.IsMdiContainer%2A>, <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>, <xref:System.Windows.Forms.MergeAction> и <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> для добавления меню дочернего окна MDI в меню родительского окна MDI. При закрытии дочернего окна MDI удаляются пункты меню, добавленные из родительского окна MDI.  
   
- См. также [приложений многодокументного интерфейса (MDI)](http://msdn.microsoft.com/library/xyhh2e7e\(v=vs.110\)).  
+ Также см. в разделе [приложений многодокументного интерфейса (MDI)](https://msdn.microsoft.com/library/xyhh2e7e\(v=vs.110\)).  
   
 ### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>Добавление пункта меню в родительское окно MDI  
   

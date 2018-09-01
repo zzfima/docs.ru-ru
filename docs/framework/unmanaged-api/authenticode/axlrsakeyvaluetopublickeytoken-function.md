@@ -10,14 +10,15 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ef73f0f7599fdff887437756a5995591fd8ec89
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e09391af9b5d71cfa423b3bf1a2b307117d0dee1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402416"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385891"
 ---
-# <a name="axlrsakeyvaluetopublickeytoken-function"></a>Функция _AxlRSAKeyValueToPublicKeyToken
+# <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_Функция AxlRSAKeyValueToPublicKeyToken
+
 Преобразует модули и экспоненту в строгое имя маркера открытого ключа.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -30,12 +31,12 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
 );  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Параметры  
  `pModulusBlob`  
- [in] Большой двоичный объект модуля кодировке base64 (от \<Modulus > элемент).  В разделе [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) структуры.  
+ [in] Большой двоичный объект модуля кодировке base64 (от \<Modulus > элемент).  См. в разделе [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) структуры.  
   
  `pExponentBlob`  
- [in] Большой двоичный объект экспоненты кодировке base64 (от \<показатель степени > элемент). В разделе [CRYPTOAPI_BLOB](http://msdn.microsoft.com/library/windows/desktop/aa380238.aspx) структуры.  
+ [in] Большой двоичный объект экспоненты с кодировкой base64 (от \<Exponent > элемент). См. в разделе [CRYPTOAPI_BLOB](/windows/desktop/api/dpapi/ns-dpapi-_cryptoapi_blob) структуры.  
   
  `ppwszPublicKeyToken`  
  [из] Указатель на WCHAR * для получения шестнадцатеричного кодированного маркера открытого ключа.  

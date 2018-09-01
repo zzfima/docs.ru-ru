@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 3c74bed67069740354b36891db73ed80b952f0c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a57bf400288c11e5ba651515feba42437b93148f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362728"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389579"
 ---
 # <a name="large-udts"></a>Большие, определяемые пользователем типы
 Определяемые пользователем типы данных (UDT) позволяют разработчику расширить систему скалярных типов путем сохранения в базе данных SQL Server объектов среды CLR. Определяемые пользователем типы могут содержать несколько элементов в отличие от традиционных псевдонимов типов данных, состоящих из одного системного типа данных SQL Server.  
@@ -24,10 +24,10 @@ ms.locfileid: "33362728"
   
  **Электронная документация по SQL Server**  
   
-1.  [Определяемые пользователем типы CLR](http://go.microsoft.com/fwlink/?LinkId=98366)  
+1.  [Определяемые пользователем типы CLR](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>Загрузка схем определяемых пользователем типов данных с помощью метода GetSchema  
- Метод <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> класса <xref:System.Data.SqlClient.SqlConnection> возвращает сведения о схеме базы данных в <xref:System.Data.DataTable>. Дополнительные сведения см. в разделе [коллекций схем SQL Server](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
+ Метод <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> класса <xref:System.Data.SqlClient.SqlConnection> возвращает сведения о схеме базы данных в <xref:System.Data.DataTable>. Дополнительные сведения см. в разделе [коллекции схемы SQL Server](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md).  
   
 ### <a name="getschematable-column-values-for-udts"></a>Значения столбца GetSchemaTable для определяемых пользователем типов данных  
  Метод <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> класса <xref:System.Data.SqlClient.SqlDataReader> возвращает объект <xref:System.Data.DataTable> с описанием метаданных столбцов. В приведенной ниже таблице описаны различия метаданных столбцов для определяемых пользователем типов данных в SQL Server 2005 и SQL Server 2008.  
@@ -41,7 +41,7 @@ ms.locfileid: "33362728"
 |`ProviderSpecificDataType`|`SqlTypes.SqlBinary`|Экземпляр определяемого пользователем типа данных|  
 |`ProviderType`|21 (`SqlDbType.VarBinary`)|29 (`SqlDbType.Udt`)|  
 |`NonVersionedProviderType`|29 (`SqlDbType.Udt`)|29 (`SqlDbType.Udt`)|  
-|`DataTypeName`|`SqlDbType.VarBinary`|Из трех частей, имя, указанное как *Database.SchemaName.TypeName*.|  
+|`DataTypeName`|`SqlDbType.VarBinary`|Трех частей имя, указанное как *Database.SchemaName.TypeName*.|  
 |`IsLong`|Возможны разные варианты|Возможны разные варианты|  
   
 ## <a name="sqldatareader-considerations"></a>Вопросы, связанные с SqlDataReader  
@@ -136,4 +136,4 @@ End Using
  [Извлечение сведений о схеме базы данных](../../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
  [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
-ms.openlocfilehash: b3d7a1c68dbaa29c83bd066a8cb3ed2775672d98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 157db8b9fbbbb6e1c6af41b4cf3903f4a762d763
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534508"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385730"
 ---
 # <a name="statusstrip-control"></a>Элемент управления StatusStrip
 Элемент управления Windows Forms `StatusStrip` используется в формах в качестве области, обычно отображаемой в нижней части окна, в которой выводятся различные сведения о состоянии приложения. Элементы управления `StatusStrip` обычно имеют встроенные элементы управления `ToolStripStatusLabel`, отображающие текст или значки, которые показывают состояние, или <xref:System.Windows.Forms.ToolStripProgressBar>, который  отображает состояние завершения процесса графически.  
@@ -22,7 +22,7 @@ ms.locfileid: "33534508"
  [Практическое руководство. Интерактивное использование свойства Spring в элементе управления StatusStrip](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)  
  Демонстрирует использование свойства `Spring` для интерактивного центрирования `ToolStripStatusLabel` в `StatusStrip`.  
   
- См. также [редактор коллекции элементов StatusStrip](http://msdn.microsoft.com/library/ms233631\(v=vs.110\)), [редактор коллекции элементов StatusStrip](http://msdn.microsoft.com/library/ms233642\(v=vs.110\)).  
+ Также см. в разделе [редактор коллекции элементов StatusStrip](https://msdn.microsoft.com/library/ms233631\(v=vs.110\)), [редактор коллекции элементов StatusStrip](https://msdn.microsoft.com/library/ms233642\(v=vs.110\)).  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.StatusStrip>  

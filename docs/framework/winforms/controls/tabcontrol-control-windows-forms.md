@@ -10,12 +10,12 @@ helpviewer_keywords:
 - property pages [Windows Forms], creating
 - tab dialog boxes
 ms.assetid: 915091af-93ac-4d3d-8283-738dd2d21ea7
-ms.openlocfilehash: 91a9930a3678e08fc0e46335f1eb95330bd171a8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75f0fc416ad29137c119b571acd658a7e56fc009
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33536765"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384958"
 ---
 # <a name="tabcontrol-control-windows-forms"></a>Элемент управления TabControl (Windows Forms)
 Элемент управления `TabControl` Windows Forms используется для отображения нескольких вкладок, аналогичных разделителям в записной книжке или меткам в наборе папок в картотеке. Вкладки могут содержать изображения и другие элементы управления. Используйте элемент управления `TabControl` для создания страниц свойств.  
@@ -36,7 +36,7 @@ ms.locfileid: "33536765"
  [Практическое руководство. Блокировка доступа ко вкладкам](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
  Объясняется, как ограничить доступ к вкладке, например на основе учетных данных пользователя.  
   
- См. также [как: Добавление и удаление вкладок с Windows Forms TabControl с помощью конструктора](http://msdn.microsoft.com/library/ms233654\(v=vs.110\)), [как: добавьте элемент управления вкладки страницы с помощью конструктора](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
+ Также см. в разделе [как: Добавление и удаление вкладок с TabControl форм Windows с помощью конструктора](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md), [как: Добавление элемента управления вкладки страницы с помощью конструктора](how-to-add-a-control-to-a-tab-page-using-the-designer.md)  
   
 ## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.TabControl>  

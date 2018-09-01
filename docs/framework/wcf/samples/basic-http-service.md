@@ -2,15 +2,15 @@
 title: Базовая служба HTTP
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 0f93b43a08f586e99d8a49379cfb2e283ff7918d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 914ad5f04d980fd53cd07251461367356f00b4cc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808862"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390384"
 ---
 # <a name="basic-http-service"></a>Базовая служба HTTP
-Этот образец демонстрирует реализацию службы на основе HTTP, на основе RPC - часто называют службы «POX» (Plain Old XML) — с использованием модели программирования REST Windows Communication Foundation (WCF). В этом примере состоит из двух компонентов: резидентной службы WCF HTTP (Service.cs) и консольного приложения (Program.cs), создающего службу и выполняющего вызовы к нему.  
+Этот образец демонстрирует реализацию службы на базе HTTP, основанные на RPC - часто называют «POX» (Plain Old XML) службы — с помощью модели программирования REST Windows Communication Foundation (WCF). Этот образец состоит из двух компонентов: резидентной службы WCF HTTP (Service.cs) и консольного приложения (Program.cs), создает службу и выполняющего вызовы к нему.  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
  Служба WCF предоставляет 2 операции `EchoWithGet` и `EchoWithPost`, который возвращает строку, которая была передана в качестве входных данных.  
@@ -19,9 +19,9 @@ ms.locfileid: "33808862"
   
  Операция `EchoWithPost` аннотируется <xref:System.ServiceModel.Web.WebInvokeAttribute>, указывающим на то, что это не является операцией `GET` (имеющей побочные эффекты). Поскольку <xref:System.ServiceModel.Web.WebInvokeAttribute> не указывает явно `Method`, операция обрабатывает HTTP-запросы `POST`, содержащие строку в тексте запроса (например, в формате XML). Обратите внимание, что метод HTTP и формат URI запроса можно изменить с помощью свойств <xref:System.ServiceModel.Web.WebInvokeAttribute.Method%2A> и <xref:System.ServiceModel.Web.WebInvokeAttribute.UriTemplate> соответственно.  
   
- Файл App.config настраивает для службы WCF конечную точку по умолчанию <xref:System.ServiceModel.Description.WebHttpEndpoint>, для свойства которого <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> задано значение `true`. В результате инфраструктура WCF создает автоматический страницу справки формате HTML по адресу `http://localhost:8000/Customers/help` , предоставляющий сведения о способах создания HTTP-запросов к службе и как использовать службы HTTP-ответа.  
+ Файл App.config настраивает для службы WCF конечную точку по умолчанию <xref:System.ServiceModel.Description.WebHttpEndpoint>, для свойства которого <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> задано значение `true`. Таким образом, инфраструктура WCF создает автоматической страницу справки на основе HTML в `http://localhost:8000/Customers/help` , предоставляющий сведения о способах создания HTTP-запросов к службе и как использовать службы HTTP-ответа.  
   
- Program.cs показывает, как фабрику каналов WCF можно использовать для выполнения вызовов службы и обработки ответов. Заметьте, что это лишь один из способов доступа к WCF-службе. Также возможен доступ к службе с помощью других классов .NET Framework, например <xref:System.Net.HttpWebRequest> и <xref:System.Net.WebClient>. Другие примеры в пакете SDK (такие как [автоматический выбор формата](../../../../docs/framework/wcf/samples/automatic-format-selection.md) образца и [базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образец) показано, как использовать эти классы для взаимодействия со службой WCF.  
+ Файле Program.cs показывается, как можно использовать фабрику каналов WCF для вызова службы и обработки ответов. Заметьте, что это лишь один из способов доступа к WCF-службе. Также возможен доступ к службе с помощью других классов .NET Framework, например <xref:System.Net.HttpWebRequest> и <xref:System.Net.WebClient>. Другие примеры в пакете SDK (такие как [автоматический выбор формата](../../../../docs/framework/wcf/samples/automatic-format-selection.md) пример и [базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образец) показано, как использовать эти классы для взаимодействия со службой WCF.  
   
  Образец состоит из резидентной службы и клиента, которые работают в консольном приложении. Во время выполнения консольного приложения клиент совершает запросы к службе и выводит в окно консоли нужные сведения из ответов.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "33808862"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
   

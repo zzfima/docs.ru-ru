@@ -2,12 +2,12 @@
 title: Динамические аргументы
 ms.date: 03/30/2017
 ms.assetid: 122ad479-d306-4602-a943-5aefe711329d
-ms.openlocfilehash: 5c00b9678191e4e88e9e41380d6b10be39684b3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcf6b84889f3bd7d043f736336c39634cd5384c7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517982"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43387244"
 ---
 # <a name="dynamic-arguments"></a>Динамические аргументы
 В этом образце показано, как реализовать действие, аргументы которого определяются объектом-получателем, а не автором действия. Это достигается переопределением способа построения метаданных действия в среде выполнения.  
@@ -41,6 +41,6 @@ ms.locfileid: "33517982"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\DynamicArguments`

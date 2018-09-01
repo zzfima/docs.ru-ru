@@ -14,12 +14,12 @@ helpviewer_keywords:
 - MDI forms [Windows Forms], creating
 - MDI forms [Windows Forms], walkthroughs
 ms.assetid: fbab4221-74af-42d0-bbf4-3c97f7b2e544
-ms.openlocfilehash: d5fa1ebcc044a18e21e57aa2f66bd8486369fe42
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: a84b51679969f38955dd6a72ffe94ec8ca70b3df
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255697"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393048"
 ---
 # <a name="walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls"></a>Пример. Создание формы MDI путем слияния меню и с применением и элементов управления ToolStrip
 Пространство имен <xref:System.Windows.Forms?displayProperty=nameWithType> поддерживает приложения с интерфейсом MDI, а элемент управления <xref:System.Windows.Forms.MenuStrip> поддерживает слияние меню. Формы MDI также могут содержать элементы управления <xref:System.Windows.Forms.ToolStrip>.  
@@ -107,7 +107,7 @@ ms.locfileid: "43255697"
   
 1.  Добавьте новую форму с именем `ChildForm` в проект.  
   
-     Дополнительные сведения см. в разделе [способ: добавить Windows Forms в проект](http://msdn.microsoft.com/library/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+     Дополнительные сведения см. в разделе [способ: добавить Windows Forms в проект](https://msdn.microsoft.com/library/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
   
 2.  Из **элементов**, перетащите <xref:System.Windows.Forms.MenuStrip> управления дочерней формы.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "43255697"
   
 4.  В **редактор коллекции элементов** диалоговое окно, добавьте новый <xref:System.Windows.Forms.ToolStripMenuItem> с именем **ChildMenuItem** в меню "дочерний".  
   
-     Дополнительные сведения см. в разделе [редактор коллекции элементов ToolStrip](http://msdn.microsoft.com/library/e681f3ab-94ba-4b2b-ac64-1dfad46caa25).  
+     Дополнительные сведения см. в разделе [редактор коллекции элементов ToolStrip](https://msdn.microsoft.com/library/e681f3ab-94ba-4b2b-ac64-1dfad46caa25).  
   
 ## <a name="testing-the-form"></a>Тестирование формы  
   

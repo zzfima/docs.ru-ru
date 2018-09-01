@@ -10,16 +10,16 @@ ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: f2eb6d1b54e9565df1401c4a1d20698ff795f896
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4b846dfdd7c19a515c759fbeac1762cb47ca8876
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258581"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395482"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Общие сведения об объектах TextPattern и Embedded
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом обзоре описано, как [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] представляет внедренные объекты или дочерние элементы в текстовом документе или контейнере.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "43258581"
   
  Для обхода содержимого текстового диапазона в фоновом режиме применяется ряд шагов для успешного выполнения метода <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> .  
   
-1.  Текстовый диапазон нормализован, т. е. он свернут до вырожденного диапазона в конечной точке <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , что делает конечную точку <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> избыточной. Этот шаг необходим для устранения неоднозначности в случаях, когда текстовый диапазон охватывает <xref:System.Windows.Automation.Text.TextUnit> границы: например, «{U} RL [ http://www.microsoft.com ](http://www.microsoft.com) внедряется в текст» где «{» и «}» — конечные точки диапазона текста.  
+1.  Текстовый диапазон нормализован, т. е. он свернут до вырожденного диапазона в конечной точке <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , что делает конечную точку <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> избыточной. Этот шаг необходим для устранения неоднозначности в случаях, когда текстовый диапазон охватывает <xref:System.Windows.Automation.Text.TextUnit> границы: например, «{U} RL [ http://www.microsoft.com ](https://www.microsoft.com) внедряется в текст» где «{» и «}» — конечные точки диапазона текста.  
   
 2.  Результирующий диапазон перемещается в <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> в начало запрошенной границы <xref:System.Windows.Automation.Text.TextUnit> .  
   
@@ -71,7 +71,7 @@ ms.locfileid: "43258581"
 ### <a name="hyperlink"></a>Гиперссылка  
  **Пример 1. Текстовый диапазон, содержащий внедренную текстовую гиперссылку**  
   
- {URL-адрес [ http://www.microsoft.com ](http://www.microsoft.com) внедряется в текст}.  
+ {URL-адрес [ http://www.microsoft.com ](https://www.microsoft.com) внедряется в текст}.  
   
 |Вызываемый метод|Результат|  
 |-------------------|------------|  
@@ -92,7 +92,7 @@ ms.locfileid: "43258581"
   
  **Пример 3 - текстовый диапазон, частично охватывающий содержимое контейнера текста. Контейнер текста содержит внедренную текстовую гиперссылку, которая не является частью текстового диапазона.**  
   
- {URL} [ http://www.microsoft.com ](http://www.microsoft.com) внедряется в текст.  
+ {URL} [ http://www.microsoft.com ](https://www.microsoft.com) внедряется в текст.  
   
 |Вызываемый метод|Результат|  
 |-------------------|------------|  
@@ -159,4 +159,4 @@ ms.locfileid: "43258581"
  [Доступ ко внедренным объектам с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)  
  [Представление содержимого таблицы с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/expose-the-content-of-a-table-using-ui-automation.md)  
  [Проход по тексту с помощью модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [TextPattern поиска и выбора](http://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)
+ [TextPattern поиска и выбора](https://msdn.microsoft.com/library/0a3bca57-8b72-489d-a57c-da85b7a22c7f)

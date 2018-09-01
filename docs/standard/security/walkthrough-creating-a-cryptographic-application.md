@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 77debed932b78ae0aa1d8eebf54bd2d3bfbfea7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a01da268a8347e93982604520f9dcb1d4e91327d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591968"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389629"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Пошаговое руководство. Создание криптографического приложения
 В этом пошаговом руководстве показано, как зашифровать и расшифровать содержимое. Пример кода предназначен для приложения Windows Forms. Это приложение не демонстрирует реальные сценарии, такие как использование смарт-карт. Вместо этого оно демонстрирует основные принципы шифрования и расшифровки.  
@@ -33,7 +33,7 @@ ms.locfileid: "33591968"
   
  В следующей таблице указаны задачи шифрования из этого раздела.  
   
-|Задача|Описание|  
+|Задача|Описание:|  
 |----------|-----------------|  
 |Создание приложения Windows Forms|Выводит список элементов управления, необходимых для запуска приложения.|  
 |Объявление глобальных объектов|Объявляет, что строковые переменные пути <xref:System.Security.Cryptography.CspParameters> и <xref:System.Security.Cryptography.RSACryptoServiceProvider> имеют глобальный контекст класса <xref:System.Windows.Forms.Form>.|  
@@ -123,7 +123,7 @@ ms.locfileid: "33591968"
  [!code-vb[CryptoWalkThru#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CryptoWalkThru/vb/Form1.vb#5)]  
   
 ## <a name="decrypting-a-file"></a>Расшифровка файла  
- Эта задача включает в себя два метода: метод обработчика событий для кнопки `Decrypt File` (`buttonEncryptFile_Click`) и метод `DecryptFile`. Первый метод отображает диалоговое окно для выбора файла и передает имя этого файла во второй метод, который выполняет расшифровку.  
+ Эта задача включает в себя два метода: метод обработчика событий для кнопки `Decrypt File` (`buttonDecryptFile_Click`) и метод `DecryptFile`. Первый метод отображает диалоговое окно для выбора файла и передает имя этого файла во второй метод, который выполняет расшифровку.  
   
  Метод `Decrypt` выполняет следующие действия:  
   

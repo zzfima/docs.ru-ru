@@ -1,5 +1,5 @@
 ---
-title: Объект My.Computer.FileSystem
+title: Объект My.Computer.FileSystem (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - FileSystem module
@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Seek function
 - FileOpen function
 ms.assetid: 4c145456-5453-4bda-aab5-578dc8bee59a
-ms.openlocfilehash: 111dde90912e586c92da4ed9f5be50d15a75485b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05d849afb50a3b1c4eeecc3db26170bacc3517df
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594374"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390932"
 ---
 # <a name="mycomputerfilesystem-object"></a>Объект My.Computer.FileSystem
 Включает свойства и методы для работы с дисками, файлами и каталогами.  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о методах и свойствах `My.Computer.FileSystem` см. в разделе <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
+ Сведения о методах и свойствах `My.Computer.FileSystem` объекта, см. в разделе <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
  Дополнительные сведения см. в разделе [доступ к файлам с помощью Visual Basic](../../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md).  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33594374"
   
  **Класс:** <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy> (предоставляет доступ к <xref:Microsoft.VisualBasic.FileIO.FileSystem>)  
   
- **Сборка:** Visual Basic Runtime Library (Microsoft.VisualBasic.dll)  
+ **Сборка:** библиотеки времени выполнения Visual Basic (в Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>См. также  
  [Объект My.Computer.FileSystem.SpecialDirectories](../../../visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md)  

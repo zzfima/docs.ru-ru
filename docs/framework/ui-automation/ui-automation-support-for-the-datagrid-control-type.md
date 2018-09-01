@@ -9,16 +9,16 @@ ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: fa898064a3b2930499a5d3b4a8c409f562162e34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0a64c87aadef98e7e838ec9aefb89bfb17034d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410258"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392207"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>Поддержка автоматизированного пользовательского интерфейса для типа элемента управления DataGrid
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе содержатся сведения о поддержке в [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] типа элемента управления DataGrid. В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]тип элемента управления — это набор условий, которым должен удовлетворять элемент управления для использования свойства `ControlType` . Условия включают конкретные правила для древовидной структуры [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значений свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] и шаблонов элементов управления.  
   
@@ -32,11 +32,11 @@ ms.locfileid: "33410258"
   
 |Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление элемента управления|Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление содержимого|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|DataGrid<br /><br /> <ul><li>Заголовок {0, 1 или 2}<br /><br /> <ul><li>HeaderItem (количество столбцов или строк)</li></ul></li><li>DataItem (0 и более; возможна иерархическая структуризация)</li></ul>|DataGrid<br /><br /> -DataItem (0 или более; возможна структуризация иерархии)|  
+|DataGrid<br /><br /> <ul><li>Заголовок {0, 1 или 2}<br /><br /> <ul><li>HeaderItem (количество столбцов или строк)</li></ul></li><li>DataItem (0 и более; возможна иерархическая структуризация)</li></ul>|DataGrid<br /><br /> -DataItem (0 или больше; могут быть структурированы в иерархии)|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Требуемые свойства модели автоматизации пользовательского интерфейса  
- В следующей таблице перечислены свойства, значение или определение которых в первую очередь относится к элементам управления DataGrid. Дополнительные сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] свойствах см. [свойства модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ В следующей таблице перечислены свойства, значение или определение которых в первую очередь относится к элементам управления DataGrid. Дополнительные сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] свойства, см. в разделе [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
 |Свойство.|Значение|Примечания|  
 |--------------|-----------|-----------|  
@@ -103,7 +103,7 @@ ms.locfileid: "33410258"
   
 |Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление элемента управления|Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление содержимого|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Header<br /><br /> <ul><li>HeaderItem "Name" (Invoke)</li><li>HeaderItem "Date Modified" (Invoke)</li><li>HeaderItem "Size" (Invoke)</li></ul></li><li>Группы «Contoso» (TableItem, GridItem, SelectionItem, таблица *, сетка\*)<br /><br /> <ul><li>DataItem «учетные записи Receivable.doc» (SelectionItem, вызвать TableItem\*, GridItem\*)</li><li>DataItem «учетные записи Payable.doc» (SelectionItem, вызвать TableItem\*, GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Группы «Contoso» (TableItem, GridItem, SelectionItem, таблица *, сетка\*)<br /><br /> <ul><li>DataItem «учетные записи Receivable.doc» (SelectionItem, вызвать TableItem\*, GridItem\*)</li><li>DataItem «учетные записи Payable.doc» (SelectionItem, вызвать TableItem\*, GridItem\*)</li></ul></li></ul>|  
+|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Header<br /><br /> <ul><li>HeaderItem "Name" (Invoke)</li><li>HeaderItem "Date Modified" (Invoke)</li><li>HeaderItem "Size" (Invoke)</li></ul></li><li>Группе «Contoso» (TableItem, GridItem, SelectionItem, таблица *, сетка\*)<br /><br /> <ul><li>DataItem «учетные записи Receivable.doc» (SelectionItem, вызвать, TableItem\*, GridItem\*)</li><li>DataItem «учетные записи Payable.doc» (SelectionItem, вызвать, TableItem\*, GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (Table, Grid, Selection)</li><li>Группе «Contoso» (TableItem, GridItem, SelectionItem, таблица *, сетка\*)<br /><br /> <ul><li>DataItem «учетные записи Receivable.doc» (SelectionItem, вызвать, TableItem\*, GridItem\*)</li><li>DataItem «учетные записи Payable.doc» (SelectionItem, вызвать, TableItem\*, GridItem\*)</li></ul></li></ul>|  
   
  *В предыдущем примере показан элемент управления DataGrid, содержащий несколько уровней элементов управления. Элемент управления Group ("Contoso") содержит два элемента управления DataItem ("Accounts Receivable.doc" и "Accounts Payable.doc"). Пара DataGrid/GridItem не зависит от пары на другом уровне. Элементы управления DataItem в элементе управления Group также могут предоставляться как тип элемента управления ListItem, что позволяет им быть представленными более четко, как выбираемые объекты, а не как простые элементы данных. Этот пример не включает дочерние элементы сгруппированных элементов данных.  
   

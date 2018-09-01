@@ -2,15 +2,15 @@
 title: Активация TCP
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 9f08864c1d5139160ac25e0733ddcfc1c8557ad9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c10cc1edfb06d55fc8a59a32bf905c95b20a19dc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807414"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396107"
 ---
 # <a name="tcp-activation"></a>Активация TCP
-Этот образец демонстрирует размещение службы, использующей службу активации Windows (WAS) для активации службы, которая осуществляет взаимодействие по протоколу net.tcp. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
+Этот образец демонстрирует размещение службы, использующей службу активации Windows (WAS) для активации службы, которая осуществляет взаимодействие по протоколу net.tcp. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -20,7 +20,7 @@ ms.locfileid: "33807414"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WASHost\TCPActivation`  
   
@@ -152,7 +152,7 @@ Press <ENTER> to terminate client.
   
     3.  Нажмите кнопку **отключение компонентов Windows**.  
   
-    4.  Разверните **Microsoft .NET Framework 3.0** узел и проверьте **не-HTTP активация Windows Communication Foundation** компонентов.  
+    4.  Разверните **Microsoft .NET Framework 3.0** узел и проверьте **не-HTTP активация Windows Communication Foundation** функции.  
   
 3.  Настройте службу WAS на поддержку активации по протоколу TCP.  
   
@@ -175,11 +175,11 @@ Press <ENTER> to terminate client.
         ```  
   
         > [!NOTE]
-        >  Эта команда представляет собой одну строку текста. Эта команда позволяет приложению/servicemodelsamples должен осуществляться с помощью http://localhost/servicemodelsamples и по адресу NET.TCP://localhost/servicemodelsamples.  
+        >  Эта команда представляет собой одну строку текста. Эта команда позволяет приложению/servicemodelsamples, осуществлять доступ к оба http://localhost/servicemodelsamples и по адресу NET.TCP://localhost/servicemodelsamples.  
   
 4.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-5.  Для запуска образца в конфигурации с одним или несколькими компьютерами следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+5.  Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
      Удалите привязку сайта к протоколу net.tcp, добавленную ранее для данного образца.  
   
@@ -206,4 +206,4 @@ Press <ENTER> to terminate client.
         >  Эта команда должна вводиться как одна строка текста.  
   
 ## <a name="see-also"></a>См. также  
- [Образцы размещения и сохраняемости образцы](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Образцы размещения AppFabric и сохраняемости](https://go.microsoft.com/fwlink/?LinkId=193961)

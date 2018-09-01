@@ -24,22 +24,22 @@ helpviewer_keywords:
 - Keys.Alt enumeration member
 - modifier keys
 ms.assetid: 1e184048-0ae3-4067-a200-d4ba31dbc2cb
-ms.openlocfilehash: 1c89149fc07f89028b21fa513fd84dee4e890968
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f73dea640bc2059353b2a250188b901f360ea750
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540021"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392529"
 ---
 # <a name="how-to-determine-which-modifier-key-was-pressed"></a>Практическое руководство. Определение нажатой управляющей клавиши
-При создании приложения, которое принимает пользователя нажатия клавиш, можно также для наблюдения за нажатием клавиш SHIFT, ALT и CTRL ключи. При нажатии клавиши-модификатора в сочетании с другими ключами или нажатием кнопки мыши, приложение может реагировать соответствующим образом. Например если нажата буквы S, это может вызвать просто «s» для отображения на экране, но при нажатии клавиш CTRL + S, текущий документ может быть сохранен. При обработке <xref:System.Windows.Forms.Control.KeyDown> событий, <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> свойство <xref:System.Windows.Forms.KeyEventArgs> полученных событием обработчик определяет, при нажатии клавиши-модификаторы. Кроме того <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> свойство <xref:System.Windows.Forms.KeyEventArgs> определяет символ, который в сочетании с побитового или с любыми клавиши-модификаторы также была нажата. Тем не менее если обрабатывается <xref:System.Windows.Forms.Control.KeyPress> событие или событие мыши, обработчик событий не получает эти сведения. В этом случае необходимо использовать <xref:System.Windows.Forms.Control.ModifierKeys%2A> свойство <xref:System.Windows.Forms.Control> класса. В любом случае необходимо выполнить операцию побитового и соответствующего <xref:System.Windows.Forms.Keys> значения и тестировании. <xref:System.Windows.Forms.Keys> Перечисление предоставляет варианты каждого ключа модификатор, поэтому важно выполнения битовой операции и правильное значение. Например, клавиша SHIFT представляется <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> и <xref:System.Windows.Forms.Keys.LShiftKey> правильное значение для тестирования является клавиша SHIFT <xref:System.Windows.Forms.Keys.Shift>. Аналогичным образом, для проверки CTLR и ALT как модификаторы вы должны использовать <xref:System.Windows.Forms.Keys.Control> и <xref:System.Windows.Forms.Keys.Alt> соответственно.  
+При создании приложения, которое принимает нажатия клавиш пользователем, можно также отслеживать за нажатием клавиш клавиши SHIFT, ALT и CTRL. При нажатии в сочетании с другими клавишами или с помощью щелчков мыши, приложение может реагировать соответствующим образом. Например если нажата буквы S, это может просто вызвать «s» для отображения на экране, но при нажатии клавиш CTRL + S, текущий документ может быть сохранен. Если вы обрабатываете <xref:System.Windows.Forms.Control.KeyDown> событий, <xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> свойство <xref:System.Windows.Forms.KeyEventArgs> полученных событием обработчик определяет нажатии клавиши-модификаторы. Кроме того <xref:System.Windows.Forms.KeyEventArgs.KeyData%2A> свойство <xref:System.Windows.Forms.KeyEventArgs> определяет символ, который также была нажата в сочетании с операцию побитового или любые клавиши-модификаторы. Тем не менее если обрабатывается <xref:System.Windows.Forms.Control.KeyPress> события или события мыши, обработчик событий не получает эти сведения. В этом случае необходимо использовать <xref:System.Windows.Forms.Control.ModifierKeys%2A> свойство <xref:System.Windows.Forms.Control> класса. В любом случае необходимо выполнить операцию побитового и соответствующего <xref:System.Windows.Forms.Keys> значения и значения, вы тестируете. <xref:System.Windows.Forms.Keys> Перечисление предоставляет варианты каждого ключа модификатор, поэтому очень важно выполнить побитового и с правильным значением. Например, клавиша SHIFT представляется <xref:System.Windows.Forms.Keys.Shift>, <xref:System.Windows.Forms.Keys.ShiftKey>, <xref:System.Windows.Forms.Keys.RShiftKey> и <xref:System.Windows.Forms.Keys.LShiftKey> правильное значение для тестирования является клавиша SHIFT <xref:System.Windows.Forms.Keys.Shift>. Аналогичным образом, для проверки CTLR и ALT качестве модификаторов вы должны использовать <xref:System.Windows.Forms.Keys.Control> и <xref:System.Windows.Forms.Keys.Alt> соответственно.  
   
 > [!NOTE]
->  Программисты на Visual Basic могут просматривать ключевые данные через <xref:Microsoft.VisualBasic.Devices.Computer.Keyboard%2A> свойство  
+>  Программистов Visual Basic также доступны сведения о ключе через <xref:Microsoft.VisualBasic.Devices.Computer.Keyboard%2A> свойство  
   
-### <a name="to-determine-which-modifier-key-was-pressed"></a>Для определения нажатой управляющей клавиши  
+### <a name="to-determine-which-modifier-key-was-pressed"></a>Чтобы определение нажатой управляющей клавиши  
   
--   Используйте побитовый `AND` оператор с <xref:System.Windows.Forms.Control.ModifierKeys%2A> свойство и значение <xref:System.Windows.Forms.Keys> enumeration, чтобы определить, нажата ли определенной клавиши. В следующем примере кода показано, как определить, является ли нажата клавиша SHIFT, внутри <xref:System.Windows.Forms.Control.KeyPress> обработчика событий.  
+-   Используйте побитовый `AND` оператор с <xref:System.Windows.Forms.Control.ModifierKeys%2A> свойство и значение <xref:System.Windows.Forms.Keys> перечисления, чтобы определить, нажата ли клавиша определенного модификатор. В следующем примере кода показано, как определить, нажата ли клавиша SHIFT в <xref:System.Windows.Forms.Control.KeyPress> обработчик событий.  
   
      [!code-cpp[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/cpp/form1.cpp#5)]
      [!code-csharp[System.Windows.Forms.DetermineModifierKey#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DetermineModifierKey/CS/form1.cs#5)]
@@ -49,4 +49,4 @@ ms.locfileid: "33540021"
  <xref:System.Windows.Forms.Keys>  
  <xref:System.Windows.Forms.Control.ModifierKeys%2A>  
  [Ввод с клавиатуры в приложении Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- [Как: определить ли CapsLock на Visual Basic](http://msdn.microsoft.com/library/91e60f5c-dd61-4222-ba5f-39af803afd8c)
+ [Практическое: определение, если CapsLock в Visual Basic](https://msdn.microsoft.com/library/91e60f5c-dd61-4222-ba5f-39af803afd8c)

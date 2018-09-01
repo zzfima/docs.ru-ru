@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
-ms.openlocfilehash: eb4ea812318e5a7df6a1bffefa5d47bf2c929f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03328b324399c7500f2cf3a8b6ab12c843115e29
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540194"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385124"
 ---
 # <a name="menustrip-control-windows-forms"></a>Элемент управления MenuStrip (Windows Forms)
 Этот элемент управления группирует команды приложения и делает их легко доступными.  
@@ -55,19 +55,19 @@ ms.locfileid: "33540194"
  [Практическое руководство. Автоматическое слияние меню в приложениях MDI](../../../../docs/framework/winforms/controls/how-to-set-up-automatic-menu-merging-for-mdi-applications.md)  
  Описывается способ слияния пунктов меню во время выполнения.  
   
--   [Редактор коллекции элементов MenuStrip](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [Редактор коллекции элементов MenuStrip](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
   
--   [Практическое руководство. Копирование объектов ToolStripMenuItems](http://msdn.microsoft.com/library/ms171653\(v=vs.110\))  
+-   [Практическое руководство. Копирование объектов ToolStripMenuItems](how-to-copy-toolstripmenuitems.md)  
   
--   [Практическое руководство. Скрытие объектов ToolStripMenuItem с помощью конструктора](http://msdn.microsoft.com/library/ms171658\(v=vs.110\))  
+-   [Практическое руководство. Скрытие объектов ToolStripMenuItem с помощью конструктора](how-to-hide-toolstripmenuitems-using-the-designer.md)  
   
--   [Практическое руководство. Отключение объектов ToolStripMenuItem с помощью конструктора](http://msdn.microsoft.com/library/ms171656\(v=vs.110\))  
+-   [Практическое руководство. Отключение объектов ToolStripMenuItem с помощью конструктора](how-to-disable-toolstripmenuitems-using-the-designer.md)  
   
--   [Практическое руководство. Перемещение объектов ToolStripMenuItem](http://msdn.microsoft.com/library/ms171660\(v=vs.110\))  
+-   [Практическое руководство. Перемещение объектов ToolStripMenuItem](how-to-move-toolstripmenuitems.md)  
   
--   [Пошаговое руководство. Создание стандартных пунктов меню для формы](http://msdn.microsoft.com/library/ms233662\(v=vs.110\))  
+-   [Пошаговое руководство. Создание стандартных пунктов меню для формы](walkthrough-providing-standard-menu-items-to-a-form.md)  
   
--   [Диалоговое окно задач MenuStrip](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [Диалоговое окно задач MenuStrip](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.MenuStrip>  

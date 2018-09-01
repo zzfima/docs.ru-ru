@@ -8,17 +8,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], read-only columns
 - DataGridView control [Windows Forms], read-only columns
 ms.assetid: 2bb73ebb-1a55-4362-9fda-e50574c087d5
-ms.openlocfilehash: 1ea4fdb6d38464993672c9aa98d8866812d21972
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8b5c0f9492941cf0e01e016d9fb097e1df44d2e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532100"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389719"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Определение столбцов элемента управления DataGridView как доступных только для чтения в Windows Forms
-Не все данные допускается изменять. В элементе управления <xref:System.Windows.Forms.DataGridView> значение свойства <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> столбца определяет, могут ли пользователи редактировать ячейки в этом столбце. Сведения о том, как сделать элемент управления доступным только для чтения см. в разделе [как: запретить добавление и удаление строк в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md).  
+Не все данные допускается изменять. В элементе управления <xref:System.Windows.Forms.DataGridView> значение свойства <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> столбца определяет, могут ли пользователи редактировать ячейки в этом столбце. Сведения о том, как сделать элемент управления доступным только для чтения, см. в разделе [как: Предотвращение добавления и удаления строк в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/prevent-row-addition-and-deletion-datagridview.md).  
   
- Эта задача поддерживается в Visual Studio.  См. также [как: сделать столбцы только для чтения в Windows Forms управления DataGridView с помощью конструктора](http://msdn.microsoft.com/library/xd4k3c7e\(v=vs.110\)).  
+ Эта задача поддерживается в Visual Studio.  Также см. в разделе [как: сделать только для чтения в Windows Forms DataGridView элемента управления с помощью конструктора](https://msdn.microsoft.com/library/xd4k3c7e\(v=vs.110\)).  
   
 ### <a name="to-make-a-column-read-only-programmatically"></a>Программное определение столбца как доступного только для чтения  
   

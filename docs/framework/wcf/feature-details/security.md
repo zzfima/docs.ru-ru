@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: fb48ae39d269f21a7120ecf143dc4c4680efe39d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a070800ea15c5a7f16b52ca69c7e454c92618e1a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499093"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43384932"
 ---
 # <a name="windows-communication-foundation-security"></a>Безопасность Windows Communication Foundation
-В этом разделе описываются средства безопасности Windows Communication Foundation (WCF) и способ их использования для защиты сообщений.  
+В этом разделе описываются средства безопасности Windows Communication Foundation (WCF) и способы их использования для защиты сообщений.  
   
- Дополнительные сведения о Windows Server AppFabric и безопасности см. в разделе [безопасности модели для Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
+ Дополнительные сведения о Windows Server AppFabric и безопасности, см. в разделе [безопасности-модель для Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
@@ -37,7 +37,7 @@ ms.locfileid: "33499093"
  Описание привязок с точки зрения безопасности, в том числе демонстрация создания настраиваемых привязок безопасности.  
   
  [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- Описание способов защиты сообщений с помощью средств безопасности WCF.  
+ Описывает способ защиты сообщений с помощью средств безопасности WCF.  
   
  [Проверка подлинности](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  Примеры типичных задач, связанных с проверкой подлинности.  
@@ -49,7 +49,7 @@ ms.locfileid: "33499093"
  Основы федерации и принципы создания клиентов, взаимодействующих с федеративными серверами.  
   
  [Частичное доверие](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
- Описание способов выполнения сценариев с частичным доверием и ограничения WCF при выполнении с частичным доверием.  
+ В этой статье описывается выполнение сценариев с частичным доверием и ограничения WCF, при выполнении с частичным доверием.  
   
  [Аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  Принципы аудита событий безопасности.  
