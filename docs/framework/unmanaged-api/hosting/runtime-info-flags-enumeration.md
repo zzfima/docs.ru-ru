@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e544db23abf89a20bd2f7763cfdb1256ea4a326c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 09bd32172bcad298eebc2921461fdc953e9c6d6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441368"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468297"
 ---
 # <a name="runtimeinfoflags-enumeration"></a>Перечисление RUNTIME_INFO_FLAGS
-Содержит значения, указывающие, какие сведения о среде (CLR) должны возвращаться.  
+Содержит значения, указывающие, какие сведения об общеязыковой среде выполнения (CLR) должны быть возвращены.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,19 +45,19 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Указывает, что сведения о каталоге не будут включены.|  
-|`RUNTIME_INFO_DONT_RETURN_VERSION`|Указывает, что сведения о версии не будут включены.|  
-|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Указывает, что не нужно отображать диалоговое окно ошибки при сбое.|  
-|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Указывает, что результаты вызова [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkId=255242) функция с флагом SEM_FAILCRITICALERRORS должен быть переопределен. То есть диалоговое окно установки должен отображаться после сбоя, а не блокируются.|  
+|`RUNTIME_INFO_DONT_RETURN_VERSION`|Указывает, что сведения о версии не следует включать.|  
+|`RUNTIME_INFO_DONT_SHOW_ERROR_DIALOG`|Указывает, что диалоговое окно ошибки, не должны быть видны в случае сбоя.|  
+|`RUNTIME_INFO_IGNORE_ERROR_MODE`|Указывает, что последствия вызова [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) функция флаг SEM_FAILCRITICALERRORS, следует переопределить. То есть диалоговое окно установки должен отображаться в случае сбоя, а не было подавлено.|  
 |`RUNTIME_INFO_REQUEST_AMD64`|Указывает запрос для получения сведений об AMD-64-совместимые версии среды выполнения.|  
 |`RUNTIME_INFO_REQUEST_IA64`|Указывает запрос для получения сведений об IA-64-совместимые версии среды выполнения.|  
 |`RUNTIME_INFO_REQUEST_X86`|Указывает запрос для получения сведений об x86-совместимой версии среды выполнения.|  
 |`RUNTIME_INFO_UPGRADE_VERSION`|Указывает, что сведения об обновлении версии должны быть включены.|  
   
 ## <a name="remarks"></a>Примечания  
- Следующие флаги архитектуры платформы можно указанного только по одному, а также нельзя использовать вместе:  
+ Далее перечислены флаги архитектуры платформы может быть указанного только один за другим и нельзя использовать вместе:  
   
 -   RUNTIME_INFO_REQUEST_IA64  
   
@@ -66,13 +66,13 @@ typedef enum {
 -   RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** MSCorEE.h  
   
  **Библиотека:** MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: 42eccbf88db2a407c6dd40209ecd615f0c19eb7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63b1a4b9b2483d017a686819573f91744d8a565a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539205"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463698"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>Элемент управления SplitContainer (Windows Forms)
 Элемент управления Windows Forms `SplitContainer` состоит из двух панелей, разделенных подвижной полосой. При наведении указателя мыши на полосу его форма изменяется, показывая, что полоса является перемещаемой.  
   
 > [!NOTE]
->  В **элементов**, этот элемент управления заменяет <xref:System.Windows.Forms.Splitter> , присутствующий в предыдущей версии Visual Studio. Элемент управления `SplitContainer` намного предпочтительнее, чем элемент управления <xref:System.Windows.Forms.Splitter>. Класс <xref:System.Windows.Forms.Splitter> по-прежнему имеется в .NET Framework для обеспечения совместимости с существующими приложениями, но для новых проектов настоятельно рекомендуется использовать элемент управления `SplitContainer`.  
+>  В **элементов**, этот элемент управления заменяет <xref:System.Windows.Forms.Splitter> элемента управления, который имелся в предыдущей версии Visual Studio. Элемент управления `SplitContainer` намного предпочтительнее, чем элемент управления <xref:System.Windows.Forms.Splitter>. Класс <xref:System.Windows.Forms.Splitter> по-прежнему имеется в .NET Framework для обеспечения совместимости с существующими приложениями, но для новых проектов настоятельно рекомендуется использовать элемент управления `SplitContainer`.  
   
  С помощью элемента управления `SplitContainer` можно создавать сложные пользовательские интерфейсы. Часто выбор на одной панели определяет объекты, отображаемые на другой. Такой подход является весьма эффективным для отображения и просмотра информации. Две панели позволяют группировать информацию, а полоса или разделитель упрощают изменение размера панелей.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "33539205"
  [Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Описывается создание пользовательского интерфейса с несколькими областями, аналогичного интерфейсу приложения Microsoft Outlook.  
   
- См. также [как: Разделение окна по горизонтали с помощью конструктора](http://msdn.microsoft.com/library/ms233667\(v=vs.110\)), [как: Создание интерфейса в стиле проводника Windows в Windows Forms](http://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [как: Создание пользовательского интерфейса с несколькими панелями с С помощью конструктора Windows Forms](http://msdn.microsoft.com/library/ms233661\(v=vs.110\)).  
+ Также см. в разделе [как: Разделение окна по горизонтали с помощью конструктора](how-to-split-a-window-horizontally-using-the-designer.md), [как: Создание интерфейса в стиле проводника Windows в форме Windows](https://msdn.microsoft.com/library/zh2fe5a5\(v=vs.110\)), [как: Создание пользовательского интерфейса с несколькими панелями с Windows Forms с помощью конструктора](create-a-multipane-user-interface-with-wf-using-the-designer.md).  
   
 ## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.SplitContainer>  

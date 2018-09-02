@@ -7,23 +7,23 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: 3c74bd33e726dc5a34f55989357218a3e2c46e3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551195"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466360"
 ---
 # <a name="combobox"></a>ComboBox
-<xref:System.Windows.Controls.ComboBox> Управления предоставляет пользователям список параметров. Список отображения или скрытия как элемент управления развернут и свернут. В состоянии по умолчанию список свернут, отображая только один вариант. Пользователь нажимает кнопку, чтобы увидеть полный список параметров.  
+<xref:System.Windows.Controls.ComboBox> Управления предоставляется пользователям в список параметров. Список отображения или скрытия как элемент управления развернут и свернут. В состоянии по умолчанию список свернут, отображая только один вариант. Пользователь нажимает кнопку, чтобы увидеть полный список параметров.  
   
- На следующем рисунке показана <xref:System.Windows.Controls.ComboBox> в различных состояниях.  
+ На следующем рисунке показано <xref:System.Windows.Controls.ComboBox> в различных состояниях.  
   
- ![Поле со списком в состоянии по умолчанию и нажато](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
-Свернутое и развернутое  
+ ![Поле со списком в состоянии по умолчанию и нажатое](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
+Свернуть и развернуть  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Как: руководство.](http://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
+ [Практическое: руководство.](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.ComboBox>

@@ -2,12 +2,12 @@
 title: Узел ReadLine экземпляра WorkflowApplication
 ms.date: 03/30/2017
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
-ms.openlocfilehash: 8da8a5bb4c80a86fe5ae9e133ea545c00ee17fba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4388ff0285de58b0dc6f86af93aad84b2894373f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518542"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470857"
 ---
 # <a name="workflowapplication-readline-host"></a>Узел ReadLine экземпляра WorkflowApplication
 Этот образец представляет собой универсальный узел ReadLine. С помощью имеющегося действия `ReadLine` (или других действий, подобных тем, которые возвращают данные из закладок, возобновленных со строками) можно загружать и запускать любой рабочий процесс. Выходные данные из действия `WriteLine` или любого другого, выполняющего запись в расширение <xref:System.Activities.Statements.WriteLine.TextWriter%2A>, направляются в окно узла. Если экземпляр бездействует, в поле со списком отображаются имеющиеся в нем закладки. Если выбрать закладку, ввести некоторый текст и нажать кнопку возобновления закладки, то выполнение рабочего процесса будет продолжено. Можно также отменить, прервать или завершить выбранный рабочий процесс. По умолчанию сохраняемость включена - можно остановить узел и снова его запустить, список экземпляров при этом будет заполнен экземплярами, сохраненными в базе данных. Отслеживание используется для передачи событий уровня <xref:System.Activities.WorkflowApplication> узлу с возможностью добавления подробного отслеживания на уровне действия.  
@@ -33,11 +33,11 @@ ms.locfileid: "33518542"
   
 6.  После запуска проекта сохраняемость можно по желанию включать или выключать. Кроме того, можно произвольно включать или выключать подробное отслеживание действия.  
   
-7.  Нажмите кнопку с многоточием рядом с **запуска** кнопку для просмотра рабочего процесса, определенные в XAML-файле  
+7.  Нажмите кнопку с многоточием рядом с полем **запуска** кнопки для просмотра рабочего процесса, определенного в файле XAML  
   
      В папке SampleWorkflows находятся два образца. Пример parallel1.xaml переходит в состояние бездействия.  
   
-8.  После выбора примера клавишу **запуска** кнопки.  
+8.  После выбора примера нажмите **запуска** кнопки.  
   
 9. Если или рабочий процесс переходит в состояние бездействия, **закладки** содержит поле со списком доступных закладок.  
   
@@ -56,6 +56,6 @@ ms.locfileid: "33518542"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

@@ -1,15 +1,15 @@
 ---
-title: 'Как: совместное использование сборки с другими приложениями (Visual Basic)'
+title: 'Практическое: совместное использование сборки с другими приложениями (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5388aedc-cb42-4622-8b70-8e701eee057a
-ms.openlocfilehash: 3a6a04a3aef5430eb65d0c1a7eb37f6afb9e5c86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7f6b49e8389108528c44d7464a2e68149dfa940
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642877"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466480"
 ---
-# <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Как: совместное использование сборки с другими приложениями (Visual Basic)
+# <a name="how-to-share-an-assembly-with-other-applications-visual-basic"></a>Практическое: совместное использование сборки с другими приложениями (Visual Basic)
 Сборки могут быть закрытыми или общими. По умолчанию большинство простых программ состоят из закрытой сборки, так как она не предназначена для использования другими приложениями.  
   
  Для совместного использования сборки с другими приложениями ее необходимо поместить в [глобальный кэш сборок](../../../../framework/app-domains/gac.md) (GAC).  
@@ -24,7 +24,7 @@ ms.locfileid: "33642877"
   
 4.  Добавьте сборку в глобальный кэш сборок. Дополнительные сведения см. в разделе [Практическое руководство. Установка сборки в глобальный кэш сборок](../../../../framework/app-domains/how-to-install-an-assembly-into-the-gac.md).  
   
-5.  Получите доступ к типам, содержащимся в сборке, из других приложений. Дополнительные сведения см. в разделе [Практическое руководство. Создание ссылки на сборку со строгим именем](http://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).  
+5.  Получите доступ к типам, содержащимся в сборке, из других приложений. Дополнительные сведения см. в разделе [Практическое руководство. Создание ссылки на сборку со строгим именем](https://msdn.microsoft.com/library/4c6a406a-b5eb-44fa-b4ed-4e95bb95a813).  
   
 ## <a name="see-also"></a>См. также  
  [Основные понятия программирования](../../../../visual-basic/programming-guide/concepts/index.md) [сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  

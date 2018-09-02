@@ -5,12 +5,12 @@ helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: f9005a25b99b0a17f8e00f350547aa4bc313c4ac
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 773aca8cbbd78f5480e254ff559192955beb18d9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961025"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455683"
 ---
 # <a name="reference-visual-basic"></a>Справочник по Visual Basic
 Этот раздел содержит ссылки на сведения о различных аспектах программирования на Visual Basic.  
@@ -42,5 +42,5 @@ ms.locfileid: "37961025"
  [Средства XML в Visual Studio](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
  Ссылки на разделы, посвященные разным средствам XML в Visual Studio.  
   
- [Справочник по автоматизации и возможностям расширения среды](http://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
+ [Справочник по автоматизации и возможностям расширения среды](https://msdn.microsoft.com/library/93112562-db21-4188-9383-ed19ad79bddf)  
  Содержит ссылки на разделы, посвященные автоматизации и расширяемости в Visual Studio для общих и языковых компонентов.

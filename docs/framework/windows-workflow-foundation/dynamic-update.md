@@ -2,12 +2,12 @@
 title: Динамическое обновление
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: f50c8e8ed7ebaab71421ff1615051d9b828d9e4b
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: dea930de2103a24aa48b1d0a31a3cbf5fc0ae26c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207525"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43455774"
 ---
 # <a name="dynamic-update"></a>Динамическое обновление
 Динамическое обновление предоставляет разработчикам приложений рабочих процессов механизм обновления определения рабочего процесса для сохраненного экземпляра рабочего процесса. Это позволяет реализовать исправление ошибки, внедрить новые требования и внести непредвиденные изменения. В этом разделе приведены общие сведения о функциях динамического обновления, введенных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -21,7 +21,7 @@ ms.locfileid: "36207525"
   
 3.  [Создание схемы обновления](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Create)  
   
-4.  [Применение схемы обновления к требуемой сохраненные экземпляры рабочего процесса](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)  
+4.  [Применение схемы обновления к требуемой сохраненные экземпляры рабочих процессов](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)  
   
 > [!NOTE]
 >  Обратите внимание, что шаги 1–3, которые охватывают создание схемы обновления, могут быть выполнены независимо от применения обновления. Типичный сценарий состоит в том, что разработчик рабочего процесса создает схему обновления вне сети, а администратор применяет обновление позже.  
@@ -34,7 +34,7 @@ ms.locfileid: "36207525"
  Чтобы подготовить рабочий процесс языка XAML для динамического обновления, его можно загрузить в <xref:System.Activities.ActivityBuilder>, а затем передать <xref:System.Activities.ActivityBuilder> в <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType>.  
   
 > [!NOTE]
->  Дополнительные сведения о работе с сериализованными рабочими процессами и <xref:System.Activities.ActivityBuilder>, в разделе [сериализация рабочих процессов и действий в XAML и обратно](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
+>  Дополнительные сведения о работе с сериализованными рабочими процессами и <xref:System.Activities.ActivityBuilder>, см. в разделе [сериализация рабочих процессов и действий в и из XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  
   
  В следующем примере определение `MortgageWorkflow` (состоящее из <xref:System.Activities.Statements.Sequence> с несколькими дочерними действиями) загружается в <xref:System.Activities.ActivityBuilder>, а затем подготавливается для динамического обновления. После возврата из метода <xref:System.Activities.ActivityBuilder> содержит исходное определение рабочего процесса и копию.  
   
@@ -57,7 +57,7 @@ DynamicUpdateServices.PrepareForUpdate(ab);
 ```  
   
 > [!NOTE]
->  Загрузить пример кода, используемый в этом разделе [пример кода динамического обновления](http://go.microsoft.com/fwlink/?LinkId=227905).  
+>  Чтобы загрузить пример кода, используемый в этом разделе, см. в разделе [пример кода динамического обновления](https://go.microsoft.com/fwlink/?LinkId=227905).  
   
 ###  <a name="Update"></a> Обновление определения рабочего процесса для отражения требуемых изменений  
  После того как определение рабочего процесса будет подготовлено к изменениям, можно внести необходимые желаемые изменения. Вы можете добавлять или удалять действия, добавлять, изменять или удалять открытые переменные, добавлять или удалять аргументы и вносить изменения в сигнатуру делегатов действий. Нельзя удалить выполняемое действие или изменить сигнатуру выполняемого делегата. Эти изменения можно внести из кода или в повторно размещенном конструкторе рабочих процессов. В следующем примере настраиваемое действие `VerifyAppraisal` добавляется в последовательность, представляющую основу `MortgageWorkflow` из предыдущего примера.  
@@ -106,7 +106,7 @@ XamlServices.Save(xw, ab);
 sw.Close();  
 ```  
   
-###  <a name="Apply"></a> Применение схемы обновления к требуемой сохраненные экземпляры рабочего процесса  
+###  <a name="Apply"></a> Применение схемы обновления к требуемой сохраненные экземпляры рабочих процессов  
  Применение схемы обновления можно выполнить в любое время после ее создания. Это можно сделать немедленно с помощью экземпляра <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>, который был возвращен методом <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType>, или позднее с помощью сохраненной копии схемы обновления. Для обновления экземпляра рабочего процесса загрузите его в объект <xref:System.Activities.WorkflowApplicationInstance> с помощью метода <xref:System.Activities.WorkflowApplication.GetInstance%2A?displayProperty=nameWithType>. Далее создайте <xref:System.Activities.WorkflowApplication> с помощью обновленного определения рабочего процесса и нужного метода <xref:System.Activities.WorkflowIdentity>. Этот идентификатор <xref:System.Activities.WorkflowIdentity> может отличаться от того, что был использован для сохранения исходного рабочего процесса, и, как правило, это делается для отражения того, что сохраненный экземпляр был изменен. Сразу после создания <xref:System.Activities.WorkflowApplication> загружается с помощью перегрузки <xref:System.Activities.WorkflowApplication.Load%2A?displayProperty=nameWithType>, принимающей <xref:System.Activities.DynamicUpdate.DynamicUpdateMap>, затем выгружается посредством вызова <xref:System.Activities.WorkflowApplication.Unload%2A?displayProperty=nameWithType>. При этом будет произведено динамическое обновление и обновленный экземпляр рабочего процесса будет сохранен.  
   
 ```csharp  
@@ -164,7 +164,7 @@ foreach (Guid id in ids)
  Сразу после применения динамического обновления можно возобновлять работу экземпляра рабочего процесса. Обратите внимание, что следует использовать новое обновленное определение и <xref:System.Activities.WorkflowIdentity>.  
   
 > [!NOTE]
->  Дополнительные сведения о работе с <xref:System.Activities.WorkflowApplication> и <xref:System.Activities.WorkflowIdentity>, в разделе [с помощью WorkflowIdentity и управления версиями](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+>  Дополнительные сведения о работе с <xref:System.Activities.WorkflowApplication> и <xref:System.Activities.WorkflowIdentity>, см. в разделе [с помощью WorkflowIdentity и управления версиями](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
  В следующем примере рабочий процесс `MortgageWorkflow_v1.1.xaml` из предыдущего примера был скомпилирован, и он загружается и возобновляется с помощью обновленного определения рабочего процесса.  
   
@@ -191,4 +191,4 @@ wfApp.Load(InstanceId);
 ```  
   
 > [!NOTE]
->  Загрузить пример кода, используемый в этом разделе [пример кода динамического обновления](http://go.microsoft.com/fwlink/?LinkId=227905).
+>  Чтобы загрузить пример кода, используемый в этом разделе, см. в разделе [пример кода динамического обновления](https://go.microsoft.com/fwlink/?LinkId=227905).

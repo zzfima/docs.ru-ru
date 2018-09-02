@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1767f3a7-29d2-4834-a763-7d169693fa8b
-ms.openlocfilehash: 82bba149f06fc68f2f01e0e7641d98ebb861dbe6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 62e2d05ec724b633de42c4b8e7183676d411791d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364860"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468830"
 ---
 # <a name="calling-service-operations-wcf-data-services"></a>Вызов операций служб (службы данных WCF)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] определяет операции службы для службы данных. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет определить такие операции, как методы на службе данных. Как и для других ресурсов службы данных, для обращения к этим операциям службы используются идентификаторы URI. Операция службы может возвращать коллекции типов сущностей, единственные экземпляры типа сущностей и примитивные типы, такие как integer и string. Операция службы также может также вернуть значение `null` (`Nothing` в Visual Basic). Клиентская библиотека [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] может использоваться для доступа к операциям службы, поддерживающим запросы HTTP GET. Такого рода операции службы определяются как методы, к которым применен атрибут <xref:System.ServiceModel.Web.WebGetAttribute>. Дополнительные сведения см. в разделе [операций службы](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "33364860"
 ## <a name="considerations-for-calling-service-operations"></a>Рассмотрение вызова операций службы  
  При использовании клиента [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] для вызова операций службы нужно учесть следующие моменты.  
   
--   При обращении к службе данных асинхронно, необходимо использовать эквивалентные асинхронные <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> методы <xref:System.Data.Services.Client.DataServiceContext> или <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> методы <xref:System.Data.Services.Client.DataServiceQuery%601>.  
+-   При доступе к службе данных асинхронно, необходимо использовать эквивалентные асинхронные <xref:System.Data.Services.Client.DataServiceContext.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceContext.EndExecute%2A> методы <xref:System.Data.Services.Client.DataServiceContext> или <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> / <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> методы <xref:System.Data.Services.Client.DataServiceQuery%601>.  
   
 -   Клиентская библиотека [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] не может материализовать результаты операции службы, которая возвращает коллекцию примитивных типов.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33364860"
   
 -   Нельзя использовать <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> для вызова операции службы GET, которая возвращает единственный результат, представляющий собой сущность или простой тип, или операции, которой требуется несколько входных параметров. Вместо этого необходимо вызвать метод <xref:System.Data.Services.Client.DataServiceContext.Execute%2A>.  
   
--   Рассмотрите возможность создания метода расширения на строго типизированном разделяемом классе <xref:System.Data.Services.Client.DataServiceContext>, который создается этими средствами и использует метод <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> или <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> для вызова операции службы. Это позволяет вызывать операции службы непосредственно из контекста. Дополнительные сведения см. в записи блога [операций службы и клиента служб данных WCF](http://go.microsoft.com/fwlink/?LinkId=215668).  
+-   Рассмотрите возможность создания метода расширения на строго типизированном разделяемом классе <xref:System.Data.Services.Client.DataServiceContext>, который создается этими средствами и использует метод <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> или <xref:System.Data.Services.Client.DataServiceContext.Execute%2A> для вызова операции службы. Это позволяет вызывать операции службы непосредственно из контекста. Дополнительные сведения см. в записи блога [операций службы и клиент WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=215668).  
   
 -   При использовании <xref:System.Data.Services.Client.DataServiceContext.CreateQuery%2A> для вызова операции службы клиентская библиотека автоматически экранирует символы для <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>, выполняя процентное кодирование зарезервированных знаков, таких как амперсанд (&), и экранируя одиночные кавычки в строках. Тем не менее, при вызове одного из *Execute* методы для вызова операции службы, необходимо помнить о выполнении такого экранирования любых предоставленных пользователем строковых значений. Одиночные кавычки в URI-адресах экранируются как пары одиночных кавычек.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33364860"
   
 -   [Вызов метода Execute&lt;T&gt; для возврата коллекции значений-примитивов](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveCollection)  
   
--   [Вызов метода Execute&lt;T&gt; для возвращения одного значения-примитива](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
+-   [Вызов метода Execute&lt;T&gt; для возврата одного значения-примитива](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecutePrimitiveValue)  
   
 -   [Вызов операции службы, которая не возвращает никаких данных](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md#ExecuteVoid)  
   

@@ -2,15 +2,15 @@
 title: Определение отношений
 ms.date: 03/30/2017
 ms.assetid: 8fa86a9d-6545-4a9d-b1f5-58d9742179c7
-ms.openlocfilehash: 9833966fa5a16bef70a6ae2b9ca618fde0e05fbb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7dc3fb0c6098d636e640aaf52b72a404c1486492
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759040"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470818"
 ---
 # <a name="inferring-relationships"></a>Определение отношений
-Если элемент, выводимый в виде таблицы, имеет дочерний элемент, который также выводится в виде таблицы, между двумя этими таблицами будет создана связь <xref:System.Data.DataRelation>. Новый столбец с именем **ParentTableName_Id** будут добавлены в таблицу, созданную для родительского элемента и в таблицу, созданную для дочернего элемента. **ColumnMapping** будет присвоено свойству данного столбца идентификаторов **MappingType.Hidden**. Столбец будет с автоматическим приращением первичного ключа для родительской таблицы и будет использоваться для **DataRelation** между двумя таблицами. Тип данных добавленный столбец идентификаторов будет **System.Int32**, в отличие от типа данных всех остальных выведенных столбцов, который является **System.String**. Объект <xref:System.Data.ForeignKeyConstraint> с **DeleteRule** = **Cascade** также будет создан с помощью нового столбца в родительской и дочерней таблицами.  
+Если элемент, выводимый в виде таблицы, имеет дочерний элемент, который также выводится в виде таблицы, между двумя этими таблицами будет создана связь <xref:System.Data.DataRelation>. Новый столбец с именем **ParentTableName_Id** будут добавлены как таблицы, созданной для родительского элемента, так и таблицу, созданную для дочернего элемента. **ColumnMapping** данного столбца идентификаторов будет установлено **MappingType.Hidden**. Столбец будет заданы с автоматическим приращением первичным ключом для родительской таблицы, а также будет использоваться для **DataRelation** между двумя таблицами. Тип данных добавленный столбец идентификаторов будет **System.Int32**, в отличие от всех остальных выведенных столбцов типа данных, который является **System.String**. Объект <xref:System.Data.ForeignKeyConstraint> с **DeleteRule** = **Cascade** также будет создаваться с помощью нового столбца в родительской и дочерней таблицами.  
   
  Например, рассмотрим следующий XML-код:  
   
@@ -25,11 +25,11 @@ ms.locfileid: "32759040"
   
  Процесс вывода создаст две таблицы: **Element1** и **ChildElement1**.  
   
- **Element1** будет содержать два столбца: **Element1_Id** и **ChildElement2**. **ColumnMapping** свойство **Element1_Id** столбца будет присвоено **MappingType.Hidden**. **ColumnMapping** свойство **ChildElement2** столбца будет присвоено **MappingType.Element**. **Element1_Id** столбца будет установлено в качестве первичного ключа **Element1** таблицы.  
+ **Element1** таблица будет содержать два столбца: **Element1_Id** и **ChildElement2**. **ColumnMapping** свойство **Element1_Id** столбца будет присвоено **MappingType.Hidden**. **ColumnMapping** свойство **ChildElement2** столбца будет присвоено **MappingType.Element**. **Element1_Id** столбца будет установлено в качестве первичного ключа **Element1** таблицы.  
   
- **ChildElement1** будет содержать три столбца: **attr1**, **attr2** и **Element1_Id**. **ColumnMapping** свойство **attr1** и **attr2** столбцов будет присвоено **MappingType.Attribute**. **ColumnMapping** свойство **Element1_Id** столбца будет присвоено **MappingType.Hidden**.  
+ **ChildElement1** таблица будет иметь три столбца: **attr1**, **attr2** и **Element1_Id**. **ColumnMapping** свойство для **attr1** и **attr2** столбцов будет присвоено **MappingType.Attribute**. **ColumnMapping** свойство **Element1_Id** столбца будет присвоено **MappingType.Hidden**.  
   
- Объект **DataRelation** и **ForeignKeyConstraint** будут созданы с использованием **Element1_Id** столбцы из обеих таблиц.  
+ Объект **DataRelation** и **ForeignKeyConstraint** будет создан с помощью **Element1_Id** столбцы из обеих таблиц.  
   
  **Набор данных:** DocumentElement  
   
@@ -76,4 +76,4 @@ ms.locfileid: "32759040"
  [Вложенность объектов DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
  [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

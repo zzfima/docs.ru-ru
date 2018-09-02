@@ -9,24 +9,24 @@ helpviewer_keywords:
 - animation [WPF], Booleans with key frames
 - key frames [WPF], animating Booleans with
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
-ms.openlocfilehash: d6273c08881e802595e831cafe120a5bec841c4d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0142748a5c8e9a4375802d1b48beec0501d37e7c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556930"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468280"
 ---
 # <a name="how-to-animate-a-boolean-by-using-key-frames"></a>Практическое руководство. Анимация логического типа с помощью ключевых кадров
-В этом примере демонстрируется анимация значение логического свойства <xref:System.Windows.Controls.Button> элемента управления с помощью ключевых кадров.  
+В этом примере показано, как анимировать значение логического свойства <xref:System.Windows.Controls.Button> элемента управления с помощью ключевых кадров.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames> класса для анимации <xref:System.Windows.UIElement.IsEnabled%2A> свойства <xref:System.Windows.Controls.Button> элемента управления. Все ключевые кадры в этом примере используется экземпляр <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> класса. Дискретные полные кадры типа <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> создают резкие переходы между значениями, то есть, перемещение анимации рывками.  
+ В следующем примере используется <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames> класс для анимации <xref:System.Windows.UIElement.IsEnabled%2A> свойство <xref:System.Windows.Controls.Button> элемента управления. Все ключевые кадры в этом примере использует экземпляр <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> класса. Дискретные ключевые кадры, например <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> , создают скачкообразные переходы между значениями, то есть, перемещение анимация выполняется рывками.  
   
  [!code-csharp[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/BooleanAnimationUsingKeyFramesExample.cs#booleananimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/booleananimationusingkeyframesexample.vb#booleananimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/BooleanAnimationUsingKeyFramesExample.xaml#booleananimationusingkeyframeswholepage)]  
   
- Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>  

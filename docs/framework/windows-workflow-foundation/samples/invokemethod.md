@@ -2,12 +2,12 @@
 title: InvokeMethod
 ms.date: 03/30/2017
 ms.assetid: 04988eb3-65f8-456d-b1bd-509f5d05a57c
-ms.openlocfilehash: 12d028515c34c0e3593c90b81a5589fb05f36b82
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 861e0cf160aec9814abcf8c27c37ce13a5d88b2a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517742"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457185"
 ---
 # <a name="invokemethod"></a>InvokeMethod
 В этом образце демонстрируются разные способы использования действия <xref:System.Activities.Statements.InvokeMethod> для вызова методов класса.  
@@ -42,7 +42,7 @@ ms.locfileid: "33517742"
 12. Извлеките значение из экземпляра объекта.  
   
 ## <a name="to-use-this-sample"></a>Использование этого образца  
- Данный образец предоставляется в двух версиях. В первой версии образца показано использование <xref:System.Activities.Statements.InvokeMethod> посредством кода C# с помощью модели программирования Windows Workflow Foundation (WF), которые находятся в папке CodedWorkflow\CS. Во второй версии показано использование метода <xref:System.Activities.Statements.InvokeMethod> при помощи XAML; версия находится под папкой DesignerWorkflow\CS.  
+ Данный образец предоставляется в двух версиях. Первая версия в этом примере показано использование метода <xref:System.Activities.Statements.InvokeMethod> посредством кода C# с помощью модели программирования Windows Workflow Foundation (WF) и его можно найти в папке CodedWorkflow\CS. Во второй версии показано использование метода <xref:System.Activities.Statements.InvokeMethod> при помощи XAML; версия находится под папкой DesignerWorkflow\CS.  
   
 #### <a name="to-run-the-coded-workflow-sample"></a>Выполнение образца кода рабочего процесса  
   
@@ -65,6 +65,6 @@ ms.locfileid: "33517742"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InvokeMethod`

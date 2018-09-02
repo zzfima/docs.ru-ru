@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51a0538670a834435aff8d2b6c81b78450fe47f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac5d80664bbca8cf950eb2e6f37badc485c398d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396764"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43474081"
 ---
 # <a name="runtime-directive-policy-settings"></a>Параметры политики директив среды выполнения
 > [!NOTE]
->  В этом разделе рассматривается предварительная версия программного обеспечения для разработчиков машинного кода .NET. Предварительную версию можно скачать на [веб-сайте Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=394611) (требуется регистрация).  
+>  В этом разделе рассматривается предварительная версия программного обеспечения для разработчиков машинного кода .NET. Предварительную версию можно скачать на [веб-сайте Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (требуется регистрация).  
   
  Параметры политики директив среды выполнения для машинного кода .NET определяют доступность метаданных для типов и членов типов во время выполнения. Без необходимых метаданных операции, зависящие от отражения, сериализации и десериализации или маршалинга типов платформы .NET Framework в COM или среду выполнения Windows, могут быть не выполнены, в результате чего создается исключение. Наиболее общие исключения, [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) и (в случае взаимодействия) [MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md).  
   

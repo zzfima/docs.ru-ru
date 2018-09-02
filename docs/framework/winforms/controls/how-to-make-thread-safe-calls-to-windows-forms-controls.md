@@ -16,12 +16,12 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: d4e5b4353b53c382dad2b390db1b8fc224e7f261
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f2716db441380138e6058ec45d9ae9c07f0e21a7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911748"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468634"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>Практическое руководство. Осуществление потокобезопасных вызовов элементов управления Windows Forms.
 
@@ -406,7 +406,7 @@ private:
  В следующем примере кода представлено полное приложение Windows Forms, состоящее из формы с тремя кнопками и одного текстового поля. Первая кнопка показывает доступ с нарушением принципов безопасности нескольких потоков, вторая кнопка показывает безопасный доступ с использованием <xref:System.Windows.Forms.Control.Invoke%2A>, а третья кнопка показывает безопасный доступ с использованием <xref:System.ComponentModel.BackgroundWorker>.
 
 > [!NOTE]
-> Инструкции по запуску этого примера см. в разделе [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Для этого примера требуются ссылки на сборки System.Drawing и System.Windows.Forms.
+> Инструкции по запуску этого примера см. в разделе [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/cc447f7e-4c3b-4397-9d05-aeba3ca49416). Для этого примера требуются ссылки на сборки System.Drawing и System.Windows.Forms.
 
 ```csharp
 using System;

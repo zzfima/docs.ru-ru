@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0f2126a83e6a5638eb492bb2a529dbf4cdab1714
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69c7e30168686eeb7d530b167b1f87c567c63874
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408636"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463199"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>Практическое руководство. Отладка приложений и служб с помощью трассировки WIF
 ## <a name="applies-to"></a>Применение  
@@ -77,14 +77,14 @@ ms.locfileid: "33408636"
     </system.diagnostics>  
     ```  
   
-3.  Приведенная выше конфигурация предписывает WIF создавать подробные события трассировки и регистрировать их в файле *WIFTrace.e2e*. Полный список значений для параметра **switchValue** см. в таблице "Уровень трассировки" в разделе [Настройка трассировки](http://msdn.microsoft.com/library/ms733025.aspx).  
+3.  Приведенная выше конфигурация предписывает WIF создавать подробные события трассировки и регистрировать их в файле *WIFTrace.e2e*. Полный список значений для параметра **switchValue** см. в таблице "Уровень трассировки" в разделе [Настройка трассировки](../wcf/diagnostics/tracing/configuring-tracing.md).  
   
 ## <a name="step-2--analyze-wif-trace-files-using-trace-viewer-tool"></a>Шаг 2. Анализ файлов трассировки WIF с помощью средства Trace Viewer  
  На этом шаге вы будете использовать средство Trace Viewer (SvcTraceViewer.exe) для анализа журналов трассировки WIF.  
   
 #### <a name="to-analyze-wif-trace-logs-using-trace-viewer-tool-svctraceviewerexe"></a>Анализ журналов трассировки WIF с помощью средства Trace Viewer (SvcTraceViewer.exe)  
   
-1.  Средство Trace Viewer (SvcTraceViewer.exe) поставляется в составе пакета Windows SDK. Если вы еще не установили пакет Windows SDK, его можно скачать здесь: [Пакет Windows SDK](http://www.microsoft.com/download/en/details.aspx?id=8279).  
+1.  Средство Trace Viewer (SvcTraceViewer.exe) поставляется в составе пакета Windows SDK. Если вы еще не установили пакет Windows SDK, его можно скачать здесь: [Пакет Windows SDK](https://www.microsoft.com/download/en/details.aspx?id=8279).  
   
 2.  Запустите средство Trace Viewer (SvcTraceViewer.exe) Обычно оно находится в папке **Bin** по пути установки.  
   
@@ -105,8 +105,8 @@ ms.locfileid: "33408636"
   
 |**Идентификатор ошибки**|**Сообщение об ошибке**|**Действие, необходимое для исправления ошибки**|  
 |-|-|-|  
-|ID4175|Издатель токена безопасности не был распознан IssuerNameRegistry.  Чтобы принимать токены безопасности от этого издателя, настройте IssuerNameRegistry для возврата допустимого имени этого издателя.|Это ошибка может быть вызвана копированием отпечатка из оснастки MMC и вставкой его в файл *Web.config*. В частности, при копировании из окна свойств сертификата можно получить лишний непечатаемый символ в текстовой строке. Этот лишний символ приводит к ошибке сравнения отпечаток. Процедуры для правильного копирования отпечатка можно найти здесь: [http://msdn.microsoft.com/library/ff359102.aspx](http://msdn.microsoft.com/library/ff359102.aspx)|  
+|ID4175|Издатель токена безопасности не был распознан IssuerNameRegistry.  Чтобы принимать токены безопасности от этого издателя, настройте IssuerNameRegistry для возврата допустимого имени этого издателя.|Это ошибка может быть вызвана копированием отпечатка из оснастки MMC и вставкой его в файл *Web.config*. В частности, при копировании из окна свойств сертификата можно получить лишний непечатаемый символ в текстовой строке. Этот лишний символ приводит к сбою отпечатка. Процедуру правильного копирования отпечатка можно найти здесь: [http://msdn.microsoft.com/library/ff359102.aspx](https://msdn.microsoft.com/library/ff359102.aspx)|  
   
 ## <a name="related-items"></a>Связанные темы  
   
--   [Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок](http://msdn.microsoft.com/library/aa751795.aspx)
+-   [Использование программы Service Trace Viewer для просмотра скоррелированных трассировок и устранения неполадок](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

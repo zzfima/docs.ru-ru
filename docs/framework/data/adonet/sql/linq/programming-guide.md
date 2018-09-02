@@ -2,17 +2,17 @@
 title: Руководство по программированию
 ms.date: 03/30/2017
 ms.assetid: ed1012d4-3ff2-4877-af27-93125c4180ea
-ms.openlocfilehash: 081b5b9fb0765a69e1f45dd0dc25234b8d217ab4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a6dad5237c149186a91637ec98efd6f7f315c4d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361388"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465516"
 ---
 # <a name="programming-guide"></a>Руководство по программированию
-В этом разделе содержатся сведения о создании и использовании объектной модели [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Если вы используете Visual Studio, можно использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для выполнения многих из этих задач.  
+В этом разделе содержатся сведения о создании и использовании объектной модели [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Если вы используете Visual Studio, можно также использовать [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] для выполнения многих из этих задач.  
   
- Документы Microsoft можно также искать конкретные проблемы, и вы можете принять участие в [форуме по LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), где можно обсудить со специалистами более сложные вопросы подробно. Наконец [LINQ to SQL: запросы LINQ .NET запросов для реляционных данных](http://go.microsoft.com/fwlink/?LinkId=93205) документ содержит описание [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] технологии, дополненный примерами кода Visual Basic и C#.  
+ Можно также поискать документы Microsoft для конкретных проблем, и вы можете принять участие в [LINQ Forum](https://go.microsoft.com/fwlink/?LinkId=76488), где можно обсудить со специалистами более сложные вопросы подробно. Наконец [LINQ to SQL: запросы запросы LINQ .NET для реляционных данных](https://go.microsoft.com/fwlink/?LinkId=93205) документ содержит описание [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] технологии, проиллюстрированные примерами кода Visual Basic и C#.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Создание модели объектов](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
@@ -40,5 +40,5 @@ ms.locfileid: "33361388"
  [Хранимые процедуры](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)  
  Ссылки на разделы, в которых демонстрируется использование хранимых процедур.  
   
- [Введение в LINQ](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)  
+ [Введение в LINQ](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e)  
  Содержатся ресурсы, которые могут быть полезными для тех, кто приступает к изучению технологии [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].

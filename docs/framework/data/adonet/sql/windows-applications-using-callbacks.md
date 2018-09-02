@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: 7f8a23c32d4c1e2a91cd83770935b071764943e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f1e3fe6d53266a4e1366c1a3d5396688a25df0f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365479"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43457025"
 ---
 # <a name="windows-applications-using-callbacks"></a>Приложения Windows, использующие обратные вызовы
 В большинстве сценариев асинхронной обработки необходимо запустить операцию в базе данных и продолжить выполнение других процессов, не дожидаясь завершения данной операции. Однако во многих случаях требуется выполнение каких-либо действий после завершения операции в базе данных. Например, в Windows-приложении может потребоваться передать длительную операцию в фоновый поток, чтобы иметь возможность работать с пользовательским интерфейсом. Однако по завершении операции в базе данных необходимо будет использовать результаты для заполнения формы. В таких случаях лучше всего использовать ответный вызов.  
@@ -380,4 +380,4 @@ private void Form1_Load(object sender, System.EventArgs e)
   
 ## <a name="see-also"></a>См. также  
  [Асинхронные операции](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Timer component [Windows Forms], about Timer components
 - timers [Windows Forms], about timers
 ms.assetid: e672c05b-a8b6-4b26-9e4d-9223aa9e3873
-ms.openlocfilehash: 39bc3c8cda06a62eb40b042e46cbd070a82cce01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e453f6b7718c6c5be3109f51153a3f5e4b5b6f4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535506"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467712"
 ---
 # <a name="timer-component-overview-windows-forms"></a>Общие сведения о компоненте Timer (Windows Forms)
-Компонент Windows Forms <xref:System.Windows.Forms.Timer> вызывает событие через определенные интервалы времени. Этот компонент предназначен для работы в среде Windows Forms. Если вам требуется таймер, подходящий для серверной среды, см. раздел [Общие сведения о серверных таймерах](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
+Компонент Windows Forms <xref:System.Windows.Forms.Timer> вызывает событие через определенные интервалы времени. Этот компонент предназначен для работы в среде Windows Forms. Если вам требуется таймер, подходящий для серверной среды, см. раздел [Общие сведения о серверных таймерах](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
   
 ## <a name="key-properties-methods-and-events"></a>Ключевые свойства, методы и события  
- Длина интервалов определяется <xref:System.Windows.Forms.Timer.Interval%2A> свойства, значение которого указывается в миллисекундах. При включении компонента <xref:System.Windows.Forms.Timer.Tick> события во время каждого интервала. Это, где можно добавить код для выполнения. Дополнительные сведения см. в разделе [как: запуска процедуры интервалы задать с помощью компонента Timer в Windows Forms](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md). Основные методы <xref:System.Windows.Forms.Timer> , компонент <xref:System.Windows.Forms.Timer.Start%2A> и <xref:System.Windows.Forms.Timer.Stop%2A>, который включения таймера и отключения. При выключении таймера сбрасывает; Невозможно приостановить <xref:System.Windows.Forms.Timer> компонента.  
+ Длина в интервале, заданном параметром <xref:System.Windows.Forms.Timer.Interval%2A> свойство, значение которого указывается в миллисекундах. При включении компонента <xref:System.Windows.Forms.Timer.Tick> события во время каждого интервала. Это, где необходимо добавить код, который будет выполнен. Дополнительные сведения см. в разделе [как: выполните процедуры периодичностью задать с помощью компонента Timer в Windows Forms](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md). Основные методы класса <xref:System.Windows.Forms.Timer> компонент <xref:System.Windows.Forms.Timer.Start%2A> и <xref:System.Windows.Forms.Timer.Stop%2A>, который включать таймер и отключать. При выключении таймера, он сбрасывает; Невозможно приостановить <xref:System.Windows.Forms.Timer> компонента.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Forms.Timer>  

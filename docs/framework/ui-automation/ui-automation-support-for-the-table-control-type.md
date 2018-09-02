@@ -9,16 +9,16 @@ ms.assetid: 9050dde5-6469-4c83-abb7-f861c24ff985
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 8635188732f31a69eeff21a545a92f5607ff5891
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f565ef28d0b4d872f7878999c19ef7756e4f7c93
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400267"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467423"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Table
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе содержатся сведения о поддержке [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] типа элемента управления Table. В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]тип элемента управления — это набор условий, которым должен удовлетворять элемент управления для использования свойства <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Условия включают конкретные правила для древовидной структуры [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значений свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] и шаблонов элементов управления.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33400267"
   
 |Представление элемента управления|Представление содержимого|  
 |------------------|------------------|  
-|Таблица<br /><br /> -Header (0 или 1)<br />-Текст (0 или 1)<br />-Различные элементы управления (0 или более)|Таблица<br /><br /> -Текст (0 или более)<br />-Различные элементы управления (0 или более)|  
+|Таблица<br /><br /> -Header (0 или 1)<br />-Text (0 или 1)<br />-Различные элементы управления (0 или более)|Таблица<br /><br /> -Text (0 или более)<br />-Различные элементы управления (0 или более)|  
   
  Если элемент управления "Таблица" содержит заголовки строк или столбцов, они должны быть представлены в представлении элемента управления дерева модели автоматизации пользовательского интерфейса. Представление содержимого не должно предоставлять эту информацию, поскольку к ней можно получить доступ с помощью шаблона TablePattern.  
   

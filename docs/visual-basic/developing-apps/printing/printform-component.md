@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
-ms.openlocfilehash: 6cb7cfe022b2b4d23f47a47ec70f08d5c0ccbc7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 879d31c5a572689d84af6b2e46f3d33e1a8841c8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591412"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472089"
 ---
 # <a name="printform-component-visual-basic"></a>Компонент PrintForm (Visual Basic)
-<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Компонент для Visual Basic позволяет напечатать изображение формы Windows Forms во время выполнения. Его поведение заменяет поведение метода `PrintForm` в более ранних версиях Visual Basic.  
+<xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Компонент для Visual Basic позволяет напечатать изображение формы Windows во время выполнения. Его поведение заменяет поведение метода `PrintForm` в более ранних версиях Visual Basic.  
   
- Элементы управления PowerPack больше не включены в Visual Studio, но их можно скачать в [Центре загрузки](http://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Элементы управления PowerPack больше не включены в Visual Studio, но их можно скачать [центра загрузки](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ## <a name="printform-component-overview"></a>Обзор компонента PrintForm  
  Распространенной ситуацией, связанной с формами Windows Forms, является создание формы с форматированием, которое походит на бумажную форму или отчет, а затем печать изображения формы. Также для этого можно использовать компонент <xref:System.Drawing.Printing.PrintDocument> , хотя это требует большого объема кода. Компонент <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> позволяет вывести изображение формы для печати на принтер, в окно предварительного просмотра печати или в файл без использования компонента <xref:System.Drawing.Printing.PrintDocument> .  

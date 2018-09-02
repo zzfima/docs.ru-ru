@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mouse input [Windows Forms], using in Windows Forms
 - keyboards [Windows Forms], keyboard input
 ms.assetid: 1486075f-1e06-4c9e-82c6-f948331db6d6
-ms.openlocfilehash: 2a618dae8d5f2f5ea6a6581fff2758fe8419f511
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fef51f57dd3c14c91572041a72c805823d6019a3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537737"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43456669"
 ---
 # <a name="user-input-in-windows-forms"></a>Ввод данных пользователем в Windows Forms
 В Windows Forms включена модель ввода пользователя, основанная на событиях, которые возникают во время обработки соответствующих сообщений Windows. Здесь приведены ссылки на разделы с информацией о вводе с помощью мыши и клавиатуры, включая примеры кода, демонстрирующие выполнение определенных задач.  
@@ -37,4 +37,4 @@ ms.locfileid: "33537737"
  Описываются методы проверки пользовательского ввода в приложениях Windows Forms.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- См. также [Создание обработчиков событий в Windows Forms](http://msdn.microsoft.com/library/dacysss4\(v=vs.110\)).
+ Также см. в разделе [Создание обработчиков событий в Windows Forms](https://msdn.microsoft.com/library/dacysss4\(v=vs.110\)).

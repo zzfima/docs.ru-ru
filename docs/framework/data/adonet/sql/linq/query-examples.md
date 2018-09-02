@@ -2,18 +2,18 @@
 title: Примеры запросов
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-ms.openlocfilehash: b7fe03a951b6b8cfccc0c0bc4a1ccfc90e903dc2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362631"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464358"
 ---
 # <a name="query-examples"></a>Примеры запросов
-В этом разделе Примеры Visual Basic и C# обычно [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] запросов. Разработчики, использующие Visual Studio можно найти гораздо больше примеров в образце решения, представленном в разделе «примеры». Дополнительные сведения см. в разделе [образцы](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+В этом разделе Примеры Visual Basic и C# обычно [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] запросов. Разработчики, использующие Visual Studio можно найти много примеров в образце решения, представленном в разделе примеров. Дополнительные сведения см. в разделе [примеры](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
->  *DB* часто используется в примерах кода в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] документации. *DB* считается экземпляр *Northwind* класс, унаследованный от класса <xref:System.Data.Linq.DataContext>.  
+>  *DB* часто используется в примерах кода в [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] документации. *DB* предполагается, что экземпляр *Northwind* класс, унаследованный от <xref:System.Data.Linq.DataContext>.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Статистические запросы](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)  
@@ -62,10 +62,10 @@ ms.locfileid: "33362631"
  Содержит примеры использования переходов внешнего ключа в предложениях `from`, `where` и `select`.  
   
  [Формулировка проекций](../../../../../../docs/framework/data/adonet/sql/linq/formulate-projections.md)  
- Содержит примеры сочетания `select` с другими возможностями (например, *анонимные типы*) для создания проекций запросов.  
+ Содержит примеры сочетания `select` с другими компонентами (например, *анонимные типы*) для создания проекций запросов.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Общие сведения о стандартных операторах запроса](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [Общие сведения о стандартных операторах запроса](https://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
  Содержит основные сведения о стандартных операторах запроса.  
   
  [Основные принципы запросов](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  

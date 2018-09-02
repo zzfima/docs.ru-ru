@@ -10,11 +10,11 @@ helpviewer_keywords:
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
 ms.openlocfilehash: 38acd9056f9517e6d8b62691cdeb1a2960bec800
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998714"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43469858"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>Преобразование значений между строковыми и другими типами (Visual Basic)
 Можно преобразовать числовые, `Boolean`, или значение для даты и времени `String`. Также можно преобразовать в обратном направлении — из строкового значения в числовой, `Boolean`, или `Date` — интерпретацией содержимое строки как допустимое значение целевого типа данных. Если это невозможно, возникает ошибка времени выполнения.  

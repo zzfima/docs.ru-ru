@@ -2,15 +2,15 @@
 title: Пошаговое руководство. Создание кода SQL
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: ab08b404dc60483a39e5c6ae56d82b63932c3f3e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5551eb4088e7529c61d5c517fed6877c23ae12f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766326"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472076"
 ---
 # <a name="walkthrough-sql-generation"></a>Пошаговое руководство. Создание кода SQL
-В этом разделе показано, как происходит создание кода SQL в [образец поставщика](http://go.microsoft.com/fwlink/?LinkId=180616). В следующем запросе Entity SQL используется модель, которая прилагается к образцу поставщика.  
+В этом разделе показано, как происходит создание кода SQL в [образец поставщика](https://go.microsoft.com/fwlink/?LinkId=180616). В следующем запросе Entity SQL используется модель, которая прилагается к образцу поставщика.  
   
 ```  
 SELECT  j1.ProductId, j1.ProductName, j1.CategoryName, j2.ShipCountry, j2.ProductId  
@@ -126,7 +126,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Схема](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- Следующее значение false передается в стек IsParentAJoin, и обрабатывается условие соединения Var(Extent1).CategoryID == Var(Extent2).CategoryID. После поиска в символьной таблице Var(Extenent1) разрешается в <symbol_Extent1>. Поскольку экземпляр разрешается в простой символ, в результате обработки Var(Extent1). CategoryID, SqlBuilder с \<symbol1 >.» Возвращается CategoryID». Схожим образом обрабатывается другая сторона сравнения, результат посещения условия соединения добавляется к предложению FROM инструкции SelectStatement1, а из стека IsParentAJoin удаляется значение false.  
+ Следующее значение false передается в стек IsParentAJoin, и обрабатывается условие соединения Var(Extent1).CategoryID == Var(Extent2).CategoryID. После поиска в символьной таблице Var(Extenent1) разрешается в <symbol_Extent1>. Поскольку экземпляр разрешается в простой символ как результат обработки Var(Extent1). CategoryID, SqlBuilder с \<symbol1 >.» Возвращается CategoryID». Схожим образом обрабатывается другая сторона сравнения, результат посещения условия соединения добавляется к предложению FROM инструкции SelectStatement1, а из стека IsParentAJoin удаляется значение false.  
   
  На этом обработка Join1 завершается, а область удаляется из символьной таблицы.  
   

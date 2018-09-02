@@ -9,16 +9,16 @@ ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: bef3393cda31e546afdb7b720cb08a2d45cb45bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e3008b710a6fcaba476fd8c425beaa8eb11f9e52
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409480"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470081"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>Поддержка автоматизации пользовательского интерфейса для элемента управления типа DataItem
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе содержатся сведения о поддержке в [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] типа элемента управления DataItem. В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] тип элемента управления — это набор условий, которым должен удовлетворять элемент управления для использования свойства <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Условия включают конкретные правила для древовидной структуры [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значений свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] и шаблонов элементов управления.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33409480"
   
 |Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление элемента управления|Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление содержимого|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|DataItem<br /><br /> -Зависит от (0 или более; возможна структуризация иерархии)|DataItem<br /><br /> -Зависит от (0 или более; возможна структуризация иерархии)|  
+|DataItem<br /><br /> -Зависит от (0 или больше; могут быть структурированы в иерархии)|DataItem<br /><br /> -Зависит от (0 или больше; могут быть структурированы в иерархии)|  
   
  Элемент данных в сетке данных может поддерживать множество объектов, в том числе еще один уровень элементов данных или определенные элементы сетки, такие как текст, изображения или элементы управления "Поле ввода". Если элемент данных имеет определенную роль объекта, этот элемент должен представляться как определенный тип элемента управления; например, тип элемента управления ListItem для элемента данных, доступного для выбора в сетке.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "33409480"
   
 |Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление элемента управления|Дерево[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] — представление содержимого|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|-Группы «Contoso» (таблица, сетка)<br />-DataItem «учетные записи Receivable.doc» (TableItem, GridItem, SelectionItem, вызова неуправляемого кода)<br />-Image «Accounts Receivable.doc»<br />-Измените «Name» (TableItem GridItem, значение «Accounts Receivable.doc»)<br />-Измените «Дата изменения» (TableItem GridItem, значение «8/25/2006 3:29 PM»)<br />-Измените «Размер» (GridItem и TableItem, значение «11.0 КБ)<br />-DataItem «учетные записи Payable.doc» (TableItem, GridItem, SelectionItem, вызова неуправляемого кода)<br />-   ...|-Группы «Contoso» (таблица, сетка)<br />-DataItem «учетные записи Receivable.doc» (TableItem, GridItem, SelectionItem, вызова неуправляемого кода)<br />-Image «Accounts Receivable.doc»<br />-Измените «Name» (TableItem GridItem, значение «Accounts Receivable.doc»)<br />-Измените «Дата изменения» (TableItem GridItem, значение «8/25/2006 3:29 PM»)<br />-Измените «Размер» (GridItem и TableItem, значение «11.0 КБ)<br />-DataItem «учетные записи Payable.doc» (TableItem, GridItem, SelectionItem, вызова неуправляемого кода)<br />-   …|  
+|-Группу «Contoso» (таблицы, сетка)<br />-DataItem «учетные записи Receivable.doc» (TableItem, GridItem, SelectionItem, вызов)<br />-Image «Accounts Receivable.doc»<br />-Edit «Name» (TableItem GridItem, значение «Accounts Receivable.doc»)<br />-Edit, «Дата изменения» (TableItem GridItem, значение «8/25/2006 3:29 PM»)<br />-Edit «Размер» (GridItem и TableItem, значение «11.0 КБ)<br />-DataItem «учетные записи Payable.doc» (TableItem, GridItem, SelectionItem, вызов)<br />-   ...|-Группу «Contoso» (таблицы, сетка)<br />-DataItem «учетные записи Receivable.doc» (TableItem, GridItem, SelectionItem, вызов)<br />-Image «Accounts Receivable.doc»<br />-Edit «Name» (TableItem GridItem, значение «Accounts Receivable.doc»)<br />-Edit, «Дата изменения» (TableItem GridItem, значение «8/25/2006 3:29 PM»)<br />-Edit «Размер» (GridItem и TableItem, значение «11.0 КБ)<br />-DataItem «учетные записи Payable.doc» (TableItem, GridItem, SelectionItem, вызов)<br />-   …|  
   
  Если сетка представляет список выбираемых элементов, соответствующие элементы пользовательского интерфейса могут быть представлены типом элемента управления ListItem, а не DataItem. В предыдущем примере элементы DataItem (Accounts Receivable.doc и Accounts Payable.doc) в в элементе Group (Contoso) можно улучшить, представив их как элементы управления типа ListItem, поскольку этот тип уже поддерживает шаблон элемента управления SelectionItem.  
   

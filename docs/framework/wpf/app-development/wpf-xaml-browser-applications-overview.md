@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: cdd636a1854b891605abadaf31b1667e235eea92
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 8121b6e8c5a136f5f89b59636a7cb7f15794164a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253202"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43462483"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Общие сведения о приложениях браузера WPF XAML
 <a name="introduction"></a>
@@ -35,7 +35,7 @@ ms.locfileid: "43253202"
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Создание приложения обозревателя XAML (XBAP)  
- Самый простой способ создать проект XBAP — с помощью Microsoft Visual Studio. При создании нового проекта выберите из списка шаблонов **приложение браузера WPF**. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового проекта приложения обозревателя WPF](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+ Самый простой способ создать проект XBAP — с помощью Microsoft Visual Studio. При создании нового проекта выберите из списка шаблонов **приложение браузера WPF**. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового проекта приложения обозревателя WPF](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
   
  При запуске проект XBAP откроется в окне браузера, а не в отдельном окне. При отладке XBAP в Visual Studio, приложение запускается с разрешениями зоны Интернета и, следовательно, если эти разрешения будут превышены исключения безопасности. Дополнительные сведения см. в разделах [Безопасность](../../../../docs/framework/wpf/security-wpf.md) и [Безопасность частичного доверия в WPF](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "43253202"
   
 <a name="communicating_with_the_host_web_page"></a>   
 ## <a name="communicating-with-the-host-web-page"></a>Связь с веб-страницей размещения  
- Если приложение находится во фрейме HTML, вы можете взаимодействовать с веб-страницей, которая содержит XBAP. Это делается путем извлечения <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> свойство <xref:System.Windows.Interop.BrowserInteropHelper>. Оно возвращает объект скрипта, представляющий окно HTML. Доступ к свойствам, методам и событиям можно получить в [объекте окна](http://go.microsoft.com/fwlink/?LinkId=160274), используя обычный синтаксис с точками. Также можно получить доступ к методам скрипта и глобальным переменным. В следующем примере показано, как извлечь объект скрипта и закрыть браузер.  
+ Если приложение находится во фрейме HTML, вы можете взаимодействовать с веб-страницей, которая содержит XBAP. Это делается путем извлечения <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> свойство <xref:System.Windows.Interop.BrowserInteropHelper>. Оно возвращает объект скрипта, представляющий окно HTML. Доступ к свойствам, методам и событиям можно получить в [объекте окна](https://go.microsoft.com/fwlink/?LinkId=160274), используя обычный синтаксис с точками. Также можно получить доступ к методам скрипта и глобальным переменным. В следующем примере показано, как извлечь объект скрипта и закрыть браузер.  
   
  [!code-csharp[XbapBrowserInterop#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]  
@@ -176,7 +176,7 @@ ms.locfileid: "43253202"
 > [!NOTE]
 >  Поведение, описанное в предыдущей таблице, относится к приложениям XBAP с полным доверием, не следующим модели доверенного развертывания ClickOnce.  
   
- Для развертывания XBAP с полным доверием рекомендуется использовать модель доверенного развертывания ClickOnce. Она позволяет XBAP получать полное доверие автоматически, независимо от зоны безопасности и не запрашивая подтверждение пользователя. При использовании этой модели приложение должно быть подписано сертификатом надежного издателя. Дополнительные сведения см. в разделах [Общие сведения о развертывании доверенных приложений](/visualstudio/deployment/trusted-application-deployment-overview) и [Знакомство с подписыванием кода](http://go.microsoft.com/fwlink/?LinkId=166327).  
+ Для развертывания XBAP с полным доверием рекомендуется использовать модель доверенного развертывания ClickOnce. Она позволяет XBAP получать полное доверие автоматически, независимо от зоны безопасности и не запрашивая подтверждение пользователя. При использовании этой модели приложение должно быть подписано сертификатом надежного издателя. Дополнительные сведения см. в разделах [Общие сведения о развертывании доверенных приложений](/visualstudio/deployment/trusted-application-deployment-overview) и [Знакомство с подписыванием кода](https://go.microsoft.com/fwlink/?LinkId=166327).  
   
 <a name="xbap_start_time_performance_considerations"></a>   
 ## <a name="xbap-start-time-performance-considerations"></a>Влияние времени запуска XBAP на производительность  

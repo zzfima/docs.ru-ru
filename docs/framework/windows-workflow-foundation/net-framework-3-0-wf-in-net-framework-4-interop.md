@@ -2,18 +2,18 @@
 title: Использование действий .NET Framework 3.0 WF на платформе .NET Framework 4 с действием «Interop»
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
-ms.openlocfilehash: 8110c86ab8bf5c557dbf8eb361d4ead2e256a3b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2dac91ffa0f4bf5e1c1afea1fc6f6629c345857
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518415"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467509"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Использование действий .NET Framework 3.0 WF на платформе .NET Framework 4 с действием «Interop»
 Действие <xref:System.Activities.Statements.Interop> - это действие [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] (WF 4.5), служащее оболочкой для действия [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) в рабочем процессе [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Действие WF 3 может быть отдельным действием или целым деревом действий. Выполнение (включая отмену и обработку исключений) и сохраняемость действий [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] происходят в контексте выполняющегося экземпляра рабочего процесса [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)].  
   
 > [!NOTE]
->  <xref:System.Activities.Statements.Interop> Действия не отображается в области элементов конструктора рабочих процессов, если проект рабочего процесса имеет его **требуемой версии .NET Framework** задано значение **.NET Framework 4.5**.  
+>  <xref:System.Activities.Statements.Interop> Действия не отображается в области элементов конструктора рабочих процессов, если в проекте рабочего процесса его **требуемой версии .NET Framework** значение **.NET Framework 4.5**.  
   
 ## <a name="criteria-for-using-a-wf-3-activity-with-an-interop-activity"></a>Условия использования действия WF 3 совместно с действием взаимодействия (Interop)  
  Для успешного выполнения действия WF 3 в действии <xref:System.Activities.Statements.Interop> необходимо соблюдение следующих условий:  
@@ -24,12 +24,12 @@ ms.locfileid: "33518415"
   
 -   Действие WF 3 должно иметь открытый конструктор по умолчанию.  
   
--   Из-за ограничений типов интерфейсов, поддерживаемых действием <xref:System.Activities.Statements.Interop>, <xref:System.Workflow.Activities.HandleExternalEventActivity> и <xref:System.Workflow.Activities.CallExternalMethodActivity> не могут использоваться непосредственно, но можно использовать производные действия, созданные с помощью инструмента Workflow Communication Activity (WCA.exe). В разделе [средства Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkId=178889) подробные сведения.  
+-   Из-за ограничений типов интерфейсов, поддерживаемых действием <xref:System.Activities.Statements.Interop>, <xref:System.Workflow.Activities.HandleExternalEventActivity> и <xref:System.Workflow.Activities.CallExternalMethodActivity> не могут использоваться непосредственно, но можно использовать производные действия, созданные с помощью инструмента Workflow Communication Activity (WCA.exe). См. в разделе [средства Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=178889) подробные сведения.  
   
 ## <a name="configuring-a-wf-3-activity-within-an-interop-activity"></a>Настройка действия WF 3 внутри действия взаимодействия  
  Для настройки, отправки и получения данных из действия WF 3 через границы взаимодействия свойства и метаданные действия WF 3 представляются действием <xref:System.Activities.Statements.Interop>. Свойства метаданных действия WF 3 (например, <xref:System.Workflow.ComponentModel.Activity.Name%2A>) предоставляются посредством коллекции <xref:System.Activities.Statements.Interop.ActivityMetaProperties%2A>. Это коллекция пар имя-значение, используемых для определения значений для свойств метаданных действия WF 3. Свойство метаданных - это свойство, поддерживаемое свойством зависимости, для которого установлен флаг <xref:System.Workflow.ComponentModel.DependencyPropertyOptions.Metadata>.  
   
- Свойства действия WF 3 предоставляются посредством коллекции <xref:System.Activities.Statements.Interop.ActivityProperties%2A>. Это набор пар имя-значение, где каждое значение - это объект <xref:System.Activities.Argument>, используемый для определения аргументов для свойств действия WF 3. Поскольку направление свойства действия WF 3 не может быть выведено, каждое свойство отображается как <xref:System.Activities.InArgument> / <xref:System.Activities.OutArgument> пары. В зависимости от способа использования свойства действием может потребоваться предоставить запись <xref:System.Activities.InArgument>, запись <xref:System.Activities.OutArgument> или обе эти записи. Ожидаемое имя записи <xref:System.Activities.InArgument> в коллекции - это имя свойства, определенное в действии WF 3. Ожидаемое имя <xref:System.Activities.OutArgument> записи в коллекции представляет собой объединение имени свойства и строки «Out».  
+ Свойства действия WF 3 предоставляются посредством коллекции <xref:System.Activities.Statements.Interop.ActivityProperties%2A>. Это набор пар имя-значение, где каждое значение - это объект <xref:System.Activities.Argument>, используемый для определения аргументов для свойств действия WF 3. Поскольку направление свойства действия WF 3 не могут быть получены, каждое свойство отображается как <xref:System.Activities.InArgument> / <xref:System.Activities.OutArgument> пары. В зависимости от способа использования свойства действием может потребоваться предоставить запись <xref:System.Activities.InArgument>, запись <xref:System.Activities.OutArgument> или обе эти записи. Ожидаемое имя записи <xref:System.Activities.InArgument> в коллекции - это имя свойства, определенное в действии WF 3. Ожидаемое имя <xref:System.Activities.OutArgument> записи в коллекции представляет собой объединение имени свойства и строку «Out».  
   
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>Ограничения использования действия WF 3 в действии взаимодействия  
  Действия WF 3, предоставленные системой, могут быть непосредственно обернуты в оболочку действия <xref:System.Activities.Statements.Interop>. Для некоторых действий WF 3, например для <xref:System.Workflow.Activities.DelayActivity>, это вызвано тем, что существует аналогичное действие WF 4.5. Для других это вызвано тем, что функциональные возможности действия не поддерживаются. Многие действия WF 3, предоставляемые системой, могут быть использованы в рабочих процессах, обернутых в оболочку действия <xref:System.Activities.Statements.Interop>, со следующими ограничениями:  

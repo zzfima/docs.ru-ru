@@ -2,12 +2,12 @@
 title: Операции массового копирования в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: 87373f55181742a243c60bc4b471334535d88ff7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16709d1bdc03c767d1e3aed808de220bf91e76ee
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360430"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43455670"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>Операции массового копирования в SQL Server
 Microsoft SQL Server включает популярную программу командной строки **bcp** обеспечивающую быстрое массовое копирование больших файлов в таблицы или представления в базах данных SQL Server. Класс <xref:System.Data.SqlClient.SqlBulkCopy> позволяет разрабатывать решения на управляемом коде, обеспечивающие аналогичную функциональность. Существуют другие способы загрузки данных в таблицу SQL Server (например, инструкция INSERT), но класс <xref:System.Data.SqlClient.SqlBulkCopy> существенно превосходит их по производительности.  
@@ -23,7 +23,7 @@ Microsoft SQL Server включает популярную программу к
 -   Операцию массового копирования внутри транзакции.  
   
 > [!NOTE]
->  При использовании .NET Framework версии 1.1 или более ранней версии (который не поддерживает <xref:System.Data.SqlClient.SqlBulkCopy> класса), можно выполнить SQL Server Transact-SQL **BULK INSERT** инструкции с помощью <xref:System.Data.SqlClient.SqlCommand> объекта.  
+>  При использовании .NET Framework версии 1.1 или более ранней версии (который не поддерживает <xref:System.Data.SqlClient.SqlBulkCopy> класс), SQL Server Transact-SQL можно выполнить **BULK INSERT** инструкции, использующей <xref:System.Data.SqlClient.SqlCommand> объекта.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Установка примера массового копирования](../../../../../docs/framework/data/adonet/sql/bulk-copy-example-setup.md)  
@@ -40,4 +40,4 @@ Microsoft SQL Server включает популярную программу к
   
 ## <a name="see-also"></a>См. также  
  [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,11 +3,11 @@ title: Печать и отчеты (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 92997b65-0279-4889-8db7-32cb6708be9c
 ms.openlocfilehash: 926526a64cd0b70db4864329454fbc42f3e34b1e
-ms.sourcegitcommit: 875ecc3ab2437e299b1d50076bd9b878fa8c64de
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43239624"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43472063"
 ---
 # <a name="printing-and-reporting-visual-basic"></a>Печать и отчеты (Visual Basic)
 Visual Basic предоставляет ряд возможностей для печати и создания отчетов. В следующих разделах приводятся обзоры и ссылки на документацию, относящуюся к печати и создания отчетов.  

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 368401d91aa2a83110631d583660d6ccebf8d4fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 664eb62997123ea248b0b69700b86bf794646d4b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491511"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465866"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Практическое руководство. Получение сертификата (WCF)
-Использовать Windows Communication Foundation (WCF) все возможности, используют сертификаты X.509, сначала нужно получить сертификаты.  
+Windows Communication Foundation (WCF) использовать возможности, используют сертификаты X.509, сначала нужно получить сертификаты.  
   
 ### <a name="to-obtain-an-x509-certificate"></a>Получение сертификата X.509  
   
@@ -20,7 +20,7 @@ ms.locfileid: "33491511"
   
     -   Приобретите сертификат в центре сертификации, например VeriSign, Inc.  
   
-    -   Создайте собственную службу сертификатов и настройте ее так, чтобы центр сертификации подписывал сертификаты. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Windows 2000 Server, Windows 2000 Server Datacenter и Windows 2000 Datacenter Server включают службы сертификатов, поддерживающие инфраструктуру открытых ключей (PKI). В Windows Server 2008 с помощью [служб сертификатов Active Directory](http://go.microsoft.com/fwlink/?LinkID=153483) роли для управления центром сертификации.  
+    -   Создайте собственную службу сертификатов и настройте ее так, чтобы центр сертификации подписывал сертификаты. [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], Windows 2000 Server, Windows 2000 Server Datacenter и Windows 2000 Datacenter Server включают службы сертификатов, поддерживающие инфраструктуру открытых ключей (PKI). В Windows Server 2008, использовать [служб сертификатов Active Directory](https://go.microsoft.com/fwlink/?LinkID=153483) роли для управления центром сертификации.  
   
     -   Создайте собственную службу сертификатов и не настраивайте подпись сертификатов.  
   

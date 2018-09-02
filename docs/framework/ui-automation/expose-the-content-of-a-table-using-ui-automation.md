@@ -12,24 +12,24 @@ ms.assetid: ac3c5eaa-49c7-4653-b83e-532e2a2604a2
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 874eada0714ed0f96248ebac8edb0efe205d9f21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8be813a16e1cdbf8367a358d91cf3b958ac36398
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407187"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43466329"
 ---
 # <a name="expose-the-content-of-a-table-using-ui-automation"></a>Представление содержимого таблицы с помощью автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе показано, как [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] может использоваться для представления содержимого и внутренних свойств каждой ячейки табличного элемента управления.  
   
 ## <a name="example"></a>Пример  
- В следующем примере кода показано, как получить <xref:System.Windows.Automation.AutomationElement> , представляющий содержимое ячейки таблицы; также извлекаются свойства ячейки, например индексы строки и столбца, диапазоны строк и столбцов и строк и столбцов сведения заголовка. В этом примере используется обработчик событий изменения фокуса для имитации прохождения с помощью клавиатуры табличного элемента управления, реализующий [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Сведения для каждого элемента таблицы предоставляются на событие изменения фокуса.  
+ В следующем примере кода демонстрируется получение <xref:System.Windows.Automation.AutomationElement> , представляющий содержимое ячейки таблицы; также получаются свойства ячеек, например индексы строки и столбца, диапазонов строк и столбцов и строк и столбцов данных в заголовке. В этом примере используется обработчик событий изменения фокуса для имитации прохождения клавиатуры табличного элемента управления, реализующий [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Сведения для каждого элемента таблицы предоставляются на событие изменения фокуса.  
   
 > [!NOTE]
->  Поскольку глобальные рабочего стола события изменения фокуса, события изменения фокуса вне таблицы должны быть отфильтрованы. В разделе [реализации](http://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9) для связанной реализации.  
+>  Так как изменения фокуса глобальные события рабочего стола, события изменения фокуса вне таблицы должны быть отфильтрованы. См. в разделе [реализации](https://msdn.microsoft.com/library/4a91c0af-6bb5-4d38-a743-cf136f268fc9) для соответствующей реализации.  
   
  [!code-csharp[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIATableItemPattern_snip/CSharp/UIATableItemPattern_snippets.cs#starttarget)]
  [!code-vb[UIATableItemPattern_snip#StartTarget](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIATableItemPattern_snip/VisualBasic/UIATableItemPattern_snippets.vb#starttarget)]  
