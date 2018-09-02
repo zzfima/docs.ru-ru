@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 8f2d962f40f2b56b1d1dda68129f477e4277ae1d
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: c2948cf76f7763eae51689973346965bc6c720a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728356"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404220"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Синхронные и асинхронные операции
 В этом разделе описывается реализация и вызов асинхронных операций службы.  
@@ -73,7 +73,7 @@ public class SampleService:ISampleService
 }  
 ```  
   
- Операция SampleMethodTaskAsync возвращает значение типа Task\<string>, так как логическая операция возвращает строковое значение. Дополнительные сведения об асинхронной модели на основе задач см. в [этой статье](http://go.microsoft.com/fwlink/?LinkId=232504).  
+ Операция SampleMethodTaskAsync возвращает значение типа Task\<string>, так как логическая операция возвращает строковое значение. Дополнительные сведения об асинхронной модели на основе задач см. в [этой статье](https://go.microsoft.com/fwlink/?LinkId=232504).  
   
 > [!WARNING]
 >  При использовании асинхронной модели на основе задач может быть вызван объект T:System.AggregateException в случае возникновения исключения во время ожидания завершения операции. Это исключение может возникнуть на стороне клиента или службы  
@@ -107,7 +107,7 @@ public class AsyncExample
 }  
 ```  
   
- Дополнительные сведения об асинхронной модели на основе событий см. в [этой статье](http://go.microsoft.com/fwlink/?LinkId=232515).  
+ Дополнительные сведения об асинхронной модели на основе событий см. в [этой статье](https://go.microsoft.com/fwlink/?LinkId=232515).  
   
 #### <a name="iasyncresult-asynchronous-pattern"></a>Асинхронная модель IAsyncResult  
  Операцию службы можно реализовать в асинхронном виде, используя для этого асинхронную модель программирования [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] и отметив метод `<Begin>`, свойство <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> которого имеет значение `true`. В этом случае асинхронная операция доступна в метаданных так же, как и синхронная операция: она предоставляется в виде одной операции с сообщением запроса и согласованным с ним сообщением ответа. В этом случае имеется возможность выбора одной из двух моделей программирования клиента. Этот шаблон может быть представлен в них в виде синхронной или асинхронной операции, поскольку при вызове службы имеет место обмен сообщениями "запрос-ответ".  

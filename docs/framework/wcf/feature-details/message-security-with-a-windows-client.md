@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 185edce5bd8a4772545ec966a6b3f74b204aa2b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f6078baba86868fa03f37873731c39e73ac81f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494785"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401880"
 ---
 # <a name="message-security-with-a-windows-client"></a>Безопасность сообщений с клиентом Windows
-Этот сценарий показывает клиента Windows Communication Foundation (WCF) и сервер защищен режима безопасности сообщений. Клиент и служба проходят проверку подлинности с использованием учетных данных Windows.  
+Этот сценарий показывает, Windows Communication Foundation (WCF) клиентом и сервером, защищенных с помощью режима безопасности сообщений. Клиент и служба проходят проверку подлинности с использованием учетных данных Windows.  
   
  ![Безопасность с клиентом Windows сообщений](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
@@ -120,4 +120,4 @@ ms.locfileid: "33494785"
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

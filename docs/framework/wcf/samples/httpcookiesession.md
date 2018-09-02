@@ -2,15 +2,15 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 64a7cba7b1bbc55a4504e3af4784fcb2a84f0fa1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: fdde238d4a4fd9291c520d4ef13694c3648c8298
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807232"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402637"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
-В этом образце показано, как построить пользовательский канал протокола, который использует для управления сеансами протокол HTTP. Этот канал обеспечивает взаимодействие между службами Windows Communication Foundation (WCF) и клиентами ASMX или между WCF клиентами и службами ASMX.  
+В этом образце показано, как построить пользовательский канал протокола, который использует для управления сеансами протокол HTTP. Этот канал обеспечивает взаимодействие между службами Windows Communication Foundation (WCF) и клиентами ASMX или между клиентами и службами ASMX WCF.  
   
  Когда клиент вызывает веб-метод в основанной на сеансах веб-службе ASMX, система [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] выполняет следующие операции:  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33807232"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\HttpCookieSession`  
   
@@ -75,7 +75,7 @@ ms.locfileid: "33807232"
 InputQueue<RequestContext> requestQueue;  
 ```  
   
- Если происходит вызов метода <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>, а в очереди сообщений нет сообщений, то канал ждет в течение заданного времени, а затем отключается. Это приведет к очистке каналов сеансов, созданных для клиентом WCF.  
+ Если происходит вызов метода <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A>, а в очереди сообщений нет сообщений, то канал ждет в течение заданного времени, а затем отключается. Это позволяет избавиться от каналов сеансов, созданных для клиентов WCF.  
   
  Мы используем `channelMapping` для отслеживания `ReplySessionChannels` и не закрываем соответствующий канал `innerChannel`, пока не будут закрыты все принятые каналы. Таким образом, канал `HttpCookieReplySessionChannel` может существовать после истечения времени существования `HttpCookieReplySessionChannelListener`. Кроме того, нам не нужно беспокоиться о попадании прослушивателя под сборку мусора, поскольку принятые каналы сохраняют ссылку на свой прослушиватель с помощью обратного вызова `OnClosed`.  
   
@@ -83,7 +83,7 @@ InputQueue<RequestContext> requestQueue;
  Соответствующий клиентский канал создается в классе `HttpCookieSessionChannelFactory`. Во время создания канал фабрика каналов с помощью `HttpCookieRequestSessionChannel` создает оболочку для внутреннего канала запросов. Класс `HttpCookieRequestSessionChannel` перенаправляет вызовы в соответствующий канал запросов. Когда клиент закрывает прокси, `HttpCookieRequestSessionChannel` отправляет службе сообщение о том, что канал закрывается. Таким образом, стек каналов службы может безопасно закрыть используемый канал сеанса.  
   
 ## <a name="binding-and-binding-element"></a>Привязка и элемент привязки  
- После создания каналов клиента и службы, следующим шагом является их интеграция в среду выполнения WCF. Каналы предоставляются через привязки и элементы привязки WCF. Привязка состоит из одного или нескольких элементов привязки. WCF предлагает несколько привязок, определенных системой; Например, BasicHttpBinding или WSHttpBinding. Класс `HttpCookieSessionBindingElement` содержит реализацию элемента привязки. Он переопределяет прослушиватель канала и методы создания фабрики канала для создания нужных экземпляров прослушивателя канала и фабрики каналов.  
+ После создания каналов служба и клиент, следующим шагом является их интеграция в среду выполнения WCF. Каналы предоставляются через привязки и элементы привязки WCF. Привязка состоит из одного или нескольких элементов привязки. WCF предлагает несколько привязок, определенных системой; Например, BasicHttpBinding или WSHttpBinding. Класс `HttpCookieSessionBindingElement` содержит реализацию элемента привязки. Он переопределяет прослушиватель канала и методы создания фабрики канала для создания нужных экземпляров прослушивателя канала и фабрики каналов.  
   
  В этом образце для описания службы используются утверждения политики. Это позволяет образцу публиковать свои требования к каналам для других клиентов, которые могут пользоваться службой. Например, этот элемент привязки публикует утверждения политики, позволяющие потенциальным клиентам узнать, служба поддерживает сеансы. Поскольку в конфигурации элемента привязки этого образца включено свойство `ExchangeTerminateMessage`, оно добавляет необходимые утверждения, чтобы показать, что служба поддерживает дополнительные действия обмена сообщениями для завершения сеанса. Клиенты могут использовать это действие. В следующем коде WSDL показаны утверждения политики, созданные на базе элемента `HttpCookieSessionBindingElement`.  
   
@@ -104,7 +104,7 @@ InputQueue<RequestContext> requestQueue;
  В этом образце имеется два канала, делающие канал доступным через конфигурацию. Первый - элемент <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> для `HttpCookieSessionBindingElement`. Основная часть реализации делегируется классу `HttpCookieSessionBindingConfigurationElement`, наследуемому от класса <xref:System.ServiceModel.Configuration.StandardBindingElement>. Элемент `HttpCookieSessionBindingConfigurationElement` имеет свойства, которые соответствуют свойствам элемента `HttpCookieSessionBindingElement`.  
   
 ### <a name="binding-element-extension-section"></a>Раздел расширения элемента привязки  
- Раздел `HttpCookieSessionBindingElementSection` — <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> , предоставляющий `HttpCookieSessionBindingElement` системе конфигурации. С помощью нескольких простых переопределений определяется имя раздела конфигурации, тип элемента привязки и способ создания элемента привязки. Мы можем затем зарегистрировать раздел расширения в файле конфигурации следующим образом.  
+ Разделе `HttpCookieSessionBindingElementSection` — <xref:System.ServiceModel.Configuration.BindingElementExtensionElement> , предоставляющий `HttpCookieSessionBindingElement` системе конфигурации. С помощью нескольких простых переопределений определяется имя раздела конфигурации, тип элемента привязки и способ создания элемента привязки. Мы можем затем зарегистрировать раздел расширения в файле конфигурации следующим образом.  
   
 ```xml  
 <configuration>        
@@ -133,7 +133,7 @@ InputQueue<RequestContext> requestQueue;
 ```  
   
 ## <a name="test-code"></a>Тестовый код  
- Тестовый код для использования этого примера транспорта находится в каталогах Client и Service. Он состоит из двух тестов-один тест использует привязку с `allowCookies` значение `true` на стороне клиента. Второй тест включает на привязке явное отключение (с помощью обмена сообщениями завершения).  
+ Тестовый код для использования этого примера транспорта находится в каталогах Client и Service. Он состоит из двух тестов-один тест использует привязку с `allowCookies` присвоено `true` на стороне клиента. Второй тест включает на привязке явное отключение (с помощью обмена сообщениями завершения).  
   
  При запуске примера результат должен выглядеть следующим образом:  
   
@@ -168,6 +168,6 @@ Press <ENTER> to terminate client.
   
 3.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>См. также

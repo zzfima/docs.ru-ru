@@ -2,12 +2,12 @@
 title: Последовательности Oracle
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
-ms.openlocfilehash: 9f89234168351191c63d81fd4f3b68b01bfac2da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c1829cc3f9506b0317e6638fd2760a91c7d19d6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358616"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403975"
 ---
 # <a name="oracle-sequences"></a>Последовательности Oracle
 Поставщик данных .NET Framework для Oracle поддерживает получение сформированных на сервере ключевых значений последовательности Oracle после выполнения вставок с помощью <xref:System.Data.OracleClient.OracleDataAdapter>.  
@@ -100,4 +100,4 @@ public void OracleSequence(String connectionString)
   
 ## <a name="see-also"></a>См. также  
  [Oracle и ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Open File dialog box
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-ms.openlocfilehash: ba04b904930f2393022ea4ca6276cef95e51d833
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 108411269067dc4b19b585b991dffbd78f2bb23f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539956"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405103"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>Компонент OpenFileDialog (Windows Forms)
-Компонент Windows Forms <xref:System.Windows.Forms.OpenFileDialog> является стандартным диалоговым окном. Он аналогичен **открыть файл** диалоговому операционной системы Windows. Он наследуется от класса <xref:System.Windows.Forms.CommonDialog>.  
+Компонент Windows Forms <xref:System.Windows.Forms.OpenFileDialog> является стандартным диалоговым окном. Он аналогичен **открыть файл** диалоговое окно, предоставляемые операционной системой Windows. Он наследуется от класса <xref:System.Windows.Forms.CommonDialog>.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о компоненте OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
@@ -33,5 +33,5 @@ ms.locfileid: "33539956"
  [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
- [Основной код для диалоговых окон Windows Forms](http://go.microsoft.com/fwlink/?LinkID=102575)  
+ [Основной код для диалоговых окон Windows Forms](https://go.microsoft.com/fwlink/?LinkID=102575)  
  Описываются элементы управления и компоненты диалоговых окон Windows Forms, а также код, необходимый для выполнения их основных функций (техническая статья в библиотеке MSDN в Интернете).

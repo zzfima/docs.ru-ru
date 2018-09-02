@@ -2,12 +2,12 @@
 title: Поставщик членства и ролей
 ms.date: 03/30/2017
 ms.assetid: 0d11a31c-e75f-4fcf-9cf4-b7f26e056bcd
-ms.openlocfilehash: 94808fbb3fae1714f63a4682dfe1096ca314985c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bff100189c904706f3c7c886945383252ce7bfcb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33506700"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405777"
 ---
 # <a name="membership-and-role-provider"></a>Поставщик членства и ролей
 В образце поставщиков членства и ролей показано, как создать службу, которая может с помощью поставщиков членства и ролей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] выполнять проверку подлинности и авторизацию клиентов.  
@@ -69,7 +69,7 @@ ms.locfileid: "33506700"
 </system.web>  
 ```  
   
- Служба предоставляет одну конечную точку для взаимодействия с ней. Эта точка задается в файле конфигурации Web.config. Конечная точка состоит из адреса, привязки и контракта. Привязка настраивается с помощью стандартного элемента `wsHttpBinding`, который по умолчанию использует проверку подлинности Windows. В этом образце стандартная привязка `wsHttpBinding` использует проверку подлинности имени пользователя. Поведение определяет, что для проверки подлинности службы должен использоваться сертификат сервера. Сертификат сервера должен содержать то же значение для `SubjectName` как `findValue` атрибута в [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) элемента конфигурации. Кроме того, поведение определяет, что проверка подлинности пар "имя пользователя-пароль" выполняется поставщиком членства [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], а сопоставление ролей выполняется поставщиком ролей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], для чего в поведении заданы имена двух поставщиков.  
+ Служба предоставляет одну конечную точку для взаимодействия с ней. Эта точка задается в файле конфигурации Web.config. Конечная точка состоит из адреса, привязки и контракта. Привязка настраивается с помощью стандартного элемента `wsHttpBinding`, который по умолчанию использует проверку подлинности Windows. В этом образце стандартная привязка `wsHttpBinding` использует проверку подлинности имени пользователя. Поведение определяет, что для проверки подлинности службы должен использоваться сертификат сервера. Сертификат сервера должен содержать то же значение для `SubjectName` как `findValue` атрибут в [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) элемента конфигурации. Кроме того, поведение определяет, что проверка подлинности пар "имя пользователя-пароль" выполняется поставщиком членства [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], а сопоставление ролей выполняется поставщиком ролей [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], для чего в поведении заданы имена двух поставщиков.  
   
 ```xml  
 <system.serviceModel>  
@@ -118,9 +118,9 @@ ms.locfileid: "33506700"
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Для сборки выпуска C# .NET или Visual Basic этого решения, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+1.  Чтобы создать выпуск решения на C# или Visual Basic .NET, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
-2.  Убедитесь, что вы настроили [базы данных служб приложения ASP.NET](http://go.microsoft.com/fwlink/?LinkId=94997).  
+2.  Убедитесь, что вы настроили [базы данных служб приложения ASP.NET](https://go.microsoft.com/fwlink/?LinkId=94997).  
   
     > [!NOTE]
     >  Если используется выпуск SQL Server Express Edition, то сервер имеет имя .\SQLEXPRESS. Это имя сервера следует использовать при настройке базы данных служб приложения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], а также в строке подключения в файле Web.config.  
@@ -138,7 +138,7 @@ ms.locfileid: "33506700"
   
 3.  Запустите программу Client.exe из каталога \client\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-4.  Если клиенту и службе не удается взаимодействовать, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах  
   
@@ -152,7 +152,7 @@ ms.locfileid: "33506700"
   
 5.  Откройте на сервере командную строку Visual Studio с правами администратора и запустите `setup.bat service`. Под управлением `setup.bat` с `service` аргумент создается сертификат службы с полным доменным именем компьютера и экспортируется в файл с именем Service.cer.  
   
-6.  Изменить файл Web.config, чтобы отразить новое имя сертификата (в `findValue` атрибута в [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), который одинаков как полное доменное имя компьютера.  
+6.  Изменение файла Web.config в соответствии с новым именем сертификата (в `findValue` атрибут в [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)), который совпадает со значением полное доменное имя компьютера.  
   
 7.  Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.  
   
@@ -160,14 +160,14 @@ ms.locfileid: "33506700"
   
 9. На клиентском компьютере откройте командную строку Visual Studio с правами администратора и запустите файл ImportServiceCert.bat. Он импортирует сертификат службы из файла Service.cer в хранилище CurrentUser - TrustedPeople.  
   
-10. На клиентском компьютере из командной строки запустите программу Client.exe. Если клиенту и службе не удается взаимодействовать, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. На клиентском компьютере из командной строки запустите программу Client.exe. Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   
 -   После завершения работы образца запустите в папке образцов файл Cleanup.bat.  
   
 > [!NOTE]
->  Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. При запуске примеров Windows Communication Foundation (WCF), используйте сертификаты на компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище CurrentUser - trustedpeople. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
+>  Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. При запуске примеров Windows Communication Foundation (WCF), которые используют сертификаты на компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище CurrentUser - trustedpeople. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="the-setup-batch-file"></a>Файл Setup.bat  
  Входящий в состав образца файл Setup.bat позволяет настроить для сервера соответствующие сертификаты, необходимые для выполнения резидентного приложения, которое требует обеспечения безопасности на основе сертификата сервера. Этот пакетный файл необходимо изменить, чтобы его можно было использовать на нескольких компьютерах или без размещения приложения.  

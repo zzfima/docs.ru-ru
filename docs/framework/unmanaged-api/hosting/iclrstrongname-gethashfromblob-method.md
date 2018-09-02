@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a489e05435ce160c65e936f448688d69b3a965f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ca958f8472d7f7e1a44ad4ab237f582f92713c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435265"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402742"
 ---
 # <a name="iclrstrongnamegethashfromblob-method"></a>Метод ICLRStrongName::GetHashFromBlob
-Возвращает хэш сборки по указанному адресу памяти, с помощью указанного хэш-алгоритма.  
+Получает хэш сборки по адресу указанной области памяти, с помощью указанного алгоритма хэширования.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,16 +42,16 @@ HRESULT GetHashFromBlob (
   
 #### <a name="parameters"></a>Параметры  
  `pbBlob`  
- [in] Указатель на адрес блока памяти, предназначенные для хэширования.  
+ [in] Указатель на адрес блока памяти, хэширование которого требуется выполнить.  
   
  `cchBlob`  
- [in] Длина блока памяти в байтах.  
+ [in] Длина в байтах блока памяти.  
   
  `piHashAlg`  
  [in, out] Константа, указывающая хэш-алгоритм. Использовать нуль для алгоритма по умолчанию.  
   
  `pbHash`  
- [out] Буфер, возвращенный хэш.  
+ [out] Буфер, возвращенный хэша.  
   
  `cchHash`  
  [in] Запрошенный максимальный размер `pbHash`.  
@@ -60,16 +60,16 @@ HRESULT GetHashFromBlob (
  [out] Размер в байтах, возвращаемого `pbHash`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (в разделе [часто встречающихся значений HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** MetaHost.h  
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

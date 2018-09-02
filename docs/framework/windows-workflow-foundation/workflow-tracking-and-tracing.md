@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: b9c1f300bcf765cf4f74ac8a8fcf4ce34c5bd967
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8490299e995a469860f660a50a69915d5ddc4940
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520020"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403751"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Отслеживание и трассировка рабочих процессов
 Отслеживание рабочих процессов Windows является функцией [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)], разработанной для обеспечения возможности отслеживания выполнения рабочих процессов. Она обеспечивает инфраструктуру отслеживания выполнения экземпляра рабочего процесса. Инфраструктура отслеживания WF прозрачно инструментирует рабочий процесс таким образом, что выдаются записи, отражающие ключевые события выполнения. Эта функция доступна по умолчанию для всех рабочих процессов [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Для выполнения отслеживания в рабочий процесс [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] не нужно вносить изменения. Необходимо лишь определить объем данных отслеживания, которые требуется получать. При запуске или завершении экземпляра рабочего процесса создаются записи отслеживания, которые затем обрабатываются. Отслеживание также позволяет извлекать важные для бизнеса данные, связанные с переменными рабочего процесса. Например, если рабочий процесс представляет собой систему обработки заказов, вместе с объектом <xref:System.Activities.Tracking.TrackingRecord> можно извлечь идентификатор заказа. Как правило, функции отслеживания WF позволяют упростить диагностику и доступ к данным бизнес-аналитики из выполняемого рабочего процесса.  
   
  Эти компоненты отслеживания эквивалентны службе отслеживания в [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]. [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] отличается более высоким уровнем производительности, а модель программирования для функции отслеживания WF - более простая. Среды выполнения отслеживания инструментирует экземпляр рабочего процесса для создания событий, связанных с жизненным циклом рабочего процесса, действиями рабочего процесса и настраиваемыми событиями.  
   
- Windows Server App Fabric также дает возможность наблюдать за выполнением WCF и службы Workflow Service. Дополнительные сведения см. в разделе [наблюдения за Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273) и [мониторинг приложений с Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=201287)  
+ Windows Server App Fabric также дает возможность наблюдать за выполнением WCF и службы Workflow Service. Дополнительные сведения см. в разделе [наблюдения за Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273) и [отслеживание приложений с помощью Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=201287)  
   
  Чтобы провести диагностику среды выполнения рабочего процесса, можно включить трассировку рабочего процесса диагностики. Дополнительные сведения см. в разделе [трассировки рабочего процесса](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md).  
   

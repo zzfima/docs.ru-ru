@@ -1,15 +1,15 @@
 ---
-title: Общие сведения о классе XAttribute (Visual Basic)
+title: Сведения о классе XAttribute (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
 ms.openlocfilehash: 08b8ebf31a39325c98023d4bb333f8e06bbdeb3f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646969"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406432"
 ---
-# <a name="xattribute-class-overview-visual-basic"></a>Общие сведения о классе XAttribute (Visual Basic)
+# <a name="xattribute-class-overview-visual-basic"></a>Сведения о классе XAttribute (Visual Basic)
 Атрибуты - это пары «имя-значение», ассоциированные с элементом. Класс <xref:System.Xml.Linq.XAttribute> представляет XML-атрибуты.  
   
 ## <a name="overview"></a>Обзор  
@@ -25,7 +25,7 @@ ms.locfileid: "33646969"
 |`XAttribute(XName name, object content)`|Создает объект <xref:System.Xml.Linq.XAttribute>. Аргумент `name` указывает имя атрибута; `content` указывает содержимое атрибута.|  
   
 ### <a name="creating-an-element-with-an-attribute"></a>Создание элемента с атрибутом  
- В следующем коде показано элемента, содержащего атрибут с помощью XML-литералов в Visual Basic:  
+ В следующем коде показано элемента, который содержит атрибут с помощью XML-литералов в Visual Basic:  
   
 ```vb  
 Dim phone As XElement = <Phone Type="Home">555-555-5555</Phone>  
@@ -75,4 +75,4 @@ Console.WriteLine(c)
  Это различие имеет первостепенную важность только для разработчиков, создающих коды, которые взаимодействуют с XML-деревьями на уровне узлов. Для многих разработчиков это различие не имеет значения.  
   
 ## <a name="see-also"></a>См. также  
- [LINQ to Общие сведения о программировании XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+ [Обзор LINQ to XML программирования (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

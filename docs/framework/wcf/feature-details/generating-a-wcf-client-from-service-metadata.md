@@ -2,12 +2,12 @@
 title: Создание клиента WCF из метаданных службы
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
-ms.openlocfilehash: 55034868b465b63dca3ca28238d81b348d9d6893
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 78804eb7f4139280e7d72c5a45aa0ae4cc3c2d77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027932"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403696"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>Создание клиента WCF из метаданных службы
 В этом разделе рассматривается использование различных ключей в Svcutil.exe для формирования клиентов из документов метаданных.  
@@ -18,9 +18,9 @@ ms.locfileid: "37027932"
   
 -   запрос MEX с присоединенным ключом `/mex` по указанному адресу;  
   
--   Запрос DISCO (с помощью [DiscoveryClientProtocol](http://go.microsoft.com/fwlink/?LinkId=94777) из веб-службы ASP.NET) по указанному адресу.  
+-   Запрос DISCO (с помощью [DiscoveryClientProtocol](https://go.microsoft.com/fwlink/?LinkId=94777) из веб-служб ASP.NET) по указанному адресу.  
   
- Программа Svcutil.exe формирует клиент на основании файла WSDL или файла политики, полученного от службы. Имя участника-пользователя (UPN) создается добавлением к имени пользователя «\@», а затем добавив полное доменное имя (FQDN). Однако для пользователей, зарегистрированных в Active Directory, этот формат не является допустимым, и имя участника-пользователя, создаваемый программой вызывает сбой проверки подлинности Kerberos со следующим сообщением: **Неудачная попытка входа.** Чтобы устранить эту проблему, необходимо вручную откорректировать файл клиента, сформированный Svcutil.exe.  
+ Программа Svcutil.exe формирует клиент на основании файла WSDL или файла политики, полученного от службы. Имя участника-пользователя (UPN) формируется путем сцепления имя пользователя с "\@", а затем добавив полное доменное имя (FQDN). Тем не менее, для пользователей, зарегистрированных в Active Directory, этот формат не является допустимым, и имя участника-пользователя, создаваемый программой приведет к сбою проверки подлинности Kerberos с следующее сообщение об ошибке: **Неудачная попытка входа.** Чтобы устранить эту проблему, необходимо вручную откорректировать файл клиента, сформированный Svcutil.exe.  
   
 ```  
 svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>  
@@ -47,7 +47,7 @@ svcutil.exe [/t:code]  <metadataDocumentPath>* | <url>* | <epr>
   
 |Параметр|Описание:|  
 |------------|-----------------|  
-|**/ Language:\<язык >**|Задает язык программирования, используемый для создания кода. Необходимо задать либо имя языка, зарегистрированное в файле Machine.config, либо полное имя класса, наследуемого от <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Значения: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> По умолчанию: csharp<br /><br /> Краткая форма: `/l`<br /><br /> Дополнительные сведения см. в разделе [класс CodeDomProvider](http://go.microsoft.com/fwlink/?LinkId=94778).|  
+|**/ Language:\<языка >**|Задает язык программирования, используемый для создания кода. Необходимо задать либо имя языка, зарегистрированное в файле Machine.config, либо полное имя класса, наследуемого от <xref:System.CodeDom.Compiler.CodeDomProvider>.<br /><br /> Значения: c#, cs, csharp, vb, vbs, visualbasic, vbscript, javascript, c++, mc, cpp<br /><br /> По умолчанию: csharp<br /><br /> Краткая форма: `/l`<br /><br /> Дополнительные сведения см. в разделе [класс CodeDomProvider](https://go.microsoft.com/fwlink/?LinkId=94778).|  
   
 ## <a name="choosing-a-namespace-for-the-client"></a>Выбор пространства имен для клиента  
   

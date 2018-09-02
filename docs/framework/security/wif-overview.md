@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: e5d668ff2b6c79105ddb4ec3672144a188e0b78c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6cfe09e7df28d6f36f6e606802597449dab38212
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400072"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399988"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Обзор Windows Identity Foundation 4.5
-Windows Identity Foundation 4.5 — это набор классов .NET Framework для реализации в приложениях удостоверений на основе утверждений. С его помощью вам будет гораздо проще воспользоваться преимуществами приложений и служб, поддерживающих утверждения. WIF 4.5 можно использовать в любом веб-приложении или в любой веб-службе, использующей NET Framework 4.5 или более поздней версии. WIF — один из компонентов семейства ПО Microsoft Federated Identity, реализующего общую отраслевую концепцию на основе открытых стандартов. Семейство Federated Identity состоит из трех компонентов: [служб федерации Active Directory®](http://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0, [службы контроля доступа (ACS) Microsoft Azure](http://go.microsoft.com/fwlink/?LinkID=247517) и WIF. В совокупности эти 3 компонента формируют основу новой облачной платформы удостоверений и доступа на основе утверждений.  
+Windows Identity Foundation 4.5 — это набор классов .NET Framework для реализации в приложениях удостоверений на основе утверждений. С его помощью вам будет гораздо проще воспользоваться преимуществами приложений и служб, поддерживающих утверждения. WIF 4.5 можно использовать в любом веб-приложении или в любой веб-службе, использующей NET Framework 4.5 или более поздней версии. WIF — один из компонентов семейства ПО Microsoft Federated Identity, реализующего общую отраслевую концепцию на основе открытых стандартов. Семейство Federated Identity состоит из трех компонентов: [служб федерации Active Directory®](https://go.microsoft.com/fwlink/?LinkID=247516) (AD FS) 2.0, [службы контроля доступа (ACS) Microsoft Azure](https://go.microsoft.com/fwlink/?LinkID=247517) и WIF. В совокупности эти 3 компонента формируют основу новой облачной платформы удостоверений и доступа на основе утверждений.  
   
- Дополнительные сведения о WIF см. в разделе [Windows Identity Foundation, веб-сайт](http://go.microsoft.com/fwlink/?LinkId=149009) (http://go.microsoft.com/fwlink/?LinkId=149009) в центре разработчиков безопасности в библиотеке MSDN. Основные сведения о создании приложений, использующих WIF, в разделе [программирования Windows Identity Foundation](http://go.microsoft.com/fwlink/?LinkId=210158) (http://go.microsoft.com/fwlink/?LinkId=210158) , Vittorio Bertocci (издательством Microsoft Press).  
+ Дополнительные сведения о WIF см. в разделе [Windows Identity Foundation, веб-сайт](https://go.microsoft.com/fwlink/?LinkId=149009) в центре разработчиков безопасности на сайте MSDN. Введение в создание приложений с помощью WIF, см. в разделе [Programming Windows Identity Foundation](https://go.microsoft.com/fwlink/?LinkId=210158) , Витторио Берточчи (опубликованных издательством Microsoft Press).  
   
 ## <a name="wif-45-features"></a>Возможности WIF 4.5  
  WIF 4.5 — это платформа для создания приложений, поддерживающих удостоверения. Данная платформа абстрагирует протоколы WS-Trust и WS-Federation и предоставляет разработчикам API-интерфейсы для создания приложений, поддерживающих утверждения, а также, при необходимости, служб токенов безопасности (STS). Приложения могут использовать WIF для обработки токенов, выданных службой STS (например, AD FS 2.0 или ACS), и принимать решения на основе удостоверения на уровне веб-приложения или веб-службы.  
@@ -29,7 +29,7 @@ Windows Identity Foundation 4.5 — это набор классов .NET Frame
   
      Кроме того, данная платформа также обеспечивает возможность создания службы STS с поддержкой WS-Federation для клиентов на основе веб-браузера. Такая служба STS также именуется "пассивной".  
   
--   Новое средство удостоверения и доступа для Visual Studio 11, предоставляющее возможность защитить приложение с помощью удостоверений на основе утверждений и принять пользователей от различных поставщиков удостоверений. Это средство WIF можно загрузить со следующего URL: [ http://go.microsoft.com/fwlink/?LinkID=245849 ](http://go.microsoft.com/fwlink/?LinkID=245849) или непосредственно из в Visual Studio 11, выполняя поиск «удостоверение» непосредственно в диспетчере расширений. Дополнительные сведения см. в разделе [Средство Identity and Access Tool для Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
+-   Новое средство удостоверения и доступа для Visual Studio 11, предоставляющее возможность защитить приложение с помощью удостоверений на основе утверждений и принять пользователей от различных поставщиков удостоверений. Это средство STS можно загрузить со следующего URL: [ https://go.microsoft.com/fwlink/?LinkID=245849 ](https://go.microsoft.com/fwlink/?LinkID=245849) или непосредственно из Visual Studio 11, выполнив поиск «identity» в диспетчере расширений. Дополнительные сведения см. в разделе [Средство Identity and Access Tool для Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md).  
   
  STS поддерживает следующие основные сценарии:  
   
@@ -39,4 +39,4 @@ Windows Identity Foundation 4.5 — это набор классов .NET Frame
   
 -   Расширенная аутентификация. Требования к аутентификации могут быть различными для разных ресурсов в пределах одного приложения. WIF предоставляет разработчикам возможность создания приложений, предъявляющих различные требования к аутентификации на разных этапах (например, первоначальный вход в систему будет выполняться с аутентификацией по имени пользователя или паролю, а затем будет применяться аутентификация по смарт-карте).  
   
- С помощью WIF вам будет гораздо проще реализовать преимущества модели удостоверений, основанных на утверждениях. Дополнительные сведения см. в [техническом документе по Windows Identity Foundation для разработчиков](http://download.microsoft.com/download/7/d/0/7d0b5166-6a8a-418a-addd-95ee9b046994/windowsidentityfoundationwhitepaperfordevelopers-rtw.pdf).
+ С помощью WIF вам будет гораздо проще реализовать преимущества модели удостоверений, основанных на утверждениях. Дополнительные сведения см. в [техническом документе по Windows Identity Foundation для разработчиков](https://download.microsoft.com/download/7/d/0/7d0b5166-6a8a-418a-addd-95ee9b046994/windowsidentityfoundationwhitepaperfordevelopers-rtw.pdf).

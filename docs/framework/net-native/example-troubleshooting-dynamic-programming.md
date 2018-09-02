@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5de4388f4d3c4117ed71abd9741d2616638038d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 21a373b946c3ce9f4606e870ae10e23a63398bc9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397511"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406373"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>Пример: Устранение неполадок динамического программирования
 > [!NOTE]
->  В этом разделе рассматривается предварительная версия программного обеспечения для разработчиков машинного кода .NET. Предварительную версию можно скачать на [веб-сайте Microsoft Connect](http://go.microsoft.com/fwlink/?LinkId=394611) (требуется регистрация).  
+>  В этом разделе рассматривается предварительная версия программного обеспечения для разработчиков машинного кода .NET. Предварительную версию можно скачать на [веб-сайте Microsoft Connect](https://go.microsoft.com/fwlink/?LinkId=394611) (требуется регистрация).  
   
  Не все метаданных поиска ошибок в приложениях, разработанных с использованием цепочки инструментов [!INCLUDE[net_native](../../../includes/net-native-md.md)], приводят к исключению.  Некоторые могут проявляться в непредсказуемом виде в приложении.  В следующем примере показано нарушение доступа, вызванное ссылкой на пустой объект:  
   

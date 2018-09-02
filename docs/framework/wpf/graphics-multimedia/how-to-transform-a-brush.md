@@ -9,40 +9,40 @@ helpviewer_keywords:
 - brushes [WPF], Transform property
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
-ms.openlocfilehash: 5caa00a378101ff4dff7745a18c3ec8905cc168b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebc8d4c6cb36d76b70691cce183f9e6070d19822
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561611"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399431"
 ---
 # <a name="how-to-transform-a-brush"></a>Практическое руководство. Преобразование кисти
-В этом примере показано, как преобразовывать <xref:System.Windows.Media.Brush> объектов с помощью двух свойств преобразования: <xref:System.Windows.Media.Brush.RelativeTransform%2A> и <xref:System.Windows.Media.Brush.Transform%2A>.  
+В этом примере показано, как преобразовать <xref:System.Windows.Media.Brush> объектов с помощью двух свойств преобразования: <xref:System.Windows.Media.Brush.RelativeTransform%2A> и <xref:System.Windows.Media.Brush.Transform%2A>.  
   
- В следующих примерах используется <xref:System.Windows.Media.RotateTransform> для поворота содержимого <xref:System.Windows.Media.ImageBrush> на 45 градусов.  
+ В следующих примерах используется <xref:System.Windows.Media.RotateTransform> для поворота содержимого объекта <xref:System.Windows.Media.ImageBrush> на 45 градусов.  
   
- На следующем рисунке показана <xref:System.Windows.Media.ImageBrush> без <xref:System.Windows.Media.RotateTransform>, с <xref:System.Windows.Media.RotateTransform> применены к <xref:System.Windows.Media.Brush.RelativeTransform%2A> свойство и с <xref:System.Windows.Media.RotateTransform> применены к <xref:System.Windows.Media.Brush.Transform%2A> свойство.  
+ На следующем рисунке показано <xref:System.Windows.Media.ImageBrush> без <xref:System.Windows.Media.RotateTransform>, с помощью <xref:System.Windows.Media.RotateTransform> применяется к <xref:System.Windows.Media.Brush.RelativeTransform%2A> свойство и с <xref:System.Windows.Media.RotateTransform> применяется к <xref:System.Windows.Media.Brush.Transform%2A> свойство.  
   
  ![Параметры RelativeTransform и Transform для кисти](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-transformandrelativetransform.png "wcpsdk_graphicsmm_transformandrelativetransform")  
   
 ## <a name="example"></a>Пример  
- В первом примере применяется <xref:System.Windows.Media.RotateTransform> для <xref:System.Windows.Media.Brush.RelativeTransform%2A> свойство <xref:System.Windows.Media.ImageBrush>. <xref:System.Windows.Media.RotateTransform.CenterX%2A> И <xref:System.Windows.Media.RotateTransform.CenterY%2A> свойства <xref:System.Windows.Media.RotateTransform> объекта задаются 0,5, что является относительная координата центральной точки этого содержимого. В результате <xref:System.Windows.Media.ImageBrush> поворачивает содержимое по центру.  
+ В первом примере применяется <xref:System.Windows.Media.RotateTransform> для <xref:System.Windows.Media.Brush.RelativeTransform%2A> свойство <xref:System.Windows.Media.ImageBrush>. <xref:System.Windows.Media.RotateTransform.CenterX%2A> И <xref:System.Windows.Media.RotateTransform.CenterY%2A> свойства <xref:System.Windows.Media.RotateTransform> объекта устанавливаются равными 0,5. это относительная координата центральной точки этого содержимого. В результате <xref:System.Windows.Media.ImageBrush> содержимое вращается вокруг своего центра.  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushrelativetransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushrelativetransformexample)]
  [!code-xaml[BrushesIntroduction_snip#ImageBrushRelativeTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushrelativetransformexample)]  
   
- Во втором примере также применяется <xref:System.Windows.Media.RotateTransform> для <xref:System.Windows.Media.ImageBrush>, однако в этом примере используется <xref:System.Windows.Media.Brush.Transform%2A> вместо <xref:System.Windows.Media.Brush.RelativeTransform%2A> свойство.  
+ Во втором примере также применяется <xref:System.Windows.Media.RotateTransform> для <xref:System.Windows.Media.ImageBrush>, однако в этом примере используется <xref:System.Windows.Media.Brush.Transform%2A> вместо свойства <xref:System.Windows.Media.Brush.RelativeTransform%2A> свойство.  
   
- Чтобы сменить кисть по центру, в этом примере <xref:System.Windows.Media.RotateTransform.CenterX%2A> и <xref:System.Windows.Media.RotateTransform.CenterY%2A> свойства <xref:System.Windows.Media.RotateTransform> абсолютные координаты. Так как эта кисть рисует прямоугольник размером 175 на 90 пикселей, центральная точка прямоугольника имеет координаты (87,5, 45).  
+ Чтобы повернуть кисть относительно ее центра, в этом примере <xref:System.Windows.Media.RotateTransform.CenterX%2A> и <xref:System.Windows.Media.RotateTransform.CenterY%2A> свойства <xref:System.Windows.Media.RotateTransform> абсолютные координаты. Так как эта кисть рисует прямоугольник размером 175 на 90 пикселей, центральная точка прямоугольника имеет координаты (87,5, 45).  
   
  [!code-csharp[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/BrushTransformExample.cs#imagebrushtransformexample)]
  [!code-vb[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtransformexample.vb#imagebrushtransformexample)]
  [!code-xaml[BrushesIntroduction_snip#ImageBrushTransformExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTransformExample.xaml#imagebrushtransformexample)]  
   
- Описание того, как <xref:System.Windows.Media.Brush.RelativeTransform%2A> и <xref:System.Windows.Media.Brush.Transform%2A> свойства работы см. в разделе [Обзор преобразования кисти](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md).  
+ Описание того, как <xref:System.Windows.Media.Brush.RelativeTransform%2A> и <xref:System.Windows.Media.Brush.Transform%2A> свойства работы, см. в разделе [Общие сведения о преобразованиях кистей](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md).  
   
- Полный пример см. в разделе [Примеры кистей](http://go.microsoft.com/fwlink/?LinkID=159973). Дополнительные сведения о кистях см. в разделе [Общие сведения о закраске сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
+ Полный пример см. в разделе [Примеры кистей](https://go.microsoft.com/fwlink/?LinkID=159973). Дополнительные сведения о кистях см. в разделе [Общие сведения о закраске сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md).  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о преобразованиях кистей](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  

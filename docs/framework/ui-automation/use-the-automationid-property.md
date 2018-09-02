@@ -12,16 +12,16 @@ ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: bd5985dd531b13ca91efd9c0aa7987ff6a57e56a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84aa8dd866d5870d8cd4e6c8c4951fa1e49a4052
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401044"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400270"
 ---
 # <a name="use-the-automationid-property"></a>Использование свойства AutomationID
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе содержатся сценарии и примеры кода, которые показывают, как и когда можно использовать <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> для поиска элемента в дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
@@ -48,7 +48,7 @@ ms.locfileid: "33401044"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Использование постоянного пути для возврата к ранее идентифицированному AutomationElement  
   
--   Клиентским приложениям, от простых тестовых скриптов до до надежных программ записи и воспроизведения, может потребоваться доступ к элементам, в текущий момент не реализованным, таким как диалоговое окно открытия файла или пункт меню, и поэтому не существующим в дереве модели автоматизации пользовательского интерфейса. Эти элементы могут быть созданы только воспроизведением определенной последовательности действий [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] с помощью свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , таких как AutomationID, шаблонов элементов управления и прослушивателей событий. В разделе [тестирования образец скрипта генератор](http://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) пример, использующий [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] создаются тестовые скрипты на основе взаимодействия пользователя с [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+-   Клиентским приложениям, от простых тестовых скриптов до до надежных программ записи и воспроизведения, может потребоваться доступ к элементам, в текущий момент не реализованным, таким как диалоговое окно открытия файла или пункт меню, и поэтому не существующим в дереве модели автоматизации пользовательского интерфейса. Эти элементы могут быть созданы только воспроизведением определенной последовательности действий [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] с помощью свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , таких как AutomationID, шаблонов элементов управления и прослушивателей событий. См. в разделе [TLA # Tla_uiautomation](https://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) пример, использующий [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] создаются тестовые скрипты на основе взаимодействия пользователя с [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

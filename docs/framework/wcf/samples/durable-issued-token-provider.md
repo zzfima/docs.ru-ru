@@ -2,18 +2,18 @@
 title: Пользовательский поставщик маркеров
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 145faaae709119708240863f85eb5352fb2c5a1b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7def23a00e42e134d8c0b9bd911710917681ad31
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807555"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404881"
 ---
 # <a name="durable-issued-token-provider"></a>Пользовательский поставщик маркеров
 Этот пример демонстрирует, как реализовать пользовательский поставщик маркеров, выдаваемых клиенту.  
   
 ## <a name="discussion"></a>Обсуждение  
- Поставщик маркеров в Windows Communication Foundation (WCF) используется для предоставления учетных данных в инфраструктуру безопасности. Поставщик токенов осуществляет общую проверку цели и выдает соответствующие учетные данные, чтобы инфраструктура безопасности смогла обеспечить защиту сообщения. WCF поставляется вместе с [!INCLUDE[infocard](../../../../includes/infocard-md.md)] поставщика маркеров. Пользовательские поставщики маркеров полезны в следующих случаях:  
+ Поставщик маркеров в Windows Communication Foundation (WCF) используется для предоставления учетных данных в инфраструктуру безопасности. Поставщик токенов осуществляет общую проверку цели и выдает соответствующие учетные данные, чтобы инфраструктура безопасности смогла обеспечить защиту сообщения. WCF поставляется с [!INCLUDE[infocard](../../../../includes/infocard-md.md)] поставщик маркеров. Пользовательские поставщики маркеров полезны в следующих случаях:  
   
 -   если используется хранилище учетных данных с которым не работает встроенный поставщик маркеров;  
   
@@ -27,7 +27,7 @@ ms.locfileid: "33807555"
   
 -   как настроить клиент с пользовательским поставщиком маркеров;  
   
--   Как можно кэшировать выданные маркеры и для клиента WCF.  
+-   Как можно кэшировать выданные маркеры и предоставлен клиенту WCF.  
   
 -   как сервер проходит проверку подлинности на клиенте с использованием сертификата X.509.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33807555"
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
- Этот образец предоставляет контракт ICalculator с помощью [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). В следующем коде показана конфигурация этой привязки на клиенте.  
+ Этот образец предоставляет контракт ICalculator, используя [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). В следующем коде показана конфигурация этой привязки на клиенте.  
   
 ```xml  
 <bindings>
@@ -250,7 +250,7 @@ ms.locfileid: "33807555"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  
   

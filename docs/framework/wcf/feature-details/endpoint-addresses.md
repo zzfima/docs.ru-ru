@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: a2815c7c63e9ba9615904028081956b138b1befa
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925482"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404571"
 ---
 # <a name="endpoint-addresses"></a>Адреса конечных точек
 С каждой конечной точкой связан адрес, который используется для поиска и идентификации этой конечной точки. Этот адрес в первую очередь включает универсальный код ресурса (URI), задающий расположение конечной точки. Адрес конечной точки представляется в модели программирования Windows Communication Foundation (WCF), <xref:System.ServiceModel.EndpointAddress> класс, который содержит необязательное <xref:System.ServiceModel.EndpointAddress.Identity%2A> свойство, которое позволяет выполнять проверку подлинности конечной точки другими конечными точками, обмена с ней сообщениями, а также набор необязательных <xref:System.ServiceModel.EndpointAddress.Headers%2A> свойства, определяющие другие заголовки SOAP, необходимые для доступа к службе. Необязательные заголовки содержат дополнительную и более подробную информацию для идентификации конечной точки службы и взаимодействия с ней. При передаче данных по каналам связи адрес конечной точки представляется ссылкой на конечную точку WS-Addressing.  
@@ -119,7 +119,7 @@ ms.locfileid: "42925482"
   
 -   в коде создайте пользовательские заголовки адреса с помощью класса <xref:System.ServiceModel.Channels.AddressHeader>, а затем используйте их в конструкторе класса <xref:System.ServiceModel.EndpointAddress>;  
   
--   В конфигурации пользовательские [ \<заголовки >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) указываются как дочерние элементы [ \<конечной точки >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент.  
+-   В конфигурации пользовательские [ \<заголовки >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) указываются как дочерние элементы [ \<конечной точки >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент.  
   
  Обычно рекомендуется использовать не код, а файл конфигурации, поскольку в этом случае заголовки можно будет менять после развертывания.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "42925482"
   
 -   для задания пользовательского адреса ожидания передачи данных в коде необходимо добавить класс <xref:System.ServiceModel.Description.ClientViaBehavior> в коллекцию расширений функциональности конечной точки;  
   
--   В конфигурации укажите пользовательский адрес ожидания передачи данных с помощью `ListenUri` атрибут службы [ \<конечной точки >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент.  
+-   В конфигурации укажите пользовательский адрес ожидания передачи данных с помощью `ListenUri` атрибут службы [ \<конечной точки >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент.  
   
 ### <a name="custom-soap-address-filter"></a>Пользовательский фильтр адресов SOAP  
  Свойство <xref:System.ServiceModel.EndpointAddress.Uri%2A> в сочетании со свойством <xref:System.ServiceModel.EndpointAddress.Headers%2A> позволяет определить фильтр адресов SOAP конечной точки (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). По умолчанию этот фильтр проверяет, что заголовок `To` входящего сообщения совпадает с универсальным кодом ресурса (URI) конечной точки и что в сообщении имеются все обязательные заголовки конечной точки.  

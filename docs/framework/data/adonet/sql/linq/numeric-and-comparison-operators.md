@@ -2,12 +2,12 @@
 title: Числовые операторы и операторы сравнения
 ms.date: 03/30/2017
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
-ms.openlocfilehash: a1ce13225d72b4286982434d52998a1913814abb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7a455730860e2b11a5ceff5a70934502b312e19
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352185"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401919"
 ---
 # <a name="numeric-and-comparison-operators"></a>Числовые операторы и операторы сравнения
 Арифметические операторы и операторы сравнения работают в среде (CLR) соответствующим образом, за исключением следующих моментов.  
@@ -59,5 +59,5 @@ ms.locfileid: "33352185"
   
 ## <a name="see-also"></a>См. также  
  [Типы данных и функции](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
- [Операторы в C#](http://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43)  
+ [Операторы в C#](https://msdn.microsoft.com/library/0301e31f-22ad-49af-ac3c-d5eae7f0ac43)  
  [Операторы](../../../../../visual-basic/language-reference/operators/index.md)

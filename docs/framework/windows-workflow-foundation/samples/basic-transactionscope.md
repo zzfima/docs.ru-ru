@@ -2,12 +2,12 @@
 title: Простой класс TransactionScope
 ms.date: 03/30/2017
 ms.assetid: 1e22b76a-76de-43b4-9be7-7a86ed3d5a44
-ms.openlocfilehash: fe6877c4b2d72dc3d571740395fd4dc92ca8e99c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3c673040d40ca91d8ab4a79e847d61e6f507ed1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516806"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415427"
 ---
 # <a name="basic-transactionscope"></a>Простой класс TransactionScope
 Этот образец состоит из четырех сценариев, выполнение которых демонстрирует вкладывание экземпляров <xref:System.Activities.Statements.TransactionScope>. В первом сценарии показана вложенность стороннего действия, о разработке которого автору ничего не известно. Второй и третий сценарии показывают, как соблюдаются времена ожиданий, а последний сценарий показывает настройку <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A>.  
@@ -29,13 +29,13 @@ ms.locfileid: "33516806"
   
 2.  Чтобы построить решение, нажмите клавиши CTRL + SHIFT + B или выберите **построить решение** из **построения** меню.  
   
-3.  После успешного построения нажмите клавишу F5 или выберите **начать отладку** из **отладки** меню. Также нажмите клавиши CTRL + F5 или выбрать команду **Запуск без отладки** из **отладки** меню для запуска без отладки.  
+3.  После успешного построения, нажмите клавишу F5 или выберите **начать отладку** из **Отладка** меню. Также можно нажать CTRL + F5 или выбрать команду **Запуск без отладки** из **Отладка** меню для запуска без отладки.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\BasicTransactionScope`

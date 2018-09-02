@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: cfdf6945be3f440013716694e633e7ca9c064729
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6708ad107a2ee5b4ba2896d811c103ed49b476b8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648672"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403832"
 ---
 # <a name="visual-basic-language-specification"></a>Спецификация языка Visual Basic
-Спецификация языка Visual Basic — Авторитетный источник для получения ответов на все вопросы о грамматике Visual Basic и синтаксисе. Она содержит подробные сведения о языке, включая многие моменты, которые не описаны в справочной документации по Visual Basic.  
+Спецификация языка Visual Basic — это полномочный источник ответы на все вопросы о Visual Basic грамматике и синтаксисе. Она содержит подробные сведения о языке, включая многие моменты, не охваченных в справочной документации Visual Basic.  
   
- Спецификация доступна в [Центре загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=188623).  
+ Спецификация доступна в [Центре загрузки Майкрософт](https://go.microsoft.com/fwlink/?LinkId=188623).  
   
 На этом сайте содержится [спецификация по VB 11](../../../../_vblang/spec/introduction.md). Она создана на основе файлов Markdown, содержащихся в [GitHub-репозитории dotnet/vblang](https://github.com/dotnet/vblang/blob/master/spec/README.md).
 

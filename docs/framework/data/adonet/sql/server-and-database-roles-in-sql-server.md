@@ -2,12 +2,12 @@
 title: Роли сервера и базы данных в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-ms.openlocfilehash: 196ca0791f42414b9da8dff32eb8285045fd7e63
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5fd706d886ea050eb578d5f889d55055665c3a44
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925469"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403148"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Роли сервера и базы данных в SQL Server
 Во всех версиях SQL Server используется безопасность на основе ролей, что позволяет назначать разрешения роли или группе пользователей, а не отдельным пользователям. Предопределенные роли сервера и предопределенные роли базы данных имеют предопределенный набор разрешений, назначенных для них.  
@@ -27,8 +27,8 @@ ms.locfileid: "42925469"
   
 |Ресурс|Описание:|  
 |--------------|-----------------|  
-|[Роли уровня сервера](/sql/relational-databases/security/authentication-access/server-level-roles) и [разрешения предопределенных ролей сервера](http://msdn.microsoft.com/library/ms175892.aspx) в электронной документации по SQL Server|Описывает предопределенные роли сервера и разрешения, связанные с ними в SQL Server.|  
-|[Роли уровня базы данных](/sql/relational-databases/security/authentication-access/database-level-roles) и [разрешения предопределенных ролей базы данных](http://msdn.microsoft.com/library/ms189612.aspx) в электронной документации по SQL Server|Описывает предопределенные роли базы данных и связанные с ними разрешения|  
+|[Роли уровня сервера](/sql/relational-databases/security/authentication-access/server-level-roles) и [разрешения предопределенных ролей сервера](https://msdn.microsoft.com/library/ms175892.aspx) в электронной документации по SQL Server|Описывает предопределенные роли сервера и разрешения, связанные с ними в SQL Server.|  
+|[Роли уровня базы данных](/sql/relational-databases/security/authentication-access/database-level-roles) и [разрешения предопределенных ролей базы данных](https://msdn.microsoft.com/library/ms189612.aspx) в электронной документации по SQL Server|Описывает предопределенные роли базы данных и связанные с ними разрешения|  
   
 ## <a name="database-roles-and-users"></a>Роли и пользователи базы данных  
  Чтобы можно было работать с объектами базы данных, имена входа должны быть сопоставлены с учетными записями пользователей базы данных. После этого пользователи базы данных могут быть добавлены к ролям базы данных, наследуя все наборы разрешений, связанные с этими ролями. Можно предоставить все разрешения.  
@@ -58,7 +58,7 @@ ms.locfileid: "42925469"
   
 |Ресурс|Описание:|  
 |--------------|-----------------|  
-|[Управление доступом и удостоверениями](http://msdn.microsoft.com/library/bb510418.aspx) в электронной документации по SQL Server|Содержит ссылки на разделы, описывающие участников, роли, учетные данные, защищаемые объекты и разрешения.|  
+|[Управление доступом и удостоверениями](https://msdn.microsoft.com/library/bb510418.aspx) в электронной документации по SQL Server|Содержит ссылки на разделы, описывающие участников, роли, учетные данные, защищаемые объекты и разрешения.|  
 |[Субъекты](/sql/relational-databases/security/authentication-access/principals-database-engine) в электронной документации по SQL Server|Описывает участников и содержит ссылки на разделы, описывающие роли сервера и базы данных.|  
   
 ## <a name="see-also"></a>См. также  
@@ -67,4 +67,4 @@ ms.locfileid: "42925469"
  [Проверка подлинности в SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [Владение и отделение пользователей от схем в SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  [Авторизация и разрешения в SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

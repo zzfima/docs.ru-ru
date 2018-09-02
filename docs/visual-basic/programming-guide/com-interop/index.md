@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: 08e7c488d6a546f3efd6098c38ca601b5f443a26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643588"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405954"
 ---
 # <a name="com-interop-visual-basic"></a>COM-взаимодействие (Visual Basic)
-Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. COM-объекты входят в состав большей части современного программного обеспечения. Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов. В этом разделе рассматриваются некоторые вопросы, связанные с созданием и использованием объектов COM с помощью Visual Basic.  
+Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. COM-объекты входят в состав большей части современного программного обеспечения. Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов. В этом разделе рассматриваются некоторые вопросы, связанные с созданием и использованием COM-объектов с помощью Visual Basic.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Знакомство с COM-взаимодействием](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
@@ -23,7 +23,7 @@ ms.locfileid: "33643588"
  Описывает, как добавлять ссылки на COM-объекты, имеющие библиотеки типов.  
   
  [Практическое руководство. Работа с элементами управления ActiveX](../../../visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md)  
- Демонстрирует использование элементов управления ActiveX, чтобы добавить компоненты в области элементов Visual Studio.  
+ В этой статье демонстрируется использование элементов управления ActiveX, чтобы добавить компоненты к панели элементов Visual Studio.  
   
  [Пошаговое руководство. Вызов API-интерфейсов Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)  
  Пошаговое описание процесса вызова API-интерфейсов, входящих в операционную систему Windows.  
@@ -50,10 +50,10 @@ ms.locfileid: "33643588"
  [Взаимодействие с неуправляемым кодом](../../../framework/interop/index.md)  
  Описываются службы взаимодействия, предоставляемые средой CLR.  
   
- [Предоставление COM-компонентов платформе .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [Предоставление COM-компонентов платформе .NET Framework](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
  Описание процесса вызова типов COM через COM-взаимодействие.  
   
- [Предоставление компонентов .NET Framework клиентам COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [Предоставление компонентов .NET Framework клиентам COM](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
  Описание подготовки и использования управляемых типов из COM.  
   
  [Применение атрибутов взаимодействия](../../../framework/interop/applying-interop-attributes.md)  

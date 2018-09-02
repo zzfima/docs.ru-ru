@@ -2,15 +2,15 @@
 title: Отправка сообщений из приложения Windows Communication Foundation в приложение MSMQ
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 0864098a55cbd7b43100bf9e0a1836e749eb2bc9
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: ea0723d178b37b1ff2581981f8f49a6953c913cc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806374"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403624"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Отправка сообщений из приложения Windows Communication Foundation в приложение MSMQ
-В этом примере показано, как приложения Windows Communication Foundation (WCF) может отправлять сообщения приложению очереди сообщений (MSMQ). Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди. Одновременная работа службы и клиента не требуется.  
+В этом примере показано, как приложение Windows Communication Foundation (WCF) можно отправлять сообщения приложению очереди сообщений (MSMQ). Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди. Одновременная работа службы и клиента не требуется.  
   
  Служба получает сообщения от очереди и обрабатывает заказы. Служба создает транзакционную очередь и создает обработчик полученных сообщений, как показано в следующем образце кода.  
 
@@ -96,7 +96,7 @@ Console.WriteLine("Order has been submitted:{0}", po);
 client.Close();  
 ```
 
- При отправке сообщения MSMQ в очередь клиент использует внутренний пользовательский порядок сообщений. Так как приложение, которое получает и обрабатывает сообщения является приложением MSMQ, а не приложения WCF, между двумя приложениями отсутствует неявный контракт службы. Таким образом, в данном сценарии невозможно создать прокси-класс при помощи средства Svculti.exe.  
+ При отправке сообщения MSMQ в очередь клиент использует внутренний пользовательский порядок сообщений. Поскольку приложение, которое получает и обрабатывает сообщение является приложением MSMQ, а не приложения WCF, является между двумя приложениями отсутствует неявный контракт службы. Таким образом, в данном сценарии невозможно создать прокси-класс при помощи средства Svculti.exe.  
   
  Пользовательский клиент в основном одинаков для всех приложений WCF, использующих `MsmqIntegration` привязки для отправки сообщений. В отличие от других клиентов, он не включает ряд операций службы. В него входит только операция отправки сообщения.  
 
@@ -130,7 +130,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
  При выполнении образца действия клиента и службы отображаются в окнах консоли как службы, так и клиента. Можно видеть, как служба получает сообщения от клиента. Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент. Обратите внимание, что поскольку используется очередь, клиенту и службе не обязательно быть запущенными и работать одновременно. Например, можно запустить клиент, выключить его, а затем запустить службу и все равно получить сообщения клиента.  
   
 > [!NOTE]
->  Данный образец требует установки очереди сообщений. См. инструкции по установке в [очереди сообщений](http://go.microsoft.com/fwlink/?LinkId=94968).  
+>  Данный образец требует установки очереди сообщений. См. инструкции по установке в [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94968).  
   
 ### <a name="to-setup-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
@@ -144,13 +144,13 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
     3.  Щелкните правой кнопкой мыши **очереди личных сообщений**и выберите **New**, **частную очередь**.  
   
-    4.  Проверьте **транзакций** поле.  
+    4.  Проверьте **транзакционная** поле.  
   
-    5.  Введите `ServiceModelSamplesTransacted` качестве имени новой очереди.  
+    5.  Введите `ServiceModelSamplesTransacted` как имя новой очереди.  
   
 3.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Для запуска образца в конфигурации с одним компьютером, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Чтобы запустить образец в конфигурации с одним компьютером, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах  
   
@@ -169,10 +169,10 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\WcfToMsmq`  
   
 ## <a name="see-also"></a>См. также  
  [Практическое руководство. Обмен сообщениями с конечными точками WCF и приложениями очереди сообщений](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
- [Очереди сообщений](http://go.microsoft.com/fwlink/?LinkId=94968)
+ [Очереди сообщений](https://go.microsoft.com/fwlink/?LinkId=94968)

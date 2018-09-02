@@ -9,19 +9,20 @@ ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 7d8814f3797be33f22d4249df1d1b8d852e755e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad69367f616236d239587293022935bc3ef4e3ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401613"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>Реализация поставщика автоматизации пользовательского интерфейса на стороне сервера
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе описывается реализация серверного поставщика автоматизации пользовательского интерфейса для пользовательского элемента управления.  
   
- Реализация элементов Windows Presentation Foundation (WPF) и не-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] элементы (например, предназначенных для [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) существенно различается. Элементы[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] с помощью класса, производного от <xref:System.Windows.Automation.Peers.AutomationPeer>. Элементы, отличные от[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , обеспечивает поддержку с помощью реализаций интерфейсов поставщика.  
+ Реализация для элементов Windows Presentation Foundation (WPF) и не-[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] элементы (например, предназначенных для [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]) существенно различается. Элементы[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] обеспечивают поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] с помощью класса, производного от <xref:System.Windows.Automation.Peers.AutomationPeer>. Элементы, отличные от[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] , обеспечивает поддержку с помощью реализаций интерфейсов поставщика.  
   
 <a name="Security_Considerations"></a>   
 ## <a name="security-considerations"></a>Вопросы безопасности  
@@ -50,7 +51,7 @@ ms.lasthandoff: 05/04/2018
 ### <a name="provider-interfaces"></a>Интерфейсы поставщика  
  Каждый поставщик [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] должен реализовывать один из следующих интерфейсов.  
   
-|Интерфейс|Описание|  
+|Интерфейс|Описание:|  
 |---------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderSimple>|Предоставляет функциональные возможности для простого элемента управления, размещенного в окне, включая поддержку для шаблонов и свойств элементов управления.|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderFragment>|Наследует от <xref:System.Windows.Automation.Provider.IRawElementProviderSimple>. Добавляет функциональные возможности для элемента в сложном элементе управления, включая навигацию внутри фрагмента, установку фокуса и возврат ограничивающего прямоугольника элемента.|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 05/04/2018
   
  Следующие интерфейсы поддерживают добавленные функциональные возможности, но необязательно должны быть реализованы.  
   
-|Интерфейс|Описание|  
+|Интерфейс|Описание:|  
 |---------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Позволяет поставщику отслеживать запросы событий.|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderHwndOverride>|Позволяет изменять положение элементов на основе окна в дереве [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] фрагмента.|  
@@ -117,7 +118,7 @@ ms.lasthandoff: 05/04/2018
 ### <a name="events-in-non-wpf-providers"></a>События в поставщиках, отличных от WPF  
  Поставщики[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] должны вызывать события, чтобы уведомлять клиентские приложения об изменениях состояния пользовательского интерфейса. Для создания событий используются следующие методы.  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationEvent%2A>|Создает различные события, включая события, вызываемые шаблонами элементов управления.|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.RaiseAutomationPropertyChangedEvent%2A>|Вызывает событие при изменении свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
@@ -127,7 +128,7 @@ ms.lasthandoff: 05/04/2018
   
  Для оптимизации производительности поставщик можно выборочно вызывать события или вообще не создавать события, если отсутствует клиентское приложение, зарегистрированное для их получения. Для оптимизации используются следующие методы.  
   
-|Метод|Описание|  
+|Метод|Описание:|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Provider.AutomationInteropProvider.ClientsAreListening%2A>|Это статическое свойство указывает, подписано ли какое-либо клиентское приложение на события [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .|  
 |<xref:System.Windows.Automation.Provider.IRawElementProviderAdviseEvents>|Реализация поставщика этого интерфейса в корневом элементе фрагмента позволяет ему знать, когда клиенты регистрируют и отменяют регистрацию обработчиков событий для событий в фрагменте.|  
@@ -178,5 +179,5 @@ ms.lasthandoff: 05/04/2018
  [Вызов событий из поставщика автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)  
  [Включение навигации в поставщике фрагментов автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/enable-navigation-in-a-ui-automation-fragment-provider.md)  
  [Поддержка шаблонов элементов управления в поставщике автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [Пример простого поставщика](http://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
- [Пример поставщика фрагмента](http://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)
+ [Пример простого поставщика](https://msdn.microsoft.com/library/c10a6255-e8dc-494b-a051-15111b47984a)  
+ [Пример поставщика фрагмента](https://msdn.microsoft.com/library/778ef1bc-8610-4bc9-886e-aeff94a8a13e)

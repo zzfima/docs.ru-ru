@@ -5,19 +5,19 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 1d245327c1e7d53de9a88c93ff0399d8e231a1df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd3b6bbb47dfd72bf70091c9ca4d6fc5e228d950
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493325"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406941"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>Практическое руководство. Регистрация и настройка моникера службы
-Перед использованием моникера службы Windows Communication Foundation (WCF) в рамках приложения COM с типизированным контрактом, необходимо зарегистрировать необходимые типы с атрибутами с помощью COM и настроить приложение COM и моникер в соответствии с необходимая привязка Конфигурация.  
+Перед использованием моникера службы Windows Communication Foundation (WCF) в рамках приложения COM с типизированным контрактом, необходимо зарегистрировать необходимые типы с атрибутами с помощью COM и настроить приложение COM и моникер в соответствии с требуемую привязку Конфигурация.  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>Регистрация необходимых типов с атрибутами с помощью COM  
   
-1.  Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство для получения метаданных контракта службы WCF. Это создает исходный код для клиента WCF сборки и файла конфигурации приложения.  
+1.  Используйте [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство для получения метаданных контракта службы WCF. Это создает исходный код для клиентской сборки WCF и файле конфигурации клиентского приложения.  
   
 2.  Убедитесь, что все типы в сборке имеют пометку `ComVisible`. Для этого добавьте в файл AssemblyInfo.cs в проекте Visual Studio следующий атрибут.  
   
@@ -25,7 +25,7 @@ ms.locfileid: "33493325"
     [assembly: ComVisible(true)]  
     ```  
   
-3.  Скомпилируйте управляемый клиент WCF, как сборка со строгими именами. Для этого нужно подписать ее с помощью пары ключей шифрования. Дополнительные сведения см. в разделе [подпись сборки строгим именем](http://go.microsoft.com/fwlink/?LinkId=94874) руководства разработчика .NET.  
+3.  Скомпилируйте управляемый клиент WCF виде сборки со строгими именами. Для этого нужно подписать ее с помощью пары ключей шифрования. Дополнительные сведения см. в разделе [подпись сборки строгим именем](https://go.microsoft.com/fwlink/?LinkId=94874) руководства для разработчиков .NET.  
   
 4.  С помощью средства регистрации сборок (Regasm.exe) с параметром `/tlb` зарегистрируйте типы сборки в COM.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33493325"
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>Настройка приложения COM и моникера с использованием нужной конфигурации привязки  
   
--   Поместить все определения привязки (созданные [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) в файле конфигурации приложения клиента) в файле конфигурации клиентского приложения. Например, для исполняемого файла Visual Basic 6.0 с именем CallCenterClient.exe конфигурацию необходимо помещать в файл с именем CallCenterConfig.exe.config в том же каталоге, что и исполняемый файл. Теперь клиентское приложение может использовать моникер. Обратите внимание, что конфигурация привязки не требуется, если используется один из стандартных привязок типов, предоставляемых средой WCF.  
+-   Поместите определения привязки (созданные [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) в файле конфигурации приложения созданного клиента) в файле конфигурации клиентского приложения. Например, для исполняемого файла Visual Basic 6.0 с именем CallCenterClient.exe конфигурацию необходимо помещать в файл с именем CallCenterConfig.exe.config в том же каталоге, что и исполняемый файл. Теперь клиентское приложение может использовать моникер. Обратите внимание, что конфигурация привязки не является обязательным, если с помощью одного из стандартных типов, предоставляемых WCF привязок.  
   
      Регистрируется следующий тип.  
   

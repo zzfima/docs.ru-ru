@@ -5,15 +5,15 @@ helpviewer_keywords:
 - NT Service
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
-ms.openlocfilehash: 06bb17ca174eef069889381460b77f6b50902f70
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 0283fd8b3fd275be9787bb75763e9395091426a3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807971"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406266"
 ---
 # <a name="windows-service-host"></a>Узел службы Windows
-В этом примере демонстрируется службы Windows Communication Foundation (WCF), размещенной в управляемой службе Windows. Службы Windows управляются с помощью компонента "службы" в **панели управления** и может быть настроен для автоматического запуска после перезагрузки системы. Этот образец состоит из клиентской программы и программы службы Windows. Служба реализуется как программа EXE и содержит свой собственный код размещения. В других средах размещения, таких как служба активации Windows (WAS) или IIS, писать код размещения необязательно.  
+В этом примере демонстрируется службы Windows Communication Foundation (WCF), размещенной в управляемой службе Windows. Службы Windows управляются с помощью оснастки «службы» в **панели управления** и могут быть настроены для автоматического запуска после перезагрузки системы. Этот образец состоит из клиентской программы и программы службы Windows. Служба реализуется как программа EXE и содержит свой собственный код размещения. В других средах размещения, таких как служба активации Windows (WAS) или IIS, писать код размещения необязательно.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -23,15 +23,15 @@ ms.locfileid: "33807971"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WindowsService`  
   
- После построения этой службы ее необходимо установить с помощью служебной программы Installutil.exe, как и все остальные службы Windows. Если предполагается вносить изменения в службу, необходимо сначала удалить ее с помощью команды `installutil /u`. Входящие в состав этого образца файлы Setup.bat и Cleanup.bat содержат команды для установки и запуска службы Windows, а также для отключения и удаления службы Windows. Служба WCF только может отвечать клиентам, если служба Windows запущена. Если остановить службу Windows с помощью компонента "службы" из **панели управления** и запустите клиент, <xref:System.ServiceModel.EndpointNotFoundException> исключение возникает, когда клиент пытается получить доступ к службе. Если перезапустить службу Windows и клиент, обращение произойдет успешно.  
+ После построения этой службы ее необходимо установить с помощью служебной программы Installutil.exe, как и все остальные службы Windows. Если предполагается вносить изменения в службу, необходимо сначала удалить ее с помощью команды `installutil /u`. Входящие в состав этого образца файлы Setup.bat и Cleanup.bat содержат команды для установки и запуска службы Windows, а также для отключения и удаления службы Windows. Службы WCF только может отвечать клиентам, если запущена служба Windows. Если остановить службу Windows с помощью оснастки «службы» из **панели управления** и запустить клиент, <xref:System.ServiceModel.EndpointNotFoundException> исключение возникает, когда клиент пытается получить доступ к службе. Если перезапустить службу Windows и клиент, обращение произойдет успешно.  
   
- Код службы включает класс установщика, класс реализации службы WCF, который реализует контракт ICalculator и класс службы Windows, который выступает в качестве узла во время выполнения. Класс установщика, унаследованный от класса <xref:System.Configuration.Install.Installer>, позволяет устанавливать программу как службу NT с помощью средства Installutil.exe. Класс реализации службы `WcfCalculatorService`, — это служба WCF, которая реализует базовый контракт службы. Эта служба WCF размещается в классе службы Windows с именем `WindowsCalculatorService`. Чтобы считаться службой Windows, этот класс наследует от класса <xref:System.ServiceProcess.ServiceBase> и реализует методы <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> и <xref:System.ServiceProcess.ServiceBase.OnStop>. В методе <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> создается и открывается объект <xref:System.ServiceModel.ServiceHost> для типа `WcfCalculatorService`. В методе <xref:System.ServiceProcess.ServiceBase.OnStop> объект ServiceHost закрывается путем вызова метода <xref:System.ServiceModel.Channels.CommunicationObject.Close%28System.TimeSpan%29> объекта <xref:System.ServiceModel.ServiceHost>. Базовый адрес узла настраивается с помощью [ \<Добавить >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md) элемент, который является дочерним для [ \<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), который является дочерним по отношению [ \<узла >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) элемент, который является дочерним для [ \<службы >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) элемента.  
+ Код службы включает класс установщика, класс реализации службы WCF, который реализует контракт ICalculator и класс службы Windows, который действует как узел среды выполнения. Класс установщика, унаследованный от класса <xref:System.Configuration.Install.Installer>, позволяет устанавливать программу как службу NT с помощью средства Installutil.exe. Класс реализации службы, `WcfCalculatorService`, — это служба WCF, которая реализует базовый контракт службы. Эта служба WCF размещается внутри класс службы Windows с именем `WindowsCalculatorService`. Чтобы считаться службой Windows, этот класс наследует от класса <xref:System.ServiceProcess.ServiceBase> и реализует методы <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> и <xref:System.ServiceProcess.ServiceBase.OnStop>. В методе <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> создается и открывается объект <xref:System.ServiceModel.ServiceHost> для типа `WcfCalculatorService`. В методе <xref:System.ServiceProcess.ServiceBase.OnStop> объект ServiceHost закрывается путем вызова метода <xref:System.ServiceModel.Channels.CommunicationObject.Close%28System.TimeSpan%29> объекта <xref:System.ServiceModel.ServiceHost>. Базовый адрес узла настраивается с помощью [ \<Добавить >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddresses.md) элемент, который является дочерним из [ \<baseAddresses >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddresses.md), который является дочерним элементом [ \<узла >](../../../../docs/framework/configure-apps/file-schema/wcf/host.md) элемент, который является дочерним для элемента [ \<службы >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) элемент.  
   
- Конечная точка, который определен использует базовый адрес и [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). В следующем образце показана конфигурация базового адреса, а также конечной точки, предоставляющей службу CalculatorService.  
+ Определяемая конечная точка использует базовый адрес и [ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md). В следующем образце показана конфигурация базового адреса, а также конечной точки, предоставляющей службу CalculatorService.  
   
 ```xml  
 <services>  
@@ -61,7 +61,7 @@ ms.locfileid: "33807971"
   
 3.  После построения решения запустите файл Setup.bat из командной строки [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] с повышенными привилегиями, чтобы установить службу Windows с помощью программы Installutil.exe. Теперь служба должна отображаться в списке служб.  
   
-4.  Для запуска образца в конфигурации с одним или несколькими компьютерами следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>См. также  
- [Образцы размещения и сохраняемости образцы](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Образцы размещения AppFabric и сохраняемости](https://go.microsoft.com/fwlink/?LinkId=193961)

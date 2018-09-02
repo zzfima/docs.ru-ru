@@ -5,11 +5,11 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 96d54efbabbd95a24f1fb7118305ddbff4dfd110
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935410"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415828"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Пошаговое руководство. Создание кнопки с помощью XAML
 Цель этого пошагового руководства — сведения о создании анимированной кнопки для использования в приложении Windows Presentation Foundation (WPF). В этом пошаговом руководстве используется стиль и шаблон для создания ресурса пользовательской кнопки, которая позволяет повторно использовать код и разделять логику от объявления кнопки. В этом пошаговом руководстве приведено полностью в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -361,7 +361,7 @@ ms.locfileid: "42935410"
   
      Нажмите клавишу F5, чтобы запустить приложение и щелкнуть одну из кнопок. Обратите внимание на то, что кнопка остается выделенной, после нажатия, так как он по-прежнему имеет фокус. Если щелкнуть еще одну кнопку "Создать" получает фокус, хотя его утрачивает последним.  
   
-4.  **Добавление анимации для** <xref:System.Windows.UIElement.MouseEnter> **и** <xref:System.Windows.UIElement.MouseLeave> **:** Далее мы добавим некоторые анимаций в триггерах.   Добавьте следующую разметку в любое место `ControlTemplate.Triggers` блока.  
+4.  **Добавление анимации для** <xref:System.Windows.UIElement.MouseEnter> **и** <xref:System.Windows.UIElement.MouseLeave> **:** Далее мы добавим некоторые анимаций в триггерах. Добавьте следующую разметку в любое место `ControlTemplate.Triggers` блока.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  

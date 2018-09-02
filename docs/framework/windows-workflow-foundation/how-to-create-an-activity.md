@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: deb1b6ca5c6fc996a015e32dd5e0c7b9bd6530fa
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332707"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43402511"
 ---
 # <a name="how-to-create-an-activity"></a>Как создать действие
 Действия являются базовой единицей режима работы в [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Логика выполнения действия может быть реализована в управляемом коде или с помощью других действий. В этом разделе показано создание двух действий. Первое действие - простое действие с использованием кода для реализации логики выполнения. Реализация второго действия определяется с помощью других действий. Эти действия используются в следующих шагах учебника.  

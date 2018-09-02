@@ -7,24 +7,24 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
-ms.openlocfilehash: f7e2253c527cbb2b6f21b222b1e9691c2ecff01f
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 718a0c086181546ba7b7fb3b31fce0732dd99382
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809122"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401771"
 ---
 # <a name="specifying-an-endpoint-address"></a>Задание адреса конечной точки
-Весь обмен данными со службой Windows Communication Foundation (WCF) осуществляется через ее конечные точки. Каждая конечная точка службы <xref:System.ServiceModel.Description.ServiceEndpoint> содержит адрес <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, привязку <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> и контракт <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. В контракте задается, какие операции доступны. Привязка определяет, как осуществлять взаимодействие со службой, а адрес показывает, где можно найти службу. Каждая конечная точка должна иметь уникальный адрес. Адрес конечной точки представляется классом <xref:System.ServiceModel.EndpointAddress>, содержащим универсальный код ресурса (URI), который, в свою очередь, обозначает адрес службы, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, представляющий удостоверение безопасности службы и коллекцию необязательных заголовков <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Необязательные заголовки содержат более подробную информацию для идентификации конечной точки и взаимодействия с ней. Например, в заголовках может содержаться информация о том, как следует обрабатывать входящее сообщение, куда конечная точка должна отправить ответное сообщение или какой экземпляр службы необходимо использовать для обработки входящего сообщения от конкретного пользователя, если доступно несколько экземпляров.  
+Весь обмен данными со службой Windows Communication Foundation (WCF) происходит через ее конечные точки. Каждая конечная точка службы <xref:System.ServiceModel.Description.ServiceEndpoint> содержит адрес <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, привязку <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A> и контракт <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. В контракте задается, какие операции доступны. Привязка определяет, как осуществлять взаимодействие со службой, а адрес показывает, где можно найти службу. Каждая конечная точка должна иметь уникальный адрес. Адрес конечной точки представляется классом <xref:System.ServiceModel.EndpointAddress>, содержащим универсальный код ресурса (URI), который, в свою очередь, обозначает адрес службы, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, представляющий удостоверение безопасности службы и коллекцию необязательных заголовков <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Необязательные заголовки содержат более подробную информацию для идентификации конечной точки и взаимодействия с ней. Например, в заголовках может содержаться информация о том, как следует обрабатывать входящее сообщение, куда конечная точка должна отправить ответное сообщение или какой экземпляр службы необходимо использовать для обработки входящего сообщения от конкретного пользователя, если доступно несколько экземпляров.  
   
 ## <a name="definition-of-an-endpoint-address"></a>Определение адреса конечной точки  
- В WCF <xref:System.ServiceModel.EndpointAddress> моделирует ссылку на конечную точку (EPR), как определено в стандарте WS-Addressing.  
+ В WCF <xref:System.ServiceModel.EndpointAddress> моделирует ссылку на конечную точку (EPR) согласно определению в стандарте WS-Addressing.  
   
- Универсальный код ресурса (URI) адреса для большинства видов транспорта состоит из четырех частей. Например, этот URI «http://www.fabrikam.com:322/mathservice.svc/secureEndpoint» состоит из следующих четырех частей:  
+ Универсальный код ресурса (URI) адреса для большинства видов транспорта состоит из четырех частей. Например, этот URI, `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` состоит из следующих четырех частей:  
   
 -   Схема: http:  
   
--   Компьютер: www.fabrikam.com  
+-   Компьютер: `www.fabrikam.com`  
   
 -   (Необязательно) Порт: 322  
   
@@ -39,13 +39,13 @@ ms.locfileid: "33809122"
  При размещении в службах IIS управление экземпляром <xref:System.ServiceModel.ServiceHost> не осуществляется пользователем. При размещении в службах IIS базовый адрес - это всегда адрес службы, указанный в файле SVC. Следовательно, для конечных точек служб, размещенных в IIS, следует использовать относительные адреса. Указание полного адреса конечной точки может привести к ошибкам при развертывании службы. Дополнительные сведения см. в разделе [развертывание службы WCF, Internet Information Services-Hosted](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Определение адреса конечной точки в конфигурации  
- Для определения конечной точки в файле конфигурации, используйте [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемента.  
+ Чтобы определить конечную точку в файле конфигурации, используйте [ \<конечной точки >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент.  
   
  [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
   
- Когда <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> вызова (то есть, когда ведущее приложение пытается запустить службу), система выполняет поиск [ \<службы >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) элемент с атрибутом name, указывающее «UE. Samples.HelloService». Если [ \<службы >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) найден элемент, система загружает указанный класс и создает конечные точки, с помощью конечных точек, содержащиеся в файле конфигурации. Благодаря такому механизму можно загружать и запускать службу с двумя строками кода, при этом не указывая привязку и адрес в коде. Преимуществом этого подхода является отсутствие необходимости в повторной компиляции или повторном развертывании приложения при внесении этих изменений.  
+ Когда <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> вызывается метод (т. е. когда ведущее приложение пытается запустить службу), система осуществляет поиск [ \<службы >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) элемент с атрибутом name, указывающее «UE. Samples.HelloService». Если [ \<службы >](../../../docs/framework/configure-apps/file-schema/wcf/service.md) элемент найден, система загружает указанный класс и создает конечные точки, с помощью конечных точек в файле конфигурации. Благодаря такому механизму можно загружать и запускать службу с двумя строками кода, при этом не указывая привязку и адрес в коде. Преимуществом этого подхода является отсутствие необходимости в повторной компиляции или повторном развертывании приложения при внесении этих изменений.  
   
- Необязательные заголовки, объявляются в [ \<заголовки >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Ниже приведен пример элементов, используемых для указания конечные точки службы в файл конфигурации, различающем два заголовка: «Gold» клиенты из http://tempuri1.org/ и «Standard» клиентов из http://tempuri2.org/. Вызов этой службы клиент должен иметь соответствующую [ \<заголовки >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) в файле конфигурации.  
+ Необязательные заголовки объявлены в [ \<заголовки >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md). Ниже приведен пример элементов, используемых для задания конечных точек службы в файле конфигурации, различающем два заголовка: «Gold» клиенты из `http://tempuri1.org/` и «Стандартный» клиентов из `http://tempuri2.org/`. Вызов этой службы клиент должен иметь соответствующий [ \<заголовки >](../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md) в файле конфигурации.  
   
  [!code-xml[S_UEHelloWorld#1](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp.config#1)]  
   
@@ -80,7 +80,7 @@ ms.locfileid: "33809122"
 ## <a name="using-default-endpoints"></a>Использование конечных точек по умолчанию  
  Если конечные точки не заданы в коде или в конфигурации, то среда выполнения предоставляет конечные точки по умолчанию, добавляя одну конечную точку по умолчанию для каждого базового адреса в каждом контракте службы, реализованном в службе. Базовый адрес можно указывать в коде или в конфигурации, а конечные точки по умолчанию добавляются, когда вызывается метод <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> в объекте <xref:System.ServiceModel.ServiceHost>.  
   
- Если конечные точки предоставляются явно, то конечные точки по умолчанию можно добавить, вызвав метод <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> класса <xref:System.ServiceModel.ServiceHost> перед вызовом <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Дополнительные сведения о конечных точек по умолчанию, привязок и поведений см. в разделе [упрощенной конфигурации](../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ Если конечные точки предоставляются явно, то конечные точки по умолчанию можно добавить, вызвав метод <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> класса <xref:System.ServiceModel.ServiceHost> перед вызовом <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A>. Дополнительные сведения о конечных точках по умолчанию, привязках и режимах работы см. в разделах [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md) и [Упрощенная конфигурация служб WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.EndpointAddress>  

@@ -2,12 +2,12 @@
 title: Служба области элементов
 ms.date: 03/30/2017
 ms.assetid: 742212d0-445e-41ed-9739-9ee848ce7f1b
-ms.openlocfilehash: 0b3ea56d28d202bd8356fea1783b6675a708631d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0b21f10c763f3f82591f947eb4cc48cf90f4ac79
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516195"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406466"
 ---
 # <a name="toolbox-service"></a>Служба области элементов
 Этот образец демонстрирует, как обновлять действия области элементов [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] на базе контекста рабочего процесса. Образец содержит рабочий процесс, изменяющий содержание области элементов в зависимости от выбранного пользовательского действия.  
@@ -39,19 +39,19 @@ public interface IActivityToolboxService
   
 3.  Откройте файл Workflow.xaml.  
   
-4.  Добавить **CustomActivity** , перетащив его из области элементов. Обратите внимание, что дополнительная область элементов имеет имя: **новая категория WF** с дополнительным действием **назначить**.  
+4.  Добавить **CustomActivity** , перетащив его из области элементов. Обратите внимание, что вызывается новую категорию области элементов: **новая категория WF** с дополнительным действием **назначить**.  
   
-5.  Снимите выбор **CustomActivity** , перетащив на него другое действие.  
+5.  Снимите выбор **CustomActivity** , перетащив в него другое действие.  
   
 6.  Элемент **назначить** в категории **новая категория WF** в области элементов будет удален. Кроме того, поскольку в категории больше не осталось элементов, будет удалена и сама категория.  
   
-7.  Выберите **CustomActivity** еще раз и категорию и **назначить** действие будет добавлено повторно.  
+7.  Выберите **CustomActivity** еще раз и категории и **назначить** обратно добавляется действие.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Designer\IActivityToolboxService`

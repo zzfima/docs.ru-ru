@@ -2,12 +2,12 @@
 title: Сохраняемая задержка
 ms.date: 03/30/2017
 ms.assetid: 220ec240-b958-430c-81ff-b734a6aa97ae
-ms.openlocfilehash: 5307b8144e17f91cd3ba8c2e385492f86c167820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a7692e28d60232913ae5d11a90025e59664c0e5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516026"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406580"
 ---
 # <a name="durable-delay"></a>Сохраняемая задержка
 В этом образце показано, как использовать сохраняемую задержку, при которой рабочий процесс сохраняется на физическом устройстве. Образец рабочего процесса содержит два сообщения на консоль, разделенных задержкой. Когда запускается задержка, рабочий процесс выгружается и в течение 5 секунд хранится в хранилище экземпляров рабочих процессов, а затем снова загружается в память.  
@@ -33,7 +33,7 @@ ms.locfileid: "33516026"
   
     1.  Откройте командную строку [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-    2.  Перейдите к [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] каталога (C:\Windows\Microsoft.NET\Framework\v4. X\\).  
+    2.  Перейдите к [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] каталог (C:\Windows\Microsoft.NET\Framework\v4. X\\).  
   
     3.  Измените файл WorkflowManagementService.exe.config и добавьте следующую строку подключения в элемент <`database`>.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33516026"
   
     5.  Запустите команду Setup.cmd.  
   
-2.  Запустите [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] с повышенными правами, щелкнув правой кнопкой мыши [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] значок и выбрав **Запуск от имени администратора**.  
+2.  Запустите [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] с повышенными правами, щелкните правой кнопкой мыши [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] значок и выбрав **Запуск от имени администратора**.  
   
 3.  Откройте файл решения Delay.sln.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "33516026"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDelay`

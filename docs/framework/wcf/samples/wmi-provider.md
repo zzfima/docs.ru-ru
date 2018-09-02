@@ -2,21 +2,21 @@
 title: Поставщик WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: d135466c402fa21b6a1b11f208ca900f58748bdb
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c3eb97537706282491de1863224e1502d6b56fda
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33807310"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416516"
 ---
 # <a name="wmi-provider"></a>Поставщик WMI
-В этом примере показано, как для сбора данных из служб Windows Communication Foundation (WCF) во время выполнения с помощью поставщика инструментария управления Windows (WMI), который встроен в WCF. Кроме того, в образце показано, как добавлять в службу пользовательский объект инструментария WMI. Этот образец активирует поставщик инструментария WMI для [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) и демонстрирует, как собирать данные из `ICalculator` службы во время выполнения.  
+В этом примере показано, как собирать данные из служб Windows Communication Foundation (WCF) во время выполнения с помощью поставщика инструментария управления Windows (WMI), который встроен в WCF. Кроме того, в образце показано, как добавлять в службу пользовательский объект инструментария WMI. Этот образец активирует поставщик WMI для [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) и демонстрирует, как собирать данные из `ICalculator` службы во время выполнения.  
   
- Инструментарий WMI - это реализованный корпорацией Майкрософт стандарт управления предприятием через Интернет (WBEM). Дополнительные сведения о пакете WMI SDK см. в разделе [инструментария управления Windows](https://msdn.microsoft.com/library/aa394582.aspx). WBEM является отраслевым стандартом предоставления приложениями инструментария управления для внешних средств управления.  
+ Инструментарий WMI - это реализованный корпорацией Майкрософт стандарт управления предприятием через Интернет (WBEM). Дополнительные сведения о пакете WMI SDK см. в разделе [инструментария управления Windows](/windows/desktop/WmiSdk/wmi-start-page). WBEM является отраслевым стандартом предоставления приложениями инструментария управления для внешних средств управления.  
   
- WCF реализует поставщик инструментария WMI, компонент, предоставляющий инструментарий в среде выполнения с помощью совместимого WBEM интерфейса. Средства управления могут подключаться к службам через интерфейс во время выполнения. WCF предоставляет атрибуты служб, такие как адреса, привязки, поведения и прослушиватели.  
+ WCF реализует поставщик WMI, компонент, предоставляющий инструментарий в среде выполнения с помощью совместимого с WBEM интерфейса. Средства управления могут подключаться к службам через интерфейс во время выполнения. WCF предоставляет атрибуты служб, таких как адреса, привязки, поведения и прослушиватели.  
   
- Встроенный поставщик инструментария WMI активируется в файле конфигурации приложения. Это осуществляется посредством `wmiProviderEnabled` атрибут [ \<диагностики >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) в [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) статьи, как показано в следующем образце Конфигурация:  
+ Встроенный поставщик инструментария WMI активируется в файле конфигурации приложения. Это осуществляется посредством `wmiProviderEnabled` атрибут [ \<диагностики >](../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) в [ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) разделе, как показано в следующем примере Конфигурация:  
   
 ```xml  
 <system.serviceModel>  
@@ -127,10 +127,10 @@ cscript EnumerateCustomObjects.js
   
 3.  Опубликуйте схему служб в WMI, запустив программу InstallUtil.exe (по умолчанию файл InstallUtil.exe расположен в папке «%WINDIR%\Microsoft.NET\Framework\v4.0.30319») для файла service.dll в каталоге размещения. Эту операцию нужно выполнять только в том случае, если в файл service.dll были внесены изменения. Дополнительные сведения см. в разделе Предоставление данных управления с помощью инструментирования приложений во: http://msdn2.microsoft.com/library/ms186147.aspx в разделе «Как для: публикация схемы в WMI для инструментированного приложения».  
   
-4.  Для запуска образца в конфигурации с одним или несколькими компьютерами следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
-    >  При установке WCF после установки ASP.NET может потребоваться запустить %WINDIR%\» Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe "- r - x, чтобы предоставить учетной записи ASPNET разрешение на публикацию объектов WMI.  
+    >  Если вы установили WCF после установки ASP.NET, может потребоваться запустить «%WINDIR%\ Microsoft.Net\Framework\v3.0\Windows Communication Foundation\servicemodelreg.exe "- r - x, чтобы предоставить учетной записи ASPNET разрешение на публикацию объектов WMI.  
   
 5.  Для просмотра данных из образцов, доступных через WMI, следует воспользоваться командами: `cscript EnumerateServices.js` или `cscript EnumerateCustomObjects.js`.  
   
@@ -139,9 +139,9 @@ cscript EnumerateCustomObjects.js
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
 ## <a name="see-also"></a>См. также  
- [Примеры мониторинга AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Образцы наблюдения за AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

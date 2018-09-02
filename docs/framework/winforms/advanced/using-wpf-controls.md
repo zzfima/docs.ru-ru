@@ -5,52 +5,52 @@ helpviewer_keywords:
 - Windows Forms Designer [Windows Forms], interoperability with WPF
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
-ms.openlocfilehash: 8dcf79d449a8f8443774b133904e819dfd925288
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 30b84f05898f823227415c410dc7ba5f89d58664
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526608"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406330"
 ---
 # <a name="using-wpf-controls"></a>Использование элементов управления WPF
-Элементы управления Windows Presentation Foundation (WPF) можно использовать в приложениях Windows Forms. Хотя эти две различные технологии, они взаимодействуют.  
+Элементы управления Windows Presentation Foundation (WPF) можно использовать в приложениях Windows Forms. Несмотря на то, что они являются две различные технологии, они взаимодействуют.  
   
- Конструктор Windows Forms предоставляет визуальную среду проектирования для размещения элементов управления Windows Presentation Foundation. Элемент управления WPF размещается специальных элементов управления Windows Forms с именем <xref:System.Windows.Forms.Integration.ElementHost>. Этот элемент управления позволяет участвовать в макет формы и получать сообщения клавиатуры и мыши элемента управления WPF. Во время разработки, вы можете упорядочить <xref:System.Windows.Forms.Integration.ElementHost> управления так же, как и любой элемент управления Windows Forms.  
+ В конструкторе Windows Forms предоставляет среду визуальной разработки для размещения элементов управления Windows Presentation Foundation. Элемент управления WPF размещается в специальный элемент управления Windows Forms с именем <xref:System.Windows.Forms.Integration.ElementHost>. Этот элемент управления включает элемент управления WPF в участвуют в макете формы и получать сообщения клавиатуры и мыши. Во время разработки, можно упорядочить <xref:System.Windows.Forms.Integration.ElementHost> управления так же, как и любой элемент управления Windows Forms.  
   
- Можно также использовать элементы управления Windows Forms в приложениях WPF. Дополнительные сведения см. в разделе [конструктор WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26).  
+ Можно также использовать элементы управления Windows Forms в WPF-приложениях. Дополнительные сведения см. в разделе [конструктора XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Копирование и вставка элемента управления ElementHost во время разработки](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
  Показано, как скопировать элемент управления Windows Presentation Foundation в Windows Forms.  
   
  [Пошаговое руководство. Упорядочение содержимого WPF для формы Windows Forms во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md)  
- Показано, как использовать функции структуры Windows Forms, такие как закрепление и линии привязки, для размещения элементов управления Windows Presentation Foundation.  
+ Показано, как использовать возможности макета Windows Forms, такие как закрепление и линии привязки, для размещения элементов управления Windows Presentation Foundation.  
   
  [Пошаговое руководство. Изменение свойств размещенного элемента WPF во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time.md)  
- Показан рабочий процесс между конструктор Windows Forms и [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] по изменению свойств для элементов управления WPF.  
+ Показывает рабочий процесс между в конструкторе Windows Forms и [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] по изменению свойств для элементов управления WPF.  
   
  [Пошаговое руководство. Создание нового содержимого WPF для формы Windows Forms во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)  
- Показано, как создать элемент управления Windows Presentation Foundation для использования в приложениях Windows Forms.  
+ В этой статье демонстрируется создание элемента управления Windows Presentation Foundation для использования в приложениях Windows Forms.  
   
  [Пошаговое руководство. Копирование и вставка элемента интерфейса ElementHost в отдельную форму Windows Forms](../../../../docs/framework/winforms/advanced/copy--paste-an-elementhost-control-into-forms.md)  
- Показано, как скопировать элемент управления Windows Presentation Foundation из одной формы Windows Forms в другую.  
+ Показано, как скопировать элемент управления Windows Presentation Foundation из одной формы Windows в другую.  
   
  [Пошаговое руководство. Назначение содержимого WPF в формах Windows Forms во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md)  
  Показано, как выбрать типы элементов управления Windows Presentation Foundation, который будет отображаться в форме.  
   
  [Пошаговое руководство. Применение стилей к содержимому WPF](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)  
- Показан рабочий процесс между конструктор Windows Forms и [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] применения стилей к элементам управления Windows Presentation Foundation.  
+ Показывает рабочий процесс между в конструкторе Windows Forms и [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] применения стилей к элементам управления Windows Presentation Foundation.  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.Integration.ElementHost>  
- Описывает класс, который можно использовать в приложениях Windows Forms для размещения элементов управления Windows Presentation Foundation.  
+ Описывает класс, который можно использовать для размещения элементов управления Windows Presentation Foundation в приложениях Windows Forms.  
   
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  Описывает класс, который можно использовать для размещения элементов управления Windows Forms в приложении Windows Presentation Foundation.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Миграция и взаимодействие систем](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- Описывает взаимодействие между технологиями Windows Presentation Foundation и Windows Forms.  
+ Содержит описание взаимодействия между технологиями Windows Presentation Foundation и Windows Forms.  
   
- [Конструктор WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
  Инструкции по разработке элементов управления Windows Presentation Foundation в Visual Studio.
