@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2575d6fbc5e8a26da301826ef8f7b0611a84871e
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c18659fa3db1f2e7e047f1bbdc4f75ba6e96f0c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43255565"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464104"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>Версии и зависимости платформы .NET Framework
 В каждую версию платформы .NET Framework входит среда CLR, библиотеки базовых классов и другие управляемые библиотеки. В этом разделе описаны основные особенности различных версий платформы .NET Framework, приведены сведения о базовых версиях среды CLR и соответствующих средах разработки, а также указаны версии, устанавливаемые системой Windows.  
@@ -61,7 +61,7 @@ ms.locfileid: "43255565"
   
      [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] и [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] используются здесь только в качестве примеров. Этот принцип применяется к любому приложению, предназначенному для более поздней версии .NET Framework, чем установленная в системе, в которой оно выполняется.  
   
- Некоторые изменения в платформе .NET Framework могут потребовать внесения изменений в код вашего приложения. Ознакомьтесь с разделом [Совместимость приложений](../../../docs/framework/migration-guide/application-compatibility.md), прежде чем запускать существующие приложения в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или более поздних версий. Дополнительные сведения об установке текущей версии см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md). Сведения о поддержке платформы .NET Framework см. на странице [Политика жизненного цикла поддержки платформы Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607) веб-сайта поддержки Майкрософт.  
+ Некоторые изменения в платформе .NET Framework могут потребовать внесения изменений в код вашего приложения. Ознакомьтесь с разделом [Совместимость приложений](../../../docs/framework/migration-guide/application-compatibility.md), прежде чем запускать существующие приложения в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или более поздних версий. Дополнительные сведения об установке текущей версии см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md). Сведения о поддержке платформы .NET Framework см. на странице [Политика жизненного цикла поддержки платформы Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) веб-сайта поддержки Майкрософт.  
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>Выбор более старых версий в качестве целевой платформы и запуск приложений  
  Версии .NET Framework 2.0, 3.0 и 3.5 построены на базе одной и той же версии среды CLR (CLR 2.0). Эти версии представляют последовательные уровни единой установки. Каждая версия построена на базе предыдущих версий. Невозможно запустить версии 2.0, 3.0 и 3.5 параллельно на одном компьютере. При установке версии 3.5 автоматически создаются уровни версий 2.0 и 3.0, и приложения, созданные для версий 2.0, 3.0 и 3.5, могут выполняться в версии 3.5. Тем не менее .NET Framework 4 завершает этот уровневый подход, и этот выпуск — а также более поздние (.NET Framework 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1 и 4.7.2) — представляет последовательные уровни единой установки.  Начиная с .NET Framework 4, разработчики могут использовать внутрипроцессное параллельное размещение для запуска нескольких версий среды CLR в одном процессе. Дополнительные сведения см. в разделе [Сборки и параллельное выполнение](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md).  
@@ -81,5 +81,5 @@ ms.locfileid: "43255565"
 ## <a name="see-also"></a>См. также
 
 [Совместимость версий](../../../docs/framework/migration-guide/version-compatibility.md)   
-[Политика жизненного цикла поддержки Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607)   
+[Политика жизненного цикла поддержки Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607)   
 [Устранение неполадок с заблокированными установками и удалениями .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
