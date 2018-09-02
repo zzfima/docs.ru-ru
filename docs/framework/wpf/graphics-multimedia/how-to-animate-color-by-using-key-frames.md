@@ -9,30 +9,30 @@ helpviewer_keywords:
 - animation [WPF], colors with key frames
 - key frames [WPF], animating colors with
 ms.assetid: ab04ffa6-4de9-4d5b-a3b4-4e35d5b2ef35
-ms.openlocfilehash: 7d89a1f9c24c93bd6b05265092bde09e8cf6eff5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb09a54df3d99e05e89ec0f3d9f17b0e9fe78647
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33560336"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419081"
 ---
 # <a name="how-to-animate-color-by-using-key-frames"></a>Практическое руководство. Анимация цвета с помощью ключевых кадров
 В этом примере демонстрируется анимация <xref:System.Windows.Media.SolidColorBrush.Color%2A> из <xref:System.Windows.Media.SolidColorBrush> с помощью ключевых кадров.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames> класса для анимации <xref:System.Windows.Media.SolidColorBrush.Color%2A> свойство <xref:System.Windows.Media.SolidColorBrush>. Эта анимация использует три ключевых кадра следующим образом:  
+ В следующем примере используется <xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames> класс для анимации <xref:System.Windows.Media.SolidColorBrush.Color%2A> свойство <xref:System.Windows.Media.SolidColorBrush>. Эта анимация использует три ключевых кадра следующим образом:  
   
-1.  В течение первых двух секунд используется экземпляр <xref:System.Windows.Media.Animation.LinearColorKeyFrame> класс постепенно изменение цвета зеленый или красный. Линейный ключевые кадры, такие как <xref:System.Windows.Media.Animation.LinearColorKeyFrame> Создание линейной плавный переход между значениями.  
+1.  В течение первых двух секунд используется экземпляр <xref:System.Windows.Media.Animation.LinearColorKeyFrame> класс для постепенного изменения цвета от зеленого к красному. Линейные ключевые кадры, например <xref:System.Windows.Media.Animation.LinearColorKeyFrame> создать плавный линейный переход между значениями.  
   
-2.  Во время окончания следующей половины секунды используется экземпляр <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> класса для быстрого изменения цвета с красного на желтый. Дискретные полные кадры типа <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> создают внезапные изменения между значениями, то есть, изменение цвета в этой части анимации происходит быстро, но заметно.  
+2.  В конце следующей половины секунды используется экземпляр <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> класс для быстрого изменения цвета с красного на желтый. Дискретные ключевые кадры, например <xref:System.Windows.Media.Animation.DiscreteColorKeyFrame> создают резкие изменения значений, то есть, изменение цвета в этой части анимации происходит быстро и не плавно.  
   
-3.  В течение последних двух секунд используется экземпляр <xref:System.Windows.Media.Animation.SplineColorKeyFrame> классе, чтобы изменить цвет снова — времени с момента обратной желтый зеленый цвет. Как и опорных кадров сплайна <xref:System.Windows.Media.Animation.SplineColorKeyFrame> создания переменного перехода между значениями согласно значениям <xref:System.Windows.Media.Animation.SplineColorKeyFrame.KeySpline%2A> свойство. В этом примере изменение цвета начинается медленно и ускоряется экспоненциально к концу временного сегмента.  
+3.  В течение последних двух секунд используется экземпляр <xref:System.Windows.Media.Animation.SplineColorKeyFrame> класс для изменения цвета — это время с желтого обратно на зеленый. Ключевые кадры сплайна, например <xref:System.Windows.Media.Animation.SplineColorKeyFrame> , создают переменный переход между значениями в соответствии со значениями из <xref:System.Windows.Media.Animation.SplineColorKeyFrame.KeySpline%2A> свойство. В этом примере изменение цвета начинается медленно и ускоряется экспоненциально к концу временного сегмента.  
   
  [!code-csharp[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/ColorAnimationUsingKeyFramesExample.cs#coloranimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/coloranimationusingkeyframesexample.vb#coloranimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#ColorAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ColorAnimationUsingKeyFramesExample.xaml#coloranimationusingkeyframeswholepage)]  
   
- Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Media.SolidColorBrush.Color%2A>  

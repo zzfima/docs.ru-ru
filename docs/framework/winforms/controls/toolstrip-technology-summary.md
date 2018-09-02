@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: c4f7b13590457623bbdfd6e4c07317f3a0285fd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26317fad5796989a58a48e4f26549805b279228a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33541915"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421912"
 ---
 # <a name="toolstrip-technology-summary"></a>Технологии, положенные в основу работы элемента управления ToolStrip
 В этом разделе содержится сводная информация о системе управления `ToolStrip` и классах, поддерживающих ее использование.  
@@ -63,31 +63,31 @@ ms.locfileid: "33541915"
 ### <a name="task-dialog-boxes"></a>Диалоговые окна задач  
  Если в конструкторе Visual Studio щелкнуть смарт-тег на элементе управления, откроется список задач, обеспечивающий удобный доступ ко многим часто используемым командам.  
   
--   [Диалоговое окно задач MenuStrip](http://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
+-   [Диалоговое окно задач MenuStrip](https://msdn.microsoft.com/library/ms233645\(v=vs.110\))  
   
--   [Диалоговое окно задач ToolStrip](http://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
+-   [Диалоговое окно задач ToolStrip](https://msdn.microsoft.com/library/ms233648\(v=vs.110\))  
   
--   [Диалоговое окно задач ContextMenuStrip](http://msdn.microsoft.com/library/ms233646\(v=vs.110\))  
+-   [Диалоговое окно задач ContextMenuStrip](https://msdn.microsoft.com/library/ms233646\(v=vs.110\))  
   
--   [Диалоговое окно задач StatusStrip](http://msdn.microsoft.com/library/ms233642\(v=vs.110\))  
+-   [Диалоговое окно задач StatusStrip](https://msdn.microsoft.com/library/ms233642\(v=vs.110\))  
   
--   [Диалоговое окно задач ToolStripContainer](http://msdn.microsoft.com/library/ms233647\(v=vs.110\))  
+-   [Диалоговое окно задач ToolStripContainer](https://msdn.microsoft.com/library/ms233647\(v=vs.110\))  
   
 ### <a name="items-collection-editors"></a>Редакторы коллекций элементов  
- В Visual Studio, при нажатии кнопки **изменение элементов** задачи списка или щелкните правой кнопкой мыши элемент управления и выберите **изменение элементов** в контекстном меню откроется редактор коллекции для элемента управления. Редакторы коллекций позволяют добавлять, удалять и изменять порядок следования элементов, которые содержит данный элемент управления. Можно также просмотреть и изменить свойства элемента управления и его элементов.  
+ В Visual Studio, щелкнув **изменение элементов** в задаче списке или щелкните правой кнопкой мыши элемент управления и выберите **изменение элементов** в контекстном меню, откроется редактор коллекции для элемента управления. Редакторы коллекций позволяют добавлять, удалять и изменять порядок следования элементов, которые содержит данный элемент управления. Можно также просмотреть и изменить свойства элемента управления и его элементов.  
   
--   [Редактор коллекции элементов MenuStrip](http://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
+-   [Редактор коллекции элементов MenuStrip](https://msdn.microsoft.com/library/ms233625\(v=vs.110\))  
   
--   [Редактор коллекции элементов StatusStrip](http://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
+-   [Редактор коллекции элементов StatusStrip](https://msdn.microsoft.com/library/ms233631\(v=vs.110\))  
   
--   [Редактор коллекции элементов ContextMenuStrip](http://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
+-   [Редактор коллекции элементов ContextMenuStrip](https://msdn.microsoft.com/library/ms233641\(v=vs.110\))  
   
--   [Редактор коллекции элементов ToolStrip](http://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
+-   [Редактор коллекции элементов ToolStrip](https://msdn.microsoft.com/library/ms233643\(v=vs.110\))  
   
 ## <a name="hosting-controls"></a>Размещение элементов управления  
  Класс <xref:System.Windows.Forms.ToolStripControlHost> предоставляет встроенные оболочки для элементов управления <xref:System.Windows.Forms.ToolStripComboBox>, <xref:System.Windows.Forms.ToolStripTextBox> и <xref:System.Windows.Forms.ToolStripProgressBar>. Также в <xref:System.Windows.Forms.ToolStripControlHost> можно разместить любой другой существующий или COM-элемент управления.  
   
- Пример размещения элементов управления см. в разделе [как: перенос элемента управления Windows Forms с помощью ToolStripControlHost](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
+ Пример размещения элементов управления, см. в разделе [как: заключение элемента управления Windows Forms с помощью ToolStripControlHost](../../../../docs/framework/winforms/controls/how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md).  
   
 ## <a name="rendering"></a>Отрисовка  
  Классы <xref:System.Windows.Forms.ToolStrip> реализуют механизм отрисовки, который существенно отличается от других элементов управления Windows Forms. Этот механизм позволяет с легкостью применять стили и темы.  
@@ -104,7 +104,7 @@ ms.locfileid: "33541915"
 ## <a name="rafting-and-docking"></a>Нависание и закрепление  
  Для элементов управления <xref:System.Windows.Forms.ToolStrip> можно использовать нависание, закрепление или абсолютное позиционирование. Элементы <xref:System.Windows.Forms.ToolStrip> располагаются с помощью <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> контейнера.  
   
- *Нависание* является возможность совместного использования горизонтального или вертикального пространства панели инструментов. Форма Windows может иметь контейнер <xref:System.Windows.Forms.ToolStripContainer>, который в свою очередь содержит панели на левой, правой, верхней и нижней сторонах формы для размещения и нависания элементов управления <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.StatusStrip>. Несколько элементов управления <xref:System.Windows.Forms.ToolStrip> располагаются по вертикали, если поместить их в левый или правый контейнер <xref:System.Windows.Forms.ToolStripContainer>. Они располагаются по горизонтали, если поместить их в верхний или нижний контейнер <xref:System.Windows.Forms.ToolStripContainer>. Для размещения традиционных элементов управления в форме может использоваться центральная панель <xref:System.Windows.Forms.ToolStripContentPanel> из контейнера <xref:System.Windows.Forms.ToolStripContainer>.  
+ *Нависание* — это возможность совместного использования горизонтального или вертикального пространства панели инструментов. Форма Windows может иметь контейнер <xref:System.Windows.Forms.ToolStripContainer>, который в свою очередь содержит панели на левой, правой, верхней и нижней сторонах формы для размещения и нависания элементов управления <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.StatusStrip>. Несколько элементов управления <xref:System.Windows.Forms.ToolStrip> располагаются по вертикали, если поместить их в левый или правый контейнер <xref:System.Windows.Forms.ToolStripContainer>. Они располагаются по горизонтали, если поместить их в верхний или нижний контейнер <xref:System.Windows.Forms.ToolStripContainer>. Для размещения традиционных элементов управления в форме может использоваться центральная панель <xref:System.Windows.Forms.ToolStripContentPanel> из контейнера <xref:System.Windows.Forms.ToolStripContainer>.  
   
  Все элементы управления <xref:System.Windows.Forms.ToolStripContainer> непосредственно доступны для выбора во время разработки и могут быть удалены. Контейнер <xref:System.Windows.Forms.ToolStripContainer> может расширяться и сворачиваться и изменять размеры элементов управления, которые он содержит.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "33541915"
   
  Преимуществом нависания над закреплением является то, что элементы управления <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.StatusStrip> могут совместно использовать горизонтальное или вертикальное пространство с другими элементами управления.  
   
- Вместо использования нависания большинство элементов управления <xref:System.Windows.Forms.ToolStrip> можно закрепить на форме, как и другие элементы управления. Можно также указать, что элемент управления <xref:System.Windows.Forms.ToolStrip> свободно размещается на форме, удалив его из его контейнера <xref:System.Windows.Forms.ToolStripContainer> и задав для его свойства `Dock` значение `None`, либо указать абсолютное положение, задав соответствующее свойство <xref:System.Windows.Forms.Control.Location%2A>. В разделе [как: перемещение элемента ToolStrip из контейнера ToolStripContainer в форму](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
+ Вместо использования нависания большинство элементов управления <xref:System.Windows.Forms.ToolStrip> можно закрепить на форме, как и другие элементы управления. Можно также указать, что элемент управления <xref:System.Windows.Forms.ToolStrip> свободно размещается на форме, удалив его из его контейнера <xref:System.Windows.Forms.ToolStripContainer> и задав для его свойства `Dock` значение `None`, либо указать абсолютное положение, задав соответствующее свойство <xref:System.Windows.Forms.Control.Location%2A>. См. в разделе [как: перемещение элемента ToolStrip из контейнера ToolStripContainer в форму](../../../../docs/framework/winforms/controls/how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md).  
   
  Использование одного или нескольких элементов управления <xref:System.Windows.Forms.ToolStripPanel> обеспечивает большую гибкость, особенно для приложений многодокументного интерфейса (MDI), либо если нет необходимости в контейнере <xref:System.Windows.Forms.ToolStripContainer>. <xref:System.Windows.Forms.ToolStripPanel> предоставляет место для закрепления и нависания только для элементов управления <xref:System.Windows.Forms.ToolStrip>, а не традиционных элементов управления. По умолчанию <xref:System.Windows.Forms.ToolStripPanel> не отображается в конструкторе **элементов**, но можно поместить туда, щелкнув правой кнопкой мыши **элементов**и нажмите кнопку **Выбор элементов**. Программно обращаться к <xref:System.Windows.Forms.ToolStripPanel> можно так же, как и к любому другому классу.  
   

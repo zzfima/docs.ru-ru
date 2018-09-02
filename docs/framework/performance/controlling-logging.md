@@ -6,19 +6,19 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58a9c0d02f4a24acc0df4d4a36d65e02f8bb7603
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1bee42db7b9a92723b0640d0b3747a7921b8617c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396215"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418989"
 ---
 # <a name="controlling-net-framework-logging"></a>Контроль ведения журнала .NET Framework
 Трассировку событий для Windows (ETW) можно использовать для записи событий среды CLR. Для создания и просмотра трассировки можно использовать следующие инструменты.  
   
--   Программы командной строки [Logman](http://go.microsoft.com/fwlink/?LinkId=150916) и [Tracerpt](http://go.microsoft.com/fwlink/?LinkId=150919), входящие в состав операционной системы Windows.  
+-   Программы командной строки [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) и [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919), входящие в состав операционной системы Windows.  
   
--   Программы [Xperf](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) в составе [набора средств для оценки производительности Windows](http://msdn.microsoft.com/library/windows/hardware/hh162945.aspx). Дополнительные сведения о программе Xperf см. в [блоге, посвященном производительности Windows](http://go.microsoft.com/fwlink/?LinkId=179509).  
+-   Программы [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) в составе [набора средств для оценки производительности Windows](https://msdn.microsoft.com/library/windows/hardware/hh162945.aspx). Дополнительные сведения о программе Xperf см. в [блоге, посвященном производительности Windows](https://go.microsoft.com/fwlink/?LinkId=179509).  
   
  Для регистрации событий среды CLR на компьютере должен быть установлен поставщик среды CLR. Чтобы проверить, установлен ли этот поставщик, введите в командной строке `logman query providers`. Откроется список поставщиков. В этом списке должна находиться следующая запись для поставщика среды CLR.  
   
@@ -28,12 +28,12 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- Если поставщик среды CLR не указан, его можно установить в Windows Vista и операционных системах более поздних версий с помощью программы командной строки Windows [Wevtutil](http://go.microsoft.com/fwlink/?LinkID=150915). Откройте окно командной строки от имени учетной записи администратора. В командной строке перейдите в папку [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<версия .NET>\). Эта папка содержит файл CLR-ETW.man. Чтобы установить поставщик среды CLR, в командной строке введите следующую команду:  
+ Если поставщик среды CLR не указан, его можно установить в Windows Vista и операционных системах более поздних версий с помощью программы командной строки Windows [Wevtutil](https://go.microsoft.com/fwlink/?LinkID=150915). Откройте окно командной строки от имени учетной записи администратора. В командной строке перейдите в папку [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<версия .NET>\). Эта папка содержит файл CLR-ETW.man. Чтобы установить поставщик среды CLR, в командной строке введите следующую команду:  
   
  `wevtutil im CLR-ETW.man`  
   
 ## <a name="capturing-clr-etw-events"></a>Регистрация событий ETW в среде CLR  
- Программы командной строки [Logman](http://go.microsoft.com/fwlink/?LinkId=150916) и [Xperf](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) можно использовать для захвата событий трассировки событий Windows, а программы [Tracerpt](http://go.microsoft.com/fwlink/?LinkId=150919) и [Xperf](http://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) — для расшифровки событий трассировки.  
+ Программы командной строки [Logman](https://go.microsoft.com/fwlink/?LinkId=150916) и [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) можно использовать для захвата событий трассировки событий Windows, а программы [Tracerpt](https://go.microsoft.com/fwlink/?LinkId=150919) и [Xperf](https://msdn.microsoft.com/library/windows/hardware/hh162920.aspx) — для расшифровки событий трассировки.  
   
  Чтобы включить ведение журнала, пользователь должен указать следующее.  
   
@@ -109,5 +109,5 @@ Provider                                 GUID
      Эта команда XPerf помещает события в дамп в виде файла с разделителями-запятыми (CSV-файл), который впоследствии можно просмотреть. Поскольку у разных событий поля разные, этот CSV-файл содержит несколько строк заголовков, расположенных перед данными. Первое поле каждой строки является типом события с указанием заголовка, который должен использоваться для определения остальных полей.  
   
 ## <a name="see-also"></a>См. также  
- [Набор средств производительности Windows](http://go.microsoft.com/fwlink/?LinkID=161141)  
+ [Windows Performance Toolkit](https://go.microsoft.com/fwlink/?LinkID=161141)  
  [События в среде CLR (трассировка событий Windows)](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

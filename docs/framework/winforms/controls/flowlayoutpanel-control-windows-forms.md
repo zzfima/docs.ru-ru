@@ -6,12 +6,12 @@ helpviewer_keywords:
 - layout [Windows Forms]
 - Windows Forms, arranging contents
 ms.assetid: 630c9305-9ecf-4f99-94f9-ddf06de82713
-ms.openlocfilehash: c164a77314f7127056e2367e7e9c4fac331d723d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 714613253c5d3e90750f4ffad1cab34064995877
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524404"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418056"
 ---
 # <a name="flowlayoutpanel-control-windows-forms"></a>Элемент управления FlowLayoutPanel (Windows Forms)
 Элемент управления `FlowLayoutPanel` упорядочивает содержимое в горизонтальном или вертикальном направлении. Его содержимое может быть перенесено из одной строки в следующую или из одного столбца в следующий. Кроме того, вместо переноса содержимое может обрезаться.  
@@ -25,7 +25,7 @@ ms.locfileid: "33524404"
  [Практическое руководство. Закрепление дочерних элементов управления в элементе управления FlowLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)  
  Описывается использование свойств <xref:System.Windows.Forms.Control.Anchor%2A> и <xref:System.Windows.Forms.Control.Dock%2A> для привязки и закрепления дочерних элементов управления в элементе управления <xref:System.Windows.Forms.FlowLayoutPanel>.  
   
- См. также [Пошаговое руководство: упорядочение элементов управления в Windows Forms с помощью элемента FlowLayoutPanel](http://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\)).  
+ Также см. в разделе [Пошаговое руководство: упорядочение элементов управления в Windows Forms с помощью элемента FlowLayoutPanel](https://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\)).  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.FlowLayoutPanel>  

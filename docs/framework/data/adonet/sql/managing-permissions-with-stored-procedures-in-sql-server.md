@@ -2,12 +2,12 @@
 title: Управление разрешениями с использованием хранимых процедур в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
-ms.openlocfilehash: d16a6609603cfb83fc6523606cc7ec9e7bfd8dba
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e6161195682964ac9063cbee65d26ade601ef66c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42912069"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425202"
 ---
 # <a name="managing-permissions-with-stored-procedures-in-sql-server"></a>Управление разрешениями с использованием хранимых процедур в SQL Server
 Одним из методов создания нескольких линий защиты для базы данных является реализация доступа ко всем данным с помощью хранимых процедур или определяемых пользователем функций. Отменяются или запрещаются разрешения на все базовые объекты (например, таблицы), на хранимые процедуры предоставляются разрешения EXECUTE. Тем самым создается эффективный периметр безопасности вокруг данных и объектов базы данных.  
@@ -54,7 +54,7 @@ ms.locfileid: "42912069"
   
 |Ресурс|Описание:|  
 |--------------|-----------------|  
-|[Хранимые процедуры](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) и [Внедрение кода SQL](http://go.microsoft.com/fwlink/?LinkId=98234) в электронной документации на SQL Server|Разделы описывают, как создавать хранимые процедуры и как работает внедрение кода SQL.|  
+|[Хранимые процедуры](/sql/relational-databases/stored-procedures/stored-procedures-database-engine) и [Внедрение кода SQL](https://go.microsoft.com/fwlink/?LinkId=98234) в электронной документации на SQL Server|Разделы описывают, как создавать хранимые процедуры и как работает внедрение кода SQL.|  
   
 ## <a name="see-also"></a>См. также  
  [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -64,4 +64,4 @@ ms.locfileid: "42912069"
  [Подписывание хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [Настройка разрешений с олицетворением в SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [Изменение данных с помощью хранимых процедур](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

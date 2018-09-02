@@ -2,12 +2,12 @@
 title: Вопросы разработки и развертывания
 ms.date: 03/30/2017
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
-ms.openlocfilehash: b8966ebc3608b1a784985fc707ed55e8750d0036
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d516877d1fc3a064f5275e226379b7e5011fbcdf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760350"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43425862"
 ---
 # <a name="development-and-deployment-considerations"></a>Вопросы разработки и развертывания
 В этом разделе приводятся рекомендации, которые следует учесть при разработке или развертывании приложений, основанных на платформе ADO.NET Entity Framework.  
@@ -25,4 +25,4 @@ ms.locfileid: "32760350"
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Общие сведения об Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [Начало работы](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [Средства работы с моделью EDM ADO.NET](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)
+ [Средства работы с моделью EDM ADO.NET](https://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

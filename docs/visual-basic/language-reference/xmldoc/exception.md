@@ -5,15 +5,15 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: f29b8e01239f46b0d56319ba3da1a8fe179a17e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 047805ad91d87550da80448fd10883ae58647bd6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33601157"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420058"
 ---
 # <a name="ltexceptiongt-visual-basic"></a>&lt;исключение&gt; (Visual Basic)
-Указывает, какие исключения.  
+Указывает, какие исключения могут вызываться.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -29,14 +29,14 @@ ms.locfileid: "33601157"
  Описание.  
   
 ## <a name="remarks"></a>Примечания  
- Используйте `<exception>` тег, чтобы указать, какие исключения. Этот тег применяется к определению метода.  
+ Используйте `<exception>` тег, чтобы указать, какие исключения могут вызываться. Этот тег применяется к определению метода.  
   
  Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).  
   
 ## <a name="example"></a>Пример  
- В этом примере используется `<exception>` тегов для описания исключения, `IntDivide` функция может создавать.  
+ В этом примере используется `<exception>` тегов для описания исключения, `IntDivide` может создавать функция.  
   
  [!code-vb[VbVbcnXmlDocComments#3](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/exception_1.vb)]  
   
 ## <a name="see-also"></a>См. также  
- [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)

@@ -2,12 +2,12 @@
 title: Расширенная обработка ошибок
 ms.date: 03/30/2017
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
-ms.openlocfilehash: 723b1ca9c2fa771d8bc3f337d9c4fde8c9632c68
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 72fb9885408759f5781501b548f81625d258d13c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810087"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423436"
 ---
 # <a name="advanced-error-handling"></a>Расширенная обработка ошибок
 В этом примере демонстрируется служба маршрутизации Windows Communication Foundation (WCF). Служба маршрутизации является компонентом WCF, который упрощает Включение маршрутизатора на основе содержимого в приложении. В этом образце показано, как служба маршрутизации выполняет интеллектуальное восстановление работы после ошибок с использованием транзакций и более сложных понятий обмена сообщениями, таких как многоадресная передача.  
@@ -17,7 +17,7 @@ ms.locfileid: "33810087"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\AdvancedErrorHandling`  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33810087"
 #### <a name="to-use-this-sample"></a>Использование этого образца  
   
 1.  > [!IMPORTANT]
-    >  Перед запуском этого образца установите очередь MSMQ. Если очередь MSMQ не установлена, то при запуске образца возвращается сообщение исключения. Инструкции по установке MSMQ можно найти в [Установка Message Queuing (MSMQ)](http://go.microsoft.com/fwlink/?LinkId=166437).  
+    >  Перед запуском этого образца установите очередь MSMQ. Если очередь MSMQ не установлена, то при запуске образца возвращается сообщение исключения. Инструкции по установке MSMQ можно найти в [Установка очереди сообщений (MSMQ)](https://go.microsoft.com/fwlink/?LinkId=166437).  
   
      Откройте файл AdvancedErrorHandling.sln в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
@@ -96,4 +96,4 @@ ms.locfileid: "33810087"
  Компания Contoso планирует транзакционные операции получения сообщений в службе маршрутизации, чтобы обеспечить доставку данных во всех необходимые службы даже при возникновении ошибок. Кроме того, требуется правильная автоматическая обработка ошибок и отправка предупреждения в случае, когда сообщение не удается доставить даже путем применения логики обработки ошибок. Для этого в службе маршрутизации настраивается резервное переключение на специальные конечные точки, и служба маршрутизации обрабатывает ошибки. В этом процессе выполняется создание, завершение, откат и прерывание транзакций и контекстов получения по мере необходимости.  
   
 ## <a name="see-also"></a>См. также  
- [Образцы размещения и сохраняемости образцы](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Образцы размещения AppFabric и сохраняемости](https://go.microsoft.com/fwlink/?LinkId=193961)

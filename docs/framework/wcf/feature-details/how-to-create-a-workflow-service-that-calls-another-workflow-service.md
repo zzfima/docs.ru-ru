@@ -3,11 +3,11 @@ title: Как создать службу рабочих процессов, к�
 ms.date: 03/30/2017
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
 ms.openlocfilehash: 1b30da34f7c85cccd98b18cd32b81c83630989b2
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258362"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452733"
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Как создать службу рабочих процессов, которая вызывает другую службу рабочих процессов
 

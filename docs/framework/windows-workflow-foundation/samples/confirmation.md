@@ -2,12 +2,12 @@
 title: Подтверждение
 ms.date: 03/30/2017
 ms.assetid: 8637aeaf-ac9e-49b8-93f4-da15dee45277
-ms.openlocfilehash: 334ac362333565626dd2bb8dcaede27fbab16f33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: caa712aa52da01ce44335a361fd6c9f5215316bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518851"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419494"
 ---
 # <a name="confirmation"></a>Подтверждение
 В данном образце показаны четыре общих сценария, связанных с использованием <xref:System.Activities.Statements.CompensableActivity> и подтверждением. Для демонстрации подтверждения в образце запускаются четыре рабочих процесса. Доступны декларативная и императивная версии образца.  
@@ -32,13 +32,13 @@ ms.locfileid: "33518851"
   
 3.  Проверьте следующие выходные данные:  
   
- **Явное подтверждение: начало workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: подтверждение HandlerEnd из workflowCompensableActivity2: HandlerExplicit подтверждение компенсации: начало workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: HandlerEnd компенсации из workflowCompensableActivity2: подтверждение HandlerCustom подтверждение обработчика: начало workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity3: BodyEnd из workflowCompensableActivity1: подтверждение HandlerCompensableActivity2: подтверждение HandlerCompensableActivity3: HandlerVariable подтверждение доступа в обработчике подтверждения: Начало workflowCompensableActivity1: BodyCompensableActivity1: сумма равна: 15CompensableActivity2: BodyCompensableActivity2: Добавление 7 к sumCompensableActivity2: сумма: 22End из workflowCompensableActivity2: подтверждение HandlerCompensableActivity1: HandlerCompensableActivity2 подтверждение: сумма равна: 22CompensableActivity2: после вычитания 12 сумма равна теперь: 10Press ввод для выхода.**  
+ **Явное подтверждение: начало workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: подтверждение HandlerEnd из workflowCompensableActivity2: подтверждение HandlerExplicit compensation: Start workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity1: HandlerEnd компенсации из workflowCompensableActivity2: подтверждение HandlerCustom подтверждение обработчика: начало workflowCompensableActivity1: BodyCompensableActivity2: BodyCompensableActivity3: BodyEnd из workflowCompensableActivity1: подтверждение HandlerCompensableActivity2: подтверждение HandlerCompensableActivity3: подтверждение HandlerVariable доступ в обработчике подтверждения: Начало workflowCompensableActivity1: BodyCompensableActivity1: сумма: 15CompensableActivity2: BodyCompensableActivity2: Добавление 7 к sumCompensableActivity2: теперь является сумма: 22End из workflowCompensableActivity2: подтверждение HandlerCompensableActivity1: Подтверждение HandlerCompensableActivity2: сумма: 22CompensableActivity2: после вычитания 12 сумма является теперь: 10Press ввод для выхода.**  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\Confirmation`

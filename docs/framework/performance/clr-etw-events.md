@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7d1f7ba1a0384ed93932733f12aa3306e16b790
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 983c38567667da911132217dcfda37c009dc833c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393923"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423489"
 ---
 # <a name="clr-etw-events"></a>События трассировки событий Windows в среде CLR
 В этом разделе описываются события трассировки событий Windows (ETW). С каждым событием связаны ключевое слово и уровень, которые описываются в разделе [Ключевые слова и уровни среды CLR (трассировка событий Windows)](../../../docs/framework/performance/clr-etw-keywords-and-levels.md). В среде CLR предусмотрены два поставщика событий:  
@@ -62,8 +62,8 @@ ms.locfileid: "33393923"
  Захватывают информацию, которая используется совместно с другими событиями для генерации трассировок стека после возникновения какого-либо события.  
   
 ## <a name="see-also"></a>См. также  
- [Улучшения отладки и настройки производительности с помощью ETW](http://go.microsoft.com/fwlink/?LinkId=179696)  
- [Блог производительности Windows](http://go.microsoft.com/fwlink/?LinkId=179509)  
+ [Улучшение отладки и настройки производительности с помощью ETW](https://go.microsoft.com/fwlink/?LinkId=179696)  
+ [Блог, посвященный производительности Windows](https://go.microsoft.com/fwlink/?LinkId=179509)  
  [Контроль ведения журнала .NET Framework](../../../docs/framework/performance/controlling-logging.md)  
  [Поставщики трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-providers.md)  
  [Ключевые слова и уровни среды CLR (трассировка событий Windows)](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  

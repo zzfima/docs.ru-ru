@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
-ms.openlocfilehash: a389f75ca6516f8bad55934717bee056aca65f1f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ccf95ff250cc7c23b1ff981087de0f1310472880
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757064"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418756"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>Создание таблицы данных из объекта DataView
-После получения данных из источника данных и заполнения данными таблицы <xref:System.Data.DataTable> можно по желанию отсортировать, отфильтровать или другим образом ограничить возвращаемые данные, не извлекая их повторно. Сделать это позволяет класс <xref:System.Data.DataView>. Кроме того, если вам нужно создать новую <xref:System.Data.DataTable> из <xref:System.Data.DataView>, можно использовать <xref:System.Data.DataView.ToTable%2A> метод, чтобы скопировать все строки и столбцы или подмножества данных в новую <xref:System.Data.DataTable>. Метод <xref:System.Data.DataView.ToTable%2A> имеет перегруженные формы для выполнения следующих действий.  
+После получения данных из источника данных и заполнения данными таблицы <xref:System.Data.DataTable> можно по желанию отсортировать, отфильтровать или другим образом ограничить возвращаемые данные, не извлекая их повторно. Сделать это позволяет класс <xref:System.Data.DataView>. Кроме того, если вам нужно создать новый <xref:System.Data.DataTable> из <xref:System.Data.DataView>, можно использовать <xref:System.Data.DataView.ToTable%2A> метод, чтобы скопировать все строки и столбцы либо подмножество данных в новую <xref:System.Data.DataTable>. Метод <xref:System.Data.DataView.ToTable%2A> имеет перегруженные формы для выполнения следующих действий.  
   
 -   Создание таблицы <xref:System.Data.DataTable>, содержащей столбцы, которые являются подмножеством столбцов в представлении <xref:System.Data.DataView>.  
   
--   Создание <xref:System.Data.DataTable> , включает только уникальные строки из <xref:System.Data.DataView>, аналогично ключевого слова DISTINCT в Transact-SQL.  
+-   Создание <xref:System.Data.DataTable> содержащей только уникальные строки из <xref:System.Data.DataView>, аналогично ключевому для ключевого слова DISTINCT в Transact-SQL.  
   
 ## <a name="example"></a>Пример  
- Следующий образец консольного приложения создает <xref:System.Data.DataTable> , содержащий данные из **Person.Contact** в таблицу **AdventureWorks** образца базы данных. Затем пример создает отсортированное и отфильтрованных <xref:System.Data.DataView> на основе <xref:System.Data.DataTable>. После отображения содержимого <xref:System.Data.DataTable> и <xref:System.Data.DataView>, в примере создается новый <xref:System.Data.DataTable> из <xref:System.Data.DataView> путем вызова <xref:System.Data.DataView.ToTable%2A> метод, при выборе только подмножество доступных столбцов. Наконец, пример отображает содержимое новой таблицы <xref:System.Data.DataTable>.  
+ В следующем образце консольного приложения создает <xref:System.Data.DataTable> , содержащий данные из **Person.Contact** в таблицу **AdventureWorks** образца базы данных. Затем пример создает отсортированное и отфильтрованное представление <xref:System.Data.DataView> на основе <xref:System.Data.DataTable>. После отображения содержимого таблицы <xref:System.Data.DataTable> и <xref:System.Data.DataView>, создается новая <xref:System.Data.DataTable> из <xref:System.Data.DataView> путем вызова <xref:System.Data.DataView.ToTable%2A> метод, выбрав только подмножество доступных столбцов. Наконец, пример отображает содержимое новой таблицы <xref:System.Data.DataTable>.  
   
 ```vb  
 Private Sub DemonstrateDataView()  
@@ -208,4 +208,4 @@ Console.WriteLine();
 ## <a name="see-also"></a>См. также  
  <xref:System.Data.DataView.ToTable%2A>  
  [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

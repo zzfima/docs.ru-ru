@@ -2,12 +2,12 @@
 title: Отслеживание использования с помощью текстового файла
 ms.date: 03/30/2017
 ms.assetid: 56a82682-73c2-4b91-a206-4d8bb12c561b
-ms.openlocfilehash: aa59ab8304c68873c938f42fc585be883b234ecc
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 19b4d544bc1d1c5bc9ebfa51b4ba28eb82c525d0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805802"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422893"
 ---
 # <a name="tracking-using-a-text-file"></a>Отслеживание использования с помощью текстового файла
 В этом примере показано, как расширить отслеживание в Windows Workflow Foundation (WF) путем создания настраиваемого участника отслеживания. Участниками отслеживания являются классы платформы .NET Framework, которые получают записи отслеживания от среды выполнения при их передаче. Можно создать участника отслеживания для транспортировки событий отслеживания в место назначения, требуемое для сценария. Например, участник отслеживания событий для Windows (ETW) предоставляется как часть [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Участник отслеживания в этом образце записывает записи в текстовый файл в формате XML.  
@@ -18,7 +18,7 @@ ms.locfileid: "33805802"
 |Класс|Описание|  
 |-----------|-----------------|  
 |`TextFileTrackingExtensionElement`|Элемент <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> используется для определения раздела конфигурации, используемого для настройки участника отслеживания текстового файла. Это позволяет пользователям указывать место назначения файла журнала с помощью обычных файлов конфигурации платформы .NET Framework.|  
-|`TextFileTrackingBehavior`|Поведения в WCF позволяют пользователям внедрять расширения в среде выполнения. Это поведение добавляет участника отслеживания к службе при ее запуске.|  
+|`TextFileTrackingBehavior`|Поведения в WCF позволяют пользователям внедрять расширения в среду выполнения. Это поведение добавляет участника отслеживания к службе при ее запуске.|  
 |`TextFileTrackingParticipant`|Участник отслеживания, который получает участников отслеживания во время выполнения и сохраняет их в файле журнала как XML.|  
   
 ## <a name="behavior-extension-elements-configuration"></a>Конфигурация элементов расширения поведения  
@@ -80,16 +80,16 @@ ms.locfileid: "33805802"
 12. Просмотрите отслеживаемые события в файле журнала, расположенном в каталоге данных приложения: %APPDATA%\trackingRecords.log.  
   
     > [!NOTE]
-    >  % APPDATA % является переменной среды, которая разрешает %SystemDrive%\Users\\< имя_пользователя\>\AppData\Roaming в [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], или Windows Server 2008.  
+    >  % APPDATA % является переменной среды, разрешающийся в %SystemDrive%\Users\\< имя пользователя\>\AppData\Roaming в [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], или Windows Server 2008.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\TextFileTracking`  
   
 ## <a name="see-also"></a>См. также  
- [Примеры мониторинга AppFabric](http://go.microsoft.com/fwlink/?LinkId=193959)
+ [Образцы наблюдения за AppFabric](https://go.microsoft.com/fwlink/?LinkId=193959)

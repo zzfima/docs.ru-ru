@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 728bac6985d47afdb4263f8c41a9d282dd2574b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3d5d91db9256cdfb3aa0062d66333f13797ee1bb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396417"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43424215"
 ---
 # <a name="net-performance-tips"></a>Советы по производительности .NET
 Под *производительностью* обычно понимается скорость выполнения программы. В некоторых случаях ее можно увеличить, следуя определенным основным правилам написания исходного кода. В некоторых программах важно тщательно проверить код и с помощью профилировщиков убедиться, что он выполняется максимально быстро. В других случаях такая оптимизация не требуется, поскольку код выполняется достаточно быстро в своем первоначальном виде. В этой статье описываются основные причины снижения производительности и приводятся рекомендации по ее повышению, а также ссылки на разделы с дополнительной информацией. Дополнительные сведения о планировании и измерении производительности см. в разделе [Производительность](../../../docs/framework/performance/index.md)  
@@ -30,20 +30,20 @@ ms.locfileid: "33396417"
   
 ## <a name="other-resources"></a>Другие ресурсы  
   
--   [Повышение производительности управляемого кода](http://go.microsoft.com/fwlink/?LinkId=99294)  
+-   [Повышение производительности управляемого кода](https://go.microsoft.com/fwlink/?LinkId=99294)  
   
--   [Повышение производительности управляемых приложений: учебник для начинающих](http://go.microsoft.com/fwlink/?LinkId=99295)  
+-   [Повышение производительности управляемых приложений: учебник для начинающих](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [Общие сведения о сборке мусора и советы по повышению производительности](http://go.microsoft.com/fwlink/?LinkId=99296)  
+-   [Общие сведения о сборке мусора и советы по повышению производительности](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [Советы и рекомендации по повышению производительности в приложениях .NET](http://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [Советы и рекомендации по повышению производительности в приложениях .NET](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
--   [Советы по повышению производительности от Рико Мариани](http://go.microsoft.com/fwlink/?LinkId=115679)  
+-   [Советы по повышению производительности от Рико Мариани](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
--   [Блога Вэнс Моррисон](https://blogs.msdn.microsoft.com/vancem/)
+-   [Блоге Вэнса Моррисона](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>См. также  
  [Производительность](../../../docs/framework/performance/index.md)  
- [Основные понятия программирования](http://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
+ [Основные понятия программирования](https://msdn.microsoft.com/library/65c12cca-af4f-4017-886e-2dbc00a189d6)  
  [Руководство по программированию на Visual Basic](../../visual-basic/programming-guide/index.md)  
- [Руководство по программированию на C#](http://msdn.microsoft.com/library/ac0f23a2-6bf3-4077-be99-538ae5fd3bc5)
+ [Руководство по программированию на C#](https://msdn.microsoft.com/library/ac0f23a2-6bf3-4077-be99-538ae5fd3bc5)

@@ -9,41 +9,41 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 75d9d5b6981f868c7a172edd7f23cf923fedd525
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84c5aee8d2bc7d31ebcfee98930d9a0847c527d5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557295"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420306"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Практическое руководство. Привязка к веб-службе
-В этом примере показано, как выполнить привязку для объектов, возвращенных вызовы метода веб-службы.  
+В этом примере показано, как выполнить привязку для объектов, возвращенных вызовов метода веб-службы.  
   
 ## <a name="example"></a>Пример  
- В этом примере используется [MSDN или TechNet публикации системы () содержимым MTPS](http://go.microsoft.com/fwlink/?LinkId=95677) для получения списка языков, поддерживаемых в указанный документ.  
+ В этом примере используется [службы содержимого MSDN или TechNet Publishing System (MTPS)](https://go.microsoft.com/fwlink/?LinkId=95677) для получения списка языков, поддерживаемых указанного документа.  
   
- Перед вызовом веб-службы необходимо создать ссылку на него. Для создания ссылки на веб-службу MTPS с помощью [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], выполните следующие действия:  
+ Перед вызовом метода веб-службы, необходимо создать ссылку на него. Для создания веб-ссылки MTPS службе, используя [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], выполните следующие действия:  
   
 1.  Откройте проект в [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)].  
   
-2.  Из **проекта** меню, нажмите кнопку **Add Web Reference**.  
+2.  Из **проекта** меню, щелкните **Add Web Reference**.  
   
-3.  В диалоговом окне задайте **URL-адрес** для [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
+3.  В диалоговом окне задайте **URL-адрес** для [ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl).  
   
-4.  Нажмите клавишу **Go** и затем **добавить ссылку**.  
+4.  Нажмите клавишу **Go** и затем **добавьте ссылку на**.  
   
- Затем вызовите метод веб-службы и задайте <xref:System.Windows.FrameworkElement.DataContext%2A> соответствующий элемент управления или окна для возвращаемого объекта. **GetContent** метод службы MTPS принимает ссылку на **getContentRequest** объекта. Таким образом в следующем примере сначала устанавливается объект запроса:  
+ Затем вызовите метод веб-службы и задайте <xref:System.Windows.FrameworkElement.DataContext%2A> соответствующий элемент управления или окно, чтобы возвращенный объект. **GetContent** метод службы MTPS принимает ссылку на **getContentRequest** объекта. Таким образом в следующем примере сначала задается объект запроса:  
   
  [!code-csharp[BindToWebService#Namespace](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
  [!code-vb[BindToWebService#Namespace](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
 [!code-csharp[BindToWebService#WebServiceCall](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
 [!code-vb[BindToWebService#WebServiceCall](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
- После <xref:System.Windows.FrameworkElement.DataContext%2A> было задано, можно создать привязку к свойствам объекта, <xref:System.Windows.FrameworkElement.DataContext%2A> ему было присвоено. В этом примере <xref:System.Windows.FrameworkElement.DataContext%2A> равно **getContentResponse** объект, возвращаемый **GetContent** метод. В следующем примере <xref:System.Windows.Controls.ItemsControl> связывает и отображает **языкового стандарта** значения **availableVersionsAndLocales** из **getContentResponse**.  
+ После <xref:System.Windows.FrameworkElement.DataContext%2A> задано значение, можно создать привязку к свойствам объекта, <xref:System.Windows.FrameworkElement.DataContext%2A> было присвоено. В этом примере <xref:System.Windows.FrameworkElement.DataContext%2A> присваивается **getContentResponse** объект, возвращаемый **GetContent** метод. В следующем примере <xref:System.Windows.Controls.ItemsControl> привязывается к и отображает **языкового стандарта** значения **availableVersionsAndLocales** из **getContentResponse**.  
   
  [!code-xaml[BindToWebService#Binding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
- Дополнительные сведения о структуре **getContentResponse**, в разделе [документации службы содержимого](http://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
+ Сведения о структуре **getContentResponse**, см. в разделе [документации службы содержимого](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о привязке данных](../../../../docs/framework/wpf/data/data-binding-overview.md)  

@@ -2,12 +2,12 @@
 title: 'Пользовательский кодировщик сообщений: кодировщик пользовательских текстовых сообщений'
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: 369706ecdc2e37a5fb62a448a273b045fe424df8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: aeb1690d7ead9116bd9c4afe3c64d65d8f51ad50
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808069"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418830"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>Пользовательский кодировщик сообщений: кодировщик пользовательских текстовых сообщений
 В этом примере показано, как реализовать пользовательский кодировщик текстовых сообщений с помощью Windows Communication Foundation (WCF).  
@@ -17,11 +17,11 @@ ms.locfileid: "33808069"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Text`  
   
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> (WCF) поддерживает только кодировки UTF-8, UTF-16 и Big Endean Unicode. Пользовательский кодировщик текстовых сообщений в этом образце поддерживает все поддерживаемые платформой кодировки символов, которые могут требоваться для взаимодействия. Этот образец содержит консольную программу клиента (EXE), библиотеку службы (DLL), размещаемую в службах IIS, и библиотеку кодировщика текстовых сообщений (DLL). Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ". Контракт определяется интерфейсом `ICalculator`, который предоставляет математические операции (добавить, вычесть, умножить и разделить). Клиент осуществляет синхронные вызовы заданной математической операции, а служба отправляет в ответ результат. Как клиент, так и служба используют кодировщик `CustomTextMessageEncoder` вместо кодировщика по умолчанию <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.  
+ <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> Из WCF поддерживает только кодировки UTF-8, UTF-16 и Big Endean Unicode. Пользовательский кодировщик текстовых сообщений в этом образце поддерживает все поддерживаемые платформой кодировки символов, которые могут требоваться для взаимодействия. Этот образец содержит консольную программу клиента (EXE), библиотеку службы (DLL), размещаемую в службах IIS, и библиотеку кодировщика текстовых сообщений (DLL). Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ". Контракт определяется интерфейсом `ICalculator`, который предоставляет математические операции (добавить, вычесть, умножить и разделить). Клиент осуществляет синхронные вызовы заданной математической операции, а служба отправляет в ответ результат. Как клиент, так и служба используют кодировщик `CustomTextMessageEncoder` вместо кодировщика по умолчанию <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>.  
   
  Реализация пользовательского кодировщика состоит из фабрики кодировщиков сообщений, кодировщика сообщений, элемента привязки кодировщика сообщений и обработчика конфигурации. При этом демонстрируются следующие операции.  
   
@@ -45,10 +45,10 @@ ms.locfileid: "33808069"
   
 3.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>Фабрика кодировщика сообщений и кодировщик сообщений  
- При открытии <xref:System.ServiceModel.ServiceHost> или канала клиента компонент времени разработки `CustomTextMessageBindingElement` создает фабрику `CustomTextMessageEncoderFactory`. Фабрика создает кодировщик `CustomTextMessageEncoder`. Кодировщик сообщений работает как в режиме буферизации, так и в режиме потоковой передачи. Он использует классы <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter> для чтения и записи сообщений соответственно. В отличие от оптимизированных средств чтения XML и записи (WCF), поддерживающих UTF-8, UTF-16 и Big-Endean Unicode эти средства чтения и записи поддерживают все кодировки, поддерживаемые платформой.  
+ При открытии <xref:System.ServiceModel.ServiceHost> или канала клиента компонент времени разработки `CustomTextMessageBindingElement` создает фабрику `CustomTextMessageEncoderFactory`. Фабрика создает кодировщик `CustomTextMessageEncoder`. Кодировщик сообщений работает как в режиме буферизации, так и в режиме потоковой передачи. Он использует классы <xref:System.Xml.XmlReader> и <xref:System.Xml.XmlWriter> для чтения и записи сообщений соответственно. В отличие от оптимизированных средств чтения XML и средств записи WCF, которые поддерживают только UTF-8, UTF-16 и Big-Endean Unicode этих модулей чтения и записи поддерживают все кодировки, поддерживаемые платформой.  
   
  В следующем примере кода показан кодировщик CustomTextMessageEncoder.  
   
@@ -191,11 +191,11 @@ public class CustomTextMessageEncoderFactory : MessageEncoderFactory
 ```  
   
 ## <a name="message-encoding-binding-element"></a>Элемент привязки кодирования сообщений  
- Элементы привязки обеспечивают настройку стека времени выполнения WCF. Для использования пользовательского кодировщика сообщений в приложениях WCF, требуется элемент привязки, создающий фабрику кодировщиков сообщений с соответствующими параметрами на соответствующем уровне в стеке времени выполнения.  
+ Элементы привязки обеспечивают настройку стека времени выполнения WCF. Чтобы использовать пользовательский кодировщик сообщений в приложении WCF, необходим элемент привязки, создающий фабрику кодировщиков сообщений с соответствующими параметрами на соответствующем уровне в стеке времени выполнения.  
   
  Класс `CustomTextMessageBindingElement` является производным от базового класса <xref:System.ServiceModel.Channels.BindingElement> и наследует от класса <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>. Это позволяет другим компонентам WCF распознавать этот элемент привязки как элемент привязки кодирования сообщений. Реализация <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A> возвращает экземпляр соответствующей фабрики кодировщиков сообщений с соответствующими параметрами.  
   
- Элемент `CustomTextMessageBindingElement` предоставляет параметры для `MessageVersion`, `ContentType` и `Encoding` через свойства. Кодировщик поддерживает версии Soap11Addressing и Soap12Addressing1. Значение по умолчанию - Soap11Addressing1. Значение по умолчанию `ContentType` - "text/xml". Свойство `Encoding` позволяет задать значение требуемой кодировки символов. Образец клиента и службы использует кодировку символов ISO-8859-1 (Latin1), которая не поддерживается <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> (WCF).  
+ Элемент `CustomTextMessageBindingElement` предоставляет параметры для `MessageVersion`, `ContentType` и `Encoding` через свойства. Кодировщик поддерживает версии Soap11Addressing и Soap12Addressing1. Значение по умолчанию - Soap11Addressing1. Значение по умолчанию `ContentType` - "text/xml". Свойство `Encoding` позволяет задать значение требуемой кодировки символов. Пример клиента и службы использует кодировку символов ISO-8859-1 (Latin1), которая не поддерживается <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> из WCF.  
   
  В следующем коде показано, как программным способом создать привязку, использующую пользовательский кодировщик текстовых сообщений.  
   
@@ -211,7 +211,7 @@ CustomBinding binding = new CustomBinding(bindingElements);
 ## <a name="adding-metadata-support-to-the-message-encoding-binding-element"></a>Добавление поддержки метаданных в элемент привязки кодирования сообщений  
  Любой тип, унаследованный от класса <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>, отвечает за обновление версии привязки протокола SOAP в документе WSDL, созданном для службы. Этого можно добиться, реализовав метод `ExportEndpoint` в интерфейсе <xref:System.ServiceModel.Description.IWsdlExportExtension>, а затем изменив созданный язык WSDL. В этом образце `CustomTextMessageBindingElement` использует логику экспорта WSDL из `TextMessageEncodingBinidngElement`.  
   
- В этом образце конфигурация клиента настраивается вручную. Для создания конфигурации клиента нельзя использовать средство Svcutil.exe, так как элемент `CustomTextMessageBindingElement` не экспортирует утверждение политики для описания своего поведения. Обычно необходимо реализовать интерфейс <xref:System.ServiceModel.Description.IPolicyExportExtension> в пользовательском элементе привязки для экспорта пользовательского утверждения политики, которое описывает поведение или возможности, реализуемые элементом привязки. Пример того, как экспортировать утверждения политики для пользовательского элемента привязки см. в разделе [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.  
+ В этом образце конфигурация клиента настраивается вручную. Для создания конфигурации клиента нельзя использовать средство Svcutil.exe, так как элемент `CustomTextMessageBindingElement` не экспортирует утверждение политики для описания своего поведения. Обычно необходимо реализовать интерфейс <xref:System.ServiceModel.Description.IPolicyExportExtension> в пользовательском элементе привязки для экспорта пользовательского утверждения политики, которое описывает поведение или возможности, реализуемые элементом привязки. Пример экспорта утверждения политика для пользовательского элемента привязки, см. в разделе [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца.  
   
 ## <a name="message-encoding-binding-configuration-handler"></a>Обработчик конфигурации привязки кодировщика сообщений  
  В предыдущем разделе показано, как использовать пользовательский кодировщик текстовых сообщений программно. `CustomTextMessageEncodingBindingSection` реализует обработчик конфигурации, позволяющий задать использование пользовательского кодировщика текстовых сообщений в файле конфигурации. Класс `CustomTextMessageEncodingBindingSection` является производным от класса <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>. Свойство `BindingElementType` информирует систему конфигурации о типе элемента конфигурации, который следует создать для этого раздела.  

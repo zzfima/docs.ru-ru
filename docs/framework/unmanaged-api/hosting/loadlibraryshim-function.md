@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8936fa3d22cfde4c2536fccf9d46c1990133db1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5fe1ba15f8a9f8ee79582158209049c1e502a61d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445316"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418659"
 ---
 # <a name="loadlibraryshim-function"></a>Функция LoadLibraryShim
-Загружает заданную версию библиотеки DLL, которая включается в распространяемый пакет платформы .NET Framework.  
+Загружает указанную версию библиотеки DLL, включенный в распространяемый пакет .NET Framework.  
   
- Эта функция рекомендуется к использованию в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Используйте [ICLRRuntimeInfo::LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) метод вместо него.  
+ Эта функция устарели в [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]. Используйте [ICLRRuntimeInfo::LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md) метод вместо этого.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,10 +42,10 @@ HRESULT LoadLibraryShim (
   
 #### <a name="parameters"></a>Параметры  
  `szDllName`  
- [in] Нулем строка, представляющая имя библиотеки DLL, загружаемой библиотеки .NET Framework.  
+ [in] Нулем строка, представляющая имя библиотеки DLL, загружаемых из библиотеки .NET Framework.  
   
  `szVersion`  
- [in] Нулем строка, представляющая версию библиотеки DLL для загрузки. Если `szVersion` равен null, выбранной для загрузки последней версии, указанной библиотеки DLL, которая меньше, чем версия 4 версии. То есть, все версии меньше, чем версия 4 учитываются, если `szVersion` имеет значение null, и если установлен без версии меньше, чем версии 4, не загружается. Это гарантирует, что установка [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] не влияет на существующие приложения или компоненты. См. в записи [SxS незавершенного и быстрый запуск миграции](http://go.microsoft.com/fwlink/?LinkId=200329) в блоге команды среды CLR.  
+ [in] Нулем строка, представляющая версию библиотеки DLL для загрузки. Если `szVersion` имеет значение null, версии, для загрузки выбрана последняя версия указанной библиотеки DLL, которая меньше, чем версии 4. То есть учитываются все версии, равно или больше, чем версии 4, если `szVersion` имеет значение null, и если установлена не версия ниже версии 4, библиотеки DLL не загружается. Это позволяет обеспечить эту установку [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] не влияет на существующие приложения или компоненты. См. в записи [In-Proc SxS и быстрого запуска миграции](https://go.microsoft.com/fwlink/?LinkId=200329) в блоге группы CLR.  
   
  `pvReserved`  
  Зарезервировано для будущего использования.  
@@ -54,25 +54,25 @@ HRESULT LoadLibraryShim (
  [out] Указатель на дескриптор модуля.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает стандартные коды ошибок модели объектов компонентов (COM), как определено в файле WinError.h, кроме следующих значений.  
+ Этот метод возвращает стандартные коды ошибок объектов модели компонентов (COM), как определено в файле WinError.h, помимо следующих значений.  
   
-|Код возврата|Описание|  
+|Код возврата|Описание:|  
 |-----------------|-----------------|  
 |S_OK|Метод завершился успешно.|  
-|CLR_E_SHIM_RUNTIMELOAD|Загрузка `szDllName` требует загрузки не удается загрузить необходимую версию среды CLR и общеязыковой среды выполнения (CLR).|  
+|CLR_E_SHIM_RUNTIMELOAD|Загрузка `szDllName` требуется загрузка общеязыковой среды выполнения (CLR) и необходимую версию среды CLR не удается загрузить.|  
   
 ## <a name="remarks"></a>Примечания  
- Эта функция используется для загрузки библиотек DLL, включенных в распространяемый пакет платформы .NET Framework. Она не загружает библиотеки DLL, созданного пользователем.  
+ Эта функция используется для загрузки библиотеки DLL, которые включаются в распространяемый пакет .NET Framework. Она не загружает библиотеки DLL, созданное пользователем.  
   
 > [!NOTE]
->  Начиная с .NET Framework версии 2.0, загрузка Fusion.dll среда CLR для загрузки. Это так, как функции в Fusion.dll теперь являются оболочками, в реализации которых предоставляются средой выполнения.  
+>  Начиная с .NET Framework версии 2.0, загрузка Fusion.dll приводит к среде CLR для загрузки. Это обусловлено функций в Fusion.dll теперь являются оболочками, реализация которых предоставляются средой выполнения.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** MSCorEE.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Устаревшие функции размещения CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

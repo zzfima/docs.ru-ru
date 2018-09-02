@@ -2,18 +2,18 @@
 title: Владение и отделение пользователей от схем в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 69d0c0dee6141b80908c8cdc36dfe21ff318f423
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b1cda211fdc89732afa8eed1eaaf2c98309a969
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358411"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421581"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Владение и отделение пользователей от схем в SQL Server
 Основным принципом безопасности SQL Server является то, что владельцы объектов имеют неотзываемые разрешения на их администрирование. Нельзя удалять права доступа у владельцев объектов. Также нельзя удалять пользователей из базы данных, если они владеют в ней объектами.  
   
 ## <a name="user-schema-separation"></a>Отделение пользователей от схем  
- Отделение пользователей от схем обеспечивает дополнительную гибкость в управлении разрешениями объектов базы данных. Объект *схемы* представляет собой именованный контейнер для объектов базы данных, который позволяет сгруппировать объекты в отдельных пространствах имен. Например, образец базы данных AdventureWorks содержит схемы для Production, Sales и HumanResources.  
+ Отделение пользователей от схем обеспечивает дополнительную гибкость в управлении разрешениями объектов базы данных. Объект *схемы* представляет собой именованный контейнер для объектов базы данных, который позволяет выполнять группирование по отдельным пространствам имен. Например, образец базы данных AdventureWorks содержит схемы для Production, Sales и HumanResources.  
   
  Четырехкомпонентный синтаксис ссылок на объекты указывает имя схемы.  
   
@@ -53,9 +53,9 @@ Server.Database.DatabaseSchema.DatabaseObject
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения о принадлежности объектов и схемах см. в следующих документах.  
   
-|Ресурс|Описание|  
+|Ресурс|Описание:|  
 |--------------|-----------------|  
-|[Отделение пользователей от схем](http://msdn.microsoft.com/library/ms190387.aspx) в электронной документации по SQL Server|Описывает изменения, возникшие из-за отделения пользователей от схем. Сюда входит новое поведение, его влияние на владение, представления каталогов и разрешения.|  
+|[Отделение пользователей от схем](https://msdn.microsoft.com/library/ms190387.aspx) в электронной документации по SQL Server|Описывает изменения, возникшие из-за отделения пользователей от схем. Сюда входит новое поведение, его влияние на владение, представления каталогов и разрешения.|  
   
 ## <a name="see-also"></a>См. также  
  [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -63,4 +63,4 @@ Server.Database.DatabaseSchema.DatabaseObject
  [Проверка подлинности в SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
  [Роли сервера и базы данных в SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
  [Авторизация и разрешения в SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

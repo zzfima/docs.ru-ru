@@ -2,20 +2,20 @@
 title: Привязка данных в клиенте Windows Forms
 ms.date: 03/30/2017
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
-ms.openlocfilehash: 38991390f2d0dd272b8d07041b61e6cf16db0cae
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a0eaa24cb521dfe4f0d6906d2d8bbbddd3a0d2e4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804382"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421161"
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Привязка данных в клиенте Windows Forms
-В этом примере показано, как выполнить привязку данных, возвращенных службой Windows Communication Foundation (WCF), в приложении Windows Forms.  
+В этом примере показано, как выполнить привязку к данным, возвращенных службой Windows Communication Foundation (WCF), в приложении Windows Forms.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного примера приведены в конце этого раздела.  
   
- В этом образце показана служба, которая реализует контракт, определяющий шаблон взаимодействия "запрос-ответ". Образец состоит из клиентского приложения Windows Forms (.exe) и службы WCF, размещенной Internet Information Services (IIS).  
+ В этом образце показана служба, которая реализует контракт, определяющий шаблон взаимодействия "запрос-ответ". Образец состоит из клиента приложение Windows Forms (.exe) и службы WCF, размещенной по Internet Information Services (IIS).  
   
  Контракт определяется интерфейсом `IWeatherService`, который предоставляет операцию с именем `GetWeatherData`. Данная операция принимает массив городов и возвращает массив объектов `WeatherData`, представляющих максимальные и минимальные прогнозируемые значения температуры для городов.  
   
@@ -27,14 +27,14 @@ ms.locfileid: "33804382"
   
 2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WindowsForms`  
   

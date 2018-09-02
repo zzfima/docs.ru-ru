@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - DataRepeater, topic list
 ms.assetid: 68e0cf5e-e2cb-480a-80cc-d13eb6c9b3dd
-ms.openlocfilehash: 91a0f8c3dcb4999d2b3d4491106c978de940344a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d317310a7ae9369fab32acfe30a61d2c20c96c2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591042"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422521"
 ---
 # <a name="datarepeater-control-visual-studio"></a>Элемент управления DataRepeater (Visual Studio)
 Элемент управления <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> из Visual Basic Power Pack является прокручиваемым контейнером для элементов управления, отображающих повторяющиеся данные, например строки в таблице базы данных. Его можно использовать в качестве альтернативы элементу управления <xref:System.Windows.Forms.DataGridView> , если требуется больший контроль над макетом данных.  
   
- Элементы управления PowerPack больше не включены в Visual Studio, но их можно скачать в [Центре загрузки](http://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Элементы управления PowerPack больше не включены в Visual Studio, но их можно скачать [центра загрузки](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "33591042"
  [Практическое руководство. Поиск данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)  
  Демонстрирует реализацию возможностей поиска в элементе управления `DataRepeater` .  
   
- [Как: создать Главная и подчиненная формы с помощью двух элементов управления DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
+ [Практическое: создать форму «основной/подробности» с помощью двух элементов управления DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
  Демонстрирует отображение связанных записей с помощью двух элементов управления `DataRepeater` .  
   
  [Пошаговое руководство. Отображение данных в элементе управления DataRepeater](../../../visual-basic/developing-apps/windows-forms/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio.md)  

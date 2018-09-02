@@ -2,12 +2,12 @@
 title: Каналы WCF с поддержкой ReceiveContext
 ms.date: 03/30/2017
 ms.assetid: d990d119-7321-4b8c-852b-10256f59f9b0
-ms.openlocfilehash: 3e5ac914ae4d0c97ed617ea4a8d5a893ec740179
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d7f80d0874606129876fbf7dfa30c0327680b922
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502938"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43442750"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>Каналы WCF с поддержкой ReceiveContext
 Данный образец демонстрирует применение каналов WCF с поддержкой <xref:System.ServiceModel.Channels.ReceiveContext>. Образец реализует службу для нахождения произведения двух чисел с помощью канала NetMSMQ.  
@@ -19,7 +19,7 @@ ms.locfileid: "33502938"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец находится в следующем каталоге:  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец находится в следующем каталоге:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\ReceiveContextProductGenerator`  
   
@@ -29,11 +29,11 @@ ms.locfileid: "33502938"
   
     1.  Установка службы MSMQ под управлением [!INCLUDE[lserver](../../../../includes/lserver-md.md)].  
   
-        1.  В **диспетчера сервера**, нажмите кнопку **функции**.  
+        1.  В **диспетчера серверов**, нажмите кнопку **функции**.  
   
-        2.  В правой панели в разделе **Сводка компонентов**, нажмите кнопку **добавить компоненты**.  
+        2.  В области справа в разделе **ׁגמהךא**, нажмите кнопку **добавить компоненты**.  
   
-        3.  В появившемся окне разверните **очереди сообщений**.  
+        3.  В появившемся окне разверните **Message Queuing**.  
   
         4.  Разверните **службы очереди сообщений**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33502938"
   
         2.  Нажмите кнопку **программы** и затем в разделе **программы и компоненты**, нажмите кнопку **Включение и отключение компонентов Windows**.  
   
-        3.  Разверните **сервер очереди сообщений Microsoft (MSMQ)**, разверните **ядро сервера очереди сообщений Microsoft (MSMQ)**, а затем установите флажки для следующих функций очереди сообщений для установки:  
+        3.  Разверните **сервер очереди сообщений Microsoft (MSMQ)**, разверните **ядро сервера очереди сообщений Майкрософт (MSMQ)** и затем установите флажки для следующих возможностей очереди сообщений для установки:  
   
             -   Сервер службы очередей сообщений  
   

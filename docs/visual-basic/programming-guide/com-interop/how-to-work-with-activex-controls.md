@@ -5,34 +5,34 @@ helpviewer_keywords:
 - Toolbox, adding controls
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
-ms.openlocfilehash: e5fe4109edfcb96704f3a39e4dce5aa7a4287e33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 740f2c899e7548829e4822bbfb56c7d61d64777a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640538"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421819"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Практическое руководство. Работа с элементами ActiveX (Visual Basic)
-Элементы управления ActiveX являются компоненты COM или объекты, которые можно вставить в веб-страницы или другое приложение для использования упакованных функциональных возможностей, запрограммированных другим пользователем. Элементы управления ActiveX, разработанные для Visual Basic 6.0 и более ранних версиях можно использовать для добавления возможностей в **элементов** из Visual Studio.  
+Элементы управления ActiveX являются компоненты COM или объекты, которые можно вставить в веб-страницы или другое приложение для использования упакованных функциональных возможностей, кто-то другой запрограммированных. Элементы управления ActiveX, разработанные для Visual Basic 6.0 и более ранних версий можно использовать для добавления возможностей в **элементов** из Visual Studio.  
   
-### <a name="to-add-activex-controls-to-the-toolbox"></a>Чтобы добавить элементы управления ActiveX на панель элементов  
+### <a name="to-add-activex-controls-to-the-toolbox"></a>Для добавления элементов управления ActiveX на панель элементов  
   
-1.  На **средства** меню, нажмите кнопку **Выбор элементов панели элементов**.  
+1.  На **средства** меню, щелкните **Выбор элементов панели элементов**.  
   
      **Выбор элементов панели элементов** откроется диалоговое окно.  
   
 2.  Нажмите кнопку **COM-компонентов** вкладки.  
   
-3.  Установите флажок рядом с элементом управления ActiveX, которые вы хотите использовать и нажмите кнопку **ОК**.  
+3.  Установите флажок рядом с элементом управления ActiveX, вы хотите использовать и нажмите кнопку **ОК**.  
   
-     Новый элемент управления отображается с другими инструментами в **элементов**.  
+     Новый элемент управления отображается с другими средствами в **элементов**.  
   
     > [!NOTE]
-    >  Программа Aximp для создания сборки взаимодействия для элементов управления ActiveX вручную. Дополнительные сведения см. в разделе [Aximp.exe (импортера элементов управления ActiveX Windows Forms)](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0).  
+    >  Чтобы вручную создать сборку взаимодействия для элементов управления ActiveX, можно использовать программу Aximp. Дополнительные сведения см. в разделе [Aximp.exe (Windows Forms ActiveX программа импорта элементов)](https://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0).  
   
 ## <a name="see-also"></a>См. также  
  [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)  
  [Практическое руководство. Добавление элементов управления ActiveX в формы Windows Forms](../../../framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
- [Aximp.exe (программа импорта элементов ActiveX форм Windows Forms)](http://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0)  
+ [Aximp.exe (программа импорта элементов ActiveX форм Windows Forms)](https://msdn.microsoft.com/library/482c0d83-7144-4497-b626-87d2351b78d0)  
  [Вопросы размещения элемента управления ActiveX в форме Windows Forms](../../../framework/winforms/controls/considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
  [Устранение неполадок взаимодействия](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)

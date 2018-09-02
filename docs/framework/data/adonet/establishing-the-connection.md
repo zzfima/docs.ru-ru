@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: a416994e5d5a1be5da9571d9f8e7564f0f14f238
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 29db884a88f5150cd93571ba8fa7bf72be2b8c69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766144"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423680"
 ---
 # <a name="establishing-the-connection"></a>Установка подключения
-Для создания соединения с Microsoft SQL Server используется объект <xref:System.Data.SqlClient.SqlConnection> поставщика данных .NET Framework для SQL Server. Для соединения с источником данных OLE DB используется объект <xref:System.Data.OleDb.OleDbConnection> поставщика данных .NET Framework для OLE DB. Для соединения с источником данных используется объект <xref:System.Data.Odbc.OdbcConnection> поставщика данных .NET Framework для ODBC. Для соединения с источником данных Oracle используется объект <xref:System.Data.OracleClient.OracleConnection> поставщика данных .NET Framework для Oracle. Безопасное хранение и извлечение строк подключения см. в разделе [Защита сведений о соединении](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
+Для создания соединения с Microsoft SQL Server используется объект <xref:System.Data.SqlClient.SqlConnection> поставщика данных .NET Framework для SQL Server. Для соединения с источником данных OLE DB используется объект <xref:System.Data.OleDb.OleDbConnection> поставщика данных .NET Framework для OLE DB. Для соединения с источником данных используется объект <xref:System.Data.Odbc.OdbcConnection> поставщика данных .NET Framework для ODBC. Для соединения с источником данных Oracle используется объект <xref:System.Data.OracleClient.OracleConnection> поставщика данных .NET Framework для Oracle. Для безопасного хранения и извлечения строки подключения, см. в разделе [Защита сведений о соединении](../../../../docs/framework/data/adonet/protecting-connection-information.md).  
   
 ## <a name="closing-connections"></a>Закрытие соединений  
- Рекомендуется всегда закрывать соединение после использования, чтобы обеспечить его возврат в пул. Блок `Using` в Visual Basic или C# автоматически удаляет соединение при выходе в коде из блока даже при наличии необработанного исключения. В разделе [с помощью инструкции](~/docs/csharp/language-reference/keywords/using-statement.md) и [инструкции Using](~/docs/visual-basic/language-reference/statements/using-statement.md) для получения дополнительной информации.  
+ Рекомендуется всегда закрывать соединение после использования, чтобы обеспечить его возврат в пул. Блок `Using` в Visual Basic или C# автоматически удаляет соединение при выходе в коде из блока даже при наличии необработанного исключения. См. в разделе [инструкцией](~/docs/csharp/language-reference/keywords/using-statement.md) и [Оператор Using](~/docs/visual-basic/language-reference/statements/using-statement.md) Дополнительные сведения.  
   
- Также можно использовать методы `Close` или `Dispose` объекта соединения для используемого поставщика. Соединения, которые явно не закрыты, нельзя добавить или вернуть в пул. Например, соединение, которое вышло за пределы области, но явно закрыто не было, будет возвращено в пул соединений только в том случае, если был достигнут максимальный размер этого пула, а соединение еще действует. Дополнительные сведения см. в разделе [OLE DB, ODBC и Oracle пулов соединений](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md).  
+ Также можно использовать методы `Close` или `Dispose` объекта соединения для используемого поставщика. Соединения, которые явно не закрыты, нельзя добавить или вернуть в пул. Например, соединение, которое вышло за пределы области, но явно закрыто не было, будет возвращено в пул соединений только в том случае, если был достигнут максимальный размер этого пула, а соединение еще действует. Дополнительные сведения см. в разделе [OLE DB, ODBC и Oracle организация пулов соединений](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md).  
   
 > [!NOTE]
 >  Не вызывайте `Close` или `Dispose` на **подключения**, **DataReader**, или любого другого управляемого объекта в `Finalize` метод класса. В методе завершения следует только освобождать неуправляемые ресурсы, которыми ваш класс непосредственно владеет. Если класс не владеет какими-либо неуправляемыми ресурсами, не включайте в его определение метод `Finalize`. Дополнительные сведения см. в разделе [мусора](../../../../docs/standard/garbage-collection/index.md).  
@@ -27,7 +27,7 @@ ms.locfileid: "32766144"
 >  События входа в систему и выхода из системы не вызываются на сервере при выборке подключения из пула подключений и при возврате его в пул подключений, поскольку при возврате в пул подключений подключение фактически не закрывается. Дополнительные сведения см. в разделе [Пулы подключений SQL Server (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ## <a name="connecting-to-sql-server"></a>Соединение с SQL Server  
- Поставщик данных .NET Framework для SQL Server поддерживает формат строки соединения, аналогичный формату строки соединения OLE DB (ADO). Сведения о допустимых именах и значениях формата строки см. в свойстве <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> объекта <xref:System.Data.SqlClient.SqlConnection>. Можно также использовать класс <xref:System.Data.SqlClient.SqlConnectionStringBuilder> для создания синтаксически правильных строк соединения во время выполнения. Дополнительные сведения см. в разделе [построители строк соединения](../../../../docs/framework/data/adonet/connection-string-builders.md).  
+ Поставщик данных .NET Framework для SQL Server поддерживает формат строки соединения, аналогичный формату строки соединения OLE DB (ADO). Сведения о допустимых именах и значениях формата строки см. в свойстве <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> объекта <xref:System.Data.SqlClient.SqlConnection>. Можно также использовать класс <xref:System.Data.SqlClient.SqlConnectionStringBuilder> для создания синтаксически правильных строк соединения во время выполнения. Дополнительные сведения см. в статье [Connection String Builders](../../../../docs/framework/data/adonet/connection-string-builders.md) (Построители строк подключения).  
   
  В следующем примере кода демонстрируется способ создания и открытия соединения с базой данных SQL Server.  
   
@@ -51,14 +51,14 @@ using (SqlConnection connection = new SqlConnection(connectionString))
 ### <a name="integrated-security-and-aspnet"></a>Встроенная безопасность и ASP.NET  
  Встроенная безопасность SQL Server (именуемая также доверительными соединениями) обеспечивает защиту при соединении с SQL Server, так как не отображает идентификатор пользователя и пароль в строке соединения, поэтому является рекомендуемым методом проверки подлинности соединения. Встроенная безопасность основана на использовании текущего идентификатора безопасности, или маркера выполняемого процесса. В приложениях рабочего стола, как правило, используется идентификатор текущего, вошедшего в систему пользователя.  
   
- Идентификатор безопасности приложений ASP.NET может быть настроен на получение одного из нескольких различных параметров. Чтобы лучше понять удостоверения безопасности, приложение ASP.NET при подключении к SQL Server, см. [олицетворение ASP.NET](http://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d), [проверки подлинности ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1), и [как: доступа SQL Сервер Windows с помощью встроенной безопасности](http://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5).  
+ Идентификатор безопасности приложений ASP.NET может быть настроен на получение одного из нескольких различных параметров. Чтобы лучше понять удостоверением безопасности, которое приложение ASP.NET использует при соединении с SQL Server, см. в разделе [олицетворение ASP.NET](https://msdn.microsoft.com/library/a0cb3024-562f-4184-9d3c-095504787d3d), [проверки подлинности ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1), и [как: Access SQL С помощью Windows Server встроенная система безопасности](https://msdn.microsoft.com/library/683f9c9f-4375-4de6-8111-943c4423fde5).  
   
 ## <a name="connecting-to-an-ole-db-data-source"></a>Соединение с источником данных OLE DB  
- Поставщик данных .NET Framework для OLE DB предоставляет возможность подключения к данным источников данных OLE DB (используя SQLOLEDB, поставщик OLE DB для SQL Server), с помощью **OleDbConnection** объекта.  
+ Поставщик данных .NET Framework для OLE DB предоставляет возможность подключения к данным источников данных OLE DB (используя SQLOLEDB, поставщик OLE DB для SQL Server) с помощью **OleDbConnection** объекта.  
   
  Формат строки соединения поставщика данных .NET Framework для OLE DB идентичен формату строки соединения, используемому в ADO, за исключением следующего.  
   
--   **Поставщика** требуется ключевое слово.  
+-   **Поставщика** ключевое слово является обязательным.  
   
 -   **URL-адрес**, **удаленного поставщика**, и **удаленного сервера** ключевые слова не поддерживаются.  
   
@@ -88,12 +88,12 @@ using (OleDbConnection connection =
 ```  
   
 ## <a name="do-not-use-universal-data-link-files"></a>Отказ от использования файлов в формате UDL  
- Можно указать сведения о соединении для **OleDbConnection** в файле универсальной Data Link (UDL); Однако вам следует избегать. UDL-файлы не подвергаются шифрованию, и строки соединения хранятся в них в виде простого текста. Так как UDL-файл представляет собой внешний файловый ресурс для приложения, его нельзя защитить средствами .NET Framework.  
+ Это можно указать сведения о соединении для **OleDbConnection** в файле универсальной Data Link (UDL); тем не менее вам следует избегать. UDL-файлы не подвергаются шифрованию, и строки соединения хранятся в них в виде простого текста. Так как UDL-файл представляет собой внешний файловый ресурс для приложения, его нельзя защитить средствами .NET Framework.  
   
 ## <a name="connecting-to-an-odbc-data-source"></a>Соединение с источником данных ODBC  
  Поставщик данных .NET Framework для ODBC обеспечивает возможность подключения к данным источников данных ODBC с помощью **OdbcConnection** объекта.  
   
- Формат строки соединения поставщика данных .NET Framework для ODBC создан с учетом настолько полного согласования с форматом строки соединения ODBC, насколько это возможно. Также можно указать имя источника данных ODBC (DSN). Дополнительные сведения о **OdbcConnection** , в разделе <xref:System.Data.Odbc.OdbcConnection>.  
+ Формат строки соединения поставщика данных .NET Framework для ODBC создан с учетом настолько полного согласования с форматом строки соединения ODBC, насколько это возможно. Также можно указать имя источника данных ODBC (DSN). Дополнительные сведения о **OdbcConnection** , см. в разделе <xref:System.Data.Odbc.OdbcConnection>.  
   
  В следующем примере кода демонстрируется способ создания и открытия соединения с источником данных ODBC.  
   
@@ -116,9 +116,9 @@ using (OdbcConnection connection =
 ```  
   
 ## <a name="connecting-to-an-oracle-data-source"></a>Соединение с источником данных Oracle  
- Поставщик данных .NET Framework для Oracle обеспечивает возможность подключения к источникам данных Oracle, используя **OracleConnection** объекта.  
+ Поставщик данных .NET Framework для Oracle предоставляет возможность подключения к источникам данных Oracle, с помощью **OracleConnection** объекта.  
   
- Формат строки соединения поставщика данных .NET Framework для Oracle создан с учетом настолько полного согласования с форматом строки соединения поставщика OLE DB для Oracle (MSDAORA), насколько это возможно. Дополнительные сведения о **OracleConnection**, в разделе <xref:System.Data.OracleClient.OracleConnection>.  
+ Формат строки соединения поставщика данных .NET Framework для Oracle создан с учетом настолько полного согласования с форматом строки соединения поставщика OLE DB для Oracle (MSDAORA), насколько это возможно. Дополнительные сведения о **OracleConnection**, см. в разделе <xref:System.Data.OracleClient.OracleConnection>.  
   
  В следующем примере кода демонстрируется способ создания и открытия соединения с источником данных Oracle.  
   
@@ -146,4 +146,4 @@ nwindConn.Open();
  [Подключение к источнику данных](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [Строки подключения](../../../../docs/framework/data/adonet/connection-strings.md)  
  [Организация пулов соединений OLE DB, ODBC и Oracle](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

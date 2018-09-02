@@ -12,15 +12,15 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: abb5733ed54ea430ba161db5ea2dcb33e99298ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d860062814a447830e1237f4fc2c1ae0d223e9e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566916"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43423693"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Рисование с помощью объектов Image, Drawing и Visual
-В этом разделе описывается использование <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, и <xref:System.Windows.Media.VisualBrush> объектов Закраска области с изображением, <xref:System.Windows.Media.Drawing>, или <xref:System.Windows.Media.Visual>.  
+В этом разделе описывается использование <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, и <xref:System.Windows.Media.VisualBrush> объекты Заливка области с изображением, <xref:System.Windows.Media.Drawing>, или <xref:System.Windows.Media.Visual>.  
     
   
 <a name="prereqs"></a>   
@@ -29,16 +29,16 @@ ms.locfileid: "33566916"
   
 <a name="image"></a>   
 ## <a name="paint-an-area-with-an-image"></a>Закрашивание области с помощью Image  
- <xref:System.Windows.Media.ImageBrush> Закрашивает область с <xref:System.Windows.Media.ImageSource>. Наиболее распространенным типом <xref:System.Windows.Media.ImageSource> для использования с <xref:System.Windows.Media.ImageBrush> — <xref:System.Windows.Media.Imaging.BitmapImage>, описывающей растрового изображения. Можно использовать <xref:System.Windows.Media.DrawingImage> для рисования с помощью <xref:System.Windows.Media.Drawing> , но проще использовать <xref:System.Windows.Media.DrawingBrush> вместо него. Дополнительные сведения о <xref:System.Windows.Media.ImageSource> объектов, в разделе [Imaging Обзор](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md).  
+ <xref:System.Windows.Media.ImageBrush> Закрашивает область с <xref:System.Windows.Media.ImageSource>. Это наиболее распространенный тип <xref:System.Windows.Media.ImageSource> для использования с <xref:System.Windows.Media.ImageBrush> является <xref:System.Windows.Media.Imaging.BitmapImage>, которая описывает растрового изображения. Можно использовать <xref:System.Windows.Media.DrawingImage> для заполнения с помощью <xref:System.Windows.Media.Drawing> , но проще использовать <xref:System.Windows.Media.DrawingBrush> вместо этого. Дополнительные сведения о <xref:System.Windows.Media.ImageSource> объектов, см. в разделе [Обзор работы с образами](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md).  
   
- Рисование с <xref:System.Windows.Media.ImageBrush>, создание <xref:System.Windows.Media.Imaging.BitmapImage> и использовать его для загрузки содержимого точечного рисунка. Затем с помощью <xref:System.Windows.Media.Imaging.BitmapImage> для задания <xref:System.Windows.Media.ImageBrush.ImageSource%2A> свойство <xref:System.Windows.Media.ImageBrush>. Наконец, примените <xref:System.Windows.Media.ImageBrush> объекту рисования.  В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], можно просто задать <xref:System.Windows.Media.ImageBrush.ImageSource%2A> свойство <xref:System.Windows.Media.ImageBrush> на путь к загружаемому изображению.  
+ Для заполнения с помощью <xref:System.Windows.Media.ImageBrush>, создание <xref:System.Windows.Media.Imaging.BitmapImage> и используйте его для загрузки содержимого точечного рисунка. Затем с помощью <xref:System.Windows.Media.Imaging.BitmapImage> присвоить <xref:System.Windows.Media.ImageBrush.ImageSource%2A> свойство <xref:System.Windows.Media.ImageBrush>. Наконец, примените <xref:System.Windows.Media.ImageBrush> на объект, который нужно нарисовать.  В [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], можно просто задать <xref:System.Windows.Media.ImageBrush.ImageSource%2A> свойство <xref:System.Windows.Media.ImageBrush> на путь к загружаемому изображению.  
   
- Как и все <xref:System.Windows.Media.Brush> объектов, <xref:System.Windows.Media.ImageBrush> можно использовать для рисования объектов, таких как фигур, панелей, элементов управления и текста. На следующем рисунке показан некоторые эффекты, которые могут быть получены с <xref:System.Windows.Media.ImageBrush>.  
+ Как и все <xref:System.Windows.Media.Brush> объектов, <xref:System.Windows.Media.ImageBrush> может использоваться для рисования объектов, таких как фигуры, панели, элементы управления и текст. На следующем рисунке показан некоторые эффекты, которые могут быть обеспечены <xref:System.Windows.Media.ImageBrush>.  
   
  ![Примеры вывода ImageBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-imagebrushexamples.gif "wcpsdk_mmgraphics_imagebrushexamples")  
 Объекты, заполненные при помощи ImageBrush  
   
- По умолчанию <xref:System.Windows.Media.ImageBrush> растягивает изображения до полного заполнения области закрашиваемой и может искажать изображение, если область рисования имеет отличные от изображения пропорции. Это поведение можно изменить, изменив <xref:System.Windows.Media.TileBrush.Stretch%2A> свойства со значения по умолчанию <xref:System.Windows.Media.Stretch.Fill> для <xref:System.Windows.Media.Stretch.None>, <xref:System.Windows.Media.Stretch.Uniform>, или <xref:System.Windows.Media.Stretch.UniformToFill>. Поскольку <xref:System.Windows.Media.ImageBrush> — это тип <xref:System.Windows.Media.TileBrush>, можно указать, как именно кисти заполняет область вывода и даже создавать шаблоны. Дополнительные сведения о дополнительных <xref:System.Windows.Media.TileBrush> возможности, см. [Обзор TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md).  
+ По умолчанию <xref:System.Windows.Media.ImageBrush> растягивает изображения до полного заполнения области закрашиваемой, возможно искажение изображения, если область рисования имеет другие пропорции изображения. Это поведение можно изменить, изменив <xref:System.Windows.Media.TileBrush.Stretch%2A> свойство со значения по умолчанию <xref:System.Windows.Media.Stretch.Fill> для <xref:System.Windows.Media.Stretch.None>, <xref:System.Windows.Media.Stretch.Uniform>, или <xref:System.Windows.Media.Stretch.UniformToFill>. Так как <xref:System.Windows.Media.ImageBrush> — это разновидность <xref:System.Windows.Media.TileBrush>, можно указать точно в том случае, как кисть изображения заполняет область вывода и даже создать шаблоны. Дополнительные сведения о дополнительных <xref:System.Windows.Media.TileBrush> функции, см. в разделе [Общие сведения о TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md).  
   
 <a name="fillingpanelwithimage"></a>   
 ## <a name="example-paint-an-object-with-a-bitmap-image"></a>Пример. Заполнение объекта с помощью точечного рисунка  
@@ -51,12 +51,12 @@ ms.locfileid: "33566916"
   
 <a name="drawingbrushintro"></a>   
 ## <a name="paint-an-area-with-a-drawing"></a>Закрашивание области с помощью Drawing  
- Объект <xref:System.Windows.Media.DrawingBrush> позволяет Закраска области с фигуры, текст, изображения и видео. Фигуры внутри кисти могут сами заполнять сплошной цвет, градиент, изображение или даже другим <xref:System.Windows.Media.DrawingBrush>. На следующем рисунке показано несколько способов использования <xref:System.Windows.Media.DrawingBrush>.  
+ Объект <xref:System.Windows.Media.DrawingBrush> позволяет закрасить область фигуры, текст, изображения и видео. Фигуры внутри закрашивающей кисти сами могут быть закрашены сплошным цветом, градиент, изображения, или даже другим <xref:System.Windows.Media.DrawingBrush>. На следующем рисунке показано несколько способов использования <xref:System.Windows.Media.DrawingBrush>.  
   
  ![Примеры вывода DrawingBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-drawingbrushexamples.png "wcpsdk_mmgraphics_drawingbrushexamples")  
 Объекты, заполненные при помощи DrawingBrush  
   
- Объект <xref:System.Windows.Media.DrawingBrush> закрашивает область с <xref:System.Windows.Media.Drawing> объекта. Объект <xref:System.Windows.Media.Drawing> описывает отображаемое содержимое, например фигуры, растрового изображения, видео или строка текста. Различные типы рисунков описывают различные типы содержимого. Ниже приведен список различных типов объектов-рисунков.  
+ Объект <xref:System.Windows.Media.DrawingBrush> закрашивает область с <xref:System.Windows.Media.Drawing> объекта. Объект <xref:System.Windows.Media.Drawing> объект описывает отображаемое содержимое, например фигуру, растровое изображение, видео или строку текста. Различные типы рисунков описывают различные типы содержимого. Ниже приведен список различных типов объектов-рисунков.  
   
 -   <xref:System.Windows.Media.GeometryDrawing> — Выводит фигуру.  
   
@@ -64,17 +64,17 @@ ms.locfileid: "33566916"
   
 -   <xref:System.Windows.Media.GlyphRunDrawing> — Выводит текст.  
   
--   <xref:System.Windows.Media.VideoDrawing> — Воспроизводит файл аудио и видео.  
+-   <xref:System.Windows.Media.VideoDrawing> — Воспроизводит аудио-или видео.  
   
 -   <xref:System.Windows.Media.DrawingGroup> — Выводит другие рисунки. Для объединения рисунков в один составной используйте группирование рисунков.  
   
- Дополнительные сведения о <xref:System.Windows.Media.Drawing> объектов, в разделе [Общие сведения об объектах Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
+ Дополнительные сведения о <xref:System.Windows.Media.Drawing> объектов, см. в разделе [Обзор объектов Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md).  
   
- Как <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> растягивает его <xref:System.Windows.Media.DrawingBrush.Drawing%2A> для заполнения области вывода. Это поведение можно переопределить, изменив <xref:System.Windows.Media.TileBrush.Stretch%2A> свойство из значения по умолчанию <xref:System.Windows.Media.Stretch.Fill>. Дополнительные сведения см. в описании свойства <xref:System.Windows.Media.TileBrush.Stretch%2A>.  
+ Как и <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush> растягивает его <xref:System.Windows.Media.DrawingBrush.Drawing%2A> для заполнения области вывода. Это поведение можно переопределить, изменив <xref:System.Windows.Media.TileBrush.Stretch%2A> свойства из значения по умолчанию <xref:System.Windows.Media.Stretch.Fill>. Дополнительные сведения см. в описании свойства <xref:System.Windows.Media.TileBrush.Stretch%2A>.  
   
 <a name="fillingareawithdrawingbrushexample"></a>   
 ## <a name="example-paint-an-object-with-a-drawing"></a>Пример. Заполнение объекта с помощью рисунка  
- В следующем примере показано, как можно заполнить объект с помощью рисунка с изображением трех эллипсов. Объект <xref:System.Windows.Media.GeometryDrawing> используется для описания многоточие.  
+ В следующем примере показано, как можно заполнить объект с помощью рисунка с изображением трех эллипсов. Объект <xref:System.Windows.Media.GeometryDrawing> используется для описания эллипсов.  
   
  [!code-xaml[BrushOverviewExamples_snip#GraphicsMMDrawingBrushAsButtonBackgroundExample](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/DrawingBrushExample.xaml#graphicsmmdrawingbrushasbuttonbackgroundexample)]  
   
@@ -83,20 +83,20 @@ ms.locfileid: "33566916"
   
 <a name="visualbrushsection"></a>   
 ## <a name="paint-an-area-with-a-visual"></a>Закрашивание области с помощью Visual  
- Наиболее гибкая и мощная кистей <xref:System.Windows.Media.VisualBrush> закрашивает область с <xref:System.Windows.Media.Visual>. Объект <xref:System.Windows.Media.Visual> является графическим типом нижнего уровня, который служит в качестве предка многих полезных графических компонентов. Например <xref:System.Windows.Window>, <xref:System.Windows.FrameworkElement>, и <xref:System.Windows.Controls.Control> классы являются все типы <xref:System.Windows.Media.Visual> объектов. С помощью <xref:System.Windows.Media.VisualBrush>, вы можете отобразить области практически любыми [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] графический объект.  
+ Наиболее гибкая и мощная из всех кистей, <xref:System.Windows.Media.VisualBrush> закрашивает область с <xref:System.Windows.Media.Visual>. Объект <xref:System.Windows.Media.Visual> является низкоуровневым графическим типом, который служит в качестве предка для многих полезных графических компонентов. Например <xref:System.Windows.Window>, <xref:System.Windows.FrameworkElement>, и <xref:System.Windows.Controls.Control> классы представляют собой различные типы <xref:System.Windows.Media.Visual> объектов. С помощью <xref:System.Windows.Media.VisualBrush>, им можно рисовать заполнить область практически любым [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] графического объекта.  
   
 > [!NOTE]
->  Несмотря на то что <xref:System.Windows.Media.VisualBrush> — это тип <xref:System.Windows.Freezable> объекта, он не может быть заморожен (доступным только для чтения) при его <xref:System.Windows.Media.VisualBrush.Visual%2A> свойству присвоено значение, отличное от `null`.  
+>  Несмотря на то что <xref:System.Windows.Media.VisualBrush> — это разновидность <xref:System.Windows.Freezable> объекта, он не может быть заморожен (доступным только для чтения) при его <xref:System.Windows.Media.VisualBrush.Visual%2A> свойству присвоено значение, отличное от `null`.  
   
- Существует два способа указать <xref:System.Windows.Media.VisualBrush.Visual%2A> содержимое <xref:System.Windows.Media.VisualBrush>.  
+ Существует два способа задания <xref:System.Windows.Media.VisualBrush.Visual%2A> содержимое <xref:System.Windows.Media.VisualBrush>.  
   
 -   Создайте новый <xref:System.Windows.Media.Visual> и использовать его для задания <xref:System.Windows.Media.VisualBrush.Visual%2A> свойство <xref:System.Windows.Media.VisualBrush>. Пример см. в разделе [Пример. Заполнение объекта с помощью видео](#examplevisualbrush1) далее в этой статье.  
   
--   Использовать существующий <xref:System.Windows.Media.Visual>, который создает дубликат изображения целевого <xref:System.Windows.Media.Visual>. Затем можно использовать <xref:System.Windows.Media.VisualBrush> для создания интересных эффектов, например отражения и увеличения. Пример см. в разделе [Пример. Создание отражения](#examplevisualbrush2).  
+-   Использовать существующее <xref:System.Windows.Media.Visual>, который создает дубликат изображения целевого объекта <xref:System.Windows.Media.Visual>. Затем можно использовать <xref:System.Windows.Media.VisualBrush> для создания интересных эффектов, например отражения и увеличения. Пример см. в разделе [Пример. Создание отражения](#examplevisualbrush2).  
   
- При определении нового <xref:System.Windows.Media.VisualBrush.Visual%2A> для <xref:System.Windows.Media.VisualBrush> и что <xref:System.Windows.Media.Visual> — <xref:System.Windows.UIElement> (например, в панели или элементе управления), система макета выполняется <xref:System.Windows.UIElement> и его дочерние элементы при <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> свойству `true`. Однако корневой <xref:System.Windows.UIElement> по существу изолирован от остальной системы: стили и внешний макет не могут переходить эту границу. Таким образом, следует явно указать размер корневого <xref:System.Windows.UIElement>, поскольку его единственным родительским объектом является <xref:System.Windows.Media.VisualBrush> и поэтому его размер не может автоматически сам по закрашиваемой области. Дополнительные сведения о макете в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] см. в разделе [Макет](../../../../docs/framework/wpf/advanced/layout.md).  
+ При определении нового <xref:System.Windows.Media.VisualBrush.Visual%2A> для <xref:System.Windows.Media.VisualBrush> и что <xref:System.Windows.Media.Visual> — <xref:System.Windows.UIElement> (например, панель или элемент управления), система разметки выполняется <xref:System.Windows.UIElement> и его дочерних элементов при <xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A> свойству `true`. Однако корневой <xref:System.Windows.UIElement> фактически изолирован от остальной части системы: стили и внешний макет не могут перейти эту границу. Таким образом, следует явно указать размер корневого <xref:System.Windows.UIElement>, так как его единственным родительским объектом является <xref:System.Windows.Media.VisualBrush> и таким образом его размер не может автоматически подобран по заполняемой области. Дополнительные сведения о макете в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] см. в разделе [Макет](../../../../docs/framework/wpf/advanced/layout.md).  
   
- Как <xref:System.Windows.Media.ImageBrush> и <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.VisualBrush> растягивает свое содержимое до заполнения области вывода. Это поведение можно переопределить, изменив <xref:System.Windows.Media.TileBrush.Stretch%2A> свойство из значения по умолчанию <xref:System.Windows.Media.Stretch.Fill>. Дополнительные сведения см. в описании свойства <xref:System.Windows.Media.TileBrush.Stretch%2A>.  
+ Как и <xref:System.Windows.Media.ImageBrush> и <xref:System.Windows.Media.DrawingBrush>, <xref:System.Windows.Media.VisualBrush> растягивает свое содержимое до заполнения области вывода. Это поведение можно переопределить, изменив <xref:System.Windows.Media.TileBrush.Stretch%2A> свойства из значения по умолчанию <xref:System.Windows.Media.Stretch.Fill>. Дополнительные сведения см. в описании свойства <xref:System.Windows.Media.TileBrush.Stretch%2A>.  
   
 <a name="examplevisualbrush1"></a>   
 ## <a name="example-paint-an-object-with-a-visual"></a>Пример. Заполнение объекта с помощью видео  
@@ -109,22 +109,22 @@ ms.locfileid: "33566916"
   
 <a name="examplevisualbrush2"></a>   
 ## <a name="example-create-a-reflection"></a>Пример. Создание отражения  
- В предыдущем примере показано, как создать новый <xref:System.Windows.Media.Visual> для использования в качестве фона. Можно также использовать <xref:System.Windows.Media.VisualBrush> для отображения существующего объекта visual; эта возможность позволяет создавать интересные визуальные эффекты, например отражения и увеличения. В следующем примере используется <xref:System.Windows.Media.VisualBrush> создание отражения <xref:System.Windows.Controls.Border> , содержащего несколько элементов. На следующей иллюстрации показан результат выполнения этого примера.  
+ В предыдущем примере показано, как создать новый <xref:System.Windows.Media.Visual> для использования в качестве фона. Можно также использовать <xref:System.Windows.Media.VisualBrush> для отображения существующего визуального; эта возможность позволяет создавать интересные визуальные эффекты, например отражения и увеличения. В следующем примере используется <xref:System.Windows.Media.VisualBrush> для создания отражения <xref:System.Windows.Controls.Border> , содержащего несколько элементов. На следующей иллюстрации показан результат выполнения этого примера.  
   
- ![Объект отражены визуального объекта](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
+ ![Объект отражены визуальный объект](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-visualbrush-reflection-small.jpg "graphicsmm_visualbrush_reflection_small")  
 Отраженный объект Visual  
   
  [!code-csharp[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/visualbrush_markup_snip/CSharp/ReflectionExample.cs#graphicsmmvisualbrushreflectionexamplewholepage)]
  [!code-vb[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/visualbrush_markup_snip/visualbasic/reflectionexample.vb#graphicsmmvisualbrushreflectionexamplewholepage)]
  [!code-xaml[visualbrush_markup_snip#GraphicsMMVisualBrushReflectionExampleWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/visualbrush_markup_snip/XAML/ReflectionExample.xaml#graphicsmmvisualbrushreflectionexamplewholepage)]  
   
- Дополнительные примеры, демонстрирующие увеличение частей экрана и создание отражений, см. в разделе [Пример VisualBrush](http://go.microsoft.com/fwlink/?LinkID=160049).  
+ Дополнительные примеры, демонстрирующие увеличение частей экрана и создание отражений, см. в разделе [Пример VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049).  
   
 <a name="tilebrush"></a>   
 ## <a name="tilebrush-features"></a>Функции TileBrush  
- <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, и <xref:System.Windows.Media.VisualBrush> типов <xref:System.Windows.Media.TileBrush> объектов. <xref:System.Windows.Media.TileBrush> объекты предоставляют значительные возможности контроля над способ рисования области с изображения, рисунок или visual. Например, можно заполнить область не одним растянутым изображением, а элементами мозаики, которые образуют узор.  
+ <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, и <xref:System.Windows.Media.VisualBrush> типов <xref:System.Windows.Media.TileBrush> объектов. <xref:System.Windows.Media.TileBrush> объекты предоставляют высокую степень контроля над закрашивание области с изображения, рисунок или visual. Например, можно заполнить область не одним растянутым изображением, а элементами мозаики, которые образуют узор.  
   
- Объект <xref:System.Windows.Media.TileBrush> имеет три основных компонента: содержимое, плитки и в области вывода.  
+ Объект <xref:System.Windows.Media.TileBrush> имеет три основных компонента: содержимое, плитки и область вывода.  
   
  ![Компоненты TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-mmgraphics-defaultcontentprojection2.png "wcpsdk_mmgraphics_defaultcontentprojection2")  
 Компоненты TileBrush с одним элементом мозаики  
@@ -132,7 +132,7 @@ ms.locfileid: "33566916"
  ![Компоненты мозаичного TileBrush](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-tiledprojection.png "graphicsmm_tiledprojection")  
 Компоненты TileBrush с несколькими элементами мозаики  
   
- Дополнительные сведения о возможностях мозаичного заполнения области <xref:System.Windows.Media.TileBrush> объектов, в разделе [Обзор TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md).  
+ Дополнительные сведения о функциях мозаики из <xref:System.Windows.Media.TileBrush> объектов, см. в разделе [Общие сведения о TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Media.ImageBrush>  
@@ -145,5 +145,5 @@ ms.locfileid: "33566916"
  [Обзор объектов Drawing](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
  [Общие сведения о масках непрозрачности](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
  [Общие сведения об отрисовке графики в WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Образец ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005)  
- [Пример использования VisualBrush](http://go.microsoft.com/fwlink/?LinkID=160049)
+ [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=160005)  
+ [Пример использования VisualBrush](https://go.microsoft.com/fwlink/?LinkID=160049)

@@ -9,16 +9,16 @@ ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 0e1a8e6820d70e4c50599056e31563f7f792f6d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2873fc18d5eb18160bf361b07af2bf12eef32e4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400111"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422227"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>Реализация клиентского поставщика автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В операционных системах [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] используется несколько разных инфраструктур [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] , включая [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]и [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] предоставляет клиентам сведения об элементах пользовательского интерфейса. Однако модель [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] сама по себе не имеет сведений о разных типах элементов управления, которые существуют в этих инфраструктурах, и методах, необходимых для извлечения из них информации. Эта задача оставляется объектам, называемым поставщиками. Поставщик извлекает информацию из определенного элемента управления и передает ее в модель [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], которая затем последовательно предоставляет эту информацию клиенту.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "33400111"
   
  [!INCLUDE[TLA2#tla_winvista](../../../includes/tla2sharptla-winvista-md.md)] Содержит поставщики для стандартных [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] и элементы управления Windows Forms. Кроме того, резервный поставщик предоставляет частичную поддержку [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] любого элемента управления, который не обслуживается другим поставщиком на стороне сервера или прокси, но имеет реализацию [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)] . Все эти поставщики автоматически загружаются и доступны для клиентских приложений.  
   
- Дополнительные сведения о поддержке [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] и элементы управления Windows Forms, в разделе [службы поддержки автоматизации пользовательского интерфейса для стандартных элементов управления](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
+ Дополнительные сведения о поддержке [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] и элементы управления Windows Forms, см. в разделе [UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md).  
   
  Приложения также могут регистрировать другие поставщики на стороне клиента.  
   

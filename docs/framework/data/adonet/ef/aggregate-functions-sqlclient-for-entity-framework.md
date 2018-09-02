@@ -2,49 +2,230 @@
 title: Статистические функции (SqlClient для Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
-ms.openlocfilehash: 558e9f8480dd69e2277603e9bb1013acfbc29467
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8ed9a58da9914724fe312876d6594cb526f2e0e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763401"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452903"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Статистические функции (SqlClient для Entity Framework)
 Поставщик данных .NET Framework для SQL Server (SqlClient) предоставляет агрегатные функции. Агрегатные функции выполняют вычисления на наборе входных значений и возвращают значение. Эти функции находятся в пространстве имен SqlServer, которое доступно при использовании SqlClient. Свойство пространства имен поставщика позволяет платформе Entity Framework узнать, какой префикс используется поставщиком для конкретных конструкций, таких как типы или функции.  
   
- В следующей таблице описаны агрегатные функции SqlClient.  
+ Ниже приведены агрегатные функции SqlClient.  
+
+## <a name="avgexpression"></a>AVG(Expression)
+
+Возвращает среднее значение для значений в коллекции. Значения NULL не учитываются.
+
+**Аргументы**
+
+`Int32`, `Int64`, `Double`, И `Decimal`.
+
+**Возвращаемое значение**
+
+Тип параметра `expression`.
+
+**Пример**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_avg)]
+ [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]
+
+## <a name="checksumaggcollection"></a>CHECKSUM_AGG(Collection)
+ 
+ Возвращает контрольную сумму значений в коллекции. Значения NULL не учитываются.
+ 
+ **Аргументы**
+ 
+ Коллекция (`Int32`).
+ 
+ **Возвращаемое значение**
+ 
+ Объект `Int32`.
+ 
+ **Пример**
+ 
+ [!code-csharp[DP EntityServices Concepts#SQLSERVER_CHECKSUM](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_checksum)]
+ [!code-sql[DP EntityServices Concepts#SQLSERVER_CHECKSUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_checksum)]
+   
+## <a name="countexpression"></a>Count(Expression)
+
+Возвращает число элементов в коллекции в виде `Int32`.
+
+**Аргументы**
+
+Коллекция\<T >, где T — один из следующих типов:
+
+|   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`|`Guid` (не возвращаемое в SQL Server 2000)|
+
+**Возвращаемое значение**
+
+Объект `Int32`.
+
+**Пример**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_count)]
+[! код sql[SQLSERVER_COUNT # понятия EntityServices точки Распространения](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)
+ 
+## <a name="countbigexpression"></a>COUNT_BIG(Expression)
+ 
+ Возвращает число элементов в коллекции в виде `bigint`.
+ 
+ **Аргументы**
+ 
+ Collection(T), где T — один из следующих типов:
+ 
+ |   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`|`Guid` (не возвращаемое в SQL Server 2000)|
+
+**Возвращаемое значение**
+
+Объект `Int64`.
+
+**Пример**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNTBIG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_countbig)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_COUNTBIG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_countbig)]
+
+## <a name="maxexpression"></a>MAX(Expression)
+
+Возвращает максимальное значение, содержащееся в коллекции.
+
+**Аргументы**
+
+Collection(T), где T — один из следующих типов: 
+
+|   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`||
+
+**Возвращаемое значение**
+
+Тип параметра `expression`.
+
+**Пример**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_MAX](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_max)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_MAX](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_max)]
+
+## <a name="minexpression"></a>Min(Expression)
+
+Возвращает минимальное значение в коллекции.
+
+**Аргументы**
+
+Collection(T), где T — один из следующих типов: 
+
+|   |   |   |   |
+|---|---|---|---|
+|`Boolean`|`Double`|`DateTime`|`DateTimeOffset`|
+|`Time`|`String`|`Binary`||
+
+**Возвращаемое значение**
+
+Тип параметра `expression`.
+
+**Пример**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_MIN](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_min)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_MIN](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_min)]
+
+## <a name="stdevexpression"></a>StDev(Expression)
+
+Возвращает статистическое стандартное отклонение всех значений в указанном выражении.
+
+**Аргументы**
+
+Коллекция (`Double`).
+
+**Возвращаемое значение**
+
+Объект `Double`.
+
+**Пример**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEV](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdev)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_STDEV](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdev)]
+
+## <a name="stdevpexpression"></a>STDEVP(Expression)
+
+Возвращает статистическое стандартное отклонение совокупности всех значений в указанном выражении.
+
+**Аргументы**
+
+Коллекция (`Double`).
+
+**Возвращаемое значение**
+
+Объект `Double`.
+
+**Пример**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEVP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdevp)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_STDEVP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdevp)]
+
+## <a name="sumexpression"></a>SUM(Expression)
+
+Возвращает сумму всех значений в коллекции.
+
+**Аргументы**
+
+Collection(T), где T — один из следующих типов: `Int32`, `Int64`, `Double`, `Decimal`.
+
+**Возвращаемое значение**
+
+Тип параметра `expression`.
+
+**Пример**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_SUM](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_sum)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_SUM](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_sum)]
+
+## <a name="varexpression"></a>VAR(Expression)
+
+Возвращает статистическую дисперсию всех значений в указанном выражении.
+
+**Аргументы**
+
+Коллекция (`Double`).
+
+**Возвращаемое значение**
+
+Объект `Double`.
+
+**Пример**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_VAR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_var)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_VAR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_var)]
+
+## <a name="varpexpression"></a>VARP(Expression)
+
+Возвращает статистическую дисперсию совокупности всех значений в указанном выражении.
+
+**Аргументы**
+
+Коллекция (`Double`).
+
+**Возвращаемое значение**
+
+Объект `Double`.
+
+**Пример**
+
+[!code-csharp[DP EntityServices Concepts#SQLSERVER_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_varp)]
+[!code-sql[DP EntityServices Concepts#SQLSERVER_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_varp)] 
   
-|Функция|Описание|  
-|--------------|-----------------|  
-|`AVG(` `expression` `)`|Возвращает среднее значение для значений в коллекции.<br /><br /> Значения NULL не учитываются.<br /><br /> **Аргументы**<br /><br /> `Int32`, `Int64`, `Double`, И `Decimal`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `expression`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_avg)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_AVG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_avg)]|  
-|`CHECKSUM_AGG(` `collection` `)`|Возвращает контрольную сумму значений в коллекции.<br /><br /> Значения NULL не учитываются.<br /><br /> **Аргументы**<br /><br /> Collection (`Int32`).<br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_CHECKSUM](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_checksum)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_CHECKSUM](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_checksum)]|  
-|`COUNT(` `expression` `)`|Возвращает число элементов в коллекции в виде `Int32`.<br /><br /> **Аргументы**<br /><br /> Тип Collection (T), где T — один из следующих типов:<br /><br /> `Guid` (не возвращен в SQL Server 2000),<br /><br /> `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String` или `Binary`.<br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int32`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNT](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_count)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNT](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_count)]|  
-|`COUNT_BIG(` `expression` `)`|Возвращает число элементов в коллекции в виде `bigint`.<br /><br /> **Аргументы**<br /><br /> Тип Collection (T), где T — один из следующих типов:<br /><br /> `Guid` (не возвращается в SQL Server 2000), `Boolean`, `Double`, `DateTime`, `DateTimeOffset`, `Time`, `String` или `Binary`.<br /><br /> **Возвращаемое значение**<br /><br /> Объект `Int64`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_countbig)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_COUNTBIG](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_countbig)]|  
-|`MAX(` `expression` `)`|Возвращает максимальное значение, содержащееся в коллекции.<br /><br /> **Аргументы**<br /><br /> Collection (T), где T может быть любым из следующих типов: `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`, `Binary`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `expression`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_MAX](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_max)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_MAX](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_max)]|  
-|`MIN(` `expression` `)`|Возвращает минимальное значение в коллекции.<br /><br /> **Аргументы**<br /><br /> Collection (T), где T может быть любым из следующих типов: `Byte`, `Int16`, `Int32`, `Int64`, `Byte`, `Single`, `Double`, `Decimal`, `DateTime`, `DateTimeOffset`, `Time`, `String`,<br /><br /> `Binary`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `expression`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_MIN](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_min)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_MIN](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_min)]|  
-|`STDEV(` `expression` `)`|Возвращает статистическое стандартное отклонение всех значений в указанном выражении.<br /><br /> **Аргументы**<br /><br /> Collection (`Double`).<br /><br /> **Возвращаемое значение**<br /><br /> Объект `Double`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEV](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdev)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEV](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdev)]|  
-|`STDEVP(` `expression` `)`|Возвращает статистическое стандартное отклонение совокупности всех значений в указанном выражении.<br /><br /> **Аргументы**<br /><br /> Collection (`Double`).<br /><br /> **Возвращаемое значение**<br /><br /> Объект `Double`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_STDEVP](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_stdevp)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_STDEVP](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_stdevp)]|  
-|`SUM(` `expression` `)`|Возвращает сумму всех значений в коллекции.<br /><br /> **Аргументы**<br /><br /> Collection (T), где T может быть любым из следующих типов: `Int32`, `Int64`, `Double`, `Decimal`.<br /><br /> **Возвращаемое значение**<br /><br /> Тип параметра `expression`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_SUM](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_sum)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_SUM](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_sum)]|  
-|`VAR(` `expression` `)`|Возвращает статистическую дисперсию всех значений в указанном выражении.<br /><br /> **Аргументы**<br /><br /> Collection (`Double`).<br /><br /> **Возвращаемое значение**<br /><br /> Объект `Double`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_VAR](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_var)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_VAR](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_var)]|  
-|`VARP(` `expression` `)`|Возвращает статистическую дисперсию совокупности всех значений в указанном выражении.<br /><br /> **Аргументы**<br /><br /> Collection (`Double`).<br /><br /> **Возвращаемое значение**<br /><br /> Объект `Double`.<br /><br /> **Пример**<br /><br /> [!code-csharp[DP EntityServices Concepts#SQLSERVER_VARP](../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_varp)]
- [!code-sql[DP EntityServices Concepts#SQLSERVER_VARP](../../../../../samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_varp)]|  
+## <a name="see-also"></a>См. также
+
+Дополнительные сведения об агрегатных функциях, поддерживаемых SqlClient, см. в документации к версии SQL Server, указанной в манифесте поставщика SqlClient.  
   
- Дополнительные сведения об агрегатных функциях, поддерживаемых SqlClient, см. в документации к версии SQL Server, указанной в манифесте поставщика SqlClient.  
-  
-|SQL Server 2000|SQL Server 2005|SQL Server 2008|  
-|---------------------|---------------------|---------------------|  
-|[Агрегатные функции (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115906)|[Агрегатные функции (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkID=115903)|[Агрегатные функции (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=115907)|  
-  
-## <a name="see-also"></a>См. также  
- [Язык Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [Статистические канонические функции](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)
+**SQL Server 2005**: [агрегатные функции (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms173454(v=sql.90))  
+**SQL Server 2008 и более поздних**: [агрегатные функции (Transact-SQL)](/sql/t-sql/functions/aggregate-functions-transact-sql)  
+[Язык Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
+[Статистические канонические функции](../../../../../docs/framework/data/adonet/ef/language-reference/aggregate-canonical-functions.md)

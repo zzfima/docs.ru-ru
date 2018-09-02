@@ -7,20 +7,21 @@ dev_langs:
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 12b491971a9f3faa57edb1ccf9fb59351ed45f3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a04b8aaf9c6263a8935099963aaa1dc8d9100fd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418809"
 ---
 # <a name="transport-security-overview"></a>Общие сведения о безопасности транспорта
 Механизмы обеспечения безопасности транспорта в Windows Communication Foundation (WCF) зависят от привязки и используемого транспорта. Например, при использовании класса <xref:System.ServiceModel.WSHttpBinding> транспортом является протокол HTTP и в качестве основного механизма защиты транспорта применяется протокол SSL через HTTP, обычно называемый HTTPS. В этом разделе рассматриваются основные транспорта механизмы безопасности, используемые в привязках, предоставляемых системой WCF.  
   
 > [!NOTE]
->  При использовании безопасности SSL на .NET Framework 3.5 и более поздних версиях клиента WCF использует промежуточные сертификаты в хранилище сертификатов и промежуточные сертификаты, полученные в процессе согласования SSL для проверки цепочки сертификатов на стороне службы сертификат. Платформа .NET Framework 3.0 использует только промежуточные сертификаты, установленные в локальном хранилище сертификатов.  
+>  При использовании безопасности SSL с .NET Framework 3.5 и более поздних версиях клиент WCF использует промежуточные сертификаты в своем хранилище сертификатов, и промежуточные сертификаты, полученные в процессе согласования SSL для проверки цепочки сертификатов для службы сертификат. Платформа .NET Framework 3.0 использует только промежуточные сертификаты, установленные в локальном хранилище сертификатов.  
   
 > [!WARNING]
->  Если используется безопасность транспорта, <!--zz <xref:System.Treading.Thread.CurrentPrincipal%2A> --> `CurrentPrincipal` свойства могут быть перезаписаны. Чтобы предотвратить возникновение этой ситуации набор <!--zz <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A> --> `PrincipalPermission` значение None. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> - это поведение службы, которое можно задать в описании службы.  
+>  Если используется безопасность транспорта, <!--zz <xref:System.Treading.Thread.CurrentPrincipal%2A> --> `CurrentPrincipal` свойства могут быть перезаписаны. Чтобы избежать этого, присвойте свойству <!--zz <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermission%2A> --> `PrincipalPermission` значение None. <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> - это поведение службы, которое можно задать в описании службы.  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  По умолчанию класс <xref:System.ServiceModel.BasicHttpBinding> не обеспечивает безопасность. Эта привязка предназначена для взаимодействия с поставщиками веб-служб, которые не реализуют средства обеспечения безопасности. Однако режим безопасности можно включить, присвоив свойству <xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> любое значение, кроме <xref:System.ServiceModel.BasicHttpSecurityMode.None>. Чтобы включить режим безопасности транспорта, присвойте этому свойству значение <xref:System.ServiceModel.BasicHttpSecurityMode.Transport>.  
@@ -48,19 +49,19 @@ ms.lasthandoff: 05/04/2018
  В следующих разделах рассматриваются другие типы учетных данных клиентов.  
   
 #### <a name="basic"></a>Basic  
- Соответствует методу обычной проверки подлинности в IIS. При использовании этого режима на сервере IIS должны быть настроены учетные записи пользователей Windows и соответствующие разрешения файловой системы NTFS. Дополнительные сведения о [!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [Включение обычной проверки подлинности и настройка имени области](http://go.microsoft.com/fwlink/?LinkId=88592). Дополнительные сведения о [!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [бета-версия IIS 7.0: Настройка обычной проверки подлинности](http://go.microsoft.com/fwlink/?LinkId=88593).  
+ Соответствует методу обычной проверки подлинности в IIS. При использовании этого режима на сервере IIS должны быть настроены учетные записи пользователей Windows и соответствующие разрешения файловой системы NTFS. Дополнительные сведения о [!INCLUDE[iis601](../../../../includes/iis601-md.md)], см. в разделе [Включение обычной проверки подлинности и настройка имени области](https://go.microsoft.com/fwlink/?LinkId=88592). Дополнительные сведения о [!INCLUDE[iisver](../../../../includes/iisver-md.md)], см. в разделе [бета-версия IIS 7.0: Настройка обычной проверки подлинности](https://go.microsoft.com/fwlink/?LinkId=88593).  
   
 #### <a name="certificate"></a>Сертификат  
- В IIS предусмотрена функция, требующая, чтобы клиенты входили в систему с использованием сертификата. Эта возможность также позволяет IIS сопоставить сертификат клиента с учетной записью Windows. Дополнительные сведения о [!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [включение сертификатов клиентов в IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88594). Дополнительные сведения о [!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [бета-версия IIS 7.0: Настройка сертификатов сервера в IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
+ В IIS предусмотрена функция, требующая, чтобы клиенты входили в систему с использованием сертификата. Эта возможность также позволяет IIS сопоставить сертификат клиента с учетной записью Windows. Дополнительные сведения о [!INCLUDE[iis601](../../../../includes/iis601-md.md)], см. в разделе [включение сертификатов клиентов в IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88594). Дополнительные сведения о [!INCLUDE[iisver](../../../../includes/iisver-md.md)], см. в разделе [бета-версия IIS 7.0: Настройка сертификатов сервера в IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="digest"></a>Digest  
- Дайджест-проверка подлинности подобна обычной проверке подлинности, но имеет преимущество, заключающееся в передаче учетных данных в виде хэша, а не открытого текста. Дополнительные сведения о [!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [дайджест-проверка подлинности в IIS 6.0](http://go.microsoft.com/fwlink/?LinkID=88443). Дополнительные сведения о [!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [бета-версия IIS 7.0: Настройка дайджест-проверка подлинности](http://go.microsoft.com/fwlink/?LinkId=88596).  
+ Дайджест-проверка подлинности подобна обычной проверке подлинности, но имеет преимущество, заключающееся в передаче учетных данных в виде хэша, а не открытого текста. Дополнительные сведения о [!INCLUDE[iis601](../../../../includes/iis601-md.md)], см. в разделе [дайджест-проверка подлинности в IIS 6.0](https://go.microsoft.com/fwlink/?LinkID=88443). Дополнительные сведения о [!INCLUDE[iisver](../../../../includes/iisver-md.md)], см. в разделе [бета-версия IIS 7.0: Настройка дайджест-проверка подлинности](https://go.microsoft.com/fwlink/?LinkId=88596).  
   
 #### <a name="windows"></a>Windows  
- Соответствует встроенной проверке подлинности Windows в IIS. При задании этого значения также предполагается, что сервер находится в домене Windows, в котором для взаимодействия с контроллером домена используется протокол Kerberos. Если сервер не находится в домене с поддержкой Kerberos или происходит сбой системы Kerberos, можно использовать значение NTLM, описанное в следующем разделе. Дополнительные сведения о [!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [встроенную проверку подлинности Windows в службах IIS 6.0](http://go.microsoft.com/fwlink/?LinkId=88597). Дополнительные сведения о [!INCLUDE[iisver](../../../../includes/iisver-md.md)], в разделе [бета-версия IIS 7.0: Настройка сертификатов сервера в IIS 7.0](http://go.microsoft.com/fwlink/?LinkId=88595).  
+ Соответствует встроенной проверке подлинности Windows в IIS. При задании этого значения также предполагается, что сервер находится в домене Windows, в котором для взаимодействия с контроллером домена используется протокол Kerberos. Если сервер не находится в домене с поддержкой Kerberos или происходит сбой системы Kerberos, можно использовать значение NTLM, описанное в следующем разделе. Дополнительные сведения о [!INCLUDE[iis601](../../../../includes/iis601-md.md)], см. в разделе [встроенная проверка подлинности Windows в IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88597). Дополнительные сведения о [!INCLUDE[iisver](../../../../includes/iisver-md.md)], см. в разделе [бета-версия IIS 7.0: Настройка сертификатов сервера в IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88595).  
   
 #### <a name="ntlm"></a>NTLM  
- Это позволяет серверу использовать NTLM для проверки подлинности в случае сбоя протокола Kerberos. Дополнительные сведения о настройке служб IIS в [!INCLUDE[iis601](../../../../includes/iis601-md.md)], в разделе [Принудительная проверка подлинности NTLM](http://go.microsoft.com/fwlink/?LinkId=88598). Для [!INCLUDE[iisver](../../../../includes/iisver-md.md)] проверка подлинности Windows включает проверку подлинности NTLM. Дополнительные сведения см. в разделе [бета-версия IIS 7.0: Настройка сертификатов сервера в IIS 7.0](http://go.microsoft.com/fwlink/?LinkID=88595).  
+ Это позволяет серверу использовать NTLM для проверки подлинности в случае сбоя протокола Kerberos. Дополнительные сведения о настройке IIS в [!INCLUDE[iis601](../../../../includes/iis601-md.md)], см. в разделе [Принудительная проверка подлинности NTLM](https://go.microsoft.com/fwlink/?LinkId=88598). Для [!INCLUDE[iisver](../../../../includes/iisver-md.md)] проверка подлинности Windows включает проверку подлинности NTLM. Дополнительные сведения см. в разделе [бета-версия IIS 7.0: Настройка сертификатов сервера в IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595).  
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
  Класс <xref:System.ServiceModel.WSHttpBinding> предназначен для взаимодействия со службами, реализующими спецификации WS-*. Безопасность транспорта для этой привязки обеспечивается посредством протокола SSL по протоколам HTTP или HTTPS. Чтобы создать приложение WCF, использующее SSL, используйте IIS для размещения приложения. В случае создания резидентного приложения используйте средство HttpCfg.exe для привязки сертификата X.509 к конкретному порту на компьютере. Номер порта указывается как часть приложения WCF, как адрес конечной точки. При использовании транспортного режима адрес конечной точки должен включать протокол HTTPS; в противном случае во время выполнения будет вызвано исключение. Дополнительные сведения см. в разделе [безопасности транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -94,7 +95,7 @@ ms.lasthandoff: 05/04/2018
  [!code-csharp[c_ProgrammingSecurity#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#13)]
  [!code-vb[c_ProgrammingSecurity#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#13)]  
   
- Кроме того, укажите сертификат в конфигурации клиента с помощью [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элемента в разделе поведений.  
+ Кроме того, укажите сертификат в конфигурации клиента с помощью [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элемент в разделе поведений.  
   
 ```xml  
 <behaviors>  
@@ -113,13 +114,13 @@ ms.lasthandoff: 05/04/2018
  Класс <xref:System.ServiceModel.NetNamedPipeBinding> предназначен для эффективного взаимодействия внутри компьютера, т. е. для процессов, выполняющихся на одном компьютере, хотя между двумя компьютерами, расположенными в одной сети, могут быть созданы именованные каналы. Эта привязка обеспечивает безопасность только на транспортном уровне. При создании приложений с использованием данной привязки адреса конечных точек должны включать "net.pipe" в качестве протокола адреса конечной точки.  
   
 ## <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
- При использовании безопасности транспорта эта привязка использует протокол SSL по HTTP, известный как HTTPS-протокол с выданным токеном (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>). Дополнительные сведения о приложениях федерации см. в разделе [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
+ При использовании безопасности транспорта эта привязка использует протокол SSL по HTTP, известный как HTTPS-протокол с выданным токеном (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>). Дополнительные сведения о федеративных приложениях см. в разделе [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md).  
   
 ## <a name="netpeertcpbinding"></a>NetPeerTcpBinding  
- Класс <xref:System.ServiceModel.NetPeerTcpBinding> представляет защищенный транспорт, предназначенный для эффективного взаимодействия с использованием функции одноранговой сети. Как указано в имени класса и привязки, применяется протокол TCP. Если для режима безопасности задано значение Transport, данная привязка реализует протокол TLS по TCP. Дополнительные сведения о компоненте одноранговая сеть см. в разделе [-одноранговые сети](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
+ Класс <xref:System.ServiceModel.NetPeerTcpBinding> представляет защищенный транспорт, предназначенный для эффективного взаимодействия с использованием функции одноранговой сети. Как указано в имени класса и привязки, применяется протокол TCP. Если для режима безопасности задано значение Transport, данная привязка реализует протокол TLS по TCP. Дополнительные сведения о функции peer-to-peer см. в разделе [сети Peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md).  
   
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding и NetMsmqBinding  
- Подробное обсуждение транспорта безопасности очередь сообщений (ранее называемой MSMQ). в разделе [защита безопасность транспорта с помощью сообщений](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
+ Подробное обсуждение транспорта безопасности с очередью сообщений (ранее называемой MSMQ), см. в разделе [защита безопасность транспорта с помощью сообщений](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md).  
   
 ## <a name="see-also"></a>См. также  
  [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

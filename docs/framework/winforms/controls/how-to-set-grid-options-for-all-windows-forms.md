@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-ms.openlocfilehash: f1779752cea467cbd7ee25235821ca99fc5cbdb5
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: ef6dc80bc00e2582b514bff7fe3e9c5d6d5770e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253356"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43420988"
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Практическое руководство. Установка параметров сетки для всех форм Windows Forms
 Освоив работу в среде разработки Visual Studio, можно задать настройки для всех форм и проектов, которыми вы работаете в конструкторе Windows Forms.  
@@ -31,7 +31,7 @@ ms.locfileid: "43253356"
   
 ## <a name="see-also"></a>См. также  
  [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Страница "Общие", конструктор Windows Forms, диалоговое окно "Параметры](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Страница "Общие", конструктор Windows Forms, диалоговое окно "Параметры](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
  [Практическое руководство. Добавление элементов управления в формы Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
  [Упорядочение элементов управления в формах Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  

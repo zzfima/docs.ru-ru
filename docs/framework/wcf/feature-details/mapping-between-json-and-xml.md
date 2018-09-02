@@ -2,12 +2,12 @@
 title: Сопоставление JSON и XML.
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: e8cc356a30d11a6f07cf4444efbeda2faf5b0471
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 079ca9cebefcc96bffdb0ec4601a675ed83adefe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931473"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421727"
 ---
 # <a name="mapping-between-json-and-xml"></a>Сопоставление JSON и XML.
 Модули чтения и записи, создаваемые фабрикой <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory>, обеспечивают интерфейс API XML к содержимому в формате JavaScript Object Notation (JSON, объектной нотации JavaScript). Формат JSON предусматривает кодирование данных с использованием подмножества объектных литералов JavaScript. Модули чтения и записи, создаваемые этой фабрикой также используются при содержимое JSON отправленных или полученных приложений Windows Communication Foundation (WCF), с помощью <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> или <xref:System.ServiceModel.WebHttpBinding>.  
@@ -38,7 +38,7 @@ ms.locfileid: "42931473"
  Кроме того Если полученных WCF сообщения JSON в примере, которая регистрируется, вы увидите фрагмент XML в предыдущем журнале.  
   
 ## <a name="mapping-between-json-and-the-xml-infoset"></a>Сопоставление между JSON и набором сведений XML  
- Формально, сопоставление устанавливается между JSON, как описано в разделе [RFC 4627](http://go.microsoft.com/fwlink/?LinkId=98808) (за исключением некоторых ограничений и некоторые другие ограничения, добавленные) и XML infoset (и не текстовые XML) как описано в разделе [XML-данных Задайте](http://go.microsoft.com/fwlink/?LinkId=98809) . См. в этом разделе для определения *информационных элементов* и полей в [квадратных скобках].  
+ Формально, сопоставление устанавливается между JSON, как описано в разделе [RFC 4627](https://go.microsoft.com/fwlink/?LinkId=98808) (за исключением некоторых ограничений и некоторые другие ограничения, добавленные) и XML infoset (и не текстовые XML) как описано в разделе [XML-данных Задайте](https://go.microsoft.com/fwlink/?LinkId=98809) . См. в этом разделе для определения *информационных элементов* и полей в [квадратных скобках].  
   
  Пустой документ JSON сопоставляется с пустой XML-документ, а пустой XML-документ соответствует пустому JSON-документу. В сопоставлении XML-JSON предшествующие пробелы и конечные пробелы после документа не допускаются.  
   

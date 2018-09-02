@@ -2,12 +2,12 @@
 title: Использование действий с коллекциями
 ms.date: 03/30/2017
 ms.assetid: e1977cf8-1695-4071-b946-7046fe39601e
-ms.openlocfilehash: 3c30a7fb46d9b155ec645a7b6845715d808d63b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a92208583ddf1c0d5d85b5af6a250a15ac8851b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516605"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43422631"
 ---
 # <a name="using-collection-activities"></a>Использование действий с коллекциями
 В этом образце демонстрируется использование действий коллекции (<xref:System.Activities.Statements.AddToCollection%601>, <xref:System.Activities.Statements.ClearCollection%601>, <xref:System.Activities.Statements.ExistsInCollection%601> и <xref:System.Activities.Statements.RemoveFromCollection%601>) с классом, реализующим интерфейс <xref:System.Collections.ICollection>, и создание пользовательского действия, которое выполняет итерацию по коллекции для распечатки содержания каждого из элементов коллекции. Пользовательское действие, называемое `PrintCollection`, выводит на консоль элементы коллекции с названием `Numbers`.  
@@ -43,6 +43,6 @@ ms.locfileid: "33516605"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Collection`

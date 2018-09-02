@@ -4,17 +4,17 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - client area [Visual Basic], printing
 ms.assetid: c06c9c0e-bc07-48cd-9596-e29a2ff96236
-ms.openlocfilehash: 361db89f0880a03273aac7fc36b5c5faa825486f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b2f13d1ec151a5fd1967b522a601e0e19de04cbb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583995"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419288"
 ---
 # <a name="how-to-print-the-client-area-of-a-form-visual-basic"></a>Практическое руководство. Печать клиентской области формы (Visual Basic)
 Компонент <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> позволяет быстро напечатать изображение формы без использования компонента <xref:System.Drawing.Printing.PrintDocument> . Ниже показано, как напечатать клиентскую область формы без строки заголовка, границ и полос прокрутки.  
   
- Элементы управления PowerPack больше не включены в Visual Studio, но их можно скачать в [Центре загрузки](http://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Элементы управления PowerPack больше не включены в Visual Studio, но их можно скачать [центра загрузки](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ### <a name="to-print-the-client-area-of-a-form"></a>Печать клиентской области формы  
   

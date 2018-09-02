@@ -1,15 +1,15 @@
 ---
-title: Сравнение изменения XML-дерева в памяти с Функциональное сборка (LINQ to XML) (Visual Basic)
+title: Сравнение изменения XML-дерева в памяти с Функциональное построение (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d91c4ebf-6549-43cc-9961-26d4a82f722b
 ms.openlocfilehash: 71b8799d4da2f8f4fb10bdec6ca7cfcec76e036a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646608"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43452785"
 ---
-# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-visual-basic"></a>Сравнение изменения XML-дерева в памяти с Функциональное сборка (LINQ to XML) (Visual Basic)
+# <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-visual-basic"></a>Сравнение изменения XML-дерева в памяти с Функциональное построение (LINQ to XML) (Visual Basic)
 Изменение XML-дерева на месте является традиционным подходом к изменению формы XML-документа. Стандартное приложение загружает документ в источник данных, например DOM или [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], при помощи интерфейса программирования вставляет, удаляет узлы или изменяет их содержимое, а затем сохраняет XML в файл или передает по сети.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] поддерживает другой подход, который во многих случаях может оказаться удобным, — *функциональное построение*. При функциональном построении изменение данных рассматривается как задача преобразования, а не как детализированное управление хранилищем данных. Если можно взять представление данных и эффективно преобразовать его из одной формы в другую, то результат будет таким же, как если бы в одном хранилище данных были произведены некоторые изменения, направленные на то, чтобы оно приняло другую форму. Основным элементом функционального построения является передача результатов запросов конструкторам <xref:System.Xml.Linq.XDocument> и <xref:System.Xml.Linq.XElement>.  

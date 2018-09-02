@@ -1,27 +1,27 @@
 ---
-title: Объект My.Computer.Clipboard
+title: Объект My.Computer.Clipboard (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Clipboard
 - My.Computer.Clipboard object
 ms.assetid: 05d4ede9-1f9a-4495-87f0-77350b8d2e5d
-ms.openlocfilehash: 484f676070a1447067304dba1795d799c046dec6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2f44908668fc48e8a45cd6f2dc686f3bb7ba4f67
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33595164"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418367"
 ---
 # <a name="mycomputerclipboard-object"></a>Объект My.Computer.Clipboard
 Предоставляет методы для управления буфером обмена.  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о методах и свойствах `My.Computer.Clipboard` см. в разделе <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.  
+ Сведения о методах и свойствах `My.Computer.Clipboard` объекта, см. в разделе <xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>.  
   
- Дополнительные сведения см. в разделе [хранение данных и чтение из буфера обмена](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
+ Дополнительные сведения см. в разделе [хранения данных и чтение из буфера обмена](../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md).  
   
 > [!NOTE]
->  Можно также использовать методы <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> класс для работы в буфер обмена.  
+>  Можно также использовать методы <xref:System.Windows.Forms.Clipboard?displayProperty=nameWithType> класс для управления в буфер обмена.  
   
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** <xref:Microsoft.VisualBasic.MyServices>  
