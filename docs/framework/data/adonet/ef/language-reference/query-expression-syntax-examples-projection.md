@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 079926c5-e6b5-4fb9-b4cf-9c63886dd626
-ms.openlocfilehash: 69c807bdc052dda9e62216aa1611b4a6b2155a27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: cc50b2564d295f1c81feacdeb52008f9f0004adc
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762817"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396633"
 ---
 # <a name="query-expression-syntax-examples-projection"></a>Примеры синтаксиса выражений запроса. Проекция
-Примеры в этом разделе демонстрируют, как использовать `Select` метод и `From … From …` ключевых слов [модели AdventureWorks Sales](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) с использованием синтаксиса выражений запроса. `From … From …` - это основанный на запросе эквивалент метода `SelectMany`. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
+Примеры в этом разделе демонстрируют, как использовать `Select` метод и `From … From …` ключевых слов [модели AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) с использованием синтаксиса выражений запроса. `From … From …` - это основанный на запросе эквивалент метода `SelectMany`. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
   
  В примерах в этом разделе используются следующие `using` / `Imports` инструкции:  
   

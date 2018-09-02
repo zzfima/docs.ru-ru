@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ToolTip control [WPF], about ToolTip control
 - controls [WPF], ToolTip
 ms.assetid: f06c1603-e9cb-4809-8a62-234607fc52f7
-ms.openlocfilehash: b70387e604b0917d154fc056b904e9ee05f6fbbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a11dcfc9030944365adda3656a8895912b0ef0d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557242"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399224"
 ---
 # <a name="tooltip-overview"></a>Общие сведения о всплывающих подсказках
-Всплывающая подсказка представляет небольшое всплывающее окно, которое появляется при наведении указателя мыши на элемент, например, на <xref:System.Windows.Controls.Button>. В этом разделе рассказывается о всплывающих подсказках и о том, как создавать и настраивать их содержимое.  
+Подсказка — это небольшое всплывающее окно, которое отображается, когда пользователь задерживает указатель мыши над элементом, например, на <xref:System.Windows.Controls.Button>. В этом разделе рассказывается о всплывающих подсказках и о том, как создавать и настраивать их содержимое.  
   
  
   
@@ -30,15 +30,15 @@ ms.locfileid: "33557242"
   
 -   <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType>  
   
- Какое свойство использовать зависит ли элемент управления, который определяет подсказку наследует от <xref:System.Windows.FrameworkContentElement> или <xref:System.Windows.FrameworkElement> класса.  
+ Какое свойство можно использовать зависит от того, является ли элемент управления, определяющий подсказку наследует от <xref:System.Windows.FrameworkContentElement> или <xref:System.Windows.FrameworkElement> класса.  
   
 <a name="create_tooltip"></a>   
 ## <a name="creating-a-tooltip"></a>Создание всплывающей подсказки  
- Приведенный ниже показано, как создать простой подсказку, присвоив <xref:System.Windows.FrameworkElement.ToolTip%2A> свойства <xref:System.Windows.Controls.Button> элемента управления в текстовую строку.  
+ В следующем примере показано, как создать простую всплывающую подсказку, присвоив <xref:System.Windows.FrameworkElement.ToolTip%2A> свойство для <xref:System.Windows.Controls.Button> элемента управления в текстовую строку.  
   
  [!code-xaml[GroupBoxSnippet#ToolTipString](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipstring)]  
   
- Можно также определить подсказку как <xref:System.Windows.Controls.ToolTip> объект. В следующем примере используется [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для указания <xref:System.Windows.Controls.ToolTip> объект как подсказку <xref:System.Windows.Controls.TextBox> элемента. Обратите внимание, что в примере указывается <xref:System.Windows.Controls.ToolTip> , установив <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType> свойство.  
+ Можно также определить подсказку как <xref:System.Windows.Controls.ToolTip> объекта. В следующем примере используется [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] для указания <xref:System.Windows.Controls.ToolTip> объект как подсказку <xref:System.Windows.Controls.TextBox> элемент. Обратите внимание, что в примере указывается <xref:System.Windows.Controls.ToolTip> , задав <xref:System.Windows.FrameworkElement.ToolTip%2A?displayProperty=nameWithType> свойство.  
   
  [!code-xaml[ToolTipSimple#ToolTip](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#tooltip)]  
   
@@ -47,19 +47,19 @@ ms.locfileid: "33557242"
  [!code-csharp[ToolTipSimple#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml.cs#2)]
  [!code-vb[ToolTipSimple#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipSimple/VisualBasic/Window1.xaml.vb#2)]  
   
- Можно также создать содержимое подсказки, которая не определена как <xref:System.Windows.Controls.ToolTip> , включив содержимое подсказки в макет элемента, такие как <xref:System.Windows.Controls.DockPanel>. Следующий пример показывает, как задать <xref:System.Windows.FrameworkElement.ToolTip%2A> свойство <xref:System.Windows.Controls.TextBox> на содержимое, которое заключено в <xref:System.Windows.Controls.DockPanel> элемента управления.  
+ Можно также создать содержимое подсказки, который не определен как <xref:System.Windows.Controls.ToolTip> объекта путем заключения содержимое подсказки в макет элемента, например <xref:System.Windows.Controls.DockPanel>. В следующем примере показано, как задать <xref:System.Windows.FrameworkElement.ToolTip%2A> свойство <xref:System.Windows.Controls.TextBox> к содержимому, которое заключено в <xref:System.Windows.Controls.DockPanel> элемента управления.  
   
  [!code-xaml[GroupBoxSnippet#ToolTipDockPanel](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GroupBoxSnippet/CS/Window1.xaml#tooltipdockpanel)]  
   
 <a name="Using_the_ToolTip_and_ToolTipService_Properties"></a>   
 ## <a name="using-the-properties-of-the-tooltip-and-tooltipservice-classes"></a>Использование свойств классов ToolTip и ToolTipService  
- Содержимое всплывающей подсказки можно настроить, задавая его визуальные свойства и применяя стили. Если определить содержимое подсказки как <xref:System.Windows.Controls.ToolTip> объекта, можно установить свойства visual <xref:System.Windows.Controls.ToolTip> объекта. В противном случае необходимо задать в эквивалентные вложенного свойства <xref:System.Windows.Controls.ToolTipService> класса.  
+ Содержимое всплывающей подсказки можно настроить, задавая его визуальные свойства и применяя стили. Если вы определяете содержимое подсказки как <xref:System.Windows.Controls.ToolTip> объекта, можно задать визуальные свойства <xref:System.Windows.Controls.ToolTip> объекта. В противном случае необходимо задать аналогичные присоединенные свойства на <xref:System.Windows.Controls.ToolTipService> класса.  
   
- Пример того, как задать свойства, чтобы указать положение содержимого всплывающей подсказки с помощью <xref:System.Windows.Controls.ToolTip> и <xref:System.Windows.Controls.ToolTipService> свойствах см. [положение подсказки](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md).  
+ Например, как настроить свойства, чтобы указать положение содержимого всплывающей подсказки с помощью <xref:System.Windows.Controls.ToolTip> и <xref:System.Windows.Controls.ToolTipService> свойства, см. в разделе [положения всплывающей подсказки](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md).  
   
 <a name="StylingToolTip"></a>   
 ## <a name="styling-a-tooltip"></a>Задание стиля всплывающей подсказки  
- Задать стиль <xref:System.Windows.Controls.ToolTip> , определив пользовательский <xref:System.Windows.Style>. В следующем примере определяется <xref:System.Windows.Style> вызывается `Simple` , показано, как изменить расположение <xref:System.Windows.Controls.ToolTip> и изменить его внешний вид, установив <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, и <xref:System.Windows.Controls.Control.FontWeight%2A>.  
+ Задать стиль <xref:System.Windows.Controls.ToolTip> , определив пользовательский объект <xref:System.Windows.Style>. В следующем примере определяется <xref:System.Windows.Style> вызывается `Simple` , показано, как изменить расположение <xref:System.Windows.Controls.ToolTip> и изменить его внешний вид, задав <xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>, <xref:System.Windows.Controls.Control.FontSize%2A>, и <xref:System.Windows.Controls.Control.FontWeight%2A>.  
   
  [!code-xaml[ToolTipSimple#Style](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ToolTipSimple/CSharp/Pane1.xaml#style)]  
   
@@ -67,9 +67,9 @@ ms.locfileid: "33557242"
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Использование свойств интервала времени элемента ToolTipService  
  <xref:System.Windows.Controls.ToolTipService> Класс предоставляет следующие свойства для задания подсказки отображения времени: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, и <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
   
- Используйте <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> и <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> свойства для указания задержки, как правило, короткой, перед <xref:System.Windows.Controls.ToolTip> отображается и Кроме того, чтобы указать, как долго <xref:System.Windows.Controls.ToolTip> остается видимым. Подробнее см. в разделе [Практическое руководство. Задержка отображения всплывающей подсказки](http://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
+ Используйте <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> и <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> свойства для указания задержки, как правило, короткой, перед <xref:System.Windows.Controls.ToolTip> отображается и Кроме того, чтобы указать, как долго <xref:System.Windows.Controls.ToolTip> остается видимым. Подробнее см. в разделе [Практическое руководство. Задержка отображения всплывающей подсказки](https://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
   
- <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> Свойство определяет, если подсказки для различных элементов управления отображаются без начальной задержки при наведении указателя мыши быстро между ними. Дополнительные сведения о <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> свойство, в разделе [руководство](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
+ <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> Свойство определяет, если всплывающие подсказки для различных элементов управления отображаться без начальной задержки при перемещении указателя мыши быстро между ними. Дополнительные сведения о <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> свойство, см. в разделе [использование свойства BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
   
  В примере ниже показано, как задать эти свойства для всплывающих подсказок.  
   

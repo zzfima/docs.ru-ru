@@ -2,17 +2,17 @@
 title: Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: 535b431fcf8ab5dafa134b8a3c1e2f7eacd6b427
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e00798a5e591ed8621cd0b5dbb4adfd1d41989bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696511"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399682"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await (Visual Basic)
 Возможности Async и Await упрощают создание асинхронных программ. Можно написать асинхронный код, который выглядит как синхронный, и позволить компилятору обрабатывать трудные функции обратного вызова и продолжения, которые обычно включает асинхронный код.  
   
- Дополнительные сведения о функции Async см. в разделе [асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
+ Дополнительные сведения о возможности Async см. в разделе [асинхронное программирование с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).  
   
  Это пошаговое руководство начинается с создания синхронного приложения Windows Presentation Foundation (WPF), которое суммирует число байтов в списке веб-сайтов. Затем в рамках руководства приложение преобразуется в асинхронное решение с помощью новых возможностей.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "34696511"
 -   [Пример](#BKMK_CompleteCodeExamples)  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- На компьютере должна быть установлена среда Visual Studio 2012 или более поздней версии. Дополнительные сведения см. на [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?LinkId=235233).  
+ На компьютере должна быть установлена среда Visual Studio 2012 или более поздней версии. Дополнительные сведения см. на [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkId=235233).  
   
 ###  <a name="CreateWPFApp"></a> Создание приложения WPF  
   
@@ -112,7 +112,7 @@ ms.locfileid: "34696511"
   
 1.  В **обозревателе решений**, откройте контекстное меню для MainWindow.xaml.vb и затем выберите **Просмотр кода**.  
   
-2.  Добавьте следующие `Imports` операторов в начале файла кода, если они еще не существует.  
+2.  Добавьте следующий `Imports` инструкций в верхней части файла кода, если они еще не существуют.  
   
     ```vb  
     Imports System.Net.Http  
@@ -123,9 +123,9 @@ ms.locfileid: "34696511"
 ##  <a name="BKMK_CreatSynchApp"></a>   
 ###  <a name="synchronous"></a> Создание синхронного приложения  
   
-1.  В окне конструктора MainWindow.xaml дважды щелкните **запустить** кнопку, чтобы создать `startButton_Click` обработчика событий в файле.  
+1.  В окне конструктора для MainWindow.xaml дважды щелкните **запустить** кнопку, чтобы создать `startButton_Click` обработчик событий в файле MainWindow.xaml.vb.  
   
-2.  В файле, скопируйте следующий код в тело `startButton_Click`:  
+2.  В файле MainWindow.xaml.vb, скопируйте следующий код в текст `startButton_Click`:  
   
     ```vb  
     resultsTextBox.Clear()  
@@ -145,7 +145,7 @@ ms.locfileid: "34696511"
   
     -   `DisplayResults`, который показывает число байтов в массиве байтов для каждого URL-адреса.  
   
-     Скопируйте следующие четыре метода, а затем вставьте их в `startButton_Click` обработчика событий в файле:  
+     Скопируйте следующие четыре метода, а затем вставьте их в разделе `startButton_Click` обработчик событий в файле MainWindow.xaml.vb:  
   
     ```vb  
     Private Sub SumPageSizes()  
@@ -265,7 +265,7 @@ ms.locfileid: "34696511"
   
 2.  `GetResponseAsync` возвращает значение типа <xref:System.Threading.Tasks.Task%601>. В этом случае *переменная, возвращаемая задачей*, `TResult`, имеет тип <xref:System.Net.WebResponse>. Задача является обещанием создать фактический объект `WebResponse` после загрузки запрошенных данных и выполнения задачи до завершения.  
   
-     Для получения `WebResponse` из задачи, примените [Await](../../../../visual-basic/language-reference/operators/await-operator.md) оператор для вызова `GetResponseAsync`, как показано в следующем коде.  
+     Для получения `WebResponse` значения из задачи, применить [Await](../../../../visual-basic/language-reference/operators/await-operator.md) оператор для вызова `GetResponseAsync`, как показано в следующем коде.  
   
     ```vb  
     Using response As WebResponse = Await webReq.GetResponseAsync()  
@@ -282,9 +282,9 @@ ms.locfileid: "34696511"
   
      Вызов `webReq.GetResponseAsync` возвращает `Task(Of WebResponse)` или `Task<WebResponse>`. Затем `Await` оператор применяется к задаче для получения `WebResponse` значение.  
   
-     Если асинхронный метод выполняет какие-то действия, это не зависит от выполнения задачи, метод может продолжать свои действия между выполнениями этих двух операторов: после вызова асинхронного метода и перед применением оператора await. Примеры см. в разделе [как: выполнение нескольких веб-запросов в параллельном режиме, с помощью Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) и [как: расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
+     Если асинхронный метод выполняет какие-то действия, это не зависит от выполнения задачи, метод может продолжать свои действия между выполнениями этих двух операторов: после вызова асинхронного метода и перед применением оператора await. Примеры, см. в разделе [как: сделать нескольких веб-запросов в параллельном режиме с помощью Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) и [как: расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
-3.  Из-за добавления оператора `Await` в предыдущем шаге возникает ошибка компилятора. Оператор может использоваться только в методах, которые отмечены [Async](../../../../visual-basic/language-reference/modifiers/async.md) модификатор. Пропустите ошибку, повторяя действия по замене вызова `CopyTo` вызовом метода `CopyToAsync`.  
+3.  Из-за добавления оператора `Await` в предыдущем шаге возникает ошибка компилятора. Оператор может использоваться только в методах, которые помечены атрибутом [Async](../../../../visual-basic/language-reference/modifiers/async.md) модификатор. Пропустите ошибку, повторяя действия по замене вызова `CopyTo` вызовом метода `CopyToAsync`.  
   
     -   Измените имя метода, вызывающего <xref:System.IO.Stream.CopyToAsync%2A>.  
   
@@ -305,13 +305,13 @@ ms.locfileid: "34696511"
         'Await copyTask  
         ```  
   
-4.  Все, что остается сделать в `GetURLContents`, — это изменить подпись метода. Можно использовать `Await` оператор только в методах, которые отмечены [Async](../../../../visual-basic/language-reference/modifiers/async.md) модификатор. Добавьте модификатор, чтобы пометить метод как *асинхронный*, как показано в приведенном ниже примере кода.  
+4.  Все, что остается сделать в `GetURLContents`, — это изменить подпись метода. Можно использовать `Await` оператор только в методах, которые помечены атрибутом [Async](../../../../visual-basic/language-reference/modifiers/async.md) модификатор. Добавьте модификатор, чтобы пометить метод как *асинхронный*, как показано в приведенном ниже примере кода.  
   
     ```vb  
     Private Async Function GetURLContents(url As String) As Byte()  
     ```  
   
-5.  Тип возвращаемого значения асинхронного метода может быть только <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>. В Visual Basic метод должен являться функцией `Function`, возвращающей `Task` или `Task(Of T)`, либо он должен быть `Sub`. Как правило `Sub` метод используется только в асинхронном обработчике событий, где `Sub` является обязательным. В других случаях используется `Task(T)` Если завершенный метод имеет [возвращают](../../../../visual-basic/language-reference/statements/return-statement.md) , возвращает значение типа T, и использовать `Task` Если завершенный метод не возвращает осмысленное значение.  
+5.  Тип возвращаемого значения асинхронного метода может быть только <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>. В Visual Basic метод должен являться функцией `Function`, возвращающей `Task` или `Task(Of T)`, либо он должен быть `Sub`. Как правило `Sub` метод используется только в асинхронном обработчике событий, где `Sub` является обязательным. В других случаях используется `Task(T)` Если завершенный метод имеет [возвращают](../../../../visual-basic/language-reference/statements/return-statement.md) инструкцию, которая возвращает значение типа T, или использовании `Task` Если завершенный метод не возвращает осмысленное значение.  
   
      Дополнительные сведения см. в разделе [асинхронные типы возвращаемых значений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).  
   
@@ -359,7 +359,7 @@ ms.locfileid: "34696511"
   
     -   Добавьте в имя метода Async.  
   
-    -   В этот раз нет возвращаемой переменной задачи T, поскольку `SumPageSizesAsync` не возвращает значение для T. (В этом методе нет оператора `Return`.) Тем не менее метод должен возвращать `Task`, чтобы для него можно было задать ожидание. Таким образом, измените тип метода с `Sub` для `Function`. Тип значения, возвращаемого функцией, — `Task`.  
+    -   В этот раз нет возвращаемой переменной задачи T, поскольку `SumPageSizesAsync` не возвращает значение для T. (В этом методе нет оператора `Return`.) Тем не менее метод должен возвращать `Task`, чтобы для него можно было задать ожидание. Таким образом, измените тип метода из `Sub` для `Function`. Тип значения, возвращаемого функцией, — `Task`.  
   
      В следующем примере кода показаны эти изменения.  
   
@@ -679,6 +679,6 @@ End Class
  [Async](../../../../visual-basic/language-reference/modifiers/async.md)  
  [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
  [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений Async (Visual Basic))  
- [Асинхронное программирование на основе задач (TAP)](http://go.microsoft.com/fwlink/?LinkId=204847)  
+ [Асинхронное программирование на основе задач (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)  
  [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Практическое руководство. Расширение пошагового руководства по асинхронным процедурам с использованием метода Task.WhenAll (Visual Basic))  
  [How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) (Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await (Visual Basic))

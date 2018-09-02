@@ -7,12 +7,12 @@ helpviewer_keywords:
 - stored procedures [LINQ to SQL]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 6436d384-d1e0-40aa-8afd-451007477260
-ms.openlocfilehash: 8aad85ce3369f84e82100072bccf389b03c38221
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 50a4dff90dc1ce02869978f1da147e530cefc3e1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754095"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393886"
 ---
 # <a name="how-to-call-a-stored-procedure-by-using-linq-visual-basic"></a>Практическое руководство. Вызов хранимой процедуры с помощью LINQ (Visual Basic)
 Language-Integrated Query (LINQ) позволяет легко получить доступ к информации базы данных, включая объекты, такие как хранимые процедуры базы данных.  
@@ -70,7 +70,7 @@ Language-Integrated Query (LINQ) позволяет легко получить 
   
 ## <a name="see-also"></a>См. также  
  [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Запросы](../../../../visual-basic/language-reference/queries/queries.md)  
+ [Запросы](../../../../visual-basic/language-reference/queries/index.md)  
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  [Методы DataContext (реляционный конструктор объектов)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [Практическое: назначение хранимых процедур для выполнения обновлений, вставок и удалений (реляционный конструктор объектов)](http://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+ [Практическое руководство. Назначение хранимых процедур для выполнения обновления, вставки и удаления (реляционный конструктор объектов)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: f92b5f5ae40287c95da10ef96aad0fa764fa00e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab2d0d9456f64f215ddbc0003833db1858f0ce1a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540677"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395108"
 ---
 # <a name="listview-control-overview-windows-forms"></a>Общие сведения об элементе управления ListView (Windows Forms)
 Элемент управления <xref:System.Windows.Forms.ListView> Windows Forms отображает список элементов со значками. Представление списка можно использовать для создания пользовательского интерфейса, аналогичного правой области окна проводника. Элемент управления имеет четыре режима представления: LargeIcon, SmallIcon, списка и сведений.  
@@ -21,13 +21,13 @@ ms.locfileid: "33540677"
 ## <a name="what-you-can-do-with-the-listview-control"></a>Что делать с элементом управления ListView  
   
 > [!NOTE]
->  Дополнительный режим просмотра плитки, доступен только в Windows XP и Windows Server 2003 операционной системы. Дополнительные сведения см. в разделе [как: Включение вида мозаики в элементе управления ListView формы Windows](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md).  
+>  Дополнительный режим просмотра плитки, доступна только в ОС Windows Server 2003 и Windows XP. Дополнительные сведения см. в разделе [как: включить мозаичное представление в элементе управления ListView формы Windows](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md).  
   
- В режиме LargeIcon отображает крупные значки рядом с текстом элемента; элементы появляются в нескольких столбцах, если элемент управления является достаточно большим. Режимом SmallIcon одинаково за исключением того, что отображаются мелкие значки. Режим списка отображаются мелкие значки, но всегда находится в одном столбце. Сведения о режиме отображаются элементы в нескольких столбцах. Дополнительные сведения см. в разделе [как: Добавление столбцов в элемент управления Windows Forms ListView](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md). Режим просмотра определяется <xref:System.Windows.Forms.ListView.View%2A> свойство. Все режимы представления можно отображать изображения из списков изображений. Дополнительные сведения см. в разделе [как: отображение значков для элемента управления ListView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md).  
+ В режиме LargeIcon отображаются крупные значки, рядом с текстом элемента; элементы появляются в нескольких столбцах, если элемент управления является достаточно большим. Режим SmallIcon аналогичен за исключением того, что отображается мелких значков. Режим списка отображаются мелкие значки, но всегда находится в одном столбце. Режим сведений отображаются элементы в нескольких столбцах. Дополнительные сведения см. в разделе [как: Добавление столбцов элемента управления ListView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md). Режим представления определяется <xref:System.Windows.Forms.ListView.View%2A> свойство. Все режимы представлении можно отобразить изображения из списков изображений. Дополнительные сведения см. в разделе [как: отображаемые значки для элемента управления ListView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md).  
   
- В следующей таблице перечислены некоторые из <xref:System.Windows.Forms.ListView> члены и представлений, они являются допустимыми в.  
+ В следующей таблице перечислены некоторые из <xref:System.Windows.Forms.ListView> члены и представления, они допустимы в.  
   
-|ListView-элемент|Просмотр|  
+|Член ListView|Просмотр|  
 |---------------------|----------|  
 |Свойство <xref:System.Windows.Forms.ListView.Alignment%2A>|<xref:System.Windows.Forms.View.SmallIcon> или <xref:System.Windows.Forms.View.LargeIcon>|  
 |Свойство <xref:System.Windows.Forms.ListView.AutoArrange%2A>|<xref:System.Windows.Forms.View.SmallIcon> или <xref:System.Windows.Forms.View.LargeIcon>|  
@@ -41,11 +41,11 @@ ms.locfileid: "33540677"
 |Свойство <xref:System.Windows.Forms.ListView.HeaderStyle%2A>|<xref:System.Windows.Forms.View.Details>.|  
 |Свойство <xref:System.Windows.Forms.ListView.InsertionMark%2A>|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>или <xref:System.Windows.Forms.View.Tile>|  
   
- Ключевое свойство <xref:System.Windows.Forms.ListView> управления <xref:System.Windows.Forms.ListView.Items%2A>, который содержит элементы, отображаемые элементом управления. <xref:System.Windows.Forms.ListView.SelectedItems%2A> Свойство содержит коллекцию элементов, выбранных в данный момент в элементе управления. Пользователь может выбрать несколько элементов, например перетаскивание нескольких элементов одновременно на другой элемент управления, если <xref:System.Windows.Forms.ListView.MultiSelect%2A> свойству `true`. <xref:System.Windows.Forms.ListView> Элемент управления может отображать флажки рядом с элементами, если <xref:System.Windows.Forms.ListView.CheckBoxes%2A> свойству `true`.  
+ Ключевое свойство <xref:System.Windows.Forms.ListView> элемент управления является <xref:System.Windows.Forms.ListView.Items%2A>, который содержит элементы, отображаемые элементом управления. <xref:System.Windows.Forms.ListView.SelectedItems%2A> Свойство содержит коллекцию элементов, выбранных в элементе управления. Пользователь может выбрать несколько элементов, например перетаскивание нескольких элементов за раз на другой элемент управления, если <xref:System.Windows.Forms.ListView.MultiSelect%2A> свойству `true`. <xref:System.Windows.Forms.ListView> Элемент управления может отображать флажки рядом с элементами, если <xref:System.Windows.Forms.ListView.CheckBoxes%2A> свойству `true`.  
   
- <xref:System.Windows.Forms.ListView.Activation%2A> Свойство определяет, какой тип действия должен выполнить пользователь для активации элемента в списке: параметры <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, и <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick> для активации требуется одним щелчком для активации элемента. <xref:System.Windows.Forms.ItemActivation.TwoClick> Активация требует от пользователя, дважды щелкните для активации элемента; одним щелчком изменяет цвет текста элемента. <xref:System.Windows.Forms.ItemActivation.Standard> Активация требует от пользователя, щелкните дважды, чтобы активировать элемент, но элемент не изменяет внешний вид.  
+ <xref:System.Windows.Forms.ListView.Activation%2A> Свойство определяет, какой тип действия должен выполнить пользователь для активации элемента в списке: возможные варианты: <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, и <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick> для активации требуется одним щелчком для активации элемента. <xref:System.Windows.Forms.ItemActivation.TwoClick> Активация требует от пользователя, дважды щелкните для активации элемента; одним щелчком мыши изменяет цвет текста элемента. <xref:System.Windows.Forms.ItemActivation.Standard> Активация требует от пользователя, дважды щелкните, чтобы активировать элемент, но элемент не приводит к изменению внешнего вида.  
   
- <xref:System.Windows.Forms.ListView> Управления также поддерживает визуальные стили и другие средства, доступные на платформе Windows XP, включая группирование, мозаичное представление и метки вставки. Дополнительные сведения см. в разделе [возможности Windows XP и элементы управления Windows Forms](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
+ <xref:System.Windows.Forms.ListView> Управления также поддерживает стили оформления и другие функции, доступные на платформе Windows XP, включая группирование, мозаичное представление и метки вставки. Дополнительные сведения см. в разделе [возможности Windows XP и элементы управления Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Forms.ListView>  

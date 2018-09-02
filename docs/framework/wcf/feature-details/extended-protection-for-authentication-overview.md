@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: fdf18564d3545e0061d8323e544aecfeed621d0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b4abd570f8bb40f2faa72f2debf2dee563d3a23
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489987"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394946"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>Общие сведения о расширенной защите для проверки подлинности
 Расширенная защита для проверки подлинности обеспечивает защиту от атак типа «злоумышленник в середине», когда злоумышленник перехватывает клиентские учетные данные и отправляет их на сервер.  
@@ -35,4 +35,4 @@ ms.locfileid: "33489987"
  Дополнительные сведения см. в образце Win7 CBT/Extended Protection.  
   
 ## <a name="see-also"></a>См. также  
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

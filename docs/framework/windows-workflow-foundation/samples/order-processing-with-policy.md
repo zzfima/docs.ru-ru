@@ -2,12 +2,12 @@
 title: Обработка заказов с помощью политики
 ms.date: 03/30/2017
 ms.assetid: 66833724-dc36-4fad-86b0-59ffeaa3ba6a
-ms.openlocfilehash: 15e274a7a513a3208e3a54575dc354310743b731
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b927d8e7090f96b22c0510f9651070ab999c91be
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519422"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398374"
 ---
 # <a name="order-processing-with-policy"></a>Обработка заказов с помощью политики
 В данном образце политики обработки заказов продемонстрированы некоторые ключевые функции, представленные в [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] платформы Windows Workflow Foundation (WF). В обработчике правил WF реализованы следующие новые функции:  
@@ -24,7 +24,7 @@ ms.locfileid: "33519422"
  В данном образце демонстрируется проект `OrderProcessingPolicy`, в котором вводится заказ клиента, состоящий из нумерованного списка доступных элементов и почтового индекса. Обработка заказа выполняется успешно, если обе записи верны, в противном случае политика создает объекты ошибок, используя перегруженный оператор `+` и предварительно определенный метод расширения, чтобы информировать пользователей об ошибках.  
   
 > [!NOTE]
->  Дополнительные сведения о методах расширения см. в разделе [спецификация C# версии 3.0](http://go.microsoft.com/fwlink/?LinkId=95402).  
+>  Дополнительные сведения о методах расширения см. в разделе [C# версии 3.0 спецификации](https://go.microsoft.com/fwlink/?LinkId=95402).  
   
  Образец включает следующие проекты:  
   
@@ -140,6 +140,6 @@ Another Order? (Y/N): n
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец находится в следующем каталоге:  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец находится в следующем каталоге:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Rules\Policy\OrderProcessingPolicy`

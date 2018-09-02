@@ -2,15 +2,15 @@
 title: Пользовательское демультиплексирование
 ms.date: 03/30/2017
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
-ms.openlocfilehash: e88672f152b87740feef1345b3eac213916a1527
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1542743a6e1658bad162d7ee9ca73e6b9b0444e2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805568"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395665"
 ---
 # <a name="custom-demux"></a>Пользовательское демультиплексирование
-В этом примере показано, как заголовки сообщений MSMQ можно сопоставлять с различными операциями служб, чтобы служб Windows Communication Foundation (WCF), использующих <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> не ограничены использованием одной операции службы, как показано в [ Очередь на Windows Communication Foundation сообщений](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) и [Windows Communication Foundation для Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) образцов.  
+В этом примере показано, как заголовки сообщений MSMQ можно сопоставлять с различными операциями служб, таким образом, Windows Communication Foundation (WCF) служб, использующих <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> не ограничены использованием одной операции службы, как показано в [ Очередь для Windows Communication Foundation сообщений](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) и [Windows Communication Foundation для Message Queuing](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) примеры.  
   
  В данном образце служба представляет собой резидентное консольное приложение, позволяющее наблюдать службу, получающую сообщения из очереди.  
   
@@ -109,7 +109,7 @@ public static void Main()
  Имя очереди MSMQ задается в разделе appSettings файла конфигурации.  
   
 > [!NOTE]
->  В имени очереди для определения локального компьютера используется точка (.), а в пути в качестве разделителей используются символы обратной косой черты. Адрес конечной точки WCF задается схема msmq.formatname и локального компьютера используется имя localhost. Схеме следует адрес очереди в правильном формате в соответствии с рекомендациям о создании адресов имен в формате MSMQ.  
+>  В имени очереди для определения локального компьютера используется точка (.), а в пути в качестве разделителей используются символы обратной косой черты. Адрес конечной точки WCF задается схема msmq.formatname и используется имя localhost для локального компьютера. Схеме следует адрес очереди в правильном формате в соответствии с рекомендациям о создании адресов имен в формате MSMQ.  
   
 ```xml  
 <appSettings>  
@@ -119,7 +119,7 @@ public static void Main()
 ```  
   
 > [!NOTE]
->  В этом примере требуется установка [очереди сообщений](http://go.microsoft.com/fwlink/?LinkId=95143).  
+>  Этот образец требует установки [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=95143).  
   
  Запустите службу и выполните клиент.  
   
@@ -164,13 +164,13 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
   
     3.  Щелкните правой кнопкой мыши **очереди личных сообщений**и выберите **New**, **частную очередь**.  
   
-    4.  Проверьте **транзакций** поле.  
+    4.  Проверьте **транзакционная** поле.  
   
-    5.  Введите `ServiceModelSamplesTransacted` качестве имени новой очереди.  
+    5.  Введите `ServiceModelSamplesTransacted` как имя новой очереди.  
   
 3.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Для запуска образца в конфигурации с одним или несколькими компьютерами следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах  
   
@@ -189,10 +189,10 @@ Purchase Order 28fc457a-1a56-4fe0-9dde-156965c21ed6 is canceled
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\CustomDemux`  
   
 ## <a name="see-also"></a>См. также  
  [Очереди в WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
- [Очереди сообщений](http://go.microsoft.com/fwlink/?LinkId=95143)
+ [Очереди сообщений](https://go.microsoft.com/fwlink/?LinkId=95143)

@@ -2,27 +2,27 @@
 title: Поставщик EntityClient для Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: bf3bf6fe0d0013b3e5b05ec697ad4f6a57459a6f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1bafdc250c7edc009352d668e8ee7962a86fe8bf
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32764799"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395095"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Поставщик EntityClient для Entity Framework
-Поставщик EntityClient - это поставщик данных, используемый приложениями платформы Entity Framework для доступа к данным, описанным в концептуальной модели. Сведения о концептуальных моделей см. в разделе [моделирования и сопоставления](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). В EntityClient для доступа к источнику данных используются другие поставщики данных .NET Framework. Например, в EntityClient используется поставщик данных .NET Framework для SQL Server (SqlClient) при доступе к базе данных SQL Server. Сведения о поставщике данных SqlClient см. в разделе [SqlClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). Поставщик EntityClient реализован в пространстве имен <xref:System.Data.EntityClient>.  
+Поставщик EntityClient - это поставщик данных, используемый приложениями платформы Entity Framework для доступа к данным, описанным в концептуальной модели. Сведения о концептуальной модели, см. в разделе [моделирования и сопоставления](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md). В EntityClient для доступа к источнику данных используются другие поставщики данных .NET Framework. Например, в EntityClient используется поставщик данных .NET Framework для SQL Server (SqlClient) при доступе к базе данных SQL Server. Сведения о поставщике SqlClient см. в разделе [SqlClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md). Поставщик EntityClient реализован в пространстве имен <xref:System.Data.EntityClient>.  
   
 ## <a name="managing-connections"></a>Управление подключениями  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Построения на основе отдельных [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] поставщиков данных, предоставляя <xref:System.Data.EntityClient.EntityConnection> базового поставщика данных и реляционной базе данных. Для создания <xref:System.Data.EntityClient.EntityConnection> объекта по ссылке на набор метаданных, содержащий необходимые модели и сопоставления, а также данные, зависящие от хранилища поставщик имя и строку соединения. После <xref:System.Data.EntityClient.EntityConnection> — на месте, сущностям можно обращаться через классы, сформированные из концептуальной модели.  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Построен на основе конкретного хранилища [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] поставщики данных, предоставляя <xref:System.Data.EntityClient.EntityConnection> к базовому поставщику данных и реляционной базы данных. Для создания <xref:System.Data.EntityClient.EntityConnection> объекта, необходимо указать ссылку на набор метаданных, содержащий необходимые модели и сопоставления, а также строку подключения и имя поставщика данных. После <xref:System.Data.EntityClient.EntityConnection> находится в месте, сущностям может осуществляться через классы, сформированные из концептуальной модели.  
   
  Строку соединения можно задать в файле app.config.  
   
- Пространство имен <xref:System.Data.EntityClient> включает также класс <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Этот класс позволяет разработчикам программным способом создавать синтаксически правильные строки соединения, а также выполнять синтаксический анализ существующих строк соединения и перестраивать их с помощью свойств и методов этого класса. Дополнительные сведения см. в разделе [как: построение строки подключения EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
+ Пространство имен <xref:System.Data.EntityClient> включает также класс <xref:System.Data.EntityClient.EntityConnectionStringBuilder>. Этот класс позволяет разработчикам программным способом создавать синтаксически правильные строки соединения, а также выполнять синтаксический анализ существующих строк соединения и перестраивать их с помощью свойств и методов этого класса. Дополнительные сведения см. в разделе [как: сборка строки подключения EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md).  
   
 ## <a name="creating-queries"></a>Создание запросов  
- [!INCLUDE[esql](../../../../../includes/esql-md.md)] Язык-это независимый от хранилища диалект SQL, который работает непосредственно с концептуальными схемами сущности и поддерживает такие понятия модели EDM, как наследование и связи. <xref:System.Data.EntityClient.EntityCommand> Класс используется для выполнения [!INCLUDE[esql](../../../../../includes/esql-md.md)] команду для модели сущностей. При конструировании объектов <xref:System.Data.EntityClient.EntityCommand> можно указать имя хранимой процедуры или текст запроса. Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] работает с зависящими от хранилища поставщиками данных в целях преобразования общих конструкций языка [!INCLUDE[esql](../../../../../includes/esql-md.md)] в специфичные для хранилища запросы. Дополнительные сведения о записи [!INCLUDE[esql](../../../../../includes/esql-md.md)] запросы, в разделе [язык Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).  
+ [!INCLUDE[esql](../../../../../includes/esql-md.md)] Язык — независимый от хранилища диалект SQL, который работает непосредственно с концептуальными схемами сущностей и поддерживает основные понятия модели EDM, таких как наследование и связи. <xref:System.Data.EntityClient.EntityCommand> Класс используется для выполнения [!INCLUDE[esql](../../../../../includes/esql-md.md)] команду для модели сущностей. При конструировании объектов <xref:System.Data.EntityClient.EntityCommand> можно указать имя хранимой процедуры или текст запроса. Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] работает с зависящими от хранилища поставщиками данных в целях преобразования общих конструкций языка [!INCLUDE[esql](../../../../../includes/esql-md.md)] в специфичные для хранилища запросы. Дополнительные сведения о записи [!INCLUDE[esql](../../../../../includes/esql-md.md)] запросы, см. в разделе [язык Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).  
   
- В следующем примере создается <xref:System.Data.EntityClient.EntityCommand> объекта и назначит [!INCLUDE[esql](../../../../../includes/esql-md.md)] текст запроса его <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> свойство. Это [!INCLUDE[esql](../../../../../includes/esql-md.md)] запросы продукты, отсортированные по прейскуранту из концептуальной модели. Следующий код не предполагает совершенно никаких знаний о модели хранения.  
+ В следующем примере создается <xref:System.Data.EntityClient.EntityCommand> объекта и назначит [!INCLUDE[esql](../../../../../includes/esql-md.md)] текст запроса его <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> свойство. Это [!INCLUDE[esql](../../../../../includes/esql-md.md)] запрос запрашивает продукты, заказанные по прейскурантной цене из концептуальной модели. Следующий код не предполагает совершенно никаких знаний о модели хранения.  
   
  `EntityCommand cmd = conn.CreateCommand();`  
   
@@ -40,7 +40,7 @@ ms.locfileid: "32764799"
 ## <a name="managing-transactions"></a>Управление транзакциями  
  Платформа Entity Framework предлагает два способа использования транзакций: автоматический и явный. В автоматических транзакциях используется пространство имен <xref:System.Transactions>, а в явных транзакциях - класс <xref:System.Data.EntityClient.EntityTransaction>.  
   
- Для обновления данных, доступных через концептуальной модели. в разделе [как: управление транзакциями в Entity Framework](http://msdn.microsoft.com/library/4a55eb7f-f826-4a48-9df1-aebe2352ebef).  
+ Для обновления данных, который предоставляется с помощью концептуальной модели. см. в разделе [как: управление транзакциями в Entity Framework](https://msdn.microsoft.com/library/4a55eb7f-f826-4a48-9df1-aebe2352ebef).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Сборка строки подключения EntityConnection](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)  
@@ -64,6 +64,6 @@ ms.locfileid: "32764799"
  [Практическое руководство. Переход по отношениям с помощью оператора Navigate](../../../../../docs/framework/data/adonet/ef/how-to-navigate-relationships-with-the-navigate-operator.md)  
   
 ## <a name="see-also"></a>См. также  
- [Управление соединениями и транзакциями](http://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
+ [Управление подключениями и транзакциями](https://msdn.microsoft.com/library/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
  [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Справочник по языку](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)

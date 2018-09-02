@@ -2,12 +2,12 @@
 title: Образец интеграции с SystemWebRouting
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: 944eb8f2bd907308e60525f8917fcad826caa472
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 95372d6052690af30042061d623b6004699c21d9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258008"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394437"
 ---
 # <a name="systemwebrouting-integration-sample"></a>Образец интеграции с SystemWebRouting
 Этот образец показывает интеграцию уровня размещения с классами в пространстве имен <xref:System.Web.Routing>. Классы в пространстве имен <xref:System.Web.Routing> позволяют приложению использовать URL-адреса, которые не соответствуют непосредственно физическому ресурсу. С помощью веб-маршрутизации разработчик может создавать виртуальные адреса протокола HTTP, затем отображаются на набор служб WCF. Это может быть полезно, когда службу WCF необходимо разместить без обязательного выделения физического файла или ресурса или к службам необходимо получать доступ по URL-адресам, не содержащим файлов, например HTML или ASPX. Этот образец показывает использование класса <xref:System.Web.Routing.RouteTable> для создания виртуальных URI-адресов, связанных с выполняющимися службами, которые определены в файле global.asax. 
@@ -26,7 +26,7 @@ ms.locfileid: "43258008"
    
 `<InstallDrive>:\WF_WCF_Samples`  
    
- Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
+ Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
    
 `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
   
@@ -84,4 +84,4 @@ ms.locfileid: "43258008"
 >  Необходимо обновить версию пула приложений по умолчанию [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] если он задан до версии 2.  
   
 ## <a name="see-also"></a>См. также  
- [Образцы размещения AppFabric и сохраняемости](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Образцы размещения AppFabric и сохраняемости](https://go.microsoft.com/fwlink/?LinkId=193961)

@@ -5,18 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
-ms.openlocfilehash: b8e6ce386dc122ba059a18a448239cec7eaae222
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eeea3933446a401ad8f556dc546f54122a19a8b5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396773"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>Практическое руководство. Асинхронная реализация операции службы
-В приложениях Windows Communication Foundation (WCF) операции службы может быть реализована асинхронно или синхронно без жесткого задания клиенту способа вызова. Например, асинхронные операции службы могут вызываться синхронно или синхронные операции службы могут вызываться асинхронно. Пример, демонстрирующий способы асинхронного вызова операции в клиентском приложении см. в разделе [как: асинхронно вызывать операции службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Дополнительные сведения о синхронных и асинхронных операциях см. в разделе [проектирование контрактов службы](../../../docs/framework/wcf/designing-service-contracts.md) и [синхронной и асинхронной операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). В этом разделе описывается базовая структура асинхронной операции службы, код не завершен. Полный пример клиенту и службе сторон см [асинхронной](http://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
+В приложениях Windows Communication Foundation (WCF) операции службы можно реализовать асинхронно или синхронно без жесткого задания клиенту как к нему обратиться. Например, асинхронные операции службы могут вызываться синхронно или синхронные операции службы могут вызываться асинхронно. Пример, демонстрирующий способы асинхронного вызова операции в клиентском приложении, см. в разделе [как: асинхронно вызывать операции службы](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Дополнительные сведения о синхронных и асинхронных операциях см. в разделе [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md) и [синхронные и асинхронные операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md). В этом разделе описывается базовая структура асинхронной операции службы, код не завершен. Полный пример, служба и клиент сторон см. в разделе [асинхронной](https://msdn.microsoft.com/library/833db946-f511-4f64-a26f-2759a11217c7).  
   
 ### <a name="implement-a-service-operation-asynchronously"></a>Асинхронная реализация операции службы  
   
-1.  В контракте службы объявите пару асинхронных методов в соответствии с рекомендациями по асинхронной разработке для платформы .NET. Метод `Begin` принимает параметр, объект обратного вызова и объект состояния, а возвращает <xref:System.IAsyncResult?displayProperty=nameWithType>; соответствующий метод `End` принимает <xref:System.IAsyncResult?displayProperty=nameWithType> и возвращает возвращаемое значение. Дополнительные сведения об асинхронных вызовов см. в разделе [проектные шаблоны асинхронного программирования](http://go.microsoft.com/fwlink/?LinkId=248221).  
+1.  В контракте службы объявите пару асинхронных методов в соответствии с рекомендациями по асинхронной разработке для платформы .NET. Метод `Begin` принимает параметр, объект обратного вызова и объект состояния, а возвращает <xref:System.IAsyncResult?displayProperty=nameWithType>; соответствующий метод `End` принимает <xref:System.IAsyncResult?displayProperty=nameWithType> и возвращает возвращаемое значение. Дополнительные сведения об асинхронных вызовах см. в разделе [проектные шаблоны асинхронного программирования](https://go.microsoft.com/fwlink/?LinkId=248221).  
   
 2.  Пометьте метод `Begin` пары асинхронных методов атрибутом <xref:System.ServiceModel.OperationContractAttribute?displayProperty=nameWithType> и задайте для свойства <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A?displayProperty=nameWithType> значение `true`. Например, приведенный ниже код выполняет шаги 1 и 2.  
   

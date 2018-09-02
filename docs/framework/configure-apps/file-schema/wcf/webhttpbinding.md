@@ -2,15 +2,15 @@
 title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: 3a5a0844da401607b2049069e7195fa996c62fba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19b82500c1d24dbbf3e630e3021f195149e19b92
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365544"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399623"
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
-Определяет элемент привязки, который используется для настройки конечных точек для веб-службы Windows Communication Foundation (WCF) служб, которые отвечают на запросы HTTP вместо сообщений протокола SOAP.  
+Определяет элемент привязки, который используется для настройки конечных точек для веб-службы Windows Communication Foundation (WCF) служб, которые отвечают на запросы HTTP вместо сообщений SOAP.  
   
 \<система. ServiceModel >  
 \<привязки >  
@@ -63,8 +63,8 @@ ms.locfileid: "33365544"
 |hostnameComparisonMode|Задает режим сравнения имен узлов HTTP для анализа универсальных кодов ресурсов (URI). Это атрибут типа <xref:System.ServiceModel.HostNameComparisonMode>, который указывает, используется ли имя узла для доступа к службе при сравнении по универсальному коду ресурсов (URI). Значение по умолчанию — <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>, при котором имя узла в найденном соответствии не используется.|  
 |maxBufferPoolSize|Целое число, задающее максимальный размер буферного пула для этой привязки. Значение по умолчанию - 524 288 байт (512 * 1024). Многие элементы Windows Communication Foundation (WCF) используют буферы. При создании буферов и их уничтожении после каждого использования расходуется слишком много ресурсов; при сборке мусора для буферов также расходуется слишком много ресурсов. Буферные пулы позволяют брать буфер из пула, использовать его, а затем возвращать обратно, когда он больше не требуется. Это позволяет избежать излишней нагрузки, связанной с созданием и уничтожением буферов.|  
 |maxBufferSize|Целое число, задающее максимальный объем памяти, выделяемый для диспетчера буферов сообщений, получающих сообщения из канала. Значение по умолчанию - 524 288 (0x80 000) байт.|  
-|maxReceivedMessageSize|Положительное целое число, задающее, в байтах, максимальный размер сообщения (включая заголовки), которое можно получить по каналу, настроенному с использованием этой привязки. Отправитель сообщения, которое превысит это ограничение, получит ошибку. Получатель отклоняет сообщение и создает запись о событии в журнале трассировки. Значение по умолчанию — 65536. **Примечание:** увеличения только этого значения не хватает в режиме совместимости ASP.NET. Кроме того, следует увеличить значение `httpRuntime` (см. [httpRuntime (схема параметров ASP.NET) элемент](http://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369)).|  
-|имя|Строка, содержащая имя конфигурации привязки. Это значение должно быть уникальным, поскольку оно используется в качестве идентификатора привязки. Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена. Дополнительные сведения о конфигурации по умолчанию и безымянные привязок и поведений см. в разделе [упрощенной конфигурации](../../../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|maxReceivedMessageSize|Положительное целое число, задающее, в байтах, максимальный размер сообщения (включая заголовки), которое можно получить по каналу, настроенному с использованием этой привязки. Отправитель сообщения, которое превысит это ограничение, получит ошибку. Получатель отклоняет сообщение и создает запись о событии в журнале трассировки. Значение по умолчанию — 65536. **Примечание:** увеличения только этого значения не является достаточным в режиме совместимости ASP.NET. Также следует увеличить значение `httpRuntime` (см. в разделе [элемент httpRuntime (схема параметров ASP.NET)](https://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369)).|  
+|имя|Строка, содержащая имя конфигурации привязки. Это значение должно быть уникальным, поскольку оно используется в качестве идентификатора привязки. Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена. Дополнительные сведения о конфигурации по умолчанию и безымянных привязках и поведениях см. в разделе [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |openTimeout|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции открытия. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:01:00.|  
 |proxyAddress|Универсальный код ресурса (URI), задающий адрес прокси-сервера HTTP. Если параметр `useSystemWebProxy` имеет значение `true`, данный параметр должен иметь значение `null`. Значение по умолчанию — `null`.|  
 |receiveTimeout|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции получения. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:01:00.|  
@@ -75,21 +75,21 @@ ms.locfileid: "33365544"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений POX, которые могут обрабатываться конечными точками, настроенными с помощью этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений POX, которые могут обрабатываться конечными точками, настроенными с помощью этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|Определяет параметры безопасности привязки. Это элемент типа <xref:System.ServiceModel.Configuration.WebHttpSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
 ## <a name="remarks"></a>Примечания  
- Модель веб-программирования WCF позволяет разработчикам предоставлять веб-служб WCF через HTTP-запросов, использующих «plain old XML» стиля (POX) вместо обмена сообщениями на основе SOAP. Чтобы клиенты могли взаимодействовать со службой, используя HTTP-запросы, необходимо настроить конечную точку службы с [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) с \<WebHttpBehavior >, присоединенные к ней.  
+ Модель веб-программирования WCF позволяет разработчикам предоставлять веб-служб WCF через HTTP-запросы, использующие «plain old XML» (POX) стиль обмена сообщениями вместо обмена сообщениями на основе SOAP. Клиенты могли взаимодействовать со службой, используя HTTP-запросов конечной точки службы должны быть настроены [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) с \<WebHttpBehavior > подключенные к ней.  
   
- Поддерживает в WCF для объединения и ASP. Интеграция с AJAX построены на основе модели веб-программирования. Дополнительные сведения о модели см. в разделе [модель программирования WCF Web HTTP](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
+ Поддерживает в WCF для синдикации и ASP. Интеграция с AJAX построены на основе модели веб-программирования. Дополнительные сведения о модели, см. в разделе [модель программирования WCF Web HTTP](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.WebHttpBinding>  
@@ -97,5 +97,5 @@ ms.locfileid: "33365544"
  [Модель веб-программирования HTTP WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)

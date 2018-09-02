@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Clipboard [Windows Forms], Windows Forms
 ms.assetid: 7cce79b6-5835-46fd-b690-73f12ad368b2
-ms.openlocfilehash: 05cc79abdeb41cd3bfb7db21ebb206eb309ad5d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2bb3c24298ffe5308af03c5af5bae697a22c33b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33522576"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398636"
 ---
 # <a name="drag-and-drop-operations-and-clipboard-support"></a>Операции перетаскивания и поддержка буфера обмена
 Пользовательские операции перетаскивания в приложении Windows можно включить путем обработки последовательности событий, в частности событий <xref:System.Windows.Forms.Control.DragEnter>, <xref:System.Windows.Forms.Control.DragLeave> и <xref:System.Windows.Forms.Control.DragDrop>.  
@@ -42,4 +42,4 @@ ms.locfileid: "33522576"
  Описание особенностей метода, который является основным для запуска операции перетаскивания.  
   
  <xref:System.Windows.Forms.Clipboard>  
- См. также [как: отправка данных в активную дочернюю форму MDI](http://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).
+ Также см. в разделе [как: отправка данных активной дочерней MDI-формы](https://msdn.microsoft.com/library/y0hkh2c8\(v=vs.110\)).

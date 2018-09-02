@@ -2,12 +2,12 @@
 title: Аутентификация в SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 85f441d2181d434ec9fccca5841296106d0d7e3f
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 8d7fcb149059c06b7875663e4df5272312121c87
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754514"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394099"
 ---
 # <a name="authentication-in-sql-server"></a>Аутентификация в SQL Server
 SQL Server поддерживает два режима проверки подлинности: режим проверки подлинности Windows и режим смешанной проверки подлинности.  
@@ -83,4 +83,4 @@ SQL Server поддерживает два режима проверки под�
  [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  [Подключение к источнику данных](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)  
  [Строки подключения](../../../../../docs/framework/data/adonet/connection-strings.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

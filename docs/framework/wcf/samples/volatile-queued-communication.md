@@ -2,12 +2,12 @@
 title: Неустойчивое взаимодействие с использованием очереди
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
-ms.openlocfilehash: b03bfff66cb9bed7ea9f1514d25096cf6b79f88a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508040"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394024"
 ---
 # <a name="volatile-queued-communication"></a>Неустойчивое взаимодействие с использованием очереди
 В этом образце показано, как осуществлять неустойчивое взаимодействие с использованием очередей с помощью транспорта очереди сообщений (MSMQ). В этом образце используется привязка <xref:System.ServiceModel.NetMsmqBinding>. В данном случае служба представляет собой резидентное консольное приложение, позволяющее наблюдать за тем, как служба получает сообщения из очереди.  
@@ -48,7 +48,7 @@ public class StockTickerService : IStockTicker
 }  
 ```  
   
- Служба является резидентной. При работе с транспортом MSMQ используемую очередь следует создавать заранее. Это можно сделать вручную или с помощью кода. В данном образце служба содержит код для проверки наличия очереди и ее создания, если это необходимо. Имя очереди считывается из файла конфигурации. Базовый адрес используется [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания прокси для службы.  
+ Служба является резидентной. При работе с транспортом MSMQ используемую очередь следует создавать заранее. Это можно сделать вручную или с помощью кода. В данном образце служба содержит код для проверки наличия очереди и ее создания, если это необходимо. Имя очереди считывается из файла конфигурации. Базовый адрес используется [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания прокси-сервера для службы.  
 
 ```csharp
 // Host the service within this EXE console application.  
@@ -82,7 +82,7 @@ public static void Main()
  Имя очереди MSMQ задается в разделе appSettings файла конфигурации. Конечная точка для службы задается в разделе system.serviceModel файла конфигурации и определяет привязку `netMsmqBinding`.  
   
 > [!NOTE]
->  В имени очереди для определения локального компьютера используется точка (.), а при создании очереди с помощью <xref:System.Messaging> в пути в качестве разделителей используются символы обратной косой черты. Адрес конечной точки службы Windows Communication Foundation (WCF) указывает net.msmq: схемы, используется имя «localhost» для локального компьютера и символы косой черты в пути.  
+>  В имени очереди для определения локального компьютера используется точка (.), а при создании очереди с помощью <xref:System.Messaging> в пути в качестве разделителей используются символы обратной косой черты. Адрес конечной точки Windows Communication Foundation (WCF) указывает net.msmq: для схемы, используется имя «localhost» для локального компьютера и косые черты в пути.  
   
  Подтверждения устойчивости или неустойчивости сообщений также задаются в конфигурации.  
   
@@ -160,9 +160,9 @@ Stock Tick zzz9:43.3
   
 2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
- По умолчанию с привязкой <xref:System.ServiceModel.NetMsmqBinding> безопасность транспорта включена. Существует два свойства, определяющих безопасность транспорта MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> и <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` по умолчанию имеет значение режима проверки подлинности `Windows` и устанавливается уровень защиты `Sign`. Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен, а также должна быть установлена возможность интеграции MSMQ со службой каталогов Active Directory. Если запустить данный образец на компьютере, который не удовлетворяет этому условию, возникнет ошибка.  
+ По умолчанию с привязкой <xref:System.ServiceModel.NetMsmqBinding> безопасность транспорта включена. Существует два свойства, определяющих безопасность транспорта MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> и <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` по умолчанию, присваивается режим проверки подлинности `Windows` и уровень защиты `Sign`. Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен, а также должна быть установлена возможность интеграции MSMQ со службой каталогов Active Directory. Если запустить данный образец на компьютере, который не удовлетворяет этому условию, возникнет ошибка.  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Запуск образца на компьютере, входящем в рабочую группу, или без интеграции с Active Directory  
   
@@ -223,7 +223,7 @@ Stock Tick zzz9:43.3
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Volatile`  
   

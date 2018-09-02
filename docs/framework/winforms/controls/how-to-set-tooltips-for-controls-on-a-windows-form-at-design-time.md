@@ -9,22 +9,22 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 4e4623c1c0fe7d082e4d1a1f404ddaa94e79fc2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7f698a517fbf72ceafde4a117b4d92dd9d352834
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533634"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395179"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Практическое руководство. Определение всплывающих подсказок для элементов управления в Windows Forms во время разработки
-Можно задать <xref:System.Windows.Forms.ToolTip> строки в коде или в конструкторе Windows Forms. Дополнительные сведения о <xref:System.Windows.Forms.ToolTip> компонента, в разделе [Общие сведения о компоненте ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).  
+Можно задать <xref:System.Windows.Forms.ToolTip> строку в коде или в конструкторе Windows Forms. Дополнительные сведения о <xref:System.Windows.Forms.ToolTip> компонента, см. в разделе [Общие сведения о компоненте ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-set-a-tooltip-programmatically"></a>Задание всплывающей подсказки программным способом  
+### <a name="to-set-a-tooltip-programmatically"></a>Чтобы задать подсказку программным способом  
   
-1.  Добавьте элемент управления, который будет отображаться всплывающая подсказка.  
+1.  Добавьте элемент управления, который будет отображаться объект ToolTip.  
   
 2.  Используйте <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> метод <xref:System.Windows.Forms.ToolTip> компонента.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "33533634"
   
 1.  Добавьте в форму компонент <xref:System.Windows.Forms.ToolTip>.  
   
-2.  Выберите элемент управления, который будет отображаться всплывающая подсказка, или добавьте его в форму.  
+2.  Выберите элемент управления, который будет отображаться объект ToolTip, или добавьте его в форму.  
   
-3.  В **свойства** задайте **ToolTip on ToolTip1** значение соответствующую строку текста.  
+3.  В **свойства** окне **во всплывающей подсказке над ToolTip1** значение соответствующую строку текста.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения об элементе управления ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  

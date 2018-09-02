@@ -14,11 +14,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms]
 ms.assetid: dbee73f2-bba6-4874-9389-cd21d44309be
 ms.openlocfilehash: 2ef387437befe3df67e261b719140456a3fde9dd
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332511"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397223"
 ---
 # <a name="datagridview-control-windows-forms"></a>элемент управления DataGridView (Windows Forms)
 Элемент управления `DataGridView` предоставляет мощный и гибкий способ отображения данных в табличном формате. Элемент управления `DataGridView` можно использовать для отображения представлений небольшого объема данных только для чтения, либо можно масштабировать его для отображения редактируемого представления очень больших наборов данных.  

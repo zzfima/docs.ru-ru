@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1bc31a4f074891149783dec647a592683564ba0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e1380d03d4456e0695777775ae786a19982d691b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33457923"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394982"
 ---
 # <a name="blessiwbemservicesobject-function"></a>Функция BlessIWbemServicesObject
-Указывает, разрешить ли учетные данные пользователя доступ к определенному [IWbemServices](https://msdn.microsoft.com/library/aa392093(v=vs.85).aspx) объекта.   
+Указывает, разрешить ли учетные данные пользователя доступом к заданному [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices) объекта.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -52,7 +52,7 @@ HRESULT BlessIWbemServicesObject (
 `strPassword`  
 [in] Пароль, связанный с `strUser`.
 
-`strAuthority` [in] Имя домена пользователя. В разделе [ConnectServerWmi](connectserverwmi.md) функции для получения дополнительной информации.
+`strAuthority` [in] Имя домена пользователя. См. в разделе [ConnectServerWmi](connectserverwmi.md) функции подробнее.
 
 `impLevel` [in] Уровень олицетворения.
 
@@ -60,22 +60,22 @@ HRESULT BlessIWbemServicesObject (
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующие значения, возвращаемые этой функцией, определяются в *WinError.h* заголовочный файл, или их можно определить как константы в коде:
+Следующие значения, возвращаемые этой функцией, определяются в *WinError.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | Один или несколько аргументов являются недопустимыми. |
-| `E_POINTER` | отметкой 0x80004003 | Свойство `pIWbemServices` имеет значение `null`. | 
+| `E_POINTER` | 0x80004003 | Свойство `pIWbemServices` имеет значение `null`. | 
 | `E_FAIL` | 0x80000008 | Произошла неизвестная ошибка. |
 | `E_OUTOFMEMORY` | 0x80000002 | Недостаточно памяти для выполнения операции. | 
-| `S_OK` | 0 | Успешный вызов функции. | 
+| `S_OK` | 0 | Вызов функции был успешным. | 
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
-[WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)
+[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

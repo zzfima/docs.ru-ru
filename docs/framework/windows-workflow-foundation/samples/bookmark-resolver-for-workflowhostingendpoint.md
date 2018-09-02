@@ -2,12 +2,12 @@
 title: Арбитр закладок для конечной точки WorkflowHostingEndpoint
 ms.date: 03/30/2017
 ms.assetid: 97fd5816-935e-4625-ad04-e6f6befa07de
-ms.openlocfilehash: f8afb804525ecf36127e32441c92f43af70f5099
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48053ec7882b2e742b61fdc293b6bc5f8a129ca5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514948"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400480"
 ---
 # <a name="bookmark-resolver-for-workflowhostingendpoint"></a>Арбитр закладок для конечной точки WorkflowHostingEndpoint
 В этом образце показано использование <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> с <xref:System.ServiceModel.Activities.WorkflowServiceHost> для создания экземпляров рабочего процесса.  
@@ -28,13 +28,13 @@ ms.locfileid: "33514948"
   
 1.  Постройте решение.  
   
-2.  Запустите приложение. При создании экземпляра рабочего процесса на консоли `CreationEndpoint` выводится сообщение, содержащее идентификатор экземпляра. Сообщение «Hello World!» выводится экземпляром рабочего процесса.  
+2.  Запустите приложение. При создании экземпляра рабочего процесса на консоли `CreationEndpoint` выводится сообщение, содержащее идентификатор экземпляра. Сообщение «Hello World!» печатается экземпляром рабочего процесса.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\CreationEndpoint`

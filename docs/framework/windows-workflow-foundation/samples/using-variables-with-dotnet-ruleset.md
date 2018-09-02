@@ -2,12 +2,12 @@
 title: Использование переменных с набором правил из .NET Framework 3.5
 ms.date: 03/30/2017
 ms.assetid: 27b56249-22fe-4252-840f-74c0d6c7a6b3
-ms.openlocfilehash: 9fa6eaf58aaddc4673f08ec9a9001647a494877d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64d47564076e19e152e30b6ab0cb3900ce53cfa1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516860"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395158"
 ---
 # <a name="using-variables-with-a-net-framework-35-ruleset"></a>Использование переменных с набором правил из .NET Framework 3.5
 В этом образце демонстрируется создание рабочего процесса, использующего действие <xref:System.Activities.Statements.Interop> для интеграции настраиваемого действия, записанного в [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] с применением политики и правил. Рабочий процесс передает данные для пользовательского действия, привязывая переменные к свойствам зависимостей, предоставляемым настраиваемым действием.  
@@ -26,7 +26,7 @@ ms.locfileid: "33516860"
   
      Появится редактор правил, показывая правила.  
   
-4.  Щелкните правой кнопкой мыши `DiscountPolicy` и выберите **Просмотр кода** для просмотра побочного C# кода для действия.  
+4.  Щелкните правой кнопкой мыши `DiscountPolicy` и выберите **Просмотр кода** возможность просмотра побочного C# кода для действия.  
   
      Проверьте значения свойства зависимости для `DiscountLevel`. Это эквивалентно аргументам в [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]. Дополнительные сведения об аргументах см. в разделе [переменных и аргументов](../../../../docs/framework/windows-workflow-foundation/variables-and-arguments.md).  
   
@@ -46,6 +46,6 @@ ms.locfileid: "33516860"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InteropWith35RuleSet`

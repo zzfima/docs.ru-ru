@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b213285b3c533488cfa48198951275925c0e37ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 93377f82992b8d7d55b21b53abfd7d7c2e9e620b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436190"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394899"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>Метод ICLRStrongName::StrongNameKeyGenEx
-Создает новую пару открытого и закрытого ключей с указанным размером ключа, для использования строгого имени.  
+Создает новую пару открытого и закрытого ключа с заданным размером ключа, для использования строгого имени.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,12 +41,12 @@ HRESULT StrongNameKeyGenEx (
   
 #### <a name="parameters"></a>Параметры  
  `wszKeyContainer`  
- [in] Имя запрашиваемый контейнер ключа. `wszKeyContainer` должен быть непустой строкой или null для создания временного имени.  
+ [in] Имя запрошенного контейнера ключа. `wszKeyContainer` должен быть непустой строкой или значение null, чтобы создать временное имя.  
   
  `dwFlags`  
  [in] Значение, указывающее, следует ли оставить ключ зарегистрирован. Поддерживаются следующие значения:  
   
--   0x00000000 — используется, когда `wszKeyContainer` имеет значение null для создания временного имени контейнера ключа.  
+-   0x00000000 — используется, когда `wszKeyContainer` имеет значение null, если для создания временного имени контейнера ключа.  
   
 -   0x00000001 (`SN_LEAVE_KEY`) — указывает, что ключ должен оставаться зарегистрированным.  
   
@@ -54,27 +54,27 @@ HRESULT StrongNameKeyGenEx (
  [in] Запрошенный размер ключа в битах.  
   
  `ppbKeyBlob`  
- [out] Возвращаемый открытого и закрытого ключей.  
+ [out] Возвращаемый ключа пары открытого и закрытого.  
   
  `pcbKeyBlob`  
- [out] Размер в байтах для `ppbKeyBlob`.  
+ [out] Размер в байтах из `ppbKeyBlob`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (в разделе [часто встречающихся значений HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
   
 ## <a name="remarks"></a>Примечания  
- Требуется платформа .NET Framework версии 1.0 и 1.1 `dwKeySize` 1024 бит для подписи сборки строгим именем; версии 2.0 добавлена поддержка 2048-разрядные ключи.  
+ Требуется .NET Framework версий 1.0 и 1.1 `dwKeySize` 1024 бит для подписи сборки строгим именем; версии 2.0 добавлена поддержка 2048-разрядные ключи.  
   
- После извлечения ключа необходимо вызвать [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод для освобождения выделенной памяти.  
+ После извлечения ключа должно вызвать [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод для освобождения выделенной памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** MetaHost.h  
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Метод StrongNameKeyGen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)  

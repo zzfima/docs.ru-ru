@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
-ms.openlocfilehash: b51178c8ba84740598db62b9011fa33da318ca8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d56c405fe9c46fcebaad8e5b217f44d709dc8db8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502281"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397790"
 ---
 # <a name="default-nettcpbinding"></a>Привязка NetTcpBinding по умолчанию
-В этом образце демонстрируется использование привязки <xref:System.ServiceModel.NetTcpBinding>. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора. В этом образце служба является резидентной. И клиент, и служба являются консольными приложениями.  
+В этом образце демонстрируется использование привязки <xref:System.ServiceModel.NetTcpBinding>. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора. В этом образце служба является резидентной. И клиент, и служба являются консольными приложениями.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -22,11 +22,11 @@ ms.locfileid: "33502281"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\TCP\Default`  
   
- Привязка задается в файлах конфигурации для клиента и службы. Тип привязки указывается в `binding` атрибут [ \<endpoint >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемента, как показано в следующем образце конфигурации.  
+ Привязка задается в файлах конфигурации для клиента и службы. Тип привязки задается в `binding` атрибут [ \<конечной точки >](https://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) элемент, как показано в следующем образце конфигурации.  
   
 ```xml  
 <endpoint address=""  
@@ -104,7 +104,7 @@ Press ENTER to terminate client.
   
 3.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
     >  Поскольку сервер является резидентным, чтобы выполнить образец на нескольких компьютерах, необходимо указать удостоверение в файле App.config клиента.  

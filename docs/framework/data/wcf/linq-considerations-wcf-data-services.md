@@ -9,18 +9,18 @@ helpviewer_keywords:
 - querying the data service [WCF Data Services]
 - WCF Data Services, querying
 ms.assetid: cc4ec9e9-348f-42a6-a78e-1cd40e370656
-ms.openlocfilehash: 030c8e12b45cfc11d1440a410c69d8bc911c56c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92b3444f81f00ee709c22836126073d342c6fa05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365973"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394644"
 ---
 # <a name="linq-considerations-wcf-data-services"></a>Рекомендации по LINQ (службы WCF Data Services)
-Данный раздел содержит сведения о способе подготовки и выполнения запросов LINQ при использовании клиента [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], а также об ограничениях использования LINQ для запросов к службе данных, реализующей [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Дополнительные сведения о создании и выполнение запросов к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-службы данных на основе разделе [запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
+Данный раздел содержит сведения о способе подготовки и выполнения запросов LINQ при использовании клиента [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], а также об ограничениях использования LINQ для запросов к службе данных, реализующей [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]. Дополнительные сведения о составлении и выполнении запросов к [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-службе данных на основе см. в разделе [запросы к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md).  
   
 ## <a name="composing-linq-queries"></a>Составление LINQ-запросов  
- LINQ позволяет составлять запросы к коллекции объектов, которая реализует <xref:System.Collections.Generic.IEnumerable%601>. Оба **добавить ссылку на службу** диалоговое окно в Visual Studio и средство DataSvcUtil.exe используются для создания представления [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] службу в виде класса контейнера сущностей, который наследует от <xref:System.Data.Services.Client.DataServiceContext>, а также объекты, представляющие сущности, возвращаемые в потоках. Эти средства также создают свойства для класса контейнера сущностей для коллекций, представляемых службой в виде потоков. Каждое свойство класса, инкапсулирующего службу данных, возвращает объект <xref:System.Data.Services.Client.DataServiceQuery%601>. Поскольку класс <xref:System.Data.Services.Client.DataServiceQuery%601> реализует интерфейс <xref:System.Linq.IQueryable%601>, определяемый LINQ, можно составить LINQ-запрос для потоков, предоставляемых службой данных, которые преобразуются клиентской библиотекой в URI-запрос, отправляемый службе данных при выполнении.  
+ LINQ позволяет составлять запросы к коллекции объектов, которая реализует <xref:System.Collections.Generic.IEnumerable%601>. Оба **Add Service Reference** диалоговое окно в Visual Studio и средство DataSvcUtil.exe используются для создания представлением [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] службы как класс контейнера сущностей, который наследует от <xref:System.Data.Services.Client.DataServiceContext>, а также объекты, представляющие сущности, возвращаемые в потоках. Эти средства также создают свойства для класса контейнера сущностей для коллекций, представляемых службой в виде потоков. Каждое свойство класса, инкапсулирующего службу данных, возвращает объект <xref:System.Data.Services.Client.DataServiceQuery%601>. Поскольку класс <xref:System.Data.Services.Client.DataServiceQuery%601> реализует интерфейс <xref:System.Linq.IQueryable%601>, определяемый LINQ, можно составить LINQ-запрос для потоков, предоставляемых службой данных, которые преобразуются клиентской библиотекой в URI-запрос, отправляемый службе данных при выполнении.  
   
 > [!IMPORTANT]
 >  Набор запросов, которые можно выразить в синтаксисе LINQ, шире, чем набор запросов, поддерживаемых в URI-синтаксисе на основе технологии [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], используемой в службах данных. Исключение <xref:System.NotSupportedException> возникает, если запрос не может быть сопоставлен с URI в целевой службе данных. Дополнительные сведения см. в разделе [неподдерживаемые методы LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md#unsupportedMethods) в этом разделе.  
@@ -30,13 +30,13 @@ ms.locfileid: "33365973"
 [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionslinqspecific)]      
 [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionslinqspecific)]    
   
- Этот запрос LINQ преобразуется в следующий запрос URI, который выполняется для основанной на Northwind [краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) службы данных:  
+ Этот запрос LINQ преобразуется в следующий запрос URI, который выполняется для основанной на Northwind [быстрого запуска](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) службы данных:  
   
 ```  
 http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight gt 30  
 ```  
   
- Дополнительные общие сведения о LINQ см. в разделе [LINQ (Language-Integrated Query)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
+ Более общие сведения о LINQ см. в разделе [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
   
  LINQ позволяет составлять запросы как с помощью декларативного синтаксиса запросов на основе определенного языка (как показано в предыдущем примере), так и в виде набора методов запроса, известных как стандартные операторы запроса. Запрос, эквивалентный запросу из предыдущего примера, может быть составлен только с помощью синтаксиса на основе методов, как показано в следующем примере.  
   
@@ -165,7 +165,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |Операторы проецирования и фильтрации|Следующие операторы проецирования и фильтрации, принимающие аргументы положения, не поддерживаются в запросе <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> -   <xref:System.Linq.Enumerable.Join%60%604%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%2CSystem.Func%7B%60%600%2C%60%602%7D%2CSystem.Func%7B%60%601%2C%60%602%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%603%7D%2CSystem.Collections.Generic.IEqualityComparer%7B%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2C%60%601%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.SelectMany%60%603%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Collections.Generic.IEnumerable%7B%60%601%7D%7D%2CSystem.Func%7B%60%600%2C%60%601%2C%60%602%7D%29><br />-   <xref:System.Linq.Enumerable.Where%60%601%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2CSystem.Int32%2CSystem.Boolean%7D%29>|  
 |Операторы группирования|Все операторы группирования не поддерживаются в запросе <xref:System.Data.Services.Client.DataServiceQuery%601>, включая следующие запросы:<br /><br /> -   <xref:System.Linq.Enumerable.GroupBy%2A><br />-   <xref:System.Linq.Enumerable.GroupJoin%2A><br /><br /> Операции группирования следует выполнять на стороне клиента.|  
 |Статистические операторы|Все статистические операторы не поддерживаются в запросе <xref:System.Data.Services.Client.DataServiceQuery%601>, включая следующие запросы:<br /><br /> -   <xref:System.Linq.Enumerable.Aggregate%2A><br />-   <xref:System.Linq.Enumerable.Average%2A><br />-   <xref:System.Linq.Enumerable.Count%2A><br />-   <xref:System.Linq.Enumerable.LongCount%2A><br />-   <xref:System.Linq.Enumerable.Max%2A><br />-   <xref:System.Linq.Enumerable.Min%2A><br />-   <xref:System.Linq.Enumerable.Sum%2A><br /><br /> Статистические операции должны выполняться на стороне клиента либо инкапсулироваться операцией службы.|  
-|Операторы разбиения на страницы|Следующие операторы разбиения на страницы не поддерживаются в запросе <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A> **Примечание:** операторы разбиения на страницы, выполненных к пустой последовательности возвращает значение null.|  
+|Операторы разбиения на страницы|Следующие операторы разбиения на страницы не поддерживаются в запросе <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> -   <xref:System.Linq.Enumerable.ElementAt%2A><br />-   <xref:System.Linq.Enumerable.Last%2A><br />-   <xref:System.Linq.Enumerable.LastOrDefault%2A><br />-   <xref:System.Linq.Enumerable.SkipWhile%2A><br />-   <xref:System.Linq.Enumerable.TakeWhile%2A> **Примечание:** операторы разбиения на страницы, которые выполняются на пустую последовательность возвращать значение null.|  
 |Другие операторы|Следующие операторы не поддерживаются в запросе <xref:System.Data.Services.Client.DataServiceQuery%601>:<br /><br /> 1.  <xref:System.Linq.Enumerable.Empty%2A><br />2.  <xref:System.Linq.Enumerable.Range%2A><br />3.  <xref:System.Linq.Enumerable.Repeat%2A><br />4.  <xref:System.Linq.Enumerable.ToDictionary%2A><br />5.  <xref:System.Linq.Enumerable.ToLookup%2A>|  
   
 <a name="supportedExpressions"></a>   
@@ -195,7 +195,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 |<xref:System.DateTime.Second>|`int second(DateTime p0)`|  
 |<xref:System.DateTime.Year>|`int year(DateTime p0)`|  
   
- <sup>1</sup>эквивалентное значение даты и времени свойства <xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType>, а также <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> также поддерживаются в Visual Basic.  
+ <sup>1</sup>эквивалентные свойства даты и времени из <xref:Microsoft.VisualBasic.DateAndTime?displayProperty=nameWithType>, а также <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A> метод в Visual Basic также поддерживаются.  
   
 |Элемент <xref:System.Math>|Поддерживаемая функция [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]|  
 |---------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------|  
@@ -216,4 +216,4 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  [Выполнение запросов к службе данных](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  [Проекции запросов](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
  [Материализация объектов](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  
- [OData: Соглашения URI](http://go.microsoft.com/fwlink/?LinkID=185564)
+ [OData: Соглашения URI](https://go.microsoft.com/fwlink/?LinkID=185564)

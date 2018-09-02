@@ -2,15 +2,15 @@
 title: Создание поставщика данных Entity Framework
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
-ms.openlocfilehash: 578de94aa191d7302b762f1cdc87d4a6810037e3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 50c0555d84c5b5f180c8c49a8419e8a414a4befe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762638"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401465"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Создание поставщика данных Entity Framework
-В этом разделе описывается порядок написания [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] поставщика для поддержки источников данных, отличных от SQL Server. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Включает поставщик, который поддерживает SQL Server.  
+В этом разделе описывается порядок написания [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] поставщика для поддержки источника данных, отличного от SQL Server. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Включает поставщика, который поддерживает SQL Server.  
   
 ## <a name="introducing-the-entity-framework-provider-model"></a>Знакомство с моделью поставщика Entity Framework  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] не зависит от баз данных, написать поставщика для подключения к различным источникам данных можно при помощи модели поставщика ADO.NE.  
@@ -32,7 +32,7 @@ ms.locfileid: "32762638"
  ![b42a7a5c&#45;0ac0&#45;4911&#45;86be&#45;0460a78760ba](../../../../../docs/framework/data/adonet/ef/media/b42a7a5c-0ac0-4911-86be-0460a78760ba.gif "b42a7a5c-0ac0-4911-86be-0460a78760ba")  
   
 ## <a name="sample"></a>Пример  
- В разделе [образца поставщика Entity Framework](http://go.microsoft.com/fwlink/?LinkId=180616) образец [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] поставщика, который поддерживает источник данных, отличных от SQL Server.  
+ См. в разделе [образца поставщика Entity Framework](https://go.microsoft.com/fwlink/?LinkId=180616) пример [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] поставщика, поддерживающего источника данных, отличного от SQL Server.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Создание SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)  

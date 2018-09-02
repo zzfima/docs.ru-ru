@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
-ms.openlocfilehash: e585d8a3c21f4a256a2e706389fc9f8adc7900da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfc77ff3b030ffebf52feab0190f81fc4e581cf9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361989"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397502"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>Выполнение пакетных операций с использованием объектов DataAdapters
 Поддержка пакетных операций в ADO.NET позволяет объекту <xref:System.Data.Common.DataAdapter> группировать операции INSERT, UPDATE и DELETE из <xref:System.Data.DataSet> или <xref:System.Data.DataTable> к серверу вместо отправки за один раз одной операции. Уменьшение числа двусторонних передач сигнала на сервер обычно приводит к значительному повышению производительности. Пакетные обновления поддерживаются для поставщиков .NET-данных для SQL Server (<xref:System.Data.SqlClient>) и Oracle (<xref:System.Data.OracleClient>).  
@@ -126,7 +126,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>Обработка событий и ошибок, связанных с обновлением пакета  
- **DataAdapter** содержит два события, связанных с обновлением: **RowUpdating** и **RowUpdated**. В более ранних версиях ADO.NET, если пакетная обработка отключена, каждое из этих событий формируется для каждой обрабатываемой строки. **RowUpdating** формируется перед появлением обновления, и **RowUpdated** формируется после завершения обновления базы данных.  
+ **DataAdapter** имеет два события, связанных с обновлением: **RowUpdating** и **RowUpdated**. В более ранних версиях ADO.NET, если пакетная обработка отключена, каждое из этих событий формируется для каждой обрабатываемой строки. **RowUpdating** перед происходит обновление, и **RowUpdated** создается после завершения обновления базы данных.  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>Изменение поведения событий при пакетных обновлениях  
  Если пакетное обновление включено, несколько строк обновляются одной операцией базы данных. Поэтому для каждого пакета происходит только одно событие `RowUpdated`, в то время как событие `RowUpdating` происходит для каждой обрабатываемой строки. Если пакетное обновление отключено, два события инициируются с чередованием один к одному, где одно событие `RowUpdating` и одно событие `RowUpdated` инициируется для строки, а затем одно событие `RowUpdating` и одно событие `RowUpdated` инициируются для следующей строки, до тех пор пока не будут обработаны все строки.  
@@ -145,4 +145,4 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
  [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Обновление источников данных с объектами DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [Обработка событий DataAdapter](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

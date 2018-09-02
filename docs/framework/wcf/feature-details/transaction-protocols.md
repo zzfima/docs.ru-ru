@@ -2,20 +2,20 @@
 title: Протоколы транзакций
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 8841a9cf414ae94da7e63bd7312a3c541ab6de1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e4f464d88a63a0aad17982d0329971de4fc5a07
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508446"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398824"
 ---
 # <a name="transaction-protocols"></a>Протоколы транзакций
 Windows Communication Foundation (WCF) реализует протоколы WS-Atomic Transaction и WS-Coordination.  
   
 |Спецификация/документ|Версия|Ссылка|  
 |-----------------------------|-------------|----------|  
-|WS-Coordination|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96104](http://go.microsoft.com/fwlink/?LinkId=96104)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
-|WS-AtomicTransaction|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> http://go.microsoft.com/fwlink/?LinkId=96081|  
+|WS-Coordination|1.0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96104](https://go.microsoft.com/fwlink/?LinkId=96104)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96079](https://go.microsoft.com/fwlink/?LinkId=96079)|  
+|WS-AtomicTransaction|1.0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96080](https://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> https://go.microsoft.com/fwlink/?LinkId=96081|  
   
  Согласно этим спецификациям протоколов, требуется взаимодействие на двух уровнях: между приложениями и между диспетчерами транзакций (см. следующий рисунок). В спецификациях подробно описываются форматы сообщений и обмен сообщениями для обоих уровней взаимодействия. При обмене между приложениями применяются определенные средства обеспечения безопасности, надежности и методы кодирования, как и при обычном обмене в пределах сообщения. Однако для успешного взаимодействия между диспетчерами транзакций требуется соглашение по конкретной привязке, поскольку она обычно не настраивается пользователем.  
   
@@ -53,22 +53,22 @@ Windows Communication Foundation (WCF) реализует протоколы WS-
   
 -   сообщения приложений.  
   
- Первые три класса сообщений считаются сообщениями диспетчера транзакций и их конфигурация привязки описывается в разделе "Обмен сообщениями приложений" ниже в данном разделе. Четвертый класс сообщений - это сообщения, передаваемые между приложениями, которые описываются в разделе "Примеры сообщений" ниже в данном разделе. В этом разделе описываются привязки протокола, используемый для каждого из этих классов с WCF.  
+ Первые три класса сообщений считаются сообщениями диспетчера транзакций и их конфигурация привязки описывается в разделе "Обмен сообщениями приложений" ниже в данном разделе. Четвертый класс сообщений - это сообщения, передаваемые между приложениями, которые описываются в разделе "Примеры сообщений" ниже в данном разделе. В этом разделе описываются привязки протокола, используемый для каждого из этих классов WCF.  
   
  Во всем данном документе используются следующие пространства имен XML и связанные с ними префиксы.  
   
 |Префикс|Версия|Универсальный код ресурса (URI) пространства имен|  
 |------------|-------------|-------------------|  
-|s11||[http://go.microsoft.com/fwlink/?LinkId=96014](http://go.microsoft.com/fwlink/?LinkId=96014)|  
-|wsa|До 1.0<br /><br /> 1.0|http://www.w3.org/2004/08/addressing<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96022](http://go.microsoft.com/fwlink/?LinkId=96022)|  
-|wscoor|1.0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96078](http://go.microsoft.com/fwlink/?LinkId=96078)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96079](http://go.microsoft.com/fwlink/?LinkId=96079)|  
-|wsat|1,0<br /><br /> 1.1|[http://go.microsoft.com/fwlink/?LinkId=96080](http://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96081](http://go.microsoft.com/fwlink/?LinkId=96081)|  
-|t|До 1.3<br /><br /> 1.3|[http://go.microsoft.com/fwlink/?LinkId=96082](http://go.microsoft.com/fwlink/?LinkId=96082)<br /><br /> [http://go.microsoft.com/fwlink/?LinkId=96100](http://go.microsoft.com/fwlink/?LinkId=96100)|  
-|o||[http://go.microsoft.com/fwlink/?LinkId=96101](http://go.microsoft.com/fwlink/?LinkId=96101)|  
-|xsd||[http://go.microsoft.com/fwlink/?LinkId=96102](http://go.microsoft.com/fwlink/?LinkId=96102)|  
+|s11||[https://go.microsoft.com/fwlink/?LinkId=96014](https://go.microsoft.com/fwlink/?LinkId=96014)|  
+|wsa|До 1.0<br /><br /> 1.0|http://www.w3.org/2004/08/addressing<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96022](https://go.microsoft.com/fwlink/?LinkId=96022)|  
+|wscoor|1.0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96078](https://go.microsoft.com/fwlink/?LinkId=96078)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96079](https://go.microsoft.com/fwlink/?LinkId=96079)|  
+|wsat|1,0<br /><br /> 1.1|[https://go.microsoft.com/fwlink/?LinkId=96080](https://go.microsoft.com/fwlink/?LinkId=96080)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96081](https://go.microsoft.com/fwlink/?LinkId=96081)|  
+|t|До 1.3<br /><br /> 1.3|[https://go.microsoft.com/fwlink/?LinkId=96082](https://go.microsoft.com/fwlink/?LinkId=96082)<br /><br /> [https://go.microsoft.com/fwlink/?LinkId=96100](https://go.microsoft.com/fwlink/?LinkId=96100)|  
+|o||[https://go.microsoft.com/fwlink/?LinkId=96101](https://go.microsoft.com/fwlink/?LinkId=96101)|  
+|xsd||[https://go.microsoft.com/fwlink/?LinkId=96102](https://go.microsoft.com/fwlink/?LinkId=96102)|  
   
 ## <a name="transaction-manager-bindings"></a>Привязки диспетчеров транзакций  
- R1001: Диспетчеры транзакций, участвующие в транзакции WS-AT 1.0 должны использовать SOAP 1.1 и WS-Addressing 2004/08 для обмена сообщениями WS-Coordination и WS-Atomic Transaction.  
+ R1001: Диспетчеры транзакций, участвующие в транзакции WS-AT 1.0 необходимо использовать SOAP 1.1 и WS-Addressing 2004/08 для WS-Atomic Transaction и WS-Coordination.  
   
  R1002: для обмена сообщениями протоколов WS-Atomic Transaction и WS-Coordination диспетчеры транзакций, участвующие в транзакции по протоколу WS-AT 1.1, должны использовать SOAP 1.1 и WS-Addressing 2005/08.  
   
@@ -88,7 +88,7 @@ Windows Communication Foundation (WCF) реализует протоколы WS-
  WCF требует дуплексной привязки типа запрос ответ с корреляцией по протоколу HTTPS. (Дополнительные сведения о корреляции и описание шаблонов обмена сообщениями "запрос-ответ" см. в разделе 8 спецификации WS-Atomic Transaction.)  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Конфигурация привязки протокола 2PC  
- WCF поддерживает односторонние (датаграммную) передачу сообщений по протоколу HTTPS. Корреляция между сообщениями зависит от реализации.  
+ WCF поддерживает односторонний (датаграммную) передачу сообщений по протоколу HTTPS. Корреляция между сообщениями зависит от реализации.  
   
  B1131: Реализации должны поддерживать `wsa:ReferenceParameters` как описано в WS-Addressing для обеспечения корреляции сообщений 2PC WCF.  
   
@@ -101,7 +101,7 @@ Windows Communication Foundation (WCF) реализует протоколы WS-
 #### <a name="activation-message-binding-configuration"></a>Конфигурация привязки сообщений активации  
  Сообщения активации обычно не участвуют во взаимодействии, поскольку они, как правило, передаются между приложением и его локальным диспетчером транзакций.  
   
- B1221: WCF использует двусторонняя привязка HTTPS (описано в [протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) для сообщения активации. Сообщения запроса и ответа коррелируются с использованием протокола WS-Addressing 2004/08 в случае WS-AT 1.0 и протокола WS-Addressing 2005/08 в случае WS-AT 1.1.  
+ B1221: WCF использует дуплексную привязку HTTPS (описано в разделе [протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)) для сообщений активации. Сообщения запроса и ответа коррелируются с использованием протокола WS-Addressing 2004/08 в случае WS-AT 1.0 и протокола WS-Addressing 2005/08 в случае WS-AT 1.1.  
   
  В разделе 8 спецификации WS-Atomic Transaction приводятся дополнительные сведения о корреляции и шаблонах обмена сообщениями.  
   
@@ -109,19 +109,19 @@ Windows Communication Foundation (WCF) реализует протоколы WS-
   
 -   R1223: если активация происходит в пределах существующего контекста координации, в сообщении `t:IssuedTokens` должен передаваться заголовок `SecurityContextToken` с маркером `CreateCoordinationContext`, связанным с существующим контекстом.  
   
- Новый `t:IssuedTokens` заголовок должно создаваться для присоединения к исходящему `wscoor:CreateCoordinationContextResponse` сообщения.  
+ Новый `t:IssuedTokens` заголовка должны создаваться для присоединения к исходящему `wscoor:CreateCoordinationContextResponse` сообщения.  
   
 #### <a name="registration-message-binding-configuration"></a>Конфигурация привязки сообщений регистрации  
- B1231: WCF использует двусторонняя привязка HTTPS (описано в [протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Сообщения запроса и ответа коррелируются с использованием протокола WS-Addressing 2004/08 в случае WS-AT 1.0 и протокола WS-Addressing 2005/08 в случае WS-AT 1.1.  
+ B1231: WCF использует дуплексную привязку HTTPS (описано в разделе [протоколы обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)). Сообщения запроса и ответа коррелируются с использованием протокола WS-Addressing 2004/08 в случае WS-AT 1.0 и протокола WS-Addressing 2005/08 в случае WS-AT 1.1.  
   
  В разделе 8 спецификации WS-AtomicTransaction приводятся дополнительные сведения о корреляции и описание шаблонов обмена сообщениями.  
   
- R1232: Исходящие `wscoor:Register` сообщений необходимо использовать `IssuedTokenOverTransport` описывается режим проверки подлинности в [протоколы WS-Security](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
+ R1232: Для исходящих `wscoor:Register` сообщений необходимо использовать `IssuedTokenOverTransport` режим проверки подлинности, описано в разделе [протоколы безопасности](../../../../docs/framework/wcf/feature-details/security-protocols.md).  
   
- `wsse:Timestamp` Элемент должен быть подписан с помощью `SecurityContextToken``STx` выдан. Эта подпись является доказательством владения маркером, связанным с конкретной транзакцией, и используется для проверки подлинности зачисления участника в транзакцию. Сообщение RegistrationResponse отправляется обратно по протоколу HTTPS.  
+ `wsse:Timestamp` Элемента должны быть подписаны с помощью `SecurityContextToken``STx` выдан. Эта подпись является доказательством владения маркером, связанным с конкретной транзакцией, и используется для проверки подлинности зачисления участника в транзакцию. Сообщение RegistrationResponse отправляется обратно по протоколу HTTPS.  
   
 #### <a name="2pc-protocol-binding-configuration"></a>Конфигурация привязки протокола 2PC  
- WCF поддерживает односторонние (датаграммную) передачу сообщений по протоколу HTTPS. Корреляция между сообщениями зависит от реализации.  
+ WCF поддерживает односторонний (датаграммную) передачу сообщений по протоколу HTTPS. Корреляция между сообщениями зависит от реализации.  
   
  B1241: Реализации должны поддерживать `wsa:ReferenceParameters` как описано в WS-Addressing для обеспечения корреляции сообщений 2PC WCF.  
   
@@ -134,7 +134,7 @@ Windows Communication Foundation (WCF) реализует протоколы WS-
   
  Заголовок `CoordinationContext` содержит `wscoor:Identifier`. Хотя определение `xsd:AnyURI` позволяет использовать абсолютные и относительные URI, WCF поддерживает только `wscoor:Identifiers`, являющиеся абсолютными URI.  
   
- B2003: Если `wscoor:Identifier` из `wscoor:CoordinationContext` является относительным URI будут возвращаться из транзакционные службы WCF.  
+ B2003: Если `wscoor:Identifier` из `wscoor:CoordinationContext` является относительным URI, из транзакционных служб WCF будут возвращаться сбои.  
   
 ## <a name="message-examples"></a>Примеры сообщений  
   
@@ -474,7 +474,7 @@ Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
 </s:Envelope>  
 ```  
   
-#### <a name="register-response-with-wscoor-10"></a>RegisterResponse по WSCoor 1.0  
+#### <a name="register-response-with-wscoor-10"></a>RegisterResponse по wscoor 1.0  
   
 ```xml  
 <s:Envelope>  

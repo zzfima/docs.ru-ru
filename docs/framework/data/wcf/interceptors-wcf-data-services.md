@@ -8,22 +8,22 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: f3ff08dd4cd20e7ce226750a386cfddb27731923
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2086d451af72157785796052af123cd210ee036
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363804"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400304"
 ---
 # <a name="interceptors-wcf-data-services"></a>Перехватчики (службы данных WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет приложению перехватывать сообщения запросов, так что можно добавить пользовательскую логику в операцию. Эта пользовательская логика можно использовать для проверки данных во входящих сообщениях. Можно также дальнейшим образом ограничить область запроса, например вставить специализированные правила проверки подлинности на основе отдельных запросов.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет приложению перехватывать сообщения запросов, таким образом, можно добавить пользовательскую логику в операцию. Эта логика можно использовать для проверки данных во входящих сообщениях. Можно также дальнейшим образом ограничить область запроса, например вставить специализированные правила проверки подлинности на основе отдельных запросов.  
   
- Перехват выполняется методами службы данных со специальными атрибутами. Эти методы вызываются службами [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] в соответствующие моменты обработки сообщений. Перехватчики определяются на основе набора сущностей и методы перехватчика не принимают параметры из запроса, как операции службы. Методы перехвата запросов, которые вызываются при обработке запросов HTTP GET, должны возвращать лямбда-выражение, определяющее, является ли экземпляр сущностей перехватчика набора должны возвращаться в результатах запроса. Это выражение используется службой данных для дальнейшего уточнения запрошенного действия. В следующем примере рассмотрено определение перехватчика запроса.  
+ Перехват выполняется методами службы данных со специальными атрибутами. Эти методы вызываются службами [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] в соответствующие моменты обработки сообщений. Перехватчики определяются на основе набора сущностей, а методы перехватчика не может принимать параметры запроса, как операции службы. Методы перехвата запросов, которые вызываются при обработке запроса HTTP GET, необходимо возвращаемое лямбда-выражение, определяющее, имеет ли экземпляр сущностей перехватчика значение должен возвращаться в результатах запроса. Это выражение используется службой данных для дальнейшего уточнения запрошенного действия. В следующем примере рассмотрено определение перехватчика запроса.  
   
  [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
  [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
- Дополнительные сведения см. в разделе [как: перехват сообщений службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ Дополнительные сведения см. в разделе [как: перехватывать сообщения службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   
  Перехватчики изменений, которые вызываются при обработке операций, не связанных с запросами, должны возвращать значение `void` (`Nothing` в коде Visual Basic). Методы перехватчика изменений должны принимать следующие два параметра.  
   
@@ -36,17 +36,17 @@ ms.locfileid: "33363804"
  [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
- Дополнительные сведения см. в разделе [как: перехват сообщений службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ Дополнительные сведения см. в разделе [как: перехватывать сообщения службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   
  Для перехватчиков поддерживаются следующие атрибуты.  
   
- **[QueryInterceptor (** *EnitySetName* **)]**  
+ **[QueryInterceptor (** *EntitySetName* **)]**  
  Методы с атрибутом <xref:System.Data.Services.QueryInterceptorAttribute> вызываются при получении запроса HTTP GET к целевому ресурсу набора сущностей. Эти методы всегда должны возвращать лямбда-выражение в форме `Expression<Func<T,bool>>`.  
   
- **[ChangeInterceptor (** *EnitySetName* **)]**  
+ **[ChangeInterceptor (** *EntitySetName* **)]**  
  Методы с атрибутом <xref:System.Data.Services.ChangeInterceptorAttribute> вызываются при получении запроса HTTP, отличного от HTTP GET, к целевому ресурсу набора сущностей. Эти методы должны всегда возвращать значение `void` (`Nothing` в коде Visual Basic).  
   
- Дополнительные сведения см. в разделе [как: перехват сообщений службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
+ Дополнительные сведения см. в разделе [как: перехватывать сообщения службы данных](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md).  
   
 ## <a name="see-also"></a>См. также  
  [Операции служб](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)

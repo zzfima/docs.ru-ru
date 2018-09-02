@@ -4,14 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 0b04dea120a54189dc1738a51d0ea7a842489506
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7de6670043e6ff8862d611e987ef7b4191b3ba8d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43397817"
 ---
 # <a name="message-security-sample"></a>Пример безопасности сообщений
-Данный образец демонстрирует реализацию приложения, в котором используется привязка `basicHttpBinding` и безопасность сообщений. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора.  
+Данный образец демонстрирует реализацию приложения, в котором используется привязка `basicHttpBinding` и безопасность сообщений. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/04/2018
 </system.serviceModel>  
 ```  
   
- Наборы конфигурации привязки `mode` атрибут [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) для `Message` и задает `clientCredentialType` атрибут [ \<сообщения >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)для `Certificate` как показано в следующем образце конфигурации:  
+ Конфигурация привязки задает `mode` атрибут [ \<безопасности >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md) для `Message` и задает `clientCredentialType` атрибут [ \<сообщения >](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)для `Certificate` как показано в следующем примере конфигурации:  
   
 ```xml  
 <bindings>  
@@ -127,7 +128,7 @@ Press <ENTER> to terminate client.
   
 3.  Запустите клиентское приложение из \service\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-4.  Если клиенту и службе не удается взаимодействовать, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 5.  После завершения работы образца запустите файл Cleanup.bat, чтобы удалить сертификаты. В других образцах обеспечения безопасности используются те же сертификаты.  
   
@@ -143,13 +144,13 @@ Press <ENTER> to terminate client.
   
 5.  На сервере выполните команду `setup.bat service`. Под управлением `setup.bat` с `service` аргумент создается сертификат службы с полным доменным именем компьютера и экспортируется в файл с именем Service.cer.  
   
-6.  Изменить Service.exe.config в соответствии с новым именем сертификата (в `findValue` атрибута в [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) элемент) которого совпадает со значением полное доменное имя компьютера. Также измените значение базового адреса для указания полного доменного имени компьютера вместо localhost`.`  
+6.  Изменить файл Service.exe.config изменения в соответствии с новым именем сертификата (в `findValue` атрибут в [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) элемент) которого совпадает со значением полное доменное имя компьютера. Также измените значение базового адреса для указания полного доменного имени компьютера вместо localhost`.`  
   
 7.  Скопируйте файл Service.cer из каталога службы в клиентский каталог на клиентском компьютере.  
   
 8.  На клиенте выполните команду `setup.bat client`. При выполнении команды `setup.bat`с аргументом `client` создается сертификат клиента с именем client.com, который экспортируется в файл с именем Client.cer.  
   
-9. В файле Client.exe.config на клиентском компьютере измените значение адреса конечной точки, чтобы оно соответствовало новому адресу службы. Для этого замените имя localhost полным именем домена сервера. Кроме того, изменить `findValue` атрибут [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) на новое имя сертификата службы, которым полное доменное имя сервера.  
+9. В файле Client.exe.config на клиентском компьютере измените значение адреса конечной точки, чтобы оно соответствовало новому адресу службы. Для этого замените имя localhost полным именем домена сервера. Кроме того, изменить `findValue` атрибут [ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md) к новым именем сертификата службы, которое — полное доменное имя сервера.  
   
 10. Скопируйте файл Client.cer из клиентского каталога в каталог службы на сервере.  
   
@@ -161,21 +162,21 @@ Press <ENTER> to terminate client.
   
 14. На клиентском компьютере из окна командной строки запустите программу Client.exe.  
   
-    1.  Если клиенту и службе не удается взаимодействовать, см. раздел [советы по устранению неполадок](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+    1.  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   
 -   После завершения работы примера запустите в папке примеров файл Cleanup.bat.  
   
     > [!NOTE]
-    >  Этот скрипт не удаляет сертификаты службы на клиенте при выполнении примера на нескольких компьютерах. При запуске образцов Windows Communication Foundation (WCF), использующих сертификаты на нескольких компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище CurrentUser - trustedpeople. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Пример: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
+    >  Этот скрипт не удаляет сертификаты службы на клиенте при выполнении примера на нескольких компьютерах. Если вы запустили примеры Windows Communication Foundation (WCF), которые используют сертификаты между компьютерами, обязательно удалите сертификаты службы, которые были установлены в хранилище CurrentUser - trustedpeople. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Пример: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\MessageSecurity`  
   

@@ -2,12 +2,12 @@
 title: Использование DataContractSerializer и Data Contract Resolver для обеспечения функциональности NetDataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: a9dde936f2daff669aabe36c5f03203a472d435c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b86ac822e7ce7f0b18962fe48adbb1c26d7259dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502223"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394303"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>Использование DataContractSerializer и Data Contract Resolver для обеспечения функциональности NetDataContractSerializer
 В образце описывается, как использование <xref:System.Runtime.Serialization.DataContractSerializer> с соответствующим <xref:System.Runtime.Serialization.DataContractResolver> обеспечивает функциональность, идентичную <xref:System.Runtime.Serialization.NetDataContractSerializer>. В следующем образце показано, как создать соответствующий <xref:System.Runtime.Serialization.DataContractResolver> и как добавить его к <xref:System.Runtime.Serialization.DataContractSerializer>.  
@@ -61,11 +61,11 @@ class MyDataContractResolver : DataContractResolver
   
 2.  Щелкните правой кнопкой мыши файл решения и выберите **свойства**.  
   
-3.  В **страницы свойств решения** диалогового окна в разделе **общие свойства**, **запускаемый проект**выберите **несколько запускаемых проектов:**.  
+3.  В **страницы свойств решения** диалогового окна в разделе **общие свойства**, **запускаемым проектом**выберите **несколько запускаемых проектов:**.  
   
-4.  Рядом с **DCSwithDCR** проекта, выберите **запустить** из **действия** раскрывающегося списка.  
+4.  Рядом с полем **DCSwithDCR** проекта, выберите **запустить** из **действие** раскрывающегося списка.  
   
-5.  Рядом с **NetDCS** проекта, выберите **запустить** из **действия** раскрывающегося списка.  
+5.  Рядом с полем **NetDCS** проекта, выберите **запустить** из **действие** раскрывающегося списка.  
   
 6.  Нажмите кнопку **ОК** чтобы закрыть диалоговое окно.  
   
@@ -78,7 +78,7 @@ class MyDataContractResolver : DataContractResolver
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  
   

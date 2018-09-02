@@ -12,24 +12,24 @@ helpviewer_keywords:
 - animation [WPF], color of GradientStop objects
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
-ms.openlocfilehash: 2eb528127c8aa66976788ec1f4e5362ca3a1ef26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcbb546b64810416d3f7dbe052da77b7bc941e7a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33558672"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43395327"
 ---
 # <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>Практическое руководство. Анимация положения или цвета ограничения градиента
 В этом примере демонстрируется анимация <xref:System.Windows.Media.GradientStop.Color%2A> и <xref:System.Windows.Media.GradientStop.Offset%2A> из <xref:System.Windows.Media.GradientStop> объектов.  
   
 ## <a name="example"></a>Пример  
- В следующем примере анимируется три градиента внутри <xref:System.Windows.Media.LinearGradientBrush>. В примере три анимации, каждый из которых выполняет анимацию различных градиента:  
+ Следующий пример анимирует три градиента внутри <xref:System.Windows.Media.LinearGradientBrush>. В примере используется три анимации, каждый из которых выполняет анимацию различных градиента:  
   
--   Первая анимация <xref:System.Windows.Media.Animation.DoubleAnimation>, анимирует первого градиента <xref:System.Windows.Media.GradientStop.Offset%2A> от 0,0 до 1,0, а затем снова 0,0. В результате первый цвет градиента перемещается из левой части правую сторону прямоугольника и обратно на левую сторону.  
+-   Первая анимация, <xref:System.Windows.Media.Animation.DoubleAnimation>, анимирует первого градиента <xref:System.Windows.Media.GradientStop.Offset%2A> от 0,0 до 1,0, а затем снова 0,0. Таким образом первый цвет градиента перемещается из левой части правую сторону прямоугольника и затем обратно в левой части.  
   
--   Вторая анимация <xref:System.Windows.Media.Animation.ColorAnimation>, анимирует второй градиента <xref:System.Windows.Media.GradientStop.Color%2A> из <xref:System.Windows.Media.Colors.Purple%2A> для <xref:System.Windows.Media.Colors.Yellow%2A> и обратно <xref:System.Windows.Media.Colors.Purple%2A>. В результате Средний цвет градиента изменяет с фиолетовым, желтый и обратно.  
+-   Второй анимации, <xref:System.Windows.Media.Animation.ColorAnimation>, анимирует второй градиента <xref:System.Windows.Media.GradientStop.Color%2A> из <xref:System.Windows.Media.Colors.Purple%2A> для <xref:System.Windows.Media.Colors.Yellow%2A> и затем обратно до <xref:System.Windows.Media.Colors.Purple%2A>. В результате Средний цвет градиента изменяется от фиолетового на желтый и обратно.  
   
--   Третья анимация другой <xref:System.Windows.Media.Animation.ColorAnimation>, анимирует непрозрачность третий градиента <xref:System.Windows.Media.GradientStop.Color%2A> -1, а затем снова. В результате исчезает третий цвет градиента и затем снова становится непрозрачным.  
+-   Третий анимации, другой <xref:System.Windows.Media.Animation.ColorAnimation>, анимирует прозрачность третий градиента <xref:System.Windows.Media.GradientStop.Color%2A> -1, а затем снова. Таким образом третий цвет в градиенте исчезает, а затем снова становится непрозрачным.  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/GradientStopAnimationExample.cs#graphicsmmgradientanimationexampleswholepage)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/gradientstopanimationexample.vb#graphicsmmgradientanimationexampleswholepage)]
@@ -37,7 +37,7 @@ ms.locfileid: "33558672"
   
  Несмотря на то, что в этом примере используется <xref:System.Windows.Media.LinearGradientBrush>, процесс одинаков для анимации <xref:System.Windows.Media.GradientStop> объектов внутри <xref:System.Windows.Media.RadialGradientBrush>.  
   
- Дополнительные примеры см. в разделе [образец кисти](http://go.microsoft.com/fwlink/?LinkID=159973).  
+ Дополнительные примеры см. в разделе [пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=159973).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Media.GradientStop>  

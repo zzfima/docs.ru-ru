@@ -2,14 +2,15 @@
 title: Предотвращение проблем при использовании операторов
 ms.date: 03/30/2017
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-ms.openlocfilehash: 14a0649c9996158f1503581c906d8dfd1a95ebc8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7534a56b2cc8fdc674242e135d70bec7f5017a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394702"
 ---
 # <a name="avoiding-problems-with-the-using-statement"></a>Предотвращение проблем при использовании операторов
-В этом образце показано, как не следует использовать оператор "using" в C# для автоматической очистки ресурсов при использовании типизированного клиента. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора. В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.  
+В этом образце показано, как не следует использовать оператор "using" в C# для автоматической очистки ресурсов при использовании типизированного клиента. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора. В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -43,7 +44,7 @@ using (CalculatorClient client = new CalculatorClient())
   
  Поскольку метод `Dispose`() происходит в блоке "finally", исключение `ApplicationException` никогда не видно за пределами блока "using", если метод `Dispose`() выполняется с ошибкой. Если внешний код должен знать, когда происходит исключение `ApplicationException`, конструкция "using" может стать причиной возникновения проблем, маскируя это исключение.  
   
- Наконец, в этом образце показано, как правильно выполнить очистку, если исключения происходят в `DemonstrateCleanupWithExceptions`. При этом используется блок try/catch для сообщения об ошибках и вызова метода `Abort`. В разделе [ожидаемого исключения](../../../../docs/framework/wcf/samples/expected-exceptions.md) образец Дополнительные сведения о перехвате исключений из вызовов клиента.  
+ Наконец, в этом образце показано, как правильно выполнить очистку, если исключения происходят в `DemonstrateCleanupWithExceptions`. При этом используется блок try/catch для сообщения об ошибках и вызова метода `Abort`. См. в разделе [ожидается исключения](../../../../docs/framework/wcf/samples/expected-exceptions.md) Дополнительные сведения о перехвате исключений из вызовов клиента.  
   
 ```csharp   
 try  
@@ -106,14 +107,14 @@ Press <ENTER> to terminate client.
   
 2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\UsingUsing`  
   

@@ -2,12 +2,12 @@
 title: Проверка связей действий
 ms.date: 03/30/2017
 ms.assetid: 6f11a34e-ed67-4bce-88ce-7e96bbb4d052
-ms.openlocfilehash: e6dd0e6a7b48444073ebae378e21c1b45977a1f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50f08118fb5ad4d9b8fe809e7ab3cc5d57f28149
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515112"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394689"
 ---
 # <a name="activity-relationships-validation"></a>Проверка связей действий
 Этот образец состоит из трех действий: `CreateCity`, `CreateState` и `CreateCountry`. Действие `CreateCity` должно быть внутри действия `CreateState`, а `CreateState` должно быть внутри действия `CreateCountry`. Для этого образца логика проверки реализуется в коде для действия `CreateState` и в XAML для действия `CreateCity`. Оба ограничения имеют одинаковое поведение.  
@@ -38,6 +38,6 @@ ms.locfileid: "33515112"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец находится в следующем каталоге:  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец находится в следующем каталоге:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Validation\ActivityRelationships`

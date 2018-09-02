@@ -9,15 +9,16 @@ ms.assetid: bb321126-4770-41da-983a-67b7b89d45dd
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 61e387462126bc7b0752932ca617f7a97235a1c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25d27faeac2c60a50801b817185aa1d5196e506d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398564"
 ---
 # <a name="ui-automation-support-for-the-combobox-control-type"></a>Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления ComboBox
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе содержатся сведения о поддержке [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] типа элемента управления ComboBox. В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]тип элемента управления — это набор условий, которым должен удовлетворять элемент управления для использования свойства <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Условия включают конкретные правила для древовидной структуры [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значений свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , шаблонов элементов управления т событий [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
@@ -31,7 +32,7 @@ ms.lasthandoff: 05/04/2018
   
 |Представление элемента управления|Представление содержимого|  
 |------------------|------------------|  
-|ComboBox<br /><br /> -Edit (0 или 1)<br />-List (1)<br />-Элемент списка (дочерний элемент списка; 0 или более)<br />-Button (1)|ComboBox<br /><br /> -List Item (0 или более)|  
+|ComboBox<br /><br /> -Edit (0 или 1)<br />-List (1)<br />-Элемент списка (дочерний для List; 0 или более)<br />-Кнопка (1)|ComboBox<br /><br /> -Элемент списка (0 или более)|  
   
  Элемент представления "Поле ввода" в представлении элемента управления для поля со списком необходим только в том случае, если в поле со списком можно добавлять какие-либо введенные данные, как в случае поля со списком в диалоговом окне "Выполнить".  
   

@@ -2,12 +2,12 @@
 title: Использование CancellationScope
 ms.date: 03/30/2017
 ms.assetid: 39c5c338-b316-43d6-b7fe-a543281dd1ec
-ms.openlocfilehash: 62b798b29149e30a2fae680b507f62ef0a2e23d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 82d44fff869f207c09dc7685fc3470630e001a59
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517470"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43401786"
 ---
 # <a name="using-cancellationscope"></a>Использование CancellationScope
 В данном образце показывается, как с помощью действия <xref:System.Activities.Statements.CancellationScope> отменять работу в приложении.  
@@ -35,6 +35,6 @@ ms.locfileid: "33517470"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\CancellationScope`

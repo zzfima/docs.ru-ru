@@ -2,12 +2,12 @@
 title: Управление приостановленным экземпляром
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-ms.openlocfilehash: 8e8bb40b22633aa83b7a70ee94f37cefe48ba68e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f614770121185644c3395f923cf7835141653f55
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519227"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43394604"
 ---
 # <a name="suspended-instance-management"></a>Управление приостановленным экземпляром
 Этот образец демонстрирует управление экземплярами рабочего процесса, которые были приостановлены.  Действием по умолчанию для поведения <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> является `AbandonAndSuspend`. Это означает, что по умолчанию при появлении необработанных исключений, сформированных экземпляром рабочего процесса, который размещен на узле <xref:System.ServiceModel.WorkflowServiceHost>, экземпляр удаляется из памяти (отбрасывается) и устойчивая/сохраненная версия экземпляра отмечается как приостановленная. Приостановленный экземпляр рабочего процесса не будет в состоянии выполняться до отмены приостановки.  
@@ -15,7 +15,7 @@ ms.locfileid: "33519227"
  Этот образец показывает, как можно реализовать программу командной строки для выполнения запроса приостановленных экземпляров и как дать пользователю возможность возобновлять или завершать работу экземпляра. В этом образце служба рабочего процесса преднамеренно вызывает исключение, в результате чего она приостанавливается. Затем с помощью программы командной строки можно будет запросить экземпляр, а после этого возобновить или завершить его работу.  
   
 ## <a name="demonstrates"></a>Демонстрации  
- <xref:System.ServiceModel.WorkflowServiceHost> с <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> и <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> в Windows Workflow Foundation (WF).  
+ <xref:System.ServiceModel.WorkflowServiceHost> с помощью <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> и <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> в Windows Workflow Foundation (WF).  
   
 ## <a name="discussion"></a>Обсуждение  
  Программа командной строки, реализованная в этом образце, предназначена для работы с реализацией хранилища экземпляра SQL Server, который поставляется в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Если имеется пользовательская реализация хранилища экземпляра, то можно приспособить и эту программу, заменяя в образце реализации `WorkflowInstanceCommand` реализациями, которые относятся к применяемому хранилищу экземпляра.  
@@ -32,7 +32,7 @@ ms.locfileid: "33519227"
   
 2.  Установка базы данных SQL Server.  
   
-    1.  Из [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] командной строки запустите команду «setup.cmd» из каталога образцов SuspendedInstanceManagement, которая выполняет следующее:  
+    1.  Из [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] командной строке выполните «setup.cmd» из каталога образцов SuspendedInstanceManagement, которая выполняет следующее:  
   
         1.  Создает базу данных сохраняемости с использованием SQL Server Express. Если база данных сохраняемости уже существует, то она будет удалена и создана повторно.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "33519227"
   
     4.  Откройте консоль «Управление компьютером», выполнив команду Compmgmt.msc из командной строки.  
   
-    5.  Разверните **службы и приложения**, **очереди сообщений**, **частные очереди**.  
+    5.  Разверните **служба и приложения**, **Message Queuing**, **частные очереди**.  
   
-    6.  Щелкните правой кнопкой мыши **ReceiveTx** очередь, а затем выберите **свойства**.  
+    6.  Щелкните правой кнопкой мыши **ReceiveTx** ставить в очередь и выберите **свойства**.  
   
-    7.  Выберите **безопасности** вкладку и разрешить **все** могут иметь разрешения на **получение сообщения**, **Просмотр сообщения**, и  **Отправить сообщение**.  
+    7.  Выберите **безопасности** вкладку и разрешить **все** обладать разрешениями на **получение сообщения**, **Peek Message**, и  **Отправить сообщение**.  
   
 4.  После этого выполните образец.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "33519227"
   
 1.  Откройте консоль управления компьютером, запустив команду Compmgmt.msc в командной строке `vs2010`.  
   
-2.  Разверните **службы и приложения**, **очереди сообщений**, **частные очереди**.  
+2.  Разверните **служба и приложения**, **Message Queuing**, **частные очереди**.  
   
 3.  Удалить **ReceiveTx** очереди.  
   
@@ -81,6 +81,6 @@ ms.locfileid: "33519227"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\SuspendedInstanceManagement`

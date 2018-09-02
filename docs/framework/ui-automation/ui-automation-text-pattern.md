@@ -11,18 +11,18 @@ ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 6f26e547ba7dac824dbfdaaac01f54a40ef4ba8f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31dacad6b2b7c891ff8c32151f9bf02e8639375f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406413"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396368"
 ---
 # <a name="ui-automation-text-pattern"></a>Шаблон текста модели автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- В этом разделе содержатся обзоры и практические руководства, помогающие приступить к работе по программированию текстовых элементов в [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
+ В этом разделе содержатся обзоры и практические руководства, которые помогут приступить к работе в программировании для текстовых элементов во [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения об объекте TextPattern модели автоматизации пользовательского интерфейса](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  

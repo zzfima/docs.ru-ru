@@ -2,12 +2,12 @@
 title: Корреляция запросов сообщений LINQ
 ms.date: 03/30/2017
 ms.assetid: b746872e-57b1-4514-b337-53398a0e0deb
-ms.openlocfilehash: 5b215764f7e02f07873f63872f4ac8c3fcaffbcc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7881140f2926bc27073a0be425a63566f313b50c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515854"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393752"
 ---
 # <a name="linq-message-query-correlation"></a>Корреляция запросов сообщений LINQ
 Этот образец демонстрирует, как выполнять корреляцию на основе содержимого с использованием пользовательской реализации <xref:System.ServiceModel.Dispatcher.MessageQuery> (в отличие от системной реализации <xref:System.ServiceModel.XPathMessageQuery>).  
@@ -20,7 +20,7 @@ ms.locfileid: "33515854"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  В этом образце доступ к службе рабочего процесса предоставляется через конечные точки HTTP. Для запуска этого примера, соответствующие URL ACL, необходимо добавить (см. [Настройка протоколов HTTP и HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) подробные сведения), запустив Visual Studio от имени администратора, или, выполнив следующую команду в командной строке с повышенными привилегиями, чтобы добавить нужные списки управления доступом. Убедитесь, что подставлены нужный домен и имя пользователя.  
+1.  В этом образце доступ к службе рабочего процесса предоставляется через конечные точки HTTP. Для выполнения этого образца, соответствующие URL ACL необходимо добавить (см. в разделе [Настройка HTTP и HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) сведения), запустив Visual Studio от имени администратора или выполните следующую команду в строке с повышенными привилегиями, чтобы добавить нужные списки управления доступом. Убедитесь, что подставлены нужный домен и имя пользователя.  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
@@ -30,7 +30,7 @@ ms.locfileid: "33515854"
   
     1.  Постройте решение.  
   
-    2.  Задайте несколько запускаемых проектов, щелкните правой кнопкой мыши решение и выбрав **назначить запускаемые проекты**. Добавить **службы** и **клиента** (в указанном порядке) в качестве запускаемых проектов.  
+    2.  Задайте несколько запускаемых проектов, щелкните правой кнопкой мыши решение и выбрав **назначить запускаемые проекты**. Добавить **службы** и **клиента** (в таком порядке) в качестве запускаемых проектов.  
   
     3.  Запустите приложение. На консоль клиентского приложения выводится рабочий процесс, вначале отправляющий заказ, затем получающий идентификатор заказа на покупку и, наконец, подтверждающий заказ. В окне службы будут выведены сведения об обрабатываемых запросах.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "33515854"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Services\LinqMessageQueryCorrelation`

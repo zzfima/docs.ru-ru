@@ -7,26 +7,26 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 9f023abe6f803413b862d695a73988c3ea779a88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05ca122f425f929264669ca4914f87e850154246
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526644"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398940"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>Практическое руководство. Создание в форме Windows Forms базового элемента управления ToolStrip со стандартными элементами с помощью конструктора
 Следующая процедура демонстрирует создание <xref:System.Windows.Forms.ToolStrip> и добавление семи <xref:System.Windows.Forms.ToolStripButton> элементов управления, которые представляют типичные задачи.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ### <a name="to-add-standard-items-in-the-designer"></a>Чтобы добавить стандартные элементы в конструкторе  
   
 1.  Создание <xref:System.Windows.Forms.ToolStrip> элемента управления.  
   
-2.  В правом верхнем углу <xref:System.Windows.Forms.ToolStrip>, щелкните стрелку запуска задачи для отображения **задач ToolStrip** области.  
+2.  В правом верхнем углу <xref:System.Windows.Forms.ToolStrip>, щелкните стрелку одноименное **задач элемента управления ToolStrip** области.  
   
-3.  В **задач ToolStrip** области, выберите **вставить стандартные элементы**.  
+3.  В **задач элемента управления ToolStrip** панели выберите **вставить стандартные элементы**.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Forms.ToolStrip>  
