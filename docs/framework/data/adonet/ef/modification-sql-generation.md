@@ -2,17 +2,17 @@
 title: Создание кода SQL для изменения данных
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
-ms.openlocfilehash: 1d24775a7a50da1008a5097e1a2caf4e72c946e2
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 8e0568e32094b6cc27137409f3d908928d82cebb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071956"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417251"
 ---
 # <a name="modification-sql-generation"></a>Создание кода SQL для изменения данных
 В этом разделе приведено описание разработки модуля создания кода SQL для изменения данных для конкретного поставщика (базы данных, совместимой с SQL:1999). Этот модуль обеспечивает преобразование дерева команд изменения в соответствующие инструкции INSERT, UPDATE или DELETE языка SQL.  
   
- Сведения о создание SQL для инструкций select см. в разделе [создания SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md).  
+ Сведения о создании кода SQL для инструкций select, см. в разделе [создание кода SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md).  
   
 ## <a name="overview-of-modification-command-trees"></a>Общие сведения о деревьях команд изменения  
  Модуль создания кода SQL для изменения данных формирует зависящие от базы данных инструкции языка SQL для изменения на основе полученных входных данных DbModificationCommandTree.  
@@ -25,11 +25,11 @@ ms.locfileid: "37071956"
   
 -   DbDeleteCommandTree  
   
- DbModificationCommandTree и его реализации, созданные с помощью [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] всегда представляют операцию из одной строки. В настоящем разделе рассматриваются указанные типы и их ограничения в .NET Framework версии 3.5.  
+ DbModificationCommandTree и его реализации, которые создаются по [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] всегда представляют операцию одной строки. В настоящем разделе рассматриваются указанные типы и их ограничения в .NET Framework версии 3.5.  
   
  ![Схема](../../../../../docs/framework/data/adonet/ef/media/558ba7b3-dd19-48d0-b91e-30a76415bf5f.gif "558ba7b3-dd19-48d0-b91e-30a76415bf5f")  
   
- DbModificationCommandTree имеет свойство Target, которое представляет набор целей для операции изменения. Свойство Expression свойства Target, которое определяет входной набор, всегда имеет тип DbScanExpression.  DbScanExpression может представлять таблицу или представление, или набор данных, определенный с запросом, если свойство метаданных «Defining Query» его свойства Target имеет отличное от null.  
+ DbModificationCommandTree имеет свойство Target, которое представляет набор целей для операции изменения. Свойство Expression свойства Target, которое определяет входной набор, всегда имеет тип DbScanExpression.  DbScanExpression может представлять либо таблицу или представление, или набора данных, определенный с запросом, если свойство метаданных «Defining Query» его свойства Target имеет отличное от null.  
   
  Объект DbScanExpression, который представляет запрос, может достичь поставщика только как цель изменения, если набор был определен с помощью определяющего запроса в модели, но для соответствующей операции изменения не была предоставлена какая-либо функция. Поставщики могут оказаться неспособными поддерживать такой сценарий (например, поставщик SqlClient его не поддерживает).  
   
@@ -83,7 +83,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 -   DbOrExpression  
   
 ## <a name="modification-sql-generation-in-the-sample-provider"></a>Создание кода SQL для изменения данных в образце поставщика  
- [Образца поставщика Entity Framework](http://go.microsoft.com/fwlink/?LinkId=180616) демонстрируются компоненты поставщиков данных ADO.NET, который поддерживает [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Он предназначен для базы данных SQL Server 2005 и реализован как оболочка на основе поставщика данных System.Data.SqlClient ADO.NET 2.0.  
+ [Образца поставщика Entity Framework](https://go.microsoft.com/fwlink/?LinkId=180616) демонстрируются компоненты поставщиков данных ADO.NET, которые поддерживают [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Он предназначен для базы данных SQL Server 2005 и реализован как оболочка на основе поставщика данных System.Data.SqlClient ADO.NET 2.0.  
   
  Модуль создания кода SQL для изменения данных из образца поставщика (который находится в файле SQL Generation\DmlSqlGenerator.cs) принимает входные данные DbModificationCommandTree и вырабатывает одну инструкцию SQL изменения, за которой может следовать инструкция SELECT, обеспечивающая возврат модуля чтения, если это указано в DbModificationCommandTree. Следует отметить, что форма созданных команд зависит от целевой базы данных SQL Server.  
   
@@ -104,7 +104,7 @@ The elements of the list are specified as type DbModificationClause, which speci
 ## <a name="generating-an-insert-sql-command"></a>Создание команд INSERT языка SQL  
  Для каждого конкретного объекта DbInsertCommandTree из образца поставщика созданная команда INSERT соответствует одному из двух приведенных далее шаблонов INSERT.  
   
- Первый шаблон имеет команду для выполнения оператора INSERT с учетом значений из списка SetClauses и инструкции SELECT для возврата свойств, указанных в свойстве Returning для вставленной строки, если свойство Returning не имело значение null. Элемент предиката «\@ @ROWCOUNT > 0» имеет значение true, если строка была вставлена. Элемент предиката «keyMemberI = keyValueI &#124; scope_identity()» принимает форму «keyMemberI = scope_identity()» только если keyMemeberI представляет ключ, поскольку функция scope_identity() возвращает последнее значение идентификатора, вставленное в (удостоверение) столбец, созданных хранилищем).  
+ Первый шаблон имеет команду для выполнения оператора INSERT с учетом значений из списка SetClauses и инструкции SELECT для возврата свойств, указанных в свойстве Returning для вставленной строки, если свойство Returning не имело значение null. Элемент предиката «\@ @ROWCOUNT > 0" имеет значение true, если строка была вставлена. Элемент предиката «keyMemberI = keyValueI &#124; scope_identity()» принимает форму «keyMemberI = scope_identity()» только если keyMemeberI представляет ключ, созданный хранилищем, поскольку функция scope_identity() возвращает последнее значение identity, вставленное в (удостоверение) столбец, созданный в хранилище).  
   
 ```  
 -- first insert Template  
@@ -199,7 +199,7 @@ WHERE <predicate>
  WHERE @@ROWCOUNT > 0 AND keyMember0 = keyValue0 AND .. keyMemberI =  keyValueI | scope_identity()  .. AND  keyMemberN = keyValueN]  
 ```  
   
- Предложение set имеет фиктивное предложение set («@i = 0") только в том случае, если указано никаких предложений set. Это должно гарантировать повторное вычисление всех вычисленных хранилищем столбцов.  
+ Предложение set имеет фиктивное предложение set («@i = 0") только в том случае, если указаны никаких предложений set. Это должно гарантировать повторное вычисление всех вычисленных хранилищем столбцов.  
   
  Только если свойство Returning не равно null, создается инструкция SELECT для возврата свойств, указанных в свойстве Returning.  
   

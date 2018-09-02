@@ -2,12 +2,12 @@
 title: Ограничения определения
 ms.date: 03/30/2017
 ms.assetid: 78517994-5d57-44f8-9d20-38812977de09
-ms.openlocfilehash: b3ad1e66a6a1a4cb2a2aab7b2f86f38e5c784876
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d113df98cdd339300b3e75ceda49a56d4f346d3c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760054"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417434"
 ---
 # <a name="inference-limitations"></a>Ограничения определения
 Процесс вывода схемы <xref:System.Data.DataSet> из XML-кода может приводиться в различных схемах в зависимости от XML-элементов в каждом документе. Например, рассмотрим следующие XML-документы.  
@@ -29,7 +29,7 @@ ms.locfileid: "32760054"
 </DocumentElement>  
 ```  
   
- Для «Document1», в процессе вывода создается **набора данных** с именем «DocumentElement» и таблица с именем «Элемент1», так как «Элемент1» является повторяющимся элементом.  
+ Для «Документ1», в процессе вывода создается **набора данных** с именем «DocumentElement» и таблица с именем «Элемент1», так как «Элемент1» является повторяющимся элементом.  
   
  **Набор данных:** DocumentElement  
   
@@ -40,7 +40,7 @@ ms.locfileid: "32760054"
 |Text1|  
 |Text2|  
   
- Однако для «Document2», в процессе вывода создается **набора данных** с именем «NewDataSet» и таблица с именем «DocumentElement.» Element1 выводится в виде столбца, потому что не имеет атрибутов и дочерних элементов.  
+ Тем не менее, для «Document2», в процессе вывода создается **набора данных** с именем «NewDataSet» и таблица с именем «DocumentElement.» Element1 выводится в виде столбца, потому что не имеет атрибутов и дочерних элементов.  
   
  **Набор данных:** NewDataSet  
   
@@ -52,7 +52,7 @@ ms.locfileid: "32760054"
   
  Эти два XML-документа, возможно, должны были выдавать одну и ту же схему, но процесс вывода дает значительно различающиеся результаты в зависимости от элементов, содержащихся в каждом документе.  
   
- Чтобы избежать несоответствий, которые могут произойти при создании схемы из XML-документа, рекомендуется явно задавать схему с помощью языка определения схем XML (XSD) или XML-Data Reduced (XDR), при загрузке **DataSet** из XML-ФАЙЛ. Дополнительные сведения о явном определении **DataSet** схемы с XML-схемы, см. [наследование реляционной структуры набора данных из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
+ Чтобы избежать несоответствий, которые могут произойти при создании схемы из XML-документа, рекомендуется явно задавать схему с помощью языка определения схемы XML (XSD) или XML-Data Reduced (XDR), при загрузке **набора данных** из XML-ФАЙЛ. Дополнительные сведения о явном задании **набора данных** схему со схемой XML, см. в разделе [наследование реляционной структуры DataSet из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).  
   
 ## <a name="see-also"></a>См. также  
  [Определение реляционной структуры DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)  
@@ -60,4 +60,4 @@ ms.locfileid: "32760054"
  [Загрузка сведений о схеме DataSet из XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-dataset-schema-information-from-xml.md)  
  [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

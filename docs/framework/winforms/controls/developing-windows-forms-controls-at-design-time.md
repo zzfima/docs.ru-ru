@@ -9,20 +9,20 @@ helpviewer_keywords:
 - user controls [Windows Forms]
 - custom controls [Windows Forms]
 ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
-ms.openlocfilehash: 267a56cbfd9025e2e20f1468535e5544146535a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b58318a3e0e9881725d3c260251288c720fa4132
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529871"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406827"
 ---
 # <a name="developing-windows-forms-controls-at-design-time"></a>Создание элементов управления Windows Forms во время разработки
 Среда .NET Framework предоставляет широкий набор технологий создания элементов управления. Авторы больше не ограничены созданием составных элементов управления, которые действуют как коллекция стандартных элементов управления. Через наследование можно создать свои собственные элементы управления на основе существующих составных элементов управления или существующих элементов управления Windows Forms. Можно также создать собственные элементы управления, реализующие настраиваемое рисование. Эти возможности обеспечивают высокую степень гибкости разработки и функциональности визуального интерфейса. Чтобы воспользоваться преимуществами этих функций, вы должны быть знакомы с понятиями объектно-ориентированного программирования.  
   
 > [!NOTE]
->  Это не обязательно иметь глубокие знания о наследовании, но могут оказаться полезными для обращения к [Основы наследования (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
+>  Это не обязательно иметь глубокие знания о наследовании, но могут оказаться полезными для ссылки на [Основы наследования (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md).  
   
- Если вам необходимо создать пользовательский элемент управления для использования в веб-формах, см. раздел [Разработка пользовательских серверных элементов управления ASP.NET](http://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
+ Если вам необходимо создать пользовательский элемент управления для использования в веб-формах, см. раздел [Разработка пользовательских серверных элементов управления ASP.NET](https://msdn.microsoft.com/library/fbe26c16-cff4-4089-b3dd-877411f0c0ef).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Пошаговое руководство. Создание составного элемента управления с помощью Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
@@ -41,7 +41,7 @@ ms.locfileid: "33529871"
  Демонстрируется использование функции смарт-тегов в элементах управления Windows Forms.  
   
  [Пошаговое руководство. Сериализация коллекций стандартных типов с использованием атрибута DesignerSerializationVisibilityAttribute](../../../../docs/framework/winforms/controls/serializing-collections-designerserializationvisibilityattribute.md)  
- Показано, как использовать <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> атрибут для сериализации коллекции.  
+ Демонстрируется использование <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content?displayProperty=nameWithType> атрибут для сериализации коллекции.  
   
  [Пошаговое руководство. Отладка пользовательских элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  Демонстрируется процедура отладки поведения элемента управления Windows Forms во время разработки.  
@@ -59,19 +59,19 @@ ms.locfileid: "33529871"
  Обзор процедуры создания составного элемента управления.  
   
  [Практическое руководство. Наследование существующих элементов управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
- Описание способов создания расширенного элемента управления путем наследования от <xref:System.Windows.Forms.Button> класса элемента управления.  
+ Демонстрируется создание расширенного элемента управления путем наследования от <xref:System.Windows.Forms.Button> класс элемента управления.  
   
  [Практическое руководство. Наследование класса Control](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
  Обзор создания расширенного элемента управления.  
   
  [Практическое руководство. Выравнивание элементов управления по границам формы во время выполнения](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- Показано, как использовать <xref:System.Windows.Forms.Control.Dock%2A> свойства для выравнивания пользовательского элемента управления по краю занимаемой им формы.  
+ Показано, как использовать <xref:System.Windows.Forms.Control.Dock%2A> свойства выравнивания элемента управления по краю занимаемой им формы.  
   
  [Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов](../../../../docs/framework/winforms/controls/how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
  Описание процедуры установки элемента управления таким образом, чтобы он отображался в диалоговом окне **Настройка области элементов**.  
   
  [Практическое руководство. Предоставление точечного рисунка панели элементов для элемента управления](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md)  
- Показано, как использовать <xref:System.Drawing.ToolboxBitmapAttribute> для отображения значка рядом с пользовательского элемента управления в **элементов**.  
+ Демонстрируется использование <xref:System.Drawing.ToolboxBitmapAttribute> для отображения значка рядом с пользовательского элемента управления в **элементов**.  
   
  [Практическое руководство. Тестирование поведения элемента UserControl во время выполнения](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
  Демонстрируется использование **тестового контейнера UserControl** для тестирования поведения составного элемента управления.  

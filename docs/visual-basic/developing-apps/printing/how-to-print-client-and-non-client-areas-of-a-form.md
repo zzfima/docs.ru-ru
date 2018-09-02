@@ -8,17 +8,17 @@ helpviewer_keywords:
 - entire form
 - non-client area [Visual Basic], printing
 ms.assetid: 856bb0e4-dbc3-47e2-81cd-4b376cf07757
-ms.openlocfilehash: 566cf295462945a6bc90bc96f8907de34646bd00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5109993146a8d53d5cbeebcc52c018a6f0f57ed5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584746"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408443"
 ---
 # <a name="how-to-print-client-and-non-client-areas-of-a-form-visual-basic"></a>Практическое руководство. Печать клиентской и неклиентской области формы (Visual Basic)
 Компонент <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> позволяет быстро напечатать изображение формы точно, как на экране, без использования компонента <xref:System.Drawing.Printing.PrintDocument> . Следующая процедура описывает печать формы, включая клиентскую и неклиентскую области. Неклиентская область включает строку заголовка, границы и полосы прокрутки.  
   
- Элементы управления PowerPack больше не включены в Visual Studio, но их можно скачать в [Центре загрузки](http://www.microsoft.com/en-us/download/details.aspx?id=25169).  
+ Элементы управления PowerPack больше не включены в Visual Studio, но их можно скачать [центра загрузки](https://www.microsoft.com/en-us/download/details.aspx?id=25169).  
   
 ### <a name="to-print-both-the-client-and-the-non-client-areas-of-a-form"></a>Печать клиентской и неклиентской областей формы  
   

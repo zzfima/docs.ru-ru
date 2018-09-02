@@ -8,32 +8,32 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 230d2c6843f9ae80126d9d0a2c949982aae24c76
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1421d076ff202ec87a9d861ab2c7d1c1cdcdc1b7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557463"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408194"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Пошаговое руководство. Отображение данных из базы данных SQL Server в элементе управления DataGrid
-В этом пошаговом руководстве, получения данных из базы данных SQL Server и отображение их в <xref:System.Windows.Controls.DataGrid> элемента управления. Использовать ADO.NET Entity Framework для создания классов сущностей, которые представляют данные, а также написать запрос, извлекающий указанные данные из класса сущностей с помощью LINQ.  
+В этом пошаговом руководстве, получения данных из базы данных SQL Server и отображение их в <xref:System.Windows.Controls.DataGrid> элемента управления. Использовать ADO.NET Entity Framework для создания классов сущностей, которые представляют данные и использовать LINQ для записи запроса, который получает указанные данные из класса сущностей.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
 -   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
   
--   Доступ к запущенному экземпляру SQL Server или SQL Server Express с подключенной образца базы данных AdventureWorks, присоединенные к нему. Можно загрузить из базы данных AdventureWorks [GitHub](https://github.com/Microsoft/sql-server-samples/releases).  
+-   Доступ к запущенному экземпляру SQL Server или SQL Server Express с образца базы данных AdventureWorks, подключенные к ней. Можно загрузить из базы данных AdventureWorks [GitHub](https://github.com/Microsoft/sql-server-samples/releases).  
   
 ### <a name="to-create-entity-classes"></a>Для создания классов сущностей  
   
-1.  Создание нового проекта приложения WPF в Visual Basic или C# и назовите его `DataGridSQLExample`.  
+1.  Создайте новый проект приложения WPF в Visual Basic или C# и назовите его `DataGridSQLExample`.  
   
-2.  В обозревателе решений щелкните проект правой кнопкой мыши **добавить**, а затем выберите **новый элемент**.  
+2.  В обозревателе решений щелкните правой кнопкой мыши проект, выберите пункт **добавить**, а затем выберите **новый элемент**.  
   
-     Откроется диалоговое окно Добавление нового элемента.  
+     Будет открыто диалоговое окно Добавление нового элемента.  
   
-3.  Выберите в области установленные шаблоны **данные** и в списке шаблонов выберите **режим данных ADO.NET Entity**l.  
+3.  На панели "Установленные шаблоны", выберите **данных** и в списке шаблонов выберите **режим данных сущности ADO.NET**l.  
   
      ![Выберите модель ADO.NET EDM](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step1.png "DataGrid_SQL_EF_Step1")  
   
@@ -41,21 +41,21 @@ ms.locfileid: "33557463"
   
      Появится мастер модели EDM.  
   
-5.  В окне Выбор содержимого модели выберите **создать из базы данных** и нажмите кнопку **Далее**.  
+5.  На экране «Выбор содержимого модели» выберите **создать из базы данных** и нажмите кнопку **Далее**.  
   
-     ![Выберите пункт Создать из базы данных параметр](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step2.png "DataGrid_SQL_EF_Step2")  
+     ![Выберите Создать из базы данных параметр](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step2.png "DataGrid_SQL_EF_Step2")  
   
-6.  На экране «Выбор подключения базы данных» укажите подключение к базе данных AdventureWorksLT2008. Дополнительные сведения см. в разделе [выберите ваш данных диалоговое окно подключения](http://go.microsoft.com/fwlink/?LinkId=160190).  
+6.  На экране «Выбор подключения к данным» обеспечивают подключение к базе данных AdventureWorksLT2008. Дополнительные сведения см. в разделе [выберите Your данных диалогового окна соединения](https://go.microsoft.com/fwlink/?LinkId=160190).  
   
      ![Предоставление подключения к базе данных](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step3.png "DataGrid_SQL_EF_Step3")  
   
-7.  Убедитесь, что имя указано `AdventureWorksLT2008Entities` и что **сохранить настройки подключения сущности в App.Config как** флажок установлен и нажмите кнопку **Далее**.  
+7.  Убедитесь, что имя указано `AdventureWorksLT2008Entities` и что **сохранить настройки подключения сущности в App.Config как** флажок выбран и нажмите кнопку **Далее**.  
   
-8.  На экране Выбор объектов базы данных, разверните узел таблицы и выберите **продукта** и **ProductCategory** таблиц.  
+8.  На экране «Выбор объектов базы данных» разверните узел таблицы и выберите **продукта** и **ProductCategory** таблиц.  
   
-     Можно создать классы сущностей для всех таблиц. Однако в этом примере извлекаются данные только из этих двух таблиц.  
+     Можно создавать классы сущностей для всех таблиц; Тем не менее в этом примере извлекаются данные только из этих двух таблиц.  
   
-     ![Выберите из таблицы Product и ProductCategory](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step4.png "DataGrid_SQL_EF_Step4")  
+     ![Выбор пунктов Product и ProductCategory из таблиц](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step4.png "DataGrid_SQL_EF_Step4")  
   
 9. Нажмите кнопку **Готово**.  
   
@@ -67,9 +67,9 @@ ms.locfileid: "33557463"
   
 1.  Откройте файл MainWindow.xaml.  
   
-2.  Задать <xref:System.Windows.FrameworkElement.Width%2A> свойство <xref:System.Windows.Window> в значение 450.  
+2.  Задайте <xref:System.Windows.FrameworkElement.Width%2A> свойство <xref:System.Windows.Window> для 450.  
   
-3.  В редакторе XAML добавьте следующие <xref:System.Windows.Controls.DataGrid> тег между `<Grid>` и `</Grid>` тегов, чтобы добавить <xref:System.Windows.Controls.DataGrid> с именем `dataGrid1`.  
+3.  В редакторе XAML добавьте следующий <xref:System.Windows.Controls.DataGrid> тег между `<Grid>` и `</Grid>` теги для добавления <xref:System.Windows.Controls.DataGrid> с именем `dataGrid1`.  
   
      [!code-xaml[DataGrid_SQL_EF_Walkthrough#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#3)]  
   
@@ -77,25 +77,25 @@ ms.locfileid: "33557463"
   
 4.  Выберите <xref:System.Windows.Window>.  
   
-5.  С помощью окна свойств или редактора XAML создайте обработчик событий для <xref:System.Windows.Window> с именем `Window_Loaded` для <xref:System.Windows.FrameworkElement.Loaded> события. Дополнительные сведения см. в разделе [как: создание простого обработчика событий](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).  
+5.  С помощью окна свойств или редактор XAML, создайте обработчик событий для <xref:System.Windows.Window> с именем `Window_Loaded` для <xref:System.Windows.FrameworkElement.Loaded> событий. Дополнительные сведения см. в разделе [как: создание простого обработчика событий](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).  
   
-     Ниже показан код XAML для файла MainWindow.xaml.  
+     Ниже показан XAML для MainWindow.xaml.  
   
     > [!NOTE]
-    >  При использовании Visual Basic в первой строке файла MainWindow.XAML замените `x:Class="DataGridSQLExample.MainWindow"` с `x:Class="MainWindow"`.  
+    >  Если вы используете Visual Basic, в первой строке файла MainWindow.XAML, замените `x:Class="DataGridSQLExample.MainWindow"` с `x:Class="MainWindow"`.  
   
      [!code-xaml[DataGrid_SQL_EF_Walkthrough#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#1)]  
   
-6.  Откройте файл кода (файл MainWindow.xaml.vb или MainWindow.xaml.cs) для <xref:System.Windows.Window>.  
+6.  Откройте файл с выделенным кодом (MainWindow.xaml.vb или MainWindow.xaml.cs) для <xref:System.Windows.Window>.  
   
-7.  Добавьте следующий код для извлечения только конкретных значений из соединяемых таблиц и установки <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> свойство <xref:System.Windows.Controls.DataGrid> к результатам запроса.  
+7.  Добавьте следующий код, чтобы получить только определенные значения из соединяемых таблиц и задать <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A> свойство <xref:System.Windows.Controls.DataGrid> к результатам запроса.  
   
      [!code-csharp[DataGrid_SQL_EF_Walkthrough#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml.cs#2)]
      [!code-vb[DataGrid_SQL_EF_Walkthrough#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/VB/MainWindow.xaml.vb#2)]  
   
 8.  Запустите пример.  
   
-     Вы увидите <xref:System.Windows.Controls.DataGrid> , отображающий данные.  
+     Вы должны увидеть <xref:System.Windows.Controls.DataGrid> , отображающий данные.  
   
      ![DataGrid с данными из базы данных SQL](../../../../docs/framework/wpf/controls/media/datagrid-sql-ef-step7.png "DataGrid_SQL_EF_Step7")  
   
@@ -103,4 +103,4 @@ ms.locfileid: "33557463"
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Controls.DataGrid>  
- [Как получить работу I: с Entity Framework в приложениях WPF?](http://go.microsoft.com/fwlink/?LinkId=159868)
+ [Как I: начало работы с Entity Framework в приложениях WPF?](https://go.microsoft.com/fwlink/?LinkId=159868)

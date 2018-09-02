@@ -9,16 +9,16 @@ ms.assetid: 48dee94a-5119-4939-a4c7-ffeaf794c732
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: b3c15aa6896f1252cd08faf163da3fcd6c096183
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4fb586b9ef34781eafbbe2deb66efdefff0eee19
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408721"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416854"
 ---
 # <a name="ui-automation-support-for-the-statusbar-control-type"></a>Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления StatusBar
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе содержатся сведения о поддержке [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] типа элемента управления StatusBar. В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]тип элемента управления — это набор условий, которым должен удовлетворять элемент управления для использования свойства <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Условия включают конкретные правила для древовидной структуры [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значений свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] и шаблонов элементов управления.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33408721"
   
 |Представление элемента управления|Представление содержимого|  
 |------------------|------------------|  
-|StatusBar<br /><br /> -Edit (0 или более)<br />-Индикатор (0 или более)<br />-Image (0 или более)<br />-Button (0 или более)|StatusBar<br /><br /> -Edit (0 или более)<br />-ProgressBar (0 или более)<br />-Image (0 или более)<br />-Button (0 или более)|  
+|StatusBar<br /><br /> -Edit (0 или больше)<br />-Индикатор хода выполнения (0 или более)<br />-Image (0 или более)<br />-Button (0 или более)|StatusBar<br /><br /> -Edit (0 или больше)<br />-Элемент управления ProgressBar (0 или более)<br />-Image (0 или более)<br />-Button (0 или более)|  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Требуемые свойства модели автоматизации пользовательского интерфейса  

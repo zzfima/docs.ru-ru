@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: ad046e4695365780bc6059617766a488ba85f642
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 41a7b5061a4a90f0b67658440e737c40295d5d5f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759375"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415915"
 ---
 # <a name="dataadapter-parameters"></a>Параметры DataAdapter
 Класс <xref:System.Data.Common.DbDataAdapter> имеет четыре свойства, которые служат для получения данных из источника данных и обновления данных в нем: свойство <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> возвращает данные из источника данных, а свойства <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> и <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> используются для управления изменениями в источнике данных. Свойство `SelectCommand` должно быть установлено до вызова метода `Fill` объекта `DataAdapter`. Свойства `InsertCommand`, `UpdateCommand` или `DeleteCommand` должны быть установлены до вызова метода `Update` объекта `DataAdapter` в зависимости от того, какие изменения были сделаны в данных в <xref:System.Data.DataTable>. Например, если добавлены строки, свойство `InsertCommand` должно быть установлено перед вызовом метода `Update`. Если метод `Update` обрабатывает вставленную, обновленную или удаленную строку, `DataAdapter` использует соответствующее свойство `Command` для обработки действия. Текущие данные об измененной строке передаются в объект `Command` через коллекцию `Parameters`.  
@@ -25,7 +25,7 @@ UPDATE Customers SET CompanyName = @CompanyName
 > [!NOTE]
 >  Синтаксис местозаполнителей параметров зависит от источника данных. В этом примере показаны местозаполнители для источника данных SQL Server. Для параметров <xref:System.Data.OleDb> и <xref:System.Data.Odbc> в качестве местозаполнителей используйте вопросительный знак (?).  
   
- В этом примере Visual Basic `CompanyName` обновляется значение `@CompanyName` параметр для строки, где `CustomerID` равен значению `@CustomerID` параметра. Параметры получают данные из измененной строки, используя <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> свойство <xref:System.Data.SqlClient.SqlParameter> объекта. Далее представлены параметры для предыдущего образца инструкции UPDATE. В коде предполагается, что переменная `adapter` представляет действительный объект <xref:System.Data.SqlClient.SqlDataAdapter>.  
+ В этом примере Visual Basic `CompanyName` обновляется значение `@CompanyName` для строки где `CustomerID` равен значению `@CustomerID` параметра. Параметры получают данные из измененной строки, используя <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> свойство <xref:System.Data.SqlClient.SqlParameter> объекта. Далее представлены параметры для предыдущего образца инструкции UPDATE. В коде предполагается, что переменная `adapter` представляет действительный объект <xref:System.Data.SqlClient.SqlDataAdapter>.  
   
 ```  
 adapter.Parameters.Add( _  
@@ -39,7 +39,7 @@ parameter.SourceVersion = DataRowVersion.Original
  Метод `Add` коллекции `Parameters` принимает имя параметра, тип данных, размер (если он применим к типу) и имя <xref:System.Data.Common.DbParameter.SourceColumn%2A> из `DataTable`. Обратите внимание, что <xref:System.Data.Common.DbParameter.SourceVersion%2A> параметра `@CustomerID` установлена в `Original`. Это гарантирует, что существующая строка в источнике данных обновляется, если значение идентифицирующих столбцов изменилось в измененном <xref:System.Data.DataRow>. В этом случае значение строки `Original` будет соответствовать текущему значению в источнике данных и значение строки `Current` будет содержать обновленное значение. `SourceVersion` для параметра `@CompanyName` не установлена и использует значение по умолчанию строки `Current`.  
   
 > [!NOTE]
->  Как для операций `Fill` объекта `DataAdapter`, так и для методов `Get` объекта `DataReader` тип [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] выводится из типа, возвращаемого поставщиком данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Выводимый [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] типы и методы доступа для типов данных Microsoft SQL Server, OLE DB и ODBC, описаны в [сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
+>  Как для операций `Fill` объекта `DataAdapter`, так и для методов `Get` объекта `DataReader` тип [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] выводится из типа, возвращаемого поставщиком данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Выводимые [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] типы и методы доступа для типов данных Microsoft SQL Server, OLE DB и ODBC описываются в [сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md).  
   
 ## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter.SourceColumn, Parameter.SourceVersion  
  `SourceColumn` и `SourceVersion` могут быть посланы как аргументы в конструктор `Parameter` или установлены как свойства существующих `Parameter`. `SourceColumn` является именем <xref:System.Data.DataColumn> из <xref:System.Data.DataRow>, где значение `Parameter` будет получено. `SourceVersion` задает версию `DataRow`, которую `DataAdapter` использует для получения значения.  
@@ -162,7 +162,7 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
->  Если для параметра не указано имя параметра, параметр присваивается имя по умолчанию параметра*N* *,* начиная с имени «Parameter1». Мы рекомендуем избегать параметр*N* соглашение об именах при указании имени параметра, потому что указываемое имя может конфликтовать с существующим именем параметра по умолчанию в `ParameterCollection`. Если указанное имя уже существует, вызывается исключение.  
+>  Если для параметра не указано имя параметра, параметр присваивается предусмотренное по умолчанию имя параметра*N* *,* начиная с имени «Parameter1». Рекомендуется избегать использования параметра*N* соглашение об именовании при указании имени параметра, поскольку такое имя может конфликтовать с именем существующего параметра по умолчанию в `ParameterCollection`. Если указанное имя уже существует, вызывается исключение.  
   
 ## <a name="see-also"></a>См. также  
  [Объекты DataAdapter и DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
@@ -170,4 +170,4 @@ adapter.Fill(customers, "Customers");
  [Обновление источников данных с объектами DataAdapter](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [Изменение данных с помощью хранимых процедур](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
  [Сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

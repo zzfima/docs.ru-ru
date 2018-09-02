@@ -2,12 +2,12 @@
 title: Двусторонний обмен данными
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: dfc332533b714083d149b2c1c4892626d2990fb0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 319b63ff1eefdab4c23932294c3f1970f204601e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508349"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416760"
 ---
 # <a name="two-way-communication"></a>Двусторонний обмен данными
 В этом образце показано, как осуществлять транзакционное двустороннее взаимодействие с использованием очередей с помощью MSMQ. В этом примере используется привязка `netMsmqBinding`. В данном случае служба представляет собой резидентное консольное приложение, позволяющее наблюдать за тем, как служба получает сообщения из очереди.  
@@ -15,7 +15,7 @@ ms.locfileid: "33508349"
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
- Этот пример построен на [транзакции привязки MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
+ Этот образец основан на [транзакции привязки MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
  При использовании очередей клиент взаимодействует со службой посредством очереди. Клиент отправляет сообщения в очередь, а служба получает сообщения из очереди. Поэтому клиенту и службе не обязательно выполняться одновременно, чтобы взаимодействовать посредством очереди.  
   
@@ -73,7 +73,7 @@ public void SubmitPurchaseOrder(PurchaseOrder po, string reportOrderStatusTo)
  Имя очереди MSMQ задается в разделе appSettings файла конфигурации. Конечная точка службы определяется в разделе System.ServiceModel файла конфигурации.  
   
 > [!NOTE]
->  Правила адресации несколько различаются для имени очереди MSMQ и адреса конечной точки. В имени очереди MSMQ для определения локального компьютера используется точка (.), а в пути в качестве разделителей используются символы обратной косой черты. Адрес конечной точки службы Windows Communication Foundation (WCF) указывает net.msmq: схему, используется имя «localhost» для локального компьютера и используются символы косой черты в пути. Для чтения очереди, размещенной на удаленном компьютере, "." и "localhost" следует заменить именем удаленного компьютера.  
+>  Правила адресации несколько различаются для имени очереди MSMQ и адреса конечной точки. В имени очереди MSMQ для определения локального компьютера используется точка (.), а в пути в качестве разделителей используются символы обратной косой черты. Адрес конечной точки Windows Communication Foundation (WCF) указывает net.msmq: схему, используется имя «localhost» для локального компьютера и используются символы косой черты в пути. Для чтения очереди, размещенной на удаленном компьютере, "." и "localhost" следует заменить именем удаленного компьютера.  
   
  Служба является резидентной. При работе с транспортом MSMQ используемую очередь следует создавать заранее. Это можно сделать вручную или с помощью кода. В данном образце служба проверяет наличие очереди и создает ее, если это необходимо. Имя очереди считывается из файла конфигурации. Базовый адрес используется [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания прокси для службы.  
 
@@ -222,12 +222,12 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
   
 2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!NOTE]
     >  Если для восстановления конфигурации этого образца используется программа Svcutil.exe, измените имена конечных точек в конфигурации клиента для соответствия клиентскому коду.  
   
- По умолчанию с привязкой <xref:System.ServiceModel.NetMsmqBinding> безопасность транспорта включена. Имеется два соответствующих свойства для обеспечения безопасности транспорта MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> и <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` по умолчанию имеет значение режима проверки подлинности `Windows` и устанавливается уровень защиты `Sign`. Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен, а также должна быть установлена возможность интеграции MSMQ со службой каталогов Active Directory. Если запустить данный образец на компьютере, который не удовлетворяет этому условию, возникнет ошибка.  
+ По умолчанию с привязкой <xref:System.ServiceModel.NetMsmqBinding> безопасность транспорта включена. Имеется два соответствующих свойства для обеспечения безопасности транспорта MSMQ, <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> и <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` по умолчанию, присваивается режим проверки подлинности `Windows` и уровень защиты `Sign`. Чтобы служба MSMQ обеспечивала возможности проверки подлинности и подписывания, она должна входить в домен, а также должна быть установлена возможность интеграции MSMQ со службой каталогов Active Directory. Если запустить данный образец на компьютере, который не удовлетворяет этому условию, возникнет ошибка.  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>Запуск образца на компьютере, входящем в рабочую группу, или без интеграции с Active Directory  
   
@@ -327,7 +327,7 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
   

@@ -2,15 +2,15 @@
 title: Размещение службы рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: b42dd42b9697d87d7721fc5edc2dfde01f1d37c2
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f75b8cc4cde0372b995c39a5da3ae4b71590743e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932837"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416369"
 ---
 # <a name="hosting-workflow-services"></a>Размещение службы рабочего процесса
-Для обработки входящих сообщений служба рабочих процессов должна быть размещена. Службы рабочих процессов используют инфраструктуру обмена сообщениями WCF и поэтому также требуют размещения. Подобно службам WCF службы рабочего процесса могут размещаться в любом управляемом приложении, в группе Internet Information Services (IIS), или в Windows процесса активации Services (WAS). Кроме того службы рабочего процесса могут размещаться в фабрике приложений Windows Server. Дополнительные сведения о Windows Server App Fabric см. в разделе [документации по Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric Hosting Features](http://go.microsoft.com/fwlink/?LinkId=196494), и [основы размещения AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). Дополнительные сведения о различных способах размещения WCF служб см. в разделе [размещение служб](../../../../docs/framework/wcf/hosting-services.md).
+Для обработки входящих сообщений служба рабочих процессов должна быть размещена. Службы рабочих процессов используют инфраструктуру обмена сообщениями WCF и поэтому также требуют размещения. Подобно службам WCF службы рабочего процесса могут размещаться в любом управляемом приложении, в группе Internet Information Services (IIS), или в Windows процесса активации Services (WAS). Кроме того службы рабочего процесса могут размещаться в фабрике приложений Windows Server. Дополнительные сведения о Windows Server App Fabric см. в разделе [документации по Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193037), [AppFabric Hosting Features](https://go.microsoft.com/fwlink/?LinkId=196494), и [основы размещения AppFabric](https://go.microsoft.com/fwlink/?LinkId=196495). Дополнительные сведения о различных способах размещения WCF служб см. в разделе [размещение служб](../../../../docs/framework/wcf/hosting-services.md).
 
 ## <a name="hosting-in-a-managed-application"></a>Размещение в управляемом приложении
  Размещение службы рабочего процесса в управляемом приложении производится с помощью класса <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Конструктор <xref:System.ServiceModel.Activities.WorkflowServiceHost> позволяет указать одноэлементный экземпляр службы рабочих процессов, определить службу рабочих процессов или действие, которое использует действия обмена сообщениями рабочих процессов. Вызов <<!--zz xref:System.ServiceModel.Activities.WorkflowServiceHost.Open%2A--> `System.ServiceModel.Activities.WorkflowServiceHost.Open`> приводит к тому, чтобы служба начинает прослушивание в ожидании входящих сообщений.
@@ -51,7 +51,7 @@ ms.locfileid: "42932837"
  Необходимо добавить ссылки на пользовательские действия <`Assemblies`> раздела <`System.Web.Compilation`>, чтобы они были загружены в домен приложения, а десериализатор XAML смог найти типы. Эти параметры могут быть указаны на уровне приложения или в корневом файле Web.config, если необходимо применять их ко всем приложениям компьютера.
 
 ## <a name="deployment"></a>Развертывание
- Для облегчения задачи развертывания создается инструмент веб-развертывания. Инструмент позволяет переносить приложения между IIS 6.0 и IIS 7.0, выполнять синхронизацию ферм серверов, а также упаковывать, архивировать и развертывать веб-приложения. Дополнительные сведения см. в разделе [средство развертывания MS](http://go.microsoft.com/fwlink/?LinkId=178690).
+ Для облегчения задачи развертывания создается инструмент веб-развертывания. Инструмент позволяет переносить приложения между IIS 6.0 и IIS 7.0, выполнять синхронизацию ферм серверов, а также упаковывать, архивировать и развертывать веб-приложения. Дополнительные сведения см. в разделе [средство развертывания MS](https://go.microsoft.com/fwlink/?LinkId=178690).
 
 ## <a name="see-also"></a>См. также
 

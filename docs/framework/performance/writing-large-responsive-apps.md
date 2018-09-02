@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bf5604472331f336c427ded36fc1666f16310ea2
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 4c90e914273de9f9121a979accdb4798b31e05cb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254357"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43418969"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Разработка больших, быстро реагирующих приложений .NET Framework
 В этой статье приведены советы по повышению производительности крупных приложений .NET Framework или приложений, обрабатывающих большой объем данных, например файлов или баз данных. Эти советы выработаны во время перевода компиляторов C# и Visual Basic на управляемый код, кроме того, здесь приведено несколько реальных примеров из компилятора C#.  
@@ -38,7 +38,7 @@ ms.locfileid: "43254357"
  Вам следует задать целевые показатели производительности для ключевых пользовательских функций или сценариев в приложении и написать тесты для измерения производительности.  Случаи сбоя тестов следует рассматривать с применением научного подхода: используйте профили для определения признаков, сделайте предположение о характере неполадки и подтвердите или опровергните это предположение с помощью эксперимента или изменения кода.  Проводите измерения базовой производительности и регулярные тестирования, чтобы иметь возможность исключить изменения, вызывающие снижение производительности.  Выбрав правильный подход к работе над производительностью, вы избавите себя от потери времени на внесение в код ненужных обновлений.  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Факт 3. Значение хороших средств трудно переоценить  
- Хорошие средства позволяют вам быстро выявлять наиболее важные проблемы с производительностью (ЦП, память или диск) и помогают локализовать код, вызывающий такие узкие места.  Корпорация Майкрософт предоставляет разнообразные средства оценки производительности, такие как [профилировщик Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), [средство анализа Windows Phone](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) и [PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
+ Хорошие средства позволяют вам быстро выявлять наиболее важные проблемы с производительностью (ЦП, память или диск) и помогают локализовать код, вызывающий такие узкие места.  Корпорация Майкрософт предоставляет разнообразные средства оценки производительности, такие как [профилировщик Visual Studio](/visualstudio/profiling/beginners-guide-to-performance-profiling), [средство анализа Windows Phone](https://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f) и [PerfView](https://www.microsoft.com/download/details.aspx?id=28567).  
   
  PerfView — это бесплатное и крайне эффективное средство, помогающее вам сконцентрироваться на самых важных проблемах — операциях ввода-вывода диска, событиях сборки мусора и памяти.  Вы можете перехватывать связанные с производительностью события [трассировки событий Windows](../../../docs/framework/wcf/samples/etw-tracing.md) и просматривать информацию для отдельных приложений, процессов, стеков и потоков.  PerfView показывает, какой объем и тип памяти выделяет ваше приложение, а также какие функции или стеки вызовов чаще всего осуществляют выделение памяти. Дополнительные сведения см. в разделах справки, демонстрациях и видеозаписях, поставляемых вместе с этим средством (например, [учебники по PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial) в Channel 9).  
   
@@ -281,7 +281,7 @@ Language-Integrated Query (LINQ), в сочетании с лямбда-выра
   
  **Пример 5: лямбда-выражения, List\<T> и IEnumerable\<T>**  
   
- В этом примере [LINQ и код в функциональном стиле](http://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) применяются для поиска символа в модели компилятора при заданной строке имени:  
+ В этом примере [LINQ и код в функциональном стиле](https://blogs.msdn.com/b/charlie/archive/2007/01/26/anders-hejlsberg-on-linq-and-functional-programming.aspx) применяются для поиска символа в модели компилятора при заданной строке имени:  
   
 ```csharp  
 class Symbol {  
@@ -305,7 +305,7 @@ Func<Symbol, bool> predicate = s => s.Name == name;
      return symbols.FirstOrDefault(predicate);  
 ```  
   
- В первой строке [лямбда-выражение](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [удерживает](http://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) локальной переменной `name`.  Это означает, что в дополнение к выделению объекта для [делегата](~/docs/csharp/language-reference/keywords/delegate.md), содержащегося в `predicate`, код выделяет статический класс для среды, которая перехватывает значение `name`.  Компилятор формирует код, аналогичный следующему:  
+ В первой строке [лямбда-выражение](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md) `s => s.Name == name` [удерживает](https://blogs.msdn.com/b/ericlippert/archive/2003/09/17/53028.aspx) локальной переменной `name`.  Это означает, что в дополнение к выделению объекта для [делегата](~/docs/csharp/language-reference/keywords/delegate.md), содержащегося в `predicate`, код выделяет статический класс для среды, которая перехватывает значение `name`.  Компилятор формирует код, аналогичный следующему:  
   
 ```csharp  
 // Compiler-generated class to hold environment state for lambda  
@@ -362,7 +362,7 @@ public Symbol FindMatchingSymbol(string name)
  Этот код не использует методы расширения LINQ, лямбда-выражения или перечислители, а также не вызывает выделений памяти.  Выделения отсутствуют, так как компилятор может определить, что коллекция `symbols` является <xref:System.Collections.Generic.List%601>, и может привязать итоговый перечислитель (структуру) к локальной переменной с помощью подходящего типа, чтобы предотвратить упаковку-преобразование.  Исходная версия данной функции была отличным примером выразительных возможностей языка C# и производительности платформы .NET Framework.  Эта новая и более эффективная версия сохраняет данные качества и не имеет сложного в обслуживании кода.  
   
 ### <a name="async-method-caching"></a>Кэширование асинхронных методов  
- В приведенном ниже примере показана распространенная проблема, возникающая при попытке использования кэшированных результатов в [асинхронном](http://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7) методе.  
+ В приведенном ниже примере показана распространенная проблема, возникающая при попытке использования кэшированных результатов в [асинхронном](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7) методе.  
   
  **Пример 6: кэширование в асинхронных методах**  
   
@@ -465,9 +465,9 @@ class Compilation { /*...*/
  [Видеозапись презентации по данному разделу](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2013/DEV-B333)  
  [Руководство по профилированию производительности для начинающих](/visualstudio/profiling/beginners-guide-to-performance-profiling)  
  [Производительность](../../../docs/framework/performance/index.md)  
- [Советы по повышению производительности .NET](http://msdn.microsoft.com/library/ms973839.aspx)  
- [Средство анализа производительности Windows Phone](http://msdn.microsoft.com/magazine/hh781024.aspx)  
- [Поиск ограничений приложений с Visual Studio Profiler](http://msdn.microsoft.com/magazine/cc337887.aspx)  
+ [Советы по повышению производительности .NET](https://msdn.microsoft.com/library/ms973839.aspx)  
+ [Средство анализа производительности Windows Phone](https://msdn.microsoft.com/magazine/hh781024.aspx)  
+ [Поиск ограничений приложений с Visual Studio Profiler](https://msdn.microsoft.com/magazine/cc337887.aspx)  
  [Channel 9 учебники по PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial)  
- [Советы по повышению производительности высокого уровня](http://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
+ [Советы по повышению производительности высокого уровня](https://curah.microsoft.com/4604/improving-your-net-apps-startup-performance)  
  [репозиторий DotNet/roslyn на GitHub](https://github.com/dotnet/roslyn)

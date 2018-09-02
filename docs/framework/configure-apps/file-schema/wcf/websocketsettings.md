@@ -2,19 +2,19 @@
 title: '&lt;webSocketSettings&gt;'
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 84aee31b6c15beb32732f89eae7c3d176f57971d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e5f34dca83c8d3d08d27fb72bee5af2a89ac6b9f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754841"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416432"
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 Элемент конфигурации, который служит для задания параметров веб-сокета.  
   
 \<система. ServiceModel >  
 \<привязки >  
-\<Привязка netHttpBinding >  
+\<netHttpBinding >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,12 +62,12 @@ ms.locfileid: "32754841"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
-|\<Привязка netHttpBinding >|Определяет привязку NetHttpBinding|  
+|\<netHttpBinding >|Определяет привязку NetHttpBinding|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать \<webSocketSettings > элемент.  
+ В следующем примере показано, как использовать \<webSocketSettings > элемента.  
   
 ```xml  
 <netHttpBinding>  
@@ -92,5 +92,5 @@ ms.locfileid: "32754841"
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)

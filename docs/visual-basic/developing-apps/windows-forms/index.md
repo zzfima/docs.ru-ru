@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 051c2be00ca18799eeb2f5253a9b236bbcf82d21
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: cdc3e42adcb2c7eae52aab0b14d0f9c6a822eeea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256566"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417716"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Основы разработки приложений Windows Forms (Visual Basic)
 Важной частью Visual Basic является возможность создания приложений Windows Forms, локально работающих на компьютерах пользователей. Чтобы создать приложение и пользовательский интерфейс, с помощью Windows Forms можно использовать Visual Studio. В приложении Windows Forms основано на классах из <xref:System.Windows.Forms> пространства имен.  
@@ -46,7 +46,7 @@ ms.locfileid: "43256566"
   
 |Кому|См.|  
 |--------|---------|  
-|Создайте новое приложение Windows Forms с помощью Visual Studio|[Пошаговое руководство: Создание формы простой Windows](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Создайте новое приложение Windows Forms с помощью Visual Studio|[Пошаговое руководство: Создание формы простой Windows](https://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Использование элементов управления в формах|[Практическое руководство. Добавление элементов управления в формы Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Создание графических объектов с помощью <xref:System.Drawing>|[Приступая к программированию графики](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Создание пользовательских элементов управления|[Практическое руководство. Наследование класса UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  

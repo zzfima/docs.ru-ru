@@ -2,12 +2,12 @@
 title: Элемент &lt;message&gt; &lt;wsFederationHttpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: 24d7370eaadba08d449b886a09cb9903ca0a64c2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 820ee7015a51ecc5510889516faef20292cfbc07
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751107"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416598"
 ---
 # <a name="ltmessagegt-element-of-ltwsfederationhttpbindinggt"></a>Элемент &lt;message&gt; &lt;wsFederationHttpBinding&gt;
 Определяет параметры безопасности уровня сообщений для [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md).  
@@ -88,7 +88,7 @@ ms.locfileid: "32751107"
 |Атрибут|Описание|  
 |---------------|-----------------|  
 |algorithmSuite|Задает алгоритмы шифрования сообщений и ключей. Допустимые значения этого атрибута см. в таблице «Атрибут algorithmSuite». Значение по умолчанию — `Basic256`.<br /><br /> Это атрибут типа <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Эти алгоритмы соответствуют алгоритмам, заданным в спецификации языка политики безопасности (WS-SecurityPolicy).|  
-|issuedKeyType|Задает тип выдаваемого ключа. Допустимы следующие значения:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> Значение по умолчанию — `SymmetricKey`. Это атрибут типа <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
+|issuedKeyType|Задает тип выдаваемого ключа. Допустимы следующие значения:<br /><br /> -SymmetricKey<br />-PublicKey<br /><br /> Значение по умолчанию — `SymmetricKey`. Это атрибут типа <xref:System.IdentityModel.Tokens.SecurityKeyType>.|  
 |issuedTokenType|Строка, содержащая универсальный код ресурса (URI), который задает тип выдаваемых маркеров. Значение по умолчанию — `null`.|  
 |negotiateServiceCredential|Логическое значение, которое определяет, должен ли проводиться обмен учетными данными службы в рамках процесса согласования, или допустимо использование внештатного канала. Значением по умолчанию является `true`, означающее, что учетные данные службы согласуются.|  
   
@@ -115,7 +115,7 @@ ms.locfileid: "32751107"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<claimTypeRequirements >](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-element.md)|Задает коллекцию типов утверждений для этой привязки. Каждый элемент имеет тип <xref:System.ServiceModel.Configuration.ClaimTypeElement>.|  
 |issuer|Задает конечную точку, которая выдает маркер безопасности. Это элемент типа <xref:System.ServiceModel.Configuration.IssuedTokenParametersEndpointAddressElement>.|  
@@ -124,7 +124,7 @@ ms.locfileid: "32751107"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|Определяет параметры безопасности для привязки.|  
   
@@ -135,5 +135,5 @@ ms.locfileid: "32751107"
  `System.ServiceModel.Configuration.FederatedMessageSecurityElement` [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)

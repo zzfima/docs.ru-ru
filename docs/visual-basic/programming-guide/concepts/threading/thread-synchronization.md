@@ -2,12 +2,12 @@
 title: Синхронизация потоков (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 04f485d1-8333-4510-9e72-c334e7427e7e
-ms.openlocfilehash: 9922230e1c7f2bd30c575bd66387feb4850a298b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3278ed1e98f71e11d47f55a0d4cb50f44ae02027
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655095"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406628"
 ---
 # <a name="thread-synchronization-visual-basic"></a>Синхронизация потоков (Visual Basic)
 В следующих разделах описаны функции и классы, которые можно использовать для синхронизации доступа к ресурсам в многопоточных приложениях.  
@@ -26,8 +26,8 @@ ms.locfileid: "33655095"
   
 -   [Рекомендации по работе с потоками](../../../../standard/threading/managed-threading-best-practices.md)  
   
-## <a name="the-lock-and-synclock-keywords"></a>Блокировки и ключевые слова SyncLock  
- В Visual Basic `SyncLock` инструкция может использоваться для обеспечения работы блока кода до завершения работы без прерывания другими потоками. Для этого нужно получить взаимоисключающую блокировку для данного объекта на время длительности блока кода.  
+## <a name="the-lock-and-synclock-keywords"></a>Lock и SyncLock ключевые слова  
+ В Visual Basic `SyncLock` инструкцию, которая может использоваться для убедитесь, что блок кода выполняется до завершения работы без прерывания другими потоками. Для этого нужно получить взаимоисключающую блокировку для данного объекта на время длительности блока кода.  
   
  Оператор `SyncLock`получает объект в качестве аргумента, и за ним следует блок кода, который должен выполняться одновременно только в одном потоке. Пример:  
   
@@ -147,7 +147,6 @@ End Module
  <xref:System.Threading>  
  <xref:System.Threading.EventWaitHandle.Set%2A>  
  <xref:System.Threading.Monitor>  
- [Многопоточные приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)  
  [Оператор SyncLock](../../../../visual-basic/language-reference/statements/synclock-statement.md)  
  [Мьютексы](../../../../standard/threading/mutexes.md)  
  [Блокируемые операции](../../../../standard/threading/interlocked-operations.md)  

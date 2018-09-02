@@ -2,19 +2,19 @@
 title: Наследование реляционной структуры набора данных от схемы XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: 7599577c4e0f485e336e7f79a6c3bd17f0f0c316
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: fd5c41272d3b050427804f08f7387328012065f4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759612"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43417208"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Наследование реляционной структуры набора данных от схемы XML (XSD)
-В этом разделе приведены общие сведения о построении реляционной схемы `DataSet` на основе документа схемы на языке XSD. Как правило, для каждого `complexType` дочерний элемент элемента схемы, создается таблица, в `DataSet`. Структура таблицы задается определением сложного типа. Таблицы создаются в `DataSet` для элементов верхнего уровня в схеме. Однако таблица создается только для верхнего уровня `complexType` элемент при `complexType` элемент вложен в другой `complexType` случае вложенный элемент, в котором `complexType` элемент сопоставляется `DataTable` в `DataSet`.  
+В этом разделе приведены общие сведения о построении реляционной схемы `DataSet` на основе документа схемы на языке XSD. Как правило, для каждого `complexType` дочерний элемент элемента схемы, будет создана таблица в `DataSet`. Структура таблицы задается определением сложного типа. Таблицы создаются в `DataSet` для элементов верхнего уровня в схеме. Тем не менее, только создается таблица для верхнего уровня `complexType` элемент при `complexType` элемент вложен в другой `complexType` случае вложенный элемент, в котором `complexType` элемент сопоставлен с `DataTable` в `DataSet`.  
   
- Дополнительные сведения о языке XSD см. в разделе World Wide Web Consortium (W3C) XML Schema Part 0: Primer Recommendation, XML Schema Part 1: структурные рекомендации и XML Schema Part 2: рекомендации по типам данных, расположенном в [ http://www.w3.org/ ](http://www.w3.org/TR/).  
+ Дополнительные сведения о языке XSD см. в разделе World Wide Web Consortium (W3C) XML Schema Part 0: Primer Recommendation, XML Schema Part 1: Structures Recommendation и XML Schema Part 2: Datatypes Recommendation, расположенный [ http://www.w3.org/ ](http://www.w3.org/TR/).  
   
- Ниже приведен пример XML-схемы где `customers` является дочерним элементом элемента `MyDataSet` элемент, являющийся **DataSet** элемента.  
+ В следующем примере показано XML-схемы где `customers` является дочерним элементом элемента `MyDataSet` элемент, который является **набора данных** элемент.  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -50,9 +50,9 @@ Customers (CustomerID , CompanyName, Phone)
  Тип данных каждого столбца в таблице получается из типа схемы XML соответствующего элемента или указанного атрибута.  
   
 > [!NOTE]
->  Если элемент `customers` — простого типа данных XML-схемы, таких как **целое**, то таблица не создается. Таблицы создаются только для элементов верхнего уровня, которые являются сложными типами.  
+>  Если элемент `customers` является простого типа данных схемы XML, такие как **целое число**, то таблица не создается. Таблицы создаются только для элементов верхнего уровня, которые являются сложными типами.  
   
- В следующей схеме XML **схемы** элемент имеет два дочерних элемента: `InStateCustomers` и `OutOfStateCustomers`.  
+ В следующей схеме XML **схемы** элемент имеет два дочерних элемента `InStateCustomers` и `OutOfStateCustomers`.  
   
 ```xml  
 <xs:schema id="SomeID"   
@@ -87,14 +87,14 @@ OutOfStateCustomers (CustomerID , CompanyName, Phone)
  Описывает элементы схемы XML, используемые для создания ограничений уникального и внешнего ключа в `DataSet`.  
   
  [Создание отношений DataSet из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
- Описывает элементы схемы XML, используемых для создания связей между столбцами таблиц в `DataSet`.  
+ Описывает элементы схемы XML, используемые для создания связей между столбцами таблиц в `DataSet`.  
   
  [Ограничения и отношения схемы XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/xml-schema-constraints-and-relationships.md)  
- Описывает, каким образом неявного создания связей при использовании элементов схемы XML для создания ограничений в `DataSet`.  
+ Описывает, как неявного создания связей при использовании элементов схемы XML для создания ограничений в `DataSet`.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Использование XML в наборах данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  Описывает, как для загрузки и сохранения реляционной структуры и данных в `DataSet` как XML-данных.  
   
 ## <a name="see-also"></a>См. также  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

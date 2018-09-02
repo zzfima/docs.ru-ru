@@ -2,12 +2,12 @@
 title: Интеграция среды CLR и SQL Server
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: 7451ed06e8a7c9797c66fd81734eb8b6b3b81f12
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f6c1dcccaddeadb65e6fc949960b0232d00ed81
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355741"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43406649"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>Интеграция среды CLR и SQL Server
 В версии SQL Server 2005 появилась поддержка интеграции сервера со средой CLR инфраструктуры .NET Framework для Microsoft Windows. Это означает, что хранимые процедуры, триггеры, определяемые пользователем типы, определяемые пользователем функции, определяемые пользователем агрегатные функции и возвращающие табличные значение потоковые функции теперь можно разрабатывать с использованием любого языка .NET Framework, включая Microsoft Visual Basic .NET и Microsoft Visual C#. Пространство имен <xref:Microsoft.SqlServer.Server> содержит ряд новых API-интерфейсов, что позволяет обеспечить взаимодействие управляемого кода со средой Microsoft SQL Server.  
@@ -18,7 +18,7 @@ ms.locfileid: "33355741"
   
  **Электронная документация по SQL Server**  
   
-1.  [Общие принципы программирования интеграции языка среды выполнения (CLR)](http://go.microsoft.com/fwlink/?LinkId=115240)  
+1.  [Распространенные языка среды CLR Integration основные понятия программирования](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Знакомство с интеграцией CLR в SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
@@ -44,5 +44,5 @@ ms.locfileid: "33355741"
   
 ## <a name="see-also"></a>См. также  
  [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Создание объектов SQL Server 2005 в управляемом коде](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Создание объектов SQL Server 2005 в управляемом коде](https://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

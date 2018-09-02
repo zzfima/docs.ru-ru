@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; для &lt;basicHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 0111a1f0b7697caa584cd7fc45ad6347207100ea
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f3f9ad2c8b587a87abea7dc22abb98fdfb6ea77e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751273"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416005"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;transport&gt; для &lt;basicHttpBinding&gt;
 Определяет свойства, которые управляют параметрами проверки подлинности для транспорта HTTP.  
@@ -46,8 +46,8 @@ ms.locfileid: "32751273"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|clientCredentialType|— Указывает тип учетных данных для использования при проверке подлинности клиента с проверкой подлинности HTTP.  Значение по умолчанию — `None`. Это атрибут типа <xref:System.ServiceModel.HttpClientCredentialType>.|  
-|proxyCredentialType|— Указывает тип учетных данных для использования при проверке подлинности клиента из домена с использованием прокси-сервер по протоколу HTTP. Этот атрибут применим, только если атрибут `mode` родительского элемента `security` имеет значение `Transport` или `TransportCredentialsOnly`. Это атрибут типа <xref:System.ServiceModel.HttpProxyCredentialType>.|  
+|clientCredentialType|— Указывает тип учетных данных, используемых при проверке подлинности клиента с проверкой подлинности HTTP.  Значение по умолчанию — `None`. Это атрибут типа <xref:System.ServiceModel.HttpClientCredentialType>.|  
+|proxyCredentialType|— Указывает тип учетных данных, используемых при проверке подлинности клиента из домена с использованием прокси-сервер по протоколу HTTP. Этот атрибут применим, только если атрибут `mode` родительского элемента `security` имеет значение `Transport` или `TransportCredentialsOnly`. Это атрибут типа <xref:System.ServiceModel.HttpProxyCredentialType>.|  
 |realm|Строка, указывающая область, используемую схемой проверки подлинности HTTP для обычной проверки подлинности или дайджест-проверки подлинности. Значение по умолчанию - пустая строка.|  
 |policyEnforcement|Это перечисление указывает, когда следует применять <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>.<br /><br /> 1.  Never - политика никогда не применяется (расширенная защита отключена).<br />2.  WhenSupported - политика применяется только тогда, когда клиент поддерживает расширенную защиту.<br />3.  Always - политика применяется всегда. Клиенты, которые не поддерживают расширенную защиту, не смогут пройти проверку подлинности.|  
 |protectionScenario|Это перечисление указывает сценарий защиты, регламентированный политикой.|  
@@ -66,7 +66,7 @@ ms.locfileid: "32751273"
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|Нет|-Во время передачи сообщения не защищены.|  
+|Нет|-Сообщения не защищены во время передачи.|  
 |Basic|Задает обычную проверку подлинности, как определено документом RFC 2617, который посвящен проверке подлинности HTTP, обычной проверке и дайджест-проверке подлинности.|  
 |Digest|Задает дайджест-проверку подлинности, как определено документом RFC 2617, который посвящен проверке подлинности HTTP, обычной проверке и дайджест-проверке подлинности.|  
 |Ntlm|Задает проверку подлинности NTLM, если это возможно и если не удается выполнить проверку подлинности Windows.|  
@@ -78,7 +78,7 @@ ms.locfileid: "32751273"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|Определяет возможности безопасности для [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).|  
   
@@ -125,5 +125,5 @@ ms.locfileid: "32751273"
  [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)

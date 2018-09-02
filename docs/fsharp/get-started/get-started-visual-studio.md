@@ -2,12 +2,12 @@
 title: 'Начало работы с F # в Visual Studio'
 description: 'Сведения об использовании F # с помощью Visual Studio.'
 ms.date: 07/03/2018
-ms.openlocfilehash: a4a12a322d7e5144f2d720541f6ef65ca12737dd
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 3dac8466501338873aeb308ceac9274a7934a8a9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874719"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415738"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Начало работы с F # в Visual Studio
 
@@ -47,7 +47,7 @@ val square: x:int -> int
 
 ## <a name="running-your-code"></a>Выполнение кода
 
-Можно выполнить код и увидеть результаты, нажав клавишу **ctrl-f5**.  Это будет запустить программу без отладки и дает возможность видеть результаты.  Кроме того, вы можете **Отладка** меню верхнего уровня элемент в Visual Studio, выбрав **Запуск без отладки**.
+Можно выполнить код и увидеть результаты, нажав клавишу **Ctrl**+**F5**.  Это запускает программу без отладки и дает возможность видеть результаты.  Кроме того, вы можете **Отладка** меню верхнего уровня элемент в Visual Studio, выбрав **Запуск без отладки**.
 
 Теперь вы увидите напечатаны в окне консоли, Visual Studio появилось следующее:
 
@@ -62,4 +62,8 @@ val square: x:int -> int
 Если это еще не сделано, см. статью [обзор языка F #](../tour.md), где приведены некоторые основные возможности языка F #.  Он будет дам обзор некоторых возможностей языка F # и предоставляет примеры кода можно в полной мере, можно скопировать в Visual Studio и запустить.  Существуют также некоторые полезные внешние ресурсы, которые можно использовать, показывавшие в [руководство по F #](../index.md).
 
 ## <a name="see-also"></a>См. также
- [Обзор языка F #](../tour.md) [Справочник по языку F #](../language-reference/index.md) [вывод типа](../language-reference/type-inference.md) [Справочник символов и оператор](../language-reference/symbol-and-operator-reference/index.md)
+
+- [Обзор языка F#](../tour.md)
+- [Справочник по языку F #](../language-reference/index.md)
+- [Вывод типа](../language-reference/type-inference.md)
+- [Справочник символов и оператор](../language-reference/symbol-and-operator-reference/index.md)

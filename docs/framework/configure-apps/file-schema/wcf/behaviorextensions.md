@@ -2,12 +2,12 @@
 title: '&lt;behaviorExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
-ms.openlocfilehash: bb59ceeb478d0324fddc98a206a00dbd170b5ac9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d025497956715913923e839cb6c482f44f96babb
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749586"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415796"
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
 Расширения поведений позволяют пользователям создавать пользовательские элементы поведений. Эти элементы могут использоваться вместе со стандартными элементами поведений Windows Communication Foundation (WCF). В разделе `behaviorExtensions` определяется элемент, который может использоваться в конфигурации. Далее приведен пример типичного расширения поведения.  
@@ -44,7 +44,7 @@ ms.locfileid: "32749586"
   
  Злоумышленник может использовать порядок поиска в среде CLR и выполнить неавторизованный код. Использование полных (строгих) имен однозначно идентифицирует тип и еще больше повышает безопасность системы.  
   
- Дополнительные сведения см. в разделе [как среда выполнения находит сборки](http://go.microsoft.com/fwlink/?LinkId=95336) и <xref:System.AppDomain.TypeResolve>.  
+ Дополнительные сведения см. в разделе [Обнаружение сборок в среде выполнения](https://go.microsoft.com/fwlink/?LinkId=95336) и <xref:System.AppDomain.TypeResolve>.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>  

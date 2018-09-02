@@ -2,12 +2,12 @@
 title: Решение SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
-ms.openlocfilehash: 37c83a9c1062fe074e41ec5db211fd513355c045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518490"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408769"
 ---
 # <a name="sqlstoreextensibility"></a>Решение SQLStoreExtensibility
 Этот образец демонстрирует использование и конфигурацию распространяемых свойств в хранилище экземпляров рабочих процессов SQL. Хранилище экземпляров рабочих процессов SQL - это реализация хранилища экземпляров на основе SQL Server. Это дает экземпляру возможность сохранять свое состояние и загружать свое состояние из базы данных SQL Server или SQL Server Express либо заносить состояние в эту базу данных. Возможность расширения хранилища позволяет пользователю определять свойства, хранимые в хранилище экземпляров. Эти свойства отображаются в представлении распространяемых свойств, которые позволяют пользователю запрашивать их.  
@@ -48,19 +48,19 @@ ms.locfileid: "33518490"
     > [!WARNING]
     >  Если база данных установлена в именованном экземпляре SQL Server, обновите строку соединения в коде перед построением решения.  
   
-3.  Запуск образца с правами администратора, перейдите в каталог проекта (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) в [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], щелкнув правой кнопкой мыши SqlStoreExtensibility.exe и выберите команду **запуска от имени Администратор**.  
+3.  Выполнение примера с правами администратора, перейдите в каталог проекта (\WF\Basic\Persistence\SqlStoreExtensibility\bin\Debug) в [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], щелкнув правой кнопкой мыши SqlStoreExtensibility.exe и выберите команду **Запуск от имени Администратор**.  
   
 ### <a name="to-verify-the-sample-is-working-correctly"></a>Проверка правильности работы образца  
   
-1.  Используйте SQL Server Management Studio для просмотра содержимого таблицы экземпляров, выбрав **баз данных**, **InstanceStore**, а затем  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** в обозревателе объектов щелкните правой кнопкой мыши **System.ServiceModel.Activities.DurableInstancing.InstanceTable** и выберите  **Выберите первые 1000 строк**. Дополнительные сведения о SQL Server Management Studio см. в разделе [Знакомство с SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645)  
+1.  Используйте SQL Server Management Studio, чтобы просмотреть содержимое таблицы экземпляров, выбрав **баз данных**, **InstanceStore**, а затем  **System.ServiceModel.Activities.DurableInstancing.InstanceTable** в обозревателе объектов щелкните правой кнопкой мыши **System.ServiceModel.Activities.DurableInstancing.InstanceTable** и выберите  **Выбрать первые 1000 строк**. Дополнительные сведения о SQL Server Management Studio, см. в разделе [Знакомство с SQL Server Management Studio](https://go.microsoft.com/fwlink/?LinkId=165645)  
   
 2.  Просмотрите перечисленные экземпляры рабочих процессов.  
   
 3.  В командной строке [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] запустите скрипт QueryInstanceStore.cmd, находящийся в каталоге образцов (\WF\Basic\Persistence\SqlStoreExtensibility).  
   
-4.  Обратите внимание на значение счетчика отображается в разделе **CountStatus**.  
+4.  Обратите внимание на значение счетчика, отображаемый под **CountStatus**.  
   
-5.  Запустите сценарий несколько раз для просмотра **CountStats** изменение значения.  
+5.  Запустить сценарий несколько раз для см. в разделе **CountStats** изменение значения.  
   
 6.  Чтобы завершить приложение рабочего процесса, нажмите клавишу ВВОД.  
   
@@ -73,11 +73,11 @@ ms.locfileid: "33518490"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\SQLStoreExtensibility`  
   
 ## <a name="see-also"></a>См. также  
  [Сохраняемость рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)  
  [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Образцы размещения и сохраняемости образцы](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Образцы размещения AppFabric и сохраняемости](https://go.microsoft.com/fwlink/?LinkId=193961)

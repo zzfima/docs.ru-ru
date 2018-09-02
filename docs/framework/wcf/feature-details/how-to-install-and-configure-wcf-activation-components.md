@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: cd792c2c26898cd3dfd7b52d865fa83636c426eb
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 8b516bb4603f33828069b5356676d8b35dc961d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253977"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408674"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Практическое руководство. Установка и настройка компонентов активации WCF
 В этом разделе описываются шаги, необходимые для настройки службы активации Windows (WAS) на [!INCLUDE[wv](../../../../includes/wv-md.md)] для размещения Windows Communication Foundation (WCF) служб, которые не поддерживают связь по протоколу HTTP сетевые протоколы. Настройка предполагает следующие шаги.  
@@ -104,4 +104,4 @@ ms.locfileid: "43253977"
  [Активация TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
  [Активация MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)  
  [Активация NamedPipe](../../../../docs/framework/wcf/samples/namedpipe-activation.md)  
- [Функции размещения фабрики приложений Windows Server](http://go.microsoft.com/fwlink/?LinkId=201276)
+ [Функции размещения фабрики приложений Windows Server](https://go.microsoft.com/fwlink/?LinkId=201276)

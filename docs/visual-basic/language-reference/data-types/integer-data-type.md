@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1846153375b19b773fedaf056a009f28ab94a4d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dc780cc845bfa6ef52fc9973ef3617d621167af1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591733"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415989"
 ---
 # <a name="integer-data-type-visual-basic"></a>Тип данных Integer (Visual Basic)
 Содержит 32-разрядные (4-байтовые) целые числа со знаком в диапазоне от -2 147 483 648 до 2 147 483 647.  
@@ -38,22 +38,22 @@ ms.locfileid: "33591733"
   
  Значение по умолчанию для типа `Integer` — 0.  
 
-## <a name="literal-assignments"></a>Литерал назначения
+## <a name="literal-assignments"></a>Назначения литералов
 
-Можно объявить и инициализировать `Integer` переменной, назначив его десятичное литералом, Шестнадцатеричный литерал восьмеричного литерала, или (начиная с Visual Basic 2017 г) двоичный литерал. Если целочисленный литерал выходит за пределы диапазона `Integer` (то есть, если он меньше <xref:System.Int32.MinValue?displayProperty=nameWithType> или больше <xref:System.Int32.MaxValue?displayProperty=nameWithType>), возникает ошибка компиляции.
+Можно объявить и инициализировать `Integer` переменной, назначив ей десятичный литерал, шестнадцатеричный восьмеричный литерал, или (начиная с Visual Basic 2017) двоичный литерал. Если целочисленный литерал выходит за пределы диапазона `Integer` (то есть, если он меньше <xref:System.Int32.MinValue?displayProperty=nameWithType> или больше <xref:System.Int32.MaxValue?displayProperty=nameWithType>), возникает ошибка компиляции.
 
 В следующем примере целые числа, равные 16 342 и представленные в виде десятичного, шестнадцатеричного и двоичного литерала, назначаются значениям `Integer`.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#Int)]  
 
 > [!NOTE]
-> Используйте префикс `&h` или `&H` для обозначения Шестнадцатеричный литерал префиксом `&b` или `&B` для обозначения двоичный литерал и префикс `&o` или `&O` для обозначения восьмеричного литерала. У десятичных литералов префиксов нет.
+> Используйте префикс `&h` или `&H` для обозначения шестнадцатеричного литерала, префикс `&b` или `&B` для обозначения двоичного литерала, а также префикс `&o` или `&O` для обозначения восьмеричный литерал. У десятичных литералов префиксов нет.
 
-Начиная с Visual Basic 2017 г., можно также использовать знак подчеркивания `_`, как разделитель для повышения удобства чтения, как в следующем примере показано.
+Начиная с Visual Basic 2017, можно также использовать символ подчеркивания, `_`, в качестве разделителя разрядов для повышения удобства чтения, как в примере ниже показан.
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
-Начиная с Visual Basic 15,5, можно также использовать символ подчеркивания (`_`) в качестве начальных разделителя между префиксом и двоичное, шестнадцатеричное или восьмеричное цифры. Пример:
+Начиная с Visual Basic 15.5, можно также использовать символ подчеркивания (`_`) в качестве начального разделителя между префиксом и двоичное, шестнадцатеричное или восьмеричное цифры. Пример:
 
 ```vb
 Dim number As Integer = &H_C305_F860
@@ -61,7 +61,7 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Можно также включать числовые литералы `I` [символ типа](../../programming-guide\language-features\data-types/type-characters.md) для обозначения `Integer` тип данных, как показано в следующем примере.
+Числовые литералы могут содержать `I` [символ типа](../../programming-guide\language-features\data-types/type-characters.md) для обозначения `Integer` тип данных, как показано в следующем примере.
 
 ```vb
 Dim number = &H_035826I
@@ -69,11 +69,11 @@ Dim number = &H_035826I
 
 ## <a name="programming-tips"></a>Советы по программированию
 
--   **Вопросы взаимодействия.** При взаимодействии с компонентами, которые не написаны для платформы .NET Framework, например, автоматизация или COM-объектов, следует помнить, что `Integer` имеет другой размер (16 бит) в других средах. При передаче 16-разрядного аргумента такому компоненту в новом коде Visual Basic следует объявить его как `Short`, а не как `Integer`.  
+-   **Вопросы взаимодействия.** При взаимодействие с компонентами, которые не написаны для платформы .NET Framework, такие как автоматизация или COM-объекты, необходимо помнить, что `Integer` имеет другой размер (16 бит) в других средах. При передаче 16-разрядного аргумента такому компоненту в новом коде Visual Basic следует объявить его как `Short`, а не как `Integer`.  
   
 -   **Расширяющие.** Тип данных `Integer` можно расширить до `Long`, `Decimal`, `Single` или `Double`. Это означает, что тип `Integer` можно преобразовать в любой из этих типов без возникновения ошибки <xref:System.OverflowException?displayProperty=nameWithType>.  
   
--   **Символы типов.** При добавлении к литералу символа типа литерала `I` производится принудительное приведение литерала к типу данных `Integer`. При добавлении символа идентификатора типа `%` к любому идентификатору производится принудительное приведение этого идентификатора к типу `Integer`.  
+-   **Символы типа.** При добавлении к литералу символа типа литерала `I` производится принудительное приведение литерала к типу данных `Integer`. При добавлении символа идентификатора типа `%` к любому идентификатору производится принудительное приведение этого идентификатора к типу `Integer`.  
   
 -   **Тип Framework.** В .NET Framework данный тип соответствует структуре <xref:System.Int32?displayProperty=nameWithType>.  
   
@@ -98,7 +98,7 @@ k = 5.5
 ## <a name="see-also"></a>См. также
 
 <xref:System.Int32?displayProperty=nameWithType>   
- [Типы данных](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
+ [Типы данных](../../../visual-basic/language-reference/data-types/index.md)  
  [Тип данных Long](../../../visual-basic/language-reference/data-types/long-data-type.md)  
  [Тип данных Short](../../../visual-basic/language-reference/data-types/short-data-type.md)  
  [Функции преобразования типов](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  

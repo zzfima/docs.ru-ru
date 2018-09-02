@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d7b12004efce76f9ac591f18fd0f4e06fdd7fd0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934955"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43416964"
 ---
 # <a name="profiling-overview"></a>Общие сведения о профилировании
 <a name="top"></a> Профилировщик — это средство, которое наблюдает за выполнением другого приложения. Профилировщик среды CLR — это библиотека DLL, содержащая функции, которые получают сообщения из среды CLR и отправляют сообщения в среду CLR с помощью API профилирования. Библиотека DLL профилировщика загружается средой CLR во время выполнения.  
@@ -209,7 +209,7 @@ ms.locfileid: "42934955"
 ### <a name="stack-snapshot"></a>Моментальный снимок стека  
  Моментальный снимок стека — это трассировка стека потока в момент времени. API профилирования поддерживает трассировку управляемых функций в стеке, но оставляет трассировку неуправляемых функций собственному обходчику стека профилировщика.  
   
- Дополнительные сведения о программировании профилировщика для обхода управляемых стеков см. в разделе [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) метод в этом комплекте документации и [Profiler, анализ стека в .NET Framework 2.0: Основы и за его пределами](http://go.microsoft.com/fwlink/?LinkId=73638).
+ Дополнительные сведения о программировании профилировщика для обхода управляемых стеков см. в разделе [ICorProfilerInfo2::DoStackSnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md) метод в этом комплекте документации и [Profiler, анализ стека в .NET Framework 2.0: Основы и за его пределами](https://go.microsoft.com/fwlink/?LinkId=73638).
   
 ### <a name="shadow-stack"></a>Теневой стек  
  Слишком частое использование метода моментального снимка может быстро создавать проблемы производительности. Если вы хотите часто получать трассировки стека, ваш профилировщик должен вместо этого построить теневой стек с помощью [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md), [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md), [FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md), и [ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md) обратных вызовов исключения. Теневой стек всегда является текущим, и его можно быстро скопировать в хранилище каждый раз, когда требуется моментальный снимок стека.  

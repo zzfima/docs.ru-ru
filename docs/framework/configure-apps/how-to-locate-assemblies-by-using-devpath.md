@@ -12,24 +12,24 @@ ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 918acf069c63d3aa8187f0f04e1f6c55ec961458
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9b8e3c89c13e7f5c294afca54af7f63293653e87
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755465"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408792"
 ---
 # <a name="how-to-locate-assemblies-by-using-devpath"></a>Практическое руководство. Поиск сборок с помощью DEVPATH
-Разработчикам может потребоваться убедитесь в том, что общей сборки, которые они построении правильно работает с несколькими приложениями. Вместо постоянно помещать сборку в глобальный кэш сборок во время цикла разработки, разработчик может создать переменную среды DEVPATH, которая указывает выходной каталог сборки для сборки.  
+Разработчикам может потребоваться, общая сборка, которую они создадут правильно работает с несколькими приложениями. Вместо постоянно помещать сборку в глобальный кэш сборок во время цикла разработки, разработчик может создать переменной среды DEVPATH, которая указывает выходной каталог сборки для сборки.  
   
- Например предположим, что вы создаете общей сборки с именем MySharedAssembly и в выходной каталог C:\MySharedAssembly\Debug. C:\MySharedAssembly\Debug можно поместить в переменной DEVPATH. Необходимо указать [ \<developmentMode >](../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md) элемент в файле конфигурации компьютера. Этот элемент предписывает среда использовать DEVPATH для обнаружения сборок.  
+ Например предположим, что вы создаете вызывается MySharedAssembly общей сборки и в выходной каталог C:\MySharedAssembly\Debug. C:\MySharedAssembly\Debug можно поместить в переменную DEVPATH. Необходимо указать [ \<developmentMode >](../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md) элемент в файле конфигурации компьютера. Этот элемент указывает среда CLR нужно использовать DEVPATH для поиска сборок.  
   
- Эту сборку необходимо обнаруживаемый средой выполнения.  Чтобы указать закрытый каталог для разрешения использования ссылок на сборки [ \<codeBase > элемент](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) или [ \<зондирования > элемент](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) в файле конфигурации, как описано в [Указание расположения сборки](../../../docs/framework/configure-apps/specify-assembly-location.md).  Можно также поместить сборку в подкаталог в каталоге приложения. Дополнительные сведения см. в разделе [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
+ Общая сборка должна быть обнаруживаема среды выполнения.  Для указания закрытого каталога для разрешения использования ссылок на сборки [ \<codeBase > элемент](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) или [ \<probing > элемент](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) в файле конфигурации, как описано в разделе [Указание расположения сборки](../../../docs/framework/configure-apps/specify-assembly-location.md).  Можно также поместить сборку в подкаталоге каталога приложения. Дополнительные сведения см. в разделе [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md).  
   
 > [!NOTE]
->  Это дополнительная функция, предназначенная только для разработки.  
+>  Это расширенная функция, предназначенная только для разработки.  
   
- В следующем примере показано, как среда выполнения поиска сборок в каталогах, указанных в переменной среды DEVPATH.  
+ В следующем примере показано, как среда выполнения для поиска сборок в каталогах, указанных в переменной среды DEVPATH.  
   
 ## <a name="example"></a>Пример  
   
@@ -41,10 +41,10 @@ ms.locfileid: "32755465"
 </configuration>  
 ```  
   
- Этот параметр по умолчанию используется значение false.  
+ Этот параметр по умолчанию false.  
   
 > [!NOTE]
->  Используйте этот параметр только во время разработки. Среда выполнения проверяет версии сборок со строгими именами, в DEVPATH. Он просто использует первый найденную сборку.  
+>  Используйте этот параметр только во время разработки. Среда выполнения не проверяет версии на в DEVPATH сборок со строгим именем. Он просто использует первый найденную сборку.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка приложений .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)
+ [Настройка приложений .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)

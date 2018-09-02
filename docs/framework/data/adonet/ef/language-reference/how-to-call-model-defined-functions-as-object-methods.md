@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 055b77697a525fd2d94192ff5b1586c885b22f94
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 290c2f58d0259d5a0df52711f63c48521891ae12
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763375"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407531"
 ---
 # <a name="how-to-call-model-defined-functions-as-object-methods"></a>Практическое руководство. Вызов определенных моделью функций как методов объектов
-В данном разделе описывается, как вызвать определяемую в модели функцию в качестве метода для объекта <xref:System.Data.Objects.ObjectContext> или в качестве статического метода для пользовательского класса. Объект *определяемой моделью функции* — это функция, которая определена в концептуальной модели. В данном разделе показываются процедуры вызова этих функций напрямую, а не с помощью запросов LINQ to Entities. Сведения о вызове определяемые моделью функции в запросах LINQ см. в разделе [как: Call Model-Defined функции в запросах](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
+В данном разделе описывается, как вызвать определяемую в модели функцию в качестве метода для объекта <xref:System.Data.Objects.ObjectContext> или в качестве статического метода для пользовательского класса. Объект *определяемой моделью функции* — это функция, которая определена в концептуальной модели. В данном разделе показываются процедуры вызова этих функций напрямую, а не с помощью запросов LINQ to Entities. Сведения о вызов определенных моделью функций в LINQ для запросов сущностей, см. в разделе [как: Call Model-Defined функций в запросах](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md).  
   
  Если определяемая в модели функция вызвается как метод <xref:System.Data.Objects.ObjectContext> или как статический метод для пользовательского класса, в первую очередь необходимо сопоставить метод с определямой в модели функцией с <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute>. Если метод определяется для класса <xref:System.Data.Objects.ObjectContext>, то следует использовать свойство <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> для предоставления поставщика LINQ, однако, если статический метод определяется для пользовательского класса, то следует использовать свойство <xref:System.Linq.IQueryable.Provider%2A> для предоставления поставщика LINQ. Дополнительные сведения см. в примерах, приведенных после указанных ниже процедур.  
   
- В следующих процедурах описываются высокоуровневые структуры для вызова определяемой в модели функции в качестве метода для объекта <xref:System.Data.Objects.ObjectContext> или в качестве статического метода для пользовательского класса. В следующих примерах подробно описаны шаги данной процедуры. Эта процедура предполагает, что функция была определена в концептуальной модели. Дополнительные сведения см. в разделе [как: определение пользовательских функций в концептуальной модели](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).  
+ В следующих процедурах описываются высокоуровневые структуры для вызова определяемой в модели функции в качестве метода для объекта <xref:System.Data.Objects.ObjectContext> или в качестве статического метода для пользовательского класса. В следующих примерах подробно описаны шаги данной процедуры. Эта процедура предполагает, что функция была определена в концептуальной модели. Дополнительные сведения см. в разделе [как: определения пользовательских функций в концептуальной модели](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).  
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>Вызов определяемой в модели функции в качестве метода объекта ObjectContext  
   
@@ -46,9 +46,9 @@ ms.locfileid: "32763375"
 ## <a name="example"></a>Пример  
  **Вызов определяемой моделью функции в качестве метода объекта ObjectContext**  
   
- В приведенном ниже примере показано, как вызвать определяемую в модели функцию в качестве метода для объекта <xref:System.Data.Objects.ObjectContext>. В этом примере [модели AdventureWorks Sales](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
+ В приведенном ниже примере показано, как вызвать определяемую в модели функцию в качестве метода для объекта <xref:System.Data.Objects.ObjectContext>. В примере используется [модели AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
   
- Рассмотрите описанную ниже функцию концептуальной модели, возвращающую доход от указанного продукта. (Сведения о добавлении функции к концептуальной модели см. в разделе [как: определение пользовательских функций в концептуальной модели](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).)  
+ Рассмотрите описанную ниже функцию концептуальной модели, возвращающую доход от указанного продукта. (Сведения о добавлении функции к концептуальной модели, см. в разделе [как: определения пользовательских функций в концептуальной модели](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).)  
   
  [!code-xml[DP L2E Methods on ObjectContext#4](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#4)]  
 
@@ -82,14 +82,14 @@ ms.locfileid: "32763375"
  [!code-vb[DP L2E Methods on ObjectContext#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#9)]  
   
 ## <a name="example"></a>Пример  
- **Вызов функции, определяемой моделью в качестве статического метода из пользовательского класса**  
+ **Вызов определяемой в модели функции в качестве статического метода из пользовательского класса**  
   
- В следующем примере показано, как вызвать определяемую в модели функцию в качестве статического метода из пользовательского класса. В этом примере [модели AdventureWorks Sales](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
+ В следующем примере показано, как вызвать определяемую в модели функцию в качестве статического метода из пользовательского класса. В примере используется [модели AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832).  
   
 > [!NOTE]
 >  Если определяемая в модели функция вызывается как статический метод для пользовательского класса, эта функция должна принять коллекцию и вернуть результат статистической обработки значений из коллекции.  
   
- Рассмотрите описанную ниже функцию концептуальной модели, возвращающую доход от коллекции SalesOrderDetail. (Сведения о добавлении функции к концептуальной модели см. в разделе [как: определение пользовательских функций в концептуальной модели](http://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).).  
+ Рассмотрите описанную ниже функцию концептуальной модели, возвращающую доход от коллекции SalesOrderDetail. (Сведения о добавлении функции к концептуальной модели, см. в разделе [как: определения пользовательских функций в концептуальной модели](https://msdn.microsoft.com/library/0dad7b8b-58f6-4271-b238-f34810d68e5f).).  
   
  [!code-xml[DP L2E Methods on ObjectContext#1](../../../../../../samples/snippets/xml/VS_Snippets_Data/dp l2e methods on objectcontext/xml/adventureworks.edmx#1)]
   
@@ -106,6 +106,6 @@ ms.locfileid: "32763375"
  [!code-vb[DP L2E Methods on ObjectContext#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#6)]  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о файлах .edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [Обзор файла .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [Запросы в LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
  [Вызов функций в запросах LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

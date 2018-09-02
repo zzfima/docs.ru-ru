@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], controls
 - Windows Forms controls, labels
 ms.assetid: 6eaf868c-819f-4131-8f59-048e20c286f7
-ms.openlocfilehash: 0b75a4f59cdba4ff732a92996086b77bc65cf46c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5504095814cdfc04699bf24b9b96191e94b22c3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535519"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43409024"
 ---
 # <a name="labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them"></a>Создание меток и назначение сочетаний клавиш для элементов управления Windows Forms
 Элементы управления, добавляемые в Windows Forms, обладают свойствами и методами, которые позволяют производить более тонкую настройку пользовательского интерфейса. Для хорошо спроектированного приложения Windows очень важна настройка пользовательского интерфейса, удовлетворяющая требованиям пользователя.  
@@ -34,4 +34,4 @@ ms.locfileid: "33535519"
  [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
  Ссылки на другие основные возможности работы с элементами управления.  
   
- См. также [как: Создание доступа ключи для Windows Forms элементов управления с помощью конструктора](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [как: задать текст отображается с помощью элемента управления Windows Forms Designer](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [как: определение изображения Отображаемый элементом управления с помощью конструктора Windows Forms](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).
+ Также см. в разделе [как: Создание доступа ключи для Windows Forms элементы управления с помощью конструктора](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md), [как: задайте текст отображается с помощью элемента управления Windows Forms Designer](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md), [как: определение изображения Отображается по Windows Forms с помощью конструктора элемента управления](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md).

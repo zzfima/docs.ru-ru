@@ -2,21 +2,21 @@
 title: Как программно добавить возможность обнаружения к службе и клиенту WCF
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 0685694db8f67ed690cf2a8002bf70a05695a192
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e32128a20a765762249e6892232447c56036c2d8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495487"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408263"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Как программно добавить возможность обнаружения к службе и клиенту WCF
-В этом разделе объясняется, как сделать обнаруживаемой службы Windows Communication Foundation (WCF). Он основан на [резидентной](http://go.microsoft.com/fwlink/?LinkId=145523) образца.  
+В этом разделе объясняется, как сделать обнаруживаемой службы Windows Communication Foundation (WCF). Он основан на [резидентного размещения](https://go.microsoft.com/fwlink/?LinkId=145523) образца.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Настройка образца службы существующего резидентного размещения для обнаружения  
   
 1.  Откройте решение резидентного размещения в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Образец находится в каталоге TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
-2.  Добавьте ссылку на проект службы `System.ServiceModel.Discovery.dll`. Может появиться сообщение об ошибке «System. ServiceModel.Discovery.dll или одна из его зависимостей требует более поздней версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] отличные от указанных в проект...» Если вы видите это сообщение, щелкните правой кнопкой мыши проект в обозревателе решений и выберите **свойства**. В **свойства проекта** окна, убедитесь, что **требуемой версии .NET Framework** — [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
+2.  Добавьте ссылку на проект службы `System.ServiceModel.Discovery.dll`. Может появиться сообщение об ошибке «System. ServiceModel.Discovery.dll или одна из его зависимостей требует более поздней версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] отличной от указанной в проекте...» Если вы видите это сообщение, щелкните правой кнопкой мыши проект в обозревателе решений и выберите **свойства**. В **свойства проекта** окна, убедитесь, что **требуемой версии .NET Framework** является [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 3.  Откройте файл Service.cs и добавьте следующую инструкцию `using`.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "33495487"
   
 2.  Добавьте ссылку на сборки `System.ServiceModel.dll` и `System.ServiceModel.Discovery.dll`.  
   
-3.  Скопируйте файлы GeneratedClient.cs и App.config из существующего проекта клиента в новый проект DiscoveryClientApp. Для этого щелкните правой кнопкой мыши файлы в **обозревателе решений**выберите **копирования**и выберите **DiscoveryClientApp** проекта, щелкните правой кнопкой мыши и выберите **Вставить**.  
+3.  Скопируйте файлы GeneratedClient.cs и App.config из существующего проекта клиента в новый проект DiscoveryClientApp. Для этого щелкните правой кнопкой мыши файлы в **обозревателе решений**выберите **копирования**, а затем выберите **DiscoveryClientApp** проекта, щелкните правой кнопкой мыши и выберите **Вставить**.  
   
 4.  Откройте файл Program.cs.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "33495487"
     }  
     ```  
   
-     Оно говорит WCF <xref:System.ServiceModel.Discovery.DiscoveryClient> класса следует использовать стандартную конечную точку обнаружения UDP для отправки и получения сообщений обнаружения.  
+     Оно говорит WCF <xref:System.ServiceModel.Discovery.DiscoveryClient> класс следует использовать стандартную конечную точку обнаружения UDP для отправки и получения сообщений обнаружения.  
   
 8.  В следующей строке вызовите метод <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> и укажите экземпляр <xref:System.ServiceModel.Discovery.FindCriteria>, содержащий контракт службы, который необходимо найти. В данном случае укажите `ICalculator`.  
   
@@ -124,7 +124,7 @@ ms.locfileid: "33495487"
   
      Этот метод использует для вызова службы калькулятора адрес конечной точки, возвращенной из `FindCalculatorServiceAddress`.  
   
-11. Внутри метода `InvokeCalculatorService` создайте экземпляр класса `CalculatorServiceClient`. Этот класс определяется [резидентной](http://go.microsoft.com/fwlink/?LinkId=145523) образца. Он был сформирован с помощью программы Svcutil.exe.  
+11. Внутри метода `InvokeCalculatorService` создайте экземпляр класса `CalculatorServiceClient`. Этот класс определяется [резидентного размещения](https://go.microsoft.com/fwlink/?LinkId=145523) образца. Он был сформирован с помощью программы Svcutil.exe.  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ ms.locfileid: "33495487"
     ```  
   
 ## <a name="example"></a>Пример  
- Ниже приведен полный листинг кода для данного образца. Поскольку этот код основан на [резидентной](http://go.microsoft.com/fwlink/?LinkId=145523) примера перечислены только те файлы, которые будут изменены. Дополнительные сведения об образце резидентной см. в разделе [инструкции по установке](http://go.microsoft.com/fwlink/?LinkId=145522).  
+ Ниже приведен полный листинг кода для данного образца. Поскольку этот код основан на [резидентного размещения](https://go.microsoft.com/fwlink/?LinkId=145523) образец, перечисляются только измененные файлы. Дополнительные сведения об образце резидентного размещения см. в разделе [инструкции по настройке](https://go.microsoft.com/fwlink/?LinkId=145522).  
   
 ```csharp  
 // Service.cs  
