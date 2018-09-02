@@ -5,31 +5,31 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - status bars
 ms.assetid: eb1e59da-0a48-4ce5-af7d-13b8e75af4b1
-ms.openlocfilehash: b3d7a1c68dbaa29c83bd066a8cb3ed2775672d98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 157db8b9fbbbb6e1c6af41b4cf3903f4a762d763
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534508"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43385730"
 ---
-# <a name="statusstrip-control"></a><span data-ttu-id="b0bd2-102">Элемент управления StatusStrip</span><span class="sxs-lookup"><span data-stu-id="b0bd2-102">StatusStrip Control</span></span>
-<span data-ttu-id="b0bd2-103">Элемент управления Windows Forms `StatusStrip` используется в формах в качестве области, обычно отображаемой в нижней части окна, в которой выводятся различные сведения о состоянии приложения.</span><span class="sxs-lookup"><span data-stu-id="b0bd2-103">The Windows Forms `StatusStrip` control is used on forms as an area, usually displayed at the bottom of a window, in which an application can display various kinds of status information.</span></span> <span data-ttu-id="b0bd2-104">Элементы управления `StatusStrip` обычно имеют встроенные элементы управления `ToolStripStatusLabel`, отображающие текст или значки, которые показывают состояние, или <xref:System.Windows.Forms.ToolStripProgressBar>, который  отображает состояние завершения процесса графически.</span><span class="sxs-lookup"><span data-stu-id="b0bd2-104">`StatusStrip` controls typically have `ToolStripStatusLabel` controls on them that display text or icons to indicate state, or a <xref:System.Windows.Forms.ToolStripProgressBar> that graphically displays the completion state of a process.</span></span>  
+# <a name="statusstrip-control"></a><span data-ttu-id="df079-102">Элемент управления StatusStrip</span><span class="sxs-lookup"><span data-stu-id="df079-102">StatusStrip Control</span></span>
+<span data-ttu-id="df079-103">Элемент управления Windows Forms `StatusStrip` используется в формах в качестве области, обычно отображаемой в нижней части окна, в которой выводятся различные сведения о состоянии приложения.</span><span class="sxs-lookup"><span data-stu-id="df079-103">The Windows Forms `StatusStrip` control is used on forms as an area, usually displayed at the bottom of a window, in which an application can display various kinds of status information.</span></span> <span data-ttu-id="df079-104">Элементы управления `StatusStrip` обычно имеют встроенные элементы управления `ToolStripStatusLabel`, отображающие текст или значки, которые показывают состояние, или <xref:System.Windows.Forms.ToolStripProgressBar>, который  отображает состояние завершения процесса графически.</span><span class="sxs-lookup"><span data-stu-id="df079-104">`StatusStrip` controls typically have `ToolStripStatusLabel` controls on them that display text or icons to indicate state, or a <xref:System.Windows.Forms.ToolStripProgressBar> that graphically displays the completion state of a process.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b0bd2-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="b0bd2-105">In This Section</span></span>  
- [<span data-ttu-id="b0bd2-106">Общие сведения об элементе управления StatusStrip</span><span class="sxs-lookup"><span data-stu-id="b0bd2-106">StatusStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusstrip-control-overview.md)  
- <span data-ttu-id="b0bd2-107">Описывается элемент управления, его основные возможности и свойства.</span><span class="sxs-lookup"><span data-stu-id="b0bd2-107">Explains what this control is and its key features and properties.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="df079-105">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="df079-105">In This Section</span></span>  
+ [<span data-ttu-id="df079-106">Общие сведения об элементе управления StatusStrip</span><span class="sxs-lookup"><span data-stu-id="df079-106">StatusStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/statusstrip-control-overview.md)  
+ <span data-ttu-id="df079-107">Описывается элемент управления, его основные возможности и свойства.</span><span class="sxs-lookup"><span data-stu-id="df079-107">Explains what this control is and its key features and properties.</span></span>  
   
- [<span data-ttu-id="b0bd2-108">Практическое руководство. Интерактивное использование свойства Spring в элементе управления StatusStrip</span><span class="sxs-lookup"><span data-stu-id="b0bd2-108">How to: Use the Spring Property Interactively in a StatusStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)  
- <span data-ttu-id="b0bd2-109">Демонстрирует использование свойства `Spring` для интерактивного центрирования `ToolStripStatusLabel` в `StatusStrip`.</span><span class="sxs-lookup"><span data-stu-id="b0bd2-109">Demonstrates using the `Spring` property to interactively center a `ToolStripStatusLabel` in a `StatusStrip`.</span></span>  
+ [<span data-ttu-id="df079-108">Практическое руководство. Интерактивное использование свойства Spring в элементе управления StatusStrip</span><span class="sxs-lookup"><span data-stu-id="df079-108">How to: Use the Spring Property Interactively in a StatusStrip</span></span>](../../../../docs/framework/winforms/controls/how-to-use-the-spring-property-interactively-in-a-statusstrip.md)  
+ <span data-ttu-id="df079-109">Демонстрирует использование свойства `Spring` для интерактивного центрирования `ToolStripStatusLabel` в `StatusStrip`.</span><span class="sxs-lookup"><span data-stu-id="df079-109">Demonstrates using the `Spring` property to interactively center a `ToolStripStatusLabel` in a `StatusStrip`.</span></span>  
   
- <span data-ttu-id="b0bd2-110">См. также [редактор коллекции элементов StatusStrip](http://msdn.microsoft.com/library/ms233631\(v=vs.110\)), [редактор коллекции элементов StatusStrip](http://msdn.microsoft.com/library/ms233642\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="b0bd2-110">Also see [StatusStrip Items Collection Editor](http://msdn.microsoft.com/library/ms233631\(v=vs.110\)), [StatusStrip Items Collection Editor](http://msdn.microsoft.com/library/ms233642\(v=vs.110\)).</span></span>  
+ <span data-ttu-id="df079-110">Также см. в разделе [редактор коллекции элементов StatusStrip](https://msdn.microsoft.com/library/ms233631\(v=vs.110\)), [редактор коллекции элементов StatusStrip](https://msdn.microsoft.com/library/ms233642\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="df079-110">Also see [StatusStrip Items Collection Editor](https://msdn.microsoft.com/library/ms233631\(v=vs.110\)), [StatusStrip Items Collection Editor](https://msdn.microsoft.com/library/ms233642\(v=vs.110\)).</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="b0bd2-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="b0bd2-111">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="df079-111">Ссылка</span><span class="sxs-lookup"><span data-stu-id="df079-111">Reference</span></span>  
  <xref:System.Windows.Forms.StatusStrip>  
- <span data-ttu-id="b0bd2-112">Справочная информация о классе и его членах.</span><span class="sxs-lookup"><span data-stu-id="b0bd2-112">Provides reference information on the class and its members.</span></span>  
+ <span data-ttu-id="df079-112">Справочная информация о классе и его членах.</span><span class="sxs-lookup"><span data-stu-id="df079-112">Provides reference information on the class and its members.</span></span>  
   
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- <span data-ttu-id="b0bd2-113">Справочная информация о классе и его членах.</span><span class="sxs-lookup"><span data-stu-id="b0bd2-113">Provides reference information on the class and its members.</span></span>  
+ <span data-ttu-id="df079-113">Справочная информация о классе и его членах.</span><span class="sxs-lookup"><span data-stu-id="df079-113">Provides reference information on the class and its members.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0bd2-114">См. также</span><span class="sxs-lookup"><span data-stu-id="b0bd2-114">See Also</span></span>  
- [<span data-ttu-id="b0bd2-115">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="b0bd2-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="df079-114">См. также</span><span class="sxs-lookup"><span data-stu-id="df079-114">See Also</span></span>  
+ [<span data-ttu-id="df079-115">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="df079-115">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
