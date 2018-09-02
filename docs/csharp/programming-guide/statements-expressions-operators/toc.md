@@ -13,7 +13,6 @@
 ### [Использование операторов преобразования](using-conversion-operators.md)
 ### [Практическое руководство. Реализация определенных пользователем преобразований между структурами](how-to-implement-user-defined-conversions-between-structs.md)
 ## [значение выражения по умолчанию](default-value-expressions.md)
-## [Практическое руководство. Перегрузка операторов для реализации класса комплексных чисел](how-to-use-operator-overloading-to-create-a-complex-number-class.md)
 ## [Сравнения на равенство](equality-comparisons.md)
 ### [Практическое руководство. Определение равенства значений для типа](how-to-define-value-equality-for-a-type.md)
 ### [Практическое руководство. Проверка на ссылочное равенство (идентичность)](how-to-test-for-reference-equality-identity.md)
