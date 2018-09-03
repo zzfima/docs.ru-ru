@@ -1,6 +1,6 @@
 ---
 title: Функция GetDemultiplexedStub (Справочник по неуправляемым API)
-description: Функция GetDemultiplexedStub создает приемника объектов сервера пересылки для клиента при получении асинхронные вызовы от управления Windows.
+description: Функция GetDemultiplexedStub создает приемник объект сервера пересылки для помощи в получении асинхронных вызовов из системы управления Windows клиента.
 ms.date: 11/06/2017
 api_name:
 - GetDemultiplexedStub
@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b195d3a512c537ca409bd2039add9e69abaf4df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4311a77c9159428bf7beacc99d4479acb28b91b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456366"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482360"
 ---
-# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="2c81d-103">Функция GetDemultiplexedStub</span><span class="sxs-lookup"><span data-stu-id="2c81d-103">GetDemultiplexedStub function</span></span>
-<span data-ttu-id="2c81d-104">Создает приемник объект сервера пересылки для клиента при получении асинхронные вызовы от управления Windows.</span><span class="sxs-lookup"><span data-stu-id="2c81d-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+# <a name="getdemultiplexedstub-function"></a><span data-ttu-id="fb8dc-103">Функция GetDemultiplexedStub</span><span class="sxs-lookup"><span data-stu-id="fb8dc-103">GetDemultiplexedStub function</span></span>
+<span data-ttu-id="fb8dc-104">Создает приемник объект сервера пересылки для помощи в получении асинхронных вызовов из системы управления Windows клиента.</span><span class="sxs-lookup"><span data-stu-id="fb8dc-104">Creates an object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="2c81d-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2c81d-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fb8dc-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fb8dc-105">Syntax</span></span>  
   
 ```  
 HRESULT GetDemultiplexedStub (
@@ -38,29 +38,29 @@ HRESULT GetDemultiplexedStub (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="2c81d-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="2c81d-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="fb8dc-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="fb8dc-106">Parameters</span></span>
 
 `pObject`  
-<span data-ttu-id="2c81d-107">[in] Указатель на реализацию клиента в процессе [IWbemObjectSink](https://msdn.microsoft.com/library/aa391787(v=vs.85).aspx).</span><span class="sxs-lookup"><span data-stu-id="2c81d-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](https://msdn.microsoft.com/library/aa391787(v=vs.85).aspx).</span></span>
+<span data-ttu-id="fb8dc-107">[in] Указатель на реализацию в процессе клиента [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span><span class="sxs-lookup"><span data-stu-id="fb8dc-107">[in] A pointer to the client's in-process implementation of [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).</span></span>
 
 `isLocal`  
-<span data-ttu-id="2c81d-108">[in] Флаг, который указывает, является ли событие локального (`true`); в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="2c81d-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
+<span data-ttu-id="fb8dc-108">[in] Флаг, указывающий, является ли событие локального (`true`); в противном случае `false`.</span><span class="sxs-lookup"><span data-stu-id="fb8dc-108">[in] A flag that indicates whether the event is local (`true`); otherwise, `false`.</span></span>
 
 `ppObject`  
-<span data-ttu-id="2c81d-109">[out] Объект сервера пересылки приемник для клиента при получении асинхронные вызовы от управления Windows.</span><span class="sxs-lookup"><span data-stu-id="2c81d-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
+<span data-ttu-id="fb8dc-109">[out] Сервер пересылки приемника объектов, для помощи в получении асинхронных вызовов из системы управления Windows клиента.</span><span class="sxs-lookup"><span data-stu-id="fb8dc-109">[out] A object forwarder sink to assist a client in receiving asynchronous calls from Windows Management.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="2c81d-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="2c81d-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="fb8dc-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="fb8dc-110">Return value</span></span>
 
-<span data-ttu-id="2c81d-111">Если функция выполняется успешно, возвращаемое значение равно `S_OK` (0).</span><span class="sxs-lookup"><span data-stu-id="2c81d-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
+<span data-ttu-id="fb8dc-111">Если функция выполняется успешно, возвращаемое значение равно `S_OK` (0).</span><span class="sxs-lookup"><span data-stu-id="fb8dc-111">If the function succeeds, the return value is `S_OK` (0).</span></span>
 
-<span data-ttu-id="2c81d-112">Если функция завершается с ошибкой, возвращается код ошибки ненулевое значение.</span><span class="sxs-lookup"><span data-stu-id="2c81d-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="2c81d-113">Чтобы получить расширенные сведения об ошибке, вызовите [GetErrorInfo](geterrorinfo.md) функции.</span><span class="sxs-lookup"><span data-stu-id="2c81d-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
+<span data-ttu-id="fb8dc-112">Если функция завершается с ошибкой, возвращается код ошибки.</span><span class="sxs-lookup"><span data-stu-id="fb8dc-112">If the function fails, the return value is a non-zero error code.</span></span> <span data-ttu-id="fb8dc-113">Чтобы получить расширенные сведения об ошибке, вызовите [GetErrorInfo](geterrorinfo.md) функции.</span><span class="sxs-lookup"><span data-stu-id="fb8dc-113">To get extended error information, call the [GetErrorInfo](geterrorinfo.md) function.</span></span>
     
-## <a name="requirements"></a><span data-ttu-id="2c81d-114">Требования</span><span class="sxs-lookup"><span data-stu-id="2c81d-114">Requirements</span></span>  
- <span data-ttu-id="2c81d-115">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2c81d-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fb8dc-114">Требования</span><span class="sxs-lookup"><span data-stu-id="fb8dc-114">Requirements</span></span>  
+ <span data-ttu-id="fb8dc-115">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fb8dc-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2c81d-116">**Заголовок:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="2c81d-116">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="fb8dc-116">**Заголовок:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="fb8dc-116">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="2c81d-117">**Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="2c81d-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="fb8dc-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="fb8dc-117">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2c81d-118">См. также</span><span class="sxs-lookup"><span data-stu-id="2c81d-118">See also</span></span>  
-[<span data-ttu-id="2c81d-119">WMI и счетчиков производительности (Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="2c81d-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="fb8dc-118">См. также</span><span class="sxs-lookup"><span data-stu-id="fb8dc-118">See also</span></span>  
+[<span data-ttu-id="fb8dc-119">WMI и счетчики производительности (Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="fb8dc-119">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
