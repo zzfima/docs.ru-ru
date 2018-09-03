@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a13912d006b522e86997fc7850befb996db4b7bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3de5b196d6ec35febe4ba30f7ac41bacacf884cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400254"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487436"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (программа установки служб .NET)
 Программа установки служб .NET выполняет следующие действия.  
@@ -67,7 +67,7 @@ ms.locfileid: "33400254"
 ## <a name="remarks"></a>Примечания  
  Программе Regsvcs.exe требуется исходный файл сборки, заданный библиотекой *assemblyFile.dll*. Эта сборка должна быть подписана с использованием строгого имени. Дополнительные сведения о подписи с использованием строгого имени см. в разделе [Подпись сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md). Имена конечного приложения и файла библиотеки типов не являются обязательными. Аргумент *applicationName* может быть создан из исходного файла сборки, и в случае его отсутствия он будет создан программой Regsvcs.exe. Аргумент *typelibraryfile* может задавать имя библиотеки типов. Если имя библиотеки типов не указано, программа Regsvcs.exe по умолчанию использует имя сборки.  
   
- Когда программа Regsvcs.exe регистрирует методы компонента, к ней применяются [требования](http://msdn.microsoft.com/library/e5283e28-2366-4519-b27d-ef5c1ddc1f48) и [требования ссылки](../../../docs/framework/misc/link-demands.md) для этих методов. Поскольку эта программа выполняется в полностью доверенной среде, большинство требований на получение разрешения удовлетворяется. Однако программа Regsvcs.exe не может регистрировать компоненты с помощью методов, защищенных требованием или требованием связи для <xref:System.Security.Permissions.StrongNameIdentityPermission> или <xref:System.Security.Permissions.PublisherIdentityPermission>.  
+ Когда программа Regsvcs.exe регистрирует методы компонента, к ней применяются [требования](https://msdn.microsoft.com/library/e5283e28-2366-4519-b27d-ef5c1ddc1f48) и [требования ссылки](../../../docs/framework/misc/link-demands.md) для этих методов. Поскольку эта программа выполняется в полностью доверенной среде, большинство требований на получение разрешения удовлетворяется. Однако программа Regsvcs.exe не может регистрировать компоненты с помощью методов, защищенных требованием или требованием связи для <xref:System.Security.Permissions.StrongNameIdentityPermission> или <xref:System.Security.Permissions.PublisherIdentityPermission>.  
   
  Для работы с программой Regsvcs.exe требуются права администратора на локальном компьютере.  
   

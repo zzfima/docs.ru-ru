@@ -2,17 +2,17 @@
 title: Общие сведения об осях LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: 0fe8766e3bcde17b59d78f0659043b8d4f017066
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 9b771e0157d1fcfbbb4643d24ccdbf096787f08b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961291"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486861"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>Общие сведения об осях LINQ to XML (C#)
 После создания XML-дерева или загрузки XML-документа в XML-дерево можно опросить его для поиска элементов и атрибутов и извлечения их значений. Коллекции получают с помощью *методов оси*, называемых также *осями*. Некоторые оси являются методами в классах <xref:System.Xml.Linq.XElement> и <xref:System.Xml.Linq.XDocument>, которые возвращают коллекции <xref:System.Collections.Generic.IEnumerable%601>. Некоторые оси являются методами расширений в классе <xref:System.Xml.Linq.Extensions>. Оси, которые реализованы как методы расширений, работают с коллекциями и возвращают коллекции.  
   
- Как описано в разделе [Общие сведения о классе XElement](http://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec), объект <xref:System.Xml.Linq.XElement> представляет собой узел с одним элементом. Содержимое элемента может быть сложным (иногда называется структурированным содержимым), или это может быть простой элемент. Простой элемент может быть пустым или содержать значение. Если узел содержит структурированное содержимое, можно использовать различные методы оси, чтобы получить перечисление элементов-потомков. Наиболее часто используемыми методами оси являются <xref:System.Xml.Linq.XContainer.Elements%2A> и <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
+ Как описано в разделе [Общие сведения о классе XElement](https://msdn.microsoft.com/library/d35180fe-7016-4895-9bfc-ba1e3f7875ec), объект <xref:System.Xml.Linq.XElement> представляет собой узел с одним элементом. Содержимое элемента может быть сложным (иногда называется структурированным содержимым), или это может быть простой элемент. Простой элемент может быть пустым или содержать значение. Если узел содержит структурированное содержимое, можно использовать различные методы оси, чтобы получить перечисление элементов-потомков. Наиболее часто используемыми методами оси являются <xref:System.Xml.Linq.XContainer.Elements%2A> и <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
   
  В дополнение к методам оси, которые возвращают коллекции, есть еще два метода, которые обычно используются в запросах [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Метод <xref:System.Xml.Linq.XContainer.Element%2A> возвращает одиночный <xref:System.Xml.Linq.XElement>. Метод <xref:System.Xml.Linq.XElement.Attribute%2A> возвращает одиночный <xref:System.Xml.Linq.XAttribute>.  
   

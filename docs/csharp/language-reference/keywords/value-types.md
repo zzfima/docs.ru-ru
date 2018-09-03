@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 17bbb0280c4db7d91e5d3cc3d3b6233b8db89cdc
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754973"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487069"
 ---
 # <a name="value-types-c-reference"></a>Типы значений (Справочник по C#)
 Типы значений относятся к двум основным категориям:  
@@ -97,11 +97,12 @@ Point p = new Point(); // Invoke default constructor for the struct.
   
  Дополнительные сведения о форматировании выходных данных числовых типов см. в разделе [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Типы](../../../csharp/language-reference/keywords/types.md)  
- [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)  
- [Типы, допускающие значения NULL](../../programming-guide/nullable-types/index.md)  
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Типы](../../../csharp/language-reference/keywords/types.md)  
+- [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)  
+- [Типы, допускающие значения NULL](../../programming-guide/nullable-types/index.md)  
