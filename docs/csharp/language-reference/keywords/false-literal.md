@@ -4,28 +4,28 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - false literal keyword [C#]
 ms.assetid: fcc1c1a5-0e42-4226-a128-81492a9bf719
-ms.openlocfilehash: 07b123176ec860addb3fcf9e9f7b7207f91b92a9
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f0743ead2836a4570d1b2dc0fc4cf20d2343a9a1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42907648"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408538"
 ---
-# <a name="false-literal-c-reference"></a><span data-ttu-id="e240a-102">Литерал false (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="e240a-102">false literal (C# Reference)</span></span>
+# <a name="false-literal-c-reference"></a><span data-ttu-id="25598-102">Литерал false (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="25598-102">false literal (C# Reference)</span></span>
 
-<span data-ttu-id="e240a-103">Представляет логическое значение "ложь".</span><span class="sxs-lookup"><span data-stu-id="e240a-103">Represents the boolean value false.</span></span>
+<span data-ttu-id="25598-103">Представляет логическое значение "ложь".</span><span class="sxs-lookup"><span data-stu-id="25598-103">Represents the boolean value false.</span></span>
 
-## <a name="example"></a><span data-ttu-id="e240a-104">Пример</span><span class="sxs-lookup"><span data-stu-id="e240a-104">Example</span></span>
+## <a name="example"></a><span data-ttu-id="25598-104">Пример</span><span class="sxs-lookup"><span data-stu-id="25598-104">Example</span></span>
 
 [!code-csharp[csrefKeywordsOperator#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsOperator/CS/csrefKeywordsOperators.cs#3)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="e240a-105">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="e240a-105">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="25598-105">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="25598-105">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="e240a-106">См. также</span><span class="sxs-lookup"><span data-stu-id="e240a-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="25598-106">См. также</span><span class="sxs-lookup"><span data-stu-id="25598-106">See also</span></span>
 
-[<span data-ttu-id="e240a-107">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="e240a-107">C# Reference</span></span>](../index.md)  
-[<span data-ttu-id="e240a-108">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="e240a-108">C# Programming Guide</span></span>](../../programming-guide/index.md)  
-[<span data-ttu-id="e240a-109">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="e240a-109">C# Keywords</span></span>](index.md)  
-[<span data-ttu-id="e240a-110">true</span><span class="sxs-lookup"><span data-stu-id="e240a-110">true</span></span>](true.md)  
+- [<span data-ttu-id="25598-107">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="25598-107">C# Reference</span></span>](../index.md)  
+- [<span data-ttu-id="25598-108">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="25598-108">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+- [<span data-ttu-id="25598-109">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="25598-109">C# Keywords</span></span>](index.md)  
+- [<span data-ttu-id="25598-110">true</span><span class="sxs-lookup"><span data-stu-id="25598-110">true</span></span>](true.md)  

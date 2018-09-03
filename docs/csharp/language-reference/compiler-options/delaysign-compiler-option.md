@@ -8,50 +8,50 @@ helpviewer_keywords:
 - delaysign compiler option [C#]
 - /delaysign compiler option [C#]
 ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
-ms.openlocfilehash: 72dcba3b506dae42f67f0421ba92efee18274c37
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 105f564d40799c1c006caf8b59d6199dbd8e9318
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472650"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400200"
 ---
-# <a name="-delaysign-c-compiler-options"></a><span data-ttu-id="571b6-102">-delaysign (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="571b6-102">-delaysign (C# Compiler Options)</span></span>
+# <a name="-delaysign-c-compiler-options"></a><span data-ttu-id="04597-102">-delaysign (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="04597-102">-delaysign (C# Compiler Options)</span></span>
 
-<span data-ttu-id="571b6-103">Этот параметр указывает компилятору зарезервировать пространство в выходном файле, чтобы впоследствии добавить в него цифровую подпись.</span><span class="sxs-lookup"><span data-stu-id="571b6-103">This option causes the compiler to reserve space in the output file so that a digital signature can be added later.</span></span>
+<span data-ttu-id="04597-103">Этот параметр указывает компилятору зарезервировать пространство в выходном файле, чтобы впоследствии добавить в него цифровую подпись.</span><span class="sxs-lookup"><span data-stu-id="04597-103">This option causes the compiler to reserve space in the output file so that a digital signature can be added later.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="571b6-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="571b6-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="04597-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="04597-104">Syntax</span></span>
 
 ```console
 -delaysign[ + | - ]
 ```
 
-## <a name="arguments"></a><span data-ttu-id="571b6-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="571b6-105">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="04597-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="04597-105">Arguments</span></span>
 
-<span data-ttu-id="571b6-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="571b6-106">`+` &#124; `-`</span></span>
+<span data-ttu-id="04597-106">`+` &#124; `-`</span><span class="sxs-lookup"><span data-stu-id="04597-106">`+` &#124; `-`</span></span>
 
-<span data-ttu-id="571b6-107">Если требуется полностью подписанная сборка, используйте параметр **-delaysign-**.</span><span class="sxs-lookup"><span data-stu-id="571b6-107">Use **-delaysign-** if you want a fully signed assembly.</span></span> <span data-ttu-id="571b6-108">Если нужно лишь поместить в сборку открытый ключ, используйте параметр **-delaysign+**.</span><span class="sxs-lookup"><span data-stu-id="571b6-108">Use **-delaysign+** if you only want to place the public key in the assembly.</span></span> <span data-ttu-id="571b6-109">Значение по умолчанию — **-delaysign-**.</span><span class="sxs-lookup"><span data-stu-id="571b6-109">The default is **-delaysign-**.</span></span>
+<span data-ttu-id="04597-107">Если требуется полностью подписанная сборка, используйте параметр **-delaysign-**.</span><span class="sxs-lookup"><span data-stu-id="04597-107">Use **-delaysign-** if you want a fully signed assembly.</span></span> <span data-ttu-id="04597-108">Если нужно лишь поместить в сборку открытый ключ, используйте параметр **-delaysign+**.</span><span class="sxs-lookup"><span data-stu-id="04597-108">Use **-delaysign+** if you only want to place the public key in the assembly.</span></span> <span data-ttu-id="04597-109">Значение по умолчанию — **-delaysign-**.</span><span class="sxs-lookup"><span data-stu-id="04597-109">The default is **-delaysign-**.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="571b6-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="571b6-110">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="04597-110">Примечания</span><span class="sxs-lookup"><span data-stu-id="04597-110">Remarks</span></span>
 
-<span data-ttu-id="571b6-111">Параметр **-delaysign** никак не действует, если не использовать его с [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) или [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="571b6-111">The **-delaysign** option has no effect unless used with [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) or [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).</span></span>
+<span data-ttu-id="04597-111">Параметр **-delaysign** никак не действует, если не использовать его с [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) или [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="04597-111">The **-delaysign** option has no effect unless used with [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) or [-keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).</span></span>
 
-<span data-ttu-id="571b6-112">Параметры **-delaysign** и **-publicsign** — взаимоисключающие.</span><span class="sxs-lookup"><span data-stu-id="571b6-112">The **-delaysign** and **-publicsign** options are mutually exclusive.</span></span>
+<span data-ttu-id="04597-112">Параметры **-delaysign** и **-publicsign** — взаимоисключающие.</span><span class="sxs-lookup"><span data-stu-id="04597-112">The **-delaysign** and **-publicsign** options are mutually exclusive.</span></span>
 
-<span data-ttu-id="571b6-113">При запросе полностью подписанной сборки компилятор хэширует файл, содержащий манифест (метаданные сборки), и подписывает хэш закрытым ключом.</span><span class="sxs-lookup"><span data-stu-id="571b6-113">When you request a fully signed assembly, the compiler hashes the file that contains the manifest (assembly metadata) and signs that hash with the private key.</span></span> <span data-ttu-id="571b6-114">Эта операция предназначена для создания итоговой цифровой подписи, которая хранится в файле, содержащем манифест.</span><span class="sxs-lookup"><span data-stu-id="571b6-114">That operation creates a digital signature which is stored in the file that contains the manifest.</span></span> <span data-ttu-id="571b6-115">При использовании отложенной подписи компилятор не вычисляет и не сохраняет подпись, а резервирует место в файле для добавления подписи в сборку в будущем.</span><span class="sxs-lookup"><span data-stu-id="571b6-115">When an assembly is delay signed, the compiler does not compute and store the signature, but reserves space in the file so the signature can be added later.</span></span>
+<span data-ttu-id="04597-113">При запросе полностью подписанной сборки компилятор хэширует файл, содержащий манифест (метаданные сборки), и подписывает хэш закрытым ключом.</span><span class="sxs-lookup"><span data-stu-id="04597-113">When you request a fully signed assembly, the compiler hashes the file that contains the manifest (assembly metadata) and signs that hash with the private key.</span></span> <span data-ttu-id="04597-114">Эта операция предназначена для создания итоговой цифровой подписи, которая хранится в файле, содержащем манифест.</span><span class="sxs-lookup"><span data-stu-id="04597-114">That operation creates a digital signature which is stored in the file that contains the manifest.</span></span> <span data-ttu-id="04597-115">При использовании отложенной подписи компилятор не вычисляет и не сохраняет подпись, а резервирует место в файле для добавления подписи в сборку в будущем.</span><span class="sxs-lookup"><span data-stu-id="04597-115">When an assembly is delay signed, the compiler does not compute and store the signature, but reserves space in the file so the signature can be added later.</span></span>
 
-<span data-ttu-id="571b6-116">Например, чтобы поместить сборку в глобальный кэш для тестирования, используйте параметр **-delaysign+**.</span><span class="sxs-lookup"><span data-stu-id="571b6-116">For example, using **-delaysign+** allows a tester to put the assembly in the global cache.</span></span> <span data-ttu-id="571b6-117">После тестирования можно полностью подписать сборку, поместив в нее закрытый ключ с помощью [компоновщика сборок](../../../framework/tools/al-exe-assembly-linker.md).</span><span class="sxs-lookup"><span data-stu-id="571b6-117">After testing, you can fully sign the assembly by placing the private key in the assembly using the [Assembly Linker](../../../framework/tools/al-exe-assembly-linker.md) utility.</span></span>
+<span data-ttu-id="04597-116">Например, чтобы поместить сборку в глобальный кэш для тестирования, используйте параметр **-delaysign+**.</span><span class="sxs-lookup"><span data-stu-id="04597-116">For example, using **-delaysign+** allows a tester to put the assembly in the global cache.</span></span> <span data-ttu-id="04597-117">После тестирования можно полностью подписать сборку, поместив в нее закрытый ключ с помощью [компоновщика сборок](../../../framework/tools/al-exe-assembly-linker.md).</span><span class="sxs-lookup"><span data-stu-id="04597-117">After testing, you can fully sign the assembly by placing the private key in the assembly using the [Assembly Linker](../../../framework/tools/al-exe-assembly-linker.md) utility.</span></span>
 
-<span data-ttu-id="571b6-118">Дополнительные сведения см. в разделах [Создание и использование сборок со строгими именами](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) и [Отложенная подпись сборки](../../../framework/app-domains/delay-sign-assembly.md).</span><span class="sxs-lookup"><span data-stu-id="571b6-118">For more information, see [Creating and Using Strong-Named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) and [Delay Signing an Assembly](../../../framework/app-domains/delay-sign-assembly.md).</span></span>
+<span data-ttu-id="04597-118">Дополнительные сведения см. в разделах [Создание и использование сборок со строгими именами](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) и [Отложенная подпись сборки](../../../framework/app-domains/delay-sign-assembly.md).</span><span class="sxs-lookup"><span data-stu-id="04597-118">For more information, see [Creating and Using Strong-Named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) and [Delay Signing an Assembly](../../../framework/app-domains/delay-sign-assembly.md).</span></span>
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="571b6-119">Установка данного параметра компилятора в среде разработки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="571b6-119">To set this compiler option in the Visual Studio development environment</span></span>
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="04597-119">Установка данного параметра компилятора в среде разработки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="04597-119">To set this compiler option in the Visual Studio development environment</span></span>
 
-1. <span data-ttu-id="571b6-120">Откройте страницу **свойств** для проекта.</span><span class="sxs-lookup"><span data-stu-id="571b6-120">Open the **Properties** page for the project.</span></span>
-1. <span data-ttu-id="571b6-121">Измените свойство **Только отложенная подпись**.</span><span class="sxs-lookup"><span data-stu-id="571b6-121">Modify the **Delay sign only** property.</span></span>
+1. <span data-ttu-id="04597-120">Откройте страницу **свойств** для проекта.</span><span class="sxs-lookup"><span data-stu-id="04597-120">Open the **Properties** page for the project.</span></span>
+1. <span data-ttu-id="04597-121">Измените свойство **Только отложенная подпись**.</span><span class="sxs-lookup"><span data-stu-id="04597-121">Modify the **Delay sign only** property.</span></span>
 
-<span data-ttu-id="571b6-122">Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span><span class="sxs-lookup"><span data-stu-id="571b6-122">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span></span>
+<span data-ttu-id="04597-122">Сведения об установке этого параметра компилятора программными средствами см. в разделе <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span><span class="sxs-lookup"><span data-stu-id="04597-122">For information on how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="571b6-123">См. также</span><span class="sxs-lookup"><span data-stu-id="571b6-123">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="04597-123">См. также</span><span class="sxs-lookup"><span data-stu-id="04597-123">See Also</span></span>
 
- [<span data-ttu-id="571b6-124">Параметр -publicsign в C#</span><span class="sxs-lookup"><span data-stu-id="571b6-124">C# -publicsign option</span></span>](publicsign-compiler-option.md)  
- [<span data-ttu-id="571b6-125">Параметры компилятора C# </span><span class="sxs-lookup"><span data-stu-id="571b6-125">C# Compiler Options</span></span>](index.md)  
- [<span data-ttu-id="571b6-126">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="571b6-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="04597-124">Параметр -publicsign в C#</span><span class="sxs-lookup"><span data-stu-id="04597-124">C# -publicsign option</span></span>](publicsign-compiler-option.md)  
+- [<span data-ttu-id="04597-125">Параметры компилятора C# </span><span class="sxs-lookup"><span data-stu-id="04597-125">C# Compiler Options</span></span>](index.md)  
+- [<span data-ttu-id="04597-126">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="04597-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

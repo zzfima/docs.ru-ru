@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
-ms.openlocfilehash: 143acc0d6e1989232f80ee74bf748d6c600b9741
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b55827b60a89da2569fad9da135c84571a24b094
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207977"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390972"
 ---
-# <a name="add-c-reference"></a><span data-ttu-id="8911f-102">add (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="8911f-102">add (C# Reference)</span></span>
-<span data-ttu-id="8911f-103">Контекстное ключевое слово `add` определяет метод доступа настраиваемого события, который вызывается, когда клиентский код подписывается на [событие](../../../csharp/language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="8911f-103">The `add` contextual keyword is used to define a custom event accessor that is invoked when client code subscribes to your [event](../../../csharp/language-reference/keywords/event.md).</span></span> <span data-ttu-id="8911f-104">Если указан настраиваемый метод доступа `add`, также необходимо указать метод доступа [remove](../../../csharp/language-reference/keywords/remove.md).</span><span class="sxs-lookup"><span data-stu-id="8911f-104">If you supply a custom `add` accessor, you must also supply a [remove](../../../csharp/language-reference/keywords/remove.md) accessor.</span></span>  
+# <a name="add-c-reference"></a><span data-ttu-id="ca4f1-102">add (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="ca4f1-102">add (C# Reference)</span></span>
+<span data-ttu-id="ca4f1-103">Контекстное ключевое слово `add` определяет метод доступа настраиваемого события, который вызывается, когда клиентский код подписывается на [событие](../../../csharp/language-reference/keywords/event.md).</span><span class="sxs-lookup"><span data-stu-id="ca4f1-103">The `add` contextual keyword is used to define a custom event accessor that is invoked when client code subscribes to your [event](../../../csharp/language-reference/keywords/event.md).</span></span> <span data-ttu-id="ca4f1-104">Если указан настраиваемый метод доступа `add`, также необходимо указать метод доступа [remove](../../../csharp/language-reference/keywords/remove.md).</span><span class="sxs-lookup"><span data-stu-id="ca4f1-104">If you supply a custom `add` accessor, you must also supply a [remove](../../../csharp/language-reference/keywords/remove.md) accessor.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="8911f-105">Пример</span><span class="sxs-lookup"><span data-stu-id="8911f-105">Example</span></span>  
- <span data-ttu-id="8911f-106">В следующем примере показано событие с настраиваемыми методами доступа `add` и [remove](../../../csharp/language-reference/keywords/remove.md).</span><span class="sxs-lookup"><span data-stu-id="8911f-106">The following example shows an event that has custom `add` and [remove](../../../csharp/language-reference/keywords/remove.md) accessors.</span></span> <span data-ttu-id="8911f-107">Полный пример см. в разделе [Практическое руководство. Реализация событий интерфейса](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span><span class="sxs-lookup"><span data-stu-id="8911f-107">For the full example, see [How to:  Implement Interface Events](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="ca4f1-105">Пример</span><span class="sxs-lookup"><span data-stu-id="ca4f1-105">Example</span></span>  
+ <span data-ttu-id="ca4f1-106">В следующем примере показано событие с настраиваемыми методами доступа `add` и [remove](../../../csharp/language-reference/keywords/remove.md).</span><span class="sxs-lookup"><span data-stu-id="ca4f1-106">The following example shows an event that has custom `add` and [remove](../../../csharp/language-reference/keywords/remove.md) accessors.</span></span> <span data-ttu-id="ca4f1-107">Полный пример см. в разделе [Практическое руководство. Реализация событий интерфейса](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span><span class="sxs-lookup"><span data-stu-id="ca4f1-107">For the full example, see [How to:  Implement Interface Events](../../../csharp/programming-guide/events/how-to-implement-interface-events.md).</span></span>  
   
 [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
   
- <span data-ttu-id="8911f-108">Как правило, настраиваемые методы доступа к событиям не используются.</span><span class="sxs-lookup"><span data-stu-id="8911f-108">You do not typically need to provide your own custom event accessors.</span></span> <span data-ttu-id="8911f-109">В большинстве сценариев достаточно методов доступа, которые автоматически создаются компилятором при объявлении события.</span><span class="sxs-lookup"><span data-stu-id="8911f-109">The accessors that are automatically generated by the compiler when you declare an event are sufficient for most scenarios.</span></span>  
+ <span data-ttu-id="ca4f1-108">Как правило, настраиваемые методы доступа к событиям не используются.</span><span class="sxs-lookup"><span data-stu-id="ca4f1-108">You do not typically need to provide your own custom event accessors.</span></span> <span data-ttu-id="ca4f1-109">В большинстве сценариев достаточно методов доступа, которые автоматически создаются компилятором при объявлении события.</span><span class="sxs-lookup"><span data-stu-id="ca4f1-109">The accessors that are automatically generated by the compiler when you declare an event are sufficient for most scenarios.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8911f-110">См. также</span><span class="sxs-lookup"><span data-stu-id="8911f-110">See Also</span></span>  
- [<span data-ttu-id="8911f-111">События</span><span class="sxs-lookup"><span data-stu-id="8911f-111">Events</span></span>](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="ca4f1-110">См. также</span><span class="sxs-lookup"><span data-stu-id="ca4f1-110">See Also</span></span>  
+- [<span data-ttu-id="ca4f1-111">События</span><span class="sxs-lookup"><span data-stu-id="ca4f1-111">Events</span></span>](../../../csharp/programming-guide/events/index.md)
