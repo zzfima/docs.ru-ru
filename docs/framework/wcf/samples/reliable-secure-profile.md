@@ -4,22 +4,22 @@ ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 65523fcc1d08bd48a432e6cf599dfcb73ade8747
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: dfdafbcdc461c80192e310a86d5bff50f0885283
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805750"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486913"
 ---
 # <a name="reliable-secure-profile"></a>Надежный защищенный профиль
-В этом примере показано, как составлять WCF и [надежному защищенному профилю](http://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Этот образец демонстрирует реализацию [Создание подключения](http://go.microsoft.com/fwlink/?LinkId=178141) канала, который может формироваться вместе с надежного обмена сообщениями и при необходимости безопасного канала для создания надежных защищенную привязку на основе RSP спецификации.  
+В этом примере показано использование WCF и [надежным защищенным профилем](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Этот образец демонстрирует реализацию [Make Connection](https://go.microsoft.com/fwlink/?LinkId=178141) защищенным каналом позволяет создать надежную защищенную привязку канала, который может быть задан, надежный обмен сообщениями и при необходимости, основанный на спецификации RSP.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ReliableSecureProfile`  
   
@@ -30,9 +30,9 @@ ms.locfileid: "33805750"
   
 1.  Откройте **ReliableSecureProfile** решения.  
   
-2.  Щелкните правой кнопкой мыши **службы** проекта в **обозревателе решений**выберите **отладки**, **запустить новый экземпляр** в контекстном меню. Запустится узел службы.  
+2.  Щелкните правой кнопкой мыши **службы** в проекте **обозревателе решений**выберите **Отладка**, **запустить новый экземпляр** в контекстном меню. Запустится узел службы.  
   
-3.  Щелкните правой кнопкой мыши **клиента** проекта в **обозревателе решений**выберите **отладки**, **запустить новый экземпляр** в контекстном меню. Запустится клиент.  
+3.  Щелкните правой кнопкой мыши **клиента** в проекте **обозревателе решений**выберите **Отладка**, **запустить новый экземпляр** в контекстном меню. Запустится клиент.  
   
 4.  Введите в окне консоли клиента любую строку и нажмите клавишу ВВОД. Введенная строка отправится в службу, которая вычислит для нее хэш.  
   

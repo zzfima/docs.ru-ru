@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errors [Windows Forms Designer]
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
-ms.openlocfilehash: 00296b51563a5f973b8e5d64c55867568ff0324e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec1801a1b695867a7edcd99394feebe1d0f6853a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527791"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480939"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Ошибки во время разработки в конструкторе Windows Forms Designer
 В этом разделе разъясняются значения и использование списка ошибок во время разработки, отображаемого в Microsoft Visual Studio при невозможности загрузить конструктор Windows Forms. При появления такого списка его надо использовать для исправлении ошибок в коде, а не воспринимать как ошибку в конструкторе.  
@@ -45,15 +45,15 @@ ms.locfileid: "33527791"
 ### <a name="forum-posts-about-this-error"></a>Сообщения об этой ошибке в форуме  
  Дополнительная справка будет содержать ссылку на сообщения в форуме MSDN, связанные с данной ошибкой. Поиск по форумам выполняется на основе строки сообщения об ошибке. Поиск можно также выполнять в следующих форумах:  
   
--   [Форум по конструктору Windows Forms](http://go.microsoft.com/fwlink/?LinkId=203524)  
+-   [Форум по конструктору Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Форумы по Windows Forms](http://go.microsoft.com/fwlink/?LinkId=203523)  
+-   [Форумы по Windows Forms](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>Игнорировать и продолжить  
  Условие ошибки можно проигнорировать и продолжить загрузку конструктора. Такое решение может привести к непредвиденному поведению. Например, на поверхности разработки могут отсутствовать элементы управления.  
   
 ## <a name="see-also"></a>См. также  
- [Устранение неполадок при разработке во время разработки](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
+ [Устранение неполадок при разработке во время разработки](https://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
  [Разрешение вопросов, связанных с созданием элементов управления и компонентов](../../../../docs/framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  
  [Создание элементов управления Windows Forms во время разработки](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Сообщения об ошибках конструктора Windows Forms](http://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)
+ [Сообщения об ошибках конструктора Windows Forms](https://msdn.microsoft.com/library/cf610bf4-5fe4-471c-bce7-6a05ece07bd2)

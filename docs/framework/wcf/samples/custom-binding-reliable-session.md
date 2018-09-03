@@ -2,12 +2,12 @@
 title: Надежный сеанс с использованием пользовательской привязки
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: 3ccf0c603c4710c3cdac1e0dd68a4a6a2e04c2d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55ffdd741bf26c1a906c7b09dfa05839b25f1645
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500767"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483085"
 ---
 # <a name="custom-binding-reliable-session"></a>Надежный сеанс с использованием пользовательской привязки
 Пользовательская привязка определяется упорядоченным списком отдельных элементов привязки. В этом примере показано, как настроить пользовательскую привязку с различными элементами транспорта и кодирования сообщений, уделяя особое внимание реализации надежных сеансов.  
@@ -17,17 +17,17 @@ ms.locfileid: "33500767"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Custom\ReliableSession`  
   
 ## <a name="sample-details"></a>Подробные сведения об образце  
- Надежные сеансы обеспечивают функции для надежного обмена сообщениями и сеансов. При надежном обмене сообщениями в случае сбоя предпринимается повторная попытка передачи, и можно задать такие гарантии доставки, как соблюдение порядка получения сообщений. Сеансы поддерживают состояние для клиентов между вызовами. Пример реализует сеансы для поддержки состояния клиента и задает гарантии соблюдения очередности доставки сообщений. Пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора. Возможности надежного сеанса включаются и настраиваются в файлах конфигурации приложения для клиента и службы.  
+ Надежные сеансы обеспечивают функции для надежного обмена сообщениями и сеансов. При надежном обмене сообщениями в случае сбоя предпринимается повторная попытка передачи, и можно задать такие гарантии доставки, как соблюдение порядка получения сообщений. Сеансы поддерживают состояние для клиентов между вызовами. Пример реализует сеансы для поддержки состояния клиента и задает гарантии соблюдения очередности доставки сообщений. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора. Возможности надежного сеанса включаются и настраиваются в файлах конфигурации приложения для клиента и службы.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
- Порядок элементов привязки, важен при определении пользовательскую привязку, так как каждый из них представляет уровень в стеке каналов (в разделе [пользовательских привязок](../../../../docs/framework/wcf/extending/custom-bindings.md)).  
+ Порядок элементов привязки имеет большое значение при определении пользовательской привязки, так как каждый элемент представляет уровень в стеке каналов (см. в разделе [пользовательских привязок](../../../../docs/framework/wcf/extending/custom-bindings.md)).  
   
  Конфигурация службы для образца определена, как показано в образце.  
   
@@ -111,10 +111,10 @@ Press <ENTER> to terminate client.
   
 3.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
     > [!IMPORTANT]
-    >  При запуске клиента в конфигурации между компьютерами, не забудьте заменить «localhost» в обоих `address` атрибут [ \<endpoint >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) элемент и `clientBaseAddress` атрибут [ \<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) с именем соответствующего компьютера, как показано в следующем примере.  
+    >  Если пример выполняется на нескольких компьютерах, не забудьте заменить «localhost» в `address` атрибут [ \<конечной точки >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md) элемент и `clientBaseAddress` атрибут [ \<compositeDuplex >](../../../../docs/framework/configure-apps/file-schema/wcf/compositeduplex.md) с именем соответствующего компьютера, как показано в следующем примере.  
   
     ```xml  
     <endpoint name = ""  

@@ -1,6 +1,6 @@
 ---
 title: Функция GetDemultiplexedStub (Справочник по неуправляемым API)
-description: Функция GetDemultiplexedStub создает приемника объектов сервера пересылки для клиента при получении асинхронные вызовы от управления Windows.
+description: Функция GetDemultiplexedStub создает приемник объект сервера пересылки для помощи в получении асинхронных вызовов из системы управления Windows клиента.
 ms.date: 11/06/2017
 api_name:
 - GetDemultiplexedStub
@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b195d3a512c537ca409bd2039add9e69abaf4df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4311a77c9159428bf7beacc99d4479acb28b91b6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456366"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482360"
 ---
 # <a name="getdemultiplexedstub-function"></a>Функция GetDemultiplexedStub
-Создает приемник объект сервера пересылки для клиента при получении асинхронные вызовы от управления Windows.
+Создает приемник объект сервера пересылки для помощи в получении асинхронных вызовов из системы управления Windows клиента.
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -41,26 +41,26 @@ HRESULT GetDemultiplexedStub (
 ## <a name="parameters"></a>Параметры
 
 `pObject`  
-[in] Указатель на реализацию клиента в процессе [IWbemObjectSink](https://msdn.microsoft.com/library/aa391787(v=vs.85).aspx).
+[in] Указатель на реализацию в процессе клиента [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink).
 
 `isLocal`  
-[in] Флаг, который указывает, является ли событие локального (`true`); в противном случае `false`.
+[in] Флаг, указывающий, является ли событие локального (`true`); в противном случае `false`.
 
 `ppObject`  
-[out] Объект сервера пересылки приемник для клиента при получении асинхронные вызовы от управления Windows.
+[out] Сервер пересылки приемника объектов, для помощи в получении асинхронных вызовов из системы управления Windows клиента.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Если функция выполняется успешно, возвращаемое значение равно `S_OK` (0).
 
-Если функция завершается с ошибкой, возвращается код ошибки ненулевое значение. Чтобы получить расширенные сведения об ошибке, вызовите [GetErrorInfo](geterrorinfo.md) функции.
+Если функция завершается с ошибкой, возвращается код ошибки. Чтобы получить расширенные сведения об ошибке, вызовите [GetErrorInfo](geterrorinfo.md) функции.
     
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** WMINet_Utils.idl  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
-[WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)
+[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

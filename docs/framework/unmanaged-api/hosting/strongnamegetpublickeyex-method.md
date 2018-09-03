@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03e3ff2adc238640034309e0f9eab6e786472631
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 82dbacdcf89a44455bb4963e73dc5e91bda1cbc7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446097"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482454"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>Метод StrongNameGetPublicKeyEx
-Возвращает открытый ключ из пары открытого и закрытого ключей и указывает хэш-алгоритм и алгоритм подписи.  
+Получает открытый ключ из пары открытого и закрытого ключей и определяет хэш-алгоритма и алгоритм подписи.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -43,35 +43,35 @@ HRESULT StrongNameGetPublicKey (
   
 #### <a name="parameters"></a>Параметры  
  `pwzKeyContainer`  
- [in] Имя контейнера ключа, который содержит пару открытого и закрытого ключей. Если `pbKeyBlob` имеет значение null, `szKeyContainer` необходимо указать допустимый контейнер в поставщике служб шифрования (CSP). В этом случае `StrongNameGetPublicKeyEx` метод извлекает открытый ключ из пары ключей, хранящихся в контейнере.  
+ [in] Имя контейнера ключа, который содержит пару открытого и закрытого ключей. Если `pbKeyBlob` имеет значение null, `szKeyContainer` необходимо указать допустимый контейнер в поставщик служб шифрования (CSP). В этом случае `StrongNameGetPublicKeyEx` метод извлекает открытый ключ из пары ключей, хранящихся в контейнере.  
   
- Если `pbKeyBlob` не равно null, предполагается пары ключей должен содержаться в ключевых большой двоичный объект (BLOB).  
+ Если `pbKeyBlob` не равно null, предполагается, что пары ключей должен содержаться в ключевых большой двоичный объект (BLOB).  
   
- Ключи должны быть 1024-разрядный Rivest шифрования RSA--Adleman () ключей подписывания. Другие типы ключей не поддерживаются в данный момент.  
+ Ключи должны быть Rivest-Шамир-Adleman 1024-разрядный (RSA) ключи подписывания. Другие типы ключей не поддерживаются в настоящее время.  
   
  `pbKeyBlob`  
- [in] Указатель на пару открытого и закрытого ключей. Эта пара имеет формат, созданные Win32 `CryptExportKey` функции. Если `pbKeyBlob` равен null, контейнер ключей, заданные `szKeyContainer` должна содержать пары ключей.  
+ [in] Указатель на пару открытого и закрытого ключей. Эта пара имеет формат, созданные Win32 `CryptExportKey` функции. Если `pbKeyBlob` имеет значение null, контейнере ключей `szKeyContainer` предполагается, что содержит пару ключей.  
   
  `cbKeyBlob`  
- [in] Размер в байтах для `pbKeyBlob`.  
+ [in] Размер в байтах из `pbKeyBlob`.  
   
  `ppbPublicKeyBlob`  
- [out] Возвращаемый открытый ключ большого двоичного ОБЪЕКТА. `ppbPublicKeyBlob` Параметра выделяется средой CLR и возвращается вызывающему. Вызывающий объект должен освободить память с помощью [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод.  
+ [out] Возвращаемый открытый ключ BLOB-ОБЪЕКТОВ. `ppbPublicKeyBlob` Параметра выделяется, среда CLR и возвращается вызывающей стороне. Вызывающий объект должен освободить память с помощью [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод.  
   
  `pcbPublicKeyBlob`  
- [out] Размер возвращаемого BLOB-объект открытого ключа.  
+ [out] Размер возвращаемого большой двоичный объект открытого ключа.  
   
  `uHashAlgId`  
- [in] Хэш-алгоритм сборки. Список допустимых значений см.  
+ [in] Алгоритм хеширования сборки. См. в разделе "Примечания" для получения списка допустимых значений.  
   
  `uReserved`  
- [in] Зарезервировано для будущего использования; значение по умолчанию null.  
+ [in] Зарезервировано для будущего использования; по умолчанию null.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (в разделе [часто встречающихся значений HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
   
 ## <a name="remarks"></a>Примечания  
- Открытый ключ содержится в [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) структуры.  
+ Открытый ключ, содержащийся в [PublicKeyBlob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md) структуры.  
   
 ## <a name="remarks"></a>Примечания  
  В следующей таблице показаны набор допустимых значений для `uHashAlgId` параметра.  
@@ -81,17 +81,17 @@ HRESULT StrongNameGetPublicKey (
 |Нет|0|  
 |SHA-1|0x8004|  
 |SHA-256|0x800c|  
-|SHA-384.|0x800d|  
+|SHA-384|0x800d|  
 |SHA-512|0x800e|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** MetaHost.h  
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Метод StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  

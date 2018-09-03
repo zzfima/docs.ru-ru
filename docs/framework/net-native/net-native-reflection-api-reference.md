@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ea47b8402f1bd2f66c957ff9126c8dff094a7ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a2a27f788fa84c41ccb818266fffc816237bb48
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397758"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486952"
 ---
 # <a name="net-native-reflection-api-reference"></a>Справочник по API отражения для машинного кода .NET
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] включает три новых типа исключений: [System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md), [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)и [System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). Все эти типы исключений имеют указанные ниже особенности:  
@@ -25,7 +25,7 @@ ms.locfileid: "33397758"
 -   [Средство устранения неполадок MissingMetadataException](http://dotnet.github.io/native/troubleshooter/method.html) для методов.  
   
 > [!NOTE]
->  Этот справочник документирует три типа исключений, которые являются уникальными для [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Справочную документацию по основному API отражения для .NET Framework см. в разделе [Пространства имен System.Reflection](http://msdn.microsoft.com/library/gg145033.aspx). Справочную документацию по основному API взаимодействия для .NET Framework см. в разделе <xref:System.Runtime.InteropServices>.  
+>  Этот справочник документирует три типа исключений, которые являются уникальными для [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Справочная документация по API-интерфейса отражения .NET Framework core, см. в разделе [пространства имен System.Reflection](https://msdn.microsoft.com/library/gg145033.aspx). Справочную документацию по основному API взаимодействия для .NET Framework см. в разделе <xref:System.Runtime.InteropServices>.  
   
 ## <a name="systemreflection-namespace"></a>Пространства имен System.Reflection  
  Пространство имен <xref:System.Reflection> содержит базовые типы, используемые для отражения в платформе .NET Framework. Для [!INCLUDE[net_native](../../../includes/net-native-md.md)], оно также включает два новых типа исключений:  

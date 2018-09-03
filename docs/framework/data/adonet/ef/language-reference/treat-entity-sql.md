@@ -2,12 +2,12 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 932f335bf6a502b031dcf09b8050e278a0bbe9f8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c3291dc6d5bc79430c8bf011ee6a2f4dc213ffad
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763980"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486900"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 Обрабатывает объект некоторого базового типа, как объект указанного производного типа.  
@@ -48,7 +48,7 @@ WHERE p IS OF (NamespaceName.Employee)
  Этот запрос приводит сущности `Person` к типу `Employee` . Если значение «p» фактически не относится к типу `Employee`, то выражение имеет значение `null`.  
   
 > [!NOTE]
->  Указанное выражение `Employee` должен быть подтипом указанного типа данных `Person`, либо тип данных должен быть подтипом данного выражения. В противном случае это выражение вызовет ошибку во время компиляции.  
+>  Указанное выражение `Employee` должен быть подтипом указанного типа данных `Person`, или тип данных должен быть подтипом данного выражения. В противном случае это выражение вызовет ошибку во время компиляции.  
   
  Следующая таблица показывает, каким образом оператор TREAT работает с некоторыми стандартными и не очень часто используемыми конструкциями. Все исключения формируются на стороне клиента перед вызовом поставщика.  
   
@@ -62,7 +62,7 @@ WHERE p IS OF (NamespaceName.Employee)
 |`TREAT (RowType AS RowType)`|Создает исключение.|  
   
 ## <a name="example"></a>Пример  
- В следующем запросе [!INCLUDE[esql](../../../../../../includes/esql-md.md)] оператор TREAT используется для преобразования объекта типа Course в коллекцию объектов типа OnsiteCourse. Запрос основан на [модели School](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac).  
+ В следующем запросе [!INCLUDE[esql](../../../../../../includes/esql-md.md)] оператор TREAT используется для преобразования объекта типа Course в коллекцию объектов типа OnsiteCourse. Запрос основан на [модели School](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac).  
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   

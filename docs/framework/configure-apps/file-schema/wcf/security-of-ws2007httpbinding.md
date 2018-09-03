@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: b7644e0cf9148cb489618b352ad09901799ceaa6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 00d1f43cb2d3f3aa67e72ee7ae405041bd2842ac
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751094"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480284"
 ---
 # <a name="ltsecuritygt-of-ltws2007httpbindinggt"></a>&lt;security&gt; для &lt;ws2007HttpBinding&gt;
-Представляет параметры безопасности, используемые с [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) элемента.  
+Представляет параметры безопасности, используемые с [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) элемент.  
   
  \<system.serviceModel >  
 \<привязки >  
@@ -45,14 +45,14 @@ ms.locfileid: "32751094"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`mode`|— Необязательный параметр. Задает тип применяемого механизма обеспечения безопасности. Значение по умолчанию — `Message`.<br /><br /> Это атрибут типа <xref:System.ServiceModel.SecurityMode>.|  
+|`mode`|-Необязательно. Задает тип применяемого механизма обеспечения безопасности. Значение по умолчанию — `Message`.<br /><br /> Это атрибут типа <xref:System.ServiceModel.SecurityMode>.|  
   
 ## <a name="mode-attribute"></a>Атрибут mode  
   
 |Значение|Описание|  
 |-----------|-----------------|  
 |`None`|Режим безопасности отключен.|  
-|`Transport`|Безопасность обеспечивается с помощью протокола HTTPS. Необходима настройка службы с помощью SSL-сертификатов. Сообщение полностью защищено с помощью HTTPS, а проверка подлинности службы выполняется клиентом с помощью SSL-сертификата службы. Проверка подлинности клиента осуществляется с помощью `ClientCredentials` атрибут [ \<транспорта >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-ws2007httpbinding.md) элемента.|  
+|`Transport`|Безопасность обеспечивается с помощью протокола HTTPS. Необходима настройка службы с помощью SSL-сертификатов. Сообщение полностью защищено с помощью HTTPS, а проверка подлинности службы выполняется клиентом с помощью SSL-сертификата службы. Проверка подлинности клиента контролируется посредством `ClientCredentials` атрибут [ \<транспорта >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-ws2007httpbinding.md) элемент.|  
 |`Message`|Безопасность обеспечивается с помощью средств безопасности сообщений SOAP. По умолчанию текст сообщений SOAP шифруется и подписывается. Этот режим предоставляет множество функций, например доступ к учетным данным службы для клиентов за пределами диапазона, выбор используемого набора алгоритмов и уровня защиты, применяемого к тексту сообщения посредством <xref:System.ServiceModel.Security.SecurityMessageProperty>. Проверка подлинности клиента выполняется один раз для каждого сеанса, и результаты проверки сохраняются в кэше на протяжении всего сеанса.|  
 |`TransportWithMessageCredential`|В данном режиме HTTPS обеспечивает целостность, конфиденциальность и проверку подлинности сервера, а механизм безопасности сообщений SOAP обеспечивает проверку подлинности клиента. По умолчанию проверка подлинности клиента выполняется один раз за сеанс, и результаты проверки сохраняются в кэше на протяжении всего сеанса.|  
   
@@ -81,5 +81,5 @@ ms.locfileid: "32751094"
  [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - raw input [WPF]
 - FilterInputMessage method [WPF]
 ms.assetid: 4d74c6cf-7d1d-49ff-96c1-231340ce54f5
-ms.openlocfilehash: 69bc1e973b690454bcf91487c12dc4ce0ac46a17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a22071696ca012968e042e15cd8a9f4b876fd9f
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548409"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43479988"
 ---
 # <a name="filterinputmessage"></a>FilterInputMessage
 Вызывается программой PresentationHost.exe всякий раз при получении сообщения, пока не будет возвращено E_NOTIMPL.  
@@ -33,14 +33,14 @@ HRESULT FilterInputMessage( [in] MSG* pMsg ) ;
   
  S_FALSE — фильтр обработал это сообщение, и дальнейшая обработка не выполняется.  
   
- Значение E_NOTIMPL – Если это значение возвращается, [FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md) не будет вызвана снова. Это значение может быть возвращено из ведущего приложения, которое заинтересовано только в предоставлении пользовательских интерфейсов хода выполнения и ошибок в PresentationHost.exe и не заинтересовано в перенаправлении необработанных входных сообщений из PresentationHost.exe.  
+ E_NOTIMPL — Если это значение возвращается, [FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md) не вызывается повторно. Это значение может быть возвращено из ведущего приложения, которое заинтересовано только в предоставлении пользовательских интерфейсов хода выполнения и ошибок в PresentationHost.exe и не заинтересовано в перенаправлении необработанных входных сообщений из PresentationHost.exe.  
   
 ## <a name="remarks"></a>Примечания  
  PresentationHost.exe является целевым объектом различных необработанных устройств ввода, включая клавиатуру, мышь и удаленное управление. В некоторых случаях поведение в ведущем приложении зависит от входных данных, которые в противном случае будет использоваться PresentationHost.exe. Например, ведущее приложение может зависеть от получения определенных входных сообщений, чтобы определить необходимость отображения конкретных элементов пользовательского интерфейса.  
   
- Чтобы разрешить ведущему приложению получать необходимые входные сообщения для предоставления этих поведений, PresentationHost.exe пересылает соответствующие необработанные входные сообщения для размещенного приложения путем вызова [FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md).  
+ Чтобы разрешить ведущему приложению получать необходимые входные сообщения для предоставления этих расширений функциональности, PresentationHost.exe перенаправляет соответствующие необработанные входные сообщения в размещенное приложение путем вызова [FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md).  
   
- Размещенное приложение получает необработанные входящие сообщения можно зарегистрировать в наборе устройства необработанного ввода (HID-устройства) возвращенные [Получение необработанных устройств ввода](../../../../docs/framework/wpf/app-development/getrawinputdevices.md).  
+ Размещенное приложение получает необработанные входные сообщения путем регистрации в наборе необработанных устройств ввода (HID-устройств) возвращенные [GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md).  
   
 ## <a name="see-also"></a>См. также  
- [WM_INPUT уведомления](http://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputmessages/wm_input.asp)
+ [Уведомление WM_INPUT](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputmessages/wm_input.asp)

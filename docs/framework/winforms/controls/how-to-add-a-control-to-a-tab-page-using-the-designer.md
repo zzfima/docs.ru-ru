@@ -6,26 +6,26 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: 1bd6050287df288b41f944232d36d2e77c1309d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07326156fabbb8b991538a7e3bbaff7d807a1e94
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529595"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486481"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>Практическое руководство. Добавление элемента управления на вкладку с помощью конструктора
-Использование Windows Forms <xref:System.Windows.Forms.TabControl> — отображение других элементов управления в структуру предприятия. Эти инструкции можно использовать для отображения рисунков в основной части вкладки. Сведения о добавлении значка в часть метки страницу вкладки см [как: изменение внешнего вида элемента управления TabControl в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
+Использование Windows Forms <xref:System.Windows.Forms.TabControl> является отображение других элементов управления в структуру предприятия. Эти инструкции можно использовать для отображения рисунка в основной части вкладки. Сведения о добавлении значка в часть метки страницы вкладки, см. в разделе [как: изменение внешнего вида элемента управления TabControl в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md).  
   
- В следующей процедуре требуется **приложение Windows** проекта с формой, содержащей <xref:System.Windows.Forms.TabControl> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создание проекта приложения Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) и [как: Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
+ Следующая процедура требуется **приложения Windows** проекта с формой, содержащей <xref:System.Windows.Forms.TabControl> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создание проекта приложения Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) и [как: Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md).  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
-### <a name="to-add-a-control-using-the-designer"></a>Чтобы добавить элемент управления с помощью конструктора  
+### <a name="to-add-a-control-using-the-designer"></a>Добавление элемента управления с помощью конструктора  
   
-1.  Щелкните соответствующую вкладку, чтобы он отображался в верхней части страницы.  
+1.  Щелкните соответствующую вкладку, чтобы он отображался в верхней части.  
   
-2.  Разместите элемент управления на странице вкладки.  
+2.  Нарисуйте элемент управления на странице вкладки.  
   
 ## <a name="see-also"></a>См. также  
  [Элемент управления TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)  

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 0fe20ffa19d14dcaecac30198c5c0e2d19fb9fa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556917"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482980"
 ---
 # <a name="control-styles-and-templates"></a>Стили и шаблоны элемента Control
-Элементы управления в Windows Presentation Foundation (WPF) имеют <xref:System.Windows.Controls.ControlTemplate> , содержащий визуальное дерево этого элемента управления. Можно изменить структуру и внешний вид элемента управления, изменив <xref:System.Windows.Controls.ControlTemplate> этого элемента управления. Невозможно заменить только часть визуального дерева элемента управления; Чтобы изменить визуальное дерево элемента управления, необходимо задать <xref:System.Windows.Controls.Control.Template%2A> свойство элемента управления, его новый и завершенный <xref:System.Windows.Controls.ControlTemplate>.  
+Элементы управления в Windows Presentation Foundation (WPF) имеют <xref:System.Windows.Controls.ControlTemplate> , содержит визуальное дерево этого элемента управления. Можно изменить структуру и внешний вид элемента управления, изменив <xref:System.Windows.Controls.ControlTemplate> этого элемента управления. Невозможно заменить только часть визуального дерева элемента управления; Чтобы изменить визуальное дерево элемента управления, необходимо задать <xref:System.Windows.Controls.Control.Template%2A> свойство элемента управления, его нового и полного <xref:System.Windows.Controls.ControlTemplate>.  
   
- Темы рабочего стола определяют, какой словарь ресурсов используется. Сведения о получении словарей ресурсов тем рабочего стола см. в разделе [Темы WPF по умолчанию](http://go.microsoft.com/fwlink/?LinkID=158252).  
+ Темы рабочего стола определяют, какой словарь ресурсов используется. Сведения о получении словарей ресурсов тем рабочего стола см. в разделе [Темы WPF по умолчанию](https://go.microsoft.com/fwlink/?LinkID=158252).  
   
  Ниже перечислены имена файлов словарей ресурсов и их соответствующие темы рабочего стола.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "33556917"
  [Стили и шаблоны элемента ListView](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
  [Стили и шаблоны элемента Menu](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
  [Стили и шаблоны элемента NavigationWindow](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [Поле пароля стили и шаблоны](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
+ [PasswordBox стили и шаблоны](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
  [Стили и шаблоны элемента ProgressBar](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
  [Стили и шаблоны элемента RadioButton](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
  [RepeatButton стили и шаблоны](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  

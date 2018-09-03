@@ -2,12 +2,12 @@
 title: Защита приложений ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: efe25082b4e4de9170179ebeff6a1dca8f67446c
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e5b99621989e9f14c6c734a497f210780f3c7e57
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728606"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481082"
 ---
 # <a name="securing-adonet-applications"></a>Защита приложений ADO.NET
 При написании безопасного приложения ADO.NET следует не просто избегать обычных проблем кодирования, таких как отсутствие проверки входных данных пользователя. В приложении, в котором выполняется обращение к данным, много потенциально уязвимых мест, которые атакующий может использовать для получения конфиденциальных данных, манипулирования ими или их уничтожения. Поэтому важно понимать все аспекты безопасности, от моделирования угроз на этапе проектирования приложения до развертывания и текущего обслуживания.  
@@ -42,10 +42,10 @@ ms.locfileid: "34728606"
  [Безопасность](../../../../docs/standard/security/index.md)  
  Содержит ссылки на статьи, в которых описываются все аспекты безопасности в .NET.  
   
- [Средства обеспечения безопасности](http://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
+ [Средства обеспечения безопасности](https://msdn.microsoft.com/library/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
  Средства .NET Framework для безопасности и администрирования политики безопасности.  
   
- [Ресурсы для создания защищенных приложений](http://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
+ [Ресурсы для создания защищенных приложений](https://msdn.microsoft.com/library/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
  Предоставляет ссылки на разделы, посвященные созданию безопасных приложений.  
   
  [Библиография по вопросам безопасности](/visualstudio/ide/security-bibliography)  
@@ -53,4 +53,4 @@ ms.locfileid: "34728606"
   
 ## <a name="see-also"></a>См. также  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

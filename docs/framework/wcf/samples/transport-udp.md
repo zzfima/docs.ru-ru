@@ -2,17 +2,17 @@
 title: 'Транспорт: UDP'
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 64452e36f34f87aef491cf66f6dd94ddc3a59f34
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: e3e01634c496a3673b49ae7329e4221e0d568803
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106042"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485944"
 ---
 # <a name="transport-udp"></a>Транспорт: UDP
-В примере транспорта UDP демонстрируется реализация UDP одноадресной и многоадресной рассылки как пользовательский транспорт Windows Communication Foundation (WCF). Образец описана процедура, предлагаемая для создания пользовательского транспорта в WCF, с помощью инфраструктуры канала и согласно рекомендации WCF. Для создания пользовательского транспорта выполните следующие действия.  
+Пример транспорта UDP демонстрируется реализация UDP одноадресного и многоадресного как пользовательский транспорт Windows Communication Foundation (WCF). Образец описана процедура, предлагаемая для создания пользовательского транспорта в WCF, с помощью инфраструктуры канала и согласно рекомендации по WCF. Для создания пользовательского транспорта выполните следующие действия.  
   
-1.  Решите, какой из канала [шаблонов обмена сообщениями](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel или IReplyChannel) будут поддерживать ChannelFactory и ChannelListener. Затем решите, поддерживать ли связанные с сеансами разновидности указанных интерфейсов.  
+1.  Определите, какие из канала [обмена сообщениями](#MessageExchangePatterns) (IOutputChannel, IInputChannel, IDuplexChannel, IRequestChannel или IReplyChannel) будут поддерживать ChannelFactory и ChannelListener. Затем решите, поддерживать ли связанные с сеансами разновидности указанных интерфейсов.  
   
 2.  Создайте фабрику и прослушиватель каналов, которые поддерживают выбранный шаблон обмена сообщениями.  
   
@@ -50,19 +50,19 @@ ms.locfileid: "37106042"
 >  Для транспорта по протоколу UDP единственным поддерживаемым шаблоном обмена сообщениями является датаграмма, поскольку структура протокола UDP основана на принципе "отправить и забыть".  
   
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>Жизненный цикл ICommunicationObject и объектов WCF  
- WCF содержит общий конечный автомат, который используется для управления жизненным циклом таких объектов, как <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, и <xref:System.ServiceModel.Channels.IChannelListener> , используемые для обмена данными. Эти объекты взаимодействий могут находиться в пяти состояниях. Эти состояния, приведенные ниже, представлены перечислением <xref:System.ServiceModel.CommunicationState>.  
+ WCF содержит общий конечный автомат, который используется для управления жизненным циклом таких объектов, таких как <xref:System.ServiceModel.Channels.IChannel>, <xref:System.ServiceModel.Channels.IChannelFactory>, и <xref:System.ServiceModel.Channels.IChannelListener> , которые используются для обмена данными. Эти объекты взаимодействий могут находиться в пяти состояниях. Эти состояния, приведенные ниже, представлены перечислением <xref:System.ServiceModel.CommunicationState>.  
   
--   Создан: Это состояние <xref:System.ServiceModel.ICommunicationObject> при его первом создании экземпляра. Ввод и вывод в этом состоянии не происходит.  
+-   Created: Это состояние <xref:System.ServiceModel.ICommunicationObject> при его первом создании экземпляра. Ввод и вывод в этом состоянии не происходит.  
   
--   Открытие: Объекты переходят в это состояние при <xref:System.ServiceModel.ICommunicationObject.Open%2A> вызывается. В этот момент свойства перестают быть изменяемыми, и могут начинаться ввод и вывод. Переход в это состояние возможен только из состояния Created.  
+-   Opening: Объекты переходят в это состояние при <xref:System.ServiceModel.ICommunicationObject.Open%2A> вызывается. В этот момент свойства перестают быть изменяемыми, и могут начинаться ввод и вывод. Переход в это состояние возможен только из состояния Created.  
   
 -   Opened: в это состояние объекты переходят по окончании процесса открытия. Переход в это состояние возможен только из состояния Opening. С этого момента объект полностью пригоден для передачи сообщений.  
   
--   Закрытие: Объекты переходят в это состояние при <xref:System.ServiceModel.ICommunicationObject.Close%2A> вызывается для нормальное завершение работы. Переход в это состояние возможен только из состояния Opened.  
+-   Closing: Объекты переходят в это состояние при <xref:System.ServiceModel.ICommunicationObject.Close%2A> вызывается для корректного завершения работы. Переход в это состояние возможен только из состояния Opened.  
   
 -   Closed: в состоянии Closed объекты использовать нельзя. В общем случае большинство конфигураций доступны для изучения, но никакие взаимодействия происходить не могут. Это состояние равнозначно удалению.  
   
--   Faulted: в состоянии Faulted объекты доступны для изучения, но их нельзя использовать. Объекты переходят в это состояние при возникновении неустранимой ошибки. Является единственным допустимым переход из этого состояния в `Closed` состояние.  
+-   Faulted: в состоянии Faulted объекты доступны для изучения, но их нельзя использовать. Объекты переходят в это состояние при возникновении неустранимой ошибки. Является переход только из этого состояния в `Closed` состояние.  
   
  Есть события, возникающие при каждом изменении состояния. <xref:System.ServiceModel.ICommunicationObject.Abort%2A> Метод можно вызвать в любое время и вызывает объект мгновенный переход из текущего состояния в состояние Closed. Вызов <xref:System.ServiceModel.ICommunicationObject.Abort%2A> прекращает любую незаконченную работу.  
   
@@ -72,9 +72,9 @@ ms.locfileid: "37106042"
   
 -   Класс <xref:System.ServiceModel.Channels.CommunicationObject> реализует интерфейс <xref:System.ServiceModel.ICommunicationObject> и принудительно создает конечный автомат, описанный ранее на шаге 2. 
 
--   <xref:System.ServiceModel.Channels.ChannelManagerBase> Класс реализует <xref:System.ServiceModel.Channels.CommunicationObject> и предоставляет единый базовый класс для <xref:System.ServiceModel.Channels.ChannelFactoryBase> и <xref:System.ServiceModel.Channels.ChannelListenerBase>. Класс <xref:System.ServiceModel.Channels.ChannelManagerBase> работает совместно с классом <xref:System.ServiceModel.Channels.ChannelBase> - базовым классом, реализующим интерфейс <xref:System.ServiceModel.Channels.IChannel>.  
+-   <xref:System.ServiceModel.Channels.ChannelManagerBase> Класс реализует <xref:System.ServiceModel.Channels.CommunicationObject> и предоставляет универсальный базовый класс для классов <xref:System.ServiceModel.Channels.ChannelFactoryBase> и <xref:System.ServiceModel.Channels.ChannelListenerBase>. Класс <xref:System.ServiceModel.Channels.ChannelManagerBase> работает совместно с классом <xref:System.ServiceModel.Channels.ChannelBase> - базовым классом, реализующим интерфейс <xref:System.ServiceModel.Channels.IChannel>.  
   
--   <xref:System.ServiceModel.Channels.ChannelFactoryBase> Класс реализует <xref:System.ServiceModel.Channels.ChannelManagerBase> и <xref:System.ServiceModel.Channels.IChannelFactory> и объединяет `CreateChannel` в одну из перегруженных функций `OnCreateChannel` абстрактный метод.  
+-   <xref:System.ServiceModel.Channels.ChannelFactoryBase> Класс реализует <xref:System.ServiceModel.Channels.ChannelManagerBase> и <xref:System.ServiceModel.Channels.IChannelFactory> и объединяет `CreateChannel` перегрузки в одну `OnCreateChannel` абстрактный метод.  
   
 -   <xref:System.ServiceModel.Channels.ChannelListenerBase> Класс реализует <xref:System.ServiceModel.Channels.IChannelListener>. Он отвечает за базовое управление состоянием.  
   
@@ -96,7 +96,7 @@ this.socket = new Socket(this.remoteEndPoint.AddressFamily, SocketType.Dgram, Pr
 this.socket.Close(0);  
 ```  
   
- Затем мы реализовали `Send()` и `BeginSend()` / `EndSend()`. Реализация делится на две принципиальные части. Сначала сообщение сериализуется в байтовый массив.  
+ Затем мы реализуем `Send()` и `BeginSend()` / `EndSend()`. Реализация делится на две принципиальные части. Сначала сообщение сериализуется в байтовый массив.  
   
 ```csharp
 ArraySegment<byte> messageBuffer = EncodeMessage(message);  
@@ -109,20 +109,20 @@ this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Coun
 ```  
   
 ### <a name="the-udpchannellistener"></a>Класс UdpChannelListener  
- `UdpChannelListener` , Образец реализует является производным от <xref:System.ServiceModel.Channels.ChannelListenerBase> класса. Он использует один UDP-сокет для приема датаграмм. Метод `OnOpen` принимает данные через UDP-сокет в асинхронном цикле. Затем данные преобразуются в сообщения с помощью системы кодирования сообщений.  
+ `UdpChannelListener` Что в этом примере реализован является производным от <xref:System.ServiceModel.Channels.ChannelListenerBase> класса. Он использует один UDP-сокет для приема датаграмм. Метод `OnOpen` принимает данные через UDP-сокет в асинхронном цикле. Затем данные преобразуются в сообщения с помощью системы кодирования сообщений.  
   
 ```csharp
 message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffer, 0, count), bufferManager);  
 ```  
   
- Поскольку один канал датаграмм представляет сообщения, приходящие из нескольких источников, `UdpChannelListener` - одноэлементный прослушиватель. Нет, в большинстве, один активный <xref:System.ServiceModel.Channels.IChannel> связанный с данным прослушивателем одновременно. В образце создается новый экземпляр только в том случае, если канал, возвращенный методом `AcceptChannel`, был впоследствии освобожден. Когда сообщение принято, оно ставится в очередь в этот одноэлементный канал.  
+ Поскольку один канал датаграмм представляет сообщения, приходящие из нескольких источников, `UdpChannelListener` - одноэлементный прослушиватель. Связано не более одного активного <xref:System.ServiceModel.Channels.IChannel> связан с этим прослушивателем за раз. В образце создается новый экземпляр только в том случае, если канал, возвращенный методом `AcceptChannel`, был впоследствии освобожден. Когда сообщение принято, оно ставится в очередь в этот одноэлементный канал.  
   
 #### <a name="udpinputchannel"></a>UdpInputChannel  
- `UdpInputChannel` Класс реализует `IInputChannel`. Он состоит из очереди входящих сообщений, которая заполняется сокетом прослушивателя `UdpChannelListener`. Эти сообщения будут извлечены `IInputChannel.Receive` метод.  
+ `UdpInputChannel` Класс реализует `IInputChannel`. Он состоит из очереди входящих сообщений, которая заполняется сокетом прослушивателя `UdpChannelListener`. Эти сообщения удаляются из очереди с `IInputChannel.Receive` метод.  
   
 <a name="AddingABindingElement"></a>   
 ## <a name="adding-a-binding-element"></a>Добавление элемента привязки  
- После создания фабрики и каналы нужно предоставить среде выполнения ServiceModel через привязку. Привязка - это коллекция элементов привязки, представляющая стек связи для адреса службы. Каждый элемент стека представлен [ \<привязки >](../../../../docs/framework/misc/binding.md) элемента.  
+ После создания фабрики и каналы нужно предоставить среде выполнения ServiceModel через привязку. Привязка - это коллекция элементов привязки, представляющая стек связи для адреса службы. Каждый элемент стека представлен [ \<привязки >](../../../../docs/framework/misc/binding.md) элемент.  
   
  В этом примере в качестве элемента привязки выступает элемент `UdpTransportBindingElement`, являющийся производным элемента <xref:System.ServiceModel.Channels.TransportBindingElement>. Он переопределяет следующие методы создания фабрик, связанных с привязкой.  
   
@@ -141,13 +141,13 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  Он также содержит члены для клонирования элемента `BindingElement` и возврата схемы (soap.udp).  
   
 ## <a name="adding-metadata-support-for-a-transport-binding-element"></a>Добавление поддержки метаданных для элемента привязки транспорта  
- Для интеграции в систему метаданных транспорт должен поддерживать как импорт, так и экспорт политики. Это позволяет создавать клиентов нашей привязкой через [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Для интеграции в систему метаданных транспорт должен поддерживать как импорт, так и экспорт политики. Это позволяет создавать клиенты привязки с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ### <a name="adding-wsdl-support"></a>Добавление поддержки WSDL  
  За экспорт и импорт адресов в метаданных отвечает элемент привязки транспорта. При использовании привязки протокола SOAP элемент привязки транспорта должен также экспортировать в метаданных правильный URI (универсальный код ресурса) транспорта.  
   
 #### <a name="wsdl-export"></a>Экспорт WSDL  
- Для экспорта адресов элемент `UdpTransportBindingElement` реализует интерфейс `IWsdlExportExtension`. `ExportEndpoint` Метод добавляет правильные сведения об адресах порта WSDL.  
+ Для экспорта адресов элемент `UdpTransportBindingElement` реализует интерфейс `IWsdlExportExtension`. `ExportEndpoint` Метод добавляет правильные адреса порта WSDL.  
   
 ```csharp
 if (context.WsdlPort != null)  
@@ -189,7 +189,7 @@ if (soapBinding != null)
   
 2.  добавить раздел конфигурации в файл Svcutil.exe.config, находящийся в том же каталоге, что и файл Svcutil.exe.  
   
- `UdpBindingElementImporter` Тип реализует `IWsdlImportExtension` интерфейса. Метод `ImportEndpoint` импортирует адрес из порта WSDL.  
+ `UdpBindingElementImporter` Введите реализует `IWsdlImportExtension` интерфейс. Метод `ImportEndpoint` импортирует адрес из порта WSDL.  
   
 ```csharp
 BindingElementCollection bindingElements = context.Endpoint.Binding.CreateBindingElements();  
@@ -204,7 +204,7 @@ if (transportBindingElement is UdpTransportBindingElement)
  Пользовательский элемент привязки может экспортировать утверждения политики в привязке WSDL для конечной точки службы, чтобы показать возможности этого элемента привязки.  
   
 #### <a name="policy-export"></a>Экспорт политики  
- `UdpTransportBindingElement` Тип реализует `IPolicyExportExtension` для добавления поддержки экспорт политики. В результате класс `System.ServiceModel.MetadataExporter` включает элемент `UdpTransportBindingElement` при формировании политики для любой привязки, в которую он входит.  
+ `UdpTransportBindingElement` Введите реализует `IPolicyExportExtension` для добавления поддержки экспорта политик. В результате класс `System.ServiceModel.MetadataExporter` включает элемент `UdpTransportBindingElement` при формировании политики для любой привязки, в которую он входит.  
   
  В методе `IPolicyExportExtension.ExportPolicy` добавляется утверждение для UDP и еще одно утверждение, если используется режим многоадресной рассылки. Это связано с тем, что режим многоадресной рассылки влияет на построение стека связи и, следовательно, должен быть согласован обеими сторонами.  
   
@@ -257,7 +257,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
 -   С помощью пользовательской привязки: пользовательская привязка позволяет пользователю создать собственную привязку на основе произвольного набора элементов привязки.  
   
--   С помощью предусмотренной в составе системы привязки, включающей наш элемент привязки. WCF предоставляет несколько из этих системных привязок, таких как `BasicHttpBinding`, `NetTcpBinding`, и `WsHttpBinding`. Каждая из них связана с четко определенным профилем.  
+-   С помощью предусмотренной в составе системы привязки, включающей наш элемент привязки. WCF предоставляет ряд этих привязок, определенных системой, такие как `BasicHttpBinding`, `NetTcpBinding`, и `WsHttpBinding`. Каждая из них связана с четко определенным профилем.  
   
  В этом образце реализуется профиль привязки в `SampleProfileUdpBinding`, производном от <xref:System.ServiceModel.Channels.Binding>. Привязка `SampleProfileUdpBinding` содержит до четырех элементов привязки: `UdpTransportBindingElement`, `TextMessageEncodingBindingElement CompositeDuplexBindingElement` и `ReliableSessionBindingElement`.  
   
@@ -306,7 +306,7 @@ if (context.Endpoint.Binding is CustomBinding)
  Для предоставления транспорта через конфигурацию нужно реализовать два раздела конфигурации. Первый - элемент `BindingElementExtensionElement` для `UdpTransportBindingElement`. За счет этого реализации `CustomBinding` могут ссылаться на наш элемент привязки. Второй - `Configuration` для `SampleProfileUdpBinding`.  
   
 ### <a name="binding-element-extension-element"></a>Элемент привязки элемента Extension  
- Раздел `UdpTransportElement` — `BindingElementExtensionElement` , предоставляющий `UdpTransportBindingElement` системе конфигурации. С помощью нескольких простых переопределений в примере определяется имя раздела конфигурации, тип элемента привязки и способ создания элемента привязки. Затем можно зарегистрировать раздел расширения в файле конфигурации, как показано в следующем коде.  
+ Разделе `UdpTransportElement` — `BindingElementExtensionElement` , предоставляющий `UdpTransportBindingElement` системе конфигурации. С помощью нескольких простых переопределений в примере определяется имя раздела конфигурации, тип элемента привязки и способ создания элемента привязки. Затем можно зарегистрировать раздел расширения в файле конфигурации, как показано в следующем коде.  
   
 ```xml
 <configuration>  
@@ -337,7 +337,7 @@ if (context.Endpoint.Binding is CustomBinding)
 ```  
   
 ### <a name="binding-section"></a>Раздел привязки  
- Раздел `SampleProfileUdpBindingCollectionElement` — `StandardBindingCollectionElement` , предоставляющий `SampleProfileUdpBinding` системе конфигурации. Основная часть реализации делегируется классу `SampleProfileUdpBindingConfigurationElement`, наследуемому от класса `StandardBindingElement`. `SampleProfileUdpBindingConfigurationElement` Имеет свойства, которые соответствуют свойствам на `SampleProfileUdpBinding`и обеспечивает сопоставление `ConfigurationElement` привязки. Наконец, метод `OnApplyConfiguration` в классе `SampleProfileUdpBinding` переопределяется, как показано в следующем образце кода.  
+ Разделе `SampleProfileUdpBindingCollectionElement` — `StandardBindingCollectionElement` , предоставляющий `SampleProfileUdpBinding` системе конфигурации. Основная часть реализации делегируется классу `SampleProfileUdpBindingConfigurationElement`, наследуемому от класса `StandardBindingElement`. `SampleProfileUdpBindingConfigurationElement` Имеет свойства, которые соответствуют свойствам в `SampleProfileUdpBinding`и обеспечивает сопоставление `ConfigurationElement` привязки. Наконец, метод `OnApplyConfiguration` в классе `SampleProfileUdpBinding` переопределяется, как показано в следующем образце кода.  
   
 ```csharp
 protected override void OnApplyConfiguration(string configurationName)  
@@ -394,7 +394,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>Тестовые служба и клиент UDP  
- Тестовый код для использования этого примера транспорта находится в каталогах UdpTestService и UdpTestClient. Код службы состоит из двух тестов. Один из них настраивает привязки и конечные точки из кода, а другой - через конфигурацию. Оба теста используют две конечных точки. Одна конечная точка использует `SampleUdpProfileBinding` с [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) значение `true`. Другая конечная точка использует пользовательскую привязку с классом `UdpTransportBindingElement`. Это эквивалентно использованию `SampleUdpProfileBinding` с [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) значение `false`. Оба теста создают службу, добавляют для каждой привязки конечную точку, открывают службу и ожидают нажатия пользователем клавиши ВВОД перед тем, как закрыть службу.  
+ Тестовый код для использования этого примера транспорта находится в каталогах UdpTestService и UdpTestClient. Код службы состоит из двух тестов. Один из них настраивает привязки и конечные точки из кода, а другой - через конфигурацию. Оба теста используют две конечных точки. Одна конечная точка использует `SampleUdpProfileBinding` с [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) присвоено `true`. Другая конечная точка использует пользовательскую привязку с классом `UdpTransportBindingElement`. Это эквивалентно использованию `SampleUdpProfileBinding` с [ \<reliableSession >](https://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) присвоено `false`. Оба теста создают службу, добавляют для каждой привязки конечную точку, открывают службу и ожидают нажатия пользователем клавиши ВВОД перед тем, как закрыть службу.  
   
  При запуске приложения тестирования службы появится результат следующего вида.  
   
@@ -468,7 +468,7 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
   
 1.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-2.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+2.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 3.  См. раздел "Тестовые служба и клиент UDP" выше.  
   
@@ -477,6 +477,6 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\Udp`

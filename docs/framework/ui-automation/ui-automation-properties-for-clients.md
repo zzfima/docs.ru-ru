@@ -11,16 +11,16 @@ ms.assetid: 255905af-0b17-485c-93d4-8a2db2a6524b
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 66ae453a8b82ea78acfb0dc423bce546324f901f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c1ab9a9eeae6de29fc838e263225050ec4122f2d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410076"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480246"
 ---
 # <a name="ui-automation-properties-for-clients"></a>Свойства автоматизации пользовательского интерфейса для клиентов
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом обзоре даются общие сведения о свойствах [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , предоставляемых клиентским приложениям модели автоматизации пользовательского интерфейса.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "33410076"
 ## <a name="property-ids"></a>Идентификаторы свойств  
  Идентификаторы [!INCLUDE[TLA#tla_id#plural](../../../includes/tlasharptla-idsharpplural-md.md)] свойств являются уникальными константами, инкапсулированными в объектах <xref:System.Windows.Automation.AutomationProperty> . Клиентские приложения модели автоматизации пользовательского интерфейса получают эти [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] из класса <xref:System.Windows.Automation.AutomationElement> или из соответствующего класса шаблона элемента управления, такого как <xref:System.Windows.Automation.ScrollPattern>. Поставщики автоматизации пользовательского интерфейса получают их из <xref:System.Windows.Automation.AutomationElementIdentifiers> или из одного из классов идентификаторов шаблонов элементов управления, такого как <xref:System.Windows.Automation.ScrollPatternIdentifiers>.  
   
- Числовые <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> из <xref:System.Windows.Automation.AutomationProperty> используется поставщиками для идентификации свойств, которые запрашиваются в <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> метод. В общем случае клиентским приложениям не требуется проверять <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>. <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> используется только для целей отладки и диагностики.  
+ Числовой <xref:System.Windows.Automation.AutomationIdentifier.Id%2A> из <xref:System.Windows.Automation.AutomationProperty> используется поставщиками для идентификации свойств, которые запрашиваются в <xref:System.Windows.Automation.Provider.IRawElementProviderSimple.GetPropertyValue%2A?displayProperty=nameWithType> метод. В общем случае клиентским приложениям не требуется проверять <xref:System.Windows.Automation.AutomationIdentifier.Id%2A>. <xref:System.Windows.Automation.AutomationIdentifier.ProgrammaticName%2A> используется только для целей отладки и диагностики.  
   
 <a name="Property_Conditions"></a>   
 ## <a name="property-conditions"></a>Условия свойств  
@@ -80,7 +80,7 @@ ms.locfileid: "33410076"
 ## <a name="default-property-values"></a>Значения свойств по умолчанию  
  Если поставщик автоматизации пользовательского интерфейса не реализует свойство, система [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] может предоставить значение по умолчанию. Например, если поставщик для элемента управления не поддерживает свойство, идентифицируемое <xref:System.Windows.Automation.AutomationElement.HelpTextProperty>, то [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] возвращает пустую строку. Аналогично, если поставщик не поддерживает свойство, идентифицируемое <xref:System.Windows.Automation.AutomationElement.IsDockPatternAvailableProperty>, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] возвращает значение `false`.  
   
- Это поведение можно изменить с помощью <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> и <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> перегруженных версий метода. При указании `true` в качестве второго параметра [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] не возвращает значение по умолчанию, но вместо этого возвращает специальное значение <xref:System.Windows.Automation.AutomationElement.NotSupported>.  
+ Это поведение можно изменить с помощью <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A?displayProperty=nameWithType> и <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A?displayProperty=nameWithType> перегрузок метода. При указании `true` в качестве второго параметра [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] не возвращает значение по умолчанию, но вместо этого возвращает специальное значение <xref:System.Windows.Automation.AutomationElement.NotSupported>.  
   
  В следующем примере код пытается извлечь свойство из элемента, и если это свойство не поддерживается, вместо него используется значение, определенное приложением.  
   

@@ -2,12 +2,12 @@
 title: Справочник по Entity SQL
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: d6b40d0c1662e18ed83c58bfdde7b6dac65220dd
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: ae0aec999d30d099467be690b8920d1413b564f0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39221053"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487423"
 ---
 # <a name="entity-sql-reference"></a>Справочник по Entity SQL
 
@@ -45,7 +45,7 @@ ms.locfileid: "39221053"
 
 Равенство и неравенство определяются для всех типов объектов, имеющих свойство идентификатора, например для типа `Boolean`. Объекты, которые не относятся к типам-примитивам, но обладают свойством идентификатора, считаются равными, если имеют одинаковое значение свойства идентификатора. В следующей таблице перечислены операторы сравнения Entity SQL:
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |--------------|-----------------|
 |[= (равно)](equals-entity-sql.md)|Проверяет равенство двух выражений.|
 |[> (больше)](greater-than-entity-sql.md)|Сравнивает два выражения и определяет, имеет ли левое выражение значение больше значения правого выражения.|
@@ -67,7 +67,7 @@ ms.locfileid: "39221053"
 |[\! (Логическое не)](not-entity-sql.md)|Логическое НЕ.|
 |[&#124;&#124;(Логическое или)](or-entity-sql.md)|Логическое ИЛИ.|
 |[CASE](case-entity-sql.md)|Вычисляет набор логических выражений для определения результата.|
-|[THEN](then-entity-sql.md)|Результат [при](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) предложения, когда оно имеет значение true.|
+|[THEN](then-entity-sql.md)|Результат [при](https://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) предложения, когда оно имеет значение true.|
 
 ## <a name="query-operators"></a>Операторы запросов
 

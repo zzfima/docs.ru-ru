@@ -2,12 +2,12 @@
 title: Упрощенная конфигурация служб WCF
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 80e2ac83ec0e07176d6afe6d34c63fb4d8e836d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ebdf7ab62676bb0c8ac99a5335a3047fcdd5a9b3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502268"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482895"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>Упрощенная конфигурация служб WCF
 В этом примере показано, как реализовать и настроить типизированные службы и клиента с помощью Windows Communication Foundation (WCF). Этот образец является основой для всех остальных базовых образцов технологий.  
@@ -37,7 +37,7 @@ ms.locfileid: "33502268"
 </configuration>  
 ```  
   
- В [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] элемент `<service>` является необязательным. Если конечные точки не заданы в службе, то к службе добавляется конечная точка для каждого базового адреса и реализованного контракта. Базовый адрес добавляется к имени контракта для определения конечной точки, и привязка определяется с помощью схемы адреса. В следующем примере кода показан файл упрощенной конфигурации. В такой конфигурации службы может осуществляться в http://localhost/servicemodelsamples/service.svc с клиента на том же компьютере. Чтобы к службе могли получить доступ клиенты на удаленных компьютерах, вместо имени localhost необходимо указать полное имя домена. По умолчанию служба не предоставляет метаданных. При этом служба включает поведение <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
+ В [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] элемент `<service>` является необязательным. Если конечные точки не заданы в службе, то к службе добавляется конечная точка для каждого базового адреса и реализованного контракта. Базовый адрес добавляется к имени контракта для определения конечной точки, и привязка определяется с помощью схемы адреса. В следующем примере кода показан файл упрощенной конфигурации. Настроенный таким образом, служба может осуществляться с http://localhost/servicemodelsamples/service.svc клиентом на одном компьютере. Чтобы к службе могли получить доступ клиенты на удаленных компьютерах, вместо имени localhost необходимо указать полное имя домена. По умолчанию служба не предоставляет метаданных. При этом служба включает поведение <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -63,21 +63,21 @@ ms.locfileid: "33502268"
   
 3.  Запустите образец, выполнив следующие шаги.  
   
-    1.  Щелкните правой кнопкой мыши **службы** проект и выберите **Назначить запускаемым проектом**, затем нажмите клавишу **Ctrl + F5**.  
+    1.  Щелкните правой кнопкой мыши **службы** проекта и выберите **Назначить запускаемым проектом**, затем нажмите клавишу **Ctrl + F5**.  
   
     2.  Дождитесь вывода данных на консоли, подтверждающих запуск и выполнение службы.  
   
-    3.  Щелкните правой кнопкой мыши **клиента** проект и выберите **Назначить запускаемым проектом**, затем нажмите клавишу **Ctrl + F5**.  
+    3.  Щелкните правой кнопкой мыши **клиента** проекта и выберите **Назначить запускаемым проектом**, затем нажмите клавишу **Ctrl + F5**.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigSimplificationIn40`  
   
 ## <a name="see-also"></a>См. также  
- [Примеры управления AppFabric](http://go.microsoft.com/fwlink/?LinkId=193960)  
+ [Образцы управления AppFabric](https://go.microsoft.com/fwlink/?LinkId=193960)  
  [Упрощенная конфигурация](../../../../docs/framework/wcf/simplified-configuration.md)

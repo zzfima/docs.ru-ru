@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e24acdde486f377cc9187aac088ce7a611cd4eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: dbf47dbfddac7d48b78c9d52969de1ef03385c15
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460754"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486822"
 ---
 # <a name="qualifiersetendenumeration-function"></a>Функция QualifierSet_EndEnumeration
 Завершается перечисление начался вызовом [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) функции.  
@@ -43,29 +43,29 @@ HRESULT QualifierSet_EndEnumeration (
 [in] Этот параметр не используется.
 
 `ptr`   
-[in] Указатель на [IWbemQualifierSet](https://msdn.microsoft.com/library/aa391860(v=vs.85).aspx) экземпляра.
+[in] Указатель на [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset) экземпляра.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Следующее значение, возвращаемое этой функцией, определенные в *WbemCli.h* файла заголовка, или можно задавать как константа в коде:
+Следующее значение, возвращаемое этой функцией, определенные в *WbemCli.h* файл заголовка, также можно определить его как константа в коде:
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
-|`WBEM_S_NO_ERROR` | 0 | Успешный вызов функции.  |
+|`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |
   
 ## <a name="remarks"></a>Примечания
 
-Эта функция создает оболочку для вызова [IWbemQualifierSet::EndEnumeration](https://msdn.microsoft.com/library/aa391865(v=vs.85).aspx) метод.
+Эта функция создает оболочку для вызова [IWbemQualifierSet::EndEnumeration](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-endenumeration) метод.
 
-Этот вызов рекомендуется, но не является обязательным. Он немедленно освобождает ресурсы, связанные с перечислением.
+Этот вызов рекомендуется, но не является обязательным. Она немедленно освобождает ресурсы, связанные с перечислением.
 
 ## <a name="requirements"></a>Требования  
 
-**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
 **Заголовок:** WMINet_Utils.idl  
   
-**Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
-[WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)
+[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

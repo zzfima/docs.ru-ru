@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f980fb1336adaf43091e41b9e42ea008b00c033f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1a96af0c66d85c7eec9a97be3ba8c756b1e91849
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447289"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486679"
 ---
 # <a name="metahostpolicyflags-enumeration"></a>Перечисление METAHOST_POLICY_FLAGS
-Предоставляет политики привязки, которые являются общими для большинства сред выполнения. Это перечисление используется методом [ICLRMetaHostPolicy::GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) метод.  
+Предоставляет политики привязки, которые являются общими для большинства сред выполнения. Это перечисление используется с [ICLRMetaHostPolicy::GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) метод.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -45,25 +45,25 @@ typedef enum {
   
 |Член|Описание|  
 |------------|-----------------|  
-|`METAHOST_POLICY_HIGHCOMPAT`|Определяет политику высокой совместимости, которая не учитывает любые общеязыковая среда выполнения (CLR), который загружается текущего процесса. Вместо этого она рассматривает только установленные среды CLR и предпочтения компонента, как производный от самого файла сборки, объявленного построения для версии или в файле конфигурации.|  
-|`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Применяет политику обновления результат привязки версии, если точное соответствие не найдено, на основе содержимого реестр\\. NETFramework\Policy\Upgrades. Это действует так же, как [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  
-|`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|Результаты привязки возвращаются, как если бы было запущено образа, предоставленного для вызова метода в новом процессе. В настоящее время `GetRequestedRuntime` игнорирует набор загружаемых сред выполнения и привязывается к набору установленных исполняющих сред. Этот флаг позволяет основному приложению определить, какие среда выполнения будет привязан EXE-файла при его запуске.|  
-|`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Если откроется диалоговое окно ошибки `GetRequestedRuntime` не удается найти среду выполнения, которая совместима со входными параметрами. Начиная с версии [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], это диалоговое окно ошибки могут принимать форму Windows функция диалогового окна, запрашивает, нужна ли пользователь включить соответствующую функцию.|  
-|`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime` использует в качестве дополнительных входных данных для процесса привязки образ процесса (и все соответствующие файлы конфигурации). По умолчанию `GetRequestedRuntime` не применяли пути образа процесса (как правило, EXE, который использовался для запуска процесса) при определении среды выполнения для привязки.|  
-|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` необходимо проверить, установлен ли соответствующий SKU при сведения недоступны в файле конфигурации. Это позволяет приложениям, не имеющих файлы конфигурации для корректного сбоя в SKU меньше, чем по умолчанию установка платформы .NET Framework. По умолчанию `GetRequestedRuntime` не проверяет, установлен ли соответствующий SKU, если атрибут SKU не указан в файле конфигурации `<supportedRuntime />` элемента.|  
-|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` необходимо проверить, установлен ли соответствующий SKU при сведения недоступны в файле конфигурации. Это позволяет приложениям, не имеющих файлы конфигурации для корректного сбоя в SKU меньше, чем по умолчанию установка платформы .NET Framework. По умолчанию `GetRequestedRuntime` не проверяет, установлен ли соответствующий SKU, если атрибут SKU не указан в файле конфигурации `<supportedRuntime />` элемента.|  
-|`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` следует игнорировать SEM_FAILCRITICALERRORS (который устанавливается путем вызова [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkId=255242) функции) и Показать диалоговое окно ошибки. По умолчанию SEM_FAILCRITICALERRORS подавляет диалоговое окно ошибки. Он может быть унаследованы от другого процесса и автоматической ошибки может быть нежелательно в сценарий.|  
+|`METAHOST_POLICY_HIGHCOMPAT`|Определяет политику высокой совместимости, которая не учитывает любые общеязыковая среда выполнения (CLR), загруженные в текущий процесс. Вместо этого он считает только установленные среды CLR и настройки компонента, как производный от самого файла сборки, объявленного построения для версии или в файле конфигурации.|  
+|`METAHOST_POLICY_APPLY_UPGRADE_POLICY`|Применяет политику обновления к результату bind версии, если точное соответствие не найдено, на основе содержимого HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. NETFramework\Policy\Upgrades. Это имеет тот же эффект, что [RUNTIME_INFO_UPGRADE_VERSION](../../../../docs/framework/unmanaged-api/hosting/runtime-info-flags-enumeration.md).|  
+|`METAHOST_POLICY_EMULATE_EXE_LAUNCH`|Привязка результаты возвращаются в том случае, как если бы образа, предоставленного в вызов был запущен в новый процесс. В настоящее время `GetRequestedRuntime` игнорирует набор загружаемых сред выполнения и привязывается к набору установленных сред выполнения. Этот флаг позволяет основному приложению определить, какая среда выполнения, EXE-файла будет привязан к при запуске приложения.|  
+|`METAHOST_POLICY_SHOW_ERROR_DIALOG`|Диалоговое окно ошибки отображается в том случае, если `GetRequestedRuntime` не удается найти среду выполнения, которая совместима с входными параметрами. Начиная с версии [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], это диалоговое окно ошибки может принимать форму в диалоговом окне Windows функция, которая запрашивает, нужна ли пользователь для включения соответствующей функции.|  
+|`METAHOST_POLICY_USE_PROCESS_IMAGE_PATH`|`GetRequestedRuntime` использует образ процесса (и все соответствующие файлы конфигурации) в качестве дополнительных входных данных для процесса привязки. По умолчанию `GetRequestedRuntime` переключается на путь к образу процесса (как правило, EXE, который использовался для запуска процесса) при определении среды выполнения для привязки.|  
+|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` необходимо проверить, установлена ли соответствующий номер SKU, если сведения недоступны в файле конфигурации. Это позволяет приложениям, у которых нет файлов конфигурации для корректного завершения сбоем в меньшего размера SKU, чем по умолчанию установка платформы .NET Framework. По умолчанию `GetRequestedRuntime` не проверяет, установлен ли соответствующий номер SKU, если атрибут SKU не указан в файле конфигурации `<supportedRuntime />` элемент.|  
+|`METAHOST_POLICY_ENSURE_SKU_SUPPORTED`|`GetRequestedRuntime` необходимо проверить, установлена ли соответствующий номер SKU, если сведения недоступны в файле конфигурации. Это позволяет приложениям, у которых нет файлов конфигурации для корректного завершения сбоем в меньшего размера SKU, чем по умолчанию установка платформы .NET Framework. По умолчанию `GetRequestedRuntime` не проверяет, установлен ли соответствующий номер SKU, если атрибут SKU не указан в файле конфигурации `<supportedRuntime />` элемент.|  
+|`METAHOST_POLICY_IGNORE_ERROR_MODE`|`GetRequestedRuntime` должен игнорировать SEM_FAILCRITICALERRORS (который устанавливается путем вызова [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkId=255242) функции) и диалоговое окно ошибки. По умолчанию SEM_FAILCRITICALERRORS подавляет диалоговое окно ошибки. Его могут быть унаследованы от другого процесса и автоматической ошибка может быть нежелательно в вашем сценарии.|  
   
 ## <a name="remarks"></a>Примечания  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** Metahost.h  
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Размещение перечислений](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  

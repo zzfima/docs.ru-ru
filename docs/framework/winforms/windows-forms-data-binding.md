@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], architecture
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
-ms.openlocfilehash: f0267a774d284cac1672ff971d6af3ec3439c84d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cfb4c59c76142420f479b0b16a6d80317e98d159
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540648"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486014"
 ---
 # <a name="windows-forms-data-binding"></a>Привязка данных Windows Forms
 Привязка данных в Windows Forms дает возможность отображать и изменять информацию из источника данных в элементах управления в форме. В Windows Forms можно выполнить привязку не только к традиционным источникам данных, но и к практически к любой структуре, содержащий данные.  
@@ -37,7 +37,7 @@ ms.locfileid: "33540648"
  Показано, как реализовать интерфейс <xref:System.ComponentModel.INotifyPropertyChanged>. Этот интерфейс сообщает связанному элементу управления об изменениях свойств бизнес-объекта  
   
  [Практическое руководство. Применение шаблона PropertyNameChanged](../../../docs/framework/winforms/how-to-apply-the-propertynamechanged-pattern.md)  
- Показано, как применить *PropertyName*шаблон Changed к свойствам пользовательского элемента управления Windows Forms.  
+ Демонстрирует применение *PropertyName*шаблон Changed к свойствам пользовательского элемента управления Windows Forms.  
   
  [Практическое руководство. Реализация интерфейса ITypedList](../../../docs/framework/winforms/how-to-implement-the-itypedlist-interface.md)  
  Показано, как задействовать обнаружение схемы для связываемого списка путем реализации интерфейса <xref:System.ComponentModel.ITypedList>.  
@@ -51,7 +51,7 @@ ms.locfileid: "33540648"
  [Практическое руководство. Правильное позиционирование выделенной строки в дочерней таблице](../../../docs/framework/winforms/ensure-the-selected-row-in-a-child-table-correct.md)  
  Показано, как обеспечить сохранение позиции выбранной строки дочерней таблицы при изменении поля родительской таблицы.  
   
- См. также [интерфейсы, связанные с привязкой данных](http://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [как: перемещения данных в Windows Forms](http://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [как: Создание элемента управления простой привязкой в форме Windows](http://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
+ Также см. в разделе [интерфейсы, относящиеся к привязке данных](https://msdn.microsoft.com/library/41e17s4b\(v=vs.110\)), [как: перемещения данных в Windows Forms](https://msdn.microsoft.com/library/b63ha24w\(v=vs.110\)), [как: Создание элемента управления простой привязкой в форме Windows](https://msdn.microsoft.com/library/sw223a62\(v=vs.110\)).  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
@@ -67,4 +67,4 @@ ms.locfileid: "33540648"
  [Элемент управления DataGridView](../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
  Предоставляет список разделов, в которых демонстрируется использование связываемого элемента управления datagrid.  
   
- См. также [доступ к данным в Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).
+ Также см. в разделе [доступ к данным в Visual Studio](/visualstudio/data-tools/accessing-data-in-visual-studio).

@@ -2,12 +2,12 @@
 title: Пользовательский перехватчик сообщений
 ms.date: 03/30/2017
 ms.assetid: 73f20972-53f8-475a-8bfe-c133bfa225b0
-ms.openlocfilehash: a59b2075473e2ca4c8cb8751fd6cb733f282238b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 5a72a964c571cf68d4b215f4029ff95c52cba0e2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806322"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486744"
 ---
 # <a name="custom-message-interceptor"></a>Пользовательский перехватчик сообщений
 Данный образец демонстрирует использование модели расширяемости канала. В частности, показано, как реализовать пользовательский элемент привязки, который создает фабрики и прослушиватели каналов для перехвата всех входящих и исходящих сообщений в определенной точке стека времени выполнения. В состав образца входят клиент и сервер, которые демонстрируют использование этих пользовательских фабрик.  
@@ -22,11 +22,11 @@ ms.locfileid: "33806322"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\MessageInterceptor`  
   
- Образец описана процедура, предлагаемая для создания пользовательского многоуровневого канала в Windows Communication Foundation (WCF), с помощью инфраструктуры канала и согласно рекомендации WCF. Чтобы создать пользовательский многоуровневый канал, выполните следующие действия.  
+ Образец описана процедура, предлагаемая для создания пользовательского многоуровневого канала в Windows Communication Foundation (WCF), с помощью инфраструктуры канала и согласно рекомендации по WCF. Чтобы создать пользовательский многоуровневый канал, выполните следующие действия.  
   
 1.  Выберите формы канала, которые будут поддерживать фабрика и прослушиватель каналов.  
   
@@ -52,7 +52,7 @@ class InterceptingChannelListener<TChannel> : ListenerFactoryBase<TChannel>
 ```  
   
 ## <a name="adding-a-binding-element"></a>Добавление элемента привязки  
- В образце определен пользовательский элемент привязки: `InterceptingBindingElement`. `InterceptingBindingElement` принимает `ChannelMessageInterceptor` в качестве входного и использует этот `ChannelMessageInterceptor` для обработки сообщений, проходящих через него. Только этот класс должен быть открытым. Фабрика, прослушиватель и каналы - все они могут являться внутренними реализациями открытых интерфейсов времени выполнения.  
+ В образце определен пользовательский элемент привязки: `InterceptingBindingElement`. `InterceptingBindingElement` принимает `ChannelMessageInterceptor` качестве входных данных и использует этот `ChannelMessageInterceptor` для обработки сообщений, проходящих через него. Только этот класс должен быть открытым. Фабрика, прослушиватель и каналы - все они могут являться внутренними реализациями открытых интерфейсов времени выполнения.  
   
 ```  
 public class InterceptingBindingElement : BindingElement  
@@ -157,7 +157,7 @@ Dangerous wind detected! Reported speed (70) is greater than 64 kph.
   
 3.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-4.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 5.  Первым запустите файл Service.exe, затем Client.exe и наблюдайте результат в обоих окнах консоли.  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 3b88835cc7836d9d6c323de3c0386b3f4c7c3078
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6dd9ad2a09c7fa587ec82df002d36ed258811fb9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399617"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483925"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>Создание первой службы WCF на основе утверждений
 ## <a name="applies-to"></a>Применение  
@@ -33,13 +33,13 @@ ms.locfileid: "33399617"
   
  STS — это служба, использующая токены после успешной аутентификации. Microsoft предлагает две службы STS, соответствующие отраслевым стандартам:  
   
--   [Службы федерации Active Directory (AD FS) 2.0](http://go.microsoft.com/fwlink/?LinkID=247516) ()http://go.microsoft.com/fwlink/?LinkID=247516)  
+-   [Службы федерации Active Directory (AD FS) 2.0](https://go.microsoft.com/fwlink/?LinkID=247516)
   
--   [Windows Azure Access Control Service (ACS)](http://go.microsoft.com/fwlink/?LinkID=247517) (http://go.microsoft.com/fwlink/?LinkID=247517).  
+-   [Windows Azure Access Control Service (ACS)](https://go.microsoft.com/fwlink/?LinkID=247517)
   
- AD FS 2.0 является компонентом решения Windows Server R2 и может использоваться в качестве службы STS для локальных сценариев. Контроль доступа Azure Active Directory (также называемый службой контроля доступа или ACS) — это облачная служба, входящая в состав Microsoft Azure. Для тестирования или обучения можно также использовать другие службы STS, создавая с их помощью приложения, поддерживающие утверждения. Например, можно использовать Local Development STS, который является частью [Identity and Access Tool для Visual Studio](http://go.microsoft.com/fwlink/?LinkID=245849) (http://go.microsoft.com/fwlink/?LinkID=245849) которого можно бесплатно.  
+ AD FS 2.0 является компонентом решения Windows Server R2 и может использоваться в качестве службы STS для локальных сценариев. Контроль доступа Azure Active Directory (также называемый службой контроля доступа или ACS) — это облачная служба, входящая в состав Microsoft Azure. Для тестирования или обучения можно также использовать другие службы STS, создавая с их помощью приложения, поддерживающие утверждения. Например, можно использовать STS локальной разработки, который является частью [Identity and Access Tool для Visual Studio](https://go.microsoft.com/fwlink/?LinkID=245849) которая доступна через Интернет.  
   
- Для построения первый утверждениям службы WCF с помощью WIF, см. [How To: Включение WIF для веб-службы WCF приложения](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
+ Для создания первой по утверждениям службы WCF с помощью WIF, см. в разделе [How To: Включение WIF для веб-службы приложения WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md).
   
 ## <a name="see-also"></a>См. также  
  [Приступая к работе с WIF](../../../docs/framework/security/getting-started-with-wif.md)

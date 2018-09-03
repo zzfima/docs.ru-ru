@@ -9,15 +9,16 @@ ms.assetid: e91a7393-a7f9-4838-a1a6-857438b24bc9
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 752ac4cfddd5ca8c8b42d05e1a452cd0ef60ee36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5f40c19d537ffb48a1077a30e1a9b0d66c4f791
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484571"
 ---
 # <a name="ui-automation-support-for-the-calendar-control-type"></a>Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Calendar
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе содержатся сведения о поддержке [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] типа элемента управления Calendar. В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]тип элемента управления — это набор условий, которым должен удовлетворять элемент управления для использования свойства <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Условия включают конкретные правила для древовидной структуры [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значений свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , шаблонов элементов управления и событий [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
@@ -31,13 +32,13 @@ ms.lasthandoff: 05/04/2018
   
 |Представление элемента управления|Представление содержимого|  
 |------------------|------------------|  
-|Календарь<br /><br /> <ul><li>DataGrid<br /><br /> <ul><li>Header (0 или 1)</li><li>HeaderItem (0 или 7; количество зависит от того, сколько дней отображается в столбцах)</li><li>ListItem (количество зависит от того, сколько дней отображается)</li><li>Button (0 или 2; для разбивки представления календаря по страницам)</li></ul></li></ul>|Календарь<br /><br /> -ListItem (количество зависит от количества дней отображается)|  
+|Календарь<br /><br /> <ul><li>DataGrid<br /><br /> <ul><li>Header (0 или 1)</li><li>HeaderItem (0 или 7; количество зависит от того, сколько дней отображается в столбцах)</li><li>ListItem (количество зависит от того, сколько дней отображается)</li><li>Button (0 или 2; для разбивки представления календаря по страницам)</li></ul></li></ul>|Календарь<br /><br /> -ListItem (количество зависит от сколько дней отображается)|  
   
  Элементы управления "Календарь" могут быть представлены в пользовательском интерфейсе во многих различных формах. Единственные элементы управления, которые обязательно будут в представлении элемента управления дерева [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , — это сетка данных, заголовок, элемент заголовка и список.  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Требуемые свойства модели автоматизации пользовательского интерфейса  
- В следующей таблице перечислены свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значения или определения которых особенно актуальны для элементов управления "Календарь". Дополнительные сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] свойствах см. [свойства модели автоматизации пользовательского интерфейса для клиентов](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
+ В следующей таблице перечислены свойства [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значения или определения которых особенно актуальны для элементов управления "Календарь". Дополнительные сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] свойства, см. в разделе [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md).  
   
 |Свойство[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] |Значение|Примечания|  
 |------------------------------------------------------------------------------------|-----------|-----------|  

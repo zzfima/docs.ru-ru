@@ -10,12 +10,12 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 67e1f8abe6872358a29ab8f6734b58c1c1bc809c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6b227915a98bb757b559d229ebc1ee757ffb25c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533761"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480121"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Практическое руководство. Циклическое воспроизведение звука в Windows Forms
 В следующем примере кода выполняется повторяющееся воспроизведение звука. Когда этот код запускается в обработчике события `stopPlayingButton_Click`, воспроизведение звука останавливается. Если звук не воспроизводится, то ничего не происходит.  
@@ -31,7 +31,7 @@ ms.locfileid: "33533761"
   
 -   замена имени файла `"c:\Windows\Media\chimes.wav"` на допустимое имя файла.  
   
- Сведения о построении этого примера из командной строки для visual Basic или Visual C# см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [построение с командной строки csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также построить этот пример, в Visual Studio, вставив код в новый проект.  См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о выполнении сборки этого примера из командной строки для visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно также сборке этого примера в Visual Studio путем вставки кода в новый проект.  См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Операции с файлами должны быть включены в соответствующие блоки обработки исключений.  

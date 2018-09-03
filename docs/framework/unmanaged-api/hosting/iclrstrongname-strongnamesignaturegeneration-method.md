@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 217b54a615d7c553e714ef87b3c2bb6a1919ae98
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1571e43d6a89af453d6289ccb646c7222f0a5ad6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435379"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483114"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegeneration-method"></a>Метод ICLRStrongName::StrongNameSignatureGeneration
-Создает подпись со строгим именем для указанной сборки.  
+Создает подпись строгого имени для указанной сборки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -42,47 +42,47 @@ HRESULT StrongNameSignatureGeneration (
   
 #### <a name="parameters"></a>Параметры  
  `wszFilePath`  
- [in] Путь к файлу, содержащему манифест сборки, для которого будет создаваться подписи строгого имени.  
+ [in] Путь к файлу, содержащему манифест сборки, для которого требуется создать подпись строгого имени.  
   
  `wszKeyContainer`  
  [in] Имя контейнера ключа, который содержит пару открытого и закрытого ключей.  
   
- Если `pbKeyBlob` имеет значение null, `wszKeyContainer` необходимо указать допустимый контейнер в поставщике служб шифрования (CSP). В этом случае для подписания файла используется пара ключей, хранящихся в контейнере.  
+ Если `pbKeyBlob` имеет значение null, `wszKeyContainer` необходимо указать допустимый контейнер в поставщик служб шифрования (CSP). В этом случае для подписывания файла используется пара ключей, хранящихся в контейнере.  
   
- Если `pbKeyBlob` не равно null, предполагается пары ключей должен содержаться в ключевых большой двоичный объект (BLOB).  
+ Если `pbKeyBlob` не равно null, предполагается, что пары ключей должен содержаться в ключевых большой двоичный объект (BLOB).  
   
- Ключи должны быть 1024-разрядный Rivest шифрования RSA--Adleman () ключей подписывания. Другие типы ключей не поддерживаются в данный момент.  
+ Ключи должны быть Rivest-Шамир-Adleman 1024-разрядный (RSA) ключи подписывания. Другие типы ключей не поддерживаются в настоящее время.  
   
  `pbKeyBlob`  
- [in] Указатель на пару открытого и закрытого ключей. Эта пара имеет формат, созданные Win32 `CryptExportKey` функции. Если `pbKeyBlob` равен null, контейнер ключей, заданные `wszKeyContainer` должна содержать пары ключей.  
+ [in] Указатель на пару открытого и закрытого ключей. Эта пара имеет формат, созданные Win32 `CryptExportKey` функции. Если `pbKeyBlob` имеет значение null, контейнере ключей `wszKeyContainer` предполагается, что содержит пару ключей.  
   
  `cbKeyBlob`  
- [in] Размер в байтах для `pbKeyBlob`.  
+ [in] Размер в байтах из `pbKeyBlob`.  
   
  `ppbSignatureBlob`  
- [out] Указатель на расположение, к которому Общеязыковая среда выполнения возвращает подпись. Если `ppbSignatureBlob` имеет значение null, среда выполнения сохраняет подпись в файл, заданный параметром `wszFilePath`.  
+ [out] Указатель на расположение, к которому среда CLR возвращает подпись. Если `ppbSignatureBlob` имеет значение null, среда выполнения сохраняет подпись в файл, указанный параметром `wszFilePath`.  
   
- Если `ppbSignatureBlob` — не null, общеязыковая среда выполнения выделяет место для возвращения подписи. Вызывающий объект должен освободить это пространство с помощью [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод.  
+ Если `ppbSignatureBlob` — не равно null, среда CLR выделяет место для возвращения подписи. Вызывающий объект должен освободить это пространство с помощью [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод.  
   
  `pcbSignatureBlob`  
- [out] Размер в байтах, возвращаемой подписи.  
+ [out] Размер в байтах, возвращаемой сигнатуры.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (в разделе [часто встречающихся значений HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
   
 ## <a name="remarks"></a>Примечания  
  Укажите значение null для `wszFilePath` для вычисления размера подписи без создания подписи.  
   
- Подпись может быть храниться непосредственно в файле или возвращается вызывающему.  
+ Подписи могут быть сохранены либо непосредственно в файле или возвращается вызывающей стороне.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** MetaHost.h  
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Метод StrongNameSignatureGenerationEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignaturegenerationex-method.md)  

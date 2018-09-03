@@ -1,15 +1,15 @@
 ---
-title: '&lt;netMsmqBinding&gt;'
+title: '&lt;NetMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
-ms.openlocfilehash: d4d28a799acecd335d8155a7ae67b6365b3f0023
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 05ab1b064f6dd7bb28d1d118ec8c4249da5a75e1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751679"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43487095"
 ---
-# <a name="ltnetmsmqbindinggt"></a>&lt;netMsmqBinding&gt;
+# <a name="ltnetmsmqbindinggt"></a>&lt;NetMsmqBinding&gt;
 Определяет поставленную в очередь привязку, пригодную для обеспечения связи между компьютерами.  
   
  \<система. ServiceModel >  
@@ -70,9 +70,9 @@ ms.locfileid: "32751679"
 |`maxBufferPoolSize`|Целое число, задающее максимальный размер буферного пула для этой привязки. Значение по умолчанию — 8.|  
 |`maxReceivedMessageSize`|Положительное целое число, определяющее максимальный размер сообщения (в байтах), включая заголовки, которое обрабатывается этой привязкой. Отправитель сообщения, превышающего это ограничение, получит ошибку SOAP. Получатель отклоняет сообщение и создает запись о событии в журнале трассировки. Значение по умолчанию — 65536. Это ограничение размера сообщения предназначено для уменьшения уязвимости к атакам типа «отказ в обслуживании» (DoS).|  
 |`maxRetryCycles`|Целое число, указывающее количество циклов повтора, используемых функцией обнаружения подозрительных сообщений. Сообщение становится подозрительным, если попытки доставки во всех циклах закончились неудачей. Значение по умолчанию — 3. Для получения дополнительной информации см. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>.|  
-|`name`|Обязательный атрибут. Строка, содержащая имя конфигурации привязки. Это значение должно быть уникальным, поскольку оно используется в качестве идентификатора привязки. Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена. Дополнительные сведения о конфигурации по умолчанию и безымянные привязок и поведений см. в разделе [упрощенной конфигурации](../../../../../docs/framework/wcf/simplified-configuration.md) и [упрощенной конфигурации для служб WCF](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`name`|Обязательный атрибут. Строка, содержащая имя конфигурации привязки. Это значение должно быть уникальным, поскольку оно используется в качестве идентификатора привязки. Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена. Дополнительные сведения о конфигурации по умолчанию и безымянных привязках и поведениях см. в разделе [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
 |`openTimeout`|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции открытия. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:01:00.|  
-|`QueueTransferProtocol`|Допустимое значение <xref:System.ServiceModel.QueueTransferProtocol>, задающее поставленный в очередь транспорт коммуникационного канала, используемый этой привязкой. MSMQ не поддерживает адресацию Active Directory при использовании протокола надежного обмена сообщениями SOAP. Таким образом, не следует устанавливать этот атрибут `Srmp` или `Srmps` при `u``seActiveDirectory` атрибута задано значение `true`.|  
+|`QueueTransferProtocol`|Допустимое значение <xref:System.ServiceModel.QueueTransferProtocol>, задающее поставленный в очередь транспорт коммуникационного канала, используемый этой привязкой. MSMQ не поддерживает адресацию Active Directory при использовании протокола надежного обмена сообщениями SOAP. Таким образом, не устанавливайте этот атрибут `Srmp` или `Srmps` при `useActiveDirectory` атрибут имеет значение `true`.|  
 |`receiveErrorHandling`|Значение <xref:System.ServiceModel.ReceiveErrorHandling>, указывающее, каким образом будут обрабатываться подозрительные сообщения и сообщения, которые не удалось доставить.|  
 |`receiveRetryCount`|Целое число, задающее максимальное число попыток отправки сообщения диспетчером очереди, после которого сообщение передается в очередь повторного выполнения.|  
 |`receiveTimeout`|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции получения. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:10:00.|  
@@ -87,7 +87,7 @@ ms.locfileid: "32751679"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|Определяет параметры безопасности привязки. Это элемент типа <xref:System.ServiceModel.Configuration.NetMsmqSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
@@ -97,7 +97,7 @@ ms.locfileid: "32751679"
 |[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
 ## <a name="remarks"></a>Примечания  
- Привязка `netMsmqBinding` обеспечивает поддержку организации очереди, используя очередь сообщений (MSMQ) как транспорт, и включает поддержку слабо связанных приложений, изоляции сбоев, распределения нагрузки, а также операций при отсутствии подключения к сети. Описание этих возможностей см. в разделе [очереди в WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
+ Привязка `netMsmqBinding` обеспечивает поддержку организации очереди, используя очередь сообщений (MSMQ) как транспорт, и включает поддержку слабо связанных приложений, изоляции сбоев, распределения нагрузки, а также операций при отсутствии подключения к сети. Описание этих возможностей, см. в разделе [очереди в WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md).  
   
 ## <a name="example"></a>Пример  
   
@@ -139,5 +139,5 @@ ms.locfileid: "32751679"
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [Очереди в WCF](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)

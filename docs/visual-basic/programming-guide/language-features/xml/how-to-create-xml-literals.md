@@ -5,24 +5,24 @@ helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
 ms.openlocfilehash: e5f8429b3ff02678bf8bf3e9e32bef6eb1a56831
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652874"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483623"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>Практическое руководство. Создание XML-литералов (Visual Basic)
-Можно создать документ, фрагмент или элемент XML непосредственно в коде с помощью XML-литерала. Примеры в этом разделе демонстрируют способ создания XML-элемента, который имеет три дочерних элемента и способ создания XML-документа.  
+XML документ, фрагмент или элемент можно создать непосредственно в коде с помощью XML-литерала. В примерах в этом разделе показано, как создать элемент XML, содержит три дочерних элемента и способ создания XML-документа.  
   
- Можно также использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API для создания [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объектов. Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XElement>.  
+ Можно также использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] API-интерфейсы для создания [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] объектов. Дополнительные сведения см. в разделе <xref:System.Xml.Linq.XElement>.  
   
 ### <a name="to-create-an-xml-element"></a>Чтобы создать XML-элемент  
   
--   Создайте встроенный XML, используя синтаксис XML-литерала, который совпадает с фактическим синтаксисом XML.  
+-   Создайте встроенный XML, используя синтаксис XML, который является таким же, как фактический синтаксис XML.  
   
      [!code-vb[VbXMLSamples#5](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_1.vb)]  
   
-     Выполните код. Результат выполнения этого кода является:  
+     Выполните код. Ниже приведен результат выполнения этого кода.  
   
      `<contact>`  
   
@@ -36,11 +36,11 @@ ms.locfileid: "33652874"
   
 ### <a name="to-create-an-xml-document"></a>Для создания XML-документа  
   
--   Создайте встроенный XML-документ. Следующий код создает XML-документ, который имеет синтаксис литералов, XML-декларация, инструкции по обработке, комментарий и элемент, содержащий другой элемент.  
+-   Создайте встроенный XML-документ. Следующий код создает XML-документ, который имеет синтаксис литерала XML-декларация, инструкции по обработке, комментарий и элемент, содержащий другой элемент.  
   
      [!code-vb[VbXMLSamples#30](../../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/how-to-create-xml-literals_2.vb)]  
   
-     Выполните код. Результат выполнения этого кода является:  
+     Выполните код. Ниже приведен результат выполнения этого кода.  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   
