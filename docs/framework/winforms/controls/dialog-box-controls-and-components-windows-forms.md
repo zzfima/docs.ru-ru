@@ -7,64 +7,64 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], Windows Forms
 - Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
-ms.openlocfilehash: 351efadfa2c97e9f36610e251c1a2f935d02514b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5af2ce568b4c4bcb66de13f18a29b3f465672ffd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527214"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456416"
 ---
-# <a name="dialog-box-controls-and-components-windows-forms"></a><span data-ttu-id="31375-102">Элементы управления и компоненты диалоговых окон (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="31375-102">Dialog-Box Controls and Components (Windows Forms)</span></span>
-<span data-ttu-id="31375-103">Перечисленные ниже элементы управления и компоненты Windows Forms представляют стандартные диалоговые окна.</span><span class="sxs-lookup"><span data-stu-id="31375-103">The following Windows Forms controls and components present standard dialog boxes.</span></span> <span data-ttu-id="31375-104">Чтобы получить дополнительную информацию о функциях, доступных в каждом диалоговом окне, щелкните соответствующую ссылку.</span><span class="sxs-lookup"><span data-stu-id="31375-104">Follow the links for more information about the functions available in each dialog box.</span></span>  
+# <a name="dialog-box-controls-and-components-windows-forms"></a><span data-ttu-id="52b97-102">Элементы управления и компоненты диалоговых окон (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="52b97-102">Dialog-Box Controls and Components (Windows Forms)</span></span>
+<span data-ttu-id="52b97-103">Перечисленные ниже элементы управления и компоненты Windows Forms представляют стандартные диалоговые окна.</span><span class="sxs-lookup"><span data-stu-id="52b97-103">The following Windows Forms controls and components present standard dialog boxes.</span></span> <span data-ttu-id="52b97-104">Чтобы получить дополнительную информацию о функциях, доступных в каждом диалоговом окне, щелкните соответствующую ссылку.</span><span class="sxs-lookup"><span data-stu-id="52b97-104">Follow the links for more information about the functions available in each dialog box.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="31375-105">Ссылка</span><span class="sxs-lookup"><span data-stu-id="31375-105">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="52b97-105">Ссылка</span><span class="sxs-lookup"><span data-stu-id="52b97-105">Reference</span></span>  
  <xref:System.Windows.Forms.ColorDialog>  
- <span data-ttu-id="31375-106">Справочная информация о классе <xref:System.Windows.Forms.ColorDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="31375-106">Provides reference information about the <xref:System.Windows.Forms.ColorDialog> class and its members.</span></span>  
+ <span data-ttu-id="52b97-106">Справочная информация о классе <xref:System.Windows.Forms.ColorDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="52b97-106">Provides reference information about the <xref:System.Windows.Forms.ColorDialog> class and its members.</span></span>  
   
  <xref:System.Windows.Forms.FontDialog>  
- <span data-ttu-id="31375-107">Справочная информация о классе <xref:System.Windows.Forms.FontDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="31375-107">Provides reference information about the <xref:System.Windows.Forms.FontDialog> class and its members.</span></span>  
+ <span data-ttu-id="52b97-107">Справочная информация о классе <xref:System.Windows.Forms.FontDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="52b97-107">Provides reference information about the <xref:System.Windows.Forms.FontDialog> class and its members.</span></span>  
   
  <xref:System.Windows.Forms.OpenFileDialog>  
- <span data-ttu-id="31375-108">Справочная информация о классе <xref:System.Windows.Forms.OpenFileDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="31375-108">Provides reference information about the <xref:System.Windows.Forms.OpenFileDialog> class and its members.</span></span>  
+ <span data-ttu-id="52b97-108">Справочная информация о классе <xref:System.Windows.Forms.OpenFileDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="52b97-108">Provides reference information about the <xref:System.Windows.Forms.OpenFileDialog> class and its members.</span></span>  
   
  <xref:System.Windows.Forms.PageSetupDialog>  
- <span data-ttu-id="31375-109">Справочная информация о классе <xref:System.Windows.Forms.PageSetupDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="31375-109">Provides reference information about the <xref:System.Windows.Forms.PageSetupDialog> class and its members.</span></span>  
+ <span data-ttu-id="52b97-109">Справочная информация о классе <xref:System.Windows.Forms.PageSetupDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="52b97-109">Provides reference information about the <xref:System.Windows.Forms.PageSetupDialog> class and its members.</span></span>  
   
  <xref:System.Windows.Forms.PrintDialog>  
- <span data-ttu-id="31375-110">Справочная информация о классе <xref:System.Windows.Forms.PrintDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="31375-110">Provides reference information about the <xref:System.Windows.Forms.PrintDialog> class and its members.</span></span>  
+ <span data-ttu-id="52b97-110">Справочная информация о классе <xref:System.Windows.Forms.PrintDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="52b97-110">Provides reference information about the <xref:System.Windows.Forms.PrintDialog> class and its members.</span></span>  
   
  <xref:System.Windows.Forms.PrintPreviewDialog>  
- <span data-ttu-id="31375-111">Справочная информация о классе <xref:System.Windows.Forms.PrintPreviewDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="31375-111">Provides reference information about the <xref:System.Windows.Forms.PrintPreviewDialog> class and its members.</span></span>  
+ <span data-ttu-id="52b97-111">Справочная информация о классе <xref:System.Windows.Forms.PrintPreviewDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="52b97-111">Provides reference information about the <xref:System.Windows.Forms.PrintPreviewDialog> class and its members.</span></span>  
   
  <xref:System.Windows.Forms.SaveFileDialog>  
- <span data-ttu-id="31375-112">Справочная информация о классе <xref:System.Windows.Forms.SaveFileDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="31375-112">Provides reference information about the <xref:System.Windows.Forms.SaveFileDialog> class and its members.</span></span>  
+ <span data-ttu-id="52b97-112">Справочная информация о классе <xref:System.Windows.Forms.SaveFileDialog> и его членах.</span><span class="sxs-lookup"><span data-stu-id="52b97-112">Provides reference information about the <xref:System.Windows.Forms.SaveFileDialog> class and its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="31375-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="31375-113">Related Sections</span></span>  
- [<span data-ttu-id="31375-114">Диалоговые окна в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="31375-114">Dialog Boxes in Windows Forms</span></span>](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
- <span data-ttu-id="31375-115">Инструкции по созданию диалогового окна для формы Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="31375-115">Describes how to create a dialog box for a Windows Form.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="52b97-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="52b97-113">Related Sections</span></span>  
+ [<span data-ttu-id="52b97-114">Диалоговые окна в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="52b97-114">Dialog Boxes in Windows Forms</span></span>](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+ <span data-ttu-id="52b97-115">Инструкции по созданию диалогового окна для формы Windows Forms.</span><span class="sxs-lookup"><span data-stu-id="52b97-115">Describes how to create a dialog box for a Windows Form.</span></span>  
   
- [<span data-ttu-id="31375-116">Общие сведения о компоненте ColorDialog</span><span class="sxs-lookup"><span data-stu-id="31375-116">ColorDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
- <span data-ttu-id="31375-117">Предоставляет стандартное диалоговое окно для выбора цветов из палитры и добавления в нее дополнительных цветов.</span><span class="sxs-lookup"><span data-stu-id="31375-117">Enables the user to select a color from a palette in a pre-configured dialog box and to add custom colors to that palette.</span></span>  
+ [<span data-ttu-id="52b97-116">Общие сведения о компоненте ColorDialog</span><span class="sxs-lookup"><span data-stu-id="52b97-116">ColorDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="52b97-117">Предоставляет стандартное диалоговое окно для выбора цветов из палитры и добавления в нее дополнительных цветов.</span><span class="sxs-lookup"><span data-stu-id="52b97-117">Enables the user to select a color from a palette in a pre-configured dialog box and to add custom colors to that palette.</span></span>  
   
- [<span data-ttu-id="31375-118">Общие сведения о компоненте FolderBrowserDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="31375-118">FolderBrowserDialog Component Overview (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
- <span data-ttu-id="31375-119">Служит для просмотра и выбора папок пользователями.</span><span class="sxs-lookup"><span data-stu-id="31375-119">Enables users to browse and select folders.</span></span>  
+ [<span data-ttu-id="52b97-118">Общие сведения о компоненте FolderBrowserDialog (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="52b97-118">FolderBrowserDialog Component Overview (Windows Forms)</span></span>](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="52b97-119">Служит для просмотра и выбора папок пользователями.</span><span class="sxs-lookup"><span data-stu-id="52b97-119">Enables users to browse and select folders.</span></span>  
   
- [<span data-ttu-id="31375-120">Общие сведения о компоненте FontDialog</span><span class="sxs-lookup"><span data-stu-id="31375-120">FontDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
- <span data-ttu-id="31375-121">Предоставляет приложениям шрифты, установленные в системе на текущий момент.</span><span class="sxs-lookup"><span data-stu-id="31375-121">Exposes the fonts that are currently installed on the system.</span></span>  
+ [<span data-ttu-id="52b97-120">Общие сведения о компоненте FontDialog</span><span class="sxs-lookup"><span data-stu-id="52b97-120">FontDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="52b97-121">Предоставляет приложениям шрифты, установленные в системе на текущий момент.</span><span class="sxs-lookup"><span data-stu-id="52b97-121">Exposes the fonts that are currently installed on the system.</span></span>  
   
- [<span data-ttu-id="31375-122">Общие сведения о компоненте OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="31375-122">OpenFileDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
- <span data-ttu-id="31375-123">Позволяет пользователям открывать файлы в стандартном диалоговом окне.</span><span class="sxs-lookup"><span data-stu-id="31375-123">Allows users to open files via a pre-configured dialog box.</span></span>  
+ [<span data-ttu-id="52b97-122">Общие сведения о компоненте OpenFileDialog</span><span class="sxs-lookup"><span data-stu-id="52b97-122">OpenFileDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="52b97-123">Позволяет пользователям открывать файлы в стандартном диалоговом окне.</span><span class="sxs-lookup"><span data-stu-id="52b97-123">Allows users to open files via a pre-configured dialog box.</span></span>  
   
- [<span data-ttu-id="31375-124">Общие сведения о компоненте PageSetupDialog</span><span class="sxs-lookup"><span data-stu-id="31375-124">PageSetupDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
- <span data-ttu-id="31375-125">Предоставляет стандартное диалоговое окно для задания параметров страницы для печати.</span><span class="sxs-lookup"><span data-stu-id="31375-125">Sets page details for printing via a pre-configured dialog box.</span></span>  
+ [<span data-ttu-id="52b97-124">Общие сведения о компоненте PageSetupDialog</span><span class="sxs-lookup"><span data-stu-id="52b97-124">PageSetupDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="52b97-125">Предоставляет стандартное диалоговое окно для задания параметров страницы для печати.</span><span class="sxs-lookup"><span data-stu-id="52b97-125">Sets page details for printing via a pre-configured dialog box.</span></span>  
   
- [<span data-ttu-id="31375-126">Общие сведения о компоненте PrintDialog</span><span class="sxs-lookup"><span data-stu-id="31375-126">PrintDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/printdialog-component-overview-windows-forms.md)  
- <span data-ttu-id="31375-127">Служит для выбора принтера, печатаемых страниц и других параметров печати.</span><span class="sxs-lookup"><span data-stu-id="31375-127">Selects a printer, chooses the pages to print, and determines other print-related settings.</span></span>  
+ [<span data-ttu-id="52b97-126">Общие сведения о компоненте PrintDialog</span><span class="sxs-lookup"><span data-stu-id="52b97-126">PrintDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/printdialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="52b97-127">Служит для выбора принтера, печатаемых страниц и других параметров печати.</span><span class="sxs-lookup"><span data-stu-id="52b97-127">Selects a printer, chooses the pages to print, and determines other print-related settings.</span></span>  
   
- [<span data-ttu-id="31375-128">Общие сведения об элементе управления PrintPreviewDialog</span><span class="sxs-lookup"><span data-stu-id="31375-128">PrintPreviewDialog Control Overview</span></span>](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)  
- <span data-ttu-id="31375-129">Выводит документ в том виде, как он будет выглядеть при печати.</span><span class="sxs-lookup"><span data-stu-id="31375-129">Displays a document as it will appear when it is printed.</span></span>  
+ [<span data-ttu-id="52b97-128">Общие сведения об элементе управления PrintPreviewDialog</span><span class="sxs-lookup"><span data-stu-id="52b97-128">PrintPreviewDialog Control Overview</span></span>](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)  
+ <span data-ttu-id="52b97-129">Выводит документ в том виде, как он будет выглядеть при печати.</span><span class="sxs-lookup"><span data-stu-id="52b97-129">Displays a document as it will appear when it is printed.</span></span>  
   
- [<span data-ttu-id="31375-130">Общие сведения о компоненте SaveFileDialog</span><span class="sxs-lookup"><span data-stu-id="31375-130">SaveFileDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
- <span data-ttu-id="31375-131">Служит для выбора сохраняемых файлов и места их сохранения.</span><span class="sxs-lookup"><span data-stu-id="31375-131">Selects files to save and where to save them.</span></span>  
+ [<span data-ttu-id="52b97-130">Общие сведения о компоненте SaveFileDialog</span><span class="sxs-lookup"><span data-stu-id="52b97-130">SaveFileDialog Component Overview</span></span>](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
+ <span data-ttu-id="52b97-131">Служит для выбора сохраняемых файлов и места их сохранения.</span><span class="sxs-lookup"><span data-stu-id="52b97-131">Selects files to save and where to save them.</span></span>  
   
- <span data-ttu-id="31375-132">Также см. раздел [Диалоговые окна в Windows Forms](http://msdn.microsoft.com/library/2chz8edb\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="31375-132">Also see [Dialog Boxes in Windows Forms](http://msdn.microsoft.com/library/2chz8edb\(v=vs.110\)).</span></span>
+ <span data-ttu-id="52b97-132">Также см. раздел [Диалоговые окна в Windows Forms](https://msdn.microsoft.com/library/2chz8edb\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="52b97-132">Also see [Dialog Boxes in Windows Forms](https://msdn.microsoft.com/library/2chz8edb\(v=vs.110\)).</span></span>

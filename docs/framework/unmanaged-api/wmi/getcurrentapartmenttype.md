@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4de85eb310de70dc8fd61f7c06abca95ec267f87
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931419"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463095"
 ---
-# <a name="getcurrentapartmenttype-function"></a><span data-ttu-id="974e3-103">Функция GetCurrentApartmentType</span><span class="sxs-lookup"><span data-stu-id="974e3-103">GetCurrentApartmentType function</span></span>
-<span data-ttu-id="974e3-104">Извлекает тип апартамента, в котором выполняется вызывающий объект.</span><span class="sxs-lookup"><span data-stu-id="974e3-104">Retrieves the type of apartment in which the caller is executing.</span></span>   
+# <a name="getcurrentapartmenttype-function"></a><span data-ttu-id="6b219-103">Функция GetCurrentApartmentType</span><span class="sxs-lookup"><span data-stu-id="6b219-103">GetCurrentApartmentType function</span></span>
+<span data-ttu-id="6b219-104">Извлекает тип апартамента, в котором выполняется вызывающий объект.</span><span class="sxs-lookup"><span data-stu-id="6b219-104">Retrieves the type of apartment in which the caller is executing.</span></span>   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="974e3-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="974e3-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b219-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="6b219-105">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentApartmentType (
@@ -38,35 +38,35 @@ HRESULT GetCurrentApartmentType (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="974e3-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="974e3-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="6b219-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="6b219-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="974e3-107">[in] Этот параметр не используется.</span><span class="sxs-lookup"><span data-stu-id="974e3-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="6b219-107">[in] Этот параметр не используется.</span><span class="sxs-lookup"><span data-stu-id="6b219-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="974e3-108">[in] Указатель на [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) экземпляра.</span><span class="sxs-lookup"><span data-stu-id="974e3-108">[in] A pointer to an [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) instance.</span></span>
+<span data-ttu-id="6b219-108">[in] Указатель на [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) экземпляра.</span><span class="sxs-lookup"><span data-stu-id="6b219-108">[in] A pointer to an [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) instance.</span></span>
 
 `aptType`  
-<span data-ttu-id="974e3-109">[out] Указатель на [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) значение перечисления, указывающее подразделения вызывающей стороны.</span><span class="sxs-lookup"><span data-stu-id="974e3-109">[out] A pointer to an [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) enumeration value that indicates the caller's apartment.</span></span>
+<span data-ttu-id="6b219-109">[out] Указатель на [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) значение перечисления, указывающее подразделения вызывающей стороны.</span><span class="sxs-lookup"><span data-stu-id="6b219-109">[out] A pointer to an [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) enumeration value that indicates the caller's apartment.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="974e3-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="974e3-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="6b219-110">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="6b219-110">Return value</span></span>
 
 
-|<span data-ttu-id="974e3-111">Константа</span><span class="sxs-lookup"><span data-stu-id="974e3-111">Constant</span></span>  |<span data-ttu-id="974e3-112">Значение</span><span class="sxs-lookup"><span data-stu-id="974e3-112">Value</span></span>  |<span data-ttu-id="974e3-113">Описание</span><span class="sxs-lookup"><span data-stu-id="974e3-113">Description</span></span>  |
+|<span data-ttu-id="6b219-111">Константа</span><span class="sxs-lookup"><span data-stu-id="6b219-111">Constant</span></span>  |<span data-ttu-id="6b219-112">Значение</span><span class="sxs-lookup"><span data-stu-id="6b219-112">Value</span></span>  |<span data-ttu-id="6b219-113">Описание</span><span class="sxs-lookup"><span data-stu-id="6b219-113">Description</span></span>  |
 |---------|---------|---------|
-| `S_OK` | <span data-ttu-id="974e3-114">0</span><span class="sxs-lookup"><span data-stu-id="974e3-114">0</span></span> | <span data-ttu-id="974e3-115">Функция успешно завершена.</span><span class="sxs-lookup"><span data-stu-id="974e3-115">The function completed successfully.</span></span> |
-| `E_FAIL` | <span data-ttu-id="974e3-116">0x80000008</span><span class="sxs-lookup"><span data-stu-id="974e3-116">0x80000008</span></span> | <span data-ttu-id="974e3-117">Вызывающий объект не выполняется в подразделении.</span><span class="sxs-lookup"><span data-stu-id="974e3-117">The caller is not executing in an apartment.</span></span> |
+| `S_OK` | <span data-ttu-id="6b219-114">0</span><span class="sxs-lookup"><span data-stu-id="6b219-114">0</span></span> | <span data-ttu-id="6b219-115">Функция успешно завершена.</span><span class="sxs-lookup"><span data-stu-id="6b219-115">The function completed successfully.</span></span> |
+| `E_FAIL` | <span data-ttu-id="6b219-116">0x80000008</span><span class="sxs-lookup"><span data-stu-id="6b219-116">0x80000008</span></span> | <span data-ttu-id="6b219-117">Вызывающий объект не выполняется в подразделении.</span><span class="sxs-lookup"><span data-stu-id="6b219-117">The caller is not executing in an apartment.</span></span> |
   
-## <a name="remarks"></a><span data-ttu-id="974e3-118">Примечания</span><span class="sxs-lookup"><span data-stu-id="974e3-118">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="6b219-118">Примечания</span><span class="sxs-lookup"><span data-stu-id="6b219-118">Remarks</span></span>
 
-<span data-ttu-id="974e3-119">Эта функция создает оболочку для вызова [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) метод.</span><span class="sxs-lookup"><span data-stu-id="974e3-119">This function wraps a call to the [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
+<span data-ttu-id="6b219-119">Эта функция создает оболочку для вызова [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) метод.</span><span class="sxs-lookup"><span data-stu-id="6b219-119">This function wraps a call to the [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="974e3-120">Требования</span><span class="sxs-lookup"><span data-stu-id="974e3-120">Requirements</span></span>  
- <span data-ttu-id="974e3-121">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="974e3-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b219-120">Требования</span><span class="sxs-lookup"><span data-stu-id="6b219-120">Requirements</span></span>  
+ <span data-ttu-id="6b219-121">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="6b219-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="974e3-122">**Заголовок:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="974e3-122">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="6b219-122">**Заголовок:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="6b219-122">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="974e3-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="974e3-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="6b219-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="6b219-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="974e3-124">См. также</span><span class="sxs-lookup"><span data-stu-id="974e3-124">See also</span></span>  
-[<span data-ttu-id="974e3-125">WMI и счетчики производительности (Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="974e3-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="6b219-124">См. также</span><span class="sxs-lookup"><span data-stu-id="6b219-124">See also</span></span>  
+[<span data-ttu-id="6b219-125">WMI и счетчики производительности (Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="6b219-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

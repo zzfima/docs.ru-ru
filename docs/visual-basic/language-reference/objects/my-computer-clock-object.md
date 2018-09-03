@@ -5,24 +5,24 @@ helpviewer_keywords:
 - My.Computer.Clock object
 ms.assetid: a362b270-8a1b-404a-95c8-516a60c607dd
 ms.openlocfilehash: 431610030480ce4eb54882e519a5a7f7bbffe90a
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253494"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456863"
 ---
-# <a name="mycomputerclock-object"></a><span data-ttu-id="bbe1a-102">Объект My.Computer.Clock</span><span class="sxs-lookup"><span data-stu-id="bbe1a-102">My.Computer.Clock Object</span></span>
-<span data-ttu-id="bbe1a-103">Включает свойства для доступа к текущему местному времени и времени в формате UTC (эквиваленту времени по Гринвичу) из системных часов.</span><span class="sxs-lookup"><span data-stu-id="bbe1a-103">Provides properties for accessing the current local time and Universal Coordinated Time (equivalent to Greenwich Mean Time) from the system clock.</span></span>  
+# <a name="mycomputerclock-object"></a><span data-ttu-id="fdd5a-102">Объект My.Computer.Clock</span><span class="sxs-lookup"><span data-stu-id="fdd5a-102">My.Computer.Clock Object</span></span>
+<span data-ttu-id="fdd5a-103">Включает свойства для доступа к текущему местному времени и времени в формате UTC (эквиваленту времени по Гринвичу) из системных часов.</span><span class="sxs-lookup"><span data-stu-id="fdd5a-103">Provides properties for accessing the current local time and Universal Coordinated Time (equivalent to Greenwich Mean Time) from the system clock.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bbe1a-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="bbe1a-104">Remarks</span></span>  
- <span data-ttu-id="bbe1a-105">Сведения о методах и свойствах `My.Computer.Clock` объекта, см. в разделе <xref:Microsoft.VisualBasic.Devices.Clock>.</span><span class="sxs-lookup"><span data-stu-id="bbe1a-105">For information about the methods and properties of the `My.Computer.Clock` object, see <xref:Microsoft.VisualBasic.Devices.Clock>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fdd5a-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="fdd5a-104">Remarks</span></span>  
+ <span data-ttu-id="fdd5a-105">Сведения о методах и свойствах `My.Computer.Clock` объекта, см. в разделе <xref:Microsoft.VisualBasic.Devices.Clock>.</span><span class="sxs-lookup"><span data-stu-id="fdd5a-105">For information about the methods and properties of the `My.Computer.Clock` object, see <xref:Microsoft.VisualBasic.Devices.Clock>.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bbe1a-106">Требования</span><span class="sxs-lookup"><span data-stu-id="bbe1a-106">Requirements</span></span>  
- <span data-ttu-id="bbe1a-107">**Пространство имен:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="bbe1a-107">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="fdd5a-106">Требования</span><span class="sxs-lookup"><span data-stu-id="fdd5a-106">Requirements</span></span>  
+ <span data-ttu-id="fdd5a-107">**Пространство имен:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="fdd5a-107">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- <span data-ttu-id="bbe1a-108">**Класс:** <xref:Microsoft.VisualBasic.Devices.Clock></span><span class="sxs-lookup"><span data-stu-id="bbe1a-108">**Class:** <xref:Microsoft.VisualBasic.Devices.Clock></span></span>  
+ <span data-ttu-id="fdd5a-108">**Класс:** <xref:Microsoft.VisualBasic.Devices.Clock></span><span class="sxs-lookup"><span data-stu-id="fdd5a-108">**Class:** <xref:Microsoft.VisualBasic.Devices.Clock></span></span>  
   
- <span data-ttu-id="bbe1a-109">**Сборка:** библиотеки времени выполнения Visual Basic (в Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="bbe1a-109">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="fdd5a-109">**Сборка:** библиотеки времени выполнения Visual Basic (в Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="fdd5a-109">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bbe1a-110">См. также</span><span class="sxs-lookup"><span data-stu-id="bbe1a-110">See Also</span></span>  
- [<span data-ttu-id="bbe1a-111">Объект My.Computer</span><span class="sxs-lookup"><span data-stu-id="bbe1a-111">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="fdd5a-110">См. также</span><span class="sxs-lookup"><span data-stu-id="fdd5a-110">See Also</span></span>  
+ [<span data-ttu-id="fdd5a-111">Объект My.Computer</span><span class="sxs-lookup"><span data-stu-id="fdd5a-111">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)

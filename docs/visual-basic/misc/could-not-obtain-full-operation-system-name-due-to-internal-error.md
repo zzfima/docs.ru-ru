@@ -4,24 +4,25 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrDiagnosticInfo_FullOSName
 ms.assetid: f69da02b-eb9a-4284-bb9e-3025517ae6c1
-ms.openlocfilehash: f85ca5f7f325cb0dd2b8fc55d3f90f6abdfd4a7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 192033348a779591a54860505d5d707a802c415a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464964"
 ---
-# <a name="could-not-obtain-full-operation-system-name-due-to-internal-error"></a><span data-ttu-id="9a09a-102">Не удалось получить полное имя операционной системы из-за внутренней ошибки</span><span class="sxs-lookup"><span data-stu-id="9a09a-102">Could not obtain full operation system name due to internal error</span></span>
-<span data-ttu-id="9a09a-103">Не удалось получить полное имя операционной системы из-за внутренней ошибки.</span><span class="sxs-lookup"><span data-stu-id="9a09a-103">Could not obtain full operation system name due to internal error.</span></span> <span data-ttu-id="9a09a-104">Это может быть вызвано отсутствием WMI на текущем компьютере.</span><span class="sxs-lookup"><span data-stu-id="9a09a-104">This might be caused by WMI not existing on the current machine.</span></span>  
+# <a name="could-not-obtain-full-operation-system-name-due-to-internal-error"></a><span data-ttu-id="ba00c-102">Не удалось получить полное имя операционной системы из-за внутренней ошибки</span><span class="sxs-lookup"><span data-stu-id="ba00c-102">Could not obtain full operation system name due to internal error</span></span>
+<span data-ttu-id="ba00c-103">Не удалось получить полное имя операционной системы из-за внутренней ошибки.</span><span class="sxs-lookup"><span data-stu-id="ba00c-103">Could not obtain full operation system name due to internal error.</span></span> <span data-ttu-id="ba00c-104">Это может быть вызвано отсутствием WMI на текущем компьютере.</span><span class="sxs-lookup"><span data-stu-id="ba00c-104">This might be caused by WMI not existing on the current machine.</span></span>  
   
- <span data-ttu-id="9a09a-105">Не удалось выполнить вызов свойства `My.Computer.Info.OSFullName` .</span><span class="sxs-lookup"><span data-stu-id="9a09a-105">A call to the `My.Computer.Info.OSFullName` property failed.</span></span> <span data-ttu-id="9a09a-106">Возможная причина этой ошибки может заключаться в том, что на текущем компьютере не установлен инструментарий управления Windows (WMI).</span><span class="sxs-lookup"><span data-stu-id="9a09a-106">A possible cause for this failure is if Windows Management Instrumentation (WMI) is not installed on the current computer.</span></span>  
+ <span data-ttu-id="ba00c-105">Не удалось выполнить вызов свойства `My.Computer.Info.OSFullName` .</span><span class="sxs-lookup"><span data-stu-id="ba00c-105">A call to the `My.Computer.Info.OSFullName` property failed.</span></span> <span data-ttu-id="ba00c-106">Возможная причина этой ошибки может заключаться в том, что на текущем компьютере не установлен инструментарий управления Windows (WMI).</span><span class="sxs-lookup"><span data-stu-id="ba00c-106">A possible cause for this failure is if Windows Management Instrumentation (WMI) is not installed on the current computer.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="9a09a-107">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="9a09a-107">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="ba00c-107">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="ba00c-107">To correct this error</span></span>  
   
-1.  <span data-ttu-id="9a09a-108">Добавьте блок `Try...Catch` вокруг вызова свойства `My.Computer.Info.OSFullName` .</span><span class="sxs-lookup"><span data-stu-id="9a09a-108">Add a `Try...Catch` block around the call to the `My.Computer.Info.OSFullName` property.</span></span>  
+1.  <span data-ttu-id="ba00c-108">Добавьте блок `Try...Catch` вокруг вызова свойства `My.Computer.Info.OSFullName` .</span><span class="sxs-lookup"><span data-stu-id="ba00c-108">Add a `Try...Catch` block around the call to the `My.Computer.Info.OSFullName` property.</span></span>  
   
-2.  <span data-ttu-id="9a09a-109">Дополнительные сведения об инструментарии WMI и для ее установки перейдите к и поиск «Основы инструментария управления Windows».</span><span class="sxs-lookup"><span data-stu-id="9a09a-109">For more information about WMI and how to install it, go to  and search for "Windows Management Instrumentation Core".</span></span>  
+2.  <span data-ttu-id="ba00c-109">Дополнительные сведения о WMI и его установке перейдите и искать «Основы инструментария управления Windows».</span><span class="sxs-lookup"><span data-stu-id="ba00c-109">For more information about WMI and how to install it, go to  and search for "Windows Management Instrumentation Core".</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9a09a-110">См. также</span><span class="sxs-lookup"><span data-stu-id="9a09a-110">See Also</span></span>  
- [<span data-ttu-id="9a09a-111">My.Computer.Info.OSFullName</span><span class="sxs-lookup"><span data-stu-id="9a09a-111">My.Computer.Info.OSFullName</span></span>](xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName)  
- [<span data-ttu-id="9a09a-112">Исключения и обработка ошибок в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9a09a-112">Exception and Error Handling in Visual Basic</span></span>](http://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)  
- [<span data-ttu-id="9a09a-113">Оператор Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="9a09a-113">Try...Catch...Finally Statement</span></span>](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a><span data-ttu-id="ba00c-110">См. также</span><span class="sxs-lookup"><span data-stu-id="ba00c-110">See Also</span></span>  
+ [<span data-ttu-id="ba00c-111">My.Computer.Info.OSFullName</span><span class="sxs-lookup"><span data-stu-id="ba00c-111">My.Computer.Info.OSFullName</span></span>](xref:Microsoft.VisualBasic.Devices.ComputerInfo.OSFullName)  
+ [<span data-ttu-id="ba00c-112">Исключения и обработка ошибок в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="ba00c-112">Exception and Error Handling in Visual Basic</span></span>](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)  
+ [<span data-ttu-id="ba00c-113">Оператор Try...Catch...Finally</span><span class="sxs-lookup"><span data-stu-id="ba00c-113">Try...Catch...Finally Statement</span></span>](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
