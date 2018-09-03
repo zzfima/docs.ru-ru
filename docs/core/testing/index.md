@@ -4,12 +4,12 @@ description: Выполнять модульное тестирование ст
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: b3d8393cf285eae3493328b16c3dc038af208da6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a1d880da796aac40da93ca2513b6163200ca3c1
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212372"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43254794"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Модульное тестирование в .NET Core и .NET Standard
 
@@ -17,7 +17,7 @@ ms.locfileid: "33212372"
 
 .NET Core 2.0 поддерживает [.NET Standard 2.0](../../standard/net-standard.md). Библиотеки, используемые для демонстрации модульного тестирования в этом разделе, зависят от .NET Standard и будут работать с другими типами проектов.
 
-Начиная с .NET Core 2.0 доступны шаблоны проекта модульных тестов не только для C#, но и для Visual Basic и F #.
+Начиная с .NET Core 2.0 доступны шаблоны проекта модульных тестов для C#, F# и Visual Basic.
 
 ## <a name="getting-started-with-testing"></a>Приступая к тестированию
 
@@ -34,18 +34,18 @@ ms.locfileid: "33212372"
 
 Дополнительные сведения об этих комбинациях см. в этих пошаговых руководствах:
 
-* Создание модульных тестов с помощью [*XUnit*, *C#* и .NET Core CLI](unit-testing-with-dotnet-test.md).
+* Создание модульных тестов с помощью [*xUnit*, *C#* и .NET Core CLI](unit-testing-with-dotnet-test.md).
 * Создание модульных тестов с помощью [*NUnit*, *C#* и интерфейса командной строки .NET Core](unit-testing-with-nunit.md).
 * Создание модульных тестов с помощью [*MSTest*, *C#* и .NET Core CLI](unit-testing-with-mstest.md).
-* Создание модульных тестов с помощью [*XUnit*, *F#* и .NET Core CLI](unit-testing-fsharp-with-dotnet-test.md).
+* Создание модульных тестов с помощью [*xUnit*, *F#* и .NET Core CLI](unit-testing-fsharp-with-dotnet-test.md).
 * Создание модульных тестов с помощью [*NUnit*, *F#* и интерфейса командной строки .NET Core](unit-testing-fsharp-with-nunit.md).
 * Создание модульных тестов с помощью [*MSTest*, *F#* и .NET Core CLI](unit-testing-fsharp-with-mstest.md).
-* Создание модульных тестов с помощью [*XUnit*, *Visual Basic* и .NET Core CLI](unit-testing-visual-basic-with-dotnet-test.md).
+* Создание модульных тестов с помощью [*xUnit*, *Visual Basic* и .NET Core CLI](unit-testing-visual-basic-with-dotnet-test.md).
 * Создание модульных тестов с помощью [*NUnit*, *Visual Basic* и интерфейса командной строки .NET Core](unit-testing-visual-basic-with-nunit.md).
 * Создание модульных тестов с помощью [*MSTest*, *Visual Basic* и .NET Core CLI](unit-testing-visual-basic-with-mstest.md).
 
 Вы можете выбрать разные языки для библиотек классов и модульных тестов. Дополнительные сведения см. в пошаговых руководствах выше (вы можете комбинировать их).
 
 * Visual Studio Enterprise предлагает отличные средства тестирования для .NET Core. Дополнительные сведения: [Live Unit Testing](/visualstudio/test/live-unit-testing) и [Code Coverage](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage).
-* Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в руководстве по [выполнению выборочных модульных тестов](selective-unit-tests.md) и [включению и исключению тестов с помощью Visual Studio](/visualstudio/test/live-unit-testing#including-and-excluding-test-projects-and-test-methods).
-* Команда разработчиков XUnit разработала учебник, в котором показано, как [использовать xUnit с .NET Core и Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
+* Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в руководстве по [выполнению выборочных модульных тестов](selective-unit-tests.md) и [включению и исключению тестов с помощью Visual Studio](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods).
+* Команда разработчиков xUnit написала учебник, в котором показано ,как [использовать xUnit с помощью .NET Core и Visual Studio](http://xunit.github.io/docs/getting-started-dotnet-core.html).
