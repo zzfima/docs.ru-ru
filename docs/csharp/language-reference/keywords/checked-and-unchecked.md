@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unchecked statement [C#]
 - statements [C#], checked and unchecked
 ms.assetid: a84bc877-2c7f-4396-8735-1ce97c42f35e
-ms.openlocfilehash: f8e292a67fab49b5fc3616e438d063eca2617274
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 04f603905690497bcd4249f73c7296be2c269a60
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34234377"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468815"
 ---
 # <a name="checked-and-unchecked-c-reference"></a>Checked и Unchecked (Справочник по C#)
 Строка кода C# может выполняться как в проверенном, так и в непроверенном контексте. В проверенном контексте арифметическое переполнение создает исключение. В непроверяемом контексте арифметическое переполнение игнорируется и результат усекается путем удаления старших разрядов, которые не помещаются в целевой тип данных.  
@@ -36,7 +36,8 @@ ms.locfileid: "34234377"
  Для константных выражений (выражения, которые можно полностью вычислить во время компиляции) контекстом по умолчанию является проверяемый. Если только константное выражение явным образом не размещено в непроверенном контексте, переполнения, возникающие при вычислении выражения во время компиляции, вызывают ошибки времени компиляции.
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../index.md)  
- [Руководство по программированию на C#](../../programming-guide/index.md)  
- [Ключевые слова в C#](index.md)  
- [Ключевые слова операторов](statement-keywords.md)
+
+- [Справочник по C#](../index.md)  
+- [Руководство по программированию на C#](../../programming-guide/index.md)  
+- [Ключевые слова в C#](index.md)  
+- [Ключевые слова операторов](statement-keywords.md)

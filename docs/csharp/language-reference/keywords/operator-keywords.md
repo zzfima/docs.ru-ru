@@ -5,12 +5,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
-ms.openlocfilehash: 19be5aadf68f7812f2cb4a4e694a6600c5203af4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b6a7fbc08647ace73676403937f4b0f79e7ff585
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273319"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43392702"
 ---
 # <a name="operator-keywords-c-reference"></a>Ключевые слова операторов (Справочник по C#)
 Используются для выполнения различных действий, включая создание объектов, проверку типа объекта во время выполнения, получение размера типа и другие операции. В этом разделе описываются следующие ключевые слова:  
@@ -55,8 +55,9 @@ ms.locfileid: "33273319"
   
 -   [unchecked](../../../csharp/language-reference/keywords/unchecked.md): указывает непроверенный контекст.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Операторы в C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Операторы в C#](../../../csharp/language-reference/operators/index.md)

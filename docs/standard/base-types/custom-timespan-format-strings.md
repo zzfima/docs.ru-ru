@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd378798ad6909175b2342b0d79584e2667f1eea
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 0cf81b5a86d55cf3d7872e0e5281c35f41ad1c31
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911884"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43390667"
 ---
 # <a name="custom-timespan-format-strings"></a>Строки пользовательского формата TimeSpan
 
@@ -67,11 +67,12 @@ ms.locfileid: "42911884"
 |"FFFFF"|Стотысячные доли секунды в интервале времени. Любые нули в конце дробной части не включаются.<br /><br /> Дополнительные сведения см. в подразделе [Настраиваемый описатель формата FFFFF](#F5_Specifier).|`TimeSpan.Parse("00:00:06.329179")`:<br /><br /> `FFFFF`: 32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`:<br /><br /> `ss\.FFFFF`: 03.1|
 |"FFFFFF"|Миллионные доли секунды в интервале времени. Любые нули в конце дробной части не отображаются.<br /><br /> Дополнительные сведения см. в подразделе [Настраиваемый описатель формата FFFFFF](#F6_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`:<br /><br /> `ss\.FFFFFF`: 03.1|
 |"FFFFFFF"|Десятимиллионные доли секунды в интервале времени. Любые нули в конце дробной части или семь нулей не отображаются.<br /><br /> Дополнительные сведения см. в подразделе [Настраиваемый описатель формата FFFFFFF](#F7_Specifier).|`TimeSpan.Parse("00:00:06.3291791")`:<br /><br /> `FFFFFF`: 3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`:<br /><br /> `ss\.FFFFFF`: 03.19|
-|*'string*'|Буквенный разделитель строк.<br /><br /> Дополнительные сведения см. тут: [Остальные символы](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|'*строка*'|Буквенный разделитель строк.<br /><br /> Дополнительные сведения см. тут: [Остальные символы](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
 |\\|Escape-символ.<br /><br /> Дополнительные сведения см. тут: [Остальные символы](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 |Любой другой знак|Любой другой символ, не являющийся escape-символом, интерпретируется как описатель настраиваемого формата.<br /><br /> Дополнительные сведения см. тут: [Остальные символы](#Other).|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
-<a name="dSpecifier"></a>
+<a name="dSpecifier"></a> 
+
 ## <a name="the-d-custom-format-specifier"></a>Настраиваемый описатель формата "d"
 
 Описатель настраиваемого формата "d" выводит значение свойства <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType>, которое представляет число целых дней в интервале времени. Он выводит полное число дней в значении <xref:System.TimeSpan>, даже если значение состоит из нескольких цифр. Если значение свойства <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> равно нулю, описатель выводит "0".
@@ -89,6 +90,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="ddSpecifier"></a> 
+
 ## <a name="the-dd-dddddddd-custom-format-specifiers"></a>Описатели настраиваемого формата "dd"-"dddddddd"
 Описатели настраиваемого формата "dd", "ddd", "dddd", "ddddd", "dddddd", "ddddddd" и "dddddddd" выводят значение свойства <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType>, которое представляет число целых дней в интервале времени.
 
@@ -102,6 +104,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="hSpecifier"></a> 
+
 ## <a name="the-h-custom-format-specifier"></a>Настраиваемый описатель формата "h"
 Описатель настраиваемого формата "h" выводит значение свойства <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>, которое представляет число целых часов в интервале времени, не входящее в число целых дней. Он возвращает однозначное строковое значение, если свойство <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> имеет значение от 0 до 9, или двузначное строковое значение, если значение свойства <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> находится в диапазоне от 10 до 23.
 
@@ -123,6 +126,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="hhSpecifier"></a> 
+
 ## <a name="the-hh-custom-format-specifier"></a>Настраиваемый описатель формата "hh"
 Описатель настраиваемого формата "hh" выводит значение свойства <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType>, которое представляет число целых часов в интервале времени, не входящее в число целых дней. Выходная строка включает предшествующий нуль для значений от 0 до 9.
 
@@ -139,6 +143,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="mSpecifier"></a> 
+
 ## <a name="the-m-custom-format-specifier"></a>Настраиваемый описатель формата "m"
 Описатель настраиваемого формата "m" выводит значение свойства <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>, которое представляет число целых минут в интервале времени, не входящее в число целых дней и часов. Он возвращает однозначное строковое значение, если свойство <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> имеет значение от 0 до 9, или двузначное строковое значение, если значение свойства <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> находится в диапазоне от 10 до 59.
 
@@ -160,6 +165,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="mmSpecifier"></a> 
+
 ## <a name="the-mm-custom-format-specifier"></a>Настраиваемый описатель формата "mm"
 Описатель настраиваемого формата "mm" выводит значение свойства <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType>, которое представляет число целых минут в интервале времени, не входящее в число целых дней и часов. Выходная строка включает предшествующий нуль для значений от 0 до 9.
 
@@ -176,6 +182,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="sSpecifier"></a> 
+
 ## <a name="the-s-custom-format-specifier"></a>Настраиваемый описатель формата "s"
 Описатель настраиваемого формата "s" выводит значение свойства <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>, которое представляет число целых секунд в интервале времени, не входящее в число целых дней, часов и минут. Он возвращает однозначное строковое значение, если свойство <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> имеет значение от 0 до 9, или двузначное строковое значение, если значение свойства <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> находится в диапазоне от 10 до 59.
 
@@ -197,6 +204,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="ssSpecifier"></a> 
+
 ## <a name="the-ss-custom-format-specifier"></a>Настраиваемый описатель формата "ss"
 Описатель настраиваемого формата "ss" выводит значение свойства <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType>, которое представляет число целых секунд в интервале времени, не входящее в число целых дней, часов и минут. Выходная строка включает предшествующий нуль для значений от 0 до 9.
 
@@ -213,6 +221,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="fSpecifier"></a> 
+
 ## <a name="thef-custom-format-specifier"></a>Описатель настраиваемого формата "f"
 Описатель настраиваемого формата "f" выводит десятые доли секунды в интервале времени. В операции форматирования все оставшиеся цифры дробной части усекаются. В операции синтаксического анализа, которая вызывает метод <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> или <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, входная строка должна содержать ровно одну цифру дробной части.
 
@@ -226,6 +235,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="ffSpecifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>Настраиваемый описатель формата "ff"
 Описатель настраиваемого формата "ff" выводит сотые доли секунды в интервале времени. В операции форматирования все оставшиеся цифры дробной части усекаются. В операции синтаксического анализа, которая вызывает метод <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> или <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, входная строка должна содержать ровно две цифры дробной части.
 
@@ -237,6 +247,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="f3Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>Настраиваемый описатель формата "fff"
 Описатель настраиваемого формата "fff" (c тремя символами "f") выводит миллисекунды в интервале времени. В операции форматирования все оставшиеся цифры дробной части усекаются. В операции синтаксического анализа, которая вызывает метод <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> или <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, входная строка должна содержать ровно три цифры дробной части.
 
@@ -248,6 +259,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="f4Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>Настраиваемый описатель формата "ffff"
 Описатель настраиваемого формата "ffff" (с четырьмя символами "f") выводит десятитысячные доли секунды в интервале времени. В операции форматирования все оставшиеся цифры дробной части усекаются. В операции синтаксического анализа, которая вызывает метод <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> или <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, входная строка должна содержать ровно четыре цифры дробной части.
 
@@ -259,6 +271,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="f5Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>Настраиваемый описатель формата "fffff"
 Описатель настраиваемого формата "fffff" (с пятью символами "f") выводит стотысячные доли секунды в интервале времени. В операции форматирования все оставшиеся цифры дробной части усекаются. В операции синтаксического анализа, которая вызывает метод <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> или <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, входная строка должна содержать ровно пять цифр дробной части.
 
@@ -270,6 +283,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="f6Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>Настраиваемый описатель формата "ffffff"
 Описатель настраиваемого формата "ffffff" (с шестью символами "f") выводит миллионные доли секунды в интервале времени. В операции форматирования все оставшиеся цифры дробной части усекаются. В операции синтаксического анализа, которая вызывает метод <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> или <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, входная строка должна содержать ровно шесть цифр дробной части.
 
@@ -281,6 +295,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="f7Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>Настраиваемый описатель формата "fffffff"
 Описатель настраиваемого формата "fffffff" (с семью символами "f") выводит десятимиллионные доли секунды (или дробное число тактов) в интервале времени. В операции синтаксического анализа, которая вызывает метод <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> или <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, входная строка должна содержать ровно семь цифр дробной части.
 
@@ -292,6 +307,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="F_Specifier"></a> 
+
 ## <a name="the-f-custom-format-specifier"></a>Настраиваемый описатель формата "F"
 Описатель настраиваемого формата "F" выводит десятые доли секунды в интервале времени. В операции форматирования все оставшиеся цифры дробной части усекаются. Если значение десятых долей секунды временного интервала равно нулю, оно не включается в строку результата. В операции синтаксического анализа, которая вызывает метод <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> или <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, наличие десятых долей секунды не является обязательным.
 
@@ -305,6 +321,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="FF_Specifier"></a> 
+
 ## <a name="the-ff-custom-format-specifier"></a>Настраиваемый описатель формата "FF"
 Описатель настраиваемого формата "FF" выводит сотые доли секунды в интервале времени. В операции форматирования все оставшиеся цифры дробной части усекаются. Результирующая строка не включает нули в конце дробной части. В операции синтаксического анализа, которая вызывает метод <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> или <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, наличие десятых или сотых долей секунды не является обязательным.
 
@@ -316,6 +333,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="F3_Specifier"></a> 
+
 ## <a name="the-fff-custom-format-specifier"></a>Настраиваемый описатель формата "FFF"
 Описатель настраиваемого формата "FFF" (c тремя символами "F") выводит миллисекунды в интервале времени. В операции форматирования все оставшиеся цифры дробной части усекаются. Результирующая строка не включает нули в конце дробной части. В операции синтаксического анализа, которая вызывает метод <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> или <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, наличие десятых, сотых или тысячных долей секунды не является обязательным.
 
@@ -327,6 +345,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="F4_Specifier"></a> 
+
 ## <a name="the-ffff-custom-format-specifier"></a>Настраиваемый описатель формата "FFFF"
 Описатель настраиваемого формата "FFFF" (с четырьмя символами "F") выводит десятитысячные доли секунды в интервале времени. В операции форматирования все оставшиеся цифры дробной части усекаются. Результирующая строка не включает нули в конце дробной части. В операции синтаксического анализа, которая вызывает метод <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> или <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, наличие десятых, сотых, тысячных или десятитысячных долей секунды не является обязательным.
 
@@ -338,6 +357,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="F5_Specifier"></a> 
+
 ## <a name="the-fffff-custom-format-specifier"></a>Настраиваемый описатель формата "FFFFF"
 Описатель настраиваемого формата "FFFFF" (с пятью символами "F") выводит стотысячные доли секунды в интервале времени. В операции форматирования все оставшиеся цифры дробной части усекаются. Результирующая строка не включает нули в конце дробной части. В операции синтаксического анализа, которая вызывает метод <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> или <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, наличие десятых, сотых, тысячных, десятитысячных или стотысячных долей секунды не является обязательным.
 
@@ -349,6 +369,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="F6_Specifier"></a> 
+
 ## <a name="the-ffffff-custom-format-specifier"></a>Настраиваемый описатель формата "FFFFFF"
 Описатель настраиваемого формата "FFFFFF" (с шестью символами "F") выводит миллионные доли секунды в интервале времени. В операции форматирования все оставшиеся цифры дробной части усекаются. Результирующая строка не включает нули в конце дробной части. В операции синтаксического анализа, которая вызывает метод <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> или <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, наличие десятых, сотых, тысячных, десятитысячных, стотысячных или миллионных долей секунды не является обязательным.
 
@@ -360,6 +381,7 @@ ms.locfileid: "42911884"
 [К таблице](#table)
 
 <a name="F7_Specifier"></a> 
+
 ## <a name="the-fffffff-custom-format-specifier"></a>Настраиваемый описатель формата "FFFFFFF"
 Описатель настраиваемого формата "FFFFFFF" (с семью символами "F") выводит десятимиллионные доли секунды (или дробное число тактов) в интервале времени. Результирующая строка не включает нули в конце дробной части. В операции анализа, которая вызывает метод <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType>или <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType>, наличие семи разрядов дробной части во входной строке не является обязательным.
 
@@ -370,7 +392,8 @@ ms.locfileid: "42911884"
 
 [К таблице](#table)
 
-<a name="Other"></a>
+<a name="Other"></a> 
+
 ## <a name="other-characters"></a>Остальные символы
 
 Любой другой символ в строке формата, не являющийся escape-символом, включая знак пробела, интерпретируется как описатель настраиваемого формата. В большинстве случаев наличие любого другого неэкранированного символа приводит к возникновению исключения <xref:System.FormatException>.

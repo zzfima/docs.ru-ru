@@ -11,12 +11,12 @@ ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8842bb47ad32ae1e26eaa503398ea91afb7fd1dd
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2c9b3b1c647d74444fed01e38b65c1b2fe8364c6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43003207"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480952"
 ---
 # <a name="internet-protocol-version-6"></a>протокол IP версии 6
 Протокол IP версии 6 (IPv6) — это новый набор стандартных протоколов для сетевого уровня Интернета. IPv6 позволяет устранить множество проблем текущей версии набора интернет-протоколов (известного как IPv4), связанных с нехваткой адресов, безопасностью, автоматической настройкой, расширяемостью и т. д. IPv6 расширяет возможности Интернета для активации новых видов приложений, включая приложения для одноранговой сети и мобильных устройств. Ниже приведены основные проблемы текущего протокола IPv4.  
@@ -58,7 +58,7 @@ ms.locfileid: "43003207"
   
 -   RFC 2374, An IPv6 Aggregatable Global Unicast Address Format.  
   
- Сведения, относящиеся к IPv6, можно также найти в [разделе о IPv6 на сайте Technet](http://go.microsoft.com/fwlink/?LinkID=179658).  
+ Сведения, относящиеся к IPv6, можно также найти в [разделе о IPv6 на сайте Technet](https://go.microsoft.com/fwlink/?LinkID=179658).  
   
 ## <a name="see-also"></a>См. также  
  [Пример сокетов IPv6](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)  

@@ -7,16 +7,17 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f4712970b2d3ebecf12cbb7b8f9b7fcdb317986
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9d00fb16ac5b71c8fb8f8560f68d20f1f33987d7
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43396890"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (средство создания заметок безопасности .NET)
 Средство создания заметок безопасности .NET Security Annotator (SecAnnotate.exe) — это приложение командной строки, определяющее части `SecurityCritical` и `SecuritySafeCritical` одной или нескольких сборок.  
   
- Расширение Visual Studio [Security Annotator](http://go.microsoft.com/fwlink/?LinkId=198007) обеспечивает графический пользовательский интерфейс для программы SecAnnotate.exe и позволяет запускать эту программу из Visual Studio.  
+ Расширение Visual Studio [Security Annotator](https://go.microsoft.com/fwlink/?LinkId=198007) обеспечивает графический пользовательский интерфейс для программы SecAnnotate.exe и позволяет запускать эту программу из Visual Studio.  
   
  Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -51,6 +52,6 @@ SecAnnotate.exe [parameters] [assemblies]
 ## <a name="remarks"></a>Примечания  
  Параметры и сборки также могут предоставляться в файле ответов, указанном в командной строке с префиксом в виде знака \@ . Каждая строка в файле ответов должна содержать один параметр или имя сборки.  
   
- Дополнительные сведения о .NET Security Annotator см. в записи [Использование SecAnnotate для анализа сборок на наличие нарушений прозрачности](http://go.microsoft.com/fwlink/?LinkId=187648) в блоге .NET Security.  
+ Дополнительные сведения о .NET Security Annotator см. в записи [Использование SecAnnotate для анализа сборок на наличие нарушений прозрачности](https://go.microsoft.com/fwlink/?LinkId=187648) в блоге .NET Security.  
   
 ## <a name="examples"></a>Примеры

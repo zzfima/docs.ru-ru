@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fe59075f04443ba40c209b6cda5a5071d16c79e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a30fe0aac4bfacc71137474837b95371e7d85b09
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392152"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43394745"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Ошибки инициализации платформы .NET Framework. Управление взаимодействием с пользователем
 Система активации среды CLR определяет версию среды CLR, которая будет использоваться для выполнения управляемого кода приложения. В некоторых случаях система активации может не найти версию среды CLR для загрузки. Эта ситуация обычно возникает в том случае, если приложение требует версии среды CLR, которая недопустима или не установлена на данном компьютере. Если запрошенная версия не найдена, то система активации среды CLR получает код ошибки HRESULT из вызванных функции или интерфейса и может отобразить сообщение об ошибке для пользователя, запустившего приложение. В этой статье приводится список кодов HRESULT и объясняется, как можно запретить отображение сообщения об ошибке.  
@@ -55,7 +55,7 @@ ms.locfileid: "33392152"
   
  Метод [ICLRMetaHostPolicy::GetRequestedRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) принимает в качестве входных данных элемент перечисления [METAHOST_POLICY_FLAGS](../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md). Можно включить флаг METAHOST_POLICY_SHOW_ERROR_DIALOG для запроса сообщения об ошибке, если запрошенная версия среды CLR не будет найдена. По умолчанию сообщение об ошибке не отображается. (Метод [ICLRMetaHost::GetRuntime](../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md) не поддерживает этот флаг и не предоставляет иных способов отобразить сообщение об ошибке.)  
   
- Windows предоставляет функцию [SetErrorMode](http://go.microsoft.com/fwlink/p/?LinkID=255242), с помощью которой можно объявить, должны ли сообщения об ошибках отображаться как результат выполнения кода, выполняемого внутри процесса. Можно указать флаг SEM_FAILCRITICALERRORS, чтобы запретить отображение сообщения об ошибке.  
+ Windows предоставляет функцию [SetErrorMode](https://go.microsoft.com/fwlink/p/?LinkID=255242), с помощью которой можно объявить, должны ли сообщения об ошибках отображаться как результат выполнения кода, выполняемого внутри процесса. Можно указать флаг SEM_FAILCRITICALERRORS, чтобы запретить отображение сообщения об ошибке.  
   
  Но в некоторых случаях важно переопределить параметр SEM_FAILCRITICALERRORS, установленный процессом приложения. Например, если имеется собственный компонент COM, в котором находится среда CLR и расположенный в процессе, для которого установлен флаг SEM_FAILCRITICALERRORS, можно переопределить флаг в зависимости от влияния отображения сообщений об ошибках в пределах данного процесса приложения. В этом случае для переопределения SEM_FAILCRITICALERRORS можно воспользоваться одним из следующих флагов:  
   

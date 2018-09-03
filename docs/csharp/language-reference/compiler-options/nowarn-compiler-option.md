@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: 1c5e8bc7ad065c4662cd489930b2226e8a4b8962
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76bb008c40d84ed6048b8f960f050048319273b9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215489"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43421932"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (параметры компилятора C#)
 Параметр **-nowarn** позволяет предотвратить отображение одного или нескольких предупреждений компилятором. Разделяйте предупреждения запятыми.  
@@ -52,6 +52,7 @@ ms.locfileid: "33215489"
  Дополнительные сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.  
   
 ## <a name="see-also"></a>См. также  
- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)  
- [Ошибки компилятора C#](../../../csharp/language-reference/compiler-messages/index.md)
+
+- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
+- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)  
+- [Ошибки компилятора C#](../../../csharp/language-reference/compiler-messages/index.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
 ms.openlocfilehash: 6b943da442d2ec1210911cb9f4b6a0d56c7216d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336356"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43465889"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Синтаксис запросов и синтаксис методов в LINQ (C#)
 Большинство запросов в вводной документации к LINQ ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) написано с использованием декларативного синтаксиса запросов LINQ. Однако синтаксис запроса должен быть преобразован в вызовы методов для среды CLR .NET, когда код компилируется. Эти вызовы метода вызывают стандартные операторы запросов, которые имеют такие имена, как `Where`, `Select`, `GroupBy`, `Join`, `Max` и `Average`. Вместо синтаксиса запросов для их вызова можно использовать синтаксис методов.  

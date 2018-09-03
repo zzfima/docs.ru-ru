@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: ea1e2e049a692fb9d86731c8a450b568f275f9a9
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 52ca30fe29025e637005b95ebc14fce8f320e8f4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924802"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43423943"
 ---
 # <a name="class-c-reference"></a>класс (Справочник по C#)
 
@@ -101,7 +101,7 @@ Console.Write(child1.name);   // Error
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по C#](../../../csharp/language-reference/index.md)  
-[Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-[Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
-[Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)

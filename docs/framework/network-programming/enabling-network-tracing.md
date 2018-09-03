@@ -14,12 +14,12 @@ ms.assetid: 5fff458c-51a6-4134-ba47-8a6137ddc41e
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 56a24f93e92fbfbd2dbb1156a1c3ef786f59034e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0ab0aeecdbd6cf763ae34cfa3bcd50af1874d39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390465"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43421494"
 ---
 # <a name="enabling-network-tracing"></a>Включение сетевой трассировки
 Трассировка сети предоставляет доступ к сведениям о вызовах методов и о сетевом трафике, созданном управляемым приложением. Чтобы включить трассировку сети в приложении, выполните следующие действия:  
@@ -51,4 +51,4 @@ ms.locfileid: "33390465"
 ## <a name="see-also"></a>См. также  
  [Интерпретация трассировки сети](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [Трассировка сети в .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
- [Введение. Подготовка к инструментированию и трассировка](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [Введение. Подготовка к инструментированию и трассировка](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

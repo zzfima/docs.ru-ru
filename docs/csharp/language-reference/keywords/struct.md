@@ -7,12 +7,12 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: ddea59e76835ccccd07c299f819796336cddada8
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 7931da2e5f5c493b54eb1f33a1d6f57b38592f6e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172153"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399022"
 ---
 # <a name="struct-c-reference"></a>struct (справочник по C#)
 Тип `struct` представляет собой тип значения, который обычно используется для инкапсуляции небольших групп связанных переменных, например координат прямоугольника или характеристик элемента в инвентаризации. В следующем примере показано простое объявление структуры:  
@@ -41,14 +41,15 @@ public struct Book
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  Примеры см. в разделе [Использование структур](../../../csharp/programming-guide/classes-and-structs/using-structs.md).  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md)  
- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Типы](../../../csharp/language-reference/keywords/types.md)  
- [Типы значений](../../../csharp/language-reference/keywords/value-types.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [interface](../../../csharp/language-reference/keywords/interface.md)  
- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md)  
+- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Типы](../../../csharp/language-reference/keywords/types.md)  
+- [Типы значений](../../../csharp/language-reference/keywords/value-types.md)  
+- [class](../../../csharp/language-reference/keywords/class.md)  
+- [interface](../../../csharp/language-reference/keywords/interface.md)  
+- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)

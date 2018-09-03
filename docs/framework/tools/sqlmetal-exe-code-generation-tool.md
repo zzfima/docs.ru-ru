@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: c9dab959628343cd99f75ffeda30e3f423f2aaf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 94ed6328857f6e77cea150d69719322d3aaaea69
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409806"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396926"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (средство создания кода)
 Программа командной строки SqlMetal создает код и сопоставление для компонента [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] платформы [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. С помощью описанных ниже параметров можно настраивать SqlMetal на выполнение различных действий, включая следующие.  
@@ -25,7 +25,7 @@ ms.locfileid: "33409806"
   
 -   Создание кода и атрибутов сопоставления или файла сопоставления на основе DBML-файла.  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. По умолчанию файл располагается в папке `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin. Если Visual Studio не установлена, файл SQLMetal можно получить, скачав [Windows SDK](http://go.microsoft.com/fwlink/?LinkId=142225).  
+ Эта программа автоматически устанавливается вместе с Visual Studio. По умолчанию файл располагается в папке `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin. Если Visual Studio не установлена, файл SQLMetal можно получить, скачав [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225).  
   
 > [!NOTE]
 >  Разработчики, работающие в Visual Studio также могут использовать [!INCLUDE[vs_ordesigner_long](../../../includes/vs-ordesigner-long-md.md)] для создания классов сущностей. Командная строка удобна при работе с большими базами данных. Поскольку SqlMetal представляет собой программу командной строки, ее можно использовать в процессе построения.  

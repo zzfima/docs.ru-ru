@@ -7,12 +7,12 @@ helpviewer_keywords:
 - left shift operator (<<) [C#]
 - << operator [C#]
 ms.assetid: a654eb56-1ff7-4bf3-9064-b631be0cdccc
-ms.openlocfilehash: bacb444c08b1f9d6e18278337015d8a427fdbe46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 036acd6159bcf5ca1677ee6383c9db357625cd67
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33286179"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43478108"
 ---
 # <a name="ltlt-operator-c-reference"></a>Оператор &lt;&lt; (справочник по C#)
 Оператор сдвига влево (`<<`) сдвигает первый операнд влево на число битов, задаваемое вторым операндом. Второй операнд должен иметь тип [int](../../../csharp/language-reference/keywords/int.md) или тип, для которого существует предварительно определенное неявное числовое преобразование в `int`.  
@@ -32,7 +32,8 @@ ms.locfileid: "33286179"
 ## <a name="comments"></a>Комментарии  
  Обратите внимание, что `i<<1` и `i<<33` дают один и тот же результат, поскольку 1 и 33 имеют одинаковые младшие пять разрядов.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Операторы в C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Операторы в C#](../../../csharp/language-reference/operators/index.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
 ms.assetid: 9c7b2c8f-a785-44ca-836c-407bfb6d27f5
-ms.openlocfilehash: 28cf2633d74f047a751ffdad11f1e1db8328cd6f
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: f00d5e489931d9c1172a21ee5f0d3e3d0a6f4a4e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457804"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43409002"
 ---
 # <a name="-and--null-conditional-operators-c-and-visual-basic"></a>?. и ?[]: операторы с условием NULL (C# и Visual Basic)
 Проверяет значение левого операнда на наличие значения NULL перед выполнением операции доступа к элементу (`?.`) или индексу (`?[]`). Возвращает `null`, если левый операнд имеет значение `null`. 
@@ -79,8 +79,9 @@ PropertyChanged?.Invoke(…)
   
  Дополнительные сведения см. в разделе [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md).  
   
-## <a name="see-also"></a>См. также  
- [Оператор ?? (оператор объединения со значением NULL)](null-coalescing-operator.md)  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Руководство по программированию на Visual Basic](../../../visual-basic/programming-guide/index.md)
+## <a name="see-also"></a>См. также
+
+- [Оператор ?? (оператор объединения со значением NULL)](null-coalescing-operator.md)  
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Руководство по программированию на Visual Basic](../../../visual-basic/programming-guide/index.md)

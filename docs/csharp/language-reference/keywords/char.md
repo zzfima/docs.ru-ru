@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: ea465e240a1d74b3f473316ca63b05bd0ba90777
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 95ecfaaf1397f7a4598faba6528b38170062145a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028036"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43463225"
 ---
 # <a name="char-c-reference"></a>char (Справочник по C#)
 
@@ -42,13 +42,13 @@ ms.locfileid: "37028036"
 
 ## <a name="see-also"></a>См. также
 
-<xref:System.Char>  
-[Справочник по C#](../../../csharp/language-reference/index.md)  
-[Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-[Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
-[Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
-[Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-[Типы, допускающие значения NULL](../../../csharp/programming-guide/nullable-types/index.md)  
-[Строки](../../../csharp/programming-guide/strings/index.md)
+- <xref:System.Char>  
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Типы, допускающие значения NULL](../../../csharp/programming-guide/nullable-types/index.md)  
+- [Строки](../../../csharp/programming-guide/strings/index.md)

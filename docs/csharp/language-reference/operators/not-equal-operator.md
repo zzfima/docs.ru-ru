@@ -8,12 +8,12 @@ helpviewer_keywords:
 - not equals operator (!=) [C#]
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
-ms.openlocfilehash: e409e2a80886fd5f7f4cdbeaa9b4e3325f8a967b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e974ffb1b25944e24fca23864dc7e932ec1876d5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33272443"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43415385"
 ---
 # <a name="-operator-c-reference"></a>Оператор != (справочник по C#)
 Оператор неравенства (`!=`) возвращает значение false, если его операнды равны. В противном случае возвращается значение true. Операторы неравенства предопределены для всех типов, включая строки и объекты. Определяемые пользователем типы могут перегружать оператор `!=`.  
@@ -26,7 +26,8 @@ ms.locfileid: "33272443"
 ## <a name="example"></a>Пример  
  [!code-csharp[csRefOperators#33](../../../csharp/language-reference/operators/codesnippet/CSharp/not-equal-operator_1.cs)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Операторы в C#](../../../csharp/language-reference/operators/index.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Операторы в C#](../../../csharp/language-reference/operators/index.md)

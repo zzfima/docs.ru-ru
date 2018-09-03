@@ -23,15 +23,15 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ef4e2918b682d964b7f65eb98d497715d1e4ac57
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a03e6760fbb233c656909fb99b48a84bddedef8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399062"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405576"
 ---
 # <a name="reflection-in-the-net-framework"></a>Отражение в .NET Framework
-Классы в пространстве имен <xref:System.Reflection> вместе с <xref:System.Type?displayProperty=nameWithType> позволяют получить информацию о загруженных [сборках](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) и типах, определенных в них, таких как [классы](http://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9), [интерфейсы](http://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5) и [типы значений](http://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). Отражение можно также использовать для создания экземпляров типов во время выполнения, для вызова этих экземпляров и получения доступа к ним. Разделы, в которых описываются отдельные аспекты отражения, можно найти в подразделе [Связанные подразделы](#related_topics) в конце этого обзора.  
+Классы в пространстве имен <xref:System.Reflection> вместе с <xref:System.Type?displayProperty=nameWithType> позволяют получить информацию о загруженных [сборках](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) и типах, определенных в них, таких как [классы](https://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9), [интерфейсы](https://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5) и [типы значений](https://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). Отражение можно также использовать для создания экземпляров типов во время выполнения, для вызова этих экземпляров и получения доступа к ним. Разделы, в которых описываются отдельные аспекты отражения, можно найти в подразделе [Связанные подразделы](#related_topics) в конце этого обзора.  
   
  Загрузчик [среды CLR](../../../docs/standard/clr.md) управляет [доменами приложений](../../../docs/framework/app-domains/application-domains.md), которые образуют определенные границы вокруг объектов с одной и той же областью приложения. В частности, он загружает каждую сборку в соответствующий домен приложения и контролирует распределение памяти для иерархии типов в каждой сборке.  
   

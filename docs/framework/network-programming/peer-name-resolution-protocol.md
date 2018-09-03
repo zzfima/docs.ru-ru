@@ -5,12 +5,12 @@ ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 01e0bd36b35319c90fc46d8f5f97161147852c7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70c49198c0198610eaa5001971b7de7efd2951aa
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397004"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482347"
 ---
 # <a name="peer-name-resolution-protocol"></a>Протокол PNRP
 В одноранговых средах одноранговые узлы используют определенные системы разрешения имен для определения сетевого расположения (адреса, протоколы и порты) друг друга на основе имен и идентификаторов других типов. Раньше разрешение имен одноранговых узлов было затруднено из-за временного характера подключений, а также других недостатков службы доменных имен (DNS).  
@@ -65,4 +65,4 @@ ms.locfileid: "33397004"
  <xref:System.ServiceModel.PeerResolvers>  
  <xref:System.Net.PeerToPeer>  
  [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Пример технологии PeerToPeer](http://go.microsoft.com/fwlink/?LinkID=179571)
+ [Пример технологии PeerToPeer](https://go.microsoft.com/fwlink/?LinkID=179571)

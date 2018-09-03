@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - internal keyword [C#]
 ms.assetid: 6ee0785c-d7c8-49b8-bb72-0a4dfbcb6461
-ms.openlocfilehash: d2fcc19bb7bc6de373412e7728f3025647c0435d
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 54ec003683953b53dedf8885a41350daf5338f83
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961486"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43399446"
 ---
 # <a name="internal-c-reference"></a>internal (Справочник по C#)
 Ключевое слово `internal` является [модификатором доступа](../../../csharp/language-reference/keywords/access-modifiers.md) для типов и членов типов. 
@@ -75,7 +75,7 @@ public class BaseClass
   
 ```csharp  
 // Assembly2_a.cs  
-// Compile with: /reference:Assembly1.dll  
+// Compile with: /reference:Assembly2.dll  
 public class TestAccess   
 {  
    static void Main()   
@@ -89,13 +89,14 @@ public class TestAccess
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Модификаторы доступа](../../../csharp/language-reference/keywords/access-modifiers.md)  
- [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md)  
- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)  
- [public](../../../csharp/language-reference/keywords/public.md)  
- [private](../../../csharp/language-reference/keywords/private.md)  
- [protected](../../../csharp/language-reference/keywords/protected.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Модификаторы доступа](../../../csharp/language-reference/keywords/access-modifiers.md)  
+- [Уровни доступности](../../../csharp/language-reference/keywords/accessibility-levels.md)  
+- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)  
+- [public](../../../csharp/language-reference/keywords/public.md)  
+- [private](../../../csharp/language-reference/keywords/private.md)  
+- [protected](../../../csharp/language-reference/keywords/protected.md)

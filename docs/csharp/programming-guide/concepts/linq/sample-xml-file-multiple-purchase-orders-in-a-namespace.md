@@ -3,11 +3,11 @@ title: Пример XML-файла. Несколько заказов на по�
 ms.date: 07/20/2015
 ms.assetid: 595024f2-374a-4615-acb5-64fa1600f377
 ms.openlocfilehash: 03ca5cfbf198f576a52e6ceb5eb085195d599d3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338439"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43470016"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>Пример XML-файла. Несколько заказов на покупку в пространстве имен
 Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл содержит несколько заказов на покупку. XML располагается в пространстве имен.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38532228f7a5d07bb1b9fcf7e90d2be53a28b04c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 361e618578e836e10cf8655f027bed42eac7affd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589975"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43393143"
 ---
 # <a name="interlocked-operations"></a>Блокируемые операции
 Класс <xref:System.Threading.Interlocked> предоставляет методы для синхронизации доступа к переменной, которую совместно используют несколько потоков. Потоки различных процессов могут использовать этот механизм, если переменная находится в общей памяти. Блокируемые операции являются атомарными, т. е. вся операция представляет собой единицу, которая не может быть прервана другой блокируемой операцией с той же переменной. Это имеет значение в операционных системах с преимущественной многопоточностью, когда поток может быть приостановлен после загрузки значения из адреса памяти, но прежде, чем его можно будет изменить или сохранить.  
@@ -36,7 +36,7 @@ ms.locfileid: "33589975"
   
  Для современных процессоров методы класса <xref:System.Threading.Interlocked> часто можно реализовать в одной инструкции. В связи с этим они обеспечивают очень высокую производительность синхронизации и могут использоваться для сборки сложных механизмов синхронизации, таких как спин-блокировки.  
   
- Пример, в котором используется сочетание классов <xref:System.Threading.Monitor> и <xref:System.Threading.Interlocked>, можно найти в описании класса [Monitor](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Пример, в котором используется сочетание классов <xref:System.Threading.Monitor> и <xref:System.Threading.Interlocked>, можно найти в описании класса [Monitor](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
   
 ## <a name="compareexchange-example"></a>Пример метода CompareExchange  
  Метод <xref:System.Threading.Interlocked.CompareExchange%2A> может использоваться для защиты более сложных вычислений, чем простое приращение и уменьшение. В следующем примере показан безопасный для потока метод, который добавляется к промежуточному итогу, хранящемуся в виде числа с плавающей запятой. (Для целых чисел проще использовать метод <xref:System.Threading.Interlocked.Add%2A>.) Полные примеры кода вы найдете в описании перегрузок <xref:System.Threading.Interlocked.CompareExchange%2A>, которые принимают аргументы с плавающей запятой одиночной и двойной точности (<xref:System.Threading.Interlocked.CompareExchange%28System.Single%40%2CSystem.Single%2CSystem.Single%29> и <xref:System.Threading.Interlocked.CompareExchange%28System.Double%40%2CSystem.Double%2CSystem.Double%29>).  

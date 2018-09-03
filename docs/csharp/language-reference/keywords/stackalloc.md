@@ -6,12 +6,12 @@ f1_keywords:
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 905873cf7f576ff35a9bc1c182ce7ebe17920288
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5926550eea1f5a2f8fb74645f22ca54c2bed3136
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33269172"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484058"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Справочник по C#)
 Ключевое слово `stackalloc` используется в контексте небезопасного кода для выделения блока памяти стеку.
@@ -63,8 +63,9 @@ int* third = stackalloc[] { 1, 2, 3 };
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>См. также
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md)  
- [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Ключевые слова операторов](../../../csharp/language-reference/keywords/operator-keywords.md)  
+- [Небезопасный код и указатели](../../../csharp/programming-guide/unsafe-code-pointers/index.md)

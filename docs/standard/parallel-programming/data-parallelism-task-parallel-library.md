@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bf162a3ef9f66e7c7d74c96f13c055857818a2b
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: f414e5b0463e28427c8c60e2f8b8774ad6973da2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37070958"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464141"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Параллелизм данных (библиотека параллельных задач)
 Понятие *Параллелизм данных* относится к сценариям, в которых одна и та же операция выполняется одновременно (то есть параллельно) для элементов в исходной коллекции или массиве. В параллельных операциях с данными исходная коллекция секционируются таким образом, чтобы несколько потоков могли одновременно работать в разных сегментах.  
   
- Библиотека параллельных задач (TPL) поддерживает параллелизм данных с помощью класса <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>. Этот класс предоставляет параллельные реализации на основе методов циклов [for](~/docs/csharp/language-reference/keywords/for.md) и [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) (`For` и `For Each` в Visual Basic). Вы пишете логику цикла для <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> или <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> в значительной степени так же, как пишете последовательный цикл. Нет необходимости создавать потоки или очередь рабочих элементов. В базовых циклах нет необходимости применять блокировки. Библиотека параллельных задач обрабатывает все низкоуровневые работы. Чтобы получить дополнительные сведения об использовании <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> скачайте документацию по [шаблонам параллельного программирования и общим сведениям о применении параллельных шаблонов с платформой .NET Framework 4](http://www.microsoft.com/download/details.aspx?id=19222). В следующем примере кода показан простой цикл `foreach` и его параллельный эквивалент.  
+ Библиотека параллельных задач (TPL) поддерживает параллелизм данных с помощью класса <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>. Этот класс предоставляет параллельные реализации на основе методов циклов [for](~/docs/csharp/language-reference/keywords/for.md) и [foreach](~/docs/csharp/language-reference/keywords/foreach-in.md) (`For` и `For Each` в Visual Basic). Вы пишете логику цикла для <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> или <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> в значительной степени так же, как пишете последовательный цикл. Нет необходимости создавать потоки или очередь рабочих элементов. В базовых циклах нет необходимости применять блокировки. Библиотека параллельных задач обрабатывает все низкоуровневые работы. Чтобы получить дополнительные сведения об использовании <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> скачайте документацию по [шаблонам параллельного программирования и общим сведениям о применении параллельных шаблонов с платформой .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222). В следующем примере кода показан простой цикл `foreach` и его параллельный эквивалент.  
   
 > [!NOTE]
 >  В этой документации для определения делегатов в библиотеке параллельных задач используются лямбда-выражения. Если вы не знакомы с лямбда-выражениями в C# или Visual Basic, см. раздел [Лямбда-выражения в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "37070958"
  При выполнении параллельного цикла библиотека параллельных задач разделяет источник данных, чтобы цикл мог одновременно работать в нескольких частях. В фоне планировщик заданий разделяет задачу исходя из системных ресурсов и рабочей нагрузки. По возможности планировщик перераспределяет работу по нескольким потокам и процессорам, если рабочая нагрузка становится несбалансированной.  
   
 > [!NOTE]
->  Можно также указать собственный пользовательский разделитель или планировщик. Дополнительные сведения см. в разделах [Пользовательские разделители для PLINQ и TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) и [Планировщики задач](http://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
+>  Можно также указать собственный пользовательский разделитель или планировщик. Дополнительные сведения см. в разделах [Пользовательские разделители для PLINQ и TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) и [Планировщики задач](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65).  
   
  Оба метода <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> имеют несколько перегрузок, позволяющих остановить или прервать выполнение цикла, отслеживать состояние цикла в других потоках, обслуживать локальное состояние потока, завершить локальные по отношению к потоку объекты, управлять степенью параллелизма и т. д. Вспомогательные типы, обеспечивающие эту функциональную возможность, включают в себя <xref:System.Threading.Tasks.ParallelLoopState>, <xref:System.Threading.Tasks.ParallelOptions>, <xref:System.Threading.Tasks.ParallelLoopResult>, <xref:System.Threading.CancellationToken> и <xref:System.Threading.CancellationTokenSource>.  
   

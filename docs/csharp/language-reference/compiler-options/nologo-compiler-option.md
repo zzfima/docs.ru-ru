@@ -9,12 +9,12 @@ helpviewer_keywords:
 - banners, suppressing startup
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
-ms.openlocfilehash: cede0d730e0c0bdaaa1b9b39c729b49677b81ed5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8f4582e9c8d5a54d924ff5b456ef8ffd8cc56f3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213644"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480599"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo (параметры компилятора C#)
 Параметр **-nologo** отключает отображение приветствия при запуске компилятора и информационных сообщений во время компиляции.  
@@ -31,5 +31,6 @@ ms.locfileid: "33213644"
  Этот параметр компилятора недоступен в Visual Studio и не может быть изменен программным способом.  
   
 ## <a name="see-also"></a>См. также  
- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
+- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

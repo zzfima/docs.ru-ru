@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 64bd5ce7d7dfe3265c3c645467493ab7d8792172
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: be7e081b18702710c00b5b86a9bc152800f0cf3d
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936882"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43253171"
 ---
 # <a name="volatile-c-reference"></a>volatile (Справочник по C#)
 Ключевое слово `volatile` означает, что поле может изменить несколько потоков, выполняемых одновременно. Поля, объявленные `volatile`, не участвуют в оптимизации компилятора, предполагающей доступ для одного потока. Эти ограничения гарантируют, что все потоки будут видеть временные записи, выполняемые другим потоком, в порядке выполнения. Нет никакой гарантии единого общего прядка временных записей во всех потоках выполнения.  
@@ -48,8 +48,9 @@ ms.locfileid: "37936882"
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)

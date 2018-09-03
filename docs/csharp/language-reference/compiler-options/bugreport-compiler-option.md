@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -bugreport compiler option [C#]
 - bugreport compiler option [C#]
 ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
-ms.openlocfilehash: 5505971ad9a6920124dd4d8c12642a5e4e346322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e4674acd2a5edbbffd2babf130d2078019ab9b7
+ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214096"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43331739"
 ---
 # <a name="-bugreport-c-compiler-options"></a>-bugreport (параметры компилятора C#)
 Указывает, что отладочную информацию следует поместить в файл для последующего анализа.  
@@ -54,6 +54,7 @@ ms.locfileid: "33214096"
  Обратите внимание, что содержимое созданного файла раскрывает исходный код, что может привести к непреднамеренному разглашению информации.  
   
 ## <a name="see-also"></a>См. также  
- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
- [-errorreport (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
+- [-errorreport (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
+- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

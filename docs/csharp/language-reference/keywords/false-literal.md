@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - false literal keyword [C#]
 ms.assetid: fcc1c1a5-0e42-4226-a128-81492a9bf719
-ms.openlocfilehash: 07b123176ec860addb3fcf9e9f7b7207f91b92a9
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f0743ead2836a4570d1b2dc0fc4cf20d2343a9a1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42907648"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408538"
 ---
 # <a name="false-literal-c-reference"></a>Литерал false (справочник по C#)
 
@@ -25,7 +25,7 @@ ms.locfileid: "42907648"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по C#](../index.md)  
-[Руководство по программированию на C#](../../programming-guide/index.md)  
-[Ключевые слова в C#](index.md)  
-[true](true.md)  
+- [Справочник по C#](../index.md)  
+- [Руководство по программированию на C#](../../programming-guide/index.md)  
+- [Ключевые слова в C#](index.md)  
+- [true](true.md)  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a909b7c940f22e6435fc72a370b8a4ed17d5f937
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f56ccbf549ce8f1750ba0bf9cf4a945007694258
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925061"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43408250"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Руководство по развертыванию .NET Framework для администраторов
 В этой статье представлено пошаговое описание развертывания администратором платформы [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и системных зависимостей в сети с помощью Microsoft System Center Configuration Manager. В рамках этой статьи предполагается, что все целевые клиентские компьютеры соответствуют минимальным требованиям для .NET Framework. Список требований к программному обеспечению и оборудованию для установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md).  
@@ -20,7 +20,7 @@ ms.locfileid: "42925061"
 > [!NOTE]
 >  Упоминаемое в этом документе программное обеспечение, в том числе [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], System Center Configuration Manager и Active Directory, используется в соответствии с условиями лицензионного соглашения. В приведенных здесь инструкциях предполагается, что эти условия лицензионного соглашения были прочитаны и приняты соответствующими приобретателями лицензий на программное обеспечение. Данные инструкции не предполагают отказа от каких-либо условий этих лицензионных соглашений.  
 >   
->  Сведения о поддержке платформы .NET Framework см. на странице [Политика жизненного цикла поддержки платформы Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607) веб-сайта поддержки Майкрософт.  
+>  Сведения о поддержке платформы .NET Framework см. на странице [Политика жизненного цикла поддержки платформы Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) веб-сайта поддержки Майкрософт.  
   
  В этом разделе содержатся следующие подразделы.  
   
@@ -37,16 +37,16 @@ ms.locfileid: "42925061"
 ## <a name="the-deployment-process"></a>Процесс развертывания  
  После создания инфраструктуры поддержки распространяемый пакет .NET Framework можно развернуть на компьютерах сети с помощью System Center 2012 Configuration Manager. Построение инфраструктуры включает в себя создание и определение пяти основных областей: коллекции, пакет и программа для программного обеспечения, точки распространения и развертывания.  
   
--   **Коллекции** — группы ресурсов Configuration Manager, такие как пользователи, группы пользователей или компьютеры, на которых развертывается .NET Framework. Дополнительные сведения см. в статье [Коллекции в Configuration Manager](http://technet.microsoft.com/library/gg682169.aspx) в библиотеке документации по Configuration Manager.  
+-   **Коллекции** — группы ресурсов Configuration Manager, такие как пользователи, группы пользователей или компьютеры, на которых развертывается .NET Framework. Дополнительные сведения см. в статье [Коллекции в Configuration Manager](https://technet.microsoft.com/library/gg682169.aspx) в библиотеке документации по Configuration Manager.  
   
--   **Пакеты и программы** обычно представляют программные приложения, которые подлежат установке на клиентском компьютере. Сюда также могут относиться отдельные файлы, обновления и даже отдельные команды. Дополнительные сведения см. в статье [Пакеты и программы в Configuration Manager](http://technet.microsoft.com/library/gg699369.aspx) в библиотеке документации по Configuration Manager.  
+-   **Пакеты и программы** обычно представляют программные приложения, которые подлежат установке на клиентском компьютере. Сюда также могут относиться отдельные файлы, обновления и даже отдельные команды. Дополнительные сведения см. в статье [Пакеты и программы в Configuration Manager](https://technet.microsoft.com/library/gg699369.aspx) в библиотеке документации по Configuration Manager.  
   
--   **Точки распространения** — роли системы сайта Configuration Manager, где хранятся файлы, необходимые для работы программного обеспечения на клиентских компьютерах. Когда клиент Configuration Manager получает и обрабатывает развертывание программного обеспечения, он связывается с точкой распространения для загрузки содержимого, связанного с программным обеспечением, и запуска процесса установки. Дополнительные сведения см. в статье [Введение в управление содержимым с помощью Configuration Manager](http://technet.microsoft.com/library/gg682083.aspx) в библиотеке документации по Configuration Manager.  
+-   **Точки распространения** — роли системы сайта Configuration Manager, где хранятся файлы, необходимые для работы программного обеспечения на клиентских компьютерах. Когда клиент Configuration Manager получает и обрабатывает развертывание программного обеспечения, он связывается с точкой распространения для загрузки содержимого, связанного с программным обеспечением, и запуска процесса установки. Дополнительные сведения см. в статье [Введение в управление содержимым с помощью Configuration Manager](https://technet.microsoft.com/library/gg682083.aspx) в библиотеке документации по Configuration Manager.  
   
--   **Развертывания** сообщают подходящим членам целевой коллекции о необходимости установить программный пакет. Дополнительные сведения см. в статье [Развертывание приложений в Configuration Manager](http://technet.microsoft.com/library/gg682082.aspx) в библиотеке документации по Configuration Manager.  
+-   **Развертывания** сообщают подходящим членам целевой коллекции о необходимости установить программный пакет. Дополнительные сведения см. в статье [Развертывание приложений в Configuration Manager](https://technet.microsoft.com/library/gg682082.aspx) в библиотеке документации по Configuration Manager.  
   
 > [!IMPORTANT]
->  Процедуры в этом разделе содержат обычные параметры для создания и развертывания пакета и программы и могут не охватывать все возможные настройки. Другие варианты развертывания Configuration Manager см. в [библиотеке документации по Configuration Manager](http://technet.microsoft.com/library/gg682041.aspx).  
+>  Процедуры в этом разделе содержат обычные параметры для создания и развертывания пакета и программы и могут не охватывать все возможные настройки. Другие варианты развертывания Configuration Manager см. в [библиотеке документации по Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).  
   
 <a name="deploying_in_a_test_environment"></a>   
 ## <a name="deploying-the-net-framework"></a>Развертывание .NET Framework  
@@ -62,7 +62,7 @@ ms.locfileid: "42925061"
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>Создание коллекции  
- На этом этапе необходимо выбрать компьютеры, на которых будет выполнено развертывание пакета и программы, и объединить их в коллекцию устройств. Для создания коллекции в Configuration Manager можно использовать правила непосредственного членства (где необходимо вручную указать членов коллекции) или правила запросов (где Configuration Manager определяет членов коллекции на основе заданных критериев). Дополнительные сведения о правилах членства, включая правила непосредственного членства и правила запросов, см. в статье [Введение в коллекции в Configuration Manager](http://technet.microsoft.com/library/gg682177.aspx) в библиотеке документации по Configuration Manager.  
+ На этом этапе необходимо выбрать компьютеры, на которых будет выполнено развертывание пакета и программы, и объединить их в коллекцию устройств. Для создания коллекции в Configuration Manager можно использовать правила непосредственного членства (где необходимо вручную указать членов коллекции) или правила запросов (где Configuration Manager определяет членов коллекции на основе заданных критериев). Дополнительные сведения о правилах членства, включая правила непосредственного членства и правила запросов, см. в статье [Введение в коллекции в Configuration Manager](https://technet.microsoft.com/library/gg682177.aspx) в библиотеке документации по Configuration Manager.  
   
  Создание коллекции  
   
@@ -84,7 +84,7 @@ ms.locfileid: "42925061"
   
 9. На странице **Правила членства в коллекции** **мастера создания коллекций устройств** нажмите кнопку **Далее**, после чего завершите работу мастера.  
   
- Дополнительные сведения о коллекциях см. в статье [Коллекции в Configuration Manager](http://technet.microsoft.com/library/bb693730.aspx) в библиотеке документации по Configuration Manager.  
+ Дополнительные сведения о коллекциях см. в статье [Коллекции в Configuration Manager](https://technet.microsoft.com/library/bb693730.aspx) в библиотеке документации по Configuration Manager.  
   
 <a name="creating_a_package"></a>   
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>Создание пакета и программы для распространяемого пакета .NET Framework  
@@ -128,9 +128,9 @@ ms.locfileid: "42925061"
 |------------|-----------------|  
 |**/q**|Включает автоматический режим. Ввод данных пользователем необязателен, вывод не отображается.|  
 |**/norestart**|Запрещает программе установки автоматически перезагружать компьютер. При использовании этого параметра Configuration Manager должен обрабатывать перезагрузку компьютера.|  
-|**/chainingpackage** *PackageName*|Указывает имя пакета, осуществляющего привязку. Эта информация передается вместе с другими данными сеанса установки для тех, кто подписался на [программу улучшения качества программного обеспечения корпорации Майкрософт (CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244). Если в имени пакета присутствуют пробелы, в качестве разделителей необходимо использовать двойные кавычки (например, **/chainingpackage "Chaining Product"**).|  
+|**/chainingpackage** *PackageName*|Указывает имя пакета, осуществляющего привязку. Эта информация передается вместе с другими данными сеанса установки для тех, кто подписался на [программу улучшения качества программного обеспечения корпорации Майкрософт (CEIP)](https://go.microsoft.com/fwlink/p/?LinkId=248244). Если в имени пакета присутствуют пробелы, в качестве разделителей необходимо использовать двойные кавычки (например, **/chainingpackage "Chaining Product"**).|  
   
- На этих этапах создается пакет с именем .NET Framework 4.5. Программа развертывает автоматическую установку .NET Framework 4.5. При автоматической установке пользователи не взаимодействуют с процедурой установки, и привязываемое приложение должно захватить код возврата и обработать перезагрузку; см. раздел с описанием [получения сведений о ходе выполнения из пакета установки](http://go.microsoft.com/fwlink/?LinkId=179606).  
+ На этих этапах создается пакет с именем .NET Framework 4.5. Программа развертывает автоматическую установку .NET Framework 4.5. При автоматической установке пользователи не взаимодействуют с процедурой установки, и привязываемое приложение должно захватить код возврата и обработать перезагрузку; см. раздел с описанием [получения сведений о ходе выполнения из пакета установки](https://go.microsoft.com/fwlink/?LinkId=179606).  
  
 <a name="select_dist_point"></a>   
 ### <a name="select-a-distribution-point"></a>Выбор точки распространения  
@@ -154,7 +154,7 @@ ms.locfileid: "42925061"
   
 8.  Завершите работу мастера.  
   
- Теперь пакет содержит все сведения, необходимые для автоматического развертывания платформы .NET Framework 4.5. Перед развертыванием пакета и программы убедитесь, что она была установлена в точке распространения; см. раздел "Мониторинг содержимого" в статье [Использование и отслеживание управления содержимым в Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) в библиотеке документации по Configuration Manager.  
+ Теперь пакет содержит все сведения, необходимые для автоматического развертывания платформы .NET Framework 4.5. Перед развертыванием пакета и программы убедитесь, что она была установлена в точке распространения; см. раздел "Мониторинг содержимого" в статье [Использование и отслеживание управления содержимым в Configuration Manager](https://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) в библиотеке документации по Configuration Manager.  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Развертывание пакета  
@@ -179,7 +179,7 @@ ms.locfileid: "42925061"
 9. На странице **Взаимодействие с пользователем** оставьте значения по умолчанию и нажмите кнопку **Далее**.  
   
     > [!WARNING]
-    >  В вашей рабочей среде могут использоваться политики, требующие выбора других параметров для расписания развертывания. Сведения об этих параметрах см. в статье [Свойства имени объявления: вкладка "Расписание"](http://technet.microsoft.com/library/bb694016.aspx) в библиотеке TechNet.  
+    >  В вашей рабочей среде могут использоваться политики, требующие выбора других параметров для расписания развертывания. Сведения об этих параметрах см. в статье [Свойства имени объявления: вкладка "Расписание"](https://technet.microsoft.com/library/bb694016.aspx) в библиотеке TechNet.  
   
 10. На странице **Точки распространения** оставьте значения по умолчанию и нажмите кнопку **Далее**.  
   
@@ -193,27 +193,27 @@ ms.locfileid: "42925061"
   
  **Active Directory, DNS, DHCP**  
   
--   [Доменные службы Active Directory для Windows Server 2008](http://technet.microsoft.com/library/dd378891.aspx)  
+-   [Доменные службы Active Directory для Windows Server 2008](https://technet.microsoft.com/library/dd378891.aspx)  
   
--   [DNS-сервер](http://technet.microsoft.com/library/cc732997.aspx)  
+-   [DNS-сервер](https://technet.microsoft.com/library/cc732997.aspx)  
   
--   [DHCP-сервер](http://technet.microsoft.com/library/cc896553.aspx)  
+-   [DHCP-сервер](https://technet.microsoft.com/library/cc896553.aspx)  
   
  **SQL Server 2008**  
   
--   [Установка SQL Server 2008 (видеоматериал по SQL Server)](http://technet.microsoft.com/library/dd299415.aspx)  
+-   [Установка SQL Server 2008 (видеоматериал по SQL Server)](https://technet.microsoft.com/library/dd299415.aspx)  
   
--   [Обзор безопасности SQL Server 2008 для администраторов баз данных](http://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
+-   [Обзор безопасности SQL Server 2008 для администраторов баз данных](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  **System Center 2012 Configuration Manager (точка управления, точка распространения)**  
   
--   [Администрирование сайтов для System Center 2012 Configuration Manager](http://technet.microsoft.com/library/gg681983.aspx)  
+-   [Администрирование сайтов для System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg681983.aspx)  
   
--   [Планирование и развертывание одного сайта Configuration Manager](http://technet.microsoft.com/library/bb680961.aspx)  
+-   [Планирование и развертывание одного сайта Configuration Manager](https://technet.microsoft.com/library/bb680961.aspx)  
   
  **Клиент System Center 2012 Configuration Manager для компьютеров под управлением Windows**  
   
--   [Развертывание клиентов для System Center 2012 Configuration Manager](http://technet.microsoft.com/library/gg699391.aspx)  
+-   [Развертывание клиентов для System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg699391.aspx)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>Устранение неполадок  
@@ -248,17 +248,17 @@ ms.locfileid: "42925061"
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>Коды ошибок загрузки  
   
--   [Коды ошибок Background Intelligent Transfer Service (BITS)](http://msdn.microsoft.com/library/aa362823.aspx)  
+-   [Коды ошибок Background Intelligent Transfer Service (BITS)](https://msdn.microsoft.com/library/aa362823.aspx)  
   
--   [Коды ошибок моникера URL](http://msdn.microsoft.com/library/ms775145.aspx)  
+-   [Коды ошибок моникера URL](https://msdn.microsoft.com/library/ms775145.aspx)  
   
 -   [Коды ошибок WinHttp](/windows/desktop/WinHttp/error-messages)  
   
  Другие коды ошибок  
   
--   [Коды ошибок установщика Windows](http://msdn.microsoft.com/library/aa368542.aspx)  
+-   [Коды ошибок установщика Windows](https://msdn.microsoft.com/library/aa368542.aspx)  
   
--   [Коды результатов агента обновления Windows](http://technet.microsoft.com/library/cc720442.aspx)  
+-   [Коды результатов агента обновления Windows](https://technet.microsoft.com/library/cc720442.aspx)  
   
 ## <a name="see-also"></a>См. также  
  [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)  

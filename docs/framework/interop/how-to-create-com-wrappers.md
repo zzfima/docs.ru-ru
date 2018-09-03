@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4deb355a7b523437ae31a1d2b9c79e3b8d4f40a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e30b1a5a4d3b50c80edaac29cbd6b90f3ddd103b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391229"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43400507"
 ---
 # <a name="how-to-create-com-wrappers"></a>Практическое руководство. Создание оболочек COM
 Программы-оболочки модели COM можно создавать с использованием функций [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] или средств платформы .NET Framework (Tlbimp.exe и Regasm.exe). Оба метода позволяют создать два типа программ-оболочек COM:  
@@ -40,7 +40,7 @@ ms.locfileid: "33391229"
  Теперь можно написать код для доступа к COM-объекту. Сначала можно объявить объект, например с помощью оператора `Imports` для [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] или `Using` для [!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)].  
   
 > [!NOTE]
->  При программировании компонентов Microsoft Office сначала необходимо установить [основные сборки взаимодействия Microsoft Office](http://go.microsoft.com/fwlink/?LinkId=50479) из Центра загрузки Майкрософт. На шаге 4 выберите последнюю доступную версию библиотеки объектов для нужного продукта Office, например **библиотеку объектов Microsoft Word 11.0**.  
+>  При программировании компонентов Microsoft Office сначала необходимо установить [основные сборки взаимодействия Microsoft Office](https://go.microsoft.com/fwlink/?LinkId=50479) из Центра загрузки Майкрософт. На шаге 4 выберите последнюю доступную версию библиотеки объектов для нужного продукта Office, например **библиотеку объектов Microsoft Word 11.0**.  
   
 #### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>Создание вызываемой оболочки времени выполнения с использованием средств платформы .NET Framework  
   

@@ -6,55 +6,60 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: 0320b1e287f8c7a3eb7751b68b40120f74e8f61c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4adc7ba106e0044ba6aff94ea3180d9c8e3ded7b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33266546"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43391529"
 ---
 # <a name="interface-c-reference"></a>interface (Справочник по C#)
-Интерфейс содержит только сигнатуры [методов](../../../csharp/programming-guide/classes-and-structs/methods.md), [свойств](../../../csharp/programming-guide/classes-and-structs/properties.md), [событий](../../../csharp/programming-guide/events/index.md) или [индексаторов](../../../csharp/programming-guide/indexers/index.md). Класс или структура, реализующие интерфейс, должны реализовать члены интерфейса, заданные в определении интерфейса. В следующем примере класс `ImplementationClass` должен реализовать метод с именем `SampleMethod`, не имеющий параметров и возвращающий значение `void`.  
-  
- Дополнительные сведения и примеры см. в разделе [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md).  
-  
-## <a name="example"></a>Пример  
- [!code-csharp[csrefKeywordsTypes#14](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_1.cs)]  
-  
- Интерфейс может быть членом пространства имен или класса и содержать сигнатуры следующих членов:  
-  
--   [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
-  
--   [Свойства](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
-  
--   [Индексаторы](../../../csharp/programming-guide/indexers/using-indexers.md)  
-  
--   [События](../../../csharp/language-reference/keywords/event.md)  
-  
- Интерфейс может наследовать от одного или нескольких базовых интерфейсов.  
-  
- Если список базовых типов содержит базовый класс и интерфейсы, базовый класс должен стоять первым в списке.  
-  
- Класс, реализующий интерфейс, может явно реализовывать члены этого интерфейса. При явной реализации члена к нему можно получить доступ только через экземпляр интерфейса, но не через экземпляр класса.  
-  
- Дополнительные сведения и примеры кода с явной реализацией интерфейса см. в разделе [Явная реализация интерфейса](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md).  
-  
-## <a name="example"></a>Пример  
- В следующем примере показана реализация интерфейса. В этом примере интерфейс содержит объявление свойства, а класс содержит реализацию. Любой экземпляр класса, который реализует `IPoint`, имеет целочисленные свойства `x` и `y`.  
-  
- [!code-csharp[csrefKeywordsTypes#15](../../../csharp/language-reference/keywords/codesnippet/CSharp/interface_2.cs)]  
-  
-## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Ссылочные типы](../../../csharp/language-reference/keywords/reference-types.md)  
- [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)  
- [Использование свойств](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
- [Использование индексаторов](../../../csharp/programming-guide/indexers/using-indexers.md)  
- [class](../../../csharp/language-reference/keywords/class.md)  
- [struct](../../../csharp/language-reference/keywords/struct.md)  
- [Интерфейсы](../../../csharp/programming-guide/interfaces/index.md)
+
+Интерфейс содержит только сигнатуры [методов](../../programming-guide/classes-and-structs/methods.md), [свойств](../../programming-guide/classes-and-structs/properties.md), [событий](../../programming-guide/events/index.md) или [индексаторов](../../programming-guide/indexers/index.md). Класс или структура, реализующие интерфейс, должны реализовать члены интерфейса, заданные в определении интерфейса. В следующем примере класс `ImplementationClass` должен реализовать метод с именем `SampleMethod`, не имеющий параметров и возвращающий значение `void`.
+
+Дополнительные сведения и примеры см. в разделе [Интерфейсы](../../programming-guide/interfaces/index.md).
+
+## <a name="example"></a>Пример
+
+[!code-csharp[csrefKeywordsTypes#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#14)]
+
+Интерфейс может быть членом пространства имен или класса и содержать сигнатуры следующих членов:
+
+- [Методы](../../programming-guide/classes-and-structs/methods.md)
+
+- [Свойства](../../programming-guide/classes-and-structs/using-properties.md)
+
+- [Индексаторы](../../programming-guide/indexers/using-indexers.md)
+
+- [События](event.md)
+
+Интерфейс может наследовать от одного или нескольких базовых интерфейсов.
+
+Если список базовых типов содержит базовый класс и интерфейсы, базовый класс должен стоять первым в списке.
+
+Класс, реализующий интерфейс, может явно реализовывать члены этого интерфейса. При явной реализации члена к нему можно получить доступ только через экземпляр интерфейса, но не через экземпляр класса.
+
+Дополнительные сведения и примеры кода с явной реализацией интерфейса см. в разделе [Явная реализация интерфейса](../../programming-guide/interfaces/explicit-interface-implementation.md).
+
+## <a name="example"></a>Пример
+
+В следующем примере показана реализация интерфейса. В этом примере интерфейс содержит объявление свойства, а класс содержит реализацию. Любой экземпляр класса, который реализует `IPoint`, имеет целочисленные свойства `x` и `y`.
+
+[!code-csharp[csrefKeywordsTypes#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#15)]
+
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../programming-guide/index.md)  
+- [Ключевые слова в C#](index.md)  
+- [Ссылочные типы](reference-types.md)  
+- [Интерфейсы](../../programming-guide/interfaces/index.md)  
+- [Использование свойств](../../programming-guide/classes-and-structs/using-properties.md)  
+- [Использование индексаторов](../../programming-guide/indexers/using-indexers.md)  
+- [class](class.md)  
+- [struct](struct.md)  
+- [Интерфейсы](../../programming-guide/interfaces/index.md)

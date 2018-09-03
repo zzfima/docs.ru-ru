@@ -5,12 +5,12 @@ ms.author: ronpet
 author: rpetrusha
 ms.date: 11/22/2016
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: e37f0e72ee02915d16509fb2ff48bd114e8ad466
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2469e8a0fbf8181a720201637ab5ac5ef02055d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217978"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43400869"
 ---
 # <a name="lambda-expressions"></a>Лямбда-выражения #
 
@@ -78,7 +78,7 @@ ms.locfileid: "33217978"
 
 ## <a name="lambda-expressions-and-tuples"></a>Лямбда-выражения и кортежи ##
 
-В C# 7.0 была представлена встроенная поддержка для кортежей. Кортеж можно ввести в качестве аргумента лямбда-выражения, и лямбда-выражение также может возвращать кортеж. В некоторых случаях компилятор C# использует определение типа для определения типов компонентов кортежа. 
+В C# 7.0 была представлена встроенная поддержка для кортежей. Кортеж можно ввести в качестве аргумента лямбда-выражения, и лямбда-выражение также может возвращать кортеж. В некоторых случаях компилятор C# использует определение типа для определения типов компонентов кортежа.
 
 Кортеж определяется путем заключения в скобки списка его компонентов с разделителями-запятыми. В следующем примере кортеж с пятью компонентами используется для передачи последовательности чисел в лямбда-выражение, которое удваивает каждое значение и возвращает кортеж с пятью компонентами, содержащий результат операций умножения.
 
@@ -154,6 +154,6 @@ ms.locfileid: "33217978"
 
 ## <a name="see-also"></a>См. также ##
 
-[Встроенный язык запросов LINQ](../standard/using-linq.md)   
-[Анонимные методы](programming-guide/statements-expressions-operators/anonymous-methods.md)   
-[Деревья выражений](expression-trees.md)
+- [Встроенный язык запросов LINQ](../standard/using-linq.md)
+- [Анонимные методы](programming-guide/statements-expressions-operators/anonymous-methods.md)
+- [Деревья выражений](expression-trees.md)

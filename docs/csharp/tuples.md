@@ -3,12 +3,12 @@ title: Типы кортежей — руководство по C#
 description: Сведения о типах именованных и неименованных кортежей в C#
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 6c3b6edb0481b8c2e4d92989b605f657aac607fa
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b0c838791e640c9813005b8a32d009153a794c14
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208306"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404318"
 ---
 # <a name="c-tuple-types"></a>Типы кортежей в C# #
 
@@ -71,7 +71,7 @@ ms.locfileid: "36208306"
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
-Во всех полях, где не указано явное имя, проецируется применимое неявное имя. Необязательно указывать семантические имена как явно, так и неявно. Следующий инициализатор имеет имена полей `Item1` со значением `42` и `StringContent` ("Ответ на все вопросы"):
+Во всех полях, где не указано явное имя, проецируется применимое неявное имя. Необязательно указывать семантические имена как явно, так и неявно. Следующий инициализатор имеет имена полей `Item1` со значением `42` и `stringContent` ("Ответ на все вопросы"):
 
 [!code-csharp[MixedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#MixedTuple "mixed tuple")]
 
@@ -92,7 +92,7 @@ ms.locfileid: "36208306"
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-Существует несколько правил, которые упрощают тесты на равенство кортежей. Если один из кортежей допускает значение NULL, как показано в следующем коде, функция проверки кортежей на равенство выполняет [преобразования для использования форм, допускающих значение NULL](/dotnet/csharp/language-reference/language-specification/conversions#lifted-conversion-operators):
+Существует несколько правил, которые упрощают тесты на равенство кортежей. Если один из кортежей допускает значение NULL, как показано в следующем коде, функция проверки кортежей на равенство выполняет [преобразования для использования форм, допускающих значение NULL](language-reference/language-specification/index.md):
 
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]

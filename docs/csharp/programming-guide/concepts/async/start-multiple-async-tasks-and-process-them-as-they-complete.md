@@ -2,12 +2,12 @@
 title: Запуск нескольких асинхронных задач и их обработка по мере завершения (C#)
 ms.date: 07/20/2015
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 29dc629abae13bb7ba3a9b0cb87300e6d1cbe2d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d59b65e456c528c63c79c97f6c75c328066be631
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333727"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43416402"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>Запуск нескольких асинхронных задач и их обработка по мере завершения (C#)
 С помощью <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> можно запускать несколько задач одновременно и обрабатывать их по одной по мере завершения, а не в порядке их запуска.  
@@ -37,7 +37,7 @@ ms.locfileid: "33333727"
  Если вы не хотите скачивать проект, можете просмотреть файл MainWindow.xaml.cs в конце этого раздела.  
   
 ## <a name="building-the-example"></a>Построение примера  
- Код из этого примера добавляется к коду, разработанному в разделе [Отмена оставшихся асинхронных задач после завершения одной из них (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)[Отмена оставшихся асинхронных задач после завершения одной из них](http://msdn.microsoft.com/library/8e800b58-235a-44b7-a02c-fa4375591d76), и использует тот же пользовательский интерфейс.  
+ Код из этого примера добавляется к коду, разработанному в разделе [Отмена оставшихся асинхронных задач после завершения одной из них (C#)](../../../../csharp/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md)[Отмена оставшихся асинхронных задач после завершения одной из них](https://msdn.microsoft.com/library/8e800b58-235a-44b7-a02c-fa4375591d76), и использует тот же пользовательский интерфейс.  
   
  Для самостоятельной сборки примера шаг за шагом следуйте инструкциям в разделе "Загрузка примера", но выберите **CancelAfterOneTask** как **запускаемый проект**. Добавьте изменения в данном разделе в метод `AccessTheWebAsync` в этом проекте. Изменения помечены звездочками.  
   

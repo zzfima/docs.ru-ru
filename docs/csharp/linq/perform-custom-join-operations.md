@@ -3,12 +3,12 @@ title: Выполнение пользовательских операций с
 description: Узнайте, как выполнять пользовательские операции соединения LINQ в C#.
 ms.date: 12/1/2016
 ms.assetid: 56a2a4a5-7299-497d-b3c3-23c848678911
-ms.openlocfilehash: 09ed0a202627a07ac8958de6ac46d7dc6c2837d0
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: a0e08396c006f68949357c50a28b3b0982f0dd83
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403974"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43468114"
 ---
 # <a name="perform-custom-join-operations"></a>Выполнение пользовательских операций соединения
 
@@ -43,6 +43,6 @@ ms.locfileid: "37403974"
 
 ## <a name="see-also"></a>См. также
 
-[LINQ](index.md)  
-[предложение join](../language-reference/keywords/join-clause.md)  
-[Упорядочение результатов предложения соединения](order-the-results-of-a-join-clause.md)  
+- [LINQ](index.md)  
+- [предложение join](../language-reference/keywords/join-clause.md)  
+- [Упорядочение результатов предложения соединения](order-the-results-of-a-join-clause.md)  

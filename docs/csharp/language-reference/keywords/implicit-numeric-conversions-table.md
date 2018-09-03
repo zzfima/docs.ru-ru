@@ -7,12 +7,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 2d417a2020656f300de0517526742679388f262e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bbc6086dc5fd3838ef9361762c3068ca44efd0e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217198"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43417600"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Таблица неявных числовых преобразований (Справочник по C#)
 В следующей таблице приведены предопределенные неявные числовые преобразования. Неявные преобразования могут выполняться во многих ситуациях, включая вызов методов и операторы назначения.  
@@ -44,9 +44,10 @@ ms.locfileid: "33217198"
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
- [Приведение и преобразование типов](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Приведение и преобразование типов](../../../csharp/programming-guide/types/casting-and-type-conversions.md)

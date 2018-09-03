@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 7363df3e4b2449924222745de409fd68349b93de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ca052dea4ee4abc866d2b02055188b0707499d4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218388"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43475937"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Таблица явных числовых преобразований (Справочник по C#)
 Явное числовое преобразование используется для преобразования любого числового типа в любой другой числовой тип, для которого отсутствует неявное преобразование, с использованием выражения приведения. Эти преобразования показаны в следующей таблице.  
@@ -56,11 +56,12 @@ ms.locfileid: "33218388"
   
  Дополнительные сведения о явных преобразованиях см. в спецификации языка C#. Дополнительные сведения о доступе к спецификации см. в разделе [Спецификация языка C#](../../../csharp/language-reference/language-specification/index.md).  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Приведение и преобразование типов](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
- [Оператор ()](../../../csharp/language-reference/operators/invocation-operator.md)  
- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Приведение и преобразование типов](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [Оператор ()](../../../csharp/language-reference/operators/invocation-operator.md)  
+- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)

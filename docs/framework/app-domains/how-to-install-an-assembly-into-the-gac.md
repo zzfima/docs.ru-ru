@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed6519cb6bb7006f62ef83cd6baf8f2e32a44d19
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8c3bd568cf504125bc99801815d08764417b42cd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744386"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43469002"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Практическое руководство. Установка сборки в глобальный кэш сборок
 Существует два способа установки сборки со строгим именем в глобальный кэш сборок:  
@@ -23,7 +23,7 @@ ms.locfileid: "32744386"
 > [!IMPORTANT]
 >  В кэш могут быть установлены только сборки со строгими именами. Сведения о создании сборки со строгим именем см. в разделе [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
   
--   С помощью [установщика Windows](http://msdn.microsoft.com/library/windows/desktop/cc185688.aspx).  
+-   С помощью [установщика Windows](/windows/desktop/Msi/windows-installer-portal).  
   
      Для этого в Visual Studio 2012 и Visual Studio 2013 создается проект InstallShield Limited.  
   
@@ -82,4 +82,4 @@ gacutil -i hello.dll
  [Практическое руководство. Удаление сборки из глобального кэша сборок](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  [Gacutil.exe (программа глобального кэша сборок)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Развертывание с помощью установщика Windows](http://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)
+ [Развертывание с помощью установщика Windows](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)

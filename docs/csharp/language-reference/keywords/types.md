@@ -5,12 +5,12 @@ helpviewer_keywords:
 - types [C#]
 - data types [C#], type system
 ms.assetid: 16b984df-f417-4e02-b1e6-4589d4a614ea
-ms.openlocfilehash: d0fe09092b438af90658d599b6a5e63cb62af580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5c29f5d9a1a4e25e2d5f8816a0df31fa9a91fb1
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33270429"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43463316"
 ---
 # <a name="types-c-reference"></a>Типы (Справочник по C#)
 Система типов C# включает в себя следующие категории:  
@@ -29,10 +29,11 @@ ms.locfileid: "33270429"
   
  Типы значений также допускают значения NULL, то есть могут хранить дополнительное состояние, не являющееся значением. Дополнительные сведения см. в разделе [Nullable Types](../../../csharp/programming-guide/nullable-types/index.md) (Типы, допускающие значение NULL).  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
- [Приведение и преобразование типов](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
- [Типы](../../../csharp/programming-guide/types/index.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
+- [Приведение и преобразование типов](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [Типы](../../../csharp/programming-guide/types/index.md)

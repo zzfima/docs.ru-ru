@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 904657175d87e0d78e518248ed89b3720227360f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 96cad879c843a7b70dc748675123b792137d290e
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339174"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43463121"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World – Создаем первую программу (Руководство по программированию на C#)
 В следующей процедуре создается версия традиционной программы "Hello World!" в C#. Программа отображает строку `Hello World!`  
@@ -78,7 +78,7 @@ ms.locfileid: "33339174"
   
  Параметр `args` метода `Main` является массивом значений типа `string`, который содержит аргументы командной строки, используемые для вызова программы. В отличие от C++, массив не содержит имя исполняемого файла (EXE).  
   
- Дополнительные сведения об использовании командной строки см. в примерах в разделах [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md) и [Практическое руководство. Создание и использование сборок с помощью командной строки](http://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
+ Дополнительные сведения об использовании командной строки см. в примерах в разделах [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md) и [Практическое руководство. Создание и использование сборок с помощью командной строки](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
   
  Вызов <xref:System.Console.ReadKey%2A> в конце метода `Main` предотвращает закрытие окна консоли, чтобы вы успели прочитать выходные данные, когда запускаете программу в режиме отладки с помощью клавиши F5.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "33339174"
  [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
  [Структура программы C#](../../../csharp/programming-guide/inside-a-program/index.md)  
  [Строки](../../../csharp/programming-guide/strings/index.md)  
- [\<paveover>Примеры приложений на C#](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+ [\<paveover>Примеры приложений на C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
  [Справочник по C#](../../../csharp/language-reference/index.md)  
  [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

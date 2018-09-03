@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50e709c8b5de505b17efea8ddf333633b2bd7400
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1be82fd9f26e382f20913551f67e8303cf20e03b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591694"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390617"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Управляемые и неуправляемые потоки в Windows
-Управление всеми потоками осуществляется посредством класса <xref:System.Threading.Thread> , включая потоки, созданные средой CLR или созданные за пределами среды выполнения и входящие в управляемую среду для выполнения кода. Среда выполнения отслеживает в своем процессе все потоки, которые когда-либо выполняли код в управляемой среде. Другие потоки она не отслеживает. Потоки могут входить в управляемую среду выполнения посредством COM-взаимодействия (так как среда выполнения предоставляет управляемые объекты неуправляемой среде в качестве COM-объектов), функции COM [DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) и вызова неуправляемого кода.  
+Управление всеми потоками осуществляется посредством класса <xref:System.Threading.Thread> , включая потоки, созданные средой CLR или созданные за пределами среды выполнения и входящие в управляемую среду для выполнения кода. Среда выполнения отслеживает в своем процессе все потоки, которые когда-либо выполняли код в управляемой среде. Другие потоки она не отслеживает. Потоки могут входить в управляемую среду выполнения посредством COM-взаимодействия (так как среда выполнения предоставляет управляемые объекты неуправляемой среде в качестве COM-объектов), функции COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) и вызова неуправляемого кода.  
   
  Когда неуправляемый поток входит в среду выполнения, например, посредством вызываемой оболочки COM, система проверяет локальное хранилище потока данного потока для поиска внутреннего управляемого объекта <xref:System.Threading.Thread> . Если он найден, среда выполнения уже оповещена об этом потоке. Если найти объект не удается, среда выполнения создает новый объект <xref:System.Threading.Thread> и устанавливает его в локальном хранилище потока данного потока.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33591694"
 |Близко к **CoInitializeEx** (OLE32.DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  
   
 ## <a name="managed-threads-and-com-apartments"></a>Управляемые потоки и подразделения COM  
- Управляемый поток может быть отмечен для указания того, что в нем будет размещаться [однопотоковое](https://msdn.microsoft.com/library/windows/desktop/ms680112.aspx) или [многопотоковое](https://msdn.microsoft.com/library/windows/desktop/ms693421.aspx) подразделение. (Дополнительные сведения об архитектуре потоков COM см. в разделе [Процессы, потоки и подразделения](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx).) Методы <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> и <xref:System.Threading.Thread.TrySetApartmentState%2A> класса <xref:System.Threading.Thread> возвращают и назначают состояние подразделения потока. Если состояние не задано, <xref:System.Threading.Thread.GetApartmentState%2A> возвращает <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
+ Управляемый поток может быть отмечен для указания того, что в нем будет размещаться [однопотоковое](/windows/desktop/com/single-threaded-apartments) или [многопотоковое](/windows/desktop/com/multithreaded-apartments) подразделение. (Дополнительные сведения об архитектуре потоков COM см. в разделе [Процессы, потоки и подразделения](https://msdn.microsoft.com/library/windows/desktop/ms693344.aspx).) Методы <xref:System.Threading.Thread.GetApartmentState%2A>, <xref:System.Threading.Thread.SetApartmentState%2A> и <xref:System.Threading.Thread.TrySetApartmentState%2A> класса <xref:System.Threading.Thread> возвращают и назначают состояние подразделения потока. Если состояние не задано, <xref:System.Threading.Thread.GetApartmentState%2A> возвращает <xref:System.Threading.ApartmentState.Unknown?displayProperty=nameWithType>.  
   
  Свойство можно задать, только когда поток находится в состоянии <xref:System.Threading.ThreadState.Unstarted?displayProperty=nameWithType>, и сделать это можно только один раз для потока.  
   

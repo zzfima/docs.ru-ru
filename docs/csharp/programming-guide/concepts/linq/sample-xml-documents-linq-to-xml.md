@@ -2,12 +2,12 @@
 title: Примеры XML-документов (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 9ec89809-41a1-484c-b1e3-6c4ecdca7b8d
-ms.openlocfilehash: ce653f5067869a3ac568cd9c25e47a92b3148dbe
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 1d9e45e3d7e3131cf37b3373156a6a136d0a5cfd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42754925"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43420227"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>Примеры XML-документов (LINQ to XML)
 Следующие примеры файлов используются в образцах и фрагментах кода во всей документации по [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -26,7 +26,7 @@ ms.locfileid: "42754925"
 |[Пример XML-файла. Конфигурация тестирования (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)|XML-документ, который содержит некоторые псевдотестовые данные конфигурации.|  
 |[Пример XML-файла. Конфигурация тестирования в пространстве имен](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace1.md)|XML-документ в пространстве имен, который содержит некоторые псевдотестовые данные конфигурации.|  
 |[Пример XML-файла. Клиенты и заказы (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)|XML-документ, который содержит список клиентов и заказов.|  
-|[Пример XSD-файла. Клиенты и заказы](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)|Определение схемы XML (XSD), которое проверяет [пример XML-файла: клиенты и заказы (LINQ to XML)](http://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).|  
+|[Пример XSD-файла. Клиенты и заказы](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)|Определение схемы XML (XSD), которое проверяет [пример XML-файла: клиенты и заказы (LINQ to XML)](https://msdn.microsoft.com/library/26790c41-5976-4558-a096-d0f67bfc4d92).|  
 |[Пример XML-файла. Клиенты и заказы в пространстве имен](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)|XML-документ в пространстве имен, который содержит список клиентов и заказов.|  
 |[Пример XML-файла. Числовые данные (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)|XML-документ, который содержит данные, подходящие для суммирования и группирования.|  
 |[Пример XML-файла. Числовые данные в пространстве имен](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md)|XML-документ в пространстве имен, который содержит данные, подходящие для суммирования и группирования.|  

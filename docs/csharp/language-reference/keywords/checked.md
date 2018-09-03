@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - checked keyword [C#]
 ms.assetid: 718a1194-988d-48a3-b089-d6ee8bd1608d
-ms.openlocfilehash: e6c28ee0c575bd6010a8aad76fc978062c5fc6a4
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 892b24b0283314f5aded0405df55a93069cf91e2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960759"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43404033"
 ---
 # <a name="checked-c-reference"></a>checked (Справочник по C#)
 
@@ -42,8 +42,8 @@ ms.locfileid: "37960759"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по C#](../../../csharp/language-reference/index.md)  
-[Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-[Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
-[Операторы checked и unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
-[unchecked](../../../csharp/language-reference/keywords/unchecked.md)
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Операторы checked и unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)  
+- [unchecked](../../../csharp/language-reference/keywords/unchecked.md)

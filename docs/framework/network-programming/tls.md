@@ -13,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 author: blowdart
-ms.openlocfilehash: adde8f3bd387a3e283ae1c3cd69e42b12b443b8c
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a45d57af1069bba9e3afe8c2e6e6d463115a4e39
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925508"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389781"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Рекомендации по использованию протокола TLS с .NET Framework
 
@@ -231,7 +231,7 @@ Windows Registry Editor Version 5.00
 
 ## <a name="configuring-schannel-protocols-in-the-windows-registry"></a>Настройка протоколов Schannel в реестре Windows
 
-Вы можете использовать реестр для точного управления протоколами, которые согласовывает клиент или серверное приложение. Приложение подключается к сети по протоколу Schannel, который также называют [Secure Channel](https://msdn.microsoft.com/library/windows/desktop/aa380123). Используя `Schannel`, вы можете настроить поведение приложения.
+Вы можете использовать реестр для точного управления протоколами, которые согласовывает клиент или серверное приложение. Приложение подключается к сети по протоколу Schannel, который также называют [Secure Channel](/windows/desktop/SecAuthN/secure-channel). Используя `Schannel`, вы можете настроить поведение приложения.
 
 Для начала перейдите в раздел реестра `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols`. В нем вы можете создать любые подразделы из набора `SSL 2.0`, `SSL 3.0`, `TLS 1.0`, `TLS 1.1` и `TLS 1.2`. В каждом подразделе можно создать подраздел `Client` и (или) `Server`. В подразделах `Client` и `Server` вы можете создать значения DWORD для `DisabledByDefault` (0 или 1) и для `Enabled` (0 или 0xFFFFFFFF).
 
@@ -239,8 +239,8 @@ Windows Registry Editor Version 5.00
 
 Если флаг `SCH_USE_STRONG_CRYPTO` включен (по умолчанию с помощью параметра `AppContext` или в реестре Windows), .NET Framework использует его, когда приложение запрашивает протокол безопасности TLS. Флаг `SCH_USE_STRONG_CRYPTO` может быть включен по умолчанию с помощью параметра `AppContext` или реестра. Операционная система передает флаг `Schannel`, чтобы отключать известные ненадежные алгоритмы шифрования, наборы шифров, версии протоколов TLS и SSL, которые могут быть включены для улучшения взаимодействия. Дополнительные сведения:
 
-- [Secure Channel](https://msdn.microsoft.com/library/windows/desktop/aa380123)
-- [SCHANNEL_CRED structure](https://msdn.microsoft.com/library/windows/desktop/aa379810) (Структура SCHANNEL_CRED)
+- [Secure Channel](/windows/desktop/SecAuthN/secure-channel)
+- [SCHANNEL_CRED structure](/windows/desktop/api/schannel/ns-schannel-_schannel_cred) (Структура SCHANNEL_CRED)
 
 Флаг `SCH_USE_STRONG_CRYPTO` также передается `Schannel`, если для <xref:System.Net.SecurityProtocolType> или <xref:System.Security.Authentication.SslProtocols> явно используются перечисляемые значения `Tls` (TLS 1.0), `Tls11` или `Tls12`.
 

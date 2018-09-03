@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /preferreduilang compiler option [C#]
 - -preferreduilang compiler option [C#]
 ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
-ms.openlocfilehash: 21a3baceb8a46723de1c633e415af0660bb41840
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1fbbb8415e5e3405f039489aa071b0624065a9d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211755"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405895"
 ---
 # <a name="-preferreduilang-c-compiler-options"></a>-preferreduilang (параметры компилятора C#)
 С помощью параметра компилятора `-preferreduilang` можно указать язык, на котором компилятор C# отображает выходные данные, например сообщения об ошибках.  
@@ -26,7 +26,7 @@ ms.locfileid: "33211755"
   
 ## <a name="arguments"></a>Аргументы  
  `language`  
- [Имя языка](https://msdn.microsoft.com/library/windows/desktop/dd318696(v=vs.85).aspx), который будет использоваться для вывода компилятора.  
+ [Имя языка](/windows/desktop/Intl/language-names), который будет использоваться для вывода компилятора.  
   
 ## <a name="remarks"></a>Примечания  
  Можно использовать параметр компилятора `-preferreduilang`, чтобы указать язык, который компилятор C# должен использовать для сообщений об ошибках и других данных вывода командной строки. Если необходимый языковой пакет не установлен, вместо него используются языковые настройки операционной системы; ошибка не возникает.  
@@ -37,5 +37,6 @@ csc.exe -preferreduilang:ja-JP
   
 ## <a name="requirements"></a>Требования  
   
-## <a name="see-also"></a>См. также  
- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+## <a name="see-also"></a>См. также
+
+- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)

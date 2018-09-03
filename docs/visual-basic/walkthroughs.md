@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 7248f352f95f2883fda9c92386f6ed769f9f2bf8
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 5211e1cc55c4af9735f59e4ddecc11acb24b8ea0
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792377"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43452798"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Пошаговые руководства для Visual Basic
 В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
@@ -47,7 +47,7 @@ ms.locfileid: "42792377"
  [Реализация наследования с использованием COM-объектов](../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  В этом пошаговом руководстве описывается использование Visual Basic 6.0 для создания COM-объекта, содержащего класс, и его последующее применение в качестве базового класса в Visual Basic.  
   
- [Многопоточность](http://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
+ [Многопоточность](https://msdn.microsoft.com/library/2cbf5116-8499-4af9-818c-6f7c1c2ad2c9)  
  В этом пошаговом руководстве описывается создание многопоточного приложения, которое выполняет поиск заданного слова в текстовом файле.  
   
  [Определение места записи сведений для My.Application.Log](../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "42792377"
  [Создание пользовательских прослушивателей журнала](../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  В этом пошаговом руководстве демонстрируется создание пользовательского прослушивателя журнала и его настройка на прослушивание выходных данных объекта `My.Application.Log`.  
   
- [Внедрение типов из управляемых сборок](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Внедрение типов из управляемых сборок](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
  В этом пошаговом руководстве описывается создание сборки и клиентской программы, в которую входят типы из этой сборки.  
   
  [Проверка паролей на сложность (Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
@@ -77,8 +77,8 @@ ms.locfileid: "42792377"
  [Управление файлами с помощью методов .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  В этом пошаговом руководстве описывается использование методов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для определения сведений о файле, поиска строки в файле и записи в файл.  
   
- [Сохранение объекта в Visual Basic](http://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
+ [Сохранение объекта в Visual Basic](https://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
  В этом пошаговом руководстве описывается создание простого объекта и сохранение его данных в файл.  
   
- [Основанная на тестировании поддержка с помощью возможности "Создание в результате использования"](http://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
+ [Основанная на тестировании поддержка с помощью возможности "Создание в результате использования"](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  
  В этом пошаговом руководстве описывается разработка типа "Сначала тест", при которой разработчик сначала пишет модульные тесты, а затем исходный код для их успешного выполнения.

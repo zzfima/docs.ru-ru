@@ -5,12 +5,12 @@ helpviewer_keywords:
 - builds [C#]
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
-ms.openlocfilehash: 3cd49a17991f3d7606b0364a83be2b2e30ba0cce
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 4b6dfdbce131371553fc729206de29794266bfbe
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961382"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482513"
 ---
 # <a name="command-line-build-with-cscexe"></a>Построение из командной строки с помощью csc.exe
 Чтобы вызвать компилятор C#, следует ввести имя соответствующего исполняемого файла (*csc.exe*) в командной строке.
@@ -96,11 +96,12 @@ csc -target:library -out:Something.xyz *.cs
 В результате вызова компилятора C# файлы объектов (*OBJ*-файлы) не создаются; выходные файлы создаются непосредственно. По этой причине компилятору C# не требуется компоновщик.
 
 ## <a name="see-also"></a>См. также
- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
- [Параметры компилятора C# в алфавитном порядке](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
- [Параметры компилятора C#, упорядоченные по категориям](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
- [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
- [Практическое руководство. Отображение аргументов командной строки](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [Практическое руководство. Доступ к аргументам командной строки с помощью оператора foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
- [Значения, возвращаемые методом main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)
+
+- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
+- [Параметры компилятора C# в алфавитном порядке](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+- [Параметры компилятора C#, упорядоченные по категориям](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+- [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [Аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
+- [Практическое руководство. Отображение аргументов командной строки](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [Практическое руководство. Доступ к аргументам командной строки с помощью оператора foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Значения, возвращаемые методом main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

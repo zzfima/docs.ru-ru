@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
-ms.openlocfilehash: 143acc0d6e1989232f80ee74bf748d6c600b9741
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: b55827b60a89da2569fad9da135c84571a24b094
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207977"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43390972"
 ---
 # <a name="add-c-reference"></a>add (Справочник по C#)
 Контекстное ключевое слово `add` определяет метод доступа настраиваемого события, который вызывается, когда клиентский код подписывается на [событие](../../../csharp/language-reference/keywords/event.md). Если указан настраиваемый метод доступа `add`, также необходимо указать метод доступа [remove](../../../csharp/language-reference/keywords/remove.md).  
@@ -24,4 +24,4 @@ ms.locfileid: "36207977"
  Как правило, настраиваемые методы доступа к событиям не используются. В большинстве сценариев достаточно методов доступа, которые автоматически создаются компилятором при объявлении события.  
   
 ## <a name="see-also"></a>См. также  
- [События](../../../csharp/programming-guide/events/index.md)
+- [События](../../../csharp/programming-guide/events/index.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-ms.openlocfilehash: 7ec8d2423c8f9d25ef48c0f0cc0d9627864c9c27
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 55d96039f430bece3cda6136d63dbf287e8fc744
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744500"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43408565"
 ---
 # <a name="client-application-services-overview"></a>Общие сведения о службах клиентских приложений
 Службы клиентских приложений предоставляют упрощенный доступ к службам входа, ролей и профилей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] из приложений Windows Forms и Windows Presentation Foundation (WPF). Службы приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] включены в расширения Microsoft ASP.NET 2.0 AJAX, которые входят в состав [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] и [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Эти службы позволяют нескольким веб-приложениям и приложениям Windows использовать сведения о пользователе и функции управления пользователями с одного сервера.  
@@ -25,7 +25,7 @@ ms.locfileid: "32744500"
   
 -   Интеграция с конструктором параметров приложения Visual Studio. При добавлении параметров в проект Visual Studio вы можете указать, к каким из них следует обращаться через поставщик служб клиентских параметров.  
   
- В следующих разделах эти возможности описываются более подробно. Дополнительные сведения о службах приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Общие сведения о службах приложений ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+ В следующих разделах эти возможности описываются более подробно. Дополнительные сведения о службах приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Общие сведения о службах приложений ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
 ## <a name="authentication"></a>Проверка подлинности  
  Вы можете использовать службы клиентских приложений для проверки пользователя в существующей службе проверки подлинности [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]. Вы можете проверить пользователя, используя проверку подлинности Windows или проверку подлинности с помощью форм. Проверка подлинности Windows означает, что операционная система предоставляет удостоверение пользователя при входе пользователя на компьютер или в домен. В приложении, развернутом в корпоративной интрасети, обычно используется проверка подлинности Windows. Проверка подлинности с помощью форм означает, что вам нужно включить элементы управления входа в приложение и передать полученные учетные данные поставщику проверки подлинности. Обычно проверка подлинности с помощью форм используется, если приложение развернуто в Интернете.  
@@ -40,17 +40,17 @@ ms.locfileid: "32744500"
   
  Если приложение настроено на использование поставщика учетных данных с проверкой подлинности с помощью форм, необходимо передать пустые строки или `null` как параметры метода <xref:System.Web.Security.Membership.ValidateUser%2A>. Затем поставщик служб вызовет реализацию вашего метода <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A?displayProperty=nameWithType>. Обычно этот метод реализуется для отображения диалогового окна и возврата заполненного объекта <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials>.  
   
- Дополнительные сведения о проверке подлинности см. в разделе [Проверка подлинности ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1). Сведения о настройке службы проверки подлинности [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Использование проверки подлинности с помощью форм в Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
+ Дополнительные сведения о проверке подлинности см. в разделе [Проверка подлинности ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1). Сведения о настройке службы проверки подлинности [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Использование проверки подлинности с помощью форм в Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
   
 ## <a name="roles"></a>Роли  
  Вы можете использовать службы клиентских приложений для получения сведений о ролях из существующей службы ролей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]. Чтобы определить, имеет ли текущий прошедший проверку подлинности пользователь определенную роль, следует вызвать метод <xref:System.Security.Principal.IPrincipal.IsInRole%2A> интерфейса <xref:System.Security.Principal.IPrincipal>, возвращаемого свойством `static` <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType>. Метод <xref:System.Security.Principal.IPrincipal.IsInRole%2A> принимает имя роли как параметр и возвращает значение <xref:System.Boolean>, указывающее, имеет ли текущий пользователь указанную роль. Этот метод вернет `false`, если пользователь не прошел проверку подлинности или не имеет указанной роли.  
   
- Сведения о настройке службы ролей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Использование сведений о ролях в Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d).  
+ Сведения о настройке службы ролей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Использование сведений о ролях в Microsoft Ajax](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d).  
   
 ## <a name="settings"></a>Параметры  
  Службы клиентских приложений можно использовать, чтобы получать параметры приложения пользователя из существующей службы профилей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]. Функциональность веб-параметров в службах клиентских приложений интегрируется с функциональностью параметров приложения, предоставленной в [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Для получения веб-параметров сначала создайте в своем проекте класс `Settings` (доступен как `Properties.Settings.Default` в C# и как `My.Settings` в Visual Basic) на вкладке **Параметры** конструктора проектов Visual Studio. На вкладке **Параметры** нажмите кнопку **Загрузить веб-параметры**, чтобы получить веб-параметры и добавить их в созданный класс `Settings`. Вы можете использовать веб-параметры, настроенные для использования всеми прошедшими проверку подлинности пользователями или всеми анонимными пользователями.  
   
- Дополнительные сведения о параметрах приложения см. в разделе [Общие сведения о параметрах приложения](../../../docs/framework/winforms/advanced/application-settings-overview.md). Дополнительные сведения о реализации собственного класса параметров вместо создания его в Visual Studio: [Практическое руководство. Создание параметров приложения](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Сведения о настройке службы профилей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Использование сведений о профилях в Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
+ Дополнительные сведения о параметрах приложения см. в разделе [Общие сведения о параметрах приложения](../../../docs/framework/winforms/advanced/application-settings-overview.md). Дополнительные сведения о реализации собственного класса параметров вместо создания его в Visual Studio: [Практическое руководство. Создание параметров приложения](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Сведения о настройке службы профилей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Использование сведений о профилях в Microsoft Ajax](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
   
 ## <a name="client-application-services-classes"></a>Классы служб клиентских приложений  
  В следующей таблице описываются классы, реализующие функциональность служб клиентских приложений.  
@@ -82,10 +82,10 @@ ms.locfileid: "32744500"
  [Практическое руководство. Реализация входа пользователя с помощью служб клиентских приложений](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [Пошаговое руководство. Использование служб клиентских приложений](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  [Общие сведения о параметрах приложений](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Общие сведения о службах приложений ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
- [Использование проверки подлинности с помощью форм в Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
- [Использование сведений о ролях в Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
- [Использование сведений о профилях в Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
- [Проверка подлинности ASP.NET](http://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
- [Управление авторизацией с помощью ролей](http://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
- [Создание и настройка базы данных служб приложений для SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)
+ [Общие сведения о службах приложений ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
+ [Использование проверки подлинности с помощью форм в Microsoft Ajax](https://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  
+ [Использование сведений о ролях в Microsoft Ajax](https://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d)  
+ [Использование сведений о профилях в Microsoft Ajax](https://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61)  
+ [Проверка подлинности ASP.NET](https://msdn.microsoft.com/library/fc10b0ef-4ce4-4a7f-9174-886325221ee1)  
+ [Управление авторизацией с помощью ролей](https://msdn.microsoft.com/library/01954ce4-39a2-487f-8153-a69f6f6f3195)  
+ [Создание и настройка базы данных служб приложений для SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:module
 - /target compiler options [C#], /target:module
 ms.assetid: 9af1e4fa-c749-44e7-ae58-90a3d05d4e72
-ms.openlocfilehash: d02a46390ca34b8063320df6ec237a00c0423c88
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7cc0e48a7a4a3ec3f28c89e80fadf6aa7e1130f2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214258"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43393130"
 ---
 # <a name="-targetmodule-c-compiler-options"></a>-target:module (параметры компилятора C#)
 Этот параметр указывает компилятору не создавать манифест сборки.  
@@ -43,5 +43,6 @@ csc -target:module in.cs
 ```  
   
 ## <a name="see-also"></a>См. также  
- [-target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+
+- [-target (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96edfd0f94240d51a224f4522573a450ab027330
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a4cb3f126a51d6bf7027edb88b8fec74c6785d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409923"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43470844"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (средство диспетчера сертификатов)
 Диспетчер сертификатов (Certmgr.exe) предназначен для управления сертификатами, списками доверия сертификатов (CTL) и списками отзыва сертификатов (CRL).  
@@ -59,7 +59,7 @@ ms.locfileid: "33409923"
 |**/CRL**|При использовании с параметром **/add** добавляет списки отзыва сертификатов (CRL). При использовании с параметром **/del** удаляет списки отзыва сертификатов (CRL). Сохраняет списки CRL при использовании с параметром **/put**. Отображает списки отзыва сертификатов (CRL) при использовании без параметра **/add**, **/del** или **/put**.|  
 |**/CTL**|При использовании с параметром **/add** добавляет списки доверия сертификатов (CTL). При использовании с параметром **/del** удаляет списки доверия сертификатов (CTL). Сохраняет списки CTL при использовании с параметром **/put**. Отображает списки доверия сертификатов (CTL) при использовании без параметра **/add**, **/del** или **/put**.|  
 |**/del**|Удаляет сертификаты, CTL и CRL из хранилища сертификатов.|  
-|**/e** *encodingType*|Указывает тип шифрования сертификата. Значение по умолчанию — `X509_ASN_ENCODING`.|  
+|**/e** *encodingType*|Указывает тип шифрования сертификата. Значение по умолчанию — `X509_ASN_ENCODING`.|  
 |**/f** *dwFlags*|Задает открытый флаг хранилища. Это параметр *dwFlags*, передаваемый методу **CertOpenStore**. По умолчанию используется значение CERT_SYSTEM_STORE_CURRENT_USER. Этот параметр обрабатывается, только если задан параметр **/y**.|  
 |**/h**[**elp**]|Отображает синтаксис команд и параметров программы.|  
 |**/n** *nam*|Задает общее имя добавляемого, удаляемого или сохраняемого сертификата. Этот параметр может применяться только для сертификатов, его нельзя задавать для CTL и CRL.|  
@@ -139,5 +139,5 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>См. также  
  [Инструменты](../../../docs/framework/tools/index.md)  
- [Makecert.exe (средство создания сертификатов)](http://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe (средство создания сертификатов)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
  [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

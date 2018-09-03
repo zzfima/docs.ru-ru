@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 5076644b-1f33-4f26-9488-87de9fcda04c
 ms.openlocfilehash: 4afdaaa62c1ac3241eb7382d0995bed51bde73e2
 ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 05/03/2018
 ms.locfileid: "32748910"
@@ -31,7 +31,7 @@ ms.locfileid: "32748910"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Фильтры >](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Содержит сопоставление протокола по умолчанию между схемой транспортного протокола (например, http, net.tcp, net.pipe, т. д.) и привязкой WCF.|  
+|[\<Фильтры>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|Содержит сопоставление протокола по умолчанию между схемой транспортного протокола (например, http, net.tcp, net.pipe, т. д.) и привязкой WCF.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   

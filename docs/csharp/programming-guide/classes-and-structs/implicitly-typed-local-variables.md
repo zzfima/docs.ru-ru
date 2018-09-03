@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: c6c2bae39764e78fad2510bbc8937b0ac790bef5
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 91020886e381d8410358cae9511107e28c51452a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172010"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43464912"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Неявно типизированные локальные переменные (Руководство по программированию в C#)
 Локальные переменные можно объявлять без указания конкретного типа. Ключевое слово `var` указывает, что компилятор должен вывести тип переменной из выражения справа от оператора инициализации. Выведенный тип может быть встроенным, анонимным, определяемым пользователем либо типом, определяемым в библиотеке классов .NET Framework. Дополнительные сведения об инициализации массивов с `var` см. в разделе [Неявно типизированные массивы](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
@@ -81,7 +81,7 @@ ms.locfileid: "34172010"
  [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
  [var](../../../csharp/language-reference/keywords/var.md)  
  [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Встроенный язык запросов LINQ](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [Встроенный язык запросов LINQ](../../../csharp/linq/index.md)  
  [for](../../../csharp/language-reference/keywords/for.md)  
  [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
  [Оператор using](../../../csharp/language-reference/keywords/using-statement.md)

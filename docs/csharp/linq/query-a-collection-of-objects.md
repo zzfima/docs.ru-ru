@@ -4,11 +4,11 @@ description: Узнайте, как выполнять запросы к кол�
 ms.date: 11/30/2016
 ms.assetid: 87a76f8a-0b58-4791-90ea-2fe0a30416c9
 ms.openlocfilehash: 7bc59e7009f9ae8d8f66c24e9519d9100404c9c4
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935545"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480924"
 ---
 # <a name="query-a-collection-of-objects"></a>Запрос коллекции объектов
 

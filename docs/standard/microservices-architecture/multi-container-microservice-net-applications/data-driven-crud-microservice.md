@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 18ffbf56cf9d324e86fc288a2ba4a387831af925
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 28955b2309b3efb321e40e19db821052b8ce42ab
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935397"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43396120"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Создание простой микрослужбы CRUD на основе данных
 
@@ -326,7 +326,7 @@ public class CatalogController : ControllerBase
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>Автоматизация создания метаданных Swagger API с помощью пакета NuGet Swashbuckle
 
-Создание метаданных Swagger вручную (в файле JSON или YAML) может быть утомительным. Однако вы можете автоматизировать обнаружение API службами веб-API ASP.NET с помощью [пакета NuGet Swashbuckle](http://aka.ms/swashbuckledotnetcore) для динамического создания метаданных Swagger API.
+Создание метаданных Swagger вручную (в файле JSON или YAML) может быть утомительным. Однако вы можете автоматизировать обнаружение API службами веб-API ASP.NET с помощью [пакета NuGet Swashbuckle](https://aka.ms/swashbuckledotnetcore) для динамического создания метаданных Swagger API.
 
 Swashbuckle автоматически создает метаданные Swagger для проектов веб-API ASP.NET. Он поддерживает проекты веб-API ASP.NET Core, классические веб-API ASP.NET и любые разновидности, такие как приложение API Azure, мобильное приложение Azure, микрослужбы Azure Service Fabric на основе ASP.NET. Он также поддерживает простой веб-API, развертываемый в контейнерах, как в эталонном приложении.
 

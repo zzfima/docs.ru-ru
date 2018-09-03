@@ -2,12 +2,12 @@
 title: Создание класса GamePiece
 ms.date: 03/30/2017
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
-ms.openlocfilehash: 0939da6eca579bd030bfe18b24d8364fbcc4fc82
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eb73918cc03e2621d39a98158d40a839dbc69d80
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744516"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43395399"
 ---
 # <a name="creating-the-gamepiece-class"></a>Создание класса GamePiece
 Класс **GamePiece** инкапсулирует все функциональные возможности, необходимые для загрузки изображения элемента игры Microsoft XNA, отслеживания состояния мыши относительно элемента игры, захвата мыши, обеспечения обработки манипуляции и инерции, а также обеспечения возможности возвращения, когда элемент игры достигнет ограничений порта просмотра.  
@@ -25,7 +25,7 @@ ms.locfileid: "32744516"
 ## <a name="class-constructor"></a>Конструктор класса  
  Конструктор класса **GamePiece** принимает следующие параметры.  
   
--   Тип [SpriteBatch](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx). Ссылка, передаваемая здесь, назначается закрытому члену `spriteBatch` и используется для доступа к методу [SpriteBatch.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx), когда элемент игры отрисовывается сам. Кроме того, свойство [GraphicsDevice](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) используется для создания объекта [Texture](http://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx), связанного с элементом игры, а также для получения размера порта просмотра для обнаружения, когда элемент игры встретит границу окна, чтобы этот элемент мог вернуться.  
+-   Тип [SpriteBatch](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx). Ссылка, передаваемая здесь, назначается закрытому члену `spriteBatch` и используется для доступа к методу [SpriteBatch.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx), когда элемент игры отрисовывается сам. Кроме того, свойство [GraphicsDevice](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) используется для создания объекта [Texture](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx), связанного с элементом игры, а также для получения размера порта просмотра для обнаружения, когда элемент игры встретит границу окна, чтобы этот элемент мог вернуться.  
   
 -   Строка, указывающая имя файла изображения, используемого для элемента игры.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "32744516"
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiacompleted)]  
   
- Ни одна из логик, представленных выше, в действительности не вызывает выполнение экстраполяции инерции. Это выполняется в методе **ProcessInertia**. Этот метод, который повторно вызывается из цикла обновления игры (метод [Game.Update](http://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx)), проверяет, имеет ли флаг *processInertia* значение `true`, и если да, вызывает метод <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A>. Вызов этого метода приводит к выполнению экстраполяции и вызывает событие <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta>.  
+ Ни одна из логик, представленных выше, в действительности не вызывает выполнение экстраполяции инерции. Это выполняется в методе **ProcessInertia**. Этот метод, который повторно вызывается из цикла обновления игры (метод [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx)), проверяет, имеет ли флаг *processInertia* значение `true`, и если да, вызывает метод <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A>. Вызов этого метода приводит к выполнению экстраполяции и вызывает событие <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta>.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_ProcessInertia](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_processinertia)]  
   
- Элемент игры фактически не отображается до тех пор, пока не будет вызвана одна из перегрузок метода Draw. Первая перегрузка этого метода вызывается повторно из цикла рисования игры (метод [Game.Draw](http://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx)). Это отрисовывает элемент игры с текущим положением, поворотом и масштабом.  
+ Элемент игры фактически не отображается до тех пор, пока не будет вызвана одна из перегрузок метода Draw. Первая перегрузка этого метода вызывается повторно из цикла рисования игры (метод [Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx)). Это отрисовывает элемент игры с текущим положением, поворотом и масштабом.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]  
   

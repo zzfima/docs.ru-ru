@@ -8,12 +8,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 6e7277b5d714e48059fe1ed7e8b85e46a14a840c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcab29cdbe98b5e49463d9a2781d43d4b9ee9544
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33279988"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43467345"
 ---
 # <a name="select-clause-c-reference"></a>Предложение "select" (справочник по C#)
 В выражении запроса предложение `select` задает тип значений, которые будут получены при выполнении запроса. Получаемый результат зависит от вычисления всех предыдущих предложений и любых выражений в самом предложении `select`. Выражение запроса должно оканчиваться предложением `select` или [group](../../../csharp/language-reference/keywords/group-clause.md).  
@@ -34,11 +34,12 @@ ms.locfileid: "33279988"
 ## <a name="remarks"></a>Примечания  
  Во время компиляции предложение `select` преобразуется в вызов метода <xref:System.Linq.Enumerable.Select%2A> стандартного оператора запроса.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Ключевые слова запроса (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
- [предложение from](../../../csharp/language-reference/keywords/from-clause.md)  
- [partial (метод) (справочник по C#)](../../../csharp/language-reference/keywords/partial-method.md)  
- [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Приступая к работе с LINQ в C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Ключевые слова запроса (LINQ)](../../../csharp/language-reference/keywords/query-keywords.md)  
+- [предложение from](../../../csharp/language-reference/keywords/from-clause.md)  
+- [partial (метод) (справочник по C#)](../../../csharp/language-reference/keywords/partial-method.md)  
+- [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [Приступая к работе с LINQ в C#](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

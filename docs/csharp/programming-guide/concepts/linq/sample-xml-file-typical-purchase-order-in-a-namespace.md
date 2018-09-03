@@ -3,11 +3,11 @@ title: Пример XML-файла. Стандартный заказ на по�
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
 ms.openlocfilehash: 0adee32a3ee4d2347bd2e0a84024fe478346987a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337565"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43404234"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>Пример XML-файла. Стандартный заказ на покупку в пространстве имен
 Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Этот файл представляет собой типичный заказ на покупку. XML располагается в пространстве имен.  

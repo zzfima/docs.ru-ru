@@ -14,12 +14,12 @@ ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 77eb199e5e8bbfb0874f8189a8daa2904b31d48e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c9550bf9d3483a8d2961e6137138bfb11f71bca
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395964"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404331"
 ---
 # <a name="how-to-configure-network-tracing"></a>Практическое руководство. Настройка трассировки сети
 Файл конфигурации приложения или компьютера содержит параметры, которые определяют формат и содержимое данных трассировки сети. Перед выполнением этой процедуры убедитесь, что трассировка включена. Сведения о том, как включить трассировку сети, см. в разделе [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -97,10 +97,10 @@ ms.locfileid: "33395964"
 |--------------------|---------------------|  
 |`Value`|Обязательный атрибут элемента <xref:System.String>. Задает уровень детализации результатов. Допустимые значения: `Critical`, `Error`, `Verbose`, `Warning` и `Information`.<br /><br /> Этот атрибут следует установить в элементе \<add name> элемента \<switches>, как показано в примере. Исключение возникает, если этот атрибут задан для элемента \<source>.|  
 |`maxdatasize`|Необязательный атрибут элемента <xref:System.Int32>. Задает максимальное число байтов сетевых данных, включенных в трассировку каждой линии. Значение по умолчанию — 1024.<br /><br /> Этот атрибут следует задавать в элементе \<source>, как показано в примере. Исключение возникает, если этот атрибут задан для элемента в элементе \<switches>.|  
-|`Tracemode`|Необязательный атрибут элемента <xref:System.String>. Задается `includehex`, чтобы трассировка протоколов отображалась в шестнадцатеричном или текстовом формате. Установите значение `protocolonly`, чтобы отображался только текст. Значение по умолчанию — `includehex`.<br /><br /> Этот атрибут следует задавать в элементе \<switches>, как показано в примере. Исключение возникает, если этот атрибут задан для элемента в элементе \<source>.|  
+|`Tracemode`|Необязательный атрибут элемента <xref:System.String>. Задается `includehex`, чтобы трассировка протоколов отображалась в шестнадцатеричном или текстовом формате. Установите значение `protocolonly`, чтобы отображался только текст. Значение по умолчанию — `includehex`.<br /><br /> Этот атрибут следует задавать в элементе \<switches>, как показано в примере. Исключение возникает, если этот атрибут задан для элемента в элементе \<source>.|  
   
 ## <a name="see-also"></a>См. также  
  [Интерпретация трассировки сети](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [Трассировка сети в .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
  [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Введение. Подготовка к инструментированию и трассировка](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [Введение. Подготовка к инструментированию и трассировка](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
