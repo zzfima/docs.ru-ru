@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 03/08/2017
 ms.technology: dotnet-cli
-ms.openlocfilehash: 57045a91ce62a730493d219bdf7c30e90fe57759
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ec7168ebc2ee4fc428d1ab520e986842f111ca7
+ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216344"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43256769"
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Начало работы с .NET Core в Windows, Linux и Mac OS с помощью командной строки
 
@@ -29,7 +29,7 @@ ms.locfileid: "33216344"
 
 Откройте командную строку и создайте папку с именем *Hello*. Перейдите в созданную папку и введите следующую команду:
 
-```
+```console
 $ dotnet new console
 $ dotnet restore
 $ dotnet run
@@ -40,10 +40,10 @@ $ dotnet run
 1. `$ dotnet new console`
 
    [`dotnet new`](../tools/dotnet-new.md) создает актуальный файл проекта `Hello.csproj` с зависимостями, необходимыми для создания консольного приложения.  Эта команда также создает `Program.cs` — простой файл, содержащий точку входа для приложения.
-   
+
    `Hello.csproj`:
 
-   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]   
+   [!code[Hello.csproj](../../../samples/core/console-apps/HelloMsBuild/Hello.csproj)]
 
    В файле проекта указываются все данные, необходимые для восстановления зависимостей и создания программы.
 
@@ -52,7 +52,7 @@ $ dotnet run
 
    `Program.cs`:
 
-   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]   
+   [!code-csharp[Program.cs](../../../samples/core/console-apps/HelloMsBuild/Program.cs)]
 
    Программа начинается с команды `using System`, что означает "добавить все данные пространства имен `System` в область видимости для этого файла". Пространство имен `System` содержит основные конструкции, такие как `string`, или числовые типы.
 
@@ -63,21 +63,21 @@ $ dotnet run
 2. `$ dotnet restore`
 
    [`dotnet restore`](../tools/dotnet-restore.md) вызывает [NuGet](https://www.nuget.org/) (диспетчер пакетов .NET) для восстановления дерева зависимостей. NuGet анализирует файл *Hello.csproj*, скачивает указанные в нем зависимости (или извлекает их из кэша на вашем компьютере) и записывает файл *obj/project.assets.json*.  Файл *project.assets.json* необходим для компиляции и запуска.
-   
+
    Файл *project.assets.json* содержит сохраняемую полную схему зависимостей NuGet и другие сведения, описывающие приложение.  Этот файл считывается другими средствами, такими как [`dotnet build`](../tools/dotnet-build.md) и [`dotnet run`](../tools/dotnet-run.md), что позволяет им обрабатывать исходный код с правильным набором зависимостей NuGet и разрешений привязки.
-   
+
 3. `$ dotnet run`
 
    [`dotnet run`](../tools/dotnet-run.md) вызывает [`dotnet build`](../tools/dotnet-build.md) для проверки того, выполнена ли сборка целевых объектов, а затем вызывает `dotnet <assembly.dll>` для запуска целевого приложения.
-   
-    ```
+
+    ```console
     $ dotnet run
     Hello World!
     ```
 
     Кроме того, вы можете выполнить [`dotnet build`](../tools/dotnet-build.md), чтобы скомпилировать код, не запуская консольные приложения сборки. В результате мы получаем скомпилированное приложение в виде файла DLL, которое можно выполнить с помощью `dotnet bin\Debug\netcoreapp1.0\Hello.dll` в Windows или `/` в других операционных системах. Вы также можете указать аргументы для приложения, как описано ниже.
 
-    ```
+    ```console
     $ dotnet bin\Debug\netcoreapp1.0\Hello.dll
     Hello World!
     ```
@@ -90,13 +90,13 @@ $ dotnet run
 
 1. Замените содержимое файла *Program.cs* следующим кодом:
 
-   [!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]   
+   [!code-csharp[Fibonacci](../../../samples/core/console-apps/fibonacci-msbuild/Program.cs)]
 
 2. Выполните [`dotnet build`](../tools/dotnet-build.md) для компиляции изменений.
 
 3. Запустите программу, передав параметр в приложение:
 
-   ```
+   ```console
    $ dotnet run -- John
    Hello John!
    Fibonacci Numbers 1-15:
@@ -121,11 +121,11 @@ $ dotnet run
 
 ## <a name="working-with-multiple-files"></a>Работа с несколькими файлами
 
-Отдельные файлы хороши для простых одиночных программ, но при создании более сложных приложений вам, вероятно, придется использовать несколько исходных файлов в проекте. Давайте возьмем за основу предыдущий пример Фибоначчи и кэшируем некоторые значения Фибоначчи, а также добавим несколько рекурсивных функций. 
+Отдельные файлы хороши для простых одиночных программ, но при создании более сложных приложений вам, вероятно, придется использовать несколько исходных файлов в проекте. Давайте возьмем за основу предыдущий пример Фибоначчи и кэшируем некоторые значения Фибоначчи, а также добавим несколько рекурсивных функций.
 
 1. Добавьте в каталог *Hello* новый файл *FibonacciGenerator.cs* со следующим кодом:
 
-   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]   
+   [!code-csharp[Fibonacci Generator](../../../samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
 
 2. Измените метод `Main` в своем файле *Program.cs*, чтобы создать экземпляр класса new и вызвать его метод, как показано в следующем примере:
 
@@ -135,7 +135,8 @@ $ dotnet run
 
 4. Запустите приложение, выполнив [`dotnet run`](../tools/dotnet-run.md). Ниже приведены выходные данные программы:
 
-   ```
+   ```console
+   $ dotnet run
    0
    1
    1
@@ -159,4 +160,4 @@ $ dotnet run
 
 ## <a name="see-also"></a>См. также
 
-[Организация и тестирование проектов с помощью инструментов командной строки .NET Core](testing-with-cli.md)
+* [Организация и тестирование проектов с помощью инструментов командной строки .NET Core](testing-with-cli.md)

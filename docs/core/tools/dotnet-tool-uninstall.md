@@ -4,12 +4,12 @@ description: Команда dotnet tool uninstall удаляет указанн�
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 5cf80d1756dbf4e88bb52a8028d186d44978f440
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 93a43e19df4c7f220ac1e2d2db397cba4d791e83
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696946"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43389842"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -21,7 +21,7 @@ ms.locfileid: "34696946"
 
 ## <a name="synopsis"></a>Краткий обзор
 
-```
+```console
 dotnet tool uninstall <PACKAGE_NAME> <-g|--global>
 dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
 dotnet tool uninstall <-h|--help>
@@ -67,4 +67,4 @@ dotnet tool uninstall <-h|--help>
 
 ## <a name="see-also"></a>См. также
 
-[Глобальные средства .NET Core](global-tools.md)
+* [Глобальные средства .NET Core](global-tools.md)

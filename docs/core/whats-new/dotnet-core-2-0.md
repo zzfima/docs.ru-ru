@@ -4,12 +4,12 @@ description: Дополнительные сведения о новых воз�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 59a1f61de365218d649e3392fbce84cd6d530ed5
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566371"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43456891"
 ---
 # <a name="whats-new-in-net-core-20"></a>Новые возможности .NET Core 2.0
 
@@ -30,7 +30,7 @@ ms.locfileid: "34566371"
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Вы также можете отключить автоматический вызов команды `dotnet restore`. Для этого передайте параметр `--no-restore` команде `new`, `run`, `build`, `publish`, `pack` и `test`. 
+Вы также можете отключить автоматический вызов команды `dotnet restore`. Для этого передайте параметр `--no-restore` команде `new`, `run`, `build`, `publish`, `pack` и `test`.
 
 ### <a name="retargeting-to-net-core-20"></a>Изменение целевой платформы на .NET Core 2.0
 
@@ -76,7 +76,7 @@ ms.locfileid: "34566371"
 
    Команда создает файл проекта с расширением `.vbproj`, а также файл исходного кода Visual Basic *Program.vb*. Этот файл содержит исходный код для записи строки Hello World! в окно консоли.
 
-1.  Введите команду `dotnet run`. [.NET Core CLI](../tools/index.md) автоматически компилирует и выполняет приложение, которое выводит сообщение "Hello World!" в окне консоли.
+1. Введите команду `dotnet run`. [.NET Core CLI](../tools/index.md) автоматически компилирует и выполняет приложение, которое выводит сообщение "Hello World!" в окне консоли.
 
 ### <a name="support-for-c-71"></a>Поддержка C# 7.1
 
@@ -162,4 +162,5 @@ ms.locfileid: "34566371"
 - [Приложения, развертываемые в облаке с помощью Azure](/azure/architecture/reference-architectures/index.md)
 
 ## <a name="see-also"></a>См. также
-[What's new in ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0) (Новые возможности ASP.NET Core 2.0)
+
+* [What's new in ASP.NET Core 2.0](/aspnet/core/aspnetcore-2.0) (Новые возможности ASP.NET Core 2.0)

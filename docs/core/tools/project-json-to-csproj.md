@@ -4,12 +4,12 @@ description: См. сопоставление между элементами pr
 author: natemcmaster
 ms.author: mairaw
 ms.date: 03/13/2017
-ms.openlocfilehash: d262792cd6821d35dcaf2f4bb9c05625e1bcd2fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 369075f91c0d5ea6c7eb5d09ac2535c4e60f28f6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218807"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43419419"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>Сопоставление между свойствами project.json и CSPROJ
 
@@ -17,8 +17,8 @@ ms.locfileid: "33218807"
 
 При разработке инструментария .NET Core были внесены важные структурные изменения, направленные на прекращение поддержки файлов *project.json* и перенос проектов .NET Core на формат MSBuild/CSPROJ.
 
-Эта статья показывает, как параметры из *project.json* представлены в формате MSBuild/CSPROJ. Это поможет вам научиться использовать новый формат и узнать об изменениях, вносимых средствами миграции при обновлении проекта до последней версии инструментария. 
- 
+Эта статья показывает, как параметры из *project.json* представлены в формате MSBuild/CSPROJ. Это поможет вам научиться использовать новый формат и узнать об изменениях, вносимых средствами миграции при обновлении проекта до последней версии инструментария.
+
 ## <a name="the-csproj-format"></a>Формат CSPROJ
 
 Новый формат \*.csproj основан на XML. В следующем примере показан корневой узел проекта .NET Core с использованием `Microsoft.NET.Sdk`. Для веб-проектов используется пакет SDK `Microsoft.NET.Sdk.Web`.
@@ -32,6 +32,7 @@ ms.locfileid: "33218807"
 ## <a name="common-top-level-properties"></a>Общие свойства верхнего уровня
 
 ### <a name="name"></a>имя
+
 ```json
 {
   "name": "MyProjectName"
@@ -40,7 +41,7 @@ ms.locfileid: "33218807"
 
 Больше не поддерживается. В CSPROJ это свойство определяется именем файла проекта, которое определяется именем каталога. Например, `MyProjectName.csproj`.
 
-По умолчанию имя файла проекта также определяет значение свойств `<AssemblyName>` и `<PackageId>`. 
+По умолчанию имя файла проекта также определяет значение свойств `<AssemblyName>` и `<PackageId>`.
 
 ```xml
 <PropertyGroup>
@@ -49,7 +50,8 @@ ms.locfileid: "33218807"
 </PropertyGroup>
 ```
 
-Значение `<AssemblyName>` будет отличаться от значения `<PackageId>`, если свойство `buildOptions\outputName` было определено в project.json. Дополнительные сведения см. в разделе [Другие общие параметры сборки](#other-common-build-options).
+Значение `<AssemblyName>` будет отличаться от значения `<PackageId>`, если свойство `buildOptions\outputName` было определено в project.json.
+Дополнительные сведения см. в разделе [Другие общие параметры сборки](#other-common-build-options).
 
 ### <a name="version"></a>version
 
@@ -58,6 +60,7 @@ ms.locfileid: "33218807"
   "version": "1.0.0-alpha-*"
 }
 ```
+
 Используйте свойства `VersionPrefix` и `VersionSuffix`:
 
 ```xml
@@ -105,6 +108,7 @@ And it's really great!</Description>
 ## <a name="frameworks"></a>Инфраструктуры
 
 ### <a name="one-target-framework"></a>Одна целевая платформа
+
 ```json
 {
   "frameworks": {
@@ -130,7 +134,7 @@ And it's really great!</Description>
 }
 ```
 
-Используйте свойство `TargetFrameworks`, чтобы определить список целевых платформ. Для разделения нескольких значений платформы используйте точку с запятой. 
+Используйте свойство `TargetFrameworks`, чтобы определить список целевых платформ. Для разделения нескольких значений платформы используйте точку с запятой.
 
 ```xml
 <PropertyGroup>
@@ -141,7 +145,8 @@ And it's really great!</Description>
 ## <a name="dependencies"></a>зависимости
 
 > [!IMPORTANT]
-> Если зависимостью является **проект**, а не пакет, то формат будет отличаться. Дополнительные сведения см. в разделе [Тип dependency](#dependency-type).
+> Если зависимостью является **проект**, а не пакет, то формат будет отличаться.
+> Дополнительные сведения см. в разделе [Тип dependency](#dependency-type).
 
 ### <a name="netstandardlibrary-metapackage"></a>Метапакет NETStandard.Library
 
@@ -178,6 +183,7 @@ And it's really great!</Description>
 Обратите внимание, что значение `<RuntimeFrameworkVersion>` в перенесенном проекте определяется версией установленного пакета SDK.
 
 ### <a name="top-level-dependencies"></a>Высокоуровневые зависимости
+
 ```json
 {
   "dependencies": {
@@ -193,6 +199,7 @@ And it's really great!</Description>
 ```
 
 ### <a name="per-framework-dependencies"></a>Зависимости отдельных платформ
+
 ```json
 {
   "framework": {
@@ -250,6 +257,7 @@ And it's really great!</Description>
 ### <a name="dependency-type"></a>Тип dependency
 
 #### <a name="type-project"></a>type: project
+
 ```json
 {
   "dependencies": {
@@ -271,8 +279,8 @@ And it's really great!</Description>
 > [!NOTE]
 > Нарушает процедуру, по которой `dotnet pack --version-suffix $suffix` определяет версию зависимости для ссылки на проект.
 
-
 #### <a name="type-build"></a>type: build
+
 ```json
 {
   "dependencies": {
@@ -291,6 +299,7 @@ And it's really great!</Description>
 ```
 
 #### <a name="type-platform"></a>type: platform
+
 ```json
 {
   "dependencies": {
@@ -302,9 +311,10 @@ And it's really great!</Description>
 }
 ```
 
-Не имеет эквивалента в CSPROJ. 
+Не имеет эквивалента в CSPROJ.
 
 ## <a name="runtimes"></a>runtimes
+
 ```json
 {
   "runtimes": {
@@ -322,6 +332,7 @@ And it's really great!</Description>
 ```
 
 ### <a name="standalone-apps-self-contained-deployment"></a>Автономные приложения (автономное развертывание)
+
 В project.json определение раздела `runtimes` означает, что приложение было автономным во время сборки и публикации.
 В MSBuild все проекты являются *портативными* во время сборки, но могут быть опубликованы как автономные.
 
@@ -330,6 +341,7 @@ And it's really great!</Description>
 Дополнительные сведения см. в статье [Автономные развертывания (SCD)](../deploying/index.md#self-contained-deployments-scd).
 
 ## <a name="tools"></a>средства
+
 ```json
 {
   "tools": {
@@ -442,7 +454,7 @@ And it's really great!</Description>
 
 ```json
 {
-  "packOptions": {    
+  "packOptions": {
     "summary": "numl is a machine learning library intended to ease the use of using standard modeling techniques for both prediction and clustering.",
     "tags": ["machine learning", "framework"],
     "releaseNotes": "Version 0.9.12-beta",
@@ -474,7 +486,8 @@ And it's really great!</Description>
 </PropertyGroup>
 ```
 
-В MSBuild нет эквивалента для элемента `owners`. Для `summary` можно использовать свойство `<Description>` MSBuild, даже если значение `summary` не переносится на него автоматически, так как это свойство сопоставляется с элементом [`description`](#-other-common-root-level-options).
+В MSBuild нет эквивалента для элемента `owners`.
+Для `summary` можно использовать свойство `<Description>` MSBuild, даже если значение `summary` не переносится на него автоматически, так как это свойство сопоставляется с элементом [`description`](#-other-common-root-level-options).
 
 ## <a name="scripts"></a>scripts
 
@@ -499,7 +512,6 @@ And it's really great!</Description>
   <Exec Command="removeTempFiles.cmd" />
 </Target>
 ```
-
 
 ## <a name="runtimeoptions"></a>runtimeOptions
 
@@ -531,6 +543,7 @@ And it's really great!</Description>
 ```
 
 Свойство "System.GC.Server" переносится в файл CSPROJ:
+
 ```xml
 <PropertyGroup>
   <ServerGarbageCollection>true</ServerGarbageCollection>
@@ -538,6 +551,7 @@ And it's really great!</Description>
 ```
 
 Но все эти значения можно задать в CSPROJ, а также в свойствах MSBuild:
+
 ```xml
 <PropertyGroup>
   <ServerGarbageCollection>true</ServerGarbageCollection>
@@ -549,13 +563,15 @@ And it's really great!</Description>
 ```
 
 ## <a name="shared"></a>общие
+
 ```json
 {
   "shared": "shared/**/*.cs"
 }
 ```
 
-Не поддерживается в CSPROJ. Вместо этого необходимо создать файлы для включения содержимого в ваш файл *NUSPEC*. Дополнительные сведения см. в разделе [Включение файлов содержимого](/nuget/schema/nuspec#including-content-files).
+Не поддерживается в CSPROJ. Вместо этого необходимо создать файлы для включения содержимого в ваш файл *NUSPEC*.
+Дополнительные сведения см. в разделе [Включение файлов содержимого](/nuget/schema/nuspec#including-content-files).
 
 ## <a name="files"></a>файлы
 
@@ -613,7 +629,8 @@ And it's really great!</Description>
 
 Макет пакета внутри NUPKG можно изменить с помощью `PackagePath="path"`.
 
-Кроме `Content`, для большинства групп элементов требуется явное добавление `Pack="true"` для включения в пакет. `Content` помещается в папку *content* пакета, так как для свойства `<IncludeContentInPack>` MSBuild по умолчанию задано значение `true`. Дополнительные сведения см. в статье [Включение содержимого в пакет](/nuget/schema/msbuild-targets#including-content-in-a-package).
+Кроме `Content`, для большинства групп элементов требуется явное добавление `Pack="true"` для включения в пакет. `Content` помещается в папку *content* пакета, так как для свойства `<IncludeContentInPack>` MSBuild по умолчанию задано значение `true`.
+Дополнительные сведения см. в статье [Включение содержимого в пакет](/nuget/schema/msbuild-targets#including-content-in-a-package).
 
 `PackagePath="%(Identity)"` позволяет быстро настроить относительный путь к файлу проекта в качестве пути к пакету.
 
@@ -659,4 +676,4 @@ And it's really great!</Description>
 
 ## <a name="see-also"></a>См. также
 
-[Краткий обзор изменений в интерфейсе командной строки](../tools/cli-msbuild-architecture.md)
+* [Краткий обзор изменений в интерфейсе командной строки](../tools/cli-msbuild-architecture.md)
