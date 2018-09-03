@@ -2,12 +2,12 @@
 title: Действие Property Promotion
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-ms.openlocfilehash: 46e74c8c479e545778db92e15de3cb8798dafa11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519929"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481141"
 ---
 # <a name="property-promotion-activity"></a>Действие Property Promotion
 Этот образец представляет собой законченное решение, в котором средства повышения уровня <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> встраиваются непосредственно в среду разработки рабочих процессов. Предоставляется коллекция элементов конфигурации, действий рабочего процесса и расширений рабочих процессов, которая позволяет упростить использование средства повышения уровня. Кроме того, этот образец включает простой рабочий процесс, в котором демонстрируется использование этой коллекции.  
@@ -23,7 +23,7 @@ ms.locfileid: "33519929"
   
 ## <a name="sample-projects"></a>Образцы проектов  
   
--   **PropertyPromotionActivity** проект содержит файлы, относящиеся к элементы конфигурации для повышения роли, действий рабочего процесса и расширения рабочего процесса.  
+-   **PropertyPromotionActivity** проект содержит файлы, относящиеся к элементы конфигурации для повышения роли, действия рабочего процесса и расширения рабочего процесса.  
   
 -   **CounterServiceApplication** проект содержит образец рабочего процесса, использующего **SqlWorkflowInstanceStorePromotion** проекта.  
   
@@ -37,11 +37,11 @@ ms.locfileid: "33519929"
   
     1.  Перейдите в каталог образца (\WF\Basic\Persistence\PropertyPromotionActivity) и запустите пакет CreateInstanceStore.cmd.  
   
-    2.  Если права администратора недоступны, создайте имя входа SQL Server. В SQL Server Management Studio перейдите в **безопасности**, **входа**. Щелкните правой кнопкой мыши **входа** и создать новое имя входа. Добавьте своего пользователя ACL к роли SQL, открыв **баз данных**, **InstanceStore**, **безопасности**. Щелкните правой кнопкой мыши **пользователей** и выберите **нового пользователя**. Задать **имя входа** для пользователя, созданной ранее. Добавьте пользователя к членам роли базы данных System.Activities.DurableInstancing.InstanceStoreUsers (и к другим ролям). Обратите внимание, что пользователь может уже существовать (например, пользователь dbo).  
+    2.  Если права администратора недоступны, создайте имя входа SQL Server. В SQL Server Management Studio перейдите в раздел **безопасности**, **имена входа**. Щелкните правой кнопкой мыши **имена входа** и создайте новое имя входа. Добавьте своего пользователя ACL к роли SQL, открыв **баз данных**, **InstanceStore**, **безопасности**. Щелкните правой кнопкой мыши **пользователей** и выберите **нового пользователя**. Задайте **имя входа** к созданным выше пользователем. Добавьте пользователя к членам роли базы данных System.Activities.DurableInstancing.InstanceStoreUsers (и к другим ролям). Обратите внимание, что пользователь может уже существовать (например, пользователь dbo).  
   
 2.  Откройте файл решения PropertyPromotionActivity.sln в [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-3.  Если хранилище экземпляров создано в базе данных, отличной от локальной установки SQL Server Express, то необходимо обновить строку подключения базы данных. Измените файл App.config в разделе **CounterServiceApplication** , задав значение `connectionString` атрибут `sqlWorkflowInstanceStorePromotion` узла, чтобы она указывала на базу данных сохраняемости, которая была инициализирована в шаге 1.  
+3.  Если хранилище экземпляров создано в базе данных, отличной от локальной установки SQL Server Express, то необходимо обновить строку подключения базы данных. Измените файл App.config в разделе **CounterServiceApplication** , задав значение `connectionString` атрибут `sqlWorkflowInstanceStorePromotion` узла, которое указывает базу данных сохраняемости, которая была инициализирована в шаге 1.  
   
 4.  Постройте и запустите это решение. Это приведет к запуску службы счетчика WF и вызовет автоматический запуск экземпляра рабочего процесса.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "33519929"
   
 -   **CounterServiceApplication** представляет собой консольное приложение, на котором размещается простая служба счетчика WF. После получения одностороннего сообщения через конечную точку `Start` рабочий процесс производит отсчет от 0 до 29, увеличивая переменную счетчика через каждые две секунды. После каждого приращения счетчика рабочий процесс сохраняется и свойства с повышенным уровнем обновляются в представлении [dbo].[CounterService]. После запуска консольного приложения это приложение размещает службу WF и отправляет сообщение в конечную точку `Start`, создавая экземпляр счетчика WF.  
   
--   **PropertyPromotionActivity** — это библиотека классов, который содержит элементы конфигурации, действий рабочего процесса и расширений рабочих процессов, **CounterServiceApplication** использует.  
+-   **PropertyPromotionActivity** — это библиотека классов, который содержит элементы конфигурации, действия рабочего процесса и расширения рабочего процесса, **CounterServiceApplication** использует.  
   
 -   **PropertyPromotionActivitySQLSample.sql** создает и добавляет представление [dbo]. [ CounterService] в базу данных.  
   
@@ -109,11 +109,11 @@ go
   
 1.  PromoteValue {Name = «Count», Value = 3}  
   
-2.  PromoteValue {Name = «LastIncrementedAt», Value = 1-1-2000}  
+2.  PromoteValue {Name = «LastIncrementedAt», значение = 1-1-2000}  
   
 3.  Persist  
   
-4.  PromoteValue {Name = «Count», Value = 4 ClearExistingPromotedData = true}  
+4.  PromoteValue {Name = «Count», Value = 4, ClearExistingPromotedData = true}  
   
 5.  Persist  
   
@@ -186,9 +186,9 @@ public class SqlWorkflowInstanceStorePromotionBehavior :
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец находится в следующем каталоге:  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец находится в следующем каталоге:  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\PropertyPromotionActivity`  
   
 ## <a name="see-also"></a>См. также  
- [Образцы размещения и сохраняемости образцы](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Образцы размещения AppFabric и сохраняемости](https://go.microsoft.com/fwlink/?LinkId=193961)

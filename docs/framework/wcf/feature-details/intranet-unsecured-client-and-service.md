@@ -7,15 +7,15 @@ dev_langs:
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: d08e8b5f9a22fc558af6f8f7c2ca3049e4a692ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e44b7af6581e6c5abdcb2f82b02d152dd22d0b3b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492252"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43475898"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Незащищенные интранет-клиент и служба
-На следующем рисунке показана простая служба Windows Communication Foundation (WCF), разработаны для предоставления информации о защищенной частной сети для приложения WCF. Безопасность не является обязательной, так как данные имеют низкий уровень важности, должно быть в своей основе является защищенной сети или безопасность обеспечивается уровнем ниже инфраструктура WCF.  
+На следующем рисунке показана простая служба Windows Communication Foundation (WCF) разработан для предоставления информации о защищенной частной сети для приложения WCF. Безопасность не является обязательным, так как данные имеют низкий уровень важности, должен быть в своей основе является защищенной сети или безопасность обеспечивается на уровне ниже инфраструктура WCF.  
   
  ![Незащищенные интранет-клиент и служба сценария](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
   
@@ -83,7 +83,7 @@ ms.locfileid: "33492252"
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
 ### <a name="code"></a>Код  
- В следующем коде показано основной клиент WCF, обращающийся к незащищенной конечной точке по протоколу TCP.  
+ В следующем коде показано базового клиента WCF, который обращается к незащищенной конечной точке по протоколу TCP.  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
@@ -117,4 +117,4 @@ ms.locfileid: "33492252"
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.NetTcpBinding>  
  [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

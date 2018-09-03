@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-ms.openlocfilehash: 9b6a4dbf90ea3541c5919ac1d7c8470b6f0dfcc4
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: bbe6ae2adfe364e41f6627e6b067aa8e18e6e079
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253395"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488085"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Практическое руководство. Упорядочение элементов управления с помощью линий привязки и сетки в формах Windows Forms
 Используя возможности макета элемента Visual Studio, можно точно указать расположение элементов управления в форме. Элементы управления добавить в форму или переместить в форме автоматически выравниваются в строки и столбцы сетки в конструкторе Windows Forms, или можно выравнивать элементы управления с помощью линий привязки.  
@@ -25,7 +25,7 @@ ms.locfileid: "43253395"
   
 -   Выберите **SnapToGrid** режим макета в конструкторе Windows Forms **параметры** диалоговое окно.  
   
-     Дополнительные сведения см. в разделе [Общие, конструктор Windows Forms, диалоговое окно параметров](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Все элементы управления теперь выравниваются по точкам сетки.  
+     Дополнительные сведения см. в разделе [Общие, конструктор Windows Forms, диалоговое окно параметров](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834). Все элементы управления теперь выравниваются по точкам сетки.  
   
      Отдельные элементы управления в сетку можно привязывать, блокировки их на месте. Тем не менее хотя они заблокированы, их нельзя переместить или изменить размер. Дополнительные сведения о блокировке элементов управления, см. в разделе [как: блокировать элементы управления в формы Windows Forms](../../../../docs/framework/winforms/controls/how-to-lock-controls-to-windows-forms.md).  
   
@@ -36,7 +36,7 @@ ms.locfileid: "43253395"
      Дополнительные сведения см. в разделе [Пошаговое руководство: упорядочение элементов управления в формы Windows с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md). Теперь можно использовать линии привязки для выравнивания и упорядочения элементов управления в форме.  
   
 ## <a name="see-also"></a>См. также  
- [Страница "Общие", конструктор Windows Forms, диалоговое окно "Параметры](http://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
+ [Страница "Общие", конструктор Windows Forms, диалоговое окно "Параметры](https://msdn.microsoft.com/library/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Элементы управления Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
  [Практическое руководство. Добавление элементов управления в формы Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 11160d7ec59914afbe501ba731c0c04a85ffc4a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37a1c0600b8429158336968507ddc8cfb6d8f98b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33548497"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485642"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Практическое руководство. Проверка и слияние PrintTickets
-[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Схеме печати](http://go.microsoft.com/fwlink/?LinkId=186397) включает гибкой и расширяемой <xref:System.Printing.PrintCapabilities> и <xref:System.Printing.PrintTicket> элементы. Первый элемент перечисляет возможности устройства печати, а второй указывает, как устройство должно использовать эти возможности по отношению к конкретная последовательность документов, отдельного документа или отдельных страниц.  
+[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Print Schema](https://go.microsoft.com/fwlink/?LinkId=186397) включает гибкой и расширяемой <xref:System.Printing.PrintCapabilities> и <xref:System.Printing.PrintTicket> элементы. Первый элемент перечисляет возможности устройства печати, а второй указывает, как устройство должно использовать эти возможности по отношению к определенной последовательности документов, отдельному документу или отдельной страницы.  
   
- Типичная последовательность задач для приложений, поддерживающий печать будет выглядеть следующим образом.  
+ Типичная последовательность задач для приложения, которое поддерживает печать будет выглядеть следующим образом.  
   
 1.  Определите возможности принтера.  
   
@@ -31,27 +31,27 @@ ms.locfileid: "33548497"
  В этой статье показано, как это сделать.  
   
 ## <a name="example"></a>Пример  
- В простом примере нас интересуют только ли принтер может поддерживать двусторонней — двусторонней печати. Ниже приведены основные шаги.  
+ В простом примере нас интересуют только может ли принтер поддерживает двухстороннюю печать — двухсторонней печати. Ниже приведены основные шаги.  
   
-1.  Получить <xref:System.Printing.PrintCapabilities> объекта с <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> метод.  
+1.  Получить <xref:System.Printing.PrintCapabilities> со <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A> метод.  
   
-2.  Для проверки наличия возможности, которые нужно. В приведенном ниже примере мы тестируем <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> свойство <xref:System.Printing.PrintCapabilities> объекта на наличие возможности печати на обеих сторонах листа бумаги с «Включение страницы» вдоль длинной стороны листа. Поскольку <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> — это коллекция мы используем `Contains` метод <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.  
+2.  Для проверки наличия нужные возможности. В приведенном ниже примере мы проверить <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> свойство <xref:System.Printing.PrintCapabilities> объекта на наличие возможности печати на обеих сторонах листа бумаги с «Включение страницы» вдоль длинной стороны листа. Так как <xref:System.Printing.PrintCapabilities.DuplexingCapability%2A> является коллекцией, мы используем `Contains` метод <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>.  
   
     > [!NOTE]
-    >  Этот шаг не является обязательным. <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Метод, используемый ниже будет проверять каждый запрос <xref:System.Printing.PrintTicket> от возможностей используемого принтера. Если запрошенная возможность не поддерживается принтером, драйвер принтера заменит альтернативный запрос в <xref:System.Printing.PrintTicket> возвращаемая этим методом.  
+    >  Этот шаг не является обязательным. <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> Ниже использован метод будет проверять каждый запрос <xref:System.Printing.PrintTicket> от возможностей используемого принтера. Если запрошенная возможность не поддерживается принтером, драйвер принтера заменит альтернативный запрос в <xref:System.Printing.PrintTicket> возвращаемых методом.  
   
-3.  Если принтер поддерживает двусторонней печати, в примере кода создается <xref:System.Printing.PrintTicket> , запрашивающий двусторонней печати. Но приложение не указывает каждый возможный параметр принтера, доступных в <xref:System.Printing.PrintTicket> элемент. Это было бы затратные программист и программа время. Вместо этого код устанавливает только запрос двусторонней печати, а затем объединяет этот <xref:System.Printing.PrintTicket> с существующим, полностью настроена и проверки <xref:System.Printing.PrintTicket>в данном случае пользователя по умолчанию <xref:System.Printing.PrintTicket>.  
+3.  Если принтер поддерживает двусторонней печати, в примере кода создается <xref:System.Printing.PrintTicket> , запрашивающий двусторонней печати. Но приложение не указывает каждый возможный параметр в принтера <xref:System.Printing.PrintTicket> элемент. Это было бы расточительно для программиста и программа время. Вместо этого код задает только запрос двусторонней печати, а затем выполняет слияние этого <xref:System.Printing.PrintTicket> с существующим, полностью настроенную и проверки <xref:System.Printing.PrintTicket>, в этом случае пользователя по умолчанию <xref:System.Printing.PrintTicket>.  
   
-4.  Соответственно, в образце вызывается <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> метод для слияния нового, минимальное количество — <xref:System.Printing.PrintTicket> пользователя по умолчанию <xref:System.Printing.PrintTicket>. Возвращает <xref:System.Printing.ValidationResult> , содержащий новый <xref:System.Printing.PrintTicket> как один из его свойств.  
+4.  Соответственно, в образце вызывается <xref:System.Printing.PrintQueue.MergeAndValidatePrintTicket%2A> метод для слияния нового, минимальным, <xref:System.Printing.PrintTicket> пользователя имеет значения по умолчанию <xref:System.Printing.PrintTicket>. Эта команда возвращает <xref:System.Printing.ValidationResult> , содержащий новый <xref:System.Printing.PrintTicket> как один из его свойств.  
   
-5.  Затем проверяет образец, новый <xref:System.Printing.PrintTicket> запрашивает двусторонней печати. Если это так, то в этом образце он новый билет печати по умолчанию для пользователя. Если шаг 2 был пропущен и принтер не поддерживает дублирование вдоль длинной стороны, а затем теста могло привести к `false`. (См. Примечание выше).  
+5.  Затем образец тестирует, новый <xref:System.Printing.PrintTicket> запрашивает двусторонней печати. Если это так, то в этом образце он новый билет печати по умолчанию для пользователя. Если шаг 2 был пропущен и принтера не поддерживали дуплексная вдоль длинной стороны, то тест привела бы к `false`. (См. Примечание выше).  
   
-6.  Значительные осталось для фиксации изменений к <xref:System.Printing.PrintQueue.UserPrintTicket%2A> свойство <xref:System.Printing.PrintQueue> с <xref:System.Printing.PrintQueue.Commit%2A> метод.  
+6.  Последний значительный шаг заключается в фиксации, чтобы изменения <xref:System.Printing.PrintQueue.UserPrintTicket%2A> свойство <xref:System.Printing.PrintQueue> с <xref:System.Printing.PrintQueue.Commit%2A> метод.  
   
  [!code-csharp[PrintTicketManagment#UsingMergeAndValidate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#usingmergeandvalidate)]
  [!code-vb[PrintTicketManagment#UsingMergeAndValidate](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#usingmergeandvalidate)]  
   
- Чтобы быстро проверкой этого примера его оставшаяся часть представлена ниже. Создайте проект и пространство имен и затем вставить фрагменты кода в этой статье в блок пространства имен.  
+ Таким образом, вы можете быстро проверить в этом примере, его оставшаяся часть представлена ниже. Создание проекта и пространство имен, а затем вставьте фрагменты кода в этой статье, в блок пространства имен.  
   
  [!code-csharp[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PrintTicketManagment/CSharp/printticket.cs#uiformergeandvalidateptutility)]
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
@@ -66,4 +66,4 @@ ms.locfileid: "33548497"
  <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
  [Документы в WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Общие сведения о печати](../../../../docs/framework/wpf/advanced/printing-overview.md)  
- [Схема печати](http://go.microsoft.com/fwlink/?LinkId=186397)
+ [Схема печати](https://go.microsoft.com/fwlink/?LinkId=186397)

@@ -2,12 +2,12 @@
 title: Использование TransactedReceiveScope
 ms.date: 03/30/2017
 ms.assetid: d455f1dc-bfc5-43d6-8ae9-bc3b3a3ea08a
-ms.openlocfilehash: 635235504a08a151053026cf25c68750dc335eef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc1c418f3fa116f5e1c1647af3543a38122842f5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517310"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43481475"
 ---
 # <a name="use-of-transactedreceivescope"></a>Использование TransactedReceiveScope
 В этом образце показывается передача транзакции от клиента к серверу с использованием действия <xref:System.Activities.Statements.TransactionScope> для создания новой транзакции на клиенте и действия <xref:System.ServiceModel.Activities.TransactedReceiveScope> для получения сообщения с передаваемой транзакцией и определения времени ее существования на сервере. Образец состоит из двух проектов, исполняющих роли клиента и сервера.  
@@ -24,9 +24,9 @@ ms.locfileid: "33517310"
   
 2.  Чтобы построить решение, нажмите клавиши CTRL + SHIFT + B или выберите **построить решение** из **построения** меню.  
   
-3.  После успешного построения щелкните решение правой кнопкой мыши и выберите **назначить запускаемые проекты**. В диалоговом окне выберите **несколько запускаемых проектов** и убедитесь, что для обоих проектов задано действие **запустить**.  
+3.  После успешного построения щелкните решение правой кнопкой мыши и выберите **назначить запускаемые проекты**. В диалоговом окне выберите **несколько запускаемых проектов** , причем для обоих проектов задано действие **запустить**.  
   
-4.  Нажмите клавишу F5 или выберите **начать отладку** из **отладки** меню. Кроме того, нажмите клавиши CTRL + F5 или выберите **Запуск без отладки** из **отладки** меню для запуска без отладки.  
+4.  Нажмите клавишу F5 или выберите **начать отладку** из **Отладка** меню. Кроме того, можно нажать CTRL + F5 или выбрать **Запуск без отладки** из **Отладка** меню для запуска без отладки.  
   
     > [!NOTE]
     >  Перед запуском клиента необходимо запустить сервер. Вывод из окна консоли, в котором размещена служба, указывает, когда она начала работу.  
@@ -36,6 +36,6 @@ ms.locfileid: "33517310"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Transactions\TransactedReceiveScope`

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 86c512f25c40f201d818b6789c6410bfb095b878
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933521"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488122"
 ---
 # <a name="getpropertyorigin-function"></a>Функция GetPropertyOrigin
 Определяет класс, в котором объявлено свойство.
@@ -57,7 +57,7 @@ HRESULT GetPropertyOrigin (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанное свойство не найден. |

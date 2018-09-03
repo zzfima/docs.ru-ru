@@ -7,12 +7,12 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview (using designer)
 - print preview [Windows Forms], default interface (using designer)
 ms.assetid: bfb5a3d7-021e-44f4-90f3-d435467f51d6
-ms.openlocfilehash: a6fc2f5127debaa54fe195d935da9b61cdc0902b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0f35343ca06666580d744b4d6e0fa954afedbd9c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538383"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480147"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>Элемент управления PrintPreviewDialog (Windows Forms)
 Элемент управления Windows Forms `PrintPreviewDialog` является стандартным диалоговым окном, используемым для отображения документа в том виде, как он будет напечатан. Он используется в приложении Windows в качестве простого решения вместо настройки собственного диалогового окна. Элемент управления содержит кнопки для печати, увеличения масштаба, отображения одной или нескольких страниц и закрытия диалогового окна.  
@@ -32,7 +32,7 @@ ms.locfileid: "33538383"
  [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
- [Основной код для диалоговых окон Windows Forms](http://go.microsoft.com/fwlink/?LinkID=102575)  
+ [Основной код для диалоговых окон Windows Forms](https://go.microsoft.com/fwlink/?LinkID=102575)  
  Описываются элементы управления и компоненты диалоговых окон Windows Forms, а также код, необходимый для выполнения их основных функций (техническая статья в библиотеке MSDN в Интернете).  
   
  [Элементы управления и компоненты диалоговых окон](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  

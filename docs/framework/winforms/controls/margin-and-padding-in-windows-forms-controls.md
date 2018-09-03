@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: c3907b9eb5849c5329043323b7b2f926f48117ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7f0469a879bab7aac8e572cc666dfa9d168103ea
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33534418"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488343"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Поля и заполнение в элементах управления Windows Forms
 Точное расположение элементов управления на форме является важным для многих приложений. Пространство имен <xref:System.Windows.Forms?displayProperty=nameWithType> предоставляет множество возможностей компоновки для решения этой задачи. Свойства <xref:System.Windows.Forms.Control.Margin%2A> и <xref:System.Windows.Forms.Control.Padding%2A> — одни из наиболее важных.  
@@ -23,9 +23,9 @@ ms.locfileid: "33534418"
   
  На рисунке ниже демонстрируется значение свойств <xref:System.Windows.Forms.Control.Padding%2A> и <xref:System.Windows.Forms.Control.Margin%2A> элемента управления.  
   
- ![Поля и заполнение для Windows Forms, элементы управления](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
+ ![И заполнение для Windows Forms элементы управления](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
- Эта возможность поддерживается во время разработки в Visual Studio.  См. также [Пошаговое руководство: размещение Out элементов управления Windows Forms с помощью заполнения, поля и свойства AutoSize](http://msdn.microsoft.com/library/3z3f9e8b\(v=vs.110\)).  
+ Эта возможность поддерживается во время разработки в Visual Studio.  Также см. в разделе [Пошаговое руководство: Создание структуры Out Windows Forms элементы управления с помощью свойств Padding, Margins и свойство AutoSize](https://msdn.microsoft.com/library/3z3f9e8b\(v=vs.110\)).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Forms.Control.AutoSize%2A>  

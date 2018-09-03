@@ -2,15 +2,15 @@
 title: Производство канала настройки
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: fc3a564128e520133c2404a82438e692b1381875
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1f95356b0b473b297b36c7661c849589e9c0d6ef
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806582"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43483740"
 ---
 # <a name="configuration-channel-factory"></a>Производство канала настройки
-В образце описывается использование <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> Обеспечивает возможность централизованного управления конфигурация клиента WCF. Это также можно использовать в случаях, когда конфигурация выбирается или изменяется после времени загрузки домена приложения.  
+В образце описывается использование <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> Обеспечивает возможность централизованного управления настройки клиента WCF. Это также можно использовать в случаях, когда конфигурация выбирается или изменяется после времени загрузки домена приложения.  
   
 ## <a name="demonstrates"></a>Демонстрации  
  <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>  
@@ -37,9 +37,9 @@ ICalculatorChannel client1 = factory1.CreateChannel();
   
 2.  Щелкните правой кнопкой мыши решение ConfigurationChannelFactory (2 проекта), а затем выберите **свойства**.  
   
-3.  В **общие свойства**выберите **запускаемый проект**, а затем нажмите кнопку **несколько запускаемых проектов**.  
+3.  В **общие свойства**выберите **запускаемым проектом**, а затем нажмите кнопку **несколько запускаемых проектов**.  
   
-4.  Переместить **службы** проекта, в начале списка, с **«Start» действие**и переместите **клиента** проекта после **службы**проекта, также с **«Start» действие**, поэтому **клиента** проекта выполняется после **службы** проекта.  
+4.  Переместить **службы** проекта в начале списка, с помощью **действие «Start»** и переместите **клиента** проекта после **службы**проекта, а также с **действие «Start»**, поэтому **клиента** проекта выполняется после **службы** проекта.  
   
 5.  Нажмите кнопку **ОК**, а затем нажмите клавишу F5 (или сочетание клавиш CTRL + F5), чтобы запустить образец.  
   
@@ -48,6 +48,6 @@ ICalculatorChannel client1 = factory1.CreateChannel();
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\ConfigurationChannelFactory`

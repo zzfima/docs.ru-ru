@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: f2c3aab20dc5bcf9b0f9f7053323ccd7a04443cc
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755055"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485733"
 ---
 # <a name="xaml-syntax-in-detail"></a>Подробное описание синтаксиса XAML
 В этом разделе определяются термины, которые используются для описания элементов синтаксиса XAML. Эти термины часто используются в оставшейся части этой документации, в документации по WPF, в частности, так и для других платформ, использующих XAML или основные понятия XAML, включаемые поддержки языка XAML на уровне System.Xaml. Этот раздел расширяет базовую терминологию, представленную в разделе [Обзор XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "42755055"
 ## <a name="the-xaml-language-specification"></a>В спецификации языка XAML  
  Синтаксическая терминология XAML, заданные здесь также определяется или на которые существуют ссылки в спецификации языка XAML. XAML — это язык на основе XML и ниже или расширяет структурным правилам XML. Некоторые термины общий или основан на терминологии, используемой при описании языка XML или объектную модель документа XML.  
   
- Дополнительные сведения о спецификации языка XAML, скачайте [ \[MS-XAML\] ](http://go.microsoft.com/fwlink/?LinkId=114525) из центра загрузки Майкрософт.  
+ Дополнительные сведения о спецификации языка XAML, скачайте [ \[MS-XAML\] ](https://go.microsoft.com/fwlink/?LinkId=114525) из центра загрузки Майкрософт.  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML и среда CLR  

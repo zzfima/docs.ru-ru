@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], Label
 - Label control [WPF]
 ms.assetid: 241c1ce2-60f8-4613-a0ec-9b9bb25fb6af
-ms.openlocfilehash: 310c9549814a2686fb29e98ea81baa642b6a16bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec5dda6c2a4690106e47ecb447ea2a409e474856
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553732"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476070"
 ---
 # <a name="label"></a>Метка
-<xref:System.Windows.Controls.Label> элементы управления обычно предоставляют информацию в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Исторически <xref:System.Windows.Controls.Label> содержал только текст, но поскольку <xref:System.Windows.Controls.Label> , которая поставляется с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] — <xref:System.Windows.Controls.ContentControl>, он может содержать текст или <xref:System.Windows.UIElement>.  
+<xref:System.Windows.Controls.Label> элементы управления обычно предоставляют информацию в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  Исторически сложилось так, что <xref:System.Windows.Controls.Label> содержал только текст, но поскольку <xref:System.Windows.Controls.Label> , поставляемый в комплекте с [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] — <xref:System.Windows.Controls.ContentControl>, он может содержать текст или <xref:System.Windows.UIElement>.  
   
- Объект <xref:System.Windows.Controls.Label> обеспечивает функциональную и визуальную поддержку клавиш доступа. Он часто используется для включения быстрый доступ к элементам управления, такие как <xref:System.Windows.Controls.TextBox>. Чтобы назначить <xref:System.Windows.Controls.Label> для <xref:System.Windows.Controls.Control>, задайте <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> свойства в элемент управления, который должен получить фокус, когда пользователь нажимает клавишу доступа.  
+ Объект <xref:System.Windows.Controls.Label> обеспечивает функциональную и визуальную поддержку клавиш доступа. Он часто используется для включения быстрый доступ к элементам управления, такие как <xref:System.Windows.Controls.TextBox>. Чтобы назначить <xref:System.Windows.Controls.Label> для <xref:System.Windows.Controls.Control>, задайте <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> свойство к элементу управления, который должен получить фокус, когда пользователь нажимает клавишу доступа.  
   
- На следующем рисунке показана <xref:System.Windows.Controls.Label> «Темы», указывающие <xref:System.Windows.Controls.ComboBox>.  Когда пользователь нажимает кнопку, <xref:System.Windows.Controls.ComboBox> получает фокус.  Дополнительные сведения см. в разделе [как: задать целевое свойство метки](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
+ На следующем рисунке показана <xref:System.Windows.Controls.Label> «Темы», указывающие <xref:System.Windows.Controls.ComboBox>.  Когда пользователь нажимает, <xref:System.Windows.Controls.ComboBox> получает фокус.  Дополнительные сведения см. в разделе [как: Установка целевого свойства метки](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
   
  ![Свойства отображения помеченные по использованию](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Практическое руководство. Установка целевого свойства метки](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
+ [Практическое руководство. Установка целевого свойства метки](https://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
   
 ## <a name="reference"></a>Ссылка  
  <xref:System.Windows.Controls.Label>

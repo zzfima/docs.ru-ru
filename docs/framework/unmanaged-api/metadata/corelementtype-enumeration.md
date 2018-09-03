@@ -1,5 +1,5 @@
 ---
-title: CorElementType Enumeration1
+title: Перечисление1 CorElementType
 ms.date: 03/30/2017
 api_name:
 - CorElementType
@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebe2cf95f5637e6924b85c2389f1c59679580298
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5112c3c8d5fef6efada4bffdfa575716503515e6
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449174"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488252"
 ---
-# <a name="corelementtype-enumeration1"></a>CorElementType Enumeration1
-Указывает, среда выполнения <xref:System.Type>, модификатор типа или сведения о типе в сигнатуре типа метаданных.  
+# <a name="corelementtype-enumeration1"></a>Перечисление1 CorElementType
+Указывает, среда CLR <xref:System.Type>, модификатор типа или сведения о типе в сигнатуре типа метаданных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -86,14 +86,14 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_CHAR`|Тип символа.|  
 |`ELEMENT_TYPE_I1`|1-байтовое целое число со знаком.|  
 |`ELEMENT_TYPE_U1`|1-байтовое целое число без знака.|  
-|`ELEMENT_TYPE_I2`|2-байтовое целое число со знаком.|  
+|`ELEMENT_TYPE_I2`|Целое число со знаком длиной 2 байта.|  
 |`ELEMENT_TYPE_U2`|2-байтовое целое число без знака.|  
 |`ELEMENT_TYPE_I4`|4-байтовое целое число со знаком.|  
 |`ELEMENT_TYPE_U4`|4-байтовое целое число без знака.|  
-|`ELEMENT_TYPE_I8`|8-байтовое целое число со знаком.|  
+|`ELEMENT_TYPE_I8`|8-байтное целое число со знаком.|  
 |`ELEMENT_TYPE_U8`|8-байтовое целое число без знака.|  
-|`ELEMENT_TYPE_R4`|4-байтовое число с плавающей запятой.|  
-|`ELEMENT_TYPE_R8`|8-байтовое число с плавающей запятой.|  
+|`ELEMENT_TYPE_R4`|4-байтовое с плавающей запятой.|  
+|`ELEMENT_TYPE_R8`|8-байтовое с плавающей запятой.|  
 |`ELEMENT_TYPE_STRING`|Тип System.String.|  
 |`ELEMENT_TYPE_PTR`|Модификатор типа указателя.|  
 |`ELEMENT_TYPE_BYREF`|Модификатор ссылочного типа.|  
@@ -103,13 +103,13 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_ARRAY`|Модификатор типа многомерного массива.|  
 |`ELEMENT_TYPE_GENERICINST`|Модификатор типа для универсальных типов.|  
 |`ELEMENT_TYPE_TYPEDBYREF`|Типизированная ссылка.|  
-|`ELEMENT_TYPE_I`|Размер собственного целого числа со знаком.|  
+|`ELEMENT_TYPE_I`|Размер собственного целого числа.|  
 |`ELEMENT_TYPE_U`|Размер собственного целое число без знака.|  
 |`ELEMENT_TYPE_FNPTR`|Указатель на функцию.|  
 |`ELEMENT_TYPE_OBJECT`|Тип System.Object.|  
-|`ELEMENT_TYPE_SZARRAY`|Одномерный, модификатор типа нулевой нижней границы массива.|  
+|`ELEMENT_TYPE_SZARRAY`|Создает одномерный, модификатор типа нулевой нижней границы массива.|  
 |`ELEMENT_TYPE_MVAR`|Модификатор типа переменной метода.|  
-|`ELEMENT_TYPE_CMOD_REQD`|Обязательный модификатор языка c.|  
+|`ELEMENT_TYPE_CMOD_REQD`|Обязательный модификатор языка C|  
 |`ELEMENT_TYPE_CMOD_OPT`|Необязательный модификатор языка C.|  
 |`ELEMENT_TYPE_INTERNAL`|Используется внутренним образом.|  
 |`ELEMENT_TYPE_MAX`|Недопустимый тип.|  
@@ -118,10 +118,10 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_PINNED`|Используется внутренним образом.|  
   
 ## <a name="remarks"></a>Примечания  
- Модификаторы типов образуют основу для представления более сложных типов. Объект `CorElementType` значение модификатора типа применяется к значению, немедленно следующий за ним в сигнатуре типа. Значение, которое следует за `CorElementType` значение модификатора типа может быть `CorElementType` значение простого типа, маркер метаданных или другое значение, как указано в следующей таблице.  
+ Модификаторы типа формируют основу для представления более сложных типов. Объект `CorElementType` значение модификатора типа применяется к значению, следующим непосредственно за ним в сигнатуре типа. Значение, которое следует за `CorElementType` значение модификатора типа может быть `CorElementType` значение простого типа, маркер метаданных или другое значение, как указано в следующей таблице.  
   
 > [!NOTE]
->  Все числа (*номер*, *счетчик аргументов*, *токен метаданных*, *ранг*, *число*и *привязан*) хранятся в виде сжатых целых чисел. В разделе [стандарту ECMA-335 - Common Language Infrastructure (CLI)](http://go.microsoft.com/fwlink/?LinkID=116487) на сайте ECMA подробные сведения.  
+>  Все числа (*номер*, *счетчик аргументов*, *токен метаданных*, *ранг*, *число*и *привязан*) хранятся в виде сжатых целых чисел. См. в разделе [стандарт ECMA-335 — Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) ECMA на веб-сайте сведения.  
   
 |Модификатор типа|Формат|  
 |-------------------|------------|  
@@ -129,21 +129,21 @@ typedef enum CorElementType {
 |`ELEMENT_TYPE_BYREF`|ELEMENT_TYPE_BYREF < `CorElementType` значение >|  
 |`ELEMENT_TYPE_VALUETYPE`|ELEMENT_TYPE_VALUETYPE < `mdTypeDef` токен метаданных >|  
 |`ELEMENT_TYPE_CLASS`|ELEMENT_TYPE_CLASS < `mdTypeDef` токен метаданных >|  
-|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<число >|  
+|`ELEMENT_TYPE_VAR`|ELEMENT_TYPE_VAR \<номер >|  
 |`ELEMENT_TYPE_ARRAY`|ELEMENT_TYPE_ARRAY < `CorElementType` значение > \<ранг > \<count1 > \<bound1 >... \<countN > \<boundN >|  
-|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST < `mdTypeDef` токен метаданных > \<аргумент Count > \<аргумент1 >... \<argN >|  
+|`ELEMENT_TYPE_GENERICINST`|ELEMENT_TYPE_GENERICINST < `mdTypeDef` токен метаданных > \<аргумент Count > \<arg1 >... \<argN >|  
 |`ELEMENT_TYPE_FNPTR`|ELEMENT_TYPE_FNPTR \<Полная сигнатура для функции, включая соглашение о вызовах >|  
 |`ELEMENT_TYPE_SZARRAY`|ELEMENT_TYPE_SZARRAY < `CorElementType` значение >|  
-|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<число >|  
-|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_ < `mdTypeRef` или `mdTypeDef` токен метаданных >|  
-|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT < `mdTypeRef` или `mdTypeDef` токен метаданных >|  
+|`ELEMENT_TYPE_MVAR`|ELEMENT_TYPE_MVAR \<номер >|  
+|`ELEMENT_TYPE_CMOD_REQD`|ELEMENT_TYPE_ < `mdTypeRef` или `mdTypeDef` маркер метаданных >|  
+|`ELEMENT_TYPE_CMOD_OPT`|E_T_CMOD_OPT < `mdTypeRef` или `mdTypeDef` маркер метаданных >|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** CorHdr.h  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Перечисления метаданных](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

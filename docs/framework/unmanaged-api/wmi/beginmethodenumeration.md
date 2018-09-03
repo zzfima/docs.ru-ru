@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e69625184aca7d1ebd4bb0b7dc7c4958596b906a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43000347"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43476096"
 ---
 # <a name="beginenumeration-function"></a>Функция BeginEnumeration
 Начинает перечисление методы, доступные для объекта.  
@@ -49,7 +49,7 @@ HRESULT BeginMethodEnumeration (
 `lEnumFlags`  
 [in] Ноль (0) для всех методов, или флаг, указывающий область видимости перечисления. Далее перечислены флаги определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-Константа  |Значение  |Описание:  |
+Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_FLAG_LOCAL_ONLY` | 0x10 | Ограничения перечисления к методам, которые определены в самом классе. |
 | `WBEM_FLAG_PROPAGATED_ONLY` |  0x20 | Ограничения перечисления для свойства, наследуемые от базовых классов. |
@@ -58,7 +58,7 @@ HRESULT BeginMethodEnumeration (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lEnnumFlags` не равно нулю и не является одним из указанных флагов. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |

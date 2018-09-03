@@ -2,15 +2,15 @@
 title: Объекты DataAdapter и DataReader
 ms.date: 03/30/2017
 ms.assetid: cc952ca2-ec19-46ab-9189-15174b52cb74
-ms.openlocfilehash: 7fd7013478bbf30c2a7e915045e3dd192ca92540
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6e711b11ef9a3eca53806b825f1e721169ab662d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758104"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476226"
 ---
 # <a name="dataadapters-and-datareaders"></a>Объекты DataAdapter и DataReader
-Вы можете использовать ADO.NET **DataReader** для извлечения только для чтения однопроходный поток данных из базы данных. Результаты возвращаются после выполнения запроса и хранятся в сетевом буфере на клиенте, пока не будут запрошены с помощью **чтения** метод **DataReader**. С помощью **DataReader** можно повысить производительность приложения как путем получения данных, как только она доступна, так и (по умолчанию) хранится в памяти, снижения нагрузки на систему одновременно только одна строка.  
+Можно использовать ADO.NET **DataReader** для получения только для чтения однопроходный поток данных из базы данных. Результаты возвращаются после выполнения запроса и хранятся в сетевом буфере на клиенте, пока не запрошены с помощью **чтения** метод **DataReader**. С помощью **DataReader** позволяет увеличить производительность приложения как путем получения данных, как только он доступен, так и (по умолчанию) хранится только одна строка в памяти, уменьшая нагрузку на системные ресурсы одновременно.  
   
  Класс <xref:System.Data.Common.DataAdapter> используется для получения данных из источника данных и заполнения таблиц в <xref:System.Data.DataSet>. Класс `DataAdapter` позволяет также решить задачу по возврату изменений, сделанных в объекте `DataSet`, обратно в источник данных. В классе `DataAdapter` используется объект `Connection` поставщика данных .NET Framework для подключения к источнику данных, а также используются объекты `Command` для получения из него данных и решения задачи по записи изменений в источник данных.  
   
@@ -18,7 +18,7 @@ ms.locfileid: "32758104"
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Извлечение данных с помощью объекта DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)  
- Описание объекта ADO.NET **DataReader** объект и способ его использования для возврата потока результатов из источника данных.  
+ Описывает объект ADO.NET **DataReader** объекта и способы ее использования для возврата потока результатов из источника данных.  
   
  [Заполнение набора данных с помощью адаптера данных DataAdapter](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  Содержит описание того, как заполнить `DataSet` таблицами, столбцами и строками с использованием `DataAdapter`.  
@@ -49,4 +49,4 @@ ms.locfileid: "32758104"
  [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Транзакции и параллельность](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  [Наборы данных, таблицы данных и объекты DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

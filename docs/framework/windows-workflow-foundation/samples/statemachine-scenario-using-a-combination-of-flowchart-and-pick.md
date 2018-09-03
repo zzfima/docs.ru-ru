@@ -2,12 +2,12 @@
 title: Сценарий конечного автомата с использованием сочетания действий FlowChart и Pick
 ms.date: 03/30/2017
 ms.assetid: 88d81395-f7a3-41d8-8439-20a425c538a6
-ms.openlocfilehash: 0f7fc809b2fb7107de355546ca52a4d2ba2b39f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b0f8e884a8a6c62c4e7edaf5cc9727bf7bfe8603
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517940"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485500"
 ---
 # <a name="statemachine-scenario-using-a-combination-of-flowchart-and-pick"></a>Сценарий конечного автомата с использованием сочетания действий FlowChart и Pick
 Этот образец показывает, как реализовать сценарий простого контрольного таймера с помощью сочетания действий <xref:System.Activities.Statements.Flowchart> и <xref:System.Activities.Statements.Pick>. Для прослушивания событий контрольного таймера используются операции Receive и Send, заданные в действии Pick.  
@@ -17,7 +17,7 @@ ms.locfileid: "33517940"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на загрузки страницы, чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к (загрузка страницы) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\StateMachineWithPick`  
   
@@ -35,7 +35,7 @@ ms.locfileid: "33517940"
   
 2.  Для построения решения нажмите CTRL+SHIFT+B.  
   
-3.  Запуск StopWatchService.exe из [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] от имени администратора, щелкнув правой кнопкой мыши файл .exe и выбрав **Запуск от имени администратора**.  
+3.  Запуск StopWatchService.exe из [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] как администратор, щелкнув правой кнопкой файл .exe и выбрав **Запуск от имени администратора**.  
   
     1.  Перейдите в папку StateMachineWithPick\CS\StopWatchService\bin\Debug.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33517940"
   
 4.  Запустите клиентское приложение StopWatchClient из [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   
-    1.  В **обозревателе решений**выберите **StopWatchClient** проект и щелкните правой кнопкой мыши **Назначить запускаемым проектом**.  
+    1.  В **обозревателе решений**выберите **StopWatchClient** проекта и щелкните правой кнопкой мыши **Назначить запускаемым проектом**.  
   
     2.  Чтобы запустить решение, нажмите клавиши CTRL+F5.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "33517940"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\StateMachineWithPick`

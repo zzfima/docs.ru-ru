@@ -5,42 +5,42 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 8058f0fac8a0401f72f84e2d2e91c28c7e46d1e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90e00e4264ff808151c9e1c58fdaf290765620c8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493367"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43488174"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>Практическое руководство. Асинхронный вызов операций службы WCF
-В этом разделе описано, каким образом клиент может асинхронно обратиться к операции службы. Служба в этом разделе реализует интерфейс `ICalculator`. Клиент может асинхронно вызывать операции этого интерфейса с помощью управляемой событиями модели асинхронного вызова. (Дополнительные сведения о на основе событий асинхронного вызова модели см. в разделе [многопоточного программирования с использованием асинхронной модели, основанной на событиях](http://go.microsoft.com/fwlink/?LinkId=248184)). Пример, демонстрирующий способы реализации операции асинхронно в службе см. в разделе [как: реализация асинхронной операции службы](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Дополнительные сведения о синхронных и асинхронных операциях см. в разделе [синхронной и асинхронной операции](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
+В этом разделе описано, каким образом клиент может асинхронно обратиться к операции службы. Служба в этом разделе реализует интерфейс `ICalculator`. Клиент может асинхронно вызывать операции этого интерфейса с помощью управляемой событиями модели асинхронного вызова. (Дополнительные сведения об управляемой событиями модели асинхронного вызова см. в разделе [многопоточное программирование с использованием асинхронной модели на основе событий](https://go.microsoft.com/fwlink/?LinkId=248184)). Пример, в котором демонстрируется реализация асинхронной операции в службе, см. в разделе [как: реализация асинхронной операции службы](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md). Дополнительные сведения о синхронных и асинхронных операциях см. в разделе [синхронные и асинхронные операции](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
   
 > [!NOTE]
->  Управляемая событиями модель асинхронных вызовов не поддерживается при использовании класса <xref:System.ServiceModel.ChannelFactory%601>. Сведения о том, как с помощью асинхронных вызовов <xref:System.ServiceModel.ChannelFactory%601>, в разделе [как: вызов операции асинхронно с помощью фабрики каналов](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
+>  Управляемая событиями модель асинхронных вызовов не поддерживается при использовании класса <xref:System.ServiceModel.ChannelFactory%601>. Сведения об асинхронных вызовах с использованием <xref:System.ServiceModel.ChannelFactory%601>, см. в разделе [как: вызов операции асинхронно с помощью фабрики каналов](../../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md).  
   
 ## <a name="procedure"></a>Процедура  
   
 #### <a name="to-call-wcf-service-operations-asynchronously"></a>Асинхронный вызов операций службы WCF  
   
-1.  Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство с обоими `/async` и `/tcv:Version35` параметры команды вместе как показано в следующей команде.  
+1.  Запустите [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство с обоими `/async` и `/tcv:Version35` параметрами командной строки как показано в следующей команде.  
   
     ```  
     svcutil /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost:8000/servicemodelsamples/service/mex /a /tcv:Version35  
     ```  
   
-     Это приводит к возникновению ошибки, помимо синхронной операции и стандартной основе делегатов асинхронными операциями, класса клиента WCF, который содержит:  
+     Это приводит к возникновению ошибки, помимо синхронной операции и стандартной делегатов асинхронными операциями, класс клиента WCF, который содержит:  
   
-    -   Два <`operationName` > `Async` операций для использования с на основе событий асинхронного вызова подхода. Пример:  
+    -   Два <`operationName` > `Async` операций для использования с основанной на событиях асинхронных вызовами. Пример:  
   
          [!code-csharp[EventAsync#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#1)]
          [!code-vb[EventAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#1)]  
   
-    -   Операция выполнена события в формате <`operationName` > `Completed` для использования с на основе событий асинхронного вызова подхода. Пример:  
+    -   События с завершенными операциями в форме <`operationName` > `Completed` для использования с основанной на событиях асинхронных вызовами. Пример:  
   
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
   
-    -   <xref:System.EventArgs?displayProperty=nameWithType> типы для каждой операции (в формате <`operationName`>`CompletedEventArgs`) для использования с на основе событий асинхронного вызова подхода. Пример:  
+    -   <xref:System.EventArgs?displayProperty=nameWithType> типы для каждой операции (в формате <`operationName`>`CompletedEventArgs`) для использования с основанной на событиях асинхронных вызовами. Пример:  
   
          [!code-csharp[EventAsync#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#3)]
          [!code-vb[EventAsync#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#3)]  
@@ -50,7 +50,7 @@ ms.locfileid: "33493367"
      [!code-csharp[EventAsync#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#4)]
      [!code-vb[EventAsync#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#4)]  
   
-3.  Перед вызовом операции, используйте новый универсальный <xref:System.EventHandler%601?displayProperty=nameWithType> типа <`operationName` > `EventArgs` добавляемый метод обработчика (созданного на предыдущем шаге) <`operationName` > `Completed` событий. Затем вызовите <`operationName` > `Async` метод. Пример:  
+3.  Перед вызовом операции используйте новый универсальный <xref:System.EventHandler%601?displayProperty=nameWithType> типа <`operationName` > `EventArgs` добавляемый метод обработчика (созданный на предыдущем шаге) <`operationName` > `Completed` событий. Затем вызовите <`operationName` > `Async` метод. Пример:  
   
      [!code-csharp[EventAsync#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/client.cs#5)]
      [!code-vb[EventAsync#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#5)]  

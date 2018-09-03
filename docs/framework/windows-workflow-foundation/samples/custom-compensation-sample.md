@@ -2,12 +2,12 @@
 title: Образец настраиваемой компенсации
 ms.date: 03/30/2017
 ms.assetid: 385920da-9284-44bf-9fe9-0d87c7478ec5
-ms.openlocfilehash: 55161a46bebca2cce41803ca405cb2b1df57b3fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac141a48f87f5b14f6b528f7b3ceb7fdddeaf2d2
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514328"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43475872"
 ---
 # <a name="custom-compensation-sample"></a>Образец настраиваемой компенсации
 В этом образце показано, как использовать действие <xref:System.Activities.Statements.CompensableActivity> и его обработчик компенсации для определения пользовательской логики компенсации. В этом образце моделируется «Агентство по аренде грузовиков».  
@@ -48,6 +48,6 @@ ms.locfileid: "33514328"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Compensation\CustomCompensation`

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - keyboard events
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
-ms.openlocfilehash: 706b4d87ddbb6afadfd90af866520e6feaa58ca7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c6059e5d0957de09dd2c4832573c784935eb510
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542266"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484913"
 ---
 # <a name="using-keyboard-events"></a>Использование событий клавиатуры
-В большинстве программ Windows Forms для обработки ввода с клавиатуры используются события клавиатуры. В этом разделе содержится обзор событий клавиатуры, включая сведения об использовании каждого события и данные, которые предоставляются для каждого события.  См. также [Обзор обработчиков событий (Windows Forms)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Общие сведения о событиях (Windows Forms)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
+В большинстве программ Windows Forms для обработки ввода с клавиатуры используются события клавиатуры. В этом разделе содержится обзор событий клавиатуры, включая сведения об использовании каждого события и данные, которые предоставляются для каждого события.  Также см. в разделе [Обзор обработчиков событий (Windows Forms)](https://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Общие сведения о событиях (Windows Forms)](https://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
   
 ## <a name="keyboard-events"></a>События клавиатуры  
  Windows Forms содержит два события, которые возникают при нажатии пользователем клавиши клавиатуры, и одно событие, которое возникает при отпускании пользователем клавиши.  

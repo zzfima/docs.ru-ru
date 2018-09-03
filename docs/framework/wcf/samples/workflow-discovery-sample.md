@@ -2,12 +2,12 @@
 title: Образец обнаружения рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
-ms.openlocfilehash: ec4b956a28048c0c30a4eadb0473adb34334fa92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1076e7045ca546fed7e6902f69406bfc002c4c26
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503443"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43476015"
 ---
 # <a name="workflow-discovery-sample"></a>Образец обнаружения рабочего процесса
 В этом образце показано, как сделать службу рабочего процесса обнаруживаемой, а также как создать настраиваемое действие кода, используемое для поиска определенной службы.  
@@ -20,15 +20,15 @@ ms.locfileid: "33503443"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
-1.  Этот образец использует конечные точки HTTP, который должен иметь соответствующие списки управления доступом URL-адрес для запуска (см. [Настройка протоколов HTTP и HTTPS](http://go.microsoft.com/fwlink/?LinkId=70353) подробные сведения). Нужные списки управления доступом будут добавлены после выполнения следующей команды в командной строке с повышенными привилегиями. Если оболочка не распознает формат переменной, замените домен и имя пользователя в следующих аргументах.  
+1.  Этот образец использует конечные точки HTTP, которые должны иметь соответствующие списки управления доступом URL-адрес для запуска (см. в разделе [Настройка HTTP и HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353) сведения). Нужные списки управления доступом будут добавлены после выполнения следующей команды в командной строке с повышенными привилегиями. Если оболочка не распознает формат переменной, замените домен и имя пользователя в следующих аргументах.  
   
-     **добавить urlacl url-адрес Netsh http =http://+:8000/ пользователь = % DOMAIN %\\% UserName %**  
+     **Netsh http добавить urlacl url =http://+:8000/ пользователя = % домена %\\% UserName %**  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\WorkflowDiscovery`
