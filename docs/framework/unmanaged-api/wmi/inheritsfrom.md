@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452917"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542658"
 ---
-# <a name="inheritsfrom-function"></a><span data-ttu-id="c72c4-103">Функция InheritsFrom</span><span class="sxs-lookup"><span data-stu-id="c72c4-103">InheritsFrom function</span></span>
-<span data-ttu-id="c72c4-104">Определяет, ли текущий класс или экземпляр является производным от указанного родительского класса.</span><span class="sxs-lookup"><span data-stu-id="c72c4-104">Determines whether the current class or instance derives from a specified parent class.</span></span>
+# <a name="inheritsfrom-function"></a><span data-ttu-id="f7e70-103">Функция InheritsFrom</span><span class="sxs-lookup"><span data-stu-id="f7e70-103">InheritsFrom function</span></span>
+<span data-ttu-id="f7e70-104">Определяет, является ли текущий класс или экземпляр производным от указанного родительского класса.</span><span class="sxs-lookup"><span data-stu-id="f7e70-104">Determines whether the current class or instance derives from a specified parent class.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="c72c4-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c72c4-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f7e70-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f7e70-105">Syntax</span></span>  
   
 ```
 HRESULT InheritsFrom (
@@ -38,37 +38,37 @@ HRESULT InheritsFrom (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="c72c4-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="c72c4-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="f7e70-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="f7e70-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="c72c4-107">[in] Этот параметр не используется.</span><span class="sxs-lookup"><span data-stu-id="c72c4-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="f7e70-107">[in] Этот параметр не используется.</span><span class="sxs-lookup"><span data-stu-id="f7e70-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="c72c4-108">[in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.</span><span class="sxs-lookup"><span data-stu-id="c72c4-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="f7e70-108">[in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.</span><span class="sxs-lookup"><span data-stu-id="f7e70-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszAncestor`  
-<span data-ttu-id="c72c4-109">[in] Имя класса.</span><span class="sxs-lookup"><span data-stu-id="c72c4-109">[in] The name of the class.</span></span> <span data-ttu-id="c72c4-110">`wszAncestor` должен указывать на допустимый `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="c72c4-110">`wszAncestor` must point to a valid `LPCWSTR`.</span></span>
+<span data-ttu-id="f7e70-109">[in] Имя класса.</span><span class="sxs-lookup"><span data-stu-id="f7e70-109">[in] The name of the class.</span></span> <span data-ttu-id="f7e70-110">`wszAncestor` должен указывать на допустимый `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="f7e70-110">`wszAncestor` must point to a valid `LPCWSTR`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="c72c4-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="c72c4-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="f7e70-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="f7e70-111">Return value</span></span>
 
-<span data-ttu-id="c72c4-112">Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:</span><span class="sxs-lookup"><span data-stu-id="c72c4-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="f7e70-112">Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:</span><span class="sxs-lookup"><span data-stu-id="f7e70-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="c72c4-113">Константа</span><span class="sxs-lookup"><span data-stu-id="c72c4-113">Constant</span></span>  |<span data-ttu-id="c72c4-114">Значение</span><span class="sxs-lookup"><span data-stu-id="c72c4-114">Value</span></span>  |<span data-ttu-id="c72c4-115">Описание</span><span class="sxs-lookup"><span data-stu-id="c72c4-115">Description</span></span>  |
+|<span data-ttu-id="f7e70-113">Константа</span><span class="sxs-lookup"><span data-stu-id="f7e70-113">Constant</span></span>  |<span data-ttu-id="f7e70-114">Значение</span><span class="sxs-lookup"><span data-stu-id="f7e70-114">Value</span></span>  |<span data-ttu-id="f7e70-115">Описание</span><span class="sxs-lookup"><span data-stu-id="f7e70-115">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="c72c4-116">0</span><span class="sxs-lookup"><span data-stu-id="c72c4-116">0</span></span> | <span data-ttu-id="c72c4-117">Наследуется текущий объект из `wszAncestor`.</span><span class="sxs-lookup"><span data-stu-id="c72c4-117">The current object inherits from `wszAncestor`.</span></span>  |
-| `WBEM_S_FALSE` | <span data-ttu-id="c72c4-118">1</span><span class="sxs-lookup"><span data-stu-id="c72c4-118">1</span></span> | <span data-ttu-id="c72c4-119">Текущий объект не наследует от `wszAncestor`.</span><span class="sxs-lookup"><span data-stu-id="c72c4-119">The current object does not inherit from `wszAncestor`.</span></span> |
-|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="c72c4-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="c72c4-120">0x80041008</span></span> | <span data-ttu-id="c72c4-121">Свойство `wszAncestor` имеет значение `null`.</span><span class="sxs-lookup"><span data-stu-id="c72c4-121">`wszAncestor` is `null`.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="f7e70-116">0</span><span class="sxs-lookup"><span data-stu-id="f7e70-116">0</span></span> | <span data-ttu-id="f7e70-117">Наследуется текущий объект из `wszAncestor`.</span><span class="sxs-lookup"><span data-stu-id="f7e70-117">The current object inherits from `wszAncestor`.</span></span>  |
+| `WBEM_S_FALSE` | <span data-ttu-id="f7e70-118">1</span><span class="sxs-lookup"><span data-stu-id="f7e70-118">1</span></span> | <span data-ttu-id="f7e70-119">Текущий объект не наследует от `wszAncestor`.</span><span class="sxs-lookup"><span data-stu-id="f7e70-119">The current object does not inherit from `wszAncestor`.</span></span> |
+|`WBEM_E_INVALID_PARAMETER` | <span data-ttu-id="f7e70-120">0x80041008</span><span class="sxs-lookup"><span data-stu-id="f7e70-120">0x80041008</span></span> | <span data-ttu-id="f7e70-121">Свойство `wszAncestor` имеет значение `null`.</span><span class="sxs-lookup"><span data-stu-id="f7e70-121">`wszAncestor` is `null`.</span></span> |
   
-## <a name="remarks"></a><span data-ttu-id="c72c4-122">Примечания</span><span class="sxs-lookup"><span data-stu-id="c72c4-122">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f7e70-122">Примечания</span><span class="sxs-lookup"><span data-stu-id="f7e70-122">Remarks</span></span>
 
-<span data-ttu-id="c72c4-123">Эта функция создает оболочку для вызова [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) метод.</span><span class="sxs-lookup"><span data-stu-id="c72c4-123">This function wraps a call to the [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) method.</span></span>
+<span data-ttu-id="f7e70-123">Эта функция создает оболочку для вызова [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) метод.</span><span class="sxs-lookup"><span data-stu-id="f7e70-123">This function wraps a call to the [IWbemClassObject::InheritsFrom](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-inheritsfrom) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="c72c4-124">Требования</span><span class="sxs-lookup"><span data-stu-id="c72c4-124">Requirements</span></span>  
- <span data-ttu-id="c72c4-125">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c72c4-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f7e70-124">Требования</span><span class="sxs-lookup"><span data-stu-id="f7e70-124">Requirements</span></span>  
+ <span data-ttu-id="f7e70-125">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f7e70-125">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c72c4-126">**Заголовок:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="c72c4-126">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="f7e70-126">**Заголовок:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="f7e70-126">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="c72c4-127">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="c72c4-127">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="f7e70-127">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="f7e70-127">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c72c4-128">См. также</span><span class="sxs-lookup"><span data-stu-id="c72c4-128">See also</span></span>  
-[<span data-ttu-id="c72c4-129">WMI и счетчики производительности (Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="c72c4-129">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="f7e70-128">См. также</span><span class="sxs-lookup"><span data-stu-id="f7e70-128">See also</span></span>  
+[<span data-ttu-id="f7e70-129">WMI и счетчики производительности (Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="f7e70-129">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

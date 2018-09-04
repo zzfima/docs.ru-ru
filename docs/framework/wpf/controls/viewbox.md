@@ -9,23 +9,23 @@ helpviewer_keywords:
 - Viewbox control [WPF]
 - scaling elements [WPF], Viewbox control
 ms.assetid: 00fc0a16-1078-4d55-9849-ffaf7da96531
-ms.openlocfilehash: 28b92e903d954312374d8e4041c4fdeb9ed375d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe7184df5d889a93f2274dfd20669701947f0965
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554369"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557854"
 ---
-# <a name="viewbox"></a><span data-ttu-id="d20b8-102">Viewbox</span><span class="sxs-lookup"><span data-stu-id="d20b8-102">Viewbox</span></span>
-<span data-ttu-id="d20b8-103"><xref:System.Windows.Controls.Viewbox> Элемент управления используется для растягивания или масштабирования дочернего элемента.</span><span class="sxs-lookup"><span data-stu-id="d20b8-103">The <xref:System.Windows.Controls.Viewbox> control is used to stretch or scale a child element.</span></span>  
+# <a name="viewbox"></a><span data-ttu-id="a205c-102">Viewbox</span><span class="sxs-lookup"><span data-stu-id="a205c-102">Viewbox</span></span>
+<span data-ttu-id="a205c-103"><xref:System.Windows.Controls.Viewbox> Элемент управления используется для растягивания или масштабирования дочернего элемента.</span><span class="sxs-lookup"><span data-stu-id="a205c-103">The <xref:System.Windows.Controls.Viewbox> control is used to stretch or scale a child element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d20b8-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="d20b8-104">In This Section</span></span>  
- [<span data-ttu-id="d20b8-105">Применение свойства Stretch к содержимому элемента Viewbox</span><span class="sxs-lookup"><span data-stu-id="d20b8-105">Apply Stretch Properties to the Contents of a Viewbox</span></span>](../../../../docs/framework/wpf/controls/how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a205c-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="a205c-104">In This Section</span></span>  
+ [<span data-ttu-id="a205c-105">Применение свойства Stretch к содержимому элемента Viewbox</span><span class="sxs-lookup"><span data-stu-id="a205c-105">Apply Stretch Properties to the Contents of a Viewbox</span></span>](../../../../docs/framework/wpf/controls/how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md)  
   
-## <a name="reference"></a><span data-ttu-id="d20b8-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="d20b8-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="a205c-106">Ссылка</span><span class="sxs-lookup"><span data-stu-id="a205c-106">Reference</span></span>  
  <xref:System.Windows.Controls.Viewbox>  
   
  <xref:System.Windows.Controls.Image>  
   
-## <a name="see-also"></a><span data-ttu-id="d20b8-107">См. также</span><span class="sxs-lookup"><span data-stu-id="d20b8-107">See Also</span></span>  
- [<span data-ttu-id="d20b8-108">Пример коллекции элементов управления WPF</span><span class="sxs-lookup"><span data-stu-id="d20b8-108">WPF Controls Gallery Sample</span></span>](http://go.microsoft.com/fwlink/?LinkID=160053)
+## <a name="see-also"></a><span data-ttu-id="a205c-107">См. также</span><span class="sxs-lookup"><span data-stu-id="a205c-107">See Also</span></span>  
+ [<span data-ttu-id="a205c-108">Пример коллекции элементов управления WPF</span><span class="sxs-lookup"><span data-stu-id="a205c-108">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)

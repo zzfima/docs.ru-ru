@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5112c3c8d5fef6efada4bffdfa575716503515e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488252"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562554"
 ---
-# <a name="corelementtype-enumeration1"></a><span data-ttu-id="4767c-102">Перечисление1 CorElementType</span><span class="sxs-lookup"><span data-stu-id="4767c-102">CorElementType Enumeration1</span></span>
-<span data-ttu-id="4767c-103">Указывает, среда CLR <xref:System.Type>, модификатор типа или сведения о типе в сигнатуре типа метаданных.</span><span class="sxs-lookup"><span data-stu-id="4767c-103">Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.</span></span>  
+# <a name="corelementtype-enumeration1"></a><span data-ttu-id="e6859-102">Перечисление1 CorElementType</span><span class="sxs-lookup"><span data-stu-id="e6859-102">CorElementType Enumeration1</span></span>
+<span data-ttu-id="e6859-103">Указывает, среда CLR <xref:System.Type>, модификатор типа или сведения о типе в сигнатуре типа метаданных.</span><span class="sxs-lookup"><span data-stu-id="e6859-103">Specifies a common language runtime <xref:System.Type>, a type modifier, or information about a type in a metadata type signature.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4767c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4767c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e6859-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e6859-104">Syntax</span></span>  
   
 ```  
 typedef enum CorElementType {  
@@ -76,74 +76,74 @@ typedef enum CorElementType {
 } CorElementType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4767c-105">Участники</span><span class="sxs-lookup"><span data-stu-id="4767c-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="e6859-105">Участники</span><span class="sxs-lookup"><span data-stu-id="e6859-105">Members</span></span>  
   
-|<span data-ttu-id="4767c-106">Член</span><span class="sxs-lookup"><span data-stu-id="4767c-106">Member</span></span>|<span data-ttu-id="4767c-107">Описание</span><span class="sxs-lookup"><span data-stu-id="4767c-107">Description</span></span>|  
+|<span data-ttu-id="e6859-106">Член</span><span class="sxs-lookup"><span data-stu-id="e6859-106">Member</span></span>|<span data-ttu-id="e6859-107">Описание</span><span class="sxs-lookup"><span data-stu-id="e6859-107">Description</span></span>|  
 |------------|-----------------|  
-|`ELEMENT_TYPE_END`|<span data-ttu-id="4767c-108">Используется внутренним образом.</span><span class="sxs-lookup"><span data-stu-id="4767c-108">Used internally.</span></span>|  
-|`ELEMENT_TYPE_VOID`|<span data-ttu-id="4767c-109">Значение типа void.</span><span class="sxs-lookup"><span data-stu-id="4767c-109">A void type.</span></span>|  
-|`ELEMENT_TYPE_BOOLEAN`|<span data-ttu-id="4767c-110">Логический тип.</span><span class="sxs-lookup"><span data-stu-id="4767c-110">A Boolean type</span></span>|  
-|`ELEMENT_TYPE_CHAR`|<span data-ttu-id="4767c-111">Тип символа.</span><span class="sxs-lookup"><span data-stu-id="4767c-111">A character type.</span></span>|  
-|`ELEMENT_TYPE_I1`|<span data-ttu-id="4767c-112">1-байтовое целое число со знаком.</span><span class="sxs-lookup"><span data-stu-id="4767c-112">A signed 1-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U1`|<span data-ttu-id="4767c-113">1-байтовое целое число без знака.</span><span class="sxs-lookup"><span data-stu-id="4767c-113">An unsigned 1-byte integer.</span></span>|  
-|`ELEMENT_TYPE_I2`|<span data-ttu-id="4767c-114">Целое число со знаком длиной 2 байта.</span><span class="sxs-lookup"><span data-stu-id="4767c-114">A signed 2-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U2`|<span data-ttu-id="4767c-115">2-байтовое целое число без знака.</span><span class="sxs-lookup"><span data-stu-id="4767c-115">An unsigned 2-byte integer.</span></span>|  
-|`ELEMENT_TYPE_I4`|<span data-ttu-id="4767c-116">4-байтовое целое число со знаком.</span><span class="sxs-lookup"><span data-stu-id="4767c-116">A signed 4-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U4`|<span data-ttu-id="4767c-117">4-байтовое целое число без знака.</span><span class="sxs-lookup"><span data-stu-id="4767c-117">An unsigned 4-byte integer.</span></span>|  
-|`ELEMENT_TYPE_I8`|<span data-ttu-id="4767c-118">8-байтное целое число со знаком.</span><span class="sxs-lookup"><span data-stu-id="4767c-118">A signed 8-byte integer.</span></span>|  
-|`ELEMENT_TYPE_U8`|<span data-ttu-id="4767c-119">8-байтовое целое число без знака.</span><span class="sxs-lookup"><span data-stu-id="4767c-119">An unsigned 8-byte integer.</span></span>|  
-|`ELEMENT_TYPE_R4`|<span data-ttu-id="4767c-120">4-байтовое с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="4767c-120">A 4-byte floating point.</span></span>|  
-|`ELEMENT_TYPE_R8`|<span data-ttu-id="4767c-121">8-байтовое с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="4767c-121">An 8-byte floating point.</span></span>|  
-|`ELEMENT_TYPE_STRING`|<span data-ttu-id="4767c-122">Тип System.String.</span><span class="sxs-lookup"><span data-stu-id="4767c-122">A System.String type.</span></span>|  
-|`ELEMENT_TYPE_PTR`|<span data-ttu-id="4767c-123">Модификатор типа указателя.</span><span class="sxs-lookup"><span data-stu-id="4767c-123">A pointer type modifier.</span></span>|  
-|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="4767c-124">Модификатор ссылочного типа.</span><span class="sxs-lookup"><span data-stu-id="4767c-124">A reference type modifier.</span></span>|  
-|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="4767c-125">Модификатор типа значения.</span><span class="sxs-lookup"><span data-stu-id="4767c-125">A value type modifier.</span></span>|  
-|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="4767c-126">Модификатор типа класса.</span><span class="sxs-lookup"><span data-stu-id="4767c-126">A class type modifier.</span></span>|  
-|`ELEMENT_TYPE_VAR`|<span data-ttu-id="4767c-127">Модификатор типа переменной.</span><span class="sxs-lookup"><span data-stu-id="4767c-127">A class variable type modifier.</span></span>|  
-|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="4767c-128">Модификатор типа многомерного массива.</span><span class="sxs-lookup"><span data-stu-id="4767c-128">A multi-dimensional array type modifier.</span></span>|  
-|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="4767c-129">Модификатор типа для универсальных типов.</span><span class="sxs-lookup"><span data-stu-id="4767c-129">A type modifier for generic types.</span></span>|  
-|`ELEMENT_TYPE_TYPEDBYREF`|<span data-ttu-id="4767c-130">Типизированная ссылка.</span><span class="sxs-lookup"><span data-stu-id="4767c-130">A typed reference.</span></span>|  
-|`ELEMENT_TYPE_I`|<span data-ttu-id="4767c-131">Размер собственного целого числа.</span><span class="sxs-lookup"><span data-stu-id="4767c-131">Size of a native integer.</span></span>|  
-|`ELEMENT_TYPE_U`|<span data-ttu-id="4767c-132">Размер собственного целое число без знака.</span><span class="sxs-lookup"><span data-stu-id="4767c-132">Size of an unsigned native integer.</span></span>|  
-|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="4767c-133">Указатель на функцию.</span><span class="sxs-lookup"><span data-stu-id="4767c-133">A pointer to a function.</span></span>|  
-|`ELEMENT_TYPE_OBJECT`|<span data-ttu-id="4767c-134">Тип System.Object.</span><span class="sxs-lookup"><span data-stu-id="4767c-134">A System.Object type.</span></span>|  
-|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="4767c-135">Создает одномерный, модификатор типа нулевой нижней границы массива.</span><span class="sxs-lookup"><span data-stu-id="4767c-135">A single-dimensional, zero lower-bound array type modifier.</span></span>|  
-|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="4767c-136">Модификатор типа переменной метода.</span><span class="sxs-lookup"><span data-stu-id="4767c-136">A method variable type modifier.</span></span>|  
-|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="4767c-137">Обязательный модификатор языка C</span><span class="sxs-lookup"><span data-stu-id="4767c-137">A C language required modifier.</span></span>|  
-|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="4767c-138">Необязательный модификатор языка C.</span><span class="sxs-lookup"><span data-stu-id="4767c-138">A C language optional modifier.</span></span>|  
-|`ELEMENT_TYPE_INTERNAL`|<span data-ttu-id="4767c-139">Используется внутренним образом.</span><span class="sxs-lookup"><span data-stu-id="4767c-139">Used internally.</span></span>|  
-|`ELEMENT_TYPE_MAX`|<span data-ttu-id="4767c-140">Недопустимый тип.</span><span class="sxs-lookup"><span data-stu-id="4767c-140">An invalid type.</span></span>|  
-|`ELEMENT_TYPE_MODIFIER`|<span data-ttu-id="4767c-141">Используется внутренним образом.</span><span class="sxs-lookup"><span data-stu-id="4767c-141">Used internally.</span></span>|  
-|`ELEMENT_TYPE_SENTINEL`|<span data-ttu-id="4767c-142">Модификатор типа, который является sentinel список переменное количество параметров.</span><span class="sxs-lookup"><span data-stu-id="4767c-142">A type modifier that is a sentinel for a list of a variable number of parameters.</span></span>|  
-|`ELEMENT_TYPE_PINNED`|<span data-ttu-id="4767c-143">Используется внутренним образом.</span><span class="sxs-lookup"><span data-stu-id="4767c-143">Used internally.</span></span>|  
+|`ELEMENT_TYPE_END`|<span data-ttu-id="e6859-108">Используется внутренним образом.</span><span class="sxs-lookup"><span data-stu-id="e6859-108">Used internally.</span></span>|  
+|`ELEMENT_TYPE_VOID`|<span data-ttu-id="e6859-109">Значение типа void.</span><span class="sxs-lookup"><span data-stu-id="e6859-109">A void type.</span></span>|  
+|`ELEMENT_TYPE_BOOLEAN`|<span data-ttu-id="e6859-110">Логический тип.</span><span class="sxs-lookup"><span data-stu-id="e6859-110">A Boolean type</span></span>|  
+|`ELEMENT_TYPE_CHAR`|<span data-ttu-id="e6859-111">Тип символа.</span><span class="sxs-lookup"><span data-stu-id="e6859-111">A character type.</span></span>|  
+|`ELEMENT_TYPE_I1`|<span data-ttu-id="e6859-112">1-байтовое целое число со знаком.</span><span class="sxs-lookup"><span data-stu-id="e6859-112">A signed 1-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U1`|<span data-ttu-id="e6859-113">1-байтовое целое число без знака.</span><span class="sxs-lookup"><span data-stu-id="e6859-113">An unsigned 1-byte integer.</span></span>|  
+|`ELEMENT_TYPE_I2`|<span data-ttu-id="e6859-114">Целое число со знаком длиной 2 байта.</span><span class="sxs-lookup"><span data-stu-id="e6859-114">A signed 2-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U2`|<span data-ttu-id="e6859-115">2-байтовое целое число без знака.</span><span class="sxs-lookup"><span data-stu-id="e6859-115">An unsigned 2-byte integer.</span></span>|  
+|`ELEMENT_TYPE_I4`|<span data-ttu-id="e6859-116">4-байтовое целое число со знаком.</span><span class="sxs-lookup"><span data-stu-id="e6859-116">A signed 4-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U4`|<span data-ttu-id="e6859-117">4-байтовое целое число без знака.</span><span class="sxs-lookup"><span data-stu-id="e6859-117">An unsigned 4-byte integer.</span></span>|  
+|`ELEMENT_TYPE_I8`|<span data-ttu-id="e6859-118">8-байтное целое число со знаком.</span><span class="sxs-lookup"><span data-stu-id="e6859-118">A signed 8-byte integer.</span></span>|  
+|`ELEMENT_TYPE_U8`|<span data-ttu-id="e6859-119">8-байтовое целое число без знака.</span><span class="sxs-lookup"><span data-stu-id="e6859-119">An unsigned 8-byte integer.</span></span>|  
+|`ELEMENT_TYPE_R4`|<span data-ttu-id="e6859-120">4-байтовое с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="e6859-120">A 4-byte floating point.</span></span>|  
+|`ELEMENT_TYPE_R8`|<span data-ttu-id="e6859-121">8-байтовое с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="e6859-121">An 8-byte floating point.</span></span>|  
+|`ELEMENT_TYPE_STRING`|<span data-ttu-id="e6859-122">Тип System.String.</span><span class="sxs-lookup"><span data-stu-id="e6859-122">A System.String type.</span></span>|  
+|`ELEMENT_TYPE_PTR`|<span data-ttu-id="e6859-123">Модификатор типа указателя.</span><span class="sxs-lookup"><span data-stu-id="e6859-123">A pointer type modifier.</span></span>|  
+|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="e6859-124">Модификатор ссылочного типа.</span><span class="sxs-lookup"><span data-stu-id="e6859-124">A reference type modifier.</span></span>|  
+|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="e6859-125">Модификатор типа значения.</span><span class="sxs-lookup"><span data-stu-id="e6859-125">A value type modifier.</span></span>|  
+|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="e6859-126">Модификатор типа класса.</span><span class="sxs-lookup"><span data-stu-id="e6859-126">A class type modifier.</span></span>|  
+|`ELEMENT_TYPE_VAR`|<span data-ttu-id="e6859-127">Модификатор типа переменной.</span><span class="sxs-lookup"><span data-stu-id="e6859-127">A class variable type modifier.</span></span>|  
+|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="e6859-128">Модификатор типа многомерного массива.</span><span class="sxs-lookup"><span data-stu-id="e6859-128">A multi-dimensional array type modifier.</span></span>|  
+|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="e6859-129">Модификатор типа для универсальных типов.</span><span class="sxs-lookup"><span data-stu-id="e6859-129">A type modifier for generic types.</span></span>|  
+|`ELEMENT_TYPE_TYPEDBYREF`|<span data-ttu-id="e6859-130">Типизированная ссылка.</span><span class="sxs-lookup"><span data-stu-id="e6859-130">A typed reference.</span></span>|  
+|`ELEMENT_TYPE_I`|<span data-ttu-id="e6859-131">Размер собственного целого числа.</span><span class="sxs-lookup"><span data-stu-id="e6859-131">Size of a native integer.</span></span>|  
+|`ELEMENT_TYPE_U`|<span data-ttu-id="e6859-132">Размер собственного целое число без знака.</span><span class="sxs-lookup"><span data-stu-id="e6859-132">Size of an unsigned native integer.</span></span>|  
+|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="e6859-133">Указатель на функцию.</span><span class="sxs-lookup"><span data-stu-id="e6859-133">A pointer to a function.</span></span>|  
+|`ELEMENT_TYPE_OBJECT`|<span data-ttu-id="e6859-134">Тип System.Object.</span><span class="sxs-lookup"><span data-stu-id="e6859-134">A System.Object type.</span></span>|  
+|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="e6859-135">Создает одномерный, модификатор типа нулевой нижней границы массива.</span><span class="sxs-lookup"><span data-stu-id="e6859-135">A single-dimensional, zero lower-bound array type modifier.</span></span>|  
+|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="e6859-136">Модификатор типа переменной метода.</span><span class="sxs-lookup"><span data-stu-id="e6859-136">A method variable type modifier.</span></span>|  
+|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="e6859-137">Обязательный модификатор языка C</span><span class="sxs-lookup"><span data-stu-id="e6859-137">A C language required modifier.</span></span>|  
+|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="e6859-138">Необязательный модификатор языка C.</span><span class="sxs-lookup"><span data-stu-id="e6859-138">A C language optional modifier.</span></span>|  
+|`ELEMENT_TYPE_INTERNAL`|<span data-ttu-id="e6859-139">Используется внутренним образом.</span><span class="sxs-lookup"><span data-stu-id="e6859-139">Used internally.</span></span>|  
+|`ELEMENT_TYPE_MAX`|<span data-ttu-id="e6859-140">Недопустимый тип.</span><span class="sxs-lookup"><span data-stu-id="e6859-140">An invalid type.</span></span>|  
+|`ELEMENT_TYPE_MODIFIER`|<span data-ttu-id="e6859-141">Используется внутренним образом.</span><span class="sxs-lookup"><span data-stu-id="e6859-141">Used internally.</span></span>|  
+|`ELEMENT_TYPE_SENTINEL`|<span data-ttu-id="e6859-142">Модификатор типа, который является sentinel список переменное количество параметров.</span><span class="sxs-lookup"><span data-stu-id="e6859-142">A type modifier that is a sentinel for a list of a variable number of parameters.</span></span>|  
+|`ELEMENT_TYPE_PINNED`|<span data-ttu-id="e6859-143">Используется внутренним образом.</span><span class="sxs-lookup"><span data-stu-id="e6859-143">Used internally.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4767c-144">Примечания</span><span class="sxs-lookup"><span data-stu-id="4767c-144">Remarks</span></span>  
- <span data-ttu-id="4767c-145">Модификаторы типа формируют основу для представления более сложных типов.</span><span class="sxs-lookup"><span data-stu-id="4767c-145">The type modifiers form the basis for representing more complex types.</span></span> <span data-ttu-id="4767c-146">Объект `CorElementType` значение модификатора типа применяется к значению, следующим непосредственно за ним в сигнатуре типа.</span><span class="sxs-lookup"><span data-stu-id="4767c-146">A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature.</span></span> <span data-ttu-id="4767c-147">Значение, которое следует за `CorElementType` значение модификатора типа может быть `CorElementType` значение простого типа, маркер метаданных или другое значение, как указано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="4767c-147">The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e6859-144">Примечания</span><span class="sxs-lookup"><span data-stu-id="e6859-144">Remarks</span></span>  
+ <span data-ttu-id="e6859-145">Модификаторы типа формируют основу для представления более сложных типов.</span><span class="sxs-lookup"><span data-stu-id="e6859-145">The type modifiers form the basis for representing more complex types.</span></span> <span data-ttu-id="e6859-146">Объект `CorElementType` значение модификатора типа применяется к значению, следующим непосредственно за ним в сигнатуре типа.</span><span class="sxs-lookup"><span data-stu-id="e6859-146">A `CorElementType` type modifier value is applied to the value that immediately follows it in the type signature.</span></span> <span data-ttu-id="e6859-147">Значение, которое следует за `CorElementType` значение модификатора типа может быть `CorElementType` значение простого типа, маркер метаданных или другое значение, как указано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="e6859-147">The value that follows the `CorElementType` type modifier value can be a `CorElementType` simple type value, a metadata token, or other value, as specified in the following table.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="4767c-148">Все числа (*номер*, *счетчик аргументов*, *токен метаданных*, *ранг*, *число*и *привязан*) хранятся в виде сжатых целых чисел.</span><span class="sxs-lookup"><span data-stu-id="4767c-148">All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers.</span></span> <span data-ttu-id="4767c-149">См. в разделе [стандарт ECMA-335 — Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) ECMA на веб-сайте сведения.</span><span class="sxs-lookup"><span data-stu-id="4767c-149">See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.</span></span>  
+>  <span data-ttu-id="e6859-148">Все числа (*номер*, *счетчик аргументов*, *токен метаданных*, *ранг*, *число*и *привязан*) хранятся в виде сжатых целых чисел.</span><span class="sxs-lookup"><span data-stu-id="e6859-148">All numbers (*number*, *argument Count*, *metadata token*, *rank*, *count*, and *bound*) are stored as compressed integers.</span></span> <span data-ttu-id="e6859-149">См. в разделе [стандарт ECMA-335 — Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) ECMA на веб-сайте сведения.</span><span class="sxs-lookup"><span data-stu-id="e6859-149">See [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=116487) on the ECMA Web site for details.</span></span>  
   
-|<span data-ttu-id="4767c-150">Модификатор типа</span><span class="sxs-lookup"><span data-stu-id="4767c-150">Type modifier</span></span>|<span data-ttu-id="4767c-151">Формат</span><span class="sxs-lookup"><span data-stu-id="4767c-151">Format</span></span>|  
+|<span data-ttu-id="e6859-150">Модификатор типа</span><span class="sxs-lookup"><span data-stu-id="e6859-150">Type modifier</span></span>|<span data-ttu-id="e6859-151">Формат</span><span class="sxs-lookup"><span data-stu-id="e6859-151">Format</span></span>|  
 |-------------------|------------|  
-|`ELEMENT_TYPE_PTR`|<span data-ttu-id="4767c-152">ELEMENT_TYPE_PTR < `CorElementType` значение ></span><span class="sxs-lookup"><span data-stu-id="4767c-152">ELEMENT_TYPE_PTR <a `CorElementType` value></span></span>|  
-|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="4767c-153">ELEMENT_TYPE_BYREF < `CorElementType` значение ></span><span class="sxs-lookup"><span data-stu-id="4767c-153">ELEMENT_TYPE_BYREF <a `CorElementType` value></span></span>|  
-|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="4767c-154">ELEMENT_TYPE_VALUETYPE < `mdTypeDef` токен метаданных ></span><span class="sxs-lookup"><span data-stu-id="4767c-154">ELEMENT_TYPE_VALUETYPE <an `mdTypeDef` metadata token></span></span>|  
-|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="4767c-155">ELEMENT_TYPE_CLASS < `mdTypeDef` токен метаданных ></span><span class="sxs-lookup"><span data-stu-id="4767c-155">ELEMENT_TYPE_CLASS <an `mdTypeDef` metadata token></span></span>|  
-|`ELEMENT_TYPE_VAR`|<span data-ttu-id="4767c-156">ELEMENT_TYPE_VAR \<номер ></span><span class="sxs-lookup"><span data-stu-id="4767c-156">ELEMENT_TYPE_VAR \<number></span></span>|  
-|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="4767c-157">ELEMENT_TYPE_ARRAY < `CorElementType` значение > \<ранг > \<count1 > \<bound1 >... \<countN > \<boundN ></span><span class="sxs-lookup"><span data-stu-id="4767c-157">ELEMENT_TYPE_ARRAY <a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN></span></span>|  
-|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="4767c-158">ELEMENT_TYPE_GENERICINST < `mdTypeDef` токен метаданных > \<аргумент Count > \<arg1 >... \<argN ></span><span class="sxs-lookup"><span data-stu-id="4767c-158">ELEMENT_TYPE_GENERICINST <an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN></span></span>|  
-|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="4767c-159">ELEMENT_TYPE_FNPTR \<Полная сигнатура для функции, включая соглашение о вызовах ></span><span class="sxs-lookup"><span data-stu-id="4767c-159">ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention></span></span>|  
-|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="4767c-160">ELEMENT_TYPE_SZARRAY < `CorElementType` значение ></span><span class="sxs-lookup"><span data-stu-id="4767c-160">ELEMENT_TYPE_SZARRAY <a `CorElementType` value></span></span>|  
-|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="4767c-161">ELEMENT_TYPE_MVAR \<номер ></span><span class="sxs-lookup"><span data-stu-id="4767c-161">ELEMENT_TYPE_MVAR \<number></span></span>|  
-|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="4767c-162">ELEMENT_TYPE_ < `mdTypeRef` или `mdTypeDef` маркер метаданных ></span><span class="sxs-lookup"><span data-stu-id="4767c-162">ELEMENT_TYPE_<a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
-|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="4767c-163">E_T_CMOD_OPT < `mdTypeRef` или `mdTypeDef` маркер метаданных ></span><span class="sxs-lookup"><span data-stu-id="4767c-163">E_T_CMOD_OPT <a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_PTR`|<span data-ttu-id="e6859-152">ELEMENT_TYPE_PTR < `CorElementType` значение ></span><span class="sxs-lookup"><span data-stu-id="e6859-152">ELEMENT_TYPE_PTR <a `CorElementType` value></span></span>|  
+|`ELEMENT_TYPE_BYREF`|<span data-ttu-id="e6859-153">ELEMENT_TYPE_BYREF < `CorElementType` значение ></span><span class="sxs-lookup"><span data-stu-id="e6859-153">ELEMENT_TYPE_BYREF <a `CorElementType` value></span></span>|  
+|`ELEMENT_TYPE_VALUETYPE`|<span data-ttu-id="e6859-154">ELEMENT_TYPE_VALUETYPE < `mdTypeDef` токен метаданных ></span><span class="sxs-lookup"><span data-stu-id="e6859-154">ELEMENT_TYPE_VALUETYPE <an `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_CLASS`|<span data-ttu-id="e6859-155">ELEMENT_TYPE_CLASS < `mdTypeDef` токен метаданных ></span><span class="sxs-lookup"><span data-stu-id="e6859-155">ELEMENT_TYPE_CLASS <an `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_VAR`|<span data-ttu-id="e6859-156">ELEMENT_TYPE_VAR \<номер ></span><span class="sxs-lookup"><span data-stu-id="e6859-156">ELEMENT_TYPE_VAR \<number></span></span>|  
+|`ELEMENT_TYPE_ARRAY`|<span data-ttu-id="e6859-157">ELEMENT_TYPE_ARRAY < `CorElementType` значение > \<ранг > \<count1 > \<bound1 >... \<countN > \<boundN ></span><span class="sxs-lookup"><span data-stu-id="e6859-157">ELEMENT_TYPE_ARRAY <a `CorElementType` value> \<rank> \<count1> \<bound1> ... \<countN> \<boundN></span></span>|  
+|`ELEMENT_TYPE_GENERICINST`|<span data-ttu-id="e6859-158">ELEMENT_TYPE_GENERICINST < `mdTypeDef` токен метаданных > \<аргумент Count > \<arg1 >... \<argN ></span><span class="sxs-lookup"><span data-stu-id="e6859-158">ELEMENT_TYPE_GENERICINST <an `mdTypeDef` metadata token> \<argument Count> \<arg1> ... \<argN></span></span>|  
+|`ELEMENT_TYPE_FNPTR`|<span data-ttu-id="e6859-159">ELEMENT_TYPE_FNPTR \<Полная сигнатура для функции, включая соглашение о вызовах ></span><span class="sxs-lookup"><span data-stu-id="e6859-159">ELEMENT_TYPE_FNPTR \<complete signature for the function, including calling convention></span></span>|  
+|`ELEMENT_TYPE_SZARRAY`|<span data-ttu-id="e6859-160">ELEMENT_TYPE_SZARRAY < `CorElementType` значение ></span><span class="sxs-lookup"><span data-stu-id="e6859-160">ELEMENT_TYPE_SZARRAY <a `CorElementType` value></span></span>|  
+|`ELEMENT_TYPE_MVAR`|<span data-ttu-id="e6859-161">ELEMENT_TYPE_MVAR \<номер ></span><span class="sxs-lookup"><span data-stu-id="e6859-161">ELEMENT_TYPE_MVAR \<number></span></span>|  
+|`ELEMENT_TYPE_CMOD_REQD`|<span data-ttu-id="e6859-162">ELEMENT_TYPE_ < `mdTypeRef` или `mdTypeDef` маркер метаданных ></span><span class="sxs-lookup"><span data-stu-id="e6859-162">ELEMENT_TYPE_<a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
+|`ELEMENT_TYPE_CMOD_OPT`|<span data-ttu-id="e6859-163">E_T_CMOD_OPT < `mdTypeRef` или `mdTypeDef` маркер метаданных ></span><span class="sxs-lookup"><span data-stu-id="e6859-163">E_T_CMOD_OPT <a `mdTypeRef` or `mdTypeDef` metadata token></span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4767c-164">Требования</span><span class="sxs-lookup"><span data-stu-id="4767c-164">Requirements</span></span>  
- <span data-ttu-id="4767c-165">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4767c-165">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e6859-164">Требования</span><span class="sxs-lookup"><span data-stu-id="e6859-164">Requirements</span></span>  
+ <span data-ttu-id="e6859-165">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e6859-165">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4767c-166">**Заголовок:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="4767c-166">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="e6859-166">**Заголовок:** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="e6859-166">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="4767c-167">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4767c-167">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="e6859-167">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e6859-167">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4767c-168">См. также</span><span class="sxs-lookup"><span data-stu-id="4767c-168">See Also</span></span>  
- [<span data-ttu-id="4767c-169">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="4767c-169">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="e6859-168">См. также</span><span class="sxs-lookup"><span data-stu-id="e6859-168">See Also</span></span>  
+ [<span data-ttu-id="e6859-169">Перечисления метаданных</span><span class="sxs-lookup"><span data-stu-id="e6859-169">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
