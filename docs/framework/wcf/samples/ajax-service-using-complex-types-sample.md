@@ -3,11 +3,11 @@ title: Образец службы AJAX, использующей сложные
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
 ms.openlocfilehash: 4574e5d33ebed7184e229c71e03496db34a95575
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43415657"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528289"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>Образец службы AJAX, использующей сложные типы
 В этом примере показано, как использовать Windows Communication Foundation (WCF) для создания служб ASP.NET асинхронных скриптов JavaScript и XML (AJAX), создающей экземпляры сложных типов и отправляющей их между службой и клиентом как нотации объектов JavaScript (JSON). К службе AJAX можно обращаться с помощью кода JavaScript из веб-браузера. Этот пример основан на [базовой службы AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) образца.  

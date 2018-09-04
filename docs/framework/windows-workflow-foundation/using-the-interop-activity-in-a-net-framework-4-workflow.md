@@ -3,11 +3,11 @@ title: Использование действия «Interop» в рабочем
 ms.date: 03/30/2017
 ms.assetid: 9bb747f0-eb33-4f70-84cd-317382372dcd
 ms.openlocfilehash: 02eeaf5bb7ff484ba5982197fc395e247cd5a87f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466729"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528114"
 ---
 # <a name="using-the-interop-activity-in-a-net-framework-4-workflow"></a>Использование действия «Interop» в рабочем процессе платформы .NET Framework 4
 Действия, созданные в [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] или в [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)], могут использоваться в рабочем процессе [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] посредством использования действия <xref:System.Activities.Statements.Interop>. В этом разделе приведены общие сведения об использовании действия <xref:System.Activities.Statements.Interop>.  

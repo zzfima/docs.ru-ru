@@ -3,11 +3,11 @@ title: Ожидаемые исключения
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
 ms.openlocfilehash: ea2043826291e77a59d61077d92b59baf129af90
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425877"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528276"
 ---
 # <a name="expected-exceptions"></a>Ожидаемые исключения
 В этом образце показано, как перехватывать ожидаемые исключения при использовании типизированного клиента. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора. В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.  
