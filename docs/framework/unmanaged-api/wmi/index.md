@@ -1,77 +1,77 @@
 ---
-title: WMI и счетчиков производительности (Справочник по неуправляемым API)
-description: .NET Framework представлены неуправляемый интерфейс API для сведений о счетчиках производительности и WMI.
+title: WMI и счетчики производительности (справочник по неуправляемым API)
+description: Сводные данные по неуправляемому API-интерфейсу .NET Framework для WMI и счетчиков производительности.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
-ms.openlocfilehash: 2007c8aa74e1ccf3c4753343ac633b67a36daeb8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6e105bc28b6011c3177216aba996eb85c0766ac8
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33462030"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43407881"
 ---
-# <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Инструментарий управления Windows (WMI) и счетчиков производительности (Справочник по неуправляемым API)
+# <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Инструментарий управления Windows (WMI) и счетчики производительности (справочник по неуправляемым API)
 
-Неуправляемый интерфейс API .NET Framework WMI и счетчики производительности состоит из набора функций, которые создают оболочки для вызовов [собственного API инструментария управления Windows](https://msdn.microsoft.com/library/aa389276(v=vs.85).aspx). Он позволяет разрабатывать средства и библиотеки, управление и наблюдение за удаленными компьютерами.
+Неуправляемый API-интерфейс .NET Framework для WMI и счетчиков производительности состоит из набора функций, которые создают оболочки для вызовов [собственного API инструментария управления Windows](/windows/desktop/WmiSdk/com-api-for-wmi). Он позволяет разрабатывать средства и библиотеки для мониторинга и контроля удаленных компьютерных систем.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-API-Интерфейс включает следующие функции:
+API включает в себя следующие функции:
 
-| Функция | Описание |
+| Функция | Описание: |
 |---------|---------|
-| [Функция BeginEnumeration](beginenumeration.md) | Устанавливает перечислитель в начало перечисления свойств объекта WMI. |
+| [Функция BeginEnumeration](beginenumeration.md) | Сбрасывает перечислитель в начало перечисления свойств объекта WMI. |
 | [Функция BeginMethodEnumeration](beginmethodenumeration.md) |  Начинает перечисление методов, доступных для объекта. |
-| [Функция BlessIWbemServices](blessiwbemservices.md) | Указывает, разрешить ли учетные данные пользователя доступ к указанному классу IWbemServices. |
-| [Функция BlessIWbemServicesObject](blessiwbemservicesobject.md) | Указывает, является ли учетные данные пользователя предоставление доступа к объекту службы IWbem. |
-| [Функция Clone](clone.md) | Возвращает новый объект, который представляет собой полный клон текущего объекта. |
-| [Функция CloneEnumWbemClassObject](cloneenumwbemclassobject.md) | Создается копия логического перечислителя, сохраняя его текущую позицию в перечислении. |
-| [Функция CompareTo](compareto.md) | Сравнивает объект с другим объектом управления Windows. |
-| [Функция ConnectServerWmi](connectserverwmi.md) | Создает подключается через DCOM с пространством имен WMI на указанном компьютере. |
-| [Функция CreateClassEnumWmi](createclassenumwmi.md) | Возвращает перечислитель для всех классов, которые удовлетворяют указанные критерии выбора. |
-| [Функция CreateInstanceEnumWmi](createinstanceenumwmi.md) | Возвращает перечислитель, который возвращает принимаемые экземпляры указанного класса, который отвечает указанные критерии выбора. |
-| [Функция Delete](delete.md) | Удаляет указанное свойство из определения класса и все его квалификаторов. |
+| [Функция BlessIWbemServices](blessiwbemservices.md) | Указывает, разрешают ли учетные данные пользователя доступ к указанному классу IWbemServices. |
+| [Функция BlessIWbemServicesObject](blessiwbemservicesobject.md) | Указывает, разрешают ли учетные данные пользователя доступ к указанному объекту службы IWbem. |
+| [Функция Clone](clone.md) | Возвращает новый объект, который является полным клоном текущего объекта. |
+| [Функция CloneEnumWbemClassObject](cloneenumwbemclassobject.md) | Создает логическую копию перечислителя, сохраняя текущую позицию в перечислении. |
+| [Функция CompareTo](compareto.md) | Сравнивает объект с другим объектом управления Windows. |
+| [Функция ConnectServerWmi](connectserverwmi.md) | Создает подключение через DCOM к пространству имен WMI на указанном компьютере. |
+| [Функция CreateClassEnumWmi](createclassenumwmi.md) | Возвращает перечислитель для всех классов, которые удовлетворяют указанным критериям выбора. |
+| [Функция CreateInstanceEnumWmi](createinstanceenumwmi.md) | Возвращает перечислитель, который возвращает экземпляры указанного класса, соответствующие указанным критериям выбора. |
+| [Функция Delete](delete.md) | Удаляет из определения класса указанное свойство и все его квалификаторы. |
 | [Функция DeleteMethod](deletemethod.md) | Удаляет указанный метод из определения класса CIM. |
 | [Функция EndEnumeration](endenumeration.md) | Завершает последовательность перечисления. | 
-| [Функция EndMethodEnumeration](endmethodenumeration.md) | Завершает последовательность перечисления запущен с помощью вызова [BeginMethodEnumeration функция](beginmethodenumeration.md). |
+| [Функция EndMethodEnumeration](endmethodenumeration.md) | Завершает последовательность перечисления, начатую вызовом [функции BeginMethodEnumeration](beginmethodenumeration.md). |
 | [Функция ExecNotificationQueryWmi](execnotificationquerywmi.md) | Выполняет запрос для получения событий. |
 | [Функция ExecQueryWmi](execquerywmi.md) | Выполняет запрос для получения объектов. |
-| [Функция FormatFromRawValue](formatfromrawvalue.md) | Преобразует одно значение данных оценки производительности в указанный формат или два значения данных для оценки производительности, если преобразование формата выполняется на основе времени. | 
-| [Функция Get](get.md) | Получает значение указанного свойства, если он существует. |
-| [Функция GetCurrentApartmentType](getcurrentapartmenttype.md) | Возвращает тип подразделения, в котором выполняется вызывающего объекта. |
-| [Функция GetDemultiplexedStub](getdemultiplexedstub.md) | Создает приемник объект сервера пересылки для клиента при получении асинхронные вызовы от управления Windows. |
-| [GetErrorInfo-функция](geterrorinfo.md) | Извлекает сведения об ошибках в предыдущем вызове функции. | 
-| [Функция GetMethod](getmethod.md) | Возвращает сведения об указанном методе. | 
+| [Функция FormatFromRawValue](formatfromrawvalue.md) | Преобразует одно значение необработанных данных о производительности в указанный формат или делает это для двух значений, если преобразование формата зависит от времени. | 
+| [Функция Get](get.md) | Получает значение указанного свойства, если оно существует. |
+| [Функция GetCurrentApartmentType](getcurrentapartmenttype.md) | Получает тип подразделения, в котором выполняется вызывающий объект. |
+| [Функция GetDemultiplexedStub](getdemultiplexedstub.md) | Создает приемник переадресации объекта, который помогает клиенту получать асинхронные вызовы из службы управления Windows. |
+| [Функция GetErrorInfo](geterrorinfo.md) | Получает сведения об ошибках из предыдущего вызова функции. | 
+| [Функция GetMethod](getmethod.md) | Получает сведения об указанном методе. | 
 | [Функция GetMethodOrigin](getmethodorigin.md) | Определяет класс, в котором объявлен метод. |
-| [Функция GetMethodQualifierSet](getmethodqualifierset.md) | Извлекает квалификатор для конкретного метода. |
-| [Функция GetNames](getnames.md) | Возвращает подмножество или все имена свойств объекта. |
-| [Функция GetObjectText](getobjecttext.md) | Возвращает текстовое отображение объекта с помощью синтаксиса MOF. | 
-| [Функция GetPropertyHandle](getpropertyhandle.md) | Возвращает уникальный дескриптор, который определяет свойство. |
+| [Функция GetMethodQualifierSet](getmethodqualifierset.md) | Получает набор квалификаторов для определенного метода. |
+| [Функция GetNames](getnames.md) | Получает подмножество имен или все имена свойств объекта. |
+| [Функция GetObjectText](getobjecttext.md) | Возвращает текстовое отображение объекта в синтаксисе MOF. | 
+| [Функция GetPropertyHandle](getpropertyhandle.md) | Возвращает уникальный маркер, определяющий свойство. |
 | [Функция GetPropertyOrigin](getpropertyorigin.md) | Определяет класс, в котором объявлено свойство. |
-| [Функция GetPropertyQualifierSet](getpropertyqualifierset.md) | Извлекает квалификатор для конкретного свойства.  |
-| [Функция GetQualifierSet](getqualifierset.md) | Извлекает квалификатор для экземпляра класса или определения класса. |
-| [Функция раскрывшемся списке](inheritsfrom.md) | Определяет, является ли текущего класса или экземпляра является производным от класса-родителя указанного. |
-| [Initialize-функция](initialize.md) | Выполняет инициализацию WMI. |
-| [Функция Next](next.md) | Извлекает свойство next в перечислении. | 
-| [Функция NextMethod](nextmethod.md) | Извлекает следующий метод в перечислении. |
-| [PUT-функция](put.md) | Присваивает новое значение именованного свойства. |
-| [Функция PutClassWmi](putclasswmi.md) | Создает новый класс, или обновляет существующую. |
-| [Функция PutInstanceWmi](putinstancewmi.md) | Создает или обновляет экземпляр существующего класса. Экземпляр записывается в репозиторий WMI. |
+| [Функция GetPropertyQualifierSet](getpropertyqualifierset.md) | Получает набор квалификаторов для определенного свойства.  |
+| [Функция GetQualifierSet](getqualifierset.md) | Получает набор квалификатор для экземпляра или определения класса. |
+| [Функция InheritsFrom](inheritsfrom.md) | Определяет, является ли текущий класс или экземпляр производным от указанного родительского класса. |
+| [Функция Initialize](initialize.md) | Инициализирует WMI. |
+| [Функция Next](next.md) | Получает следующее свойство в перечислении. | 
+| [Функция NextMethod](nextmethod.md) | Получает следующий метод в перечислении. |
+| [Функция Put](put.md) | Задает новое значение для именованного свойства. |
+| [Функция PutClassWmi](putclasswmi.md) | Создает новый класс или обновляет существующий. |
+| [Функция PutInstanceWmi](putinstancewmi.md) | Создает или обновляет экземпляр существующего класса. Экземпляр записывается в репозиторий WMI. |
 | [Функция PutMethod](putmethod.md) | Создает метод. |
-| [Функция QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) | Возвращает перечислитель квалификаторы объект в начало перечисления. |
+| [Функция QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) | Сбрасывает перечислитель квалификаторов объекта в начало перечисления. |
 | [Функция QualifierSet_Delete](qualifierset-delete.md) | Удаляет указанный квалификатор по имени.  |
-| [Функция QualifierSet_EndEnumeration](qualifierset-endenumeration.md) | Завершается перечисление начался вызовом `QualifierSet_BeginEnumeration` функции. |
-| [Функция QualifierSet_Get](qualifierset-get.md) | Возвращает указанный именованный квалификатор.  |
-| [Функция QualifierSet_GetNames](qualifierset-getnames.md) | Получает имена всех квалификаторов, или указанный квалификаторов, которые доступны из текущего объекта или свойства. |
-| [Функция QualifierSet_Next](qualifierset-next.md) | Извлекает следующий квалификатор в перечислении, работы с помощью вызова [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md) функции. |
+| [Функция QualifierSet_EndEnumeration](qualifierset-endenumeration.md) | Завершает перечисление, начатое вызовом функции `QualifierSet_BeginEnumeration`. |
+| [Функция QualifierSet_Get](qualifierset-get.md) | Получает указанный именованный квалификатор.  |
+| [Функция QualifierSet_GetNames](qualifierset-getnames.md) | Получает имена всех или указанных квалификаторов, доступных из текущего объекта или свойства. |
+| [Функция QualifierSet_Next](qualifierset-next.md) | Получает следующий квалификатор в перечислении, начатом вызовом функции [QualifierSet_BeginEnumeration](qualifierset-beginenumeration.md). |
 | [Функция QualifierSet_Put](qualifierset-put.md) | Записывает именованный квалификатор и значение. |
-| [Функция ResetSecurity](resetsecurity.md) | Присваивает указанный олицетворения текущего потока. |
-| [Функция SetSecurity](setsecurity.md) | Извлекает маркер олицетворения, связанный с текущим потоком. |
-| [Функция SpawnDerivedClass](spawnderivedclass.md) | Создает объект вновь производного класса из указанного объекта. | 
-| [Функция SpawnInstance](spawninstance.md) | Создает новый экземпляр класса. |   
-| [Функция VerifyClient](verifyclientkey.md) | Гарантирует, что ключ клиента имеет неправильные параметры безопасности. |
-| [Функция WritePropertyValue](writepropertyvalue.md) | Записывает указанное число байтов в свойство, идентифицируемое дескриптор свойства. |
+| [Функция ResetSecurity](resetsecurity.md) | Назначает предоставленный маркер олицетворения текущему потоку. |
+| [Функция SetSecurity](setsecurity.md) | Получает маркер олицетворения, связанный с текущим потоком. |
+| [Функция SpawnDerivedClass](spawnderivedclass.md) | Создает объект производного класса из указанного объекта. | 
+| [Функция SpawnInstance](spawninstance.md) | Создает экземпляр класса. |   
+| [Функция VerifyClient](verifyclientkey.md) | Проверяет, что ключ клиента имеет верные параметры безопасности. |
+| [Функция WritePropertyValue](writepropertyvalue.md) | Записывает указанное число байт в свойство, заданное маркером свойства. |
 
  ## <a name="see-also"></a>См. также
-[Справочник по неуправляемым API](../index.md) 
+[Справочник по неуправляемым API](../index.md) 

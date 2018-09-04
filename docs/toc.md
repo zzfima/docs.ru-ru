@@ -63,6 +63,7 @@
 
 <!-- .NET Core Content -->
 # [Руководство по .NET Core](core/index.md)
+## [Сведения о .NET Core](core/about.md)
 ## [Начало работы](core/get-started.md)
 ### [Начало работы с C# и Visual Studio Code](core/tutorials/with-visual-studio-code.md)
 ### [Создание приложения Hello World на C# с помощью .NET Core в Visual Studio 2017](core/tutorials/with-visual-studio.md)
@@ -108,6 +109,7 @@
 ### [Создание образов Docker для приложений .NET Core](core/docker/building-net-docker-images.md)
 ### [Инструменты Visual Studio для Docker](/aspnet/core/publishing/visual-studio-tools-for-docker)
 ## [Модульное тестирование](core/testing/index.md)
+### [Рекомендации по модульному тестированию](core/testing/unit-testing-best-practices.md)
 ### [Модульное тестирование в C# с использованием xUnit](core/testing/unit-testing-with-dotnet-test.md)
 ### [Модульное тестирование в C# с использованием NUnit](core/testing/unit-testing-with-nunit.md)
 ### [Модульное тестирование в C# с использованием MSTest](core/testing/unit-testing-with-mstest.md)
@@ -118,10 +120,13 @@
 ### [Модульное тестирование в Visual Basic с использованием NUnit](core/testing/unit-testing-visual-basic-with-nunit.md)
 ### [Модульное тестирование в Visual Basic с использованием MSTest](core/testing/unit-testing-visual-basic-with-mstest.md)
 ### [Выполнение выборочных модульных тестов](core/testing/selective-unit-tests.md)
-### [Модульное тестирование опубликованных выходных данных](core/testing/unit-testing-published-output.md)
+### [Модульное тестирование публикуемых выходных данных](core/testing/unit-testing-published-output.md)
 ### [Live Unit Testing в проектах .NET Core с использованием Visual Studio](/visualstudio/test/live-unit-testing-start)
 ## [Управление версиями](core/versions/index.md)
+### [Журнал версий .NET Core](core/versions/version-history.md)
 ### [Выбор версии .NET Core](core/versions/selection.md)
+### [Управление установкой .NET Core](core/versions/install-management.md)
+### [Удаление устаревших сред выполнения и SDK](core/versions/remove-runtime-sdk-versions.md)
 ## [Каталог идентификаторов сред выполнения](core/rid-catalog.md)
 ## [Обзор пакета SDK для .NET Core](core/sdk.md)
 ## [Средства интерфейса командной строки .NET Core](core/tools/index.md)
@@ -293,7 +298,6 @@
 <!-- F# Content -->
 # [Руководство по языку F#](fsharp/index.md)
 
-## [Обзор языка F#](fsharp/tour.md)
 ## [Начало работы](fsharp/get-started/index.md)
 ### [Установка F#](fsharp/get-started/install-fsharp.md)
 ### [Начало работы с Visual Studio](fsharp/get-started/get-started-visual-studio.md)
@@ -301,38 +305,19 @@
 ### [Начало работы с Visual Studio Code и Ionide](fsharp/get-started/get-started-vscode.md)
 ### [Начало работы с интерфейсом командной строки .NET Core](fsharp/get-started/get-started-command-line.md)
 
-## [Руководство по стилю для F#](fsharp/style-guide/index.md)
-### [Рекомендации по форматированию кода F#](fsharp/style-guide/formatting.md)
-### [Соглашения о написании кода на F#](fsharp/style-guide/conventions.md)
-### [Рекомендации по проектированию компонентов F#](fsharp/style-guide/component-design-guidelines.md)
+## [Что такое F#](fsharp/what-is-fsharp.md)
+## [Обзор языка F#](fsharp/tour.md)
 
 ## Учебники
-### [Окно "Интерактивный F#"](fsharp/tutorials/fsharp-interactive/index.md)
+### Введение в функциональное программирование
+#### [Функции как значения первого класса](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
+### Асинхронное и параллельное программирование
+#### [Асинхронное программирование](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
 ### [Поставщики типов](fsharp/tutorials/type-providers/index.md)
 #### [Создание поставщика типов](fsharp/tutorials/type-providers/creating-a-type-provider.md)
 #### [Безопасность поставщиков типов](fsharp/tutorials/type-providers/type-provider-security.md)
 #### [Устранение неполадок поставщиков типов](fsharp/tutorials/type-providers/troubleshooting-type-providers.md)
-
-<!--## [Introduction to Functional Programming](fsharp/introduction-to-functional-programming/index.md)-->
-## Введение в функциональное программирование
-### [Функции как значения первого класса](fsharp/introduction-to-functional-programming/functions-as-first-class-values.md)
-
-<!--### [Asynchronous and Concurrent Programming](fsharp/tutorials/asynchronous-and-concurrent-programming/index.md)-->
-### Асинхронное и параллельное программирование
-#### [Асинхронное программирование](fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)
-
-<!--## [Using F# in Visual Studio](fsharp/using-fsharp-in-visual-studio/index.md)-->
-### [Компоненты среды разработки Visual F#](fsharp/using-fsharp-in-visual-studio/visual-fsharp-development-environment-features.md)
-### [Настройка проектов](fsharp/using-fsharp-in-visual-studio/configuring-projects.md)
-### [Нацеливание на предыдущие версии .NET](fsharp/using-fsharp-in-visual-studio/targeting-older-versions-of-net.md)
-
-## [Использование языка F# в Azure](fsharp/using-fsharp-on-azure/index.md)
-### [Начало работы с хранилищем BLOB-объектов Azure с помощью языка F#](fsharp/using-fsharp-on-azure/blob-storage.md)
-### [Начало работы с хранилищем файлов Azure с помощью языка F#](fsharp/using-fsharp-on-azure/file-storage.md)
-### [Начало работы с хранилищем очередей Azure с помощью языка F#](fsharp/using-fsharp-on-azure/queue-storage.md)
-### [Начало работы с хранилищем таблиц Azure с помощью языка F#](fsharp/using-fsharp-on-azure/table-storage.md)
-<!--### [Using F# on Azure Service Fabric](fsharp/using-fsharp-on-azure/using-fsharp-on-azure-service-fabric.md)-->
-### [Управление пакетами для зависимостей F# в Azure](fsharp/using-fsharp-on-azure/package-management.md)
+### [Окно "Интерактивный F#"](fsharp/tutorials/fsharp-interactive/index.md)
 
 ## [Справочник по языку F#](fsharp/language-reference/index.md)
 ### [Справочник ключевых слов](fsharp/language-reference/keyword-reference.md)
@@ -361,6 +346,7 @@
 ### [Типы коллекций F#](fsharp/language-reference/fsharp-collection-types.md)
 ### [Списки](fsharp/language-reference/lists.md)
 ### [Параметры](fsharp/language-reference/options.md)
+### [Параметры значений](fsharp/language-reference/value-options.md)
 ### [Результаты](fsharp/language-reference/results.md)
 ### [Последовательности](fsharp/language-reference/sequences.md)
 ### [Массивы](fsharp/language-reference/arrays.md)
@@ -431,26 +417,37 @@
 ### [Идентификаторы Source Line, File и Path](fsharp/language-reference/source-line-file-path-identifiers.md)
 ### [Сведения о вызывающем объекте](fsharp/language-reference/caller-information.md)
 ### [Подробный синтаксис](fsharp/language-reference/verbose-syntax.md)
-### [Рекомендации по форматированию кода](fsharp/language-reference/code-formatting-guidelines.md)
+
+## [Руководство по стилю для F#](fsharp/style-guide/index.md)
+### [Рекомендации по форматированию кода F#](fsharp/style-guide/formatting.md)
+### [Соглашения о написании кода на F#](fsharp/style-guide/conventions.md)
+### [Рекомендации по проектированию компонентов F#](fsharp/style-guide/component-design-guidelines.md)
+
+## [Использование языка F# в Azure](fsharp/using-fsharp-on-azure/index.md)
+### [Начало работы с хранилищем BLOB-объектов Azure с помощью языка F#](fsharp/using-fsharp-on-azure/blob-storage.md)
+### [Начало работы с хранилищем файлов Azure с помощью языка F#](fsharp/using-fsharp-on-azure/file-storage.md)
+### [Начало работы с хранилищем очередей Azure с помощью языка F#](fsharp/using-fsharp-on-azure/queue-storage.md)
+### [Начало работы с хранилищем таблиц Azure с помощью языка F#](fsharp/using-fsharp-on-azure/table-storage.md)
+### [Управление пакетами для зависимостей F# в Azure](fsharp/using-fsharp-on-azure/package-management.md)
 <!-- End F# Content -->
 
 <!-- VB Content -->
 # [Руководство по Visual Basic](visual-basic/index.md)
+## [Новые возможности Visual Basic](visual-basic/getting-started/whats-new.md)
 ## [Начало работы](visual-basic/getting-started/index.md)
-### [Новые возможности Visual Basic](visual-basic/getting-started/whats-new.md)
 ### [Критические изменения Visual Basic в Visual Studio 2015](visual-basic/getting-started/breaking-changes-in-visual-studio.md)
 ### [Дополнительные ресурсы для программистов, использующих Visual Basic](visual-basic/getting-started/additional-resources.md)
 
 ## [Разработка приложений](visual-basic/developing-apps/index.md)
 
 ### [Программирование в Visual Basic](visual-basic/developing-apps/programming/index.md)
-#### [Доступ к ресурсам компьютера](visual-basic/developing-apps/programming/computer-resources/computer-resources.md)
-#### [Запись сведений в журнал из приложения](visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)
+#### [Доступ к ресурсам компьютера](visual-basic/developing-apps/programming/computer-resources/index.md)
+#### [Запись сведений в журнал из приложения](visual-basic/developing-apps/programming/log-info/index.md)
 #### [Доступ к данным пользователя](visual-basic/developing-apps/programming/accessing-user-data.md)
 #### [Доступ к формам приложения](visual-basic/developing-apps/programming/accessing-application-forms.md)
 #### [Доступ к веб-службам приложения](visual-basic/developing-apps/programming/accessing-application-web-services.md)
 ##### [Практическое руководство. Асинхронный вызов веб-службы](visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md)
-#### [Доступ к параметрам приложения](visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)
+#### [Доступ к параметрам приложения](visual-basic/developing-apps/programming/app-settings/index.md)
 #### [Операции с дисками, каталогами и файлами](visual-basic/developing-apps/programming/drives-directories-files/processing.md)
 
 ### [Разработка с использованием My](visual-basic/developing-apps/development-with-my/index.md)
@@ -463,7 +460,7 @@
 ### [Доступ к данным](visual-basic/developing-apps/accessing-data.md)
 ### [Создание и использование компонентов](visual-basic/developing-apps/creating-and-using-components.md)
 
-### [Печать и отчеты](visual-basic/developing-apps/printing/printing-and-reporting.md)
+### [Печать и отчеты](visual-basic/developing-apps/printing/index.md)
 #### [Компонент PrintForm](visual-basic/developing-apps/printing/printform-component.md)
 #### [Практическое руководство. Печать прокручиваемой формы](visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
 #### [Практическое руководство. Печать клиентской и неклиентской области формы](visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)
@@ -472,29 +469,9 @@
 #### [Развертывание приложений, ссылающихся на компонент PrintForm](visual-basic/developing-apps/printing/deploying-applications-that-reference-the-printform-component.md)
 #### [Добавление печатаемых отчетов в приложения Visual Studio](visual-basic/developing-apps/printing/adding-printable-reports-to-visual-studio-applications.md)
 
-### [Основы разработки приложений Windows Forms](visual-basic/developing-apps/windows-forms/windows-forms-application-basics.md)
-### [Элементы управления Power Packs](visual-basic/developing-apps/windows-forms/power-packs-controls.md)
-### [Элемент управления DataRepeater](visual-basic/developing-apps/windows-forms/datarepeater-control-visual-studio.md)
-#### [Общие сведения об элементе управления DataRepeater](visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)
-#### [Виртуальный режим в элементе управления DataRepeater](visual-basic/developing-apps/windows-forms/virtual-mode-in-the-datarepeater-control-visual-studio.md)
-#### [Пошаговое руководство. Отображение связанных данных в элементе управления DataRepeater](visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)
-#### [Пошаговое руководство. Отображение несвязанных элементов управления в элементе управления DataRepeater](visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)
-#### [Практическое руководство. Изменение структуры элемента управления DataRepeater](visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)
-#### [Практическое руководство. Изменение внешнего вида элемента управления DataRepeater](visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)
-#### [Пошаговое руководство. Отображение заголовков элементов в элементе управления DataRepeater](visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)
-#### [Пошаговое руководство. Запрещение возможности добавления и удаления элементов DataRepeater](visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)
-#### [Практическое руководство. Поиск данных в элементе управления DataRepeater](visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)
-#### [Практическое руководство. Создание главного и подчиненного представлений данных с использованием двух элементов управления DataRepeater](visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)
-#### [Пошаговое руководство. Отображение данных в элементе управления DataRepeater](visual-basic/developing-apps/windows-forms/walkthrough-displaying-data-in-a-datarepeater-control-visual-studio.md)
-#### [Устранение неполадок при использовании элемента управления DataRepeater](visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
-### [Элементы управления Line и Shape](visual-basic/developing-apps/windows-forms/line-and-shape-controls-visual-studio.md)
-#### [Знакомство с элементами управления Line и Shape](visual-basic/developing-apps/windows-forms/introduction-to-the-line-and-shape-controls-visual-studio.md)
-#### [Пошаговое руководство. Изображение линий при помощи элемента управления LineShape](visual-basic/developing-apps/windows-forms/how-to-draw-lines-with-the-lineshape-control-visual-studio.md)
-#### [Пошаговое руководство. Рисование фигур при помощи элементов управления OvalShape и RectangleShape](visual-basic/developing-apps/windows-forms/how-to-draw-shapes-with-the-ovalshape-and-rectangleshape-controls.md)
-#### [Пошаговое руководство. Разрешение переходов между фигурами](visual-basic/developing-apps/windows-forms/how-to-enable-tabbing-between-shapes-visual-studio.md)
-#### [Развертывание приложений, ссылающихся на элементы управления пакетов Power Packs](visual-basic/developing-apps/windows-forms/deploying-applications-that-reference-power-packs-controls-visual-studio.md)
+### [Основы разработки приложений Windows Forms](visual-basic/developing-apps/windows-forms/index.md)
 
-### [Настройка проектов и расширение объекта My в Visual Basic](visual-basic/developing-apps/customizing-extending-my/customizing-projects-and-extending-my.md)
+### [Настройка проектов и расширение объекта My в Visual Basic](visual-basic/developing-apps/customizing-extending-my/index.md)
 #### [Расширение пространства имен My](visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md)
 #### [Упаковка и развертывание пользовательских расширений пространства имен My](visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)
 #### [Расширение модели приложения Visual Basic](visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md)
@@ -588,7 +565,7 @@
 #### [Сводка по работе со строками](visual-basic/language-reference/keywords/string-manipulation-summary.md)
 ### [Атрибуты](visual-basic/language-reference/attributes.md)
 ### [Константы и перечисления](visual-basic/language-reference/constants-and-enumerations.md)
-### [Сводка по типам данных](visual-basic/language-reference/data-types/data-type-summary.md)
+### [Сводка по типам данных](visual-basic/language-reference/data-types/index.md)
 #### [Логический тип данных](visual-basic/language-reference/data-types/boolean-data-type.md)
 #### [Тип данных Byte](visual-basic/language-reference/data-types/byte-data-type.md)
 #### [Тип данных Char](visual-basic/language-reference/data-types/char-data-type.md)
@@ -606,7 +583,7 @@
 #### [Тип данных ULong](visual-basic/language-reference/data-types/ulong-data-type.md)
 #### [Тип данных, определенный пользователем](visual-basic/language-reference/data-types/user-defined-data-type.md)
 #### [Тип данных UShort](visual-basic/language-reference/data-types/ushort-data-type.md)
-### [Директивы](visual-basic/language-reference/directives/directives.md)
+### [Директивы](visual-basic/language-reference/directives/index.md)
 #### [Директива #Const](visual-basic/language-reference/directives/const-directive.md)
 #### [Директива #ExternalSource](visual-basic/language-reference/directives/externalsource-directive.md)
 #### [Директивы #If...Then...#Else](visual-basic/language-reference/directives/if-then-else-directives.md)
@@ -737,7 +714,7 @@
 #### [Логические и побитовые операторы](visual-basic/language-reference/operators/logical-bitwise-operators.md)
 #### [Прочие операторы](visual-basic/language-reference/operators/miscellaneous-operators.md)
 ### [Свойства](visual-basic/language-reference/properties.md)
-### [Запросы](visual-basic/language-reference/queries/queries.md)
+### [Запросы](visual-basic/language-reference/queries/index.md)
 #### [Предложение Aggregate](visual-basic/language-reference/queries/aggregate-clause.md)
 #### [Предложение Distinct](visual-basic/language-reference/queries/distinct-clause.md)
 #### [Предложение Equals](visual-basic/language-reference/queries/equals-clause.md)
@@ -827,7 +804,7 @@
 #### [Список атрибутов](visual-basic/language-reference/statements/attribute-list.md)
 #### [Список параметров](visual-basic/language-reference/statements/parameter-list.md)
 #### [Список типов](visual-basic/language-reference/statements/type-list.md)
-### [XML-теги для комментариев](visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)
+### [XML-теги для комментариев](visual-basic/language-reference/xmldoc/index.md)
 #### [<c>](visual-basic/language-reference/xmldoc/c.md)
 #### [<code>](visual-basic/language-reference/xmldoc/code.md)
 #### [<example>](visual-basic/language-reference/xmldoc/example.md)
@@ -845,7 +822,7 @@
 #### [<summary>](visual-basic/language-reference/xmldoc/summary.md)
 #### [<typeparam>](visual-basic/language-reference/xmldoc/typeparam.md)
 #### [<value>](visual-basic/language-reference/xmldoc/value.md)
-### [Свойства оси XML](visual-basic/language-reference/xml-axis/xml-axis-properties.md)
+### [Свойства оси XML](visual-basic/language-reference/xml-axis/index.md)
 #### [Свойство оси атрибута XML](visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)
 #### [Свойство дочерней оси XML](visual-basic/language-reference/xml-axis/xml-child-axis-property.md)
 #### [Свойство дочерней оси XML](visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)
@@ -1140,6 +1117,7 @@
 ### [Глоссарий по машинному обучению](machine-learning/resources/glossary.md)
 ### [Основы машинного обучения](machine-learning/resources/basics.md)
 ### [Задачи машинного обучения](machine-learning/resources/tasks.md)
+### [Преобразования данных](machine-learning/resources/transforms.md)
 
 <!-- End ML.NET Content -->
 

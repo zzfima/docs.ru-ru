@@ -7,14 +7,14 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: 8c9b2803819b4ffcf0edce7994b9fdbc1c6c6951
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa34c181073d089d137ac0ef64c85c8fe2772093
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33212633"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43398071"
 ---
-# <a name="get-started-with-c"></a>Начало работы с C# #
+# <a name="get-started-with-c"></a>Начало работы с C\#
 
 В этом разделе собраны короткие и простые руководства, которые позволяют быстро создать приложение с помощью C# и .NET Core. Это статьи по началу работы с Visual Studio 2017 и Visual Studio Code. Вы можете создать простое приложение Hello World, а если у вас есть Visual Studio 2017, еще и простую библиотеку классов, которую затем можно использовать в других приложениях.
 
@@ -63,4 +63,5 @@ ms.locfileid: "33212633"
     Приведены ссылки на пошаговые руководства по написанию программ, использующих C#, и дано краткое описание каждого пошагового руководства.
 
 ## <a name="see-also"></a>См. также
- [Начало работы с Visual C# и Visual Basic в Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+
+* [Начало работы с Visual C# и Visual Basic в Visual Studio](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - format specifiers, standard numeric format strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20db5cfb13f788ae0f8670f0d1c3b221db3e43b
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
-ms.translationtype: HT
+ms.openlocfilehash: 7f304adb567e3568fb4624b3c5e9ec4585009a05
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/15/2018
-ms.locfileid: "42753621"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43403193"
 ---
 # <a name="standard-numeric-format-strings"></a>Строки стандартных числовых форматов
 
@@ -33,8 +33,10 @@ ms.locfileid: "42753621"
   
 -   `xx` — это необязательное целое число, которое называют *описателем точности*. Спецификатор точности находится в диапазоне от 0 до 99 и влияет на число цифр в результате. Описатель точности управляет количеством цифр в строковом представлении числа. Он не округляет само число. Для выполнения операции округления используйте метод <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType> или <xref:System.Math.Round%2A?displayProperty=nameWithType>.  
   
-     Если *указатель точности* ограничивает число цифр дробной части в итоговой строке, числа в итоговых строках округляются к большему по модулю (то есть с использованием <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
-  
+    Когда *указатель точности* ограничивает число цифр дробной части в итоговой строке, числа в итоговых строках округляются до представимого результата, ближайшего к бесконечно точному. Если имеются два одинаково близких представимых результата:
+    - **В .NET Framework и .NET Core вплоть до версии 2.0** среда выполнения выбирает результат с большей наименее значащей цифрой (то есть с использованием <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).
+    - **В .NET Core 2.1 и более поздних версиях** среда выполнения выбирает результат с четной наименее значащей цифрой (то есть с использованием <xref:System.MidpointRounding.ToEven?displayProperty=nameWithType>). 
+
     > [!NOTE]
     >  Описатель точности определяет число цифр в результирующей строке. Чтобы заполнить строку результата начальными или конечными пробелами, используйте функцию [составного форматирования](../../../docs/standard/base-types/composite-formatting.md) и определите  *компонент выравнивания* в элементе форматирования.  
   

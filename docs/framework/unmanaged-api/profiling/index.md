@@ -8,41 +8,31 @@ helpviewer_keywords:
 ms.assetid: 14c68e84-657e-49c2-aa8b-4978dbaf4454
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 581f42dc83622712dbb30ef556a481388bafe259
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 75df075cd39375084a7d5a4489694ec937e15d99
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455576"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43404466"
 ---
 # <a name="profiling-unmanaged-api-reference"></a>Профилирование (справочник по неуправляемым интерфейсам API)
-API профилирования позволяет профилировщику отслеживать выполнение программы с общеязыковой среды выполнения (CLR).  
-  
-## <a name="in-this-section"></a>В этом разделе  
- [Общие сведения о профилировании](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
- Описание служб и интерфейсов, предоставляемых средой CLR для поддержки профилирования в среде .NET Framework.  
-  
- [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- В этом разделе описываются неуправляемые интерфейсы, которые использует API профилирования.  
-  
- [Настройка среды профилирования](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)  
- Описание действий, которые необходимо выполнить профилирование приложения .NET Framework.  
-  
- [Профилировщики CLR и приложения для Магазина Windows](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md)  
- Описывает, как перенести средства диагностики, которые используют API профилирования среды CLR для успешной работы с приложениями для магазина Windows.  
-  
- [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)  
- Документирует условия, при которых вызов метода возвращает `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT.  
-  
- [Глобальные статические функции профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
- В этом разделе описываются неуправляемые глобальные статистические функции, которые использует API профилирования.  
-  
- [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
- В этом разделе описываются неуправляемые перечисления, которые использует API профилирования.  
-  
- [Структуры профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)  
- В этом разделе описываются неуправляемые структуры, которые использует API профилирования.  
-  
-## <a name="related-sections"></a>Связанные разделы  
- [Пошаговое руководство. Выявление проблем с производительностью](/visualstudio/profiling/walkthrough-identifying-performance-problems)  
- Объясняется, как использовать встроенные средства профилирования в Microsoft Visual Studio 2005 Team System. Эти средства предоставляют альтернативный подход к использованию API профилирования.
+
+API профилирования позволяет профилировщику отслеживать выполнение программы с помощью общеязыковой среды выполнения (CLR).
+
+## <a name="in-this-section"></a>В этом разделе
+
+ [Общие сведения о профилировании](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md). Описание служб и интерфейсов, предоставляемых средой CLR для поддержки профилирования в среде .NET Framework.
+
+ [Интерфейсы профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md). Описание неуправляемых интерфейсов, используемых API профилирования.
+
+ [Настройка среды профилирования](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md). Описание действий, которые необходимо выполнить для профилирования приложения .NET Framework.
+
+ [Профилировщики CLR и приложения для Магазина Windows](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md). Описание процедуры переноса средств диагностики, использующих API профилирования среды CLR для эффективной работы с приложениями Магазина Windows.
+
+ [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md). Описание условий, при которых вызов метода возвращает `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT.
+
+ [Глобальные статические функции профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md). Описание неуправляемых глобальных статических функций, используемых API профилирования.
+
+ [Перечисления профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md). Описание неуправляемых перечислений, используемых API профилирования.
+
+ [Структуры профилирования](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md). Описание неуправляемых структур, используемых API профилирования.
