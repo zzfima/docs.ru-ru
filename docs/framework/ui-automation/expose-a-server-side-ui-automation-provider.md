@@ -12,18 +12,18 @@ ms.assetid: 55d419c0-2201-4101-90c9-2888df4dbb47
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 9700b9cfef92da48a61b033ecf7b7357c113a994
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6180a5091b6072af97fd108b27a8dbe6cfd71324
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400384"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43501277"
 ---
 # <a name="expose-a-server-side-ui-automation-provider"></a>Представление поставщика автоматизации пользовательского интерфейса со стороны сервера
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- В этом разделе содержится пример кода, демонстрирующий предоставление поставщика автоматизации пользовательского интерфейса серверных, который размещен в <xref:System.Windows.Forms.Control?displayProperty=nameWithType> окна.  
+ В этом разделе содержится пример кода, демонстрирующий предоставление серверного поставщика автоматизации пользовательского интерфейса, размещенного в <xref:System.Windows.Forms.Control?displayProperty=nameWithType> окна.  
   
  В примере переопределяется процедура окна для перехвата сообщения WM_GETOBJECT, отправляемого основной службой [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , когда клиентское приложение запрашивает информацию об окне.  
   

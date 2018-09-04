@@ -2,12 +2,12 @@
 title: Записи отслеживания
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: b07175943f85b61024030c1e0251e24d1eb35c86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2be8dbcdd740dee1c5cddd1121716058bfa5c175
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520283"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527043"
 ---
 # <a name="tracking-records"></a>Записи отслеживания
 Среда выполнения рабочего процесса инструментирована для создания записей отслеживания выполнения экземпляра рабочего процесса.  
@@ -28,25 +28,25 @@ ms.locfileid: "33520283"
   
 -   **WorkflowInstanceRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> описывает жизненный цикл экземпляра рабочего процесса. Например, запись создается при запуске или завершении рабочего процесса и содержит состояние экземпляра рабочего процесса. Сведения об этой записи приведены в <xref:System.Activities.Tracking.WorkflowInstanceRecord>.  
   
--   **WorkflowInstanceAbortedRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> создается, когда прерывается экземпляр рабочего процесса. Запись содержит причину прерывания экземпляра рабочего процесса. Сведения об этой записи приведены в <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>.  
+-   **WorkflowInstanceAbortedRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> создается при прерывании экземпляра рабочего процесса. Запись содержит причину прерывания экземпляра рабочего процесса. Сведения об этой записи приведены в <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>.  
   
--   **WorkflowInstanceUnhandledExceptionRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> создается, если исключение возникает в экземпляре рабочего процесса и не обрабатывается ни одним из действий. Запись содержит подробные сведения об исключении. Сведения об этой записи приведены в <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.  
+-   **WorkflowInstanceUnhandledExceptionRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> создается, если исключение возникает в экземпляре рабочего процесса и не обрабатывается каким-либо действием. Запись содержит подробные сведения об исключении. Сведения об этой записи приведены в <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>.  
   
 -   **WorkflowInstanceSuspendedRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> создается каждый раз, когда экземпляр рабочего процесса приостановлен. Запись содержит причину приостановки выполнения экземпляра рабочего процесса. Сведения об этой записи приведены в <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>.  
   
--   **WorkflowInstanceTerminatedRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> создается при завершении экземпляра рабочего процесса. Запись содержит причину прекращения выполнения экземпляра рабочего процесса. Сведения об этой записи приведены в <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>.  
+-   **WorkflowInstanceTerminatedRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> создается каждый раз, когда прерывается экземпляр рабочего процесса. Запись содержит причину прекращения выполнения экземпляра рабочего процесса. Сведения об этой записи приведены в <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>.  
   
 -   **ActivityStateRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> создается, когда выполняется действие в рабочем процессе. Эти записи указывают состояние действия в экземпляре рабочего процесса. Сведения об этой записи приведены в <xref:System.Activities.Tracking.ActivityStateRecord>.  
   
 -   **ActivityScheduledRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> создается, когда действие планирует дочернее действие. Эта запись содержит подробные сведения о родительском действии (планирующем действии) и о запланированном дочернем действии. Сведения об этой записи приведены в <xref:System.Activities.Tracking.ActivityScheduledRecord>.  
   
--   **FaultPropagationRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> создается для каждого обработчика, просматривающего запись до ее обработки. Используется для обозначения пути ошибки в экземпляре рабочего процесса. Сведения об этой записи приведены в <xref:System.Activities.Tracking.FaultPropagationRecord>.  
+-   **Запись FaultPropagationRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> создается для каждого обработчика, просматривающего запись до ее обработки. Используется для обозначения пути ошибки в экземпляре рабочего процесса. Сведения об этой записи приведены в <xref:System.Activities.Tracking.FaultPropagationRecord>.  
   
 -   **CancelRequestedRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> создается каждый раз, когда действие пытается отменить дочернее действие. Эта запись содержит подробные сведения о родительском действии и об отменяемом дочернем действии. Сведения об этой записи приведены в <xref:System.Activities.Tracking.CancelRequestedRecord>.  
   
--   **BookmarkResumptionRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> отслеживает все закладки, успешно возобновлена. Сведения об этой записи приведены в <xref:System.Activities.Tracking.BookmarkResumptionRecord>.  
+-   **BookmarkResumptionRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> отслеживает все закладка, которая успешно возобновлена. Сведения об этой записи приведены в <xref:System.Activities.Tracking.BookmarkResumptionRecord>.  
   
--   **CustomTrackingRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> создается и выдается автором рабочего процесса в действии пользовательского рабочего процесса. Пользовательские записи отслеживания можно заполнять данными, которые будут выдаваться вместе с записями. Сведения об этой записи приведены в <xref:System.Activities.Tracking.CustomTrackingRecord>.  
+-   **CustomTrackingRecord** : Эта <xref:System.Activities.Tracking.TrackingRecord> создается и выдается автором рабочего процесса в рамках действия пользовательского рабочего процесса. Пользовательские записи отслеживания можно заполнять данными, которые будут выдаваться вместе с записями. Сведения об этой записи приведены в <xref:System.Activities.Tracking.CustomTrackingRecord>.  
   
  Например, простое действие <xref:System.Activities.Statements.Sequence> может содержать операцию <xref:System.Activities.Statements.WriteLine> с записями отслеживания, выдаваемыми в следующем порядке.  
   
@@ -61,5 +61,5 @@ ms.locfileid: "33520283"
 5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> сообщает о завершении рабочего процесса.  
   
 ## <a name="see-also"></a>См. также  
- [Наблюдение за Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkId=201273)  
- [Мониторинг приложений с](http://go.microsoft.com/fwlink/?LinkId=201275)
+ [Мониторинг Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=201273)  
+ [Мониторинг приложений с помощью фабрики приложения](https://go.microsoft.com/fwlink/?LinkId=201275)

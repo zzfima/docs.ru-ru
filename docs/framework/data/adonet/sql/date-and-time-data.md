@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 2130c79ba79ce7e327a2a1b3adccd92e52153d85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1b7d5aca6b2c992e4f1d6bdef2a687d1ff43bf71
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354872"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514007"
 ---
 # <a name="date-and-time-data"></a>Данные даты и времени
 В SQL Server 2008 появились указанные ниже новые типы данных для обработки сведений о дате и времени. Новые типы данных включают отдельные типы для даты и времени, а также расширенные типы данных, обладающие большим диапазоном, большей точностью и учитывающие часовые пояса. Начиная с .NET Framework 3.5 с пакетом обновления 1 (SP1), поставщик данных .NET Framework для SQL Server (<xref:System.Data.SqlClient>) полностью поддерживает все новые возможности ядра СУБД SQL Server 2008. Для использования новых возможностей с SqlClient необходимо установить .NET Framework 3.5 с пакетом обновления 1 (SP1) или более поздней версии.  
@@ -21,7 +21,7 @@ ms.locfileid: "33354872"
   
  **Электронная документация по SQL Server**  
   
-1.  [Использование данных даты и времени](http://go.microsoft.com/fwlink/?LinkID=98361)  
+1.  [Использование данных даты и времени](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>Типы данных даты и времени и только даты, появившиеся в SQL Server 2008  
  В приведенной ниже таблице описаны новые типы данных даты и времени.  
@@ -41,12 +41,12 @@ ms.locfileid: "33354872"
   
  Инструкция Transact-SQL SET LANGUAGE неявным образом задает значение параметра DATEFORMAT, определяющего порядок компонентов даты. Инструкцию Transact-SQL SET DATEFORMAT можно использовать в подключении для устранения неоднозначности значений даты путем расположения компонентов даты в порядке МДГ, ДМГ, ГМД, ГДМ, МГД или ДГМ.  
   
- Если значение параметра DATEFORMAT для подключения не указано, SQL Server использует связанный с подключением язык по умолчанию. Например, строка даты '01/02/03' будет интерпретирована как МДГ (2 января 2003 г.), если на сервере установлен английский язык (США), и как ДМГ (1 февраля 2003 г.), если на сервере установлен английский язык (Соединенное Королевство). Год определяется по правилу отсечения двух цифр года SQL Server, которое определяет дату отсечения для выбора века. Дополнительные сведения см. в разделе [параметр две цифры года для двухзначной записи](http://go.microsoft.com/fwlink/?LinkId=120473) в электронной документации по SQL Server.  
+ Если значение параметра DATEFORMAT для подключения не указано, SQL Server использует связанный с подключением язык по умолчанию. Например, строка даты '01/02/03' будет интерпретирована как МДГ (2 января 2003 г.), если на сервере установлен английский язык (США), и как ДМГ (1 февраля 2003 г.), если на сервере установлен английский язык (Соединенное Королевство). Год определяется по правилу отсечения двух цифр года SQL Server, которое определяет дату отсечения для выбора века. Дополнительные сведения см. в разделе [параметр отсечения двух цифр года](https://go.microsoft.com/fwlink/?LinkId=120473) в электронной документации по SQL Server.  
   
 > [!NOTE]
 >  Формат даты ГДМ не поддерживается при преобразовании из строкового формата в формат `date`, `time`, `datetime2` или `datetimeoffset`.  
   
- Дополнительные сведения об интерпретации сервером SQL Server даты и времени см. в разделе [данных с использованием даты и времени](http://go.microsoft.com/fwlink/?LinkID=98361) в электронной документации по SQL Server 2008.  
+ Дополнительные сведения об интерпретации сервером SQL Server данные даты и времени, см. в разделе [данных с помощью даты и времени](https://go.microsoft.com/fwlink/?LinkID=98361) в электронной документации по SQL Server 2008.  
   
 ## <a name="datetime-data-types-and-parameters"></a>Параметры и типы данных даты-времени  
  Для поддержки новых типов данных даты и времени к <xref:System.Data.SqlDbType> были добавлены следующие перечисления.  
@@ -62,7 +62,7 @@ ms.locfileid: "33354872"
 Можно указать тип данных <xref:System.Data.SqlClient.SqlParameter> с помощью одного из указанных выше <xref:System.Data.SqlDbType> перечисления. 
 
 > [!NOTE]
-> Не удается задать `DbType` свойство `SqlParameter` для `SqlDbType.Date`.
+> Невозможно задать `DbType` свойство `SqlParameter` для `SqlDbType.Date`.
 
  Также можно указать тип объекта <xref:System.Data.SqlClient.SqlParameter> в общей форме, задав для свойства <xref:System.Data.SqlClient.SqlParameter.DbType%2A> объекта `SqlParameter` особое значение перечисления <xref:System.Data.DbType>. Для поддержки типов данных <xref:System.Data.DbType> и `datetime2` к свойству `datetimeoffset` были добавлены следующие значения перечисления.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "33354872"
   
 |Свойство|Описание|  
 |--------------|-----------------|  
-|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Возвращает или задает значение, указывающее, можно ли использовать значения NULL. При отправке на сервер параметра со значением NULL необходимо указывать значение <xref:System.DBNull>, а не значение `null` (`Nothing` в Visual Basic). Дополнительные сведения о null базы данных см. в разделе [обработки значения Null](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).|  
+|<xref:System.Data.SqlClient.SqlParameter.IsNullable%2A>|Возвращает или задает значение, указывающее, можно ли использовать значения NULL. При отправке на сервер параметра со значением NULL необходимо указывать значение <xref:System.DBNull>, а не значение `null` (`Nothing` в Visual Basic). Дополнительные сведения о значении NULL базы данных, см. в разделе [Handling Null Values](../../../../../docs/framework/data/adonet/sql/handling-null-values.md).|  
 |<xref:System.Data.SqlClient.SqlParameter.Precision%2A>|Возвращает или задает максимальное количество разрядов, используемых для представления значения. Этот параметр пропускается для типов данных даты и времени.|  
 |<xref:System.Data.SqlClient.SqlParameter.Scale%2A>|Возвращает или задает число десятичных разрядов, до которых разрешается промежуток времени для `Time`, `DateTime2`, и `DateTimeOffset`. Значение по умолчанию — 0, означающее, что фактический масштаб выводится из значения и отправляется на сервер.|  
 |<xref:System.Data.SqlClient.SqlParameter.Size%2A>|Пропускается для типов данных даты и времени.|  
@@ -101,7 +101,7 @@ ms.locfileid: "33354872"
 ### <a name="creating-parameters"></a>Создание параметров  
  Объект <xref:System.Data.SqlClient.SqlParameter> можно создать с помощью конструктора либо путем добавления этого объекта в коллекцию <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> путем вызова метода `Add` класса <xref:System.Data.SqlClient.SqlParameterCollection>. Метод `Add` принимает в качестве входных данных либо аргументы конструктора, либо существующий объект параметра.  
   
- В следующих подразделах данного раздела приведены примеры указания параметров даты и времени. Дополнительные примеры по работе с параметрами см. в разделе [Настройка параметров и типов данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) и [параметры DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
+ В следующих подразделах данного раздела приведены примеры указания параметров даты и времени. Дополнительные примеры по работе с параметрами см. в разделе [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md) и [параметры DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md).  
   
 ### <a name="date-example"></a>Пример работы с типом date  
  В нижеприведенном примере кода показано указание параметра `date`.  
@@ -184,7 +184,7 @@ command.Parameters.AddWithValue( _
     "@date", DateTimeOffset.Parse("16660902"))  
 ```  
   
- `@date` Можно сопоставить `date`, `datetime`, или `datetime2` тип данных на сервере. При работе с новыми типами данных `datetime` необходимо явным образом присвоить свойству <xref:System.Data.SqlDbType> параметра тип данных экземпляра. Использование <xref:System.Data.SqlDbType.Variant> или неявных значений параметра может привести к проблемам с обратной совместимостью для типов данных `datetime` и `smalldatetime`.  
+ `@date` Параметра будут соответствовать `date`, `datetime`, или `datetime2` тип данных на сервере. При работе с новыми типами данных `datetime` необходимо явным образом присвоить свойству <xref:System.Data.SqlDbType> параметра тип данных экземпляра. Использование <xref:System.Data.SqlDbType.Variant> или неявных значений параметра может привести к проблемам с обратной совместимостью для типов данных `datetime` и `smalldatetime`.  
   
  В приведенной ниже таблице показано, какие типы `SqlDbTypes` выводятся из каких типов среды CLR.  
   
@@ -235,12 +235,12 @@ command.Parameters.AddWithValue( _
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Данных даты и времени типы и функции (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98360)|Приводятся общие сведения обо всех типах данных и функциях даты и времени в языке Transact-SQL.|  
-|[Использование данных даты и времени](http://go.microsoft.com/fwlink/?LinkId=98361)|Приводятся сведения о типах данных даты и времени, функциях для работы с этими типами данных и примеры их использования.|  
-|[Типы данных (Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=98362)|Описываются системные типы данных в SQL Server 2008.|  
+|[Данные даты и времени типы и функции (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Приводятся общие сведения обо всех типах данных и функциях даты и времени в языке Transact-SQL.|  
+|[Использование данных даты и времени](https://go.microsoft.com/fwlink/?LinkId=98361)|Приводятся сведения о типах данных даты и времени, функциях для работы с этими типами данных и примеры их использования.|  
+|[Типы данных (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|Описываются системные типы данных в SQL Server 2008.|  
   
 ## <a name="see-also"></a>См. также  
  [Сопоставления типов данных SQL Server](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  [Настройка параметров и типы данных параметров](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [Типы данных SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -2,12 +2,12 @@
 title: Настройка разрешений с олицетворением в SQL Server
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: ac2c6805a9ab49d95f68e56306d7d9fb8aab2a2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bfee153a1293ec89285dbeabd1ed64a89764a717
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362647"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513976"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>Настройка разрешений с олицетворением в SQL Server
 Во многих приложениях используются хранимые процедуры для получения доступа к данным, что позволяет ограничивать доступ к базовым таблицам на основе формирования цепочки владения. При этом можно предоставлять разрешения EXECUTE для хранимых процедур, отзывая или отменяя разрешения по отношению к базовым таблицам. В СУБД SQL Server если хранимая процедура и таблицы имеют одного владельца, то разрешения вызывающего объекта не проверяются. Но формирование цепочки владения перестает действовать, если объекты имеют разных владельцев, а также в случае применения динамического кода SQL.  
@@ -54,7 +54,7 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
 ### <a name="using-execute-as-with-revert"></a>Использование предложения EXECUTE AS с инструкцией REVERT  
  Инструкцию REVERT языка Transact-SQL можно использовать для возврата к первоначальному контексту выполнения.  
   
- Необязательное предложение WITH NO REVERT COOKIE = @variableName, позволяет переключать контекст выполнения обратно в вызывающий объект, если @variableName переменной содержит правильное значение. Это позволяет переключать контекст выполнения обратно к контексту вызывающего объекта в тех средах, где используются пулы соединений. Так как значение @variableName известно только инициатору инструкции EXECUTE AS инструкции, вызывающий объект может гарантировать, что контекст выполнения не может изменяться конечным пользователем, вызывающее приложение. Соединение после закрытия возвращается в пул. Дополнительные сведения о подключения в ADO.NET см [SQL пулов соединений Server (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
+ Необязательное предложение WITH NO REVERT COOKIE = @variableName, позволяет переключать контекст выполнения обратно в вызывающий объект, если @variableName переменной содержит правильное значение. Это позволяет переключать контекст выполнения обратно к контексту вызывающего объекта в тех средах, где используются пулы соединений. Так как значение @variableName известно только инициатору инструкции EXECUTE AS инструкция, вызывающая сторона может гарантировать, что контекст выполнения не может изменяться конечным пользователем, вызывающее приложение. Соединение после закрытия возвращается в пул. Дополнительные сведения о подключения пулов в ADO.NET, см. в разделе [Server пулы подключений SQL (ADO.NET)](../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md).  
   
 ### <a name="specifying-the-execution-context"></a>Определение контекста выполнения  
  Предложение EXECUTE AS можно не только использовать для указания пользователя, но и указывать в нем любое из следующих ключевых слов.  
@@ -65,14 +65,6 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
   
 -   SELF. Выполнение с ключевым словом SELF приводит к выполнению в контексте безопасности создателя хранимой процедуры. Это эквивалентно вызову на выполнение от имени указанного пользователя, где указанным пользователем является лицо, создавшее или изменившее процедуру.  
   
-## <a name="external-resources"></a>Внешние ресурсы  
- Дополнительные сведения см. в следующих ресурсах.  
-  
-|Ресурс|Описание|  
-|--------------|-----------------|  
-|[Переключение контекста](http://msdn.microsoft.com/library/ms188268.aspx) в электронной документации по SQL Server|Содержит ссылки на разделы с описаниями способов использования предложения EXECUTE AS.|  
-|[Использование инструкции EXECUTE AS для создания пользовательских наборов разрешений](http://msdn.microsoft.com/library/ms190384.aspx) и [с помощью инструкции EXECUTE AS в модулях](http://msdn.microsoft.com/library/ms178106.aspx) в электронной документации по SQL Server|Разделы содержат описание способов использования предложения EXECUTE AS.|  
-  
 ## <a name="see-also"></a>См. также  
  [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
@@ -81,4 +73,4 @@ CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...
  [Написание безопасного динамического кода SQL в SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [Подписывание хранимых процедур в SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  [Изменение данных с помощью хранимых процедур](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

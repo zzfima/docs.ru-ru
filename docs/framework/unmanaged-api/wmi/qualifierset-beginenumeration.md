@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d20701237501834c611c4e498c39597cf275176
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43407038"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518690"
 ---
 # <a name="qualifiersetbeginenumeration-function"></a>Функция QualifierSet_BeginEnumeration
 Сбрасывает перечислитель квалификаторов объекта в начало перечисления.  
@@ -53,7 +53,7 @@ HRESULT QualifierSet_BeginEnumeration (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lFlags` Недопустимый параметр. |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | Второй вызов `QualifierSet_BeginEnumeration` была сделана без промежуточных вызовов к [ `QualifierSet_EndEnumeration` ](qualifierset-endenumeration.md). |

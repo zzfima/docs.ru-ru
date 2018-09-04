@@ -5,16 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: 1974ac71e367203b8b94375e43d4fde13f2df51f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c66a11e0662cd007797243c136ec0617ce5be47c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513151"
 ---
 # <a name="annotating-typed-datasets"></a>Создание примечаний к типизированным наборам данных
-Заметки дают возможность изменять имена элементов в типизированных <xref:System.Data.DataSet> без изменения базовой схемы. Изменить имена элементов в базовой схеме, типизированные **набора данных** для ссылки на объекты, которые не существуют в источнике данных, а также потеряют ссылки на объекты, которые существуют в источнике данных.  
+Заметки дают возможность изменять имена элементов в типизированных <xref:System.Data.DataSet> без изменения базовой схемы. Изменение имен элементов в базовой схеме вызовет типизированного **набора данных** ссылаться на объекты, которые не существуют в источнике данных, а также потеряют ссылки на объекты, которые существуют в источнике данных.  
   
- Используя заметки, можно изменить имена объектов в типизированных объектах **DataSet** с более понятные имена, что делает код более удобочитаемым и типизированного **DataSet** облегчает клиентам использовать, предоставляя Базовая схема без изменений. Например, следующий элемент схемы для **клиентов** таблицу **Northwind** базы данных приведет к появлению **DataRow** объект имени  **CustomersRow** и <xref:System.Data.DataRowCollection> с именем **клиентов**.  
+ Используя заметки, можно изменить имена объектов в типизированных **набора данных** с более значащими именами, что делает код более удобочитаемым и типизированных **набора данных** проще для использования клиентами, оставив без изменения базовой схемы. Например, следующий элемент схемы для **клиентов** таблицы **Northwind** приведет к базе данных **DataRow** объект имени  **CustomersRow** и <xref:System.Data.DataRowCollection> с именем **клиентов**.  
   
 ```xml  
 <xs:element name="Customers">  
@@ -26,7 +27,7 @@ ms.lasthandoff: 05/03/2018
 </xs:element>  
 ```  
   
- Объект **DataRowCollection** имя **клиентов** имеет смысл в клиентском коде, но **DataRow** имя **CustomersRow** может ввести в заблуждение так как один объект. Кроме того, общие сценарии, объект обычно указывается без **строки** идентификатор и вместо этого будет просто обращаться как к **клиента** объекта. Решение — добавить заметки к схеме и определить новые имена для **DataRow** и **DataRowCollection** объектов. Далее приводится версия предыдущей схемы с добавленными заметками.  
+ Объект **DataRowCollection** имя **клиентов** имеет смысл в клиентском коде, но **DataRow** имя **CustomersRow** может ввести в заблуждение так как он представляет собой один объект. Кроме того, в распространенных сценариях, объект будет ссылаться без **строки** идентификатор и вместо этого будет просто обращаться как к **клиента** объекта. Решение заключается в заметки к схеме и определить новые имена для **DataRow** и **DataRowCollection** объектов. Далее приводится версия предыдущей схемы с добавленными заметками.  
   
 ```xml  
 <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
@@ -48,9 +49,9 @@ ms.lasthandoff: 05/03/2018
 |**typedPlural**|Имя коллекции объектов.|  
 |**typedParent**|Имя объекта при ссылке на родительскую связь.|  
 |**typedChildren**|Имя метода, возвращающего объекты по дочерней связи.|  
-|**nullValue**|Значение, если базовое значение ― **DBNull**. См. следующую таблицу для **nullValue** заметок. Значение по умолчанию — **_throw**.|  
+|**nullValue**|Значение, если базовое значение ― **DBNull**. См. в следующей таблице **nullValue** заметок. По умолчанию используется **_throw**.|  
   
- В следующей таблице показаны значения, которые могут быть указаны для **nullValue** заметки.  
+ Ниже приведены значения, которые могут быть указаны для **nullValue** заметки.  
   
 |Значение nullValue|Описание|  
 |---------------------|-----------------|  
@@ -63,23 +64,23 @@ ms.lasthandoff: 05/03/2018
   
 |Объект/Метод/Событие|По умолчанию|Комментарий|  
 |---------------------------|-------------|----------------|  
-|**Таблицы данных**|TableNameDataTable|typedPlural|  
+|**DataTable**|TableNameDataTable|typedPlural|  
 |**DataTable** методы|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
-|**dataRow**|TableNameRow|typedName|  
+|**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
 |**Свойство**|PropertyName|typedName|  
 |**Дочерние** метода доступа|GetChildTableNameRows|typedChildren|  
 |**Родительский** метода доступа|TableNameRow|typedParent|  
 |**Набор данных** события|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- Чтобы использовать типизированные **DataSet** заметки, необходимо включить следующие **xmlns** ссылка в вашей языка определения схемы XML. (Чтобы сформировать xsd из таблиц базы данных, в разделе <xref:System.Data.DataSet.WriteXmlSchema%2A> или [работа с наборами данных в Visual Studio](http://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
+ Чтобы использовать типизированные **набора данных** заметки, необходимо включить следующие **xmlns** ссылки в схеме языка определения схемы XML. (Чтобы сформировать xsd из таблиц базы данных, см. в разделе <xref:System.Data.DataSet.WriteXmlSchema%2A> или [работа с наборами данных в Visual Studio](https://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
   
 ```  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
- Ниже приведен пример аннотированной схемы, которая предоставляет **клиентов** таблицу **Northwind** базы данных с отношением для **заказов** таблица, включенная.  
+ Ниже приведен образец схемы с заметками, который предоставляет **клиентов** таблицы **Northwind** базы данных с отношением с **заказы** таблица, включенная.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -133,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- В следующем примере кода используется строго типизированный **DataSet** созданный из образца схемы. Он использует один <xref:System.Data.SqlClient.SqlDataAdapter> для заполнения **клиентов** таблицу, а другую <xref:System.Data.SqlClient.SqlDataAdapter> для заполнения **заказов** таблицы. Строго типизированные **DataSet** определяет **отношений DataRelation**.  
+ В следующем примере кода используется строго типизированный **набора данных** создан из образца схемы. Он использует один <xref:System.Data.SqlClient.SqlDataAdapter> для заполнения **клиентов** таблицу, а другую <xref:System.Data.SqlClient.SqlDataAdapter> для заполнения **заказы** таблицы. Строго типизированные **набора данных** определяет **DataRelations**.  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -158,7 +159,7 @@ AddHandler customers.Customers.CustomerChanged, &
   
 ' Add a strongly typed DataRow.  
 Dim newCustomer As CustomerDataSet.Customer = _  
-    customers.Customers.NewCustomeromer()  
+    customers.Customers.NewCustomer()  
 newCustomer.CustomerID = "NEW01"  
 newCustomer.CompanyName = "My New Company"  
 customers.Customers.AddCustomer(newCustomer)  
@@ -202,7 +203,7 @@ customers.Customers.CustomerChanged += new
   
 // Add a strongly typed DataRow.  
 CustomerDataSet.Customer newCustomer =   
-    customers.Customers.NewCustomeromer();  
+    customers.Customers.NewCustomer();  
 newCustomer.CustomerID = "NEW01";  
 newCustomer.CompanyName = "My New Company";  
 customers.Customers.AddCustomer(newCustomer);  
@@ -226,4 +227,4 @@ protected static void OnCustomerChanged(object sender, CustomerDataSet.CustomerC
  <xref:System.Data.DataSet>  
  [Типизированные наборы данных](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
  [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

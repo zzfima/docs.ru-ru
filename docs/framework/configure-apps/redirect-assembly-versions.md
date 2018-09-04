@@ -11,12 +11,12 @@ ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3459ebd2f1df38ac70e9211fd4865e227cd996cb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: aad369b35837089d05f5d7517e023671f0178011
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759274"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507808"
 ---
 # <a name="redirecting-assembly-versions"></a>Перенаправление версий сборки
 Вы можете перенаправлять привязанные во время компиляции ссылки на сборки .NET Framework, сторонние сборки или сборки вашего собственного приложения. Вы можете перенаправлять свое приложение, чтобы оно использовало другую версию сборки, несколькими способами: через политику издателя, с помощью файла конфигурации приложения или с помощью файла конфигурации компьютера. В этой статье показывается, как привязка сборок работает в .NET Framework и как ее можно настроить.  
@@ -66,11 +66,11 @@ ms.locfileid: "32759274"
   
  `<bindingRedirect oldVersion="1.0.0.0" newVersion="2.0.0.0" />`  
   
- Вы можете включить автоматическое перенаправление привязки, если приложение предназначено для более старых версий .NET Framework в [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]. Это поведение по умолчанию можно переопределить, предоставив сведения о перенаправлении привязки в файле app.config для какой-либо сборки или отключив функцию перенаправления привязки. Сведения о том, как включить эту функцию, или отключить см. в разделе [как: Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).  
+ Вы можете включить автоматическое перенаправление привязки, если приложение предназначено для более старых версий .NET Framework в [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]. Это поведение по умолчанию можно переопределить, предоставив сведения о перенаправлении привязки в файле app.config для какой-либо сборки или отключив функцию перенаправления привязки. Сведения о том, как включить эту функцию, или отключить, см. в разделе [как: Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).  
   
 <a name="bypass_PP"></a>   
 ### <a name="bypassing-publisher-policy"></a>Обход политики издателя  
- При необходимости вы можете переопределить политику издателя в файле конфигурации приложения. Например, новые версии сборок, которые объявлены как поддерживающие обратную совместимость, могут все-таки нарушать работу приложения. Если вы хотите обойти политику издателя, добавьте [ \<publisherPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) элемент [ \<dependentAssembly >](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) элемент в файл конфигурации приложения и набора **применить** атрибут **не**, что переопределит все предыдущие **Да** параметры.  
+ При необходимости вы можете переопределить политику издателя в файле конфигурации приложения. Например, новые версии сборок, которые объявлены как поддерживающие обратную совместимость, могут все-таки нарушать работу приложения. Если вы хотите обойти политику издателя, добавьте [ \<publisherPolicy >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) элемент [ \<dependentAssembly >](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md) элемент в файл конфигурации приложения и задаются **применить** атрибут **не**, что переопределит все предыдущие **Да** параметры.  
   
  `<publisherPolicy apply="no" />`  
   
@@ -82,11 +82,11 @@ ms.locfileid: "32759274"
   
 <a name="BKMK_Specifyingassemblybindinginconfigurationfiles"></a>   
 ## <a name="specifying-assembly-binding-in-configuration-files"></a>Указание привязки сборки в файлах конфигурации  
- Один и тот же формат XML позволяет указать перенаправления привязок в файле конфигурации приложения, в файле конфигурации компьютера и в файле политики издателя. Для перенаправления одной версии сборки на другую, используйте [ \<bindingRedirect >](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) элемента. В атрибуте **OldVersion** можно указать одну версию сборки или диапазон версий. В атрибуте `newVersion` должна быть указана одна версия.  Например, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` указывает, что среда выполнения должна использовать версию 2.0.0.0 вместо версий сборки от 1.1.0.0 до 1.2.0.0.  
+ Один и тот же формат XML позволяет указать перенаправления привязок в файле конфигурации приложения, в файле конфигурации компьютера и в файле политики издателя. Для перенаправления одной версии сборки на другую, используйте [ \<bindingRedirect >](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md) элемент. В атрибуте **OldVersion** можно указать одну версию сборки или диапазон версий. В атрибуте `newVersion` должна быть указана одна версия.  Например, `<bindingRedirect oldVersion="1.1.0.0-1.2.0.0" newVersion="2.0.0.0"/>` указывает, что среда выполнения должна использовать версию 2.0.0.0 вместо версий сборки от 1.1.0.0 до 1.2.0.0.  
   
  Следующий пример кода демонстрирует различные сценарии перенаправления привязки. В примере указывается перенаправление для диапазона версий `myAssembly`и одно перенаправление привязки для `mySecondAssembly`. В примере также указывается, что файл политики издателя не будет переопределять перенаправления привязок для `myThirdAssembly`.  
   
- Чтобы привязать сборку, необходимо указать строку «urn: schemas-microsoft-com:asm.v1» с **xmlns** атрибута в [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) тег.  
+ Чтобы привязать сборку, необходимо указать строку «urn: schemas-microsoft-com:asm.v1» с **xmlns** атрибут в [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) тега.  
   
 ```xml  
 <configuration>  
@@ -120,7 +120,7 @@ ms.locfileid: "32759274"
 ```  
   
 ### <a name="limiting-assembly--bindings-to-a-specific-version"></a>Ограничения привязок сборок определенной версией  
- Можно использовать **appliesTo** атрибут [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) элемент в файле конфигурации приложения, чтобы перенаправить ссылки привязки сборок на определенную версию платформы .NET Платформа. Этот необязательный атрибут содержит номер версии .NET Framework, к которой применяется перенаправление. Если атрибут **appliesTo** не указан, элемент [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) применяется ко всем версиям платформы .NET Framework.  
+ Можно использовать **appliesTo** атрибут [ \<assemblyBinding >](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) элемент в файле конфигурации приложения, чтобы перенаправить ссылки привязки сборок на определенную версию .NET Версия .NET Framework. Этот необязательный атрибут содержит номер версии .NET Framework, к которой применяется перенаправление. Если атрибут **appliesTo** не указан, элемент [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) применяется ко всем версиям платформы .NET Framework.  
   
  Например, чтобы перенаправить привязку сборки для .NET Framework версии 3.5, следует включить в файл конфигурации приложения приведенный ниже код XML.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "32759274"
  [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Настройка приложений](../../../docs/framework/configure-apps/index.md)  
- [Настройка приложений .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Настройка приложений .NET Framework](https://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Схема параметров среды выполнения](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Схема файла конфигурации](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Практическое руководство. Создание политики издателя](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

@@ -3,11 +3,11 @@ title: Роли сервера и базы данных в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
 ms.openlocfilehash: 5fd706d886ea050eb578d5f889d55055665c3a44
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403148"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43517909"
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Роли сервера и базы данных в SQL Server
 Во всех версиях SQL Server используется безопасность на основе ролей, что позволяет назначать разрешения роли или группе пользователей, а не отдельным пользователям. Предопределенные роли сервера и предопределенные роли базы данных имеют предопределенный набор разрешений, назначенных для них.  
@@ -25,7 +25,7 @@ ms.locfileid: "43403148"
   
  Дополнительные сведения о предопределенных ролях SQL Server см. в следующих ресурсах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Роли уровня сервера](/sql/relational-databases/security/authentication-access/server-level-roles) и [разрешения предопределенных ролей сервера](https://msdn.microsoft.com/library/ms175892.aspx) в электронной документации по SQL Server|Описывает предопределенные роли сервера и разрешения, связанные с ними в SQL Server.|  
 |[Роли уровня базы данных](/sql/relational-databases/security/authentication-access/database-level-roles) и [разрешения предопределенных ролей базы данных](https://msdn.microsoft.com/library/ms189612.aspx) в электронной документации по SQL Server|Описывает предопределенные роли базы данных и связанные с ними разрешения|  
@@ -56,7 +56,7 @@ ms.locfileid: "43403148"
   
  Дополнительные сведения об именах входа, пользователях и ролях SQL Server см. в следующих ресурсах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Управление доступом и удостоверениями](https://msdn.microsoft.com/library/bb510418.aspx) в электронной документации по SQL Server|Содержит ссылки на разделы, описывающие участников, роли, учетные данные, защищаемые объекты и разрешения.|  
 |[Субъекты](/sql/relational-databases/security/authentication-access/principals-database-engine) в электронной документации по SQL Server|Описывает участников и содержит ссылки на разделы, описывающие роли сервера и базы данных.|  

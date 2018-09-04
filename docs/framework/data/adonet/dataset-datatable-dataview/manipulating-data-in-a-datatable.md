@@ -2,15 +2,15 @@
 title: Управление данными в таблице данных
 ms.date: 03/30/2017
 ms.assetid: 5cb86d48-a987-4af4-80e0-8cc2c8373d62
-ms.openlocfilehash: f21ac216ed69db99001e324eb34cacf1254fcf6e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a09edc6ce3098ab135d8c27ba0f6ad56cceed159
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757646"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521312"
 ---
 # <a name="manipulating-data-in-a-datatable"></a>Управление данными в таблице данных
-После создания объекта <xref:System.Data.DataTable> в объекте <xref:System.Data.DataSet> можно выполнять такие же действия, как и при использовании таблицы в базе данных. Можно добавлять, просматривать, изменять и удалять данные в таблице. Можно отслеживать ошибки и события; кроме того, можно запрашивать находящиеся в таблице данные. При изменении данных в **DataTable**, также можно проверить правильность изменений и определить, программным образом принять или отклонить изменения.  
+После создания объекта <xref:System.Data.DataTable> в объекте <xref:System.Data.DataSet> можно выполнять такие же действия, как и при использовании таблицы в базе данных. Можно добавлять, просматривать, изменять и удалять данные в таблице. Можно отслеживать ошибки и события; кроме того, можно запрашивать находящиеся в таблице данные. При изменении данных в **DataTable**, также можно проверить правильность изменений и определить, программно принять или отклонить изменения.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Добавление данных в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-data-to-a-datatable.md)  
@@ -20,7 +20,7 @@ ms.locfileid: "32757646"
  Описывает, как получать доступ к данным в строке, включая исходную и текущую версии данных.  
   
  [Метод Load](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/the-load-method.md)  
- Описывает использование **нагрузки** метод для заполнения **DataTable** со строками.  
+ Описание использования **нагрузки** метод для заполнения **DataTable** со строками.  
   
  [Редактирование DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-edits.md)  
  Рассказывает, как изменять данные в строке, в том числе приостанавливать внесение изменений в строку, пока предложенные изменения не будут проверены и приняты.  
@@ -40,4 +40,4 @@ ms.locfileid: "32757646"
 ## <a name="see-also"></a>См. также  
  [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  [Обработка событий DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

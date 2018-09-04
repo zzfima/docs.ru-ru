@@ -10,11 +10,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: f565ef28d0b4d872f7878999c19ef7756e4f7c93
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467423"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503999"
 ---
 # <a name="ui-automation-support-for-the-table-control-type"></a>Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления Table
 > [!NOTE]

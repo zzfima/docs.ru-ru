@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa9e7a4dacceb492dfe037b4b64f22f231323de5
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c08b1f6be41de63886115e5aed6bcad901658bb5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258337"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509224"
 ---
 # <a name="coropenflags-enumeration"></a>Перечисление CorOpenFlags
 Содержит значения флага, которые управляют поведением метаданных при открытии файлов манифеста.  
@@ -61,7 +61,7 @@ typedef enum CorOpenFlags
 |`ofReadOnly`|Указывает, что файл должен быть открыт для чтения, а вызов `QueryInterface` для [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) нельзя сделать.|  
 |`ofTakeOwnership`|Указывает, что память была выделена с помощью вызова [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc) и будет освобождена метаданными.|  
 |`ofNoTypeLib`|Является устаревшей. Этот флаг отклонен.|  
-|`ofNoTransform`|Указывает, что автоматические преобразования из файла .WINMD следует отключить. Другими словами, проекцию типа среды выполнения Windows на тип платформы .NET Framework следует отключить. Дополнительные сведения см. в разделе [под представление о внутренней работе с .NET и среды выполнения Windows](http://msdn.microsoft.com/magazine/jj651569.aspx).|  
+|`ofNoTransform`|Указывает, что автоматические преобразования из файла .WINMD следует отключить. Другими словами, проекцию типа среды выполнения Windows на тип платформы .NET Framework следует отключить. Дополнительные сведения см. в разделе [под представление о внутренней работе с .NET и среды выполнения Windows](https://msdn.microsoft.com/magazine/jj651569.aspx).|  
 |`ofReserved1`|Зарезервировано для внутреннего использования.|  
 |`ofReserved2`|Зарезервировано для внутреннего использования.|  
 |`ofReserved`|Зарезервировано для внутреннего использования.|  

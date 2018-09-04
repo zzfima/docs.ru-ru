@@ -13,11 +13,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: ac1e1f7bc36d8d2b12b99de2794bb0ba31ddbd7a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398736"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518651"
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; элемент
 Указывает, что приложение поддерживает только версию 1.0 среды CLR. Этот элемент устарел и больше не используется. [ `supportedRuntime` ](supportedruntime-element.md) Элемента, которые должны использоваться вместо нее.
@@ -46,7 +46,7 @@ safemode="true|false"/>
   
 ## <a name="safemode-attribute"></a>безопасный режим атрибут  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`false`|Код запуска среды выполнения ищет в реестре. Это значение по умолчанию.|  
 |`true`|Код запуска среды выполнения не выглядит в реестре.|  
@@ -56,7 +56,7 @@ safemode="true|false"/>
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`startup`|Содержит `<requiredRuntime>` элемент.|  

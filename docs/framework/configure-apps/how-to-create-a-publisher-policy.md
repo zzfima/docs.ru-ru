@@ -11,11 +11,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 3fdc3786be3307e8c882a33b5139ee34344733b8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404414"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504822"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Практическое руководство. Создание политики издателя
 Поставщики сборок можно указать, что приложения должны использовать более новой версии сборки, включая файл политики издателя с обновленной сборкой. Файл политики издателя указывает перенаправление сборки и параметры базы кода и используется тот же формат, что и файл конфигурации приложения. Файл политики издателя компилируется в сборку и помещен в глобальном кэше сборок.  
@@ -92,7 +92,7 @@ ms.locfileid: "43404414"
   
 1.  Введите следующую команду в командной строке:  
   
-     **Gacutil /i***publisherPolicyAssemblyFile*   
+     **Gacutil /i***publisherPolicyAssemblyFile*  
   
      Следующая команда добавляет `policy.1.0.myAssembly.dll` в глобальном кэше сборок.  
   

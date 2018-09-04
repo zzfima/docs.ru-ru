@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF], versioning
 ms.assetid: 4a0700cb-5f5f-4137-8705-3a3ecf06461f
 ms.openlocfilehash: 0e91bf597e344dd09e80bee5787e92383065b654
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393189"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43520202"
 ---
 # <a name="data-contract-versioning"></a>Управление версиями контракта данных
 По мере развития приложений может возникнуть необходимость в изменении контрактов данных, используемых службами. В данном разделе описано, как создавать версии контрактов данных. В этом разделе описываются механизмы создания версий контрактов данных. Полный обзор и руководство по управлению версиями, см. в разделе [рекомендации: управление версиями контракта данных](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md).  

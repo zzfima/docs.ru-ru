@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb46b6466ee0ee3d4cdc4b7c934e518fd9f7f082
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40d8edd2b2166b0c90da1ce640dcd16bc33ed9f7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394424"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525313"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>Счетчики производительности в .NET Framework
-В этом разделе представлен перечень счетчиков производительности, которые содержатся в [системном мониторе](http://technet.microsoft.com/library/cc749249.aspx).  
+В этом разделе представлен перечень счетчиков производительности, которые содержатся в [системном мониторе](https://technet.microsoft.com/library/cc749249.aspx).  
   
 -   [Счетчики исключений](#exception)  
   

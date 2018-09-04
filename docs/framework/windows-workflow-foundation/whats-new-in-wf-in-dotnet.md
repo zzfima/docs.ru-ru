@@ -3,11 +3,11 @@ title: Что&#39;возможности в Windows Workflow Foundation в .NET 
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
 ms.openlocfilehash: cfc8be396e9327ee38ea20e8757993aafe7e2151
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396052"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513580"
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Что&#39;возможности в Windows Workflow Foundation в .NET 4.5
 Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] содержит множество новых функций, таких как новые действия, возможности конструктора и модели разработки рабочего процесса. Многие, хотя и не все, новые функции рабочего процесса, представленные в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], поддерживаются в повторно размещенном конструкторе рабочих процессов. Дополнительные сведения о новых возможностях, которые поддерживаются, см. в разделе [Поддержка новых функций Workflow Foundation 4.5 в конструкторе рабочих процессов, повторно размещенными](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). Дополнительные сведения о миграции .NET 3.0 и .NET 3.5 приложений рабочих процессов для использования последней версии, см. в разделе [руководство по миграции](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). В этом разделе содержится общее описание новых возможностей рабочего процесса, представленных в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
 ms.openlocfilehash: 57d9ef87a078655a89a5869a48a1bd16f21b000f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385158"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500930"
 ---
 # <a name="iwpfhostsupport"></a>Интерфейс IWpfHostSupport
 Приложения, размещающие [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] содержимым при помощи PresentationHost.exe Реализуйте этот интерфейс для предоставления точки интеграции между узлом и PresentationHost.exe.  
@@ -30,7 +30,7 @@ ms.locfileid: "43385158"
   
 ## <a name="members"></a>Члены  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |[GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)|Позволяет программе PresentationHost.exe обнаруживать устройства необработанного ввода (устройства HID), которые интересуют ведущее приложение.|  
 |[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)|Вызывается программой PresentationHost.exe всякий раз при получении сообщения, пока не будет возвращено E_NOTIMPL.|  

@@ -2,12 +2,12 @@
 title: Сохранение приложения рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: abcff14c-f047-4195-ba26-d27f4a82c24e
-ms.openlocfilehash: e5c0cf23dd238c0c5a81519b5e6c415f4ef75f1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c225a9ed56a742fce0aaff3704bab31dabb0b9a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519191"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500008"
 ---
 # <a name="persisting-a-workflow-application"></a>Сохранение приложения рабочего процесса
 Этот образец демонстрирует, как запускать приложение <xref:System.Activities.WorkflowApplication>, выгружать его при переходе в состояние бездействия и снова загружать для продолжения выполнения.  
@@ -17,11 +17,11 @@ ms.locfileid: "33519191"
   
  Образцом рабочего процесса может служить действие <xref:System.Activities.Statements.WriteLine>, предлагающее пользователю ввести свое имя, действие `ReadLine`, считывающее имя в качестве входного значения через запрос возобновления <xref:System.Activities.Bookmark>, или другое действие <xref:System.Activities.Statements.WriteLine>, отображающее приветствие пользователю. Время ожидания рабочим процессом входных данных - это естественный момент для запуска операций сохранения. Его часто называют точкой <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle>. <xref:System.Activities.WorkflowApplication> вызывает событие <xref:System.Workflow.Runtime.Tracking.TrackingWorkflowEvent.Idle> всякий раз, когда программа рабочего процесса может быть сохранена, ожидает возобновления закладки, и не выполняются никакие другие работы. В данном образце рабочего процесса этот момент наступает сразу после выполнения действия `ReadLine`.  
   
- Объект <xref:System.Activities.WorkflowApplication> настроен для выполнения операций сохранения <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`. В этом образце используется привязка <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>. <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` Должны быть назначены <xref:System.Activities.WorkflowApplication.InstanceStore%2A> свойства перед <xref:System.Activities.WorkflowApplication> выполняется.  
+ Объект <xref:System.Activities.WorkflowApplication> предназначена для выполнения операций сохранения над <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`. В этом образце используется привязка <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>. <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` Должны быть назначены <xref:System.Activities.WorkflowApplication.InstanceStore%2A> свойства перед <xref:System.Activities.WorkflowApplication> выполняется.  
   
  В этом образце происходит добавление обработчика к событию <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>. Обработчик этого события, возвращая действие <xref:System.Activities.WorkflowApplication>, указывает, что должно делать приложение <xref:System.Activities.PersistableIdleAction>. Если возвращается действие <xref:System.Activities.PersistableIdleAction.Unload>, приложение <xref:System.Activities.WorkflowApplication> будет выгружено.  
   
- Данный образец затем принимает входное значение от пользователя и загружает сохраненный рабочий процесс в новое приложение <xref:System.Activities.WorkflowApplication>. Это достигается путем создания нового <xref:System.Activities.WorkflowApplication>, восстановления <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`и сопоставления завершенных и выгруженных событий в экземпляре и последующего вызова <xref:System.Activities.WorkflowApplication.Load%2A> с идентификатор целевого экземпляра рабочего процесса. После получения экземпляра закладка активности `ReadLine` возобновляется. Рабочий процесс продолжает выполняться в рамках действия `ReadLine` вплоть до завершения. Если рабочий процесс завершения и выгрузки <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` вызывается последний раз, чтобы удалить рабочий процесс.  
+ Данный образец затем принимает входное значение от пользователя и загружает сохраненный рабочий процесс в новое приложение <xref:System.Activities.WorkflowApplication>. Это достигается путем создания нового <xref:System.Activities.WorkflowApplication>, воссоздание <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore`и сопоставления завершенных и выгруженных событий в экземпляре и последующего вызова <xref:System.Activities.WorkflowApplication.Load%2A> с идентификатором экземпляра целевого рабочего процесса. После получения экземпляра закладка активности `ReadLine` возобновляется. Рабочий процесс продолжает выполняться в рамках действия `ReadLine` вплоть до завершения. Когда рабочий процесс завершения и выгрузки <!--zz <xref:System.Runtime.Persistence.InstanceStore> --> `System.Runtime.Persistence.InstanceStore` вызывается еще раз для удаления рабочего процесса.  
   
 #### <a name="to-use-this-sample"></a>Использование этого образца  
   
@@ -39,7 +39,7 @@ ms.locfileid: "33519191"
     > [!CAUTION]
     >  Если база данных установлена в именованном экземпляре SQL Server, обновите строку соединения в коде перед построением решения.  
   
-4.  Запуск образца с правами администратора, перейдите в каталог проекта (\WF\Basic\Persistence\InstancePersistence\bin\Debug) в [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], щелкнув правой кнопкой мыши Workflow.exe и выберите команду **Запуск от имени администратора**.  
+4.  Выполнение примера с правами администратора, перейдите в каталог проекта (\WF\Basic\Persistence\InstancePersistence\bin\Debug) в [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], щелкнув правой кнопкой мыши Workflow.exe и выберите команду **Запуск от имени администратора**.  
   
 #### <a name="to-remove-the-instance-store-database"></a>Удаление базы данных хранилища экземпляров  
   
@@ -52,9 +52,9 @@ ms.locfileid: "33519191"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Persistence\InstancePersistence`  
   
 ## <a name="see-also"></a>См. также  
- [Образцы размещения и сохраняемости образцы](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Образцы размещения AppFabric и сохраняемости](https://go.microsoft.com/fwlink/?LinkId=193961)

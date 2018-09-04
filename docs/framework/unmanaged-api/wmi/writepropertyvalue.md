@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f2a4eb444967390492be33b25866de8a93a1698c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393911"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518297"
 ---
 # <a name="writepropertyvalue-function"></a>Функция WritePropertyValue
-Записывает указанное число байтов для свойства, идентифицируемого по дескриптор свойства.
+Записывает указанное число байт в свойство, заданное маркером свойства.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -61,7 +61,7 @@ HRESULT WritePropertyValue (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |
 |`WBEM_E_TYPE_MISMATCH` | 0x80041005 | Несоответствие типов. |
