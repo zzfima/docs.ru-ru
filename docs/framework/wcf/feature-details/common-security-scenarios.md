@@ -7,11 +7,11 @@ ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 220795488d6e4bedf40e0764040470c18d3a3b48
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402786"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525828"
 ---
 # <a name="common-security-scenarios"></a>Типовые сценарии безопасности
 В подразделах этого раздела рассматривается множество возможных конфигураций безопасности клиентов и служб. Конфигурация зависит от ряда факторов: например, находится ли служба или клиент в интрасети, или чем обеспечивается безопасность - Windows или транспортом (таким как HTTPS).  

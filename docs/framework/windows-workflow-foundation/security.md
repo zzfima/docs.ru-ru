@@ -3,11 +3,11 @@ title: Безопасность
 ms.date: 03/30/2017
 ms.assetid: 737ec121-bfc5-4b75-a504-2d53c2c8af39
 ms.openlocfilehash: 6c4e64e928e3ada4210138878426fea9ffe5bdec
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466686"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519253"
 ---
 # <a name="security"></a>Безопасность
 Хранилище экземпляров рабочих процессов SQL использует следующие роли безопасности базы данных для обеспечения безопасного доступа к сведениям о состоянии экземпляров в базе данных сохраняемости.  

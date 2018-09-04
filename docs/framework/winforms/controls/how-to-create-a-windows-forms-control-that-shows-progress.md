@@ -10,12 +10,12 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: 5773181b8883f0f94ff451808c8c97ce3407970e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bff9bef08cdf7317d4dc8903412e03bfdacb7237
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33531434"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502352"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>Практическое руководство. Создание элемента управления, показывающего прогресс в форме Windows Forms
 В следующем примере кода показан пользовательский элемент управления `FlashTrackBar`, который позволяет показывать пользователю уровень или ход выполнения приложения. Ход выполнения отображается с помощью градиента.  
@@ -26,9 +26,9 @@ ms.locfileid: "33531434"
   
 -   Определение пользовательских событий. (`FlashTrackBar` определяет событие `ValueChanged`.)  
   
--   Переопределение <xref:System.Windows.Forms.Control.OnPaint%2A> метод для предоставления логики для рисования элемента управления.  
+-   Переопределение <xref:System.Windows.Forms.Control.OnPaint%2A> метод для предоставления логики для отрисовки элемента управления.  
   
--   Расчет области, доступной для рисования элемента управления, используя его <xref:System.Windows.Forms.Control.ClientRectangle%2A> свойство. `FlashTrackBar` выполняет это действие в методе `OptimizedInvalidate`.  
+-   Расчет области, доступной для рисования элемента управления с помощью его <xref:System.Windows.Forms.Control.ClientRectangle%2A> свойство. `FlashTrackBar` выполняет это действие в методе `OptimizedInvalidate`.  
   
 -   Реализация сериализации (устойчивости) для свойства при его изменении в конструкторе Windows Forms. `FlashTrackBar` определяет методы `ShouldSerializeStartColor` и `ShouldSerializeEndColor` для сериализации свойств `StartColor` и `EndColor`.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "33531434"
 > [!NOTE]
 >  `FlashTrackBar` использует <xref:System.EventArgs> класс данных события и <xref:System.EventHandler> для делегата события.  
   
- Для обработки соответствующего *EventName* события, `FlashTrackBar` переопределяет следующие методы, которые он наследует от <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
+ Для обработки соответствующих *EventName* события, `FlashTrackBar` переопределяет следующие методы, которые он наследует от <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
 -   <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
@@ -93,5 +93,5 @@ ms.locfileid: "33531434"
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
 ## <a name="see-also"></a>См. также  
- [Расширения поддержки времени разработки](http://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
+ [Расширения поддержки времени разработки](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
  [Основы разработки элементов управления форм Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

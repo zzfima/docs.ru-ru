@@ -3,11 +3,11 @@ title: Каналы WCF с поддержкой ReceiveContext
 ms.date: 03/30/2017
 ms.assetid: d990d119-7321-4b8c-852b-10256f59f9b0
 ms.openlocfilehash: d7f80d0874606129876fbf7dfa30c0327680b922
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43442750"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515934"
 ---
 # <a name="receivecontext-enabled-wcf-channels"></a>Каналы WCF с поддержкой ReceiveContext
 Данный образец демонстрирует применение каналов WCF с поддержкой <xref:System.ServiceModel.Channels.ReceiveContext>. Образец реализует службу для нахождения произведения двух чисел с помощью канала NetMSMQ.  

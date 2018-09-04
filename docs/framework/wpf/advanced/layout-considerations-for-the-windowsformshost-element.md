@@ -10,11 +10,11 @@ helpviewer_keywords:
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
 ms.openlocfilehash: 5856e710ad5a70fd740a5bb99ff241b8d9f2037a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400679"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518953"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Вопросы, связанные с макетом элемента WindowsFormsHost
 Здесь описывается, как <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент взаимодействует с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] система макета.  
@@ -28,7 +28,7 @@ ms.locfileid: "43400679"
   
  Макет в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] зависящие от устройства и скорее всего, будут статическими. Как правило [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] абсолютного позиционирования элементов управления формы с помощью измерений, указанных в аппаратно зависимые пиксели. Тем не менее [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] поддерживают некоторые функции динамического макета, как описано в следующей таблице.  
   
-|Функция макета|Описание:|  
+|Функция макета|Описание|  
 |--------------------|-----------------|  
 |Автоматическое изменение размера|Некоторые [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] изменение размера элементов управления, с целью отображения их содержимое должным образом. Дополнительные сведения см. в разделе [Общие](../../../../docs/framework/winforms/controls/autosize-property-overview.md).|  
 |Привязка и закрепление|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элементы управления поддерживают размещение и изменение размера, основанное на родительском контейнере. Дополнительные сведения см. в разделах <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> и <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
@@ -67,7 +67,7 @@ ms.locfileid: "43400679"
   
  Кроме масштабирования, <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент обрабатывает случаи округления и переполнения, как описано в следующей таблице.  
   
-|Проблема преобразования|Описание:|  
+|Проблема преобразования|Описание|  
 |----------------------|-----------------|  
 |Округление|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] аппаратно независимых пикселах задаются в виде `double`, и [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] оборудования размеры указываются в виде `int`. В случаях, где `double`-измерения, основанные на преобразуются в `int`-на основе измерения, <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент использует стандартное округление, таким образом, чтобы меньше 0,5 дробные значения округляются до 0.|  
 |Переполнение|При <xref:System.Windows.Forms.Integration.WindowsFormsHost> преобразует элемент из `double` значения `int` значения, возможна переполнения. Значения, размер которых превышает <xref:System.Int32.MaxValue> присваивается <xref:System.Int32.MaxValue>.|  

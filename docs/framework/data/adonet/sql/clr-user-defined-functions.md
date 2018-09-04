@@ -3,11 +3,11 @@ title: Пользовательские функции CLR
 ms.date: 03/30/2017
 ms.assetid: 1c59d9d3-6ff9-411b-8b29-b1494d80fdf1
 ms.openlocfilehash: 592a8232f30db075add7bd6b1d61a25352309853
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481406"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502986"
 ---
 # <a name="clr-user-defined-functions"></a>Пользовательские функции CLR
 Определяемые пользователем функции представляют собой подпрограммы, которые могут принимать параметры, выполнять вычисления или другие действия и возвращать результат. Определяемую пользователем функцию можно написать на любом языке программирования Microsoft .NET Framework, например на Microsoft Visual Basic .NET или Microsoft Visual C#.  

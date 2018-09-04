@@ -8,20 +8,20 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 32fd7b7b952ebbc853e41c0a8276d1ab487e619f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a934316517047da6b6aec8e88026024b9a25f65
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561895"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514805"
 ---
 # <a name="xamlname-grammar"></a>Грамматика XamlName
-Грамматика XamlName является определенной грамматикой, определенные в спецификации языка XAML [MS-XAML], которая воспроизводится здесь для удобства.  
+Грамматика XamlName является грамматики, который определен в спецификации языка XAML [MS-XAML], который здесь приведен для удобства.  
   
 ## <a name="from-the-xaml-specification"></a>Из спецификации XAML  
- В спецификации [MS-XAML] определяет грамматику XamlName для определения набора разрешенных символьных идентификаторов, используемых для типов и свойств.  
+ В спецификации [MS-XAML] определяет Грамматика XamlName для определения набора разрешенных символьных идентификаторов, используемых для типов и свойств.  
   
- Строковые значения типа XamlName должны соответствовать следующей грамматике:  
+ Строковые значения, которые имеют тип XamlName должны соответствовать следующей грамматике:  
   
 ```  
 XamlName ::= NameStartChar ( NameChar )*   
@@ -32,7 +32,7 @@ DecimalDigit ::= UnicodeNd
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
 ```  
   
- Предполагается следующие общие значения категорий, как определено в базе данных символов Юникода  
+ Предполагает следующие значения общей категории, как определено в база данных символов Юникода  
   
 ```  
 Lu  
@@ -55,13 +55,13 @@ Nl
 Number, Letter  
 ```  
   
- Код XAML определяет вторую грамматику, DottedXamlName, который используется для свойства и события ссылок на, а также для вложенных элементов. Дополнительные сведения см. в разделе <xref:System.Windows.DependencyProperty> и [Обзор XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
+ XAML определяет вторую грамматику, DottedXamlName, который используется для свойств и событий ссылок, а также для вложенных элементов. Дополнительные сведения см. в разделе <xref:System.Windows.DependencyProperty> и [Обзор XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
   
- Строковые значения типа DottedXamlName должны соответствовать следующей грамматике:  
+ Строковые значения, которые относятся к типу, DottedXamlName должны соответствовать следующей грамматике:  
   
 ```  
 DottedXamlName ::= XamlName '.' XamlName  
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Полную спецификацию в разделе [ \[MS-XAML\]](http://go.microsoft.com/fwlink/?LinkId=114525).
+ Полное же описание объекта, см. в разделе [ \[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525).

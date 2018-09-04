@@ -8,11 +8,11 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: 6f1fb6fa7702d36aa7ddf4c12fe4a370f4e66e23
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486783"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43528796"
 ---
 # <a name="popup-placement-behavior"></a>Поведение при размещении контекстного меню
 Объект <xref:System.Windows.Controls.Primitives.Popup> управления отображает содержимое в отдельном окне, расположенном поверх приложения. Можно указать положение <xref:System.Windows.Controls.Primitives.Popup> по отношению к элементу управления, мыши или экрана с помощью <xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A>, <xref:System.Windows.Controls.Primitives.Popup.Placement%2A>, <xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>, <xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A>, и <xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A> свойства.  Эти свойства совместной работы позволяют гибко указывать положение <xref:System.Windows.Controls.Primitives.Popup>.  

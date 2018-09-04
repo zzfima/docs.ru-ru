@@ -2,22 +2,22 @@
 title: Действия доступа к базе данных
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: e9c7627738d3c5313a4f3e6e4451daf78b87839a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e315742226ab086a865fa53d7aab9e7f15add08
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520413"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502832"
 ---
 # <a name="database-access-activities"></a>Действия доступа к базе данных
-Действия доступа к базе данных позволяют обращаться к базе данных из рабочего процесса. Эти действия позволяют доступ к базам данных, чтобы вернуть или изменить сведения, а также использовать [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) для доступа к базе данных.  
+Действия доступа к базе данных позволяют обращаться к базе данных из рабочего процесса. Эти действия позволяют доступ к базам данных, чтобы вернуть или изменить сведения, а также использовать [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) для доступа к базе данных.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите на загрузки страницы, чтобы загрузить все Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к (загрузка страницы) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`  
   
@@ -88,7 +88,7 @@ Public class DbUpdate: AsyncCodeActivity
   
  Запрос для выполнения настраивается в свойстве `Sql`, а параметры передаются через коллекцию `Parameters`.  
   
- После `DbQueryScalar` — выполняется, скалярное значение возвращается в `Result``out` аргумент (типа `TResult`, который определен в базовом классе <xref:System.Activities.AsyncCodeActivity%601>).  
+ После `DbQueryScalar` является выполнении скалярное значение возвращается в `Result``out` аргумент (типа `TResult`, который определен в базовом классе <xref:System.Activities.AsyncCodeActivity%601>).  
   
 ```  
 public class DbQueryScalar<TResult> : AsyncCodeActivity<TResult>  
@@ -189,8 +189,8 @@ public class DbQuery<TResult> : AsyncCodeActivity<IList<TResult>> where TResult 
 |CommandType|Тип выполняемой команды <xref:System.Data.Common.DbCommand>.|  
 |Sql|Выполняемая команда SQL.|  
 |Параметры|Коллекция параметров SQL-запроса.|  
-|Сопоставитель|Функция сопоставления (<xref:System.Func%601><`DbDataReader`, `TResult`>), принимает запись в `DataReader` полученном в результате выполнения запроса и возвращает экземпляр объекта типа `TResult` для добавления `Result` коллекции.<br /><br /> В этом случае сопоставление совершается на одном шаге выполнения, но декларативное авторство с использованием конструктора невозможно.|  
-|MapperFunc|Функция сопоставления (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>), принимает запись в `DataReader` полученном в результате выполнения запроса и возвращает экземпляр объекта типа `TResult` для добавления `Result` коллекции.<br /><br /> В этом случае сопоставление совершается в несколько шагов выполнения. Для этой функции возможны сериализация в XAML и декларативное авторство (любое существующее действие может участвовать в сопоставлении).|  
+|Сопоставитель|Функция сопоставления (<xref:System.Func%601><`DbDataReader`, `TResult`>), принимает запись в `DataReader` полученном в результате выполнения запроса и возвращает экземпляр объекта типа `TResult` добавляемый `Result` коллекции.<br /><br /> В этом случае сопоставление совершается на одном шаге выполнения, но декларативное авторство с использованием конструктора невозможно.|  
+|MapperFunc|Функция сопоставления (<xref:System.Activities.ActivityFunc%601><`DbDataReader`, `TResult`>), принимает запись в `DataReader` полученном в результате выполнения запроса и возвращает экземпляр объекта типа `TResult` добавляемый `Result` коллекции.<br /><br /> В этом случае сопоставление совершается в несколько шагов выполнения. Для этой функции возможны сериализация в XAML и декларативное авторство (любое существующее действие может участвовать в сопоставлении).|  
 |Результат|Список объектов, полученный в результате выполнения запроса и выполнения функции сопоставления для каждой записи в `DataReader`.|  
   
 ## <a name="dbquerydataset"></a>DbQueryDataSet  
@@ -325,6 +325,6 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\DbActivities`

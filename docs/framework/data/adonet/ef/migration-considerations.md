@@ -3,11 +3,11 @@ title: Вопросы миграции (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
 ms.openlocfilehash: d6643986190b376e188b19851b044bcf05ff7f02
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399821"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511026"
 ---
 # <a name="migration-considerations-entity-framework"></a>Вопросы миграции (Entity Framework)
 Платформа [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework предоставляет существующим приложениям ряд преимуществ. Наиболее важным из них является возможность использования концептуальной модели для отделения структур данных, используемых приложением, от схемы в источнике данных. Это позволяет в дальнейшем значительно упростить внесение изменений в модель хранения или сам источник данных, устранив необходимость внесения соответствующих изменений в приложение. Дополнительные сведения о преимуществах использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], см. в разделе [Обзор Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) и [модели EDM](../../../../../docs/framework/data/adonet/entity-data-model.md).  

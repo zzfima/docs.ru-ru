@@ -3,11 +3,11 @@ title: Функциональное преобразование XML (Visual Bas
 ms.date: 07/20/2015
 ms.assetid: fdbe5b91-f457-4b4e-a11b-def4bdd77bab
 ms.openlocfilehash: 25e5d743b983badaefa3012b8839e4b039419ee9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403912"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532051"
 ---
 # <a name="functional-transformation-of-xml-visual-basic"></a>Функциональное преобразование XML (Visual Basic)
 В этом разделе описан подход с использованием чисто функционального преобразования для изменения XML-документов и производится сравнение его с процедурным подходом.  

@@ -16,15 +16,15 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e0710b26237b350f1dfbc7d2464b7a131373604e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 95ef445d41672c5c2895bd7115afb6a73a57e8f9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460425"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542171"
 ---
 # <a name="formatfromrawvalue-function"></a>Функция FormatFromRawValue
-Преобразует одно значение данных оценки производительности в указанный формат или два значения данных для оценки производительности, если преобразование формата выполняется на основе времени.   
+Преобразует одно значение необработанных данных о производительности в указанный формат или делает это для двух значений, если преобразование формата зависит от времени.   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
@@ -44,10 +44,10 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>Параметры
 
 `dwCounterType`  
-[in] Тип счетчика. Список типов счетчиков см. в разделе [типы счетчиков производительности WMI](https://msdn.microsoft.com/library/aa394569(v=vs.85).aspx). `dwCounterType` может иметь любой тип счетчика, за исключением `PERF_LARGE_RAW_FRACTION` и `PERF_LARGE_RAW_BASE`. 
+[in] Тип счетчика. Список типов счетчиков, см. в разделе [типы счетчиков производительности WMI](/windows/desktop/WmiSdk/wmi-performance-counter-types). `dwCounterType` может иметь любой тип счетчика, за исключением `PERF_LARGE_RAW_FRACTION` и `PERF_LARGE_RAW_BASE`. 
 
 `dwFormat`  
-[in] Формат, в который требуется преобразовать необработанные данные производительности. Он может принимать одно из следующих значений:
+[in] Формат, в который требуется преобразовать необработанные данные. Он может принимать одно из следующих значений:
 
 |Константа  |Значение  |Описание |
 |---------|---------|---------|
@@ -55,30 +55,30 @@ int FormatFromRawValue (
 | `PDH_FMT_LARGE` | 0x00000400 | Возвращает вычисленное значение как 64-разрядное целое число. |
 | `PDH_FMT_LONG` | 0x00000100 | Возвращает вычисленное значение как 32-разрядное целое число. |
 
-Одно из предыдущих значений можно связать логическим с одним из следующих флагов масштабирования:
+Одно из предыдущих значений может быть ORed с одним из следующих флагов масштабирования:
 
 |Константа  |Значение  |Описание |
 |---------|---------|---------|
 | `PDH_FMT_NOSCALE` | 0x00001000 | Коэффициенты масштабирования счетчика не применяются. |
-| `PDH_FMT_1000` | 0x00002000 | Умножьте окончательное значение 1000. | 
+| `PDH_FMT_1000` | 0x00002000 | Умножьте конечное значение 1000. | 
 
 `pTimeBase`  
-[in] Указатель на базовое время, если это необходимо для преобразования формата. Если базовые сведения о времени не является обязательной для преобразования формата, значение этого параметра учитывается.
+[in] Указатель на базовое время, при необходимости для преобразования формата. Если базовые сведения о времени не является обязательной для преобразования формата, значение этого параметра игнорируется.
 
-`pRawValue1` [in] Указатель на [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) структуру, которая представляет значение оценки производительности.
+`pRawValue1` [in] Указатель на [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) структура, представляющая значение оценки производительности.
 
-`pRawValue2` [in] Указатель на [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) структуру, которая представляет значение секунд оценки производительности. Если второе значение оценки производительности не является обязательной, этот параметр должен быть `null`.
+`pRawValue2` [in] Указатель на [ `PDH_RAW_COUNTER` ](https://msdn.microsoft.com/library/windows/desktop/aa373060(v=vs.85).aspx) структура, представляющая значение секунд оценки производительности. Если второе значение оценки производительности не требуется, этот параметр должен быть `null`.
 
-`pFmtValue` [out] Указатель на [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) структуру, которая получает значение форматированные производительности.
+`pFmtValue` [out] Указатель на [ `PDH_FMT_COUNTERVALUE` ](https://msdn.microsoft.com/library/windows/desktop/aa373050(v=vs.85).aspx) структуры, который получает значение форматированного производительности.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Эта функция возвращаются следующие значения.
+Эта функция возвращаются следующие значения:
 
 |Константа  |Значение  |Описание  |
 |---------|---------|---------|
-| `ERROR_SUCCESS` | 0 | Вызов функции выполняется успешно. |
-| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Обязательный аргумент отсутствует или является недопустимым. | 
+| `ERROR_SUCCESS` | 0 | Вызов функции был успешным. |
+| `PDH_INVALID_ARGUMENT` | 0xC0000BBD | Обязательный аргумент отсутствует или неверен. | 
 | `PDH_INVALID_HANDLE` | 0xC0000BBC | Дескриптор не является допустимым PDH-объектом. |
   
 ## <a name="remarks"></a>Примечания
@@ -86,11 +86,11 @@ int FormatFromRawValue (
 Эта функция создает оболочку для вызова [FormatFromRawValue](https://msdn.microsoft.com/library/ms231047(v=vs.85).aspx) функции.
 
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Библиотека:** PerfCounter.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>См. также  
-[WMI и счетчиков производительности (Справочник по неуправляемым API)](index.md)
+[WMI и счетчики производительности (Справочник по неуправляемым API)](index.md)

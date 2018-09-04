@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: c1d8b9dd579cae7f4868058343c034caf17c5fff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7588b2b4592a5298a69eb4adfbc06edb6913ef76
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362068"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519100"
 ---
 # <a name="performing-catalog-operations"></a>Выполнение операций каталога
-Для выполнения команды для изменения базы данных или каталога, такие как инструкция CREATE TABLE или CREATE PROCEDURE, создайте **команда** с помощью соответствующих инструкций SQL и **подключения** объекта. Выполните команду с **ExecuteNonQuery** метод **команда** объекта.  
+Чтобы выполнить команду изменения базы данных или каталога, такие как инструкция CREATE TABLE или CREATE PROCEDURE, создайте **команда** с помощью соответствующих инструкций SQL и **подключения** объекта. Выполните команду с **ExecuteNonQuery** метод **команда** объекта.  
   
  В следующем примере кода создается хранимая процедура в базе данных Microsoft SQL Server.  
   
@@ -48,4 +48,4 @@ command.ExecuteNonQuery();
 ## <a name="see-also"></a>См. также  
  [Использование команд для изменения данных](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)  
  [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

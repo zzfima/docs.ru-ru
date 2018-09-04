@@ -10,11 +10,11 @@ helpviewer_keywords:
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
 ms.openlocfilehash: 6f5a89ebe359ca2fdae1d5545192dc2dcecca6a2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401379"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529818"
 ---
 # <a name="synclock-statement"></a>Оператор SyncLock
 Применяет монопольную блокировку для блока инструкций, перед выполнением блока.  
@@ -75,7 +75,7 @@ End SyncLock
   
 ## <a name="examples"></a>Примеры  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере класс, который поддерживает простой список сообщений. Сообщения хранятся в массиве, а последний элемент этого массива в переменной. `addAnotherMessage` Процедура увеличивает значение последнего элемента и сохраняет новое сообщение. Эти две операции защищены с помощью `SyncLock` и `End SyncLock` инструкции, так как после последнего элемента был увеличен, должен храниться новое сообщение, прежде, чем любой другой поток может снова увеличить последнего элемента.  
   
  Если `simpleMessageList` один список сообщений для всех его экземпляров, переменные общих классов `messagesList` и `messagesLast` должна быть объявлена как `Shared`. В данном случае переменная `messagesLock` также должен быть `Shared`, таким образом, чтобы могла быть объект блокировки, используемые каждым экземпляром.  
@@ -83,7 +83,7 @@ End SyncLock
 ### <a name="code"></a>Код  
  [!code-vb[VbVbalrThreading#1](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/synclock-statement_1.vb)]  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В следующем примере используются потоки и `SyncLock`. Поскольку `SyncLock` присутствует оператор, блокировка оператора является критической секции и `balance` никогда не будет отрицательным числом. Вы можете закомментировать `SyncLock` и `End SyncLock` инструкции, чтобы увидеть эффект пропускают `SyncLock` ключевое слово.  
   
 ### <a name="code"></a>Код  

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - XML axis [Visual Basic], Value
 - XML Value property [Visual Basic]
 ms.assetid: 7ddd057a-a195-4e9b-ad8b-2ee0e615a20f
-ms.openlocfilehash: 927158f940d9b96cd06873c7d3e710be91b887e9
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 2b0719320db5843d5d010bfbd70e551646e3ded9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071623"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533395"
 ---
 # <a name="xml-value-property-visual-basic"></a>Свойство значения XML (Visual Basic)
-Предоставляет доступ к значению первого элемента из коллекции <xref:System.Xml.Linq.XElement> объектов.  
+Предоставляет доступ к значению первого элемента в коллекцию <xref:System.Xml.Linq.XElement> объектов.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -32,23 +32,23 @@ object.Value
 |`object`|Обязательно. Коллекция объектов <xref:System.Xml.Linq.XElement>.|  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Объект `String` , содержащий значение первого элемента коллекции, или `Nothing` Если возвращается пустая коллекция.  
+ Объект `String` , содержащий значение первого элемента коллекции, или `Nothing` если коллекция пуста.  
   
 ## <a name="remarks"></a>Примечания  
- <xref:System.Xml.Linq.XElement.Value%2A> Свойство позволяет легко обращаться к значению первого элемента в коллекции <xref:System.Xml.Linq.XElement> объектов. Это свойство сначала проверяет, содержит ли коллекция хотя бы один объект. Если коллекция пуста, это свойство возвращает `Nothing`. В противном случае это свойство возвращает значение <xref:System.Xml.Linq.XElement.Value%2A> свойства первого элемента в коллекции.  
+ <xref:System.Xml.Linq.XElement.Value%2A> Свойство позволяет легко получить доступ к значению первого элемента в коллекции <xref:System.Xml.Linq.XElement> объектов. Это свойство сначала проверяет, содержит ли коллекция хотя бы один объект. Если коллекция пуста, это свойство возвращает `Nothing`. В противном случае это свойство возвращает значение <xref:System.Xml.Linq.XElement.Value%2A> свойства первого элемента в коллекции.  
   
 > [!NOTE]
 >  При доступе к значение атрибута XML с помощью "\@" идентификатор, значение атрибута возвращается в виде `String` и вам не нужно явно указать <xref:System.Xml.Linq.XAttribute.Value%2A> свойство.  
   
- Чтобы получить доступ к другим элементам в коллекции, можно использовать свойство-индексатор расширения XML. Дополнительные сведения см. в разделе [свойство-индексатор расширения](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
+ Для доступа к другим элементам в коллекции, можно использовать свойство-индексатор расширения XML. Дополнительные сведения см. в разделе [свойство-индексатор расширения](../../../visual-basic/language-reference/xml-axis/extension-indexer-property.md).  
   
 ## <a name="inheritance"></a>Наследование  
- Большинство пользователей не будет реализовать <xref:System.Collections.Generic.IEnumerable%601>и поэтому может игнорировать в этом разделе.  
+ Большинство пользователей не будет реализовать <xref:System.Collections.Generic.IEnumerable%601>и таким образом можно игнорировать в этом разделе.  
   
- <xref:System.Xml.Linq.XElement.Value%2A> Свойство расширения для типов, реализующих `IEnumerable(Of XElement)`. Привязка этого расширенного свойства — как привязка методов расширения: Если тип реализует один из интерфейсов и определяет свойство с именем «Значение», это свойство имеет приоритет над свойством расширения. Другими словами, это <xref:System.Xml.Linq.XElement.Value%2A> свойство может быть переопределено, определив новое свойство в класс, реализующий `IEnumerable(Of XElement)`.  
+ <xref:System.Xml.Linq.XElement.Value%2A> Свойство является свойством расширения для типов, реализующих `IEnumerable(Of XElement)`. Привязка этого свойства расширения имеет как привязка методов расширения: Если тип реализует один из интерфейсов и определяет свойство с именем «Value», это свойство имеет приоритет над свойством расширения. Другими словами, это <xref:System.Xml.Linq.XElement.Value%2A> свойство можно переопределить, определив новое свойство в класс, реализующий `IEnumerable(Of XElement)`.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать <xref:System.Xml.Linq.XElement.Value%2A> свойство для доступа к первым узлом в коллекцию <xref:System.Xml.Linq.XElement> объектов. В примере используется свойство дочерней оси для получения коллекции всех дочерних узлов с именем `phone` , находящихся в `contact` объекта.  
+ В следующем примере показано, как использовать <xref:System.Xml.Linq.XElement.Value%2A> свойство для доступа к первым узлом в коллекцию <xref:System.Xml.Linq.XElement> объектов. В примере используется свойство дочерней оси для получения коллекции всех дочерних узлов с именем `phone` , находящиеся в `contact` объекта.  
   
  [!code-vb[VbXMLSamples#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_1.vb)]  
   
@@ -57,7 +57,7 @@ object.Value
  `Phone number: 206-555-0144`  
   
 ## <a name="example"></a>Пример  
- Приведенный ниже показано, как получить значение атрибута XML из коллекции <xref:System.Xml.Linq.XAttribute> объектов. В примере используется свойство оси атрибута для отображения значения `type` атрибутов для всех `phone` элементов.  
+ В следующем примере показано, как получить значение атрибута XML из коллекции <xref:System.Xml.Linq.XAttribute> объектов. В примере используется свойство оси атрибута для отображения значения `type` атрибутов для всех `phone` элементов.  
   
  [!code-vb[VbXMLSamples#16](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/xml-value-property_2.vb)]  
   
@@ -70,7 +70,7 @@ object.Value
 ## <a name="see-also"></a>См. также  
  <xref:System.Xml.Linq.XElement>  
  <xref:System.Collections.Generic.IEnumerable%601>  
- [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/index.md)  
  [XML-литералы](../../../visual-basic/language-reference/xml-literals/index.md)  
  [Создание XML в Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
  [Методы расширения](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)  

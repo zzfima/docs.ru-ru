@@ -3,11 +3,11 @@ title: Создание действия DynamicActivity
 ms.date: 03/30/2017
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
 ms.openlocfilehash: 270066fafd5c71b2a720ca305433159c172872aa
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385265"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534021"
 ---
 # <a name="dynamicactivity-creation"></a>Создание действия DynamicActivity
 В этом образце показываются два разных способа создания действия во время выполнения с помощью действия <xref:System.Activities.DynamicActivity>.  

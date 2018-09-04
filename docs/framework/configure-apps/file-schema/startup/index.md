@@ -10,16 +10,16 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 68f37e3efca784b94be90d5779c9bc402f144448
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465477"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530338"
 ---
 # <a name="startup-settings-schema"></a>Схема параметров запуска
 Параметры запуска определяют версию среды CLR, в которой должно выполняться приложение.  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<requiredRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|Указывает, что приложение поддерживает только версию 1.0 среды CLR. Приложения, созданные с помощью среды выполнения версии 1.1, должны использовать элемент **\<supportedRuntime>**.|  
 |[\<supportedRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)|Указывает, какие версии среды CLR поддерживает приложение.|  

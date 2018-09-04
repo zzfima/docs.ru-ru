@@ -2,15 +2,15 @@
 title: Клиент ASMX со службой WCF
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: 93a881e486d82183fc42c524f3d83527c649516d
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3465954cc937e1611634c8cd13a9264173e71817
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805133"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507203"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>Клиент ASMX со службой WCF
-В этом примере показано, как создать службу с помощью Windows Communication Foundation (WCF) и получить доступ к службе из клиента не WCF, например из клиента ASMX.  
+В этом примере показано, как создать службу с помощью Windows Communication Foundation (WCF) и затем получить доступ к службе из клиента не WCF, например из клиента ASMX.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -34,7 +34,7 @@ public interface ICalculator
 }  
 ```  
   
- Объекты <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Xml.Serialization.XmlSerializer> сопоставляют типы среды CLR с XML-представлением. <xref:System.Runtime.Serialization.DataContractSerializer> интерпретирует некоторые XML-представления не так, как XmlSerializer. WCF не генераторы прокси, например Wsdl.exe, создать более удобный интерфейс при использовании класса XmlSerializer. <xref:System.ServiceModel.XmlSerializerFormatAttribute> Применяется к `ICalculator` интерфейс, чтобы убедиться, что класс XmlSerializer используется для сопоставления типов среды CLR в XML. Реализация службы выполняет вычисления и возвращает соответствующий результат.  
+ Объекты <xref:System.Runtime.Serialization.DataContractSerializer> и <xref:System.Xml.Serialization.XmlSerializer> сопоставляют типы среды CLR с XML-представлением. <xref:System.Runtime.Serialization.DataContractSerializer> интерпретирует некоторые XML-представления не так, как XmlSerializer. Генераторы прокси-сервера не WCF, например Wsdl.exe, создать более удобный интерфейс при использовании XmlSerializer. <xref:System.ServiceModel.XmlSerializerFormatAttribute> Применяется к `ICalculator` интерфейс, чтобы убедиться, что класс XmlSerializer используется для сопоставления типов среды CLR в XML. Реализация службы выполняет вычисления и возвращает соответствующий результат.  
   
  Служба предоставляет одну конечную точку для взаимодействия с ней; конечная точка определяется в файле конфигурации (Web.config). Конечная точка состоит из адреса, привязки и контракта. Служба предоставляет конечную точку по базовому адресу, предоставляемую узлом IIS. Для атрибута `binding` задается значение basicHttpBinding, что обеспечивает взаимодействие по протоколу HTTP с использованием протокола SOAP 1.1, который совместим со спецификацией WS-I BasicProfile 1.1, как показано в следующем образце конфигурации.  
   
@@ -50,7 +50,7 @@ public interface ICalculator
 </services>  
 ```  
   
- Клиент ASMX взаимодействует со службой WCF, с помощью типизированного прокси, созданный программой (Wsdl.exe) языка описания веб-служб (WSDL). Типизированный прокси содержится в файле generatedClient.cs. Специальная программа WSDL извлекает метаданные для заданной службы и создает типизированный прокси, который будет использоваться клиентом для взаимодействия. По умолчанию платформа не предоставляет никаких метаданных. Чтобы предоставлять метаданные, необходимые для создания прокси-сервер, необходимо добавить [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) и задайте его `httpGetEnabled` атрибут `True` как показано в следующей конфигурации.  
+ Клиент ASMX взаимодействует со службой WCF, с помощью типизированного прокси, который создается с помощью языка описания служб (WSDL) программы (Wsdl.exe). Типизированный прокси содержится в файле generatedClient.cs. Специальная программа WSDL извлекает метаданные для заданной службы и создает типизированный прокси, который будет использоваться клиентом для взаимодействия. По умолчанию платформа не предоставляет никаких метаданных. Чтобы предоставить метаданные, необходимые для создания прокси-сервер, необходимо добавить [ \<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) и задайте его `httpGetEnabled` атрибут `True` как показано в следующей конфигурации.  
   
 ```xml  
 <behaviors>  
@@ -135,17 +135,17 @@ Press <ENTER> to terminate client.
   
 2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!NOTE]
->  Дополнительные сведения о передаче и возврат сложных данных см. типы: [привязки данных в клиенте Windows Forms](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [привязка данных в клиенте Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), и [данных Привязки в клиенте ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
+>  Дополнительные сведения о передаче и возврат сложных данных типов см. в разделе: [привязки данных в клиенте Windows Forms](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md), [привязки данных в клиенте Windows Presentation Foundation](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md), и [данных Привязки в клиенте ASP.NET](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Interop\ASMX`  
   

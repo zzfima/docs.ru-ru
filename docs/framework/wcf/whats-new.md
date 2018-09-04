@@ -1,25 +1,25 @@
 ---
-title: Что&#39;новые возможности Windows Communication Foundation 4.5
+title: Что&#39;возможности в Windows Communication Foundation 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: 910da1073f0dc787be26d2c87b5bf49b4115aaef
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: db4a1d1e515dee5b107b2c2067d8b0fe58ccf836
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809905"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43537778"
 ---
-# <a name="what39s-new-in-windows-communication-foundation-45"></a>Что&#39;новые возможности Windows Communication Foundation 4.5
-В этом разделе рассматриваются функции, новые для Windows Communication Foundation (WCF).  
+# <a name="what39s-new-in-windows-communication-foundation-45"></a>Что&#39;возможности в Windows Communication Foundation 4.5
+В этом разделе рассматриваются функции нового в Windows Communication Foundation (WCF).  
   
 ## <a name="wcf-simplification-features"></a>Возможности упрощения WCF  
  Много работы было посвящено тому, чтобы сделать разработку и поддержку приложений WCF 4.5 более легкой. Дополнительные сведения см. в разделе [возможности упрощения WCF](../../../docs/framework/wcf/wcf-simplification-features.md).  
   
 ### <a name="task-based-async-support"></a>Поддержка асинхронного выполнения задач  
- По умолчанию команда добавления ссылки на службу формирует методы асинхронных операций службы, возвращающие объекты задач. Это выполняется как для синхронных, так и для асинхронных методов. Это позволяет вызывать операции службы асинхронно, используя новую модель асинхронного программирования на основе задач. При вызове сформированного прокси-метода WCF создает объект задачи, представляющий асинхронную операцию, и возвращает ее. После завершения операции завершения задачи.  При реализации асинхронной операции можно реализовать его как на основе задач асинхронной операции. Дополнительные сведения см. в разделе [синхронной и асинхронной операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
+ По умолчанию команда добавления ссылки на службу формирует методы асинхронных операций службы, возвращающие объекты задач. Это выполняется как для синхронных, так и для асинхронных методов. Это позволяет вызывать операции службы асинхронно, используя новую модель асинхронного программирования на основе задач. При вызове сформированного прокси-метода WCF создает объект задачи, представляющий асинхронную операцию, и возвращает ее. Задача завершается при завершении операции.  При реализации асинхронной операции можно реализовать его как на основе задач асинхронной операции. Дополнительные сведения см. [синхронные и асинхронные операции](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md).  
   
 ### <a name="simplified-generated-configuration-files"></a>Упрощенные сформированные файлы конфигурации  
  Клиентский файл конфигурации создается при добавлении ссылки на службу в Visual Studio или при использовании средства SvcUtil.exe. В предыдущих версиях WCF эти файлы конфигурации содержали значения каждого свойства привязки, даже если значение было значением по умолчанию. В WCF 4.5 сформированные файлы конфигурации содержат только те свойства привязки, которым присвоено значение не по умолчанию.  
@@ -30,10 +30,10 @@ ms.locfileid: "33809905"
  WCF теперь поддерживает разработку в соответствии с парадигмой «Сначала контракт». Средство svcutl.exe имеет переключатель /serviceContract, который позволяет создавать контракты службы и данных на основе WSDL-документа.  
   
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>Добавление ссылки на службу из проекта переносимого подмножества  
- Проекты переносимого подмножества позволяют программистам, создающим сборки .NET, поддерживать одно дерево исходного кода и создавать сборки, одновременно поддерживая несколько платформ .NET (настольные приложения, Silverlight, Windows Phone и XBOX). Проекты переносимого подмножества обращаются только к переносимым сборкам .NET framework, можно использовать на любой платформе .NET. Процесс добавления такой же, как и при добавлении ссылки на службу в рамках любого другого клиентского приложения WCF. Дополнительные сведения см. в разделе [добавить ссылку на службу в проект переносного подмножества](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md).  
+ Проекты переносимого подмножества позволяют программистам, создающим сборки .NET, поддерживать одно дерево исходного кода и создавать сборки, одновременно поддерживая несколько платформ .NET (настольные приложения, Silverlight, Windows Phone и XBOX). Проекты переносимого подмножества ссылаться только на переносимые библиотеки .NET, которые являются сборкой .NET framework, который можно использовать на любой платформе .NET. Процесс добавления такой же, как и при добавлении ссылки на службу в рамках любого другого клиентского приложения WCF. Дополнительные сведения см. в разделе [добавить ссылку на службу в проект переносного подмножества](../../../docs/framework/wcf/add-service-reference-in-a-portable-subset-project.md).  
   
 ### <a name="aspnet-compatibility-mode-default-changed"></a>Изменились значения по умолчанию для режима совместимости с ASP.NET  
- WCF предоставляет режим совместимости с ASP.NET, дающий разработчикам при создании служб WCF полный доступ к возможностям HTTP-конвейера ASP.NET. Чтобы использовать этот режим, необходимо задать `aspNetCompatibilityEnabled` атрибута значение true в [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) файла Web.config. Кроме того, у любой службы в данном домене приложения свойство `RequirementsMode` в ее атрибуте <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> должно быть задано как значение <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> или <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>. По умолчанию <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> теперь настроен для <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>. Дополнительные сведения см. в разделе [новые возможности в Windows Communication Foundation](../../../docs/framework/wcf/whats-new.md) и [службы WCF и ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
+ WCF предоставляет режим совместимости с ASP.NET, дающий разработчикам при создании служб WCF полный доступ к возможностям HTTP-конвейера ASP.NET. Для использования этого режима необходимо задать `aspNetCompatibilityEnabled` атрибута в значение true в [ \<serviceHostingEnvironment >](../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md) разделе файла web.config. Кроме того, у любой службы в данном домене приложения свойство `RequirementsMode` в ее атрибуте <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> должно быть задано как значение <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> или <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>. По умолчанию <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> теперь настроен для <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed>. Дополнительные сведения см. в разделе [новые возможности в Windows Communication Foundation](../../../docs/framework/wcf/whats-new.md) и [службы WCF и ASP.NET](../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).  
   
 ### <a name="new-transport-default-values"></a>Новые значения по умолчанию для свойств транспорта  
  Для упрощения настройки были изменены несколько значений по умолчанию для свойств транспорта. Дополнительные сведения см. в разделе [возможности упрощения WCF](../../../docs/framework/wcf/wcf-simplification-features.md).  
@@ -54,10 +54,10 @@ ms.locfileid: "33809905"
  Было добавлено сопоставление протокола HTTPS для упрощения предоставления доступа к конечной точке по протоколу HTTPS. Чтобы включить конечную точку HTTPS, убедитесь, что веб-сайт имеет привязку HTTPS и настроенный SSL-сертификат, а затем просто включите HTTPS для виртуального каталога, в котором размещается служба. Если для службы включены метаданные, то доступ к ней будет также предоставлен по протоколу HTTPS.  
   
 ## <a name="generating-a-single-wsdl-document"></a>Создание одного документа WSDL  
- Некоторые стеки обработки WSDL от сторонних производителей не могут обрабатывать документы WSDL, которые имеют зависимости от других документов посредством xsd:import.  WCF теперь позволяет указывать, что все данные WSDL должны быть возвращены в одном документе. Чтобы запросить один документ WSDL, добавьте «? singleWSDL» в URI, при запросе метаданных от службы.  
+ Некоторые стеки обработки WSDL от сторонних производителей не могут обрабатывать документы WSDL, которые имеют зависимости от других документов посредством xsd:import.  WCF теперь позволяет указывать, что все данные WSDL должны быть возвращены в одном документе. Чтобы запросить один документ WSDL, добавьте «? singleWSDL» к URL-АДРЕСУ при запросе метаданных от службы.  
   
 ## <a name="websocket-support"></a>Поддержка WebSocket  
- WebSockets - это технология, которая обеспечивает истинный двусторонний обмен сообщениями по портам 80 и 443, имеющий характеристики производительности, схожие с протоколом TCP. Были добавлены две привязки для поддержки обмена данными через транспорт WebSocket. <xref:System.ServiceModel.NetHttpBinding> и <xref:System.ServiceModel.NetHttpsBinding>. Дополнительные сведения см.: [привязка, предоставляемая системой](../../../docs/framework/wcf/system-provided-bindings.md).  
+ WebSockets - это технология, которая обеспечивает истинный двусторонний обмен сообщениями по портам 80 и 443, имеющий характеристики производительности, схожие с протоколом TCP. Были добавлены две привязки для поддержки обмена данными через транспорт WebSocket. <xref:System.ServiceModel.NetHttpBinding> и <xref:System.ServiceModel.NetHttpsBinding>. Дополнительные сведения см. в разделе: [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md).  
   
 ## <a name="new-transport-default-values"></a>Новые значения по умолчанию для свойств транспорта  
  В следующей таблице описываются измененные настройки и разделы, в которых можно найти дополнительные сведения.  
@@ -66,15 +66,15 @@ ms.locfileid: "33809905"
 |--------------|--------|-----------------|------------------------------|  
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 секунд|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|  
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * количество процессоров|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|  
-|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * количество процессоров для транспорта<br /><br /> 4 \* количество процессоров для SMSvcHost.exe|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Настройка службы совместного использования портов Net.TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
+|maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * количество процессоров для транспорта<br /><br /> 4 \* количество процессоров для SMSvcHost.exe|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> [Настройка службы совместного использования портов Net.TCP](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * количество процессоров|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|  
-|receiveTimeout|SMSvcHost.exe|30 секунд|[Настройка службы совместного использования портов Net.TCP](http://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
+|receiveTimeout|SMSvcHost.exe|30 секунд|[Настройка службы совместного использования портов Net.TCP](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)|  
   
 ## <a name="xml-editor-tooltips"></a>Подсказки в редакторе XML  
  В XML-редакторе Visual Studio отображаются подсказки для каждого элемента конфигурации (и его свойств), входящего в файл конфигурации службы. Это облегчает работу разработчиков по конфигурации WCF-служб.  
   
 ## <a name="configuring-wcf-services-in-code"></a>Настройка служб WCF в коде  
- Windows Communication Foundation (WCF) позволяет разработчикам настраивать службы с помощью файлов конфигурации или кода.  Файлы конфигурации используются, если необходимо настроить службу после ее развертывания. При использовании файлов конфигурации ИТ-работнику требуется только обновить файл конфигурации без необходимости выполнять повторную компиляцию. Файлы конфигурации, однако, могут быть сложными и требовать больших усилий при обслуживании. Отсутствует поддержка отладки файлов конфигурации, и ссылки на элементы конфигурации осуществляются по именам, что усложняет работу и способствует совершению ошибок при создании файлов конфигурации. WCF также позволяет настраивать службы в коде. В предыдущих версиях WCF (4.0 и ранее) Настройка служб в коде легко выполнялась в случае сценариев резидентных <xref:System.ServiceModel.ServiceHost> класс позволял настроить конечные точки и поведение до вызова метода ServiceHost.Open. Однако в сценариях с размещением в Интернете нет прямого доступа к классу <xref:System.ServiceModel.ServiceHost>. Чтобы настроить службу, размещенную в сети, приходилось создавать класс `System.ServiceModel.ServiceHostFactory`, который создавал <xref:System.ServiceModel.Activation.ServiceHostFactory> и выполнял необходимые настройки. Начиная с .NET 4.5, WCF предоставляет более простой способ настроить резидентной и на веб-сервере службы в коде. Дополнительные сведения см. в разделе [Настройка служб WCF в коде](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
+ Windows Communication Foundation (WCF) позволяет разработчикам настраивать службы с помощью файлов конфигурации или кода.  Файлы конфигурации используются, если необходимо настроить службу после ее развертывания. При использовании файлов конфигурации ИТ-работнику требуется только обновить файл конфигурации без необходимости выполнять повторную компиляцию. Файлы конфигурации, однако, могут быть сложными и требовать больших усилий при обслуживании. Отсутствует поддержка отладки файлов конфигурации, и ссылки на элементы конфигурации осуществляются по именам, что усложняет работу и способствует совершению ошибок при создании файлов конфигурации. Кроме того, WCF позволяет настраивать службы в коде. В более ранних версиях настройку служб WCF (4.0 и более ранних версий) в коде было просто в резидентных сценариях <xref:System.ServiceModel.ServiceHost> класс позволял настроить конечные точки и поведение до вызова метода ServiceHost.Open. Однако в сценариях с размещением в Интернете нет прямого доступа к классу <xref:System.ServiceModel.ServiceHost>. Чтобы настроить службу, размещенную в сети, приходилось создавать класс `System.ServiceModel.ServiceHostFactory`, который создавал <xref:System.ServiceModel.Activation.ServiceHostFactory> и выполнял необходимые настройки. Начиная с .NET 4.5, WCF предоставляет более простой способ настроить оба с локальным размещением и web размещенные службы в коде. Дополнительные сведения см. в разделе [Настройка служб WCF в коде](../../../docs/framework/wcf/configuring-wcf-services-in-code.md).  
   
 ## <a name="channelfactory-caching"></a>Кэширование ChannelFactory  
  Клиентские приложения WCF используют класс <xref:System.ServiceModel.ChannelFactory%601> для создания коммуникационного канала со службой WCF.  Создание экземпляров класса <xref:System.ServiceModel.ChannelFactory%601> оказывает определенное влияние на производительность, поскольку выполняются следующие операции:  
@@ -93,25 +93,25 @@ ms.locfileid: "33809905"
  Начиная с версии WCF 4.5, в двоичном кодировщике появилась поддержка сжатия. Тип сжатия задается с помощью свойства <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A>. Свойство <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement.CompressionFormat%2A> должно быть задано и в клиенте и в службе. Сжатие будет работать для протоколов HTTP, HTTPS и TCP. Если клиент указывает использование сжатия, но служба его не поддерживает, возникает исключение протокола, указывающее на несоответствие. Дополнительные сведения см. в разделе [Выбор кодировщика сообщений](../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)  
   
 ## <a name="udp"></a>UDP  
- Добавлена поддержка для транспорта UDP, что позволяет разработчикам писать службы, использующие «отправить и забыть» обмен сообщениями. Клиент отправляет сообщение службе, но не ожидает от нее ответа.  
+ Добавлена поддержка для транспорта UDP, что позволяет разработчикам писать службы, использующие «отправить и забыть» обмена сообщениями. Клиент отправляет сообщение службе, но не ожидает от нее ответа.  
   
 ## <a name="multiple-authentication-support"></a>Поддержка нескольких видов проверок подлинности  
  Была добавлена поддержка нескольких режимов проверок подлинности, поддерживаемых службами IIS, в одной конечной точке WCF при использовании транспорта HTTP и безопасности транспорта. Служба IIS позволяет включить несколько режимов проверки подлинности в виртуальном каталоге. Эта возможность позволяет одной конечной точке WCF поддерживать несколько режимов проверки подлинности, разрешенных для виртуального каталога, в котором размещена служба WCF.  
   
 ## <a name="idn-support"></a>Поддержка IDN  
- Добавлена поддержка служб WCF с интернационализированными именами домена (IDN). Дополнительные сведения см. [WCF и международных доменных имен](../../../docs/framework/wcf/feature-details/wcf-and-internationalized-domain-names.md).  
+ Добавлена поддержка служб WCF с интернационализированными именами домена (IDN). Дополнительные сведения см. в разделе [WCF и международные доменные имена](../../../docs/framework/wcf/feature-details/wcf-and-internationalized-domain-names.md).  
   
 ## <a name="httpclient"></a>HttpClient  
- Был добавлен новый класс <xref:System.Net.Http.HttpClient>, существенного облегчающий работу с HTTP-запросами. Дополнительные сведения см. в разделе [разработка приложений, социальных сетей и связанных со службами HTTP](http://go.microsoft.com/fwlink/?LinkId=231886) и [пример клиентского HTTP](http://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664).  
+ Был добавлен новый класс <xref:System.Net.Http.HttpClient>, существенного облегчающий работу с HTTP-запросами. Дополнительные сведения см. в разделе [разработка приложений, социальными сетями и подключение к HTTP-службам](https://go.microsoft.com/fwlink/?LinkId=231886) и [пример HTTP-клиента](https://code.msdn.microsoft.com/windowsapps/HttpClient-sample-55700664).  
   
 ## <a name="configuration-intellisense"></a>Технология Intellisense в файлах конфигурации  
  Значения атрибутов в файлах конфигурации для настраиваемых атрибутов, определенных в проекте, теперь поддерживают технологию intellisense для ускорения работы.  
   
 ## <a name="configuration-tooltips"></a>Всплывающие подсказки в файлах конфигурации  
- Теперь WCF элементы и атрибуты более просто нужно подсказки в редакторе XML и точно определить назначение элемента или атрибута.  
+ WCF элементы и атрибуты теперь нужно подсказки в редакторе XML, более легко и точно определить назначение элемента или атрибута.  
   
 ## <a name="paste-data-as-classes"></a>Вставка данных в виде классов  
- В проекте WCF типы данных, определенные в XML (например, предоставленные как служба), могут быть вставлены непосредственно в кодовую страницу. XML-тип будет вставлен как тип CLR. В разделе [создания классов типа данных из XML-кода](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md) для получения дополнительных сведений.  
+ В проекте WCF типы данных, определенные в XML (например, предоставленные как служба), могут быть вставлены непосредственно в кодовую страницу. XML-тип будет вставлен как тип CLR. См. в разделе [формирование классов типов данных из XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md) для получения дополнительных сведений.  
   
 ## <a name="webservicehost-and-default-endpoints"></a>WebServiceHost и конечные точки по умолчанию.  
  В Visual Studio 2010 WebServiceHost автоматически создавал конечную точку по умолчанию независимо от того, была она явно указана или нет. В Visual Studio 2012 WebServiceHost создаст конечную точку по умолчанию, только если не была явно добавлена ни одна конечная точка. Если клиент ожидает конечную точку по умолчанию, можно явным образом добавить точку и направить клиента к ней. Кроме того, можно вернуть прежнее поведение WCF, добавив следующий параметр в файл конфигурации приложения.  

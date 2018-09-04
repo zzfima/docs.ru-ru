@@ -2,22 +2,22 @@
 title: Маршрутизация по телу сообщения
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: e9a0c947a1dd7ac2a6c7af74baaa072aae67358c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef463f7a7c46387ba3779ef6c674d9c3b022116e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33504238"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521843"
 ---
 # <a name="route-by-body"></a>Маршрутизация по телу сообщения
-В этом образце показано, как реализовать службу, которая принимает объекты сообщений с действием SOAP. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующий службу калькулятора. Служба реализует одну операцию `Calculate`, которая принимает параметр запроса <xref:System.ServiceModel.Channels.Message> и возвращает ответ <xref:System.ServiceModel.Channels.Message>.  
+В этом образце показано, как реализовать службу, которая принимает объекты сообщений с действием SOAP. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора. Служба реализует одну операцию `Calculate`, которая принимает параметр запроса <xref:System.ServiceModel.Channels.Message> и возвращает ответ <xref:System.ServiceModel.Channels.Message>.  
   
  В этом образце клиентом является консольное приложение (EXE), а служба размещается в службах IIS.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
- Этот образец демонстрирует диспетчеризацию сообщений на основе содержимого тела сообщения. Встроенный механизм диспетчеризации модели службы Windows Communication Foundation (WCF) сообщения основан на параметрах Action сообщений. Однако есть много существующих веб-служб, которые для всех своих операций определяют параметр Action="". Невозможно построить службу на основе кода WSDL, когда диспетчеризация сообщений запросов осуществляется на основе параметра Action. В этом образце показан контракт службы, основанный на коде WSDL (код WSDL содержится в файле Service.wsdl, который входит в этот образец). Контракт службы-калькулятора, похожий на тот, который используется в [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). Однако контракт `[OperationContract]` задает для всех операций `Action=""`.  
+ Этот образец демонстрирует диспетчеризацию сообщений на основе содержимого тела сообщения. Встроенный механизм диспетчеризации модели службы Windows Communication Foundation (WCF) сообщение зависит от сообщения действия. Однако есть много существующих веб-служб, которые для всех своих операций определяют параметр Action="". Невозможно построить службу на основе кода WSDL, когда диспетчеризация сообщений запросов осуществляется на основе параметра Action. В этом образце показан контракт службы, основанный на коде WSDL (код WSDL содержится в файле Service.wsdl, который входит в этот образец). Контракт службы-Calculator, подобной той, используемых в [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). Однако контракт `[OperationContract]` задает для всех операций `Action=""`.  
   
 ```  
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples"),    
@@ -35,9 +35,9 @@ ms.locfileid: "33504238"
     }  
 ```  
   
- Чтобы при таком контракте можно было распределять сообщения между операциями, службе требуется пользовательское поведение диспетчеризации `DispatchByBodyBehavior`. Это поведение отправки инициализирует `DispatchByBodyElementOperationSelector` настраиваемый селектор операций с помощью таблицы имен операций, ключом которого является QName соответствующих элементов оболочек. Операция `DispatchByBodyElementOperationSelector` проверяет начальный тег первого дочернего элемента Body и выбирает операцию, используя упомянутую ранее таблицу.  
+ Чтобы при таком контракте можно было распределять сообщения между операциями, службе требуется пользовательское поведение диспетчеризации `DispatchByBodyBehavior`. Это поведение отправки инициализирует `DispatchByBodyElementOperationSelector` пользовательский селектор операций с таблицей имен операций, обозначенных с помощью значений QName соответствующих элементов оболочек. Операция `DispatchByBodyElementOperationSelector` проверяет начальный тег первого дочернего элемента Body и выбирает операцию, используя упомянутую ранее таблицу.  
   
- Клиент использует прокси-сервера, автоматически сгенерированный из WSDL, экспортированный с помощью службы [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
+ Клиент использует прокси-сервера, автоматически создается из кода WSDL, экспортированного службой с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
 ```  
 svcutil.exe  /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples /uxs http://localhost/servicemodelsamples/service.svc?wsdl /out:generatedProxy.cs  
@@ -62,14 +62,14 @@ Press <ENTER> to terminate client.
   
 2.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
   

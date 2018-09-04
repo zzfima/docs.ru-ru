@@ -2,23 +2,23 @@
 title: Основные сведения
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: 66d2047a064663cfe93823d92d30f682d557c493
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd2531dd141cfc6f0b67d1f58766327c218610f5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363221"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515636"
 ---
 # <a name="background-information"></a>Основные сведения
 Темы данного раздела содержат описания принципов и процедур, расширяющих базовую функциональность [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  Для поиска дополнительных примеров кода и приложений [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] выполните следующие действия.  
   
--   Поиск в документах Microsoft конкретные вопросы.  
+-   Документация Microsoft поиска для конкретных проблем.  
   
--   Участвовать в [форуме по LINQ](http://go.microsoft.com/fwlink/?LinkId=76488), где можно обсудить со специалистами более сложные вопросы подробно.  
+-   Участвовать в [LINQ Forum](https://go.microsoft.com/fwlink/?LinkId=76488), где можно обсудить со специалистами более сложные вопросы подробно.  
   
--   Изучите Технический документ с подробным [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] технологии, дополненный примерами кода Visual Basic и C#. Дополнительные сведения см. в разделе [LINQ to SQL: запросы LINQ .NET запросов для реляционных данных](http://go.microsoft.com/fwlink/?LinkId=93205).  
+-   Изучите Технический документ с подробным описанием [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] технологии, проиллюстрированные примерами кода Visual Basic и C#. Дополнительные сведения см. в разделе [LINQ to SQL: запросы запросы LINQ .NET для реляционных данных](https://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [ADO.NET и LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  

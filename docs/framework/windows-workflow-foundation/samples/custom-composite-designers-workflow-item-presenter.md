@@ -2,15 +2,15 @@
 title: Пользовательские составные конструкторы - средство представления элементов рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 5bdc952bb4b920f0b5a7d272423ec2d922a94798
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7519ea560bab1e0c6651ad0b37c8477297b0d64d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517122"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526834"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>Пользовательские составные конструкторы - средство представления элементов рабочего процесса
-<xref:System.Activities.Presentation.WorkflowItemPresenter> Является ключевым типом в модели программирования конструктора WF, позволяющей создавать «зону сброса» где могут размещаться произвольные действия. В этом примере показано, как построить конструктор действий, который предоставляет доступ к «зону перетаскивания.»  
+<xref:System.Activities.Presentation.WorkflowItemPresenter> Является ключевым типом в модели программирования конструктора WF, позволяет создавать «зону перетаскивания» для размещения произвольное действие. В этом примере показано, как построить конструктор действий, который предоставляет доступ к «зону сброса.»  
   
  В этом образце показаны следующие действия.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "33517122"
 </sap:ActivityDesigner>  
 ```  
   
- Обратите внимание на использование привязки данных WPF для привязки к `ModelItem.Body`. `ModelItem` -Свойство <xref:System.Activities.Presentation.ActivityDesigner> , относится к базовому объекту, в которой используется конструктор, в этом случае **SimpleNativeActivity**.  
+ Обратите внимание на использование привязки данных WPF для привязки к `ModelItem.Body`. `ModelItem` Свойство <xref:System.Activities.Presentation.ActivityDesigner> , относится к базовому объекту которого используется конструктор, в этом случае **SimpleNativeActivity**.  
   
 #### <a name="to-setup-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
@@ -76,7 +76,7 @@ ms.locfileid: "33517122"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemPresenter`  
   

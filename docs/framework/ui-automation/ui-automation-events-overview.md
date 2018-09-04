@@ -13,11 +13,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 1c479bc423ba17e527926bbf9c7dae6ffd8845d1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400317"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526056"
 ---
 # <a name="ui-automation-events-overview"></a>Обзор событий автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -31,7 +31,7 @@ ms.locfileid: "43400317"
 ## <a name="types-of-events"></a>Типы событий  
  События[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] делятся на следующие категории.  
   
-|событие|Описание:|  
+|событие|Описание|  
 |-----------|-----------------|  
 |Изменение свойства|Возникает, когда свойство элемента [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] или шаблона элемента управления изменяется. Например, если клиент должен отслеживать элемент управления "Флажок" приложения, он может зарегистрироваться для прослушивания события изменения свойства <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> . Когда флажок устанавливается или снимается, поставщик вызывает событие и клиент может выполнить необходимые действия.|  
 |Действие элемента|Возникает при изменении результатов [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] конечным пользователем или программой, например при нажатии кнопки или ее вызове с помощью <xref:System.Windows.Automation.InvokePattern>.|  
@@ -69,7 +69,7 @@ ms.locfileid: "43400317"
 ## <a name="ui-automation-event-arguments"></a>Аргументы событий автоматизации пользовательского интерфейса  
  Следующие классы инкапсулируют аргументы событий.  
   
-|Класс|Описание:|  
+|Класс|Описание|  
 |-----------|-----------------|  
 |<xref:System.Windows.Automation.AsyncContentLoadedEventArgs>|Содержит сведения об асинхронной загрузке содержимого, включая процент завершения загрузки.|  
 |<xref:System.Windows.Automation.AutomationEventArgs>|Содержит сведения о простом событии, не требующем дополнительных данных.|  

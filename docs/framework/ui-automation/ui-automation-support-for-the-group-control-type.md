@@ -9,15 +9,16 @@ ms.assetid: 18e01bab-01f8-4567-b867-88dce9c4a435
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 96816772f5d7abb8f89ab6fd1542dbc43eb286cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5bc202c0297eb3f0d4f6fa06b3beca0f9112272
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542340"
 ---
 # <a name="ui-automation-support-for-the-group-control-type"></a>Поддержка автоматизации пользовательского интерфейса для типа элемента управления Group
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе содержатся сведения о поддержке [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] типа элемента управления Group. В [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]тип элемента управления — это набор условий, которым должен удовлетворять элемент управления для использования свойства <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> . Эти условия включают определенные правила для древовидной структуры [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , значений свойств [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] и шаблонов элементов управления [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] .  
   
@@ -33,7 +34,7 @@ ms.lasthandoff: 05/04/2018
 |------------------|------------------|  
 |Группа<br /><br /> -0 или несколько элементов управления|Группа<br /><br /> -0 или несколько элементов управления|  
   
- Обычно группа элементов управления есть [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления ListItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md), [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления TreeItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md), или [Поддержка модели автоматизации пользовательского интерфейса для Тип элемента управления DataItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md) находящиеся под ними в поддереве типы элементов управления. Так как "Группа" представляет собой универсальный контейнер, под элементом управления "Группа" в дереве может находиться любой тип элемента управления.  
+ Обычно элементы управления группы будут иметь [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления ListItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md), [Поддержка модели автоматизации пользовательского интерфейса для типа элемента управления TreeItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md), или [Поддержка модели автоматизации пользовательского интерфейса для Тип элемента управления DataItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md) управления типами, находящиеся под ними в поддереве. Так как "Группа" представляет собой универсальный контейнер, под элементом управления "Группа" в дереве может находиться любой тип элемента управления.  
   
 <a name="Required_UI_Automation_Properties"></a>   
 ## <a name="required-ui-automation-properties"></a>Требуемые свойства модели автоматизации пользовательского интерфейса  

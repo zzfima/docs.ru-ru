@@ -3,11 +3,11 @@ title: Вызов функций в запросах LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
 ms.openlocfilehash: 4aed9fd59cceb72baac9dc12a85c52787c4b3866
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388519"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506948"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>Вызов функций в запросах LINQ to Entities
 В подразделах этого раздела описывается вызов функций в запросах LINQ to Entities.  

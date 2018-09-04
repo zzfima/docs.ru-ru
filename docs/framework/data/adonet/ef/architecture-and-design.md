@@ -3,11 +3,11 @@ title: Архитектура и разработка
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 ms.openlocfilehash: 5a0d8aac401a3485bc5f158bcda893ad9ab424e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419608"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43530474"
 ---
 # <a name="architecture-and-design"></a>Архитектура и разработка
 Модуль создания SQL в [образец поставщика](https://go.microsoft.com/fwlink/?LinkId=180616) реализуется в виде посетителя в дереве выражения, представляющем дерево команд. Создание кода выполняется за один проход по дереву выражения.  

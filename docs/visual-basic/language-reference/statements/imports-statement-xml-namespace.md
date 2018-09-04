@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 51b63a11fd2987d82f9a7599b39d15856a0abb1d
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 1100afd89b27e789c0db713291ed3656092fb0c7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39243832"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43533646"
 ---
 # <a name="imports-statement-xml-namespace"></a>Оператор Imports (пространство имен XML)
 Импортирует префиксы пространства имен XML для использования в XML-литералы и свойства оси XML.  
@@ -35,7 +35,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="remarks"></a>Примечания  
  Можно использовать `Imports` инструкции для определения глобальных пространств имен XML, который можно использовать с XML-литералы и свойства оси XML, или в качестве параметров, переданных `GetXmlNamespace` оператор. (Дополнительные сведения об использовании `Imports` инструкцию, чтобы импортировать псевдоним, который может использоваться где имена типов используются в коде, см. в разделе [оператор Imports (пространство имен .NET и тип)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) Синтаксис объявления пространства имен XML с помощью `Imports` инструкция идентична синтаксисе, используемом в XML. Таким образом, можно скопировать объявление пространства имен из файла XML и использовать его в `Imports` инструкции.  
   
- Префиксы пространства имен XML полезны в тех случаях, когда вы хотите повторно создать XML-элементах из одного пространства имен. Префикс пространства имен XML объявлен с `Imports` инструкция является глобальным в том смысле, что он доступен на весь код в файле. Его можно использовать при создании литералов XML-элемента и при доступе к свойства оси XML. Дополнительные сведения см. в разделе [литерала элемента XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) и [свойства оси XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md).  
+ Префиксы пространства имен XML полезны в тех случаях, когда вы хотите повторно создать XML-элементах из одного пространства имен. Префикс пространства имен XML объявлен с `Imports` инструкция является глобальным в том смысле, что он доступен на весь код в файле. Его можно использовать при создании литералов XML-элемента и при доступе к свойства оси XML. Дополнительные сведения см. в разделе [литерала элемента XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md) и [свойства оси XML](../../../visual-basic/language-reference/xml-axis/index.md).  
   
  Если можно определить глобальное пространство имен XML без префикса пространства имен (например, `Imports <xmlns="http://SomeNameSpace>"`), это пространство имен считается пространство имен XML по умолчанию. Для любого элемента XML-литералов или свойств оси атрибута XML пространство имен явно не указано, используется пространство имен XML по умолчанию. Пространство имен по умолчанию используется также в том случае, если указанное пространство имен является пустое пространство имен (то есть `xmlns=""`). Пространство имен XML по умолчанию не применяется к атрибутам XML в XML-литералов или свойств оси атрибута XML, у которых нет пространства имен.  
   
@@ -90,6 +90,6 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
   
 ## <a name="see-also"></a>См. также  
  [XML-литерал элемента](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
+ [Свойства оси XML](../../../visual-basic/language-reference/xml-axis/index.md)  
  [Имена объявленных элементов и атрибутов XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
  [Оператор GetXmlNamespace](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

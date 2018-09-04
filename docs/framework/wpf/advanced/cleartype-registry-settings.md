@@ -6,11 +6,11 @@ helpviewer_keywords:
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
 ms.openlocfilehash: d6a121e2a95ce4005b43937f83c6c74ec7d8f1c1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43474016"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514862"
 ---
 # <a name="cleartype-registry-settings"></a>Параметры реестра ClearType
 В этом разделе содержится обзор [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] параметры реестра, используемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] приложений.  
@@ -30,7 +30,7 @@ ms.locfileid: "43474016"
 ## <a name="registry-settings"></a>Параметры реестра  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Задает четыре параметра реестра для управления [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] функции:  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |-------------|-----------------|  
 |Уровень [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]|Описывает уровень [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] прозрачности цвета.|  
 |Гамма-уровень|Описывает уровень компонента цвета пикселя для устройства отображения.|  
@@ -81,7 +81,7 @@ ms.locfileid: "43474016"
 ## <a name="pixel-structure"></a>Структура пикселей  
  Структура пикселей описывает тип пикселей, составляющих устройство отображения. Структура пикселей определяется как один из трех типов.  
   
-|Тип|Значение|Описание:|  
+|Тип|Значение|Описание|  
 |----------|-----------|-----------------|  
 |плоский|0|Устройство отображения не имеет структуры пикселей. Это означает, что источники света для каждого цвета распределены равномерно в области пикселя: это называется отрисовкой в оттенках серого. Так работает стандартное устройство отображения. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] никогда не применяется к отрисованному тексту.|  
 |RGB|1|Пиксели на устройстве отображения состоят из трех полос, расположенных в следующем порядке: красный, зеленый и синий. [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] применяется к отрисованному тексту.|  

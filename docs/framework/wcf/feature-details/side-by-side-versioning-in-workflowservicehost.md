@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
-ms.openlocfilehash: 6c2329fe69941341dff1536b213ca4f1b961889a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 05bec31cb0d1dca3dc906c183d001fb526173bb5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505757"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43502556"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Параллельное управление версиями в WorkflowServiceHost
 Параллельное управление версиями <xref:System.ServiceModel.Activities.WorkflowServiceHost>, введенное в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], предоставляет возможность размещения нескольких версий службы Workflow Service на одной конечной точке. Предоставляемая функциональность параллельной работы позволяет настроить службу Workflow Service таким образом, чтобы новые экземпляры службы Workflow Service создавались с использованием нового определения рабочего процесса, а запущенные экземпляры завершались с использованием существующего определения. Данный раздел содержит общие сведения о параллельном выполнении служб Workflow Services с использованием <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  
   
 > [!NOTE]
->  Для загрузки образца и просмотреть пошаговое видеоруководство управления версиями side-by-side службы рабочего процесса, в разделе [параллельное управление версиями с помощью службы рабочего процесса Xamlx руководством](http://go.microsoft.com/fwlink/?LinkId=393746).  
+>  Чтобы скачать пример и просмотреть пошаговое видеоруководство управления версиями side-by-side службы рабочего процесса, см. в разделе [параллельное управление версиями с помощью службы рабочего процесса Xamlx руководством](https://go.microsoft.com/fwlink/?LinkId=393746).  
   
 ## <a name="hosting-multiple-versions-in-a-workflow-service"></a>Размещение нескольких версий в службе Workflow Service  
- <xref:System.ServiceModel.Activities.WorkflowServiceHost> содержит два свойства, которые можно настроить для разрешения параллельного выполнения нескольких версий рабочего процесса: <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> и <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>. <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> содержит поддерживаемые версии службы Workflow Service, а <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> используется для уникальной идентификации каждой службы Workflow Service. Для этого нужно связать <xref:System.Activities.WorkflowIdentity> со службой Workflow Service. В <xref:System.Activities.WorkflowIdentity> содержится три элемента информации для идентификации. <xref:System.Activities.WorkflowIdentity.Name%2A> и <xref:System.Activities.WorkflowIdentity.Version%2A> содержат имя и <xref:System.Version> и являются обязательными, а <xref:System.Activities.WorkflowIdentity.Package%2A> является необязательным и может использоваться для указания дополнительной строки с информацией (например, именем сборки или другими полезными сведениями). Каждая служба Workflow Service, содержащаяся в коллекции <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A>, должна иметь уникальный <xref:System.Activities.WorkflowIdentity>. <xref:System.Activities.WorkflowIdentity> уникален, если какое-либо из его трех свойств отличается от другого <xref:System.Activities.WorkflowIdentity>. Объект `null` <xref:System.Activities.WorkflowIdentity> является допустимым значением для <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>, но может быть только одна предыдущая версия службы workflow Service `null` <xref:System.Activities.WorkflowIdentity>.  
+ <xref:System.ServiceModel.Activities.WorkflowServiceHost> содержит два свойства, которые можно настроить для разрешения параллельного выполнения нескольких версий рабочего процесса: <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> и <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>. <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> содержит поддерживаемые версии службы Workflow Service, а <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> используется для уникальной идентификации каждой службы Workflow Service. Для этого нужно связать <xref:System.Activities.WorkflowIdentity> со службой Workflow Service. В <xref:System.Activities.WorkflowIdentity> содержится три элемента информации для идентификации. <xref:System.Activities.WorkflowIdentity.Name%2A> и <xref:System.Activities.WorkflowIdentity.Version%2A> содержат имя и <xref:System.Version> и являются обязательными, а <xref:System.Activities.WorkflowIdentity.Package%2A> является необязательным и может использоваться для указания дополнительной строки с информацией (например, именем сборки или другими полезными сведениями). Каждая служба Workflow Service, содержащаяся в коллекции <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A>, должна иметь уникальный <xref:System.Activities.WorkflowIdentity>. <xref:System.Activities.WorkflowIdentity> уникален, если какое-либо из его трех свойств отличается от другого <xref:System.Activities.WorkflowIdentity>. Объект `null` <xref:System.Activities.WorkflowIdentity> является допустимым значением для <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>, но которые могут иметь только один из предыдущей версии службы workflow Service `null` <xref:System.Activities.WorkflowIdentity>.  
   
 > [!IMPORTANT]
 >  Экземпляр <xref:System.Activities.WorkflowIdentity> не должен содержать персональные данные (PII). <xref:System.Activities.WorkflowIdentity> состоит из 3 частей: <xref:System.Activities.WorkflowIdentity.Name%2A> (<xref:System.String>), <xref:System.Activities.WorkflowIdentity.Version%2A> (<xref:System.Version>) и <xref:System.Activities.WorkflowIdentity.Package%2A> (<xref:System.String>). Сведения об объекте <xref:System.Activities.WorkflowIdentity>, используемом для создания экземпляра, передаются средой выполнения всем настроенным службам отслеживания на различных этапах жизненного цикла действия. Отслеживание WF не имеет механизмов, позволяющих скрывать персональные данные (конфиденциальные пользовательские данные). Поэтому экземпляр <xref:System.Activities.WorkflowIdentity> не должен содержать никаких персональных данных, так как они будут передаваться средой выполнения в записях отслеживания и могут отображаться любому пользователю с доступом к записям отслеживания.  
@@ -31,7 +31,7 @@ ms.locfileid: "33505757"
   
 -   Не должна содержать действий <xref:System.ServiceModel.Activities.Receive> или <xref:System.ServiceModel.Activities.SendReply> в своем <xref:System.ServiceModel.Activities.WorkflowService.Body%2A>, которых нет в основной версии, и они должны соответствовать контракту операции.  
   
--   Иметь уникальный <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>. Может иметь одно и только одно определение рабочего процесса `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>.  
+-   Иметь уникальный <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>. Может иметь только одно определение рабочего процесса `null` <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>.  
   
  Некоторые изменения разрешены. Следующие элементы могут различаться между версиями:  
   
@@ -44,11 +44,11 @@ ms.locfileid: "33505757"
 -   <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> может отличаться от основной версии.  
   
 ### <a name="configuring-the-definitionidentity"></a>Настройка DefinitionIdentity  
- При создании службы рабочего процесса в конструкторе рабочих процессов <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> задается с помощью **свойства** окна. Щелкните вне корневого действия службы в конструкторе, чтобы выбрать службу рабочего процесса, а затем выберите **окно свойств** из **представление** меню. Выберите **WorkflowIdentity** из раскрывающегося списка, который появляется рядом со **DefinitionIdentity** свойства, а затем разверните и задайте необходимые <xref:System.Activities.WorkflowIdentity> свойства. В следующем примере <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> оснащен <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` и <xref:System.Activities.WorkflowIdentity.Version%2A> из `1.0.0.0`. <xref:System.Activities.WorkflowIdentity.Package%2A> является необязательным и в данном примере равняется `null`.  
+ При создании службы рабочего процесса в конструкторе рабочих процессов, <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> задается с помощью **свойства** окна. Щелкните за пределами корневого действия службы в конструкторе, чтобы указать службы рабочего процесса и выберите **окно "Свойства"** из **представление** меню. Выберите **WorkflowIdentity** из раскрывающегося списка, который появляется рядом **DefinitionIdentity** свойства, а затем разверните и задайте необходимые <xref:System.Activities.WorkflowIdentity> свойства. В следующем примере <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> настраивается с помощью <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` и <xref:System.Activities.WorkflowIdentity.Version%2A> из `1.0.0.0`. <xref:System.Activities.WorkflowIdentity.Package%2A> является необязательным и в данном примере равняется `null`.  
   
  ![DefinitionIdentity](../../../../docs/framework/wcf/feature-details/media/workflowservicedefinitionidentityv1.bmp "WorkflowServiceDefinitionIdentityv1")  
   
- Если служба Workflow Service размещается резидентно, <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> настраивается при построении службы Workflow Service. В следующем примере <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> настроены с одинаковыми значениями в предыдущем примере <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` и <xref:System.Activities.WorkflowIdentity.Name%2A> из `1.0.0.0`.  
+ Если служба Workflow Service размещается резидентно, <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> настраивается при построении службы Workflow Service. В следующем примере <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> настроены с теми же значениями, как в предыдущем примере <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow` и <xref:System.Activities.WorkflowIdentity.Name%2A> из `1.0.0.0`.  
   
 ```csharp  
 WorkflowService service = new WorkflowService  
@@ -76,7 +76,7 @@ With service
 End With  
 ```  
   
- Объект <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> не является обязательным, хотя только одна версия службы рабочего процесса может иметь **null**<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>.  
+ Объект <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> не является обязательным, хотя только одна версия службы workflow service может иметь **null**<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>.  
   
 > [!NOTE]
 >  Это полезно, если служба изначально была развернута без настроенного <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>, а после этого создается обновленная версия.  

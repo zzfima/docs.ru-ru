@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms]
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
-ms.openlocfilehash: 396553ce72e34a6af40f54fa45035a218b7fdb17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e30f4b21d8b8f1a4c5a168402ce5cc386d932f86
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539693"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510615"
 ---
 # <a name="listview-control-windows-forms"></a>Элемент управления ListView (Windows Forms)
 Элемент управления `ListView` Windows Forms отображает список элементов со значками. Представление списка можно использовать для создания пользовательского интерфейса, аналогичного правой области окна проводника.  
@@ -58,15 +58,15 @@ ms.locfileid: "33539693"
  [Практическое руководство. Добавление в элемент управления ListView возможностей поиска](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
  Описывается, как программным способом найти элемент с помощью текстового поиска или экранных координат.  
   
--   [Практическое руководство. Включение вида мозаики в элементе управления ListView формы Windows Forms с помощью конструктора](http://msdn.microsoft.com/library/ms233655\(v=vs.110\))  
+-   [Практическое руководство. Включение вида мозаики в элементе управления ListView формы Windows Forms с помощью конструктора](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [Практическое руководство. Добавление и удаление элементов с использованием элемента управления ListView в формах Windows Forms с помощью конструктора](http://msdn.microsoft.com/library/ms233671\(v=vs.110\))  
+-   [Практическое руководство. Добавление и удаление элементов с использованием элемента управления ListView в формах Windows Forms с помощью конструктора](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [Практическое руководство. Добавление столбцов в элемент управления ListView в формах Windows Forms с помощью конструктора](http://msdn.microsoft.com/library/ms233652\(v=vs.110\))  
+-   [Практическое руководство. Добавление столбцов в элемент управления ListView в формах Windows Forms с помощью конструктора](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [Практическое руководство. Группирование элементов в элементе управления ListView в формах Windows Forms с помощью конструктора](http://msdn.microsoft.com/library/ms233663\(v=vs.110\))  
+-   [Практическое руководство. Группирование элементов в элементе управления ListView в формах Windows Forms с помощью конструктора](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [Пример. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора](http://msdn.microsoft.com/library/ms171645\(v=vs.110\))  
+-   [Пример. Создание интерфейса в стиле проводника с использованием элементов управления ListView и TreeView с помощью конструктора](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>Ссылка  
  Класс <xref:System.Windows.Forms.ListView>  
@@ -82,7 +82,7 @@ ms.locfileid: "33539693"
  [Практическое руководство. Создание пользовательского интерфейса с несколькими областями с помощью Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Инструкции по компоновке формы Windows Forms с несколькими панелями.  
   
- [Возможности Windows XP и элементы управления Windows Forms](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
+ [Возможности Windows XP и элементы управления Windows Forms](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
  Объясняется, как использовать преимущества Windows XP, относящиеся к элементу управления <xref:System.Windows.Forms.ListView>.  
   
 ## <a name="see-also"></a>См. также  

@@ -1,23 +1,23 @@
 ---
-title: LINQ to SQL образца
+title: Пример LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 5f39db9e-0e62-42c9-8c98-bb8b54cec98c
-ms.openlocfilehash: 3cfcaf3de1a22b8bb5505083f127a9888b99dbd8
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 83dc8433459f64860baaca2e8309fbc85e2bb3a2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806722"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515372"
 ---
-# <a name="linq-to-sql-sample"></a>LINQ to SQL образца
+# <a name="linq-to-sql-sample"></a>Пример LINQ to SQL
 В этом образце показано создание действий, использующих запросы к сущностям LINQ to SQL из таблиц в базах данных SQL Server.  
   
 > [!IMPORTANT]
->  Образцы WCF уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
+>  Образцы WCF может быть установлена на вашем компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardspace`  
 >   
->  Если этот каталог не существует, щелкните ссылку "Загрузить образец" в верхней части страницы. Обратите внимание, что этой ссылке происходит загрузка и установка всех [!INCLUDE[wf1](../../../../includes/wf1-md.md)], WCF, и [!INCLUDE[infocard](../../../../includes/infocard-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, щелкните ссылку "Загрузить образец" в верхней части страницы. Обратите внимание, что эту ссылку, загружает и устанавливает все [!INCLUDE[wf1](../../../../includes/wf1-md.md)], WCF, и [!INCLUDE[infocard](../../../../includes/infocard-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\Samples\WCFWFCardSpace\WF\Scenario\ActivityLibrary\Linq\LinqToSql`  
   
@@ -84,10 +84,10 @@ new FindInSqlTable<Employee>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Liiinq\LinqToSql`  
   
 ## <a name="see-also"></a>См. также  
- [LINQ to SQL](http://go.microsoft.com/fwlink/?LinkId=150376)  
- [Начало работы (LINQ to SQL)](http://go.microsoft.com/fwlink/?LinkId=150377)
+ [LINQ to SQL](https://go.microsoft.com/fwlink/?LinkId=150376)  
+ [Приступая к работе (LINQ to SQL)](https://go.microsoft.com/fwlink/?LinkId=150377)

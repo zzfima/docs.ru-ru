@@ -2,12 +2,12 @@
 title: Создание ролей приложений в SQL Server
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: cb3bcb08877d8a17ea40ea48440c1d71560d0e5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 811654b73cd1cc0b8c17565b45613253de3c0e81
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33362531"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43522017"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>Создание ролей приложений в SQL Server
 Роли приложения предоставляют возможность назначать разрешения приложению, а не ролям базы данных или пользователям. Пользователи могут соединиться с базой данных, активировать роль приложения и воспользоваться разрешениями, предоставленными приложению. Разрешения, предоставленные роли приложения, действуют в течение всего соединения.  
@@ -56,10 +56,10 @@ ms.locfileid: "33362531"
   
 |Ресурс|Описание|  
 |--------------|-----------------|  
-|[Роли приложений](http://msdn.microsoft.com/library/ms190998.aspx) в электронной документации по SQL Server|Описывает процесс создания и использования ролей приложения в SQL Server 2008.|  
+|[Роли приложений](/sql/relational-databases/security/authentication-access/application-roles)|Описывает процесс создания и использования ролей приложения в SQL Server 2008.|  
   
 ## <a name="see-also"></a>См. также  
  [Защита приложений ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Общие сведения о безопасности SQL Server](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)  
  [Сценарии безопасности приложений в SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

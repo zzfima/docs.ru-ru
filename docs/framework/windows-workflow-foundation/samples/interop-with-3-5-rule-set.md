@@ -2,15 +2,15 @@
 title: Взаимодействие с набором правил 3.5
 ms.date: 03/30/2017
 ms.assetid: 969f3295-d874-428c-a9c6-623e3d578e51
-ms.openlocfilehash: 9d42198d336e38c4ad9fc6c686a019814bd571bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5ea5454ef80bfd83611ed20392782d99cd8c0c25
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517911"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538556"
 ---
 # <a name="interop-with-35-rule-set"></a>Взаимодействие с набором правил 3.5
-В этом примере демонстрируется использование <xref:System.Activities.Statements.Interop> действия для интеграции с пользовательским действием в [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] с помощью <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` и правил. Оно передает данные для пользовательского действия, привязывая переменные [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] к свойствам зависимостей, предоставляемым пользовательским действием.  
+В этом примере демонстрируется использование <xref:System.Activities.Statements.Interop> для интеграции с пользовательским действием в [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] с помощью <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` и правил. Оно передает данные для пользовательского действия, привязывая переменные [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] к свойствам зависимостей, предоставляемым пользовательским действием.  
   
 ## <a name="requirements"></a>Требования  
   
@@ -21,21 +21,21 @@ ms.locfileid: "33517911"
 3.  [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]  
   
 ## <a name="demonstrates"></a>Демонстрации  
- <xref:System.Activities.Statements.Interop> действия, <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` действия в [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] со свойствами зависимости  
+ <xref:System.Activities.Statements.Interop> действие, <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` действия в [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] со свойствами зависимости  
   
 ## <a name="discussion"></a>Обсуждение  
- В этом образце демонстрируется один из сценариев интеграции для интеграции с действием [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]. Этот пример включает [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] пользовательского действия, которое вызывает <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` действия.  
+ В этом образце демонстрируется один из сценариев интеграции для интеграции с действием [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]. Этот пример включает [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] пользовательское действие, которое вызывает <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` действия.  
   
 ## <a name="travelrulelibrary"></a>TravelRuleLibrary  
  При открытии TravelRuleSet.cs в конструкторе следующим образом показывается последовательное пользовательское действие, содержащее действие PolicyActivity:  
   
  ![Действие Interop](../../../../docs/framework/windows-workflow-foundation/samples/media/interoprulespolicy.jpg "InteropRulesPolicy")  
   
- Дважды щелкните **DiscountPolicy** действия политики для просмотра правил. Появляется редактор правил, показывающий правила.  
+ Дважды щелкните **DiscountPolicy** действие политики для просмотра правил. Появляется редактор правил, показывающий правила.  
   
  ![Редактор набора правил](../../../../docs/framework/windows-workflow-foundation/samples/media/interoprulesruleseteditor.jpg "InteropRulesRuleSetEditor")  
   
- Щелкните правой кнопкой мыши **DiscountPolicy** действие и выберите **Просмотр кода** для просмотра побочного C# кода для этого действия. Проверьте значения свойства зависимости для `DiscountLevel`. Это эквивалентно <xref:System.Activities.Argument> в [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].  
+ Щелкните правой кнопкой мыши **DiscountPolicy** действие и выберите **Просмотр кода** возможность рассмотреть с кодом C# код, данного действия. Проверьте значения свойства зависимости для `DiscountLevel`. Это эквивалентно <xref:System.Activities.Argument> в [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].  
   
 ```  
 public static DependencyProperty DiscountLevelProperty = DependencyProperty.Register("DiscountLevel", typeof(int), typeof(TravelRuleSet));  
@@ -77,6 +77,6 @@ base.SetValue(TravelRuleSet.DiscountLevelProperty, value);
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\InteropWith35RuleSet`

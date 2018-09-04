@@ -2,15 +2,15 @@
 title: Активация UDP
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 9f7600bff17c015f28c3fb94ed5360561d45c65b
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: c64540db555d7cac56dd46c6ffb63ec95ca81f91
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810035"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538520"
 ---
 # <a name="udp-activation"></a>Активация UDP
-Этот пример построен на [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца. Он расширяет [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) пример поддержки активацию с помощью службы активации процессов Windows (WAS).  
+Этот образец основан на [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца. Он расширяет [транспорт: UDP](../../../../docs/framework/wcf/samples/transport-udp.md) образца для поддержки активации процесса с помощью службы активации процессов Windows (WAS).  
   
  Образец состоит из трех основных частей:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33810035"
   
  При поступлении нового запроса, который является первым для приложения, адаптер прослушивателя вызывает `WebhostOpenListenerChannelInstance` в WAS, запуская рабочий процесс, если он еще не запущен. Затем загружаются обработчики протокола, и можно начинать обмен данными между адаптером прослушивателя и виртуальным приложением.  
   
- Адаптер прослушивателя регистрируется в %SystemRoot%\System32\inetsrv\ApplicationHost.config в <`listenerAdapters`> статьи следующим образом:  
+ Адаптер прослушивателя регистрируется в %SystemRoot%\System32\inetsrv\ApplicationHost.config в <`listenerAdapters`> разделе следующим образом:  
   
 ```xml  
 <add name="net.udp" identity="S-1-5-21-2127521184-1604012920-1887927527-387045" />  
@@ -59,7 +59,7 @@ ms.locfileid: "33810035"
  В этом примере мы используем WCF для взаимодействия активатора и рабочего процесса WAS. Служба, находящаяся в активаторе, называется службой управления.  
   
 ## <a name="protocol-handlers"></a>Обработчики протоколов  
- После того как адаптер прослушивателя вызывает `WebhostOpenListenerChannelInstance`, диспетчер процесса WAS запускает рабочий процесс, если он еще не запущен. Затем диспетчер приложения внутри рабочего процесса загружает обработчик протокола процесса (PPH) UDP с запросом этого `ListenerChannelId`. PPH в вызывает `IAdphManager`.`StartAppDomainProtocolListenerChannel` Чтобы запустить обработчик протокола AppDomain (ADPH) UDP.  
+ После того как адаптер прослушивателя вызывает `WebhostOpenListenerChannelInstance`, диспетчер процесса WAS запускает рабочий процесс, если он еще не запущен. Затем диспетчер приложения внутри рабочего процесса загружает обработчик протокола процесса (PPH) UDP с запросом этого `ListenerChannelId`. Обработчик протокола Процесса в pph вызывает `IAdphManager`.`StartAppDomainProtocolListenerChannel` Чтобы запустить обработчик протокола AppDomain (ADPH) UDP.  
   
 ## <a name="hostedudptransportconfiguration"></a>HostedUDPTransportConfiguration  
  Информация регистрируется в файле Web.config следующим образом:  
@@ -89,7 +89,7 @@ ms.locfileid: "33810035"
   
     -   Также включается протокол "net.udp" для данного виртуального приложения.  
   
-3.  Запустите приложение пользовательского интерфейса "WasNetActivator.exe". Нажмите кнопку **установки** , проверьте следующие флажки и нажмите кнопку **установить** установить их:  
+3.  Запустите приложение пользовательского интерфейса "WasNetActivator.exe". Нажмите кнопку **установки** вкладке, установите следующие флажки и нажмите кнопку **установить** их установку:  
   
     -   Адаптер прослушивателя UDP  
   
@@ -119,7 +119,7 @@ ms.locfileid: "33810035"
   
     -   Службы IIS: W3SVC.  
   
-2.  Затем запустите активатор WasNetActivator.exe. В разделе **активации** вкладка, единственный протокол, **UDP**, выбранного в раскрывающемся списке. Нажмите кнопку **запустить** кнопку для запуска активатора.  
+2.  Затем запустите активатор WasNetActivator.exe. В разделе **активации** вкладку, единственный протокол, **UDP**, выбранного в раскрывающемся списке. Нажмите кнопку **запустить** кнопки для запуска активатора.  
   
 3.  После запуска активатора можно запустить код клиента, запустив файл Client.exe в командном окне. Далее приводится образец вывода:  
   
@@ -158,7 +158,7 @@ ms.locfileid: "33810035"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
   

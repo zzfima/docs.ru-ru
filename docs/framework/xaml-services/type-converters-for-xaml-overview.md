@@ -7,11 +7,11 @@ helpviewer_keywords:
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
 ms.openlocfilehash: 25705b573be74ea5a2d71537b0c165a6f619d1d9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399587"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519157"
 ---
 # <a name="type-converters-for-xaml-overview"></a>Общие сведения о преобразователях типов для XAML
 Преобразователи типов предоставляют логику для средства записи объекта, преобразующую строку в разметке XAML в конкретные объекты в графе объектов. В службах XAML .NET Framework преобразователь типов должен быть классом, производным от <xref:System.ComponentModel.TypeConverter>. Некоторые преобразователи также поддерживают путь сохранения XAML и могут использоваться для сериализации объекта в виде строки в разметке сериализации. В этом разделе описывается, как и когда вызываются преобразователи типов в XAML, а также представлены рекомендации по реализации переопределений методов класса <xref:System.ComponentModel.TypeConverter>.  

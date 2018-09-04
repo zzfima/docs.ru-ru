@@ -3,11 +3,11 @@ title: Аутентификация в SQL Server
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.openlocfilehash: 8d7fcb149059c06b7875663e4df5272312121c87
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394099"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521521"
 ---
 # <a name="authentication-in-sql-server"></a>Аутентификация в SQL Server
 SQL Server поддерживает два режима проверки подлинности: режим проверки подлинности Windows и режим смешанной проверки подлинности.  
@@ -74,7 +74,7 @@ SQL Server поддерживает два режима проверки под�
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
 |[Субъекты](/sql/relational-databases/security/authentication-access/principals-database-engine)|Описывает имена входа и другие субъекты безопасности в SQL Server.|  
   

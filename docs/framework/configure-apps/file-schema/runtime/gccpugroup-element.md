@@ -8,11 +8,11 @@ ms.assetid: c1fc7d6c-7220-475c-a312-5b8b201f66e0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21ab18cded2b9a16fe2520547287198d3cfe6b74
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416778"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43529315"
 ---
 # <a name="ltgccpugroupgt-element"></a>&lt;GCCpuGroup&gt; элемент
 Определяет, поддерживает ли сборка мусора несколько групп ЦП.  
@@ -39,7 +39,7 @@ ms.locfileid: "43416778"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |`false`|Сборка мусора не поддерживает несколько групп ЦП. Это значение по умолчанию.|  
 |`true`|Сборка мусора поддерживает несколько групп ЦП, если включена серверная сборка мусора.|  
@@ -49,7 +49,7 @@ ms.locfileid: "43416778"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  

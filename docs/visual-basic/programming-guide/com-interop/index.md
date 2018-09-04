@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405954"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43534595"
 ---
 # <a name="com-interop-visual-basic"></a>COM-взаимодействие (Visual Basic)
 Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. COM-объекты входят в состав большей части современного программного обеспечения. Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов. В этом разделе рассматриваются некоторые вопросы, связанные с созданием и использованием COM-объектов с помощью Visual Basic.  
