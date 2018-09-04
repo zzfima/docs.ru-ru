@@ -2,12 +2,12 @@
 title: Область сопровождения транзакции
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
-ms.openlocfilehash: 4b053c15768a20ade4a469c9a40af797f49c268b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516569"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536095"
 ---
 # <a name="transaction-convoy-scope"></a>Область сопровождения транзакции
 В этом образце демонстрируется создание шаблона обмена сообщениями Parallel Convoy совместно с <xref:System.ServiceModel.Activities.TransactedReceiveScope> для моделирования протокола, при котором несколько операций могут выполняться в любом порядке в рамках одной транзакции. Также в этом образце показано, как класс <xref:System.ServiceModel.Activities.TransactedReceiveScope> автоматически создает новую транзакцию, если транзакция не была передана серверу, и клиент не смог воспользоваться какими-либо транзакциями.  
@@ -26,7 +26,7 @@ ms.locfileid: "33516569"
   
     1.  В **обозревателе решений**, щелкните правой кнопкой мыши решение и выберите **назначить запускаемые проекты**.  
   
-    2.  Выберите **несколько запускаемых проектов** и убедитесь, что для обоих проектов задано действие **запустить**.  
+    2.  Выберите **несколько запускаемых проектов** и настройте действие для обоих проектов **запустить**.  
   
 4.  Чтобы запустить решение, нажмите клавиши CTRL+F5.  
   
@@ -39,6 +39,6 @@ ms.locfileid: "33516569"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Transactions\TransactedConvoyScope`

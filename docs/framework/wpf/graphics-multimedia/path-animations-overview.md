@@ -9,11 +9,11 @@ helpviewer_keywords:
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
 ms.openlocfilehash: 0f795ad00823e7b1c37221f7417b09d3982c4c18
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465607"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538152"
 ---
 # <a name="path-animations-overview"></a>Общие сведения об анимация с использованием пути
 <a name="introduction"></a> В этом разделе представлены общие сведения об анимациях по контуру, которые позволяют использовать геометрические контуры для формирования выходных значений. Анимации по контуру можно использовать для перемещения или вращения объектов по сложным траекториям.  
@@ -71,7 +71,7 @@ ms.locfileid: "43465607"
   
  Существует несколько типов сегментов.  
   
-|Тип сегмента|Описание:|  
+|Тип сегмента|Описание|  
 |------------------|-----------------|  
 |<xref:System.Windows.Media.ArcSegment>|Создает эллиптическую дугу между двумя точками.|  
 |<xref:System.Windows.Media.BezierSegment>|Создает кривую Безье третьего порядка между двумя точками.|  

@@ -3,11 +3,11 @@ title: Типизированные наборы данных
 ms.date: 03/30/2017
 ms.assetid: 033d2548-cf24-4c05-8179-67d8b009c048
 ms.openlocfilehash: 68721bcdbce6bf6d3279d6018ce6bc48d65c55a3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489751"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536805"
 ---
 # <a name="typed-datasets"></a>Типизированные наборы данных
 Наряду с доступом к значениям с поздним связыванием через слабо типизированные переменные, в объекте <xref:System.Data.DataSet> предоставляется доступ к данным на основе принципа строгой типизации. Таблицы и столбцы, которые являются частью **набора данных** может осуществляться с использованием понятных имен и строго типизированных переменных.  
