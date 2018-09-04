@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 5b34f93348c43a26f603140f2393389e1bce107a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 93cc0cf34d2bba23ff0938c8c13d7343d665192d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759144"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552971"
 ---
 # <a name="adonet-code-examples"></a>Примеры кода ADO.NET
 В листингах кода, приведенных в данном разделе, демонстрируется извлечение данных из базы данных с помощью следующих технологий ADO.NET.
@@ -39,7 +39,7 @@ ms.locfileid: "32759144"
 В приведенных ниже листингах кода демонстрируется извлечение данных из базы данных с помощью поставщиков данных ADO.NET. Данные возвращаются в классе `DataReader`. Дополнительные сведения см. в разделе [получение данных с помощью объекта DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).
 
 ### <a name="sqlclient"></a>SqlClient
-В этом примере предполагается, что можно подключиться к `Northwind` образца базы данных на сервере Microsoft SQL Server. Код создает команду <xref:System.Data.SqlClient.SqlCommand> для выборки строк из таблицы Products, к которой добавляется параметр <xref:System.Data.SqlClient.SqlParameter>, ограничивающий результат строками, для которых значение UnitPrice превышает указанное значение параметра, в данном случае 5. <xref:System.Data.SqlClient.SqlConnection> Открыт внутри `using` блок, который гарантирует, что ресурсы закрытие и освобождение после завершения работы кода. Команда выполняется с помощью объекта <xref:System.Data.SqlClient.SqlDataReader>, а результаты выводятся в окно консоли.
+В этом примере предполагается, что можно соединиться с `Northwind` образца базы данных на сервере Microsoft SQL Server. Код создает команду <xref:System.Data.SqlClient.SqlCommand> для выборки строк из таблицы Products, к которой добавляется параметр <xref:System.Data.SqlClient.SqlParameter>, ограничивающий результат строками, для которых значение UnitPrice превышает указанное значение параметра, в данном случае 5. <xref:System.Data.SqlClient.SqlConnection> Открыт внутри `using` блок, который гарантирует, что ресурсы закрытие и освобождение при выходе. Команда выполняется с помощью объекта <xref:System.Data.SqlClient.SqlDataReader>, а результаты выводятся в окно консоли.
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]
@@ -51,7 +51,7 @@ ms.locfileid: "32759144"
  [!code-vb[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/VB/source.vb#1)]
 
 ### <a name="odbc"></a>Odbc
-Данный образец кода предполагает возможность подключения к образцу базы данных Northwind из Microsoft Access. Код создает команду <xref:System.Data.Odbc.OdbcCommand> для выборки строк из таблицы Products, к которой добавляется параметр <xref:System.Data.Odbc.OdbcParameter>, ограничивающий результат строками, для которых значение UnitPrice превышает указанное значение параметра, в данном случае 5. <xref:System.Data.Odbc.OdbcConnection> Открыт внутри `using` блок, который гарантирует, что ресурсы закрытие и освобождение после завершения работы кода. Команда выполняется с помощью объекта <xref:System.Data.Odbc.OdbcDataReader>, а результаты выводятся в окно консоли.
+Данный образец кода предполагает возможность подключения к образцу базы данных Northwind из Microsoft Access. Код создает команду <xref:System.Data.Odbc.OdbcCommand> для выборки строк из таблицы Products, к которой добавляется параметр <xref:System.Data.Odbc.OdbcParameter>, ограничивающий результат строками, для которых значение UnitPrice превышает указанное значение параметра, в данном случае 5. <xref:System.Data.Odbc.OdbcConnection> Открыт внутри `using` блок, который гарантирует, что ресурсы закрытие и освобождение при выходе. Команда выполняется с помощью объекта <xref:System.Data.Odbc.OdbcDataReader>, а результаты выводятся в окно консоли.
 
 [!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)] 
 [!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)] 
@@ -62,11 +62,11 @@ ms.locfileid: "32759144"
  [!code-csharp[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
-## <a name="entity-framework-examples"></a>Примеры использования платформы Entity Framework
-В приведенных ниже листингах кода демонстрируется извлечение данных из источника данных путем выполнения запросов к сущностям модели EDM. В этих примерах используются [модели "Northwind"](http://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638). Дополнительные сведения см. в разделе [Общие сведения об Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).
+## <a name="entity-framework-examples"></a>Примеры Entity Framework
+В приведенных ниже листингах кода демонстрируется извлечение данных из источника данных путем выполнения запросов к сущностям модели EDM. В этих примерах используется [модель Northwind](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638). Дополнительные сведения см. в разделе [Обзор Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
-В данном примере кода запрос LINQ используется для возврата данных в виде объектов Categories, которые проецируются в анонимный тип, содержащий только свойства CategoryID и CategoryName. Дополнительные сведения см. в разделе [LINQ to Entities Обзор](http://msdn.microsoft.com/86d87a27-c17a-45ac-b28d-72c8500333c6).
+В данном примере кода запрос LINQ используется для возврата данных в виде объектов Categories, которые проецируются в анонимный тип, содержащий только свойства CategoryID и CategoryName. Дополнительные сведения см. в разделе [LINQ to Entities Обзор](https://msdn.microsoft.com/86d87a27-c17a-45ac-b28d-72c8500333c6).
 
 ```csharp
 using System;
@@ -137,7 +137,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>Типизированный запрос ObjectQuery
-В данном примере кода для возврата данных в виде объектов Categories используется запрос <xref:System.Data.Objects.ObjectQuery%601>. Дополнительные сведения см. в разделе [запросов объектов](http://msdn.microsoft.com/0768033c-876f-471d-85d5-264884349276).
+В данном примере кода для возврата данных в виде объектов Categories используется запрос <xref:System.Data.Objects.ObjectQuery%601>. Дополнительные сведения см. в разделе [запросы объектов](https://msdn.microsoft.com/0768033c-876f-471d-85d5-264884349276).
 
 ```csharp
 using System;
@@ -346,7 +346,7 @@ End Class
 ## <a name="see-also"></a>См. также
  [Общие сведения об ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Создание приложений для работы с данными](http://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
- [Запрос модели EDM (задачи Entity Framework)](http://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [Как: выполнение запроса, возвращающего объекты анонимного типа](http://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)  
+ [Создание приложений для работы с данными](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
+ [Запрос модели EDM (задачи Entity Framework)](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
+ [Практическое: выполнение запроса, возвращающего объекты анонимного типа](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)  

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
-ms.openlocfilehash: 1658db83c809f875914036e9e10ac86cc6a821c5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9c395ffe4f715b6d6ea034c848cbb277d60d560
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501974"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553646"
 ---
 # <a name="multiple-endpoints"></a>Несколько конечных точек
-В образце "Несколько конечных точек" показано, как настроить несколько конечных точек на службе и как взаимодействовать с каждой конечной точкой со стороны клиента. Этот пример построен на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). Конфигурация службы была изменена для определения двух конечных точек, которые поддерживают контракт `ICalculator`, но для которых заданы различные адреса с использованием различных привязок. Конфигурация и код клиента были изменены, чтобы он мог взаимодействовать с обеими конечными точками службы.  
+В образце "Несколько конечных точек" показано, как настроить несколько конечных точек на службе и как взаимодействовать с каждой конечной точкой со стороны клиента. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md). Конфигурация службы была изменена для определения двух конечных точек, которые поддерживают контракт `ICalculator`, но для которых заданы различные адреса с использованием различных привязок. Конфигурация и код клиента были изменены, чтобы он мог взаимодействовать с обеими конечными точками службы.  
   
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
@@ -50,7 +50,7 @@ ms.locfileid: "33501974"
   <!-- Passing "secure" into the constructor of the CalculatorClient  
        class selects this endpoint.-->  
   <endpoint name="secure"  
-address="http://localhost/servicemodelsamples/service.svc/secure"   
+            address="http://localhost/servicemodelsamples/service.svc/secure"   
             binding="wsHttpBinding"   
             contract="Microsoft.ServiceModel.Samples.ICalculator" />  
 </client>  
@@ -58,7 +58,7 @@ address="http://localhost/servicemodelsamples/service.svc/secure"
   
  Клиент использует обе конечные точки, как показано в следующем коде.  
   
-```  
+```csharp  
 static void Main()  
 {  
     // Create a client to the basic endpoint configuration.  
@@ -108,14 +108,14 @@ Press <ENTER> to terminate client.
   
 2.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Для запуска образца в конфигурации одного или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+3.  Чтобы выполнить образец на одном или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleEndpoints`  
   

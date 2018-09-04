@@ -2,18 +2,18 @@
 title: Поддержка SqlClient LocalDB
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-ms.openlocfilehash: 33368ca4b2dc5397087d29e515db6c1094e350bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ef75def3f3de44b5e23cb1197a4410dcf6b547f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359801"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532713"
 ---
 # <a name="sqlclient-support-for-localdb"></a>Поддержка SqlClient LocalDB
-Начиная с SQL Server с кодовым названием Denali, облегченная версия SQL Server, называемая LocalDB, будут доступны. В этом разделе описывается, как установить подключение к базе данных LocalDB.  
+Начиная с SQL Server с рабочим названием Denali, облегченная версия SQL Server, называемая LocalDB, будут доступны. В этом разделе описывается, как установить подключение к базе данных LocalDB.  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о LocalDB, включая установку и настройку экземпляра LocalDB в разделе электронной документации по SQL Server.  
+ Дополнительные сведения о LocalDB, включая установку и настройку экземпляра LocalDB см. в разделе электронной документации по SQL Server.  
   
  Обзор возможностей LocalDB:  
   
@@ -31,7 +31,7 @@ ms.locfileid: "33359801"
   
  Указание`User Instance=True` недопустимо, если производится соединение с базой данных LocalDB.  
   
- Базу данных LocalDB можно скачать из [пакета дополнительных компонентов Microsoft SQL Server 2012](http://www.microsoft.com/download/en/details.aspx?id=29065). Если вы будете использовать sqlcmd.exe для изменения данных в экземпляре LocalDB, необходимо будет sqlcmd из SQL Server 2012 можно также получить из пакета дополнительных компонентов SQL Server 2012.  
+ Вы можете скачать LocalDB из [Microsoft SQL Server 2012 Feature Pack](https://www.microsoft.com/download/en/details.aspx?id=29065). Если вы будете использовать sqlcmd.exe для изменения данных в экземпляре LocalDB, вам потребуется sqlcmd из SQL Server 2012, который также можно получить из пакета дополнительных компонентов SQL Server 2012.  
   
 ## <a name="programmatically-create-a-named-instance"></a>Создание именованного экземпляра программным путем  
  В приложении можно создать именованный экземпляр и определить базу данных следующим образом.  
@@ -60,4 +60,4 @@ ms.locfileid: "33359801"
   
 ## <a name="see-also"></a>См. также  
  [Возможности SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

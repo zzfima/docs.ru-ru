@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1a96af0c66d85c7eec9a97be3ba8c756b1e91849
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486679"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43516041"
 ---
 # <a name="metahostpolicyflags-enumeration"></a>Перечисление METAHOST_POLICY_FLAGS
 Предоставляет политики привязки, которые являются общими для большинства сред выполнения. Это перечисление используется с [ICLRMetaHostPolicy::GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) метод.  

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CommandManager [WPF]
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
 ms.openlocfilehash: d41613ce2488fa572fa11def06350ab1e564df6c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43467968"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43539824"
 ---
 # <a name="commanding-overview"></a>Общие сведения о системе команд
 Система команд <a name="introduction"></a> представляет собой механизм ввода в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], обеспечивающий обработку входных данных на более семантическом уровне по сравнению с вводом устройств. Примеры команд включают операции **Копировать**, **Вырезать** и **Вставить**, доступные во многих приложениях.  

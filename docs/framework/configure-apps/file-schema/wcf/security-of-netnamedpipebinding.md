@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 74bf0d14b0acfd8a5382575d2ee1e51174b6b6b8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0e5a22d6e517bc7a05f74089b7c8ece8c8a4bd39
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752797"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558676"
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a>&lt;security&gt; для &lt;netNamedPipeBinding&gt;
 Определяет параметры безопасности для привязки.  
@@ -39,7 +39,7 @@ ms.locfileid: "32752797"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|режим|Задает тип системы безопасности, применяемой к этой привязке. Допустимы следующие значения:<br /><br /> — None: Режим безопасности отключен.<br />-Transport: Безопасность обеспечивается с помощью базовых функций безопасности транспорта. Этот режим позволяет контролировать уровень защиты.<br />Значение по умолчанию-Transport. Это атрибут типа <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
+|режим|Задает тип системы безопасности, применяемой к этой привязке. Допустимы следующие значения:<br /><br /> -None: Режим безопасности отключен.<br />-Transport: Безопасность обеспечивается с помощью базовых функций безопасности транспорта. Этот режим позволяет контролировать уровень защиты.<br />-Значение по умолчанию — транспорта. Это атрибут типа <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -51,7 +51,7 @@ ms.locfileid: "32752797"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|привязка|Элемент привязки для [ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).|  
+|привязка|Элемент привязки [ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md).|  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.NetNamedPipeSecurity>  
@@ -62,5 +62,5 @@ ms.locfileid: "32752797"
  [Выбор типа учетных данных](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)

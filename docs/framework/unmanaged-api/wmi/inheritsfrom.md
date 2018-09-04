@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452917"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542658"
 ---
 # <a name="inheritsfrom-function"></a>Функция InheritsFrom
-Определяет, ли текущий класс или экземпляр является производным от указанного родительского класса.
+Определяет, является ли текущий класс или экземпляр производным от указанного родительского класса.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     

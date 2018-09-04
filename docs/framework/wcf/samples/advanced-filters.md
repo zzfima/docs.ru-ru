@@ -2,22 +2,22 @@
 title: Дополнительные фильтры
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
-ms.openlocfilehash: de8577be2d56ec3c942fd8736e350234daf6a35a
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7022384e8abe93f4276eec48785b3243ed926438
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805620"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564204"
 ---
 # <a name="advanced-filters"></a>Дополнительные фильтры
-В этом образце показана служба маршрутизации, Windows Communication Foundation (WCF). Служба маршрутизации является компонентом WCF, который упрощает Включение маршрутизатора на основе содержимого в приложении. В этом примере адаптирует стандартный образец калькулятора WCF для взаимодействия с использованием службы маршрутизации. В этом образце показано определение логики маршрутизации на основе содержимого посредством использования фильтров сообщений и таблиц фильтров сообщений.  
+В этом образце показана служба маршрутизации, Windows Communication Foundation (WCF). Служба маршрутизации является компонентом WCF, который упрощает Включение маршрутизатора на основе содержимого в приложении. В этом образце адаптирует стандартный образец калькулятора WCF для связи с использованием службы маршрутизации. В этом образце показано определение логики маршрутизации на основе содержимого посредством использования фильтров сообщений и таблиц фильтров сообщений.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\AdvancedFilters`  
   
@@ -49,7 +49,7 @@ XPathMessageFilter xpathFilter = new XPathMessageFilter("/s12:Envelope/s12:Heade
 EndpointNameMessageFilter endpointNameFilter = new EndpointNameMessageFilter("calculatorEndpoint");  
 ```  
   
- Третьим фильтром является <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Этому фильтру соответствует любое сообщение, поступающее в конечную точку, адрес которой соответствует указанному префиксу адреса (или передней части). В этом примере определяется префикс адреса «http://localhost/routingservice/router/rounding/». Это означает, что любые входящие сообщения, адресованные «http://localhost/routingservice/router/rounding/*» соответствует этому фильтру. В этом случае это сообщения, которые отображаются на конечную точку Округляющего калькулятора, который имеет адрес «http://localhost/routingservice/router/rounding/calculator».  
+ Третьим фильтром является <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>. Этому фильтру соответствует любое сообщение, поступающее в конечную точку, адрес которой соответствует указанному префиксу адреса (или передней части). В этом примере префикс адреса определяются как "http://localhost/routingservice/router/rounding/«. Это означает, что любые входящие сообщения, адресованные "http://localhost/routingservice/router/rounding/*» соответствует этому фильтру. В этом случае это сообщения, поступающие в конечную точку Округляющего калькулятора, которая имеет адрес « http://localhost/routingservice/router/rounding/calculator».  
   
 ```  
 PrefixEndpointAddressMessageFilter prefixAddressFilter = new PrefixEndpointAddressMessageFilter(new EndpointAddress("http://localhost/routingservice/router/rounding/"));  
@@ -80,9 +80,9 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 2.  Чтобы открыть **обозревателе решений**выберите **обозревателе решений** из **представление** меню.  
   
-3.  В Visual Studio, нажмите клавишу F5 или CTRL + SHIFT + B.  
+3.  В Visual Studio нажмите клавишу F5 или CTRL + SHIFT + B.  
   
-    1.  Если вы хотите автоматически загружались все необходимые проекты при нажатии клавиши F5, щелкните правой кнопкой мыши решение и выберите **свойства**. Выберите **запускаемый проект** узле **общие свойства** в левой области. Выберите **несколько запускаемых проектов** переключатель и задать все проекты, которые нужно иметь **запустить** действие.  
+    1.  Если вы хотите автоматически загружались все необходимые проекты при нажатии клавиши F5, щелкните правой кнопкой мыши решение и выберите **свойства**. Выберите **запускаемым проектом** узле **общие свойства** в левой области. Выберите **несколько запускаемых проектов** кнопку-переключатель и все проекты, чтобы задать **запустить** действие.  
   
     2.  Если проект строится с помощью клавиш CTRL+SHIFT+B, необходимо запустить следующие приложения.  
   
@@ -140,7 +140,7 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
   
 8.  Служба калькулятора и служба округляющего калькулятора также печатают журнал вызванных операций в соответствующих консольных окнах.  
   
-9. В окне консоли клиента введите `quit` и нажмите клавишу ВВОД для выхода.  
+9. В консольном окне клиента введите `quit` и нажмите клавишу ВВОД для выхода.  
   
 10. Нажмите клавишу ВВОД в окнах консоли служб, чтобы завершить службы.  
   
@@ -154,4 +154,4 @@ RoundRobinMessageFilter roundRobinFilter2 = new RoundRobinMessageFilter("group1"
  Компания Contoso планирует провести виртуализацию всех служб, чтобы сделать общедоступной только одну конечную точку, через которую возможен доступ к нескольким различным типам служб. В этом случае применяются функции маршрутизации на основе содержимого, чтобы определить назначение для отправки входящих запросов.  
   
 ## <a name="see-also"></a>См. также  
- [Образцы размещения и сохраняемости образцы](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Образцы размещения AppFabric и сохраняемости](https://go.microsoft.com/fwlink/?LinkId=193961)

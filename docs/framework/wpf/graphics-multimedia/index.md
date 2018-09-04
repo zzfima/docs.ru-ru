@@ -12,16 +12,16 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 74375c468170d58cfa79031ab0030477c29bd445
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c7cae5be1d7e52186752d67354927084d118beb9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33566638"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559015"
 ---
 # <a name="graphics-and-multimedia"></a>Графика и мультимедиа
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обеспечивает поддержку мультимедиа, векторную графику, анимацию и композицию содержимого, что облегчает разработчикам создание интересных пользовательских интерфейсов и содержимого. С помощью [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] можно создать векторную графику или сложную анимацию и интегрировать мультимедиа в приложения.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] обеспечивает поддержку мультимедиа, векторную графику, анимацию и композицию содержимого, что упрощает для разработчиков создание интересных пользовательских интерфейсов и содержимого. С помощью [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] можно создать векторную графику или сложную анимацию и интегрировать мультимедиа в приложения.  
   
  В этом разделе представлены возможности графики, анимации и мультимедиа в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], которые позволяют добавлять в приложения рисунки, эффекты перехода, звук и видео.  
   
@@ -34,11 +34,11 @@ ms.locfileid: "33566638"
   
 -   Округление макета  
   
-     Когда граница объекта попадает в середину пикселя устройства, не зависящая от разрешения система графики может создавать артефакты отрисовки, например нечеткие или полупрозрачные границы. Предыдущие версии WPF для обработки таких случаев включали функцию привязки пикселей. В Silverlight 2 появилось округление макета, являющееся другим способом перемещения элементов так, чтобы границы попадали между пикселями. Теперь WPF поддерживает округление макета с <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> вложенное свойство на <xref:System.Windows.FrameworkElement>.  
+     Когда граница объекта попадает в середину пикселя устройства, не зависящая от разрешения система графики может создавать артефакты отрисовки, например нечеткие или полупрозрачные границы. Предыдущие версии WPF для обработки таких случаев включали функцию привязки пикселей. В Silverlight 2 появилось округление макета, являющееся другим способом перемещения элементов так, чтобы границы попадали между пикселями. Теперь WPF поддерживает округление макета с помощью <xref:System.Windows.FrameworkElement.UseLayoutRounding%2A> вложенного свойства зависимостей <xref:System.Windows.FrameworkElement>.  
   
 -   Кэшированная композиция  
   
-     С помощью нового <xref:System.Windows.Media.BitmapCache> и <xref:System.Windows.Media.BitmapCacheBrush> классов, можно кэшировать составную часть визуального дерева как растровое изображение и значительно уменьшить время отрисовки. Растровое изображение продолжает реагировать на действия пользователя, например на щелчки мыши, и им можно рисовать на других элементах, как любой кистью.  
+     С помощью нового <xref:System.Windows.Media.BitmapCache> и <xref:System.Windows.Media.BitmapCacheBrush> классы, можно кэшировать сложной частью визуального дерева как растровое изображение и значительно уменьшить время отрисовки. Растровое изображение продолжает реагировать на действия пользователя, например на щелчки мыши, и им можно рисовать на других элементах, как любой кистью.  
   
 -   Поддержка построителя текстур 3  
   
@@ -46,7 +46,7 @@ ms.locfileid: "33566638"
   
 -   Функции плавности  
   
-     Можно усовершенствовать анимацию с помощью функций плавности, которые обеспечивают дополнительный контроль над поведением анимации. Например, можно применить <xref:System.Windows.Media.Animation.ElasticEase> к анимации, чтобы придать анимации быстроту. Дополнительные сведения см в <xref:System.Windows.Media.Animation> пространства имен.  
+     Можно усовершенствовать анимацию с помощью функций плавности, которые обеспечивают дополнительный контроль над поведением анимации. Например, можно применить <xref:System.Windows.Media.Animation.ElasticEase> к анимации, чтобы придать анимации быстроту. Дополнительные сведения см. в описании типов плавности <xref:System.Windows.Media.Animation> пространства имен.  
   
 <a name="graphics_and_rendering"></a>   
 ## <a name="graphics-and-rendering"></a>Графика и отрисовка  
@@ -57,7 +57,7 @@ ms.locfileid: "33566638"
   
  ![Эллипсы и прямоугольники](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure4.PNG "WPFIntroFigure4")  
   
- Эти встроенные фигуры [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] являются не просто фигурами: это программируемые элементы, в которых реализованы многие возможности, ожидаемые от наиболее распространенных элементов управления, включая клавиатуру и мышь. В следующем примере показано, как обрабатывать <xref:System.Windows.UIElement.MouseUp> событие, возникающее, щелкнув <xref:System.Windows.Shapes.Ellipse> элемента.  
+ Эти встроенные фигуры [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] являются не просто фигурами: это программируемые элементы, в которых реализованы многие возможности, ожидаемые от наиболее распространенных элементов управления, включая клавиатуру и мышь. В следующем примере показано, как обрабатывать <xref:System.Windows.UIElement.MouseUp> события, возникающего при щелчке <xref:System.Windows.Shapes.Ellipse> элемент.  
   
 ```xaml  
 <Window  
@@ -91,21 +91,21 @@ End Class
   
  ![Окно с текстом "Вы щелкнули эллипс!"](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure12.png "WPFIntroFigure12")  
   
- Более подробную информацию см. в разделе [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md). Вводный пример см. в разделе [Пример элементов-фигур](http://go.microsoft.com/fwlink/?LinkID=160037).  
+ Более подробную информацию см. в разделе [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md). Вводный пример см. в разделе [Пример элементов-фигур](https://go.microsoft.com/fwlink/?LinkID=160037).  
   
 ### <a name="2-d-geometries"></a>Двумерные геометрические объекты  
  Когда фигур [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)], предоставляемых [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], недостаточно, можно использовать поддержку [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] геометрических фигур и путей для создания собственных. Ниже показано, как можно использовать геометрические объекты для создания фигур (например, кисти рисования) и обрезки других элементов [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
  ![Различные способы использования Path](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure5.PNG "WPFIntroFigure5")  
   
- Более подробную информацию см. в разделе [Общие сведения о классе Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md). Вводный пример в разделе [Примеры геометрических объектов](http://go.microsoft.com/fwlink/?LinkID=159989).  
+ Более подробную информацию см. в разделе [Общие сведения о классе Geometry](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md). Вводный пример в разделе [Примеры геометрических объектов](https://go.microsoft.com/fwlink/?LinkID=159989).  
   
 ### <a name="2-d-effects"></a>Двумерные эффекты  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] предоставляет библиотеку классов [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)], которые можно использовать для создания различных эффектов. Возможности отрисовки в [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] для [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] позволяют рисовать элементы [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], имеющие градиентные заливки, растровые изображения, рисунки и видео, а также управлять ими с помощью вращения, масштабирования и наклона. На следующем рисунке приведен пример многих эффектов, которых можно добиться с помощью кисти [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)].  
   
  ![Иллюстрации различных кистей](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
- Более подробную информацию см. в разделе [Общие сведения о кистях WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md). Вводный пример см. в разделе [Пример использования кистей](http://go.microsoft.com/fwlink/?LinkID=159973).  
+ Более подробную информацию см. в разделе [Общие сведения о кистях WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md). Вводный пример см. в разделе [Пример использования кистей](https://go.microsoft.com/fwlink/?LinkID=159973).  
   
 <a name="rendering"></a>   
 ## <a name="3-d-rendering"></a>Трехмерная отрисовка  
@@ -113,7 +113,7 @@ End Class
   
  ![Снимок экрана примера Visual3D](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure13.png "WPFIntroFigure13")  
   
- Более подробную информацию см. в разделе [Обзор трехмерной графики](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md). Вводный пример см. в разделе [Пример трехмерных тел](http://go.microsoft.com/fwlink/?LinkID=159964).  
+ Более подробную информацию см. в разделе [Обзор трехмерной графики](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md). Вводный пример см. в разделе [Пример трехмерных тел](https://go.microsoft.com/fwlink/?LinkID=159964).  
   
 <a name="animation"></a>   
 ## <a name="animation"></a>Анимация  
@@ -121,7 +121,7 @@ End Class
   
  ![Изображения анимированного куба](../../../../docs/framework/wpf/graphics-multimedia/media/wpfintrofigure7.png "WPFIntroFigure7")  
   
- Более подробную информацию см. в разделе [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Вводный пример в разделе [Коллекция примеров анимации](http://go.microsoft.com/fwlink/?LinkID=159969).  
+ Более подробную информацию см. в разделе [Общие сведения об эффектах анимации](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md). Вводный пример в разделе [Коллекция примеров анимации](https://go.microsoft.com/fwlink/?LinkID=159969).  
   
 <a name="media"></a>   
 ## <a name="media"></a>Мультимедиа  
@@ -141,7 +141,7 @@ End Class
 <MediaElement Source="media\numbers.wmv" Width="450" Height="250" />  
 ```  
   
- <xref:System.Windows.Controls.MediaElement> позволяет воспроизводить видео и аудио и достаточно широкие возможности для легкого создания пользовательских [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)].  
+ <xref:System.Windows.Controls.MediaElement> позволяет воспроизводить видео и аудио и достаточно расширяемым для простого создания пользовательских [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)].  
   
  Дополнительные сведения см. в разделе [Общие сведения о мультимедиа](../../../../docs/framework/wpf/graphics-multimedia/multimedia-overview.md).  
   
@@ -153,6 +153,6 @@ End Class
  [Обзор фигур и базовых средств рисования в приложении WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Общие сведения о закраске сплошным цветом и градиентом](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
  [Заполнение с использованием изображений, рисунков и визуальных элементов](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Анимация и расчет времени](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [Трехмерная графика](http://msdn.microsoft.com/library/565c1f3c-235b-47de-b05b-3b53ed63f1b8)  
- [Мультимедиа](http://msdn.microsoft.com/library/44a8dcd0-80cb-4db0-a222-87cde68c2fac)
+ [Анимация и расчет времени](https://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [Трехмерная графика](https://msdn.microsoft.com/library/565c1f3c-235b-47de-b05b-3b53ed63f1b8)  
+ [Мультимедиа](https://msdn.microsoft.com/library/44a8dcd0-80cb-4db0-a222-87cde68c2fac)

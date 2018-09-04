@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
 ms.openlocfilehash: 83bba35340a917b649369fc1eb7a01a2bc6a2188
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43442776"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557284"
 ---
 # <a name="mysettings-object"></a>Объект My.Settings
 Предоставляет свойства и методы для доступа к параметрам приложения.  
@@ -35,7 +35,7 @@ ms.locfileid: "43442776"
   
 ## <a name="methods"></a>Методы  
   
-|Метод|Описание:|  
+|Метод|Описание|  
 |---|---|  
 |`Reload`|Перезагружает параметры пользователя из последними сохраненными значениями.|  
 |`Save`|Сохраняет текущие параметры пользователя.|  

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2d83d7c0-b3be-4c92-a630-25cd1285de31
-ms.openlocfilehash: a5222110bc5ac41ecaaa8e5003262360fd4d9ff5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 519f9073954e8f7710c9e73b61f40b4fcfefd25b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763528"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560236"
 ---
 # <a name="query-expression-syntax-examples-grouping"></a>Примеры синтаксиса выражений запроса. Группировка
-Примеры в этом разделе демонстрируют, как использовать `GroupBy` метод для запроса [модели AdventureWorks Sales](http://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) с использованием синтаксиса выражений запроса. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
+Примеры в этом разделе демонстрируют, как использовать `GroupBy` метод для запроса [модели AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) с использованием синтаксиса выражений запроса. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  
   
  В примерах в этом разделе используются следующие `using` / `Imports` инструкции:  
   

@@ -3,11 +3,11 @@ title: Протоколы обмена сообщениями
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
 ms.openlocfilehash: 3e56636e8364eec333f9585a0f62f6510561d1cc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405063"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43563282"
 ---
 # <a name="messaging-protocols"></a>Протоколы обмена сообщениями
 Стек канала Windows Communication Foundation (WCF) использует шифрование и транспортные каналы для преобразования представления внутренних сообщений в его формат подключения и отправить его с помощью определенного транспорта. Для взаимодействия веб-служб чаще всего используется транспорт HTTP, а в качестве кодировок в веб-службах чаще всего используются основанные на XML протоколы SOAP 1.1, SOAP 1.2 и механизм оптимизации передачи сообщений (MTOM).  

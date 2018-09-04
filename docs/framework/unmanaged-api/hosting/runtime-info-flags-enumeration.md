@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 09bd32172bcad298eebc2921461fdc953e9c6d6e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43468297"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43536184"
 ---
 # <a name="runtimeinfoflags-enumeration"></a>Перечисление RUNTIME_INFO_FLAGS
 Содержит значения, указывающие, какие сведения об общеязыковой среде выполнения (CLR) должны быть возвращены.  
@@ -45,7 +45,7 @@ typedef enum {
   
 ## <a name="members"></a>Участники  
   
-|Член|Описание:|  
+|Член|Описание|  
 |------------|-----------------|  
 |`RUNTIME_INFO_DONT_RETURN_DIRECTORY`|Указывает, что сведения о каталоге не будут включены.|  
 |`RUNTIME_INFO_DONT_RETURN_VERSION`|Указывает, что сведения о версии не следует включать.|  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: bd0ad5392010772c3205d8f148c985de2706de01
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71897299d68c2f0e43def8e70730ea456d6e9e24
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398996"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564721"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>Практическое руководство. Включение WIF для приложения веб-службы WCF
 ## <a name="applies-to"></a>Применение  
@@ -19,7 +19,7 @@ ms.locfileid: "33398996"
 -   Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>Сводка  
- Это практическое руководство содержит пошаговые инструкции по включению WIF в веб-службе WCF. Оно также содержит инструкции по тестированию приложения для проверки того, что веб-служба правильно представляет утверждения во время выполнения приложения. В этом практическом руководстве нет подробных инструкций по созданию службы токенов безопасности (STS); вместо этого используется служба Development STS, входящая в состав средства Identity and Access Tool. Служба Development STS не выполняет фактическую аутентификацию и предназначена только для тестирования. Для выполнения этого практического руководства необходимо установить средство Identity and Access Tool. Его можно скачать на следующей странице: [Средство Identity and Access Tool](http://go.microsoft.com/fwlink/?LinkID=245849)  
+ Это практическое руководство содержит пошаговые инструкции по включению WIF в веб-службе WCF. Оно также содержит инструкции по тестированию приложения для проверки того, что веб-служба правильно представляет утверждения во время выполнения приложения. В этом практическом руководстве нет подробных инструкций по созданию службы токенов безопасности (STS); вместо этого используется служба Development STS, входящая в состав средства Identity and Access Tool. Служба Development STS не выполняет фактическую аутентификацию и предназначена только для тестирования. Для выполнения этого практического руководства необходимо установить средство Identity and Access Tool. Его можно скачать на следующей странице: [Средство Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>Описание  
   

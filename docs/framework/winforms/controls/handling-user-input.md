@@ -9,33 +9,33 @@ helpviewer_keywords:
 - custom controls [Windows Forms], keyboard events using code
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
-ms.openlocfilehash: a230611bfbb0a7f21a96de22674377887cc93c2d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 19bb494d6f478c8cb7adda770f441470c4b2d19f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527804"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43540370"
 ---
 # <a name="handling-user-input"></a>Обработка введенных пользователем данных
-В этом разделе описываются основные события клавиатуры и мыши, предоставляемые <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. При обработке события разработчики элементов управления должны переопределить защищенный `On` метод *EventName*, а не подключить делегат к событию. Сведения о событиях см. в разделе [Инициирование событий из компонента](http://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).  
+В этом разделе описываются основные события клавиатуры и мыши, предоставляемые <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. При обработке события разработчики элементов управления должны переопределить защищенный `On` метод *EventName*, а не подключить делегат к событию. Сведения о событиях см. в разделе [Инициирование событий из компонента](https://msdn.microsoft.com/library/9aebf605-a87d-470b-b7c8-f9abfc8360a0).  
   
 > [!NOTE]
->  Если нет данных события, экземпляр базового класса <xref:System.EventArgs> передается в качестве аргумента для `On` *EventName* метод.  
+>  Если нет данных связанные с событием, экземпляр базового класса <xref:System.EventArgs> передается в качестве аргумента для `On` *EventName* метод.  
   
 ## <a name="keyboard-events"></a>События клавиатуры  
- Распространенные события клавиатуры, которые может обрабатывать элемент управления пользователя, <xref:System.Windows.Forms.Control.KeyDown>, <xref:System.Windows.Forms.Control.KeyPress>, и <xref:System.Windows.Forms.Control.KeyUp>.  
+ Общими событиями клавиатуры, которые может обрабатывать элемент управления, <xref:System.Windows.Forms.Control.KeyDown>, <xref:System.Windows.Forms.Control.KeyPress>, и <xref:System.Windows.Forms.Control.KeyUp>.  
   
 |Имя события|Метод для переопределения|Описание события|  
 |----------------|------------------------|--------------------------|  
 |`KeyDown`|`void OnKeyDown(KeyEventArgs)`|Возникает только при первоначальном нажатии клавиши.|  
-|`KeyPress`|`void OnKeyPress`<br /><br /> `(KeyPressEventArgs)`|Возникает при каждом нажатии клавиши. При удерживании клавиши, <xref:System.Windows.Forms.Control.KeyPress> события на скорость повтора, определенные операционной системой.|  
+|`KeyPress`|`void OnKeyPress`<br /><br /> `(KeyPressEventArgs)`|Возникает при каждом нажатии клавиши. Если удерживается клавиша, <xref:System.Windows.Forms.Control.KeyPress> события с частотой повторения, определенные операционной системой.|  
 |`KeyUp`|`void OnKeyUp(KeyEventArgs)`|Возникает при отпускании клавиши.|  
   
 > [!NOTE]
 >  Обработка ввода с клавиатуры значительно сложнее, чем переопределение событий в предыдущей таблице и в данном разделе не рассматривается. Дополнительные сведения см. в разделе [Ввод данных пользователем в Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md).  
   
 ## <a name="mouse-events"></a>События мыши  
- События мыши, которые элемент управления может обрабатывать, <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseHover>, <xref:System.Windows.Forms.Control.MouseLeave>, <xref:System.Windows.Forms.Control.MouseMove>, и <xref:System.Windows.Forms.Control.MouseUp>.  
+ События мыши, которые может обрабатывать элемент управления: <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseHover>, <xref:System.Windows.Forms.Control.MouseLeave>, <xref:System.Windows.Forms.Control.MouseMove>, и <xref:System.Windows.Forms.Control.MouseUp>.  
   
 |Имя события|Метод для переопределения|Описание события|  
 |----------------|------------------------|--------------------------|  

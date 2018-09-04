@@ -11,11 +11,11 @@ helpviewer_keywords:
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
 ms.openlocfilehash: 93eda6d6a13d6a510f2aeb06ab1c66d0cd40927f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384303"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556422"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>Использование стеклянной рамки в приложении WPF
 В этом разделе показано, как расширить [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] стеклянную рамку на клиентскую область приложения Windows Presentation Foundation (WPF).  

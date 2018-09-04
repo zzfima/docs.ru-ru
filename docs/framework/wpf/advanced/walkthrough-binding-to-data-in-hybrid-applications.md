@@ -8,15 +8,15 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: fe8826a390abd370361b84f99540b8dacbdedc5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 773708eab617e7f4cfdffad2e5019e66c60ebf37
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33549283"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562663"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Пошаговое руководство. Привязка к данным в гибридных приложениях
-Привязка источника данных к элементу управления необходима для предоставления пользователям доступа к базовым данным независимо от использовании [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] или [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В этом пошаговом руководстве показано, как можно использовать привязку данных в гибридных приложениях, содержащих [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов управления.  
+Привязка источника данных к элементу управления необходима для предоставления пользователям доступа к базовым данным независимо от используемой [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] или [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В этом пошаговом руководстве показано, как можно использовать привязку данных в гибридных приложениях, которые включают [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов управления.  
   
  В данном пошаговом руководстве представлены следующие задачи.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "33549283"
   
 -   Подключение к источнику данных.  
   
- Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. [привязка данных в гибридных приложениях-пример](http://go.microsoft.com/fwlink/?LinkID=159983).  
+ Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. в разделе [привязка данных в гибридных приложениях-пример](https://go.microsoft.com/fwlink/?LinkID=159983).  
   
  Изучив этот раздел, вы будете иметь представление о функциях привязки данных в гибридных приложениях.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "33549283"
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
--   Доступ к учебной базе данных Northwind, под управлением Microsoft SQL Server.  
+-   Доступ к базе данных Northwind на сервере Microsoft SQL Server.  
   
 ## <a name="creating-the-project"></a>Создание проекта  
   
@@ -59,22 +59,22 @@ ms.locfileid: "33549283"
   
 3.  Откройте файл MainWindow.xaml в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
-4.  В <xref:System.Windows.Window> элемента, добавьте следующий [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сопоставление пространства имен.  
+4.  В <xref:System.Windows.Window> элемента, добавьте следующий [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] сопоставление пространств имен.  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  Имя по умолчанию <xref:System.Windows.Controls.Grid> элемент `mainGrid` , назначив <xref:System.Windows.FrameworkElement.Name%2A> свойство.  
+5.  По умолчанию имя <xref:System.Windows.Controls.Grid> элемент `mainGrid` , назначив <xref:System.Windows.FrameworkElement.Name%2A> свойство.  
   
      [!code-xaml[WPFWithWFAndDatabinding#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
   
 ## <a name="defining-the-data-template"></a>Определение шаблона данных  
- Основной список клиентов отображается в <xref:System.Windows.Controls.ListBox> элемента управления. В следующем примере кода определяется <xref:System.Windows.DataTemplate> объект с именем `ListItemsTemplate` визуального дерева, который управляет <xref:System.Windows.Controls.ListBox> элемента управления. Это <xref:System.Windows.DataTemplate> назначается <xref:System.Windows.Controls.ListBox> элемента управления <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> свойство.  
+ Основной список клиентов отображается в <xref:System.Windows.Controls.ListBox> элемента управления. В следующем примере кода определяется <xref:System.Windows.DataTemplate> объект с именем `ListItemsTemplate` визуальное дерево элемента, который управляет <xref:System.Windows.Controls.ListBox> элемента управления. Это <xref:System.Windows.DataTemplate> назначается <xref:System.Windows.Controls.ListBox> элемента управления <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> свойство.  
   
 #### <a name="to-define-the-data-template"></a>Чтобы определить шаблон данных, выполните следующие действия.  
   
--   Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
+-   Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
@@ -83,50 +83,50 @@ ms.locfileid: "33549283"
   
 #### <a name="to-set-up-the-grid-layout"></a>Настройка макета сетки  
   
--   Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
+-   Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>Чтобы настроить элементы управления Label, выполните следующие действия.  
   
--   Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
+-   Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
 ## <a name="specifying-data-bindings"></a>Задание привязок данных  
- Основной список клиентов отображается в <xref:System.Windows.Controls.ListBox> элемента управления. Прикрепленное `ListItemsTemplate` привязывает <xref:System.Windows.Controls.TextBlock> управления `ContactName` поля из базы данных.  
+ Основной список клиентов отображается в <xref:System.Windows.Controls.ListBox> элемента управления. Вложенный `ListItemsTemplate` привязывает <xref:System.Windows.Controls.TextBlock> управления `ContactName` поля из базы данных.  
   
- Подробные сведения о каждой записи клиента отображаются в нескольких <xref:System.Windows.Controls.TextBox> элементов управления.  
+ Сведения о каждой записи клиента отображаются в нескольких <xref:System.Windows.Controls.TextBox> элементов управления.  
   
 #### <a name="to-specify-data-bindings"></a>Чтобы задать привязки данных, выполните следующие действия.  
   
--   Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
+-   Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
   
-     <xref:System.Windows.Data.Binding> Класса привязки <xref:System.Windows.Controls.TextBox> элементов управления с соответствующими полями в базе данных.  
+     <xref:System.Windows.Data.Binding> Класса привязки <xref:System.Windows.Controls.TextBox> элементов управления к соответствующим полям в базе данных.  
   
      [!code-xaml[WPFWithWFAndDatabinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#6)]  
   
 ## <a name="displaying-data-by-using-interoperation"></a>Отображение данных с помощью взаимодействия  
- Заказы, соответствующие выбранному заказчику, отображаются в <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> управления с именем `dataGridView1`. `dataGridView1` Элемент управления привязан к источнику данных в файле кода. Объект <xref:System.Windows.Forms.Integration.WindowsFormsHost> управления является родительским для данного [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элемента управления.  
+ Заказы, соответствующие выбранному клиенту, отображаются в <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> управления с именем `dataGridView1`. `dataGridView1` Привязке элемента управления к источнику данных в файле кода. Объект <xref:System.Windows.Forms.Integration.WindowsFormsHost> элемент управления является родительский элемент данного [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] элемента управления.  
   
 #### <a name="to-display-data-in-the-datagridview-control"></a>Чтобы отобразить данные в элементе управления DataGridView, выполните следующие действия.  
   
--   Скопируйте следующий код XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
+-   Скопируйте следующий XAML в <xref:System.Windows.Controls.Grid> объявление элемента.  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
 ## <a name="adding-the-data-source-to-the-project"></a>Добавление источника данных в проект  
- С помощью Visual Studio можно легко добавить источник данных к проекту. Эта процедура добавляет строго типизированный набор данных в ваш проект. Также добавляется несколько других классов поддержки, таких как адаптеры таблиц для каждой из выбранных таблиц.  
+ С помощью Visual Studio можно легко добавить источник данных в проект. Эта процедура добавляет строго типизированный набор данных в ваш проект. Также добавляется несколько других классов поддержки, таких как адаптеры таблиц для каждой из выбранных таблиц.  
   
 #### <a name="to-add-the-data-source"></a>Добавление источника данных  
   
-1.  Из **данные** последовательно выберите пункты **добавить новый источник данных**.  
+1.  Из **данных** меню, выберите **добавить новый источник данных**.  
   
-2.  В **мастер настройки источника данных**, создать подключение к базе данных Northwind с помощью набора данных. Дополнительные сведения см. в разделе [как: подключение к данным в базе данных](http://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
+2.  В **мастер настройки источника данных**, создать подключение к базе данных "Борей" с помощью набора данных. Дополнительные сведения см. в разделе [как: подключение к данным в базе данных](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556).  
   
-3.  При появлении по **мастер настройки источника данных**, сохранить строку подключения в качестве `NorthwindConnectionString`.  
+3.  При появлении запроса с **мастер настройки источника данных**, сохранить строку подключения в качестве `NorthwindConnectionString`.  
   
-4.  При появлении запроса на выбор объектов базы данных выберите `Customers` и `Orders` таблицы и имя созданного набора данных `NorthwindDataSet`.  
+4.  При появлении запроса на выбор объектов базы данных, выберите `Customers` и `Orders` таблицы и имя созданного набора данных `NorthwindDataSet`.  
   
 ## <a name="binding-to-the-data-source"></a>Подключение к источнику данных  
  <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> Компонент предоставляет единый интерфейс для источника данных приложения. Привязка к источнику данных реализована в файле кода программной части.  
@@ -135,9 +135,9 @@ ms.locfileid: "33549283"
   
 1.  Откройте файл кода программной части с именем MainWindow.xaml.vb или MainWindow.xaml.cs.  
   
-2.  Скопируйте следующий код в `MainWindow` определения класса.  
+2.  Скопируйте следующий код в `MainWindow` определение класса.  
   
-     Этот код объявляет <xref:System.Windows.Forms.BindingSource> компонента и связанные вспомогательные классы, которые подключаются к базе данных.  
+     Этот код объявляет <xref:System.Windows.Forms.BindingSource> компонента и связывает вспомогательные классы, которые подключаются к базе данных.  
   
      [!code-csharp[WPFWithWFAndDatabinding#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
      [!code-vb[WPFWithWFAndDatabinding#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]  
@@ -151,22 +151,22 @@ ms.locfileid: "33549283"
   
 4.  Откройте файл MainWindow.xaml.  
   
-5.  В режиме конструктора или XAML, выберите <xref:System.Windows.Window> элемент.  
+5.  В представлении конструирования или XAML, выберите <xref:System.Windows.Window> элемент.  
   
 6.  В окне «Свойства» щелкните **события** вкладки.  
   
 7.  Дважды щелкните <xref:System.Windows.FrameworkElement.Loaded> событий.  
   
-8.  Скопируйте следующий код в <xref:System.Windows.FrameworkElement.Loaded> обработчика событий.  
+8.  Скопируйте следующий код в <xref:System.Windows.FrameworkElement.Loaded> обработчик событий.  
   
      Этот код присваивает <xref:System.Windows.Forms.BindingSource> компонент в качестве контекста данных и заполняет `Customers` и `Orders` объекты адаптера.  
   
      [!code-csharp[WPFWithWFAndDatabinding#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
      [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]  
   
-9. Скопируйте следующий код в `MainWindow` определения класса.  
+9. Скопируйте следующий код в `MainWindow` определение класса.  
   
-     Этот метод отвечает за <xref:System.Windows.Data.CollectionView.CurrentChanged> событий и обновляет текущий элемент привязки данных.  
+     Этот метод обрабатывает <xref:System.Windows.Data.CollectionView.CurrentChanged> событий и обновляет текущий элемент привязки данных.  
   
      [!code-csharp[WPFWithWFAndDatabinding#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
@@ -176,7 +176,7 @@ ms.locfileid: "33549283"
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Конструктор WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
- [Привязка данных в гибридных приложениях-пример](http://go.microsoft.com/fwlink/?LinkID=159983)  
+ [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
+ [Привязка данных в пример гибридного приложения](https://go.microsoft.com/fwlink/?LinkID=159983)  
  [Пошаговое руководство. Размещение составного элемента управления Windows Forms в приложении WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
  [Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

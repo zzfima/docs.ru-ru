@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: cbbaba8cbdaf6dfd7b7c18447d425298b4911e94
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387345"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554859"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>Общие сведения об отрисовке графики в WPF
 В этом разделе приведены общие сведения о визуальном слое [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Этот раздел посвящен роль <xref:System.Windows.Media.Visual> класс поддержке отрисовки в [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] модели.  
@@ -64,7 +64,7 @@ ms.locfileid: "43387345"
 ### <a name="drawing-content-in-visual-objects"></a>Рисование содержимого в объектах Visual  
  Объект <xref:System.Windows.Media.Visual> объект сохраняет данные его отрисовки в виде **списка инструкций векторной графики**. Каждый элемент в списке инструкций представляет низкоуровневый набор графических данных и связанных ресурсов в сериализованном формате. Существует четыре различных типа данных отрисовки, которые могут включать графическое содержимое.  
   
-|Тип содержимого для отрисовки|Описание:|  
+|Тип содержимого для отрисовки|Описание|  
 |--------------------------|-----------------|  
 |Векторная графика|Представляет векторные графические данные и все связанные <xref:System.Windows.Media.Brush> и <xref:System.Windows.Media.Pen> сведения.|  
 |Изображение|Представляет изображение в пределах области, определяемой <xref:System.Windows.Rect>.|  

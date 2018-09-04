@@ -3,11 +3,11 @@ title: Невозможно запросить сведения о файле, �
 ms.date: 07/20/2015
 ms.assetid: 2bf50d79-2a74-403f-833c-6cabd2c213ce
 ms.openlocfilehash: 698d5ee08d470d846e2d13b3793be62a3699f807
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403209"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561738"
 ---
 # <a name="file-information-cannot-be-queried-if-the-file-does-not-exist"></a>Невозможно запросить сведения о файле, если он не существует
 Предпринята попытка запроса объекта <xref:System.IO.FileInfo> для получения сведений о файле, который не существует. Обычно это связано с ошибкой при указании имени файла.  

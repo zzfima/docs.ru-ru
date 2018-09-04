@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
 ms.openlocfilehash: 4d5de5ed3f557842fb28a3cf92b1923a709195d2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466301"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43542803"
 ---
 # <a name="manipulating-data"></a>Управление данными
 До того как был введен в действие режим MARS, для поиска решений в некоторых сценариях разработчикам приходилось использовать либо несколько соединений, либо серверные курсоры. Кроме того, при использовании нескольких подключений в случае транзакций, связанных соединений (с **sp_getbindtoken** и **sp_bindsession**) должны были. В следующих сценариях показано использование соединения с включенным режимом MARS вместо нескольких соединений.  

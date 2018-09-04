@@ -3,11 +3,11 @@ title: Повышение управляемости обработки ошиб
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 6492807b55b50662790cf25807a35ddd65fbe01d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399908"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557790"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>Повышение управляемости обработки ошибок и формирования сообщений об ошибках
 В этом примере показано, как расширить управление обработкой ошибок и ошибок на службу Windows Communication Foundation (WCF) с помощью <xref:System.ServiceModel.Dispatcher.IErrorHandler> интерфейс. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) некоторые дополнительный код, добавленный в службу для обработки ошибок. Клиент вызывает несколько ошибок. Служба перехватывает эти ошибки и регистрирует их в файле.  

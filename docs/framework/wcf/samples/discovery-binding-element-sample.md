@@ -2,28 +2,28 @@
 title: Образец элемента привязки для обнаружения
 ms.date: 03/30/2017
 ms.assetid: af513015-85bf-417b-8729-1bdff77ff6d6
-ms.openlocfilehash: 853f5cebfd745b3413d605dcfbf0e395e103b4f1
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: d906d9a389c50095f2af5d52e3874c3e43199e68
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805672"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535781"
 ---
 # <a name="discovery-binding-element-sample"></a>Образец элемента привязки для обнаружения
 Данный образец демонстрирует использование клиентского элемента привязки обнаружения для обнаружения службы. Эта функция позволяет разработчикам добавлять клиентский канал обнаружения к клиентскому стеку каналов, в результате чего модель программирования становится намного интуитивно понятнее. Если соответствующий канал открыт, адрес службы разрешается в процессе обнаружения. Данный образец состоит из следующих проектов.  
   
 -   **CalculatorService**: обнаруживаемой службы WCF.  
   
--   **CalculatorClient**: клиентское приложение WCF, которая использует клиентский канал обнаружения для поиска и вызова службы CalculatorService.  
+-   **CalculatorClient**: клиентское приложение WCF, которое использует клиентский канал обнаружения для поиска и вызова службы CalculatorService.  
   
--   **DynamicCalculatorClient**: клиентское приложение WCF, который использует динамическую конечную точку для поиска и вызова службы CalculatorService.  
+-   **DynamicCalculatorClient**: клиентское приложение WCF, которое использует динамическую конечную точку для поиска и вызова службы CalculatorService.  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryBindingElement`  
   
@@ -82,7 +82,7 @@ static CustomBinding CreateCustomBindingWithDiscoveryElement()
             return customBinding; }  
 ```  
   
- После создания экземпляра <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> разработчик указывает критерии, используемые при поиске службы. В данном случае критерием обнаружения является тип `ICalculatorService`. Кроме того, разработчик указывает поставщика <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>, который возвращает конечную точку <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>, указывающую место поиска служб. Поставщик <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> возвращает новый экземпляр конечной точки <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>. Дополнительные сведения см. в разделе [использование пользовательскими привязками клиентского канала обнаружения](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
+ После создания экземпляра <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement> разработчик указывает критерии, используемые при поиске службы. В данном случае критерием обнаружения является тип `ICalculatorService`. Кроме того, разработчик указывает поставщика <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider>, который возвращает конечную точку <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>, указывающую место поиска служб. Поставщик <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> возвращает новый экземпляр конечной точки <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>. Дополнительные сведения см. в разделе [с помощью пользовательской привязке для клиентского канала обнаружения](../../../../docs/framework/wcf/feature-details/using-a-custom-binding-with-the-discovery-client-channel.md).  
   
 ```  
 // Extend DiscoveryEndpointProvider class to change the default DiscoveryEndpoint  

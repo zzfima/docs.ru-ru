@@ -2,12 +2,12 @@
 title: Шаблон автоподтверждения
 ms.date: 03/30/2017
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
-ms.openlocfilehash: b30703ffba3b721ac544ea6471ec47ce7f746d2b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a032c05743b64fe58b0b187328b5216080ba6e19
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515997"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43552274"
 ---
 # <a name="auto-confirm-pattern"></a>Шаблон автоподтверждения
 Данный образец включает три сценария, иллюстрирующих пользовательское действие `AutoConfirmScope`. В первом образце показано успешное выполнение последовательности из четырех подлежащих компенсации действий, из которых второе и третье действия являются вложенными в `AutoConfirmScope`. Во втором образце показана та же последовательность с исключением, сформированным после выполнения четвертого действия <xref:System.Activities.Statements.CompensableActivity>. В третьем сценарии показана та же последовательность с исключением, сформированным в `AutoConfirmScope` после завершения второго действия <xref:System.Activities.Statements.CompensableActivity>.  
@@ -35,6 +35,6 @@ ms.locfileid: "33515997"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\Compensation\AutoConfirm`

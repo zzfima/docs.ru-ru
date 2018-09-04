@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; для &lt;msmqIntegrationBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
-ms.openlocfilehash: e9b065621f57ab902362a9fb1424bde252eba449
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: eb992a79a4a5a65404aec99cc84e9f1d78cb3f4b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750652"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535127"
 ---
 # <a name="lttransportgt-of-ltmsmqintegrationbindinggt"></a>&lt;transport&gt; для &lt;msmqIntegrationBinding&gt;
 Определяет параметры безопасности для транспорта интеграции очереди сообщений.  
@@ -37,10 +37,10 @@ msmqIntegrationBinding
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`msmqAuthenticationMode`|Задает способ проверки подлинности сообщения транспортом MSMQ. Если задано значение `None`, атрибуту `msmqProtectionLevel` также должно быть присвоено значение `None`.<br /><br /> Допустимы следующие значения:<br /><br /> — None: Проверка подлинности.<br />-WindowsDomain: Механизм проверки подлинности использует Active Directory для получения сертификата X.509 для SID, связанного с сообщением. Затем это используется для проверки ACL очереди, чтобы убедиться в наличии у пользователя разрешений для записи в очередь.<br />-Certificate: Канал получает сертификат из хранилища сертификатов.<br /><br /> Значение по умолчанию - WindowsDomain. Это атрибут типа <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
+|`msmqAuthenticationMode`|Задает способ проверки подлинности сообщения транспортом MSMQ. Если задано значение `None`, атрибуту `msmqProtectionLevel` также должно быть присвоено значение `None`.<br /><br /> Допустимы следующие значения:<br /><br /> -None: Без проверки подлинности.<br />-WindowsDomain: Механизм проверки подлинности использует Active Directory для получения сертификата X.509 для SID, связанный с сообщением. Затем это используется для проверки ACL очереди, чтобы убедиться в наличии у пользователя разрешений для записи в очередь.<br />-Certificate: Канал получает сертификат из хранилища сертификатов.<br /><br /> Значение по умолчанию - WindowsDomain. Это атрибут типа <xref:System.ServiceModel.MsmqAuthenticationMode>.|  
 |`msmqEncryptionAlgorithm`|Задает алгоритм, который будет использоваться для шифрования сообщений при их передаче между диспетчерами очередей сообщений. Допустимы следующие значения:<br /><br /> -RC4Stream<br />-AES<br /><br /> Значение по умолчанию - RC4Stream. Это атрибут типа <xref:System.ServiceModel.MsmqEncryptionAlgorithm>.|  
-|`msmqProtectionLevel`|Задает способ обеспечения безопасности сообщения на уровне транспорта MSMQ. Шифрование обеспечивает целостность сообщения, а EncryptAndSign - целостность и неотрекаемость сообщения; то есть гарантируется, что сообщение на самом деле поступает от отправителя, и отправитель действительно является тем, кем называет себя.<br /><br /> -Допустимые значения:<br />— None: Без защиты.<br />-Sign: Сообщения подписываются.<br />-EncryptAndSign: Сообщения шифруются и подписываются.<br /><br /> Значение по умолчанию - Sign. Это атрибут типа ProtectionLevel.|  
-|`msmqSecureHashAlgorithm`|— Задает алгоритм, который должен использоваться при вычислении дайджеста как части сигнатур. Допустимы следующие значения:<br />-MD5<br />-SHA1<br />-SHA256<br />-SHA512<br /><br /> Значение по умолчанию - SHA1. Это атрибут типа <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
+|`msmqProtectionLevel`|Задает способ обеспечения безопасности сообщения на уровне транспорта MSMQ. Шифрование обеспечивает целостность сообщения, а EncryptAndSign - целостность и неотрекаемость сообщения; то есть гарантируется, что сообщение на самом деле поступает от отправителя, и отправитель действительно является тем, кем называет себя.<br /><br /> -Допустимыми являются следующие:<br />-None: Без защиты.<br />-Sign: Сообщения подписываются.<br />-EncryptAndSign: Сообщения шифруются и подписываются.<br /><br /> Значение по умолчанию - Sign. Это атрибут типа ProtectionLevel.|  
+|`msmqSecureHashAlgorithm`|— Указывает алгоритм, используемый при вычислении дайджеста в составе сигнатур. Допустимы следующие значения:<br />-MD5<br />-SHA1<br />-SHA256<br />-SHA512<br /><br /> Значение по умолчанию - SHA1. Это атрибут типа <xref:System.ServiceModel.MsmqSecureHashAlgorithm>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
@@ -63,5 +63,5 @@ msmqIntegrationBinding
  [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)

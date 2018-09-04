@@ -3,11 +3,11 @@ title: Обзор LINQ to XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
 ms.openlocfilehash: 49533050efda4254f186a8c06f5c42bdd9555a23
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43415809"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43553911"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>Обзор LINQ to XML (Visual Basic)
 XML широко используется для форматирования данных в целом ряде контекстов. Примеры XML можно обнаружить в веб-среде, в файлах конфигурации, в файлах Microsoft Office Word и в базах данных.  

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
 ms.openlocfilehash: 5ae25cbca73f7c8e767cad0ac332d77c306724a1
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256808"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538911"
 ---
 # <a name="event-statement"></a>Оператор Event
 Объявляет пользовательское событие.  
@@ -56,7 +56,7 @@ End Event
   
 ## <a name="parts"></a>Части  
   
-|Отделение|Описание:|  
+|Отделение|Описание|  
 |---|---|  
 |`attrlist`|Необязательный. Список атрибутов, применимых к этому событию. Несколько атрибутов разделяются запятыми. Необходимо заключить [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md) в угловые скобки (»`<`«и»`>`«).|  
 |`accessmodifier`|Необязательный. Указывает, какой код может получать доступ к событию. Ниже указаны доступные значения.<br /><br /> -   [Открытый](../../../visual-basic/language-reference/modifiers/public.md)— любой код, который можно получить доступ к элементу, который объявляет он доступен.<br />-   [Защищенные](../../../visual-basic/language-reference/modifiers/protected.md)— только код внутри его класса или производного класса можно получить доступ к его.<br />-   [Дружественные](../../../visual-basic/language-reference/modifiers/friend.md)— только код в той же сборке может получить доступ к его.<br />-   [Закрытый](../../../visual-basic/language-reference/modifiers/private.md)— доступ к нему только код в объявляющем его элементе.<br /> -   [Protected Friend](../../language-reference/modifiers/protected-friend.md)-только доступ к нему код в классе события, производном классе или той же сборки. <br />- [Частный защищенный](../../language-reference/modifiers/private-protected.md)-только доступ к нему код в классе события или производного класса в той же сборке.|  

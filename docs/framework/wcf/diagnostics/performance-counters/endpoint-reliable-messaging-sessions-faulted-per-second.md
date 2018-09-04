@@ -3,11 +3,11 @@ title: 'Конечная точка: количество надежных се�
 ms.date: 03/30/2017
 ms.assetid: e9ae808a-7e1f-46b0-9560-d5a866be6d6e
 ms.openlocfilehash: f6b48ec4c37c28588dd874a5bfa94a01a2f43b0c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43384700"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564191"
 ---
 # <a name="endpoint-reliable-messaging-sessions-faulted-per-second"></a>Конечная точка: количество надежных сеансов обмена сообщениями, в которых произошел сбой, в секунду
 Имя счетчика: Reliable Messaging Sessions Faulted Per Second.  

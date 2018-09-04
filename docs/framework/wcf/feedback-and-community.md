@@ -5,14 +5,14 @@ helpviewer_keywords:
 - feedback [WCF]
 - customer feedback [WCF]
 ms.assetid: ba0fd32b-cbcb-4f5b-b913-d98514ab5650
-ms.openlocfilehash: 0f21a4abc7134fbfd5369ae2b3f7f5cf56915c01
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 5067495aa24d5ae7e60633ed6a0ce5c0af081367
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33810165"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538627"
 ---
 # <a name="feedback-and-community"></a>Отзывы и предложения и сообщество
 Благодарим за комментарии и соображения о Windows Communication Foundation (WCF) или [!INCLUDE[infocard](../../../includes/infocard-md.md)] документации. В нижней части каждой страницы в пакет SDK имеется ссылка «Отправить комментарии к этому разделу в корпорацию Майкрософт». Щелкните ссылку «комментарии», чтобы отправить свои комментарии и предложения по определенному разделу.  
   
- Если вы ищете дополнительные сведения, или хотите обменяться опытом с другими пользователями, заинтересованными в WCF, попробуйте [форуме MSDN Windows Communication Foundation](http://go.microsoft.com/fwlink/?LinkId=186463).
+ Если вы ищете дополнительные сведения или вы хотите поделиться методиками с другими пользователями, заинтересованными в WCF, попробуйте [форум MSDN Windows Communication Foundation](https://go.microsoft.com/fwlink/?LinkId=186463).

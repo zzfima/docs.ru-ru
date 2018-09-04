@@ -8,31 +8,31 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: cbdc693197344fe570c1462f6ca3115018eb69d6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7095784c2c9e2dc3c0ebafe84b89f9657321e1c5
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803745"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43558895"
 ---
 # <a name="basic-wcf-programming"></a>Базовое программирование WCF
-В этом разделе описываются основные принципы создания приложений Windows Communication Foundation (WCF).  
+В этом разделе представлены основные принципы создания приложений Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Базовый жизненный цикл программирования](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
- Описание жизненного цикла разработки, построения и развертывания служб и клиентских приложений WCF.  
+ Описание жизненного цикла разработки, создания и развертывания служб и клиентских приложений WCF.  
   
  [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)  
  Описание разработки и реализации контракта службы, выбора шаблона обмена сообщениями, задания контракта сбоя и других основных аспектов служб.  
   
  [Настройка служб](../../../docs/framework/wcf/configuring-services.md)  
- Описывает, как настроить службу WCF на поддержку требований контракта, настройки поведения среды выполнения локальной и обозначения адреса для публикации службы.  
+ В этой статье описывается настройка службы WCF на поддержку требований контракта, настройки поведения среды выполнения локальной и обозначения адреса для публикации службы.  
   
  [Размещение служб](../../../docs/framework/wcf/hosting-services.md)  
  Описание основных принципов размещения служб в приложении.  
   
  [Создание клиентов](../../../docs/framework/wcf/building-clients.md)  
- Описывает, как получить метаданные из службы, преобразовать их в код клиента WCF, решения проблем безопасности и сборки, настройки и размещения клиента WCF.  
+ Описывает способы решения проблем безопасности, получить метаданные из службы, преобразовать их в код клиента WCF и сборки, настройки и размещения клиентом WCF.  
   
  [Введение в расширяемость](../../../docs/framework/wcf/introduction-to-extensibility.md)  
  Описывает способы расширения WCF для создания пользовательских решений.  
@@ -61,7 +61,7 @@ ms.locfileid: "33803745"
   
  [Средства Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
   
- [Примеры Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Примеры Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Начало работы](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   

@@ -2,12 +2,12 @@
 title: Работа с потоками (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
-ms.openlocfilehash: fd1530a2b03c01b0a1cba0ce3ed4e18f2bf29046
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: f477a36c6ffa0b5a809c8ba899b21d19a8c9a2d8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874837"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555790"
 ---
 # <a name="threading-visual-basic"></a>Работа с потоками (Visual Basic)
 Потоки позволяют программе на Visual Basic осуществлять параллельную обработку, то есть вы можете выполнять несколько операций одновременно. Например, потоки можно использовать для отслеживания пользовательского ввода, выполнения фоновых задач и одновременной обработки нескольких потоков ввода.  
@@ -31,16 +31,11 @@ ms.locfileid: "37874837"
  Вы можете использовать все классы или некоторые из них для синхронизации работы нескольких потоков, но некоторые функции для потоков поддерживаются также и языком Visual Basic. Например [оператор SyncLock](../../../../visual-basic/language-reference/statements/synclock-statement.md) дает возможность синхронизации за счет неявного использования класса <xref:System.Threading.Monitor>.  
   
 > [!NOTE]
->  Начиная с [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], многопоточное программирование значительно упростилось благодаря классам <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), новым классам параллельной коллекции из пространства имен <xref:System.Collections.Concurrent?displayProperty=nameWithType> и новой модели программирования, которая вместо потоков использует концепцию задач. Дополнительные сведения см. в разделе [Параллельное программирование](../../../../standard/parallel-programming/index.md).  
+>  Начиная с [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], многопоточное программирование значительно упростилось благодаря классам <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, [Parallel LINQ (PLINQ)](../../../../standard/parallel-programming/parallel-linq-plinq.md), новым классам параллельной коллекции из пространства имен <xref:System.Collections.Concurrent?displayProperty=nameWithType> и новой модели программирования, которая вместо потоков использует концепцию задач. Дополнительные сведения см. в разделе [Параллельное программирование](../../../../standard/parallel-programming/index.md).  
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
-|[Многопоточные приложения (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/multithreaded-applications.md)|Описание создания и использования потоков.|  
-|[Параметры и возвращаемые значения для многопоточных процедур (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md)|Описание передачи и возвращения параметров в многопоточных приложениях.|  
-|[Пошаговое руководство. Многопоточность с помощью компонента BackgroundWorker (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/walkthrough-multithreading-with-the-backgroundworker-component.md)|Пример создания простого многопоточного приложения.|  
 |[Синхронизация потоков (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)|Описание управления взаимодействием потоков.|  
-|[Группировка потоков в пул (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)|Описание использования пула рабочих потоков, управляемых системой.|  
-|[Практическое руководство. Использование пула потоков (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Демонстрация синхронизированного использования нескольких потоков в пуле.|  
 |[Работа с потоками](../../../../standard/threading/index.md)|Описание реализации работы с потоками на платформе .NET Framework.|

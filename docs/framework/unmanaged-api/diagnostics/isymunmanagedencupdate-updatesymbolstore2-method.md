@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02eaaa1c3336b6e99b8c8deabb944e292e35a2a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 78d9e27299c9d7ed7d6cb9b09dd659ba081c5fde
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425188"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554733"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>Метод ISymUnmanagedENCUpdate::UpdateSymbolStore2
-Позволяет компилятору пропускать функции, которые не были изменены из потока программы базы данных (PDB), предоставляемых сведений о строке соответствует требованиям. Правильные сведения строки можно определить с помощью старых сведений строки PDB и одного разностного для всех строк в функции.  
+Позволяет компилятору пропускать функции, которые не были изменены из потока базы данных (PDB) программы, предоставляемые данные строки соответствует требованиям. Правильные сведения строки можно определить с помощью старых сведений строки PDB и одного разностного для всех строк в функции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,7 +38,7 @@ HRESULT UpdateSymbolStore2(
   
 #### <a name="parameters"></a>Параметры  
  `pIStream`  
- [in] Указатель на [IStream](https://msdn.microsoft.com/library/aa380034.aspx) , содержащий сведения о строке.  
+ [in] Указатель на [IStream](/windows/desktop/api/objidl/nn-objidl-istream) , содержащий сведения о строке.  
   
  `pDeltaLines`  
  [in] Указатель на [SYMLINEDELTA](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md) структуру, содержащую строки, которые были изменены.  

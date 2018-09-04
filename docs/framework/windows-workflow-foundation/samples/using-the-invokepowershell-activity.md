@@ -2,12 +2,12 @@
 title: Использование действия InvokePowerShell
 ms.date: 03/30/2017
 ms.assetid: 956251a0-31ca-4183-bf76-d277c08585df
-ms.openlocfilehash: c5609556af94ed3e372538047ff6309a105975ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa42cddd930b755e9938a02a137ee77ee273fad0
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520244"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43538871"
 ---
 # <a name="using-the-invokepowershell-activity"></a>Использование действия InvokePowerShell
 Образец InvokePowerShell демонстрирует, как вызывать команды Windows PowerShell с помощью действия `InvokePowerShell`.  
@@ -25,7 +25,7 @@ ms.locfileid: "33520244"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`  
   
@@ -35,8 +35,8 @@ ms.locfileid: "33520244"
 |Имя проекта|Описание|Основные файлы|  
 |------------------|-----------------|----------------|  
 |CodedClient|Образец клиентского приложения, использующий действие PowerShell.|-   **Program.cs**: программным образом создает рабочий процесс на основе последовательности, вызывающей действие InvokePowerShell.|  
-|DesignerClient|Набор пользовательских действий, содержащих пользовательское действие `InvokePowerShell`, прочие пользовательские действия и рабочий процесс, использующий их.|<ul><li>Действия:<br /><br /> <ul><li>**PrintCollection.cs**: вспомогательное действие, выводящее все элементы в коллекции на консоль.</li><li>**ReadLine.cs**: вспомогательное действие для чтения данные с консоли.</li></ul></li><li>Файловая система:<br /><br /> <ul><li>**Copy.XAML**: действие, копирующее файл.</li><li>**CreateFile.xaml**: действие, создающее файл.</li><li>**DeleteFile.xaml**: действие, которое удаляет файл.</li><li>**MakeDir.xaml**: действие, которое создает каталог.</li><li>**MOVE.XAML**: действие, перемещающее файл.</li><li>**ReadFile.xaml**: действие, которое считывает файл и возвращает его содержимое.</li><li>**TestPath.xaml**: действие, проверяющее наличие пути.</li></ul></li><li>Процесс:<br /><br /> <ul><li>**GetProcess.xaml**: действие, возвращающее перечень запущенных процессов.</li><li>**StopProcess.xaml**: действие, останавливающее конкретный процесс.</li></ul></li><li>**Program.cs**: вызывает рабочий процесс Sequence1.</li><li>**Sequence1.XAML**: рабочий процесс на основе последовательности.</li></ul>|  
-|PowerShell|Действие `InvokePowerShell` и связанные с ним конструкторы.|Файлы действия<br /><br /> -   **ExecutePowerShell.cs**: основной логики выполнения действия.<br />-   **InvokePowerShell.cs**: оболочка главной логики исполнения, который содержит стандартную (возвращающую значение) версию и нестандартную (не возвращающую значение) версию. Это открытый интерфейс действия.<br />-   **NoPersistZone.cs**: это действие препятствующее сохранению дочерних действий. Данный класс используется в реализации действия `InvokePowerShell` для предотвращения сохранения действия в ходе исполнения.<br /><br /> Файлы конструктора:<br /><br /> 1.  **ArgumentDictionaryEditor.cs**: диалог Windows, который позволяет пользователю изменять аргументы `InvokePowerShell` действия.<br />2.  **GenericInvokePowerShellDesigner.xaml** и **GenericInvokePowerShellDesigner.xaml.cs**: Определяет внешний вид универсального `InvokePowerShell` действия в [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].<br />3.  **InvokePowerShellDesigner.xaml** и **InvokePowerShellDesigner.cs**: Определяет внешний вид неуниверсальные `InvokePowerShell` действия в [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].|  
+|DesignerClient|Набор пользовательских действий, содержащих пользовательское действие `InvokePowerShell`, прочие пользовательские действия и рабочий процесс, использующий их.|<ul><li>Действия:<br /><br /> <ul><li>**PrintCollection.cs**: вспомогательное действие, выводящее все элементы в коллекции на консоль.</li><li>**ReadLine.cs**: вспомогательное действие для чтения данные с консоли.</li></ul></li><li>Файловая система:<br /><br /> <ul><li>**Copy.XAML**: действие, копирующее файл.</li><li>**CreateFile.xaml**: действие, создающее файл.</li><li>**DeleteFile.xaml**: действие, которое удаляет файл.</li><li>**MakeDir.xaml**: действие, создающее каталог.</li><li>**MOVE.XAML**: действие, перемещающее файл.</li><li>**ReadFile.xaml**: действие, которое считывает файл и возвращает его содержимое.</li><li>**TestPath.xaml**: действие, проверяющее наличие пути.</li></ul></li><li>Процесс:<br /><br /> <ul><li>**GetProcess.xaml**: действие, которое получает список выполняющихся процессов.</li><li>**StopProcess.xaml**: действие, останавливающее конкретный процесс.</li></ul></li><li>**Program.cs**: вызывает рабочий процесс Sequence1.</li><li>**Sequence1.XAML**: рабочий процесс на основе последовательности.</li></ul>|  
+|PowerShell|Действие `InvokePowerShell` и связанные с ним конструкторы.|Файлы действия<br /><br /> -   **ExecutePowerShell.cs**: основной логики выполнения действия.<br />-   **InvokePowerShell.cs**: оболочка главной логики исполнения, который содержит стандартную (возвращающую значение) версию и нестандартную (не возвращающую значение) версию. Это открытый интерфейс действия.<br />-   **NoPersistZone.cs**: это действие предотвращает сохранение дочерних действий. Данный класс используется в реализации действия `InvokePowerShell` для предотвращения сохранения действия в ходе исполнения.<br /><br /> Файлы конструктора:<br /><br /> 1.  **ArgumentDictionaryEditor.cs**: диалоговое окно Windows, которое позволяет пользователю изменять аргументы `InvokePowerShell` действия.<br />2.  **GenericInvokePowerShellDesigner.xaml** и **GenericInvokePowerShellDesigner.xaml.cs**: Определяет внешний вид универсального `InvokePowerShell` действия в [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].<br />3.  **InvokePowerShellDesigner.xaml** и **InvokePowerShellDesigner.cs**: Определяет внешний вид и неуниверсальный `InvokePowerShell` действия в [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].|  
   
  Клиентские проекты обсуждаются в первую очередь, поскольку проще понять внутреннее функционирование действия PowerShell, изучив его практическое применение.  
   
@@ -166,10 +166,10 @@ new ForEach<PSObject>
     Grid.Row="1" Grid.Column="1" />  
 ```  
   
- Настройка конструктора не завершается настройкой XAML-файлов, определяющих внешний вид действия на холсте конструктора. Диалоговые окна, используемые для отображения параметров действия, тоже можно настроить. Эти параметры и переменные PowerShell влияют на поведение команд PowerShell. Это действие предоставляет их в виде <!--zz <xref:System.Collections.Generic.Dictionary%601>--> `System.Collections.Generic.Dictionary` типов. ArgumentDictionaryEditor.cs, PropertyEditorResources.xaml и PropertyEditorResources.cs определяют диалоговое окно, позволяющее изменять эти типы.  
+ Настройка конструктора не завершается настройкой XAML-файлов, определяющих внешний вид действия на холсте конструктора. Диалоговые окна, используемые для отображения параметров действия, тоже можно настроить. Эти параметры и переменные PowerShell влияют на поведение команд PowerShell. Действие предоставляет их как <!--zz <xref:System.Collections.Generic.Dictionary%601>--> `System.Collections.Generic.Dictionary` типов. ArgumentDictionaryEditor.cs, PropertyEditorResources.xaml и PropertyEditorResources.cs определяют диалоговое окно, позволяющее изменять эти типы.  
   
 ## <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
- Чтобы запустить этот образец, нужно установить Windows PowerShell. Windows PowerShell можно установить из этого расположения: [Windows PowerShell](http://go.microsoft.com/fwlink/?LinkId=150383).  
+ Чтобы запустить этот образец, нужно установить Windows PowerShell. Windows PowerShell можно установить из этого расположения: [Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=150383).  
   
 #### <a name="to-run-the-coded-client"></a>Запуск закодированного клиента  
   
@@ -177,7 +177,7 @@ new ForEach<PSObject>
   
 2.  Щелкните решение правой кнопкой мыши и постройте его.  
   
-3.  Щелкните правой кнопкой мыши **CodedClient** проект и выберите **Назначить запускаемым проектом**.  
+3.  Щелкните правой кнопкой мыши **CodedClient** проекта и выберите **Назначить запускаемым проектом**.  
   
 4.  Нажмите CTRL+F5, чтобы запустить приложение.  
   
@@ -187,7 +187,7 @@ new ForEach<PSObject>
   
 2.  Щелкните решение правой кнопкой мыши и постройте его.  
   
-3.  Щелкните правой кнопкой мыши **DesignerClient** проект и выберите **Назначить запускаемым проектом**.  
+3.  Щелкните правой кнопкой мыши **DesignerClient** проекта и выберите **Назначить запускаемым проектом**.  
   
 4.  Нажмите CTRL+F5, чтобы запустить приложение.  
   
@@ -195,7 +195,7 @@ new ForEach<PSObject>
   
 1.  Если при обращении к сборке с действиями `InvokePowerShell` или проекту от другого проекта возникает ошибка, возможно, нужно вручную добавить элемент `<SpecificVersion>True</SpecificVersion>` к CSPROJ-файлу нового проекта под строчкой, в которой происходит обращение к `InvokePowerShell`.  
   
-2.  Если не установлена оболочка Windows PowerShell, следующее сообщение об ошибке отображается в Visual Studio, сразу после добавления `InvokePowerShell` действия в рабочий процесс: `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
+2.  Если Windows PowerShell не установлен, сообщение об ошибке отображается в Visual Studio, сразу же после добавления `InvokePowerShell` действия в рабочий процесс: `Workflow Designer encountered problems with your document. Could not load file or assembly ‘System.Management.Automation’ ... or one of its dependencies. The system cannot find the file specified.`  
   
 3.  В среде Windows PowerShell 2.0 не удался вызов `$input.MoveNext()` программным образом, а в скриптах, использующих `$input.MoveNext()`, формируются непреднамеренные ошибки и результаты. Чтобы решить эту проблему, попробуйте использовать операцию PowerShell `foreach`, вместо того, чтобы вызывать `MoveNext()` при проходе по массиву.  
   
@@ -204,6 +204,6 @@ new ForEach<PSObject>
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\PowerShell`

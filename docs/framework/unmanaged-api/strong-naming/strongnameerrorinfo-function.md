@@ -21,14 +21,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481973"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560592"
 ---
 # <a name="strongnameerrorinfo-function"></a>Функция StrongNameErrorInfo
-Возвращает код последней ошибки, которое было вызвано одной из функций строгого имени.  
+Получает код последней ошибки, вызванной одной из функций строгого имени.  
   
  Эта функция является устаревшей.  
   
@@ -54,4 +54,4 @@ HRESULT StrongNameErrorInfo ();
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Строгое именование глобальные статические функции](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)
+ [Глобальные статические функции строгого именования](https://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)

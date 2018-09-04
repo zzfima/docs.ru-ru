@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 320a45af1c2f3b460c23d8320c456120643902f7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7bb68a7d08d983e93119804db6c1f5a01cd047c9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759547"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659393"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Настройка параметров и типы данных параметров
 Объекты команды используют параметры для передачи значений в выражения SQL или хранимые процедуры, обеспечивая проверку типов и правильности. В отличие от текста команд, входные параметры обрабатываются как буквенные значения, а не как исполняемый код. Это помогает защищаться от атак путем внедрения кода SQL, при которых злоумышленник вставляет в инструкцию SQL команду, ставящую под угрозу безопасность сервера.  
   
- Параметризованные команды также позволяют повысить производительность при выполнении запроса, поскольку при их использовании сервер баз данных может точно сопоставить входящей команде правильный кэшированных план запроса. Дополнительные сведения см. в разделах [Кэширование и повторное использование плана выполнения](http://go.microsoft.com/fwlink/?LinkId=120424) и [Повторное использование параметров и плана выполнения](http://go.microsoft.com/fwlink/?LinkId=120423) электронной документации по SQL Server. Помимо повышения безопасности и производительности параметризованные команды обеспечивают удобный метод организации значений, передающихся в источник данных.  
+ Параметризованные команды также позволяют повысить производительность при выполнении запроса, поскольку при их использовании сервер баз данных может точно сопоставить входящей команде правильный кэшированных план запроса. Дополнительные сведения см. в разделе [кэширование и плана выполнения повторного использования](/sql/relational-databases/query-processing-architecture-guide#execution-plan-caching-and-reuse) и [параметры и повторное использование планов выполнения](/sql/relational-databases/query-processing-architecture-guide#PlanReuse). Помимо повышения безопасности и производительности параметризованные команды обеспечивают удобный метод организации значений, передающихся в источник данных.  
   
  Объект <xref:System.Data.Common.DbParameter> можно создать при помощи конструктора или путем добавления его в коллекцию <xref:System.Data.Common.DbCommand.DbParameterCollection%2A> с помощью метода `Add` коллекции <xref:System.Data.Common.DbParameterCollection> . Метод `Add` принимает в качестве входных данных либо аргументы конструктора, либо существующий объект параметра - в зависимости от поставщика данных.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "32759547"
 |-------------------------|------------|---------------|---------------|--------------|----------------|  
 |<xref:System.Boolean>|Boolean|Разряд|Boolean|Разряд|Byte|  
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|  
-|byte[]|Binary|VarBinary`.` это неявное преобразование завершится ошибкой, если массив байтов больше, чем максимальный размер varbinary, который составляет 8000 байт. Байтовые массивы, размер которых превышает 8000 байт, явно задать <xref:System.Data.SqlDbType>.|VarBinary|Binary|Raw|  
+|byte[]|Binary|VarBinary`.` это неявное преобразование завершится ошибкой, если массив байтов больше, чем максимальный размер VarBinary, который является более 8000 байт. Для массивов байтов, превышающих 8000 байт, необходимо явно указать <xref:System.Data.SqlDbType>.|VarBinary|Binary|Raw|  
 |<xref:System.Char>|``|Вывод типа <xref:System.Data.SqlDbType> из типа char не поддерживается.|Char|Char|Byte|  
 |<xref:System.DateTime>|DateTime|DateTime|DBTimeStamp|DateTime|DateTime|  
 |<xref:System.DateTimeOffset>|DateTimeOffset|Тип DateTimeOffset в SQL Server 2008. Вывод типа <xref:System.Data.SqlDbType> из типа DateTimeOffset не поддерживается в версиях SQL Server до SQL Server 2008.|||DateTime|  
@@ -56,7 +56,7 @@ ms.locfileid: "32759547"
 |<xref:System.Double>|Double|Float|Double|Double|Double|  
 |<xref:System.Single>|Single|Real|Single|Real|Float|  
 |<xref:System.Guid>|Guid|UniqueIdentifier|Guid|UniqueIdentifier|Raw|  
-|<xref:System.Int16 >|Int16|SmallInt|SmallInt|SmallInt|Int16|  
+|<xref:System.Int16>|Int16|SmallInt|SmallInt|SmallInt|Int16|  
 |<xref:System.Int32>|Int32|Int|Int|Int|Int32|  
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Числовой|  
 |<xref:System.Object>|Объект|Вариант|Вариант|Вывод типа OdbcType из типа Object не поддерживается.|Blob|  
@@ -87,13 +87,13 @@ ms.locfileid: "32759547"
 > [!NOTE]
 >  Выведение информации о параметрах снижает производительность, так как для этого требуется дополнительный обмен данных с источником данных. Если информация о параметрах известна во время разработки, можно увеличить производительность приложения, задав параметры явным образом.  
   
- Дополнительные сведения см. в разделе [создание команд с помощью построителей команд](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
+ Дополнительные сведения см. в разделе [создание команд с помощью построителей CommandBuilder](../../../../docs/framework/data/adonet/generating-commands-with-commandbuilders.md).  
   
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>Использование параметров с объектом SqlCommand и хранимой процедурой  
  Хранимые процедуры дают множество преимуществ в приложениях, управляемых данными. С помощью хранимых процедур операции с базой данных можно инкапсулировать в одну команду, оптимизированную для производительности и обладающую повышенной безопасностью. Хотя хранимые процедуры можно вызывать и с помощью инструкции SQL, указывая в ней имя процедуры и ее аргументы, использование коллекции <xref:System.Data.Common.DbCommand.Parameters%2A> объекта [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] в <xref:System.Data.Common.DbCommand> позволяет более явно задать параметры процедуры, а также обращаться к выходным параметрам и возвращаемым значениям.  
   
 > [!NOTE]
->  Параметризованные инструкции выполняются на сервере с помощью хранимой процедуры `sp_executesql,` которая позволяет повторно использовать планы запросов. Локальные курсоры или переменные в пакете `sp_executesql` недоступны пакету, вызвавшему `sp_executesql`. Изменения в контексте базы данных длятся только до завершения выполнения инструкции `sp_executesql` . Дополнительные сведения см. в электронной документации по SQL Server.  
+> Параметризованные инструкции выполняются на сервере с помощью хранимой процедуры `sp_executesql,` которая позволяет повторно использовать планы запросов. Локальные курсоры или переменные в пакете `sp_executesql` недоступны пакету, вызвавшему `sp_executesql`. Изменения в контексте базы данных длятся только до завершения выполнения инструкции `sp_executesql` . Дополнительные сведения см. в разделе [sp_executesql (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql).
   
  Если параметры используются с объектом <xref:System.Data.SqlClient.SqlCommand> для выполнения хранимой процедуры SQL Server, то имена параметров, добавляемых в коллекцию <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> , должны соответствовать именам маркеров параметров в хранимой процедуре. Поставщик данных [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] для SQL Server не поддерживает местозаполнитель (?) для передачи параметров в инструкции SQL и хранимые процедуры. Он обрабатывает параметры в хранимой процедуре как именованные параметры и ищет соответствующие маркеры параметров. Например, хранимая процедура `CustOrderHist` определяется с использованием параметра `@CustomerID`. Когда программа выполняет эта хранимую процедуру, она также должна использовать параметр `@CustomerID`.  
   
@@ -199,4 +199,4 @@ parameter.Direction = ParameterDirection.Output;
  [Команды и параметры](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
  [Параметры DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Сопоставления типов данных в ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

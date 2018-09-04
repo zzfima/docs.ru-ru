@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aea9fb2bb9c4535e30a42ad956b04b3bb06a798a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3dd083193fa8fed2abc8a1a498325f7edd89bc96
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33433992"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43658004"
 ---
 # <a name="iclrstrongnamestrongnametokenfromassembly-method"></a>Метод ICLRStrongName::StrongNameTokenFromAssembly
 Создает маркер строгого имени из указанного файла сборки.  
@@ -39,30 +39,30 @@ HRESULT StrongNameTokenFromAssembly (
   
 #### <a name="parameters"></a>Параметры  
  `wszFilePath`  
- [in] Путь к файлу переносимого исполняемого (PE) для сборки.  
+ [in] Путь к переносимого исполняемого (PE) файла для сборки.  
   
  `ppbStrongNameToken`  
- [out] Возвращаемый строгое имя маркера.  
+ [out] Токен, возвращенный строгого имени.  
   
  `pcbStrongNameToken`  
- [out] Размер в байтах строгое имя маркера.  
+ [out] Размер в байтах, строгое имя маркера.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (в разделе [часто встречающихся значений HRESULT](http://go.microsoft.com/fwlink/?LinkId=213878) список).  
+ `S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).  
   
 ## <a name="remarks"></a>Примечания  
- Маркер строгого имени — это сокращенная форма открытого ключа. Маркер является 64-разрядный хэш, который создается из открытого ключа, используемого для подписания сборки. Маркер является частью строгого имени для сборки и может быть считано из метаданных сборки.  
+ Маркер строгого имени — это сокращенная форма открытого ключа. Токен является 64-разрядный хэш, который создается из открытого ключа, используемого для подписания сборки. Маркер является частью строгого имени для сборки и может быть считано из метаданных сборки.  
   
  После создания маркера необходимо вызвать [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод для освобождения выделенной памяти.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** MetaHost.h  
   
  **Библиотека:** включена как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Метод StrongNameTokenFromAssemblyEx](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)  

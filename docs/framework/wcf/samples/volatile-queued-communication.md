@@ -3,11 +3,11 @@ title: Неустойчивое взаимодействие с использо
 ms.date: 03/30/2017
 ms.assetid: 0d012f64-51c7-41d0-8e18-c756f658ee3d
 ms.openlocfilehash: 55c2b695cdc672216ef6a76bef55bc0d427336a0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43394024"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560669"
 ---
 # <a name="volatile-queued-communication"></a>Неустойчивое взаимодействие с использованием очереди
 В этом образце показано, как осуществлять неустойчивое взаимодействие с использованием очередей с помощью транспорта очереди сообщений (MSMQ). В этом образце используется привязка <xref:System.ServiceModel.NetMsmqBinding>. В данном случае служба представляет собой резидентное консольное приложение, позволяющее наблюдать за тем, как служба получает сообщения из очереди.  

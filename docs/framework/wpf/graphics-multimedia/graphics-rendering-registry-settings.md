@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: e12fccf7426ae130cd2aaf120eafb19ac3909659
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: acaa8f2ff6611f2f0beb07b74193341edfa2a428
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925759"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561237"
 ---
 # <a name="graphics-rendering-registry-settings"></a>Настройки реестра графической отрисовки
 В этом разделе содержится обзор параметров графической отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в реестре, которые влияют на приложения [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -26,13 +26,13 @@ ms.locfileid: "42925759"
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>Что такое XPDM и WDDM?  
- Некоторые из параметров реестра для графической отрисовки имеют разные значения по умолчанию, в зависимости от того, использует ли видеокарта драйвер XPDM или WDDM. XPDM — модель видеодрайвера [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)], а WDDM — модель видеодрайвера Windows. Модель WDDM доступна на компьютерах под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] и [!INCLUDE[win7](../../../../includes/win7-md.md)]. Модель XPDM доступна на компьютерах под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] и [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Дополнительную информацию о WDDM см. в разделе [Руководство по проектированию для модели видеодрайвера Windows Vista](http://go.microsoft.com/fwlink/?LinkId=178394).  
+ Некоторые из параметров реестра для графической отрисовки имеют разные значения по умолчанию, в зависимости от того, использует ли видеокарта драйвер XPDM или WDDM. XPDM — модель видеодрайвера [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)], а WDDM — модель видеодрайвера Windows. Модель WDDM доступна на компьютерах под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] и [!INCLUDE[win7](../../../../includes/win7-md.md)]. Модель XPDM доступна на компьютерах под управлением [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)], [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] и [!INCLUDE[TLA#tla_winnetsvrfam](../../../../includes/tlasharptla-winnetsvrfam-md.md)]. Дополнительную информацию о WDDM см. в разделе [Руководство по проектированию для модели видеодрайвера Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178394).  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>Параметры реестра  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] включает четыре параметра реестра для управления функциями отрисовки [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |-------------|-----------------|  
 |**Отключить аппаратное ускорение**|Указывает, следует ли включить аппаратное ускорение.|  
 |**Максимальное значение мультисэмплинга**|Определяет степень мультисэмплинга для сглаживания содержимого [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)].|  

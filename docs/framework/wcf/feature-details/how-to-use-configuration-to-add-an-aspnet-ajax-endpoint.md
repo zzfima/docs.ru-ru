@@ -3,11 +3,11 @@ title: Практическое руководство. Использовани
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
 ms.openlocfilehash: 3a3474dc04ce2cda63157e68597d1184e9b2bf15
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934411"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43559955"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>Практическое руководство. Использование конфигурации для добавления конечной точки ASP.NET AJAX
 Windows Communication Foundation (WCF) позволяет создавать службу, использующую с поддержкой ASP.NET AJAX конечной точки доступны, который может вызываться из JavaScript на веб-сайта клиента. Чтобы создать такой конечной точки, можно использовать файл конфигурации, как и для всех остальных конечных точек службы Windows Communication Foundation (WCF), или использовать метод, который не требует никаких элементов конфигурации. В этом разделе показано выполнение этой задачи с помощью файла конфигурации.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
 ms.openlocfilehash: 8e7632dda1a1bd2b60b71c385ad58c23e4207534
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408320"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43532107"
 ---
 # <a name="authorization-in-wcf"></a>Авторизация в WCF
 Авторизация - процесс управления доступом и правами на ресурсы, например службы и файлы. В подразделах этого раздела показано, как выполнять эту основную задачу в Windows Communication Foundation (WCF) в различными способами.  

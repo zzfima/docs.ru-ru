@@ -3,11 +3,11 @@ title: Проверка внешнего действия
 ms.date: 03/30/2017
 ms.assetid: 49619f59-9819-484a-bcd8-5596308e8551
 ms.openlocfilehash: 4805bec3deed0779b02687b11dd487e673802925
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423898"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527811"
 ---
 # <a name="external-activity-validation"></a>Проверка внешнего действия
 В этом образце показано, как добавить логику проверки во встроенное действие, созданное другим пользователем. Логика проверки включает принудительное обеспечение для всех свойств <xref:System.Activities.Statements.If>, входящих в рабочий процесс, установки либо свойства <xref:System.Activities.Statements.If.Then%2A>, либо свойства <xref:System.Activities.Statements.If.Else%2A>. Кроме того, логика проверки включает проверку наличия у всех действий <xref:System.Activities.Statements.Pick>, присутствующих в рабочем процессе, нескольких ветвей. В противном случае создается предупреждение.  

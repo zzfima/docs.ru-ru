@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Viewbox control [WPF]
 - scaling elements [WPF], Viewbox control
 ms.assetid: 00fc0a16-1078-4d55-9849-ffaf7da96531
-ms.openlocfilehash: 28b92e903d954312374d8e4041c4fdeb9ed375d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe7184df5d889a93f2274dfd20669701947f0965
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554369"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43557854"
 ---
 # <a name="viewbox"></a>Viewbox
 <xref:System.Windows.Controls.Viewbox> Элемент управления используется для растягивания или масштабирования дочернего элемента.  
@@ -28,4 +28,4 @@ ms.locfileid: "33554369"
  <xref:System.Windows.Controls.Image>  
   
 ## <a name="see-also"></a>См. также  
- [Пример коллекции элементов управления WPF](http://go.microsoft.com/fwlink/?LinkID=160053)
+ [Пример коллекции элементов управления WPF](https://go.microsoft.com/fwlink/?LinkID=160053)

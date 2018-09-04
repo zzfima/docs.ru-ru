@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d207eae5e9ac1b3020216226442321e72840c037
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f86fd424b397859dd70e113f2d8b8dcae7226f53
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450366"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561172"
 ---
 # <a name="imetadatatablesgettableindex-method"></a>Метод IMetaDataTables::GetTableIndex
-Возвращает индекс для таблицы, который ссылается указанный токен.  
+Получает индекс для таблицы, который ссылается указанный токен.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -41,19 +41,19 @@ HRESULT GetTableIndex (
  [in] Токен, который ссылается на таблицу.  
   
  `pixTbl`  
- [out] Указатель на возвращаемый индекс для ссылочной таблицы.  
+ [out] Указатель на возвращаемый индекс для таблицы, на которую указывает ссылка.  
   
 ## <a name="remarks"></a>Примечания  
- Не рекомендуется для использования этого метода, так как он не возвращает согласованные результаты. Сведения о таблице см. в документации Common Language Infrastructure (CLI), особенно «раздел II: определение метаданных и семантика». Документация доступна в Интернете; см. страницы [ECMAC# и стандарты Common Language Infrastructure](http://go.microsoft.com/fwlink/?LinkID=99212) на сайте MSDN и [Стандарт ECMA-335 — общеязыковая инфраструктура (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) на международном веб-сайте организации ECMA.  
+ Не рекомендуется использование этого метода, так как он не возвращает согласованные результаты. Сведения о таблице см. в документации по Common Language Infrastructure (CLI), особенно «раздел II: определение метаданных и семантика». Документация доступна в Интернете; см. страницы [ECMAC# и стандарты Common Language Infrastructure](https://go.microsoft.com/fwlink/?LinkID=99212) на сайте MSDN и [Стандарт ECMA-335 — общеязыковая инфраструктура (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) на международном веб-сайте организации ECMA.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** Cor.h  
   
  **Библиотека:** используется как ресурс в MsCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  

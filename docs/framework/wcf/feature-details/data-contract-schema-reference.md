@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 06bc79e059300d448ababa87974b590f54f7984c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496803"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554697"
 ---
 # <a name="data-contract-schema-reference"></a>Справочник по схеме контрактов данных
 В данном разделе описывается подмножество схемы XML (XSD), используемое <xref:System.Runtime.Serialization.DataContractSerializer> для описания типов среды CLR, применяемых для сериализации XML.  
   
 ## <a name="datacontractserializer-mappings"></a>DataContractSerializer - сопоставления  
- `DataContractSerializer` Сопоставляет типы CLR с XSD при экспорте метаданных из конечной точки метаданных с помощью службы Windows Communication Foundation (WCF) или [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Дополнительные сведения см. в разделе [сериализатор контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
+ `DataContractSerializer` Сопоставляет типы CLR с XSD при экспорте метаданных из службы Windows Communication Foundation (WCF), используя конечную точку метаданных или [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Дополнительные сведения см. в разделе [сериализатор контракта данных](../../../../docs/framework/wcf/feature-details/data-contract-serializer.md).  
   
  `DataContractSerializer` также сопоставляет типы XSD типам среды CLR, когда для доступа к документам WSDL или XSD и создания контрактов данных для служб или клиентов используется Svcutil.exe.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "33496803"
   
 ## <a name="general-information"></a>Общие сведения  
   
--   Пространство имен схемы описывается в разделе [Схема XML](http://go.microsoft.com/fwlink/?LinkId=95475). В этом документе используется префикс «xs».  
+-   Пространство имен схемы описывается в [схемы XML](https://go.microsoft.com/fwlink/?LinkId=95475). В этом документе используется префикс «xs».  
   
 -   Атрибуты с пространством имен, отличным от пространства имен схемы, игнорируются.  
   
@@ -44,10 +44,10 @@ ms.locfileid: "33496803"
 |---------------|------------------|  
 |`attributeFormDefault`|Не обрабатывается.|  
 |`blockDefault`|Не обрабатывается.|  
-|`elementFormDefault`|Должен иметь полное имя. Для того чтобы схема поддерживалась `DataContractSerializer`, все элементы должны иметь полное имя. Это можно сделать, настроив xs:schema/@elementFormDefault «qualified» или установив xs:element/@form с «полное» при каждом объявлении отдельного элемента.|  
+|`elementFormDefault`|Должен иметь полное имя. Для того чтобы схема поддерживалась `DataContractSerializer`, все элементы должны иметь полное имя. Это можно сделать, либо присвоив xs:schema/@elementFormDefault «qualified» или установив xs:element/@form до «qualified» в объявлении каждого отдельного элемента.|  
 |`finalDefault`|Не обрабатывается.|  
 |`Id`|Не обрабатывается.|  
-|`targetNamespace`|Поддерживается и сопоставляется пространству имен контракта данных. Если данный атрибут не определен, используется пустое пространство имен. Не может быть зарезервированным пространством имен http://schemas.microsoft.com/2003/10/Serialization/.|  
+|`targetNamespace`|Поддерживается и сопоставляется пространству имен контракта данных. Если данный атрибут не определен, используется пустое пространство имен. Не может быть зарезервированному пространству имен http://schemas.microsoft.com/2003/10/Serialization/.|  
 |`version`|Не обрабатывается.|  
   
 ### <a name="xsschema-contents"></a>\<xs:schema >: содержимое  
@@ -65,10 +65,10 @@ ms.locfileid: "33496803"
 |`attribute`|Не обрабатывается. `DataContractSerializer` не поддерживает использование `xs:group`, `xs:attributeGroup`и `xs:attribute`. Эти объявления игнорируются как дочерние элементы `xs:schema`, но ссылки на них невозможны из `complexType` или других поддерживаемых конструкторов.|  
 |`notation`|Не обрабатывается.|  
   
-## <a name="complex-types--xscomplextype"></a>Сложные типы — \<xs: complexType >  
+## <a name="complex-types--xscomplextype"></a>Сложные типы – \<xs: complexType >  
   
 ### <a name="general-information"></a>Общие сведения  
- Каждый сложный тип \<xs: complexType > сопоставляется с контрактом данных.  
+ Каждый сложный тип \<xs: complexType > сопоставляется контракту данных.  
   
 ### <a name="xscomplextype-attributes"></a>\<xs: complexType >: атрибуты  
   
@@ -92,7 +92,7 @@ ms.locfileid: "33496803"
 |`choice`|Запрещено|  
 |`sequence`|Поддерживается, сопоставляется членам данных контракта данных.|  
 |`attribute`|Запрещено, даже если use="prohibited" (существует одно исключение). Только необязательные атрибуты из стандартного пространства имен сериализации поддерживаются. Они не сопоставляются членам данных в модели программирования контракта данных. В настоящее время только один подобный атрибут имеет значение; он рассматривается в разделе ISerializable. Другие атрибуты игнорируются.|  
-|`attributeGroup`|Запрещено. В версии v1 WCF `DataContractSerializer` игнорирует наличие `attributeGroup` внутри `xs:complexType`.|  
+|`attributeGroup`|Запрещено. В выпуске версии 1 WCF `DataContractSerializer` игнорирует наличие `attributeGroup` внутри `xs:complexType`.|  
 |`anyAttribute`|Запрещено.|  
 |(пусто)|Сопоставляется с контрактом данных, не имеющем элементов данных.|  
   
@@ -126,7 +126,7 @@ ms.locfileid: "33496803"
   
 -   Он может использоваться в `<xs:schema>` в качестве объявления глобального элемента.  
   
-### <a name="xselement-with-maxoccurs1-within-an-xssequence-data-members"></a>\<xs: element > при maxOccurs = 1 в \<xs: Sequence > (элементы данных)  
+### <a name="xselement-with-maxoccurs1-within-an-xssequence-data-members"></a>\<xs: element > при maxOccurs = 1 в \<xs: Sequence > (члены данных)  
   
 |Атрибут|Схема|  
 |---------------|------------|  
@@ -200,7 +200,7 @@ ms.locfileid: "33496803"
 |`keyref`|Не обрабатывается.|  
 |(пусто)|Поддерживается.|  
   
- \* При использовании `simpleType` и `complexType,` сопоставление анонимных типов аналогичен-анонимные типы, за исключением того, что анонимные контракты данных отсутствуют, и поэтому создается именованный контракт данных создается с именем, образованным от имени элемента. Ниже перечислены правила для анонимных типов.  
+ \* При использовании `simpleType` и `complexType,` сопоставления для анонимных типов такое же, как не анонимных типов, тем исключением, что анонимные контракты данных отсутствуют, и поэтому создается именованный контракт с созданным именем на основе имени элемента. Ниже перечислены правила для анонимных типов.  
   
 -   Сведения о реализации WCF: Если `xs:element` имя не содержит точек, анонимный тип сопоставляется внутреннему типу внешнего типа контракта данных. Если имя содержит точки, итоговый тип контракта данных является независимым (не внутренним типом).  
   
@@ -232,7 +232,7 @@ ms.locfileid: "33496803"
   
 -   Ограничения простых типов `xs:string` , не имеющие никаких других аспектов ограничения, кроме `xs:enumeration` , сопоставляются контрактам данных перечисления.  
   
--   Все другие ограничения простых типов сопоставляются типам, которые они ограничивают. Например, ограничение `xs:int` сопоставляется с целым числом так же, как и `xs:int` . Дополнительные сведения о сопоставлении тип-примитив. в разделе сопоставление тип примитив.  
+-   Все другие ограничения простых типов сопоставляются типам, которые они ограничивают. Например, ограничение `xs:int` сопоставляется с целым числом так же, как и `xs:int` . Дополнительные сведения о сопоставлении примитивных типов см. в разделе сопоставление тип примитив.  
   
 ### <a name="xsrestriction-attributes"></a>\<xs: Restriction >: атрибуты  
   
@@ -524,7 +524,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>Сопоставление типов ISerializable  
- В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.0 интерфейс `ISerializable` использовался как основной механизм сериализации объектов для сохранения или передачи данных. Существует много типов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , которые реализуют интерфейс `ISerializable` и могут автоматически передаваться между приложениями. `DataContractSerializer` поддерживает классы `ISerializable` . `DataContractSerializer` сопоставляет типы схемы реализации `ISerializable` , отличающиеся только полным именем типа (QName) и фактически являющиеся коллекциями свойств. Например `DataContractSerializer` сопоставляет <xref:System.Exception> следующему типу XSD в http://schemas.datacontract.org/2004/07/System пространства имен.  
+ В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.0 интерфейс `ISerializable` использовался как основной механизм сериализации объектов для сохранения или передачи данных. Существует много типов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , которые реализуют интерфейс `ISerializable` и могут автоматически передаваться между приложениями. `DataContractSerializer` поддерживает классы `ISerializable` . `DataContractSerializer` сопоставляет типы схемы реализации `ISerializable` , отличающиеся только полным именем типа (QName) и фактически являющиеся коллекциями свойств. Например `DataContractSerializer` сопоставляет <xref:System.Exception> к следующему типу XSD в http://schemas.datacontract.org/2004/07/System пространства имен.  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -536,7 +536,7 @@ public class Employee : Person
 </xs:complexType>  
 ```  
   
- Необязательный атрибут `ser:FactoryType` , объявленный в схеме сериализации контракта данных ссылается на класс фабрики, который может выполнить десериализацию типа. Класс фабрики может входить в коллекцию известных типов используемого экземпляра `DataContractSerializer` . Дополнительные сведения об известных типах см. в разделе [известные типы контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
+ Необязательный атрибут `ser:FactoryType` , объявленный в схеме сериализации контракта данных ссылается на класс фабрики, который может выполнить десериализацию типа. Класс фабрики может входить в коллекцию известных типов используемого экземпляра `DataContractSerializer` . Дополнительные сведения об известных типах см. в разделе [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).  
   
 ## <a name="datacontract-serialization-schema"></a>DataContract - схема сериализации  
  Ряд схем, импортируемых `DataContractSerializer` , использует типы, элементы и атрибуты специального пространства имен сериализации контракта данных.  

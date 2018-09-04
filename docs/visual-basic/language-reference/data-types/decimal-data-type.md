@@ -21,11 +21,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
 ms.openlocfilehash: ffc1cd141ba624d2ce26e4b1c070431ff0ddd6fe
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43390903"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554936"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Тип данных Decimal (Visual Basic)
 Содержит знаком, 128 бит (16-байтные) значения, представляющие 96-разрядного (12-байтные) целые числа с переменной степенью 10. Коэффициент масштабирования указывает число цифр справа от десятичного разделителя; она в диапазоне от 0 до 28. С масштабом 0 (без десятичных разрядов), наибольшее возможное значение равно +/-79,228,162,514,264,337,593,543,950,335 (+/-7 .9228162514264337593543950335E + 28). Наибольшее значение равно +/-7,9228162514264337593543950335 с 28 десятичных разрядов и наименьшее ненулевое значение равно +/-0,0000000000000000000000000001, элемента (+/-1E-28).  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 4fd846502fd348222bc1da1c8746f037e9f237fe
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425847"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554410"
 ---
 # <a name="transforms-overview"></a>Общие сведения о классах Transform
 В этом разделе описывается использование [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> классы для поворота, масштабирования, сдвига и наклона <xref:System.Windows.FrameworkElement> объектов.  
@@ -48,7 +48,7 @@ ms.locfileid: "43425847"
 ## <a name="transform-classes"></a>Классы преобразования  
  Windows Presentation Foundation (WPF) предоставляет следующие [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> классы для распространенных операций преобразования:  
   
-|Класс|Описание:|Пример|Рисунки|  
+|Класс|Описание|Пример|Рисунки|  
 |-----------|-----------------|-------------|------------------|  
 |<xref:System.Windows.Media.RotateTransform>|Поворачивает элемент на указанный <xref:System.Windows.Media.RotateTransform.Angle%2A>.|[Вращение объекта](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)|![Иллюстрация вращения](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
 |<xref:System.Windows.Media.ScaleTransform>|Масштабирует элемент с указанным <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> и <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> суммы.|[Масштабирование элемента](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)|![Иллюстрация масштабирования](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
@@ -57,7 +57,7 @@ ms.locfileid: "43425847"
   
  Для создания более сложных преобразований, Windows Presentation Foundation (WPF) предоставляет следующие два класса:  
   
-|Класс|Описание:|Пример|  
+|Класс|Описание|Пример|  
 |-----------|-----------------|-------------|  
 |<xref:System.Windows.Media.TransformGroup>|Группирует несколько <xref:System.Windows.Media.TransformGroup> объекты в единую <xref:System.Windows.Media.Transform> , затем можно применить для преобразования свойств.|[Применение нескольких преобразований к объекту](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|Создает пользовательские преобразования, которые не предоставляются с использованием других <xref:System.Windows.Media.Transform> классы. При использовании <xref:System.Windows.Media.MatrixTransform>, напрямую управлять матрицу.|[Использование MatrixTransform для создания пользовательских преобразований](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  

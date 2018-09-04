@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 441fe91c8c884e59c6399d57e7e55bf6591cb1bb
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 1782748749df171ec8d6e3bc8873b4a42c83c0e6
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42754045"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43556059"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Время существования: создание и уничтожение объектов (Visual Basic)
 Экземпляр класса, объект, создается с помощью ключевого слова `New`. Задачи инициализации зачастую необходимо выполнять на новых объектах до их использования. К распространенным задачам инициализации относится открытие файлов, подключение к базам данных и чтение значений параметров реестра. Visual Basic управляет инициализацией новых объектов с помощью процедур, которые называются *конструкторы* (специальные методы, позволяющие управлять инициализацией).  
@@ -148,7 +148,7 @@ End Sub
   
 ## <a name="see-also"></a>См. также  
  <xref:System.IDisposable.Dispose%2A>  
- [Инициализация и прекращение работы компонентов](http://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
+ [Инициализация и прекращение работы компонентов](https://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
  [Оператор New](../../../../visual-basic/language-reference/operators/new-operator.md)  
  [Очистка неуправляемых ресурсов](../../../../standard/garbage-collection/unmanaged.md)  
  [Nothing](../../../../visual-basic/language-reference/nothing.md)

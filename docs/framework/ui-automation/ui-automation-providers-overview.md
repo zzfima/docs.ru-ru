@@ -8,15 +8,16 @@ ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: e48e2eb0df8fbc4daf4db68b0c27493b122adfa3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40ad2eb09b4e3a8f78f493311cdb5c0da410943b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560532"
 ---
 # <a name="ui-automation-providers-overview"></a>Общие сведения о поставщиках автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  Поставщики автоматизации пользовательского интерфейса включают элементы управления для взаимодействия с клиентскими приложениями модели автоматизации пользовательского интерфейса. В целом каждый элемент управления или другой отдельный элемент в [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] представляется поставщиком. Поставщик предоставляет сведения об этом элементе и при необходимости реализует шаблоны элементов управления, которые позволяют клиентскому приложению взаимодействовать с этим элементом управления.  
   
@@ -31,10 +32,10 @@ ms.lasthandoff: 05/04/2018
 ### <a name="client-side-providers"></a>Поставщики на стороне клиента  
  Поставщики на стороне клиента реализуются клиентами автоматизации пользовательского интерфейса для взаимодействия с приложением, которое не поддерживает или не полностью поддерживает [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Поставщики на стороне клиента обычно взаимодействуют с сервером через границу процесса путем отправки и получения сообщений Windows.  
   
- Поскольку поставщики автоматизации пользовательского интерфейса для элементов управления в [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms или [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] приложений предоставляется как часть операционной системы, клиентским приложениям редко требуется реализовывать свои собственные поставщики и не рассматривается в этом обзоре Далее.  
+ Поскольку поставщики автоматизации пользовательского интерфейса для элементов управления в [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, или [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] приложений предоставляется как часть операционной системы, клиентским приложениям редко требуется реализовывать их собственные поставщики и не рассматривается в этом обзоре Далее.  
   
 ### <a name="server-side-providers"></a>Поставщики на стороне сервера  
- Поставщики на стороне сервера реализуются пользовательскими элементами управления или приложениями, основанными на инфраструктуре пользовательского интерфейса, отличной от [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms или [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
+ Поставщики на стороне сервера реализуются пользовательскими элементами управления или приложениями, которые основаны на это платформа пользовательского интерфейса, отличное от [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], Windows Forms, или [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)].  
   
  Поставщики на стороне сервера взаимодействуют с клиентскими приложениями через границу процесса, предоставляя интерфейсы для базовой системы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , которая в свою очередь обслуживает запросы от клиентов.  
   

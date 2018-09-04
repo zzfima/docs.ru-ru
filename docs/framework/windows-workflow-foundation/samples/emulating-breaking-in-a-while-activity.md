@@ -2,23 +2,23 @@
 title: Эмуляция прерывания в действии While
 ms.date: 03/30/2017
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-ms.openlocfilehash: 37c64c2b8dc03d58f9c2802edef644fe4888e87d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4938e07364609520f6528688877bce112be26d3f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514717"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43560429"
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a>Эмуляция прерывания в действии While
 Этот образец показывает, как прервать циклический механизм следующих действий: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While> и <xref:System.Activities.Statements.ParallelForEach%601>.  
   
- Это полезно, так как Windows Workflow Foundation (WF) не включены действия для прерывания выполнения этих циклов.  
+ Это полезно, поскольку Windows Workflow Foundation (WF) не включает действия для прерывания выполнения этих циклов.  
   
 ## <a name="scenario"></a>Сценарий  
  Образец находит первого надежного поставщика из списка поставщиков (экземпляры класса `Vendor`). Каждый поставщик имеет `ID`, `Name` и числовое значение надежности, определяющее, насколько на его продукцию можно положиться. Образец создает пользовательское действие с именем `FindReliableVendor`, получающее два входных параметра (список поставщиков и минимальное значение надежности) и возвращает первого поставщика из списка, соответствующего предоставленным критериям.  
   
 ## <a name="breaking-a-loop"></a>Прерывание цикла  
- Windows Workflow Foundation (WF), не включены действия для прерывания цикла. Образец кода выполняет прерывание цикла с помощью действия <xref:System.Activities.Statements.If> и нескольких переменных. В этом образце действие <xref:System.Activities.Statements.While> прерывается, если переменной `reliableVendor` присваивается значение, отличное от `null`.  
+ Windows Workflow Foundation (WF) не включены действия для прерывания цикла. Образец кода выполняет прерывание цикла с помощью действия <xref:System.Activities.Statements.If> и нескольких переменных. В этом образце действие <xref:System.Activities.Statements.While> прерывается, если переменной `reliableVendor` присваивается значение, отличное от `null`.  
   
  Следующий пример кода демонстрирует, как этот образец прерывает цикл while.  
   
@@ -77,6 +77,6 @@ new While(env => i.Get(env) < this.Vendors.Get(env).Count && reliableVendor.Get(
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\EmulatingBreakInWhile`

@@ -2,12 +2,12 @@
 title: Подписывание хранимых процедур в SQL Server
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 7ef43f403a300e58a27df2de1f980dc8bcc58c02
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: c24edd59992c246c33944e6693ff5ac69311886a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43253648"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555168"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Подписывание хранимых процедур в SQL Server
  Цифровая сигнатура представляет собой хэш-код данных, зашифрованную при помощи закрытого ключа лица, ставящего свою сигнатуру. Закрытый ключ обеспечивает уникальность цифровой сигнатуры его владельцу. Можно подписывать хранимые процедуры, функции (за исключением встроенных функций с табличным), триггеры и сборки.  
@@ -49,9 +49,9 @@ ms.locfileid: "43253648"
 ## <a name="external-resources"></a>Внешние ресурсы  
  Дополнительные сведения см. в следующих ресурсах.  
   
-|Ресурс|Описание:|  
+|Ресурс|Описание|  
 |--------------|-----------------|  
-|[Подписание модулей](http://go.microsoft.com/fwlink/?LinkId=98590) в электронной документации по SQL Server|Описывает подписывание модулей, демонстрирует образец сценария и содержит ссылки на соответствующие разделы по языку Transact-SQL.|  
+|[Подписание модулей](https://go.microsoft.com/fwlink/?LinkId=98590) в электронной документации по SQL Server|Описывает подписывание модулей, демонстрирует образец сценария и содержит ссылки на соответствующие разделы по языку Transact-SQL.|  
 |[Подписывание хранимых процедур с помощью сертификата](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate) в электронной документации по SQL Server|Предоставляет учебник для подписания хранимой процедуры с помощью сертификата.|  
   
 ## <a name="see-also"></a>См. также  
@@ -62,4 +62,4 @@ ms.locfileid: "43253648"
  [Написание безопасного динамического кода SQL в SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  [Настройка разрешений с олицетворением в SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  [Изменение данных с помощью хранимых процедур](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

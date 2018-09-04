@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 ms.openlocfilehash: fa70af311d6b4fa4e17bb3ba6110e4cea420c34c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465594"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43554170"
 ---
 # <a name="datatable-constraints"></a>Ограничения таблиц данных
 Ограничения позволяют принудительно поддерживать целостность данных <xref:System.Data.DataTable>. Ограничение представляет собой автоматическое правило, применяемое к столбцу или связанным столбцам и определяющее порядок действий при каком-либо изменении содержимого строки. Ограничения применяются при `System.Data.DataSet.EnforceConstraints` свойство <xref:System.Data.DataSet> — **true**. Пример кода, показывающий, как установить свойство `EnforceConstraints`, см. в разделе справки <xref:System.Data.DataSet.EnforceConstraints%2A>.  
@@ -22,7 +22,7 @@ ms.locfileid: "43465594"
   
  <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> И <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> свойства **ForeignKeyConstraint** определить действие, выполняемое, когда пользователь пытается удалить или обновить строку в связанной таблице. В следующей таблице описаны различные доступные параметры для **DeleteRule** и **UpdateRule** свойства **ForeignKeyConstraint**.  
   
-|Установка правил|Описание:|  
+|Установка правил|Описание|  
 |------------------|-----------------|  
 |**Cascade**|Удалить или обновить связанные строки.|  
 |**SetNull**|Задайте значения в связанных строках **DBNull**.|  
@@ -58,7 +58,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
  В следующей таблице перечислены доступные параметры для **AcceptRejectRule**.  
   
-|Установка правил|Описание:|  
+|Установка правил|Описание|  
 |------------------|-----------------|  
 |**Cascade**|Принять или отклонить изменения в дочерних строках.|  
 |**None**|Не выполнять никаких действий в дочерних строках. Это значение по умолчанию.|  

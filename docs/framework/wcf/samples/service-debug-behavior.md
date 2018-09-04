@@ -3,11 +3,11 @@ title: Поведение отладки службы
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
 ms.openlocfilehash: b87911426b6d4edf8a6f9b0172f4872fac7b9b6f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465555"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43555101"
 ---
 # <a name="service-debug-behavior"></a>Поведение отладки службы
 В этом образце показано, как могут настраиваться параметры поведения отладки службы. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует `ICalculator` контракт службы. Этот образец явно определяет поведение отладки службы в файле конфигурации. Это также можно выполнить императивно в коде.  

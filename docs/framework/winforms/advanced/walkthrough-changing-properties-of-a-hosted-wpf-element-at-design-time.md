@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF content [Windows Forms], hosting in Windows Forms
 - interoperability [WPF]
 ms.assetid: a1f7a90c-0bbb-4781-8c3c-8cc8bef2488d
-ms.openlocfilehash: d17273f52d0cef118b79fef03af72522f6677073
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15cab9266af5840aa4b37a62b71bd5010b7a859a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529825"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43535646"
 ---
 # <a name="walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time"></a>Пошаговое руководство. Изменение свойств размещенного элемента WPF во время разработки
 В этом пошаговом руководстве показано, как изменить значения свойств элемента управления Windows Presentation Foundation (WPF), размещенного на форме Windows Forms.  
@@ -28,7 +28,7 @@ ms.locfileid: "33529825"
 -   Изменение значений свойств с использованием конструктора WPF для Visual Studio.  
   
 > [!NOTE]
->  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
@@ -43,16 +43,16 @@ ms.locfileid: "33529825"
   
 #### <a name="to-create-the-project"></a>Создание проекта  
   
--   Создайте новый проект приложения Windows Forms в Visual Basic или Visual C# с именем `WpfHost`.  
+-   Создание нового проекта приложения Windows Forms в Visual Basic или Visual C# с именем `WpfHost`.  
   
 ## <a name="creating-the-wpf-control"></a>Создание элемента управления WPF  
  После добавления в проект элемента управления WPF можно разместить его в форме.  
   
 #### <a name="to-create-wpf-controls"></a>Создание элементов управления WPF  
   
-1.  Добавьте в проект новый элемент управления WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового WPF содержимого в формах Windows Forms во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
+1.  Добавьте в проект новый элемент управления WPF <xref:System.Windows.Controls.UserControl>. Используйте имя по умолчанию для этого типа элемента управления (`UserControl1.xaml`). Дополнительные сведения см. в разделе [Пошаговое руководство: Создание нового содержимого WPF в формах Windows Forms во время разработки](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md).  
   
-2.  В **свойства** задайте значение <xref:System.Windows.Controls.Control.Background%2A> свойства `Blue`.  
+2.  В **свойства** окна, установите для параметра <xref:System.Windows.Controls.Control.Background%2A> свойства `Blue`.  
   
 3.  Выполните построение проекта.  
   
@@ -67,11 +67,11 @@ ms.locfileid: "33529825"
   
      Экземпляр `UserControl1` размещается в новом элементе управления <xref:System.Windows.Forms.Integration.ElementHost> под именем `elementHost1`.  
   
-3.  В **задачи ElementHost** смарт-тега, выберите **редактировать содержимое**.  
+3.  В **задачи ElementHost** смарт-тега выберите **редактировать содержимое**.  
   
      Файл UserControl1.xaml откроется в конструкторе WPF.  
   
-4.  В **свойства** задайте значение <xref:System.Windows.Controls.Control.Background%2A> свойства `Red`.  
+4.  В **свойства** окна, установите для параметра <xref:System.Windows.Controls.Control.Background%2A> свойства `Red`.  
   
 5.  Перестройте проект.  
   
@@ -87,4 +87,4 @@ ms.locfileid: "33529825"
  [Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Миграция и взаимодействие систем](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [Использование элементов управления WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
- [Конструктор WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)
+ [Проектирование XAML в Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)

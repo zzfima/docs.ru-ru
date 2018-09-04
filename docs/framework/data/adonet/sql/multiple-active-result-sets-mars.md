@@ -3,11 +3,11 @@ title: Несколько активных результирующих набо
 ms.date: 03/30/2017
 ms.assetid: c90ef863-bac7-44cf-adc1-f05c36fcf57d
 ms.openlocfilehash: 67df210fa48c1b72323177b627b17e537f9fb180
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480757"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43564413"
 ---
 # <a name="multiple-active-result-sets-mars"></a>Несколько активных результирующих наборов (MARS)
 MARS - это возможность, обеспечивающая выполнение нескольких пакетов в одном соединении. В предыдущих версиях в одном соединении можно было одновременно выполнять только один пакет. Из того, что при использовании режима MARS выполняются сразу несколько пакетов, не следует, что операции выполняются одновременно.  

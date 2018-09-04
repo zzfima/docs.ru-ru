@@ -9,11 +9,11 @@ helpviewer_keywords:
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
 ms.openlocfilehash: 98ed6d4e10d0eb80b99a36172980fcb33186c8ca
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419206"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43561874"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Руководство: предоставление справки в приложении Windows
 Можно использовать для включения <xref:System.Windows.Forms.HelpProvider> компонента для присоединения разделов справки в файле справки для определенных элементов управления в формах Windows Forms. Файл справки может быть в формате HTML, HTMLHelp 1.x или следующих версий.  
@@ -37,7 +37,7 @@ ms.locfileid: "43419206"
   
      Этот параметр определяет способ, которым свойство **HelpKeyword** передается в справочную систему. В следующей таблице показаны возможные настройки и их описания.  
   
-    |Имя элемента|Описание:|  
+    |Имя элемента|Описание|  
     |-----------------|-----------------|  
     |AssociateIndex|Указывает, что индекс для данного раздела выполняется в заданном URL-адресе.|  
     |Find|Указывает, что отображается страница поиска заданного URL-адреса.|  
