@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Next method [WPF]
 ms.assetid: 3698b44d-510e-4d18-b32b-85f17188ee26
 ms.openlocfilehash: 329a2cd96346e199ee834856dd6dbfac6175b722
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481182"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43515321"
 ---
-# <a name="ienumrawinputdevicnext"></a><span data-ttu-id="147e9-102">IEnumRAWINPUTDEVIC:Next</span><span class="sxs-lookup"><span data-stu-id="147e9-102">IEnumRAWINPUTDEVIC:Next</span></span>
-<span data-ttu-id="147e9-103">Перечисляет следующие `celt` [RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) структуры в списке перечислителя, возвращая их в `rgelt` вместе с фактическое число перечисляемых элементов в `pceltFetched`.</span><span class="sxs-lookup"><span data-stu-id="147e9-103">Enumerates the next `celt` [RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) structures in the enumerator's list, returning them in `rgelt` along with the actual number of enumerated elements in `pceltFetched`.</span></span>  
+# <a name="ienumrawinputdevicnext"></a><span data-ttu-id="3337a-102">IEnumRAWINPUTDEVIC:Next</span><span class="sxs-lookup"><span data-stu-id="3337a-102">IEnumRAWINPUTDEVIC:Next</span></span>
+<span data-ttu-id="3337a-103">Перечисляет следующие `celt` [RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) структуры в списке перечислителя, возвращая их в `rgelt` вместе с фактическое число перечисляемых элементов в `pceltFetched`.</span><span class="sxs-lookup"><span data-stu-id="3337a-103">Enumerates the next `celt` [RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) structures in the enumerator's list, returning them in `rgelt` along with the actual number of enumerated elements in `pceltFetched`.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="147e9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="147e9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3337a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3337a-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -23,18 +23,18 @@ HRESULT Next(
       [out] ULONG *pceltFetched);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="147e9-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="147e9-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3337a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="3337a-105">Parameters</span></span>  
  `celt`  
   
- <span data-ttu-id="147e9-106">[in] Число [RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) структур, возвращаемые в `rgelt`.</span><span class="sxs-lookup"><span data-stu-id="147e9-106">[in] Number of [RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) structures returned in `rgelt`.</span></span>  
+ <span data-ttu-id="3337a-106">[in] Число [RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) структур, возвращаемые в `rgelt`.</span><span class="sxs-lookup"><span data-stu-id="3337a-106">[in] Number of [RAWINPUTDEVICE](https://msdn.microsoft.com/library/default.asp?url=/library/winui/winui/windowsuserinterface/userinput/rawinput/rawinputreference/rawinputstructures/rawinputdevice.asp) structures returned in `rgelt`.</span></span>  
   
  `rgelt`  
   
- <span data-ttu-id="147e9-107">[out] Массив celt размера (или больше) для получения перечисленных структур RAWINPUTDEVICE .</span><span class="sxs-lookup"><span data-stu-id="147e9-107">[out] Array of size celt (or larger) to receive enumerated RAWINPUTDEVICE structures.</span></span>  
+ <span data-ttu-id="3337a-107">[out] Массив celt размера (или больше) для получения перечисленных структур RAWINPUTDEVICE .</span><span class="sxs-lookup"><span data-stu-id="3337a-107">[out] Array of size celt (or larger) to receive enumerated RAWINPUTDEVICE structures.</span></span>  
   
  `pceltFetched`  
   
- <span data-ttu-id="147e9-108">[out] Указатель на количество элементов, фактически представленных в `rgelt`.</span><span class="sxs-lookup"><span data-stu-id="147e9-108">[out] Pointer to the number of elements actually supplied in `rgelt`.</span></span> <span data-ttu-id="147e9-109">Вызывающий объект может передать `NULL`, если `rgelt` — один.</span><span class="sxs-lookup"><span data-stu-id="147e9-109">Caller can pass in `NULL` if `rgelt` is one.</span></span>  
+ <span data-ttu-id="3337a-108">[out] Указатель на количество элементов, фактически представленных в `rgelt`.</span><span class="sxs-lookup"><span data-stu-id="3337a-108">[out] Pointer to the number of elements actually supplied in `rgelt`.</span></span> <span data-ttu-id="3337a-109">Вызывающий объект может передать `NULL`, если `rgelt` — один.</span><span class="sxs-lookup"><span data-stu-id="3337a-109">Caller can pass in `NULL` if `rgelt` is one.</span></span>  
   
-## <a name="property-valuereturn-value"></a><span data-ttu-id="147e9-110">Значение свойства, возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="147e9-110">Property Value/Return Value</span></span>  
- <span data-ttu-id="147e9-111">HRESULT: значение S_OK, если число предоставленных элементов составляет `celt`; в противном случае значение S_FALSE.</span><span class="sxs-lookup"><span data-stu-id="147e9-111">HRESULT: S_OK if the number of elements supplied is `celt`; S_FALSE otherwise.</span></span>
+## <a name="property-valuereturn-value"></a><span data-ttu-id="3337a-110">Значение свойства, возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="3337a-110">Property Value/Return Value</span></span>  
+ <span data-ttu-id="3337a-111">HRESULT: значение S_OK, если число предоставленных элементов составляет `celt`; в противном случае значение S_FALSE.</span><span class="sxs-lookup"><span data-stu-id="3337a-111">HRESULT: S_OK if the number of elements supplied is `celt`; S_FALSE otherwise.</span></span>
