@@ -9,11 +9,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 73ac290c688436e7ce74e1baaf9f7dbbbecb66bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43418743"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661576"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>Общие сведения о шаблонах элементов управления модели автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -54,7 +54,7 @@ ms.locfileid: "43418743"
 ## <a name="control-pattern-classes-and-interfaces"></a>Классы шаблонов элементов управления и интерфейсы  
  В следующей таблице описываются шаблоны элементов управления [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] . В этой таблице также приведены классы, используемые клиентами автоматизации пользовательского интерфейса для доступа к шаблонам элементов управления, а также интерфейсы, используемые поставщиками автоматизации пользовательского интерфейса для их реализации.  
   
-|Класс шаблона элемента управления|Интерфейс поставщика|Описание:|  
+|Класс шаблона элемента управления|Интерфейс поставщика|Описание|  
 |---------------------------|------------------------|-----------------|  
 |<xref:System.Windows.Automation.DockPattern>|<xref:System.Windows.Automation.Provider.IDockProvider>|Используется для элементов управления, которые могут быть закреплены в контейнере закрепления. Например, это могут быть панели инструментов или палитры инструментов.|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern>|<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|Используется для элементов управления, которые можно разворачивать и сворачивать. Например, это могут быть пункты меню в приложении, такие как меню **Файл** .|  

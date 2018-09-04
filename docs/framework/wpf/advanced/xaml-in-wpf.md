@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
 ms.openlocfilehash: 5a1db973be51d98ad6e55062fac23e31926f2bb1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393606"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659908"
 ---
 # <a name="xaml-in-wpf"></a>XAML в WPF
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] — это язык разметки для декларативной приложения программирования. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] реализован обработчик и обеспечивает поддержку языка XAML. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Типы реализованы таким образом, что они предоставляют требуемый тип, резервирующий представление XAML. Как правило, можно создать большую часть вашей [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] пользовательский Интерфейс приложения в разметке XAML.  

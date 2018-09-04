@@ -3,11 +3,11 @@ title: Подтверждение
 ms.date: 03/30/2017
 ms.assetid: 8637aeaf-ac9e-49b8-93f4-da15dee45277
 ms.openlocfilehash: caa712aa52da01ce44335a361fd6c9f5215316bf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419494"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661000"
 ---
 # <a name="confirmation"></a>Подтверждение
 В данном образце показаны четыре общих сценария, связанных с использованием <xref:System.Activities.Statements.CompensableActivity> и подтверждением. Для демонстрации подтверждения в образце запускаются четыре рабочих процесса. Доступны декларативная и императивная версии образца.  

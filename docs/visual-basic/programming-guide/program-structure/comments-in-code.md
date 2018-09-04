@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 4486b5be42f4a356b2017fe8629bc96f6ad47eda
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fafc80cc4847e9ec05f19fc7f3d31d2d5b11197a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33650973"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43661156"
 ---
 # <a name="comments-in-code-visual-basic"></a>Комментарии в коде (Visual Basic)
 В примерах кодов часто встречается символ начала комментария (`'`). Этот символ дает компилятору Visual Basic проигнорировать последующий текст, или *комментарий*. Комментарии — это краткие заметки, внесенные в код, чтобы сделать чтение кода более легким.  
@@ -54,14 +54,14 @@ ms.locfileid: "33650973"
   
 -   Комментарии не могут располагаться за последовательностью продолжения строки в той же строке.  
   
- Можно добавить или удалить символы начала комментария для блоков кода, выберите одну или несколько строк кода, выберите **комментарий** (![VisualBasicWinAppCodeEditorCommentButton](../../../visual-basic/programming-guide/program-structure/media/vacommentbutton.gif "vaCommentButton ")) и **Uncomment** (![VisualStudioWinAppProjectUncommentButton](../../../visual-basic/programming-guide/program-structure/media/vauncommentbutton.gif "vaUncommentButton")) кнопок, расположенных на **изменение**  инструментов.  
+ Можно добавить или удалить символы начала комментария для блока кода, щелкнув один или несколько строк кода и выбрав **комментарий** (![VisualBasicWinAppCodeEditorCommentButton](../../../visual-basic/programming-guide/program-structure/media/vacommentbutton.gif "vaCommentButton ")) и **Uncomment** (![VisualStudioWinAppProjectUncommentButton](../../../visual-basic/programming-guide/program-structure/media/vauncommentbutton.gif "vaUncommentButton")) кнопки на **изменение**  панели инструментов.  
   
 > [!NOTE]
->  Кроме того, можно добавить в код комментарии, поставив в начале текста ключевое слово `REM`. Тем не менее `'` символов и **комментарий**/**Uncomment** кнопок, проще использовать и требует меньше места и памяти.  
+>  Кроме того, можно добавить в код комментарии, поставив в начале текста ключевое слово `REM`. Тем не менее `'` символов и **комментарий**/**Uncomment** кнопки гораздо проще использовать и требует меньше места и памяти.  
   
 ## <a name="see-also"></a>См. также  
- [Документирование кода с комментариями XML](http://msdn.microsoft.com/magazine/dd722812.aspx)  
+ [Документирование кода с комментариями XML](https://msdn.microsoft.com/magazine/dd722812.aspx)  
  [Практическое руководство. Создание XML-документации](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)  
- [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/recommended-xml-tags-for-documentation-comments.md)  
+ [XML-теги для комментариев](../../../visual-basic/language-reference/xmldoc/index.md)  
  [Соглашения о структуре программы и коде](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
  [Оператор REM](../../../visual-basic/language-reference/statements/rem-statement.md)

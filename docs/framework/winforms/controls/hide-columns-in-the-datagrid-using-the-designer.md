@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: a81c38e6-2527-426a-bcb1-be691403be04
 ms.openlocfilehash: 0187d85a639fc446f207a7b532fecc5ee707ae55
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401648"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43659280"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>Практическое руководство. Скрытие столбцов элемента управления DataGridView в формах Windows Forms с помощью конструктора
 Иногда требуется показать только некоторые из столбцов, доступных в элементе управления <xref:System.Windows.Forms.DataGridView> Windows Forms. Например, может потребоваться Показать сотрудник столбец заработной платы для пользователей с учетными данными управления скрывая его от других пользователей. Кроме того можно привязать элемент управления к источнику данных, содержащей много столбцов, только некоторые из которых вы хотите отобразить. В этом случае обычно будет удалить столбцы, которые не представляют интереса в отображение, а не скрываются. Дополнительные сведения см. в разделе [как: Добавление и удаление столбцов в Windows Forms DataGridView элемента управления с помощью конструктора](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md).  
