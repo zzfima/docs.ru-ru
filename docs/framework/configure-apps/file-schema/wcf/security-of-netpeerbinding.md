@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 7413820f1a1f38b3d533573715267df3b85c9d9a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 45000554226fcde753041fca283bfc8b1eeba5ce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749144"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43489764"
 ---
 # <a name="ltsecuritygt-of-ltnetpeerbindinggt"></a>&lt;security&gt; для &lt;netPeerBinding&gt;
-Определяет параметры безопасности [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), включая тип проверки подлинности, используемый и безопасности, используемый для передачи сообщений.  
+Определяет параметры безопасности [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md), включая тип проверки подлинности, используемые и безопасности, используемый для передачи сообщений.  
   
  \<система. ServiceModel >  
 \<привязки >  
@@ -60,7 +60,7 @@ ms.locfileid: "32749144"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
+|[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности привязки [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).|  
   
 ## <a name="remarks"></a>Примечания  
  Безопасность может определяться как на уровне сообщений, так и на уровне транспорта.  
@@ -74,5 +74,5 @@ ms.locfileid: "32749144"
  [Выбор типа учетных данных](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)
