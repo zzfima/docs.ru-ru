@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8ef6d73aa6cd044cf6808878bf6142a735d015c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc3796e3e79112b14d45bb410e63656a81d474c8
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391253"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526724"
 ---
 # <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>Руководство по переходу на .NET Framework 4.7, 4.6 и 4.5 
 Если приложение создано с использованием более ранней версии .NET Framework, обычно его можно легко обновить до версии .NET Framework 4.5 и ее доработанных выпусков (4.5.1 и 4.5.2), версии NET Framework 4.6 и ее доработанных выпусков (4.6.1 и 4.6.2) или версии .NET Framework 4.7 и ее доработанных выпусков (4.7.1 и 4.7.2). Откройте проект в Visual Studio. Если проект был создан в более ранней версии Visual Studio, автоматически откроется диалоговое окно **Совместимость проекта**. Дополнительные сведения об обновлении проекта в Visual Studio см. в разделах [Перенос, миграция и обновление проектов Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) и [Целевая платформа и совместимость для Visual Studio 2017](/visualstudio/productinfo/vs2017-compatibility-vs).  
@@ -39,5 +39,5 @@ ms.locfileid: "33391253"
  [Практическое руководство. Настройка приложения для поддержки платформы .NET Framework 4 или 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
  [Новые возможности](../../../docs/framework/whats-new/index.md)  
  [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)  
- [Сведения о версиях и сборках платформы .NET Framework](http://go.microsoft.com/fwlink/?LinkId=201701)  
- [Политика жизненного цикла поддержки Microsoft .NET Framework](http://go.microsoft.com/fwlink/?LinkId=196607) [Проблемы при миграции на .NET Framework 4](net-framework-4-migration-issues.md)
+ [Сведения о версиях и сборках платформы .NET Framework](https://go.microsoft.com/fwlink/?LinkId=201701)  
+ [Политика жизненного цикла поддержки Microsoft .NET Framework](https://go.microsoft.com/fwlink/?LinkId=196607) [Проблемы при миграции на .NET Framework 4](net-framework-4-migration-issues.md)

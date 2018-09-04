@@ -1,13 +1,13 @@
 ---
 title: Ресурсы по ML.NET
 description: Следующие ресурсы по ML.NET помогут вам создавать специализированные решения на базе искусственного интеллекта и интегрировать их в свои .NET-приложения.
-ms.date: 06/05/2018
-ms.openlocfilehash: 8cda1321e1b4a5d16e14ca73e709498341fe04e9
-ms.sourcegitcommit: fc70fcb9c789b6a4aefcdace46f3643fd076450f
+ms.date: 07/27/2018
+ms.openlocfilehash: cea0f8fe30e01340c5eb671f39f28a6cbf33884c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/06/2018
-ms.locfileid: "34862350"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485010"
 ---
 # <a name="mlnet-resources"></a>Ресурсы по ML.NET
 
@@ -16,3 +16,4 @@ ms.locfileid: "34862350"
 - [Глоссарий по машинному обучению](glossary.md): содержит определения важных терминов, связанных с машинным обучением.
 - [Основы машинного обучения](basics.md): содержит ссылки на учебные ресурсы, которые помогут вам приступить к работе с машинным обучением.
 - [Задачи машинного обучения](tasks.md): описывает различные сценарии использования машинного обучения, поддерживаемые ML.NET.
+- [Преобразования данных](transforms.md): общие сведения о преобразованиях данных, поддерживаемых ML.NET.

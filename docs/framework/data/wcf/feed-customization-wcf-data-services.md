@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: 0b83369a00cdd21b64c53834a7f6e7bcea09a26a
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 1922351ffb11d5ff6541ef22dee623c20d153d6a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43258567"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43482926"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Настройка каналов (службы данных WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] использует [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для предоставления данных в виде канала. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] поддерживает форматы Atom и нотации объектов JavaScript (JSON) для веб-каналов данных. При использовании потока Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] предоставляет стандартный метод сериализации данных, таких как сущности и связи, в формате XML, которое может быть включено в тексте HTTP-сообщения. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Определяет свойства сущности по умолчанию сопоставление между данными, содержащимися в сущностях и элементах Atom. Дополнительные сведения см. в разделе [OData: формат Atom](http://go.microsoft.com/fwlink/?LinkID=185794).  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] использует [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для предоставления данных в виде канала. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] поддерживает форматы Atom и нотации объектов JavaScript (JSON) для веб-каналов данных. При использовании потока Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] предоставляет стандартный метод сериализации данных, таких как сущности и связи, в формате XML, которое может быть включено в тексте HTTP-сообщения. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Определяет свойства сущности по умолчанию сопоставление между данными, содержащимися в сущностях и элементах Atom. Дополнительные сведения см. в разделе [OData: формат Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  
   
  Возможна ситуация, когда требуется сериализация данных свойства, возвращаемых службой данных, в настраиваемом виде, а не в стандартном формате канала. С помощью [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)], можно настроить сериализацию в канале данных, чтобы свойства сущности сопоставлялись с неиспользуемыми элементами и атрибутами сущности или со специализированными элементами записи в веб-канала.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "43258567"
 >  При определении специализированных каналов необходимо убедиться, что все свойства сущности, которые имеют определенные пользовательские сопоставления, включены в проекцию. Если сопоставленное свойство сущности не включено в проекцию, может произойти потеря данных. Дополнительные сведения см. в разделе [проекции запросов](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md).  
   
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>Настройка каналов с помощью поставщика Entity Framework  
- Модель данных, используемая с поставщиком [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], представлена в виде XML в EDMX-файле. В данном случае атрибуты, определяющие специализированные каналы, добавляются к элементам `EntityType` и `Property`, представляющим типы сущностей и свойства в модели данных. Эти атрибуты настройки потока не определены в [ \[MC-CSDL\]: формат файла определения концептуальной схемы](http://go.microsoft.com/fwlink/?LinkId=159072), который является форматом, [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] поставщик использует для определения модели данных. Поэтому атрибуты настройки канала должны быть объявлены в специальном пространстве имен схемы, определенном как `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Следующий фрагмент XML иллюстрирует применение атрибутов настройки канала к элементам `Property` типа сущности `Products`, определяющего свойства `ProductName`, `ReorderLevel` и `UnitsInStock`.  
+ Модель данных, используемая с поставщиком [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], представлена в виде XML в EDMX-файле. В данном случае атрибуты, определяющие специализированные каналы, добавляются к элементам `EntityType` и `Property`, представляющим типы сущностей и свойства в модели данных. Эти атрибуты настройки потока не определены в [ \[MC-CSDL\]: формат файла определения концептуальной схемы](https://go.microsoft.com/fwlink/?LinkId=159072), который является форматом, [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] поставщик использует для определения модели данных. Поэтому атрибуты настройки канала должны быть объявлены в специальном пространстве имен схемы, определенном как `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`. Следующий фрагмент XML иллюстрирует применение атрибутов настройки канала к элементам `Property` типа сущности `Products`, определяющего свойства `ProductName`, `ReorderLevel` и `UnitsInStock`.  
   
  [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedattributes)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "43258567"
  Дополнительные сведения см. в разделе [как: Настройка веб-каналов с помощью поставщика Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
->  Поскольку расширения модели данных не поддерживаются конструктором сущностей, необходимо вручную модифицировать XML-файл, содержащий модель данных. Дополнительные сведения о EDMX-файл, который формируется [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] средства, см. в разделе [Обзор файла .edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
+>  Поскольку расширения модели данных не поддерживаются конструктором сущностей, необходимо вручную модифицировать XML-файл, содержащий модель данных. Дополнительные сведения о EDMX-файл, который формируется [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] средства, см. в разделе [Обзор файла .edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
   
 ### <a name="custom-feed-attributes"></a>Настраиваемые атрибуты канала  
  В следующей таблице приведены XML-атрибуты, с помощью которых можно настроить каналы, добавляемые в язык определения концептуальной схемы (CSDL) с определением модели данных. Эти атрибуты эквивалентны свойствам объекта <xref:System.Data.Services.Common.EntityPropertyMappingAttribute>, используемым при работе с поставщиком отражения.  

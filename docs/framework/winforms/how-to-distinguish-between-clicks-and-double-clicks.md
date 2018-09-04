@@ -10,12 +10,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], double-click
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
-ms.openlocfilehash: 6c8603df5a844fb93db0555b605f16235b9dff54
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 84d085700091c4e7b8658e8eac4cf86fbd7730d5
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539728"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43486494"
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Практическое руководство. Распознавание одиночных и двойных щелчков
 Как правило, одиночное событие *щелчок* инициирует действие пользовательского интерфейса, а событие *двойной щелчок* расширяет его. Например, одним щелчком мыши обычно выбирается элемент, а двойным щелчком мыши этот элемент изменяется. Однако события щелчков Windows Forms непросто приспособить к сценарию, в котором щелчок и двойной щелчок выполняют несовместимые действия, поскольку действие, привязанное к событию <xref:System.Windows.Forms.Control.Click> или <xref:System.Windows.Forms.Control.MouseClick>, выполняется перед действием, привязанным к событию <xref:System.Windows.Forms.Control.DoubleClick> или <xref:System.Windows.Forms.Control.MouseDoubleClick>. В этом разделе показаны два способа решения этой проблемы. Одним из решений является обработка события двойного щелчка и откат действий при обработке события щелчка. В редких случаях может потребоваться имитировать поведение при одинарном и двойном щелчке при обработке событий <xref:System.Windows.Forms.Control.MouseDown> и с помощью свойств <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> и <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> класса <xref:System.Windows.Forms.SystemInformation>. Производится измерение времени между щелчками мышью и, если второе нажатие происходит до того, как <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> достигнет значения и кнопка мыши была нажата, когда курсор находился в прямоугольнике, заданном <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, то выполняется действие двойного щелчка; в противном случае выполняется действие щелчка.  
@@ -40,7 +40,7 @@ ms.locfileid: "33539728"
   
 -   ссылки на сборки System, System.Drawing и System.Windows.Forms.  
   
- Сведения о построении этих примеров из командной строки для Visual Basic или Visual C# см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [построение с командной строки csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Можно выполнить сборку этого примера, в Visual Studio, вставив код в новый проект.  См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Сведения о сборке этих примеров из командной строки для Visual Basic или Visual C#, см. в разделе [построение из командной строки](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) или [командной строки создания с помощью csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Следующие примеры в Visual Studio можно также создать, вставив код в новый проект.  См. также [Практическое руководство. Компиляция и выполнение откомпилированного примера кода формы Windows Forms с помощью Visual Studio](https://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>См. также  
  [Ввод данных мышью в приложении Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

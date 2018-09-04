@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, generics
 - generics [C#]
 ms.assetid: 75ea8509-a4ea-4e7a-a2b3-cf72482e9282
-ms.openlocfilehash: 8f412366072c81b8aaca94829e0aa214f356200d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 638612a0ece8e701b088c97e5dfc49362e6d6419
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333818"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506085"
 ---
 # <a name="generics-c-programming-guide"></a>Универсальные шаблоны (Руководство по программированию на C#)
 Универсальные шаблоны были добавлены в язык C# и общеязыковую среду выполнения (CLR) в версии 2.0. Универсальные шаблоны вводят на платформе .NET Framework концепцию параметров универсального типа. Благодаря им вы можете создавать классы и методы с типами, спецификация которых отложена до момента объявления и создания экземпляров в клиентском коде. Как пример, ниже показан класс с параметром T универсального типа. Этот класс может использоваться в другом клиентском коде, не требуя ресурсов и не создавая рисков, связанных с операциями приведения и упаковки-преобразования в среде выполнения.  
@@ -59,10 +59,11 @@ ms.locfileid: "33333818"
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  Дополнительные сведения см. в [спецификации языка C#](../../../csharp/language-reference/language-specification/index.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections.Generic>  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Типы](../../../csharp/programming-guide/types/index.md)  
- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
- [Универсальные шаблоны в .NET](../../../standard/generics/index.md)  
+## <a name="see-also"></a>См. также
+
+- <xref:System.Collections.Generic>  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Типы](../../../csharp/programming-guide/types/index.md)  
+- [\<typeparam>](../../../csharp/programming-guide/xmldoc/typeparam.md)  
+- [\<typeparamref>](../../../csharp/programming-guide/xmldoc/typeparamref.md)  
+- [Универсальные шаблоны в .NET](../../../standard/generics/index.md)  

@@ -2,12 +2,12 @@
 title: Деревья выражений (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: 14ca5394a21b8dddb6c4431e6cabbf44a2f9add2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f17b4fba92c502ca6d53fef7ac6d01f2fdefc02e
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326502"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526869"
 ---
 # <a name="expression-trees-c"></a>Деревья выражений (C#)
 Деревья выражений представляют код в виде древовидной структуры, где каждый узел является выражением, например, вызовом метода или двоичной операцией, такой как `x < y`.  
@@ -147,10 +147,11 @@ Console.WriteLine(expr.Compile()(4));
   
  Дополнительные сведения см. в разделе [Практическое руководство. Выполнение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq.Expressions>  
- [Практическое руководство. Выполнение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
- [Практическое руководство. Изменение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
- [Лямбда-выражения](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Общие сведения о среде DLR](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- [Основные понятия программирования (C#)](../../../../csharp/programming-guide/concepts/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Linq.Expressions>  
+- [Практическое руководство. Выполнение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)  
+- [Практическое руководство. Изменение деревьев выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)  
+- [Лямбда-выражения](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Общие сведения о среде DLR](../../../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+- [Основные понятия программирования (C#)](../../../../csharp/programming-guide/concepts/index.md)

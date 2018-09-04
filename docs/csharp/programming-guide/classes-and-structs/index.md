@@ -10,12 +10,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 801f8e64bf64ee55651521ba53915000cc326303
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 8860b519ece14a13e2a3350d299aa67598eadcc2
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43419580"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43513989"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Классы и структуры (Руководство по программированию в C#)
 Классы и структуры являются двумя основными конструкциями системы общих типов CTS, используемой в платформе .NET Framework. Оба они являются структурами данных, которые инкапсулируют набор данных и поведений в одной логической сущности. Данные и поведение являются *членами* класса или структуры. К ним относятся методы, свойства, события и другие элементы, которые описаны далее в этой статье.  
@@ -101,5 +101,6 @@ ms.locfileid: "43419580"
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
