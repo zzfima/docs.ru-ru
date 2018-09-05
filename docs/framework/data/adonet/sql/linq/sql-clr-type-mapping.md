@@ -2,12 +2,12 @@
 title: Сопоставление типов SQL-CLR
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
-ms.openlocfilehash: 5437529d9293951ad34abda435b538b4f404c600
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: ac00d78fff65f5d44a52f92509db3aa493952949
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33365531"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735440"
 ---
 # <a name="sql-clr-type-mapping"></a>Сопоставление типов SQL-CLR
 В LINQ to SQL модель данных реляционной базы данных сопоставляется с моделью объектов, выраженной на выбранном языке программирования. При выполнении приложения LINQ to SQL преобразует запросы LINQ модели объектов в код SQL и направляет их в базу данных для выполнения. Когда база данных возвращает результаты, LINQ to SQL преобразует их обратно в объекты, с которыми можно работать на языке программирования.  
@@ -60,7 +60,7 @@ ms.locfileid: "33365531"
   
 -   SQL Server применяет для некоторых типов данных порядок, отличный от порядка эквивалентных типов в среде CLR. Например, порядок данных типа `UNIQUEIDENTIFIER` в SQL Server отличается от порядка данных типа <xref:System.Guid?displayProperty=nameWithType> в среде CLR.  
   
--   Некоторые операции сравнения строк обрабатываются в SQL Server иначе, чем в среде CLR. Порядок сравнения строк в SQL Server зависит от параметров сортировки на сервере. Дополнительные сведения см. в разделе [работа с параметрами сортировки](http://go.microsoft.com/fwlink/?LinkId=115330) в электронной документации по Microsoft SQL Server.  
+-   Некоторые операции сравнения строк обрабатываются в SQL Server иначе, чем в среде CLR. Порядок сравнения строк в SQL Server зависит от параметров сортировки на сервере. Дополнительные сведения см. в разделе [работа с параметрами сортировки](https://go.microsoft.com/fwlink/?LinkId=115330) в электронной документации по Microsoft SQL Server.  
   
 -   Для некоторых сопоставленных функций SQL Server может возвращать значения, отличные от аналогичных значений, возвращаемых средой CLR. Например, функции проверки равенства будут возвращать различные результаты, поскольку SQL Server считает равными две строки, различающиеся только конечными пробелами, в то время как с точки зрения среды CLR эти строки не равны.  
   
@@ -232,11 +232,11 @@ ms.locfileid: "33365531"
 ### <a name="sql-server-filestream"></a>SQL Server FILESTREAM  
  Атрибут `FILESTREAM` для столбцов `VARBINARY(MAX)` доступен, начиная с версии Microsoft SQL Server 2008. Сопоставление с этим типом в LINQ to SQL поддерживается, начиная с версии платформы .NET Framework 3.5 с пакетом обновления 1 (SP1).  
   
- Столбцы `VARBINARY(MAX)` с атрибутом `FILESTREAM` можно сопоставлять с объектами <xref:System.Data.Linq.Binary>, но метод <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> не может автоматически создавать столбцы с атрибутом `FILESTREAM`. Дополнительные сведения о `FILESTREAM`, см. в разделе [Общие сведения о FILESTREAM](http://go.microsoft.com/fwlink/?LinkId=115291) на Microsoft SQL Server Books Online.  
+ Столбцы `VARBINARY(MAX)` с атрибутом `FILESTREAM` можно сопоставлять с объектами <xref:System.Data.Linq.Binary>, но метод <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> не может автоматически создавать столбцы с атрибутом `FILESTREAM`. Дополнительные сведения о `FILESTREAM`, см. в разделе [Общие сведения о FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=115291) на Microsoft SQL Server Books Online.  
   
 <a name="BinarySerialization"></a>   
 ### <a name="binary-serialization"></a>Двоичная сериализация  
- Если в классе реализован интерфейс <xref:System.Runtime.Serialization.ISerializable>, объект этого класса можно сериализовать в любое двоичное поле SQL (`BINARY`, `VARBINARY`, `IMAGE`). Сериализация и десериализация объекта выполняется в соответствии с реализацией интерфейса <xref:System.Runtime.Serialization.ISerializable>. Дополнительные сведения см. в разделе [двоичной сериализации](http://go.microsoft.com/fwlink/?LinkId=115581).  
+ Если в классе реализован интерфейс <xref:System.Runtime.Serialization.ISerializable>, объект этого класса можно сериализовать в любое двоичное поле SQL (`BINARY`, `VARBINARY`, `IMAGE`). Сериализация и десериализация объекта выполняется в соответствии с реализацией интерфейса <xref:System.Runtime.Serialization.ISerializable>. Дополнительные сведения см. в разделе [двоичной сериализации](https://go.microsoft.com/fwlink/?LinkId=115581).  
   
 <a name="MiscMapping"></a>   
 ## <a name="miscellaneous-mapping"></a>Прочие виды сопоставления  
