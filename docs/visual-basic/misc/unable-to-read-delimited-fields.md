@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_IllegalDelimiter
 ms.assetid: ab8a0c3a-b89c-4617-9e31-7e81f5dca433
 ms.openlocfilehash: faa42c2fec5851857496b321dbdb53c16c43e8c1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389654"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525941"
 ---
 # <a name="unable-to-read-delimited-fields-because-a-double-quote-is-not-a-legal-delimiter-when-escapequotes-is-set-to-true"></a>Не удается прочитать поля с разделителями, поскольку двойные кавычки не являются допустимым разделителем, если параметр EscapeQuotes имеет значение True
 `TextFieldParser` не может читать из файла, поскольку в качестве разделителя указан знак кавычек ("), а `EscapeQuotes` имеет значение `True`.  
