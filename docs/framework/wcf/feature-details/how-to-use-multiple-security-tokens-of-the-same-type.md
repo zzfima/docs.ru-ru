@@ -4,52 +4,52 @@ ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 67a9fd51377294ab6afb5a3d7deaec19fb134b21
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25afbb268a0ef7772585a0f3829b56f135758b61
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33490751"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672324"
 ---
-# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a><span data-ttu-id="8be96-102">Практическое руководство. Использование нескольких маркеров безопасности одного типа</span><span class="sxs-lookup"><span data-stu-id="8be96-102">How to: Use Multiple Security Tokens of the Same Type</span></span>
--   <span data-ttu-id="8be96-103">В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 клиентское сообщение содержало только один маркер любого заданного типа.</span><span class="sxs-lookup"><span data-stu-id="8be96-103">In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, a client message only contained one token of any given type.</span></span> <span data-ttu-id="8be96-104">Теперь клиентские сообщения могут содержать несколько маркеров одного типа.</span><span class="sxs-lookup"><span data-stu-id="8be96-104">Now client messages can contain multiple tokens of a type.</span></span> <span data-ttu-id="8be96-105">В этом разделе описывается, как включать в сообщение клиента несколько маркеров одного типа.</span><span class="sxs-lookup"><span data-stu-id="8be96-105">This topic shows how to include multiple tokens of the same type in a client message.</span></span>  
+# <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a><span data-ttu-id="684da-102">Практическое руководство. Использование нескольких маркеров безопасности одного типа</span><span class="sxs-lookup"><span data-stu-id="684da-102">How to: Use Multiple Security Tokens of the Same Type</span></span>
+-   <span data-ttu-id="684da-103">В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 клиентское сообщение содержало только один маркер любого заданного типа.</span><span class="sxs-lookup"><span data-stu-id="684da-103">In [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0, a client message only contained one token of any given type.</span></span> <span data-ttu-id="684da-104">Теперь клиентские сообщения могут содержать несколько маркеров одного типа.</span><span class="sxs-lookup"><span data-stu-id="684da-104">Now client messages can contain multiple tokens of a type.</span></span> <span data-ttu-id="684da-105">В этом разделе описывается, как включать в сообщение клиента несколько маркеров одного типа.</span><span class="sxs-lookup"><span data-stu-id="684da-105">This topic shows how to include multiple tokens of the same type in a client message.</span></span>  
   
--   <span data-ttu-id="8be96-106">Обратите внимание, что настроить таким образом службу невозможно: служба может содержать только один вспомогательный маркер.</span><span class="sxs-lookup"><span data-stu-id="8be96-106">Note that you cannot configure a service in this way: a service can contain only one supporting token.</span></span>  
+-   <span data-ttu-id="684da-106">Обратите внимание, что настроить таким образом службу невозможно: служба может содержать только один вспомогательный маркер.</span><span class="sxs-lookup"><span data-stu-id="684da-106">Note that you cannot configure a service in this way: a service can contain only one supporting token.</span></span>  
   
-### <a name="to-use-multiple-security-tokens-of-the-same-type"></a><span data-ttu-id="8be96-107">Использование нескольких маркеров безопасности одного типа</span><span class="sxs-lookup"><span data-stu-id="8be96-107">To use multiple security tokens of the same type</span></span>  
+### <a name="to-use-multiple-security-tokens-of-the-same-type"></a><span data-ttu-id="684da-107">Использование нескольких маркеров безопасности одного типа</span><span class="sxs-lookup"><span data-stu-id="684da-107">To use multiple security tokens of the same type</span></span>  
   
-1.  <span data-ttu-id="8be96-108">Создайте пустую коллекцию элементов привязки для заполнения.</span><span class="sxs-lookup"><span data-stu-id="8be96-108">Create an empty binding element collection to be populated.</span></span>  
+1.  <span data-ttu-id="684da-108">Создайте пустую коллекцию элементов привязки для заполнения.</span><span class="sxs-lookup"><span data-stu-id="684da-108">Create an empty binding element collection to be populated.</span></span>  
   
      [!code-csharp[C_CustomBinding#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#9)]  
   
-2.  <span data-ttu-id="8be96-109">Создайте элемент привязки <xref:System.ServiceModel.Channels.SecurityBindingElement>, вызвав метод <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>.</span><span class="sxs-lookup"><span data-stu-id="8be96-109">Create a <xref:System.ServiceModel.Channels.SecurityBindingElement> by calling <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>.</span></span>  
+2.  <span data-ttu-id="684da-109">Создайте элемент привязки <xref:System.ServiceModel.Channels.SecurityBindingElement>, вызвав метод <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>.</span><span class="sxs-lookup"><span data-stu-id="684da-109">Create a <xref:System.ServiceModel.Channels.SecurityBindingElement> by calling <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>.</span></span>  
   
      [!code-csharp[C_CustomBinding#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#10)]  
   
-3.  <span data-ttu-id="8be96-110">Создайте коллекцию <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters>.</span><span class="sxs-lookup"><span data-stu-id="8be96-110">Create a <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters> collection.</span></span>  
+3.  <span data-ttu-id="684da-110">Создайте коллекцию <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters>.</span><span class="sxs-lookup"><span data-stu-id="684da-110">Create a <xref:System.ServiceModel.Security.Tokens.SupportingTokenParameters> collection.</span></span>  
   
      [!code-csharp[C_CustomBinding#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#11)]  
   
-4.  <span data-ttu-id="8be96-111">Добавьте в коллекцию маркеры SAML.</span><span class="sxs-lookup"><span data-stu-id="8be96-111">Add SAML tokens to the collection.</span></span>  
+4.  <span data-ttu-id="684da-111">Добавьте в коллекцию маркеры SAML.</span><span class="sxs-lookup"><span data-stu-id="684da-111">Add SAML tokens to the collection.</span></span>  
   
      [!code-csharp[C_CustomBinding#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#12)]  
   
-5.  <span data-ttu-id="8be96-112">Добавьте коллекцию к элементу привязки <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="8be96-112">Add the collection to the <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span></span>  
+5.  <span data-ttu-id="684da-112">Добавьте коллекцию к элементу привязки <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span><span class="sxs-lookup"><span data-stu-id="684da-112">Add the collection to the <xref:System.ServiceModel.Channels.SecurityBindingElement>.</span></span>  
   
      [!code-csharp[C_CustomBinding#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#13)]  
   
-6.  <span data-ttu-id="8be96-113">Добавьте элементы привязки в коллекцию элементов привязки.</span><span class="sxs-lookup"><span data-stu-id="8be96-113">Add binding elements to the binding element collection.</span></span>  
+6.  <span data-ttu-id="684da-113">Добавьте элементы привязки в коллекцию элементов привязки.</span><span class="sxs-lookup"><span data-stu-id="684da-113">Add binding elements to the binding element collection.</span></span>  
   
      [!code-csharp[C_CustomBinding#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#14)]  
   
-7.  <span data-ttu-id="8be96-114">Верните новую пользовательскую привязку, созданную из коллекции элементов привязки.</span><span class="sxs-lookup"><span data-stu-id="8be96-114">Return a new custom binding created from the binding element collection.</span></span>  
+7.  <span data-ttu-id="684da-114">Верните новую пользовательскую привязку, созданную из коллекции элементов привязки.</span><span class="sxs-lookup"><span data-stu-id="684da-114">Return a new custom binding created from the binding element collection.</span></span>  
   
      [!code-csharp[C_CustomBinding#15](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#15)]  
   
-## <a name="example"></a><span data-ttu-id="8be96-115">Пример</span><span class="sxs-lookup"><span data-stu-id="8be96-115">Example</span></span>  
- <span data-ttu-id="8be96-116">Ниже приводится весь метод, описанный в предыдущей процедуре.</span><span class="sxs-lookup"><span data-stu-id="8be96-116">The following is the entire method described by the preceding procedure.</span></span>  
+## <a name="example"></a><span data-ttu-id="684da-115">Пример</span><span class="sxs-lookup"><span data-stu-id="684da-115">Example</span></span>  
+ <span data-ttu-id="684da-116">Ниже приводится весь метод, описанный в предыдущей процедуре.</span><span class="sxs-lookup"><span data-stu-id="684da-116">The following is the entire method described by the preceding procedure.</span></span>  
   
  [!code-csharp[C_CustomBinding#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombinding/cs/c_custombinding.cs#7)]  
   
-## <a name="see-also"></a><span data-ttu-id="8be96-117">См. также</span><span class="sxs-lookup"><span data-stu-id="8be96-117">See Also</span></span>  
- [<span data-ttu-id="8be96-118">Архитектура безопасности</span><span class="sxs-lookup"><span data-stu-id="8be96-118">Security Architecture</span></span>](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
+## <a name="see-also"></a><span data-ttu-id="684da-117">См. также</span><span class="sxs-lookup"><span data-stu-id="684da-117">See Also</span></span>  
+ [<span data-ttu-id="684da-118">Архитектура безопасности</span><span class="sxs-lookup"><span data-stu-id="684da-118">Security Architecture</span></span>](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)
