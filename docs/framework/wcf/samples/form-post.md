@@ -3,11 +3,11 @@ title: Передача формы
 ms.date: 03/30/2017
 ms.assetid: fa6f84f9-2e07-4e3c-92d0-a245308b7dff
 ms.openlocfilehash: 9115b9abfa7039bf409bb9bbce54e5012d05a074
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464938"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672141"
 ---
 # <a name="form-post"></a>Передача формы
 Данный образец демонстрирует расширение программной модели WCF REST для поддержки новых форматов входящих запросов. Образец также содержит реализацию модуля форматирования, который может десериализовать запрос из передачи формы HTML методом POST в тип [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Кроме того, образец использует шаблон T4 для возврата страницы HTML, которая предоставляет форму HTML, дающую пользователям возможность возвращать данные в службу WCF REST.  

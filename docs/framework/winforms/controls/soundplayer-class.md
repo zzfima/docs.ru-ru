@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sounds [Windows Forms], playing
 ms.assetid: f3945af9-045c-4e2d-b251-377c37ca2d77
-ms.openlocfilehash: 39d3c9d54eb61c0220a13870d5bd2ff69f8dfc38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57d9affa76a5f24e8a3ab6b3d13516396a82eb92
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538827"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672895"
 ---
 # <a name="soundplayer-class"></a>Класс SoundPlayer
 Класс `SoundPlayer` позволяет облегчить добавление звуков в приложениях.  
@@ -51,4 +51,4 @@ ms.locfileid: "33538827"
  [Элементы управления для использования в Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Полный список элементов управления Windows Forms со ссылками на информацию об их применении.  
   
- См. также [гиперссылка «http://msdn.microsoft.com/library/11bxex12(v=vs.110)"объект My.Computer](http://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) или [объект My.Computer](http://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).
+ Также см. в разделе [HYPERLINK "http://msdn.microsoft.com/library/11bxex12(v=vs.110)" объект My.Computer](https://msdn.microsoft.com/library/11bxex12\(v=vs.110\)) или [объект My.Computer](https://msdn.microsoft.com/library/11bxex12\(v=vs.120\)).

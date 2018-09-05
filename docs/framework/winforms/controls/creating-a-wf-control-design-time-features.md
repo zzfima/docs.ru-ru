@@ -11,11 +11,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 ms.openlocfilehash: aa30842ca72bb50767513cf387f59e29e40574e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486887"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43671871"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Пошаговое руководство: Создание элемента управления Windows Forms, в котором используются преимущества возможностей Visual Studio, применяемых во время разработки
 Среда разработки для пользовательского элемента управления можно улучшить путем создания пользовательских сопоставленный конструктор.  

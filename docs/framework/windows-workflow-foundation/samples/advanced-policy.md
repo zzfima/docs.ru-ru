@@ -3,11 +3,11 @@ title: Дополнительная политика
 ms.date: 03/30/2017
 ms.assetid: 75a22c88-5e54-4ae8-84cb-fbb22a612f0a
 ms.openlocfilehash: becdc28affd877239474d6f0f007a480297bccb8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387893"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672844"
 ---
 # <a name="advanced-policy"></a>Дополнительная политика
 Данный образец выступает как дополнение образца простой политики. К правилам для скидок на жилье и коммерческих скидок, описанных в примере простой политики, добавлены несколько новых правил.  

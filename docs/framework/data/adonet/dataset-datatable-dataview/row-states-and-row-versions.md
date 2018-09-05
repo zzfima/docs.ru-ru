@@ -1,16 +1,16 @@
 ---
 title: Состояния и версии строк
-ms.date: 03/30/2017
+ms.date: 07/19/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
-ms.openlocfilehash: d36556b62a95a7af1097d8fe88597569c81c0111
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 629e8b0bea1cd5c1dd80409acd7c03e0e033b5bc
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759417"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672818"
 ---
 # <a name="row-states-and-row-versions"></a>Состояния и версии строк
 ADO.NET управляет строками таблиц с помощью состояний и версий строк. Состояние строки указывает на статус строки, а версии строк хранят значения изменения строки, включая текущее, исходное и применяемое по умолчанию значения. Например, после внесения изменения в столбец строки эта строка будет иметь состояние `Modified` и две версии: `Current`, содержащую текущие значения, и `Original`, содержащую значения этой строки до изменения столбца.  
@@ -44,7 +44,7 @@ string custID = custRow["CustomerID", DataRowVersion.Original].ToString();
 |Значение DataRowVersion|Описание|  
 |--------------------------|-----------------|  
 |<xref:System.Data.DataRowVersion.Current>|Текущие значения строки. Эта версия не существует для строк, у которых `RowState` равно `Deleted`.|  
-|<xref:System.Data.DataRowVersion.Default>|Версия по умолчанию для конкретной строки. Версия по умолчанию для строки `Added`, `Modified` и `Unchanged` представляет собой `Current`. Версия по умолчанию для строки `Deleted` - `Original`. Версия по умолчанию для строки `Detached` - `Proposed`.|  
+|<xref:System.Data.DataRowVersion.Default>|Версия по умолчанию для конкретной строки. Версия по умолчанию для строки `Added`, `Modified` и `Deleted` представляет собой `Current`. Версия по умолчанию для строки `Detached` - `Proposed`.|  
 |<xref:System.Data.DataRowVersion.Original>|Исходные значения строки. Эта версия не существует для строк, у которых `RowState` равно `Added`.|  
 |<xref:System.Data.DataRowVersion.Proposed>|Предложенные значения строки. Эта версия строки существует в течение операции изменения строки или для строки, не содержащейся в коллекции `DataRowCollection`.|  
   
@@ -98,4 +98,4 @@ foreach (DataRow delRow in delRows)
  [Управление данными в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [Наборы данных, таблицы данных и объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [Объекты DataAdapter и DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

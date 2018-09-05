@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
-ms.openlocfilehash: c0cc0834dc087df89131a720f517cd34f757a0f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 38d716552c4a52e01ef803ce197e4d588ed562c3
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763674"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43672265"
 ---
 # <a name="merging-dataset-contents"></a>Слияние содержимого набора данных
 Метод <xref:System.Data.DataSet.Merge%2A> можно использовать для объединения содержимого массива <xref:System.Data.DataSet>, <xref:System.Data.DataTable> или <xref:System.Data.DataRow> с существующим `DataSet`. Несколько факторов и параметров влияют на то, как новые данные объединяются с существующим `DataSet`.  
@@ -31,7 +31,7 @@ ms.locfileid: "32763674"
 >  Это поведение в .NET Framework версии 2.0 изменяется. В версии 1.1 пространства имен поддерживались, но во время операций объединения не учитывались. По этой причине <xref:System.Data.DataSet>, который использует значения свойства <xref:System.Data.DataTable.Namespace%2A>, будет иметь разные характеристики в зависимости от того, какая версия .NET Framework выполняется. Например, предположим, имеются два `DataSets`, содержащие `DataTables` с одинаковыми значениями свойства <xref:System.Data.DataTable.TableName%2A>, но с разными значениями свойства <xref:System.Data.DataTable.Namespace%2A>. В .NET Framework версии 1.1 разные имена <xref:System.Data.DataTable.Namespace%2A> пропускаются, когда объединяются два объекта <xref:System.Data.DataSet>. Однако, начиная с версии 2.0, слияние приводит к созданию в целевом объекте `DataTables` двух новых объектов <xref:System.Data.DataSet>. Исходные таблицы `DataTables` объединением не затрагиваются.  
   
 ## <a name="preservechanges"></a>Флаг PreserveChanges  
- Когда `DataSet`, `DataTable` или `DataRow` передается в метод `Merge`, можно включить необязательные параметры, указывающие, сохранять ли изменения в существующем объекте `DataSet` и как обрабатывать элементы новой схемы в исходных данных. Первым из этих параметров после входных данных является логический флаг <xref:System.Data.LoadOption.PreserveChanges>, который задает, сохранять ли изменения в существующем `DataSet`. Если флаг `PreserveChanges` установлен в `true`, входные значения не переопределяют существующие значения в версии `Current` текущей строки. Если флаг `PreserveChanges` установлен в `false`, входные значения переопределяют существующие значения в версии `Current` текущей строки. Если флаг `PreserveChanges` не задан, по умолчанию он устанавливается в `false`. Дополнительные сведения о версиях строк см. в разделе [состояния строк и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ Когда `DataSet`, `DataTable` или `DataRow` передается в метод `Merge`, можно включить необязательные параметры, указывающие, сохранять ли изменения в существующем объекте `DataSet` и как обрабатывать элементы новой схемы в исходных данных. Первым из этих параметров после входных данных является логический флаг <xref:System.Data.LoadOption.PreserveChanges>, который задает, сохранять ли изменения в существующем `DataSet`. Если флаг `PreserveChanges` установлен в `true`, входные значения не переопределяют существующие значения в версии `Current` текущей строки. Если флаг `PreserveChanges` установлен в `false`, входные значения переопределяют существующие значения в версии `Current` текущей строки. Если флаг `PreserveChanges` не задан, по умолчанию он устанавливается в `false`. Дополнительные сведения о версиях строк см. в разделе [строки состояния и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
  Если `PreserveChanges` имеет значение `true`, данные из существующей строки сохраняются в версии <xref:System.Data.DataRowVersion.Current> текущей строки, в то время как данные из версии <xref:System.Data.DataRowVersion.Original> существующей строки переопределяются данными из версии `Original` входной строки. <xref:System.Data.DataRow.RowState%2A> существующей строки установлен в <xref:System.Data.DataRowState.Modified>. Применяются следующие исключения:  
   
@@ -84,4 +84,4 @@ ms.locfileid: "32763674"
  [Объекты DataAdapter и DataReader](../../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Извлечение идентификации или значений автонумерации](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
