@@ -14,11 +14,11 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8a83f99faa5beaf0fd6a5a53f41cdcba5015fa27
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931184"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43405090"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Классы знаков в регулярных выражениях
 <a name="Top"></a> Класс символов определяет набор символов, любой из которых может присутствовать во входной строке для успешного сопоставления. Язык регулярных выражений в .NET поддерживает следующие классы символов:  
