@@ -7,12 +7,12 @@ helpviewer_keywords:
 - serialization, selective serialization
 - binary serialization, selective serialization
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
-ms.openlocfilehash: 6a91501c4c3763250a64c9849694bc4e5fa4829f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74e21045ec70faf6ee82200a15362d51edf61433
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581541"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879289"
 ---
 # <a name="selective-serialization"></a>Выборочная сериализация
 Класс часто содержит поля, которые не должны быть сериализованы. Например, рассмотрим класс, содержащий идентификатор потока в переменной-члене. При десериализации класса поток, в котором хранился идентификатор во время сериализации класса, может уже не использоваться, поэтому сериализация такого значения не имеет смысла. Предотвратить сериализацию переменных-членов можно, маркировав их атрибутом [NonSerialized](xref:System.NonSerializedAttribute) следующим образом.  
@@ -31,7 +31,8 @@ public class MyObject
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>См. также  
- [Двоичная сериализация](binary-serialization.md)  
- [Сериализация XML и SOAP](xml-and-soap-serialization.md)  
- [Безопасность и сериализация](../../../docs/framework/misc/security-and-serialization.md)
+## <a name="see-also"></a>См. также
+
+- [Двоичная сериализация](binary-serialization.md)  
+- [Сериализация XML и SOAP](xml-and-soap-serialization.md)  
+- [Безопасность и сериализация](../../../docs/framework/misc/security-and-serialization.md)

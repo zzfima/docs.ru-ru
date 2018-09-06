@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
 ms.openlocfilehash: 31edbc8f4cbb09f8720b373780f1b0646a985b20
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481687"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43884186"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>Интеграция System.Transactions с SQL Server
 Платформа [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 2.0 включает новую платформу транзакций, к которой можно обращаться через пространство имен <xref:System.Transactions> . Возможности работы с транзакциями в этой платформе полностью интегрированы с [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], включая [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
