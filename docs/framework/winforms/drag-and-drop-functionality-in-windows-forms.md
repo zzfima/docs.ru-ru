@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
 ms.openlocfilehash: b1189da9fa0b76ede3261cf6da5305a09147bba5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43786245"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865089"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Функциональная возможность перетаскивания в Windows Forms
 Windows Forms включает набор методов, событий и классов, реализующих режим перетаскивания. В этом разделе приводится обзор поддержки перетаскивания в Windows Forms.  Также см. в разделе [и-операции перетаскивания и поддержка буфера обмена](https://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  

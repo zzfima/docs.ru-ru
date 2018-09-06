@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
 ms.openlocfilehash: a3b5805808ce2e84e7713f07694464b75d83a391
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43424266"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872573"
 ---
 # <a name="listview-overview"></a>Общие сведения об элементе управления ListView
 <xref:System.Windows.Controls.ListView> Управления предоставляет инфраструктуру для отображения набора элементов данных в различных макетах или представлениях. Например, у пользователя может возникнуть необходимость в отображении элементов данных в таблице, а также в сортировке ее столбцов.  

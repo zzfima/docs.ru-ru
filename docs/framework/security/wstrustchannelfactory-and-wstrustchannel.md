@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 78bf58b6d1b9059d2513b9f81eb382487bb4004b
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "42998470"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875591"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory и WSTrustChannel
 Если вы уже знакомы с платформой Windows Communication Foundation (WCF), значит вам также известно, что клиент WCF уже включает возможности федерации. Путем настройки клиента WCF с привязкой <xref:System.ServiceModel.WSFederationHttpBinding> или аналогичной пользовательской привязкой можно включить федеративную проверку подлинности для службы.  
@@ -24,7 +24,7 @@ ms.locfileid: "42998470"
   
 -   включение WIF в клиенте WCF для вставки элемента ActAs или OnBehalfOf в токен безопасности запроса для службы STS;  
   
--   использование WIF для получения токена от службы STS и настройки клиента WCF для проверки подлинности с данным токеном. Дополнительные сведения см. в описании примера [ClaimsAwareWebService](http://go.microsoft.com/fwlink/?LinkID=248406).  
+-   использование WIF для получения токена от службы STS и настройки клиента WCF для проверки подлинности с данным токеном. Дополнительные сведения см. в описании примера [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406).  
   
  Название первого сценария говорит само за себя: существующие клиенты WCF будут продолжать работать с проверяющими сторонами WIF и службами STS. В данном же разделе рассматриваются два других сценария.  
   

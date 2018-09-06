@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: e702ecdb-3419-4743-92a9-c3c0e7d44082
 ms.openlocfilehash: 9c4b3fa3a706f8dc0ff072520dd91a74bc9d0a2c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43457231"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871680"
 ---
 # <a name="custom-data-service-providers-wcf-data-services"></a>Специализированные поставщики служб данных (службы WCF Data Services)
 Службы [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] включают набор поставщиков, которые позволяют определить модель данных на основе типов данных с поздним связыванием.  

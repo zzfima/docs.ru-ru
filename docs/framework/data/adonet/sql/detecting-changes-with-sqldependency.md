@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e6a58316-f005-4477-92e1-45cc2eb8c5b4
 ms.openlocfilehash: 63d6a17e5aaf3e5d39ed0eda288e75c071be4d73
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43724780"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871154"
 ---
 # <a name="detecting-changes-with-sqldependency"></a>Обнаружение изменений с использованием SqlDependency
 Объект <xref:System.Data.SqlClient.SqlDependency> может быть связан с командой <xref:System.Data.SqlClient.SqlCommand>, чтобы определить, отличаются ли результаты запроса от исходных полученных результатов. Можно также назначить делегата событию `OnChange`, которое инициируется, когда для связанной команды изменяются результаты. <xref:System.Data.SqlClient.SqlDependency> необходимо связать с командой перед выполнением команды. Свойство `HasChanges` зависимости <xref:System.Data.SqlClient.SqlDependency> может также использоваться для определения, изменились ли результаты запроса после первого получения данных.  

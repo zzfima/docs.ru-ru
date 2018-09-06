@@ -3,11 +3,11 @@ title: LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 743e3755-3ecb-45a2-8d9b-9ed41f0dcf17
 ms.openlocfilehash: 5e1644af7e07ad3395a30e56df52b7f85cefa77c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43742498"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867778"
 ---
 # <a name="linq-to-dataset"></a>LINQ to DataSet
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] упрощает и ускоряет запросы к данным, кэшированным в объекте <xref:System.Data.DataSet>. В частности [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] упрощает создание запросов, позволяя разработчикам писать запросы в языке программирования, а не используя отдельный язык запросов. Это особенно полезно для разработчиков Visual Studio, которые теперь могут воспользоваться преимуществами проверку синтаксиса во время компиляции, статическую типизацию и поддержку технологии IntelliSense, предоставляемые Visual Studio в своих запросах.  

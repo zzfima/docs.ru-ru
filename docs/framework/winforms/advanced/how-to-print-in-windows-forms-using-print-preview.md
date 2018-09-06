@@ -10,11 +10,11 @@ helpviewer_keywords:
 - print preview
 ms.assetid: 4a16f7e2-ae10-4485-b0ae-3d558334d0fe
 ms.openlocfilehash: ff113b3abfb8363e65d7ccb101973b6821d97262
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43531736"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868075"
 ---
 # <a name="how-to-print-in-windows-forms-using-print-preview"></a>Практическое руководство. Печать в Windows Forms с использованием предварительного просмотра
 При программировании с использованием Windows Forms в качестве дополнения к службам печати часто предлагается возможность предварительного просмотра. Легким способом добавления предварительного просмотра в приложение является использование элемента управления <xref:System.Windows.Forms.PrintPreviewDialog> в сочетании с логикой обработки событий <xref:System.Drawing.Printing.PrintDocument.PrintPage> для печати файла.  

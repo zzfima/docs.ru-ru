@@ -3,11 +3,11 @@ title: Корреляция по содержимому
 ms.date: 03/30/2017
 ms.assetid: 8638b5d6-1d59-456d-8acd-179a5b39b260
 ms.openlocfilehash: c0367f480701468dcd5024ea3439bdcd38acc78f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785821"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865775"
 ---
 # <a name="content-based-correlation"></a>Корреляция по содержимому
 В этом образце демонстрируется, как действия по обмену сообщениями (<xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, и <xref:System.ServiceModel.Activities.ReceiveReply>) могут использоваться с несколькими корреляциями на основе содержимого, и одной корреляцией на основе содержимого. В этом сценарии корреляция сначала запускается на основе идентификатора заказа на покупку, затем создается другая корреляция на основе идентификатора клиента. Это показывает, как действие <xref:System.ServiceModel.Activities.Receive> может как следовать существующей корреляции, так и запускать новую корреляцию на основе одного и того же входящего сообщения.  

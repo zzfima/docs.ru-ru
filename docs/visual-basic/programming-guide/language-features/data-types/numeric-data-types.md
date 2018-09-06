@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
 ms.openlocfilehash: 6578a410e389a313b0bad70f043691240e288887
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391706"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865762"
 ---
 # <a name="numeric-data-types-visual-basic"></a>Числовые типы данных (Visual Basic)
 Visual Basic предоставляет несколько *числовых типов данных* для обработки чисел в различные представления. *Целочисленный* типы представляют только целые числа (положительные, отрицательных и нулевых), и *нецелочисленным* — числа с целой и дробной частями.  

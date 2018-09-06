@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
 ms.openlocfilehash: 4c9a2e8cf64f18f3e8614912759a4a6eb01d4823
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43673260"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867337"
 ---
 # <a name="scrollviewer-overview"></a>Общие сведения об элементе управления ScrollViewer
 Часто содержимое в пользовательском интерфейсе занимает больше места, чем вмещает область отображения на экране компьютера. <xref:System.Windows.Controls.ScrollViewer> Элемент управления предоставляет удобный способ включить прокрутку содержимого в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений. В данном разделе представлены <xref:System.Windows.Controls.ScrollViewer> элемент и приводится несколько примеров использования.  

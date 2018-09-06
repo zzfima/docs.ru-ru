@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], disabling data entry
 ms.assetid: ef9539ce-539b-404e-84b6-ac282b64b88c
 ms.openlocfilehash: 6263c92e6a981983c19e9d7f2357c581bee5ec07
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43660276"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875379"
 ---
 # <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control"></a>Практическое руководство. Запрет добавления и удаления строк элемента управления DataGridView в Windows Forms
 Иногда необходимо запретить пользователям вставлять новые строки данных или удалять существующие из элемента управления <xref:System.Windows.Forms.DataGridView>. Свойство <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> указывает, имеется ли в наличии строка для ввода новых записей в нижней части элемента управления, свойство <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> указывает, могут ли строки быть удалены. В следующем примере кода используются эти свойства, а также задается свойство <xref:System.Windows.Forms.DataGridView.ReadOnly%2A>, чтобы сделать элемент управления доступным только для чтения.  

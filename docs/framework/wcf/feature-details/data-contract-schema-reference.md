@@ -5,11 +5,11 @@ helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
 ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43554697"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875087"
 ---
 # <a name="data-contract-schema-reference"></a>Справочник по схеме контрактов данных
 В данном разделе описывается подмножество схемы XML (XSD), используемое <xref:System.Runtime.Serialization.DataContractSerializer> для описания типов среды CLR, применяемых для сериализации XML.  

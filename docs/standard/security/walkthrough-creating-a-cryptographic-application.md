@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a01da268a8347e93982604520f9dcb1d4e91327d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501619"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43873777"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Пошаговое руководство. Создание криптографического приложения
 В этом пошаговом руководстве показано, как зашифровать и расшифровать содержимое. Пример кода предназначен для приложения Windows Forms. Это приложение не демонстрирует реальные сценарии, такие как использование смарт-карт. Вместо этого оно демонстрирует основные принципы шифрования и расшифровки.  
@@ -210,5 +210,6 @@ ms.locfileid: "43501619"
   
 2.  Нажмите кнопку `Decrypt File` и выберите только что зашифрованный файл. Эта операция будет успешной, так как имеется полная пара ключей для расшифровки.  
   
-## <a name="see-also"></a>См. также  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>См. также
+
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da4f65d1510f22e05cef4295a342163bba2d1958
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38bb22de14ecef618d45f54cced32af57542d3df
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583384"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43866849"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>Практическое руководство. Расшифровывание XML-элементов с помощью симметричного ключа
 Классы можно использовать в пространстве имен <xref:System.Security.Cryptography.Xml> для шифрования элемента XML-документа.  Шифрование XML-данных позволяет хранить или передавать важные XML-данные, не беспокоясь о том, что они могут быть прочитаны.  Этот пример кода выполняет расшифровку XML-элемента при помощи алгоритма AES, также известного как Rijndael.  
@@ -33,7 +33,7 @@ ms.locfileid: "33583384"
   
 ### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a>Расшифровка XML-элемента при помощи симметричного ключа  
   
-1.  Шифрование XML-элемента с использованием ранее созданного ключа, с помощью методик, описанных в [как: шифрование XML-элементов с помощью симметричного ключа](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
+1.  Шифрование XML-элемента с помощью ранее созданного ключа, используя методики, описанные в [как: шифрование XML-элементов с помощью симметричного ключа](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md).  
   
 2.  Найдите элемент <`EncryptedData`> (определенный стандартом шифрования XML-данных) в объекте <xref:System.Xml.XmlDocument>, содержащем зашифрованные XML-данные, и создайте новый объект <xref:System.Xml.XmlElement> для представления этого элемента.  
   
@@ -81,6 +81,7 @@ ms.locfileid: "33583384"
   
  После завершения работы с симметричным криптографическим ключом очистите его из памяти, установив для каждого байта нулевое значение или вызвав метод <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> управляемого класса шифрования.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Security.Cryptography.Xml>  
- [Практическое руководство. Шифрование XML-элементов с помощью симметричных ключей](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Практическое руководство. Шифрование XML-элементов с помощью симметричных ключей](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)

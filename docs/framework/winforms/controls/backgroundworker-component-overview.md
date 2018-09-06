@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: 1f7da963db34434ee2631e9e2c0367abbd628656
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d7d99cf87507237b23cb40c58b2308643f7f1056
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749172"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872196"
 ---
 # <a name="backgroundworker-component-overview"></a>Общие сведения о компоненте BackgroundWorker
 Выполнение многих часто выполняемых операций может занимать длительное время. Например:  
@@ -60,6 +60,8 @@ ms.locfileid: "43749172"
   
  Дополнительные сведения об использовании <xref:System.ComponentModel.BackgroundWorker> , представлена в разделе [как: выполнение операции в фоновом режиме](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md).  
   
-## <a name="see-also"></a>См. также  
- (Не относится к этой сборке) [Многопоточность в Visual Basic](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
- [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+## <a name="see-also"></a>См. также
+
+- [Управляемая поточность](../../../../docs/standard/threading/index.md)
+- [Обзор асинхронной модели, основанной на событиях](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](how-to-implement-a-form-that-uses-a-background-operation.md)

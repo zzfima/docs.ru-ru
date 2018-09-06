@@ -3,11 +3,11 @@ title: Общие сведения о Windows Workflow
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
 ms.openlocfilehash: a516f454abc81ae8f6f1c15c815fe2b671ecd98f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749519"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869182"
 ---
 # <a name="windows-workflow-overview"></a>Общие сведения о Windows Workflow
 Рабочий процесс представляет собой набор элементарных единиц вызывается *действия* , которые хранятся на модель, описывающую реального процесса. Рабочие процессы позволяют описывать порядок выполнения этапов краткосрочных и долгосрочных работ, а также зависимости между этими этапами. Работа проходит по модели от начала и до конца, а действия могут выполняться как людьми, так и системными функциями.  

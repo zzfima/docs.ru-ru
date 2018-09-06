@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0064aaf2e67eb3fb40e4c58995ce8678321d21aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 25a2fb441269508402263e103a6c6e1be2635406
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583335"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869535"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Практическое руководство. Расшифровка XML-элементов с помощью сертификатов X.509
-Классы можно использовать в пространстве имен <xref:System.Security.Cryptography.Xml> для шифрования и расшифровки элемента XML-документа.  Шифрование XML-данных — это стандартный способ обмена зашифрованными XML-данными и их хранения, позволяющий не беспокоиться о том, что эти данные могут быть прочитаны.  Дополнительные сведения о стандарте XML-шифрования см. в разделе спецификации консорциума World Wide Web (W3C) для XML-шифрования, расположенный http://www.w3.org/TR/xmldsig-core/.  
+Классы можно использовать в пространстве имен <xref:System.Security.Cryptography.Xml> для шифрования и расшифровки элемента XML-документа.  Шифрование XML-данных — это стандартный способ обмена зашифрованными XML-данными и их хранения, позволяющий не беспокоиться о том, что эти данные могут быть прочитаны.  Дополнительные сведения о стандарте XML-шифрования, см. в спецификации консорциума World Wide Web (W3C) XML-шифрования, расположенным в http://www.w3.org/TR/xmldsig-core/.  
   
- Этот пример выполняет расшифровку XML-элемента, зашифрованного с помощью методов, описанных в: [как: шифрование XML-элементов с использованием сертификатов X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Он производит поиск элемента <`EncryptedData`>, его расшифровку и замену исходным XML-элементом в формате простого текста.  
+ Этот пример выполняет расшифровку XML-элемент, который был зашифрован при помощи методов, описанных в: [как: шифрование XML-элементов с помощью сертификатов X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md).  Он производит поиск элемента <`EncryptedData`>, его расшифровку и замену исходным XML-элементом в формате простого текста.  
   
  В примере кода этой процедуры выполняется расшифровка XML-элемента при помощи сертификата X.509 из локального хранилища сертификатов текущей учетной записи пользователя.  В примере используется метод <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> для автоматического извлечения сертификата X.509 и расшифровки сеансового ключа, хранящегося в элементе <`EncryptedKey`> элемента <`EncryptedData`>.  После этого метод <xref:System.Security.Cryptography.Xml.EncryptedXml.DecryptDocument%2A> автоматически использует сеансовый ключ для расшифровки XML-элемента.  
   
@@ -77,6 +77,7 @@ ms.locfileid: "33583335"
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Используемый в этом примере сертификат X.509 предназначен исключительно для тестирования.  Приложения должны использовать сертификат X.509, созданный доверенным центром сертификации или сервером сертификатов Microsoft Windows.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Security.Cryptography.Xml>  
- [Практическое руководство. Шифрование XML-элементов с помощью сертификатов X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Security.Cryptography.Xml>  
+- [Практическое руководство. Шифрование XML-элементов с помощью сертификатов X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)

@@ -3,11 +3,11 @@ title: Универсальные шаблоны (F#)
 description: 'Сведения об использовании F # универсальные функции и типы, которые позволяют писать код, который работает с множеством типов без повторения кода.'
 ms.date: 05/16/2016
 ms.openlocfilehash: fc061f19c6c7fa737f7ca05aae83fd42c0010b37
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43749240"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876136"
 ---
 # <a name="generics"></a>Универсальные шаблоны
 

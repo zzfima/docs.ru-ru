@@ -3,11 +3,11 @@ title: Встроенная конфигурация
 ms.date: 03/30/2017
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
 ms.openlocfilehash: e76c019d9fc1b416e6fa8175a70b5fd01d9ff53e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661169"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867847"
 ---
 # <a name="built-in-configuration"></a>Встроенная конфигурация
 Этот образец показывает использование и настройку хранилища экземпляров рабочих процессов SQL. Хранилище экземпляров рабочих процессов SQL - это реализация хранилища экземпляров на основе SQL Server. Она позволяет экземпляру загружать свое состояние из базы данных SQL Server или SQL Server Express, либо сохранять состояние в этой базе данных.  

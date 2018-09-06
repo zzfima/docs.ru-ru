@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: b979d63132b44ee2e05fcc55cfdd4c79309a159b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e4d6e3edb15dbf5ba4b7ec7f8658fec1a618d315
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581450"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875753"
 ---
 # <a name="how-to-serialize-an-object"></a>Практическое руководство. Сериализация объекта
 Для сериализации объекта сначала следует создать сериализуемый объект и задать открытые свойства и поля. Для этого необходимо выбрать формат передачи, в котором будет храниться поток XML: поток или файл. Например, если поток XML должен храниться в неизменном виде, создайте объект <xref:System.IO.FileStream>.  
@@ -50,6 +50,7 @@ ms.locfileid: "33581450"
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Введение в сериализацию XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
- [Практическое руководство. Десериализация объекта](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+## <a name="see-also"></a>См. также
+
+- [Введение в сериализацию XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
+- [Практическое руководство. Десериализация объекта](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -2,15 +2,15 @@
 title: Объединение подключений в пул
 ms.date: 03/30/2017
 ms.assetid: 955c057f-aea8-4ba8-aa6d-e3dfa18ba8d5
-ms.openlocfilehash: 47143e1d08f6a910b82b435303c164729b6ad3a5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 28a1036f377326b5f1fdfafa1eaffd8a47bc05bc
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755530"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876613"
 ---
 # <a name="connection-pooling"></a>Объединение подключений в пул
-На соединение с источником данных может требоваться значительное время. Чтобы свести к минимуму затраты на открытие соединения, в ADO.NET используется техника *организация пулов соединений*, которая позволяет минимизировать затраты на часто открываемые и закрываемые соединения. Пулы соединений обрабатываются для поставщиков данных .NET Framework по-разному.  
+На соединение с источником данных может требоваться значительное время. Чтобы свести к минимуму стоимость открытия соединения, в ADO.NET используется техника *организация пулов соединений*, который позволяет минимизировать затраты на часто открываемые и закрываемые соединения. Пулы соединений обрабатываются для поставщиков данных .NET Framework по-разному.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Объединение подключений в пул в SQL Server (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
@@ -21,4 +21,4 @@ ms.locfileid: "32755530"
   
 ## <a name="see-also"></a>См. также  
  [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

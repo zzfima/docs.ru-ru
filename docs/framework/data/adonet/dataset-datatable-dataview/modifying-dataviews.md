@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-ms.openlocfilehash: 3663b0317176495b13b1092652bd8bf4c79f30d2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3b1e0cbfc6118ad9ca670f5d91183b78b2c99d89
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760106"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870436"
 ---
 # <a name="modifying-dataviews"></a>Изменение объектов DataView
-Объект <xref:System.Data.DataView> можно использовать, чтобы добавлять, удалять или изменять строки данных в базовой таблице. Возможность использования **DataView** для изменения данных в базовой таблице, управляется заданием одного из трех логических свойств объекта **DataView**. А именно: <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A> и <xref:System.Data.DataView.AllowDelete%2A>. Устанавливается **true** по умолчанию.  
+Объект <xref:System.Data.DataView> можно использовать, чтобы добавлять, удалять или изменять строки данных в базовой таблице. Возможность использования **DataView** для изменения данных в базовой таблице задается с помощью одного из трех логических свойств объекта **DataView**. А именно: <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A> и <xref:System.Data.DataView.AllowDelete%2A>. Они задаются **true** по умолчанию.  
   
- Если **AllowNew** — **true**, можно использовать <xref:System.Data.DataView.AddNew%2A> метод **DataView** для создания нового <xref:System.Data.DataRowView>. Обратите внимание, что строки не были добавлены к базовому объекту <xref:System.Data.DataTable> до <xref:System.Data.DataRowView.EndEdit%2A> метод **DataRowView** вызывается. Если <xref:System.Data.DataRowView.CancelEdit%2A> метод **DataRowView** является именем, новая строка удаляется. Обратите внимание, что можно изменять только один **DataRowView** одновременно. При вызове метода **AddNew** или **BeginEdit** метод **DataRowView** пока существует ожидающая строка, **EndEdit** неявно вызывается Ожидающая строка. При **EndEdit** является именем, изменения будут применены к базовому объекту **DataTable** и в дальнейшем можно будет зафиксировать или отклонить с помощью **AcceptChanges** или  **RejectChanges** методы **DataTable**, **DataSet**, или **DataRow** объекта. Если **AllowNew** — **false**, создается исключение при вызове метода **AddNew** метод **DataRowView**.  
+ Если **AllowNew** — **true**, можно использовать <xref:System.Data.DataView.AddNew%2A> метод **DataView** для создания нового <xref:System.Data.DataRowView>. Обратите внимание, что строки не были добавлены к базовому объекту <xref:System.Data.DataTable> пока <xref:System.Data.DataRowView.EndEdit%2A> метод **DataRowView** вызывается. Если <xref:System.Data.DataRowView.CancelEdit%2A> метод **DataRowView** является именем, новая строка удаляется. Обратите внимание, что можно изменять только один **DataRowView** за раз. При вызове метода **AddNew** или **BeginEdit** метод **DataRowView** пока существует ожидающая строка, **EndEdit** неявно вызывается Ожидающая строка. При **EndEdit** — вызывается, будут применены к базовому объекту **DataTable** и в дальнейшем можно будет зафиксировать или отклонить с помощью **AcceptChanges** или  **RejectChanges** методы **DataTable**, **набора данных**, или **DataRow** объекта. Если **AllowNew** — **false**, возникает исключение при вызове метода **AddNew** метод **DataRowView**.  
   
- Если **AllowEdit** — **true**, можно изменить содержимое **DataRow** через **DataRowView**. Можно подтвердить изменения в базовую строку при помощи **DataRowView.EndEdit** или отклонить изменения с помощью **DataRowView.CancelEdit**. Отметим, что одновременно можно изменять только одну строку. При вызове метода **AddNew** или **BeginEdit** методы **DataRowView** пока существует ожидающая строка, **EndEdit** неявно вызывается Ожидающая строка. Когда **EndEdit** вызывается, предложенные изменения помещаются в **текущей** версия строки базового **DataRow** и в дальнейшем можно будет зафиксировать или отклонить с помощью  **AcceptChanges** или **RejectChanges** методы **DataTable**, **DataSet**, или **DataRow** объект. Если **AllowEdit** — **false**, создается исключение при попытке изменить значение в **DataView**.  
+ Если **AllowEdit** — **true**, можно изменить содержимое **DataRow** через **DataRowView**. Можно проверить изменения в базовых строк с помощью **DataRowView.EndEdit** или отклонить изменения с помощью **DataRowView.CancelEdit**. Отметим, что одновременно можно изменять только одну строку. При вызове метода **AddNew** или **BeginEdit** методы **DataRowView** пока существует ожидающая строка, **EndEdit** неявно вызывается Ожидающая строка. Когда **EndEdit** вызывается, предложенные изменения помещаются в **текущей** версия строки базового **DataRow** и в дальнейшем можно будет зафиксировать или отклонить с помощью  **AcceptChanges** или **RejectChanges** методы **DataTable**, **набора данных**, или **DataRow** объект. Если **AllowEdit** — **false**, возникает исключение при попытке изменить значение в **DataView**.  
   
- Если в имеющемся **DataRowView** редактируется, события базового **DataTable** по-прежнему будет вызываться с предлагаемыми изменениями. Обратите внимание, что при вызове метода **EndEdit** или **CancelEdit** для базового **DataRow**отложенные изменения будут применены или отменены независимо от того, следует ли  **EndEdit** или **CancelEdit** будет вызван на **DataRowView**.  
+ Если в имеющемся **DataRowView** редактируется, события базового **DataTable** по-прежнему будет вызываться с предлагаемыми изменениями. Обратите внимание, что при вызове метода **EndEdit** или **CancelEdit** для базового **DataRow**, ожидающие изменения будут применены или отменены независимо от того, следует ли  **EndEdit** или **CancelEdit** вызывается для **DataRowView**.  
   
- Если **AllowDelete** — **true**, можно удалить строки из **DataView** с помощью **удаление** метод **DataView**  или **DataRowView** объекта и строки удаляются из основного **DataTable**. Можно зафиксировать или отклонить с помощью операции удаления **AcceptChanges** или **RejectChanges** соответственно. Если **AllowDelete** — **false**, создается исключение при вызове метода **удаление** метод **DataView** или  **DataRowView**.  
+ Если **AllowDelete** — **true**, можно удалить строки из **DataView** с помощью **удалить** метод **DataView**  или **DataRowView** объекта и строки удаляются из базового **DataTable**. Вы можете зафиксировать или отменить удаление с помощью **AcceptChanges** или **RejectChanges** соответственно. Если **AllowDelete** — **false**, возникает исключение при вызове метода **удалить** метод **DataView** или  **DataRowView**.  
   
- Следующий пример кода отключает использование **DataView** для удаления строк и добавляет новую строку в базовую таблицу при помощи **DataView**.  
+ В следующем примере кода отключает использование **DataView** для удаления строк и добавляет новую строку в базовую таблицу при помощи **DataView**.  
   
 ```vb  
 Dim custTable As DataTable = custDS.Tables("Customers")  
@@ -56,4 +56,4 @@ newDRV.EndEdit();
  <xref:System.Data.DataView>  
  <xref:System.Data.DataRowView>  
  [Объекты DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

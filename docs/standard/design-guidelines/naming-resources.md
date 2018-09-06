@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7cfda4e6a340d040de02903b9b64f0339751c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5b53fc383e6fc9a5f056bab4eabde9979cd734b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571190"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875113"
 ---
 # <a name="naming-resources"></a>Именование ресурсов
-Поскольку локализуемые ресурсы можно ссылаться через определенные объекты, как если бы они были свойства, правилам именования для ресурсов похожи на правила свойств.  
+Так как локализуемые ресурсы можно ссылаться с помощью определенных объектов, как если бы они были свойства, рекомендации по именованию для ресурсов похожи на правила свойств.  
   
  **✓ DO** использовать PascalCasing в ключи ресурсов.  
   
@@ -31,16 +31,17 @@ ms.locfileid: "33571190"
   
  **✓ DO** используется следующее соглашение об именовании ресурсов сообщение исключения.  
   
- Идентификатор ресурса должен быть именем типа исключения, а также с коротким идентификатором исключения:  
+ Идентификатор ресурса должен быть именем типа исключения, а также краткого идентификатора исключения:  
   
  `ArgumentExceptionIllegalCharacters`  
  `ArgumentExceptionInvalidName`  
  `ArgumentExceptionFileNameIsMalformed`  
   
- *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
+ *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*  
   
-## <a name="see-also"></a>См. также  
- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
- [Правила именования](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>См. также
+
+- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Правила именования](../../../docs/standard/design-guidelines/naming-guidelines.md)

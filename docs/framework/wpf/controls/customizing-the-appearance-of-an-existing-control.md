@@ -13,11 +13,11 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
 ms.openlocfilehash: 435789e0d1bc601a9eb51488254407fefd334e05
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43483818"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43868119"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Настройка внешнего вида существующего элемента управления путем создания объекта ControlTemplate
 <a name="introduction"></a> Объект <xref:System.Windows.Controls.ControlTemplate> указывает визуальную структуру и визуальное поведение элемента управления. Можно настроить внешний вид элемента управления, предоставляя ему новый <xref:System.Windows.Controls.ControlTemplate>. При создании <xref:System.Windows.Controls.ControlTemplate>, заменяется внешний вид существующего элемента управления без изменения его функциональных возможностей. Например, можно сделать кнопки в приложении круглыми вместо установленных по умолчанию квадратных, но кнопка по-прежнему будет вызывать <xref:System.Windows.Controls.Primitives.ButtonBase.Click> событий.  

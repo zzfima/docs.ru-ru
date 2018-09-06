@@ -3,11 +3,11 @@ title: Совместимость возможностей частичного 
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: 97a51fe29677f46f9d3053250b65b3d818ca47dc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745600"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864528"
 ---
 # <a name="partial-trust-feature-compatibility"></a>Совместимость возможностей частичного доверия
 Windows Communication Foundation (WCF) поддерживает ограниченный набор функциональности при работе в среде с частичным доверием. Дополнительные сведения о различных функциях, поддерживаемых при работе с частичным доверием, которые разработаны на базе определенного набора сценариев, см. в разделе [Supported Deployment Scenarios](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) .  

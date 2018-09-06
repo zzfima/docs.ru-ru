@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27e4abcd5e8dfe253ba8a7ea1ba5022561ed9ae7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16770ea938973372d1d94c628c42d5d5bf10c695
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581577"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43874996"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Обеспечение целостности данных с помощью хэш-кодов
 Хэш-код является численным значением фиксированной длины, которое однозначно идентифицирует данные. Хэш-коды представляют большие объемы данных в виде намного меньших по объему числовых значений, поэтому они используются с цифровыми подписями. Хэш-код можно подписать более эффективно, чем значение большего размера. Хэш-коды также могут использоваться для проверки целостности данных, пересылаемых по незащищенным каналам. Хэш-код полученных данных можно сравнить с хэш-кодом этих же данных, вычисленным перед их передачей, и на основании этого определить, подвергались ли данные изменениям.  
@@ -58,5 +58,6 @@ The hash codes match.
 The hash codes do not match.  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>См. также
+
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

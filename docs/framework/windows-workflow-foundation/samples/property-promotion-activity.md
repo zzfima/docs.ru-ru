@@ -3,11 +3,11 @@ title: Действие Property Promotion
 ms.date: 03/30/2017
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
 ms.openlocfilehash: 6e059a0d344e6c62833feaa890c459c141a49673
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747058"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43870088"
 ---
 # <a name="property-promotion-activity"></a>Действие Property Promotion
 Этот образец представляет собой законченное решение, в котором средства повышения уровня <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> встраиваются непосредственно в среду разработки рабочих процессов. Предоставляется коллекция элементов конфигурации, действий рабочего процесса и расширений рабочих процессов, которая позволяет упростить использование средства повышения уровня. Кроме того, этот образец включает простой рабочий процесс, в котором демонстрируется использование этой коллекции.  

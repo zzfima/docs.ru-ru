@@ -3,11 +3,11 @@ title: Кодирование MTOM
 ms.date: 03/30/2017
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
 ms.openlocfilehash: f54a22b0004623c8aef8f2788ed7d59f7d777ce7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43400104"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43875558"
 ---
 # <a name="mtom-encoding"></a>Кодирование MTOM
 В данном образце демонстрируется использование кодирования сообщений с помощью механизма оптимизации передачи сообщений (MTOM) с WSHttpBinding. MTOM — это механизм передачи больших вложений в двоичном формате с сообщениями SOAP как необработанных байтов, допустимых для меньших сообщений.  

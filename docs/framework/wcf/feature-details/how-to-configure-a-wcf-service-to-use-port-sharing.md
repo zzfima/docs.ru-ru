@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
 ms.openlocfilehash: 2715e319772e4e0ae4cb38f3dbd1dd5133a2eef3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43723864"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864593"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Практическое руководство. Настройка службы Windows Communication Foundation на совместное использование портов
 — Это самый простой способ использования порта net.tcp:// в приложении Windows Communication Foundation (WCF) для предоставления службы с помощью <xref:System.ServiceModel.NetTcpBinding>.  

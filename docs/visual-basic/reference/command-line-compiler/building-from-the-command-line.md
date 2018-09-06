@@ -14,11 +14,11 @@ helpviewer_keywords:
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 ms.openlocfilehash: 89bcd6e0e7c1cc867bf853dc9bbe96628942ace2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542275"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867005"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>Построение из командной строки (Visual Basic)
 Проект Visual Basic состоит из одного или нескольких файлов отдельный источник. В процессе компиляции эти файлы соединяются в один пакет — исполняемый файл, который запускается как приложение.  

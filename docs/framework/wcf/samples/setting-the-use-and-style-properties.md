@@ -3,11 +3,11 @@ title: Установка свойств Use и Style
 ms.date: 03/30/2017
 ms.assetid: c09a0600-116f-41cf-900a-1b7e4ea4e300
 ms.openlocfilehash: d5e6409e3921d40b14b940786f6344aea657b84b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734698"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865544"
 ---
 # <a name="setting-the-use-and-style-properties"></a>Установка свойств Use и Style
 В этом образце кода показано, как использовать свойства Use и Style классов <xref:System.ServiceModel.XmlSerializerFormatAttribute> и <xref:System.ServiceModel.DataContractFormatAttribute>. Эти свойства влияют на форматирование сообщений. По умолчанию тело сообщения форматируется с использованием стиля <xref:System.ServiceModel.OperationFormatStyle.Document>. Эти параметры можно задать либо на уровне контракта службы, либо на уровне контракта операции.  

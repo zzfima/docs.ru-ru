@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: aa87cb7f-e608-4a81-948b-c9b8a1225783
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 656b34a828ef6acd488cc84ca98d5a4bbaaa2cdf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3f9d83a0edb6dc2261931e422b0ae4c735d2e0d1
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589809"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869997"
 ---
 # <a name="cryptographic-signatures"></a>Криптографические подписи
 <a name="top"></a> Криптографические цифровые подписи используют алгоритмы с открытым ключом для обеспечения целостности данных. Если вы подписываете данные с помощью цифровой подписи, другая сторона может проверить подпись и убедиться в том, что данные поступили от вас и не были изменены после подписывания. Подробнее о цифровых подписях см. в разделе [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md).  
@@ -105,7 +105,7 @@ class Class1
 ### <a name="signing-xml-files"></a>Подписывание XML-файлов  
  .NET Framework предоставляет пространство имен <xref:System.Security.Cryptography.Xml> , которое позволяет подписывать XML. Подписывание XML имеет важное значение в случае, если вы хотите убедиться в том, что XML-файл исходит от конкретного источника. Например, если вы пользуетесь службой котировки акций, которая использует XML, вы можете проверить источник XML-файла, если он подписан.  
   
- Классы в этом пространстве имен следуют [XML-Signature Syntax and Processing рекомендация](https://www.w3.org/TR/xmldsig-core/) из консорциума W3c.  
+ Классы в этом пространстве имен следуют [XML-Signature Syntax and Processing рекомендация](https://www.w3.org/TR/xmldsig-core/) из консорциума World Wide Web.  
   
  [К началу](#top)  
   
@@ -121,7 +121,7 @@ class Class1
   
 -   хэш-алгоритм, который использовался при создании подписи.  
   
- Для проверки подписи, созданной с помощью класса <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> , используется класс <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . Классу <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> необходимо предоставить открытый ключ подписывающей стороны. Для указания открытого ключа нужно знать значения модуля и экспоненты. (Эти значения должны быть предоставлены стороной, создавшей открытый и закрытый ключи.) Сначала создайте <xref:System.Security.Cryptography.RSACryptoServiceProvider> объекта, содержащего открытый ключ, который проверки подписи, а затем инициализируйте <xref:System.Security.Cryptography.RSAParameters> структуры значениями модуля и экспоненты, которые определяют открытый ключ.  
+ Для проверки подписи, созданной с помощью класса <xref:System.Security.Cryptography.RSAPKCS1SignatureFormatter> , используется класс <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> . Классу <xref:System.Security.Cryptography.RSAPKCS1SignatureDeformatter> необходимо предоставить открытый ключ подписывающей стороны. Для указания открытого ключа нужно знать значения модуля и экспоненты. (Эти значения должны быть предоставлены стороной, создавшей открытый и закрытый ключи.) Сначала создайте <xref:System.Security.Cryptography.RSACryptoServiceProvider> объекта, содержащего открытый ключ, который будет проверять подпись, а затем инициализируйте <xref:System.Security.Cryptography.RSAParameters> структуры значениями модуля и экспоненты, которые определяют открытый ключ.  
   
  В следующем примере кода показано создание структуры <xref:System.Security.Cryptography.RSAParameters> . Свойству `Modulus` присваивается байтовый массив `ModulusData` , а свойству `Exponent` — байтовый массив `ExponentData`.  
   
@@ -172,5 +172,6 @@ else
   
  Если подпись действительна, этот фрагмент кода выдаст сообщение «`The signature is valid`», а в противном случае — сообщение «`The signature is not valid`».  
   
-## <a name="see-also"></a>См. также  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>См. также
+
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
