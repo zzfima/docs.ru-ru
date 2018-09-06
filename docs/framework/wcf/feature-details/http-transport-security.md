@@ -5,11 +5,11 @@ ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 00ba9aff27fa1332c311c3e5afa2937259c42bae
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401574"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862187"
 ---
 # <a name="http-transport-security"></a>Безопасность транспорта HTTP
 Если в качестве транспорта используется протокол HTTP, безопасность обеспечивается реализацией протокола SSL (Secure Sockets Layer). Протокол SSL широко используется в Интернете для проверки подлинности службы при подключении клиента, а затем и для обеспечения конфиденциальности (шифрования) канала. В этом разделе объясняется, как SSL работает и как это реализуется в Windows Communication Foundation (WCF).  

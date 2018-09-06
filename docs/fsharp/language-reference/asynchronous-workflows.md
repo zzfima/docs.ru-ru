@@ -2,12 +2,12 @@
 title: Асинхронные рабочие потоки (F#)
 description: 'Сведения о поддержке в языке F # язык программирования для выполнения асинхронных вычислений, которые выполняются без блокировки других операций.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 9516a281701b6c431fc950fe6881359f9c8a672b
-ms.sourcegitcommit: dc02d7d95f1e3efcc7166eaf431b0ec0dc9d8dca
+ms.openlocfilehash: 2a6d5f8b61d63a722744f8f71a037e8bc460c64f
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37143511"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861566"
 ---
 # <a name="asynchronous-workflows"></a>Асинхронные рабочие потоки
 
@@ -67,8 +67,6 @@ let! (result2 : byte[])  = stream.AsyncRead(bufferSize)
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по языку F#](index.md)
-
-[Выражения вычисления](computation-expressions.md)
-
-[Класс Control.Async](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)
+- [Справочник по языку F#](index.md)
+- [Выражения вычисления](computation-expressions.md)
+- [Класс Control.Async](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.async-class-%5bfsharp%5d)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: d681cd15fa3daa3698edc5e0ad3d3c2669c1dfdf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43403097"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43804536"
 ---
 # <a name="path-markup-syntax"></a>Синтаксис разметки пути
 Путями, рассматриваются в [фигур и базовых средств рисования в WPF Обзор](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md) и [Общие сведения о геометрии](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md), однако в этом разделе подробно описываются сложной и мощной мини-язык, который можно использовать для указания пути более [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -55,7 +55,7 @@ ms.locfileid: "43403097"
 |-----------------------------------------------|  
 |`<` *Объект* *свойство* `="` `figureDescription`[ `figureDescription`] * `" ... />`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> Указывает, является ли <xref:System.Windows.Media.StreamGeometry> использует <xref:System.Windows.Media.FillRule.EvenOdd> или <xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>.<br /><br /> -   `F0` Указывает <xref:System.Windows.Media.FillRule.EvenOdd> правило заполнения.<br />-   `F1` Указывает <xref:System.Windows.Media.FillRule.Nonzero> правило заполнения.<br /><br /> Если опустить эту команду, во вложенном пути используется поведение по умолчанию, которое является <xref:System.Windows.Media.FillRule.EvenOdd>. Если эта команда используется, ее необходимо размещать вначале.|  
 |*figureDescription*|Фигура, состоящая из команды перемещения, команд рисования и необязательной команды закрытия.<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
@@ -71,7 +71,7 @@ ms.locfileid: "43403097"
 |------------|  
 |`M` *startPoint*<br /><br /> -или-<br /><br /> `m` *startPoint*|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |*startPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Начальная точка новой фигуры.|  
   
@@ -90,7 +90,7 @@ ms.locfileid: "43403097"
 |------------|  
 |`L` *endPoint*<br /><br /> -или-<br /><br /> `l` *endPoint*|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |*endPoint*|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Конечная точка строки.|  
 
@@ -104,7 +104,7 @@ ms.locfileid: "43403097"
 |------------|  
 |`H`  *x*<br /><br /> -или-<br /><br /> `h`  *x*|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |*x*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата X конечной точки линии.|  
   
@@ -118,7 +118,7 @@ ms.locfileid: "43403097"
 |------------|  
 |`V`  *y*<br /><br /> -или-<br /><br /> `v`  *y*|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |*y*|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата Y конечной точки линии.|  
 
@@ -131,7 +131,7 @@ ms.locfileid: "43403097"
 |------------|  
 |`C` `controlPoint`1`controlPoint`2`endPoint`<br /><br /> -или-<br /><br /> `c` `controlPoint`1`controlPoint`2`endPoint`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`controlPoint`1|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Первая контрольная точка кривой, которая определяет начальную касательную к кривой.|  
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Вторая контрольная точка кривой, которая определяет конечную касательную к кривой.|  
@@ -144,7 +144,7 @@ ms.locfileid: "43403097"
 |------------|  
 |`Q` `controlPoint` `endPoint`<br /><br /> -или-<br /><br /> `q` `controlPoint` `endPoint`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Контрольная точка кривой, которая определяет начальную и конечную касательные к кривой.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Точка для рисования кривой.|  
@@ -156,7 +156,7 @@ ms.locfileid: "43403097"
 |------------|  
 |`S` `controlPoint`2`endPoint`<br /><br /> -или-<br /><br /> `s` `controlPoint`2`endPoint`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`controlPoint`2|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Контрольная точка кривой, которая определяет конечную касательную к кривой.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Точка для рисования кривой.|  
@@ -168,7 +168,7 @@ ms.locfileid: "43403097"
 |------------|  
 |`T` `controlPoint` `endPoint`<br /><br /> -или-<br /><br /> `t` `controlPoint` `endPoint`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`controlPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Контрольная точка кривой, которая определяет начальную касательную к кривой.|  
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> Точка для рисования кривой.|  
@@ -180,7 +180,7 @@ ms.locfileid: "43403097"
 |------------|  
 |`A` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`<br /><br /> -или-<br /><br /> `a` `size` `rotationAngle` `isLargeArcFlag` `sweepDirectionFlag` `endPoint`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`size`|<xref:System.Windows.Size?displayProperty=nameWithType><br /><br /> Радиусы арки X и Y.|  
 |`rotationAngle`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Поворот эллипса в градусах.|  
@@ -204,7 +204,7 @@ ms.locfileid: "43403097"
 |------------|  
 |`x` `,` `y`<br /><br /> -или-<br /><br /> `x` `y`|  
   
-|Термин|Описание:|  
+|Термин|Описание|  
 |----------|-----------------|  
 |`x`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата X точки.|  
 |`y`|<xref:System.Double?displayProperty=nameWithType><br /><br /> Координата Y точки.|  

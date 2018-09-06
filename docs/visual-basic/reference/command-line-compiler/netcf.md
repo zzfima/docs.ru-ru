@@ -12,11 +12,11 @@ ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 36b2cba14f15cebdcc7f371f53f46b657ab12758
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33655776"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43854406"
 ---
 # <a name="-netcf"></a>-netcf
 Задает для компилятора целевой объект [!INCLUDE[Compact](~/includes/compact-md.md)].  
@@ -28,24 +28,24 @@ ms.locfileid: "33655776"
 ```  
   
 ## <a name="remarks"></a>Примечания  
- `-netcf` Заставляет компилятор Visual Basic целевой [!INCLUDE[Compact](~/includes/compact-md.md)] вместо полного [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Функциональные возможности языка, присутствует только в полной [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] отключена.  
+ `-netcf` Компилятору Visual Basic к целевому объекту [!INCLUDE[Compact](~/includes/compact-md.md)] вместо полной [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Функциональные возможности языка, которая присутствует только в полной [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] отключена.  
   
- `-netcf` Параметр предназначен для использования с [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Языковые возможности, отключенные по `-netcf` являются те же функции языка, отсутствует в файлах `-sdkpath`.  
+ `-netcf` Параметр предназначен для использования с [- sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md). Языковые возможности, отключенные по `-netcf` являются те же функции языка, не представленным в файлах `-sdkpath`.  
   
 > [!NOTE]
->  `-netcf` Параметр недоступен в среде разработки Visual Studio; она доступна только при компиляции из командной строки. `-netcf` Был установлен при загрузке проекта Visual Basic устройства.  
+>  `-netcf` Не доступна из среды разработки Visual Studio; она доступна только при компиляции из командной строки. `-netcf` Был установлен при загрузке проекта Visual Basic для устройства.  
   
- `-netcf` Параметр изменяет следующих возможностей языка:  
+ `-netcf` Параметр изменяет следующие функции языка:  
   
--   [Окончания \<ключевое слово > инструкции](../../../visual-basic/language-reference/statements/end-keyword-statement.md) ключевое слово, которое завершает выполнение программы, отключено. Следующая программа компилируется и выполняется без `-netcf` , но завершается ошибкой во время компиляции с `-netcf`.  
+-   [Окончания \<ключевое слово > инструкции](../../../visual-basic/language-reference/statements/end-keyword-statement.md) ключевое слово, которое завершает выполнение программы, отключен. Следующая программа компилируется и выполняется без `-netcf` , но во время компиляции с `-netcf`.  
   
      [!code-vb[VbVbalrCompiler#34](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_1.vb)]  
   
--   Позднее связывание во всех формах отключено. Ошибки времени компиляции создаются при обнаружении распознаваемым сценариев позднего связывания. Следующая программа компилируется и выполняется без `-netcf` , но завершается ошибкой во время компиляции с `-netcf`.  
+-   Позднее связывание, во всех формах, отключен. Ошибки времени компиляции создаются при обнаружении распознанных сценариев позднего связывания. Следующая программа компилируется и выполняется без `-netcf` , но во время компиляции с `-netcf`.  
   
      [!code-vb[VbVbalrCompiler#35](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_2.vb)]  
   
--   [Автоматически](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), и [Юникода](../../../visual-basic/language-reference/modifiers/unicode.md) модификаторы отключены. Синтаксис [инструкции Declare](../../../visual-basic/language-reference/statements/declare-statement.md) инструкции также изменяется для `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. В следующем коде показано влияние `-netcf` на процесс компиляции.  
+-   [Автоматически](../../../visual-basic/language-reference/modifiers/auto.md), [Ansi](../../../visual-basic/language-reference/modifiers/ansi.md), и [Юникода](../../../visual-basic/language-reference/modifiers/unicode.md) модификаторы отключены. Синтаксис [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md) инструкции также изменяется — `Declare Sub|Function name Lib "library" [Alias "alias"] [([arglist])]`. В следующем коде показано влияние `-netcf` на процесс компиляции.  
   
      [!code-vb[VbVbalrCompiler#36](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/netcf_3.vb)]  
   
@@ -84,7 +84,7 @@ ms.locfileid: "33655776"
     -   `Line`  
   
 ## <a name="example"></a>Пример  
- Следующий код компилирует `Myfile.vb` с [!INCLUDE[Compact](~/includes/compact-md.md)], с помощью версии mscorlib.dll и Microsoft.VisualBasic.dll найден в каталоге установки по умолчанию для [!INCLUDE[Compact](~/includes/compact-md.md)] на диске C. Обычно, следует использовать самую последнюю версию [!INCLUDE[Compact](~/includes/compact-md.md)].  
+ Следующий код компилирует `Myfile.vb` с [!INCLUDE[Compact](~/includes/compact-md.md)], с помощью версии библиотеки mscorlib.dll и Microsoft.VisualBasic.dll см. в каталог установки по умолчанию для [!INCLUDE[Compact](~/includes/compact-md.md)] на диске C:. Как правило, используется самую последнюю версию [!INCLUDE[Compact](~/includes/compact-md.md)].  
   
 ```console  
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb  

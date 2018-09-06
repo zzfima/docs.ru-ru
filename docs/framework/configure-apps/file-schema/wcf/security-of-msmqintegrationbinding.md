@@ -4,11 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 861942ac3ce84d75be61d7b4125ab0e17c6d86e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6419c2157281d00cf79de16d4f494fc52bcee598
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876736"
 ---
 # <a name="ltsecuritygt-of-ltmsmqintegrationbindinggt"></a>&lt;security&gt; для &lt;msmqIntegrationBinding&gt;
 Определяет параметры безопасности транспорта для канала интеграции очереди сообщений (MSMQ).  
@@ -44,7 +45,7 @@ msmqIntegrationBinding
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|режим|Задает тип системы безопасности, отвечающей за целостность, конфиденциальность и проверку подлинности при использовании канала интеграции очереди сообщений. Допустимы следующие значения:<br /><br /> — None: Режим безопасности отключен.<br />-Transport: Защита и проверка подлинности предоставляются транспортом. Это значение связано с безопасностью сообщений между двумя диспетчерами очереди. Между приложением и диспетчером очереди безопасность сообщений не обеспечивается. Существующие Msmq-приложения функционально равноценны такому режиму безопасности.<br /><br /> Значение по умолчанию — `Transport`. Это атрибут типа <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
+|режим|Задает тип системы безопасности, отвечающей за целостность, конфиденциальность и проверку подлинности при использовании канала интеграции очереди сообщений. Допустимы следующие значения:<br /><br /> -None: Режим безопасности отключен.<br />-Transport: Защита и проверка подлинности предоставляются транспортом. Это значение связано с безопасностью сообщений между двумя диспетчерами очереди. Между приложением и диспетчером очереди безопасность сообщений не обеспечивается. Существующие Msmq-приложения функционально равноценны такому режиму безопасности.<br /><br /> Значение по умолчанию — `Transport`. Это атрибут типа <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationSecurityMode>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -56,7 +57,7 @@ msmqIntegrationBinding
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Элемент привязки для [ \<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).|  
+|[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Элемент привязки [ \<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md).|  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Configuration.MsmqIntegrationSecurityElement>  
@@ -67,6 +68,6 @@ msmqIntegrationBinding
  [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб Windows Communication Foundation и клиентов](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)  
- [\<msmqIntegrationBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)
+ [\<msmqIntegrationBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/msmqintegrationbinding.md)

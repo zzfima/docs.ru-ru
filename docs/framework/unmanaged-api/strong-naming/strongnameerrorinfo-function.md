@@ -21,11 +21,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ad328d484ba01e22557d7d23d1cfa21813de9c8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43560592"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43860341"
 ---
 # <a name="strongnameerrorinfo-function"></a>Функция StrongNameErrorInfo
 Получает код последней ошибки, вызванной одной из функций строгого имени.  

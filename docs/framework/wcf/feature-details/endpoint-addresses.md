@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43404571"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855719"
 ---
 # <a name="endpoint-addresses"></a>Адреса конечных точек
 С каждой конечной точкой связан адрес, который используется для поиска и идентификации этой конечной точки. Этот адрес в первую очередь включает универсальный код ресурса (URI), задающий расположение конечной точки. Адрес конечной точки представляется в модели программирования Windows Communication Foundation (WCF), <xref:System.ServiceModel.EndpointAddress> класс, который содержит необязательное <xref:System.ServiceModel.EndpointAddress.Identity%2A> свойство, которое позволяет выполнять проверку подлинности конечной точки другими конечными точками, обмена с ней сообщениями, а также набор необязательных <xref:System.ServiceModel.EndpointAddress.Headers%2A> свойства, определяющие другие заголовки SOAP, необходимые для доступа к службе. Необязательные заголовки содержат дополнительную и более подробную информацию для идентификации конечной точки службы и взаимодействия с ней. При передаче данных по каналам связи адрес конечной точки представляется ссылкой на конечную точку WS-Addressing.  

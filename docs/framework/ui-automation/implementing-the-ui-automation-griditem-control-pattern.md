@@ -9,19 +9,20 @@ ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: bfe7fb8ab64f148d8ca5af0e419ca60690a1acce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bfe2e62e98dd206d85e87d8885a1c58786a420fc
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855469"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>Реализация шаблона элемента управления GridItem модели автоматизации пользовательского интерфейса
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](http://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом разделе приводятся рекомендации и соглашения для реализации <xref:System.Windows.Automation.Provider.IGridItemProvider>, включая сведения о свойствах. Ссылки на дополнительные материалы перечислены в конце раздела.  
   
- <xref:System.Windows.Automation.GridItemPattern> Используется для поддержки отдельных дочерних элементов управления контейнеров, реализующих шаблон элемента управления <xref:System.Windows.Automation.Provider.IGridProvider>. Примеры элементов управления, реализующих данный шаблон элемента управления, см. в разделе [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
+ <xref:System.Windows.Automation.GridItemPattern> Шаблон элемента управления используется для поддержки отдельных дочерних элементов управления контейнеров, реализующих <xref:System.Windows.Automation.Provider.IGridProvider>. Примеры элементов управления, реализующих данный шаблон элемента управления, см. в разделе [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md).  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>Правила и соглашения реализации  
@@ -29,11 +30,11 @@ ms.lasthandoff: 05/04/2018
   
 -   Координаты сетки отсчитываются от нуля, начиная с верхней левой ячейки с координатами (0, 0).  
   
--   Объединенные ячейки будут передавать свои <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> и <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> основании свойств их базовой ячейки привязки в соответствии с определением поставщика автоматизации пользовательского интерфейса. Как правило, это будет самая верхняя строка и крайний левый столбец.  
+-   Объединенные ячейки будут передавать свои <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> и <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> основании свойств их базовой ячейки, как определено поставщиком модели автоматизации пользовательского интерфейса. Как правило, это будет самая верхняя строка и крайний левый столбец.  
   
--   <xref:System.Windows.Automation.Provider.IGridItemProvider> Отсутствует активная обработка сетки, таких как объединение или разбиение ячеек.  
+-   <xref:System.Windows.Automation.Provider.IGridItemProvider> не поддерживает активные манипуляции с сеткой, такие как объединение или разбиение ячеек.  
   
--   Элементы управления, реализующие <xref:System.Windows.Automation.Provider.IGridItemProvider> обычно может выполняться (то есть клиент автоматизации пользовательского интерфейса может переходить к соседним элементам управления) с помощью клавиатуры.  
+-   Элементы управления, реализующие <xref:System.Windows.Automation.Provider.IGridItemProvider> обычно могут быть пройдены (то есть клиент автоматизации пользовательского интерфейса может переходить между соседними элементами управления) с помощью клавиатуры.  
   
 <a name="Required_Members_for_IGridItemProvider"></a>   
 ## <a name="required-members-for-igriditemprovider"></a>Обязательные члены для IGridItemProvider  

@@ -3,11 +3,11 @@ title: Как создать настраиваемого участника с�
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
 ms.openlocfilehash: 8daf4924db48c79486e85660357e3b28a2583836
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43558530"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855846"
 ---
 # <a name="how-to-create-a-custom-persistence-participant"></a>Как создать настраиваемого участника сохраняемости
 В следующей процедуре содержаться шаги для создания участника сохраняемости. См. в разделе [участие в сохраняемости](https://go.microsoft.com/fwlink/?LinkID=177735) пример и [расширяемости Store](../../../docs/framework/windows-workflow-foundation/store-extensibility.md) разделе Примеры реализации участников сохраняемости.  

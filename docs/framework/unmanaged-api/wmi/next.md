@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15d470ccf9384695aa38a50c2c062c1b660fea96
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43388618"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43803032"
 ---
 # <a name="next-function"></a>Функция Next
 Извлекает следующее свойство в перечисление, которое начинается с вызова [BeginEnumeration](beginenumeration.md).  
@@ -69,7 +69,7 @@ HRESULT Next (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | Недопустимый параметр. |
@@ -89,7 +89,7 @@ HRESULT Next (
 
 Если `plFlavor` не `null`, `LONG` значение получает сведения о происхождении свойства, следующим образом:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 | `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | Свойство является свойством стандартной системы. |
 | `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | Для класса: свойство наследуется от родительского класса. </br> Для экземпляра: свойство, хотя наследуется от родительского класса, не был изменен в экземпляре.  |

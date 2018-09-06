@@ -6,11 +6,11 @@ helpviewer_keywords:
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
 ms.openlocfilehash: a43b3c0e008025171e3b1fdeba3bc514d01e28c8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542628"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856041"
 ---
 # <a name="use-automatic-layout-overview"></a>Обзор использования автоматической разметки
 В этом разделе представлены рекомендации разработчикам о написании [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] приложений с локализуемым [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]. В прошлом, локализация [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] было много времени. Каждый язык, [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] адаптирован для требовал попиксельного выравнивания. Сегодня при правом разработки и кодирования стандартов, [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] могут создаваться таким образом, чтобы локализаторам требовалось выполнять меньше изменений размеров и расположений для выполнения. Подход к написанию приложений, в которых проще изменять размер и положение элементов называется автоматической разметкой и может осуществляться с помощью [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] разработки приложения.  

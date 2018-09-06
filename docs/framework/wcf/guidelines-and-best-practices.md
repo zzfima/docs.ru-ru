@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, best practices
 - Windows Communication Foundation, guidelines
 ms.assetid: 5098ba46-6e8d-4e02-b0c5-d737f9fdad84
-ms.openlocfilehash: 40e0d2e8d9293792e295f1b1a45de84f4d66d8af
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 54af876a361dfee7a00e3fd29f43f4b643b07913
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803683"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804283"
 ---
 # <a name="guidelines-and-best-practices"></a>Правила и рекомендации
 Этот раздел содержит разделы, в которых приведены указания по созданию приложений Windows Communication Foundation (WCF).  
@@ -23,7 +23,7 @@ ms.locfileid: "33803683"
  Рассматривается, как и когда создавать контракты данных, которые не будут нарушены при создании новых версий.  
   
  [Управление версиями служб](../../../docs/framework/wcf/service-versioning.md)  
- Объясняет, как управление версиями в WCF. После развертывания служб (и предоставляемых ими конечных точек) может возникать потребность в их изменении, например для удовлетворения изменяющихся потребностей бизнеса или требований информационных технологий либо для устранения проблем. В результате каждого изменения создается новая версия службы.  
+ В этой статье описывается управление версиями в WCF. После развертывания служб (и предоставляемых ими конечных точек) может возникать потребность в их изменении, например для удовлетворения изменяющихся потребностей бизнеса или требований информационных технологий либо для устранения проблем. В результате каждого изменения создается новая версия службы.  
   
  [Балансировка нагрузки](../../../docs/framework/wcf/load-balancing.md)  
  Перечислены рекомендации по балансировке нагрузки в веб-ферме.  
@@ -46,6 +46,6 @@ ms.locfileid: "33803683"
   
 ## <a name="see-also"></a>См. также  
  [Что такое Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Примеры Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Примеры Windows Communication Foundation](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
  [Концептуальный обзор](../../../docs/framework/wcf/conceptual-overview.md)  
  [Создание клиентов](../../../docs/framework/wcf/building-clients.md)

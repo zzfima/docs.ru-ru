@@ -3,11 +3,11 @@ title: Написание безопасного динамического ко
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
 ms.openlocfilehash: 5357bb4ad82f5fe9a70f15a540aba355e847ad71
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538191"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857918"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>Написание безопасного динамического кода SQL в SQL Server
 Внедрение кода SQL - это процесс, посредством которого пользователь-злоумышленник вводит инструкции языка Transact-SQL вместо допустимых входных данных. Если входные данные передаются непосредственно на сервер без проверки, и если в приложении не приняты меры против выполнения внедренного кода, то появляется возможность осуществлять злонамеренные действия для повреждения или уничтожения данных.  

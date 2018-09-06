@@ -3,11 +3,11 @@ title: Шаблон автоподтверждения
 ms.date: 03/30/2017
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
 ms.openlocfilehash: a032c05743b64fe58b0b187328b5216080ba6e19
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43552274"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864059"
 ---
 # <a name="auto-confirm-pattern"></a>Шаблон автоподтверждения
 Данный образец включает три сценария, иллюстрирующих пользовательское действие `AutoConfirmScope`. В первом образце показано успешное выполнение последовательности из четырех подлежащих компенсации действий, из которых второе и третье действия являются вложенными в `AutoConfirmScope`. Во втором образце показана та же последовательность с исключением, сформированным после выполнения четвертого действия <xref:System.Activities.Statements.CompensableActivity>. В третьем сценарии показана та же последовательность с исключением, сформированным в `AutoConfirmScope` после завершения второго действия <xref:System.Activities.Statements.CompensableActivity>.  

@@ -7,11 +7,11 @@ ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 95836865bcf8908583e3a5c347bfcef805997fdc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43561686"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43802032"
 ---
 # <a name="security-guidance-and-best-practices"></a>Руководство и рекомендации по безопасности
 Подразделы этого раздела предоставляют рекомендации по и которые необходимо учитывать при создании безопасных приложений Windows Communication Foundation (WCF). Дополнительные сведения о Windows Server AppFabric и безопасности см. [безопасности модели для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

@@ -3,11 +3,11 @@ title: Программа конфигурации WS-AtomicTransaction (wsatCon
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
 ms.openlocfilehash: 31b2b3cf16857bf08a4f8d09f47f80d9b34a53b8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43659964"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43871995"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>Программа конфигурации WS-AtomicTransaction (wsatConfig.exe)
 Программа настройки WS-AtomicTransaction используется для настройки основных параметров поддержки WS-AtomicTransaction.  

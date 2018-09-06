@@ -10,11 +10,11 @@ ms.assetid: 84526045-496f-489d-8517-a258cf76f040
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a444b7eace18fa579324f540e8cf7537c420a6a8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43425760"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879849"
 ---
 # <a name="code-contracts"></a>Контракты для кода
 Контракты для кода предоставляют способ указания предусловий, постусловий и инвариантов объектов в коде. Предусловия — это требования, которые должны быть выполнены при входе в метод или свойство. Постусловия описывают ожидания во время выхода из кода метода или свойства. Инварианты объектов описывают ожидаемое состояние класса, который находится в рабочем состоянии.  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f4680187de7318a6438bf6a5e6bd7c5f3acd05c2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43555492"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43797850"
 ---
 # <a name="startupflags-enumeration"></a>Перечисление STARTUP_FLAGS
 Содержит значения, указывающие поведение при запуске общеязыковой среды выполнения (CLR). По умолчанию, сбора мусора связана с непараллельной, а только библиотеки базовых классов загружаются в область нейтральных к домену.  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
 ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735531"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43803334"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Сценарии приложений (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживает базовый набор сценариев для предоставления и использования данных в виде [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. В этом подразделе описываются разделы, относящиеся к этим сценариям.  

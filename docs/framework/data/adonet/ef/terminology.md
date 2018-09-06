@@ -3,11 +3,11 @@ title: Терминология платформы Entity Framework
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
 ms.openlocfilehash: 4c0497f3c8069dc7d77bc742b1a7848716a5f4d2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43538306"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857379"
 ---
 # <a name="entity-framework-terminology"></a>Терминология платформы Entity Framework
 В этом разделе определены термины, которые часто встречаются в [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] документации. Даны ссылки на соответствующие разделы, содержащие дополнительные сведения.  

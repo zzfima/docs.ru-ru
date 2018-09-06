@@ -19,11 +19,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 54f7dcd7de28e8aaa5376bb4ddd67fd53518511e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43661558"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861741"
 ---
 # <a name="string-data-type-visual-basic"></a>Тип данных String (Visual Basic)
 Содержит последовательности точек неподписанный код 16-разрядное (2-байтовое) этого диапазона, в диапазоне от 0 до 65535. Каждый *кодовую точку*, или код символа, представляющего отдельный символ Юникода. Строки могут содержать от 0 до двух миллиардов (2 ^ 31) символов Юникода.  

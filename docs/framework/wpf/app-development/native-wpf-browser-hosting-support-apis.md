@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WPF browser hosting support APIs [WPF]
 ms.assetid: 82c133a8-d760-45fb-a2b9-3a997537f1d4
 ms.openlocfilehash: f542da55b6cde2d140e1f9f391e6b2f3d6fe172f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562394"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863739"
 ---
 # <a name="native-wpf-browser-hosting-support-apis"></a>Интерфейсы API для поддержки размещения в собственном браузере WPF
 Размещение [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] приложений в веб-браузерах упрощается с помощью сервера активных документов (также известного как DocObject), зарегистрированного из ведущего приложения WPF. [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] напрямую можно активировать и интегрировать в активный документ. Для размещения приложений XBAP и Свободный XAML документов в браузерах Mozilla [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] предоставляет подключаемый модуль NPAPI, который предоставляет аналогичную среду размещения для [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] сервера активных документов как [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] does. Однако самый простой удобный для размещения приложений XBAP и XAML документов в других браузерах и автономных приложениях является использование элемента управления веб-обозревателя Internet Explorer. Элемент управления веб-браузер предоставляет сложные среда размещения сервера активных документов, а также включает собственную узла настроить и расширить эту среду и напрямую взаимодействовать с объект текущего активного документа.  

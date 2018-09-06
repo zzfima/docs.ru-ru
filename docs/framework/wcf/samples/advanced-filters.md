@@ -3,11 +3,11 @@ title: Дополнительные фильтры
 ms.date: 03/30/2017
 ms.assetid: 8d81590f-e036-4f96-824a-4a187f462764
 ms.openlocfilehash: 7022384e8abe93f4276eec48785b3243ed926438
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43564204"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43805446"
 ---
 # <a name="advanced-filters"></a>Дополнительные фильтры
 В этом образце показана служба маршрутизации, Windows Communication Foundation (WCF). Служба маршрутизации является компонентом WCF, который упрощает Включение маршрутизатора на основе содержимого в приложении. В этом образце адаптирует стандартный образец калькулятора WCF для связи с использованием службы маршрутизации. В этом образце показано определение логики маршрутизации на основе содержимого посредством использования фильтров сообщений и таблиц фильтров сообщений.  
