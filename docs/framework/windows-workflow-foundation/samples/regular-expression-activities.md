@@ -2,15 +2,15 @@
 title: Действия с регулярными выражениями
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
-ms.openlocfilehash: 34b1f18f26f0b79c4b8711d65da5707a85cf3bf0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33519838"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43743168"
 ---
 # <a name="regular-expression-activities"></a>Действия с регулярными выражениями
-Этот образец демонстрирует способ создания набора действий, которые представляют функциональные возможности регулярного выражения пространства имен <xref:System.Text.RegularExpressions>. Такие пользовательские действия можно использовать в приложении рабочего процесса. Дополнительные сведения о регулярных выражениях см. в разделе [N:System.Text.RegularExpressions](http://go.microsoft.com/fwlink/?LinkId=150434) пространства имен.  
+Этот образец демонстрирует способ создания набора действий, которые представляют функциональные возможности регулярного выражения пространства имен <xref:System.Text.RegularExpressions>. Такие пользовательские действия можно использовать в приложении рабочего процесса. Дополнительные сведения о регулярных выражениях см. в разделе [N:System.Text.RegularExpressions](https://go.microsoft.com/fwlink/?LinkId=150434) пространства имен.  
   
  В следующей таблице приведены сведения о пользовательских действиях, выполняемых в данном образце.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "33519838"
 |------------------------------|-----------------|  
 |Шаблон (обязательно)|Регулярное выражение, по которому выполняется поиск.|  
 |Входные данные (обязательно)|Входная строка для поиска.|  
-|RegexOptions|Побитовое сочетание OR [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) значений перечисления.|  
+|RegexOptions|Побитовое сочетание OR [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) значений перечисления.|  
 |Возвращаемое значение|`true`, если входная строка совпадает с указанным шаблоном. В противном случае `false`.|  
   
  В следующем примере кода показано использование настраиваемого действия `IsMatch`.  
@@ -51,7 +51,7 @@ new IsMatch
 |------------------------------|-----------------|  
 |Шаблон (обязательно)|Регулярное выражение, по которому выполняется поиск.|  
 |Входные данные (обязательно)|Входная строка для поиска.|  
-|RegexOptions|Побитовое сочетание OR [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) значений перечисления.|  
+|RegexOptions|Побитовое сочетание OR [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) значений перечисления.|  
 |Возвращаемое значение|Объект <xref:System.Text.RegularExpressions.MatchCollection>, содержащий коллекцию успешных совпадений.|  
   
  В следующем примере кода показано использование настраиваемого действия `Matches`.  
@@ -75,7 +75,7 @@ new Matches
 |Входные данные (обязательно)|Входная строка для поиска.|  
 |Замена|Строка замены.<br /><br /> Если задано свойство `Replacement`, то свойство `MatchEvaluator` не учитывается. Необходимо задать либо свойство `Replacement`, либо свойство `MatchEvaluator`.|  
 |MatchEvaluator|Пользовательский метод, анализирующий каждое совпадение и возвращающий либо исходную строку с совпадениями, либо строку замены.<br /><br /> Если задано свойство `Replacement`, то свойство `MatchEvaluator` не учитывается. Необходимо задать либо свойство `Replacement`, либо свойство `MatchEvaluator`.|  
-|RegexOptions|Побитовое сочетание OR [RegexOptions](http://go.microsoft.com/fwlink/?LinkId=150446) значений перечисления.|  
+|RegexOptions|Побитовое сочетание OR [RegexOptions](https://go.microsoft.com/fwlink/?LinkId=150446) значений перечисления.|  
 |Возвращаемое значение|Объект <xref:System.Text.RegularExpressions.MatchCollection>, содержащий коллекцию успешных совпадений.|  
   
  В следующем примере кода показано использование настраиваемого действия `Replace`.  
@@ -111,6 +111,6 @@ new Replace
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\Regex`

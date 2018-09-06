@@ -1,15 +1,15 @@
 ---
-title: '&lt;Настройка&gt;'
+title: '&lt;Custom&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 19f960c14b6171557ec0f353dae34f26d7a7686c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7d558be66b8a1e46d9743c5f8bf0bb9a8b4c349e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748364"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776227"
 ---
-# <a name="ltcustomgt"></a>&lt;Настройка&gt;
+# <a name="ltcustomgt"></a>&lt;Custom&gt;
 Задает параметры службы пользовательского распознавателя одноранговых узлов.  
   
 \<system.serviceModel >  
@@ -53,7 +53,7 @@ ms.locfileid: "32748364"
 |[\<resolver>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|Распознаватель одноранговых узлов, используемый для разрешения идентификатора сетки с IP-адресами в набор адресов одноранговых узлов, представляющих несколько узлов, входящих в сетку.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот элемент определяет основные параметры пользовательской службы распознавателя одноранговых узлов, включая адрес конечной точки однорангового узла, на котором размещена служба, и любые специальные параметры привязки. Дополнительные сведения о создании пользовательского арбитра конфликтов см. в разделе [Добавление пользовательского арбитра конфликтов в приложении PeerChannel](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).  
+ Этот элемент определяет основные параметры пользовательской службы распознавателя одноранговых узлов, включая адрес конечной точки однорангового узла, на котором размещена служба, и любые специальные параметры привязки. Дополнительные сведения о создании пользовательского распознавателя см. в разделе [Добавление в приложение PeerChannel пользовательского распознавателя](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
@@ -61,4 +61,4 @@ ms.locfileid: "32748364"
  <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
  <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
  [Одноранговые распознаватели](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [Добавление пользовательского арбитра конфликтов в приложении PeerChannel](http://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+ [Добавление в приложение PeerChannel пользовательского распознавателя](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)

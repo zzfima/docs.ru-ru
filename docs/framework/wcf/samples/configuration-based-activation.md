@@ -2,12 +2,12 @@
 title: Активация на основе конфигурации
 ms.date: 03/30/2017
 ms.assetid: 21bb762e-c43e-4b0c-887b-5e434d665838
-ms.openlocfilehash: 3ac4edd2a51e4ed8a5c0b7e73d7d1afa31334c33
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: e016dffdaf93b222c1fd2380bfa175256b009068
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809918"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742320"
 ---
 # <a name="configuration-based-activation"></a>Активация на основе конфигурации
 В этом примере показано, как активировать службы Windows Communication Foundation (WCF) без использования SVC-файла.  
@@ -17,7 +17,7 @@ ms.locfileid: "33809918"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] образцов. Этот образец расположен в следующем каталоге.  
+>  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\ConfigBasedActivation`  
   
@@ -60,7 +60,7 @@ ms.locfileid: "33809918"
   
 7.  Нажмите CTRL+SHIFT+A, чтобы задать адрес службы.  
   
-8.  Задать адрес, который http://localhost/ServiceModelSamples/Calculator.svc.  
+8.  Задайте адрес http://localhost/ServiceModelSamples/Calculator.svc.  
   
 9. Выполните операцию `Add`. Задайте для параметра `n1` значение, равное 10, а для параметра `n2` значение, равное 15.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "33809918"
   
 3.  После построения решения запустите файл Setup.bat, чтобы настроить приложение ServiceModelSamples в службах IIS. Теперь каталог ServiceModelSamples должен представляться как приложение IIS.  
   
-4.  Для запуска образца в конфигурации с одним или несколькими компьютерами следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
+4.  Чтобы запустить образец в конфигурации с одной или нескольких компьютерах, следуйте инструкциям в [выполнение образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md).  
   
 ## <a name="see-also"></a>См. также  
- [Образцы размещения и сохраняемости образцы](http://go.microsoft.com/fwlink/?LinkId=193961)
+ [Образцы размещения AppFabric и сохраняемости](https://go.microsoft.com/fwlink/?LinkId=193961)

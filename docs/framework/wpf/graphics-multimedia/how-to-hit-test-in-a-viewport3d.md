@@ -9,25 +9,25 @@ helpviewer_keywords:
 - hit tests [WPF], for 3-D visuals
 - Viewport3D [WPF]
 ms.assetid: 42bfbd99-c7c6-43f1-940b-90448faa412e
-ms.openlocfilehash: ab097e11490fda7a8e3b23c8749204f091271919
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 297fe17b8844f7542255afcfe442fbf9b7a0d59d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559684"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733385"
 ---
 # <a name="how-to-hit-test-in-a-viewport3d"></a>Практическое руководство. Проверка нажатия в Viewport3D
-В этом примере показано, как для проверки нажатия для трехмерной визуальных элементов в <xref:System.Windows.Controls.Viewport3D>.  
+В этом примере показано, как выполнить проверку попадания для трехмерных визуальных элементов в <xref:System.Windows.Controls.Viewport3D>.  
   
- Поскольку <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> возвращает 2D и 3D информацию, имеется возможность прохода по результатам теста для просмотра только 3D результатов.  
+ Так как <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A> возвращает сведения о двух- и трехмерные, возможно, для прохода по результатам теста для чтения только 3D результатов.  
   
  [!code-csharp[HitTest3D#HitTest3D3DN4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn4)]
  [!code-vb[HitTest3D#HitTest3D3DN4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn4)]  
   
- <xref:System.Windows.Media.HitTestResultBehavior> В следующем коде определяет способ обработки результатов проверки нажатия.  `UpdateResultInfo` и `UpdateMaterial` являются локально определенными методами.  
+ <xref:System.Windows.Media.HitTestResultBehavior> В следующий код определяет способ обработки результатов проверки попадания.  `UpdateResultInfo` и `UpdateMaterial` локально определенные методы.  
   
  [!code-csharp[HitTest3D#HitTest3D3DN5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HitTest3D/CSharp/Window1.xaml.cs#hittest3d3dn5)]
  [!code-vb[HitTest3D#HitTest3D3DN5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HitTest3D/visualbasic/window1.xaml.vb#hittest3d3dn5)]  
   
 ## <a name="see-also"></a>См. также  
- [Пример проверки нажатия в трехмерном пространстве](http://go.microsoft.com/fwlink/?LinkID=159959)
+ [Пример проверки нажатия в трехмерном пространстве](https://go.microsoft.com/fwlink/?LinkID=159959)

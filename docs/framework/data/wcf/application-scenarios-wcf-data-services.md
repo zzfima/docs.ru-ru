@@ -5,17 +5,17 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
-ms.openlocfilehash: 81a75007f1d4a13828867e6419412ea9f4c28906
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 5446ab5fe65bd6e2b5244e135c0723f3cb28e81a
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33365064"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43735531"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>Сценарии приложений (службы данных WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживают базовый набор сценариев предоставления и использования данных в виде [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. В этом подразделе описываются разделы, относящиеся к этим сценариям.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживает базовый набор сценариев для предоставления и использования данных в виде [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. В этом подразделе описываются разделы, относящиеся к этим сценариям.  
   
- Предоставления реляционных данных из базы данных в виде [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала.  
+ Предоставьте реляционные данные из базы данных в виде [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала.  
  -   [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
 -   [Предоставление данных как службы](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
@@ -37,20 +37,20 @@ ms.locfileid: "33365064"
 -   [Библиотека клиентов служб данных WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
   
  Использование канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] в клиентском приложении Silverlight.  
- -   [Службы WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+ -   [Службы WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
 -   [Асинхронные операции](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Как: привязки данных службы данных к элементам управления (данных WCF служб или Silverlight)](http://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
+-   [Практическое: привязка данных службы данных к элементам управления (WCF Data Services/Silverlight)](https://msdn.microsoft.com/library/bda7d82e-7b1f-4690-8a33-c6297465bdd5)  
   
  Использование канала [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] в клиентском приложении AJAX.  
  -   [Использование служб данных в клиентском приложении](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
   
--   [OData: Соглашения URI](http://go.microsoft.com/fwlink/?LinkId=185564)  
+-   [OData: Соглашения URI](https://go.microsoft.com/fwlink/?LinkId=185564)  
   
--   [OData: JavaScript Object Notation (JSON) формата](http://go.microsoft.com/fwlink/?LinkId=185790)  
+-   [OData: JavaScript Object Notation (JSON) формата](https://go.microsoft.com/fwlink/?LinkId=185790)  
   
- Создайте решение конца в конец данных, которое использует [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] для передачи данных между клиентом и сервером.  
+ Создать решение данных end-to-end, который использует [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] для передачи данных между клиентом и сервером.  
  -   [Краткое руководство](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
 -   [Использование служб данных в клиентском приложении](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
@@ -62,14 +62,14 @@ ms.locfileid: "33365064"
   
 -   [Асинхронные операции](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
   
--   [Службы WCF Data Services (Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
+-   [Службы WCF Data Services (Silverlight)](https://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30)  
   
- Предоставления и получения [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канал с большой двоичный объект, доступ и изменить в виде потока.  
+ Предоставление и использование [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала с большой двоичный объект и изменить в виде потока.  
  -   [Поставщик потоковых данных](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)  
   
 -   [Работа с двоичными данными](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
   
- Привязать [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналы для элементов управления в приложении Windows Presentation Framework (WPF).  
+ Привязать [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-каналов к элементам управления в приложении Windows Presentation Framework (WPF).  
  -   [Привязка данных к элементам управления](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
   
 -   [Практическое руководство. Привязка данных к элементам Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  

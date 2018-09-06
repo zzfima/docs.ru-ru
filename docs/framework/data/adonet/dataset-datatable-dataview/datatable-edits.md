@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
-ms.openlocfilehash: b806e642a5cce6a55ff0dcecc9b018f3ee78bad8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 1d9321a1db4f68195fb914f271fb98f904d2f963
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758624"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43733356"
 ---
 # <a name="datatable-edits"></a>Редактирование таблиц данных
-При выполнении изменений значений столбцов в <xref:System.Data.DataRow>, изменения немедленно помещаются в текущее состояние строки. <xref:System.Data.DataRowState> Присваивается значение **Modified**, и изменения принимаются или отклонить при помощи <xref:System.Data.DataRow.AcceptChanges%2A> или <xref:System.Data.DataRow.RejectChanges%2A> методы **DataRow**. **DataRow** также предоставляет три метода, которые можно использовать для приостановки состояния строки, пока вы работаете. Такими методами являются: <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> и <xref:System.Data.DataRow.CancelEdit%2A>.  
+При выполнении изменений значений столбцов в <xref:System.Data.DataRow>, изменения немедленно помещаются в текущее состояние строки. <xref:System.Data.DataRowState> Затем устанавливается **Modified**, и изменения принимаются или отвергаются с использованием <xref:System.Data.DataRow.AcceptChanges%2A> или <xref:System.Data.DataRow.RejectChanges%2A> методы **DataRow**. **DataRow** также предоставляет три метода, которые можно использовать для приостановки состояния строки, при редактировании его. Такими методами являются: <xref:System.Data.DataRow.BeginEdit%2A>, <xref:System.Data.DataRow.EndEdit%2A> и <xref:System.Data.DataRow.CancelEdit%2A>.  
   
- При изменении значений столбцов **DataRow** напрямую, **DataRow** управляет значениями столбцов с помощью **текущей**, **по умолчанию**, и **Исходного** версий строк. Помимо этих версий строки **BeginEdit**, **EndEdit**, и **CancelEdit** методы используют четвертая версия: **предложено**. Дополнительные сведения о версиях строк см. в разделе [состояния строк и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
+ При изменении значений столбцов **DataRow** напрямую, **DataRow** управляет значениями столбцов с помощью **текущей**, **по умолчанию**, и **Исходного** версий строк. Помимо этих версий строки **BeginEdit**, **EndEdit**, и **CancelEdit** методы используют четвертую версию строки: **предложено**. Дополнительные сведения о версиях строк см. в разделе [строки состояния и версии строк](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md).  
   
- **Предложено** версия строки существует во время операции изменения, которая начинается вызовом **BeginEdit** и заканчивающийся либо с помощью **EndEdit** или **CancelEdit**  или вызвав **AcceptChanges** или **RejectChanges**.  
+ **Предложено** версия строки существует во время операции редактирования, которая начинается вызовом **BeginEdit** и заканчивается с помощью **EndEdit** или **CancelEdit,**  или вызвав **AcceptChanges** или **RejectChanges**.  
   
- Во время операции изменения можно применить логику проверки в отдельные столбцы, оценивая **ProposedValue** в **ColumnChanged** событие **DataTable**. **ColumnChanged** содержит событие **DataColumnChangeEventArgs** , сохранить ссылку для изменяемого столбца и **ProposedValue**. После оценки предложенного значения можно изменить его или отменить изменение. Когда изменение заканчивается, строка переходит из **предложено** состояния.  
+ Во время операции изменения можно применить логику проверки к отдельным столбцам, оценивая **ProposedValue** в **ColumnChanged** событие **DataTable**. **ColumnChanged** событий содержит **DataColumnChangeEventArgs** , сохранить ссылку для изменяемого столбца и **ProposedValue**. После оценки предложенного значения можно изменить его или отменить изменение. Когда изменение заканчивается, строка выводится из **предложено** состояния.  
   
- Изменения можно подтвердить, вызвав **EndEdit**, или отменить, вызвав **CancelEdit**. Обратите внимание, что, хотя **EndEdit** подтвердить изменения, **DataSet** фактически не принимает изменения до **AcceptChanges** вызывается. Обратите внимание, что при вызове метода **AcceptChanges** до окончания изменений при помощи **EndEdit** или **CancelEdit**, то изменение заканчивается и **предложено** значения строк принимаются для обоих **текущей** и **исходного** версий строк. Таким же образом вызвав **RejectChanges** заканчивает изменения и отменяет **текущей** и **предложено** версий строк. Вызов **EndEdit** или **CancelEdit** после вызова **AcceptChanges** или **RejectChanges** имеет смысл, поскольку редактирование уже завершено.  
+ Изменения можно подтвердить, вызвав **EndEdit**, или их можно отменить, вызвав **CancelEdit**. Обратите внимание, что, хотя **EndEdit** подтвердить изменения, **набора данных** фактически не принимает изменения до **AcceptChanges** вызывается. Обратите внимание, что при вызове метода **AcceptChanges** до окончания изменений при помощи **EndEdit** или **CancelEdit**, то изменение заканчивается и **предложено** значения строк принимаются для обоих **текущей** и **исходного** версий строк. Таким же образом вызвав **RejectChanges** заканчивает изменения и отменяет **текущей** и **предложено** версий строк. Вызов **EndEdit** или **CancelEdit** после вызова метода **AcceptChanges** или **RejectChanges** не влияет, так как изменение оказало уже завершено.  
   
- В следующем примере демонстрируется использование **BeginEdit** с **EndEdit** и **CancelEdit**. В примере также проверяется **ProposedValue** в **ColumnChanged** событий и решает, следует ли отменить изменение.  
+ Следующий пример демонстрирует, как использовать **BeginEdit** с **EndEdit** и **CancelEdit**. В примере также проверяется **ProposedValue** в **ColumnChanged** событий и решает, следует ли отменить изменения.  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  
@@ -92,4 +92,4 @@ protected static void OnColumnChanged(
  <xref:System.Data.DataRowVersion>  
  [Управление данными в DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  [Обработка событий DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

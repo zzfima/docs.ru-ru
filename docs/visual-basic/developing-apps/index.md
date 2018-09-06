@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: b4434d6f66ea8329903c92fe664d9704bce19625
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ecb2c0a09ce92a11a021b45576b5499900b25356
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584206"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748493"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Разработка приложений в Visual Basic
 В этом разделе приведена основная документация по языку Visual Basic.  
@@ -28,13 +28,13 @@ ms.locfileid: "33584206"
  [Создание и использование компонентов в Visual Basic](../../visual-basic/developing-apps/creating-and-using-components.md)  
  Здесь определяется термин *компонент* и описывается, как и когда следует создавать компоненты.  
   
- [Печать и отчеты](../../visual-basic/developing-apps/printing/printing-and-reporting.md)  
+ [Печать и отчеты](../../visual-basic/developing-apps/printing/index.md)  
  Содержит обзоры и ссылки на документацию, относящуюся к печати и созданию отчетов.  
   
- [Основы разработки приложений Windows Forms](../../visual-basic/developing-apps/windows-forms/windows-forms-application-basics.md)  
+ [Основы разработки приложений Windows Forms](../../visual-basic/developing-apps/windows-forms/index.md)  
  Сведения о разработке приложений с помощью Windows Forms в Visual Studio.  
   
- [Настройка проектов и расширение объекта My](../../visual-basic/developing-apps/customizing-extending-my/customizing-projects-and-extending-my.md)  
+ [Настройка проектов и расширение объекта My](../../visual-basic/developing-apps/customizing-extending-my/index.md)  
  Описывает, как можно настроить шаблоны проектов для предоставления дополнительных объектов `My`.  
   
 ## <a name="related-sections"></a>Связанные разделы  

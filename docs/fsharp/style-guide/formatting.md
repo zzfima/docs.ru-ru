@@ -3,11 +3,11 @@ title: 'Рекомендациями по форматированию кода 
 description: 'Дополнительные сведения, касающиеся форматирования кода на F #.'
 ms.date: 05/14/2018
 ms.openlocfilehash: 9c6e80509e9a5654e6514674d38c02e2a6b44e37
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935941"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734646"
 ---
 # <a name="f-code-formatting-guidelines"></a>Рекомендациями по форматированию кода F #
 

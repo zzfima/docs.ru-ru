@@ -9,11 +9,11 @@ ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0df1f3bcf8941b5fe0a8fd19dfc7423e669a766
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465620"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43742297"
 ---
 # <a name="runtime-settings-schema"></a>Схема параметров среды выполнения
 Параметры среды выполнения используются средой CLR для настройки приложений, предназначенных для .NET Framework.  
@@ -77,7 +77,7 @@ ms.locfileid: "43465620"
 
 ## <a name="alphabetical-list-of-runtime-elements"></a>Алфавитный список \<среды выполнения > элементы
 
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/runtime/add-element-for-namedcaches.md)|Добавляет именованный кэш к коллекции `namedCaches` для кэша памяти.|  
 |[\<alwaysFlowImpersonationPolicy>](../../../../../docs/framework/configure-apps/file-schema/runtime/alwaysflowimpersonationpolicy-element.md)|Указывает, что удостоверение Windows всегда проходит через асинхронные точки, независимо от того, как было выполнено олицетворение.|  

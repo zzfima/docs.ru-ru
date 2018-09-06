@@ -6,15 +6,15 @@ helpviewer_keywords:
 ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: 2e0440aadcad7c4297cdc6e6489ca004480420ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 60aa4da95666de01daa087c4c8e826c8cf72ba85
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497416"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734933"
 ---
 # <a name="securing-services-and-clients"></a>Защита служб и клиентов
-Сведения этого раздела посвящена программирования безопасности в Windows Communication Foundation (WCF). Обычно обеспечение безопасности включает выбор подходящей предоставляемой системой привязки, задание свойств элемента безопасности и задание свойств поведений службы, управляющих извлечением учетных данных для использования службой или клиентом. Эти методы рассматриваются требования безопасности для большинства пользователей для большинства сценариев, как показано в [типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Если сценарий требует больше возможностей, сначала узнать [возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md), если решение не является очевидным, см. [расширение безопасности](../../../../docs/framework/wcf/extending/extending-security.md). При создании (или взаимодействие с) системы, где используется форматированного утверждений см. в разделах [авторизации](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
+Сведения этого раздела посвящена программирование безопасности в Windows Communication Foundation (WCF). Обычно обеспечение безопасности включает выбор подходящей предоставляемой системой привязки, задание свойств элемента безопасности и задание свойств поведений службы, управляющих извлечением учетных данных для использования службой или клиентом. Эти подходы охватывают требования к безопасности большинства пользователей для большинства сценариев, как показано в [типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Если сценарий требует больше возможностей, сначала ознакомьтесь с разделом [возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); Если решение не очевидными, см. в разделе [расширение безопасности](../../../../docs/framework/wcf/extending/extending-security.md). Если при создании (или взаимодействия с) система, использующая сложные утверждения, см. в пункте [авторизации](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Программирование безопасности WCF](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)  
@@ -24,10 +24,10 @@ ms.locfileid: "33497416"
  Общие сведения о защите сообщений на транспортном уровне.  
   
  [Безопасность сообщений](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- Сводка причин для использования безопасности на уровне сообщений в Windows Communication Foundation (WCF).  
+ Сводка причин для использования безопасности уровня сообщений в Windows Communication Foundation (WCF).  
   
  [Безопасные сеансы](../../../../docs/framework/wcf/feature-details/secure-sessions.md)  
- Обсуждение вопросов, необходимых при защите сеанса WCF.  
+ Обсуждение вопросов, необходимых при обеспечении безопасности сеанса WCF.  
   
  [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  Описание некоторых стандартных задач, которые требуется выполнять при использовании сертификатов X.509.  
@@ -56,4 +56,4 @@ ms.locfileid: "33497416"
   
 ## <a name="see-also"></a>См. также  
  [Базовое программирование для WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
- [Модель безопасности для Windows Server App Fabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [Модель безопасности для Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

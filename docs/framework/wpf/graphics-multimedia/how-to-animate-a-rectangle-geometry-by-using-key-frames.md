@@ -9,30 +9,30 @@ helpviewer_keywords:
 - RectangleGeometry objects [WPF], animating with key frames
 - animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-ms.openlocfilehash: 581dc89d21091ad0ce856d7a7ced84fd7bcea9d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9b4a620ea58026c3be1b09d01a595e965e4c2b45
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33559286"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43722935"
 ---
 # <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>Практическое руководство. Анимация прямоугольника с помощью ключевых кадров
 В этом примере демонстрируется анимация <xref:System.Windows.Media.RectangleGeometry.Rect%2A> свойство <xref:System.Windows.Media.RectangleGeometry> с помощью ключевых кадров.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames> класса для анимации <xref:System.Windows.Media.RectangleGeometry.Rect%2A> свойство <xref:System.Windows.Media.RectangleGeometry>. Эта анимация использует три ключевых кадра следующим образом:  
+ В следующем примере используется <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames> класс для анимации <xref:System.Windows.Media.RectangleGeometry.Rect%2A> свойство <xref:System.Windows.Media.RectangleGeometry>. Эта анимация использует три ключевых кадра следующим образом:  
   
-1.  В течение первых двух секунд используется экземпляр <xref:System.Windows.Media.Animation.LinearRectKeyFrame> класса для анимации постепенного изменения положение, ширину и высоту прямоугольника. Линейный ключевые кадры, такие как <xref:System.Windows.Media.Animation.LinearRectKeyFrame> Создание линейной плавный переход между значениями.  
+1.  В течение первых двух секунд используется экземпляр <xref:System.Windows.Media.Animation.LinearRectKeyFrame> класс для анимации к плавному изменению в позицию, ширину и высоту прямоугольника. Линейные ключевые кадры, например <xref:System.Windows.Media.Animation.LinearRectKeyFrame> создать плавный линейный переход между значениями.  
   
-2.  Во время окончания следующей половины секунды используется экземпляр <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> класс неожиданно уменьшить высоту прямоугольника. Дискретные полные кадры типа <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> создают внезапные изменения между значениями, то есть, уменьшение высоты происходит быстро, но заметно.  
+2.  В конце следующей половины секунды используется экземпляр <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> класс для резкого уменьшения высоты прямоугольника. Дискретные ключевые кадры, например <xref:System.Windows.Media.Animation.DiscreteRectKeyFrame> создают резкие изменения значений, то есть, уменьшение высоты происходит быстро и не плавно.  
   
-3.  В течение последних двух секунд используется экземпляр <xref:System.Windows.Media.Animation.SplineRectKeyFrame> классе, чтобы изменить прямоугольник обратно в исходный размер и положение. Как и опорных кадров сплайна <xref:System.Windows.Media.Animation.SplineRectKeyFrame> создания переменного перехода между значениями согласно значениям <xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A> свойство. В этом примере изменение начинается медленно и ускоряется экспоненциально к концу временного сегмента.  
+3.  В течение последних двух секунд используется экземпляр <xref:System.Windows.Media.Animation.SplineRectKeyFrame> класс, чтобы изменить прямоугольника обратно на исходный размер и положение. Ключевые кадры сплайна, например <xref:System.Windows.Media.Animation.SplineRectKeyFrame> , создают переменный переход между значениями в соответствии со значениями из <xref:System.Windows.Media.Animation.SplineRectKeyFrame.KeySpline%2A> свойство. В этом примере изменение начинается медленно и ускоряется экспоненциально к концу временного сегмента.  
   
  [!code-csharp[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/RectAnimationUsingKeyFramesExample.cs#rectanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/rectanimationusingkeyframesexample.vb#rectanimationusingkeyframeswholepage)]
  [!code-xaml[keyframes_snip#RectAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/RectAnimationUsingKeyFramesExample.xaml#rectanimationusingkeyframeswholepage)]  
   
- Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](http://go.microsoft.com/fwlink/?LinkID=160012).  
+ Описание полного примера см. в разделе [Пример анимации по ключевым кадрам](https://go.microsoft.com/fwlink/?LinkID=160012).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Media.RectangleGeometry>  

@@ -5,16 +5,16 @@ ms.assetid: 89a70b90-d7e4-4b03-9b84-4dc88ce3d605
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: b857a608c6b485c384956e55247b6e02c49a8564
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465943"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43725115"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>Конечная точка: количество сбоев при проверке безопасности и проверке подлинности в секунду
 Имя счетчика: Security Validation and Authentication Failures Per Second  
   
-## <a name="description"></a>Описание:  
+## <a name="description"></a>Описание  
  Значение этого счетчика увеличивается всякий раз, когда сообщение отклоняется из-за проблемы безопасности, не относящейся к счетчику "Security Calls Not Authorized". К таким проблемам относятся следующие.  
   
 -   Невозможно прочесть в этом сообщении маркер клиента.  

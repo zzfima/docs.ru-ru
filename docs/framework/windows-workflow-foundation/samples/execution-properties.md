@@ -3,11 +3,11 @@ title: Свойства выполнения
 ms.date: 03/30/2017
 ms.assetid: 31c009db-397c-4653-87e2-32dc77fa4b13
 ms.openlocfilehash: 4906c2ad11c8b5822764435d2b39a5b51f2673ba
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43409093"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43748198"
 ---
 # <a name="execution-properties"></a>Свойства выполнения
 В этом образце показано, как определить и использовать свойство выполнения в настраиваемом действии. В этом примере свойство выполнения определяет цвет переднего плана консоли. Рабочий процесс в примере показывает, как разные логические пути выполнения (ответвления действия <xref:System.Activities.Statements.Parallel>) могут поддерживать различные цвета консоли, несмотря на поочередное исполнение действий (по всем ответвлениям действия <xref:System.Activities.Statements.Parallel>).  

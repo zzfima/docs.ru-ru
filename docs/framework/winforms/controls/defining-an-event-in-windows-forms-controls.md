@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], events using code
 ms.assetid: d89f1096-8061-42e2-a855-a1f053f1940a
 ms.openlocfilehash: 60ae01ca63f895bfb1c7aabbe3337596cd13933d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43466273"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43732979"
 ---
 # <a name="defining-an-event-in-windows-forms-controls"></a>Определение событий в элементах управления Windows Forms
 Дополнительные сведения о пользовательских событиях см. в разделе [события](../../../../docs/standard/events/index.md). При определении события, не имеющего связанных данных, необходимо использовать базовый тип данных о событиях, <xref:System.EventArgs> и <xref:System.EventHandler> в качестве делегата события. Все, что остается только определить член события и защищенный `On` *EventName* метод, который вызывает событие.  

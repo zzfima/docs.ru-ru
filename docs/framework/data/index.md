@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [.NET Framework], about .NET Framework data access
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
-ms.openlocfilehash: 4ad0b287aa37104e01015ef0a44cf500bc885c29
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0db71fd7e48515ad6be3641786fc180f62aacf33
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356764"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724010"
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>Данные и модели в .NET Framework
 Этот раздел содержит сведения о доступе к данным с использованием ADO.NET, LINQ, служб данных WCF и XML.  
@@ -20,7 +20,7 @@ ms.locfileid: "33356764"
  [ADO.NET](../../../docs/framework/data/adonet/index.md)  
  Описание архитектуры ADO.NET и способов использования классов ADO.NET для управления данными приложения и взаимодействия с источниками данных, включая Microsoft SQL Server, источники данных OLE DB и XML.  
   
- [Портал LINQ](http://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ [Портал LINQ](https://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
  Содержит ссылки на важную документацию по LINQ.  
   
  [Обработка транзакций](../../../docs/framework/data/transactions/index.md)  
@@ -32,11 +32,11 @@ ms.locfileid: "33356764"
  [XML-документы и данные](../../../docs/standard/data/xml/index.md)  
  Здесь приводится обзор обширного и встроенного набора классов, предназначенных для работы с XML-документами и данными в .NET Framework.  
   
- [Справочник по XML-стандартам](http://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
+ [Справочник по XML-стандартам](https://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
  Справочная информация об основанных на XML стандартах, поддерживаемых корпорацией Майкрософт.  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Технологии моделирования Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=193039)  
+ [Технологии моделирования Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkId=193039)  
  Описание набора технологий, обеспечивающих быструю и настраиваемую разработку структуры и кода приложений на основе данных.  
   
  [Руководство по разработке](../../../docs/framework/development-guide.md)  

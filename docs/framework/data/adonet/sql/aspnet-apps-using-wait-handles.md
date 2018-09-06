@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
 ms.openlocfilehash: 608cec63f08869ebb3a6519f9de0fe7fa02a344f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43386286"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43738970"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>Приложения ASP.NET, использующие дескрипторы ожидания
 Модели ответного вызова и опроса для обработки асинхронных операций полезны, если приложение в определенный момент времени обрабатывает только одну асинхронную операцию. Модели ожидания предоставляют более гибкий способ обработки нескольких асинхронных операций. Существует две модели ожидания, называемые по именам методов <xref:System.Threading.WaitHandle>, используемых для их реализации: Wait (Any) и Wait (All).  

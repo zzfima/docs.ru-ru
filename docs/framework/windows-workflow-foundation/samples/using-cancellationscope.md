@@ -3,11 +3,11 @@ title: Использование CancellationScope
 ms.date: 03/30/2017
 ms.assetid: 39c5c338-b316-43d6-b7fe-a543281dd1ec
 ms.openlocfilehash: 82d44fff869f207c09dc7685fc3470630e001a59
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43401786"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43731525"
 ---
 # <a name="using-cancellationscope"></a>Использование CancellationScope
 В данном образце показывается, как с помощью действия <xref:System.Activities.Statements.CancellationScope> отменять работу в приложении.  

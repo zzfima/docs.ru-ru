@@ -2,17 +2,17 @@
 title: Указание отношений между элементами без вложенности
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
-ms.openlocfilehash: 1d178287150dfca4c379cf6e934370434c3cfc98
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d04a3d946b87c7203497313c6e21a75ef69f50eb
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760093"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724312"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>Указание отношений между элементами без вложенности
-Если элементы не вложены, какие-либо неявные связи не создаются. Однако, можно явно указать связей между элементами, которые не являются вложенными с помощью **msdata: Relationship** заметки.  
+Если элементы не вложены, какие-либо неявные связи не создаются. Однако, можно явно указать отношений между элементами, которые не являются вложенными, используя **msdata: Relationship** заметки.  
   
- В следующем примере показано XML-схемы, в котором **msdata: Relationship** между указана заметка **порядок** и **OrderDetail** элементов, которые не являются вложенность. **Msdata: Relationship** как дочерний элемент элемента задана заметка **схемы** элемента.  
+ В следующем примере показано XML-схемы, в котором **msdata: Relationship** между задана заметка **порядок** и **OrderDetail** элементов, которые не являются вложенными. **Msdata: Relationship** заметка указывается в качестве дочернего элемента **схемы** элемент.  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""   
@@ -67,4 +67,4 @@ Nested: False
 ## <a name="see-also"></a>См. также  
  [Создание отношений DataSet из схемы XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)  
  [Сопоставление ограничений схемы XML (XSD) с ограничениями DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](http://go.microsoft.com/fwlink/?LinkId=217917)
+ [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)

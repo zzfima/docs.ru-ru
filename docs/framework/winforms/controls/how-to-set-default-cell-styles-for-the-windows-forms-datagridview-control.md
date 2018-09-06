@@ -9,17 +9,17 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: 1aaaca43-5340-447e-99c0-9177d9776aa1
-ms.openlocfilehash: ed7ff720d8ef4aa2caa858ea61c4d38866cf50a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 072a9ce7e28983683ac1104b70c160cf5eea12b7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538685"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43734045"
 ---
 # <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>Практическое руководство. Установка стилей ячейки по умолчанию для элемента управления DataGridView в Windows Forms
-С помощью элемента управления <xref:System.Windows.Forms.DataGridView> можно задавать стили ячеек по умолчанию для всего элемента управления или для определенных столбцов и строк. Эти стили по умолчанию отфильтровываются на уровне элемента управления, затем на уровне столбца, строки и, наконец, на уровне ячейки. Если определенное свойство <xref:System.Windows.Forms.DataGridViewCellStyle> не задано на уровне ячейки, то на уровне строки используется свойство по умолчанию. Если свойство не задано и на уровне строки, то используется значение столбца по умолчанию. Наконец, если свойство не задано на уровне столбца, то по умолчанию используется значение <xref:System.Windows.Forms.DataGridView>. Использование этой настройки позволит избежать дублирования значений свойств на нескольких уровнях. На каждом уровне нужно просто указывать стили, отличающиеся от вышестоящих уровней. Дополнительные сведения см. в разделе [стили ячеек в элементе управления DataGridView Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
+С помощью элемента управления <xref:System.Windows.Forms.DataGridView> можно задавать стили ячеек по умолчанию для всего элемента управления или для определенных столбцов и строк. Эти стили по умолчанию отфильтровываются на уровне элемента управления, затем на уровне столбца, строки и, наконец, на уровне ячейки. Если определенное свойство <xref:System.Windows.Forms.DataGridViewCellStyle> не задано на уровне ячейки, то на уровне строки используется свойство по умолчанию. Если свойство не задано и на уровне строки, то используется значение столбца по умолчанию. Наконец, если свойство не задано на уровне столбца, то по умолчанию используется значение <xref:System.Windows.Forms.DataGridView>. Использование этой настройки позволит избежать дублирования значений свойств на нескольких уровнях. На каждом уровне нужно просто указывать стили, отличающиеся от вышестоящих уровней. Дополнительные сведения см. в разделе [стили ячеек элемента управления DataGridView Windows Forms в](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md).  
   
- В Visual Studio предусмотрена расширенная поддержка данной задачи.  См. также [как: установка стилей ячейки по умолчанию и форматов данных в Windows Forms управления DataGridView с помощью конструктора](http://msdn.microsoft.com/library/95y5fz2x\(v=vs.110\)).  
+ В Visual Studio предусмотрена расширенная поддержка данной задачи.  Также см. в разделе [как: установка стилей ячейки по умолчанию и форматов данных в Windows Forms DataGridView элемента управления с помощью конструктора](https://msdn.microsoft.com/library/95y5fz2x\(v=vs.110\)).  
   
 ### <a name="to-set-the-default-cell-styles-programmatically"></a>Программная установка стилей ячейки по умолчанию  
   

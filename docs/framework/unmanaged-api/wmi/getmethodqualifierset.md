@@ -17,14 +17,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a363591f5db7a2dbcba1147df35d8c023c9b0707
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389046"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43724725"
 ---
 # <a name="getmethodqualifierset-function"></a>Функция GetMethodQualifierSet
-Извлекает значение для конкретного метода квалификатор.
+Получает набор квалификаторов для определенного метода.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
@@ -57,7 +57,7 @@ HRESULT GetMethodQualifierSet (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Указанный метод не существует. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр — `null`. |
