@@ -11,79 +11,79 @@ helpviewer_keywords:
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
 ms.openlocfilehash: 2c0372e0176ea54a975e787631ba2849f79e5493
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736806"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876626"
 ---
-# <a name="visual-basic-language-reference"></a><span data-ttu-id="9bfbb-102">Справочник по языку Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9bfbb-102">Visual Basic Language Reference</span></span>
-<span data-ttu-id="9bfbb-103">Этот раздел содержит справочные сведения о различных аспектах языка Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-103">This section provides reference information for various aspects of the Visual Basic language.</span></span>  
+# <a name="visual-basic-language-reference"></a><span data-ttu-id="fd773-102">Справочник по языку Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fd773-102">Visual Basic Language Reference</span></span>
+<span data-ttu-id="fd773-103">Этот раздел содержит справочные сведения о различных аспектах языка Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fd773-103">This section provides reference information for various aspects of the Visual Basic language.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="9bfbb-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="9bfbb-104">In This Section</span></span>  
- [<span data-ttu-id="9bfbb-105">Условные обозначения и соглашения о коде</span><span class="sxs-lookup"><span data-stu-id="9bfbb-105">Typographic and Code Conventions</span></span>](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
- <span data-ttu-id="9bfbb-106">Описывается способ, которым форматирование ключевых слов, заполнителей и других элементов языка в документации по Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-106">Summarizes the way that keywords, placeholders, and other elements of the language are formatted in the Visual Basic documentation.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="fd773-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="fd773-104">In This Section</span></span>  
+ [<span data-ttu-id="fd773-105">Условные обозначения и соглашения о коде</span><span class="sxs-lookup"><span data-stu-id="fd773-105">Typographic and Code Conventions</span></span>](../../visual-basic/language-reference/typographic-and-code-conventions.md)  
+ <span data-ttu-id="fd773-106">Описывается способ, которым форматирование ключевых слов, заполнителей и других элементов языка в документации по Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fd773-106">Summarizes the way that keywords, placeholders, and other elements of the language are formatted in the Visual Basic documentation.</span></span>  
   
- [<span data-ttu-id="9bfbb-107">Члены библиотеки времени выполнения Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9bfbb-107">Visual Basic Runtime Library Members</span></span>](../../visual-basic/language-reference/runtime-library-members.md)  
- <span data-ttu-id="9bfbb-108">Содержит список классов и модулей пространства имен <xref:Microsoft.VisualBasic?displayProperty=nameWithType> со ссылками на их функции-члены, методы, свойства, константы и перечисления.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-108">Lists the classes and modules of the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace, with links to their member functions, methods, properties, constants, and enumerations.</span></span>  
+ [<span data-ttu-id="fd773-107">Члены библиотеки времени выполнения Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fd773-107">Visual Basic Runtime Library Members</span></span>](../../visual-basic/language-reference/runtime-library-members.md)  
+ <span data-ttu-id="fd773-108">Содержит список классов и модулей пространства имен <xref:Microsoft.VisualBasic?displayProperty=nameWithType> со ссылками на их функции-члены, методы, свойства, константы и перечисления.</span><span class="sxs-lookup"><span data-stu-id="fd773-108">Lists the classes and modules of the <xref:Microsoft.VisualBasic?displayProperty=nameWithType> namespace, with links to their member functions, methods, properties, constants, and enumerations.</span></span>  
   
- [<span data-ttu-id="9bfbb-109">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="9bfbb-109">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)  
- <span data-ttu-id="9bfbb-110">Содержит список всех ключевых слов Visual Basic и ссылки на дополнительную информацию.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-110">Lists all Visual Basic keywords and provides links to more information.</span></span>  
+ [<span data-ttu-id="fd773-109">Ключевые слова</span><span class="sxs-lookup"><span data-stu-id="fd773-109">Keywords</span></span>](../../visual-basic/language-reference/keywords/index.md)  
+ <span data-ttu-id="fd773-110">Содержит список всех ключевых слов Visual Basic и ссылки на дополнительную информацию.</span><span class="sxs-lookup"><span data-stu-id="fd773-110">Lists all Visual Basic keywords and provides links to more information.</span></span>  
   
- [<span data-ttu-id="9bfbb-111">Атрибуты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9bfbb-111">Attributes (Visual Basic)</span></span>](../../visual-basic/language-reference/attributes.md)  
- <span data-ttu-id="9bfbb-112">Описывает атрибуты, доступные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-112">Documents the attributes available in Visual Basic.</span></span>  
+ [<span data-ttu-id="fd773-111">Атрибуты (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fd773-111">Attributes (Visual Basic)</span></span>](../../visual-basic/language-reference/attributes.md)  
+ <span data-ttu-id="fd773-112">Описывает атрибуты, доступные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fd773-112">Documents the attributes available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="9bfbb-113">Константы и перечисления</span><span class="sxs-lookup"><span data-stu-id="9bfbb-113">Constants and Enumerations</span></span>](../../visual-basic/language-reference/constants-and-enumerations.md)  
- <span data-ttu-id="9bfbb-114">Описывает константы и перечисления, доступные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-114">Documents the constants and enumerations available in Visual Basic.</span></span>  
+ [<span data-ttu-id="fd773-113">Константы и перечисления</span><span class="sxs-lookup"><span data-stu-id="fd773-113">Constants and Enumerations</span></span>](../../visual-basic/language-reference/constants-and-enumerations.md)  
+ <span data-ttu-id="fd773-114">Описывает константы и перечисления, доступные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fd773-114">Documents the constants and enumerations available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="9bfbb-115">Типы данных</span><span class="sxs-lookup"><span data-stu-id="9bfbb-115">Data Types</span></span>](../../visual-basic/language-reference/data-types/index.md)  
- <span data-ttu-id="9bfbb-116">Описывает типы данных, доступные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-116">Documents the data types available in Visual Basic.</span></span>  
+ [<span data-ttu-id="fd773-115">Типы данных</span><span class="sxs-lookup"><span data-stu-id="fd773-115">Data Types</span></span>](../../visual-basic/language-reference/data-types/index.md)  
+ <span data-ttu-id="fd773-116">Описывает типы данных, доступные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fd773-116">Documents the data types available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="9bfbb-117">Директивы</span><span class="sxs-lookup"><span data-stu-id="9bfbb-117">Directives</span></span>](../../visual-basic/language-reference/directives/index.md)  
- <span data-ttu-id="9bfbb-118">Описывает директивы компилятора, доступные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-118">Documents the compiler directives available in Visual Basic.</span></span>  
+ [<span data-ttu-id="fd773-117">Директивы</span><span class="sxs-lookup"><span data-stu-id="fd773-117">Directives</span></span>](../../visual-basic/language-reference/directives/index.md)  
+ <span data-ttu-id="fd773-118">Описывает директивы компилятора, доступные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fd773-118">Documents the compiler directives available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="9bfbb-119">Функции</span><span class="sxs-lookup"><span data-stu-id="9bfbb-119">Functions</span></span>](../../visual-basic/language-reference/functions/index.md)  
- <span data-ttu-id="9bfbb-120">Документирует функции времени выполнения, доступные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-120">Documents the run-time functions available in Visual Basic.</span></span>  
+ [<span data-ttu-id="fd773-119">Функции</span><span class="sxs-lookup"><span data-stu-id="fd773-119">Functions</span></span>](../../visual-basic/language-reference/functions/index.md)  
+ <span data-ttu-id="fd773-120">Документирует функции времени выполнения, доступные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fd773-120">Documents the run-time functions available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="9bfbb-121">Модификаторы</span><span class="sxs-lookup"><span data-stu-id="9bfbb-121">Modifiers</span></span>](../../visual-basic/language-reference/modifiers/index.md)  
- <span data-ttu-id="9bfbb-122">Содержит список модификаторов времени выполнения Visual Basic и ссылки на дополнительную информацию.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-122">Lists the Visual Basic run-time modifiers and provides links to more information.</span></span>  
+ [<span data-ttu-id="fd773-121">Модификаторы</span><span class="sxs-lookup"><span data-stu-id="fd773-121">Modifiers</span></span>](../../visual-basic/language-reference/modifiers/index.md)  
+ <span data-ttu-id="fd773-122">Содержит список модификаторов времени выполнения Visual Basic и ссылки на дополнительную информацию.</span><span class="sxs-lookup"><span data-stu-id="fd773-122">Lists the Visual Basic run-time modifiers and provides links to more information.</span></span>  
   
- [<span data-ttu-id="9bfbb-123">Модули</span><span class="sxs-lookup"><span data-stu-id="9bfbb-123">Modules</span></span>](../../visual-basic/language-reference/modules.md)  
- <span data-ttu-id="9bfbb-124">Описывает модули, доступные в Visual Basic и их члены.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-124">Documents the modules available in Visual Basic and their members.</span></span>  
+ [<span data-ttu-id="fd773-123">Модули</span><span class="sxs-lookup"><span data-stu-id="fd773-123">Modules</span></span>](../../visual-basic/language-reference/modules.md)  
+ <span data-ttu-id="fd773-124">Описывает модули, доступные в Visual Basic и их члены.</span><span class="sxs-lookup"><span data-stu-id="fd773-124">Documents the modules available in Visual Basic and their members.</span></span>  
   
- [<span data-ttu-id="9bfbb-125">Nothing</span><span class="sxs-lookup"><span data-stu-id="9bfbb-125">Nothing</span></span>](../../visual-basic/language-reference/nothing.md)  
- <span data-ttu-id="9bfbb-126">Описывает значение по умолчанию любого типа данных.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-126">Describes the default value of any data type.</span></span>  
+ [<span data-ttu-id="fd773-125">Nothing</span><span class="sxs-lookup"><span data-stu-id="fd773-125">Nothing</span></span>](../../visual-basic/language-reference/nothing.md)  
+ <span data-ttu-id="fd773-126">Описывает значение по умолчанию любого типа данных.</span><span class="sxs-lookup"><span data-stu-id="fd773-126">Describes the default value of any data type.</span></span>  
   
- [<span data-ttu-id="9bfbb-127">Объекты</span><span class="sxs-lookup"><span data-stu-id="9bfbb-127">Objects</span></span>](../../visual-basic/language-reference/objects/index.md)  
- <span data-ttu-id="9bfbb-128">Описывает объекты, доступные в Visual Basic и их члены.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-128">Documents the objects available in Visual Basic and their members.</span></span>  
+ [<span data-ttu-id="fd773-127">Объекты</span><span class="sxs-lookup"><span data-stu-id="fd773-127">Objects</span></span>](../../visual-basic/language-reference/objects/index.md)  
+ <span data-ttu-id="fd773-128">Описывает объекты, доступные в Visual Basic и их члены.</span><span class="sxs-lookup"><span data-stu-id="fd773-128">Documents the objects available in Visual Basic and their members.</span></span>  
   
- [<span data-ttu-id="9bfbb-129">Операторы</span><span class="sxs-lookup"><span data-stu-id="9bfbb-129">Operators</span></span>](../../visual-basic/language-reference/operators/index.md)  
- <span data-ttu-id="9bfbb-130">Описывает операторы, доступных в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-130">Documents the operators available in Visual Basic.</span></span>  
+ [<span data-ttu-id="fd773-129">Операторы</span><span class="sxs-lookup"><span data-stu-id="fd773-129">Operators</span></span>](../../visual-basic/language-reference/operators/index.md)  
+ <span data-ttu-id="fd773-130">Описывает операторы, доступных в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fd773-130">Documents the operators available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="9bfbb-131">Свойства</span><span class="sxs-lookup"><span data-stu-id="9bfbb-131">Properties</span></span>](../../visual-basic/language-reference/properties.md)  
- <span data-ttu-id="9bfbb-132">Описывает свойства, доступные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-132">Documents the properties available in Visual Basic.</span></span>  
+ [<span data-ttu-id="fd773-131">Свойства</span><span class="sxs-lookup"><span data-stu-id="fd773-131">Properties</span></span>](../../visual-basic/language-reference/properties.md)  
+ <span data-ttu-id="fd773-132">Описывает свойства, доступные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fd773-132">Documents the properties available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="9bfbb-133">Запросы</span><span class="sxs-lookup"><span data-stu-id="9bfbb-133">Queries</span></span>](../../visual-basic/language-reference/queries/index.md)  
- <span data-ttu-id="9bfbb-134">Приводит справочную информацию об использовании в коде выражений [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].</span><span class="sxs-lookup"><span data-stu-id="9bfbb-134">Provides reference information about using [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span></span>  
+ [<span data-ttu-id="fd773-133">Запросы</span><span class="sxs-lookup"><span data-stu-id="fd773-133">Queries</span></span>](../../visual-basic/language-reference/queries/index.md)  
+ <span data-ttu-id="fd773-134">Приводит справочную информацию об использовании в коде выражений [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].</span><span class="sxs-lookup"><span data-stu-id="fd773-134">Provides reference information about using [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] expressions in your code.</span></span>  
   
- [<span data-ttu-id="9bfbb-135">Операторы</span><span class="sxs-lookup"><span data-stu-id="9bfbb-135">Statements</span></span>](../../visual-basic/language-reference/statements/index.md)  
- <span data-ttu-id="9bfbb-136">Документирует объявления и исполняемые операторы, доступные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-136">Documents the declaration and executable statements available in Visual Basic.</span></span>  
+ [<span data-ttu-id="fd773-135">Операторы</span><span class="sxs-lookup"><span data-stu-id="fd773-135">Statements</span></span>](../../visual-basic/language-reference/statements/index.md)  
+ <span data-ttu-id="fd773-136">Документирует объявления и исполняемые операторы, доступные в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fd773-136">Documents the declaration and executable statements available in Visual Basic.</span></span>  
   
- [<span data-ttu-id="9bfbb-137">XML-теги для комментариев</span><span class="sxs-lookup"><span data-stu-id="9bfbb-137">XML Comment Tags</span></span>](../../visual-basic/language-reference/xmldoc/index.md)  
- <span data-ttu-id="9bfbb-138">Описывает комментарии к документации, для которых функция IntelliSense предоставляется в редакторе кода Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-138">Describes the documentation comments for which IntelliSense is provided in the Visual Basic Code Editor.</span></span>  
+ [<span data-ttu-id="fd773-137">XML-теги для комментариев</span><span class="sxs-lookup"><span data-stu-id="fd773-137">XML Comment Tags</span></span>](../../visual-basic/language-reference/xmldoc/index.md)  
+ <span data-ttu-id="fd773-138">Описывает комментарии к документации, для которых функция IntelliSense предоставляется в редакторе кода Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fd773-138">Describes the documentation comments for which IntelliSense is provided in the Visual Basic Code Editor.</span></span>  
   
- [<span data-ttu-id="9bfbb-139">Свойства оси XML</span><span class="sxs-lookup"><span data-stu-id="9bfbb-139">XML Axis Properties</span></span>](../../visual-basic/language-reference/xml-axis/index.md)  
- <span data-ttu-id="9bfbb-140">Приводит ссылки на сведения об использовании свойств оси XML для доступа к XML непосредственно в коде.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-140">Provides links to information about using XML axis properties to access XML directly in your code.</span></span>  
+ [<span data-ttu-id="fd773-139">Свойства оси XML</span><span class="sxs-lookup"><span data-stu-id="fd773-139">XML Axis Properties</span></span>](../../visual-basic/language-reference/xml-axis/index.md)  
+ <span data-ttu-id="fd773-140">Приводит ссылки на сведения об использовании свойств оси XML для доступа к XML непосредственно в коде.</span><span class="sxs-lookup"><span data-stu-id="fd773-140">Provides links to information about using XML axis properties to access XML directly in your code.</span></span>  
   
- [<span data-ttu-id="9bfbb-141">XML-литералы</span><span class="sxs-lookup"><span data-stu-id="9bfbb-141">XML Literals</span></span>](../../visual-basic/language-reference/xml-literals/index.md)  
- <span data-ttu-id="9bfbb-142">Приводит ссылки на сведения об использовании XML-литералов для включения XML непосредственно в код.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-142">Provides links to information about using XML literals to incorporate XML directly in your code.</span></span>  
+ [<span data-ttu-id="fd773-141">XML-литералы</span><span class="sxs-lookup"><span data-stu-id="fd773-141">XML Literals</span></span>](../../visual-basic/language-reference/xml-literals/index.md)  
+ <span data-ttu-id="fd773-142">Приводит ссылки на сведения об использовании XML-литералов для включения XML непосредственно в код.</span><span class="sxs-lookup"><span data-stu-id="fd773-142">Provides links to information about using XML literals to incorporate XML directly in your code.</span></span>  
   
- [<span data-ttu-id="9bfbb-143">Сообщения об ошибках</span><span class="sxs-lookup"><span data-stu-id="9bfbb-143">Error Messages</span></span>](../../visual-basic/language-reference/error-messages/index.md)  
- <span data-ttu-id="9bfbb-144">Предоставляет список Visual Basic компилятор и среда выполнения сообщения об ошибках и справку о том, как их обрабатывать.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-144">Provides a listing of Visual Basic compiler and run-time error messages and help on how to handle them.</span></span>  
+ [<span data-ttu-id="fd773-143">Сообщения об ошибках</span><span class="sxs-lookup"><span data-stu-id="fd773-143">Error Messages</span></span>](../../visual-basic/language-reference/error-messages/index.md)  
+ <span data-ttu-id="fd773-144">Предоставляет список Visual Basic компилятор и среда выполнения сообщения об ошибках и справку о том, как их обрабатывать.</span><span class="sxs-lookup"><span data-stu-id="fd773-144">Provides a listing of Visual Basic compiler and run-time error messages and help on how to handle them.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="9bfbb-145">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="9bfbb-145">Related Sections</span></span>  
- [<span data-ttu-id="9bfbb-146">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="9bfbb-146">Visual Basic</span></span>](../../visual-basic/index.md)  
- <span data-ttu-id="9bfbb-147">Приводит комплексную справку по всем областям языка Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9bfbb-147">Provides comprehensive help on all areas of the Visual Basic language.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="fd773-145">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="fd773-145">Related Sections</span></span>  
+ [<span data-ttu-id="fd773-146">Visual Basic</span><span class="sxs-lookup"><span data-stu-id="fd773-146">Visual Basic</span></span>](../../visual-basic/index.md)  
+ <span data-ttu-id="fd773-147">Приводит комплексную справку по всем областям языка Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="fd773-147">Provides comprehensive help on all areas of the Visual Basic language.</span></span>  
   
- [<span data-ttu-id="9bfbb-148">Компилятор Visual Basic с интерфейсом командной строки</span><span class="sxs-lookup"><span data-stu-id="9bfbb-148">Visual Basic Command-Line Compiler</span></span>](../../visual-basic/reference/command-line-compiler/index.md)  
- <span data-ttu-id="9bfbb-149">В этой статье описывается использование компилятора командной строки в качестве альтернативы компиляции программ из среды разработки Visual Studio (IDE).</span><span class="sxs-lookup"><span data-stu-id="9bfbb-149">Describes how to use the command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).</span></span>
+ [<span data-ttu-id="fd773-148">Компилятор Visual Basic с интерфейсом командной строки</span><span class="sxs-lookup"><span data-stu-id="fd773-148">Visual Basic Command-Line Compiler</span></span>](../../visual-basic/reference/command-line-compiler/index.md)  
+ <span data-ttu-id="fd773-149">В этой статье описывается использование компилятора командной строки в качестве альтернативы компиляции программ из среды разработки Visual Studio (IDE).</span><span class="sxs-lookup"><span data-stu-id="fd773-149">Describes how to use the command-line compiler as an alternative to compiling programs from within the Visual Studio integrated development environment (IDE).</span></span>
