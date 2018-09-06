@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 33c73e58be39a7f1ffa9300947c3ee552231adab
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462315"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43786353"
 ---
 # <a name="endenumeration-function"></a>Функция EndEnumeration
 Завершает работу вызовом последовательности перечисления [функция BeginEnumeration](beginenumeration.md).  
@@ -50,7 +50,7 @@ HRESULT EndEnumeration (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | Произошел общий сбой. |
 |`WBEM_S_NO_ERROR` | 0 | Вызов функции был успешным.  |

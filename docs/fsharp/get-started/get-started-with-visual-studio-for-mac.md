@@ -2,12 +2,12 @@
 title: 'Начало работы с F # в Visual Studio для Mac'
 description: 'Сведения об использовании F # с помощью Visual Studio для Mac.'
 ms.date: 07/03/2018
-ms.openlocfilehash: 200c3a8fee072797a54d15d8989937f4cadb33e2
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 6aceec299c29e04aecd7999cd1dda6a56dd2779a
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874657"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785535"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Начало работы с F # в Visual Studio для Mac
 
@@ -114,8 +114,9 @@ val it : bool = true
 Если это еще не сделано, см. статью [обзор языка F #](../tour.md), где приведены некоторые основные возможности языка F #.  Он будет дам обзор некоторых возможностей языка F # и предоставляет примеры кода можно в полной мере, можно скопировать в Visual Studio для Mac и запустить.  Существуют также некоторые полезные внешние ресурсы, которые можно использовать, показывавшие в [руководство по F #](../index.md).
 
 ## <a name="see-also"></a>См. также
- [Visual F#](../index.md)  
- [Обзор языка F#](../tour.md)  
- [Справочник по языку F #](../language-reference/index.md)  
- [Вывод типа](../language-reference/type-inference.md)  
- [Справочник символов и оператор](../language-reference/symbol-and-operator-reference/index.md)  
+
+- [Visual F#](../index.md)  
+- [Обзор языка F#](../tour.md)  
+- [Справочник по языку F #](../language-reference/index.md)  
+- [Вывод типа](../language-reference/type-inference.md)  
+- [Справочник символов и оператор](../language-reference/symbol-and-operator-reference/index.md)  

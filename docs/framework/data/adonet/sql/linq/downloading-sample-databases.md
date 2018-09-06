@@ -2,12 +2,12 @@
 title: Загрузка примеров баз данных
 ms.date: 03/30/2017
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 4f5799b395abbbb5a4e61bac9572c808bb4ad5a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0b842385762a486ffcc775974e15334c77b589b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359680"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43741706"
 ---
 # <a name="downloading-sample-databases"></a>Загрузка примеров баз данных
 В ряде примеров и пошаговых руководств документации [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] используется база данных «Northwind» и выпуск SQL Server Express Edition. Эти продукты можно бесплатно загрузить в Центре загрузки Майкрософт.  
@@ -18,13 +18,13 @@ ms.locfileid: "33359680"
   
 1.  Запустите Internet Explorer.  
   
-2.  Последовательно выберите пункты [образцы баз данных Pubs и Northwind](http://go.microsoft.com/fwlink?linkid=64296) веб-сайта.  
+2.  Перейдите к [Northwind и Pubs образцов баз данных](https://go.microsoft.com/fwlink?linkid=64296) веб-сайта.  
   
 3.  Нажмите **Загрузить**.  
   
 4.  В **Загрузка файла** выберите **Сохранить**.  
   
-5.  После загрузки файла дважды щелкните файл **Nwind.exe** файл, чтобы установить базу данных.  
+5.  После загрузки файла, дважды щелкните файл **Nwind.exe** файл, чтобы установить базу данных.  
   
      По умолчанию база данных устанавливается в *диск*: \SQL Server 2000 Sample Databases.  
   
@@ -35,22 +35,22 @@ ms.locfileid: "33359680"
   
 1.  Запустите Internet Explorer.  
   
-2.  Последовательно выберите пункты [центра загрузки Майкрософт](http://go.microsoft.com/fwlink?linkid=74602) веб-сайта.  
+2.  Перейдите к [центра загрузки Майкрософт](https://go.microsoft.com/fwlink?linkid=74602) веб-сайта.  
   
-3.  Введите в поле ключевых слов **SQL Server Express**.  
+3.  В поле ключевых слов введите **SQL Server Express**.  
   
 4.  Нажмите **Перейти**.  
   
-5.  На странице результатов щелкните ссылку, чтобы **Microsoft SQL Server 2005 Express Edition** странице загрузки.  
+5.  На странице результатов, щелкните ссылку, чтобы **Microsoft SQL Server 2005 Express Edition** странице загрузки.  
   
 6.  Следуйте указаниям по установке, содержащимся на веб-узле.  
   
 ## <a name="downloading-management-studio-express"></a>Загрузка среды Management Studio Express  
- Если требуется изменить загруженную базу данных, доступ к базе данных из **обозревателя серверов** в Visual Studio интегрированной среде разработки (IDE), или использовать Microsoft SQL Server Management Studio Express (SSMSE) .  
+ Если вы хотите изменить базу данных, который был загружен, можно обращаться к базе данных из **обозревателя серверов** в Visual Studio интегрированной среды разработки (IDE), или использовать Microsoft SQL Server Management Studio Express (SSMSE) .  
   
 #### <a name="to-download-management-studio-express"></a>Загрузка среды Management Studio Express  
   
--   Следуйте инструкциям в [сайте SSMSE](http://go.microsoft.com/fwlink/?LinkId=95933).  
+-   Следуйте инструкциям в [сайте SSMSE](https://go.microsoft.com/fwlink/?LinkId=95933).  
   
 ## <a name="see-also"></a>См. также  
  [Начало работы](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
 ms.openlocfilehash: 4dfe14f7680ad0c3a302334c07bb17e3e92011b0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534560"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787002"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>Настройка проектов и расширение объекта My в Visual Basic
 Шаблоны проектов для предоставления дополнительных `My` объектов. Это упрощает для других разработчиков, поиск и использование ваших объектов.  

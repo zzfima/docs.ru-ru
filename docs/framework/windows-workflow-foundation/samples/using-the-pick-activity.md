@@ -3,11 +3,11 @@ title: Использование действия Pick
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
 ms.openlocfilehash: 193b60bff7b08c0de9a0957668483eb73be97274
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43563166"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784677"
 ---
 # <a name="using-the-pick-activity"></a>Использование действия Pick
 Этот образец демонстрирует применение действия <xref:System.Activities.Statements.Pick>.  

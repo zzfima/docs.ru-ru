@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Distinct statement [Visual Basic]
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
-ms.openlocfilehash: 4b0ce12f6361d3dc6e5cc3601e96fc3a9bcf3841
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18d09d8018303aab6a69801c84c7ec9c6ea19ca9
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603981"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43788627"
 ---
 # <a name="distinct-clause-visual-basic"></a>Предложение Distinct (Visual Basic)
 Ограничивает значения текущей переменной диапазона, чтобы исключить повторяющиеся значения в предложениях последующих запросов.  
@@ -25,16 +25,16 @@ Distinct
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Можно использовать `Distinct` предложение, чтобы получить список уникальных элементов. `Distinct` Предложение вызывает запрос, чтобы игнорировать повторяющиеся результаты запроса. `Distinct` Предложение распространяется на повторяющиеся значения все возвращаемые поля, заданные параметром `Select` предложения. Если не `Select` указано предложение `Distinct` предложение применяется к переменной диапазона для запроса, указанного в `From` предложения. Если переменная диапазона не является неизменяемым типом, запрос только игнорировать результата запроса, если все члены типа соответствуют существующим результатам запроса.  
+ Можно использовать `Distinct` предложение, чтобы получить список уникальных элементов. `Distinct` Предложение вызывает игнорировать повторяющиеся результаты запроса. `Distinct` Предложение применяется к повторяющимся значениям для все возвращаемые поля, заданные параметром `Select` предложение. Если не `Select` указано предложение, `Distinct` предложение применяется к переменной диапазона для запроса, указанного в `From` предложение. Если переменной диапазона не является неизменяемым типом, запрос только игнорирует результат запроса, если все члены типа соответствуют существующим результатам запроса.  
   
 ## <a name="example"></a>Пример  
- Следующее выражение запроса соединяет список клиентов и список заказов клиента. `Distinct` Предложение включена, чтобы получить список уникальных имен клиентов и порядок даты.  
+ Следующее выражение запроса объединяет список клиентов и список заказов клиентов. `Distinct` Предложение включена, чтобы получить список уникальных имен клиентов и порядок даты.  
   
  [!code-vb[VbSimpleQuerySamples#20](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/distinct-clause_1.vb)]  
   
 ## <a name="see-also"></a>См. также  
  [Introduction to LINQ in Visual Basic](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
- [Запросы](../../../visual-basic/language-reference/queries/queries.md)  
+ [Запросы](../../../visual-basic/language-reference/queries/index.md)  
  [Предложение From](../../../visual-basic/language-reference/queries/from-clause.md)  
  [Предложение Select](../../../visual-basic/language-reference/queries/select-clause.md)  
  [Предложения Where](../../../visual-basic/language-reference/queries/where-clause.md)

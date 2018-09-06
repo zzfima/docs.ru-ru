@@ -2,18 +2,19 @@
 title: Побитовые операторы (F#)
 description: 'Дополнительные сведения о побитовые операторы, доступные в языке F #.'
 ms.date: 07/20/2018
-ms.openlocfilehash: abd2778eba422b3ce2a3472efd458446854b3d2f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43559560"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784372"
 ---
 # <a name="bitwise-operators"></a>Побитовые операторы
 
 В этом разделе описываются побитовые операторы, доступные в языке F #.
 
 ## <a name="summary-of-bitwise-operators"></a>Побитовые операторы
+
 В следующей таблице описаны побитовые операторы, которые поддерживаются для неупакованных целочисленных типов в языке F #.
 
 |Оператор|Примечания|
@@ -28,9 +29,7 @@ ms.locfileid: "43559560"
 Следующие типы можно использовать с побитовые операторы: `byte`, `sbyte`, `int16`, `uint16`, `int32 (int)`, `uint32`, `int64`, `uint64`, `nativeint`, и `unativeint`.
 
 ## <a name="see-also"></a>См. также
-[Справочник символов и операторов](index.md)
 
-[Арифметические операторы](arithmetic-operators.md)
-
-[Логические операторы](boolean-operators.md)
-
+- [Справочник символов и операторов](index.md)
+- [Арифметические операторы](arithmetic-operators.md)
+- [Логические операторы](boolean-operators.md)

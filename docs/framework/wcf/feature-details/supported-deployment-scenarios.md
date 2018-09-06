@@ -3,11 +3,11 @@ title: Поддерживаемые сценарии развертывания
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
 ms.openlocfilehash: a86fd9d50b2bdfa2daafa3bec98802d10a1efef5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43672622"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43787939"
 ---
 # <a name="supported-deployment-scenarios"></a>Поддерживаемые сценарии развертывания
 Подмножество функций Windows Communication Foundation (WCF), поддерживается для использования в частично доверенных приложениях предназначен для соответствия требованиям некоторых, но не все сценарии использования WCF. На сервере, соответствующий требованиям WCF к сети Интернет поставщиков услуг совместного размещения работающих приложений независимых поставщиков в [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] набор по соображениям безопасности разрешений среднего уровня доверия. На клиенте поддержка частичного доверия WCF разработан в соответствии с требованиями развертывания технологий, таких как [развертывания ClickOnce](https://go.microsoft.com/fwlink/?LinkId=83712) или [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]технология приложения браузера XAML, которая допускает беспрепятственное и безопасное Развертывание классических приложений с ненадежных узлов.  

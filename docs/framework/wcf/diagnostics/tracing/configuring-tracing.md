@@ -5,11 +5,11 @@ helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
 ms.openlocfilehash: c5064d90c8601ee44be593446b0fd5ad483e57f2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43542301"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785444"
 ---
 # <a name="configuring-tracing"></a>Настройка трассировки
 В этом разделе описывается, как включить трассировку, настроить создание трассировки источниками трассировки и задать уровни трассировки, задать распространение и трассировку действий для поддержки сквозной корреляции трассировки, а также настроить доступ прослушивателей трассировки к трассировкам.  

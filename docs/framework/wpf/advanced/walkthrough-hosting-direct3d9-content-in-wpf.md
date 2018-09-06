@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: 3b215c0eead8c5fc28b477b81f75c39b5c946302
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e7edfbeb9a3cddcdcd81d9c87e5e85bfc947339
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546176"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43785018"
 ---
 # <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>Пошаговое руководство. Размещение содержимого Direct3D9 в WPF
-В этом пошаговом руководстве показано, как разместить содержимое Direct3D9 в приложении Windows Presentation Foundation (WPF).  
+В этом пошаговом руководстве показано, как размещение содержимого Direct3D9 в приложении Windows Presentation Foundation (WPF).  
   
  В руководстве выполняются следующие задачи:  
   
@@ -23,23 +23,23 @@ ms.locfileid: "33546176"
   
 -   Отображение содержимого Direct3D9 с помощью <xref:System.Windows.Interop.D3DImage> класса.  
   
- Когда вы закончите, вы будете знать, как разместить содержимое Direct3D9 в приложении WPF.  
+ Когда вы закончите, будет известно о размещении содержимого Direct3D9 в WPF-приложение.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
--   DirectX SDK 9 или более поздней версии.  
+-   DirectX SDK, 9 или более поздней версии.  
   
--   Библиотеки DLL, которая содержит содержимое Direct3D9 в WPF-совместимом формате. Дополнительные сведения см. в разделе [WPF и взаимодействие Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md) и [Пошаговое руководство: создание Direct3D9 содержимого для размещения в WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
+-   Библиотеку DLL, содержащую содержимого Direct3D9 в WPF-совместимом формате. Дополнительные сведения см. в разделе [взаимодействие WPF и Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md) и [Пошаговое руководство: создание Direct3D9 содержимого для размещения в WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md).  
   
 ## <a name="creating-the-wpf-project"></a>Создание проекта WPF  
  Первым шагом является создание проекта приложения WPF.  
   
 #### <a name="to-create-the-wpf-project"></a>Создание проекта WPF  
   
--   Создание нового проекта приложения WPF в Visual C# с именем `D3DHost`. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового проекта приложения WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+-   Создание нового проекта приложения WPF в Visual C# с именем `D3DHost`. Дополнительные сведения см. в разделе [Практическое руководство. Создание нового проекта приложения WPF](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
      Файл MainWindow.xaml откроется в [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].  
   
@@ -59,17 +59,17 @@ ms.locfileid: "33546176"
   
 #### <a name="to-host-the-direct3d9-content"></a>Для размещения содержимого Direct3D9  
   
-1.  В файл MainWindow.xaml замените автоматически создаваемый код на следующий код XAML.  
+1.  В файле MainWindow.xaml замените автоматически созданный XAML следующий XAML.  
   
      [!code-xaml[System.Windows.Interop.D3DImage#10](../../../../samples/snippets/csharp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/CS/window1.xaml#10)]  
   
 2.  Выполните построение проекта.  
   
-3.  Скопируйте библиотеку DLL, содержащую содержимое Direct3D9 в папку bin/Debug.  
+3.  Скопируйте библиотеку DLL, содержащую содержимого Direct3D9 в папку bin/Debug.  
   
 4.  Нажмите клавишу F5, чтобы запустить проект.  
   
-     Содержимое Direct3D9 будет отображено в приложении WPF.  
+     Содержимое Direct3D9 в WPF-приложении.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Interop.D3DImage>  
