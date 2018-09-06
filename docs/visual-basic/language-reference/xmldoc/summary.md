@@ -6,36 +6,36 @@ helpviewer_keywords:
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
 ms.openlocfilehash: 5ef9b7a98503ff36174de4418ca7d599c365f5aa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43671391"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43784586"
 ---
-# <a name="ltsummarygt-visual-basic"></a><span data-ttu-id="f694c-102">&lt;Сводка&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="f694c-102">&lt;summary&gt; (Visual Basic)</span></span>
-<span data-ttu-id="f694c-103">Задает сводку элемента.</span><span class="sxs-lookup"><span data-stu-id="f694c-103">Specifies the summary of the member.</span></span>  
+# <a name="ltsummarygt-visual-basic"></a><span data-ttu-id="a57dc-102">&lt;Сводка&gt; (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a57dc-102">&lt;summary&gt; (Visual Basic)</span></span>
+<span data-ttu-id="a57dc-103">Задает сводку элемента.</span><span class="sxs-lookup"><span data-stu-id="a57dc-103">Specifies the summary of the member.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f694c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f694c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a57dc-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a57dc-104">Syntax</span></span>  
   
 ```xml  
 <summary>description</summary>  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f694c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="f694c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="a57dc-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="a57dc-105">Parameters</span></span>  
  `description`  
- <span data-ttu-id="f694c-106">Сводка объекта.</span><span class="sxs-lookup"><span data-stu-id="f694c-106">A summary of the object.</span></span>  
+ <span data-ttu-id="a57dc-106">Сводка объекта.</span><span class="sxs-lookup"><span data-stu-id="a57dc-106">A summary of the object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="f694c-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="f694c-107">Remarks</span></span>  
- <span data-ttu-id="f694c-108">Используйте `<summary>` тегов для описания типа или члена типа.</span><span class="sxs-lookup"><span data-stu-id="f694c-108">Use the `<summary>` tag to describe a type or a type member.</span></span> <span data-ttu-id="f694c-109">Чтобы добавить дополнительную информацию в описание типа, используйте [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md).</span><span class="sxs-lookup"><span data-stu-id="f694c-109">Use [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) to add supplemental information to a type description.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a57dc-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="a57dc-107">Remarks</span></span>  
+ <span data-ttu-id="a57dc-108">Используйте `<summary>` тегов для описания типа или члена типа.</span><span class="sxs-lookup"><span data-stu-id="a57dc-108">Use the `<summary>` tag to describe a type or a type member.</span></span> <span data-ttu-id="a57dc-109">Чтобы добавить дополнительную информацию в описание типа, используйте [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md).</span><span class="sxs-lookup"><span data-stu-id="a57dc-109">Use [\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) to add supplemental information to a type description.</span></span>  
   
- <span data-ttu-id="f694c-110">Текст для `<summary>` тег является единственным источником сведений о типе для технологии IntelliSense, а также отображается в обозревателе объектов.</span><span class="sxs-lookup"><span data-stu-id="f694c-110">The text for the `<summary>` tag is the only source of information about the type in IntelliSense, and is also displayed in the Object Browser.</span></span> <span data-ttu-id="f694c-111">Сведения об обозревателе объектов см. в разделе [Просмотр структуры кода](/visualstudio/ide/viewing-the-structure-of-code).</span><span class="sxs-lookup"><span data-stu-id="f694c-111">For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).</span></span>  
+ <span data-ttu-id="a57dc-110">Текст для `<summary>` тег является единственным источником сведений о типе для технологии IntelliSense, а также отображается в обозревателе объектов.</span><span class="sxs-lookup"><span data-stu-id="a57dc-110">The text for the `<summary>` tag is the only source of information about the type in IntelliSense, and is also displayed in the Object Browser.</span></span> <span data-ttu-id="a57dc-111">Сведения об обозревателе объектов см. в разделе [Просмотр структуры кода](/visualstudio/ide/viewing-the-structure-of-code).</span><span class="sxs-lookup"><span data-stu-id="a57dc-111">For information about the Object Browser, see [Viewing the Structure of Code](/visualstudio/ide/viewing-the-structure-of-code).</span></span>  
   
- <span data-ttu-id="f694c-112">Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span><span class="sxs-lookup"><span data-stu-id="f694c-112">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
+ <span data-ttu-id="a57dc-112">Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../../../visual-basic/reference/command-line-compiler/doc.md).</span><span class="sxs-lookup"><span data-stu-id="a57dc-112">Compile with [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) to process documentation comments to a file.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f694c-113">Пример</span><span class="sxs-lookup"><span data-stu-id="f694c-113">Example</span></span>  
- <span data-ttu-id="f694c-114">В этом примере используется `<summary>` тегов для описания `ResetCounter` метод и `Counter` свойство.</span><span class="sxs-lookup"><span data-stu-id="f694c-114">This example uses the `<summary>` tag to describe the `ResetCounter` method and `Counter` property.</span></span>  
+## <a name="example"></a><span data-ttu-id="a57dc-113">Пример</span><span class="sxs-lookup"><span data-stu-id="a57dc-113">Example</span></span>  
+ <span data-ttu-id="a57dc-114">В этом примере используется `<summary>` тегов для описания `ResetCounter` метод и `Counter` свойство.</span><span class="sxs-lookup"><span data-stu-id="a57dc-114">This example uses the `<summary>` tag to describe the `ResetCounter` method and `Counter` property.</span></span>  
   
  [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/summary_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="f694c-115">См. также</span><span class="sxs-lookup"><span data-stu-id="f694c-115">See Also</span></span>  
- [<span data-ttu-id="f694c-116">XML-теги для комментариев</span><span class="sxs-lookup"><span data-stu-id="f694c-116">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a><span data-ttu-id="a57dc-115">См. также</span><span class="sxs-lookup"><span data-stu-id="a57dc-115">See Also</span></span>  
+ [<span data-ttu-id="a57dc-116">XML-теги для комментариев</span><span class="sxs-lookup"><span data-stu-id="a57dc-116">XML Comment Tags</span></span>](../../../visual-basic/language-reference/xmldoc/index.md)
