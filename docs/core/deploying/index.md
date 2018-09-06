@@ -4,12 +4,12 @@ description: Развертывание приложения .NET Core.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/18/2017
-ms.openlocfilehash: 4a39efdd92cf9c3bb6aadf83949e02ce20960481
-ms.sourcegitcommit: 702d5ffc6e733b6c4ded85bf1c92e2293638ee9a
+ms.openlocfilehash: ab65beaa293f7543a8436f913a1e5bf89ca7281b
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/04/2018
-ms.locfileid: "37792430"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43562010"
 ---
 # <a name="net-core-application-deployment"></a>Развертывание приложений .NET Core
 
@@ -21,7 +21,7 @@ ms.locfileid: "37792430"
 
 ## <a name="framework-dependent-deployments-fdd"></a>Развертывания, зависящие от платформы
 
-В случае с зависящим от платформы развертыванием вы развертываете только приложение и зависимости сторонних разработчиков. Платформу .NET Core развертывать не нужно, так как приложение будет использовать версию .NET Core, имеющуюся в целевой системе. Это модель развертывания приложений .NET Core по умолчанию.
+При развертывании, зависящем от платформы, вы развертываете только свое приложение и сторонние зависимости. Платформу .NET Core развертывать не нужно, так как приложение будет использовать версию .NET Core, имеющуюся в целевой системе. Это стандартная модель развертывания для приложений .NET Core и ASP.NET Core, использующих .NET Core.
 
 ### <a name="why-create-a-framework-dependent-deployment"></a>Зачем использовать развертывание, зависящее от платформы
 
@@ -70,9 +70,9 @@ ms.locfileid: "37792430"
 - автономное развертывание;
 - Автономное развертывание с зависимостями сторонних разработчиков
 
-# <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
 
-[Deploying .NET Core apps with command-line interface (CLI) tools](deploy-with-cli.md)  (Развертывание приложений .NET Core с помощью средств командной строки)  
-[Deploying .NET Core apps with Visual Studio](deploy-with-vs.md)  (Развертывание приложений .NET Core с помощью Visual Studio)  
-[Пакеты, метапакеты и платформы](../packages.md)   
-[Каталог идентификаторов сред выполнения (RID) в .NET Core](../rid-catalog.md)
+* [Развертывание приложений .NET Core с помощью средств командной строки (CLI)](deploy-with-cli.md)
+* [Развертывание приложений .NET Core с помощью Visual Studio](deploy-with-vs.md)
+* [Пакеты, метапакеты и платформы](../packages.md)
+* [Каталог идентификаторов сред выполнения (RID) в .NET Core](../rid-catalog.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9a716244c779a25ad75c9db37aade0524e9e740
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 955efad34f816cd0445c4ebdf120d8b614f0d351
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442921"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43508526"
 ---
 # <a name="unmanaged-api-reference"></a>Справочник по неуправляемым API
 В данном разделе содержатся сведения о неуправляемых API, которые могут использоваться приложениями, связанными с управляемым кодом, например хост-приложениями среды выполнения, компиляторами, дизассемблерами, средствами запутывания, отладчиками и профилировщиками.  
@@ -23,7 +23,7 @@ ms.locfileid: "33442921"
  [Общие типы данных](../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)  
  Содержит список используемых общих типы данных, в частности в неуправляемых API профилирования и отладки.  
   
- [В разделе](../../../docs/framework/unmanaged-api/alink/index.md)  
+ [ALink](../../../docs/framework/unmanaged-api/alink/index.md)  
  Описывает API ALink, поддерживающий создание сборок платформы .NET Framework и несвязанных модулей.  
   
  [Authenticode](../../../docs/framework/unmanaged-api/authenticode/index.md)  
@@ -32,7 +32,7 @@ ms.locfileid: "33442921"
  [Константы](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  Описывает константы, определяемые в CorSym.idl.  
   
- [Настраиваемые атрибуты интерфейса](http://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [Пользовательские атрибуты интерфейса](https://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
  Описывает атрибуты пользовательского интерфейса COM.  
   
  [Отладка](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -57,7 +57,7 @@ ms.locfileid: "33442921"
  Описывает API строгого именования, который позволяет клиенту администрировать подписание строгого именования для сборки.  
 
  [WMI и счетчики производительности](wmi/index.md)  
- Описание API, переносить вызовы инструментария управления Windows (WMI).
+ Описывает интерфейсы API, которые упаковывают вызовы библиотек инструментария управления Windows (WMI).
   
  [Вспомогательные функции Tlbexp](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  Описывает две вспомогательные функции и интерфейс, используемые модулем экспорта библиотек (Tlbexp.exe) в процессе преобразования сборки в библиотеку типов.  
@@ -65,4 +65,4 @@ ms.locfileid: "33442921"
 ## <a name="related-sections"></a>Связанные разделы  
  [Руководство по разработке](../../../docs/framework/development-guide.md)  
   
- [Дополнительные сведения о .NET Framework](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [Дополнительные сведения о .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

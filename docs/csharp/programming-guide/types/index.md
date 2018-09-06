@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 15f3a774255923aba83f15700540369040c02dcd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: ba019d4104ec6669ef07b608f40fc1489c994cbf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961538"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525492"
 ---
 # <a name="types-c-programming-guide"></a>Типы (Руководство по программированию на C#)
 ## <a name="types-variables-and-values"></a>Типы, переменные и значения  
@@ -99,7 +99,7 @@ int i = 5;
 char c = 'Z';  
 ```  
   
- Типы значений являются *запечатанными*, что означает, например, что нельзя наследовать тип от <xref:System.Int32?displayProperty=nameWithType> и нельзя определить структуру для наследования от любого пользовательского класса или структуры, поскольку структура может наследовать только от <xref:System.ValueType?displayProperty=nameWithType>. Тем не менее структура может реализовывать один или несколько интерфейсов. Можно выполнить приведение типа структуры к типу интерфейса; это приведет к операции *упаковки-преобразования*, которая создаст программу-оболочку для структуры внутри объекта ссылочного типа в управляемой куче. Операции упаковки-преобразования возникают при передаче типа значения в метод, принимающий <xref:System.Object?displayProperty=nameWithType> в качестве входного параметра. Дополнительные сведения см. в разделе [Упаковка-преобразование и распаковка-преобразование](../../../csharp/programming-guide/types/boxing-and-unboxing.md).  
+ Типы значений являются *запечатанными*, что означает, например, что нельзя наследовать тип от <xref:System.Int32?displayProperty=nameWithType> и нельзя определить структуру для наследования от любого пользовательского класса или структуры, поскольку структура может наследовать только от <xref:System.ValueType?displayProperty=nameWithType>. Тем не менее структура может реализовывать один или несколько интерфейсов. Вы можете привести тип структуры к любому типу интерфейса, который она реализует. Это приведет к операции *упаковки-преобразования*, которая упакует структуру внутри объекта ссылочного типа в управляемой куче. Операции упаковки-преобразования выполняются при передаче типа значения в метод, принимающий <xref:System.Object?displayProperty=nameWithType> или любой тип интерфейса в качестве входного параметра. Дополнительные сведения см. в разделе [Упаковка-преобразование и распаковка-преобразование](../../../csharp/programming-guide/types/boxing-and-unboxing.md).  
   
  Используйте ключевое слово [struct](../../../csharp/language-reference/keywords/struct.md), чтобы создать собственные пользовательские типы значений. Как правило, структура используется как контейнер для небольшого набора связанных переменных, как показано в следующем примере:  
   
@@ -183,8 +183,9 @@ stringList.Add(4);
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Преобразование типов XML-данных](../../../standard/data/xml/conversion-of-xml-data-types.md)  
- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Преобразование типов XML-данных](../../../standard/data/xml/conversion-of-xml-data-types.md)  
+- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)
