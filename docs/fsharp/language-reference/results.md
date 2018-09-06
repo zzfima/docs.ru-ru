@@ -1,19 +1,19 @@
 ---
 title: 'Результаты (F #)'
-description: 'Узнайте, как использовать тип F # «Привести» для упрощения написания кода на языке.'
+description: 'Узнайте, как использовать тип F # «Результат», которые помогут вам создавать ошибкам кода.'
 ms.date: 04/24/2017
-ms.openlocfilehash: 432e420ba7c2005caa46250dde82c2c67c9d3ae3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563012"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43749253"
 ---
-# <a name="results"></a><span data-ttu-id="7f702-103">Результаты</span><span class="sxs-lookup"><span data-stu-id="7f702-103">Results</span></span>
+# <a name="results"></a><span data-ttu-id="a1f07-103">Результаты</span><span class="sxs-lookup"><span data-stu-id="a1f07-103">Results</span></span>
 
-<span data-ttu-id="7f702-104">Начиная с версии 4.1 F #, имеется `Result<'T,'TFailure>` тип, который можно использовать для написания нечувствительный код, который может быть создан.</span><span class="sxs-lookup"><span data-stu-id="7f702-104">Starting with F# 4.1, there is a `Result<'T,'TFailure>` type which you can use for writing error-tolerant code which can be composed.</span></span>
+<span data-ttu-id="a1f07-104">Начиная с F # 4.1, имеется `Result<'T,'TFailure>` тип, который можно использовать для написания ошибкам код, который может быть задан.</span><span class="sxs-lookup"><span data-stu-id="a1f07-104">Starting with F# 4.1, there is a `Result<'T,'TFailure>` type which you can use for writing error-tolerant code which can be composed.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="7f702-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7f702-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="a1f07-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a1f07-105">Syntax</span></span>
 
 ```fsharp
 // The definition of Result in FSharp.Core
@@ -25,11 +25,11 @@ type Result<'T,'TError> =
     | Error of ErrorValue:'TError
 ```
 
-## <a name="remarks"></a><span data-ttu-id="7f702-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="7f702-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="a1f07-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="a1f07-106">Remarks</span></span>
 
-<span data-ttu-id="7f702-107">Обратите внимание, что тип результата — [структура размеченные объединения](discriminated-unions.md#struct-discriminated-unions), который является другой функцией, представленные в F # 4.1.</span><span class="sxs-lookup"><span data-stu-id="7f702-107">Note that the result type is a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions), which is another feature introduced in F# 4.1.</span></span>  <span data-ttu-id="7f702-108">Здесь применяются семантикой структурного равенства.</span><span class="sxs-lookup"><span data-stu-id="7f702-108">Structural equality semantics apply here.</span></span>
+<span data-ttu-id="a1f07-107">Обратите внимание, что тип результата — [размеченные объединения](discriminated-unions.md#struct-discriminated-unions), который является другая технология, представленная в F # 4.1.</span><span class="sxs-lookup"><span data-stu-id="a1f07-107">Note that the result type is a [struct discriminated union](discriminated-unions.md#struct-discriminated-unions), which is another feature introduced in F# 4.1.</span></span>  <span data-ttu-id="a1f07-108">Здесь применяется семантика структурного равенства.</span><span class="sxs-lookup"><span data-stu-id="a1f07-108">Structural equality semantics apply here.</span></span>
 
-<span data-ttu-id="7f702-109">`Result` Тип обычно используется в результата вычисления обработки ошибок, который часто называют [Железная дорога ориентированном программировании](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) в сообществе F #.</span><span class="sxs-lookup"><span data-stu-id="7f702-109">The `Result` type is typically used in monadic error-handling, which is often referred to as [Railway-oriented Programming](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) within the F# community.</span></span>  <span data-ttu-id="7f702-110">Приведенный ниже тривиальные демонстрирует этот подход.</span><span class="sxs-lookup"><span data-stu-id="7f702-110">The following trivial example demonstrates this approach.</span></span>
+<span data-ttu-id="a1f07-109">`Result` Тип обычно используется в результата вычисления обработки ошибок, который часто называется [железнодорожных ориентированное программирование](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) в сообществе F #.</span><span class="sxs-lookup"><span data-stu-id="a1f07-109">The `Result` type is typically used in monadic error-handling, which is often referred to as [Railway-oriented Programming](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) within the F# community.</span></span>  <span data-ttu-id="a1f07-110">Ниже приведен упрощенный пример этот подход.</span><span class="sxs-lookup"><span data-stu-id="a1f07-110">The following trivial example demonstrates this approach.</span></span>
 
 ```fsharp
 // Define a simple type which has fields that can be validated
@@ -80,10 +80,9 @@ let test() =
 test()
 ```
 
-<span data-ttu-id="7f702-111">Как видите, это довольно просто цепочку различные функции проверки, если все они будут возвращать принудительно `Result`.</span><span class="sxs-lookup"><span data-stu-id="7f702-111">As you can see, it's quite easy to chain together various validation functions if you force them all to return a `Result`.</span></span>  <span data-ttu-id="7f702-112">Это позволяет разбить таких функций, как это на мелкие части, которые сочетаются как при необходимости быть.</span><span class="sxs-lookup"><span data-stu-id="7f702-112">This lets you break up functionality like this into small pieces which are as composable as you need them to be.</span></span>  <span data-ttu-id="7f702-113">Этот шаблон также имеет значение added *применения* использование [соответствие шаблону](pattern-matching.md) в конце цикла проверки, который в свою очередь, приводит обеспечивает более высокую степень корректности.</span><span class="sxs-lookup"><span data-stu-id="7f702-113">This also has the added value of *enforcing* the use of [pattern matching](pattern-matching.md) at the end of a round of validation, which in turns enforces a higher degree of program correctness.</span></span>
+<span data-ttu-id="a1f07-111">Как вы видите, это довольно просто цепочку различные функции проверки, если можно сделать так, чтобы вернуть `Result`.</span><span class="sxs-lookup"><span data-stu-id="a1f07-111">As you can see, it's quite easy to chain together various validation functions if you force them all to return a `Result`.</span></span>  <span data-ttu-id="a1f07-112">Это позволяет разделить функциональные возможности следующим образом на мелкие части, в которых сочетаются, как их быть при необходимости.</span><span class="sxs-lookup"><span data-stu-id="a1f07-112">This lets you break up functionality like this into small pieces which are as composable as you need them to be.</span></span>  <span data-ttu-id="a1f07-113">Кроме того, это преимущества *применение* использование [сопоставление шаблонов](pattern-matching.md) в конце цикла проверки, который, в обеспечивает более высокую степень корректности программ.</span><span class="sxs-lookup"><span data-stu-id="a1f07-113">This also has the added value of *enforcing* the use of [pattern matching](pattern-matching.md) at the end of a round of validation, which in turns enforces a higher degree of program correctness.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="7f702-114">См. также</span><span class="sxs-lookup"><span data-stu-id="7f702-114">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a1f07-114">См. также</span><span class="sxs-lookup"><span data-stu-id="a1f07-114">See also</span></span>
 
-[<span data-ttu-id="7f702-115">Размеченные объединения</span><span class="sxs-lookup"><span data-stu-id="7f702-115">Discriminated Unions</span></span>](discriminated-unions.md)
-
-[<span data-ttu-id="7f702-116">Соответствие шаблону</span><span class="sxs-lookup"><span data-stu-id="7f702-116">Pattern Matching</span></span>](pattern-matching.md)
+- [<span data-ttu-id="a1f07-115">Размеченные объединения</span><span class="sxs-lookup"><span data-stu-id="a1f07-115">Discriminated Unions</span></span>](discriminated-unions.md)
+- [<span data-ttu-id="a1f07-116">Соответствие шаблону</span><span class="sxs-lookup"><span data-stu-id="a1f07-116">Pattern Matching</span></span>](pattern-matching.md)

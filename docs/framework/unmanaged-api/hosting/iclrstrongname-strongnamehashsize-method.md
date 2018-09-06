@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c09832d296033b0790d3e6282763a1163abdfd2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406295"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747532"
 ---
-# <a name="iclrstrongnamestrongnamehashsize-method"></a><span data-ttu-id="00bdd-102">Метод ICLRStrongName::StrongNameHashSize</span><span class="sxs-lookup"><span data-stu-id="00bdd-102">ICLRStrongName::StrongNameHashSize Method</span></span>
-<span data-ttu-id="00bdd-103">Получает размер буфера, необходимый для хэша, с помощью указанного алгоритма хэширования.</span><span class="sxs-lookup"><span data-stu-id="00bdd-103">Gets the buffer size required for a hash, using the specified hash algorithm.</span></span>  
+# <a name="iclrstrongnamestrongnamehashsize-method"></a><span data-ttu-id="bab06-102">Метод ICLRStrongName::StrongNameHashSize</span><span class="sxs-lookup"><span data-stu-id="bab06-102">ICLRStrongName::StrongNameHashSize Method</span></span>
+<span data-ttu-id="bab06-103">Получает размер буфера, необходимый для хэша, с помощью указанного хэш-алгоритма.</span><span class="sxs-lookup"><span data-stu-id="bab06-103">Gets the buffer size required for a hash, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="00bdd-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="00bdd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bab06-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bab06-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameHashSize (  
@@ -36,24 +36,24 @@ HRESULT StrongNameHashSize (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="00bdd-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="00bdd-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="bab06-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="bab06-105">Parameters</span></span>  
  `ulHashAlg`  
- <span data-ttu-id="00bdd-106">[in] Хэш-алгоритм, используемый для вычисления размера буфера.</span><span class="sxs-lookup"><span data-stu-id="00bdd-106">[in] The hash algorithm used to compute the buffer size.</span></span>  
+ <span data-ttu-id="bab06-106">[in] Хэш-алгоритм, используемый для вычисления размера буфера.</span><span class="sxs-lookup"><span data-stu-id="bab06-106">[in] The hash algorithm used to compute the buffer size.</span></span>  
   
  `pcbSize`  
- <span data-ttu-id="00bdd-107">[out] Возвращаемый размер буфера в байтах.</span><span class="sxs-lookup"><span data-stu-id="00bdd-107">[out] The returned buffer size, in bytes.</span></span>  
+ <span data-ttu-id="bab06-107">[out] Возвращаемый размер буфера в байтах.</span><span class="sxs-lookup"><span data-stu-id="bab06-107">[out] The returned buffer size, in bytes.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="00bdd-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="00bdd-108">Return Value</span></span>  
- <span data-ttu-id="00bdd-109">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="00bdd-109">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="bab06-108">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="bab06-108">Return Value</span></span>  
+ <span data-ttu-id="bab06-109">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="bab06-109">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="00bdd-110">Требования</span><span class="sxs-lookup"><span data-stu-id="00bdd-110">Requirements</span></span>  
- <span data-ttu-id="00bdd-111">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="00bdd-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="bab06-110">Требования</span><span class="sxs-lookup"><span data-stu-id="bab06-110">Requirements</span></span>  
+ <span data-ttu-id="bab06-111">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="bab06-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="00bdd-112">**Заголовок:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="00bdd-112">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="bab06-112">**Заголовок:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="bab06-112">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="00bdd-113">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="00bdd-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="bab06-113">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="bab06-113">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="00bdd-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="00bdd-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="bab06-114">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bab06-114">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="00bdd-115">См. также</span><span class="sxs-lookup"><span data-stu-id="00bdd-115">See Also</span></span>  
- [<span data-ttu-id="00bdd-116">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="00bdd-116">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="bab06-115">См. также</span><span class="sxs-lookup"><span data-stu-id="bab06-115">See Also</span></span>  
+ [<span data-ttu-id="bab06-116">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="bab06-116">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
