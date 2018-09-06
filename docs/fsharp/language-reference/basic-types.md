@@ -2,18 +2,18 @@
 title: 'Базовые типы (F #)'
 description: 'Узнайте основные базовые типы, которые используются в языке F #.'
 ms.date: 07/09/2018
-ms.openlocfilehash: fdb5e95e102fcf721569156c7fb3a32604fff1dd
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937201"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43777211"
 ---
 # <a name="basic-types"></a>Базовые типы
 
 В этом разделе перечислены базовые типы, которые определены в языке F #. Эти типы представляют собой фундаментальные в F #, являющееся основой практически все программы на F #. Они являются подмножеством типов-примитивов .NET.
 
-|Тип|Тип .NET|Описание:|
+|Тип|Тип .NET|Описание|
 |----|---------|-----------|
 |`bool`|<xref:System.Boolean>|Возможными значениями являются `true` и `false`.|
 |`byte`|<xref:System.Byte>|Значения от 0 до 255.|
@@ -38,4 +38,5 @@ ms.locfileid: "37937201"
 Позволяет выполнять вычисления с целыми числами слишком велик для 64-разрядному целочисленному типу с помощью [bigint](https://msdn.microsoft.com/library/dc8be18d-4042-46c4-b136-2f21a84f6efa) типа. `bigint` не является базовый тип; он представляет собой сокращение от `System.Numerics.BigInteger`.
 
 ## <a name="see-also"></a>См. также
-[Справочник по языку F#](index.md)
+
+- [Справочник по языку F#](index.md)

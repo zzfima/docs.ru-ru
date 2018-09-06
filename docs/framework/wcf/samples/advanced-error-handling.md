@@ -3,11 +3,11 @@ title: Расширенная обработка ошибок
 ms.date: 03/30/2017
 ms.assetid: ed54b687-78af-4eda-8507-9fd081bdea1a
 ms.openlocfilehash: 72fb9885408759f5781501b548f81625d258d13c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43423436"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745262"
 ---
 # <a name="advanced-error-handling"></a>Расширенная обработка ошибок
 В этом примере демонстрируется служба маршрутизации Windows Communication Foundation (WCF). Служба маршрутизации является компонентом WCF, который упрощает Включение маршрутизатора на основе содержимого в приложении. В этом образце показано, как служба маршрутизации выполняет интеллектуальное восстановление работы после ошибок с использованием транзакций и более сложных понятий обмена сообщениями, таких как многоадресная передача.  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
 ms.openlocfilehash: a07955363ea5ca1ca8785c241b0de58149f329ba
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43541847"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43745584"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Поскольку этот вызов не ожидается, выполнение текущего метода продолжается до завершения вызова.
 Так как этот вызов не ожидается, выполнение существующего метода продолжается до тех пор, пока вызов не будет завершен. Рассмотрите возможность применения оператора Await к результату вызова.  

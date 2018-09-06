@@ -3,11 +3,11 @@ title: Приступая к написанию настраиваемого д�
 ms.date: 03/30/2017
 ms.assetid: 3902f5fa-8a43-4048-8a6a-6b15472f90f0
 ms.openlocfilehash: 4d9c140ca230750ca1119b33252b1edb8796d458
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43405232"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43776662"
 ---
 # <a name="getting-started-writing-a-custom-activity"></a>Приступая к написанию настраиваемого действия
 В этом образце показано, как определить простое пользовательское действие в XAML. Действию присваивается имя `Rhyme`, а его логика представляет собой последовательность из трех действий <xref:System.Activities.Statements.WriteLine>.  

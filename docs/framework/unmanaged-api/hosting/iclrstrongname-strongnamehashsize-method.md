@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c09832d296033b0790d3e6282763a1163abdfd2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406295"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747532"
 ---
 # <a name="iclrstrongnamestrongnamehashsize-method"></a>Метод ICLRStrongName::StrongNameHashSize
-Получает размер буфера, необходимый для хэша, с помощью указанного алгоритма хэширования.  
+Получает размер буфера, необходимый для хэша, с помощью указанного хэш-алгоритма.  
   
 ## <a name="syntax"></a>Синтаксис  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
 ms.openlocfilehash: 0003e6c5e9499c066f47202a6dd03fc86268d679
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399860"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43747097"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>Указание значений XML как параметров
 Если запрос требует параметра, значение которого является XML-строка, разработчики могут передать это значение, используя экземпляр **SqlXml** тип данных. Это не рекомендации; XML-столбцов в SQL Server принимает значения параметров точно так же, как другие типы данных.  
