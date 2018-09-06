@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: 3b6cdffdaab508d898e7caa8c93ac0f7b1365d01
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: fdbb220cd856fd7309d54c41a39f91a9316fe434
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43408884"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43805160"
 ---
 # <a name="interfaces-c-programming-guide"></a>Интерфейсы (Руководство по программированию в C#)
 Интерфейс содержит определения для группы связанных функциональных возможностей, которые может реализовать [класс](../../../csharp/language-reference/keywords/class.md) или [структура](../../../csharp/language-reference/keywords/struct.md).  
@@ -93,6 +93,7 @@ ms.locfileid: "43408884"
 ## <a name="featured-book-chapter"></a>Важная глава книги  
  Глава [Интерфейсы](https://msdn.microsoft.com/library/orm-9780596521066-01-13.aspx) в документе [Изучение C# 3.0: овладение основными понятиями C# 3.0](https://msdn.microsoft.com/library/orm-9780596521066-01.aspx)  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

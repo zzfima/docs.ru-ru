@@ -13,11 +13,11 @@ ms.assetid: ba72d648-9553-4849-b829-069ad5ea014b
 author: ghogen
 manager: douge
 ms.openlocfilehash: 2c7fb148b96d5ff9804bcb0bb7c842c475c0f117
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43385985"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43740834"
 ---
 # <a name="developing-windows-service-applications"></a>Разработка служебных приложений Windows
 С помощью Microsoft Visual Studio или пакета SDK Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] можно легко создавать службы. Просто создайте приложение, которое устанавливается как служба. Такие приложения называются службами Windows. Используя компоненты платформы, можно создавать, устанавливать, запускать, останавливать и администрировать службы.  
