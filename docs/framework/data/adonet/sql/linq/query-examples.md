@@ -3,11 +3,11 @@ title: Примеры запросов
 ms.date: 03/30/2017
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
 ms.openlocfilehash: 38454890e05b00cd92bca909ce0c7975f5ef1f6e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464358"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43882052"
 ---
 # <a name="query-examples"></a>Примеры запросов
 В этом разделе Примеры Visual Basic и C# обычно [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] запросов. Разработчики, использующие Visual Studio можно найти много примеров в образце решения, представленном в разделе примеров. Дополнительные сведения см. в разделе [примеры](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  

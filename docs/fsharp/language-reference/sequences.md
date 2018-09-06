@@ -3,11 +3,11 @@ title: Последовательности (F#)
 description: 'Узнайте, как использовать F #, при наличии большой упорядоченной коллекции данных, но вряд ли будет обязательно использовать все элементы.'
 ms.date: 05/16/2016
 ms.openlocfilehash: cfe8d1e350a8ac46b7700c12aa84d250f8b35855
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43776452"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44036513"
 ---
 # <a name="sequences"></a>Последовательности
 

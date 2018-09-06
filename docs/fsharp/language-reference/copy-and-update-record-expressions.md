@@ -4,11 +4,11 @@ description: Вы можете научиться писать «копиров�
 author: ChrSteinert
 ms.date: 06/04/2016
 ms.openlocfilehash: d2b089e8a7fc5c7ee26139003e23d2eaa8a3174e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745909"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43892273"
 ---
 # <a name="copy-and-update-record-expressions"></a>Копирование и обновление выражений записей
 

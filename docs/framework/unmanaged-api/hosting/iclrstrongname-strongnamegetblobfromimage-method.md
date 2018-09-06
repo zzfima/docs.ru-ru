@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cd6cb0116e1080a68c91df365cc7dd1485b21791
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43421545"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43881259"
 ---
 # <a name="iclrstrongnamestrongnamegetblobfromimage-method"></a>Метод ICLRStrongName::StrongNameGetBlobFromImage
-Возвращает двоичное представление образа сборки по указанному адресу памяти.  
+Получает двоичное представление образа сборки по указанному адресу памяти.  
   
 ## <a name="syntax"></a>Синтаксис  
   

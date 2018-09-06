@@ -3,11 +3,11 @@ title: Условные выражения. if... then...else (F#)
 description: 'Вы можете научиться писать условных выражений в F # для выполнения различных ветвей кода.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 10e4224bef772f00520cf5a0fff2f2920147c2fc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745200"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43890873"
 ---
 # <a name="conditional-expressions-ifthenelse"></a>Условные выражения. `if...then...else`
 

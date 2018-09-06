@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40fef0ccbdf73580c5662fc76ed4335e587b9fbc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3bc5b4a9bef51ac1591bdeb21651cee624d552b2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582178"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43891750"
 ---
 # <a name="impersonating-and-reverting"></a>Олицетворение и возвращение
 Иногда может потребоваться получить токен учетной записи Windows для олицетворения учетной записи Windows. Например, приложению ASP.NET может требоваться действовать от лица разных пользователей в разное время. Ваше приложение может принять токен, представляющий администратора, из служб IIS, выполнить олицетворение этого пользователя, выполнить операцию и вернуться к предыдущему удостоверению. Далее он может принять токен из служб IIS, который представляет пользователя с меньшим набором прав, выполнить некую операцию и снова вернуться.  
@@ -36,7 +36,7 @@ ms.locfileid: "33582178"
     Dim ImpersonatedIdentity As New WindowsIdentity(hToken)  
     ```  
   
-3.  Начните олицетворение, создав новый экземпляр <xref:System.Security.Principal.WindowsImpersonationContext> класса и инициализировав его с <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> метода инициализации класса, как показано в следующем коде.  
+3.  Начните олицетворение, создав новый экземпляр класса <xref:System.Security.Principal.WindowsImpersonationContext> класс и инициализировав его с помощью <xref:System.Security.Principal.WindowsIdentity.Impersonate%2A?displayProperty=nameWithType> метод инициализации класса, как показано в следующем коде.  
   
     ```csharp  
     WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate();  
@@ -46,7 +46,7 @@ ms.locfileid: "33582178"
     WindowsImpersonationContext MyImpersonation = ImpersonatedIdentity.Impersonate()  
     ```  
   
-4.  Если олицетворение больше не требуется, вызовите <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> метода для отмены олицетворения, как показано в следующем коде.  
+4.  Если олицетворение больше не требуется, вызовите <xref:System.Security.Principal.WindowsImpersonationContext.Undo%2A?displayProperty=nameWithType> метод для отмены олицетворения, как показано в следующем коде.  
   
     ```csharp  
     MyImpersonation.Undo();  
@@ -58,10 +58,11 @@ ms.locfileid: "33582178"
   
  Если доверенный код уже присоединил <xref:System.Security.Principal.WindowsPrincipal> объекта в поток, можно вызвать метод экземпляра **Impersonate**, который не принимает токен учетной записи. Обратите внимание, что это целесообразно только в том случае, если объект **WindowsPrincipal** в потоке представляет пользователя, отличного от того, под которым выполняется процесс. Например, такая ситуация может возникнуть при использовании ASP.NET с включенной проверкой подлинности Windows и отключенным олицетворением. В этом случае процесс выполняется под учетной записью, настроенной в IIS, тогда как текущий участник представляет пользователя Windows, который обращается к странице.  
   
- Обратите внимание, что ни один **Impersonate** , ни **отменить** изменения **основной** объекта (<xref:System.Security.Principal.IPrincipal>) связанный с текущим контекстом вызова. Говоря точнее, эти методы меняют токен, связанный с текущим процессом операционной системы.  
+ Обратите внимание, что **Impersonate** , ни **отменить** изменения **участника** объекта (<xref:System.Security.Principal.IPrincipal>) связанный с текущим контекстом вызова. Говоря точнее, эти методы меняют токен, связанный с текущим процессом операционной системы.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Security.Principal.WindowsIdentity>  
- <xref:System.Security.Principal.WindowsImpersonationContext>  
- [Объекты Principal и Identity](../../../docs/standard/security/principal-and-identity-objects.md)  
- [Взаимодействие с неуправляемым кодом](../../../docs/framework/interop/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Security.Principal.WindowsIdentity>  
+- <xref:System.Security.Principal.WindowsImpersonationContext>  
+- [Объекты Principal и Identity](../../../docs/standard/security/principal-and-identity-objects.md)  
+- [Взаимодействие с неуправляемым кодом](../../../docs/framework/interop/index.md)

@@ -3,11 +3,11 @@ title: Внешние функции (F#)
 description: 'Сведения о поддержке языка F # для вызова функций в машинном коде.'
 ms.date: 05/16/2016
 ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43747386"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44037231"
 ---
 # <a name="external-functions"></a>Внешние функции
 

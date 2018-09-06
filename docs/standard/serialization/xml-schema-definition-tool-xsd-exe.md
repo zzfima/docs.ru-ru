@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 71a964831b661e97d3be3853a179849e037d3ff6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3a16e92dab6994de6bfa99c248ff0b13658e22d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592462"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879781"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 Инструмент определения схемы XML (Xsd.exe) создает схему XML или классы CLR из файлов XDR, XML и XSD либо из классов в сборке среды выполнения.  
@@ -35,7 +35,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |Параметр|Описание|  
 |------------|-----------------|  
 |**/h**[**elp**]|Отображает синтаксис команд и параметров программы.|  
-|**/ o**[**utputdir**] **: *** каталога*|Задает каталог выходных файлов. Этот аргумент отображается только один раз. Значением по умолчанию является текущий каталог.|  
+|**/o**[**utputdir**] **: *** каталога*|Задает каталог выходных файлов. Этот аргумент отображается только один раз. Значением по умолчанию является текущий каталог.|  
 |**/?**|Отображает синтаксис команд и параметров программы.|  
 |**/P[arameters]:** *file.xml*|Считывает параметры различных режимов операций из указанного XML-файла. Краткая форма "/p:". Дополнительные сведения см. в разделе "Примечания".|  
   
@@ -51,11 +51,11 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Параметр|Описание|  
 |------------|-----------------|  
-|**/e**[**элементам**] **: *** элемент*|Определяет элемент в схеме, для которого создается код. По умолчанию все элементы имеют тип. Этот аргумент можно задать несколько раз.|  
+|**/e**[**реализовать**] **: *** элемент*|Определяет элемент в схеме, для которого создается код. По умолчанию все элементы имеют тип. Этот аргумент можно задать несколько раз.|  
 |**/enableDataBinding**|Реализует интерфейс <xref:System.ComponentModel.INotifyPropertyChanged> для всех созданных типов для обеспечения привязки данных. Краткая форма: `/edb`.|  
 |**/enableLinqDataSet**|(Краткая форма: `/eld`.) Указывает, что созданный набор данных можно запросить с помощью LINQ to DataSet. Этот параметр используется только при указании параметра /dataset. Дополнительные сведения см. в разделах [Общие сведения о LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) и [Запрос к типизированным объектам DataSet](../../../docs/framework/data/adonet/querying-typed-datasets.md). Общие сведения об использовании LINQ см. в разделе [LINQ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
 |**/f**[**ields**]|Создает поля вместо свойств. По умолчанию создаются свойства.|  
-|**/l**[**anguage**] **: *** языка*|Задает используемый язык программирования. Доступный выбор: `CS` (C#, по умолчанию), `VB` (Visual Basic), `JS` (JScript) или `VJS` (Visual J#). Также можно указать полное имя класса, реализующего <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
+|**/l**[**ЫК**] **: *** языка*|Задает используемый язык программирования. Доступный выбор: `CS` (C#, по умолчанию), `VB` (Visual Basic), `JS` (JScript) или `VJS` (Visual J#). Также можно указать полное имя класса, реализующего <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
 |**/n**[**amespace**]**:***namespace*|Определяет пространство имен среды выполнения для создаваемых типов. Пространство имен по умолчанию — `Schemas`.|  
 |**/nologo**|Отключает баннер.|  
 |**/order**|Создает явные идентификаторы порядка для всех примитивных членов.|  
@@ -66,7 +66,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
   
 |Параметр|Описание|  
 |------------|-----------------|  
-|**/t**[**тип**] **: *** typename*|Задает имя типа, для которого следует создать схему. Можно указать несколько аргументов типа. Если *имя_типа* не указывает пространство имен, Xsd.exe сопоставляет все типы в сборке с указанным типом. Если *имя_типа* задает пространство имен, сопоставляется только этот тип. Если *имя_типа* заканчивается знаком звездочки (\*), средство сопоставляет все типы, которые начинаются со строки, предшествующей знаку звездочки (\*). Если параметр `/type` не задан, Xsd.exe создает схемы для всех типов в сборке.|  
+|**/t**[**ипу**] **: *** typename*|Задает имя типа, для которого следует создать схему. Можно указать несколько аргументов типа. Если *имя_типа* не указывает пространство имен, Xsd.exe сопоставляет все типы в сборке с указанным типом. Если *имя_типа* задает пространство имен, сопоставляется только этот тип. Если *имя_типа* заканчивается знаком звездочки (\*), средство сопоставляет все типы, которые начинаются со строки, предшествующей знаку звездочки (\*). Если параметр `/type` не задан, Xsd.exe создает схемы для всех типов в сборке.|  
   
 ## <a name="remarks"></a>Примечания  
  В следующей таблице показаны операции, выполняемые Xsd.exe.  
@@ -86,7 +86,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
  Классы в XSD  
  Создает схему XML из типа или типов в файле сборки среды выполнения. Созданная схема определяет формат XML, используемый `System.Xml.Serialization.XmlSerializer`.  
   
- Xsd.exe позволяет управлять только схемами XML, которые соответствуют языку определения схемы XML (XSD), предложенному консорциумом World Wide Web Consortium (W3C). Дополнительные сведения о предложении определения схемы XML или стандарт XML см. в разделе http://w3.org.  
+ Xsd.exe позволяет управлять только схемами XML, которые соответствуют языку определения схемы XML (XSD), предложенному консорциумом World Wide Web Consortium (W3C). Дополнительные сведения о предложении определения схемы XML или стандарте XML, см. в разделе http://w3.org.  
   
 ## <a name="setting-options-with-an-xml-file"></a>Установка параметров с помощью XML-файла  
  С помощью параметра `/parameters` можно задать один XML-файл, который содержит различные параметры. Задаваемые параметры зависят от способа использования инструмента XSD.exe. Варианты включают в себя создание схем, файлов кода или создание файлов кода, содержащих функции `DataSet`. Например, можно задать элемент `<assembly\>` как имя исполняемого файла (расширение EXE) или файла библиотеки типов (расширение DLL) при создании схемы, но не при создании файла кода. В следующем примере XML показано, как использовать элемент `<generateSchemas\>` с указанным исполняемым файлом:  
@@ -221,11 +221,12 @@ xsd /dataset /language:CS XSDSchemaFile.xsd
 xsd myAssembly.dll    
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Data.DataSet>  
- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
- [Инструменты](../../../docs/framework/tools/index.md)      
- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
- [Общие сведения о LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- [Запрос к типизированным объектам DataSet](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [Встроенный язык запросов LINQ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Data.DataSet>  
+- <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
+- [Инструменты](../../../docs/framework/tools/index.md)      
+- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+- [Общие сведения о LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+- [Запрос к типизированным объектам DataSet](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+- [Встроенный язык запросов LINQ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
