@@ -3,389 +3,389 @@ title: Математические функции
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
 ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/06/2018
-ms.locfileid: "43801389"
+ms.locfileid: "44036601"
 ---
-# <a name="mathematical-functions"></a><span data-ttu-id="9f740-102">Математические функции</span><span class="sxs-lookup"><span data-stu-id="9f740-102">Mathematical Functions</span></span>
+# <a name="mathematical-functions"></a><span data-ttu-id="a3ea2-102">Математические функции</span><span class="sxs-lookup"><span data-stu-id="a3ea2-102">Mathematical Functions</span></span>
 
-<span data-ttu-id="9f740-103">Поставщик данных для SQL Server платформы .NET Framework (SqlClient) предоставляет математические функции, производящие вычисления на входящих значениях, предоставляемых в качестве аргументов, и возвращающие результат в виде числовых значений.</span><span class="sxs-lookup"><span data-stu-id="9f740-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides math functions that perform calculations on input values that are provided as arguments, and return a numeric value result.</span></span> <span data-ttu-id="9f740-104">Эти функции находятся в пространстве имен SqlServer, которое доступно при использовании SqlClient.</span><span class="sxs-lookup"><span data-stu-id="9f740-104">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="9f740-105">Свойство пространства имен поставщика позволяет платформе Entity Framework узнать, какой префикс используется поставщиком для конкретных конструкций, таких как типы или функции. В следующей таблице описаны математические функции SqlClient.</span><span class="sxs-lookup"><span data-stu-id="9f740-105">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.The following table describes the SqlClient math functions.</span></span>  
+<span data-ttu-id="a3ea2-103">Поставщик данных для SQL Server платформы .NET Framework (SqlClient) предоставляет математические функции, производящие вычисления на входящих значениях, предоставляемых в качестве аргументов, и возвращающие результат в виде числовых значений.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-103">The .NET Framework Data Provider for SQL Server (SqlClient) provides math functions that perform calculations on input values that are provided as arguments, and return a numeric value result.</span></span> <span data-ttu-id="a3ea2-104">Эти функции находятся в пространстве имен SqlServer, которое доступно при использовании SqlClient.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-104">These functions are in the SqlServer namespace, which is available when you use SqlClient.</span></span> <span data-ttu-id="a3ea2-105">Свойство пространства имен поставщика позволяет платформе Entity Framework узнать, какой префикс используется поставщиком для конкретных конструкций, таких как типы или функции. В следующей таблице описаны математические функции SqlClient.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-105">A provider's namespace property allows the Entity Framework to discover which prefix is used by this provider for specific constructs, such as types and functions.The following table describes the SqlClient math functions.</span></span>  
   
-## <a name="absexpression"></a><span data-ttu-id="9f740-106">ABS(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-106">ABS(expression)</span></span>
+## <a name="absexpression"></a><span data-ttu-id="a3ea2-106">ABS(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-106">ABS(expression)</span></span>
 
-<span data-ttu-id="9f740-107">Возвращает абсолютное значение.</span><span class="sxs-lookup"><span data-stu-id="9f740-107">Performs the absolute value function.</span></span>
+<span data-ttu-id="a3ea2-107">Возвращает абсолютное значение.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-107">Performs the absolute value function.</span></span>
 
-<span data-ttu-id="9f740-108">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-108">**Arguments**</span></span>
+<span data-ttu-id="a3ea2-108">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-108">**Arguments**</span></span>
 
-<span data-ttu-id="9f740-109">`expression`: значение типа `Int32`, `Int64`, `Double` или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="9f740-109">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+<span data-ttu-id="a3ea2-109">`expression`: значение типа `Int32`, `Int64`, `Double` или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-109">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
 
-<span data-ttu-id="9f740-110">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-110">**Return Value**</span></span>
+<span data-ttu-id="a3ea2-110">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-110">**Return Value**</span></span>
 
-<span data-ttu-id="9f740-111">Абсолютное значение заданного выражения.</span><span class="sxs-lookup"><span data-stu-id="9f740-111">The absolute value of the specified expression.</span></span>
+<span data-ttu-id="a3ea2-111">Абсолютное значение заданного выражения.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-111">The absolute value of the specified expression.</span></span>
 
-<span data-ttu-id="9f740-112">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-112">**Example**</span></span>
+<span data-ttu-id="a3ea2-112">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-112">**Example**</span></span>
 
 `SqlServer.ABS(-2)`
 
-## <a name="acosexpression"></a><span data-ttu-id="9f740-113">ACOS(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-113">ACOS(expression)</span></span>
+## <a name="acosexpression"></a><span data-ttu-id="a3ea2-113">ACOS(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-113">ACOS(expression)</span></span>
 
-<span data-ttu-id="9f740-114">Возвращает значение арккосинуса указанного выражения.</span><span class="sxs-lookup"><span data-stu-id="9f740-114">Returns the arccosine value of the specified expression.</span></span>
+<span data-ttu-id="a3ea2-114">Возвращает значение арккосинуса указанного выражения.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-114">Returns the arccosine value of the specified expression.</span></span>
 
-<span data-ttu-id="9f740-115">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-115">**Arguments**</span></span>
+<span data-ttu-id="a3ea2-115">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-115">**Arguments**</span></span>
 
-<span data-ttu-id="9f740-116">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-116">`expression`: A `Double`.</span></span>
+<span data-ttu-id="a3ea2-116">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-116">`expression`: A `Double`.</span></span>
 
-<span data-ttu-id="9f740-117">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-117">**Return Value**</span></span>
+<span data-ttu-id="a3ea2-117">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-117">**Return Value**</span></span>
 
-<span data-ttu-id="9f740-118">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-118">A `Double`.</span></span>
+<span data-ttu-id="a3ea2-118">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-118">A `Double`.</span></span>
 
-<span data-ttu-id="9f740-119">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-119">**Example**</span></span>
+<span data-ttu-id="a3ea2-119">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-119">**Example**</span></span>
 
 `SqlServer.ACOS(.9)`
 
-## <a name="asinexpression"></a><span data-ttu-id="9f740-120">ASIN(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-120">ASIN(expression)</span></span>
+## <a name="asinexpression"></a><span data-ttu-id="a3ea2-120">ASIN(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-120">ASIN(expression)</span></span>
 
-<span data-ttu-id="9f740-121">Возвращает значение арксинуса указанного выражения.</span><span class="sxs-lookup"><span data-stu-id="9f740-121">Returns the arcsine value of the specified expression.</span></span>
+<span data-ttu-id="a3ea2-121">Возвращает значение арксинуса указанного выражения.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-121">Returns the arcsine value of the specified expression.</span></span>
 
-<span data-ttu-id="9f740-122">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-122">**Arguments**</span></span>
+<span data-ttu-id="a3ea2-122">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-122">**Arguments**</span></span>
 
-<span data-ttu-id="9f740-123">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-123">`expression`: A `Double`.</span></span>
+<span data-ttu-id="a3ea2-123">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-123">`expression`: A `Double`.</span></span>
 
-<span data-ttu-id="9f740-124">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-124">**Return Value**</span></span>
+<span data-ttu-id="a3ea2-124">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-124">**Return Value**</span></span>
 
-<span data-ttu-id="9f740-125">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-125">A `Double`.</span></span>
+<span data-ttu-id="a3ea2-125">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-125">A `Double`.</span></span>
 
-<span data-ttu-id="9f740-126">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-126">**Example**</span></span>
+<span data-ttu-id="a3ea2-126">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-126">**Example**</span></span>
 
 `SqlServer.ASIN(.9)`
 
-## <a name="atanexpression"></a><span data-ttu-id="9f740-127">ATAN(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-127">ATAN(expression)</span></span>
+## <a name="atanexpression"></a><span data-ttu-id="a3ea2-127">ATAN(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-127">ATAN(expression)</span></span>
 
-<span data-ttu-id="9f740-128">Возвращает значение арктангенса указанного числового выражения.</span><span class="sxs-lookup"><span data-stu-id="9f740-128">Returns the arctangent value of the specified numeric expression.</span></span>
+<span data-ttu-id="a3ea2-128">Возвращает значение арктангенса указанного числового выражения.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-128">Returns the arctangent value of the specified numeric expression.</span></span>
 
-<span data-ttu-id="9f740-129">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-129">**Arguments**</span></span>
+<span data-ttu-id="a3ea2-129">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-129">**Arguments**</span></span>
 
-<span data-ttu-id="9f740-130">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-130">`expression`: A `Double`.</span></span>
+<span data-ttu-id="a3ea2-130">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-130">`expression`: A `Double`.</span></span>
 
-<span data-ttu-id="9f740-131">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-131">**Return Value**</span></span>
+<span data-ttu-id="a3ea2-131">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-131">**Return Value**</span></span>
 
-<span data-ttu-id="9f740-132">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-132">A `Double`.</span></span>
+<span data-ttu-id="a3ea2-132">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-132">A `Double`.</span></span>
 
-<span data-ttu-id="9f740-133">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-133">**Example**</span></span>
+<span data-ttu-id="a3ea2-133">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-133">**Example**</span></span>
 
 `SqlServer.ATAN(9)`
 
-## <a name="atn2expression-expression"></a><span data-ttu-id="9f740-134">ATN2(Expression, Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-134">ATN2(expression, expression)</span></span>
+## <a name="atn2expression-expression"></a><span data-ttu-id="a3ea2-134">ATN2(Expression, Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-134">ATN2(expression, expression)</span></span>
 
-<span data-ttu-id="9f740-135">Возвращает угол в радианах, тангенс которого находится в диапазоне между двумя заданными числовыми выражениями.</span><span class="sxs-lookup"><span data-stu-id="9f740-135">Returns the angle, in radians, whose tangent is between the two specified numeric expressions.</span></span>
+<span data-ttu-id="a3ea2-135">Возвращает угол в радианах, тангенс которого находится в диапазоне между двумя заданными числовыми выражениями.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-135">Returns the angle, in radians, whose tangent is between the two specified numeric expressions.</span></span>
 
-<span data-ttu-id="9f740-136">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-136">**Arguments**</span></span>
+<span data-ttu-id="a3ea2-136">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-136">**Arguments**</span></span>
 
-<span data-ttu-id="9f740-137">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-137">`expression`: A `Double`.</span></span>
+<span data-ttu-id="a3ea2-137">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-137">`expression`: A `Double`.</span></span>
 
-<span data-ttu-id="9f740-138">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-138">**Return Value**</span></span>
+<span data-ttu-id="a3ea2-138">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-138">**Return Value**</span></span>
 
-<span data-ttu-id="9f740-139">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-139">A `Double`.</span></span>
+<span data-ttu-id="a3ea2-139">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-139">A `Double`.</span></span>
 
-<span data-ttu-id="9f740-140">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-140">**Example**</span></span>
+<span data-ttu-id="a3ea2-140">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-140">**Example**</span></span>
 
 `SqlServer.ATN2(9, 8)`
  
-## <a name="ceilingexpression"></a><span data-ttu-id="9f740-141">CEILING(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-141">CEILING(expression)</span></span>
+## <a name="ceilingexpression"></a><span data-ttu-id="a3ea2-141">CEILING(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-141">CEILING(expression)</span></span>
 
-<span data-ttu-id="9f740-142">Преобразует указанное выражение в наименьшее целое число, большее или равное данному выражению.</span><span class="sxs-lookup"><span data-stu-id="9f740-142">Converts the specified expression to the smallest integer that is greater than or equal to it.</span></span>
+<span data-ttu-id="a3ea2-142">Преобразует указанное выражение в наименьшее целое число, большее или равное данному выражению.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-142">Converts the specified expression to the smallest integer that is greater than or equal to it.</span></span>
 
-<span data-ttu-id="9f740-143">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-143">**Arguments**</span></span>
+<span data-ttu-id="a3ea2-143">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-143">**Arguments**</span></span>
 
-<span data-ttu-id="9f740-144">`expression`: значение типа `Int32`, `Int64`, `Double` или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="9f740-144">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+<span data-ttu-id="a3ea2-144">`expression`: значение типа `Int32`, `Int64`, `Double` или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-144">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
 
-<span data-ttu-id="9f740-145">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-145">**Return Value**</span></span>
+<span data-ttu-id="a3ea2-145">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-145">**Return Value**</span></span>
 
-<span data-ttu-id="9f740-146">`Int32`, `Int64`, `Double`, Или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="9f740-146">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
+<span data-ttu-id="a3ea2-146">`Int32`, `Int64`, `Double`, Или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-146">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>
 
-<span data-ttu-id="9f740-147">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-147">**Example**</span></span> 
+<span data-ttu-id="a3ea2-147">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-147">**Example**</span></span> 
 
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_ceiling)]
 [!code-sql[DP EntityServices Concepts#SQLSERVER_CEILING](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_ceiling)]
 
-## <a name="cosexpression"></a><span data-ttu-id="9f740-148">COS(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-148">COS(expression)</span></span>
+## <a name="cosexpression"></a><span data-ttu-id="a3ea2-148">COS(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-148">COS(expression)</span></span>
 
-<span data-ttu-id="9f740-149">Вычисляет тригонометрический косинус указанного угла в радианах.</span><span class="sxs-lookup"><span data-stu-id="9f740-149">Calculates the trigonometric cosine of the specified angle in radians.</span></span> 
+<span data-ttu-id="a3ea2-149">Вычисляет тригонометрический косинус указанного угла в радианах.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-149">Calculates the trigonometric cosine of the specified angle in radians.</span></span> 
 
-<span data-ttu-id="9f740-150">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-150">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-150">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-150">**Arguments**</span></span> 
 
-<span data-ttu-id="9f740-151">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-151">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-151">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-151">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-152">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-152">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-152">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-152">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-153">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-153">A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-153">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-153">A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-154">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-154">**Example**</span></span> 
+<span data-ttu-id="a3ea2-154">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-154">**Example**</span></span> 
 
 `SqlServer.COS(45)`
 
-## <a name="cotexpression"></a><span data-ttu-id="9f740-155">COT(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-155">COT(expression)</span></span>
+## <a name="cotexpression"></a><span data-ttu-id="a3ea2-155">COT(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-155">COT(expression)</span></span>
 
-<span data-ttu-id="9f740-156">Вычисляет тригонометрический котангенс указанного угла в радианах.</span><span class="sxs-lookup"><span data-stu-id="9f740-156">Calculates the trigonometric cotangent of the specified angle in radians.</span></span> 
+<span data-ttu-id="a3ea2-156">Вычисляет тригонометрический котангенс указанного угла в радианах.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-156">Calculates the trigonometric cotangent of the specified angle in radians.</span></span> 
 
-<span data-ttu-id="9f740-157">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-157">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-157">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-157">**Arguments**</span></span> 
 
-<span data-ttu-id="9f740-158">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-158">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-158">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-158">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-159">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-159">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-159">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-159">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-160">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-160">A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-160">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-160">A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-161">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-161">**Example**</span></span> 
+<span data-ttu-id="a3ea2-161">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-161">**Example**</span></span> 
 
 `SqlServer.COT(60)`
   
-## <a name="degreesradians"></a><span data-ttu-id="9f740-162">DEGREES(RADIANS)</span><span class="sxs-lookup"><span data-stu-id="9f740-162">DEGREES(radians)</span></span>
+## <a name="degreesradians"></a><span data-ttu-id="a3ea2-162">DEGREES(RADIANS)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-162">DEGREES(radians)</span></span>
 
-<span data-ttu-id="9f740-163">Возвращает соответствующее значение угла в градусах.</span><span class="sxs-lookup"><span data-stu-id="9f740-163">Returns the corresponding angle in degrees.</span></span> 
+<span data-ttu-id="a3ea2-163">Возвращает соответствующее значение угла в градусах.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-163">Returns the corresponding angle in degrees.</span></span> 
 
-<span data-ttu-id="9f740-164">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-164">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-164">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-164">**Arguments**</span></span> 
 
-<span data-ttu-id="9f740-165">`expression`: значение типа `Int32`, `Int64`, `Double` или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="9f740-165">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+<span data-ttu-id="a3ea2-165">`expression`: значение типа `Int32`, `Int64`, `Double` или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-165">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
 
-<span data-ttu-id="9f740-166">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-166">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-166">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-166">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-167">`Int32`, `Int64`, `Double`, Или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="9f740-167">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+<span data-ttu-id="a3ea2-167">`Int32`, `Int64`, `Double`, Или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-167">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
 
-<span data-ttu-id="9f740-168">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-168">**Example**</span></span> 
+<span data-ttu-id="a3ea2-168">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-168">**Example**</span></span> 
 
 `SqlServer.DEGREES(3.1)`
 
-## <a name="expexpression"></a><span data-ttu-id="9f740-169">EXP(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-169">EXP(expression)</span></span>
+## <a name="expexpression"></a><span data-ttu-id="a3ea2-169">EXP(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-169">EXP(expression)</span></span>
 
-<span data-ttu-id="9f740-170">Вычисляет экспоненту заданного числового выражения.</span><span class="sxs-lookup"><span data-stu-id="9f740-170">Calculates the exponential value of a specified numeric expression.</span></span> 
+<span data-ttu-id="a3ea2-170">Вычисляет экспоненту заданного числового выражения.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-170">Calculates the exponential value of a specified numeric expression.</span></span> 
 
-<span data-ttu-id="9f740-171">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-171">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-171">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-171">**Arguments**</span></span> 
 
-<span data-ttu-id="9f740-172">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-172">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-172">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-172">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-173">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-173">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-173">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-173">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-174">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-174">A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-174">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-174">A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-175">**Пример** `SqlServer.EXP(1)`</span><span class="sxs-lookup"><span data-stu-id="9f740-175">**Example** `SqlServer.EXP(1)`</span></span>
+<span data-ttu-id="a3ea2-175">**Пример** `SqlServer.EXP(1)`</span><span class="sxs-lookup"><span data-stu-id="a3ea2-175">**Example** `SqlServer.EXP(1)`</span></span>
 
-## <a name="floorexpression"></a><span data-ttu-id="9f740-176">FLOOR(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-176">FLOOR(expression)</span></span>
+## <a name="floorexpression"></a><span data-ttu-id="a3ea2-176">FLOOR(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-176">FLOOR(expression)</span></span>
 
-<span data-ttu-id="9f740-177">Преобразует указанное выражение в наибольшее целое число, меньшее или равное данному выражению.</span><span class="sxs-lookup"><span data-stu-id="9f740-177">Converts the specified expression to the largest integer less than or equal to it.</span></span> 
+<span data-ttu-id="a3ea2-177">Преобразует указанное выражение в наибольшее целое число, меньшее или равное данному выражению.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-177">Converts the specified expression to the largest integer less than or equal to it.</span></span> 
 
-<span data-ttu-id="9f740-178">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-178">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-178">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-178">**Arguments**</span></span> 
 
-<span data-ttu-id="9f740-179">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-179">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-179">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-179">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-180">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-180">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-180">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-180">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-181">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-181">A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-181">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-181">A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-182">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-182">**Example**</span></span> 
+<span data-ttu-id="a3ea2-182">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-182">**Example**</span></span> 
 
 [!code-csharp[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#sqlserver_floor)] 
 [!code-sql[DP EntityServices Concepts#SQLSERVER_FLOOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#sqlserver_floor)]
 
-## <a name="logexpression"></a><span data-ttu-id="9f740-183">LOG(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-183">LOG(expression)</span></span>
+## <a name="logexpression"></a><span data-ttu-id="a3ea2-183">LOG(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-183">LOG(expression)</span></span>
 
-<span data-ttu-id="9f740-184">Вычисляет натуральный логарифм заданного выражения типа `float`.</span><span class="sxs-lookup"><span data-stu-id="9f740-184">Calculates the natural logarithm of the specified `float` expression.</span></span> 
+<span data-ttu-id="a3ea2-184">Вычисляет натуральный логарифм заданного выражения типа `float`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-184">Calculates the natural logarithm of the specified `float` expression.</span></span> 
 
-<span data-ttu-id="9f740-185">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-185">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-185">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-185">**Arguments**</span></span> 
 
-<span data-ttu-id="9f740-186">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-186">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-186">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-186">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-187">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-187">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-187">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-187">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-188">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-188">A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-188">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-188">A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-189">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-189">**Example**</span></span> 
+<span data-ttu-id="a3ea2-189">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-189">**Example**</span></span> 
 
 `SqlServer.LOG(100)`
 
-## <a name="log10expression"></a><span data-ttu-id="9f740-190">LOG10(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-190">LOG10(expression)</span></span>
+## <a name="log10expression"></a><span data-ttu-id="a3ea2-190">LOG10(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-190">LOG10(expression)</span></span>
 
-<span data-ttu-id="9f740-191">Возвращает десятичный логарифм указанного выражения типа `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-191">Returns the base-10 logarithm of the specified `Double` expression.</span></span> 
+<span data-ttu-id="a3ea2-191">Возвращает десятичный логарифм указанного выражения типа `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-191">Returns the base-10 logarithm of the specified `Double` expression.</span></span> 
 
-<span data-ttu-id="9f740-192">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-192">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-192">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-192">**Arguments**</span></span> 
 
-<span data-ttu-id="9f740-193">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-193">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-193">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-193">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-194">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-194">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-194">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-194">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-195">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-195">A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-195">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-195">A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-196">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-196">**Example**</span></span> 
+<span data-ttu-id="a3ea2-196">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-196">**Example**</span></span> 
 
 `SqlServer.LOG10(100)`
 
-## <a name="pi"></a><span data-ttu-id="9f740-197">ПИ()</span><span class="sxs-lookup"><span data-stu-id="9f740-197">PI()</span></span>
+## <a name="pi"></a><span data-ttu-id="a3ea2-197">ПИ()</span><span class="sxs-lookup"><span data-stu-id="a3ea2-197">PI()</span></span>
 
-<span data-ttu-id="9f740-198">Возвращает константу «пи» в виде значения типа `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-198">Returns the constant value of pi as a `Double`.</span></span> 
+<span data-ttu-id="a3ea2-198">Возвращает константу «пи» в виде значения типа `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-198">Returns the constant value of pi as a `Double`.</span></span> 
 
-<span data-ttu-id="9f740-199">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-199">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-199">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-199">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-200">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-200">A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-200">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-200">A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-201">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-201">**Example**</span></span> 
+<span data-ttu-id="a3ea2-201">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-201">**Example**</span></span> 
 
 `SqlServer.PI()`
 
-## <a name="powernumericexpression-powerexpression"></a><span data-ttu-id="9f740-202">POWER (numeric_expression, power_expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-202">POWER(numeric_expression, power_expression)</span></span>
+## <a name="powernumericexpression-powerexpression"></a><span data-ttu-id="a3ea2-202">POWER (numeric_expression, power_expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-202">POWER(numeric_expression, power_expression)</span></span>
 
-<span data-ttu-id="9f740-203">Вычисляет значение указанного выражения, возведенного в заданную степень.</span><span class="sxs-lookup"><span data-stu-id="9f740-203">Calculates the value of a specified expression to a specified power.</span></span>
+<span data-ttu-id="a3ea2-203">Вычисляет значение указанного выражения, возведенного в заданную степень.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-203">Calculates the value of a specified expression to a specified power.</span></span>
 
-<span data-ttu-id="9f740-204">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-204">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-204">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-204">**Arguments**</span></span> 
 
 |  |  |
 |--|--|
-|`numeric_expression`| <span data-ttu-id="9f740-205">`Int32`, `Int64`, `Double`, Или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="9f740-205">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>|
-|`power_expression`| <span data-ttu-id="9f740-206">Объект `Double` , представляющее степень, в которую возводится `numeric_expression`.</span><span class="sxs-lookup"><span data-stu-id="9f740-206">A `Double` that represents the power to which to raise the `numeric_expression`.</span></span>| 
+|`numeric_expression`| <span data-ttu-id="a3ea2-205">`Int32`, `Int64`, `Double`, Или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-205">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span>|
+|`power_expression`| <span data-ttu-id="a3ea2-206">Объект `Double` , представляющее степень, в которую возводится `numeric_expression`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-206">A `Double` that represents the power to which to raise the `numeric_expression`.</span></span>| 
 
-<span data-ttu-id="9f740-207">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-207">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-207">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-207">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-208">Значение заданного выражения `numeric_expression` в указанной степени `power_expression`.</span><span class="sxs-lookup"><span data-stu-id="9f740-208">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span> 
+<span data-ttu-id="a3ea2-208">Значение заданного выражения `numeric_expression` в указанной степени `power_expression`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-208">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span> 
 
-<span data-ttu-id="9f740-209">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-209">**Example**</span></span> 
+<span data-ttu-id="a3ea2-209">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-209">**Example**</span></span> 
 
 `SqlServer.POWER(2,7)`
 
-## <a name="radiansexpression"></a><span data-ttu-id="9f740-210">RADIANS(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-210">RADIANS(expression)</span></span>
+## <a name="radiansexpression"></a><span data-ttu-id="a3ea2-210">RADIANS(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-210">RADIANS(expression)</span></span>
 
-<span data-ttu-id="9f740-211">Преобразовывает градусы в радианы.</span><span class="sxs-lookup"><span data-stu-id="9f740-211">Converts degrees to radians.</span></span> 
+<span data-ttu-id="a3ea2-211">Преобразовывает градусы в радианы.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-211">Converts degrees to radians.</span></span> 
 
-<span data-ttu-id="9f740-212">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-212">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-212">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-212">**Arguments**</span></span> 
 
-<span data-ttu-id="9f740-213">`expression`: значение типа `Int32`, `Int64`, `Double` или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="9f740-213">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+<span data-ttu-id="a3ea2-213">`expression`: значение типа `Int32`, `Int64`, `Double` или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-213">`expression`: An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
 
-<span data-ttu-id="9f740-214">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-214">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-214">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-214">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-215">`Int32`, `Int64`, `Double`, Или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="9f740-215">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+<span data-ttu-id="a3ea2-215">`Int32`, `Int64`, `Double`, Или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-215">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
 
-<span data-ttu-id="9f740-216">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-216">**Example**</span></span> 
+<span data-ttu-id="a3ea2-216">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-216">**Example**</span></span> 
 
 `SqlServer.RADIANS(360.0)`
 
-## <a name="randseed"></a><span data-ttu-id="9f740-217">RAND([seed])</span><span class="sxs-lookup"><span data-stu-id="9f740-217">RAND([seed])</span></span>
+## <a name="randseed"></a><span data-ttu-id="a3ea2-217">RAND([seed])</span><span class="sxs-lookup"><span data-stu-id="a3ea2-217">RAND([seed])</span></span>
 
-<span data-ttu-id="9f740-218">Возвращает случайное значение от 0 до 1.</span><span class="sxs-lookup"><span data-stu-id="9f740-218">Returns a random value from 0 through 1.</span></span> 
+<span data-ttu-id="a3ea2-218">Возвращает случайное значение от 0 до 1.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-218">Returns a random value from 0 through 1.</span></span> 
 
-<span data-ttu-id="9f740-219">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-219">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-219">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-219">**Arguments**</span></span> 
 
-<span data-ttu-id="9f740-220">Начальное значение, что `Int32`.</span><span class="sxs-lookup"><span data-stu-id="9f740-220">The seed value as an `Int32`.</span></span> <span data-ttu-id="9f740-221">Если начальное значение не задано, то компонент SQL Server Database Engine присваивает случайно выбранное начальное значение.</span><span class="sxs-lookup"><span data-stu-id="9f740-221">If the seed is not specified, the SQL Server Database Engine assigns a seed value at random.</span></span> <span data-ttu-id="9f740-222">Для указанного начального значения возвращаемый результат всегда будет один и тот же.</span><span class="sxs-lookup"><span data-stu-id="9f740-222">For a specified seed value, the result returned is always the same.</span></span>
+<span data-ttu-id="a3ea2-220">Начальное значение, что `Int32`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-220">The seed value as an `Int32`.</span></span> <span data-ttu-id="a3ea2-221">Если начальное значение не задано, то компонент SQL Server Database Engine присваивает случайно выбранное начальное значение.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-221">If the seed is not specified, the SQL Server Database Engine assigns a seed value at random.</span></span> <span data-ttu-id="a3ea2-222">Для указанного начального значения возвращаемый результат всегда будет один и тот же.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-222">For a specified seed value, the result returned is always the same.</span></span>
 
-<span data-ttu-id="9f740-223">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-223">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-223">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-223">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-224">Случайное значение типа `Double` от 0 до 1.</span><span class="sxs-lookup"><span data-stu-id="9f740-224">A random `Double` value from 0 through 1.</span></span> 
+<span data-ttu-id="a3ea2-224">Случайное значение типа `Double` от 0 до 1.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-224">A random `Double` value from 0 through 1.</span></span> 
 
-<span data-ttu-id="9f740-225">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-225">**Example**</span></span> 
+<span data-ttu-id="a3ea2-225">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-225">**Example**</span></span> 
 
 `SqlServer.RAND()`
   
-## <a name="roundnumericexpression-lengthfunction"></a><span data-ttu-id="9f740-226">Round(Numeric_Expression, length[,Function])</span><span class="sxs-lookup"><span data-stu-id="9f740-226">ROUND(numeric_expression, length[,function])</span></span>
+## <a name="roundnumericexpression-lengthfunction"></a><span data-ttu-id="a3ea2-226">Round(Numeric_Expression, length[,Function])</span><span class="sxs-lookup"><span data-stu-id="a3ea2-226">ROUND(numeric_expression, length[,function])</span></span>
 
-<span data-ttu-id="9f740-227">Возвращает числовое выражение, округленное до указанной длины или точности.</span><span class="sxs-lookup"><span data-stu-id="9f740-227">Returns a numeric expression, rounded to the specified length or precision.</span></span> 
+<span data-ttu-id="a3ea2-227">Возвращает числовое выражение, округленное до указанной длины или точности.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-227">Returns a numeric expression, rounded to the specified length or precision.</span></span> 
 
-<span data-ttu-id="9f740-228">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-228">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-228">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-228">**Arguments**</span></span> 
 
 |  |  |
 |--|--|
-|`numeric_expression`| <span data-ttu-id="9f740-229">`Int32`, `Int64`, `Double`, Или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="9f740-229">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
-|`length`| <span data-ttu-id="9f740-230">Значение типа `Int32`, указывающее точность, до которой должно быть округлено значение аргумента `numeric_expression`.</span><span class="sxs-lookup"><span data-stu-id="9f740-230">An `Int32` that represents the precision to which `numeric_expression` is to be rounded.</span></span> <span data-ttu-id="9f740-231">Если аргумент `length` является положительным числом, значение `numeric_expression` округляется до числа десятичных разрядов, указанных аргументом `length`.</span><span class="sxs-lookup"><span data-stu-id="9f740-231">When `length` is a positive number, `numeric_expression` is rounded to the number of decimal positions specified by `length`.</span></span> <span data-ttu-id="9f740-232">Если аргумент `length` является отрицательным числом, значение `numeric_expression` округляется слева от десятичной запятой, как указано аргументом `length`.</span><span class="sxs-lookup"><span data-stu-id="9f740-232">When `length` is a negative number, `numeric_expression` is rounded on the left side of the decimal point, as specified by `length`.</span></span>|
-|`function` | <span data-ttu-id="9f740-233">Необязательный.</span><span class="sxs-lookup"><span data-stu-id="9f740-233">Optional.</span></span> <span data-ttu-id="9f740-234">`Int32` , Представляющий тип выполняемой операции.</span><span class="sxs-lookup"><span data-stu-id="9f740-234">An `Int32` that represents the type of operation to perform.</span></span> <span data-ttu-id="9f740-235">Если функция указан или имеет значение 0 (по умолчанию), `numeric_expression` округляется.</span><span class="sxs-lookup"><span data-stu-id="9f740-235">When function is omitted or has a value of 0 (default), `numeric_expression` is rounded.</span></span> <span data-ttu-id="9f740-236">Если значение, отличное от указано значение 0, `numeric_expression` усекается.</span><span class="sxs-lookup"><span data-stu-id="9f740-236">When a value other than 0 is specified, `numeric_expression` is truncated.</span></span> |
+|`numeric_expression`| <span data-ttu-id="a3ea2-229">`Int32`, `Int64`, `Double`, Или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-229">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+|`length`| <span data-ttu-id="a3ea2-230">Значение типа `Int32`, указывающее точность, до которой должно быть округлено значение аргумента `numeric_expression`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-230">An `Int32` that represents the precision to which `numeric_expression` is to be rounded.</span></span> <span data-ttu-id="a3ea2-231">Если аргумент `length` является положительным числом, значение `numeric_expression` округляется до числа десятичных разрядов, указанных аргументом `length`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-231">When `length` is a positive number, `numeric_expression` is rounded to the number of decimal positions specified by `length`.</span></span> <span data-ttu-id="a3ea2-232">Если аргумент `length` является отрицательным числом, значение `numeric_expression` округляется слева от десятичной запятой, как указано аргументом `length`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-232">When `length` is a negative number, `numeric_expression` is rounded on the left side of the decimal point, as specified by `length`.</span></span>|
+|`function` | <span data-ttu-id="a3ea2-233">Необязательный.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-233">Optional.</span></span> <span data-ttu-id="a3ea2-234">`Int32` , Представляющий тип выполняемой операции.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-234">An `Int32` that represents the type of operation to perform.</span></span> <span data-ttu-id="a3ea2-235">Если функция указан или имеет значение 0 (по умолчанию), `numeric_expression` округляется.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-235">When function is omitted or has a value of 0 (default), `numeric_expression` is rounded.</span></span> <span data-ttu-id="a3ea2-236">Если значение, отличное от указано значение 0, `numeric_expression` усекается.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-236">When a value other than 0 is specified, `numeric_expression` is truncated.</span></span> |
 
-<span data-ttu-id="9f740-237">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-237">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-237">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-237">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-238">Значение заданного выражения `numeric_expression` в указанной степени `power_expression`.</span><span class="sxs-lookup"><span data-stu-id="9f740-238">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span>
+<span data-ttu-id="a3ea2-238">Значение заданного выражения `numeric_expression` в указанной степени `power_expression`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-238">The value of the specified `numeric_expression` to the specified `power_expression`.</span></span>
 
-<span data-ttu-id="9f740-239">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-239">**Example**</span></span> 
+<span data-ttu-id="a3ea2-239">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-239">**Example**</span></span> 
 
 `SqlServer.ROUND(748.58, -3)`
 
-## <a name="signexpression"></a><span data-ttu-id="9f740-240">Sign(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-240">SIGN(expression)</span></span> 
+## <a name="signexpression"></a><span data-ttu-id="a3ea2-240">Sign(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-240">SIGN(expression)</span></span> 
 
-<span data-ttu-id="9f740-241">Возвращает положительный знак (+1), ноль (0) или отрицательный знак (-1) указанного выражения.</span><span class="sxs-lookup"><span data-stu-id="9f740-241">Returns the positive (+1), zero (0), or negative (-1) sign of the specified expression.</span></span> 
+<span data-ttu-id="a3ea2-241">Возвращает положительный знак (+1), ноль (0) или отрицательный знак (-1) указанного выражения.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-241">Returns the positive (+1), zero (0), or negative (-1) sign of the specified expression.</span></span> 
 
-<span data-ttu-id="9f740-242">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-242">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-242">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-242">**Arguments**</span></span> 
 
-<span data-ttu-id="9f740-243">`expression`: `Int32`, `Int64`, `Double` или `Decimal`</span><span class="sxs-lookup"><span data-stu-id="9f740-243">`expression`: `Int32`, `Int64`, `Double`, or `Decimal`</span></span> 
+<span data-ttu-id="a3ea2-243">`expression`: `Int32`, `Int64`, `Double` или `Decimal`</span><span class="sxs-lookup"><span data-stu-id="a3ea2-243">`expression`: `Int32`, `Int64`, `Double`, or `Decimal`</span></span> 
 
-<span data-ttu-id="9f740-244">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-244">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-244">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-244">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-245">`Int32`, `Int64`, `Double`, Или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="9f740-245">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
+<span data-ttu-id="a3ea2-245">`Int32`, `Int64`, `Double`, Или `Decimal`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-245">An `Int32`, `Int64`, `Double`, or `Decimal`.</span></span> 
 
-<span data-ttu-id="9f740-246">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-246">**Example**</span></span> 
+<span data-ttu-id="a3ea2-246">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-246">**Example**</span></span> 
 
 `SqlServer.SIGN(-10)`
 
-## <a name="sinexpression"></a><span data-ttu-id="9f740-247">SIN(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-247">SIN(expression)</span></span>
+## <a name="sinexpression"></a><span data-ttu-id="a3ea2-247">SIN(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-247">SIN(expression)</span></span>
 
-<span data-ttu-id="9f740-248">Вычисляет тригонометрический синус заданного угла в радианах и возвращает выражение типа `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-248">Calculates the trigonometric sine of the specified angle in radians, and returns a `Double` expression.</span></span> 
+<span data-ttu-id="a3ea2-248">Вычисляет тригонометрический синус заданного угла в радианах и возвращает выражение типа `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-248">Calculates the trigonometric sine of the specified angle in radians, and returns a `Double` expression.</span></span> 
 
-<span data-ttu-id="9f740-249">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-249">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-249">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-249">**Arguments**</span></span> 
 
-<span data-ttu-id="9f740-250">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-250">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-250">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-250">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-251">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-251">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-251">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-251">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-252">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-252">A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-252">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-252">A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-253">**Пример** `SqlServer.SIN(20)`</span><span class="sxs-lookup"><span data-stu-id="9f740-253">**Example** `SqlServer.SIN(20)`</span></span>
+<span data-ttu-id="a3ea2-253">**Пример** `SqlServer.SIN(20)`</span><span class="sxs-lookup"><span data-stu-id="a3ea2-253">**Example** `SqlServer.SIN(20)`</span></span>
 
-## <a name="sqrtexpression"></a><span data-ttu-id="9f740-254">SQRT(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-254">SQRT(expression)</span></span>
+## <a name="sqrtexpression"></a><span data-ttu-id="a3ea2-254">SQRT(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-254">SQRT(expression)</span></span>
 
-<span data-ttu-id="9f740-255">Возвращает квадратный корень указанного выражения.</span><span class="sxs-lookup"><span data-stu-id="9f740-255">Returns the square root of the specified expression.</span></span> 
+<span data-ttu-id="a3ea2-255">Возвращает квадратный корень указанного выражения.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-255">Returns the square root of the specified expression.</span></span> 
 
-<span data-ttu-id="9f740-256">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-256">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-256">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-256">**Arguments**</span></span> 
 
-<span data-ttu-id="9f740-257">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-257">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-257">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-257">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-258">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-258">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-258">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-258">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-259">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-259">A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-259">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-259">A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-260">**Пример** `SqlServer.SQRT(3600)`</span><span class="sxs-lookup"><span data-stu-id="9f740-260">**Example** `SqlServer.SQRT(3600)`</span></span>
+<span data-ttu-id="a3ea2-260">**Пример** `SqlServer.SQRT(3600)`</span><span class="sxs-lookup"><span data-stu-id="a3ea2-260">**Example** `SqlServer.SQRT(3600)`</span></span>
 
-## <a name="squareexpression"></a><span data-ttu-id="9f740-261">Square(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-261">SQUARE(expression)</span></span>
+## <a name="squareexpression"></a><span data-ttu-id="a3ea2-261">Square(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-261">SQUARE(expression)</span></span>
 
-<span data-ttu-id="9f740-262">Возвращает значение указанного выражения в квадрате.</span><span class="sxs-lookup"><span data-stu-id="9f740-262">Returns the square of the specified expression.</span></span> 
+<span data-ttu-id="a3ea2-262">Возвращает значение указанного выражения в квадрате.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-262">Returns the square of the specified expression.</span></span> 
 
-<span data-ttu-id="9f740-263">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-263">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-263">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-263">**Arguments**</span></span> 
 
-<span data-ttu-id="9f740-264">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-264">`expression`: A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-264">`expression`: Тип `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-264">`expression`: A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-265">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-265">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-265">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-265">**Return Value**</span></span> 
 
-<span data-ttu-id="9f740-266">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="9f740-266">A `Double`.</span></span> 
+<span data-ttu-id="a3ea2-266">Объект `Double`.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-266">A `Double`.</span></span> 
 
-<span data-ttu-id="9f740-267">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-267">**Example**</span></span> 
+<span data-ttu-id="a3ea2-267">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-267">**Example**</span></span> 
 
 `SqlServer.SQUARE(25)`
 
-## <a name="tanexpression"></a><span data-ttu-id="9f740-268">TAN(Expression)</span><span class="sxs-lookup"><span data-stu-id="9f740-268">TAN(expression)</span></span>
+## <a name="tanexpression"></a><span data-ttu-id="a3ea2-268">TAN(Expression)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-268">TAN(expression)</span></span>
 
-<span data-ttu-id="9f740-269">Вычисляет тангенс заданного выражения.</span><span class="sxs-lookup"><span data-stu-id="9f740-269">Calculates the tangent of a specified expression.</span></span>
+<span data-ttu-id="a3ea2-269">Вычисляет тангенс заданного выражения.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-269">Calculates the tangent of a specified expression.</span></span>
 
-<span data-ttu-id="9f740-270">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="9f740-270">**Arguments**</span></span> 
+<span data-ttu-id="a3ea2-270">**Аргументы**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-270">**Arguments**</span></span> 
 
-<span data-ttu-id="9f740-271">`expression`: `Double`</span><span class="sxs-lookup"><span data-stu-id="9f740-271">`expression`: `Double`</span></span> 
+<span data-ttu-id="a3ea2-271">`expression`: `Double`</span><span class="sxs-lookup"><span data-stu-id="a3ea2-271">`expression`: `Double`</span></span> 
 
-<span data-ttu-id="9f740-272">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="9f740-272">**Return Value**</span></span> 
+<span data-ttu-id="a3ea2-272">**Возвращаемое значение**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-272">**Return Value**</span></span> 
 
 `Double` 
 
-<span data-ttu-id="9f740-273">**Пример**</span><span class="sxs-lookup"><span data-stu-id="9f740-273">**Example**</span></span> 
+<span data-ttu-id="a3ea2-273">**Пример**</span><span class="sxs-lookup"><span data-stu-id="a3ea2-273">**Example**</span></span> 
 
 `SqlServer.TAN(45.0)`
   
-## <a name="see-also"></a><span data-ttu-id="9f740-274">См. также</span><span class="sxs-lookup"><span data-stu-id="9f740-274">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a3ea2-274">См. также</span><span class="sxs-lookup"><span data-stu-id="a3ea2-274">See also</span></span>
 
-<span data-ttu-id="9f740-275">Дополнительные сведения о математических функциях, поддерживаемых SqlClient, см. в документации к версии SQL Server, указанной в манифесте поставщика SqlClient.</span><span class="sxs-lookup"><span data-stu-id="9f740-275">For more information about the mathematical functions that SqlClient supports, see the documentation for the SQL Server version that you specified in the SqlClient provider manifest:</span></span>  
+<span data-ttu-id="a3ea2-275">Дополнительные сведения о математических функциях, поддерживаемых SqlClient, см. в документации к версии SQL Server, указанной в манифесте поставщика SqlClient.</span><span class="sxs-lookup"><span data-stu-id="a3ea2-275">For more information about the mathematical functions that SqlClient supports, see the documentation for the SQL Server version that you specified in the SqlClient provider manifest:</span></span>  
   
-<span data-ttu-id="9f740-276">**SQL Server 2005:** [математические функции (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))</span><span class="sxs-lookup"><span data-stu-id="9f740-276">**SQL Server 2005:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))</span></span>  
-<span data-ttu-id="9f740-277">**SQL Server 2008:** [математические функции (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))</span><span class="sxs-lookup"><span data-stu-id="9f740-277">**SQL Server 2008:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))</span></span>  
-<span data-ttu-id="9f740-278">**SQL Server 2012 и более поздних версий:** [математические функции (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)</span><span class="sxs-lookup"><span data-stu-id="9f740-278">**SQL Server 2012 and later:** [Mathematical Functions (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)</span></span>   
+<span data-ttu-id="a3ea2-276">**SQL Server 2005:** [математические функции (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))</span><span class="sxs-lookup"><span data-stu-id="a3ea2-276">**SQL Server 2005:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))</span></span>  
+<span data-ttu-id="a3ea2-277">**SQL Server 2008:** [математические функции (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))</span><span class="sxs-lookup"><span data-stu-id="a3ea2-277">**SQL Server 2008:** [Mathematical Functions (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))</span></span>  
+<span data-ttu-id="a3ea2-278">**SQL Server 2012 и более поздних версий:** [математические функции (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)</span><span class="sxs-lookup"><span data-stu-id="a3ea2-278">**SQL Server 2012 and later:** [Mathematical Functions (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)</span></span>   
 
- [<span data-ttu-id="9f740-279">Функции SqlClient для Entity Framework</span><span class="sxs-lookup"><span data-stu-id="9f740-279">SqlClient for Entity Framework Functions</span></span>](sqlclient-for-ef-functions.md)
+ [<span data-ttu-id="a3ea2-279">Функции SqlClient для Entity Framework</span><span class="sxs-lookup"><span data-stu-id="a3ea2-279">SqlClient for Entity Framework Functions</span></span>](sqlclient-for-ef-functions.md)
