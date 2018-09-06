@@ -2,12 +2,12 @@
 title: Расширения типов (F#)
 description: 'Узнайте, как разрешить расширения типов F #, добавлять новые члены в ранее определенный тип объекта.'
 ms.date: 07/20/2018
-ms.openlocfilehash: 2181745ea75894fbfe35d5522c130baaf1876455
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 27238db1fd0803f62c32755fbc4ab7688f5c107e
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33566890"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855065"
 ---
 # <a name="type-extensions"></a>Расширения типов
 
@@ -169,6 +169,5 @@ type IEnumerableExtensions() =
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по языку F#](index.md)
-
-[Члены](members/index.md)
+- [Справочник по языку F#](index.md)
+- [Члены](members/index.md)
