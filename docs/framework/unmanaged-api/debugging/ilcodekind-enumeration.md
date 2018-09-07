@@ -15,18 +15,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a02c26b72fc7039a5050ee369043f081c32cd7ec
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43869984"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087502"
 ---
-# <a name="ilcodekind-enumeration"></a><span data-ttu-id="17a4b-102">Перечисление ILCodeKind</span><span class="sxs-lookup"><span data-stu-id="17a4b-102">ILCodeKind Enumeration</span></span>
-<span data-ttu-id="17a4b-103">[Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="17a4b-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
+# <a name="ilcodekind-enumeration"></a><span data-ttu-id="7cb65-102">Перечисление ILCodeKind</span><span class="sxs-lookup"><span data-stu-id="7cb65-102">ILCodeKind Enumeration</span></span>
+<span data-ttu-id="7cb65-103">[Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]</span><span class="sxs-lookup"><span data-stu-id="7cb65-103">[Supported in the .NET Framework 4.5.2 and later versions]</span></span>  
   
- <span data-ttu-id="17a4b-104">Предоставляет значения, которые указывают, может ли отладчик получить доступ к локальным переменным или коду, добавленным в инструментарий ReJIT профилировщика.</span><span class="sxs-lookup"><span data-stu-id="17a4b-104">Provides values that specify whether the debugger is able to access local variables or code added in profiler ReJIT instrumentation.</span></span>  
+ <span data-ttu-id="7cb65-104">Предоставляет значения, которые указывают, может ли отладчик получить доступ к локальным переменным или коду, добавленным в инструментарий ReJIT профилировщика.</span><span class="sxs-lookup"><span data-stu-id="7cb65-104">Provides values that specify whether the debugger is able to access local variables or code added in profiler ReJIT instrumentation.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="17a4b-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="17a4b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7cb65-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7cb65-105">Syntax</span></span>  
   
 ```cpp
 typedef enum ILCodeKind {  
@@ -35,26 +35,26 @@ typedef enum ILCodeKind {
 } ILCodeKind;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="17a4b-106">Участники</span><span class="sxs-lookup"><span data-stu-id="17a4b-106">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="7cb65-106">Участники</span><span class="sxs-lookup"><span data-stu-id="7cb65-106">Members</span></span>  
   
-|<span data-ttu-id="17a4b-107">Имя члена</span><span class="sxs-lookup"><span data-stu-id="17a4b-107">Member name</span></span>|<span data-ttu-id="17a4b-108">Описание</span><span class="sxs-lookup"><span data-stu-id="17a4b-108">Description</span></span>|  
+|<span data-ttu-id="7cb65-107">Имя члена</span><span class="sxs-lookup"><span data-stu-id="7cb65-107">Member name</span></span>|<span data-ttu-id="7cb65-108">Описание</span><span class="sxs-lookup"><span data-stu-id="7cb65-108">Description</span></span>|  
 |-----------------|-----------------|  
-|`ILCODE_ORIGINAL_IL`|<span data-ttu-id="17a4b-109">Отладчик не имеет доступа к информации из инструментария ReJIT.</span><span class="sxs-lookup"><span data-stu-id="17a4b-109">The debugger does not have access to information from ReJIT instrumentation.</span></span>|  
-|`ILCODE_REJIT_IL`|<span data-ttu-id="17a4b-110">Отладчик имеет доступ к информации из инструментария ReJIT.</span><span class="sxs-lookup"><span data-stu-id="17a4b-110">The debugger has access to information from ReJIT instrumentation.</span></span>|  
+|`ILCODE_ORIGINAL_IL`|<span data-ttu-id="7cb65-109">Отладчик не имеет доступа к информации из инструментария ReJIT.</span><span class="sxs-lookup"><span data-stu-id="7cb65-109">The debugger does not have access to information from ReJIT instrumentation.</span></span>|  
+|`ILCODE_REJIT_IL`|<span data-ttu-id="7cb65-110">Отладчик имеет доступ к информации из инструментария ReJIT.</span><span class="sxs-lookup"><span data-stu-id="7cb65-110">The debugger has access to information from ReJIT instrumentation.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="17a4b-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="17a4b-111">Remarks</span></span>  
- <span data-ttu-id="17a4b-112">Является членом `ILCodeKind` перечисления может быть передан [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) и [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) методы, чтобы определить возможность доступа отладчика к переменным, добавленным в профилировщике Инструментарий ReJIT и [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) метод, чтобы определить, может ли отладчик доступ к инструментированному Промежуточному.</span><span class="sxs-lookup"><span data-stu-id="17a4b-112">A member of the `ILCodeKind` enumeration can be passed to the [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) and [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) methods to determine whether the debugger can access variables added in profiler ReJIT instrumentation, and to the [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) method to determine whether the debugger can access instrumented IL.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7cb65-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="7cb65-111">Remarks</span></span>  
+ <span data-ttu-id="7cb65-112">Является членом `ILCodeKind` перечисления может быть передан [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) и [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) методы, чтобы определить возможность доступа отладчика к переменным, добавленным в профилировщике Инструментарий ReJIT и [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) метод, чтобы определить, может ли отладчик доступ к инструментированному Промежуточному.</span><span class="sxs-lookup"><span data-stu-id="7cb65-112">A member of the `ILCodeKind` enumeration can be passed to the [EnumerateLocalVariablesEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) and [GetLocalVariableEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) methods to determine whether the debugger can access variables added in profiler ReJIT instrumentation, and to the [GetCodeEx](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) method to determine whether the debugger can access instrumented IL.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="17a4b-113">Требования</span><span class="sxs-lookup"><span data-stu-id="17a4b-113">Requirements</span></span>  
- <span data-ttu-id="17a4b-114">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="17a4b-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7cb65-113">Требования</span><span class="sxs-lookup"><span data-stu-id="7cb65-113">Requirements</span></span>  
+ <span data-ttu-id="7cb65-114">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7cb65-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="17a4b-115">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="17a4b-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="7cb65-115">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7cb65-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="17a4b-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17a4b-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="7cb65-116">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7cb65-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="17a4b-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17a4b-117">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
+ <span data-ttu-id="7cb65-117">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7cb65-117">**.NET Framework Versions:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17a4b-118">См. также</span><span class="sxs-lookup"><span data-stu-id="17a4b-118">See Also</span></span>  
- [<span data-ttu-id="17a4b-119">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="17a4b-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
- [<span data-ttu-id="17a4b-120">Интерфейс ICorDebugILFrame4</span><span class="sxs-lookup"><span data-stu-id="17a4b-120">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)  
- [<span data-ttu-id="17a4b-121">ReJIT: Практическое руководство</span><span class="sxs-lookup"><span data-stu-id="17a4b-121">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)
+## <a name="see-also"></a><span data-ttu-id="7cb65-118">См. также</span><span class="sxs-lookup"><span data-stu-id="7cb65-118">See Also</span></span>  
+ [<span data-ttu-id="7cb65-119">Перечисления отладки</span><span class="sxs-lookup"><span data-stu-id="7cb65-119">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
+ [<span data-ttu-id="7cb65-120">Интерфейс ICorDebugILFrame4</span><span class="sxs-lookup"><span data-stu-id="7cb65-120">ICorDebugILFrame4 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-interface.md)  
+ [<span data-ttu-id="7cb65-121">ReJIT: Практическое руководство</span><span class="sxs-lookup"><span data-stu-id="7cb65-121">ReJIT: A How-To Guide</span></span>](https://blogs.msdn.com/b/davbr/archive/2011/10/12/rejit-a-how-to-guide.aspx)

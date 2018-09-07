@@ -21,16 +21,16 @@ ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05aac9109e49897d1c4dbbad60d807eb3e47798d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43798639"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081954"
 ---
-# <a name="ifthenelse-directives"></a><span data-ttu-id="ca943-102">Директивы #If...Then...#Else</span><span class="sxs-lookup"><span data-stu-id="ca943-102">#If...Then...#Else Directives</span></span>
-<span data-ttu-id="ca943-103">Условно компилирует выбранные блоки кода Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="ca943-103">Conditionally compiles selected blocks of Visual Basic code.</span></span>  
+# <a name="ifthenelse-directives"></a><span data-ttu-id="153e2-102">Директивы #If...Then...#Else</span><span class="sxs-lookup"><span data-stu-id="153e2-102">#If...Then...#Else Directives</span></span>
+<span data-ttu-id="153e2-103">Условно компилирует выбранные блоки кода Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="153e2-103">Conditionally compiles selected blocks of Visual Basic code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca943-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ca943-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="153e2-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="153e2-104">Syntax</span></span>  
   
 ```  
 #If expression Then  
@@ -45,27 +45,27 @@ ms.locfileid: "43798639"
 #End If  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="ca943-105">Части</span><span class="sxs-lookup"><span data-stu-id="ca943-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="153e2-105">Части</span><span class="sxs-lookup"><span data-stu-id="153e2-105">Parts</span></span>  
  `expression`  
- <span data-ttu-id="ca943-106">Требуется для `#If` и `#ElseIf` операторов в другом месте.</span><span class="sxs-lookup"><span data-stu-id="ca943-106">Required for `#If` and `#ElseIf` statements, optional elsewhere.</span></span> <span data-ttu-id="ca943-107">Любое выражение, состоящий только из одного или нескольких константы условной компиляции, литералы и операторы, которые принимает значение `True` или `False`.</span><span class="sxs-lookup"><span data-stu-id="ca943-107">Any expression, consisting exclusively of one or more conditional compiler constants, literals, and operators, that evaluates to `True` or `False`.</span></span>  
+ <span data-ttu-id="153e2-106">Требуется для `#If` и `#ElseIf` операторов в другом месте.</span><span class="sxs-lookup"><span data-stu-id="153e2-106">Required for `#If` and `#ElseIf` statements, optional elsewhere.</span></span> <span data-ttu-id="153e2-107">Любое выражение, состоящий только из одного или нескольких константы условной компиляции, литералы и операторы, которые принимает значение `True` или `False`.</span><span class="sxs-lookup"><span data-stu-id="153e2-107">Any expression, consisting exclusively of one or more conditional compiler constants, literals, and operators, that evaluates to `True` or `False`.</span></span>  
   
  `statements`  
- <span data-ttu-id="ca943-108">Требуется для `#If` инструкции блока, необязательно в другом месте.</span><span class="sxs-lookup"><span data-stu-id="ca943-108">Required for `#If` statement block, optional elsewhere.</span></span> <span data-ttu-id="ca943-109">Строки кода Visual Basic или директивы компилятора, которые компилируются, если связанное выражение, результатом которого является `True`.</span><span class="sxs-lookup"><span data-stu-id="ca943-109">Visual Basic program lines or compiler directives that are compiled if the associated expression evaluates to `True`.</span></span>  
+ <span data-ttu-id="153e2-108">Требуется для `#If` инструкции блока, необязательно в другом месте.</span><span class="sxs-lookup"><span data-stu-id="153e2-108">Required for `#If` statement block, optional elsewhere.</span></span> <span data-ttu-id="153e2-109">Строки кода Visual Basic или директивы компилятора, которые компилируются, если связанное выражение, результатом которого является `True`.</span><span class="sxs-lookup"><span data-stu-id="153e2-109">Visual Basic program lines or compiler directives that are compiled if the associated expression evaluates to `True`.</span></span>  
   
  `#End If`  
- <span data-ttu-id="ca943-110">Завершает `#If` блока инструкций.</span><span class="sxs-lookup"><span data-stu-id="ca943-110">Terminates the `#If` statement block.</span></span>  
+ <span data-ttu-id="153e2-110">Завершает `#If` блока инструкций.</span><span class="sxs-lookup"><span data-stu-id="153e2-110">Terminates the `#If` statement block.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ca943-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="ca943-111">Remarks</span></span>  
- <span data-ttu-id="ca943-112">В рабочей области, поведение `#If...Then...#Else` директивы отображается одинаково как для `If...Then...Else` инструкций.</span><span class="sxs-lookup"><span data-stu-id="ca943-112">On the surface, the behavior of the `#If...Then...#Else` directives appears the same as that of the `If...Then...Else` statements.</span></span> <span data-ttu-id="ca943-113">Тем не менее `#If...Then...#Else` директивы оперируют компилятором, тогда как `If...Then...Else` инструкций оценки условий во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="ca943-113">However, the `#If...Then...#Else` directives evaluate what is compiled by the compiler, whereas the `If...Then...Else` statements evaluate conditions at run time.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="153e2-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="153e2-111">Remarks</span></span>  
+ <span data-ttu-id="153e2-112">В рабочей области, поведение `#If...Then...#Else` директивы отображается одинаково как для `If...Then...Else` инструкций.</span><span class="sxs-lookup"><span data-stu-id="153e2-112">On the surface, the behavior of the `#If...Then...#Else` directives appears the same as that of the `If...Then...Else` statements.</span></span> <span data-ttu-id="153e2-113">Тем не менее `#If...Then...#Else` директивы оперируют компилятором, тогда как `If...Then...Else` инструкций оценки условий во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="153e2-113">However, the `#If...Then...#Else` directives evaluate what is compiled by the compiler, whereas the `If...Then...Else` statements evaluate conditions at run time.</span></span>  
   
- <span data-ttu-id="ca943-114">Условная компиляция обычно используется для компиляции той же программе для разных платформ.</span><span class="sxs-lookup"><span data-stu-id="ca943-114">Conditional compilation is typically used to compile the same program for different platforms.</span></span> <span data-ttu-id="ca943-115">Он также используется для предотвращения появления в исполняемом файле отладочного кода.</span><span class="sxs-lookup"><span data-stu-id="ca943-115">It is also used to prevent debugging code from appearing in an executable file.</span></span> <span data-ttu-id="ca943-116">Код, исключаемый при условной компиляции полностью исключается из итоговый исполняемый файл, поэтому он не влияет на производительность или размер.</span><span class="sxs-lookup"><span data-stu-id="ca943-116">Code excluded during conditional compilation is completely omitted from the final executable file, so it has no effect on size or performance.</span></span>  
+ <span data-ttu-id="153e2-114">Условная компиляция обычно используется для компиляции той же программе для разных платформ.</span><span class="sxs-lookup"><span data-stu-id="153e2-114">Conditional compilation is typically used to compile the same program for different platforms.</span></span> <span data-ttu-id="153e2-115">Он также используется для предотвращения появления в исполняемом файле отладочного кода.</span><span class="sxs-lookup"><span data-stu-id="153e2-115">It is also used to prevent debugging code from appearing in an executable file.</span></span> <span data-ttu-id="153e2-116">Код, исключаемый при условной компиляции полностью исключается из итоговый исполняемый файл, поэтому он не влияет на производительность или размер.</span><span class="sxs-lookup"><span data-stu-id="153e2-116">Code excluded during conditional compilation is completely omitted from the final executable file, so it has no effect on size or performance.</span></span>  
   
- <span data-ttu-id="ca943-117">Независимо от результата все вычисления, все выражения вычисляются с помощью `Option Compare Binary`.</span><span class="sxs-lookup"><span data-stu-id="ca943-117">Regardless of the outcome of any evaluation, all expressions are evaluated using `Option Compare Binary`.</span></span> <span data-ttu-id="ca943-118">`Option Compare` Инструкции не влияет на выражения в `#If` и `#ElseIf` инструкций.</span><span class="sxs-lookup"><span data-stu-id="ca943-118">The `Option Compare` statement does not affect expressions in `#If` and `#ElseIf` statements.</span></span>  
+ <span data-ttu-id="153e2-117">Независимо от результата все вычисления, все выражения вычисляются с помощью `Option Compare Binary`.</span><span class="sxs-lookup"><span data-stu-id="153e2-117">Regardless of the outcome of any evaluation, all expressions are evaluated using `Option Compare Binary`.</span></span> <span data-ttu-id="153e2-118">`Option Compare` Инструкции не влияет на выражения в `#If` и `#ElseIf` инструкций.</span><span class="sxs-lookup"><span data-stu-id="153e2-118">The `Option Compare` statement does not affect expressions in `#If` and `#ElseIf` statements.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="ca943-119">Не однострочный форма `#If`, `#Else`, `#ElseIf`, и `#End If` существует директивы.</span><span class="sxs-lookup"><span data-stu-id="ca943-119">No single-line form of the `#If`, `#Else`, `#ElseIf`, and `#End If` directives exists.</span></span> <span data-ttu-id="ca943-120">Никакой другой код могут отображаться на одной строке с любой из директив.</span><span class="sxs-lookup"><span data-stu-id="ca943-120">No other code can appear on the same line as any of the directives.</span></span> 
+>  <span data-ttu-id="153e2-119">Не однострочный форма `#If`, `#Else`, `#ElseIf`, и `#End If` существует директивы.</span><span class="sxs-lookup"><span data-stu-id="153e2-119">No single-line form of the `#If`, `#Else`, `#ElseIf`, and `#End If` directives exists.</span></span> <span data-ttu-id="153e2-120">Никакой другой код могут отображаться на одной строке с любой из директив.</span><span class="sxs-lookup"><span data-stu-id="153e2-120">No other code can appear on the same line as any of the directives.</span></span> 
 
-<span data-ttu-id="ca943-121">Операторы в блоке условной компиляции необходимо полных логических операторов.</span><span class="sxs-lookup"><span data-stu-id="ca943-121">The statements within a conditional compilation block must be complete logical statements.</span></span> <span data-ttu-id="ca943-122">Например нельзя условной компиляции только атрибуты функции, но можно условно объявить функцию и ее атрибуты:</span><span class="sxs-lookup"><span data-stu-id="ca943-122">For example, you cannot conditionally compile only the attributes of a function, but you can conditionally declare the function along with its attributes:</span></span>
+<span data-ttu-id="153e2-121">Операторы в блоке условной компиляции необходимо полных логических операторов.</span><span class="sxs-lookup"><span data-stu-id="153e2-121">The statements within a conditional compilation block must be complete logical statements.</span></span> <span data-ttu-id="153e2-122">Например нельзя условной компиляции только атрибуты функции, но можно условно объявить функцию и ее атрибуты:</span><span class="sxs-lookup"><span data-stu-id="153e2-122">For example, you cannot conditionally compile only the attributes of a function, but you can conditionally declare the function along with its attributes:</span></span>
 
 ```vb
    #If DEBUG Then
@@ -77,15 +77,15 @@ ms.locfileid: "43798639"
    #End If
 ```
 
-## <a name="example"></a><span data-ttu-id="ca943-123">Пример</span><span class="sxs-lookup"><span data-stu-id="ca943-123">Example</span></span>
- <span data-ttu-id="ca943-124">В этом примере используется `#If...Then...#Else` для определения, следует ли компилировать определенных операторов.</span><span class="sxs-lookup"><span data-stu-id="ca943-124">This example uses the `#If...Then...#Else` construct to determine whether to compile certain statements.</span></span>  
+## <a name="example"></a><span data-ttu-id="153e2-123">Пример</span><span class="sxs-lookup"><span data-stu-id="153e2-123">Example</span></span>
+ <span data-ttu-id="153e2-124">В этом примере используется `#If...Then...#Else` для определения, следует ли компилировать определенных операторов.</span><span class="sxs-lookup"><span data-stu-id="153e2-124">This example uses the `#If...Then...#Else` construct to determine whether to compile certain statements.</span></span>  
   
  [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="ca943-125">См. также</span><span class="sxs-lookup"><span data-stu-id="ca943-125">See Also</span></span>  
-[<span data-ttu-id="ca943-126">Директива #Const</span><span class="sxs-lookup"><span data-stu-id="ca943-126">#Const Directive</span></span>](../../../visual-basic/language-reference/directives/const-directive.md)  
-[<span data-ttu-id="ca943-127">Оператор If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="ca943-127">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
-<span data-ttu-id="ca943-128">[Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) </span><span class="sxs-lookup"><span data-stu-id="ca943-128">[Conditional Compilation](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) </span></span>  
+## <a name="see-also"></a><span data-ttu-id="153e2-125">См. также</span><span class="sxs-lookup"><span data-stu-id="153e2-125">See Also</span></span>  
+[<span data-ttu-id="153e2-126">Директива #Const</span><span class="sxs-lookup"><span data-stu-id="153e2-126">#Const Directive</span></span>](../../../visual-basic/language-reference/directives/const-directive.md)  
+[<span data-ttu-id="153e2-127">Оператор If...Then...Else</span><span class="sxs-lookup"><span data-stu-id="153e2-127">If...Then...Else Statement</span></span>](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
+<span data-ttu-id="153e2-128">[Условная компиляция](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) </span><span class="sxs-lookup"><span data-stu-id="153e2-128">[Conditional Compilation](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) </span></span>  
 <xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>   
 
 

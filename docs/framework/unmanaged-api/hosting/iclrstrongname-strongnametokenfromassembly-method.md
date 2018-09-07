@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3dd083193fa8fed2abc8a1a498325f7edd89bc96
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886130"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087515"
 ---
-# <a name="iclrstrongnamestrongnametokenfromassembly-method"></a><span data-ttu-id="5455a-102">Метод ICLRStrongName::StrongNameTokenFromAssembly</span><span class="sxs-lookup"><span data-stu-id="5455a-102">ICLRStrongName::StrongNameTokenFromAssembly Method</span></span>
-<span data-ttu-id="5455a-103">Создает маркер строгого имени из указанного файла сборки.</span><span class="sxs-lookup"><span data-stu-id="5455a-103">Creates a strong name token from the specified assembly file.</span></span>  
+# <a name="iclrstrongnamestrongnametokenfromassembly-method"></a><span data-ttu-id="84f28-102">Метод ICLRStrongName::StrongNameTokenFromAssembly</span><span class="sxs-lookup"><span data-stu-id="84f28-102">ICLRStrongName::StrongNameTokenFromAssembly Method</span></span>
+<span data-ttu-id="84f28-103">Создает маркер строгого имени из указанного файла сборки.</span><span class="sxs-lookup"><span data-stu-id="84f28-103">Creates a strong name token from the specified assembly file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5455a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5455a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84f28-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="84f28-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameTokenFromAssembly (  
@@ -37,33 +37,33 @@ HRESULT StrongNameTokenFromAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5455a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="5455a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="84f28-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="84f28-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="5455a-106">[in] Путь к переносимого исполняемого (PE) файла для сборки.</span><span class="sxs-lookup"><span data-stu-id="5455a-106">[in] The path to the portable executable (PE) file for the assembly.</span></span>  
+ <span data-ttu-id="84f28-106">[in] Путь к переносимого исполняемого (PE) файла для сборки.</span><span class="sxs-lookup"><span data-stu-id="84f28-106">[in] The path to the portable executable (PE) file for the assembly.</span></span>  
   
  `ppbStrongNameToken`  
- <span data-ttu-id="5455a-107">[out] Токен, возвращенный строгого имени.</span><span class="sxs-lookup"><span data-stu-id="5455a-107">[out] The returned strong name token.</span></span>  
+ <span data-ttu-id="84f28-107">[out] Токен, возвращенный строгого имени.</span><span class="sxs-lookup"><span data-stu-id="84f28-107">[out] The returned strong name token.</span></span>  
   
  `pcbStrongNameToken`  
- <span data-ttu-id="5455a-108">[out] Размер в байтах, строгое имя маркера.</span><span class="sxs-lookup"><span data-stu-id="5455a-108">[out] The size, in bytes, of the strong name token.</span></span>  
+ <span data-ttu-id="84f28-108">[out] Размер в байтах, строгое имя маркера.</span><span class="sxs-lookup"><span data-stu-id="84f28-108">[out] The size, in bytes, of the strong name token.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5455a-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="5455a-109">Return Value</span></span>  
- <span data-ttu-id="5455a-110">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="5455a-110">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="84f28-109">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="84f28-109">Return Value</span></span>  
+ <span data-ttu-id="84f28-110">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="84f28-110">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="5455a-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="5455a-111">Remarks</span></span>  
- <span data-ttu-id="5455a-112">Маркер строгого имени — это сокращенная форма открытого ключа.</span><span class="sxs-lookup"><span data-stu-id="5455a-112">A strong name token is the shortened form of a public key.</span></span> <span data-ttu-id="5455a-113">Токен является 64-разрядный хэш, который создается из открытого ключа, используемого для подписания сборки.</span><span class="sxs-lookup"><span data-stu-id="5455a-113">The token is a 64-bit hash that is created from the public key used to sign the assembly.</span></span> <span data-ttu-id="5455a-114">Маркер является частью строгого имени для сборки и может быть считано из метаданных сборки.</span><span class="sxs-lookup"><span data-stu-id="5455a-114">The token is a part of the strong name for the assembly, and can be read from the assembly metadata.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="84f28-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="84f28-111">Remarks</span></span>  
+ <span data-ttu-id="84f28-112">Маркер строгого имени — это сокращенная форма открытого ключа.</span><span class="sxs-lookup"><span data-stu-id="84f28-112">A strong name token is the shortened form of a public key.</span></span> <span data-ttu-id="84f28-113">Токен является 64-разрядный хэш, который создается из открытого ключа, используемого для подписания сборки.</span><span class="sxs-lookup"><span data-stu-id="84f28-113">The token is a 64-bit hash that is created from the public key used to sign the assembly.</span></span> <span data-ttu-id="84f28-114">Маркер является частью строгого имени для сборки и может быть считано из метаданных сборки.</span><span class="sxs-lookup"><span data-stu-id="84f28-114">The token is a part of the strong name for the assembly, and can be read from the assembly metadata.</span></span>  
   
- <span data-ttu-id="5455a-115">После создания маркера необходимо вызвать [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод для освобождения выделенной памяти.</span><span class="sxs-lookup"><span data-stu-id="5455a-115">After the token is created, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
+ <span data-ttu-id="84f28-115">После создания маркера необходимо вызвать [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) метод для освобождения выделенной памяти.</span><span class="sxs-lookup"><span data-stu-id="84f28-115">After the token is created, you should call the [ICLRStrongName::StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md) method to release the allocated memory.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5455a-116">Требования</span><span class="sxs-lookup"><span data-stu-id="5455a-116">Requirements</span></span>  
- <span data-ttu-id="5455a-117">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5455a-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="84f28-116">Требования</span><span class="sxs-lookup"><span data-stu-id="84f28-116">Requirements</span></span>  
+ <span data-ttu-id="84f28-117">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="84f28-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="5455a-118">**Заголовок:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="5455a-118">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="84f28-118">**Заголовок:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="84f28-118">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="5455a-119">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5455a-119">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="84f28-119">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="84f28-119">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="5455a-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5455a-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="84f28-120">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="84f28-120">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5455a-121">См. также</span><span class="sxs-lookup"><span data-stu-id="5455a-121">See Also</span></span>  
- [<span data-ttu-id="5455a-122">Метод StrongNameTokenFromAssemblyEx</span><span class="sxs-lookup"><span data-stu-id="5455a-122">StrongNameTokenFromAssemblyEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)  
- [<span data-ttu-id="5455a-123">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="5455a-123">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="84f28-121">См. также</span><span class="sxs-lookup"><span data-stu-id="84f28-121">See Also</span></span>  
+ [<span data-ttu-id="84f28-122">Метод StrongNameTokenFromAssemblyEx</span><span class="sxs-lookup"><span data-stu-id="84f28-122">StrongNameTokenFromAssemblyEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)  
+ [<span data-ttu-id="84f28-123">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="84f28-123">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
