@@ -3,18 +3,18 @@ title: 'Конечная точка: количество вызовов в се
 ms.date: 03/30/2017
 ms.assetid: ca0fc06d-d68f-4236-bd5f-c7ff6214acdd
 ms.openlocfilehash: a70df63f6fd268abdd2e1799d1aa38afb41e2811
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: MT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486926"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43804621"
 ---
-# <a name="endpoint-calls-per-second"></a><span data-ttu-id="99928-102">Конечная точка: количество вызовов в секунду</span><span class="sxs-lookup"><span data-stu-id="99928-102">Endpoint: Calls Per Second</span></span>
-<span data-ttu-id="99928-103">Имя счетчика: Calls Per Second.</span><span class="sxs-lookup"><span data-stu-id="99928-103">Counter Name: Calls Per Second.</span></span>  
+# <a name="endpoint-calls-per-second"></a><span data-ttu-id="cbbdf-102">Конечная точка: количество вызовов в секунду</span><span class="sxs-lookup"><span data-stu-id="cbbdf-102">Endpoint: Calls Per Second</span></span>
+<span data-ttu-id="cbbdf-103">Имя счетчика: Calls Per Second.</span><span class="sxs-lookup"><span data-stu-id="cbbdf-103">Counter Name: Calls Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="99928-104">Описание</span><span class="sxs-lookup"><span data-stu-id="99928-104">Description</span></span>  
- <span data-ttu-id="99928-105">Количество вызовов данной конечной точки в секунду.</span><span class="sxs-lookup"><span data-stu-id="99928-105">Number of calls to this endpoint in a second.</span></span>  
+## <a name="description"></a><span data-ttu-id="cbbdf-104">Описание</span><span class="sxs-lookup"><span data-stu-id="cbbdf-104">Description</span></span>  
+ <span data-ttu-id="cbbdf-105">Количество вызовов данной конечной точки в секунду.</span><span class="sxs-lookup"><span data-stu-id="cbbdf-105">Number of calls to this endpoint in a second.</span></span>  
   
- <span data-ttu-id="99928-106">Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.</span><span class="sxs-lookup"><span data-stu-id="99928-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="cbbdf-106">Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.</span><span class="sxs-lookup"><span data-stu-id="cbbdf-106">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="99928-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="99928-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="cbbdf-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="cbbdf-107">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
