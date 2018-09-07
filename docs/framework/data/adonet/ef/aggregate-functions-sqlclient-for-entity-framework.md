@@ -3,11 +3,11 @@ title: Статистические функции (SqlClient для Entity Fram
 ms.date: 03/30/2017
 ms.assetid: 03303f01-b591-4efc-9875-f9c608edff0b
 ms.openlocfilehash: 8ed9a58da9914724fe312876d6594cb526f2e0e9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452903"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856521"
 ---
 # <a name="aggregate-functions-sqlclient-for-entity-framework"></a>Статистические функции (SqlClient для Entity Framework)
 Поставщик данных .NET Framework для SQL Server (SqlClient) предоставляет агрегатные функции. Агрегатные функции выполняют вычисления на наборе входных значений и возвращают значение. Эти функции находятся в пространстве имен SqlServer, которое доступно при использовании SqlClient. Свойство пространства имен поставщика позволяет платформе Entity Framework узнать, какой префикс используется поставщиком для конкретных конструкций, таких как типы или функции.  

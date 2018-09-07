@@ -3,11 +3,11 @@ title: LINQ to ADO.NET (Страница портала)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
 ms.openlocfilehash: 424a4639677d6066fa5cac74e370ca76ebcaea60
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43735069"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43803865"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (Страница портала)
 [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] позволяет запрашивать любой перечисляемый объект [!INCLUDE[vstecado](~/includes/vstecado-md.md)] с помощью модели программирования [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  

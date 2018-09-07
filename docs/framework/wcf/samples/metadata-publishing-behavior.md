@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
 ms.openlocfilehash: c3e26454cc9b29620d80a86df7d7aee131e18200
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/05/2018
-ms.locfileid: "43734123"
+ms.locfileid: "43804795"
 ---
 # <a name="metadata-publishing-behavior"></a>Поведение публикации метаданных
 Образец поведения публикации метаданных демонстрирует, как управлять возможностями публикации метаданных службы. Чтобы предотвратить непреднамеренное разглашение потенциально важных метаданных службы, конфигурация по умолчанию для служб Windows Communication Foundation (WCF) отключает публикацию метаданных. Такое расширение функциональности по умолчанию защищено, но это также означает, что при этом невозможно использовать средство импорта метаданных (например, Svcutil.exe) для создания клиентского кода, необходимого для вызова службы, если поведение публикации не включено явно в конфигурации.  

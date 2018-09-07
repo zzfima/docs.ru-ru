@@ -3,11 +3,11 @@ title: Использование XML в наборах данных
 ms.date: 03/30/2017
 ms.assetid: 35138159-e199-49ec-baf7-1ec6777e171e
 ms.openlocfilehash: cbdc6135a819e2141426f432d163cd49a7b78ac4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489881"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856443"
 ---
 # <a name="using-xml-in-a-dataset"></a>Использование XML в наборах данных
 В ADO.NET можно заполнить <xref:System.Data.DataSet> из XML-потока или документа. XML-поток или XML-документ можно использовать для предоставления объекту <xref:System.Data.DataSet> данных, информации о схеме или того и другого. Данные из XML-потока или документа можно комбинировать с существующими в <xref:System.Data.DataSet> данными или сведениями о схеме.  

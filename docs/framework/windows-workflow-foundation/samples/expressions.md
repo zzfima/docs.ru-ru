@@ -3,11 +3,11 @@ title: Expressions2
 ms.date: 03/30/2017
 ms.assetid: 43a85905-77b5-4893-bb38-1cb9b293d69d
 ms.openlocfilehash: e852b62e6d0b6b4b3ddc19b197902de5325310a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43557478"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43799295"
 ---
 # <a name="expressions"></a>Выражения
 В этом образце демонстрируется использование в рабочем процессе базовых выражений. Образец содержит рабочий процесс, который рассчитывает статистику по базовой заработной плате для двух служащих вымышленной компании. Два класса - `Employee` и `SalaryStats` - определяются в файлах Employee.cs и SalaryStats.cs. Эти классы используются в рабочем процессе, который показывает, как выполнять простые арифметические и строковые операции над свойствами переменных сложных типов.  

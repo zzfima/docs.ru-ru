@@ -3,11 +3,11 @@ title: Объектная модель программирования WCF Web 
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
 ms.openlocfilehash: 8400798e4edcad41c4f5336d59646413900347f8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43670643"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861641"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>Объектная модель программирования WCF Web HTTP
 Модель программирования HTTP WCF WEB позволяет разработчикам предоставлять веб-службы Windows Communication Foundation (WCF) службам через базовые HTTP-запросы, не требуя использования SOAP. WCF модель программирования WEB HTTP построена на основе существующей модели расширяемости WCF. Она определяет следующие классы.  

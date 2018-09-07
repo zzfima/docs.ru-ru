@@ -3,11 +3,11 @@ title: Использование процедурных действий
 ms.date: 03/30/2017
 ms.assetid: 1c67f739-3878-48ad-806c-b2ce0d6733a0
 ms.openlocfilehash: bd83f1a0fa9f3af7c22cee73fbc4f984a9ebf53c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: HT
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43732044"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43804779"
 ---
 # <a name="using-procedural-activities"></a>Использование процедурных действий
 В образце действия <xref:System.Activities.Statements.Sequence>, <xref:System.Activities.Statements.Assign>, <xref:System.Activities.Statements.If>, <xref:System.Activities.Statements.While>, <xref:System.Activities.Statements.Switch%601>, <xref:System.Activities.Statements.TryCatch> и <xref:System.Activities.Statements.WriteLine> используются для реализации игры по угадыванию числа. В игре по угадыванию числа компьютер выбирает случайное число, а игрок должен угадать это число. Если игрок дает неверный ответ, рабочий процесс подсказывает, является ли загаданное число большим или меньшим предложенного. Если игрок угадывает число менее чем за 7 попыток, отображается особое поздравление.  

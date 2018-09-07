@@ -3,11 +3,11 @@ title: Объекты обнаружения Find и FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
 ms.openlocfilehash: b2f679879bd3a32e770aa934f715dd70b4a2b5f8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43534039"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43856005"
 ---
 # <a name="discovery-find-and-findcriteria"></a>Объекты обнаружения Find и FindCriteria
 Операция поиска объектов обнаружения инициируется клиентом для обнаружения одной или нескольких служб и является одним из основных действий, выполняемых при обнаружении. При операции поиска выполняется отправка сообщения зонда WS-Discovery по сети. Службы, которые соответствуют указанному критерию, отвечают сообщениями WS-Discovery ProbeMatch. Дополнительные сведения о сообщениях обнаружения см. в разделе [спецификации WS-Discovery](https://go.microsoft.com/fwlink/?LinkID=122347).  

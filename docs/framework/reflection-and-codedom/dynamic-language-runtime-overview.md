@@ -10,11 +10,11 @@ ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5a4645efc9276429cbdb0812f1ca501c89ea5dbb
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855156"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060692"
 ---
 # <a name="dynamic-language-runtime-overview"></a>Общие сведения о среде DLR
 *Среда DLR* представляет собой среду выполнения, которая добавляет набор служб для динамических языков в среду CLR. Среда DLR упрощает разработку динамических языков, используемых в .NET Framework, и добавление динамических функций в языки со статической типизацией.  
