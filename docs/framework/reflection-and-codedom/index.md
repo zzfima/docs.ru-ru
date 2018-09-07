@@ -8,29 +8,29 @@ ms.assetid: f78ec137-df0e-48c9-a7a0-5f6a1055f011
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e90857fcf02dbd0dd888b0658f3ab626bc5b11bd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43540071"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44064768"
 ---
-# <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="f56f9-102">Динамическое программирование в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f56f9-102">Dynamic Programming in the .NET Framework</span></span>
-<span data-ttu-id="f56f9-103">Этот раздел документации содержит сведения о динамическом программировании на платформе .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="f56f9-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  
+# <a name="dynamic-programming-in-the-net-framework"></a><span data-ttu-id="cc802-102">Динамическое программирование в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="cc802-102">Dynamic Programming in the .NET Framework</span></span>
+<span data-ttu-id="cc802-103">Этот раздел документации содержит сведения о динамическом программировании на платформе .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="cc802-103">This section of the documentation provides information about dynamic programming in the .NET Framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="f56f9-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="f56f9-104">In This Section</span></span>  
- [<span data-ttu-id="f56f9-105">Отражение</span><span class="sxs-lookup"><span data-stu-id="f56f9-105">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
- <span data-ttu-id="f56f9-106">Описание использования отражения для работы с объектами во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="f56f9-106">Describes how to use reflection to work with objects at run time.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="cc802-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="cc802-104">In This Section</span></span>  
+ [<span data-ttu-id="cc802-105">Отражение</span><span class="sxs-lookup"><span data-stu-id="cc802-105">Reflection</span></span>](../../../docs/framework/reflection-and-codedom/reflection.md)  
+ <span data-ttu-id="cc802-106">Описание использования отражения для работы с объектами во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="cc802-106">Describes how to use reflection to work with objects at run time.</span></span>  
   
- [<span data-ttu-id="f56f9-107">Предоставление динамических методов и сборок</span><span class="sxs-lookup"><span data-stu-id="f56f9-107">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
- <span data-ttu-id="f56f9-108">Описание способов создания методов и сборок во время выполнения с помощью Reflection.Emit.</span><span class="sxs-lookup"><span data-stu-id="f56f9-108">Describes how to create methods and assemblies at run time by using Reflection.Emit.</span></span>  
+ [<span data-ttu-id="cc802-107">Предоставление динамических методов и сборок</span><span class="sxs-lookup"><span data-stu-id="cc802-107">Emitting Dynamic Methods and Assemblies</span></span>](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
+ <span data-ttu-id="cc802-108">Описание способов создания методов и сборок во время выполнения с помощью Reflection.Emit.</span><span class="sxs-lookup"><span data-stu-id="cc802-108">Describes how to create methods and assemblies at run time by using Reflection.Emit.</span></span>  
   
- [<span data-ttu-id="f56f9-109">Общие сведения о среде DLR</span><span class="sxs-lookup"><span data-stu-id="f56f9-109">Dynamic Language Runtime Overview</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
- <span data-ttu-id="f56f9-110">Описание возможностей динамической среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="f56f9-110">Describes the features of the dynamic language runtime.</span></span>  
+ [<span data-ttu-id="cc802-109">Общие сведения о среде DLR</span><span class="sxs-lookup"><span data-stu-id="cc802-109">Dynamic Language Runtime Overview</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+ <span data-ttu-id="cc802-110">Описание возможностей динамической среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="cc802-110">Describes the features of the dynamic language runtime.</span></span>  
   
- [<span data-ttu-id="f56f9-111">Динамическое создание и компиляция исходного кода</span><span class="sxs-lookup"><span data-stu-id="f56f9-111">Dynamic Source Code Generation and Compilation</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
- <span data-ttu-id="f56f9-112">Описание способов создания и компиляции динамического исходного кода.</span><span class="sxs-lookup"><span data-stu-id="f56f9-112">Describes how to generate and compile dynamic source code.</span></span>  
+ [<span data-ttu-id="cc802-111">Динамическое создание и компиляция исходного кода</span><span class="sxs-lookup"><span data-stu-id="cc802-111">Dynamic Source Code Generation and Compilation</span></span>](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
+ <span data-ttu-id="cc802-112">Описание способов создания и компиляции динамического исходного кода.</span><span class="sxs-lookup"><span data-stu-id="cc802-112">Describes how to generate and compile dynamic source code.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="f56f9-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="f56f9-113">Related Sections</span></span>  
- [<span data-ttu-id="f56f9-114">Руководство по разработке</span><span class="sxs-lookup"><span data-stu-id="f56f9-114">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
+## <a name="related-sections"></a><span data-ttu-id="cc802-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="cc802-113">Related Sections</span></span>  
+ [<span data-ttu-id="cc802-114">Руководство по разработке</span><span class="sxs-lookup"><span data-stu-id="cc802-114">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
   
- [<span data-ttu-id="f56f9-115">Дополнительные сведения о .NET Framework</span><span class="sxs-lookup"><span data-stu-id="f56f9-115">Advanced Reading for the .NET Framework</span></span>](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [<span data-ttu-id="cc802-115">Дополнительные сведения о .NET Framework</span><span class="sxs-lookup"><span data-stu-id="cc802-115">Advanced Reading for the .NET Framework</span></span>](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)
