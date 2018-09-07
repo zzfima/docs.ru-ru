@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42358
 ms.assetid: 43342515-c3c8-4155-9263-c302afabcbc2
-ms.openlocfilehash: a07955363ea5ca1ca8785c241b0de58149f329ba
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fe820b9d2157c09428903a36427d3ff5e4c0045b
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43745584"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44069620"
 ---
 # <a name="because-this-call-is-not-awaited-the-current-method-continues-to-run-before-the-call-is-completed"></a>Поскольку этот вызов не ожидается, выполнение текущего метода продолжается до завершения вызова.
 Так как этот вызов не ожидается, выполнение существующего метода продолжается до тех пор, пока вызов не будет завершен. Рассмотрите возможность применения оператора Await к результату вызова.  
@@ -117,7 +117,7 @@ ms.locfileid: "43745584"
   
      В представлении **Конструктор** файла MainWindow.xaml появится простое окно, содержащее кнопку и текстовое поле.  
   
-     Дополнительные сведения о конструкторе XAML см. в разделе [Создание пользовательского интерфейса с помощью конструктора XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Сведения о том, как построить собственный простой пользовательский интерфейс, см. в подразделах "Создание приложений WPF" и "Создание простого MainWindow WPF" в разделе [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](https://msdn.microsoft.com/library/25879a6d-fdee-4a38-bc98-bb8c24d16042).  
+     Дополнительные сведения о конструкторе XAML см. в разделе [Создание пользовательского интерфейса с помощью конструктора XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio). Сведения о том, как построить собственный простой пользовательский интерфейс, см. в подразделах "Создание приложений WPF" и "Создание простого MainWindow WPF" в разделе [Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await](../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md).  
   
 4.  Замените код в MainWindow.xaml.vb на приведенный далее.  
   
@@ -203,6 +203,7 @@ ms.locfileid: "43745584"
   
      Ожидаемый результат отобразится в конце кода.  
   
-## <a name="see-also"></a>См. также  
- [Оператор Await](../../../visual-basic/language-reference/operators/await-operator.md)  
- [Асинхронное программирование с использованием ключевых слов Async и Await](../../../visual-basic/programming-guide/concepts/async/index.md)
+## <a name="see-also"></a>См. также
+
+- [Оператор Await](../../../visual-basic/language-reference/operators/await-operator.md)  
+- [Асинхронное программирование с использованием ключевых слов Async и Await](../../../visual-basic/programming-guide/concepts/async/index.md)

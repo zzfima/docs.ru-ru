@@ -11,11 +11,11 @@ helpviewer_keywords:
 - sum operator [Visual Basic]
 ms.assetid: 5694778f-0a2c-4539-8009-f66f318fb46d
 ms.openlocfilehash: 91806c204c313956b292eb9c9be078991f733b4e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777981"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060548"
 ---
 # <a name="-operator-visual-basic"></a>Оператор + (Visual Basic)
 Складывает два числа и возвращает положительное значение числового выражения. Может также использоваться для сцепления двух строковых выражений.  

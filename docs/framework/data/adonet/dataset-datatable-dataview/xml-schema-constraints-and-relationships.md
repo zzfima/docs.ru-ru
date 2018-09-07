@@ -3,11 +3,11 @@ title: Ограничения и отношения схемы XML
 ms.date: 03/30/2017
 ms.assetid: 165bc2bc-60a1-40e0-9b89-7c68ef979079
 ms.openlocfilehash: bcb6e257a40040701612b73768a98e056bccd6c5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872349"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087002"
 ---
 # <a name="xml-schema-constraints-and-relationships"></a>Ограничения и отношения схемы XML
 В схему языка определения схемы XML, можно указать ограничения (unique, key и keyref) и связи (с помощью **msdata: Relationship** заметки). В этом разделе описана интерпретация ограничений и связей, указанных в схеме XML, при формировании набора данных <xref:System.Data.DataSet>.  

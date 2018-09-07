@@ -9,11 +9,11 @@ helpviewer_keywords:
 - timing key-fram animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
 ms.openlocfilehash: d65bf6f7643adf1d98d468853ae8017a4a6554ac
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43892682"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086197"
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>Практическое руководство. Распределение времени для анимации с ключевыми кадрами
 В этом примере показано, как управлять временем ключевые кадры в анимации по полным кадрам. Как и другие виды анимации, имеют покадровой анимации <xref:System.Windows.Media.Animation.Timeline.Duration%2A> свойство. Помимо задания длительности анимации, необходимо указать, какая часть, в течение выделенного для каждого из его ключевых кадров. Чтобы выделить время, необходимо указать <xref:System.Windows.Media.Animation.KeyTime> для каждого ключевого кадра анимации.  

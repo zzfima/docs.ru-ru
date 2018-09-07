@@ -2,12 +2,12 @@
 title: Интегрированная среда разработки Visual Studio и поддержка средств для LINQ (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
-ms.openlocfilehash: d284b47a0745b0c514f5e8c530d649c49b4cfa4f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b6b6cda40da1d54a68fdf924e6bf92efd5dec7a0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038183"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081720"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Интегрированная среда разработки Visual Studio и поддержка средств для LINQ (Visual Basic)
 Интегрированная среда разработки Visual Studio (IDE) предоставляет следующие возможности, поддерживающие разработку приложений LINQ.  
@@ -16,7 +16,7 @@ ms.locfileid: "44038183"
  Реляционный конструктор объектов — это средство визуального проектирования, который можно использовать в [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md) приложений для создания классов в Visual Basic, представляющих реляционные данные в основной базе данных. Дополнительные сведения см. в разделе [Средства LINQ to SQL в Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).  
   
 ## <a name="sqlmetal-command-line-tool"></a>Средство командной строки SQLMetal  
- SQLMetal — это средство командной строки, которое может использоваться в процессах сборки для создания классов из существующей базы данных, предназначенных для работы в приложениях LINQ to SQL. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](https://msdn.microsoft.com/library/819e5a96-7646-4fdb-b14b-fe31221b0614).  
+ SQLMetal — это средство командной строки, которое может использоваться в процессах сборки для создания классов из существующей базы данных, предназначенных для работы в приложениях LINQ to SQL. Дополнительные сведения см. в разделе [SQLMetal.exe (средство создания кода)](../../../../framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="linq-aware-code-editor"></a>Редактор кода с поддержкой LINQ  
  Редактор кода Visual Basic поддерживает LINQ с новой технологии IntelliSense и возможностями форматирования.  

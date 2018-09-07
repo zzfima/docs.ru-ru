@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 5b92eaf56e337b8a8128bb3a0706ecdb76177c0e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8525fa7eca2f61d3091a7597db94247b4701ed19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516831"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086522"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>Устранение неполадок взаимодействия (Visual Basic)
 При взаимодействии между COM и управляемым кодом [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], может появиться один или несколько из следующих распространенных проблем.  
@@ -126,11 +126,12 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
   
  Сборки, которые не являются общими должен находиться рядом друг с другом в каталоге с вызывающим приложением.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Tlbimp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
- [Tlbexp.exe (программа экспорта библиотек типов)](https://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
- [Пошаговое руководство. Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [Оператор Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)  
- [Глобальный кэш сборок](../../../framework/app-domains/gac.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
+- [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)  
+- [Tlbimp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
+- [Tlbexp.exe (программа экспорта библиотек типов)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)  
+- [Пошаговое руководство. Реализация наследования с использованием COM-объектов](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+- [Оператор Inherits](../../../visual-basic/language-reference/statements/inherits-statement.md)  
+- [Глобальный кэш сборок](../../../framework/app-domains/gac.md)

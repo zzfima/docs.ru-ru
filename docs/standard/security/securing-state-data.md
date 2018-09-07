@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 12671309-2877-43fe-a3df-6863507e712d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fe941fff7091fb579e41a3c417dbb2129bcf3e8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c821177ca897e617885425217ac0b6659b5ea6e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580787"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44062577"
 ---
 # <a name="securing-state-data"></a>Обеспечение безопасности данных
 Приложения, работающие с конфиденциальными данными или принимающие любые решения по организации безопасности, должны сохранять эти данные под своим непосредственным управлением и не должны позволять потенциально вредоносному коду напрямую получать доступ к данным. Лучшим способом защиты данных в памяти является объявление этих данных как закрытых или внутренних переменных (с областью, ограниченной той же сборкой). Однако не следует забывать, что даже к этим данным применяются права доступа.  
@@ -28,5 +28,6 @@ ms.locfileid: "33580787"
   
  Убедитесь, что ни один из ваших собственных методов или свойств не предоставляет непреднамеренно эти значения.  
   
-## <a name="see-also"></a>См. также  
- [Правила написания безопасного кода](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>См. также
+
+- [Правила написания безопасного кода](../../../docs/standard/security/secure-coding-guidelines.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 39dd7bfe4e5dd3405e24bf044723dbd92ccc65a3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589832"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44070385"
 ---
 # <a name="encrypting-data"></a>Шифрование данных
 Симметричное и асимметричное шифрования выполняются с использованием различных процессов. Симметричное шифрование выполняется в рамках потоков, поэтому его удобно применять для шифрования больших объемов данных. Асимметричное шифрование выполняется в рамках небольшого числа байтов, поэтому его удобно применять для шифрования только небольших объемов данных.  
@@ -173,7 +173,7 @@ The connection failed.
 ## <a name="asymmetric-encryption"></a>Асимметричное шифрование  
  Асимметричные алгоритмы обычно используются для шифрования малых объемов данных, например для шифрования симметричного ключа и вектора инициализации. Как правило, сторона, осуществляющая асимметричное шифрование, использует открытый ключ, созданный другой стороной. Для этих целей платформа .NET Framework предоставляет класс <xref:System.Security.Cryptography.RSACryptoServiceProvider> .  
   
- В следующем примере сведения об открытом ключе используются для шифрования симметричного ключа и вектора инициализации. Инициализируются два массива байтов, представляющих открытый ключ третьей стороны. Объект <xref:System.Security.Cryptography.RSAParameters> инициализируется с этими значениями. Далее, **RSAParameters** (вместе с представляемым открытым ключом) импортируется в **RSACryptoServiceProvider** с помощью <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> метод. Наконец, выполняется шифрование закрытого ключа и вектора инициализации, созданных классом <xref:System.Security.Cryptography.RijndaelManaged> . В этом примере требуется, чтобы в системе было установлено 128-битное шифрование.  
+ В следующем примере сведения об открытом ключе используются для шифрования симметричного ключа и вектора инициализации. Инициализируются два массива байтов, представляющих открытый ключ третьей стороны. Объект <xref:System.Security.Cryptography.RSAParameters> инициализируется с этими значениями. Далее, **RSAParameters** (вместе с представляемым им открытым ключом) импортируется в **RSACryptoServiceProvider** с помощью <xref:System.Security.Cryptography.RSACryptoServiceProvider.ImportParameters%2A?displayProperty=nameWithType> метод. Наконец, выполняется шифрование закрытого ключа и вектора инициализации, созданных классом <xref:System.Security.Cryptography.RijndaelManaged> . В этом примере требуется, чтобы в системе было установлено 128-битное шифрование.  
   
 ```vb  
 Imports System  
@@ -262,7 +262,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Создание ключей для шифрования и расшифровки](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [Расшифровка данных](../../../docs/standard/security/decrypting-data.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>См. также
+
+- [Создание ключей для шифрования и расшифровки](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [Расшифровка данных](../../../docs/standard/security/decrypting-data.md)  
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

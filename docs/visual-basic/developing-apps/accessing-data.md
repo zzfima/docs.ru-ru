@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data [Visual Basic]
 - Visual Basic, data access
 ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
-ms.openlocfilehash: 2e6cfc3d6d8752b12fa20a357dedfeb1b3346dce
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 220d662576a5f23194dee7e23317bdbb0027546d
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198867"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44098541"
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Доступ к данным в приложениях Visual Basic
 В Visual Basic входит несколько новых возможностей для разработки приложений, обращающихся к данным. Формы с привязкой к данным для приложений Windows создаются путем перетаскивания элементов из [окна "Источники данных"](/visualstudio/data-tools/add-new-data-sources) на форму. Привязка элементов управления к данным осуществляется путем перетаскивания элементов из **окна "Источники данных"** на форму.  
@@ -55,5 +55,4 @@ ms.locfileid: "39198867"
  [ADO.NET](../../framework/data/adonet/index.md)  
  Описание классов ADO.NET, которые предоставляют программистам .NET Framework службы доступа к данным.
 
- [Данные в решениях Office](https://msdn.microsoft.com/library/xx069ybh)  
- Содержит ссылки на страницы с пояснением работы данных в решениях Office, включая информацию о схемо-ориентированном программировании, кэшировании данных и доступе к данным на стороне сервера.
+ [Данные в решениях Office](/visualstudio/vsto/data-in-office-solutions) содержит ссылки на страницы с пояснением работы данных в решениях Office, включая информацию о схемо ориентированном программировании, кэшировании данных и доступа к данным на стороне сервера.

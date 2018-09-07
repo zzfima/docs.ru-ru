@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3db4afb00367f719391193ebce4053cc5da16164
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5cd157f89797406fbe87c3d70c415d7b192d1a9
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588860"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061212"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>Практическое руководство. Хранение асимметричных ключей в контейнере ключей
 Асимметричные закрытые ключи никогда не следует хранить буквальной форме или в формате обычного текста на локальном компьютере. Если необходимо хранить закрытый ключ, следует использовать для этого контейнер ключа. Дополнительные сведения о контейнерах ключей см. в разделе [Общие сведения о контейнерах ключей RSA уровня компьютера и пользователя](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9).  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>Порядок создания асимметричного ключа и сохранения его в контейнере ключей  
   
-1.  Создать новый экземпляр <xref:System.Security.Cryptography.CspParameters> и передайте имя, которое должно вызывать контейнер ключей для <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> поля.  
+1.  Создайте новый экземпляр класса <xref:System.Security.Cryptography.CspParameters> и передайте имя, которое должно вызывать контейнер ключей, в <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> поля.  
   
 2.  Создать новый экземпляр класса, производного от <xref:System.Security.Cryptography.AsymmetricAlgorithm> класса (обычно **RSACryptoServiceProvider** или **DSACryptoServiceProvider**) и передайте ранее созданный  **CspParameters** объекта в его конструктор.  
   
@@ -223,8 +223,9 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Создание ключей для шифрования и расшифровки](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
- [Шифрование данных](../../../docs/standard/security/encrypting-data.md)  
- [Расшифровка данных](../../../docs/standard/security/decrypting-data.md)  
- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>См. также
+
+- [Создание ключей для шифрования и расшифровки](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
+- [Шифрование данных](../../../docs/standard/security/encrypting-data.md)  
+- [Расшифровка данных](../../../docs/standard/security/decrypting-data.md)  
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

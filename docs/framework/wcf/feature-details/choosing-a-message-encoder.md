@@ -3,11 +3,11 @@ title: Выбор кодировщика сообщений
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
 ms.openlocfilehash: 5d2b55f04954cdd855ff9e224d2bc0405919f7a3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773111"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080557"
 ---
 # <a name="choosing-a-message-encoder"></a>Выбор кодировщика сообщений
 В этом разделе описываются критерии выбора одного из кодировщиков сообщений, которые включены в Windows Communication Foundation (WCF): двоичный файл, текст и механизм оптимизации передачи сообщений (MTOM).  

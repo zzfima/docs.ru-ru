@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 51d561009a2f497cf4cf720abd5a414cbbbb2e64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b47be45f00ee03d400383dd45dc6776cff3f816d
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592097"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44060337"
 ---
 # <a name="serialization-guidelines"></a>Правила сериализации
 В настоящем документе перечислены рекомендации, которые следует учитывать при разработке сериализуемого API.  
@@ -138,11 +138,12 @@ ms.locfileid: "33592097"
      [!code-csharp[SerializationGuidelines#11](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#11)]
      [!code-vb[SerializationGuidelines#11](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#11)]  
   
-## <a name="see-also"></a>См. также  
- [Использование контрактов данных](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Сериализатор контракта данных](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
- [Типы, поддерживаемые сериализатором контракта данных](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
- [Двоичная сериализация](binary-serialization.md)  
- [Удаленные объекты](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
- [Сериализация XML и SOAP](xml-and-soap-serialization.md)  
- [Безопасность и сериализация](../../../docs/framework/misc/security-and-serialization.md)
+## <a name="see-also"></a>См. также
+
+- [Использование контрактов данных](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
+- [Сериализатор контракта данных](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)  
+- [Типы, поддерживаемые сериализатором контракта данных](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)  
+- [Двоичная сериализация](binary-serialization.md)  
+- [Удаленные объекты](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+- [Сериализация XML и SOAP](xml-and-soap-serialization.md)  
+- [Безопасность и сериализация](../../../docs/framework/misc/security-and-serialization.md)

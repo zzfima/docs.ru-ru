@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed6b96bb05c52de4bfd8b6ad6b972c9d22ca66da
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e6a8a1dcdcb8fa3311b040c72987f0f76e681fc
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570491"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086476"
 ---
 # <a name="naming-parameters"></a>Именование параметров
-Помимо очевидной причине удобочитаемость необходимо придерживаться следующих правил имена параметров, поскольку параметры отображаются в документации и в конструкторе при средства визуального проектирования предоставляют Intellisense и функции просмотра классов.  
+Помимо очевидная причина восприятия очень важно следовать рекомендациям для имен параметров, так как параметры отображаются в документации и в конструкторе, когда средства визуального проектирования предоставляют Intellisense и функции просмотра классов.  
   
  **✓ DO** использовать camelCasing в именах параметров.  
   
@@ -33,10 +33,11 @@ ms.locfileid: "33570491"
   
  **X DO NOT** использования сокращений и числовые индексы для оператора перегрузки имена параметров.  
   
- *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
+ *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*  
   
-## <a name="see-also"></a>См. также  
- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
- [Правила именования](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>См. также
+
+- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Правила именования](../../../docs/standard/design-guidelines/naming-guidelines.md)

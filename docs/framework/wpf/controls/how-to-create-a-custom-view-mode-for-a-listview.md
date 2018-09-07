@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
 ms.openlocfilehash: 239fb2e9a364bd0265ff7cf644ee296878280cf3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799714"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081812"
 ---
 # <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Практическое руководство. Создание пользовательского режима представления для ListView
 В этом примере показано, как можно создавать пользовательские <xref:System.Windows.Controls.ListView.View%2A> режим для <xref:System.Windows.Controls.ListView> элемента управления.  
