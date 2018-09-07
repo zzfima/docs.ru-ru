@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 5926da78a470911af3d8b068107f637406cb0eb9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4e4cc7b3a0249836e6c0960208c0158962088c11
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43391156"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861937"
 ---
 # <a name="c-keywords"></a>Ключевые слова C#
 Ключевые слова — это предварительно определенные зарезервированные идентификаторы, которые имеют специальные значения для компилятора. Их нельзя использовать как идентификаторы в программах без префикса `@`. Например, допустимым идентификатором является `@if`, но не `if`, поскольку `if` является ключевым словом.  
@@ -49,15 +49,16 @@ ms.locfileid: "43391156"
   
 ||||  
 |---|---|---|  
-|[add](../../../csharp/language-reference/keywords/add.md)|[alias](../../../csharp/language-reference/keywords/extern-alias.md)|[ascending](../../../csharp/language-reference/keywords/ascending.md)|  
-|[async](../../../csharp/language-reference/keywords/async.md)|[await](../../../csharp/language-reference/keywords/await.md)|[descending](../../../csharp/language-reference/keywords/descending.md)|  
-|[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|[from](../../../csharp/language-reference/keywords/from-clause.md)|[get](../../../csharp/language-reference/keywords/get.md)|  
-|[global](../../../csharp/language-reference/keywords/global.md)|[group](../../../csharp/language-reference/keywords/group-clause.md)|[into](../../../csharp/language-reference/keywords/into.md)|  
-|[join](../../../csharp/language-reference/keywords/join-clause.md)|[let](../../../csharp/language-reference/keywords/let-clause.md)|[nameof](nameof.md)|   
-|[orderby](../../../csharp/language-reference/keywords/orderby-clause.md)|[partial (тип)](../../../csharp/language-reference/keywords/partial-type.md)|[partial (метод)](../../../csharp/language-reference/keywords/partial-method.md)|   
-|[remove](../../../csharp/language-reference/keywords/remove.md)|[select](../../../csharp/language-reference/keywords/select-clause.md)|[set](../../../csharp/language-reference/keywords/set.md)|   
-|[value](../../../csharp/language-reference/keywords/value.md)|[var](../../../csharp/language-reference/keywords/var.md)|[when (условие фильтра)](when.md)|   
-|[where (ограничение универсального типа)](../../../csharp/language-reference/keywords/where-generic-type-constraint.md)|[where (предложение запроса)](../../../csharp/language-reference/keywords/where-clause.md)|[yield](../../../csharp/language-reference/keywords/yield.md)|  
+|[add](add.md)|[alias](extern-alias.md)|[ascending](ascending.md)|
+|[async](async.md)|[await](await.md)|[by](by.md)|
+|[descending](descending.md)|[dynamic](dynamic.md)|[equals](equals.md)|
+|[from](from-clause.md)|[get](get.md)|[global](global.md)|
+|[group](group-clause.md)|[into](into.md)|[join](join-clause.md)|
+|[let](let-clause.md)|[nameof](nameof.md)|[on](on.md)|
+|[orderby](orderby-clause.md)|[partial (тип)](partial-type.md)|[partial (метод)](partial-method.md)|
+|[remove](remove.md)|[select](select-clause.md)|[set](set.md)|
+|[value](value.md)|[var](var.md)|[when (условие фильтра)](when.md)|
+|[where (ограничение универсального типа)](where-generic-type-constraint.md)|[where (предложение запроса)](where-clause.md)|[yield](yield.md)|
   
 ## <a name="see-also"></a>См. также
 

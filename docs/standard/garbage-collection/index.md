@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d820783b931195bf62b75ea76d7d0573289bab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f61b63f78ea3c6131d4d1ab4e421be25149035b
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573689"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43876123"
 ---
 # <a name="garbage-collection"></a>Сборка мусора
 Сборщик мусора .NET управляет выделением и освобождением памяти для приложения. При каждом создании объекта среда CLR выделяет память для объекта из управляемой кучи. Пока в управляемой куче есть доступное адресное пространство, среда выполнения продолжает выделять пространство для новых объектов. Тем не менее ресурсы памяти не безграничны. В конечном счете сборщику мусора необходимо выполнить сбор, чтобы освободить память. Механизм оптимизации сборщика мусора определяет наилучшее время для выполнения сбора, основываясь на выполненных операциях выделения памяти. Когда сборщик мусора выполняет сборку, он проверяет наличие объектов в управляемой куче, которые больше не используются приложением, а затем выполняет необходимые операции, чтобы освободить память.  
@@ -61,5 +61,6 @@ ms.locfileid: "33573689"
   
  <xref:System.IDisposable?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>См. также  
- [Очистка неуправляемых ресурсов](../../../docs/standard/garbage-collection/unmanaged.md)
+## <a name="see-also"></a>См. также
+
+- [Очистка неуправляемых ресурсов](../../../docs/standard/garbage-collection/unmanaged.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a278940528966e32646a3551b4c133223de9746e
-ms.sourcegitcommit: 640cee8fc5d256cdd80e5b80240469feac10499e
+ms.openlocfilehash: 263e6394a57ec3e7ef00eb79671d9b8ac47e724f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36298348"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "43883785"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Обработка и создание исключений в .NET
 
@@ -60,13 +60,13 @@ ms.locfileid: "36298348"
 
 ## <a name="see-also"></a>См. также
 
-[Класс Exception и его свойства](exception-class-and-properties.md)  
-[Практическое руководство. Использование пробного блока и блока перехвата для перехвата исключений](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
-[Практическое руководство. Использование определенных исключений в блоке catch](how-to-use-specific-exceptions-in-a-catch-block.md)  
-[Практическое руководство. Явное создание исключений](how-to-explicitly-throw-exceptions.md)  
-[Практическое руководство. Создание пользовательских исключений](how-to-create-user-defined-exceptions.md)  
-[Использование обработчиков исключений с пользовательской фильтрацией](using-user-filtered-exception-handlers.md)  
-[Практическое руководство. Использование блоков Finally](how-to-use-finally-blocks.md)  
-[Обработка исключений COM-взаимодействия](handling-com-interop-exceptions.md)  
-[Рекомендации по обработке исключений](best-practices-for-exceptions.md)  
-[What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Что нужно знать всем разработчикам об исключениях в среде выполнения).
+- [Класс Exception и его свойства](exception-class-and-properties.md)  
+- [Практическое руководство. Использование пробного блока и блока перехвата для перехвата исключений](how-to-use-the-try-catch-block-to-catch-exceptions.md)  
+- [Практическое руководство. Использование определенных исключений в блоке catch](how-to-use-specific-exceptions-in-a-catch-block.md)  
+- [Практическое руководство. Явное создание исключений](how-to-explicitly-throw-exceptions.md)  
+- [Практическое руководство. Создание пользовательских исключений](how-to-create-user-defined-exceptions.md)  
+- [Использование обработчиков исключений с пользовательской фильтрацией](using-user-filtered-exception-handlers.md)  
+- [Практическое руководство. Использование блоков Finally](how-to-use-finally-blocks.md)  
+- [Обработка исключений COM-взаимодействия](handling-com-interop-exceptions.md)  
+- [Рекомендации по обработке исключений](best-practices-for-exceptions.md)  
+- [What Every Dev needs to Know About Exceptions in the Runtime](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md) (Что нужно знать всем разработчикам об исключениях в среде выполнения).

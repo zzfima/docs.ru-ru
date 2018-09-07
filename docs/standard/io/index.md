@@ -13,11 +13,11 @@ ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43556939"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44061238"
 ---
 # <a name="file-and-stream-io"></a>Файловый и потоковый ввод-вывод
 Файловый и потоковый ввод-вывод относятся к передаче данных с носителя информации или на него. В .NET Framework пространства имен `System.IO` содержат типы, которые обеспечивают как синхронные, так и асинхронные операции чтения и записи для потоков и файлов. Кроме того, эти пространства имен содержат типы, выполняющие сжатие и распаковку файлов, а также типы, которые обеспечивают взаимодействие через каналы и последовательные порты.  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - directories [Visual Studio], processing
 ms.assetid: f1db14c8-a4fd-4d0b-8323-c7cb29d688c2
 ms.openlocfilehash: 0c9c1c787138595f725316a580acda9c5d4d43a9
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777568"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863628"
 ---
 # <a name="processing-drives-directories-and-files-visual-basic"></a>Операции с дисками, папками и файлами (Visual Basic)
 Visual Basic можно использовать для обработки дисков, папок и файлов с помощью объекта `My.Computer.FileSystem`, который обеспечивает лучшую производительность и проще в использовании, чем традиционные методы, такие как `FileOpen` и `Write` (хотя они по-прежнему доступны). Эти методы подробно обсуждаются в следующих разделах.  
