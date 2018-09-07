@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25fe93b63c518f54ee72300f26dfcb3f3ad21d76
-ms.sourcegitcommit: b6baf91310f6867223f0f32d596b451592b917b5
+ms.openlocfilehash: 0541f100f208543c796de7238e68ea6f90c7b299
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "33575353"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44077113"
 ---
 # <a name="names-of-type-members"></a>Имена членов типа
 Типы состоят из элементов: методов, свойств, событий, конструкторов и полей. В следующих разделах приведены рекомендации по именованию элементов типа.  
@@ -102,6 +102,7 @@ public class Control {
   
  *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*  
   
-## <a name="see-also"></a>См. также  
- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
- [Правила именования](../../../docs/standard/design-guidelines/naming-guidelines.md)
+## <a name="see-also"></a>См. также
+
+- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)  
+- [Правила именования](../../../docs/standard/design-guidelines/naming-guidelines.md)
