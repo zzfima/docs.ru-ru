@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 114d24c1fc523d5501deb4aa17f9541c5a918276
-ms.sourcegitcommit: c66ba2df2d2ecfb214f85ee0687d298e4941c1a8
+ms.openlocfilehash: 67a5ffe2075618020f3ab9f801852a1a97fc74d2
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "33574651"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44072172"
 ---
 # <a name="writing-custom-attributes"></a>Написание настраиваемых атрибутов
 Чтобы создавать собственные атрибуты, совсем не обязательно в совершенстве овладевать множеством новых понятий. Если вы знакомы с объектно-ориентированным программированием и знаете, как создавать классы, вы уже обладаете почти всеми нужными знаниями. Настраиваемые атрибуты — это традиционные классы, прямо или косвенно наследующие от <xref:System.Attribute?displayProperty=nameWithType>. Подобно традиционным классам настраиваемые атрибуты содержат методы, хранящие и извлекающие данные.  
@@ -148,7 +148,8 @@ ms.locfileid: "33574651"
   
  В первом примере этот атрибут применяется только с обязательными именованными параметрами, а во втором примере атрибут применяется и с обязательными, и с необязательными параметрами.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Attribute?displayProperty=nameWithType>  
- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
- [Атрибуты](../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Attribute?displayProperty=nameWithType>  
+- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
+- [Атрибуты](../../../docs/standard/attributes/index.md)
