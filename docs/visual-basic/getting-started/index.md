@@ -5,12 +5,12 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-ms.openlocfilehash: 9d51aca4c7ad491c0b807ef6a40cb2581f97355b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 373f5815e1ca466545da4e2368bdf55e944d28f8
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589845"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44173318"
 ---
 # <a name="get-started-with-visual-basic"></a>Начало работы с Visual Basic
 Этот раздел документации помогает начать разработку приложений на Visual Basic.  
@@ -65,5 +65,5 @@ ms.locfileid: "33589845"
  [Visual C++](/cpp/)  
  Ссылки на документацию по Visual C++.  
   
- [Office and SharePoint Development](https://msdn.microsoft.com/library/d2tx7z6d) (Разработка приложений Office и SharePoint)  
+ [Office and SharePoint Development](/visualstudio/vsto/office-and-sharepoint-development-in-visual-studio) (Разработка приложений Office и SharePoint)  
  Сведения об использовании Microsoft Office и Visual Studio в рамках бизнес-приложения.

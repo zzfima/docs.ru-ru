@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfa44187d846c72f0dfd4fb131cacbe41648dd32
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: abb38e4f084575665954bc514584feed760b0666
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33579812"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207646"
 ---
 # <a name="standard-date-and-time-format-strings"></a>Строки стандартных форматов даты и времени
 Строка стандартного формата даты и времени использует один описатель формата для определения текстового представления значения даты и времени. Любая строка формата даты и времени, содержащая более одного символа, включая пробел, интерпретируется как строка настраиваемого формата даты и времени. Дополнительные сведения см. в разделе [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Строку стандартного или пользовательского формата можно использовать двумя способами:  
@@ -413,9 +413,10 @@ ms.locfileid: "33579812"
 ### <a name="datetimeformatinfo-properties"></a>Свойства DateTimeFormatInfo  
  На форматирование влияют свойства текущего объекта <xref:System.Globalization.DateTimeFormatInfo>, которые задаются либо неявно, языком и региональными параметрами текущего потока, либо явно, параметром <xref:System.IFormatProvider> метода, который вызывает форматирование. Для параметра <xref:System.IFormatProvider> приложение должно указать объект <xref:System.Globalization.CultureInfo>, представляющий региональные параметры, или объект <xref:System.Globalization.DateTimeFormatInfo>, представляющий соглашения о форматировании даты и времени для конкретных региональных параметров. Многие спецификаторы стандартных форматов даты и времени являются псевдонимами для шаблонов форматирования, которые определены свойствами текущего объекта <xref:System.Globalization.DateTimeFormatInfo>. Приложение может изменить результат, полученный некоторыми спецификаторами стандартных форматов даты и времени, изменив соответствующие шаблоны форматирования соответствующего свойства <xref:System.Globalization.DateTimeFormatInfo>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.DateTime?displayProperty=nameWithType>  
- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
- [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
- [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Пример. Служебная программа форматирования для .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>См. также
+
+- <xref:System.DateTime?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset?displayProperty=nameWithType>  
+- [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
+- [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+- [Пример. Служебная программа форматирования для .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
