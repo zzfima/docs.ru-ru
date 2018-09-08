@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 2f641d04b53d2e80985defcd6bd9a4882004fd97
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 6c5f7d288d805a6a25afa9a5b32a4550aaa76ec3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868015"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44221939"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Пошаговое руководство. Написание запросов в Visual Basic
 В этом пошаговом руководстве показано, как можно использовать возможности языка Visual Basic для написания [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] выражений запросов. В примере демонстрируются способы создания запросов к списку объектов Student, как выполнять запросы и об их изменении. Запросы включают в себя несколько функций, включая инициализаторы объектов, вывод локального типа и анонимные типы.  
@@ -134,20 +134,21 @@ ms.locfileid: "43868015"
 ## <a name="additional-information"></a>Дополнительные сведения  
  После ознакомления с основными принципами работы с запросами, вы будете готовы прочитать документацию и примеры для конкретного типа [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] поставщика, которые вас интересуют:  
   
- [LINQ to Objects](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)  
+ [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
   
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
- [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)  
+ [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
-## <a name="see-also"></a>См. также  
- [Синтаксис LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
- [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Инициализаторы объектов. Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Запросы](../../../../visual-basic/language-reference/queries/index.md)
+## <a name="see-also"></a>См. также
+
+- [Синтаксис LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
+- [Приступая к работе с LINQ в Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
+- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+- [Инициализаторы объектов. Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+- [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Запросы](../../../../visual-basic/language-reference/queries/index.md)

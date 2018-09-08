@@ -10,11 +10,11 @@ helpviewer_keywords:
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
 ms.openlocfilehash: a1006816168e405d0d79786b8430b802f1ec0928
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44060350"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216637"
 ---
 # <a name="freezable-objects-overview"></a>Общие сведения об объектах класса Freezable
 В этом разделе описывается, как эффективно использовать и создавать <xref:System.Windows.Freezable> объекты, которые предоставляют специальные функции, которые могут помочь повысить производительность приложения. Объекты freezable примеры кисти, перья, преобразования, геометрии и анимации.  

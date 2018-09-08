@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
 ms.openlocfilehash: 47833e734c09e402ab1824b9c629b2ba39acfb9f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076392"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44221731"
 ---
 # <a name="how-to-display-pop-up-help"></a>Практическое руководство. Отображение всплывающей справки
 Один из способов отображения справки в Windows Forms — через **помочь** кнопки, расположенной в правой части строки заголовка, доступной через <xref:System.Windows.Forms.Form.HelpButton%2A> свойство. Этот способ вывода справки хорошо подходит при работе с диалоговыми окнами. Модальные диалоговые окна (с методом <xref:System.Windows.Forms.Form.ShowDialog%2A>) затрудняют работу внешних справочных систем, так как их нужно закрывать, чтобы перенести фокус на другое окно. Кроме того, с помощью **помочь** кнопку требует отсутствия не **свернуть** кнопку или **развернуть** кнопки в строке заголовка. Это стандартное соглашение стандартным диалоговым окном, формах обычно есть **свернуть** и **развернуть** кнопки.  
