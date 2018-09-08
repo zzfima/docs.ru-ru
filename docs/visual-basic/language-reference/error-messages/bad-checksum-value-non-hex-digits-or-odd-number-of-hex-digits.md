@@ -7,30 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - BC42033
 ms.assetid: 4575554d-3615-46e4-9c6a-18e9c338e4ed
-ms.openlocfilehash: 5c01e918e1f607febc10be89c3d27c50870c401a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e682c2c23dd6fe80aee87d2a86b3df2dae66b802
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589255"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213083"
 ---
-# <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a><span data-ttu-id="1b853-102">Неверное значение контрольной суммы, не шестнадцатеричные цифры или нечетное число шестнадцатеричных цифр</span><span class="sxs-lookup"><span data-stu-id="1b853-102">Bad checksum value, non hex digits or odd number of hex digits</span></span>
-<span data-ttu-id="1b853-103">Значение контрольной суммы содержит недопустимые шестнадцатеричные цифры или содержит нечетное число цифр.</span><span class="sxs-lookup"><span data-stu-id="1b853-103">A checksum value contains invalid hexadecimal digits or has an odd number of digits.</span></span>  
+# <a name="bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits"></a><span data-ttu-id="8c628-102">Неверное значение контрольной суммы, не шестнадцатеричные цифры или нечетное число шестнадцатеричных цифр</span><span class="sxs-lookup"><span data-stu-id="8c628-102">Bad checksum value, non hex digits or odd number of hex digits</span></span>
+<span data-ttu-id="8c628-103">Значение контрольной суммы содержит недопустимые шестнадцатеричные цифры или содержит нечетное число цифр.</span><span class="sxs-lookup"><span data-stu-id="8c628-103">A checksum value contains invalid hexadecimal digits or has an odd number of digits.</span></span>  
   
- <span data-ttu-id="1b853-104">Когда среда ASP.NET создает исходный файл Visual Basic (с расширением VB), она вычисляет контрольную сумму и помещает ее в скрытый исходный файл под идентификатором `#externalchecksum`.</span><span class="sxs-lookup"><span data-stu-id="1b853-104">When ASP.NET generates a Visual Basic source file (extension .vb), it calculates a checksum and places it in a hidden source file identified by `#externalchecksum`.</span></span> <span data-ttu-id="1b853-105">Это также может сделать и пользователь, создающий файл VB, однако лучше оставить выполнение этого процесса внутренним механизмам.</span><span class="sxs-lookup"><span data-stu-id="1b853-105">It is possible for a user generating a .vb file to do this also, but this process is best left to internal use.</span></span>  
+ <span data-ttu-id="8c628-104">Когда среда ASP.NET создает исходный файл Visual Basic (с расширением VB), она вычисляет контрольную сумму и помещает ее в скрытый исходный файл под идентификатором `#externalchecksum`.</span><span class="sxs-lookup"><span data-stu-id="8c628-104">When ASP.NET generates a Visual Basic source file (extension .vb), it calculates a checksum and places it in a hidden source file identified by `#externalchecksum`.</span></span> <span data-ttu-id="8c628-105">Это также может сделать и пользователь, создающий файл VB, однако лучше оставить выполнение этого процесса внутренним механизмам.</span><span class="sxs-lookup"><span data-stu-id="8c628-105">It is possible for a user generating a .vb file to do this also, but this process is best left to internal use.</span></span>  
   
- <span data-ttu-id="1b853-106">По умолчанию данное сообщение является предупреждением.</span><span class="sxs-lookup"><span data-stu-id="1b853-106">By default, this message is a warning.</span></span> <span data-ttu-id="1b853-107">Сведения о сокрытии предупреждений или обработке предупреждений как ошибок см. в разделе [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="1b853-107">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
+ <span data-ttu-id="8c628-106">По умолчанию данное сообщение является предупреждением.</span><span class="sxs-lookup"><span data-stu-id="8c628-106">By default, this message is a warning.</span></span> <span data-ttu-id="8c628-107">Сведения о сокрытии предупреждений или обработке предупреждений как ошибок см. в разделе [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span><span class="sxs-lookup"><span data-stu-id="8c628-107">For information on hiding warnings or treating warnings as errors, see [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).</span></span>  
   
- <span data-ttu-id="1b853-108">**Идентификатор ошибки:** BC42033</span><span class="sxs-lookup"><span data-stu-id="1b853-108">**Error ID:** BC42033</span></span>  
+ <span data-ttu-id="8c628-108">**Идентификатор ошибки:** BC42033</span><span class="sxs-lookup"><span data-stu-id="8c628-108">**Error ID:** BC42033</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="1b853-109">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="1b853-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="8c628-109">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="8c628-109">To correct this error</span></span>  
   
-1.  <span data-ttu-id="1b853-110">Если ASP.NET создает исходный файл Visual Basic, перезапустите сборку проекта.</span><span class="sxs-lookup"><span data-stu-id="1b853-110">If ASP.NET is generating the Visual Basic source file, restart the project build.</span></span>  
+1.  <span data-ttu-id="8c628-110">Если ASP.NET создает исходный файл Visual Basic, перезапустите сборку проекта.</span><span class="sxs-lookup"><span data-stu-id="8c628-110">If ASP.NET is generating the Visual Basic source file, restart the project build.</span></span>  
   
-2.  <span data-ttu-id="1b853-111">Если предупреждение продолжает выводиться после перезапуска, переустановите ASP.NET и повторите попытку сборки.</span><span class="sxs-lookup"><span data-stu-id="1b853-111">If this warning persists after restarting, reinstall ASP.NET and try the build again.</span></span>  
+2.  <span data-ttu-id="8c628-111">Если предупреждение продолжает выводиться после перезапуска, переустановите ASP.NET и повторите попытку сборки.</span><span class="sxs-lookup"><span data-stu-id="8c628-111">If this warning persists after restarting, reinstall ASP.NET and try the build again.</span></span>  
   
-3.  <span data-ttu-id="1b853-112">Если предупреждение не пропадает или вы не используете ASP.NET, соберите сведения об условиях ее возникновения и уведомите службу технической поддержки Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="1b853-112">If the warning still persists, or if you are not using ASP.NET, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>  
+3.  <span data-ttu-id="8c628-112">Если предупреждение не пропадает или вы не используете ASP.NET, соберите сведения об условиях ее возникновения и уведомите службу технической поддержки Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="8c628-112">If the warning still persists, or if you are not using ASP.NET, gather information about the circumstances and notify Microsoft Product Support Services.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b853-113">См. также</span><span class="sxs-lookup"><span data-stu-id="1b853-113">See Also</span></span>  
- [<span data-ttu-id="1b853-114">Обзор ASP.NET</span><span class="sxs-lookup"><span data-stu-id="1b853-114">ASP.NET Overview</span></span>](https://msdn.microsoft.com/library/4w3ex9c2.aspx)  
- [<span data-ttu-id="1b853-115">Обращайтесь к нам</span><span class="sxs-lookup"><span data-stu-id="1b853-115">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)
+## <a name="see-also"></a><span data-ttu-id="8c628-113">См. также</span><span class="sxs-lookup"><span data-stu-id="8c628-113">See also</span></span>
+
+- [<span data-ttu-id="8c628-114">Обзор ASP.NET</span><span class="sxs-lookup"><span data-stu-id="8c628-114">ASP.NET Overview</span></span>](/aspnet/overview)  
+- [<span data-ttu-id="8c628-115">Обращайтесь к нам</span><span class="sxs-lookup"><span data-stu-id="8c628-115">Talk to Us</span></span>](/visualstudio/ide/talk-to-us)

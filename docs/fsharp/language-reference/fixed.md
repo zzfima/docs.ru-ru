@@ -3,33 +3,33 @@ title: 'Ключевое слово Fixed (F #)'
 description: 'Узнайте, как «закрепить» локальный в стек для предотвращения коллекции с помощью F # «fixed» ключевое слово.'
 ms.date: 04/24/2017
 ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44039299"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201417"
 ---
-# <a name="the-fixed-keyword"></a><span data-ttu-id="d9c3f-103">Ключевое слово Fixed</span><span class="sxs-lookup"><span data-stu-id="d9c3f-103">The Fixed Keyword</span></span>
+# <a name="the-fixed-keyword"></a><span data-ttu-id="319ca-103">Ключевое слово Fixed</span><span class="sxs-lookup"><span data-stu-id="319ca-103">The Fixed Keyword</span></span>
 
-<span data-ttu-id="d9c3f-104">Введение в F # 4.1 `fixed` ключевое слово, которое позволяет «закрепить» локальный в стек для предотвращения ее собранные или перемещен во время сбора мусора.</span><span class="sxs-lookup"><span data-stu-id="d9c3f-104">F# 4.1 introduces the `fixed` keyword, which allows you to "pin" a local onto the stack to prevent it from being collected or moved during garbage-collection.</span></span>  <span data-ttu-id="d9c3f-105">Он используется для низкоуровневых сценариев программирования.</span><span class="sxs-lookup"><span data-stu-id="d9c3f-105">It is used for low-level programming scenarios.</span></span>
+<span data-ttu-id="319ca-104">Введение в F # 4.1 `fixed` ключевое слово, которое позволяет «закрепить» локальный в стек для предотвращения ее собранные или перемещен во время сбора мусора.</span><span class="sxs-lookup"><span data-stu-id="319ca-104">F# 4.1 introduces the `fixed` keyword, which allows you to "pin" a local onto the stack to prevent it from being collected or moved during garbage-collection.</span></span>  <span data-ttu-id="319ca-105">Он используется для низкоуровневых сценариев программирования.</span><span class="sxs-lookup"><span data-stu-id="319ca-105">It is used for low-level programming scenarios.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="d9c3f-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d9c3f-106">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="319ca-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="319ca-106">Syntax</span></span>
 
 ```fsharp
 use ptr = fixed expression
 ```
 
-## <a name="remarks"></a><span data-ttu-id="d9c3f-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="d9c3f-107">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="319ca-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="319ca-107">Remarks</span></span>
 
-<span data-ttu-id="d9c3f-108">При этом расширяется синтаксис выражений для извлечения указатель и связывание его с именем которой предотвращается собранные или перемещается во время сбора мусора.</span><span class="sxs-lookup"><span data-stu-id="d9c3f-108">This extends the syntax of expressions to allow extracting a pointer and binding it to a name which is prevented from being collected or moved during garbage-collection.</span></span>  
+<span data-ttu-id="319ca-108">При этом расширяется синтаксис выражений для извлечения указатель и связывание его с именем которой предотвращается собранные или перемещается во время сбора мусора.</span><span class="sxs-lookup"><span data-stu-id="319ca-108">This extends the syntax of expressions to allow extracting a pointer and binding it to a name which is prevented from being collected or moved during garbage-collection.</span></span>  
 
-<span data-ttu-id="d9c3f-109">Указатель на основе выражения является фиксированным через `fixed` ключевое слово привязывается к идентификатору с помощью `use` ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="d9c3f-109">A pointer from an expression is fixed via the `fixed` keyword is bound to an identifier via the `use` keyword.</span></span>  <span data-ttu-id="d9c3f-110">Это семантика аналогичную управление ресурсами с помощью `use` ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="d9c3f-110">The semantics of this are similar to resource management via the `use` keyword.</span></span>  <span data-ttu-id="d9c3f-111">Указатель является фиксированным, пока он находится в области, и когда она выходит из области действия, он больше не является фиксированным.</span><span class="sxs-lookup"><span data-stu-id="d9c3f-111">The pointer is fixed while it is in scope, and once it is out of scope, it is no longer fixed.</span></span>  <span data-ttu-id="d9c3f-112">`fixed` нельзя использовать вне контекста `use` привязки.</span><span class="sxs-lookup"><span data-stu-id="d9c3f-112">`fixed` cannot be used outside the context of a `use` binding.</span></span>  <span data-ttu-id="d9c3f-113">Необходимо привязать указатель к имени с `use`.</span><span class="sxs-lookup"><span data-stu-id="d9c3f-113">You must bind the pointer to a name with `use`.</span></span>
+<span data-ttu-id="319ca-109">Указатель на основе выражения является фиксированным через `fixed` ключевое слово привязывается к идентификатору с помощью `use` ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="319ca-109">A pointer from an expression is fixed via the `fixed` keyword is bound to an identifier via the `use` keyword.</span></span>  <span data-ttu-id="319ca-110">Это семантика аналогичную управление ресурсами с помощью `use` ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="319ca-110">The semantics of this are similar to resource management via the `use` keyword.</span></span>  <span data-ttu-id="319ca-111">Указатель является фиксированным, пока он находится в области, и когда она выходит из области действия, он больше не является фиксированным.</span><span class="sxs-lookup"><span data-stu-id="319ca-111">The pointer is fixed while it is in scope, and once it is out of scope, it is no longer fixed.</span></span>  <span data-ttu-id="319ca-112">`fixed` нельзя использовать вне контекста `use` привязки.</span><span class="sxs-lookup"><span data-stu-id="319ca-112">`fixed` cannot be used outside the context of a `use` binding.</span></span>  <span data-ttu-id="319ca-113">Необходимо привязать указатель к имени с `use`.</span><span class="sxs-lookup"><span data-stu-id="319ca-113">You must bind the pointer to a name with `use`.</span></span>
 
-<span data-ttu-id="d9c3f-114">Использование `fixed` должно находиться в пределах выражения в функции или метода.</span><span class="sxs-lookup"><span data-stu-id="d9c3f-114">Use of `fixed` must occur within an expression in a function or a method.</span></span>  <span data-ttu-id="d9c3f-115">Он не может использоваться в области сценария уровня или уровня модуля.</span><span class="sxs-lookup"><span data-stu-id="d9c3f-115">It cannot be used at a script-level or module-level scope.</span></span>
+<span data-ttu-id="319ca-114">Использование `fixed` должно находиться в пределах выражения в функции или метода.</span><span class="sxs-lookup"><span data-stu-id="319ca-114">Use of `fixed` must occur within an expression in a function or a method.</span></span>  <span data-ttu-id="319ca-115">Он не может использоваться в области сценария уровня или уровня модуля.</span><span class="sxs-lookup"><span data-stu-id="319ca-115">It cannot be used at a script-level or module-level scope.</span></span>
 
-<span data-ttu-id="d9c3f-116">Как и весь код указатель это является небезопасный функцией и выдает предупреждение при использовании.</span><span class="sxs-lookup"><span data-stu-id="d9c3f-116">Like all pointer code, this is an unsafe feature and will emit a warning when used.</span></span>
+<span data-ttu-id="319ca-116">Как и весь код указатель это является небезопасный функцией и выдает предупреждение при использовании.</span><span class="sxs-lookup"><span data-stu-id="319ca-116">Like all pointer code, this is an unsafe feature and will emit a warning when used.</span></span>
 
-## <a name="example"></a><span data-ttu-id="d9c3f-117">Пример</span><span class="sxs-lookup"><span data-stu-id="d9c3f-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="319ca-117">Пример</span><span class="sxs-lookup"><span data-stu-id="319ca-117">Example</span></span>
 
 ```fsharp
 open Microsoft.FSharp.NativeInterop
@@ -61,6 +61,6 @@ let doPointerWork() =
 doPointerWork()
 ```
 
-## <a name="see-also"></a><span data-ttu-id="d9c3f-118">См. также</span><span class="sxs-lookup"><span data-stu-id="d9c3f-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="319ca-118">См. также</span><span class="sxs-lookup"><span data-stu-id="319ca-118">See also</span></span>
 
-- [<span data-ttu-id="d9c3f-119">Nativeptr-модуль</span><span class="sxs-lookup"><span data-stu-id="d9c3f-119">NativePtr Module</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
+- [<span data-ttu-id="319ca-119">Nativeptr-модуль</span><span class="sxs-lookup"><span data-stu-id="319ca-119">NativePtr Module</span></span>](https://msdn.microsoft.com/visualfsharpdocs/conceptual/nativeinterop.nativeptr-module-%5Bfsharp%5D)
