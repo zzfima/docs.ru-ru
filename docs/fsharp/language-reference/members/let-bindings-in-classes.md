@@ -3,17 +3,17 @@ title: Привязки let в классах (F#)
 description: 'Узнайте, как определять закрытые поля и закрытые функции для классов F # с помощью привязок «let» в определении класса.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43866797"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44186023"
 ---
-# <a name="let-bindings-in-classes"></a><span data-ttu-id="4ec83-103">Привязки let в классах</span><span class="sxs-lookup"><span data-stu-id="4ec83-103">let Bindings in Classes</span></span>
+# <a name="let-bindings-in-classes"></a><span data-ttu-id="60e34-103">Привязки let в классах</span><span class="sxs-lookup"><span data-stu-id="60e34-103">let Bindings in Classes</span></span>
 
-<span data-ttu-id="4ec83-104">Закрытые поля и закрытые функции для классов F # можно определить с помощью `let` привязок в определении класса.</span><span class="sxs-lookup"><span data-stu-id="4ec83-104">You can define private fields and private functions for F# classes by using `let` bindings in the class definition.</span></span>
+<span data-ttu-id="60e34-104">Закрытые поля и закрытые функции для классов F # можно определить с помощью `let` привязок в определении класса.</span><span class="sxs-lookup"><span data-stu-id="60e34-104">You can define private fields and private functions for F# classes by using `let` bindings in the class definition.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="4ec83-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4ec83-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="60e34-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="60e34-105">Syntax</span></span>
 
 ```fsharp
 // Field.
@@ -23,34 +23,34 @@ ms.locfileid: "43866797"
 [static] let [ rec ] binding1 [ and ... binding-n ]
 ```
 
-## <a name="remarks"></a><span data-ttu-id="4ec83-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="4ec83-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="60e34-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="60e34-106">Remarks</span></span>
 
-<span data-ttu-id="4ec83-107">Предыдущий синтаксис появляется после объявления заголовка и наследование классов, но до определения членов.</span><span class="sxs-lookup"><span data-stu-id="4ec83-107">The previous syntax appears after the class heading and inheritance declarations but before any member definitions.</span></span> <span data-ttu-id="4ec83-108">Синтаксис аналогичен синтаксису `let` привязки за пределами классов, но имена, определенные в классе имеют область, которая ограничена класса.</span><span class="sxs-lookup"><span data-stu-id="4ec83-108">The syntax is like that of `let` bindings outside of classes, but the names defined in a class have a scope that is limited to the class.</span></span> <span data-ttu-id="4ec83-109">Объект `let` привязки создает закрытое поле или функции; для предоставления данных или функции, объявления свойства или метода-члена.</span><span class="sxs-lookup"><span data-stu-id="4ec83-109">A `let` binding creates a private field or function; to expose data or functions publicly, declare a property or a member method.</span></span>
+<span data-ttu-id="60e34-107">Предыдущий синтаксис появляется после объявления заголовка и наследование классов, но до определения членов.</span><span class="sxs-lookup"><span data-stu-id="60e34-107">The previous syntax appears after the class heading and inheritance declarations but before any member definitions.</span></span> <span data-ttu-id="60e34-108">Синтаксис аналогичен синтаксису `let` привязки за пределами классов, но имена, определенные в классе имеют область, которая ограничена класса.</span><span class="sxs-lookup"><span data-stu-id="60e34-108">The syntax is like that of `let` bindings outside of classes, but the names defined in a class have a scope that is limited to the class.</span></span> <span data-ttu-id="60e34-109">Объект `let` привязки создает закрытое поле или функции; для предоставления данных или функции, объявления свойства или метода-члена.</span><span class="sxs-lookup"><span data-stu-id="60e34-109">A `let` binding creates a private field or function; to expose data or functions publicly, declare a property or a member method.</span></span>
 
-<span data-ttu-id="4ec83-110">Объект `let` привязка, которая не является статическим, вызывается экземпляр `let` привязки.</span><span class="sxs-lookup"><span data-stu-id="4ec83-110">A `let` binding that is not static is called an instance `let` binding.</span></span> <span data-ttu-id="4ec83-111">Экземпляр `let` привязки выполняются при создании объектов.</span><span class="sxs-lookup"><span data-stu-id="4ec83-111">Instance `let` bindings execute when objects are created.</span></span> <span data-ttu-id="4ec83-112">Статические `let` привязки являются частью статический инициализатор для класса, который гарантированно выполняется до первого использования типа.</span><span class="sxs-lookup"><span data-stu-id="4ec83-112">Static `let` bindings are part of the static initializer for the class, which is guaranteed to execute before the type is first used.</span></span>
+<span data-ttu-id="60e34-110">Объект `let` привязка, которая не является статическим, вызывается экземпляр `let` привязки.</span><span class="sxs-lookup"><span data-stu-id="60e34-110">A `let` binding that is not static is called an instance `let` binding.</span></span> <span data-ttu-id="60e34-111">Экземпляр `let` привязки выполняются при создании объектов.</span><span class="sxs-lookup"><span data-stu-id="60e34-111">Instance `let` bindings execute when objects are created.</span></span> <span data-ttu-id="60e34-112">Статические `let` привязки являются частью статический инициализатор для класса, который гарантированно выполняется до первого использования типа.</span><span class="sxs-lookup"><span data-stu-id="60e34-112">Static `let` bindings are part of the static initializer for the class, which is guaranteed to execute before the type is first used.</span></span>
 
-<span data-ttu-id="4ec83-113">Код в пределах экземпляра `let` привязки можно использовать параметры первичного конструктора.</span><span class="sxs-lookup"><span data-stu-id="4ec83-113">The code within instance `let` bindings can use the primary constructor's parameters.</span></span>
+<span data-ttu-id="60e34-113">Код в пределах экземпляра `let` привязки можно использовать параметры первичного конструктора.</span><span class="sxs-lookup"><span data-stu-id="60e34-113">The code within instance `let` bindings can use the primary constructor's parameters.</span></span>
 
-<span data-ttu-id="4ec83-114">Атрибуты и модификаторы доступа не разрешены для `let` привязок в классах.</span><span class="sxs-lookup"><span data-stu-id="4ec83-114">Attributes and accessibility modifiers are not permitted on `let` bindings in classes.</span></span>
+<span data-ttu-id="60e34-114">Атрибуты и модификаторы доступа не разрешены для `let` привязок в классах.</span><span class="sxs-lookup"><span data-stu-id="60e34-114">Attributes and accessibility modifiers are not permitted on `let` bindings in classes.</span></span>
 
-<span data-ttu-id="4ec83-115">В следующих примерах кода показаны несколько видов `let` привязок в классах.</span><span class="sxs-lookup"><span data-stu-id="4ec83-115">The following code examples illustrate several types of `let` bindings in classes.</span></span>
+<span data-ttu-id="60e34-115">В следующих примерах кода показаны несколько видов `let` привязок в классах.</span><span class="sxs-lookup"><span data-stu-id="60e34-115">The following code examples illustrate several types of `let` bindings in classes.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet3001.fs)]
 
-<span data-ttu-id="4ec83-116">Выходные данные выглядят следующим образом.</span><span class="sxs-lookup"><span data-stu-id="4ec83-116">The output is as follows.</span></span>
+<span data-ttu-id="60e34-116">Выходные данные выглядят следующим образом.</span><span class="sxs-lookup"><span data-stu-id="60e34-116">The output is as follows.</span></span>
 
 ```
 10 52 1 204
 ```
 
-## <a name="alternative-ways-to-create-fields"></a><span data-ttu-id="4ec83-117">Другие способы создания поля</span><span class="sxs-lookup"><span data-stu-id="4ec83-117">Alternative Ways to Create Fields</span></span>
+## <a name="alternative-ways-to-create-fields"></a><span data-ttu-id="60e34-117">Другие способы создания поля</span><span class="sxs-lookup"><span data-stu-id="60e34-117">Alternative Ways to Create Fields</span></span>
 
-<span data-ttu-id="4ec83-118">Можно также использовать `val` ключевое слово, чтобы создать частное поле.</span><span class="sxs-lookup"><span data-stu-id="4ec83-118">You can also use the `val` keyword to create a private field.</span></span> <span data-ttu-id="4ec83-119">При использовании `val` ключевое слово, поле не имеет значения при создании объекта, но инициализируется со значением по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="4ec83-119">When using the `val` keyword, the field is not given a value when the object is created, but instead is initialized with a default value.</span></span> <span data-ttu-id="4ec83-120">Дополнительные сведения см. в разделе [явные поля: val ключевое слово](explicit-fields-the-val-keyword.md).</span><span class="sxs-lookup"><span data-stu-id="4ec83-120">For more information, see [Explicit Fields: The val Keyword](explicit-fields-the-val-keyword.md).</span></span>
+<span data-ttu-id="60e34-118">Можно также использовать `val` ключевое слово, чтобы создать частное поле.</span><span class="sxs-lookup"><span data-stu-id="60e34-118">You can also use the `val` keyword to create a private field.</span></span> <span data-ttu-id="60e34-119">При использовании `val` ключевое слово, поле не имеет значения при создании объекта, но инициализируется со значением по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="60e34-119">When using the `val` keyword, the field is not given a value when the object is created, but instead is initialized with a default value.</span></span> <span data-ttu-id="60e34-120">Дополнительные сведения см. в разделе [явные поля: val ключевое слово](explicit-fields-the-val-keyword.md).</span><span class="sxs-lookup"><span data-stu-id="60e34-120">For more information, see [Explicit Fields: The val Keyword](explicit-fields-the-val-keyword.md).</span></span>
 
-<span data-ttu-id="4ec83-121">Закрытые поля можно также определять в классе с помощью определения члена и добавив ключевое слово `private` к определению.</span><span class="sxs-lookup"><span data-stu-id="4ec83-121">You can also define private fields in a class by using a member definition and adding the keyword `private` to the definition.</span></span> <span data-ttu-id="4ec83-122">Это может быть полезно в том случае, если вы собираетесь изменить доступность члена без изменения кода.</span><span class="sxs-lookup"><span data-stu-id="4ec83-122">This can be useful if you expect to change the accessibility of a member without rewriting your code.</span></span> <span data-ttu-id="4ec83-123">Дополнительные сведения см. в статье [Управление доступом](../access-control.md).</span><span class="sxs-lookup"><span data-stu-id="4ec83-123">For more information, see [Access Control](../access-control.md).</span></span>
+<span data-ttu-id="60e34-121">Закрытые поля можно также определять в классе с помощью определения члена и добавив ключевое слово `private` к определению.</span><span class="sxs-lookup"><span data-stu-id="60e34-121">You can also define private fields in a class by using a member definition and adding the keyword `private` to the definition.</span></span> <span data-ttu-id="60e34-122">Это может быть полезно в том случае, если вы собираетесь изменить доступность члена без изменения кода.</span><span class="sxs-lookup"><span data-stu-id="60e34-122">This can be useful if you expect to change the accessibility of a member without rewriting your code.</span></span> <span data-ttu-id="60e34-123">Дополнительные сведения см. в статье [Управление доступом](../access-control.md).</span><span class="sxs-lookup"><span data-stu-id="60e34-123">For more information, see [Access Control](../access-control.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="4ec83-124">См. также</span><span class="sxs-lookup"><span data-stu-id="4ec83-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="60e34-124">См. также</span><span class="sxs-lookup"><span data-stu-id="60e34-124">See also</span></span>
 
-- [<span data-ttu-id="4ec83-125">Члены</span><span class="sxs-lookup"><span data-stu-id="4ec83-125">Members</span></span>](index.md)
-- [<span data-ttu-id="4ec83-126">Привязки `do` в классах</span><span class="sxs-lookup"><span data-stu-id="4ec83-126">`do` Bindings in Classes</span></span>](do-bindings-in-classes.md)
-- [<span data-ttu-id="4ec83-127">`let` Привязки</span><span class="sxs-lookup"><span data-stu-id="4ec83-127">`let` Bindings</span></span>](../functions/let-bindings.md)
+- [<span data-ttu-id="60e34-125">Члены</span><span class="sxs-lookup"><span data-stu-id="60e34-125">Members</span></span>](index.md)
+- [<span data-ttu-id="60e34-126">Привязки `do` в классах</span><span class="sxs-lookup"><span data-stu-id="60e34-126">`do` Bindings in Classes</span></span>](do-bindings-in-classes.md)
+- [<span data-ttu-id="60e34-127">`let` Привязки</span><span class="sxs-lookup"><span data-stu-id="60e34-127">`let` Bindings</span></span>](../functions/let-bindings.md)
