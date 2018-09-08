@@ -3,11 +3,11 @@ title: Поставщик WMI
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
 ms.openlocfilehash: c3eb97537706282491de1863224e1502d6b56fda
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43532865"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135424"
 ---
 # <a name="wmi-provider"></a>Поставщик WMI
 В этом примере показано, как собирать данные из служб Windows Communication Foundation (WCF) во время выполнения с помощью поставщика инструментария управления Windows (WMI), который встроен в WCF. Кроме того, в образце показано, как добавлять в службу пользовательский объект инструментария WMI. Этот образец активирует поставщик WMI для [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) и демонстрирует, как собирать данные из `ICalculator` службы во время выполнения.  
