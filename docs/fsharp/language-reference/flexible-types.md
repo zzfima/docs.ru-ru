@@ -3,11 +3,11 @@ title: Гибкие типы (F#)
 description: 'Сведения об использовании F # заметка с гибким типом, который указывает, что параметр, переменная или значение имеет тип, совместимый с указанным типом.'
 ms.date: 05/16/2016
 ms.openlocfilehash: b6c97c3cc19f15b2c8db74b2c55660a16b2858f7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886374"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44179651"
 ---
 # <a name="flexible-types"></a>Гибкие типы
 

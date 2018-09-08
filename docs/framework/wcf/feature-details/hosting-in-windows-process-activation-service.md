@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
 ms.openlocfilehash: 0fe38b690d093e5a0bbe90d2b62e56b5d0cb4816
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877928"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188388"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Размещение в службе активации процессов Windows
 Служба активации процессов Windows (WAS) управляет активацией и временем существования рабочих процессов, содержащих приложения, размещения служб Windows Communication Foundation (WCF). Модель процесса WAS обобщает модель процесса [!INCLUDE[iis601](../../../../includes/iis601-md.md)] для HTTP-сервера путем устранения зависимости от HTTP. Это позволяет службам WCF использовать как HTTP, так и отличные от HTTP протоколы, такие как Net.TCP, в среде размещения, которая поддерживает активацию на основе сообщений и предоставляет возможность размещать большое количество приложений на данном компьютере.  

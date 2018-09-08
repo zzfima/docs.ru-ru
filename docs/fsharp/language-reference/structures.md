@@ -2,12 +2,12 @@
 title: Структуры (F#)
 description: 'Дополнительные сведения о структуре F #, это компактный тип объекта часто более эффективен, чем класс для типов с меньшим объемом данных и простое поведение.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 889d493af3c9c388bdc7969c02bc7b021b82517d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43799675"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181931"
 ---
 # <a name="structures"></a>Структуры
 
@@ -48,9 +48,51 @@ type [accessibility-modifier] type-name =
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2501.fs)]
 
+## <a name="byreflike-structs"></a>ByRefLike структуры
+
+Вы можете определить собственные структуры, можно придерживаться `byref`-семантику, например: см. в разделе [Byrefs](byrefs.md) Дополнительные сведения. Это делается с помощью <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> атрибут:
+
+```fsharp
+open System
+open System.Runtime.CompilerServices
+
+[<IsByRefLike; Struct>]
+type S(count1: Span<int>, count2: Span<int>) =
+    member x.Count1 = count1
+    member x.Count2 = count2
+```
+
+`IsByRefLike` не подразумевает `Struct`. Оба должны присутствовать на тип.
+
+Объект "`byref`-как «структура в F # является типом значения стека привязки. Он никогда не выделяется в управляемой куче. Объект `byref`-как структура полезна для программирования высокой производительности, как реализована с помощью набора строгим проверкам, о времени существования и незахвата. Ниже приведены правила.
+
+* Они могут использоваться как параметры функции, параметры метода, локальные переменные, метод возвращает.
+* Они не может быть статическим или члены класса или обычной структуры экземпляров.
+* Не может быть перехвачено любой конструкции замыкание (`async` методы или лямбда-выражений).
+* Они не может использоваться в качестве универсального параметра.
+
+Несмотря на то, что эти правила очень строго ограничить использование, они появляющимися достигается за счет высокопроизводительные вычислительные системы безопасным образом.
+
+## <a name="readonly-structs"></a>Структурах только для чтения
+
+Можно добавить заметку структуры <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> атрибута. Пример:
+
+```fsharp
+[<IsReadOnly; Struct>]
+type S(count1: int, count2: int) =
+    member x.Count1 = count1
+    member x.Count2 = count2
+```
+
+`IsReadOnly` не подразумевает `Struct`. Необходимо добавить оба иметь `IsReadOnly` структуры.
+
+Использование этого атрибута выдает метаданные, позволяя F # и знать, что в C# `inref<'T>` и `in ref`, соответственно.
+
+Определение изменяемого значения внутри структуры только для чтения выводит сообщение об ошибке.
+
 ## <a name="struct-records-and-discriminated-unions"></a>Структура записи и размеченные объединения
 
-Начиная с F # 4.1, может представлять [записей](records.md) и [размеченные объединения](discriminated-unions.md) как структуры с `[<Struct>]` атрибута.  См. в каждой статье для получения дополнительных сведений.
+Вы можете представить [записей](records.md) и [размеченные объединения](discriminated-unions.md) как структуры с `[<Struct>]` атрибута.  См. в каждой статье для получения дополнительных сведений.
 
 ## <a name="see-also"></a>См. также
 

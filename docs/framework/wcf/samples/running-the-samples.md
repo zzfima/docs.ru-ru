@@ -3,11 +3,11 @@ title: Выполнение примеров Windows Communication Foundation
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
 ms.openlocfilehash: d6fc93af217bfc282ce7030973be32baf7d864cd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43658942"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197249"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Выполнение примеров Windows Communication Foundation
 Примеры Windows Communication Foundation (WCF) может выполняться в одном или нескольких компьютерах конфигурации. После передачи примеры готовы к выполнению на одном компьютере. При выполнении на нескольких компьютерах необходимо изменить параметры файла конфигурации примера. В следующих процедурах объясняется, как выполнить пример на одном компьютере или на нескольких компьютерах. Обратите внимание, что шаги, выполняемые для служб, размещенных в службах IIS, и шаги для резидентных примеров, отличаются. Большинство примеров размещаются в службах IIS; чтобы определить, как размещается пример, см. сведения в файле Readme.  

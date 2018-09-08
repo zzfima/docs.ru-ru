@@ -13,11 +13,11 @@ ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2593b85dd4747a3fbe365994c3e5d9beae3e3406
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891544"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188154"
 ---
 # <a name="nested-types"></a>Вложенные типы
 Вложенный тип — тип, определенный внутри области другого типа, который называется включающего типа. Вложенный тип имеет доступ ко всем членам включающего типа. Например он имеет доступ к закрытым полям, определенных в включающего типа и защите полей, определенных в всех предков включающего типа.  

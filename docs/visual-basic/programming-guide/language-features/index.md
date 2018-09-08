@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, elements of
 - Visual Basic code
 ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
-ms.openlocfilehash: a8f6da4dc42244fbadbaf0e96b0dd281a3f7ccb2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 975bec73235b3b8f82088325e0d4abc50ce6b1dd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879608"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44185367"
 ---
 # <a name="visual-basic-language-features"></a>Возможности и элементы языка Visual Basic
 В следующих разделах описываются и обсуждаются основные компоненты Visual Basic, объектно ориентированного языка программирования. После того, как вы подготовите пользовательский интерфейс для вашего приложения с помощью форм и элементов управления, необходимо написать код, определяющий поведение приложения. Как и любой современный язык программирования Visual Basic поддерживает ряд общих конструкций программирования и элементов языка.  
@@ -77,8 +77,9 @@ ms.locfileid: "43879608"
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)  
  Содержит ссылки на разделы, описывающие использование XML в Visual Basic.  
   
-## <a name="related-sections"></a>Связанные разделы  
- [Коллекции](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
+## <a name="related-sections"></a>Связанные разделы
+
+ [Коллекции](../../../visual-basic/programming-guide/concepts/collections.md)  
  Описывает некоторые типы коллекций, предоставляемых платформой .NET Framework. Демонстрирует использование простых коллекций и коллекций с парами "ключ — значение".  
   
  [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)  

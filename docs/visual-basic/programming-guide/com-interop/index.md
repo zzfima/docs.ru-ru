@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: b6da65a0c94875f73c8e1094448d76a72823404d
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871063"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183175"
 ---
 # <a name="com-interop-visual-basic"></a>COM-взаимодействие (Visual Basic)
 Объектная модель компонентов (модель COM) позволяет объекту предоставлять свою функциональность другим компонентам и ведущим приложениям. COM-объекты входят в состав большей части современного программного обеспечения. Хотя сборки .NET являются наилучшим решением для новых приложений, в некоторых случаях необходимо использование COM-объектов. В этом разделе рассматриваются некоторые вопросы, связанные с созданием и использованием COM-объектов с помощью Visual Basic.  
@@ -50,10 +50,10 @@ ms.locfileid: "43871063"
  [Взаимодействие с неуправляемым кодом](../../../framework/interop/index.md)  
  Описываются службы взаимодействия, предоставляемые средой CLR.  
   
- [Предоставление COM-компонентов платформе .NET Framework](https://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
+ [Предоставление COM-компонентов платформе .NET Framework](../../../framework/interop/exposing-com-components.md)  
  Описание процесса вызова типов COM через COM-взаимодействие.  
   
- [Предоставление компонентов .NET Framework клиентам COM](https://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
+ [Предоставление компонентов .NET Framework клиентам COM](../../../framework/interop/exposing-dotnet-components-to-com.md)  
  Описание подготовки и использования управляемых типов из COM.  
   
  [Применение атрибутов взаимодействия](../../../framework/interop/applying-interop-attributes.md)  

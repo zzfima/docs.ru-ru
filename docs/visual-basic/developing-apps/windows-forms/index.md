@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: cdc3e42adcb2c7eae52aab0b14d0f9c6a822eeea
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b900b85b4e3e56dbc587a15edea40f6e3032cbd1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43881994"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192435"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Основы разработки приложений Windows Forms (Visual Basic)
 Важной частью Visual Basic является возможность создания приложений Windows Forms, локально работающих на компьютерах пользователей. Чтобы создать приложение и пользовательский интерфейс, с помощью Windows Forms можно использовать Visual Studio. В приложении Windows Forms основано на классах из <xref:System.Windows.Forms> пространства имен.  
@@ -67,7 +67,7 @@ ms.locfileid: "43881994"
 |Кому|См.|  
 |--------|---------|  
 |Используйте <xref:System.Windows.Forms.BindingSource> компонента|[Практическое руководство. Связывание элементов управления Windows Forms с компонентом BindingSource с помощью конструктора](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|Работа с [!INCLUDE[vstecado](~/includes/vstecado-md.md)] источников данных|[Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью компонента BindingSource в Windows Forms](https://msdn.microsoft.com/library/ya3sah92.aspx)|  
+|Работа с [!INCLUDE[vstecado](~/includes/vstecado-md.md)] источников данных|[Практическое руководство. Сортировка и фильтрация данных ADO.NET с помощью компонента BindingSource в Windows Forms](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |Использование окна "Источники данных"|[Пошаговое руководство. Отображение данных на форме в приложении Windows](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Развертывание приложений на клиентских компьютерах  
@@ -95,7 +95,8 @@ ms.locfileid: "43881994"
 |Печать содержимого формы|[Практическое руководство. Печать графических изображений в Windows Forms](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [Практическое руководство. Печать многостраничных текстовых файлов в Windows Forms](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |Дополнительные сведения о безопасности форм Windows Forms|[Общие сведения о безопасности в Windows Forms](../../../framework/winforms/security-in-windows-forms-overview.md)|  
   
-## <a name="see-also"></a>См. также  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
- [Общие сведения о Windows Forms](../../../framework/winforms/windows-forms-overview.md)  
- [Объект My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)
+## <a name="see-also"></a>См. также
+
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  
+- [Общие сведения о Windows Forms](../../../framework/winforms/windows-forms-overview.md)  
+- [Объект My.Forms](../../../visual-basic/language-reference/objects/my-forms-object.md)

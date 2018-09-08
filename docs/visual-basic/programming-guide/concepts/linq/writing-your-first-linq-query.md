@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 83a1b7629672c6a74fd29ce698a6b8e6e152b1da
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
-ms.translationtype: HT
+ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44068954"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44184315"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Написание первого запроса LINQ (Visual Basic)
 *Запрос* представляет собой выражение, извлекающее данные из источника данных. Запросы выражаются на языке запросов выделенного. Со временем различных языков были разработаны для различных типов источников данных, например, SQL для реляционных баз данных и XQuery для XML. Поэтому для разработчиков приложений изучать новый язык запросов для каждого типа источника данных или формата данных, который поддерживается.  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- Дополнительные сведения о способах создания определенных типов источников данных см. в документации для различных поставщиков [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Список этих поставщиков, см. в разделе [LINQ (Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).) Общее правило очень просто: [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] источник данных — это любой объект, который поддерживает универсальный <xref:System.Collections.Generic.IEnumerable%601> интерфейс или интерфейс, наследуемый от него.  
+ Дополнительные сведения о способах создания определенных типов источников данных см. в документации для различных поставщиков [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. (Список этих поставщиков, см. в разделе [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md).) Общее правило очень просто: [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] источник данных — это любой объект, который поддерживает универсальный <xref:System.Collections.Generic.IEnumerable%601> интерфейс или интерфейс, наследуемый от него.  
   
 > [!NOTE]
 >  Типы, такие как <xref:System.Collections.ArrayList> , которые поддерживают неуниверсальный <xref:System.Collections.IEnumerable> интерфейс может также использоваться как [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] источников данных. Пример, использующий <xref:System.Collections.ArrayList>, см. в разделе [как: выполнение запроса к ArrayList с помощью LINQ (Visual Basic)](how-to-query-an-arraylist-with-linq.md).  
@@ -118,10 +118,11 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  Можно также вызвать запрос для выполнения с помощью `IEnumerable` метода, такого как <xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A> метод.  
   
-## <a name="see-also"></a>См. также  
- [Приступая к работе с LINQ в Visual Basic](getting-started-with-linq.md)  
- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Общие сведения о стандартных операторах запроса (Visual Basic)](standard-query-operators-overview.md)  
- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Запросы](../../../../visual-basic/language-reference/queries/index.md)
+## <a name="see-also"></a>См. также
+
+- [Приступая к работе с LINQ в Visual Basic](getting-started-with-linq.md)  
+- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+- [Общие сведения о стандартных операторах запроса (Visual Basic)](standard-query-operators-overview.md)  
+- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
+- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)  
+- [Запросы](../../../../visual-basic/language-reference/queries/index.md)

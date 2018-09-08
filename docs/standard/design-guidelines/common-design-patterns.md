@@ -8,22 +8,23 @@ helpviewer_keywords:
 ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29dd2e2ab097c38f81143e717e5f76f3ba284f96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d41ba0c1e972eeee07b36ad0d15532f7b551ec2a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570354"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44172948"
 ---
 # <a name="common-design-patterns"></a>Обычные шаблоны разработки
-Существует большое количество книг на шаблонов программного обеспечения, шаблон языки и antipatterns, которые касаются очень широкий субъекта шаблонов. Таким образом этот раздел предоставляет рекомендации и относящееся лишь ограниченный набор шаблонов, которые часто используются при разработке API платформы .NET Framework.  
+Существует большое количество книг на шаблоны программного обеспечения, шаблон языков и антишаблоны, предназначенным для очень обширная тема шаблонов. Таким образом в этой главе содержатся рекомендации и обсуждения, связанные с очень ограниченный набор шаблонов, которые часто используются в разработке API-интерфейсы .NET Framework.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Свойства зависимостей](../../../docs/standard/design-guidelines/dependency-properties.md)  
  [Шаблон ликвидации](../../../docs/standard/design-guidelines/dispose-pattern.md)  
- *Фрагменты © 2005, 2009 корпорации Майкрософт. Все права защищены.*  
+ *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
   
- *Перепечатываются разрешении Пирсона для образовательных учреждений, Inc. из [Framework рекомендации по проектированию: условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2-е издание](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina и Брэд Абрамс, опубликованные 22 октября 2008 г., Addison-Wesley Professional в составе ряда разработки Microsoft Windows.*  
+ *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*  
   
-## <a name="see-also"></a>См. также  
- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)
+## <a name="see-also"></a>См. также
+
+- [Рекомендации по проектированию на основе Framework](../../../docs/standard/design-guidelines/index.md)

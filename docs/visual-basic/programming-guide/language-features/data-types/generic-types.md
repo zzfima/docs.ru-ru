@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: c13bdc47568aa8bbd934bb2b86410e17bbc485dc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3a419fb38d3b97b08c8aaa094265d8b426429ae4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43562813"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44188674"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Универсальные типы в Visual Basic (Visual Basic)
 *Универсальный тип* является одиночным элементом программирования, который используется для выполнения одинаковой функциональности для различных типов данных. При определении универсальных классов или процедур не нужно определять отдельную версию для каждого типа данных, для которых может потребоваться выполнение этой функциональности.  
@@ -147,15 +147,16 @@ ms.locfileid: "43562813"
   
 -   *Сконструированный тип*. Класс, структура, интерфейс, процедура или делегат, объявленный из универсального типа с помощью указания аргументов типа для параметров типа.  
   
-## <a name="see-also"></a>См. также  
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)  
- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
- [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
- [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
- [Ковариация и контрвариантность](../../concepts/covariance-contravariance/index.md)  
- [Итераторы](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+## <a name="see-also"></a>См. также
+
+- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+- [Знаки типов](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
+- [Типы значений и ссылочные типы](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
+- [Преобразование типов в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
+- [Устранение неполадок, связанных с типами данных](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+- [Типы данных](../../../../visual-basic/language-reference/data-types/index.md)  
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
+- [As](../../../../visual-basic/language-reference/statements/as-clause.md)  
+- [Тип данных Object](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
+- [Ковариация и контрвариантность](../../concepts/covariance-contravariance/index.md)  
+- [Итераторы](../../../../visual-basic/programming-guide/concepts/iterators.md)

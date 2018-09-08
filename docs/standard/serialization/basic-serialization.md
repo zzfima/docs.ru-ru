@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d899d43c-335a-433e-a589-cd187192984f
 dev_langs:
 - CSharp
-ms.openlocfilehash: faa91d3e72ebd94b2f849f824ca7e47876793109
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb42c265d9057ea4fdb76e72fc9cdb2368309cae
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583270"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44181580"
 ---
 # <a name="basic-serialization"></a>Базовая сериализация
 
@@ -94,6 +94,7 @@ public class MyStuff : MyObject
   
  Использование атрибута [Serializable](xref:System.SerializableAttribute) удобно, но у него есть свои ограничения, как это показано выше. См. раздел [Правила сериализации](serialization-guidelines.md), чтобы получить сведения о том, в каких случаях класс следует отмечать для сериализации. Сериализацию невозможно добавить в класс после его компиляции.  
   
-## <a name="see-also"></a>См. также  
- [Двоичная сериализация](binary-serialization.md)  
- [Сериализация XML и SOAP](xml-and-soap-serialization.md)
+## <a name="see-also"></a>См. также
+
+- [Двоичная сериализация](binary-serialization.md)  
+- [Сериализация XML и SOAP](xml-and-soap-serialization.md)
