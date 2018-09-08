@@ -2,12 +2,12 @@
 title: 'Начало работы с F # с помощью средства командной строки'
 description: 'Узнайте, как создать простое решение для нескольких проектов F # с помощью интерфейса командной строки .NET Core в любой операционной системе (Windows, macOs или Linux).'
 ms.date: 03/26/2018
-ms.openlocfilehash: 6cdb2b42781dba6ba00c03b20e6a76d033e03063
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875018"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44134809"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Начало работы с F # с помощью интерфейса командной строки .NET Core
 
@@ -41,7 +41,7 @@ FSNetCore
 Используйте `dotnet new` команды, создайте проект библиотеки классов в **src** папку с именем библиотеки.
 
 ```console
-dotnet new lib -lang F# -o src/Library
+dotnet new classlib -lang F# -o src/Library
 ```
 
 После выполнения предыдущей команды создается следующая структура каталогов:

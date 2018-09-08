@@ -10,11 +10,11 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
 ms.openlocfilehash: 4db5d288d79379b677bb19b2eba0d094e0d71bc8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44036409"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140714"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>Практическое руководство. Объединение данных с помощью LINQ с использованием соединений (Visual Basic)
 Visual Basic предоставляет `Join` и `Group Join` для объединения содержимого нескольких коллекций на основе общих значений между коллекциями предложения запроса. Эти значения называются *ключ* значения. Разработчикам, знакомым с понятиями реляционной базы данных будет распознавать `Join` предложение INNER JOIN и `Group Join` предложение as, фактически, ЛЕВОЕ ВНЕШНЕЕ соединение.  

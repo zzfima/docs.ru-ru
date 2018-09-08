@@ -2,12 +2,12 @@
 title: 'Практическое: расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-ms.openlocfilehash: 650b96926cf66810a93b003b1ebc09ca16212b00
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 09496f7044a0be86a3fdb37085b09069086750ce
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064937"
+ms.locfileid: "44129077"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>Практическое: расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)
 Вы можете повысить производительность асинхронного решения в [Пошаговое руководство: доступ к Интернету с помощью Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) с помощью <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> метод. Этот метод асинхронно ожидает несколько асинхронных операций, которые представлены в виде коллекции задач.  
@@ -62,7 +62,7 @@ ms.locfileid: "44064937"
     'Next  
     ```  
   
-3.  Создайте коллекцию задач. Следующий код определяет [запрос](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d), который при выполнении метода <xref:System.Linq.Enumerable.ToArray%2A> создает коллекцию задач, скачивающих содержимое каждого веб-сайта. Задачи запускаются при вычислении запроса.  
+3.  Создайте коллекцию задач. Следующий код определяет [запрос](../../../../visual-basic/programming-guide/concepts/linq/index.md), который при выполнении метода <xref:System.Linq.Enumerable.ToArray%2A> создает коллекцию задач, скачивающих содержимое каждого веб-сайта. Задачи запускаются при вычислении запроса.  
   
      Добавьте следующий код в метод `SumPageSizesAsync` после объявления `urlList`.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "44064937"
     'Next  
     ```  
   
-3.  Определите [запрос](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d), который при выполнении метода <xref:System.Linq.Enumerable.ToArray%2A> создает коллекцию задач, скачивающих содержимое каждого веб-сайта. Задачи запускаются при вычислении запроса.  
+3.  Определите [запрос](../../../../visual-basic/programming-guide/concepts/linq/index.md), который при выполнении метода <xref:System.Linq.Enumerable.ToArray%2A> создает коллекцию задач, скачивающих содержимое каждого веб-сайта. Задачи запускаются при вычислении запроса.  
   
      Добавьте следующий код в метод `SumPageSizesAsync` после объявления `client` и `urlList`.  
   
@@ -419,6 +419,7 @@ Class MainWindow
 End Class  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
- [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Пошаговое руководство. Доступ к веб-сайтам с помощью модификатора Async и оператора Await (Visual Basic))
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>  
+- [Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Пошаговое руководство. Доступ к веб-сайтам с помощью модификатора Async и оператора Await (Visual Basic))

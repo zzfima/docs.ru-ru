@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: d827c2c5f407c3041a31efbc06fcfed205bef458
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f520e897ad467686e0dc151548a61ea8370eb07a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492438"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133234"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Практическое руководство. Извлечение отпечатка сертификата
-При написании приложения Windows Communication Foundation (WCF), использующий сертификат X.509 для проверки подлинности, часто бывает необходимо указать утверждения, найденных в сертификате. Например, при использовании перечисления <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> в методе <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> необходимо указать утверждение отпечатка. Чтобы найти значение утверждения, необходимо выполнить два действия. Сначала необходимо открыть оснастку сертификатов консоли управления (MMC). (См. раздел [Практическое руководство. Просмотр сертификатов с помощью оснастки консоли MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)). После этого, как описано в этом разделе, необходимо найти соответствующий сертификат и скопировать его отпечаток (или другие значения утверждений).  
+При написании приложения Windows Communication Foundation (WCF), использующий сертификат X.509 для проверки подлинности, часто бывает необходимо задать утверждения из сертификата. Например, при использовании перечисления <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> в методе <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> необходимо указать утверждение отпечатка. Чтобы найти значение утверждения, необходимо выполнить два действия. Сначала необходимо открыть оснастку сертификатов консоли управления (MMC). (См. раздел [Практическое руководство. Просмотр сертификатов с помощью оснастки консоли MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)). После этого, как описано в этом разделе, необходимо найти соответствующий сертификат и скопировать его отпечаток (или другие значения утверждений).  
   
  Если сертификат используется для проверки подлинности службы, важно запомнить значение столбца **Кому выдан** (первый столбец консоли). При использовании для защиты транспорта протокола SSL одним из первых шагов является сравнение базового адреса универсального кода ресурса (URI) службы со значением поля **Кому выдан** . Значения должны совпадать, в противном случае процесс проверки подлинности будет прерван.  
   
- Кроме того, можно с помощью средства Makecert.exe из пакета SDK для [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] создать временные сертификаты для использования только на этапе разработки. Однако по умолчанию такой сертификат не выдается центром сертификации и не может использоваться в рабочей среде. Дополнительные сведения см. в разделе [как: создание временных сертификатов для использования во время разработки](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
+ Также можно использовать командлет Powershell New-SelfSignedCertificate для создания временных сертификатов для использования только во время разработки. По умолчанию однако такой сертификат не выдан центром сертификации и может использоваться в рабочей среде. Дополнительные сведения см. в разделе [как: создание временных сертификатов для использования во время разработки](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md).  
   
 ### <a name="to-retrieve-a-certificates-thumbprint"></a>Извлечение отпечатка сертификата  
   

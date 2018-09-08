@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XML [Visual Basic], manipulating
 ms.assetid: da32cffb-198d-41b1-9af3-260fe32e3b7d
 ms.openlocfilehash: 7fd111f5e885de3389b8f93002db22b48c4edd45
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43805433"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44130923"
 ---
 # <a name="manipulating-xml-in-visual-basic"></a>Обработка XML в Visual Basic
 Можно использовать *XML-литералов* загрузить XML из внешнего источника, например строки, файл или поток. Затем можно использовать [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] обработки XML и использовать [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] чтобы запросить XML.  

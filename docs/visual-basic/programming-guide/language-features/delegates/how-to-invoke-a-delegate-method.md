@@ -2,12 +2,12 @@
 title: Практическое руководство. Вызов метода делегата (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: 9fea3ddbc9fb553041671713a64e4b866ee38b50
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c50a32d300aaf52efe0c55cef69d5793a98305ac
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392442"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129221"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>Практическое руководство. Вызов метода делегата (Visual Basic)
 В этом примере показано, как связать метод с делегатом, а затем вызвать метод через делегат.  
@@ -42,8 +42,9 @@ ms.locfileid: "43392442"
     End Sub  
     ```  
   
-## <a name="see-also"></a>См. также  
- [Оператор Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
- [Делегаты](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
- [События](../../../../visual-basic/programming-guide/language-features/events/index.md)  
- [Многопоточные приложения](https://msdn.microsoft.com/library/a06a1a56-dd16-44e8-bc01-2c2255511bc6)
+## <a name="see-also"></a>См. также
+
+- [Оператор Delegate](../../../../visual-basic/language-reference/statements/delegate-statement.md)  
+- [Делегаты](../../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+- [События](../../../../visual-basic/programming-guide/language-features/events/index.md)  
+- [Многопоточные приложения](../../../../standard/threading/using-threads-and-threading.md)

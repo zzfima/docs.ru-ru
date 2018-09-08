@@ -3,11 +3,11 @@ title: Участники отслеживания
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
 ms.openlocfilehash: e346e0df3417f6ac83854bd96d6e64dcf103ea93
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44062618"
+ms.locfileid: "44133802"
 ---
 # <a name="tracking-participants"></a>Участники отслеживания
 Участниками отслеживания являются точки расширения, обеспечивающие разработчику рабочего процесса доступ к объектам <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> и возможность их обработки. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] включает стандартного участника отслеживания, который пишет записи отслеживания в виде средства трассировки событий для Windows (ETW). Если это не отвечает заданным требованиям, то можно создать своего собственного участника отслеживания.  

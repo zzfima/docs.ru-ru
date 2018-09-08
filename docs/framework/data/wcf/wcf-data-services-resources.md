@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
 ms.openlocfilehash: 790fe629ae709a9fcb57d5b551e9fa7aecfb04f5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032115"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137152"
 ---
 # <a name="wcf-data-services-resources"></a>Ресурсы служб данных WCF
 Вводные разделы по службам [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] можно найти в следующих местах. Во многих из них также есть ссылки на связанные разделы, содержащие более подробные сведения.  

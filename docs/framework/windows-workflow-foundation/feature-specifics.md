@@ -3,11 +3,11 @@ title: Особенности возможностей Windows Workflow Foundati
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 ms.openlocfilehash: b18c6dd76762f4495ac475cd3dfa4e1995733b59
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884488"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44140883"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Особенности возможностей Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] добавляет ряд функциональных возможностей в Windows Workflow Foundation. В этом документе описываются некоторые новые функциональные возможности и приведены подробные сведения о сценариях, в которых они могут оказаться полезными.  

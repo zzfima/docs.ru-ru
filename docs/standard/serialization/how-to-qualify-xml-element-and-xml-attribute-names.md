@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 6b4d58f6b5bf23cbce2ace8fb40730d7b73994de
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785496"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133286"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>Практическое руководство. Квалификация элемента XML и имен атрибутов XML
 
@@ -171,11 +171,11 @@ public class Book
 
 ## <a name="see-also"></a>См. также
 
-<xref:System.Xml.Serialization.XmlSerializer>
-[Инструмент определения схемы XML и сериализация XML](the-xml-schema-definition-tool-and-xml-serialization.md)
-[введение в сериализацию XML](introducing-xml-serialization.md)
-[класс XmlSerializer](xref:System.Xml.Serialization.XmlSerializer) 
- [Атрибуты управления сериализацией XML](attributes-that-control-xml-serialization.md)
-[как: Указание имени альтернативного элемента для XML Stream](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-[как: сериализация объекта](how-to-serialize-an-object.md) 
- [Как: десериализации объекта](how-to-deserialize-an-object.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [Инструмент определения схемы XML и сериализация XML](the-xml-schema-definition-tool-and-xml-serialization.md)
+- [Введение в сериализацию XML](introducing-xml-serialization.md)
+- [Класс XmlSerializer](xref:System.Xml.Serialization.XmlSerializer)
+- [Атрибуты управления сериализацией XML](attributes-that-control-xml-serialization.md)
+- [Практическое руководство. Указание имени альтернативного элемента для потока XML](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [Практическое руководство. Сериализация объекта](how-to-serialize-an-object.md)
+- [Практическое руководство. Десериализация объекта](how-to-deserialize-an-object.md)

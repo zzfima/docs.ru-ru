@@ -14,11 +14,11 @@ ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b583df2eb6098fa28dd8999a6796e5053d13cab4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44070385"
+ms.locfileid: "44135514"
 ---
 # <a name="encrypting-data"></a>Шифрование данных
 Симметричное и асимметричное шифрования выполняются с использованием различных процессов. Симметричное шифрование выполняется в рамках потоков, поэтому его удобно применять для шифрования больших объемов данных. Асимметричное шифрование выполняется в рамках небольшого числа байтов, поэтому его удобно применять для шифрования только небольших объемов данных.  

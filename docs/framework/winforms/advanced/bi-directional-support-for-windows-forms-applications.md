@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4c572e518c84dfb230ff26049369011d8d7aa70
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43872407"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131966"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Поддержка двунаправленного письма для приложений Windows Forms
 Visual Studio можно использовать для создания приложений на основе Windows, которые поддерживают такие языки (справа налево), такие как арабский и иврит. Сюда входят стандартные формы, диалоговые окна, MDI-формы и все элементы управления, с которыми можно работать в этих формах, то есть все объекты в пространстве имен <xref:System.Windows.Forms.Control>.  

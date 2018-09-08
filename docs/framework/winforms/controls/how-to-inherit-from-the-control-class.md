@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
 ms.openlocfilehash: 1a0eea1930699ed85fcf0eaf184ba0aabe398d73
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44031904"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44137659"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>Практическое руководство. Наследование класса Control.
 Если вы хотите создать полностью пользовательский элемент управления для использования в Windows Forms, следует наследовать <xref:System.Windows.Forms.Control> класса. При наследовании <xref:System.Windows.Forms.Control> класса необходимо, чтобы выполнить более тщательного планирования и реализации также предоставляет широкий выбор вариантов. При наследовании от <xref:System.Windows.Forms.Control>, наследуются простейшие функции, обеспечивающие работоспособность элементов управления. Стандартные функции <xref:System.Windows.Forms.Control> класс обрабатывает входные данные с клавиатуры и мыши, определяют границы и размер элемента управления, обрабатывают окна и обеспечивают обработку сообщений и безопасность. Они не включают оформление (в данном случае отрисовку графического интерфейса элемента управления) или конкретные функции взаимодействия с пользователем. Все эти аспекты необходимо прописывать в пользовательском коде.  

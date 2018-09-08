@@ -5,11 +5,11 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: d4f7ebf784ab02ecdd0203423157da5bef968a87
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064781"
+ms.locfileid: "44130098"
 ---
 # <a name="denial-of-service"></a>Отказ в обслуживании
 Если система перегружена так, что не удается обрабатывать сообщения, или сообщения обрабатываются слишком медленно, происходит отказ в обслуживании.  

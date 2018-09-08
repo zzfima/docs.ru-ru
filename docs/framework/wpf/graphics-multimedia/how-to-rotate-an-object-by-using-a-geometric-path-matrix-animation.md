@@ -10,11 +10,11 @@ helpviewer_keywords:
 - matrix animation [WPF]
 ms.assetid: 877dc9aa-6bdc-4beb-8772-3efaec32c0f0
 ms.openlocfilehash: 3a35f6dda05cfe65811de16d76b288c8fbd618a7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43874926"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44133614"
 ---
 # <a name="how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation"></a>Практическое руководство. Поворот объекта с использованием геометрического пути (матрица анимации)
 В этом примере показано, как использовать <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> и <xref:System.Windows.Media.MatrixTransform> для поворота (вращения) объекта вдоль геометрического пути, определенного <xref:System.Windows.Media.PathGeometry> объекта.  

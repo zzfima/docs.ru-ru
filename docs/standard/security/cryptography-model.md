@@ -9,11 +9,11 @@ ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d74ce08197ac76a601202da8e35ca6f619207076
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885751"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44132017"
 ---
 # <a name="net-framework-cryptography-model"></a>Модель криптографии .NET Framework
 Платформа .NET Framework предоставляет реализации многих стандартных алгоритмов шифрования. Эти алгоритмы просты в использовании и имеют максимально безопасные свойства по умолчанию. Кроме того, криптографическая модель наследования объектов, поточно-ориентированная структура и конфигурация платформы .NET Framework являются чрезвычайно расширяемыми.  

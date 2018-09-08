@@ -3,11 +3,11 @@ title: Использование отслеживания для устране
 ms.date: 03/30/2017
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
 ms.openlocfilehash: f991533b61705c8d0a1a8e71b632dd53f24dd979
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879325"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44130371"
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Использование отслеживания для устранения неполадок приложений
 Windows Workflow Foundation (WF) позволяет отслеживать данные, относящихся к рабочему процессу, для последующей передачи подробных сведений в выполнение приложения Windows Workflow Foundation или службы. Узлы Windows Workflow Foundation, могут захватывать события рабочего процесса во время выполнения экземпляра рабочего процесса. Если в рабочем процессе возникают ошибки или исключения, можно использовать в Windows Workflow Foundation, отслеживание сведений для устранения неполадок обработки.  

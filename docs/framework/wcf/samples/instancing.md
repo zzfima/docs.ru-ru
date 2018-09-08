@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
 ms.openlocfilehash: 1d193b0cac56f365a4f0a294145369502754a1b1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43882014"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44131767"
 ---
 # <a name="instancing"></a>Создание экземпляров
 В образце создания экземпляра демонстрируется действие параметра, регулирующего способ создания экземпляров класса службы при получении запросов от клиентов. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует `ICalculator` контракт службы. В этом образце определен новый контракт `ICalculatorInstance`, производный от класса `ICalculator`. Контракт, указанный для `ICalculatorInstance`, обеспечивает три дополнительные операции для проверки состояния экземпляра службы. Изменив параметр создания экземпляров, можно запустить клиент и проверить, как изменилось поведение создания экземпляров.  

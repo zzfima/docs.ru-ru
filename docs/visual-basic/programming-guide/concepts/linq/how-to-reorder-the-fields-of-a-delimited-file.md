@@ -2,12 +2,12 @@
 title: 'Практическое: изменение порядка полей файла с разделителями (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c451c7db-663b-4daf-b8ba-a2093095d672
-ms.openlocfilehash: 7d385473c461540c81d35d42d664ef0a8b7c054b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f9322ac9601deffd110c962a9ed8b502a02092ee
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527893"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129257"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-visual-basic"></a>Практическое: изменение порядка полей файла с разделителями (LINQ) (Visual Basic)
 CSV-файл — это текстовый файл, который часто используется для хранения данных электронных таблиц или других табличных данных, представленных строками и столбцами. Использование метода <xref:System.String.Split%2A> для разделения полей упрощает создание запросов к CSV-файлам и управление ими с помощью LINQ. Фактически та же технология может использоваться для изменения порядка частей любой структурированной строки текста, а не только CSV-файлов.  
@@ -76,7 +76,8 @@ End Class
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
   
-## <a name="see-also"></a>См. также  
- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
- [Практическое руководство. Создание кода XML из CSV-файлов](https://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)
+## <a name="see-also"></a>См. также
+
+- [LINQ и строки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ и каталоги файлов (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- [Практическое руководство. Создание кода XML из CSV-файлов](../../../../visual-basic/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)

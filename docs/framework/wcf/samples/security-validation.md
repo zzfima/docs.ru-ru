@@ -5,11 +5,11 @@ ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 0aaa88268959561cabe4613d51feb0f219275634
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44064047"
+ms.locfileid: "44131082"
 ---
 # <a name="security-validation"></a>Проверка безопасности
 Этот образец показывает, как с помощью пользовательского поведения проверять службы на компьютере на соответствие определенным условиям. В этом образце службы проверяются с помощью пользовательского поведения путем сканирования каждой конечной точки службы и проверки, содержат ли они безопасные элементы привязки. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  

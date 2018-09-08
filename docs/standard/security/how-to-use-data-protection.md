@@ -19,11 +19,11 @@ ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b043c5a2173cff9eb82497f6d4ee8b7c0aa3f14c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44061030"
+ms.locfileid: "44140348"
 ---
 # <a name="how-to-use-data-protection"></a>Практическое руководство. Использование защиты данных
 Платформа .NET Framework предоставляет доступ к API защиты данных (DPAPI), который позволяет шифровать данные, используя сведения из текущей учетной записи пользователя или с текущего компьютера.  Использование API защиты данных позволяет упростить сложную задачу явного создания и хранения криптографического ключа.  

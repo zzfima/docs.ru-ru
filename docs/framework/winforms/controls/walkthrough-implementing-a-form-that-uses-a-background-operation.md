@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 435bc1c04bfd2f9b8a94ff8151369b5ef2fae6f8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 81c7f21e7e331b60d41330c8239893332dbea5a1
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43777996"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44135891"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Пошаговое руководство. Реализация формы, в которой выполняется фоновая операция
 Если у вас есть операция будет выполняться долго для завершения, и не требуется пользовательский интерфейс (UI) перестает отвечать на запросы или «зависания», можно использовать <xref:System.ComponentModel.BackgroundWorker> класс для выполнения операции в другом потоке.  
@@ -163,11 +163,12 @@ ms.locfileid: "43777996"
     > [!CAUTION]
     >  При использовании любой многопоточности существует потенциальная возможность возникновения серьезных ошибок. Перед реализацией любого решения, в котором используется многопоточность, ознакомьтесь с разделом [Рекомендации по работе с потоками](../../../../docs/standard/threading/managed-threading-best-practices.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ComponentModel.BackgroundWorker>  
- [Рекомендации по работе с потоками](../../../../docs/standard/threading/managed-threading-best-practices.md)  
- [Многопоточность в компонентах](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
- (Не относится к этой сборке) [Многопоточность в Visual Basic](https://msdn.microsoft.com/library/c731a50c-09c1-4468-9646-54c86b75d269)  
- [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [Пример. Фоновое выполнение операции](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
- [Компонент BackgroundWorker](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
+- [Управляемая поточность](../../../../docs/standard/threading/index.md)
+- [Рекомендации по работе с потоками](../../../../docs/standard/threading/managed-threading-best-practices.md)
+- [Обзор асинхронной модели, основанной на событиях](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [Практическое руководство. Реализация формы, в которой выполняется фоновая операция](how-to-implement-a-form-that-uses-a-background-operation.md)  
+- [Пример. Фоновое выполнение операции](walkthrough-running-an-operation-in-the-background.md)
+- [Компонент BackgroundWorker](backgroundworker-component.md)

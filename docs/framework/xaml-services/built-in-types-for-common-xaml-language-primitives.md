@@ -16,11 +16,11 @@ helpviewer_keywords:
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
 ms.openlocfilehash: f6225dfcc02b90da58ccafd5c70726b6f80f29d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868145"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44129488"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>Встроенные типы для общих примитивов языка XAML
 В XAML 2009 появилась поддержка уровня языка XAML для некоторых типов данных, которые являются часто используемыми примитивами в среде CLR и в других языках программирования. В XAML 2009 добавлена поддержка следующих примитивов: `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`и `x:Array`  

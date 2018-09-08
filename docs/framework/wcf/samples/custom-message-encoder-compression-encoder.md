@@ -3,11 +3,11 @@ title: 'Пользовательский кодировщик сообщений
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
 ms.openlocfilehash: b70875e385fa32256476f6d1ae53e8cc1f5ff9de
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/07/2018
-ms.locfileid: "44065028"
+ms.locfileid: "44135540"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>Пользовательский кодировщик сообщений: кодировщик сжатия
 В этом примере показано, как реализовать пользовательский кодировщик с помощью платформы Windows Communication Foundation (WCF).  
