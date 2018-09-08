@@ -30,14 +30,14 @@ ms.locfileid: "33588701"
   
 |Тип|Со знаком или без|Размер (в байтах)|Минимальное значение|Максимальное значение|  
 |----------|----------------------|--------------------|-------------------|-------------------|  
-|<xref:System.Byte?displayProperty=nameWithType>|Без знака|1|0|255|  
-|<xref:System.Int16?displayProperty=nameWithType>|Подписанный|2|–32 768|32 767|  
-|<xref:System.Int32?displayProperty=nameWithType>|Подписанный|4|–2 147 483 648|2 147 483 647|  
-|<xref:System.Int64?displayProperty=nameWithType>|Подписанный|8|–9 223 372 036 854 775 808|9 223 372 036 854 775 807|  
-|<xref:System.SByte?displayProperty=nameWithType>|Подписанный|1|–128|127|  
-|<xref:System.UInt16?displayProperty=nameWithType>|Без знака|2|0|65 535|  
-|<xref:System.UInt32?displayProperty=nameWithType>|Без знака|4|0|4 294 967 295|  
-|<xref:System.UInt64?displayProperty=nameWithType>|Без знака|8|0|18 446 744 073 709 551 615|  
+|<xref:System.Byte?displayProperty=nameWithType>|беззнаковый|1|0|255|  
+|<xref:System.Int16?displayProperty=nameWithType>|знаковый|2|–32 768|32 767|  
+|<xref:System.Int32?displayProperty=nameWithType>|знаковый|4|–2 147 483 648|2 147 483 647|  
+|<xref:System.Int64?displayProperty=nameWithType>|знаковый|8|–9 223 372 036 854 775 808|9 223 372 036 854 775 807|  
+|<xref:System.SByte?displayProperty=nameWithType>|знаковый|1|–128|127|  
+|<xref:System.UInt16?displayProperty=nameWithType>|беззнаковый|2|0|65 535|  
+|<xref:System.UInt32?displayProperty=nameWithType>|беззнаковый|4|0|4 294 967 295|  
+|<xref:System.UInt64?displayProperty=nameWithType>|беззнаковый|8|0|18 446 744 073 709 551 615|  
   
  Каждый целочисленный тип поддерживает стандартный набор арифметических операторов, операторов сравнения, равенства, явного и неявного преобразования. Каждый целочисленный тип также имеет методы для выполнения сравнения на равенство и относительного сравнения, преобразования строкового представления числа в данный целочисленный тип и преобразования целого числа в строковое представление. Некоторые дополнительные математические операции, помимо обеспечиваемых стандартными операторами, такие как округление и определение меньшего или большего из двух целых чисел, доступны посредством класса <xref:System.Math>. Вы также можете работать с отдельными битами целочисленного значения с помощью класса <xref:System.BitConverter>.  
   
