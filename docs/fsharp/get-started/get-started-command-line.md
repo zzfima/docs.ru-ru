@@ -3,11 +3,11 @@ title: 'Начало работы с F # с помощью средства ко
 description: 'Узнайте, как создать простое решение для нескольких проектов F # с помощью интерфейса командной строки .NET Core в любой операционной системе (Windows, macOs или Linux).'
 ms.date: 03/26/2018
 ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44134809"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198521"
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Начало работы с F # с помощью интерфейса командной строки .NET Core
 

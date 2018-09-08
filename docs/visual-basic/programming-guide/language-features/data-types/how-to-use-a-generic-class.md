@@ -21,12 +21,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 242dd2a6-86c4-4ce7-83f2-f2661803f752
-ms.openlocfilehash: 3bcf7b0556ef2c5d9b8f82442815672b2b3cde86
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 108532e5b765fa918fa894199ef710a9f52db4e4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520661"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207139"
 ---
 # <a name="how-to-use-a-generic-class-visual-basic"></a>Практическое руководство. Использование универсального класса (Visual Basic)
 Класс, принимающий *параметры типа*, называется *универсальным*. При использовании универсального класса из него можно создать *сконструированный класс*, указав *аргумент типа* для каждого из этих параметров. После этого можно объявить переменную типа сконструированного класса, а также создать экземпляр такого класса и присвоить его этой переменной.  
@@ -45,11 +45,12 @@ ms.locfileid: "43520661"
   
      [!code-vb[VbVbalrDataTypes#9](../../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/how-to-use-a-generic-class_1.vb)]  
   
-## <a name="see-also"></a>См. также  
- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [Универсальные типы в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Независимость от языка и независимые от языка компоненты](../../../../standard/language-independence-and-language-independent-components.md)  
- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
- [Оператор Imports (пространство имен и тип .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [Практическое руководство. Определение класса, реализующего одинаковую функциональность для различных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
- [Итераторы](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)
+## <a name="see-also"></a>См. также
+
+- [Типы данных](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
+- [Универсальные типы в Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
+- [Независимость от языка и независимые от языка компоненты](../../../../standard/language-independence-and-language-independent-components.md)  
+- [Of](../../../../visual-basic/language-reference/statements/of-clause.md)  
+- [Оператор Imports (пространство имен и тип .NET)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
+- [Практическое руководство. Определение класса, реализующего одинаковую функциональность для различных типов данных](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)  
+- [Итераторы](../../../../visual-basic/programming-guide/concepts/iterators.md)

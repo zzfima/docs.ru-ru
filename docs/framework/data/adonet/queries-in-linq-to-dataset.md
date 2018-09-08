@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
 ms.openlocfilehash: da9e5bd39cebce27dbaf89ac020c2bf8f154adcc
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44071704"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211844"
 ---
 # <a name="queries-in-linq-to-dataset"></a>Запросы в LINQ to DataSet
 Запрос представляет собой выражение, извлекающее данные из источника данных. Запросы обычно выражаются на специализированном языке запросов, например SQL для реляционных баз данных и XQuery для XML. Поэтому разработчикам приходится учить новый язык запросов для каждого типа источника данных и формата данных, для которых выполняется запрос. [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] реализует более простую и согласованную модель работы с данными для различных типов источников данных и различных форматов данных. В запросе [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] работа всегда происходит с программными объектами.  

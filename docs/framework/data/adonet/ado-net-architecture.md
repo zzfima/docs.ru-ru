@@ -3,11 +3,11 @@ title: Архитектура ADO.NET
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
 ms.openlocfilehash: 4c2299951202794112ea66c1f20025777c68e356
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44097451"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195521"
 ---
 # <a name="adonet-architecture"></a>Архитектура ADO.NET
 Обработка данных традиционно полагалась в основном на двухуровневую модель, основанную на сетевом соединении. Так как при обработке данных все больше используется многоуровневая архитектура, программисты переходят на метод, не использующий подключение, чтобы обеспечить лучшую масштабируемость для их приложений.  

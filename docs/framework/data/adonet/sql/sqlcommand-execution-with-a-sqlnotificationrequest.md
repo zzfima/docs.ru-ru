@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1776f48f-9bea-41f6-83a4-c990c7a2c991
 ms.openlocfilehash: 83450e6ace33e89ddd263a1514f74f4d4e231cf7
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44139076"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213333"
 ---
 # <a name="sqlcommand-execution-with-a-sqlnotificationrequest"></a>Выполнение SqlCommand с помощью SqlNotificationRequest
 Объект <xref:System.Data.SqlClient.SqlCommand> можно настроить таким образом, чтобы при изменении выбранных с сервера данных создавалось уведомление, когда результирующий набор повторного запроса будет отличаться от результирующего набора первого запроса. Это полезно в сценариях, в которых нужно создать пользовательские очереди уведомлений или не требуется поддерживать активные объекты.  

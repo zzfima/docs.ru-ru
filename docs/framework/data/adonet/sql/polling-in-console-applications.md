@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
 ms.openlocfilehash: 6b0d298e1959ff2fdcd46a9f218eb980671407be
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44067150"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204738"
 ---
 # <a name="polling-in-console-applications"></a>Выполнение опросов в консольных приложениях
 Асинхронные операции в ADO.NET позволяют запускать трудоемкие операции базы данных в одном потоке, а остальные задачи выполнять в другом потоке. Однако в большинстве сценариев в конечном итоге достигается положение, в котором не следует продолжать работу приложения, пока не завершится операция базы данных. В таких случаях полезно опросить асинхронную операцию, чтобы определить, завершена ли эта операция.  

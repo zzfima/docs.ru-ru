@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 ms.openlocfilehash: 1922351ffb11d5ff6541ef22dee623c20d153d6a
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44137802"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207496"
 ---
 # <a name="feed-customization-wcf-data-services"></a>Настройка каналов (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] использует [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для предоставления данных в виде канала. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] поддерживает форматы Atom и нотации объектов JavaScript (JSON) для веб-каналов данных. При использовании потока Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] предоставляет стандартный метод сериализации данных, таких как сущности и связи, в формате XML, которое может быть включено в тексте HTTP-сообщения. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] Определяет свойства сущности по умолчанию сопоставление между данными, содержащимися в сущностях и элементах Atom. Дополнительные сведения см. в разделе [OData: формат Atom](https://go.microsoft.com/fwlink/?LinkID=185794).  

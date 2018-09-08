@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8
 ms.openlocfilehash: 7d982b73332a2629ccd32c409e0de6fe1ce6eb98
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43876574"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201911"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>Сравнение значений идентификатора GUID и uniqueidentifier
 Тип данных идентификатора GUID в SQL Server представлен типом данных `uniqueidentifier`, который хранит 16-байтовое двоичное значение. Идентификатор GUID - это двоичное число, главным образом используемое для назначения идентификаторов, которые должны быть уникальными в рамках сети с большим числом компьютеров в различных расположениях. Идентификаторы GUID можно создавать путем вызова функции Transact-SQL NEWID, они гарантированно будут уникальными в любом расположении. Дополнительные сведения см. в разделе [uniqueidentifier (Transact-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql).  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17528bb9faf137029b35e4a9f28bab7a28ae25db
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5e3f691da48db863edd20bc6881785940a5451ef
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864619"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44209385"
 ---
 # <a name="-target-visual-basic"></a>-target (Visual Basic)
 Задает формат выходных данных компилятора.  
@@ -38,7 +38,7 @@ ms.locfileid: "43864619"
   
  Если не указать `-target:module`, `-target` вызывает [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] манифест сборки для добавления в выходной файл.  
   
- Создает каждый экземпляр Vbc.exe, не более одного выходного файла. При указании параметра компилятора, такие как `-out` или `-target` более одного раза, последнее из них процессы компиляции, вступают в силу. Сведения обо всех файлах в компиляции добавляются в манифест. Все выходные файлы, кроме созданных с помощью `-target:module` содержать метаданные сборки в манифесте. Используйте [Ildasm.exe (дизассемблер IL)](https://msdn.microsoft.com/library/f7dy01k1) для просмотра метаданных в выходном файле.  
+ Создает каждый экземпляр Vbc.exe, не более одного выходного файла. При указании параметра компилятора, такие как `-out` или `-target` более одного раза, последнее из них процессы компиляции, вступают в силу. Сведения обо всех файлах в компиляции добавляются в манифест. Все выходные файлы, кроме созданных с помощью `-target:module` содержать метаданные сборки в манифесте. Используйте [Ildasm.exe (дизассемблер IL)](../../../framework/tools/ildasm-exe-il-disassembler.md) для просмотра метаданных в выходном файле.  
   
  Краткой формой `-target` является `-t`.  
   
@@ -57,12 +57,13 @@ ms.locfileid: "43864619"
 vbc -target:library in.vb  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
- [-ссылке (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
- [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>См. также
+
+- [Компилятор Visual Basic с интерфейсом командной строки](../../../visual-basic/reference/command-line-compiler/index.md)  
+- [-main](../../../visual-basic/reference/command-line-compiler/main.md)  
+- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
+- [-ссылке (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
+- [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
+- [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
+- [Сборки и глобальный кэш сборок](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+- [Примеры командных строк компиляции](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

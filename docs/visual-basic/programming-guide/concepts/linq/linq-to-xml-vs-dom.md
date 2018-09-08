@@ -2,12 +2,12 @@
 title: LINQ to XML или DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: a0a23a773e927155ca22456ea403549b255718ad
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4feb0df2e4d3ffe5c79ce61d7b94142833a312c7
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43885634"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213875"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML или DOM (Visual Basic)
 В этом разделе описываются некоторые основные различия между [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] и текущим преобладающим программным интерфейсом API XML, а именно моделью DOM консорциума W3C.  
@@ -125,10 +125,10 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] хранит пробелы как узлы <xref:System.Xml.Linq.XText>, а не имеет сериализованный тип узла <xref:System.Xml.XmlNodeType.Whitespace>, который есть в DOM.  
   
 ## <a name="support-for-annotations"></a>Поддержка заметок  
- Элементы [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] поддерживают расширяемый набор заметок. Это полезно для отслеживания различной информации об элементе, например сведений о схеме, сведений о привязке элемента к пользовательскому интерфейсу, а также любых других сведений, относящихся к конкретному приложению. Дополнительные сведения см. в разделе [Заметки LINQ to XML](https://msdn.microsoft.com/library/e2f0052d-61e2-48d4-9ea4-356c9cab35d5).  
+ Элементы [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] поддерживают расширяемый набор заметок. Это полезно для отслеживания различной информации об элементе, например сведений о схеме, сведений о привязке элемента к пользовательскому интерфейсу, а также любых других сведений, относящихся к конкретному приложению. Дополнительные сведения см. в разделе [Заметки LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md).  
   
 ## <a name="support-for-schema-information"></a>Поддержка сведений схемы  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] обеспечивает поддержку проверки правильности по схеме XSD через методы расширения в пространстве имен <xref:System.Xml.Schema?displayProperty=nameWithType>. Можно проверить XML-дерево на соответствие схеме XSD. XML-дерево можно заполнить при помощи модуля проверки после обработки схемы (PSVI). Дополнительные сведения см. в разделах [Практическое руководство. Проверка XSD с использованием XSD](https://msdn.microsoft.com/library/481a97fa-6e96-46f2-8c9a-415555fac33b) и <xref:System.Xml.Schema.Extensions>.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] обеспечивает поддержку проверки правильности по схеме XSD через методы расширения в пространстве имен <xref:System.Xml.Schema?displayProperty=nameWithType>. Можно проверить XML-дерево на соответствие схеме XSD. XML-дерево можно заполнить при помощи модуля проверки после обработки схемы (PSVI). Дополнительные сведения см. в разделах [Практическое руководство. Проверка XSD с использованием XSD](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) и <xref:System.Xml.Schema.Extensions>.  
   
 ## <a name="see-also"></a>См. также  
  [Начало работы (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

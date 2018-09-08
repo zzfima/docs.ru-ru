@@ -2,12 +2,12 @@
 title: Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 9798136bfa88e19764a064732637783620f77a73
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0c4ee6d7bd6d0b160d5f2ed0ab0021601b3aced2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43884680"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213307"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)
 Асинхронное программирование позволяет избежать появления узких мест производительности и увеличить общую скорость реагирования приложения. Однако традиционные методы создания асинхронных приложений могут оказаться сложными, как в плане написания кода, так и в плане отладки и обслуживания.  
@@ -99,7 +99,7 @@ Dim urlContents As String = Await client.GetStringAsync()
   
  В асинхронных методах с помощью соответствующих ключевых слов и типов указывается, что требуется сделать, а компилятор выполняет остальные задачи, в том числе отслеживает обязательные действия, когда управление возвращается в точку await в приостановленном методе. Некоторые программные процессы, такие как циклы и обработка исключений, сложно добавлять в традиционный асинхронный код. В асинхронном методе эти элементы пишутся почти так же, как в синхронном решении, что очень удобно.  
   
- Дополнительные сведения об асинхронности в предыдущих версиях платформы .NET Framework, см. в статье [TPL and Traditional .NET Framework Asynchronous Programming](https://msdn.microsoft.com/library/e7b31170-a156-433f-9f26-b1fc7cd1776f) (Библиотека параллельных задач и традиционное асинхронное программирование в .NET Framework).  
+ Дополнительные сведения об асинхронности в предыдущих версиях платформы .NET Framework, см. в статье [TPL and Traditional .NET Framework Asynchronous Programming](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md) (Библиотека параллельных задач и традиционное асинхронное программирование в .NET Framework).  
   
 ##  <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a>Что происходит в методе Async  
  В асинхронном программировании важнее всего понимать, как поток управления перемещается из метода в метод. Следующая схема описывает этот процесс.  
@@ -246,7 +246,7 @@ Await Task_MethodAsync()
 |[WhenAny. Связывание .NET Framework и среды выполнения Windows (C# и Visual Basic)](https://msdn.microsoft.com/library/jj635140(v=vs.120).aspx)|Иллюстрирует, как создать мост между типами задач на платформе .NET Framework и IAsyncOperations в [!INCLUDE[wrt](~/includes/wrt-md.md)], чтобы можно было использовать <xref:System.Threading.Tasks.Task.WhenAny%2A> с методом [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Async Sample: Bridging between .NET and Windows Runtime (AsTask and WhenAny)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/jj635140(v=vs.120)) (Пример использования async. Связывание между платформой .NET и средой выполнения Windows с помощью AsTask и WhenAny)|  
 |Асинхронная отмена. Связывание .NET Framework и среды выполнения Windows|Иллюстрирует, как создать мост между типами задач на платформе .NET Framework и IAsyncOperations в [!INCLUDE[wrt](~/includes/wrt-md.md)], чтобы можно было использовать <xref:System.Threading.CancellationTokenSource> с методом [!INCLUDE[wrt](~/includes/wrt-md.md)].|[Async Sample: Bridging between .NET and Windows Runtime (AsTask & Cancellation)](https://code.msdn.microsoft.com/Async-Sample-Bridging-9479eca3) (Пример использования async. Связывание между платформой .NET и средой выполнения Windows с помощью AsTask и Cancellation)|  
 |[Using Async for File Access (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/using-async-for-file-access.md) (Использование метода Async для доступа к файлам (Visual Basic))|Иллюстрирует преимущества использования асинхронности и ожидания для доступа к файлам.||  
-|[Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/library/8cef1fcf-6f9f-417c-b21f-3fd8bac75007) (Асинхронный шаблон, основанный на задачах (TAP))|Описывает новый шаблон для асинхронности в платформе .NET Framework. Шаблон основан на типах <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>.||  
+|[Task-based Asynchronous Pattern (TAP)](../../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Асинхронный шаблон, основанный на задачах (TAP))|Описывает новый шаблон для асинхронности в платформе .NET Framework. Шаблон основан на типах <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601>.||  
 |[Видеоролики об async на канале Channel 9](https://channel9.msdn.com/search?term=async+&type=All)|Предоставляет ссылки на различные видеоролики об асинхронном программировании.||  
   
 ##  <a name="BKMK_CompleteExample"></a> Полный пример  
@@ -313,6 +313,7 @@ End Class
 ' Length of the downloaded string: 41763.  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Оператор Await](../../../../visual-basic/language-reference/operators/await-operator.md)  
- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
+## <a name="see-also"></a>См. также
+
+- [Оператор Await](../../../../visual-basic/language-reference/operators/await-operator.md)  
+- [Async](../../../../visual-basic/language-reference/modifiers/async.md)

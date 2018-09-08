@@ -3,11 +3,11 @@ title: Поставщики типов
 description: 'Узнайте, как поставщик типов F # — это компонент, который предоставляет типы, свойства и методы для использования в программах.'
 ms.date: 04/02/2018
 ms.openlocfilehash: 5fa9de229caa2ec3ba4a248ca5cd1c8aa5adb230
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44134738"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210329"
 ---
 # <a name="type-providers"></a>Поставщики типов
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
 ms.openlocfilehash: f1084ffcf0b5330185a44eda8721ef2a03413602
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886400"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197278"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>Отношения типов в операциях запроса (Visual Basic)
 Переменные, используемые в [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] запроса операции являются строго типизированными и должны быть совместимы друг с другом. Строгая типизация используется в источнике данных, в самом запросе и при выполнении запроса. На следующем рисунке показаны термины, используемые для описания [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] запроса. Дополнительные сведения о частях запроса см. в разделе [основные операции запроса (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md).  

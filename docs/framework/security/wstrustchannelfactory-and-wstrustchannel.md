@@ -5,11 +5,11 @@ ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7dfe18a55d8c7f56db1906cb2aa982ab043841c7
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43875591"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197292"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory и WSTrustChannel
 Если вы уже знакомы с платформой Windows Communication Foundation (WCF), значит вам также известно, что клиент WCF уже включает возможности федерации. Путем настройки клиента WCF с привязкой <xref:System.ServiceModel.WSFederationHttpBinding> или аналогичной пользовательской привязкой можно включить федеративную проверку подлинности для службы.  

@@ -3,11 +3,11 @@ title: Использование AsyncOperationContext в образце дей
 ms.date: 03/30/2017
 ms.assetid: 0888a0bd-d227-4c00-ad6a-b654a01740e8
 ms.openlocfilehash: 4358a364a3f7ec69b7c1c548fcf82fe494f37505
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44078910"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44196911"
 ---
 # <a name="using-asyncoperationcontext-in-an-activity-sample"></a>Использование AsyncOperationContext в образце действия
 В этом образце показано, как разработать настраиваемое действие <xref:System.Activities.CodeActivity>, которое использует <xref:System.Activities.AsyncCodeActivityContext> для асинхронного выполнения работы вне рабочего процесса.  

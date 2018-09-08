@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 3d830bcd-32b4-4f26-9287-d58a071452c6
 ms.openlocfilehash: eb9d7cd8e62a73f49fd2b0f2fc2572b01109553b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44070554"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44214840"
 ---
 # <a name="how-to-enable-access-to-the-data-service-wcf-data-services"></a>Как включить доступ к службе данных (службы WCF Data Services)
 В службах [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] требуется явно предоставлять доступ к ресурсам, предоставляемым службой данных. Это значит, что после создания новой службы данных все равно требуется явно предоставлять доступ к отдельным ресурсам в виде набора сущностей. В этом разделе показано, как включить чтения и задает доступ на запись к пяти сущности в службе данных Northwind, которая создается при завершении [быстрого запуска](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md). Поскольку перечисление <xref:System.Data.Services.EntitySetRights> определяется с помощью <xref:System.FlagsAttribute>, для указания нескольких разрешений для одного набора сущностей или операции можно использовать логический оператор OR.  

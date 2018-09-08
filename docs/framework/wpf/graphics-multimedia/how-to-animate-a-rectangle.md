@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rectangles [WPF], animating
 ms.assetid: 572ffb95-790d-4ace-adbf-b2ea8a90e75b
 ms.openlocfilehash: c2edf1bc8505b7bda2cc31ded2d2bf53a96243ac
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44070853"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204569"
 ---
 # <a name="how-to-animate-a-rectangle"></a>Практическое руководство. Анимация прямоугольника
 В этом примере показано, как анимировать изменения размера и положения прямоугольника.  

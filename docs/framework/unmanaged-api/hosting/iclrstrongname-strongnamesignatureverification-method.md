@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49041031742332fbc275a9dbde91e640eb428c28
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44035704"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210511"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverification-method"></a>Метод ICLRStrongName::StrongNameSignatureVerification
 Получает значение, указывающее, содержит ли манифест сборки по указанному пути подпись строгого имени, который проверяется в соответствии с заданными флагами.  

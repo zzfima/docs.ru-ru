@@ -3,11 +3,11 @@ title: Параллельное действие ForEach с ограничени
 ms.date: 03/30/2017
 ms.assetid: f2855b5f-e9a7-433d-96a4-40fc31025215
 ms.openlocfilehash: 7149e6db8992bff5b436ffae4a77d985ec255986
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43564909"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44215990"
 ---
 # <a name="throttled-parallel-foreach"></a>Параллельное действие ForEach с ограничением
 `ThrottleParallelForEach` Аналогично действию <!--zz <xref:System.Activities.Statements.ParallelForEach>--> `System.Activities.Statements.ParallelForEach` действия, за одним исключением, позволяет настроить фактор одновременности для ограничения число одновременно выполняющихся ветвей. Действие `ThrottleParallelForEach` является производным от действия <xref:System.Activities.NativeActivity>, поскольку оно должно планировать другие действия (дочерние действия), что можно сделать только через класс <xref:System.Activities.NativeActivityContext>.  

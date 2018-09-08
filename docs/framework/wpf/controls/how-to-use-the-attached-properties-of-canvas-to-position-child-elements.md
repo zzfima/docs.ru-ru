@@ -9,18 +9,19 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 - Canvas control [WPF], attached properties
 ms.assetid: 48f1d25d-3820-4107-a4cc-d6c1e5664a44
-ms.openlocfilehash: 886440304dc1bebdcfae66676254bef7ac35457d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89327b834dfd71c0a7420eb42a598b98cdb5e9d8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552378"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208496"
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>Практическое руководство. Использование присоединенных свойств Canvas для расположения дочерних элементов
 В этом примере показано использование вложенных свойств <xref:System.Windows.Controls.Canvas> для размещения дочерних элементов.  
   
 ## <a name="example"></a>Пример  
- В следующем примере добавляются четыре <xref:System.Windows.Controls.Button> элементы как дочерние элементы родительского <xref:System.Windows.Controls.Canvas>. Каждый дочерний элемент представляет отдельное вложенное свойство <xref:System.Windows.Controls.Canvas>: <xref:System.Windows.Controls.Canvas.Bottom%2A>, <xref:System.Windows.Controls.Canvas.Left%2A>, <xref:System.Windows.Controls.Canvas.Right%2A>, и <xref:System.Windows.Controls.Canvas.Top%2A>. Каждый <xref:System.Windows.Controls.Button> располагается относительно родительского элемента <xref:System.Windows.Controls.Canvas> и в соответствии с его значение присоединенного свойства.  
+ В следующем примере добавляется четыре <xref:System.Windows.Controls.Button> элементы как дочерние элементы родительского элемента <xref:System.Windows.Controls.Canvas>. Каждый элемент представлен <xref:System.Windows.Controls.Canvas.Bottom%2A>, <xref:System.Windows.Controls.Canvas.Left%2A>, <xref:System.Windows.Controls.Canvas.Right%2A>, и <xref:System.Windows.Controls.Canvas.Top%2A>.
+Каждый <xref:System.Windows.Controls.Button> располагается относительно родительского элемента <xref:System.Windows.Controls.Canvas> и в соответствии с назначенным значением свойства.  
   
  [!code-cpp[CanvasAttachedProperties#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/CanvasAttachedProperties/CPP/CanvasAttachedProps.cpp#1)]
  [!code-csharp[CanvasAttachedProperties#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CanvasAttachedProperties/CSharp/CanvasAttachedProps.cs#1)]

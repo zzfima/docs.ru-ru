@@ -3,11 +3,11 @@ title: Решение SQLStoreExtensibility
 ms.date: 03/30/2017
 ms.assetid: 5da1b5a3-f144-41ba-b9c4-02818b28b15d
 ms.openlocfilehash: f49d05244cf9f65a8e06f39c7e40391aaebd9f77
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44032813"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44202379"
 ---
 # <a name="sqlstoreextensibility"></a>Решение SQLStoreExtensibility
 Этот образец демонстрирует использование и конфигурацию распространяемых свойств в хранилище экземпляров рабочих процессов SQL. Хранилище экземпляров рабочих процессов SQL - это реализация хранилища экземпляров на основе SQL Server. Это дает экземпляру возможность сохранять свое состояние и загружать свое состояние из базы данных SQL Server или SQL Server Express либо заносить состояние в эту базу данных. Возможность расширения хранилища позволяет пользователю определять свойства, хранимые в хранилище экземпляров. Эти свойства отображаются в представлении распространяемых свойств, которые позволяют пользователю запрашивать их.  

@@ -3,11 +3,11 @@ title: '&lt;services&gt; для &lt;workflowRuntime&gt;'
 ms.date: 03/30/2017
 ms.assetid: 219a05b1-f573-45c9-849b-e86bc373b62f
 ms.openlocfilehash: 44da735ab1aa2391fe882dfba6e1afc47be746ff
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44138127"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44217520"
 ---
 # <a name="ltservicesgt-of-ltworkflowruntimegt"></a>&lt;services&gt; для &lt;workflowRuntime&gt;
 Представляет коллекцию служб, добавляемую в подсистему <xref:System.Workflow.Runtime.WorkflowRuntime>. Элементы имеют тип <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  Службы, указанные в коллекции, инициализируются механизмом среды выполнения рабочих процессов и добавляются в службы при вызове соответствующего конструктора <xref:System.Workflow.Runtime.WorkflowRuntime>. Таким образом, службы, указанные в коллекции, должны отвечать определенным правилам в отношении сигнатур конструкторов. Дополнительные сведения см. в разделе <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>.  
