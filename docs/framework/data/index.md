@@ -7,40 +7,40 @@ helpviewer_keywords:
 - data [.NET Framework], accessing
 ms.assetid: 8c37635d-e2c1-4b64-a258-61d9e87405e6
 ms.openlocfilehash: 0db71fd7e48515ad6be3641786fc180f62aacf33
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879654"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44138933"
 ---
-# <a name="data-and-modeling-in-the-net-framework"></a><span data-ttu-id="2c817-102">Данные и модели в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="2c817-102">Data and Modeling in the .NET Framework</span></span>
-<span data-ttu-id="2c817-103">Этот раздел содержит сведения о доступе к данным с использованием ADO.NET, LINQ, служб данных WCF и XML.</span><span class="sxs-lookup"><span data-stu-id="2c817-103">This section provides information on how to access data using ADO.NET, Language Integrated Query (LINQ), WCF Data Services, and XML.</span></span>  
+# <a name="data-and-modeling-in-the-net-framework"></a><span data-ttu-id="08100-102">Данные и модели в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="08100-102">Data and Modeling in the .NET Framework</span></span>
+<span data-ttu-id="08100-103">Этот раздел содержит сведения о доступе к данным с использованием ADO.NET, LINQ, служб данных WCF и XML.</span><span class="sxs-lookup"><span data-stu-id="08100-103">This section provides information on how to access data using ADO.NET, Language Integrated Query (LINQ), WCF Data Services, and XML.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2c817-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="2c817-104">In This Section</span></span>  
- [<span data-ttu-id="2c817-105">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="2c817-105">ADO.NET</span></span>](../../../docs/framework/data/adonet/index.md)  
- <span data-ttu-id="2c817-106">Описание архитектуры ADO.NET и способов использования классов ADO.NET для управления данными приложения и взаимодействия с источниками данных, включая Microsoft SQL Server, источники данных OLE DB и XML.</span><span class="sxs-lookup"><span data-stu-id="2c817-106">Describes the ADO.NET architecture and how to use the ADO.NET classes to manage application data and interact with data sources, including Microsoft SQL Server, OLE DB data sources, and XML.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="08100-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="08100-104">In This Section</span></span>  
+ [<span data-ttu-id="08100-105">ADO.NET</span><span class="sxs-lookup"><span data-stu-id="08100-105">ADO.NET</span></span>](../../../docs/framework/data/adonet/index.md)  
+ <span data-ttu-id="08100-106">Описание архитектуры ADO.NET и способов использования классов ADO.NET для управления данными приложения и взаимодействия с источниками данных, включая Microsoft SQL Server, источники данных OLE DB и XML.</span><span class="sxs-lookup"><span data-stu-id="08100-106">Describes the ADO.NET architecture and how to use the ADO.NET classes to manage application data and interact with data sources, including Microsoft SQL Server, OLE DB data sources, and XML.</span></span>  
   
- [<span data-ttu-id="2c817-107">Портал LINQ</span><span class="sxs-lookup"><span data-stu-id="2c817-107">LINQ Portal</span></span>](https://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
- <span data-ttu-id="2c817-108">Содержит ссылки на важную документацию по LINQ.</span><span class="sxs-lookup"><span data-stu-id="2c817-108">Provides links to relevant documentation for Language Integrated Query (LINQ).</span></span>  
+ [<span data-ttu-id="08100-107">Портал LINQ</span><span class="sxs-lookup"><span data-stu-id="08100-107">LINQ Portal</span></span>](https://msdn.microsoft.com/library/6eb15c76-4ee6-4146-981e-b3429a945e6f)  
+ <span data-ttu-id="08100-108">Содержит ссылки на важную документацию по LINQ.</span><span class="sxs-lookup"><span data-stu-id="08100-108">Provides links to relevant documentation for Language Integrated Query (LINQ).</span></span>  
   
- [<span data-ttu-id="2c817-109">Обработка транзакций</span><span class="sxs-lookup"><span data-stu-id="2c817-109">Transaction Processing</span></span>](../../../docs/framework/data/transactions/index.md)  
- <span data-ttu-id="2c817-110">Обсуждение поддержки транзакций в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2c817-110">Discusses the .NET Framework support for transactions.</span></span>  
+ [<span data-ttu-id="08100-109">Обработка транзакций</span><span class="sxs-lookup"><span data-stu-id="08100-109">Transaction Processing</span></span>](../../../docs/framework/data/transactions/index.md)  
+ <span data-ttu-id="08100-110">Обсуждение поддержки транзакций в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="08100-110">Discusses the .NET Framework support for transactions.</span></span>  
   
- [<span data-ttu-id="2c817-111">Службы данных WCF 4.5</span><span class="sxs-lookup"><span data-stu-id="2c817-111">WCF Data Services 4.5</span></span>](../../../docs/framework/data/wcf/index.md)  
- <span data-ttu-id="2c817-112">Содержит сведения об использовании служб данных WCF для развертывания служб данных в Интернете или интрасети.</span><span class="sxs-lookup"><span data-stu-id="2c817-112">Provides information about how to use WCF Data Services to deploy data services on the Web or an intranet.</span></span>  
+ [<span data-ttu-id="08100-111">Службы данных WCF 4.5</span><span class="sxs-lookup"><span data-stu-id="08100-111">WCF Data Services 4.5</span></span>](../../../docs/framework/data/wcf/index.md)  
+ <span data-ttu-id="08100-112">Содержит сведения об использовании служб данных WCF для развертывания служб данных в Интернете или интрасети.</span><span class="sxs-lookup"><span data-stu-id="08100-112">Provides information about how to use WCF Data Services to deploy data services on the Web or an intranet.</span></span>  
   
- [<span data-ttu-id="2c817-113">XML-документы и данные</span><span class="sxs-lookup"><span data-stu-id="2c817-113">XML Documents and Data</span></span>](../../../docs/standard/data/xml/index.md)  
- <span data-ttu-id="2c817-114">Здесь приводится обзор обширного и встроенного набора классов, предназначенных для работы с XML-документами и данными в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="2c817-114">Provides an overview to a comprehensive and integrated set of classes that work with XML documents and data in the .NET Framework.</span></span>  
+ [<span data-ttu-id="08100-113">XML-документы и данные</span><span class="sxs-lookup"><span data-stu-id="08100-113">XML Documents and Data</span></span>](../../../docs/standard/data/xml/index.md)  
+ <span data-ttu-id="08100-114">Здесь приводится обзор обширного и встроенного набора классов, предназначенных для работы с XML-документами и данными в .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="08100-114">Provides an overview to a comprehensive and integrated set of classes that work with XML documents and data in the .NET Framework.</span></span>  
   
- [<span data-ttu-id="2c817-115">Справочник по XML-стандартам</span><span class="sxs-lookup"><span data-stu-id="2c817-115">XML Standards Reference</span></span>](https://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
- <span data-ttu-id="2c817-116">Справочная информация об основанных на XML стандартах, поддерживаемых корпорацией Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="2c817-116">Provides reference information on XML standards that Microsoft supports.</span></span>  
+ [<span data-ttu-id="08100-115">Справочник по XML-стандартам</span><span class="sxs-lookup"><span data-stu-id="08100-115">XML Standards Reference</span></span>](https://msdn.microsoft.com/library/79c78508-c9d0-423a-a00f-672e855de401)  
+ <span data-ttu-id="08100-116">Справочная информация об основанных на XML стандартах, поддерживаемых корпорацией Майкрософт.</span><span class="sxs-lookup"><span data-stu-id="08100-116">Provides reference information on XML standards that Microsoft supports.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="2c817-117">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="2c817-117">Related Sections</span></span>  
- [<span data-ttu-id="2c817-118">Технологии моделирования Microsoft SQL Server</span><span class="sxs-lookup"><span data-stu-id="2c817-118">Microsoft SQL Server Modeling Technologies</span></span>](https://go.microsoft.com/fwlink/?LinkId=193039)  
- <span data-ttu-id="2c817-119">Описание набора технологий, обеспечивающих быструю и настраиваемую разработку структуры и кода приложений на основе данных.</span><span class="sxs-lookup"><span data-stu-id="2c817-119">Describes a set of technologies that enable rapid and customized data-based application design and development.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="08100-117">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="08100-117">Related Sections</span></span>  
+ [<span data-ttu-id="08100-118">Технологии моделирования Microsoft SQL Server</span><span class="sxs-lookup"><span data-stu-id="08100-118">Microsoft SQL Server Modeling Technologies</span></span>](https://go.microsoft.com/fwlink/?LinkId=193039)  
+ <span data-ttu-id="08100-119">Описание набора технологий, обеспечивающих быструю и настраиваемую разработку структуры и кода приложений на основе данных.</span><span class="sxs-lookup"><span data-stu-id="08100-119">Describes a set of technologies that enable rapid and customized data-based application design and development.</span></span>  
   
- [<span data-ttu-id="2c817-120">Руководство по разработке</span><span class="sxs-lookup"><span data-stu-id="2c817-120">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
- <span data-ttu-id="2c817-121">Здесь содержится руководство по всем ключевым технологическим областям и задачам для разработки приложений, включая создание, настройку, отладку, безопасность и развертывание приложений, а также сведения о динамическом программировании, взаимодействии, расширении среды, управлении памятью и работе с потоками.</span><span class="sxs-lookup"><span data-stu-id="2c817-121">Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application, and information about dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>  
+ [<span data-ttu-id="08100-120">Руководство по разработке</span><span class="sxs-lookup"><span data-stu-id="08100-120">Development Guide</span></span>](../../../docs/framework/development-guide.md)  
+ <span data-ttu-id="08100-121">Здесь содержится руководство по всем ключевым технологическим областям и задачам для разработки приложений, включая создание, настройку, отладку, безопасность и развертывание приложений, а также сведения о динамическом программировании, взаимодействии, расширении среды, управлении памятью и работе с потоками.</span><span class="sxs-lookup"><span data-stu-id="08100-121">Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application, and information about dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>  
   
- [<span data-ttu-id="2c817-122">Безопасность</span><span class="sxs-lookup"><span data-stu-id="2c817-122">Security</span></span>](../../../docs/standard/security/index.md)  
- <span data-ttu-id="2c817-123">Здесь приводятся ссылки на дополнительные сведения о классах и службах среды CLR и .NET Framework, предназначенных для упрощения разработки безопасных приложений.</span><span class="sxs-lookup"><span data-stu-id="2c817-123">Provides links to more information on the classes and services in the common language runtime and the .NET Framework that facilitate secure application development.</span></span>
+ [<span data-ttu-id="08100-122">Безопасность</span><span class="sxs-lookup"><span data-stu-id="08100-122">Security</span></span>](../../../docs/standard/security/index.md)  
+ <span data-ttu-id="08100-123">Здесь приводятся ссылки на дополнительные сведения о классах и службах среды CLR и .NET Framework, предназначенных для упрощения разработки безопасных приложений.</span><span class="sxs-lookup"><span data-stu-id="08100-123">Provides links to more information on the classes and services in the common language runtime and the .NET Framework that facilitate secure application development.</span></span>
