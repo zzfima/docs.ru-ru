@@ -9,11 +9,11 @@ helpviewer_keywords:
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
 ms.openlocfilehash: c2086d451af72157785796052af123cd210ee036
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44063109"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194946"
 ---
 # <a name="interceptors-wcf-data-services"></a>Перехватчики (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] позволяет приложению перехватывать сообщения запросов, таким образом, можно добавить пользовательскую логику в операцию. Эта логика можно использовать для проверки данных во входящих сообщениях. Можно также дальнейшим образом ограничить область запроса, например вставить специализированные правила проверки подлинности на основе отдельных запросов.  

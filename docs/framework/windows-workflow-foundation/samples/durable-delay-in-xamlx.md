@@ -3,11 +3,11 @@ title: Сохраняемая задержка в XAMLX
 ms.date: 03/30/2017
 ms.assetid: efc38df4-2d34-453c-8e59-2c21d1307354
 ms.openlocfilehash: 1eef9211c67d190ecb5f329c481fa2e3d1763353
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43873933"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44195193"
 ---
 # <a name="durable-delay-in-xamlx"></a>Сохраняемая задержка в XAMLX
 В этом образце показано, как использовать сохраняемую задержку, при которой рабочий процесс сохраняется на физическом устройстве.  
