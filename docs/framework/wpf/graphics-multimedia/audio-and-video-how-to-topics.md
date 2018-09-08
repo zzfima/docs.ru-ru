@@ -8,30 +8,30 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: f7d96707-ffb5-486c-9e85-db6f0d5ac547
 ms.openlocfilehash: d7c3a6b01591dd1c7fc7554a6e660f1ca7b12de1
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075414"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44222547"
 ---
-# <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="2191c-102">Разделы руководства, посвященные аудио и видео</span><span class="sxs-lookup"><span data-stu-id="2191c-102">Audio and Video How-to Topics</span></span>
-<span data-ttu-id="2191c-103">В следующих разделах показано, как использовать <xref:System.Windows.Controls.MediaElement> интегрировать содержимому аудио и видео в приложениях.</span><span class="sxs-lookup"><span data-stu-id="2191c-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  
+# <a name="audio-and-video-how-to-topics"></a><span data-ttu-id="939ce-102">Разделы руководства, посвященные аудио и видео</span><span class="sxs-lookup"><span data-stu-id="939ce-102">Audio and Video How-to Topics</span></span>
+<span data-ttu-id="939ce-103">В следующих разделах показано, как использовать <xref:System.Windows.Controls.MediaElement> интегрировать содержимому аудио и видео в приложениях.</span><span class="sxs-lookup"><span data-stu-id="939ce-103">The following topics demonstrate how to use the <xref:System.Windows.Controls.MediaElement> to integrate audio and video content in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="2191c-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="2191c-104">In This Section</span></span>  
- [<span data-ttu-id="2191c-105">Практическое: динамическое добавление элемента</span><span class="sxs-lookup"><span data-stu-id="2191c-105">How to: Add an Element Dynamically</span></span>](https://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)  
- [<span data-ttu-id="2191c-106">Управление элементом MediaElement (воспроизведение, пауза, остановка, громкость и скорость)</span><span class="sxs-lookup"><span data-stu-id="2191c-106">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
- [<span data-ttu-id="2191c-107">Управление элементом MediaElement с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="2191c-107">Control a MediaElement by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
- [<span data-ttu-id="2191c-108">Инициирование воспроизведение мультимедиа с помощью пользовательского события</span><span class="sxs-lookup"><span data-stu-id="2191c-108">Trigger Media Playback with a User Event</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
- [<span data-ttu-id="2191c-109">Повторение воспроизведения мультимедиа</span><span class="sxs-lookup"><span data-stu-id="2191c-109">Repeat Media Playback</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
- [<span data-ttu-id="2191c-110">Воспроизведение мультимедиа с анимацией</span><span class="sxs-lookup"><span data-stu-id="2191c-110">Play Media with Animations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
- [<span data-ttu-id="2191c-111">Использование преобразований для элемента MediaElement</span><span class="sxs-lookup"><span data-stu-id="2191c-111">Use Transforms on a MediaElement</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
+## <a name="in-this-section"></a><span data-ttu-id="939ce-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="939ce-104">In This Section</span></span>  
+ [<span data-ttu-id="939ce-105">Практическое: динамическое добавление элемента</span><span class="sxs-lookup"><span data-stu-id="939ce-105">How to: Add an Element Dynamically</span></span>](https://msdn.microsoft.com/library/d00f258a-7973-4de7-bc54-a3fc1f638419)  
+ [<span data-ttu-id="939ce-106">Управление элементом MediaElement (воспроизведение, пауза, остановка, громкость и скорость)</span><span class="sxs-lookup"><span data-stu-id="939ce-106">Control a MediaElement (Play, Pause, Stop, Volume, and Speed)</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [<span data-ttu-id="939ce-107">Управление элементом MediaElement с помощью раскадровки</span><span class="sxs-lookup"><span data-stu-id="939ce-107">Control a MediaElement by Using a Storyboard</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
+ [<span data-ttu-id="939ce-108">Инициирование воспроизведение мультимедиа с помощью пользовательского события</span><span class="sxs-lookup"><span data-stu-id="939ce-108">Trigger Media Playback with a User Event</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
+ [<span data-ttu-id="939ce-109">Повторение воспроизведения мультимедиа</span><span class="sxs-lookup"><span data-stu-id="939ce-109">Repeat Media Playback</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
+ [<span data-ttu-id="939ce-110">Воспроизведение мультимедиа с анимацией</span><span class="sxs-lookup"><span data-stu-id="939ce-110">Play Media with Animations</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
+ [<span data-ttu-id="939ce-111">Использование преобразований для элемента MediaElement</span><span class="sxs-lookup"><span data-stu-id="939ce-111">Use Transforms on a MediaElement</span></span>](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
   
-## <a name="reference"></a><span data-ttu-id="2191c-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="2191c-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="939ce-112">Ссылка</span><span class="sxs-lookup"><span data-stu-id="939ce-112">Reference</span></span>  
  <xref:System.Windows.Controls.MediaElement>  
   
  <xref:System.Windows.Media.MediaPlayer>  
   
  <xref:System.Windows.Media.MediaTimeline>  
   
-## <a name="related-sections"></a><span data-ttu-id="2191c-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="2191c-113">Related Sections</span></span>  
- [<span data-ttu-id="2191c-114">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="2191c-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="related-sections"></a><span data-ttu-id="939ce-113">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="939ce-113">Related Sections</span></span>  
+ [<span data-ttu-id="939ce-114">Графика и мультимедиа</span><span class="sxs-lookup"><span data-stu-id="939ce-114">Graphics and Multimedia</span></span>](../../../../docs/framework/wpf/graphics-multimedia/index.md)
