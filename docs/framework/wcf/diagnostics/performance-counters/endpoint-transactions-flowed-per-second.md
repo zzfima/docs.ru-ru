@@ -3,18 +3,18 @@ title: 'Конечная точка: количество поступивших
 ms.date: 03/30/2017
 ms.assetid: 0f370ff1-a913-450b-bccb-c279ad165b3d
 ms.openlocfilehash: 79f50b6706facd040ec2d325c676f210d5327bf8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44175021"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227146"
 ---
-# <a name="endpoint-transactions-flowed-per-second"></a><span data-ttu-id="a4177-102">Конечная точка: количество поступивших транзакций в секунду</span><span class="sxs-lookup"><span data-stu-id="a4177-102">Endpoint: Transactions Flowed Per Second</span></span>
-<span data-ttu-id="a4177-103">Имя счетчика: Transactions Flowed Per Second.</span><span class="sxs-lookup"><span data-stu-id="a4177-103">Counter Name: Transactions Flowed Per Second.</span></span>  
+# <a name="endpoint-transactions-flowed-per-second"></a><span data-ttu-id="3d9a0-102">Конечная точка: количество поступивших транзакций в секунду</span><span class="sxs-lookup"><span data-stu-id="3d9a0-102">Endpoint: Transactions Flowed Per Second</span></span>
+<span data-ttu-id="3d9a0-103">Имя счетчика: Transactions Flowed Per Second.</span><span class="sxs-lookup"><span data-stu-id="3d9a0-103">Counter Name: Transactions Flowed Per Second.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="a4177-104">Описание</span><span class="sxs-lookup"><span data-stu-id="a4177-104">Description</span></span>  
- <span data-ttu-id="a4177-105">Количество транзакций, поступивших в операции в этой конечной точке в секунду.</span><span class="sxs-lookup"><span data-stu-id="a4177-105">Number of transactions flowed to operations at this endpoint in a second.</span></span> <span data-ttu-id="a4177-106">Значение этого счетчика увеличивается каждый раз, когда в сообщении, отправленном в эту конечную точку, содержится идентификатор транзакции.</span><span class="sxs-lookup"><span data-stu-id="a4177-106">This counter is incremented any time a transaction ID is present in a message sent to the endpoint.</span></span>  
+## <a name="description"></a><span data-ttu-id="3d9a0-104">Описание</span><span class="sxs-lookup"><span data-stu-id="3d9a0-104">Description</span></span>  
+ <span data-ttu-id="3d9a0-105">Количество транзакций, поступивших в операции в этой конечной точке в секунду.</span><span class="sxs-lookup"><span data-stu-id="3d9a0-105">Number of transactions flowed to operations at this endpoint in a second.</span></span> <span data-ttu-id="3d9a0-106">Значение этого счетчика увеличивается каждый раз, когда в сообщении, отправленном в эту конечную точку, содержится идентификатор транзакции.</span><span class="sxs-lookup"><span data-stu-id="3d9a0-106">This counter is incremented any time a transaction ID is present in a message sent to the endpoint.</span></span>  
   
- <span data-ttu-id="a4177-107">Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.</span><span class="sxs-lookup"><span data-stu-id="a4177-107">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
+ <span data-ttu-id="3d9a0-107">Этот счетчик является счетчиком производительности типа [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), значение которого вычисляется по следующей формуле.</span><span class="sxs-lookup"><span data-stu-id="3d9a0-107">This counter is of performance counter type [PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649), whose value is calculated using the following formula.</span></span>  
   
- <span data-ttu-id="a4177-108">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="a4177-108">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
+ <span data-ttu-id="3d9a0-108">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span><span class="sxs-lookup"><span data-stu-id="3d9a0-108">(N 1 - N 0 ) / ( (D 1 -D 0 ) / F)</span></span>
