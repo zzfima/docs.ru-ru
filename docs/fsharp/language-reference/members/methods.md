@@ -3,11 +3,11 @@ title: Методы (F#)
 description: 'Узнайте, как метод F # — это функция, связанный с типом, которые используются для предоставления и реализовать функциональность и поведение объектов и типов.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 02d5a7d22d1ce79a06e15462637c373b33623f61
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871242"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253212"
 ---
 # <a name="methods"></a>Методы
 

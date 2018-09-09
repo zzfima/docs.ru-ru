@@ -10,11 +10,11 @@ ms.assetid: 7cb4b0f3-7a10-4c93-b84d-733f7134fcf8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65c54fe9a076a219c61280a98c390b16f56b5015
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44127856"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252003"
 ---
 # <a name="field-design"></a>Разработка полей
 Принцип инкапсуляции является одним из наиболее важные понятия об удостоверении в объектно ориентированного проектирования. Этот принцип утверждает, что данные, хранящиеся в объекте должен быть доступен только для этого объекта.  

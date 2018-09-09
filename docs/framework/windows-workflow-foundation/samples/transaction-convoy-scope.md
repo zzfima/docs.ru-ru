@@ -3,11 +3,11 @@ title: Область сопровождения транзакции
 ms.date: 03/30/2017
 ms.assetid: 37141708-a29f-4b6a-81fe-f8a11f825061
 ms.openlocfilehash: fa1da6df5ad5256665610c9b3c2df7d706cef63c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43871255"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225166"
 ---
 # <a name="transaction-convoy-scope"></a>Область сопровождения транзакции
 В этом образце демонстрируется создание шаблона обмена сообщениями Parallel Convoy совместно с <xref:System.ServiceModel.Activities.TransactedReceiveScope> для моделирования протокола, при котором несколько операций могут выполняться в любом порядке в рамках одной транзакции. Также в этом образце показано, как класс <xref:System.ServiceModel.Activities.TransactedReceiveScope> автоматически создает новую транзакцию, если транзакция не была передана серверу, и клиент не смог воспользоваться какими-либо транзакциями.  

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
 ms.openlocfilehash: eb218a9b72208b13700ebd18dbf588066839203d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44140623"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44251996"
 ---
 # <a name="short-data-type-visual-basic"></a>Тип данных Short (Visual Basic)
 Содержит знаком 16-разрядных целых чисел (2-байтовое), которые могут меняться в диапазоне от-32 768 до 32 767.  
