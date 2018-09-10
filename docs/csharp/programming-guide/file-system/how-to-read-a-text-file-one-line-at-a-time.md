@@ -6,12 +6,12 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: b31e3f0164b2a2094e84263702c52c2817219d20
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 6ba479e341b71bebe60d9744f239b752d3d81167
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752075"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43738772"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-visual-c"></a>Практическое руководство. Построчное чтение текстового файла (Visual C#)
 В этом примере производится построчное чтение содержимого текстового файла в строку с помощью метода `ReadLine` класса `StreamReader`. Каждая строка текста сохраняется в строке `line` и отображается на экране.  
@@ -50,7 +50,8 @@ System.Console.ReadLine();
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  По имени файла не всегда можно с уверенностью судить о его содержимом. Например, файл с именем `myFile.cs` может вовсе не быть исходным файлом C#.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IO?displayProperty=nameWithType>  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)

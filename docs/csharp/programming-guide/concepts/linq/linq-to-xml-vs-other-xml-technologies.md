@@ -2,12 +2,12 @@
 title: LINQ to XML или Другие XML-технологии3
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 5c8b043055660ad272e46e72c877729086689158
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 2b9ae3a71dab0e9d355cf2d86eebd2763885caaf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39199203"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503174"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML или Другие XML-технологии
 В этом разделе [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] сравнивается со следующими XML-технологиями: <xref:System.Xml.XmlReader>, XSLT, MSXML и XmlLite. Данные сведения могут помочь в выборе технологии.  
@@ -52,5 +52,6 @@ ms.locfileid: "39199203"
   
  XmlLite не поддерживает интеграцию с [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Применение этого инструмента, в отличие от технологии [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], не приводит к повышению производительности программиста, что является одним из побудительных мотивов к использованию этой технологии.  
   
-## <a name="see-also"></a>См. также  
- [Начало работы (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+
+- [Начало работы (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

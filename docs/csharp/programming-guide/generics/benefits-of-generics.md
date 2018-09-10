@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], benefits
 ms.assetid: 80f037cd-9ea7-48be-bfc1-219bfb2d4277
-ms.openlocfilehash: bd0a133c6ce1a9623bfe8598d1dc786c44e6eaad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2770f8bc7fc4242beb02bf9e0555b5cbb8db0180
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336834"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43503798"
 ---
 # <a name="benefits-of-generics-c-programming-guide"></a>Преимущества универсальных шаблонов (Руководство по программированию на C#)
 Универсальные шаблоны позволяют обойти ограничение, существовавшее в более ранних версиях общеязыковой среды выполнения (CLR) и языка C#, из-за которого обобщение реализовывалось путем приведения типов к универсальному базовому типу <xref:System.Object> или из него. Создавая универсальный класс, вы можете создать коллекцию, которая будет типобезопасной во время компиляции.  
@@ -34,10 +34,11 @@ ms.locfileid: "33336834"
   
  В клиентском коде в <xref:System.Collections.Generic.List%601> по сравнению с <xref:System.Collections.ArrayList> добавлен только аргумент типа для объявления и создания экземпляра. После этого незначительного усложнения кода стало возможным создание списка, который не только безопаснее <xref:System.Collections.ArrayList>, но и обрабатывается значительно быстрее его, особенно если его элементы представляют собой типы значений.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections.Generic>  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Упаковка-преобразование и распаковка-преобразование](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
- [Когда следует использовать универсальные коллекции](../../../standard/collections/when-to-use-generic-collections.md)  
- [Рекомендации по использованию коллекций](../../../standard/design-guidelines/guidelines-for-collections.md)   
+## <a name="see-also"></a>См. также
+
+- <xref:System.Collections.Generic>  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Упаковка-преобразование и распаковка-преобразование](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
+- [Когда следует использовать универсальные коллекции](../../../standard/collections/when-to-use-generic-collections.md)  
+- [Рекомендации по использованию коллекций](../../../standard/design-guidelines/guidelines-for-collections.md)   

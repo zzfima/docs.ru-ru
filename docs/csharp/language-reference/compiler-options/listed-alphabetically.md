@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: ca21aeb6ae1cf53bc3ff4edbcf575b733a52a1cf
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.openlocfilehash: 22574df77250479250f1ce1369c4bfb59c456d26
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472494"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43525689"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Параметры компилятора C# в алфавитном порядке
 
@@ -82,7 +82,7 @@ ms.locfileid: "34472494"
 
 ## <a name="see-also"></a>См. также
 
- [Параметры компилятора C# ](index.md)  
- [Параметры компилятора C#, упорядоченные по категориям](listed-by-category.md)  
- [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
- [Элемент \<compiler>](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [Параметры компилятора C# ](index.md)  
+- [Параметры компилятора C#, упорядоченные по категориям](listed-by-category.md)  
+- [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
+- [Элемент \<compiler>](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

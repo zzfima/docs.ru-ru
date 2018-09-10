@@ -5,12 +5,12 @@ ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: d3a26d6c3fc500691fa007abfe9c8fd069f9e812
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d26b6df5d26a96bb8fa41dd3a8151fcb4a08b75
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398096"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43773661"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Сетевая изоляция для приложений Магазина Windows
 Классы в пространствах имен <xref:System.Net>, <xref:System.Net.Http> и <xref:System.Net.Http.Headers> можно использовать для разработки классических приложений или приложений для Магазина Windows. При использовании в приложениях для Магазина Windows к классам из этих пространств имен применяется сетевая изоляция, которая является одной из составляющих модели обеспечения безопасности приложений в [!INCLUDE[win8](../../../includes/win8-md.md)]. Чтобы обеспечить доступ к сети, в манифесте приложения для Магазина Windows необходимо включить соответствующие сетевые возможности.  
@@ -26,12 +26,12 @@ ms.locfileid: "33398096"
   
 4.  Разверните и запустите приложение, чтобы проверить его с использованием средств сетевой изоляции, предусмотренных для устранения неполадок.  
   
- Дополнительные сведения о средствах настройки сетевых возможностей и изоляции, которые используются для устранения неполадок с сетевой изоляцией, см. в разделе [Практическое руководство. Настройка возможностей сетевой изоляции](http://go.microsoft.com/fwlink/?LinkID=228265) в документации разработчика [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
+ Дополнительные сведения о средствах настройки сетевых возможностей и изоляции, которые используются для устранения неполадок с сетевой изоляцией, см. в разделе [Практическое руководство. Настройка возможностей сетевой изоляции](https://go.microsoft.com/fwlink/?LinkID=228265) в документации разработчика [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   
 ## <a name="see-also"></a>См. также  
- [Соединение с веб-службой](http://go.microsoft.com/fwlink/?LinkID=245696)  
- [Рекомендации и контрольный список для настройки сетевой изоляции](http://go.microsoft.com/fwlink/?LinkID=228265)  
- [Краткое руководство. Подключение с помощью HttpClient](http://go.microsoft.com/fwlink/?LinkId=245697)  
- [Как использовать обработчики HttpClient](http://go.microsoft.com/fwlink/?LinkId=245699)  
- [Как защитить подключения HttpClient](http://go.microsoft.com/fwlink/?LinkId=245698)  
- [Пример HttpClient](http://go.microsoft.com/fwlink/?LinkId=242550)
+ [Соединение с веб-службой](https://go.microsoft.com/fwlink/?LinkID=245696)  
+ [Рекомендации и контрольный список для настройки сетевой изоляции](https://go.microsoft.com/fwlink/?LinkID=228265)  
+ [Краткое руководство. Подключение с помощью HttpClient](https://go.microsoft.com/fwlink/?LinkId=245697)  
+ [Как использовать обработчики HttpClient](https://go.microsoft.com/fwlink/?LinkId=245699)  
+ [Как защитить подключения HttpClient](https://go.microsoft.com/fwlink/?LinkId=245698)  
+ [Пример HttpClient](https://go.microsoft.com/fwlink/?LinkId=242550)

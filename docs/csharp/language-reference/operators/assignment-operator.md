@@ -7,11 +7,11 @@ helpviewer_keywords:
 - = operator [C#]
 ms.assetid: d802a6d5-32f0-42b8-b180-12f5a081bfc1
 ms.openlocfilehash: 9cd1af400a9afdb7942a49dee7e7f7bb78387f2d
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43477936"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507358"
 ---
 # <a name="-operator-c-reference"></a>Оператор = (Справочник по C#)
 Оператор присваивания (`=`) сохраняет значение расположенного в правой части операнда в месте хранения, свойстве или индексаторе, которые указаны в операнде слева, после чего возвращает значение в виде результата. Операнды должны иметь один тип (либо операнд справа должен допускать неявное преобразование в тип операнда в левой части).  

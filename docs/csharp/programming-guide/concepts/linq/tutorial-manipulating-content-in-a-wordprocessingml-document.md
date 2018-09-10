@@ -2,12 +2,12 @@
 title: Учебник. Управление содержимым в документе WordprocessingML (C#)
 ms.date: 07/20/2015
 ms.assetid: bc9815f8-13d2-4f50-a4d1-b1c0d50d37b3
-ms.openlocfilehash: 948363fcf3392a6258bb05e448dfb4ee37549304
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 64749bfda88b3bf9473fef08d5aef6490d2c37c7
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340116"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43514786"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-c"></a>Учебник. Управление содержимым в документе WordprocessingML (C#)
 В этом учебнике рассказывается, как применять функциональное преобразование и LINQ to XML для обработки XML-документов. В примерах на C# запрашивается и обрабатывается информация в документах WordprocessingML в формате Office Open XML, сохраненных программой Microsoft Word.  
@@ -29,6 +29,7 @@ ms.locfileid: "33340116"
 |[Поиск текста в документах Word (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)|Использует предыдущие запросы, чтобы найти в документе заданную строку текста.|  
 |[Сведения о документах WordprocessingML в формате Office Open XML (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|Приводит некоторые подробные сведения о документах Office Open XML WordprocessingML.|  
   
-## <a name="see-also"></a>См. также  
- [Чистые функциональные преобразования XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
- [Введение в чистые функциональные преобразования (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+## <a name="see-also"></a>См. также
+
+- [Чистые функциональные преобразования XML (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)  
+- [Введение в чистые функциональные преобразования (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

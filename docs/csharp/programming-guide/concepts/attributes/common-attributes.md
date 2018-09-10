@@ -2,12 +2,12 @@
 title: Общие атрибуты (C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 771460f8547252448be1b74526ec2babb719c3fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33332534"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504399"
 ---
 # <a name="common-attributes-c"></a>Общие атрибуты (C#)
 В этом разделе описываются атрибуты, которые чаще всего используются в программах C#.  
@@ -229,10 +229,11 @@ class SampleClass
   
  Дополнительные сведения об информационных атрибутах вызывающего объекта см. в разделе [Сведения о вызывающем объекте (C#)](../../../../csharp/programming-guide/concepts/caller-information.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
- [Атрибуты](../../../../../docs/standard/attributes/index.md)  
- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) (Отражение (C#))  
- [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Reflection>  
+- <xref:System.Attribute>  
+- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
+- [Атрибуты](../../../../../docs/standard/attributes/index.md)  
+- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) (Отражение (C#))  
+- [Обращение к атрибутам с помощью отражения (C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)

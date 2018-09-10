@@ -1,12 +1,12 @@
 ---
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
-ms.openlocfilehash: 869e6509e55268767915a783a8652f7f950d7137
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 37657a0611180d5b4c48b3e1778d33861afa5a74
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33955932"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43500576"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
@@ -80,11 +80,12 @@ SecondAttribute
 ```
 
 ## <a name="see-also"></a>См. также
- <xref:System.Attribute>  
- <xref:System.Reflection>  
- [Руководство по программированию на C#](../..//index.md)  
- [Атрибуты](../../../..//standard/attributes/index.md)  
- [Reflection (C#)](../reflection.md) (Отражение (C#))  
- [Атрибуты](index.md)  
- [Создание настраиваемых атрибутов (C#)](creating-custom-attributes.md)  
- [Обращение к атрибутам с помощью отражения (C#)](accessing-attributes-by-using-reflection.md)
+
+- <xref:System.Attribute>  
+- <xref:System.Reflection>  
+- [Руководство по программированию на C#](../..//index.md)  
+- [Атрибуты](../../../..//standard/attributes/index.md)  
+- [Reflection (C#)](../reflection.md) (Отражение (C#))  
+- [Атрибуты](index.md)  
+- [Создание настраиваемых атрибутов (C#)](creating-custom-attributes.md)  
+- [Обращение к атрибутам с помощью отражения (C#)](accessing-attributes-by-using-reflection.md)

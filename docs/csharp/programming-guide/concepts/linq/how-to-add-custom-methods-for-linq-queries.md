@@ -2,12 +2,12 @@
 title: Практическое руководство. Добавление настраиваемых методов для запросов LINQ (C#)
 ms.date: 07/20/2015
 ms.assetid: 1a500f60-2e10-49fb-8b2a-d8d08e4817cb
-ms.openlocfilehash: cd282b4b8ee4add759070317d9dbc3f78c07abf1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e843f64a8556b110bc96126ddbbd760b6093270
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33326902"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510427"
 ---
 # <a name="how-to-add-custom-methods-for-linq-queries-c"></a>Практическое руководство. Добавление настраиваемых методов для запросов LINQ (C#)
 Вы можете расширить набор методов, которые можно использовать для запросов LINQ, путем добавления методов расширения в интерфейс <xref:System.Collections.Generic.IEnumerable%601>. Например, помимо стандартных операций вычисления среднего или максимального значения, можно создать настраиваемый метод агрегирования для вычисления одного значения на основе последовательности значений. Также можно создать метод, который работает как настраиваемый фильтр или особое преобразование данных для последовательности значений и возвращает новую последовательность. Примерами таких методов являются <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Skip%2A> и <xref:System.Linq.Enumerable.Reverse%2A>.  
@@ -205,6 +205,7 @@ foreach (var element in query)
 */  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections.Generic.IEnumerable%601>  
- [Методы расширения](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Collections.Generic.IEnumerable%601>  
+- [Методы расширения](../../../../csharp/programming-guide/classes-and-structs/extension-methods.md)

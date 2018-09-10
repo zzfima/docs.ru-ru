@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 6b943da442d2ec1210911cb9f4b6a0d56c7216d7
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: fe1fbfbf76507f19905d1a9a3a836483a8dd3849
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465889"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748240"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>Синтаксис запросов и синтаксис методов в LINQ (C#)
 Большинство запросов в вводной документации к LINQ ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) написано с использованием декларативного синтаксиса запросов LINQ. Однако синтаксис запроса должен быть преобразован в вызовы методов для среды CLR .NET, когда код компилируется. Эти вызовы метода вызывают стандартные операторы запросов, которые имеют такие имена, как `Where`, `Select`, `GroupBy`, `Join`, `Max` и `Average`. Вместо синтаксиса запросов для их вызова можно использовать синтаксис методов.  
@@ -42,5 +42,6 @@ ms.locfileid: "43465889"
 ## <a name="composability-of-queries"></a>Совместимость запросов  
  Обратите внимание на то, что в представленном выше примере кода метод `OrderBy` вызывается с помощью оператора точки при вызове `Where`. `Where` создает отфильтрованную последовательность, а затем `Orderby` ее сортирует. Поскольку запросы возвращают `IEnumerable`, объедините их в синтаксис метода, собрав вызовы методов в цепочку. Компилятор выполняет это действие в фоновом режиме, когда вы пишете запросы, используя синтаксис запросов. А поскольку в переменной запроса результаты запроса не сохраняются, его можно в любое время изменить или использовать как базу для нового запроса даже после выполнения.  
   
-## <a name="see-also"></a>См. также  
- [Приступая к работе с LINQ в C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+## <a name="see-also"></a>См. также
+
+- [Приступая к работе с LINQ в C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 744ce1f2810eee025f071cafaa71e473b6ed4c50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9df1aa781bd54468d2273a335b3fda7d701854d
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392857"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519412"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>Практическое руководство. Настройка COM-компонентов на основе платформы .NET Framework для активации без регистрации
 Активация компонентов на основе платформы .NET Framework без регистрации осуществляется лишь немного сложнее, чем для COM-компонентов. При установке требуются два манифеста:  
@@ -37,7 +37,7 @@ ms.locfileid: "33392857"
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-     Дополнительные сведения об элементах манифеста и их атрибутах см. в статье [Application Manifests](https://msdn.microsoft.com/library/windows/desktop/aa374191.aspx) (Манифесты приложений).  
+     Дополнительные сведения об элементах манифеста и их атрибутах см. в статье [Application Manifests](/windows/desktop/SbsCs/application-manifests) (Манифесты приложений).  
   
 3.  Определите владельца манифеста. В следующем примере владельцем файла манифеста является `myComApp` версии 1.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "33392857"
   
 5.  Сохраните файл манифеста под соответствующим именем. Имя манифеста приложения состоит из имени исполняемого файла сборки и расширения manifest. Например, для приложения myComApp.exe файл манифеста будет носить имя myComApp.exe.manifest.  
   
- Манифест приложения можно установить в тот же каталог, что и COM-приложение. Также его можно добавить в качестве ресурса в EXE-файл приложения. Дополнительные сведения см. в статье о [параллельных сборках](https://msdn.microsoft.com/library/windows/desktop/ff951640.aspx).  
+ Манифест приложения можно установить в тот же каталог, что и COM-приложение. Также его можно добавить в качестве ресурса в EXE-файл приложения. Дополнительные сведения см. в статье о [параллельных сборках](/windows/desktop/SbsCs/about-side-by-side-assemblies-).  
   
 #### <a name="to-create-a-component-manifest"></a>Создание манифеста компонента  
   

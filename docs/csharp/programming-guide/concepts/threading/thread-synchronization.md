@@ -2,12 +2,12 @@
 title: Синхронизация потоков (C#)
 ms.date: 07/20/2015
 ms.assetid: e42b1be6-c93c-479f-a148-be0759f1a4e1
-ms.openlocfilehash: 4ed6cad647c965882a63282ce32c998cec138eec
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6f0fe42c06b27369612cf586c7a93ce098822162
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43463160"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509390"
 ---
 # <a name="thread-synchronization-c"></a>Синхронизация потоков (C#)
 В следующих разделах описаны функции и классы, которые можно использовать для синхронизации доступа к ресурсам в многопоточных приложениях.  
@@ -142,26 +142,27 @@ class ThreadingExample
 ## <a name="deadlocks"></a>Взаимоблокировки  
  В многопоточных приложениях не обойтись без синхронизации потоков, однако всегда существует опасность создания `deadlock`, когда несколько потоков ожидают друг друга, и приложение зависает. Взаимоблокировка аналогична ситуации, в которой автомобили останавливаются на перекрестке и каждый водитель ожидает, пока проедет другой. Важно исключить возможность взаимоблокировок путем тщательного планирования. Взаимоблокировки часто можно предвидеть еще до написания кода, построив диаграмму многопотокового приложения.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.WaitHandle.WaitOne%2A>  
- <xref:System.Threading.WaitHandle.WaitAny%2A>  
- <xref:System.Threading.WaitHandle.WaitAll%2A>  
- <xref:System.Threading.Thread.Join%2A>  
- <xref:System.Threading.Thread.Start%2A>  
- <xref:System.Threading.Thread.Sleep%2A>  
- <xref:System.Threading.Monitor>  
- <xref:System.Threading.Mutex>  
- <xref:System.Threading.AutoResetEvent>  
- <xref:System.Threading.ManualResetEvent>  
- <xref:System.Threading.Interlocked>  
- <xref:System.Threading.WaitHandle>  
- <xref:System.Threading.EventWaitHandle>  
- <xref:System.Threading>  
- <xref:System.Threading.EventWaitHandle.Set%2A>  
- <xref:System.Threading.Monitor>  
- [Оператор lock](../../../../csharp/language-reference/keywords/lock-statement.md)  
- [Мьютексы](../../../../standard/threading/mutexes.md)  
- [Блокируемые операции](../../../../standard/threading/interlocked-operations.md)  
- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
- [Синхронизация данных для многопоточности](../../../../standard/threading/synchronizing-data-for-multithreading.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.WaitHandle.WaitOne%2A>  
+- <xref:System.Threading.WaitHandle.WaitAny%2A>  
+- <xref:System.Threading.WaitHandle.WaitAll%2A>  
+- <xref:System.Threading.Thread.Join%2A>  
+- <xref:System.Threading.Thread.Start%2A>  
+- <xref:System.Threading.Thread.Sleep%2A>  
+- <xref:System.Threading.Monitor>  
+- <xref:System.Threading.Mutex>  
+- <xref:System.Threading.AutoResetEvent>  
+- <xref:System.Threading.ManualResetEvent>  
+- <xref:System.Threading.Interlocked>  
+- <xref:System.Threading.WaitHandle>  
+- <xref:System.Threading.EventWaitHandle>  
+- <xref:System.Threading>  
+- <xref:System.Threading.EventWaitHandle.Set%2A>  
+- <xref:System.Threading.Monitor>  
+- [Оператор lock](../../../../csharp/language-reference/keywords/lock-statement.md)  
+- [Мьютексы](../../../../standard/threading/mutexes.md)  
+- [Блокируемые операции](../../../../standard/threading/interlocked-operations.md)  
+- [AutoResetEvent](../../../../standard/threading/autoresetevent.md)  
+- [Синхронизация данных для многопоточности](../../../../standard/threading/synchronizing-data-for-multithreading.md)

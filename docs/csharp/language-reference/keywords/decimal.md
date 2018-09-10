@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: 18924abefb85012fc6c61073603c594de906b58d
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: c9d40238ca4c34238d5663185f93afbce73195cf
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961200"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506523"
 ---
 # <a name="decimal-c-reference"></a>decimal (Справочник по C#)
 
@@ -20,7 +20,7 @@ ms.locfileid: "37961200"
 
 |Тип|Приблизительный диапазон значений|Точность|Тип .NET|
 |----------|-----------------------|---------------|-------------------------|
-|`decimal`|(От -7,9 x 10<sup>28</sup> до 7,9 x 10<sup>28</sup>) / (от 10<sup>0</sup> до 10<sup>28</sup>)|28–29 значащих цифр|<xref:System.Decimal?displayProperty=nameWithType>|
+|`decimal`|от ±1,0 x 10<sup>-28</sup> до ±7,9228 x 10<sup>28</sup>|28–29 значащих цифр|<xref:System.Decimal?displayProperty=nameWithType>|
 
 Значением переменной `decimal` по умолчанию является 0m.
 
@@ -96,12 +96,12 @@ Console.WriteLine((double)dec + dub);
 
 ## <a name="see-also"></a>См. также
 
-<xref:System.Decimal>  
-[Справочник по C#](../../../csharp/language-reference/index.md)  
-[Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-[Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
-[Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
-[Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-[Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-[Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-[Строки стандартных числовых форматов](../../../standard/base-types/standard-numeric-format-strings.md)
+- <xref:System.Decimal>  
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
+- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
+- [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [Строки стандартных числовых форматов](../../../standard/base-types/standard-numeric-format-strings.md)

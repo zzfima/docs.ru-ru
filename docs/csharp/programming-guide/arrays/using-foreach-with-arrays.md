@@ -5,12 +5,12 @@ helpviewer_keywords:
 - arrays [C#], foreach
 - foreach statement [C#], using with arrays
 ms.assetid: 5f2da2a9-1f56-4de5-94cc-e07f4f7a0244
-ms.openlocfilehash: b858f35167e24390a729769487ce98908a3d349f
-ms.sourcegitcommit: 54231aa56fca059e9297888a96fbca1d4cf3746c
+ms.openlocfilehash: 298ee915bbe11313f3b33ea7dae9353ef956a231
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34549459"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509539"
 ---
 # <a name="using-foreach-with-arrays-c-programming-guide"></a>Использование оператора foreach с массивами (Руководство по программированию на C#)
 
@@ -26,10 +26,11 @@ ms.locfileid: "34549459"
 
 Тем не менее для управления порядком обрабатываемых элементов в многомерных массивах можно использовать вложенный цикл [for](../../language-reference/keywords/for.md).
 
-## <a name="see-also"></a>См. также  
- <xref:System.Array>  
- [Руководство по программированию на C#](../index.md)  
- [Массивы](index.md)  
- [Одномерные массивы](single-dimensional-arrays.md)  
- [Многомерные массивы](multidimensional-arrays.md)  
- [Массивы массивов](jagged-arrays.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Array>  
+- [Руководство по программированию на C#](../index.md)  
+- [Массивы](index.md)  
+- [Одномерные массивы](single-dimensional-arrays.md)  
+- [Многомерные массивы](multidimensional-arrays.md)  
+- [Массивы массивов](jagged-arrays.md)

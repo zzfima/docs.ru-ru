@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01969eff86e5b1e8e4e2bdc4950df9fb5291f5b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6835d159c9c30d09892bad8cc1d20753fe6f21c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514454"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43855339"
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Устаревшие классы библиотеки классов .NET Framework
 Со временем в платформу .NET Framework вносятся изменения. В каждой новой версии добавляются новые типы и члены типов, предоставляющие новые функциональные возможности. Существующие типы и их члены постепенно изменяются. Например, некоторые типы становятся менее важными из-за того, что поддерживаемая ими технология заменяется на другую технологию, а некоторые методы вытесняются новыми методами, которые более удобны в использовании или обладают большей функциональностью.  
@@ -73,13 +73,13 @@ ms.locfileid: "33514454"
  [Устаревшие члены](../../../docs/framework/whats-new/obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>Списки устаревших типов и членов для предыдущих версий  
- [Устаревшие типы в платформе .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224224)  
+ [Устаревшие типы в платформе .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224224)  
   
- [Устаревшие члены в платформе .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224227)  
+ [Устаревшие члены в платформе .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=224227)  
   
- [Список устаревших элементов в платформе .NET Framework 3.5](http://go.microsoft.com/fwlink/?LinkId=163710)  
+ [Список устаревших элементов в платформе .NET Framework 3.5](https://go.microsoft.com/fwlink/?LinkId=163710)  
   
- [Список устаревших элементов в платформе .NET Framework 2.0](http://go.microsoft.com/fwlink/?LinkID=125264)  
+ [Список устаревших элементов в платформе .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>См. также  
  [\<Поддерживаемый элемент среды выполнения](../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)

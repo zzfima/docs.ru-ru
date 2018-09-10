@@ -4,11 +4,11 @@ description: Как возвратить запрос.
 ms.date: 11/30/2016
 ms.assetid: db220f79-c35b-41f2-886c-cd068672d42d
 ms.openlocfilehash: 1c5fa534f3f39f8201d93b986e687d85bb303736
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43473948"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510791"
 ---
 # <a name="how-to-return-a-query-from-a-method-c-programming-guide"></a>Практическое руководство. Возврат запроса из метода (Руководство по программированию на C#)
 В этом примере показан способ возврата запроса из метода в качестве возвращаемого значения и параметра `out`.  

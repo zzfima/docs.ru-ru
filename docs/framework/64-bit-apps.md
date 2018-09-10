@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2fe12f67814b2fc049ec26c745b43aa85627d555
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8cfe1f76cfe489095dfa996bce8005d2777966b7
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744279"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43748094"
 ---
 # <a name="64-bit-applications"></a>64-разрядные приложения
 При компиляции приложения можно указать, должно ли оно запускаться в 64-разрядной операционной системе Windows в качестве собственного приложения или в эмуляторе WOW64 (в 32- или 64-разрядной ОС Windows). WOW64 — это среда совместимости, которая позволяет выполнять 32-разрядное приложение в 64-разрядной системе. Эмулятор WOW64 входит в состав всех 64-разрядных версий операционной системы Windows.  
@@ -43,13 +43,13 @@ ms.locfileid: "32744279"
 ## <a name="general-64-bit-programming-information"></a>Общие сведения о 64-разрядном программировании  
  Общие сведения о 64-разрядном программировании см. в перечисленных ниже материалах.  
   
--   Дополнительные сведения о 64-разрядной версии среды CLR на компьютере с 64-разрядной ОС Windows см. на странице [Центр разработчиков .NET Framework](http://go.microsoft.com/fwlink/?LinkId=37079) на веб-сайте MSDN.  
+-   Дополнительные сведения о 64-разрядной версии среды CLR на компьютере с 64-разрядной ОС Windows см. на странице [Центр разработчиков .NET Framework](https://go.microsoft.com/fwlink/?LinkId=37079) на веб-сайте MSDN.  
   
--   В документации [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] см. раздел [Руководство по программированию для 64-разрядных версий Windows](http://go.microsoft.com/fwlink/p/?LinkId=253512).  
+-   В документации [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] см. раздел [Руководство по программированию для 64-разрядных версий Windows](https://go.microsoft.com/fwlink/p/?LinkId=253512).  
   
--   Дополнительные сведения о загрузке 64-разрядной версии среды CLR см. на странице [Загрузки в центре разработчиков .NET Framework](http://go.microsoft.com/fwlink/?LinkId=50953) на веб-сайте MSDN.  
+-   Дополнительные сведения о загрузке 64-разрядной версии среды CLR см. на странице [Загрузки в центре разработчиков .NET Framework](https://go.microsoft.com/fwlink/?LinkId=50953) на веб-сайте MSDN.  
   
--   Сведения о поддержке создания 64-разрядных приложений в Visual Studio см. в разделе [Поддержка 64-разрядной среды разработки Visual Studio](http://msdn.microsoft.com/library/b08ff3ad-c6fd-468f-94d5-01a61aab6833).  
+-   Сведения о поддержке создания 64-разрядных приложений в Visual Studio см. в разделе [Поддержка 64-разрядной среды разработки Visual Studio](https://msdn.microsoft.com/library/b08ff3ad-c6fd-468f-94d5-01a61aab6833).  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>Поддержка создания 64-разрядных приложений компилятором  
  Приложение, построенное с помощью .NET Framework на 32- или 64-разрядном компьютере, на 64-разрядном компьютере по умолчанию выполняется как собственное приложение (не в эмуляторе WOW64). В таблице ниже перечислены материалы, в которых описывается использование компиляторов Visual Studio для создания 64-разрядных приложений, выполняемых как собственные, в эмуляторе WOW64 или обоими способами.  
@@ -58,7 +58,7 @@ ms.locfileid: "32744279"
 |--------------|---------------------|  
 |Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[/platform (параметры компилятора C#)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|Вы можете создавать платформенно-независимые приложения MSIL с помощью **/clr:safe**. Дополнительные сведения см. в разделе [/clr (компиляция CLR)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ содержит отдельные компиляторы для каждой 64-разрядной операционной системы. Дополнительные сведения об использовании Visual C++ для создания приложений, выполняемых как собственные в 64-разрядной операционной системе Windows, см. в разделе [64-разрядное программирование](http://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\)).|  
+|Visual C++|Вы можете создавать платформенно-независимые приложения MSIL с помощью **/clr:safe**. Дополнительные сведения см. в разделе [/clr (компиляция CLR)](/cpp/build/reference/clr-common-language-runtime-compilation).<br /><br /> Visual C++ содержит отдельные компиляторы для каждой 64-разрядной операционной системы. Дополнительные сведения об использовании Visual C++ для создания приложений, выполняемых как собственные в 64-разрядной операционной системе Windows, см. в разделе [64-разрядное программирование](https://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\)).|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>Определение состояния EXE- или DLL-файлов  
  Чтобы определить, будет ли EXE- или DLL-файл выполняться только на определенной платформе или в эмуляторе WOW64, воспользуйтесь [средством преобразования CorFlags (CorFlags.exe)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md). Кроме того, программа CorFlags.exe используется для изменения состояния платформы EXE- или DLL-файла. В заголовке среды CLR сборки Visual Studio основной номер версии среды выполнения имеет значение 2, а дополнительный номер версии среды выполнения — значение 5. Приложения, у которых дополнительный номер версии среды выполнения имеет значение 0, обрабатываются как приложения прежних версий и всегда запускаются в эмуляторе WOW64.  

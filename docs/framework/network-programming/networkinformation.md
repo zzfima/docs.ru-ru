@@ -7,12 +7,12 @@ ms.assetid: 31b44dd3-b903-4a48-8419-40419a3e4038
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 964e76a008e1c18fe9f609f1dd63bce565e95d44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 88b39b5ae01ec5b22044dde82ba0f802c1a50ca9
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396325"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43526756"
 ---
 # <a name="networkinformation"></a>NetworkInformation
 Пространство имен <xref:System.Net.NetworkInformation> содержит классы для программного сбора информации о событиях, изменениях, статистике и свойствах сети. Можно также определить доступность удаленного узла с помощью класса <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType>.  
@@ -28,6 +28,6 @@ ms.locfileid: "33396325"
   
 ## <a name="see-also"></a>См. также  
  [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Пример сетевых информационных технологий](http://go.microsoft.com/fwlink/?LinkID=179564)  
- [Пример технологии средства NetStat](http://go.microsoft.com/fwlink/?LinkID=179562)  
- [Пример клиентской технологии проверки связи](http://go.microsoft.com/fwlink/?LinkID=179565)
+ [Пример сетевых информационных технологий](https://go.microsoft.com/fwlink/?LinkID=179564)  
+ [Пример технологии средства NetStat](https://go.microsoft.com/fwlink/?LinkID=179562)  
+ [Пример клиентской технологии проверки связи](https://go.microsoft.com/fwlink/?LinkID=179565)

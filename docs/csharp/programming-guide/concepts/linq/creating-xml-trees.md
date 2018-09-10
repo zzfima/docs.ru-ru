@@ -2,12 +2,12 @@
 title: Создание деревьев XML (C#)
 ms.date: 07/20/2015
 ms.assetid: bccc3e0a-c08c-468e-9d30-e075670fdace
-ms.openlocfilehash: a9e9cfd82434de0fabc8119aa500ad9d9ef8155a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 1245c0f087bb63f12d9f17389bf752330ccc7670
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481379"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43521542"
 ---
 # <a name="creating-xml-trees-c"></a>Создание деревьев XML (C#)
 Одна из самых распространенных задач при работе с XML состоит в построении XML-дерева. В этом разделе описывается несколько способов создания таких деревьев.  
@@ -23,5 +23,6 @@ ms.locfileid: "43481379"
 |[Практическое руководство. Проверка с использованием XSD (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)|Показывает, как проверять XML-дерево с помощью XSD.|  
 |[Допустимое содержимое объектов XElement и XDocument](../../../../csharp/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects3.md)|Описывает допустимые аргументы, которые можно передавать конструкторам, а также методы, которые можно использовать для добавления содержимого в элементы и документы.|  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

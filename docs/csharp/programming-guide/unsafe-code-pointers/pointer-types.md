@@ -4,12 +4,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: cbc75a2ec6fe826cb192b1e8bef61c7295f13916
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 2950d92f877a7e99734267a3071b2bcb25ce1023
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924512"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43509282"
 ---
 # <a name="pointer-types-c-programming-guide"></a>Типы указателей (Руководство по программированию на C#)
 
@@ -89,12 +89,13 @@ int* myVariable;
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>См. также
- [Руководство по программированию на C#](../index.md)  
- [Небезопасный код и указатели](index.md)  
- [Преобразования указателей](pointer-conversions.md)  
- [Выражения указателей](pointer-expressions.md)  
- [Типы](../../language-reference/keywords/types.md)  
- [unsafe](../../language-reference/keywords/unsafe.md)  
- [Оператор fixed](../../language-reference/keywords/fixed-statement.md)  
- [stackalloc](../../language-reference/keywords/stackalloc.md)  
- [Упаковка-преобразование и распаковка-преобразование](../types/boxing-and-unboxing.md)
+
+- [Руководство по программированию на C#](../index.md)  
+- [Небезопасный код и указатели](index.md)  
+- [Преобразования указателей](pointer-conversions.md)  
+- [Выражения указателей](pointer-expressions.md)  
+- [Типы](../../language-reference/keywords/types.md)  
+- [unsafe](../../language-reference/keywords/unsafe.md)  
+- [Оператор fixed](../../language-reference/keywords/fixed-statement.md)  
+- [stackalloc](../../language-reference/keywords/stackalloc.md)  
+- [Упаковка-преобразование и распаковка-преобразование](../types/boxing-and-unboxing.md)

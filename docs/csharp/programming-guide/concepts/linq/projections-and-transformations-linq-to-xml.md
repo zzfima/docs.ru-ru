@@ -2,12 +2,12 @@
 title: Проекции и преобразования (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: bb0457ab-1823-47e6-9d2d-c93c958cc913
-ms.openlocfilehash: dfd10011646fb758215c8d472dacf7e16296493f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 835383e472362d38ded3862042609eaaa508efbe
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929799"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43747838"
 ---
 # <a name="projections-and-transformations-linq-to-xml-c"></a>Проекции и преобразования (LINQ to XML) (C#)
 В этом разделе приводятся примеры проекций и преобразований [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
@@ -25,5 +25,6 @@ ms.locfileid: "42929799"
 |[Практическое руководство. Создание текстовых файлов из XML (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-text-files-from-xml.md)|Показывает, как преобразовывать XML-файл в текстовый файл формата, отличного от XML.|  
 |[Практическое руководство. Создание XML из CSV-файлов (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)|Показывает, как с помощью [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] анализировать файлы CSV и создавать из них XML-файлы.|  
   
-## <a name="see-also"></a>См. также  
- [Выполнение запросов к деревьям XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>См. также
+
+- [Выполнение запросов к деревьям XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
