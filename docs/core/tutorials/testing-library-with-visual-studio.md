@@ -8,11 +8,11 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 8ea958ad5d3eba394eb914da81111a0eaf707cf4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43398882"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43527084"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Тестирование библиотеки классов с помощью .NET Core в Visual Studio 2017
 
