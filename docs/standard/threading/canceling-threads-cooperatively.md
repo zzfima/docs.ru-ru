@@ -1,5 +1,5 @@
 ---
-title: Совместная отмена потоков
+title: Согласованная отмена потоков
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,18 +10,20 @@ helpviewer_keywords:
 ms.assetid: d2d6d5fd-e263-4fa0-847b-2fc3e0d82337
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3edd0f9c991df8d8d70b14f4439c5c477e8f1401
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24cacf0323c96f6959442dea94b0540633661bce
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33581346"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485603"
 ---
-# <a name="canceling-threads-cooperatively"></a><span data-ttu-id="f4adb-102">Совместная отмена потоков</span><span class="sxs-lookup"><span data-stu-id="f4adb-102">Canceling Threads Cooperatively</span></span>
-<span data-ttu-id="f4adb-103">До [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]платформа .NET Framework не предоставляла встроенных средств согласованной отмены потока после его запуска.</span><span class="sxs-lookup"><span data-stu-id="f4adb-103">Prior to the [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], the .NET Framework provided no built-in way to cancel a thread cooperatively after it was started.</span></span> <span data-ttu-id="f4adb-104">Тем не менее в [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]можно использовать токены для отмены потоков так же, как и для отмены объектов <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> или запросов PLINQ.</span><span class="sxs-lookup"><span data-stu-id="f4adb-104">However, in [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], you can use cancellation tokens to cancel threads, just as you can use them to cancel <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> objects or PLINQ queries.</span></span> <span data-ttu-id="f4adb-105">Хотя класс <xref:System.Threading.Thread?displayProperty=nameWithType> не обеспечивает встроенную поддержку токенов отмены, токен можно передать процедуре потока с помощью конструктора <xref:System.Threading.Thread>, принимающего делегат <xref:System.Threading.ParameterizedThreadStart>.</span><span class="sxs-lookup"><span data-stu-id="f4adb-105">Although the <xref:System.Threading.Thread?displayProperty=nameWithType> class does not offer built-in support for cancellation tokens, you can pass a token to a thread procedure by using the <xref:System.Threading.Thread> constructor that takes a <xref:System.Threading.ParameterizedThreadStart> delegate.</span></span> <span data-ttu-id="f4adb-106">В следующем примере показано, как это сделать.</span><span class="sxs-lookup"><span data-stu-id="f4adb-106">The following example demonstrates how to do this.</span></span>  
+# <a name="canceling-threads-cooperatively"></a><span data-ttu-id="b7cdf-102">Согласованная отмена потоков</span><span class="sxs-lookup"><span data-stu-id="b7cdf-102">Canceling threads cooperatively</span></span>
+
+<span data-ttu-id="b7cdf-103">До версии 4 платформа .NET Framework не предоставляла встроенных средств для согласованной отмены потока после его запуска.</span><span class="sxs-lookup"><span data-stu-id="b7cdf-103">Prior to the .NET Framework 4, the .NET Framework provided no built-in way to cancel a thread cooperatively after it was started.</span></span> <span data-ttu-id="b7cdf-104">Однако начиная с .NET Framework 4 вы можете использовать <xref:System.Threading.CancellationToken?displayProperty=nameWithType> для отмены потоков точно так же, как и для отмены объектов <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> или запросов PLINQ.</span><span class="sxs-lookup"><span data-stu-id="b7cdf-104">However, starting with the .NET Framework 4, you can use a <xref:System.Threading.CancellationToken?displayProperty=nameWithType> to cancel threads, just as you can use them to cancel <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> objects or PLINQ queries.</span></span> <span data-ttu-id="b7cdf-105">Хотя класс <xref:System.Threading.Thread?displayProperty=nameWithType> не обеспечивает встроенную поддержку токенов отмены, токен можно передать процедуре потока с помощью конструктора <xref:System.Threading.Thread>, принимающего делегат <xref:System.Threading.ParameterizedThreadStart>.</span><span class="sxs-lookup"><span data-stu-id="b7cdf-105">Although the <xref:System.Threading.Thread?displayProperty=nameWithType> class does not offer built-in support for cancellation tokens, you can pass a token to a thread procedure by using the <xref:System.Threading.Thread> constructor that takes a <xref:System.Threading.ParameterizedThreadStart> delegate.</span></span> <span data-ttu-id="b7cdf-106">В следующем примере показано, как это сделать.</span><span class="sxs-lookup"><span data-stu-id="b7cdf-106">The following example demonstrates how to do this.</span></span>  
   
  [!code-csharp[Cancellation#14](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/CooperativeThreads.cs#14)]
  [!code-vb[Cancellation#14](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/CooperativeThreads.vb#14)]  
   
-## <a name="see-also"></a><span data-ttu-id="f4adb-107">См. также</span><span class="sxs-lookup"><span data-stu-id="f4adb-107">See Also</span></span>  
- [<span data-ttu-id="f4adb-108">Использование потоков и работа с потоками</span><span class="sxs-lookup"><span data-stu-id="f4adb-108">Using Threads and Threading</span></span>](../../../docs/standard/threading/using-threads-and-threading.md)
+## <a name="see-also"></a><span data-ttu-id="b7cdf-107">См. также</span><span class="sxs-lookup"><span data-stu-id="b7cdf-107">See also</span></span>
+
+ [<span data-ttu-id="b7cdf-108">Использование потоков и работа с потоками</span><span class="sxs-lookup"><span data-stu-id="b7cdf-108">Using Threads and Threading</span></span>](using-threads-and-threading.md)  
