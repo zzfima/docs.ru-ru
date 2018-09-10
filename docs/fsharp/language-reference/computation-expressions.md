@@ -3,11 +3,11 @@ title: Выражения вычисления (F#)
 description: 'Узнайте, как создать удобный синтаксис для записи вычислений в F #, который можно упорядочивать и комбинировать с помощью привязок и конструкций потока управления.'
 ms.date: 07/27/2018
 ms.openlocfilehash: ce81af7966a436b3973de277fb2a78ec06f4c471
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200068"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44273769"
 ---
 # <a name="computation-expressions"></a>Выражения вычисления
 

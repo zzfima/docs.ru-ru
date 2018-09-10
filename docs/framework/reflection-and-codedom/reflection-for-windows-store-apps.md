@@ -11,11 +11,11 @@ ms.assetid: 0d07090c-9b47-4ecc-81d1-29d539603c9b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 192ac28610f596bc6b6f4ebf1c80962ab2d71cbf
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210563"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274808"
 ---
 # <a name="reflection-in-the-net-framework-for-windows-store-apps"></a>Отражение в .NET Framework для приложений для Магазина Windows
 Начиная с версии [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], платформа .NET Framework включает набор типов и членов отражения для использования в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Эти типы и члены доступны в полной версии платформы .NET Framework, а также в [.NET для приложений Магазина Windows](https://go.microsoft.com/fwlink/?LinkID=225700). В этом документе описаны основные отличия между ними и их аналогами в платформе .NET Framework версии 4 и более ранних версий.  

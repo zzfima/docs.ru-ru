@@ -3,11 +3,11 @@ title: Руководство по программированию (LINQ to XML
 ms.date: 07/20/2015
 ms.assetid: 4b1ffd10-ab81-4a0d-a0ca-e9876478d924
 ms.openlocfilehash: acb8271ad9ea338d31516c35bae46593a5fd2f78
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187917"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276903"
 ---
 # <a name="programming-guide-linq-to-xml-c"></a>Руководство по программированию (LINQ to XML) (C#)
 Этот раздел содержит теоретические и практические сведения о программировании при помощи [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
