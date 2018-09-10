@@ -9,11 +9,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.openlocfilehash: 9994f6a3026c790acdb35af3300379786f615607
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: HT
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43481988"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518887"
 ---
 # <a name="obtaining-ui-automation-elements"></a>Получение элементов автоматизации пользовательского интерфейса
 > [!NOTE]
@@ -39,7 +39,7 @@ ms.locfileid: "43481988"
   
  Простейшим условием является <xref:System.Windows.Automation.Condition.TrueCondition>, предопределенный объект, указывающий, что должны быть возвращены все элементы в области поиска. Условие<xref:System.Windows.Automation.Condition.FalseCondition>, противоположное <xref:System.Windows.Automation.Condition.TrueCondition>, менее целесообразно, так как может помешать поиску каких-либо элементов.  
   
- Три прочих предопределенных условия можно использовать отдельно или в сочетании с другими условиями: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>и <xref:System.Windows.Automation.Automation.RawViewCondition>. Условие<xref:System.Windows.Automation.Automation.RawViewCondition>, используемое само по себе, эквивалентно <xref:System.Windows.Automation.Condition.TrueCondition>, так как оно не фильтрует элементы по их свойству <xref:System.Windows.Automation.AutomationElement.AutomationElementInfилиmation.IsControlElement%2A> или <xref:System.Windows.Automation.AutomationElement.AutomationElementInfилиmation.IsContentElement%2A> .  
+ Три прочих предопределенных условия можно использовать отдельно или в сочетании с другими условиями: <xref:System.Windows.Automation.Automation.ContentViewCondition>, <xref:System.Windows.Automation.Automation.ControlViewCondition>и <xref:System.Windows.Automation.Automation.RawViewCondition>. Условие<xref:System.Windows.Automation.Automation.RawViewCondition>, используемое само по себе, эквивалентно <xref:System.Windows.Automation.Condition.TrueCondition>, так как оно не фильтрует элементы по их свойству <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> или <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>.  
   
  Прочие условия создаются из одного или нескольких объектов <xref:System.Windows.Automation.PropertyCondition> , каждый из которых задает значение свойства. Например, <xref:System.Windows.Automation.PropertyCondition> может указывать, что элемент включен или что он поддерживает определенный шаблон элемента управления.  
   
