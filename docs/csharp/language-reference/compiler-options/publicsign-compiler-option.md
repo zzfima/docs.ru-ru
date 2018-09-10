@@ -8,43 +8,43 @@ helpviewer_keywords:
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
 ms.openlocfilehash: 01ce30b9ac5997f56f29dcbbfa43a27738fa5556
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43474256"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44184987"
 ---
-# <a name="-publicsign-c-compiler-options"></a><span data-ttu-id="644fe-102">-publicsign (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="644fe-102">-publicsign (C# Compiler Options)</span></span>
+# <a name="-publicsign-c-compiler-options"></a><span data-ttu-id="8a716-102">-publicsign (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="8a716-102">-publicsign (C# Compiler Options)</span></span>
 
-<span data-ttu-id="644fe-103">Этот параметр указывает компилятору на необходимость применения открытого ключа, но фактически не подписывает сборку.</span><span class="sxs-lookup"><span data-stu-id="644fe-103">This option causes the compiler to apply a public key but does not actually sign the assembly.</span></span> <span data-ttu-id="644fe-104">Кроме того, параметр **-publicsign** задает в сборке бит, который сообщает среде выполнения, что файл подписан.</span><span class="sxs-lookup"><span data-stu-id="644fe-104">The **-publicsign** option also sets a bit in the assembly that tells the runtime that the file is actually signed.</span></span>
+<span data-ttu-id="8a716-103">Этот параметр указывает компилятору на необходимость применения открытого ключа, но фактически не подписывает сборку.</span><span class="sxs-lookup"><span data-stu-id="8a716-103">This option causes the compiler to apply a public key but does not actually sign the assembly.</span></span> <span data-ttu-id="8a716-104">Кроме того, параметр **-publicsign** задает в сборке бит, который сообщает среде выполнения, что файл подписан.</span><span class="sxs-lookup"><span data-stu-id="8a716-104">The **-publicsign** option also sets a bit in the assembly that tells the runtime that the file is actually signed.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="644fe-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="644fe-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="8a716-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8a716-105">Syntax</span></span>
 
 ```console
 -publicsign
 ```
 
-## <a name="arguments"></a><span data-ttu-id="644fe-106">Аргументы</span><span class="sxs-lookup"><span data-stu-id="644fe-106">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="8a716-106">Аргументы</span><span class="sxs-lookup"><span data-stu-id="8a716-106">Arguments</span></span>
 
-<span data-ttu-id="644fe-107">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="644fe-107">None.</span></span>
+<span data-ttu-id="8a716-107">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="8a716-107">None.</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="644fe-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="644fe-108">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="8a716-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="8a716-108">Remarks</span></span>
 
-<span data-ttu-id="644fe-109">С параметром **-publicsign** необходимо использовать параметр [-keyfile](keyfile-compiler-option.md) или [-keycontainer](keycontainer-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="644fe-109">The **-publicsign** option requires the use of the [-keyfile](keyfile-compiler-option.md) or [-keycontainer](keycontainer-compiler-option.md).</span></span> <span data-ttu-id="644fe-110">Каждый из параметров **keyfile** и **keycontainer** определяет открытый ключ.</span><span class="sxs-lookup"><span data-stu-id="644fe-110">The **keyfile** or **keycontainer** options specify the public key.</span></span>
+<span data-ttu-id="8a716-109">С параметром **-publicsign** необходимо использовать параметр [-keyfile](keyfile-compiler-option.md) или [-keycontainer](keycontainer-compiler-option.md).</span><span class="sxs-lookup"><span data-stu-id="8a716-109">The **-publicsign** option requires the use of the [-keyfile](keyfile-compiler-option.md) or [-keycontainer](keycontainer-compiler-option.md).</span></span> <span data-ttu-id="8a716-110">Каждый из параметров **keyfile** и **keycontainer** определяет открытый ключ.</span><span class="sxs-lookup"><span data-stu-id="8a716-110">The **keyfile** or **keycontainer** options specify the public key.</span></span>
 
-<span data-ttu-id="644fe-111">Параметры **-publicsign** и **-delaysign** — взаимоисключающие.</span><span class="sxs-lookup"><span data-stu-id="644fe-111">The **-publicsign** and **-delaysign** options are mutually exclusive.</span></span>
+<span data-ttu-id="8a716-111">Параметры **-publicsign** и **-delaysign** — взаимоисключающие.</span><span class="sxs-lookup"><span data-stu-id="8a716-111">The **-publicsign** and **-delaysign** options are mutually exclusive.</span></span>
 
-<span data-ttu-id="644fe-112">При таком подписывании в сборку добавляется открытый ключ. Кроме того, в сборке устанавливается флаг "подписано", хотя фактически сборка не подписывается закрытым ключом. Такой подход иногда называют "фиктивным подписыванием" или "подписыванием OSS".</span><span class="sxs-lookup"><span data-stu-id="644fe-112">Sometimes called "fake sign" or "OSS sign", public signing includes the public key in an output assembly and sets the "signed" flag, but doesn't actually sign the assembly with a private key.</span></span> <span data-ttu-id="644fe-113">Он полезен на проектах с открытым исходным кодом: людям нужно создавать сборки, которые будут совместимы с выпущенными "полностью подписанными" сборками, но у них нет доступа к закрытому ключу, который использовался для подписывания сборок.</span><span class="sxs-lookup"><span data-stu-id="644fe-113">This is useful for open source projects where people want to build assemblies which are compatible with the released "fully signed" assemblies, but don't have access to the private key used to sign the assemblies.</span></span> <span data-ttu-id="644fe-114">Так как потребителям практически никогда не нужно проверять, полностью ли подписана сборка, создаваемые сообществами сборки можно использовать практические во всех случаях, в которых может использоваться полностью подписанная сборка.</span><span class="sxs-lookup"><span data-stu-id="644fe-114">Since almost no consumers actually need to check if the assembly is fully signed, these publicly built assemblies are useable in almost every scenario where the fully signed one would be used.</span></span>
+<span data-ttu-id="8a716-112">При таком подписывании в сборку добавляется открытый ключ. Кроме того, в сборке устанавливается флаг "подписано", хотя фактически сборка не подписывается закрытым ключом. Такой подход иногда называют "фиктивным подписыванием" или "подписыванием OSS".</span><span class="sxs-lookup"><span data-stu-id="8a716-112">Sometimes called "fake sign" or "OSS sign", public signing includes the public key in an output assembly and sets the "signed" flag, but doesn't actually sign the assembly with a private key.</span></span> <span data-ttu-id="8a716-113">Он полезен на проектах с открытым исходным кодом: людям нужно создавать сборки, которые будут совместимы с выпущенными "полностью подписанными" сборками, но у них нет доступа к закрытому ключу, который использовался для подписывания сборок.</span><span class="sxs-lookup"><span data-stu-id="8a716-113">This is useful for open source projects where people want to build assemblies which are compatible with the released "fully signed" assemblies, but don't have access to the private key used to sign the assemblies.</span></span> <span data-ttu-id="8a716-114">Так как потребителям практически никогда не нужно проверять, полностью ли подписана сборка, создаваемые сообществами сборки можно использовать практические во всех случаях, в которых может использоваться полностью подписанная сборка.</span><span class="sxs-lookup"><span data-stu-id="8a716-114">Since almost no consumers actually need to check if the assembly is fully signed, these publicly built assemblies are useable in almost every scenario where the fully signed one would be used.</span></span>
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="644fe-115">Установка данного параметра компилятора в среде разработки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="644fe-115">To set this compiler option in the Visual Studio development environment</span></span>
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="8a716-115">Установка данного параметра компилятора в среде разработки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="8a716-115">To set this compiler option in the Visual Studio development environment</span></span>
 
-1. <span data-ttu-id="644fe-116">Откройте страницу **свойств** для проекта.</span><span class="sxs-lookup"><span data-stu-id="644fe-116">Open the **Properties** page for the project.</span></span>
-1. <span data-ttu-id="644fe-117">Измените свойство **Только отложенная подпись**.</span><span class="sxs-lookup"><span data-stu-id="644fe-117">Modify the **Delay sign only** property.</span></span>
+1. <span data-ttu-id="8a716-116">Откройте страницу **свойств** для проекта.</span><span class="sxs-lookup"><span data-stu-id="8a716-116">Open the **Properties** page for the project.</span></span>
+1. <span data-ttu-id="8a716-117">Измените свойство **Только отложенная подпись**.</span><span class="sxs-lookup"><span data-stu-id="8a716-117">Modify the **Delay sign only** property.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="644fe-118">См. также</span><span class="sxs-lookup"><span data-stu-id="644fe-118">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8a716-118">См. также</span><span class="sxs-lookup"><span data-stu-id="8a716-118">See Also</span></span>
 
-- [<span data-ttu-id="644fe-119">-delaysign (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="644fe-119">C# Compiler -delaysign option</span></span>](delaysign-compiler-option.md)  
-- [<span data-ttu-id="644fe-120">-keyfile (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="644fe-120">C# Compiler -keyfile option</span></span>](keyfile-compiler-option.md)  
-- [<span data-ttu-id="644fe-121">-keycontainer (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="644fe-121">C# Compiler -keycontainer option</span></span>](keycontainer-compiler-option.md)  
-- [<span data-ttu-id="644fe-122">Параметры компилятора C# </span><span class="sxs-lookup"><span data-stu-id="644fe-122">C# Compiler Options</span></span>](index.md)  
-- [<span data-ttu-id="644fe-123">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="644fe-123">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="8a716-119">-delaysign (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="8a716-119">C# Compiler -delaysign option</span></span>](delaysign-compiler-option.md)  
+- [<span data-ttu-id="8a716-120">-keyfile (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="8a716-120">C# Compiler -keyfile option</span></span>](keyfile-compiler-option.md)  
+- [<span data-ttu-id="8a716-121">-keycontainer (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="8a716-121">C# Compiler -keycontainer option</span></span>](keycontainer-compiler-option.md)  
+- [<span data-ttu-id="8a716-122">Параметры компилятора C# </span><span class="sxs-lookup"><span data-stu-id="8a716-122">C# Compiler Options</span></span>](index.md)  
+- [<span data-ttu-id="8a716-123">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="8a716-123">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

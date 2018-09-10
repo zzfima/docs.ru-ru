@@ -5,30 +5,30 @@ helpviewer_keywords:
 - statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
 ms.openlocfilehash: da3132a82e2cb0b3aaa55fbe82898414ebd31c12
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332010"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192760"
 ---
-# <a name="selection-statements-c-reference"></a><span data-ttu-id="3cfcf-102">Инструкции выбора (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="3cfcf-102">Selection Statements (C# Reference)</span></span>
-<span data-ttu-id="3cfcf-103">Оператор выбора позволяет программе передать управление определенному потоку команд в зависимости от выполнения условия `true`.</span><span class="sxs-lookup"><span data-stu-id="3cfcf-103">A selection statement causes the program control to be transferred to a specific flow based upon whether a certain condition is `true` or not.</span></span>  
+# <a name="selection-statements-c-reference"></a><span data-ttu-id="6c472-102">Инструкции выбора (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="6c472-102">Selection Statements (C# Reference)</span></span>
+<span data-ttu-id="6c472-103">Оператор выбора позволяет программе передать управление определенному потоку команд в зависимости от выполнения условия `true`.</span><span class="sxs-lookup"><span data-stu-id="6c472-103">A selection statement causes the program control to be transferred to a specific flow based upon whether a certain condition is `true` or not.</span></span>  
   
- <span data-ttu-id="3cfcf-104">В операторах выбора могут использоваться следующие ключевые слова:</span><span class="sxs-lookup"><span data-stu-id="3cfcf-104">The following keywords are used in selection statements:</span></span>  
+ <span data-ttu-id="6c472-104">В операторах выбора могут использоваться следующие ключевые слова:</span><span class="sxs-lookup"><span data-stu-id="6c472-104">The following keywords are used in selection statements:</span></span>  
   
--   [<span data-ttu-id="3cfcf-105">if</span><span class="sxs-lookup"><span data-stu-id="3cfcf-105">if</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
+-   [<span data-ttu-id="6c472-105">if</span><span class="sxs-lookup"><span data-stu-id="6c472-105">if</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
   
--   [<span data-ttu-id="3cfcf-106">else</span><span class="sxs-lookup"><span data-stu-id="3cfcf-106">else</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
+-   [<span data-ttu-id="6c472-106">else</span><span class="sxs-lookup"><span data-stu-id="6c472-106">else</span></span>](../../../csharp/language-reference/keywords/if-else.md)  
   
--   [<span data-ttu-id="3cfcf-107">switch</span><span class="sxs-lookup"><span data-stu-id="3cfcf-107">switch</span></span>](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="6c472-107">switch</span><span class="sxs-lookup"><span data-stu-id="6c472-107">switch</span></span>](../../../csharp/language-reference/keywords/switch.md)  
   
--   [<span data-ttu-id="3cfcf-108">case</span><span class="sxs-lookup"><span data-stu-id="3cfcf-108">case</span></span>](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="6c472-108">case</span><span class="sxs-lookup"><span data-stu-id="6c472-108">case</span></span>](../../../csharp/language-reference/keywords/switch.md)  
   
--   [<span data-ttu-id="3cfcf-109">default</span><span class="sxs-lookup"><span data-stu-id="3cfcf-109">default</span></span>](../../../csharp/language-reference/keywords/switch.md)  
+-   [<span data-ttu-id="6c472-109">default</span><span class="sxs-lookup"><span data-stu-id="6c472-109">default</span></span>](../../../csharp/language-reference/keywords/switch.md)  
 
-## <a name="see-also"></a><span data-ttu-id="3cfcf-110">См. также</span><span class="sxs-lookup"><span data-stu-id="3cfcf-110">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6c472-110">См. также</span><span class="sxs-lookup"><span data-stu-id="6c472-110">See Also</span></span>
 
-- [<span data-ttu-id="3cfcf-111">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="3cfcf-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="3cfcf-112">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="3cfcf-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="3cfcf-113">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="3cfcf-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="3cfcf-114">Ключевые слова операторов</span><span class="sxs-lookup"><span data-stu-id="3cfcf-114">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)
+- [<span data-ttu-id="6c472-111">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="6c472-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="6c472-112">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="6c472-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="6c472-113">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="6c472-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="6c472-114">Ключевые слова операторов</span><span class="sxs-lookup"><span data-stu-id="6c472-114">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)

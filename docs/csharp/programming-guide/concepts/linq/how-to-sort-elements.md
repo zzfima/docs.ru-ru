@@ -2,18 +2,18 @@
 title: Практическое руководство. Сортировка элементов (C#)
 ms.date: 07/20/2015
 ms.assetid: aee6fbbc-81fd-4b3e-b40f-6ed7b3bd3fee
-ms.openlocfilehash: a49b4fea8410075ca8b28f2ef7792738d063e256
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7548f183736ac9ed0ed09d3be775b3ffde6cb255
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33319771"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042612"
 ---
-# <a name="how-to-sort-elements-c"></a><span data-ttu-id="ad687-102">Практическое руководство. Сортировка элементов (C#)</span><span class="sxs-lookup"><span data-stu-id="ad687-102">How to: Sort Elements (C#)</span></span>
-<span data-ttu-id="ad687-103">В этом примере показано, как создавать запросы с сортировкой результатов.</span><span class="sxs-lookup"><span data-stu-id="ad687-103">This example shows how to write a query that sorts its results.</span></span>  
+# <a name="how-to-sort-elements-c"></a><span data-ttu-id="1e26d-102">Практическое руководство. Сортировка элементов (C#)</span><span class="sxs-lookup"><span data-stu-id="1e26d-102">How to: Sort Elements (C#)</span></span>
+<span data-ttu-id="1e26d-103">В этом примере показано, как создавать запросы с сортировкой результатов.</span><span class="sxs-lookup"><span data-stu-id="1e26d-103">This example shows how to write a query that sorts its results.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ad687-104">Пример</span><span class="sxs-lookup"><span data-stu-id="ad687-104">Example</span></span>  
- <span data-ttu-id="ad687-105">В этом примере используется следующий XML-документ: [Пример XML-файла. Числовые данные (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="ad687-105">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="1e26d-104">Пример</span><span class="sxs-lookup"><span data-stu-id="1e26d-104">Example</span></span>  
+ <span data-ttu-id="1e26d-105">В этом примере используется следующий XML-документ: [Пример XML-файла. Числовые данные (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span><span class="sxs-lookup"><span data-stu-id="1e26d-105">This example uses the following XML document: [Sample XML File: Numerical Data (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("Data.xml");  
@@ -26,7 +26,7 @@ foreach (decimal el in prices)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="ad687-106">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="ad687-106">This code produces the following output:</span></span>  
+ <span data-ttu-id="1e26d-106">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="1e26d-106">This code produces the following output:</span></span>  
   
 ```  
 0.99  
@@ -38,10 +38,10 @@ foreach (decimal el in prices)
 89.99  
 ```  
   
-## <a name="example"></a><span data-ttu-id="ad687-107">Пример</span><span class="sxs-lookup"><span data-stu-id="ad687-107">Example</span></span>  
- <span data-ttu-id="ad687-108">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="ad687-108">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="ad687-109">Дополнительные сведения см. в разделе [Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="ad687-109">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="1e26d-107">Пример</span><span class="sxs-lookup"><span data-stu-id="1e26d-107">Example</span></span>  
+ <span data-ttu-id="1e26d-108">Следующий пример демонстрирует тот же запрос XML, что и в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="1e26d-108">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="1e26d-109">Дополнительные сведения см. в разделе [Работа с пространствами имен XML (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span><span class="sxs-lookup"><span data-stu-id="1e26d-109">For more information, see [Working with XML Namespaces (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- <span data-ttu-id="ad687-110">В этом примере используется следующий XML-документ: [Пример XML-файла. Числовые данные пространства имен](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="ad687-110">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="1e26d-110">В этом примере используется следующий XML-документ: [Пример XML-файла. Числовые данные пространства имен](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span><span class="sxs-lookup"><span data-stu-id="1e26d-110">This example uses the following XML document: [Sample XML File: Numerical Data in a Namespace](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-in-a-namespace.md).</span></span>  
   
 ```csharp  
 XElement root = XElement.Load("DataInNamespace.xml");  
@@ -55,7 +55,7 @@ foreach (decimal el in prices)
     Console.WriteLine(el);  
 ```  
   
- <span data-ttu-id="ad687-111">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="ad687-111">This code produces the following output:</span></span>  
+ <span data-ttu-id="1e26d-111">Этот код выводит следующие результаты:</span><span class="sxs-lookup"><span data-stu-id="1e26d-111">This code produces the following output:</span></span>  
   
 ```  
 0.99  
@@ -67,6 +67,7 @@ foreach (decimal el in prices)
 89.99  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ad687-112">См. также</span><span class="sxs-lookup"><span data-stu-id="ad687-112">See Also</span></span>  
- [<span data-ttu-id="ad687-113">Сортировка данных (C#)</span><span class="sxs-lookup"><span data-stu-id="ad687-113">Sorting Data (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
- [<span data-ttu-id="ad687-114">Базовые запросы (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="ad687-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="1e26d-112">См. также</span><span class="sxs-lookup"><span data-stu-id="1e26d-112">See Also</span></span>
+
+- [<span data-ttu-id="1e26d-113">Сортировка данных (C#)</span><span class="sxs-lookup"><span data-stu-id="1e26d-113">Sorting Data (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/sorting-data.md)  
+- [<span data-ttu-id="1e26d-114">Базовые запросы (LINQ to XML) (C#)</span><span class="sxs-lookup"><span data-stu-id="1e26d-114">Basic Queries (LINQ to XML) (C#)</span></span>](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

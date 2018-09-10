@@ -4,61 +4,61 @@ ms.date: 07/05/2018
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-ms.openlocfilehash: 0289297be9d7b4989cc95d2b50b92dae9ee831f7
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: b2e6c0134af3b5814e9c9321e1486820311aa5c6
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911803"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042430"
 ---
-# <a name="passing-arrays-as-arguments-c-programming-guide"></a><span data-ttu-id="de10c-102">Передача массивов в качестве аргументов (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="de10c-102">Passing arrays as arguments (C# Programming Guide)</span></span>
+# <a name="passing-arrays-as-arguments-c-programming-guide"></a><span data-ttu-id="701c5-102">Передача массивов в качестве аргументов (руководство по программированию на C#)</span><span class="sxs-lookup"><span data-stu-id="701c5-102">Passing arrays as arguments (C# Programming Guide)</span></span>
 
-<span data-ttu-id="de10c-103">Массивы можно передавать в качестве аргументов в параметры метода.</span><span class="sxs-lookup"><span data-stu-id="de10c-103">Arrays can be passed as arguments to method parameters.</span></span> <span data-ttu-id="de10c-104">Поскольку массивы представляют собой ссылочные типы, метод может изменять значения элементов.</span><span class="sxs-lookup"><span data-stu-id="de10c-104">Because arrays are reference types, the method can change the value of the elements.</span></span>
+<span data-ttu-id="701c5-103">Массивы можно передавать в качестве аргументов в параметры метода.</span><span class="sxs-lookup"><span data-stu-id="701c5-103">Arrays can be passed as arguments to method parameters.</span></span> <span data-ttu-id="701c5-104">Поскольку массивы представляют собой ссылочные типы, метод может изменять значения элементов.</span><span class="sxs-lookup"><span data-stu-id="701c5-104">Because arrays are reference types, the method can change the value of the elements.</span></span>
 
-## <a name="passing-single-dimensional-arrays-as-arguments"></a><span data-ttu-id="de10c-105">Передача одномерных массивов в качестве аргументов</span><span class="sxs-lookup"><span data-stu-id="de10c-105">Passing single-dimensional arrays as arguments</span></span>
+## <a name="passing-single-dimensional-arrays-as-arguments"></a><span data-ttu-id="701c5-105">Передача одномерных массивов в качестве аргументов</span><span class="sxs-lookup"><span data-stu-id="701c5-105">Passing single-dimensional arrays as arguments</span></span>
 
-<span data-ttu-id="de10c-106">Инициализированный одномерный массив можно передать в метод.</span><span class="sxs-lookup"><span data-stu-id="de10c-106">You can pass an initialized single-dimensional array to a method.</span></span> <span data-ttu-id="de10c-107">Например, следующий оператор передает массив в метод печати.</span><span class="sxs-lookup"><span data-stu-id="de10c-107">For example, the following statement sends an array to a print method.</span></span>
+<span data-ttu-id="701c5-106">Инициализированный одномерный массив можно передать в метод.</span><span class="sxs-lookup"><span data-stu-id="701c5-106">You can pass an initialized single-dimensional array to a method.</span></span> <span data-ttu-id="701c5-107">Например, следующий оператор передает массив в метод печати.</span><span class="sxs-lookup"><span data-stu-id="701c5-107">For example, the following statement sends an array to a print method.</span></span>
 
 [!code-csharp[csProgGuideArrays#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#34)]
 
-<span data-ttu-id="de10c-108">В следующем примере кода показана разделяемая реализация метода печати.</span><span class="sxs-lookup"><span data-stu-id="de10c-108">The following code shows a partial implementation of the print method.</span></span>
+<span data-ttu-id="701c5-108">В следующем примере кода показана разделяемая реализация метода печати.</span><span class="sxs-lookup"><span data-stu-id="701c5-108">The following code shows a partial implementation of the print method.</span></span>
 
 [!code-csharp[csProgGuideArrays#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#33)]
 
-<span data-ttu-id="de10c-109">Новый массив можно инициализировать и передать за один шаг, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="de10c-109">You can initialize and pass a new array in one step, as is shown in the following example.</span></span>
+<span data-ttu-id="701c5-109">Новый массив можно инициализировать и передать за один шаг, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="701c5-109">You can initialize and pass a new array in one step, as is shown in the following example.</span></span>
 
 [!code-csharp[CsProgGuideArrays#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#35)]
 
-### <a name="example"></a><span data-ttu-id="de10c-110">Пример</span><span class="sxs-lookup"><span data-stu-id="de10c-110">Example</span></span>
+### <a name="example"></a><span data-ttu-id="701c5-110">Пример</span><span class="sxs-lookup"><span data-stu-id="701c5-110">Example</span></span>
 
-<span data-ttu-id="de10c-111">В следующем примере массив строк инициализируется и передается в качестве аргумента в метод `DisplayArray` для строк.</span><span class="sxs-lookup"><span data-stu-id="de10c-111">In the following example, an array of strings is initialized and passed as an argument to a `DisplayArray` method for strings.</span></span> <span data-ttu-id="de10c-112">Этот метод отображает элементы массива.</span><span class="sxs-lookup"><span data-stu-id="de10c-112">The method displays the elements of the array.</span></span> <span data-ttu-id="de10c-113">Затем метод `ChangeArray` размещает элементы массива в обратном порядке, а метод `ChangeArrayElements` изменяет первые три элемента массива.</span><span class="sxs-lookup"><span data-stu-id="de10c-113">Next, the `ChangeArray` method reverses the array elements, and then the `ChangeArrayElements` method modifies the first three elements of the array.</span></span> <span data-ttu-id="de10c-114">После возврата каждого метода метод `DisplayArray` показывает, что передача массива по значению не препятствует изменению элементов массива.</span><span class="sxs-lookup"><span data-stu-id="de10c-114">After each method returns, the `DisplayArray` method shows that passing an array by value doesn't prevent changes to the array elements.</span></span>
+<span data-ttu-id="701c5-111">В следующем примере массив строк инициализируется и передается в качестве аргумента в метод `DisplayArray` для строк.</span><span class="sxs-lookup"><span data-stu-id="701c5-111">In the following example, an array of strings is initialized and passed as an argument to a `DisplayArray` method for strings.</span></span> <span data-ttu-id="701c5-112">Этот метод отображает элементы массива.</span><span class="sxs-lookup"><span data-stu-id="701c5-112">The method displays the elements of the array.</span></span> <span data-ttu-id="701c5-113">Затем метод `ChangeArray` размещает элементы массива в обратном порядке, а метод `ChangeArrayElements` изменяет первые три элемента массива.</span><span class="sxs-lookup"><span data-stu-id="701c5-113">Next, the `ChangeArray` method reverses the array elements, and then the `ChangeArrayElements` method modifies the first three elements of the array.</span></span> <span data-ttu-id="701c5-114">После возврата каждого метода метод `DisplayArray` показывает, что передача массива по значению не препятствует изменению элементов массива.</span><span class="sxs-lookup"><span data-stu-id="701c5-114">After each method returns, the `DisplayArray` method shows that passing an array by value doesn't prevent changes to the array elements.</span></span>
 
 [!code-csharp[csProgGuideArrays#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/ArrayExample.cs)]
 
-## <a name="passing-multidimensional-arrays-as-arguments"></a><span data-ttu-id="de10c-115">Передача многомерных массивов в качестве аргументов</span><span class="sxs-lookup"><span data-stu-id="de10c-115">Passing multidimensional arrays as arguments</span></span>
+## <a name="passing-multidimensional-arrays-as-arguments"></a><span data-ttu-id="701c5-115">Передача многомерных массивов в качестве аргументов</span><span class="sxs-lookup"><span data-stu-id="701c5-115">Passing multidimensional arrays as arguments</span></span>
 
-<span data-ttu-id="de10c-116">Инициализированный многомерный массив можно передать в метод так же, как и одномерный массив.</span><span class="sxs-lookup"><span data-stu-id="de10c-116">You pass an initialized multidimensional array to a method in the same way that you pass a one-dimensional array.</span></span>
+<span data-ttu-id="701c5-116">Инициализированный многомерный массив можно передать в метод так же, как и одномерный массив.</span><span class="sxs-lookup"><span data-stu-id="701c5-116">You pass an initialized multidimensional array to a method in the same way that you pass a one-dimensional array.</span></span>
 
 [!code-csharp[csProgGuideArrays#41](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#41)]
 
-<span data-ttu-id="de10c-117">В следующем коде показано разделяемое объявление метода печати, который принимает в качестве аргумента двухмерный массив.</span><span class="sxs-lookup"><span data-stu-id="de10c-117">The following code shows a partial declaration of a print method that accepts a two-dimensional array as its argument.</span></span>
+<span data-ttu-id="701c5-117">В следующем коде показано разделяемое объявление метода печати, который принимает в качестве аргумента двухмерный массив.</span><span class="sxs-lookup"><span data-stu-id="701c5-117">The following code shows a partial declaration of a print method that accepts a two-dimensional array as its argument.</span></span>
 
 [!code-csharp[csProgGuideArrays#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#36)]
 
-<span data-ttu-id="de10c-118">Новый массив можно инициализировать и передать за один шаг, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="de10c-118">You can initialize and pass a new array in one step, as is shown in the following example:</span></span>
+<span data-ttu-id="701c5-118">Новый массив можно инициализировать и передать за один шаг, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="701c5-118">You can initialize and pass a new array in one step, as is shown in the following example:</span></span>
 
 [!code-csharp[csProgGuideArrays#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#32)]
 
-### <a name="example"></a><span data-ttu-id="de10c-119">Пример</span><span class="sxs-lookup"><span data-stu-id="de10c-119">Example</span></span>
+### <a name="example"></a><span data-ttu-id="701c5-119">Пример</span><span class="sxs-lookup"><span data-stu-id="701c5-119">Example</span></span>
 
-<span data-ttu-id="de10c-120">В следующем примере инициализируется двухмерный массив целых чисел, который передается в метод `Print2DArray`.</span><span class="sxs-lookup"><span data-stu-id="de10c-120">In the following example, a two-dimensional array of integers is initialized and passed to the `Print2DArray` method.</span></span> <span data-ttu-id="de10c-121">Этот метод отображает элементы массива.</span><span class="sxs-lookup"><span data-stu-id="de10c-121">The method displays the elements of the array.</span></span>
+<span data-ttu-id="701c5-120">В следующем примере инициализируется двухмерный массив целых чисел, который передается в метод `Print2DArray`.</span><span class="sxs-lookup"><span data-stu-id="701c5-120">In the following example, a two-dimensional array of integers is initialized and passed to the `Print2DArray` method.</span></span> <span data-ttu-id="701c5-121">Этот метод отображает элементы массива.</span><span class="sxs-lookup"><span data-stu-id="701c5-121">The method displays the elements of the array.</span></span>
 
 [!code-csharp[csProgGuideArrays#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#31)]
 
-## <a name="see-also"></a><span data-ttu-id="de10c-122">См. также</span><span class="sxs-lookup"><span data-stu-id="de10c-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="701c5-122">См. также</span><span class="sxs-lookup"><span data-stu-id="701c5-122">See also</span></span>
 
-[<span data-ttu-id="de10c-123">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="de10c-123">C# Programming Guide</span></span>](../index.md)  
-[<span data-ttu-id="de10c-124">Массивы</span><span class="sxs-lookup"><span data-stu-id="de10c-124">Arrays</span></span>](index.md)  
-[<span data-ttu-id="de10c-125">Одномерные массивы</span><span class="sxs-lookup"><span data-stu-id="de10c-125">Single-Dimensional Arrays</span></span>](single-dimensional-arrays.md)  
-[<span data-ttu-id="de10c-126">Многомерные массивы</span><span class="sxs-lookup"><span data-stu-id="de10c-126">Multidimensional Arrays</span></span>](multidimensional-arrays.md)  
-[<span data-ttu-id="de10c-127">Массивы массивов</span><span class="sxs-lookup"><span data-stu-id="de10c-127">Jagged Arrays</span></span>](jagged-arrays.md)  
+- [<span data-ttu-id="701c5-123">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="701c5-123">C# Programming Guide</span></span>](../index.md)  
+- [<span data-ttu-id="701c5-124">Массивы</span><span class="sxs-lookup"><span data-stu-id="701c5-124">Arrays</span></span>](index.md)  
+- [<span data-ttu-id="701c5-125">Одномерные массивы</span><span class="sxs-lookup"><span data-stu-id="701c5-125">Single-Dimensional Arrays</span></span>](single-dimensional-arrays.md)  
+- [<span data-ttu-id="701c5-126">Многомерные массивы</span><span class="sxs-lookup"><span data-stu-id="701c5-126">Multidimensional Arrays</span></span>](multidimensional-arrays.md)  
+- [<span data-ttu-id="701c5-127">Массивы массивов</span><span class="sxs-lookup"><span data-stu-id="701c5-127">Jagged Arrays</span></span>](jagged-arrays.md)  

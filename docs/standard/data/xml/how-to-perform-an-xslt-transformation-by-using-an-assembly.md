@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d8f29b1274e6e8436aed0dfb698ede4864a15417
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef0d47ae18b8bdd3f1d49a20937b65e9872ab551
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569507"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201755"
 ---
-# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a><span data-ttu-id="f29da-102">Как выполнить XSLT-преобразование с помощью сборки</span><span class="sxs-lookup"><span data-stu-id="f29da-102">How to: Perform an XSLT Transformation by Using an Assembly</span></span>
-<span data-ttu-id="f29da-103">XSLT-компилятор (xsltc.exe) компилирует таблицы стилей XSLT и создает сборку.</span><span class="sxs-lookup"><span data-stu-id="f29da-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="f29da-104">Сборку можно передать непосредственно методу <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="f29da-104">The assembly can be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span>  
+# <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a><span data-ttu-id="c0fb2-102">Как выполнить XSLT-преобразование с помощью сборки</span><span class="sxs-lookup"><span data-stu-id="c0fb2-102">How to: Perform an XSLT Transformation by Using an Assembly</span></span>
+<span data-ttu-id="c0fb2-103">XSLT-компилятор (xsltc.exe) компилирует таблицы стилей XSLT и создает сборку.</span><span class="sxs-lookup"><span data-stu-id="c0fb2-103">The XSLT compiler (xsltc.exe) compiles XSLT style sheets and generates an assembly.</span></span> <span data-ttu-id="c0fb2-104">Сборку можно передать непосредственно методу <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="c0fb2-104">The assembly can be passed directly into the <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> method.</span></span>  
   
-### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a><span data-ttu-id="f29da-105">Копирование XML-файлов и XSLT-файлов на локальный компьютер</span><span class="sxs-lookup"><span data-stu-id="f29da-105">To copy the XML and XSLT files to your local computer</span></span>  
+### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a><span data-ttu-id="c0fb2-105">Копирование XML-файлов и XSLT-файлов на локальный компьютер</span><span class="sxs-lookup"><span data-stu-id="c0fb2-105">To copy the XML and XSLT files to your local computer</span></span>  
   
--   <span data-ttu-id="f29da-106">Скопируйте XSLT-файл на локальный компьютер и переименуйте его в Transform.xsl.</span><span class="sxs-lookup"><span data-stu-id="f29da-106">Copy the XSLT file to your local computer and name it Transform.xsl.</span></span>  
+-   <span data-ttu-id="c0fb2-106">Скопируйте XSLT-файл на локальный компьютер и переименуйте его в Transform.xsl.</span><span class="sxs-lookup"><span data-stu-id="c0fb2-106">Copy the XSLT file to your local computer and name it Transform.xsl.</span></span>  
   
     ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -87,7 +87,7 @@ ms.locfileid: "33569507"
     </xsl:stylesheet>  
     ```  
   
--   <span data-ttu-id="f29da-107">Скопируйте XML-файл на локальный компьютер и переименуйте его в `books.xml`.</span><span class="sxs-lookup"><span data-stu-id="f29da-107">Copy the XML file to your local computer and name it `books.xml`.</span></span>  
+-   <span data-ttu-id="c0fb2-107">Скопируйте XML-файл на локальный компьютер и переименуйте его в `books.xml`.</span><span class="sxs-lookup"><span data-stu-id="c0fb2-107">Copy the XML file to your local computer and name it `books.xml`.</span></span>  
   
     ```xml  
     <?xml version="1.0"?>  
@@ -130,59 +130,60 @@ ms.locfileid: "33569507"
     </catalog>  
     ```  
   
-### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a><span data-ttu-id="f29da-108">Компиляция таблицы стилей с поддержкой скриптов</span><span class="sxs-lookup"><span data-stu-id="f29da-108">To compile the style sheet with the script enabled.</span></span>  
+### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a><span data-ttu-id="c0fb2-108">Компиляция таблицы стилей с поддержкой скриптов</span><span class="sxs-lookup"><span data-stu-id="c0fb2-108">To compile the style sheet with the script enabled.</span></span>  
   
-1.  <span data-ttu-id="f29da-109">При выполнении следующей команды из командной строки создаются две сборки с именами `Transform.dll` и `Transform_Script1.dll` (это действие выполняется по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="f29da-109">Executing the following command from the command line creates two assemblies named `Transform.dll` and `Transform_Script1.dll` (This is the default behavior.</span></span> <span data-ttu-id="f29da-110">Если не указано иное, имя класса и сборки по умолчанию совпадает с именем главной таблицы стилей):</span><span class="sxs-lookup"><span data-stu-id="f29da-110">Unless otherwise specified, the name of the class and the assembly defaults to the name of the main style sheet):</span></span>  
+1.  <span data-ttu-id="c0fb2-109">При выполнении следующей команды из командной строки создаются две сборки с именами `Transform.dll` и `Transform_Script1.dll` (это действие выполняется по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="c0fb2-109">Executing the following command from the command line creates two assemblies named `Transform.dll` and `Transform_Script1.dll` (This is the default behavior.</span></span> <span data-ttu-id="c0fb2-110">Если не указано иное, имя класса и сборки по умолчанию совпадает с именем главной таблицы стилей):</span><span class="sxs-lookup"><span data-stu-id="c0fb2-110">Unless otherwise specified, the name of the class and the assembly defaults to the name of the main style sheet):</span></span>  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
     ```  
   
- <span data-ttu-id="f29da-111">Следующая команда явно задает имя класса Transform:</span><span class="sxs-lookup"><span data-stu-id="f29da-111">The following command explicitly sets the class name to Transform:</span></span>  
+ <span data-ttu-id="c0fb2-111">Следующая команда явно задает имя класса Transform:</span><span class="sxs-lookup"><span data-stu-id="c0fb2-111">The following command explicitly sets the class name to Transform:</span></span>  
   
 ```  
 xsltc /settings:script+ /class:Transform Transform.xsl  
 ```  
   
-### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a><span data-ttu-id="f29da-112">Включение скомпилированной сборки в виде ссылки во время компиляции кода</span><span class="sxs-lookup"><span data-stu-id="f29da-112">To include the compiled assembly as a reference when you compile your code.</span></span>  
+### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a><span data-ttu-id="c0fb2-112">Включение скомпилированной сборки в виде ссылки во время компиляции кода</span><span class="sxs-lookup"><span data-stu-id="c0fb2-112">To include the compiled assembly as a reference when you compile your code.</span></span>  
   
-1.  <span data-ttu-id="f29da-113">Можно включить сборку в Visual Studio, добавив ссылку в обозревателе решений, или из командной строки.</span><span class="sxs-lookup"><span data-stu-id="f29da-113">You can include an assembly in Visual Studio by adding a reference in the Solution Explorer, or from the command line.</span></span>  
+1.  <span data-ttu-id="c0fb2-113">Можно включить сборку в Visual Studio, добавив ссылку в обозревателе решений, или из командной строки.</span><span class="sxs-lookup"><span data-stu-id="c0fb2-113">You can include an assembly in Visual Studio by adding a reference in the Solution Explorer, or from the command line.</span></span>  
   
-2.  <span data-ttu-id="f29da-114">Если используется язык C#, введите в командной строке следующее:</span><span class="sxs-lookup"><span data-stu-id="f29da-114">For the command line with C#, use the following:</span></span>  
+2.  <span data-ttu-id="c0fb2-114">Если используется язык C#, введите в командной строке следующее:</span><span class="sxs-lookup"><span data-stu-id="c0fb2-114">For the command line with C#, use the following:</span></span>  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3.  <span data-ttu-id="f29da-115">Если используется язык Visual Basic, введите в командной строке следующее:</span><span class="sxs-lookup"><span data-stu-id="f29da-115">For the command line with Visual Basic, use the following</span></span>  
+3.  <span data-ttu-id="c0fb2-115">Если используется язык Visual Basic, введите в командной строке следующее:</span><span class="sxs-lookup"><span data-stu-id="c0fb2-115">For the command line with Visual Basic, use the following</span></span>  
   
     ```  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-### <a name="to-use-the-compiled-assembly-in-your-code"></a><span data-ttu-id="f29da-116">Использование скомпилированной сборки в коде</span><span class="sxs-lookup"><span data-stu-id="f29da-116">To use the compiled assembly in your code.</span></span>  
+### <a name="to-use-the-compiled-assembly-in-your-code"></a><span data-ttu-id="c0fb2-116">Использование скомпилированной сборки в коде</span><span class="sxs-lookup"><span data-stu-id="c0fb2-116">To use the compiled assembly in your code.</span></span>  
   
-1.  <span data-ttu-id="f29da-117">В следующем примере показано, как выполнить преобразование XSLT, используя скомпилированную таблицу стилей.</span><span class="sxs-lookup"><span data-stu-id="f29da-117">The following example shows how to execute the XSLT transformation by using the compiled style sheet.</span></span>  
+1.  <span data-ttu-id="c0fb2-117">В следующем примере показано, как выполнить преобразование XSLT, используя скомпилированную таблицу стилей.</span><span class="sxs-lookup"><span data-stu-id="c0fb2-117">The following example shows how to execute the XSLT transformation by using the compiled style sheet.</span></span>  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  
   
- <span data-ttu-id="f29da-118">Чтобы создать динамическую ссылку на скомпилированную сборку, замените</span><span class="sxs-lookup"><span data-stu-id="f29da-118">To dynamically link to the compiled assembly, replace</span></span>  
+ <span data-ttu-id="c0fb2-118">Чтобы создать динамическую ссылку на скомпилированную сборку, замените</span><span class="sxs-lookup"><span data-stu-id="c0fb2-118">To dynamically link to the compiled assembly, replace</span></span>  
   
 ```  
 xslt.Load(typeof(Transform))  
 ```  
   
- <span data-ttu-id="f29da-119">на</span><span class="sxs-lookup"><span data-stu-id="f29da-119">with</span></span>  
+ <span data-ttu-id="c0fb2-119">на</span><span class="sxs-lookup"><span data-stu-id="c0fb2-119">with</span></span>  
   
 ```  
 xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))  
 ```  
   
- <span data-ttu-id="f29da-120">в примере выше.</span><span class="sxs-lookup"><span data-stu-id="f29da-120">in the example above.</span></span> <span data-ttu-id="f29da-121">Дополнительные сведения о методе Assembly.Load см. в коде <xref:System.Reflection.Assembly.Load%2A></span><span class="sxs-lookup"><span data-stu-id="f29da-121">For more information on the Assembly.Load method, see <xref:System.Reflection.Assembly.Load%2A></span></span>  
+ <span data-ttu-id="c0fb2-120">в примере выше.</span><span class="sxs-lookup"><span data-stu-id="c0fb2-120">in the example above.</span></span> <span data-ttu-id="c0fb2-121">Дополнительные сведения о методе Assembly.Load см. в коде <xref:System.Reflection.Assembly.Load%2A></span><span class="sxs-lookup"><span data-stu-id="c0fb2-121">For more information on the Assembly.Load method, see <xref:System.Reflection.Assembly.Load%2A></span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f29da-122">См. также</span><span class="sxs-lookup"><span data-stu-id="f29da-122">See Also</span></span>  
- <xref:System.Xml.Xsl.XslCompiledTransform>  
- [<span data-ttu-id="f29da-123">Компилятор XSLT (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="f29da-123">XSLT Compiler (xsltc.exe)</span></span>](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
- [<span data-ttu-id="f29da-124">Преобразования XSLT</span><span class="sxs-lookup"><span data-stu-id="f29da-124">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [<span data-ttu-id="f29da-125">Сборка из командной строки с помощью csc.exe</span><span class="sxs-lookup"><span data-stu-id="f29da-125">Command-line Building With csc.exe</span></span>](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+## <a name="see-also"></a><span data-ttu-id="c0fb2-122">См. также</span><span class="sxs-lookup"><span data-stu-id="c0fb2-122">See also</span></span>
+
+- <xref:System.Xml.Xsl.XslCompiledTransform>  
+- [<span data-ttu-id="c0fb2-123">Компилятор XSLT (xsltc.exe)</span><span class="sxs-lookup"><span data-stu-id="c0fb2-123">XSLT Compiler (xsltc.exe)</span></span>](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
+- [<span data-ttu-id="c0fb2-124">Преобразования XSLT</span><span class="sxs-lookup"><span data-stu-id="c0fb2-124">XSLT Transformations</span></span>](../../../../docs/standard/data/xml/xslt-transformations.md)  
+- [<span data-ttu-id="c0fb2-125">Сборка из командной строки с помощью csc.exe</span><span class="sxs-lookup"><span data-stu-id="c0fb2-125">Command-line Building With csc.exe</span></span>](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
