@@ -2,11 +2,12 @@
 title: Безопасность LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: ef2c0dc9-ecf9-4c17-b24e-144184ab725f
-ms.openlocfilehash: f51c256091d503a34caadbdf46d08e05c3122238
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c4ee8df85d6e5c6f84947dcaaeb6875bbd687de
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269323"
 ---
 # <a name="linq-to-xml-security-c"></a>Безопасность LINQ to XML (C#)
 В этом разделе обсуждаются проблемы безопасности, связанные с LINQ to XML. Кроме того, в нем приводятся рекомендации по снижению рисков нарушения безопасности.  
@@ -98,5 +99,6 @@ ms.lasthandoff: 05/04/2018
   
  Определенный уровень безопасности предоставляется средой CLR. Например, компонент, не содержащий закрытый класс, не может получить доступ к заметкам, которые обозначены ключами с помощью этого класса. Однако заметки могут быть удалены компонентами, не имеющими возможность их читать. Это может использоваться в качестве атаки для злонамеренного изменения данных.  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

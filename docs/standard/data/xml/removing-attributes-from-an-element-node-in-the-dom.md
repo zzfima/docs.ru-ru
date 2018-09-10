@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 758ce84390c9ba47e3eb56e1feb293a4cf0408a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570573"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188149"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>Удаление атрибутов из узла элемента в DOM
 Существует много способов удаления атрибутов. Один из них заключается в их удалении из коллекции атрибутов. Для этого выполняются следующие шаги.  
@@ -39,5 +39,6 @@ ms.locfileid: "33570573"
   
  Если метод <xref:System.Xml.XmlAttribute> вызывается с атрибутом <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A>, он присваивает атрибуту значение String.Empty, поскольку атрибут не может существовать без значения.  
   
-## <a name="see-also"></a>См. также  
- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также
+
+- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

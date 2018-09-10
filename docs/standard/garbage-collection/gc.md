@@ -4,11 +4,12 @@ description: Сведения о том, как для автоматическ�
 ms.date: 07/22/2016
 ms.technology: dotnet-standard
 ms.assetid: d095b0b6-2454-4e23-80b4-c9e8a447116c
-ms.openlocfilehash: b9ce8b1fec5c6fc0808b86f06408c3f5d612e492
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8046cb744dccaf512208d517c243640820efce8e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194447"
 ---
 # <a name="automatic-memory-management-and-garbage-collection"></a>Автоматическое управление памятью и сборка мусора
 
@@ -46,7 +47,5 @@ ms.lasthandoff: 05/04/2018
 
 ## <a name="see-also"></a>См. также
 
-[System.GC](xref:System.GC)
-
-[Сборка мусора в .NET](index.md)
-
+- [System.GC](xref:System.GC)
+- [Сборка мусора в .NET](index.md)

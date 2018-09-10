@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ab0b8967ac394540f201fcc9098024faaccaa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3deaba0c8589eaa0ba24bc66669f5a76e60467f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591300"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877811"
 ---
 # <a name="exception-handling-task-parallel-library"></a>Обработка исключений (библиотека параллельных задач)
 Необработанные исключения, создаваемые пользовательским кодом, который выполняется в задаче, распространяются обратно в вызывающий поток, за исключением отдельных сценариев, описанных далее в этом разделе. Исключения распространяются, если вы вызываете один из методов <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> или <!--zz <xref:System.Threading.Tasks.Task%601.Wait%2A?displayProperty=nameWithType>  --> `Wait` (статических или методов экземпляра ), и заключаете этот вызов в инструкцию `try`/`catch`. Если задача является родительской для присоединенных дочерних задач или если вы ожидаете несколько задач, может быть создано несколько исключений.  
@@ -91,5 +91,6 @@ ms.locfileid: "33591300"
 ## <a name="unobservedtaskexception-event"></a>Событие UnobservedTaskException  
  В некоторых сценариях, например при размещении недоверенных подключаемых модулей, неопасные исключения могут быть общими, и может оказаться слишком сложно вручную выявить их все. В таких случаях можно обрабатывать событие <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException?displayProperty=nameWithType>. Экземпляр <xref:System.Threading.Tasks.UnobservedTaskExceptionEventArgs?displayProperty=nameWithType>, который передается в обработчик, не позволяет незамеченным исключениям бесконтрольно распространяться обратно в присоединяемый поток.  
   
-## <a name="see-also"></a>См. также  
- [Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>См. также
+
+- [Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

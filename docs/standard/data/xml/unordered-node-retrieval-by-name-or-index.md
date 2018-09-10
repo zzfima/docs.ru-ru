@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 785a609455a35dd87a9593f00b58fd160ac708e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572945"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44180817"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Неупорядоченное извлечение узлов по имени или индексу
 Класс **XmlNamedNodeMap** описан в спецификации консорциума W3C как NamedNodeMap. Он нужен для обработки неупорядоченного набора узлов с возможностью ссылаться на узлы по их именам и индексам. Единственный способ доступа к классу **XmlNamedNodeMap** — возврат **XmlNamedNodeMap** через метод или свойство. Есть три метода или свойства, возвращающих класс **XmlNamedNodeMap**:  
@@ -119,5 +119,6 @@ class test {
   
  Дополнительный пример кода, в котором показано перемещение атрибута из коллекции **AttributeCollection**, см. в описании [XmlNamedNodeMap.RemoveNamedItem Method](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Дополнительные сведения о доступных методах и свойствах см. в описании [XmlNamedNodeMap Members](AllMembers.T:System.Xml.XmlNamedNodeMap).  
   
-## <a name="see-also"></a>См. также  
- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также
+
+- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

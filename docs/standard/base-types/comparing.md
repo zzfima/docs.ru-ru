@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c925b734c6d89bfa7240a7946c5bae4d8062a47a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577821"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264679"
 ---
 # <a name="comparing-strings-in-net"></a>Сравнение строк в .NET
 Платформа .NET обеспечивает несколько методов для сравнения значений строк. В таблице ниже перечислены и описаны методы сравнения значений.  
@@ -150,6 +150,8 @@ ms.locfileid: "33577821"
   
  Оба метода полезно использовать в сочетании с методом **String.Remove** . Для получения позиции символа используется метод **IndexOf** или **LastIndexOf** , после чего эта позиция передается методу **Remove** для удаления символа или начинающегося с него слова.  
   
-## <a name="see-also"></a>См. также  
- [Базовые операции со строками в .NET Framework](../../../docs/standard/base-types/basic-string-operations.md)  
- [Выполнение строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>См. также
+
+- [Базовые операции со строками в .NET Framework](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Выполнение строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [Сортировка таблиц веса](https://www.microsoft.com/en-us/download/details.aspx?id=10921)

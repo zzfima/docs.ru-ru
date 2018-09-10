@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9dd06e25-12c0-4a9e-855a-452dc83803e2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1f3df40a468c7c0f7da0b559ea9b01703cd200a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80379e46c6482a3e052c1283fb4aaba2c7df282e
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590030"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44079179"
 ---
 # <a name="mutexes"></a>Mutexes
 Объект <xref:System.Threading.Mutex> можно использовать для получения монопольного доступа к ресурсу. Класс <xref:System.Threading.Mutex> использует больше системных ресурсов, чем класс <xref:System.Threading.Monitor>, но он может маршалироваться между доменами приложений, использоваться с несколькими ожиданиями и синхронизировать потоки в нескольких процессах. Сравнение механизмов управляемой синхронизации см. в разделе [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
@@ -49,12 +49,13 @@ ms.locfileid: "33590030"
   
  Сведения о защите и управлении доступом для мьютексов вы найдете в описаниях классов <xref:System.Security.AccessControl.MutexSecurity> и <xref:System.Security.AccessControl.MutexAccessRule>, перечисления <xref:System.Security.AccessControl.MutexRights>, методов <xref:System.Threading.Mutex.GetAccessControl%2A>, <xref:System.Threading.Mutex.SetAccessControl%2A> и <xref:System.Threading.Mutex.OpenExisting%2A> класса <xref:System.Threading.Mutex> и описании конструктора <xref:System.Threading.Mutex.%23ctor%28System.Boolean%2CSystem.String%2CSystem.Boolean%40%2CSystem.Security.AccessControl.MutexSecurity%29>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.Mutex>  
- <xref:System.Threading.Mutex.%23ctor%2A>  
- <xref:System.Security.AccessControl.MutexSecurity>  
- <xref:System.Security.AccessControl.MutexAccessRule>  
- [Работа с потоками](../../../docs/standard/threading/index.md)  
- [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)  
- [Мониторы](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
- [Потоки и работа с потоками](../../../docs/standard/threading/threads-and-threading.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.Mutex>  
+- <xref:System.Threading.Mutex.%23ctor%2A>  
+- <xref:System.Security.AccessControl.MutexSecurity>  
+- <xref:System.Security.AccessControl.MutexAccessRule>  
+- [Работа с потоками](../../../docs/standard/threading/index.md)  
+- [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)  
+- [Мониторы](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+- [Потоки и работа с потоками](../../../docs/standard/threading/threads-and-threading.md)

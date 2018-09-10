@@ -8,12 +8,12 @@ helpviewer_keywords:
 - read/write properties [C#]
 - accessors [C#], declaring properties with
 ms.assetid: a4962fef-af7e-4c4b-a929-4ae4d646ab8a
-ms.openlocfilehash: d6a7083e1c0cf0dc5c076a69dee15fc39e234d53
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: 77db2841d6ef9af21d38736f39e6041699ca13d5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172332"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180266"
 ---
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>Практическое руководство. Объявление и использование свойств чтения и записи (руководство по программированию на C#)
 Свойства имеют все преимущества открытых членов данных, но не связаны с рисками незащищенного, неконтролируемого и несанкционированного доступа к данным объекта. Это достигается благодаря применению *методов доступа*, которые представляют собой особые методы для присвоения и извлечения значений базового члена данных. Метод доступа [set](../../../csharp/language-reference/keywords/set.md) присваивает значения членам данных, а метод доступа [get](../../../csharp/language-reference/keywords/get.md) извлекает их.  
@@ -54,7 +54,8 @@ person.SetAge(person.GetAge() + 1);
   
  Обратите внимание, что метод `ToString` не используется в этой программе явно. Он вызывается по умолчанию при вызове `WriteLine`.  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)

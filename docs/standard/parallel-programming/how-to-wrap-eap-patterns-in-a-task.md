@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f11ed467-af2f-4504-8a2e-299a6c36d44e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 292bff13b4651b0e886abc435104edfa930f9de1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a4287879bd95f7bc1e1dc99f74fa0d7cc0fe737f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582773"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44191031"
 ---
 # <a name="how-to-wrap-eap-patterns-in-a-task"></a>Практическое руководство. Создание задачи-оболочки для шаблонов EAP
 В следующем примере показан способ предоставления произвольной последовательности асинхронных операций на основе событий (EAP) как одной задачи с помощью <xref:System.Threading.Tasks.TaskCompletionSource%601>. В примере также показано использование <xref:System.Threading.CancellationToken> для вызова встроенных методов отмены в объектах <xref:System.Net.WebClient>.  
@@ -24,5 +24,6 @@ ms.locfileid: "33582773"
  [!code-csharp[FromAsync#08](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/fromasync.cs#08)]
  [!code-vb[FromAsync#08](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/module1.vb#08)]  
   
-## <a name="see-also"></a>См. также  
- [Библиотека параллельных задач и традиционное асинхронное программирование .NET Framework](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)
+## <a name="see-also"></a>См. также
+
+- [Библиотека параллельных задач и традиционное асинхронное программирование .NET Framework](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)

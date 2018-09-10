@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6446145d34d22503697bbca59bc2cb2cd2619cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8fd937d6ce2edf0c47fce78d48a90ec1aa409eef
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580368"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44196651"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>Практическое руководство. Переход по двоичному дереву с помощью параллельных задач
 В следующем примере представлено два способа применить параллельные задачи для обхода древовидной структуры данных. Создание такого дерева остается вам в качестве упражнения.  
@@ -26,5 +26,6 @@ ms.locfileid: "33580368"
   
  Два представленных здесь метода функционально эквивалентны. Используя метод <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> для создания и выполнения задач, вы можете получить от этих задач дескриптор и применить его для ожидания задач и обработки исключений.  
   
-## <a name="see-also"></a>См. также  
- [Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>См. также
+
+- [Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

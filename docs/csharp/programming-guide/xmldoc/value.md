@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: 22de15560d6db6e8a70cea744dd9d85359336306
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 24ef4aba13668cd04e20f17ebffac9eb68e796ca
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356435"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081860"
 ---
 # <a name="ltvaluegt-c-programming-guide"></a>&lt;value&gt; (руководство по программированию на C#)
 ## <a name="syntax"></a>Синтаксис  
@@ -33,6 +33,7 @@ ms.locfileid: "33356435"
 ## <a name="example"></a>Пример  
  [!code-csharp[csProgGuideDocComments#14](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/value_1.cs)]  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

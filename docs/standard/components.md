@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2415f0c360118389bc7a3ae3aaf74ca8daf24422
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574811"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262281"
 ---
 # <a name="net-architectural-components"></a>Архитектурные компоненты .NET
 
@@ -68,11 +68,11 @@ UWP представляет собой реализацию .NET, котора�
 ## <a name="net-runtimes"></a>Среды выполнения .NET
 
 Среда выполнения — это среда выполнения для управляемой программы. Операционная система является частью среды выполнения, но не входит в среду выполнения .NET. Ниже приведены несколько примеров сред выполнения .NET.
- 
- - Среда CLR для .NET Framework
- - Среда CoreCLR для .NET Core
- - .NET Native для универсальной платформы Windows 
- - Среда выполнения Mono для Xamarin.iOS, Xamarin.Android, Xamarin.Mac и платформы Mono для рабочего стола
+
+- Среда CLR для .NET Framework
+- Среда CoreCLR для .NET Core
+- .NET Native для универсальной платформы Windows 
+- Среда выполнения Mono для Xamarin.iOS, Xamarin.Android, Xamarin.Mac и платформы Mono для рабочего стола
 
 ## <a name="net-tooling-and-common-infrastructure"></a>Инструменты для .NET и общая инфраструктура
 
@@ -85,11 +85,11 @@ UWP представляет собой реализацию .NET, котора�
 - инструменты для управления сборкой с открытым исходным кодом, например [CAKE](https://cakebuild.net/) и [FAKE](https://fake.build/).
 
 ## <a name="see-also"></a>См. также
-[Выбор между .NET Core и .NET Framework для серверных приложений](choosing-core-framework-server.md)   
-[.NET Standard](net-standard.md)  
-[Руководство по .NET Core](../core/index.md)  
-[Руководство по .NET Framework](../framework/index.md)  
-[Руководство по языку C#](../csharp/index.md)  
-[Руководство по языку F#](../fsharp/index.md)  
-[Руководство по VB .NET](../visual-basic/index.md)  
 
+- [Выбор между .NET Core и .NET Framework для серверных приложений](choosing-core-framework-server.md)   
+- [.NET Standard](net-standard.md)  
+- [Руководство по .NET Core](../core/index.md)  
+- [Руководство по .NET Framework](../framework/index.md)  
+- [Руководство по языку C#](../csharp/index.md)  
+- [Руководство по языку F#](../fsharp/index.md)  
+- [Руководство по VB .NET](../visual-basic/index.md)  

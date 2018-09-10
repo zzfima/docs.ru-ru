@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: ba5c7fcc8fe9e3eaab0a955f4cd1a1e07169049e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5014b1da714f8e29f869d4641da93796a607aa4d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216207"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225351"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (параметры компилятора C#)
 Параметр **-win32icon** вставляет в выходной файл ICO-файл, который придает выходному файлу необходимый вид в проводнике.  
@@ -29,7 +29,7 @@ ms.locfileid: "33216207"
  ICO-файл, который требуется добавить в выходной файл.  
   
 ## <a name="remarks"></a>Примечания  
- ICO-файл можно создать с помощью [компилятора ресурсов](https://msdn.microsoft.com/library/aa381042.aspx). Компилятор ресурсов вызывается при компиляции программы Visual C++; ICO-файл создается из RC-файла.  
+ ICO-файл можно создать с помощью [компилятора ресурсов](/windows/desktop/menurc/resource-compiler). Компилятор ресурсов вызывается при компиляции программы Visual C++; ICO-файл создается из RC-файла.  
   
  Дополнительные сведения о ссылках на файлы ресурсов .NET Framework и их присоединении см. в разделах [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) и [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) соответственно. Дополнительные сведения об импорте RES-файла см. в разделе [-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md).  
   
@@ -51,5 +51,6 @@ csc -win32icon:rf.ico in.cs
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
+- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

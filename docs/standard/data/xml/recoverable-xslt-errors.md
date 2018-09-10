@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ef88add49cb4a269612965d14dfbca6b3263533
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f7630b9a233db009b6095abc8d833870c1f33d8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579279"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252360"
 ---
 # <a name="recoverable-xslt-errors"></a>Устранимые ошибки XSLT
 Рекомендация W3C по XSL-преобразованиям (XSLT) версии 1.0 включает в себя такие области, в которых поставщик реализации может решать, как обрабатывать ситуацию. Эти области считаются предоставленными на усмотрение поставщика. Например, в разделе 7.3 «Инструкции по обработке при создании» рекомендаций XSLT 1.0 указывается на ошибку, которая возникает, если при формировании экземпляра содержимого `xsl:processing-instruction` создаются узлы, отличные от текстовых. Для некоторых проблем в рекомендациях XSLT 1.0 указывается решение, которое следует принять, если обработчик решает устранить ошибку. Для проблемы, приведенной в разделе 7.3, W3C заявляет, что реализация может устранять эту ошибку, игнорируя узлы и их содержимое.  
@@ -54,5 +54,6 @@ ms.locfileid: "33579279"
   
  <sup>*</sup>Это поведение отличается от класса <xref:System.Xml.Xsl.XslTransform>. См. дополнительные сведения по [реализации избирательного поведения в классе XslTransform](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
-## <a name="see-also"></a>См. также  
- [Преобразования XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>См. также
+
+- [Преобразования XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

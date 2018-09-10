@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbea588604ebd5ad39e134a4ecfe771c89fb1121
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43390572"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44251658"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Другие конструкции в регулярных выражениях
 Регулярные выражения в .NET поддерживают три различные языковые конструкции. Одна позволяет включать или отключать определенные параметры соответствия в середине шаблона регулярного выражения. Оставшиеся две позволяют включать комментарии в регулярное выражение.  
@@ -101,5 +101,6 @@ ms.locfileid: "43390572"
   
  Обратите внимание, что вместо конструкции `(?x)` в регулярном выражении для распознавания комментария можно вызвать метод <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>, передав ему значение перечисления <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также  
- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>См. также
+
+- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

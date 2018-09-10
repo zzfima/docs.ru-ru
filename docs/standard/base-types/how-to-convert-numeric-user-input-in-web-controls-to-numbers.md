@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24016ea68e17aa66432928c43d1de970fc13a55b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571918"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44204959"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Практическое руководство. Преобразование числовых данных, введенных пользователем в веб-элементах управления, в числа
 Веб-страницы могут отображаться в любой части света, а значит пользователи будут вводить числовые данные в элемент управления <xref:System.Web.UI.WebControls.TextBox> в самых разных форматах. Поэтому очень важно правильно определить язык и региональные параметры каждого посетителя веб-страницы. Тогда вы сможете применить соглашения о форматировании, соответствующие языку и региональным параметрам пользователя, при синтаксическом анализе вводимых данных.  
@@ -71,6 +71,7 @@ ms.locfileid: "33571918"
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Чтобы пользователи не могли внедрять скрипты в поток HTML, никогда не передавайте введенные данные напрямую в ответе сервера. Всегда шифруйте ответ с помощью метода <xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также  
- [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Анализ числовых строк](../../../docs/standard/base-types/parsing-numeric.md)
+## <a name="see-also"></a>См. также
+
+- [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Анализ числовых строк](../../../docs/standard/base-types/parsing-numeric.md)

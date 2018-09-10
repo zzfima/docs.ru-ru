@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 5211e1cc55c4af9735f59e4ddecc11acb24b8ea0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5cf49f8b97b33e179234bda4eb9ed6ef01d07fca
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43452798"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086768"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Пошаговые руководства для Visual Basic
 В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
@@ -62,7 +62,7 @@ ms.locfileid: "43452798"
  [Создание пользовательских прослушивателей журнала](../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
  В этом пошаговом руководстве демонстрируется создание пользовательского прослушивателя журнала и его настройка на прослушивание выходных данных объекта `My.Application.Log`.  
   
- [Внедрение типов из управляемых сборок](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Внедрение типов из управляемых сборок](../visual-basic/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-vs.md)  
  В этом пошаговом руководстве описывается создание сборки и клиентской программы, в которую входят типы из этой сборки.  
   
  [Проверка паролей на сложность (Visual Basic)](../visual-basic/programming-guide/language-features/strings/walkthrough-validating-that-passwords-are-complex.md)  
@@ -77,7 +77,7 @@ ms.locfileid: "43452798"
  [Управление файлами с помощью методов .NET Framework](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
  В этом пошаговом руководстве описывается использование методов [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] для определения сведений о файле, поиска строки в файле и записи в файл.  
   
- [Сохранение объекта в Visual Basic](https://msdn.microsoft.com/library/cb0a0917-08d5-4578-ad2b-3764ccf6167f)  
+ [Сохранение объекта в Visual Basic](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  В этом пошаговом руководстве описывается создание простого объекта и сохранение его данных в файл.  
   
  [Основанная на тестировании поддержка с помощью возможности "Создание в результате использования"](https://msdn.microsoft.com/library/764c17a4-cd95-4c23-bf63-d92d9c5adfb2)  

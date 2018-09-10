@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f29a92c0d0b8961c178b7a92ea5964a1575a48db
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bd20db7fcc16f7781e093d59514c4be75705080a
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570550"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262535"
 ---
 # <a name="changing-case-in-net"></a>Смена регистра в .NET
 При написании приложения, которое принимает входные данные от пользователя, невозможно предугадать, какой регистр будет использоваться для ввода данных. Часто требуется обеспечить согласованность регистра строк, особенно если они отображаются в пользовательском интерфейсе. В таблице ниже описаны три метода изменения регистра. Для первых двух методов имеются перегруженные варианты, учитывающие язык и региональные параметры.  
@@ -70,6 +70,7 @@ ms.locfileid: "33570550"
   
  Обратите внимание на то, что хотя метод <xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType> и учитывает язык и региональные параметры, он не обеспечивает лингвистическую правильность использования прописных и строчных букв. Например, в предыдущем примере метод преобразует строку "a tale of two cities" в "A Tale Of Two Cities". При этом лингвистически правильным для языка и региональных параметров en-US будет преобразование "A Tale of Two Cities".  
   
-## <a name="see-also"></a>См. также  
- [Базовые операции со строками в .NET Framework](../../../docs/standard/base-types/basic-string-operations.md)  
- [Выполнение строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>См. также
+
+- [Базовые операции со строками в .NET Framework](../../../docs/standard/base-types/basic-string-operations.md)  
+- [Выполнение строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

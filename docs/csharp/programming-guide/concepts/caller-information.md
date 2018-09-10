@@ -2,12 +2,12 @@
 title: Сведения о вызывающем объекте (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 6f0cd4d9d8fc85cb15431ccb4c76eee14b3f67c7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 048e91ad337f74ef04a2a03412a44a0be0ef9506
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320694"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212455"
 ---
 # <a name="caller-information-c"></a>Сведения о вызывающем объекте (C#)
 С помощью информационных атрибутов вызывающего объекта можно получить сведения о вызывающем объекте метода. Можно получить путь к файлу исходного кода, номер строки в исходном коде и имя вызывающего объекта. Эти сведения полезны для трассировки, отладки и создания средств диагностики.  
@@ -75,8 +75,9 @@ public void TraceMessage(string message,
 |Конструктора атрибута|Имя члена, к которому применяется атрибут. Если атрибут — любой элемент внутри члена (например, параметр, возвращаемое значение или параметр универсального типа), то результат — имя члена, который связан с этим элементом.|  
 |Нет содержащего члена (например, уровень сборки или атрибуты, примененные к типам)|Значение необязательного параметра по умолчанию.|  
   
-## <a name="see-also"></a>См. также  
- [Атрибуты (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
- [Общие атрибуты (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
- [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
- [Основные понятия программирования (C#)](../../../csharp/programming-guide/concepts/index.md)
+## <a name="see-also"></a>См. также
+
+- [Атрибуты (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [Общие атрибуты (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)  
+- [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+- [Основные понятия программирования (C#)](../../../csharp/programming-guide/concepts/index.md)

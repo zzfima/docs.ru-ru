@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: be98c0ab-7ef8-409f-8a0d-cb6e5b75ff20
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3c979477f0928c9c3d2a393042867c84df33ecf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7831e383a3048523909b79ac5a4706f3c1c48371
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571973"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178524"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>Оптимизация совместного размещения веб-сайтов
 Если вы являетесь администратором сервера, на котором совместно размещены несколько небольших веб-сайтов, производительность и емкость такого сайта можно увеличить, добавив следующий параметр `gcTrimCommitOnLowMemory` в узел `runtime` файла Aspnet.config, расположенного в каталоге .NET.  
@@ -44,5 +44,6 @@ ms.locfileid: "33571973"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Сборка мусора](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>См. также
+
+- [Сборка мусора](../../../docs/standard/garbage-collection/index.md)

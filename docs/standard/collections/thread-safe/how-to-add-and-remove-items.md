@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8bb84f2e26471e004678afde99a1dd725db6832
-ms.sourcegitcommit: bd4fa78f5a46133efdead1bc692a9aa2811d7868
+ms.openlocfilehash: 98d30cd89114aa4aa3d4f7f71f5174c54d3fcecb
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42755110"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265082"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Практическое руководство. Добавление элементов в коллекцию ConcurrentDictionary и их удаление из этой коллекции
 В этом примере показано, как добавлять, получать, обновлять и удалять элементы класса <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Этот класс коллекций является потокобезопасной реализацией. Рекомендуется использовать его каждый раз, когда множество потоков одновременно могут пытаться получить доступ к элементам.  
@@ -48,6 +48,7 @@ ms.locfileid: "42755110"
   
  Поэтому нет гарантии, что данные, возвращаемые методом <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>, будут данными, созданными делегатом valueFactory потока. Аналогичная последовательность событий может иметь место при вызове метода <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [Потокобезопасные коллекции](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [Потокобезопасные коллекции](../../../../docs/standard/collections/thread-safe/index.md)

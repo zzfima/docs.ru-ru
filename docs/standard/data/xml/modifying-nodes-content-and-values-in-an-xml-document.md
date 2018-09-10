@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 716270450a5f0ede545ffcbd906b0a42f547c20f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571440"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208586"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Изменение узлов, содержимого и значений в XML-документе
 Существует множество способов изменения узлов и содержимого в документе. Можно выполнить следующие действия.  
@@ -46,5 +46,6 @@ ms.locfileid: "33571440"
   
  Допустимо добавлять дочерний узел, доступный только для чтения, в узел, поддерживающий изменение, или удалять из него. Однако при попытке изменить сам узел, доступный только для чтения, вызывается исключение <xref:System.InvalidOperationException>. Примером может служить изменение потомков узла <xref:System.Xml.XmlEntityReference>. Потомки доступны только для чтения, и их нельзя изменить. Любая попытка изменить вызывает исключение <xref:System.InvalidOperationException>.  
   
-## <a name="see-also"></a>См. также  
- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также
+
+- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

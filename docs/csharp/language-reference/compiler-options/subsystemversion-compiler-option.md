@@ -2,12 +2,12 @@
 title: -subsystemversion (параметры компилятора C#)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: 25391dd504fb8a2b9458fd9495477258fc23d81a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: ff4cd196edc1ec04f8abcecfa1a7a4e99e32dd56
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43001397"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44098889"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (параметры компилятора C#)
 Указывает минимальную версию подсистемы, в которой может выполняться созданный исполняемый файл, то есть определяет версии Windows, в которых может работать исполняемый файл. Чаще всего этот параметр предоставляет исполняемому файлу возможность использовать определенные возможности безопасности, недоступные в прежних версиях Windows.  
@@ -59,4 +59,5 @@ ms.locfileid: "43001397"
  Чтобы задать параметр компилятора **-subsystemversion** в Visual Studio, нужно открыть CSPROJ-файл и указать значение для свойства `SubsystemVersion` в XML MSBuild. Этот параметр невозможно задать в интегрированной среде разработки Visual Studio. Дополнительные сведения см. выше в подразделе "Значения по умолчанию" или в разделе [Общие свойства проектов MSBuild](/visualstudio/msbuild/common-msbuild-project-properties).  
   
 ## <a name="see-also"></a>См. также  
- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)
+
+- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)

@@ -2,12 +2,12 @@
 title: Практическое руководство. Изменение порядка полей файла с разделителями (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
-ms.openlocfilehash: 4c7dcbea938711904d42228d9c3bd24abffa4f35
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 24d1bf9825e00d0764846a0ae83ae73cd0ea03e1
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43384546"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44080570"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>Практическое руководство. Изменение порядка полей файла с разделителями (LINQ) (C#)
 CSV-файл — это текстовый файл, который часто используется для хранения данных электронных таблиц или других табличных данных, представленных строками и столбцами. Использование метода <xref:System.String.Split%2A> для разделения полей упрощает создание запросов к CSV-файлам и управление ими с помощью LINQ. Фактически та же технология может использоваться для изменения порядка частей любой структурированной строки текста, а не только CSV-файлов.  
@@ -78,7 +78,8 @@ class CSVFiles
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.  
   
-## <a name="see-also"></a>См. также  
- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
- [Практическое руководство. Создание кода XML из CSV-файлов](https://msdn.microsoft.com/library/dd7bab8c-96fa-4343-94d0-9739dd6a74fd)
+## <a name="see-also"></a>См. также
+
+- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
+- [Практическое руководство. Создание XML из CSV-файлов (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-generate-xml-from-csv-files.md)

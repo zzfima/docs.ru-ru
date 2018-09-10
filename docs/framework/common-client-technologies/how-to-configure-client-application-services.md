@@ -5,11 +5,11 @@ helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
 ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43399242"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861628"
 ---
 # <a name="how-to-configure-client-application-services"></a>Практическое руководство. Настройка служб клиентских приложений
 Этот раздел описывает использование **конструктора проектов** Visual Studio для активации и настройки служб клиентского приложения. Эти службы позволяют проверять подлинность пользователей, извлекать роли пользователей и параметры из существующей службы приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]. После настройки можно получить доступ к включенным службам в коде приложения, как описано в разделе [Общие сведения о службах клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Дополнительные сведения о службах приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Общие сведения о службах приложений ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  

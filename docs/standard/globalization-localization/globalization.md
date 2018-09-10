@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9eb57aa0d6645958691c0003b07db6e8bb844fc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5b59e0bda45b0b45b49c22d49ec2556fbcfef75d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579578"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221913"
 ---
 # <a name="globalization"></a>Глобализация
 Глобализация предполагает проектирование и разработку готовых к использованию во всем мире приложений, поддерживающих локализованные интерфейсы и региональные данные для пользователей разных культур. Перед началом проектирования необходимо определить, какие языки и региональные параметры будет поддерживать приложение. Хотя приложение нацелено на один язык или страну по умолчанию, его можно спроектировать и создать так, чтобы его могли использовать пользователи в других странах.  
@@ -369,6 +369,7 @@ ms.locfileid: "33579578"
   
 -   Пользователь может настроить язык и региональные параметры с помощью приложения **Язык и региональные стандарты** на панели управления. При создании экземпляра объекта <xref:System.Globalization.CultureInfo> можно указать, отражает ли он эти настройки пользователя, вызвав конструктор <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType>. Обычно для приложений, предназначенных для конечных пользователей, необходимо учитывать предпочтения пользователя и предоставлять пользователю данные в том формате, в котором он ожидает их увидеть.  
   
-## <a name="see-also"></a>См. также  
- [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)  
- [Рекомендации по использованию строк](../../../docs/standard/base-types/best-practices-strings.md)
+## <a name="see-also"></a>См. также
+
+- [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)  
+- [Рекомендации по использованию строк](../../../docs/standard/base-types/best-practices-strings.md)

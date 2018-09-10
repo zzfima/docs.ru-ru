@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 969a511f6b3d93450866d7a85cf2bcb198d2581e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bea51eaf11bd9d73d5a68eb09795bd9f9f143f95
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572038"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214476"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>Практическое руководство. Запись символов в строку
 Следующий пример кода демонстрирует синхронную и асинхронную запись символов из массива символов в строку.  
@@ -35,15 +35,16 @@ ms.locfileid: "33572038"
  [!code-csharp[Conceptual.StringReader#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.stringreader/cs/source2.cs#2)]
  [!code-vb[Conceptual.StringReader#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.stringreader/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IO.StringWriter>  
- <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>  
- <xref:System.Text.StringBuilder>  
- [Файловый и потоковый ввод-вывод](../../../docs/standard/io/index.md)  
- [Асинхронный файловый ввод-вывод](../../../docs/standard/io/asynchronous-file-i-o.md)  
- [Практическое руководство. Перечисление каталогов и файлов](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
- [Практическое руководство. Считывание из нового файла данных и запись в этот файл](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
- [Практическое руководство. Открытие файла журнала и добавление в него данных](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
- [Практическое руководство. Считывание текста из файла](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
- [Практическое руководство. Запись текста в файл](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
- [Практическое руководство. Считывание символов из строки](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.IO.StringWriter>  
+- <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>  
+- <xref:System.Text.StringBuilder>  
+- [Файловый и потоковый ввод-вывод](../../../docs/standard/io/index.md)  
+- [Асинхронный файловый ввод-вывод](../../../docs/standard/io/asynchronous-file-i-o.md)  
+- [Практическое руководство. Перечисление каталогов и файлов](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
+- [Практическое руководство. Считывание из нового файла данных и запись в этот файл](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [Практическое руководство. Открытие файла журнала и добавление в него данных](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
+- [Практическое руководство. Считывание текста из файла](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+- [Практическое руководство. Запись текста в файл](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
+- [Практическое руководство. Считывание символов из строки](../../../docs/standard/io/how-to-read-characters-from-a-string.md)

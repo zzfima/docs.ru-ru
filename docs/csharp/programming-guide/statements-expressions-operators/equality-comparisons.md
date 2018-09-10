@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: c1abee8636cf540d42d92eb7496fb078f06e6e0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 07607f96acb2ca44142bd6a8b4fdd84ea0d1b532
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335252"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43788640"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>Сравнения на равенство (Руководство по программированию на C#)
 Иногда возникает необходимость проверить равенство двух значений. В некоторых случаях проверяется *равенство значений*, которое также называют их *эквивалентностью*, что означает, что содержащиеся в двух переменных значения равны. В других случаях требуется определить, ссылаются ли две переменные на один и тот же объект в памяти. Такой тип равенства называется *равенством ссылок* или *идентичностью*. В этом разделе описаны эти два типа равенства и приведены ссылки на разделы, содержащие дополнительные сведения.  
@@ -53,5 +53,6 @@ if( b == a)
 |[Руководство по программированию на C#](../../../csharp/programming-guide/index.md)|Ссылки на подробные сведения о важных элементах языка C#, а также об элементах, доступных в этом языке благодаря .NET Framework.|  
 |[Типы](../../../csharp/programming-guide/types/index.md)|Сведения о системе типов C# и ссылки на дополнительные сведения.|  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: cef2a907a8d7e6158239b88d5c8551c2c734faa0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 718be7e201788906fa0fad829922eb5b77b48aed
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43386302"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857314"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Пошаговое руководство. Программирование приложений Office (C# и Visual Basic)
 Visual Studio предлагает новые функции C# и Visual Basic, позволяющие улучшить программирование для Microsoft Office. В число полезных функций C# входят именованные и необязательные аргументы и возвращаемые значения типа `dynamic`. В программировании COM можно опустить ключевое слово `ref` и получить доступ к индексированным свойствам. Список функций Visual Basic включает автоматически реализуемые свойства, инструкции в лямбда-выражениях и инициализаторы коллекций.
 
-Оба языка поддерживают внедрение сведений о типах, что позволяет развертывать сборки, взаимодействующие с компонентами COM, без предварительного развертывания на компьютере основных сборок взаимодействия (PIA). Дополнительные сведения см. в разделе [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+Оба языка поддерживают внедрение сведений о типах, что позволяет развертывать сборки, взаимодействующие с компонентами COM, без предварительного развертывания на компьютере основных сборок взаимодействия (PIA). Дополнительные сведения см. в разделе [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
   
 В данном пошаговом руководстве эти возможности показаны в контексте программирования для Microsoft Office, но многие из них могут оказаться полезными и в других ситуациях. В этом пошаговом руководстве вы создадите книгу Excel с помощью надстройки Excel, а затем документ Word со ссылкой на эту книгу. Наконец, вы узнаете, как включать и отключать зависимость PIA.  
   
@@ -93,11 +93,11 @@ Visual Studio предлагает новые функции C# и Visual Basic,
   
      В этом методе используются две новые возможности C#. Оба эти возможности уже существуют в Visual Basic.  
   
-    -   У метода [Add](https://msdn.microsoft.com/library/microsoft.office.interop.excel.workbooks.add.aspx) есть *необязательный параметр* для указания конкретного шаблона. Необязательные параметры, впервые появившиеся в [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], позволяют опускать аргумент для таких параметров, если требуется использовать значение параметра по умолчанию. Поскольку в предыдущем примере никакой аргумент не передается, в методе `Add` используется шаблон по умолчанию и создается новая книга. В эквивалентном операторе в более ранних версиях C# необходимо было использовать аргумент-местозаполнитель `excelApp.Workbooks.Add(Type.Missing)`.  
+    -   У метода [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) есть *необязательный параметр* для указания конкретного шаблона. Необязательные параметры, впервые появившиеся в [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], позволяют опускать аргумент для таких параметров, если требуется использовать значение параметра по умолчанию. Поскольку в предыдущем примере никакой аргумент не передается, в методе `Add` используется шаблон по умолчанию и создается новая книга. В эквивалентном операторе в более ранних версиях C# необходимо было использовать аргумент-местозаполнитель `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Дополнительные сведения см. в разделе [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
-    -   Свойства `Range` и `Offset` объекта [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) используют возможность *индексированных свойств*. Она позволяет использовать свойства типов COM с помощью стандартного синтаксиса C#. Кроме того, индексированные свойства позволяют использовать свойство `Value` объекта `Range`, устраняя необходимость в использовании свойства `Value2`. Свойство `Value` является индексированным, но индекс — необязательным. Совместная работа необязательных аргументов и индексированных свойств показана в следующем примере.  
+    -   Свойства `Range` и `Offset` объекта [Range](<xref:Microsoft.Office.Interop.Excel.Range>) используют возможность *индексированных свойств*. Она позволяет использовать свойства типов COM с помощью стандартного синтаксиса C#. Кроме того, индексированные свойства позволяют использовать свойство `Value` объекта `Range`, устраняя необходимость в использовании свойства `Value2`. Свойство `Value` является индексированным, но индекс — необязательным. Совместная работа необязательных аргументов и индексированных свойств показана в следующем примере.  
   
          [!code-csharp[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
   
@@ -117,7 +117,7 @@ Visual Studio предлагает новые функции C# и Visual Basic,
   
      Эти дополнения демонстрируют еще одну возможность C#: значения `Object`, возвращаемые главными приложениями COM, например приложениями Office, и обрабатываются так, как если бы они имели тип [dynamic](../../../csharp/language-reference/keywords/dynamic.md). Это происходит автоматически, если параметр **Внедрить типы взаимодействия** имеет значение по умолчанию (`True`), или, что эквивалентно, если ссылка на сборку задается с помощью параметра компилятора [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md). Тип `dynamic` делает возможным позднее связывание, уже доступное в Visual Basic, и не допускает явного приведения, которое требовалось бы в Visual C# 2008 и более ранних версиях языка.  
   
-     Например, `excelApp.Columns[1]` возвращает `Object`, а `AutoFit` является методом Excel [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx). Без типа `dynamic` необходимо выполнять приведение объекта, возвращаемого `excelApp.Columns[1]`, к экземпляру `Range` перед вызовом метода `AutoFit`.  
+     Например, `excelApp.Columns[1]` возвращает `Object`, а `AutoFit` является методом Excel [Range](<xref:Microsoft.Office.Interop.Excel.Range>). Без типа `dynamic` необходимо выполнять приведение объекта, возвращаемого `excelApp.Columns[1]`, к экземпляру `Range` перед вызовом метода `AutoFit`.  
   
      [!code-csharp[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
   
@@ -141,7 +141,7 @@ Visual Studio предлагает новые функции C# и Visual Basic,
 
      [!code-vb[csOfficeWalkthrough#10](../../../csharp/programming-guide/interop/codesnippet/VisualBasic/walkthrough-office-programming_10.vb)]  
   
-     В этом коде демонстрируются некоторые новые функции C#: возможность опускать ключевое слово `ref` при программировании в модели COM, именованные аргументы и необязательные аргументы. Эти возможности уже существовали в Visual Basic. Метод [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx) имеет семь параметров, которые определены как необязательные ссылочные параметры. Именованные и необязательные аргументы позволяют определять параметры, к которым требуется обращаться по имени, и передавать аргументы только для этих параметров. В этом примере аргументы передаются, чтобы показать, что необходимо создать ссылку на книгу в буфере (параметр `Link`) и что эта ссылка должна отображаться в документе Word в виде значка (параметр `DisplayAsIcon`). Кроме того, Visual C# позволяет опускать ключевое слово `ref` для таких аргументов.
+     В этом коде демонстрируются некоторые новые функции C#: возможность опускать ключевое слово `ref` при программировании в модели COM, именованные аргументы и необязательные аргументы. Эти возможности уже существовали в Visual Basic. Метод [PasteSpecial](<xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>) имеет семь параметров, которые определены как необязательные ссылочные параметры. Именованные и необязательные аргументы позволяют определять параметры, к которым требуется обращаться по имени, и передавать аргументы только для этих параметров. В этом примере аргументы передаются, чтобы показать, что необходимо создать ссылку на книгу в буфере (параметр `Link`) и что эта ссылка должна отображаться в документе Word в виде значка (параметр `DisplayAsIcon`). Кроме того, Visual C# позволяет опускать ключевое слово `ref` для таких аргументов.
   
 ### <a name="to-run-the-application"></a>Запуск приложения  
   
@@ -190,22 +190,23 @@ Visual Studio предлагает новые функции C# и Visual Basic,
   
 8.  В Visual Studio в меню **Построение** выберите пункт **Очистить решение**, чтобы очистить завершенный проект.  
   
-## <a name="see-also"></a>См. также  
- [Автоматически реализуемые свойства (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
- [Автоматически реализуемые свойства (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
- [Инициализаторы коллекций](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
- [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
- [Необязательные параметры](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [Передача аргументов по позиции и по имени](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
- [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
- [Раннее и позднее связывание](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Лямбда-выражения (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Лямбда-выражения (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Практическое руководство. Использование индексированных свойств в программировании COM-взаимодействия](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
- [Пошаговое руководство. Внедрение данных о типе из сборок для приложений Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
- [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [Пошаговое руководство. Создание первой надстройки VSTO для Excel](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
- [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Взаимодействие](../../../csharp/programming-guide/interop/index.md)
+## <a name="see-also"></a>См. также
+
+- [Автоматически реализуемые свойства (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+- [Автоматически реализуемые свойства (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [Инициализаторы коллекций](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
+- [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
+- [Необязательные параметры](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
+- [Передача аргументов по позиции и по имени](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
+- [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+- [Раннее и позднее связывание](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+- [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [Лямбда-выражения (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+- [Лямбда-выражения (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Практическое руководство. Использование индексированных свойств в программировании COM-взаимодействия](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+- [Пошаговое руководство. Внедрение данных о типе из сборок для приложений Microsoft Office](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-type-information-from-microsoft-office-assemblies.md)  
+- [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [Пошаговое руководство. Создание первой надстройки VSTO для Excel](/visualstudio/vsto/walkthrough-creating-your-first-vsto-add-in-for-excel)  
+- [COM-взаимодействие](../../../visual-basic/programming-guide/com-interop/index.md)  
+- [Взаимодействие](../../../csharp/programming-guide/interop/index.md)

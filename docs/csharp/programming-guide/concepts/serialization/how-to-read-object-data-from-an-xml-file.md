@@ -2,12 +2,12 @@
 title: Практическое руководство. Чтение данных объекта из XML-файла (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 59110a5bd0fe738239c0ca8b177a8c775db99ccf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c3bad56c6a0bee51262586aea4ce97ff0491f24
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336158"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083940"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>Практическое руководство. Чтение данных объекта из XML-файла (C#)
 В этом примере демонстрируется считывание данных объекта, которые ранее были записаны в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -61,8 +61,9 @@ public void ReadXML()
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Всегда проверяйте входные данные и никогда не десериализуйте данные из непроверенных источников. Созданный заново объект выполняется на локальном компьютере с разрешениями кода, который его десериализовал. Следует проверять все входные данные перед использованием их в приложении.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IO.StreamWriter>  
- [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Практическое руководство. Запись данных объекта в XML-файл (C#))  
- [Сериализация (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.IO.StreamWriter>  
+- [How to: Write Object Data to an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-write-object-data-to-an-xml-file.md) (Практическое руководство. Запись данных объекта в XML-файл (C#))  
+- [Сериализация (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)  
+- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)

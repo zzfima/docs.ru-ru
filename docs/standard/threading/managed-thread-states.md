@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 63890d5e-6025-4a7c-aaf0-d8bfd54b455f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4266aea9bf206d127e2837955dcc00cc23f4119b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a55409cd2c3bed2bc09db10622de1cceab934112
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33587727"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207334"
 ---
 # <a name="managed-thread-states"></a>Состояния управляемых потоков
 Свойство <xref:System.Threading.Thread.ThreadState%2A?displayProperty=nameWithType> предоставляет битовую маску, которая указывает текущее состояние потока. Поток постоянно находится по крайней мере в одном из возможных состояний, указанных в перечислении <xref:System.Threading.ThreadState> , и может иметь несколько состояний одновременно.  
@@ -48,8 +48,9 @@ if ((state & (Unstarted | Stopped)) == 0)   // implies Running
   
  Если поток был выведен из состояния <xref:System.Threading.ThreadState.Unstarted> в результате вызова метода <xref:System.Threading.Thread.Start%2A>, он не может вернуться в состояние <xref:System.Threading.ThreadState.Unstarted> ни при каких условиях. Поток никогда не может выйти из состояния <xref:System.Threading.ThreadState.Stopped> .  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.ThreadAbortException>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.ThreadState>  
- [Работа с потоками](../../../docs/standard/threading/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.ThreadAbortException>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadState>  
+- [Работа с потоками](../../../docs/standard/threading/index.md)

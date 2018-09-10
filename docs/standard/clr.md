@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89989b4b7730f4e252dc846377b385cb359dbee1
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: 9fd04a68a34f6cfb0e59a861b27178d4d2a9e857
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36315125"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042391"
 ---
 # <a name="common-language-runtime-clr-overview"></a>Обзор среды CLR
 
@@ -89,4 +89,4 @@ ms.locfileid: "36315125"
 
 ## <a name="see-also"></a>См. также
 
-[Версии и зависимости](../framework/migration-guide/versions-and-dependencies.md)
+- [Версии и зависимости](../framework/migration-guide/versions-and-dependencies.md)

@@ -2,12 +2,12 @@
 title: Операции соединения (C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: 23d1432d32b22964c333640ccd3ac8dc7a2394d4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: f03d5cf14525a6d23240747c2f377348bf608782
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480313"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44200858"
 ---
 # <a name="join-operations-c"></a>Операции соединения (C#)
 *Соединение* двух источников данных — это связь объектов в одном источнике данных с объектами, которые имеют общий атрибут в другом источнике данных.  
@@ -27,17 +27,18 @@ ms.locfileid: "43480313"
 |Join|Соединяет две последовательности на основании функций селектора ключа и извлекает пары значений.|`join … in … on … equals …`|<xref:System.Linq.Enumerable.Join%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Join%2A?displayProperty=nameWithType>|  
 |GroupJoin|Соединяет две последовательности на основании функций селектора ключа и группирует полученные при сопоставлении данные для каждого элемента.|`join … in … on … equals … into …`|<xref:System.Linq.Enumerable.GroupJoin%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupJoin%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq>  
- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Анонимные типы](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
- [Формулировка запросов-объединений и запросов векторного произведения](https://msdn.microsoft.com/library/d8072ede-0521-4670-9bec-1778ceeb875b)  
- [предложение join](../../../../csharp/language-reference/keywords/join-clause.md)  
- [Практическое руководство. Соединение с помощью составных ключей](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
- [Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
- [Практическое руководство. Упорядочение результатов предложения соединения](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
- [Практическое руководство. Выполнение пользовательских операций соединения](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)  
- [Практическое руководство. Выполнение групповых соединений](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
- [Практическое руководство. Выполнение внутренних соединений](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
- [Практическое руководство. Выполнение левых внешних соединений](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
- [Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Linq>  
+- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [Анонимные типы](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [Формулировка запросов-объединений и запросов векторного произведения](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
+- [предложение join](../../../../csharp/language-reference/keywords/join-clause.md)  
+- [Практическое руководство. Соединение с помощью составных ключей](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
+- [Практическое руководство. Объединение содержимого из файлов разных форматов (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
+- [Практическое руководство. Упорядочение результатов предложения соединения](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
+- [Практическое руководство. Выполнение пользовательских операций соединения](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)  
+- [Практическое руководство. Выполнение групповых соединений](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
+- [Практическое руководство. Выполнение внутренних соединений](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
+- [Практическое руководство. Выполнение левых внешних соединений](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
+- [Практическое руководство. Заполнение коллекций объектов из нескольких источников (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

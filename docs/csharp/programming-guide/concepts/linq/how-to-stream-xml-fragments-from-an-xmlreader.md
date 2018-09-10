@@ -2,12 +2,12 @@
 title: Практическое руководство. Потоковая передача фрагментов XML из XmlReader (C#)
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: 8e2baed3ca32ea4273993fe5bed43fef768204ce
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: cb3e9fbc9567593cdc77ae116273f4c0fede4af3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39221014"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195807"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>Практическое руководство. Потоковая передача фрагментов XML из XmlReader (C#)
 При необходимости обработать большой XML-файл загрузка в память полного XML-дерева, возможно, будет неосуществима. В этом разделе показано, как обрабатывать фрагменты в потоке с помощью <xref:System.Xml.XmlReader>.  
@@ -82,5 +82,6 @@ ccc
   
  В этом примере документ-источник весьма невелик. Тем не менее, даже если бы он содержал миллионы элементов `Child`, для этого примера потребовался бы очень небольшой объем памяти.  
   
-## <a name="see-also"></a>См. также  
- [Анализ XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+## <a name="see-also"></a>См. также
+
+- [Анализ XML (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

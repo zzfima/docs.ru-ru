@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (C#)
 ms.date: 07/20/2015
 ms.assetid: 3320e866-01f1-4b7f-8932-049a7b2d2a9b
-ms.openlocfilehash: 8e7eb5c797ca87f87950d530112ec64f1327ae0c
-ms.sourcegitcommit: 2d8b7488d94101b534ca3e9780b1c1e840233405
+ms.openlocfilehash: 381173eedc209930e011dfa7f1711167f16d5ef6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39198501"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187972"
 ---
 # <a name="walkthrough-embedding-type-information-from-microsoft-office-assemblies-in-visual-studio-c"></a>Пошаговое руководство. Внедрение данных о типах из сборок Microsoft Office в Visual Studio (C#)
 Если в приложение, имеющее ссылки на COM-объекты, внедрены данные о типе, можно исключить необходимость использования основной сборки взаимодействия (PIA). Кроме того внедренные данные о типах позволяют создать приложение, не зависящее от версии. Это означает, что в программе можно использовать типы из нескольких версий библиотеки COM, т. е. необходимость использования конкретной основной сборки взаимодействия для каждой версии библиотеки COM отпадает. Это стандартный сценарий для приложений, использующих объекты из библиотек Microsoft Office. Внедрение данных о типе позволяет одной сборке программы работать с разными версиями приложения Microsoft Office на разных компьютерах без необходимости повторного развертывания программы или основной сборки взаимодействия для каждой версии приложения Microsoft Office.  
@@ -116,7 +116,7 @@ ms.locfileid: "39198501"
   
 1.  В Visual Studio откройте проект, созданный в ходе этого пошагового руководства.  
   
-2.  В меню **Сборка** выберите **Опубликовать CreateExcelWorkbook**. Чтобы создать устанавливаемую версию приложения, следуйте указаниям мастера публикации. Дополнительные сведения см. в разделе [Мастер публикации (разработка для Office в Visual Studio)](https://msdn.microsoft.com/library/bb625071).  
+2.  В меню **Сборка** выберите **Опубликовать CreateExcelWorkbook**. Чтобы создать устанавливаемую версию приложения, следуйте указаниям мастера публикации. Дополнительные сведения см. в разделе [Мастер публикации (разработка для Office в Visual Studio)](/visualstudio/vsto/publish-wizard-office-development-in-visual-studio).  
   
 3.  Установите приложение на компьютере, на котором установлена платформа .NET Framework 4 или более поздняя версия и другая версия Excel.  
   
@@ -124,6 +124,7 @@ ms.locfileid: "39198501"
   
 5.  Убедитесь, что книга Excel была создана в расположении, указанном в примере кода: C:\SampleFolder\SampleWorkbook.xls.  
   
-## <a name="see-also"></a>См. также  
- [Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
- [/link (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)
+## <a name="see-also"></a>См. также
+
+- [Пошаговое руководство. Внедрение типов из управляемых сборок в Visual Studio (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)  
+- [/link (параметры компилятора C#)](../../../../csharp/language-reference/compiler-options/link-compiler-option.md)

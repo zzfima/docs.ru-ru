@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e12d8e74-31e3-4035-a87d-f3e66f0a9b89
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d3470ebdd55adc97a60f07228c441cb7c94a53e6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10f947fc44e69368e30614e0b41eaf7c73fb6563
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579162"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084953"
 ---
 # <a name="garbage-collection-notifications"></a>Уведомления о сборке мусора
 В некоторых случаях полная сборка мусора (сборка объектов поколения 2) средой CLR может отрицательно сказаться на производительности. Это может стать проблемой, особенно для серверов, которые обрабатывают большие объемы запросов. Длительный процесс сборки может привести к потере запросов из-за превышения времени ожидания. Чтобы предотвратить запуск полной сборки мусора в критически важные периоды, вы можете настроить уведомления о ее приближении. Это позволит принять меры и перенести нагрузку на другой экземпляр сервера. Также вы можете самостоятельно запустить сборку мусора на экземплярах сервера, которые в текущий момент не применяются для обработки запросов.  
@@ -122,5 +122,6 @@ ms.locfileid: "33579162"
  [!code-csharp[GCNotification#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GCNotification/cs/Program.cs#1)]
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
-## <a name="see-also"></a>См. также  
- [Сборка мусора](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>См. также
+
+- [Сборка мусора](../../../docs/standard/garbage-collection/index.md)

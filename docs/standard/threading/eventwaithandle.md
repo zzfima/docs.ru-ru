@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 697820b01bd629baa306d96002a98d92e44dab51
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cdb11b283cc008e7f4bb060d1c2cb18706c824b7
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592201"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084722"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 Класс <xref:System.Threading.EventWaitHandle> позволяет потокам взаимодействовать друг с другом, передавая и ожидая передачи сигналов. Дескрипторы ожидания событий (часто их называют просто "события") — это дескрипторы ожидания, которые можно создавать для освобождения одного или нескольких потоков в состоянии ожидания. Созданное событие (дескриптор ожидания) затем сбрасывается вручную или автоматически. Класс <xref:System.Threading.EventWaitHandle> может представлять любой локальный дескриптор ожидания событий (локальное событие) или именованный системный дескриптор ожидания событий (именованное событие), который доступен для всех процессов.  
@@ -62,9 +62,10 @@ ms.locfileid: "33592201"
 > [!NOTE]
 >  В отличие от класса <xref:System.Threading.EventWaitHandle>, производные классы <xref:System.Threading.AutoResetEvent> и <xref:System.Threading.ManualResetEvent> могут представлять только локальные дескрипторы ожидания. Они не могут представлять именованные системные события.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.EventWaitHandle>  
- <xref:System.Threading.WaitHandle>  
- <xref:System.Threading.AutoResetEvent>  
- <xref:System.Threading.ManualResetEvent>  
- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.EventWaitHandle>  
+- <xref:System.Threading.WaitHandle>  
+- <xref:System.Threading.AutoResetEvent>  
+- <xref:System.Threading.ManualResetEvent>  
+- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - less than or equal to operator (<=) [C#]
 - <= operator [C#]
 ms.assetid: bb0caec9-d253-4105-b8bc-5252233251e4
-ms.openlocfilehash: 24bf274bfcb0a8e19a79aafb3bd7920054044be0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: afbb932c1be010790236bec73a36acf0f01b97f4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271166"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180700"
 ---
 # <a name="lt-operator-c-reference"></a>Оператор &lt;= (справочник по C#)
 Все числовые типы и типы перечисления определяют оператор отношения "меньше или равно" (`<=`), который возвращает `true`, если первый операнд меньше второго или равен ему. В противном случае возвращается `false`.  
@@ -23,8 +23,9 @@ ms.locfileid: "33271166"
 ## <a name="example"></a>Пример  
  [!code-csharp[csRefOperators#32](../../../csharp/language-reference/operators/codesnippet/CSharp/less-than-equal-operator_1.cs)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Операторы в C#](../../../csharp/language-reference/operators/index.md)  
- [explicit](../../../csharp/language-reference/keywords/explicit.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Операторы в C#](../../../csharp/language-reference/operators/index.md)  
+- [explicit](../../../csharp/language-reference/keywords/explicit.md)

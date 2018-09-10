@@ -4,12 +4,12 @@ description: Рекомендации по использованию реали
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 541bcdf69d658fd37271169c028fb64611a35655
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934537"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864966"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
 
@@ -103,8 +103,10 @@ ms.locfileid: "42934537"
 
 ## <a name="see-also"></a>См. также
 
- [Выбор между ASP.NET и ASP.NET Core](/aspnet/core/choose-aspnet-framework) [Целевые платформы](frameworks.md) [Руководство по .NET Core](../core/index.md)  
- [Перенос кода в .NET Core из .NET Framework](../core/porting/index.md)  
- [Руководство по Docker в .NET Framework](../framework/docker/index.md)  
- [Общие сведения о компонентах .NET](components.md)  
- [Микрослужбы .NET: архитектура контейнерных приложений .NET](microservices-architecture/index.md)
+* [Выбор между ASP.NET и ASP.NET Core](/aspnet/core/choose-aspnet-framework)
+* [Целевые платформы](frameworks.md)
+* [Руководство по .NET Core](../core/index.md)  
+* [Перенос кода в .NET Core из .NET Framework](../core/porting/index.md)  
+* [Руководство по Docker в .NET Framework](../framework/docker/index.md)  
+* [Общие сведения о компонентах .NET](components.md)  
+* [Микрослужбы .NET: архитектура контейнерных приложений .NET](microservices-architecture/index.md)

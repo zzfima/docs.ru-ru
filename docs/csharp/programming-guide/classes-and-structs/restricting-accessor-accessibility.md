@@ -9,12 +9,12 @@ helpviewer_keywords:
 - asymmetric accessor accesibility [C#]
 - indexers [C#], read-only
 ms.assetid: 6e655798-e112-4301-a680-6310a6e012e1
-ms.openlocfilehash: bf9ead7934630d3974657107ca38e08bbd3bed85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 66e6f0da417e62bb592fdd8654f85cdb80ccf9bc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322319"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197210"
 ---
 # <a name="restricting-accessor-accessibility-c-programming-guide"></a>Ограничение доступности методов доступа (Руководство по программированию на C#)
 Выражения [get](../../../csharp/language-reference/keywords/get.md) и [set](../../../csharp/language-reference/keywords/set.md) свойства или индексатора называются *методами доступа*. По умолчанию они имеют такие же уровни видимости или доступа, что и свойство или индексатор, которым они принадлежат. Дополнительные сведения см. в разделе [Уровни доступа](../../../csharp/language-reference/keywords/accessibility-levels.md). Тем не менее в некоторых случаях рекомендуется ограничить уровни доступа для этих методов. Как правило, в этом случае ограничивается уровень доступа для метода `set`, тогда как метод `get` остается общедоступным. Пример:  
@@ -63,8 +63,9 @@ ms.locfileid: "33322319"
   
  `Name and ID in the derived class: John, John123`  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
- [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
+- [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)

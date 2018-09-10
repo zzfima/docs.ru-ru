@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf18fb7238eb35b5ceb1624c14b83486485ddc1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90b3e7246046a979f3ee02e332fbb6a843ea9e8c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579630"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864791"
 ---
 # <a name="language-independence-and-language-independent-components"></a>Независимость от языка и независимые от языка компоненты
 Платформа .NET Framework является независимой от языка. Это означает, что код можно разрабатывать на одном из многих языков, ориентированных на .NET Framework, например C#, C++/CLI, Eiffel, F#, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL и Windows PowerShell. Чтобы использовать типы и члены библиотек классов, разработанных для платформы .NET Framework, не требуется знать их исходный язык и следовать его правилам. Если вы разрабатываете компоненты, они будут доступны всем приложениям .NET Framework вне зависимости от используемого вами языка.  
@@ -585,5 +585,6 @@ vbc example.vb /r:UtilityLib.dll
 csc example.cs /r:UtilityLib.dll  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.CLSCompliantAttribute>
+## <a name="see-also"></a>См. также
+
+- <xref:System.CLSCompliantAttribute>

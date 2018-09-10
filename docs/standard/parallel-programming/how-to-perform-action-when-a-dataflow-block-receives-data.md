@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a348a83ef0b05ce44b3b3adf8e0031ce350cd37b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dd5963fee985633d843cc60f521b66000b84e55e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583023"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44217195"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Практическое руководство. Выполнение действий при получении данных блоком потоков данных
 Типы *блоков выполнения потоков данных* вызывают предоставленный пользователем делегат при получении данных. Классы <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> являются типами блоков выполнения потока данных. При предоставлении рабочей функции блоку выполнения потока данных можно использовать ключевое слово `delegate` (`Sub` в Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> или лямбда-выражение. В этом документе описано, как использовать <xref:System.Func%602> и лямбда-выражения для выполнения действий в блоках выполнения.  
@@ -55,5 +55,6 @@ ms.locfileid: "33583023"
  [!code-csharp[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#3)]
  [!code-vb[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#3)]  
   
-## <a name="see-also"></a>См. также  
- [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>См. также
+
+- [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

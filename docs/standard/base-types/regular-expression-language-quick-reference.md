@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc0c1ebdc4f774858916dcc8ec8db2ba386b7a88
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 53f0f0d82ee751b66168fff68c31d952f480be2e
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948609"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041620"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Элементы языка регулярных выражений — краткий справочник
 <a name="top"></a> Регулярное выражение — это шаблон, который обработчик регулярных выражений пытается сопоставить с введенным текстом. Шаблон состоит из односимвольных или многосимвольных литералов, операторов или конструкций.  См. краткое описание [регулярных выражений .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -216,11 +216,12 @@ ms.locfileid: "36948609"
 |`(?#` *комментарий* `)`|Встроенное примечание. Примечание заканчивается первой закрывающей скобкой.|`\bA(?#Matches words starting with A)\w+\b`|  
 |`#` [до конца строки]|Комментарий режима X. Примечание начинается от знака `#` без обратной косой черты и продолжается до конца строки.|`(?x)\bA\w+\b#Matches words starting with A`|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
- <xref:System.Text.RegularExpressions.Regex>  
- [Регулярные выражения](regular-expressions.md)  
- [Классы регулярных выражений](the-regular-expression-object-model.md)  
- [Примеры регулярных выражений](regular-expression-examples.md)  
- [Краткий справочник по регулярным выражениям (скачать в формате Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Регулярные выражения — краткий справочник (загрузить в формате PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
+- <xref:System.Text.RegularExpressions.Regex>  
+- [Регулярные выражения](regular-expressions.md)  
+- [Классы регулярных выражений](the-regular-expression-object-model.md)  
+- [Примеры регулярных выражений](regular-expression-examples.md)  
+- [Краткий справочник по регулярным выражениям (скачать в формате Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+- [Регулярные выражения — краткий справочник (загрузить в формате PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

@@ -7,12 +7,12 @@ ms.assetid: 9b43f8b4-89d7-46a7-89fc-71aca916dd32
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e491754b1c6c96e6afa9b172200cfb564307a8a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5dc6ee0f2c832e3274a1e58808acfdb56ae804c
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395078"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43862982"
 ---
 # <a name="ftp"></a>FTP
 Платформа .NET Framework обеспечивает полную поддержку протокола FTP посредством классов <xref:System.Net.FtpWebRequest> и <xref:System.Net.FtpWebResponse>. Эти классы являются производными от <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse>. В большинстве случаев классы <xref:System.Net.WebRequest> и <xref:System.Net.WebResponse> предоставляют все необходимое для выполнения запроса, но если вам требуется доступ к возможностям протокола FTP, представленным в виде свойств, можно выполнить приведение типа этих классов к <xref:System.Net.FtpWebRequest> или <xref:System.Net.FtpWebResponse>.  
@@ -26,6 +26,6 @@ ms.locfileid: "33395078"
 ## <a name="see-also"></a>См. также  
  [Доступ к Интернету через прокси-сервер](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
  [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
- [Пример клиентской технологии FTP](http://go.microsoft.com/fwlink/?LinkID=179557)  
- [Пример технологии FTP Explorer](http://go.microsoft.com/fwlink/?LinkID=179569)  
+ [Пример клиентской технологии FTP](https://go.microsoft.com/fwlink/?LinkID=179557)  
+ [Пример технологии FTP Explorer](https://go.microsoft.com/fwlink/?LinkID=179569)  
  [Использование протоколов приложений](../../../docs/framework/network-programming/using-application-protocols.md)

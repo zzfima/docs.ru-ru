@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1c56d69724212b9d1cd6a24204a12460071633f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef31d101769dca00f5cff545c72b3afbd59bc638
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577108"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268410"
 ---
 # <a name="resolving-external-resources"></a>Разрешение внешних ресурсов
 Свойство **XmlResolver** класса **XmlDocument** используется классом **XmlDocument** для поиска ресурсов, не встроенных в XML-данные, таких как внешние определения DTD, сущности и схемы. Эти элементы могут находиться в сети или на локальном диске, и могут быть найдены с помощью URI. Это позволяет классу **XmlDocument** разрешать имеющиеся в документе узлы **EntityReference** и проверять документ на соответствие внешнему определению DTD или схеме.  
@@ -52,5 +52,6 @@ ms.locfileid: "33577108"
   
  Дополнительные сведения см. в подразделе "Примечания" на справочной странице <xref:System.Xml.XmlResolver>.  
   
-## <a name="see-also"></a>См. также  
- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также
+
+- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

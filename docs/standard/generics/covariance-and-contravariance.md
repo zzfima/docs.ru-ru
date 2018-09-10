@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80c3a772ae4dfba53982ed28c0bd54f500c50b08
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: ad0649f3cebbd9adf04bdaf0f06d4c5f5797a84f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43466058"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44038748"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Ковариация и контравариация в универсальных шаблонах
 <a name="top"></a> Термины "ковариантность" и "контрвариантность" относятся к возможности использовать более производный (более конкретный) или менее производный (менее конкретный) тип, чем задано изначально. Параметры универсальных типов поддерживают ковариантность и контравариантность и обеспечивают большую гибкость в назначении и использовании универсальных типов. Ниже приведены определения терминов "ковариантность", "контравариантность" и "инвариантность" в контексте системы типов. В этом примере предполагается наличие базового класса с именем `Base` и производного класса с именем `Derived`.  
@@ -188,7 +188,8 @@ ms.locfileid: "43466058"
 |<xref:System.Linq.IOrderedQueryable%601>|Да||  
 |<xref:System.Linq.IQueryable%601>|Да||  
   
-## <a name="see-also"></a>См. также  
- [Covariance and Contravariance (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md) (Ковариация и контрвариантность (C#))  
- [Ковариация и контрвариантность (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
- [Расхождение в делегатах](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+## <a name="see-also"></a>См. также
+
+- [Covariance and Contravariance (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md) (Ковариация и контрвариантность (C#))  
+- [Covariance and Contravariance (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md) (Ковариация и контравариация (Visual Basic))    
+- [Расхождение в делегатах](https://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

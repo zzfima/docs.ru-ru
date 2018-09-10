@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 53f31402e78a15289bb996c63e1e8e3cd98e6aac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590777"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188271"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Присоединенные и отсоединенные дочерние задачи
 *Дочерняя задача* (или *вложенная задача*) — это экземпляр <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, создаваемый в пользовательском делегате другой задачи, которая называется *родительской задачей*. Дочерняя задача может быть отсоединенной или присоединенной. *Отсоединенная дочерняя задача* — это задача, которая выполняется независимо от своего родительского объекта. *Присоединенная дочерняя задача* — это вложенная задача, созданная с параметром <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType>, родительский объект которой не запрещает ее присоединение явно или по умолчанию. Задача может создавать любое количество присоединенных и отсоединенных дочерних задач, ограничиваемое только системными ресурсами.  
@@ -78,6 +78,7 @@ ms.locfileid: "33590777"
   
  Можно также запрещать присоединение дочерней задачи к ее родителю, когда дочерняя задача не завершается своевременно. Поскольку родительская задача не завершается, пока не будут завершены все ее дочерние задачи, дочерняя задача с длительным временем выполнения может привести к снижению производительности всего приложения. Пример, в котором показано, как повысить производительность приложения, предотвращая присоединение задачи к ее родительской задаче, см. в [руководстве по запрету присоединения дочерней задачи к ее родительской задаче](../../../docs/standard/parallel-programming/how-to-prevent-a-child-task-from-attaching-to-its-parent.md).  
   
-## <a name="see-also"></a>См. также  
- [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)  
- [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+## <a name="see-also"></a>См. также
+
+- [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)  
+- [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

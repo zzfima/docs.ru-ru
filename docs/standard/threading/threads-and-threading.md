@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4380c509a08ebe59f9561a9e6fc596458768917f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef464b0d4c22d04d42f9b6f953abefe7582b4957
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592188"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188544"
 ---
 # <a name="threads-and-threading"></a>Потоки и работа с потоками
 В операционных системах для разделения нескольких выполняемых приложений используются процессы. Потоки являются базовыми единицами, для которых операционная система выделяет процессорное время, и в каждом процессе код может выполняться в нескольких потоках. Каждый поток поддерживает обработчики исключений, приоритет планирования и набор структур, в которых система сохраняет контекст потока до его очередного выполнения. Контекст потока содержит все сведения, позволяющие потоку безболезненно возобновить выполнение в адресном пространстве хост-процесса потока, в том числе набор регистров процессора и стек потока.  
@@ -89,8 +89,9 @@ ms.locfileid: "33592188"
 > [!NOTE]
 >  На платформе .NET Framework версий 1.0 и 1.1 среда CLR перехватывает некоторые исключения, например в потоках из пула потоков, без уведомления. Это может нарушить состояние приложения и в итоге привести к его "зависанию", отладить которое может быть очень сложно.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.ThreadPool>  
- <xref:System.ComponentModel.BackgroundWorker>  
- [Синхронизация данных для многопоточности](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [Пул управляемых потоков](../../../docs/standard/threading/the-managed-thread-pool.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.ThreadPool>  
+- <xref:System.ComponentModel.BackgroundWorker>  
+- [Синхронизация данных для многопоточности](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
+- [Пул управляемых потоков](../../../docs/standard/threading/the-managed-thread-pool.md)

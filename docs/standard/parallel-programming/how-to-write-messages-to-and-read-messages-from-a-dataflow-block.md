@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61f520b7f4d1827424466a5cc3537041ae37a3bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47a61a1d01984eeefb2f1f09774374dc29a774d3
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583244"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087813"
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Практическое руководство. Запись и чтение сообщений в блоке потока данных
 В этом документе описываются способы использования библиотеки потоков данных TPL для записи сообщений в блок потока данных и считывания сообщений из него. Библиотека потоков данных TPL предоставляет как синхронные, так и асинхронные методы для записи сообщений в блок потока данных и чтения сообщений из него. В этом документе используется класс <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType>. Класс <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> помещает сообщения в буфер и работает и в качестве источника сообщений, и как адресат сообщения.  
@@ -65,5 +65,6 @@ ms.locfileid: "33583244"
 ## <a name="next-steps"></a>Следующие шаги  
  В этом примере показано, как считывать и записывать в блок сообщений напрямую. Можно также подключить блоки потока данных для создания *конвейеров*, которые являются линейными последовательностями блоков потока данных, или *сетей*, являющихся графами блоков потоков данных. Конвейеры или сети асинхронно распространяют исходные данные целевым объектам, когда данные становятся доступны. Пример, в котором создается базовый конвейер потока данных, см. в разделе [Пошаговое руководство. Создание конвейера потока данных](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Пример создания более комплексной сети потока данных см. в разделе [Пошаговое руководство. Использование потоков данных в приложении Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
-## <a name="see-also"></a>См. также  
- [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>См. также
+
+- [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

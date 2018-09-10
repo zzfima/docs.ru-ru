@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7df080185db9631e47bb7a886f6e0db894974a6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0652f5f3f3629257f8f67c6b4a0b9551ef547b62
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584637"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44221900"
 ---
 # <a name="merge-options-in-plinq"></a>Параметры слияние в PLINQ
 Когда запрос выполняется как параллельный, PLINQ разделяет исходную последовательность между несколькими потоками, чтобы они могли параллельно работать с разными частями. Если результаты будут использоваться в одном потоке, например в цикле `foreach` (`For Each` в Visual Basic), то полученные в каждом потоке результаты нужно объединить в одну последовательность. PLINQ может выполнять разные типы слияния в зависимости от операторов, которые присутствуют в запросе. Например, для операторов, изменяющих порядок результатов, необходимо собрать в буфер все элементы из всех потоков. Для потока ожидающего такой результат (и для пользователя приложения) может пройти достаточно большой период времени, пока появятся первые результаты полностью буферизованного запроса. Другие операторы по умолчанию используют частичную буферизацию, то есть возвращают результаты несколькими пакетами. Один оператор (<xref:System.Linq.ParallelEnumerable.ForAll%2A>) по умолчанию не использует буферизацию. Он немедленно выдает все элементы из всех потоков.  
@@ -65,6 +65,7 @@ ms.locfileid: "33584637"
   
  Поддержка некоторых параметров слияния некоторыми операторами зависит от типа исходной последовательности и наличия оператора <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> в более ранней позиции этого запроса. <xref:System.Linq.ParallelEnumerable.ForAll%2A> всегда использует <xref:System.Linq.ParallelMergeOptions.NotBuffered>, то есть возвращает все элементы немедленно. <xref:System.Linq.ParallelEnumerable.OrderBy%2A> всегда использует <xref:System.Linq.ParallelMergeOptions.FullyBuffered>, то есть сортирует полный список перед выдачей любых результатов.  
   
-## <a name="see-also"></a>См. также  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Практическое руководство. Задание параметров слияния в PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+## <a name="see-also"></a>См. также
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Практическое руководство. Задание параметров слияния в PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

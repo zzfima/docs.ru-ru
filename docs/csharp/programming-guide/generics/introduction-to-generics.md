@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], about generics
 ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
-ms.openlocfilehash: 892b6bfe5cf18bde91221bb8b2fa7ca7a2813870
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17f4c67792732be7a678ec858b6627fa712194c5
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321250"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861291"
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>Введение в универсальные шаблоны. (Руководство по программированию на C#)
 Универсальные классы и методы сочетают такие характеристики, как возможность многократного использования, типобезопасность и эффективность, которые не обеспечивают их неуниверсальные аналоги. Универсальные типы наиболее часто используются с коллекциями и методами, которые выполняют с ними операции. Библиотека классов на платформе .NET Framework 2.0 предоставляет новое пространство имен <xref:System.Collections.Generic>, которое содержит несколько новых универсальных классов коллекций. Во всех приложениях, предназначенных для .NET Framework 2.0 и более поздних версий, рекомендуем использовать новые универсальные классы коллекций вместо старых неуниверсальных аналогов, например <xref:System.Collections.ArrayList>. Дополнительные сведения см. в статье об [универсальных шаблонах в .NET](../../../standard/generics/index.md).  
@@ -30,7 +30,8 @@ ms.locfileid: "33321250"
   
  [!code-csharp[csProgGuideGenerics#3](../../../csharp/programming-guide/generics/codesnippet/CSharp/introduction-to-generics_2.cs)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections.Generic>  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Collections.Generic>  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)

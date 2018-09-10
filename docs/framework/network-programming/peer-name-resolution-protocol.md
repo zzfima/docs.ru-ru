@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 70c49198c0198610eaa5001971b7de7efd2951aa
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482347"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207113"
 ---
 # <a name="peer-name-resolution-protocol"></a>Протокол PNRP
 В одноранговых средах одноранговые узлы используют определенные системы разрешения имен для определения сетевого расположения (адреса, протоколы и порты) друг друга на основе имен и идентификаторов других типов. Раньше разрешение имен одноранговых узлов было затруднено из-за временного характера подключений, а также других недостатков службы доменных имен (DNS).  

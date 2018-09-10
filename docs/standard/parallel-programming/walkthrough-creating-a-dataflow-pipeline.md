@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e55d902971c5cea64cf14458f09e58fb47e2d0aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b74e60daced88050413855070c880cd6c1cebfb1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591772"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214710"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Пошаговое руководство. Создание конвейера потока данных
 Чтобы получать сообщения из блоков источника, можно использовать методы <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> или же объединить блоки сообщений в *конвейер потока данных*. Конвейер потока данных — это цепочка компонентов, или *блоков потока данных*, каждый из которых выполняет конкретную задачу в рамках более крупной цели. Каждый блок потока данных в конвейере потока данных выполняет работу, когда получает сообщение от другого блока потока данных. Можно сравнить это с линией сборки автомобилей. Как при продвижении автомобиля по сборочной линии одна станция собирает раму, следующая — устанавливает двигатель и так далее. Так как при этом можно собирать одновременно много автомобилей, линия сборки обеспечивает большую производительность, чем полная сборка автомобилей по одному.
@@ -110,5 +110,6 @@ ms.locfileid: "33591772"
   
  Вы также можете подсоединить блок-источник потока данных к нескольким целевым блокам для создания *сети потока данных*. Перегруженная версия метода <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> принимает объект <xref:System.Predicate%601>, который определяет, примет ли целевой объект сообщение, основываясь на его значении. Большинство типов блоков потока данных, выполняющих роль источников, предлагают сообщения всем подключенным целевым блокам в порядке их подсоединения, пока один из блоков не примет это сообщение. С помощью этого механизма фильтрации можно создавать системы связанных блоков потока данных, которые будут направлять определенные по одному пути, а другие данные — по другому пути. Пример с использованием фильтрации для создания сети потока данных, см. в статье [Пошаговое руководство. Использование потоков данных в приложении Windows Forms](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
-## <a name="see-also"></a>См. также  
- [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>См. также
+
+- [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

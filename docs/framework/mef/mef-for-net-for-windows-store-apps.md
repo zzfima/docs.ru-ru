@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26c2c6cd701f15ca950d399cf3074ee229534d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cb7807fbfc1fbaf039fd7aef04331210dfa7cfa
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388863"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227419"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>Managed Extensibility Framework для .NET: приложения из магазина Windows Store
 Пространство имен <xref:System.Composition?displayProperty=nameWithType> и его дочерние пространства содержат типы для разработки расширяемых приложений для [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] с использованием Managed Extensibility Framework (MEF). Эти пространства имен являются частью подмножества [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] для операционной системы [!INCLUDE[win8](../../../includes/win8-md.md)].  
@@ -24,9 +24,9 @@ ms.locfileid: "33388863"
   
 -   <xref:System.Composition.Hosting.Core?displayProperty=nameWithType> предоставляет типы MEF, которые использует обработчик композиции.  
   
- Дополнительные сведения о платформе [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и список входящих в нее пространств имен и типов см. в статье [Обзор приложений .NET для Магазина Windows](http://go.microsoft.com/fwlink/p/?LinkID=238312) в Центре разработки для Windows.  
+ Дополнительные сведения о платформе [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и список входящих в нее пространств имен и типов см. в статье [Обзор приложений .NET для Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=238312) в Центре разработки для Windows.  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о платформе .NET для приложений Магазина Windows](http://go.microsoft.com/fwlink/p/?LinkID=238312)  
- [Поддерживаемые API .NET для приложений Магазина Windows](http://go.microsoft.com/fwlink/p/?LinkID=247912)  
+ [Общие сведения о платформе .NET для приложений Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=238312)  
+ [Поддерживаемые API .NET для приложений Магазина Windows](https://go.microsoft.com/fwlink/p/?LinkID=247912)  
  [Managed Extensibility Framework (MEF)](../../../docs/framework/mef/index.md)

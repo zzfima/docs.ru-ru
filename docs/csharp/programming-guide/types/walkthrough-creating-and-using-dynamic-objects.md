@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: a04962912e3bc54d600b4514967cbc40a0d4f590
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 79e7ef99d9d21eb161d8981e166963df7dd57be5
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43420880"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858903"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Пошаговое руководство. Создание и использование динамических объектов (C# и Visual Basic)
 
@@ -157,10 +157,11 @@ ms.locfileid: "43420880"
   
 9. Сохраните файл и нажмите сочетание клавиш CTRL+F5 для сборки и запуска приложения.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Dynamic?displayProperty=nameWithType>  
- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
- [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Раннее и позднее связывание](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [Реализация динамических интерфейсов (документ в формате PDF на сайте Microsoft TechNet)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Dynamic?displayProperty=nameWithType>  
+- <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
+- [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [Раннее и позднее связывание](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+- [Реализация динамических интерфейсов (документ в формате PDF на сайте Microsoft TechNet)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

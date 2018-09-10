@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 173efcf485d5eb019b22a329a9d96b5cbe6a2f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54601bc705a8684508563ecf0682d84bcac8713f
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592305"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43879758"
 ---
 # <a name="introduction-to-plinq"></a>Введение в PLINQ
 ## <a name="what-is-a-parallel-query"></a>Что такое параллельный запрос?  
@@ -120,6 +120,7 @@ ms.locfileid: "33592305"
 ## <a name="measuring-plinq-performance"></a>Измерение производительности PLINQ  
  Во многих случаях запрос может выполняться параллельно, но на настройку параллельного запроса уходит больше времени, чем будет выиграно в результате. Если запрос не выполняет большой объем вычислений или источник данных небольшой, запрос PLINQ может быть медленнее, чем последовательный запрос LINQ to Objects. Анализатор параллельной производительности в Visual Studio Team Server позволяет сравнивать производительность различных запросов и таким образом выявлять проблемы обработки и определять, выполняется ли запрос параллельно или последовательно. Дополнительные сведения см. в разделах [Визуализатор параллелизма](/visualstudio/profiling/concurrency-visualizer) и [Практическое руководство. Измерение производительности запросов PLINQ](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md).  
   
-## <a name="see-also"></a>См. также  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Общее представление об ускорении выполнения в PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)
+## <a name="see-also"></a>См. также
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Общее представление об ускорении выполнения в PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)

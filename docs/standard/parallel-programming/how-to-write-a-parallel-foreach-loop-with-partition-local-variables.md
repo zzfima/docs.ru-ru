@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: edcc390014cfc70f4da4f72270c7dd53f9b9423b
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37076260"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227575"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Практическое руководство. Написание цикла Parallel.ForEach c локальными переменными раздела
 В следующем примере описывается порядок написания метода <xref:System.Threading.Tasks.Parallel.ForEach%2A>, использующего локальные переменные раздела. Когда выполняется цикл <xref:System.Threading.Tasks.Parallel.ForEach%2A>, он делит свою исходную коллекцию на несколько разделов. Каждый раздел содержит свою копию локальной переменной раздела. Локальная переменная раздела аналогична [локальной переменной потока](xref:System.Threading.ThreadLocal%601), однако допускает выполнение нескольких разделов в одном потоке.
@@ -48,7 +48,8 @@ ms.locfileid: "37076260"
  [!code-csharp[TPL_Parallel#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/foreachthreadlocal.cs#04)]
  [!code-vb[TPL_Parallel#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/foreachthreadlocal.vb#04)]  
   
-## <a name="see-also"></a>См. также  
- [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [Практическое руководство. Написание цикла Parallel.For и локальными переменными потока](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
- [Лямбда-выражения в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+## <a name="see-also"></a>См. также
+
+- [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [Практическое руководство. Написание цикла Parallel.For и локальными переменными потока](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
+- [Лямбда-выражения в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

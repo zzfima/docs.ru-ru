@@ -2,12 +2,12 @@
 title: Практическое руководство. Загрузка и выгрузка сборок (C#)
 ms.date: 07/20/2015
 ms.assetid: 6a4f490f-3576-471f-9533-003737cad4a3
-ms.openlocfilehash: fe9f78e145e6b7bc8ef138ff5cdb98aa345b90c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2934ff07026d520f52309e50eb7da24731608292
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33329518"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259653"
 ---
 # <a name="how-to-load-and-unload-assemblies-c"></a>Практическое руководство. Загрузка и выгрузка сборок (C#)
 Сборки, на которые ссылается программа, загружаются автоматически во время построения, но в текущий домен приложения можно также загрузить конкретные сборки во время выполнения. Дополнительные сведения см. в разделе [Практическое руководство. Загрузка сборок в домен приложения](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md).  
@@ -24,7 +24,8 @@ ms.locfileid: "33329518"
   
 1.  Отдельную сборку нельзя выгрузить, не выгрузив все домены приложений, в которых она содержится. Используйте метод `Unload` из <xref:System.AppDomain> для выгрузки доменов приложений. Дополнительные сведения см. в разделе [Практическое руководство. Выгрузка домена приложения](../../../../framework/app-domains/how-to-unload-an-application-domain.md).  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
- [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [Практическое руководство. Загрузка сборок в домен приложения](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
+- [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [Практическое руководство. Загрузка сборок в домен приложения](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)

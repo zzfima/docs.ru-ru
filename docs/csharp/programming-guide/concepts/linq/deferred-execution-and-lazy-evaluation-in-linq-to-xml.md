@@ -2,12 +2,12 @@
 title: Отложенное выполнение и отложенное вычисление в LINQ to XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 8683d1b4-b7ec-407b-be12-906ebe958a09
-ms.openlocfilehash: dd0b8413f172182edfc83f99fd418d1372984b7d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: baf6a26b1579c17adfc60b27b485ba3af66c67d7
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340376"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085346"
 ---
 # <a name="deferred-execution-and-lazy-evaluation-in-linq-to-xml-c"></a>Отложенное выполнение и отложенное вычисление в LINQ to XML (C#)
 Операции по обработке запросов и осей часто реализуются с использованием отложенного выполнения. В этом разделе разъясняются требования и достоинства отложенного выполнения, а также содержатся некоторые соображения относительно реализации.  
@@ -33,8 +33,9 @@ ms.locfileid: "33340376"
   
 -   [Пример отложенного выполнения (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-example.md)  
   
-## <a name="see-also"></a>См. также  
- [Учебник. Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)  
- [Основные принципы и терминология (функциональное преобразование) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)  
- [Операции агрегирования (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
- [yield](../../../../csharp/language-reference/keywords/yield.md)
+## <a name="see-also"></a>См. также
+
+- [Учебник. Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)  
+- [Основные принципы и терминология (функциональное преобразование) (C#)](../../../../csharp/programming-guide/concepts/linq/concepts-and-terminology-functional-transformation.md)  
+- [Операции агрегирования (C#)](../../../../csharp/programming-guide/concepts/linq/aggregation-operations.md)  
+- [yield](../../../../csharp/language-reference/keywords/yield.md)

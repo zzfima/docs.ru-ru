@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: e35d4535-3732-421e-b1a3-37412e036145
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b99803970b205e3dbbb1d78c9bdaf0fefa73a04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 16b12a1ab274a63b8d190278d6312d36a61efe16
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575584"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207724"
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Практическое руководство. Предупреждение нехватки места при изолированном хранении
 Код, использующий изолированное хранилище, ограничен [квотой](../../../docs/standard/io/isolated-storage.md#quotas) на максимальный размер секции данных, в которой существуют изолированные файлы и каталоги хранения. Эта квота определяется политикой безопасности и настраивается администраторами. Если при попытке записи данных превышается максимальный размер, создается исключение <xref:System.IO.IsolatedStorage.IsolatedStorageException> и операция завершается ошибкой. Это помогает предотвратить атаки типа "отказ в обслуживании", которые могут привести к неспособности приложения обрабатывать запросы из-за переполнения хранилища данных.  
@@ -45,7 +45,8 @@ ms.locfileid: "33575584"
  [!code-csharp[Conceptual.IsolatedStorage#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source7.cs#8)]
  [!code-vb[Conceptual.IsolatedStorage#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source7.vb#8)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)  
- [Практическое руководство. Получение хранилищ для изолированного хранения](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
+- [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)  
+- [Практическое руководство. Получение хранилищ для изолированного хранения](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

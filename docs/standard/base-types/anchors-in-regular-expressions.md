@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 24a579acacf41df24779252e1064e1c271310edc
-ms.sourcegitcommit: ed7b4b9b77d35e94a35a2634e8c874f46603fb2b
+ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36948593"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085190"
 ---
 # <a name="anchors-in-regular-expressions"></a>Привязки в регулярных выражениях
 <a name="top"></a> Привязки (или атомарные утверждения нулевой ширины) указывают положение в строке, где должно быть найдено соответствие. При использовании привязки в выражении поиска обработчик регулярных выражений не проходит по строке и не потребляет символы; он ищет соответствия только в заданном местоположении. Например, `^` указывает, что соответствие должно начаться в начале строки. Таким образом, регулярное выражение `^http:` находит соответствие для http, только если этот элемент находится в начале строки. В таблице ниже перечислены привязки, поддерживаемые регулярными выражениями в .NET.  
@@ -174,6 +174,7 @@ ms.locfileid: "36948593"
 |`qu`|Совпадение с подстрокой qu.|  
 |`\w+`|Совпадение с одним или несколькими символами слова.|  
   
-## <a name="see-also"></a>См. также  
- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md)
+## <a name="see-also"></a>См. также
+
+- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md)

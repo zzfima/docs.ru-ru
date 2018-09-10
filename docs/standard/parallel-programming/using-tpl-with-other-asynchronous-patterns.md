@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7add905b-ff60-4353-af79-5089038d9a08
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1aa1dd482a931a49ba3c0f6759db12d45f744eec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1ae3449e37dd5b8ff19dd2f0116a3c2cfa051385
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580930"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253238"
 ---
 # <a name="using-tpl-with-other-asynchronous-patterns"></a>Использование библиотеки параллельных задач с другими асинхронными шаблонами
 Библиотеку параллельных задач можно использовать с традиционными шаблонами асинхронного программирования платформы .NET Framework различными способами.  
@@ -24,5 +24,6 @@ ms.locfileid: "33580930"
  [Практическое руководство. Создание задачи-оболочки для шаблонов EAP](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)  
  Сведения о том, как использовать объекты <xref:System.Threading.Tasks.Task> для инкапсуляции шаблонов EAP.  
   
-## <a name="see-also"></a>См. также  
- [Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>См. также
+
+- [Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

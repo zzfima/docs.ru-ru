@@ -5,12 +5,12 @@ helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 7e35c7d6712323bd7088ad68160da05cdf3a5115
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 9bbf08161162c2d0776a066098e40b57a415da6d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245782"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44187141"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Универсальные типы и отражение (Руководство по программированию в C#)
 Поскольку среда CLR имеет доступ к данным универсальных типов во время выполнения, вы можете использовать отражение для получения сведений об универсальных типах точно так же, как и для неуниверсальных типов. Дополнительные сведения см. в разделе [Универсальные типы во время выполнения](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -44,8 +44,9 @@ ms.locfileid: "39245782"
 |<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Возвращает значение true, если текущий метод <xref:System.Reflection.MethodInfo> представляет определение универсального метода.|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Заменяет параметры типа элементами массива типов для определения текущего универсального метода и возвращает объект <xref:System.Reflection.MethodInfo>, представляющий итоговый сконструированный метод.|  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)  
- [Отражение и универсальные типы](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
- [Универсальные шаблоны](~/docs/standard/generics/index.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Универсальные шаблоны](../../../csharp/programming-guide/generics/index.md)  
+- [Отражение и универсальные типы](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [Универсальные шаблоны](~/docs/standard/generics/index.md)

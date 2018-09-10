@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - files [C#], getting information about
 ms.assetid: 22fc2da6-5494-405b-995e-c0b99142a93e
-ms.openlocfilehash: c4f29cd2ae65fb05a2636ae3674c7ffd1613b0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ebacff0f3a1704ec001e3570d0df136f54baf9d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33338543"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44206462"
 ---
 # <a name="how-to-get-information-about-files-folders-and-drives--c-programming-guide"></a>Практическое руководство. Получение сведений о файлах, папках и дисках (Руководство по программированию на C#)
 В платформе .NET Framework доступ к сведениям о файловой системе можно получить, используя следующие классы:  
@@ -52,7 +52,8 @@ System.IO.DriveInfo di = new System.IO.DriveInfo(@"C:\");
   
  Если у приложения недостаточно прав для чтения указанного файла, метод `Exists` возвратит значение `false` независимо от существования указанного пути. Исключений этот метод не вызывает.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IO?displayProperty=nameWithType>  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)

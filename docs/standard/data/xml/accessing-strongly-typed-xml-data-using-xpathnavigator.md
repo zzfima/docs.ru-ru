@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 898e0f52-8a7c-4d1f-afcd-6ffb28b050b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 040a137f9b7c26c4484a69313e1f405699a19b64
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c283d3c87effcf9e898bb769cc8991da6cea453
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578133"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44199626"
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Доступ к XML-данным со строгой типизацией с помощью XPathNavigator
 Класс <xref:System.Xml.XPath.XPathNavigator> как экземпляр модели данных XPath 2.0, может содержать данные со строгой типизацией, которые сопоставляются с типами CLR. Согласно модели данных XPath 2.0, только элементы и атрибуты могут содержать данные со строгой типизацией. Класс <xref:System.Xml.XPath.XPathNavigator> предоставляет механизмы для доступа к данным со строгой типизацией в объектах <xref:System.Xml.XPath.XPathDocument> и <xref:System.Xml.XmlDocument>, а также механизмы для преобразования данных из одного типа в другой.  
@@ -185,12 +185,13 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
   
  Дополнительные сведения о сопоставлении встроенных типов схемы с типами CLR см. в руководстве по [поддержке типов в классах System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XPath.XPathDocument>  
- <xref:System.Xml.XPath.XPathNavigator>  
- [Поддержка типов в классах System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
- [Обработка XML-данных с использованием модели данных XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Навигация в наборе узлов с помощью XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
- [Навигация по узлам атрибутов и пространств имен с помощью XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
- [Извлечение XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XPath.XPathDocument>  
+- <xref:System.Xml.XPath.XPathNavigator>  
+- [Поддержка типов в классах System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
+- [Обработка XML-данных с использованием модели данных XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+- [Навигация в наборе узлов с помощью XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+- [Навигация по узлам атрибутов и пространств имен с помощью XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
+- [Извлечение XML-данных с помощью XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)

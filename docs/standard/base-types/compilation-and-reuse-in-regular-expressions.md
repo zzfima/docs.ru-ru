@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a9adb5d39eb420496030d85dacd95a1cccd6fd2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2166412269a84329d42f58c7e3423229be4327b8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568762"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43877774"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Компиляция и многократное использование в регулярных выражениях
 Производительность приложений, активно использующих регулярные выражения, можно оптимизировать, если понимать, каким образом обработчик регулярных выражений компилирует выражения и как кэшируются регулярные выражения. В этом разделе описаны и компиляция, и кэширование.  
@@ -46,5 +46,6 @@ ms.locfileid: "33568762"
   
  Создание и быстрое уничтожение многочисленных объектов <xref:System.Text.RegularExpressions.Regex> — это очень затратный процесс, так как высоки издержки на создание объектов и компиляцию регулярных выражений. Для приложений, использующих большое количество разных регулярных выражений, производительность можно повысить путем вызова статических методов `Regex` и, возможно, путем увеличения размера кэша для регулярных выражений.  
   
-## <a name="see-also"></a>См. также  
- [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>См. также
+
+- [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)

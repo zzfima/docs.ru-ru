@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b224e758eb5b0e07c76f055f22bfe827789f07ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574843"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209962"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>Преимущества использования потокобезопасных коллекций
 В [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] представлено пять новых типов коллекций, специально разработанных для поддержки многопотоковых операций добавления и удаления. Для достижения потокобезопасности эти новые типы используют различные типы эффективных механизмов синхронизации с блокировкой и без блокировки. Синхронизация добавляет к операции издержки. Значения издержек зависят от используемого типа синхронизации, выполняемого типа операции и других факторов, например количества потоков, которые одновременно пытаются получить доступ к коллекции.  
@@ -62,7 +62,8 @@ ms.locfileid: "33574843"
 ## <a name="blockingcollection"></a>BlockingCollection  
  Если вы хотите использовать семантику границ и блокировок, класс <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> может работать быстрее, чем любые пользовательские реализации. Он также поддерживает гибкую обработку исключений и операций отмены, перечисления.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [Потокобезопасные коллекции](../../../../docs/standard/collections/thread-safe/index.md)  
- [Параллельное программирование](../../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [Потокобезопасные коллекции](../../../../docs/standard/collections/thread-safe/index.md)  
+- [Параллельное программирование](../../../../docs/standard/parallel-programming/index.md)

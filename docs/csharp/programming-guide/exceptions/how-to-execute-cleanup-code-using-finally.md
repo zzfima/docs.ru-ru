@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#], try/finally block
 - exception handling [C#], try/finally block
 ms.assetid: 1b1e5aef-3f32-4a88-9d39-b5fffb33bdaf
-ms.openlocfilehash: 948281af45d04714ed6fc308b60341e87abeb830
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47e9bb368deb077ef10ce474683d81e0cb56cef8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331712"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183789"
 ---
 # <a name="how-to-execute-cleanup-code-using-finally-c-programming-guide"></a>Практическое руководство. Выполнение кода очистки с использованием блока finally (Руководство по программированию на C#)
 Оператор `finally` позволяет гарантировать, что необходимая очистка объектов, как правило, объектов, занимающих внешние ресурсы, возникает немедленно, даже при создании исключения. Примером подобной очистки является вызов <xref:System.IO.Stream.Close%2A> для <xref:System.IO.FileStream> сразу после использования вместо ожидания сборки мусора, выполняемой для объекта средой CLR, следующим образом:  
@@ -27,11 +27,12 @@ ms.locfileid: "33331712"
   
  Подключение к базе данных — еще один подходящий кандидат для заключения в блок `finally`. Так как количество разрешенных подключений к серверу базы данных иногда ограничено, закрывать подключения к базе данных рекомендуется как можно быстрее. Если перед закрытием подключения возникает исключение, это еще один случай, когда использование блока `finally` предпочтительнее, чем ожидание сборки мусора.  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)  
- [Обработка исключений](../../../csharp/programming-guide/exceptions/exception-handling.md)  
- [Оператор using](../../../csharp/language-reference/keywords/using-statement.md)  
- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)  
+- [Обработка исключений](../../../csharp/programming-guide/exceptions/exception-handling.md)  
+- [Оператор using](../../../csharp/language-reference/keywords/using-statement.md)  
+- [try-catch](../../../csharp/language-reference/keywords/try-catch.md)  
+- [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
+- [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)

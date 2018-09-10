@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 864571262d1c9c060235840424542856187341df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 385e370f205851630f809b285a93c2609220efeb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584302"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44212403"
 ---
 # <a name="barrier-net-framework"></a>Барьер (.NET Framework)
 *Барьер* — это определяемый пользователем примитив синхронизации, позволяющий нескольким потокам (которые называются *участниками*) параллельно осуществлять поэтапную работу с алгоритмом. Каждый участник выполняется до достижения точки барьера в коде. Барьер означает окончание одного этапа работы. Когда участник достигает барьера, он блокируется до тех пор, пока все участники не достигнут этого барьера. Когда все участники достигли барьера, можно при необходимости можно вызвать действие следующего этапа. Это действие следующего этапа может использоваться для выполнения действий одним потоком, пока все остальные потоки все еще остаются блокированными. После выполнения действия все участники разблокируются.  
@@ -49,6 +49,7 @@ ms.locfileid: "33584302"
   
  Подробнее см. в разделе [Создание цепочки задач с помощью задач продолжения](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
   
-## <a name="see-also"></a>См. также  
- [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)  
- [Практическое руководство. Синхронизация параллельных операций с барьером](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)
+## <a name="see-also"></a>См. также
+
+- [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)  
+- [Практическое руководство. Синхронизация параллельных операций с барьером](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)

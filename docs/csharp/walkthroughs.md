@@ -6,12 +6,12 @@ helpviewer_keywords:
 - walkthroughs [Visual Studio], Visual C#
 - Visual C#, walkthroughs
 ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
-ms.openlocfilehash: aaf57e666faf18010c7f267f96e6958c73e58bcf
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: a2efaae7cd861842f92ba3cdedc5ae77beec9f6f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42935142"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267132"
 ---
 # <a name="c-walkthroughs"></a>Пошаговые руководства по C#
 В пошаговых руководствах содержатся инструкции по выполнению стандартных сценариев, что делает их удобным инструментом для начала изучения продукта в целом или его отдельных возможностей.  
@@ -50,16 +50,16 @@ ms.locfileid: "42935142"
  [Написание запросов на C# (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  
  Описание возможностей C#, которые служат для написания выражений запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
- [Обработка данных (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386927.aspx)  
+ [Обработка данных (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)  
  Описание сценария [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] для добавления, изменения и удаления данных в базе данных.  
   
- [Простая модель объектов и простой запрос (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386940.aspx)  
+ [Простая модель объектов и простой запрос (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)  
  Описание процесса создания класса сущностей и простого запроса для фильтрации класса сущностей.  
   
- [Применение только хранимых процедур (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb399407.aspx)  
+ [Применение только хранимых процедур (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
  Описание процесса использования LINQ to SQL для доступа к данным только с помощью хранимых процедур.  
   
- [Запросы по связям (C#) (LINQ to SQL)](https://msdn.microsoft.com/library/bb386951.aspx)  
+ [Запросы по связям (C#) (LINQ to SQL)](../framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)  
  Описание процесса использования сопоставлений [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] для представления связей внешних ключей в базе данных.  
 
  [Написание визуализатора на C#](/visualstudio/debugger/walkthrough-writing-a-visualizer-in-csharp)  
@@ -69,6 +69,7 @@ ms.locfileid: "42935142"
  [Примеры и пошаговые руководства по развертыванию](/visualstudio/deployment/clickonce-deployment-samples-and-walkthroughs)  
  Пошаговое описание примеров распространенных скриптов развертывания.  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../csharp/programming-guide/index.md)  
- [Примеры Visual Studio](/visualstudio/ide/visual-studio-samples)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../csharp/programming-guide/index.md)  
+- [Примеры Visual Studio](/visualstudio/ide/visual-studio-samples)

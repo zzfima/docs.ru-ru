@@ -2,12 +2,12 @@
 title: Пример XSD-файла. Клиенты и заказы1
 ms.date: 07/20/2015
 ms.assetid: ef9911a3-7ac4-44fd-b36e-a0c0ad0a157d
-ms.openlocfilehash: d7507e7aaca254e5755cb7ffbeccf5616fc051fd
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 3e6eaf41ad8c91f1b59f70f58a8c8f0e127ec949
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244520"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200094"
 ---
 # <a name="sample-xsd-file-customers-and-orders"></a>Пример XSD-файла. Клиенты и заказы в пространстве имен
 Следующий файл XSD используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]. Он содержит определение схемы XML (XSD) для раздела [Пример XML-файла. Клиенты и заказы в пространстве имен (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md). В схеме используются функции XSD `xs:key` и `xs:keyref` для определения того, что атрибут `CustomerID` элемента `Customer` является ключом, а также для установления связей между элементом `CustomerID` в каждом элементе `Order` и атрибутом `CustomerID` в каждом элементе `Customer`.  
@@ -93,5 +93,6 @@ ms.locfileid: "39244520"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Примеры XML-документов (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+
+- [Примеры XML-документов (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

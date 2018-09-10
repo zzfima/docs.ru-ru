@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d708068dc0d55a1c7ec725977a4ca6d16b0f43c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591759"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225598"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>Библиотека параллельных задач и традиционное асинхронное программирование .NET Framework
 Платформа .NET Framework предоставляет следующие две стандартные модели для выполнения асинхронных операций ввода-вывода и вычислений.  
@@ -119,5 +119,6 @@ ms.locfileid: "33591759"
 ## <a name="using-the-streamextensions-sample-code"></a>Использование примера кода StreamExtensions  
  Файл Streamextensions.cs (см. [примеры параллельного программирования в .NET Framework 4](https://code.msdn.microsoft.com/ParExtSamples)) содержит несколько базовых реализаций, в которых используются объекты задачи для асинхронных операций файлового и сетевого ввода-вывода.  
   
-## <a name="see-also"></a>См. также  
- [Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a>См. также
+
+- [Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

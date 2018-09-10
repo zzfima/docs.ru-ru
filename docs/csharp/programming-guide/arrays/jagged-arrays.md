@@ -5,14 +5,15 @@ helpviewer_keywords:
 - jagged arrays [C#]
 - arrays [C#], jagged
 ms.assetid: 537c65a6-0e0a-4a00-a2b8-086f38519c70
-ms.openlocfilehash: c1825e1a731c40a5945060f8085bd612b5d62008
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e4988439000712f4d1bd9b5abe412e7fd5d43eb
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297372"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261674"
 ---
 # <a name="jagged-arrays-c-programming-guide"></a>Массивы массивов (Руководство по программированию на C#)
+
 Массив массивов — это массив, элементы которого сами являются массивами. Элементы массива массивов могут иметь различные измерения и размеры. Массив массивов иногда называется нерегулярным массивом. В следующих примерах показано, как объявлять и инициализировать массивы массивов, а также получать доступ к ним.  
   
  Ниже объявляется одномерный массив из трех элементов, каждый из которых является одномерным массивом целых чисел:  
@@ -57,14 +58,16 @@ ms.locfileid: "33297372"
   
  возвращает значение 3.  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Пример
+
  В этом примере создается массив, элементы которого являются массивами. Все элементы массива имеют разный размер.  
   
  [!code-csharp[csProgGuideArrays#18](../../../csharp/programming-guide/arrays/codesnippet/CSharp/jagged-arrays_10.cs)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Array>  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Массивы](../../../csharp/programming-guide/arrays/index.md)  
- [Одномерные массивы](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
- [Многомерные массивы](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Array>  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Массивы](../../../csharp/programming-guide/arrays/index.md)  
+- [Одномерные массивы](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)  
+- [Многомерные массивы](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)

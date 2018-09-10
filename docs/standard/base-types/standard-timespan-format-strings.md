@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 82774ffaf03b7eaad6240a0361bede076053de0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 52da538ba9cf348062905b66a87d13db82a214a0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578311"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085270"
 ---
 # <a name="standard-timespan-format-strings"></a>Строки стандартного формата TimeSpan
 <a name="Top"></a> Строка стандартного формата <xref:System.TimeSpan> использует один описатель формата для определения текстового представления значения <xref:System.TimeSpan>, получаемого после выполнения операции форматирования. Любая строка формата, содержащая более одной буквы, включая пробелы, интерпретируется как строка настраиваемого формата <xref:System.TimeSpan>. Дополнительные сведения см. в разделе [Строки настраиваемого формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md).  
@@ -130,7 +130,8 @@ ms.locfileid: "33578311"
   
  [К таблице](#Top)  
   
-## <a name="see-also"></a>См. также  
- [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
- [Строки настраиваемого формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
+## <a name="see-also"></a>См. также
+
+- [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
+- [Строки настраиваемого формата TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)

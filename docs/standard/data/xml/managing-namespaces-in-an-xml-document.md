@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 47162a43c942416c5a2b842663288290c9f43f62
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c8d08d6fd6fb783f5cb8c7e714bffa2b655ffb41
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574726"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44214827"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Управление пространствами имен в XML-документе
 Пространства имен XML связывают имена элементов и атрибутов в XML-документе с пользовательскими и стандартными URI. Для создания этих связей определяются префиксы для URI пространства имен, с помощью которых затем квалифицируются имена элементов и атрибутов в XML-данных. Пространства имен предотвращают конфликты имен элементов и атрибутов, а также позволяют обрабатывать и проверять элементы и атрибуты с одним и тем же именем.  
@@ -79,6 +79,7 @@ ms.locfileid: "33574726"
 |Проверка того, определен ли префикс в текущей области|Метод <xref:System.Xml.XmlNamespaceManager.HasNamespace%2A>|  
 |Получение таблицы имен используется для поиска префиксов и URI|Свойство <xref:System.Xml.XmlNamespaceManager.NameTable%2A>|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.XmlNamespaceManager>  
- [XML-документы и данные](../../../../docs/standard/data/xml/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Xml.XmlNamespaceManager>  
+- [XML-документы и данные](../../../../docs/standard/data/xml/index.md)

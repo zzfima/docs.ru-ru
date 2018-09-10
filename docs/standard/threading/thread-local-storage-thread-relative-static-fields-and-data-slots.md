@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a17bc509c8c82bfb30811ec3511207ca2d823e5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bea5dfd7c53b5b5f53ddab5d4d07ec6a603b14e8
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589858"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042235"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>Локальное хранилище потока: статические поля потока и области данных
 Вы можете использовать управляемую локальную память потока для хранения данных, которые являются уникальными для потока и домена приложения. Платформа .NET Framework предоставляет два способа работы с локальной памятью: статические поля потоков и ячейки данных.  
@@ -57,9 +57,10 @@ ms.locfileid: "33589858"
   
  Именованные области особенно удобны, так как позволяют в любой момент получить нужную область, передав ее имя в метод <xref:System.Threading.Thread.GetNamedDataSlot%2A>, вместо того чтобы хранить ссылку на безымянную область. Но если другой компонент использует то же имя в своем хранилище потока, при выполнении в одном потоке кода из обоих этих компонентов они могут повредить данные друг друга. (Здесь предполагается, что оба компонента работают в одном домене приложения и не рассчитаны на совместное использование данных.)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ContextStaticAttribute>  
- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
- <xref:System.ThreadStaticAttribute>  
- <xref:System.Runtime.Remoting.Messaging.CallContext>  
- [Работа с потоками](../../../docs/standard/threading/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.ContextStaticAttribute>  
+- <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType>  
+- <xref:System.ThreadStaticAttribute>  
+- <xref:System.Runtime.Remoting.Messaging.CallContext>  
+- [Работа с потоками](../../../docs/standard/threading/index.md)

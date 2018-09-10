@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6505229d96c6f27452776403a6e1f997dc5a8b10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c570f812ec06c6ead0d12dc14c33fcdfd1f075c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572201"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44204881"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>Проверка по XML-схеме (XSD) с помощью XmlSchemaCollection
 Объект <xref:System.Xml.Schema.XmlSchemaCollection> можно использовать для проверки XML-документа по схемам на языке XSD. Объект <xref:System.Xml.Schema.XmlSchemaCollection> повышает производительность за счет сохранения схем в коллекции, чтобы они не загружались в память при каждой проверке. Если схема существует в коллекции схем, для ее поиска в коллекции используется атрибут `schemaLocation`.  
@@ -208,8 +208,9 @@ while(vr.Read()) {
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.XmlParserContext>  
- <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
- <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
- [Компиляция схемы XmlSchemaCollection](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Xml.XmlParserContext>  
+- <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
+- <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
+- [Компиляция схемы XmlSchemaCollection](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

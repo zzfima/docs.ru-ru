@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b02fd72c705d264394b83b89fc7ec802be7e502a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5f2da2849bdf9ce922a89bf25e1758d868ee5ea8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575366"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198261"
 ---
 # <a name="traversing-xml-schemas"></a>Обход XML-схем
 Обзор схемы XML с помощью API-интерфейса объектной модели схемы XML (SOM) предоставляет доступ к элементам, атрибутам и типам, хранящимся в модели SOM. Проход по схеме XML, загружаемой в SOM, представляет собой также первый шаг в изменении схемы XML с помощью SOM API.  
@@ -67,11 +67,12 @@ ms.locfileid: "33575366"
   
  Пример кода в руководстве по [созданию схемы XML](../../../../docs/standard/data/xml/building-xml-schemas.md) использует коллекцию <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> для добавления атрибута `CustomerId` к элементу `Customer`. Это свойство доступно до компиляции схемы. Соответствующее свойство PSCI (доступное только после компиляции схемы) представляет собой коллекцию <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType>, которая хранит все атрибуты сложного типа, в том числе унаследованные.  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Чтение и запись XML-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Изменение XML-схем](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Включение или импорт XML-схем](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Набор сведений для постсхемной компиляции](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>См. также
+
+- [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [Чтение и запись XML-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [Построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [Изменение XML-схем](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [Включение или импорт XML-схем](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Набор сведений для постсхемной компиляции](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

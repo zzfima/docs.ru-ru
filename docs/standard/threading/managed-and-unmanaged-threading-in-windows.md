@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4fb6452f-c071-420d-9e71-da16dee7a1eb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1be82fd9f26e382f20913551f67e8303cf20e03b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7834df6c987e94e59357c7c60db2627d107bffc3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43390617"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864554"
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Управляемые и неуправляемые потоки в Windows
 Управление всеми потоками осуществляется посредством класса <xref:System.Threading.Thread> , включая потоки, созданные средой CLR или созданные за пределами среды выполнения и входящие в управляемую среду для выполнения кода. Среда выполнения отслеживает в своем процессе все потоки, которые когда-либо выполняли код в управляемой среде. Другие потоки она не отслеживает. Потоки могут входить в управляемую среду выполнения посредством COM-взаимодействия (так как среда выполнения предоставляет управляемые объекты неуправляемой среде в качестве COM-объектов), функции COM [DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject) и вызова неуправляемого кода.  
@@ -63,9 +63,10 @@ ms.locfileid: "43390617"
 ## <a name="blocking-issues"></a>Блокировка неполадок  
  Если поток выполняет неуправляемый вызов для операционной системы, которая заблокировала этот поток в неуправляемом коде, среда выполнения не берет на себя управление им для <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> или <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. В случае с <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> среда выполнения помечает поток как **Abort**, приступая к управлению, когда он повторно входит в управляемый код. Вместо неуправляемой блокировки рекомендуется использовать управляемую блокировку. <xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>,<xref:System.Threading.WaitHandle.WaitAny%2A?displayProperty=nameWithType>, <xref:System.Threading.WaitHandle.WaitAll%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>, <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> и др. реагируют на <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> и <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>. Кроме того, если ваш поток находится в однопотоковом подразделении, все эти операции управляемой блокировки будут корректно выдавать сообщения в ваше подразделение, пока поток находится в заблокированном состоянии.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
- <xref:System.Threading.ThreadState>  
- <xref:System.EnterpriseServices.ServicedComponent>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.Monitor>
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.ThreadState>  
+- <xref:System.EnterpriseServices.ServicedComponent>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.Monitor>

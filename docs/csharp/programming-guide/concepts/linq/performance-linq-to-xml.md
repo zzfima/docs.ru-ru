@@ -2,12 +2,12 @@
 title: Производительность (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 43c9f1b7-9bd3-489c-b45c-cb09173a3718
-ms.openlocfilehash: 93c753c9bc408abb3db652f435ac1b0c87f93898
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 340be61f55f2b77ed22d608ec151daa737389771
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245420"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857132"
 ---
 # <a name="performance-linq-to-xml-c"></a>Производительность (LINQ to XML) (C#)
 В данном разделе содержатся сведения о производительности в [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], касающиеся в основном производительности функционального построения и запросов.  
@@ -25,5 +25,6 @@ ms.locfileid: "39245420"
  [Статически скомпилированные запросы (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
  Содержит сведения о производительности статически скомпилированных запросов, которые противопоставляются анализу и обработке в средстве оценки выражений XPath.  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

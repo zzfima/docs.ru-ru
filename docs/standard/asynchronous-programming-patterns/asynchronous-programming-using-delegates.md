@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 38a345ca-6963-4436-9608-5c9defef9c64
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15d99ef6ef3ae089216e586fe873043fa03b0d7b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bad5372af1d771dc93a20e61090ef84126f3e1eb
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567293"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44267119"
 ---
 # <a name="asynchronous-programming-using-delegates"></a>Асинхронное программирование с использованием делегатов
 Делегаты позволяют вызывать синхронные методы асинхронно. При синхронном вызове делегата метод `Invoke` вызывает целевой метод непосредственно в текущем потоке. При вызове метода `BeginInvoke` среда CLR помещает запрос в очередь и сразу же передает управление вызывающему объекту. Целевой метод вызывается асинхронно в потоке из пула потоков. Исходный поток, отправивший этот запрос, продолжает выполняться параллельно с целевым методом. Если при вызове метода `BeginInvoke` был указан метод обратного вызова, то метод обратного вызова вызывается после завершения целевого метода. В методе обратного вызова метод `EndInvoke` получает возвращаемое значение и любые параметры ввода/вывода или только выходные параметры. Если при вызове `BeginInvoke` не указан метод обратного вызова, `EndInvoke` можно вызвать из потока, который вызвал `BeginInvoke`.  
@@ -35,5 +35,6 @@ ms.locfileid: "33567293"
  [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
  Описывается асинхронное программирование в .NET Framework.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Delegate>
+## <a name="see-also"></a>См. также
+
+* <xref:System.Delegate>

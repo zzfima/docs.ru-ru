@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bcd12d5c3cfe341b22a5421930a22c272878006b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fb3f50459eeafcbb9f4882e56fb08b2001a35fb3
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591850"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042376"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Пошаговое руководство. Повышение эффективности с помощью BatchBlock и BatchedJoinBlock
 Библиотека потоков данных TPL предоставляет классы <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType>, чтобы пользователь мог получать и помещать в буфер данные из одного или нескольких источников и затем передавать эти помещенные в буфер данные в виде одной коллекции. Этот механизм пакетной обработки полезен при сборе данных из одного или нескольких источников и дальнейшей обработке различных элементов данных в пакетном режиме. Например, рассмотрим приложение, использующее поток данных для вставки записей в базу данных. Эта операция может быть эффективнее, если несколько элементов добавляются одновременно, а не последовательно по одному. В этом документе описано, как использовать класс <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> для увеличения эффективности подобных операций вставки в базу данных. Также здесь приводится способ использования класса <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> для перехвата и результатов, и всех исключений, возникающих при выполнении программой считывания из базы данных.
@@ -118,5 +118,6 @@ ms.locfileid: "33591850"
  [!code-csharp[TPLDataflow_BatchDatabase#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_batchdatabase/cs/dataflowbatchdatabase.cs#100)]
  [!code-vb[TPLDataflow_BatchDatabase#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#100)]  
   
-## <a name="see-also"></a>См. также  
- [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+## <a name="see-also"></a>См. также
+
+- [Поток данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

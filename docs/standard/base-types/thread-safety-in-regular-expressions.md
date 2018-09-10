@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79ca0b92cf79ca9be023925f064c1c7c16b3c9ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1c0bcab0757bc48f6a8216dd5878f0289e49a275
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567722"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208170"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>Потокобезопасность в регулярных выражениях
 Сам по себе класс <xref:System.Text.RegularExpressions.Regex> является потокобезопасным и неизменяемым (предназначенным только для чтения). Это означает, что объекты **Regex** могут создаваться в любом потоке и совместно использоваться несколькими потоками. Одни и те же методы могут вызываться из любого потока, никак не изменяя при этом глобальное состояние.  
@@ -27,5 +27,6 @@ ms.locfileid: "33567722"
   
  Перечислители являются единственным исключением. Вызовы, обращенные к перечислителям коллекций, в приложениях должны быть сериализованы. Правило заключается в том, что если существует возможность одновременной работы перечислителей из нескольких потоков с одной коллекцией, то их методы необходимо синхронизировать в корневом объекте коллекции, по которой проходит перечислитель.  
   
-## <a name="see-also"></a>См. также  
- [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>См. также
+
+- [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)

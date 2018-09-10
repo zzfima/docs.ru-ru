@@ -7,11 +7,11 @@ helpviewer_keywords:
 - add event accessor [C#]
 ms.assetid: faf30b99-10e8-45cd-ab9a-57585d4d1d8d
 ms.openlocfilehash: b55827b60a89da2569fad9da135c84571a24b094
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43390972"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266327"
 ---
 # <a name="add-c-reference"></a>add (Справочник по C#)
 Контекстное ключевое слово `add` определяет метод доступа настраиваемого события, который вызывается, когда клиентский код подписывается на [событие](../../../csharp/language-reference/keywords/event.md). Если указан настраиваемый метод доступа `add`, также необходимо указать метод доступа [remove](../../../csharp/language-reference/keywords/remove.md).  

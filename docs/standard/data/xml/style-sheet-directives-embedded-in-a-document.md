@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d79fb295-ebc7-438d-ba1b-05be7d534834
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08bd33aab6cbeeeb9060f3de3565a05896c6ba7f
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 65987c5e29d593758b21259d6367202c882df2de
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43391098"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201833"
 ---
 # <a name="style-sheet-directives-embedded-in-a-document"></a>Директивы таблицы стилей, встроенные в документ
 
@@ -39,4 +39,4 @@ ms.locfileid: "43391098"
 
 ## <a name="see-also"></a>См. также
 
-[Модель объектов документов XML (DOM)](xml-document-object-model-dom.md)  
+- [Модель объектов документов XML (DOM)](xml-document-object-model-dom.md)

@@ -2,12 +2,12 @@
 title: Преобразование типов данных (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: 374ce15b8329c02c6b496a276a40fd9a60596e1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54ef612ad4e92058d9af4d96b7b3cde9732b2f9c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33335826"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210056"
 ---
 # <a name="converting-data-types-c"></a>Преобразование типов данных (C#)
 Методы преобразования изменяют тип входных объектов.  
@@ -74,9 +74,10 @@ static void Cast()
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq>  
- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [предложение from](../../../../csharp/language-reference/keywords/from-clause.md)  
- [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
- [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Linq>  
+- [Общие сведения о стандартных операторах запроса (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [предложение from](../../../../csharp/language-reference/keywords/from-clause.md)  
+- [Выражения запросов LINQ](../../../../csharp/programming-guide/linq-query-expressions/index.md)  
+- [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)

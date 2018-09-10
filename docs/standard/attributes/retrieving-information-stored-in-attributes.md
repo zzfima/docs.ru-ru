@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b6799763b4635632728561eef2820b26820aeed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7021a984f844660c45ae3e2d98569432ab64b657
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570414"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264783"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Извлечение информации, сохраненной в атрибуте
 Извлечение пользовательских атрибутов не представляет никакой сложности. Сначала объявите экземпляр атрибута, который вам нужно получить. Затем вызовите метод <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>, чтобы инициализировать новый атрибут тем значением, которое вы хотите получить. После инициализации нового атрибута обращайтесь к его свойствам, чтобы получить значения.  
@@ -84,8 +84,9 @@ The attribute was not found.
   
  Вы можете использовать члены класса <xref:System.Type>, чтобы получить отдельные методы и члены переданного класса. Этот пример первым делом опрашивает объект **Type**, чтобы получить данные об атрибуте на уровне класса. После этого он выполняет <xref:System.Type.GetMethods%2A?displayProperty=nameWithType>, чтобы поместить экземпляры всех методов в массив объектов <xref:System.Reflection.MemberInfo?displayProperty=nameWithType> и получить данные об атрибуте на уровне методов. Вы также можете использовать метод <xref:System.Type.GetProperties%2A?displayProperty=nameWithType>, чтобы найти атрибуты на уровне свойств, или метод <xref:System.Type.GetConstructors%2A?displayProperty=nameWithType>, чтобы найти атрибуты на уровне конструктора.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Type?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
- [Атрибуты](../../../docs/standard/attributes/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Type?displayProperty=nameWithType>  
+- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
+- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
+- [Атрибуты](../../../docs/standard/attributes/index.md)

@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76cfa51c7d434a6dfdcdc1e6852779decaa601e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 57290af1df8d370c928a97aba1622e41a6a33589
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570468"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44196253"
 ---
 # <a name="xpathnavigator-in-transformations"></a>XPathNavigator в преобразованиях
 Класс <xref:System.Xml.XPath.XPathNavigator> обеспечивает случайный доступ только для чтения и предназначен для использования в качестве входа в языке XSLT. Он реализован в <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument> и <xref:System.Xml.XmlDocument>. Класс <xref:System.Xml.XPath.XPathNavigator> основан на модели данных консорциума World Wide Web Consortium (W3C), описанной в разделе 5 рекомендаций по языку XPath.  
@@ -116,5 +116,6 @@ public class sample
 <?xml version="1.0" encoding="utf-8"?>Joe  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>См. также
+
+- [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

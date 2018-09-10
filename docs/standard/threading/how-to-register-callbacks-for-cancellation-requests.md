@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8838dd75-18ed-4b8b-b322-cd4531faac64
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8df4c73af81580d1b242ce0ede8f8bcb4cad4fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e2d61ba254a76235a12ca5dda23fdecb8838ae75
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583296"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43863586"
 ---
 # <a name="how-to-register-callbacks-for-cancellation-requests"></a>Практическое руководство. Регистрация обратных вызовов для запросов на отмену
 В следующем примере показана процедура регистрации делегата, который будет вызываться при принятии свойством <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> значения true в результате вызова <xref:System.Threading.CancellationTokenSource.Cancel%2A> для объекта, который создал токен. Этот прием используется для отмены асинхронных операций, в которых отсутствует встроенная поддержка унифицированной инфраструктуры отмены, а также для разблокирования методов, ожидающих завершения асинхронной операции.  
@@ -31,5 +31,6 @@ ms.locfileid: "33583296"
   
  Если при регистрации обратного вызова отмена уже была зарегистрирована, то этот обратный вызов гарантированно будет вызван. В этом случае метод <xref:System.Net.WebClient.CancelAsync%2A> не выполняет никаких действий (при отсутствии выполняющихся асинхронных операций), поэтому этот метод можно вызывать всегда.  
   
-## <a name="see-also"></a>См. также  
- [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>См. также
+
+- [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2a795fb52c123840c1ba7b82f77d6745feba89b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d253e7a32d5f302b095a86ddb5c296d5fa8fa11
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33588701"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44209501"
 ---
 # <a name="numerics-in-the-net-framework"></a>Числовые значения в платформе .NET Framework
 Платформа .NET Framework поддерживает стандартные числовые примитивные типы (целочисленные и с плавающей запятой), а также <xref:System.Numerics.BigInteger> (целочисленный тип, не имеющий теоретических верхних и нижних границ), <xref:System.Numerics.Complex> (тип для представления комплексных чисел), а также набор векторных типов с поддержкой SIMD в пространстве имен <xref:System.Numerics>.  
@@ -77,5 +77,6 @@ ms.locfileid: "33588701"
   
  SIMD также можно скачать в виде [пакета NuGet](https://www.nuget.org/packages/System.Numerics.Vectors).  Пакет NuGet также содержит универсальную структуру <xref:System.Numerics.Vector%601>, которая позволяет создать вектор любого примитивного числового типа. (К примитивным числовым типам относятся все числовые типы в пространстве имен <xref:System>, за исключением <xref:System.Decimal>.) Кроме того, структура <xref:System.Numerics.Vector%601> предоставляет библиотеку удобных методов, которые можно вызывать при работе с векторами.  
   
-## <a name="see-also"></a>См. также  
- [.NET Framework Application Essentials](../../docs/standard/application-essentials.md) (Основные сведения о приложениях .NET Framework)
+## <a name="see-also"></a>См. также
+
+- [Основные сведения о приложениях .NET Framework](../../docs/standard/application-essentials.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 67e752b9997301fcb3140539255fc32572bfd6e7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 257435516b38d0e4389b7feceba68371bcc8f90e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573624"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262143"
 ---
 # <a name="blockingcollection-overview"></a>Общие сведения о коллекции BlockingCollection
 <xref:System.Collections.Concurrent.BlockingCollection%601> — это потокобезопасный класс коллекции, обеспечивающий следующие возможности:  
@@ -80,7 +80,8 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
 ## <a name="using-many-blockingcollections-as-one"></a>Использование нескольких коллекций BlockingCollection в качестве одной коллекции  
  В сценариях, где потребителю необходимо одновременно извлекать элементы из нескольких коллекций, можно создавать массивы <xref:System.Collections.Concurrent.BlockingCollection%601> и использовать такие статические методы, как <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> и <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A>, позволяющие добавлять и извлекать элементы любой коллекции в массиве. Если одна из коллекций заблокирована, метод немедленно переходит к другой, пока не найдет коллекцию, способную выполнить операцию. Дополнительные сведения см. в разделе [Практическое руководство. Использование массивов для блокировки коллекций в конвейере](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [Коллекции и структуры данных](../../../../docs/standard/collections/index.md)  
- [Потокобезопасные коллекции](../../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- [Коллекции и структуры данных](../../../../docs/standard/collections/index.md)  
+- [Потокобезопасные коллекции](../../../../docs/standard/collections/thread-safe/index.md)

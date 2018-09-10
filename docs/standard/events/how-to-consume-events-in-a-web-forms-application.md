@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 73bf8638-c4ec-4069-b0bb-a1dc79b92e32
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b8af7b3894c010d5a7a4c712efe2458a6bb2a50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c03ab0e1d493d9669f1e3821393d41d1c1b89867
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571078"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44227549"
 ---
 # <a name="how-to-consume-events-in-a-web-forms-application"></a>Практическое руководство. Прием событий в приложениях Web Forms
 Распространенный сценарий в приложениях веб-форм ASP.NET — заполнение веб-страницы элементами управления и выполнение определенных действий в зависимости от того, какой элемент управления выбрал пользователь. Например, элемент управления <xref:System.Web.UI.WebControls.Button?displayProperty=nameWithType> вызывает событие, когда пользователь щелкает его на странице. При обработке события приложение может выполнить соответствующую логику приложения для этого нажатия кнопки.  
@@ -51,5 +51,6 @@ ms.locfileid: "33571078"
   
 3.  В метод обработчика событий, определенный на втором шаге, добавьте код для выполнения действий, которые должны быть выполнены при возникновении события.  
   
-## <a name="see-also"></a>См. также  
- [События](../../../docs/standard/events/index.md)
+## <a name="see-also"></a>См. также
+
+- [События](../../../docs/standard/events/index.md)

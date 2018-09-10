@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 804f92ddd564f057157598c3cf62106d1a7d5318
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35b8e062c9f207eba19bcee5593425095de2e267
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578207"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44041474"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Рекомендации по разработке международных приложений
 В этом разделе описаны рекомендации по разработке международных приложений.  
@@ -100,6 +100,7 @@ ms.locfileid: "33578207"
   
 5.  Обратите внимание, что в качестве значения uiCulture может быть задан язык, установленный в браузере.  
   
-## <a name="see-also"></a>См. также  
- [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)  
- [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>См. также
+
+- [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)  
+- [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)

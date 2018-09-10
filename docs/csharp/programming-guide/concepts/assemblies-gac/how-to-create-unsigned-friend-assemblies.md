@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание неподписанных дружественных сборок (C#)
 ms.date: 07/20/2015
 ms.assetid: 78cbc4f0-b021-4141-a4ff-eb4edbd814ca
-ms.openlocfilehash: 676b9d3c641f45736af50bc2290426e261b591c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7244f17c24a16569903783c730fc356b11e20aa8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340207"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44211805"
 ---
 # <a name="how-to-create-unsigned-friend-assemblies-c"></a>Практическое руководство. Создание неподписанных дружественных сборок (C#)
 В этом примере показано использование дружественных сборок с неподписанными сборками.  
@@ -90,9 +90,10 @@ ms.locfileid: "33340207"
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство. Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `internal`.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [Дружественные сборки (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Практическое руководство. Создание подписанных дружественных сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [Дружественные сборки (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [Практическое руководство. Создание подписанных дружественных сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)

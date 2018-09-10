@@ -8,11 +8,11 @@ helpviewer_keywords:
 - equality operator [C#]
 ms.assetid: 34c6b597-caa2-4855-a7cd-38ecdd11bd07
 ms.openlocfilehash: d9d7dcf3b38939e681fb51d6c674151cee78b3d0
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43421116"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43779174"
 ---
 # <a name="-operator-c-reference"></a>Оператор == (справочник по C#)
 Для предопределенных типов значений оператор равенства (`==`) возвращает значение true, если значения его операндов равны, и `false` в любых остальных случаях. Для ссылочных типов (кроме [string](../../../csharp/language-reference/keywords/string.md)) оператор `==` возвращает `true`, если оба его операнда ссылаются на один и тот же объект. Для типа `string` оператор `==` сравнивает значения строк.  

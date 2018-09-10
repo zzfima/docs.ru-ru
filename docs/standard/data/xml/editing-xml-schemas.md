@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fa09c8e5-c2b9-49d2-bb0d-40330cd13e4d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 38519ee90578d0bc13689216fb5674653ead4c19
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc8df722acd5c9547833cb4fe3051e1590c6c627
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577219"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087677"
 ---
 # <a name="editing-xml-schemas"></a>Изменение XML-схем
 Изменение схем XML является одной из самых важных возможностей модели SOM. Все свойства модели SOM, относящиеся к работе перед компиляцией схемы, можно использовать для изменения существующих значений в схеме XML. Затем можно повторно скомпилировать схему XML, чтобы изменения вступили в силу.  
@@ -135,11 +135,12 @@ ms.locfileid: "33577219"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Чтение и запись XML-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Обход XML-схем](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [Включение или импорт XML-схем](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Набор сведений для постсхемной компиляции](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>См. также
+
+- [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [Чтение и запись XML-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [Построение XML-схем](../../../../docs/standard/data/xml/building-xml-schemas.md)  
+- [Обход XML-схем](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+- [Включение или импорт XML-схем](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Набор сведений для постсхемной компиляции](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

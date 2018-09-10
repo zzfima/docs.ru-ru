@@ -2,12 +2,12 @@
 title: Статьи с практическими руководствами (руководств по языку C#)
 description: Коллекция советов и кратких конкретных примеров кода
 ms.date: 12/20/2017
-ms.openlocfilehash: 86e245873c8316cc4ddd52fe59a06f2cac648e6c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9326235341ee38e46f4204b7b3d7f67cae2774af
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507679"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44191695"
 ---
 # <a name="how-to-c"></a>Практическое руководство (C#)
 
@@ -65,7 +65,7 @@ ms.locfileid: "43507679"
 - [Преобразование строки в `DateTime`](../../standard/base-types/parsing-datetime.md).
 - [Преобразование массива байтов в значение типа int](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Преобразование строки в число](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
-- [Использование `as` и `is` для безопасного приведения к другому типу](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).
+- [Использование операторов сопоставления шаблонов `as` и `is` для безопасного приведения к другому типу](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
 - [Определение операторов преобразования для типов `struct`](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
 - [Определение того, допускает ли тип значения NULL](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
 - [Преобразование между типами значений, допускающие значения NULL, и типами, не допускающими значения NULL](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - delegates [C#], with named vs. anonymous methods
 - methods [C#], in delegates
 ms.assetid: 98fa8c61-66b6-4146-986c-3236c4045733
-ms.openlocfilehash: 93e140859e44aab860577feede40df6eab4c8e00
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d7dcb3c7c6fa8f1d55237504c23cf468aa0e79d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330769"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44194222"
 ---
 # <a name="delegates-with-named-vs-anonymous-methods-c-programming-guide"></a>Делегаты с именованными методами и Анонимные методы (Руководство по программированию в C#)
 [Делегат](../../../csharp/language-reference/keywords/delegate.md) можно связать с именованным методом. При создании экземпляра делегата с использованием именованного метода этот метод передается в качестве параметра, например:  
@@ -36,9 +36,10 @@ ms.locfileid: "33330769"
   
  [!code-csharp[csProgGuideDelegates#3](../../../csharp/programming-guide/delegates/codesnippet/CSharp/delegates-with-named-vs-anonymous-methods_3.cs)]  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Делегаты](../../../csharp/programming-guide/delegates/index.md)  
- [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
- [Практическое руководство. Объединение делегатов (многоадресные делегаты)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
- [События](../../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Делегаты](../../../csharp/programming-guide/delegates/index.md)  
+- [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+- [Практическое руководство. Объединение делегатов (многоадресные делегаты)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+- [События](../../../csharp/programming-guide/events/index.md)

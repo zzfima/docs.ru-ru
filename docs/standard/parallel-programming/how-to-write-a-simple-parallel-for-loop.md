@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a601c8f1fed04c839c2a413e4b0e44a75f4195b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29da081784c06d8cd467f0566f9d4db92a130b53
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586147"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087278"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Практическое руководство. Написание простого цикла Parallel.For
 Этот раздел содержит два примера, иллюстрирующих использование метода <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Первый использует перегрузку метода <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType>, а второй — перегрузку <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType>, которые являются двумя простейшими перегрузками метода <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>. Эти две перегрузки метода <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> можно использовать, когда не требуется отменять цикл, прерывать итерации цикла или сохранять локальное состояние по отношению к потоку.  
@@ -63,8 +63,9 @@ ms.locfileid: "33586147"
   
 -   Скопируйте и вставьте этот код в проект Visual Studio 2010.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.Tasks.Parallel.For%2A>  
- <xref:System.Threading.Tasks.Parallel.ForEach%2A>  
- [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.Tasks.Parallel.For%2A>  
+- <xref:System.Threading.Tasks.Parallel.ForEach%2A>  
+- [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)

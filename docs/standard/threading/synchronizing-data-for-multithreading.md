@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 998e159cceded6da2e9c3068680c45bc1c9345a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1a7561a09b1b47827b3476b5525863503765064f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591535"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180141"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Синхронизация данных для многопоточности
 Если несколько потоков могут вызывать свойства и методы отдельного объекта, эти вызовы важно синхронизировать. В противном случае поток может прерваться действиями другого потока, а объект может остаться в недопустимом состоянии. Класс, члены которого защищены от подобных прерываний, называется потокобезопасным.  
@@ -67,9 +67,10 @@ ms.locfileid: "33591535"
 ## <a name="synchronized-context"></a>Синхронизированные контексты  
  **SynchronizationAttribute** можно использовать в любом объекте **ContextBoundObject** для синхронизации всех методов и полей экземпляра. Блокировка распространяется на все объекты с одним и тем же контекстным доменом. К методам и полям могут обращаться сразу несколько потоков, но только по одному за раз.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
- [Потоки и работа с потоками](../../../docs/standard/threading/threads-and-threading.md)  
- [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
- [Оператор SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
- [Оператор lock](~/docs/csharp/language-reference/keywords/lock-statement.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
+- [Потоки и работа с потоками](../../../docs/standard/threading/threads-and-threading.md)  
+- [Обзор примитивов синхронизации](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
+- [Оператор SyncLock](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+- [Оператор lock](~/docs/csharp/language-reference/keywords/lock-statement.md)

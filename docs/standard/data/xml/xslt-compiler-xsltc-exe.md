@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aef49f70f3a60151aa053a1a94a06bc71401531e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 470dd0eb37d8081d388ef69b204293f568096a5e
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575444"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262234"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT-компилятор (xsltc.exe)
 XSLT-компилятор (xsltc.exe) компилирует таблицы стилей XSLT и создает сборку. Скомпилированную таблицу стилей можно передать непосредственно методу <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType>. Подписанные сборки не могут создаваться с помощью xsltc.exe.  
@@ -82,7 +82,8 @@ xsltc /settings:DTD+,script+ /out:myTest calc.xsl
 xsltc booksort.xsl output.xsl  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.Xsl.XslCompiledTransform>  
- [Как выполнить XSLT-преобразование с помощью сборки](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
- [Преобразования XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Xml.Xsl.XslCompiledTransform>  
+- [Как выполнить XSLT-преобразование с помощью сборки](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
+- [Преобразования XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

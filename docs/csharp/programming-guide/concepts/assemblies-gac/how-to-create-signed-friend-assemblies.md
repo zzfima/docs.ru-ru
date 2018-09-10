@@ -2,12 +2,12 @@
 title: Практическое руководство. Создание подписанных дружественных сборок (C#)
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 34243a65f57f41c358439baac82a1ce169233259
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f310055db6899bf315310efc22b67bca2c4500f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340662"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260010"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Практическое руководство. Создание подписанных дружественных сборок (C#)
 В этом примере демонстрируется использование дружественных сборок со сборками, имеющими строгие имена. Обе сборки должны иметь строгое имя. Хотя обе сборки в этом примере используют одинаковые ключи, вы можете использовать для двух сборок разные ключи.  
@@ -16,7 +16,7 @@ ms.locfileid: "33340662"
   
 1.  Откройте окно командной строки.  
   
-2.  Используйте следующую последовательность команд в средстве задания строгих имен для формирования файла ключа и отображения его открытого ключа. Дополнительные сведения см. на странице [Sn.exe (Strong Name Tool)](https://msdn.microsoft.com/library/k5b5tt23) (Sn.exe: средство строгих имен).  
+2.  Используйте следующую последовательность команд в средстве задания строгих имен для формирования файла ключа и отображения его открытого ключа. Дополнительные сведения см. на странице [Sn.exe (Strong Name Tool)](../../../../framework/tools/sn-exe-strong-name-tool.md) (Sn.exe: средство строгих имен).  
   
     1.  Создайте ключ строгого имени для этого примера и сохраните его в файле FriendAssemblies.snk:  
   
@@ -88,12 +88,13 @@ ms.locfileid: "33340662"
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Между атрибутом <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> и классом <xref:System.Security.Permissions.StrongNameIdentityPermission> существует определенное сходство. Основное отличие заключается в том, что для выполнения <xref:System.Security.Permissions.StrongNameIdentityPermission> в определенном разделе кода могут потребоваться разрешения системы безопасности, тогда как атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> определяет видимость членов и типов `internal`.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
- [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
- [Дружественные сборки (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Практическое руководство. Создание неподписанных дружественных сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
- [/keyfile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [Sn.exe (средство строгих имен)](https://msdn.microsoft.com/library/k5b5tt23)  
- [Создание и использование сборок со строгими именами](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
+- [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+- [Дружественные сборки (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
+- [Практическое руководство. Создание неподписанных дружественных сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
+- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)  
+- [Sn.exe (средство строгих имен)](../../../../framework/tools/sn-exe-strong-name-tool.md)  
+- [Создание и использование сборок со строгими именами](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)

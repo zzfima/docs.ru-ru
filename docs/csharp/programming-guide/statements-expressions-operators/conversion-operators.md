@@ -7,12 +7,12 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: 97e93230658b5d1da676b029169b63bc9006ddb1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cbf6a83d43a1b3a69e82a35d5d0875f62422cd3f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334718"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183318"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>Операторы преобразования (Руководство по программированию в C#)
 Разработчики на C# могут объявлять преобразования классов или структур в другие классы, структуры или базовые типы и обратно. Преобразования определяются как операторы и называются по имени типа, в который осуществляется преобразование. В качестве содержащего типа должен выступать либо тип преобразуемого аргумента, либо тип результата преобразования, но не оба эти типа.  
@@ -43,7 +43,8 @@ ms.locfileid: "33334718"
   
 -   [static](../../../csharp/language-reference/keywords/static.md)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Convert>  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Связанные пользовательские явные преобразования в C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Convert>  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Связанные пользовательские явные преобразования в C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)

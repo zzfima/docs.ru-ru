@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 476dc75a569224db405eb7498ecb35eb6bda24d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcedd478ee1eb89c11dc9535b1d2ffe843d0f658
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583082"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44081333"
 ---
 # <a name="foreground-and-background-threads"></a>Основные и фоновые потоки
 Управляемый поток может быть основным или фоновым. Фоновые потоки отличаются от основных только в одном аспекте: фоновый поток не поддерживает управляемое выполнение среды выполнения. После того, как в управляемом процессе (где управляемой сборкой является файл EXE) остановятся все основные потоки, система принудительно останавливает все фоновые потоки и завершает работу процесса.  
@@ -32,7 +32,8 @@ ms.locfileid: "33583082"
   
  Если у вас есть поток, который отслеживает некоторое действие, например подключение через сокет, установите для его свойства <xref:System.Threading.Thread.IsBackground%2A> значение `true`, чтобы этот поток не мешал завершить процесс.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
- <xref:System.Threading.Thread>  
- <xref:System.Threading.ThreadAbortException>
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadAbortException>

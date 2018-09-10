@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3894229ff5561e50d42a36f576a89ee7bf01c067
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: f7721ffaebfefadee332c923d867e68204b5205f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33592422"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268764"
 ---
 # <a name="the-managed-thread-pool"></a>Пул управляемых потоков
 
@@ -87,12 +87,12 @@ ms.locfileid: "33592422"
   
 ## <a name="see-also"></a>См. также
 
- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
- [Библиотека параллельных задач (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
- [Практическое руководство. Возвращение значения из задачи](../parallel-programming/how-to-return-a-value-from-a-task.md)  
- [Объекты и функциональные возможности работы с потоками](threading-objects-and-features.md)  
- [Потоки и работа с потоками](threads-and-threading.md)  
- [Асинхронный файловый ввод-вывод](../io/asynchronous-file-i-o.md)  
- [Таймеры](timers.md)  
+- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
+- [Библиотека параллельных задач (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
+- [Практическое руководство. Возвращение значения из задачи](../parallel-programming/how-to-return-a-value-from-a-task.md)  
+- [Объекты и функциональные возможности работы с потоками](threading-objects-and-features.md)  
+- [Потоки и работа с потоками](threads-and-threading.md)  
+- [Асинхронный файловый ввод-вывод](../io/asynchronous-file-i-o.md)  
+- [Таймеры](timers.md)  

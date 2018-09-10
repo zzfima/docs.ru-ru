@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 8a5ea56c-0140-4b51-8997-875ae6a8e0cb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ed02680831302880e2bfc02b21ea61303b92a3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10b2471d13d410826cec3404725117649442297b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576826"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44197346"
 ---
 # <a name="building-xml-schemas"></a>Построение XML-схем
 Классы в пространстве имен <xref:System.Xml.Schema?displayProperty=nameWithType> сопоставляются со структурами, определенными в рекомендациях по схемам XML консорциума W3C, и могут использоваться для сборки схем XML в памяти.  
@@ -88,11 +88,12 @@ ms.locfileid: "33576826"
 </xs:schema>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Чтение и запись XML-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Обход XML-схем](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [Изменение XML-схем](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Включение или импорт XML-схем](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Набор сведений для постсхемной компиляции](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+## <a name="see-also"></a>См. также
+
+- [Общие сведения об модели объектов XML-схемы](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+- [Чтение и запись XML-схем](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+- [Обход XML-схем](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+- [Изменение XML-схем](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [Включение или импорт XML-схем](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+- [XmlSchemaSet для компиляции схемы](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- [Набор сведений для постсхемной компиляции](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

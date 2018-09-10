@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2cb45ea6ed5c5795c910b2f6c3575b12f8189cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f9aca20a3ff65d061c04a21e31db3fb5eab62ba
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213916"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252620"
 ---
 # <a name="-deterministic"></a>-deterministic
 
@@ -55,5 +55,6 @@ ms.locfileid: "33213916"
 Если источники общедоступны, детерминированную компиляцию можно использовать, чтобы установить, компилируются ли двоичные данные из надежного источника. Ее также можно использовать в системе непрерывной сборки, чтобы определить необходимость выполнения шагов сборки, зависящих от изменений в двоичном файле. 
 
 ## <a name="see-also"></a>См. также  
- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)
+
+- [Параметры компилятора C# ](../../../csharp/language-reference/compiler-options/index.md)  
+- [Управление свойствами проектов и решений](/visualstudio/ide/managing-project-and-solution-properties)

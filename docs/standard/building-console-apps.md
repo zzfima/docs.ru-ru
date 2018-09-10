@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: c21fb997-9f0e-40a5-8741-f73bba376bd8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79005c69e8c125e78573a44f34740632676faf59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 979989c3e1f90f3de47473aa1bd8bc5268520e57
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568814"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261974"
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Построение консольных приложений в .NET Framework
 Приложения .NET Framework могут использовать класс <xref:System.Console?displayProperty=nameWithType> для выполнения консольного ввода-вывода символов. Данные, поступающие от консоли, считываются из стандартного потока ввода, выводимые на консоль данные записываются в стандартный поток вывода, а сведения об ошибках записываются в стандартный поток вывода ошибок. Эти потоки автоматически связываются с консолью при запуске приложения и представлены свойствами <xref:System.Console.In%2A>, <xref:System.Console.Out%2A> и <xref:System.Console.Error%2A> соответственно.  
@@ -32,6 +32,7 @@ ms.locfileid: "33568814"
   
  У класса **System.Console** имеются методы, позволяющие считывать с консоли отдельные символы или целые строки. Другие методы выполняют преобразование данных и форматирование строковых значений, а затем выводят отформатированные строки на консоль. Дополнительные сведения о форматировании строк см. в статье [Общие сведения о форматировании](../../docs/standard/base-types/formatting-types.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Console?displayProperty=nameWithType>  
- [Типы форматирования](../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Console?displayProperty=nameWithType>  
+- [Типы форматирования](../../docs/standard/base-types/formatting-types.md)

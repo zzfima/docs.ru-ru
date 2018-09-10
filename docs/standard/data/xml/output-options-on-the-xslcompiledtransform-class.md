@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa1049528458d558409ac1ace215c7d5b10f520e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572100"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183490"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>Параметры вывода в классе XslCompiledTransform
 В этом разделе рассматриваются доступные параметры вывода XSLT. Параметры вывода можно указать в таблице стилей или методе <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A>.  
@@ -57,5 +57,6 @@ ms.locfileid: "33572100"
   
 -   При записи пустых тегов между последним символом имени элемента и обратной косой чертой записывается пробел, например `<myElement />`. Это позволяет правильно отобразить сформированные HTML-страницы в старых браузерах.  
   
-## <a name="see-also"></a>См. также  
- [Преобразования XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)
+## <a name="see-also"></a>См. также
+
+- [Преобразования XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

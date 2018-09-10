@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4e4d7e64-9f1b-4026-98f7-20488ac7b42b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cb8da9ff6df910e1932c593c1f1b882dca12146a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5cc481c7370a21c56daf9ce2949247e65fa33bda
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33572363"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225533"
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Практическое руководство. Использование именованных каналов для взаимодействия между процессами по сети
 Именованные каналы обеспечивают межпроцессное взаимодействие между сервером канала и одним или несколькими клиентами канала. Они предоставляют больше функциональных возможностей, чем анонимные каналы, которые обеспечивают межпроцессное взаимодействие на локальном компьютере. Именованные каналы поддерживают полную дуплексную связь по сети и несколько экземпляров сервера, связь на основе сообщений и олицетворение клиента, позволяющее подключающимся процессам использовать собственные наборы разрешений на удаленных серверах.  
@@ -45,8 +45,9 @@ ms.locfileid: "33572363"
 ## <a name="robust-programming"></a>Отказоустойчивость  
  Клиентский и серверный процессы в этом примере предназначены для выполнения на одном компьютере, поэтому объекту <xref:System.IO.Pipes.NamedPipeClientStream> передается имя сервера `"."`. Если клиентский и серверный процессы выполняются на разных компьютерах, вместо `"."` должно быть указано сетевое имя компьютера, на котором осуществляется серверный процесс.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Security.Principal.TokenImpersonationLevel>  
- <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>  
- [Каналы](../../../docs/standard/io/pipe-operations.md)  
- [Практическое руководство. Использование анонимных каналов для локального взаимодействия между процессами](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Security.Principal.TokenImpersonationLevel>  
+- <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>  
+- [Каналы](../../../docs/standard/io/pipe-operations.md)  
+- [Практическое руководство. Использование анонимных каналов для локального взаимодействия между процессами](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)

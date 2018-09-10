@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ToString method, overriding in C#
 - inheritance [C#], overriding OnPaint and ToString
 ms.assetid: 8016db69-1f19-420c-8e17-98e8bebb7749
-ms.openlocfilehash: 86394f5fed55f57df8928648548fcfca117b00d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b047efb9215675b8c3dfb75438a6dbbc4e6f92d0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33330711"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084177"
 ---
 # <a name="how-to-override-the-tostring-method-c-programming-guide"></a>Практическое руководство. Переопределение метода ToString (Руководство по программированию на C#)
 Каждый класс или структура в языке C# неявно наследует класс <xref:System.Object>. Поэтому каждый объект в языке C# получает метод <xref:System.Object.ToString%2A>, который возвращает строковое представление данного объекта. Например, все переменные типа `int` имеют метод `ToString`, который позволяет им возвращать их содержимое в виде строки:  
@@ -42,13 +42,14 @@ ms.locfileid: "33330711"
   
      [!code-csharp[csProgGuideInheritance#38](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-override-the-tostring-method_3.cs)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IFormattable>  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Строки](../../../csharp/programming-guide/strings/index.md)  
- [string](../../../csharp/language-reference/keywords/string.md)  
- [new](../../../csharp/language-reference/keywords/new.md)  
- [override](../../../csharp/language-reference/keywords/override.md)  
- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
- [Типы форматирования](../../../standard/base-types/formatting-types.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.IFormattable>  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Строки](../../../csharp/programming-guide/strings/index.md)  
+- [string](../../../csharp/language-reference/keywords/string.md)  
+- [new](../../../csharp/language-reference/keywords/new.md)  
+- [override](../../../csharp/language-reference/keywords/override.md)  
+- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+- [Типы форматирования](../../../standard/base-types/formatting-types.md)

@@ -2,12 +2,12 @@
 title: Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: c052302439407cecd7ce2924cc6cf5ffeefd1239
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 679dde2d2d1607c2703468f64903f3cd9e59bcb8
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328017"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083577"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>Практическое руководство. Объединение и сравнение коллекций строк (LINQ) (C#)
 В этом примере показано объединение файлов, содержащих строки текста, и последующая сортировка результатов. В частности, показано выполнение простого сцепления, объединения и пересечения в двух наборах строк текста.  
@@ -171,6 +171,7 @@ class MergeStrings
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.  
   
-## <a name="see-also"></a>См. также  
- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>См. также
+
+- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

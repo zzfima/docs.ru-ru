@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - indexers [C#], about indexers
 ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
-ms.openlocfilehash: 82de2841a74f58905d3089bb0b320e7501a77045
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e4c1f346b83cf97c57a359984bd08e075b6451b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33337617"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44253225"
 ---
 # <a name="using-indexers-c-programming-guide"></a>Использование индексаторов (Руководство по программированию в C#)
 Применение индексаторов упрощает работу с синтаксисом, позволяя создавать [классы](../../../csharp/language-reference/keywords/class.md), [структуры](../../../csharp/language-reference/keywords/struct.md) и [интерфейсы](../../../csharp/language-reference/keywords/interface.md), к которым клиентские приложения могут обращаться так же, как к массиву. Индексаторы чаще всего реализуются в типах, предназначенных преимущественно для инкапсуляции внутренней коллекции или массива. Допустим, у вас есть класс TempRecord, представляющий журнал с 10 измерениями температуры по шкале Фаренгейта за 24 часа. В этом классе содержится массив temps типа float, представляющий значения температуры, а также <xref:System.DateTime>, содержащий даты соответствующих измерений. Реализация индексатора в этом классе позволит клиентам получать доступ к значениям температуры в экземпляре TempRecord, используя синтаксис `float temp = tr[4]` вместо `float temp = tr.temps[4]`. Это позволяет не только упростить синтаксис клиентских приложений, но и облегчить понимание кода класса и его предназначения другими разработчиками.  
@@ -71,7 +71,8 @@ public int this [int index]   // Indexer declaration
   
 -   Настройте максимально ограничивающие уровни доступа для методов `get` и [set](../../../csharp/language-reference/keywords/set.md). Особенно важно сделать это для метода доступа `set`. Дополнительные сведения см. в разделе [Доступность методов доступа](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md).  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
+- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)

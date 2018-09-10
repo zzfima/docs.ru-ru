@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 66082d58ac38348eb4f2ee16bf611259d9fe598e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb520169f8e7925862d415a4dfb65af09263b0d2
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580230"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266830"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>Практическое руководство. Отмена задачи и ее дочерних элементов
 В следующих примерах показано выполнение таких задач:  
@@ -38,11 +38,12 @@ ms.locfileid: "33580230"
   
  Класс <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> полностью интегрирован с моделью отмены, основанной на типах <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> и <xref:System.Threading.CancellationToken?displayProperty=nameWithType>. Дополнительные сведения см. в статьях [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md) и [Отмена задач](../../../docs/standard/parallel-programming/task-cancellation.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>  
- <xref:System.Threading.CancellationToken?displayProperty=nameWithType>  
- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
- [Асинхронное программирование на основе задач](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)  
- [Присоединенные и отсоединенные дочерние задачи](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)  
- [Лямбда-выражения в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType>  
+- <xref:System.Threading.CancellationToken?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
+- [Асинхронное программирование на основе задач](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)  
+- [Присоединенные и отсоединенные дочерние задачи](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)  
+- [Лямбда-выражения в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

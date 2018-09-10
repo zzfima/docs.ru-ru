@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 11393f4013a1b5ed9dc90154f289466432102a38
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 48838a90939899fc1e7e91cdb7bbe98019591416
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573124"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210303"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Сравнение и сортировка в коллекциях
 Классы <xref:System.Collections> выполняют сравнения почти во всех процессах управления коллекциями — будь то поиск элемента для удаления или возвращение значения пары "ключ-значение".  
@@ -59,9 +59,10 @@ ms.locfileid: "33573124"
  [!code-csharp[System.Collections.Generic.List.Sort#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.collections.generic.list.sort/cs/program.cs#1)]
  [!code-vb[System.Collections.Generic.List.Sort#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.collections.generic.list.sort/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections.IComparer>  
- <xref:System.IEquatable%601>  
- <xref:System.Collections.Generic.IComparer%601>  
- <xref:System.IComparable>  
- <xref:System.IComparable%601>
+## <a name="see-also"></a>См. также
+
+- <xref:System.Collections.IComparer>  
+- <xref:System.IEquatable%601>  
+- <xref:System.Collections.Generic.IComparer%601>  
+- <xref:System.IComparable>  
+- <xref:System.IComparable%601>

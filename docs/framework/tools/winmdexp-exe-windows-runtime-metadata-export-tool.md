@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7181f6f28d576c5ddbbbe57d27e1d41e412cef6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a228513bd29e35e8793124846de16f1c8bf4c10
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408103"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208534"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)
 Программа экспорта метаданных (Winmdexp.exe) [!INCLUDE[wrt](../../../includes/wrt-md.md)] преобразует модуль .NET Framework в файл, содержащий метаданные [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Несмотря на то что сборки .NET Framework и файлы метаданных [!INCLUDE[wrt](../../../includes/wrt-md.md)] используют один и тот же физический формат, существуют различия в содержимом таблиц метаданных, то есть сборки .NET Framework невозможно автоматически использовать как компоненты [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Процесс преобразования модуля .NET Framework в компонент [!INCLUDE[wrt](../../../includes/wrt-md.md)] называется *экспортированием*. В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] конечный файл метаданных Windows (WINMD) содержит и метаданные, и реализацию.  
@@ -46,12 +46,12 @@ winmdexp [options] winmdmodule
 |**@** `responsefile`|Задает файл ответа (RSP), содержащий параметры (и при необходимости — `winmdmodule`). Каждая строка в файле `responsefile` должна содержать один аргумент или параметр.|  
   
 ## <a name="remarks"></a>Примечания  
- Программа Winmdexp.exe не предназначена для преобразования произвольной сборки .NET Framework в WINMD-файл. Для ее работы требуется модуль, который скомпилирован с параметром `/target:winmdobj`, и использование дополнительных ограничений. Наиболее важным ограничением является то, что все типы, которые отображаются в рабочей области API сборки, должны быть типами [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Дополнительные сведения см. в разделе "Объявление типов в компонентах среды выполнения Windows" статьи [Создание компонентов среды выполнения Windows на языках C# и Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=238313) в Центре разработки для Windows.  
+ Программа Winmdexp.exe не предназначена для преобразования произвольной сборки .NET Framework в WINMD-файл. Для ее работы требуется модуль, который скомпилирован с параметром `/target:winmdobj`, и использование дополнительных ограничений. Наиболее важным ограничением является то, что все типы, которые отображаются в рабочей области API сборки, должны быть типами [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Дополнительные сведения см. в разделе "Объявление типов в компонентах среды выполнения Windows" статьи [Создание компонентов среды выполнения Windows на языках C# и Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313) в Центре разработки для Windows.  
   
- Платформа .NET Framework упрощает программирование в [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] и делает его более естественным при создании приложений [!INCLUDE[wrt](../../../includes/wrt-md.md)] или компонентов [!INCLUDE[wrt](../../../includes/wrt-md.md)] на C# или Visual Basic. Это рассматривается в статье [Поддержка платформы .NET Framework для приложений Магазина Windows и среды выполнения Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). Во время разработки некоторые часто используемые типы [!INCLUDE[wrt](../../../includes/wrt-md.md)] сопоставляются с типами .NET Framework. Программа Winmdexp.exe позволяет упростить такой процесс и создает рабочую область API, в которой используются соответствующие типы [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Например, типы, полученные из интерфейса <xref:System.Collections.Generic.IList%601>, сопоставляются с типами, полученными из интерфейса [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](http://go.microsoft.com/fwlink/p/?LinkId=251132).  
+ Платформа .NET Framework упрощает программирование в [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] и делает его более естественным при создании приложений [!INCLUDE[wrt](../../../includes/wrt-md.md)] или компонентов [!INCLUDE[wrt](../../../includes/wrt-md.md)] на C# или Visual Basic. Это рассматривается в статье [Поддержка платформы .NET Framework для приложений Магазина Windows и среды выполнения Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). Во время разработки некоторые часто используемые типы [!INCLUDE[wrt](../../../includes/wrt-md.md)] сопоставляются с типами .NET Framework. Программа Winmdexp.exe позволяет упростить такой процесс и создает рабочую область API, в которой используются соответствующие типы [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Например, типы, полученные из интерфейса <xref:System.Collections.Generic.IList%601>, сопоставляются с типами, полученными из интерфейса [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132).  
   
 ## <a name="see-also"></a>См. также  
  [Поддержка платформы .NET Framework для приложений магазина Windows и среды выполнения Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
- [Создание компонентов среды выполнения Windows в C# и Visual Basic](http://go.microsoft.com/fwlink/p/?LinkID=238313)  
+ [Создание компонентов среды выполнения Windows в C# и Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313)  
  [Сообщения об ошибках Winmdexp.exe](../../../docs/framework/tools/winmdexp-exe-error-messages.md)  
- [Средства построения, развертывания и конфигурирования (платформа .NET Framework)](http://msdn.microsoft.com/library/b8c921be-6012-4181-b8d4-ab15813fc9a7)
+ [Средства построения, развертывания и конфигурирования (платформа .NET Framework)](https://msdn.microsoft.com/library/b8c921be-6012-4181-b8d4-ab15813fc9a7)

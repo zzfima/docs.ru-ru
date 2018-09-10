@@ -5,12 +5,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 61818b153bb74c5c0da053f381fd1ed9132c066b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbfd0c48dc59b094af49e65d2ed4fcd4e2a70ff0
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318228"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087563"
 ---
 # <a name="members-c-programming-guide"></a>Члены (Руководство по программированию на C#)
 В классах и структурах есть члены, представляющие их данные и поведение. Члены класса включают все члены, объявленные в этом классе, а также все члены (кроме конструкторов и методов завершения), объявленные во всех классах в иерархии наследования данного класса. Закрытые члены в базовых классах наследуются, но недоступны из производных классов.  
@@ -30,16 +30,17 @@ ms.locfileid: "33318228"
 |[Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)|Методы завершения очень редко используются в C#. Они являются методами, вызываемыми средой выполнения, когда объект нужно удалить из памяти. Они обычно применяются для правильной обработки ресурсов, которые должны быть высвобождены.|  
 |[Вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md)|Вложенными типами являются типы, объявленные в другом типе. Вложенные типы часто применяются для описания объектов, использующихся только типами, в которых эти объекты находятся.|  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
- [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
- [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)  
- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
- [События](../../../csharp/programming-guide/events/index.md)  
- [Вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
- [Операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
- [Перегружаемые операторы](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [Методы завершения](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [Свойства](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [Поля](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
+- [События](../../../csharp/programming-guide/events/index.md)  
+- [Вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+- [Операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Перегружаемые операторы](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md)

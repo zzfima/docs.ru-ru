@@ -2,12 +2,12 @@
 title: Использование метода Async для доступа к файлам (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 083a9113fc75c9e18646953a144b9e3d1bfd90ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bbaeb14d5c17665308932c26a0630f1e9e5dabdf
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328293"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44225221"
 ---
 # <a name="using-async-for-file-access-c"></a>Использование метода Async для доступа к файлам (C#)
 Для доступа к файлам можно использовать функцию Async. При использовании функции Async вы можете вызывать асинхронные методы без использования обратных вызовов или разделения вашего кода на множество методов или лямбда-выражений. Для выполнения последовательного кода асинхронно просто вызовите асинхронный метод вместо синхронного метода и добавьте несколько ключевых слов в код.  
@@ -174,7 +174,8 @@ public async void ProcessWriteMult()
   
  При использовании методов <xref:System.IO.Stream.WriteAsync%2A> и <xref:System.IO.Stream.ReadAsync%2A> можно указать <xref:System.Threading.CancellationToken>, который позволяет отменить операцию в середине потока. Дополнительные сведения см. в разделах [Настройка асинхронного приложения (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md) и [Отмена в управляемых потоках](../../../../standard/threading/cancellation-in-managed-threads.md).  
   
-## <a name="see-also"></a>См. также  
- [Асинхронное программирование с использованием ключевых слов async и await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений асинхронных операций в C#)  
- [Поток управления в асинхронных программах (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)
+## <a name="see-also"></a>См. также
+
+- [Асинхронное программирование с использованием ключевых слов async и await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
+- [Async Return Types (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений асинхронных операций в C#)  
+- [Поток управления в асинхронных программах (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)

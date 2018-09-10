@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acc661e8110892dc7daa603ef82b4bc5f167a970
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 176ae3589443937331259ee4716570c66053de3c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579448"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44186192"
 ---
 # <a name="implementing-a-dispose-method"></a>Реализация метода Dispose
 
@@ -162,11 +162,11 @@ ms.locfileid: "33579448"
   
 ## <a name="see-also"></a>См. также
 
-<xref:System.GC.SuppressFinalize%2A>   
-<xref:System.IDisposable>   
-<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>   
-<xref:Microsoft.Win32.SafeHandles>   
-<xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
-<xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
-[Практическое руководство. Определение и использование классов и структур (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
-[Шаблон ликвидации](../../../docs/standard/design-guidelines/dispose-pattern.md)
+- <xref:System.GC.SuppressFinalize%2A>   
+- <xref:System.IDisposable>   
+- <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>   
+- <xref:Microsoft.Win32.SafeHandles>   
+- <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType>   
+- <xref:System.Object.Finalize%2A?displayProperty=nameWithType>   
+- [Практическое руководство. Определение и использование классов и структур (C++/CLI)](/cpp/dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli)   
+- [Шаблон ликвидации](../../../docs/standard/design-guidelines/dispose-pattern.md)

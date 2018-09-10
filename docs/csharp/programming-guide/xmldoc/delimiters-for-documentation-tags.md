@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: 8c5e7b0e921c7720524b9fa398f2c5d451747e3d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 06bd997e6862bc1f86ad2e3b2afbbb5afac78d9c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33325686"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44217260"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Разделители для тегов в документации (Руководство по программированию на C#)
 Для создания комментариев в документах XML необходимо использовать разделители, по которым компилятор определяет начало и конец комментария. С тегами в XML-документации можно использовать следующие виды разделителей:  
@@ -77,8 +77,9 @@ ms.locfileid: "33325686"
     */   
     ```  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
- [/doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
- [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [/doc (параметры компилятора C#)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
+- [Комментарии XML-документации](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f4429d50f6b7646cb75fad44957a98812282928
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a17752257589ea4ee4d9e58182d4448f02f6460
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571268"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225205"
 ---
 # <a name="handling-com-interop-exceptions"></a>Обработка исключений COM-взаимодействия
 При обработке исключений управляемый и неуправляемый код может работать совместно. Если метод вызывает исключение в управляемом коде, то среда CLR может передать значение HRESULT в COM-объект. Если сбой метода происходит в неуправляемом коде и возвращается значение HRESULT, указывающее на сбой, то среда выполнения создает исключение, которое может быть перехвачено управляемым кодом.  
@@ -31,4 +31,5 @@ ms.locfileid: "33571268"
  Если сбой метода произошел в неуправляемом коде, то исключение может быть передано в сегмент управляемого кода. В разделе [Сопоставление значений HRESULT и исключений](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md) представлена таблица, в которой показано сопоставление значений HRESULT с объектами исключений среды выполнения.  
 
 ## <a name="see-also"></a>См. также
-[Исключения](index.md) 
+
+- [Исключения](index.md)

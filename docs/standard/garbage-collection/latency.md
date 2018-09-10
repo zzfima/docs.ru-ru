@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 96278bb7-6eab-4612-8594-ceebfc887d81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 913a5d6ab28d375dbfdd99dec6fd153bc94efee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3440e0869bfd131f8a57a74af6105716d4b72935
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573904"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43883726"
 ---
 # <a name="latency-modes"></a>Режимы задержки
 Чтобы освободить объекты, сборщик мусора должен остановить все выполняющиеся потоки приложения. В некоторых ситуациях, например, когда приложение получает данные или отображает содержимое, полная сборка мусора может произойти в критическое время и снизить производительность. Степень вмешательства сборщика мусора можно настроить, присвоив свойству <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> одно из значений <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType>.  
@@ -54,7 +54,8 @@ ms.locfileid: "33573904"
   
 -   Можно принудительно запускать освобождение объектов поколения 2 в периоды небольшого времени ожидания путем вызова метода <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%29?displayProperty=nameWithType>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.GC?displayProperty=nameWithType>  
- [Индуцированные коллекции](../../../docs/standard/garbage-collection/induced.md)  
- [Сборка мусора](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.GC?displayProperty=nameWithType>  
+- [Индуцированные коллекции](../../../docs/standard/garbage-collection/induced.md)  
+- [Сборка мусора](../../../docs/standard/garbage-collection/index.md)

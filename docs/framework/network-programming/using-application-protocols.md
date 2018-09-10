@@ -17,11 +17,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: 158a68d97a52bb5a72985d260a3dd5c6bfd0bd41
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43408491"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084615"
 ---
 # <a name="using-application-protocols"></a>Использование протоколов приложений
 Платформа .NET Framework поддерживает распространенные прикладные протоколы Интернета. В этом разделе приводятся сведения об использовании протоколов [HTTP](../../../docs/framework/network-programming/http.md), TCP и UDP, а также интерфейса [Windows Sockets](../../../docs/framework/network-programming/sockets.md) для реализации пользовательских протоколов.  

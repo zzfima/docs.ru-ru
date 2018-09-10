@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 270ae5a8cfa7c69c7caa0896dfe23b84db48f659
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cf253ff4a25ba902c16c6d00a8be4bf291166774
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575522"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268738"
 ---
 # <a name="asynchronous-file-io"></a>Асинхронный файловый ввод-вывод
 Асинхронные операции позволяют выполнять ресурсоемкие операции ввода-вывода без блокировки основного потока. Это соображение, связанное с производительностью, особенно важно в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] и [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] , где длительная потоковая операция может блокировать поток пользовательского интерфейса и создавать впечатление, что приложение не работает.  
@@ -58,7 +58,8 @@ ms.locfileid: "33575522"
   
  [!code-xaml[System.IO.WindowsRuntimeStorageExtensions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestorageextensions/cs/blankpage.xaml#1)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IO.Stream>  
- [Файловый и потоковый ввод-вывод](../../../docs/standard/io/index.md)  
- [Асинхронное программирование с использованием ключевых слов Async и Await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)
+## <a name="see-also"></a>См. также
+
+- <xref:System.IO.Stream>  
+- [Файловый и потоковый ввод-вывод](../../../docs/standard/io/index.md)  
+- [Асинхронное программирование с использованием ключевых слов Async и Await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)

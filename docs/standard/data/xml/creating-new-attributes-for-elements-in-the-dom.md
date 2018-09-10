@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb1a337c2795627b82125c8c29335c52b5fb332c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570388"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44071448"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Создание новых атрибутов для элементов в модели DOM
 Создание новых атрибутов отличается от создания других типов узлов, поскольку атрибуты являются не узлами, а свойствами узла элемента, и содержатся в связанной с этим элементом коллекции **XmlAttributeCollection**. Есть несколько способов создания атрибута и присоединения его к элементу:  
@@ -124,5 +124,6 @@ doc.DocumentElement.SetAttributeNode(attr);
 ## <a name="attribute-child-nodes"></a>Дочерние узлы атрибута  
  Значение узла атрибута становится его дочерними узлами. Существует всего два допустимых типа дочерних узлов: **XmlText** и **XmlEntityReference**. Они являются дочерними узлами в том смысле, что такие методы, как **FirstChild** и **LastChild**, обрабатывают их как дочерние узлы. Это отличие атрибута, имеющего дочерние узлы, становится важным во время удаления атрибута или его дочерних узлов. Дополнительные сведения см. в статье [Удаление атрибутов из узла элемента в модели DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
   
-## <a name="see-also"></a>См. также  
- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также
+
+- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

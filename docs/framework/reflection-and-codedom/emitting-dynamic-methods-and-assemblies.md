@@ -9,12 +9,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 527da43807a0dbba8f5365c92f566053f10d49f5
-ms.sourcegitcommit: c03eef711abe961a85db2b4d0715257d1524aef6
+ms.openlocfilehash: 1a0ed1d02fd40a94d4ae63deea3c09b04bfc9bd8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33848301"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44183136"
 ---
 # <a name="emitting-dynamic-methods-and-assemblies"></a>Предоставление динамических методов и сборок
 В этом разделе описывается набор управляемых типов в пространстве имен <xref:System.Reflection.Emit>, позволяющий компилятору или средству порождать метаданные и код MSIL во время выполнения, а также при необходимости создавать переносимый исполняемый (PE) файл на диске. Основными пользователями этого пространства имен являются обработчики скриптов и компиляторы. В этом разделе функциональные возможности, предоставляемые пространством имен <xref:System.Reflection.Emit>, называются порождением отражения.  
@@ -35,7 +35,7 @@ ms.locfileid: "33848301"
   
  Наряду с управляемыми типами в пространстве имен <xref:System.Reflection.Emit> существуют неуправляемые интерфейсы метаданных, которые описаны в статье [Интерфейсы метаданных](../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md) справочной документации. Управляемое порождение отражения обеспечивает более строгую проверку семантических ошибок и более высокий уровень абстрагирования метаданных, чем неуправляемые интерфейсы метаданных.  
   
- Другим полезным ресурсом для работы с метаданными и кодом MSIL является документация по инфраструктуре Common Language Infrastructure (CLI), особенно раздел II, посвященный определению и семантике метаданных, и раздел III, посвященный набору инструкций CIL. Документацию можно найти на сайтах [MSDN](http://go.microsoft.com/fwlink/?LinkID=65555) и [ECMA](http://go.microsoft.com/fwlink/?LinkId=116487).  
+ Другим полезным ресурсом для работы с метаданными и кодом MSIL является документация по инфраструктуре Common Language Infrastructure (CLI), особенно раздел II, посвященный определению и семантике метаданных, и раздел III, посвященный набору инструкций CIL. Документацию можно найти на сайтах [MSDN](https://go.microsoft.com/fwlink/?LinkID=65555) и [ECMA](https://go.microsoft.com/fwlink/?LinkId=116487).  
   
 ## <a name="in-this-section"></a>В этом разделе
   

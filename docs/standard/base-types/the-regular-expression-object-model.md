@@ -37,12 +37,12 @@ helpviewer_keywords:
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14402b56a765fc8fe57f40e9c5c44f500267e266
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 856b7c8a842b173fbf3e31323ce7224fc05a4f12
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579864"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192851"
 ---
 # <a name="the-regular-expression-object-model"></a>Объектная модель регулярных выражений
 <a name="introduction"></a> В этом разделе описывается объектная модель, используемая при работе с регулярными выражениями в .NET. Он содержит следующие подразделы:  
@@ -169,7 +169,7 @@ ms.locfileid: "33579864"
 ### <a name="the-match-collection"></a>Коллекция Match  
  Метод <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> возвращает объект <xref:System.Text.RegularExpressions.MatchCollection>, содержащий объекты <xref:System.Text.RegularExpressions.Match>, которые представляют все сопоставления, найденных механизмом регулярных выражений, в том порядке, в котором они присутствуют во входной строке. Если соответствий нет, метод возвращает объект <xref:System.Text.RegularExpressions.MatchCollection> без членов. Свойство <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> позволяет получить доступ к отдельным членам коллекции по индексу (от нуля до значения свойства <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> минус 1). <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> — это индексатор коллекции (для C#) и свойство по умолчанию (для Visual Basic).  
   
- По умолчанию вызов метода <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> использует отложенные вычисления для заполнения объекта <xref:System.Text.RegularExpressions.MatchCollection>. Доступ к свойствам, которым требуется полностью заполненная коллекция, например свойства <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> и <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>, может быть связан с дополнительными затратами. Поэтому мы рекомендуем обращаться к коллекции, используя объект <xref:System.Collections.IEnumerator>, возвращаемый методом <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>. Некоторые языки предоставляют конструкции, такие как `For``Each` в Visual Basic и `foreach` в C#, которые создают оболочку для интерфейса <xref:System.Collections.IEnumerator> коллекции.  
+ По умолчанию вызов метода <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> использует отложенные вычисления для заполнения объекта <xref:System.Text.RegularExpressions.MatchCollection>. Доступ к свойствам, которым требуется полностью заполненная коллекция, например свойства <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> и <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType>, может быть связан с дополнительными затратами. Поэтому мы рекомендуем обращаться к коллекции, используя объект <xref:System.Collections.IEnumerator>, возвращаемый методом <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType>. Некоторые языки предоставляют конструкции, такие как `For Each` в Visual Basic и `foreach` в C#, которые создают оболочку для интерфейса <xref:System.Collections.IEnumerator> коллекции.  
   
  Следующий пример использует метод <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%29?displayProperty=nameWithType> для заполнения объекта <xref:System.Text.RegularExpressions.MatchCollection> всеми соответствиями, найденными во входной строке. Пример перечисляет коллекцию, копирует соответствия в массив строк и записывает позиции символов в целочисленный массив.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "33579864"
   
 <a name="the_captured_group"></a>   
 ## <a name="the-captured-group"></a>Захватываемая группа  
- Класс <xref:System.Text.RegularExpressions.Group> представляет результат одной захватываемой группы. Объекты Group, представляющие захватываемые группы, заданные в регулярном выражении, возвращаются свойством <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> объекта <xref:System.Text.RegularExpressions.GroupCollection>, который возвращается свойством <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Свойство <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> — это индексатор (для C#) и свойство по умолчанию (для Visual Basic) класса <xref:System.Text.RegularExpressions.Group>. Вы также можете извлечь отдельные члены, циклически перебирая коллекцию с помощью конструкции `foreach` или `For``Each`. Пример см. в предыдущем разделе.  
+ Класс <xref:System.Text.RegularExpressions.Group> представляет результат одной захватываемой группы. Объекты Group, представляющие захватываемые группы, заданные в регулярном выражении, возвращаются свойством <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> объекта <xref:System.Text.RegularExpressions.GroupCollection>, который возвращается свойством <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType>. Свойство <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> — это индексатор (для C#) и свойство по умолчанию (для Visual Basic) класса <xref:System.Text.RegularExpressions.Group>. Вы также можете извлечь отдельные члены, циклически перебирая коллекцию с помощью конструкции `foreach` или `For Each`. Пример см. в предыдущем разделе.  
   
  В следующем примере вложенные конструкции группировки используются для записи подстрок в группы. Шаблон регулярного выражения `(a(b))c` сопоставляет строку "abc". Он назначает подстроку "ab" первой захватываемой группе, а подстроку "b" — второй захватываемой группе.  
   
@@ -312,7 +312,7 @@ ms.locfileid: "33579864"
 ## <a name="the-capture-collection"></a>Коллекция Capture  
  Объект <xref:System.Text.RegularExpressions.Group> содержит сведения только о последнем выделении. Однако весь набор выделений, созданный захватываемой группой, по-прежнему доступен из объекта <xref:System.Text.RegularExpressions.CaptureCollection>, возвращаемого свойством <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>. Каждый член коллекции — это объект <xref:System.Text.RegularExpressions.Capture>, представляющий выделение этой захватываемой группы в порядке захвата (и, следовательно, в порядке сопоставления выделенных строк слева направо во входной строке). Вы можете извлечь отдельные объекты <xref:System.Text.RegularExpressions.Capture> из коллекции одним из двух способов:  
   
--   циклически перебирая коллекцию с помощью конструкции `foreach` (для C#) или `For``Each` (для Visual Basic);  
+-   циклически перебирая коллекцию с помощью конструкции `foreach` (для C#) или `For Each` (для Visual Basic);  
   
 -   используя свойство <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A?displayProperty=nameWithType> для извлечения определенного объекта по индексу. Свойство <xref:System.Text.RegularExpressions.CaptureCollection.Item%2A> — это свойство по умолчанию (для Visual Basic) индексатор (для C#) класса <xref:System.Text.RegularExpressions.CaptureCollection>.  
   
@@ -351,7 +351,8 @@ ms.locfileid: "33579864"
 |`;`|Сопоставление точки с запятой.|  
 |`((\w+(\s\w+)*),(\d+);)+`|Шаблона из слова, за которым следуют другие слова, запятая, одна или несколько цифр и точка запятая сопоставляется один или более раз. Это первая группа записи.|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Text.RegularExpressions>  
- [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)  
- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Text.RegularExpressions>  
+- [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)  
+- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

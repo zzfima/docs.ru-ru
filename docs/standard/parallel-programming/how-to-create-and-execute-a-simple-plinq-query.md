@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 983b4213-bddd-4a44-9262-cbe59186df4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e5bd27dda4bacc50672cca2db38a6eda746d79b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 544ea0f89dfa518c2ef18bffe2609d72e6fdee70
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580381"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085044"
 ---
 # <a name="how-to-create-and-execute-a-simple-plinq-query"></a>Практическое руководство. Создание и выполнение простого запроса PLINQ
 В следующем примере показано, как создать простой параллельный запрос LINQ (PLINQ) с помощью метода расширения <xref:System.Linq.ParallelEnumerable.AsParallel%2A> исходной последовательности, а также выполнить запрос с помощью метода <xref:System.Linq.ParallelEnumerable.ForAll%2A>.  
@@ -29,5 +29,6 @@ ms.locfileid: "33580381"
   
  В данном примере показан базовый шаблон для создания и выполнения любого параллельного запроса LINQ в случае, когда порядок последовательности результатов не имеет значения; неупорядоченные запросы обычно выполняются быстрее упорядоченных. Запрос делит источник на задачи, выполняемые асинхронно в нескольких потоках. Порядок выполнения каждой из задач зависит не только от объема работы по обработке элементов в разделе, но и от внешних факторов, например, от планирования каждого из потоков операционной системой. Этот пример предназначен для демонстрации использования и может выполняться не быстрее аналогичного последовательного запроса LINQ to Objects. См. дополнительные сведения об [ускорении выполнения в PLINQ](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md). См. дополнительные сведения о [сохранении порядка элементов в запросе PLINQ](../../../docs/standard/parallel-programming/how-to-control-ordering-in-a-plinq-query.md).  
   
-## <a name="see-also"></a>См. также  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>См. также
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

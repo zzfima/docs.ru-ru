@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6e2bb94-a95d-44e2-b68c-cfdd1db77784
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 212aa3f00967c04631b80305289c46d818106c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3c1e1b476a1de1f0c348e264c9dc6b42ceb81eff
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574054"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43869345"
 ---
 # <a name="culture-insensitive-string-operations"></a>Строковые операции, не зависящие от языка и региональных параметров
 Строковые операции с учетом языка и региональных параметров могут представлять преимущество для разработчиков, которые создают приложения, предназначенные для отображения пользователям результатов в зависимости от языка и региона. По умолчанию методы, зависящие от языка и региона, используют значение среды, содержащееся в свойстве <xref:System.Globalization.CultureInfo.CurrentCulture%2A> для текущего потока.  
@@ -32,5 +32,6 @@ ms.locfileid: "33574054"
   
  Независимо от того, содержит ли разрабатываемое приложение код для проведения локализации и глобализации, следует осторожно работать с методами .NET Framework, результат работы которых по умолчанию зависит от языка и региона. Цель этого раздела — показать правильный порядок использования этих методов для получения результатов, не зависящих от языка и региона.  
   
-## <a name="see-also"></a>См. также  
- [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)
+## <a name="see-also"></a>См. также
+
+- [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)

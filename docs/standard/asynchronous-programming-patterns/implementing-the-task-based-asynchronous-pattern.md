@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ed73e8d7279d5371c305e7bd29c08ac00f6a329
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 639a7ae4eb20cfc95f4d01dd0c7035f17656e3e1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576521"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44207347"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Реализация асинхронного шаблона, основанного на задачах
 Можно реализовать асинхронную модель на основе задач (TAP) тремя способами: с помощью компиляторов C# и Visual Basic в Visual Studio, вручную или путем сочетания этих методов. Каждый метод подробно обсуждается в следующих разделах. Модель TAP можно применять для создания асинхронных операций, связанных с операциями ввода-вывода и ограниченных по скорости вычислений. В разделе [Рабочие нагрузки](#workloads) рассматриваются операции каждого типа.
@@ -102,6 +102,7 @@ ms.locfileid: "33576521"
 Этот пример также демонстрирует, как один токен отмены может направляться через несколько асинхронных операций. Дополнительные сведения см. в разделе об отмене операции в статье [Использование асинхронного шаблона, основанного на задачах](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
 ## <a name="see-also"></a>См. также
- [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Асинхронный шаблон, основанный на задачах (TAP))  
- [Использование асинхронной модели на основе задач](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)  
- [Взаимодействие с другими асинхронными шаблонами и типами](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)  
+
+- [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (Асинхронный шаблон, основанный на задачах (TAP))  
+- [Использование асинхронной модели на основе задач](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)  
+- [Взаимодействие с другими асинхронными шаблонами и типами](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf9d1323918d42884f5e2fdf8a5905d13283c74c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6c151798c807206cc7f4b2fbeb21e75e9142379
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575977"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44198482"
 ---
 # <a name="generic-interfaces"></a>Универсальные интерфейсы
 В этом разделе приводится обзор универсальных интерфейсов, которые предоставляют общие функциональные возможности для различных семейств универсальных типов.  
@@ -42,10 +42,11 @@ ms.locfileid: "33575977"
   
  Универсальный интерфейс <xref:System.Collections.Generic.IEnumerable%601> предоставляет структуру универсального перечислителя. Универсальный интерфейс <xref:System.Collections.Generic.IEnumerator%601>, реализуемый универсальными перечислителями, наследуется от неуниверсального интерфейса <xref:System.Collections.IEnumerator>. Члены <xref:System.Collections.IEnumerator.MoveNext%2A> и <xref:System.Collections.IEnumerator.Reset%2A>, которые не зависят от параметра типа `T`, присутствуют только в неуниверсальном интерфейсе. Это означает, что любой потребитель неуниверсального интерфейса также может использовать универсальный интерфейс.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [Универсальные шаблоны](../../../docs/standard/generics/index.md)  
- [Универсальные коллекции в .NET Framework](../../../docs/standard/generics/collections.md)  
- [Универсальные методы-делегаты для управления массивами и списками](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
- [Ковариация и контрвариантность](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [Универсальные шаблоны](../../../docs/standard/generics/index.md)  
+- [Универсальные коллекции в .NET Framework](../../../docs/standard/generics/collections.md)  
+- [Универсальные методы-делегаты для управления массивами и списками](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- [Ковариация и контрвариантность](../../../docs/standard/generics/covariance-and-contravariance.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: dc2e2b65-f623-4dc3-938b-d2a054d6832c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1e9b22a4bc876e9b02ec0da0439682082d2d706
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 59e288a756a022763bae2235964a8b25a9d72bd1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568775"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44196241"
 ---
 # <a name="converting-net-framework-types-to-strings"></a>Преобразование типов .NET Framework в строки
 Чтобы преобразовать тип .NET Framework в строку, используйте метод **ToString**. Метод **ToString** возвращает символьное представление переданного типа. В следующей таблице приведен список типов платформы .NET Framework, которые возвращают строку в формате, сопоставленном со спецификациями XSD.  
@@ -25,6 +25,7 @@ ms.locfileid: "33568775"
 |DateTime|Используется формат гггг-ММ-ддТЧЧ:мм:ссzzzzzz и его подмножества.|  
 |TimeSpan|Используется формат PnYnMnTnHnMnS. Например, значение `P2Y10M15DT10H30M20S` соответствует длительности в 2 года, 10 месяцев, 15 дней, 10 часов, 30 минут и 20 секунд.|  
   
-## <a name="see-also"></a>См. также  
- [Преобразование типов XML-данных](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
- [Преобразование строк в типы данных .NET Framework](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
+## <a name="see-also"></a>См. также
+
+- [Преобразование типов XML-данных](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+- [Преобразование строк в типы данных .NET Framework](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)

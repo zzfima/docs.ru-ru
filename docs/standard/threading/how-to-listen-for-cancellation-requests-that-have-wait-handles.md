@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e2aa49b-fc84-4bcf-962b-17db98b7edcb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6543c2e5ea953887e699ee6f9ca3b70e08e5ae85
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b1c8bfea5fc55bafbaa30d3b74edf60b674ef75c
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583920"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268816"
 ---
 # <a name="how-to-listen-for-cancellation-requests-that-have-wait-handles"></a>Практическое руководство. Прослушивание запросов на отмену, содержащих дескрипторы ожидания
 Если метод блокируется на время ожидания сигнала события, он не может проверить значение токена отмены и своевременно отреагировать на него. Первый пример демонстрирует, как эту проблему можно решить для таких событий, как <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>, которые не реализуют поддержку унифицированной инфраструктуры отмены. Второй пример демонстрирует более простой подход с применением <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>, который поддерживает унифицированную отмену.  
@@ -35,5 +35,6 @@ ms.locfileid: "33583920"
  [!code-csharp[Cancellation#10](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#10)]
  [!code-vb[Cancellation#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#10)]  
   
-## <a name="see-also"></a>См. также  
- [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>См. также
+
+- [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md)

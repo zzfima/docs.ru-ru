@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dd16f46b7d7eb80021a67583f51feae182a2cc9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0e7ef42bab2d7567741a433cbcacf10a5e689f6a
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33590898"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43867937"
 ---
 # <a name="plinq-data-sample"></a>Пример данных PLINQ
 Этот пример содержит тестовые данные в формате CSV и несколько методов, которые преобразуют эти данные в коллекции в памяти (клиенты, продукты, заказы и сведения о заказе). Чтобы поэкспериментировать с PLINQ, вы можете вставить в этот код примеры кода из других статей и вызвать его из метода `Main`. Также вы можете применить собственные запросы PLINQ к этим данным.  
@@ -862,5 +862,6 @@ PRODUCTS
 END PRODUCTS  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>См. также
+
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

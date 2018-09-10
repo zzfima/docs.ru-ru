@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bd4066fe0a2d9f26505976c13ac80e03554e0aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 58676b1726496a33496b10bbd3befba82aea4434
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575731"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43872350"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Практическое руководство. Извлечение дня недели из конкретной даты
 Платформа .NET Framework упрощает определение дня недели и отображение локализованного дня для определенной даты. Значение перечисления, которое указывает день недели, соответствующий определенной дате, можно получить из свойства <xref:System.DateTime.DayOfWeek%2A> или <xref:System.DateTimeOffset.DayOfWeek%2A>. Напротив, получение названия дня недели — это операция форматирования, которую можно выполнить с помощью метода форматирования, например метода `ToString` значения даты и времени или метода <xref:System.String.Format%2A?displayProperty=nameWithType>. В этом разделе показано, как выполнить эти операции форматирования.  
@@ -100,7 +100,8 @@ ms.locfileid: "33575731"
  [!code-csharp[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/Howto1.cs#8)]
  [!code-vb[Formatting.HowTo.WeekdayName#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/Howto1.vb#8)]  
   
-## <a name="see-also"></a>См. также  
- [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+## <a name="see-also"></a>См. также
+
+- [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+- [Строки настраиваемых форматов даты и времени](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

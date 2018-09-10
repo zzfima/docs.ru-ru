@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b5e52844-4820-47c0-a61d-de2da33e9f54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 23be7e47dbe54d95eb29ef3b3cb169caeee3eff4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b98aa5b62718a2ff19cb50a09de1a0ddf55ddb91
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579370"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087197"
 ---
 # <a name="xml-document-object-model-dom"></a>Модель объектов XML-документов (DOM)
 Класс XML DOM является представлением XML-документа в памяти. Модель DOM позволяет читать, обрабатывать и изменять XML-документ программным образом. Класс **XmlReader** также читает XML, но предоставляет только последовательный доступ для чтения без поддержки кэширования. Это значит, что **XmlReader** не позволит изменять значения атрибутов или содержимое элемента, а также вставлять и удалять узлы. Изменение - основная функция модели DOM. Это стандартизованный, структурированный способ представления XML-данных в памяти, хотя на самом деле данные XML хранятся в файлах и пересылаются из других объектов в строковом виде. Далее приведен пример XML-данных.  
@@ -76,6 +76,7 @@ ms.locfileid: "33579370"
   
  Модель DOM чрезвычайно полезна для считывания XML-данных в память, изменения их структуры, добавления и удаления узлов, изменения данных, принадлежащих узлу (например, текста, содержащегося в документе). Однако существуют и другие классы, которые в некоторых ситуациях работают быстрее модели DOM. Классы **XmlReader** и **XmlWriter** предоставляют быстрый последовательный потоковый доступ к XML без поддержки кэширования. Если вам нужен произвольный доступ с моделью курсора и **XPath**, используйте класс **XPathNavigator**.  
   
-## <a name="see-also"></a>См. также  
- [Типы XML-узлов](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
- [Сопоставление объектной иерархии с XML-данными](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)
+## <a name="see-also"></a>См. также
+
+- [Типы XML-узлов](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
+- [Сопоставление объектной иерархии с XML-данными](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

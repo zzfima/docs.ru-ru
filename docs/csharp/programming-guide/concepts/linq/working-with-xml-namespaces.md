@@ -2,12 +2,12 @@
 title: Работа с пространствами имен XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 05cf4dc7-7b25-40f0-abc9-1bc35de4b48a
-ms.openlocfilehash: e00886281fbccd0e10706575483dd174d7d53052
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4863794408adbfb8b51c4f125ee340eb718a5abe
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416245"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269011"
 ---
 # <a name="working-with-xml-namespaces-c"></a>Работа с пространствами имен XML (C#)
 Темы в этом разделе описывают, как [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] поддерживает пространства имен.  
@@ -22,5 +22,6 @@ ms.locfileid: "43416245"
 |[Области пространств имен по умолчанию в C#](../../../../csharp/programming-guide/concepts/linq/scope-of-default-namespaces.md)|Демонстрирует соответствующий способ составления запросов к XML в пространстве имен по умолчанию.|  
 |[Практическое руководство. Создание запросов к XML в пространствах имен (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-write-queries-on-xml-in-namespaces.md)|В этом руководстве описывается, как указывать пространства имен XML в запросах LINQ to XML в C#.|  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

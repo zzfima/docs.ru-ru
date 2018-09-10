@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6aa9c6717d89cf5529ef65b56811e614b6fc30f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 39e8afd8c22ca757141d2a7b556b115f8380e731
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574765"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262457"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Разрешение внешних таблиц стилей XSLT и документов
 В некоторых случаях в процессе преобразования может потребоваться разрешение внешних ресурсов.  
@@ -43,16 +43,17 @@ ms.locfileid: "33574765"
   
  При вызове метода <xref:System.Xml.Xsl.XslTransform.Transform%2A> разрешения вычисляются с учетом свидетельств, предоставленных во время загрузки, и этот набор разрешений назначается всему процессу преобразования. Если функция `document()` пытается инициировать действие, для которого требуются разрешения, отсутствующие в наборе, вызывается исключение.  
   
-## <a name="see-also"></a>См. также  
- [XSLT-преобразования с помощью класса XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
- [Результаты вывода XslTransform](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)  
- [XSLT-преобразования над различными хранилищами](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)  
- [XsltArgumentList для параметров таблицы стилей и объектов расширения](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)  
- [Создание скриптов таблиц стилей XSLT с помощью \<msxsl:script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)  
- [Поддержка функции msxsl:node-set()](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)  
- [XPathNavigator в преобразованиях](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
- [XPathNodeIterator в преобразованиях](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [Ввод XPathDocument в XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
- [Ввод XmlDataDocument в XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
- [Ввод XmlDocument в XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+## <a name="see-also"></a>См. также
+
+- [XSLT-преобразования с помощью класса XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
+- [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+- [Результаты вывода XslTransform](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)  
+- [XSLT-преобразования над различными хранилищами](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)  
+- [XsltArgumentList для параметров таблицы стилей и объектов расширения](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)  
+- [Создание скриптов таблиц стилей XSLT с помощью \<msxsl:script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)  
+- [Поддержка функции msxsl:node-set()](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)  
+- [XPathNavigator в преобразованиях](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
+- [XPathNodeIterator в преобразованиях](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
+- [Ввод XPathDocument в XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+- [Ввод XmlDataDocument в XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
+- [Ввод XmlDocument в XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

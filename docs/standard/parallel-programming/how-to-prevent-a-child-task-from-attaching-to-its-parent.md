@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c0fb85d4-9e80-4905-9f65-29acc54201c4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ea0254add0592c0c79c03f4e94f02526f9fe689
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 234a8de8ed9f4e403d932c01728ab9ffbc72ad14
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580774"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44214853"
 ---
 # <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Практическое руководство. Запрет присоединения дочерней задачи к ее родительской задаче
 В этом документе показано, как предотвратить прикрепление дочерней задачи к родительской. Предотвращение прикрепления дочерней задачи к родительской полезно при вызове компонента, написанного сторонним разработчиком и также использующим задачи. Например, компонент стороннего разработчика, использующий параметр <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> для создания объекта <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>, может вызвать проблемы в коде, если он продолжительный или создает необрабатываемое исключение.  
@@ -41,5 +41,6 @@ ms.locfileid: "33580774"
   
 ## <a name="robust-programming"></a>Отказоустойчивость  
   
-## <a name="see-also"></a>См. также  
- [Асинхронное программирование на основе задач](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+## <a name="see-also"></a>См. также
+
+- [Асинхронное программирование на основе задач](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)

@@ -5,14 +5,15 @@ helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: 2f5dcb032c5dea764cdd212bbcd02e1640089d96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33313957"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44128554"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Одномерные массивы (Руководство по программированию на C#)
+
 Вы можете объявить одномерный массив, содержащий пять целых чисел, как показано в следующем примере:  
   
  [!code-csharp[csProgGuideArrays#4](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_1.cs)]  
@@ -23,7 +24,8 @@ ms.locfileid: "33313957"
   
  [!code-csharp[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
   
-## <a name="array-initialization"></a>Инициализация массива  
+## <a name="array-initialization"></a>Инициализация массива
+
  Массив можно инициализировать при объявлении. В этом случае не требуется спецификатор ранга, поскольку он уже задается по числу элементов в списке инициализации. Пример:  
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
@@ -42,7 +44,8 @@ ms.locfileid: "33313957"
   
  В C# 3.0 представлены неявно типизированные массивы. Дополнительные сведения см. в разделе [Неявно типизированные массивы](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
   
-## <a name="value-type-and-reference-type-arrays"></a>Массивы типов значений и ссылочных типов  
+## <a name="value-type-and-reference-type-arrays"></a>Массивы типов значений и ссылочных типов
+
  Рассмотрим следующее объявление массива:  
   
  [!code-csharp[csProgGuideArrays#10](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_7.cs)]  
@@ -51,9 +54,10 @@ ms.locfileid: "33313957"
   
  Дополнительные сведения о типах значений и ссылочных типах см. в разделе [Типы](../../../csharp/language-reference/keywords/types.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Array>  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Массивы](../../../csharp/programming-guide/arrays/index.md)  
- [Многомерные массивы](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
- [Массивы массивов](../../../csharp/programming-guide/arrays/jagged-arrays.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Array>  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Массивы](../../../csharp/programming-guide/arrays/index.md)  
+- [Многомерные массивы](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)  
+- [Массивы массивов](../../../csharp/programming-guide/arrays/jagged-arrays.md)

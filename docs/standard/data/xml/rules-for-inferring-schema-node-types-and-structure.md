@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1593f703f1f8b4465b46d3b22b763d35c582744
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a518df5b016552de25091e7a9d89f737a1a66151
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578239"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44087662"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Правила выведения структуры и типов узлов схемы
 В данном разделе описывается, как в процессе вывода схемы различные типы узлов XML-документа преобразуются в структуру языка XSD.  
@@ -146,9 +146,10 @@ ms.locfileid: "33578239"
   
  См. дополнительные сведения о [выведении схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.Schema.XmlSchemaInference>  
- [Модель объектов схемы XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [Выведение XML-схемы](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
- [Выведение схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [Правила выведения простых типов](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Xml.Schema.XmlSchemaInference>  
+- [Модель объектов схемы XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [Выведение XML-схемы](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
+- [Выведение схем из XML-документов](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+- [Правила выведения простых типов](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

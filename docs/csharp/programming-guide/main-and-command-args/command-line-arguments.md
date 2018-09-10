@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
-ms.openlocfilehash: ccfac6bd2688a2e02a1b3fcc14748d357acb1aa2
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a55e40a4a4880c39c74186c55b0886e06dc33bcb
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43464341"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44083953"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>Аргументы командной строки (Руководство по программированию на C#)
 Вы можете передавать аргументы в метод `Main`, определив метод одним из следующих способов:  
@@ -71,13 +71,14 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 >  При выполнении приложения в Visual Studio аргументы командной строки можно указать на [странице "Отладка" в конструкторе проектов](/visualstudio/ide/reference/debug-page-project-designer).  
   
- Дополнительные примеры об использовании командной строки см. в разделе [Практическое руководство. Создание и использование сборок с помощью командной строки](https://msdn.microsoft.com/library/70f65026-3687-4e9c-ab79-c18b97dd8be4).  
+ Дополнительные примеры об использовании командной строки см. в разделе [Практическое руководство. Создание и использование сборок с помощью командной строки](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Environment?displayProperty=nameWithType>  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Практическое руководство. Отображение аргументов командной строки](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [Практическое руководство. Доступ к аргументам командной строки с помощью оператора foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
- [Значения, возвращаемые методом main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Environment?displayProperty=nameWithType>  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md)  
+- [Практическое руководство. Отображение аргументов командной строки](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+- [Практическое руководство. Доступ к аргументам командной строки с помощью оператора foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+- [Значения, возвращаемые методом main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)  
+- [Классы](../../../csharp/programming-guide/classes-and-structs/classes.md)

@@ -2,12 +2,12 @@
 title: Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 6f203d7fa4a313be122d09d5bd68e77411c89ed2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: debc6bffd2a5c23e27fe8685c237b33016745be6
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33328764"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261266"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>Практическое руководство. Вычисление значений столбцов в текстовом CSV-файле (LINQ) (C#)
 В этом примере демонстрируется выполнение статистических вычислений, таких как сумма, среднее, минимальное и максимальное для столбцов в CSV-файле. Приведенные в примере принципы могут применяться к другим типам структурированного текста.  
@@ -161,6 +161,7 @@ class SumColumns
 ## <a name="compiling-the-code"></a>Компиляция кода  
  Создайте проект, предназначенный для .NET Framework 3.5 или более поздней версии, со ссылкой на библиотеку System.Core.dll и директивы `using` для пространств имен System.Linq и System.IO.  
   
-## <a name="see-also"></a>См. также  
- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>См. также
+
+- [LINQ и строки (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
+- [LINQ и каталоги файлов (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)

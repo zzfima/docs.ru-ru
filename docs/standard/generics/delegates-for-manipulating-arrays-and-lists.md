@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 416be383-cc61-4102-9b1b-88b51adb963e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 566a2e5e8587dc6d6d2259a5f79f5c59c2e60c90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a8266db66abb46ffc9503bdaeaf4ec4078177760
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576299"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44174995"
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Универсальные делегаты для управления массивами и списками
 В этом разделе содержится обзор универсальных делегатов для преобразований, предикатов поиска и действий, осуществляемых с элементами массива или коллекции.  
@@ -41,10 +41,11 @@ ms.locfileid: "33576299"
 ### <a name="chaining-delegates"></a>Связывание делегатов  
  Многие методы, использующие эти делегаты, возвращают массив или список, который можно передать другому методу. Например, если вы хотите выбрать определенные элементы массива, преобразовать их в новый тип и сохранить в новый массив, вы можете передать массив, возвращенный универсальным методом <xref:System.Array.FindAll%2A>, в универсальный метод <xref:System.Array.ConvertAll%2A>. Если у нового типа элементов нет естественного порядка сортировки, вы можете передать массив, возвращенный универсальным методом <xref:System.Array.ConvertAll%2A>, в универсальный метод <xref:System.Array.Sort%60%601%28%60%600%5B%5D%2CSystem.Comparison%7B%60%600%7D%29>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections.Generic?displayProperty=nameWithType>  
- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
- [Универсальные шаблоны](../../../docs/standard/generics/index.md)  
- [Универсальные коллекции в .NET Framework](../../../docs/standard/generics/collections.md)  
- [Универсальные интерфейсы](../../../docs/standard/generics/interfaces.md)  
- [Ковариация и контрвариантность](../../../docs/standard/generics/covariance-and-contravariance.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Collections.Generic?displayProperty=nameWithType>  
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
+- [Универсальные шаблоны](../../../docs/standard/generics/index.md)  
+- [Универсальные коллекции в .NET Framework](../../../docs/standard/generics/collections.md)  
+- [Универсальные интерфейсы](../../../docs/standard/generics/interfaces.md)  
+- [Ковариация и контрвариантность](../../../docs/standard/generics/covariance-and-contravariance.md)

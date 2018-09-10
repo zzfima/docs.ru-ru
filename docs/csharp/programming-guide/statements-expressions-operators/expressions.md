@@ -5,12 +5,12 @@ helpviewer_keywords:
 - expressions [C#]
 - C# language, expressions
 ms.assetid: c7d8feb0-0e58-4f94-8bf6-4d070550a832
-ms.openlocfilehash: bb70a7e3dfd8b274987bf68568004d785afd0ee1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 3cf084102186d9e13727c36ed14e2ea72ca324f9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37936959"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44213810"
 ---
 # <a name="expressions-c-programming-guide"></a>Выражения (Руководство по программированию в C#)
 *Выражение* представляет собой последовательность из одного или нескольких операндов и от нуля до нескольких операторов, которую можно вычислить, получив в результате одно значение, объект, метод или пространство имен. Выражение может состоять из литерала, вызова метода, оператора или его операндов, а также из *простого имени*. Простые имена могут быть именами переменной, элемента типа, параметра метода, пространства имен или типа.  
@@ -72,10 +72,11 @@ C# поддерживает *элементы, воплощающие выраж
 ## <a name="remarks"></a>Примечания  
  Если в выражении присутствует переменная, свойство объекта или индексатор объекта, для вычисления выражения используется значение этого элемента. В C# выражение можно использовать везде, где требуется значение или объект, если результат вычисления выражения соответствует требуемому типу.  
 
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Делегаты](../../../csharp/programming-guide/delegates/index.md)  
- [Операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
- [Типы](../../../csharp/programming-guide/types/index.md)  
- [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Делегаты](../../../csharp/programming-guide/delegates/index.md)  
+- [Операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [Типы](../../../csharp/programming-guide/types/index.md)  
+- [Выражения запросов LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)

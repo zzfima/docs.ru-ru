@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 19e5883135d65a648bb6afb74a475b761f572a95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6c53d7572074db44976494e5eed596bf95aaf456
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333977"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858864"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Практическое руководство. Объявление, создание экземпляра и использование делегата (руководство по программированию в C#)
 В C# 1.0 и более поздних версий делегаты можно объявлять так, как показано в следующем примере.  
@@ -71,7 +71,8 @@ ms.locfileid: "33333977"
   
      Делегат можно вызвать синхронно, как показано в этом примере, или асинхронно при помощи методов `BeginInvoke` и `EndInvoke`.  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [События](../../../csharp/programming-guide/events/index.md)  
- [Делегаты](../../../csharp/programming-guide/delegates/index.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [События](../../../csharp/programming-guide/events/index.md)  
+- [Делегаты](../../../csharp/programming-guide/delegates/index.md)

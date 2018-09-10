@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d789101231a37bb9a2b6b3c7830f6b679fd364d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1d9f62055b497aa7522d589610c12badb2361d5
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567849"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262423"
 ---
 # <a name="performing-formatting-operations"></a>Выполнение операций форматирования
 В перечисленных далее разделах содержатся пошаговые инструкции для выполнения конкретных операций форматирования.  
@@ -38,5 +38,6 @@ ms.locfileid: "33567849"
   
 -   [Практическое руководство. Отображение дат в календарях, отличных от григорианского](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)  
   
-## <a name="see-also"></a>См. также  
- [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)
+## <a name="see-also"></a>См. также
+
+- [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d51f6c8e7dc03edb2823f61ab638fc669847dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574937"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44211818"
 ---
 # <a name="selecting-a-collection-class"></a>Выбор класса коллекции
 Внимательно относитесь к выбору класса коллекции. Неправильный тип может ограничить возможности использования коллекции. Как правило, не рекомендуется использовать типы в пространстве имен <xref:System.Collections>, если приложение не создается специально для .NET Framework версии 1.1 Универсальные и параллельные версии коллекций предпочтительны из-за повышенной безопасности типов и других усовершенствований.  
@@ -79,8 +79,9 @@ ms.locfileid: "33574937"
   
  Язык PLINQ предоставляет параллельную реализацию языка LINQ to Objects, которая может обеспечить более быстрое выполнение запросов во многих сценариях за счет более эффективного использования многоядерных компьютеров. Дополнительные сведения см. в разделе [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections>  
- <xref:System.Collections.Specialized>  
- <xref:System.Collections.Generic>  
- [Потокобезопасные коллекции](../../../docs/standard/collections/thread-safe/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Collections>  
+- <xref:System.Collections.Specialized>  
+- <xref:System.Collections.Generic>  
+- [Потокобезопасные коллекции](../../../docs/standard/collections/thread-safe/index.md)

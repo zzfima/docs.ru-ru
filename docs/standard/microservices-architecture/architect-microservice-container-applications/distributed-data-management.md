@@ -4,12 +4,12 @@ description: 'Архитектура микрослужб .NET для упако
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 7e539067b20f0e018496b0076582619cb88072e1
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 4c514f3a7dc1fb01b2f1ed2dddc9d938c1101809
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43480669"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268855"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Распределенное управление данными: проблемы и решения
 
@@ -79,7 +79,7 @@ ms.locfileid: "43480669"
 
 Поэтому, чтобы повысить автономность и устойчивость микрослужб, следует как можно реже использовать цепочки запросов и ответов для взаимодействия между микрослужбами. Рекомендуется использовать только асинхронное взаимодействие для связи между микрослужбами — либо асинхронное взаимодействие, управляемое сообщениями и событиями, либо HTTP-опросы независимо от изначального цикла HTTP-запросов и ответов.
 
-Более подробно асинхронное взаимодействие описывается в разделах [Асинхронная интеграция микрослужб в целях автономности](#asynchronous-microservice-integration-enforce-microservices-autonomy) и [Асинхронное взаимодействие на базе сообщений](#asynchronous-message-based-communication).
+Более подробно асинхронное взаимодействие описывается в разделах [Асинхронная интеграция микрослужб в целях автономности](communication-in-microservice-architecture.md#asynchronous-microservice-integration-enforces-microservices-autonomy) и [Асинхронное взаимодействие на базе сообщений](asynchronous-message-based-communication.md).
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 

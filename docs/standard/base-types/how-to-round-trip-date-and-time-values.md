@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a1cafc7ed6e497e5aab9cd33654f3aa3d4d98c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55b16d135449cad8ed489a8a3e21db326be0fae0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33573190"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44193267"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Практическое руководство. Обеспечение однозначности при сохранении и восстановлении значений даты и времени
 Во многих приложениях значение даты и времени предназначено для однозначного определения одного момента времени. В этой статье показано, как правильно сохранять и восстанавливать значения <xref:System.DateTime> и <xref:System.DateTimeOffset>, а также значения времени с информацией о часовом поясе, чтобы восстановленное значение определяло то же время, что и сохраненное значение.  
@@ -99,7 +99,8 @@ ms.locfileid: "33573190"
   
 -   Все примеры кода, кроме класса `DateInTimeZone`, нужно включить в класс или модуль Visual Basic, упаковать в методы и вызывать из метода `Main`.  
   
-## <a name="see-also"></a>См. также  
- [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md).  
- [Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+## <a name="see-also"></a>См. также
+
+- [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)  
+- [Выбор между типами DateTime, DateTimeOffset, TimeSpan и TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md).  
+- [Строки стандартных форматов даты и времени](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

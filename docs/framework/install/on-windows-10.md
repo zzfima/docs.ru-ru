@@ -5,16 +5,16 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: cf374f9d1fd7e343e5eba868d3f686784428a2d0
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: b7c7b8d16463cd66eb8a0a5e383dd3763af323d8
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270452"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857197"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Установка платформы .NET Framework в Windows 10 и Windows Server 2016
 
-Для многих приложений, работающих в ОС Windows, требуется платформа .NET Framework. В этой статье приводятся инструкции по установке необходимых версий .NET Framework. [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) является последней доступной версией.
+Для многих приложений, работающих в ОС Windows, требуется платформа .NET Framework. В этой статье приводятся инструкции по установке необходимых версий .NET Framework. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) является последней доступной версией.
 
 Вы могли попасть на эту страницу после попытки запуска приложения и отображения диалогового окна, аналогичного приведенному ниже:
 
@@ -29,9 +29,9 @@ ms.locfileid: "36270452"
 > [!div class="button"]
 [Загрузить .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
-[.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) можно использовать для запуска приложений, созданных для .NET Framework версии от 4.0 до 4.7.1.
+[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) можно использовать для запуска приложений, созданных для .NET Framework версии от 4.0 до 4.7.1.
 
-Вы можете установить [.NET Framework 4.7.2](http://go.microsoft.com/fwlink/?LinkID=863255) в:
+Вы можете установить [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) в:
 
 * Windows 10 Fall Creators Update (версия 1709)
 * Обновление Windows 10 Creators Update (версия 1703)

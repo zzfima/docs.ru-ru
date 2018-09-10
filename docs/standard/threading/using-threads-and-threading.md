@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 871a0a06c9f1cc09fb86f20c85163fb8fcdf4100
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f4fd57de4c6e65c3c82d0dc71bcaf84d668f28bf
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934135"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43864233"
 ---
 # <a name="using-threads-and-threading"></a>Использование потоков и работа с потоками
 
@@ -54,6 +54,6 @@ ms.locfileid: "42934135"
 
 ## <a name="see-also"></a>См. также
 
- <xref:System.Threading.Thread?displayProperty=nameWithType>  
- [Потоки и работа с потоками](threads-and-threading.md)  
- [Параллельное программирование](../parallel-programming/index.md)  
+- <xref:System.Threading.Thread?displayProperty=nameWithType>  
+- [Потоки и работа с потоками](threads-and-threading.md)  
+- [Параллельное программирование](../parallel-programming/index.md)  

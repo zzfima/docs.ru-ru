@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1cf2d7f36dbfffe1c86e32eec5137840837612f4
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 5c35bbc8d4223e9404371665e7666715fa357154
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208198"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865843"
 ---
 # <a name="memory-mapped-files"></a>Сопоставленные в памяти файлы
 Отображаемый в память файл содержит содержимое файла в виртуальной памяти. Отображение файла в области памяти позволяет приложению, содержащему несколько процессов, взаимодействовать с файлом путем чтения этой памяти и записи в нее. Начиная с версии [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] вы можете использовать управляемый код для доступа к отображенным в память файлам тем же способом, что и собственные функции Windows. Описание этого механизма можно найти на странице [Managing Memory-Mapped Files](https://msdn.microsoft.com/library/ms810613.aspx) (Управление отображенными в память файлами).  
@@ -44,7 +44,7 @@ ms.locfileid: "36208198"
   
  На следующем изображении показано, как несколько процессов могут одновременно использовать несколько перекрывающихся представлений для одного отображенного в память файла:  
   
- ![Пример представлений для отображенного в память файла. ] (../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
+ ![Пример представлений для отображенного в память файла. ](../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
 Несколько перекрывающихся представлений для отображенного в память файла  
   
 ## <a name="programming-with-memory-mapped-files"></a>Программирование с использованием отображенных в память файлов  
@@ -144,5 +144,6 @@ Process C says: True
  [!code-csharp[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/cs/program.cs#1)]
  [!code-vb[System.IO.MemoryMappedFiles_IPC_B#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.memorymappedfiles_ipc_b/vb/program.vb#1)]  
   
-## <a name="see-also"></a>См. также  
- [Файловый и потоковый ввод-вывод](../../../docs/standard/io/index.md)
+## <a name="see-also"></a>См. также
+
+- [Файловый и потоковый ввод-вывод](../../../docs/standard/io/index.md)

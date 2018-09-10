@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc2698a37dc77ccd8c58164ec5a34f21251b6dbe
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 86642da8647d185d863607819bbb18de9e976e6b
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33571128"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264159"
 ---
 # <a name="type-conversion-tables-in-net"></a>Таблицы преобразования типов в .NET
 Расширяющее преобразование — это преобразование, при котором значение одного типа преобразуется в другой тип равного или большего размера. Сужающее преобразование — это преобразование, при котором значение одного типа преобразуется в другой тип меньшего размера. Таблицы в этом разделе описывают характеристики обоих типов преобразований.  
@@ -71,6 +71,7 @@ ms.locfileid: "33571128"
 |<xref:System.Single>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
 |<xref:System.Double>|<xref:System.Byte>, <xref:System.SByte>, <xref:System.Int16>, <xref:System.UInt16>, <xref:System.Int32>, <xref:System.UInt32>, <xref:System.Int64>, <xref:System.UInt64>|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Convert?displayProperty=nameWithType>  
- [Преобразование типов в .NET](../../../docs/standard/base-types/type-conversion.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Convert?displayProperty=nameWithType>  
+- [Преобразование типов в .NET](../../../docs/standard/base-types/type-conversion.md)

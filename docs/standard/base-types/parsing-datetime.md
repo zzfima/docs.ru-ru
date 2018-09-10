@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c093f22f77284d15e56c8f1d4a95afbeb75202d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d10384955e07198a4b5ea7202722bea4b831e02
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576107"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207620"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Синтаксический анализ строк даты и времени в .NET
 
@@ -87,9 +87,10 @@ ms.locfileid: "33576107"
 
 При каждой перегрузке методов <xref:System.DateTime.Parse%2A> и <xref:System.DateTime.ParseExact%2A> также используется параметр <xref:System.IFormatProvider>, который предоставляет сведения о языке и региональных параметрах для форматирования строки. Этот объект <xref:System.IFormatProvider> является объектом <xref:System.Globalization.CultureInfo>, который представляет стандартные язык и региональные параметры, или объектом <xref:System.Globalization.DateTimeFormatInfo>, возвращаемым в свойстве <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>.  Кроме того, в методе <xref:System.DateTime.ParseExact%2A> используется дополнительная строка или аргумент массива строк для определения одного или нескольких настраиваемых форматов даты и времени.  
 
-## <a name="see-also"></a>См. также  
- [Анализ строк в .NET Framework](parsing-strings.md)  
- [Типы форматирования](formatting-types.md)  
- [Преобразование типов в .NET](type-conversion.md)  
- [Стандартные форматы даты и времени](standard-date-and-time-format-strings.md)  
- [Строки настраиваемых форматов даты и времени](custom-date-and-time-format-strings.md)
+## <a name="see-also"></a>См. также
+
+- [Анализ строк в .NET Framework](parsing-strings.md)  
+- [Типы форматирования](formatting-types.md)  
+- [Преобразование типов в .NET](type-conversion.md)  
+- [Стандартные форматы даты и времени](standard-date-and-time-format-strings.md)  
+- [Строки настраиваемых форматов даты и времени](custom-date-and-time-format-strings.md)

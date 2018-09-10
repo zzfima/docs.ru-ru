@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b77d26a79796a9de87c07e366929cb516169907b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0f5ae64eb1017570a56efab59a4bf1a66d5e02b
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576316"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44264393"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Проверка XML-документа в DOM
 По умолчанию класс <xref:System.Xml.XmlDocument> не сверяет код XML в модели DOM ни с данными схемы XSD, ни c определением типа документа (DTD). Код XML проверяется только на правильность формата.  
@@ -82,10 +82,11 @@ ms.locfileid: "33576316"
   
  Примеры, иллюстрирующие работу <xref:System.Xml.Schema.ValidationEventHandler>, см. выше в подразделах «Проверка XML-документа в процессе его загрузки в модель DOM» и «Проверка XML-документа в модели DOM».  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.XmlDocument>  
- <xref:System.Xml.XmlReader>  
- <xref:System.Xml.Schema.ValidationEventHandler>  
- <xref:System.Xml.XmlReaderSettings>  
- [Обработка XML-данных с использованием модели DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
- [Работа с XML-схемами](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Xml.XmlDocument>  
+- <xref:System.Xml.XmlReader>  
+- <xref:System.Xml.Schema.ValidationEventHandler>  
+- <xref:System.Xml.XmlReaderSettings>  
+- [Обработка XML-данных с использованием модели DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+- [Работа с XML-схемами](../../../../docs/standard/data/xml/working-with-xml-schemas.md)

@@ -2,12 +2,12 @@
 title: Практическое руководство. Поиск одного потомка с помощью метода потомков (C#)
 ms.date: 07/20/2015
 ms.assetid: 6f735be9-0293-4680-8007-ca9d96bfebed
-ms.openlocfilehash: e08e07e0d32146a14b90b9d6463e6e58a233a923
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fafb7dc4e2e65c913de46b64028f7dcd69fdd2c3
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33316963"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43784664"
 ---
 # <a name="how-to-find-a-single-descendant-using-the-descendants-method-c"></a>Практическое руководство. Поиск одного потомка с помощью метода потомков (C#)
 Метод оси <xref:System.Xml.Linq.XContainer.Descendants%2A> можно использовать для быстрого написания кода с целью поиска одного уникально именованного элемента. Этот способ особенно полезен, если нужно найти конкретного потомка с заданным именем. Можно написать собственный код для перехода к нужному элементу, но часто быстрей и легче написать такой код с помощью оси <xref:System.Xml.Linq.XContainer.Descendants%2A>.  
@@ -73,5 +73,6 @@ Console.WriteLine(grandChild3);
 GC3 Value  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Базовые запросы (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+
+- [Базовые запросы (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

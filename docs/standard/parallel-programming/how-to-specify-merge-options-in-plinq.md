@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0f33b527-e91a-4550-a39a-e63e396fd831
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1f30245b398ae894e7226d1e94046fc9111dcf9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8914d3c443971f73e6f3fa366c26567bae60dbe1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33580449"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44189471"
 ---
 # <a name="how-to-specify-merge-options-in-plinq"></a>Практическое руководство. Задание параметров слияния в PLINQ
 Этот пример демонстрирует, как указать параметры слияния, которые будут применяться ко всем последующим операторам в запросе PLINQ. Параметры слияния не обязательно указывать явным образом, но иногда это может повысить производительность. Дополнительные сведения о параметрах слияния см. в разделе [Параметры слияния в PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
@@ -31,6 +31,7 @@ ms.locfileid: "33580449"
   
  В случаях, если вариант <xref:System.Linq.ParallelMergeOptions.AutoBuffered> приводит к нежелательной задержке перед получением первого элемента, попробуйте вариант <xref:System.Linq.ParallelMergeOptions.NotBuffered>, чтобы получать результаты быстрее и спокойнее.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq.ParallelMergeOptions>  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Linq.ParallelMergeOptions>  
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

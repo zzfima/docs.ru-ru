@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object identity [C#]
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
-ms.openlocfilehash: 78a6bf1f5d4a93bd561faada91b4a11f52692dbf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d48c2cab7100d8227b33ee0eeefb825dd81a5f88
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33322345"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084573"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>Практическое руководство. Тестирование на равенство (идентичность) ссылок (Руководство по программированию на C#)
 Вам не требуется реализовывать настраиваемую логику, чтобы обеспечить поддержку проверки ссылок на равенство в типах. Эту возможность для всех типов реализует метод <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>.  
@@ -26,5 +26,6 @@ ms.locfileid: "33322345"
   
  Константные строки в рамках одной сборки всегда интернируются во время выполнения. Таким образом, всегда присутствует только один экземпляр каждого уникального строкового литерала. Тем не менее во время выполнения не гарантируется интернирование строк, созданных во время выполнения, а также интернирование двух равных константных строк из разных сборок.  
   
-## <a name="see-also"></a>См. также  
- [Сравнения на равенство](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)
+## <a name="see-also"></a>См. также
+
+- [Сравнения на равенство](../../../csharp/programming-guide/statements-expressions-operators/equality-comparisons.md)

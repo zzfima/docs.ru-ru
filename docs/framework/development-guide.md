@@ -7,11 +7,11 @@ ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c42311368bf94a2629f656b61b09cb7c2c5f68b6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43387993"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44205391"
 ---
 # <a name="net-framework-development-guide"></a>Руководство по разработке для .NET Framework
 В этом разделе поясняются способы создания, настройки, отладки, защиты и развертывания приложений .NET Framework. В этом разделе также приводятся сведения о технологических областях, таких как динамическое программирование, взаимодействие, расширяемость, управление памятью и потоки.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a9ed3e4e-4f29-4207-b730-ed0a51ecbc19
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7795b25ca8e9337a53fc67ebc6f56130237d0764
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 216480e893f6dbebbb204cbf2bfebae8dc139ec4
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582760"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44190706"
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Практическое руководство. SpinLock и низкоуровневая синхронизация
 В следующем примере демонстрируется использование <xref:System.Threading.SpinLock>.  
@@ -32,5 +32,6 @@ ms.locfileid: "33582760"
   
  Обратите внимание на использование `false` (`False` в Visual Basic) в вызове <xref:System.Threading.SpinLock.Exit%2A>. Это обеспечивает оптимальную производительность. Укажите архитектуры `true` (`True`)on IA64, чтобы воспользоваться барьером памяти, который очищает буферы записи, обеспечивая таким образом блокировку для завершения работы других потоков.  
   
-## <a name="see-also"></a>См. также  
- [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>См. также
+
+- [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3ecf1ea9-e399-4a6a-a0d6-8475f48dcb28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b9a9331f62ba9655c20a2e27b3a94dac1903472
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79350178300dde2896f6b22c68d6062bbb57f700
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582692"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865635"
 ---
 # <a name="task-cancellation"></a>Отмена задач
 Классы <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> поддерживают отмену с помощью токенов отмены в .NET Framework. См. дополнительные сведения об [отмене в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md). В классах задач отмена включает взаимодействие между пользовательским делегатом, который представляет операцию отмены, и кодом, который запросил отмену.  Успешная отмена включает запрашивающий код, который вызывает метод <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType>, и пользовательский делегат, который своевременно завершает операцию. Операцию можно завершить одним из следующих способов.  
@@ -40,6 +40,7 @@ ms.locfileid: "33582692"
   
  В некоторых случаях задача может продолжить обработку некоторых элементов после запроса отмены.  
   
-## <a name="see-also"></a>См. также  
- [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- [Практическое руководство. Отмена задачи и ее дочерних элементов](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
+## <a name="see-also"></a>См. также
+
+- [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
+- [Практическое руководство. Отмена задачи и ее дочерних элементов](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)

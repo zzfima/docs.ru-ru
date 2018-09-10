@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 8c71acf2-2c18-4f4d-8cdb-0728639265fd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f829fc0b399f5cfd10d98f6b7439de757674f11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8be9b4eef30333fbbdc26915635d17157176d6fc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33586377"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208183"
 ---
 # <a name="reader-writer-locks"></a>Блокировки чтения и записи
 Класс <xref:System.Threading.ReaderWriterLockSlim> позволяет нескольким потокам одновременно считывать данные из одного ресурса, но требует предоставить потоку монопольную блокировку для записи в этот ресурс.  
@@ -27,8 +27,9 @@ ms.locfileid: "33586377"
 > [!NOTE]
 >  Класс [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] использует две блокировки чтения и записи: <xref:System.Threading.ReaderWriterLockSlim> и <xref:System.Threading.ReaderWriterLock>. Мы рекомендуем применять <xref:System.Threading.ReaderWriterLockSlim> при любых новых разработках. <xref:System.Threading.ReaderWriterLockSlim> действует так же, как и <xref:System.Threading.ReaderWriterLock>, но с более простыми правилами рекурсии и изменения состояния блокировки. <xref:System.Threading.ReaderWriterLockSlim> позволяет избежать многих ситуаций взаимоблокировки. Кроме того, производительность <xref:System.Threading.ReaderWriterLockSlim> значительно выше, чем у <xref:System.Threading.ReaderWriterLock>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.ReaderWriterLockSlim>  
- <xref:System.Threading.ReaderWriterLock>  
- [Работа с потоками](../../../docs/standard/threading/index.md)  
- [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.ReaderWriterLockSlim>  
+- <xref:System.Threading.ReaderWriterLock>  
+- [Работа с потоками](../../../docs/standard/threading/index.md)  
+- [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)

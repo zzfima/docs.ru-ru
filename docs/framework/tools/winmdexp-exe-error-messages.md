@@ -160,11 +160,11 @@ ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f051af9284ddbf583e5454f7bdc106a061489d3c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43465503"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44075465"
 ---
 # <a name="winmdexpexe-error-messages"></a>Сообщения об ошибках Winmdexp.exe
 Процесс сборки вызывает программу [Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) при использовании шаблона **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Компонент** в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], поэтому сообщения об ошибках Winmdexp.exe отображаются в **Списке ошибок**. Программа Winmdexp.exe работает в модуле, который компилируется с параметром `/target:winmdobj`. Поскольку в качестве входных данных этой программе требуется скомпилированный модуль, в случае сбоя компиляции сообщения об ошибках Winmdexp.exe не отображаются.  

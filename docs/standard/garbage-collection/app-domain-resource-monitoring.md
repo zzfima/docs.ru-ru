@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45b0f8293b41d42114b189c3ebe917a4f64c4f27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33578334"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208761"
 ---
 # <a name="application-domain-resource-monitoring"></a>Отслеживание ресурсов домена приложения
 Функция наблюдения за ресурсами доменов приложений (ARM) позволяет узлам отслеживать загрузку ЦП и использование памяти доменом приложения. Это полезно для некоторых узлов, таких как ASP.NET, которые используют несколько доменов приложений в длительных процессах. Узел может выгрузить домен приложения, если его работа понижает производительность процесса в целом. Но для нужно определить проблемное приложение. ARM предоставляет сведения, которые помогут решить эту задачу.  
@@ -83,8 +83,9 @@ ms.locfileid: "33578334"
 #### <a name="hosting-api"></a>Интерфейс API размещения  
  Если вы используете API размещения, а не управляемый API, узел должен передать в среду CLR реализацию интерфейса [IHostGCManager](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-interface.md). Среда CLR вызывает метод [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md) из этого интерфейса, когда возобновляет выполнение потоков, приостановленных на время сбора мусора. Среда CLR передает в параметре этого метода номер поколения выполненной сборки. Это позволяет узлу определить тип сборки (полная или частичная). Вы можете поместить запросы данных оставшейся памяти в реализацию метода [IHostGCManager::SuspensionEnding](../../../docs/framework/unmanaged-api/hosting/ihostgcmanager-suspensionending-method.md), чтобы получать их сразу же по мере обновления.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
- [Интерфейс ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
+- [Интерфейс ICLRAppDomainResourceMonitor](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
+- [\<appDomainResourceMonitoring>](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
+- [События трассировки событий Windows в среде CLR](../../../docs/framework/performance/clr-etw-events.md)

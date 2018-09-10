@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15c5455bd604765ebcd78aa418d2f74f4141628d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d3d0e2dbd57d9581d1c8b0ca42d1e9d556d8905
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398278"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44198508"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>Совместимость версий в .NET Framework
 Обратная совместимость означает, что приложение, разработанное для конкретной версии платформы, будет запускаться и в более поздних версиях этой платформы. В платформе .NET Framework в максимально возможной степени обеспечивается обратная совместимость: исходный код, написанный для одной версии платформы .NET Framework, должен компилироваться в более поздних версиях этой платформы, а двоичные файлы, работающие в одной версии платформы .NET Framework, должны точно так же работать в более поздних версиях этой платформы.  
@@ -52,9 +52,9 @@ ms.locfileid: "33398278"
 
 - Если приложение предназначено для .NET Framework 3.5, см. также раздел [Проблемы при миграции на .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md).
 
-- Если приложение предназначено для .NET Framework 2.0, см. также раздел [Изменения в .NET Framework 3.5 SP1](http://go.microsoft.com/fwlink/?LinkId=186989).
+- Если приложение предназначено для .NET Framework 2.0, см. также раздел [Изменения в .NET Framework 3.5 SP1](https://go.microsoft.com/fwlink/?LinkId=186989).
 
-- Если приложение предназначено для .NET Framework 1.1, см. также раздел [Изменения в .NET Framework 2.0](http://go.microsoft.com/fwlink/?LinkID=125263).  
+- Если приложение предназначено для .NET Framework 1.1, см. также раздел [Изменения в .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkID=125263).  
   
 -   Если вы перекомпилируете существующий исходный код для запуска в платформе .NET Framework 4.5 (или ее доработанных выпусках) или разрабатываете новую версию приложения или компонента для запуска в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или ее доработанных выпусках на основе существующей базы исходного кода, просмотрите раздел [Что устарело в библиотеке классов](../../../docs/framework/whats-new/whats-obsolete.md) на предмет устаревших типов и членов и используйте описанный обходной путь. (Скомпилированный ранее код будет продолжать работать с типами и членами, которые отмечены как устаревшие.)  
   
@@ -69,5 +69,5 @@ ms.locfileid: "33398278"
  [Новые возможности](../../../docs/framework/whats-new/index.md)  
  [Устаревшие классы библиотеки классов](../../../docs/framework/whats-new/whats-obsolete.md)  
  [Совместимость приложений](../../../docs/framework/migration-guide/application-compatibility.md)  
- [Политика жизненного цикла поддержки Microsoft .NET Framework](http://go.microsoft.com/fwlink/p/?LinkId=248212)  
+ [Политика жизненного цикла поддержки Microsoft .NET Framework](https://go.microsoft.com/fwlink/p/?LinkId=248212)  
  [Проблемы при миграции на .NET Framework 4](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)

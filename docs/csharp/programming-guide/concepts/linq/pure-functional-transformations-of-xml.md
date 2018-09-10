@@ -2,12 +2,12 @@
 title: Чистые функциональные преобразования XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 97e8e582-eb3d-4756-bbfb-0899eb688ae4
-ms.openlocfilehash: 7bbe5735541432108794959a7889976d4951fffd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e05c6167973b2342aafd51aad7d9102db9e94ae0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336714"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252133"
 ---
 # <a name="pure-functional-transformations-of-xml-c"></a>Чистые функциональные преобразования XML (C#)
 В этом разделе приведен учебник по функциональным преобразованиям для XML. В учебнике разъясняются основные принципы и языковые конструкции, которые необходимо понять, чтобы использовать функциональные преобразования. В нем также рассказывается об использовании функциональных преобразований для обработки XML-документа. Несмотря на то что в этом учебнике приведены примеры кода LINQ to XML, все базовые принципы также применяются и к другим технологиям LINQ.  
@@ -26,5 +26,6 @@ ms.locfileid: "33336714"
 |[Учебник. Объединение запросов в цепочки (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)|Подробно описывает отложенное вычисление и отложенное выполнение.|  
 |[Учебник. Управление содержимым в документе WordprocessingML (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)|Учебник, в котором демонстрируется функциональное преобразование.|  
   
-## <a name="see-also"></a>См. также  
- [Выполнение запросов к деревьям XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)
+## <a name="see-also"></a>См. также
+
+- [Выполнение запросов к деревьям XML (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)

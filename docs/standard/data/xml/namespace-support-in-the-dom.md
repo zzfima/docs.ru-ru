@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f0548ead-0fed-41ee-b33e-117ba900d3bc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e91ce2b36462780925dcaef701583a966c5f59b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcc796f8d895e3daa81a9607bd7c4941b747cf24
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569455"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44208774"
 ---
 # <a name="namespace-support-in-the-dom"></a>Поддержка пространств имен в модели DOM
 Модель XML DOM полностью построена на пространствах имен. Поддерживаются только XML-документы, где определены пространства имен. По спецификации W3C приложения DOM, реализующие уровень 1, могут не учитывать пространства имен, а возможности уровня 2 модели DOM учитывают пространства имен. Однако в модели XML DOM все возможности учитывают пространства имен, независимо о того, соответствует ли метод рекомендации для уровня 1 или уровня 2 модели DOM.  
@@ -25,5 +25,6 @@ ms.locfileid: "33569455"
   
 -   Если обнаружено двоеточие, имя разбивается на две части в зависимости от позиции первого символа двоеточия. Префикс получает значение строки, расположенной перед двоеточием, а локальным именем становится строка, расположенная после двоеточия. Для методов, не принимающих значение NamespaceURI, оно не разрешается и остается пустой строкой. В противном случае NamespaceURI получает значение строки, переданной методу. Если префикс не определен, метод **Save** и свойства **InnerXml** и **OuterXml** завершаются с ошибкой.  
   
-## <a name="see-also"></a>См. также  
- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также
+
+- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

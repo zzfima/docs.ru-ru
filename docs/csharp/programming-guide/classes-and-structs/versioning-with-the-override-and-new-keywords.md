@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 2a6a6f59320d94cf97b1a07448000bd708d95559
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5dfed1c4a7e68bbe112a136260bf95ba0826392d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33327555"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44178381"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Практическое руководство. Управление версиями с помощью ключевых слов "Override" и "New" (Руководство по программированию в C#)
 Язык C# построен таким образом, что управление версиями [базовых](../../../csharp/language-reference/keywords/base.md) и производных классов в различных библиотеках может включать сохранение и расширение обратной совместимости. Это означает, например, то, что C# полностью поддерживает введение в базовый [класс](../../../csharp/language-reference/keywords/class.md) нового члена с таким же именем, как у члена производного класса, и никакое непредвиденное поведение при этом не возникает. Кроме того, это значит, что класс должен прямо указывать, в каких случаях метод будет перезаписывать унаследованный метод, а в каких он будет становиться новым методом, скрывающим одноименный унаследованный метод.  
@@ -78,8 +78,9 @@ ms.locfileid: "33327555"
   
  Дополнительные примеры `new` и `override` см. в разделе [Использование ключевых слов Override и New](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md).  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)  
- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)  
+- [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)

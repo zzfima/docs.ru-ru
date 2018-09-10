@@ -2,19 +2,19 @@
 title: Практическое руководство. Как определить, является ли файл сборкой (C#)
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: 0557f42d42e42606c3d1b2a2ad71bd797a159e8c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee2313677fba21624ccdb44db779633f6c4503bf
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33317987"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861014"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>Практическое руководство. Как определить, является ли файл сборкой (C#)
 Файл является сборкой только в том случае, если он является управляемым и содержит запись сборки в своих метаданных. Дополнительные сведения о сборках и метаданных см. в разделе [Манифест сборки](../../../../../docs/framework/app-domains/assembly-manifest.md).  
   
 ### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>Как вручную определить, является ли файл сборкой  
   
-1.  Запустите [Ildasm.exe (дизассемблер IL)](https://msdn.microsoft.com/library/f7dy01k1).  
+1.  Запустите [Ildasm.exe (дизассемблер IL)](../../../../framework/tools/ildasm-exe-il-disassembler.md).  
   
 2.  Загрузите файл, который нужно протестировать.  
   
@@ -66,7 +66,8 @@ class TestAssembly
   
  Метод <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> загружает тестовый файл и освобождает его после того, как информация будет прочитана.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Reflection.AssemblyName>  
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
- [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Reflection.AssemblyName>  
+- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
+- [Сборки и глобальный кэш сборок (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/index.md)

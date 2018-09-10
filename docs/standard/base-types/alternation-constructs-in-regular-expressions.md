@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 956d16b47fb31549de8f25c513d73c43ab41c267
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b653972fad71ce3a89c35598513b94f71fb4bf0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574739"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44183003"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Конструкции изменения в регулярных выражениях
 <a name="top"></a> Конструкции изменения модифицируют регулярное выражение, включая сопоставление по принципу «либо/или» или условное сопоставление. Платформа .NET поддерживает три указанные далее конструкции изменения.  
@@ -132,5 +132,6 @@ ms.locfileid: "33574739"
  [!code-csharp[RegularExpressions.Language.Alternation#5](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.alternation/cs/alternation5.cs#5)]
  [!code-vb[RegularExpressions.Language.Alternation#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.alternation/vb/alternation5.vb#5)]  
   
-## <a name="see-also"></a>См. также  
- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>См. также
+
+- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

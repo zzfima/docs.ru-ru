@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: 9193dc56a0f92daf486d95666ba820cb09d588d0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745374"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43788932"
 ---
 # <a name="walkthrough-using-client-application-services"></a>Пошаговое руководство. Использование служб клиентских приложений
 В этой статье описывается создание приложения Windows, в котором для проверки подлинности пользователей и извлечения их ролей и параметров используются службы клиентских приложений.  
@@ -69,7 +69,7 @@ ms.locfileid: "32745374"
  На данном этапе приложение настроено для доступа ко всем трем службам с одного узла. В следующем разделе для тестирования конфигурации клиента вы создадите узел, выступающий в качестве простого приложения веб-служб.  
   
 ## <a name="creating-the-application-services-host"></a>Создание узла служб приложений  
- В этом разделе вы создадите простое приложение веб-служб для доступа к пользовательским данным, хранящимся в файле локальной базы данных SQL Server Compact. Затем нужно будет заполнить базу данных при помощи [ASP.NET Web Site Administration Tool](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec). Выполнив простую настройку, вы сможете быстро протестировать ваше клиентское приложение. В качестве альтернативы можно настроить узел веб-служб для доступа к пользовательским данным из заполненной базы данных SQL Server или с помощью пользовательских классов <xref:System.Web.Security.MembershipProvider> и <xref:System.Web.Security.RoleProvider> . Для получения дополнительной информации см. [Creating and Configuring the Application Services Database for SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
+ В этом разделе вы создадите простое приложение веб-служб для доступа к пользовательским данным, хранящимся в файле локальной базы данных SQL Server Compact. Затем нужно будет заполнить базу данных при помощи [ASP.NET Web Site Administration Tool](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec). Выполнив простую настройку, вы сможете быстро протестировать ваше клиентское приложение. В качестве альтернативы можно настроить узел веб-служб для доступа к пользовательским данным из заполненной базы данных SQL Server или с помощью пользовательских классов <xref:System.Web.Security.MembershipProvider> и <xref:System.Web.Security.RoleProvider> . Для получения дополнительной информации см. [Creating and Configuring the Application Services Database for SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2).  
   
  В следующей процедуре описывается создание и настройка веб-службы AppServices.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "32745374"
      Элементы `authenticationService`, `profileService`, и `roleService` в данном коде предназначены для включения и настройки служб приложений. В целях тестирования атрибуту `requireSSL` элемента `authenticationService` присвоено значение "false". Атрибуты `readAccessProperties` и `writeAccessProperties` элемента `profileService` указывают, что свойство `WebSettingsTestText` доступно для чтения и записи.  
   
     > [!NOTE]
-    >  В рабочем коде следует всегда обращаться к службе проверки подлинности с помощью протокола SSL (с использованием протокола HTTPS). Сведения о настройке SSL см. в разделе [Настройка протокола SSL (руководство пользователя IIS 6.0)](http://go.microsoft.com/fwlink/?LinkId=91844).  
+    >  В рабочем коде следует всегда обращаться к службе проверки подлинности с помощью протокола SSL (с использованием протокола HTTPS). Сведения о настройке SSL см. в разделе [Настройка протокола SSL (руководство пользователя IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=91844).  
   
     ```xml  
     <system.web.extensions>  
@@ -538,6 +538,6 @@ ms.locfileid: "32745374"
  [Службы клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [Общие сведения о службах клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [Практическое руководство. Настройка служб клиентских приложений](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [Средство администрирования веб-сайта ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
- [Создание и настройка базы данных служб приложений для SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
- [Пошаговое руководство. Использование служб приложений ASP.NET](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)
+ [Средство администрирования веб-сайта ASP.NET](https://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
+ [Создание и настройка базы данных служб приложений для SQL Server](https://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
+ [Пошаговое руководство. Использование служб приложений ASP.NET](https://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 68384064-7ee7-41e2-90e3-71f00bde01bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a70b8e3d1f56eafc04b97a19a1582d9c664e587d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 18458e52c6cf38b2900036613676adea3f3b2d0b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584674"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44188128"
 ---
 # <a name="how-to-write-a-parallelfor-loop-with-thread-local-variables"></a>Практическое руководство. Написание цикла Parallel.For и локальными переменными потока
 В этом примере показано, как использовать локальные переменные потока для хранения и получения состояния каждой отдельной задачи, создаваемой циклом <xref:System.Threading.Tasks.Parallel.For%2A>. Благодаря локальным переменным потока вы можете избежать дополнительной нагрузки при синхронизации большого количества доступов к общему состоянию. Вместо записи в общий ресурс при каждой итерации вы вычисляете и сохраняете значение до тех пор, пока не будут выполнены все итерации для задачи. После этого вы можете однократно записать итоговый результат в общий ресурс или передать его в другой метод.  
@@ -44,8 +44,9 @@ Function() new MyClass()
   
  См. дополнительные сведения о [лямбда-выражениях в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md).  
   
-## <a name="see-also"></a>См. также  
- [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)  
- [Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- [Лямбда-выражения в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+## <a name="see-also"></a>См. также
+
+- [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
+- [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)  
+- [Библиотека параллельных задач (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
+- [Лямбда-выражения в PLINQ и TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

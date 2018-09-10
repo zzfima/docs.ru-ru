@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: a42f98a81ff9e9bdbbf6c61554667aa223c7c269
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cb7f5c0239273c04f9f89b4e63335e67fdf5419a
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33331676"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44084121"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>Практическое руководство. Чтение из текстового файла (Руководство по программированию на C#)
 В этом примере считывается содержимое текстового файла с помощью статических методов <xref:System.IO.File.ReadAllText%2A> и <xref:System.IO.File.ReadAllLines%2A> из класса <xref:System.IO.File?displayProperty=nameWithType>.  
@@ -40,7 +40,8 @@ ms.locfileid: "33331676"
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Не следует полагаться на имя файла, чтобы определить содержимое файла. Например, файл `myFile.cs` может вовсе не быть исходным файлом C#.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IO?displayProperty=nameWithType>  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)

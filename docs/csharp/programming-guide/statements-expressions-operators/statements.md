@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 4dc2507e37793fb154b932062854b3f590e362e8
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 515ae6bb6030e80c80289ff888f07ade2f341792
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43420433"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44187500"
 ---
 # <a name="statements-c-programming-guide"></a>Операторы (Руководство по программированию в C#)
 Действия программы выражаются в операторах. В общие действия включено объявление переменных, присвоение значений, вызов методов, проход по коллекциям и ветвление на один или другой блок кода, в зависимости от заданного условия. Порядок выполнения операторов в программе называется потоком управления или потоком выполнения. Поток управления может отличаться при каждом запуске программы, в зависимости от реакции программы на входные данные, которые она получает во время выполнения.  
@@ -32,7 +32,7 @@ ms.locfileid: "43420433"
 |[Операторы обработки исключений](../../../csharp/language-reference/keywords/exception-handling-statements.md)|Операторы обработки исключений позволяют аккуратно восстановиться после исключительных условий, возникающих во время выполнения. Дополнительные сведения см. в следующих разделах:<br /><br /> [throw](../../../csharp/language-reference/keywords/throw.md), [try-catch](../../../csharp/language-reference/keywords/try-catch.md), [try-finally](../../../csharp/language-reference/keywords/try-finally.md), [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)|  
 |[Операторы checked и unchecked](../../../csharp/language-reference/keywords/checked-and-unchecked.md)|Операторы checked и unchecked позволяют указать, позволено ли числовым операциям вызывать переполнение, когда результат сохраняется в переменной, которая слишком мала для хранения результирующего значения. Дополнительные сведения см. в разделах [checked](../../../csharp/language-reference/keywords/checked.md) и [unchecked](../../../csharp/language-reference/keywords/unchecked.md).|  
 |Оператор `await`|Если пометить метод с помощью модификатора [async](../../../csharp/language-reference/keywords/async.md) , можно использовать в этом методе инструкцию [await](../../../csharp/language-reference/keywords/await.md) . Когда управление достигает выражения `await` в асинхронном методе, управление возвращается вызывающему объекту, и выполнение метода приостанавливается до завершения выполнения ожидающей задачи. После завершения задачи можно возобновить выполнение в методе.<br /><br /> Простой пример см. в подразделе "Асинхронные методы" раздела [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md). Дополнительные сведения см. в разделе [Асинхронное программирование с использованием ключевых слов async и await](../../../csharp/programming-guide/concepts/async/index.md).|  
-|Оператор `yield return`|Итератор выполняет настраиваемую итерацию по коллекции, например по списку или массиву. Итератор использует оператор [yield return](../../../csharp/language-reference/keywords/yield.md) для возврата всех элементов по одному. При достижении оператора `yield return` текущее расположение в коде запоминается. При следующем вызове итератора выполнение возобновляется с этого места.<br /><br /> Дополнительные сведения см. в разделе [Итераторы](https://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).|  
+|Оператор `yield return`|Итератор выполняет настраиваемую итерацию по коллекции, например по списку или массиву. Итератор использует оператор [yield return](../../../csharp/language-reference/keywords/yield.md) для возврата всех элементов по одному. При достижении оператора `yield return` текущее расположение в коде запоминается. При следующем вызове итератора выполнение возобновляется с этого места.<br /><br /> Дополнительные сведения см. в разделе [Итераторы](../../../csharp/programming-guide/concepts/iterators.md).|  
 |Оператор `fixed`|Оператор fixed не позволяет сборщику мусора переносить перемещаемую переменную. Дополнительные сведения см. в разделе [fixed](../../../csharp/language-reference/keywords/fixed-statement.md).|  
 |Оператор `lock`|Оператор lock позволяет ограничить одновременный доступ к блокам кода только до одного потока. Дополнительные сведения см. в разделе [lock](../../../csharp/language-reference/keywords/lock-statement.md).|  
 |Операторы с метками|Оператор можно пометить и затем использовать ключевое слово [goto](../../../csharp/language-reference/keywords/goto.md) для перехода к оператору с меткой. (См. пример в следующей строке.)|  
@@ -91,5 +91,6 @@ ms.locfileid: "43420433"
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)

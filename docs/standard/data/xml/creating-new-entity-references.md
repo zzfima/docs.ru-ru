@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: a42f81b3-0403-4e34-b346-7d2129804e54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0fefea6f8dfd74dfd31c7c07a158e4935ab0e02c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67fdbcdbff64bcd91c80fbeaec0c41982b68d98f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33568450"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265225"
 ---
 # <a name="creating-new-entity-references"></a>Создание новых ссылок на сущности
 Метод **CreateEntityReference** создает новый узел **XmlEntityReference**. Модель DOM определяет, было ли уже декларировано имя сущности, на которую указывает ссылка. Если было, то дочерние узлы узла **XmlEntityReference** копируются из узла декларации сущности. Если совпадающая декларация сущности отсутствует, пустой текстовый узел прикрепляется как единственный дочерний узел узла ссылки на сущность. Так как дочерние узлы узла **XmlEntityReference** являются копиями других узлов, они доступны только для чтения и не могут быть изменены.  
@@ -22,5 +22,6 @@ ms.locfileid: "33568450"
   
  Хотя класс **XmlDataDocument** является производным от класса **XmlDocument**, класс **XmlDataDocument** не поддерживает создание ссылок на сущности. Это связано с тем, что дочерние узлы **EntityReference** доступны только для чтения. Дочерние узлы узла **EntityReference** могут принадлежать к нескольким областям. В этом случае часть строки, связанная с областью, которая содержит часть узла **EntityReference**, будет доступна только для чтения.  
   
-## <a name="see-also"></a>См. также  
- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также
+
+- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

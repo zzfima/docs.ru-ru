@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f560e3b080f6355d4e0c433c2a2218fbcbc6d72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 844b0edb93b93704c4886495c673dc0496f7ba71
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574664"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192981"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Выполнение смены регистра независимо от языка и региональных параметров
 Методы <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> и <xref:System.Char.ToLower%2A?displayProperty=nameWithType> предоставляют перегрузки, которые не принимают параметры. По умолчанию эти перегрузки без параметров выполняют изменения регистра на основе значения <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Результат преобразования чувствителен к регистру и может быть разным для языков и региональных параметров. Чтобы четко указать, нужно ли учитывать язык и региональные параметры при изменении регистра, используйте перегрузки этих методов, принимающие параметр `culture` явным образом. Чтобы изменить регистр с учетом языка и региональных параметров, укажите значение `CultureInfo.CurrentCulture` для параметра `culture`. Чтобы изменить регистр без учета языка и региональных параметров, укажите значение `CultureInfo.InvariantCulture` для параметра `culture`.  
@@ -67,9 +67,10 @@ static object LookupKey(string key)
 ## <a name="using-the-chartoupper-and-chartolower-methods"></a>Использование методов Char.ToUpper и Char.ToLower  
  Методы `Char.ToUpper` и `Char.ToLower` действуют точно так же, как и методы `String.ToUpper` и `String.ToLower`, за исключением турецкого (Турция) и азербайджанского (латиница, Азербайджан) языков. Только для этих значений языка и региональных параметров изменяется применение регистра для одиночных символов. Дополнительные сведения об этом уникальном сопоставлении регистра см. в разделе "Регистр" описания класса <xref:System.String>. Чтобы повысить читаемость кода и стабильность результатов, мы рекомендуем всегда использовать перегрузки этих методов, позволяющие явным образом указать параметр `culture`.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
- <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
- [Выполнение строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
+- <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
+- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
+- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
+- [Выполнение строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

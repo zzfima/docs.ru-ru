@@ -2,12 +2,12 @@
 title: Удаление элементов, атрибутов и узлов из дерева XML (C#)
 ms.date: 07/20/2015
 ms.assetid: 07dd06d6-1117-4077-bf98-9120cf51176e
-ms.openlocfilehash: 85c1adc06321abf90fe478abf5375882069f11ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ce63ce6a4ef75dedc788efca11e8dd2bdb471eb
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33339973"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44217494"
 ---
 # <a name="removing-elements-attributes-and-nodes-from-an-xml-tree-c"></a>Удаление элементов, атрибутов и узлов из дерева XML (C#)
 Можно вносить изменения в XML-дерево, удаляя элементы, атрибуты и узлы других типов.  
@@ -78,5 +78,6 @@ Console.WriteLine(root);
   
  Обратите внимание, что первый внучатый элемент был удален из `Child1`. Все внучатые элементы были удалены из `Child2` и `Child3`.  
   
-## <a name="see-also"></a>См. также  
- [Изменение деревьев XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>См. также
+
+- [Изменение деревьев XML (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

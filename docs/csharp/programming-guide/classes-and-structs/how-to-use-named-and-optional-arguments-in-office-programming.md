@@ -6,17 +6,17 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: 3fce8a30e9ed663f06fa04c462fc1e1fd249d27a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f86509b7257f25e8faaadfc107ad70ca794aeee0
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33321877"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44190979"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Практическое руководство. Использование именованных и необязательных аргументов в программировании приложений Office (Руководство по программированию на C#)
 Появившиеся в [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] именованные и необязательные аргументы повышают удобство, гибкость и удобочитаемость программирования на C#. Кроме того, эти функции значительно упрощают доступ к COM-интерфейсам, таким как интерфейсы API автоматизации Microsoft Office.  
   
- В следующем примере у метода [ConvertToTable](https://msdn.microsoft.com/library/bb216993.aspx) имеется шестнадцать параметров, представляющих характеристики таблицы, например число столбцов и строк, форматирование, границы и цвета. Все шестнадцать параметров являются необязательными, поскольку в большинстве случаев не требуется задавать конкретные значения для всех этих параметров. Однако без именованных и необязательных аргументов приходилось указывать значение или значение-заполнитель для каждого из параметров. Именованные и необязательные параметры позволяют задавать значения только для тех параметров, которые требуются в конкретном проекте.  
+ В следующем примере у метода [ConvertToTable](<xref:Microsoft.Office.Interop.Word.Range.ConvertToTable%2A>) имеется шестнадцать параметров, представляющих характеристики таблицы, например число столбцов и строк, форматирование, границы и цвета. Все шестнадцать параметров являются необязательными, поскольку в большинстве случаев не требуется задавать конкретные значения для всех этих параметров. Однако без именованных и необязательных аргументов приходилось указывать значение или значение-заполнитель для каждого из параметров. Именованные и необязательные параметры позволяют задавать значения только для тех параметров, которые требуются в конкретном проекте.  
   
  Для выполнения этих процедур на компьютере должно быть установлено приложение Microsoft Office Word.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "33321877"
   
 ### <a name="to-display-text-in-a-word-document"></a>Отображение текста в документ Word  
   
-1.  В класс `Program` в файле Program.cs добавьте следующий метод для создания приложения Word и документа Word. Метод [Add](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) имеет четыре необязательных параметра. В этом примере используются значения по умолчанию. Поэтому в операторе вызова указывать аргументы не требуется.  
+1.  В класс `Program` в файле Program.cs добавьте следующий метод для создания приложения Word и документа Word. Метод [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) имеет четыре необязательных параметра. В этом примере используются значения по умолчанию. Поэтому в операторе вызова указывать аргументы не требуется.  
   
      [!code-csharp[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]  
   
@@ -97,7 +97,7 @@ ms.locfileid: "33321877"
   
      [!code-csharp[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]  
   
-2.  Чтобы использовать заранее определенный формат таблицы, замените последнюю строку метода `DisplayInWord` следующей инструкцией и нажмите сочетание клавиш CTRL+F5. В качестве формата можно использовать любую из констант [WdTableFormat](https://msdn.microsoft.com/library/microsoft.office.interop.word.wdtableformat.aspx).  
+2.  Чтобы использовать заранее определенный формат таблицы, замените последнюю строку метода `DisplayInWord` следующей инструкцией и нажмите сочетание клавиш CTRL+F5. В качестве формата можно использовать любую из констант [WdTableFormat](<xref:Microsoft.Office.Interop.Word.WdTableFormat>).  
   
      [!code-csharp[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]  
   
@@ -106,5 +106,6 @@ ms.locfileid: "33321877"
   
  [!code-csharp[csProgGuideNamedAndOptional#12](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_9.cs)]  
   
-## <a name="see-also"></a>См. также  
- [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
+## <a name="see-also"></a>См. также
+
+- [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5156374708beb07da875d2e2a8a3b74e52e21427
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 55756092f086de47c4b2acb8f147ca3ab231abe1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569978"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207230"
 ---
 # <a name="load-data-from-a-reader"></a>Загрузка данных из модуля чтения
 Если XML-документ загружен с помощью метода <xref:System.Xml.XmlDocument.Load%2A> и параметра <xref:System.Xml.XmlReader>, его поведение отличается от поведения загруженных данных других форматов. Если модуль чтения находится в начальном состоянии, метод <xref:System.Xml.XmlDocument.Load%2A> получает все его содержимое и строит модель XML DOM на основе всех данных модуля чтения.  
@@ -29,5 +29,6 @@ ms.locfileid: "33569978"
   
  По умолчанию метод <xref:System.Xml.XmlDocument.Load%2A> не проверяет допустимость XML с помощью определения типа документа (DTD) или проверки схемы. Он только проверяет правильность формата XML-документа. Чтобы выполнялась проверка, необходимо создать объект <xref:System.Xml.XmlReader> с помощью класса <xref:System.Xml.XmlReaderSettings>. Класс <xref:System.Xml.XmlReader> может применять проверку с помощью DTD или XSD-схемы. Свойство <xref:System.Xml.ValidationType> класса <xref:System.Xml.XmlReaderSettings> определяет, применяет ли экземпляр <xref:System.Xml.XmlReader> принудительную проверку. Дополнительные сведения о проверке данных XML см. в подразделе примечаний на справочной странице <xref:System.Xml.XmlReader>.  
   
-## <a name="see-also"></a>См. также  
- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также
+
+- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

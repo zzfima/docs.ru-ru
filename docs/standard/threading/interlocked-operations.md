@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cbda7114-c752-4f3e-ada1-b1e8dd262f2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 361e618578e836e10cf8655f027bed42eac7affd
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6478ea94b6c54272a01497ac7b1cb1b197892309
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393143"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269258"
 ---
 # <a name="interlocked-operations"></a>Блокируемые операции
 Класс <xref:System.Threading.Interlocked> предоставляет методы для синхронизации доступа к переменной, которую совместно используют несколько потоков. Потоки различных процессов могут использовать этот механизм, если переменная находится в общей памяти. Блокируемые операции являются атомарными, т. е. вся операция представляет собой единицу, которая не может быть прервана другой блокируемой операцией с той же переменной. Это имеет значение в операционных системах с преимущественной многопоточностью, когда поток может быть приостановлен после загрузки значения из адреса памяти, но прежде, чем его можно будет изменить или сохранить.  
@@ -57,8 +57,9 @@ ms.locfileid: "43393143"
  [!code-csharp[Conceptual.Interlocked#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interlocked/cs/source2.cs#2)]
  [!code-vb[Conceptual.Interlocked#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interlocked/vb/source2.vb#2)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.Interlocked>  
- <xref:System.Threading.Monitor>  
- [Работа с потоками](../../../docs/standard/threading/index.md)  
- [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.Interlocked>  
+- <xref:System.Threading.Monitor>  
+- [Работа с потоками](../../../docs/standard/threading/index.md)  
+- [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)

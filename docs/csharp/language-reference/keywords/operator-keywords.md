@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [C#], keywords
 ms.assetid: f745c81f-f8d8-4673-86a1-0f3a85cc63c3
 ms.openlocfilehash: b6a7fbc08647ace73676403937f4b0f79e7ff585
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43392702"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262091"
 ---
 # <a name="operator-keywords-c-reference"></a>Ключевые слова операторов (Справочник по C#)
 Используются для выполнения различных действий, включая создание объектов, проверку типа объекта во время выполнения, получение размера типа и другие операции. В этом разделе описываются следующие ключевые слова:  

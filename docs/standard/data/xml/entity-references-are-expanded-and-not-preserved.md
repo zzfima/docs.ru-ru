@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa03532200a89aa164648c1278c9dbafc2aee214
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569536"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266869"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Разворачиваемые и не сохраняемые ссылки на сущности
 Если ссылка на сущность разворачивается и заменяется текстом, который она представляет, узел **XmlEntityReference** не создается. Вместо этого выполняется синтаксический анализ для декларации сущности и на место **XmlEntityReference** копируются узлы, созданные из содержимого этой декларации. Таким образом, в примере `&publisher;` ссылка `&publisher;` не сохраняется, а вместо нее создается узел **XmlText**.  
@@ -40,5 +40,6 @@ ms.locfileid: "33569536"
   
  Если используется модуль чтения, который не умеет разрешать сущности, метод **Load** создает исключение, когда обнаруживает ссылку на сущность.  
   
-## <a name="see-also"></a>См. также  
- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также
+
+- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

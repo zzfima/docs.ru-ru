@@ -4,12 +4,12 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: c9fb03560e30bab3cc71a6171c731d887e859f6c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: bc31ae202ccbfee467dc0f6fa2cf515c751825ed
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43423586"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44201313"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Модификатор параметров out (справочник по C#)
 Ключевое `out` инициирует передачу аргументов по ссылке. Оно схоже с ключевым словом [ref](ref.md) за исключением того, что при использовании `ref` перед передачей переменную необходимо инициализировать. Оно также похоже на ключевое слово [in](in-parameter-modifier.md) за исключением того, что `in` не позволяет вызываемому методу изменять значение аргумента. Для применения параметра `out` определение метода и метод вызова должны явно использовать ключевое слово `out`. Пример:  
@@ -41,9 +41,7 @@ class CS0663_Example
  
 Свойства не являются переменными и поэтому не могут быть переданы как параметры `out`.
   
- Сведения о передаче массивов см. в разделе [Передача массивов при помощи параметров ref и out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
-  
- Ключевые слова `in`, `ref` и `out` запрещено использовать для следующих типов методов.  
+Ключевые слова `in`, `ref` и `out` запрещено использовать для следующих типов методов.  
   
 -   Асинхронные методы, которые определяются с помощью модификатора [async](../../../csharp/language-reference/keywords/async.md).  
   

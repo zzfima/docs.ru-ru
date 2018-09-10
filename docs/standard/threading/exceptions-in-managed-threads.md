@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99b3c36f040b506c23315d40d76642b09c0f362b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63931f4498f4c1f313e7980b91ef712d4a46a837
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591577"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43865183"
 ---
 # <a name="exceptions-in-managed-threads"></a>Исключения в управляемых потоках
 Начиная с .NET Framework версии 2.0, среда CLR позволяет большинству необработанных исключений выполняться в потоках. Как правило, это означает, что необработанное исключение будет вызывать завершение работы приложения.  
@@ -78,5 +78,6 @@ ms.locfileid: "33591577"
 ## <a name="host-override"></a>Переопределение узла  
  В платформе .NET Framework версии 2.0 неуправляемый узел может использовать интерфейс [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) в API размещения для переопределения политики необработанных исключений по умолчанию среды CLR. Чтобы задать политику для необработанных исключений, используется функция [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md).  
   
-## <a name="see-also"></a>См. также  
- [Основы управляемых потоков](../../../docs/standard/threading/managed-threading-basics.md)
+## <a name="see-also"></a>См. также
+
+- [Основы управляемых потоков](../../../docs/standard/threading/managed-threading-basics.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f9c6df23ae1a142d208672a03ffeb74709a0a05
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e98862aba937724c799adef597260a06ed495f6
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33591316"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44199769"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Классы Semaphore и SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> Класс представляет собой именованный (общесистемный) или локальный семафор. Он является тонкой оболочкой вокруг объекта семафора Win32. Семафоры Win32 являются семафорами счета, которые могут быть использованы для управления доступом к пулу ресурсов.  
@@ -46,7 +46,8 @@ ms.locfileid: "33591316"
   
  Используйте безопасность управления доступом для защиты объекта <xref:System.Threading.Semaphore>, представляющего именованный семафор, предпочтительнее с помощью конструктора, который определяет объект <xref:System.Security.AccessControl.SemaphoreSecurity?displayProperty=nameWithType>. Также можно применить безопасность управления доступом с помощью метода <xref:System.Threading.Semaphore.SetAccessControl%2A?displayProperty=nameWithType>, однако это оставит брешь в защите между временем создания семафора и временем, когда он будет защищен. Защита семафоров с помощью безопасности управления доступом способствует предотвращению атак злоумышленников, но не решает проблемы непреднамеренного конфликта имен.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.Semaphore>  
- <xref:System.Threading.SemaphoreSlim>  
- [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.Semaphore>  
+- <xref:System.Threading.SemaphoreSlim>  
+- [Объекты и функциональные возможности работы с потоками](../../../docs/standard/threading/threading-objects-and-features.md)

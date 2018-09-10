@@ -2,12 +2,12 @@
 title: Практическое руководство. Запись данных объекта в XML-файл (C#)
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: 1c8bfd00452cee63456bc3bf64ccf4a0c61aa06e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b8fb60640c9bdc0337d45b6901b1be3979dbac1f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33320552"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259760"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>Практическое руководство. Запись данных объекта в XML-файл (C#)
 Показывает, как записать объект из класса в XML-файл с помощью класса <xref:System.Xml.Serialization.XmlSerializer>.  
@@ -61,7 +61,8 @@ public class XMLWrite
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  В этом примере создается файл (если файл отсутствует). Если приложению требуется создать файл, оно должно иметь доступ к каталогу для создания файлов (`Create`). Если файл уже существует, то приложению достаточно иметь лишь доступ для записи файлов (`Write`), т. е. меньшие привилегии. Безопаснее создавать файл во время развертывания, если это возможно, а также предоставлять доступ `Read` к отдельному файлу вместо доступа `Create` к папке.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IO.StreamWriter>  
- [How to: Read Object Data from an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md) (Практическое руководство. Чтение данных объекта из XML-файла (C#))  
- [Сериализация (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.IO.StreamWriter>  
+- [How to: Read Object Data from an XML File (C#)](../../../../csharp/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md) (Практическое руководство. Чтение данных объекта из XML-файла (C#))  
+- [Сериализация (C#)](../../../../csharp/programming-guide/concepts/serialization/index.md)

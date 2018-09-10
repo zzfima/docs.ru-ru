@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d0cbf517-d9f6-4097-9851-4fa62903decd
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d3eb24d76ffb07b36b837056ffa5cde0cbd37f5f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d4b1fb4abe8ca0ba7afcefe996de59ceaf67a249
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33570554"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44252783"
 ---
 # <a name="support-for-the-msxslnode-set-function"></a>Поддержка функции msxsl:node-set()
 Функция `msxsl:node-set` позволяет преобразовать фрагмент дерева результатов в набор узлов. Получаемый в результате набор узлов всегда содержит один узел, который является корневым узлом дерева.  
@@ -53,5 +53,6 @@ ms.locfileid: "33570554"
 <authors><author>Michael Howard</author><author>Michael Kay</author></authors>  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+## <a name="see-also"></a>См. также
+
+- [Реализация классом XslTransform XSLT-процессора](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

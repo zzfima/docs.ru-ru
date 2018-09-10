@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1907841694cde82cebada4a9e73b8ce703208611
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b19bc78f44781923df6873ccc9720f4605731976
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576133"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44206066"
 ---
 # <a name="localizability-review"></a>Обзор локализуемости
 Проверка локализуемости — промежуточный шаг в разработке международных приложений. Это проверка, что международное приложение готово к локализации, которая позволяет определить код и элементы пользовательского интерфейса, требующие специальной обработки. Этот шаг также помогает удостовериться, что процесс локализации не внесет в приложение функциональных дефектов. Когда все проблемы, выявленные при анализе локализуемости, устранены, приложение готово для локализации. Исчерпывающая проверка локализуемости позволяет не изменять исходный код при локализации.  
@@ -73,8 +73,9 @@ ms.locfileid: "33576133"
   
  Если при разработке приложения вы соблюдали все рекомендации по глобализации, правильно обрабатывали функции, чувствительные к языковым и региональным параметрам, выявляли и устраняли проблемы локализации на этапе тестирования, то теперь можете смело переходить к следующему шагу: [Локализация](../../../docs/standard/globalization-localization/localization.md).  
   
-## <a name="see-also"></a>См. также  
- [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)  
- [Локализация](../../../docs/standard/globalization-localization/localization.md)  
- [Глобализация](../../../docs/standard/globalization-localization/globalization.md)  
- [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)
+## <a name="see-also"></a>См. также
+
+- [Глобализация и локализация](../../../docs/standard/globalization-localization/index.md)  
+- [Локализация](../../../docs/standard/globalization-localization/localization.md)  
+- [Глобализация](../../../docs/standard/globalization-localization/globalization.md)  
+- [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)

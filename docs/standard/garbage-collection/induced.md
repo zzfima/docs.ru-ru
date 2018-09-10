@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 436953782049800e89298932278af4e450fc10de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69590b0efc924132d149621c135ef0816cac7d1e
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575867"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44192552"
 ---
 # <a name="induced-collections"></a>Индуцированные коллекции
 В большинстве случаев сборщик мусора может определить самое подходящее время для выполнения сборки мусора, поэтому следует дать ему возможность работать независимо. В очень редких случаях принудительная сборка мусора может улучшить производительность приложения. В этих случаях вы можете принудительно запустить сборку мусора с помощью метода <xref:System.GC.Collect%2A?displayProperty=nameWithType>.  
@@ -36,6 +36,7 @@ ms.locfileid: "33575867"
 |<xref:System.GCCollectionMode.Forced> или <xref:System.GCCollectionMode.Default>|Блокирующий сбор выполнится, как только это станет возможным. Если в это время выполняется фоновая сборка и параметр поколения имеет значение 0 или 1, метод <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> немедленно запускает блокирующую сборку и возвращает управление по ее завершении. Если выполняется фоновая сборка и параметр `generation` имеет значение 2, метод дожидается завершения фоновой сборки, активирует блокирующую сборку поколения 2 и возвращает управление.|Сборка выполнится, как только это станет возможным. Метод <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> запрашивает фоновую сборку, но не гарантирует этот режим. В зависимости от обстоятельств может выполняться блокирующая сборка. Если фоновая сборка уже выполняется, метод возвращает управление немедленно.|  
 |<xref:System.GCCollectionMode.Optimized>|В зависимости от текущего состояния сборщика мусора и значения параметра `generation` может выполняться блокирующая сборка. Сборщик мусора пытается обеспечить оптимальную производительность.|Сборка может быть выполнена в зависимости от состояния сборщика мусора. Метод <xref:System.GC.Collect%28System.Int32%2CSystem.GCCollectionMode%2CSystem.Boolean%29> запрашивает фоновую сборку, но не гарантирует этот режим. В зависимости от обстоятельств может выполняться блокирующая сборка. Сборщик мусора пытается обеспечить оптимальную производительность. Если фоновая сборка уже выполняется, метод возвращает управление немедленно.|  
   
-## <a name="see-also"></a>См. также  
- [Режимы задержки](../../../docs/standard/garbage-collection/latency.md)  
- [Сборка мусора](../../../docs/standard/garbage-collection/index.md)
+## <a name="see-also"></a>См. также
+
+- [Режимы задержки](../../../docs/standard/garbage-collection/latency.md)  
+- [Сборка мусора](../../../docs/standard/garbage-collection/index.md)

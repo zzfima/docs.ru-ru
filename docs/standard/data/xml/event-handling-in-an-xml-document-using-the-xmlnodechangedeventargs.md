@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 00ed0437f51650cd335d528632f9f0cc14af6422
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0c382b22825512000a906af8a865b6b7c5f4c73c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569737"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44204894"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Обработка событий в XML-документе с помощью XmlNodeChangedEventArgs
 Класс **XmlNodeChangedEventArgs** инкапсулирует аргументы, передаваемые обработчикам событий, которые зарегистрированы в объекте **XmlDocument** для обработки событий. События и описания условий их срабатывания приведены в следующей таблице.  
@@ -208,5 +208,6 @@ public class Sample
   
  Дополнительные сведения см. в разделах <xref:System.Xml.XmlNodeChangedEventArgs> и <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
-## <a name="see-also"></a>См. также  
- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+## <a name="see-also"></a>См. также
+
+- [Модель объектов документов XML (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

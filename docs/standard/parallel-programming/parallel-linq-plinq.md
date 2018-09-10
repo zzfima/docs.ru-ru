@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 326fce55b13217bd08e58bf13a423fc9b6ffcbff
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 1fe7edffd53023cba6dac1454e620d6e0d7e9513
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43416054"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44210199"
 ---
 # <a name="parallel-linq-plinq"></a>Parallel LINQ (PLINQ)
 Parallel LINQ (PLINQ) является параллельной реализацией LINQ to Objects. PLINQ реализует полный набор стандартных операторов запроса LINQ как методов расширения для пространства имен <xref:System.Linq> и имеет дополнительные операторы для параллельных операций. PLINQ объединяет простоту и удобство чтения синтаксиса LINQ с мощностью параллельного программирования. Подобно коду, предназначенному для библиотеки параллельных задач, запросы PLINQ масштабируются в степень параллелизма на основе возможностей главного компьютера.  
@@ -50,7 +50,8 @@ Parallel LINQ (PLINQ) является параллельной реализац
   
  [Пример данных PLINQ](../../../docs/standard/parallel-programming/plinq-data-sample.md)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq.ParallelEnumerable>  
- [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)  
- [Встроенный язык запросов LINQ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)  
+- [Встроенный язык запросов LINQ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

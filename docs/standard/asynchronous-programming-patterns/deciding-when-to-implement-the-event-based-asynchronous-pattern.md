@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-ms.openlocfilehash: 04bdc94bceeed313d519658afb853a77e218989e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: af30f0d09ce772f20f342ec0936d0ca63f5465d7
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43398597"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262364"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Определение, когда следует реализовать асинхронную модель, основанную на событиях
 Асинхронная модель на основе событий применяется для предоставления асинхронного поведения класса. С момента ее появления [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] определяет две модели для предоставления асинхронного поведения: на основе интерфейса <xref:System.IAsyncResult?displayProperty=nameWithType> и на основе событий. Эта статья описывает ситуации, в которых вам следует применять ту или иную модель.  
@@ -80,9 +80,10 @@ ms.locfileid: "43398597"
   
 -   Предоставляйте модель <xref:System.IAsyncResult> только в том случае, если у вас высокие требования к производительности, которые гарантированно недостижимы при применении модели на основе событий, но могут быть достижимы с помощью модели <xref:System.IAsyncResult>.  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
- [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
- [Реализация асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
- [Рекомендации по реализации асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
- [Обзор асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a>См. также
+
+- [Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)  
+- [Асинхронная модель на основе событий (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+- [Реализация асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)  
+- [Рекомендации по реализации асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)  
+- [Обзор асинхронной модели, основанной на событиях](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

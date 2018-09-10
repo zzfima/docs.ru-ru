@@ -7,12 +7,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d69885b420d28878072a70dfd2288905cf13de1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34919efe32730fe0db11cb881b8e07629a3094fd
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33334838"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44207464"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>Практическое руководство. Создание файла или папки (Руководство по программированию на C#)
 Вы можете программно создать на компьютере папку, вложенную папку и файл во вложенной папке, а затем записать данные в этот файл.  
@@ -67,7 +67,8 @@ ms.locfileid: "33334838"
   
  Если у вас нет разрешения на создание папки, код в приведенном примере породит как исключение экземпляр класса <xref:System.UnauthorizedAccessException>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.IO?displayProperty=nameWithType>  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.IO?displayProperty=nameWithType>  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Файловая система и реестр (руководство по программированию на C#)](../../../csharp/programming-guide/file-system/index.md)

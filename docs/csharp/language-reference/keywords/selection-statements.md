@@ -5,11 +5,11 @@ helpviewer_keywords:
 - statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
 ms.openlocfilehash: da3132a82e2cb0b3aaa55fbe82898414ebd31c12
-ms.sourcegitcommit: a368166a51e5204c0224fbf5e46476e3ed122817
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/31/2018
-ms.locfileid: "43332010"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192760"
 ---
 # <a name="selection-statements-c-reference"></a>Инструкции выбора (Справочник по C#)
 Оператор выбора позволяет программе передать управление определенному потоку команд в зависимости от выполнения условия `true`.  

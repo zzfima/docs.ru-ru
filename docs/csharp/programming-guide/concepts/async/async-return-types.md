@@ -2,12 +2,12 @@
 title: Асинхронные типы возвращаемых значений (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 9b0ee1c2e9925a1caffca6b7fb83eff34003246b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3d3c7d610dd1287d2c7284a5edd9c92810a74dba
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43387583"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44212143"
 ---
 # <a name="async-return-types-c"></a>Асинхронные типы возвращаемых значений (C#)
 Асинхронные методы могут иметь следующие типы возвращаемых значений:
@@ -77,9 +77,10 @@ ms.locfileid: "43387583"
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 
-## <a name="see-also"></a>См. также  
-<xref:System.Threading.Tasks.Task.FromResult%2A>   
-[Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
-[Поток управления в асинхронных программах (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
-[async](../../../../csharp/language-reference/keywords/async.md)   
-[await](../../../../csharp/language-reference/keywords/await.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.Tasks.Task.FromResult%2A>   
+- [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Пошаговое руководство. Обращение к веб-сайтам с помощью async и await в C#)   
+- [Поток управления в асинхронных программах (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
+- [async](../../../../csharp/language-reference/keywords/async.md)   
+- [await](../../../../csharp/language-reference/keywords/await.md)

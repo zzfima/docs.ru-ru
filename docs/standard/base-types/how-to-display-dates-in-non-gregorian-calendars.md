@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3da8a524af872a724ee6cbe206912572d6338624
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 63af71f92af9c2f3a5986dcb73f44d0e53c00f58
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574752"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44079465"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Практическое руководство. Отображение дат в календарях, отличных от григорианского
 Для типов<xref:System.DateTime> и <xref:System.DateTimeOffset> в качестве календаря по умолчанию используется григорианский календарь. Это означает, что вызов метода `ToString` для значения даты и времени выведет строковое представление даты и времени по григорианскому календарю даже в том случае, если значение даты и времени создавалось с помощью другого календаря. Это показано в следующем примере, в котором двумя разными способами создаются значения даты и времени с персидским календарем. При вызове метода <xref:System.DateTime.ToString%2A> значения даты и времени по-прежнему отображаются в григорианском календаре. В этом примере представлены два часто используемых неверных способа отображения даты в заданном календаре.  
@@ -90,5 +90,6 @@ ms.locfileid: "33574752"
   
  Скомпилируйте код из командной строки с помощью команд csc.exe или vb.exe. Для компиляции кода в Visual Studio поместите его в шаблон проекта консольного приложения.  
   
-## <a name="see-also"></a>См. также  
- [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)
+## <a name="see-also"></a>См. также
+
+- [Выполнение операций форматирования](../../../docs/standard/base-types/performing-formatting-operations.md)

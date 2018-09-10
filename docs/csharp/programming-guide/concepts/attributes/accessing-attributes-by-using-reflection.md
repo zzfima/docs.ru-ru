@@ -2,12 +2,12 @@
 title: Обращение к атрибутам с помощью отражения (C#)
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: 05c051490dab5265309fd067dfb67f0ef7822541
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: aa8bf447fe0df81821a34b5a6d898980749921e1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33318494"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44216023"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>Обращение к атрибутам с помощью отражения (C#)
 Возможность определения настраиваемых атрибутов и их помещения в собственный исходный код не будет настолько значимой без наличия способа извлечения этих сведений и работы с ними. Отражение позволяет извлекать сведения, определенные с настраиваемыми атрибутами. Основным методом выступает `GetCustomAttributes`, который возвращает массив объектов, являющихся эквивалентами времени выполнения атрибутов исходного кода. Для этого метода существует несколько перегруженных версий. Дополнительные сведения см. в разделе <xref:System.Attribute>.  
@@ -113,11 +113,12 @@ class TestAuthorAttribute
 */  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Reflection>  
- <xref:System.Attribute>  
- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
- [Извлечение информации, сохраненной в атрибуте](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) (Отражение (C#))  
- [Атрибуты (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
- [Создание настраиваемых атрибутов (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Reflection>  
+- <xref:System.Attribute>  
+- [Руководство по программированию на C#](../../../../csharp/programming-guide/index.md)  
+- [Извлечение информации, сохраненной в атрибуте](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [Reflection (C#)](../../../../csharp/programming-guide/concepts/reflection.md) (Отражение (C#))  
+- [Атрибуты (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
+- [Создание настраиваемых атрибутов (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 030b62688ba8985a2659769fe20b6ae527471df5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03b77074323346e1a26fa07dc1ec873152da356b
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579396"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44195063"
 ---
 # <a name="observer-design-pattern-best-practices"></a>Рекомендации по шаблону разработки Observer
 На платформе .NET Framework шаблон разработки наблюдателя реализован в виде набора интерфейсов. Интерфейс <xref:System.IObservable%601?displayProperty=nameWithType> представляет поставщик данных, который также отвечает за предоставление реализации <xref:System.IDisposable>, позволяющей наблюдателям отменять подписку на уведомления. Интерфейс <xref:System.IObserver%601?displayProperty=nameWithType> представляет наблюдателя. В этом разделе содержатся рекомендации, которым должны следовать разработчики при реализации шаблона разработки наблюдателя с помощью этих интерфейсов.  
@@ -53,7 +53,8 @@ ms.locfileid: "33579396"
   
  Несмотря на наличие возможности прикрепить наблюдателя к нескольким поставщикам, рекомендуется присоединить экземпляр <xref:System.IObserver%601> только к одному экземпляру <xref:System.IObservable%601>.  
   
-## <a name="see-also"></a>См. также  
- [Шаблон разработки наблюдателя](../../../docs/standard/events/observer-design-pattern.md)  
- [Практическое руководство. Реализация объекта Observer](../../../docs/standard/events/how-to-implement-an-observer.md)  
- [Практическое руководство. Реализация поставщика](../../../docs/standard/events/how-to-implement-a-provider.md)
+## <a name="see-also"></a>См. также
+
+- [Шаблон разработки наблюдателя](../../../docs/standard/events/observer-design-pattern.md)  
+- [Практическое руководство. Реализация объекта Observer](../../../docs/standard/events/how-to-implement-an-observer.md)  
+- [Практическое руководство. Реализация поставщика](../../../docs/standard/events/how-to-implement-a-provider.md)

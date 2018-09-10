@@ -10,11 +10,12 @@ helpviewer_keywords:
 ms.assetid: 555e9f48-f53d-4774-9bcf-3e965c732ec5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43a7ac57e90b60679f29e9a5635be6ee8b8f8d93
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34f9208ac5007e26967c136f0599cabfd66ba2ea
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44189372"
 ---
 # <a name="how-to-iterate-file-directories-with-the-parallel-class"></a>Практическое руководство. Перебор каталогов с файлами с помощью параллельного класса
 Во многих случаях итерацию файла можно легко параллелизовать. В статье [Практическое руководство. Перебор каталогов с файлами с помощью PLINQ](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md) демонстрируется самый простой способ, позволяющий выполнить эту задачу во многих сценариях. Но с ним могут возникнуть трудности, если код должен поддерживать много разных исключений, которые могут возникнуть при доступе к файловой системе. В примере ниже представлен один из подходов к решению этой проблемы. Он применяет итерацию на основе стека для просмотра всех файлов и папок в указанном каталоге и позволяет перехватывать и обрабатывать разные исключения в пользовательском коде. Разумеется, за вами остается конкретный механизм обработки исключений.  
@@ -31,5 +32,6 @@ ms.lasthandoff: 05/04/2018
   
  Обратите внимание, что создание исключений в основном потоке не всегда приводит к остановке потоков, запущенных из метода <xref:System.Threading.Tasks.Parallel.ForEach%2A>. Чтобы остановить эти потоки, создайте в обработчиках исключений логическую переменную и проверяйте ее значение при каждой итерации параллельного цикла. Если значение указывает на созданное исключение, остановите или прервите выполнение цикла с помощью переменной <xref:System.Threading.Tasks.ParallelLoopState>. Подробнее см. статью [How to: Stop or Break from a Parallel.For Loop](https://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e) (Практическое руководство. Остановка цикла Parallel.For или выход из этого цикла).  
   
-## <a name="see-also"></a>См. также  
- [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
+## <a name="see-also"></a>См. также
+
+- [Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)

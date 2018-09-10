@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3a0151f6cc3ce25ca0c52a25be328ece8cb4434
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d28da0c788d40222ccd689807d6e51f66b4ce78
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567371"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44193722"
 ---
 # <a name="applying-attributes"></a>Применение атрибутов
 Чтобы применить атрибут к элементу кода, выполните указанные ниже действия.  
@@ -52,8 +52,9 @@ ms.locfileid: "33567371"
   
  Если атрибут применяется, строка `"My Assembly"` помещается в манифест сборки в раздел метаданных файла. Для просмотра атрибута можно воспользоваться [дизассемблером MSIL (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) или создать пользовательскую программу для извлечения атрибута.  
   
-## <a name="see-also"></a>См. также  
- [Атрибуты](../../../docs/standard/attributes/index.md)  
- [Извлечение информации, сохраненной в атрибуте](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
- [Основные понятия](/cpp/windows/attributed-programming-concepts)  
- [Атрибуты](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+## <a name="see-also"></a>См. также
+
+- [Атрибуты](../../../docs/standard/attributes/index.md)  
+- [Извлечение информации, сохраненной в атрибуте](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [Основные понятия](/cpp/windows/attributed-programming-concepts)  
+- [Атрибуты](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)

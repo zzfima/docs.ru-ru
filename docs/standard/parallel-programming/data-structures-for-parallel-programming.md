@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0b18f33c0cbc83f955c32477a21f77b09c7546c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6453e9983086dcb5b97ec134db9d74160d7a47cf
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43396478"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180310"
 ---
 # <a name="data-structures-for-parallel-programming"></a>Структуры данных для параллельного программирования
 На платформе .NET Framework версии 4 появились несколько новых типов для параллельного программирования, включая набор классов параллельных коллекций, упрощенные примитивы синхронизации и типы отложенной инициализации. Эти типы можно использовать с любым кодом многопоточного приложения, включая библиотеку параллельных задач и PLINQ.  
@@ -68,7 +68,8 @@ ms.locfileid: "43396478"
 ## <a name="aggregate-exceptions"></a>Агрегатные исключения  
  Тип <xref:System.AggregateException?displayProperty=nameWithType> позволяет захватить несколько исключений, создаваемых одновременно в нескольких отдельных потоках, и передать их в присоединяемый поток в виде одного исключения. Типы <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>, а также PLINQ, широко используют для этой цели <xref:System.AggregateException>. Дополнительные сведения см. в статьях [Обработка исключений](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) и [Практическое руководство. Обработка исключений в запросах PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- <xref:System.Threading?displayProperty=nameWithType>  
- [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Threading?displayProperty=nameWithType>  
+- [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)

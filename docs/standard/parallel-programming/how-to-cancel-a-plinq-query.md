@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 074371a929d5dd2cf0efb763ec45395a8dfd0432
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5008ede5054e8e6970bcb6f804fa1888244238f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33584286"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44210777"
 ---
 # <a name="how-to-cancel-a-plinq-query"></a>Практическое руководство. Отмена запроса PLINQ
 В приведенных ниже примерах показаны два способа отмены запроса PLINQ. В первом примере отменяется запрос, который состоит в основном из обхода данных. Во втором примере отменяется запрос, который содержит ресурсоемкую функцию.  
@@ -50,7 +50,8 @@ ms.locfileid: "33584286"
   
  Если удаляется перечислитель, например когда код прерывается вне цикла foreach (For Each в Visual Basic), выполняющего итерацию по результатам запроса, то этот запрос отменяется без создания исключений.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Linq.ParallelEnumerable>  
- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Linq.ParallelEnumerable>  
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
+- [Отмена в управляемых потоках](../../../docs/standard/threading/cancellation-in-managed-threads.md)

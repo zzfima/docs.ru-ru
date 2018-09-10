@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 51b611237422ef30730850369627467c152f7579
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e27473ca34f634f4a3125a2e87e6d0ef918a6f9d
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33336207"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44225442"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Практическое руководство. Подписка и отмена подписки на события (Руководство по программированию в C#)
 Необходимость подписки на событие, опубликованное другим классом, может возникнуть, когда требуется написать пользовательский код, вызываемый при инициировании такого события. Например, можно подписаться на событие кнопки `click`, чтобы приложение выполняло некоторое действие при нажатии пользователем кнопки.  
@@ -98,9 +98,10 @@ ms.locfileid: "33336207"
   
      Если подписка на событие отменена для всех подписчиков, экземпляр события в классе издателя получает значение `null`.  
   
-## <a name="see-also"></a>См. также  
- [События](../../../csharp/programming-guide/events/index.md)  
- [event](../../../csharp/language-reference/keywords/event.md)  
- [Практическое руководство. Публикация событий, соответствующих рекомендациям для .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
- [Оператор -= (справочник по C#)](../../language-reference/operators/subtraction-assignment-operator.md)  
- [Оператор +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)
+## <a name="see-also"></a>См. также
+
+- [События](../../../csharp/programming-guide/events/index.md)  
+- [event](../../../csharp/language-reference/keywords/event.md)  
+- [Практическое руководство. Публикация событий, соответствующих рекомендациям для .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+- [Оператор -= (справочник по C#)](../../language-reference/operators/subtraction-assignment-operator.md)  
+- [Оператор +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)
