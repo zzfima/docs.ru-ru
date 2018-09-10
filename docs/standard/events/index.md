@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 623700161ae4587daeb2c7348055d413512f7c87
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f5d106dd3b7b9a7a0aeedca86e63a6fccbb1cc27
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43805641"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192488"
 ---
 # <a name="handling-and-raising-events"></a>Обработка и вызов событий
 События на платформе .NET Framework основаны на модели делегата. Модель делегата соответствует шаблону разработки наблюдателя, который позволяет подписчику зарегистрироваться у поставщика и получать от него уведомления. Отправитель события отправляет уведомление о событии, а приемник событий получает уведомление и определяет ответ на него. В этом разделе описываются основные компоненты модели делегата, использование событий в приложениях и реализация событий в коде.  
@@ -87,11 +87,12 @@ ms.locfileid: "43805641"
 |[Шаблон разработки наблюдателя](../../../docs/standard/events/observer-design-pattern.md)|Описывает шаблон разработки, позволяющий подписчику зарегистрироваться у поставщика и получать от него уведомления.|  
 |[Практическое руководство. Прием событий в приложениях Web Forms](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Описывает способы обработки событий, вызванных элементом управления веб-форм (Web Forms).|  
   
-## <a name="see-also"></a>См. также  
- <xref:System.EventHandler>  
- <xref:System.EventHandler%601>  
- <xref:System.EventArgs>  
- <xref:System.Delegate>  
- [Общие сведения о событиях и перенаправленных событиях (приложения для UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
- [События (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
- [События (Руководство по программированию в C#)](../../csharp/programming-guide/events/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.EventHandler>  
+- <xref:System.EventHandler%601>  
+- <xref:System.EventArgs>  
+- <xref:System.Delegate>  
+- [Общие сведения о событиях и перенаправленных событиях (приложения для UWP)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
+- [События (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
+- [События (Руководство по программированию в C#)](../../csharp/programming-guide/events/index.md)
