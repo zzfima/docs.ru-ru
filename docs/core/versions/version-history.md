@@ -3,11 +3,11 @@ title: Журнал версий .NET Core
 description: Версии среды выполнения .NET Core, пакета SDK для .NET Core, компилятора C# и компилятора VB.NET см. на временной шкале.
 ms.date: 07/26/2018
 ms.openlocfilehash: 90fd4ba57620a3a005f2148c0335a76a6fa54a30
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42936626"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43519069"
 ---
 # <a name="net-core-version-history"></a>Журнал версий .NET Core
 

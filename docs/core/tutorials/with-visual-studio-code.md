@@ -4,12 +4,12 @@ description: Узнайте, как создать и отладить в Visual
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
-ms.openlocfilehash: 8958c39ba16cadbfab95e35fa36e8e85ce0a4ab8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 321edcebdea141b7290fa57b47c8d9fc91d3521c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213621"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484672"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Начало работы с C# и Visual Studio Code
 
@@ -50,7 +50,7 @@ ms.locfileid: "33213621"
 
 4. Запустите программу Hello World.
 
-    * Введите `dotnet run`. 
+    * Введите `dotnet run`.
 
       ![Команда dotnet run](media/with-visual-studio-code/dotnetrun.png)
 
@@ -62,7 +62,7 @@ ms.locfileid: "33213621"
 
     ![Откройте файл Program.cs](media/with-visual-studio-code/opencs.png)
 
-2. Visual Studio Code предлагает добавить недостающие ресурсы для сборки и отладки приложения. Выберите ответ **Да**. 
+2. Visual Studio Code предлагает добавить недостающие ресурсы для сборки и отладки приложения. Выберите ответ **Да**.
 
     ![Предупреждение о недостающих ресурсах](media/with-visual-studio-code/missing-assets.png)
 
@@ -74,7 +74,7 @@ ms.locfileid: "33213621"
 
     ![Выбор .NET Core](media/with-visual-studio-code/selectcore.png)
 
-5. Добавьте в проект точку останова, щелкнув **поле редактора** (пустое пространство слева от номеров строк) в строке 9.
+5. Добавьте в проект точку останова, щелкнув **поле редактора** (пустое пространство слева от номеров строк) в строке 9, или переместите курсор текста в строку 9 в редакторе и нажмите клавишу <kbd>F9</kbd>.
 
     ![Установка точки останова](media/with-visual-studio-code/setbreakpoint.png)
 
@@ -85,9 +85,16 @@ ms.locfileid: "33213621"
 
 7. Выберите зеленую стрелку в верхней части, чтобы продолжить отладку, или выберите красный квадрат в верхней части, чтобы остановить процесс.
 
-> [!TIP] 
+> [!TIP]
 > Дополнительные сведения и советы по отладке .NET Core в Visual Studio Code с помощью OmniSharp см. в разделе [Инструкции по настройке отладчика .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 
+## <a name="faq"></a>часто задаваемые вопросы
+
+### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Мне не хватает ресурсов для выполнения сборки и отладки C# в Visual Studio Code. Отладчик выдает сообщение: "Конфигурация отсутствует".
+
+Ресурсы для сборки и отладки можно создать с помощью расширения Visual Studio Code C#. Visual Studio Code предложит создать эти ресурсы при первом открытии проекта C#. Если вы не создали ресурсы, то все равно сможете выполнить эту команду. Для этого откройте палитру команд (**Вид > Палитра команд**) и введите ">.NET: Создать ресурсы для сборки и отладки". После этого будут созданы необходимые конфигурационные файлы .vscode, launch.json и tasks.json.
+
 ## <a name="see-also"></a>См. также
-[Настройка Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)   
-[Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Отладка в Visual Studio Code)
+
+* [Setting up Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview) (Настройка Visual Studio Code)
+* [Debugging in Visual Studio Code](https://code.visualstudio.com/Docs/editor/debugging) (Отладка в Visual Studio Code)

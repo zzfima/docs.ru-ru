@@ -1,26 +1,37 @@
 ---
 title: Ключевое слово operator (справочник по C#)
-ms.date: 07/20/2015
+description: Сведения о том, как перегрузить встроенные операторы C#
+ms.date: 08/27/2018
 f1_keywords:
 - operator_CSharpKeyword
 - operator
 helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
-ms.openlocfilehash: c3bfada235993670bf158fe9803a09707b2b3251
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 1e11d7767b61becc39b1158fae9cb2abe997e4bd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42929876"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43480656"
 ---
 # <a name="operator-c-reference"></a>operator (Справочник по C#)
 
 Ключевое слово `operator` используется для перегрузки встроенного оператора или выполнения пользовательского преобразования в объявлении класса или структуры.
 
+Чтобы перегрузить оператор в пользовательском классе или структуре, создайте объявление оператора в соответствующем типе. Объявление оператора, которое перегружает встроенный оператор C#, должно удовлетворять следующим правилам:
+
+- Оно должно включать `public` и модификатор `static`.
+- Оно должно включать `operator X`, где `X` — имя или обозначение перегружаемого оператора.
+- Унарные операторы имеют один параметр, а бинарные операторы имеют два параметра. В каждом случае по крайней мере один параметр должен иметь тот же тип, что и класс или структура, в которых объявлен этот оператор.
+
+Сведения о том, как определить операторы преобразования, см. в разделах, посвященных ключевым словам [explicit](explicit.md) и [implicit](implicit.md).
+
+Обзор операторов C#, которые могут быть перегружены, см. в разделе [Перегружаемые операторы](../../programming-guide/statements-expressions-operators/overloadable-operators.md).
+
 ## <a name="example"></a>Пример
 
-Ниже приведен сильно упрощенный класс для дробных чисел. Он перегружает операторы `+` и `*` для выполнения сложения и умножения, а также предоставляет оператор преобразования, который преобразует тип `Fraction` в тип `double`.
+В следующем примере определяется тип `Fraction`, представляющий дробные числа. Он перегружает операторы `+` и `*` для выполнения сложения и умножения, а также предоставляет оператор преобразования, который преобразует тип `Fraction` в тип `double`.
 
 [!code-csharp[csrefKeywordsConversion#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#6)]
 
@@ -35,4 +46,5 @@ ms.locfileid: "42929876"
 - [Ключевые слова в C#](index.md)
 - [implicit](implicit.md)
 - [explicit](explicit.md)
+- [Перегружаемые операторы](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
 - [Практическое руководство. Реализация определенных пользователем преобразований между структурами](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)

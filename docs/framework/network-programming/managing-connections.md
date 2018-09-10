@@ -20,19 +20,19 @@ ms.assetid: 9b3d3de7-189f-4f7d-81ae-9c29c441aaaa
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 8702f2329b262fc5c5965ae49365d46ba34091d6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29077a1c0f2b803270adb730e0d810143095e709
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391177"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484984"
 ---
 # <a name="managing-connections"></a>Управление подключениями
 Приложения, которые используют протокол HTTP для подключения к ресурсам данных, могут использовать классы <xref:System.Net.ServicePoint> и <xref:System.Net.ServicePointManager> .NET Framework для управления подключением к Интернету и для оптимизации масштабирования и производительности.  
   
  Класс **ServicePoint** предоставляет приложению конечную точку, которое оно может использовать для доступа к ресурсам в Интернете. Каждый экземпляр класса **ServicePoint** содержит сведения, которые помогают оптимизировать подключения к интернет-серверу с помощью анализа сведений о подключениях для повышения производительности.  
   
- Каждый класс **ServicePoint** определяется с помощью универсального кода ресурса (URI). Классы разбиваются на категории на основе идентификатора схемы и фрагмента узла URI. Например, один и тот же экземпляр **ServicePoint** может предоставлять запросы к URI http://www.contoso.com/index.htm и http://www.contoso.com/news.htm?date=today, так как в этих URI используется один и тот же идентификатор схемы (http) и фрагмент узла (www.contoso.com). Если у приложения уже есть постоянное подключение к серверу www.contoso.com, приложение использует это подключение для обработки обоих запросов, поэтому создавать два подключения не требуется.  
+ Каждый класс **ServicePoint** определяется с помощью универсального кода ресурса (URI). Классы разбиваются на категории на основе идентификатора схемы и фрагмента узла URI. Например, один и тот же экземпляр **ServicePoint** может предоставлять запросы к URI `http://www.contoso.com/index.htm` и `http://www.contoso.com/news.htm?date=today`, так как в этих URI используется один и тот же идентификатор схемы (http) и фрагмент узла (`www.contoso.com`). Если у приложения уже есть постоянное подключение к серверу `www.contoso.com`, приложение использует это подключение для обработки обоих запросов, поэтому создавать два подключения не требуется.  
   
  **ServicePointManager** — статический класс, который управляет созданием и уничтожением экземпляров класса **ServicePoint**. Класс **ServicePointManager** создает класс **ServicePoint**, когда приложение запрашивает интернет-ресурс, не входящий в коллекцию существующих экземпляров классов **ServicePoint**. Классы **ServicePoint** уничтожаются, если превышается максимальное время ожидания или количество существующих экземпляров классов **ServicePoint** превышает максимальное количество экземпляров классов **ServicePoint** для приложения. Вы можете задать как максимальное время ожидания по умолчанию, так и максимальное количество экземпляров классов **ServicePoint**, установив свойства <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A> и <xref:System.Net.ServicePointManager.MaxServicePoints%2A> для класса **ServicePointManager**.  
   
@@ -53,7 +53,7 @@ ServicePointManager.DefaultConnectionLimit = 4;
 ServicePointManager.DefaultConnectionLimit = 4  
 ```  
   
- Изменение свойства **ServicePointManager.DefaultConnectionLimit** не влияет на ранее инициализированные экземпляры класса **ServicePoint**. В следующем коде показано изменение количества подключений для существующего класса **ServicePoint** для сервера http://www.contoso.com на значение, которое хранится в `newLimit`.  
+ Изменение свойства **ServicePointManager.DefaultConnectionLimit** не влияет на ранее инициализированные экземпляры класса **ServicePoint**. В следующем коде показано изменение количества подключений для существующего класса **ServicePoint** для сервера `http://www.contoso.com` на значение, которое хранится в `newLimit`.  
   
 ```csharp  
 Uri uri = new Uri("http://www.contoso.com/");  

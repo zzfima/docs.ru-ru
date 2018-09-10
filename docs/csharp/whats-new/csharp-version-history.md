@@ -3,12 +3,12 @@ title: История языка C# (руководство по C#)
 description: На что был похож этот язык в ранних версиях и во что он превратился сейчас?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 90f480d7b25ebe308d1f1cb3d4c117f36f7dd9bf
-ms.sourcegitcommit: a1e35d4e94edab384a63406c0a5438306873031b
+ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42752034"
+ms.lasthandoff: 09/02/2018
+ms.locfileid: "43391252"
 ---
 # <a name="the-history-of-c"></a>История языка C# #
 
@@ -34,6 +34,10 @@ ms.locfileid: "42752034"
 - [Операторы](../programming-guide/statements-expressions-operators/statements.md)
 - [Атрибуты](../programming-guide/concepts/attributes/index.md)
 - Литералы
+
+## <a name="c-version-12"></a>Версия для C# 1.2
+
+Версия C# 1.2 входит в состав Visual Studio 2003. Она содержит ряд небольших улучшений языка. Наиболее значительным изменением является то, что начиная с этой версии код, создаваемый в цикле `foreach`, вызывает <xref:System.IDisposable.Dispose%2A> в <xref:System.Collections.IEnumerator>, если <xref:System.Collections.IEnumerator> реализует <xref:System.IDisposable>.
 
 ## <a name="c-version-20"></a>C# версии 2.0
 

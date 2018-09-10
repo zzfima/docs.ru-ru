@@ -5,18 +5,19 @@ ms.date: 03/20/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: e9f4216af6073a352bef1efb59eea0ddeda5fc4b
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961310"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43484106"
 ---
-# <a name="how-to-compare-strings-in-c"></a>Сравнение строк в C# #
+# <a name="how-to-compare-strings-in-c"></a>Сравнение строк в C\#
 
 Сравнивая строки, вы хотите ответить на один из двух вопросов: "Равны ли две эти строки?" или "В каком порядке должны следовать эти строки при их сортировке?".
 
-Однако эту задачу осложняют факторы, влияющие на сравнение строк: 
+Однако эту задачу осложняют факторы, влияющие на сравнение строк:
+
 - Вы можете выбрать порядковое или лингвистическое сравнение.
 - Вы можете указать, учитывается ли регистр.
 - Вы можете выбрать сравнения для конкретного языка.
@@ -36,14 +37,15 @@ ms.locfileid: "37961310"
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>Порядковые сравнения без учета регистра
 
-Метод <xref:System.String.Equals%2A?displayProperty=nameWithType> позволяет задать значение <xref:System.StringComparison> объекта <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>, чтобы проводить сравнение без учета регистра. Присутствует также статический метод <xref:System.String.Compare%2A> с логическим аргументом, позволяющим проводить сравнение без учета регистра. Это показано в следующем коде:
+Метод <xref:System.String.Equals%2A?displayProperty=nameWithType> позволяет указать значение <xref:System.StringComparison> для объекта <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>
+для сравнения без учета регистра. Присутствует также статический метод <xref:System.String.Compare%2A> с логическим аргументом, позволяющим проводить сравнение без учета регистра. Это показано в следующем коде:
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
 
 ## <a name="linguistic-comparisons"></a>Лингвистические сравнения
 
 Строки могут быть упорядочены с использованием лингвистических правил для текущих значений языка и региональных параметров.
-Иногда это называется порядком сортировки слов. При лингвистическом сравнении некоторые символы Юникода, отличные от алфавитно-цифровых, могут иметь особые весовые коэффициенты. Например, дефис "-" может иметь очень низкий весовой коэффициент, чтобы слова "co-op" и "coop" находились рядом друг с другом в порядке сортировки. Кроме того, некоторые символы Юникода могут быть эквивалентны последовательности буквенно-цифровых символов. В следующем примере используется фраза "Они танцуют на улице." на немецком языке с буквами "ss" и "ß". Лингвистически (в Windows) буквы "ss" равнозначны немецкому символу эсцет "ß" в языках "en-US" и "de-DE". 
+Иногда это называется порядком сортировки слов. При лингвистическом сравнении некоторые символы Юникода, отличные от алфавитно-цифровых, могут иметь особые весовые коэффициенты. Например, дефис "-" может иметь очень низкий весовой коэффициент, чтобы слова "co-op" и "coop" находились рядом друг с другом в порядке сортировки. Кроме того, некоторые символы Юникода могут быть эквивалентны последовательности буквенно-цифровых символов. В следующем примере используется фраза "Они танцуют на улице." на немецком языке с буквами "ss" и "ß". Лингвистически (в Windows) буквы "ss" равнозначны немецкому символу эсцет "ß" в языках "en-US" и "de-DE".
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
@@ -86,7 +88,7 @@ ms.locfileid: "37961310"
 
 Приведенные ниже примеры показывают, как сортировать и искать строки в массиве с помощью лингвистического сравнения, зависящего от текущих значений языка и региональных параметров. Используйте статические методы <xref:System.Array>, которые принимают параметр <xref:System.StringComparer?displayProperty=nameWithType>.
 
-В этом примере показано, как сортировать массив строк с использованием текущих значений языка и региональных параметров: 
+В этом примере показано, как сортировать массив строк с использованием текущих значений языка и региональных параметров:
 
 [!code-csharp-interactive[Sorting an array of strings](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#5)]
 
@@ -104,7 +106,7 @@ ms.locfileid: "37961310"
 
 [!code-csharp-interactive[csProgGuideStrings#11](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#8)]
 
-Всегда используйте один и тот же тип сравнения для сортировки и поиска. Использование разных типов сравнения приводит к неожиданным результатам. 
+Всегда используйте один и тот же тип сравнения для сортировки и поиска. Использование разных типов сравнения приводит к неожиданным результатам.
 
 Классы коллекций, такие как <xref:System.Collections.Hashtable?displayProperty=nameWithType>, <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>, и <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, имеют конструкторы, принимающие параметр <xref:System.StringComparer?displayProperty=nameWithType>, если типом элементов или ключей является `string`. В целом, по возможности следует использовать эти конструкторы и задавать либо <xref:System.StringComparer.Ordinal?displayProperty=nameWithType>, либо <xref:System.StringComparer.OrdinalIgnoreCase?displayProperty=nameWithType>.
 
@@ -118,8 +120,9 @@ ms.locfileid: "37961310"
 > При проверке строк на равенство нужно использовать методы, которые явно указывают, какой вид сравнения следует выполнить. Это делает код намного более понятным и удобочитаемым. Используйте перегрузки методов классов <xref:System.String?displayProperty=nameWithType> и <xref:System.Array?displayProperty=nameWithType>, которые принимают параметр перечисления <xref:System.StringComparison>. Это позволяет указать тип выполняемого сравнения. Старайтесь избегать использования операторов `==` и `!=` при проверке на равенство. Методы экземпляра <xref:System.String.CompareTo%2A?displayProperty=nameWithType> всегда выполняют порядковое сравнение с учетом регистра. Они предназначены, прежде всего, для упорядочивания строк в алфавитном порядке.
 
 ## <a name="see-also"></a>См. также
- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
- <xref:System.StringComparer?displayProperty=nameWithType>  
- [Строки](../programming-guide/strings/index.md)  
- [Сравнение строк в .NET Framework](../../standard/base-types/comparing.md)  
- [Глобализация и локализация приложений](/visualstudio/ide/globalizing-and-localizing-applications)
+
+- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
+- <xref:System.StringComparer?displayProperty=nameWithType>  
+- [Строки](../programming-guide/strings/index.md)  
+- [Сравнение строк в .NET Framework](../../standard/base-types/comparing.md)  
+- [Глобализация и локализация приложений](/visualstudio/ide/globalizing-and-localizing-applications)

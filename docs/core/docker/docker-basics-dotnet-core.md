@@ -6,23 +6,23 @@ ms.author: johalex
 ms.date: 11/06/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 02b6b3fc9e149f5d1d5d78e310c7df257be983c1
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 543b9454e826022a72752d9a24bc43b77d2501f5
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37961551"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44201391"
 ---
 # <a name="learn-docker-basics-with-net-core"></a>Основы работы с Docker с помощью .NET Core
 
-Это руководство описывает задачи сборки и развертывания контейнера Docker для приложения .NET Core. В ходе работы с этим руководством вы узнаете:
+Это руководство описывает задачи сборки и развертывания контейнера Docker для приложения .NET Core. [Платформа Docker](https://docs.docker.com/engine/docker-overview/#the-docker-platform) использует [подсистему Docker](https://docs.docker.com/engine/docker-overview/#docker-engine) для быстрой сборки и упаковки приложений в качестве [образов Docker](https://docs.docker.com/glossary/?term=image). Эти образы имеют формат [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) и предназначены для развертывания и запуска в [многоуровневом контейнере](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
+
+В ходе работы с этим руководством вы:
 
 > [!div class="checklist"]
 > * как создать Dockerfile;
 > * как создать приложение .NET Core;
 > * как развертывать приложение в контейнер Docker.
-
-[Платформа Docker](https://docs.docker.com/engine/docker-overview/#the-docker-platform) использует [подсистему Docker](https://docs.docker.com/engine/docker-overview/#docker-engine) для быстрой сборки и упаковки приложений в качестве [образов Docker](https://docs.docker.com/glossary/?term=image). Эти образы имеют формат [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) и предназначены для развертывания и запуска в [многоуровневом контейнере](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers).
 
 ## <a name="net-core-easiest-way-to-get-started"></a>.NET Core: самый простой способ начать работу
 
@@ -283,7 +283,7 @@ Hello World!
 
 ## <a name="related-resources"></a>Связанные ресурсы
 
-* [Примеры Docker для .NET Core](https://github.com/dotnet/dotnet-docker-samples/README.md)
+* [Примеры Docker для .NET Core](https://github.com/dotnet/dotnet-docker/tree/master/samples)
 * [Dockerfile в контейнерах Windows](https://docs.microsoft.com/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [Примеры Docker для .NET Framework](https://github.com/Microsoft/dotnet-framework-docker-samples)
 * [ASP.NET Core в центре Docker](https://hub.docker.com/r/microsoft/aspnetcore/)

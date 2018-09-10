@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 1733f3fc66d79dafb9bc6f983773f043be6c1006
-ms.sourcegitcommit: b7763f3435635850a76d4cbcf09bdce6c019208a
+ms.openlocfilehash: 8ea958ad5d3eba394eb914da81111a0eaf707cf4
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/25/2018
-ms.locfileid: "34483477"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43398882"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Тестирование библиотеки классов с помощью .NET Core в Visual Studio 2017
 
@@ -38,11 +38,11 @@ ms.locfileid: "34483477"
 
    Исходный код, созданный шаблоном модульного теста, выполняет следующие действия.
 
-   * Он импортирует пространство имен [Microsoft.VisualStudio.TestTools.UnitTesting](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.aspx), которое содержит типы, используемые для модульного тестирования.
+   * Он импортирует пространство имен <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType>, которое содержит типы, используемые для модульного тестирования.
 
-   * Он применяет атрибут [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) к классу `UnitTest1`. При запуске модульного теста автоматически выполняются все методы теста в тестовом классе, помеченные атрибутом \[TestMethod\].
+   * Он применяет атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> к классу `UnitTest1`. При запуске модульного теста автоматически выполняются все методы теста в тестовом классе, помеченные атрибутом \[TestMethod\].
 
-   * Атрибут [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) определяет `TestMethod1` как метод теста, который будет автоматически выполняться при запуске модульного теста.
+   * Атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> определяет `TestMethod1` как метод теста, который будет автоматически выполняться при запуске модульного теста.
 
 1. В **обозревателе решений** щелкните узел **Зависимости** в проекте **StringLibraryTest** правой кнопкой мыши и выберите в контекстном меню пункт **Добавить ссылку**.
 
@@ -67,11 +67,11 @@ ms.locfileid: "34483477"
 
    Исходный код, созданный шаблоном модульного теста, выполняет следующие действия.
 
-   * Он импортирует пространство имен [Microsoft.VisualStudio.TestTools.UnitTesting](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.aspx), которое содержит типы, используемые для модульного тестирования.
+   * Он импортирует пространство имен [Microsoft.VisualStudio.TestTools.UnitTesting]<xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=namewithType>, которое содержит типы, используемые для модульного тестирования.
 
-   * Он применяет атрибут [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx) к классу `UnitTest1`. При запуске модульного теста автоматически выполняются все методы теста в тестовом классе, помеченные атрибутом \[TestMethod\].
+   * Он применяет атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>) к классу `UnitTest1`. При запуске модульного теста автоматически выполняются все методы теста в классе теста, помеченные атрибутом <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute>.
 
-   * Атрибут [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx) определяет `TestMethod1` как метод теста, который будет автоматически выполняться при запуске модульного теста.
+   * Атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> определяет `TestMethod1` как метод теста, который будет автоматически выполняться при запуске модульного теста.
 
 1. В **обозревателе решений** щелкните узел **Зависимости** в проекте **StringLibraryTest** правой кнопкой мыши и выберите в контекстном меню пункт **Добавить ссылку**.
 
@@ -84,9 +84,9 @@ ms.locfileid: "34483477"
 
 ## <a name="adding-and-running-unit-test-methods"></a>Добавление и выполнение методов модульных тестов
 
-При запуске модульного теста Visual Studio выполняет каждый метод, помеченный атрибутом [\[TestMethod\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testmethodattribute.aspx), из класса модульных тестов (это класс, к которому применен атрибут [\[TestClass\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.testclassattribute.aspx)). Метод теста завершается, когда происходит первый сбой или когда все тесты, содержащиеся в методе, будут успешно выполнены.
+При запуске модульного теста Visual Studio выполняет каждый метод, помеченный атрибутом <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute>, из класса модульных тестов (это класс, к которому применяется атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>). Метод теста завершается, когда происходит первый сбой или когда все тесты, содержащиеся в методе, будут успешно выполнены.
 
-Самый распространенный вид тестов вызывает члены класса [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx). Многие методы утверждения (Assert) принимают по крайней мере два параметра, из которых один представляет ожидаемый результат теста, а второй — фактический результат теста. Наиболее популярные из этих методов перечислены в представленной ниже таблице.
+В самых распространенных тестах вызываются члены класса <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>. Многие методы утверждения (Assert) принимают по крайней мере два параметра, из которых один представляет ожидаемый результат теста, а второй — фактический результат теста. Наиболее популярные из этих методов перечислены в представленной ниже таблице.
 
 Методы утверждения | Функция
 --- | ---
@@ -95,13 +95,13 @@ ms.locfileid: "34483477"
 `Assert.IsFalse` | Проверяет, что условие имеет значение `false`. Утверждение не выполняется, если условие имеет значение `true`.
 `Assert.IsNotNull` | Проверяет, что объект не имеет значения `null`. Утверждение не выполняется, если объект является `null`.
 
-К тестовому методу можно также применить атрибут [\[ExpectedException\]](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.expectedexceptionattribute.aspx). Он указывает тип исключения, который должен вызывать метод теста. Такой тест считается не выполненным, если заявленное исключение не было создано.
+К методу теста также можно применить атрибут <xref:Microsoft.VisualStudio.TestTools.UnitTesting.ExpectedExceptionAttribute>. Он указывает тип исключения, который должен вызывать метод теста. Такой тест считается не выполненным, если заявленное исключение не было создано.
 
-Для тестирования метода `StringLibrary.StartsWithUpper` необходимо предоставить несколько строк, которые начинаются с символов верхнего регистра. Предполагается, что в этих случаях метод вернет `true`, поэтому можно вызвать метод [Assert.IsTrue (логическое значение, строка)](https://msdn.microsoft.com/library/ms243754.aspx). Представьте также несколько строк, которые не начинаются с символов верхнего регистра. Предполагается, что в этих случаях метод вернет `false`, поэтому можно вызвать метод [Assert.IsFalse (логическое значение, строка)](https://msdn.microsoft.com/library/ms243805.aspx).
+Для тестирования метода `StringLibrary.StartsWithUpper` необходимо предоставить несколько строк, которые начинаются с символов верхнего регистра. Предполагается, что в этих случаях метод возвратит `true`, поэтому можно вызвать метод <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A>. Представьте также несколько строк, которые не начинаются с символов верхнего регистра. Предполагается, что в этих случаях метод возвратит `false`, поэтому можно вызвать метод <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A>.
 
 Так как ваш метод библиотеки обрабатывает строки, нам нужно проверить правильность обработки [пустых строк (`String.Empty`)](xref:System.String.Empty) (так называется допустимая строка, которая не содержит символов и для которой свойство <xref:System.String.Length> имеет значение 0) и строки `null`, которая не была инициализирована. Если `StartsWithUpper` вызывается в качестве метода расширения для экземпляра <xref:System.String>, ему нельзя передавать строку `null`. Однако его можно вызвать напрямую как статический метод и передать ему один аргумент типа <xref:System.String>.
 
-Вы определите три метода, каждый из которых поочередно вызывает метод [Assert](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.unittesting.assert.aspx) для каждого элемента в массиве строк. Поскольку метод теста завершается ошибкой при первом же сбое, вы вызовете перегруженную версию метода, которая позволяет передать строку и указать строковое значение, используемое в вызове метода.
+Вы определите три метода, каждый из которых поочередно вызывает метод <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> для каждого элемента в массиве строк. Поскольку метод теста завершается ошибкой при первом же сбое, вы вызовете перегруженную версию метода, которая позволяет передать строку и указать строковое значение, используемое в вызове метода.
 
 Создание методов теста:
 

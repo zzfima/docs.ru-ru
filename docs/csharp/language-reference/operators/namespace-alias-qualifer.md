@@ -8,18 +8,25 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 480ed224d1994dac926dfc78d59e227c8d1e8f36
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 077d5835b372897cbe797385271effc5d00bf6e3
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42934999"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43473977"
 ---
 # <a name="-operator-c-reference"></a>Оператор :: (Справочник по C#)
 Квалификатор псевдонима пространства имен (`::`) служит для поиска идентификаторов. Он всегда размещается между двумя идентификаторами, как показано в следующем примере.  
   
  [!code-csharp[csRefOperators#27](../../../csharp/language-reference/operators/codesnippet/CSharp/namespace-alias-qualifer_1.cs)]  
-  
+
+Оператор `::` также может использоваться с *директивой псевдонима using*:
+
+```csharp
+// using Col=System.Collections.Generic;
+var numbers = new Col::List<int> { 1, 2, 3 };
+```
+
 ## <a name="remarks"></a>Примечания  
  Квалификатор псевдонима пространства имен может быть `global`. Он вызывает поиск в глобальном пространстве имен, а не в пространстве имен с псевдонимом.  
   

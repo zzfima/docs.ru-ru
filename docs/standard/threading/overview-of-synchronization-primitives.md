@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e35c2337ff7e416cb5f2c869f8ede160e05d369f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5098eea86ee910baad57115419e147df02e41ed9
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592019"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43485538"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Обзор примитивов синхронизации
 <a name="top"></a> Платформа .NET Framework предоставляет ряд примитивов синхронизации для управления взаимодействием потоков и предотвращения состояний гонки. Их можно условно разделить на три категории: блокировка, сигнал и блокированные операции.  
@@ -40,7 +40,7 @@ ms.locfileid: "33592019"
  Блокировки предоставляют единовременное управление ресурсом одному потоку или определенному количеству потоков. Поток, запрашивающий монопольную блокировку, если блокировка уже используется, блокируется до того момента, как блокировка станет доступной.  
   
 ### <a name="exclusive-locks"></a>Монопольные блокировки  
- Самым простым способом блокировки является оператор `lock` в C# и оператор `SyncLock` в Visual Basic, который управляет доступом к блоку кода. Как правило, этот блок называется критической секцией. Оператор `lock` реализуется с помощью методов <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> и <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Он использует блок `try…catch…finally` для контроля снятия блокировки.  
+ Самым простым способом блокировки является оператор `lock` в C# и оператор `SyncLock` в Visual Basic, который управляет доступом к блоку кода. Как правило, этот блок называется критической секцией. Оператор `lock` реализуется с помощью методов <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> и <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Он использует блок `try…finally` для снятия блокировки.  
   
  В целом, использование оператора `lock` или `SyncLock` для защиты небольших блоков кода, включающих не более одного метода, является лучшим способом использовать класс <xref:System.Threading.Monitor>. Несмотря на все свои возможности, класс <xref:System.Threading.Monitor> подвержен потере блокировок и взаимоблокировок.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "33592019"
   
  Класс <xref:System.Threading.Monitor> не поддерживает создание экземпляров. Его методы являются статическими (`Shared` в Visual Basic) и работают с созданным экземпляром заблокированного объекта.  
   
- Обзор концепции см. в разделе [Мониторы](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
+ Обзор концепции см. в разделе [Мониторы](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
   
 #### <a name="mutex-class"></a>Класс Mutex  
  Потоки запрашивают <xref:System.Threading.Mutex> путем вызова перегрузки его метода <xref:System.Threading.WaitHandle.WaitOne%2A>. Перегрузки со временем ожидания предоставляются для освобождения потоков после определенного времени ожидания. В отличие от класса <xref:System.Threading.Monitor> мьютекс может быть или локальным, или глобальным. Глобальные мьютексы, также называемые именованными мьютексами, видны в операционной системе и могут использоваться для синхронизации потоков в различных доменах приложений или процессах. Локальные мьютексы происходят от <xref:System.MarshalByRefObject> и могут использоваться за границами домена приложения.  
@@ -109,7 +109,7 @@ ms.locfileid: "33592019"
   
  Потоки блокируются при дескрипторах ожидания посредством вызова метода экземпляра <xref:System.Threading.WaitHandle.WaitOne%2A> или одного из статических методов <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> или <xref:System.Threading.WaitHandle.SignalAndWait%2A>. Способ их освобождения зависит от того, какой метод был вызван, а также от типа дескрипторов ожидания.  
   
- Обзор концепции см. в разделе [Дескрипторы ожидания](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489).  
+ Обзор концепции см. в разделе [Дескрипторы ожидания](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489).  
   
 #### <a name="event-wait-handles"></a>Дескрипторы ожидания событий  
  Дескрипторы ожидания событий включают класс <xref:System.Threading.EventWaitHandle> и его производные классы <xref:System.Threading.AutoResetEvent> и <xref:System.Threading.ManualResetEvent>. Потоки освобождаются от дескриптора ожидания событий, если этот дескриптор получает сигнал посредством вызова метода <xref:System.Threading.EventWaitHandle.Set%2A> или с помощью метода <xref:System.Threading.WaitHandle.SignalAndWait%2A>.  
@@ -167,11 +167,11 @@ ms.locfileid: "33592019"
   
 ## <a name="see-also"></a>См. также  
  [Синхронизация данных для многопоточности](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [Мониторы](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
+ [Мониторы](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  [Мьютексы](../../../docs/standard/threading/mutexes.md)  
  [Классы Semaphore и SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
  [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
- [Дескрипторы ожидания](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
+ [Дескрипторы ожидания](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
  [Блокируемые операции](../../../docs/standard/threading/interlocked-operations.md)  
  [Блокировки чтения и записи](../../../docs/standard/threading/reader-writer-locks.md)  
  [Barrier](../../../docs/standard/threading/barrier.md)  

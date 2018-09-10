@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: fbee7e6ad0fad312e9e5524f7b3fcc7c417ad47b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b156d043f5a4b72f4cb7423708b41fdd0e475dd
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33577431"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43385700"
 ---
 # <a name="async-in-depth"></a>Подробный обзор асинхронного программирования
 
@@ -114,7 +114,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 Кроме того, направление работы в поток пользовательского интерфейса (например, обновление пользовательского интерфейса) с помощью методов `async` реализуется очень просто и не требует дополнительных усилий (например, вызова потокобезопасного делегата).
 
-## <a name="deeper-dive-into-task-and-taskt-for-a-cpu-bound-operation"></a>Подробный обзор Task и Task<T> для операций, связанных с ЦП
+## <a name="deeper-dive-into-task-and-tasklttgt-for-a-cpu-bound-operation"></a>Подробный обзор Task и Task&lt;T&gt; для операций, связанных с ЦП
 
 Код `async`, связанный с использованием ЦП, немного отличается от кода `async`, связанного с операциями ввода-вывода.  Поскольку работа выполняется на ЦП, невозможно избежать выделения потока для вычислений.  Использование `async` и `await` предоставляет чистый способ взаимодействия с фоновым потоком и позволяет объекту, вызвавшему асинхронный метод, по-прежнему реагировать на новые запросы.  Обратите внимание, что это не обеспечивает защиту общих данных.  Если вы используете общие данные, все равно потребуется применять соответствующую стратегию синхронизации.
 

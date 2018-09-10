@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 180c038987e7de6b39a8eae0e86871eea41a40bb
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 1ed7ac49cde6792cddff898e8b9930a83598e02c
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37960044"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43388147"
 ---
 # <a name="using-directive-c-reference"></a>Директива using (Справочник по C#)
 Директива `using` используется в следующих трех целях.  
@@ -20,7 +20,7 @@ ms.locfileid: "37960044"
     using System.Text;  
     ```  
   
--   Для разрешения доступа к статическим членам типа без необходимости квалификации доступа с помощью имени типа: 
+-   Для разрешения доступа к статическим членам и вложенным типам без необходимости квалифицировать доступ с помощью имени типа. 
   
     ```csharp  
     using static System.Math;  
@@ -52,13 +52,23 @@ class Program
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Область директивы `using` ограничена файлом, в котором она находится.  
+ Область директивы `using` ограничена файлом, в котором она находится.
+ 
+ Директива `using` может отображаться:
+- В начале файла исходного кода перед определением пространств имен и типов.
+- В пространстве имен перед любыми пространствами имен и типами, объявленными в этом пространстве имен.
+
+В противном случае возникнет ошибка компилятора [CS1529](../../misc/cs1529.md).
   
- Создайте псевдоним `using`, чтобы упростить квалификацию идентификатора для пространства имен или типа. Правая часть директивы псевдонима using всегда должна быть полным типом независимо от директив using до нее.  
+ Создайте директиву псевдонима `using`, чтобы упростить квалификацию идентификатора для пространства имен или типа. Во всех директивах `using` следует использовать полное пространство имен или тип независимо от того, какие директивы `using` находятся перед ней. В объявлении директивы `using` не может использоваться псевдоним `using`. Например, следующий код вызовет ошибку компиляции:
+ ```csharp
+ using s = System.Text;
+ using s.RegularExpressions; 
+ ```
   
  Создайте директиву `using`, чтобы использовать типы в пространстве имен без необходимости указания этого пространства имен. Директива `using` не предоставляет доступ к пространствам имен, вложенным в указанное пространство имен.  
   
- Пространства имен делятся на две категории: пользовательские и системные. Пользовательские пространства имен задаются в вашем коде. Список системных пространств имен см. в разделе [Обзор библиотеки классов .NET Framework](../../../standard/class-library-overview.md).  
+ Пространства имен делятся на две категории: пользовательские и системные. Пользовательские пространства имен задаются в вашем коде. Список системных пространств имен см. в разделе [Браузер API .NET](https://docs.microsoft.com/en-us/dotnet/api/).  
   
  Примеры ссылочных методов в других сборках см. в разделе [Создание и использование сборок в командной строке](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
@@ -79,11 +89,12 @@ class Program
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Использование пространств имен](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)  
- [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)  
- [Оператор using](../../../csharp/language-reference/keywords/using-statement.md)
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Использование пространств имен](../../../csharp/programming-guide/namespaces/using-namespaces.md)  
+- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
+- [Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)  
+- [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)  
+- [Оператор using](../../../csharp/language-reference/keywords/using-statement.md)

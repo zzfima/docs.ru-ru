@@ -3,13 +3,13 @@ title: Команда dotnet nuget push — CLI .NET Core
 description: Команда dotnet nuget push отправляет пакет на сервер и публикует его.
 author: karann-msft
 ms.author: mairaw
-ms.date: 06/01/2018
-ms.openlocfilehash: 8a64f9cdc11d03bed82a132265c3b4e1de290807
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 09/04/2018
+ms.openlocfilehash: 23d27cef29008955850f9ed9f4a8baed9e7ad982
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728580"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44186467"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -198,7 +198,3 @@ dotnet nuget push [-h|--help]
 Отправляет все файлы *NUPKG* из текущего каталога в источник push-уведомлений по умолчанию.
 
 `dotnet nuget push *.nupkg`
-
-Отправляет все файлы *NUPKG* из текущего каталога в источник push-уведомлений по умолчанию, указав собственный файл конфигурации *./config/My.Config*.
-
-`dotnet nuget push *.nupkg --config-file ./config/My.Config`

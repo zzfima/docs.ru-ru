@@ -1,26 +1,28 @@
 ---
 title: Ключевое слово explicit (справочник по C#)
-ms.date: 07/20/2015
+ms.date: 08/24/2018
 f1_keywords:
 - explicit_CSharpKeyword
 - explicit
 helpviewer_keywords:
 - explicit keyword [C#]
 ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
-ms.openlocfilehash: 66d271fdac0bad356ee0bafc1732e2f410854da1
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 3567a2c5aa549aa3141ed59c3e93e7b07975da70
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37027945"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43463147"
 ---
 # <a name="explicit-c-reference"></a>explicit (Справочник по C#)
 
-Ключевое слово `explicit` объявляет оператор преобразования определяемого пользователем типа, который должен быть вызван с помощью приведения. Например, этот оператор выполняет преобразование из класса Fahrenheit в класс Celsius:
+Ключевое слово `explicit` объявляет оператор преобразования определяемого пользователем типа, который должен быть вызван с помощью приведения.
+
+В следующем примере определяется оператор, который преобразует класс `Fahrenheit` в класс `Celsius`. Оператор должен быть определен в классе `Fahrenheit` или в классе `Celsius`:
 
 [!code-csharp[csrefKeywordsConversion#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#2)]
 
-Такой оператор преобразования можно вызвать следующим образом:
+Вызовите определенный оператор преобразования с помощью приведения, как показано в следующем примере:
 
 [!code-csharp[csrefKeywordsConversion#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsConversion/CS/csrefKeywordsConversion.cs#3)]
 
@@ -48,10 +50,10 @@ ms.locfileid: "37027945"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по C#](../index.md)  
-[Руководство по программированию на C#](../../programming-guide/index.md)  
-[Ключевые слова в C#](index.md)  
-[implicit](implicit.md)  
-[operator (справочник по C#)](operator.md)  
-[Практическое руководство. Реализация определенных пользователем преобразований между структурами](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
-[Связанные пользовательские явные преобразования в C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)  
+- [Справочник по C#](../index.md)  
+- [Руководство по программированию на C#](../../programming-guide/index.md)  
+- [Ключевые слова в C#](index.md)  
+- [implicit](implicit.md)  
+- [operator (справочник по C#)](operator.md)  
+- [Практическое руководство. Реализация определенных пользователем преобразований между структурами](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+- [Связанные пользовательские явные преобразования в C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/)  

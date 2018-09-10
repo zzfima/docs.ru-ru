@@ -1,5 +1,5 @@
 ---
-title: foreach, in (Справочник по C#)
+title: Оператор foreach в C#
 ms.date: 06/29/2018
 f1_keywords:
 - foreach
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: a6397cdc9d1e36423a14158a57ca2c1b3fe9df17
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: d84c68eb102d55b31ba20a6b6b5c01b96963924d
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874966"
+ms.lasthandoff: 09/01/2018
+ms.locfileid: "43405854"
 ---
-# <a name="foreach-in-c-reference"></a>foreach, in (Справочник по C#)
+# <a name="foreach-in-c-reference"></a>foreach, in (справочник по C#)
 
 Оператор `foreach` выполняет оператор или блок операторов для каждого элемента в экземпляре типа, который реализует интерфейс <xref:System.Collections.IEnumerable?displayProperty=nameWithType> или <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>. Оператор `foreach` не ограничивается этими типами. Он может применяться к экземпляру любого типа, который удовлетворяет следующим условиям:
 
@@ -47,10 +47,10 @@ ms.locfileid: "37874966"
 
 ## <a name="see-also"></a>См. также
 
-[Оператор foreach (спецификация языка C#)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)  
-[Использование оператора foreach с массивами](../../programming-guide/arrays/using-foreach-with-arrays.md)  
-[for](for.md)  
-[Операторы итерации](iteration-statements.md)  
-[Ключевые слова в C#](index.md)  
-[Справочник по C#](../index.md)  
-[Руководство по программированию на C#](../../programming-guide/index.md)  
+- [Оператор foreach (спецификация языка C#)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
+- [Использование оператора foreach с массивами](../../programming-guide/arrays/using-foreach-with-arrays.md)
+- [for](for.md)
+- [Операторы итерации](iteration-statements.md)
+- [Ключевые слова в C#](index.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)

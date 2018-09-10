@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 manager: douge
-ms.openlocfilehash: 73f61ee3358edf50c11ae10ee53650c66b1c1400
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 6d70db7139d82b6e219e2c417282333f950ef402
+ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925806"
+ms.lasthandoff: 09/03/2018
+ms.locfileid: "43417865"
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Пошаговое руководство. Создание приложения служб Windows в конструкторе компонентов
 В этой статье описывается процедура создания простого приложения службы Windows в Visual Studio, которое записывает сообщения в журнал событий. Ниже приведены основные шаги, которые необходимо выполнить для создания и использования службы.  
@@ -477,7 +477,7 @@ End Sub
      Если служба удалена успешно, installutil.exe сообщит об этом. Для получения дополнительной информации см. [How to: Install and Uninstall Services](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md).  
   
 ## <a name="next-steps"></a>Следующие шаги  
- Можно создать автономную программу установки, которую могут использовать другие пользователи для установки вашей службы Windows, но для этого потребуется выполнить дополнительные операции. ClickOnce не поддерживает службы Windows, поэтому вы не сможете использовать мастер публикации. Можно использовать полный выпуск InstallShield, который не предоставляется корпорацией Майкрософт. Дополнительные сведения об InstallShield см. в разделе [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition). Для создания установщика службы Windows можно также использовать [Windows Installer XML Toolset](http://go.microsoft.com/fwlink/?LinkId=249067) .  
+ Можно создать автономную программу установки, которую могут использовать другие пользователи для установки вашей службы Windows, но для этого потребуется выполнить дополнительные операции. ClickOnce не поддерживает службы Windows, поэтому вы не сможете использовать мастер публикации. Можно использовать полный выпуск InstallShield, который не предоставляется корпорацией Майкрософт. Дополнительные сведения об InstallShield см. в разделе [InstallShield Limited Edition](/visualstudio/deployment/installshield-limited-edition). Для создания установщика службы Windows также можно использовать [Набор инструментов XML установщика Windows](https://go.microsoft.com/fwlink/?LinkId=249067).  
   
  Кроме того, можно изучить возможности компонента <xref:System.ServiceProcess.ServiceController> , который позволяет отправлять команды в установленную службу.  
   
@@ -487,4 +487,4 @@ End Sub
  [Приложения служб Windows](../../../docs/framework/windows-services/index.md)  
  [Знакомство с приложениями служб Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  [Практическое руководство. Отладка приложений служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [Службы (Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
+ [Службы (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)
