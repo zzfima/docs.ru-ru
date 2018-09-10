@@ -9,35 +9,35 @@ helpviewer_keywords:
 - -codepage compiler option [C#]
 ms.assetid: 75942989-b69a-4308-90a0-840c73d2c478
 ms.openlocfilehash: 66edb32d24dd1dc543097b98ff3744f0aa0a7145
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43389693"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43511876"
 ---
-# <a name="-codepage-c-compiler-options"></a><span data-ttu-id="b6510-102">-codepage (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="b6510-102">-codepage (C# Compiler Options)</span></span>
-<span data-ttu-id="b6510-103">Этот параметр задает кодовую страницу, используемую во время компиляции, если требуемая страница не является текущей кодовой страницей системы по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="b6510-103">This option specifies which codepage to use during compilation if the required page is not the current default codepage for the system.</span></span>  
+# <a name="-codepage-c-compiler-options"></a><span data-ttu-id="80b84-102">-codepage (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="80b84-102">-codepage (C# Compiler Options)</span></span>
+<span data-ttu-id="80b84-103">Этот параметр задает кодовую страницу, используемую во время компиляции, если требуемая страница не является текущей кодовой страницей системы по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="80b84-103">This option specifies which codepage to use during compilation if the required page is not the current default codepage for the system.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b6510-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b6510-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80b84-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="80b84-104">Syntax</span></span>  
   
 ```console  
 -codepage:id  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="b6510-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="b6510-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="80b84-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="80b84-105">Arguments</span></span>  
  `id`  
- <span data-ttu-id="b6510-106">Идентификатор кодовой страницы, используемой для всех файлов исходного кода при компиляции.</span><span class="sxs-lookup"><span data-stu-id="b6510-106">The id of the code page to use for all source code files in the compilation.</span></span>  
+ <span data-ttu-id="80b84-106">Идентификатор кодовой страницы, используемой для всех файлов исходного кода при компиляции.</span><span class="sxs-lookup"><span data-stu-id="80b84-106">The id of the code page to use for all source code files in the compilation.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b6510-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="b6510-107">Remarks</span></span>  
- <span data-ttu-id="b6510-108">При компиляции одного или нескольких файлов исходного кода, не использующих кодовую страницу по умолчанию, с помощью параметра **-codepage** можно указать нужную кодовую страницу.</span><span class="sxs-lookup"><span data-stu-id="b6510-108">If you compile one or more source code files that were not created to use the default code page on your computer, you can use the **-codepage** option to specify which code page should be used.</span></span> <span data-ttu-id="b6510-109">Параметр **-codepage** применяется ко всем файлам исходного кода, включенным в компиляцию.</span><span class="sxs-lookup"><span data-stu-id="b6510-109">**-codepage** applies to all source code files in your compilation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="80b84-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="80b84-107">Remarks</span></span>  
+ <span data-ttu-id="80b84-108">При компиляции одного или нескольких файлов исходного кода, не использующих кодовую страницу по умолчанию, с помощью параметра **-codepage** можно указать нужную кодовую страницу.</span><span class="sxs-lookup"><span data-stu-id="80b84-108">If you compile one or more source code files that were not created to use the default code page on your computer, you can use the **-codepage** option to specify which code page should be used.</span></span> <span data-ttu-id="80b84-109">Параметр **-codepage** применяется ко всем файлам исходного кода, включенным в компиляцию.</span><span class="sxs-lookup"><span data-stu-id="80b84-109">**-codepage** applies to all source code files in your compilation.</span></span>  
   
- <span data-ttu-id="b6510-110">Если файлы исходного кода были созданы с помощью кодовой страницы, активной на компьютере, либо с помощью кодовой страницы UNICODE или UTF-8, использовать параметр **-codepage** не требуется.</span><span class="sxs-lookup"><span data-stu-id="b6510-110">If the source code files were created with the same codepage that is in effect on your computer or if the source code files were created with UNICODE or UTF-8, you need not use **-codepage**.</span></span>  
+ <span data-ttu-id="80b84-110">Если файлы исходного кода были созданы с помощью кодовой страницы, активной на компьютере, либо с помощью кодовой страницы UNICODE или UTF-8, использовать параметр **-codepage** не требуется.</span><span class="sxs-lookup"><span data-stu-id="80b84-110">If the source code files were created with the same codepage that is in effect on your computer or if the source code files were created with UNICODE or UTF-8, you need not use **-codepage**.</span></span>  
   
- <span data-ttu-id="b6510-111">Сведения о том, как найти кодовые страницы, которые поддерживаются в системе, см. на странице, посвященной функции [GetCPInfo](/windows/desktop/api/winnls/nf-winnls-getcpinfo).</span><span class="sxs-lookup"><span data-stu-id="b6510-111">See [GetCPInfo](/windows/desktop/api/winnls/nf-winnls-getcpinfo) for information on how to find which code pages are supported on your system.</span></span>  
+ <span data-ttu-id="80b84-111">Сведения о том, как найти кодовые страницы, которые поддерживаются в системе, см. на странице, посвященной функции [GetCPInfo](/windows/desktop/api/winnls/nf-winnls-getcpinfo).</span><span class="sxs-lookup"><span data-stu-id="80b84-111">See [GetCPInfo](/windows/desktop/api/winnls/nf-winnls-getcpinfo) for information on how to find which code pages are supported on your system.</span></span>  
   
- <span data-ttu-id="b6510-112">Этот параметр компилятора недоступен в Visual Studio и не может быть изменен программным способом.</span><span class="sxs-lookup"><span data-stu-id="b6510-112">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
+ <span data-ttu-id="80b84-112">Этот параметр компилятора недоступен в Visual Studio и не может быть изменен программным способом.</span><span class="sxs-lookup"><span data-stu-id="80b84-112">This compiler option is unavailable in Visual Studio and cannot be changed programmatically.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6510-113">См. также</span><span class="sxs-lookup"><span data-stu-id="b6510-113">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="80b84-113">См. также</span><span class="sxs-lookup"><span data-stu-id="80b84-113">See Also</span></span>  
 
-- [<span data-ttu-id="b6510-114">Параметры компилятора C# </span><span class="sxs-lookup"><span data-stu-id="b6510-114">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="b6510-115">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="b6510-115">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="80b84-114">Параметры компилятора C# </span><span class="sxs-lookup"><span data-stu-id="80b84-114">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+- [<span data-ttu-id="80b84-115">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="80b84-115">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)

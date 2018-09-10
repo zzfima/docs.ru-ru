@@ -8,37 +8,37 @@ helpviewer_keywords:
 - '&= operator [C#]'
 ms.assetid: e8d58f3f-72dd-4b5a-b995-452fcce7e6bb
 ms.openlocfilehash: f3a6fe20ca89a90b5a64118d73fb39e9a364d1e9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43406739"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43506405"
 ---
-# <a name="amp-operator-c-reference"></a><span data-ttu-id="c5818-102">Оператор &amp;= (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="c5818-102">&amp;= Operator (C# Reference)</span></span>
-<span data-ttu-id="c5818-103">Оператор присваивания И.</span><span class="sxs-lookup"><span data-stu-id="c5818-103">The AND assignment operator.</span></span>  
+# <a name="amp-operator-c-reference"></a><span data-ttu-id="86302-102">Оператор &amp;= (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="86302-102">&amp;= Operator (C# Reference)</span></span>
+<span data-ttu-id="86302-103">Оператор присваивания И.</span><span class="sxs-lookup"><span data-stu-id="86302-103">The AND assignment operator.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c5818-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="c5818-104">Remarks</span></span>  
- <span data-ttu-id="c5818-105">Выражение, использующее оператор присваивания `&=`, такое как</span><span class="sxs-lookup"><span data-stu-id="c5818-105">An expression using the `&=` assignment operator, such as</span></span>  
+## <a name="remarks"></a><span data-ttu-id="86302-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="86302-104">Remarks</span></span>  
+ <span data-ttu-id="86302-105">Выражение, использующее оператор присваивания `&=`, такое как</span><span class="sxs-lookup"><span data-stu-id="86302-105">An expression using the `&=` assignment operator, such as</span></span>  
   
 ```csharp  
 x &= y  
 ```  
   
- <span data-ttu-id="c5818-106">эквивалентно</span><span class="sxs-lookup"><span data-stu-id="c5818-106">is equivalent to</span></span>  
+ <span data-ttu-id="86302-106">эквивалентно</span><span class="sxs-lookup"><span data-stu-id="86302-106">is equivalent to</span></span>  
   
 ```csharp  
 x = x & y  
 ```  
   
- <span data-ttu-id="c5818-107">за исключением того, что `x` вычисляется только один раз.</span><span class="sxs-lookup"><span data-stu-id="c5818-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="c5818-108">[Оператор &](../../../csharp/language-reference/operators/and-operator.md) выполняет побитовую логическую операцию И в отношении целочисленных операндов и логическую операцию И в отношении операндов типа `bool`.</span><span class="sxs-lookup"><span data-stu-id="c5818-108">The [& operator](../../../csharp/language-reference/operators/and-operator.md) performs a bitwise logical AND operation on integral operands and logical AND on `bool` operands.</span></span>  
+ <span data-ttu-id="86302-107">за исключением того, что `x` вычисляется только один раз.</span><span class="sxs-lookup"><span data-stu-id="86302-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="86302-108">[Оператор &](../../../csharp/language-reference/operators/and-operator.md) выполняет побитовую логическую операцию И в отношении целочисленных операндов и логическую операцию И в отношении операндов типа `bool`.</span><span class="sxs-lookup"><span data-stu-id="86302-108">The [& operator](../../../csharp/language-reference/operators/and-operator.md) performs a bitwise logical AND operation on integral operands and logical AND on `bool` operands.</span></span>  
   
- <span data-ttu-id="c5818-109">Оператор `&=` нельзя перегружать напрямую, однако пользовательские типы могут перегружать бинарный [оператор &](../../../csharp/language-reference/operators/and-operator.md) (см. [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="c5818-109">The `&=` operator cannot be overloaded directly, but user-defined types can overload the binary [& operator](../../../csharp/language-reference/operators/and-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
+ <span data-ttu-id="86302-109">Оператор `&=` нельзя перегружать напрямую, однако пользовательские типы могут перегружать бинарный [оператор &](../../../csharp/language-reference/operators/and-operator.md) (см. [operator](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="86302-109">The `&=` operator cannot be overloaded directly, but user-defined types can overload the binary [& operator](../../../csharp/language-reference/operators/and-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c5818-110">Пример</span><span class="sxs-lookup"><span data-stu-id="c5818-110">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="86302-110">Пример</span><span class="sxs-lookup"><span data-stu-id="86302-110">Example</span></span>  
  [!code-csharp[csRefOperators#34](../../../csharp/language-reference/operators/codesnippet/CSharp/and-assignment-operator_1.cs)]  
   
-## <a name="see-also"></a><span data-ttu-id="c5818-111">См. также</span><span class="sxs-lookup"><span data-stu-id="c5818-111">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="86302-111">См. также</span><span class="sxs-lookup"><span data-stu-id="86302-111">See Also</span></span>
 
-- [<span data-ttu-id="c5818-112">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="c5818-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="c5818-113">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="c5818-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="c5818-114">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="c5818-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+- [<span data-ttu-id="86302-112">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="86302-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="86302-113">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="86302-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="86302-114">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="86302-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)

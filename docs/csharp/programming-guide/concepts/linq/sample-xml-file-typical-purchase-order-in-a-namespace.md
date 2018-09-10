@@ -2,17 +2,17 @@
 title: Пример XML-файла. Стандартный заказ на покупку в пространстве имен1
 ms.date: 07/20/2015
 ms.assetid: 84dc3339-ea32-4ccc-9af6-ab38ddfecced
-ms.openlocfilehash: 0adee32a3ee4d2347bd2e0a84024fe478346987a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: dd3b19a34aa36f4378e247e394f8dae912f13854
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43404234"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43510179"
 ---
-# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="2094a-102">Пример XML-файла. Стандартный заказ на покупку в пространстве имен</span><span class="sxs-lookup"><span data-stu-id="2094a-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
-<span data-ttu-id="2094a-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2094a-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="2094a-104">Этот файл представляет собой типичный заказ на покупку.</span><span class="sxs-lookup"><span data-stu-id="2094a-104">This file is a typical purchase order.</span></span> <span data-ttu-id="2094a-105">XML располагается в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="2094a-105">The XML is in a namespace.</span></span>  
+# <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a><span data-ttu-id="517c2-102">Пример XML-файла. Стандартный заказ на покупку в пространстве имен</span><span class="sxs-lookup"><span data-stu-id="517c2-102">Sample XML File: Typical Purchase Order in a Namespace</span></span>
+<span data-ttu-id="517c2-103">Следующий XML-файл используется в различных примерах в документации [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].</span><span class="sxs-lookup"><span data-stu-id="517c2-103">The following XML file is used in various examples in the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] documentation.</span></span> <span data-ttu-id="517c2-104">Этот файл представляет собой типичный заказ на покупку.</span><span class="sxs-lookup"><span data-stu-id="517c2-104">This file is a typical purchase order.</span></span> <span data-ttu-id="517c2-105">XML располагается в пространстве имен.</span><span class="sxs-lookup"><span data-stu-id="517c2-105">The XML is in a namespace.</span></span>  
   
-## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="2094a-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="2094a-106">PurchaseOrderInNamespace.xml</span></span>  
+## <a name="purchaseorderinnamespacexml"></a><span data-ttu-id="517c2-106">PurchaseOrderInNamespace.xml</span><span class="sxs-lookup"><span data-stu-id="517c2-106">PurchaseOrderInNamespace.xml</span></span>  
   
 ```xml  
 <?xml version="1.0"?>  
@@ -54,5 +54,6 @@ ms.locfileid: "43404234"
 </aw:PurchaseOrder>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2094a-107">См. также</span><span class="sxs-lookup"><span data-stu-id="2094a-107">See Also</span></span>  
- [<span data-ttu-id="2094a-108">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="2094a-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="517c2-107">См. также</span><span class="sxs-lookup"><span data-stu-id="517c2-107">See Also</span></span>
+
+- [<span data-ttu-id="517c2-108">Примеры XML-документов (LINQ to XML)</span><span class="sxs-lookup"><span data-stu-id="517c2-108">Sample XML Documents (LINQ to XML)</span></span>](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

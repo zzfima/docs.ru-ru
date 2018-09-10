@@ -9,50 +9,50 @@ helpviewer_keywords:
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
 ms.openlocfilehash: 76bb008c40d84ed6048b8f960f050048319273b9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43421932"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43518209"
 ---
-# <a name="-nowarn-c-compiler-options"></a><span data-ttu-id="3ec4e-102">-nowarn (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="3ec4e-102">-nowarn (C# Compiler Options)</span></span>
-<span data-ttu-id="3ec4e-103">Параметр **-nowarn** позволяет предотвратить отображение одного или нескольких предупреждений компилятором.</span><span class="sxs-lookup"><span data-stu-id="3ec4e-103">The **-nowarn** option lets you suppress the compiler from displaying one or more warnings.</span></span> <span data-ttu-id="3ec4e-104">Разделяйте предупреждения запятыми.</span><span class="sxs-lookup"><span data-stu-id="3ec4e-104">Separate multiple warning numbers with a comma.</span></span>  
+# <a name="-nowarn-c-compiler-options"></a><span data-ttu-id="4f420-102">-nowarn (параметры компилятора C#)</span><span class="sxs-lookup"><span data-stu-id="4f420-102">-nowarn (C# Compiler Options)</span></span>
+<span data-ttu-id="4f420-103">Параметр **-nowarn** позволяет предотвратить отображение одного или нескольких предупреждений компилятором.</span><span class="sxs-lookup"><span data-stu-id="4f420-103">The **-nowarn** option lets you suppress the compiler from displaying one or more warnings.</span></span> <span data-ttu-id="4f420-104">Разделяйте предупреждения запятыми.</span><span class="sxs-lookup"><span data-stu-id="4f420-104">Separate multiple warning numbers with a comma.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3ec4e-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3ec4e-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4f420-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="4f420-105">Syntax</span></span>  
   
 ```console  
 -nowarn:number1[,number2,...]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="3ec4e-106">Аргументы</span><span class="sxs-lookup"><span data-stu-id="3ec4e-106">Arguments</span></span>  
- <span data-ttu-id="3ec4e-107">`number1`, `number2`</span><span class="sxs-lookup"><span data-stu-id="3ec4e-107">`number1`, `number2`</span></span>  
- <span data-ttu-id="3ec4e-108">Номер (номера) предупреждений, которые требуется отключить в компиляторе.</span><span class="sxs-lookup"><span data-stu-id="3ec4e-108">Warning number(s) that you want the compiler to suppress.</span></span>  
+## <a name="arguments"></a><span data-ttu-id="4f420-106">Аргументы</span><span class="sxs-lookup"><span data-stu-id="4f420-106">Arguments</span></span>  
+ <span data-ttu-id="4f420-107">`number1`, `number2`</span><span class="sxs-lookup"><span data-stu-id="4f420-107">`number1`, `number2`</span></span>  
+ <span data-ttu-id="4f420-108">Номер (номера) предупреждений, которые требуется отключить в компиляторе.</span><span class="sxs-lookup"><span data-stu-id="4f420-108">Warning number(s) that you want the compiler to suppress.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3ec4e-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="3ec4e-109">Remarks</span></span>  
- <span data-ttu-id="3ec4e-110">Необходимо указать только числовую часть идентификатора предупреждения.</span><span class="sxs-lookup"><span data-stu-id="3ec4e-110">You should only specify the numeric part of the warning identifier.</span></span> <span data-ttu-id="3ec4e-111">Например, если требуется отключить CS0028, можно указать `-nowarn:28`.</span><span class="sxs-lookup"><span data-stu-id="3ec4e-111">For example, if you want to suppress CS0028, you could specify `-nowarn:28`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4f420-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="4f420-109">Remarks</span></span>  
+ <span data-ttu-id="4f420-110">Необходимо указать только числовую часть идентификатора предупреждения.</span><span class="sxs-lookup"><span data-stu-id="4f420-110">You should only specify the numeric part of the warning identifier.</span></span> <span data-ttu-id="4f420-111">Например, если требуется отключить CS0028, можно указать `-nowarn:28`.</span><span class="sxs-lookup"><span data-stu-id="4f420-111">For example, if you want to suppress CS0028, you could specify `-nowarn:28`.</span></span>  
   
- <span data-ttu-id="3ec4e-112">Компилятор просто пропустит номера предупреждений, переданные `-nowarn`, которые использовались в предыдущих версиях, но были удалены из компилятора.</span><span class="sxs-lookup"><span data-stu-id="3ec4e-112">The compiler will silently ignore warning numbers passed to `-nowarn` that were valid in previous releases, but that have been removed from the compiler.</span></span> <span data-ttu-id="3ec4e-113">Например, предупреждение CS0679 использовалось в компиляторе Visual Studio .NET 2002, но было удалено в последующих версиях.</span><span class="sxs-lookup"><span data-stu-id="3ec4e-113">For example, CS0679 was valid in the compiler in Visual Studio .NET 2002 but was subsequently removed.</span></span>  
+ <span data-ttu-id="4f420-112">Компилятор просто пропустит номера предупреждений, переданные `-nowarn`, которые использовались в предыдущих версиях, но были удалены из компилятора.</span><span class="sxs-lookup"><span data-stu-id="4f420-112">The compiler will silently ignore warning numbers passed to `-nowarn` that were valid in previous releases, but that have been removed from the compiler.</span></span> <span data-ttu-id="4f420-113">Например, предупреждение CS0679 использовалось в компиляторе Visual Studio .NET 2002, но было удалено в последующих версиях.</span><span class="sxs-lookup"><span data-stu-id="4f420-113">For example, CS0679 was valid in the compiler in Visual Studio .NET 2002 but was subsequently removed.</span></span>  
   
- <span data-ttu-id="3ec4e-114">Параметр `-nowarn` позволяет отключить следующие предупреждения:</span><span class="sxs-lookup"><span data-stu-id="3ec4e-114">The following warnings cannot be suppressed by the `-nowarn` option:</span></span>  
+ <span data-ttu-id="4f420-114">Параметр `-nowarn` позволяет отключить следующие предупреждения:</span><span class="sxs-lookup"><span data-stu-id="4f420-114">The following warnings cannot be suppressed by the `-nowarn` option:</span></span>  
   
--   <span data-ttu-id="3ec4e-115">Предупреждение компилятора (уровень 1) CS2002</span><span class="sxs-lookup"><span data-stu-id="3ec4e-115">Compiler Warning (level 1) CS2002</span></span>  
+-   <span data-ttu-id="4f420-115">Предупреждение компилятора (уровень 1) CS2002</span><span class="sxs-lookup"><span data-stu-id="4f420-115">Compiler Warning (level 1) CS2002</span></span>  
   
--   <span data-ttu-id="3ec4e-116">Предупреждение компилятора (уровень 1) CS2023</span><span class="sxs-lookup"><span data-stu-id="3ec4e-116">Compiler Warning (level 1) CS2023</span></span>  
+-   <span data-ttu-id="4f420-116">Предупреждение компилятора (уровень 1) CS2023</span><span class="sxs-lookup"><span data-stu-id="4f420-116">Compiler Warning (level 1) CS2023</span></span>  
   
--   <span data-ttu-id="3ec4e-117">Предупреждение компилятора (уровень 1) CS2029</span><span class="sxs-lookup"><span data-stu-id="3ec4e-117">Compiler Warning (level 1) CS2029</span></span>  
+-   <span data-ttu-id="4f420-117">Предупреждение компилятора (уровень 1) CS2029</span><span class="sxs-lookup"><span data-stu-id="4f420-117">Compiler Warning (level 1) CS2029</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="3ec4e-118">Установка данного параметра компилятора в среде разработки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="3ec4e-118">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="4f420-118">Установка данного параметра компилятора в среде разработки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="4f420-118">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="3ec4e-119">Откройте страницу **свойств** для проекта.</span><span class="sxs-lookup"><span data-stu-id="3ec4e-119">Open the **Properties** page for the project.</span></span> <span data-ttu-id="3ec4e-120">Дополнительные сведения см. в разделе [Страница "Сборка", конструктор проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span><span class="sxs-lookup"><span data-stu-id="3ec4e-120">For details, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
+1.  <span data-ttu-id="4f420-119">Откройте страницу **свойств** для проекта.</span><span class="sxs-lookup"><span data-stu-id="4f420-119">Open the **Properties** page for the project.</span></span> <span data-ttu-id="4f420-120">Дополнительные сведения см. в разделе [Страница "Сборка", конструктор проектов (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span><span class="sxs-lookup"><span data-stu-id="4f420-120">For details, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
   
-2.  <span data-ttu-id="3ec4e-121">Щелкните страницу свойств **Сборка**.</span><span class="sxs-lookup"><span data-stu-id="3ec4e-121">Click the **Build** property page.</span></span>  
+2.  <span data-ttu-id="4f420-121">Щелкните страницу свойств **Сборка**.</span><span class="sxs-lookup"><span data-stu-id="4f420-121">Click the **Build** property page.</span></span>  
   
-3.  <span data-ttu-id="3ec4e-122">Измените свойство **Отключить предупреждения**.</span><span class="sxs-lookup"><span data-stu-id="3ec4e-122">Modify the **Suppress Warnings** property.</span></span>  
+3.  <span data-ttu-id="4f420-122">Измените свойство **Отключить предупреждения**.</span><span class="sxs-lookup"><span data-stu-id="4f420-122">Modify the **Suppress Warnings** property.</span></span>  
   
- <span data-ttu-id="3ec4e-123">Дополнительные сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span><span class="sxs-lookup"><span data-stu-id="3ec4e-123">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span></span>  
+ <span data-ttu-id="4f420-123">Дополнительные сведения об установке этого параметра компилятора программным путем см. в разделе <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span><span class="sxs-lookup"><span data-stu-id="4f420-123">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ec4e-124">См. также</span><span class="sxs-lookup"><span data-stu-id="3ec4e-124">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="4f420-124">См. также</span><span class="sxs-lookup"><span data-stu-id="4f420-124">See Also</span></span>  
 
-- [<span data-ttu-id="3ec4e-125">Параметры компилятора C# </span><span class="sxs-lookup"><span data-stu-id="3ec4e-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
-- [<span data-ttu-id="3ec4e-126">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="3ec4e-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)  
-- [<span data-ttu-id="3ec4e-127">Ошибки компилятора C#</span><span class="sxs-lookup"><span data-stu-id="3ec4e-127">C# Compiler Errors</span></span>](../../../csharp/language-reference/compiler-messages/index.md)
+- [<span data-ttu-id="4f420-125">Параметры компилятора C# </span><span class="sxs-lookup"><span data-stu-id="4f420-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)  
+- [<span data-ttu-id="4f420-126">Управление свойствами проектов и решений</span><span class="sxs-lookup"><span data-stu-id="4f420-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)  
+- [<span data-ttu-id="4f420-127">Ошибки компилятора C#</span><span class="sxs-lookup"><span data-stu-id="4f420-127">C# Compiler Errors</span></span>](../../../csharp/language-reference/compiler-messages/index.md)
