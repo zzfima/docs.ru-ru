@@ -3,11 +3,11 @@ title: Атрибуты (F#)
 description: 'Узнайте, как F # атрибуты позволяют применять к программным конструкциям метаданные.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e7f1d0ff383e1070b3db72e633f80ea37150548
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: HT
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264419"
+ms.locfileid: "44342333"
 ---
 # <a name="attributes"></a>Атрибуты
 

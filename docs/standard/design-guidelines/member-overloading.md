@@ -12,11 +12,11 @@ ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2127497d294cbfd4e1bb24d033f432378627ff13
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273233"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353178"
 ---
 # <a name="member-overloading"></a>Перегрузка членов
 Перегрузка членов означает создание двух или более элементов на том же типе, отличающиеся только количество и тип параметров, но иметь то же имя. Например, в следующих `WriteLine` метод перегружен:  

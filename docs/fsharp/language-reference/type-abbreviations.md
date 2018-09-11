@@ -3,11 +3,11 @@ title: Аббревиатуры типов (F#)
 description: 'Дополнительные сведения о F # сокращенные формы типов для предоставления более значимое имя для типа, чтобы сделать код более удобным для чтения.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 259cd6c84e22fc7c98e08255d3e0ded5b87af352
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44336476"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44365609"
 ---
 # <a name="type-abbreviations"></a>Сокращенные обозначения типов
 

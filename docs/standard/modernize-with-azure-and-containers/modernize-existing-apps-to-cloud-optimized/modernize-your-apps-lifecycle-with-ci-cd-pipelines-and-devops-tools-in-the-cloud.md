@@ -1,39 +1,39 @@
 ---
-title: Модернизировать жизненного цикла приложения с помощью средств DevOps в облаке и конвейеры CI или компакт-диска
-description: Модернизировать существующие приложения .NET с контейнерами Windows и облако Azure | Модернизировать жизненного цикла приложения с помощью средств DevOps в облаке и конвейеры CI или компакт-диска
+title: Модернизация жизненного цикла приложений с помощью конвейеров непрерывной Интеграции и Развертывания и инструменты DevOps в облаке
+description: Модернизация существующих приложений .NET с помощью облака Azure и Windows контейнерах | Модернизация жизненного цикла приложений с помощью конвейеров непрерывной Интеграции и Развертывания и инструменты DevOps в облаке
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 63907a1911b4c95f0dbecb2af33964225cf3e7b1
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: c4d3eaa50f6c7645c954ca65bf42c6c1eab3a68d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957904"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44366847"
 ---
-# <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Модернизировать жизненного цикла приложения с помощью средств DevOps в облаке и конвейеры CI или компакт-диска
+# <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Модернизация жизненного цикла приложений с помощью конвейеров непрерывной Интеграции и Развертывания и инструменты DevOps в облаке
 
-Современных предприятий должны инновации в быструю темпе, для повышения конкурентоспособности на рынке. Доставка высокого качества, современных приложений требуется DevOps средства и процессы, которые абсолютно необходимы для реализации этого цикла константой инноваций. Средства DevOps вправо разработчики могут упростить непрерывного развертывания и быстро инновационными приложениями в руки пользователей.
+Современные компании требуется для внедрения инноваций в быстром темпе для повышения конкурентоспособности на рынке. Чтобы обеспечить высокое качество, современных приложений требуются инструментов и процессов, которые абсолютно необходимы для реализации этого цикла константы инноваций DevOps. Используя соответствующие инструменты DevOps разработчики могут упростить непрерывного развертывания и быстро инновационных приложений в руки пользователей.
 
-Несмотря на то, что непрерывной интеграции и развертывания и рекомендации, широко, введение контейнеров появился ряд особенностей, особенно в том случае, если вы работаете с несколькими контейнера приложений.
+Несмотря на то, что широко применяются для непрерывной интеграции и использования опыта развертывания, появлением контейнеры вводит новые вопросы, особенно в том случае, если вы работаете с несколькими контейнерами приложений.
 
-Visual Studio Team Services поддерживает непрерывной интеграции и развертывания контейнера для нескольких приложений для различных сред с помощью официальный задачи развертывания Team Services:
+Службы Azure DevOps поддерживают непрерывную интеграцию и развертывание многоконтейнерных приложений для широкого спектра сред с помощью официальной задачи развертывания служб Azure DevOps:
 
--   [Развертывание для автономной виртуальной Машины узла Docker](https://docs.microsoft.com/vsts/build-release/apps/cd/deploy-docker-windowsvm) (Linux или Windows Server 2016 или более поздней версии)
+-   [Развертывание автономных виртуальных Машин узла Docker](https://docs.microsoft.com/azure/devops/build-release/apps/cd/deploy-docker-windowsvm) (Linux или Windows Server 2016 или более поздней версии)
 
--   [Развертывание Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-tutorial-deploy-app-with-cicd-vsts)
+-   [Развертывание в Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-tutorial-deploy-app-with-cicd-vsts)
 
--   [Развертывание службы контейнер Azure — Kubernetes](https://docs.microsoft.com/vsts/build-release/apps/cd/azure/deploy-container-kubernetes)
+-   [Развертывание в службе контейнеров Azure — Kubernetes](https://docs.microsoft.com/azure/devops/build-release/apps/cd/azure/deploy-container-kubernetes)
 
-Но также можно развернуть на [помощью Docker Swarm](https://blogs.msdn.microsoft.com/jcorioland/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services/) или DC/OS с помощью задач на основе сценария Team Services.
+Но вы также можете развернуть [Docker Swarm](https://blogs.msdn.microsoft.com/jcorioland/2016/11/29/full-ci-cd-pipeline-to-deploy-multi-containers-application-on-azure-container-service-docker-swarm-using-visual-studio-team-services/) или DC/OS с помощью служб Azure DevOps на основе сценария задач.
 
-Чтобы продолжить, проведению гибкость развертывания, эти средства предоставляют взаимодействие с отличным разработки к к тестовой развертывания для рабочих нагрузок контейнера, с выбором разработки и решениях CI/CD.
+Чтобы продолжить, облегчая гибкость развертывания, эти средства предоставляют прекрасный dev к теста — в рабочей среде развертывания, взаимодействие для рабочих нагрузок контейнера, благодаря чему разработки и непрерывной Интеграции и Развертывания решений.
 
-Рис. 4-12 показано конвейера непрерывного развертывания, который развертывает Kubernetes кластера в службе контейнера Azure.
+Рис. 4-12 показано конвейер непрерывного развертывания, который развертывает кластер Kubernetes в службе контейнеров Azure.
 
-![Конвейер непрерывного развертывания Visual Studio Team Services, развертывание в кластере Kubernetes](./media/image12.png)
+![Azure конвейере непрерывного развертывания службы DevOps, развертывание в кластер Kubernetes](./media/image12.png)
 
-> **Рис. 4-12.** Конвейер непрерывного развертывания Visual Studio Team Services, развертывание в кластере Kubernetes
+> **Рис. 4-12.** Azure конвейере непрерывного развертывания службы DevOps, развертывание в кластер Kubernetes
 
 >[!div class="step-by-step"]
 [Назад](modernize-your-apps-with-monitoring-and-telemetry.md)
