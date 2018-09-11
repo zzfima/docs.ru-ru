@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: 6c5f7d288d805a6a25afa9a5b32a4550aaa76ec3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44221939"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275357"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>Пошаговое руководство. Написание запросов в Visual Basic
 В этом пошаговом руководстве показано, как можно использовать возможности языка Visual Basic для написания [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] выражений запросов. В примере демонстрируются способы создания запросов к списку объектов Student, как выполнять запросы и об их изменении. Запросы включают в себя несколько функций, включая инициализаторы объектов, вывод локального типа и анонимные типы.  

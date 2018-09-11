@@ -8,11 +8,11 @@ ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 7f46ea28fe0827e7919b62550492d66a51a125fc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183240"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271667"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>Безопасность сообщений с использованием клиента Windows без согласования учетных данных
 В следующем сценарии показаны клиент Windows Communication Foundation (WCF) и служба, защищенные протоколом Kerberos.  

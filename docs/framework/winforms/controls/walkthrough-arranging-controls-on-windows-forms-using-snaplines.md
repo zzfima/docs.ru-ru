@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 170b79f03515ab371f7013c267b28ba85dafd0f5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44180622"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44271420"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>Пример. Упорядочение элементов управления в формах Windows Forms с помощью линий привязки
 Точное расположение элементов управления на форме является важным для многих приложений. В конструкторе Windows Forms предоставляет множество средств форматирования, для выполнения этой задачи. Одним из наиболее важных является <xref:System.Windows.Forms.Design.Behavior.SnapLine> функции.  

@@ -3,11 +3,11 @@ title: Действие политики в .NET Framework 4.5
 ms.date: 03/30/2017
 ms.assetid: 8e375e0c-d7c1-4d69-88ab-36d52db0aa7e
 ms.openlocfilehash: 9d8983f2f1d3f75beffeacfff4b673f6c23c4204
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208709"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44337802"
 ---
 # <a name="policy-activity-in-net-framework-45"></a>Действие политики в .NET Framework 4.5
 Действие Policy4 позволяет Windows Workflow Foundation в [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> объектов для использования в Windows Workflow Foundation в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) непосредственно с помощью обработчика правил, входящий в комплект поставки WF 3.5. Используя это действие, можно создавать и выполнять наборы правил <xref:System.Workflow.Activities.Rules.RuleSet> WF 3.5. Дополнительные сведения о обработчик правил WF 3.5, являющемся частью Windows Workflow Foundation см. Введение в обработчик правил Windows Workflow Foundation. Дополнительные сведения о миграции правил WF в [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)], см. в статье [руководство по миграции](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  

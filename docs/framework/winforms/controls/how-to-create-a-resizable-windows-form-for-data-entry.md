@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Forms, resizable
 ms.assetid: babdf198-404c-485d-a914-ed370c6ecd99
 ms.openlocfilehash: a319fba43c6735cd5552dd71d1fb614a6192da97
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205748"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260948"
 ---
 # <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a>Практическое руководство. Создание в Windows Forms формы для ввода данных, размер которой можно изменять
 Удачно сконструированный макет должен реагировать на изменение размеров родительской формы. Для согласованного изменения размера и положения элементов управления на макете формы при изменении размеров формы можно использовать элемент управления <xref:System.Windows.Forms.TableLayoutPanel>. Элемент управления <xref:System.Windows.Forms.TableLayoutPanel> также полезен в случаях, когда изменение содержимого элементов управления приводит к изменению макета. Процесс, описанный в этой процедуре, можно выполнить в среде Visual Studio.  См. также [Пошаговое руководство. Создание в Windows Forms формы для ввода данных переменного размера](https://msdn.microsoft.com/library/991eahec\(v=vs.110\)).  

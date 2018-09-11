@@ -17,11 +17,11 @@ ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 361dfd8cc9264f86bfc94a150635d9891274c9ac
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252068"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277316"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Практическое руководство. Подписание XML-документов с помощью цифровых подписей
 Можно использовать классы в пространстве имен <xref:System.Security.Cryptography.Xml> для подписания XML-документа или его части при помощи цифровой подписи.  Цифровые подписи XML (XMLDSIG) позволяют убедиться, что данные не были изменены после подписания.  Дополнительные сведения о стандарте XMLDSIG см. в рекомендации консорциума World Wide Web (W3C) [XML Signature Syntax and Processing](https://www.w3.org/TR/xmldsig-core/).  

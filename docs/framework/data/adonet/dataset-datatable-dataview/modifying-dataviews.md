@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
 ms.openlocfilehash: 3b1e0cbfc6118ad9ca670f5d91183b78b2c99d89
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44225650"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268540"
 ---
 # <a name="modifying-dataviews"></a>Изменение объектов DataView
 Объект <xref:System.Data.DataView> можно использовать, чтобы добавлять, удалять или изменять строки данных в базовой таблице. Возможность использования **DataView** для изменения данных в базовой таблице задается с помощью одного из трех логических свойств объекта **DataView**. А именно: <xref:System.Data.DataView.AllowNew%2A>, <xref:System.Data.DataView.AllowEdit%2A> и <xref:System.Data.DataView.AllowDelete%2A>. Они задаются **true** по умолчанию.  

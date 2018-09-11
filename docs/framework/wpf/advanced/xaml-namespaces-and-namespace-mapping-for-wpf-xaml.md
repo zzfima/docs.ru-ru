@@ -15,11 +15,11 @@ helpviewer_keywords:
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
 ms.openlocfilehash: 9e93d3cd417d0d075fcebb8327ec51799884f8d6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44178147"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338523"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>Пространства имен XAML и сопоставление пространств имен для WPF XAML
 В этом разделе обосновывается наличие и рассматриваются цели сопоставления двух пространств имен XAML, обычно содержащихся в корневом теге файла WPF XAML. Также описываются способы создания аналогичных сопоставлений для использования элементов, заданных в коде и/или в отдельных сборках.  

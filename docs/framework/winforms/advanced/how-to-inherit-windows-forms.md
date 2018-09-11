@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
 ms.openlocfilehash: 275ae52a36ed9766e2569bd6c8ecdea78ea56e0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185854"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276292"
 ---
 # <a name="how-to-inherit-windows-forms"></a>Практическое руководство. Наследование форм Windows Forms
 Создание новых форм Windows Forms путем наследования базовых форм является удобным способом для дублирования уже созданного, минуя процесс повторного создания формы с нуля каждый раз, когда она необходима.  

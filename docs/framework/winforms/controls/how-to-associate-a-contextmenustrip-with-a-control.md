@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ContextMenuStrips [Windows Forms], relating
 ms.assetid: 6fc40a42-5d69-427f-aa30-0a146193226b
 ms.openlocfilehash: 7776a5e5ed6e650aad82f7863a7fa1748006b3bc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44200657"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266556"
 ---
 # <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>Практическое руководство. Связывание объекта ContextMenuStrip с элементом управления
 После создания элементов управления и контекстных меню используйте приведенные ниже процедуры для вывода определенного контекстного меню, когда пользователь щелкает элемент управления правой кнопкой мыши. Эти процедуры связывают объект <xref:System.Windows.Forms.ContextMenuStrip> с формой Windows Forms и элементом управления <xref:System.Windows.Forms.ToolStrip>.  

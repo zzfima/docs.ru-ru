@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: f171a6380840fe2cb828ee06985317f002b353de
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179758"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275409"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Общие сведения о привязках Windows Communication Foundation
 Привязки-это объекты, которые используются для указания сведений о связи, необходимые для подключения к конечной точке службы Windows Communication Foundation (WCF). Каждая конечная точка в службе WCF требует точного задания привязки. В этом разделе описаны типы сведений о связи, определяемых привязками, элементы привязки, какие привязки включены в WCF, и как можно указать привязку для конечной точки.  

@@ -3,11 +3,11 @@ title: 'Выражения: выражение try...finally (F#)'
 description: 'Узнайте, как F # "try... finally" выражение позволяет выполнять код очистки, даже если блок кода вызывает исключение.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 546a6b0619de6f51044600dc1ead73c6d5211299
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211597"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44275149"
 ---
 # <a name="exceptions-the-tryfinally-expression"></a>Выражения: выражение try...finally
 

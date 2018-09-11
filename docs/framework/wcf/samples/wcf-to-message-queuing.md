@@ -3,11 +3,11 @@ title: Отправка сообщений из приложения Windows Com
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
 ms.openlocfilehash: ea0723d178b37b1ff2581981f8f49a6953c913cc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197489"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44277485"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Отправка сообщений из приложения Windows Communication Foundation в приложение MSMQ
 В этом примере показано, как приложение Windows Communication Foundation (WCF) можно отправлять сообщения приложению очереди сообщений (MSMQ). Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди. Одновременная работа службы и клиента не требуется.  

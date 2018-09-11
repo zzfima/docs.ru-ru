@@ -5,11 +5,11 @@ f1_keywords:
 - vbrMouse_NoMouseIsPresent
 ms.assetid: 4472fd57-4217-4463-9d3c-dc4a8fe88f1b
 ms.openlocfilehash: ee04ed880f8aa24bbd155c5658ad6de856e2c388
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189810"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259984"
 ---
 # <a name="no-mouse-is-present"></a>Не обнаружена мышь.
 Было вызвано одно из свойств объекта `My.Computer.Mouse` , но на компьютере отсутствует установленная мышь или порт мыши.  

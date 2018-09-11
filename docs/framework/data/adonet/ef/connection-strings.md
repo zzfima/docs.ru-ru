@@ -3,11 +3,11 @@ title: Строки подключения
 ms.date: 03/30/2017
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
 ms.openlocfilehash: 17d91c9b97e370afe3704d2a58f5228e3fec95f1
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192097"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44274233"
 ---
 # <a name="connection-strings"></a>Строки подключения
 Строка подключения содержит сведения для инициализации, передаваемые в виде параметра от поставщика данных в источник данных. Синтаксис зависит от поставщика данных, и при попытке открыть соединение строка соединения анализируется. Строки соединения платформы Entity Framework содержат сведения, которые используются для соединения с базовым поставщиком данных ADO.NET, поддерживающим Entity Framework. Они также содержат сведения о необходимых файлах модели и сопоставления.  

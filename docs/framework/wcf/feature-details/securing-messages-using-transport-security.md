@@ -5,11 +5,11 @@ ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 0ab04326404a4b90e30036594a7152e6118c2138
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227276"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44259951"
 ---
 # <a name="securing-messages-using-transport-security"></a>Защита сообщений с использованием средств обеспечения безопасности транспорта
 В этом разделе рассматривается механизм безопасности транспорта очереди сообщений MSMQ, который может быть использован для защиты сообщений, отправленных в очередь.  

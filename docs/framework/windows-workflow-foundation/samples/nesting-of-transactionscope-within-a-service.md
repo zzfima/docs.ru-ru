@@ -3,11 +3,11 @@ title: Вложенные объекты TransactionScope в службе
 ms.date: 03/30/2017
 ms.assetid: e7e1ba64-1384-4eba-add8-415636e2d6d0
 ms.openlocfilehash: cf73c0c2d061f1c997a8ade5d7b2bf61887915ca
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187930"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266431"
 ---
 # <a name="nesting-of-transactionscope-within-a-service"></a>Вложенные объекты TransactionScope в службе
 Этот образец состоит из двух сценариев, при выполнении показывающих, как обрабатывать экземпляры действий <xref:System.Activities.Statements.TransactionScope> в службе. Сначала запускается транзакция с использованием действия <xref:System.Activities.Statements.TransactionScope> для создания новой транзакции на клиенте и объекта <xref:System.ServiceModel.Activities.TransactedReceiveScope> для получения транзакции и определения времени ее существования на сервере. Первый сценарий в службе выполняет вторичное действие <xref:System.Activities.Statements.TransactionScope> для демонстрации вложения действий <xref:System.Activities.Statements.TransactionScope> в службе. Второй сценарий показывает, как соблюдаются времена ожиданий во вложенных действиях <xref:System.Activities.Statements.TransactionScope>.  

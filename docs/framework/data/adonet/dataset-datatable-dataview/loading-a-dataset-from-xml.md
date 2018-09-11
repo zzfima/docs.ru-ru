@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
 ms.openlocfilehash: 3a781f17ac3cabebce17955b9a7e2edda4d4fd4b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44212442"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338822"
 ---
 # <a name="loading-a-dataset-from-xml"></a>Загрузка набора данных из XML
 Содержимое объекта <xref:System.Data.DataSet> технологии ADO.NET может быть создано на основе XML-потока или XML-документа. Кроме того, использование .NET Framework обеспечивает большую гибкость при выборе сведений, загружаемых из XML, а также способа создания схемы или реляционной структуры <xref:System.Data.DataSet>.  

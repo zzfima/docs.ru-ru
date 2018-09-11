@@ -3,11 +3,11 @@ title: Инструмент создания XML-сериализатора (Sge
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
 ms.openlocfilehash: e0fee890f86f4e377a9372d7e4c47ef78effc9fa
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214905"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44268423"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Инструмент создания XML-сериализатора (Sgen.exe)
 Генератор XML-сериализатора создает сборку сериализации XML для типов в указанной сборке, чтобы повысить производительность при запуске <xref:System.Xml.Serialization.XmlSerializer> во время сериализации или десериализации объектов указанных типов.  

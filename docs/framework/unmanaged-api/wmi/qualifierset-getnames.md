@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 84059c5e5542e13b1d4fc4efcfc4c7f418db391e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: MT
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44181554"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276920"
 ---
 # <a name="qualifiersetgetnames-function"></a>Функция QualifierSet_GetNames
 Возвращает имена всех квалификаторов или определенных квалификаторов, доступные из текущего объекта или свойства. 

@@ -3,11 +3,11 @@ title: Активация на основе конфигурации в IIS и W
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
 ms.openlocfilehash: d15202a7d34f3246cd7679687b6a510252fe3541
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210212"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44338900"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Активация на основе конфигурации в IIS и WAS
 Обычно при размещении службы Windows Communication Foundation (WCF) в Internet Information Services (IIS) или службы активации процессов Windows (WAS), необходимо указать SVC-файла. SVC-файл содержит имя службы, а также дополнительную пользовательскую фабрику узла службы. С помощью этого дополнительного файла добавляются служебные данные по управлению. Возможность активации на основе конфигурации снимает требование по наличию SVC-файла и, следовательно, по наличию связанных служебных данных.  

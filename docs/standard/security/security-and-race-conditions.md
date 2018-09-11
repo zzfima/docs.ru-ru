@@ -14,11 +14,11 @@ ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 57ceaedc7c38ae70a0db5a7fd584a765a7474aff
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210498"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339354"
 ---
 # <a name="security-and-race-conditions"></a>Безопасность и конфликты
 Еще одна группа проблемой является возможность бреши в гонки безопасности. Существует несколько способов, в которых это может произойти. Нижеследующие подразделы описывают некоторые основные ловушки, которые разработчик должен обойти.  

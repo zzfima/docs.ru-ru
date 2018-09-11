@@ -7,11 +7,11 @@ helpviewer_keywords:
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
 ms.openlocfilehash: 373478e8c21fca66cbfbf7a58fc7d53f65ce5d0b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44195105"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44339218"
 ---
 # <a name="xaml-services"></a>Службы XAML
 В этом разделе описываются возможности набора технологий, известный как .NET Framework XAML служб. Большинство служб и интерфейсов API, описанных находятся в сборке System.Xaml, который является сборкой, обусловленные появлением [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] набор сборок .NET core. Службы включают в себя средства чтения и записи, классы схемы и поддержка схемы, фабрики, классов, встроенную поддержку для языка XAML и другие возможности языка XAML с атрибутами.  

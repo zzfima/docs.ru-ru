@@ -3,11 +3,11 @@ title: Строки подключения в ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
 ms.openlocfilehash: b4e057cab4c562fc51893631c35d66409e1c3731
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213109"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44265845"
 ---
 # <a name="connection-strings-in-adonet"></a>Строки подключения в ADO.NET
 Платформа .NET Framework 2.0 предоставляет новые возможности для работы со строками подключения, включая представление новых ключевых слов для классов построителей строк подключения, упрощающих создание допустимых строк подключения во время выполнения.  
