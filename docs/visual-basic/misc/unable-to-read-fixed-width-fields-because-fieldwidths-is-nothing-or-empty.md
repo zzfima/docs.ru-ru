@@ -5,22 +5,22 @@ f1_keywords:
 - vbrTextFieldParser_FieldWidthsNothing
 ms.assetid: 623e0825-5640-4e47-8341-7eeec80fc145
 ms.openlocfilehash: cb9051269bf46e23d5ae070956994212d3e98675
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201443"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44361077"
 ---
-# <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a><span data-ttu-id="b04e5-102">Чтение полей фиксированной ширины невозможно: параметр FieldWidths имеет значение Nothing или не определен.</span><span class="sxs-lookup"><span data-stu-id="b04e5-102">Unable to read fixed width fields because FieldWidths is Nothing or empty</span></span>
-<span data-ttu-id="b04e5-103">`TextFieldParser` не удалось прочесть поля фиксированной ширины, поскольку свойство `FieldWidths` имеет значение `Nothing` или оно пустое.</span><span class="sxs-lookup"><span data-stu-id="b04e5-103">The `TextFieldParser` is unable to read fixed-width fields because the `FieldWidths` property is set to `Nothing` or is empty.</span></span>  
+# <a name="unable-to-read-fixed-width-fields-because-fieldwidths-is-nothing-or-empty"></a><span data-ttu-id="d66a1-102">Чтение полей фиксированной ширины невозможно: параметр FieldWidths имеет значение Nothing или не определен.</span><span class="sxs-lookup"><span data-stu-id="d66a1-102">Unable to read fixed width fields because FieldWidths is Nothing or empty</span></span>
+<span data-ttu-id="d66a1-103">`TextFieldParser` не удалось прочесть поля фиксированной ширины, поскольку свойство `FieldWidths` имеет значение `Nothing` или оно пустое.</span><span class="sxs-lookup"><span data-stu-id="d66a1-103">The `TextFieldParser` is unable to read fixed-width fields because the `FieldWidths` property is set to `Nothing` or is empty.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="b04e5-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="b04e5-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d66a1-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="d66a1-104">To correct this error</span></span>  
   
--   <span data-ttu-id="b04e5-105">Установите для `FieldWidths` допустимое значение.</span><span class="sxs-lookup"><span data-stu-id="b04e5-105">Set `FieldWidths` to a valid value.</span></span>  
+-   <span data-ttu-id="d66a1-105">Установите для `FieldWidths` допустимое значение.</span><span class="sxs-lookup"><span data-stu-id="d66a1-105">Set `FieldWidths` to a valid value.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b04e5-106">См. также</span><span class="sxs-lookup"><span data-stu-id="b04e5-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d66a1-106">См. также</span><span class="sxs-lookup"><span data-stu-id="d66a1-106">See also</span></span>
 
-- [<span data-ttu-id="b04e5-107">Метод TextFieldParser.SetFieldWidths</span><span class="sxs-lookup"><span data-stu-id="b04e5-107">TextFieldParser.SetFieldWidths Method</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)  
-- [<span data-ttu-id="b04e5-108">Свойство TextFieldParser.FieldWidths</span><span class="sxs-lookup"><span data-stu-id="b04e5-108">TextFieldParser.FieldWidths Property</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)  
-- [<span data-ttu-id="b04e5-109">Практическое руководство. Чтение из текстовых файлов с полями фиксированного размера</span><span class="sxs-lookup"><span data-stu-id="b04e5-109">How to: Read From Fixed-width Text Files</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
-- [<span data-ttu-id="b04e5-110">Объект TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="b04e5-110">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)
+- [<span data-ttu-id="d66a1-107">Метод TextFieldParser.SetFieldWidths</span><span class="sxs-lookup"><span data-stu-id="d66a1-107">TextFieldParser.SetFieldWidths Method</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetFieldWidths%2A)  
+- [<span data-ttu-id="d66a1-108">Свойство TextFieldParser.FieldWidths</span><span class="sxs-lookup"><span data-stu-id="d66a1-108">TextFieldParser.FieldWidths Property</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.FieldWidths%2A)  
+- [<span data-ttu-id="d66a1-109">Практическое руководство. Чтение из текстовых файлов с полями фиксированного размера</span><span class="sxs-lookup"><span data-stu-id="d66a1-109">How to: Read From Fixed-width Text Files</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)  
+- [<span data-ttu-id="d66a1-110">Объект TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="d66a1-110">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)

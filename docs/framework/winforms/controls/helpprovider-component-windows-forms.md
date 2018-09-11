@@ -7,30 +7,30 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 ms.assetid: a09a6e0b-79d8-457f-bb36-86fad2beeada
 ms.openlocfilehash: 63574e6a4f7a9c5a1c2bcb267c64baa5c5e392f3
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44339172"
+ms.lasthandoff: 09/11/2018
+ms.locfileid: "44353113"
 ---
-# <a name="helpprovider-component-windows-forms"></a><span data-ttu-id="feff4-102">Компонент HelpProvider (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="feff4-102">HelpProvider Component (Windows Forms)</span></span>
-<span data-ttu-id="feff4-103">Компонент `HelpProvider` Windows Forms позволяет связать HTML-файл справки версии 1.x (CHM-файл, созданный с помощью средства HTML Help Workshop, или HTM-файл) с приложением Windows.</span><span class="sxs-lookup"><span data-stu-id="feff4-103">The Windows Forms `HelpProvider` component is used to associate an HTML Help 1.x Help file (either a .chm file, produced with the HTML Help Workshop, or an .htm file) with your Windows-based application.</span></span>  
+# <a name="helpprovider-component-windows-forms"></a><span data-ttu-id="ab53b-102">Компонент HelpProvider (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="ab53b-102">HelpProvider Component (Windows Forms)</span></span>
+<span data-ttu-id="ab53b-103">Компонент `HelpProvider` Windows Forms позволяет связать HTML-файл справки версии 1.x (CHM-файл, созданный с помощью средства HTML Help Workshop, или HTM-файл) с приложением Windows.</span><span class="sxs-lookup"><span data-stu-id="ab53b-103">The Windows Forms `HelpProvider` component is used to associate an HTML Help 1.x Help file (either a .chm file, produced with the HTML Help Workshop, or an .htm file) with your Windows-based application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="feff4-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="feff4-104">In This Section</span></span>  
- [<span data-ttu-id="feff4-105">Общие сведения о компоненте HelpProvider</span><span class="sxs-lookup"><span data-stu-id="feff4-105">HelpProvider Component Overview</span></span>](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)  
- <span data-ttu-id="feff4-106">Общие понятия, связанные с компонентом `HelpProvider`, который позволяет связать HTML-файл справки с приложением Windows.</span><span class="sxs-lookup"><span data-stu-id="feff4-106">Introduces the general concepts of the `HelpProvider` component, which lets you associate an HTML Help file with a Windows-based application.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="ab53b-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="ab53b-104">In This Section</span></span>  
+ [<span data-ttu-id="ab53b-105">Общие сведения о компоненте HelpProvider</span><span class="sxs-lookup"><span data-stu-id="ab53b-105">HelpProvider Component Overview</span></span>](../../../../docs/framework/winforms/controls/helpprovider-component-overview-windows-forms.md)  
+ <span data-ttu-id="ab53b-106">Общие понятия, связанные с компонентом `HelpProvider`, который позволяет связать HTML-файл справки с приложением Windows.</span><span class="sxs-lookup"><span data-stu-id="ab53b-106">Introduces the general concepts of the `HelpProvider` component, which lets you associate an HTML Help file with a Windows-based application.</span></span>  
   
- <span data-ttu-id="feff4-107">См. в разделе [справочные системы в приложениях Windows Forms](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md).</span><span class="sxs-lookup"><span data-stu-id="feff4-107">See [Help Systems in Windows Forms Applications](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md).</span></span>  
+ <span data-ttu-id="ab53b-107">См. в разделе [справочные системы в приложениях Windows Forms](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md).</span><span class="sxs-lookup"><span data-stu-id="ab53b-107">See [Help Systems in Windows Forms Applications](../../../../docs/framework/winforms/advanced/help-systems-in-windows-forms-applications.md).</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="feff4-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="feff4-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="ab53b-108">Ссылка</span><span class="sxs-lookup"><span data-stu-id="ab53b-108">Reference</span></span>  
  <xref:System.Windows.Forms.HelpProvider>  
- <span data-ttu-id="feff4-109">Описание класса и всех его членов.</span><span class="sxs-lookup"><span data-stu-id="feff4-109">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="ab53b-109">Описание класса и всех его членов.</span><span class="sxs-lookup"><span data-stu-id="ab53b-109">Describes this class and has links to all its members.</span></span>  
   
  <xref:System.Windows.Forms.Help>  
- <span data-ttu-id="feff4-110">Описание класса и всех его членов.</span><span class="sxs-lookup"><span data-stu-id="feff4-110">Describes this class and has links to all its members.</span></span>  
+ <span data-ttu-id="ab53b-110">Описание класса и всех его членов.</span><span class="sxs-lookup"><span data-stu-id="ab53b-110">Describes this class and has links to all its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="feff4-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="feff4-111">Related Sections</span></span>  
- [<span data-ttu-id="feff4-112">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="feff4-112">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="feff4-113">Полный список элементов управления Windows Forms со ссылками на информацию об их применении.</span><span class="sxs-lookup"><span data-stu-id="feff4-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="ab53b-111">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="ab53b-111">Related Sections</span></span>  
+ [<span data-ttu-id="ab53b-112">Элементы управления для использования в Windows Forms</span><span class="sxs-lookup"><span data-stu-id="ab53b-112">Controls to Use on Windows Forms</span></span>](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="ab53b-113">Полный список элементов управления Windows Forms со ссылками на информацию об их применении.</span><span class="sxs-lookup"><span data-stu-id="ab53b-113">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
- <span data-ttu-id="feff4-114">Также см. в разделе [справочные системы в приложениях Windows Forms](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="feff4-114">Also see [Help Systems in Windows Forms Applications](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).</span></span>
+ <span data-ttu-id="ab53b-114">Также см. в разделе [справочные системы в приложениях Windows Forms](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).</span><span class="sxs-lookup"><span data-stu-id="ab53b-114">Also see [Help Systems in Windows Forms Applications](https://msdn.microsoft.com/library/55dct0a1\(v=vs.110\)).</span></span>
