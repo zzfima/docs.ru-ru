@@ -223,7 +223,7 @@ public void Configure(EntityTypeBuilder<Order> orderConfiguration)
 
 В приведенном выше коде метод `orderConfiguration.OwnsOne(o => o.Address)` указывает, что свойство `Address` принадлежит сущности типа `Order`.
 
-По умолчанию соглашения EF Core именуют столбцы базы данных для свойств типа принадлежащих сущностей следующим образом: `EntityProperty_OwnedEntityProperty`. Следовательно, внутренние свойства типа `Address` будут отображаться в таблице `Orders` с именами `Address_Street`, `Address_City` (и так далее для свойств `State`, `Country` и `ZipCode`).
+По умолчанию соглашения EF Core именуют столбцы базы данных для свойств принадлежащего типа сущностей следующим образом: `EntityProperty_OwnedEntityProperty`. Следовательно, внутренние свойства типа `Address` будут отображаться в таблице `Orders` с именами `Address_Street`, `Address_City` (и так далее для свойств `State`, `Country` и `ZipCode`).
 
 Можно переименовать эти столбцы, добавив текучий метод `Property().HasColumnName()`. В случае, когда свойство `Address` является общедоступным свойством, сопоставление будет выполняться подобным образом:
 
