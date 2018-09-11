@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 49041031742332fbc275a9dbde91e640eb428c28
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44210511"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44276699"
 ---
-# <a name="iclrstrongnamestrongnamesignatureverification-method"></a><span data-ttu-id="95dbb-102">Метод ICLRStrongName::StrongNameSignatureVerification</span><span class="sxs-lookup"><span data-stu-id="95dbb-102">ICLRStrongName::StrongNameSignatureVerification Method</span></span>
-<span data-ttu-id="95dbb-103">Получает значение, указывающее, содержит ли манифест сборки по указанному пути подпись строгого имени, который проверяется в соответствии с заданными флагами.</span><span class="sxs-lookup"><span data-stu-id="95dbb-103">Gets a value that indicates whether the assembly manifest at the supplied path contains a strong name signature, which is verified according to the specified flags.</span></span>  
+# <a name="iclrstrongnamestrongnamesignatureverification-method"></a><span data-ttu-id="c5c66-102">Метод ICLRStrongName::StrongNameSignatureVerification</span><span class="sxs-lookup"><span data-stu-id="c5c66-102">ICLRStrongName::StrongNameSignatureVerification Method</span></span>
+<span data-ttu-id="c5c66-103">Получает значение, указывающее, содержит ли манифест сборки по указанному пути подпись строгого имени, который проверяется в соответствии с заданными флагами.</span><span class="sxs-lookup"><span data-stu-id="c5c66-103">Gets a value that indicates whether the assembly manifest at the supplied path contains a strong name signature, which is verified according to the specified flags.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="95dbb-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="95dbb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c5c66-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c5c66-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameSignatureVerification (  
@@ -37,42 +37,42 @@ HRESULT StrongNameSignatureVerification (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="95dbb-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="95dbb-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="c5c66-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="c5c66-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="95dbb-106">[in] Путь к переносимого исполняемого файла (.dll или .exe) для сборки для проверки.</span><span class="sxs-lookup"><span data-stu-id="95dbb-106">[in] The path to the portable executable (.dll or .exe) file for the assembly to verify.</span></span>  
+ <span data-ttu-id="c5c66-106">[in] Путь к переносимого исполняемого файла (.dll или .exe) для сборки для проверки.</span><span class="sxs-lookup"><span data-stu-id="c5c66-106">[in] The path to the portable executable (.dll or .exe) file for the assembly to verify.</span></span>  
   
  `dwInFlags`  
- <span data-ttu-id="95dbb-107">[in] Флаги для изменения поведения проверки.</span><span class="sxs-lookup"><span data-stu-id="95dbb-107">[in] Flags to modify the verification behavior.</span></span> <span data-ttu-id="95dbb-108">Поддерживаются следующие значения:</span><span class="sxs-lookup"><span data-stu-id="95dbb-108">The following values are supported:</span></span>  
+ <span data-ttu-id="c5c66-107">[in] Флаги для изменения поведения проверки.</span><span class="sxs-lookup"><span data-stu-id="c5c66-107">[in] Flags to modify the verification behavior.</span></span> <span data-ttu-id="c5c66-108">Поддерживаются следующие значения:</span><span class="sxs-lookup"><span data-stu-id="c5c66-108">The following values are supported:</span></span>  
   
--   <span data-ttu-id="95dbb-109">`SN_INFLAG_FORCE_VER` (0x00000001) — проверка производится, даже если это необходимо переопределить параметры реестра.</span><span class="sxs-lookup"><span data-stu-id="95dbb-109">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
+-   <span data-ttu-id="c5c66-109">`SN_INFLAG_FORCE_VER` (0x00000001) — проверка производится, даже если это необходимо переопределить параметры реестра.</span><span class="sxs-lookup"><span data-stu-id="c5c66-109">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
   
--   <span data-ttu-id="95dbb-110">`SN_INFLAG_INSTALL` (0x00000002) — указывает, что это в первый раз, проверка манифеста.</span><span class="sxs-lookup"><span data-stu-id="95dbb-110">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first time the manifest is verified.</span></span>  
+-   <span data-ttu-id="c5c66-110">`SN_INFLAG_INSTALL` (0x00000002) — указывает, что это в первый раз, проверка манифеста.</span><span class="sxs-lookup"><span data-stu-id="c5c66-110">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first time the manifest is verified.</span></span>  
   
--   <span data-ttu-id="95dbb-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) — указывает, что кэш будет предоставлять доступ только к пользователям, имеющим права администратора.</span><span class="sxs-lookup"><span data-stu-id="95dbb-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
+-   <span data-ttu-id="c5c66-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) — указывает, что кэш будет предоставлять доступ только к пользователям, имеющим права администратора.</span><span class="sxs-lookup"><span data-stu-id="c5c66-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
   
--   <span data-ttu-id="95dbb-112">`SN_INFLAG_USER_ACCESS` (0x00000008) — указывает, что сборка будет доступен только для текущего пользователя.</span><span class="sxs-lookup"><span data-stu-id="95dbb-112">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
+-   <span data-ttu-id="c5c66-112">`SN_INFLAG_USER_ACCESS` (0x00000008) — указывает, что сборка будет доступен только для текущего пользователя.</span><span class="sxs-lookup"><span data-stu-id="c5c66-112">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
   
--   <span data-ttu-id="95dbb-113">`SN_INFLAG_ALL_ACCESS` (0x00000010) — указывает, что кэш будет предоставлять никаких гарантий, ограничения доступа.</span><span class="sxs-lookup"><span data-stu-id="95dbb-113">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
+-   <span data-ttu-id="c5c66-113">`SN_INFLAG_ALL_ACCESS` (0x00000010) — указывает, что кэш будет предоставлять никаких гарантий, ограничения доступа.</span><span class="sxs-lookup"><span data-stu-id="c5c66-113">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
   
--   <span data-ttu-id="95dbb-114">`SN_INFLAG_RUNTIME` (0x80000000) — зарезервировано для внутренней отладки.</span><span class="sxs-lookup"><span data-stu-id="95dbb-114">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
+-   <span data-ttu-id="c5c66-114">`SN_INFLAG_RUNTIME` (0x80000000) — зарезервировано для внутренней отладки.</span><span class="sxs-lookup"><span data-stu-id="c5c66-114">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
   
  `pdwOutFlags`  
- <span data-ttu-id="95dbb-115">[out] Флаги, указывающие, был ли проверен подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="95dbb-115">[out] Flags indicating whether the strong name signature was verified.</span></span> <span data-ttu-id="95dbb-116">Поддерживается следующее значение:</span><span class="sxs-lookup"><span data-stu-id="95dbb-116">The following value is supported:</span></span>  
+ <span data-ttu-id="c5c66-115">[out] Флаги, указывающие, был ли проверен подписи строгого имени.</span><span class="sxs-lookup"><span data-stu-id="c5c66-115">[out] Flags indicating whether the strong name signature was verified.</span></span> <span data-ttu-id="c5c66-116">Поддерживается следующее значение:</span><span class="sxs-lookup"><span data-stu-id="c5c66-116">The following value is supported:</span></span>  
   
--   <span data-ttu-id="95dbb-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) — это значение присваивается `false` для указания, что проверка выполнена успешно из-за параметров реестра.</span><span class="sxs-lookup"><span data-stu-id="95dbb-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
+-   <span data-ttu-id="c5c66-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) — это значение присваивается `false` для указания, что проверка выполнена успешно из-за параметров реестра.</span><span class="sxs-lookup"><span data-stu-id="c5c66-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="95dbb-118">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="95dbb-118">Return Value</span></span>  
- <span data-ttu-id="95dbb-119">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="95dbb-119">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c5c66-118">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="c5c66-118">Return Value</span></span>  
+ <span data-ttu-id="c5c66-119">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="c5c66-119">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="95dbb-120">Требования</span><span class="sxs-lookup"><span data-stu-id="95dbb-120">Requirements</span></span>  
- <span data-ttu-id="95dbb-121">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="95dbb-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c5c66-120">Требования</span><span class="sxs-lookup"><span data-stu-id="c5c66-120">Requirements</span></span>  
+ <span data-ttu-id="c5c66-121">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c5c66-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="95dbb-122">**Заголовок:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="95dbb-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="c5c66-122">**Заголовок:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="c5c66-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="95dbb-123">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="95dbb-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c5c66-123">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c5c66-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="95dbb-124">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="95dbb-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="c5c66-124">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c5c66-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="95dbb-125">См. также</span><span class="sxs-lookup"><span data-stu-id="95dbb-125">See Also</span></span>  
- [<span data-ttu-id="95dbb-126">Метод StrongNameSignatureVerificationEx</span><span class="sxs-lookup"><span data-stu-id="95dbb-126">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)  
- [<span data-ttu-id="95dbb-127">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="95dbb-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c5c66-125">См. также</span><span class="sxs-lookup"><span data-stu-id="c5c66-125">See Also</span></span>  
+ [<span data-ttu-id="c5c66-126">Метод StrongNameSignatureVerificationEx</span><span class="sxs-lookup"><span data-stu-id="c5c66-126">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)  
+ [<span data-ttu-id="c5c66-127">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="c5c66-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
