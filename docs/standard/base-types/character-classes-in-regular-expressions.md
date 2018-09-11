@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a83f99faa5beaf0fd6a5a53f41cdcba5015fa27
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 2b1a40c5c178f87bb5037ce356d345a2f3db997a
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43405090"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180154"
 ---
 # <a name="character-classes-in-regular-expressions"></a>Классы знаков в регулярных выражениях
 <a name="Top"></a> Класс символов определяет набор символов, любой из которых может присутствовать во входной строке для успешного сопоставления. Язык регулярных выражений в .NET поддерживает следующие классы символов:  
@@ -590,7 +590,8 @@ ms.locfileid: "43405090"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/classsubtraction1.cs#15)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/classsubtraction1.vb#15)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Char.GetUnicodeCategory%2A>  
- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Char.GetUnicodeCategory%2A>  
+- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Параметры регулярных выражений](../../../docs/standard/base-types/regular-expression-options.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e05da1c2ed68f482cbb1280c5c40583ab54d71bb
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 043b4ab00699062d8c1af5866fbeb3773c8ce9af
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37071868"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44039505"
 ---
 # <a name="backtracking-in-regular-expressions"></a>Поиск с возвратом в регулярных выражениях
 <a name="top"></a> Поиск с возвратом происходит, если шаблон регулярного выражения содержит переменные [квантификаторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) или [конструкции изменения](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), и обработчик регулярных выражений возвращается в предыдущее сохраненное состояние, чтобы продолжить поиск совпадения. В поиске с возвратом заключена сила регулярных выражений. Благодаря ему выражения могут быть мощными и гибкими, а также совпадать со сложными шаблонами. С другой стороны, эти возможности дорого обходятся. Часто именно поиск с возвратом существенно снижает производительность обработчика регулярных выражений. К счастью, разработчик может управлять работой обработчика регулярных выражений и тем, как он использует поиск с возвратом. В этом разделе описано, как функционирует поиск с возвратом, и как им можно управлять.  
@@ -215,9 +215,10 @@ ms.locfileid: "37071868"
   
  [К началу](#top)  
   
-## <a name="see-also"></a>См. также  
- [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)  
- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Квантификаторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
- [Конструкции чередования](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
- [Конструкции группирования](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+## <a name="see-also"></a>См. также
+
+- [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)  
+- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Квантификаторы](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
+- [Конструкции чередования](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+- [Конструкции группирования](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

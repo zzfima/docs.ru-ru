@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b270559e9e73e18bebb29e36b815268d5426a940
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: e6fe667ca908b2a4ba16e34e8e74dd39ca01f153
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728684"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44187472"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Пример регулярного выражения. Поиск ссылок HREF
 В следующем примере показаны поиск и вывод всех значений href="...", а также их позиций в строке.  
@@ -56,5 +56,6 @@ ms.locfileid: "34728684"
   
  Для решения этих проблем класс <xref:System.Text.RegularExpressions.Regex> поддерживает синтаксис `(?<name>…)`, с помощью которого найденное совпадение можно сохранить в указанной ячейке (которой можно присвоить строковое имя или целочисленное обозначение; числа при этом работают быстрее). Таким образом, если совпадение будет найдено повторно, оно попадет в ту же ячейку. В случае конфликта успешным является то совпадение, которое было помещено в ячейку последним. (Однако доступен и полный список совпадений для одной ячейки. Подробнее см. описание коллекции <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType>.)  
   
-## <a name="see-also"></a>См. также  
- [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)
+## <a name="see-also"></a>См. также
+
+- [Регулярные выражения .NET](../../../docs/standard/base-types/regular-expressions.md)

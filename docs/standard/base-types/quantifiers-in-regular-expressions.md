@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 374ef3e015ee477c5979e2e31574aabfdd03dd1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a982082611760e4f901c427af25a0a49a4e243a1
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579097"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44192291"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>кванторы в регулярных выражениях
 Квантификаторы определяют количество экземпляров символа, группы или класса символов, которое должно присутствовать во входных данных, чтобы было зафиксировано совпадение.  В приведенной ниже таблице перечислены квантификаторы, поддерживаемые платформой .NET.  
@@ -115,7 +115,7 @@ ms.locfileid: "33579097"
 |`\b`|Конец на границе слова.|  
   
 ### <a name="match-at-least-n-times-n"></a>Совпадение как минимум n раз: {n,}  
- Квантификатор `{`*n*`,}` сопоставляет предыдущий элемент как минимум *n* раз, где *n* — любое целое число. `{`*n*`,}` — жадный квантификатор, ленивым эквивалентом которого является квантификатор `{`*n*`}?`.  
+ Квантификатор `{`*n*`,}` сопоставляет предыдущий элемент как минимум *n* раз, где *n* — любое целое число. `{`*n*`,}` — жадный квантификатор, ленивым эквивалентом которого является квантификатор `{`*n*`,}?`.  
   
  Например, с помощью регулярного выражения `\b\d{2,}\b\D+` осуществляется поиск границы слова, за которой следует по крайней мере два десятичных знака, граница слова и знак, не являющийся числом. В следующем примере показано, как использовать это регулярное выражение. Это регулярное выражение не соответствует фразе `"7 days"`, так как она содержит всего одну десятичную цифру, но соответствует фразам `"10 weeks and 300 years"`.  
   
@@ -271,6 +271,7 @@ ms.locfileid: "33579097"
  [!code-csharp[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/cs/emptymatch4.cs#2)]
  [!code-vb[RegularExpressions.Quantifiers.EmptyMatch#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.quantifiers.emptymatch/vb/emptymatch4.vb#2)]  
   
-## <a name="see-also"></a>См. также  
- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
- [Поиск с возвратом](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)
+## <a name="see-also"></a>См. также
+
+- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
+- [Поиск с возвратом](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)

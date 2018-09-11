@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f19cbf305165c2553d5a493f7011a6aea19fb23
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43396459"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44262274"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escape-знаки в регулярных выражениях
 Обратная косая черта (\\) в регулярном выражении может означать следующее.  
@@ -69,5 +69,6 @@ ms.locfileid: "43396459"
 |`(.+)`|Сопоставление любого символа один или более раз. Это вторая группа записи.|  
 |`\r?\n`|Соответствует отсутствию или одному вхождению символа возврата каретки, за которым следует новая строка.|  
   
-## <a name="see-also"></a>См. также  
- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+## <a name="see-also"></a>См. также
+
+- [Элементы языка регулярных выражений — краткий справочник](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)

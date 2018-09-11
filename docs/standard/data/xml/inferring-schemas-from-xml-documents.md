@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8640a951acab512cbe2397df831a74700b5ad6c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a27696b6511103e98d37fb72b33f801d23ad391
+ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574824"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "44042183"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>Выведение схем из XML-документов
 В этом разделе описывается, как использовать класс <xref:System.Xml.Schema.XmlSchemaInference> для выведения схемы XSD из структуры XML-документа.  
@@ -82,9 +82,10 @@ ms.locfileid: "33574824"
 ## <a name="schemas-that-cannot-be-refined"></a>Неуточняемые схемы  
  В схемах W3C XML существуют такие конструкции, которые процесс <xref:System.Xml.Schema.XmlSchemaInference> для схемы XSD не может обработать, если задан тип для уточнения, и которые приводят к созданию исключения. Например, сложный тип, на верхнем уровне которого находится компоновщик, отличный от sequence. В модели SOM это соответствует типу <xref:System.Xml.Schema.XmlSchemaComplexType>, свойством <xref:System.Xml.Schema.XmlSchemaComplexType.Particle%2A> которого не является экземпляр <xref:System.Xml.Schema.XmlSchemaSequence>.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Xml.Schema.XmlSchemaInference>  
- [Модель объектов схемы XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
- [Выведение XML-схемы](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
- [Правила выведения структуры и типов узлов схемы](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
- [Правила выведения простых типов](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Xml.Schema.XmlSchemaInference>  
+- [Модель объектов схемы XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+- [Выведение XML-схемы](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
+- [Правила выведения структуры и типов узлов схемы](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
+- [Правила выведения простых типов](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
