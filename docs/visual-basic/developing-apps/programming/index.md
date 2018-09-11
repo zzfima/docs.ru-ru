@@ -6,39 +6,39 @@ helpviewer_keywords:
 - programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
 ms.openlocfilehash: 5ffe44545e60bb74563180a6a5c87c78526ab566
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44177131"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44341834"
 ---
-# <a name="programming-in-visual-basic"></a><span data-ttu-id="e6218-102">Программирование в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e6218-102">Programming in Visual Basic</span></span>
-<span data-ttu-id="e6218-103">В этом разделе рассматриваются задачи программирования, о которых вам может понадобиться дополнительная информация при создании приложения Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="e6218-103">This section discusses programming tasks that you may want to learn more about as you create your Visual Basic application.</span></span>  
+# <a name="programming-in-visual-basic"></a><span data-ttu-id="8a7c1-102">Программирование в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8a7c1-102">Programming in Visual Basic</span></span>
+<span data-ttu-id="8a7c1-103">В этом разделе рассматриваются задачи программирования, о которых вам может понадобиться дополнительная информация при создании приложения Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="8a7c1-103">This section discusses programming tasks that you may want to learn more about as you create your Visual Basic application.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="e6218-104">Содержание раздела</span><span class="sxs-lookup"><span data-stu-id="e6218-104">In this section</span></span>  
- [<span data-ttu-id="e6218-105">Доступ к ресурсам компьютера</span><span class="sxs-lookup"><span data-stu-id="e6218-105">Accessing Computer Resources</span></span>](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
- <span data-ttu-id="e6218-106">Содержит документацию по использованию объекта `My.Computer` для доступа к сведениям о компьютере, на котором выполняется приложение, и для управления компьютером.</span><span class="sxs-lookup"><span data-stu-id="e6218-106">Contains documentation on how to use the `My.Computer` object to access information about the computer on which an application runs and how to control the computer.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="8a7c1-104">Содержание раздела</span><span class="sxs-lookup"><span data-stu-id="8a7c1-104">In this section</span></span>  
+ [<span data-ttu-id="8a7c1-105">Доступ к ресурсам компьютера</span><span class="sxs-lookup"><span data-stu-id="8a7c1-105">Accessing Computer Resources</span></span>](../../../visual-basic/developing-apps/programming/computer-resources/index.md)  
+ <span data-ttu-id="8a7c1-106">Содержит документацию по использованию объекта `My.Computer` для доступа к сведениям о компьютере, на котором выполняется приложение, и для управления компьютером.</span><span class="sxs-lookup"><span data-stu-id="8a7c1-106">Contains documentation on how to use the `My.Computer` object to access information about the computer on which an application runs and how to control the computer.</span></span>  
   
- [<span data-ttu-id="e6218-107">Запись сведений в журнал из приложения</span><span class="sxs-lookup"><span data-stu-id="e6218-107">Logging Information from the Application</span></span>](../../../visual-basic/developing-apps/programming/log-info/index.md)  
- <span data-ttu-id="e6218-108">Содержит документацию о записи в журнал информации из приложения с помощью объектов `My.Application.Log` и `My.Log`, а также о расширении возможностей ведения журнала в приложении.</span><span class="sxs-lookup"><span data-stu-id="e6218-108">Contains documentation on how to log information from your application using the `My.Application.Log` and `My.Log` objects, and how to extend the application's logging capabilities.</span></span>  
+ [<span data-ttu-id="8a7c1-107">Запись сведений в журнал из приложения</span><span class="sxs-lookup"><span data-stu-id="8a7c1-107">Logging Information from the Application</span></span>](../../../visual-basic/developing-apps/programming/log-info/index.md)  
+ <span data-ttu-id="8a7c1-108">Содержит документацию о записи в журнал информации из приложения с помощью объектов `My.Application.Log` и `My.Log`, а также о расширении возможностей ведения журнала в приложении.</span><span class="sxs-lookup"><span data-stu-id="8a7c1-108">Contains documentation on how to log information from your application using the `My.Application.Log` and `My.Log` objects, and how to extend the application's logging capabilities.</span></span>  
   
- [<span data-ttu-id="e6218-109">Доступ к данным пользователя</span><span class="sxs-lookup"><span data-stu-id="e6218-109">Accessing User Data</span></span>](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
- <span data-ttu-id="e6218-110">Содержит документацию по задачам, которые можно выполнить с помощью объекта `My.User`.</span><span class="sxs-lookup"><span data-stu-id="e6218-110">Contains documentation on tasks that you can accomplish using the `My.User` object.</span></span>  
+ [<span data-ttu-id="8a7c1-109">Доступ к данным пользователя</span><span class="sxs-lookup"><span data-stu-id="8a7c1-109">Accessing User Data</span></span>](../../../visual-basic/developing-apps/programming/accessing-user-data.md)  
+ <span data-ttu-id="8a7c1-110">Содержит документацию по задачам, которые можно выполнить с помощью объекта `My.User`.</span><span class="sxs-lookup"><span data-stu-id="8a7c1-110">Contains documentation on tasks that you can accomplish using the `My.User` object.</span></span>  
   
- [<span data-ttu-id="e6218-111">Доступ к формам приложения</span><span class="sxs-lookup"><span data-stu-id="e6218-111">Accessing Application Forms</span></span>](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)  
- <span data-ttu-id="e6218-112">Содержит документацию по доступу к формам приложения с помощью объектов `My.Forms` и `My.Application`.</span><span class="sxs-lookup"><span data-stu-id="e6218-112">Contains documentation on accessing an application's forms by using the `My.Forms` and `My.Application` objects.</span></span>  
+ [<span data-ttu-id="8a7c1-111">Доступ к формам приложения</span><span class="sxs-lookup"><span data-stu-id="8a7c1-111">Accessing Application Forms</span></span>](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)  
+ <span data-ttu-id="8a7c1-112">Содержит документацию по доступу к формам приложения с помощью объектов `My.Forms` и `My.Application`.</span><span class="sxs-lookup"><span data-stu-id="8a7c1-112">Contains documentation on accessing an application's forms by using the `My.Forms` and `My.Application` objects.</span></span>  
   
- [<span data-ttu-id="e6218-113">Доступ к веб-службам приложения</span><span class="sxs-lookup"><span data-stu-id="e6218-113">Accessing Application Web Services</span></span>](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
- <span data-ttu-id="e6218-114">Содержит документацию о том, как с помощью объекта `My.WebServices` обращаться к веб-службам, ссылки на которые есть в приложении.</span><span class="sxs-lookup"><span data-stu-id="e6218-114">Contains documentation on how to access the Web services referenced by the application using the `My.WebServices` object.</span></span>  
+ [<span data-ttu-id="8a7c1-113">Доступ к веб-службам приложения</span><span class="sxs-lookup"><span data-stu-id="8a7c1-113">Accessing Application Web Services</span></span>](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
+ <span data-ttu-id="8a7c1-114">Содержит документацию о том, как с помощью объекта `My.WebServices` обращаться к веб-службам, ссылки на которые есть в приложении.</span><span class="sxs-lookup"><span data-stu-id="8a7c1-114">Contains documentation on how to access the Web services referenced by the application using the `My.WebServices` object.</span></span>  
   
- [<span data-ttu-id="e6218-115">Доступ к параметрам приложения</span><span class="sxs-lookup"><span data-stu-id="e6218-115">Accessing Application Settings</span></span>](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
- <span data-ttu-id="e6218-116">Содержит документацию по доступу к настройкам приложения с помощью объекта `My.Settings`.</span><span class="sxs-lookup"><span data-stu-id="e6218-116">Contains documentation on accessing an application's settings using the `My.Settings` object.</span></span>  
+ [<span data-ttu-id="8a7c1-115">Доступ к параметрам приложения</span><span class="sxs-lookup"><span data-stu-id="8a7c1-115">Accessing Application Settings</span></span>](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ <span data-ttu-id="8a7c1-116">Содержит документацию по доступу к настройкам приложения с помощью объекта `My.Settings`.</span><span class="sxs-lookup"><span data-stu-id="8a7c1-116">Contains documentation on accessing an application's settings using the `My.Settings` object.</span></span>  
   
- [<span data-ttu-id="e6218-117">Операции с дисками, каталогами и файлами</span><span class="sxs-lookup"><span data-stu-id="e6218-117">Processing Drives, Directories, and Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
- <span data-ttu-id="e6218-118">Содержит документацию о том, как получить доступ к файловой системе с помощью объекта `My.Computer.FileSystem`.</span><span class="sxs-lookup"><span data-stu-id="e6218-118">Contains documentation on how to access the file system using the `My.Computer.FileSystem` object.</span></span>  
+ [<span data-ttu-id="8a7c1-117">Операции с дисками, каталогами и файлами</span><span class="sxs-lookup"><span data-stu-id="8a7c1-117">Processing Drives, Directories, and Files</span></span>](../../../visual-basic/developing-apps/programming/drives-directories-files/processing.md)  
+ <span data-ttu-id="8a7c1-118">Содержит документацию о том, как получить доступ к файловой системе с помощью объекта `My.Computer.FileSystem`.</span><span class="sxs-lookup"><span data-stu-id="8a7c1-118">Contains documentation on how to access the file system using the `My.Computer.FileSystem` object.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e6218-119">См. также</span><span class="sxs-lookup"><span data-stu-id="e6218-119">See Also</span></span>  
- [<span data-ttu-id="e6218-120">Возможности и элементы языка Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e6218-120">Visual Basic Language Features</span></span>](../../../visual-basic/programming-guide/language-features/index.md)  
- [<span data-ttu-id="e6218-121">Основные понятия программирования</span><span class="sxs-lookup"><span data-stu-id="e6218-121">Programming Concepts</span></span>](../../../visual-basic/programming-guide/concepts/index.md)  
- [<span data-ttu-id="e6218-122">Коллекции</span><span class="sxs-lookup"><span data-stu-id="e6218-122">Collections</span></span>](../../../visual-basic/programming-guide/concepts/collections.md)  
- [<span data-ttu-id="e6218-123">Разработка приложений в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="e6218-123">Developing Applications with Visual Basic</span></span>](../../../visual-basic/developing-apps/index.md)
+## <a name="see-also"></a><span data-ttu-id="8a7c1-119">См. также</span><span class="sxs-lookup"><span data-stu-id="8a7c1-119">See Also</span></span>  
+ [<span data-ttu-id="8a7c1-120">Возможности и элементы языка Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8a7c1-120">Visual Basic Language Features</span></span>](../../../visual-basic/programming-guide/language-features/index.md)  
+ [<span data-ttu-id="8a7c1-121">Основные понятия программирования</span><span class="sxs-lookup"><span data-stu-id="8a7c1-121">Programming Concepts</span></span>](../../../visual-basic/programming-guide/concepts/index.md)  
+ [<span data-ttu-id="8a7c1-122">Коллекции</span><span class="sxs-lookup"><span data-stu-id="8a7c1-122">Collections</span></span>](../../../visual-basic/programming-guide/concepts/collections.md)  
+ [<span data-ttu-id="8a7c1-123">Разработка приложений в Visual Basic</span><span class="sxs-lookup"><span data-stu-id="8a7c1-123">Developing Applications with Visual Basic</span></span>](../../../visual-basic/developing-apps/index.md)
