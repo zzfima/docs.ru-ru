@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8d9e7d593c2a8a9cce798724b2705dee21a740e
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44361850"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44699885"
 ---
-# <a name="iclrstrongnamegethashfromassemblyfile-method"></a><span data-ttu-id="2bb6a-102">Метод ICLRStrongName::GetHashFromAssemblyFile</span><span class="sxs-lookup"><span data-stu-id="2bb6a-102">ICLRStrongName::GetHashFromAssemblyFile Method</span></span>
-<span data-ttu-id="2bb6a-103">Получает хэш указанного файла сборки с помощью указанного хэш-алгоритма.</span><span class="sxs-lookup"><span data-stu-id="2bb6a-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  
+# <a name="iclrstrongnamegethashfromassemblyfile-method"></a><span data-ttu-id="65eef-102">Метод ICLRStrongName::GetHashFromAssemblyFile</span><span class="sxs-lookup"><span data-stu-id="65eef-102">ICLRStrongName::GetHashFromAssemblyFile Method</span></span>
+<span data-ttu-id="65eef-103">Получает хэш указанного файла сборки с помощью указанного хэш-алгоритма.</span><span class="sxs-lookup"><span data-stu-id="65eef-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2bb6a-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2bb6a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="65eef-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="65eef-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromAssemblyFile (  
@@ -39,34 +39,34 @@ HRESULT GetHashFromAssemblyFile (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2bb6a-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="2bb6a-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="65eef-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="65eef-105">Parameters</span></span>  
  `szFilePath`  
- <span data-ttu-id="2bb6a-106">[in] Путь к файлу, хэширование которого требуется выполнить.</span><span class="sxs-lookup"><span data-stu-id="2bb6a-106">[in] The path to the file to be hashed.</span></span>  
+ <span data-ttu-id="65eef-106">[in] Путь к файлу, хэширование которого требуется выполнить.</span><span class="sxs-lookup"><span data-stu-id="65eef-106">[in] The path to the file to be hashed.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="2bb6a-107">[in, out] Константа, указывающая хэш-алгоритм.</span><span class="sxs-lookup"><span data-stu-id="2bb6a-107">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="2bb6a-108">Использовать нуль для хэш-алгоритм по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="2bb6a-108">Use zero for the default hash algorithm.</span></span>  
+ <span data-ttu-id="65eef-107">[in, out] Константа, указывающая хэш-алгоритм.</span><span class="sxs-lookup"><span data-stu-id="65eef-107">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="65eef-108">Использовать нуль для хэш-алгоритм по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="65eef-108">Use zero for the default hash algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="2bb6a-109">[out] Буфер, возвращенный хэша.</span><span class="sxs-lookup"><span data-stu-id="2bb6a-109">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="65eef-109">[out] Буфер, возвращенный хэша.</span><span class="sxs-lookup"><span data-stu-id="65eef-109">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="2bb6a-110">[in] Запрошенный максимальный размер `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="2bb6a-110">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="65eef-110">[in] Запрошенный максимальный размер `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="65eef-110">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="2bb6a-111">[out] Размер в байтах, возвращенное `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="2bb6a-111">[out] The returned size, in bytes, of `pbHash`.</span></span>  
+ <span data-ttu-id="65eef-111">[out] Размер в байтах, возвращенное `pbHash`.</span><span class="sxs-lookup"><span data-stu-id="65eef-111">[out] The returned size, in bytes, of `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2bb6a-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="2bb6a-112">Return Value</span></span>  
- <span data-ttu-id="2bb6a-113">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="2bb6a-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="65eef-112">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="65eef-112">Return Value</span></span>  
+ <span data-ttu-id="65eef-113">`S_OK` Если метод успешно завершена; в противном случае — значение HRESULT, указывающее на сбой (см. в разделе [часто встречающихся значений HRESULT](https://go.microsoft.com/fwlink/?LinkId=213878) список).</span><span class="sxs-lookup"><span data-stu-id="65eef-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2bb6a-114">Требования</span><span class="sxs-lookup"><span data-stu-id="2bb6a-114">Requirements</span></span>  
- <span data-ttu-id="2bb6a-115">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2bb6a-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="65eef-114">Требования</span><span class="sxs-lookup"><span data-stu-id="65eef-114">Requirements</span></span>  
+ <span data-ttu-id="65eef-115">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="65eef-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2bb6a-116">**Заголовок:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="2bb6a-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="65eef-116">**Заголовок:** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="65eef-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="2bb6a-117">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="2bb6a-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="65eef-117">**Библиотека:** включена как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="65eef-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="2bb6a-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2bb6a-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="65eef-118">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="65eef-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2bb6a-119">См. также</span><span class="sxs-lookup"><span data-stu-id="2bb6a-119">See Also</span></span>  
- [<span data-ttu-id="2bb6a-120">Метод GetHashFromAssemblyFileW</span><span class="sxs-lookup"><span data-stu-id="2bb6a-120">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)  
- [<span data-ttu-id="2bb6a-121">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="2bb6a-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="65eef-119">См. также</span><span class="sxs-lookup"><span data-stu-id="65eef-119">See Also</span></span>  
+ [<span data-ttu-id="65eef-120">Метод GetHashFromAssemblyFileW</span><span class="sxs-lookup"><span data-stu-id="65eef-120">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)  
+ [<span data-ttu-id="65eef-121">Интерфейс ICLRStrongName</span><span class="sxs-lookup"><span data-stu-id="65eef-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
