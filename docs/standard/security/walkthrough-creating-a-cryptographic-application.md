@@ -13,11 +13,11 @@ ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44337750"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44708697"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>Пошаговое руководство. Создание криптографического приложения
 В этом пошаговом руководстве показано, как зашифровать и расшифровать содержимое. Пример кода предназначен для приложения Windows Forms. Это приложение не демонстрирует реальные сценарии, такие как использование смарт-карт. Вместо этого оно демонстрирует основные принципы шифрования и расшифровки.  

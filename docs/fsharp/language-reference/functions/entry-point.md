@@ -3,11 +3,11 @@ title: Точка входа (F#)
 description: 'Узнайте, как установить точку входа для приложения F #, который компилируется как исполняемого файла, где формально начинается выполнение.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 298500931d49c891a7a243295333df3a9f5d413e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189226"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44710347"
 ---
 # <a name="entry-point"></a>Точка входа
 

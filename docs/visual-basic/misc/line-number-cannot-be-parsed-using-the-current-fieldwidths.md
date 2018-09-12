@@ -5,11 +5,11 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
 ms.openlocfilehash: d362ed594fd343c22345df9767c94a5770e5303a
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: HT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44510890"
+ms.locfileid: "44699154"
 ---
 # <a name="line-ltnumbergt-cannot-be-parsed-using-the-current-fieldwidths"></a>Строки &lt;номер&gt; не может быть проанализирована с использованием текущего параметра FieldWidths
 Указанная строка не может быть проанализирована, так как ее поля имеют ширину, отличную от указанной.  

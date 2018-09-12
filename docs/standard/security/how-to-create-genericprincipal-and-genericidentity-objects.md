@@ -14,11 +14,11 @@ ms.assetid: 465694cf-258b-4747-9dae-35b01a5bcdbb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 79b5e05fe9133eb2282eedefa001e64ece5e0f57
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: HT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44493944"
+ms.locfileid: "44699232"
 ---
 # <a name="how-to-create-genericprincipal-and-genericidentity-objects"></a>Практическое руководство. Создание объектов GenericPrincipal и GenericIdentity
 Можно использовать <xref:System.Security.Principal.GenericIdentity> класс в сочетании с <xref:System.Security.Principal.GenericPrincipal> класса для создания схемы авторизации, которая существует независимо от домена Windows.  

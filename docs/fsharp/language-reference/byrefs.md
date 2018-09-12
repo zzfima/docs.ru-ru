@@ -2,12 +2,12 @@
 title: 'Byrefs (F #)'
 description: 'Дополнительные сведения о byref и типов, схожих byref в F #, которые используются для программирования низкого уровня.'
 ms.date: 09/02/2018
-ms.openlocfilehash: 7d4138649ee39a0d342db2828ad4d32fbded978c
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: HT
+ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514440"
+ms.locfileid: "44699650"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -105,7 +105,7 @@ let f (x: inref<SomeStruct>) = s.SomeField
 
 Цель `outref<'T>` необходимо указать, что указатель должен выполняться только чтение. Неожиданно `outref<'T>` разрешает чтение базового значение несмотря на свое название. Это необходимо для обеспечения совместимости. Семантически `outref<'T>` ничем не отличается от `byref<'T>`.
 
-### <a name="interop-with-c"></a>Взаимодействие с c# #
+### <a name="interop-with-c"></a>Взаимодействие с C# #
 
 Язык C# поддерживает `in ref` и `out ref` ключевые слова, в дополнение к `ref` возвращает. В следующей таблице показаны как F # интерпретирует C# выдает что:
 
@@ -196,7 +196,7 @@ printfn "%d" sum // 'sum' is of type 'int'
 Можно также напрямую назначить возвращаемое значение `byref`. Рассмотрим следующую программу (высокой императивный):
 
 ```fsharp
-ype C() =
+type C() =
     let mutable nums = [| 1; 3; 7; 15; 31; 63; 127; 255; 511; 1023 |]
 
     override __.ToString() = String.Join(' ', nums)

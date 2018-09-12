@@ -3,11 +3,11 @@ title: Моделирование и сопоставление
 ms.date: 03/30/2017
 ms.assetid: ec8a9515-3708-4cde-a688-4d8e6975f150
 ms.openlocfilehash: 81080c416fd18c51be6626cb70a23073e049051d
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: HT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44514427"
+ms.locfileid: "44710454"
 ---
 # <a name="modeling-and-mapping"></a>Моделирование и сопоставление
 Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] позволяет определить концептуальную модель, модель хранения и сопоставление между ними, которые оптимальным образом подходят для приложения. Средств модели EDM в Visual Studio позволяют создавать. [EDMX-файла](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4) из базы данных или графической модели и затем обновлять его при изменении модели или базы данных.  

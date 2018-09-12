@@ -11,11 +11,11 @@ helpviewer_keywords:
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
 ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353620"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44710269"
 ---
 # <a name="control-styles-and-templates"></a>Стили и шаблоны элемента Control
 Элементы управления в Windows Presentation Foundation (WPF) имеют <xref:System.Windows.Controls.ControlTemplate> , содержит визуальное дерево этого элемента управления. Можно изменить структуру и внешний вид элемента управления, изменив <xref:System.Windows.Controls.ControlTemplate> этого элемента управления. Невозможно заменить только часть визуального дерева элемента управления; Чтобы изменить визуальное дерево элемента управления, необходимо задать <xref:System.Windows.Controls.Control.Template%2A> свойство элемента управления, его нового и полного <xref:System.Windows.Controls.ControlTemplate>.  
