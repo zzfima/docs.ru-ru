@@ -1,4 +1,4 @@
-﻿---
+---
 title: Mutexes
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
