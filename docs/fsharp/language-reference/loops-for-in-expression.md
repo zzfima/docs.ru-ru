@@ -3,11 +3,11 @@ title: 'Циклы: выражение for...in (F#)'
 description: 'См. в разделе как F # for... в выражении циклов конструкция используется для итерации по совпадениям с шаблоном в перечислимой коллекции.'
 ms.date: 05/16/2016
 ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: MT
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44271693"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44513957"
 ---
 # <a name="loops-forin-expression"></a>Циклы: выражение for...in
 

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 81f1eb4236bab72caf4421342e1f54d6d2f32607
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44261821"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44510263"
 ---
 # <a name="iclrstrongnamestrongnamesignaturegenerationex-method"></a>Метод ICLRStrongName::StrongNameSignatureGenerationEx
 Создает подпись строгого имени для указанной сборки, в соответствии с заданными флагами.  

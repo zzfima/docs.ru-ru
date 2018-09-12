@@ -3,11 +3,11 @@ title: Привязки do (F#)
 description: 'Узнайте, как F #, «do» привязка используется для выполнения кода без определения функции или значения.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 78dbf8da0fe40b5af566ad98693df1109eede7e4
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353100"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700327"
 ---
 # <a name="do-bindings"></a>Привязки do
 

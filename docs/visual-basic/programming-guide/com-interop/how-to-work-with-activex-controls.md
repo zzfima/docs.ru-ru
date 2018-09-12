@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ActiveX controls, adding to Toolbox
 ms.assetid: ec675027-866f-4c05-aaf2-92fca5200f9a
 ms.openlocfilehash: 8faa8fc86312df2f03ec7a70a488d0e7c12b394b
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44337503"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44514572"
 ---
 # <a name="how-to-work-with-activex-controls-visual-basic"></a>Практическое руководство. Работа с элементами ActiveX (Visual Basic)
 Элементы управления ActiveX являются компоненты COM или объекты, которые можно вставить в веб-страницы или другое приложение для использования упакованных функциональных возможностей, кто-то другой запрограммированных. Элементы управления ActiveX, разработанные для Visual Basic 6.0 и более ранних версий можно использовать для добавления возможностей в **элементов** из Visual Studio.  

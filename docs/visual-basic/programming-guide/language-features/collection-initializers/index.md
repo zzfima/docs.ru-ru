@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: a9290329-77b0-4fdf-ae75-8fc17287f469
-ms.openlocfilehash: e844a673f1a60d5a151a6ae612d4af7a6712eef4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c22599f50ac071245a1381d267f3f7cb66806174
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508348"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44700054"
 ---
 # <a name="collection-initializers-visual-basic"></a>Инициализаторы коллекций (Visual Basic)
 *Инициализаторы набора* предлагают сокращенный синтаксис для создания коллекций и заполнения их начальным набором значений. Инициализаторы набора полезны при создании коллекции из набора известных значений и ее последующей проверки. Это может быть список команд меню или категорий, исходный набор числовых значений, статический список строк, например названий дней или месяцев либо географических расположений (список штатов), и многое другое.  
   
- Более подробную информацию о коллекциях см. в статье [Коллекции](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b).  
+ Более подробную информацию о коллекциях см. в статье [Коллекции](../../../../visual-basic/programming-guide/concepts/collections.md).  
   
  Инициализатор набора определяется по ключевому слову `From`, за которым следуют фигурные скобки (`{}`). Это похоже на синтаксис литерала массива, описанный в разделе [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md). Следующие примеры демонстрируют различные способы применения инициализаторов для создания коллекций.  
   
@@ -76,14 +76,15 @@ ms.locfileid: "43508348"
 |[Практическое руководство. Создание метода расширения Add, используемого инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-an-add-extension-method-used-by-a-collection-initializer.md)|Описывает создание метода расширения `Add`, который можно использовать для заполнения коллекции значениями из инициализатора набора.|  
 |[Практическое руководство. Создание коллекции, используемой инициализатором набора](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)|Описывает, как активировать использование инициализатора набора, включив метод `Add` в класс коллекции, реализующий `IEnumerable`.|  
   
-## <a name="see-also"></a>См. также  
- [Коллекции](https://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
- [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Инициализаторы объектов. Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Оператор New](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [Автоматически реализуемые свойства](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
- [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md) (Практическое руководство. Инициализация переменной массива в Visual Basic)  
- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
- [Практическое руководство. Создание списка элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+## <a name="see-also"></a>См. также
+
+- [Коллекции](../../../../visual-basic/programming-guide/concepts/collections.md)  
+- [Массивы](../../../../visual-basic/programming-guide/language-features/arrays/index.md)  
+- [Инициализаторы объектов. Именованные и анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+- [Оператор New](../../../../visual-basic/language-reference/operators/new-operator.md)  
+- [Автоматически реализуемые свойства](../../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+- [How to: Initialize an Array Variable in Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md) (Практическое руководство. Инициализация переменной массива в Visual Basic)  
+- [Вывод локального типа](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
+- [Анонимные типы](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
+- [Introduction to LINQ in Visual Basic](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md) (Знакомство с LINQ в Visual Basic)  
+- [Практическое руководство. Создание списка элементов](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)

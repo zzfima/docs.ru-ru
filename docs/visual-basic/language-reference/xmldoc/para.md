@@ -6,11 +6,11 @@ helpviewer_keywords:
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
 ms.openlocfilehash: fa11c713a5ed5793b50865753f8bcdeaabf56e83
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
-ms.translationtype: MT
+ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44270556"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44510250"
 ---
 # <a name="ltparagt-visual-basic"></a>&lt;para&gt; (Visual Basic)
 Указывает, что содержимое отформатировано как абзац.  
