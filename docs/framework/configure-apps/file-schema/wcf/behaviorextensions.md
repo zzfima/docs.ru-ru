@@ -3,11 +3,11 @@ title: '&lt;behaviorExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 59f2791a-c78f-40d7-aa80-0d9cd10135d9
 ms.openlocfilehash: d025497956715913923e839cb6c482f44f96babb
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353126"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44705080"
 ---
 # <a name="ltbehaviorextensionsgt"></a>&lt;behaviorExtensions&gt;
 Расширения поведений позволяют пользователям создавать пользовательские элементы поведений. Эти элементы могут использоваться вместе со стандартными элементами поведений Windows Communication Foundation (WCF). В разделе `behaviorExtensions` определяется элемент, который может использоваться в конфигурации. Далее приведен пример типичного расширения поведения.  

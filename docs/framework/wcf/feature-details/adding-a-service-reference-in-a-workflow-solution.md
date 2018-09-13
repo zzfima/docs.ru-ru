@@ -3,11 +3,11 @@ title: Добавление ссылки на службу в решение р�
 ms.date: 03/30/2017
 ms.assetid: 83574cf3-9803-49bc-837f-432936dc9c76
 ms.openlocfilehash: 9dcbf779d948f6d295c2a23f5a09efc5ac989cdd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188937"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44707899"
 ---
 # <a name="adding-a-service-reference-in-a-workflow-solution"></a>Добавление ссылки на службу в решение рабочего процесса
 

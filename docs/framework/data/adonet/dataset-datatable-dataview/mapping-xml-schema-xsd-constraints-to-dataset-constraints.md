@@ -3,11 +3,11 @@ title: Сопоставление ограничений XML-схемы (XSD) с
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
 ms.openlocfilehash: c9cd97535a0165b82f0823c1f17f621491d4255c
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
-ms.translationtype: HT
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511348"
+ms.locfileid: "44706415"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>Сопоставление ограничений XML-схемы (XSD) с ограничениями набора данных
 Язык XSD позволяет задавать ограничения применительно к элементам и атрибутам, которые он определяет. При сопоставлении XML-схемы с реляционной схемой в <xref:System.Data.DataSet>, ограничения XML-схемы сопоставляются с соответствующими реляционными ограничениями таблиц и столбцов в пределах **набора данных**.  

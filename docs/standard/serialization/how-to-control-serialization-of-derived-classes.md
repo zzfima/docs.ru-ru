@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
 ms.openlocfilehash: 00eb4ba1f5f84c60f1ca51871f604b6ee27798c3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44179264"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44707559"
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>Практическое руководство. Управление сериализацией производных классов
 Использование атрибута **XmlElementAttribute** для изменения имени элемента XML — не единственный способ изменения сериализации объекта. Поток XML также можно настроить путем наследования из существующего класса и передачи в экземпляр <xref:System.Xml.Serialization.XmlSerializer> инструкций по сериализации нового класса.  

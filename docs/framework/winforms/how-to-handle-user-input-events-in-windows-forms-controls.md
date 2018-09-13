@@ -10,11 +10,11 @@ helpviewer_keywords:
 - user input [Windows Forms], Windows Forms controls
 ms.assetid: 3de74dcf-fae3-42d0-92b5-bc04a61a6888
 ms.openlocfilehash: 3b15edfec25282d5a0b79ef48cabd2a27c694055
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44367305"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44707988"
 ---
 # <a name="how-to-handle-user-input-events-in-windows-forms-controls"></a>Практическое руководство. Обработка событий пользовательского ввода в элементах управления Windows Forms
 В этом примере демонстрируется, как обрабатывать большинство событий клавиатуры, мыши, фокуса и проверки, которые происходят в элементе управления Windows Forms. Текстовое поле с именем `TextBoxInput` получает события при установке в нем фокуса, и сведения о каждом событии записываются в текстовое поле с именем `TextBoxOutput` в том порядке, в котором вызываются события. В приложении также есть набор флажков, с помощью которых можно фильтровать события, о которых нужно сообщать.  

@@ -3,11 +3,11 @@ title: '&lt;transport&gt; для &lt;netPeerTcpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
 ms.openlocfilehash: 2b89ae090d24ff6aad1aae1b39a0a18961bd2537
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44181002"
+ms.lasthandoff: 09/12/2018
+ms.locfileid: "44704557"
 ---
 # <a name="lttransportgt-of-ltnetpeertcpbindinggt"></a>&lt;transport&gt; для &lt;netPeerTcpBinding&gt;
 Указывает параметры безопасности уровня транспорта при использовании [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md).  
