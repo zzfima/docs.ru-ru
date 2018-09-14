@@ -14,11 +14,11 @@ ms.assetid: 694a33c5-a040-450d-aed5-ac49fc88ce61
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d2aaeaffaf3abbe1e8efcdb57d40e6ae60f89b5
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44510276"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591961"
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Пошаговое руководство. Создание расширяемого приложения
 В этом пошаговом руководстве описывается, как создать конвейер для надстройки, которая выполняет функции простого калькулятора. Он не демонстрирует реальной ситуации; Вместо этого он демонстрирует основные функциональные возможности конвейера, и как надстройка может предоставлять службы для узла.  

@@ -3,11 +3,11 @@ title: Статически разрешаемые параметры типа (
 description: 'Сведения об использовании F # статически разрешаемым параметром типа, который заменяется фактическим типом во время компиляции, а не во время выполнения.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 747917fef2746dcbf363ef4b717ace5e47229800
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44698855"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45595143"
 ---
 # <a name="statically-resolved-type-parameters"></a>Статически разрешаемые параметры типов
 
