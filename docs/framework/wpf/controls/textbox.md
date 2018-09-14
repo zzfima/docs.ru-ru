@@ -8,20 +8,20 @@ helpviewer_keywords:
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
 ms.openlocfilehash: c0826e007576dc0e97ef953e698f5f8d115742e9
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44196664"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45526156"
 ---
-# <a name="textbox"></a><span data-ttu-id="bf5ae-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="bf5ae-102">TextBox</span></span>
-<span data-ttu-id="bf5ae-103"><xref:System.Windows.Controls.TextBox> Элемент управления поддерживает базовые текстовые входные данные в приложениях WPF.</span><span class="sxs-lookup"><span data-stu-id="bf5ae-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
+# <a name="textbox"></a><span data-ttu-id="e45c0-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="e45c0-102">TextBox</span></span>
+<span data-ttu-id="e45c0-103"><xref:System.Windows.Controls.TextBox> Элемент управления поддерживает базовые текстовые входные данные в приложениях WPF.</span><span class="sxs-lookup"><span data-stu-id="e45c0-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bf5ae-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="bf5ae-104">In This Section</span></span>  
- [<span data-ttu-id="bf5ae-105">Общие сведения о TextBox</span><span class="sxs-lookup"><span data-stu-id="bf5ae-105">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)  
- [<span data-ttu-id="bf5ae-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="bf5ae-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="e45c0-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="e45c0-104">In This Section</span></span>  
+ [<span data-ttu-id="e45c0-105">Общие сведения о TextBox</span><span class="sxs-lookup"><span data-stu-id="e45c0-105">TextBox Overview</span></span>](../../../../docs/framework/wpf/controls/textbox-overview.md)  
+ [<span data-ttu-id="e45c0-106">Разделы практического руководства</span><span class="sxs-lookup"><span data-stu-id="e45c0-106">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="bf5ae-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="bf5ae-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="e45c0-107">Ссылка</span><span class="sxs-lookup"><span data-stu-id="e45c0-107">Reference</span></span>  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -30,6 +30,6 @@ ms.locfileid: "44196664"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a><span data-ttu-id="bf5ae-108">См. также</span><span class="sxs-lookup"><span data-stu-id="bf5ae-108">See Also</span></span>  
- [<span data-ttu-id="bf5ae-109">Пример коллекции элементов управления WPF</span><span class="sxs-lookup"><span data-stu-id="bf5ae-109">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)  
- [<span data-ttu-id="bf5ae-110">Стили и шаблоны элемента TextBox</span><span class="sxs-lookup"><span data-stu-id="bf5ae-110">TextBox Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+## <a name="see-also"></a><span data-ttu-id="e45c0-108">См. также</span><span class="sxs-lookup"><span data-stu-id="e45c0-108">See Also</span></span>  
+ [<span data-ttu-id="e45c0-109">Пример коллекции элементов управления WPF</span><span class="sxs-lookup"><span data-stu-id="e45c0-109">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)  
+ [<span data-ttu-id="e45c0-110">Стили и шаблоны элемента TextBox</span><span class="sxs-lookup"><span data-stu-id="e45c0-110">TextBox Styles and Templates</span></span>](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)

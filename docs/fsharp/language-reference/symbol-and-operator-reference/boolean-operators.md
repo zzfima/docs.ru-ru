@@ -3,30 +3,30 @@ title: Логические операторы (F#)
 description: 'Дополнительные сведения о логические операторы, доступные в языке F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44364357"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45516637"
 ---
-# <a name="boolean-operators"></a><span data-ttu-id="8955d-103">Логические операторы</span><span class="sxs-lookup"><span data-stu-id="8955d-103">Boolean Operators</span></span>
+# <a name="boolean-operators"></a><span data-ttu-id="06bf5-103">Логические операторы</span><span class="sxs-lookup"><span data-stu-id="06bf5-103">Boolean Operators</span></span>
 
-<span data-ttu-id="8955d-104">В этом разделе описывается поддержка логических операторов в языке F #.</span><span class="sxs-lookup"><span data-stu-id="8955d-104">This topic describes the support for Boolean operators in the F# language.</span></span>
+<span data-ttu-id="06bf5-104">В этом разделе описывается поддержка логических операторов в языке F #.</span><span class="sxs-lookup"><span data-stu-id="06bf5-104">This topic describes the support for Boolean operators in the F# language.</span></span>
 
-## <a name="summary-of-boolean-operators"></a><span data-ttu-id="8955d-105">Сводка по логические операторы</span><span class="sxs-lookup"><span data-stu-id="8955d-105">Summary of Boolean Operators</span></span>
+## <a name="summary-of-boolean-operators"></a><span data-ttu-id="06bf5-105">Сводка по логические операторы</span><span class="sxs-lookup"><span data-stu-id="06bf5-105">Summary of Boolean Operators</span></span>
 
-<span data-ttu-id="8955d-106">В следующей таблице перечислены логические операторы, доступные в языке F #.</span><span class="sxs-lookup"><span data-stu-id="8955d-106">The following table summarizes the Boolean operators that are available in the F# language.</span></span> <span data-ttu-id="8955d-107">Единственный тип, поддерживаемый эти операторы — `bool` типа.</span><span class="sxs-lookup"><span data-stu-id="8955d-107">The only type supported by these operators is the `bool` type.</span></span>
+<span data-ttu-id="06bf5-106">В следующей таблице перечислены логические операторы, доступные в языке F #.</span><span class="sxs-lookup"><span data-stu-id="06bf5-106">The following table summarizes the Boolean operators that are available in the F# language.</span></span> <span data-ttu-id="06bf5-107">Единственный тип, поддерживаемый эти операторы — `bool` типа.</span><span class="sxs-lookup"><span data-stu-id="06bf5-107">The only type supported by these operators is the `bool` type.</span></span>
 
-|<span data-ttu-id="8955d-108">Оператор</span><span class="sxs-lookup"><span data-stu-id="8955d-108">Operator</span></span>|<span data-ttu-id="8955d-109">Описание</span><span class="sxs-lookup"><span data-stu-id="8955d-109">Description</span></span>|
+|<span data-ttu-id="06bf5-108">Оператор</span><span class="sxs-lookup"><span data-stu-id="06bf5-108">Operator</span></span>|<span data-ttu-id="06bf5-109">Описание</span><span class="sxs-lookup"><span data-stu-id="06bf5-109">Description</span></span>|
 |--------|-----------|
-|`not`|<span data-ttu-id="8955d-110">Логическое отрицание</span><span class="sxs-lookup"><span data-stu-id="8955d-110">Boolean negation</span></span>|
-|<code>&#124;&#124;</code>|<span data-ttu-id="8955d-111">Логическое или</span><span class="sxs-lookup"><span data-stu-id="8955d-111">Boolean OR</span></span>|
-|`&&`|<span data-ttu-id="8955d-112">Логическое и</span><span class="sxs-lookup"><span data-stu-id="8955d-112">Boolean AND</span></span>|
+|`not`|<span data-ttu-id="06bf5-110">Логическое отрицание</span><span class="sxs-lookup"><span data-stu-id="06bf5-110">Boolean negation</span></span>|
+|<code>&#124;&#124;</code>|<span data-ttu-id="06bf5-111">Логическое или</span><span class="sxs-lookup"><span data-stu-id="06bf5-111">Boolean OR</span></span>|
+|`&&`|<span data-ttu-id="06bf5-112">Логическое и</span><span class="sxs-lookup"><span data-stu-id="06bf5-112">Boolean AND</span></span>|
 
-<span data-ttu-id="8955d-113">Логические и и или операторы выполнения *сокращенным вычислением*, то есть они вычисляют выражение справа от оператора, только в том случае, когда это необходимо для определения результата выражения.</span><span class="sxs-lookup"><span data-stu-id="8955d-113">The Boolean AND and OR operators perform *short-circuit evaluation*, that is, they evaluate the expression on the right of the operator only when it is necessary to determine the overall result of the expression.</span></span> <span data-ttu-id="8955d-114">Второе выражение `&&` оператора определяется только в том случае, если первое выражение, результатом которого является `true`; второе выражение `||` оператора определяется только в том случае, если первое выражение, результатом которого является `false`.</span><span class="sxs-lookup"><span data-stu-id="8955d-114">The second expression of the `&&` operator is evaluated only if the first expression evaluates to `true`; the second expression of the `||` operator is evaluated only if the first expression evaluates to `false`.</span></span>
+<span data-ttu-id="06bf5-113">Логические и и или операторы выполнения *сокращенным вычислением*, то есть они вычисляют выражение справа от оператора, только в том случае, когда это необходимо для определения результата выражения.</span><span class="sxs-lookup"><span data-stu-id="06bf5-113">The Boolean AND and OR operators perform *short-circuit evaluation*, that is, they evaluate the expression on the right of the operator only when it is necessary to determine the overall result of the expression.</span></span> <span data-ttu-id="06bf5-114">Второе выражение `&&` оператора определяется только в том случае, если первое выражение, результатом которого является `true`; второе выражение `||` оператора определяется только в том случае, если первое выражение, результатом которого является `false`.</span><span class="sxs-lookup"><span data-stu-id="06bf5-114">The second expression of the `&&` operator is evaluated only if the first expression evaluates to `true`; the second expression of the `||` operator is evaluated only if the first expression evaluates to `false`.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="8955d-115">См. также</span><span class="sxs-lookup"><span data-stu-id="8955d-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="06bf5-115">См. также</span><span class="sxs-lookup"><span data-stu-id="06bf5-115">See also</span></span>
 
-- [<span data-ttu-id="8955d-116">Побитовые операторы</span><span class="sxs-lookup"><span data-stu-id="8955d-116">Bitwise Operators</span></span>](bitwise-operators.md)
-- [<span data-ttu-id="8955d-117">Арифметические операторы</span><span class="sxs-lookup"><span data-stu-id="8955d-117">Arithmetic Operators</span></span>](arithmetic-operators.md)
-- [<span data-ttu-id="8955d-118">Справочник символов и операторов</span><span class="sxs-lookup"><span data-stu-id="8955d-118">Symbol and Operator Reference</span></span>](index.md)
+- [<span data-ttu-id="06bf5-116">Побитовые операторы</span><span class="sxs-lookup"><span data-stu-id="06bf5-116">Bitwise Operators</span></span>](bitwise-operators.md)
+- [<span data-ttu-id="06bf5-117">Арифметические операторы</span><span class="sxs-lookup"><span data-stu-id="06bf5-117">Arithmetic Operators</span></span>](arithmetic-operators.md)
+- [<span data-ttu-id="06bf5-118">Справочник символов и операторов</span><span class="sxs-lookup"><span data-stu-id="06bf5-118">Symbol and Operator Reference</span></span>](index.md)

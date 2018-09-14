@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
 ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216325"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45517922"
 ---
-# <a name="childviews-and-relations"></a><span data-ttu-id="ed304-102">ChildView и отношения</span><span class="sxs-lookup"><span data-stu-id="ed304-102">ChildViews and Relations</span></span>
-<span data-ttu-id="ed304-103">Если какая-то связь существует между таблицами в <xref:System.Data.DataSet>, то можно создать объект <xref:System.Data.DataView>, содержащий строки из связанной дочерней таблицы, с применением метода <xref:System.Data.DataRowView.CreateChildView%2A> объекта <xref:System.Data.DataRowView> по отношению к строкам в родительской таблице.</span><span class="sxs-lookup"><span data-stu-id="ed304-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="ed304-104">Например, следующий код отображает **категории** и связанных с ними **продуктов** в алфавитном порядке по **CategoryName** и **ProductName** .</span><span class="sxs-lookup"><span data-stu-id="ed304-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
+# <a name="childviews-and-relations"></a><span data-ttu-id="8f58b-102">ChildView и отношения</span><span class="sxs-lookup"><span data-stu-id="8f58b-102">ChildViews and Relations</span></span>
+<span data-ttu-id="8f58b-103">Если какая-то связь существует между таблицами в <xref:System.Data.DataSet>, то можно создать объект <xref:System.Data.DataView>, содержащий строки из связанной дочерней таблицы, с применением метода <xref:System.Data.DataRowView.CreateChildView%2A> объекта <xref:System.Data.DataRowView> по отношению к строкам в родительской таблице.</span><span class="sxs-lookup"><span data-stu-id="8f58b-103">If a relationship exists between tables in a <xref:System.Data.DataSet>, you can create a <xref:System.Data.DataView> containing rows from the related child table by using the <xref:System.Data.DataRowView.CreateChildView%2A> method of the <xref:System.Data.DataRowView> for the rows in the parent table.</span></span> <span data-ttu-id="8f58b-104">Например, следующий код отображает **категории** и связанных с ними **продуктов** в алфавитном порядке по **CategoryName** и **ProductName** .</span><span class="sxs-lookup"><span data-stu-id="8f58b-104">For example, the following code displays **Categories** and their related **Products** in alphabetical order sorted by **CategoryName** and **ProductName**.</span></span>  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -73,9 +73,9 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ed304-105">См. также</span><span class="sxs-lookup"><span data-stu-id="ed304-105">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8f58b-105">См. также</span><span class="sxs-lookup"><span data-stu-id="8f58b-105">See Also</span></span>  
  <xref:System.Data.DataSet>  
  <xref:System.Data.DataView>  
  <xref:System.Data.DataRowView>  
- [<span data-ttu-id="ed304-106">Объекты DataView</span><span class="sxs-lookup"><span data-stu-id="ed304-106">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [<span data-ttu-id="ed304-107">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="ed304-107">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [<span data-ttu-id="8f58b-106">Объекты DataView</span><span class="sxs-lookup"><span data-stu-id="8f58b-106">DataViews</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [<span data-ttu-id="8f58b-107">Центр разработчиков наборов данных и управляемых поставщиков ADO.NET</span><span class="sxs-lookup"><span data-stu-id="8f58b-107">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

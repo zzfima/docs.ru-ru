@@ -11,61 +11,61 @@ helpviewer_keywords:
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
 ms.openlocfilehash: 84fce92183228cbfa5554a3ba45770a86e83bff5
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44099054"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45507306"
 ---
-# <a name="error-statement"></a><span data-ttu-id="dca93-102">Оператор Error</span><span class="sxs-lookup"><span data-stu-id="dca93-102">Error Statement</span></span>
-<span data-ttu-id="dca93-103">Имитирует возникновение ошибки.</span><span class="sxs-lookup"><span data-stu-id="dca93-103">Simulates the occurrence of an error.</span></span>  
+# <a name="error-statement"></a><span data-ttu-id="d55ad-102">Оператор Error</span><span class="sxs-lookup"><span data-stu-id="d55ad-102">Error Statement</span></span>
+<span data-ttu-id="d55ad-103">Имитирует возникновение ошибки.</span><span class="sxs-lookup"><span data-stu-id="d55ad-103">Simulates the occurrence of an error.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dca93-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="dca93-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d55ad-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d55ad-104">Syntax</span></span>  
   
 ```  
 Error errornumber  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="dca93-105">Части</span><span class="sxs-lookup"><span data-stu-id="dca93-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="d55ad-105">Части</span><span class="sxs-lookup"><span data-stu-id="d55ad-105">Parts</span></span>  
  `errornumber`  
- <span data-ttu-id="dca93-106">Обязательно.</span><span class="sxs-lookup"><span data-stu-id="dca93-106">Required.</span></span> <span data-ttu-id="dca93-107">Может быть любой допустимый номер ошибки.</span><span class="sxs-lookup"><span data-stu-id="dca93-107">Can be any valid error number.</span></span>  
+ <span data-ttu-id="d55ad-106">Обязательно.</span><span class="sxs-lookup"><span data-stu-id="d55ad-106">Required.</span></span> <span data-ttu-id="d55ad-107">Может быть любой допустимый номер ошибки.</span><span class="sxs-lookup"><span data-stu-id="d55ad-107">Can be any valid error number.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="dca93-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="dca93-108">Remarks</span></span>  
- <span data-ttu-id="dca93-109">`Error` Инструкция поддерживается для обеспечения обратной совместимости.</span><span class="sxs-lookup"><span data-stu-id="dca93-109">The `Error` statement is supported for backward compatibility.</span></span> <span data-ttu-id="dca93-110">В новом коде, особенно в том случае, при создании объектов, используйте `Err` объекта `Raise` метод для создания ошибки времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="dca93-110">In new code, especially when creating objects, use the `Err` object's `Raise` method to generate run-time errors.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d55ad-108">Примечания</span><span class="sxs-lookup"><span data-stu-id="d55ad-108">Remarks</span></span>  
+ <span data-ttu-id="d55ad-109">`Error` Инструкция поддерживается для обеспечения обратной совместимости.</span><span class="sxs-lookup"><span data-stu-id="d55ad-109">The `Error` statement is supported for backward compatibility.</span></span> <span data-ttu-id="d55ad-110">В новом коде, особенно в том случае, при создании объектов, используйте `Err` объекта `Raise` метод для создания ошибки времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="d55ad-110">In new code, especially when creating objects, use the `Err` object's `Raise` method to generate run-time errors.</span></span>  
   
- <span data-ttu-id="dca93-111">Если `errornumber` определен, `Error` инструкция вызывает обработчик ошибок после свойства `Err` объекта назначаются следующие значения по умолчанию:</span><span class="sxs-lookup"><span data-stu-id="dca93-111">If `errornumber` is defined, the `Error` statement calls the error handler after the properties of the `Err` object are assigned the following default values:</span></span>  
+ <span data-ttu-id="d55ad-111">Если `errornumber` определен, `Error` инструкция вызывает обработчик ошибок после свойства `Err` объекта назначаются следующие значения по умолчанию:</span><span class="sxs-lookup"><span data-stu-id="d55ad-111">If `errornumber` is defined, the `Error` statement calls the error handler after the properties of the `Err` object are assigned the following default values:</span></span>  
   
-|<span data-ttu-id="dca93-112">Свойство.</span><span class="sxs-lookup"><span data-stu-id="dca93-112">Property</span></span>|<span data-ttu-id="dca93-113">Значение</span><span class="sxs-lookup"><span data-stu-id="dca93-113">Value</span></span>|  
+|<span data-ttu-id="d55ad-112">Свойство.</span><span class="sxs-lookup"><span data-stu-id="d55ad-112">Property</span></span>|<span data-ttu-id="d55ad-113">Значение</span><span class="sxs-lookup"><span data-stu-id="d55ad-113">Value</span></span>|  
 |--------------|-----------|  
-|`Number`|<span data-ttu-id="dca93-114">Значение, указанное в качестве аргумента `Error` инструкции.</span><span class="sxs-lookup"><span data-stu-id="dca93-114">Value specified as argument to `Error` statement.</span></span> <span data-ttu-id="dca93-115">Может быть любой допустимый номер ошибки.</span><span class="sxs-lookup"><span data-stu-id="dca93-115">Can be any valid error number.</span></span>|  
-|`Source`|<span data-ttu-id="dca93-116">Имя текущего проекта Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="dca93-116">Name of the current Visual Basic project.</span></span>|  
-|`Description`|<span data-ttu-id="dca93-117">Строковое выражение, соответствующее возвращаемое значение `Error` функция для указанного `Number`, если эта строка существует.</span><span class="sxs-lookup"><span data-stu-id="dca93-117">String expression corresponding to the return value of the `Error` function for the specified `Number`, if this string exists.</span></span> <span data-ttu-id="dca93-118">Если строка не существует, `Description` содержит строку нулевой длины (»»).</span><span class="sxs-lookup"><span data-stu-id="dca93-118">If the string does not exist, `Description` contains a zero-length string ("").</span></span>|  
-|`HelpFile`|<span data-ttu-id="dca93-119">Полное имя диска, путь и имя файла, соответствующего файла справки Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="dca93-119">The fully qualified drive, path, and file name of the appropriate Visual Basic Help file.</span></span>|  
-|`HelpContext`|<span data-ttu-id="dca93-120">Соответствующий Visual Basic файла справки идентификатор контекста для ошибки, соответствующий `Number` свойство.</span><span class="sxs-lookup"><span data-stu-id="dca93-120">The appropriate Visual Basic Help file context ID for the error corresponding to the `Number` property.</span></span>|  
-|`LastDLLError`|<span data-ttu-id="dca93-121">Ноль.</span><span class="sxs-lookup"><span data-stu-id="dca93-121">Zero.</span></span>|  
+|`Number`|<span data-ttu-id="d55ad-114">Значение, указанное в качестве аргумента `Error` инструкции.</span><span class="sxs-lookup"><span data-stu-id="d55ad-114">Value specified as argument to `Error` statement.</span></span> <span data-ttu-id="d55ad-115">Может быть любой допустимый номер ошибки.</span><span class="sxs-lookup"><span data-stu-id="d55ad-115">Can be any valid error number.</span></span>|  
+|`Source`|<span data-ttu-id="d55ad-116">Имя текущего проекта Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="d55ad-116">Name of the current Visual Basic project.</span></span>|  
+|`Description`|<span data-ttu-id="d55ad-117">Строковое выражение, соответствующее возвращаемое значение `Error` функция для указанного `Number`, если эта строка существует.</span><span class="sxs-lookup"><span data-stu-id="d55ad-117">String expression corresponding to the return value of the `Error` function for the specified `Number`, if this string exists.</span></span> <span data-ttu-id="d55ad-118">Если строка не существует, `Description` содержит строку нулевой длины (»»).</span><span class="sxs-lookup"><span data-stu-id="d55ad-118">If the string does not exist, `Description` contains a zero-length string ("").</span></span>|  
+|`HelpFile`|<span data-ttu-id="d55ad-119">Полное имя диска, путь и имя файла, соответствующего файла справки Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="d55ad-119">The fully qualified drive, path, and file name of the appropriate Visual Basic Help file.</span></span>|  
+|`HelpContext`|<span data-ttu-id="d55ad-120">Соответствующий Visual Basic файла справки идентификатор контекста для ошибки, соответствующий `Number` свойство.</span><span class="sxs-lookup"><span data-stu-id="d55ad-120">The appropriate Visual Basic Help file context ID for the error corresponding to the `Number` property.</span></span>|  
+|`LastDLLError`|<span data-ttu-id="d55ad-121">Ноль.</span><span class="sxs-lookup"><span data-stu-id="d55ad-121">Zero.</span></span>|  
   
- <span data-ttu-id="dca93-122">Если обработчик ошибок отсутствует или отключен, сообщение об ошибке создаются и отображаются из `Err` свойства объекта.</span><span class="sxs-lookup"><span data-stu-id="dca93-122">If no error handler exists, or if none is enabled, an error message is created and displayed from the `Err` object properties.</span></span>  
+ <span data-ttu-id="d55ad-122">Если обработчик ошибок отсутствует или отключен, сообщение об ошибке создаются и отображаются из `Err` свойства объекта.</span><span class="sxs-lookup"><span data-stu-id="d55ad-122">If no error handler exists, or if none is enabled, an error message is created and displayed from the `Err` object properties.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="dca93-123">Некоторые хост-приложения Visual Basic нельзя создавать объекты.</span><span class="sxs-lookup"><span data-stu-id="dca93-123">Some Visual Basic host applications cannot create objects.</span></span> <span data-ttu-id="dca93-124">См. в разделе документации ведущего приложения для определения возможности создания классов и объектов.</span><span class="sxs-lookup"><span data-stu-id="dca93-124">See your host application's documentation to determine whether it can create classes and objects.</span></span>  
+>  <span data-ttu-id="d55ad-123">Некоторые хост-приложения Visual Basic нельзя создавать объекты.</span><span class="sxs-lookup"><span data-stu-id="d55ad-123">Some Visual Basic host applications cannot create objects.</span></span> <span data-ttu-id="d55ad-124">См. в разделе документации ведущего приложения для определения возможности создания классов и объектов.</span><span class="sxs-lookup"><span data-stu-id="d55ad-124">See your host application's documentation to determine whether it can create classes and objects.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="dca93-125">Пример</span><span class="sxs-lookup"><span data-stu-id="dca93-125">Example</span></span>  
- <span data-ttu-id="dca93-126">В этом примере используется `Error` инструкции для создания ошибки номер 11.</span><span class="sxs-lookup"><span data-stu-id="dca93-126">This example uses the `Error` statement to generate error number 11.</span></span>  
+## <a name="example"></a><span data-ttu-id="d55ad-125">Пример</span><span class="sxs-lookup"><span data-stu-id="d55ad-125">Example</span></span>  
+ <span data-ttu-id="d55ad-126">В этом примере используется `Error` инструкции для создания ошибки номер 11.</span><span class="sxs-lookup"><span data-stu-id="d55ad-126">This example uses the `Error` statement to generate error number 11.</span></span>  
   
 ```  
 On Error Resume Next   ' Defer error handling.  
 Error 11   ' Simulate the "Division by zero" error.  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="dca93-127">Требования</span><span class="sxs-lookup"><span data-stu-id="dca93-127">Requirements</span></span>  
- <span data-ttu-id="dca93-128">**Пространство имен:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="dca93-128">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d55ad-127">Требования</span><span class="sxs-lookup"><span data-stu-id="d55ad-127">Requirements</span></span>  
+ <span data-ttu-id="d55ad-128">**Пространство имен:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span><span class="sxs-lookup"><span data-stu-id="d55ad-128">**Namespace:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)</span></span>  
   
- <span data-ttu-id="dca93-129">**Сборка:** библиотеки времени выполнения Visual Basic (в Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="dca93-129">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="d55ad-129">**Сборка:** библиотеки времени выполнения Visual Basic (в Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="d55ad-129">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dca93-130">См. также</span><span class="sxs-lookup"><span data-stu-id="dca93-130">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d55ad-130">См. также</span><span class="sxs-lookup"><span data-stu-id="d55ad-130">See Also</span></span>  
  <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>  
  <xref:Microsoft.VisualBasic.Information.Err%2A>  
  <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>  
- [<span data-ttu-id="dca93-131">Оператор On Error</span><span class="sxs-lookup"><span data-stu-id="dca93-131">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)  
- [<span data-ttu-id="dca93-132">Оператор Resume</span><span class="sxs-lookup"><span data-stu-id="dca93-132">Resume Statement</span></span>](../../../visual-basic/language-reference/statements/resume-statement.md)  
- [<span data-ttu-id="dca93-133">Сообщения об ошибках</span><span class="sxs-lookup"><span data-stu-id="dca93-133">Error Messages</span></span>](../../../visual-basic/language-reference/error-messages/index.md)
+ [<span data-ttu-id="d55ad-131">Оператор On Error</span><span class="sxs-lookup"><span data-stu-id="d55ad-131">On Error Statement</span></span>](../../../visual-basic/language-reference/statements/on-error-statement.md)  
+ [<span data-ttu-id="d55ad-132">Оператор Resume</span><span class="sxs-lookup"><span data-stu-id="d55ad-132">Resume Statement</span></span>](../../../visual-basic/language-reference/statements/resume-statement.md)  
+ [<span data-ttu-id="d55ad-133">Сообщения об ошибках</span><span class="sxs-lookup"><span data-stu-id="d55ad-133">Error Messages</span></span>](../../../visual-basic/language-reference/error-messages/index.md)
