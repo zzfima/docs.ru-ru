@@ -5,22 +5,22 @@ f1_keywords:
 - vbrTextFieldParser_EndCharsInDelimiter
 ms.assetid: 0701f3b6-635b-468e-b908-867df00dd5db
 ms.openlocfilehash: b76e7f26d7d8cebb1ebddfdd5e53a5c399abea1f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201872"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45585555"
 ---
-# <a name="textfieldparser-does-not-support-delimiters-that-contain-endline-characters"></a><span data-ttu-id="eb583-102">TextFieldParser не поддерживает разделители, содержащие символы конца строки</span><span class="sxs-lookup"><span data-stu-id="eb583-102">TextFieldParser does not support delimiters that contain endline characters</span></span>
-<span data-ttu-id="eb583-103">Указан разделитель, содержащий символ конца строки будет предоставлено, но `TextFieldParser` не поддерживает разделители, содержащие символы конца строки.</span><span class="sxs-lookup"><span data-stu-id="eb583-103">A delimiter that contains an endline character has been supplied, but the `TextFieldParser` does not support delimiters that contain endline characters.</span></span>  
+# <a name="textfieldparser-does-not-support-delimiters-that-contain-endline-characters"></a><span data-ttu-id="bbf10-102">TextFieldParser не поддерживает разделители, содержащие символы конца строки</span><span class="sxs-lookup"><span data-stu-id="bbf10-102">TextFieldParser does not support delimiters that contain endline characters</span></span>
+<span data-ttu-id="bbf10-103">Указан разделитель, содержащий символ конца строки будет предоставлено, но `TextFieldParser` не поддерживает разделители, содержащие символы конца строки.</span><span class="sxs-lookup"><span data-stu-id="bbf10-103">A delimiter that contains an endline character has been supplied, but the `TextFieldParser` does not support delimiters that contain endline characters.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="eb583-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="eb583-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="bbf10-104">Исправление ошибки</span><span class="sxs-lookup"><span data-stu-id="bbf10-104">To correct this error</span></span>  
   
--   <span data-ttu-id="eb583-105">Укажите правильный разделитель.</span><span class="sxs-lookup"><span data-stu-id="eb583-105">Supply a correct delimiter.</span></span>  
+-   <span data-ttu-id="bbf10-105">Укажите правильный разделитель.</span><span class="sxs-lookup"><span data-stu-id="bbf10-105">Supply a correct delimiter.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="eb583-106">См. также</span><span class="sxs-lookup"><span data-stu-id="eb583-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bbf10-106">См. также</span><span class="sxs-lookup"><span data-stu-id="bbf10-106">See also</span></span>
 
-- [<span data-ttu-id="eb583-107">Свойство TextFieldParser.Delimiters</span><span class="sxs-lookup"><span data-stu-id="eb583-107">TextFieldParser.Delimiters Property</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A)  
-- [<span data-ttu-id="eb583-108">Метод TextFieldParser.SetDelimiters</span><span class="sxs-lookup"><span data-stu-id="eb583-108">TextFieldParser.SetDelimiters Method</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A)  
-- [<span data-ttu-id="eb583-109">Анализ текстовых файлов с помощью объекта TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="eb583-109">Parsing Text Files with the TextFieldParser Object</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
-- [<span data-ttu-id="eb583-110">Объект TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="eb583-110">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)
+- [<span data-ttu-id="bbf10-107">Свойство TextFieldParser.Delimiters</span><span class="sxs-lookup"><span data-stu-id="bbf10-107">TextFieldParser.Delimiters Property</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.Delimiters%2A)  
+- [<span data-ttu-id="bbf10-108">Метод TextFieldParser.SetDelimiters</span><span class="sxs-lookup"><span data-stu-id="bbf10-108">TextFieldParser.SetDelimiters Method</span></span>](xref:Microsoft.VisualBasic.FileIO.TextFieldParser.SetDelimiters%2A)  
+- [<span data-ttu-id="bbf10-109">Анализ текстовых файлов с помощью объекта TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="bbf10-109">Parsing Text Files with the TextFieldParser Object</span></span>](../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)  
+- [<span data-ttu-id="bbf10-110">Объект TextFieldParser</span><span class="sxs-lookup"><span data-stu-id="bbf10-110">TextFieldParser Object</span></span>](../../visual-basic/language-reference/objects/textfieldparser-object.md)
