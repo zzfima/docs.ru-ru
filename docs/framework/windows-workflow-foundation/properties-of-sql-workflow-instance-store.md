@@ -3,29 +3,29 @@ title: Свойства хранилища экземпляров рабочег
 ms.date: 03/30/2017
 ms.assetid: 5bf75f3c-8f33-450d-967f-6ee862c14c67
 ms.openlocfilehash: 3707e4912628380e5e06eeae1a6d608a4b0d5555
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699323"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45597287"
 ---
-# <a name="properties-of-sql-workflow-instance-store"></a><span data-ttu-id="069fa-102">Свойства хранилища экземпляров рабочего процесса SQL</span><span class="sxs-lookup"><span data-stu-id="069fa-102">Properties of SQL Workflow Instance Store</span></span>
-<span data-ttu-id="069fa-103">В этом подразделе приводятся подробные сведения о свойствах хранилища экземпляров рабочих процессов SQL.</span><span class="sxs-lookup"><span data-stu-id="069fa-103">The topics in this section provide details about properties of the SQL Workflow Instance Store.</span></span>  
+# <a name="properties-of-sql-workflow-instance-store"></a><span data-ttu-id="c67e6-102">Свойства хранилища экземпляров рабочего процесса SQL</span><span class="sxs-lookup"><span data-stu-id="c67e6-102">Properties of SQL Workflow Instance Store</span></span>
+<span data-ttu-id="c67e6-103">В этом подразделе приводятся подробные сведения о свойствах хранилища экземпляров рабочих процессов SQL.</span><span class="sxs-lookup"><span data-stu-id="c67e6-103">The topics in this section provide details about properties of the SQL Workflow Instance Store.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="069fa-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="069fa-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="c67e6-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="c67e6-104">In This Section</span></span>  
   
--   [<span data-ttu-id="069fa-105">Возможность кодирования экземпляров</span><span class="sxs-lookup"><span data-stu-id="069fa-105">Instance Encoding Option</span></span>](../../../docs/framework/windows-workflow-foundation/instance-encoding-option.md)  
+-   [<span data-ttu-id="c67e6-105">Возможность кодирования экземпляров</span><span class="sxs-lookup"><span data-stu-id="c67e6-105">Instance Encoding Option</span></span>](../../../docs/framework/windows-workflow-foundation/instance-encoding-option.md)  
   
--   [<span data-ttu-id="069fa-106">Действие при завершении экземпляра</span><span class="sxs-lookup"><span data-stu-id="069fa-106">Instance Completion Action</span></span>](../../../docs/framework/windows-workflow-foundation/instance-completion-action.md)  
+-   [<span data-ttu-id="c67e6-106">Действие при завершении экземпляра</span><span class="sxs-lookup"><span data-stu-id="c67e6-106">Instance Completion Action</span></span>](../../../docs/framework/windows-workflow-foundation/instance-completion-action.md)  
   
--   [<span data-ttu-id="069fa-107">Действие при исключении "Экземпляр заблокирован"</span><span class="sxs-lookup"><span data-stu-id="069fa-107">Instance Locked Exception Action</span></span>](../../../docs/framework/windows-workflow-foundation/instance-locked-exception-action.md)  
+-   [<span data-ttu-id="c67e6-107">Действие при исключении "Экземпляр заблокирован"</span><span class="sxs-lookup"><span data-stu-id="c67e6-107">Instance Locked Exception Action</span></span>](../../../docs/framework/windows-workflow-foundation/instance-locked-exception-action.md)  
   
--   [<span data-ttu-id="069fa-108">Период возобновления блокировки узла</span><span class="sxs-lookup"><span data-stu-id="069fa-108">Host Lock Renewal Period</span></span>](../../../docs/framework/windows-workflow-foundation/host-lock-renewal-period.md)  
+-   [<span data-ttu-id="c67e6-108">Период возобновления блокировки узла</span><span class="sxs-lookup"><span data-stu-id="c67e6-108">Host Lock Renewal Period</span></span>](../../../docs/framework/windows-workflow-foundation/host-lock-renewal-period.md)  
   
--   [<span data-ttu-id="069fa-109">Период обнаружения запускаемых экземпляров</span><span class="sxs-lookup"><span data-stu-id="069fa-109">Runnable Instances Detection Period</span></span>](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md)  
+-   [<span data-ttu-id="c67e6-109">Период обнаружения запускаемых экземпляров</span><span class="sxs-lookup"><span data-stu-id="c67e6-109">Runnable Instances Detection Period</span></span>](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md)  
   
--   [<span data-ttu-id="069fa-110">Строка подключения и ее имя</span><span class="sxs-lookup"><span data-stu-id="069fa-110">Connection String and Connection String Name</span></span>](../../../docs/framework/windows-workflow-foundation/connection-string-and-connection-string-name.md)  
+-   [<span data-ttu-id="c67e6-110">Строка подключения и ее имя</span><span class="sxs-lookup"><span data-stu-id="c67e6-110">Connection String and Connection String Name</span></span>](../../../docs/framework/windows-workflow-foundation/connection-string-and-connection-string-name.md)  
   
-## <a name="see-also"></a><span data-ttu-id="069fa-111">См. также</span><span class="sxs-lookup"><span data-stu-id="069fa-111">See Also</span></span>  
- [<span data-ttu-id="069fa-112">Windows Server App Fabric экземпляр Store</span><span class="sxs-lookup"><span data-stu-id="069fa-112">Windows Server App Fabric Instance Store</span></span>](https://go.microsoft.com/fwlink/?LinkId=201201)  
- [<span data-ttu-id="069fa-113">База данных сохраняемости фабрики приложения SQL Server</span><span class="sxs-lookup"><span data-stu-id="069fa-113">App Fabric SQL Server Persistence Database</span></span>](https://go.microsoft.com/fwlink/?LinkId=201202)
+## <a name="see-also"></a><span data-ttu-id="c67e6-111">См. также</span><span class="sxs-lookup"><span data-stu-id="c67e6-111">See Also</span></span>  
+ [<span data-ttu-id="c67e6-112">Windows Server App Fabric экземпляр Store</span><span class="sxs-lookup"><span data-stu-id="c67e6-112">Windows Server App Fabric Instance Store</span></span>](https://go.microsoft.com/fwlink/?LinkId=201201)  
+ [<span data-ttu-id="c67e6-113">База данных сохраняемости фабрики приложения SQL Server</span><span class="sxs-lookup"><span data-stu-id="c67e6-113">App Fabric SQL Server Persistence Database</span></span>](https://go.microsoft.com/fwlink/?LinkId=201202)
