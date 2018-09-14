@@ -11,11 +11,11 @@ ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6d68966f60c5039fd67195a03facc1586b9ed154
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183266"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45591728"
 ---
 # <a name="names-of-namespaces"></a>Имена пространств имен.
 Как с помощью других рекомендациях по именованию, целью при именовании пространств имен является создание достаточно ясности для программиста, с помощью платформы для сразу знать содержимое пространства имен, вероятно, будет. Следующий шаблон определяет правило именования пространства имен:  

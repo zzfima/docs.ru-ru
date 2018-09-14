@@ -3,11 +3,11 @@ title: Индексированные свойства (F#)
 description: 'Дополнительные сведения о F # индексированные свойства, которые являются свойства, предоставляющие доступ через массив к данным упорядоченный.'
 ms.date: 05/16/2016
 ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44511046"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45583428"
 ---
 # <a name="indexed-properties"></a>Индексированные свойства
 

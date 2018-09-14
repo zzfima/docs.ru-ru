@@ -3,11 +3,11 @@ title: Действия с регулярными выражениями
 ms.date: 03/30/2017
 ms.assetid: b8f24694-49db-4339-92ec-014e3d4ae63b
 ms.openlocfilehash: 50daa5b6d7baab37f372de4c30c2e0d12b4fa943
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44509886"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45588271"
 ---
 # <a name="regular-expression-activities"></a>Действия с регулярными выражениями
 Этот образец демонстрирует способ создания набора действий, которые представляют функциональные возможности регулярного выражения пространства имен <xref:System.Text.RegularExpressions>. Такие пользовательские действия можно использовать в приложении рабочего процесса. Дополнительные сведения о регулярных выражениях см. в разделе [N:System.Text.RegularExpressions](https://go.microsoft.com/fwlink/?LinkId=150434) пространства имен.  
