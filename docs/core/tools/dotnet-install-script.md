@@ -4,12 +4,12 @@ description: Сведения о скриптах dotnet-install, которые
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: acdf49950ebb49751c55ae72b3f623e590489202
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214384"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44180047"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Справка по скриптам dotnet-install
 
@@ -36,11 +36,11 @@ Mac OS и Linux:
 * https://dot.net/v1/dotnet-install.sh (Bash, UNIX);
 * https://dot.net/v1/dotnet-install.ps1 (Powershell, Windows).
 
-Их основное назначение — помощь в сценариях автоматизации и при установках без прав администратора. Существует два скрипта. Один — скрипт PowerShell, который работает в Windows. Второй — bash-скрипт, который выполняется в Linux и macOS. Оба скрипта выполняют одни и те же функции. Так как bash-скрипт также считывает параметры PowerShell, их можно использовать с этим скриптом в системах Linux и macOS. 
+Их основное назначение — помощь в сценариях автоматизации и при установках без прав администратора. Существует два скрипта. Один — скрипт PowerShell, который работает в Windows. Второй — bash-скрипт, который выполняется в Linux и macOS. Оба скрипта выполняют одни и те же функции. Так как bash-скрипт также считывает параметры PowerShell, их можно использовать с этим скриптом в системах Linux и macOS.
 
-Скрипты установки скачивают файл ZIP или TAR из места сборки CLI, а затем осуществляют установку в расположении по умолчанию или расположении, заданном параметром `-InstallDir|--install-dir`. По умолчанию скрипты установки скачивают и устанавливают пакет SDK. Если вы хотите получить только общую среду выполнения, укажите аргумент `--shared-runtime`. 
+Скрипты установки скачивают файл ZIP или TAR из места сборки CLI, а затем осуществляют установку в расположении по умолчанию или расположении, заданном параметром `-InstallDir|--install-dir`. По умолчанию скрипты установки скачивают и устанавливают пакет SDK. Если вы хотите получить только общую среду выполнения, укажите аргумент `--shared-runtime`.
 
-По умолчанию скрипт добавляет место установки в переменную $PATH для текущего сеанса. Переопределите это поведение по умолчанию, указав аргумент `--no-path`. 
+По умолчанию скрипт добавляет место установки в переменную $PATH для текущего сеанса. Переопределите это поведение по умолчанию, указав аргумент `--no-path`.
 
 Перед запуском скрипта установите все необходимые [зависимости](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md).
 
@@ -57,7 +57,7 @@ Mac OS и Linux:
 - Версия из двух частей в формате X.Y, который представляет конкретный выпуск (например, `2.0` или `1.0`).
 - Имя ветви [например, `release/2.0.0`, `release/2.0.0-preview2` или `master` для последней из ветви `master` ("суперсовременные" ночные выпуски)].
 
-Значение по умолчанию — `LTS`. Дополнительные сведения о каналах поддержки .NET см. в документе [.NET Core Support Lifecycle](https://www.microsoft.com/net/core/support) (Жизненный цикл поддержки .NET Core).
+Значение по умолчанию — `LTS`. Дополнительные сведения о каналах поддержки .NET см. в документе [.NET Core Support Lifecycle](https://www.microsoft.com/net/core/support) (Жизненный цикл поддержки .NET Core).
 
 `-Version <VERSION>`
 
@@ -91,7 +91,7 @@ Mac OS и Linux:
 
 `-AzureFeed`
 
-Указывает URL-адрес для веб-канала Azure этого установщика. Изменять это значение не рекомендуется. Значение по умолчанию — `https://dotnetcli.azureedge.net/dotnet`.
+Указывает URL-адрес для веб-канала Azure этого установщика. Изменять это значение не рекомендуется. Значение по умолчанию — `https://dotnetcli.azureedge.net/dotnet`.
 
 `-ProxyAddress`
 
@@ -141,7 +141,7 @@ Mac OS и Linux:
 
 Windows:
 
-`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "&([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
+`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
 
 Mac OS и Linux:
 
@@ -149,5 +149,5 @@ Mac OS и Linux:
 
 ## <a name="see-also"></a>См. также
 
-[Выпуски .NET Core](https://github.com/dotnet/core/releases)   
-[Архив загрузки пакета SDK и среды выполнения .NET Core](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)
+* [Выпуски .NET Core](https://github.com/dotnet/core/releases)
+* [Архив загрузки пакета SDK и среды выполнения .NET Core](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

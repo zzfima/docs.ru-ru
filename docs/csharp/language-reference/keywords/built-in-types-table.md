@@ -1,62 +1,72 @@
 ---
 title: Таблица встроенных типов (Справочник по C#)
-ms.date: 07/20/2015
+description: Ключевые слова для встроенных типов C#
+ms.date: 08/17/2018
 helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 120347e5bff7f0d6c7120af0cb250936ca39ea16
-ms.sourcegitcommit: 89c93d05c2281b4c834f48f6c8df1047e1410980
+ms.openlocfilehash: fd9ba878d77bdb219542db55bb38023c60c7bec4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2018
-ms.locfileid: "34172270"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43507316"
 ---
 # <a name="built-in-types-table-c-reference"></a>Таблица встроенных типов (Справочник по C#)
+
 В следующей таблице показаны ключевые слова для встроенных типов C#, которые являются псевдонимами предопределенных типов в пространстве имен <xref:System>.  
   
-|Тип C#|Тип .NET Framework|  
+|Тип C#|Тип .NET|  
 |--------------|-------------------------|  
-|[bool](../../../csharp/language-reference/keywords/bool.md)|`System.Boolean`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|`System.Byte`|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`System.SByte`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`System.Char`|  
-|[decimal](../../../csharp/language-reference/keywords/decimal.md)|`System.Decimal`|  
-|[double](../../../csharp/language-reference/keywords/double.md)|`System.Double`|  
-|[float](../../../csharp/language-reference/keywords/float.md)|`System.Single`|  
-|[int](../../../csharp/language-reference/keywords/int.md)|`System.Int32`|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|`System.UInt32`|  
-|[long](../../../csharp/language-reference/keywords/long.md)|`System.Int64`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`System.UInt64`|  
-|[object](../../../csharp/language-reference/keywords/object.md)|`System.Object`|  
-|[short](../../../csharp/language-reference/keywords/short.md)|`System.Int16`|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`System.UInt16`|  
-|[string](../../../csharp/language-reference/keywords/string.md)|`System.String`|  
+|[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
+|[byte](byte.md)|<xref:System.Byte?displayProperty=nameWithType>|  
+|[sbyte](sbyte.md)|<xref:System.SByte?displayProperty=nameWithType>|  
+|[char](char.md)|<xref:System.Char?displayProperty=nameWithType>|  
+|[decimal](decimal.md)|<xref:System.Decimal?displayProperty=nameWithType>|  
+|[double](double.md)|<xref:System.Double?displayProperty=nameWithType>|  
+|[float](float.md)|<xref:System.Single?displayProperty=nameWithType>|  
+|[int](int.md)|<xref:System.Int32?displayProperty=nameWithType>|  
+|[uint](uint.md)|<xref:System.UInt32?displayProperty=nameWithType>|  
+|[long](long.md)|<xref:System.Int64?displayProperty=nameWithType>|  
+|[ulong](ulong.md)|<xref:System.UInt64?displayProperty=nameWithType>|  
+|[object](object.md)|<xref:System.Object?displayProperty=nameWithType>|  
+|[short](short.md)|<xref:System.Int16?displayProperty=nameWithType>|  
+|[ushort](ushort.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
+|[string](string.md)|<xref:System.String?displayProperty=nameWithType>|  
   
-## <a name="remarks"></a>Примечания  
- Все типы в таблице, за исключением `object` и `string`, считаются простыми.  
+## <a name="remarks"></a>Примечания
+
+Все типы в таблице, за исключением `object` и `string`, считаются простыми.  
   
- Ключевые слова типов C# и их псевдонимы являются взаимозаменяемыми. Например, можно объявить целочисленную переменную с помощью любого из следующих объявлений:  
-  
-```csharp  
-int x = 123;  
-System.Int32 x = 123;  
-```  
-  
- Чтобы отобразить фактический тип для любого типа C#, используйте системный метод `GetType()`. Например, следующий оператор выводит системный псевдоним, который представляет тип `myVariable`:  
-  
-```csharp  
-Console.WriteLine(myVariable.GetType());  
-```  
-  
- Также можно использовать оператор [typeof](../../../csharp/language-reference/keywords/typeof.md).  
-  
-## <a name="see-also"></a>См. также  
- [Справочник по C#](../../../csharp/language-reference/index.md)  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
- [Типы значений](../../../csharp/language-reference/keywords/value-types.md)  
- [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md)  
- [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md)  
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)
+Ключевые слова типов C# и их псевдонимы являются взаимозаменяемыми. Например, можно объявить целочисленную переменную с помощью любого из следующих объявлений:  
+
+```csharp
+int x = 123;
+System.Int32 y = 123;
+```
+
+Используйте оператор [typeof](typeof.md), чтобы получить экземпляр <xref:System.Type?displayProperty=nameWithType>, представляющий указанный тип:
+
+```csharp
+Type stringType = typeof(string);
+Console.WriteLine(stringType.FullName);
+
+Type doubleType = typeof(System.Double);
+Console.WriteLine(doubleType.FullName);
+
+// Output:
+// System.String
+// System.Double
+```
+
+## <a name="see-also"></a>См. также
+
+- [Справочник по C#](../../../csharp/language-reference/index.md)
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Ключевые слова в C#](index.md)
+- [Справочные таблицы по типам](reference-tables-for-types.md)
+- [Типы значений](value-types.md)
+- [Ссылочные типы](reference-types.md)
+- [Таблица значений по умолчанию](default-values-table.md)
+- [dynamic](dynamic.md)

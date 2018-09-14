@@ -1,77 +1,68 @@
 ---
 title: Оператор lock (справочник по C#)
-description: 'Ключевое слово lock используется при работе с потоками '
-ms.date: 07/20/2015
+description: Использование выражения блокировки C# для синхронизации доступа потоков к общему ресурсу
+ms.date: 08/28/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 6ed46837482642dfd7e1a96cd120fc18023c5e9f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931197"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858360"
 ---
 # <a name="lock-statement-c-reference"></a>Оператор lock (справочник по C#)
 
-При помощи ключевого слова `lock` блок выражений можно пометить как важный фрагмент. Получив блокировку взаимного исключения для указанного объекта, выражения выполняются, а затем снимается блокировка. Следующий пример включает оператор `lock`.
+Оператор `lock` создает взаимоисключающую блокировку заданного объекта перед выполнением определенных операторов, а затем снимает блокировку. Во время блокировки поток, удерживающий блокировку, может снова получить и снять блокировку. Любой другой поток не может получить блокировку и ожидает ее снятия.
+
+Оператор `lock` имеет форму
 
 ```csharp
-class Account
+lock (x)
 {
-    decimal balance;
-    private Object thisLock = new Object();
-
-    public void Withdraw(decimal amount)
-    {
-        lock (thisLock)
-        {
-            if (amount > balance)
-            {
-                throw new Exception("Insufficient funds");
-            }
-            balance -= amount;
-        }
-    }
+    // Your code...
 }
 ```
 
-Дополнительные сведения см. в разделе [Синхронизация потоков](../../programming-guide/concepts/threading/thread-synchronization.md).
+Здесь `x` — это выражение [ссылочного типа](reference-types.md). Оно является точным эквивалентом
 
-## <a name="remarks"></a>Примечания
+```csharp
+object __lockObj = x;
+bool __lockWasTaken = false;
+try
+{
+    System.Threading.Monitor.Enter(__lockObj, ref __lockWasTaken);
+    // Your code...
+}
+finally
+{
+    if (__lockWasTaken) System.Threading.Monitor.Exit(__lockObj);
+}
+```
 
-Ключевое слово `lock` не позволит одному потоку войти в важный раздел кода в тот момент, когда в нем находится другой поток. При попытке входа другого потока в заблокированный код потребуется дождаться снятия блокировки объекта.
-
-Работа с потоками описана в разделе [Работа с потоками](../../programming-guide/concepts/threading/index.md).
-
-Ключевое слово `lock` вызывает <xref:System.Threading.Monitor.Enter%2A> в начале блока и <xref:System.Threading.Monitor.Exit%2A> в конце блока. Если <xref:System.Threading.Thread.Interrupt%2A> прерывает работу потока, который ожидает ввода оператора `lock`, возникает <xref:System.Threading.ThreadInterruptedException>.
-
-Как правило, рекомендуется избегать блокировки типа `public` или экземпляров, которыми код не управляет. Это правило не соблюдается в распространенных конструкциях `lock (this)`, `lock (typeof (MyType))` и `lock ("myLock")`.
-
-- `lock (this)` может привести к проблеме, если к экземпляру допускается открытый доступ.
-
-- `lock (typeof (MyType))` может привести к проблеме, если к `MyType` допускается открытый доступ.
-
-- `lock("myLock")` может привести к проблеме, поскольку любой код в процессе, использующий ту же строку, будет совместно использовать ту же блокировку.
-
-Для блокировки рекомендуется использовать объект `private`. Если нужно защитить данные, являющиеся общими для всех экземпляров, рекомендуется использовать переменную объекта `private static`.
+Так как в коде используется блок [try... finally](try-finally.md), блокировка освобождается, даже если возникает исключение в теле оператора `lock`.
 
 Нельзя использовать ключевое слово [await](await.md) в теле оператора `lock`.
 
-## <a name="example---threads-without-locking"></a>Пример — потоки без блокировки
+## <a name="remarks"></a>Примечания
 
-В следующем примере показано простое использование потоков без блокировки в C#:
+При синхронизации доступа потоков к общему ресурсу блокируйте выделенный экземпляр объекта (например, `private readonly object balanceLock = new object();`) или другой экземпляр, который, скорее всего, не будет использоваться как объект блокировки другими частями кода. Не используйте один и тот же экземпляр объекта блокировки для разных общих ресурсов: это может привести к взаимоблокировке или состязанию при блокировке. В частности, старайтесь не использовать:
 
-[!code-csharp[csrefKeywordsFixedLock#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsFixedLock/CS/csrefKeywordsFixedLock.cs#5)]
+- `this` (может использоваться вызывающими объектами как блокировка);
+- экземпляры <xref:System.Type> (может получатся оператором [typeof](typeof.md) или отражением);
+- строковые экземпляры, включая строковые литералы,
 
-## <a name="example---threads-using-locking"></a>Пример — потоки с блокировкой
+как объекты блокировки.
 
-В следующем примере используются потоки и ключевое слово`lock`. Так как присутствует оператор `lock`, блокировка оператора является важным разделом и `balance` никогда не будет отрицательным числом:
+## <a name="example"></a>Пример
 
-[!code-csharp[csrefKeywordsFixedLock#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsFixedLock/CS/csrefKeywordsFixedLock.cs#6)]
+В следующем примере определяется класс `Account`, который синхронизирует доступ к закрытому полю `balance` путем блокировки выделенного экземпляра `balanceLock`. Использование того же экземпляра для блокировки гарантирует, что поле `balance` не смогут одновременно обновить два потока, пытающиеся вызвать методы `Debit` или `Credit` одновременно.
+
+[!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
@@ -79,14 +70,11 @@ class Account
 
 ## <a name="see-also"></a>См. также
 
-- <xref:System.Reflection.MethodImplAttributes>
-- <xref:System.Threading.Mutex>
-- <xref:System.Threading.Monitor>
-- [Справочник по C#](../../language-reference/index.md)
-- [Руководство по программированию на C#](../../programming-guide/index.md)
-- [Работа с потоками](../../programming-guide/concepts/threading/index.md)
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- <xref:System.Threading.SpinLock?displayProperty=nameWithType>
+- <xref:System.Threading.Interlocked?displayProperty=nameWithType>
+- [Справочник по C#](../index.md)
 - [Ключевые слова в C#](index.md)
 - [Ключевые слова операторов](statement-keywords.md)
 - [Блокируемые операции](../../../standard/threading/interlocked-operations.md)
-- [AutoResetEvent](../../../standard/threading/autoresetevent.md)
-- [Синхронизация потоков](../../programming-guide/concepts/threading/thread-synchronization.md)
+- [Обзор примитивов синхронизации](../../../standard/threading/overview-of-synchronization-primitives.md)

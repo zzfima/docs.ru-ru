@@ -9,12 +9,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 4e2599f34e80f70a36d6f497f908887aa6853121
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 9d07f8e7b2f4c31af572829256065cf6aa3383bb
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932112"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44260221"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Практическое руководство. Доступ к объектам взаимодействия Office с помощью функций Visual C# (руководство по программированию на C#)
 В Visual C# предусмотрены функции, упрощающие доступ к объектам API Office. К новым функциям относятся именованные и необязательные аргументы, новый тип `dynamic`, а также возможность передавать аргументы ссылочным параметрам в методах COM, как если бы они были параметрами значений.  
@@ -27,7 +27,7 @@ ms.locfileid: "42932112"
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-create-a-new-console-application"></a>Создание нового проекта консольного приложения  
+## <a name="to-create-a-new-console-application"></a>Создание нового проекта консольного приложения  
   
 1.  Запустите Visual Studio.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "42932112"
   
      В **обозревателе решений** появится новый проект.  
   
-### <a name="to-add-references"></a>Добавление ссылок  
+## <a name="to-add-references"></a>Добавление ссылок  
   
 1.  В **обозревателе решений** щелкните имя проекта правой кнопкой мыши и выберите пункт **Добавить ссылку**. Откроется диалоговое окно **Добавление ссылки**.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "42932112"
   
 3.  Нажмите кнопку **ОК**.  
   
-### <a name="to-add-necessary-using-directives"></a>Добавление необходимых директив using  
+## <a name="to-add-necessary-using-directives"></a>Добавление необходимых директив using  
   
 1.  В **обозревателе решений** щелкните правой кнопкой мыши файл **Program.cs** и выберите пункт **Просмотреть код**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "42932112"
   
      [!code-csharp[csProgGuideOfficeHowTo#1](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_1.cs)]  
   
-### <a name="to-create-a-list-of-bank-accounts"></a>Создание списка банковских счетов  
+## <a name="to-create-a-list-of-bank-accounts"></a>Создание списка банковских счетов  
   
 1.  Вставьте следующее определение класса в файл **Program.cs** в класс `Program`.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "42932112"
   
      [!code-csharp[csProgGuideOfficeHowTo#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_3.cs)]  
   
-### <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>Объявление метода, экспортирующего сведения о счетах в Excel  
+## <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>Объявление метода, экспортирующего сведения о счетах в Excel  
   
 1.  Чтобы настроить лист Excel, добавьте в класс `Program` следующий метод.  
   
-     У метода [Add](https://msdn.microsoft.com/library/microsoft.office.interop.excel.workbooks.add.aspx) есть необязательный параметр для указания конкретного шаблона. Необязательные параметры, впервые появившиеся в [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], позволяют опускать аргумент для таких параметров, если требуется использовать значение параметра по умолчанию. Поскольку в следующем коде никакой аргумент не передается, в методе `Add` используется шаблон по умолчанию и создается новая книга. В эквивалентном операторе в более ранних версиях C# необходимо было использовать аргумент-местозаполнитель `ExcelApp.Workbooks.Add(Type.Missing)`.  
+     У метода <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> есть необязательный параметр для указания конкретного шаблона. Необязательные параметры, впервые появившиеся в [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], позволяют опускать аргумент для таких параметров, если требуется использовать значение параметра по умолчанию. Поскольку в следующем коде никакой аргумент не передается, в методе `Add` используется шаблон по умолчанию и создается новая книга. В эквивалентном операторе в более ранних версиях C# необходимо было использовать аргумент-местозаполнитель `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
   
@@ -91,13 +91,13 @@ ms.locfileid: "42932112"
   
      [!code-csharp[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
   
-     В более ранних версиях C# требовалось явное приведение типов для этих операций, поскольку `ExcelApp.Columns[1]` возвращает тип `Object`, а метод `AutoFit` является методом Excel [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx). Приведение показано в следующих строках.  
+     В более ранних версиях C# требовалось явное приведение типов для этих операций, поскольку `ExcelApp.Columns[1]` возвращает тип `Object`, а метод `AutoFit` является методом Excel <xref:Microsoft.Office.Interop.Excel.Range>. Приведение показано в следующих строках.  
   
      [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
      В [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] и более поздних версиях возвращаемое значение `Object` преобразуется в `dynamic` автоматически, если ссылка на сборку задана с помощью параметра компилятора [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) или, что эквивалентно, если свойство Excel **Внедрить типы взаимодействия** имеет значение true. True является значением по умолчанию для этого свойства.  
   
-### <a name="to-run-the-project"></a>Запуск проекта  
+## <a name="to-run-the-project"></a>Запуск проекта  
   
 1.  Добавьте в конец метода `Main` следующую строку.  
   
@@ -107,11 +107,11 @@ ms.locfileid: "42932112"
   
      Появится книга Excel, содержащая данные о двух счетах.  
   
-### <a name="to-add-a-word-document"></a>Добавление документа Word  
+## <a name="to-add-a-word-document"></a>Добавление документа Word  
   
 1.  Чтобы продемонстрировать дополнительные способы, совершенствующие программирование для Office в [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] и более поздних версиях, следующий код открывает приложение Word и создает значок со ссылкой на лист Excel.  
   
-     Вставьте метод `CreateIconInWordDoc`, указанный далее в этом шаге, в класс `Program`. `CreateIconInWordDoc` использует именованные и необязательные аргументы, чтобы упростить вызовы методов [Add](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) и [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx). Этих вызовах используются две новые возможности, появившиеся в [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] которые упрощают вызовы методов COM, имеющих ссылочные параметры. Во-первых, аргументы можно передать в ссылочные параметры, как если бы они были параметрами значений. Это значит, что значения можно передавать напрямую без создания переменной для каждого ссылочного параметра. Компилятор создает временные переменные для хранения значений аргументов и уничтожает эти переменные после завершения вызываемого метода. Во-вторых, ключевое слово `ref` в списке аргументов можно опустить.  
+     Вставьте метод `CreateIconInWordDoc`, указанный далее в этом шаге, в класс `Program`. `CreateIconInWordDoc` использует именованные и необязательные аргументы, чтобы упростить вызовы методов <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> и <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A>. Этих вызовах используются две новые возможности, появившиеся в [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] которые упрощают вызовы методов COM, имеющих ссылочные параметры. Во-первых, аргументы можно передать в ссылочные параметры, как если бы они были параметрами значений. Это значит, что значения можно передавать напрямую без создания переменной для каждого ссылочного параметра. Компилятор создает временные переменные для хранения значений аргументов и уничтожает эти переменные после завершения вызываемого метода. Во-вторых, ключевое слово `ref` в списке аргументов можно опустить.  
   
      У метода `Add` имеется четыре ссылочных параметра, все из которых являются необязательными. В [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] или более поздних версиях можно опустить аргументы для любого или для всех параметров, если требуется использовать значения по умолчанию. В [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] и более ранних версиях необходимо было указывать аргумент для каждого из параметров, и этот аргумент должен был быть переменной, поскольку параметры являются ссылочными.  
   
@@ -135,9 +135,9 @@ ms.locfileid: "42932112"
   
      Появится документ Word, содержащий значок. Дважды щелкните значок, чтобы отобразить лист на переднем плане.  
   
-### <a name="to-set-the-embed-interop-types-property"></a>Задание свойства "Внедрить типы взаимодействия"  
+## <a name="to-set-the-embed-interop-types-property"></a>Задание свойства "Внедрить типы взаимодействия"  
   
-1.  При вызове типа COM, который не требует во время выполнения основной сборки взаимодействия (PIA), можно использовать дополнительные усовершенствования. Избавление от зависимостей от PIA приводит к независимости версий и делает развертывание более простым. Дополнительные сведения о преимуществах программирования без основных сборок взаимодействия см. в разделе [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+1.  При вызове типа COM, который не требует во время выполнения основной сборки взаимодействия (PIA), можно использовать дополнительные усовершенствования. Избавление от зависимостей от PIA приводит к независимости версий и делает развертывание более простым. Дополнительные сведения о преимуществах программирования без основных сборок взаимодействия см. в разделе [Пошаговое руководство. Внедрение данных о типах из управляемых сборок](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md).  
   
      Кроме того, писать программы стало проще, поскольку типы, принимаемые и возвращаемые методами COM, можно представить с помощью типа `dynamic` вместо типа `Object`. Переменные типа `dynamic` не вычисляются до времени выполнения, что позволяет обходиться без явного приведения. Дополнительные сведения см. в разделе [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md).  
   
@@ -151,17 +151,17 @@ ms.locfileid: "42932112"
   
 4.  В списке свойств найдите свойство **Внедрить типы взаимодействия** и измените его значение на **False**. Также можно выполнить компиляцию через командную строку с использованием параметра компилятора [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) вместо [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md).  
   
-### <a name="to-add-additional-formatting-to-the-table"></a>Дополнительное форматирование таблицы  
+## <a name="to-add-additional-formatting-to-the-table"></a>Дополнительное форматирование таблицы  
   
 1.  Замените два вызова `AutoFit` в методе `DisplayInExcel` следующей инструкцией.  
   
      [!code-csharp[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
   
-     У метода [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat.aspx) имеется семь параметров значений, и все они являются необязательными. Именованные и необязательные аргументы позволяют задать аргументы для всех параметров, их части или ни для одного параметра. В приведенной выше инструкции аргумент задается только для одного из параметров, `Format`. Поскольку `Format` является первым параметром в списке, имя параметра указывать не требуется. Однако инструкция может быть проще для понимания, если указать имя параметра, как показано в следующем фрагменте кода.  
+     У метода <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> имеется семь параметров значений, и все они являются необязательными. Именованные и необязательные аргументы позволяют задать аргументы для всех параметров, их части или ни для одного параметра. В приведенной выше инструкции аргумент задается только для одного из параметров, `Format`. Поскольку `Format` является первым параметром в списке, имя параметра указывать не требуется. Однако инструкция может быть проще для понимания, если указать имя параметра, как показано в следующем фрагменте кода.  
   
      [!code-csharp[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
   
-2.  Нажмите сочетание клавиш CTRL + F5, чтобы увидеть результат. Другие форматы представлены в перечислении [XlRangeAutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.xlrangeautoformat.aspx).  
+2.  Нажмите сочетание клавиш CTRL + F5, чтобы увидеть результат. Другие форматы представлены в перечислении <xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat>.  
   
 3.  Сравните инструкцию в шаге 1 со следующим кодом, в котором показаны аргументы, необходимые в [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] или более ранней версии.  
   
@@ -172,9 +172,10 @@ ms.locfileid: "42932112"
   
  [!code-csharp[csProgGuideOfficeHowTo#18](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_17.cs)]  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Type.Missing?displayProperty=nameWithType>  
- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
- [Практическое руководство. Использование именованных и необязательных аргументов в программировании приложений Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Type.Missing?displayProperty=nameWithType>  
+- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+- [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [Именованные и необязательные аргументы](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
+- [Практическое руководство. Использование именованных и необязательных аргументов в программировании приложений Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

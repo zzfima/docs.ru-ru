@@ -12,12 +12,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8342f1389718eb41d1138e0bdd166530c1f2a10e
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 0efef54abd1da9631b5a560b49c6587d726e9193
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42933609"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43861306"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Форматы путей к файлам в системах Windows
 
@@ -117,7 +117,7 @@ UNC-пути всегда должны быть полными. Они могу�
 - Вычисляются относительные компоненты каталога (`.` для текущего и `..` для родительского каталога).
 - Удаляются некоторые символы.
 
-Нормализация осуществляется неявно, но при необходимости вы можете выполнить ее явно, вызвав метод <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, который создает оболочку для вызова [функции GetFullPathName()](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx). Также можно вызвать [функцию GetFullPathName()](https://msdn.microsoft.com/library/windows/desktop/aa364963(v=vs.85).aspx) Windows напрямую с помощью P/Invoke. Кроме того, можно вызвать 
+Нормализация осуществляется неявно, но при необходимости вы можете выполнить ее явно, вызвав метод <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, который создает оболочку для вызова [GetFullPathName() function](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx). Также можно вызвать [GetFullPathName() function](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx) Windows напрямую с помощью P/Invoke. Кроме того, можно вызвать 
 
 ### <a name="identifying-the-path"></a>Идентификация пути
 

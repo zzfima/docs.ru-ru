@@ -1,5 +1,5 @@
 ---
-title: ref (Справочник по C#)
+title: Ключевое слово ref (справочник по C#)
 ms.date: 03/06/2018
 f1_keywords:
 - ref_CSharpKeyword
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: a72624d5702ec12bfda98d49a16474cc84205ff0
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: e0b82de125246e95d8dce2a7afc20119a8a1fe4f
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245756"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44200557"
 ---
 # <a name="ref-c-reference"></a>ref (Справочник по C#)
 
@@ -21,7 +21,7 @@ ms.locfileid: "39245756"
 - В сигнатуре и вызове метода для передачи аргумента в метод по ссылке. Дополнительные сведения см. в разделе [Передача аргумента по ссылке](#passing-an-argument-by-reference).
 - В сигнатуре метода для возврата значения вызывающему объекту по ссылке. Дополнительные сведения см. в разделе [Возвращаемые ссылочные значения](#reference-return-values).
 - В теле элемента для указания на то, что возвращаемые ссылочные значения хранятся локально в виде ссылки, которая может быть изменена вызывающим объектом, или, в общем случае, что локальная переменная обращается к другому значению по ссылке. Дополнительные сведения см. в разделе [Ссылочные локальные переменные](#ref-locals).
-- В объявлении `struct`, чтобы объявить `ref struct` или `ref readonly struct`. Дополнительные сведения см. в разделе [объявления ссылочных структур](#ref-struct-declarations).
+- В объявлении `struct`, чтобы объявить `ref struct` или `ref readonly struct`. Для получения дополнительной информации см. раздел [Семантика ссылок с типами значений](../../reference-semantics-with-value-types.md).
 
 ## <a name="passing-an-argument-by-reference"></a>Передача аргументов по ссылке
 
@@ -32,7 +32,7 @@ ms.locfileid: "39245756"
 
 Для использования параметра `ref` и при определении метода, и при вызове метода следует явно использовать ключевое слово `ref`, как показано в следующем примере.  
 
-[!code-csharp-interactive[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#1)]
+[!code-csharp-interactive[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#1)]
 
 Аргумент, передаваемый в параметр `ref` или `in`, нужно инициализировать перед передачей. В этом заключается отличие от параметров [out](out-parameter-modifier.md), аргументы которых не требуют явной инициализации перед передачей.
 
@@ -50,26 +50,24 @@ class CS0663_Example
 
 Но методы можно перегружать, если один метод имеет параметр `ref`, `in` или `out`, а другой — параметр по значению, как показано в приведенном ниже примере.
   
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#2)]
+[!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#2)]
   
  В других ситуациях, требующих соответствия сигнатур, таких как скрытие или переопределение, `in`, `ref` и `out` являются частью сигнатуры и не соответствуют друг другу.  
   
  Свойства не являются переменными. Они являются методами и не могут быть переданы в параметр `ref`.  
   
- Сведения о передаче массивов см. в разделе [Передача массивов при помощи параметров ref и out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
-  
  Ключевые слова `ref`, `in` и `out` запрещено использовать для следующих типов методов.  
   
-- Асинхронные методы, которые определяются с помощью модификатора [async](../../../csharp/language-reference/keywords/async.md).  
-- Методы итератора, которые включают оператор [yield return](../../../csharp/language-reference/keywords/yield.md) или `yield break`.  
+- Асинхронные методы, которые определяются с помощью модификатора [async](async.md).  
+- Методы итератора, которые включают оператор [yield return](yield.md) или `yield break`.  
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>Пример передачи аргументов по ссылке
 
 В предыдущих примерах типы значений передаются по ссылке. Также можно использовать ключевое слово `ref` для передачи ссылочных типов по ссылке. Передача ссылочного типа по ссылке позволяет вызываемому методу заменять объект, на который указывает ссылочный параметр в вызывающем объекте. Место хранения объекта передается методу в качестве значения ссылочного параметра. Если изменить место хранения параметра (с указанием на новый объект), необходимо изменить место хранения, на который ссылается вызывающий объект. В следующем примере экземпляр ссылочного типа передается как параметр `ref`.
   
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#3)]
+[!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#3)]
 
-Дополнительные сведения о передаче ссылочных типов по значению и по ссылке см. в разделе [Передача параметров ссылочного типа](../../../csharp/programming-guide/classes-and-structs/passing-reference-type-parameters.md).
+Дополнительные сведения о передаче ссылочных типов по значению и по ссылке см. в разделе [Передача параметров ссылочного типа](../../programming-guide/classes-and-structs/passing-reference-type-parameters.md).
   
 ## <a name="reference-return-values"></a>Возвращаемые ссылочные значения
 
@@ -80,7 +78,7 @@ class CS0663_Example
 - В сигнатуре метода. Например, следующая сигнатура указывает, что метод `GetCurrentPrice` возвращает значение <xref:System.Decimal> по ссылке.
 
 ```csharp
-public ref decimal GetCurrentValue()
+public ref decimal GetCurrentPrice()
 ```
 
 - Между токеном `return` и переменной, возвращенной в инструкции `return` в методе. Пример:
@@ -95,7 +93,7 @@ return ref DecimalArray[0];
 
 ## <a name="ref-locals"></a>Ссылочные локальные переменные
 
-Ссылочная локальная переменная задает ссылку на значения, возвращаемые с помощью `return ref`.  После инициализации ссылочной локальной переменной необходимо присвоить ей возвращаемое ссылочное значение. Любые изменения в значении ссылочной локальной переменной отражаются в состоянии объекта, метод которого возвращает значение по ссылке.
+Ссылочная локальная переменная задает ссылку на значения, возвращаемые с помощью `return ref`. Ссылочная локальная переменная не может инициализироваться как не ссылочное возвращаемое значение. Другими словами, правая часть инициализации должна быть ссылкой. Любые изменения в значении ссылочной локальной переменной отражаются в состоянии объекта, метод которого возвращает значение по ссылке.
 
 Ссылочная локальная переменная определяется с помощью ключевого слова `ref` перед объявлением переменной, а также непосредственно перед вызовом метода, который возвращает значение по ссылке.
 
@@ -117,13 +115,11 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 В следующем примере определяется класс `Book`, содержащий два поля <xref:System.String>: `Title` и `Author`. Также определяется класс `BookCollection`, который включает частный массив объектов `Book`. Отдельные объекты книг возвращаются по ссылке путем вызова метода `GetBookByTitle`.
 
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#4)]
+[!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#4)]
 
 Если вызывающий объект сохраняет значение, возвращаемое методом `GetBookByTitle`, в качестве ссылочной локальной переменной, изменения, которые этот объект вносит в возвращаемое значение, отражаются в объекте `BookCollection`, как показано в следующем примере.
 
-[!code-csharp[csrefKeywordsMethodParams#6](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
-
-## <a name="ref-struct-declarations"></a>Объявления ссылочных структур
+[!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
@@ -131,9 +127,9 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
   
 ## <a name="see-also"></a>См. также
 
- [Семантика ссылок с типами значений](../../reference-semantics-with-value-types.md)  
- [Передача параметров](../../programming-guide/classes-and-structs/passing-parameters.md)  
- [Параметры методов](method-parameters.md)  
- [Справочник по C#](../index.md)  
- [Руководство по программированию на C#](../../programming-guide/index.md)  
- [Ключевые слова в C#](index.md)
+- [Семантика ссылок с типами значений](../../reference-semantics-with-value-types.md)  
+- [Передача параметров](../../programming-guide/classes-and-structs/passing-parameters.md)  
+- [Параметры методов](method-parameters.md)  
+- [Справочник по C#](../index.md)  
+- [Руководство по программированию на C#](../../programming-guide/index.md)  
+- [Ключевые слова в C#](index.md)

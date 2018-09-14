@@ -9,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 5587708a6ce7218498e5e695466887c6146c75a4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6b691939d2592cc72a232a09ab2a7e950b810281
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43389970"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44086781"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Приведение и преобразование типов (Руководство по программированию на C#)
 
@@ -79,18 +79,19 @@ Giraffe g2 = (Giraffe) a;
   
  [!code-csharp[csProgGuideTypes#41](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/casting-and-type-conversions_3.cs)]  
   
- C# предоставляет операторы [is](../../../csharp/language-reference/keywords/is.md) и [as](../../../csharp/language-reference/keywords/as.md), чтобы можно было проверить совместимость перед фактическим выполнением приведения. Дополнительные сведения см. в разделе [Практическое руководство. Безопасное приведение с помощью операторов as и is](../../../csharp/programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).  
+ C# предоставляет операторы [is](../../../csharp/language-reference/keywords/is.md) и [as](../../../csharp/language-reference/keywords/as.md), чтобы можно было проверить совместимость перед фактическим выполнением приведения. Дополнительные сведения см. в разделе [Практическое руководство. Безопасное приведение с помощью сопоставления шаблонов, операторы as и is](../../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
 
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Типы](../../../csharp/programming-guide/types/index.md)  
- [Оператор ()](../../../csharp/language-reference/operators/invocation-operator.md)  
- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
- [implicit](../../../csharp/language-reference/keywords/implicit.md)  
- [Операторы преобразования](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
- [Обобщенное преобразование типов](https://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
- [Преобразование экспортированного типа](https://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
- [Практическое руководство. Преобразование строки в число](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Типы](../../../csharp/programming-guide/types/index.md)  
+- [Оператор ()](../../../csharp/language-reference/operators/invocation-operator.md)  
+- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
+- [implicit](../../../csharp/language-reference/keywords/implicit.md)  
+- [Операторы преобразования](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
+- [Обобщенное преобразование типов](https://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
+- [Преобразование экспортированного типа](https://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
+- [Практическое руководство. Преобразование строки в число](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

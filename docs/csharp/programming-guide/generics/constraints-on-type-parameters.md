@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: b5ad639309238912aa27b58c95466b4f37052699
-ms.sourcegitcommit: 43924acbdbb3981d103e11049bbe460457d42073
+ms.openlocfilehash: df5a509296f3fb9e8e77a273a0636c74a6f86da3
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34457376"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44208664"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Ограничения параметров типа (руководство по программированию на C#)
 
@@ -19,7 +19,7 @@ ms.locfileid: "34457376"
 
 |Ограничение|Описание:|
 |----------------|-----------------|
-|`where T : struct`|Аргумент типа должен быть типом значения. Допускается задание любого типа значения, кроме <xref:System.Nullable>. Дополнительные сведения см. в разделе [Использование допускающих значение NULL типов](../nullable-types/using-nullable-types.md).|
+|`where T : struct`|Аргумент типа должен быть типом значения. Допускается задание любого типа значения, кроме <xref:System.Nullable%601>. См. дополнительные сведения о [типах, допускающих значение NULL](../nullable-types/index.md).|
 |`where T : class`|Аргумент типа должен быть ссылочным типом. Это ограничение также применяется к любому типу класса, интерфейса, делегата или массива.|
 |`where T : unmanaged`|Аргумент типа не может быть ссылочным типом и содержать члены ссылочного типа на любом уровне вложения.|
 |`where T : new()`|Аргумент типа должен иметь общий конструктор без параметров. При одновременном использовании нескольких ограничений последним должно указываться ограничение `new()`.|
@@ -111,7 +111,8 @@ ms.locfileid: "34457376"
 
 ## <a name="see-also"></a>См. также
 
- <xref:System.Collections.Generic> [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
- [Универсальные классы](../../../csharp/programming-guide/generics/generic-classes.md)  
- [Ограничение new](../../../csharp/language-reference/keywords/new-constraint.md)  
+- <xref:System.Collections.Generic>
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Введение в универсальные шаблоны](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
+- [Универсальные классы](../../../csharp/programming-guide/generics/generic-classes.md)  
+- [Ограничение new](../../../csharp/language-reference/keywords/new-constraint.md)  

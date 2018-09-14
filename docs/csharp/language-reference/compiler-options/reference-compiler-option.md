@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 76a53d6adcf4c55faa57c25f851e46dd4c2c6c22
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 131cdf62917ab2fc8d564b85c30d13c8971e5809
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43393215"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213719"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (параметры компилятора C#)
 Параметр **-reference** предписывает компилятору импортировать сведения типа [public](../../../csharp/language-reference/keywords/public.md) из указанного файла в текущий проект. Это позволяет ссылаться на метаданные из указанных файлов сборки.  
@@ -67,10 +67,12 @@ ms.locfileid: "43393215"
  В этом примере показано, как использовать [псевдоним extern](../../../csharp/language-reference/keywords/extern-alias.md).  
   
  В примере компилируется файл исходного кода и импортируются метаданные из сборок `grid.dll` и `grid20.dll`, которые были скомпилированы ранее. Два DLL-файла содержат разные версии одного компонента, поэтому для компиляции файла исходного кода используются два параметра **-reference** с подпараметрами псевдонимов. Параметры выглядят следующим образом:  
+
+```console
+-reference:GridV1=grid.dll -reference:GridV2=grid20.dll  
+```
   
- /reference:GridV1=grid.dll и /reference:GridV2=grid20.dll  
-  
- При этом устанавливаются внешние псевдонимы "GridV1" и "GridV2", которые используются посредством оператора "extern":  
+ При этом устанавливаются внешние псевдонимы `GridV1` и `GridV2`, которые используются посредством оператора `extern`.  
   
 ```csharp  
 extern alias GridV1;  
@@ -78,13 +80,13 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- После выполнения описанных выше действий можно ссылаться на элемент управления "сетка" из файла grid.dll, предваряя имя элемента управления префиксом GridV1, как показано в следующем коде:  
+ После выполнения описанных выше действий можно ссылаться на элемент управления "сетка" из файла `grid.dll`, предваряя имя элемента управления префиксом `GridV1`, как показано в следующем коде.  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- Кроме того, можно ссылаться на элемент управления "сетка" из файла grid20.dll, предваряя имя элемента управления префиксом GridV2, как показано ниже:  
+ Кроме того, можно ссылаться на элемент управления "сетка" из файла `grid20.dll`, предваряя имя элемента управления префиксом `GridV2`, как показано в следующем коде.  
   
 ```csharp  
 GridV2::Grid   

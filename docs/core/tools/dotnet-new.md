@@ -3,13 +3,13 @@ title: Команда dotnet new — интерфейс командной ст
 description: Команда dotnet new создает проекты .NET Core на основе указанного шаблона.
 author: mairaw
 ms.author: mairaw
-ms.date: 06/12/2018
-ms.openlocfilehash: f0ef91361dfbc2c2ba5532fbd607786289e98c69
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.date: 07/31/2018
+ms.openlocfilehash: 2c82dda2d93225edb360316637e22964135cd5e4
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207813"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43512559"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -22,25 +22,31 @@ ms.locfileid: "36207813"
 ## <a name="synopsis"></a>Краткий обзор
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [--nuget-source] [-o|--output]
     [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
+
+```console
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
+
+```console
 dotnet new <TEMPLATE> [-lang|--language] [-n|--name] [-o|--output] [-all|--show-all] [-h|--help] [Template options]
 dotnet new <TEMPLATE> [-l|--list]
 dotnet new [-all|--show-all]
 dotnet new [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>Описание:
@@ -268,7 +274,7 @@ dotnet new [-h|--help]
 
 **classlib**
 
-`-f|--framework <FRAMEWORK>` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp2.0` для создания библиотеки классов .NET Core или `netstandard2.0` для создания стандартной библиотеки классов .NET. Значение по умолчанию — `netstandard2.0`.
+`-f|--framework <FRAMEWORK>` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp2.0` для создания библиотеки классов .NET Core или `netstandard2.0` для создания стандартной библиотеки классов .NET. Значение по умолчанию — `netstandard2.0`.
 
 `--no-restore` — во время создания проекта не выполняется неявное восстановление.
 
@@ -284,9 +290,11 @@ dotnet new [-h|--help]
 
 **web**
 
-`--use-launch-settings` — включает файл *launchSettings.json* в создаваемые выходные данные шаблона.
+`--exclude-launch-settings` — исключает файл *launchSettings.json* из создаваемого шаблона.
 
 `--no-restore` — во время создания проекта не выполняется неявное восстановление.
+
+`--no-https` — проекту не требуется HTTPS. Этот параметр применяется, только если `IndividualAuth` или `OrganizationalAuth` не используются.
 
 **webapi**
 
@@ -297,25 +305,27 @@ dotnet new [-h|--help]
 - `SingleOrg` — проверка подлинности организации для отдельного клиента.
 - `Windows` — проверка подлинности Windows.
 
-`--aad-b2c-instance <INSTANCE>` — экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
+`--aad-b2c-instance <INSTANCE>` — экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
 
 `-ssp|--susi-policy-id <ID>` — идентификатор политики входа и регистрации для этого проекта. Используется с проверкой подлинности `IndividualB2C`.
 
-`--aad-instance <INSTANCE>` — экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
+`--aad-instance <INSTANCE>` — экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
 
-`--client-id <ID>` — идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C` или `SingleOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
+`--client-id <ID>` — идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C` или `SingleOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
 
-`--domain <DOMAIN>` — домен клиента каталога. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `qualified.domain.name`.
+`--domain <DOMAIN>` — домен клиента каталога. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `qualified.domain.name`.
 
-`--tenant-id <ID>` — идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
+`--tenant-id <ID>` — идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
 
 `-r|--org-read-access` — предоставляет приложению доступ к каталогу для чтения. Применяется только при проверке подлинности `SingleOrg` или `MultiOrg`.
 
-`--use-launch-settings` — включает файл *launchSettings.json* в создаваемые выходные данные шаблона.
+`--exclude-launch-settings` — исключает файл *launchSettings.json* из создаваемого шаблона.
 
 `-uld|--use-local-db` — указывает, что вместо SQLite следует использовать LocalDB. Применяется только при проверке подлинности `Individual` или `IndividualB2C`.
 
 `--no-restore` — во время создания проекта не выполняется неявное восстановление.
+
+`--no-https` — проекту не требуется HTTPS. `app.UseHsts` и `app.UseHttpsRedirection` не добавляются к `Startup.Configure`. Этот параметр применяется, только если `Individual`, `IndividualB2C`, `SingleOrg` или `MultiOrg` не используются.
 
 **mvc, razor**
 
@@ -328,7 +338,7 @@ dotnet new [-h|--help]
 - `MultiOrg` — проверка подлинности организации для нескольких клиентов.
 - `Windows` — проверка подлинности Windows.
 
-`--aad-b2c-instance <INSTANCE>` — экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
+`--aad-b2c-instance <INSTANCE>` — экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
 
 `-ssp|--susi-policy-id <ID>` — идентификатор политики входа и регистрации для этого проекта. Используется с проверкой подлинности `IndividualB2C`.
 
@@ -336,19 +346,19 @@ dotnet new [-h|--help]
 
 `-ep|--edit-profile-policy-id <ID>` — идентификатор политики изменения профилей для этого проекта. Используется с проверкой подлинности `IndividualB2C`.
 
-`--aad-instance <INSTANCE>` — экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg` или `MultiOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
+`--aad-instance <INSTANCE>` — экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg` или `MultiOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
 
-`--client-id <ID>` — идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C`, `SingleOrg` или `MultiOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
+`--client-id <ID>` — идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C`, `SingleOrg` или `MultiOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
 
-`--domain <DOMAIN>` — домен клиента каталога. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `qualified.domain.name`.
+`--domain <DOMAIN>` — домен клиента каталога. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `qualified.domain.name`.
 
-`--tenant-id <ID>` — идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
+`--tenant-id <ID>` — идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
 
-`--callback-path <PATH>` — путь запроса по базовому пути кода URI перенаправления для приложения. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `/signin-oidc`.
+`--callback-path <PATH>` — путь запроса по базовому пути кода URI перенаправления для приложения. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `/signin-oidc`.
 
 `-r|--org-read-access` — предоставляет приложению доступ к каталогу для чтения. Применяется только при проверке подлинности `SingleOrg` или `MultiOrg`.
 
-`--use-launch-settings` — включает файл *launchSettings.json* в создаваемые выходные данные шаблона.
+`--exclude-launch-settings` — исключает файл *launchSettings.json* из создаваемого шаблона.
 
 `--use-browserlink` — включает BrowserLink в проект.
 
@@ -356,15 +366,17 @@ dotnet new [-h|--help]
 
 `--no-restore` — во время создания проекта не выполняется неявное восстановление.
 
+`--no-https` — проекту не требуется HTTPS. `app.UseHsts` и `app.UseHttpsRedirection` не добавляются к `Startup.Configure`. Этот параметр применяется, только если `Individual`, `IndividualB2C`, `SingleOrg` или `MultiOrg` не используются.
+
 **page**
 
-`-na|--namespace <NAMESPACE_NAME>` — пространство имен созданного кода. Значение по умолчанию — `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>` — пространство имен созданного кода. Значение по умолчанию — `MyApp.Namespace`.
 
 `-np|--no-pagemodel` — создает страницу без PageModel.
 
 **viewimports**
 
-`-na|--namespace <NAMESPACE_NAME>` — пространство имен созданного кода. Значение по умолчанию — `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>` — пространство имен созданного кода. Значение по умолчанию — `MyApp.Namespace`.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
@@ -374,7 +386,7 @@ dotnet new [-h|--help]
 
 **classlib**
 
-`-f|--framework <FRAMEWORK>` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp2.0` для создания библиотеки классов .NET Core или `netstandard2.0` для создания стандартной библиотеки классов .NET. Значение по умолчанию — `netstandard2.0`.
+`-f|--framework <FRAMEWORK>` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp2.0` для создания библиотеки классов .NET Core или `netstandard2.0` для создания стандартной библиотеки классов .NET. Значение по умолчанию — `netstandard2.0`.
 
 `--no-restore` — во время создания проекта не выполняется неявное восстановление.
 
@@ -403,17 +415,17 @@ dotnet new [-h|--help]
 - `SingleOrg` — проверка подлинности организации для отдельного клиента.
 - `Windows` — проверка подлинности Windows.
 
-`--aad-b2c-instance <INSTANCE>` — экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
+`--aad-b2c-instance <INSTANCE>` — экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
 
 `-ssp|--susi-policy-id <ID>` — идентификатор политики входа и регистрации для этого проекта. Используется с проверкой подлинности `IndividualB2C`.
 
-`--aad-instance <INSTANCE>` — экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
+`--aad-instance <INSTANCE>` — экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
 
-`--client-id <ID>` — идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C` или `SingleOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
+`--client-id <ID>` — идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C` или `SingleOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
 
-`--domain <DOMAIN>` — домен клиента каталога. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `qualified.domain.name`.
+`--domain <DOMAIN>` — домен клиента каталога. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `qualified.domain.name`.
 
-`--tenant-id <ID>` — идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
+`--tenant-id <ID>` — идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
 
 `-r|--org-read-access` — предоставляет приложению доступ к каталогу для чтения. Применяется только при проверке подлинности `SingleOrg` или `MultiOrg`.
 
@@ -434,7 +446,7 @@ dotnet new [-h|--help]
 - `MultiOrg` — проверка подлинности организации для нескольких клиентов.
 - `Windows` — проверка подлинности Windows.
 
-`--aad-b2c-instance <INSTANCE>` — экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
+`--aad-b2c-instance <INSTANCE>` — экземпляр Azure Active Directory B2C, к которому выполняется подключение. Используется с проверкой подлинности `IndividualB2C`. Значение по умолчанию — `https://login.microsoftonline.com/tfp/`.
 
 `-ssp|--susi-policy-id <ID>` — идентификатор политики входа и регистрации для этого проекта. Используется с проверкой подлинности `IndividualB2C`.
 
@@ -442,15 +454,15 @@ dotnet new [-h|--help]
 
 `-ep|--edit-profile-policy-id <ID>` — идентификатор политики изменения профилей для этого проекта. Используется с проверкой подлинности `IndividualB2C`.
 
-`--aad-instance <INSTANCE>` — экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg` или `MultiOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
+`--aad-instance <INSTANCE>` — экземпляр Azure Active Directory, к которому выполняется подключение. Используется с проверкой подлинности `SingleOrg` или `MultiOrg`. Значение по умолчанию — `https://login.microsoftonline.com/`.
 
-`--client-id <ID>` — идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C`, `SingleOrg` или `MultiOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
+`--client-id <ID>` — идентификатор клиента для этого проекта. Используется с проверкой подлинности `IndividualB2C`, `SingleOrg` или `MultiOrg`. Значение по умолчанию — `11111111-1111-1111-11111111111111111`.
 
-`--domain <DOMAIN>` — домен клиента каталога. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `qualified.domain.name`.
+`--domain <DOMAIN>` — домен клиента каталога. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `qualified.domain.name`.
 
-`--tenant-id <ID>` — идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
+`--tenant-id <ID>` — идентификатор TenantId каталога, к которому устанавливается подключение. Используется с проверкой подлинности `SingleOrg`. Значение по умолчанию — `22222222-2222-2222-2222-222222222222`.
 
-`--callback-path <PATH>` — путь запроса по базовому пути кода URI перенаправления для приложения. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `/signin-oidc`.
+`--callback-path <PATH>` — путь запроса по базовому пути кода URI перенаправления для приложения. Используется с проверкой подлинности `SingleOrg` или `IndividualB2C`. Значение по умолчанию — `/signin-oidc`.
 
 `-r|--org-read-access` — предоставляет приложению доступ к каталогу для чтения. Применяется только при проверке подлинности `SingleOrg` или `MultiOrg`.
 
@@ -464,31 +476,31 @@ dotnet new [-h|--help]
 
 **page**
 
-`-na|--namespace <NAMESPACE_NAME>` — пространство имен созданного кода. Значение по умолчанию — `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>` — пространство имен созданного кода. Значение по умолчанию — `MyApp.Namespace`.
 
 `-np|--no-pagemodel` — создает страницу без PageModel.
 
 **viewimports**
 
-`-na|--namespace <NAMESPACE_NAME>` — пространство имен созданного кода. Значение по умолчанию — `MyApp.Namespace`.
+`-na|--namespace <NAMESPACE_NAME>` — пространство имен созданного кода. Значение по умолчанию — `MyApp.Namespace`.
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 **console, xunit, mstest, web, webapi**
 
-`-f|--framework` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp1.0` или `netcoreapp1.1`. Значение по умолчанию — `netcoreapp1.0`.
+`-f|--framework` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp1.0` или `netcoreapp1.1`. Значение по умолчанию — `netcoreapp1.0`.
 
 **classlib**
 
-`-f|--framework` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp1.0`, `netcoreapp1.1` или с `netstandard1.0` по `netstandard1.6`. Значение по умолчанию — `netstandard1.4`.
+`-f|--framework` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp1.0`, `netcoreapp1.1` или с `netstandard1.0` по `netstandard1.6`. Значение по умолчанию — `netstandard1.4`.
 
 **mvc**
 
-`-f|--framework` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp1.0` или `netcoreapp1.1`. Значение по умолчанию — `netcoreapp1.0`.
+`-f|--framework` — указывает целевую [платформу](../../standard/frameworks.md). Значения: `netcoreapp1.0` или `netcoreapp1.1`. Значение по умолчанию — `netcoreapp1.0`.
 
-`-au|--auth` — тип проверки подлинности. Значения: `None` или `Individual`. Значение по умолчанию — `None`.
+`-au|--auth` — тип проверки подлинности. Значения: `None` или `Individual`. Значение по умолчанию — `None`.
 
-`-uld|--use-local-db` — указывает, следует ли использовать LocalDB вместо SQLite. Значения: `true` или `false`. Значение по умолчанию — `false`.
+`-uld|--use-local-db` — указывает, следует ли использовать LocalDB вместо SQLite. Значения: `true` или `false`. Значение по умолчанию — `false`.
 
 ---
 
@@ -524,7 +536,7 @@ dotnet new [-h|--help]
 
 ## <a name="see-also"></a>См. также
 
-[Пользовательские шаблоны для команды dotnet new](custom-templates.md)  
-[Создание пользовательского шаблона для dotnet](~/docs/core/tutorials/create-custom-template.md)  
-[Репозиторий dotnet/dotnet-template-samples в GitHub](https://github.com/dotnet/dotnet-template-samples)  
-[Доступные шаблоны для команды dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)
+* [Пользовательские шаблоны для команды dotnet new](custom-templates.md)  
+* [Создание пользовательского шаблона для dotnet](~/docs/core/tutorials/create-custom-template.md)  
+* [Репозиторий dotnet/dotnet-template-samples в GitHub](https://github.com/dotnet/dotnet-template-samples)  
+* [Доступные шаблоны для команды dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

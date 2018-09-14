@@ -3,11 +3,11 @@ title: Рекомендации по размещению в службах IIS
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
 ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44338614"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45588531"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Рекомендации по размещению в службах IIS
 В этом разделе описаны некоторые рекомендации для размещения служб Windows Communication Foundation (WCF).  

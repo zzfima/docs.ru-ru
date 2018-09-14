@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], outside LINQ
 ms.assetid: 2b519274-6ee4-4455-ab2e-aed67dbfd07c
-ms.openlocfilehash: 6ba6c6f50b4d2f717de4325b5cd21434066b2899
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: eb9fea64b8aeb96a880b7e177673c1316b7aa4c1
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43389188"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44261541"
 ---
 # <a name="how-to-use-lambda-expressions-outside-linq-c-programming-guide"></a>Практическое руководство. Использование лямбда-выражений вне LINQ (Руководство по программированию на C#)
 Лямбда-выражения не ограничиваются запросами [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Их можно использовать везде, где ожидается значение делегата, т. е. там, где можно использовать анонимный метод. В представленном ниже примере показано, как использовать лямбда-выражение в обработчике событий Windows Forms. Обратите внимание на то, что типы входных данных (<xref:System.Object> и <xref:System.Windows.Forms.MouseEventArgs>) выводятся компилятором и не требуют прямого указания параметров лямбда-выражений.  
   
 ## <a name="example"></a>Пример  
   
-```  
+```csharp  
 public partial class Form1 : Form  
 {  
     public Form1()  
@@ -28,7 +28,8 @@ public partial class Form1 : Form
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
- [Встроенный язык запросов LINQ](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+## <a name="see-also"></a>См. также
+
+- [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+- [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+- [Синтаксис LINQ](../../../csharp/programming-guide/concepts/linq/index.md)

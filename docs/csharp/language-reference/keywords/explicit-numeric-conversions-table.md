@@ -1,6 +1,6 @@
 ---
 title: Таблица явных числовых преобразований (Справочник по C#)
-ms.date: 07/20/2015
+ms.date: 09/06/2018
 helpviewer_keywords:
 - conversions [C#], explicit numeric
 - numeric conversions [C#], explicit
@@ -9,59 +9,67 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 5ca052dea4ee4abc866d2b02055188b0707499d4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 22bb2117e7b78596e1fb6af63584f51b066564c9
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43475937"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44211792"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Таблица явных числовых преобразований (Справочник по C#)
-Явное числовое преобразование используется для преобразования любого числового типа в любой другой числовой тип, для которого отсутствует неявное преобразование, с использованием выражения приведения. Эти преобразования показаны в следующей таблице.  
-  
- Дополнительные сведения о преобразованиях см. в разделе [Приведение и преобразование типов](../../../csharp/programming-guide/types/casting-and-type-conversions.md).  
-  
+
+В следующей таблице показаны предопределенные явные преобразования между числовыми типами .NET, для которых нет [неявного преобразования](implicit-numeric-conversions-table.md).
+
 |Исходный тип|Кому|  
 |----------|--------|  
-|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|`byte`, `ushort`, `uint`, `ulong` или `char`|  
-|[byte](../../../csharp/language-reference/keywords/byte.md)|`Sbyte` или `char`|  
-|[short](../../../csharp/language-reference/keywords/short.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong` или `char`|  
-|[ushort](../../../csharp/language-reference/keywords/ushort.md)|`sbyte`, `byte`, `short` или `char`|  
-|[int](../../../csharp/language-reference/keywords/int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` или `char`|  
-|[uint](../../../csharp/language-reference/keywords/uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int` или `char`|  
-|[long](../../../csharp/language-reference/keywords/long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` или `char`|  
-|[ulong](../../../csharp/language-reference/keywords/ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` или `char`|  
-|[char](../../../csharp/language-reference/keywords/char.md)|`sbyte`, `byte`или `short`|  
-|[float](../../../csharp/language-reference/keywords/float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char` или `decimal`|  
-|[double](../../../csharp/language-reference/keywords/double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` или `decimal`|  
-|[decimal](../../../csharp/language-reference/keywords/decimal.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` или `double`|  
+|[sbyte](sbyte.md)|`byte`, `ushort`, `uint`, `ulong` или `char`|  
+|[byte](byte.md)|`sbyte` или `char`|  
+|[short](short.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong` или `char`|  
+|[ushort](ushort.md)|`sbyte`, `byte`, `short` или `char`|  
+|[int](int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` или `char`|  
+|[uint](uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int` или `char`|  
+|[long](long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` или `char`|  
+|[ulong](ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` или `char`|  
+|[char](char.md)|`sbyte`, `byte`или `short`|  
+|[float](float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char` или `decimal`|  
+|[double](double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` или `decimal`|  
+|[decimal](decimal.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` или `double`|  
   
 ## <a name="remarks"></a>Примечания  
   
--   Явное числовое преобразование может привести к потере точности или возникновению исключения.  
+- Явное числовое преобразование может привести к потере точности или возникновению исключения, обычно <xref:System.OverflowException>.  
+
+- При преобразовании значения целочисленного типа в другой целочисленный тип результат зависит от переполнения [контекста проверки](checked-and-unchecked.md). В проверенном контексте преобразование выполняется успешно, если исходное значение находится в диапазоне конечного типа. В противном случае возникает исключение <xref:System.OverflowException>. В непроверяемом контексте преобразование всегда завершается успешно и выполняется следующим образом.
+
+  - Если исходный тип больше целевого, исходное значение усекается путем отбрасывания его "лишних" самых значимых битов. Результат затем обрабатывается как значение целевого типа.
+
+  - Если исходный тип меньше целевого, исходное значение дополняется знаками или нулями, чтобы иметь тот же размер, что и целевой тип. Знаки добавляются, если исходный тип имеет знак. Если у исходного типа нет знака, добавляются нули. Результат затем обрабатывается как значение целевого типа.
+
+  - Если исходный тип совпадает по размеру с целевым, исходное значение обрабатывается как значение целевого типа.
   
--   При преобразовании значения `decimal` в целочисленный тип оно округляется в сторону нуля до ближайшего целого значения. Если итоговое целое значение находится вне диапазона целевого типа, возникает исключение <xref:System.OverflowException>.  
+- При преобразовании значения `decimal` в целочисленный тип оно округляется в сторону нуля до ближайшего целого значения. Если итоговое целое значение находится вне диапазона целевого типа, возникает исключение <xref:System.OverflowException>.  
   
--   При преобразовании значения `double` или `float` в целочисленный тип это значение усекается. Если полученное целое значение выходит за пределы диапазона целевого значения, результат будет зависеть от контекста проверки переполнения. В проверенном контексте возникает исключение `OverflowException`, а в непроверенном контексте результатом будет неопределенное значение целевого типа.  
+- При преобразовании значения `double` или `float` в целочисленный тип оно округляется в сторону нуля до ближайшего целого значения. Если полученное целое значение выходит за пределы диапазона целевого типа, результат будет зависеть от [контекста проверки](checked-and-unchecked.md) переполнения. В проверенном контексте возникает исключение <xref:System.OverflowException>, а в непроверенном контексте результатом будет неопределенное значение целевого типа.  
   
--   При преобразовании из `double` в `float` значение `double` округляется до ближайшего значения `float`. Если значение `double` слишком мало или слишком велико для целевого типа, результатом будет ноль или бесконечность соответственно.  
+- При преобразовании из `double` в `float` значение `double` округляется до ближайшего значения `float`. Если значение `double` слишком мало или слишком велико для целевого типа, результатом будет ноль или бесконечность соответственно.  
   
--   При преобразовании из `float` или `double` в `decimal` исходное значение преобразуется в представление `decimal` и при необходимости округляется до ближайшего числа после 28-го десятичного разряда. В зависимости от исходного значения возможны следующие результаты:  
+- При преобразовании из `float` или `double` в `decimal` исходное значение преобразуется в представление `decimal` и при необходимости округляется до ближайшего числа после 28-го десятичного разряда. В зависимости от исходного значения возможны следующие результаты:  
+
+  - Если исходное значение слишком мало для представления в виде `decimal`, результатом будет ноль.  
+
+  - Если исходное значение не является числом (NaN), равно бесконечности или слишком велико для представления в виде `decimal`, возникает исключение <xref:System.OverflowException>.  
   
-    -   Если исходное значение слишком мало для представления в виде `decimal`, результатом будет ноль.  
+- При преобразовании из `decimal` в `float` или `double` значение `decimal` округляется до ближайшего значения `double` или `float`.  
   
-    -   Если исходное значение не является числом (NaN), равно бесконечности или слишком велико для представления в виде `decimal`, возникает исключение `OverflowException`.  
-  
--   При преобразовании из `decimal` в `float` или `double` значение `decimal` округляется до ближайшего значения `double` или `float`.  
-  
- Дополнительные сведения о явных преобразованиях см. в спецификации языка C#. Дополнительные сведения о доступе к спецификации см. в разделе [Спецификация языка C#](../../../csharp/language-reference/language-specification/index.md).  
+ Дополнительные сведения о явных преобразованиях см. в разделе [Явные преобразования](/dotnet/csharp/language-reference/language-specification/conversions#explicit-conversions) в [спецификации языка C#](../language-specification/index.md).
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Приведение и преобразование типов](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
-- [Оператор ()](../../../csharp/language-reference/operators/invocation-operator.md)  
-- [Таблица целых типов](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Приведение и преобразование типов](../../programming-guide/types/casting-and-type-conversions.md)
+- [Оператор ()](../operators/invocation-operator.md)
+- [Таблица целых типов](integral-types-table.md)
+- [Таблица типов с плавающей запятой](floating-point-types-table.md)
+- [Таблица встроенных типов](built-in-types-table.md)
+- [Таблица неявных числовых преобразований](implicit-numeric-conversions-table.md)

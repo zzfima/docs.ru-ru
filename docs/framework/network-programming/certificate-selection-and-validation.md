@@ -5,12 +5,12 @@ ms.assetid: c933aca2-4cd0-4ff1-9df9-267143f25a6f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: bdeb0e92dca723b64ee82b70f58fe910fd0c2edb
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: fe3b10e17c3cdf181f0b33b4305008655047fb0f
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931054"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44269401"
 ---
 # <a name="certificate-selection-and-validation"></a>Выбор и проверка сертификата
 Классы <xref:System.Net> поддерживают несколько способов выбора и проверки <xref:System.Security.Cryptography.X509Certificates> для подключений SSL. Клиент может выбрать один или несколько сертификатов для прохождения проверки подлинности на сервере. Сервер может потребовать наличия в сертификате клиента одного или нескольких атрибутов для проверки подлинности.  
@@ -41,13 +41,13 @@ ms.locfileid: "42931054"
 ## <a name="tools-for-certificate-configuration"></a>Средства для настройки сертификатов  
  Для настройки сертификатов клиента и сервера имеется ряд средств.  
   
- С помощью средства *Winhttpcertcfg.exe* можно настраивать сертификаты клиента. Средство *Winhttpcertcfg.exe* входит в состав набора ресурсов Windows Server 2003. Его также можно скачать в составе средств набора ресурсов Windows Server 2003 на сайте www.microsoft.com.  
+ С помощью средства *Winhttpcertcfg.exe* можно настраивать сертификаты клиента. Средство *Winhttpcertcfg.exe* входит в состав набора ресурсов Windows Server 2003. Его также можно скачать в составе средств набора ресурсов Windows Server 2003 на сайте [www.microsoft.com](https://www.microsoft.com).  
   
 С помощью средства *The HttpCfg.exe* можно настраивать сертификаты сервера для класса <xref:System.Net.HttpListener>. Средство *HttpCfg.exe* входит в состав вспомогательных средств для Windows Server 2003 и Windows XP с пакетом обновления 2 (SP2). *HttpCfg.exe* и другие вспомогательные средства не устанавливаются в Windows Server 2003 и Windows XP по умолчанию. В Windows Server 2003 вспомогательные средства устанавливаются отдельно из следующего файла на компакт-диске с Windows Server 2003:  
   
  \Support\Tools\Suptools.msi  
   
- Для Windows XP с пакетом обновления 2 (SP2) вспомогательные средства можно скачать с сайта www.microsoft.com.  
+ Для Windows XP с пакетом обновления 2 (SP2) вспомогательные средства можно скачать с сайта [www.microsoft.com](https://www.microsoft.com).  
   
  Исходный код версии средства *HttpCfg.exe* также предоставляется в качестве образца в пакете SDK для Windows Server. Исходный код образца *HttpCfg.exe* устанавливается по умолчанию вместе с другими образцами сетевого взаимодействия из пакета Windows SDK в следующей папке:  
   

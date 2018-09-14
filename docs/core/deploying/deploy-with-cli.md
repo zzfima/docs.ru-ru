@@ -3,13 +3,16 @@ title: Развертывание приложений .NET Core с помощь
 description: Сведения о развертывании приложений .NET Core с помощью средств интерфейса командной строки (CLI)
 author: rpetrusha
 ms.author: ronpet
-ms.date: 04/18/2017
-ms.openlocfilehash: dbef9d91aa4e7af8e6e0ed2d8f361238385d4976
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.date: 09/05/2018
+dev_langs:
+- csharp
+- vb
+ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855026"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44272895"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Развертывание приложений .NET Core с помощью средств командной строки (CLI)
 
@@ -32,15 +35,16 @@ ms.locfileid: "43855026"
 
    Создайте каталог для проекта и сделайте его текущим каталогом.
 
-1. создание проекта;
+1. Создание проекта.
 
-   В командной строке введите [dotnet new](../tools/dotnet-new.md), чтобы создать проект консольного приложения C# в этом каталоге.
+   Из командной строки введите [dotnet new console](../tools/dotnet-new.md), чтобы создать новый консольный проект C#, или [dotnet new console -lang vb](../tools/dotnet-new.md), чтобы создать проект консольного приложения Visual Basic в этом каталоге.
 
 1. Добавление исходного кода приложения.
 
-   Откройте файл *Program.cs* в редакторе и замените автоматически созданный код приведенным ниже кодом. Он выводит запрос на ввод текста и отображает отдельные слова, введенные пользователем. Для разделения слов во введенном тексте в нем используется регулярное выражение `\w+`.
+   Откройте файл *Program.cs* или *Program.vb* в редакторе и замените автоматически созданный код приведенным ниже кодом. Он выводит запрос на ввод текста и отображает отдельные слова, введенные пользователем. Для разделения слов во введенном тексте в нем используется регулярное выражение `\w+`.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 
 1. Обновление зависимостей и средств проекта.
 
@@ -55,7 +59,7 @@ ms.locfileid: "43855026"
    После отладки и тестирования программы создайте развертывание с помощью следующей команды:
 
       ```console
-      dotnet publish -f netcoreapp1.1 -c Release
+      dotnet publish -f netcoreapp2.1 -c Release
       ```
    При этом создается версия выпуска приложения (а не отладочная версия). Итоговые файлы помещаются в каталог с именем *publish*, который находится в подкаталоге каталога *bin* проекта.
 
@@ -101,8 +105,8 @@ ms.locfileid: "43855026"
 
    Откройте файл *Program.cs* в редакторе и замените автоматически созданный код приведенным ниже кодом. Он выводит запрос на ввод текста и отображает отдельные слова, введенные пользователем. Для разделения слов во введенном тексте в нем используется регулярное выражение `\w+`.
 
-   [!code-csharp[deployment#1](../../../samples/snippets/core/deploying/deployment-example.cs)]
-
+   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
+   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
 1. Определение платформ, для которых будет предназначено приложение.
 
    В разделе `<PropertyGroup>` файла *csproj* создайте тег `<RuntimeIdentifiers>`, определяющий платформы, для которых предназначено приложение, и укажите идентификатор среды выполнения (RID) для каждой целевой платформы. Обратите внимание, что для разделения идентификаторов RID необходимо добавлять точку с запятой. Список идентификаторов сред выполнения см. в [каталоге идентификаторов сред выполнения](../rid-catalog.md).
@@ -121,6 +125,14 @@ ms.locfileid: "43855026"
 
    Запустите [dotnet restore](../tools/dotnet-restore.md) ([см. Примечание](#dotnet-restore-note)) для восстановления зависимостей, указанных в проекте.
 
+1. Определите, хотите ли вы использовать инвариантный режим глобализации.
+
+   Особенно в том случае, если приложение предназначено для Linux, вы можете уменьшить размер развертывания, используя преимущества [инвариантного режима глобализации](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md). Инвариантный режим глобализации подходит для приложений, которые не имеют глобальных параметров и могут использовать соглашения о форматировании, соглашения о регистре, сравнение строк и порядок сортировки для [инвариантного языка и региональных параметров](xref:System.Globalization.CultureInfo.InvariantCulture).
+
+   Чтобы включить инвариантный режим, щелкните правой кнопкой мыши проект (не решение) в **обозревателе решений** и выберите **Изменить SCD.csproj** или **Изменить SCD.vbproj**. Затем добавьте следующие выделенные строки в файл:
+
+ [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
+
 1. Создание отладочной сборки приложения.
 
    Из командной строки запустите команду [dotnet build](../tools/dotnet-build.md).
@@ -134,7 +146,7 @@ ms.locfileid: "43855026"
       dotnet publish -c Release -r osx.10.11-x64
       ```
 
-   При этом создается версия выпуска приложения (а не отладочная версия) для каждой целевой платформы. Итоговые файлы помещаются в подкаталог с именем *publish*, который находится в подкаталоге *.\bin\Release\netcoreapp1.1 \<идентификатор_среды_выполнения>* каталога проекта. Обратите внимание на то, что каждый подкаталог содержит полный набор файлов (как файлов приложения, так и всех файлов .NET Core), необходимых для запуска приложения.
+   При этом создается версия выпуска приложения (а не отладочная версия) для каждой целевой платформы. Итоговые файлы помещаются в подкаталог с именем *publish*, который находится в подкаталоге *.\bin\Release\netcoreapp2.1 \<идентификатор_среды_выполнения>* каталога проекта. Обратите внимание на то, что каждый подкаталог содержит полный набор файлов (как файлов приложения, так и всех файлов .NET Core), необходимых для запуска приложения.
 
 Помимо файлов приложения, процесс публикации создает файл базы данных программы (PDB), который содержит отладочную информацию о приложении. Файл используется в основном для отладки исключений. Его можно не упаковывать вместе с файлами приложения. Однако его следует сохранить на случай, если потребуется выполнить отладку сборки выпуска приложения.
 
@@ -146,7 +158,7 @@ ms.locfileid: "43855026"
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
 </Project>
@@ -172,7 +184,7 @@ ms.locfileid: "43855026"
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
   </PropertyGroup>
   <ItemGroup>

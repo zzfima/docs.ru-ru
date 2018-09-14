@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: e043903647075587d1e7eec21c9a7b04f596dbf6
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: 47e066f8eb7402fedabc70cf1e3b4a1bb974ff62
+ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937053"
+ms.lasthandoff: 09/04/2018
+ms.locfileid: "43504696"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Лямбда-выражения (Руководство по программированию в C#)
 
@@ -78,8 +78,9 @@ namespace ConsoleApplication1
 ```csharp
 (int x, string s) => s.Length > x
 ```
+ Типы входных параметров должны быть либо полностью явными, либо полностью неявными; в противном случае C# создает ошибку компилятора [CS0748](../../misc/cs0748.md).
 
- Нулевое количество входных параметры задается пустыми скобками:  
+ Нулевое количество входных параметров задается пустыми скобками:  
   
 ```csharp
 () => SomeMethod()
@@ -273,11 +274,12 @@ class Test
 ## <a name="featured-book-chapter"></a>Важная глава книги  
  [Делегаты, события и лямбда-выражения](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) в [справочном руководстве по C# 3.0, третье издание: более 250 решений для программистов на C# 3.0](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  
   
-## <a name="see-also"></a>См. также  
- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
- [Встроенный язык запросов LINQ](../../../csharp/programming-guide/concepts/linq/index.md)  
- [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
- [is](../../../csharp/language-reference/keywords/is.md)  
- [Деревья выражений](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
- [Примеры C# в Visual Studio 2008 (см. файлы примеров запросов LINQ и программу XQuery)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
- [Рекурсивные лямбда-выражения](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)
+## <a name="see-also"></a>См. также
+
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Встроенный язык запросов LINQ](../../../csharp/programming-guide/concepts/linq/index.md)  
+- [Анонимные методы](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
+- [is](../../../csharp/language-reference/keywords/is.md)  
+- [Деревья выражений](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
+- [Примеры C# в Visual Studio 2008 (см. файлы примеров запросов LINQ и программу XQuery)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
+- [Рекурсивные лямбда-выражения](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

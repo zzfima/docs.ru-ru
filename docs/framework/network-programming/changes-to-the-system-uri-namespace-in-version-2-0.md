@@ -5,12 +5,12 @@ ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 169454edd04bfdb55affcc2be12140f42dd2f7ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbd12b3e08b6e21d26e2cb688a591cd4e03574dc
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392452"
+ms.lasthandoff: 09/08/2018
+ms.locfileid: "44205988"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>Изменения пространства имен System.Uri в версии 2.0
 В класс <xref:System.Uri?displayProperty=nameWithType> были внесены некоторые изменения. Эти изменения были направлены на исправление некорректного поведения, повышение удобства использования и улучшение безопасности.  
@@ -42,7 +42,7 @@ ms.locfileid: "33392452"
   
 -   Для схем URI, которые заведомо не содержат части запроса (file, ftp и другие), символ "?" всегда экранируется и не обрабатывается как начало части <xref:System.Uri.Query%2A>.  
   
--   Для неявных файловых URI (имеют форму "c:\directory\file@name.txt") символ фрагмента ("#") всегда экранируется, за исключением случаев, когда запрашивается полная отмена экранирования или <xref:System.Uri.LocalPath%2A> имеет значение `true`.  
+-   Для неявных файловых URI (имеют форму `c:\directory\file@name.txt`) символ фрагмента ("#") всегда экранируется, за исключением случаев, когда запрашивается полная отмена экранирования или <xref:System.Uri.LocalPath%2A> имеет значение `true`.  
   
 -   Прекращена поддержка имен узлов UNC. Принята спецификация IDN, определяющая представление международных имен узлов.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "33392452"
   
 -   <xref:System.Uri.IsLoopback%2A> теперь дает согласованные результаты.  
   
--   URI "`file:///path`" больше не преобразуется как "file://path".  
+-   URI "`file:///path`" больше не преобразуется в `file://path`.  
   
--   "#" теперь распознается как признак конца имени узла. То есть "http://consoto.com#fragment" теперь преобразуется в "http://contoso.com/#fragment".  
+-   "#" теперь распознается как признак конца имени узла. То есть `http://consoto.com#fragment` теперь преобразуется в `http://contoso.com/#fragment`.  
   
 -   Исправлена ошибка, возникающая при объединении базового URI с фрагментом.  
   

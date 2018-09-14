@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3677ff7cc27847d56802206c793a574d61b1464c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1874d5512f04f22b9c53bdc9e92d0c96e45d21c8
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391642"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44222744"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Практическое руководство. Определение установленных версий платформы .NET Framework
 
@@ -94,7 +94,7 @@ ms.locfileid: "33391642"
     |379893|.NET Framework 4.5.2|
     |Только в системах Windows 10: 393295<br /><br /> Во всех других версиях ОС: 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
     |Только в системах Windows 10 с ноябрьским обновлением: 394254<br /><br /> Во всех других версиях ОС: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |Только в юбилейном обновлении Windows 10 Anniversary Update: 394802<br /><br /> Во всех других версиях ОС: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
+    |В юбилейном обновлении Windows 10 и Windows Server 2016: 394802<br /><br /> Во всех других версиях ОС: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |Только в обновлении Windows 10 Creators Update: 460798<br/><br/> Во всех других версиях ОС: 460805 | .NET Framework 4.7 |
     |Только в Windows 10 Fall Creators Update: 461308<br/><br/> Во всех других версиях ОС: 461310 | .NET Framework 4.7.1 |
     |Только в обновлении Windows 10 за апрель 2018: 461808<br/><br/> Во всех других версиях ОС: 461814| .NET Framework 4.7.2 |
@@ -142,7 +142,7 @@ ms.locfileid: "33391642"
     |Платформа .NET Framework 4.6, установленная во всех остальных версиях ОС Windows|393297|
     |Платформа .NET Framework 4.6.1, установленная в Windows 10|394254|
     |Платформа .NET Framework 4.6.1, установленная во всех остальных версиях ОС Windows|394271|
-    |Платформа .NET Framework 4.6.2, установленная в юбилейном обновлении Windows 10|394802|
+    |Платформа .NET Framework 4.6.2, установленная в юбилейном обновлении Windows 10 и Windows Server 2016|394802|
     |Платформа .NET Framework 4.6.2, установленная во всех остальных версиях ОС Windows|394806|
     |.NET Framework 4.7 установлена в обновлении Windows 10 Creators Update|460798|
     |Платформа .NET Framework 4.7, установленная во всех остальных версиях ОС Windows|460805|

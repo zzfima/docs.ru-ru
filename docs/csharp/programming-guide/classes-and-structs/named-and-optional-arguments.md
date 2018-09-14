@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-ms.openlocfilehash: b0963457e22bf0c3fc92d33c5ed0eb699be27cf7
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: f536499e95611bad6ac1766e117d4a2f1463e53d
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932046"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43857986"
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Именованные и необязательные аргументы (Руководство по программированию на C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] вводит именованные и необязательные аргументы. *Именованные аргументы* позволяют указать аргумент для определенного параметра, связав этот аргумент с именем параметра, а не с его позицией в списке параметров. *Необязательные аргументы* позволяют опускать аргументы для некоторых параметров. Оба варианта можно использовать с методами, индексаторами, конструкторами и делегатами.  
@@ -101,7 +101,7 @@ ms.locfileid: "42932046"
 ## <a name="com-interfaces"></a>Интерфейсы COM  
  Именованные и необязательные аргументы, а также поддержка динамических объектов и другие усовершенствования значительно улучшают взаимодействие с API COM, такими как API автоматизации Office.  
   
- Например, метод [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) в интерфейсе [диапазона](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) Microsoft Office Excel имеет семь параметров и все они необязательные. Эти параметры показаны на следующем рисунке.  
+ Например, метод <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A>в интерфейсе Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Range> имеет семь параметров и все они необязательные. Эти параметры показаны на следующем рисунке.  
   
  ![Быстрая справка IntelliSense для метода AutoFormat.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 Параметры метода AutoFormat  
@@ -128,8 +128,9 @@ ms.locfileid: "42932046"
 ## <a name="c-language-specification"></a>Спецификация языка C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>См. также  
- [Практическое руководство. Использование именованных и необязательных аргументов в программировании приложений Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
- [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Использование конструкторов](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
- [Использование индексаторов](../../../csharp/programming-guide/indexers/using-indexers.md)
+## <a name="see-also"></a>См. также
+
+- [Практическое руководство. Использование именованных и необязательных аргументов в программировании приложений Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+- [Использование типа dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+- [Использование конструкторов](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
+- [Использование индексаторов](../../../csharp/programming-guide/indexers/using-indexers.md)

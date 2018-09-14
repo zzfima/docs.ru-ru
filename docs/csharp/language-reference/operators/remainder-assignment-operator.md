@@ -1,44 +1,47 @@
 ---
 title: Оператор %= (Справочник по C#)
-ms.date: 04/04/2018
+ms.date: 09/04/2018
 f1_keywords:
 - '%=_CSharpKeyword'
 helpviewer_keywords:
 - remainder assignment operator (%=) [C#]
 - '%= assignment operator (remainder assignment) [C#]'
 ms.assetid: 47e5f068-1d97-4010-bd3b-e21b5d3a77f5
-ms.openlocfilehash: 009c162b13fab05ba349d0535fe8dfae206502f3
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c475517666bdadaa457dbb4188808b3a96fcdf0e
+ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43399495"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44085651"
 ---
 # <a name="-operator-c-reference"></a>Оператор %= (Справочник по C#)
-Оператор присваивания остатка.  
-  
-## <a name="remarks"></a>Примечания  
- Выражение, использующее оператор присваивания `%=`, такое как  
-  
-```csharp  
-x %= y  
+
+Оператор присваивания остатка.
+
+Выражение, использующее оператор `%=`, такое как  
+
+```csharp
+x %= y
 ```  
-  
- эквивалентно  
-  
-```csharp  
-x = x % y  
+
+эквивалентно  
+
+```csharp
+x = x % y
 ```  
+
+за исключением того, что `x` вычисляется только один раз.
   
- за исключением того, что `x` вычисляется только один раз. В числовых типах предварительно определенный [оператор %](../../../csharp/language-reference/operators/remainder-operator.md) используется для вычисления остатка от деления.  
+[Оператор остатка](remainder-operator.md) `%` поддерживается всеми числовыми типами и вычисляет остаток от деления своих операндов.
+
+Если определяемый пользователем тип [перегружает](../keywords/operator.md) [оператор остатка](remainder-operator.md) `%`, оператор присваивания остатка `%=` неявно перегружается.
   
- Оператор `%=` нельзя перегружать напрямую, однако пользовательские типы могут перегружать [оператор %](../../../csharp/language-reference/operators/remainder-operator.md) (см. [operator (справочник по C#)](../../../csharp/language-reference/keywords/operator.md)).  
-  
-## <a name="example"></a>Пример  
- [!code-csharp[csRefOperators#4](../../../csharp/language-reference/operators/codesnippet/CSharp/modulus-assignment-operator_1.cs)]  
-  
+В следующем примере иллюстрируется использование оператора `%=`.
+
+[!code-csharp-interactive[%= example](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#3)]
+
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Операторы в C#](../../../csharp/language-reference/operators/index.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Операторы в C#](index.md)
