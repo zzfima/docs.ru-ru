@@ -11,11 +11,11 @@ ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 97bd152cff53fb1c2edb107b6d6b34bd91ca1c49
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
-ms.translationtype: HT
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699479"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45516228"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Имена сборок и библиотек DLL
 Сборка является единицей развертывания и удостоверение для управляемого кода программы. Несмотря на то, что сборки могут охватывать один или несколько файлов, обычно сборки взаимно-однозначное сопоставление с библиотекой DLL. Таким образом в этом разделе описывается только DLL соглашения об именовании, которые затем можно сопоставить с соглашения об именовании сборок.  

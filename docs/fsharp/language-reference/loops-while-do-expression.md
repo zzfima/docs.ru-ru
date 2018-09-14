@@ -3,11 +3,11 @@ title: 'Циклы: выражение while...do (F#)'
 description: См. в разделе как while... сделать выражение используется для выполнения итерации (в цикле), пока заданное условие теста истинно.
 ms.date: 05/16/2016
 ms.openlocfilehash: 5cf4461669221f91cb50e238c25494f03a10bbc2
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44352561"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45517465"
 ---
 # <a name="loops-whiledo-expression"></a>Циклы: выражение while...do
 

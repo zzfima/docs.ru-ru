@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: bf5648b1aa21ffd783c76aaa11c8e81371f45d18
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104642"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "44778426"
 ---
 # <a name="key-takeaways"></a>Главные выводы
 
@@ -23,7 +23,7 @@ ms.locfileid: "37104642"
 
 -   Среда DevOps, поддерживающая взаимодействие непрерывной интеграции и непрерывного развертывания с рабочими средами Docker, обеспечивает гибкость и в итоге сокращает время выхода приложений на рынок.
 
-Visual Studio Team Services значительно упрощает функционирование среды DevOps Docker, предназначенной для сред Docker из конвейеров непрерывного развертывания, включая простые среды Docker или более сложные оркестраторы микрослужб и контейнеров на основе Azure.
+Службы Azure DevOps значительно упрощает функционирование среды DevOps предназначенной для сред Docker из конвейеров непрерывного развертывания, включая простые среды Docker или более сложные оркестраторы микрослужб и контейнеров на основе Azure.
 
 >[!div class="step-by-step"]
 [Назад](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

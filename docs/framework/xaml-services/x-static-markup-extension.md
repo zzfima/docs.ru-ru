@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 8a14b00fe762d325028072cd0ea3eecf9b9206e3
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44508352"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45519907"
 ---
 # <a name="xstatic-markup-extension"></a>Расширение разметки x:Static
 Ссылается на любой сущности кода статический по значению, определенному в [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]— надлежащим способом. Статическое свойство, которое указывается может использоваться для предоставления значения свойства в XAML.  

@@ -3,11 +3,11 @@ title: Динамическая реконфигурация
 ms.date: 03/30/2017
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
 ms.openlocfilehash: a147a1d6cf61001832661376363ecc850ecad309
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44189933"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45508211"
 ---
 # <a name="dynamic-reconfiguration"></a>Динамическая реконфигурация
 В этом примере демонстрируется служба маршрутизации Windows Communication Foundation (WCF). Служба маршрутизации является компонентом WCF, который упрощает Включение маршрутизатора на основе содержимого в приложении. В этом образце адаптирует стандартный образец калькулятора WCF для связи с использованием службы маршрутизации. Этот образец показывает, как можно динамически переконфигурировать службу маршрутизации во время выполнения.  

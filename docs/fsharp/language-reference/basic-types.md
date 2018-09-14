@@ -3,11 +3,11 @@ title: 'Базовые типы (F #)'
 description: 'Узнайте основные базовые типы, которые используются в языке F #.'
 ms.date: 07/09/2018
 ms.openlocfilehash: 8f948d066323527b09b1d3f9f4167b95b1c875cf
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44368129"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45514980"
 ---
 # <a name="basic-types"></a>Базовые типы
 

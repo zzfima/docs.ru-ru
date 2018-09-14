@@ -11,11 +11,11 @@ helpviewer_keywords:
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
 ms.openlocfilehash: fd29696d88eba5c1363464334b63cb2ab0df4a0e
-ms.sourcegitcommit: 67de6cb5dd66a19f2180ba7e4d7aecc697f8a963
+ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44342645"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45510270"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>Стратегия безопасности WPF — проектирование безопасности
 Trustworthy Computing (защищенные информационные системы) — это инициатива корпорации Майкрософт по созданию безопасного кода. Ключевым элементом для создания защищенных информационных систем является [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] является технической практикой, которая используется в сочетании со стандартными инженерными процессами для облегчения доставки безопасного кода. [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] состоит из десяти этапов, которые объединяют рекомендации с формализацией, измеряемостью и дополнительными структурами, включая:  
