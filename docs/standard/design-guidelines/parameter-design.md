@@ -12,11 +12,11 @@ ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ea5311de8cef266af23b259d943568bfa95eaf72
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708589"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615080"
 ---
 # <a name="parameter-design"></a>Разработка параметров
 Этот раздел содержит общие рекомендации по разработке параметров, включая разделы с рекомендации по проверке аргументов. Кроме того, следует ознакомиться с рекомендации, приведенные в [именования параметров](../../../docs/standard/design-guidelines/naming-parameters.md).  

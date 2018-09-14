@@ -3,11 +3,11 @@ title: Создание и запуск экземпляра рабочего п
 ms.date: 03/30/2017
 ms.assetid: 19d27f47-0491-4569-8f53-51bc1d940e80
 ms.openlocfilehash: 571d41194ebc98be81646fb5bfdab060225015ca
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516585"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45619051"
 ---
 # <a name="creating-and-running-a-workflow-instance"></a>Создание и запуск экземпляра рабочего процесса
 В этом образце показано, как выполнить экземпляр рабочего процесса. Здесь показано синхронное и асинхронное выполнение.  

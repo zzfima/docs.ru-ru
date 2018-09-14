@@ -3,11 +3,11 @@ title: Интеграция кэширования ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 ms.openlocfilehash: 55e6213bf0c4c212ebcf4e68882d16532c0e4229
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44353581"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45617212"
 ---
 # <a name="aspnet-caching-integration"></a>Интеграция кэширования ASP.NET
 В этом образце демонстрируется использование выходного кэша ASP.NET в модели веб-программирования WCF HTTP . См. в разделе [базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образец резидентную версию этого сценария, рассматривается реализация службы в глубину. В этом разделе основное внимание уделено возможности интеграции выходного кэша ASP.NET.  

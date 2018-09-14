@@ -5,11 +5,11 @@ ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2603c29fe9108a32f3c3ba86a5aba9fae5042b17
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45516387"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45616816"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>Измерение улучшения запуска с машинным кодом .NET
 [!INCLUDE[net_native](../../../includes/net-native-md.md)]значительно сокращает время запуска приложений. Это улучшение особенно заметно на портативных устройствах малой мощности, а также при сложных приложениях. Этот раздел поможет вам приступить к работе с основным инструментарием, который необходим для измерения данного улучшения запуска.  
