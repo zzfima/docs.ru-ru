@@ -1,36 +1,55 @@
 ---
 title: Оператор % (Справочник по C#)
-ms.date: 04/04/2018
+ms.date: 09/04/2018
 f1_keywords:
 - '%_CSharpKeyword'
 helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: b906feb22aaec97e58da562b615baae01f3e0719
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
+ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33271079"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44266700"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="b53b3-102">Оператор % (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="b53b3-102">% Operator (C# Reference)</span></span>
-<span data-ttu-id="b53b3-103">Оператор остатка (`%`) вычисляет остаток от деления первого операнда на второй.</span><span class="sxs-lookup"><span data-stu-id="b53b3-103">The remainder operator (`%`) computes the remainder after dividing its first operand by its second.</span></span> <span data-ttu-id="b53b3-104">Все числовые типы имеют предопределенные операторы вычисления остатка.</span><span class="sxs-lookup"><span data-stu-id="b53b3-104">All numeric types have predefined remainder operators.</span></span> 
+# <a name="-operator-c-reference"></a><span data-ttu-id="9fd11-102">Оператор % (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="9fd11-102">% Operator (C# Reference)</span></span>
+
+<span data-ttu-id="9fd11-103">Оператор остатка `%` вычисляет остаток от деления первого операнда на второй.</span><span class="sxs-lookup"><span data-stu-id="9fd11-103">The remainder operator `%` computes the remainder after dividing its first operand by its second operand.</span></span> <span data-ttu-id="9fd11-104">Определяемые пользователем типы могут [перегружать](../keywords/operator.md) оператор `%`.</span><span class="sxs-lookup"><span data-stu-id="9fd11-104">User-defined types can [overload](../keywords/operator.md) the `%` operator.</span></span> <span data-ttu-id="9fd11-105">Когда `%` перегружается, [оператор присваивания остатка](remainder-assignment-operator.md) `%=` также неявно перегружается.</span><span class="sxs-lookup"><span data-stu-id="9fd11-105">When the `%` is overloaded, the [remainder assignment operator](remainder-assignment-operator.md) `%=` is also implicitly overloaded.</span></span>
+
+<span data-ttu-id="9fd11-106">Все числовые типы поддерживают оператор остатка.</span><span class="sxs-lookup"><span data-stu-id="9fd11-106">All numeric types support the remainder operator.</span></span>
+
+## <a name="integer-remainder"></a><span data-ttu-id="9fd11-107">Целочисленный остаток</span><span class="sxs-lookup"><span data-stu-id="9fd11-107">Integer remainder</span></span>
   
-## <a name="remarks"></a><span data-ttu-id="b53b3-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="b53b3-105">Remarks</span></span>  
- <span data-ttu-id="b53b3-106">Формула `a % b` всегда возвращает значение в диапазоне `(-b, b)`, исключая границы (она не может вернуть значение `b` или `-b`), с сохранением знака делимого.</span><span class="sxs-lookup"><span data-stu-id="b53b3-106">The formula `a % b` will always return a value on the range `(-b, b)`, exclusive (it can never return `b` or `-b`), keeping the sign of the dividend.</span></span> <span data-ttu-id="b53b3-107">При целочисленном делении для оператора остатка соблюдается правило `a % b = a - (a / b) * b`.</span><span class="sxs-lookup"><span data-stu-id="b53b3-107">For integer division, the remainder operator satisfies the rule `a % b = a - (a / b) * b`.</span></span>
-  
- <span data-ttu-id="b53b3-108">Эту операцию не следует путать с получением канонического модуля, которое следует тому же правилу, но округление производится к меньшему и возвращаются значения в диапазоне `[0, b)`.</span><span class="sxs-lookup"><span data-stu-id="b53b3-108">This is not to be confused with canonical modulus, which satisfies a similar rule but with floored division and returns values on the range `[0, b)`.</span></span> <span data-ttu-id="b53b3-109">В C# нет оператора для получения канонического модуля.</span><span class="sxs-lookup"><span data-stu-id="b53b3-109">C# does not have an operator for canonical modulus.</span></span> <span data-ttu-id="b53b3-110">Однако для положительного делимого результат будет аналогичным.</span><span class="sxs-lookup"><span data-stu-id="b53b3-110">However, the behavior is the same for positive dividends.</span></span>
-  
- <span data-ttu-id="b53b3-111">Определяемые пользователем типы могут вызвать перегрузку оператора `%` (см. раздел [operator](../../../csharp/language-reference/keywords/operator.md)) .</span><span class="sxs-lookup"><span data-stu-id="b53b3-111">User-defined types can overload the `%` operator (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span> <span data-ttu-id="b53b3-112">При перегрузке бинарного оператора соответствующий оператор присвоения (если таковой имеется) также неявно перегружается.</span><span class="sxs-lookup"><span data-stu-id="b53b3-112">When a binary operator is overloaded, the corresponding assignment operator, if any, is also implicitly overloaded.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="b53b3-113">Пример</span><span class="sxs-lookup"><span data-stu-id="b53b3-113">Example</span></span>  
- [!code-csharp[csRefOperators#9](../../../csharp/language-reference/operators/codesnippet/CSharp/remainder-operator_1.cs)]  
-  
-## <a name="comments"></a><span data-ttu-id="b53b3-114">Комментарии</span><span class="sxs-lookup"><span data-stu-id="b53b3-114">Comments</span></span>  
- <span data-ttu-id="b53b3-115">Обратите внимание на ошибки округления, связанные с использованием типа double.</span><span class="sxs-lookup"><span data-stu-id="b53b3-115">Note the round-off errors associated with the double type.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="b53b3-116">См. также</span><span class="sxs-lookup"><span data-stu-id="b53b3-116">See Also</span></span>  
- [<span data-ttu-id="b53b3-117">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="b53b3-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="b53b3-118">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="b53b3-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="b53b3-119">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="b53b3-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="9fd11-108">Для целочисленных операндов результатом `a % b` является значение, произведенное `a - (a / b) * b`.</span><span class="sxs-lookup"><span data-stu-id="9fd11-108">For the integer operands, the result of `a % b` is the value produced by `a - (a / b) * b`.</span></span> <span data-ttu-id="9fd11-109">Знак ненулевого остатка такой же, как и у первого операнда, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="9fd11-109">The sign of the non-zero remainder is the same as that of the first operand, as the following example shows:</span></span>
+
+[!code-csharp-interactive[integer remainder](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#1)]
+
+## <a name="floating-point-remainder"></a><span data-ttu-id="9fd11-110">Остаток с плавающей запятой</span><span class="sxs-lookup"><span data-stu-id="9fd11-110">Floating-point remainder</span></span>
+
+<span data-ttu-id="9fd11-111">Для операндов типа [float](../keywords/float.md) и [double](../keywords/double.md) результатом `x % y` для конечных `x` и `y` будет значение `z`, так что:</span><span class="sxs-lookup"><span data-stu-id="9fd11-111">For the [float](../keywords/float.md) and [double](../keywords/double.md) operands, the result of `x % y` for the finite `x` and `y` is the value `z` such that</span></span>
+
+- <span data-ttu-id="9fd11-112">знак `z`, если отлично от нуля, совпадает со знаком `x`;</span><span class="sxs-lookup"><span data-stu-id="9fd11-112">the sign of `z`, if non-zero, is the same as the sign of `x`;</span></span>
+- <span data-ttu-id="9fd11-113">абсолютное значение `z` является значением, произведенным `|x| - n * |y|`, где `n` — это наибольшее возможное целое число, которое меньше или равно `|x| / |y|`, а `|x|` и `|y|` являются абсолютными значениями `x` и `y` соответственно.</span><span class="sxs-lookup"><span data-stu-id="9fd11-113">the absolute value of `z` is the value produced by `|x| - n * |y|` where `n` is the largest possible integer that is less than or equal to `|x| / |y|` and `|x|` and `|y|` are the absolute values of `x` and `y`, respectively.</span></span>
+
+<span data-ttu-id="9fd11-114">Сведения о поведение оператора `%` в случае неконечных операндов см. в разделе [Оператор остатка](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator) в [спецификации языка C#](/dotnet/csharp/language-reference/language-specification/index).</span><span class="sxs-lookup"><span data-stu-id="9fd11-114">For information about behavior of the `%` operator in case of non-finite operands, see the [Remainder operator](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator) section of the [C# language specification](/dotnet/csharp/language-reference/language-specification/index).</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="9fd11-115">Этот метод вычисления остатка аналогичен тому, который использовался для целочисленных операндов, но отличается от IEEE 754.</span><span class="sxs-lookup"><span data-stu-id="9fd11-115">This method of computing the remainder is analogous to that used for integer operands, but differs from the IEEE 754.</span></span> <span data-ttu-id="9fd11-116">Если вам нужна операция остатка, которая соответствует IEEE 754, используйте метод <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="9fd11-116">If you need the remainder operation that complies with the IEEE 754, use the <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> method.</span></span>
+
+<span data-ttu-id="9fd11-117">В следующем примере показано поведение оператора остатка для операндов `float` и `double`.</span><span class="sxs-lookup"><span data-stu-id="9fd11-117">The following example demonstrates the behavior of the remainder operator for `float` and `double` operands:</span></span>
+
+[!code-csharp-interactive[float and double remainder](~/samples/snippets/csharp/language-reference/operators/RemainderExamples.cs#2)]
+
+<span data-ttu-id="9fd11-118">Обратите внимание на ошибки округления, которые могут быть связаны с типами с плавающей запятой.</span><span class="sxs-lookup"><span data-stu-id="9fd11-118">Note the round-off errors that can be associated with the floating-point types.</span></span>
+
+<span data-ttu-id="9fd11-119">Для [десятичных](../keywords/decimal.md) операндов оператор остатка `%` эквивалентен [оператору остатка](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>) типа <xref:System.Decimal?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="9fd11-119">For the [decimal](../keywords/decimal.md) operands, the remainder operator `%` is equivalent to the [remainder operator](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>) of the <xref:System.Decimal?displayProperty=nameWithType> type.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="9fd11-120">См. также</span><span class="sxs-lookup"><span data-stu-id="9fd11-120">See also</span></span>
+
+- [<span data-ttu-id="9fd11-121">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="9fd11-121">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="9fd11-122">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="9fd11-122">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="9fd11-123">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="9fd11-123">C# Operators</span></span>](index.md)
+- <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>
+- <xref:System.Math.DivRem%2A?displayProperty=nameWithType>

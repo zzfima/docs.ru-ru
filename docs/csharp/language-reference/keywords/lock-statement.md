@@ -1,92 +1,80 @@
 ---
 title: Оператор lock (справочник по C#)
-description: 'Ключевое слово lock используется при работе с потоками '
-ms.date: 07/20/2015
+description: Использование выражения блокировки C# для синхронизации доступа потоков к общему ресурсу
+ms.date: 08/28/2018
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 6ed46837482642dfd7e1a96cd120fc18023c5e9f
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: 2b6fbfb2f81d7745c4effb9ea0087f34cc872a6c
+ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931197"
+ms.lasthandoff: 09/06/2018
+ms.locfileid: "43858360"
 ---
-# <a name="lock-statement-c-reference"></a><span data-ttu-id="0206a-103">Оператор lock (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="0206a-103">lock statement (C# Reference)</span></span>
+# <a name="lock-statement-c-reference"></a><span data-ttu-id="a42e8-103">Оператор lock (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="a42e8-103">lock statement (C# Reference)</span></span>
 
-<span data-ttu-id="0206a-104">При помощи ключевого слова `lock` блок выражений можно пометить как важный фрагмент. Получив блокировку взаимного исключения для указанного объекта, выражения выполняются, а затем снимается блокировка.</span><span class="sxs-lookup"><span data-stu-id="0206a-104">The `lock` keyword marks a statement block as a critical section by obtaining the mutual-exclusion lock for a given object, executing a statement, and then releasing the lock.</span></span> <span data-ttu-id="0206a-105">Следующий пример включает оператор `lock`.</span><span class="sxs-lookup"><span data-stu-id="0206a-105">The following example includes a `lock` statement.</span></span>
+<span data-ttu-id="a42e8-104">Оператор `lock` создает взаимоисключающую блокировку заданного объекта перед выполнением определенных операторов, а затем снимает блокировку.</span><span class="sxs-lookup"><span data-stu-id="a42e8-104">The `lock` statement obtains the mutual-exclusion lock for a given object, executes a statement block, and then releases the lock.</span></span> <span data-ttu-id="a42e8-105">Во время блокировки поток, удерживающий блокировку, может снова получить и снять блокировку.</span><span class="sxs-lookup"><span data-stu-id="a42e8-105">While a lock is held, the thread that holds the lock can again obtain and release the lock.</span></span> <span data-ttu-id="a42e8-106">Любой другой поток не может получить блокировку и ожидает ее снятия.</span><span class="sxs-lookup"><span data-stu-id="a42e8-106">Any other thread is blocked from obtaining the lock and waits until the lock is released.</span></span>
+
+<span data-ttu-id="a42e8-107">Оператор `lock` имеет форму</span><span class="sxs-lookup"><span data-stu-id="a42e8-107">The `lock` statement is of the form</span></span>
 
 ```csharp
-class Account
+lock (x)
 {
-    decimal balance;
-    private Object thisLock = new Object();
-
-    public void Withdraw(decimal amount)
-    {
-        lock (thisLock)
-        {
-            if (amount > balance)
-            {
-                throw new Exception("Insufficient funds");
-            }
-            balance -= amount;
-        }
-    }
+    // Your code...
 }
 ```
 
-<span data-ttu-id="0206a-106">Дополнительные сведения см. в разделе [Синхронизация потоков](../../programming-guide/concepts/threading/thread-synchronization.md).</span><span class="sxs-lookup"><span data-stu-id="0206a-106">For more information, see [Thread Synchronization](../../programming-guide/concepts/threading/thread-synchronization.md).</span></span>
+<span data-ttu-id="a42e8-108">Здесь `x` — это выражение [ссылочного типа](reference-types.md).</span><span class="sxs-lookup"><span data-stu-id="a42e8-108">where `x` is an expression of a [reference type](reference-types.md).</span></span> <span data-ttu-id="a42e8-109">Оно является точным эквивалентом</span><span class="sxs-lookup"><span data-stu-id="a42e8-109">It's precisely equivalent to</span></span>
 
-## <a name="remarks"></a><span data-ttu-id="0206a-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="0206a-107">Remarks</span></span>
+```csharp
+object __lockObj = x;
+bool __lockWasTaken = false;
+try
+{
+    System.Threading.Monitor.Enter(__lockObj, ref __lockWasTaken);
+    // Your code...
+}
+finally
+{
+    if (__lockWasTaken) System.Threading.Monitor.Exit(__lockObj);
+}
+```
 
-<span data-ttu-id="0206a-108">Ключевое слово `lock` не позволит одному потоку войти в важный раздел кода в тот момент, когда в нем находится другой поток.</span><span class="sxs-lookup"><span data-stu-id="0206a-108">The `lock` keyword ensures that one thread does not enter a critical section of code while another thread is in the critical section.</span></span> <span data-ttu-id="0206a-109">При попытке входа другого потока в заблокированный код потребуется дождаться снятия блокировки объекта.</span><span class="sxs-lookup"><span data-stu-id="0206a-109">If another thread tries to enter a locked code, it will wait, block, until the object is released.</span></span>
+<span data-ttu-id="a42e8-110">Так как в коде используется блок [try... finally](try-finally.md), блокировка освобождается, даже если возникает исключение в теле оператора `lock`.</span><span class="sxs-lookup"><span data-stu-id="a42e8-110">Since the code uses a [try...finally](try-finally.md) block, the lock is released even if an exception is thrown within the body of a `lock` statement.</span></span>
 
-<span data-ttu-id="0206a-110">Работа с потоками описана в разделе [Работа с потоками](../../programming-guide/concepts/threading/index.md).</span><span class="sxs-lookup"><span data-stu-id="0206a-110">The section [Threading](../../programming-guide/concepts/threading/index.md) discusses threading.</span></span>
+<span data-ttu-id="a42e8-111">Нельзя использовать ключевое слово [await](await.md) в теле оператора `lock`.</span><span class="sxs-lookup"><span data-stu-id="a42e8-111">You can't use the [await](await.md) keyword in the body of a `lock` statement.</span></span>
 
-<span data-ttu-id="0206a-111">Ключевое слово `lock` вызывает <xref:System.Threading.Monitor.Enter%2A> в начале блока и <xref:System.Threading.Monitor.Exit%2A> в конце блока.</span><span class="sxs-lookup"><span data-stu-id="0206a-111">The `lock` keyword calls <xref:System.Threading.Monitor.Enter%2A> at the start of the block and <xref:System.Threading.Monitor.Exit%2A> at the end of the block.</span></span> <span data-ttu-id="0206a-112">Если <xref:System.Threading.Thread.Interrupt%2A> прерывает работу потока, который ожидает ввода оператора `lock`, возникает <xref:System.Threading.ThreadInterruptedException>.</span><span class="sxs-lookup"><span data-stu-id="0206a-112">A <xref:System.Threading.ThreadInterruptedException> is thrown if <xref:System.Threading.Thread.Interrupt%2A> interrupts a thread that is waiting to enter a `lock` statement.</span></span>
+## <a name="remarks"></a><span data-ttu-id="a42e8-112">Примечания</span><span class="sxs-lookup"><span data-stu-id="a42e8-112">Remarks</span></span>
 
-<span data-ttu-id="0206a-113">Как правило, рекомендуется избегать блокировки типа `public` или экземпляров, которыми код не управляет.</span><span class="sxs-lookup"><span data-stu-id="0206a-113">In general, avoid locking on a `public` type, or instances beyond your code's control.</span></span> <span data-ttu-id="0206a-114">Это правило не соблюдается в распространенных конструкциях `lock (this)`, `lock (typeof (MyType))` и `lock ("myLock")`.</span><span class="sxs-lookup"><span data-stu-id="0206a-114">The common constructs `lock (this)`, `lock (typeof (MyType))`, and `lock ("myLock")` violate this guideline:</span></span>
+<span data-ttu-id="a42e8-113">При синхронизации доступа потоков к общему ресурсу блокируйте выделенный экземпляр объекта (например, `private readonly object balanceLock = new object();`) или другой экземпляр, который, скорее всего, не будет использоваться как объект блокировки другими частями кода.</span><span class="sxs-lookup"><span data-stu-id="a42e8-113">When you synchronize thread access to shared resource, lock on a dedicated object instance (for example, `private readonly object balanceLock = new object();`) or another instance that is unlikely to be used as a lock object by unrelated parts of the code.</span></span> <span data-ttu-id="a42e8-114">Не используйте один и тот же экземпляр объекта блокировки для разных общих ресурсов: это может привести к взаимоблокировке или состязанию при блокировке.</span><span class="sxs-lookup"><span data-stu-id="a42e8-114">Avoid using the same lock object instance for different shared resources, as it might result in deadlock or lock contention.</span></span> <span data-ttu-id="a42e8-115">В частности, старайтесь не использовать:</span><span class="sxs-lookup"><span data-stu-id="a42e8-115">In particular, avoid using</span></span>
 
-- <span data-ttu-id="0206a-115">`lock (this)` может привести к проблеме, если к экземпляру допускается открытый доступ.</span><span class="sxs-lookup"><span data-stu-id="0206a-115">`lock (this)` is a problem if the instance can be accessed publicly.</span></span>
+- <span data-ttu-id="a42e8-116">`this` (может использоваться вызывающими объектами как блокировка);</span><span class="sxs-lookup"><span data-stu-id="a42e8-116">`this` (might be used by the callers as a lock),</span></span>
+- <span data-ttu-id="a42e8-117">экземпляры <xref:System.Type> (может получатся оператором [typeof](typeof.md) или отражением);</span><span class="sxs-lookup"><span data-stu-id="a42e8-117"><xref:System.Type> instances (might be obtained by the [typeof](typeof.md) operator or reflection),</span></span>
+- <span data-ttu-id="a42e8-118">строковые экземпляры, включая строковые литералы,</span><span class="sxs-lookup"><span data-stu-id="a42e8-118">string instances, including string literals,</span></span>
 
-- <span data-ttu-id="0206a-116">`lock (typeof (MyType))` может привести к проблеме, если к `MyType` допускается открытый доступ.</span><span class="sxs-lookup"><span data-stu-id="0206a-116">`lock (typeof (MyType))` is a problem if `MyType` is publicly accessible.</span></span>
+<span data-ttu-id="a42e8-119">как объекты блокировки.</span><span class="sxs-lookup"><span data-stu-id="a42e8-119">as lock objects.</span></span>
 
-- <span data-ttu-id="0206a-117">`lock("myLock")` может привести к проблеме, поскольку любой код в процессе, использующий ту же строку, будет совместно использовать ту же блокировку.</span><span class="sxs-lookup"><span data-stu-id="0206a-117">`lock("myLock")` is a problem because any other code in the process using the same string, will share the same lock.</span></span>
+## <a name="example"></a><span data-ttu-id="a42e8-120">Пример</span><span class="sxs-lookup"><span data-stu-id="a42e8-120">Example</span></span>
 
-<span data-ttu-id="0206a-118">Для блокировки рекомендуется использовать объект `private`. Если нужно защитить данные, являющиеся общими для всех экземпляров, рекомендуется использовать переменную объекта `private static`.</span><span class="sxs-lookup"><span data-stu-id="0206a-118">Best practice is to define a `private` object to lock on, or a `private static` object variable to protect data common to all instances.</span></span>
+<span data-ttu-id="a42e8-121">В следующем примере определяется класс `Account`, который синхронизирует доступ к закрытому полю `balance` путем блокировки выделенного экземпляра `balanceLock`.</span><span class="sxs-lookup"><span data-stu-id="a42e8-121">The following example defines an `Account` class that synchronizes access to its private `balance` field by locking on a dedicated `balanceLock` instance.</span></span> <span data-ttu-id="a42e8-122">Использование того же экземпляра для блокировки гарантирует, что поле `balance` не смогут одновременно обновить два потока, пытающиеся вызвать методы `Debit` или `Credit` одновременно.</span><span class="sxs-lookup"><span data-stu-id="a42e8-122">Using the same instance for locking ensures that the `balance` field cannot be updated simultaneously by two threads attempting to call the `Debit` or `Credit` methods simultaneously.</span></span>
 
-<span data-ttu-id="0206a-119">Нельзя использовать ключевое слово [await](await.md) в теле оператора `lock`.</span><span class="sxs-lookup"><span data-stu-id="0206a-119">You can't use the [await](await.md) keyword in the body of a `lock` statement.</span></span>
+[!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
-## <a name="example---threads-without-locking"></a><span data-ttu-id="0206a-120">Пример — потоки без блокировки</span><span class="sxs-lookup"><span data-stu-id="0206a-120">Example - Threads without locking</span></span>
-
-<span data-ttu-id="0206a-121">В следующем примере показано простое использование потоков без блокировки в C#:</span><span class="sxs-lookup"><span data-stu-id="0206a-121">The following sample shows a simple use of threads without locking in C#:</span></span>
-
-[!code-csharp[csrefKeywordsFixedLock#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsFixedLock/CS/csrefKeywordsFixedLock.cs#5)]
-
-## <a name="example---threads-using-locking"></a><span data-ttu-id="0206a-122">Пример — потоки с блокировкой</span><span class="sxs-lookup"><span data-stu-id="0206a-122">Example - Threads using locking</span></span>
-
-<span data-ttu-id="0206a-123">В следующем примере используются потоки и ключевое слово`lock`.</span><span class="sxs-lookup"><span data-stu-id="0206a-123">The following sample uses threads and `lock`.</span></span> <span data-ttu-id="0206a-124">Так как присутствует оператор `lock`, блокировка оператора является важным разделом и `balance` никогда не будет отрицательным числом:</span><span class="sxs-lookup"><span data-stu-id="0206a-124">As long as the `lock` statement is present, the statement block is a critical section and `balance` will never become a negative number:</span></span>
-
-[!code-csharp[csrefKeywordsFixedLock#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsFixedLock/CS/csrefKeywordsFixedLock.cs#6)]
-
-## <a name="c-language-specification"></a><span data-ttu-id="0206a-125">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="0206a-125">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="a42e8-123">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="a42e8-123">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="0206a-126">См. также</span><span class="sxs-lookup"><span data-stu-id="0206a-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a42e8-124">См. также</span><span class="sxs-lookup"><span data-stu-id="a42e8-124">See also</span></span>
 
-- <xref:System.Reflection.MethodImplAttributes>
-- <xref:System.Threading.Mutex>
-- <xref:System.Threading.Monitor>
-- [<span data-ttu-id="0206a-127">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="0206a-127">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="0206a-128">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="0206a-128">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="0206a-129">Работа с потоками</span><span class="sxs-lookup"><span data-stu-id="0206a-129">Threading</span></span>](../../programming-guide/concepts/threading/index.md)
-- [<span data-ttu-id="0206a-130">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="0206a-130">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="0206a-131">Ключевые слова операторов</span><span class="sxs-lookup"><span data-stu-id="0206a-131">Statement Keywords</span></span>](statement-keywords.md)
-- [<span data-ttu-id="0206a-132">Блокируемые операции</span><span class="sxs-lookup"><span data-stu-id="0206a-132">Interlocked Operations</span></span>](../../../standard/threading/interlocked-operations.md)
-- [<span data-ttu-id="0206a-133">AutoResetEvent</span><span class="sxs-lookup"><span data-stu-id="0206a-133">AutoResetEvent</span></span>](../../../standard/threading/autoresetevent.md)
-- [<span data-ttu-id="0206a-134">Синхронизация потоков</span><span class="sxs-lookup"><span data-stu-id="0206a-134">Thread Synchronization</span></span>](../../programming-guide/concepts/threading/thread-synchronization.md)
+- <xref:System.Threading.Monitor?displayProperty=nameWithType>
+- <xref:System.Threading.SpinLock?displayProperty=nameWithType>
+- <xref:System.Threading.Interlocked?displayProperty=nameWithType>
+- [<span data-ttu-id="a42e8-125">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="a42e8-125">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="a42e8-126">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="a42e8-126">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="a42e8-127">Ключевые слова операторов</span><span class="sxs-lookup"><span data-stu-id="a42e8-127">Statement Keywords</span></span>](statement-keywords.md)
+- [<span data-ttu-id="a42e8-128">Блокируемые операции</span><span class="sxs-lookup"><span data-stu-id="a42e8-128">Interlocked operations</span></span>](../../../standard/threading/interlocked-operations.md)
+- [<span data-ttu-id="a42e8-129">Обзор примитивов синхронизации</span><span class="sxs-lookup"><span data-stu-id="a42e8-129">Overview of synchronization primitives</span></span>](../../../standard/threading/overview-of-synchronization-primitives.md)

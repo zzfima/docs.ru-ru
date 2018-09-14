@@ -1,53 +1,61 @@
 ---
 title: Таблица неявных числовых преобразований (Справочник по C#)
-ms.date: 07/20/2015
+ms.date: 09/05/2018
 helpviewer_keywords:
 - conversions [C#], implicit numeric
 - implicit numeric conversions [C#]
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 4bbc6086dc5fd3838ef9361762c3068ca44efd0e
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: e46816fc8f3a6ff71dcba3561098d3cfce1e1054
+ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43417600"
+ms.lasthandoff: 09/09/2018
+ms.locfileid: "44213268"
 ---
-# <a name="implicit-numeric-conversions-table-c-reference"></a><span data-ttu-id="f6db4-102">Таблица неявных числовых преобразований (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="f6db4-102">Implicit Numeric Conversions Table (C# Reference)</span></span>
-<span data-ttu-id="f6db4-103">В следующей таблице приведены предопределенные неявные числовые преобразования.</span><span class="sxs-lookup"><span data-stu-id="f6db4-103">The following table shows the predefined implicit numeric conversions.</span></span> <span data-ttu-id="f6db4-104">Неявные преобразования могут выполняться во многих ситуациях, включая вызов методов и операторы назначения.</span><span class="sxs-lookup"><span data-stu-id="f6db4-104">Implicit conversions might occur in many situations, including method invoking and assignment statements.</span></span>  
-  
-|<span data-ttu-id="f6db4-105">Исходный тип</span><span class="sxs-lookup"><span data-stu-id="f6db4-105">From</span></span>|<span data-ttu-id="f6db4-106">Кому</span><span class="sxs-lookup"><span data-stu-id="f6db4-106">To</span></span>|  
-|----------|--------|  
-|[<span data-ttu-id="f6db4-107">sbyte</span><span class="sxs-lookup"><span data-stu-id="f6db4-107">sbyte</span></span>](../../../csharp/language-reference/keywords/sbyte.md)|<span data-ttu-id="f6db4-108">`short`, `int`, `long`, `float`, `double` или `decimal`</span><span class="sxs-lookup"><span data-stu-id="f6db4-108">`short`, `int`, `long`, `float`, `double`, or `decimal`</span></span>|  
-|[<span data-ttu-id="f6db4-109">byte</span><span class="sxs-lookup"><span data-stu-id="f6db4-109">byte</span></span>](../../../csharp/language-reference/keywords/byte.md)|<span data-ttu-id="f6db4-110">`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`</span><span class="sxs-lookup"><span data-stu-id="f6db4-110">`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, or `decimal`</span></span>|  
-|[<span data-ttu-id="f6db4-111">short</span><span class="sxs-lookup"><span data-stu-id="f6db4-111">short</span></span>](../../../csharp/language-reference/keywords/short.md)|<span data-ttu-id="f6db4-112">`int`, `long`, `float`, `double` или `decimal`</span><span class="sxs-lookup"><span data-stu-id="f6db4-112">`int`, `long`, `float`, `double`, or `decimal`</span></span>|  
-|[<span data-ttu-id="f6db4-113">ushort</span><span class="sxs-lookup"><span data-stu-id="f6db4-113">ushort</span></span>](../../../csharp/language-reference/keywords/ushort.md)|<span data-ttu-id="f6db4-114">`int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`</span><span class="sxs-lookup"><span data-stu-id="f6db4-114">`int`, `uint`, `long`, `ulong`, `float`, `double`, or `decimal`</span></span>|  
-|[<span data-ttu-id="f6db4-115">int</span><span class="sxs-lookup"><span data-stu-id="f6db4-115">int</span></span>](../../../csharp/language-reference/keywords/int.md)|<span data-ttu-id="f6db4-116">`long`, `float`, `double` или `decimal`</span><span class="sxs-lookup"><span data-stu-id="f6db4-116">`long`, `float`, `double`, or `decimal`</span></span>|  
-|[<span data-ttu-id="f6db4-117">uint</span><span class="sxs-lookup"><span data-stu-id="f6db4-117">uint</span></span>](../../../csharp/language-reference/keywords/uint.md)|<span data-ttu-id="f6db4-118">`long`, `ulong`, `float`, `double` или `decimal`</span><span class="sxs-lookup"><span data-stu-id="f6db4-118">`long`, `ulong`, `float`, `double`, or `decimal`</span></span>|  
-|[<span data-ttu-id="f6db4-119">long</span><span class="sxs-lookup"><span data-stu-id="f6db4-119">long</span></span>](../../../csharp/language-reference/keywords/long.md)|<span data-ttu-id="f6db4-120">`float`, `double`или `decimal`</span><span class="sxs-lookup"><span data-stu-id="f6db4-120">`float`, `double`, or `decimal`</span></span>|  
-|[<span data-ttu-id="f6db4-121">char</span><span class="sxs-lookup"><span data-stu-id="f6db4-121">char</span></span>](../../../csharp/language-reference/keywords/char.md)|<span data-ttu-id="f6db4-122">`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`</span><span class="sxs-lookup"><span data-stu-id="f6db4-122">`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, or `decimal`</span></span>|  
-|[<span data-ttu-id="f6db4-123">float</span><span class="sxs-lookup"><span data-stu-id="f6db4-123">float</span></span>](../../../csharp/language-reference/keywords/float.md)|`double`|  
-|[<span data-ttu-id="f6db4-124">ulong</span><span class="sxs-lookup"><span data-stu-id="f6db4-124">ulong</span></span>](../../../csharp/language-reference/keywords/ulong.md)|<span data-ttu-id="f6db4-125">`float`, `double`или `decimal`</span><span class="sxs-lookup"><span data-stu-id="f6db4-125">`float`, `double`, or `decimal`</span></span>|  
-  
-## <a name="remarks"></a><span data-ttu-id="f6db4-126">Примечания</span><span class="sxs-lookup"><span data-stu-id="f6db4-126">Remarks</span></span>  
-  
--   <span data-ttu-id="f6db4-127">При преобразовании из `int`, `uint`, `long` или `ulong` в `float` и из `long` или `ulong` в `double` может быть потеряна точность, но не величина.</span><span class="sxs-lookup"><span data-stu-id="f6db4-127">Precision but not magnitude might be lost in the conversions from `int`, `uint`,  `long`, or `ulong` to `float` and from `long` or `ulong` to `double`.</span></span>  
-  
--   <span data-ttu-id="f6db4-128">Не поддерживается неявное преобразование в тип `char`.</span><span class="sxs-lookup"><span data-stu-id="f6db4-128">There are no implicit conversions to the `char` type.</span></span>  
-  
--   <span data-ttu-id="f6db4-129">Не поддерживается неявное преобразование между типами с плавающей запятой и типом `decimal`.</span><span class="sxs-lookup"><span data-stu-id="f6db4-129">There are no implicit conversions between floating-point types and the `decimal` type.</span></span>  
-  
--   <span data-ttu-id="f6db4-130">Константное выражение типа `int` можно преобразовать в `sbyte`, `byte`, `short`, `ushort`, `uint` или `ulong`, если значение константного выражения находится в диапазоне конечного типа.</span><span class="sxs-lookup"><span data-stu-id="f6db4-130">A constant expression of type `int` can be converted to `sbyte`, `byte`, `short`, `ushort`, `uint`, or `ulong`, provided the value of the constant expression is within the range of the destination type.</span></span>  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="f6db4-131">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="f6db4-131">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="f6db4-132">См. также</span><span class="sxs-lookup"><span data-stu-id="f6db4-132">See Also</span></span>  
+# <a name="implicit-numeric-conversions-table-c-reference"></a><span data-ttu-id="2bad4-102">Таблица неявных числовых преобразований (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="2bad4-102">Implicit numeric conversions table (C# Reference)</span></span>
 
-- [<span data-ttu-id="f6db4-133">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="f6db4-133">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="f6db4-134">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="f6db4-134">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="f6db4-135">Таблица целых типов</span><span class="sxs-lookup"><span data-stu-id="f6db4-135">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [<span data-ttu-id="f6db4-136">Таблица встроенных типов</span><span class="sxs-lookup"><span data-stu-id="f6db4-136">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [<span data-ttu-id="f6db4-137">Таблица явных числовых преобразований</span><span class="sxs-lookup"><span data-stu-id="f6db4-137">Explicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [<span data-ttu-id="f6db4-138">Приведение и преобразование типов</span><span class="sxs-lookup"><span data-stu-id="f6db4-138">Casting and Type Conversions</span></span>](../../../csharp/programming-guide/types/casting-and-type-conversions.md)
+<span data-ttu-id="2bad4-103">В следующей таблице приведены предопределенные неявные преобразования между числовыми типами .NET.</span><span class="sxs-lookup"><span data-stu-id="2bad4-103">The following table shows the predefined implicit conversions between .NET numeric types.</span></span>
+  
+|<span data-ttu-id="2bad4-104">Исходный тип</span><span class="sxs-lookup"><span data-stu-id="2bad4-104">From</span></span>|<span data-ttu-id="2bad4-105">Кому</span><span class="sxs-lookup"><span data-stu-id="2bad4-105">To</span></span>|  
+|----------|--------|  
+|[<span data-ttu-id="2bad4-106">sbyte</span><span class="sxs-lookup"><span data-stu-id="2bad4-106">sbyte</span></span>](sbyte.md)|<span data-ttu-id="2bad4-107">`short`, `int`, `long`, `float`, `double` или `decimal`</span><span class="sxs-lookup"><span data-stu-id="2bad4-107">`short`, `int`, `long`, `float`, `double`, or `decimal`</span></span>|  
+|[<span data-ttu-id="2bad4-108">byte</span><span class="sxs-lookup"><span data-stu-id="2bad4-108">byte</span></span>](byte.md)|<span data-ttu-id="2bad4-109">`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`</span><span class="sxs-lookup"><span data-stu-id="2bad4-109">`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, or `decimal`</span></span>|  
+|[<span data-ttu-id="2bad4-110">short</span><span class="sxs-lookup"><span data-stu-id="2bad4-110">short</span></span>](short.md)|<span data-ttu-id="2bad4-111">`int`, `long`, `float`, `double` или `decimal`</span><span class="sxs-lookup"><span data-stu-id="2bad4-111">`int`, `long`, `float`, `double`, or `decimal`</span></span>|  
+|[<span data-ttu-id="2bad4-112">ushort</span><span class="sxs-lookup"><span data-stu-id="2bad4-112">ushort</span></span>](ushort.md)|<span data-ttu-id="2bad4-113">`int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`</span><span class="sxs-lookup"><span data-stu-id="2bad4-113">`int`, `uint`, `long`, `ulong`, `float`, `double`, or `decimal`</span></span>|  
+|[<span data-ttu-id="2bad4-114">int</span><span class="sxs-lookup"><span data-stu-id="2bad4-114">int</span></span>](int.md)|<span data-ttu-id="2bad4-115">`long`, `float`, `double` или `decimal`</span><span class="sxs-lookup"><span data-stu-id="2bad4-115">`long`, `float`, `double`, or `decimal`</span></span>|  
+|[<span data-ttu-id="2bad4-116">uint</span><span class="sxs-lookup"><span data-stu-id="2bad4-116">uint</span></span>](uint.md)|<span data-ttu-id="2bad4-117">`long`, `ulong`, `float`, `double` или `decimal`</span><span class="sxs-lookup"><span data-stu-id="2bad4-117">`long`, `ulong`, `float`, `double`, or `decimal`</span></span>|  
+|[<span data-ttu-id="2bad4-118">long</span><span class="sxs-lookup"><span data-stu-id="2bad4-118">long</span></span>](long.md)|<span data-ttu-id="2bad4-119">`float`, `double`или `decimal`</span><span class="sxs-lookup"><span data-stu-id="2bad4-119">`float`, `double`, or `decimal`</span></span>|  
+|[<span data-ttu-id="2bad4-120">char</span><span class="sxs-lookup"><span data-stu-id="2bad4-120">char</span></span>](char.md)|<span data-ttu-id="2bad4-121">`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`</span><span class="sxs-lookup"><span data-stu-id="2bad4-121">`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double`, or `decimal`</span></span>|  
+|[<span data-ttu-id="2bad4-122">float</span><span class="sxs-lookup"><span data-stu-id="2bad4-122">float</span></span>](float.md)|`double`|  
+|[<span data-ttu-id="2bad4-123">ulong</span><span class="sxs-lookup"><span data-stu-id="2bad4-123">ulong</span></span>](ulong.md)|<span data-ttu-id="2bad4-124">`float`, `double`или `decimal`</span><span class="sxs-lookup"><span data-stu-id="2bad4-124">`float`, `double`, or `decimal`</span></span>|  
+  
+## <a name="remarks"></a><span data-ttu-id="2bad4-125">Примечания</span><span class="sxs-lookup"><span data-stu-id="2bad4-125">Remarks</span></span>  
+
+- <span data-ttu-id="2bad4-126">Любой [целочисленный тип](integral-types-table.md) неявно преобразуется к любому [типу с плавающей запятой](floating-point-types-table.md).</span><span class="sxs-lookup"><span data-stu-id="2bad4-126">Any [integral type](integral-types-table.md) is implicitly convertible to any [floating-point type](floating-point-types-table.md).</span></span>
+
+- <span data-ttu-id="2bad4-127">При преобразовании из `int`, `uint`, `long` или `ulong` в `float` и из `long` или `ulong` в `double` может быть потеряна точность, но не величина.</span><span class="sxs-lookup"><span data-stu-id="2bad4-127">Precision but not magnitude might be lost in the conversions from `int`, `uint`, `long`, or `ulong` to `float` and from `long` or `ulong` to `double`.</span></span>  
+  
+- <span data-ttu-id="2bad4-128">Не поддерживается неявное преобразование в тип `char`.</span><span class="sxs-lookup"><span data-stu-id="2bad4-128">There are no implicit conversions to the `char` type.</span></span>  
+  
+- <span data-ttu-id="2bad4-129">Не поддерживается неявное преобразование между типами `float` и `double` и типом `decimal`.</span><span class="sxs-lookup"><span data-stu-id="2bad4-129">There are no implicit conversions between the `float` and `double` types and the `decimal` type.</span></span>  
+  
+- <span data-ttu-id="2bad4-130">Значение константного выражения типа `int` (например, значение, представленное целочисленным литералом) может быть преобразовано в `sbyte`, `byte`, `short`, `ushort`, `uint` или `ulong`, если оно находится в диапазоне конечного типа.</span><span class="sxs-lookup"><span data-stu-id="2bad4-130">A value of a constant expression of type `int` (for example, a value represented by an integral literal) can be converted to `sbyte`, `byte`, `short`, `ushort`, `uint`, or `ulong`, provided it's within the range of the destination type:</span></span>
+
+  ```csharp
+  byte a = 13;    // Compiles
+  byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
+  ```
+
+<span data-ttu-id="2bad4-131">Дополнительные сведения о неявных преобразованиях см. в разделе [Неявные преобразования](/dotnet/csharp/language-reference/language-specification/conversions#implicit-conversions) в [спецификации языка C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="2bad4-131">For more information about implicit conversions, see the [Implicit conversions](/dotnet/csharp/language-reference/language-specification/conversions#implicit-conversions) section of the [C# language specification](../language-specification/index.md).</span></span>
+  
+## <a name="see-also"></a><span data-ttu-id="2bad4-132">См. также</span><span class="sxs-lookup"><span data-stu-id="2bad4-132">See also</span></span>
+
+- [<span data-ttu-id="2bad4-133">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="2bad4-133">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="2bad4-134">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="2bad4-134">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="2bad4-135">Таблица целых типов</span><span class="sxs-lookup"><span data-stu-id="2bad4-135">Integral types table</span></span>](integral-types-table.md)
+- [<span data-ttu-id="2bad4-136">Таблица типов с плавающей запятой</span><span class="sxs-lookup"><span data-stu-id="2bad4-136">Floating-point types table</span></span>](floating-point-types-table.md)
+- [<span data-ttu-id="2bad4-137">Таблица встроенных типов</span><span class="sxs-lookup"><span data-stu-id="2bad4-137">Built-in types table</span></span>](built-in-types-table.md)
+- [<span data-ttu-id="2bad4-138">Таблица явных числовых преобразований</span><span class="sxs-lookup"><span data-stu-id="2bad4-138">Explicit numeric conversions table</span></span>](explicit-numeric-conversions-table.md)
+- [<span data-ttu-id="2bad4-139">Приведение и преобразование типов</span><span class="sxs-lookup"><span data-stu-id="2bad4-139">Casting and type conversions</span></span>](../../programming-guide/types/casting-and-type-conversions.md)
