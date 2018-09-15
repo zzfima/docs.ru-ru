@@ -3,11 +3,11 @@ title: Записи (F#)
 description: 'Узнайте, как записи на F # представляют собой простые агрегаты именованных значений, при необходимости с участниками.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6103d96b6b80a9e2ed168755958dbe800f7fa862
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45569597"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638575"
 ---
 # <a name="records"></a>Записи
 

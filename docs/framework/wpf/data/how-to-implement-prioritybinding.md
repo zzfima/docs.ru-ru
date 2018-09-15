@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
 ms.openlocfilehash: a7729ec3d06ec701cf2194bed5d90b5bed76573a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514071"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649267"
 ---
 # <a name="how-to-implement-prioritybinding"></a>Практическое руководство. Реализация класса PriorityBinding
 <xref:System.Windows.Data.PriorityBinding> в [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] работает путем указания списка привязок. Список привязок упорядочен от наиболее важных к наименее важным. Если привязка наивысшего приоритета возвращает значение успешно при его обработке то нет необходимости обрабатывать другие привязки в списке. Возможно, что привязка наивысшего приоритета занимает много времени для оценки, будет использоваться самым высоким приоритетом, которое возвращает значение успешно, пока не будет успешно возвращает значение привязки более высокий приоритет.  

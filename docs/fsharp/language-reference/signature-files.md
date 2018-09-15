@@ -3,11 +3,11 @@ title: 'Файлы сигнатур (F #)'
 description: 'Узнайте, как использовать файлы сигнатур F # для хранения сведений об открытых сигнатурах набора элементов F # программы, такие как типы, пространства имен и модули.'
 ms.date: 06/15/2018
 ms.openlocfilehash: f0836aa7f638dc9e2b066b0f46bbb6c086347615
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508425"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638562"
 ---
 # <a name="signatures"></a>Сигнатуры
 

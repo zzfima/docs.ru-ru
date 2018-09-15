@@ -3,11 +3,11 @@ title: Структуры (F#)
 description: 'Дополнительные сведения о структуре F #, это компактный тип объекта часто более эффективен, чем класс для типов с меньшим объемом данных и простое поведение.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 08af88132dda28883e246b94585ff4ed8bd2f16a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508453"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638812"
 ---
 # <a name="structures"></a>Структуры
 

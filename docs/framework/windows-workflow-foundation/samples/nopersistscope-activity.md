@@ -3,11 +3,11 @@ title: Действие NoPersistScope
 ms.date: 03/30/2017
 ms.assetid: 9a0baeb7-a05c-4fac-b905-252758cb71bb
 ms.openlocfilehash: 6543756594b6734aec39bf22c5ab6215605341b1
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45529259"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649553"
 ---
 # <a name="nopersistscope-activity"></a>Действие NoPersistScope
 В этом образце показано, как обрабатывать несериализуемое и высвобождаемое состояние в рабочем процессе. Важно заметить, что попыток сохранения несериализуемого состояния в рабочих процессах не происходит. Кроме того, необходимо очищать высвобождаемые объекты после их использования в рабочем процессе.  

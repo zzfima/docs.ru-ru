@@ -3,11 +3,11 @@ title: Владение и отделение пользователей от с
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
 ms.openlocfilehash: 7b1cda211fdc89732afa8eed1eaaf2c98309a969
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44708066"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649124"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>Владение и отделение пользователей от схем в SQL Server
 Основным принципом безопасности SQL Server является то, что владельцы объектов имеют неотзываемые разрешения на их администрирование. Нельзя удалять права доступа у владельцев объектов. Также нельзя удалять пользователей из базы данных, если они владеют в ней объектами.  

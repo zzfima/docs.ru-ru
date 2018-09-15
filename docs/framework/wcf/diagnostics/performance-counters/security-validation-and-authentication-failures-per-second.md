@@ -5,11 +5,11 @@ ms.assetid: 266c3bd3-2ffc-4471-94b7-3675443be1ac
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 4836a5076401de2f7c3112b298cdadc0e0307962
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45518351"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45641063"
 ---
 # <a name="security-validation-and-authentication-failures-per-second"></a>Количество сбоев при проверке безопасности и проверке подлинности в секунду
 Имя счетчика: Security Validation and Authentication Failures Per Second.  

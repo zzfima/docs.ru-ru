@@ -3,11 +3,11 @@ title: Миграция веб-служб WSE 3.0 на платформу WCF
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
 ms.openlocfilehash: 21e36be178bb0dd0c52213d8c4c1387a564a0e5a
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45507762"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45649423"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Миграция веб-служб WSE 3.0 на платформу WCF
 Преимущества переноса WSE веб-служб 3.0 для Windows Communication Foundation (WCF) относятся повышение производительности и поддержка дополнительных транспортов, дополнительных сценариев безопасности и WS-* спецификации. Веб-службы, которая переносится с WSE 3.0 на платформу WCF можно добиться повышения производительности 200% до 400%. Дополнительные сведения о транспортах, поддерживаемых WCF, см. в разделе [выбор транспорта](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Список сценариев, поддерживаемых WCF, см. в разделе [типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Список спецификаций, поддерживаемых WCF, см. в разделе [руководство по взаимодействию протоколов служб Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
