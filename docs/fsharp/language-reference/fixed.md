@@ -3,11 +3,11 @@ title: 'Ключевое слово Fixed (F #)'
 description: 'Узнайте, как «закрепить» локальный в стек для предотвращения коллекции с помощью F # «fixed» ключевое слово.'
 ms.date: 04/24/2017
 ms.openlocfilehash: 1bf1b2ad67d2dd7f854e569cfca7c06e8aec7f4c
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 09/14/2018
-ms.locfileid: "45560377"
+ms.locfileid: "45624513"
 ---
 # <a name="the-fixed-keyword"></a>Ключевое слово Fixed
 

@@ -3,11 +3,11 @@ title: Действие OperationScope
 ms.date: 03/30/2017
 ms.assetid: 56206a21-1e63-422d-b92a-e5d8b713e707
 ms.openlocfilehash: 562fd9c8ff964cb997012d49600bce73d4441465
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45520617"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45625897"
 ---
 # <a name="operationscope"></a>Действие OperationScope
 В этом образце демонстрируется использование действий по обмену сообщениями <xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.SendReply> для представления существующего пользовательского действия в качестве операции в службе рабочего процесса. Этот пример включает новое пользовательское действие, названное `OperationScope`. Оно предназначено для облегчения разработки службы рабочего процесса, позволяя пользователям отдельно записывать текст их операций как пользовательские действия, а затем представляя их как операции службы, использующие действие `OperationScope`. Например, пользовательское действие `Add`, которое принимает два аргумента `in` и возвращает один аргумент `out`, может быть представлено как операция `Add` в рабочем процессе путем перетаскивания его в область `OperationScope`.  
