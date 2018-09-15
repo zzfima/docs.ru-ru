@@ -6,26 +6,26 @@ helpviewer_keywords:
 - My.Computer.Audio object
 ms.assetid: ab5bdd04-b0ce-48b2-91c5-6404ceca31d0
 ms.openlocfilehash: 805e2a87e586e96048dd40033e7d80a74dcc94e9
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45583798"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45641213"
 ---
-# <a name="mycomputeraudio-object"></a><span data-ttu-id="897b1-102">Объект My.Computer.Audio</span><span class="sxs-lookup"><span data-stu-id="897b1-102">My.Computer.Audio Object</span></span>
-<span data-ttu-id="897b1-103">Предоставляет методы для воспроизведения звуков.</span><span class="sxs-lookup"><span data-stu-id="897b1-103">Provides methods for playing sounds.</span></span>  
+# <a name="mycomputeraudio-object"></a><span data-ttu-id="c89c4-102">Объект My.Computer.Audio</span><span class="sxs-lookup"><span data-stu-id="c89c4-102">My.Computer.Audio Object</span></span>
+<span data-ttu-id="c89c4-103">Предоставляет методы для воспроизведения звуков.</span><span class="sxs-lookup"><span data-stu-id="c89c4-103">Provides methods for playing sounds.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="897b1-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="897b1-104">Remarks</span></span>  
- <span data-ttu-id="897b1-105">Сведения о методах и свойствах `My.Computer.Audio` объекта, см. в разделе <xref:Microsoft.VisualBasic.Devices.Audio>.</span><span class="sxs-lookup"><span data-stu-id="897b1-105">For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c89c4-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="c89c4-104">Remarks</span></span>  
+ <span data-ttu-id="c89c4-105">Сведения о методах и свойствах `My.Computer.Audio` объекта, см. в разделе <xref:Microsoft.VisualBasic.Devices.Audio>.</span><span class="sxs-lookup"><span data-stu-id="c89c4-105">For information about the methods and properties of the `My.Computer.Audio` object, see <xref:Microsoft.VisualBasic.Devices.Audio>.</span></span>  
   
- <span data-ttu-id="897b1-106">Дополнительные сведения см. в разделе [звуки игральную](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span><span class="sxs-lookup"><span data-stu-id="897b1-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span></span>  
+ <span data-ttu-id="c89c4-106">Дополнительные сведения см. в разделе [звуки игральную](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span><span class="sxs-lookup"><span data-stu-id="c89c4-106">For more information, see [Playing Sounds](../../../visual-basic/developing-apps/programming/computer-resources/playing-sounds.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="897b1-107">Требования</span><span class="sxs-lookup"><span data-stu-id="897b1-107">Requirements</span></span>  
- <span data-ttu-id="897b1-108">**Пространство имен:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="897b1-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
+## <a name="requirements"></a><span data-ttu-id="c89c4-107">Требования</span><span class="sxs-lookup"><span data-stu-id="c89c4-107">Requirements</span></span>  
+ <span data-ttu-id="c89c4-108">**Пространство имен:** <xref:Microsoft.VisualBasic.Devices></span><span class="sxs-lookup"><span data-stu-id="c89c4-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices></span></span>  
   
- <span data-ttu-id="897b1-109">**Класс:** <xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="897b1-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Audio></span></span>  
+ <span data-ttu-id="c89c4-109">**Класс:** <xref:Microsoft.VisualBasic.Devices.Audio></span><span class="sxs-lookup"><span data-stu-id="c89c4-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Audio></span></span>  
   
- <span data-ttu-id="897b1-110">**Сборка:** библиотеки времени выполнения Visual Basic (в Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="897b1-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="c89c4-110">**Сборка:** библиотеки времени выполнения Visual Basic (в Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="c89c4-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="897b1-111">См. также</span><span class="sxs-lookup"><span data-stu-id="897b1-111">See Also</span></span>  
- [<span data-ttu-id="897b1-112">Объект My.Computer</span><span class="sxs-lookup"><span data-stu-id="897b1-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a><span data-ttu-id="c89c4-111">См. также</span><span class="sxs-lookup"><span data-stu-id="c89c4-111">See Also</span></span>  
+ [<span data-ttu-id="c89c4-112">Объект My.Computer</span><span class="sxs-lookup"><span data-stu-id="c89c4-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
