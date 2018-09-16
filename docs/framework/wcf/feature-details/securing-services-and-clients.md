@@ -7,11 +7,11 @@ ms.assetid: e681f3bd-0c09-4a58-b0e4-0ecbdf1aa6c7
 author: BrucePerlerMS
 manager: mbaldwin
 ms.openlocfilehash: 60aa4da95666de01daa087c4c8e826c8cf72ba85
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45583720"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674082"
 ---
 # <a name="securing-services-and-clients"></a>Защита служб и клиентов
 Сведения этого раздела посвящена программирование безопасности в Windows Communication Foundation (WCF). Обычно обеспечение безопасности включает выбор подходящей предоставляемой системой привязки, задание свойств элемента безопасности и задание свойств поведений службы, управляющих извлечением учетных данных для использования службой или клиентом. Эти подходы охватывают требования к безопасности большинства пользователей для большинства сценариев, как показано в [типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Если сценарий требует больше возможностей, сначала ознакомьтесь с разделом [возможности безопасности при использовании пользовательских привязок](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md); Если решение не очевидными, см. в разделе [расширение безопасности](../../../../docs/framework/wcf/extending/extending-security.md). Если при создании (или взаимодействия с) система, использующая сложные утверждения, см. в пункте [авторизации](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  

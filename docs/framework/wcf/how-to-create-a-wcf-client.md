@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 9e6d75bf8911a3c36e63b3bc108faae823434d1d
-ms.sourcegitcommit: 8c2ece71e54f46aef9a2153540d0bda7e74b19a9
+ms.openlocfilehash: e5655a6fdc06e69d801cb38b7ee7412450f0d34c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44510003"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674147"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Практическое руководство. Создание клиента Windows Communication Foundation
 
@@ -36,18 +36,18 @@ ms.locfileid: "44510003"
 
 3.  Добавьте ссылку на сборку System.ServiceModel для проекта GettingStartedClient, щелкнув правой кнопкой мыши **ссылку** папку проекта GettingStartedClient в обозревателе решений и выберите **добавить** Ссылка. В диалоговом окне **Добавить ссылку** выберите в левой части диалогового окна пункт **Платформа**. В текстовом поле «Поиск сборок» введите `System.ServiceModel`. В центральной части диалогового окна выберите **System.ServiceModel**, нажмите кнопку **Добавить**, а затем кнопку **Закрыть**. Сохраните решение, нажав кнопку **сохранить все** кнопку под главным меню.
 
-4.  Далее вы добавите ссылку на службу для службы калькулятора. Прежде чем это можно будет сделать, следует запустить консольное приложение GettingStartedHost. После запуска размещения правой кнопкой мыши **ссылки** папку проекта GettingStartedClient в **обозревателе решений** и выберите **добавить**  >   **Службе Справочник по**. Введите следующий URL-адрес в поле "адрес" **Add Service Reference** диалоговое окно: [ http://localhost:8000/ServiceModelSamples/Service ](http://localhost:8000/ServiceModelSamples/Service) и нажмите кнопку **Go** кнопки. CalculatorService должна отображаться в списке служб. Дважды щелкните CalculatorService и он будет развернуть и Показать контрактов службы, реализованном в службе. Оставьте пространство имен по умолчанию и нажмите кнопку **ОК** кнопки.
+4.  Далее вы добавите ссылку на службу для службы калькулятора. Прежде чем это можно будет сделать, следует запустить консольное приложение GettingStartedHost. После запуска размещения правой кнопкой мыши **ссылки** папку проекта GettingStartedClient в **обозревателе решений** и выберите **добавить**  >   **Службе Справочник по**. Введите следующий URL-адрес в поле "адрес" **Add Service Reference** диалоговое окно: [ http://localhost:8000/GettingStartedClient/Service ](http://localhost:8000/GettingStartedClient/Service) и нажмите кнопку **Go** кнопки. CalculatorService должна отображаться в списке служб. Дважды щелкните CalculatorService и он будет развернуть и Показать контрактов службы, реализованном в службе. Оставьте пространство имен по умолчанию и нажмите кнопку **ОК** кнопки.
 
      При добавлении ссылки на службу с помощью Visual Studio в обозревателе решений для проекта GettingStartedClient появится новый элемент в папке «Ссылки на службы».  Если вы используете [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) средство, будет создан файл исходного кода и файл app.config.
 
      Можно также использовать средство командной строки [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) с соответствующими параметрами, чтобы создать клиентский код. В следующем примере создается файл кода и файл конфигурации для службы. В первом примере показано, как создать прокси на VB, а во втором то же самое, но с использованием C#:
 
     ```
-    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/ServiceModelSamples/service
+    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStartedClient/service
     ```
 
     ```csharp
-    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/ServiceModelSamples/service
+    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStartedClient/service
     ```
 
  Мы создали прокси, который будет использовать клиентское приложение для вызова службы калькулятора. Перейти к следующей статье из серии: [как: Настройка клиента](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)

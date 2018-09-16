@@ -16,11 +16,11 @@ helpviewer_keywords:
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 ms.openlocfilehash: 824c1e47cf50dc13a3a986e48a49158b15dbb935
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44699859"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677335"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Пример. Отладка пользовательских элементов управления Windows Forms во время разработки
 При создании пользовательского элемента управления, вам будет часто понадобиться для отладки его поведение во время разработки. Это особенно верно в случае, если вы создаете пользовательский конструктор для элемента управления. Дополнительные сведения см. в разделе [Пошаговое руководство: создание Windows Forms управления что принимает преимуществ Visual Studio во время разработки функций](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  

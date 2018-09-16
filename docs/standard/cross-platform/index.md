@@ -6,11 +6,11 @@ ms.assetid: b153baaa-130c-4169-860b-e580591de91e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cf3a3b984936cb4eb947d650cc8c63db5a9a8ea5
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45513917"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666711"
 ---
 # <a name="developing-for-multiple-platforms-with-the-net-framework"></a>Разработка для нескольких платформ с помощью .NET Framework
 Вы можете разрабатывать приложения для платформ Майкрософт и других поставщиков, используя .NET Framework и Visual Studio.  

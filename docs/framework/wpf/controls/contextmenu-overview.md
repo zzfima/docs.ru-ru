@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
 ms.openlocfilehash: 54fd823594fba4500f35ed1d69720a3309e54a36
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44698632"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45666776"
 ---
 # <a name="contextmenu-overview"></a>Общие сведения о ContextMenu
 <xref:System.Windows.Controls.ContextMenu> Класс представляет элемент, который предоставляет функциональные возможности с помощью контекстно зависимое <xref:System.Windows.Controls.Menu>. Как правило, предоставляется пользователю <xref:System.Windows.Controls.ContextMenu> в [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] щелкнув правой кнопкой мыши. В данном разделе представлены <xref:System.Windows.Controls.ContextMenu> элемент и приводятся примеры того, как использовать его в [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] и кода.  

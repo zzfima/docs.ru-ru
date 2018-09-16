@@ -3,11 +3,11 @@ title: Взаимодействие с набором правил 3.5
 ms.date: 03/30/2017
 ms.assetid: 969f3295-d874-428c-a9c6-623e3d578e51
 ms.openlocfilehash: 5ea5454ef80bfd83611ed20392782d99cd8c0c25
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45510153"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677283"
 ---
 # <a name="interop-with-35-rule-set"></a>Взаимодействие с набором правил 3.5
 В этом примере демонстрируется использование <xref:System.Activities.Statements.Interop> для интеграции с пользовательским действием в [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] с помощью <!--zz <xref:System.Workflow.Activities.Policy> --> `System.Workflow.Activities.Policy` и правил. Оно передает данные для пользовательского действия, привязывая переменные [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] к свойствам зависимостей, предоставляемым пользовательским действием.  

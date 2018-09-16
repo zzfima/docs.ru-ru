@@ -6,11 +6,11 @@ ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44272955"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45674095"
 ---
 # <a name="guidelines-for-collections"></a>Рекомендации по использованию коллекций
 Можно рассматривать как коллекцию любого типа, разработанные специально для того, для использования группы объектов, с некоторыми общими характеристиками. Это почти всегда требуется для таких типов, для реализации <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>, поэтому в этом разделе мы учитываем только типы, реализовав один или оба этих интерфейса, как коллекции.  

@@ -3,11 +3,11 @@ title: Приведение и преобразование (F#)
 description: 'Узнайте, как на языке программирования F # предоставляет операторы преобразования для преобразования между различными типами-примитивами.'
 ms.date: 05/16/2016
 ms.openlocfilehash: aca1a2523130ee485a7e7c9a6a45a410904cb246
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45508399"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45677935"
 ---
 # <a name="casting-and-conversions-f"></a>Приведение и преобразование (F#)
 
