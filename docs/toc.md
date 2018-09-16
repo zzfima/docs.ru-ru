@@ -82,7 +82,7 @@
 ### [Начало работы с .NET Core в macOS с помощью Visual Studio для Mac](core/tutorials/using-on-mac-vs.md)
 ### [Создание полноценного решения .NET Core на базе macOS с помощью Visual Studio для Mac](core/tutorials/using-on-mac-vs-full-solution.md)
 ### [Начало работы с .NET Core с помощью средств интерфейса командной строки](core/tutorials/using-with-xplat-cli.md)
-#### [Организация и тестирование проектов с использованием командной строки .NET Core](core/tutorials/testing-with-cli.md)
+### [Организация и тестирование проектов с использованием командной строки .NET Core](core/tutorials/testing-with-cli.md)
 ### [Разработка библиотек с помощью кроссплатформенных средств](core/tutorials/libraries.md)
 ### [Разработка приложений ASP.NET Core](core/tutorials/aspnet-core.md)
 ### [Управление версиями зависимостей пакетов для .NET Core 1.0](core/tutorials/managing-package-dependency-versions.md)
