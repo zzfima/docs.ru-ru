@@ -6,11 +6,11 @@ ms.assetid: ffd97806-ab43-4538-8de2-5828bfbbde57
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7a55aa71ff3976241b96dd12baef06a9a13ef9dd
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44266869"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676984"
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Разворачиваемые и не сохраняемые ссылки на сущности
 Если ссылка на сущность разворачивается и заменяется текстом, который она представляет, узел **XmlEntityReference** не создается. Вместо этого выполняется синтаксический анализ для декларации сущности и на место **XmlEntityReference** копируются узлы, созданные из содержимого этой декларации. Таким образом, в примере `&publisher;` ссылка `&publisher;` не сохраняется, а вместо нее создается узел **XmlText**.  

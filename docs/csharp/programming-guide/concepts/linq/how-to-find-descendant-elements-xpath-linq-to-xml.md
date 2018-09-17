@@ -3,11 +3,11 @@ title: Практическое руководство. Поиск элемен�
 ms.date: 07/20/2015
 ms.assetid: b318da39-bb8b-4c56-a019-e13b12b01831
 ms.openlocfilehash: df1b151948b7b11757f2f8f312fa1f0bba00673a
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44274678"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45675658"
 ---
 # <a name="how-to-find-descendant-elements-xpath-linq-to-xml-c"></a>Практическое руководство. Поиск элементов-потомков (XPath-LINQ to XML) (C#)
 В этом разделе рассказывается, как возвращать элементы-потомки с определенным именем.  

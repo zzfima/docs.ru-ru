@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e8f58e17-2714-4821-802a-f8eb3b2baa62
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ded5c057b1c257e8bcf3c8427f5810720eaf0947
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc3af01167fe97b701bdb0c7bc37af02d8e8a77c
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33582165"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45658591"
 ---
 # <a name="threadsuspend-garbage-collection-and-safe-points"></a>Метод Thread.Suspend, сборка мусора и безопасные точки
 Когда вы вызываете для потока <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType>, система фиксирует запрос на приостановку потока и позволяет ему продолжить работу до безопасной точки, а лишь затем выполняет приостановку. Безопасной точкой для потока считается такой этап выполнения, в котором можно безопасно выполнять сборку мусора.  
@@ -26,8 +26,9 @@ ms.locfileid: "33582165"
 > [!NOTE]
 >  Чтобы выполнить сборку мусора, среда выполнения приостанавливает все потоки, за исключением самого потока сборки мусора. Каждый поток должен достичь безопасной точки, чтобы его можно было приостановить.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Threading.Thread>  
- <xref:System.GC>  
- [Работа с потоками](../../../docs/standard/threading/index.md)  
- [Автоматическое управление памятью](../../../docs/standard/automatic-memory-management.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Threading.Thread>  
+- <xref:System.GC>  
+- [Работа с потоками](../../../docs/standard/threading/index.md)  
+- [Автоматическое управление памятью](../../../docs/standard/automatic-memory-management.md)
