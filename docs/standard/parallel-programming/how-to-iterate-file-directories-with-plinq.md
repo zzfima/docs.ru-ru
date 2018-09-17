@@ -8,11 +8,11 @@ ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d48f6df1e0e7680d2706c73c33dc817e1feaf1d5
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "43871628"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45689331"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>Практическое руководство. Перебор каталогов с файлами с помощью PLINQ
 В этом примере показаны два простых способа параллельного выполнения операций с каталогами файлов. Первый запрос использует метод <xref:System.IO.Directory.GetFiles%2A>, чтобы заполнить массив имен всех файлов и подкаталогов в каталоге. Этот метод не возвращает результаты, пока не заполнит весь массив, поэтому в начале его работы можно ожидать существенную задержку. Но после заполнения массива PLINQ сможет очень быстро обрабатывать его параллельно.  

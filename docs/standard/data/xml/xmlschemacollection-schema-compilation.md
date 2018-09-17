@@ -9,11 +9,11 @@ ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7b6ea782020dde83aa7d59be8ec3058a27075ad
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44267955"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45677706"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>Компиляция схемы XmlSchemaCollection
 Объект **XmlSchemaCollection** является кэшем или библиотекой, где можно хранить и проверять схемы XDR и XSD. Использование **XmlSchemaCollection** повышает производительность, поскольку схемы кэшируются в памяти и их не нужно каждый раз получать из файла или по URL-адресу.  

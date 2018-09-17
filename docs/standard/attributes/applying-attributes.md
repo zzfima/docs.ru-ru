@@ -13,11 +13,11 @@ ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d28da0c788d40222ccd689807d6e51f66b4ce78
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44193722"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45686054"
 ---
 # <a name="applying-attributes"></a>Применение атрибутов
 Чтобы применить атрибут к элементу кода, выполните указанные ниже действия.  

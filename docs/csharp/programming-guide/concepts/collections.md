@@ -3,11 +3,11 @@ title: Коллекции (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
 ms.openlocfilehash: 24b2155c07b6b66820d373d6310ff6b1c6ab224f
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44273298"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45679178"
 ---
 # <a name="collections-c"></a>Коллекции (C#)
 Во многих приложениях требуется создавать группы связанных объектов и управлять ими. Существует два способа группировки объектов: создать массив объектов и создать коллекцию.  
