@@ -4,12 +4,12 @@ description: Дополнительные сведения о новых воз�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 02aac2dab2b892927c0c98fae30bb287a6e24ad6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4be579f2000c86b3dad412b24589fa8e7024d2f0
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44191057"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591767"
 ---
 # <a name="whats-new-in-net-core-20"></a>Новые возможности .NET Core 2.0
 
@@ -158,8 +158,8 @@ ms.locfileid: "44191057"
 
 - [Микрослужбы и контейнеры Docker](../../standard/microservices-architecture/index.md)
 - [Разработка веб-приложений с помощью ASP.NET](../../standard/modern-web-apps-azure-architecture/index.md)
-- [Мобильные приложения в Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index.md)
-- [Приложения, развертываемые в облаке с помощью Azure](/azure/architecture/reference-architectures/index.md)
+- [Мобильные приложения в Xamarin](/xamarin/xamarin-forms/enterprise-application-patterns/index)
+- [Приложения, развертываемые в облаке с помощью Azure](/azure/architecture/reference-architectures/index)
 
 ## <a name="see-also"></a>См. также
 

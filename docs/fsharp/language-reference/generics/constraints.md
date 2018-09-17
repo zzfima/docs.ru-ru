@@ -3,11 +3,11 @@ title: Ограничения (F#)
 description: 'Дополнительные сведения о F # ограничений, относящихся к параметров универсального типа для задания требований к аргументу типа в универсальном типе или функции.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 9534db4ffd195022366af8c993658bd94f375f53
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44707780"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45675890"
 ---
 # <a name="constraints"></a>Ограничения
 

@@ -4,12 +4,12 @@ description: Команда dotnet run — это удобное средств
 author: mairaw
 ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 609ac27f21e6801992b9e10c7d465a805492859e
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: f560e6f795f00488818647a4b5c711dcf9d59dcd
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245256"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45687651"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -44,7 +44,7 @@ dotnet run [-h|--help]
 
 `dotnet run` — это удобное средство для запуска приложения из исходного кода одной командой. Это полезно для быстрой последовательной разработки из командной строки. В отношении сборки кода эта команда зависима от команды [`dotnet build`](dotnet-build.md). Любые требования к сборке, например, то, что проект сначала нужно восстановить, применяются и к `dotnet run`.
 
-Выходные файлы записываются в расположение по умолчанию, которым является `bin/<configuration>/<target>`. Например, если у вас есть приложение `netcoreapp1.0` и вы запускаете `dotnet run`, выходные данные помещаются в `bin/Debug/netcoreapp1.0`. При необходимости файлы перезаписываются. Временные файлы помещаются в каталог `obj`.
+Выходные файлы записываются в расположение по умолчанию, которым является `bin/<configuration>/<target>`. Например, если у вас есть приложение `netcoreapp2.1` и вы запускаете `dotnet run`, выходные данные помещаются в `bin/Debug/netcoreapp2.1`. При необходимости файлы перезаписываются. Временные файлы помещаются в каталог `obj`.
 
 Когда в проекте задано несколько платформ, выполнение `dotnet run` приводит к ошибке, если только для указания платформы не используется параметр `-f|--framework <FRAMEWORK>`.
 

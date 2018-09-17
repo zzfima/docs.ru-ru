@@ -4,12 +4,13 @@ description: Сведения о создании библиотеки клас�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
-ms.openlocfilehash: fa265dc5e1101c54ae8d65ad9a3232cd6bd4e52a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: vs-dotnet
+ms.openlocfilehash: 101cb8b9134f7e64e5489f5bc7abb6a9570d2131
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33211993"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45638825"
 ---
 # <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017
 
