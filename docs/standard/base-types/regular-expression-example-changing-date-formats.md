@@ -16,47 +16,47 @@ ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e8c26608115a22a5402d671c5f5e51c75442a0a5
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262676"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45668877"
 ---
-# <a name="regular-expression-example-changing-date-formats"></a><span data-ttu-id="fbcd2-102">Пример регулярного выражения. Изменение форматов даты</span><span class="sxs-lookup"><span data-stu-id="fbcd2-102">Regular Expression Example: Changing Date Formats</span></span>
-<span data-ttu-id="fbcd2-103">В следующем примере кода метод <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> используется для замены дат в формате *мм*/*дд*/*гг* на даты в формате *дд*-*мм*-*гг*.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-103">The following code example uses the <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> method to replace dates that have the form *mm*/*dd*/*yy* with dates that have the form *dd*-*mm*-*yy*.</span></span>  
+# <a name="regular-expression-example-changing-date-formats"></a><span data-ttu-id="a61fb-102">Пример регулярного выражения. Изменение форматов даты</span><span class="sxs-lookup"><span data-stu-id="a61fb-102">Regular Expression Example: Changing Date Formats</span></span>
+<span data-ttu-id="a61fb-103">В следующем примере кода метод <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> используется для замены дат в формате *мм*/*дд*/*гг* на даты в формате *дд*-*мм*-*гг*.</span><span class="sxs-lookup"><span data-stu-id="a61fb-103">The following code example uses the <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> method to replace dates that have the form *mm*/*dd*/*yy* with dates that have the form *dd*-*mm*-*yy*.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fbcd2-104">Пример</span><span class="sxs-lookup"><span data-stu-id="fbcd2-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="a61fb-104">Пример</span><span class="sxs-lookup"><span data-stu-id="a61fb-104">Example</span></span>  
  [!code-csharp[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/cs/Example_ChangeDateFormats1.cs#1)]
  [!code-vb[RegularExpressions.Examples.ChangeDateFormats#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/vb/Example_ChangeDateFormats1.vb#1)]  
   
- <span data-ttu-id="fbcd2-105">В следующем коде показано, как можно вызывать метод `MDYToDMY` в приложении.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-105">The following code shows how the `MDYToDMY` method can be called in an application.</span></span>  
+ <span data-ttu-id="a61fb-105">В следующем коде показано, как можно вызывать метод `MDYToDMY` в приложении.</span><span class="sxs-lookup"><span data-stu-id="a61fb-105">The following code shows how the `MDYToDMY` method can be called in an application.</span></span>  
   
  [!code-csharp[RegularExpressions.Examples.ChangeDateFormats#2](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/cs/Example_ChangeDateFormats1.cs#2)]
  [!code-vb[RegularExpressions.Examples.ChangeDateFormats#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.ChangeDateFormats/vb/Example_ChangeDateFormats1.vb#2)]  
   
-## <a name="comments"></a><span data-ttu-id="fbcd2-106">Комментарии</span><span class="sxs-lookup"><span data-stu-id="fbcd2-106">Comments</span></span>  
- <span data-ttu-id="fbcd2-107">Возможные интерпретации шаблона регулярного выражения `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` показаны в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-107">The regular expression pattern  `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` is interpreted as shown in the following table.</span></span>  
+## <a name="comments"></a><span data-ttu-id="a61fb-106">Комментарии</span><span class="sxs-lookup"><span data-stu-id="a61fb-106">Comments</span></span>  
+ <span data-ttu-id="a61fb-107">Возможные интерпретации шаблона регулярного выражения `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` показаны в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="a61fb-107">The regular expression pattern  `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` is interpreted as shown in the following table.</span></span>  
   
-|<span data-ttu-id="fbcd2-108">Шаблон</span><span class="sxs-lookup"><span data-stu-id="fbcd2-108">Pattern</span></span>|<span data-ttu-id="fbcd2-109">Описание:</span><span class="sxs-lookup"><span data-stu-id="fbcd2-109">Description</span></span>|  
+|<span data-ttu-id="a61fb-108">Шаблон</span><span class="sxs-lookup"><span data-stu-id="a61fb-108">Pattern</span></span>|<span data-ttu-id="a61fb-109">Описание:</span><span class="sxs-lookup"><span data-stu-id="a61fb-109">Description</span></span>|  
 |-------------|-----------------|  
-|`\b`|<span data-ttu-id="fbcd2-110">Совпадение должно начинаться на границе слова.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-110">Begin the match at a word boundary.</span></span>|  
-|`(?<month>\d{1,2})`|<span data-ttu-id="fbcd2-111">Совпадение с одной или двумя десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-111">Match one or two decimal digits.</span></span> <span data-ttu-id="fbcd2-112">Это записанная группа `month`.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-112">This is the `month` captured group.</span></span>|  
-|`/`|<span data-ttu-id="fbcd2-113">Совпадение с косой чертой.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-113">Match the slash mark.</span></span>|  
-|`(?<day>\d{1,2})`|<span data-ttu-id="fbcd2-114">Совпадение с одной или двумя десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-114">Match one or two decimal digits.</span></span> <span data-ttu-id="fbcd2-115">Это записанная группа `day`.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-115">This is the `day` captured group.</span></span>|  
-|`/`|<span data-ttu-id="fbcd2-116">Совпадение с косой чертой.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-116">Match the slash mark.</span></span>|  
-|`(?<year>\d{2,4})`|<span data-ttu-id="fbcd2-117">Совпадение с двумя-четырьмя десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-117">Match from two to four decimal digits.</span></span> <span data-ttu-id="fbcd2-118">Это записанная группа `year`.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-118">This is the `year` captured group.</span></span>|  
-|`\b`|<span data-ttu-id="fbcd2-119">Совпадение должно заканчиваться на границе слова.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-119">End the match at a word boundary.</span></span>|  
+|`\b`|<span data-ttu-id="a61fb-110">Совпадение должно начинаться на границе слова.</span><span class="sxs-lookup"><span data-stu-id="a61fb-110">Begin the match at a word boundary.</span></span>|  
+|`(?<month>\d{1,2})`|<span data-ttu-id="a61fb-111">Совпадение с одной или двумя десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="a61fb-111">Match one or two decimal digits.</span></span> <span data-ttu-id="a61fb-112">Это записанная группа `month`.</span><span class="sxs-lookup"><span data-stu-id="a61fb-112">This is the `month` captured group.</span></span>|  
+|`/`|<span data-ttu-id="a61fb-113">Совпадение с косой чертой.</span><span class="sxs-lookup"><span data-stu-id="a61fb-113">Match the slash mark.</span></span>|  
+|`(?<day>\d{1,2})`|<span data-ttu-id="a61fb-114">Совпадение с одной или двумя десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="a61fb-114">Match one or two decimal digits.</span></span> <span data-ttu-id="a61fb-115">Это записанная группа `day`.</span><span class="sxs-lookup"><span data-stu-id="a61fb-115">This is the `day` captured group.</span></span>|  
+|`/`|<span data-ttu-id="a61fb-116">Совпадение с косой чертой.</span><span class="sxs-lookup"><span data-stu-id="a61fb-116">Match the slash mark.</span></span>|  
+|`(?<year>\d{2,4})`|<span data-ttu-id="a61fb-117">Совпадение с двумя-четырьмя десятичными цифрами.</span><span class="sxs-lookup"><span data-stu-id="a61fb-117">Match from two to four decimal digits.</span></span> <span data-ttu-id="a61fb-118">Это записанная группа `year`.</span><span class="sxs-lookup"><span data-stu-id="a61fb-118">This is the `year` captured group.</span></span>|  
+|`\b`|<span data-ttu-id="a61fb-119">Совпадение должно заканчиваться на границе слова.</span><span class="sxs-lookup"><span data-stu-id="a61fb-119">End the match at a word boundary.</span></span>|  
   
- <span data-ttu-id="fbcd2-120">Шаблон `${day}-${month}-${year}` определяет строку замены, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-120">The pattern `${day}-${month}-${year}` defines the replacement string as shown in the following table.</span></span>  
+ <span data-ttu-id="a61fb-120">Шаблон `${day}-${month}-${year}` определяет строку замены, как показано в следующей таблице.</span><span class="sxs-lookup"><span data-stu-id="a61fb-120">The pattern `${day}-${month}-${year}` defines the replacement string as shown in the following table.</span></span>  
   
-|<span data-ttu-id="fbcd2-121">Шаблон</span><span class="sxs-lookup"><span data-stu-id="fbcd2-121">Pattern</span></span>|<span data-ttu-id="fbcd2-122">Описание:</span><span class="sxs-lookup"><span data-stu-id="fbcd2-122">Description</span></span>|  
+|<span data-ttu-id="a61fb-121">Шаблон</span><span class="sxs-lookup"><span data-stu-id="a61fb-121">Pattern</span></span>|<span data-ttu-id="a61fb-122">Описание:</span><span class="sxs-lookup"><span data-stu-id="a61fb-122">Description</span></span>|  
 |-------------|-----------------|  
-|`$(day)`|<span data-ttu-id="fbcd2-123">Добавляет строку, которая записана захватываемой группой `day`.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-123">Add the string captured by the `day` capturing group.</span></span>|  
-|`-`|<span data-ttu-id="fbcd2-124">Добавляет символ дефиса.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-124">Add a hyphen.</span></span>|  
-|`$(month)`|<span data-ttu-id="fbcd2-125">Добавляет строку, которая записана захватываемой группой `month`.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-125">Add the string captured by the `month` capturing group.</span></span>|  
-|`-`|<span data-ttu-id="fbcd2-126">Добавляет символ дефиса.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-126">Add a hyphen.</span></span>|  
-|`$(year)`|<span data-ttu-id="fbcd2-127">Добавляет строку, которая записана захватываемой группой `year`.</span><span class="sxs-lookup"><span data-stu-id="fbcd2-127">Add the string captured by the `year` capturing group.</span></span>|  
+|`$(day)`|<span data-ttu-id="a61fb-123">Добавляет строку, которая записана захватываемой группой `day`.</span><span class="sxs-lookup"><span data-stu-id="a61fb-123">Add the string captured by the `day` capturing group.</span></span>|  
+|`-`|<span data-ttu-id="a61fb-124">Добавляет символ дефиса.</span><span class="sxs-lookup"><span data-stu-id="a61fb-124">Add a hyphen.</span></span>|  
+|`$(month)`|<span data-ttu-id="a61fb-125">Добавляет строку, которая записана захватываемой группой `month`.</span><span class="sxs-lookup"><span data-stu-id="a61fb-125">Add the string captured by the `month` capturing group.</span></span>|  
+|`-`|<span data-ttu-id="a61fb-126">Добавляет символ дефиса.</span><span class="sxs-lookup"><span data-stu-id="a61fb-126">Add a hyphen.</span></span>|  
+|`$(year)`|<span data-ttu-id="a61fb-127">Добавляет строку, которая записана захватываемой группой `year`.</span><span class="sxs-lookup"><span data-stu-id="a61fb-127">Add the string captured by the `year` capturing group.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="fbcd2-128">См. также</span><span class="sxs-lookup"><span data-stu-id="fbcd2-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a61fb-128">См. также</span><span class="sxs-lookup"><span data-stu-id="a61fb-128">See also</span></span>
 
-- [<span data-ttu-id="fbcd2-129">Регулярные выражения .NET</span><span class="sxs-lookup"><span data-stu-id="fbcd2-129">.NET Regular Expressions</span></span>](../../../docs/standard/base-types/regular-expressions.md)
+- [<span data-ttu-id="a61fb-129">Регулярные выражения .NET</span><span class="sxs-lookup"><span data-stu-id="a61fb-129">.NET Regular Expressions</span></span>](../../../docs/standard/base-types/regular-expressions.md)

@@ -9,24 +9,24 @@ ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44276267"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45676195"
 ---
-# <a name="ordered-node-retrieval-by-index"></a><span data-ttu-id="01656-102">Упорядоченное извлечение узлов по индексу</span><span class="sxs-lookup"><span data-stu-id="01656-102">Ordered Node Retrieval by Index</span></span>
-<span data-ttu-id="01656-103">Модель DOM XML-документа консорциума W3C описывает класс NodeList, который позволяет обрабатывать упорядоченные списки узлов, в отличие от неупорядоченного набора, обрабатываемого с помощью класса **XmlNamedNodeMap**.</span><span class="sxs-lookup"><span data-stu-id="01656-103">The World Wide Web Consortium (W3C) XML Document Object Model (DOM) also describes a NodeList, which has the ability to handle an ordered list of nodes, as opposed to the unordered set handled by the **XmlNamedNodeMap**.</span></span> <span data-ttu-id="01656-104">Класс NodeList в платформе Microsoft .NET Framework называется **XmlNodeList**.</span><span class="sxs-lookup"><span data-stu-id="01656-104">The NodeList in the Microsoft .NET Framework is called **XmlNodeList**.</span></span> <span data-ttu-id="01656-105">Методы и свойства, которые возвращают класс **XmlNodeList**:</span><span class="sxs-lookup"><span data-stu-id="01656-105">Methods and properties that return an **XmlNodeList** are:</span></span>  
+# <a name="ordered-node-retrieval-by-index"></a><span data-ttu-id="84ef9-102">Упорядоченное извлечение узлов по индексу</span><span class="sxs-lookup"><span data-stu-id="84ef9-102">Ordered Node Retrieval by Index</span></span>
+<span data-ttu-id="84ef9-103">Модель DOM XML-документа консорциума W3C описывает класс NodeList, который позволяет обрабатывать упорядоченные списки узлов, в отличие от неупорядоченного набора, обрабатываемого с помощью класса **XmlNamedNodeMap**.</span><span class="sxs-lookup"><span data-stu-id="84ef9-103">The World Wide Web Consortium (W3C) XML Document Object Model (DOM) also describes a NodeList, which has the ability to handle an ordered list of nodes, as opposed to the unordered set handled by the **XmlNamedNodeMap**.</span></span> <span data-ttu-id="84ef9-104">Класс NodeList в платформе Microsoft .NET Framework называется **XmlNodeList**.</span><span class="sxs-lookup"><span data-stu-id="84ef9-104">The NodeList in the Microsoft .NET Framework is called **XmlNodeList**.</span></span> <span data-ttu-id="84ef9-105">Методы и свойства, которые возвращают класс **XmlNodeList**:</span><span class="sxs-lookup"><span data-stu-id="84ef9-105">Methods and properties that return an **XmlNodeList** are:</span></span>  
   
--   <span data-ttu-id="01656-106">XmlNode.ChildNodes</span><span class="sxs-lookup"><span data-stu-id="01656-106">XmlNode.ChildNodes</span></span>  
+-   <span data-ttu-id="84ef9-106">XmlNode.ChildNodes</span><span class="sxs-lookup"><span data-stu-id="84ef9-106">XmlNode.ChildNodes</span></span>  
   
--   <span data-ttu-id="01656-107">XmlDocument.GetElementsByTagName</span><span class="sxs-lookup"><span data-stu-id="01656-107">XmlDocument.GetElementsByTagName</span></span>  
+-   <span data-ttu-id="84ef9-107">XmlDocument.GetElementsByTagName</span><span class="sxs-lookup"><span data-stu-id="84ef9-107">XmlDocument.GetElementsByTagName</span></span>  
   
--   <span data-ttu-id="01656-108">XmlElement.GetElementsByTagName;</span><span class="sxs-lookup"><span data-stu-id="01656-108">XmlElement.GetElementsByTagName</span></span>  
+-   <span data-ttu-id="84ef9-108">XmlElement.GetElementsByTagName;</span><span class="sxs-lookup"><span data-stu-id="84ef9-108">XmlElement.GetElementsByTagName</span></span>  
   
--   <span data-ttu-id="01656-109">XmlNode.SelectNodes</span><span class="sxs-lookup"><span data-stu-id="01656-109">XmlNode.SelectNodes</span></span>  
+-   <span data-ttu-id="84ef9-109">XmlNode.SelectNodes</span><span class="sxs-lookup"><span data-stu-id="84ef9-109">XmlNode.SelectNodes</span></span>  
   
- <span data-ttu-id="01656-110">Класс **XmlNodeList** имеет свойство **Count**, с помощью которого можно создавать циклы для выполнения итерации по узлам объекта **XmlNodeList**, как показано в следующем примере кода:</span><span class="sxs-lookup"><span data-stu-id="01656-110">The **XmlNodeList** has a **Count** property that can be used to write loops to iterate over the nodes in the **XmlNodeList**, as shown in the following code sample:</span></span>  
+ <span data-ttu-id="84ef9-110">Класс **XmlNodeList** имеет свойство **Count**, с помощью которого можно создавать циклы для выполнения итерации по узлам объекта **XmlNodeList**, как показано в следующем примере кода:</span><span class="sxs-lookup"><span data-stu-id="84ef9-110">The **XmlNodeList** has a **Count** property that can be used to write loops to iterate over the nodes in the **XmlNodeList**, as shown in the following code sample:</span></span>  
   
 ```vb  
 Dim doc as XmlDocument = new XmlDocument()  
@@ -55,7 +55,7 @@ for (int i=0; i < elemList.Count; i++)
 }   
 ```  
   
- <span data-ttu-id="01656-111">В дополнение к свойству **Count**, доступен метод **GetEnumerator**, который обеспечивает итерацию в стиле `foreach` по коллекции узлов в объекте **XmlNodeList**.</span><span class="sxs-lookup"><span data-stu-id="01656-111">In addition to the **Count** property, there is a **GetEnumerator** method that provides a, `foreach` style iteration over the collection of nodes in the **XmlNodeList**.</span></span> <span data-ttu-id="01656-112">В следующем примере кода показано использование инструкции `foreach`.</span><span class="sxs-lookup"><span data-stu-id="01656-112">The following code example shows the use of the `foreach` statement.</span></span>  
+ <span data-ttu-id="84ef9-111">В дополнение к свойству **Count**, доступен метод **GetEnumerator**, который обеспечивает итерацию в стиле `foreach` по коллекции узлов в объекте **XmlNodeList**.</span><span class="sxs-lookup"><span data-stu-id="84ef9-111">In addition to the **Count** property, there is a **GetEnumerator** method that provides a, `foreach` style iteration over the collection of nodes in the **XmlNodeList**.</span></span> <span data-ttu-id="84ef9-112">В следующем примере кода показано использование инструкции `foreach`.</span><span class="sxs-lookup"><span data-stu-id="84ef9-112">The following code example shows the use of the `foreach` statement.</span></span>  
   
 ```vb  
 Dim doc As New XmlDocument()  
@@ -92,8 +92,8 @@ End While
   }  
 ```  
   
- <span data-ttu-id="01656-113">Дополнительные сведения о доступных методах и свойствах класса **XmlNodeList** см. в описании <xref:System.Xml.XmlNodeList>.</span><span class="sxs-lookup"><span data-stu-id="01656-113">For more information on the methods and properties available on the **XmlNodeList**, see <xref:System.Xml.XmlNodeList>.</span></span>  
+ <span data-ttu-id="84ef9-113">Дополнительные сведения о доступных методах и свойствах класса **XmlNodeList** см. в описании <xref:System.Xml.XmlNodeList>.</span><span class="sxs-lookup"><span data-stu-id="84ef9-113">For more information on the methods and properties available on the **XmlNodeList**, see <xref:System.Xml.XmlNodeList>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="01656-114">См. также</span><span class="sxs-lookup"><span data-stu-id="01656-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="84ef9-114">См. также</span><span class="sxs-lookup"><span data-stu-id="84ef9-114">See also</span></span>
 
-- [<span data-ttu-id="01656-115">Модель объектов документов XML (DOM)</span><span class="sxs-lookup"><span data-stu-id="01656-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [<span data-ttu-id="84ef9-115">Модель объектов документов XML (DOM)</span><span class="sxs-lookup"><span data-stu-id="84ef9-115">XML Document Object Model (DOM)</span></span>](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
