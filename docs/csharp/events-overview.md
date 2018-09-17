@@ -3,12 +3,12 @@ title: Общие сведения о событиях
 description: Сведения о событиях в .NET Core и наших задачах по разработке языка для них.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 2a2230ea5fba1b0cd5b13319677965e7a776549e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9f14954dd2e8aeacf3c5ae70a9e891ad11a6f0d7
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213478"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45618068"
 ---
 # <a name="introduction-to-events"></a>Общие сведения о событиях
 
@@ -65,7 +65,7 @@ Progress?.Invoke(this, new FileListArgs(file));
 ```csharp
 EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
     Console.WriteLine(eventArgs.FoundFile);
-lister.Progress += OnProgress;
+lister.Progress += onProgress;
 ```
 
 Имя метода обработчика обычно содержит имя события с префиксом "On", как показано выше.

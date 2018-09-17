@@ -13,11 +13,11 @@ ms.assetid: 90f308b9-82dc-414a-bce1-77e0155e56bd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 939630726f399184c264f73ee01270f50981e83a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44209112"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45595351"
 ---
 # <a name="registration-free-com-interop"></a>COM-взаимодействие без регистрации
 COM-взаимодействие без регистрации активирует компонент, не используя реестр Windows для хранения сведений о сборке. Вместо регистрации компонента на компьютере во время развертывания необходимо в режиме разработки создать файлы манифеста в стиле Win32, содержащие информацию о привязке и активации. Именно эти файлы манифеста, а не ключи реестра, управляют активацией объекта.  

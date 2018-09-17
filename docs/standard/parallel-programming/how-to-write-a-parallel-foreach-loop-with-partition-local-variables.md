@@ -11,11 +11,11 @@ ms.assetid: 24b10041-b30b-45cb-aa65-66cf568ca76d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 357cc488705ec3dab66543fa4814dbe3e6a22777
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44227575"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45591001"
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-partition-local-variables"></a>Практическое руководство. Написание цикла Parallel.ForEach c локальными переменными раздела
 В следующем примере описывается порядок написания метода <xref:System.Threading.Tasks.Parallel.ForEach%2A>, использующего локальные переменные раздела. Когда выполняется цикл <xref:System.Threading.Tasks.Parallel.ForEach%2A>, он делит свою исходную коллекцию на несколько разделов. Каждый раздел содержит свою копию локальной переменной раздела. Локальная переменная раздела аналогична [локальной переменной потока](xref:System.Threading.ThreadLocal%601), однако допускает выполнение нескольких разделов в одном потоке.

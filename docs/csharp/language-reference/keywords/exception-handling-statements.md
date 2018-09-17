@@ -5,11 +5,11 @@ helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
 ms.openlocfilehash: 1d48981e0d36053fce1249b27cd15551ed59dc91
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44275188"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45593690"
 ---
 # <a name="exception-handling-statements-c-reference"></a>Операторы обработки исключений (Справочник по C#)
 Язык C# обеспечивает встроенную поддержку для обработки нестандартных ситуаций, называемых исключениями, которые могут происходить во время выполнения программы. Эти исключения обрабатываются кодом, выходящим за пределы обычного потока управления.  

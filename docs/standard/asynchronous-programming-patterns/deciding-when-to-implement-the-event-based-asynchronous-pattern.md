@@ -13,11 +13,11 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
 ms.openlocfilehash: af30f0d09ce772f20f342ec0936d0ca63f5465d7
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44262364"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45592027"
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Определение, когда следует реализовать асинхронную модель, основанную на событиях
 Асинхронная модель на основе событий применяется для предоставления асинхронного поведения класса. С момента ее появления [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] определяет две модели для предоставления асинхронного поведения: на основе интерфейса <xref:System.IAsyncResult?displayProperty=nameWithType> и на основе событий. Эта статья описывает ситуации, в которых вам следует применять ту или иную модель.  

@@ -6,11 +6,11 @@ ms.assetid: d818a29a-6ee5-4725-97c4-78cf60a156b6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 960d69e7db4d06956bfff8fb849f1d085e4cb1c0
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44179381"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45594054"
 ---
 # <a name="removing-nodes-content-and-values-from-an-xml-document"></a>Удаление узлов, содержимого и значений из XML-документа
 Как только в памяти создана модель XML DOM, можно удалить узлы дерева или удалить содержимое и значения из узлов определенного типа. См. дополнительные сведения о [полном удалении листового узла или поддерева узлов из модели DOM](../../../../docs/standard/data/xml/removing-nodes-from-the-dom.md). См. дополнительные сведения об [удалении атрибутов из узла элемента в модели DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md). См. дополнительные сведения об [удалении содержимого узла с сохранением узла в дереве в модели DOM](../../../../docs/standard/data/xml/removing-node-content-in-the-dom.md).  

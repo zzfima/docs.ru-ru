@@ -27,11 +27,11 @@ ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d039e591e1f61a7be18dc224845f82b107d918f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211959"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45617938"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Преобразование типов в .NET Framework
 <a name="top"></a> У каждого значения есть соответствующий тип, который определяет такие атрибуты, как объем памяти, которая выделяется значению, диапазон возможных значений и доступные члены типа. Многие значения можно выразить несколькими типами. Например, число 4 можно выразить как целое число или как число с плавающей запятой. Преобразование типа создает значение нового типа, эквивалентное значению старого типа, но при этом не обязательно сохраняется идентичность (или точные значения) первоначального объекта.  

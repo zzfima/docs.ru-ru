@@ -3,11 +3,11 @@ title: Практическое руководство. Создание XML и�
 ms.date: 07/20/2015
 ms.assetid: 57b9ccde-f983-4a21-ae61-70ecede30307
 ms.openlocfilehash: 9200cfc443ae87fcbeaf87c7674f15d8a241f5dc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44210884"
+ms.lasthandoff: 09/16/2018
+ms.locfileid: "45609192"
 ---
 # <a name="how-to-generate-xml-from-csv-files-c"></a>Практическое руководство. Создание XML из CSV-файлов (C#)
 В этом примере показано, как [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] и [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] используются для создания XML-документа из файла с разделителями-запятыми (.csv).  

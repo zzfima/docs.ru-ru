@@ -16,11 +16,11 @@ ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 663f9d88315f396b187cca874c930179f1dea523
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44204959"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45615395"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>Практическое руководство. Преобразование числовых данных, введенных пользователем в веб-элементах управления, в числа
 Веб-страницы могут отображаться в любой части света, а значит пользователи будут вводить числовые данные в элемент управления <xref:System.Web.UI.WebControls.TextBox> в самых разных форматах. Поэтому очень важно правильно определить язык и региональные параметры каждого посетителя веб-страницы. Тогда вы сможете применить соглашения о форматировании, соответствующие языку и региональным параметрам пользователя, при синтаксическом анализе вводимых данных.  

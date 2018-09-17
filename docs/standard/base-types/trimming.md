@@ -18,11 +18,11 @@ ms.assetid: ab248dab-70d4-4413-81c6-542d153fd195
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1d13d4e115caa636e5d760b65bc98e195490f911
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44184097"
+ms.lasthandoff: 09/15/2018
+ms.locfileid: "45616238"
 ---
 # <a name="trimming-and-removing-characters-from-strings-in-net"></a>Сокращение и удаление символов из строк в .NET
 При разборе предложения на отдельные слова может оказаться, что в начале или в конце некоторых слов стоят пробелы. В этом случае можно воспользоваться методами сокращения в классе **System.String**, чтобы удалить любое количество пробелов или других символов из указанной позиции в строке. В таблице ниже описаны доступны методы сокращения.  
