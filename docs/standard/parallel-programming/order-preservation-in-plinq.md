@@ -11,11 +11,11 @@ ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1587b2c4d19833c615c5a10a2fe0d6b28e854aca
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615028"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698335"
 ---
 # <a name="order-preservation-in-plinq"></a>Сохранение порядка в PLINQ
 PLINQ предназначен для повышения производительности при сохранении правильности вычислений. Запрос должен выполняться как можно быстрее, но всегда давать правильные результаты. В некоторых случаях для правильных расчетов нужно соблюдать порядок исходной последовательности, но упорядочение может требовать больших вычислительных ресурсов. Поэтому по умолчанию PLINQ не сохраняет порядок исходной последовательности. В этом PLINQ похож на [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)], но отличается от LINQ to Objects, который строго сохраняет порядок.  
