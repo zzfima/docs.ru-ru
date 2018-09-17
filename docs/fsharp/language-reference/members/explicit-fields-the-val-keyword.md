@@ -3,11 +3,11 @@ title: Явные поля. Ключевое слово val (F#)
 description: Дополнительные сведения о ключевом слове val в F#, которое используется для объявления места хранения значения в типе класса или структуры без инициализации.
 ms.date: 05/16/2016
 ms.openlocfilehash: 9cd06f7e90192be79490dd0ff67f118cce4339c3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617374"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45746397"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>Явные поля. Ключевое слово val
 

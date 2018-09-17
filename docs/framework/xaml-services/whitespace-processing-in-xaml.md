@@ -8,11 +8,11 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: 89f8a4675b3edc23913549bc24f0d9ae16917519
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595072"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45749978"
 ---
 # <a name="white-space-processing-in-xaml"></a>Обработки пробелов в XAML
 Состояние согласно правилам языка XAML, значащим пробелом должны обрабатываться [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] реализации обработчика. В этом разделе описываются эти правила языка XAML. Здесь также описывается обработка дополнительных пробелов, определяемое [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] реализация обработчика XAML и записи XAML для сериализации.  

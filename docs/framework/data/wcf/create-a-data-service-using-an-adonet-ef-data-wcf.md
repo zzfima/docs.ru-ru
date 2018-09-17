@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 72439596ec6dc6c42024ed38116ba0026922154c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4bccd1e4655786ae24166cdc32619b420c4a54d3
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679613"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743778"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Практическое руководство. Создание службы данных с использованием источника данных Entity Framework ADO.NET (службы данных WCF)
 
@@ -34,7 +34,7 @@ ms.locfileid: "45679613"
 
 6. В **свойства соединения** диалоговом окне введите имя сервера, выберите метод проверки подлинности, введите имя базы данных и нажмите кнопку **ОК**.
 
-     **Выбор подключения к данным**s-диалоговое окно обновляется параметры подключения к базе данных.
+     **Выбор подключения к данным** диалоговое окно обновляется параметры подключения к базе данных.
 
 7. Убедитесь, что **сохранить настройки подключения сущности в App.Config как:** флажок. Затем нажмите кнопку **Далее**.
 

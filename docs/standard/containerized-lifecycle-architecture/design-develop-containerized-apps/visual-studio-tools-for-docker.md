@@ -3,72 +3,68 @@ title: С помощью средств Visual Studio для Docker (Visual Stud
 description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 09/22/2017
-ms.openlocfilehash: facc295399a7471edfd3e59eb1cc0e90f01ef11b
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/12/2018
+ms.custom: vs-dotnet
+ms.openlocfilehash: af14c92ab27885deec878dc33e7b94035f43e65b
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104896"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45743834"
 ---
 # <a name="using-visual-studio-tools-for-docker-visual-studio-on-windows"></a>С помощью средств Visual Studio для Docker (Visual Studio в Windows)
 
-Разработчик рабочего процесса при использовании средств Visual Studio для Docker аналогична рабочего процесса при использовании кода Visual Studio и Docker CLI (на самом деле он основан на одном Docker CLI), но проще приступить к работе, упрощает процесс и предоставляет больше производительность для построения, запуска и создать задач. Это также может выполнять и отлаживать вашей контейнеры через простые действия, такие как F5 или Ctrl + F5 в Visual Studio. Еще более с Visual Studio 2017 г Помимо возможности позволяют выполнять и отлаживать в одном контейнере, можно также запустить и отладить группы контейнеров (всего решения) в то же время, если они определены в одном файле docker compose.yml на уровне решения.
+Рабочий процесс разработки при использовании инструментов Visual Studio для Docker похоже на рабочий процесс, при использовании Visual Studio Code и Docker CLI. По сути, он основан на том же Docker CLI, но проще приступить к работе, упрощает процесс и обеспечивает повышение производительности для сборки, запуска, а также объединять задач. Он также имеет возможность выполнять и отлаживать контейнеры с помощью простых действий, таких как F5 или Ctrl + F5, из Visual Studio. Благодаря поддержке оркестрации дополнительный контейнер, помимо возможности для запуска и отладки одного контейнера можно выполнять и отлаживать группу контейнеров (всего решения), в то же время. Просто определите контейнеры в том же *docker-compose.yml* файл на уровне решения.
 
-## <a name="configuring-your-local-environment"></a>Настройка локальной среде
+## <a name="configuring-your-local-environment"></a>Настройка локальной среды
 
-С последними версиями Docker для Windows проще, чем когда-либо для разработки Docker приложений так, как настройка является простым, как описано в следующих документах.
+Поддержка docker включена в Visual Studio 2017 с любым из рабочей нагрузки .NET и .NET Core. Установите Docker для Windows отдельно.
+
+В последних версиях Docker для Windows это проще, чем когда-либо для разработки приложений Docker так, как настройка довольно прост, как описано в следующих документах.
 
 **Дополнительные сведения:** Дополнительные сведения об установке Docker для Windows, перейдите к <https://docs.docker.com/docker-for-windows/>.
 
-Если вы используете Visual Studio 2015, необходимо иметь обновления 3 или более поздней версии, а также средств Visual Studio для Docker.
+**Дополнительные сведения:** инструкции по установке Visual Studio, см. в статье [ https://visualstudio.microsoft.com/downloads/ ](https://visualstudio.microsoft.com/downloads/).
 
-**Дополнительные сведения:** инструкции по установке Visual Studio перейдите к [ https://visualstudio.microsoft.com/\ продуктов или vs-2015--выпуски продукта](https://visualstudio.microsoft.com/products/vs-2015-product-editions).
+Чтобы просмотреть сведения об установке средств Visual Studio для Docker, перейдите к <http://aka.ms/vstoolsfordocker> и <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
 
-Для просмотра дополнительных сведений об установке набора средств Visual Studio для Docker, воспользуйтесь <http://aka.ms/vstoolsfordocker> и <https://docs.microsoft.com/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker>.
+## <a name="using-docker-tools-in-visual-studio-2017"></a>С помощью средств Docker в Visual Studio 2017
 
-Вы используете Visual Studio 2017 г., уже включена поддержка Docker.
+При добавлении поддержки Docker в проект (см. рис. 4-26), Visual Studio добавляет *Dockerfile* в корневую папку проекта.
 
-## <a name="using-docker-tools-in-visual-studio-2015"></a>С помощью средств Docker в Visual Studio 2015
+![Включение поддержки решения Docker в проекте Visual Studio 2017](./media/image32.png)
 
-Средства Visual Studio для Docker предоставляет согласованный способ разработки и проверки локально в контейнеры Docker для Linux в узле Linux Docker или виртуальной Машины или в контейнеры Windows непосредственно в Windows.
+Рис. 4-26: Включение поддержки решения Docker в проекте Visual Studio 2017
 
-Если вы используете один контейнер, первое, что необходимо начать — включить поддержку Docker в проект .NET Core. Для этого щелкните правой кнопкой мыши файл проекта, как показано на рисунке 4 — 25.
+ Поддержка оркестрации контейнера, с помощью Docker Compose, добавляется по умолчанию в Visual Studio 2017 версии 15.7 или более ранней версии. Поддержка оркестрации контейнеров — это компонент согласием в Visual Studio 2017 версии 15.8 или более поздней версии, в этом случае Docker Compose и Service Fabric поддерживаются.
 
-![https://i1.visualstudiogallery.msdn.s-msft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/image/file/205468/1/add-docker-support.png](./media/image31.png)
+С помощью Visual Studio требуется выделить 15,8 и более поздних версий можно добавить поддержку для нескольких проектов в решении, каждый из которых содержит связанный контейнер. Щелкните правой кнопкой мыши узел решения или проекта в **обозревателе решений**и выберите **добавить** > **поддержки Оркестрации контейнеров**.  Затем выберите **Docker Compose** или **Service Fabric** для управления контейнерами.
 
-На рисунке 4-25: Включение поддержки Docker для проекта Visual Studio
+При выборе **Docker Compose**, Visual Studio добавляет раздел служб в своем решении *docker-compose.yml* файлы (или создает файлы, если они не существуют). Это простой способ начать создание многоконтейнерного решения; Затем можно открыть *docker-compose.yml* файлы и обновлять их с помощью дополнительных функций.
 
-## <a name="using-docker-tools-in-visual-studio-2017"></a>С помощью средств Docker в Visual Studio 2017 г.
+Это действие добавляет требуемую конфигурацию строки кода для *docker-compose.yml* задать на уровне решения.
 
-При добавлении поддержки Docker в проект службы в решении (см. рис. 4-26), Visual Studio является не просто прибавляет файл DockerFile в проект, он также является добавление раздела службы в решения docker compose.yml файлы (или создании файлов, если они не существует). Это простой способ начать составление multicontainer решения; Затем можно открыть файлы docker compose.yml и обновлять их с дополнительными возможностями.
+Также можно включить поддержку Docker при создании проекта ASP.NET Core в Visual Studio 2017, как показано на рисунке 4-27.
 
-![](./media/image32.png)
-
-Рис. 4-26: Включение поддержки Docker решений в проекте Visual Studio 2017 г.
-
-Это действие не только добавляет файл DockerFile в проект, он также добавляет необходимую настройку строки кода для глобальных docker-compose.yml задавать на уровне решения.
-
-Также можно включить поддержку Docker при создании проекта ASP.NET Core в Visual Studio 2017 г., как показано на рисунке 4-27.
-
-![](./media/image33.png)
+![Включение поддержки Docker при создании проекта](./media/image33.png)
 
 Рис. 4-27: Включение поддержки Docker при создании проекта
 
-После добавления поддержки Docker в решение в Visual Studio, вы также увидите нового узла дерева в обозревателе решений с файлами добавлены docker-compose.yml, как показано на рисунке 4-28.
+После добавления поддержки Docker в решение в Visual Studio, вы также увидите новый узел дерева на **обозревателе решений** путем добавления *docker-compose.yml* файлы, как показано на рис. 4-28.
 
-![](./media/image34.PNG)
+![файлы docker-compose.yml, теперь отображаются в обозревателе решений](./media/image34.PNG)
 
-Рис. 4-28: файлы docker compose.yml теперь отображаются в обозревателе решений
+Рис. 4-28: файлы docker-compose.yml отображаться **обозревателе решений**
 
-Можно развернуть multicontainer приложения с помощью файла одного docker-compose.yml при запуске docker составления вверх; Тем не менее, Visual Studio добавляет группу из них, можно изменить значения в зависимости от среды (разработки и производственной) и выполнения типа (выпуска и отладки). Эта возможность лучше описывается в последующих главах.
+Можно развернуть многоконтейнерного приложения с помощью одной *docker-compose.yml* файл при запуске `docker-compose up`, однако Visual Studio добавляет группу серверов, чтобы вы могли переопределять значения в зависимости от среды (разработки или для рабочей среды) и введите (выпуска или отладки) выполнения. Эта возможность лучше описан в последующих главах.
 
-**Дополнительные сведения:** для получения сведений о реализации службы и использовании средств Visual Studio для Docker в следующих статьях:
+Можно также использовать Service Fabric вместо Docker Compose для управления несколькими контейнерами. См. в разделе [руководство: развертывание приложения .NET в контейнере Windows в Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-host-app-in-a-container).
+
+**Дополнительные сведения:** Дополнительные сведения о реализации служб и использование набора средств Visual Studio для Docker в следующих статьях:
 
 Сборки, отладки, обновления и обновления приложений в локальном контейнере Docker: [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh/](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
-Разверните контейнер ASP.NET к удаленному узлу Docker. [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
-
+Развертывание контейнера ASP.NET Core Docker в реестр контейнеров: [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker/](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
 
 >[!div class="step-by-step"]
 [Назад](docker-apps-inner-loop-workflow.md)
