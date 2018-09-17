@@ -4,12 +4,13 @@ description: Узнайте, как выполнить отладку прило
 author: BillWagner
 ms.author: wiwagn
 ms.date: 12/15/2017
-ms.openlocfilehash: 3c130c2eebdf79c1db171cb2171aa68dfff728a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: vs-dotnet
+ms.openlocfilehash: 4623f4efa8637bd30f378006a92bfc4965429182
+ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218434"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45696150"
 ---
 # <a name="debug-your-hello-world-application-with-visual-studio-2017"></a>Отладка приложения Hello World в Visual Studio 2017
 
