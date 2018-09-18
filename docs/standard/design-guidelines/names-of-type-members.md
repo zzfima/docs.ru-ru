@@ -15,11 +15,11 @@ ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0541f100f208543c796de7238e68ea6f90c7b299
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45614984"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45964531"
 ---
 # <a name="names-of-type-members"></a>Имена членов типа
 Типы состоят из элементов: методов, свойств, событий, конструкторов и полей. В следующих разделах приведены рекомендации по именованию элементов типа.  
