@@ -3,11 +3,11 @@ title: Локальный канал
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
 ms.openlocfilehash: 731fcfde52a6b1277551f7d70f795c721fc99dd8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45597827"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46002714"
 ---
 # <a name="local-channel"></a>Локальный канал
 Локальный канал является каналом транспорта Windows Communication Foundation (WCF), который используется для обмена данными в одном домене приложения. Это полезно в случаях, когда клиент и служба работают на одном домене приложения и требуется избежать увеличения расхода ресурсов типичного WCF-канала (сериализация и десериализация сообщений).  

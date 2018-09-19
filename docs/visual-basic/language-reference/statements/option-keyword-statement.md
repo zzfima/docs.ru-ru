@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
 ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45963881"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46008672"
 ---
 # <a name="option-ltkeywordgt-statement"></a>Параметр &lt;ключевое слово&gt; инструкции
 Вводит оператор, который указывает параметр компилятора, который применяется для всего исходного файла.  

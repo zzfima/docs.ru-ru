@@ -6,11 +6,11 @@ helpviewer_keywords:
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
 ms.openlocfilehash: e9b54cd7e59a5a410bfc5c0fb1ba4973c5e482af
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45616842"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45999407"
 ---
 # <a name="printing-how-to-topics"></a>Разделы руководства по печати
 В подразделах этого раздела демонстрируется использование печати и функции управления печатью состав [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] а также новый [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] способ печати.  

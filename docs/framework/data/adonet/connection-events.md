@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
 ms.openlocfilehash: c1ef9ff9cc4d77e4951e99ed74c96cf78eb71506
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44778603"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003806"
 ---
 # <a name="connection-events"></a>События подключения
 Все поставщики данных .NET Framework имеют **подключения** объектов с двумя событиями, которые можно использовать для получения информационных сообщений из источника данных или для определения состояния **подключения** имеет изменить. В следующей таблице описаны событий **подключения** объекта.  

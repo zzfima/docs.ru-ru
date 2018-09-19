@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 ms.openlocfilehash: b900b85b4e3e56dbc587a15edea40f6e3032cbd1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618981"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46004501"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Основы разработки приложений Windows Forms (Visual Basic)
 Важной частью Visual Basic является возможность создания приложений Windows Forms, локально работающих на компьютерах пользователей. Чтобы создать приложение и пользовательский интерфейс, с помощью Windows Forms можно использовать Visual Studio. В приложении Windows Forms основано на классах из <xref:System.Windows.Forms> пространства имен.  

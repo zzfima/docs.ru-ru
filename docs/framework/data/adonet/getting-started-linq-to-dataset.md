@@ -3,11 +3,11 @@ title: Начало работы (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 97522119-f6a3-434c-a1ec-17396b74a556
 ms.openlocfilehash: 8a9c49edfcc43b1862745240ca4e4607bbe27f21
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615746"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003520"
 ---
 # <a name="getting-started-linq-to-dataset"></a>Начало работы (LINQ to DataSet)
 Этот раздел содержит общие сведения о программировании с помощью [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)].  

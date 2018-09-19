@@ -3,11 +3,11 @@ title: Параметры (F#)
 description: 'Сведения об использовании F # параметр типов, когда фактическое значение может не существовать для именованного значения или переменной.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 0859cb42e72ef9e67551b884f5cf6130fb099a78
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615765"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46287940"
 ---
 # <a name="options"></a>Параметры
 

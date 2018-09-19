@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: e4d56c5b5deda0bd1df8827020e0b76cc6276c1c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649253"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46007377"
 ---
 # <a name="xtype-markup-extension"></a>Расширение разметки x:Type
 Среда CLR предоставляет <xref:System.Type> объект, который является базовым типом для указанного типа XAML.  

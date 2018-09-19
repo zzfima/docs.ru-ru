@@ -3,11 +3,11 @@ title: Перечисления (F#)
 description: 'Узнайте, как использовать F # перечисления вместо литералов, чтобы сделать код более читаемым и простым в обслуживании.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 47fb353c2698f8b1474834ebbd1b0eff2c7f76e7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638380"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003169"
 ---
 # <a name="enumerations"></a>Перечисления
 
