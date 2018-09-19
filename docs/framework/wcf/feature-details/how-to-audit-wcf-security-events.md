@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
 author: BrucePerlerMS
 manager: mbaldwin
-ms.openlocfilehash: ad1cf3dd598a2ec76302c48ae36b45fd0310d69d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35d884c0e772deafdaa2326a47903e90691f8106
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493272"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45969669"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>Практическое руководство. Аудит событий безопасности Windows Communication Foundation
-Windows Communication Foundation (WCF) позволяет регистрировать события безопасности в журнал событий Windows, который можно просмотреть с помощью средства просмотра событий Windows. В этом разделе описано, как настроить приложение, чтобы события безопасности регистрировались в журнале. Дополнительные сведения об аудите WCF см. в разделе [аудита](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
+Windows Communication Foundation (WCF) позволяет регистрировать события безопасности в журнале событий Windows, который можно просмотреть с помощью средства просмотра событий Windows. В этом разделе описано, как настроить приложение, чтобы события безопасности регистрировались в журнале. Дополнительные сведения об аудите WCF см. в разделе [аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md).  
   
 ### <a name="to-audit-security-events-in-code"></a>Аудит событий безопасности в коде  
   
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF) позволяет регистриров
   
 ### <a name="to-set-up-auditing-in-configuration"></a>Настройка аудита в файле конфигурации  
   
-1.  Настройка аудита в файле конфигурации, добавьте [ \<поведение >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) элемент [ \<поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) раздел файла web.config. Затем добавьте [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) и присвойте различные атрибуты, как показано в следующем примере.  
+1.  Чтобы настроить аудит в конфигурации, добавьте [ \<поведение >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) элемент [ \<поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) раздел файла web.config. Затем добавьте [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) элемент и задайте атрибуты, как показано в следующем примере.  
   
     ```xml  
     <behaviors>  
@@ -81,9 +81,9 @@ Windows Communication Foundation (WCF) позволяет регистриров
  [!code-vb[AuditingSecurityEvents#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/auditingsecurityevents/vb/auditingsecurityevents.vb#1)]  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
- Если для свойства <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> задать значение `true`, все неудачные попытки создания аудита безопасности будут подавляться (если задано значение `false`, будет создаваться исключение). Тем не менее если включить следующие окна **параметр локальной безопасности**свойство, сбой создания события аудита может привести к немедленно завершить работу:  
+ Если для свойства <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> задать значение `true`, все неудачные попытки создания аудита безопасности будут подавляться (если задано значение `false`, будет создаваться исключение). Тем не менее если включен следующий Windows **параметр локальной безопасности** свойство, сбой создания событий вызовет Windows немедленное завершение работы:  
   
- **Аудит: Немедленное отключение системы, если невозможно внести в журнал записи об аудите безопасности**  
+ **Аудит: Немедленное отключение системы, если невозможно внести в журнал аудита безопасности**  
   
  Чтобы задать свойства, откройте **локальные параметры безопасности** диалоговое окно. В разделе **параметры безопасности**, нажмите кнопку **локальные политики**. Нажмите кнопку **параметры безопасности**.  
   

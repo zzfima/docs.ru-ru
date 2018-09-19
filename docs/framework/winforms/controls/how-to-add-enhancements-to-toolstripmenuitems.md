@@ -24,63 +24,63 @@ helpviewer_keywords:
 - images [Windows Forms], adding to menus
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
-ms.openlocfilehash: 37843d27211bd07c2749b3e6fc14ec03d7bf570d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eb55796480bea896383da479fe23a5d8967a52e3
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33529725"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46006814"
 ---
 # <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>Практическое руководство. Дополнительные возможности элементов ToolStripMenuItem
 Можно повысить удобство использования <xref:System.Windows.Forms.MenuStrip> и <xref:System.Windows.Forms.ContextMenuStrip> элементы управления одним из следующих способов:  
   
--   Добавьте галочки для обозначения состояния включено или отключить, например, для отображения линейки вдоль поля текстового редактора или для указания файла в список файлов, отображаемых, например на **окна** меню.  
+-   Добавьте галочки для обозначения включено или отключить, например, следует ли отображать линейки вдоль поля текстового редактора, или для указания файла в список файлов, отображаемых, например на **окно** меню.  
   
--   Добавьте изображения, которые визуально представляют команды меню.  
+-   Добавление изображений, которые визуально представляют команды меню.  
   
--   Отображать сочетания клавиш, чтобы предоставить альтернативы мыши, клавиатуры для выполнения команд. Например, нажатие клавиш CTRL + C выполняет **копирования** команды.  
+-   Отображать сочетания клавиш, чтобы предоставить альтернативы мыши, клавиатуры для выполнения команды. Например, нажатие клавиш CTRL + C выполняет **копирования** команды.  
   
--   Отображение клавиш доступа для предоставления клавиатуры вместо мыши для перехода по меню. Например, нажмите клавиши ALT + F, выбирает **файл** меню.  
+-   Отображение ключей доступа для предоставления клавиатуры вместо мыши для навигации в меню. Например, нажмите клавиши ALT + F, выбирает **файл** меню.  
   
--   Показать разделители, чтобы сгруппировать связанные команды и сделать меню удобочитаемыми.  
+-   Показать разделители, чтобы сгруппировать связанные команды и сделать меню в более удобном для чтения.  
   
 ### <a name="to-display-a-check-mark-on-a-menu-command"></a>Чтобы отобразить метку команды меню  
   
 -   Задайте его <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> свойства `true`.  
   
-     Эта команда также задает <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> свойства `true`. Эта процедура используется только в том случае, если требуется, чтобы галочкой по умолчанию, независимо от того, выбран ли команда меню.  
+     Эта команда также задает <xref:System.Windows.Forms.ToolStripMenuItem.CheckState%2A> свойства `true`. Используйте эту процедуру только в том случае, если требуется, чтобы команда меню, подлежащая галочкой по умолчанию, независимо от того, установлен ли флажок.  
   
-### <a name="to-display-a-check-mark-that-changes-state-with-each-click"></a>Чтобы отобразить флажок, который изменяет состояние каждого щелчка  
+### <a name="to-display-a-check-mark-that-changes-state-with-each-click"></a>Чтобы отобразить флажок, который изменяет состояние каждого щелчком  
   
 -   Команды меню <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A> свойства `true`.  
   
-### <a name="to-add-an-image-to-a-menu-command"></a>Чтобы добавить изображение к командам меню  
+### <a name="to-add-an-image-to-a-menu-command"></a>Добавление изображения для команды меню  
   
--   Команды меню <xref:System.Windows.Forms.ToolStripItem.Image%2A> на имя образа. Если <xref:System.Windows.Forms.ToolStripItemDisplayStyle> этой команды меню свойству <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> или <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, образ не может быть отображен.  
+-   Команды меню <xref:System.Windows.Forms.ToolStripItem.Image%2A> имя изображения. Если <xref:System.Windows.Forms.ToolStripItemDisplayStyle> этой команды меню свойству <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> или <xref:System.Windows.Forms.ToolStripItemDisplayStyle.None>, не удается отобразить изображение.  
   
 > [!NOTE]
->  Поля изображения можно также Показывать метку желанию. Кроме того, можно задать <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> свойства изображения `true`, и будет выглядеть изображение со штриховой границей вокруг нее во время выполнения.  
+>  Поле изображения также можно Показать метку желанию. Кроме того, можно задать <xref:System.Windows.Forms.ToolStripMenuItem.Checked%2A> свойство изображения `true`, а изображение будет отображаться со штриховой границей вокруг него во время выполнения.  
   
 ### <a name="to-display-a-shortcut-key-for-a-menu-command"></a>Чтобы отобразить сочетания клавиш для команды меню  
   
--   Команды меню <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> свойства желаемое сочетание клавиш, например CTRL + O для **откройте** команды меню, а также установите <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> свойства `true`.  
+-   Команды меню <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A> свойства желаемое сочетание клавиш, например CTRL + O для **откройте** команды меню, а также набор <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> свойства `true`.  
   
 ### <a name="to-display-custom-shortcut-keys-for-a-menu-command"></a>Чтобы отобразить настраиваемые сочетания клавиш для команды меню  
   
 -   Команды меню <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeyDisplayString%2A> свойства желаемое сочетание клавиш, например CTRL + SHIFT + O, а не SHIFT + CTRL + O и набор <xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A> свойства `true`.  
   
-### <a name="to-display-an-access-key-for-a-menu-command"></a>Чтобы отобразить сочетания клавиш для команды меню  
+### <a name="to-display-an-access-key-for-a-menu-command"></a>Чтобы отобразить ключ доступа для команды меню  
   
--   При задании <xref:System.Windows.Forms.ToolStripItem.Text%2A> свойство для команды меню введите амперсанд (&) перед буквой, чтобы подчеркнуть как клавиша доступа. Например, если ввести `&Open` как <xref:System.Windows.Forms.ToolStripItem.Text%2A> свойства пункта меню приведет к команде меню, который отображается в виде **O**пера.  
+-   При задании <xref:System.Windows.Forms.ToolStripItem.Text%2A> свойство для команды меню введите амперсанд (&) перед буквой, чтобы быть подчеркнуты как клавиша доступа. Например, при вводе `&Open` как <xref:System.Windows.Forms.ToolStripItem.Text%2A> свойство пункта меню приведет к команде меню, который отображается в виде <u>O</u>пера.
   
-     Чтобы перейти к этой команды меню, нажмите клавишу ALT, чтобы передать фокус <xref:System.Windows.Forms.MenuStrip>и нажмите клавишу доступа для меню. Когда меню открывается и показаны элементы, с помощью клавиши доступа, необходимо клавишу доступа, чтобы выбрать команду меню.  
+     Чтобы перейти к этой команды меню, нажмите клавишу ALT, чтобы передать фокус <xref:System.Windows.Forms.MenuStrip>и нажмите клавишу доступа для меню. Когда откроется меню и отображаются элементы с помощью ключей доступа, необходимо только клавишу доступа, чтобы выбрать команду меню.  
   
 > [!NOTE]
->  Не следует определять дублирующиеся клавиши доступа, например определением ALT + F дважды в одной и той же системе меню. Порядок выбора дублирующиеся клавиши доступа не гарантируется.  
+>  Не рекомендуется определять дублирующиеся клавиши доступа, например для определения ALT + F дважды в одной и той же системе меню. Невозможно гарантировать порядок выбора дублирующиеся клавиши доступа.  
   
-### <a name="to-display-a-separator-bar-between-menu-commands"></a>Чтобы отобразить строку разделителя между команды меню  
+### <a name="to-display-a-separator-bar-between-menu-commands"></a>Чтобы отобразить строку разделителя между командами меню  
   
--   После определения вашей <xref:System.Windows.Forms.MenuStrip> и элементы, он будет содержать, используйте <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> или <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> метод, чтобы добавить команды меню и <xref:System.Windows.Forms.ToolStripSeparator> элементы управления <xref:System.Windows.Forms.MenuStrip> в порядке.  
+-   После определения вашей <xref:System.Windows.Forms.MenuStrip> и элементов, которые он содержит, используйте <xref:System.Windows.Forms.ToolStripItemCollection.AddRange%2A> или <xref:System.Windows.Forms.ToolStripItemCollection.Add%2A> метод для добавления команды меню и <xref:System.Windows.Forms.ToolStripSeparator> элементы управления <xref:System.Windows.Forms.MenuStrip> в том порядке, в.  
   
     ```vb  
     ' This code adds a top-level File menu to the MenuStrip.  

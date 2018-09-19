@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
 ms.openlocfilehash: 08594d9757596eed470ffba8b5b63a01c493c358
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677348"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45972336"
 ---
 # <a name="xname-directive"></a>Директива x:Name
 Однозначно определяет элементы, определенные в XAML, в области имен XAML. Области видимости имен XAML и их уникальность моделей могут применяться к экземпляры объектов, при платформы предоставляют интерфейсы API или реализации поведений, которые обращаются к графа объекта XAML во время выполнения.  

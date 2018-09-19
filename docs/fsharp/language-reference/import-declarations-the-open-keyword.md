@@ -3,11 +3,11 @@ title: 'Объявления импорта: ключевое слово open (F
 description: 'Дополнительные сведения о объявления импорта F # и как указать модуль или пространство имен, элементы которого можно ссылаться без использования полного имени.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 8cae4b4f5418689bfb0933b7db4ec23a313d5ed8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45668734"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45969584"
 ---
 # <a name="import-declarations-the-open-keyword"></a>Объявления импорта: `open` ключевое слово
 

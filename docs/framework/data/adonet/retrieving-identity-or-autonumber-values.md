@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
 ms.openlocfilehash: ca739f703267f27932ec7450a59d7f4afaffd64b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666789"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45972602"
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Извлечение идентификации или значений автонумерации
 Первичным ключом в реляционной базе данных является столбец или сочетание столбцов, которые всегда содержат уникальные значения. Если известно значение первичного ключа, то можно найти строку, которая содержит это значение. Такие СУРБД, как SQL Server, Oracle и Microsoft Access/Jet, поддерживают создание столбцов с автоматически увеличивающимися значениями, которые могут назначаться в качестве первичных ключей. Эти значения формируются сервером по мере добавления строк в таблицу. В SQL Server задается свойство идентификатора столбца, в Oracle создается последовательность Sequence, а в Microsoft Access создается столбец AutoNumber.  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 97b878621d5aa1860cd955755d9bbc344b95b993
-ms.sourcegitcommit: ba5c189bf44d44204a3e8838e59ec378a62d82f3
+ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "44778530"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46287732"
 ---
 # <a name="bitmap-effects-overview"></a>Общие сведения об эффектах для точечных рисунков
 Растровые эффекты позволяют конструкторам и разработчикам применять визуальные эффекты к просмотру содержимого Windows Presentation Foundation (WPF). Например, растровые эффекты позволяют легко применить <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> эффект или эффект размытия для изображения или кнопки.  
