@@ -2,15 +2,15 @@
 title: Доступ к OperationContext из службы рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
-ms.openlocfilehash: 11c10e83c02ec0e2e74462e84c68fd2fcd3ff761
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 15dd817dddbe3272b188f6b74697f8c5839d498b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495571"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326375"
 ---
 # <a name="accessing-operationcontext-from-a-workflow-service"></a>Доступ к OperationContext из службы рабочего процесса
-Для доступа к <xref:System.ServiceModel.OperationContext> в службе рабочего процесса необходимо реализовать интерфейс <xref:System.ServiceModel.Activities.IReceiveMessageCallback> в пользовательском свойстве выполнения. Переопределите метод <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)>, который передается в качестве ссылки на <xref:System.ServiceModel.OperationContext>. Данный раздел содержит пошаговое руководство по реализации данного свойства выполнения с целью возвращения пользовательского заголовка, а также пользовательского действия, которое должно выявить это свойство для <xref:System.ServiceModel.Activities.Receive> во время выполнения.  Пользовательское действие реализует поведение аналогично <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` действия, за исключением того, что при <xref:System.ServiceModel.Activities.Receive> размещения в нем <xref:System.ServiceModel.Activities.IReceiveMessageCallback> будет вызван и <xref:System.ServiceModel.OperationContext> будут извлекаться сведения.  Также в данном разделе показано, как получить доступ к <xref:System.ServiceModel.OperationContext> на стороне клиента с целью добавления исходящего заголовка через интерфейс <xref:System.ServiceModel.Activities.ISendMessageCallback>.  
+Для доступа к <xref:System.ServiceModel.OperationContext> в службе рабочего процесса необходимо реализовать интерфейс <xref:System.ServiceModel.Activities.IReceiveMessageCallback> в пользовательском свойстве выполнения. Переопределите метод <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)>, который передается в качестве ссылки на <xref:System.ServiceModel.OperationContext>. Данный раздел содержит пошаговое руководство по реализации данного свойства выполнения с целью возвращения пользовательского заголовка, а также пользовательского действия, которое должно выявить это свойство для <xref:System.ServiceModel.Activities.Receive> во время выполнения.  Пользовательское действие реализует такое же поведение, что и действие <xref:System.Activities.Statements.Sequence>, не считая того, что после размещения в нем <xref:System.ServiceModel.Activities.Receive> вызывается <xref:System.ServiceModel.Activities.IReceiveMessageCallback> и происходит возврат информации <xref:System.ServiceModel.OperationContext>.  Также в данном разделе показано, как получить доступ к <xref:System.ServiceModel.OperationContext> на стороне клиента с целью добавления исходящего заголовка через интерфейс <xref:System.ServiceModel.Activities.ISendMessageCallback>.  
   
 ### <a name="implement-the-service-side-ireceivemessagecallback"></a>Реализация IReceiveMessageCallback на стороне сервера  
   

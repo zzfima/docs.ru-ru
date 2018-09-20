@@ -10,11 +10,11 @@ ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9fbbe84811e3fa096b9e13c459143311bb75a198
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46288255"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326638"
 ---
 # <a name="exception-throwing"></a>Создание исключений
 Исключения рекомендации, приведенные в этом разделе требуется хорошее определение значение сбой при выполнении. Сбой при выполнении происходит всякий раз, когда член не может это было целью (что член названия). Например если `OpenFile` метод не может возвращать дескриптор открытого файла вызывающей стороне, он будет считаться ошибкой выполнения.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
 ms.openlocfilehash: b46c763e7cddfc7617c9a6a23428f83a54955ba0
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46006527"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46326336"
 ---
 # <a name="sql-xml-column-values"></a>Значения столбцов XML SQL
 SQL Server поддерживает `xml` тип данных, поэтому разработчики могут получать результирующие наборы с данными этого типа, с помощью стандартных средств <xref:System.Data.SqlClient.SqlCommand> класса. Значения столбца `xml` извлекаются точно так же, как и значения любого столбца (например, в <xref:System.Data.SqlClient.SqlDataReader>), но если с содержимым этого столбца необходимо работать в формате XML, то следует использовать <xref:System.Xml.XmlReader>.  

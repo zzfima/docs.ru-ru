@@ -2,12 +2,12 @@
 title: Модель объектов обнаружения WCF
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
-ms.openlocfilehash: a325ee0fd6376f101ca8ccc6097e79c30198a011
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b337eda40fc70a6d0e7b3aeccfc125e6e6bacf8f
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509038"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46324132"
 ---
 # <a name="wcf-discovery-object-model"></a>Модель объектов обнаружения WCF
 Обнаружение WCF включает в себя набор типов, обеспечивающих унифицированную модель программирования, которая позволяет создавать службы, доступные для обнаружения во время выполнения, а также клиентов, которые могут находить и использовать их.  
@@ -61,9 +61,7 @@ ms.locfileid: "33509038"
 -   <xref:System.ServiceModel.Discovery.ResolveResponse>  
   
 -   <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
-  
--   <!--zz <xref:System.ServiceModel.Discovery.ServiceDiscoveryExtension> --> `ServiceDiscoveryExtension`  
-  
+ 
 -   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
 -   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
@@ -80,14 +78,14 @@ ms.locfileid: "33509038"
 ## <a name="discoveryclient"></a>DiscoveryClient  
  Класс <xref:System.ServiceModel.Discovery.DiscoveryClient> используется клиентским приложением для нахождения и разрешения доступных служб. Он предоставляет синхронные и асинхронные методы для нахождения и разрешения служб на основе заданных критериев <xref:System.ServiceModel.Discovery.FindCriteria> и <xref:System.ServiceModel.Discovery.ResolveCriteria> соответственно. Разработчик создает экземпляр <xref:System.ServiceModel.Discovery.DiscoveryClient> и передает экземпляр <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> в качестве параметра конструктора.  
   
- Чтобы найти службу, разработчик вызывает синхронный или асинхронный `Find` метод, который обеспечивает <!--zz <xref:System.ServiceModel.Discription.FindCriteria> --> `FindCriteria` экземпляр, содержащий критерии поиска для использования. Клиент <xref:System.ServiceModel.Discovery.DiscoveryClient> создает сообщение `Probe` с соответствующими заголовками и отправляет запрос поиска. Поскольку в любое время может быть более одного необработанного запроса `Find`, клиент сопоставляет полученные ответы и проверяет ответ. Затем клиент доставляет результаты объекту, вызвавшему операцию `Find`, с помощью метода <xref:System.ServiceModel.Discovery.FindResponse>.  
+ Чтобы найти службу, разработчик вызывает синхронный или асинхронный метод `Find`, который предоставляет экземпляр <xref:System.ServiceModel.Discovery.FindCriteria>, содержащий критерии поиска для использования. Клиент <xref:System.ServiceModel.Discovery.DiscoveryClient> создает сообщение `Probe` с соответствующими заголовками и отправляет запрос поиска. Поскольку в любое время может быть более одного необработанного запроса `Find`, клиент сопоставляет полученные ответы и проверяет ответ. Затем клиент доставляет результаты объекту, вызвавшему операцию `Find`, с помощью метода <xref:System.ServiceModel.Discovery.FindResponse>.  
   
- Чтобы разрешить известную службу, разработчик вызывает синхронный или асинхронный `Resolve` метод, который предоставляет экземпляр <!--zz <xref:System.ServiceModel.ResolveCriteria>--> `ResolveCriteria` , содержащий <xref:System.ServiceModel.EndpointAddress> известной службы. Клиент <xref:System.ServiceModel.Discovery.DiscoveryClient> создает сообщение `Resolve` с соответствующими заголовками и отправляет запрос разрешения. Полученный ответ сопоставляется с необработанными запросами разрешения, и результат доставляется объекту, вызвавшему операцию `Resolve`, при помощи метода <xref:System.ServiceModel.Discovery.ResolveResponse>.  
+ Чтобы разрешить известную службу, разработчик вызывает синхронный или асинхронный метод `Resolve`, который представляет экземпляр <xref:System.ServiceModel.Discovery.ResolveCriteria>, содержащий адрес <xref:System.ServiceModel.EndpointAddress> известной службы. Клиент <xref:System.ServiceModel.Discovery.DiscoveryClient> создает сообщение `Resolve` с соответствующими заголовками и отправляет запрос разрешения. Полученный ответ сопоставляется с необработанными запросами разрешения, и результат доставляется объекту, вызвавшему операцию `Resolve`, при помощи метода <xref:System.ServiceModel.Discovery.ResolveResponse>.  
   
- Если прокси-сервер обнаружения присутствует в сети и <!--zz <xref:System.ServiceModel.Discover.DiscoveryClient> --> `DiscoveryClient` отправляет запрос обнаружения многоканально, прокси-сервер обнаружения может ответить на приветственное сообщение подавления многоадресной рассылки. <!--zz <xref:System.ServiceModel.Discover.DiscoveryClient> --> `DiscoveryClient` Вызывает `ProxyAvailable` событие при получении сообщений Hello в ответ на необработанный `Find` или `Resolve` запросов. Событие `ProxyAvailable` содержит метаданные <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> о прокси-сервере обнаружения. Затем разработчик должен использовать эту информацию для переключения из нерегламентированного режима в управляемый.  
+ Если прокси-сервер обнаружения присутствует в сети и клиент <xref:System.ServiceModel.Discovery.DiscoveryClient> отправляет запрос обнаружения по нескольким адресам, то прокси-сервер обнаружения может ответить многоадресным сообщением отмены типа Hello. Клиент <xref:System.ServiceModel.Discovery.DiscoveryClient> создает событие `ProxyAvailable` при получении сообщений Hello в ответ на необработанный запрос `Find` или `Resolve`. Событие `ProxyAvailable` содержит метаданные <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> о прокси-сервере обнаружения. Затем разработчик должен использовать эту информацию для переключения из нерегламентированного режима в управляемый.  
   
 ## <a name="discoveryendpoint"></a>DiscoveryEndpoint  
- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> представляет стандартную конечную точку с заданным контрактом обнаружения. Используется службой или клиентом для отправки и получения сообщений обнаружения. По умолчанию <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> используется <!--zz <xref:System.ServiceModel.Discovery.DiscoveryMode.Managed>--> `Managed` режим и версию WSDiscovery11 WS-Discovery.  
+ <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> представляет стандартную конечную точку с заданным контрактом обнаружения. Используется службой или клиентом для отправки и получения сообщений обнаружения. По умолчанию конечная точка <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> использует режим <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Managed?displayProperty=nameWithType> и версию WSDiscovery11.  
   
 ## <a name="discoverymessagesequencegenerator"></a>DiscoveryMessageSequenceGenerator  
  <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator> используется для формирования последовательности сообщений <xref:System.ServiceModel.Discovery.DiscoveryMessageSequence>, когда служба отправляет сообщения обнаружения или сообщения с объявлениями.  
@@ -102,13 +100,13 @@ ms.locfileid: "33509038"
  Класс <xref:System.ServiceModel.Discovery.DiscoveryVersion> представляет используемую версию протокола обнаружения.  
   
 ## <a name="endpointdiscoverybehavior"></a>EndpointDiscoveryBehavior  
- Класс <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> служит для контроля возможности обнаружения конечной точки, указания расширений и дополнительных имен типов контрактов. и областей, связанных с этой конечной точкой. Это поведение добавляется в конечную точку приложения для настройки ее метаданных <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>. При добавлении поведения <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> к узлу службы все конечные точки приложения, размещенные узлом службы, по умолчанию получают возможность обнаружения. Разработчик может отключить обнаружение для конкретной конечной точки, задав <!--zz <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enable%2A>--> `Enable` свойства `false`.  
+ Класс <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior> служит для контроля возможности обнаружения конечной точки, указания расширений и дополнительных имен типов контрактов. и областей, связанных с этой конечной точкой. Это поведение добавляется в конечную точку приложения для настройки ее метаданных <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>. При добавлении поведения <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> к узлу службы все конечные точки приложения, размещенные узлом службы, по умолчанию получают возможность обнаружения. Разработчик может отключить обнаружение для определенной конечной точки, установив свойство <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Enabled%2A> в значение `false`.  
   
 ## <a name="endpointdiscoverymetadata"></a>EndpointDiscoveryMetadata  
  Класс <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> обеспечивает независимое от версии представление конечной точки, опубликованной службой. Служба содержит адреса конечных точек, URI прослушивания, имена типов контрактов, области, версию метаданных и модули, указанные разработчиком службы. Критерии <xref:System.ServiceModel.Discovery.FindCriteria>, отправляемые клиентом в течение операции `Probe`, сопоставляются с метаданными <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>. Если критерии совпадут, метаданные <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> будут возвращены клиенту. Адрес конечной точки в <xref:System.ServiceModel.Discovery.ResolveCriteria> сопоставляется с адресом конечной точки <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>. Если критерии совпадут, метаданные <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> будут возвращены клиенту.  
   
 ## <a name="findcriteria"></a>FindCriteria  
- Класс <xref:System.ServiceModel.Discovery.FindCriteria> является независимым от версии классом, который используется для указания критериев, используемых при нахождении службы. Класс полностью поддерживает критерии, определенные WS-Discovery, для сопоставления служб. Он также имеет модули, которые разработчики могут использовать для указания пользовательских значений, используемых в течение процесса сопоставления. Разработчик может предоставить критерии завершения для `Find` операцию, указав <!--zz <xref:System.ServiceModel.Discovery.FindCriteria.MaxResult%2A>--> `MaxResult`, который определяет общее количество служб, разработчик выполняет поиск значения или <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>, который является значение, указывающее, как долго клиент ожидает ответы.  
+ Класс <xref:System.ServiceModel.Discovery.FindCriteria> является независимым от версии классом, который используется для указания критериев, используемых при нахождении службы. Класс полностью поддерживает критерии, определенные WS-Discovery, для сопоставления служб. Он также имеет модули, которые разработчики могут использовать для указания пользовательских значений, используемых в течение процесса сопоставления. Разработчик может предоставить критерии завершения для операции `Find`, указав значение <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A>, которое задает общее количество служб, разыскиваемых разработчиком, либо задает длительность <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A>, то есть время, в течение которого клиент ожидает ответы.  
   
 ## <a name="findrequestcontext"></a>FindRequestContext  
  Класс <xref:System.ServiceModel.Discovery.FindRequestContext> создается службой обнаружения на основе сообщения `Probe`, полученного при запуске клиентом операции `Find`. Класс содержит экземпляр <xref:System.ServiceModel.Discovery.FindCriteria>, заданный клиентом.  
@@ -125,11 +123,8 @@ ms.locfileid: "33509038"
 ## <a name="servicediscoverybehavior"></a>ServiceDiscoveryBehavior  
  Класс <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> позволяет разработчику добавлять функцию обнаружения для службы. Это поведение добавляется к <xref:System.ServiceModel.ServiceHost>. Класс <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> просматривает конечные точки приложения, добавленные к узлу службы, и создает коллекцию <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>, содержащую конечные точки, доступные для обнаружения. Все конечные точки по умолчанию доступны для обнаружения. Возможность обнаружения определенной конечной точки может быть ограничена за счет добавления к ней поведения <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>. Если конечные точки объявлений добавлены в поведение <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>, то объявление всех точек, которые могут быть обнаружены, отправляется для каждой конечной точки объявления при открытии или закрытии узла службы.  
   
-## <a name="servicediscoveryextension"></a>ServiceDiscoveryExtension  
- <!--zz <xref:System.ServiceModel.Discovery.ServiceDiscoveryExtension> --> `ServiceDiscoveryExtension` Класс создается с помощью <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> класса. Конечные точки, которые выполняются обнаруживаемыми можно получить из <!--zz <xref:System.ServiceModel.Discovery.ServiceDiscoveryExtension> --> `ServiceDiscoveryExtension`. Этот класс также используется для реализации пользовательской службы обнаружения.  
-  
 ## <a name="udpannouncementendpoint"></a>UdpAnnouncementEndpoint  
  Класс <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> ― это стандартная точка объявления, которая является предустановленной для объявления через привязку для многоадресной рассылки UDP. По умолчанию класс <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint> использует версию WSApril2005 WS_Discovery.  
   
 ## <a name="udpdiscoveryendpoint"></a>UdpDiscoveryEndpoint  
- Конечная точка <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ― это стандартная конечная точка обнаружения, заранее настроенная для операций обнаружения через привязку для многоадресной рассылки. По умолчанию <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> использует версию WSDiscovery11 WS-Discovery и <!--zz <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.Adhoc>--> `Adhoc` режим.
+ Конечная точка <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> ― это стандартная конечная точка обнаружения, заранее настроенная для операций обнаружения через привязку для многоадресной рассылки. По умолчанию конечная точка <xref:System.ServiceModel.Discovery.DiscoveryEndpoint> использует версию WSDiscovery11 WS-Discovery и режим <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode.Adhoc?displayProperty=nameWithType>.
