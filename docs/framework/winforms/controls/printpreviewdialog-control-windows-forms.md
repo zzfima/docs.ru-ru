@@ -8,11 +8,11 @@ helpviewer_keywords:
 - print preview [Windows Forms], default interface (using designer)
 ms.assetid: bfb5a3d7-021e-44f4-90f3-d435467f51d6
 ms.openlocfilehash: 0f35343ca06666580d744b4d6e0fa954afedbd9c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45968995"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46477853"
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>Элемент управления PrintPreviewDialog (Windows Forms)
 Элемент управления Windows Forms `PrintPreviewDialog` является стандартным диалоговым окном, используемым для отображения документа в том виде, как он будет напечатан. Он используется в приложении Windows в качестве простого решения вместо настройки собственного диалогового окна. Элемент управления содержит кнопки для печати, увеличения масштаба, отображения одной или нескольких страниц и закрытия диалогового окна.  

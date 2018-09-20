@@ -2,12 +2,12 @@
 title: Параметры разработки действий в WF
 ms.date: 03/30/2017
 ms.assetid: b9061f5f-12c3-47f0-adbe-1330e2714c94
-ms.openlocfilehash: f91c74b4e3dc002ed2abf979619b84a81db65e78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 219d759cd1390a83abfb90af509b21047085f6e9
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516404"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481258"
 ---
 # <a name="activity-authoring-options-in-wf"></a>Параметры разработки действий в WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] обеспечивает несколько вариантов разработки настраиваемых действий. Выбор правильного метода создания определенного действия зависит от требований функций времени выполнения.  
@@ -20,7 +20,7 @@ ms.locfileid: "33516404"
 |<xref:System.Activities.Activity>|Формирует составное действие из групп системных и настраиваемых действий.|  
 |<xref:System.Activities.CodeActivity>|Реализует императивные функции путем предоставления метода <xref:System.Activities.CodeActivity%601.Execute%2A>, который можно переопределить. Также обеспечивает доступ к отслеживанию, переменным и аргументам.|  
 |<xref:System.Activities.NativeActivity>|Обеспечивает все функции <xref:System.Activities.CodeActivity>, а также прерывание выполнения действий, отмену выполнения дочерних действий, использование закладок, а также планирование действий, задач действий и функций.|  
-|<xref:System.Activities.DynamicActivity>|Предоставляет DOM-подход к действиям построения, схожий с используется конструктор WF и механизмы среды выполнения с <!--zz <xref:System.ComponentModel.IcustomTypeDescriptor>--> `IcustomTypeDescriptor`, позволяя создания без определения новых типов новых действий.|  
+|<xref:System.Activities.DynamicActivity>|Обеспечивает подход, схожий с DOM, к действиям построения, при которых используется конструктор WF и механизмы среды выполнения с <xref:System.ComponentModel.ICustomTypeDescriptor>, что обеспечивает возможность создания новых действий без определения новых типов.|  
   
 ## <a name="authoring-activities-using-activity"></a>Разработка действий с помощью действия  
  Действия, которые являются производными от <xref:System.Activities.Activity>, реализуют функциональность путем сборки других существующих действий. Такими действиями могут быть существующие настраиваемые действия и действия из библиотеки действий [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]. Сборка этих действий является наиболее простым способом создания пользовательских функциональных возможностей. Этот подход обычно используется при создании рабочих процессов в среде виртуальной разработки.  
@@ -29,7 +29,7 @@ ms.locfileid: "33516404"
  Действия, которые являются производными от <xref:System.Activities.CodeActivity> или <xref:System.Activities.AsyncCodeActivity>, могут реализовывать императивные функции путем переопределения метода <xref:System.Activities.CodeActivity%601.Execute%2A> с помощью настраиваемого императивного кода. Настраиваемый код выполняется при выполнении действия средой выполнения. Действия, созданные таким образом, имеют доступ к пользовательским функциям, но не ко всем функциям среды выполнения, таким как полный доступ к среде выполнения, возможность планировать дочерние действия, создание закладок и поддержка методов Cancel или Abort. При своем выполнении <xref:System.Activities.CodeActivity> получает доступ к сокращенной версии среды выполнения (посредством класса <xref:System.Activities.CodeActivityContext> или <xref:System.Activities.AsyncCodeActivityContext>). Действия, созданные с помощью <xref:System.Activities.CodeActivity>, имеют доступ к разрешению аргументов и переменных, расширениям и отслеживанию. Асинхронное планирование действий можно выполнить с помощью <xref:System.Activities.AsyncCodeActivity>.  
   
 ## <a name="authoring-activities-using-nativeactivity"></a>Разработка действий с помощью NativeActivity  
- Действия, которые являются производными от <xref:System.Activities.NativeActivity> аналогично производным действиям от <xref:System.Activities.CodeActivity>, создают императивные функции путем переопределения <xref:System.Activities.NativeActivity.Execute%2A>, но также имеют доступ ко всем функциям среды выполнения рабочего процесса благодаря <xref:System.Activities.NativeActivityContext>, который передается методу <xref:System.Activities.NativeActivity.Execute%2A>. Этот контекст поддерживает планирование и отмену дочерних действий, выполнение <xref:System.Activities.ActivityAction> и <!--zz <xref:System.Activities.ActivityFunc>--> `ActivityFunc` объектов поточные транзакции в рабочем процессе, вызов асинхронных процессов, отмену и прерывание выполнения, доступ к свойства выполнения и расширения, а также закладки (маркеры возобновления приостановленных рабочих процессов).  
+ Действия, которые являются производными от <xref:System.Activities.NativeActivity> аналогично производным действиям от <xref:System.Activities.CodeActivity>, создают императивные функции путем переопределения <xref:System.Activities.NativeActivity.Execute%2A>, но также имеют доступ ко всем функциям среды выполнения рабочего процесса благодаря <xref:System.Activities.NativeActivityContext>, который передается методу <xref:System.Activities.NativeActivity.Execute%2A>. Этот контекст поддерживает планирование и отмену дочерних действий, выполнение объектов <xref:System.Activities.ActivityAction> и <xref:System.Activities.ActivityFunc%601>, потоки транзакций в рабочем процессе, вызов асинхронных процессов, отмену и прерывание выполнения, доступ к свойствам выполнения и расширениям, а также закладки (маркеры для возобновления приостановленных рабочих процессов).  
   
 ## <a name="authoring-activities-using-dynamicactivity"></a>Разработка действий с помощью DynamicActivity  
  В отличие от трех других типов действий новая функциональность создается не путем создания новых типов из <xref:System.Activities.DynamicActivity> (этот класс является запечатанным), а путем сборки функциональности в свойства <xref:System.Activities.DynamicActivity.Properties%2A> и <xref:System.Activities.DynamicActivity.Implementation%2A> с помощью модели DOM действий.  

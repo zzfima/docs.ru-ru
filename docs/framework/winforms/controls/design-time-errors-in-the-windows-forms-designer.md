@@ -9,11 +9,11 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: ec1801a1b695867a7edcd99394feebe1d0f6853a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666594"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490144"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Ошибки во время разработки в конструкторе Windows Forms Designer
 В этом разделе разъясняются значения и использование списка ошибок во время разработки, отображаемого в Microsoft Visual Studio при невозможности загрузить конструктор Windows Forms. При появления такого списка его надо использовать для исправлении ошибок в коде, а не воспринимать как ошибку в конструкторе.  

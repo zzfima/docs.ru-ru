@@ -2,12 +2,12 @@
 title: Выбор фильтра
 ms.date: 03/30/2017
 ms.assetid: 67ab5af9-b9d9-4300-b3b1-41abb5a1fd10
-ms.openlocfilehash: bc3bba9a2b00b35f3e0cff1786ea98cfa881f311
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 377d4f5c221ad37acf954b1dafc8712a388122ff
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43743152"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478507"
 ---
 # <a name="choosing-a-filter"></a>Выбор фильтра
 При настройке службы маршрутизации важно выбрать правильные фильтры сообщений и настроить их таким образом, чтобы полученное сообщение всегда определялось одним из них. Если выбранные фильтры допускают избыточные совпадения или неверно настроены, то сообщения будут маршрутизироваться неправильно. Если фильтры слишком строги, то это может привести к тому, что для некоторых сообщений не окажется ни одного допустимого маршрута.  
@@ -16,7 +16,7 @@ ms.locfileid: "43743152"
  При выборе фильтров, используемых службой маршрутизации, важно понимать, каким образом работает каждый из них и какие сведения имеются во входящих сообщениях. Например, если все сообщения получаются одной и той же конечной точкой, то фильтры Address и EndpointName не рекомендуется использовать вместе, так как все сообщения будут определены этими фильтрами.  
   
 ### <a name="action"></a>Действие  
- Фильтр Action проверяет свойство <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Если содержимое заголовка Action в сообщении соответствует значению данных фильтра, которое указано в конфигурации фильтра, то этот фильтр возвращает значение `true`. В следующем примере определяется `FilterElement` , использует фильтр Action для поиска сообщений с заголовком action, содержит значение "http://namespace/contract/operation/«.  
+ Фильтр Action проверяет свойство <xref:System.ServiceModel.Channels.MessageHeaders.Action%2A>. Если содержимое заголовка Action в сообщении соответствует значению данных фильтра, которое указано в конфигурации фильтра, то этот фильтр возвращает значение `true`. В следующем примере определяется `FilterElement` , использует фильтр Action для поиска сообщений с заголовком action, содержащий значение `http://namespace/contract/operation/`.
   
 ```xml  
 <filter name="action1" filterType="Action" filterData="http://namespace/contract/operation/" />  
@@ -47,7 +47,7 @@ EndpointAddressMessageFilter address1 = new EndpointAddressMessageFilter(new End
  Этот фильтр следует использовать в том случае, когда входящие сообщения адресованы по уникальному адресу.  
   
 ### <a name="endpointaddressprefix"></a>EndpointAddressPrefix  
- Фильтр EndpointAddressPrefix аналогичен фильтру EndpointAddress. Он также проверяет адрес конечной точки, на который было получено сообщение. Однако EndpointAddressPrefix ищет совпадение начала адреса с шаблоном, заданным в конфигурации фильтра. В следующем примере определяется `FilterElement` который использует фильтр EndpointAddressPrefix для поиска всех сообщений, адресованных « http://\<имя узла > / vdir *».  
+ Фильтр EndpointAddressPrefix аналогичен фильтру EndpointAddress. Он также проверяет адрес конечной точки, на который было получено сообщение. Однако EndpointAddressPrefix ищет совпадение начала адреса с шаблоном, заданным в конфигурации фильтра. В следующем примере определяется `FilterElement` который использует фильтр EndpointAddressPrefix для поиска всех сообщений, адресованных `http://<hostname>/vdir*`.  
   
 ```xml  
 <filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/vdir" />  

@@ -3,11 +3,11 @@ title: Инструменты сериализации
 ms.date: 03/30/2017
 ms.assetid: 593b675f-938c-44ff-807b-0ca9fea30103
 ms.openlocfilehash: af0ed0df0e99245d3dacd31280574c36415d2a1e
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46005584"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481823"
 ---
 # <a name="serialization-tools"></a>Инструменты сериализации
 Данный раздел содержит подробные сведения об инструментах сериализации. Все инструменты можно запускать из командной строки.  

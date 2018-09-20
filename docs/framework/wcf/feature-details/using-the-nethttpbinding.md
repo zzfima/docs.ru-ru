@@ -2,21 +2,21 @@
 title: Использование NetHttpBinding
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: a753cca008c7eb9b500afa7f3f3b55b5410522a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd4a50798ff709c32db056c6aa7289993431f40e
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498873"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46471149"
 ---
 # <a name="using-the-nethttpbinding"></a>Использование NetHttpBinding
-<xref:System.ServiceModel.NetHttpBinding> - это привязка, предназначенная для использования служб HTTP или WebSocket и использующая по умолчанию двоичное кодирование. <xref:System.ServiceModel.NetHttpBinding> определит, будет ли она использоваться с дуплексным контрактом и контрактом типа «запрос-ответ» и изменит ли свое поведение для соответствия контракту. HTTP будет использоваться для контрактов типа «запрос-ответ», и WebSockets - для дуплексных контрактов. Это поведение можно переопределить с помощью <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A> --> `WebSocketTransportUsage` параметр:  
+<xref:System.ServiceModel.NetHttpBinding> - это привязка, предназначенная для использования служб HTTP или WebSocket и использующая по умолчанию двоичное кодирование. <xref:System.ServiceModel.NetHttpBinding> определит, будет ли она использоваться с дуплексным контрактом и контрактом типа «запрос-ответ» и изменит ли свое поведение для соответствия контракту. HTTP будет использоваться для контрактов типа «запрос-ответ», и WebSockets - для дуплексных контрактов. Данное поведение можно переопределить с помощью параметра <xref:System.ServiceModel.Channels.WebSocketTransportUsage>:.  
   
-1.  Always - это обеспечивает использование службы WebSockets даже для контрактов типа «запрос-ответ».  
+1. `Always` -Это обеспечивает использование службы WebSockets даже для контрактов типа запрос ответ.  
   
-2.  Never - это исключает использование службы WebSockets. Попытка использования дуплексного контракта с этим параметром приведет к возникновению исключения.  
+2. `Never` -Это предотвращает использование WebSockets. Попытка использования дуплексного контракта с этим параметром приведет к возникновению исключения.  
   
-3.  WhenDuplex - это значение по умолчанию, данное поведение работает способом, описанным выше.  
+3. `WhenDuplex` -Это значение по умолчанию и ведет себя так, как описано выше.  
   
  <xref:System.ServiceModel.NetHttpBinding> поддерживает надежные сеансы как в режиме HTTP, так и в режиме WebSocket. В режиме WebSocket сеансы предоставляются транспортом.  
   

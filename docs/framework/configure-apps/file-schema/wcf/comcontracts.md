@@ -2,18 +2,18 @@
 title: '&lt;comContracts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
-ms.openlocfilehash: b44c09e7e32129ba21834f7fbb8dc4699904e46b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 297a28181de8ce6ed658afad950f25cced9f9cb7
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746414"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490222"
 ---
 # <a name="ltcomcontractsgt"></a>&lt;comContracts&gt;
 Раздел конфигурации `comContracts` содержит элементы, которые позволяют задавать различные свойства контракта службы интеграции COM+.  
   
 ## <a name="specifying-namespace-and-contract"></a>Задание пространства имен и контракта  
- Контракты службы интеграции COM + в настоящее время ограничены "http://tempuri.org" пространство имен, а имя контракта является производным от поддерживающего COM-интерфейса. Однако можно указать альтернативы, используя раздел `comContracts` в файле конфигурации.  
+ Контракты службы интеграции COM +, в настоящее время ограничены `http://tempuri.org` пространства имен, а имя контракта является производным от поддерживающего COM-интерфейса. Однако можно указать альтернативы, используя раздел `comContracts` в файле конфигурации.  
   
  Например, для указания пространства имен, имени контракта службы и параметра для принудительного использования сеансовых привязок можно использовать следующую конфигурацию.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "32746414"
   
  Если раздел пуст, при инициализации службы применяется пространство имен по умолчанию и имя контракта, взятое из идентификатора поддерживающего COM-интерфейса.  
   
- Кроме того, можно использовать [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) элемента, чтобы указать методов COM +, которые предоставляются при предоставлении интерфейса компонента COM + предоставляется как веб-службы. Можно также использовать [ \<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md) для указания сохраняемого типы, используемые в интеграции. Наконец, можно использовать [ \<userDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md) элемент для включения определяемых пользователем типов (UDT), должны быть включены в контракте службы.  
+ Кроме того, можно использовать [ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md) элемент для задания методов COM +, которые предоставляются при предоставлении интерфейса компонента COM + предоставляется как веб-службы. Можно также использовать [ \<persistableTypes >](../../../../../docs/framework/configure-apps/file-schema/wcf/persistabletypes.md) для задания неизменных типов, используемых в интеграции. Наконец, вы можете использовать [ \<userDefinedType >](../../../../../docs/framework/configure-apps/file-schema/wcf/userdefinedtype.md) элемент для включения пользовательских типов (UDT), должны быть включены в контракте службы.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Configuration.ComContractElementCollection>  

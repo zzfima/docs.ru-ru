@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 4c47013ebc84c6006d65a89e57217ce1c720b45a
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: f9ae53aeb988f23611adb4b00354f65918790d3b
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44197570"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490170"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>Служебное средство ServiceModel Metadata Utility Tool (Svcutil.exe)
 
@@ -192,7 +192,7 @@ Svcutil.exe может улучшить производительность п�
 |/ reference:\<путь к файлу >|Добавляет заданную сборку в набор сборок, используемых для разрешения ссылок на типы.<br /><br /> Сокращенная форма: `/r`|
 |/excludeType:\<тип >|Задает полное имя типа или имя типа с указанием на сборку, который необходимо исключить из экспорта или проверки.<br /><br /> Сокращенная форма: `/et`|
 |/ out:\<файла >|Задает имя файла созданного кода. При передаче в средство нескольких сборок в качестве входных данных этот параметр игнорируется.<br /><br /> По умолчанию: наследуется от имени сборки.<br /><br /> Сокращенная форма: `/o`|
-|/UseSerializerForFaults|Указывает, что <!--zz <xref:System.Xml.XmlSerializer> --> `xref:System.Xml.XmlSerializer ` следует использовать для чтения и записи сбоев, вместо значения по умолчанию <xref:System.Runtime.Serialization.DataContractSerializer>.|
+|/UseSerializerForFaults|Указывает, что вместо сериализатора по умолчанию <xref:System.Xml.Serialization.XmlSerializer> для чтения и записи ошибок следует использовать сериализатор <xref:System.Runtime.Serialization.DataContractSerializer>.|
 
 ## <a name="examples"></a>Примеры
 

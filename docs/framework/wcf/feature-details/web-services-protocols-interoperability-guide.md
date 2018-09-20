@@ -2,12 +2,12 @@
 title: Руководство по взаимодействию по протоколам веб-служб
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: da5014292a8ebfcea48a7b6e1a0cdfd014b09961
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 37416a80c8b6f2ac086dbface1cda37609698bfc
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43739049"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46490380"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Руководство по взаимодействию по протоколам веб-служб
 Windows Communication Foundation (WCF) реализует ряд протоколов веб-служб. Многие из этих протоколов предусматривают ряд параметров и точек расширяемости, оставляемых на усмотрение реализующего субъекта. Этот раздел содержит список протоколов веб-служб, реализуемых WCF. В остальных подразделах содержатся подробности о реализации каждого поддерживаемого протокола.  
@@ -74,7 +74,7 @@ Windows Communication Foundation (WCF) реализует ряд протоко�
 |WS-Coordination|[Web Services Coordination](https://go.microsoft.com/fwlink/?LinkId=95324)|  
 |WS-AtomicTransaction|[Web Services Atomic Transaction](https://go.microsoft.com/fwlink/?LinkId=95323)|  
   
- <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`, `System.ServiceModel.Description.WSDLImporter`, И <xref:System.ServiceModel.Description.MetadataResolver> классы обеспечивают поддержку следующих спецификаций метаданных:  
+ Классы <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <xref:System.ServiceModel.Description.WsdlExporter>, <xref:System.ServiceModel.Description.WsdlImporter> и <xref:System.ServiceModel.Description.MetadataResolver> обеспечивают поддержку следующих спецификаций метаданных.  
   
 -   [Схема XML, часть 1: Структуры, второе издание](https://go.microsoft.com/fwlink/?LinkId=3536)  
   

@@ -3,11 +3,11 @@ title: Разработка рабочих процессов, действий 
 ms.date: 03/30/2017
 ms.assetid: cefc9cfc-2882-4eb9-8c94-7a6da957f2b2
 ms.openlocfilehash: a0566e01d5786c955562ef97d6d083d886278293
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747086"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46489150"
 ---
 # <a name="authoring-workflows-activities-and-expressions-using-imperative-code"></a>Разработка рабочих процессов, действий и выражений с помощью императивного кода
 Определение рабочего процесса представляет собой дерево настроенных объектов действий. Это дерево действий можно определить многими способами, включая редактирование XAML вручную и использование конструктора рабочих процессов для создания XAML. Но использование XAML не является обязательным. Определения рабочих процессов могут быть также созданы вручную. В этом разделе представлены общие сведения о создании определений, действий и выражений рабочего процесса с помощью кода. Примеры по работе с рабочими процессами XAML с помощью кода, см. в разделе [сериализация рабочих процессов и действий в и из XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md).  

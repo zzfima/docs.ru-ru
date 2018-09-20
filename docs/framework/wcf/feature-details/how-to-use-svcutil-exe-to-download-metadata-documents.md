@@ -2,12 +2,12 @@
 title: Практическое руководство. Использование Svcutil.exe для загрузки документов метаданных
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 75068608c2b44ab772175aba7af8d8123457fb7c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6643f0a5dba98afcef38870cf24d91e7d69a1440
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510953"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481862"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>Практическое руководство. Использование Svcutil.exe для загрузки документов метаданных
 Средство Svcutil.exe позволяет загружать метаданные из выполняющихся служб и сохранять эти метаданные в локальных файлах. Для схем HTTP и HTTPS URL-адрес Svcutil.exe предпринимает попытку извлечь метаданные с помощью WS-MetadataExchange и [обнаружение веб-служб XML](https://go.microsoft.com/fwlink/?LinkId=94950). Для всех остальных URL-схем средство Svcutil.exe использует только протокол WS-MetadataExchange.  
@@ -15,13 +15,13 @@ ms.locfileid: "43510953"
  По умолчанию средство Svcutil.exe использует привязки, определенные в классе <xref:System.ServiceModel.Description.MetadataExchangeBindings>. Чтобы настроить привязку, используемую для протокола WS-MetadataExchange, необходимо в файле конфигурации Svcutil.exe (svcutil.exe.config) настроить конечную точку клиента, которая бы использовала контракт `IMetadataExchange` и имя которой совпадало бы со схемой универсального кода ресурса (URI) адреса конечной точки метаданных.  
   
 > [!CAUTION]
->  При запуске Svcutil.exe получить метаданные для службы, которая предоставляет две разные службы контрактов, что каждый содержат операции с тем же именем, Svcutil.exe выводит сообщение об ошибке говорит: «Не удается получить метаданные из...» Например если у вас есть службы, которая предоставляет контракт службы с именем ICarService, который содержит операцию Get (Car c) и же служба предоставляет контракт службы с именем IBookService, который содержит операцию Get (Book b). Чтобы устранить эту проблему, выполните одно из следующих действий.  
->   
->  -   Переименуйте одну из операций  
-> -   Задайте другое имя в свойстве <xref:System.ServiceModel.OperationContractAttribute.Name%2A>.  
-> -   Установите другое пространство имен для одной из операций с помощью свойства <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>.  
+> При запуске Svcutil.exe получить метаданные для службы, которая предоставляет две разные службы контрактов, что каждый содержат операции с тем же именем, Svcutil.exe выводит сообщение об ошибке говорит: «Не удается получить метаданные из...» Например, если у вас есть службы, которая предоставляет контракт службы с именем `ICarService` , содержащий операцию `Get(Car c)` и той же службы предоставляет доступ к контракту службы с именем `IBookService` , содержащий операцию `Get(Book b)`. Чтобы устранить эту проблему, выполните одно из следующих действий.
+>
+> - Переименуйте одну из операций.
+> - Задайте другое имя в свойстве <xref:System.ServiceModel.OperationContractAttribute.Name%2A>.
+> - Установите другое пространство имен для одной из операций с помощью свойства <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A>.
   
-### <a name="to-download-metadata-using-svcutilexe"></a>Загрузка метаданных с помощью средства Svcutil.exe  
+## <a name="to-download-metadata-using-svcutilexe"></a>Загрузка метаданных с помощью средства Svcutil.exe  
   
 1.  Найдите средство Svcutil.exe в следующей папке:  
   

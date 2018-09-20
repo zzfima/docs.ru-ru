@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 7dcdaa0d101ce45ba24226e0aba81b812d5b88da
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1190fb739e7c1873532e96b50399ac0deb6bb51c
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518310"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46478608"
 ---
 # <a name="how-to-localize-an-application"></a>Практическое руководство. Локализация приложения
 В этом учебнике рассматривается создание локализованного приложения с помощью средства LocBaml.  
@@ -46,11 +46,11 @@ ms.locfileid: "43518310"
   
 3.  Добавьте ИД пользователей в свои файлы [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. ИД пользователей используются для отслеживания изменений в файлах и для идентификации элементов, которые должны быть переведены. Чтобы добавить ИД пользователей в файлы, запустите **updateuid** в файле проекта:  
   
-     **msbuild /t:updateuid helloapp.csproj**  
+     **MSBuild - t: updateuid helloapp.csproj**  
   
      Чтобы проверить, что отсутствующие или дублированные ИД пользователей, запустите **checkuid**:  
   
-     **msbuild /t:checkuid helloapp.csproj**  
+     **MSBuild - t: checkuid helloapp.csproj**  
   
      После выполнения команды **updateuid**, файлы должны содержать ИД пользователей. Например, в файле Pane1.xaml приложения HelloApp вы должны найти следующее:  
   

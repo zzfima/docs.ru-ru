@@ -11,11 +11,11 @@ ms.assetid: 1cdb8740-871a-456c-9bd9-db96ca8d79b3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9c1690d0cdf1f57eaf0a794d6e71babfa4fa6425
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46287966"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46485604"
 ---
 # <a name="designing-for-extensibility"></a>Разработка с обеспечением расширяемости
 Одним важным аспектом разработки платформа нужно убедиться, что тщательно рассматривается как расширяемость платформы. Для этого требуется, что вы понимаете, затраты и преимущества, связанные с различные механизмы расширяемости. В этой главе поможет вам решить, какой из механизмов расширения — создание подклассов, события, виртуальные члены, обратные вызовы и т. д. — лучше всего решать требования к платформе.  

@@ -2,19 +2,19 @@
 title: Предоставление и вызов действий ActivityActions
 ms.date: 03/30/2017
 ms.assetid: 97ce4797-426e-463d-9cc4-1261afad6df4
-ms.openlocfilehash: f36d88fc54e5150927113ed8825fbccad84129d4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 99207c33d82ec9028da2355cc792c366dc5e0cc6
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520127"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46479758"
 ---
 # <a name="exposing-and-invoking-activityactions"></a>Предоставление и вызов действий ActivityActions
 В этом образце показано, как разработать настраиваемое действие, имеющее <xref:System.Activities.ActivityAction>. Также демонстрируется, как использовать данное действие, обеспечив реализацию <xref:System.Activities.ActivityAction>.  
   
- <xref:System.Activities.ActivityAction> Позволяет создателям действий предоставлять «дыры» с определенными сигнатурами которых пользователи действия могут подключить пользовательское поведение. Например <!--zz <xref:System.Activities.Statements.ForEach>--> `System.Activities.Statements.ForEach` действия (совершающее коллекцию элементов), имеет <xref:System.Activities.ActivityAction> , позволяет пользователю действия подключить поведение, работающее с текущим элементом итерации.  
+ <xref:System.Activities.ActivityAction> Позволяет создателям действий предоставлять «дыры» с определенными сигнатурами которых пользователи действия могут подключить пользовательское поведение. Например, действие <xref:System.Activities.Statements.ForEach%601> (совершающее операции с коллекцией элементов) имеет <xref:System.Activities.ActivityAction>, что позволяет пользователю действия подключить поведение, работающее с текущим элементом итерации.  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
+## <a name="to-set-up-build-and-run-the-sample"></a>Настройка, сборка и выполнение образца  
   
 1.  Откройте **ActivityAction.sln** образец решения в [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
   

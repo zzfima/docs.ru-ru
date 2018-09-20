@@ -1,5 +1,5 @@
 ---
-title: '&lt;Добавить&gt; элемент для webRequestModules (параметры сети)'
+title: '&lt;Добавление&gt; элемент для webRequestModules (параметры сети)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/add
@@ -13,15 +13,15 @@ ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 921f5f2bfda1a19d022d3f3f4131e3653fd17ea7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f3c3ea63df8d99154c42e40b359180ad1065f6c5
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742794"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46481758"
 ---
-# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;Добавить&gt; элемент для webRequestModules (параметры сети)
-Добавляет в приложение пользовательский модуль веб-запросов.  
+# <a name="ltaddgt-element-for-webrequestmodules-network-settings"></a>&lt;Добавление&gt; элемент для webRequestModules (параметры сети)
+Добавляет пользовательский модуль веб-запросов к приложению.  
   
  \<configuration>  
 \<System.NET >  
@@ -45,7 +45,7 @@ ms.locfileid: "32742794"
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
 |`prefix`|Префикс URI для запросов, обрабатываемых этот модуль веб-запросов.|  
-|`type`|Полное имя типа (обозначается <xref:System.Type.FullName%2A> свойства) и имя сборки (обозначается <xref:System.Reflection.Assembly.FullName%2A> свойства), разделенных запятыми, который реализует этот модуль веб-запросов.|  
+|`type`|Полное имя типа (обозначается <xref:System.Type.FullName%2A> свойства) и имя сборки (обозначается <xref:System.Reflection.Assembly.FullName%2A> свойство), разделенные запятыми, который реализует этот модуль веб-запросов.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
@@ -57,19 +57,19 @@ ms.locfileid: "32742794"
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Задает модули, используемые для запроса данных от сетевых узлов.|  
   
 ## <a name="remarks"></a>Примечания  
- `prefix` Атрибут определяет префикс URI, который использует указанный модуль веб-запросов. Модули веб-запросов обычно регистрируются для обработки определенных протоколов, таких как HTTP или FTP, но могут быть зарегистрированы для обработки запросов к определенному серверу или пути на сервере.  
+ `prefix` Атрибут определяет префикс URI, который использует указанный модуль веб-запросов. Модули веб-запросов обычно регистрируются для обработки конкретного протокола, например HTTP или FTP, но могут быть зарегистрированы для обработки запросов к конкретному серверу или пути на сервере.  
   
  Модуль веб-запросов создается в том случае, если соответствующий префикс URI передается на <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> метод.  
   
- Значение для `prefix` атрибут должен иметь первые символы допустимый URI — например, «http», или «http://www.contoso.com».  
+ Значение для `prefix` атрибут должен быть из ведущих символов является допустимым URI. Например, `http` или `http://www.contoso.com`.
   
- Значение для `type` атрибут должен быть допустимым именем типа и соответствующее имя сборки, разделенных точкой с запятой.  
+ Значение для `type` атрибут должен быть допустимым именем типа и соответствующее имя сборки, разделенных запятыми.
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере регистрируется пользовательский модуль веб-запросов для HTTP. Следует заменить значения для Version и PublicKeyToken правильные значения для указанного модуля.  
+ В следующем примере регистрируется пользовательский модуль веб-запросов для HTTP. Следует заменить значения для версии и PublicKeyToken правильными значениями для указанного модуля.  
   
 ```xml  
 <configuration>  

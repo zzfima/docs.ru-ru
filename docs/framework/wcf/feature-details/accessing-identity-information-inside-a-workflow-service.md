@@ -2,17 +2,17 @@
 title: Доступ к идентификационным данным в службе рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
-ms.openlocfilehash: a87c21215c37fefd8d9306fd0ccd0c5b2a1dfd11
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7951782946f5b8ef989598d01229dcf193d97689
+ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33491979"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46480751"
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>Доступ к идентификационным данным в службе рабочего процесса
-Для доступа к сведениям об удостоверении в службе рабочего процесса необходимо реализовать интерфейс <xref:System.ServiceModel.Activities.IReceiveMessageCallback> в пользовательском свойстве выполнения. В методе <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> можно обратиться к контексту <xref:System.ServiceModel.OperationContext.ServiceSecurityContext>, чтобы получить доступ к сведениям об удостоверении. Данный раздел содержит пошаговое руководство по реализации этого свойства выполнения, а также пользовательского действия, которое должно выявить это свойство для действия <xref:System.ServiceModel.Activities.Receive> во время выполнения.  Пользовательское действие реализует поведение аналогично <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` действия, за исключением того, что при <xref:System.ServiceModel.Activities.Receive> размещения в нем <xref:System.ServiceModel.Activities.IReceiveMessageCallback> будет вызываться и сведения об удостоверении будут извлечены.  
+Для доступа к сведениям об удостоверении в службе рабочего процесса необходимо реализовать интерфейс <xref:System.ServiceModel.Activities.IReceiveMessageCallback> в пользовательском свойстве выполнения. В методе <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> можно обратиться к контексту <xref:System.ServiceModel.OperationContext.ServiceSecurityContext>, чтобы получить доступ к сведениям об удостоверении. Данный раздел содержит пошаговое руководство по реализации этого свойства выполнения, а также пользовательского действия, которое должно выявить это свойство для действия <xref:System.ServiceModel.Activities.Receive> во время выполнения. Пользовательское действие реализует такое же поведение, что и действие <xref:System.Activities.Statements.Sequence>, не считая того, что после размещения в нем действия <xref:System.ServiceModel.Activities.Receive> вызывается <xref:System.ServiceModel.Activities.IReceiveMessageCallback> и происходит возврат сведений об удостоверении.  
   
-### <a name="implement-ireceivemessagecallback"></a>Реализация IReceiveMessageCallback  
+## <a name="implement-ireceivemessagecallback"></a>Реализация IReceiveMessageCallback  
   
 1.  Создайте пустое решение [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
@@ -50,13 +50,13 @@ ms.locfileid: "33491979"
   
      В этом коде для доступа к сведениям об удостоверении методу передается контекст <xref:System.ServiceModel.OperationContext>.  
   
-### <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>Реализуйте собственное действие, чтобы добавить реализацию IReceiveMessageCallback к контексту NativeActivityContext  
+## <a name="implement-a-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a>Реализуйте собственное действие, чтобы добавить реализацию IReceiveMessageCallback к контексту NativeActivityContext  
   
 1.  Добавьте новый класс, производный от <xref:System.Activities.NativeActivity>, с именем `AccessIdentityScope`.  
   
 2.  Добавьте локальные переменные, чтобы отслеживать дочерние действия, переменные, индекс текущего действия и обратный вызов <xref:System.Activities.CompletionCallback>.  
   
-    ```  
+    ```csharp
     public sealed class AccessIdentityScope : NativeActivity  
     {  
         Collection<Activity> children;  
@@ -68,7 +68,7 @@ ms.locfileid: "33491979"
   
 3.  Реализуйте конструктор  
   
-    ```  
+    ```csharp
     public AccessIdentityScope() : base()  
     {  
         this.children = new Collection<Activity>();  
@@ -79,7 +79,7 @@ ms.locfileid: "33491979"
   
 4.  Реализуйте свойства `Activities` и `Variables`.  
   
-    ```  
+    ```csharp
     public Collection<Activity> Activities  
     {  
          get { return this.children; }  
@@ -93,7 +93,7 @@ ms.locfileid: "33491979"
   
 5.  Переопределите метод <xref:System.Activities.NativeActivity.CacheMetadata%2A>.  
   
-    ```  
+    ```csharp
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
     {  
         //call base.CacheMetadata to add the Activities and Variables to this activity's metadata  
@@ -105,7 +105,7 @@ ms.locfileid: "33491979"
   
 6.  Переопределите метод <xref:System.Activities.NativeActivity.Execute%2A>.  
   
-    ```  
+    ```csharp
     protected override void Execute(NativeActivityContext context)  
     {  
        // Add the IReceiveMessageCallback implementation as an Execution property   
@@ -139,13 +139,13 @@ ms.locfileid: "33491979"
     }  
     ```  
   
-### <a name="implement-the-workflow-service"></a>Реализация службы рабочего процесса  
+## <a name="implement-the-workflow-service"></a>Реализация службы рабочего процесса  
   
 1.  Открыть существующий `Program` класса.  
   
 2.  Определите следующие константы.  
   
-    ```  
+    ```csharp
     class Program  
     {  
        const string addr = "http://localhost:8080/Service";  
@@ -155,7 +155,7 @@ ms.locfileid: "33491979"
   
 3.  Добавьте статический метод с именем `GetWorkflowService`, создающий службу рабочего процесса.  
   
-    ```  
+    ```csharp
     static Activity GetServiceWorkflow()  
     {  
        Variable<string> echoString = new Variable<string>();  
@@ -194,7 +194,7 @@ ms.locfileid: "33491979"
   
 4.  В существующем методе `Main` разместите службу рабочего процесса.  
   
-    ```  
+    ```csharp
     static void Main(string[] args)  
     {  
        string addr = "http://localhost:8080/Service";  
@@ -213,7 +213,7 @@ ms.locfileid: "33491979"
     }  
     ```  
   
-### <a name="implement-a-workflow-client"></a>Реализуйте клиент рабочего процесса  
+## <a name="implement-a-workflow-client"></a>Реализуйте клиент рабочего процесса  
   
 1.  Создайте новый проект консольного приложения с именем `Client`.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "33491979"
   
 3.  Откройте сформированный файл Program.cs и добавьте статический метод с именем `GetClientWorkflow`, чтобы создать рабочий процесс клиента.  
   
-    ```  
+    ```csharp
     static Activity GetClientWorkflow()  
     {  
        Variable<string> echoString = new Variable<string>();  
@@ -245,7 +245,7 @@ ms.locfileid: "33491979"
           OperationName = "Echo",  
           Content = new SendParametersContent()  
           {  
-             Parameters = { { "echoString", new InArgument<string>("Hello, World") } }   
+             Parameters = { { "echoString", new InArgument<string>("Hello, World") } }
           }  
        };  
   
@@ -253,12 +253,12 @@ ms.locfileid: "33491979"
        {  
           Variables = { echoString },  
           Activities =  
-          {                      
+          {
              new CorrelationScope  
              {  
                 Body = new Sequence  
                 {  
-                   Activities =   
+                   Activities =
                    {  
                       echoRequest,  
                       new ReceiveReply  
@@ -271,8 +271,8 @@ ms.locfileid: "33491979"
                       }  
                    }  
                 }  
-             },                      
-             new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },                      
+             },
+             new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },
              }  
           };  
        }  
@@ -281,7 +281,7 @@ ms.locfileid: "33491979"
   
 4.  Добавьте следующий код для размещения метода `Main()`.  
   
-    ```  
+    ```csharp
     static void Main(string[] args)  
     {  
        Activity workflow = GetClientWorkflow();  
@@ -292,10 +292,10 @@ ms.locfileid: "33491979"
     }  
     ```  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Пример
  Исходный код, используемый в этом разделе, полностью приведен ниже.  
   
-```  
+```csharp
 // AccessIdentityCallback.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -333,9 +333,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
+```csharp
 // AccessIdentityScope.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -381,9 +381,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         {  
             //call base.CacheMetadata to add the Activities and Variables to this activity's metadata  
             base.CacheMetadata(metadata);  
-            //add the private implementation variable: currentIndex   
+            //add the private implementation variable: currentIndex
             metadata.AddImplementationVariable(this.currentIndex);  
-        }                     
+        }
   
         protected override void Execute(  
             NativeActivityContext context)  
@@ -418,9 +418,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
+```csharp
 // Service.cs  
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
@@ -493,10 +493,10 @@ namespace Microsoft.Samples.AccessingOperationContext.Service
         }  
     }  
 }  
-```  
+```
   
-```  
-// client.cs   
+```csharp
+// client.cs
 //----------------------------------------------------------------  
 // Copyright (c) Microsoft Corporation.  All rights reserved.  
 //----------------------------------------------------------------  
@@ -546,12 +546,12 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
             {  
                 Variables = { echoString },  
                 Activities =  
-                {                      
+                {
                     new CorrelationScope  
                     {  
                         Body = new Sequence  
                         {  
-                            Activities =   
+                            Activities =
                             {  
                                 echoRequest,  
                                 new ReceiveReply  
@@ -564,8 +564,8 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
                                 }  
                             }  
                         }  
-                    },                      
-                    new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },                      
+                    },
+                    new WriteLine { Text = new InArgument<string>( (e) => "Received Text: " + echoString.Get(e) ) },
                 }  
             };  
         }  
