@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2e6642c9-bfc6-425c-b3a7-e4912ffa6c1f
 ms.openlocfilehash: 629e8b0bea1cd5c1dd80409acd7c03e0e033b5bc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972810"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46492987"
 ---
 # <a name="row-states-and-row-versions"></a>Состояния и версии строк
 ADO.NET управляет строками таблиц с помощью состояний и версий строк. Состояние строки указывает на статус строки, а версии строк хранят значения изменения строки, включая текущее, исходное и применяемое по умолчанию значения. Например, после внесения изменения в столбец строки эта строка будет иметь состояние `Modified` и две версии: `Current`, содержащую текущие значения, и `Original`, содержащую значения этой строки до изменения столбца.  

@@ -2,12 +2,12 @@
 title: Как получить доступ к службе из приложения рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 5bc18b446d4bf818c874839a421793a997ddc543
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 460e5d0f1bbfdebf885176ed9fcc336b76731edd
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595468"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493318"
 ---
 # <a name="how-to-access-a-service-from-a-workflow-application"></a>Как получить доступ к службе из приложения рабочего процесса
 В этом разделе описывается вызов службы рабочего процесса из консольного приложения рабочего процесса. Он зависит от выполнения [как: создание службы рабочего процесса с действиями обмена сообщениями](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md) раздела. Несмотря на то, что в этом разделе описывается вызов службы рабочего процесса в приложении рабочего процесса, можно использовать те же методы для вызова любой службы Windows Communication Foundation (WCF) из приложения рабочего процесса.
@@ -42,13 +42,13 @@ ms.locfileid: "45595468"
 
      ![Вывести на экран в области элементов](../../../../docs/framework/wcf/feature-details/media/echoactivity.JPG "EchoActivity")
 
-7.  Перетаскивание <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` действия в область конструктора. Под **поток управления** разделе области элементов.
+7.  Перетащите действие <xref:System.Activities.Statements.Sequence> в область конструктора. Под **поток управления** разделе области элементов.
 
-8.  С помощью <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` щелкните действие в фокусе, **переменных** ссылку и добавьте строковую переменную с именем `inString`. Присвойте переменной значение по умолчанию `"Hello, world"` а также строковую переменную с именем `outString` как показано на следующей схеме.
+8.  С помощью <xref:System.Activities.Statements.Sequence> щелкните действие в фокусе, **переменных** ссылку и добавьте строковую переменную с именем `inString`. Присвойте переменной значение по умолчанию `"Hello, world"` а также строковую переменную с именем `outString` как показано на следующей схеме.
 
      ![Добавление переменной](../../../../docs/framework/wcf/feature-details/media/instringvar.JPG "inStringVar")
 
-9. Перетаскивание **Echo** действия в <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence`. В окне свойств привязки `inMsg` аргумент `inString` переменной и `outMsg` аргумент `outString` переменной, как показано на следующем рисунке. При этом операции будет передано значение переменной `inString`, а затем будет принято возвращаемое значение и помещено в переменную `outString`.
+9. Перетаскивание **Echo** действия в <xref:System.Activities.Statements.Sequence>. В окне свойств привязки `inMsg` аргумент `inString` переменной и `outMsg` аргумент `outString` переменной, как показано на следующем рисунке. При этом операции будет передано значение переменной `inString`, а затем будет принято возвращаемое значение и помещено в переменную `outString`.
 
      ![Привязка аргументов к переменным](../../../../docs/framework/wcf/feature-details/media/argumentbind.JPG "ArgumentBind")
 

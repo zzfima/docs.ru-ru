@@ -2,12 +2,12 @@
 title: Возможности упрощения WCF
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: 010f941850dedd73e9cc203ea2b180dae7d4742c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ded4fc93e5e8f33d98e58ffcb3cb98c2bff2b410
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526357"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46493241"
 ---
 # <a name="wcf-simplification-features"></a>Возможности упрощения WCF
 В этом разделе описываются новые возможности, упрощающие написание приложений WCF.  
@@ -106,7 +106,7 @@ ms.locfileid: "43526357"
 |----------------|-------------------|-----------------|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>|Int32.MaxValue|Возвращает и задает максимально допустимую длину массива. Эта квота ограничивает максимальный размер массива примитивов, возвращаемых средством чтения XML, включая байтовые массивы. Эта квота ограничивает потребление памяти не в самом средстве чтения XML, а в компоненте, использующем средство чтения. Например, когда <xref:System.Runtime.Serialization.DataContractSerializer> использует средство чтения, защищенное <xref:System.Xml.XmlDictionaryReaderQuotas.MaxArrayLength%2A>, оно не десериализует байтовые массивы, чей размер превышает указанное в этой квоте значение.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>|Int32.MaxValue|Возвращает и задает максимально допустимое число байтов, возвращаемых для каждой операции чтения. Эта квота ограничивает число байтов, которые считываются за одну операцию считывания при чтении открывающего тега элемента и его атрибутов. (В случае непотоковой передачи данных само имя элемента не входит в квоту.) Наличие слишком большого числа атрибутов XML может привести к неоправданно большому времени обработки, поскольку требуется проверка уникальности имен атрибутов. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A> устраняет эту возможную проблему.|  
-|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|Глубина в 128 узлов|Эта квота ограничивает максимальную глубину вложенности XML-элементов.  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> взаимодействует с <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>: средство чтения всегда сохраняет в памяти данные по текущему элементу и всем его предкам, поэтому максимальный потребляемый средством чтения объем памяти пропорционален произведению этих двух параметров. При десериализации графа объекта с глубоким вложением десериализатор принудительно получает доступ ко всему стеку, и выдается неисправимое исключение <xref:System.StackOverflowException>. Существует прямая корреляция между вложением XML и вложением объекта для обоих <xref:System.Runtime.Serialization.DataContractSerializer> и <!--zz <xref:System.Runtime.Serialization.XmlSerializer>--> `System.Runtime.Serialization.XmlSerializer`. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> используется для устранения этой проблемы.|  
+|<xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A>|Глубина в 128 узлов|Эта квота ограничивает максимальную глубину вложенности XML-элементов.  <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> взаимодействует с <xref:System.Xml.XmlDictionaryReaderQuotas.MaxBytesPerRead%2A>: средство чтения всегда сохраняет в памяти данные по текущему элементу и всем его предкам, поэтому максимальный потребляемый средством чтения объем памяти пропорционален произведению этих двух параметров. При десериализации графа объекта с глубоким вложением десериализатор принудительно получает доступ ко всему стеку, и выдается неисправимое исключение <xref:System.StackOverflowException>. Между вложением XML и вложением объекта существует прямая связь как для <xref:System.Runtime.Serialization.DataContractSerializer> , так и для <xref:System.Xml.Serialization.XmlSerializer>. <xref:System.Xml.XmlDictionaryReaderQuotas.MaxDepth%2A> используется для устранения этой проблемы.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxNameTableCharCount%2A>|Int32.MaxValue|Эта квота ограничивает максимальное количество символов, разрешенных в таблице имен. В таблице имен содержатся определенные строки (например пространства имен и префиксы), возникающие при обработке документа XML. Поскольку эти строки буферизуются в память, эта квота используется для предотвращения чрезмерной буферизации, если ожидается потоковая передача.|  
 |<xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>|Int32.MaxValue|Эта квота ограничивает максимальный размер строки, возвращаемой средством чтения XML. Эта квота ограничивает потребление памяти не в самом средстве чтения XML, а в компоненте, использующем средство чтения. Например, когда <xref:System.Runtime.Serialization.DataContractSerializer> использует средство чтения, защищенное <xref:System.Xml.XmlDictionaryReaderQuotas.MaxStringContentLength%2A>, он не десериализует строки, чей размер превышает указанное в этой квоте значение.|  
   
