@@ -3,17 +3,17 @@ title: Рекурсивные функции. Ключевое слово rec (F
 description: 'Узнайте, как ключевое слово «rec» F # используется с ключевым словом «let» для определения рекурсивной функции.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45745975"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508558"
 ---
-# <a name="recursive-functions-the-rec-keyword"></a><span data-ttu-id="3b5c3-103">Рекурсивные функции. Ключевое слово rec</span><span class="sxs-lookup"><span data-stu-id="3b5c3-103">Recursive Functions: The rec Keyword</span></span>
+# <a name="recursive-functions-the-rec-keyword"></a><span data-ttu-id="b6a79-103">Рекурсивные функции. Ключевое слово rec</span><span class="sxs-lookup"><span data-stu-id="b6a79-103">Recursive Functions: The rec Keyword</span></span>
 
-<span data-ttu-id="3b5c3-104">`rec` Ключевое слово используется вместе с `let` ключевое слово для определения рекурсивной функции.</span><span class="sxs-lookup"><span data-stu-id="3b5c3-104">The `rec` keyword is used together with the `let` keyword to define a recursive function.</span></span>
+<span data-ttu-id="b6a79-104">`rec` Ключевое слово используется вместе с `let` ключевое слово для определения рекурсивной функции.</span><span class="sxs-lookup"><span data-stu-id="b6a79-104">The `rec` keyword is used together with the `let` keyword to define a recursive function.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="3b5c3-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3b5c3-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="b6a79-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b6a79-105">Syntax</span></span>
 
 ```fsharp
 // Recursive function:
@@ -28,27 +28,27 @@ function2-body
 ...
 ```
 
-## <a name="remarks"></a><span data-ttu-id="3b5c3-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="3b5c3-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="b6a79-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="b6a79-106">Remarks</span></span>
 
-<span data-ttu-id="3b5c3-107">Рекурсивные функции, функции, которые вызывают сами себя, явным образом определяются на языке F #.</span><span class="sxs-lookup"><span data-stu-id="3b5c3-107">Recursive functions, functions that call themselves, are identified explicitly in the F# language.</span></span> <span data-ttu-id="3b5c3-108">Это делает доступным идентификатор, который определяется в области видимости функции.</span><span class="sxs-lookup"><span data-stu-id="3b5c3-108">This makes the identifer that is being defined available in the scope of the function.</span></span>
+<span data-ttu-id="b6a79-107">Рекурсивные функции, функции, которые вызывают сами себя, явным образом определяются на языке F #.</span><span class="sxs-lookup"><span data-stu-id="b6a79-107">Recursive functions, functions that call themselves, are identified explicitly in the F# language.</span></span> <span data-ttu-id="b6a79-108">Это делает доступным идентификатор, который определяется в области видимости функции.</span><span class="sxs-lookup"><span data-stu-id="b6a79-108">This makes the identifer that is being defined available in the scope of the function.</span></span>
 
-<span data-ttu-id="3b5c3-109">Следующий код иллюстрирует рекурсивную функцию, которая вычисляет *n*<sup>th</sup> число Фибоначчи.</span><span class="sxs-lookup"><span data-stu-id="3b5c3-109">The following code illustrates a recursive function that computes the *n*<sup>th</sup> Fibonacci number.</span></span>
+<span data-ttu-id="b6a79-109">Следующий код иллюстрирует рекурсивную функцию, которая вычисляет *n*<sup>th</sup> число Фибоначчи.</span><span class="sxs-lookup"><span data-stu-id="b6a79-109">The following code illustrates a recursive function that computes the *n*<sup>th</sup> Fibonacci number.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4001.fs)]
 
 >[!NOTE]
-<span data-ttu-id="3b5c3-110">На практике, приведенный выше код неэффективен времени процессора и памяти, так как подразумевает перерасчет ранее вычисленных значений.</span><span class="sxs-lookup"><span data-stu-id="3b5c3-110">In practice, code like that above is wasteful of memory and processor time because it involves the recomputation of previously computed values.</span></span>
+<span data-ttu-id="b6a79-110">На практике, приведенный выше код неэффективен времени процессора и памяти, так как подразумевает перерасчет ранее вычисленных значений.</span><span class="sxs-lookup"><span data-stu-id="b6a79-110">In practice, code like that above is wasteful of memory and processor time because it involves the recomputation of previously computed values.</span></span>
 
-<span data-ttu-id="3b5c3-111">Методы являются неявно рекурсивными в пределах типа; Нет необходимости, чтобы добавить `rec` ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="3b5c3-111">Methods are implicitly recursive within the type; there is no need to add the `rec` keyword.</span></span> <span data-ttu-id="3b5c3-112">Привязки let в классах не являются неявно рекурсивными.</span><span class="sxs-lookup"><span data-stu-id="3b5c3-112">Let bindings within classes are not implicitly recursive.</span></span>
+<span data-ttu-id="b6a79-111">Методы являются неявно рекурсивными в пределах типа; Нет необходимости, чтобы добавить `rec` ключевое слово.</span><span class="sxs-lookup"><span data-stu-id="b6a79-111">Methods are implicitly recursive within the type; there is no need to add the `rec` keyword.</span></span> <span data-ttu-id="b6a79-112">Привязки let в классах не являются неявно рекурсивными.</span><span class="sxs-lookup"><span data-stu-id="b6a79-112">Let bindings within classes are not implicitly recursive.</span></span>
 
-## <a name="mutually-recursive-functions"></a><span data-ttu-id="3b5c3-113">Взаимно рекурсивные функции</span><span class="sxs-lookup"><span data-stu-id="3b5c3-113">Mutually Recursive Functions</span></span>
+## <a name="mutually-recursive-functions"></a><span data-ttu-id="b6a79-113">Взаимно рекурсивные функции</span><span class="sxs-lookup"><span data-stu-id="b6a79-113">Mutually Recursive Functions</span></span>
 
-<span data-ttu-id="3b5c3-114">Иногда функции являются *взаимно рекурсивные*, это значит, что круг, где одна функция вызывает другую, которая в свою очередь вызывает первый, с любым количеством вызовов между ними.</span><span class="sxs-lookup"><span data-stu-id="3b5c3-114">Sometimes functions are *mutually recursive*, meaning that calls form a circle, where one function calls another which in turn calls the first, with any number of calls in between.</span></span> <span data-ttu-id="3b5c3-115">Такие функции должны определять вместе в одном `let` привязка, с помощью `and` ключевое слово, чтобы связать их друг с другом.</span><span class="sxs-lookup"><span data-stu-id="3b5c3-115">You must define such functions together in the one `let` binding, using the `and` keyword to link them together.</span></span>
+<span data-ttu-id="b6a79-114">Иногда функции являются *взаимно рекурсивные*, это значит, что круг, где одна функция вызывает другую, которая в свою очередь вызывает первый, с любым количеством вызовов между ними.</span><span class="sxs-lookup"><span data-stu-id="b6a79-114">Sometimes functions are *mutually recursive*, meaning that calls form a circle, where one function calls another which in turn calls the first, with any number of calls in between.</span></span> <span data-ttu-id="b6a79-115">Такие функции должны определять вместе в одном `let` привязка, с помощью `and` ключевое слово, чтобы связать их друг с другом.</span><span class="sxs-lookup"><span data-stu-id="b6a79-115">You must define such functions together in the one `let` binding, using the `and` keyword to link them together.</span></span>
 
-<span data-ttu-id="3b5c3-116">В следующем примере показано два взаимно рекурсивные функции.</span><span class="sxs-lookup"><span data-stu-id="3b5c3-116">The following example shows two mutually recursive functions.</span></span>
+<span data-ttu-id="b6a79-116">В следующем примере показано два взаимно рекурсивные функции.</span><span class="sxs-lookup"><span data-stu-id="b6a79-116">The following example shows two mutually recursive functions.</span></span>
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet4002.fs)]
 
-## <a name="see-also"></a><span data-ttu-id="3b5c3-117">См. также</span><span class="sxs-lookup"><span data-stu-id="3b5c3-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b6a79-117">См. также</span><span class="sxs-lookup"><span data-stu-id="b6a79-117">See also</span></span>
 
-- [<span data-ttu-id="3b5c3-118">Функции</span><span class="sxs-lookup"><span data-stu-id="3b5c3-118">Functions</span></span>](index.md)
+- [<span data-ttu-id="b6a79-118">Функции</span><span class="sxs-lookup"><span data-stu-id="b6a79-118">Functions</span></span>](index.md)
