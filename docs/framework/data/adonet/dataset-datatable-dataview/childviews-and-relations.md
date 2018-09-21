@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
 ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46009569"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46528779"
 ---
 # <a name="childviews-and-relations"></a>ChildView и отношения
 Если какая-то связь существует между таблицами в <xref:System.Data.DataSet>, то можно создать объект <xref:System.Data.DataView>, содержащий строки из связанной дочерней таблицы, с применением метода <xref:System.Data.DataRowView.CreateChildView%2A> объекта <xref:System.Data.DataRowView> по отношению к строкам в родительской таблице. Например, следующий код отображает **категории** и связанных с ними **продуктов** в алфавитном порядке по **CategoryName** и **ProductName** .  

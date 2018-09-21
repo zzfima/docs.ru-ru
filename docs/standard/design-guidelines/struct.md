@@ -14,11 +14,11 @@ ms.assetid: 1f48b2d8-608c-4be6-9ba4-d8f203ed9f9f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3879dc3f0270a56132b44882a74c50d05914ff89
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46324624"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46531961"
 ---
 # <a name="struct-design"></a>Разработка структур
 Тип общего назначения значения наиболее часто называется структурой, ключевое слово C#. Этот раздел содержит рекомендации для проектирования общей структуры.  

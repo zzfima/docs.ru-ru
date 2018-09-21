@@ -8,41 +8,41 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: 338daa031ac2c1b31a121908643a15449c5401a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 0d18ee811763a1a3db6905bdbd18540ab5c97c05
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497043"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46517705"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Импорт схемы для создания классов
-Чтобы создать классы из схем, которые могут использоваться с Windows Communication Foundation (WCF), используйте <xref:System.Runtime.Serialization.XsdDataContractImporter> класса. В данном разделе описывается процесс и параметры импорта.  
+Для создания классов из схемы, которые могут использоваться с Windows Communication Foundation (WCF), используйте <xref:System.Runtime.Serialization.XsdDataContractImporter> класса. В данном разделе описывается процесс и параметры импорта.  
   
-## <a name="the-import-process"></a>Процесс импорта  
+## <a name="the-import-process"></a>Процесс импорта
  Процесс импорта схемы начинается с создания объекта <xref:System.Xml.Schema.XmlSchemaSet>, что приводит к созданию объекта <xref:System.CodeDom.CodeCompileUnit>.  
   
  Класс `XmlSchemaSet` является частью объектной модели схемы (SOM) платформы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], представляющей набор документов схемы на языке определения схемы XML (XSD). Чтобы создать объект `XmlSchemaSet` из набора документов XSD, десериализуйте каждый документ в объект <xref:System.Xml.Schema.XmlSchema> (с помощью сериализатора <xref:System.Xml.Serialization.XmlSerializer>) и добавьте эти объекты в новый объект `XmlSchemaSet`.  
   
  Класс `CodeCompileUnit` является частью документной объектной модели кода (CodeDOM) платформы [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], представляющей код [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] абстрактным способом. Чтобы создать фактический код из `CodeCompileUnit`, используйте подкласс класса <xref:System.CodeDom.Compiler.CodeDomProvider>, например класс <xref:Microsoft.CSharp.CSharpCodeProvider> или класс <xref:Microsoft.VisualBasic.VBCodeProvider>.  
   
-#### <a name="to-import-a-schema"></a>Процедура импорта схемы  
+### <a name="to-import-a-schema"></a>Процедура импорта схемы  
   
-1.  Создайте экземпляр класса <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
+1. Создайте экземпляр класса <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
   
-2.  Необязательно. Передайте объект `CodeCompileUnit` в конструктор. Типы, созданные во время импорта схемы, добавляются в этот экземпляр класса `CodeCompileUnit` вместо создания нового пустого экземпляра класса `CodeCompileUnit`.  
+2. Необязательно. Передайте объект `CodeCompileUnit` в конструктор. Типы, созданные во время импорта схемы, добавляются в этот экземпляр класса `CodeCompileUnit` вместо создания нового пустого экземпляра класса `CodeCompileUnit`.  
   
-3.  Необязательно. Вызовите один из методов <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A>. Метод определяет, является ли данная схема действительной схемой контракта данных и можно ли ее импортировать. Метод `CanImport` имеет те же перегрузки, что метод `Import` (см. следующий шаг).  
+3. Необязательно. Вызовите один из методов <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A>. Метод определяет, является ли данная схема действительной схемой контракта данных и можно ли ее импортировать. Метод `CanImport` имеет те же перегрузки, что метод `Import` (см. следующий шаг).  
   
-4.  Вызовите один из перегруженных методов `Import`, например метод <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29>.  
+4. Вызовите один из перегруженных методов `Import`, например метод <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29>.  
   
      Простейшая перегрузка принимает объект `XmlSchemaSet` и импортирует все типы, включая анонимные, найденные в данном наборе схем. Другие перегрузки позволяют указывать тип XSD или список типов для импорта (в виде объекта <xref:System.Xml.XmlQualifiedName> или коллекции объектов `XmlQualifiedName`). В этом случае импортируются только указанные типы. Перегрузка принимает объект <xref:System.Xml.Schema.XmlSchemaElement>, импортирующий определенный элемент из объекта `XmlSchemaSet` и его связанный тип (анонимный или нет). Эта перегрузка возвращает объект `XmlQualifiedName`, представляющий имя контракта данных типа, созданного для этого элемента.  
   
      При нескольких вызовах метода `Import` в один и тот же объект `CodeCompileUnit` добавляется несколько типов. Тип не создается в объекте `CodeCompileUnit`, если он уже имеется в нем. Вызовите метод `Import` несколько раз для одного и того же объекта `XsdDataContractImporter` вместо использования нескольких объектов `XsdDataContractImporter`. Этот метод рекомендуется использовать, чтобы избежать создания повторяющихся типов.  
   
     > [!NOTE]
-    >  В случае сбоя при импорте объект `CodeCompileUnit` будет находиться в непредсказуемом состоянии. Использование объекта `CodeCompileUnit`, возникшего после сбоя импорта, может привести к образованию уязвимых мест в системе безопасности.  
+    > В случае сбоя при импорте объект `CodeCompileUnit` будет находиться в непредсказуемом состоянии. Использование объекта `CodeCompileUnit`, возникшего после сбоя импорта, может привести к образованию уязвимых мест в системе безопасности.  
   
-5.  Для доступа к объекту `CodeCompileUnit` используется свойство <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A>.  
+5. Для доступа к объекту `CodeCompileUnit` используется свойство <xref:System.Runtime.Serialization.XsdDataContractImporter.CodeCompileUnit%2A>.  
   
 ### <a name="import-options-customizing-the-generated-types"></a>Параметры импорта. Настройка созданных типов  
  Можно присвоить свойство <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> объекта <xref:System.Runtime.Serialization.XsdDataContractImporter> экземпляру класса <xref:System.Runtime.Serialization.ImportOptions> для управления различными аспектами процесса импорта. Некоторые параметры непосредственно влияют на созданные типы.  
@@ -58,21 +58,21 @@ ms.locfileid: "33497043"
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
   
 #### <a name="controlling-namespaces-namespaces-or-the-namespace-switch"></a>Управление пространствами имен (Namespaces или коммутатор /namespace)  
- Это соответствует **/Namespace** переключиться `Svcutil.exe` средства.  
+ Это соответствует **/Namespace** переключиться `Svcutil.exe` средство.  
   
- Как правило, созданные из схемы типы создаются в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] пространств имен, с каждого пространства имен XSD соответствует определенному [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] пространства имен в соответствии с сопоставлением, рассмотренным в [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Это сопоставление можно настроить, присвоив свойству <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> значение <xref:System.Collections.Generic.Dictionary%602>. Если пространство имен XSD найдено в словаре, соответствующее пространство имен [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] также берется из словаря.  
+ Как правило, сформированные из схемы типы создаются в [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] пространства имен, каждое пространство имен XSD соответствует определенному [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] пространства имен в соответствии с сопоставлением, рассмотренным в [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md). Это сопоставление можно настроить, присвоив свойству <xref:System.Runtime.Serialization.ImportOptions.Namespaces%2A> значение <xref:System.Collections.Generic.Dictionary%602>. Если пространство имен XSD найдено в словаре, соответствующее пространство имен [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] также берется из словаря.  
   
  Например, рассмотрим следующую схему.  
   
  [!code-xml[c_SchemaImportExport#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
   
- В следующем примере используется `Namespaces` свойство для сопоставления "http://schemas.contoso.com/carSchema" и «Contoso.Cars» пространство имен.  
+ В следующем примере используется `Namespaces` свойства для сопоставления `http://schemas.contoso.com/carSchema` пространство имен «Contoso.Cars».  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
   
 #### <a name="adding-the-serializableattribute-generateserializable-or-the-serializable-switch"></a>Добавление SerializableAttribute (GenerateSerializable или коммутатор /serializable)  
- Это соответствует **/ serializable** переключиться `Svcutil.exe` средства.  
+ Это соответствует **/ serializable** переключиться `Svcutil.exe` средство.  
   
  Иногда важно, чтобы созданные из схемы типы могли использоваться в модулях сериализации среды выполнения [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (например, классе <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter?displayProperty=nameWithType> и классе <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>). Это полезно при использовании типов для удаленного взаимодействия [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]. Чтобы включить эту возможность, необходимо применить атрибут <xref:System.SerializableAttribute> к созданным типам помимо обычного атрибута <xref:System.Runtime.Serialization.DataContractAttribute>. Этот атрибут создается автоматически, если параметр импорта `GenerateSerializable` имеет значение `true`.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "33497043"
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>Добавление поддержки привязки данных (EnableDataBinding или коммутатор /enableDataBinding)  
  Это соответствует **/enableDataBinding** в средстве Svcutil.exe.  
   
- Иногда возникает необходимость привязать созданные из схемы типы к компонентам графического пользовательского интерфейса, чтобы при каждом обновлении экземпляров этих типов автоматически обновлялся пользовательский интерфейс. Объект `XsdDataContractImporter` может создавать типы, реализующие интерфейс <xref:System.ComponentModel.INotifyPropertyChanged> способом, обеспечивающим вызов события при любом изменении свойства. При создании типов для использования в среде программирования пользовательского интерфейса клиента, который поддерживает этот интерфейс (таких как Windows Presentation Foundation (WPF)), задать <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> свойства `true` для включения этой функции.  
+ Иногда возникает необходимость привязать созданные из схемы типы к компонентам графического пользовательского интерфейса, чтобы при каждом обновлении экземпляров этих типов автоматически обновлялся пользовательский интерфейс. Объект `XsdDataContractImporter` может создавать типы, реализующие интерфейс <xref:System.ComponentModel.INotifyPropertyChanged> способом, обеспечивающим вызов события при любом изменении свойства. При создании типов для использования в среде программирования пользовательского интерфейса клиента, который поддерживает этот интерфейс (таких как Windows Presentation Foundation (WPF)), задайте <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> свойства `true` для включения этой функции.  
   
  В следующем примере показан класс `Vehicle`, при создании которого параметр импорта <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> был установлен на значение `true`.  
   
@@ -101,9 +101,9 @@ ms.locfileid: "33497043"
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Любая ассоциация может также считаться списком. Например, указанную выше ассоциацию можно рассматривать как список сложных объектов `city` с двумя полями (полем строки и целочисленным полем). Оба шаблона имеют представление в схеме XSD. Нет возможности различать список и ассоциацию, поэтому такие шаблоны всегда обрабатываются как списки, если в схеме отсутствует специальная заметка, характерная для WCF. В заметке указывается, что данный шаблон представляет ассоциацию. Дополнительные сведения см. в разделе [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Любая ассоциация может также считаться списком. Например, указанную выше ассоциацию можно рассматривать как список сложных объектов `city` с двумя полями (полем строки и целочисленным полем). Оба шаблона имеют представление в схеме XSD. Нет способа различать список и ассоциацию, поэтому такие шаблоны всегда обрабатываются как списки, если не специальная заметка, характерная для WCF в схеме. В заметке указывается, что данный шаблон представляет ассоциацию. Дополнительные сведения см. в разделе [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
- Как правило, список импортируется как контракт данных коллекции, наследуемый от универсального списка, или как массив [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в зависимости от того, используется ли в схеме стандартный шаблон именования коллекций. Это описывается более подробно в [типы коллекций в контрактах данных](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Обычно ассоциации импортируются либо в виде <xref:System.Collections.Generic.Dictionary%602>, либо в виде контракта данных коллекции, наследуемого от объекта словаря. Например, рассмотрим следующую схему.  
+ Как правило, список импортируется как контракт данных коллекции, наследуемый от универсального списка, или как массив [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] в зависимости от того, используется ли в схеме стандартный шаблон именования коллекций. Это описано более подробно в [типы коллекций в контрактах данных](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Обычно ассоциации импортируются либо в виде <xref:System.Collections.Generic.Dictionary%602>, либо в виде контракта данных коллекции, наследуемого от объекта словаря. Например, рассмотрим следующую схему.  
   
  [!code-xml[c_SchemaImportExport#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#13)]  
   
@@ -127,7 +127,7 @@ ms.locfileid: "33497043"
   
  Механизм ссылочных типов коллекций работает одинаково хорошо как для коллекций сложных типов (включая коллекции других коллекций), так и для коллекций примитивов.  
   
- `ReferencedCollectionTypes` Свойство соответствует свойству **/collectionType** в средстве SvcUtil.exe. Обратите внимание, что для ссылки на несколько типов коллекций, **/collectionType** коммутатора должен быть задан несколько раз. Если тип не существует в библиотеке MsCorLib.dll, его необходимо также быть ссылка на сборку с помощью **/reference** переключения.  
+ `ReferencedCollectionTypes` Свойство соответствует **/collectionType** в средстве SvcUtil.exe. Обратите внимание, что для ссылки на несколько типов коллекций, **/collectionType** коммутатора должен быть указан несколько раз. Если тип не находится в библиотеке MsCorLib.dll, его сборки также должно быть указано с помощью **/reference** переключения.  
   
 #### <a name="import-options-referencing-existing-types"></a>Параметры импорта. Ссылка на существующие типы  
  Иногда типы в схеме соответствуют существующим типам [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], и нет необходимости создавать эти типы с нуля. (Сведения, представленные в данном разделе, применимы только к типам, не являющимся коллекциями. Дополнительные сведения о типах коллекций см. в предыдущем разделе.)  
@@ -138,10 +138,10 @@ ms.locfileid: "33497043"
   
  Допустимо добавлять несколько типов с одинаковым именем контракта данных и пространством имен в коллекцию ссылочных типов, если никакие типы схемы не импортируются с этим именем и пространством имен. Это позволит быстро добавлять все типы в сборке в коллекцию, не задумываясь о возможных проблемах с дубликатами для типов, которые в настоящий момент отсутствуют в схеме.  
   
- `ReferencedTypes` Свойство соответствует свойству **/reference** в определенных режимах работы средства Svcutil.exe.  
+ `ReferencedTypes` Свойство соответствует **/reference** в определенных режимах работы средства Svcutil.exe.  
   
 > [!NOTE]
->  Если программа Svcutil.exe или (в Visual Studio) **добавить ссылку на службу** , все типы в библиотеке MsCorLib.dll ссылки на создаются автоматически.  
+>  При использовании Svcutil.exe или (в Visual Studio) **Add Service Reference** автоматически добавляются ссылки на средства, все типы в библиотеке MsCorLib.dll.  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Параметры импорта. Импорт схемы, отличной от DataContract, в виде типов IXmlSerializable  
  Объект <xref:System.Runtime.Serialization.XsdDataContractImporter> поддерживает ограниченное подмножество схемы. При наличии неподдерживаемых конструкций схемы (например, атрибутов XML) попытка импорта заканчивается с ошибкой, и возникает исключение. Однако, если присвоить свойству <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> значение `true`, диапазон поддерживаемых схем увеличится. При выборе значения `true` объект <xref:System.Runtime.Serialization.XsdDataContractImporter> создает типы, реализующие интерфейс <xref:System.Xml.Serialization.IXmlSerializable>. Это обеспечивает прямой доступ к XML-представлению этих типов.  
@@ -152,7 +152,7 @@ ms.locfileid: "33497043"
   
 -   Некоторые конструкции схемы невозможно импортировать с помощью <xref:System.Runtime.Serialization.XsdDataContractImporter>, даже если свойству <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> присвоено значение `true`. В таких случаях также рекомендуется использовать <xref:System.Xml.Serialization.XmlSerializer>.  
   
--   Точные конструкции схемы, поддерживаемые одновременно при <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> — `true` или `false` описаны в [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+-   Точные конструкции схемы, поддерживаемые одновременно при <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> — `true` или `false` описаны в [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
 -   При импорте и экспорте точность схемы для созданных типов <xref:System.Xml.Serialization.IXmlSerializable> не сохраняется. Это значит, что при экспорте схемы из созданных типов и импорте в виде классов исходная схема не возвращается.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "33497043"
   
  Процесс экспорта схемы можно выполнить в созданных классах `IXmlSerializable`. Как уже говорилось ранее, исходная схема не возвращается. Вместо этого вы получите «anyType» стандартный тип XSD, который является подстановочным знаком для любого типа XSD.  
   
- Это достигается путем применения <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> для создаваемого атрибута `IXmlSerializable` классы и указанию метода, которая вызывает <xref:System.Runtime.Serialization.XmlSerializableServices.AddDefaultSchema%2A> метод для создания типа «anyType».  
+ Это достигается путем применения <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> атрибут в созданный `IXmlSerializable` классы и указанию метода, который вызывает <xref:System.Runtime.Serialization.XmlSerializableServices.AddDefaultSchema%2A> метод для создания типа «anyType».  
   
 > [!NOTE]
 >  Тип <xref:System.Runtime.Serialization.XmlSerializableServices> существует только для поддержки этой конкретной функции. Не рекомендуется использовать его для других целей.  

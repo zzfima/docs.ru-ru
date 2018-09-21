@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 35a9fc08033d2b9cd1dae5a1f1f3ddcd361f03eb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bcdac76528e7a8b07b56b6fd1d827c3c8072c371
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753642"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529584"
 ---
 # <a name="add-element-for-appsettings"></a>\<Добавить > элемент для \<appSettings >
 
@@ -36,7 +36,7 @@ ms.locfileid: "32753642"
 
 |           | Описание |
 | --------- | ----------- |
-| **key**   | Обязательный атрибут.<br><br>Задает имя ключа. |
+| **key**   | Обязательный атрибут.<br><br>Указывает имя ключа. |
 | **value** | Обязательный атрибут.<br><br>Указывает значение ключа. |
 
 ## <a name="parent-element"></a>Родительский элемент
@@ -51,7 +51,7 @@ ms.locfileid: "32753642"
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует добавление настроек пользовательской конфигурации для имени приложения:
+Следующий пример показывает добавление настроек пользовательской конфигурации для имени приложения:
 
 ```xml
 <appSettings>
@@ -59,6 +59,15 @@ ms.locfileid: "32753642"
 </appSettings>
 ```
 
+В следующем примере используется `<add>` для определения двух параметров совместимости в приложении ASP.NET:
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
+</appSettings>
+```
+
 ## <a name="see-also"></a>См. также
 
-[Схема файла конфигурации для платформы .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+[Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

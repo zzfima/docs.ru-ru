@@ -2,15 +2,15 @@
 title: Страница справки веб-службы HTTP WCF
 ms.date: 03/30/2017
 ms.assetid: 63c7c695-44b6-4f31-bb9c-00f2763f525e
-ms.openlocfilehash: 75babbeda7d5f0dca18c2de2e3187145164ac9a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0fe4f99fea4d414c95244e535cd75891f921790
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500956"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529980"
 ---
 # <a name="wcf-web-http-service-help-page"></a>Страница справки веб-службы HTTP WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] предоставляет автоматическую справочную страницу для службы WCF WEB HTTP. На этой странице справки приводится описание каждой операции, форматов запроса и ответа, а также схем. По умолчанию эта функциональная возможность отключена. Когда пользователь переходит к службе WCF WEB HTTP и добавляет «/ Help» в конце URL-адрес, например http://localhost:8000/Customers/Help, страницу справки, как отображается следующая информация.  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] предоставляет автоматическую справочную страницу для службы WCF WEB HTTP. На этой странице справки приводится описание каждой операции, форматов запроса и ответа, а также схем. По умолчанию эта функциональная возможность отключена. Когда пользователь переходит к службе WCF WEB HTTP и добавляет «/ Help» в конце URL-адрес, например http://localhost:8000/Customers/Help, страницы справки, как отображается следующая информация.  
   
  ![Страница справки WCF REST](../../../../docs/framework/wcf/feature-details/media/wcfresthelppagemain.gif "WCFRESTHELPPAGEMAIN")  
   
@@ -45,12 +45,12 @@ SyndicationFeedFormatter GetTemplate1();
 </services>  
 ```  
   
- Чтобы включить WCF Web HTTP справочную страницу в коде, добавьте конечную точку службы и <xref:System.ServiceModel.Description.WebHttpBehavior> к параметру конечной точки <!--zz <xref:System.ServiceModel.Description.WebHttpBehavior.EnableHelp%2A>--> `EnableHelp` для `true`. В следующем примере кода показано, как это сделать:  
+ Чтобы включить справочную страницу службы WCF WEB HTTP из кода, добавьте конечную точку службы и добавьте <xref:System.ServiceModel.Description.WebHttpBehavior> к параметру конечной точки <xref:System.ServiceModel.Description.WebHttpBehavior.HelpEnabled%2A> со значением `true`. В следующем примере кода показано, как это сделать:  
   
 ```  
 using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http://localhost:8000/Customers")))  
 {  
-   host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");               
+   host.AddServiceEndpoint(typeof(ICustomerCollection), new WebHttpBinding(), "");
    host.Description.Endpoints[0].Behaviors.Add(new WebHttpBehavior { EnableHelp = true });  
    // ...  
 }  
@@ -240,4 +240,4 @@ using (WebServiceHost host = new WebServiceHost(typeof(Service), new Uri("http:/
 </xs:schema>  
 ```  
   
- Дополнительные сведения о схеме сериализации контракта данных см. в разделе [Справочник по схеме контрактов данных](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).
+ Дополнительные сведения о схеме сериализации контракта данных, см. в разделе [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).

@@ -3,11 +3,11 @@ title: Цитирование кода (F#)
 description: 'Сведения о F # Цитирование кода — функцию языка, позволяет создавать и работать с помощью выражения кода F #, программными средствами.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 27e9cf1d99e2b5955cc6359653fc87bdbe824cc7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45749957"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46539139"
 ---
 # <a name="code-quotations"></a>Цитирование кода
 

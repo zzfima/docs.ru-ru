@@ -3,11 +3,11 @@ title: Упрощенная конфигурация
 ms.date: 03/30/2017
 ms.assetid: dcbe1f84-437c-495f-9324-2bc09fd79ea9
 ms.openlocfilehash: 7df686188099aea45cac81ea94a49b98e5c65f89
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46485708"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46508350"
 ---
 # <a name="simplified-configuration"></a>Упрощенная конфигурация
 Настройка служб Windows Communication Foundation (WCF) может оказаться сложной задачей. Разных параметров много, и не всегда легко понять, какие настройки необходимы. Хотя файлы конфигурации и увеличивают гибкость служб WCF, они также являются источником многих трудно обнаруживаемых проблем. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] устраняет эти проблемы, предоставляя способ уменьшить размер и упростить конфигурацию службы.  

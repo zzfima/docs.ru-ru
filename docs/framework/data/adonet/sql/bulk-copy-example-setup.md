@@ -3,11 +3,11 @@ title: Установка примера массового копировани
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
 ms.openlocfilehash: 71daf489fdf5e7e12594e798bc3ac01b1c76b027
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478192"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46531394"
 ---
 # <a name="bulk-copy-example-setup"></a>Установка примера массового копирования
 Класс <xref:System.Data.SqlClient.SqlBulkCopy> может использоваться для записи данных только в таблицы SQL Server. Примеры кода, приведенные в этом разделе используется образец базы данных SQL Server, **AdventureWorks**. В целях предотвращения модификации существующих таблиц в этих образцах кода запись данных осуществляется в таблицы, которые должны быть созданы заранее.  

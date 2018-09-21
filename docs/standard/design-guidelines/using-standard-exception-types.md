@@ -11,11 +11,11 @@ ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ea4a61be3a76c30c564cbf98ba3318fc6c3e7d4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972297"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46509152"
 ---
 # <a name="using-standard-exception-types"></a>Использование исключений стандартных типов
 В этом разделе описываются стандартные исключения, предоставляемые платформой и особенностей их использования. Список отнюдь не является исчерпывающим. Обратитесь к документации .NET Framework для использования другие типы исключений платформы.  

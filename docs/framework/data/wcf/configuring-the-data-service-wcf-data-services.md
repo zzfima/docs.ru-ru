@@ -8,11 +8,11 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 ms.assetid: 59efd4c8-cc7a-4800-a0a4-d3f8abe6c55c
 ms.openlocfilehash: 0824a43cba1a21cc9ae92b1f807c6a1369fd63ed
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478525"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46530288"
 ---
 # <a name="configuring-the-data-service-wcf-data-services"></a>Настройка службы данных (службы данных WCF)
 С помощью [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], можно создавать службы данных, которые предоставляют [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] веб-каналов. В этих каналах могут находиться данные из различных источников данных. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] использует поставщики данных для представления данных в виде [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] веб-канала. В число таких поставщиков входят [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)], поставщик отражения, а также набор пользовательских интерфейсов поставщиков служб данных. Реализация поставщика определяет модель данных для службы. Дополнительные сведения см. в разделе [поставщики служб данных](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md).  

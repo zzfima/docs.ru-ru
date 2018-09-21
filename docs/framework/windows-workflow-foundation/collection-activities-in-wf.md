@@ -2,12 +2,12 @@
 title: Действия коллекции в WF
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
-ms.openlocfilehash: 442da07e78ee08b49ad0e023362cace23dcd5b8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6b3a02cdd020d303519f605a206d62b42f4fe731
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516731"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46538392"
 ---
 # <a name="collection-activities-in-wf"></a>Действия коллекции в WF
 Действия коллекции используются для работы с объектами коллекции в рамках рабочего процесса. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] имеет системные действия для добавления элементов в коллекцию и удаления из нее, тестирования на наличие элемента в коллекции и очистки коллекции. `ExistsInCollection` и `RemoveFromCollection` имеют <xref:System.Activities.OutArgument%601> типа <xref:System.Boolean>, который определяет результат.  
@@ -25,7 +25,7 @@ ms.locfileid: "33516731"
 |<xref:System.Activities.Statements.RemoveFromCollection%601>|Удаляет элемент из указанной коллекции и возвращает значение `true`, если элемент успешно удален.|  
   
 ## <a name="using-collection-activities"></a>Использование действий коллекции  
- В следующем примере кода показано, как работать с коллекцией, объявленной в виде переменной рабочего процесса. Используемая коллекция является <!--zz <xref:System.Collections.Generic.List%E2%80%991>--> `System.Collections.Generic.List` из <xref:System.String> объектов с именем `fruitList`.  
+ В следующем примере кода показано, как работать с коллекцией, объявленной в виде переменной рабочего процесса. Используемая коллекция является <xref:System.Collections.Generic.List%601> объектов <xref:System.String> по имени `fruitList`.  
   
 ```csharp  
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
@@ -227,7 +227,7 @@ Activity wf = new Sequence
   
  Перечисленные выше образцы кода можно также создать с помощью <xref:Microsoft.CSharp.Activities.CSharpValue%601> вместо <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
   
-```  
+```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  
 {  
     Default = new CSharpValue<ICollection<string>>("new List<String> From {\"Apple\", \"Orange\"};"),  

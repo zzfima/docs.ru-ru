@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: 26317fad5796989a58a48e4f26549805b279228a
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46473425"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46530275"
 ---
 # <a name="toolstrip-technology-summary"></a>Технологии, положенные в основу работы элемента управления ToolStrip
 В этом разделе содержится сводная информация о системе управления `ToolStrip` и классах, поддерживающих ее использование.  

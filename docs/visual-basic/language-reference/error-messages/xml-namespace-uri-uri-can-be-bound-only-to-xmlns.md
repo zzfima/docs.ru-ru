@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31183
 ms.assetid: 0ab1dbce-8397-4959-b2cd-f58798b051a0
 ms.openlocfilehash: 46a6c4896dae3951b5aedae79361f2e06d02bc04
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46488929"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46538077"
 ---
 # <a name="xml-namespace-uri-httpwwww3orgxml1998namespace-can-be-bound-only-to-39xmlns39"></a>URI пространства имен XML `http://www.w3.org/XML/1998/namespace`; может быть привязан только к &#39;xmlns&#39;
 URI `http://www.w3.org/XML/1998/namespace` используется в объявление пространства имен XML. Этот URI является зарезервированным пространством имен и не может быть включен в объявление пространства имен XML.  

@@ -2,12 +2,12 @@
 title: Доступ к службам WCF из клиентского приложения Магазина Windows
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: cfc5dd13c5660ff1604e9de02fdf6755d70a95e9
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a6324d5400e9fb15b3373eea4df0a15cd7c54887
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485668"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46541123"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Доступ к службам WCF из клиентского приложения Магазина Windows
 В Windows 8 появился новый тип приложения - приложения Магазина Windows. Эти приложения предназначены для работы с сенсорным экраном. .NET Framework 4.5 позволяет приложениям Магазина Windows вызывать службы WCF.  
@@ -107,17 +107,18 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 >  XmlDictionaryWriter.Write (DateTime) теперь записывает объект DateTime в виде строки.  
   
 ### <a name="security"></a>Безопасность  
- Поддерживаются следующие режимы безопасности в приложениях Магазина Windows  
+
+В приложениях Windows Store поддерживаются следующие режимы безопасности:
   
-1.  <xref:System.ServiceModel.SecurityMode.None>  
+1. <xref:System.ServiceModel.SecurityMode.None>  
   
-2.  <xref:System.ServiceModel.SecurityMode.Transport>  
+2. <xref:System.ServiceModel.SecurityMode.Transport>  
   
-3.  <!--zz <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredentials> --> `System.ServiceModel.SecurityMode.TransportWithMessageCredentials`
+3. <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>
   
-4.  <!--zz <xref:System.ServiceModel.SecurityMode.TransportCredentialOnly>  --> `System.ServiceModel.SecurityMode.TransportCredentialOnly`
+4. <xref:System.ServiceModel.SecurityMode.Message>
   
- Поддерживаются следующие типы учетных данных клиента в приложениях Магазина Windows  
+В приложениях Windows Store поддерживаются следующие типы учетных данных клиента:
   
 1.  Нет  
   
@@ -145,7 +146,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 1.  <xref:System.ServiceModel.ChannelFactory>  
   
-2.  <!--zz <xref:System.ServiceModel.DuplexChannelFactory> --> `System.ServiceModel.DuplexChannelFactory`
+2.  <xref:System.ServiceModel.DuplexChannelFactory%601>
   
 3.  <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   

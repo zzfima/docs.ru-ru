@@ -3,11 +3,11 @@ title: Корреляция сообщений
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
 ms.openlocfilehash: fd97f12f536da85619f300d36d02a10306f32aa5
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493199"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46529104"
 ---
 # <a name="message-correlation"></a>Корреляция сообщений
 Этот образец демонстрирует, как приложение очереди сообщений (MSMQ) может отправлять сообщения MSMQ к службе Windows Communication Foundation (WCF) и как можно коррелировать сообщения между приложениями отправителя и получателя в сценарии запроса/ответа. В этом образце используется привязка msmqIntegrationBinding. В данном случае служба представляет собой резидентное консольное приложение, позволяющее наблюдать за тем, как служба получает сообщения из очереди. k  
