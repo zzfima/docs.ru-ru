@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b712c6ae5978e83dab085f48dd1fd572757384a
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46528052"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577550"
 ---
-# <a name="asmcacheflags-enumeration"></a><span data-ttu-id="0a326-102">Перечисление ASM_CACHE_FLAGS</span><span class="sxs-lookup"><span data-stu-id="0a326-102">ASM_CACHE_FLAGS Enumeration</span></span>
-<span data-ttu-id="0a326-103">Указывает источник сборки, представленного [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="0a326-103">Indicates the source of an assembly that is represented by [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) in the global assembly cache.</span></span>  
+# <a name="asmcacheflags-enumeration"></a><span data-ttu-id="80304-102">Перечисление ASM_CACHE_FLAGS</span><span class="sxs-lookup"><span data-stu-id="80304-102">ASM_CACHE_FLAGS Enumeration</span></span>
+<span data-ttu-id="80304-103">Указывает источник сборки, представленного [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) в глобальном кэше сборок.</span><span class="sxs-lookup"><span data-stu-id="80304-103">Indicates the source of an assembly that is represented by [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md) in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0a326-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0a326-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="80304-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="80304-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -38,26 +38,26 @@ typedef enum {
 } ASM_CACHE_FLAGS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="0a326-105">Участники</span><span class="sxs-lookup"><span data-stu-id="0a326-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="80304-105">Участники</span><span class="sxs-lookup"><span data-stu-id="80304-105">Members</span></span>  
   
-|<span data-ttu-id="0a326-106">Член</span><span class="sxs-lookup"><span data-stu-id="0a326-106">Member</span></span>|<span data-ttu-id="0a326-107">Описание</span><span class="sxs-lookup"><span data-stu-id="0a326-107">Description</span></span>|  
+|<span data-ttu-id="80304-106">Член</span><span class="sxs-lookup"><span data-stu-id="80304-106">Member</span></span>|<span data-ttu-id="80304-107">Описание</span><span class="sxs-lookup"><span data-stu-id="80304-107">Description</span></span>|  
 |------------|-----------------|  
-|`ASM_CACHE_ZAP`|<span data-ttu-id="0a326-108">Перечисляет кэша предварительно скомпилированных сборок с помощью Ngen.exe.</span><span class="sxs-lookup"><span data-stu-id="0a326-108">Enumerates the cache of precompiled assemblies by using Ngen.exe.</span></span>|  
-|`ASM_CACHE_GAC`|<span data-ttu-id="0a326-109">Перечисляет глобальный кэш сборок.</span><span class="sxs-lookup"><span data-stu-id="0a326-109">Enumerates the global assembly cache.</span></span>|  
-|`ASM_CACHE_DOWNLOAD`|<span data-ttu-id="0a326-110">Перечисляет сборки, загруженные по запросу или которые были теневого копирования.</span><span class="sxs-lookup"><span data-stu-id="0a326-110">Enumerates the assemblies that have been downloaded on demand or that have been shadow-copied.</span></span>|  
-|`ASM_CACHE_ROOT`|<span data-ttu-id="0a326-111">Указывает, что [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) функция должна возвращать путь в глобальном кэше сборок для общеязыковой среды выполнения (CLR) версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="0a326-111">Indicates that the [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) function should return the path to the global assembly cache for the common language runtime (CLR) version 2.0.</span></span> <span data-ttu-id="0a326-112">Значение только в контексте вызова [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span><span class="sxs-lookup"><span data-stu-id="0a326-112">Meaningful only in the context of a call to [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span></span>|  
-|`ASM_CACHE_ROOT_EX`|<span data-ttu-id="0a326-113">Указывает, что [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) функция должна возвращать путь в глобальном кэше сборок для среды CLR версии 4.</span><span class="sxs-lookup"><span data-stu-id="0a326-113">Indicates that the [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) function should return the path to the global assembly cache for CLR version 4.</span></span> <span data-ttu-id="0a326-114">Значение только в контексте вызова [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span><span class="sxs-lookup"><span data-stu-id="0a326-114">Meaningful only in the context of a call to [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span></span>|  
+|`ASM_CACHE_ZAP`|<span data-ttu-id="80304-108">Перечисляет кэша предварительно скомпилированных сборок с помощью Ngen.exe.</span><span class="sxs-lookup"><span data-stu-id="80304-108">Enumerates the cache of precompiled assemblies by using Ngen.exe.</span></span>|  
+|`ASM_CACHE_GAC`|<span data-ttu-id="80304-109">Перечисляет глобальный кэш сборок.</span><span class="sxs-lookup"><span data-stu-id="80304-109">Enumerates the global assembly cache.</span></span>|  
+|`ASM_CACHE_DOWNLOAD`|<span data-ttu-id="80304-110">Перечисляет сборки, загруженные по запросу или которые были теневого копирования.</span><span class="sxs-lookup"><span data-stu-id="80304-110">Enumerates the assemblies that have been downloaded on demand or that have been shadow-copied.</span></span>|  
+|`ASM_CACHE_ROOT`|<span data-ttu-id="80304-111">Указывает, что [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) функция должна возвращать путь в глобальном кэше сборок для общеязыковой среды выполнения (CLR) версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="80304-111">Indicates that the [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) function should return the path to the global assembly cache for the common language runtime (CLR) version 2.0.</span></span> <span data-ttu-id="80304-112">Значение только в контексте вызова [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span><span class="sxs-lookup"><span data-stu-id="80304-112">Meaningful only in the context of a call to [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span></span>|  
+|`ASM_CACHE_ROOT_EX`|<span data-ttu-id="80304-113">Указывает, что [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) функция должна возвращать путь в глобальном кэше сборок для среды CLR версии 4.</span><span class="sxs-lookup"><span data-stu-id="80304-113">Indicates that the [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md) function should return the path to the global assembly cache for CLR version 4.</span></span> <span data-ttu-id="80304-114">Значение только в контексте вызова [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span><span class="sxs-lookup"><span data-stu-id="80304-114">Meaningful only in the context of a call to [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md).</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="0a326-115">Требования</span><span class="sxs-lookup"><span data-stu-id="0a326-115">Requirements</span></span>  
- <span data-ttu-id="0a326-116">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0a326-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="80304-115">Требования</span><span class="sxs-lookup"><span data-stu-id="80304-115">Requirements</span></span>  
+ <span data-ttu-id="80304-116">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="80304-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0a326-117">**Заголовок:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="0a326-117">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="80304-117">**Заголовок:** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="80304-117">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="0a326-118">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="0a326-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="80304-118">**Библиотека:** включена как ресурс в MsCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="80304-118">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="0a326-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a326-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="80304-119">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="80304-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a326-120">См. также</span><span class="sxs-lookup"><span data-stu-id="0a326-120">See Also</span></span>  
- [<span data-ttu-id="0a326-121">Функция GetCachePath</span><span class="sxs-lookup"><span data-stu-id="0a326-121">GetCachePath Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
- [<span data-ttu-id="0a326-122">Интерфейс IAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="0a326-122">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)  
- [<span data-ttu-id="0a326-123">Перечисления Fusion</span><span class="sxs-lookup"><span data-stu-id="0a326-123">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="80304-120">См. также</span><span class="sxs-lookup"><span data-stu-id="80304-120">See Also</span></span>  
+ [<span data-ttu-id="80304-121">Функция GetCachePath</span><span class="sxs-lookup"><span data-stu-id="80304-121">GetCachePath Function</span></span>](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
+ [<span data-ttu-id="80304-122">Интерфейс IAssemblyCacheItem</span><span class="sxs-lookup"><span data-stu-id="80304-122">IAssemblyCacheItem Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)  
+ [<span data-ttu-id="80304-123">Перечисления Fusion</span><span class="sxs-lookup"><span data-stu-id="80304-123">Fusion Enumerations</span></span>](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
