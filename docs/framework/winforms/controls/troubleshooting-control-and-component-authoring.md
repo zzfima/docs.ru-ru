@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
 ms.openlocfilehash: caad6a76b52a970e133425c484602deb8801d252
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46538957"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46584244"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Разрешение вопросов, связанных с созданием элементов управления и компонентов
 В этом разделе перечислены распространенные проблемы, возникающие при разработке компонентов и элементов управления. Дополнительные сведения см. в разделе [Программирование с использованием компонентов](https://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
