@@ -9,11 +9,11 @@ ms.assetid: f7bd1361-4ab2-4132-972d-a044b8f197e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d41ba0c1e972eeee07b36ad0d15532f7b551ec2a
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493221"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580568"
 ---
 # <a name="common-design-patterns"></a>Обычные шаблоны разработки
 Существует большое количество книг на шаблоны программного обеспечения, шаблон языков и антишаблоны, предназначенным для очень обширная тема шаблонов. Таким образом в этой главе содержатся рекомендации и обсуждения, связанные с очень ограниченный набор шаблонов, которые часто используются в разработке API-интерфейсы .NET Framework.  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 19f66872-d5ab-49f8-969f-e53f9632a13d
 ms.openlocfilehash: 5f1ef8680bc6826f4e8b1beb1e49fce3a15c40c9
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46517971"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579255"
 ---
 # <a name="method-based-query-syntax-examples-conversion"></a>Примеры синтаксиса запросов на основе методов. Преобразования
 Примеры в этом разделе демонстрируют, как использовать <xref:System.Linq.Enumerable.ToArray%2A>, <xref:System.Linq.Enumerable.ToDictionary%2A> и <xref:System.Linq.Enumerable.ToList%2A> методы запроса [модели AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) с использованием синтаксиса запросов на основе методов. Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.  

@@ -3,11 +3,11 @@ title: Доступ к идентификационным данным в слу
 ms.date: 03/30/2017
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
 ms.openlocfilehash: 7951782946f5b8ef989598d01229dcf193d97689
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46480751"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585511"
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>Доступ к идентификационным данным в службе рабочего процесса
 Для доступа к сведениям об удостоверении в службе рабочего процесса необходимо реализовать интерфейс <xref:System.ServiceModel.Activities.IReceiveMessageCallback> в пользовательском свойстве выполнения. В методе <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> можно обратиться к контексту <xref:System.ServiceModel.OperationContext.ServiceSecurityContext>, чтобы получить доступ к сведениям об удостоверении. Данный раздел содержит пошаговое руководство по реализации этого свойства выполнения, а также пользовательского действия, которое должно выявить это свойство для действия <xref:System.ServiceModel.Activities.Receive> во время выполнения. Пользовательское действие реализует такое же поведение, что и действие <xref:System.Activities.Statements.Sequence>, не считая того, что после размещения в нем действия <xref:System.ServiceModel.Activities.Receive> вызывается <xref:System.ServiceModel.Activities.IReceiveMessageCallback> и происходит возврат сведений об удостоверении.  

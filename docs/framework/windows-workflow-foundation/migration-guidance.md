@@ -3,11 +3,11 @@ title: Руководство по миграции
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 ms.openlocfilehash: 93d523c51c45f9b6f6235a7645fa126fcb09b6e5
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46528285"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579273"
 ---
 # <a name="migration-guidance"></a>Руководство по миграции
 В [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], корпорация Майкрософт выпускает второй основной номер версии Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] была выпущена в составе [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (она включала типы в пространствах имен System.Workflow.*, которые теперь называются WF3) и улучшена в [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 также является частью [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], но он сосуществует с новой технологией рабочего процесса (типы в System.Activities.\* пространства имен; Далее именуется WF4). При принятии решения об использовании WF4 важно помнить, что управление временем осуществляет пользователь.  

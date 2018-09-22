@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
 ms.openlocfilehash: 4c04c00c5392d8ba363346b06c806ec79041c439
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46508691"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46580334"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>Написание первого запроса LINQ (Visual Basic)
 *Запрос* представляет собой выражение, извлекающее данные из источника данных. Запросы выражаются на языке запросов выделенного. Со временем различных языков были разработаны для различных типов источников данных, например, SQL для реляционных баз данных и XQuery для XML. Поэтому для разработчиков приложений изучать новый язык запросов для каждого типа источника данных или формата данных, который поддерживается.  

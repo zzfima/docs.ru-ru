@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
 ms.openlocfilehash: 5aeb5fc3ad1008871b6c54d6c096cb3a76c3416e
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46529363"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586251"
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Синхронизация набора данных с XmlDataDocument
 В этом разделе демонстрируется один шаг обработки заказа на покупку с использованием <xref:System.Data.DataSet> со строгой типизацией, синхронизированного с <xref:System.Xml.XmlDataDocument>. Следующие примеры создания **набора данных** с минимальной схемой, соответствует только часть исходного XML-документа. В примерах используется **XmlDataDocument** совпадения исходного документа XML, включение **набора данных** для предоставления доступа к подмножеству XML-документа.  

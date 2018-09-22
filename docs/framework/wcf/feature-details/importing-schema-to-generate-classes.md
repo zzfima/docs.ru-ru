@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 0d18ee811763a1a3db6905bdbd18540ab5c97c05
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539920"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577945"
 ---
 # <a name="importing-schema-to-generate-classes"></a>Импорт схемы для создания классов
 Для создания классов из схемы, которые могут использоваться с Windows Communication Foundation (WCF), используйте <xref:System.Runtime.Serialization.XsdDataContractImporter> класса. В данном разделе описывается процесс и параметры импорта.  

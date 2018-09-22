@@ -12,11 +12,11 @@ ms.assetid: bc496a91-fefb-4ce0-ab4c-61f09964119a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 27550a8fd8292029cad9c2e699374a190b1a532e
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46526494"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46696083"
 ---
 # <a name="equality-operators"></a>Операторы равенства
 В этом разделе обсуждаются перегрузка операторов равенства и ссылается на `operator==` и `operator!=` как операторы равенства.  

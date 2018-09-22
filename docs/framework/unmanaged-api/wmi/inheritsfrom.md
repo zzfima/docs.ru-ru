@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4784e22d5a3eec031fbee00441958a62d66b52df
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46508873"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577000"
 ---
 # <a name="inheritsfrom-function"></a>Функция InheritsFrom
 Определяет, является ли текущий класс или экземпляр производным от указанного родительского класса.

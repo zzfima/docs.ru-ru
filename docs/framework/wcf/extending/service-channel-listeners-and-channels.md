@@ -3,11 +3,11 @@ title: 'Служба: Прослушиватели каналов и канал�
 ms.date: 03/30/2017
 ms.assetid: 8ccbe0e8-7e55-441d-80de-5765f67542fa
 ms.openlocfilehash: 88bfdc879e4f3c7df6b2c4035c7ed7fdc2b4c41d
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537271"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46585419"
 ---
 # <a name="service-channel-listeners-and-channels"></a>Служба: Прослушиватели каналов и каналы
 

@@ -12,11 +12,11 @@ ms.assetid: 5e87881c-9c13-4b52-8ad1-e34bb46e8aaa
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c62a469b3e31283e5790c747092a8fe504ef8c2a
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46517848"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46579203"
 ---
 # <a name="security-changes-in-the-net-framework"></a>Изменения системы безопасности в .NET Framework
 Самое важное изменение в отношении безопасности в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] — это строгое именование. Описание этих изменений см. в разделе [Enhanced Strong Naming](../../../docs/framework/app-domains/enhanced-strong-naming.md) .  
