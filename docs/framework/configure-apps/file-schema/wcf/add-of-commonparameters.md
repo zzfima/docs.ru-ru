@@ -3,24 +3,24 @@ title: '&lt;add&gt; для &lt;commonParameters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
 ms.openlocfilehash: 93e82aa3bd44a747d1e85986c51c21522d709bd0
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46489855"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46578911"
 ---
-# <a name="ltaddgt-of-ltcommonparametersgt"></a><span data-ttu-id="25d46-102">&lt;add&gt; для &lt;commonParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="25d46-102">&lt;add&gt; of &lt;commonParameters&gt;</span></span>
-<span data-ttu-id="25d46-103">Определяет пару параметров «имя-значение», которые используются глобально в нескольких службах.</span><span class="sxs-lookup"><span data-stu-id="25d46-103">Specifies a name-value pair of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="25d46-104">Как правило, этот параметр включает строку подключения базы данных, которая может совместно использоваться долговременными службами.</span><span class="sxs-lookup"><span data-stu-id="25d46-104">Typically this parameter includes the database connection string that might be shared by durable services.</span></span>  
+# <a name="ltaddgt-of-ltcommonparametersgt"></a><span data-ttu-id="8989f-102">&lt;add&gt; для &lt;commonParameters&gt;</span><span class="sxs-lookup"><span data-stu-id="8989f-102">&lt;add&gt; of &lt;commonParameters&gt;</span></span>
+<span data-ttu-id="8989f-103">Определяет пару параметров «имя-значение», которые используются глобально в нескольких службах.</span><span class="sxs-lookup"><span data-stu-id="8989f-103">Specifies a name-value pair of parameters that are used globally across multiple services.</span></span> <span data-ttu-id="8989f-104">Как правило, этот параметр включает строку подключения базы данных, которая может совместно использоваться долговременными службами.</span><span class="sxs-lookup"><span data-stu-id="8989f-104">Typically this parameter includes the database connection string that might be shared by durable services.</span></span>  
   
- <span data-ttu-id="25d46-105">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="25d46-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="25d46-106">\<варианты поведения ></span><span class="sxs-lookup"><span data-stu-id="25d46-106">\<behaviors></span></span>  
-<span data-ttu-id="25d46-107">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="25d46-107">\<serviceBehaviors></span></span>  
-<span data-ttu-id="25d46-108">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="25d46-108">\<behavior></span></span>  
-<span data-ttu-id="25d46-109">\<workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="25d46-109">\<workflowRuntime></span></span>  
-<span data-ttu-id="25d46-110">\<commonParameters ></span><span class="sxs-lookup"><span data-stu-id="25d46-110">\<commonParameters></span></span>  
-<span data-ttu-id="25d46-111">\<add></span><span class="sxs-lookup"><span data-stu-id="25d46-111">\<add></span></span>  
+ <span data-ttu-id="8989f-105">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="8989f-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="8989f-106">\<варианты поведения ></span><span class="sxs-lookup"><span data-stu-id="8989f-106">\<behaviors></span></span>  
+<span data-ttu-id="8989f-107">\<serviceBehaviors ></span><span class="sxs-lookup"><span data-stu-id="8989f-107">\<serviceBehaviors></span></span>  
+<span data-ttu-id="8989f-108">\<поведение ></span><span class="sxs-lookup"><span data-stu-id="8989f-108">\<behavior></span></span>  
+<span data-ttu-id="8989f-109">\<workflowRuntime ></span><span class="sxs-lookup"><span data-stu-id="8989f-109">\<workflowRuntime></span></span>  
+<span data-ttu-id="8989f-110">\<commonParameters ></span><span class="sxs-lookup"><span data-stu-id="8989f-110">\<commonParameters></span></span>  
+<span data-ttu-id="8989f-111">\<add></span><span class="sxs-lookup"><span data-stu-id="8989f-111">\<add></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="25d46-112">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="25d46-112">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8989f-112">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="8989f-112">Syntax</span></span>  
   
 ```xml  
 <workflowRuntime>  
@@ -30,29 +30,29 @@ ms.locfileid: "46489855"
 </workflowRuntime>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="25d46-113">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="25d46-113">Attributes and Elements</span></span>  
- <span data-ttu-id="25d46-114">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="25d46-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="8989f-113">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="8989f-113">Attributes and Elements</span></span>  
+ <span data-ttu-id="8989f-114">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="8989f-114">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="25d46-115">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="25d46-115">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="8989f-115">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="8989f-115">Attributes</span></span>  
   
-|<span data-ttu-id="25d46-116">Атрибут</span><span class="sxs-lookup"><span data-stu-id="25d46-116">Attribute</span></span>|<span data-ttu-id="25d46-117">Описание</span><span class="sxs-lookup"><span data-stu-id="25d46-117">Description</span></span>|  
+|<span data-ttu-id="8989f-116">Атрибут</span><span class="sxs-lookup"><span data-stu-id="8989f-116">Attribute</span></span>|<span data-ttu-id="8989f-117">Описание</span><span class="sxs-lookup"><span data-stu-id="8989f-117">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="25d46-118">имя</span><span class="sxs-lookup"><span data-stu-id="25d46-118">name</span></span>|<span data-ttu-id="25d46-119">Имя параметра, заданного для службы.</span><span class="sxs-lookup"><span data-stu-id="25d46-119">The name of the parameter specified for a service.</span></span>|  
-|<span data-ttu-id="25d46-120">value</span><span class="sxs-lookup"><span data-stu-id="25d46-120">value</span></span>|<span data-ttu-id="25d46-121">Значение параметра, заданного для службы.</span><span class="sxs-lookup"><span data-stu-id="25d46-121">The value of the parameter specified for a service.</span></span>|  
+|<span data-ttu-id="8989f-118">имя</span><span class="sxs-lookup"><span data-stu-id="8989f-118">name</span></span>|<span data-ttu-id="8989f-119">Имя параметра, заданного для службы.</span><span class="sxs-lookup"><span data-stu-id="8989f-119">The name of the parameter specified for a service.</span></span>|  
+|<span data-ttu-id="8989f-120">value</span><span class="sxs-lookup"><span data-stu-id="8989f-120">value</span></span>|<span data-ttu-id="8989f-121">Значение параметра, заданного для службы.</span><span class="sxs-lookup"><span data-stu-id="8989f-121">The value of the parameter specified for a service.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="25d46-122">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="25d46-122">Child Elements</span></span>  
- <span data-ttu-id="25d46-123">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="25d46-123">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="8989f-122">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="8989f-122">Child Elements</span></span>  
+ <span data-ttu-id="8989f-123">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="8989f-123">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="25d46-124">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="25d46-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="8989f-124">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="8989f-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="25d46-125">Элемент</span><span class="sxs-lookup"><span data-stu-id="25d46-125">Element</span></span>|<span data-ttu-id="25d46-126">Описание</span><span class="sxs-lookup"><span data-stu-id="25d46-126">Description</span></span>|  
+|<span data-ttu-id="8989f-125">Элемент</span><span class="sxs-lookup"><span data-stu-id="8989f-125">Element</span></span>|<span data-ttu-id="8989f-126">Описание</span><span class="sxs-lookup"><span data-stu-id="8989f-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="25d46-127">\<commonParameters ></span><span class="sxs-lookup"><span data-stu-id="25d46-127">\<commonParameters></span></span>](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|<span data-ttu-id="25d46-128">Коллекция общих параметров, используемых службой.</span><span class="sxs-lookup"><span data-stu-id="25d46-128">A collection of common parameters used by services.</span></span> <span data-ttu-id="25d46-129">Эта коллекция, как правило, включает строку подключения базы данных, которая может совместно использоваться постоянными службами.</span><span class="sxs-lookup"><span data-stu-id="25d46-129">This collection will typically include the database connection string that might be shared by durable services.</span></span>|  
+|[<span data-ttu-id="8989f-127">\<commonParameters ></span><span class="sxs-lookup"><span data-stu-id="8989f-127">\<commonParameters></span></span>](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)|<span data-ttu-id="8989f-128">Коллекция общих параметров, используемых службой.</span><span class="sxs-lookup"><span data-stu-id="8989f-128">A collection of common parameters used by services.</span></span> <span data-ttu-id="8989f-129">Эта коллекция, как правило, включает строку подключения базы данных, которая может совместно использоваться постоянными службами.</span><span class="sxs-lookup"><span data-stu-id="8989f-129">This collection will typically include the database connection string that might be shared by durable services.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="25d46-130">Примечания</span><span class="sxs-lookup"><span data-stu-id="25d46-130">Remarks</span></span>  
- <span data-ttu-id="25d46-131">Элемент `<commonParameters>` определяет любые параметры, которые используются глобально несколькими службами, например `ConnectionString` при использовании <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span><span class="sxs-lookup"><span data-stu-id="25d46-131">The `<commonParameters>` element defines any parameters that are used globally across multiple services, for example `ConnectionString` when using the <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="8989f-130">Примечания</span><span class="sxs-lookup"><span data-stu-id="8989f-130">Remarks</span></span>  
+ <span data-ttu-id="8989f-131">Элемент `<commonParameters>` определяет любые параметры, которые используются глобально несколькими службами, например `ConnectionString` при использовании <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span><span class="sxs-lookup"><span data-stu-id="8989f-131">The `<commonParameters>` element defines any parameters that are used globally across multiple services, for example `ConnectionString` when using the <xref:System.Workflow.Runtime.Hosting.SharedConnectionWorkflowCommitWorkBatchService>.</span></span>  
   
- <span data-ttu-id="25d46-132">Для служб, фиксирующих рабочие пакеты в постоянных хранилищах, таких как <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> и <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, можно включить режим повторения попытки транзакции, используя параметр `EnableRetries`, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="25d46-132">For services that commit work batches to persistence stores, such as <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> and <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, you can enable them to retry their transaction by using the `EnableRetries` parameter as shown in the following example:</span></span>  
+ <span data-ttu-id="8989f-132">Для служб, фиксирующих рабочие пакеты в постоянных хранилищах, таких как <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> и <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, можно включить режим повторения попытки транзакции, используя параметр `EnableRetries`, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="8989f-132">For services that commit work batches to persistence stores, such as <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService> and <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>, you can enable them to retry their transaction by using the `EnableRetries` parameter as shown in the following example:</span></span>  
   
 ```xml  
 <WorkflowRuntime Name="SampleApplication" UnloadOnIdle="false">  
@@ -66,11 +66,11 @@ ms.locfileid: "46489855"
 </WorkflowRuntime>  
 ```  
   
- <span data-ttu-id="25d46-133">Обратите внимание, что `EnableRetries` параметра может быть задано и на глобальном уровне (как показано в *CommonParameters* раздел) или для отдельных служб, поддерживающих `EnableRetries` (как показано в *служб*раздел).</span><span class="sxs-lookup"><span data-stu-id="25d46-133">Notice that the `EnableRetries` parameter can be set at either a global level (as shown in the *CommonParameters* section) or for individual services that support `EnableRetries` (as shown in the *Services* section).</span></span>  
+ <span data-ttu-id="8989f-133">Обратите внимание, что `EnableRetries` параметра может быть задано и на глобальном уровне (как показано в *CommonParameters* раздел) или для отдельных служб, поддерживающих `EnableRetries` (как показано в *служб*раздел).</span><span class="sxs-lookup"><span data-stu-id="8989f-133">Notice that the `EnableRetries` parameter can be set at either a global level (as shown in the *CommonParameters* section) or for individual services that support `EnableRetries` (as shown in the *Services* section).</span></span>  
   
- <span data-ttu-id="25d46-134">Дополнительные сведения об использовании файла конфигурации для управления поведением <xref:System.Workflow.Runtime.WorkflowRuntime> объект ведущего приложения Windows Workflow Foundation, см. в разделе [файлы конфигурации рабочего процесса](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).</span><span class="sxs-lookup"><span data-stu-id="25d46-134">For more information on using a configuration file to control the behavior of a <xref:System.Workflow.Runtime.WorkflowRuntime> object of a Windows Workflow Foundation host application, see [Workflow Configuration Files](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).</span></span>  
+ <span data-ttu-id="8989f-134">Дополнительные сведения об использовании файла конфигурации для управления поведением <xref:System.Workflow.Runtime.WorkflowRuntime> объект ведущего приложения Windows Workflow Foundation, см. в разделе [файлы конфигурации рабочего процесса](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).</span><span class="sxs-lookup"><span data-stu-id="8989f-134">For more information on using a configuration file to control the behavior of a <xref:System.Workflow.Runtime.WorkflowRuntime> object of a Windows Workflow Foundation host application, see [Workflow Configuration Files](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90)).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="25d46-135">Пример</span><span class="sxs-lookup"><span data-stu-id="25d46-135">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="8989f-135">Пример</span><span class="sxs-lookup"><span data-stu-id="8989f-135">Example</span></span>  
   
 ```xml  
 <commonParameters>  
@@ -79,11 +79,11 @@ ms.locfileid: "46489855"
 </commonParameters>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="25d46-136">См. также</span><span class="sxs-lookup"><span data-stu-id="25d46-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="8989f-136">См. также</span><span class="sxs-lookup"><span data-stu-id="8989f-136">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
  <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
  <xref:System.Workflow.Runtime.WorkflowRuntime>  
  <xref:System.Workflow.Runtime.Hosting.DefaultWorkflowCommitWorkBatchService>  
  <xref:System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService>  
- <span data-ttu-id="25d46-137">[Файлы конфигурации рабочего процесса](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="25d46-137">[Workflow Configuration Files](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))</span></span>  
- [<span data-ttu-id="25d46-138">\<commonParameters ></span><span class="sxs-lookup"><span data-stu-id="25d46-138">\<commonParameters></span></span>](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)
+ <span data-ttu-id="8989f-137">[Файлы конфигурации рабочего процесса](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))</span><span class="sxs-lookup"><span data-stu-id="8989f-137">[Workflow Configuration Files](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))</span></span>  
+ [<span data-ttu-id="8989f-138">\<commonParameters ></span><span class="sxs-lookup"><span data-stu-id="8989f-138">\<commonParameters></span></span>](https://msdn.microsoft.com/library/d0e1e6fc-985a-4713-b7da-194e30dfab4c)

@@ -3,23 +3,23 @@ title: '&lt;Custom&gt;'
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
 ms.openlocfilehash: 7d558be66b8a1e46d9743c5f8bf0bb9a8b4c349e
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46540743"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46586731"
 ---
-# <a name="ltcustomgt"></a><span data-ttu-id="9f6e9-102">&lt;Custom&gt;</span><span class="sxs-lookup"><span data-stu-id="9f6e9-102">&lt;custom&gt;</span></span>
-<span data-ttu-id="9f6e9-103">Задает параметры службы пользовательского распознавателя одноранговых узлов.</span><span class="sxs-lookup"><span data-stu-id="9f6e9-103">Specifies settings for a custom peer resolver service.</span></span>  
+# <a name="ltcustomgt"></a><span data-ttu-id="3a830-102">&lt;Custom&gt;</span><span class="sxs-lookup"><span data-stu-id="3a830-102">&lt;custom&gt;</span></span>
+<span data-ttu-id="3a830-103">Задает параметры службы пользовательского распознавателя одноранговых узлов.</span><span class="sxs-lookup"><span data-stu-id="3a830-103">Specifies settings for a custom peer resolver service.</span></span>  
   
-<span data-ttu-id="9f6e9-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="9f6e9-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="9f6e9-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="9f6e9-105">\<bindings></span></span>  
-<span data-ttu-id="9f6e9-106">\<netPeerBinding ></span><span class="sxs-lookup"><span data-stu-id="9f6e9-106">\<netPeerBinding></span></span>  
-<span data-ttu-id="9f6e9-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="9f6e9-107">\<binding></span></span>  
-<span data-ttu-id="9f6e9-108">\<Сопоставитель ></span><span class="sxs-lookup"><span data-stu-id="9f6e9-108">\<resolver></span></span>  
-<span data-ttu-id="9f6e9-109">\<пользовательские ></span><span class="sxs-lookup"><span data-stu-id="9f6e9-109">\<custom></span></span>  
+<span data-ttu-id="3a830-104">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="3a830-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="3a830-105">\<привязки ></span><span class="sxs-lookup"><span data-stu-id="3a830-105">\<bindings></span></span>  
+<span data-ttu-id="3a830-106">\<netPeerBinding ></span><span class="sxs-lookup"><span data-stu-id="3a830-106">\<netPeerBinding></span></span>  
+<span data-ttu-id="3a830-107">\<Привязка ></span><span class="sxs-lookup"><span data-stu-id="3a830-107">\<binding></span></span>  
+<span data-ttu-id="3a830-108">\<Сопоставитель ></span><span class="sxs-lookup"><span data-stu-id="3a830-108">\<resolver></span></span>  
+<span data-ttu-id="3a830-109">\<пользовательские ></span><span class="sxs-lookup"><span data-stu-id="3a830-109">\<custom></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9f6e9-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9f6e9-110">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a830-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="3a830-110">Syntax</span></span>  
   
 ```xml
 <custom address="Uri" 
@@ -29,36 +29,36 @@ ms.locfileid: "46540743"
 </custom>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="9f6e9-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="9f6e9-111">Attributes and Elements</span></span>  
- <span data-ttu-id="9f6e9-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="9f6e9-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="3a830-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="3a830-111">Attributes and Elements</span></span>  
+ <span data-ttu-id="3a830-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="3a830-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="9f6e9-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="9f6e9-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="3a830-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="3a830-113">Attributes</span></span>  
   
-|<span data-ttu-id="9f6e9-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="9f6e9-114">Attribute</span></span>|<span data-ttu-id="9f6e9-115">Описание</span><span class="sxs-lookup"><span data-stu-id="9f6e9-115">Description</span></span>|  
+|<span data-ttu-id="3a830-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="3a830-114">Attribute</span></span>|<span data-ttu-id="3a830-115">Описание</span><span class="sxs-lookup"><span data-stu-id="3a830-115">Description</span></span>|  
 |---------------|-----------------|  
-|`address`|<span data-ttu-id="9f6e9-116">URI, указывающий адрес конечной точки однорангового узла, на котором размещается пользовательская служба распознавателя одноранговых узлов.</span><span class="sxs-lookup"><span data-stu-id="9f6e9-116">A URI that specifies the endpoint address of the peer node that hosts the custom peer resolver service.</span></span>|  
-|`resolverType`|<span data-ttu-id="9f6e9-117">Строка, задающая тип пользовательской службы распознавателя одноранговых узлов.</span><span class="sxs-lookup"><span data-stu-id="9f6e9-117">A string that specifies the type of the custom peer resolver service.</span></span>|  
+|`address`|<span data-ttu-id="3a830-116">URI, указывающий адрес конечной точки однорангового узла, на котором размещается пользовательская служба распознавателя одноранговых узлов.</span><span class="sxs-lookup"><span data-stu-id="3a830-116">A URI that specifies the endpoint address of the peer node that hosts the custom peer resolver service.</span></span>|  
+|`resolverType`|<span data-ttu-id="3a830-117">Строка, задающая тип пользовательской службы распознавателя одноранговых узлов.</span><span class="sxs-lookup"><span data-stu-id="3a830-117">A string that specifies the type of the custom peer resolver service.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="9f6e9-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="9f6e9-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="3a830-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="3a830-118">Child Elements</span></span>  
   
-|<span data-ttu-id="9f6e9-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="9f6e9-119">Element</span></span>|<span data-ttu-id="9f6e9-120">Описание</span><span class="sxs-lookup"><span data-stu-id="9f6e9-120">Description</span></span>|  
+|<span data-ttu-id="3a830-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="3a830-119">Element</span></span>|<span data-ttu-id="3a830-120">Описание</span><span class="sxs-lookup"><span data-stu-id="3a830-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9f6e9-121">\<удостоверение ></span><span class="sxs-lookup"><span data-stu-id="9f6e9-121">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="9f6e9-122">Задает идентификатор пользовательских распознавателей одноранговых узлов, настроенных для данного элемента.</span><span class="sxs-lookup"><span data-stu-id="9f6e9-122">Specifies the identity for custom peer resolvers configured with this element.</span></span> <span data-ttu-id="9f6e9-123">Это элемент типа <xref:System.ServiceModel.Configuration.IdentityElement>.</span><span class="sxs-lookup"><span data-stu-id="9f6e9-123">This element is of type <xref:System.ServiceModel.Configuration.IdentityElement>.</span></span>|  
-|[<span data-ttu-id="9f6e9-124">\<заголовки ></span><span class="sxs-lookup"><span data-stu-id="9f6e9-124">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|<span data-ttu-id="9f6e9-125">Коллекция заголовков адреса, используемых для сообщений SOAP, обрабатываемых пользовательским распознавателем одноранговых узлов.</span><span class="sxs-lookup"><span data-stu-id="9f6e9-125">A collection of address header used for SOAP messages handled by the custom peer resolver.</span></span>|  
+|[<span data-ttu-id="3a830-121">\<удостоверение ></span><span class="sxs-lookup"><span data-stu-id="3a830-121">\<identity></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|<span data-ttu-id="3a830-122">Задает идентификатор пользовательских распознавателей одноранговых узлов, настроенных для данного элемента.</span><span class="sxs-lookup"><span data-stu-id="3a830-122">Specifies the identity for custom peer resolvers configured with this element.</span></span> <span data-ttu-id="3a830-123">Это элемент типа <xref:System.ServiceModel.Configuration.IdentityElement>.</span><span class="sxs-lookup"><span data-stu-id="3a830-123">This element is of type <xref:System.ServiceModel.Configuration.IdentityElement>.</span></span>|  
+|[<span data-ttu-id="3a830-124">\<заголовки ></span><span class="sxs-lookup"><span data-stu-id="3a830-124">\<headers></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/headers-element.md)|<span data-ttu-id="3a830-125">Коллекция заголовков адреса, используемых для сообщений SOAP, обрабатываемых пользовательским распознавателем одноранговых узлов.</span><span class="sxs-lookup"><span data-stu-id="3a830-125">A collection of address header used for SOAP messages handled by the custom peer resolver.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="9f6e9-126">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="9f6e9-126">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="3a830-126">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="3a830-126">Parent Elements</span></span>  
   
-|<span data-ttu-id="9f6e9-127">Элемент</span><span class="sxs-lookup"><span data-stu-id="9f6e9-127">Element</span></span>|<span data-ttu-id="9f6e9-128">Описание</span><span class="sxs-lookup"><span data-stu-id="9f6e9-128">Description</span></span>|  
+|<span data-ttu-id="3a830-127">Элемент</span><span class="sxs-lookup"><span data-stu-id="3a830-127">Element</span></span>|<span data-ttu-id="3a830-128">Описание</span><span class="sxs-lookup"><span data-stu-id="3a830-128">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="9f6e9-129">\<resolver></span><span class="sxs-lookup"><span data-stu-id="9f6e9-129">\<resolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|<span data-ttu-id="9f6e9-130">Распознаватель одноранговых узлов, используемый для разрешения идентификатора сетки с IP-адресами в набор адресов одноранговых узлов, представляющих несколько узлов, входящих в сетку.</span><span class="sxs-lookup"><span data-stu-id="9f6e9-130">A peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>|  
+|[<span data-ttu-id="3a830-129">\<resolver></span><span class="sxs-lookup"><span data-stu-id="3a830-129">\<resolver></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/resolver.md)|<span data-ttu-id="3a830-130">Распознаватель одноранговых узлов, используемый для разрешения идентификатора сетки с IP-адресами в набор адресов одноранговых узлов, представляющих несколько узлов, входящих в сетку.</span><span class="sxs-lookup"><span data-stu-id="3a830-130">A peer resolver that is used to resolve a peer mesh ID to a set of peer node addresses that represents several nodes that participate in the mesh.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9f6e9-131">Примечания</span><span class="sxs-lookup"><span data-stu-id="9f6e9-131">Remarks</span></span>  
- <span data-ttu-id="9f6e9-132">Этот элемент определяет основные параметры пользовательской службы распознавателя одноранговых узлов, включая адрес конечной точки однорангового узла, на котором размещена служба, и любые специальные параметры привязки.</span><span class="sxs-lookup"><span data-stu-id="9f6e9-132">This element defines the basic settings for a custom peer resolver service, including the endpoint address of the peer hosting the service and any specific binding settings.</span></span> <span data-ttu-id="9f6e9-133">Дополнительные сведения о создании пользовательского распознавателя см. в разделе [Добавление в приложение PeerChannel пользовательского распознавателя](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).</span><span class="sxs-lookup"><span data-stu-id="9f6e9-133">For more information on creating a custom resolver, see [Adding a Custom Resolver to a PeerChannel Application](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3a830-131">Примечания</span><span class="sxs-lookup"><span data-stu-id="3a830-131">Remarks</span></span>  
+ <span data-ttu-id="3a830-132">Этот элемент определяет основные параметры пользовательской службы распознавателя одноранговых узлов, включая адрес конечной точки однорангового узла, на котором размещена служба, и любые специальные параметры привязки.</span><span class="sxs-lookup"><span data-stu-id="3a830-132">This element defines the basic settings for a custom peer resolver service, including the endpoint address of the peer hosting the service and any specific binding settings.</span></span> <span data-ttu-id="3a830-133">Дополнительные сведения о создании пользовательского распознавателя см. в разделе [Добавление в приложение PeerChannel пользовательского распознавателя](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).</span><span class="sxs-lookup"><span data-stu-id="3a830-133">For more information on creating a custom resolver, see [Adding a Custom Resolver to a PeerChannel Application](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9f6e9-134">См. также</span><span class="sxs-lookup"><span data-stu-id="9f6e9-134">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="3a830-134">См. также</span><span class="sxs-lookup"><span data-stu-id="3a830-134">See Also</span></span>  
  <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>  
  <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>  
  <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>  
  <xref:System.ServiceModel.Configuration.PeerCustomResolverElement>  
- [<span data-ttu-id="9f6e9-135">Одноранговые распознаватели</span><span class="sxs-lookup"><span data-stu-id="9f6e9-135">Peer Resolvers</span></span>](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
- [<span data-ttu-id="9f6e9-136">Добавление в приложение PeerChannel пользовательского распознавателя</span><span class="sxs-lookup"><span data-stu-id="9f6e9-136">Adding a Custom Resolver to a PeerChannel Application</span></span>](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
+ [<span data-ttu-id="3a830-135">Одноранговые распознаватели</span><span class="sxs-lookup"><span data-stu-id="3a830-135">Peer Resolvers</span></span>](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)  
+ [<span data-ttu-id="3a830-136">Добавление в приложение PeerChannel пользовательского распознавателя</span><span class="sxs-lookup"><span data-stu-id="3a830-136">Adding a Custom Resolver to a PeerChannel Application</span></span>](https://msdn.microsoft.com/library/12aa3787-2962-439c-ad27-46523c8b0419)
