@@ -12,11 +12,11 @@ ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 070fc69728c2cb38e465dab9f6f591a77a857531
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46531576"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46703230"
 ---
 # <a name="capitalization-conventions"></a>Соглашения о написании прописными буквами
 Рекомендации в этой главе размещать простой метод с помощью варианта, когда применяется последовательно, делать идентификаторы для типов, членов и параметров, удобном для чтения.  
