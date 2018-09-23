@@ -4,12 +4,12 @@ description: Узнайте, как выполнять сборку .NET Core �
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
-ms.openlocfilehash: 2623c5d21121b71960d174301c35bdd0d7f8558a
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fa9c193ea4088f04745bdadc6040552e18c0858a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618523"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577507"
 ---
 # <a name="build-net-core-from-source"></a>Сборка .NET Core из исходного кода
 
@@ -93,7 +93,7 @@ ms.locfileid: "45618523"
   * Xcode
   * Openssl
 
-Чтобы выполнить сборку, запустите `build.cmd` в Windows или `build.sh` в Linux и macOS из корня. Если вы не хотите выполнять тесты, используйте `build.cmd /t:Compile` или `./build.sh /t:Compile`. Для сборки CLI в macOS Sierra задайте значение переменной среды DOTNET_RUNTIME_ID, выполнив `export DOTNET_RUNTIME_ID=osx.10.11-x64`.
+Чтобы выполнить сборку, запустите `build.cmd` в Windows или `build.sh` в Linux и macOS из корня. Если вы не хотите выполнять тесты, используйте `build.cmd -t:Compile` или `./build.sh -t:Compile`. Для сборки CLI в macOS Sierra задайте значение переменной среды DOTNET_RUNTIME_ID, выполнив `export DOTNET_RUNTIME_ID=osx.10.11-x64`.
 
 ### <a name="using-your-build"></a>Использование сборки
 
