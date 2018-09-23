@@ -6,11 +6,11 @@ ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6bfc2e6def94d0830df4a4cdf738cdeef106de9f
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46539169"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46703535"
 ---
 # <a name="extension-methods"></a>Методы расширения
 Методы расширения являются компонентом языка, который позволяет статических методов, вызываемых с помощью синтаксиса вызова метода экземпляра. Эти методы необходимо выполнить хотя бы один параметр, который представляет экземпляр, метод должен работать.  
