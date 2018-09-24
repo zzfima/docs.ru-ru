@@ -4,11 +4,11 @@ description: Сведения о принципах работы управле�
 ms.date: 01/08/2017
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
 ms.openlocfilehash: 949b7414116169cada62b48392f37809f26d7ff9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45597749"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46585937"
 ---
 # <a name="versioning-in-c"></a>Управление версиями в C# #
 

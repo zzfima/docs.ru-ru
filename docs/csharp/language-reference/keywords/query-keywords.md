@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
 ms.openlocfilehash: 9ec163e1de018bd87348a5b39a1f34654d7d6d84
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45624766"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577325"
 ---
 # <a name="query-keywords-c-reference"></a>Ключевые слова запроса (Справочник по C#)
 

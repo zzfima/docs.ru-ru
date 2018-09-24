@@ -4,11 +4,11 @@ description: Узнайте, как выполнять соединение с �
 ms.date: 12/1/2016
 ms.assetid: da70b54d-3213-45eb-8437-fbe75cbcf935
 ms.openlocfilehash: ae37d03f996f0b0cc184a86663f16d62e6c29c69
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609538"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "46711068"
 ---
 # <a name="join-by-using-composite-keys"></a>Соединение с помощью составных ключей
 

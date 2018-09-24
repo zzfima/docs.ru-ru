@@ -3,11 +3,11 @@ title: Практическое руководство. Создание иер�
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
 ms.openlocfilehash: 8fa384ced04a90002f8f721266f163c874d6e0ff
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649696"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46585564"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-c"></a>Практическое руководство. Создание иерархии с помощью группировки (C#)
 Этот пример показывает, как группировать данные и затем создавать код XML на основе группирования.  

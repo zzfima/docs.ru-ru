@@ -7,12 +7,13 @@ ms.date: 09/03/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 62cfef08a8319981891c713c08c34eba5ab54b6f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.custom: vs-dotnet
+ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45595314"
+ms.lasthandoff: 09/23/2018
+ms.locfileid: "46705803"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Развертывание приложений .NET Core с помощью Visual Studio
 

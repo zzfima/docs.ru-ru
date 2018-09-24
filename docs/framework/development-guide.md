@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c42311368bf94a2629f656b61b09cb7c2c5f68b6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a21f4cd8657a9d2c26ac481e7f2b00e6a2f502c9
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44205391"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46581107"
 ---
 # <a name="net-framework-development-guide"></a>Руководство по разработке для .NET Framework
 В этом разделе поясняются способы создания, настройки, отладки, защиты и развертывания приложений .NET Framework. В этом разделе также приводятся сведения о технологических областях, таких как динамическое программирование, взаимодействие, расширяемость, управление памятью и потоки.  
@@ -64,10 +64,7 @@ ms.locfileid: "44205391"
   
  [Производительность](../../docs/framework/performance/index.md)  
  Здесь приводятся сведения о кэшировании, отложенной инициализации, надежности и событиях трассировки событий Windows.  
-  
- <!--zz [Advanced Reading for the .NET Framework](https://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)  
- Provides information about advanced development tasks and techniques in the .NET Framework, including extensibility, interoperability, and reflection. Also includes the reference topics for unmanaged APIs that can be used by managed apps, such as runtime hosts, compilers, disassemblers, debuggers, and profilers.  --> 
-  
+ 
 ## <a name="reference"></a>Ссылка  
  [Библиотека классов .NET Framework](/dotnet/api/?view=netframework-4.7)  
  Здесь приводится синтаксис, примеры кода и сведения по использованию для всех классов, содержащихся в пространствах имен [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  

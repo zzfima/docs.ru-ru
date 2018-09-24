@@ -4,11 +4,11 @@ description: Сведения о событиях в .NET Core и наших з�
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
 ms.openlocfilehash: 9f14954dd2e8aeacf3c5ae70a9e891ad11a6f0d7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45618068"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45747099"
 ---
 # <a name="introduction-to-events"></a>Общие сведения о событиях
 

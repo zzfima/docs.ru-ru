@@ -6,11 +6,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.openlocfilehash: fe3b10e17c3cdf181f0b33b4305008655047fb0f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45590699"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46577182"
 ---
 # <a name="certificate-selection-and-validation"></a>Выбор и проверка сертификата
 Классы <xref:System.Net> поддерживают несколько способов выбора и проверки <xref:System.Security.Cryptography.X509Certificates> для подключений SSL. Клиент может выбрать один или несколько сертификатов для прохождения проверки подлинности на сервере. Сервер может потребовать наличия в сертификате клиента одного или нескольких атрибутов для проверки подлинности.  
