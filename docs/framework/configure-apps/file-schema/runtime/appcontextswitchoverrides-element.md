@@ -1,7 +1,7 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; элемент'
 ms.custom: updateeachrelease
-ms.date: 04/19/2018
+ms.date: 09/19/2018
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d16ce7f2744869c812b9988e91edd153d9cb4fd2
-ms.sourcegitcommit: e8dc507cfdaad504fc9d4c83d28d24569dcef91c
+ms.openlocfilehash: c06b63c492d31d1391b53a36ced5b5c7277f5ad6
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "32747529"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47027377"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; элемент
 Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.  
@@ -41,7 +41,7 @@ ms.locfileid: "32747529"
   
 ### <a name="value-attribute"></a>значение атрибута  
   
-|Значение|Описание:|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |«имя = значение»|Имя коммутатора предопределенные вместе с его значением (`true` или `false`). Несколько пар имя значение параметра разделяются точками с запятой («;»). Список имен предопределенных коммутатора, поддерживаемые платформой .NET Framework см. в разделе "Примечания".|  
   
@@ -50,7 +50,7 @@ ms.locfileid: "32747529"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
@@ -62,7 +62,7 @@ ms.locfileid: "32747529"
   
  .NET Framework поддерживает следующие параметры:  
   
-|Имя коммутатора|Описание:|Представленные|  
+|Имя коммутатора|Описание|Представленные|  
 |-----------------|-----------------|----------------|  
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Определяет, использует ли Windows Presentation Foundation это алгоритм для прежних версий для макета элемента управления. Дополнительные сведения см. в разделе [Устранение рисков. Макет WPF](~/docs/framework/migration-guide/mitigation-wpf-layout.md).|.NET Framework 4.6|  
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Определяет, является ли алгоритм по умолчанию, используемый для подписывания частей пакетов PackageDigitalSignatureManager SHA1 или SHA256.|.NET Framework 4.7.1|
@@ -125,7 +125,21 @@ ms.locfileid: "32747529"
   
  Разработчики библиотек можно также определить настраиваемые параметры, которые вызывающие методы могли отказаться от измененные функции, появившиеся в более поздних версиях их библиотеки. Дополнительные сведения см. в описании класса <xref:System.AppContext>.  
   
-## <a name="example"></a>Пример  
+## <a name="switches-in-aspnet-applications"></a>Параметры в приложениях ASP.NET
+
+Можно настроить приложение ASP.NET для использования параметров совместимости, добавив [ \<Добавить >](~/docs/framework/configure-apps/file-schema/appsettings/add-element-for-appsettings.md) элемент [ \<appSettings >](~/docs/framework/configure-apps/file-schema/appsettings/index.md) раздел файла web.config. 
+
+В следующем примере используется `<add>` элемент, чтобы добавить два параметра для `<appSettings>` раздел файла web.config:
+
+```xml
+<appSettings>
+  <add key="AppContext.SetSwitch:Switch.System.Globalization.NoAsyncCurrentCulture" value="true" />
+  <add key="AppContext.SetSwitch:Switch.System.Uri.DontEnableStrictRFC3986ReservedCharacterSets" value="true" />
+</appSettings>
+```
+
+## <a name="example"></a>Пример
+
  В следующем примере используется `AppContextSwitchOverrides` для определения переключатель совместимости одного приложения, `Switch.System.Globalization.NoAsyncCurrentCulture`, язык и региональные параметры, препятствующая из потока между потоками в асинхронных вызовах методов.  
   
 ```xml  
