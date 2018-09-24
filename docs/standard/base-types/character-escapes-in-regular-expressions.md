@@ -17,11 +17,11 @@ ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45658656"
+ms.lasthandoff: 09/22/2018
+ms.locfileid: "46583854"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escape-знаки в регулярных выражениях
 Обратная косая черта (\\) в регулярном выражении может означать следующее.  

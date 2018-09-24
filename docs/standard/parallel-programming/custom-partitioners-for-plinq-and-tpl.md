@@ -11,11 +11,11 @@ ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b4e835d01ac0e1249a9a4c71a3a9db25082fec1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617679"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45964861"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Пользовательские разделители для PLINQ и TPL
 Одним из основных шагов при распараллеливании операции над источником данных является *секционирование* источника, чтобы несколько потоков могли параллельно обращаться к нескольким секциям. PLINQ и библиотека параллельных задач (TPL) предоставляют стандартные средства секционирования, которые прозрачно работают при создании параллельного запроса или цикла <xref:System.Threading.Tasks.Parallel.ForEach%2A>. Для более сложных сценариев вы можете подключить собственное средство секционирования.  

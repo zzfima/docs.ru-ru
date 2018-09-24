@@ -11,11 +11,11 @@ ms.assetid: c95788bf-90a6-4e96-b7bc-58e36a228cc5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 83451af25006e9da396a3e6618cbecee036e9fe2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45687677"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003767"
 ---
 # <a name="attached-and-detached-child-tasks"></a>Присоединенные и отсоединенные дочерние задачи
 *Дочерняя задача* (или *вложенная задача*) — это экземпляр <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>, создаваемый в пользовательском делегате другой задачи, которая называется *родительской задачей*. Дочерняя задача может быть отсоединенной или присоединенной. *Отсоединенная дочерняя задача* — это задача, которая выполняется независимо от своего родительского объекта. *Присоединенная дочерняя задача* — это вложенная задача, созданная с параметром <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType>, родительский объект которой не запрещает ее присоединение явно или по умолчанию. Задача может создавать любое количество присоединенных и отсоединенных дочерних задач, ограничиваемое только системными ресурсами.  
