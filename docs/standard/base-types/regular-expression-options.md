@@ -15,11 +15,11 @@ ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbc5909a3d4ea1ba2747fcc694bf1f34e20e7d2b
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46509123"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47078231"
 ---
 # <a name="regular-expression-options"></a>Параметры регулярных выражений
 <a name="Top"></a> По умолчанию при сравнении входной строки с любыми литеральными символами в шаблоне регулярного выражения учитывается регистр, пробел в шаблоне интерпретируется как литеральный символ, а захватываемые группы в регулярном выражении именуются как явно, так и неявно. Вы можете изменить эти и некоторые другие аспекты поведения регулярного выражения по умолчанию с помощью параметров регулярного выражения. Эти параметры, которые представлены в следующей таблице, могут быть указаны как часть шаблона регулярного выражения или переданы конструктору класса <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> или статичному методу сопоставления шаблона как значение перечисления <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>.  

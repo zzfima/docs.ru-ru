@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f4ed8fa218e97f4a6b06bd1c8a06d9b300b16119
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: b949c9fd50ee4d09d7237bc14898a1b55689f2f4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584348"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088624"
 ---
 # <a name="network-programming-in-the-net-framework"></a>Сетевое программирование в .NET Framework
 Microsoft .NET Framework обеспечивает многоуровневую, расширяемую и управляемую реализацию служб Интернета, которую можно легко и быстро интегрировать в приложения. В сетевых приложениях можно использовать подключаемые протоколы, которые позволяют автоматически применять новые протоколы Интернета, или управляемую реализацию интерфейса сокетов Windows, дающую возможность работать с сетью на уровне сокетов.  
