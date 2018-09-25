@@ -1,24 +1,23 @@
 ---
-title: '&lt;iriParsing&gt; элемент (параметры Uri)'
+title: '&lt;iriParsing&gt; (параметры Uri)'
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f05f7e35d69f789d3ebb371689aafbc84004b732
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 446447f0d279755dbc06e0e3a25d50ad86ad555b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743307"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075230"
 ---
-# <a name="ltiriparsinggt-element-uri-settings"></a>&lt;iriParsing&gt; элемент (параметры Uri)
+# <a name="ltiriparsinggt-element-uri-settings"></a>&lt;iriParsing&gt; (параметры Uri)
 Определяет, применяется ли к <xref:System.Uri> анализ международных идентификаторов ресурсов (IRI) и применяются ли правила анализа IRI.  
   
 ## <a name="schema-hierarchy"></a>Схема иерархии  
  [Элемент \<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<URI > элемент (параметры Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
+ [\<URI > (параметры Uri)](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
  [\<iriParsing >](../../../../../docs/framework/configure-apps/file-schema/network/iriparsing-element-uri-settings.md)  
   
@@ -37,7 +36,7 @@ ms.locfileid: "32743307"
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|`enabled`|Указывает, включен ли синтаксического анализа IRI. Значение по умолчанию — `false`.|  
+|`enabled`|Указывает, включена ли синтаксического анализа IRI. Значение по умолчанию — `false`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
@@ -46,12 +45,12 @@ ms.locfileid: "32743307"
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Содержит параметры, определяющие, как платформа .NET Framework обрабатывает веб-адреса, выраженные с использованием универсальных кодов ресурсов (URI).|  
+|[URI](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|Содержит параметры, определяющие, каким образом платформа .NET Framework обрабатывает веб-адреса, выраженные с использованием универсальных кодов ресурсов (URI).|  
   
 ## <a name="remarks"></a>Примечания  
- Существующий <xref:System.Uri> класс был расширен в .NET Framework 3.5. 3.0 с пакетом обновления 1 и 2.0 с пакетом обновления 1, чтобы обеспечить поддержку международных идентификаторов ресурсов (IRI) и международных доменных имен (IDN). Текущие пользователи не увидят любые изменения в работе платформы .NET Framework 2.0, пока они не запустят IRI и IDN поддержки. Это обеспечивает совместимость приложений с предыдущими версиями платформы .NET Framework.  
+ Существующий <xref:System.Uri> класс был расширен в .NET Framework 3.5. 3.0 с пакетом обновления 1 и 2.0 с пакетом обновления 1 для предоставления поддержки для международных идентификаторов ресурсов (IRI) и международных доменных имен (IDN). Текущие пользователи не увидят любое изменение в .NET Framework 2.0, пока они не запустят IRI и IDN поддержки. Это обеспечивает совместимость приложений с предыдущими версиями платформы .NET Framework.  
   
- Чтобы обеспечить поддержку IRI, необходимы следующие два изменения:  
+ Чтобы включить поддержку IRI, необходимы следующие два изменения:  
   
 1.  Добавьте следующую строку в файл machine.config в каталоге .NET Framework 2.0  
   
@@ -59,9 +58,9 @@ ms.locfileid: "32743307"
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  Укажите, следует ли применять правила синтаксического анализа IRI. Это можно сделать в файле machine.config или в файле app.config.  
+2.  Укажите, должна ли применяться правила синтаксического анализа IRI. Это можно сделать в файле machine.config или в файле app.config.  
   
- Включение синтаксического анализа IRI (iriParsing включен = `true`) нормализация и проверка символов в соответствии с последней IRI правилами в стандарте RFC 3987. Значение по умолчанию — `false` и нормализации и символов проверка в соответствии с RFC 2396 и RFC 3986 (для литералов IPv6).  
+ Включение синтаксического анализа IRI (iriParsing включена = `true`) нормализация и проверка символов в соответствии с последней IRI правилами в RFC 3987. Значение по умолчанию — `false` и нормализации и символов проверку в соответствии с RFC 2396 и RFC 3986 (для литералов IPv6).  
   
 ### <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
@@ -69,7 +68,7 @@ ms.locfileid: "32743307"
 ## <a name="example"></a>Пример  
   
 ### <a name="description"></a>Описание  
- В следующем примере показано конфигурацию, используемую <xref:System.Uri> класс для поддержки синтаксического анализа IRI и имен IDN.  
+ В следующем примере показано конфигурацию, используемую <xref:System.Uri> класс для поддержки синтаксического анализа IRI и IDN-имена.  
   
 ### <a name="code"></a>Код  
   
