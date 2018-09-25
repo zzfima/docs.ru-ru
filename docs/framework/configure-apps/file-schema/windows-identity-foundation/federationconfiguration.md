@@ -3,16 +3,15 @@ title: '&lt;federationConfiguration&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 44014d620dcd03e055eb58b50a1428b8e1b41186
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 66fa16992d779b08ee8c55598efc98f8f5267656
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32759391"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47073629"
 ---
 # <a name="ltfederationconfigurationgt"></a>&lt;federationConfiguration&gt;
-Настраивает <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM), при использовании федеративной проверки подлинности по протоколу WS-Federation. Настраивает <xref:System.Security.Claims.ClaimsAuthorizationManager> при использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса для обеспечения контроля доступа на основе утверждений.  
+Настраивает <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM), при использовании Федеративная проверка подлинности по протоколу WS-Federation. Настраивает <xref:System.Security.Claims.ClaimsAuthorizationManager> при использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класс, чтобы обеспечить управление доступом на основе утверждений.  
   
  \<system.identityModel.services >  
 \<federationConfiguration >  
@@ -33,15 +32,15 @@ ms.locfileid: "32759391"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|имя|Имя данного элемента конфигурации федерации. В основном этот атрибут предоставляет точку расширения для будущих протоколов. Необязательный.|  
-|identityConfigurationName|Имя раздела конфигурации удостоверения, как указано в [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) элемента, который требуется использовать. Если этот атрибут не указан, используется раздел конфигурации по умолчанию удостоверение. Необязательный.|  
+|имя|Имя данного элемента конфигурации федерации. Этот атрибут главным образом предоставляет точку расширения для будущих протоколов. Необязательный.|  
+|identityConfigurationName|Имя раздела конфигурации удостоверений, как указано в [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) элемент для использования. Если этот атрибут не указан, используется раздел конфигурации удостоверений по умолчанию. Необязательный.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Настраивает обработчик куки-файл, используемый SAM. Необязательный.|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Настраивает сертификат, используемый для шифрования и расшифровки токенов. Необязательный.|  
+|[\<cookieHandler >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|Настраивает обработчик файлов cookie, используемый SAM. Необязательный.|  
+|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Настраивает сертификат, используемый для шифрования и расшифровки маркеров. Необязательный.|  
 |[\<wsFederation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|Настраивает модуль проверки подлинности WS-Federation (WSFAM). Необязательный.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
@@ -53,29 +52,29 @@ ms.locfileid: "32759391"
 ## <a name="remarks"></a>Примечания  
  \<FederationConfiguration > элемент предоставляет параметры в двух разных сценариев:  
   
--   При использовании WS-Federation passive веб-приложения, элемент содержит параметры, настроенные <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). Он также ссылается на конфигурацию удостоверения используемый для настройки обработчики маркеров безопасности и сертификаты и компоненты, например диспетчера авторизации утверждений и диспетчером проверки подлинности утверждений.  
+-   При использовании WS-Federation passive веб-приложения, элемент содержит параметры, определяющие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM). Он также ссылается на конфигурацию удостоверения, чтобы использовать для настройки обработчики маркеров безопасности и сертификаты и компоненты, такие как диспетчер авторизации утверждений и диспетчер аутентификации утверждений.  
   
--   При использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса для обеспечения контроля доступа на основе утверждений в коде, элемент ссылается на конфигурацию удостоверения, который настраивает диспетчера авторизации утверждений и политики, которая используется для выполнения авторизации решения. Это верно даже в случаях, которые не являются пассивный веб-сценариев; Например, приложения Windows Communication Foundation (WCF) или приложение, которое не является веб сервера. Если приложение не пассивное веб-приложение [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) элемент (и политики его дочерние элементы, если он имеется) идентификаторов конфигурации, ссылается `<federationConfiguration>` элемент применяются только параметры. Другие атрибуты игнорируются.  
+-   При использовании <xref:System.IdentityModel.Services.ClaimsPrincipalPermission> или <xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute> класса, чтобы обеспечить управление доступом на основе утверждений в коде, элемент, ссылающийся на конфигурацию удостоверения, который настраивает диспетчера авторизации утверждений и политику, которая используется для выполнения авторизации решения. Это верно даже в сценариях, которые не являются пассивных сценариях Web; Например, приложение, которое не является веб-или приложений Windows Communication Foundation (WCF). Если приложение не пассивное веб-приложение, [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md) элемента (и политики его дочерние элементы, если он имеется) конфигурации удостоверения, ссылается `<federationConfiguration>` элемент применяются только параметры. Другие атрибуты игнорируются.  
   
- Независимо от того, сценарий среда выполнения загружает конфигурацию федерации по умолчанию. Поведение определяется следующим образом:  
+ Независимо от сценария среда выполнения загружает конфигурации федерации по умолчанию. Поведение определяется следующим образом:  
   
-1.  При наличии не `<federationConfiguration>` элемент отсутствует, среда выполнения создает конфигурацию федерации и заполняет значениями по умолчанию. Эта конфигурация по умолчанию федерации будет ссылаться на конфигурацию удостоверения по умолчанию.  
+1.  Если нет `<federationConfiguration>` элемент присутствует, среда выполнения создает конфигурацию федерации и заполняет его значения по умолчанию. Эта конфигурация федерации будет ссылаться на конфигурацию удостоверения по умолчанию.  
   
-2.  Если один `<federationConfiguration>` элемент присутствует, он федерации конфигурации по умолчанию, будь то с именем или без имени. Если его `identityConfiguration` атрибут указан, указывается конфигурация именованный удостоверений; в противном случае ссылка на конфигурацию удостоверения по умолчанию.  
+2.  Если одно `<federationConfiguration>` элемент присутствует, он является конфигурацией федерации по умолчанию независимо от того, независимо от того, является ли она с именем или без имени. Если его `identityConfiguration` атрибут указан, на который приведена ссылка на конфигурацию удостоверения именованный; в противном случае используется конфигурация по умолчанию.  
   
-3.  Если неименованный `<federationConfiguration>` элемент присутствует, это конфигурация по умолчанию федерации. Если его `identityConfiguration` атрибут указан, указывается конфигурация именованный удостоверений; в противном случае ссылка на конфигурацию удостоверения по умолчанию.  
+3.  Если неименованный `<federationConfiguration>` элемент присутствует, это конфигурация по умолчанию федерации. Если его `identityConfiguration` атрибут указан, на который приведена ссылка на конфигурацию удостоверения именованный; в противном случае используется конфигурация по умолчанию.  
   
-4.  Если несколько именованных `<federationConfiguration>` элементы, присутствует и нет неименованных `<federationConfiguration>` одного элемента, создается исключение.  
+4.  Если несколько с именем `<federationConfiguration>` элементы являются присутствует и нет неименованных `<federationConfiguration>` присутствует элемент, возникает исключение.  
   
- Как правило, только один `<federationConfiguration>` определенный раздел. Этот раздел представляет конфигурацию федерации по умолчанию. Можно указать несколько уникальность имен `<federationConfiguration>` элементов; Однако в этом случае, если требуется загрузить конфигурацию федерации, отличном от того, без имени, необходимо указать обработчик. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> событие и набор <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> свойство в обработчике для <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> объект инициализирован со значениями из соответствующих `<federationConfiguration>` элемент в файле конфигурации.  
+ Как правило, только один `<federationConfiguration>` определен раздел. Этот раздел представляет конфигурацию федерации по умолчанию. Можно указать несколько, с уникальным именем `<federationConfiguration>` элементов; Однако в этом случае, если вы хотите загрузить конфигурацию федерации, отличном от того, без имени, необходимо указать обработчик для. <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> событие и набор <xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType> свойство внутри обработчика <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> объект инициализирован со значениями из соответствующих `<federationConfiguration>` элемент в файле конфигурации.  
   
- `<federationConfiguration>` Представлен <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> класса. Сам объект конфигурации представленного <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> класса. Один <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> набор экземпляров на <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> свойства и обеспечивает федеративной конфигурацию для приложения.  
+ `<federationConfiguration>` Элемент, представленный объектом <xref:System.IdentityModel.Services.Configuration.FederationConfigurationElement> класса. Сам объект конфигурации представленного <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> класса. Один <xref:System.IdentityModel.Services.Configuration.FederationConfiguration> экземпляр устанавливается на <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType> свойство и предоставляет федеративной конфигурации для приложения.  
   
 ## <a name="example"></a>Пример  
- Следующий XML-КОДЕ показано `<federationConfiguration>` элемент, который задает настройки для WSFAM и указывает, что обработчик куки-файл по умолчанию (экземпляр <xref:System.IdentityModel.Services.ChunkedCookieHandler> класс) будет использоваться SAM.  
+ Следующий код XML показывает `<federationConfiguration>` элемент, который задает параметры для WSFAM и указывает, что обработчик файлов cookie по умолчанию (экземпляр <xref:System.IdentityModel.Services.ChunkedCookieHandler> класса) будет использоваться SAM.  
   
 > [!WARNING]
->  В этом примере обработчик cookie ни WSFAM необходимы для использования протокола HTTPS. Это вызвано `requireHttps` атрибут `<wsFederation>` элемент и `requireSsl` для атрибута `<cookieHandlerElement>` являются `false`. Эти параметры не рекомендуется для большинства рабочих сред, как они могут представлять угрозу безопасности.  
+>  В этом примере ни обработчик файлов cookie, ни WSFAM необходимы для использования протокола HTTPS. Это обусловлено `requireHttps` атрибут `<wsFederation>` элемент и `requireSsl` атрибут `<cookieHandlerElement>` являются `false`. Эти параметры не рекомендуется для большинства рабочих сред, как они могут представлять угрозу безопасности.  
   
 ```xml  
 <system.identityModel.services>  

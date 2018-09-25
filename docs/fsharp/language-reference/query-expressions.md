@@ -3,11 +3,11 @@ title: Выражения запросов (F#)
 description: 'Дополнительные сведения о поддержке выражения запроса LINQ в языке F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6586d991dde550380d04c4d9831bb954eb94a715
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584309"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071076"
 ---
 # <a name="query-expressions"></a>Выражения запросов
 

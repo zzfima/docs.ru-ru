@@ -1,18 +1,17 @@
 ---
-title: '&lt;certificateReference&gt;'
+title: '&lt;CertificateReference&gt;'
 ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e0f9a826a4c8d292346d9efee7970a82b88fb612
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e04dc90134aadfb8af7b0800c7144963d267f513
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756843"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075087"
 ---
-# <a name="ltcertificatereferencegt"></a>&lt;certificateReference&gt;
-Указывает параметры, используемые для поиска и проверки сертификатов в хранилище сертификатов X.509.  
+# <a name="ltcertificatereferencegt"></a>&lt;CertificateReference&gt;
+Задает параметры, которые используются для поиска и проверки сертификатов X.509 в хранилище сертификатов.  
   
  \<system.identityModel.services >  
 \<federationConfiguration >  
@@ -46,9 +45,9 @@ ms.locfileid: "32756843"
 |---------------|-----------------|  
 |storeName|Имя хранилища сертификатов X.509. Значение по умолчанию — «My». Необязательный.|  
 |storeLocation|Объект <xref:System.Security.Cryptography.X509Certificates.StoreLocation> значение, указывающее расположение хранилища сертификатов X.509. Значение по умолчанию — «LocalMachine». Необязательный.|  
-|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType> Значение, указывающее тип выполняемого поиска, должно быть выполнено. Значение по умолчанию — «FindBySubjectDistinguishedName». Необязательный.|  
+|x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType> Значение, указывающее тип выполняемого поиска, который должен выполняться. Значение по умолчанию — «FindBySubjectDistinguishedName». Необязательный.|  
 |findValue|Значение для поиска в хранилище сертификатов X.509. Необязательный.|  
-|isChainIncluded|Указывает, следует ли выполнять проверки с с использованием цепочки сертификатов. Значение по умолчанию — «true»; Проверка выполняется с помощью цепочки сертификатов. Необязательный.|  
+|isChainIncluded|Указывает, нужно ли выполнять проверку с помощью цепочки сертификатов. Значение по умолчанию равно «true»; Проверка выполняется с помощью цепочки сертификатов. Необязательный.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
@@ -57,7 +56,7 @@ ms.locfileid: "32756843"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Настраивает сертификат, используемый для шифрования и расшифровки токенов.|  
+|[\<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|Настраивает сертификат, используемый для шифрования и расшифровки маркеров.|  
   
 ## <a name="remarks"></a>Примечания  
- `<certificateReference>` Элемент задает параметры, используемые для поиска и проверки сертификатов в хранилище сертификатов X.509. Когда он указан как дочерний элемент элемента `<serviceCertficate>` элемент задает параметры расположения и проверки сертификата X.509, используемый для шифрования и расшифровки токенов. `<certificateReference>` Представлен <xref:System.ServiceModel.Configuration.CertificateReferenceElement> класса.
+ `<certificateReference>` Элемент определяет параметры, которые используются для поиска и проверки сертификатов X.509 в хранилище сертификатов. Когда он указан как дочерний элемент `<serviceCertficate>` , он указывает расположение и проверки параметров сертификата X.509, который используется для шифрования и расшифровки маркеров. `<certificateReference>` Элемент, представленный объектом <xref:System.ServiceModel.Configuration.CertificateReferenceElement> класса.

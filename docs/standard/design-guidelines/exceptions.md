@@ -11,11 +11,11 @@ ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703743"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070624"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Правила разработки исключений
 Обработка исключений имеет множество преимуществ перед отчеты об ошибках на основе возвращаемого значения. Хорошей платформы разработки помогает реализовать преимущества исключения разработчик приложения. В этом разделе описаны преимущества исключения и представлены рекомендации по эффективному использованию.  

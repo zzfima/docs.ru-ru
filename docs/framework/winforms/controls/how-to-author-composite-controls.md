@@ -8,11 +8,11 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
 ms.openlocfilehash: 7abdeae4d19ceb6425f85e3cdd28f565a03d7ea4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703574"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075480"
 ---
 # <a name="how-to-author-composite-controls"></a>Практическое руководство. Создание составных элементов управления
 Составные элементы управления можно применять различным образом. Их можно создать как часть проекта приложения рабочего стола Windows и использовать только в формах проекта. Или их можно создать в проекте библиотеки элементов управления Windows, скомпилировать проект в сборку и использовать элементы управления в других проектах. Можно даже от них наследовать и использовать визуальное наследование для их быстрой настройки.  

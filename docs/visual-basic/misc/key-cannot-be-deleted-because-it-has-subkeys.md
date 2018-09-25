@@ -3,11 +3,11 @@ title: Нельзя удалить раздел, так как он содерж
 ms.date: 07/20/2015
 ms.assetid: 71d7f28f-42ef-4eb7-a39e-512c40b79977
 ms.openlocfilehash: da784f0d22e0cdd5db5054645d977918fca47f4b
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46519623"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47061294"
 ---
 # <a name="key-cannot-be-deleted-because-it-has-subkeys"></a>Нельзя удалить раздел, так как он содержит подразделы
 Удалить раздел нельзя, так как он содержит подразделы.  

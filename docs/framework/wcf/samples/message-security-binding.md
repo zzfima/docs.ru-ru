@@ -3,20 +3,19 @@ title: Привязка безопасности сообщений
 ms.date: 03/30/2017
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 50e9b831430eefc202dd3128502a7f916b96aef6
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 22daa3edbda5be44ce67a6b9a93946505f3fcc12
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805045"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070868"
 ---
 # <a name="message-security-binding"></a>Привязка безопасности сообщений
-В этом разделе содержатся образцы, которые демонстрируют привязку безопасности сообщений в службах Windows в WCF.  
+Этот раздел содержит образцы, демонстрирующие привязка безопасности сообщений в службах Windows в WCF.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Безопасность сообщений с возможностью анонимного доступа](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
- В этом примере показано, как реализовать приложение, Windows Communication Foundation (WCF), использующего безопасность на уровне сообщений без проверки подлинности клиента, но с требованием проверки подлинности сервера с помощью сертификата X.509 сервера.  
+ Этот образец демонстрирует, как реализовать приложение, Windows Communication Foundation (WCF), использующей безопасность уровня сообщений без проверки подлинности клиента, но с требованием проверки подлинности сервера с помощью сертификата X.509 сервера.  
   
  [Сертификат безопасности сообщений](../../../../docs/framework/wcf/samples/message-security-certificate.md)  
  В этом образце показано, как реализовать приложение, использующее протокол WS-Security и проверку подлинности с использованием сертификата X.509 v3 для клиента и требующее проверки подлинности сервера с использованием сертификата X.509 v3 сервера.  

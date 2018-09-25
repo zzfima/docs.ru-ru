@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5c7918048743d53d8523ec399d1a11c67152a2bf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6c72d9780088fddcaa59e644ff8069afbb4e43d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742953"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074983"
 ---
 # <a name="ltremovegt-element-for-bypasslist-network-settings"></a>&lt;Удалить&gt; элемент для bypasslist (параметры сети)
 Удаляет IP-адрес или DNS-имя из списка обхода прокси-сервера.  
@@ -27,7 +26,7 @@ ms.locfileid: "32742953"
 \<System.NET >  
 \<defaultProxy >  
 \<bypasslist >  
-\<Удалите >  
+\<Удалить >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,9 +55,9 @@ ms.locfileid: "32742953"
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.|  
   
 ## <a name="remarks"></a>Примечания  
- `remove` Элемент удаляет регулярное выражение, описывающее IP-адреса или имена DNS-серверов в списке адресов, которые обходят прокси-сервер. Эти адреса были заданы ранее в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
+ `remove` Приводит к удалению регулярное выражение, описывающее IP-адреса или имена DNS-серверов в списке адресов, которые обходят прокси-сервер. Эти адреса были заданы ранее в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
   
- Значение для `address` атрибут должен иметь регулярное выражение, которое описывает набор IP-адресов или имен узлов.  
+ Значение для `address` атрибут должен быть регулярное выражение, которое описывает набор IP-адресов или имен узлов.  
   
  Дополнительные сведения о регулярных выражениях см. в разделе. [Регулярные выражения .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
@@ -66,7 +65,7 @@ ms.locfileid: "32742953"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- Следующий пример удаляет все предыдущие определения для домена adventure-works.com и затем добавляет в список пропускаемых домена contoso.com.  
+ Следующий пример отменяет любые предыдущие определения для домена adventure-works.com и затем добавляется в список пропускаемых домен contoso.com.  
   
 ```xml  
 <configuration>  
