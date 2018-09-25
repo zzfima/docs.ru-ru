@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 32c7a9e07b48536584f7ca5588226fb4479bacb5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f0daa689ba09fa39ffe0f38d769112f0f095592a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742527"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070647"
 ---
 # <a name="ltcleargt-element-for-schemesettings-uri-settings"></a>&lt;Очистить&gt; элемент для schemeSettings (параметры Uri)
 Удаляет все существующие параметры схемы.  
@@ -42,19 +41,19 @@ ms.locfileid: "32742527"
 |[Элемент \<schemeSettings> (параметры URI)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|Определяет, как <xref:System.Uri> анализируется для определенных схем.|  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию <xref:System.Uri?displayProperty=nameWithType> процентов класс un-escape-символы в кодировке разделители пути до выполнения сжатия пути. Это было реализовано в качестве механизма защиты от атак на систему следующим образом:  
+ По умолчанию <xref:System.Uri?displayProperty=nameWithType> знаком процента Отмена переходов класс разделители пути до выполнения сжатия пути. Это было реализовано в качестве механизма защиты от атак, следующим образом:  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Если этот URI передается вниз к модулям не обрабатывает процентов символы в кодировке правильно, это может привести в следующей команде, выполняемой на сервере:  
+ Если этот URI передается вниз, чтобы модули не обрабатывает процентов символы в кодировке неправильно, это может привести в следующей команде, выполняемой на сервере:  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- По этой причине <xref:System.Uri?displayProperty=nameWithType> класса первый разделители пути un-escape-последовательности, а затем применяет сжатие пути. Результат передачи вредоносного URL-адрес выше <xref:System.Uri?displayProperty=nameWithType> класса конструктор результаты в следующий URI:  
+ По этой причине <xref:System.Uri?displayProperty=nameWithType> класса первый разделители пути Отмена переходов, а затем применяет сжатие пути. Результат передачи вредоносных URL-адрес выше <xref:System.Uri?displayProperty=nameWithType> класса конструктор результаты в следующий URI:  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- Можно изменить это поведение по умолчанию для не разделители un escape-символ процента закодированный путь, с помощью параметра конфигурации schemeSettings для нужной раскладки.  
+ Можно изменить это поведение по умолчанию для не разделители отмены escape процента закодированный путь, с помощью параметра конфигурации schemeSettings для определенной схемы.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  

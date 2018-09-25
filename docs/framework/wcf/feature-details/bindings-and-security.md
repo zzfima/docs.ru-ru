@@ -8,13 +8,12 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a7d2e55f84ed99ccb25e9966dc72112c0113eabc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 904ea64bd6e76e7bf99aa4a31ef752bfb2760c23
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519810"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080134"
 ---
 # <a name="bindings-and-security"></a>Привязки и безопасность
 Предоставляемые системой привязки, включенные с помощью Windows Communication Foundation (WCF) позволяют быстро программировании приложений WCF. За одним исключением, во всех привязках включена схема безопасности по умолчанию. Этот раздел поможет выбрать привязку, соответствующую требованиям к безопасности.  

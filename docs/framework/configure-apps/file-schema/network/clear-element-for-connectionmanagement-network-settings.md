@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5bcd17cfe1f3bd7531453b62552a4907df5b96bc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9542332085d0b0319c55db63fd98c9dd8eb3f576
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741988"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070504"
 ---
 # <a name="ltcleargt-element-for-connectionmanagement-network-settings"></a>&lt;Очистить&gt; элемент для connectionManagement (параметры сети)
 Очищает список управления подключениями.  
@@ -56,7 +55,7 @@ ms.locfileid: "32741988"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере очищает список управления подключениями и затем добавляет новые записи управления подключением к серверу www.contoso.com и всем другим сетевым узлам.  
+ Следующий пример очищает список управления подключениями и добавляет новые записи управления подключением к серверу www.contoso.com и всем другим узлам сети.  
   
 ```xml  
 <configuration>  

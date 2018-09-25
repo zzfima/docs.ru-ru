@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a22ddbada0162ba38589b244cab9123f33d7cf45
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 332f8eb4fb1a5a02df76c5745522037b029a2407
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742394"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47072798"
 ---
 # <a name="ltremovegt-element-for-authenticationmodules-network-settings"></a>&lt;Удалить&gt; элемент для authenticationModules (параметры сети)
 Удаляет модуль проверки подлинности из приложения.  
@@ -26,7 +25,7 @@ ms.locfileid: "32742394"
  \<configuration>  
 \<System.NET >  
 \<authenticationModules >  
-\<Удалите >  
+\<Удалить >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -55,9 +54,9 @@ ms.locfileid: "32742394"
 |[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|Задает модули, используемые для проверки подлинности сетевых запросов.|  
   
 ## <a name="remarks"></a>Примечания  
- `remove` Элемент удаляет модули проверки подлинности, определенные ранее в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
+ `remove` Элемент удаляет модули проверки подлинности, которые были ранее определены в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
   
- Значение для `type` атрибут должен иметь допустимое имя класса.  
+ Значение для `type` атрибут должен быть допустимым именем класса.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  

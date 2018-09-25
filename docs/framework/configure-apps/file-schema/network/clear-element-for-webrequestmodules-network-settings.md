@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4d89fbc757198f25219b8051bf77dbdeea0cef53
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2b313aa2481b1257715ac4dbc6d452e2120f4726
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752732"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070387"
 ---
 # <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;Очистить&gt; элемент для webRequestModules (параметры сети)
 Удаляет все зарегистрированные модули веб-запросов из приложения.  
@@ -50,13 +49,13 @@ ms.locfileid: "32752732"
 |[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Задает модули, используемые для запроса данных от сетевых узлов.|  
   
 ## <a name="remarks"></a>Примечания  
- `clear` Элемент удаляет все зарегистрированные модули веб-запросов, определенные ранее в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
+ `clear` Элемент удаляет все зарегистрированные модули веб-запросов, которые были ранее определены в файле конфигурации или на более высоком уровне в иерархии конфигурации.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- Следующий пример удаляет все модули веб-запросов и затем регистрирует модуль веб-запросов для HTTP.  
+ В следующем примере удаляет все модули веб-запросов и затем регистрирует модуль веб-запросов для HTTP.  
   
 ```xml  
 <configuration>  

@@ -3,16 +3,15 @@ title: '&lt;serviceTokenResolver&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: c25ea1fc32c93e7eb57ef8ed06d6f786ae0a670e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d4b64e2c88e153834b7cf5a83bd6258b6dfd471f
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755764"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075312"
 ---
 # <a name="ltservicetokenresolvergt"></a>&lt;serviceTokenResolver&gt;
-Регистрирует Сопоставитель токена службы, используемой обработчиков в коллекцию обработчиков токенов. Распознавателю маркеров службы используется для разрешения маркера шифрования для входящих токенов и сообщения.  
+Регистрирует Сопоставитель токенов служб, используемый обработчиками в коллекцию обработчиков токенов. Сопоставитель токенов служб используется для разрешения токена шифрования на входящих токенов и сообщений.  
   
  \<system.identityModel >  
 \<identityConfiguration >  
@@ -42,7 +41,7 @@ ms.locfileid: "32755764"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|type|Указывает тип арбитр маркеров службы. Либо <xref:System.IdentityModel.Selectors.SecurityTokenResolver> тип или тип, производный от <xref:System.IdentityModel.Selectors.SecurityTokenResolver> класса. Дополнительные сведения о способах указания `type` см. в разделе [пользовательский тип ссылки]. Обязательно.|  
+|type|Указывает тип Сопоставитель токенов служб. Либо <xref:System.IdentityModel.Selectors.SecurityTokenResolver> типом или типом, который является производным от <xref:System.IdentityModel.Selectors.SecurityTokenResolver> класса. Дополнительные сведения о способах указания `type` атрибут, см. в разделе [пользовательский тип ссылки]. Обязательно.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
@@ -51,12 +50,12 @@ ms.locfileid: "32755764"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Обеспечивает настройку для коллекции безопасности обработчиков маркеров.|  
+|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции безопасности обработчиков маркеров.|  
   
 ## <a name="remarks"></a>Примечания  
- Распознавателю маркеров службы можно использовать для разрешения маркера шифрования на входящих токенов и сообщения. Он используется для получения ключа, который должен использоваться для расшифровки входящих токенов. Необходимо указать `type` атрибута. Указанный тип может быть как <xref:System.IdentityModel.Selectors.SecurityTokenResolver> или пользовательский тип, который является производным от <xref:System.IdentityModel.Selectors.SecurityTokenResolver> класса.  
+ Сопоставитель токенов служб можно использовать для разрешения токена шифрования на входящих токенов и сообщений. Он используется для извлечения ключа, который должен использоваться для расшифровки входящих маркеров. Необходимо указать `type` атрибута. Указанный тип может быть либо <xref:System.IdentityModel.Selectors.SecurityTokenResolver> или пользовательский тип, производный от <xref:System.IdentityModel.Selectors.SecurityTokenResolver> класса.  
   
- Некоторые обработчики маркеров позволяют задавать параметры арбитр маркеров службы в конфигурации. Параметры на отдельных обработчиков маркеров переопределить указанных в коллекцию обработчиков токенов безопасности.  
+ Некоторые обработчики маркеров позволяют пользователю указать параметры Сопоставитель токена службы в конфигурации. Параметры на отдельных обработчиков маркеров в переопределите указанных в коллекцию обработчиков токенов безопасности.  
   
 > [!NOTE]
 >  Указание `<serviceTokenResolver>` элемент как дочерний элемент элемента [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) элемент является устаревшим, но по-прежнему поддерживается для обеспечения обратной совместимости. Параметры на `<securityTokenHandlerConfiguration>` элемент переопределяют на `<identityConfiguration>` элемент.  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;memoryCache&gt; элемент (параметры кэша)'
+title: '&lt;memoryCache&gt; (параметры кэша)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <memoryCache> element
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 3d0d741fd8193c7d874d70248cbd149f11163ed0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2d6b7a1ba9c9b7ba598dbcea076ff6ee553ddc9a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075389"
 ---
-# <a name="ltmemorycachegt-element-cache-settings"></a>&lt;memoryCache&gt; элемент (параметры кэша)
+# <a name="ltmemorycachegt-element-cache-settings"></a>&lt;memoryCache&gt; (параметры кэша)
 Определяет элемент, используемый для настройки кэша, который основан на классе <xref:System.Runtime.Caching.MemoryCache> . Класс <xref:System.Runtime.Caching.Configuration.MemoryCacheElement> определяет элемент [memoryCache](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md) , который можно использовать для настройки кэша. В одном приложении может использоваться несколько экземпляров класса <xref:System.Runtime.Caching.MemoryCache> . Каждый элемент `memoryCache` в файле конфигурации может содержать параметры для именованного экземпляра <xref:System.Runtime.Caching.MemoryCache> .  
   
  \<configuration>  
@@ -94,5 +94,5 @@ ms.lasthandoff: 05/03/2018
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Runtime.Caching.MemoryCache>  
- [\<System.Runtime.Caching > элемент (параметры кэша)](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)  
- [\<namedCaches > элемент (параметры кэша)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+ [\<System.Runtime.Caching > (параметры кэша)](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)  
+ [\<namedCaches > (параметры кэша)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

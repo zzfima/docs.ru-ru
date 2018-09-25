@@ -3,16 +3,15 @@ title: Безопасные сеансы
 ms.date: 03/30/2017
 ms.assetid: 7b50602f-d7b5-42e9-8e92-1f0413df0d8b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 1c7229fba8e30632f08834eb36c1fb177de7a294
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09c261afb2c64a46fc1f4619c4ec6b2e87b3fbbf
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497546"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47070205"
 ---
 # <a name="secure-sessions"></a>Безопасные сеансы
-Функция Windows Communication Foundation (WCF) — надежные сеансы, которые гарантируют, что получение сообщений в порядке, в котором они были отправлены. В этом разделе рассматриваются проблемы безопасности, которые необходимо учитывать при создании надежного сеанса. Дополнительные сведения о надежных сеансов см. в разделе [с использованием сеансов](../../../../docs/framework/wcf/using-sessions.md).  
+Функция Windows Communication Foundation (WCF) — надежные сеансы, которые гарантируют, что сообщения получаются в порядке, в котором они были отправлены. В этом разделе рассматриваются проблемы безопасности, которые необходимо учитывать при создании надежного сеанса. Дополнительные сведения о надежных сеансах см. в разделе [с использованием сеансов](../../../../docs/framework/wcf/using-sessions.md).  
   
 > [!NOTE]
 >  Если в ОС Windows XP требуется олицетворение, следует использовать безопасный сеанс без маркера контекста безопасности с отслеживанием состояния (SCT). При использовании маркеров SCT с отслеживанием состояния вместе с олицетворением возникает исключение <xref:System.InvalidOperationException>. Дополнительные сведения см. в разделе [неподдерживаемые сценарии](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md).  

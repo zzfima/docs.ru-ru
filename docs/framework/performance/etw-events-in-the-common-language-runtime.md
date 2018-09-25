@@ -9,11 +9,11 @@ ms.assetid: 5bb9b6a2-7b57-4aea-8809-32b28bc73e88
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d59416ea2d9a2d7b001421271b9907bb3e84c086
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47027030"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071612"
 ---
 # <a name="etw-events-in-the-common-language-runtime"></a>События в среде CLR (трассировка событий Windows)
 В общеязыковой среде выполнения (CLR) реализован полезный механизм трассировки событий (ETW), который позволяет получать диагностические сведения для широкого спектра событий отладки и профилирования. События трассировки событий Windows в среде CLR используют систему трассировки Windows ETW, дополняя существующие средства профилирования и отладки, реализованные в общеязыковой среде выполнения.  

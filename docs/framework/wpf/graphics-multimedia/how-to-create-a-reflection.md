@@ -10,11 +10,11 @@ helpviewer_keywords:
 - reflections [WPF], creating
 ms.assetid: 4f017e16-ab80-43c7-98df-03b6bddbb203
 ms.openlocfilehash: 716adff5c5c41e6601e384b6669516cb6ba1041d
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585551"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080559"
 ---
 # <a name="how-to-create-a-reflection"></a>Практическое руководство. Создание отражения
 В этом примере показано, как использовать <xref:System.Windows.Media.VisualBrush> для создания отражения. Так как <xref:System.Windows.Media.VisualBrush> можно отображать существующие визуальные, эту возможность можно использовать для создания интересных визуальных эффектов, например отражения и увеличения.  

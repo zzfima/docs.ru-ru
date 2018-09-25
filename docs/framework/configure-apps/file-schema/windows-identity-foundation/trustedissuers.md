@@ -3,13 +3,12 @@ title: '&lt;trustedIssuers&gt;'
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f9daea7d6b78e2f6790050b35dde62db6058c60b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c390cecc265b27dfa8d9d0a892f5930c982f7054
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757474"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075376"
 ---
 # <a name="lttrustedissuersgt"></a>&lt;trustedIssuers&gt;
 Настраивает список доверенных издателей сертификатов, используемых реестр имен издателей на основе конфигурации (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>).  
@@ -51,23 +50,23 @@ ms.locfileid: "32757474"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|`<add thumbprint=xs:string name=xs:string>`|Добавляет сертификат в коллекцию доверенных издателей. Сертификат указан с `thumbprint` атрибута. Этот атрибут является обязательным и должен содержать отпечаток сертификата в кодировке ASN.1 формы. `name` Атрибут является необязательным и может использоваться для указания понятное имя для сертификата.|  
+|`<add thumbprint=xs:string name=xs:string>`|Добавляет сертификат в коллекцию доверенных издателей. Сертификат указывается с помощью `thumbprint` атрибута. Этот атрибут является обязательным и должен содержать формы в кодировке ASN.1 отпечатка сертификата. `name` Атрибут является необязательным и может использоваться для указания понятное имя для сертификата.|  
 |`<clear>`|Очищает все сертификаты из коллекции доверенных издателей.|  
-|`<remove thumbprint=xs:string>`|Удаляет сертификат из коллекции доверенных издателей. Сертификат указан с `thumbprint` атрибута. Атрибут обязателен.|  
+|`<remove thumbprint=xs:string>`|Удаляет сертификат из коллекции доверенных издателей. Сертификат указывается с помощью `thumbprint` атрибута. Атрибут обязателен.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Настраивает реестр имен поставщиков. **Важно:** `type` атрибут `<issuerNameRegistry>` должен ссылаться на элемент <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класса для `<trustedIssuers>` элемент был допустимым.|  
+|[\<issuerNameRegistry >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/issuernameregistry.md)|Настраивает реестр имен издателей. **Важно:** `type` атрибут `<issuerNameRegistry>` должен ссылаться элемент <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класса для `<trustedIssuers>` элемент был допустимым.|  
   
 ## <a name="remarks"></a>Примечания  
- Windows Identity Foundation (WIF) предоставляет одну реализацию <xref:System.IdentityModel.Tokens.IssuerNameRegistry> класс готовые <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класса. В системном реестре имя издателя ведет список доверенных издателей, загруженная из конфигурации. Список связывает имя каждого издателя с сертификатом X.509, который необходим для проверки подписи токенов, полученных поставщиком. Список доверенных издателей сертификатов, указанные в разделе `<trustedIssuers>` элемента. Каждый элемент в списке связывает имя издателя, назначенный с сертификатом X.509, который необходим для проверки подписи токенов, созданных этим издателем. Доверенных сертификатов задаются с помощью ASN.1 кодированной формы отпечатка сертификата и добавляются к коллекции с помощью `<add>` элемента. Вы можете удалить или удалить из списка издателей (сертификатов), с помощью `<clear>` и `<remove>` элементы.  
+ Windows Identity Foundation (WIF) обеспечивает единую реализацию <xref:System.IdentityModel.Tokens.IssuerNameRegistry> класс по умолчанию, <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класса. Конфигурация реестр имен издателей ведет список доверенных издателей, загруженный из конфигурации. Список связывает каждое имя издателя с сертификатом X.509, который необходим для проверки подписи токенов, создаваемых издателем. Список доверенных издателей сертификатов, указанные в разделе `<trustedIssuers>` элемент. Каждый элемент в списке связывает имя мнемонический издателя с сертификатом X.509, который необходим для проверки подписи токенов, создаваемых этим издателем. Доверенные сертификаты указываются с помощью ASN.1 кодированной формы отпечатка сертификата и добавляются к коллекции с помощью `<add>` элемент. Вы можете удалить или удалить из списка издателей (сертификаты), с помощью `<clear>` и `<remove>` элементы.  
   
- `type` Атрибут `<issuerNameRegistry>` должен ссылаться на элемент <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класса для `<trustedIssuers>` элемент был допустимым.  
+ `type` Атрибут `<issuerNameRegistry>` должен ссылаться элемент <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> класса для `<trustedIssuers>` элемент был допустимым.  
   
 ## <a name="example"></a>Пример  
- Следующий код XML показано, как указать поставщика конфигурации на основе реестра имя.  
+ Следующий код XML показано, как указать поставщика конфигурации на основе реестра имен.  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  

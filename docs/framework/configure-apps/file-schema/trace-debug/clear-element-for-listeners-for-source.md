@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8c6ef51dae36e94fa4a4fdc5ad8983380e78bde3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3674b5e8f54735010da901c76b77bd617218891e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746856"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47071757"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Очистить&gt; элемент для &lt;прослушиватели&gt; для &lt;источника&gt;
 Очищает коллекцию `Listeners` для источника трассировки.  
@@ -53,10 +52,10 @@ ms.locfileid: "32746856"
 |`listeners`|Задает прослушиватели для сбора, хранения и маршрутизации сообщений.|  
   
 ## <a name="remarks"></a>Примечания  
- `<clear>` Элемент удаляет все прослушиватели `Listeners` сбор данных для источника трассировки, включая <xref:System.Diagnostics.DefaultTraceListener>. Можно использовать `<clear>` элемент перед использованием `<add>` элемент, чтобы быть уверенным, отсутствуют другие активные прослушиватели в коллекции.  
+ `<clear>` Элемент удаляет все прослушиватели `Listeners` коллекции для источника трассировки, включая <xref:System.Diagnostics.DefaultTraceListener>. Можно использовать `<clear>` элемент перед использованием `<add>` элемент, чтобы быть уверенным, отсутствуют другие активные прослушиватели в коллекции.  
   
 ## <a name="configuration-file"></a>Файл конфигурации  
- Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.  
+ Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как использовать `<clear>` элемент перед использованием `<add>` элементы для добавления прослушивателей `console` и `textListener` для `Listeners` коллекции для источника трассировки `TraceSourceApp`.  

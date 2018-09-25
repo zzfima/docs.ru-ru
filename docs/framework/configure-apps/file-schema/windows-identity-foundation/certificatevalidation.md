@@ -3,16 +3,15 @@ title: '&lt;certificateValidation&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: af4dc459da49b46d70276d3f4bcd5f94d2a91ffe
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 29881be43f02d275ad135efd97dc8b25a7409beb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756063"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47074792"
 ---
 # <a name="ltcertificatevalidationgt"></a>&lt;certificateValidation&gt;
-Управляет параметрами обработчиков токенов, используемых для проверки сертификатов. Эти параметры переопределяются, если обработчик конкретного настроен собственный проверяющий элемент управления.  
+Управляет параметрами, используемых обработчиками токена для проверки сертификатов. Эти параметры переопределяются в том случае, если настроен собственный проверяющий элемент управления указанным обработчиком.  
   
  \<system.identityModel >  
 \<identityConfiguration >  
@@ -39,9 +38,9 @@ ms.locfileid: "32756063"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode> Значение, указывающее режим проверки для сертификата X.509. Значение по умолчанию — «PeerOrChainTrust». Чтобы указать настраиваемый проверяющий элемент управления, присвоить этому атрибуту «Custom» и укажите с помощью проверяющего элемента управления [ \<certificateValidator >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md) элемента. Необязательный.|  
-|revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> Значение, указывающее режим отзыва для сертификата X.509. Значение по умолчанию — «В сети». Необязательный.|  
-|trustedStoreLocation|Объект <xref:System.Security.Cryptography.X509Certificates.StoreLocation> значение, указывающее хранилище сертификатов X.509. Значение по умолчанию — «LocalMachine». Необязательный.|  
+|certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode> Значение, определяющее режим проверки для сертификата X.509. Значение по умолчанию — «PeerOrChainTrust». Чтобы указать настраиваемый проверяющий элемент управления, установите этому атрибуту значение «Custom» и укажите проверяющего элемента управления с помощью [ \<certificateValidator >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md) элемент. Необязательный.|  
+|revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> Значение, определяющее режим отзыва для сертификата X.509. Значение по умолчанию — «В сети». Необязательный.|  
+|trustedStoreLocation|Объект <xref:System.Security.Cryptography.X509Certificates.StoreLocation> значение, которое указывает хранилище сертификатов X.509. Значение по умолчанию — «LocalMachine». Необязательный.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
@@ -53,11 +52,11 @@ ms.locfileid: "32756063"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Указывает параметры уровня службы удостоверений.|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Обеспечивает настройку для коллекции безопасности обработчиков маркеров.|  
+|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Указывает параметры уровня службы идентификации.|  
+|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции безопасности обработчиков маркеров.|  
   
 ## <a name="remarks"></a>Примечания  
- A `<certificateValidation>` элемент можно задать на уровне службы под `<identityConfiguration>` элемент, либо на уровне коллекции обработчик маркеров безопасности в разделе `<securityTokenHandlerConfiguration>` элемента. Параметры в коллекцию обработчика токенов переопределяют алгоритмам, заданным в службе. Некоторые обработчики маркеров позволяют задать параметры проверки сертификата в конфигурации. Параметры на отдельных обработчиков маркеров переопределить адреса, указанные как на уровне службы, так и в коллекцию обработчиков токенов безопасности.  
+ Объект `<certificateValidation>` на уровне службы может быть задан элемент `<identityConfiguration>` элемент или на уровне коллекции обработчиков токенов безопасности в разделе `<securityTokenHandlerConfiguration>` элемент. Переопределить параметры на коллекцию обработчиков токенов, теми, которые указаны в службе. Некоторые обработчики маркеров позволяют задать параметры проверки сертификата в конфигурации. Параметры на отдельных обработчиков маркеров переопределить указанные как на уровне службы, так и на коллекцию обработчиков токенов безопасности.  
   
 ## <a name="example"></a>Пример  
   
