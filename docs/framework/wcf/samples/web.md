@@ -2,40 +2,26 @@
 title: Интернет
 ms.date: 03/30/2017
 ms.assetid: 88794df1-8e2d-431e-b377-2fd3dc7942ab
-ms.openlocfilehash: b1a691e7f5b10f603e604f3bd8f1fc1fafb87765
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 7a3863f1abf1ba926c0dacdb017dca9540246c0c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33805117"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195307"
 ---
 # <a name="web"></a>Интернет
 В этом разделе перечислены образцы, размещенные в Интернете.  
   
-## <a name="in-this-section"></a>В этом разделе  
- [Выбор дополнительного формата](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
- Демонстрирует расширение модели программирования WCF Web HTTP для поддержки новых форматов исходящих ответов.  
-  
- [Автоматический выбор формата](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
- Демонстрирует Включение автоматического выбора формата (XML или JSON) при использовании программирования модели, а также явное задание формата в коде операции WCF Web HTTP.  
+## <a name="in-this-section"></a>В этом разделе
   
  [Базовая служба HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md)  
- Демонстрирует реализацию службы на основе HTTP, на основе RPC - часто называют службы «POX» (Plain Old XML) — с помощью модели программирования WCF Web HTTP.  
-  
- [Основная служба ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md)  
- Демонстрирует реализацию службы на основе HTTP, с помощью модели программирования WCF Web HTTP, который предоставляет доступ к коллекции клиентов, поддерживающей операции поиска, добавления, удаления и замены.  
-  
- [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md)  
- Демонстрирует размещение службы WCF Web HTTP с помощью маршрутов ASP.NET.  
-  
- [Условные методы Get и Put](../../../../docs/framework/wcf/samples/conditional-get-and-put.md)  
- Показано, как использовать новый условного получения и обновления API-интерфейсы для модели программирования WCF Web HTTP.  
+ Демонстрирует реализацию службы на базе HTTP, основанные на RPC - часто называют «POX» (Plain Old XML) службы — с помощью модели программирования WCF Web HTTP.
   
  [Конечные точки SOAP и HTTP](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
- Демонстрирует реализацию службы на основе RPC и предоставление ее в формате протокола SOAP и формате «Plain Old XML» (POX), с помощью модели программирования WCF Web HTTP.  
+ Демонстрирует реализацию службы на основе RPC и предоставление ее в формате SOAP и формате «Plain Old XML» (POX), используя модель программирования WCF Web HTTP.  
   
  [Интеграция кэширования ASP.NET](../../../../docs/framework/wcf/samples/aspnet-caching-integration.md)  
- Демонстрирует использование выходного кэша ASP.NET с помощью модели программирования WCF Web HTTP.  
+ В этой статье демонстрируется использование выходного кэша ASP.NET с помощью модели программирования WCF Web HTTP.  
   
  [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
  Демонстрирует основные понятия, связанные с классом <xref:System.UriTemplate>.  

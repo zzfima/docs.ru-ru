@@ -9,11 +9,11 @@ ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 3d0f4b2f2989791d0beacbe74e464d0a59d5a913
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47157406"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193750"
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>Поддержка автоматизации пользовательского интерфейса для древовидного типа элемента управления
 > [!NOTE]

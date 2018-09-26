@@ -2,17 +2,18 @@
 title: Разработка и реализация настраиваемых действий
 ms.date: 03/30/2017
 ms.assetid: 4e30e63d-6e33-4842-a7a4-ce807cef1fad
-ms.openlocfilehash: 2ed80b5cbb27c6647053ee9b8f4cd2bedb0c6cde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 673145c856e950c8648a87cb3dcb9665ffa51ba9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216724"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>Разработка и реализация настраиваемых действий
 Настраиваемые действия в [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] создаются либо посредством сборки системных действий в составные действия, либо путем создания новых типов, производных от <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity> или <xref:System.Activities.NativeActivity>. В этом разделе описываются способы создания пользовательских действий обоими способами.  
   
 > [!IMPORTANT]
->  Настраиваемые действия по умолчанию отображаются в конструкторе рабочих процессов в виде простого прямоугольника с именем действия. Для создания настраиваемого визуального представления действия в конструкторе рабочих процессов также необходимо создать пользовательский конструктор. Дополнительные сведения см. в разделе [с помощью пользовательских конструкторов действий и шаблоны](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md).  
+>  Настраиваемые действия по умолчанию отображаются в конструкторе рабочих процессов в виде простого прямоугольника с именем действия. Для создания настраиваемого визуального представления действия в конструкторе рабочих процессов также необходимо создать пользовательский конструктор. Дополнительные сведения см. в разделе [шаблонов и с помощью конструкторов пользовательских действий](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Параметры разработки действий](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)  
@@ -34,10 +35,7 @@ ms.lasthandoff: 05/04/2018
  Описывает, как использовать свойства выполнения рабочего процесса для добавления определенных свойств контекста к среде действия.  
   
  [Использование делегатов действий](../../../docs/framework/windows-workflow-foundation/using-activity-delegates.md)  
- Описывает создание и использование действий, содержащих делегаты действий.  
-  
- [Локализация действий](../../../docs/framework/windows-workflow-foundation/activity-localization.md)  
- Описывает использование в действиях локализации строковых ресурсов.  
+ Описывает создание и использование действий, содержащих делегаты действий.
   
  [Использование расширений действий](../../../docs/framework/windows-workflow-foundation/using-activity-extensions.md)  
  Описывает, как создавать и использовать расширения действий.  

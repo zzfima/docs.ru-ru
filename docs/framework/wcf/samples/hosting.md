@@ -2,22 +2,19 @@
 title: Hosting1
 ms.date: 03/30/2017
 ms.assetid: 8a6ec5d4-d191-49cc-bb0f-a07639dc60d4
-ms.openlocfilehash: f7c10e6c3c290e3f1648b18c45aa414d3ea61457
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 6cbd05bd0d478898807ef0bfadfc64f1feea0574
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809811"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47203530"
 ---
 # <a name="hosting"></a>Размещение
-Этот раздел содержит образцы, демонстрирующие размещения службы Windows Communication Foundation (WCF).  
+Этот раздел содержит образцы, демонстрирующие размещение служб Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Активация процессов Windows](../../../../docs/framework/wcf/samples/windows-process-activation.md)  
  Демонстрирует включение службы с помощью сетевых протоколов.  
-  
- [Активация на основе конфигурации](../../../../docs/framework/wcf/samples/configuration-based-activation.md)  
- Демонстрирует активацию служб WCF без использования SVC-файла.  
   
  [Образец интеграции с SystemWebRouting](../../../../docs/framework/wcf/samples/systemwebrouting-integration-sample.md)  
  Демонстрирует интеграцию уровня размещения с классами в пространстве имен <xref:System.Web.Routing>.  

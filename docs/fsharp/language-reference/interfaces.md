@@ -3,11 +3,11 @@ title: Интерфейсы (F#)
 description: 'Узнайте, как интерфейсы в F # указать наборы связанных элементов, реализуемых другими классами.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 6d7f8ee9ea17d2294933f88577c30a96975ae5d4
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47115117"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231444"
 ---
 # <a name="interfaces"></a>интерфейсов,
 

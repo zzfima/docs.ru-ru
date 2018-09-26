@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109122"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47204655"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>Метод IMetaDataEmit::ApplyEditAndContinue
 Обновляет текущую область сборки с изменениями, сделанными в указанные метаданные.  

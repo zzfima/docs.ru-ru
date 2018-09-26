@@ -3,11 +3,11 @@ title: Побитовые операторы (F#)
 description: 'Дополнительные сведения о побитовые операторы, доступные в языке F #.'
 ms.date: 07/20/2018
 ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075074"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205243"
 ---
 # <a name="bitwise-operators"></a>Побитовые операторы
 

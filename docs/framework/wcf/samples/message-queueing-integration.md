@@ -2,25 +2,22 @@
 title: Интеграция очередей сообщений
 ms.date: 03/30/2017
 ms.assetid: 8d2b47a0-5d51-45b5-9633-b62e064e8ea4
-ms.openlocfilehash: 5c1f41c97148782a83c6b11dd60b808cfe8b2b34
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 63c40f2ae3bb3fef9127add033df0cf23649f797
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804837"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196936"
 ---
 # <a name="message-queueing-integration"></a>Интеграция очередей сообщений
-Этот раздел содержит образцы, демонстрирующие интеграции очереди сообщений и Windows Communication Foundation (WCF).  
+Этот раздел содержит образцы, демонстрирующие интеграцию очереди сообщений и Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Передача сообщений из приложения MSMQ в приложение Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- Демонстрирует, как приложение очереди сообщений (MSMQ) может отправлять сообщения MSMQ службе WCF.  
-  
- [Пользовательское демультиплексирование](../../../../docs/framework/wcf/samples/custom-demux.md)  
- Показано, как заголовки сообщений MSMQ можно сопоставлять с различными операциями служб, чтобы служб WCF, использующих <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> не ограничены использованием одной операции службы.  
+ Демонстрирует, как приложение очереди сообщений (MSMQ) может отправлять сообщения MSMQ к службе WCF.
   
  [Отправка сообщений из приложения Windows Communication Foundation в приложение MSMQ](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
- Демонстрирует, как приложение WCF может отправлять сообщения приложению очереди сообщений (MSMQ).  
+ Демонстрирует, как приложения WCF могут отправлять сообщения приложения Message Queuing (MSMQ).  
   
  [Корреляция сообщений](../../../../docs/framework/wcf/samples/message-correlation.md)  
- Демонстрирует, как приложение очереди сообщений (MSMQ) может отправлять сообщения MSMQ службе WCF и каким образом можно согласовывать сообщения между приложениями отправителя и получателя в сценарии запрос ответ.
+ Демонстрирует, как приложение очереди сообщений (MSMQ) может отправлять сообщения MSMQ к службе WCF, и как можно коррелировать сообщения между приложениями отправителя и получателя в сценарии запроса/ответа.

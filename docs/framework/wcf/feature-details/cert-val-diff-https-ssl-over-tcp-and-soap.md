@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
 author: BrucePerlerMS
 ms.openlocfilehash: 79b5e86b689da0678b0d949d2a335dbfe3836f0e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077217"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195333"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Различия проверки сертификатов с использованием средств обеспечения безопасности HTTPS, SSL по TCP и SOAP
 Можно использовать сертификаты в Windows Communication Foundation (WCF) (SOAP) на уровне сообщений безопасности в дополнение к функциям безопасности транспортного уровня (TLS) по протоколу HTTP (HTTPS) или TCP. В данном разделе описываются различия в способе, который используется для проверки сертификатов.  

@@ -10,11 +10,11 @@ ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: bfcf96c553f85aeb0a40dfd6ea36667d504e8eee
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47172840"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47202793"
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;прослушиватели&gt; элемент для &lt;трассировки&gt;
 Указывает прослушиватель, который собирает, хранилищ и направляет сообщения. Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту.  

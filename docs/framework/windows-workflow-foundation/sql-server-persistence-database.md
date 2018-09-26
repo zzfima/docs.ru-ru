@@ -3,11 +3,11 @@ title: База данных постоянного хранения SQL Server
 ms.date: 03/30/2017
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
 ms.openlocfilehash: 3929148cf6a236db7d226b45da750e8d4ae1d0cc
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088260"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195537"
 ---
 # <a name="sql-server-persistence-database"></a>База данных постоянного хранения SQL Server
 В этом разделе приведены сведения об общих представлениях базы данных, поддерживаемых хранилищем экземпляров рабочих процессов SQL, и показано, как проводить десериализацию примитивных свойств данных экземпляров и как обращаться с запросами к несохраняемым экземплярам.  

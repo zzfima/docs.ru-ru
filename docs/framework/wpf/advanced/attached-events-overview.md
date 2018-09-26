@@ -13,11 +13,11 @@ helpviewer_keywords:
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
 ms.openlocfilehash: c6a8b3b7355d315b83f859e7016018b56ade5484
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112472"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196347"
 ---
 # <a name="attached-events-overview"></a>Общие сведения о вложенных событиях
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] определяет компонент языка и тип события, называемый *присоединенным событием*. Концепция присоединенного события позволяет добавить обработчик для конкретного события в произвольный элемент, а не в элемент, который фактически определяет или наследует событие. В этом случае ни объект, потенциально вызывающий событие, ни конечный обрабатывающий экземпляр не определяет или иным образом не "владеет" событием.  

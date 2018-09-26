@@ -12,11 +12,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7d59af89-ff82-41d8-a48a-f1fbae788b0d
 ms.openlocfilehash: f085e7b7d20f958a90777ddb820924a07a5e2d8d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082296"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199721"
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Практическое руководство. Связывание элемента управления с объектом-фабрикой в Windows Forms
 При создании элементов управления, взаимодействующих с данными, иногда требуется привязать элемент управления к объекту или методу, создающему другие объекты. Такой объект или метод называется фабрикой. Источник данных может быть, например, возвращаемым значением вызова метода, а не объектом в памяти или типом. Можно привязать элемент управления к такому типу источника данных при условии, что источник возвращает коллекцию.  

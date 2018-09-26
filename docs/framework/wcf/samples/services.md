@@ -2,12 +2,12 @@
 title: Services2
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: 2b6d8322caa32246d6171af50c7773342ac11de2
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 3987b170f216064073f14afb489bd7afb5228c77
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33806101"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206385"
 ---
 # <a name="services"></a>Службы
 Этот раздел содержит образцы, демонстрирующие службы Windows Communication Foundation (WCF).  
@@ -29,10 +29,7 @@ ms.locfileid: "33806101"
  Показано, как реализовать и настроить типизированные службы и клиента с помощью WCF.  
   
  [Использование стандартных конечных точек](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
- Демонстрирует использование стандартных конечных точек в файлах конфигурации службы.  
-  
- [Иерархическая модель конфигурации](../../../../docs/framework/wcf/samples/hierarchical-configuration-model.md)  
- Демонстрирует реализацию иерархии файлов конфигурации для служб.  
+ Демонстрирует использование стандартных конечных точек в файлах конфигурации службы.
   
  [Расширенная политика защиты](../../../../docs/framework/wcf/samples/extended-protection-policy.md)  
  Демонстрирует расширенную защиту, защитную инициативу, направленную на отражение атак типа «злоумышленник в середине».  
@@ -44,7 +41,7 @@ ms.locfileid: "33806101"
  Показаны различные аспекты и возможности адресов конечных точек.  
   
  [Императивное определение](../../../../docs/framework/wcf/samples/imperative.md)  
- Демонстрируется определение <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> для службы в коде, вместо того чтобы определять `wsHttpBinding` привязку в конфигурации.  
+ Демонстрируется способ определения <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> для службы в коде, вместо определения `wsHttpBinding` привязки в конфигурации.  
   
  [Несколько контрактов](../../../../docs/framework/wcf/samples/multiple-contracts.md)  
  Демонстрируется способ реализации нескольких контрактов в службе и способ настройки конечных точек для взаимодействия с каждым из реализованных контрактов.  
@@ -56,7 +53,7 @@ ms.locfileid: "33806101"
  Показана служба, в которой размещается несколько конечных точек по одному адресу `ListenUri`.  
   
  [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
- Демонстрирует способ отправки дополнительной информации при вызове функции WCF, с помощью заголовков.  
+ Демонстрируется способ отправки дополнительной информации при вызове функции WCF с помощью заголовков.  
   
  [Описание службы](../../../../docs/framework/wcf/samples/service-description.md)  
  Демонстрируется процесс извлечения службой данных описания службы в среде выполнения.  

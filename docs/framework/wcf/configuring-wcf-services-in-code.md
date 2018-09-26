@@ -2,15 +2,15 @@
 title: Настройка служб WCF в коде
 ms.date: 03/30/2017
 ms.assetid: 193c725d-134f-4d31-a8f8-4e575233bff6
-ms.openlocfilehash: 714236bcdb562840323698622cdf3d0c6c89b6ca
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: abd75e514d698e73c2297a5dc2e511f89f0534b1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804151"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47216519"
 ---
 # <a name="configuring-wcf-services-in-code"></a>Настройка служб WCF в коде
-Windows Communication Foundation (WCF) позволяет разработчикам настраивать службы с помощью файлов конфигурации или кода.  Файлы конфигурации используются, если необходимо настроить службу после ее развертывания. При использовании файлов конфигурации ИТ-работнику требуется только обновить файл конфигурации без необходимости выполнять повторную компиляцию. Файлы конфигурации, однако, могут быть сложными и требовать больших усилий при обслуживании. Отсутствует поддержка отладки файлов конфигурации, и ссылки на элементы конфигурации осуществляются по именам, что усложняет работу и способствует совершению ошибок при создании файлов конфигурации. WCF также позволяет настраивать службы в коде. В предыдущих версиях WCF (4.0 и ранее) Настройка служб в коде легко выполнялась в случае сценариев резидентных <xref:System.ServiceModel.ServiceHost> класс позволял настроить конечные точки и поведение до вызова метода ServiceHost.Open. Однако в сценариях с размещением в Интернете нет прямого доступа к классу <xref:System.ServiceModel.ServiceHost>. Чтобы настроить службу, размещенную в сети, приходилось создавать класс `System.ServiceModel.ServiceHostFactory`, который создавал <xref:System.ServiceModel.Activation.ServiceHostFactory> и выполнял необходимые настройки. Начиная с .NET 4.5, WCF предоставляет более простой способ настроить резидентной и на веб-сервере службы в коде.  
+Windows Communication Foundation (WCF) позволяет разработчикам настраивать службы с помощью файлов конфигурации или кода.  Файлы конфигурации используются, если необходимо настроить службу после ее развертывания. При использовании файлов конфигурации ИТ-работнику требуется только обновить файл конфигурации без необходимости выполнять повторную компиляцию. Файлы конфигурации, однако, могут быть сложными и требовать больших усилий при обслуживании. Отсутствует поддержка отладки файлов конфигурации, и ссылки на элементы конфигурации осуществляются по именам, что усложняет работу и способствует совершению ошибок при создании файлов конфигурации. Кроме того, WCF позволяет настраивать службы в коде. В более ранних версиях настройку служб WCF (4.0 и более ранних версий) в коде было просто в резидентных сценариях <xref:System.ServiceModel.ServiceHost> класс позволял настроить конечные точки и поведение до вызова метода ServiceHost.Open. Однако в сценариях с размещением в Интернете нет прямого доступа к классу <xref:System.ServiceModel.ServiceHost>. Чтобы настроить службу, размещенную в сети, приходилось создавать класс `System.ServiceModel.ServiceHostFactory`, который создавал <xref:System.ServiceModel.Activation.ServiceHostFactory> и выполнял необходимые настройки. Начиная с .NET 4.5, WCF предоставляет более простой способ настроить оба с локальным размещением и web размещенные службы в коде.  
   
 ## <a name="the-configure-method"></a>Метод Configure   
  Просто определите открытый статический метод с именем `Configure` со следующей сигнатурой в классе реализации службы.  
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) позволяет разработчик
 public static void Configure(ServiceConfiguration config)  
 ```  
   
- Метод принимает экземпляр <xref:System.ServiceModel.ServiceConfiguration>, что позволяет разработчикам добавлять конечные точки и расширения функциональности. Этот метод вызывается методом WCF перед открытием узла службы. Если он задан, то никакие параметры конфигурации службы, определенные в файле app.config или web.config, не учитываются.  
+ Метод принимает экземпляр <xref:System.ServiceModel.ServiceConfiguration>, что позволяет разработчикам добавлять конечные точки и расширения функциональности. Этот метод вызывается платформой WCF перед открытием узла службы. Если он задан, то никакие параметры конфигурации службы, определенные в файле app.config или web.config, не учитываются.  
   
  В следующем фрагменте кода показано, как определить метод `Configure` и добавить конечную точку службы, поведение конечной точки и расширения функциональности служб.  
   
@@ -77,7 +77,7 @@ public class Service1 : IService1
 }   
 ```  
   
- Параметры в <`protocolMappings`> раздела используются только в том случае, если добавляются конечные точки приложения не <xref:System.ServiceModel.ServiceConfiguration> программными средствами. При необходимости можно загрузить конфигурацию службы из файла конфигурации приложения по умолчанию путем вызова <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> и измените параметры. Класс <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> также позволяет загрузить конфигурацию из централизованной конфигурации. В следующем примере кода показано, как это реализовать.  
+ Параметры в <`protocolMappings`> раздела используются только в том случае, если конечные точки приложения не добавляются к <xref:System.ServiceModel.ServiceConfiguration> программным способом. При необходимости можно загружать конфигурацию службы из файла конфигурации приложения по умолчанию путем вызова <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> и измените параметры. Класс <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration> также позволяет загрузить конфигурацию из централизованной конфигурации. В следующем примере кода показано, как это реализовать.  
   
 ```  
 public class Service1 : IService1   
@@ -91,13 +91,12 @@ public class Service1 : IService1
 ```  
   
 > [!IMPORTANT]
->  Обратите внимание, что <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> игнорирует <`host`> Параметры <`service`> тег <`system.serviceModel`>. По существу <`host`> — о конфигурации узла, не конфигурации службы и он получает загрузить до выполнения метода Настройка.  
+>  Обратите внимание, что <xref:System.ServiceModel.ServiceConfiguration.LoadFromConfiguration%2A> игнорирует <`host`> Параметры <`service`> тег <`system.serviceModel`>. По существу <`host`> — о конфигурации узла, не конфигурацию службы и он загружается до выполнения метода Configure.  
   
 ## <a name="see-also"></a>См. также  
  [Настройка служб с использованием файлов конфигурации](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
  [Настройка поведения клиентов](../../../docs/framework/wcf/configuring-client-behaviors.md)  
  [Упрощенная конфигурация](../../../docs/framework/wcf/simplified-configuration.md)  
- [Активация на основе конфигурации](../../../docs/framework/wcf/samples/configuration-based-activation.md)  
  [Конфигурация](../../../docs/framework/wcf/samples/configuration-sample.md)  
  [Активация на основе конфигурации в IIS и WAS](../../../docs/framework/wcf/feature-details/configuration-based-activation-in-iis-and-was.md)  
  [Конфигурация и поддержка метаданных](../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)  

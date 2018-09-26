@@ -2,15 +2,15 @@
 title: Интеграция кэширования ASP.NET
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 55e6213bf0c4c212ebcf4e68882d16532c0e4229
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002792"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197452"
 ---
 # <a name="aspnet-caching-integration"></a>Интеграция кэширования ASP.NET
-В этом образце демонстрируется использование выходного кэша ASP.NET в модели веб-программирования WCF HTTP . См. в разделе [базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образец резидентную версию этого сценария, рассматривается реализация службы в глубину. В этом разделе основное внимание уделено возможности интеграции выходного кэша ASP.NET.  
+В этом образце демонстрируется использование выходного кэша ASP.NET в модели веб-программирования WCF HTTP . В этом разделе основное внимание уделено возможности интеграции выходного кэша ASP.NET.  
   
 ## <a name="demonstrates"></a>Демонстрации  
  Интеграция с выходным кэшем ASP.NET  
@@ -29,7 +29,7 @@ ms.locfileid: "46002792"
   
  В файле Service.cs из образца проекта Service как `GetCustomer` и `GetCustomers` операции будут отмечены <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, который предоставляет имя профиля кэша «CacheFor60Seconds». В файле Web.config проекта Service профиль кэша «CacheFor60Seconds» предоставляется в разделе <`caching`> элемента <`system.web`>. Для этого профиля кэша значение `duration` атрибута является «60», поэтому ответы, связанные с этим профилем, кэшируются в кэше вывода ASP.NET для 60 секунд. Кроме того, для этого профиля кэша `varmByParam` атрибут имеет значение «Format» так запросы с разными значениями для `format` параметра строки запроса ответы на них кэшируются отдельно. Наконец, профиля кэша `varyByHeader` атрибут имеет значение «Accept», так что запросы с другими значениями заголовка Accept кэшируются отдельно ответы на них.  
   
- В файле Program.cs из проекта «Клиент» показывается, как можно разработать клиент с помощью <xref:System.Net.HttpWebRequest>. Заметьте, что это лишь один из способов доступа к WCF-службе. Можно также получить доступ к службе с помощью других классов .NET Framework, например фабрики каналов WCF и <xref:System.Net.WebClient>. Другие примеры в пакете SDK (такие как [базовой службы HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) пример и [автоматический выбор формата](../../../../docs/framework/wcf/samples/automatic-format-selection.md) образец) показывают, как использовать эти классы для взаимодействия со службой WCF.  
+ В файле Program.cs из проекта «Клиент» показывается, как можно разработать клиент с помощью <xref:System.Net.HttpWebRequest>. Заметьте, что это лишь один из способов доступа к WCF-службе. Можно также получить доступ к службе с помощью других классов .NET Framework, например фабрики каналов WCF и <xref:System.Net.WebClient>. Другие примеры в пакете SDK (такие как [базовой службы HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) образец) показывают, как использовать эти классы для взаимодействия со службой WCF.  
   
 ## <a name="to-run-the-sample"></a>Выполнение образца  
  Этот образец состоит из трех проектов.  

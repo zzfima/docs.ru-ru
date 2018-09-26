@@ -3,15 +3,15 @@ title: '&lt;tokenReplayCache&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 79022319944c4042c6f62a7521784b826b90d4ce
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d21a819f789b5be4bdf7ebf57b37a072e1d213ff
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206225"
 ---
 # <a name="lttokenreplaycachegt"></a>&lt;tokenReplayCache&gt;
-Регистрирует кэш воспроизведения токена службы или коллекции обработчик маркеров безопасности.  
+Регистрирует кэш повторного использования токенов службы или коллекцию обработчиков токенов безопасности.  
   
  \<system.identityModel >  
 \<identityConfiguration >  
@@ -38,7 +38,7 @@ ms.lasthandoff: 05/03/2018
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|type|Тип, который является производным от <xref:System.IdentityModel.Tokens.TokenReplayCache> класса. Дополнительные сведения о том, как задать пользовательский `type`, в разделе [ссылок на пользовательские типы].
+|type|Тип, который является производным от <xref:System.IdentityModel.Tokens.TokenReplayCache> класса. Дополнительные сведения о том, как задать пользовательский `type`, см. в разделе [ссылки на пользовательские типы].
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
@@ -47,13 +47,13 @@ ms.lasthandoff: 05/03/2018
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<кэширует >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Регистрирует кэши, используемая службой или коллекцию обработчика токенов безопасности.|  
+|[\<кэширует >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|Регистрирует кэши, используемые службы или коллекцию обработчиков токенов безопасности.|  
   
 ## <a name="remarks"></a>Примечания  
- Кэш воспроизведения токена используется для обнаружения воспроизводимой маркеры. Обнаружение воспроизведения токенов включено по [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) элемент, указывающий максимальный срок действия маркеров.  
+ Кэш повторного использования токенов используется для обнаружения переигранных токенов. Обнаружение воспроизведения токенов включено по [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) элемент, который также указывает максимальный срок действия маркеров.  
   
 ## <a name="example"></a>Пример  
- Следующий код XML показана конфигурация пользовательского кэша для обнаружения воспроизводимой маркеры.  
+ Следующий код XML показана конфигурация пользовательского кэша за обнаружение повторно используемых токенов.  
   
 ```xml  
 <caches>  

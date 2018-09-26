@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
 author: BrucePerlerMS
 ms.openlocfilehash: c2cb1f6d06961546a04b4a132bf9861c925ca421
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47113862"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197998"
 ---
 # <a name="how-to-examine-the-security-context"></a>Практическое руководство. Анализ контекста безопасности
 При программировании служб Windows Communication Foundation (WCF), контекст безопасности службы позволяет определять сведения об учетных данных клиента и утверждения, используемый для проверки подлинности в службе. Это осуществляется с помощью свойств класса <xref:System.ServiceModel.ServiceSecurityContext>.  

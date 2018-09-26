@@ -5,11 +5,11 @@ ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 41679d4041a6a5a7b9b71a451a083c539d6b4c7b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47090257"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196494"
 ---
 # <a name="getting-started-with-net-native"></a>Начало работы с машинным кодом .NET
 При разработке нового приложения для Windows 10 или при миграции существующего приложения Магазина Windows можно использовать один и тот же набор процедур. Чтобы создать приложение [!INCLUDE[net_native](../../../includes/net-native-md.md)] , выполните следующие действия:  

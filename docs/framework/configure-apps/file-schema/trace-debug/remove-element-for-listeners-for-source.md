@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: cc6772e7a9b98f09df21fd1acf24f578b66ae51e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5cfed154af93d72f69efc24c6475b432d0963580
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754279"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47188941"
 ---
 # <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Удалить&gt; элемент для &lt;прослушиватели&gt; для &lt;источника&gt;
 Удаляет прослушиватель из коллекции `Listeners` для источника трассировки.  
@@ -25,7 +24,7 @@ ms.locfileid: "32754279"
 \<источники >  
 \<Источник >  
 \<прослушиватели >  
-\<Удалите >  
+\<Удалить >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,14 +55,14 @@ ms.locfileid: "32754279"
 |`listeners`|Задает прослушиватели для сбора, хранения и маршрутизации сообщений.|  
   
 ## <a name="remarks"></a>Примечания  
- `<remove>` Элемент Удаляет заданный прослушиватель из `Listeners` коллекции для источника трассировки.  
+ `<remove>` Элемент Удаляет указанный прослушиватель из `Listeners` коллекции для источника трассировки.  
   
  Можно удалить элемент из `Listeners` коллекции для источника трассировки программно, вызвав <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> метод <xref:System.Diagnostics.TraceSource.Listeners%2A> свойство <xref:System.Diagnostics.TraceSource> экземпляра.  
   
- Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.  
+ Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `<remove>` элемент перед использованием `<add>` элемент для добавления прослушивателя `console` для `Listeners` коллекции для источника трассировки `TraceSourceApp`.  
+ В следующем примере показано, как использовать `<remove>` элемент перед использованием `<add>` элемент, чтобы добавить прослушиватель `console` для `Listeners` коллекции для источника трассировки `TraceSourceApp`.  
   
 ```xml  
 <configuration>  

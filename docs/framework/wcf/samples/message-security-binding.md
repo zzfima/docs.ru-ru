@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
 author: BrucePerlerMS
 ms.openlocfilehash: 22daa3edbda5be44ce67a6b9a93946505f3fcc12
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070868"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200065"
 ---
 # <a name="message-security-binding"></a>Привязка безопасности сообщений
 Этот раздел содержит образцы, демонстрирующие привязка безопасности сообщений в службах Windows в WCF.  

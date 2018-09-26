@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
 ms.openlocfilehash: e1071261f45c56655f8e6fb5fec6fccb08fd13c6
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170903"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47205425"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Создание команд с помощью построителей CommandBuilder
 Если свойство `SelectCommand` задается динамически во время выполнения, например при помощи средства запроса, принимающего от пользователя текстовые команды, то во время разработки нельзя задавать соответствующие свойства `InsertCommand`, `UpdateCommand` или `DeleteCommand`. Если <xref:System.Data.DataTable> сопоставляется с одной таблицей базы данных или создается из нее, то можно воспользоваться преимуществом объекта <xref:System.Data.Common.DbCommandBuilder> для автоматического создания сущностей `DeleteCommand`, `InsertCommand` и `UpdateCommand` объекта <xref:System.Data.Common.DbDataAdapter>.  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
-ms.openlocfilehash: 8490299e995a469860f660a50a69915d5ddc4940
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 5358a3abe84c7fe7d753560611f0c7338b060826
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44038092"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47200299"
 ---
 # <a name="workflow-tracking-and-tracing"></a>Отслеживание и трассировка рабочих процессов
 Отслеживание рабочих процессов Windows является функцией [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)], разработанной для обеспечения возможности отслеживания выполнения рабочих процессов. Она обеспечивает инфраструктуру отслеживания выполнения экземпляра рабочего процесса. Инфраструктура отслеживания WF прозрачно инструментирует рабочий процесс таким образом, что выдаются записи, отражающие ключевые события выполнения. Эта функция доступна по умолчанию для всех рабочих процессов [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]. Для выполнения отслеживания в рабочий процесс [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] не нужно вносить изменения. Необходимо лишь определить объем данных отслеживания, которые требуется получать. При запуске или завершении экземпляра рабочего процесса создаются записи отслеживания, которые затем обрабатываются. Отслеживание также позволяет извлекать важные для бизнеса данные, связанные с переменными рабочего процесса. Например, если рабочий процесс представляет собой систему обработки заказов, вместе с объектом <xref:System.Activities.Tracking.TrackingRecord> можно извлечь идентификатор заказа. Как правило, функции отслеживания WF позволяют упростить диагностику и доступ к данным бизнес-аналитики из выполняемого рабочего процесса.  
@@ -50,9 +50,6 @@ ms.locfileid: "44038092"
   
  [Трассировка рабочих процессов](../../../docs/framework/windows-workflow-foundation/workflow-tracing.md)  
  Описывает два способа включения трассировки отладки рабочего процесса.  
-  
- [Использование трассировки для определения длительности выполнения рабочего процесса](../../../docs/framework/windows-workflow-foundation/determining-workflow-execution-duration-using-tracing.md)  
- Описывает, как использовать сообщения трассировки для определения продолжительности выполнения рабочего процесса.  
   
 ## <a name="see-also"></a>См. также  
  [Отслеживание SQL](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
