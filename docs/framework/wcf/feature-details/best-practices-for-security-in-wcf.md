@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 author: BrucePerlerMS
 ms.openlocfilehash: a45ec6b5cdd241cb92069e8097bc94baa65b2166
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47075635"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193728"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Рекомендации по безопасности при использовании WCF
 В следующих разделах приводятся рекомендации по созданию надежных приложений с помощью Windows Communication Foundation (WCF). Дополнительные сведения о безопасности см. в разделах [Вопросы безопасности](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [Вопросы безопасности для данных](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md) и [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  

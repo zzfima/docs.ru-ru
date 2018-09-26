@@ -3,11 +3,11 @@ title: 'Лямбда-выражения: ключевое слово fun (F#)'
 description: 'Узнайте, как использовать ключевое слово «интересные» F # для определения лямбда-выражения, который представляет собой анонимную функцию.'
 ms.date: 05/16/2016
 ms.openlocfilehash: a37757f6b7328cd348bbf13f058a6dbc881769cf
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080188"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47231025"
 ---
 # <a name="lambda-expressions-the-fun-keyword-f"></a>Лямбда-выражения: ключевое слово fun (F#)
 
