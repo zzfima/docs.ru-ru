@@ -6,13 +6,12 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: f5f991296aa00bcc49c6672113fd1c25afac3c53
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 54cb952e2f3bffc9c37f2d75059c931d78f29eee
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43402871"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088513"
 ---
 # <a name="security-overview"></a>Общие сведения о безопасности
 Windows Communication Foundation (WCF) — это SOAP на базе сообщений Распределенная платформа программирования, а защита сообщений между клиентами и службами — важно для защиты данных. WCF предоставляет универсальный и гибкую платформу для безопасного обмена сообщениями на основе существующей инфраструктуры безопасности и общепризнанных стандартов безопасности для сообщений SOAP.  
@@ -105,7 +104,7 @@ Windows Communication Foundation (WCF) — это SOAP на базе сообщ�
  [Типовые сценарии безопасности](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)  
  [Привязки и безопасность](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [Проверка подлинности](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Authentication](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [Федерация и выданные маркеры](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  [Аудит](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  

@@ -1,5 +1,5 @@
 ---
-title: '&lt;bypasslist&gt; элемент (параметры сети)'
+title: '&lt;bypasslist&gt; (сетевые параметры)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#bypasslist
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 2d2076ee5e95ab722fe828ee625392671a6281c1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3ca7ba9b0e534b5806570580b207da5314243d8f
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743905"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47109044"
 ---
-# <a name="ltbypasslistgt-element-network-settings"></a>&lt;bypasslist&gt; элемент (параметры сети)
+# <a name="ltbypasslistgt-element-network-settings"></a>&lt;bypasslist&gt; (сетевые параметры)
 Предоставляет набор регулярных выражений, описывающих адреса, которые не используют прокси-сервер.  
   
  \<configuration>  
@@ -44,7 +43,7 @@ ms.locfileid: "32743905"
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|Добавляет IP-адрес или DNS-имя в список обхода прокси-сервера.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|Очищает список обхода.|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|Очищает список вариантов обхода.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|Удаляет IP-адрес или DNS-имя из списка обхода прокси-сервера.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
@@ -54,9 +53,9 @@ ms.locfileid: "32743905"
 |[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|Настраивает прокси-сервер протокола передачи гипертекста (HTTP).|  
   
 ## <a name="remarks"></a>Примечания  
- Список пропускаемых содержит регулярных выражений, описывающих URI, <xref:System.Net.WebRequest> экземпляры доступ напрямую вместо того, через прокси-сервер.  
+ В списке пропускаемых адресов содержит регулярных выражений, описывающих URI, <xref:System.Net.WebRequest> экземпляры доступ напрямую вместо того, через прокси-сервер.  
   
- Следует проявлять осторожность при вводе регулярного выражения для данного элемента. Регулярное выражение «[a-z] +\\.contoso\\.com» совпадает с любого узла в домене contoso.com, но он также соответствует любому узлу в contoso.com.cpandl.com домена. Чтобы соответствовать только одному узлу в домене contoso.com, используйте элемент привязки («$»): «[a-z] +\\.contoso\\.com$».  
+ Будьте внимательны при указании регулярное выражение для этого элемента. Регулярное выражение «[a-z] +\\.contoso\\.com» совпадений, любого узла в домене contoso.com, но он также соответствует любому узлу в contoso.com.cpandl.com домена. Чтобы сопоставить только на узле в домене contoso.com, используйте привязку («$»): «[a-z] +\\.contoso\\.com$».  
   
  Дополнительные сведения о регулярных выражениях см. в разделе. [Регулярные выражения .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
@@ -64,7 +63,7 @@ ms.locfileid: "32743905"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- Список пропускаемых в следующем примере добавляются два адреса. Первый обход прокси-сервера для всех серверов в домене contoso.com. второй обход прокси-сервера для всех серверов, IP-адреса которых начинаются с 192.168.  
+ Следующий пример добавляет два адреса в списке пропускаемых адресов. Первый обходит прокси-сервер для всех серверов в домене contoso.com. второй обходит прокси-сервер для всех серверов, IP-адреса начинается с 192.168.  
   
 ```xml  
 <configuration>  

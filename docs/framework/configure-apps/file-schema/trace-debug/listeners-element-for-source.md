@@ -9,16 +9,15 @@ helpviewer_keywords:
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: a711b8d6bfd5b6d73d3240cb84810841bdc5a2b6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 86b85779f4eff72e8ab910a5ccd32fd369270509
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746843"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085688"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;прослушиватели&gt; элемент для &lt;источника&gt;
-Добавляет или удаляет прослушиватели <xref:System.Diagnostics.TraceSource.Listeners%2A> коллекции для <xref:System.Diagnostics.TraceSource>. Прослушиватель направляет данные трассировки соответствующему целевому объекту, например журнал, окно или текстовый файл.  
+Добавляет или удаляет прослушиватели в <xref:System.Diagnostics.TraceSource.Listeners%2A> коллекции для <xref:System.Diagnostics.TraceSource>. Прослушиватель направляет данные трассировки соответствующему целевому объекту, например журнал, окно или текстовый файл.  
   
  \<configuration>  
 \<System.Diagnostics >  
@@ -47,7 +46,7 @@ ms.locfileid: "32746843"
 |Элемент|Описание|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|Добавляет прослушиватель в коллекцию `Listeners`.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Удаление прослушивателя из `Listeners` коллекции.|  
+|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|Удаляет прослушиватель из `Listeners` коллекции.|  
 |[\<clear>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|Очищает коллекцию `Listeners` для источника трассировки.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
@@ -62,10 +61,10 @@ ms.locfileid: "32746843"
 ## <a name="remarks"></a>Примечания  
   
 ## <a name="configuration-file"></a>Файл конфигурации  
- Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.  
+ Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файле конфигурации приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `<listeners>` элемента, который требуется добавить прослушиватель трассировки консоли для `mySource` источника и удалить прослушиватель трассировки по умолчанию.  
+ В следующем примере показано, как использовать `<listeners>` элемент, чтобы добавить прослушиватель трассировки консоли `mySource` источника и удалить прослушиватель трассировки по умолчанию.  
   
 ```xml  
 <configuration>  

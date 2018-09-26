@@ -2,12 +2,12 @@
 title: UriTemplate и UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 75ef447d8c79bded99bd29292a544c72627f113e
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 66463248f66457aa61ceea22afd003f7b93717e1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46478601"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090517"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate и UriTemplateTable
 Веб-разработчикам необходима возможность описания формы и структуры универсальных кодов ресурса (URI), на которые отвечают их службы. Windows Communication Foundation (WCF) появились два новых класса, позволяющие разработчикам контролировать свои URI. <xref:System.UriTemplate> и <xref:System.UriTemplateTable> формируют основу механизма диспетчеризации на основе URI в WCF. Эти классы также могут использоваться на свои собственные, позволяя разработчикам воспользоваться преимуществами шаблонов и URI механизм сопоставления без реализации службы WCF.  
@@ -192,7 +192,7 @@ foreach (string key in m1.BoundVariables.AllKeys)
 ```  
   
 > [!NOTE]
->  URI, таких как http://localhost:8000/// соответствует шаблону, перечисленных в приведенном выше коде, тем не менее URI, таких как http://localhost:8000/ does.  
+> URI, таких как `http://localhost:8000///` соответствует шаблону, перечисленных в приведенном выше коде, тем не менее URI, таких как `http://localhost:8000/` does.  
   
  В следующем коде показано, как обрабатываются значения переменных по умолчанию при создании универсального кода ресурса (URI) с помощью шаблона.  
   

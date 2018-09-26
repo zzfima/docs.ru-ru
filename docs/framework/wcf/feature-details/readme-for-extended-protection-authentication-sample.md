@@ -3,16 +3,15 @@ title: Файл ReadMe для образца проверки подлиннос
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: d45271180b7f00ba78d106f2a93d5860375da5f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d298f1f6668078d327cf0fd78110c0cbb7b4474c
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495084"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110328"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>Файл ReadMe для образца проверки подлинности с расширенной защитой
-Расширенная защита-это технология безопасности для защиты от атак в середине (MITM), в которых злоумышленник (» в посредник»), перехватывает клиентские учетные данные и использует их для доступа к защищенным ресурсам на сервере предполагаемого клиента.  
+Расширенная защита-это технология безопасности для защиты от атак man-in--middle (MITM), в которых злоумышленник («man-in--middle»), перехватывает учетных данных клиента и использует их для доступа к защищенным ресурсам на сервере предполагаемый клиента.  
   
  Дополнительные сведения см. в разделе [расширенная защита для проверки подлинности Обзор](../../../../docs/framework/wcf/feature-details/extended-protection-for-authentication-overview.md).  
   

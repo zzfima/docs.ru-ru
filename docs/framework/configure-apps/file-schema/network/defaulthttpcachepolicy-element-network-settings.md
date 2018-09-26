@@ -1,5 +1,5 @@
 ---
-title: '&lt;defaultHttpCachePolicy&gt; элемент (параметры сети)'
+title: '&lt;defaultHttpCachePolicy&gt; (сетевые параметры)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
@@ -10,16 +10,15 @@ helpviewer_keywords:
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 0425711687a2f8b40f2c645e1c478d52b56ad979
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1e1b27cb8c0df4450c1a08151af19913b65fc2b3
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741845"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172930"
 ---
-# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt; элемент (параметры сети)
-Описывает указывает, активна ли функция HTTP-кэширования и описывает политику кэширования по умолчанию.  
+# <a name="ltdefaulthttpcachepolicygt-element-network-settings"></a>&lt;defaultHttpCachePolicy&gt; (сетевые параметры)
+Описывает указывает, активна ли HTTP-кэширования и описывает политику кэширования по умолчанию.  
   
  \<configuration>  
 \<System.NET >  
@@ -44,8 +43,8 @@ ms.locfileid: "32741845"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`maximumAge`|Указывает максимальный интервал времени перед кэшированный объект помечается как устаревшая.|  
-|`maximumStale`|Указывает максимальный интервал времени после запрограммированного обновления время ожидания до кэшированный объект помечается как устаревшая.|  
+|`maximumAge`|Указывает максимальный интервал времени, кэшированный объект будет помечена как просроченная.|  
+|`maximumStale`|Указывает максимальное время после запрограммированного обновления срока действия кэшированного объекта будет помечена как просроченная.|  
 |`minimumFresh`|Указывает минимальное время актуальности кэшированного объекта.|  
 |`policyLevel`|Указывает, является ли политика кэширования автоматической или кэш пропускается. Значение по умолчанию — `BypassCache`.|  
   
@@ -61,13 +60,13 @@ ms.locfileid: "32741845"
 ## <a name="remarks"></a>Примечания  
  Значение для `policyLevel` атрибут является либо `BypassCache` или `Default`.  
   
- Значения для `maximumAge`, `maximumStale`, и `minimumFresh` элементы, либо явные временной интервал, в формате *d*. *hh*:*мм*:*ss* (дней, часов, минут и секунд), или константы `minValue` или `maxValue`соответствующим образом.  
+ Значения для `maximumAge`, `maximumStale`, и `minimumFresh` элементы, либо как явные временные интервалы в формате *d*. *hh*:*мм*:*ss* (дни, часы, минуты и секунды), либо как константы `minValue` или `maxValue`, соответствующим образом.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- Приведенный ниже показано, как указать минимальное время актуальности шести часов, максимальный срок жизни двух дней и максимальное время устаревания, равной четырем часам.  
+ Приведенный ниже показано, как указать минимальное время актуальности шести часов, максимальный срок жизни за два дня и максимальное время устаревания четыре часа.  
   
 ```xml  
 <configuration>  

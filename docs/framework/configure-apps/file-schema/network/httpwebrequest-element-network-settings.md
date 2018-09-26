@@ -1,5 +1,5 @@
 ---
-title: '&lt;httpWebRequest&gt; элемент (параметры сети)'
+title: '&lt;httpWebRequest&gt; (сетевые параметры)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1d1dce38e5188824ba1412d3f2a285bd2304f147
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e83f12d849f6f6a587bccc85fbf6fe8fe24026f0
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741972"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108108"
 ---
-# <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt; элемент (параметры сети)
+# <a name="lthttpwebrequestgt-element-network-settings"></a>&lt;httpWebRequest&gt; (сетевые параметры)
 Настраивает параметры веб-запроса.  
   
  \<configuration>  
@@ -44,10 +43,10 @@ ms.locfileid: "32741972"
   
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
-|`maximumResponseHeadersLength`|Указывает максимальную длину заголовка ответа, в килобайтах. Значение по умолчанию — 64. Значение -1 указывает, что отсутствие ограничений размера накладывается на заголовки ответа.|  
-|`maximumErrorResponseLength`|Указывает максимальную длину ответа об ошибке, в килобайтах. Значение по умолчанию — 64. Значение -1 указывает, что отсутствие ограничений размера накладывается на ответ на ошибку.|  
-|`maximumUnauthorizedUploadLength`|Указывает максимальный объем данных, передаваемых в ответ на код ошибки доступа, в байтах. Значение по умолчанию — -1. Значение -1 указывает, что отсутствие ограничений размера накладывается на отправку.|  
-|`useUnsafeHeaderParsing`|Указывает, включен ли разбор небезопасных заголовков. Значение по умолчанию — `false`.|  
+|`maximumResponseHeadersLength`|Указывает максимальную длину заголовка ответа, в килобайтах. Значение по умолчанию — 64. Значение -1 указывает, что нет ограничения размера накладывается на заголовки ответа.|  
+|`maximumErrorResponseLength`|Указывает максимальную длину ответа об ошибке, в килобайтах. Значение по умолчанию — 64. Значение -1 указывает, что нет ограничения размера накладывается на сообщение об ошибке.|  
+|`maximumUnauthorizedUploadLength`|Указывает максимальную длину данных, передаваемых в ответ на код ошибки доступа, в байтах. Значение по умолчанию — -1. Значение -1 указывает, что нет ограничения размера накладывается на отправку.|  
+|`useUnsafeHeaderParsing`|Указывает, включена ли разбор небезопасных заголовков. Значение по умолчанию — `false`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
@@ -59,7 +58,7 @@ ms.locfileid: "32741972"
 |[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
 ## <a name="remarks"></a>Примечания  
- По умолчанию платформа .NET Framework обеспечивает строго RFC 2616 для синтаксического анализа URI. Некоторые ответы сервера могут содержать управляющие символы в запрещенных полях, которые могут вызвать <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> метод выдает исключение <xref:System.Net.WebException>. Если **useUnsafeHeaderParsing** равно **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> не возникнет, при этом, однако, приложение будет уязвимо для некоторых форм атак на разбор URI. Наилучшим решением является изменение сервера, чтобы ответ не содержать управляющие символы.  
+ По умолчанию .NET Framework строго контролирует соблюдение RFC 2616 для синтаксического анализа URI. Некоторые ответы сервера могут содержать управляющие символы в запрещенных полях, которые могут вызвать <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> метод выдает исключение <xref:System.Net.WebException>. Если **useUnsafeHeaderParsing** присваивается **true**, <xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType> не вызывает исключение в данном случае; тем не менее, приложение будет уязвимо для некоторых форм синтаксический анализ атаки URI. Наилучшим решением является изменение сервера, таким образом, ответ содержит управляющих символов.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  

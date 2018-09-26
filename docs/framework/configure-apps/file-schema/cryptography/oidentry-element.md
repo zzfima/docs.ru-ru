@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: db209bac487ccbb98f7f0aeb272f51169e7a0148
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c5be6ef95693f274e5cb2002e5642d5e58a7661a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746359"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082072"
 ---
 # <a name="ltoidentrygt-element"></a>&lt;oidEntry&gt; элемент
 Сопоставляет идентификатор объекта (OID) ASN.1 с понятным именем.  
@@ -41,7 +40,7 @@ ms.locfileid: "32746359"
 |Атрибут|Описание|  
 |---------------|-----------------|  
 |**ИДЕНТИФИКАТОР ОБЪЕКТА**|Обязательный атрибут.<br /><br /> Указывает идентификатор Объекта ASN.1, соответствующий алгоритм, реализованный класс.|  
-|**name**|Обязательный атрибут.<br /><br /> Указывает значение для **имя** атрибута в [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) тег.|  
+|**name**|Обязательный атрибут.<br /><br /> Указывает значение для **имя** атрибут в [ \<nameEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) тега.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
@@ -52,11 +51,11 @@ ms.locfileid: "32746359"
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`cryptographySettings`|Содержит параметры шифрования.|  
-|`mscorlib`|Содержит `cryptographySettings` элемента.|  
+|`mscorlib`|Содержит `cryptographySettings` элемент.|  
 |`oidMap`|Содержит сопоставления идентификатора объекта ASN.1 с классами.|  
   
 ## <a name="remarks"></a>Примечания  
- Идентификаторы объектов ASN.1 определяют алгоритмы в некоторых криптографических форматах. Понятные имена алгоритмов, которые нужно определить сопоставления идентификаторов объектов.  
+ Идентификаторы объектов ASN.1 определяют алгоритмы в некоторых криптографических форматах. Понятные имена алгоритмов, которые вы хотите определить сопоставления идентификаторов объектов.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано, как использовать  **\<oidEntry >** элемент для сопоставления идентификатора объекта хэш-алгоритма RIPEMD-160 с реализацией этого алгоритма.  

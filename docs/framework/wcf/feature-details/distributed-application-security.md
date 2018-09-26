@@ -6,13 +6,12 @@ helpviewer_keywords:
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 0dbc06afd4695b85f426fad2859b4c6d4b6684d6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: dfefa94db2bd286cb92a7fe09e5c4addb52ba8c8
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857184"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090546"
 ---
 # <a name="distributed-application-security"></a>Защита распределенных приложений
 Безопасность Windows Communication Foundation (WCF) делится на три основные функциональные области: безопасность передачи, управление доступом и аудита. Безопасность передачи обеспечивает целостность, конфиденциальность и проверку подлинности. Безопасность передачи обеспечивается одним из следующих способов: безопасность транспорта, безопасность сообщений или `TransportWithMessageCredential`.  

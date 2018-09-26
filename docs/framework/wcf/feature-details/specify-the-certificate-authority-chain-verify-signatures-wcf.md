@@ -6,11 +6,11 @@ helpviewer_keywords:
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
 ms.openlocfilehash: 9e2ba9f3550442602cab217fec329e6c19efd3b3
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46585380"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47080829"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>Практическое руководство. Указание цепочки сертификатов центра сертификации, используемой для проверки сигнатур (WCF)
 Получив сообщение SOAP, подписанное с помощью сертификата X.509, Windows Communication Foundation (WCF) по умолчанию он проверяет, сертификат X.509 выдан доверенным центром сертификации. Для этого выполняется поиск в хранилище сертификатов и проверяется, отмечен ли соответствующий центр сертификации как надежный. Чтобы WCF для создания этого определения цепь сертификатов центра сертификации должны устанавливаться в надлежащем хранилище сертификатов.  

@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1bffb72e7c68d10e2c0edd5ec3cb9bcff10cbc0a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9f8176ca3ee2340100978aef044140dafdeb179b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743057"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082374"
 ---
 # <a name="ltnameentrygt-element"></a>&lt;nameEntry&gt; элемент
 Сопоставляет имя класса с понятным именем алгоритма, что позволяет одному классу иметь несколько понятных имен.  
@@ -40,8 +39,8 @@ ms.locfileid: "32743057"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|**name**|Обязательный атрибут.<br /><br /> Указывает понятное имя для алгоритма, который реализует криптографический класс.|  
-|**class**|Обязательный атрибут.<br /><br /> Указывает значение для **имя** атрибута в [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) элемента.|  
+|**name**|Обязательный атрибут.<br /><br /> Указывает понятное имя алгоритма, который реализует криптографический класс.|  
+|**class**|Обязательный атрибут.<br /><br /> Указывает значение для **имя** атрибут в [ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md) элемент.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
@@ -54,10 +53,10 @@ ms.locfileid: "32743057"
 |`system.web`|Задает корневой элемент для раздела конфигурации ASP.NET.|  
   
 ## <a name="remarks"></a>Примечания  
- **Имя** атрибут может быть имя абстрактные классы, находящиеся в <xref:System.Security.Cryptography> пространства имен. При вызове **создать** метода криптографии абстрактного класса, абстрактный класс имя передается <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> метод. **CreateFromName** возвращает экземпляр типа, указанного **класса** атрибута. Если **имя** атрибут — это краткое имя, например RSA, можно использовать это имя при вызове **CreateFromName** метод.  
+ **Имя** атрибут может быть имя одного из абстрактных классов <xref:System.Security.Cryptography> пространства имен. При вызове **создать** метода класса абстрактный криптографии, передается имя абстрактного класса <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A> метод. **CreateFromName** возвращает экземпляр типа, указанного **класс** атрибута. Если **имя** атрибут — это краткое имя, например RSA, можно использовать это имя при вызове **CreateFromName** метод.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать  **\<nameEntry >** для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку «RSA» для <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и использование <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> метод для возврата `MyCryptoRSAClass` объекта.  
+ В следующем примере показано, как использовать  **\<nameEntry >** элемент для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку «RSA» для <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и использование <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> метод для возврата `MyCryptoRSAClass` объекта.  
   
 ```xml  
 <configuration>  

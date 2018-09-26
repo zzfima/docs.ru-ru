@@ -3,16 +3,15 @@ title: Расширяемость средств обеспечения безо
 ms.date: 03/30/2017
 ms.assetid: 2afe044d-df4a-49a4-9865-38700474c3dd
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 8f68d842b305c37a9e23bf23429c0bfb66a8eae4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 09872b5422d9d66dd4f54753815067954be6c0bb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501040"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47090491"
 ---
 # <a name="security-extensibility"></a>Расширяемость средств обеспечения безопасности
-Этот раздел содержит образцы, демонстрирующие пользовательские безопасности в Windows Communication Foundation (WCF).  
+Этот раздел содержит образцы, демонстрирующие безопасности в Windows Communication Foundation (WCF).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Пользовательский поставщик маркеров](../../../../docs/framework/wcf/samples/durable-issued-token-provider.md)  
@@ -40,7 +39,7 @@ ms.locfileid: "33501040"
  Демонстрируется, как реализовать пользовательскую политику авторизации утверждений и связанный с ней пользовательский диспетчер авторизации службы.  
   
  [Пользовательский маркер](../../../../docs/framework/wcf/samples/custom-token.md)  
- Демонстрирует способы добавления пользовательской реализации маркера в приложение Windows Communication Foundation (WCF).  
+ В этой статье демонстрируется добавление пользовательской реализации маркера в приложение Windows Communication Foundation (WCF).  
   
  [Проверка клиента](../../../../docs/framework/wcf/samples/client-validation.md)  
  Демонстрирует создание поведения конечной точки клиента, которое проверяет конечную точку службы, чтобы убедиться, что конечная точка службы является безопасной.

@@ -1,5 +1,5 @@
 ---
-title: '&lt;Добавить&gt; элемент для bypasslist (параметры сети)'
+title: '&lt;Добавление&gt; элемент для bypasslist (параметры сети)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: d786d4fd7e6663649408b36fb518db06063ef916
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b6cf22fcaff928e53c33a8eb4987acd5a7f6250e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754523"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47081037"
 ---
-# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;Добавить&gt; элемент для bypasslist (параметры сети)
+# <a name="ltaddgt-element-for-bypasslist-network-settings"></a>&lt;Добавление&gt; элемент для bypasslist (параметры сети)
 Добавляет IP-адрес или DNS-имя в список обхода прокси-сервера.  
   
  \<configuration>  
@@ -58,9 +57,9 @@ ms.locfileid: "32754523"
 ## <a name="remarks"></a>Примечания  
  `add` Элемент вставляет регулярное выражение, описывающее IP-адреса или имена DNS-серверов в список адресов, которые обходят прокси-сервер.  
   
- Значение `address` атрибут должен иметь регулярное выражение, которое описывает набор IP-адресов или имен узлов.  
+ Значение `address` атрибут должен быть регулярное выражение, которое описывает набор IP-адресов или имен узлов.  
   
- Следует проявлять осторожность при вводе регулярного выражения для данного элемента. Регулярное выражение «[a-z] +\\.contoso\\.com» совпадает с любого узла в домене contoso.com, но он также соответствует любому узлу в contoso.com.cpandl.com домена. Чтобы соответствовать только одному узлу в домене contoso.com, используйте элемент привязки («$»): «[a-z] +\\.contoso\\.com$».  
+ Будьте внимательны при указании регулярное выражение для этого элемента. Регулярное выражение «[a-z] +\\.contoso\\.com» совпадений, любого узла в домене contoso.com, но он также соответствует любому узлу в contoso.com.cpandl.com домена. Чтобы сопоставить только на узле в домене contoso.com, используйте привязку («$»): «[a-z] +\\.contoso\\.com$».  
   
  Дополнительные сведения о регулярных выражениях см. в разделе. [Регулярные выражения .NET framework](../../../../../docs/standard/base-types/regular-expressions.md).  
   
@@ -68,7 +67,7 @@ ms.locfileid: "32754523"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- Список пропускаемых в следующем примере добавляются два адреса. Первый обход прокси-сервера для всех серверов в домене contoso.com. второй обход прокси-сервера для всех серверов, IP-адрес начинается с 192.168.  
+ Следующий пример добавляет два адреса в списке пропускаемых адресов. Первый обходит прокси-сервер для всех серверов в домене contoso.com. второй обходит прокси-сервер для всех серверов, IP-адрес начинается с 192.168.  
   
 ```xml  
 <configuration>  

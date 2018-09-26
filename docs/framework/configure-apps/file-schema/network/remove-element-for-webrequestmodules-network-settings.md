@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 40eda14d4d578f10a77aa06843abd48f58c55f6a
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: d0da0fd2edae4687ea80b4a23cc82a25ead9cb7b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37073025"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112209"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;Удалить&gt; элемент для webRequestModules (параметры сети)
 Удаляет пользовательский модуль веб-запросов из приложения.  
@@ -26,7 +25,7 @@ ms.locfileid: "37073025"
  \<configuration>  
 \<System.NET >  
 \<webRequestModules >  
-\<Удалите >  
+\<Удалить >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,13 +56,13 @@ ms.locfileid: "37073025"
 ## <a name="remarks"></a>Примечания  
  `remove` Элемент удаляет зарегистрированный модуль веб-запросов для заданного префикса URI.  
   
- Значение для `prefix` атрибут должен иметь первые символы допустимый URI — например, «http», или «`http://www.contoso.com` ».  
+ Значение для `prefix` атрибут должен быть из ведущих символов является допустимым URI — например, «http», или "`http://www.contoso.com` «.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- Следующий пример удаляет существующий модуль веб-запросов для HTTP, а затем выполняется регистрация нового пользовательского модуля для HTTP-запросов к www.contoso.com.  
+ В следующем примере удаляется существующий модуль веб-запросов для HTTP и затем регистрирует нового пользовательского модуля для HTTP-запросов к www.contoso.com.  
   
 ```xml  
 <configuration>  

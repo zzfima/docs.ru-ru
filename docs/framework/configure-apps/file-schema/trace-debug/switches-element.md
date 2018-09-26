@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 4cf36786-b89a-40e2-a0f1-86bb9b783343
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 60a18ae8d89d6be69b2c10c07064f123d3f9c0f8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 7ca375935c1dfcdb406257ece1a9dfd18851dddf
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113888"
 ---
 # <a name="ltswitchesgt-element"></a>&lt;Коммутаторы&gt; элемент
 Содержит ключи трассировки и уровень, на котором они установлены.  
   
  \<configuration>  
 \<System.Diagnostics >  
-\<Коммутаторы >  
+\<Параметры >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -52,10 +52,10 @@ ms.lasthandoff: 05/03/2018
 |`System.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
   
 ## <a name="remarks"></a>Примечания  
- Уровень переключателя трассировки можно изменить, поместив его в файле конфигурации. Если параметр <xref:System.Diagnostics.BooleanSwitch>, вы можете включать и отключать. Если параметр <xref:System.Diagnostics.TraceSwitch>, можно назначать различные уровни для указания типов трассировки или выводимых приложением сообщений отладки.  
+ Уровень переключателя трассировки можно изменить, поместив его в файле конфигурации. Если значение параметра равно <xref:System.Diagnostics.BooleanSwitch>, вы можете включать и отключать. Если значение параметра равно <xref:System.Diagnostics.TraceSwitch>, можно назначать различные уровни для указания типов трассировки или отладки сообщений выходные данные приложения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать  **\<переключения >** элемента `General` для переключателя трассировки <xref:System.Diagnostics.TraceLevel> уровня и включить `Data` логический переключатель трассировки.  
+ В следующем примере показано, как использовать  **\<переключения >** задаваемого элемента `General` для переключателя трассировки <xref:System.Diagnostics.TraceLevel> уровня и включить `Data` логический переключатель трассировки.  
   
 ```xml  
 <configuration>  

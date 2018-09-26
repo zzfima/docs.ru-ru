@@ -3,16 +3,15 @@ title: '&lt;Кэши&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4651091b-3a20-40d8-b293-4408c0710143
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 2a9766b826eb7a708b4b4e99b6bd984f9fc76812
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a91a389e53354e4f5b26e1510fc2f025300d65cc
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755218"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47084245"
 ---
 # <a name="ltcachesgt"></a>&lt;Кэши&gt;
-Регистрирует кэши, используемый для маркеров сеансов и обнаружение воспроизведения токенов.  
+Регистрирует кэши маркеров сеанса и обнаружения воспроизведения маркеров.  
   
  \<system.identityModel >  
 \<identityConfiguration >  
@@ -39,23 +38,23 @@ ms.locfileid: "32755218"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<sessionSecurityTokenCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)|Регистрирует кэша для маркеров сеанса службы или коллекции обработчик маркеров безопасности.|  
-|[\<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)|Регистрирует кэш воспроизведения токена службы или коллекции обработчик маркеров безопасности.|  
+|[\<sessionSecurityTokenCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/sessionsecuritytokencache.md)|Регистрирует кэш токенов сеансов службы или коллекцию обработчиков токенов безопасности.|  
+|[\<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md)|Регистрирует кэш повторного использования токенов службы или коллекцию обработчиков токенов безопасности.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Указывает параметры уровня службы удостоверений.|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Обеспечивает настройку для коллекции безопасности обработчиков маркеров.|  
+|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|Указывает параметры уровня службы идентификации.|  
+|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|Предоставляет конфигурацию для коллекции безопасности обработчиков маркеров.|  
   
 ## <a name="remarks"></a>Примечания  
- A `<caches>` элемент можно задать на уровне службы под `<identityConfiguration>` элемент, либо на уровне коллекции обработчик маркеров безопасности в разделе `<securityTokenHandlerConfiguration>` элемента. Параметры в коллекцию обработчика токенов переопределяют алгоритмам, заданным в службе.  
+ Объект `<caches>` на уровне службы может быть задан элемент `<identityConfiguration>` элемент или на уровне коллекции обработчиков токенов безопасности в разделе `<securityTokenHandlerConfiguration>` элемент. Переопределить параметры на коллекцию обработчиков токенов, теми, которые указаны в службе.  
   
- `<caches>` Представлен <xref:System.IdentityModel.Configuration.IdentityModelCachesElement> класса. Настроенный кэши представляются <xref:System.IdentityModel.Configuration.IdentityModelCaches> класса.  
+ `<caches>` Элемент, представленный объектом <xref:System.IdentityModel.Configuration.IdentityModelCachesElement> класса. Настраиваемые кэши представлены <xref:System.IdentityModel.Configuration.IdentityModelCaches> класса.  
   
 ## <a name="example"></a>Пример  
- Следующий код XML показана конфигурация пользовательского кэша для хранения токенов безопасности сеанса (<xref:System.IdentityModel.Tokens.SessionSecurityToken>). Конфигурации берется из `ClaimsAwareWebFarm` образца.  
+ Следующий код XML показана конфигурация пользовательского кэша для хранения сеанса маркеров безопасности (<xref:System.IdentityModel.Tokens.SessionSecurityToken>). Конфигурации берется из `ClaimsAwareWebFarm` образца.  
   
 ```xml  
 <caches>  

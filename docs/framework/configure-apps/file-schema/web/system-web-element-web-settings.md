@@ -1,5 +1,5 @@
 ---
-title: '&lt;System.Web&gt; элемент (веб-параметров)'
+title: '&lt;System.Web&gt; элемент (веб-параметры)'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Web.config configuration file [ASP.NET]
@@ -10,19 +10,18 @@ helpviewer_keywords:
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 7527ee9e7528a0da47529bae93e8112705e03a36
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 39d305d429490380c76e15bdcdde434f0d75457b
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755166"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083141"
 ---
-# <a name="ltsystemwebgt-element-web-settings"></a>&lt;System.Web&gt; элемент (веб-параметров)
-Содержит сведения о том, как уровень размещения ASP.NET управляет поведением на уровне процесса.  
+# <a name="ltsystemwebgt-element-web-settings"></a>&lt;System.Web&gt; элемент (веб-параметры)
+Содержит сведения об управлении поведению процессов, используемые уровнем размещения ASP.NET.  
   
  \<configuration>  
-\<System.Web > элемент (веб-параметров)  
+\<System.Web > элемент (веб-параметры)  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -50,10 +49,10 @@ ms.locfileid: "32755166"
 |[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Указывает корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] .|  
   
 ## <a name="remarks"></a>Примечания  
- `system.web` Элемента и его дочерних `applicationPool` добавлен элемент [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] в [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]. При запуске [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздних версий в интегрированном режиме это сочетание элементов позволяет настроить, как ASP.NET управляет потоками и как помещает запросы в очередь, когда ASP.NET размещен в пуле приложений IIS. При запуске [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздних версий в классическом режиме или режиме ISAPI, эти параметры учитываются.  
+ `system.web` Элемента и его дочерних `applicationPool` элемента были добавлены в [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] начиная с версии [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]. При запуске [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздних версий в интегрированном режиме это сочетание элементов позволяет настроить, как ASP.NET управляет потоками и как помещает запросы в очередь, когда ASP.NET размещен в пуле приложений IIS. При запуске [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздних версий в классическом режиме или режиме ISAPI, эти параметры игнорируются.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как настроить поведение всего процесса ASP.NET в файле aspnet.config, когда ASP.NET размещен в пуле приложений IIS. В примере предполагается, что службы IIS запущены в интегрированном режиме, а приложение использует [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] или более поздней версии. Этого не происходит в версиях [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] более раннюю, чем [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]. В примере используются значения по умолчанию.  
+ В следующем примере показано, как настроить поведение всего процесса ASP.NET в файле aspnet.config, когда ASP.NET размещен в пуле приложений IIS. В примере предполагается, что службы IIS выполняются в интегрированном режиме, и что приложение использует [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)] или более поздней версии. Этого не происходит в версиях [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] более ранней, чем [!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]. В примере значения являются значениями по умолчанию.  
   
 ```xml  
 <configuration>  

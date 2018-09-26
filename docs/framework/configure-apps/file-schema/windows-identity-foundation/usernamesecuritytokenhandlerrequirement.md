@@ -3,16 +3,15 @@ title: '&lt;userNameSecurityTokenHandlerRequirement&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6ec3bac1-b014-49ae-843c-c54518cb709a
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 5d725cc0d16457f2bdfb404baf4758e3431ce6b7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: dfcaad8b150321fda2a86e601bf57204cbdc1a0e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32756661"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47075040"
 ---
 # <a name="ltusernamesecuritytokenhandlerrequirementgt"></a>&lt;userNameSecurityTokenHandlerRequirement&gt;
-Обеспечивает настройку для <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> класса или производных классов.  
+Предоставляет конфигурацию для <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> классом или производными классами.  
   
  \<system.identityModel >  
 \<identityConfiguration >  
@@ -42,7 +41,7 @@ ms.locfileid: "32756661"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|Используйте|Указывает <xref:System.Web.Security.MembershipProvider> , следует использовать обработчик маркеров безопасности.|  
+|membershipProviderName|Указывает <xref:System.Web.Security.MembershipProvider> , рекомендуется использовать обработчик токенов безопасности.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
@@ -51,10 +50,10 @@ ms.locfileid: "32756661"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Добавляет обработчик маркеров безопасности в коллекцию обработчиков токенов.|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Добавляет обработчик токенов безопасности в коллекцию обработчиков токенов.|  
   
 ## <a name="remarks"></a>Примечания  
- `<userNameSecurityTokenHandlerRequirement>` Наборы элементов <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> свойство при <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> инициализации объекта из конфигурации.  
+ `<userNameSecurityTokenHandlerRequirement>` Наборов элементов <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler.MembershipProvider%2A> свойство при <xref:System.IdentityModel.Services.Tokens.MembershipUserNameSecurityTokenHandler> объект инициализирован из конфигурации.  
   
 ## <a name="example"></a>Пример  
   

@@ -7,13 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a070800ea15c5a7f16b52ca69c7e454c92618e1a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2d4f2d67c8afd1687d9de506cf8a7616408069d2
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503336"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111455"
 ---
 # <a name="windows-communication-foundation-security"></a>Безопасность Windows Communication Foundation
 В этом разделе описываются средства безопасности Windows Communication Foundation (WCF) и способы их использования для защиты сообщений.  
@@ -39,7 +38,7 @@ ms.locfileid: "43503336"
  [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  Описывает способ защиты сообщений с помощью средств безопасности WCF.  
   
- [Проверка подлинности](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
+ [Authentication](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  Примеры типичных задач, связанных с проверкой подлинности.  
   
  [Авторизация](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  

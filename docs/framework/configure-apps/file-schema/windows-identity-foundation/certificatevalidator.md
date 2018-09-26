@@ -3,13 +3,12 @@ title: '&lt;certificateValidator&gt;'
 ms.date: 03/30/2017
 ms.assetid: 86161897-c20f-4ad8-9d7f-050c247251bf
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: a4663b0c3a2a6965a977a1d551c47de7e13d144b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 65b8aa6fa4422579ce0d1c5e33d3418ea051612a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32766898"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077659"
 ---
 # <a name="ltcertificatevalidatorgt"></a>&lt;certificateValidator&gt;
 Задает пользовательский тип для проверки сертификата. Этот тип используется только в том случае, если `certificateValidationMode` атрибут [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) имеет значение «Custom».  
@@ -39,7 +38,7 @@ ms.locfileid: "32766898"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|type|Задает пользовательский тип, который является производным от <xref:System.IdentityModel.Selectors.X509CertificateValidator> класса. Задать `certificateValidationMode` атрибут [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) элемента «Custom», чтобы использовать этот тип. Дополнительные сведения о способах указания `type` см. в разделе [ссылок на пользовательские типы](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). Необязательный.|  
+|type|Задает пользовательский тип, производный от <xref:System.IdentityModel.Selectors.X509CertificateValidator> класса. Задайте `certificateValidationMode` атрибут [ \<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md) элемент на «Пользовательский», чтобы использовать этот тип. Дополнительные сведения о способах указания `type` атрибут, см. в разделе [ссылок на пользовательские типы](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md). Необязательный.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
@@ -48,7 +47,7 @@ ms.locfileid: "32766898"
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Управляет параметрами обработчиков токенов, используемых для проверки сертификатов.|  
+|[\<certificateValidation >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidation.md)|Управляет параметрами, используемых обработчиками токена для проверки сертификатов.|  
   
 ## <a name="example"></a>Пример  
   

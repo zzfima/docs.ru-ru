@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f6811a2dbd8859a8765c5e855e0fe423bd31f287
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad1611701dca48244f3b2a93ecc3ea86363081ed
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359391"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170513"
 ---
 # <a name="ltcryptonamemappinggt-element"></a>&lt;cryptoNameMapping&gt; элемент
 Содержит сопоставления классов с понятными именами.  
@@ -53,10 +52,10 @@ ms.locfileid: "33359391"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`cryptographySettings`|Содержит параметры шифрования.|  
 |`cryptoNameMapping`|Содержит сопоставления классов с понятными именами.|  
-|`mscorlib`|Содержит \<cryptographySettings > элемент.|  
+|`mscorlib`|Содержит \<cryptographySettings > элемента.|  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать  **\<cryptoNameMapping >** для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку «RSA» для <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и использование <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> метод для возврата `MyCryptoRSAClass` объекта.  
+ В следующем примере показано, как использовать  **\<cryptoNameMapping >** элемент для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку «RSA» для <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и использование <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> метод для возврата `MyCryptoRSAClass` объекта.  
   
 ```xml  
 <configuration>  

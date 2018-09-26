@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9297b68a31117aabfa45328954ccb9c7cdac66c5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ca6c8e9334bdfcdf4d79c5a91612ee117445d9cb
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742196"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47170643"
 ---
 # <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;Очистить&gt; элемент для bypasslist (параметры сети)
 Очищает список обхода прокси-сервера.  
@@ -57,7 +56,7 @@ ms.locfileid: "32742196"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере очищает список обхода и затем добавляет два адреса в список обхода. Первый обход прокси-сервера для всех серверов в домене contoso.com. второй обход прокси-сервера для всех серверов, IP-адрес начинается с 192.168.  
+ В следующем примере очищает список обхода и затем добавляются два адреса в списке пропускаемых адресов. Первый обходит прокси-сервер для всех серверов в домене contoso.com. второй обходит прокси-сервер для всех серверов, IP-адрес начинается с 192.168.  
   
 ```xml  
 <configuration>  

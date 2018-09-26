@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 728fff7b8626e227e692c713f4cb05049c14a9f1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e74cc5fa99473562b158cd5068fb8bbaeb6a4a17
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742761"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47083917"
 ---
 # <a name="ltcryptoclassgt-element"></a>&lt;cryptoClass&gt; элемент
 Содержит криптографический класс, сопоставленный с понятным именем, указанным в элементе [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md).  
@@ -41,7 +40,7 @@ ms.locfileid: "32742761"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`customClassName`|Обязательный атрибут.<br /><br /> Содержит сведения для класса шифрования. Этот атрибут используется для предоставления краткого имени класса. Необходимо указать строку, отвечающую требованиям, указанным в [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
+|`customClassName`|Обязательный атрибут.<br /><br /> Содержит сведения для класса шифрования. Этот атрибут используется для предоставления краткого имени класса. Необходимо указать строку, которая соответствует требованиям, перечисленным в [Указание полных имен типов](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md).|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
@@ -57,7 +56,7 @@ ms.locfileid: "32742761"
 |`mscorlib`|Содержит элемент [\<cryptographySettings>](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md).|  
   
 ## <a name="example"></a>Пример  
- Приведенный ниже показано, как использовать  **\<cryptoClass >** для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку «RSA» для <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и использование <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> метод для возврата `MyCryptoRSAClass` объекта.  
+ Приведенный ниже, показано, как использовать  **\<cryptoClass >** элемент для ссылки на криптографический класс и настройки среды выполнения. Затем можно передать строку «RSA» для <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> метод и использование <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> метод для возврата `MyCryptoRSAClass` объекта.  
   
 ```xml  
 <configuration>  

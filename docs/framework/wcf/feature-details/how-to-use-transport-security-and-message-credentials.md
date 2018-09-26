@@ -8,16 +8,15 @@ helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: b94c6fd4761a5b0383c21d36a6d717f78a8825de
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 40fe7b1fa6a61b56d5dfdde75a92834f096a8be4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496052"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082764"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>Практическое руководство. Использование средств обеспечения безопасности транспорта и учетных данных сообщения
-Защита службы с использованием учетных данных транспорта и сообщения использует лучшие из режимов безопасности транспорта и сообщений в Windows Communication Foundation (WCF). В общих словах, TLS обеспечивает целостность и конфиденциальность, а MLS предоставляет различные учетные данные, которые невозможно использовать в строгих механизмах обеспечения безопасности транспорта. В этом разделе приведены основные этапы реализации транспорта с учетными данными сообщения с помощью привязок <xref:System.ServiceModel.WSHttpBinding> и <xref:System.ServiceModel.NetTcpBinding>. Дополнительные сведения о задании режима безопасности см. в разделе [как: режим безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
+Защита службы с помощью учетных данных транспорта и сообщений использует лучшие возможности режимов безопасности транспорта и сообщений в Windows Communication Foundation (WCF). В общих словах, TLS обеспечивает целостность и конфиденциальность, а MLS предоставляет различные учетные данные, которые невозможно использовать в строгих механизмах обеспечения безопасности транспорта. В этом разделе приведены основные этапы реализации транспорта с учетными данными сообщения с помощью привязок <xref:System.ServiceModel.WSHttpBinding> и <xref:System.ServiceModel.NetTcpBinding>. Дополнительные сведения о задании режима безопасности см. в разделе [как: Настройка режима безопасности](../../../../docs/framework/wcf/how-to-set-the-security-mode.md).  
   
  При задании режима безопасности`TransportWithMessageCredential` транспорт определяет фактический механизм, обеспечивающий безопасность на транспортном уровне. В случае HTTP таким механизмом является SSL по HTTP (HTTPS); в случае TCP таким механизмом является SSL по TCP или Windows.  
   
@@ -27,11 +26,11 @@ ms.locfileid: "33496052"
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>Использование привязки WSHttpBinding с сертификатом для обеспечения безопасности транспорта (в коде)  
   
-1.  Воспользуйтесь средством HttpCfg.exe для привязки SSL-сертификата к порту на компьютере. Дополнительные сведения см. в разделе [как: Настройка порта с SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
+1.  Воспользуйтесь средством HttpCfg.exe для привязки SSL-сертификата к порту на компьютере. Дополнительные сведения см. в разделе [как: Настройка порта SSL-сертификат](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md).  
   
 2.  Создайте экземпляр класса <xref:System.ServiceModel.WSHttpBinding> и задайте для свойства <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> значение <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>.  
   
-3.  Присвойте свойству <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> соответствующее значение. (Дополнительные сведения см. в разделе [при выборе типа учетных данных](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) В следующем коде используется значение <xref:System.ServiceModel.MessageCredentialType.Certificate>.  
+3.  Присвойте свойству <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> соответствующее значение. (Дополнительные сведения см. в разделе [Выбор типа учетных данных](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md).) В следующем коде используется значение <xref:System.ServiceModel.MessageCredentialType.Certificate>.  
   
 4.  Создайте экземпляр класса <xref:System.Uri> с соответствующим базовым адресом. Обратите внимание, что адрес должен использовать схему "HTTPS" и содержать фактическое имя компьютера и номер порта, к которому привязан SSL-сертификат. (Кроме того, базовый адрес можно задать в конфигурации.)  
   
@@ -86,7 +85,7 @@ ms.locfileid: "33496052"
   
 #### <a name="to-use-the-wshttpbinding"></a>Использование привязки WSHttpBinding  
   
-1.  Задайте для компьютера SSL-сертификат, привязанный к порту. (Дополнительные сведения см. в разделе [как: Настройка порта SSL-сертификат,](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Не нужно задавать <`transport`> значение элемента в этой конфигурации.  
+1.  Задайте для компьютера SSL-сертификат, привязанный к порту. (Дополнительные сведения см. в разделе [как: Настройка порта SSL-сертификат](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)). Необходимо задать <`transport`> значение элемента с этой конфигурацией.  
   
 2.  Задайте тип учетных данных клиента для MLS. В следующем примере задается `clientCredentialType` атрибут <`message`> элемент `UserName`.  
   
@@ -117,13 +116,13 @@ ms.locfileid: "33496052"
     </behaviors>  
     ```  
   
-2.  Добавить [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) для раздела привязок  
+2.  Добавить [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) в раздел привязок  
   
 3.  Добавьте элемент привязки и присвойте атрибуту `name` соответствующее значение.  
   
-4.  Добавить <`security`> и присвойте `mode` атрибут `TransportWithMessageCredential`.  
+4.  Добавьте <`security`> и присвойте `mode` атрибут `TransportWithMessageCredential`.  
   
-5.  Добавить <`message>` элемент, а также установите `clientCredentialType` соответствующее значение атрибута.  
+5.  Добавьте <`message>` и присвойте `clientCredentialType` атрибут соответствующее значение.  
   
     ```xml  
     <bindings>  
@@ -139,15 +138,15 @@ ms.locfileid: "33496052"
   
 #### <a name="to-use-the-nettcpbinding-with-windows-for-transport-security"></a>Использование привязки NetTcpBinding с Windows для обеспечения безопасности транспорта  
   
-1.  Добавить [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) для раздела привязок  
+1.  Добавить [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md) в раздел привязок  
   
-2.  Добавить <`binding`> и присвойте `name` соответствующее значение атрибута.  
+2.  Добавьте <`binding`> и присвойте `name` атрибут соответствующее значение.  
   
-3.  Добавить <`security`> и присвойте `mode` атрибут `TransportWithMessageCredential`.  
+3.  Добавьте <`security`> и присвойте `mode` атрибут `TransportWithMessageCredential`.  
   
-4.  Добавить <`transport`> и присвойте `clientCredentialType` атрибут `Windows`.  
+4.  Добавьте <`transport`> и присвойте `clientCredentialType` атрибут `Windows`.  
   
-5.  Добавить <`message`> и присвойте `clientCredentialType` соответствующее значение атрибута. В следующем коде задается значение для сертификата.  
+5.  Добавьте <`message`> и присвойте `clientCredentialType` атрибут соответствующее значение. В следующем коде задается значение для сертификата.  
   
     ```xml  
     <bindings>  

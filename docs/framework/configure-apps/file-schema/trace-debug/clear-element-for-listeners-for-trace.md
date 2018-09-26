@@ -9,13 +9,12 @@ helpviewer_keywords:
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 1705ed7cc847d60ecf8b42f4615d77f2cc569e21
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 91b4b4f132138fa6752c1da9b28e7a3ab7fad006
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748663"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082894"
 ---
 # <a name="ltcleargt-element-for-ltlistenersgt-for-lttracegt"></a>&lt;Очистить&gt; элемент для &lt;прослушиватели&gt; для &lt;трассировки&gt;
 Очищает коллекцию `Listeners` для трассировки.  
@@ -48,20 +47,20 @@ ms.locfileid: "32748663"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`system.diagnostics`|Задает прослушиватели трассировки, собирающие, хранящие и маршрутизирующие сообщения, а также уровень, на котором установлен ключ трассировки.|  
 |`trace`|Содержит прослушиватели, которые собирают, хранят и маршрутизируют сообщения трассировки.|  
-|`listeners`|Содержит прослушиватели для сбора, хранения и маршрутизации сообщений. Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту.|  
+|`listeners`|Содержит прослушиватели, сбора, хранения и маршрутизации сообщений. Прослушиватели направляют выходные данные трассировки соответствующему целевому объекту.|  
   
 ## <a name="remarks"></a>Примечания  
  `<clear>` Элемент удаляет все прослушиватели `Listeners` коллекции для трассировки. Можно использовать `<clear>` элемент перед использованием `<add>` элемент, чтобы быть уверенным, отсутствуют другие активные прослушиватели в коллекции.  
   
- Можно снять `Listeners` коллекции программным образом путем вызова <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> метод <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> свойство (`System.Diagnostics.Trace.Listeners.Clear()`).  
+ Можно снять `Listeners` коллекцию программно, вызвав <xref:System.Diagnostics.TraceListenerCollection.Clear%2A> метод <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> свойство (`System.Diagnostics.Trace.Listeners.Clear()`).  
   
- Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файл конфигурации приложения.  
+ Этот элемент может использоваться в файле конфигурации компьютера (Machine.config) и файле конфигурации приложения.  
   
 > [!NOTE]
->  `<clear>` Элемент удаляет <xref:System.Diagnostics.DefaultTraceListener> из `Listeners` коллекции, меняет поведение <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, и <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> методы. Вызов `Assert` или `Fail` метод обычно приводит к отображению окна сообщения. Однако окно сообщения не отображается при <xref:System.Diagnostics.DefaultTraceListener> не находится в `Listeners` коллекции.  
+>  `<clear>` Приводит к удалению <xref:System.Diagnostics.DefaultTraceListener> из `Listeners` коллекции, меняет поведение <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=nameWithType>, <xref:System.Diagnostics.Debug.Fail%2A?displayProperty=nameWithType>, и <xref:System.Diagnostics.Trace.Fail%2A?displayProperty=nameWithType> методы. Вызов `Assert` или `Fail` метод обычно приводит к отображению окна сообщения. В окне сообщения тем не менее, не отображается, если <xref:System.Diagnostics.DefaultTraceListener> не находится в `Listeners` коллекции.  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как использовать `<clear>` элемент перед использованием `<add>` элемент для добавления прослушивателя `console` для `Listeners` коллекции для трассировки.  
+ В следующем примере показано, как использовать `<clear>` элемент перед использованием `<add>` элемент, чтобы добавить прослушиватель `console` для `Listeners` коллекции для трассировки.  
   
 ```xml  
 <configuration>  

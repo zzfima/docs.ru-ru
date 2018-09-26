@@ -6,18 +6,17 @@ dev_langs:
 - vb
 ms.assetid: a7c7747a-5b8c-463f-8493-7266dac75066
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 70c3e371be3af5f03ea85f1681155c2590d42373
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6204a2832bbdc0c6631903687fcd8a1c45b35d03
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489535"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47088416"
 ---
 # <a name="how-to-create-a-securitybindingelement-for-a-specified-authentication-mode"></a>Практическое руководства. Создание SecurityBindingElement для заданного режима проверки подлинности
-Windows Communication Foundation (WCF) имеется несколько режимов, с помощью которых клиенты и службы проверяют подлинность друг друга. Для этих режимов проверки подлинности можно создать привязки безопасности с помощью статических методов класса <xref:System.ServiceModel.Channels.SecurityBindingElement> или с помощью конфигурации, как показано в следующем примере кода.  
+Windows Communication Foundation (WCF) предоставляет несколько режимов, по которым клиенты и службы проверяют подлинность друг друга. Для этих режимов проверки подлинности можно создать привязки безопасности с помощью статических методов класса <xref:System.ServiceModel.Channels.SecurityBindingElement> или с помощью конфигурации, как показано в следующем примере кода.  
   
- Дополнительные сведения о режимах проверки подлинности 18 см. в разделе [режимы проверки подлинности SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
+ Дополнительные сведения о 18 режимов проверки подлинности, см. в разделе [режимы проверки подлинности SecurityBindingElement](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода показаны методы создания привязок для различных методов проверки подлинности.  

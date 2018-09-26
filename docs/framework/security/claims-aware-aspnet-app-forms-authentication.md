@@ -3,13 +3,12 @@ title: Практическое руководство. Создание при�
 ms.date: 03/30/2017
 ms.assetid: 98a3e029-1a9b-4e0c-b5d0-29d3f23f5b15
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 851a856d291da78265e9eac73e9e06028e24ef2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8dab5cfbcf14707699e6672017f5f80db232f01d
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408623"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110441"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-forms-based-authentication"></a>Практическое руководство. Создание приложения ASP.NET, поддерживающего утверждения, использующего проверку подлинности на основе форм
 ## <a name="applies-to"></a>Применение  

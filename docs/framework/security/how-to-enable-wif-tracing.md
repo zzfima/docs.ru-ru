@@ -3,13 +3,12 @@ title: Практическое руководство. Включение тр�
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 17650e06cb505dd778a9c0980c2a32fda8099cb4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f763c279c29bec73d4fc20d59dc86726d84e21bd
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856248"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171703"
 ---
 # <a name="how-to-enable-wif-tracing"></a>Практическое руководство. Включение трассировки WIF
 ## <a name="applies-to"></a>Применение  

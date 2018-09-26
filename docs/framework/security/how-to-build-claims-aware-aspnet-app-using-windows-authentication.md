@@ -3,13 +3,12 @@ title: Практическое руководство. Создание при�
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 2a5dbec2e92d32e45bc0271de04f8c6403f67f90
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2c7877c452c729b30029cad1a8e17600f3dc9661
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399799"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47112430"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>Практическое руководство. Создание приложения ASP.NET, поддерживающего утверждения, использующего проверку подлинности Windows
 ## <a name="applies-to"></a>Применение  

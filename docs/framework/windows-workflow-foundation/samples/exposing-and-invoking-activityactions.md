@@ -3,11 +3,11 @@ title: Предоставление и вызов действий ActivityActio
 ms.date: 03/30/2017
 ms.assetid: 97ce4797-426e-463d-9cc4-1261afad6df4
 ms.openlocfilehash: 99207c33d82ec9028da2355cc792c366dc5e0cc6
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46583065"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176403"
 ---
 # <a name="exposing-and-invoking-activityactions"></a>Предоставление и вызов действий ActivityActions
 В этом образце показано, как разработать настраиваемое действие, имеющее <xref:System.Activities.ActivityAction>. Также демонстрируется, как использовать данное действие, обеспечив реализацию <xref:System.Activities.ActivityAction>.  

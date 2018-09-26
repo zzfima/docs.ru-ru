@@ -1,5 +1,5 @@
 ---
-title: '&lt;webRequestModules&gt; элемент (параметры сети)'
+title: '&lt;webRequestModules&gt; (сетевые параметры)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules
@@ -10,15 +10,14 @@ helpviewer_keywords:
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 7454099d8af0f2d656296be55677c648cc0c36c9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 34173812f4f6fac940632e23e6641e458250a4ee
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742696"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47110896"
 ---
-# <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt; элемент (параметры сети)
+# <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt; (сетевые параметры)
 Задает модули, используемые для запроса данных от сетевых узлов.  
   
  \<configuration>  
@@ -42,7 +41,7 @@ ms.locfileid: "32742696"
   
 |**Элемент**|**Описание**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|Добавляет в приложение пользовательский модуль веб-запросов.|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|Добавляет пользовательский модуль веб-запросов к приложению.|  
 |[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|Удаляет все зарегистрированные модули веб-запросов из приложения.|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|Удаляет пользовательский модуль веб-запросов из приложения.|  
   
@@ -53,15 +52,15 @@ ms.locfileid: "32742696"
 |[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   
 ## <a name="remarks"></a>Примечания  
- Элемент `webRequestModules` регистрирует потомки класса <xref:System.Net.WebRequest>, чтобы обработать запросы информации к сетевым узлам. Модули веб-запросов необходимо реализовать <xref:System.Net.IWebRequestCreate> интерфейса.  
+ Элемент `webRequestModules` регистрирует потомки класса <xref:System.Net.WebRequest>, чтобы обработать запросы информации к сетевым узлам. Модули веб-запросов необходимо реализовать <xref:System.Net.IWebRequestCreate> интерфейс.  
   
- Платформа .NET Framework включает модули веб-запросов для URI, который начинается с http://, https:// и file://. Модули по умолчанию можно переопределить только зарегистрировав пользовательский модуль в файле конфигурации.  
+ .NET Framework включает модули веб-запросов для URI, который начинается с http://, https:// и file://. Модули по умолчанию можно переопределить только путем регистрации пользовательского модуля в файле конфигурации.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере регистрируется модуль HTTP по умолчанию. Следует заменить значения для Version и PublicKeyToken правильные значения для указанного модуля.  
+ В следующем примере регистрируется модуль HTTP по умолчанию. Следует заменить значения для версии и PublicKeyToken правильными значениями для указанного модуля.  
   
 ```xml  
 <configuration>  
