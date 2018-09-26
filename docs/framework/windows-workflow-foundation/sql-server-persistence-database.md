@@ -3,22 +3,22 @@ title: База данных постоянного хранения SQL Server
 ms.date: 03/30/2017
 ms.assetid: 4e594eec-2a31-4d49-ad31-aca2ecbb1f69
 ms.openlocfilehash: 3929148cf6a236db7d226b45da750e8d4ae1d0cc
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088260"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195537"
 ---
-# <a name="sql-server-persistence-database"></a><span data-ttu-id="4fe86-102">База данных постоянного хранения SQL Server</span><span class="sxs-lookup"><span data-stu-id="4fe86-102">SQL Server Persistence Database</span></span>
-<span data-ttu-id="4fe86-103">В этом разделе приведены сведения об общих представлениях базы данных, поддерживаемых хранилищем экземпляров рабочих процессов SQL, и показано, как проводить десериализацию примитивных свойств данных экземпляров и как обращаться с запросами к несохраняемым экземплярам.</span><span class="sxs-lookup"><span data-stu-id="4fe86-103">This section provides details about public database views supported by the SQL Workflow Instance Store and shows how to de-serialize primitive instance data properties and how to query for non-persisted instances.</span></span>  
+# <a name="sql-server-persistence-database"></a><span data-ttu-id="761c8-102">База данных постоянного хранения SQL Server</span><span class="sxs-lookup"><span data-stu-id="761c8-102">SQL Server Persistence Database</span></span>
+<span data-ttu-id="761c8-103">В этом разделе приведены сведения об общих представлениях базы данных, поддерживаемых хранилищем экземпляров рабочих процессов SQL, и показано, как проводить десериализацию примитивных свойств данных экземпляров и как обращаться с запросами к несохраняемым экземплярам.</span><span class="sxs-lookup"><span data-stu-id="761c8-103">This section provides details about public database views supported by the SQL Workflow Instance Store and shows how to de-serialize primitive instance data properties and how to query for non-persisted instances.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="4fe86-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="4fe86-104">In This Section</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="761c8-104">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="761c8-104">In This Section</span></span>  
   
--   [<span data-ttu-id="4fe86-105">Схема базы данных сохраняемости</span><span class="sxs-lookup"><span data-stu-id="4fe86-105">Persistence Database Schema</span></span>](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md)  
+-   [<span data-ttu-id="761c8-105">Схема базы данных сохраняемости</span><span class="sxs-lookup"><span data-stu-id="761c8-105">Persistence Database Schema</span></span>](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md)  
   
--   [<span data-ttu-id="4fe86-106">Практическое руководство. Десериализация свойств данных экземпляра</span><span class="sxs-lookup"><span data-stu-id="4fe86-106">How to: Deserialize Instance Data Properties</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-deserialize-instance-data-properties.md)  
+-   [<span data-ttu-id="761c8-106">Практическое руководство. Десериализация свойств данных экземпляра</span><span class="sxs-lookup"><span data-stu-id="761c8-106">How to: Deserialize Instance Data Properties</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-deserialize-instance-data-properties.md)  
   
--   [<span data-ttu-id="4fe86-107">Практическое руководство. Запросы для несохраняемых экземпляров</span><span class="sxs-lookup"><span data-stu-id="4fe86-107">How to: Query for Non-persisted Instances</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-query-for-non-persisted-instances.md)  
+-   [<span data-ttu-id="761c8-107">Практическое руководство. Запросы для несохраняемых экземпляров</span><span class="sxs-lookup"><span data-stu-id="761c8-107">How to: Query for Non-persisted Instances</span></span>](../../../docs/framework/windows-workflow-foundation/how-to-query-for-non-persisted-instances.md)  
   
-## <a name="see-also"></a><span data-ttu-id="4fe86-108">См. также</span><span class="sxs-lookup"><span data-stu-id="4fe86-108">See Also</span></span>  
- [<span data-ttu-id="4fe86-109">База данных сохраняемости фабрики приложения SQL Server</span><span class="sxs-lookup"><span data-stu-id="4fe86-109">App Fabric SQL Server Persistence Database</span></span>](https://go.microsoft.com/fwlink/?LinkID=201202&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="761c8-108">См. также</span><span class="sxs-lookup"><span data-stu-id="761c8-108">See Also</span></span>  
+ [<span data-ttu-id="761c8-109">База данных сохраняемости фабрики приложения SQL Server</span><span class="sxs-lookup"><span data-stu-id="761c8-109">App Fabric SQL Server Persistence Database</span></span>](https://go.microsoft.com/fwlink/?LinkID=201202&clcid=0x409)

@@ -4,47 +4,47 @@ ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
 ms.openlocfilehash: 1b3121a6e7e036ec268cf83ffbf545c0e669a9b9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47077334"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47206142"
 ---
-# <a name="ltsystemidentitymodelgt"></a><span data-ttu-id="edb12-102">&lt;system.identityModel&gt;</span><span class="sxs-lookup"><span data-stu-id="edb12-102">&lt;system.identityModel&gt;</span></span>
-<span data-ttu-id="edb12-103">Предоставляет конфигурацию для включения параметров Windows Identity Foundation (WIF) в приложениях.</span><span class="sxs-lookup"><span data-stu-id="edb12-103">Provides configuration for enabling Windows Identity Foundation (WIF) options in applications.</span></span>  
+# <a name="ltsystemidentitymodelgt"></a><span data-ttu-id="c23a0-102">&lt;system.identityModel&gt;</span><span class="sxs-lookup"><span data-stu-id="c23a0-102">&lt;system.identityModel&gt;</span></span>
+<span data-ttu-id="c23a0-103">Предоставляет конфигурацию для включения параметров Windows Identity Foundation (WIF) в приложениях.</span><span class="sxs-lookup"><span data-stu-id="c23a0-103">Provides configuration for enabling Windows Identity Foundation (WIF) options in applications.</span></span>  
   
- <span data-ttu-id="edb12-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="edb12-104">\<system.identityModel></span></span>  
+ <span data-ttu-id="c23a0-104">\<system.identityModel ></span><span class="sxs-lookup"><span data-stu-id="c23a0-104">\<system.identityModel></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="edb12-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="edb12-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c23a0-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c23a0-105">Syntax</span></span>  
   
 ```xml  
 <system.identityModel>  
 </system.identityModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="edb12-106">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="edb12-106">Attributes and Elements</span></span>  
- <span data-ttu-id="edb12-107">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="edb12-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c23a0-106">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="c23a0-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="c23a0-107">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="c23a0-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="edb12-108">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="edb12-108">Attributes</span></span>  
- <span data-ttu-id="edb12-109">Нет</span><span class="sxs-lookup"><span data-stu-id="edb12-109">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c23a0-108">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="c23a0-108">Attributes</span></span>  
+ <span data-ttu-id="c23a0-109">Нет</span><span class="sxs-lookup"><span data-stu-id="c23a0-109">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="edb12-110">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="edb12-110">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c23a0-110">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="c23a0-110">Child Elements</span></span>  
   
-|<span data-ttu-id="edb12-111">Элемент</span><span class="sxs-lookup"><span data-stu-id="edb12-111">Element</span></span>|<span data-ttu-id="edb12-112">Описание</span><span class="sxs-lookup"><span data-stu-id="edb12-112">Description</span></span>|  
+|<span data-ttu-id="c23a0-111">Элемент</span><span class="sxs-lookup"><span data-stu-id="c23a0-111">Element</span></span>|<span data-ttu-id="c23a0-112">Описание</span><span class="sxs-lookup"><span data-stu-id="c23a0-112">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="edb12-113">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="edb12-113">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|<span data-ttu-id="edb12-114">Указывает параметры уровня службы идентификации.</span><span class="sxs-lookup"><span data-stu-id="edb12-114">Specifies service-level identity settings.</span></span>|  
+|[<span data-ttu-id="c23a0-113">\<identityConfiguration ></span><span class="sxs-lookup"><span data-stu-id="c23a0-113">\<identityConfiguration></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|<span data-ttu-id="c23a0-114">Указывает параметры уровня службы идентификации.</span><span class="sxs-lookup"><span data-stu-id="c23a0-114">Specifies service-level identity settings.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="edb12-115">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="edb12-115">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c23a0-115">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="c23a0-115">Parent Elements</span></span>  
   
-|<span data-ttu-id="edb12-116">Элемент</span><span class="sxs-lookup"><span data-stu-id="edb12-116">Element</span></span>|<span data-ttu-id="edb12-117">Описание</span><span class="sxs-lookup"><span data-stu-id="edb12-117">Description</span></span>|  
+|<span data-ttu-id="c23a0-116">Элемент</span><span class="sxs-lookup"><span data-stu-id="c23a0-116">Element</span></span>|<span data-ttu-id="c23a0-117">Описание</span><span class="sxs-lookup"><span data-stu-id="c23a0-117">Description</span></span>|  
 |-------------|-----------------|  
-|`<configuration>`|<span data-ttu-id="edb12-118">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="edb12-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
+|`<configuration>`|<span data-ttu-id="c23a0-118">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="c23a0-118">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="edb12-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="edb12-119">Remarks</span></span>  
- <span data-ttu-id="edb12-120">Добавить `<system.identityModel>` раздел в файл конфигурации для настройки службы или приложения для использования Windows Identity Foundation (WIF).</span><span class="sxs-lookup"><span data-stu-id="edb12-120">Add a `<system.identityModel>` section to the configuration file to configure a service or application to use Windows Identity Foundation (WIF).</span></span> <span data-ttu-id="edb12-121">`<system.identityModel>` Элемент, представленный объектом <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> класса.</span><span class="sxs-lookup"><span data-stu-id="edb12-121">The `<system.identityModel>` element is represented by the <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> class.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c23a0-119">Примечания</span><span class="sxs-lookup"><span data-stu-id="c23a0-119">Remarks</span></span>  
+ <span data-ttu-id="c23a0-120">Добавить `<system.identityModel>` раздел в файл конфигурации для настройки службы или приложения для использования Windows Identity Foundation (WIF).</span><span class="sxs-lookup"><span data-stu-id="c23a0-120">Add a `<system.identityModel>` section to the configuration file to configure a service or application to use Windows Identity Foundation (WIF).</span></span> <span data-ttu-id="c23a0-121">`<system.identityModel>` Элемент, представленный объектом <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> класса.</span><span class="sxs-lookup"><span data-stu-id="c23a0-121">The `<system.identityModel>` element is represented by the <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="edb12-122">Пример</span><span class="sxs-lookup"><span data-stu-id="edb12-122">Example</span></span>  
- <span data-ttu-id="edb12-123">В следующем примере показано, как добавить `<system.identityModel>` раздел в файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="edb12-123">The following example shows how to add a `<system.identityModel>` section to a configuration file.</span></span> <span data-ttu-id="edb12-124">Необходимо сначала добавить объявление раздела и пространства имен конфигурации в разделе `<configSections>` элемент.</span><span class="sxs-lookup"><span data-stu-id="edb12-124">You must first add the configuration section and namespace declaration under the `<configSections>` element.</span></span> <span data-ttu-id="edb12-125">Затем можно добавить `<system.IdentityModel>` элемент в файл конфигурации, чтобы указать одну или несколько конфигураций удостоверений.</span><span class="sxs-lookup"><span data-stu-id="edb12-125">Then you can add the `<system.IdentityModel>` element to your configuration file to specify one or more identity configurations.</span></span>  
+## <a name="example"></a><span data-ttu-id="c23a0-122">Пример</span><span class="sxs-lookup"><span data-stu-id="c23a0-122">Example</span></span>  
+ <span data-ttu-id="c23a0-123">В следующем примере показано, как добавить `<system.identityModel>` раздел в файл конфигурации.</span><span class="sxs-lookup"><span data-stu-id="c23a0-123">The following example shows how to add a `<system.identityModel>` section to a configuration file.</span></span> <span data-ttu-id="c23a0-124">Необходимо сначала добавить объявление раздела и пространства имен конфигурации в разделе `<configSections>` элемент.</span><span class="sxs-lookup"><span data-stu-id="c23a0-124">You must first add the configuration section and namespace declaration under the `<configSections>` element.</span></span> <span data-ttu-id="c23a0-125">Затем можно добавить `<system.IdentityModel>` элемент в файл конфигурации, чтобы указать одну или несколько конфигураций удостоверений.</span><span class="sxs-lookup"><span data-stu-id="c23a0-125">Then you can add the `<system.IdentityModel>` element to your configuration file to specify one or more identity configurations.</span></span>  
   
 ```xml  
 <configuration>  
@@ -75,5 +75,5 @@ ms.locfileid: "47077334"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="edb12-126">См. также</span><span class="sxs-lookup"><span data-stu-id="edb12-126">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c23a0-126">См. также</span><span class="sxs-lookup"><span data-stu-id="c23a0-126">See Also</span></span>  
  <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>

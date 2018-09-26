@@ -4,75 +4,75 @@ ms.date: 03/30/2017
 ms.assetid: 7eb50bcb-38d8-4afb-86aa-2573586697c2
 author: BrucePerlerMS
 ms.openlocfilehash: 00feb727f72cedb2d25eab974148f81c1344eaf0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071969"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47196814"
 ---
-# <a name="windows-identity-foundation"></a><span data-ttu-id="acbea-102">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="acbea-102">Windows Identity Foundation</span></span>
--   [<span data-ttu-id="acbea-103">Новые возможности Windows Identity Foundation 4.5</span><span class="sxs-lookup"><span data-stu-id="acbea-103">What's New in Windows Identity Foundation 4.5</span></span>](../../../docs/framework/security/whats-new-in-wif.md)  
+# <a name="windows-identity-foundation"></a><span data-ttu-id="55740-102">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="55740-102">Windows Identity Foundation</span></span>
+-   [<span data-ttu-id="55740-103">Новые возможности Windows Identity Foundation 4.5</span><span class="sxs-lookup"><span data-stu-id="55740-103">What's New in Windows Identity Foundation 4.5</span></span>](../../../docs/framework/security/whats-new-in-wif.md)  
   
--   [<span data-ttu-id="acbea-104">Обзор Windows Identity Foundation 4.5</span><span class="sxs-lookup"><span data-stu-id="acbea-104">Windows Identity Foundation 4.5 Overview</span></span>](../../../docs/framework/security/wif-overview.md)  
+-   [<span data-ttu-id="55740-104">Обзор Windows Identity Foundation 4.5</span><span class="sxs-lookup"><span data-stu-id="55740-104">Windows Identity Foundation 4.5 Overview</span></span>](../../../docs/framework/security/wif-overview.md)  
   
-    -   [<span data-ttu-id="acbea-105">Модель удостоверений на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="acbea-105">Claims-Based Identity Model</span></span>](../../../docs/framework/security/claims-based-identity-model.md)  
+    -   [<span data-ttu-id="55740-105">Модель удостоверений на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="55740-105">Claims-Based Identity Model</span></span>](../../../docs/framework/security/claims-based-identity-model.md)  
   
-    -   [<span data-ttu-id="acbea-106">Авторизация на основе утверждений с использованием WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-106">Claims Based Authorization Using WIF</span></span>](../../../docs/framework/security/claims-based-authorization-using-wif.md)  
+    -   [<span data-ttu-id="55740-106">Авторизация на основе утверждений с использованием WIF</span><span class="sxs-lookup"><span data-stu-id="55740-106">Claims Based Authorization Using WIF</span></span>](../../../docs/framework/security/claims-based-authorization-using-wif.md)  
   
-    -   [<span data-ttu-id="acbea-107">Модель программирования утверждений WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-107">WIF Claims Programming Model</span></span>](../../../docs/framework/security/wif-claims-programming-model.md)  
+    -   [<span data-ttu-id="55740-107">Модель программирования утверждений WIF</span><span class="sxs-lookup"><span data-stu-id="55740-107">WIF Claims Programming Model</span></span>](../../../docs/framework/security/wif-claims-programming-model.md)  
   
--   [<span data-ttu-id="acbea-108">Приступая к работе с WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-108">Getting Started With WIF</span></span>](../../../docs/framework/security/getting-started-with-wif.md)  
+-   [<span data-ttu-id="55740-108">Приступая к работе с WIF</span><span class="sxs-lookup"><span data-stu-id="55740-108">Getting Started With WIF</span></span>](../../../docs/framework/security/getting-started-with-wif.md)  
   
-    -   [<span data-ttu-id="acbea-109">Создание первого веб-приложения ASP.NET с поддержкой утверждений</span><span class="sxs-lookup"><span data-stu-id="acbea-109">Building My First Claims-Aware ASP.NET Web Application</span></span>](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
+    -   [<span data-ttu-id="55740-109">Создание первого веб-приложения ASP.NET с поддержкой утверждений</span><span class="sxs-lookup"><span data-stu-id="55740-109">Building My First Claims-Aware ASP.NET Web Application</span></span>](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
   
-    -   [<span data-ttu-id="acbea-110">Создание первой службы WCF на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="acbea-110">Building My First Claims-Aware WCF Service</span></span>](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
+    -   [<span data-ttu-id="55740-110">Создание первой службы WCF на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="55740-110">Building My First Claims-Aware WCF Service</span></span>](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
   
--   [<span data-ttu-id="acbea-111">Возможности WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-111">WIF Features</span></span>](../../../docs/framework/security/wif-features.md)  
+-   [<span data-ttu-id="55740-111">Возможности WIF</span><span class="sxs-lookup"><span data-stu-id="55740-111">WIF Features</span></span>](../../../docs/framework/security/wif-features.md)  
   
-    -   [<span data-ttu-id="acbea-112">Средство Identity and Access Tool для Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="acbea-112">Identity and Access Tool for Visual Studio 2012</span></span>](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
+    -   [<span data-ttu-id="55740-112">Средство Identity and Access Tool для Visual Studio 2012</span><span class="sxs-lookup"><span data-stu-id="55740-112">Identity and Access Tool for Visual Studio 2012</span></span>](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  
   
-    -   [<span data-ttu-id="acbea-113">Управление сеансами WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-113">WIF Session Management</span></span>](../../../docs/framework/security/wif-session-management.md)  
+    -   [<span data-ttu-id="55740-113">Управление сеансами WIF</span><span class="sxs-lookup"><span data-stu-id="55740-113">WIF Session Management</span></span>](../../../docs/framework/security/wif-session-management.md)  
   
-    -   [<span data-ttu-id="acbea-114">WIF и веб-фермы</span><span class="sxs-lookup"><span data-stu-id="acbea-114">WIF and Web Farms</span></span>](../../../docs/framework/security/wif-and-web-farms.md)  
+    -   [<span data-ttu-id="55740-114">WIF и веб-фермы</span><span class="sxs-lookup"><span data-stu-id="55740-114">WIF and Web Farms</span></span>](../../../docs/framework/security/wif-and-web-farms.md)  
   
-    -   [<span data-ttu-id="acbea-115">Обзор модуля аутентификации WSFederation</span><span class="sxs-lookup"><span data-stu-id="acbea-115">WSFederation Authentication Module Overview</span></span>](../../../docs/framework/security/wsfederation-authentication-module-overview.md)  
+    -   [<span data-ttu-id="55740-115">Обзор модуля аутентификации WSFederation</span><span class="sxs-lookup"><span data-stu-id="55740-115">WSFederation Authentication Module Overview</span></span>](../../../docs/framework/security/wsfederation-authentication-module-overview.md)  
   
-    -   [<span data-ttu-id="acbea-116">WSTrustChannelFactory и WSTrustChannel</span><span class="sxs-lookup"><span data-stu-id="acbea-116">WSTrustChannelFactory and WSTrustChannel</span></span>](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)  
+    -   [<span data-ttu-id="55740-116">WSTrustChannelFactory и WSTrustChannel</span><span class="sxs-lookup"><span data-stu-id="55740-116">WSTrustChannelFactory and WSTrustChannel</span></span>](../../../docs/framework/security/wstrustchannelfactory-and-wstrustchannel.md)  
   
--   [<span data-ttu-id="acbea-117">Индекс практического руководства WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-117">WIF How-To's Index</span></span>](../../../docs/framework/security/wif-how-tos-index.md)  
+-   [<span data-ttu-id="55740-117">Индекс практического руководства WIF</span><span class="sxs-lookup"><span data-stu-id="55740-117">WIF How-To's Index</span></span>](../../../docs/framework/security/wif-how-tos-index.md)  
   
-    -   [<span data-ttu-id="acbea-118">Практическое руководство. Создание веб-приложения ASP.NET MVC, поддерживающего утверждения, с использованием WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-118">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+    -   [<span data-ttu-id="55740-118">Практическое руководство. Создание веб-приложения ASP.NET MVC, поддерживающего утверждения, с использованием WIF</span><span class="sxs-lookup"><span data-stu-id="55740-118">How To: Build Claims-Aware ASP.NET MVC Web Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
-    -   [<span data-ttu-id="acbea-119">Практическое руководство. Создание приложения ASP.NET Web Forms, поддерживающего утверждения, с использованием WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-119">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+    -   [<span data-ttu-id="55740-119">Практическое руководство. Создание приложения ASP.NET Web Forms, поддерживающего утверждения, с использованием WIF</span><span class="sxs-lookup"><span data-stu-id="55740-119">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
-    -   [<span data-ttu-id="acbea-120">Практическое руководство. Создание приложения ASP.NET, поддерживающего утверждения, с использованием аутентификации</span><span class="sxs-lookup"><span data-stu-id="acbea-120">How To: Build Claims-Aware ASP.NET Application Using Forms-Based Authentication</span></span>](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+    -   [<span data-ttu-id="55740-120">Практическое руководство. Создание приложения ASP.NET, поддерживающего утверждения, с использованием аутентификации</span><span class="sxs-lookup"><span data-stu-id="55740-120">How To: Build Claims-Aware ASP.NET Application Using Forms-Based Authentication</span></span>](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
-    -   [<span data-ttu-id="acbea-121">Практическое руководство. Создание приложения ASP.NET, поддерживающего утверждения, с использованием аутентификации Windows</span><span class="sxs-lookup"><span data-stu-id="acbea-121">How To: Build Claims-Aware ASP.NET Application Using Windows Authentication</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)  
+    -   [<span data-ttu-id="55740-121">Практическое руководство. Создание приложения ASP.NET, поддерживающего утверждения, с использованием аутентификации Windows</span><span class="sxs-lookup"><span data-stu-id="55740-121">How To: Build Claims-Aware ASP.NET Application Using Windows Authentication</span></span>](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)  
   
-    -   [<span data-ttu-id="acbea-122">Практическое руководство: Отладка приложений и служб с помощью трассировки WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-122">How To: Debug Claims-Aware Applications And Services Using WIF Tracing</span></span>](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)  
+    -   [<span data-ttu-id="55740-122">Практическое руководство: Отладка приложений и служб с помощью трассировки WIF</span><span class="sxs-lookup"><span data-stu-id="55740-122">How To: Debug Claims-Aware Applications And Services Using WIF Tracing</span></span>](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)  
   
-    -   [<span data-ttu-id="acbea-123">Практическое руководство. Отображение состояния входа с помощью WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-123">How To: Display Signed In Status Using WIF</span></span>](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)  
+    -   [<span data-ttu-id="55740-123">Практическое руководство. Отображение состояния входа с помощью WIF</span><span class="sxs-lookup"><span data-stu-id="55740-123">How To: Display Signed In Status Using WIF</span></span>](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)  
   
-    -   [<span data-ttu-id="acbea-124">Практическое руководство. Включение обнаружения повтора сообщений</span><span class="sxs-lookup"><span data-stu-id="acbea-124">How To: Enable Token Replay Detection</span></span>](../../../docs/framework/security/how-to-enable-token-replay-detection.md)  
+    -   [<span data-ttu-id="55740-124">Практическое руководство. Включение обнаружения повтора сообщений</span><span class="sxs-lookup"><span data-stu-id="55740-124">How To: Enable Token Replay Detection</span></span>](../../../docs/framework/security/how-to-enable-token-replay-detection.md)  
   
-    -   [<span data-ttu-id="acbea-125">Практическое руководство. Включение трассировки WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-125">How To: Enable WIF Tracing</span></span>](../../../docs/framework/security/how-to-enable-wif-tracing.md)  
+    -   [<span data-ttu-id="55740-125">Практическое руководство. Включение трассировки WIF</span><span class="sxs-lookup"><span data-stu-id="55740-125">How To: Enable WIF Tracing</span></span>](../../../docs/framework/security/how-to-enable-wif-tracing.md)  
   
-    -   [<span data-ttu-id="acbea-126">Практическое руководство. Включение WIF для приложения веб-службы WCF</span><span class="sxs-lookup"><span data-stu-id="acbea-126">How To: Enable WIF for a WCF Web Service Application</span></span>](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)  
+    -   [<span data-ttu-id="55740-126">Практическое руководство. Включение WIF для приложения веб-службы WCF</span><span class="sxs-lookup"><span data-stu-id="55740-126">How To: Enable WIF for a WCF Web Service Application</span></span>](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)  
   
-    -   [<span data-ttu-id="acbea-127">Практическое руководство. Преобразование входящих утверждений</span><span class="sxs-lookup"><span data-stu-id="acbea-127">How To: Transform Incoming Claims</span></span>](../../../docs/framework/security/how-to-transform-incoming-claims.md)  
+    -   [<span data-ttu-id="55740-127">Практическое руководство. Преобразование входящих утверждений</span><span class="sxs-lookup"><span data-stu-id="55740-127">How To: Transform Incoming Claims</span></span>](../../../docs/framework/security/how-to-transform-incoming-claims.md)  
   
--   [<span data-ttu-id="acbea-128">Руководства по WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-128">WIF Guidelines</span></span>](../../../docs/framework/security/wif-guidelines.md)  
+-   [<span data-ttu-id="55740-128">Руководства по WIF</span><span class="sxs-lookup"><span data-stu-id="55740-128">WIF Guidelines</span></span>](../../../docs/framework/security/wif-guidelines.md)  
   
-    -   [<span data-ttu-id="acbea-129">Руководства по миграции приложения, созданного с использованием WIF 3.5, в WIF 4.5</span><span class="sxs-lookup"><span data-stu-id="acbea-129">Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5</span></span>](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
+    -   [<span data-ttu-id="55740-129">Руководства по миграции приложения, созданного с использованием WIF 3.5, в WIF 4.5</span><span class="sxs-lookup"><span data-stu-id="55740-129">Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5</span></span>](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
   
-    -   [<span data-ttu-id="acbea-130">Сопоставление пространств имен между WIF 3.5 и WIF 4.5</span><span class="sxs-lookup"><span data-stu-id="acbea-130">Namespace Mapping between WIF 3.5 and WIF 4.5</span></span>](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
+    -   [<span data-ttu-id="55740-130">Сопоставление пространств имен между WIF 3.5 и WIF 4.5</span><span class="sxs-lookup"><span data-stu-id="55740-130">Namespace Mapping between WIF 3.5 and WIF 4.5</span></span>](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
   
--   [<span data-ttu-id="acbea-131">Индекс образцов кода WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-131">WIF Code Sample Index</span></span>](../../../docs/framework/security/wif-code-sample-index.md)  
+-   [<span data-ttu-id="55740-131">Индекс образцов кода WIF</span><span class="sxs-lookup"><span data-stu-id="55740-131">WIF Code Sample Index</span></span>](../../../docs/framework/security/wif-code-sample-index.md)  
   
--   [<span data-ttu-id="acbea-132">Расширения WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-132">WIF Extensions</span></span>](../../../docs/framework/security/wif-extensions.md)  
+-   [<span data-ttu-id="55740-132">Расширения WIF</span><span class="sxs-lookup"><span data-stu-id="55740-132">WIF Extensions</span></span>](../../../docs/framework/security/wif-extensions.md)  
   
--   [<span data-ttu-id="acbea-133">Справочник по API WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-133">WIF API Reference</span></span>](../../../docs/framework/security/wif-api-reference.md)  
+-   [<span data-ttu-id="55740-133">Справочник по API WIF</span><span class="sxs-lookup"><span data-stu-id="55740-133">WIF API Reference</span></span>](../../../docs/framework/security/wif-api-reference.md)  
   
--   [<span data-ttu-id="acbea-134">Справочник по конфигурации WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-134">WIF Configuration Reference</span></span>](../../../docs/framework/security/wif-configuration-reference.md)  
+-   [<span data-ttu-id="55740-134">Справочник по конфигурации WIF</span><span class="sxs-lookup"><span data-stu-id="55740-134">WIF Configuration Reference</span></span>](../../../docs/framework/security/wif-configuration-reference.md)  
   
-    -   [<span data-ttu-id="acbea-135">Соглашения о схеме конфигурации WIF</span><span class="sxs-lookup"><span data-stu-id="acbea-135">WIF Configuration Schema Conventions</span></span>](../../../docs/framework/security/wif-configuration-schema-conventions.md)
+    -   [<span data-ttu-id="55740-135">Соглашения о схеме конфигурации WIF</span><span class="sxs-lookup"><span data-stu-id="55740-135">WIF Configuration Schema Conventions</span></span>](../../../docs/framework/security/wif-configuration-schema-conventions.md)

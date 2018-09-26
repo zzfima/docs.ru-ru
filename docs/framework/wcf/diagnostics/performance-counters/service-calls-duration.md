@@ -3,17 +3,17 @@ title: 'Службы: Продолжительность вызовов'
 ms.date: 03/30/2017
 ms.assetid: dfe42a97-daf8-42c3-ba34-4bb8230cdebb
 ms.openlocfilehash: 660a36844c2b48324447616aa0f2530127cef94f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47074850"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199844"
 ---
-# <a name="service-calls-duration"></a><span data-ttu-id="e2cfa-102">Службы: Продолжительность вызовов</span><span class="sxs-lookup"><span data-stu-id="e2cfa-102">Service: Calls Duration</span></span>
-<span data-ttu-id="e2cfa-103">Имя счетчика: Продолжительность вызовов</span><span class="sxs-lookup"><span data-stu-id="e2cfa-103">Counter Name: Calls Duration</span></span>  
+# <a name="service-calls-duration"></a><span data-ttu-id="94f03-102">Службы: Продолжительность вызовов</span><span class="sxs-lookup"><span data-stu-id="94f03-102">Service: Calls Duration</span></span>
+<span data-ttu-id="94f03-103">Имя счетчика: Продолжительность вызовов</span><span class="sxs-lookup"><span data-stu-id="94f03-103">Counter Name: Calls Duration</span></span>  
   
-## <a name="description"></a><span data-ttu-id="e2cfa-104">Описание</span><span class="sxs-lookup"><span data-stu-id="e2cfa-104">Description</span></span>  
- <span data-ttu-id="e2cfa-105">Средняя длительность вызовов к этой службе.</span><span class="sxs-lookup"><span data-stu-id="e2cfa-105">The average duration of calls to this service.</span></span> <span data-ttu-id="e2cfa-106">Средняя длительность вычисляется по следующей формуле: (N1-N0)/(D1-D0).</span><span class="sxs-lookup"><span data-stu-id="e2cfa-106">The average duration is calculated based on this equation: (N1-N0)/(D1-D0).</span></span>  
+## <a name="description"></a><span data-ttu-id="94f03-104">Описание</span><span class="sxs-lookup"><span data-stu-id="94f03-104">Description</span></span>  
+ <span data-ttu-id="94f03-105">Средняя длительность вызовов к этой службе.</span><span class="sxs-lookup"><span data-stu-id="94f03-105">The average duration of calls to this service.</span></span> <span data-ttu-id="94f03-106">Средняя длительность вычисляется по следующей формуле: (N1-N0)/(D1-D0).</span><span class="sxs-lookup"><span data-stu-id="94f03-106">The average duration is calculated based on this equation: (N1-N0)/(D1-D0).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e2cfa-107">См. также</span><span class="sxs-lookup"><span data-stu-id="e2cfa-107">See Also</span></span>  
- [<span data-ttu-id="e2cfa-108">PERF_AVERAGE_TIMER</span><span class="sxs-lookup"><span data-stu-id="e2cfa-108">PERF_AVERAGE_TIMER</span></span>](https://go.microsoft.com/fwlink/?LinkID=95015)
+## <a name="see-also"></a><span data-ttu-id="94f03-107">См. также</span><span class="sxs-lookup"><span data-stu-id="94f03-107">See Also</span></span>  
+ [<span data-ttu-id="94f03-108">PERF_AVERAGE_TIMER</span><span class="sxs-lookup"><span data-stu-id="94f03-108">PERF_AVERAGE_TIMER</span></span>](https://go.microsoft.com/fwlink/?LinkID=95015)
