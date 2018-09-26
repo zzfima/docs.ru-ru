@@ -3,23 +3,22 @@ title: '&lt;chunkedCookieHandler&gt;'
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 193b783e44fe4386d3575e180dc5baa6a7f9a8be
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f5592e0fd02d34b2882182196e0aa9425672a8fe
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32758377"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082907"
 ---
-# <a name="ltchunkedcookiehandlergt"></a><span data-ttu-id="d1b62-102">&lt;chunkedCookieHandler&gt;</span><span class="sxs-lookup"><span data-stu-id="d1b62-102">&lt;chunkedCookieHandler&gt;</span></span>
-<span data-ttu-id="d1b62-103">Настраивает <xref:System.IdentityModel.Services.ChunkedCookieHandler>.</span><span class="sxs-lookup"><span data-stu-id="d1b62-103">Configures the <xref:System.IdentityModel.Services.ChunkedCookieHandler>.</span></span> <span data-ttu-id="d1b62-104">Этот элемент может быть представлен, только если `mode` атрибут `<cookieHandler>` «Default» или «Фрагментированным».</span><span class="sxs-lookup"><span data-stu-id="d1b62-104">This element may only be present if the `mode` attribute of the `<cookieHandler>` element is "Default" or "Chunked".</span></span>  
+# <a name="ltchunkedcookiehandlergt"></a><span data-ttu-id="f5033-102">&lt;chunkedCookieHandler&gt;</span><span class="sxs-lookup"><span data-stu-id="f5033-102">&lt;chunkedCookieHandler&gt;</span></span>
+<span data-ttu-id="f5033-103">Настраивает <xref:System.IdentityModel.Services.ChunkedCookieHandler>.</span><span class="sxs-lookup"><span data-stu-id="f5033-103">Configures the <xref:System.IdentityModel.Services.ChunkedCookieHandler>.</span></span> <span data-ttu-id="f5033-104">Этот элемент может быть представлен, только если `mode` атрибут `<cookieHandler>` элемент является «Default» или шифрование «фрагментированной».</span><span class="sxs-lookup"><span data-stu-id="f5033-104">This element may only be present if the `mode` attribute of the `<cookieHandler>` element is "Default" or "Chunked".</span></span>  
   
- <span data-ttu-id="d1b62-105">\<system.identityModel.services ></span><span class="sxs-lookup"><span data-stu-id="d1b62-105">\<system.identityModel.services></span></span>  
-<span data-ttu-id="d1b62-106">\<federationConfiguration ></span><span class="sxs-lookup"><span data-stu-id="d1b62-106">\<federationConfiguration></span></span>  
-<span data-ttu-id="d1b62-107">\<cookieHandler ></span><span class="sxs-lookup"><span data-stu-id="d1b62-107">\<cookieHandler></span></span>  
-<span data-ttu-id="d1b62-108">\<chunkedCookieHandler ></span><span class="sxs-lookup"><span data-stu-id="d1b62-108">\<chunkedCookieHandler></span></span>  
+ <span data-ttu-id="f5033-105">\<system.identityModel.services ></span><span class="sxs-lookup"><span data-stu-id="f5033-105">\<system.identityModel.services></span></span>  
+<span data-ttu-id="f5033-106">\<federationConfiguration ></span><span class="sxs-lookup"><span data-stu-id="f5033-106">\<federationConfiguration></span></span>  
+<span data-ttu-id="f5033-107">\<cookieHandler ></span><span class="sxs-lookup"><span data-stu-id="f5033-107">\<cookieHandler></span></span>  
+<span data-ttu-id="f5033-108">\<chunkedCookieHandler ></span><span class="sxs-lookup"><span data-stu-id="f5033-108">\<chunkedCookieHandler></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d1b62-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="d1b62-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f5033-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f5033-109">Syntax</span></span>  
   
 ```xml  
 <system.identityModel.services>  
@@ -32,31 +31,31 @@ ms.locfileid: "32758377"
 </system.identityModel.services>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="d1b62-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="d1b62-110">Attributes and Elements</span></span>  
- <span data-ttu-id="d1b62-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="d1b62-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="f5033-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="f5033-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="f5033-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="f5033-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="d1b62-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="d1b62-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="f5033-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="f5033-112">Attributes</span></span>  
   
-|<span data-ttu-id="d1b62-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="d1b62-113">Attribute</span></span>|<span data-ttu-id="d1b62-114">Описание</span><span class="sxs-lookup"><span data-stu-id="d1b62-114">Description</span></span>|  
+|<span data-ttu-id="f5033-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="f5033-113">Attribute</span></span>|<span data-ttu-id="f5033-114">Описание</span><span class="sxs-lookup"><span data-stu-id="f5033-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="d1b62-115">размер фрагмента данных</span><span class="sxs-lookup"><span data-stu-id="d1b62-115">chunkSize</span></span>|<span data-ttu-id="d1b62-116">Максимальный размер в символах данных файлов cookie HTTP для любого отдельного файла cookie HTTP.</span><span class="sxs-lookup"><span data-stu-id="d1b62-116">The maximum size, in characters, of the HTTP cookie data for any one HTTP cookie.</span></span> <span data-ttu-id="d1b62-117">Будьте внимательны, чтобы при корректировке размер фрагмента данных.</span><span class="sxs-lookup"><span data-stu-id="d1b62-117">You must be careful when adjusting the chunk size.</span></span> <span data-ttu-id="d1b62-118">Веб-браузеры имеют различные ограничения на размер файлов cookie и номер, приходящихся на каждый домен.</span><span class="sxs-lookup"><span data-stu-id="d1b62-118">Web browsers have different limits on the size of cookies and number allowed per domain.</span></span> <span data-ttu-id="d1b62-119">Например, Netscape спецификацию исходных оговорено этих ограничений: 300 файлы cookie всего 4096 байт на заголовке cookie (включая метаданные, не только значение файла cookie) и 20 файлов cookies для каждого домена.</span><span class="sxs-lookup"><span data-stu-id="d1b62-119">For example, the original Netscape specification stipulated these limits: 300 cookies total, 4096 bytes per cookie header (including metadata, not just the cookie value), and 20 cookies per domain.</span></span> <span data-ttu-id="d1b62-120">Значение по умолчанию — 2000.</span><span class="sxs-lookup"><span data-stu-id="d1b62-120">The default is 2000.</span></span> <span data-ttu-id="d1b62-121">Обязательно.</span><span class="sxs-lookup"><span data-stu-id="d1b62-121">Required.</span></span>|  
+|<span data-ttu-id="f5033-115">размер фрагмента данных</span><span class="sxs-lookup"><span data-stu-id="f5033-115">chunkSize</span></span>|<span data-ttu-id="f5033-116">Максимальный размер в символах данные файла cookie HTTP для любого отдельного файла cookie HTTP.</span><span class="sxs-lookup"><span data-stu-id="f5033-116">The maximum size, in characters, of the HTTP cookie data for any one HTTP cookie.</span></span> <span data-ttu-id="f5033-117">Будьте внимательны, настраивая размер фрагмента данных.</span><span class="sxs-lookup"><span data-stu-id="f5033-117">You must be careful when adjusting the chunk size.</span></span> <span data-ttu-id="f5033-118">Веб-браузеры имеют различные ограничения на размер файлов cookie и номер, приходящихся на каждый домен.</span><span class="sxs-lookup"><span data-stu-id="f5033-118">Web browsers have different limits on the size of cookies and number allowed per domain.</span></span> <span data-ttu-id="f5033-119">Например, исходная спецификация Netscape оговорено эти ограничения: всего 300 файлы cookie, 4096 байт в заголовок файла cookie (включая метаданные, не только значение файла cookie) и 20 файлов cookies для каждого домена.</span><span class="sxs-lookup"><span data-stu-id="f5033-119">For example, the original Netscape specification stipulated these limits: 300 cookies total, 4096 bytes per cookie header (including metadata, not just the cookie value), and 20 cookies per domain.</span></span> <span data-ttu-id="f5033-120">Значение по умолчанию — 2000.</span><span class="sxs-lookup"><span data-stu-id="f5033-120">The default is 2000.</span></span> <span data-ttu-id="f5033-121">Обязательно.</span><span class="sxs-lookup"><span data-stu-id="f5033-121">Required.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="d1b62-122">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="d1b62-122">Child Elements</span></span>  
- <span data-ttu-id="d1b62-123">Нет</span><span class="sxs-lookup"><span data-stu-id="d1b62-123">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="f5033-122">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="f5033-122">Child Elements</span></span>  
+ <span data-ttu-id="f5033-123">Нет</span><span class="sxs-lookup"><span data-stu-id="f5033-123">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="d1b62-124">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="d1b62-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="f5033-124">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="f5033-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="d1b62-125">Элемент</span><span class="sxs-lookup"><span data-stu-id="d1b62-125">Element</span></span>|<span data-ttu-id="d1b62-126">Описание</span><span class="sxs-lookup"><span data-stu-id="d1b62-126">Description</span></span>|  
+|<span data-ttu-id="f5033-125">Элемент</span><span class="sxs-lookup"><span data-stu-id="f5033-125">Element</span></span>|<span data-ttu-id="f5033-126">Описание</span><span class="sxs-lookup"><span data-stu-id="f5033-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="d1b62-127">\<cookieHandler ></span><span class="sxs-lookup"><span data-stu-id="d1b62-127">\<cookieHandler></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|<span data-ttu-id="d1b62-128">Настраивает <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) используется для чтения и записи файлов cookie.</span><span class="sxs-lookup"><span data-stu-id="d1b62-128">Configures the <xref:System.IdentityModel.Services.CookieHandler> that the <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) uses to read and write cookies.</span></span>|  
+|[<span data-ttu-id="f5033-127">\<cookieHandler ></span><span class="sxs-lookup"><span data-stu-id="f5033-127">\<cookieHandler></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|<span data-ttu-id="f5033-128">Настраивает <xref:System.IdentityModel.Services.CookieHandler> , <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) используется для чтения и записи файлов cookie.</span><span class="sxs-lookup"><span data-stu-id="f5033-128">Configures the <xref:System.IdentityModel.Services.CookieHandler> that the <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM) uses to read and write cookies.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="d1b62-129">Примечания</span><span class="sxs-lookup"><span data-stu-id="d1b62-129">Remarks</span></span>  
- <span data-ttu-id="d1b62-130">При указании <xref:System.IdentityModel.Services.ChunkedCookieHandler> , установив `mode` атрибут `<cookieHandler>` элемент «Default» или «Chunked» можно указать размер фрагмента данных, используемого обработчиком куки-файл для чтения и записи, включая файлы cookie `<chunkedCookieHandler>` дочерний элемент и Установка его `chunkSize` атрибута.</span><span class="sxs-lookup"><span data-stu-id="d1b62-130">When you specify a <xref:System.IdentityModel.Services.ChunkedCookieHandler> by setting the `mode` attribute of the `<cookieHandler>` element to "Default" or "Chunked", you can specify the chunk size that the cookie handler uses to read and write cookies by including a `<chunkedCookieHandler>` child element and setting its `chunkSize` attribute.</span></span> <span data-ttu-id="d1b62-131">Если `<chunkedCookieHandler>` элемент отсутствует, используется размер блока по умолчанию 2000 байтов.</span><span class="sxs-lookup"><span data-stu-id="d1b62-131">If the `<chunkedCookieHandler>` element is not present, the default chunk size of 2000 bytes is used.</span></span> <span data-ttu-id="d1b62-132">Этот элемент не может быть указано при `mode` атрибута задано значение «Custom».</span><span class="sxs-lookup"><span data-stu-id="d1b62-132">This element cannot be specified when the `mode` attribute is set to "Custom".</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f5033-129">Примечания</span><span class="sxs-lookup"><span data-stu-id="f5033-129">Remarks</span></span>  
+ <span data-ttu-id="f5033-130">При указании <xref:System.IdentityModel.Services.ChunkedCookieHandler> , задав `mode` атрибут `<cookieHandler>` элемент «Default» или «Chunked» можно указать размер фрагмента данных, который использует обработчик файлов cookie для чтения и записи файлов cookie, включив `<chunkedCookieHandler>` дочерний элемент и Установка его `chunkSize` атрибута.</span><span class="sxs-lookup"><span data-stu-id="f5033-130">When you specify a <xref:System.IdentityModel.Services.ChunkedCookieHandler> by setting the `mode` attribute of the `<cookieHandler>` element to "Default" or "Chunked", you can specify the chunk size that the cookie handler uses to read and write cookies by including a `<chunkedCookieHandler>` child element and setting its `chunkSize` attribute.</span></span> <span data-ttu-id="f5033-131">Если `<chunkedCookieHandler>` элемент отсутствует, используется размер блока по умолчанию 2000 байтов.</span><span class="sxs-lookup"><span data-stu-id="f5033-131">If the `<chunkedCookieHandler>` element is not present, the default chunk size of 2000 bytes is used.</span></span> <span data-ttu-id="f5033-132">Этот элемент не может быть указан при `mode` атрибут имеет значение «Custom».</span><span class="sxs-lookup"><span data-stu-id="f5033-132">This element cannot be specified when the `mode` attribute is set to "Custom".</span></span>  
   
- <span data-ttu-id="d1b62-133">`<chunkedCookieHandler>` Представлен <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> класса.</span><span class="sxs-lookup"><span data-stu-id="d1b62-133">The `<chunkedCookieHandler>` element is represented by the <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> class.</span></span>  
+ <span data-ttu-id="f5033-133">`<chunkedCookieHandler>` Элемент, представленный объектом <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> класса.</span><span class="sxs-lookup"><span data-stu-id="f5033-133">The `<chunkedCookieHandler>` element is represented by the <xref:System.IdentityModel.Services.ChunkedCookieHandlerElement> class.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d1b62-134">Пример</span><span class="sxs-lookup"><span data-stu-id="d1b62-134">Example</span></span>  
- <span data-ttu-id="d1b62-135">В следующем примере настраивается обработчик блочный файл cookie, который записывает файлы cookie фрагментами 3000 байт.</span><span class="sxs-lookup"><span data-stu-id="d1b62-135">The following example configures a chunked cookie handler that writes cookies in chunks of 3000 bytes.</span></span>  
+## <a name="example"></a><span data-ttu-id="f5033-134">Пример</span><span class="sxs-lookup"><span data-stu-id="f5033-134">Example</span></span>  
+ <span data-ttu-id="f5033-135">В следующем примере настраивается фрагментированный обработчик файлов cookie, записывает файлы cookie в виде фрагментов 3000 байтов.</span><span class="sxs-lookup"><span data-stu-id="f5033-135">The following example configures a chunked cookie handler that writes cookies in chunks of 3000 bytes.</span></span>  
   
 ```xml  
 <cookieHandler mode="Chunked">  
@@ -64,5 +63,5 @@ ms.locfileid: "32758377"
 </cookieHandler>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="d1b62-136">См. также</span><span class="sxs-lookup"><span data-stu-id="d1b62-136">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f5033-136">См. также</span><span class="sxs-lookup"><span data-stu-id="f5033-136">See Also</span></span>  
  <xref:System.IdentityModel.Services.ChunkedCookieHandler>

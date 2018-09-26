@@ -3,30 +3,30 @@ title: Доступ к OperationContext из службы рабочего пр�
 ms.date: 03/30/2017
 ms.assetid: b1dafe55-a20e-4db0-9ac8-90c315883cdd
 ms.openlocfilehash: 15dd817dddbe3272b188f6b74697f8c5839d498b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46697832"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47111323"
 ---
-# <a name="accessing-operationcontext-from-a-workflow-service"></a><span data-ttu-id="a218b-102">Доступ к OperationContext из службы рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="a218b-102">Accessing OperationContext from a Workflow Service</span></span>
-<span data-ttu-id="a218b-103">Для доступа к <xref:System.ServiceModel.OperationContext> в службе рабочего процесса необходимо реализовать интерфейс <xref:System.ServiceModel.Activities.IReceiveMessageCallback> в пользовательском свойстве выполнения.</span><span class="sxs-lookup"><span data-stu-id="a218b-103">To access the <xref:System.ServiceModel.OperationContext> inside a workflow service, you must implement the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface in a custom execution property.</span></span> <span data-ttu-id="a218b-104">Переопределите метод <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)>, который передается в качестве ссылки на <xref:System.ServiceModel.OperationContext>.</span><span class="sxs-lookup"><span data-stu-id="a218b-104">Override the <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> method which is passed a reference to the <xref:System.ServiceModel.OperationContext>.</span></span> <span data-ttu-id="a218b-105">Данный раздел содержит пошаговое руководство по реализации данного свойства выполнения с целью возвращения пользовательского заголовка, а также пользовательского действия, которое должно выявить это свойство для <xref:System.ServiceModel.Activities.Receive> во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="a218b-105">This topic will walk you through implementing this execution property to retrieve a custom header, as well as a custom activity that will surface this property to the <xref:System.ServiceModel.Activities.Receive> at runtime.</span></span>  <span data-ttu-id="a218b-106">Пользовательское действие реализует такое же поведение, что и действие <xref:System.Activities.Statements.Sequence>, не считая того, что после размещения в нем <xref:System.ServiceModel.Activities.Receive> вызывается <xref:System.ServiceModel.Activities.IReceiveMessageCallback> и происходит возврат информации <xref:System.ServiceModel.OperationContext>.</span><span class="sxs-lookup"><span data-stu-id="a218b-106">The custom activity will implement the same behavior as a <xref:System.Activities.Statements.Sequence> activity, except that when a <xref:System.ServiceModel.Activities.Receive> is placed inside of it, the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> will be called and the <xref:System.ServiceModel.OperationContext> information will be retrieved.</span></span>  <span data-ttu-id="a218b-107">Также в данном разделе показано, как получить доступ к <xref:System.ServiceModel.OperationContext> на стороне клиента с целью добавления исходящего заголовка через интерфейс <xref:System.ServiceModel.Activities.ISendMessageCallback>.</span><span class="sxs-lookup"><span data-stu-id="a218b-107">This topic also shows how to access the client-side <xref:System.ServiceModel.OperationContext> to add outgoing headers via the <xref:System.ServiceModel.Activities.ISendMessageCallback> interface.</span></span>  
+# <a name="accessing-operationcontext-from-a-workflow-service"></a><span data-ttu-id="d9aff-102">Доступ к OperationContext из службы рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="d9aff-102">Accessing OperationContext from a Workflow Service</span></span>
+<span data-ttu-id="d9aff-103">Для доступа к <xref:System.ServiceModel.OperationContext> в службе рабочего процесса необходимо реализовать интерфейс <xref:System.ServiceModel.Activities.IReceiveMessageCallback> в пользовательском свойстве выполнения.</span><span class="sxs-lookup"><span data-stu-id="d9aff-103">To access the <xref:System.ServiceModel.OperationContext> inside a workflow service, you must implement the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interface in a custom execution property.</span></span> <span data-ttu-id="d9aff-104">Переопределите метод <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)>, который передается в качестве ссылки на <xref:System.ServiceModel.OperationContext>.</span><span class="sxs-lookup"><span data-stu-id="d9aff-104">Override the <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> method which is passed a reference to the <xref:System.ServiceModel.OperationContext>.</span></span> <span data-ttu-id="d9aff-105">Данный раздел содержит пошаговое руководство по реализации данного свойства выполнения с целью возвращения пользовательского заголовка, а также пользовательского действия, которое должно выявить это свойство для <xref:System.ServiceModel.Activities.Receive> во время выполнения.</span><span class="sxs-lookup"><span data-stu-id="d9aff-105">This topic will walk you through implementing this execution property to retrieve a custom header, as well as a custom activity that will surface this property to the <xref:System.ServiceModel.Activities.Receive> at runtime.</span></span>  <span data-ttu-id="d9aff-106">Пользовательское действие реализует такое же поведение, что и действие <xref:System.Activities.Statements.Sequence>, не считая того, что после размещения в нем <xref:System.ServiceModel.Activities.Receive> вызывается <xref:System.ServiceModel.Activities.IReceiveMessageCallback> и происходит возврат информации <xref:System.ServiceModel.OperationContext>.</span><span class="sxs-lookup"><span data-stu-id="d9aff-106">The custom activity will implement the same behavior as a <xref:System.Activities.Statements.Sequence> activity, except that when a <xref:System.ServiceModel.Activities.Receive> is placed inside of it, the <xref:System.ServiceModel.Activities.IReceiveMessageCallback> will be called and the <xref:System.ServiceModel.OperationContext> information will be retrieved.</span></span>  <span data-ttu-id="d9aff-107">Также в данном разделе показано, как получить доступ к <xref:System.ServiceModel.OperationContext> на стороне клиента с целью добавления исходящего заголовка через интерфейс <xref:System.ServiceModel.Activities.ISendMessageCallback>.</span><span class="sxs-lookup"><span data-stu-id="d9aff-107">This topic also shows how to access the client-side <xref:System.ServiceModel.OperationContext> to add outgoing headers via the <xref:System.ServiceModel.Activities.ISendMessageCallback> interface.</span></span>  
   
-### <a name="implement-the-service-side-ireceivemessagecallback"></a><span data-ttu-id="a218b-108">Реализация IReceiveMessageCallback на стороне сервера</span><span class="sxs-lookup"><span data-stu-id="a218b-108">Implement the Service-side IReceiveMessageCallback</span></span>  
+### <a name="implement-the-service-side-ireceivemessagecallback"></a><span data-ttu-id="d9aff-108">Реализация IReceiveMessageCallback на стороне сервера</span><span class="sxs-lookup"><span data-stu-id="d9aff-108">Implement the Service-side IReceiveMessageCallback</span></span>  
   
-1.  <span data-ttu-id="a218b-109">Создайте пустое решение [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a218b-109">Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution.</span></span>  
+1.  <span data-ttu-id="d9aff-109">Создайте пустое решение [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d9aff-109">Create an empty [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] solution.</span></span>  
   
-2.  <span data-ttu-id="a218b-110">Добавьте в решение новое консольное приложение с именем `Service`.</span><span class="sxs-lookup"><span data-stu-id="a218b-110">Add a new console application called `Service` to the solution.</span></span>  
+2.  <span data-ttu-id="d9aff-110">Добавьте в решение новое консольное приложение с именем `Service`.</span><span class="sxs-lookup"><span data-stu-id="d9aff-110">Add a new console application called `Service` to the solution.</span></span>  
   
-3.  <span data-ttu-id="a218b-111">Добавьте ссылки на следующие сборки:</span><span class="sxs-lookup"><span data-stu-id="a218b-111">Add references to the following assemblies:</span></span>  
+3.  <span data-ttu-id="d9aff-111">Добавьте ссылки на следующие сборки:</span><span class="sxs-lookup"><span data-stu-id="d9aff-111">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="a218b-112">System.Runtime.Serialization</span><span class="sxs-lookup"><span data-stu-id="a218b-112">System.Runtime.Serialization</span></span>  
+    1.  <span data-ttu-id="d9aff-112">System.Runtime.Serialization</span><span class="sxs-lookup"><span data-stu-id="d9aff-112">System.Runtime.Serialization</span></span>  
   
-    2.  <span data-ttu-id="a218b-113">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="a218b-113">System.ServiceModel</span></span>  
+    2.  <span data-ttu-id="d9aff-113">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="d9aff-113">System.ServiceModel</span></span>  
   
-    3.  <span data-ttu-id="a218b-114">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="a218b-114">System.ServiceModel.Activities</span></span>  
+    3.  <span data-ttu-id="d9aff-114">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="d9aff-114">System.ServiceModel.Activities</span></span>  
   
-4.  <span data-ttu-id="a218b-115">Добавьте новый класс с именем `ReceiveInstanceIdCallback` и реализуйте <xref:System.ServiceModel.Activities.IReceiveMessageCallback> согласно следующему примеру.</span><span class="sxs-lookup"><span data-stu-id="a218b-115">Add a new class called `ReceiveInstanceIdCallback` and implement <xref:System.ServiceModel.Activities.IReceiveMessageCallback> as shown in the following example.</span></span>  
+4.  <span data-ttu-id="d9aff-115">Добавьте новый класс с именем `ReceiveInstanceIdCallback` и реализуйте <xref:System.ServiceModel.Activities.IReceiveMessageCallback> согласно следующему примеру.</span><span class="sxs-lookup"><span data-stu-id="d9aff-115">Add a new class called `ReceiveInstanceIdCallback` and implement <xref:System.ServiceModel.Activities.IReceiveMessageCallback> as shown in the following example.</span></span>  
   
     ```csharp  
     class ReceiveInstanceIdCallback : IReceiveMessageCallback  
@@ -49,13 +49,13 @@ ms.locfileid: "46697832"
     }  
     ```  
   
-     <span data-ttu-id="a218b-116">Для доступа к заголовкам входящих сообщений в коде используется <xref:System.ServiceModel.OperationContext>, переданный методу.</span><span class="sxs-lookup"><span data-stu-id="a218b-116">This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to access the incoming message’s headers.</span></span>  
+     <span data-ttu-id="d9aff-116">Для доступа к заголовкам входящих сообщений в коде используется <xref:System.ServiceModel.OperationContext>, переданный методу.</span><span class="sxs-lookup"><span data-stu-id="d9aff-116">This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to access the incoming message’s headers.</span></span>  
   
-### <a name="implement-a-service-side-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a><span data-ttu-id="a218b-117">Реализуйте собственное действие на стороне службы, чтобы добавить реализацию IReceiveMessageCallback к NativeActivityContext</span><span class="sxs-lookup"><span data-stu-id="a218b-117">Implement a Service-side Native activity to add the IReceiveMessageCallback implementation to the NativeActivityContext</span></span>  
+### <a name="implement-a-service-side-native-activity-to-add-the-ireceivemessagecallback-implementation-to-the-nativeactivitycontext"></a><span data-ttu-id="d9aff-117">Реализуйте собственное действие на стороне службы, чтобы добавить реализацию IReceiveMessageCallback к NativeActivityContext</span><span class="sxs-lookup"><span data-stu-id="d9aff-117">Implement a Service-side Native activity to add the IReceiveMessageCallback implementation to the NativeActivityContext</span></span>  
   
-1.  <span data-ttu-id="a218b-118">Добавьте новый класс, производный от <xref:System.Activities.NativeActivity>, с именем `ReceiveInstanceIdScope`.</span><span class="sxs-lookup"><span data-stu-id="a218b-118">Add a new class derived from <xref:System.Activities.NativeActivity> called `ReceiveInstanceIdScope`.</span></span>  
+1.  <span data-ttu-id="d9aff-118">Добавьте новый класс, производный от <xref:System.Activities.NativeActivity>, с именем `ReceiveInstanceIdScope`.</span><span class="sxs-lookup"><span data-stu-id="d9aff-118">Add a new class derived from <xref:System.Activities.NativeActivity> called `ReceiveInstanceIdScope`.</span></span>  
   
-2.  <span data-ttu-id="a218b-119">Добавьте локальные переменные, чтобы отслеживать дочерние действия, переменные, индекс текущего действия и обратный вызов <xref:System.Activities.CompletionCallback>.</span><span class="sxs-lookup"><span data-stu-id="a218b-119">Add local variables to keep track of child activities, variables, current activity index, and a <xref:System.Activities.CompletionCallback> callback.</span></span>  
+2.  <span data-ttu-id="d9aff-119">Добавьте локальные переменные, чтобы отслеживать дочерние действия, переменные, индекс текущего действия и обратный вызов <xref:System.Activities.CompletionCallback>.</span><span class="sxs-lookup"><span data-stu-id="d9aff-119">Add local variables to keep track of child activities, variables, current activity index, and a <xref:System.Activities.CompletionCallback> callback.</span></span>  
   
     ```  
     public sealed class ReceiveInstanceIdScope : NativeActivity  
@@ -67,7 +67,7 @@ ms.locfileid: "46697832"
     }  
     ```  
   
-3.  <span data-ttu-id="a218b-120">Реализуйте конструктор</span><span class="sxs-lookup"><span data-stu-id="a218b-120">Implement the constructor</span></span>  
+3.  <span data-ttu-id="d9aff-120">Реализуйте конструктор</span><span class="sxs-lookup"><span data-stu-id="d9aff-120">Implement the constructor</span></span>  
   
     ```  
     public ReceiveInstanceIdScope()  
@@ -80,7 +80,7 @@ ms.locfileid: "46697832"
     }  
     ```  
   
-4.  <span data-ttu-id="a218b-121">Реализуйте свойства `Activities` и `Variables`.</span><span class="sxs-lookup"><span data-stu-id="a218b-121">Implement the `Activities` and `Variables` properties.</span></span>  
+4.  <span data-ttu-id="d9aff-121">Реализуйте свойства `Activities` и `Variables`.</span><span class="sxs-lookup"><span data-stu-id="d9aff-121">Implement the `Activities` and `Variables` properties.</span></span>  
   
     ```  
     public Collection<Activity> Activities  
@@ -94,7 +94,7 @@ ms.locfileid: "46697832"
     }  
     ```  
   
-5.  <span data-ttu-id="a218b-122">Переопределите метод <xref:System.Activities.NativeActivity.CacheMetadata%2A>.</span><span class="sxs-lookup"><span data-stu-id="a218b-122">Override <xref:System.Activities.NativeActivity.CacheMetadata%2A></span></span>  
+5.  <span data-ttu-id="d9aff-122">Переопределите метод <xref:System.Activities.NativeActivity.CacheMetadata%2A>.</span><span class="sxs-lookup"><span data-stu-id="d9aff-122">Override <xref:System.Activities.NativeActivity.CacheMetadata%2A></span></span>  
   
     ```  
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
@@ -106,7 +106,7 @@ ms.locfileid: "46697832"
     }  
     ```  
   
-6.  <span data-ttu-id="a218b-123">Переопределите метод <xref:System.Activities.NativeActivity.Execute%2A>.</span><span class="sxs-lookup"><span data-stu-id="a218b-123">Override <xref:System.Activities.NativeActivity.Execute%2A></span></span>  
+6.  <span data-ttu-id="d9aff-123">Переопределите метод <xref:System.Activities.NativeActivity.Execute%2A>.</span><span class="sxs-lookup"><span data-stu-id="d9aff-123">Override <xref:System.Activities.NativeActivity.Execute%2A></span></span>  
   
     ```  
     protected override void Execute(  
@@ -142,11 +142,11 @@ ms.locfileid: "46697832"
             }  
     ```  
   
-### <a name="implement-the-workflow-service"></a><span data-ttu-id="a218b-124">Реализация службы рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="a218b-124">Implement the workflow service</span></span>  
+### <a name="implement-the-workflow-service"></a><span data-ttu-id="d9aff-124">Реализация службы рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="d9aff-124">Implement the workflow service</span></span>  
   
-1.  <span data-ttu-id="a218b-125">Открыть существующий `Program` класса.</span><span class="sxs-lookup"><span data-stu-id="a218b-125">Open the existing `Program` class.</span></span>  
+1.  <span data-ttu-id="d9aff-125">Открыть существующий `Program` класса.</span><span class="sxs-lookup"><span data-stu-id="d9aff-125">Open the existing `Program` class.</span></span>  
   
-2.  <span data-ttu-id="a218b-126">Определите следующие константы.</span><span class="sxs-lookup"><span data-stu-id="a218b-126">Define the following constants:</span></span>  
+2.  <span data-ttu-id="d9aff-126">Определите следующие константы.</span><span class="sxs-lookup"><span data-stu-id="d9aff-126">Define the following constants:</span></span>  
   
     ```  
     class Program  
@@ -156,7 +156,7 @@ ms.locfileid: "46697832"
     }  
     ```  
   
-3.  <span data-ttu-id="a218b-127">Добавьте статический метод с именем `GetWorkflowService`, создающий службу рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="a218b-127">Add a static method called `GetWorkflowService` that creates the workflow service.</span></span>  
+3.  <span data-ttu-id="d9aff-127">Добавьте статический метод с именем `GetWorkflowService`, создающий службу рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="d9aff-127">Add a static method called `GetWorkflowService` that creates the workflow service.</span></span>  
   
     ```  
     static Activity GetServiceWorkflow()  
@@ -194,7 +194,7 @@ ms.locfileid: "46697832"
             }  
     ```  
   
-4.  <span data-ttu-id="a218b-128">В существующем методе `Main` разместите службу рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="a218b-128">In the existing `Main` method, host the workflow service.</span></span>  
+4.  <span data-ttu-id="d9aff-128">В существующем методе `Main` разместите службу рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="d9aff-128">In the existing `Main` method, host the workflow service.</span></span>  
   
     ```  
     static void Main(string[] args)  
@@ -214,19 +214,19 @@ ms.locfileid: "46697832"
             }  
     ```  
   
-### <a name="implement-the-client-side-isendmessagecallback"></a><span data-ttu-id="a218b-129">Реализуйте ISendMessageCallback на стороне клиента</span><span class="sxs-lookup"><span data-stu-id="a218b-129">Implement the Client-side ISendMessageCallback</span></span>  
+### <a name="implement-the-client-side-isendmessagecallback"></a><span data-ttu-id="d9aff-129">Реализуйте ISendMessageCallback на стороне клиента</span><span class="sxs-lookup"><span data-stu-id="d9aff-129">Implement the Client-side ISendMessageCallback</span></span>  
   
-1.  <span data-ttu-id="a218b-130">Добавьте в решение новое консольное приложение с именем `Service`.</span><span class="sxs-lookup"><span data-stu-id="a218b-130">Add a new console application called `Service` to the solution.</span></span>  
+1.  <span data-ttu-id="d9aff-130">Добавьте в решение новое консольное приложение с именем `Service`.</span><span class="sxs-lookup"><span data-stu-id="d9aff-130">Add a new console application called `Service` to the solution.</span></span>  
   
-2.  <span data-ttu-id="a218b-131">Добавьте ссылки на следующие сборки:</span><span class="sxs-lookup"><span data-stu-id="a218b-131">Add references to the following assemblies:</span></span>  
+2.  <span data-ttu-id="d9aff-131">Добавьте ссылки на следующие сборки:</span><span class="sxs-lookup"><span data-stu-id="d9aff-131">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="a218b-132">System.Runtime.Serialization</span><span class="sxs-lookup"><span data-stu-id="a218b-132">System.Runtime.Serialization</span></span>  
+    1.  <span data-ttu-id="d9aff-132">System.Runtime.Serialization</span><span class="sxs-lookup"><span data-stu-id="d9aff-132">System.Runtime.Serialization</span></span>  
   
-    2.  <span data-ttu-id="a218b-133">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="a218b-133">System.ServiceModel</span></span>  
+    2.  <span data-ttu-id="d9aff-133">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="d9aff-133">System.ServiceModel</span></span>  
   
-    3.  <span data-ttu-id="a218b-134">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="a218b-134">System.ServiceModel.Activities</span></span>  
+    3.  <span data-ttu-id="d9aff-134">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="d9aff-134">System.ServiceModel.Activities</span></span>  
   
-3.  <span data-ttu-id="a218b-135">Добавьте новый класс с именем `SendInstanceIdCallback` и реализуйте <xref:System.ServiceModel.Activities.ISendMessageCallback> согласно следующему примеру.</span><span class="sxs-lookup"><span data-stu-id="a218b-135">Add a new class called `SendInstanceIdCallback` and implement <xref:System.ServiceModel.Activities.ISendMessageCallback> as shown in the following example.</span></span>  
+3.  <span data-ttu-id="d9aff-135">Добавьте новый класс с именем `SendInstanceIdCallback` и реализуйте <xref:System.ServiceModel.Activities.ISendMessageCallback> согласно следующему примеру.</span><span class="sxs-lookup"><span data-stu-id="d9aff-135">Add a new class called `SendInstanceIdCallback` and implement <xref:System.ServiceModel.Activities.ISendMessageCallback> as shown in the following example.</span></span>  
   
     ```csharp  
     class SendInstanceIdCallback : ISendMessageCallback  
@@ -243,13 +243,13 @@ ms.locfileid: "46697832"
         }  
     ```  
   
-     <span data-ttu-id="a218b-136">Для добавления пользовательского заголовка к входящему сообщению в этом коде используется <xref:System.ServiceModel.OperationContext>, переданный методу.</span><span class="sxs-lookup"><span data-stu-id="a218b-136">This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to add a custom header to the incoming message.</span></span>  
+     <span data-ttu-id="d9aff-136">Для добавления пользовательского заголовка к входящему сообщению в этом коде используется <xref:System.ServiceModel.OperationContext>, переданный методу.</span><span class="sxs-lookup"><span data-stu-id="d9aff-136">This code uses the <xref:System.ServiceModel.OperationContext> passed into the method to add a custom header to the incoming message.</span></span>  
   
-### <a name="implement-a-client-side-native-activity-to-add-the-client-side-isendmessagecallback-implementation-to-the-nativeactivitycontext"></a><span data-ttu-id="a218b-137">Реализуйте собственное действие на стороне клиента, чтобы добавить реализацию ISendMessageCallback на стороне клиента к NativeActivityContext</span><span class="sxs-lookup"><span data-stu-id="a218b-137">Implement a Client-side Native activity to add the client-side ISendMessageCallback implementation to the NativeActivityContext</span></span>  
+### <a name="implement-a-client-side-native-activity-to-add-the-client-side-isendmessagecallback-implementation-to-the-nativeactivitycontext"></a><span data-ttu-id="d9aff-137">Реализуйте собственное действие на стороне клиента, чтобы добавить реализацию ISendMessageCallback на стороне клиента к NativeActivityContext</span><span class="sxs-lookup"><span data-stu-id="d9aff-137">Implement a Client-side Native activity to add the client-side ISendMessageCallback implementation to the NativeActivityContext</span></span>  
   
-1.  <span data-ttu-id="a218b-138">Добавьте новый класс, производный от <xref:System.Activities.NativeActivity>, с именем `SendInstanceIdScope`.</span><span class="sxs-lookup"><span data-stu-id="a218b-138">Add a new class derived from <xref:System.Activities.NativeActivity> called `SendInstanceIdScope`.</span></span>  
+1.  <span data-ttu-id="d9aff-138">Добавьте новый класс, производный от <xref:System.Activities.NativeActivity>, с именем `SendInstanceIdScope`.</span><span class="sxs-lookup"><span data-stu-id="d9aff-138">Add a new class derived from <xref:System.Activities.NativeActivity> called `SendInstanceIdScope`.</span></span>  
   
-2.  <span data-ttu-id="a218b-139">Добавьте локальные переменные, чтобы отслеживать дочерние действия, переменные, индекс текущего действия и обратный вызов <xref:System.Activities.CompletionCallback>.</span><span class="sxs-lookup"><span data-stu-id="a218b-139">Add local variables to keep track of child activities, variables, current activity index, and a <xref:System.Activities.CompletionCallback> callback.</span></span>  
+2.  <span data-ttu-id="d9aff-139">Добавьте локальные переменные, чтобы отслеживать дочерние действия, переменные, индекс текущего действия и обратный вызов <xref:System.Activities.CompletionCallback>.</span><span class="sxs-lookup"><span data-stu-id="d9aff-139">Add local variables to keep track of child activities, variables, current activity index, and a <xref:System.Activities.CompletionCallback> callback.</span></span>  
   
     ```  
     public sealed class SendInstanceIdScope : NativeActivity  
@@ -261,7 +261,7 @@ ms.locfileid: "46697832"
     }  
     ```  
   
-3.  <span data-ttu-id="a218b-140">Реализуйте конструктор</span><span class="sxs-lookup"><span data-stu-id="a218b-140">Implement the constructor</span></span>  
+3.  <span data-ttu-id="d9aff-140">Реализуйте конструктор</span><span class="sxs-lookup"><span data-stu-id="d9aff-140">Implement the constructor</span></span>  
   
     ```  
     public SendInstanceIdScope()  
@@ -273,7 +273,7 @@ ms.locfileid: "46697832"
             }  
     ```  
   
-4.  <span data-ttu-id="a218b-141">Реализуйте свойства `Activities` и `Variables`.</span><span class="sxs-lookup"><span data-stu-id="a218b-141">Implement the `Activities` and `Variables` properties.</span></span>  
+4.  <span data-ttu-id="d9aff-141">Реализуйте свойства `Activities` и `Variables`.</span><span class="sxs-lookup"><span data-stu-id="d9aff-141">Implement the `Activities` and `Variables` properties.</span></span>  
   
     ```  
     public Collection<Activity> Activities  
@@ -287,7 +287,7 @@ ms.locfileid: "46697832"
     }  
     ```  
   
-5.  <span data-ttu-id="a218b-142">Переопределите метод <xref:System.Activities.NativeActivity.CacheMetadata%2A>.</span><span class="sxs-lookup"><span data-stu-id="a218b-142">Override <xref:System.Activities.NativeActivity.CacheMetadata%2A></span></span>  
+5.  <span data-ttu-id="d9aff-142">Переопределите метод <xref:System.Activities.NativeActivity.CacheMetadata%2A>.</span><span class="sxs-lookup"><span data-stu-id="d9aff-142">Override <xref:System.Activities.NativeActivity.CacheMetadata%2A></span></span>  
   
     ```  
     protected override void CacheMetadata(NativeActivityMetadata metadata)  
@@ -299,7 +299,7 @@ ms.locfileid: "46697832"
     }  
     ```  
   
-6.  <span data-ttu-id="a218b-143">Переопределите метод <xref:System.Activities.NativeActivity.Execute%2A>.</span><span class="sxs-lookup"><span data-stu-id="a218b-143">Override <xref:System.Activities.NativeActivity.Execute%2A></span></span>  
+6.  <span data-ttu-id="d9aff-143">Переопределите метод <xref:System.Activities.NativeActivity.Execute%2A>.</span><span class="sxs-lookup"><span data-stu-id="d9aff-143">Override <xref:System.Activities.NativeActivity.Execute%2A></span></span>  
   
     ```  
     protected override void Execute(  
@@ -366,19 +366,19 @@ ms.locfileid: "46697832"
             }  
     ```  
   
-### <a name="implement-a-workflow-client"></a><span data-ttu-id="a218b-144">Реализуйте клиент рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="a218b-144">Implement a workflow client</span></span>  
+### <a name="implement-a-workflow-client"></a><span data-ttu-id="d9aff-144">Реализуйте клиент рабочего процесса</span><span class="sxs-lookup"><span data-stu-id="d9aff-144">Implement a workflow client</span></span>  
   
-1.  <span data-ttu-id="a218b-145">Создайте новый проект консольного приложения с именем `Client`.</span><span class="sxs-lookup"><span data-stu-id="a218b-145">Create a new console application project called `Client`.</span></span>  
+1.  <span data-ttu-id="d9aff-145">Создайте новый проект консольного приложения с именем `Client`.</span><span class="sxs-lookup"><span data-stu-id="d9aff-145">Create a new console application project called `Client`.</span></span>  
   
-2.  <span data-ttu-id="a218b-146">Добавьте ссылки на следующие сборки:</span><span class="sxs-lookup"><span data-stu-id="a218b-146">Add references to the following assemblies:</span></span>  
+2.  <span data-ttu-id="d9aff-146">Добавьте ссылки на следующие сборки:</span><span class="sxs-lookup"><span data-stu-id="d9aff-146">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="a218b-147">System.Activities</span><span class="sxs-lookup"><span data-stu-id="a218b-147">System.Activities</span></span>  
+    1.  <span data-ttu-id="d9aff-147">System.Activities</span><span class="sxs-lookup"><span data-stu-id="d9aff-147">System.Activities</span></span>  
   
-    2.  <span data-ttu-id="a218b-148">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="a218b-148">System.ServiceModel</span></span>  
+    2.  <span data-ttu-id="d9aff-148">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="d9aff-148">System.ServiceModel</span></span>  
   
-    3.  <span data-ttu-id="a218b-149">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="a218b-149">System.ServiceModel.Activities</span></span>  
+    3.  <span data-ttu-id="d9aff-149">System.ServiceModel.Activities</span><span class="sxs-lookup"><span data-stu-id="d9aff-149">System.ServiceModel.Activities</span></span>  
   
-3.  <span data-ttu-id="a218b-150">Откройте сформированный файл Program.cs и добавьте статический метод с именем `GetClientWorkflow`, чтобы создать рабочий процесс клиента.</span><span class="sxs-lookup"><span data-stu-id="a218b-150">Open the generated Program.cs file and add a static method called `GetClientWorkflow` to create the client workflow.</span></span>  
+3.  <span data-ttu-id="d9aff-150">Откройте сформированный файл Program.cs и добавьте статический метод с именем `GetClientWorkflow`, чтобы создать рабочий процесс клиента.</span><span class="sxs-lookup"><span data-stu-id="d9aff-150">Open the generated Program.cs file and add a static method called `GetClientWorkflow` to create the client workflow.</span></span>  
   
     ```  
     static Activity GetClientWorkflow()  
@@ -438,7 +438,7 @@ ms.locfileid: "46697832"
             }  
     ```  
   
-4.  <span data-ttu-id="a218b-151">Добавьте следующий код для размещения метода `Main()`.</span><span class="sxs-lookup"><span data-stu-id="a218b-151">Add the following hosting code to the `Main()` method.</span></span>  
+4.  <span data-ttu-id="d9aff-151">Добавьте следующий код для размещения метода `Main()`.</span><span class="sxs-lookup"><span data-stu-id="d9aff-151">Add the following hosting code to the `Main()` method.</span></span>  
   
     ```  
     static void Main(string[] args)  
@@ -451,8 +451,8 @@ ms.locfileid: "46697832"
     }  
     ```  
   
-## <a name="example"></a><span data-ttu-id="a218b-152">Пример</span><span class="sxs-lookup"><span data-stu-id="a218b-152">Example</span></span>  
- <span data-ttu-id="a218b-153">Исходный код, используемый в этом разделе, полностью приведен ниже.</span><span class="sxs-lookup"><span data-stu-id="a218b-153">Here is a complete listing of the source code used in this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="d9aff-152">Пример</span><span class="sxs-lookup"><span data-stu-id="d9aff-152">Example</span></span>  
+ <span data-ttu-id="d9aff-153">Исходный код, используемый в этом разделе, полностью приведен ниже.</span><span class="sxs-lookup"><span data-stu-id="d9aff-153">Here is a complete listing of the source code used in this topic.</span></span>  
   
 ```  
 // ReceiveInstanceIdScope.cs  
@@ -837,9 +837,9 @@ namespace Microsoft.Samples.AccessingOperationContext.Client
 }  
 ```  
   
- <span data-ttu-id="a218b-154">Необязательные комментарии.</span><span class="sxs-lookup"><span data-stu-id="a218b-154">Optional comments.</span></span>  
+ <span data-ttu-id="d9aff-154">Необязательные комментарии.</span><span class="sxs-lookup"><span data-stu-id="d9aff-154">Optional comments.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a218b-155">См. также</span><span class="sxs-lookup"><span data-stu-id="a218b-155">See Also</span></span>  
- [<span data-ttu-id="a218b-156">Службы рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="a218b-156">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [<span data-ttu-id="a218b-157">Доступ к контексту OperationContext</span><span class="sxs-lookup"><span data-stu-id="a218b-157">Accessing OperationContext</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
- [<span data-ttu-id="a218b-158">Разработка рабочих процессов, действий и выражений с использованием императивного кода</span><span class="sxs-lookup"><span data-stu-id="a218b-158">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+## <a name="see-also"></a><span data-ttu-id="d9aff-155">См. также</span><span class="sxs-lookup"><span data-stu-id="d9aff-155">See Also</span></span>  
+ [<span data-ttu-id="d9aff-156">Службы рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="d9aff-156">Workflow Services</span></span>](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+ [<span data-ttu-id="d9aff-157">Доступ к контексту OperationContext</span><span class="sxs-lookup"><span data-stu-id="d9aff-157">Accessing OperationContext</span></span>](../../../../docs/framework/windows-workflow-foundation/samples/accessing-operationcontext.md)  
+ [<span data-ttu-id="d9aff-158">Разработка рабочих процессов, действий и выражений с использованием императивного кода</span><span class="sxs-lookup"><span data-stu-id="d9aff-158">Authoring Workflows, Activities, and Expressions Using Imperative Code</span></span>](../../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

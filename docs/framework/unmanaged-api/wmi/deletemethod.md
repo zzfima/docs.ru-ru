@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5996ce41c80cb54c4fcb9104c2993c85bcc2b466
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46526475"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47082150"
 ---
-# <a name="deletemethod-function"></a><span data-ttu-id="ee92a-103">Функция DeleteMethod</span><span class="sxs-lookup"><span data-stu-id="ee92a-103">DeleteMethod function</span></span>
-<span data-ttu-id="ee92a-104">Удаляет указанный метод из определения класса CIM.</span><span class="sxs-lookup"><span data-stu-id="ee92a-104">Deletes the specified method from a CIM class definition.</span></span>
+# <a name="deletemethod-function"></a><span data-ttu-id="59e78-103">Функция DeleteMethod</span><span class="sxs-lookup"><span data-stu-id="59e78-103">DeleteMethod function</span></span>
+<span data-ttu-id="59e78-104">Удаляет указанный метод из определения класса CIM.</span><span class="sxs-lookup"><span data-stu-id="59e78-104">Deletes the specified method from a CIM class definition.</span></span>
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
-## <a name="syntax"></a><span data-ttu-id="ee92a-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ee92a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="59e78-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="59e78-105">Syntax</span></span>  
   
 ```  
 HRESULT Delete (
@@ -38,39 +38,39 @@ HRESULT Delete (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="ee92a-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="ee92a-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="59e78-106">Параметры</span><span class="sxs-lookup"><span data-stu-id="59e78-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="ee92a-107">[in] Этот параметр не используется.</span><span class="sxs-lookup"><span data-stu-id="ee92a-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="59e78-107">[in] Этот параметр не используется.</span><span class="sxs-lookup"><span data-stu-id="59e78-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="ee92a-108">[in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.</span><span class="sxs-lookup"><span data-stu-id="ee92a-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
+<span data-ttu-id="59e78-108">[in] Указатель на [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) экземпляра.</span><span class="sxs-lookup"><span data-stu-id="59e78-108">[in] A pointer to an [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) instance.</span></span>
 
 `wszName`  
-<span data-ttu-id="ee92a-109">[in] Имя метода для удаления из класса в таблицу.</span><span class="sxs-lookup"><span data-stu-id="ee92a-109">[in] The name of the method to remove from the class table.</span></span> <span data-ttu-id="ee92a-110">`wszName` должен быть указателем на допустимый `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="ee92a-110">`wszName` must be a pointer to a valid `LPCWSTR`.</span></span>
+<span data-ttu-id="59e78-109">[in] Имя метода для удаления из класса в таблицу.</span><span class="sxs-lookup"><span data-stu-id="59e78-109">[in] The name of the method to remove from the class table.</span></span> <span data-ttu-id="59e78-110">`wszName` должен быть указателем на допустимый `LPCWSTR`.</span><span class="sxs-lookup"><span data-stu-id="59e78-110">`wszName` must be a pointer to a valid `LPCWSTR`.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="ee92a-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="ee92a-111">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="59e78-111">Возвращаемое значение</span><span class="sxs-lookup"><span data-stu-id="59e78-111">Return value</span></span>
 
-<span data-ttu-id="ee92a-112">Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:</span><span class="sxs-lookup"><span data-stu-id="ee92a-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
+<span data-ttu-id="59e78-112">Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:</span><span class="sxs-lookup"><span data-stu-id="59e78-112">The following values returned by this function are defined in the *WbemCli.h* header file, or you can define them as constants in your code:</span></span>
 
-|<span data-ttu-id="ee92a-113">Константа</span><span class="sxs-lookup"><span data-stu-id="ee92a-113">Constant</span></span>  |<span data-ttu-id="ee92a-114">Значение</span><span class="sxs-lookup"><span data-stu-id="ee92a-114">Value</span></span>  |<span data-ttu-id="ee92a-115">Описание</span><span class="sxs-lookup"><span data-stu-id="ee92a-115">Description</span></span>  |
+|<span data-ttu-id="59e78-113">Константа</span><span class="sxs-lookup"><span data-stu-id="59e78-113">Constant</span></span>  |<span data-ttu-id="59e78-114">Значение</span><span class="sxs-lookup"><span data-stu-id="59e78-114">Value</span></span>  |<span data-ttu-id="59e78-115">Описание</span><span class="sxs-lookup"><span data-stu-id="59e78-115">Description</span></span>  |
 |---------|---------|---------|
-| `WBEM_E_NOT_FOUND` | <span data-ttu-id="ee92a-116">0x80041002</span><span class="sxs-lookup"><span data-stu-id="ee92a-116">0x80041002</span></span> | <span data-ttu-id="ee92a-117">Указанный метод не существует.</span><span class="sxs-lookup"><span data-stu-id="ee92a-117">The specified method does not exist.</span></span> |
-| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="ee92a-118">0x80041006</span><span class="sxs-lookup"><span data-stu-id="ee92a-118">0x80041006</span></span> | <span data-ttu-id="ee92a-119">Не хватает памяти для завершения операции.</span><span class="sxs-lookup"><span data-stu-id="ee92a-119">There is not enough memory to complete the operation.</span></span> |
-| `WBEM_S_NO_ERROR` | <span data-ttu-id="ee92a-120">0</span><span class="sxs-lookup"><span data-stu-id="ee92a-120">0</span></span> | <span data-ttu-id="ee92a-121">Вызов функции был успешным.</span><span class="sxs-lookup"><span data-stu-id="ee92a-121">The function call was successful.</span></span>  |
+| `WBEM_E_NOT_FOUND` | <span data-ttu-id="59e78-116">0x80041002</span><span class="sxs-lookup"><span data-stu-id="59e78-116">0x80041002</span></span> | <span data-ttu-id="59e78-117">Указанный метод не существует.</span><span class="sxs-lookup"><span data-stu-id="59e78-117">The specified method does not exist.</span></span> |
+| `WBEM_E_OUT_OF_MEMORY` | <span data-ttu-id="59e78-118">0x80041006</span><span class="sxs-lookup"><span data-stu-id="59e78-118">0x80041006</span></span> | <span data-ttu-id="59e78-119">Не хватает памяти для завершения операции.</span><span class="sxs-lookup"><span data-stu-id="59e78-119">There is not enough memory to complete the operation.</span></span> |
+| `WBEM_S_NO_ERROR` | <span data-ttu-id="59e78-120">0</span><span class="sxs-lookup"><span data-stu-id="59e78-120">0</span></span> | <span data-ttu-id="59e78-121">Вызов функции был успешным.</span><span class="sxs-lookup"><span data-stu-id="59e78-121">The function call was successful.</span></span>  |
 
-## <a name="remarks"></a><span data-ttu-id="ee92a-122">Примечания</span><span class="sxs-lookup"><span data-stu-id="ee92a-122">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="59e78-122">Примечания</span><span class="sxs-lookup"><span data-stu-id="59e78-122">Remarks</span></span>
 
-<span data-ttu-id="ee92a-123">Эта функция создает оболочку для вызова [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) метод.</span><span class="sxs-lookup"><span data-stu-id="ee92a-123">This function wraps a call to the [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) method.</span></span>
+<span data-ttu-id="59e78-123">Эта функция создает оболочку для вызова [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) метод.</span><span class="sxs-lookup"><span data-stu-id="59e78-123">This function wraps a call to the [IWbemClassObject::DeleteMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-deletemethod) method.</span></span>
 
-<span data-ttu-id="ee92a-124">Удаление метода не поддерживается для [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) указатели, которые указывают на экземпляры CIM.</span><span class="sxs-lookup"><span data-stu-id="ee92a-124">Method deletion is not supported for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointers that point to CIM instances.</span></span>
+<span data-ttu-id="59e78-124">Удаление метода не поддерживается для [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) указатели, которые указывают на экземпляры CIM.</span><span class="sxs-lookup"><span data-stu-id="59e78-124">Method deletion is not supported for [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) pointers that point to CIM instances.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="ee92a-125">Требования</span><span class="sxs-lookup"><span data-stu-id="ee92a-125">Requirements</span></span>  
- <span data-ttu-id="ee92a-126">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ee92a-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="59e78-125">Требования</span><span class="sxs-lookup"><span data-stu-id="59e78-125">Requirements</span></span>  
+ <span data-ttu-id="59e78-126">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="59e78-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ee92a-127">**Заголовок:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="ee92a-127">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="59e78-127">**Заголовок:** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="59e78-127">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="ee92a-128">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="ee92a-128">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ <span data-ttu-id="59e78-128">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="59e78-128">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ee92a-129">См. также</span><span class="sxs-lookup"><span data-stu-id="ee92a-129">See also</span></span>  
-[<span data-ttu-id="ee92a-130">WMI и счетчики производительности (Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="ee92a-130">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="59e78-129">См. также</span><span class="sxs-lookup"><span data-stu-id="59e78-129">See also</span></span>  
+[<span data-ttu-id="59e78-130">WMI и счетчики производительности (Справочник по неуправляемым API)</span><span class="sxs-lookup"><span data-stu-id="59e78-130">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

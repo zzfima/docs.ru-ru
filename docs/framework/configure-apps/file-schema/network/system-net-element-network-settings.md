@@ -1,5 +1,5 @@
 ---
-title: '&lt;system.Net&gt; элемент (параметры сети)'
+title: '&lt;system.Net&gt; (сетевые параметры)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.Net
@@ -10,56 +10,55 @@ helpviewer_keywords:
 ms.assetid: 52de4d6c-b24d-44aa-ba7d-6b5061f1357e
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: f9098ce379cbaf12f589270729018da399f282b0
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 25663774c639e9fea13ced54a9aa7f456922fa1a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752446"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085713"
 ---
-# <a name="ltsystemnetgt-element-network-settings"></a><span data-ttu-id="13a52-102">&lt;system.Net&gt; элемент (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="13a52-102">&lt;system.Net&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="13a52-103">Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.</span><span class="sxs-lookup"><span data-stu-id="13a52-103">Contains settings that specify how the .NET Framework connects to the network.</span></span>  
+# <a name="ltsystemnetgt-element-network-settings"></a><span data-ttu-id="da462-102">&lt;system.Net&gt; (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="da462-102">&lt;system.Net&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="da462-103">Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.</span><span class="sxs-lookup"><span data-stu-id="da462-103">Contains settings that specify how the .NET Framework connects to the network.</span></span>  
   
- <span data-ttu-id="13a52-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="13a52-104">\<configuration></span></span>  
-<span data-ttu-id="13a52-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="13a52-105">\<system.net></span></span>  
+ <span data-ttu-id="da462-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="da462-104">\<configuration></span></span>  
+<span data-ttu-id="da462-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="da462-105">\<system.net></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="13a52-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="13a52-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da462-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="da462-106">Syntax</span></span>  
   
 ```xml  
 <system.net>   
 </system.net>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="13a52-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="13a52-107">Attributes and Elements</span></span>  
- <span data-ttu-id="13a52-108">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="13a52-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="da462-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="da462-107">Attributes and Elements</span></span>  
+ <span data-ttu-id="da462-108">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="da462-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="13a52-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="13a52-109">Attributes</span></span>  
- <span data-ttu-id="13a52-110">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="13a52-110">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="da462-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="da462-109">Attributes</span></span>  
+ <span data-ttu-id="da462-110">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="da462-110">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="13a52-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="13a52-111">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="da462-111">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="da462-111">Child Elements</span></span>  
   
-|<span data-ttu-id="13a52-112">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="13a52-112">**Element**</span></span>|<span data-ttu-id="13a52-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="13a52-113">**Description**</span></span>|  
+|<span data-ttu-id="da462-112">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="da462-112">**Element**</span></span>|<span data-ttu-id="da462-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="da462-113">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="13a52-114">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="13a52-114">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="13a52-115">Задает модули, используемые для проверки подлинности Интернет-запросов.</span><span class="sxs-lookup"><span data-stu-id="13a52-115">Specifies modules used to authenticate Internet requests.</span></span>|  
-|[<span data-ttu-id="13a52-116">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="13a52-116">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="13a52-117">Указывает максимальное число подключений к Интернет-узла.</span><span class="sxs-lookup"><span data-stu-id="13a52-117">Specifies the maximum number of connections to an Internet host.</span></span>|  
-|[<span data-ttu-id="13a52-118">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="13a52-118">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="13a52-119">Настраивает прокси-сервер протокола передачи гипертекста (HTTP).</span><span class="sxs-lookup"><span data-stu-id="13a52-119">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
-|[<span data-ttu-id="13a52-120">mailSettings</span><span class="sxs-lookup"><span data-stu-id="13a52-120">mailSettings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="13a52-121">Настраивает параметры отправки сообщений транспортного протокола SMTP (Simple Mail).</span><span class="sxs-lookup"><span data-stu-id="13a52-121">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
-|[<span data-ttu-id="13a52-122">requestCaching</span><span class="sxs-lookup"><span data-stu-id="13a52-122">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="13a52-123">Определяет механизм кэширования для сетевых запросов.</span><span class="sxs-lookup"><span data-stu-id="13a52-123">Controls the caching mechanism for network requests.</span></span>|  
-|[<span data-ttu-id="13a52-124">Параметры</span><span class="sxs-lookup"><span data-stu-id="13a52-124">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="13a52-125">Настраивает основные сетевые параметры для классов в <xref:System.Net> и связанные с ним дочерние пространства имен.</span><span class="sxs-lookup"><span data-stu-id="13a52-125">Configures basic network options for classes in the <xref:System.Net> and related child namespaces.</span></span>|  
-|[<span data-ttu-id="13a52-126">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="13a52-126">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="13a52-127">Задает модули, используемые для запроса данных от Интернет-узлов.</span><span class="sxs-lookup"><span data-stu-id="13a52-127">Specifies modules to use to request information from Internet hosts.</span></span>|  
+|[<span data-ttu-id="da462-114">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="da462-114">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="da462-115">Задает модули, используемые для проверки подлинности Интернет-запросов.</span><span class="sxs-lookup"><span data-stu-id="da462-115">Specifies modules used to authenticate Internet requests.</span></span>|  
+|[<span data-ttu-id="da462-116">connectionManagement</span><span class="sxs-lookup"><span data-stu-id="da462-116">connectionManagement</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|<span data-ttu-id="da462-117">Указывает максимальное число подключений к Интернет-узле.</span><span class="sxs-lookup"><span data-stu-id="da462-117">Specifies the maximum number of connections to an Internet host.</span></span>|  
+|[<span data-ttu-id="da462-118">defaultProxy</span><span class="sxs-lookup"><span data-stu-id="da462-118">defaultProxy</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|<span data-ttu-id="da462-119">Настраивает прокси-сервер протокола передачи гипертекста (HTTP).</span><span class="sxs-lookup"><span data-stu-id="da462-119">Configures the Hypertext Transfer Protocol (HTTP) proxy server.</span></span>|  
+|[<span data-ttu-id="da462-120">mailSettings</span><span class="sxs-lookup"><span data-stu-id="da462-120">mailSettings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="da462-121">Настраивает параметры отправки сообщений транспортного протокола SMTP (Simple Mail).</span><span class="sxs-lookup"><span data-stu-id="da462-121">Configures Simple Mail Transport Protocol (SMTP) mail sending options.</span></span>|  
+|[<span data-ttu-id="da462-122">requestCaching</span><span class="sxs-lookup"><span data-stu-id="da462-122">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="da462-123">Определяет механизм кэширования для сетевых запросов.</span><span class="sxs-lookup"><span data-stu-id="da462-123">Controls the caching mechanism for network requests.</span></span>|  
+|[<span data-ttu-id="da462-124">Параметры</span><span class="sxs-lookup"><span data-stu-id="da462-124">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="da462-125">Настраивает основные параметры сети для классов в <xref:System.Net> и связанные с ней дочерние пространства имен.</span><span class="sxs-lookup"><span data-stu-id="da462-125">Configures basic network options for classes in the <xref:System.Net> and related child namespaces.</span></span>|  
+|[<span data-ttu-id="da462-126">webRequestModules</span><span class="sxs-lookup"><span data-stu-id="da462-126">webRequestModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|<span data-ttu-id="da462-127">Задает модули, используемые для запроса данных из Интернет-узлов.</span><span class="sxs-lookup"><span data-stu-id="da462-127">Specifies modules to use to request information from Internet hosts.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="13a52-128">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="13a52-128">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="da462-128">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="da462-128">Parent Elements</span></span>  
   
-|<span data-ttu-id="13a52-129">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="13a52-129">**Element**</span></span>|<span data-ttu-id="13a52-130">**Описание**</span><span class="sxs-lookup"><span data-stu-id="13a52-130">**Description**</span></span>|  
+|<span data-ttu-id="da462-129">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="da462-129">**Element**</span></span>|<span data-ttu-id="da462-130">**Описание**</span><span class="sxs-lookup"><span data-stu-id="da462-130">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="13a52-131">Конфигурации</span><span class="sxs-lookup"><span data-stu-id="13a52-131">configuration</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="13a52-132">Содержит параметры для всех пространств имен.</span><span class="sxs-lookup"><span data-stu-id="13a52-132">Contains settings for all namespaces.</span></span>|  
+|[<span data-ttu-id="da462-131">Конфигурации</span><span class="sxs-lookup"><span data-stu-id="da462-131">configuration</span></span>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|<span data-ttu-id="da462-132">Содержит параметры для всех пространств имен.</span><span class="sxs-lookup"><span data-stu-id="da462-132">Contains settings for all namespaces.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="13a52-133">Примечания</span><span class="sxs-lookup"><span data-stu-id="13a52-133">Remarks</span></span>  
- <span data-ttu-id="13a52-134">[ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) элемент содержит параметры для классов в <xref:System.Net> и связанные с ним дочерние пространства имен.</span><span class="sxs-lookup"><span data-stu-id="13a52-134">The [\<system.net>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) element contains settings for classes in the <xref:System.Net> and related child namespaces.</span></span> <span data-ttu-id="13a52-135">Параметры настройки модулей проверки подлинности, управление соединениями, параметры электронной почты, прокси-сервера и модулей Интернет-запросов при получении данных от Интернет-узлов.</span><span class="sxs-lookup"><span data-stu-id="13a52-135">The settings configure authentication modules, connection management, mail settings, the proxy server, and Internet request modules for receiving information from Internet hosts.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="da462-133">Примечания</span><span class="sxs-lookup"><span data-stu-id="da462-133">Remarks</span></span>  
+ <span data-ttu-id="da462-134">[ \<System.net >](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) элемент содержит параметры для классов в <xref:System.Net> и связанные с ней дочерние пространства имен.</span><span class="sxs-lookup"><span data-stu-id="da462-134">The [\<system.net>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) element contains settings for classes in the <xref:System.Net> and related child namespaces.</span></span> <span data-ttu-id="da462-135">Параметры настройки модулей проверки подлинности, управление подключениями, параметры электронной почты, прокси-сервера и модулей Интернет-запросов на получение информации от Интернет-узлов.</span><span class="sxs-lookup"><span data-stu-id="da462-135">The settings configure authentication modules, connection management, mail settings, the proxy server, and Internet request modules for receiving information from Internet hosts.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="13a52-136">Пример</span><span class="sxs-lookup"><span data-stu-id="13a52-136">Example</span></span>  
- <span data-ttu-id="13a52-137">В следующем примере показано стандартной конфигурации, используемые <xref:System.Net> классы.</span><span class="sxs-lookup"><span data-stu-id="13a52-137">The following example shows a typical configuration used by <xref:System.Net> classes.</span></span>  
+## <a name="example"></a><span data-ttu-id="da462-136">Пример</span><span class="sxs-lookup"><span data-stu-id="da462-136">Example</span></span>  
+ <span data-ttu-id="da462-137">В следующем примере показано Типовая конфигурация, используемая с <xref:System.Net> классы.</span><span class="sxs-lookup"><span data-stu-id="da462-137">The following example shows a typical configuration used by <xref:System.Net> classes.</span></span>  
   
 ```xml  
 <configuration>  
@@ -95,5 +94,5 @@ ms.locfileid: "32752446"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="13a52-138">См. также</span><span class="sxs-lookup"><span data-stu-id="13a52-138">See Also</span></span>  
- [<span data-ttu-id="13a52-139">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="13a52-139">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="da462-138">См. также</span><span class="sxs-lookup"><span data-stu-id="da462-138">See Also</span></span>  
+ [<span data-ttu-id="da462-139">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="da462-139">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -3,67 +3,66 @@ title: Практическое руководство. Создание при�
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 764e7fba31a7fb3fc40ec85ab4d0fb6e18e57390
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 83b5808ced1bc6243294b23d9784ec7993e3ba4a
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519049"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47108134"
 ---
-# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a><span data-ttu-id="effa1-102">Практическое руководство. Создание приложения ASP.NET Web Forms, поддерживающего утверждения, с помощью WIF</span><span class="sxs-lookup"><span data-stu-id="effa1-102">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>
-## <a name="applies-to"></a><span data-ttu-id="effa1-103">Применение</span><span class="sxs-lookup"><span data-stu-id="effa1-103">Applies To</span></span>  
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a><span data-ttu-id="c685b-102">Практическое руководство. Создание приложения ASP.NET Web Forms, поддерживающего утверждения, с помощью WIF</span><span class="sxs-lookup"><span data-stu-id="c685b-102">How To: Build Claims-Aware ASP.NET Web Forms Application Using WIF</span></span>
+## <a name="applies-to"></a><span data-ttu-id="c685b-103">Применение</span><span class="sxs-lookup"><span data-stu-id="c685b-103">Applies To</span></span>  
   
--   <span data-ttu-id="effa1-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="effa1-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
+-   <span data-ttu-id="c685b-104">Microsoft® Windows® Identity Foundation (WIF)</span><span class="sxs-lookup"><span data-stu-id="c685b-104">Microsoft® Windows® Identity Foundation (WIF)</span></span>  
   
--   <span data-ttu-id="effa1-105">Веб-формы ASP.NET®</span><span class="sxs-lookup"><span data-stu-id="effa1-105">ASP.NET® Web Forms</span></span>  
+-   <span data-ttu-id="c685b-105">Веб-формы ASP.NET®</span><span class="sxs-lookup"><span data-stu-id="c685b-105">ASP.NET® Web Forms</span></span>  
   
-## <a name="summary"></a><span data-ttu-id="effa1-106">Сводка</span><span class="sxs-lookup"><span data-stu-id="effa1-106">Summary</span></span>  
- <span data-ttu-id="effa1-107">В этом практическом руководстве представлены подробные пошаговые процедуры по созданию простого приложения веб-форм ASP.NET с поддержкой утверждений.</span><span class="sxs-lookup"><span data-stu-id="effa1-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET Web Forms application.</span></span> <span data-ttu-id="effa1-108">Также здесь приводятся инструкции по тестированию простого приложения веб-форм ASP.NET с поддержкой утверждений для реализации федеративной проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="effa1-108">It also provides instructions for how to test the simple claims-aware ASP.NET Web Forms application for successful implementation of federated authentication.</span></span> <span data-ttu-id="effa1-109">В этом практическом руководстве не приводятся подробные инструкции по созданию службы маркеров безопасности (STS) и подразумевается, что вы уже выполнили ее настройку.</span><span class="sxs-lookup"><span data-stu-id="effa1-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
+## <a name="summary"></a><span data-ttu-id="c685b-106">Сводка</span><span class="sxs-lookup"><span data-stu-id="c685b-106">Summary</span></span>  
+ <span data-ttu-id="c685b-107">В этом практическом руководстве представлены подробные пошаговые процедуры по созданию простого приложения веб-форм ASP.NET с поддержкой утверждений.</span><span class="sxs-lookup"><span data-stu-id="c685b-107">This How-To provides detailed step-by-step procedures for creating simple claims-aware ASP.NET Web Forms application.</span></span> <span data-ttu-id="c685b-108">Также здесь приводятся инструкции по тестированию простого приложения веб-форм ASP.NET с поддержкой утверждений для реализации федеративной проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="c685b-108">It also provides instructions for how to test the simple claims-aware ASP.NET Web Forms application for successful implementation of federated authentication.</span></span> <span data-ttu-id="c685b-109">В этом практическом руководстве не приводятся подробные инструкции по созданию службы маркеров безопасности (STS) и подразумевается, что вы уже выполнили ее настройку.</span><span class="sxs-lookup"><span data-stu-id="c685b-109">This How-To does not have detailed instructions for creating a Security Token Service (STS), and assumes you have already configured an STS.</span></span>  
   
-## <a name="contents"></a><span data-ttu-id="effa1-110">Описание</span><span class="sxs-lookup"><span data-stu-id="effa1-110">Contents</span></span>  
+## <a name="contents"></a><span data-ttu-id="c685b-110">Описание</span><span class="sxs-lookup"><span data-stu-id="c685b-110">Contents</span></span>  
   
--   <span data-ttu-id="effa1-111">Цели</span><span class="sxs-lookup"><span data-stu-id="effa1-111">Objectives</span></span>  
+-   <span data-ttu-id="c685b-111">Цели</span><span class="sxs-lookup"><span data-stu-id="c685b-111">Objectives</span></span>  
   
--   <span data-ttu-id="effa1-112">Сводка действий</span><span class="sxs-lookup"><span data-stu-id="effa1-112">Summary of Steps</span></span>  
+-   <span data-ttu-id="c685b-112">Сводка действий</span><span class="sxs-lookup"><span data-stu-id="c685b-112">Summary of Steps</span></span>  
   
--   <span data-ttu-id="effa1-113">Шаг 1. Создание простого приложения веб-форм ASP.NET</span><span class="sxs-lookup"><span data-stu-id="effa1-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+-   <span data-ttu-id="c685b-113">Шаг 1. Создание простого приложения веб-форм ASP.NET</span><span class="sxs-lookup"><span data-stu-id="c685b-113">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
   
--   <span data-ttu-id="effa1-114">Шаг 2. Настройка приложения веб-форм ASP.NET для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="effa1-114">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
+-   <span data-ttu-id="c685b-114">Шаг 2. Настройка приложения веб-форм ASP.NET для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="c685b-114">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
   
--   <span data-ttu-id="effa1-115">Шаг 3. Тестирование решения</span><span class="sxs-lookup"><span data-stu-id="effa1-115">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="c685b-115">Шаг 3. Тестирование решения</span><span class="sxs-lookup"><span data-stu-id="c685b-115">Step 3 – Test Your Solution</span></span>  
   
-## <a name="objectives"></a><span data-ttu-id="effa1-116">Цели</span><span class="sxs-lookup"><span data-stu-id="effa1-116">Objectives</span></span>  
+## <a name="objectives"></a><span data-ttu-id="c685b-116">Цели</span><span class="sxs-lookup"><span data-stu-id="c685b-116">Objectives</span></span>  
   
--   <span data-ttu-id="effa1-117">Настройка приложения веб-форм ASP.NET для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="effa1-117">Configure ASP.NET Web Forms application for claims-based authentication</span></span>  
+-   <span data-ttu-id="c685b-117">Настройка приложения веб-форм ASP.NET для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="c685b-117">Configure ASP.NET Web Forms application for claims-based authentication</span></span>  
   
--   <span data-ttu-id="effa1-118">Тестирование приложения веб-форм ASP.NET с поддержкой утверждений</span><span class="sxs-lookup"><span data-stu-id="effa1-118">Test successful claims-aware ASP.NET Web Forms application</span></span>  
+-   <span data-ttu-id="c685b-118">Тестирование приложения веб-форм ASP.NET с поддержкой утверждений</span><span class="sxs-lookup"><span data-stu-id="c685b-118">Test successful claims-aware ASP.NET Web Forms application</span></span>  
   
-## <a name="summary-of-steps"></a><span data-ttu-id="effa1-119">Сводка действий</span><span class="sxs-lookup"><span data-stu-id="effa1-119">Summary of Steps</span></span>  
+## <a name="summary-of-steps"></a><span data-ttu-id="c685b-119">Сводка действий</span><span class="sxs-lookup"><span data-stu-id="c685b-119">Summary of Steps</span></span>  
   
--   <span data-ttu-id="effa1-120">Шаг 1. Создание простого приложения веб-форм ASP.NET</span><span class="sxs-lookup"><span data-stu-id="effa1-120">Step 1 – Create Simple ASP.NET Web Forms Application</span></span>  
+-   <span data-ttu-id="c685b-120">Шаг 1. Создание простого приложения веб-форм ASP.NET</span><span class="sxs-lookup"><span data-stu-id="c685b-120">Step 1 – Create Simple ASP.NET Web Forms Application</span></span>  
   
--   <span data-ttu-id="effa1-121">Шаг 2. Настройка приложения веб-форм ASP.NET для федеративной проверки подлинности</span><span class="sxs-lookup"><span data-stu-id="effa1-121">Step 2 – Configure ASP.NET Web Forms Application for Federated Authentication</span></span>  
+-   <span data-ttu-id="c685b-121">Шаг 2. Настройка приложения веб-форм ASP.NET для федеративной проверки подлинности</span><span class="sxs-lookup"><span data-stu-id="c685b-121">Step 2 – Configure ASP.NET Web Forms Application for Federated Authentication</span></span>  
   
--   <span data-ttu-id="effa1-122">Шаг 3. Тестирование решения</span><span class="sxs-lookup"><span data-stu-id="effa1-122">Step 3 – Test Your Solution</span></span>  
+-   <span data-ttu-id="c685b-122">Шаг 3. Тестирование решения</span><span class="sxs-lookup"><span data-stu-id="c685b-122">Step 3 – Test Your Solution</span></span>  
   
-## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="effa1-123">Шаг 1. Создание простого приложения веб-форм ASP.NET</span><span class="sxs-lookup"><span data-stu-id="effa1-123">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
- <span data-ttu-id="effa1-124">На этом шаге создается новое приложение веб-форм ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="effa1-124">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
+## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a><span data-ttu-id="c685b-123">Шаг 1. Создание простого приложения веб-форм ASP.NET</span><span class="sxs-lookup"><span data-stu-id="c685b-123">Step 1 – Create a Simple ASP.NET Web Forms Application</span></span>  
+ <span data-ttu-id="c685b-124">На этом шаге создается новое приложение веб-форм ASP.NET.</span><span class="sxs-lookup"><span data-stu-id="c685b-124">In this step, you will create a new ASP.NET Web Forms application.</span></span>  
   
-#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="effa1-125">Создание простого приложения ASP.NET</span><span class="sxs-lookup"><span data-stu-id="effa1-125">To create a simple ASP.NET application</span></span>  
+#### <a name="to-create-a-simple-aspnet-application"></a><span data-ttu-id="c685b-125">Создание простого приложения ASP.NET</span><span class="sxs-lookup"><span data-stu-id="c685b-125">To create a simple ASP.NET application</span></span>  
   
-1.  <span data-ttu-id="effa1-126">Запустите Visual Studio и выберите **Файл**, **Создать** и затем **Проект**.</span><span class="sxs-lookup"><span data-stu-id="effa1-126">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
+1.  <span data-ttu-id="c685b-126">Запустите Visual Studio и выберите **Файл**, **Создать** и затем **Проект**.</span><span class="sxs-lookup"><span data-stu-id="c685b-126">Start Visual Studio and click **File**, **New**, and then **Project**.</span></span>  
   
-2.  <span data-ttu-id="effa1-127">В окне **Новый проект** выберите **Приложение веб-форм ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="effa1-127">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
+2.  <span data-ttu-id="c685b-127">В окне **Новый проект** выберите **Приложение веб-форм ASP.NET**.</span><span class="sxs-lookup"><span data-stu-id="c685b-127">In the **New Project** window, click **ASP.NET Web Forms Application**.</span></span>  
   
-3.  <span data-ttu-id="effa1-128">В поле **Имя** введите `TestApp` и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="effa1-128">In **Name**, enter `TestApp` and press **OK**.</span></span>  
+3.  <span data-ttu-id="c685b-128">В поле **Имя** введите `TestApp` и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="c685b-128">In **Name**, enter `TestApp` and press **OK**.</span></span>  
   
-## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a><span data-ttu-id="effa1-129">Шаг 2. Настройка приложения веб-форм ASP.NET для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="effa1-129">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
- <span data-ttu-id="effa1-130">На этом шаге в файл конфигурации *Web.config* приложения веб-форм ASP.NET добавляются записи конфигурации, позволяющие реализовать поддержку утверждений.</span><span class="sxs-lookup"><span data-stu-id="effa1-130">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET Web Forms application to make it claims-aware.</span></span>  
+## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a><span data-ttu-id="c685b-129">Шаг 2. Настройка приложения веб-форм ASP.NET для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="c685b-129">Step 2 – Configure ASP.NET Web Forms Application for Claims-Based Authentication</span></span>  
+ <span data-ttu-id="c685b-130">На этом шаге в файл конфигурации *Web.config* приложения веб-форм ASP.NET добавляются записи конфигурации, позволяющие реализовать поддержку утверждений.</span><span class="sxs-lookup"><span data-stu-id="c685b-130">In this step you will add configuration entries to the *Web.config* configuration file of your ASP.NET Web Forms application to make it claims-aware.</span></span>  
   
-#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a><span data-ttu-id="effa1-131">Настройка приложения ASP.NET для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="effa1-131">To configure ASP.NET application for claims-based authentication</span></span>  
+#### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a><span data-ttu-id="c685b-131">Настройка приложения ASP.NET для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="c685b-131">To configure ASP.NET application for claims-based authentication</span></span>  
   
-1.  <span data-ttu-id="effa1-132">Добавьте в файл конфигурации *Web.config* следующий раздел конфигурации непосредственно после открывающего элемента **\<configuration>**:</span><span class="sxs-lookup"><span data-stu-id="effa1-132">Add the following configuration section entries to the *Web.config* configuration file immediately after the **\<configuration>** opening element:</span></span>  
+1.  <span data-ttu-id="c685b-132">Добавьте в файл конфигурации *Web.config* следующий раздел конфигурации непосредственно после открывающего элемента **\<configuration>**:</span><span class="sxs-lookup"><span data-stu-id="c685b-132">Add the following configuration section entries to the *Web.config* configuration file immediately after the **\<configuration>** opening element:</span></span>  
   
     ```xml  
     <configSections>  
@@ -72,7 +71,7 @@ ms.locfileid: "43519049"
     </configSections>  
     ```  
   
-2.  <span data-ttu-id="effa1-133">Добавьте элемент **\<location>**, который обеспечивает доступ к метаданным федерации приложения:</span><span class="sxs-lookup"><span data-stu-id="effa1-133">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
+2.  <span data-ttu-id="c685b-133">Добавьте элемент **\<location>**, который обеспечивает доступ к метаданным федерации приложения:</span><span class="sxs-lookup"><span data-stu-id="c685b-133">Add a **\<location>** element that enables access to the application’s federation metadata:</span></span>  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -84,7 +83,7 @@ ms.locfileid: "43519049"
     </location>  
     ```  
   
-3.  <span data-ttu-id="effa1-134">Добавьте следующие записи конфигурации в элементы **\<system.web>**, чтобы запретить пользователей, отключить собственную проверку подлинности и включить платформу WIF для управления проверкой подлинности.</span><span class="sxs-lookup"><span data-stu-id="effa1-134">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
+3.  <span data-ttu-id="c685b-134">Добавьте следующие записи конфигурации в элементы **\<system.web>**, чтобы запретить пользователей, отключить собственную проверку подлинности и включить платформу WIF для управления проверкой подлинности.</span><span class="sxs-lookup"><span data-stu-id="c685b-134">Add the following configuration entries within the **\<system.web>** elements to deny users, disable native authentication, and enable WIF to manage authentication.</span></span>  
   
     ```xml  
     <authorization>  
@@ -93,7 +92,7 @@ ms.locfileid: "43519049"
     <authentication mode="None" />  
     ```  
   
-4.  <span data-ttu-id="effa1-135">Добавьте элемент **\<system.webServer>**, который определяет модули для федеративной проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="effa1-135">Add a **\<system.webServer>** element that defines the modules for federated authentication.</span></span> <span data-ttu-id="effa1-136">Обратите внимание, что атрибут *PublicKeyToken* должен иметь то же значение, что и атрибут *PublicKeyToken* для ранее добавленных записей **\<configSections>**:</span><span class="sxs-lookup"><span data-stu-id="effa1-136">Note that the *PublicKeyToken* attribute must be the same as the *PublicKeyToken* attribute for the **\<configSections>** entries added earlier:</span></span>  
+4.  <span data-ttu-id="c685b-135">Добавьте элемент **\<system.webServer>**, который определяет модули для федеративной проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="c685b-135">Add a **\<system.webServer>** element that defines the modules for federated authentication.</span></span> <span data-ttu-id="c685b-136">Обратите внимание, что атрибут *PublicKeyToken* должен иметь то же значение, что и атрибут *PublicKeyToken* для ранее добавленных записей **\<configSections>**:</span><span class="sxs-lookup"><span data-stu-id="c685b-136">Note that the *PublicKeyToken* attribute must be the same as the *PublicKeyToken* attribute for the **\<configSections>** entries added earlier:</span></span>  
   
     ```xml  
     <system.webServer>  
@@ -104,7 +103,7 @@ ms.locfileid: "43519049"
     </system.webServer>  
     ```  
   
-5.  <span data-ttu-id="effa1-137">Добавьте следующие записи конфигурации платформы Windows Identity Foundation и убедитесь, что URL-адрес и номер порта приложения ASP.NET соответствуют значениям в записи **\<audienceUris>**, атрибуте **realm** элемента **\<wsFederation>** и атрибуте **reply** элемента **\<wsFederation>**.</span><span class="sxs-lookup"><span data-stu-id="effa1-137">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="effa1-138">Также убедитесь, что значение **issuer** соответствует URL-адресу службы маркеров безопасности (STS).</span><span class="sxs-lookup"><span data-stu-id="effa1-138">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
+5.  <span data-ttu-id="c685b-137">Добавьте следующие записи конфигурации платформы Windows Identity Foundation и убедитесь, что URL-адрес и номер порта приложения ASP.NET соответствуют значениям в записи **\<audienceUris>**, атрибуте **realm** элемента **\<wsFederation>** и атрибуте **reply** элемента **\<wsFederation>**.</span><span class="sxs-lookup"><span data-stu-id="c685b-137">Add the following Windows Identity Foundation related configuration entries and ensure that your ASP.NET application’s URL and port number match the values in the **\<audienceUris>** entry, **realm** attribute of the **\<wsFederation>** element, and the **reply** attribute of the **\<wsFederation>** element.</span></span> <span data-ttu-id="c685b-138">Также убедитесь, что значение **issuer** соответствует URL-адресу службы маркеров безопасности (STS).</span><span class="sxs-lookup"><span data-stu-id="c685b-138">Also ensure that the **issuer** value fits your Security Token Service (STS) URL.</span></span>  
   
     ```xml  
     <system.identityModel>  
@@ -128,16 +127,16 @@ ms.locfileid: "43519049"
     </system.identityModel.services>  
     ```  
   
-6.  <span data-ttu-id="effa1-139">Добавьте ссылку на сборку <xref:System.IdentityModel>.</span><span class="sxs-lookup"><span data-stu-id="effa1-139">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
+6.  <span data-ttu-id="c685b-139">Добавьте ссылку на сборку <xref:System.IdentityModel>.</span><span class="sxs-lookup"><span data-stu-id="c685b-139">Add reference to the <xref:System.IdentityModel> assembly.</span></span>  
   
-7.  <span data-ttu-id="effa1-140">Скомпилируйте решение и убедитесь в отсутствии ошибок.</span><span class="sxs-lookup"><span data-stu-id="effa1-140">Compile the solution to make sure there are no errors.</span></span>  
+7.  <span data-ttu-id="c685b-140">Скомпилируйте решение и убедитесь в отсутствии ошибок.</span><span class="sxs-lookup"><span data-stu-id="c685b-140">Compile the solution to make sure there are no errors.</span></span>  
   
-## <a name="step-3--test-your-solution"></a><span data-ttu-id="effa1-141">Шаг 3. Тестирование решения</span><span class="sxs-lookup"><span data-stu-id="effa1-141">Step 3 – Test Your Solution</span></span>  
- <span data-ttu-id="effa1-142">На этом шаге выполняется тестирование приложения веб-форм ASP.NET, настроенного для проверки подлинности на основе утверждений.</span><span class="sxs-lookup"><span data-stu-id="effa1-142">In this step you will test your ASP.NET Web Forms application configured for claims-based authentication.</span></span> <span data-ttu-id="effa1-143">Для базовой проверки необходимо добавить код, который отображает утверждения в маркере безопасности, выданном службой STS.</span><span class="sxs-lookup"><span data-stu-id="effa1-143">To perform a basic test, you will add code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
+## <a name="step-3--test-your-solution"></a><span data-ttu-id="c685b-141">Шаг 3. Тестирование решения</span><span class="sxs-lookup"><span data-stu-id="c685b-141">Step 3 – Test Your Solution</span></span>  
+ <span data-ttu-id="c685b-142">На этом шаге выполняется тестирование приложения веб-форм ASP.NET, настроенного для проверки подлинности на основе утверждений.</span><span class="sxs-lookup"><span data-stu-id="c685b-142">In this step you will test your ASP.NET Web Forms application configured for claims-based authentication.</span></span> <span data-ttu-id="c685b-143">Для базовой проверки необходимо добавить код, который отображает утверждения в маркере безопасности, выданном службой STS.</span><span class="sxs-lookup"><span data-stu-id="c685b-143">To perform a basic test, you will add code that displays claims in the token issued by the Security Token Service (STS).</span></span>  
   
-#### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a><span data-ttu-id="effa1-144">Проверка приложения веб-форм ASP.NET для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="effa1-144">To test your ASP.NET Web Form application for claims-based authentication</span></span>  
+#### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a><span data-ttu-id="c685b-144">Проверка приложения веб-форм ASP.NET для проверки подлинности на основе утверждений</span><span class="sxs-lookup"><span data-stu-id="c685b-144">To test your ASP.NET Web Form application for claims-based authentication</span></span>  
   
-1.  <span data-ttu-id="effa1-145">Откройте файл **Default.aspx** в проекте **TestApp** и замените существующую разметку следующей:</span><span class="sxs-lookup"><span data-stu-id="effa1-145">Open the **Default.aspx** file under the **TestApp** project and replace its existing markup with the following markup:</span></span>  
+1.  <span data-ttu-id="c685b-145">Откройте файл **Default.aspx** в проекте **TestApp** и замените существующую разметку следующей:</span><span class="sxs-lookup"><span data-stu-id="c685b-145">Open the **Default.aspx** file under the **TestApp** project and replace its existing markup with the following markup:</span></span>  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -159,12 +158,12 @@ ms.locfileid: "43519049"
     </html>  
     ```  
   
-2.  <span data-ttu-id="effa1-146">Сохраните файл **Default.aspx**, а затем откройте его файл кода программной части с именем **Default.aspx.cs**.</span><span class="sxs-lookup"><span data-stu-id="effa1-146">Save **Default.aspx**, and then open its code behind file named **Default.aspx.cs**.</span></span>  
+2.  <span data-ttu-id="c685b-146">Сохраните файл **Default.aspx**, а затем откройте его файл кода программной части с именем **Default.aspx.cs**.</span><span class="sxs-lookup"><span data-stu-id="c685b-146">Save **Default.aspx**, and then open its code behind file named **Default.aspx.cs**.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="effa1-147">Файл **Default.aspx.cs** может быть скрыт в узле **Default.aspx** в обозревателе решений.</span><span class="sxs-lookup"><span data-stu-id="effa1-147">**Default.aspx.cs** may be hidden beneath **Default.aspx** in Solution Explorer.</span></span> <span data-ttu-id="effa1-148">Если файл **Default.aspx.cs** не отображается, разверните узел **Default.aspx**, щелкнув значок треугольника рядом с ним.</span><span class="sxs-lookup"><span data-stu-id="effa1-148">If **Default.aspx.cs** is not visible, expand **Default.aspx** by clicking on the triangle next to it.</span></span>  
+    >  <span data-ttu-id="c685b-147">Файл **Default.aspx.cs** может быть скрыт в узле **Default.aspx** в обозревателе решений.</span><span class="sxs-lookup"><span data-stu-id="c685b-147">**Default.aspx.cs** may be hidden beneath **Default.aspx** in Solution Explorer.</span></span> <span data-ttu-id="c685b-148">Если файл **Default.aspx.cs** не отображается, разверните узел **Default.aspx**, щелкнув значок треугольника рядом с ним.</span><span class="sxs-lookup"><span data-stu-id="c685b-148">If **Default.aspx.cs** is not visible, expand **Default.aspx** by clicking on the triangle next to it.</span></span>  
   
-3.  <span data-ttu-id="effa1-149">Замените существующий код метода **Page_Load** в файле **Default.aspx.cs** следующим:</span><span class="sxs-lookup"><span data-stu-id="effa1-149">Replace the existing code in the **Page_Load** method of **Default.aspx.cs** with the following code:</span></span>  
+3.  <span data-ttu-id="c685b-149">Замените существующий код метода **Page_Load** в файле **Default.aspx.cs** следующим:</span><span class="sxs-lookup"><span data-stu-id="c685b-149">Replace the existing code in the **Page_Load** method of **Default.aspx.cs** with the following code:</span></span>  
   
     ```csharp  
     using System;  
@@ -203,8 +202,8 @@ ms.locfileid: "43519049"
     }  
     ```  
   
-4.  <span data-ttu-id="effa1-150">Сохраните файл **Default.aspx.cs** и выполните построение решения.</span><span class="sxs-lookup"><span data-stu-id="effa1-150">Save **Default.aspx.cs**, and build the solution.</span></span>  
+4.  <span data-ttu-id="c685b-150">Сохраните файл **Default.aspx.cs** и выполните построение решения.</span><span class="sxs-lookup"><span data-stu-id="c685b-150">Save **Default.aspx.cs**, and build the solution.</span></span>  
   
-5.  <span data-ttu-id="effa1-151">Запустите решение, нажав клавишу **F5**.</span><span class="sxs-lookup"><span data-stu-id="effa1-151">Run the solution by pressing the **F5** key.</span></span>  
+5.  <span data-ttu-id="c685b-151">Запустите решение, нажав клавишу **F5**.</span><span class="sxs-lookup"><span data-stu-id="c685b-151">Run the solution by pressing the **F5** key.</span></span>  
   
-6.  <span data-ttu-id="effa1-152">Появится страница, на которой будут отображены утверждения в маркере безопасности, выданном службой маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="effa1-152">You should be presented with the page that displays the claims in the token that was issued to you by the Security Token Service.</span></span>
+6.  <span data-ttu-id="c685b-152">Появится страница, на которой будут отображены утверждения в маркере безопасности, выданном службой маркеров безопасности.</span><span class="sxs-lookup"><span data-stu-id="c685b-152">You should be presented with the page that displays the claims in the token that was issued to you by the Security Token Service.</span></span>
