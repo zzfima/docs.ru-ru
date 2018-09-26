@@ -10,11 +10,11 @@ helpviewer_keywords:
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
 ms.openlocfilehash: 1085de3447bd6101fcccf6cae7b37afac24d37f1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45613986"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45971277"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Операторы и выражения (Руководство по программированию на C#)
 Код приложения на C# состоит из операторов, которые включают ключевые слова, выражения и символьные операторы. В этом разделе содержатся сведения об этих базовых элементах программы на C#.  
