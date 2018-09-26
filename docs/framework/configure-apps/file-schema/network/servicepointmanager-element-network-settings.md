@@ -1,5 +1,5 @@
 ---
-title: '&lt;servicePointManager&gt; элемент (параметры сети)'
+title: '&lt;servicePointManager&gt; (сетевые параметры)'
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 5903174f125938923a63fc031421a8d5a020e56d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 2aaf590975d9fd3f5d78cb64d8d2b1c38c0e8dc7
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47113073"
 ---
-# <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; элемент (параметры сети)
+# <a name="ltservicepointmanagergt-element-network-settings"></a>&lt;servicePointManager&gt; (сетевые параметры)
 Настраивает подключения к сетевым ресурсам.  
   
  \<configuration>  
@@ -46,13 +46,13 @@ ms.lasthandoff: 05/03/2018
   
 |**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))|**Описание**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|Указывает, должен ли система проверить соответствие имени узла сервера перед использованием сертификата имя сертификата. Значение по умолчанию — `true`.|  
-|`checkCertificateRevocationList`|Указывает, должна ли система проверять был отозван ли сертификат, перед использованием сертификата. Значение по умолчанию — `false`.|  
-|`dnsRefreshTimeout`|Указывает срок службы доменных имен (DNS) разрешений кэшируются в сочетании с параметром циклического перебора DNS, в миллисекундах. По умолчанию установлено значение 120 000 миллисекунд (2 минуты).|  
-|`enableDnsRoundRobin`|Указывает имена ли разрешенные DNS-узла с помощью нескольких адресов протокола IP (Internet) возвращаемого все адреса или только первый из них. Значение по умолчанию — `false`.|  
-|`encryptionPolicy`|Указывает политики шифрования, примененные к сеанса SSL/TLS на <xref:System.Net.ServicePointManager> экземпляра. Возможные значения равны значениям для <xref:System.Net.Security.EncryptionPolicy> перечисления. Использование <xref:System.Security.Authentication.CipherAlgorithmType.Null> является обязательным, если политика шифрования `NoEncryption`. Значение по умолчанию — `RequireEncryption`.|  
-|`expect100Continue`|Указывает ли методам POST ожидать получения `100-continue` ответа от сервера. Значение по умолчанию — `true`.|  
-|`useNagleAlgorithm`|Указывает, управляемых диспетчером службы точки подключения использовать алгоритм Nagle. Значение по умолчанию — `true`.|  
+|`checkCertificateName`|Указывает, должен ли система проверить соответствие имени узла сервера имен на сертификат перед использованием сертификата. Значение по умолчанию — `true`.|  
+|`checkCertificateRevocationList`|Указывает, должна ли система проверять был отозван ли сертификат, прежде чем использовать сертификат. Значение по умолчанию — `false`.|  
+|`dnsRefreshTimeout`|Указывает продолжительность службы доменных имен (DNS) разрешений кэшируются в сочетании с параметром циклического перебора DNS, в миллисекундах. По умолчанию установлено значение 120 000 миллисекунд (2 минуты).|  
+|`enableDnsRoundRobin`|Указывает имя ли разрешение DNS узла с несколькими адресами протокола Интернета (IP) возвращаемое все адреса или только первый из них. Значение по умолчанию — `false`.|  
+|`encryptionPolicy`|Указывает политики шифрования, примененный к сеанс SSL/TLS на <xref:System.Net.ServicePointManager> экземпляра. Возможные значения эквивалентны значениям <xref:System.Net.Security.EncryptionPolicy> перечисления. Использование <xref:System.Security.Authentication.CipherAlgorithmType.Null> является обязательным, если настроена политика шифрования `NoEncryption`. Значение по умолчанию — `RequireEncryption`.|  
+|`expect100Continue`|Указывает ли методы POST следует ожидать появления `100-continue` ответа от сервера. Значение по умолчанию — `true`.|  
+|`useNagleAlgorithm`|Указывает, использовать ли подключениям, управляемым диспетчером точки службы алгоритм Nagle. Значение по умолчанию — `true`.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  

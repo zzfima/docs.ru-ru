@@ -3,20 +3,19 @@ title: Безопасность транспорта
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: e7f804d34a47c5508839636a6fe5045ebce3972e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7a52ac584abe766a7517436e697aff89333c9833
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498219"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171430"
 ---
 # <a name="transport-security"></a>Безопасность транспорта
 Безопасность транспорта в Windows Communication Foundation (WCF), зависит от выбранной привязки. Транспорт, реализуемый привязкой, определяет фактический механизм безопасности. В подразделах данного раздела описываются реализуемые механизмы и их параметры.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Общие сведения о безопасности транспорта](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)  
- Основные сведения о безопасности транспортировки в WCF.  
+ Основные сведения о безопасности транспорта в WCF.  
   
  [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)  
  Объясняет, как WCF реализует Secure Sockets Layer (SSL или HTTPS).  

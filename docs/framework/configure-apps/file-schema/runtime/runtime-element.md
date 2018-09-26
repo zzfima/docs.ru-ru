@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: fb050a8d73c42094caf83ba00c5dfc2e4d472723
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0640b4c54b6f1429bce4947ec536352f240ca719
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748676"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47172736"
 ---
 # <a name="ltruntimegt-element"></a>&lt;Среда выполнения&gt; элемент
-Предоставляет сведения, используемые средой CLR для настройки приложений.  
+Предоставляет информацию о используется среда CLR для настройки приложений.  
   
  \<configuration>  
 \<Среда выполнения >  
@@ -33,7 +32,7 @@ ms.locfileid: "32748676"
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны дочерние и родительские элементы.  
+ В следующих разделах дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
  Отсутствует.  
@@ -49,9 +48,9 @@ ms.locfileid: "32748676"
 |[\<appDomainResourceMonitoring>](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)|Указывает среде собирать статистику для всех доменов приложений в процессе за весь период его существования.|  
 |[\<assemblyBinding>](../../../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)|Содержит сведения о перенаправлении версии сборки и о расположениях сборок.|  
 |[\<bypassTrustedAppStrongNames>](../../../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)|Указывает, следует ли обходить проверку строгих имен для доверенных сборок.|  
-|[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Указывает, что среда выполнения должна использовать устаревший порядок сортировки, при выполнении сравнения строк.|  
+|[\<CompatSortNLSVersion>](../../../../../docs/framework/configure-apps/file-schema/runtime/compatsortnlsversion-element.md)|Указывает, что при операциях сравнения строк, среда выполнения должна использовать устаревший порядок сортировки.|  
 |[\<developmentMode>](../../../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)|Указывает, выполняет ли среда поиск сборок в каталогах, указанных в переменной среды DEVPATH.|  
-|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Указывает, отключено ли кэширование ошибок привязки, который является режимом по умолчанию в платформе .NET Framework версии 2.0.|  
+|[\<disableCachingBindingFailures>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecachingbindingfailures-element.md)|Указывает, отключено ли кэширование ошибок привязки, которая является поведением по умолчанию в .NET Framework версии 2.0.|  
 |[\<disableCommitThreadStack>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablecommitthreadstack-element.md)|Указывает, фиксируется ли весь стек потоков при запуске потока.|  
 |[\<disableFusionUpdatesFromADManager>](../../../../../docs/framework/configure-apps/file-schema/runtime/disablefusionupdatesfromadmanager-element.md)|Указывает, отключено ли поведение по умолчанию, которое разрешает хост-приложению среды выполнения переопределять параметры конфигурации для домена приложения.|  
 |[\<EnableAmPmParseAdjustment>](../../../../../docs/framework/configure-apps/file-schema/runtime/enableampmparseadjustment-element.md)|Определяет, используют ли методы анализа даты и времени скорректированной набор правил для анализа строк даты, содержащих только день, месяц, час и указатель AM/PM.|  
@@ -59,7 +58,7 @@ ms.locfileid: "32748676"
 |[\<etwEnable>](../../../../../docs/framework/configure-apps/file-schema/runtime/etwenable-element.md)|Указывает, следует ли включить трассировку событий Windows для событий среды CLR.|  
 |[\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md)|Указывает, использует ли файл PerfCounter.dll параметр реестра CategoryOptions в приложении .NET Framework версии 1.1, чтобы определить, следует ли загружать данные счетчиков производительности из общей памяти конкретной категории или глобальной памяти.|  
 |[\<gcAllowVeryLargeObjects>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)|На 64 разрядных платформах позволяет использовать массивы, размер которых превышает 2 гигабайта (ГБ).|  
-|[\<gcConcurrent>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)|Указывает, является ли общеязыковая среда выполнения выполняет сборку мусора параллельно.|  
+|[\<gcConcurrent>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)|Указывает, будет ли среда CLR производить параллельную сборку мусора.|  
 |[\<GCCpuGroup>](../../../../../docs/framework/configure-apps/file-schema/runtime/gccpugroup-element.md)|Определяет, поддерживает ли сборка мусора несколько групп ЦП.|  
 |[\<gcServer>](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)|Указывает, выполняет ли среда CLR сборку мусора сервера.|  
 |[\<generatePublisherEvidence>](../../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)|Указывает, использует ли среда выполнения политику разграничения доступа кода, используемую издателем.|  
@@ -88,9 +87,9 @@ ms.locfileid: "32748676"
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
   
 ## <a name="remarks"></a>Примечания  
- Дочерние элементы в [ \<среды выполнения >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) раздел файла конфигурации используются средой CLR для настройки, как приложение выполняется. Например [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) элемент определяет, использует ли сборщик мусора рабочей станции или сервера сборщик мусора, [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) определяет, вычисляет ли среда хэш-кодов для строку для каждого приложения или отдельного на уровне домена приложения и `AppContextSwitchOverrides` элемент позволяет пользователям библиотеки подписаться на по или отказаться от измененные функциональные возможности, предоставляемые библиотекой.  
+ Дочерние элементы в [ \<среды выполнения >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) раздел файла конфигурации используются средой CLR для настройки, как приложение выполняет. Например [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md) элемент определяет, использует ли сборщик мусора рабочей станции или сервера сборщик мусора, [ \< UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md) определяет, является ли среда CLR вычисляет хэш-коды для строки для каждого приложения или на уровне домена приложения и `AppContextSwitchOverrides` элемент позволяет пользователям библиотек Чтобы согласиться или отказаться от измененные функции, предоставляемые библиотекой.  
   
- Элементы в [ \<среды выполнения >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) раздел чтения автоматически средой CLR при запуске приложения. Можно также определить файл конфигурации для домена приложения не по умолчанию, указав ее имя на <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> свойства; его параметры считываются автоматически при загрузке домена приложения. Следует редко, если вообще нет необходимости непосредственно прочитать параметры в [ \<среды выполнения >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) в файле конфигурации приложения.  
+ Элементы в [ \<среды выполнения >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) разделе считываются автоматически средой CLR при запуске приложения. Можно также определить файл конфигурации для домена приложения не по умолчанию, указав ее имя на <xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType> свойство; его параметры считываются автоматически при загрузке домена приложения. Следует редко, если когда-нибудь, нет необходимости напрямую прочитать параметры в [ \<среды выполнения >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) раздел в файле конфигурации приложения.  
   
 ## <a name="see-also"></a>См. также  
  [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  

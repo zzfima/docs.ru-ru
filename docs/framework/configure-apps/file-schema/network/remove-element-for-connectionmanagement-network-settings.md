@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8d503e06139fc6ce14f4d2c50c46e4bcfeb1b860
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754484"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47085548"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;Удалить&gt; элемент для connectionManagement (параметры сети)
 Удаляет IP-адрес или DNS-имя из списка управления подключениями.  
@@ -26,7 +25,7 @@ ms.locfileid: "32754484"
  \<configuration>  
 \<System.NET >  
 \<connectionManagement >  
-\<Удалите >  
+\<Удалить >  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,13 +56,13 @@ ms.locfileid: "32754484"
 ## <a name="remarks"></a>Примечания  
  `remove` Элемент удаляет запись списка управления подключением для указанного сервера.  
   
- Значение `address` атрибут должен иметь допустимый IP-адрес или имя.  
+ Значение `address` атрибут должен быть допустимым IP-адресом или именем.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- Следующий пример удаляет все записи списка управления подключением www.adventure-works.com сервера и затем приложение настраивается для использования четырех подключений к серверу www.contoso.com и двух подключений ко всем другим серверам.  
+ В следующем примере удаляет все записи списка управления подключением www.adventure-works.com сервера и затем настраивает приложение для использования четырех подключений к серверу www.contoso.com и двух подключений ко всем остальным серверам.  
   
 ```xml  
 <configuration>  

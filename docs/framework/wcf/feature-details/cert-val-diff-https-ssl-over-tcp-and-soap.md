@@ -8,16 +8,15 @@ helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 744d9208f6be47965b89ddd9555b99feab9e18b7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 79b5e86b689da0678b0d949d2a335dbfe3836f0e
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489473"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47077217"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>Различия проверки сертификатов с использованием средств обеспечения безопасности HTTPS, SSL по TCP и SOAP
-Можно использовать сертификаты в Windows Communication Foundation (WCF) с безопасность на уровне сообщений (SOAP) в дополнение к безопасности транспортного уровня (TLS) через HTTP (HTTPS) или TCP. В данном разделе описываются различия в способе, который используется для проверки сертификатов.  
+Можно использовать сертификаты в Windows Communication Foundation (WCF) (SOAP) на уровне сообщений безопасности в дополнение к функциям безопасности транспортного уровня (TLS) по протоколу HTTP (HTTPS) или TCP. В данном разделе описываются различия в способе, который используется для проверки сертификатов.  
   
 ## <a name="validation-of-https-client-certificates"></a>Проверка сертификатов клиента HTTPS  
  При использовании HTTPS для связи клиента и службы сертификат, который клиент использует для проверки подлинности службы, должен поддерживать цепь доверия. То есть, сертификат должен связываться по цепочке с доверенным корневым центром сертификации. Если нет, уровень HTTP вызывает исключение <xref:System.Net.WebException> с сообщением «удаленный сервер вернул ошибку: (403) запрещено.» WCF обрабатывает данное исключение как <xref:System.ServiceModel.Security.MessageSecurityException>.  
