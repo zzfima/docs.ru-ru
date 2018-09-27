@@ -2,15 +2,15 @@
 title: Интеграция с System.Web.Routing
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 540795838109b99111279bc693a765f58a1ff18e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2df1ff8230cd79f61fdee971d783544054bd8196
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504848"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47232350"
 ---
 # <a name="systemwebrouting-integration"></a>Интеграция с System.Web.Routing
-При размещении службы Windows Communication Foundation (WCF) в Internet Information Service (IIS), необходимо поместить SVC-файла в виртуальном каталоге. Этот SVC-файл указывает фабрику узла службы, которую необходимо использовать, а также класс, реализующий эту службу. При составлении запросов к службе указывается SVC-файла в URI, например: http://contoso.com/EmployeeServce.svc. Для разработчиков служб REST такой тип URI не является оптимальным. URI для служб REST указывают определенный ресурс и обычно не имеют модулей. <xref:System.Web.Routing> Компонент интеграции позволяет размещать службы WCF REST, которая отвечает на URI без расширения. Дополнительные сведения о маршрутизации см. в разделе [маршрутизация ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660) и [AspNetRouteIntegration](../../../../docs/framework/wcf/samples/aspnetrouteintegration.md) образца.  
+При размещении службы Windows Communication Foundation (WCF) в Internet Information Service (IIS), необходимо поместить SVC-файла в виртуальном каталоге. Этот SVC-файл указывает фабрику узла службы, которую необходимо использовать, а также класс, реализующий эту службу. При составлении запросов к службе указывается SVC-файла в URI, например: http://contoso.com/EmployeeServce.svc. Для разработчиков служб REST такой тип URI не является оптимальным. URI для служб REST указывают определенный ресурс и обычно не имеют модулей. <xref:System.Web.Routing> Компонент интеграции позволяет размещать службы WCF REST, которая отвечает на URI без расширения. Дополнительные сведения о маршрутизации см. в разделе [маршрутизация ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660).  
   
 ## <a name="using-systemwebrouting-integration"></a>Использование интеграции System.Web.Routing  
  Для использования функции интеграции <xref:System.Web.Routing> с помощью класса <xref:System.ServiceModel.Activation.ServiceRoute> создайте один или несколько маршрутов и добавьте их в <xref:System.Web.Routing.RouteTable> в файле Global.asax. Это маршруты указывают относительные URI, по которым отвечает служба. Следующий пример показывает, как это сделать.  

@@ -3,13 +3,12 @@ title: Исключения безопасности
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 author: BrucePerlerMS
-manager: mbaldwin
-ms.openlocfilehash: 057d01ba918a41df0bdf2acc30c9bb35777ebc27
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e5795da5765e3dadfb169b1819b7154bd6ce0a9
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474887"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233264"
 ---
 # <a name="security-exceptions"></a>Исключения безопасности
 В этом разделе перечислены все исключения безопасности.  
@@ -30,7 +29,7 @@ ms.locfileid: "33474887"
 |BindingDoesNotSupportWindowsIdenityForImpersonation|В указанной операции контракта для автоматического олицетворения требуется удостоверение Windows. В указанной привязке для указанного контракта отсутствует удостоверение Windows, представляющее вызывающую сторону.|  
 |CachedNegotiationStateQuotaReached|Служба не может кэшировать состояние согласования, так как достигнута указанная емкость. Повторите запрос.|  
 |CacheQuotaReached|Не удается добавить элемент. Максимальный размер кэша равен указанному значению.|  
-|CannotDetermineSPNBasedOnAddress|Клиент не может определить имя службы-участника на основании имени в указанном конечном адресе для SspiNegotiation/Kerberos. Целевому адресу должен быть удостоверение имени участника-пользователя (например acmedomain\\\alice) или имя участника-службы (например, узел/bobs-machine).|  
+|CannotDetermineSPNBasedOnAddress|Клиент не может определить имя службы-участника на основании имени в указанном конечном адресе для SspiNegotiation/Kerberos. Целевой адрес удостоверение должно быть удостоверение имени участника-пользователя (например acmedomain\\\alice) или удостоверение имени участника-службы (например, узел/bobs-machine).|  
 |CannotFindCert|Не удается найти сертификат X.509 с помощью следующих условий поиска: StoreName, StoreLocation, FindType, FindValue.|  
 |CannotFindCertForTarget|Не удается найти сертификат X.509 с помощью следующих условий поиска: StoreName, StoreLocation, FindType, FindValue для указанного целевого объекта.|  
 |CannotFindCorrelationStateForApplyingSecurity|Не удается найти состояние корреляции для применения безопасности к ответу респондента.|  
