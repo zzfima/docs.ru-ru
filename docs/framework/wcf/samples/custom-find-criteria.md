@@ -3,11 +3,11 @@ title: Пользовательские критерии поиска
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: 699260fcef7680710f721d213dbf1126ebf7a896
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070472"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400781"
 ---
 # <a name="custom-find-criteria"></a>Пользовательские критерии поиска
 В этом образце показано, как создать логику сопоставления пользовательских областей и реализовать пользовательскую службу обнаружения. Клиенты используют функции сопоставления пользовательских областей, чтобы расширить функции поиска, предоставляемые системой WCF Discovery. В этом образце реализован следующий сценарий.  

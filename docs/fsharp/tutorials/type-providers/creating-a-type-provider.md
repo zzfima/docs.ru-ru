@@ -3,11 +3,11 @@ title: 'Учебник: Создание поставщика типов (F #)'
 description: 'Сведения о создании собственных поставщиков типов F # в F # 3.0, изучив несколько поставщиков простого типа, чтобы продемонстрировать основные понятия.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47109135"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397963"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Учебник: Создание поставщика типов
 

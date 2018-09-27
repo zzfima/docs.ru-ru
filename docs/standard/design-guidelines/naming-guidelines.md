@@ -14,11 +14,11 @@ ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 70888e068782add5ebe5ae1c7da3bdee842faea8
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070218"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47398882"
 ---
 # <a name="naming-guidelines"></a>Правила именования
 Следуя согласованный набор соглашения об именовании при разработке инфраструктуры может быть основной свой вклад в удобство использования платформы. Он позволяет платформе использовать многие разработчики широко отдельных проектов. Помимо согласованности формы имена элементов платформы должны быть понятными и должен передать функции каждого элемента.  

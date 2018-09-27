@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
 ms.openlocfilehash: a35a0bf54d7850e4b10e59c259e4ee512bc93aad
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47071744"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47398684"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>Практическое руководство. Сборка строки подключения EntityConnection
 В этом разделе содержится пример создания экземпляра <xref:System.Data.EntityClient.EntityConnection>.  

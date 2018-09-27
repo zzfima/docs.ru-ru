@@ -10,11 +10,11 @@ ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 86b85779f4eff72e8ab910a5ccd32fd369270509
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47085688"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47399012"
 ---
 # <a name="ltlistenersgt-element-for-ltsourcegt"></a>&lt;прослушиватели&gt; элемент для &lt;источника&gt;
 Добавляет или удаляет прослушиватели в <xref:System.Diagnostics.TraceSource.Listeners%2A> коллекции для <xref:System.Diagnostics.TraceSource>. Прослушиватель направляет данные трассировки соответствующему целевому объекту, например журнал, окно или текстовый файл.  

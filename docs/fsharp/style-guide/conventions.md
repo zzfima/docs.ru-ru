@@ -3,11 +3,11 @@ title: 'Соглашения о написании кода F #'
 description: 'Дополнительные общие рекомендации и способы, при написании кода F #.'
 ms.date: 05/14/2018
 ms.openlocfilehash: b9afd1fbfbd9d8e04d9bfaa07615de045b7e05fe
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47078484"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47237413"
 ---
 # <a name="f-coding-conventions"></a>Соглашения о написании кода F #
 
