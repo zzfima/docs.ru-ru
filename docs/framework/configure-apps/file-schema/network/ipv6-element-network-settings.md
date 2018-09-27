@@ -11,21 +11,21 @@ ms.assetid: 10b79aef-327b-4718-a892-e11f55e4d169
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 5b1707d7490de07520603f6fdf6d1ee1a44ffba7
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171417"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47400508"
 ---
-# <a name="ltipv6gt-element-network-settings"></a><span data-ttu-id="5cfd5-102">&lt;IPv6&gt; (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="5cfd5-102">&lt;ipv6&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="5cfd5-103">Включает протокол IP версии 6 (IPv6) ответы от устаревших членов из <xref:System.Net.Dns> класса.</span><span class="sxs-lookup"><span data-stu-id="5cfd5-103">Enables Internet Protocol version 6 (IPv6) responses from obsolete members of the <xref:System.Net.Dns> class.</span></span>  
+# <a name="ltipv6gt-element-network-settings"></a><span data-ttu-id="84780-102">&lt;IPv6&gt; (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="84780-102">&lt;ipv6&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="84780-103">Включает протокол IP версии 6 (IPv6) ответы от устаревших членов из <xref:System.Net.Dns> класса.</span><span class="sxs-lookup"><span data-stu-id="84780-103">Enables Internet Protocol version 6 (IPv6) responses from obsolete members of the <xref:System.Net.Dns> class.</span></span>  
   
- <span data-ttu-id="5cfd5-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="5cfd5-104">\<configuration></span></span>  
-<span data-ttu-id="5cfd5-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="5cfd5-105">\<system.net></span></span>  
-<span data-ttu-id="5cfd5-106">\<Параметры ></span><span class="sxs-lookup"><span data-stu-id="5cfd5-106">\<settings></span></span>  
-<span data-ttu-id="5cfd5-107">\<IPv6 ></span><span class="sxs-lookup"><span data-stu-id="5cfd5-107">\<ipv6></span></span>  
+ <span data-ttu-id="84780-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="84780-104">\<configuration></span></span>  
+<span data-ttu-id="84780-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="84780-105">\<system.net></span></span>  
+<span data-ttu-id="84780-106">\<Параметры ></span><span class="sxs-lookup"><span data-stu-id="84780-106">\<settings></span></span>  
+<span data-ttu-id="84780-107">\<IPv6 ></span><span class="sxs-lookup"><span data-stu-id="84780-107">\<ipv6></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5cfd5-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="5cfd5-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="84780-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="84780-108">Syntax</span></span>  
   
 ```xml  
 <ipv6  
@@ -33,32 +33,32 @@ ms.locfileid: "47171417"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="5cfd5-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="5cfd5-109">Attributes and Elements</span></span>  
- <span data-ttu-id="5cfd5-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="5cfd5-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="84780-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="84780-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="84780-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="84780-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="5cfd5-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="5cfd5-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="84780-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="84780-111">Attributes</span></span>  
   
-|<span data-ttu-id="5cfd5-112">**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))</span><span class="sxs-lookup"><span data-stu-id="5cfd5-112">**Attribute**</span></span>|<span data-ttu-id="5cfd5-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="5cfd5-113">**Description**</span></span>|  
+|<span data-ttu-id="84780-112">**Attribute (XElement Dynamic Property)** (Attribute (динамическое свойство XElement))</span><span class="sxs-lookup"><span data-stu-id="84780-112">**Attribute**</span></span>|<span data-ttu-id="84780-113">**Описание**</span><span class="sxs-lookup"><span data-stu-id="84780-113">**Description**</span></span>|  
 |-------------------|---------------------|  
-|`enabled`|<span data-ttu-id="5cfd5-114">Указывает ли члены <xref:System.Net.Dns> класса вернуть IP версии 6 (IPv6) адреса.</span><span class="sxs-lookup"><span data-stu-id="5cfd5-114">Specifies whether members of the <xref:System.Net.Dns> class return Internet Protocol version 6 (IPv6) addresses.</span></span> <span data-ttu-id="5cfd5-115">Значение по умолчанию — `false`.</span><span class="sxs-lookup"><span data-stu-id="5cfd5-115">The default value is `false`.</span></span>|  
+|`enabled`|<span data-ttu-id="84780-114">Указывает ли члены <xref:System.Net.Dns> класса вернуть IP версии 6 (IPv6) адреса.</span><span class="sxs-lookup"><span data-stu-id="84780-114">Specifies whether members of the <xref:System.Net.Dns> class return Internet Protocol version 6 (IPv6) addresses.</span></span> <span data-ttu-id="84780-115">Значение по умолчанию — `false`.</span><span class="sxs-lookup"><span data-stu-id="84780-115">The default value is `false`.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="5cfd5-116">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="5cfd5-116">Child Elements</span></span>  
- <span data-ttu-id="5cfd5-117">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="5cfd5-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="84780-116">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="84780-116">Child Elements</span></span>  
+ <span data-ttu-id="84780-117">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="84780-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="5cfd5-118">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="5cfd5-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="84780-118">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="84780-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="5cfd5-119">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="5cfd5-119">**Element**</span></span>|<span data-ttu-id="5cfd5-120">**Описание**</span><span class="sxs-lookup"><span data-stu-id="5cfd5-120">**Description**</span></span>|  
+|<span data-ttu-id="84780-119">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="84780-119">**Element**</span></span>|<span data-ttu-id="84780-120">**Описание**</span><span class="sxs-lookup"><span data-stu-id="84780-120">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="5cfd5-121">Параметры</span><span class="sxs-lookup"><span data-stu-id="5cfd5-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="5cfd5-122">Настраивает основные параметры сети для пространства имен <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="5cfd5-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
+|[<span data-ttu-id="84780-121">Параметры</span><span class="sxs-lookup"><span data-stu-id="84780-121">settings</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<span data-ttu-id="84780-122">Настраивает основные параметры сети для пространства имен <xref:System.Net>.</span><span class="sxs-lookup"><span data-stu-id="84780-122">Configures basic network options for the <xref:System.Net> namespace.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="5cfd5-123">Примечания</span><span class="sxs-lookup"><span data-stu-id="5cfd5-123">Remarks</span></span>  
- <span data-ttu-id="5cfd5-124">Этот параметр обеспечивает поддержку IPv6 для устаревших членов <xref:System.Net.Dns> класса: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, и <xref:System.Net.Dns.Resolve%2A>.</span><span class="sxs-lookup"><span data-stu-id="5cfd5-124">This setting enables IPv6 support for the obsolete members of the <xref:System.Net.Dns> class: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, and <xref:System.Net.Dns.Resolve%2A>.</span></span> <span data-ttu-id="5cfd5-125">Для других членов <xref:System.Net?displayProperty=nameWithType> пространства имен, IPv6-адреса может быть возвращено, если была включена поддержка IPv6 в операционной системе.</span><span class="sxs-lookup"><span data-stu-id="5cfd5-125">For other members of the <xref:System.Net?displayProperty=nameWithType> namespace, IPv6 addresses may be returned if IPv6 is enabled in the operating system.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="84780-123">Примечания</span><span class="sxs-lookup"><span data-stu-id="84780-123">Remarks</span></span>  
+ <span data-ttu-id="84780-124">Этот параметр обеспечивает поддержку IPv6 для устаревших членов <xref:System.Net.Dns> класса: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, и <xref:System.Net.Dns.Resolve%2A>.</span><span class="sxs-lookup"><span data-stu-id="84780-124">This setting enables IPv6 support for the obsolete members of the <xref:System.Net.Dns> class: <xref:System.Net.Dns.BeginGetHostByName%2A>, <xref:System.Net.Dns.BeginResolve%2A>, <xref:System.Net.Dns.EndGetHostByName%2A>, <xref:System.Net.Dns.EndResolve%2A>, <xref:System.Net.Dns.GetHostByAddress%2A>, <xref:System.Net.Dns.GetHostByName%2A>, and <xref:System.Net.Dns.Resolve%2A>.</span></span> <span data-ttu-id="84780-125">Для других членов <xref:System.Net?displayProperty=nameWithType> пространства имен, IPv6-адреса может быть возвращено, если была включена поддержка IPv6 в операционной системе.</span><span class="sxs-lookup"><span data-stu-id="84780-125">For other members of the <xref:System.Net?displayProperty=nameWithType> namespace, IPv6 addresses may be returned if IPv6 is enabled in the operating system.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="5cfd5-126">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="5cfd5-126">Configuration Files</span></span>  
- <span data-ttu-id="5cfd5-127">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="5cfd5-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="84780-126">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="84780-126">Configuration Files</span></span>  
+ <span data-ttu-id="84780-127">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="84780-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="5cfd5-128">Пример</span><span class="sxs-lookup"><span data-stu-id="5cfd5-128">Example</span></span>  
- <span data-ttu-id="5cfd5-129">В следующем примере показано, как включить поддержку IPv6 для <xref:System.Net.Dns> класса.</span><span class="sxs-lookup"><span data-stu-id="5cfd5-129">The following example shows how to enable IPv6 support for the <xref:System.Net.Dns> class.</span></span>  
+## <a name="example"></a><span data-ttu-id="84780-128">Пример</span><span class="sxs-lookup"><span data-stu-id="84780-128">Example</span></span>  
+ <span data-ttu-id="84780-129">В следующем примере показано, как включить поддержку IPv6 для <xref:System.Net.Dns> класса.</span><span class="sxs-lookup"><span data-stu-id="84780-129">The following example shows how to enable IPv6 support for the <xref:System.Net.Dns> class.</span></span>  
   
 ```xml  
 <configuration>  
@@ -70,8 +70,8 @@ ms.locfileid: "47171417"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="5cfd5-130">См. также</span><span class="sxs-lookup"><span data-stu-id="5cfd5-130">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="84780-130">См. также</span><span class="sxs-lookup"><span data-stu-id="84780-130">See Also</span></span>  
  <xref:System.Net?displayProperty=nameWithType>  
  <xref:System.Net.Dns?displayProperty=nameWithType>  
  <xref:System.Net.Sockets.Socket.OSSupportsIPv6%2A?displayProperty=nameWithType>  
- [<span data-ttu-id="5cfd5-131">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="5cfd5-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="84780-131">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="84780-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
