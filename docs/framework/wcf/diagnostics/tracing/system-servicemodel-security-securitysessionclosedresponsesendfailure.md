@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 214e88fe-0476-4604-bca6-1b2f25fe1194
 author: BrucePerlerMS
 ms.openlocfilehash: 49663218e2896b2528f27e7db6f200984f4f7b2e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070712"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47425983"
 ---
-# <a name="systemservicemodelsecuritysecuritysessionclosedresponsesendfailure"></a><span data-ttu-id="2daaf-102">System.ServiceModel.Security.SecuritySessionClosedResponseSendFailure</span><span class="sxs-lookup"><span data-stu-id="2daaf-102">System.ServiceModel.Security.SecuritySessionClosedResponseSendFailure</span></span>
-<span data-ttu-id="2daaf-103">System.ServiceModel.Security.SecuritySessionClosedResponseSendFailure</span><span class="sxs-lookup"><span data-stu-id="2daaf-103">System.ServiceModel.Security.SecuritySessionClosedResponseSendFailure</span></span>  
+# <a name="systemservicemodelsecuritysecuritysessionclosedresponsesendfailure"></a><span data-ttu-id="db7cc-102">System.ServiceModel.Security.SecuritySessionClosedResponseSendFailure</span><span class="sxs-lookup"><span data-stu-id="db7cc-102">System.ServiceModel.Security.SecuritySessionClosedResponseSendFailure</span></span>
+<span data-ttu-id="db7cc-103">System.ServiceModel.Security.SecuritySessionClosedResponseSendFailure</span><span class="sxs-lookup"><span data-stu-id="db7cc-103">System.ServiceModel.Security.SecuritySessionClosedResponseSendFailure</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2daaf-104">Описание</span><span class="sxs-lookup"><span data-stu-id="2daaf-104">Description</span></span>  
- <span data-ttu-id="2daaf-105">Сбой при отправлении клиенту ответного сообщения о закрытии сеанса безопасности.</span><span class="sxs-lookup"><span data-stu-id="2daaf-105">A failure occurred when sending a security session Close response to the client.</span></span>  
+## <a name="description"></a><span data-ttu-id="db7cc-104">Описание</span><span class="sxs-lookup"><span data-stu-id="db7cc-104">Description</span></span>  
+ <span data-ttu-id="db7cc-105">Сбой при отправлении клиенту ответного сообщения о закрытии сеанса безопасности.</span><span class="sxs-lookup"><span data-stu-id="db7cc-105">A failure occurred when sending a security session Close response to the client.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2daaf-106">См. также</span><span class="sxs-lookup"><span data-stu-id="2daaf-106">See Also</span></span>  
- [<span data-ttu-id="2daaf-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="2daaf-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="2daaf-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="2daaf-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="2daaf-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="2daaf-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="db7cc-106">См. также</span><span class="sxs-lookup"><span data-stu-id="db7cc-106">See Also</span></span>  
+ [<span data-ttu-id="db7cc-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="db7cc-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="db7cc-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="db7cc-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="db7cc-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="db7cc-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
