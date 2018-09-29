@@ -2,12 +2,12 @@
 title: Базовая служба HTTP
 ms.date: 03/30/2017
 ms.assetid: 27048b43-8a54-4f2a-9952-594bbfab10ad
-ms.openlocfilehash: 914ad5f04d980fd53cd07251461367356f00b4cc
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f97fcab1200b9c13860ab8030378b5402b087d7a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516633"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47455727"
 ---
 # <a name="basic-http-service"></a>Базовая служба HTTP
 Этот образец демонстрирует реализацию службы на базе HTTP, основанные на RPC - часто называют «POX» (Plain Old XML) службы — с помощью модели программирования REST Windows Communication Foundation (WCF). Этот образец состоит из двух компонентов: резидентной службы WCF HTTP (Service.cs) и консольного приложения (Program.cs), создает службу и выполняющего вызовы к нему.  
@@ -21,7 +21,7 @@ ms.locfileid: "43516633"
   
  Файл App.config настраивает для службы WCF конечную точку по умолчанию <xref:System.ServiceModel.Description.WebHttpEndpoint>, для свойства которого <xref:System.ServiceModel.Description.WebHttpEndpoint.HelpEnabled%2A> задано значение `true`. Таким образом, инфраструктура WCF создает автоматической страницу справки на основе HTML в `http://localhost:8000/Customers/help` , предоставляющий сведения о способах создания HTTP-запросов к службе и как использовать службы HTTP-ответа.  
   
- Файле Program.cs показывается, как можно использовать фабрику каналов WCF для вызова службы и обработки ответов. Заметьте, что это лишь один из способов доступа к WCF-службе. Также возможен доступ к службе с помощью других классов .NET Framework, например <xref:System.Net.HttpWebRequest> и <xref:System.Net.WebClient>. Другие примеры в пакете SDK (такие как [автоматический выбор формата](../../../../docs/framework/wcf/samples/automatic-format-selection.md) пример и [базовой службы ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md) образец) показано, как использовать эти классы для взаимодействия со службой WCF.  
+ Файле Program.cs показывается, как можно использовать фабрику каналов WCF для вызова службы и обработки ответов. Заметьте, что это лишь один из способов доступа к WCF-службе. Также возможен доступ к службе с помощью других классов .NET Framework, например <xref:System.Net.HttpWebRequest> и <xref:System.Net.WebClient>.
   
  Образец состоит из резидентной службы и клиента, которые работают в консольном приложении. Во время выполнения консольного приложения клиент совершает запросы к службе и выводит в окно консоли нужные сведения из ответов.  
   
@@ -41,7 +41,3 @@ ms.locfileid: "43516633"
 >  Если этот каталог не существует, перейдите к [Windows Communication Foundation (WCF) и образцы Windows Workflow Foundation (WF) для .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) для загрузки всех Windows Communication Foundation (WCF) и [!INCLUDE[wf1](../../../../includes/wf1-md.md)] примеры. Этот образец расположен в следующем каталоге.  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Web\BasicHttpService`  
-  
-## <a name="see-also"></a>См. также  
- [Автоматический выбор формата](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
- [Основная служба ресурсов](../../../../docs/framework/wcf/samples/basic-resource-service.md)

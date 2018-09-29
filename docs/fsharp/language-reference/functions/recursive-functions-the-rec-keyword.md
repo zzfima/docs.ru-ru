@@ -3,11 +3,11 @@ title: Рекурсивные функции. Ключевое слово rec (F
 description: 'Узнайте, как ключевое слово «rec» F # используется с ключевым словом «let» для определения рекурсивной функции.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 5aab6ed8ab0fc3c0f0bcfc93c3ce6518ec53254f
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47072677"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47456107"
 ---
 # <a name="recursive-functions-the-rec-keyword"></a>Рекурсивные функции. Ключевое слово rec
 
