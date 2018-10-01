@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /nologo compiler option [C#]
 ms.assetid: 426afb36-a8fb-469d-9c45-a35d9512557c
 ms.openlocfilehash: a8f4582e9c8d5a54d924ff5b456ef8ffd8cc56f3
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46583526"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47400953"
 ---
 # <a name="-nologo-c-compiler-options"></a>-nologo (параметры компилятора C#)
 Параметр **-nologo** отключает отображение приветствия при запуске компилятора и информационных сообщений во время компиляции.  

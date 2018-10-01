@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 6cf25d3d7dcde963f06729794716b75dffdb64ae
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: f4ae905b7500a8555691557b264985acf538d075
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207369"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47401255"
 ---
 # <a name="proxy-configuration"></a>Настройка прокси-сервера
 Прокси-сервер обрабатывает клиентские запросы на ресурсы. Прокси-сервер может возвращать запрошенный ресурс из своего кэша или пересылать запрос на сервер, на котором находится данный ресурс. Прокси-серверы могут повышать производительность сети, благодаря уменьшению числа запросов, отправляемых на удаленные серверы. Прокси-серверы также можно использовать для ограничения доступа к ресурсам.  

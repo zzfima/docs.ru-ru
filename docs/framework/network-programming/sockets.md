@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: b234846e63eab59602069aa72125df116e30375d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ce7ded81ad23c2df55afa9360435e8391fea7a63
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398291"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176829"
 ---
 # <a name="sockets"></a>сокеты
 Пространство имен <xref:System.Net.Sockets> содержит управляемую реализацию интерфейса Windows Sockets. Все остальные классы для доступа к сети в пространстве имен <xref:System.Net> основываются на этой реализации сокетов.  

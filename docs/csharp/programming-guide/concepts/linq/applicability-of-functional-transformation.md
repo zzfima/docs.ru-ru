@@ -3,11 +3,11 @@ title: Применимость функциональных преобразо�
 ms.date: 07/20/2015
 ms.assetid: c78107bd-b006-4574-a3d4-bbf808388ff3
 ms.openlocfilehash: baa3866c8c2c148a3080522d7c02e28e9d0fd945
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584227"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47231537"
 ---
 # <a name="applicability-of-functional-transformation-c"></a>Применимость функциональных преобразований (C#)
 Чисто функциональные преобразования применяются в самых разнообразных ситуациях.  

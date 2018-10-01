@@ -11,11 +11,11 @@ ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6910dfba0889b4eaf601960d13dfe87a3b8c2fa
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46706441"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47087439"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Потенциальные ошибки, связанные с параллелизмом данных и задач
 Во многих случаях <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> могут значительно повысить производительность по сравнению с обычным выполнением последовательных циклов. В то же время сложность процесса параллелизации может вызывать проблемы, которые в последовательном коде не встречаются или для него не типичны. В этом разделе перечислены некоторые рекомендации по написанию параллельных циклов.  

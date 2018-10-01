@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3fc7533-6956-42c6-bbc3-73e5a221027d
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 963a33975836531290a9471dbf9c727dc53ab557
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b744690cf2af1c2935a381c3edc2198840704425
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395857"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47197913"
 ---
 # <a name="socket-code-examples"></a>Примеры кода сокетов
 В следующем примере кода демонстрируется использование класса <xref:System.Net.Sockets.Socket> в качестве клиента для подключения к удаленным сетевым службам и в качестве сервера для прослушивания подключений удаленных клиентов.  

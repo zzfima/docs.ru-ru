@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 640caf57638acae9bbe39d3f1039bc08c036785f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c518c3bea980e23367477bd1b9851630454b728b
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002662"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47209890"
 ---
 # <a name="listening-with-sockets"></a>прослушивание с помощью сокетов
 Сокеты прослушивателя и сервера открывают порт в сети и ожидают, когда клиент подключится к этому порту. В этом примере показано, как создать удаленную службу для сети TCP/IP (хотя существуют и другие семейства сетевых адресов и протоколов).  

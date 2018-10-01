@@ -8,11 +8,11 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46577609"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47208254"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Развертывание приложений .NET Core с помощью средств командной строки (CLI)
 

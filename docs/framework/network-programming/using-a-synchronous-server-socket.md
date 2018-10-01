@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4f04255edf9533612dd6b0733331fb18587ff3f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e79c9a75e4513be91af1104195af3614b49092d
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398148"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47398554"
 ---
 # <a name="using-a-synchronous-server-socket"></a>Использование синхронного сокета сервера
 Синхронные сокеты сервера приостанавливают выполнение приложения до тех пор, пока сокет не получит запрос на соединение. Синхронные сокеты сервера не подходят для приложений, которые сильно загружают сеть своими операциями, но они могут подходить для простых сетевых приложений.  

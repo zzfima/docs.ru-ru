@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b064497c-d956-46b8-838d-7a0223c7e200
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 4d26b6df5d26a96bb8fa41dd3a8151fcb4a08b75
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 97096d6fa41cd25a92c23cd47008b33fb6037190
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43773661"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195411"
 ---
 # <a name="network-isolation-for-windows-store-apps"></a>Сетевая изоляция для приложений Магазина Windows
 Классы в пространствах имен <xref:System.Net>, <xref:System.Net.Http> и <xref:System.Net.Http.Headers> можно использовать для разработки классических приложений или приложений для Магазина Windows. При использовании в приложениях для Магазина Windows к классам из этих пространств имен применяется сетевая изоляция, которая является одной из составляющих модели обеспечения безопасности приложений в [!INCLUDE[win8](../../../includes/win8-md.md)]. Чтобы обеспечить доступ к сети, в манифесте приложения для Магазина Windows необходимо включить соответствующие сетевые возможности.  

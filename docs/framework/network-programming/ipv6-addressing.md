@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 532928118df9784198eada6f6a2f1e7a1b808ee9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8c992a96f2fa8d55d1fe16c03922cc8dbb39451c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394840"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47194013"
 ---
 # <a name="ipv6-addressing"></a>Адресация IPv6
 Длина IPv6-адресов составляет 128 бит. Одна из причин такого большого адресного пространства заключается в том, чтобы разделить доступные адреса на иерархию доменов маршрутизации, отражающих топологию Интернета. Другая причина состоит в том, чтобы сопоставить адреса сетевых адаптеров (или интерфейсов), которые подключают устройства к сети. IPv6 обладает встроенной возможностью разрешать адреса на их самом низком уровне, который находится на уровне сетевого интерфейса, а также позволяет выполнять автоматическую настройку.  

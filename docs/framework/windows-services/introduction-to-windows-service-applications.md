@@ -22,13 +22,12 @@ helpviewer_keywords:
 - Windows Service applications, lifetime
 ms.assetid: 1b1b5e67-3ff3-40c0-8154-322cfd6ef0ae
 author: ghogen
-manager: douge
-ms.openlocfilehash: e0720b90d89e5117cbac15ce7e38a41071f1c13e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0a16ee6f627ecc062fcad5f5216dda9855e430e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520426"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47436288"
 ---
 # <a name="introduction-to-windows-service-applications"></a>Знакомство с приложениями служб Windows
 Службы Microsoft Windows, ранее известные как службы NT, позволяют создавать долговременные исполняемые приложения, которые запускаются в собственных сеансах Windows. Для этих служб не предусмотрен пользовательский интерфейс. Они могут запускаться автоматически при загрузке компьютера, их также можно приостанавливать и перезапускать. Благодаря этому службы идеально подходят для использования на сервере, а также в ситуациях, когда необходимы долго выполняемые процессы, которые не мешают работе пользователей на том же компьютере. Службы могут выполняться в контексте безопасности определенной учетной записи пользователя, которая отличается от учетной записи вошедшего в систему пользователя или учетной записи компьютера по умолчанию. Дополнительные сведения о службах и сеансах Windows см. в документации по Windows SDK.  

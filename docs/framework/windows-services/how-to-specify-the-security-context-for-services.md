@@ -11,13 +11,12 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-manager: douge
-ms.openlocfilehash: e3e5ad7dd44dcaf1593ac80bbe6d0a367964e4e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5a437af90f29bc601215176ad5c4fec702ddbc0
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512480"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47073727"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>Практическое руководство. Назначение службам контекста безопасности
 По умолчанию службы работают в контексте безопасности, отличном от того, в котором работает вошедший в систему пользователь. Службы работают в контексте стандартной системной учетной записи с именем `LocalSystem`. Она дает им другие права на доступ к системным ресурсам (не такие, как у пользователя). Эту ситуацию можно изменить, указав другую учетную запись пользователя, под которой будет работать служба.  

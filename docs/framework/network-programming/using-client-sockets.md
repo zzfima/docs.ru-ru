@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 81de9f59-8177-4d98-b25d-43fc32a98383
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 458e67861bfd40b69f7a6f756ddee8be433e9e2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee10681c8beddac06d5c4eae453f4070b2bf1b4e
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395951"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47195554"
 ---
 # <a name="using-client-sockets"></a>Использование сокетов клиента
 Перед инициацией взаимодействия через <xref:System.Net.Sockets.Socket> необходимо создать канал передачи данных между приложением и удаленным устройством. В этом примере показано, как создать подключение TCP/IP к удаленном устройству (хотя существуют и другие семейства сетевых адресов и протоколы).  

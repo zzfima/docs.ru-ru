@@ -9,11 +9,11 @@ ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 69a11e99966467de005ab92d3dcdebaa70bbdbe4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46584296"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47397989"
 ---
 # <a name="garbage-collection-and-performance"></a>Сборка мусора и производительность
 <a name="top"></a> В этом разделе описаны вопросы, связанные со сборкой мусора и использованием памяти. Здесь рассматриваются проблемы, относящиеся к управляемой куче, и объясняется, как свести к минимуму влияние сборки мусора на работу приложений. Для каждого аспекта приводятся ссылки на процедуры, которые можно использовать для анализа проблем.  

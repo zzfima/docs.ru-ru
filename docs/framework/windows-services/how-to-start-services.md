@@ -6,13 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-manager: douge
-ms.openlocfilehash: 3c8382d2e425d11dc8aa8b22e361b3cc5637744f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b3f04deb11a23957198864c444b4872aef45b2e4
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516221"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47176751"
 ---
 # <a name="how-to-start-services"></a>Практическое руководство. Запуск служб
 Установленную службу необходимо запустить. Процедура запуска вызывает метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> в классе службы. Как правило, метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A> определяет полезные действия, которые будет выполнять служба. Запущенная служба остается активной, пока не будет приостановлена или остановлена вручную.  
@@ -36,7 +35,7 @@ ms.locfileid: "33516221"
   
     |Чтобы установить службу|Задайте это значение|  
     |----------------------------------|--------------------|  
-    |При перезапуске компьютера|**Automatic**|  
+    |При перезапуске компьютера|**Автоматический**|  
     |При запуске службы с помощью явного действия пользователя|**Manual** (Вручную)|  
   
     > [!TIP]

@@ -13,11 +13,11 @@ ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d84bc5ac2256139626311ff7c848170c28ffbd5b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46580672"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47454345"
 ---
 # <a name="selecting-a-collection-class"></a>Выбор класса коллекции
 Внимательно относитесь к выбору класса коллекции. Неправильный тип может ограничить возможности использования коллекции. Как правило, не рекомендуется использовать типы в пространстве имен <xref:System.Collections>, если приложение не создается специально для .NET Framework версии 1.1 Универсальные и параллельные версии коллекций предпочтительны из-за повышенной безопасности типов и других усовершенствований.  

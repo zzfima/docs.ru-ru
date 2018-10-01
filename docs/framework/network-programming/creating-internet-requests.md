@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: faab683e-3f1e-4eee-b5e9-59f7245033d5
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 8ebe861fc2de8b21ee766e52dada1eec10169f16
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 201bc5e92aeedcbfe2f710681cf3bbc773a11424
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395769"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193386"
 ---
 # <a name="creating-internet-requests"></a>Создание интернет-запросов
 Приложения создают экземпляры <xref:System.Net.WebRequest> с помощью метода <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>. Этот статический метод создает класс, производный от **WebRequest**, на основе переданной ему схемы URI.  

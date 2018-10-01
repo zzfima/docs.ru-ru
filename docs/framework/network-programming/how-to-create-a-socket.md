@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 600ea82965c332c8620db689abb50965f15f0067
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2ec87d45a4e7140aa2c1d901492952cd25634025
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396952"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192227"
 ---
 # <a name="how-to-create-a-socket"></a>Практическое руководство. Создание сокета
 Перед использованием сокета для связи с удаленными устройствами необходимо инициализировать сокет, указав протокол и сведения о сетевом адресе. Конструктор класса <xref:System.Net.Sockets.Socket> имеет параметры, которые определяют семейство адресов, тип сокета и тип протокола, которые сокет использует для подключения.  

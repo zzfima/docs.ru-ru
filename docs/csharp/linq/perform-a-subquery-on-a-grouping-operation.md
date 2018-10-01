@@ -4,11 +4,11 @@ description: Как выполнять вложенный запрос в опе
 ms.date: 12/1/2016
 ms.assetid: d75a588e-9b6f-4f37-b195-f99ec8503855
 ms.openlocfilehash: 514db81b80557a3026589f00177910cc9446c0f4
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46696966"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47193477"
 ---
 # <a name="perform-a-subquery-on-a-grouping-operation"></a>Вложенный запрос в операции группирования
 

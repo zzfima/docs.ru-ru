@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fcd9c3bd-93de-4c92-8ff3-837327ad18de
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: acb14d8785a01d98d56233b8eb942f9bc4675f63
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f43f8b4f7bdaba3902168ee7a1c6b7f7a2f3d39c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394885"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47193399"
 ---
 # <a name="automatic-proxy-detection"></a>Автоматическое обнаружение прокси-сервера
 В ходе автоматического обнаружения прокси-сервера система определяет сервер веб-прокси, который используется для отправки запросов от имени клиента. Эта функция также называется автообнаружением веб-прокси (WPAD). Если автоматическое обнаружение прокси-сервера включено, система пытается обнаружить скрипт конфигурации прокси-сервера, возвращающий набор прокси-серверов, который можно использовать для обработки запросов. Если такой скрипт обнаружен, он скачивается, компилируется и запускается на локальном компьютере при получении информации о прокси-сервере, потока запроса или ответа для запроса, который использует экземпляр <xref:System.Net.WebProxy>.  
