@@ -1,5 +1,5 @@
 ---
-title: 'Устранение неполадок: отладка служб Windows'
+title: Разрешение вопросов. Отладка служб Windows
 ms.date: 03/30/2017
 helpviewer_keywords:
 - debugging Windows Service applications
@@ -12,19 +12,18 @@ helpviewer_keywords:
 - Windows Service applications, troubleshooting
 ms.assetid: cf859d4c-f04c-4cb7-81e3-bc7de8bea190
 author: ghogen
-manager: douge
-ms.openlocfilehash: 77a0c19c2da2d1886beaf396650fa024fc1243a6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0dbbebd14ce0ff5f69a12c256238c7e0a02494cb
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510141"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199948"
 ---
-# <a name="troubleshooting-debugging-windows-services"></a><span data-ttu-id="840b2-102">Устранение неполадок: отладка служб Windows</span><span class="sxs-lookup"><span data-stu-id="840b2-102">Troubleshooting: Debugging Windows Services</span></span>
-<span data-ttu-id="840b2-103">При отладке приложения-службы Windows происходит взаимодействие между службой и диспетчером **Windows Service Manager**.</span><span class="sxs-lookup"><span data-stu-id="840b2-103">When you debug a Windows service application, your service and the **Windows Service Manager** interact.</span></span> <span data-ttu-id="840b2-104">**Service Manager** запускает службу, вызывая метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, после чего 30 секунд ожидает возврат метода <xref:System.ServiceProcess.ServiceBase.OnStart%2A>.</span><span class="sxs-lookup"><span data-stu-id="840b2-104">The **Service Manager** starts your service by calling the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, and then waits 30 seconds for the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method to return.</span></span> <span data-ttu-id="840b2-105">Если метод не возвращается за это время, диспетчер отображает ошибку о невозможности запустить службу.</span><span class="sxs-lookup"><span data-stu-id="840b2-105">If the method does not return in this time, the manager shows an error that the service cannot be started.</span></span>  
+# <a name="troubleshooting-debugging-windows-services"></a><span data-ttu-id="cc4a8-102">Разрешение вопросов. Отладка служб Windows</span><span class="sxs-lookup"><span data-stu-id="cc4a8-102">Troubleshooting: Debugging Windows Services</span></span>
+<span data-ttu-id="cc4a8-103">При отладке приложения-службы Windows происходит взаимодействие между службой и диспетчером **Windows Service Manager**.</span><span class="sxs-lookup"><span data-stu-id="cc4a8-103">When you debug a Windows service application, your service and the **Windows Service Manager** interact.</span></span> <span data-ttu-id="cc4a8-104">**Service Manager** запускает службу, вызывая метод <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, после чего 30 секунд ожидает возврат метода <xref:System.ServiceProcess.ServiceBase.OnStart%2A>.</span><span class="sxs-lookup"><span data-stu-id="cc4a8-104">The **Service Manager** starts your service by calling the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method, and then waits 30 seconds for the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method to return.</span></span> <span data-ttu-id="cc4a8-105">Если метод не возвращается за это время, диспетчер отображает ошибку о невозможности запустить службу.</span><span class="sxs-lookup"><span data-stu-id="cc4a8-105">If the method does not return in this time, the manager shows an error that the service cannot be started.</span></span>  
   
- <span data-ttu-id="840b2-106">При отладке метода <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, как описано в статье [Практическое руководство. Отладка приложений-служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md), необходимо помнить об этом 30-секундном периоде.</span><span class="sxs-lookup"><span data-stu-id="840b2-106">When you debug the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method as described in [How to: Debug Windows Service Applications](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md), you must be aware of this 30-second period.</span></span> <span data-ttu-id="840b2-107">Если в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A> установить точку останова и не пройти ее за 30 секунд, диспетчер не запустит службу.</span><span class="sxs-lookup"><span data-stu-id="840b2-107">If you place a breakpoint in the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method and do not step through it in 30 seconds, the manager will not start the service.</span></span>  
+ <span data-ttu-id="cc4a8-106">При отладке метода <xref:System.ServiceProcess.ServiceBase.OnStart%2A>, как описано в статье [Практическое руководство. Отладка приложений-служб Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md), необходимо помнить об этом 30-секундном периоде.</span><span class="sxs-lookup"><span data-stu-id="cc4a8-106">When you debug the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method as described in [How to: Debug Windows Service Applications](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md), you must be aware of this 30-second period.</span></span> <span data-ttu-id="cc4a8-107">Если в методе <xref:System.ServiceProcess.ServiceBase.OnStart%2A> установить точку останова и не пройти ее за 30 секунд, диспетчер не запустит службу.</span><span class="sxs-lookup"><span data-stu-id="cc4a8-107">If you place a breakpoint in the <xref:System.ServiceProcess.ServiceBase.OnStart%2A> method and do not step through it in 30 seconds, the manager will not start the service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="840b2-108">См. также</span><span class="sxs-lookup"><span data-stu-id="840b2-108">See Also</span></span>  
- [<span data-ttu-id="840b2-109">Практическое руководство. Отладка приложений служб Windows</span><span class="sxs-lookup"><span data-stu-id="840b2-109">How to: Debug Windows Service Applications</span></span>](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [<span data-ttu-id="840b2-110">Знакомство с приложениями служб Windows</span><span class="sxs-lookup"><span data-stu-id="840b2-110">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
+## <a name="see-also"></a><span data-ttu-id="cc4a8-108">См. также</span><span class="sxs-lookup"><span data-stu-id="cc4a8-108">See Also</span></span>  
+ [<span data-ttu-id="cc4a8-109">Практическое руководство. Отладка приложений служб Windows</span><span class="sxs-lookup"><span data-stu-id="cc4a8-109">How to: Debug Windows Service Applications</span></span>](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [<span data-ttu-id="cc4a8-110">Знакомство с приложениями служб Windows</span><span class="sxs-lookup"><span data-stu-id="cc4a8-110">Introduction to Windows Service Applications</span></span>](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)

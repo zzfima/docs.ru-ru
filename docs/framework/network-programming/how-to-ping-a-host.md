@@ -6,17 +6,17 @@ helpviewer_keywords:
 ms.assetid: bbf20f5b-eca1-4661-af04-cb8837f9af05
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 62ab62520e42fcf3ecfb8bd7fd6b57485451e6e4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e066af175982b71fb42bf2eec75fe9d92f532e61
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47402754"
 ---
-# <a name="how-to-ping-a-host"></a><span data-ttu-id="087ca-102">Практическое руководство. Проверка связи с узлом</span><span class="sxs-lookup"><span data-stu-id="087ca-102">How to: Ping a Host</span></span>
-<span data-ttu-id="087ca-103">В этом примере показано, как проверить связь с удаленным узлом.</span><span class="sxs-lookup"><span data-stu-id="087ca-103">This sample shows how to ping a remote host.</span></span>  
+# <a name="how-to-ping-a-host"></a><span data-ttu-id="e6ec1-102">Практическое руководство. Проверка связи с узлом</span><span class="sxs-lookup"><span data-stu-id="e6ec1-102">How to: Ping a Host</span></span>
+<span data-ttu-id="e6ec1-103">В этом примере показано, как проверить связь с удаленным узлом.</span><span class="sxs-lookup"><span data-stu-id="e6ec1-103">This sample shows how to ping a remote host.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="087ca-104">Пример</span><span class="sxs-lookup"><span data-stu-id="087ca-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="e6ec1-104">Пример</span><span class="sxs-lookup"><span data-stu-id="e6ec1-104">Example</span></span>  
   
 ```  
 using System;  
@@ -122,7 +122,7 @@ namespace Examples.System.Net.NetworkInformation.PingTest
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="087ca-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="087ca-105">Compiling the Code</span></span>  
- <span data-ttu-id="087ca-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="087ca-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="e6ec1-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="e6ec1-105">Compiling the Code</span></span>  
+ <span data-ttu-id="e6ec1-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="e6ec1-106">This example requires:</span></span>  
   
--   <span data-ttu-id="087ca-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="087ca-107">References to the **System.Net** namespace.</span></span>
+-   <span data-ttu-id="e6ec1-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="e6ec1-107">References to the **System.Net** namespace.</span></span>

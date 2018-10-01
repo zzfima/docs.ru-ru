@@ -5,29 +5,29 @@ helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
 ms.openlocfilehash: 1d48981e0d36053fce1249b27cd15551ed59dc91
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46576948"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47208228"
 ---
-# <a name="exception-handling-statements-c-reference"></a><span data-ttu-id="7af15-102">Операторы обработки исключений (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="7af15-102">Exception Handling Statements (C# Reference)</span></span>
-<span data-ttu-id="7af15-103">Язык C# обеспечивает встроенную поддержку для обработки нестандартных ситуаций, называемых исключениями, которые могут происходить во время выполнения программы.</span><span class="sxs-lookup"><span data-stu-id="7af15-103">C# provides built-in support for handling anomalous situations, known as exceptions, which may occur during the execution of your program.</span></span> <span data-ttu-id="7af15-104">Эти исключения обрабатываются кодом, выходящим за пределы обычного потока управления.</span><span class="sxs-lookup"><span data-stu-id="7af15-104">These exceptions are handled by code that is outside the normal flow of control.</span></span>  
+# <a name="exception-handling-statements-c-reference"></a><span data-ttu-id="70499-102">Операторы обработки исключений (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="70499-102">Exception Handling Statements (C# Reference)</span></span>
+<span data-ttu-id="70499-103">Язык C# обеспечивает встроенную поддержку для обработки нестандартных ситуаций, называемых исключениями, которые могут происходить во время выполнения программы.</span><span class="sxs-lookup"><span data-stu-id="70499-103">C# provides built-in support for handling anomalous situations, known as exceptions, which may occur during the execution of your program.</span></span> <span data-ttu-id="70499-104">Эти исключения обрабатываются кодом, выходящим за пределы обычного потока управления.</span><span class="sxs-lookup"><span data-stu-id="70499-104">These exceptions are handled by code that is outside the normal flow of control.</span></span>  
   
- <span data-ttu-id="7af15-105">В этом разделе содержатся следующие подразделы с описанием обработки исключений:</span><span class="sxs-lookup"><span data-stu-id="7af15-105">The following exception handling topics are explained in this section:</span></span>  
+ <span data-ttu-id="70499-105">В этом разделе содержатся следующие подразделы с описанием обработки исключений:</span><span class="sxs-lookup"><span data-stu-id="70499-105">The following exception handling topics are explained in this section:</span></span>  
   
--   [<span data-ttu-id="7af15-106">throw</span><span class="sxs-lookup"><span data-stu-id="7af15-106">throw</span></span>](../../../csharp/language-reference/keywords/throw.md)  
+-   [<span data-ttu-id="70499-106">throw</span><span class="sxs-lookup"><span data-stu-id="70499-106">throw</span></span>](../../../csharp/language-reference/keywords/throw.md)  
   
--   [<span data-ttu-id="7af15-107">try-catch</span><span class="sxs-lookup"><span data-stu-id="7af15-107">try-catch</span></span>](../../../csharp/language-reference/keywords/try-catch.md)  
+-   [<span data-ttu-id="70499-107">try-catch</span><span class="sxs-lookup"><span data-stu-id="70499-107">try-catch</span></span>](../../../csharp/language-reference/keywords/try-catch.md)  
   
--   [<span data-ttu-id="7af15-108">try-finally</span><span class="sxs-lookup"><span data-stu-id="7af15-108">try-finally</span></span>](../../../csharp/language-reference/keywords/try-finally.md)  
+-   [<span data-ttu-id="70499-108">try-finally</span><span class="sxs-lookup"><span data-stu-id="70499-108">try-finally</span></span>](../../../csharp/language-reference/keywords/try-finally.md)  
   
--   [<span data-ttu-id="7af15-109">try-catch-finally</span><span class="sxs-lookup"><span data-stu-id="7af15-109">try-catch-finally</span></span>](../../../csharp/language-reference/keywords/try-catch-finally.md)  
+-   [<span data-ttu-id="70499-109">try-catch-finally</span><span class="sxs-lookup"><span data-stu-id="70499-109">try-catch-finally</span></span>](../../../csharp/language-reference/keywords/try-catch-finally.md)  
   
-## <a name="see-also"></a><span data-ttu-id="7af15-110">См. также</span><span class="sxs-lookup"><span data-stu-id="7af15-110">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="70499-110">См. также</span><span class="sxs-lookup"><span data-stu-id="70499-110">See Also</span></span>  
 
-- [<span data-ttu-id="7af15-111">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="7af15-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="7af15-112">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="7af15-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="7af15-113">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="7af15-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="7af15-114">Ключевые слова операторов</span><span class="sxs-lookup"><span data-stu-id="7af15-114">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)  
-- [<span data-ttu-id="7af15-115">Исключения и обработка исключений</span><span class="sxs-lookup"><span data-stu-id="7af15-115">Exceptions and Exception Handling</span></span>](../../../csharp/programming-guide/exceptions/index.md)
+- [<span data-ttu-id="70499-111">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="70499-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+- [<span data-ttu-id="70499-112">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="70499-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+- [<span data-ttu-id="70499-113">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="70499-113">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
+- [<span data-ttu-id="70499-114">Ключевые слова операторов</span><span class="sxs-lookup"><span data-stu-id="70499-114">Statement Keywords</span></span>](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [<span data-ttu-id="70499-115">Исключения и обработка исключений</span><span class="sxs-lookup"><span data-stu-id="70499-115">Exceptions and Exception Handling</span></span>](../../../csharp/programming-guide/exceptions/index.md)

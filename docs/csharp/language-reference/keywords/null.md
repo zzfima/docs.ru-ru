@@ -8,29 +8,29 @@ helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
 ms.openlocfilehash: 67961027c7eab40344251db3d57e4d80ca5e8cdc
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46699031"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47208203"
 ---
-# <a name="null-c-reference"></a><span data-ttu-id="a4a9d-102">null (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="a4a9d-102">null (C# Reference)</span></span>
+# <a name="null-c-reference"></a><span data-ttu-id="43e7c-102">null (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="43e7c-102">null (C# Reference)</span></span>
 
-<span data-ttu-id="a4a9d-103">Ключевое слово `null` является литералом, представляющим пустую ссылку, которая не ссылается на объект.</span><span class="sxs-lookup"><span data-stu-id="a4a9d-103">The `null` keyword is a literal that represents a null reference, one that does not refer to any object.</span></span> <span data-ttu-id="a4a9d-104">`null` является значением по умолчанию для переменных ссылочного типа.</span><span class="sxs-lookup"><span data-stu-id="a4a9d-104">`null` is the default value of reference-type variables.</span></span> <span data-ttu-id="a4a9d-105">Обычные типы значений не могут принимать значение NULL.</span><span class="sxs-lookup"><span data-stu-id="a4a9d-105">Ordinary value types cannot be null.</span></span> <span data-ttu-id="a4a9d-106">Однако в C# 2.0 представлены типы значений, допускающие значение NULL.</span><span class="sxs-lookup"><span data-stu-id="a4a9d-106">However, C# 2.0 introduced nullable value types.</span></span> <span data-ttu-id="a4a9d-107">См. раздел [Типы, допускающие значения NULL](../../programming-guide/nullable-types/index.md).</span><span class="sxs-lookup"><span data-stu-id="a4a9d-107">See [Nullable Types](../../programming-guide/nullable-types/index.md).</span></span>
+<span data-ttu-id="43e7c-103">Ключевое слово `null` является литералом, представляющим пустую ссылку, которая не ссылается на объект.</span><span class="sxs-lookup"><span data-stu-id="43e7c-103">The `null` keyword is a literal that represents a null reference, one that does not refer to any object.</span></span> <span data-ttu-id="43e7c-104">`null` является значением по умолчанию для переменных ссылочного типа.</span><span class="sxs-lookup"><span data-stu-id="43e7c-104">`null` is the default value of reference-type variables.</span></span> <span data-ttu-id="43e7c-105">Обычные типы значений не могут принимать значение NULL.</span><span class="sxs-lookup"><span data-stu-id="43e7c-105">Ordinary value types cannot be null.</span></span> <span data-ttu-id="43e7c-106">Однако в C# 2.0 представлены типы значений, допускающие значение NULL.</span><span class="sxs-lookup"><span data-stu-id="43e7c-106">However, C# 2.0 introduced nullable value types.</span></span> <span data-ttu-id="43e7c-107">См. раздел [Типы, допускающие значения NULL](../../programming-guide/nullable-types/index.md).</span><span class="sxs-lookup"><span data-stu-id="43e7c-107">See [Nullable Types](../../programming-guide/nullable-types/index.md).</span></span>
 
-<span data-ttu-id="a4a9d-108">В следующем примере показано возможное поведение ключевого слова null:</span><span class="sxs-lookup"><span data-stu-id="a4a9d-108">The following example demonstrates some behaviors of the null keyword:</span></span>
+<span data-ttu-id="43e7c-108">В следующем примере показано возможное поведение ключевого слова null:</span><span class="sxs-lookup"><span data-stu-id="43e7c-108">The following example demonstrates some behaviors of the null keyword:</span></span>
 
 [!code-csharp[csrefKeywordsLiteral#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsLiteral/CS/csrefKeywordsLiteral.cs#1)]
 
-## <a name="c-language-specification"></a><span data-ttu-id="a4a9d-109">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="a4a9d-109">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="43e7c-109">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="43e7c-109">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="a4a9d-110">См. также</span><span class="sxs-lookup"><span data-stu-id="a4a9d-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="43e7c-110">См. также</span><span class="sxs-lookup"><span data-stu-id="43e7c-110">See also</span></span>
 
-- [<span data-ttu-id="a4a9d-111">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="a4a9d-111">C# Reference</span></span>](../../language-reference/index.md)
-- [<span data-ttu-id="a4a9d-112">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="a4a9d-112">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="a4a9d-113">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="a4a9d-113">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="a4a9d-114">Буквенные ключевые слова</span><span class="sxs-lookup"><span data-stu-id="a4a9d-114">Literal Keywords</span></span>](literal-keywords.md)
-- [<span data-ttu-id="a4a9d-115">Таблица значений по умолчанию</span><span class="sxs-lookup"><span data-stu-id="a4a9d-115">Default Values Table</span></span>](default-values-table.md)
-- [<span data-ttu-id="a4a9d-116">Nothing</span><span class="sxs-lookup"><span data-stu-id="a4a9d-116">Nothing</span></span>](../../../visual-basic/language-reference/nothing.md)
+- [<span data-ttu-id="43e7c-111">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="43e7c-111">C# Reference</span></span>](../../language-reference/index.md)
+- [<span data-ttu-id="43e7c-112">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="43e7c-112">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="43e7c-113">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="43e7c-113">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="43e7c-114">Буквенные ключевые слова</span><span class="sxs-lookup"><span data-stu-id="43e7c-114">Literal Keywords</span></span>](literal-keywords.md)
+- [<span data-ttu-id="43e7c-115">Таблица значений по умолчанию</span><span class="sxs-lookup"><span data-stu-id="43e7c-115">Default Values Table</span></span>](default-values-table.md)
+- [<span data-ttu-id="43e7c-116">Nothing</span><span class="sxs-lookup"><span data-stu-id="43e7c-116">Nothing</span></span>](../../../visual-basic/language-reference/nothing.md)

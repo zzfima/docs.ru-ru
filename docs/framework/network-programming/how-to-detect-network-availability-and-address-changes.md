@@ -6,18 +6,17 @@ helpviewer_keywords:
 ms.assetid: d4377115-4a76-4848-ab23-4898d65c771c
 author: mcleblanc
 ms.author: markl
-manager: markl
-ms.openlocfilehash: 9056c8b2ecf18c4a57d356e7c9698984df1558eb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0357c4000a7efdb838a40f2f3f907c1dd313c58
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396263"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47193126"
 ---
-# <a name="how-to-detect-network-availability-and-address-changes"></a><span data-ttu-id="53415-102">Практическое руководство. Определение доступности сети и изменений адреса</span><span class="sxs-lookup"><span data-stu-id="53415-102">How to: Detect Network Availability and Address Changes</span></span>
-<span data-ttu-id="53415-103">В этом примере показано, как обнаружить изменения в сетевом адресе интерфейса.</span><span class="sxs-lookup"><span data-stu-id="53415-103">This sample shows how to detect changes in the network address of an interface.</span></span>  
+# <a name="how-to-detect-network-availability-and-address-changes"></a><span data-ttu-id="23334-102">Практическое руководство. Определение доступности сети и изменений адреса</span><span class="sxs-lookup"><span data-stu-id="23334-102">How to: Detect Network Availability and Address Changes</span></span>
+<span data-ttu-id="23334-103">В этом примере показано, как обнаружить изменения в сетевом адресе интерфейса.</span><span class="sxs-lookup"><span data-stu-id="23334-103">This sample shows how to detect changes in the network address of an interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="53415-104">Пример</span><span class="sxs-lookup"><span data-stu-id="53415-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="23334-104">Пример</span><span class="sxs-lookup"><span data-stu-id="23334-104">Example</span></span>  
   
 ```  
 using System;  
@@ -48,7 +47,7 @@ namespace Examples.Net.AddressChanges
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="53415-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="53415-105">Compiling the Code</span></span>  
- <span data-ttu-id="53415-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="53415-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="23334-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="23334-105">Compiling the Code</span></span>  
+ <span data-ttu-id="23334-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="23334-106">This example requires:</span></span>  
   
--   <span data-ttu-id="53415-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="53415-107">References to the **System.Net** namespace.</span></span>
+-   <span data-ttu-id="23334-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="23334-107">References to the **System.Net** namespace.</span></span>
