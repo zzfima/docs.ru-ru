@@ -1,4 +1,4 @@
-﻿---
+---
 title: Практическое руководство. Создание объектов Graphics для рисования
 ms.date: 03/30/2017
 dev_langs:
@@ -27,11 +27,11 @@ ms.locfileid: "33526492"
 2.  Использование объекта <xref:System.Drawing.Graphics> для рисования линий и фигур, отображения текста или изображений и управления ими.  
   
 ## <a name="creating-a-graphics-object"></a>Создание объектов Graphics  
- Объекты Graphics могут создаваться различными способами.
+ Объекты Graphics могут создаваться различными способами.  
   
 #### <a name="to-create-a-graphics-object"></a>Чтобы создать объект Graphics  
   
--    Получите ссылку на объект Graphics как часть <xref:System.Windows.Forms.PaintEventArgs> в событии <xref:System.Windows.Forms.Control.Paint> формы или элемента управления. Это обычный способ получения ссылки на объект Graphics при создании кода рисования для элемента управления. Аналогичным образом можно получить объект Graphics как свойство <xref:System.Drawing.Printing.PrintPageEventArgs> при обработке события <xref:System.Drawing.Printing.PrintDocument.PrintPage> для <xref:System.Drawing.Printing.PrintDocument>.
+-   Получите ссылку на объект Graphics как часть <xref:System.Windows.Forms.PaintEventArgs> в событии <xref:System.Windows.Forms.Control.Paint>  формы или элемента управления. Это обычный способ получения ссылки на объект Graphics при создании кода рисования для элемента управления. Аналогичным образом можно получить объект Graphics как свойство <xref:System.Drawing.Printing.PrintPageEventArgs> при обработке события <xref:System.Drawing.Printing.PrintDocument.PrintPage> для <xref:System.Drawing.Printing.PrintDocument>.  
   
      - или -  
   
@@ -44,7 +44,7 @@ ms.locfileid: "33526492"
      В следующих разделах приводятся сведения о каждом из этих процессов.  
   
 ## <a name="painteventargs-in-the-paint-event-handler"></a>PaintEventArgs в обработчике события рисования  
- При программировании <xref:System.Windows.Forms.PaintEventHandler> для элементов управления или <xref:System.Drawing.Printing.PrintDocument.PrintPage> для <xref:System.Drawing.Printing.PrintDocument> объект Graphics предоставляется как одно из свойств объекта <xref:System.Windows.Forms.PaintEventArgs> или <xref:System.Drawing.Printing.PrintPageEventArgs>.
+ При программировании <xref:System.Windows.Forms.PaintEventHandler> для элементов управления или <xref:System.Drawing.Printing.PrintDocument.PrintPage> для <xref:System.Drawing.Printing.PrintDocument> объект Graphics предоставляется как одно из свойств объекта <xref:System.Windows.Forms.PaintEventArgs> или <xref:System.Drawing.Printing.PrintPageEventArgs>.  
   
 #### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>Для получения ссылки на объект Graphics из PaintEventArgs в событии рисования  
   
@@ -94,7 +94,7 @@ ms.locfileid: "33526492"
   
 #### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>Чтобы создать объект Graphics с помощью метода CreateGraphics  
   
--   Вызовите метод <xref:System.Windows.Forms.Control.CreateGraphics%2A> формы или элемента управления, на которых необходимо отрисовывать графику. 
+-   Вызовите метод <xref:System.Windows.Forms.Control.CreateGraphics%2A> формы или элемента управления, на которых необходимо отрисовывать графику.  
   
     ```vb  
     Dim g as Graphics  
@@ -144,28 +144,28 @@ ms.locfileid: "33526492"
     ```  
   
 > [!NOTE]
->  Вы можете создавать объекты <xref:System.Drawing.Graphics> только из неиндексированных BMP-файлов, например, 16, 24 и 32-разрядных BMP-файлов. Каждый пиксель неиндексированного BMP-файла содержит сведения о цвете, в отличие от пикселей индексированного BMP-файла, содержащих указатели на таблицу цветов.
+>  Вы можете создавать объекты <xref:System.Drawing.Graphics> только из неиндексированных BMP-файлов, например, 16, 24 и 32-разрядных BMP-файлов. Каждый пиксель неиндексированного BMP-файла содержит сведения о цвете, в отличие от пикселей индексированного BMP-файла, содержащих указатели на таблицу цветов.  
   
 -  
   
-## <a name="drawing-and-manipulating-shapes-and-images"></a>Рисование и изменение фигур и изображений
- После создания объект <xref:System.Drawing.Graphics> можно использовать для рисования линий и фигур, отрисовки текста, а также показа и изменения изображений. Основные объекты, которые используются с объектами <xref:System.Drawing.Graphics>: 
+## <a name="drawing-and-manipulating-shapes-and-images"></a>Рисование и изменение фигур и изображений  
+ После создания объект <xref:System.Drawing.Graphics> можно использовать для рисования линий и фигур, отрисовки текста, а также показа и изменения изображений. Основные объекты, которые используются с объектами <xref:System.Drawing.Graphics>:  
   
 -   Класс <xref:System.Drawing.Pen>, используемый для рисования линий, контуров и отрисовки других геометрических объектов.  
   
--   Класс <xref:System.Drawing.Brush>, используемый для заливки графических областей, например фигур, изображений или текста. 
+-   Класс <xref:System.Drawing.Brush>, используемый для заливки графических областей, например фигур, изображений или текста.  
   
--   Класс <xref:System.Drawing.Font>, содержащий описание фигур, которые должны использоваться при отрисовке текста.
+-   Класс <xref:System.Drawing.Font>, содержащий описание фигур, которые должны использоваться при отрисовке текста.  
   
--   Структура <xref:System.Drawing.Color>, представляющая различные цвета для отображения.
+-   Структура <xref:System.Drawing.Color>, представляющая различные цвета для отображения.  
   
 #### <a name="to-use-the-graphics-object-you-have-created"></a>Чтобы использовать объект Graphics, который вы создали  
   
--   Используйте любой из вышеперечисленных объектов для рисования того, что вам нужно.
+-   Используйте любой из вышеперечисленных объектов для рисования того, что вам нужно.  
   
      Дополнительные сведения см. в следующих разделах:  
   
-    |Для отрисовки|См.|
+    |Для отрисовки|См.|  
     |---------------|---------|  
     |Прямых линий|[Практическое руководство. Рисование линии в Windows Forms](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)|  
     |Фигур|[Практическое руководство. Рисование контурной фигуры](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)|  
