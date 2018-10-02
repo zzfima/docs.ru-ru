@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 author: BrucePerlerMS
 ms.openlocfilehash: f488d2e840ec2524f0cde8dc4b3e6c1cd10c554e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400365"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030302"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>Безопасность сообщений с анонимным клиентом
 В следующем сценарии показаны клиент и служба, защищенные механизмом безопасности сообщений Windows Communication Foundation (WCF). Задача, поставленная при разработке, заключается в использовании безопасности сообщений, а не безопасности транспорта, чтобы в будущем возможно было использование более глубокой модели, использующей утверждения. Дополнительные сведения об использовании сложные утверждения для авторизации см. в разделе [управление утверждениями и авторизацией с моделью идентификации](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md).  

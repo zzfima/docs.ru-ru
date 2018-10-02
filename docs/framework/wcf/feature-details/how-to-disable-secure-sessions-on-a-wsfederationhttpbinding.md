@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 675fa143-6a4e-4be3-8afc-673334ab55ec
 author: BrucePerlerMS
 ms.openlocfilehash: e81469f5ac55b1c698dc99af0782dbdedab33339
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205129"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036571"
 ---
 # <a name="how-to-disable-secure-sessions-on-a-wsfederationhttpbinding"></a>Практическое руководство. Порядок отключения безопасных сеансов в WSFederationHttpBinding
 Некоторые службы могут требовать федеративных учетных данных, но не поддерживать безопасные сеансы. В этом случае необходимо отключить возможность безопасных сеансов. В отличие от <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>, <xref:System.ServiceModel.WSFederationHttpBinding> класс не предоставляет способа отключения безопасных сеансов при взаимодействии со службой. Вместо этого необходимо создать пользовательскую привязку, которая заменяет параметры безопасного сеанса начальной загрузкой.  

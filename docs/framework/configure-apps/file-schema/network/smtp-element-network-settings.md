@@ -11,11 +11,11 @@ ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 61110413f43e95060aa2cfecb4acdb3ebaae14df
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47425827"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027589"
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; (сетевые параметры)
 Настраивает формат и способ доставки и адрес отправителя для отправки сообщений электронной почты.  

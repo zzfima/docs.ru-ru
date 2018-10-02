@@ -6,11 +6,11 @@ helpviewer_keywords:
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
 author: BrucePerlerMS
 ms.openlocfilehash: bfb8f3b8d824c1a3324b1d01edc9a087c0cf4abd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204668"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035218"
 ---
 # <a name="security-protocols"></a>Протоколы безопасности
 Протоколы WS-Security предоставляют механизмы обеспечения безопасности веб-служб, охватывающие все существующие требования к безопасности обмена сообщениями на предприятии. В этом разделе подробно описано, Windows Communication Foundation (WCF) (реализованный в <xref:System.ServiceModel.Channels.SecurityBindingElement>) для следующих протоколов ws-security.  

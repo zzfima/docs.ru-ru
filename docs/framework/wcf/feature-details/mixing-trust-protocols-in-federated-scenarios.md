@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: d7b5fee9-2246-4b09-b8d7-9e63cb817279
 author: BrucePerlerMS
 ms.openlocfilehash: d4290880d8d708811a95b38356aa61f0d23c89a8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47205151"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48030081"
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Использование нескольких протоколов доверия в сценариях федерации
 Возможны сценарии, в которых федеративные клиенты взаимодействуют со службой и службой маркеров безопасности, версии доверия которых не совпадают. Код WSDL службы может содержать утверждение `RequestSecurityTokenTemplate` с элементами WS-Trust, версии которых не совпадают с версией службы маркеров безопасности. В таком случае клиент Windows Communication Foundation (WCF) преобразует элементы WS-Trust, полученные от `RequestSecurityTokenTemplate` в соответствии с версии STS trust. Платформа WCF выполняет версий несоответствующие trust только для стандартных привязок. Все стандартные параметры алгоритмов, распознаваемые WCF являются частью стандартной привязки. В этом разделе описано поведение WCF с различными параметрами доверия между службой и STS.  

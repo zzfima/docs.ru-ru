@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 226ec3f683913102e8f5202ffaa100945e629e0a
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 7ecffedbe536f293945227d817e507f012816737
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082517"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037045"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Отключение поддержки определения DPI в Visual Studio
 
@@ -51,7 +51,10 @@ Visual Studio является точек на дюйм (DPI) приложени
 
 Visual Studio можно пометить как не поддерживающие точек на ДЮЙМ, путем изменения реестра. Откройте **редактора реестра** и добавить запись **NT\CurrentVersion\AppCompatFlags\Layers этот** подраздел:
 
-**Запись**: % ProgramFiles (x86) %\Microsoft Visual Studio\2017\your-edition\Common7\IDE\devenv.exe
+**Запись**: % ProgramFiles (x86) %\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+
+   > [!NOTE]
+   > Если вы используете выпуск Visual Studio 2017 Professional или Enterprise, замените **сообщества** с **Professional** или **Enterprise** в записи.
 
 **Тип**: REG_SZ
 

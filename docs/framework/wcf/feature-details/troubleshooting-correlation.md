@@ -2,12 +2,12 @@
 title: Устранение неполадок корреляции
 ms.date: 03/30/2017
 ms.assetid: 98003875-233d-4512-a688-4b2a1b0b5371
-ms.openlocfilehash: 56b17d0a865d1a6c1afaa2844878c82b755afdc7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fecfaf7374823bb19a4ad3d7f6cb2dbbdf139703
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397164"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027927"
 ---
 # <a name="troubleshooting-correlation"></a>Устранение неполадок корреляции
 Корреляция позволяет сопоставлять сообщения службы рабочего процесса друг с другом и с нужным экземпляром рабочего процесса. Если же корреляция настроена неправильно, то сообщения не будут приниматься и приложения будут работать неправильно. В этом разделе даны общие сведения о нескольких методах устранения неполадок корреляции, а также перечислен ряд распространенных проблем, которые возникают при использовании корреляции.
@@ -76,7 +76,7 @@ class CustomFactory : WorkflowServiceHostFactory
 host.WorkflowExtensions.Add(new ConsoleTrackingParticipant());
 ```
 
- Участник отслеживания, такой как ConsoleTrackingParticipant, удобен для резидентных служб рабочего процесса с окном консоли. Для службы веб сервере, участника отслеживания, который записывает данные отслеживания в постоянное хранилище следует использовать, например встроенный <xref:System.Activities.Tracking.EtwTrackingParticipant>, или настраиваемого участника отслеживания, записывает сведения в файл, такой как `TextWriterTrackingParticpant` из [ Отслеживание с помощью текстового файла](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md) образца.
+ Участник отслеживания, такой как ConsoleTrackingParticipant, удобен для резидентных служб рабочего процесса с окном консоли. Для службы веб сервере, участника отслеживания, который записывает данные отслеживания в постоянное хранилище следует использовать, например встроенный <xref:System.Activities.Tracking.EtwTrackingParticipant>, или настраиваемого участника отслеживания, записывает сведения в файл.
 
  Дополнительные сведения об отслеживании и настройке отслеживания для службы рабочего процесса, размещенные в Интернете, см. в разделе [отслеживание и трассировка рабочих процессов](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md), [Настройка отслеживания для рабочего процесса](../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)и [ Отслеживание &#91;образцы WF&#93; ](../../../../docs/framework/windows-workflow-foundation/samples/tracking.md) примеры.
 
@@ -214,7 +214,7 @@ sm:body()/xg0:AddItemMessage/xg0:CartId
 sm:header()/tempuri:CartId
 ```
 
- Это можно проверить, изучив текст сообщения.
+Это можно проверить, изучив текст сообщения.
 
 ```xml
 <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
@@ -230,7 +230,7 @@ sm:header()/tempuri:CartId
 </s:Envelope>
 ```
 
- В следующем примере показано действие <xref:System.ServiceModel.Activities.Receive>, настроенное для операции `AddItem`, использующей предыдущий контракт сообщения для получения данных. Запрос XPath настроен правильно.
+В следующем примере показано действие <xref:System.ServiceModel.Activities.Receive>, настроенное для операции `AddItem`, использующей предыдущий контракт сообщения для получения данных. Запрос XPath настроен правильно.
 
 ```xaml
 <Receive CorrelatesWith="[CCHandle] OperationName="AddItem" ServiceContractName="p:IService">
@@ -247,5 +247,3 @@ sm:header()/tempuri:CartId
   </ReceiveMessageContent>
 </Receive>
 ```
-
-Дополнительные сведения о корреляции по содержимому, см. в разделе [коррелированных калькулятор](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) образца.

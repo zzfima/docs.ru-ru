@@ -3,11 +3,11 @@ title: Привязки let в классах (F#)
 description: 'Узнайте, как определять закрытые поля и закрытые функции для классов F # с помощью привязок «let» в определении класса.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 237eb98a57571a21c9187abf31f05160374cf4fc
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210244"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48033224"
 ---
 # <a name="let-bindings-in-classes"></a>Привязки let в классах
 

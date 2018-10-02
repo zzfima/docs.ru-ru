@@ -2,12 +2,12 @@
 title: Направление транзакций в службы рабочего процесса и из них
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 8b3d3e85b626d033c9ab50e93e3ceb3b86058a2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f53bfa3c745a0d487a8daf23f399c1420e36c8ec
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496101"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036056"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>Направление транзакций в службы рабочего процесса и из них
 Службы и клиенты рабочих процессов могут использоваться в транзакциях.  Чтобы сделать операцию службы частью внешней транзакции, поместите действие <xref:System.ServiceModel.Activities.Receive> в действие <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Все вызовы, выполненные действием <xref:System.ServiceModel.Activities.Send> или <xref:System.ServiceModel.Activities.SendReply> в области <xref:System.ServiceModel.Activities.TransactedReceiveScope>, также будут выполнены во внешней транзакции. Клиентское приложение рабочего процесса может создавать внешнюю транзакцию с помощью действия <xref:System.Activities.Statements.TransactionScope> и вызывать операции службы с помощью внешних транзакций. В данном разделе описывается создание службы рабочего процесса и клиента рабочего процесса, которые участвуют в транзакции.  
@@ -72,11 +72,11 @@ ms.locfileid: "33496101"
     }  
     ```  
   
-     Это собственное действие, при выполнении которого отображаются данные о внешней транзакции, и оно используется в службе и клиенте рабочих процессов, описываемых в этом разделе. Постройте решение, чтобы обеспечить доступность в действия **Общие** раздел **элементов**.  
+     Это собственное действие, при выполнении которого отображаются данные о внешней транзакции, и оно используется в службе и клиенте рабочих процессов, описываемых в этом разделе. Постройте решение, чтобы обеспечить доступность в действия **распространенных** раздел **элементов**.  
   
 ### <a name="implement-the-workflow-service"></a>Реализация службы рабочего процесса  
   
-1.  Добавление новой службы рабочего процесса WCF, вызывается `WorkflowService` для `Common` проекта. Для этого щелкните правой `Common` проекта, выберите **добавить**, **новый элемент...** Выберите **рабочего процесса** под **установленные шаблоны** и выберите **службы рабочего процесса WCF**.  
+1.  Добавить новую службу рабочего процесса WCF, вызывается `WorkflowService` для `Common` проекта. Для этого щелкните правой кнопкой `Common` проекта, выберите **добавить**, **новый элемент...** Выберите **рабочего процесса** под **установленные шаблоны** и выберите **службы WCF Workflow Service**.  
   
      ![Добавление службы рабочего процесса](../../../../docs/framework/wcf/feature-details/media/addwfservice.JPG "AddWFService")  
   
@@ -86,7 +86,7 @@ ms.locfileid: "33496101"
   
      ![Добавление действия WriteLine](../../../../docs/framework/wcf/feature-details/media/addwriteline.JPG "AddWriteLine")  
   
-4.  Перетащите действие <xref:System.ServiceModel.Activities.TransactedReceiveScope> и поместите его после действия <xref:System.Activities.Statements.WriteLine>. <xref:System.ServiceModel.Activities.TransactedReceiveScope> Действия можно найти в **обмен сообщениями** раздел **элементов**. <xref:System.ServiceModel.Activities.TransactedReceiveScope> Действие состоит из двух разделов **запроса** и **текст**. **Запроса** раздел содержит <xref:System.ServiceModel.Activities.Receive> действия. **Текст** содержит действия, которые необходимо выполнить в транзакции после получения сообщения.  
+4.  Перетащите действие <xref:System.ServiceModel.Activities.TransactedReceiveScope> и поместите его после действия <xref:System.Activities.Statements.WriteLine>. <xref:System.ServiceModel.Activities.TransactedReceiveScope> Действия можно найти в **Messaging** раздел **элементов**. <xref:System.ServiceModel.Activities.TransactedReceiveScope> Действие состоит из двух разделов **запроса** и **текст**. **Запроса** раздел содержит <xref:System.ServiceModel.Activities.Receive> действия. **Текст** раздел содержит действия, которые необходимо выполнить в рамках транзакции, после получения сообщения.  
   
      ![Добавление действия TransactedReceiveScope](../../../../docs/framework/wcf/feature-details/media/trs.JPG "TRS")  
   
@@ -97,7 +97,7 @@ ms.locfileid: "33496101"
     > [!NOTE]
     >  Можно удалить переменную данных, заданную по умолчанию. Также можно использовать существующую переменную обработки.  
   
-6.  Перетаскивание <xref:System.ServiceModel.Activities.Receive> действия в **запроса** раздел <xref:System.ServiceModel.Activities.TransactedReceiveScope> действия. Задайте следующие свойства:  
+6.  Перетаскивание <xref:System.ServiceModel.Activities.Receive> действие в рамках **запроса** раздел <xref:System.ServiceModel.Activities.TransactedReceiveScope> действия. Задайте следующие свойства:  
   
     |Свойство.|Значение|  
     |--------------|-----------|  
@@ -145,7 +145,7 @@ ms.locfileid: "33496101"
   
      ![Параметры сообщения ответа](../../../../docs/framework/wcf/feature-details/media/replymessagesettings.JPG "ReplyMessageSettings")  
   
-13. Перетаскивание <xref:System.Activities.Statements.WriteLine> действия после `SendReplyToReceive` и задайте имеет <xref:System.Activities.Statements.WriteLine.Text%2A> свойства» службы: Reply sent.»  
+13. Путем перетаскивания <xref:System.Activities.Statements.WriteLine> действия после `SendReplyToReceive` действие и набор имеет <xref:System.Activities.Statements.WriteLine.Text%2A> свойства «Service: ответ, отправленный.»  
   
 14. Перетащите действие <xref:System.Activities.Statements.WriteLine> в нижнюю область рабочего процесса и задайте для свойства <xref:System.Activities.Statements.WriteLine.Text%2A> значение "Service: Workflow ends, press ENTER to exit".  
   
@@ -155,7 +155,7 @@ ms.locfileid: "33496101"
   
 ### <a name="implement-the-workflow-client"></a>Реализуйте клиент рабочего процесса  
   
-1.  Добавьте новое приложение WCF Workflow с именем `WorkflowClient` к проекту `Common`. Для этого щелкните правой `Common` проекта, выберите **добавить**, **новый элемент...** Выберите **рабочего процесса** под **установленные шаблоны** и выберите **действия**.  
+1.  Добавьте новое приложение WCF Workflow с именем `WorkflowClient` к проекту `Common`. Для этого щелкните правой кнопкой `Common` проекта, выберите **добавить**, **новый элемент...** Выберите **рабочего процесса** под **установленные шаблоны** и выберите **действия**.  
   
      ![Добавление проекта действия](../../../../docs/framework/wcf/feature-details/media/addactivity.JPG "AddActivity")  
   
@@ -173,7 +173,7 @@ ms.locfileid: "33496101"
   
 6.  Перетащите действие `PrintTransactionInfo` в <xref:System.Activities.Statements.Sequence>.  
   
-7.  Перетаскивание <xref:System.Activities.Statements.WriteLine> действия после `PrintTransactionInfo` и задайте его <xref:System.Activities.Statements.WriteLine.Text%2A> значение «Client: Beginning Send». После этого рабочий процесс должен выглядеть так:  
+7.  Перетаскивание <xref:System.Activities.Statements.WriteLine> действия после `PrintTransactionInfo` действие и набор его <xref:System.Activities.Statements.WriteLine.Text%2A> значение «Client: Beginning Send». После этого рабочий процесс должен выглядеть так:  
   
      ![Добавление действий](../../../../docs/framework/wcf/feature-details/media/clientaddcbswriteline.JPG "ClientAddCBSWriteLine")  
   
@@ -313,6 +313,6 @@ ms.locfileid: "33496101"
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
- [Общие сведения о транзакциях Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
- [Использование TransactedReceiveScope](../../../../docs/framework/windows-workflow-foundation/samples/use-of-transactedreceivescope.md)
+
+- [Службы рабочих процессов](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
+- [Общие сведения о транзакциях Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/transactions-overview.md)

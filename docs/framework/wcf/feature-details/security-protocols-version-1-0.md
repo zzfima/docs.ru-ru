@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
 author: BrucePerlerMS
 ms.openlocfilehash: 043a092855b7f5827c03b1d247b03328ba561edf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421337"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48036283"
 ---
 # <a name="security-protocols-version-10"></a>Протоколы безопасности версии 1.0
 Протоколы WS-Security предоставляют механизмы обеспечения безопасности веб-служб, охватывающие все существующие требования к безопасности обмена сообщениями на предприятии. В этом разделе подробно описано, Windows Communication Foundation (WCF) версии 1.0 (реализованные в <xref:System.ServiceModel.Channels.SecurityBindingElement>) для следующих протоколов ws-security.  

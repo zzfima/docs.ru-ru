@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
-ms.openlocfilehash: 55869c3c8a957de98962378cc1a93e7058e24e38
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d79c8fc364d13c00049523f7788ada258af6ec98
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524874"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028351"
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Как включить сохраняемость SQL для рабочих процессов и служб рабочих процессов
 
@@ -72,7 +72,7 @@ Windows Server App Fabric упрощает процесс настройки с�
    ```
 
 > [!NOTE]
-> См. в разделе [сохранение приложения рабочего процесса](../../../docs/framework/windows-workflow-foundation/samples/persisting-a-workflow-application.md) пример в [сохраняемости](../../../docs/framework/windows-workflow-foundation/samples/persistence.md) пример включения сохраняемости для рабочих процессов с помощью <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>и [как: Создание и запуск длительно Запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) шаге [Приступая к работе](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) для пошаговой инструкцией.  
+> См. в разделе [как: Создание и запуск длительно выполняющегося рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md) шаге [Приступая к работе](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) для пошаговой инструкцией.  
 
 ## <a name="enabling-persistence-for-self-hosted-workflow-services-that-use-the-workflowservicehost"></a>Включение сохраняемости для резидентных служб рабочих процессов, которые используют WorkflowServiceHost
 
@@ -82,7 +82,7 @@ Windows Server App Fabric упрощает процесс настройки с�
 
 В следующем списке перечислены этапы использования класса <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior> для включения сохраняемости для резидентных служб рабочих процессов.  
 
-##### <a name="to-enable-persistence-using-sqlworkflowinstancestorebehavior"></a>Включение сохраняемости с помощью SqlWorkflowInstanceStoreBehavior
+#### <a name="to-enable-persistence-using-sqlworkflowinstancestorebehavior"></a>Включение сохраняемости с помощью SqlWorkflowInstanceStoreBehavior
 
 1.  Добавьте ссылку на System.ServiceModel.dll.  
   
@@ -116,9 +116,6 @@ Windows Server App Fabric упрощает процесс настройки с�
     ```csharp
     host.Open();
     ```
-
-> [!IMPORTANT]
-> См. в разделе [встроенной конфигурации](../../../docs/framework/windows-workflow-foundation/samples/built-in-configuration.md) пример в [сохраняемости](../../../docs/framework/windows-workflow-foundation/samples/persistence.md) пример включения сохраняемости для служб рабочих процессов с помощью `SqlWorkflowInstanceStoreBehavior` класса.  
 
 ### <a name="using-the-durableinstancingoptions-property"></a>Использование свойства DurableInstancingOptions
 

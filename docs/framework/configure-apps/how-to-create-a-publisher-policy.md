@@ -10,11 +10,11 @@ ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: e7cac3c7e6c588a82e9dfff169ba7b7aa72c35f8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399639"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48028018"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Практическое руководство. Создание политики издателя
 Поставщики сборок можно указать, что приложения должны использовать более новой версии сборки, включая файл политики издателя с обновленной сборкой. Файл политики издателя указывает перенаправление сборки и параметры базы кода и используется тот же формат, что и файл конфигурации приложения. Файл политики издателя компилируется в сборку и помещен в глобальном кэше сборок.  
