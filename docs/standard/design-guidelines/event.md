@@ -13,11 +13,11 @@ ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b257da73d33fae54ef464e9dd69906316b87fd88
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47401281"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863303"
 ---
 # <a name="event-design"></a>Разработка событий
 События являются наиболее часто используемые формой обратные вызовы (конструкции, которые позволяют framework для вызова пользовательского кода). Другие механизмы обратного вызова участием делегатов, виртуальные члены и основанная на интерфейсах подключаемых модулей. Данные из исследований об удобстве использования, указывают, что большинство разработчиков удобнее работать с помощью событий, чем они при использовании других методов обратного вызова. События хорошо интегрированы с Visual Studio и многих языков.  
