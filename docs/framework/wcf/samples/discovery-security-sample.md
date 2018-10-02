@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
 author: BrucePerlerMS
 ms.openlocfilehash: be915a0b619c800c79ef1acbec9b71812c749cf7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: daa8788af67ac2d1cecd24f9f3409babb2f978c9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399181"
+ms.lasthandoff: 10/01/2018
+ms.locfileid: "47863732"
 ---
 # <a name="discovery-security-sample"></a>Образец безопасности при обнаружении
 В спецификации Discovery не требуется защищенность конечных точек, участвующих в процессе обнаружения. Включение функций безопасности для сообщений обнаружения обеспечивает защиту от атак различного типа (изменение сообщений, отказ в обслуживании, воспроизведение, подделка пакетов). В этом образце реализованы пользовательские каналы, которые вычисляют и проверяют сигнатуры сообщений в компактном формате (описан в разделе 8.2 спецификации WS-Discovery). Образец поддерживает [спецификацию Discovery 2005](https://go.microsoft.com/fwlink/?LinkId=177912) и [версии 1.1](https://go.microsoft.com/fwlink/?LinkId=179677).  
