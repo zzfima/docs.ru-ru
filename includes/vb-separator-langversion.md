@@ -1,8 +1,10 @@
 
-Для использования в качестве начальных разделителя знак подчеркивания, необходимо добавить следующий элемент в проект Visual Basic (\*.vbproj) файла:
+Чтобы использовать символ подчеркивания в качестве начального разделителя, нужно добавить в файл проекта Visual Basic (\*.vbproj) следующий элемент:
 
 ```xml
 <PropertyGroup>
   <LangVersion>15.5</LangVersion>
 </PropertyGroup>
 ```
+
+Дополнительные сведения см. в разделе [параметр версии языка Visual Basic](../docs/visual-basic/language-reference/configure-language-version.md).
