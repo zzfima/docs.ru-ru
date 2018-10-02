@@ -1,8 +1,10 @@
 
-<span data-ttu-id="5dece-101">Для использования в качестве начальных разделителя знак подчеркивания, необходимо добавить следующий элемент в проект Visual Basic (\*.vbproj) файла:</span><span class="sxs-lookup"><span data-stu-id="5dece-101">To use the underscore character as a leading separator, you must add the following element to your Visual Basic project (\*.vbproj) file:</span></span>
+<span data-ttu-id="ece4e-101">Чтобы использовать символ подчеркивания в качестве начального разделителя, нужно добавить в файл проекта Visual Basic (\*.vbproj) следующий элемент:</span><span class="sxs-lookup"><span data-stu-id="ece4e-101">To use the underscore character as a leading separator, you must add the following element to your Visual Basic project (\*.vbproj) file:</span></span>
 
 ```xml
 <PropertyGroup>
   <LangVersion>15.5</LangVersion>
 </PropertyGroup>
 ```
+
+<span data-ttu-id="ece4e-102">Дополнительные сведения см. в разделе [параметр версии языка Visual Basic](../docs/visual-basic/language-reference/configure-language-version.md).</span><span class="sxs-lookup"><span data-stu-id="ece4e-102">For more information see [setting the Visual Basic language version](../docs/visual-basic/language-reference/configure-language-version.md).</span></span>
