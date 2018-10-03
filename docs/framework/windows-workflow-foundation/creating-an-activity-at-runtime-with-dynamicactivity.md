@@ -2,12 +2,12 @@
 title: Создание действия в среде выполнения с динамическим действием
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 0450a56059083f355f3fd71d95c83bf8dd1cf0e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 880dbc6263b64c877d3211347541766d91534c85
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515178"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48027368"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>Создание действия в среде выполнения с динамическим действием
 <xref:System.Activities.DynamicActivity> представляет собой конкретный запечатанный класс с открытым конструктором. <xref:System.Activities.DynamicActivity> может использоваться для объединения функций действий во время выполнения с помощью действия DOM.  
@@ -76,7 +76,7 @@ ms.locfileid: "33515178"
   
 3.  Откройте файл Workflow1.xaml в проекте HelloActivity. Нажмите кнопку **аргументы** в нижней части конструктора. Создайте новый аргумент `In`, вызываемый методом `TextToWrite` типа `String`.  
   
-4.  Перетащите **WriteLine** действия из **примитивы** области элементов в область конструктора. Присвойте значение `TextToWrite` для **текст** свойства действия.  
+4.  Перетащите **WriteLine** действия из **примитивы** разделе области элементов в область конструктора. Назначьте `TextToWrite` для **текст** свойства действия.  
   
 5.  Откройте файл Program.cs. Добавьте следующую директиву в начало файла.  
   
@@ -96,6 +96,6 @@ ms.locfileid: "33515178"
   
 8.  Щелкните правой кнопкой мыши файл Workflow1.xaml в **обозревателе решений** и выберите **Просмотр кода**. Следует отметить, что класс действия создается при помощи `x:Class`, а свойство - при помощи `x:Property`.  
   
-## <a name="see-also"></a>См. также  
- [Разработка рабочих процессов, действий и выражений с использованием императивного кода](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)  
- [Создание действия DynamicActivity](../../../docs/framework/windows-workflow-foundation/samples/dynamicactivity-creation.md)
+## <a name="see-also"></a>См. также
+
+- [Разработка рабочих процессов, действий и выражений с использованием императивного кода](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

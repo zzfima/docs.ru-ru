@@ -8,11 +8,11 @@ ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 68fa7753be76b0681c40e540e86b11c89e7a8ca1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193890"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48037343"
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Поддержка автоматизации пользовательского интерфейса для стандартных элементов управления
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "47193890"
 |Правка|Document|  
 |Правка|Правка|  
 |SysLink|Гиперссылка|  
-|Static|Text|  
+|Static|Текста|  
 |Static|Изображение|  
 |SysIPAddress32|Другой|  
 |SysHeader32|Header/HeaderItem|  

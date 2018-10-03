@@ -3,11 +3,11 @@ title: Проверочные утверждения (F#)
 description: 'Узнайте, как использовать выражение «assert» как средство отладки для тестирования выражений в языке F #.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47233256"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48034314"
 ---
 # <a name="assertions"></a>Утверждения
 
