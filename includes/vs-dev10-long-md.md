@@ -1,1 +1,0 @@
-<span data-ttu-id="e24c4-101">Visual Studio 2010</span><span class="sxs-lookup"><span data-stu-id="e24c4-101">Visual Studio 2010</span></span>
