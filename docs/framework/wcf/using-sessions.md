@@ -129,7 +129,7 @@ ms.locfileid: "44260208"
   
 -   Завершающей операции для любого типа объекта клиента WCF (по умолчанию операции не являются завершающими; контракт должен явно указывать завершающую операцию). При вызове первой операции объекта клиента WCF автоматически открывает канал и инициирует сеанс.  
   
- Примеры см. в разделе [How to: Create a Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) , а также в примерах из разделов [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) и [Instancing](../../../docs/framework/wcf/samples/instancing.md) .  
+ Примеры см. в разделе [Практическое руководство. Создание службы, для которой требуются сеансы](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md) , а также в примерах из разделов [Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md) и [Instancing](../../../docs/framework/wcf/samples/instancing.md) .  
   
  Дополнительные сведения о клиентах и сеансах см. в разделе [доступ к службам, с помощью клиента WCF](../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md).  
   

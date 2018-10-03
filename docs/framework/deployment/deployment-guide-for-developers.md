@@ -230,7 +230,7 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 - [Определение](#detecting-the-language-packs) наличия нужных языковых пакетов на компьютере пользователя.
 
-- Если требуется контроль над развертыванием, запустите процесс установки .NET Framework в автоматическом режиме и отслеживайте его (см. раздел [How to: Get Progress from the .NET Framework 4.5 Installer](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)).
+- Если требуется контроль над развертыванием, запустите процесс установки .NET Framework в автоматическом режиме и отслеживайте его (см. раздел [Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
 
 - При развертывании автономного установщика [привяжите языковые пакеты отдельно](#chain_langpack).
 
