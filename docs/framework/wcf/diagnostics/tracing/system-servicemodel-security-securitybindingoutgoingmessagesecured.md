@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 5b6cd812-63ba-4614-89f1-3c31d7540c5d
 author: BrucePerlerMS
 ms.openlocfilehash: df4819e6136e28786d192b60d13dce5edf979afe
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48026865"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48581727"
 ---
-# <a name="systemservicemodelsecuritysecuritybindingoutgoingmessagesecured"></a><span data-ttu-id="f1df7-102">System.ServiceModel.Security.SecurityBindingOutgoingMessageSecured</span><span class="sxs-lookup"><span data-stu-id="f1df7-102">System.ServiceModel.Security.SecurityBindingOutgoingMessageSecured</span></span>
-<span data-ttu-id="f1df7-103">System.ServiceModel.Security.SecurityBindingOutgoingMessageSecured</span><span class="sxs-lookup"><span data-stu-id="f1df7-103">System.ServiceModel.Security.SecurityBindingOutgoingMessageSecured</span></span>  
+# <a name="systemservicemodelsecuritysecuritybindingoutgoingmessagesecured"></a><span data-ttu-id="da4b6-102">System.ServiceModel.Security.SecurityBindingOutgoingMessageSecured</span><span class="sxs-lookup"><span data-stu-id="da4b6-102">System.ServiceModel.Security.SecurityBindingOutgoingMessageSecured</span></span>
+<span data-ttu-id="da4b6-103">System.ServiceModel.Security.SecurityBindingOutgoingMessageSecured</span><span class="sxs-lookup"><span data-stu-id="da4b6-103">System.ServiceModel.Security.SecurityBindingOutgoingMessageSecured</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f1df7-104">Описание</span><span class="sxs-lookup"><span data-stu-id="f1df7-104">Description</span></span>  
- <span data-ttu-id="f1df7-105">Протокол безопасности обеспечил защиту исходящего сообщения.</span><span class="sxs-lookup"><span data-stu-id="f1df7-105">The security protocol secured the outgoing message.</span></span>  
+## <a name="description"></a><span data-ttu-id="da4b6-104">Описание</span><span class="sxs-lookup"><span data-stu-id="da4b6-104">Description</span></span>  
+ <span data-ttu-id="da4b6-105">Протокол безопасности обеспечил защиту исходящего сообщения.</span><span class="sxs-lookup"><span data-stu-id="da4b6-105">The security protocol secured the outgoing message.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f1df7-106">См. также</span><span class="sxs-lookup"><span data-stu-id="f1df7-106">See Also</span></span>  
- [<span data-ttu-id="f1df7-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="f1df7-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="f1df7-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="f1df7-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="f1df7-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="f1df7-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="da4b6-106">См. также</span><span class="sxs-lookup"><span data-stu-id="da4b6-106">See Also</span></span>  
+ [<span data-ttu-id="da4b6-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="da4b6-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="da4b6-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="da4b6-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="da4b6-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="da4b6-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

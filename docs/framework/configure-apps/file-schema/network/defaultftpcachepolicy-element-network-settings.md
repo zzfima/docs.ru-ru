@@ -11,21 +11,21 @@ ms.assetid: 0eb0c5cb-dd97-484d-8614-785e88877abb
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: e03fb02bd351058c1fcdedb8367d03318418a12c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032378"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777764"
 ---
-# <a name="ltdefaultftpcachepolicygt-element-network-settings"></a><span data-ttu-id="b0e89-102">&lt;defaultFtpCachePolicy&gt; (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="b0e89-102">&lt;defaultFtpCachePolicy&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="b0e89-103">Описывает указывает, активна ли функция FTP-кэширования и описывает политику кэширования по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="b0e89-103">Describes whether FTP caching is active and describes the default caching policy.</span></span>  
+# <a name="ltdefaultftpcachepolicygt-element-network-settings"></a><span data-ttu-id="00c6f-102">&lt;defaultFtpCachePolicy&gt; (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="00c6f-102">&lt;defaultFtpCachePolicy&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="00c6f-103">Описывает указывает, активна ли функция FTP-кэширования и описывает политику кэширования по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="00c6f-103">Describes whether FTP caching is active and describes the default caching policy.</span></span>  
   
- <span data-ttu-id="b0e89-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="b0e89-104">\<configuration></span></span>  
-<span data-ttu-id="b0e89-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="b0e89-105">\<system.net></span></span>  
-<span data-ttu-id="b0e89-106">\<requestCaching ></span><span class="sxs-lookup"><span data-stu-id="b0e89-106">\<requestCaching></span></span>  
-<span data-ttu-id="b0e89-107">\<defaultFtpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="b0e89-107">\<defaultFtpCachePolicy></span></span>  
+ <span data-ttu-id="00c6f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="00c6f-104">\<configuration></span></span>  
+<span data-ttu-id="00c6f-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="00c6f-105">\<system.net></span></span>  
+<span data-ttu-id="00c6f-106">\<requestCaching ></span><span class="sxs-lookup"><span data-stu-id="00c6f-106">\<requestCaching></span></span>  
+<span data-ttu-id="00c6f-107">\<defaultFtpCachePolicy ></span><span class="sxs-lookup"><span data-stu-id="00c6f-107">\<defaultFtpCachePolicy></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b0e89-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="b0e89-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="00c6f-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="00c6f-108">Syntax</span></span>  
   
 ```xml  
 <defaultFtpCachePolicy  
@@ -33,41 +33,41 @@ ms.locfileid: "48032378"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="b0e89-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="b0e89-109">Attributes and Elements</span></span>  
- <span data-ttu-id="b0e89-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="b0e89-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="00c6f-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="00c6f-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="00c6f-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="00c6f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="b0e89-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="b0e89-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="00c6f-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="00c6f-111">Attributes</span></span>  
   
-|<span data-ttu-id="b0e89-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="b0e89-112">Attribute</span></span>|<span data-ttu-id="b0e89-113">Описание</span><span class="sxs-lookup"><span data-stu-id="b0e89-113">Description</span></span>|  
+|<span data-ttu-id="00c6f-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="00c6f-112">Attribute</span></span>|<span data-ttu-id="00c6f-113">Описание</span><span class="sxs-lookup"><span data-stu-id="00c6f-113">Description</span></span>|  
 |---------------|-----------------|  
-|`policyLevel`|<span data-ttu-id="b0e89-114">Указывает политику кэширования FTP.</span><span class="sxs-lookup"><span data-stu-id="b0e89-114">Specifies the FTP caching policy.</span></span> <span data-ttu-id="b0e89-115">Значение по умолчанию — `Default`.</span><span class="sxs-lookup"><span data-stu-id="b0e89-115">The default value is `Default`.</span></span>|  
+|`policyLevel`|<span data-ttu-id="00c6f-114">Указывает политику кэширования FTP.</span><span class="sxs-lookup"><span data-stu-id="00c6f-114">Specifies the FTP caching policy.</span></span> <span data-ttu-id="00c6f-115">Значение по умолчанию — `Default`.</span><span class="sxs-lookup"><span data-stu-id="00c6f-115">The default value is `Default`.</span></span>|  
   
-## <a name="policylevel-attribute"></a><span data-ttu-id="b0e89-116">policyLevel атрибут</span><span class="sxs-lookup"><span data-stu-id="b0e89-116">policyLevel Attribute</span></span>  
+## <a name="policylevel-attribute"></a><span data-ttu-id="00c6f-116">policyLevel атрибут</span><span class="sxs-lookup"><span data-stu-id="00c6f-116">policyLevel Attribute</span></span>  
   
-|<span data-ttu-id="b0e89-117">Значение</span><span class="sxs-lookup"><span data-stu-id="b0e89-117">Value</span></span>|<span data-ttu-id="b0e89-118">Описание</span><span class="sxs-lookup"><span data-stu-id="b0e89-118">Description</span></span>|  
+|<span data-ttu-id="00c6f-117">Значение</span><span class="sxs-lookup"><span data-stu-id="00c6f-117">Value</span></span>|<span data-ttu-id="00c6f-118">Описание</span><span class="sxs-lookup"><span data-stu-id="00c6f-118">Description</span></span>|  
 |-----------|-----------------|  
-|`Default`|<span data-ttu-id="b0e89-119">Возвращает кэшированный ресурс, если ресурс является новым, длина содержимого точна и присутствуют атрибуты content-length, модификации и истечения срока действия.</span><span class="sxs-lookup"><span data-stu-id="b0e89-119">Returns the cached resource if the resource is fresh, the content length is accurate, and the expiration, modification, and content length attributes are present.</span></span>|  
-|`BypassCache`|<span data-ttu-id="b0e89-120">Возвращает ресурс с сервера.</span><span class="sxs-lookup"><span data-stu-id="b0e89-120">Returns the resource from the server.</span></span>|  
-|`CacheOnly`|<span data-ttu-id="b0e89-121">Возвращает кэшированный ресурс, если длина содержимого присутствует и соответствует размеру записи.</span><span class="sxs-lookup"><span data-stu-id="b0e89-121">Returns the cached resource if the content length is present and matches the entry size.</span></span>|  
-|`CacheIfAvailable`|<span data-ttu-id="b0e89-122">Возвращает кэшированный ресурс, если длина содержимого и соответствует размеру записи; в противном случае ресурс загружается с сервера и возвращается вызывающему объекту.</span><span class="sxs-lookup"><span data-stu-id="b0e89-122">Returns the cached resource if the content length is provided and matches the entry size; otherwise, the resource is downloaded from the server and is returned to the caller.</span></span>|  
-|`Revalidate`|<span data-ttu-id="b0e89-123">Возвращает кэшированный ресурс, если метка времени используется кэшированный ресурс совпадает с меткой времени ресурса на сервере; в противном случае ресурс загружается с сервера, сохраняется в кэше и возвращается вызывающей стороне.</span><span class="sxs-lookup"><span data-stu-id="b0e89-123">Returns the cached resource if the timestamp of the cached resource is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, stored in the cache, and returned to the caller.</span></span>|  
-|`Reload`|<span data-ttu-id="b0e89-124">Загружает ресурс с сервера, сохраняется в кэше и возвращает ресурс вызывающему объекту.</span><span class="sxs-lookup"><span data-stu-id="b0e89-124">Downloads the resource from the server, stores it in the cache, and returns the resource to the caller.</span></span>|  
-|`NoCacheNoStore`|<span data-ttu-id="b0e89-125">Если кэшируемый ресурс существует, она удаляется.</span><span class="sxs-lookup"><span data-stu-id="b0e89-125">If a cached resource exists, it is deleted.</span></span> <span data-ttu-id="b0e89-126">Ресурс загружается с сервера и возвращается вызывающему объекту.</span><span class="sxs-lookup"><span data-stu-id="b0e89-126">The resource is downloaded from the server and is returned to the caller.</span></span>|  
-|`Revalidate`|<span data-ttu-id="b0e89-127">Выполняет запрос с помощью кэшированной копии ресурса, если метка времени совпадает с меткой времени ресурса на сервере; в противном случае ресурс загружается с сервера, представляется вызывающему и сохраняется в кэше.</span><span class="sxs-lookup"><span data-stu-id="b0e89-127">Satisfies a request by using the cached copy of the resource if the timestamp is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, presented to the caller, and stored in the cache.</span></span>|  
+|`Default`|<span data-ttu-id="00c6f-119">Возвращает кэшированный ресурс, если ресурс является новым, длина содержимого точна и присутствуют атрибуты content-length, модификации и истечения срока действия.</span><span class="sxs-lookup"><span data-stu-id="00c6f-119">Returns the cached resource if the resource is fresh, the content length is accurate, and the expiration, modification, and content length attributes are present.</span></span>|  
+|`BypassCache`|<span data-ttu-id="00c6f-120">Возвращает ресурс с сервера.</span><span class="sxs-lookup"><span data-stu-id="00c6f-120">Returns the resource from the server.</span></span>|  
+|`CacheOnly`|<span data-ttu-id="00c6f-121">Возвращает кэшированный ресурс, если длина содержимого присутствует и соответствует размеру записи.</span><span class="sxs-lookup"><span data-stu-id="00c6f-121">Returns the cached resource if the content length is present and matches the entry size.</span></span>|  
+|`CacheIfAvailable`|<span data-ttu-id="00c6f-122">Возвращает кэшированный ресурс, если длина содержимого и соответствует размеру записи; в противном случае ресурс загружается с сервера и возвращается вызывающему объекту.</span><span class="sxs-lookup"><span data-stu-id="00c6f-122">Returns the cached resource if the content length is provided and matches the entry size; otherwise, the resource is downloaded from the server and is returned to the caller.</span></span>|  
+|`Revalidate`|<span data-ttu-id="00c6f-123">Возвращает кэшированный ресурс, если метка времени используется кэшированный ресурс совпадает с меткой времени ресурса на сервере; в противном случае ресурс загружается с сервера, сохраняется в кэше и возвращается вызывающей стороне.</span><span class="sxs-lookup"><span data-stu-id="00c6f-123">Returns the cached resource if the timestamp of the cached resource is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, stored in the cache, and returned to the caller.</span></span>|  
+|`Reload`|<span data-ttu-id="00c6f-124">Загружает ресурс с сервера, сохраняется в кэше и возвращает ресурс вызывающему объекту.</span><span class="sxs-lookup"><span data-stu-id="00c6f-124">Downloads the resource from the server, stores it in the cache, and returns the resource to the caller.</span></span>|  
+|`NoCacheNoStore`|<span data-ttu-id="00c6f-125">Если кэшируемый ресурс существует, она удаляется.</span><span class="sxs-lookup"><span data-stu-id="00c6f-125">If a cached resource exists, it is deleted.</span></span> <span data-ttu-id="00c6f-126">Ресурс загружается с сервера и возвращается вызывающему объекту.</span><span class="sxs-lookup"><span data-stu-id="00c6f-126">The resource is downloaded from the server and is returned to the caller.</span></span>|  
+|`Revalidate`|<span data-ttu-id="00c6f-127">Выполняет запрос с помощью кэшированной копии ресурса, если метка времени совпадает с меткой времени ресурса на сервере; в противном случае ресурс загружается с сервера, представляется вызывающему и сохраняется в кэше.</span><span class="sxs-lookup"><span data-stu-id="00c6f-127">Satisfies a request by using the cached copy of the resource if the timestamp is the same as the timestamp of the resource on the server; otherwise, the resource is downloaded from the server, presented to the caller, and stored in the cache.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="b0e89-128">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="b0e89-128">Child Elements</span></span>  
- <span data-ttu-id="b0e89-129">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="b0e89-129">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="00c6f-128">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="00c6f-128">Child Elements</span></span>  
+ <span data-ttu-id="00c6f-129">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="00c6f-129">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="b0e89-130">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="b0e89-130">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="00c6f-130">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="00c6f-130">Parent Elements</span></span>  
   
-|<span data-ttu-id="b0e89-131">Элемент</span><span class="sxs-lookup"><span data-stu-id="b0e89-131">Element</span></span>|<span data-ttu-id="b0e89-132">Описание</span><span class="sxs-lookup"><span data-stu-id="b0e89-132">Description</span></span>|  
+|<span data-ttu-id="00c6f-131">Элемент</span><span class="sxs-lookup"><span data-stu-id="00c6f-131">Element</span></span>|<span data-ttu-id="00c6f-132">Описание</span><span class="sxs-lookup"><span data-stu-id="00c6f-132">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="b0e89-133">requestCaching</span><span class="sxs-lookup"><span data-stu-id="b0e89-133">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="b0e89-134">Определяет механизм кэширования для сетевых запросов.</span><span class="sxs-lookup"><span data-stu-id="b0e89-134">Controls the caching mechanism for network requests.</span></span>|  
+|[<span data-ttu-id="00c6f-133">requestCaching</span><span class="sxs-lookup"><span data-stu-id="00c6f-133">requestCaching</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|<span data-ttu-id="00c6f-134">Определяет механизм кэширования для сетевых запросов.</span><span class="sxs-lookup"><span data-stu-id="00c6f-134">Controls the caching mechanism for network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="b0e89-135">Примечания</span><span class="sxs-lookup"><span data-stu-id="b0e89-135">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="00c6f-135">Примечания</span><span class="sxs-lookup"><span data-stu-id="00c6f-135">Remarks</span></span>  
   
-## <a name="example"></a><span data-ttu-id="b0e89-136">Пример</span><span class="sxs-lookup"><span data-stu-id="b0e89-136">Example</span></span>  
- <span data-ttu-id="b0e89-137">В следующем примере показано задание политики кэширования для FTP `NoCacheNoStore`.</span><span class="sxs-lookup"><span data-stu-id="b0e89-137">The following example shows how to specify an FTP caching policy of `NoCacheNoStore`.</span></span>  
+## <a name="example"></a><span data-ttu-id="00c6f-136">Пример</span><span class="sxs-lookup"><span data-stu-id="00c6f-136">Example</span></span>  
+ <span data-ttu-id="00c6f-137">В следующем примере показано задание политики кэширования для FTP `NoCacheNoStore`.</span><span class="sxs-lookup"><span data-stu-id="00c6f-137">The following example shows how to specify an FTP caching policy of `NoCacheNoStore`.</span></span>  
   
 ```xml  
 <configuration>  
@@ -81,8 +81,8 @@ ms.locfileid: "48032378"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="b0e89-138">См. также</span><span class="sxs-lookup"><span data-stu-id="b0e89-138">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="00c6f-138">См. также</span><span class="sxs-lookup"><span data-stu-id="00c6f-138">See Also</span></span>  
  <xref:System.Net.Cache>  
  <xref:System.Net.WebRequest>  
  <xref:System.Net.Cache.RequestCacheLevel>  
- [<span data-ttu-id="b0e89-139">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="b0e89-139">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+ [<span data-ttu-id="00c6f-139">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="00c6f-139">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
