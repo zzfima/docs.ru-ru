@@ -6,57 +6,57 @@ dev_langs:
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
 ms.openlocfilehash: bc8bfaabb9e90e66e4ec81e551fd66319a78ca7e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207365"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48245209"
 ---
-# <a name="query-expression-syntax-examples-ordering"></a><span data-ttu-id="409b7-102">Примеры синтаксиса выражений запроса. Упорядочение</span><span class="sxs-lookup"><span data-stu-id="409b7-102">Query Expression Syntax Examples: Ordering</span></span>
-<span data-ttu-id="409b7-103">Примеры в этом разделе демонстрируют, как использовать `OrderBy` и `OrderByDescending` методы запроса [модели AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) с использованием синтаксиса выражений запроса.</span><span class="sxs-lookup"><span data-stu-id="409b7-103">The examples in this topic demonstrate how to use the `OrderBy` and `OrderByDescending` methods to query the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) using query expression syntax.</span></span> <span data-ttu-id="409b7-104">Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="409b7-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+# <a name="query-expression-syntax-examples-ordering"></a><span data-ttu-id="c959e-102">Примеры синтаксиса выражений запроса. Упорядочение</span><span class="sxs-lookup"><span data-stu-id="c959e-102">Query Expression Syntax Examples: Ordering</span></span>
+<span data-ttu-id="c959e-103">Примеры в этом разделе демонстрируют, как использовать `OrderBy` и `OrderByDescending` методы запроса [модели AdventureWorks Sales](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) с использованием синтаксиса выражений запроса.</span><span class="sxs-lookup"><span data-stu-id="c959e-103">The examples in this topic demonstrate how to use the `OrderBy` and `OrderByDescending` methods to query the [AdventureWorks Sales Model](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) using query expression syntax.</span></span> <span data-ttu-id="c959e-104">Модель AdventureWorks Sales, которая используется в этих примерах, состоит из таблиц Contact, Address, Product, SalesOrderHeader и SalesOrderDetail образца базы данных AdventureWorks.</span><span class="sxs-lookup"><span data-stu-id="c959e-104">The AdventureWorks Sales Model used in these examples is built from the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="409b7-105">В примерах в этом разделе используются следующие `using` / `Imports` инструкции:</span><span class="sxs-lookup"><span data-stu-id="409b7-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="c959e-105">В примерах в этом разделе используются следующие `using` / `Imports` инструкции:</span><span class="sxs-lookup"><span data-stu-id="c959e-105">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
   
-## <a name="orderby"></a><span data-ttu-id="409b7-106">OrderBy</span><span class="sxs-lookup"><span data-stu-id="409b7-106">OrderBy</span></span>  
+## <a name="orderby"></a><span data-ttu-id="c959e-106">OrderBy</span><span class="sxs-lookup"><span data-stu-id="c959e-106">OrderBy</span></span>  
   
-### <a name="example"></a><span data-ttu-id="409b7-107">Пример</span><span class="sxs-lookup"><span data-stu-id="409b7-107">Example</span></span>  
- <span data-ttu-id="409b7-108">В следующем примере выражение <xref:System.Linq.Enumerable.OrderBy%2A> используется для возвращения списка контактов, упорядоченного по фамилии.</span><span class="sxs-lookup"><span data-stu-id="409b7-108">The following example uses <xref:System.Linq.Enumerable.OrderBy%2A> to return a list of contacts ordered by last name.</span></span>  
+### <a name="example"></a><span data-ttu-id="c959e-107">Пример</span><span class="sxs-lookup"><span data-stu-id="c959e-107">Example</span></span>  
+ <span data-ttu-id="c959e-108">В следующем примере выражение <xref:System.Linq.Enumerable.OrderBy%2A> используется для возвращения списка контактов, упорядоченного по фамилии.</span><span class="sxs-lookup"><span data-stu-id="c959e-108">The following example uses <xref:System.Linq.Enumerable.OrderBy%2A> to return a list of contacts ordered by last name.</span></span>  
   
  [!code-csharp[DP L2E Examples#OrderBySimple1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#orderbysimple1)]
  [!code-vb[DP L2E Examples#OrderBySimple1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#orderbysimple1)]  
   
-### <a name="example"></a><span data-ttu-id="409b7-109">Пример</span><span class="sxs-lookup"><span data-stu-id="409b7-109">Example</span></span>  
- <span data-ttu-id="409b7-110">В следующем примере выражение <xref:System.Linq.Enumerable.OrderBy%2A> используется для сортировки контактов по длине фамилии.</span><span class="sxs-lookup"><span data-stu-id="409b7-110">The following example uses <xref:System.Linq.Enumerable.OrderBy%2A> to sort a list of contacts by length of last name.</span></span>  
+### <a name="example"></a><span data-ttu-id="c959e-109">Пример</span><span class="sxs-lookup"><span data-stu-id="c959e-109">Example</span></span>  
+ <span data-ttu-id="c959e-110">В следующем примере выражение <xref:System.Linq.Enumerable.OrderBy%2A> используется для сортировки контактов по длине фамилии.</span><span class="sxs-lookup"><span data-stu-id="c959e-110">The following example uses <xref:System.Linq.Enumerable.OrderBy%2A> to sort a list of contacts by length of last name.</span></span>  
   
  [!code-csharp[DP L2E Examples#OrderBySimple2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#orderbysimple2)]
  [!code-vb[DP L2E Examples#OrderBySimple2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#orderbysimple2)]  
   
-## <a name="orderbydescending"></a><span data-ttu-id="409b7-111">OrderByDescending</span><span class="sxs-lookup"><span data-stu-id="409b7-111">OrderByDescending</span></span>  
+## <a name="orderbydescending"></a><span data-ttu-id="c959e-111">OrderByDescending</span><span class="sxs-lookup"><span data-stu-id="c959e-111">OrderByDescending</span></span>  
   
-### <a name="example"></a><span data-ttu-id="409b7-112">Пример</span><span class="sxs-lookup"><span data-stu-id="409b7-112">Example</span></span>  
- <span data-ttu-id="409b7-113">В следующем примере выражение `orderby… descending` (`Order By … Descending` на Visual Basic), эквивалентное методу <xref:System.Linq.Enumerable.OrderByDescending%2A>, используется для сортировки прейскуранта по убыванию.</span><span class="sxs-lookup"><span data-stu-id="409b7-113">The following example uses `orderby… descending` (`Order By … Descending` in Visual Basic), which is equivalent to the <xref:System.Linq.Enumerable.OrderByDescending%2A> method, to sort the price list from highest to lowest.</span></span>  
+### <a name="example"></a><span data-ttu-id="c959e-112">Пример</span><span class="sxs-lookup"><span data-stu-id="c959e-112">Example</span></span>  
+ <span data-ttu-id="c959e-113">В следующем примере выражение `orderby… descending` (`Order By … Descending` на Visual Basic), эквивалентное методу <xref:System.Linq.Enumerable.OrderByDescending%2A>, используется для сортировки прейскуранта по убыванию.</span><span class="sxs-lookup"><span data-stu-id="c959e-113">The following example uses `orderby… descending` (`Order By … Descending` in Visual Basic), which is equivalent to the <xref:System.Linq.Enumerable.OrderByDescending%2A> method, to sort the price list from highest to lowest.</span></span>  
   
  [!code-csharp[DP L2E Examples#OrderByDescendingSimple1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#orderbydescendingsimple1)]
  [!code-vb[DP L2E Examples#OrderByDescendingSimple1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#orderbydescendingsimple1)]  
   
-## <a name="thenby"></a><span data-ttu-id="409b7-114">ThenBy</span><span class="sxs-lookup"><span data-stu-id="409b7-114">ThenBy</span></span>  
+## <a name="thenby"></a><span data-ttu-id="c959e-114">ThenBy</span><span class="sxs-lookup"><span data-stu-id="c959e-114">ThenBy</span></span>  
   
-### <a name="example"></a><span data-ttu-id="409b7-115">Пример</span><span class="sxs-lookup"><span data-stu-id="409b7-115">Example</span></span>  
- <span data-ttu-id="409b7-116">В следующем примере выражения <xref:System.Linq.Queryable.OrderBy%2A> и <xref:System.Linq.Queryable.ThenBy%2A> используются для возвращения списка контактов, упорядоченных вначале по фамилии, затем по имени.</span><span class="sxs-lookup"><span data-stu-id="409b7-116">The following example uses <xref:System.Linq.Queryable.OrderBy%2A> and <xref:System.Linq.Queryable.ThenBy%2A> to return a list of contacts ordered by last name and then by first name.</span></span>  
+### <a name="example"></a><span data-ttu-id="c959e-115">Пример</span><span class="sxs-lookup"><span data-stu-id="c959e-115">Example</span></span>  
+ <span data-ttu-id="c959e-116">В следующем примере выражения <xref:System.Linq.Queryable.OrderBy%2A> и <xref:System.Linq.Queryable.ThenBy%2A> используются для возвращения списка контактов, упорядоченных вначале по фамилии, затем по имени.</span><span class="sxs-lookup"><span data-stu-id="c959e-116">The following example uses <xref:System.Linq.Queryable.OrderBy%2A> and <xref:System.Linq.Queryable.ThenBy%2A> to return a list of contacts ordered by last name and then by first name.</span></span>  
   
  [!code-csharp[DP L2E Examples#OrderByThenBy](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#orderbythenby)]
  [!code-vb[DP L2E Examples#OrderByThenBy](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#orderbythenby)]  
   
-## <a name="thenbydescending"></a><span data-ttu-id="409b7-117">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="409b7-117">ThenByDescending</span></span>  
+## <a name="thenbydescending"></a><span data-ttu-id="c959e-117">ThenByDescending</span><span class="sxs-lookup"><span data-stu-id="c959e-117">ThenByDescending</span></span>  
   
-### <a name="example"></a><span data-ttu-id="409b7-118">Пример</span><span class="sxs-lookup"><span data-stu-id="409b7-118">Example</span></span>  
- <span data-ttu-id="409b7-119">В следующем примере выражение `OrderBy… Descending`, эквивалентное методу <xref:System.Linq.Enumerable.ThenByDescending%2A>, используется для сортировки списка продуктов: вначале по названию, затем по прейскурантной цене - по убыванию.</span><span class="sxs-lookup"><span data-stu-id="409b7-119">The following example uses `OrderBy… Descending`, which is equivalent to the <xref:System.Linq.Enumerable.ThenByDescending%2A> method, to sort a list of products, first by name and then by list price from highest to lowest.</span></span>  
+### <a name="example"></a><span data-ttu-id="c959e-118">Пример</span><span class="sxs-lookup"><span data-stu-id="c959e-118">Example</span></span>  
+ <span data-ttu-id="c959e-119">В следующем примере выражение `OrderBy… Descending`, эквивалентное методу <xref:System.Linq.Enumerable.ThenByDescending%2A>, используется для сортировки списка продуктов: вначале по названию, затем по прейскурантной цене - по убыванию.</span><span class="sxs-lookup"><span data-stu-id="c959e-119">The following example uses `OrderBy… Descending`, which is equivalent to the <xref:System.Linq.Enumerable.ThenByDescending%2A> method, to sort a list of products, first by name and then by list price from highest to lowest.</span></span>  
   
  [!code-csharp[DP L2E Examples#ThenByDescendingSimple](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#thenbydescendingsimple)]
  [!code-vb[DP L2E Examples#ThenByDescendingSimple](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#thenbydescendingsimple)]  
   
-## <a name="see-also"></a><span data-ttu-id="409b7-120">См. также</span><span class="sxs-lookup"><span data-stu-id="409b7-120">See Also</span></span>  
- [<span data-ttu-id="409b7-121">Запросы в LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="409b7-121">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a><span data-ttu-id="c959e-120">См. также</span><span class="sxs-lookup"><span data-stu-id="c959e-120">See Also</span></span>  
+ [<span data-ttu-id="c959e-121">Запросы в LINQ to Entities</span><span class="sxs-lookup"><span data-stu-id="c959e-121">Queries in LINQ to Entities</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
