@@ -2,42 +2,42 @@
 title: Процесс корпоративных закупок
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: a5e0d6191967c592d5a32baa7eee3f1659a27e50
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1817b7af00abd9240eb427f61ed9f0255d51c60d
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802915"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48781665"
 ---
 # <a name="corporate-purchase-process"></a>Процесс корпоративных закупок
-Этот образец показывает, как создать очень простой запрос предложений на основе процесса покупки с автоматическим выбором наилучшего предложения. В нем совместно применяются операторы <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> и <xref:System.Activities.Statements.ForEach%601>, а также пользовательское действие для создания рабочего потока, который представляет процесс.  
-  
- Этот образец содержит клиентское приложение [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], которое обеспечивает взаимодействие с процессом в качестве различных участников (исходной запрашивающей стороны или конкретного поставщика).  
-  
-## <a name="requirements"></a>Требования  
-  
--   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
-  
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
-  
-## <a name="demonstrates"></a>Демонстрации  
-  
--   Настраиваемые действия.  
-  
--   Сочетание действий.  
-  
--   Закладки.  
-  
--   Сохраняемость.  
-  
--   Схематизированная сохраняемость.  
-  
--   Трассировка.  
-  
--   Отслеживание.  
-  
--   Размещение [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в различных клиентах (веб-приложения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и приложения WinForms).  
-  
+Этот образец показывает, как создать очень простой запрос предложений на основе процесса покупки с автоматическим выбором наилучшего предложения. В нем совместно применяются операторы <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601> и <xref:System.Activities.Statements.ForEach%601>, а также пользовательское действие для создания рабочего потока, который представляет процесс.
+
+ Этот образец содержит клиентское приложение [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)], которое обеспечивает взаимодействие с процессом в качестве различных участников (исходной запрашивающей стороны или конкретного поставщика).
+
+## <a name="requirements"></a>Требования
+
+-   Visual Studio 2012.
+
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+
+## <a name="demonstrates"></a>Демонстрации
+
+-   Настраиваемые действия.
+
+-   Сочетание действий.
+
+-   Закладки.
+
+-   Сохраняемость.
+
+-   Схематизированная сохраняемость.
+
+-   Трассировка.
+
+-   Отслеживание.
+
+-   Размещение [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в различных клиентах (веб-приложения [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] и приложения WinForms).
+
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   
@@ -143,7 +143,7 @@ ms.locfileid: "43802915"
   
 #### <a name="to-use-this-sample"></a>Использование этого образца  
   
-1.  С использованием [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] откройте файл решения PurchaseProcess.sln.  
+1.  С помощью Visual Studio 2010, откройте решения purchaseprocess.sln.  
   
 2.  Чтобы выполнить проект веб-клиента, откройте **обозревателе решений** и щелкните правой кнопкой мыши **веб-клиент** проекта. Выберите **Назначить запускаемым проектом**.  
   

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-ms.openlocfilehash: e129924de53fb0dba61798cc492729c8af69ed94
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33496939"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48780457"
 ---
 # <a name="message-filters"></a>Фильтры сообщений
 Чтобы обеспечить маршрутизацию на основе содержимого, служба маршрутизации использует реализации класса <xref:System.ServiceModel.Dispatcher.MessageFilter>, которые проверяют такие разделы сообщения, как адрес, имя конечной точки или инструкция XPath. Если ни один из фильтров, предоставляемых платформой [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)], не подходит, можно создать пользовательский фильтр, написав реализацию базового класса <xref:System.ServiceModel.Dispatcher.MessageFilter>.  
   
- При настройке службы маршрутизации, необходимо определить элементы фильтра (<xref:System.ServiceModel.Routing.Configuration.FilterElement> объектов), которые описывают тип **MessageFilter** и все дополнительные данные, необходимые для создания фильтра, например, строковые значения для поиска для сообщения. Обратите внимание, что создание элементов фильтров подразумевает только создание отдельных фильтров сообщений. Для фильтров, занимающихся вычислением и маршрутизацией сообщений, необходимо также определить таблицу фильтров (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>).  
+ При настройке службы маршрутизации, необходимо определить элементы фильтра (<xref:System.ServiceModel.Routing.Configuration.FilterElement> объекты), описывающие тип **MessageFilter** и все дополнительные данные, необходимые для создания фильтра, такие как строковые значения для поиска для сообщения. Обратите внимание, что создание элементов фильтров подразумевает только создание отдельных фильтров сообщений. Для фильтров, занимающихся вычислением и маршрутизацией сообщений, необходимо также определить таблицу фильтров (<xref:System.ServiceModel.Routing.Configuration.FilterTableEntryCollection>).  
   
  Каждая запись в таблице фильтров указывает на элемент фильтра и клиентскую конечную точку, в которую производится перенаправление сообщения при обнаружении соответствия. В записи таблицы фильтров можно также задать коллекцию резервных конечных точек (<xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection>), содержащую список конечных точек, в которые сообщение передается в случае возникновения ошибки при отправке сообщения в основную конечную точку. Эти конечные точки перебираются в указанном порядке до тех пор, пока передача сообщения не будет выполнена успешно.  
   
@@ -26,11 +26,11 @@ ms.locfileid: "33496939"
 |Тип фильтра|Описание|Значение данных фильтра|Пример фильтра|  
 |------------------|-----------------|-------------------------|--------------------|  
 |Действие|Использует класс <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> для поиска сообщений, содержащих определенное действие.|Действие, по которому производится фильтрация.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
-|EndpointAddress|Использует <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> класса, с <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` для поиска сообщений, содержащих определенный адрес.|Адрес, по которому будет выполняться фильтрация (в поле «Кому»).|\<Имя фильтра = filterType «address1» = «EndpointAddress» filterData =»http://host/vdir/s.svc/b"/ >|  
-|EndpointAddressPrefix|Использует <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> класса, с <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` для поиска сообщений, содержащих определенный префикс адреса.|Адрес, по которому будет выполняться фильтрация с использованием самого длинного совпадающего префикса.|\<Имя фильтра = filterType «prefix1» = «EndpointAddressPrefix» filterData =»http://host/"/ >|  
-|И|Использует класс <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter>, который всегда проверяет оба условия перед возвратом результата.|параметр filterData не используется. Вместо этого filter1 и filter2 содержат имена соответствующих фильтров сообщений (также в таблице), которые должны быть **AND**объединены.|\<Имя фильтра = filterType «и «1 = фильтр1 «И» = «address1» filter2 = «action1» / >|  
+|EndpointAddress|Использует <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> класса, с помощью <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` для поиска сообщений, содержащих определенный адрес.|Адрес, по которому будет выполняться фильтрация (в поле «Кому»).|\<Имя фильтра = filterType «address1» = «EndpointAddress» filterData =» http://host/vdir/s.svc/b"/ >|  
+|EndpointAddressPrefix|Использует <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> класса, с помощью <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` для поиска сообщений, содержащих определенный префикс адреса.|Адрес, по которому будет выполняться фильтрация с использованием самого длинного совпадающего префикса.|\<Имя фильтра = filterType «prefix1» = «EndpointAddressPrefix» filterData =» http://host/"/ >|  
+|И|Использует класс <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter>, который всегда проверяет оба условия перед возвратом результата.|параметр filterData не используется; Вместо этого filter1 и filter2 содержат имена соответствующих фильтров сообщений (также в таблице), которые должны быть **AND**ed вместе.|\<Имя фильтра = filterType «и» 1 = filter1 «И» = «address1» filter2 = «action1» / >|  
 |Другой|Определяемый пользователем тип, который расширяет класс <xref:System.ServiceModel.Dispatcher.MessageFilter> и имеет конструктор, принимающий строку.|Атрибут customType является полным именем типа для создаваемого класса. Параметр filterData - строка, передаваемая конструктору при создании фильтра.|\<Имя фильтра = filterType «custom1» = «Custom» customType="CustomAssembly.CustomMsgFilter, CustomAssembly» filterData = «Пользовательские данные» / >|  
-|EndpointName|Использует класс <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> для поиска сообщений на основе имени конечной точки службы, в которую они поступили.|Имя конечной точки службы, например: «serviceEndpoint1».  Это должна быть одна из конечных точек, представленных в службе Routing Service.|\<Имя фильтра = «stock1» filterType = filterData «Конечная точка» = «SvcEndpoint»->|  
+|EndpointName|Использует класс <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> для поиска сообщений на основе имени конечной точки службы, в которую они поступили.|Имя конечной точки службы, например: «serviceEndpoint1».  Это должна быть одна из конечных точек, представленных в службе Routing Service.|\<Имя фильтра = filterType «stock1» = «Endpoint» filterData = «SvcEndpoint» / >|  
 |MatchAll|Использует класс <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter>. Этот фильтр находит все поступившие сообщения.|Параметр filterData не используется. Этот фильтр всегда находит все поступившие сообщения.|\<Имя фильтра = filterType «matchAll1» = «MatchAll» / >|  
 |XPath|Использует класс <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> для поиска сообщений по запросу XPath.|Запрос XPath, используемый при сопоставлении сообщений.|\<Имя фильтра = filterType «XPath1» = «XPath» filterData = «//ns:element» / >|  
   
@@ -63,15 +63,15 @@ ms.locfileid: "33496939"
   
 |Префикс|Пространство имен|  
 |------------|---------------|  
-|s11|http://schemas.xmlsoap.org/soap/envelope|  
-|s12|http://www.w3.org/2003/05/soap-envelope|  
-|wsaAugust2004|http://schemas.xmlsoap.org/ws/2004/08/addressing|  
-|wsa10|http://www.w3.org/2005/08/addressing|  
-|sm|http://schemas.microsoft.com/serviceModel/2004/05/xpathfunctions|  
-|tempuri|http://tempuri.org|  
-|ser|http://schemas.microsoft.com/2003/10/Serialization|  
+|s11|`http://schemas.xmlsoap.org/soap/envelope`|  
+|s12|`http://www.w3.org/2003/05/soap-envelope`|  
+|wsaAugust2004|`http://schemas.xmlsoap.org/ws/2004/08/addressing`|  
+|wsa10|`http://www.w3.org/2005/08/addressing`|  
+|sm|`http://schemas.microsoft.com/serviceModel/2004/05/xpathfunctions`|  
+|tempuri|`http://tempuri.org`|  
+|ser|`http://schemas.microsoft.com/2003/10/Serialization`|  
   
- Если известны пространства имен, которые будут использоваться в запросах XPath, их можно добавить в таблицу пространств имен вместе с уникальными префиксами, которые затем можно использовать в запросах XPath вместо полных пространств имен. В следующем примере определяется префикс «custom» для пространства имен «http://my.custom.namespace», которое затем используется в запросе XPath, содержащемся в filterData.  
+ Если известны пространства имен, которые будут использоваться в запросах XPath, их можно добавить в таблицу пространств имен вместе с уникальными префиксами, которые затем можно использовать в запросах XPath вместо полных пространств имен. В следующем примере определяется префикс «custom» для пространства имен `"http://my.custom.namespace"`, который затем используется в запросе XPath, содержащемся в filterData.  
   
 ```xml  
 <namespaceTable>  
@@ -149,4 +149,4 @@ ms.locfileid: "33496939"
 </backupLists>  
 ```  
   
- В приведенном выше примере при сбое отправки в основную конечную точку «Destination», служба маршрутизации попытается повторить отправку для каждой конечной точки в последовательности, они перечислены, отправляя последовательно и впоследствии отправку сообщения, если происходит сбой отправки последовательно. Если отправка сообщения завершилась ошибкой для всех конечных точек, возвращается ошибка.
+ В приведенном выше примере отправка в основную конечную точку «Destination» в случае сбоя служба маршрутизации попытается повторить отправку каждой конечной точки в последовательности, они перечислены, отправляя в backupServiceQueue и впоследствии отправки в alternateServiceQueue, если не удается отправить в backupServiceQueue. Если отправка сообщения завершилась ошибкой для всех конечных точек, возвращается ошибка.
