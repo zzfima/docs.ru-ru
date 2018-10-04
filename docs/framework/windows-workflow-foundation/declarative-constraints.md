@@ -2,12 +2,12 @@
 title: Декларативные ограничения
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: bf794d5b14d2d278dc4068309f25e6f0ddcf3342
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5599513405c77aa213b329b085075660baed5c47
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517664"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580495"
 ---
 # <a name="declarative-constraints"></a>Декларативные ограничения
 Декларативные ограничения - это мощный метод проверки допустимости действия и его связей с другими действиями. Ограничения для действий настраиваются во время процесса создания, однако дополнительные ограничения также могут задаваться ведущим приложением рабочего процесса. В этом разделе приводятся общие сведения об использовании декларативных ограничений для обеспечения проверки допустимости действий.  
@@ -57,12 +57,13 @@ public sealed class SampleActivity : CodeActivity
   
  Ведущее приложение может также задавать это ограничение для действий в рабочем процессе посредством использования <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Этот вариант описывается в следующем разделе.  
   
- Действие <xref:System.Activities.Validation.AddValidationError> используется для создания ошибки или предупреждения проверки допустимости без необходимости вычисления выражения. Его свойства подобны свойствам <xref:System.Activities.Validation.AssertValidation>; оно может использоваться совместно с действиями управления потоком ограничения, например с действием <xref:System.Activities.Statements.If>.  
+ Действие <xref:System.Activities.Validation.AddValidationError> используется для создания ошибки или предупреждения проверки допустимости без необходимости вычисления выражения. Его свойства подобны свойствам <xref:System.Activities.Validation.AssertValidation>; оно может использоваться совместно с действиями управления потоком ограничения, например с действием <xref:System.Activities.Statements.If>.
   
-### <a name="workflow-relationship-activities"></a>Действия связей рабочих процессов  
- Доступны несколько действий проверки допустимости, которые предоставляют сведения о других действиях в рабочем процессе относительно проверяемого действия. <xref:System.Activities.Validation.GetParentChain> возвращает коллекцию действий, содержащую все действия, лежащие между текущим и корневым действиями. <xref:System.Activities.Validation.GetChildSubtree> предоставляет коллекцию действий, содержащую дочерние действия в рекурсивном шаблоне, и <xref:System.Activities.Validation.GetWorkflowTree> возвращает все действия в рабочем процессе.  
+### <a name="workflow-relationship-activities"></a>Действия связей рабочих процессов
+
+Доступны несколько действий проверки допустимости, которые предоставляют сведения о других действиях в рабочем процессе относительно проверяемого действия. <xref:System.Activities.Validation.GetParentChain> возвращает коллекцию действий, содержащую все действия, лежащие между текущим и корневым действиями. <xref:System.Activities.Validation.GetChildSubtree> предоставляет коллекцию действий, содержащую дочерние действия в рекурсивном шаблоне, и <xref:System.Activities.Validation.GetWorkflowTree> возвращает все действия в рабочем процессе.  
   
- В следующем примере из [Проверка связей действий](../../../docs/framework/windows-workflow-foundation/samples/activity-relationships-validation.md) образце `CreateState` определяется действие. Действие `CreateState` должно содержаться в действии `CreateCountry`; метод `GetParent` возвращает ограничение, принудительно реализующее это требование. `GetParent` использует действие <xref:System.Activities.Validation.GetParentChain> совместно с действием <xref:System.Activities.Statements.ForEach%601> для проверки родительских действий действия `CreateState`, чтобы определить, удовлетворяется ли это требование.  
+В следующем примере определяется действие `CreateState`. Действие `CreateState` должно содержаться в действии `CreateCountry`; метод `GetParent` возвращает ограничение, принудительно реализующее это требование. `GetParent` использует действие <xref:System.Activities.Validation.GetParentChain> совместно с действием <xref:System.Activities.Statements.ForEach%601> для проверки родительских действий действия `CreateState`, чтобы определить, удовлетворяется ли это требование.  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -134,9 +135,7 @@ public sealed class CreateState : CodeActivity
         // not needed for the sample  
     }  
 }  
-```  
-  
- Дополнительные сведения см. в разделе Windows Workflow Foundation [проверки](../../../docs/framework/windows-workflow-foundation/samples/validation.md) образцов.  
+```
   
 ## <a name="additional-constraints"></a>Дополнительные ограничения  
  Авторы ведущих приложений рабочих процессов могут задавать дополнительные ограничения проверки допустимости для действий в рабочем процессе, создавая ограничения и добавляя их к словарю <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> экземпляра <xref:System.Activities.Validation.ValidationSettings>. Каждый элемент в <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> содержит тип действия, к которому применяются ограничения, а также список дополнительных ограничений для этого типа действия. При вызове проверки допустимости для рабочего процесса каждое действие указанного типа, включая производные классы, проверяется на соответствие ограничениям. В этом примере ограничение `ActivityDisplayNameIsNotSetWarning` из предыдущего раздела применяется ко всем действиям в рабочем процессе.  
@@ -177,4 +176,4 @@ else
 }  
 ```  
   
- Если свойство <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> у <xref:System.Activities.Validation.ValidationSettings> имеет значение `true`, то при вызове проверки допустимости путем вызова <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> выполняется проверка только дополнительных ограничений. Это может быть полезно при проверке рабочих процессов по отдельным конфигурациям проверки. Необходимо отметить, что при вызове рабочего процесса выполняется проверка логики проверки, настроенной в рабочем процессе; для запуска рабочего процесса проверка должна быть пройдена успешно. Дополнительные сведения о вызове метода проверки см. в разделе [вызова проверки действия](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).
+ Если свойство <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> у <xref:System.Activities.Validation.ValidationSettings> имеет значение `true`, то при вызове проверки допустимости путем вызова <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> выполняется проверка только дополнительных ограничений. Это может быть полезно при проверке рабочих процессов по отдельным конфигурациям проверки. Необходимо отметить, что при вызове рабочего процесса выполняется проверка логики проверки, настроенной в рабочем процессе; для запуска рабочего процесса проверка должна быть пройдена успешно. Дополнительные сведения о вызове проверки см. в разделе [вызов проверки действия](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md).

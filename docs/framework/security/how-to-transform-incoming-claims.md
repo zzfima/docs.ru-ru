@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 2831d514-d9d8-4200-9192-954bb6da1126
 author: BrucePerlerMS
 ms.openlocfilehash: 8673b4520d9727ae1aa78ef0bc9f435defb02598
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032339"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582126"
 ---
 # <a name="how-to-transform-incoming-claims"></a>Практическое руководство. Преобразование входящих утверждений
 ## <a name="applies-to"></a>Применение  

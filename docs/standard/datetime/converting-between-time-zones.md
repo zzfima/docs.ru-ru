@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c77832a4c578ddb2c8a427b133e53ab4ab5c5e3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 0f5a70a01937c52197978db776b90028e1fcb7c6
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45595637"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580161"
 ---
 # <a name="converting-times-between-time-zones"></a>Преобразование времени из одного часового пояса в другой
 
@@ -44,9 +44,6 @@ ms.locfileid: "45595637"
 
 [!code-csharp[System.TimeZone2.Concepts#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#6)]
 [!code-vb[System.TimeZone2.Concepts#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#6)]
-
-> [!NOTE]
-> <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> Метод не обязательно возвращает результаты, которые совпадают с <xref:System.TimeZone.ToUniversalTime%2A?displayProperty=nameWithType> и <xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> методы. Если узел локальный часовой пояс содержит несколько правил коррекции, <xref:System.TimeZoneInfo.ConvertTimeToUtc%28System.DateTime%29?displayProperty=nameWithType> применяет соответствующее правило для определенной даты и времени. Два других метода всегда применяют последнее правило коррекции.
 
 Если значение даты и времени не представляет время в формате UTC или местное время <xref:System.DateTime.ToUniversalTime%2A> метод скорее всего вернет ошибочный результат. Тем не менее, можно использовать <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> метода для преобразования даты и времени из заданного часового пояса. (Дополнительные сведения о получении <xref:System.TimeZoneInfo> , представляющий часовой пояс назначения, см. в разделе [поиск часового пояса, заданного в локальной системе](../../../docs/standard/datetime/finding-the-time-zones-on-local-system.md).) В следующем коде используется <xref:System.TimeZoneInfo.ConvertTimeToUtc%2A?displayProperty=nameWithType> метод для преобразования восточного стандартного времени в формате UTC.
 

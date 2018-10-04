@@ -2,12 +2,12 @@
 title: '&lt;basicHttpContextBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 39b16b82-4ec6-4eff-8031-67e026870961
-ms.openlocfilehash: 6a53251f9c5bc828fde1e2cc21cc9d06c477f1d6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 065371a86f8ed82b09f81a9f57682a93c14fa1c9
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864726"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777738"
 ---
 # <a name="ltbasichttpcontextbindinggt"></a>&lt;basicHttpContextBinding&gt;
 Указание привязки, предоставляющей контекст для обмена <xref:System.ServiceModel.BasicHttpBinding> путем включения файлов Cookie HTTP в качестве механизма обмена.  
@@ -99,6 +99,6 @@ ms.locfileid: "43864726"
  <xref:System.ServiceModel.Channels.ContextBindingElement>  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)  
  [\<basicHttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)

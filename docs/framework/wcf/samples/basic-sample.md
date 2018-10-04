@@ -2,16 +2,16 @@
 title: Базовый образец
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 8c99b4955dcc00015d54391dcb509b312190ddab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 29edc8acb0293210e66e31660e3215220440fbae
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508713"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580320"
 ---
 # <a name="basic-sample"></a>Базовый образец
-В этом образце показано, как сделать службу обнаруживаемой, а также как искать и вызывать обнаруживаемую службу. Этот образец состоит из двух проектов: службы и клиента.  
-  
+В этом образце показано, как сделать службу обнаруживаемой, а также как искать и вызывать обнаруживаемую службу. Этот образец состоит из двух проектов: службы и клиента.
+
 > [!NOTE]
 >  Этот образец реализует возможность обнаружения в коде.  Пример реализации возможности обнаружения в конфигурации, см. в разделе [конфигурации](../../../../docs/framework/wcf/samples/configuration-sample.md).  
   
@@ -84,7 +84,7 @@ static void InvokeCalculatorService(ServiceEndpoint serviceEndpoint)
   
 1.  В этом образце используются конечные точки HTTP, и для работы этого образца необходимо добавить соответствующие списки управления доступом по URL-адресу. Дополнительные сведения см. в разделе [Настройка HTTP и HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353). Нужные списки управления доступом будут добавлены после выполнения следующей команды с повышенными привилегиями. Если команда не работает, следует указать домен и имя пользователя в следующих аргументах. `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  С помощью [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] откройте Basic.sln и соберите образец.  
+2.  С помощью Visual Studio 2012, откройте Basic.sln и сборка образца.  
   
 3.  Запустите приложение service.exe.  
   

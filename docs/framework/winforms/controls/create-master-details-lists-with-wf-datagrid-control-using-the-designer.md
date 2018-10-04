@@ -6,14 +6,15 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 44cb9cc77e109acd7dd4b2e02f4c93a4f9a35407
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: aec02e38fbe80302108397543144b1cc9c3ea346
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501338"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266792"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Практическое руководство. Создание списков основных сведений с использованием элемента управления DataGrid в формах Windows Forms с помощью конструктора
+
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -26,10 +27,10 @@ ms.locfileid: "43501338"
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>Чтобы создать список основных сведений в конструкторе  
   
-1.  Добавьте два <xref:System.Windows.Forms.DataGrid> элементов управления в форму. Дополнительные сведения см. в разделе [как: Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). В [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> элемент управления отсутствует в **элементов** по умолчанию. Дополнительные сведения см. в разделе [как: Добавление элементов на панель инструментов](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
+1.  Добавьте два <xref:System.Windows.Forms.DataGrid> элементов управления в форму. Дополнительные сведения см. в разделе [как: Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). В Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> элемент управления отсутствует в **элементов** по умолчанию. Дополнительные сведения см. в разделе [как: Добавление элементов на панель инструментов](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
   
     > [!NOTE]
-    >  Следующие действия не применяются к [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], которая использует **источников данных** окно для привязки данных во время разработки. Дополнительные сведения см. в разделе [привязка элементов управления к данным в Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) и [как: отображение связанных данные в приложении Windows Forms](https://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).  
+    >  Следующие действия не применяются к Visual Studio 2005, который использует **источников данных** окно для привязки данных во время разработки. Дополнительные сведения см. в разделе [привязка элементов управления к данным в Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) и [как: отображение связанных данные в приложении Windows Forms](https://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).  
   
 2.  Перетащите несколько таблиц из **обозревателя серверов** в форму.  
   

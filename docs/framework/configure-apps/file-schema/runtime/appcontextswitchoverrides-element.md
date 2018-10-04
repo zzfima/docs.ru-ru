@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c06b63c492d31d1391b53a36ced5b5c7277f5ad6
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: ed2a81c4ec4f679b99f5f5a4d2a2c21270691e93
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028193"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778410"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; элемент
 Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.  
@@ -93,7 +93,7 @@ ms.locfileid: "48028193"
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Элементы управления ли значение [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) свойство [IntPtr](xref:System.IntPtr) что представляет область памяти окна обработки, или это дескриптор окна (HWND). Дополнительные сведения см. в статье [Mitigation: CspParameters.ParentWindowHandle Expects an HWND](Mitigation:%20CspParameters.ParentWindowHandle%20Expects%20an%20HWND.md) (Устранение рисков. CspParameters.ParentWindowHandle ожидает HWND). |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Определяет, является ли значение по умолчанию для некоторых операций SignedCMS SHA1 или SHA256. |.NET Framework 4.7.1|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Определяет, является ли значение по умолчанию для некоторых операций SignedXML SHA1 или SHA256. |.NET Framework 4.7.1|
-|`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Определяет, является ли `TransportWithMessageCredential` режим безопасности разрешает сообщения с неподписанным заголовком «to». Это параметр согласием. Дополнительные сведения см. в разделе [изменения среды выполнения в .NET Framework 4.6.1](https://msdn.microsoft.com/library/mt592686.aspx#WCF).|.NET Framework 4.6.1| 
+|`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Определяет, является ли `TransportWithMessageCredential` режим безопасности разрешает сообщения с неподписанным заголовком «to». Это параметр согласием. Дополнительные сведения см. в разделе [изменения среды выполнения в .NET Framework 4.6.1](~/docs/framework/migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Элементы управления ли <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> конструктор вызывает <xref:System.ArgumentException> Если один из элементов является `null`.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|Определяет, вызывает ли попытка использовать X509 сертификатов с помощью поставщика хранилища ключей CSG исключение. Дополнительные сведения см. в разделе [безопасность транспорта WCF поддерживает сертификаты, сохраненные с помощью CNG](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
 |`Switch.System.ServiceModel.`<br/>`DisableExplicitConnectionCloseHeader`|При использовании транспорта HTTP с резидентной службы, установка этого значения в `true` заставляет игнорировать Добавление приложения WCF `Connection: close` заголовок, чтобы заголовки ответа для запроса. Установка этого значения в `false` включает добавление `Connection: close` заголовка для заголовков ответа, что приводит к закрытие сокета запроса после отправки ответа.|.NET Framework 4.6|

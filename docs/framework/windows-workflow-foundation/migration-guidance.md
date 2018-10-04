@@ -2,12 +2,12 @@
 title: Руководство по миграции
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 93d523c51c45f9b6f6235a7645fa126fcb09b6e5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 73488354a807d8bf7d90c97b95f1021d884efd27
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027394"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777962"
 ---
 # <a name="migration-guidance"></a>Руководство по миграции
 В [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], корпорация Майкрософт выпускает второй основной номер версии Windows Workflow Foundation (WF). [!INCLUDE[wf1](../../../includes/wf1-md.md)] была выпущена в составе [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (она включала типы в пространствах имен System.Workflow.*, которые теперь называются WF3) и улучшена в [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 также является частью [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], но он сосуществует с новой технологией рабочего процесса (типы в System.Activities.\* пространства имен; Далее именуется WF4). При принятии решения об использовании WF4 важно помнить, что управление временем осуществляет пользователь.  
@@ -16,7 +16,7 @@ ms.locfileid: "48027394"
   
 -   Приложения WF3 запускаются в [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] без внесения изменений, при этом они по-прежнему полностью поддерживаются.  
   
--   Могут создаваться новые приложения WF3, а существующие приложения можно изменить в [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)], при этом они полностью поддерживаются.  
+-   Можно создавать новые приложения WF3 и существующие приложения можно изменить в Visual Studio 2012 и полностью поддерживаются.  
   
  Таким образом, решение .NET Framework 4 связано с решением о переходе на WF4 (System.Activities.*) с WF3 (System.Workflow.\*). В этом разделе приведены ссылки на руководство по миграции в WF, в котором описывается работа с WF3 и WF4.  
   

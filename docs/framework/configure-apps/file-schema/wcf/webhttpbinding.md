@@ -2,12 +2,12 @@
 title: '&lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 84179d77-825d-44b9-895a-ab08e7aa044d
-ms.openlocfilehash: 19b82500c1d24dbbf3e630e3021f195149e19b92
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0138eab4db42a64a74212d5c68f693916d7b702a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516951"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582545"
 ---
 # <a name="ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;
 Определяет элемент привязки, который используется для настройки конечных точек для веб-службы Windows Communication Foundation (WCF) служб, которые отвечают на запросы HTTP вместо сообщений SOAP.  
@@ -97,5 +97,5 @@ ms.locfileid: "43516951"
  [Модель веб-программирования HTTP WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)

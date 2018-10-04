@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
 author: BrucePerlerMS
 ms.openlocfilehash: ad05e3c202e7115aaddd2b892377f570e14afec7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208702"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266849"
 ---
 # <a name="transport-security-overview"></a>Общие сведения о безопасности транспорта
 Механизмы обеспечения безопасности транспорта в Windows Communication Foundation (WCF) зависят от привязки и используемого транспорта. Например, при использовании класса <xref:System.ServiceModel.WSHttpBinding> транспортом является протокол HTTP и в качестве основного механизма защиты транспорта применяется протокол SSL через HTTP, обычно называемый HTTPS. В этом разделе рассматриваются основные транспорта механизмы безопасности, используемые в привязках, предоставляемых системой WCF.  

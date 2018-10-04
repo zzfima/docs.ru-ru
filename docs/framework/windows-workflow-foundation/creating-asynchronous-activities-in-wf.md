@@ -2,12 +2,12 @@
 title: Создание асинхронных действий в WF
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 8df876c9be020ece29683d1c101a4045b1c76322
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31c0d5a87a7979bc59c3e1d942ed0594d128c80a
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520072"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266563"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Создание асинхронных действий в WF
 Класс <xref:System.Activities.AsyncCodeActivity> предоставляет авторам действий базовый класс, обеспечивающий реализацию логики асинхронного выполнения в производных от него действиях. Это особенно полезно для пользовательских действий, которые должны выполнять работу асинхронно, не останавливая поток расписания рабочих процессов и не блокируя другие действия, которые могут выполняться параллельно. В данном разделе приводятся общие сведения о процессе создания пользовательских асинхронных действий с использованием <xref:System.Activities.AsyncCodeActivity>.  
@@ -31,7 +31,7 @@ ms.locfileid: "33520072"
  [!code-csharp[CFX_ActivityExample#10](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### <a name="invoking-asynchronous-methods-on-a-class"></a>Вызов асинхронных методов в классе  
- Многие классы в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] обеспечивают асинхронное функционирование. Такой функциональностью можно асинхронно воспользоваться с помощью действий, основанных на <xref:System.Activities.AsyncCodeActivity>. В следующем примере из [использование AsyncOperationContext в действии](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md), создать действие, асинхронно создает файл с помощью <xref:System.IO.FileStream> класса.  
+ Многие классы в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] обеспечивают асинхронное функционирование. Такой функциональностью можно асинхронно воспользоваться с помощью действий, основанных на <xref:System.Activities.AsyncCodeActivity>. В следующем примере создается действие, асинхронно создает файл с помощью <xref:System.IO.FileStream> класса.  
   
  [!code-csharp[CFX_ActivityExample#12](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   
@@ -39,14 +39,14 @@ ms.locfileid: "33520072"
  В предыдущем примере доступ к объекту <xref:System.IO.FileStream>, созданному в <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>, был выполнен в <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. Это обусловлено тем, что переменная `file` была передана в свойстве <xref:System.Activities.AsyncCodeActivityContext.UserState%2A?displayProperty=nameWithType> методом <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>. Это правильный метод для совместного использования состояния между <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> и <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>. Использовать переменную-член в производном классе (в данном случае `FileWriter`) для совместного использования состояния между <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> и <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> неверно, так как на объект действия могут ссылаться несколько экземпляров действия. Попытка использовать переменную-член для совместного использования состояния может привести к перезаписи значений из одного <xref:System.Activities.ActivityInstance> или потреблению значений из другого <xref:System.Activities.ActivityInstance>.  
   
 ### <a name="accessing-argument-values"></a>Доступ к значениям аргументов  
- Среда <xref:System.Activities.AsyncCodeActivity> состоит из аргументов, определенных для действия. Эти аргументы можно обращаться из <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> / <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> переопределяет с помощью <xref:System.Activities.AsyncCodeActivityContext> параметра. Получить доступ к аргументам в делегате невозможно, но значения аргументов или любые другие требуемые данные можно передать в делегат через его параметры. В следующем примере определяется действие создания случайного числа, которое получает инклюзивную верхнюю границу создаваемого числа в аргументе `Max`. При вызове делегата значение аргумента передается в асинхронный код.  
+ Среда <xref:System.Activities.AsyncCodeActivity> состоит из аргументов, определенных для действия. Эти аргументы можно получить доступ из <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> / <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> переопределяет с помощью <xref:System.Activities.AsyncCodeActivityContext> параметра. Получить доступ к аргументам в делегате невозможно, но значения аргументов или любые другие требуемые данные можно передать в делегат через его параметры. В следующем примере определяется действие создания случайного числа, которое получает инклюзивную верхнюю границу создаваемого числа в аргументе `Max`. При вызове делегата значение аргумента передается в асинхронный код.  
   
  [!code-csharp[CFX_ActivityExample#9](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   
 ### <a name="scheduling-actions-or-child-activities-using-asynccodeactivity"></a>Планирование действий или дочерних действий с помощью AsyncCodeActivity  
- Производные от <xref:System.Activities.AsyncCodeActivity> настраиваемых действий предоставляют метод для асинхронного выполнения работы в отношении к потоку рабочего процесса, но не предоставляют возможности планирования действий или дочерних действий. Однако асинхронное поведение можно встроить в планирование дочерних действий посредством композиции. Асинхронное действие можно создать, а затем сочетать с действием, производным от <xref:System.Activities.Activity> или <xref:System.Activities.NativeActivity>, предоставив асинхронное поведение и планирование действий или дочерних действий. Например, можно создать действие, производное от <xref:System.Activities.Activity>, у которого в качестве его реализации будет <xref:System.Activities.Statements.Sequence>, содержащий асинхронное действие, а также другие действия, реализующие логику этого действия. Дополнительные примеры составления действий с помощью <xref:System.Activities.Activity> и <xref:System.Activities.NativeActivity>, в разделе [как: создается действие](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md), [параметры разработки действий](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md)и [составного](../../../docs/framework/windows-workflow-foundation/samples/composite.md) образцы действий.  
+ Производные от <xref:System.Activities.AsyncCodeActivity> настраиваемых действий предоставляют метод для асинхронного выполнения работы в отношении к потоку рабочего процесса, но не предоставляют возможности планирования действий или дочерних действий. Однако асинхронное поведение можно встроить в планирование дочерних действий посредством композиции. Асинхронное действие можно создать, а затем сочетать с действием, производным от <xref:System.Activities.Activity> или <xref:System.Activities.NativeActivity>, предоставив асинхронное поведение и планирование действий или дочерних действий. Например, можно создать действие, производное от <xref:System.Activities.Activity>, у которого в качестве его реализации будет <xref:System.Activities.Statements.Sequence>, содержащий асинхронное действие, а также другие действия, реализующие логику этого действия. Дополнительные примеры составления действий с помощью <xref:System.Activities.Activity> и <xref:System.Activities.NativeActivity>, см. в разделе [как: Создание действия](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) и [параметры разработки действий](../../../docs/framework/windows-workflow-foundation/activity-authoring-options-in-wf.md).  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Action>  
- <xref:System.Func%602>  
- [Использование AsyncOperationContext в действии](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)
+
+- <xref:System.Action>  
+- <xref:System.Func%602>  

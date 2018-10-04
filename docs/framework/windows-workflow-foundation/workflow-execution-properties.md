@@ -2,12 +2,12 @@
 title: Свойства выполнения рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 2681152ba89baa2f65d5402a8c8c9d872cadb65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2b72782b4b9fef127e61bb22b7800740af1d8d2b
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518648"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582074"
 ---
 # <a name="workflow-execution-properties"></a>Свойства выполнения рабочего процесса
 Через локальную память потока (TLS) CLR поддерживает контекст выполнения для каждого потока. Этот контекст выполнения управляет хорошо известными свойствами потоков, например идентификатором потока, внешней транзакцией и текущим набором разрешений, а также пользовательскими свойствами потока, например именованными областями.  
@@ -18,9 +18,6 @@ ms.locfileid: "33518648"
   
 ## <a name="creating-and-using-workflow-execution-properties"></a>Создание и использование свойств выполнения рабочего процесса  
  Свойства выполнения рабочего процесса обычно реализуют интерфейс <xref:System.Activities.IExecutionProperty>, хотя свойства, сфокусированные на обмене сообщениями, могут вместо этого реализовать <xref:System.ServiceModel.Activities.ISendMessageCallback> и <xref:System.ServiceModel.Activities.IReceiveMessageCallback>. Чтобы создать свойство выполнения рабочего процесса, создайте класс, который реализует интерфейс <xref:System.Activities.IExecutionProperty>, а также реализует элементы <xref:System.Activities.IExecutionProperty.SetupWorkflowThread%2A> и <xref:System.Activities.IExecutionProperty.CleanupWorkflowThread%2A>. Эти элементы обеспечивают для свойства выполнения возможность правильной настройки локального хранилища потока на всех этапах выполнения действия, которое содержит свойство, включая все дочерние свойства. В этом примере создается `ConsoleColorProperty`, который задает `Console.ForegroundColor`.  
-  
-> [!NOTE]
->  В следующем примере кода в этом разделе основан на [свойства выполнения](../../../docs/framework/windows-workflow-foundation/samples/execution-properties.md) образца.  
   
 ```csharp  
 class ConsoleColorProperty : IExecutionProperty  

@@ -3,11 +3,11 @@ title: Активация на основе конфигурации в IIS и W
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
 ms.openlocfilehash: da98d237c066b70398d3238a75500e8a3abbe887
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028031"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582688"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>Активация на основе конфигурации в IIS и WAS
 

@@ -2,12 +2,12 @@
 title: '&lt;транспорт&gt; для &lt;netHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
-ms.openlocfilehash: 03e245acd8cb31630d6154e01d934ce6d293f4e4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 092072df2b88c59c7744a694175ce5ddf39cf79b
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507968"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580539"
 ---
 # <a name="lttransportgt-of-ltnethttpbindinggt"></a>&lt;транспорт&gt; для &lt;netHttpBinding&gt;
 Определяет свойства, которые управляют параметрами проверки подлинности для транспорта HTTP.  
@@ -120,5 +120,5 @@ ms.locfileid: "43507968"
  [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)

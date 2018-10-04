@@ -2,15 +2,16 @@
 title: Отладка запросов в LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: fd10e6c715529ba937ba09732a254d311158b0f1
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: c1014db4cad54420b917585becd2a2031638c1d9
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086008"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266264"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Отладка запросов в LINQ to DataSet
-Среда [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] поддерживает отладку кода [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Тем не менее, существуют некоторые различия между отладкой [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] код и не-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] управляемого кода. Большинство функций отладки работают с [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] инструкций, включая пошаговое выполнение, установку точек останова и просмотр результатов, отображаемых в окнах отладчика. Тем не менее отложенное выполнение запроса имеет некоторые побочные эффекты, которые следует учитывать при отладке [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] кода и существуют некоторые ограничения на использование, изменить и продолжить. В этом разделе обсуждаются аспекты отладки, уникальные для [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] по сравнению с отличным от[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] управляемого кода.  
+
+Visual Studio поддерживает отладку [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] кода. Тем не менее, существуют некоторые различия между отладкой [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] код и не-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] управляемого кода. Большинство функций отладки работают с [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] инструкций, включая пошаговое выполнение, установку точек останова и просмотр результатов, отображаемых в окнах отладчика. Тем не менее отложенное выполнение запроса имеет некоторые побочные эффекты, которые следует учитывать при отладке [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] кода и существуют некоторые ограничения на использование, изменить и продолжить. В этом разделе обсуждаются аспекты отладки, уникальные для [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] по сравнению с отличным от[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] управляемого кода.  
   
 ## <a name="viewing-results"></a>Просмотр результатов  
  Можно просмотреть результат [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] инструкции с помощью подсказки, окно контрольных значений и диалоговом окне "Быстрая проверка". В окне исходного текста можно остановить указатель на запросе, после чего появится элемент DataTip. Можно скопировать переменную [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] и перенести ее в окно просмотра или диалоговое окно быстрого просмотра. В [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] результат запроса вычисляется не при создании или объявлении запроса, а при его выполнении. Это называется *отложенного выполнения*. Поэтому переменная запроса не имеет значения, пока запрос не выполнен. Дополнительные сведения см. в разделе [запросов в LINQ to DataSet](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md).  

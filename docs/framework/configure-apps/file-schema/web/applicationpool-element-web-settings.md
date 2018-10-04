@@ -8,11 +8,11 @@ ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: d5d6ee0b5153c734249e64a4d29f6621edcc61bf
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046491"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779274"
 ---
 # <a name="ltapplicationpoolgt-element-web-settings"></a>&lt;пул приложений&gt; элемент (веб-параметры)
 Задает параметры конфигурации, которые используются платформой ASP.NET для управления поведением всего процесса, когда приложение ASP.NET выполняется в режиме интеграции с [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] или более поздней версии.  

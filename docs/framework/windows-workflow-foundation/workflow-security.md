@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
 ms.openlocfilehash: 726e41e8cde028fb86004ff06e2ad0663a042287
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030276"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580080"
 ---
 # <a name="workflow-security"></a>Безопасность рабочих процессов
 Windows Workflow Foundation (WF) интегрируется с нескольких различных технологий, таких как Microsoft SQL Server и Windows Communication Foundation (WCF). В случае неправильной настройки взаимодействие с этими технологиями может вызвать проблемы безопасности в рабочем процессе.

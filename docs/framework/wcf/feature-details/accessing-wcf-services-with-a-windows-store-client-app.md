@@ -3,11 +3,11 @@ title: Доступ к службам WCF из клиентского прило
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
 ms.openlocfilehash: a6324d5400e9fb15b3373eea4df0a15cd7c54887
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399220"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266646"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Доступ к службам WCF из клиентского приложения Магазина Windows
 В Windows 8 появился новый тип приложения - приложения Магазина Windows. Эти приложения предназначены для работы с сенсорным экраном. .NET Framework 4.5 позволяет приложениям Магазина Windows вызывать службы WCF.  

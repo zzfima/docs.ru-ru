@@ -21,11 +21,11 @@ helpviewer_keywords:
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
 ms.openlocfilehash: 98433c0f1d1008664bb994f3b43fe48a753a432c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028781"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582727"
 ---
 # <a name="single-data-type-visual-basic"></a>Тип данных Single (Visual Basic)
 Содержит числа со знаком IEEE 32 бита (4-байтовое) одиночной точности с плавающей запятой в диапазоне от - 3, 4028235E + 38 до - 1, 401298E-45 для отрицательных значений и от 1, 401298E-45 до 3, 4028235E + 38 для положительных значений. Числа одинарной точности хранят приближенное значение вещественного числа.  

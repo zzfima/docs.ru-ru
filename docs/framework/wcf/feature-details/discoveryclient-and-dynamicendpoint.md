@@ -3,11 +3,11 @@ title: DiscoveryClient и DynamicEndpoint
 ms.date: 03/30/2017
 ms.assetid: 7cd418f0-0eab-48d1-a493-7eb907867ec3
 ms.openlocfilehash: ff8cc071b13123a8d04162a2c52a8c3fb486d6db
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037194"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579755"
 ---
 # <a name="discoveryclient-and-dynamicendpoint"></a>DiscoveryClient и DynamicEndpoint
 <xref:System.ServiceModel.Discovery.DiscoveryClient> и <xref:System.ServiceModel.Discovery.DynamicEndpoint> представляют собой два класса, используемые на стороне клиента для поиска служб. <xref:System.ServiceModel.Discovery.DiscoveryClient> предоставляет список служб, соответствующих конкретному набору требований, и позволяет подключиться к службам. <xref:System.ServiceModel.Discovery.DynamicEndpoint> выполняет те же функции и, кроме того, автоматически подключается к одной из найденных служб. Все конечные точки могут быть преобразованы в <xref:System.ServiceModel.Discovery.DynamicEndpoint>, условие поиска также может быть добавлено в конфигурацию, поэтому <xref:System.ServiceModel.Discovery.DynamicEndpoint> полезен в случаях, когда в решении необходима функция обнаружения, но изменения логики клиента нежелательны (нужно лишь изменить конечные точки). С другой стороны, <xref:System.ServiceModel.Discovery.DiscoveryClient> можно использовать для более точного контроля над операцией поиска. Использование и преимущества каждого класса уточняются далее.  

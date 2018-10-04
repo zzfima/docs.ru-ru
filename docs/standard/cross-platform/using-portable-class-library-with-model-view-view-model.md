@@ -11,78 +11,78 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d2f07e471d4f0173f768b0d2a463d756b5be0682
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7b42f20509b34b934418ed8e870a60713def7387
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47459793"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778251"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Использование переносимой библиотеки классов с шаблоном "модель-представление-модель представления"
-Можно использовать .NET Framework [переносимой библиотеки классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) реализовать шаблон модель-представление-View Model (MVVM) и совместного использования сборок на нескольких платформах.  
+Можно использовать .NET Framework [переносимой библиотеки классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) реализовать шаблон модель-представление-View Model (MVVM) и совместного использования сборок на нескольких платформах.
 
 [!INCLUDE[standard](../../../includes/pcl-to-standard.md)]
 
- MVVM — это шаблон приложения, который изолирует интерфейс пользователя от основной бизнес-логики. Можно реализовать классы модели и модели представления в проекте [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], а затем создать представления, которые учитывают особенности разных платформ. Такой подход позволяет создавать модель и бизнес-логику данных только один раз и использовать этот код в платформе .NET Framework, приложениях Silverlight, Windows Phone и [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], как показано на следующей иллюстрации.  
-  
- ![Переносимые со схемой MVVM](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")  
-  
- В этом разделе не предоставляет общие сведения о шаблоне MVVM. Он только предоставляет сведения об использовании [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] для реализации MVVM. Дополнительные сведения о шаблоне MVVM см. в разделе [краткое руководство по MVVM](https://msdn.microsoft.com/library/gg430869(v=PandP.40).aspx).  
-  
-## <a name="classes-that-support-mvvm"></a>Классы, поддерживающие MVVM  
- Отметив [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight или Windows Phone 7.5 для вашей [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проект, следующие классы доступны для реализации шаблона MVVM:  
-  
--   Класс <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>  
-  
--   Класс <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>  
-  
--   Класс <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>  
-  
--   Класс <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType>  
-  
--   Класс <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType>  
-  
--   Класс <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType>  
-  
--   Класс <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType>  
-  
--   Класс <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType>  
-  
--   Класс <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType>  
-  
--   Класс <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>  
-  
--   Все классы в <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> пространства имен  
-  
-## <a name="implementing-mvvm"></a>Реализации MVVM  
- Для реализации MVVM, вы обычно создают модель и модель представления в [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проекта, так как [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проект не может ссылаться на проект непереносимые. Модели и модели представления может быть в одном проекте или в виде отдельных проектов. Если вы используете отдельные проекты, добавьте ссылку из проекта модели представления в проект модели.  
-  
- После компиляции модели и просматривать проекты модели, можно ссылаться на эти сборки в приложении, которая содержит представление. Если представление взаимодействует только с помощью модели представления, необходимо ссылаться на сборку, содержащую модели представления.  
-  
-### <a name="model"></a>Модель  
- В примере показан класс упрощенной модели, которые могут располагаться в [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проекта.  
-  
+ MVVM — это шаблон приложения, который изолирует интерфейс пользователя от основной бизнес-логики. Можно реализовать классы модели и представления модели в [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проекта в Visual Studio 2012, а затем создать представления, которые настраиваются для различных платформ. Такой подход позволяет создавать модель и бизнес-логику данных только один раз и использовать этот код в платформе .NET Framework, приложениях Silverlight, Windows Phone и [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], как показано на следующей иллюстрации.
+
+ ![Переносимые со схемой MVVM](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")
+
+ В этом разделе не предоставляет общие сведения о шаблоне MVVM. Он только предоставляет сведения об использовании [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] для реализации MVVM. Дополнительные сведения о шаблоне MVVM см. в разделе [краткое руководство по MVVM](https://msdn.microsoft.com/library/gg430869(v=PandP.40).aspx).
+
+## <a name="classes-that-support-mvvm"></a>Классы, поддерживающие MVVM
+ Отметив [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)], Silverlight или Windows Phone 7.5 для вашей [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проект, следующие классы доступны для реализации шаблона MVVM:
+
+-   Класс <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>
+
+-   Класс <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType>
+
+-   Класс <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>
+
+-   Класс <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType>
+
+-   Класс <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType>
+
+-   Класс <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType>
+
+-   Класс <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType>
+
+-   Класс <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType>
+
+-   Класс <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType>
+
+-   Класс <xref:System.Windows.Input.ICommand?displayProperty=nameWithType>
+
+-   Все классы в <xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType> пространства имен
+
+## <a name="implementing-mvvm"></a>Реализации MVVM
+ Для реализации MVVM, вы обычно создают модель и модель представления в [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проекта, так как [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проект не может ссылаться на проект непереносимые. Модели и модели представления может быть в одном проекте или в виде отдельных проектов. Если вы используете отдельные проекты, добавьте ссылку из проекта модели представления в проект модели.
+
+ После компиляции модели и просматривать проекты модели, можно ссылаться на эти сборки в приложении, которая содержит представление. Если представление взаимодействует только с помощью модели представления, необходимо ссылаться на сборку, содержащую модели представления.
+
+### <a name="model"></a>Модель
+ В примере показан класс упрощенной модели, которые могут располагаться в [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проекта.
+
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
- [!code-vb[PortableClassLibraryMVVM#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customer.vb#1)]  
-  
- В примере показан простой способ заполнения, извлечения и обновления данных в [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проекта. В реальном приложении можно извлечь данные из источника, например службы Windows Communication Foundation (WCF).  
-  
+ [!code-vb[PortableClassLibraryMVVM#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customer.vb#1)]
+
+ В примере показан простой способ заполнения, извлечения и обновления данных в [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] проекта. В реальном приложении можно извлечь данные из источника, например службы Windows Communication Foundation (WCF).
+
  [!code-csharp[PortableClassLibraryMVVM#2](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customerrepository.cs#2)]
- [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]  
-  
-### <a name="view-model"></a>Модель представления  
- Базовый класс для представления моделей часто добавляется при реализации шаблона MVVM. В следующем примере базового класса.  
-  
+ [!code-vb[PortableClassLibraryMVVM#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerrepository.vb#2)]
+
+### <a name="view-model"></a>Модель представления
+ Базовый класс для представления моделей часто добавляется при реализации шаблона MVVM. В следующем примере базового класса.
+
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
- [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]  
-  
- Реализация <xref:System.Windows.Input.ICommand> интерфейс часто используется с помощью шаблона MVVM. В следующем примере показана реализация интерфейса <xref:System.Windows.Input.ICommand>.  
-  
+ [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]
+
+ Реализация <xref:System.Windows.Input.ICommand> интерфейс часто используется с помощью шаблона MVVM. В следующем примере показана реализация интерфейса <xref:System.Windows.Input.ICommand>.
+
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
- [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]  
-  
- В примере показан упрощенный вид модели.  
-  
+ [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]
+
+ В примере показан упрощенный вид модели.
+
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   

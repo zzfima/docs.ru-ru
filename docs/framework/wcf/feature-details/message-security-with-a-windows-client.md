@@ -7,11 +7,11 @@ dev_langs:
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
 author: BrucePerlerMS
 ms.openlocfilehash: c24ced1a3f19297f06404403f1196b8a9139a919
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030581"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579313"
 ---
 # <a name="message-security-with-a-windows-client"></a>Безопасность сообщений с клиентом Windows
 Этот сценарий показывает, Windows Communication Foundation (WCF) клиентом и сервером, защищенных с помощью режима безопасности сообщений. Клиент и служба проходят проверку подлинности с использованием учетных данных Windows.  

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - composite controls [Windows Forms], Windows Forms
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-ms.openlocfilehash: 24fbf17f02072b2d9922ca0998805b916afc41b6
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3bd8a91942cf41be62ff1e66bd97064e2db26692
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43510164"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580814"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>Разработка составного элемента Windows Forms
 Можно разработать составной элемент управления Windows Forms, объединив другие элементы управления Windows Forms. Составные элементы управления, которые являются производными от <xref:System.Web.UI.UserControl> называются пользовательскими элементами управления. Базовый класс <xref:System.Windows.Forms.UserControl> обеспечивает маршрутизацию событий клавиатуры для дочерних элементов управления, это гарантирует, что дочерние элементы управления смогут получать фокус ввода. Пример пользовательского элемента управления, см. в разделе <xref:System.Windows.Forms.UserControl> в [как: применение атрибутов в элементах управления Windows Forms](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md).  
   
- Конструктор Windows Forms в [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] предоставляет широкие возможности поддержки для пользовательских элементов управления во время разработки.  
+ Конструктор Windows Forms в Visual Studio предоставляет широкие возможности поддержки времени разработки для пользовательских элементов управления.  
   
 -   [Практическое руководство. Отображение элемента управления в диалоговом окне выбора элементов панели элементов](https://msdn.microsoft.com/library/9yxtkx75\(v=vs.110\))  
   

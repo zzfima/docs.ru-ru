@@ -2,133 +2,133 @@
 title: Отправка сообщений из приложения Windows Communication Foundation в приложение MSMQ
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: ea0723d178b37b1ff2581981f8f49a6953c913cc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f6a686e658f4cc0097f86dfb19def2d0ba91b8ab
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45597811"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582467"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Отправка сообщений из приложения Windows Communication Foundation в приложение MSMQ
-В этом примере показано, как приложение Windows Communication Foundation (WCF) можно отправлять сообщения приложению очереди сообщений (MSMQ). Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди. Одновременная работа службы и клиента не требуется.  
-  
- Служба получает сообщения от очереди и обрабатывает заказы. Служба создает транзакционную очередь и создает обработчик полученных сообщений, как показано в следующем образце кода.  
+В этом примере показано, как приложение Windows Communication Foundation (WCF) можно отправлять сообщения приложению очереди сообщений (MSMQ). Служба представляет собой резидентное консольное приложение, позволяющее наблюдать за получением службой сообщений из очереди. Одновременная работа службы и клиента не требуется.
+
+ Служба получает сообщения от очереди и обрабатывает заказы. Служба создает транзакционную очередь и создает обработчик полученных сообщений, как показано в следующем образце кода.
 
 ```csharp
-static void Main(string[] args)  
-{  
-    if (!MessageQueue.Exists(  
-              ConfigurationManager.AppSettings["queueName"]))  
-       MessageQueue.Create(  
-           ConfigurationManager.AppSettings["queueName"], true);  
-        //Connect to the queue  
-        MessageQueue Queue = new   
-    MessageQueue(ConfigurationManager.AppSettings["queueName"]);  
-    Queue.ReceiveCompleted +=   
-                 new ReceiveCompletedEventHandler(ProcessOrder);  
-    Queue.BeginReceive();  
-    Console.WriteLine("Order Service is running");  
-    Console.ReadLine();  
-}  
+static void Main(string[] args)
+{
+    if (!MessageQueue.Exists(
+              ConfigurationManager.AppSettings["queueName"]))
+       MessageQueue.Create(
+           ConfigurationManager.AppSettings["queueName"], true);
+        //Connect to the queue
+        MessageQueue Queue = new
+    MessageQueue(ConfigurationManager.AppSettings["queueName"]);
+    Queue.ReceiveCompleted +=
+                 new ReceiveCompletedEventHandler(ProcessOrder);
+    Queue.BeginReceive();
+    Console.WriteLine("Order Service is running");
+    Console.ReadLine();
+}
 ```
 
- При получении сообщения в очереди вызывается обработчик сообщений `ProcessOrder`.  
+ При получении сообщения в очереди вызывается обработчик сообщений `ProcessOrder`.
 
 ```csharp
-public static void ProcessOrder(Object source,  
-    ReceiveCompletedEventArgs asyncResult)  
-{  
-    try  
-    {  
-        // Connect to the queue.  
-        MessageQueue Queue = (MessageQueue)source;  
-        // End the asynchronous receive operation.  
-        System.Messaging.Message msg =   
-                     Queue.EndReceive(asyncResult.AsyncResult);  
-        msg.Formatter = new System.Messaging.XmlMessageFormatter(  
-                                new Type[] { typeof(PurchaseOrder) });  
-        PurchaseOrder po = (PurchaseOrder) msg.Body;  
-        Random statusIndexer = new Random();  
-        po.Status = PurchaseOrder.OrderStates[statusIndexer.Next(3)];  
-        Console.WriteLine("Processing {0} ", po);  
-        Queue.BeginReceive();  
-    }  
-    catch (System.Exception ex)  
-    {  
-        Console.WriteLine(ex.Message);  
-    }  
-  
-}  
+public static void ProcessOrder(Object source,
+    ReceiveCompletedEventArgs asyncResult)
+{
+    try
+    {
+        // Connect to the queue.
+        MessageQueue Queue = (MessageQueue)source;
+        // End the asynchronous receive operation.
+        System.Messaging.Message msg =
+                     Queue.EndReceive(asyncResult.AsyncResult);
+        msg.Formatter = new System.Messaging.XmlMessageFormatter(
+                                new Type[] { typeof(PurchaseOrder) });
+        PurchaseOrder po = (PurchaseOrder) msg.Body;
+        Random statusIndexer = new Random();
+        po.Status = PurchaseOrder.OrderStates[statusIndexer.Next(3)];
+        Console.WriteLine("Processing {0} ", po);
+        Queue.BeginReceive();
+    }
+    catch (System.Exception ex)
+    {
+        Console.WriteLine(ex.Message);
+    }
+
+}
 ```
 
- Служба извлекает `ProcessOrder` из тела сообщения MSMQ и обрабатывает заказ.  
-  
- Имя очереди MSMQ задается в разделе appSettings файла конфигурации, как показано в следующем образце конфигурации.  
-  
-```xml  
-<appSettings>  
-    <add key="orderQueueName" value=".\private$\Orders" />  
-</appSettings>  
-```  
-  
+ Служба извлекает `ProcessOrder` из тела сообщения MSMQ и обрабатывает заказ.
+
+ Имя очереди MSMQ задается в разделе appSettings файла конфигурации, как показано в следующем образце конфигурации.
+
+```xml
+<appSettings>
+    <add key="orderQueueName" value=".\private$\Orders" />
+</appSettings>
+```
+
 > [!NOTE]
->  В имени очереди для определения локального компьютера используется точка (.), а в пути в качестве разделителей используются символы обратной косой черты.  
-  
- Клиент создает заказ на покупку и отправляет его в пределах транзакции, как показано в следующем образце кода.  
+>  В имени очереди для определения локального компьютера используется точка (.), а в пути в качестве разделителей используются символы обратной косой черты.
+
+ Клиент создает заказ на покупку и отправляет его в пределах транзакции, как показано в следующем образце кода.
 
 ```csharp
-// Create the purchase order  
-PurchaseOrder po = new PurchaseOrder();  
-// Fill in the details  
-...  
-  
-OrderProcessorClient client = new OrderProcessorClient("OrderResponseEndpoint");  
-  
-MsmqMessage<PurchaseOrder> ordermsg = new MsmqMessage<PurchaseOrder>(po);  
-using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
-{  
-    client.SubmitPurchaseOrder(ordermsg);  
-    scope.Complete();  
-}  
-Console.WriteLine("Order has been submitted:{0}", po);  
-  
-//Closing the client gracefully closes the connection and cleans up resources  
-client.Close();  
+// Create the purchase order
+PurchaseOrder po = new PurchaseOrder();
+// Fill in the details
+...
+
+OrderProcessorClient client = new OrderProcessorClient("OrderResponseEndpoint");
+
+MsmqMessage<PurchaseOrder> ordermsg = new MsmqMessage<PurchaseOrder>(po);
+using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))
+{
+    client.SubmitPurchaseOrder(ordermsg);
+    scope.Complete();
+}
+Console.WriteLine("Order has been submitted:{0}", po);
+
+//Closing the client gracefully closes the connection and cleans up resources
+client.Close();
 ```
 
- При отправке сообщения MSMQ в очередь клиент использует внутренний пользовательский порядок сообщений. Поскольку приложение, которое получает и обрабатывает сообщение является приложением MSMQ, а не приложения WCF, является между двумя приложениями отсутствует неявный контракт службы. Таким образом, в данном сценарии невозможно создать прокси-класс при помощи средства Svculti.exe.  
-  
- Пользовательский клиент в основном одинаков для всех приложений WCF, использующих `MsmqIntegration` привязки для отправки сообщений. В отличие от других клиентов, он не включает ряд операций службы. В него входит только операция отправки сообщения.  
+ При отправке сообщения MSMQ в очередь клиент использует внутренний пользовательский порядок сообщений. Поскольку приложение, которое получает и обрабатывает сообщение является приложением MSMQ, а не приложения WCF, является между двумя приложениями отсутствует неявный контракт службы. Таким образом, в данном сценарии невозможно создать прокси-класс при помощи средства Svculti.exe.
+
+ Пользовательский клиент в основном одинаков для всех приложений WCF, использующих `MsmqIntegration` привязки для отправки сообщений. В отличие от других клиентов, он не включает ряд операций службы. В него входит только операция отправки сообщения.
 
 ```csharp
-[System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
-public interface IOrderProcessor  
-{  
-    [OperationContract(IsOneWay = true, Action = "*")]  
-    void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
-}  
-  
-public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrderProcessor>, IOrderProcessor  
-{  
-    public OrderProcessorClient(){}  
-  
-    public OrderProcessorClient(string configurationName)  
-        : base(configurationName)  
-    { }  
-  
-    public OrderProcessorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address)  
-        : base(binding, address)  
-    { }  
-  
-    public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)  
-    {  
-        base.Channel.SubmitPurchaseOrder(msg);  
-    }  
-}  
+[System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]
+public interface IOrderProcessor
+{
+    [OperationContract(IsOneWay = true, Action = "*")]
+    void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);
+}
+
+public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrderProcessor>, IOrderProcessor
+{
+    public OrderProcessorClient(){}
+
+    public OrderProcessorClient(string configurationName)
+        : base(configurationName)
+    { }
+
+    public OrderProcessorClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress address)
+        : base(binding, address)
+    { }
+
+    public void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg)
+    {
+        base.Channel.SubmitPurchaseOrder(msg);
+    }
+}
 ```
 
- При выполнении образца действия клиента и службы отображаются в окнах консоли как службы, так и клиента. Можно видеть, как служба получает сообщения от клиента. Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент. Обратите внимание, что поскольку используется очередь, клиенту и службе не обязательно быть запущенными и работать одновременно. Например, можно запустить клиент, выключить его, а затем запустить службу и все равно получить сообщения клиента.  
-  
+ При выполнении образца действия клиента и службы отображаются в окнах консоли как службы, так и клиента. Можно видеть, как служба получает сообщения от клиента. Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент. Обратите внимание, что поскольку используется очередь, клиенту и службе не обязательно быть запущенными и работать одновременно. Например, можно запустить клиент, выключить его, а затем запустить службу и все равно получить сообщения клиента.
+
 > [!NOTE]
 >  Данный образец требует установки очереди сообщений. См. инструкции по установке в [Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94968).  
   
@@ -138,7 +138,7 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
 2.  При первом запуске служба проверит наличие очереди. Если очередь отсутствует, служба ее создаст. Можно сначала запустить службу, чтобы создать очередь, либо создать ее с помощью диспетчера очередей MSMQ. Чтобы создать очередь в Windows 2008, выполните следующие шаги.  
   
-    1.  Откройте диспетчер сервера в [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
+    1.  Откройте диспетчер серверов в Visual Studio 2012.  
   
     2.  Разверните **функции** вкладки.  
   

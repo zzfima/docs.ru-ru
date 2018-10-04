@@ -2,12 +2,12 @@
 title: '&lt;message&gt; для &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: 65a8b0fa120d23931ad218ac67846c066b050af8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 124d53ae24b627c35863fda4cd8f404057978f1e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515818"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579090"
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;message&gt; для &lt;netMsmqBinding&gt;
 Определяет параметры безопасности сообщений SOAP для данной привязки `netMsmqBinding`.  
@@ -60,5 +60,5 @@ ms.locfileid: "43515818"
  [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)

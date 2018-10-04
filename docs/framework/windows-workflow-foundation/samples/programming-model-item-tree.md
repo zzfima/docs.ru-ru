@@ -2,43 +2,43 @@
 title: Программирование дерева элементов модели
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: a24e52ec2b7cab10471d756a721611c6dd10516e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f6f625ae7cd5251f7d7935d018142b32ea71b13f
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521974"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48776510"
 ---
 # <a name="programming-model-item-tree"></a>Программирование дерева элементов модели
-В этом примере демонстрируется переход <xref:System.Activities.Presentation.Model.ModelItem> дерева, используя привязку декларативных данных из представления дерева Windows Presentation Foundation (WPF).  
-  
-## <a name="sample-details"></a>Подробные сведения об образце  
- Дерево <xref:System.Activities.Presentation.Model.ModelItem> является абстракцией, которая используется инфраструктурой [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] для предоставления данных о базовом изменяемом экземпляре. На следующей иллюстрации показаны различные слои инфраструктуры внутри [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].  
-  
- ![Архитектура конструктора рабочих процессов](../../../../docs/framework/windows-workflow-foundation/samples/media/workflowdesignerarch.JPG "WorkflowDesignerArch")  
-  
- Элемент <xref:System.Activities.Presentation.Model.ModelItem> состоит из указателя базового значения, а также коллекции объектов <xref:System.Activities.Presentation.Model.ModelProperty>. Объект <xref:System.Activities.Presentation.Model.ModelProperty> в свою очередь включает данные, такие как имя и тип свойства, и указатель значения, который в свою очередь является еще одним элементом <xref:System.Activities.Presentation.Model.ModelItem>. Преобразователь значений используется для манипуляции некоторыми элементами <xref:System.Activities.Presentation.Model.ModelItem>, возвращаемыми свойством <xref:System.Activities.Presentation.Model.ModelProperty>, чтобы они правильно отображались в представлении дерева. Далее в образце показано, как императивно программировать с использованием дерева <xref:System.Activities.Presentation.Model.ModelItem> при помощи императивных инструкций, в соответствии со следующим примером.  
-  
-```csharp  
-ModelItem mi = wd.Context.Services.GetService<ModelService>().Root;  
-ModelProperty mp = mi.Properties["Activities"];  
-mp.Collection.Add(new Persist());  
-ModelItem justAdded = mp.Collection.Last();  
-justAdded.Properties["DisplayName"].SetValue("new name");  
-```  
-  
-#### <a name="to-use-this-sample"></a>Использование этого образца  
-  
-1.  Откройте решение ProgrammingModelItemTree.sln в среде [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
-  
-2.  Постройте решение, выбрав **построить решение** из **построения** меню.  
-  
-3.  Нажмите клавишу F5 для запуска приложения. Будет показана форма [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)].  
-  
-4.  Нажмите кнопку **загрузить WF** кнопку, чтобы загрузить <xref:System.Activities.Presentation.Model.ModelItem> и привязать его к представлении в виде дерева.  
-  
-5.  Щелкнув **изменить дерево элементов модели** кнопки выполняется предшествующий код, чтобы добавить элемент в дерево и задает свойство.  
-  
+В этом примере демонстрируется переход <xref:System.Activities.Presentation.Model.ModelItem> дерева, используя привязку декларативных данных из представления дерева Windows Presentation Foundation (WPF).
+
+## <a name="sample-details"></a>Подробные сведения об образце
+ Дерево <xref:System.Activities.Presentation.Model.ModelItem> является абстракцией, которая используется инфраструктурой [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)] для предоставления данных о базовом изменяемом экземпляре. На следующей иллюстрации показаны различные слои инфраструктуры внутри [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)].
+
+ ![Архитектура конструктора рабочих процессов](../../../../docs/framework/windows-workflow-foundation/samples/media/workflowdesignerarch.JPG "WorkflowDesignerArch")
+
+ Элемент <xref:System.Activities.Presentation.Model.ModelItem> состоит из указателя базового значения, а также коллекции объектов <xref:System.Activities.Presentation.Model.ModelProperty>. Объект <xref:System.Activities.Presentation.Model.ModelProperty> в свою очередь включает данные, такие как имя и тип свойства, и указатель значения, который в свою очередь является еще одним элементом <xref:System.Activities.Presentation.Model.ModelItem>. Преобразователь значений используется для манипуляции некоторыми элементами <xref:System.Activities.Presentation.Model.ModelItem>, возвращаемыми свойством <xref:System.Activities.Presentation.Model.ModelProperty>, чтобы они правильно отображались в представлении дерева. Далее в образце показано, как императивно программировать с использованием дерева <xref:System.Activities.Presentation.Model.ModelItem> при помощи императивных инструкций, в соответствии со следующим примером.
+
+```csharp
+ModelItem mi = wd.Context.Services.GetService<ModelService>().Root;
+ModelProperty mp = mi.Properties["Activities"];
+mp.Collection.Add(new Persist());
+ModelItem justAdded = mp.Collection.Last();
+justAdded.Properties["DisplayName"].SetValue("new name");
+```
+
+#### <a name="to-use-this-sample"></a>Использование этого образца
+
+1.  Откройте решение ProgrammingModelItemTree.sln в Visual Studio 2010.
+
+2.  Постройте решение, выбрав **построить решение** из **построения** меню.
+
+3.  Нажмите клавишу F5 для запуска приложения. Будет показана форма [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)].
+
+4.  Нажмите кнопку **загрузить WF** кнопку, чтобы загрузить <xref:System.Activities.Presentation.Model.ModelItem> и привязать его к представлении в виде дерева.
+
+5.  Щелкнув **изменить дерево элементов модели** кнопки выполняется предшествующий код, чтобы добавить элемент в дерево и задает свойство.
+
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  
 >   

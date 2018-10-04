@@ -8,31 +8,31 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 6db75e9d8ec5aeb1a0c7310d39391f8f264649d3
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 554153335c08c9c8911a5d4fda3696db1e0abf2a
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45689279"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48264230"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Пошаговое руководство. Назначение содержимого WPF в формах Windows Forms во время разработки
-В этом пошаговом руководстве показано, как выбрать типы элементов управления Windows Presentation Foundation (WPF), которые будут отображаться в форме. Можно выбрать любые типы элементов управления WPF, включенные в проект.  
-  
- В этом пошаговом руководстве выполняются следующие задачи.  
-  
--   Создание проекта.  
-  
--   Создание типов элементов управления WPF.  
-  
--   Выбор элементов управления WPF.  
-  
+В этом пошаговом руководстве показано, как выбрать типы элементов управления Windows Presentation Foundation (WPF), которые будут отображаться в форме. Можно выбрать любые типы элементов управления WPF, включенные в проект.
+
+ В этом пошаговом руководстве выполняются следующие задачи.
+
+-   Создание проекта.
+
+-   Создание типов элементов управления WPF.
+
+-   Выбор элементов управления WPF.
+
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>Создание проекта  
  Первым шагом является создание проекта Windows Forms.  

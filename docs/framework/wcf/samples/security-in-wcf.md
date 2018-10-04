@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 05d73638-30a9-43b4-8c86-f27f57b6eef1
 author: BrucePerlerMS
 ms.openlocfilehash: 6f005fade22df9476f5411e9a55334320300169c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029246"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777949"
 ---
 # <a name="security-in-wcf"></a>Безопасность в WCF
 Этот раздел содержит примеры, относящиеся к безопасности Windows Communication Foundation (WCF).  

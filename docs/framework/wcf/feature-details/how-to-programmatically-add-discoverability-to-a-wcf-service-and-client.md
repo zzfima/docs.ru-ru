@@ -2,19 +2,19 @@
 title: Как программно добавить возможность обнаружения к службе и клиенту WCF
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: e32128a20a765762249e6892232447c56036c2d8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 407777b1545fb12eb3ed1787fdba86991c894fdb
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524144"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48779898"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>Как программно добавить возможность обнаружения к службе и клиенту WCF
 В этом разделе объясняется, как сделать обнаруживаемой службы Windows Communication Foundation (WCF). Он основан на [резидентного размещения](https://go.microsoft.com/fwlink/?LinkId=145523) образца.  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>Настройка образца службы существующего резидентного размещения для обнаружения  
   
-1.  Откройте решение резидентного размещения в среде [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Образец находится в каталоге TechnologySamples\Basic\Service\Hosting\SelfHost.  
+1.  Откройте решение резидентного размещения в Visual Studio 2012. Образец находится в каталоге TechnologySamples\Basic\Service\Hosting\SelfHost.  
   
 2.  Добавьте ссылку на проект службы `System.ServiceModel.Discovery.dll`. Может появиться сообщение об ошибке «System. ServiceModel.Discovery.dll или одна из его зависимостей требует более поздней версии [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] отличной от указанной в проекте...» Если вы видите это сообщение, щелкните правой кнопкой мыши проект в обозревателе решений и выберите **свойства**. В **свойства проекта** окна, убедитесь, что **требуемой версии .NET Framework** является [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   

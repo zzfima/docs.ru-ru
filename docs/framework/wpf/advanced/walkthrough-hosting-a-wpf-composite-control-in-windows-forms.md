@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 09f634c870eb78c16192ed30ffbbfdc71fdd5142
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b49d09ce81c0605ecd82b67ec4c0b24973ac293c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856170"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582818"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Пошаговое руководство. Размещение составного элемента управления WPF в форме Windows Forms
 Служба [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет среду с широкими возможностями для создания приложений. Тем не менее, если имеются существенные преимущества в [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] код, он может быть более эффективным, расширение существующего [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] приложения с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , а не переписывание кода с нуля. Распространенный сценарий — при необходимости внедрения одного или нескольких элементов управления, реализованных с [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] в приложении Windows Forms. Дополнительные сведения о настройке элементов управления WPF, см. в разделе [Настройка элементов управления](../../../../docs/framework/wpf/controls/control-customization.md).  
@@ -27,9 +27,8 @@ ms.locfileid: "43856170"
  Полный пример кода для задач, приведенных в этом пошаговом руководстве, см. в разделе [размещение составного элемента управления WPF в Windows Forms образец](https://go.microsoft.com/fwlink/?LinkID=159996).  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
-  
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+
+Требуется Visual Studio для выполнения этого пошагового руководства.  
   
 ## <a name="implementing-the-wpf-composite-control"></a>Реализация составного элемента управления WPF  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Составного элемента управления, используемый в этом примере представляет собой форму простого ввода данных, который принимает имя и адрес пользователя. Когда пользователь нажимает одну из двух кнопок, чтобы указать, что задача завершена, элемент управления создает пользовательское событие для возвращения сведений в ведущее приложение. На приведенном ниже рисунке показан отображаемый элемент управления.  
@@ -229,7 +228,7 @@ namespace MyControls
   
 4.  Добавьте следующий <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> элементов управления в форму.  
   
-    |name|Text|  
+    |name|Текста|  
     |----------|----------|  
     |groupBox1|Цвет фона|  
     |groupBox2|Цвет переднего плана|  
@@ -241,7 +240,7 @@ namespace MyControls
   
 5.  Добавьте следующий <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> элементы управления <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> элементов управления.  
   
-    |GroupBox|name|Text|  
+    |GroupBox|name|Текста|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|До преобразования|  
     |groupBox1|radioBackgroundLightGreen|LightGreen|  
@@ -262,7 +261,7 @@ namespace MyControls
   
 6.  Добавьте следующий <xref:System.Windows.Forms.Label?displayProperty=nameWithType> управляет к последнему <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>. Эти элементы управления отображают данные, возвращенные [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] составного элемента управления.  
   
-    |GroupBox|name|Text|  
+    |GroupBox|name|Текста|  
     |--------------|----------|----------|  
     |groupBox7|lblName|Имя.|  
     |groupBox7|lblAddress|Почтовый адрес:|  

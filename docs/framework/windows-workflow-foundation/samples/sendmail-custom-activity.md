@@ -2,12 +2,12 @@
 title: Настраиваемое действие SendMail
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: e9d27711754c3aa8ff7f68c23f528c9f5c4356f7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f51914ae01ea680ae09be8080cce1aa866bd6ec7
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45747209"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266673"
 ---
 # <a name="sendmail-custom-activity"></a>Настраиваемое действие SendMail
 В образце описывается создание настраиваемого действия, которое является производным от <xref:System.Activities.AsyncCodeActivity>, для отправки почты с помощью SMTP для работы в приложении рабочего процесса. Настраиваемое действие использует возможности <xref:System.Net.Mail.SmtpClient> асинхронно отправлять электронную почту и для отправки почты с проверкой подлинности. При этом также обеспечивается возможность использования таких возможностей конечных пользователей, как тестовый режим, замена маркеров, шаблоны файлов и тестовый путь размещения файла.  
@@ -119,7 +119,7 @@ new SendMail
   
 ##### <a name="to-run-this-sample"></a>Запуск образца  
   
-1.  С помощью [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] откройте файл решения SendMail.sln.  
+1.  С помощью Visual Studio 2010, откройте решения SendMail.sln.  
   
 2.  Убедитесь, что имеется доступ к работающему SMTP-серверу. См. инструкции по настройке.  
   

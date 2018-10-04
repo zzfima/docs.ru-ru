@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; для &lt;webHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: bbbd459e5717722359fe010a27e548d21ff074db
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3401eada9ae2580cc665d9b4a5a6475f86b68072
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43482681"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48777803"
 ---
 # <a name="lttransportgt-of-ltwebhttpbindinggt"></a>&lt;transport&gt; для &lt;webHttpBinding&gt;
 Определяет параметры безопасности уровня транспорта для конечной точки службы, настроенной для получения запросов HTTP.  
@@ -92,6 +92,6 @@ ms.locfileid: "43482681"
  [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Привязки](../../../../../docs/framework/wcf/bindings.md)  
  [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки службы Windows Communication Foundation и клиентов](https://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  [\<Привязка >](../../../../../docs/framework/misc/binding.md)  
  [Модель веб-программирования HTTP WCF](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

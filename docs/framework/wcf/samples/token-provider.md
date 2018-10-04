@@ -3,260 +3,260 @@ title: Поставщик маркеров
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
 author: BrucePerlerMS
-ms.openlocfilehash: b7b7750b51450d3b5d31b8034a20317ba03c49a4
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9e9bc55c0596943739e7cbd46e78d2802906f30e
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030146"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580567"
 ---
 # <a name="token-provider"></a>Поставщик маркеров
-В этом образце показано, как реализовать пользовательский поставщик маркеров. Поставщик маркеров в Windows Communication Foundation (WCF) используется для передачи учетных данных в инфраструктуру безопасности. Поставщик токенов осуществляет общую проверку цели и выдает соответствующие учетные данные, чтобы инфраструктура безопасности смогла обеспечить защиту сообщения. WCF поставляется с поставщиком токенов учетных данных по умолчанию. WCF поставляется с [!INCLUDE[infocard](../../../../includes/infocard-md.md)] поставщик маркеров. Пользовательские поставщики маркеров полезны в следующих случаях:  
-  
--   если используется хранилище учетных данных с которым эти поставщики не работают;  
-  
--   Если вы хотите создать собственный пользовательский механизм для преобразования учетных данных из точки, где пользователь предоставляет сведения, которые должны при инфраструктура клиента WCF использует учетные данные.  
-  
--   если строится пользовательский маркер.  
-  
- В этом образце показано, как построить поставщик пользовательских маркеров, преобразующий входные данные пользователя в другой формат.  
-  
- Итак, этот образец демонстрирует следующее:  
-  
--   как клиент может проходить проверку подлинности с использованием пары "имя пользователя/пароль";  
-  
--   как настроить клиент с пользовательским поставщиком маркеров;  
-  
--   как сервер может проверить учетные данные клиента с помощью пользовательского объекта <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, проверяющего соответствие имени пользователя и пароля;  
-  
--   как сервер проходит проверку подлинности на клиенте с использованием сертификата X.509.  
-  
- В данном образце также показано, как можно получить доступ к удостоверению вызывающего модуля после процесса проверки подлинности пользовательского маркера.  
-  
- Служба предоставляет одну конечную точку для взаимодействия со службой, определенной в файле конфигурации App.config. Конечная точка состоит из адреса, привязки и контракта. Привязка настраивается с помощью стандартного элемента `wsHttpBinding`, который по умолчанию использует безопасность сообщений. В этом образце стандартная привязка `wsHttpBinding` использует проверку подлинности имени пользователя клиента. Кроме того, служба настраивает сертификат службы с помощью поведения serviceCredentials. Поведение serviceCredentials позволяет настроить сертификат службы. Сертификат службы используется клиентом для проверки подлинности службы и обеспечения защиты сообщения. В следующей конфигурации делается ссылка на сертификат localhost, установленный во время установки образца, как описано в инструкциях по установке далее.  
-  
-```xml  
-<system.serviceModel>  
-    <services>  
-      <service   
-          name="Microsoft.ServiceModel.Samples.CalculatorService"  
-          behaviorConfiguration="CalculatorServiceBehavior">  
-        <host>  
-          <baseAddresses>  
-            <!-- configure base address provided by host -->  
-            <add baseAddress ="http://localhost:8000/servicemodelsamples/service"/>  
-          </baseAddresses>  
-        </host>  
-        <!-- use base address provided by host -->  
-        <endpoint address=""  
-                  binding="wsHttpBinding"  
-                  bindingConfiguration="Binding1"   
-                  contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-      </service>  
-    </services>  
-  
-    <bindings>  
-      <wsHttpBinding>  
-        <binding name="Binding1">  
-          <security mode="Message">  
-            <message clientCredentialType="UserName" />  
-          </security>  
-        </binding>  
-      </wsHttpBinding>  
-    </bindings>  
-  
-    <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="CalculatorServiceBehavior">  
-          <serviceDebug includeExceptionDetailInFaults="False" />  
-          <!--   
-        The serviceCredentials behavior allows one to define a service certificate.  
-        A service certificate is used by a client to authenticate the service and provide message protection.  
-        This configuration references the "localhost" certificate installed during the setup instructions.  
-        -->  
-          <serviceCredentials>  
-            <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName" />  
-          </serviceCredentials>  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
-  </system.serviceModel>  
-```  
-  
- Конфигурация конечной точки клиента состоит из имени конфигурации, абсолютного адреса конечной точки службы, привязки и контракта. Привязка клиента настраивается с помощью соответствующего режима (`Mode`) и типа (`clientCredentialType`) сообщения.  
-  
-```xml  
-<system.serviceModel>  
-  <client>  
-    <endpoint name=""  
-              address="http://localhost:8000/servicemodelsamples/service"   
-              binding="wsHttpBinding"   
-              bindingConfiguration="Binding1"   
-              contract="Microsoft.ServiceModel.Samples.ICalculator">  
-    </endpoint>  
-  </client>  
-  
-  <bindings>  
-    <wsHttpBinding>  
-      <binding name="Binding1">  
-        <security mode="Message">  
-          <message clientCredentialType="UserName" />  
-        </security>  
-      </binding>  
-    </wsHttpBinding>  
-  </bindings>  
-</system.serviceModel>  
-```  
-  
- Ниже показано, как разработать пользовательский поставщик маркеров и интегрировать его с помощью платформы безопасности WCF:  
-  
-1.  Создание пользовательского поставщика маркеров.  
-  
-     В образце реализуется пользовательский поставщик маркеров, получающий имя пользователя и пароль. Пароль должен соответствовать данному имени пользователя. Этот пользовательский поставщик маркеров приводится исключительно с целью демонстрации; его не рекомендуется использовать в реальном развертывании.  
-  
-     Для выполнения этой задачи пользовательский поставщик маркеров наследует класс <xref:System.IdentityModel.Selectors.SecurityTokenProvider> и переопределяет метод <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29>. Этот метод создает и возвращает новый маркер `UserNameSecurityToken`.  
-  
-    ```  
-    protected override SecurityToken GetTokenCore(TimeSpan timeout)  
-    {  
-        // obtain username and password from the user using console window  
-        string username = GetUserName();  
-        string password = GetPassword();  
-        Console.WriteLine("username: {0}", username);  
-  
-        // return new UserNameSecurityToken containing information obtained from user  
-        return new UserNameSecurityToken(username, password);  
-    }  
-    ```  
-  
-2.  Создание пользовательского диспетчера маркеров безопасности.  
-  
-     Класс <xref:System.IdentityModel.Selectors.SecurityTokenManager> используется для создания объекта <xref:System.IdentityModel.Selectors.SecurityTokenProvider> для конкретного конструктора <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, который передается в него в методе `CreateSecurityTokenProvider`. Диспетчер маркеров безопасности также используется для создания структур проверки подлинности маркеров и сериализатора маркеров. В этом образце они не представлены. В данном образце пользовательский диспетчер маркеров безопасности наследуется от класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> и переопределяет метод `CreateSecurityTokenProvider`, возвращающий пользовательский поставщик маркеров, когда переданные требования маркера указывают на запрос пользовательского поставщика.  
-  
-    ```  
-    public class MyUserNameSecurityTokenManager : ClientCredentialsSecurityTokenManager  
-    {  
-        MyUserNameClientCredentials myUserNameClientCredentials;  
-  
-        public MyUserNameSecurityTokenManager(MyUserNameClientCredentials myUserNameClientCredentials)  
-            : base(myUserNameClientCredentials)  
-        {  
-            this.myUserNameClientCredentials = myUserNameClientCredentials;  
-        }  
-  
-        public override SecurityTokenProvider CreateSecurityTokenProvider(SecurityTokenRequirement tokenRequirement)  
-        {  
-            // if token requirement matches username token return custom username token provider  
-            // otherwise use base implementation  
-            if (tokenRequirement.TokenType == SecurityTokenTypes.UserName)  
-            {  
-                return new MyUserNameTokenProvider();  
-            }  
-            else  
-            {  
-                return base.CreateSecurityTokenProvider(tokenRequirement);  
-            }  
-        }  
-    }  
-    ```  
-  
-3.  Создание пользовательских учетных данных клиента.  
-  
-     Класс учетных данных клиента используется для представления учетных данных, которые сконфигурированы для прокси клиента, и создает диспетчер маркеров безопасности, который используется для получения структур проверки подлинности маркеров, поставщиков маркеров и сериализаторов маркеров.  
-  
-    ```  
-    public class MyUserNameClientCredentials : ClientCredentials  
-    {  
-        public MyUserNameClientCredentials()  
-            : base()  
-        {  
-        }  
-  
-        protected override ClientCredentials CloneCore()  
-        {  
-            return new MyUserNameClientCredentials();  
-        }  
-  
-        public override SecurityTokenManager CreateSecurityTokenManager()  
-        {  
-            // return custom security token manager  
-            return new MyUserNameSecurityTokenManager(this);  
-        }  
-    }  
-    ```  
-  
-4.  Настройка клиента для использования пользовательских учетных данных клиента.  
-  
-     Чтобы клиент мог использовать пользовательские учетные данные клиента, образец удаляет класс учетных данных клиента по умолчанию и предоставляет новый класс учетных данных клиента.  
-  
-    ```  
-    static void Main()  
-    {  
-        // ...  
-           // Create a client with given client endpoint configuration  
-          CalculatorClient client = new CalculatorClient();  
-  
-          // set new credentials  
-           client.ChannelFactory.Endpoint.Behaviors.Remove(typeof(ClientCredentials));  
-         client.ChannelFactory.Endpoint.Behaviors.Add(new MyUserNameClientCredentials());  
-       // ...  
-    }  
-    ```  
-  
- На стороне службы для вывода информации о вызывающем модуле можно использовать свойство <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>, как показано в следующем примере кода. Свойство <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> содержит информацию об утверждениях о текущем вызывающем модуле.  
-  
-```  
-static void DisplayIdentityInformation()  
-{  
-    Console.WriteLine("\t\tSecurity context identity  :  {0}",   
-        ServiceSecurityContext.Current.PrimaryIdentity.Name);  
-}  
-```  
-  
- При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
-  
-## <a name="setup-batch-file"></a>Пакетный файл Setup  
- Входящий в состав образца файл Setup.bat позволяет настроить для сервера соответствующий сертификат, необходимый для выполнения резидентного приложения, для которого требуется обеспечение безопасности на основе сертификата сервера. Этот пакетный файл необходимо изменить, чтобы его можно было использовать на нескольких компьютерах или без размещения приложения.  
-  
- Ниже представлен краткие общие сведения о различных разделах пакетных файлов, позволяющий изменять их для выполнения в соответствующей конфигурации.  
-  
--   Создание сертификата сервера.  
-  
-     Следующие строки из файла Setup.bat создают используемый в дальнейшем сертификат сервера. Переменная `%SERVER_NAME%`задает имя сервера. Измените эту переменную, чтобы задать собственное имя сервера. По умолчанию в этом пакетном файле используется имя localhost.  
-  
-    ```  
-    echo ************  
-    echo Server cert setup starting  
-    echo %SERVER_NAME%  
-    echo ************  
-    echo making server cert  
-    echo ************  
-    makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe  
-    ```  
-  
--   Установка сертификата сервера в хранилище доверенных сертификатов клиента.  
-  
-     Следующие строки из файла Setup.bat копируют сертификат сервера в хранилище доверенных лиц клиента. Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны клиентской системы. Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата сервера в хранилище сертификатов клиента не требуется.  
-  
-    ```  
-    certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
-    ```  
-  
+В этом образце показано, как реализовать пользовательский поставщик маркеров. Поставщик маркеров в Windows Communication Foundation (WCF) используется для передачи учетных данных в инфраструктуру безопасности. Поставщик токенов осуществляет общую проверку цели и выдает соответствующие учетные данные, чтобы инфраструктура безопасности смогла обеспечить защиту сообщения. WCF поставляется с поставщиком токенов учетных данных по умолчанию. WCF поставляется с [!INCLUDE[infocard](../../../../includes/infocard-md.md)] поставщик маркеров. Пользовательские поставщики маркеров полезны в следующих случаях:
+
+-   если используется хранилище учетных данных с которым эти поставщики не работают;
+
+-   Если вы хотите создать собственный пользовательский механизм для преобразования учетных данных из точки, где пользователь предоставляет сведения, которые должны при инфраструктура клиента WCF использует учетные данные.
+
+-   если строится пользовательский маркер.
+
+ В этом образце показано, как построить поставщик пользовательских маркеров, преобразующий входные данные пользователя в другой формат.
+
+ Итак, этот образец демонстрирует следующее:
+
+-   как клиент может проходить проверку подлинности с использованием пары "имя пользователя/пароль";
+
+-   как настроить клиент с пользовательским поставщиком маркеров;
+
+-   как сервер может проверить учетные данные клиента с помощью пользовательского объекта <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>, проверяющего соответствие имени пользователя и пароля;
+
+-   как сервер проходит проверку подлинности на клиенте с использованием сертификата X.509.
+
+ В данном образце также показано, как можно получить доступ к удостоверению вызывающего модуля после процесса проверки подлинности пользовательского маркера.
+
+ Служба предоставляет одну конечную точку для взаимодействия со службой, определенной в файле конфигурации App.config. Конечная точка состоит из адреса, привязки и контракта. Привязка настраивается с помощью стандартного элемента `wsHttpBinding`, который по умолчанию использует безопасность сообщений. В этом образце стандартная привязка `wsHttpBinding` использует проверку подлинности имени пользователя клиента. Кроме того, служба настраивает сертификат службы с помощью поведения serviceCredentials. Поведение serviceCredentials позволяет настроить сертификат службы. Сертификат службы используется клиентом для проверки подлинности службы и обеспечения защиты сообщения. В следующей конфигурации делается ссылка на сертификат localhost, установленный во время установки образца, как описано в инструкциях по установке далее.
+
+```xml
+<system.serviceModel>
+    <services>
+      <service
+          name="Microsoft.ServiceModel.Samples.CalculatorService"
+          behaviorConfiguration="CalculatorServiceBehavior">
+        <host>
+          <baseAddresses>
+            <!-- configure base address provided by host -->
+            <add baseAddress ="http://localhost:8000/servicemodelsamples/service"/>
+          </baseAddresses>
+        </host>
+        <!-- use base address provided by host -->
+        <endpoint address=""
+                  binding="wsHttpBinding"
+                  bindingConfiguration="Binding1"
+                  contract="Microsoft.ServiceModel.Samples.ICalculator" />
+      </service>
+    </services>
+
+    <bindings>
+      <wsHttpBinding>
+        <binding name="Binding1">
+          <security mode="Message">
+            <message clientCredentialType="UserName" />
+          </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="CalculatorServiceBehavior">
+          <serviceDebug includeExceptionDetailInFaults="False" />
+          <!--
+        The serviceCredentials behavior allows one to define a service certificate.
+        A service certificate is used by a client to authenticate the service and provide message protection.
+        This configuration references the "localhost" certificate installed during the setup instructions.
+        -->
+          <serviceCredentials>
+            <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName" />
+          </serviceCredentials>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
+```
+
+ Конфигурация конечной точки клиента состоит из имени конфигурации, абсолютного адреса конечной точки службы, привязки и контракта. Привязка клиента настраивается с помощью соответствующего режима (`Mode`) и типа (`clientCredentialType`) сообщения.
+
+```xml
+<system.serviceModel>
+  <client>
+    <endpoint name=""
+              address="http://localhost:8000/servicemodelsamples/service"
+              binding="wsHttpBinding"
+              bindingConfiguration="Binding1"
+              contract="Microsoft.ServiceModel.Samples.ICalculator">
+    </endpoint>
+  </client>
+
+  <bindings>
+    <wsHttpBinding>
+      <binding name="Binding1">
+        <security mode="Message">
+          <message clientCredentialType="UserName" />
+        </security>
+      </binding>
+    </wsHttpBinding>
+  </bindings>
+</system.serviceModel>
+```
+
+ Ниже показано, как разработать пользовательский поставщик маркеров и интегрировать его с помощью платформы безопасности WCF:
+
+1.  Создание пользовательского поставщика маркеров.
+
+     В образце реализуется пользовательский поставщик маркеров, получающий имя пользователя и пароль. Пароль должен соответствовать данному имени пользователя. Этот пользовательский поставщик маркеров приводится исключительно с целью демонстрации; его не рекомендуется использовать в реальном развертывании.
+
+     Для выполнения этой задачи пользовательский поставщик маркеров наследует класс <xref:System.IdentityModel.Selectors.SecurityTokenProvider> и переопределяет метод <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29>. Этот метод создает и возвращает новый маркер `UserNameSecurityToken`.
+
+    ```
+    protected override SecurityToken GetTokenCore(TimeSpan timeout)
+    {
+        // obtain username and password from the user using console window
+        string username = GetUserName();
+        string password = GetPassword();
+        Console.WriteLine("username: {0}", username);
+
+        // return new UserNameSecurityToken containing information obtained from user
+        return new UserNameSecurityToken(username, password);
+    }
+    ```
+
+2.  Создание пользовательского диспетчера маркеров безопасности.
+
+     Класс <xref:System.IdentityModel.Selectors.SecurityTokenManager> используется для создания объекта <xref:System.IdentityModel.Selectors.SecurityTokenProvider> для конкретного конструктора <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>, который передается в него в методе `CreateSecurityTokenProvider`. Диспетчер маркеров безопасности также используется для создания структур проверки подлинности маркеров и сериализатора маркеров. В этом образце они не представлены. В данном образце пользовательский диспетчер маркеров безопасности наследуется от класса <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> и переопределяет метод `CreateSecurityTokenProvider`, возвращающий пользовательский поставщик маркеров, когда переданные требования маркера указывают на запрос пользовательского поставщика.
+
+    ```
+    public class MyUserNameSecurityTokenManager : ClientCredentialsSecurityTokenManager
+    {
+        MyUserNameClientCredentials myUserNameClientCredentials;
+
+        public MyUserNameSecurityTokenManager(MyUserNameClientCredentials myUserNameClientCredentials)
+            : base(myUserNameClientCredentials)
+        {
+            this.myUserNameClientCredentials = myUserNameClientCredentials;
+        }
+
+        public override SecurityTokenProvider CreateSecurityTokenProvider(SecurityTokenRequirement tokenRequirement)
+        {
+            // if token requirement matches username token return custom username token provider
+            // otherwise use base implementation
+            if (tokenRequirement.TokenType == SecurityTokenTypes.UserName)
+            {
+                return new MyUserNameTokenProvider();
+            }
+            else
+            {
+                return base.CreateSecurityTokenProvider(tokenRequirement);
+            }
+        }
+    }
+    ```
+
+3.  Создание пользовательских учетных данных клиента.
+
+     Класс учетных данных клиента используется для представления учетных данных, которые сконфигурированы для прокси клиента, и создает диспетчер маркеров безопасности, который используется для получения структур проверки подлинности маркеров, поставщиков маркеров и сериализаторов маркеров.
+
+    ```
+    public class MyUserNameClientCredentials : ClientCredentials
+    {
+        public MyUserNameClientCredentials()
+            : base()
+        {
+        }
+
+        protected override ClientCredentials CloneCore()
+        {
+            return new MyUserNameClientCredentials();
+        }
+
+        public override SecurityTokenManager CreateSecurityTokenManager()
+        {
+            // return custom security token manager
+            return new MyUserNameSecurityTokenManager(this);
+        }
+    }
+    ```
+
+4.  Настройка клиента для использования пользовательских учетных данных клиента.
+
+     Чтобы клиент мог использовать пользовательские учетные данные клиента, образец удаляет класс учетных данных клиента по умолчанию и предоставляет новый класс учетных данных клиента.
+
+    ```
+    static void Main()
+    {
+        // ...
+           // Create a client with given client endpoint configuration
+          CalculatorClient client = new CalculatorClient();
+
+          // set new credentials
+           client.ChannelFactory.Endpoint.Behaviors.Remove(typeof(ClientCredentials));
+         client.ChannelFactory.Endpoint.Behaviors.Add(new MyUserNameClientCredentials());
+       // ...
+    }
+    ```
+
+ На стороне службы для вывода информации о вызывающем модуле можно использовать свойство <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>, как показано в следующем примере кода. Свойство <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> содержит информацию об утверждениях о текущем вызывающем модуле.
+
+```
+static void DisplayIdentityInformation()
+{
+    Console.WriteLine("\t\tSecurity context identity  :  {0}",
+        ServiceSecurityContext.Current.PrimaryIdentity.Name);
+}
+```
+
+ При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.
+
+## <a name="setup-batch-file"></a>Пакетный файл Setup
+ Входящий в состав образца файл Setup.bat позволяет настроить для сервера соответствующий сертификат, необходимый для выполнения резидентного приложения, для которого требуется обеспечение безопасности на основе сертификата сервера. Этот пакетный файл необходимо изменить, чтобы его можно было использовать на нескольких компьютерах или без размещения приложения.
+
+ Ниже представлен краткие общие сведения о различных разделах пакетных файлов, позволяющий изменять их для выполнения в соответствующей конфигурации.
+
+-   Создание сертификата сервера.
+
+     Следующие строки из файла Setup.bat создают используемый в дальнейшем сертификат сервера. Переменная `%SERVER_NAME%`задает имя сервера. Измените эту переменную, чтобы задать собственное имя сервера. По умолчанию в этом пакетном файле используется имя localhost.
+
+    ```
+    echo ************
+    echo Server cert setup starting
+    echo %SERVER_NAME%
+    echo ************
+    echo making server cert
+    echo ************
+    makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
+    ```
+
+-   Установка сертификата сервера в хранилище доверенных сертификатов клиента.
+
+     Следующие строки из файла Setup.bat копируют сертификат сервера в хранилище доверенных лиц клиента. Этот шаг является обязательным, поскольку сертификаты, созданные с помощью программы Makecert.exe, не получают неявного доверия со стороны клиентской системы. Если уже имеется сертификат, имеющий доверенный корневой сертификат клиента, например сертификат, выпущенный корпорацией Майкрософт, выполнять этот шаг по добавлению сертификата сервера в хранилище сертификатов клиента не требуется.
+
+    ```
+    certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
+    ```
+
 > [!NOTE]
->  Пакетный файл Setup.bat предназначен для запуска из командной строки Windows SDK. Требуется, чтобы переменная среды MSSDK указывала на каталог, в котором установлен пакет SDK. Эта переменная среды автоматически устанавливается в командной строке Windows SDK.  
-  
-#### <a name="to-set-up-and-build-the-sample"></a>Настройка и сборка образца  
-  
-1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).  
-  
-2.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
-  
-#### <a name="to-run-the-sample-on-the-same-computer"></a>Запуск образца на одном компьютере  
-  
-1.  Откройте окно командной строки [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] с правами администратора и запустите файл Setup.bat из папки установки образца. При этом устанавливаются все сертификаты, необходимые для выполнения образца.  
-  
+>  Пакетный файл Setup.bat предназначен для запуска из командной строки Windows SDK. Требуется, чтобы переменная среды MSSDK указывала на каталог, в котором установлен пакет SDK. Эта переменная среды автоматически устанавливается в командной строке Windows SDK.
+
+#### <a name="to-set-up-and-build-the-sample"></a>Настройка и сборка образца
+
+1.  Убедитесь, что вы выполнили [выполняемая однократно процедура настройки для образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).
+
+2.  Чтобы построить решение, следуйте инструкциям в [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).
+
+#### <a name="to-run-the-sample-on-the-same-computer"></a>Запуск образца на одном компьютере
+
+1.  Запустите файл Setup.bat из папки установки образца командную строку Visual Studio 2012, открытой с правами администратора. При этом устанавливаются все сертификаты, необходимые для выполнения образца.
+
     > [!NOTE]
-    >  Пакетный файл Setup.bat предназначен для запуска из командной строки [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]. Переменная среды PATH, заданная в командной строке [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], указывает на каталог, содержащий исполняемые файлы, необходимые для скрипта Setup.bat.  
+    >  Пакетный файл Setup.bat предназначен для запуска из командной строки с 2012 Visual Studio. Набор переменных среды в командной строке Visual Studio 2012 путь указывает на каталог, содержащий исполняемые файлы, необходимые для скрипта Setup.bat.  
   
 2.  Запустите программу Service.exe из каталога \service\bin.  
   

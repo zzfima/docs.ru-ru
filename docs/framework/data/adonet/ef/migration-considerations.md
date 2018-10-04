@@ -2,12 +2,12 @@
 title: Вопросы миграции (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: d6643986190b376e188b19851b044bcf05ff7f02
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cf705caa84742d654465a2dba005f2d8f32abcca
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511026"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48778027"
 ---
 # <a name="migration-considerations-entity-framework"></a>Вопросы миграции (Entity Framework)
 Платформа [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework предоставляет существующим приложениям ряд преимуществ. Наиболее важным из них является возможность использования концептуальной модели для отделения структур данных, используемых приложением, от схемы в источнике данных. Это позволяет в дальнейшем значительно упростить внесение изменений в модель хранения или сам источник данных, устранив необходимость внесения соответствующих изменений в приложение. Дополнительные сведения о преимуществах использования [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], см. в разделе [Обзор Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md) и [модели EDM](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -29,11 +29,11 @@ ms.locfileid: "43511026"
  Путь переноса существующего приложения на платформу [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] зависит как от типа приложения, так и от существующей стратегии доступа к данным. Но при переносе любого существующего приложения на платформу [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] всегда приходится выполнять следующие задачи.  
   
 > [!NOTE]
->  Все эти задачи выполняются автоматически при использовании средств модели EDM, начиная с [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)]. Дополнительные сведения см. в разделе [как: использовать мастер моделей EDM](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+>  Все эти задачи выполняются автоматически при использовании средств модели EDM, начиная с версии Visual Studio 2008. Дополнительные сведения см. в разделе [как: использовать мастер моделей EDM](https://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 1.  Обновление приложения.  
   
-     Проект, созданный с помощью более ранней версии Visual Studio и [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] необходимо обновить для использования [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)] SP1 и [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] начиная с версии 3.5 с пакетом обновления 1.  
+     Проект, созданный с помощью более ранней версии Visual Studio и [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] необходимо обновить для использования с пакетом обновления 1 для Visual Studio 2008 и [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] начиная с версии 3.5 с пакетом обновления 1.  
   
 2.  Определение моделей и сопоставлений.  
   

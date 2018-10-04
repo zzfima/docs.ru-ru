@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 93cc0cf34d2bba23ff0938c8c13d7343d665192d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a809dbc34d08fc864f6cfe8263489ab52ce41e35
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649228"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580749"
 ---
 # <a name="adonet-code-examples"></a>Примеры кода ADO.NET
 В листингах кода, приведенных в данном разделе, демонстрируется извлечение данных из базы данных с помощью следующих технологий ADO.NET.
@@ -66,7 +66,7 @@ ms.locfileid: "45649228"
 В приведенных ниже листингах кода демонстрируется извлечение данных из источника данных путем выполнения запросов к сущностям модели EDM. В этих примерах используется [модель Northwind](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638). Дополнительные сведения см. в разделе [Обзор Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
-В данном примере кода запрос LINQ используется для возврата данных в виде объектов Categories, которые проецируются в анонимный тип, содержащий только свойства CategoryID и CategoryName. Дополнительные сведения см. в разделе [LINQ to Entities Обзор](https://msdn.microsoft.com/86d87a27-c17a-45ac-b28d-72c8500333c6).
+В данном примере кода запрос LINQ используется для возврата данных в виде объектов Categories, которые проецируются в анонимный тип, содержащий только свойства CategoryID и CategoryName. Дополнительные сведения см. в разделе [LINQ to Entities Обзор](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
 ```csharp
 using System;

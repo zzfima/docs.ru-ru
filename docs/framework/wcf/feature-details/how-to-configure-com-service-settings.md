@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
 ms.openlocfilehash: d14fd1434cb87dc62babeabb79cb780e568aacb7
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032768"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48581845"
 ---
 # <a name="how-to-configure-com-service-settings"></a>Практическое руководство. Настройка параметров службы COM+
 Если интерфейс приложения добавляется или удаляется с использованием средства конфигурации служб COM+, конфигурация веб-службы обновляется в файле конфигурации приложения. В режиме размещенного в COM + файл Application.config помещается в корневом каталоге приложения (приложения %PROGRAMFILES%\ComPlus\\{appid} значение по умолчанию). В обоих режимах размещения на веб-сервере файл Web.config помещается в заданный виртуальный корневой каталог.  

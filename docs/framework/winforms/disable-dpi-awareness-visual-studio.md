@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 7ecffedbe536f293945227d817e507f012816737
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3b290b67ca97065dfc408c09850cf0b5720d65ae
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037045"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263510"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>Отключение поддержки определения DPI в Visual Studio
 
@@ -68,6 +68,10 @@ Visual Studio можно пометить как не поддерживающи
 Для применения вашего экрана, масштабирование параметр до 100% в Windows 10 введите **параметры отображения** в панели поиска, а затем выберите задач **изменению параметров отображения**. В **параметры** окне **изменить размер текста, приложений и других элементов** для **100%**.
 
 Настройка вашего экрана, масштабирование до 100% может быть нежелательно, так как он может сделать пользовательский интерфейс слишком мал, чтобы можно было использовать.
+
+## <a name="troubleshoot"></a>Устранение неполадок
+
+Если поддержка DPI перехода не работает должным образом в Visual Studio, проверьте наличие `dpiAwareness` значение в **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image файл выполнения Options\devenv.exe**  подразделов в редакторе реестра. Удалите значение, если он имеется.
 
 ## <a name="see-also"></a>См. также
 

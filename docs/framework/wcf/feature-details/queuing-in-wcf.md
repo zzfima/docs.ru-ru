@@ -3,11 +3,11 @@ title: Очереди в WCF
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
 ms.openlocfilehash: f04055df2c6d4b0a51b36040a5b377bb8738c534
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204161"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48266628"
 ---
 # <a name="queuing-in-wcf"></a>Очереди в WCF
 В этом разделе описывается использование взаимодействия с использованием очередей в Windows Communication Foundation (WCF).  

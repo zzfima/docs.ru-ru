@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 773708eab617e7f4cfdffad2e5019e66c60ebf37
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 7128b23790588a604989cb18918a7a7e8b598191
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43787068"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584226"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Пошаговое руководство. Привязка к данным в гибридных приложениях
 Привязка источника данных к элементу управления необходима для предоставления пользователям доступа к базовым данным независимо от используемой [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] или [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. В этом пошаговом руководстве показано, как можно использовать привязку данных в гибридных приложениях, которые включают [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] и [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] элементов управления.  
@@ -41,7 +41,7 @@ ms.locfileid: "43787068"
 ## <a name="prerequisites"></a>Предварительные требования  
  Ниже приведены компоненты, необходимые для выполнения данного пошагового руководства.  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+-   Visual Studio.  
   
 -   Доступ к базе данных Northwind на сервере Microsoft SQL Server.  
   
@@ -140,34 +140,34 @@ ms.locfileid: "43787068"
      Этот код объявляет <xref:System.Windows.Forms.BindingSource> компонента и связывает вспомогательные классы, которые подключаются к базе данных.  
   
      [!code-csharp[WPFWithWFAndDatabinding#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
-     [!code-vb[WPFWithWFAndDatabinding#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]  
-  
-3.  Копируйте в конструктор следующий код.  
-  
-     Этот код создает и инициализирует <xref:System.Windows.Forms.BindingSource> компонента.  
-  
+     [!code-vb[WPFWithWFAndDatabinding#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
+
+3.  Копируйте в конструктор следующий код.
+
+     Этот код создает и инициализирует <xref:System.Windows.Forms.BindingSource> компонента.
+
      [!code-csharp[WPFWithWFAndDatabinding#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
-     [!code-vb[WPFWithWFAndDatabinding#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]  
-  
-4.  Откройте файл MainWindow.xaml.  
-  
-5.  В представлении конструирования или XAML, выберите <xref:System.Windows.Window> элемент.  
-  
-6.  В окне «Свойства» щелкните **события** вкладки.  
-  
-7.  Дважды щелкните <xref:System.Windows.FrameworkElement.Loaded> событий.  
-  
-8.  Скопируйте следующий код в <xref:System.Windows.FrameworkElement.Loaded> обработчик событий.  
-  
-     Этот код присваивает <xref:System.Windows.Forms.BindingSource> компонент в качестве контекста данных и заполняет `Customers` и `Orders` объекты адаптера.  
-  
+     [!code-vb[WPFWithWFAndDatabinding#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
+
+4.  Откройте файл MainWindow.xaml.
+
+5.  В представлении конструирования или XAML, выберите <xref:System.Windows.Window> элемент.
+
+6.  В окне «Свойства» щелкните **события** вкладки.
+
+7.  Дважды щелкните <xref:System.Windows.FrameworkElement.Loaded> событий.
+
+8.  Скопируйте следующий код в <xref:System.Windows.FrameworkElement.Loaded> обработчик событий.
+
+     Этот код присваивает <xref:System.Windows.Forms.BindingSource> компонент в качестве контекста данных и заполняет `Customers` и `Orders` объекты адаптера.
+
      [!code-csharp[WPFWithWFAndDatabinding#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
-     [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]  
-  
-9. Скопируйте следующий код в `MainWindow` определение класса.  
-  
-     Этот метод обрабатывает <xref:System.Windows.Data.CollectionView.CurrentChanged> событий и обновляет текущий элемент привязки данных.  
-  
+     [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]
+
+9. Скопируйте следующий код в `MainWindow` определение класса.
+
+     Этот метод обрабатывает <xref:System.Windows.Data.CollectionView.CurrentChanged> событий и обновляет текущий элемент привязки данных.
+
      [!code-csharp[WPFWithWFAndDatabinding#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
      [!code-vb[WPFWithWFAndDatabinding#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
   

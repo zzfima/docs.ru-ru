@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: b900b85b4e3e56dbc587a15edea40f6e3032cbd1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 59b21bf9bbe3e78a1ac8cedd3812863cbcae7382
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004501"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582584"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Основы разработки приложений Windows Forms (Visual Basic)
 Важной частью Visual Basic является возможность создания приложений Windows Forms, локально работающих на компьютерах пользователей. Чтобы создать приложение и пользовательский интерфейс, с помощью Windows Forms можно использовать Visual Studio. В приложении Windows Forms основано на классах из <xref:System.Windows.Forms> пространства имен.  
@@ -54,7 +54,7 @@ ms.locfileid: "46004501"
 ## <a name="displaying-and-manipulating-data"></a>Отображение и обработка данных  
  Во многих приложениях нужно отображать данные из базы данных, XML-файла, веб-службы XML или другого источника данных. Windows Forms предоставляет гибкий элемент управления называется <xref:System.Windows.Forms.DataGridView> , предназначенный для представления таких табличных данных в традиционном формате строк и столбцов так, что каждый фрагмент данных занимает свою собственную ячейку. С помощью <xref:System.Windows.Forms.DataGridView> можно настроить внешний вид отдельных ячеек, зафиксировать строки и столбцы на своем месте и отображение сложных элементов управления внутри ячеек, помимо других функций.  
   
- При использовании интеллектуальных клиентов Windows Forms можно легко подключаться к источникам данных по сети. Компонент Windows Forms <xref:System.Windows.Forms.BindingSource>, появившийся в [!INCLUDE[vsprvslong](~/includes/vsprvslong-md.md)] и [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], представляет подключение к источнику данных и содержит методы для привязки данных к элементам управления, перехода к предыдущей или следующей записи, редактирования записей и сохранения изменений в исходном источнике. Элемент управления <xref:System.Windows.Forms.BindingNavigator> предоставляет простой интерфейс на основе компонента <xref:System.Windows.Forms.BindingSource> для перехода между записями.  
+ При использовании интеллектуальных клиентов Windows Forms можно легко подключаться к источникам данных по сети. <xref:System.Windows.Forms.BindingSource> Компонент, появившееся в Windows Forms в Visual Studio 2005 и [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)], представляет подключение к источнику данных и предоставляет методы для привязки данных к элементам управления, перехода к предыдущей или следующей записи, редактирования записей и сохранения изменения в исходном источнике. Элемент управления <xref:System.Windows.Forms.BindingNavigator> предоставляет простой интерфейс на основе компонента <xref:System.Windows.Forms.BindingSource> для перехода между записями.  
   
 ### <a name="data-bound-controls"></a>Элементы управления с привязкой данных  
  Можно создать элементы управления с привязкой данных с помощью окна источников данных, которая отображает источников данных, таких как базы данных, веб-служб и объектов в проекте. Создавать элементы управления с привязкой к данным можно путем перетаскивания объектов из этого окна в формы проекта. Также можно связывать существующие элементы управления с данными, перетаскивая объекты из окна "Источники данных" в существующие элементы управления.  

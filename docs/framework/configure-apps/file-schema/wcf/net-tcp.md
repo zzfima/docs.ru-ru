@@ -2,12 +2,12 @@
 title: '&lt;NET.TCP&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
-ms.openlocfilehash: ae6837bf6dc8167e165a3adcd1fca8abc3dcd396
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c67aeca183eb476460fa0be2c6dcd9c6077165d8
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500815"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48579347"
 ---
 # <a name="ltnettcpgt"></a>&lt;NET.TCP&gt;
 Задает параметры конфигурации для службы общего доступа к портам Net.Tcp, которая позволяет нескольким процессам совместно использовать один и тот же порт протокола TCP.  
@@ -71,9 +71,9 @@ ms.locfileid: "43500815"
 |[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|Содержит параметры конфигурации для процесса прослушивателя SMSvcHost.exe.|  
   
 ## <a name="remarks"></a>Примечания  
- Дополнительные сведения о совместное использование порта, см. в разделе [совместного использования портов Net.TCP](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded). Чтобы понять, как настроить службы совместного использования портов, см. в разделе [Настройка службы совместного использования портов Net.TCP](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0).  
+ Дополнительные сведения о совместное использование порта, см. в разделе [совместного использования портов Net.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md). Чтобы понять, как настроить службы совместного использования портов, см. в разделе [Настройка службы совместного использования портов Net.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Совместное использование портов Net.TCP](https://msdn.microsoft.com/library/f13692ee-a179-4439-ae72-50db9534eded)  
- [Настройка службы совместного использования портов Net.TCP](https://msdn.microsoft.com/library/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)
+ [Совместное использование портов Net.TCP](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)  
+ [Настройка службы совместного использования портов Net.TCP](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)

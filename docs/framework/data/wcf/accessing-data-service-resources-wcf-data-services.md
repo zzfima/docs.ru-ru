@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
 ms.openlocfilehash: d4f4de1fa12418bd56f9680e5414bfe7dd0aa128
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47210088"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48263327"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Доступ к ресурсам служб данных (службы данных WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] поддерживает [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] для предоставления данных в виде канала с ресурсами, которые можно обращаться по URI. Эти ресурсы представлены в рамках соглашений о связях сущностей из [модели EDM](../../../../docs/framework/data/adonet/entity-data-model.md). Сущности в этой модели представляют операционные единицы данных, которые являются типами данных в домене приложений, такими как клиенты, заказы, элементы и продукты. Это позволяет обращаться к данным сущности и изменять их с использованием семантики REST, в частности стандартных команд HTTP, таких как GET, PUT, POST и DELETE.  

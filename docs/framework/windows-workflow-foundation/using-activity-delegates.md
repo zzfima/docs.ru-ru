@@ -2,12 +2,12 @@
 title: Использование делегатов действий
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-ms.openlocfilehash: bb23f6a79b6f2390952f9aadc1cf08099acb289b
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7ed4032f8f8070648f8a2f0fcfb386101740f1ad
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43489933"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48580892"
 ---
 # <a name="using-activity-delegates"></a>Использование делегатов действий
 Делегаты действий позволяют создателям действий предоставлять обратные вызовы с определенными сигнатурами, для которых пользователи действия могут предоставить обработчики, основанные на действиях. Доступны два типа делегатов действия: <xref:System.Activities.ActivityAction%601> используется для определения делегатов действий, которые не возвращают значение, а <xref:System.Activities.ActivityFunc%601> используется для определения делегатов действий, которые возвращают значение.  
@@ -54,7 +54,4 @@ ms.locfileid: "43489933"
   
  Чтобы использовать действие `TextGenerator` с действием `WriteFillerText`, задайте его в виде <xref:System.Activities.ActivityDelegate.Handler%2A>.  
   
- [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
-  
-## <a name="see-also"></a>См. также  
- [Предоставление и вызов действий ActivityActions](../../../docs/framework/windows-workflow-foundation/samples/exposing-and-invoking-activityactions.md)
+ [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]
