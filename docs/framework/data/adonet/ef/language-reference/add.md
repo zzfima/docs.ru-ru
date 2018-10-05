@@ -31,7 +31,7 @@ expression + expression
 ## <a name="example"></a>Пример  
  В следующем запросе Entity SQL арифметический оператор сложения (+) используется для сложения двух чисел. Запрос основан на модели AdventureWorks Sales. Для компиляции и запуска этого запроса выполните следующие шаги.  
   
-1.  Выполните процедуру из статьи [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
+1.  Выполните процедуру из статьи [Практическое руководство. Выполнение запроса, возвращающего результаты StructuralType](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).  
   
 2.  Передайте следующий запрос в качестве аргумента методу `ExecuteStructuralTypeQuery` :  
   

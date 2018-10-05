@@ -111,7 +111,7 @@ ms.locfileid: "48261515"
      Дополнительные сведения о вариантах развертывания для [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] приложения, см. в разделе [Обзор веб-развертывания для Visual Studio и ASP.NET](https://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).
 
     > [!TIP]
-    > Прежде чем пытаться выполнить развертывание службы данных в IIS, обязательно протестируйте развертывание на веб-сервере, где работают службы IIS. Для получения дополнительной информации см. [How to: Develop a WCF Data Service Running on IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
+    > Прежде чем пытаться выполнить развертывание службы данных в IIS, обязательно протестируйте развертывание на веб-сервере, где работают службы IIS. Для получения дополнительной информации см. [Практическое руководство. Разработка службы данных WCF Data Service, работающей на IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).
 
 -   **Microsoft Azure**
 

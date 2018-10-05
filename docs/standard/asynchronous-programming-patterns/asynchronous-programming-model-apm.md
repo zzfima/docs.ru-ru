@@ -57,13 +57,13 @@ ms.locfileid: "45698391"
   
 -   Вызов метода **End***Имя_операции* из главного потока приложения блокирует выполнение приложения до завершения операции. Пример с демонстрацией этого способа см. в статье [Блокировка выполнения приложения путем завершения асинхронной операции](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md).  
   
--   Используйте свойство <xref:System.IAsyncResult.AsyncWaitHandle%2A> , чтобы заблокировать выполнение приложения до завершения одной или нескольких операций. Пример, демонстрирующий этот способ, см. в разделе [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
+-   Используйте свойство <xref:System.IAsyncResult.AsyncWaitHandle%2A> , чтобы заблокировать выполнение приложения до завершения одной или нескольких операций. Пример, демонстрирующий этот способ, см. в разделе [Блокировка выполнения приложения с помощью AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).  
   
  В приложениях, которые не нужно блокировать до завершения асинхронной операции, можно использовать один из описанных ниже способов.  
   
--   Запрашивайте состояние выполнения операции, периодически проверяя свойство <xref:System.IAsyncResult.IsCompleted%2A>, и вызовите метод **End***Имя_операции*, когда операция будет завершена. Пример, демонстрирующий этот способ, см. в разделе [Polling for the Status of an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
+-   Запрашивайте состояние выполнения операции, периодически проверяя свойство <xref:System.IAsyncResult.IsCompleted%2A>, и вызовите метод **End***Имя_операции*, когда операция будет завершена. Пример, демонстрирующий этот способ, см. в разделе [Запрос состояния асинхронной операции](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md).  
   
--   Используйте делегат <xref:System.AsyncCallback> для указания метода, который должен вызываться при завершении операции. Пример, демонстрирующий этот способ, см. в разделе [Using an AsyncCallback Delegate to End an Asynchronous Operation](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
+-   Используйте делегат <xref:System.AsyncCallback> для указания метода, который должен вызываться при завершении операции. Пример, демонстрирующий этот способ, см. в разделе [Использование делегата AsyncCallback для завершения асинхронной операции](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md).  
   
 ## <a name="see-also"></a>См. также
 
