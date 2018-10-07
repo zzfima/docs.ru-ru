@@ -2,12 +2,12 @@
 title: Инструкции по установке сертификата сервера в службах IIS
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: 46d1acf758dd50b881527a16570a1e4a45933958
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ae1f90a68acc4b1217c46a6570031a88e60c6e88
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33502609"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838252"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Инструкции по установке сертификата сервера в службах IIS
 Чтобы запускать примеры, которые безопасным образом взаимодействуют со службами IIS, необходимо создать и установить сертификат сервера.  
@@ -26,7 +26,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
 1.  Откройте оснастку консоли MMC диспетчера служб IIS.  
   
-2.  Щелкните правой кнопкой мыши веб-узел по умолчанию и выберите **свойства**.  
+2.  Щелкните правой кнопкой мыши веб-сайта по умолчанию и выберите **свойства**.  
   
 3.  Выберите **Безопасность каталога** вкладки.  
   
@@ -36,7 +36,7 @@ makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exc
   
      ![Мастер сертификатов IIS](../../../../docs/framework/wcf/samples/media/iiscertificate-wizard.GIF "IISCertificate_Wizard")  
   
-6.  Протестируйте доступ к службе в браузере с помощью HTTPS-адрес https://localhost/servicemodelsamples/service.svc.  
+6.  Тестирование доступа к службе в браузере с помощью HTTPS-адрес `https://localhost/servicemodelsamples/service.svc`.  
   
 #### <a name="if-ssl-was-previously-configured-by-using-httpcfgexe"></a>Если до этого был настроен протокол SSL с помощью Httpcfg.exe  
   
@@ -57,15 +57,15 @@ PermissiveCertificatePolicy.Enact("CN=ServiceModelSamples-HTTPS-Server");
   
 1.  Из **запустить** меню, нажмите кнопку **запуска**, затем введите **inetmgr** чтобы открыть оснастку MMC Internet Information Services (IIS).  
   
-2.  Щелкните правой кнопкой мыши **веб-сайт по умолчанию** и выберите **изменить привязки...**  
+2.  Щелкните правой кнопкой мыши **Default Web Site** и выберите **изменить привязки...**  
   
 3.  Нажмите кнопку **добавить** кнопки **привязки сайта** диалоговое окно.  
   
-4.  Выберите **HTTPS** из **тип** раскрывающегося списка.  
+4.  Выберите **HTTPS** из **тип** стрелку раскрывающегося списка.  
   
-5.  Выберите **ServiceModelSamples-HTTPS-Server** из **SSL-сертификат** раскрывающегося списка и нажмите кнопку **ОК**.  
+5.  Выберите **ServiceModelSamples-HTTPS-Server** из **SSL-сертификат** стрелку раскрывающегося списка и нажмите кнопку **ОК**.  
   
-6.  Протестируйте доступ к службе в браузере с помощью HTTPS-адрес https://localhost/servicemodelsamples/service.svc.  
+6.  Тестирование доступа к службе в браузере с помощью HTTPS-адрес `https://localhost/servicemodelsamples/service.svc`.  
   
 > [!NOTE]
 >  Поскольку только что установленный тестовый сертификат не является доверенным сертификатом, при переходе по локальным веб-адресам, защищенным с помощью этого сертификата, могут появиться дополнительные предупреждения системы безопасности Internet Explorer.  

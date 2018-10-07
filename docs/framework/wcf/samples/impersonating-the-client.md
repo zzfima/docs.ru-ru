@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 5a13ab73e48616b38e583b1c9948fc1bf5eb8a64
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 29ed1f988819a47d8ac8845a379aeda5e15c655e
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522292"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844297"
 ---
 # <a name="impersonating-the-client"></a>Олицетворение клиента
 Пример олицетворения демонстрирует, как олицетворять приложение абонента в службе таким образом, чтобы служба могла получить доступ к ресурсам системы от лица абонента.  
@@ -102,7 +102,7 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  При запуске данного примера запросы и ответы операций отображаются в окнах консоли как службы, так и клиента. Нажмите клавишу ВВОД в каждом окне консоли, чтобы закрыть службу и клиент.  
   
 > [!NOTE]
->  Службы необходимо запустить с учетной записью администратора или учетной записи, он запускается под должна иметь права для регистрации http://localhost:8000/ServiceModelSamples URI с уровнем HTTP. Такие права могут быть предоставлены, настроив [резервирование пространства имен](https://go.microsoft.com/fwlink/?LinkId=95012) с помощью [средства Httpcfg.exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
+>  Службы необходимо запустить с учетной записью администратора или учетной записи, он запускается под должна иметь права для регистрации `http://localhost:8000/ServiceModelSamples` URI с уровнем HTTP. Такие права могут быть предоставлены, настроив [резервирование пространства имен](https://go.microsoft.com/fwlink/?LinkId=95012) с помощью [средства Httpcfg.exe](https://go.microsoft.com/fwlink/?LinkId=95010).  
   
 > [!NOTE]
 >  На компьютерах с [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] олицетворение поддерживается, только если приложение Host.exe имеет привилегию олицетворения. (По умолчанию эту привилегию имеют только администраторы). Чтобы добавить данное право доступа к учетной записи, работает под управлением службы, перейдите к **Администрирование**откройте **Локальная политика безопасности**откройте **локальные политики**, нажмите кнопку **Назначение прав пользователя**и выберите **олицетворение клиента после проверки подлинности** и дважды щелкните **свойства** для добавления пользователя или группы.  

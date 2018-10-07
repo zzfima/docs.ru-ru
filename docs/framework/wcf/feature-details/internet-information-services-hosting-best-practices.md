@@ -2,12 +2,12 @@
 title: Рекомендации по размещению в службах IIS
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: 0ca5e20b846a1b10f5a52748ff06a4af958b2f4c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 2cb193cd2f504b5010ede6887e814e0c4d0a1a3c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073597"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840749"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>Рекомендации по размещению в службах IIS
 В этом разделе описаны некоторые рекомендации для размещения служб Windows Communication Foundation (WCF).  
@@ -33,7 +33,7 @@ ms.locfileid: "47073597"
  Увеличение производительности в сценариях среднего уровня обеспечивается также благодаря использованию асинхронных интерфейсов API, создаваемых параметром `svcutil /a`. `/a` Предписывает [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания `BeginXXX/EndXXX` методы для каждой операции службы, которая позволяет потенциально долго действующие вызовы удаленных служб в фоновые потоки.  
   
 ## <a name="wcf-in-multi-homed-or-multi-named-scenarios"></a>WCF в многосетевых сценариях и сценариях со многими именами  
- Вы можете развертывать службы WCF внутри веб-фермы IIS, где ряд компьютеров совместно используют общее имя внешнего (такие как http://www.contoso.com) , но реализуются по отдельности разные имена узлов (например, http://www.contoso.com может направлять трафик на два разных компьютера с именем http://machine1.internal.contoso.com и http://machine2.internal.contoso.com). В этом сценарии развертывания, полностью совместима с WCF, но требуется специальная конфигурация веб-узла IIS размещение служб WCF для отображения правильного имени узла (внешний) в метаданных службы (Web Services Description Language).  
+ Вы можете развертывать службы WCF внутри веб-фермы IIS, где ряд компьютеров совместно используют общее имя внешнего (такие как `http://www.contoso.com`), но реализуются по отдельности разные имена узлов (например, `http://www.contoso.com` может направлять трафик на два разных компьютера с именем `http://machine1.internal.contoso.com` и `http://machine2.internal.contoso.com`). В этом сценарии развертывания, полностью совместима с WCF, но требуется специальная конфигурация веб-узла IIS размещение служб WCF для отображения правильного имени узла (внешний) в метаданных службы (Web Services Description Language).  
   
  Чтобы убедиться, что правильное имя узла отображается в метаданных службы WCF приводит к возникновению ошибки, настройте идентификацию по умолчанию для веб-узла IIS, где размещены службы WCF для использования явно заданного имени узла. Например, компьютеров, которые находятся в ферме www.contoso.com следует использовать привязку узла IIS из *: 80: www.contoso.com для HTTP и \*: 443:www.contoso.com для использования протокола HTTPS.  
   

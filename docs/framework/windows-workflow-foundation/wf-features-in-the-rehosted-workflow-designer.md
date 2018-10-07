@@ -3,11 +3,11 @@ title: Поддержка новых возможностей Workflow Foundatio
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
 ms.openlocfilehash: c6f6c6baedba0c932472a087d378ccce90b60db7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266736"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836989"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Поддержка новых возможностей Workflow Foundation 4.5 во вновь размещенном конструкторе рабочих процессов
 Windows Workflow Foundation (WF) в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] появилось множество новых возможностей, в том числе некоторые улучшения работы конструктора рабочих процессов. В этом разделе подробно описываются те возможности, которые поддерживаются в повторно размещенном конструкторе, и те, которые в настоящее время не поддерживаются.

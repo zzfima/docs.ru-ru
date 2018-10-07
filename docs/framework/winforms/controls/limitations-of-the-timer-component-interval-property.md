@@ -7,12 +7,12 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: e5b9e7e43369913f0cdc9c7f2111bd4fe58675e6
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 9710568c3c21878aa6aad626e3152168a2f0c2fe
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43465659"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836398"
 ---
 # <a name="limitations-of-the-windows-forms-timer-component39s-interval-property"></a>Ограничения компонента Timer в Windows Forms&#39;свойства Interval s
 Windows Forms <xref:System.Windows.Forms.Timer> компонент имеет <xref:System.Windows.Forms.Timer.Interval%2A> свойство, которое указывает количество миллисекунд, которые проходят между событие одного таймера, а также следующие. Если компонент отключен, таймер для получения <xref:System.Windows.Forms.Timer.Tick> событий через приблизительно равные интервалы времени.  
@@ -26,7 +26,7 @@ Windows Forms <xref:System.Windows.Forms.Timer> компонент имеет <x
   
 -   Интервал истечет точно вовремя не гарантируется. Для обеспечения точности, таймер следует проверить системные часы, при необходимости, а не повторите для отслеживания накопленные временные внутренним образом.  
   
--   Точность <xref:System.Windows.Forms.Timer.Interval%2A> свойство указывается в миллисекундах. Некоторые компьютеры имеют счетчик высокого разрешения, более высокую точность разрешение. Доступность такого счетчика зависит от оборудования процессора компьютера. Дополнительные сведения см. в статье 172338 «Как для использования QueryPerformanceCounter для кода,» в базе знаний Майкрософт в http://support.microsoft.com.  
+-   Точность <xref:System.Windows.Forms.Timer.Interval%2A> свойство указывается в миллисекундах. Некоторые компьютеры имеют счетчик высокого разрешения, более высокую точность разрешение. Доступность такого счетчика зависит от оборудования процессора компьютера.
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Forms.Timer>  

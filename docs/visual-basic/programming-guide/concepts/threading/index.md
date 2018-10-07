@@ -2,12 +2,12 @@
 title: Работа с потоками (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
-ms.openlocfilehash: f477a36c6ffa0b5a809c8ba899b21d19a8c9a2d8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 366c88db5d229120b1e626f275b4eeb8ecd42dba
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861950"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845000"
 ---
 # <a name="threading-visual-basic"></a>Работа с потоками (Visual Basic)
 Потоки позволяют программе на Visual Basic осуществлять параллельную обработку, то есть вы можете выполнять несколько операций одновременно. Например, потоки можно использовать для отслеживания пользовательского ввода, выполнения фоновых задач и одновременной обработки нескольких потоков ввода.  
@@ -35,7 +35,6 @@ ms.locfileid: "43861950"
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
-|[Синхронизация потоков (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-synchronization.md)|Описание управления взаимодействием потоков.|  
 |[Работа с потоками](../../../../standard/threading/index.md)|Описание реализации работы с потоками на платформе .NET Framework.|

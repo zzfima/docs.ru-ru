@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
 ms.openlocfilehash: 66596bbc7171a33318b835a552b7fb364d6833f7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580409"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838550"
 ---
 # <a name="ltwsfederationgt"></a>&lt;wsFederation&gt;
 Предоставляет конфигурацию для <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM).  
@@ -48,7 +48,7 @@ ms.locfileid: "48580409"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |authenticationType|URI, указывающий тип проверки подлинности. Задает параметр wauth запроса входа запроса WS-Federation. Необязательный. Значение по умолчанию является пустой строкой, который указывает, что параметр wauth не включен в запрос.|  
 |актуальность|Требуемая Максимальная длительность запросов аутентификации в минутах. Задает параметр wfresh запроса входа запроса WS-Federation. Необязательный. По умолчанию используется значение ноль. Необязательный. **Предупреждение:** в следующем выпуске платформы .NET Framework 4.5 `freshness` атрибут будет иметь тип `xs:string` и его значение по умолчанию будет `null`.|  
@@ -72,7 +72,7 @@ ms.locfileid: "48580409"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|Содержит параметры, определяющие <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) и <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
   

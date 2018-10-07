@@ -1,16 +1,16 @@
 ---
-title: 'Основное взаимодействие: Каналы транспорта HTTP-HTTPS'
+title: 'Core взаимодействие: Транспортные каналы HTTP-HTTPS'
 ms.date: 03/30/2017
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
-ms.openlocfilehash: fbdb5b350425aad7108402dec939f036e971d053
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c4a2537ae615943ffac299a8c8cd00c67094360
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33473331"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48844193"
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>Основное взаимодействие: транспортные каналы HTTP/HTTPS
-В этом разделе перечислены все исключения, вызываемые каналами HTTP или HTTPS транспорт Windows Communication Foundation (WCF).  
+В этом разделе перечислены все исключения, вызываемые каналами транспорта и HTTP Windows Communication Foundation (WCF).  
   
 ## <a name="exception-list"></a>Список исключений  
   
@@ -21,7 +21,7 @@ ms.locfileid: "33473331"
 |Hosting_SslSettingsMisconfigured|Параметры SSL заданной службы не соответствуют одноименным параметрам IIS.|  
 |HttpAuthSchemeAndClientCert|Фабрика прослушивателя HTTPS настроена на запрос сертификата клиента и указанной схемы проверки подлинности. Однако единовременно можно запросить только один тип проверки подлинности.|  
 |HttpReceiveFailure|При получении HTTP-ответа заданным объектом возникла ошибка. Привязка конечной точки службы, возможно, не использует протокол HTTP. Также возможно, что контекст HTTP-запроса был завершен сервером вследствие завершения работы службы. Дополнительные сведения см. в журналах сервера.|  
-|HttpRegistrationAccessDenied|HTTP не удается зарегистрировать указанный URL-адрес. Процесс имеет права доступа к этому пространству имен (в разделе http://msdn.microsoft.com/library/default.asp?url=/library/http/http/namespace_reservations_registrations_and_routing.asp подробные сведения).|  
+|HttpRegistrationAccessDenied|HTTP не удается зарегистрировать указанный URL-адрес. Ваш процесс не имеет прав доступа к этому пространству имен (см. в разделе [резервирование пространства имен, регистрация и маршрутизация](/windows/desktop/http/namespace-reservations-registrations-and-routing) сведения).|  
 |HttpRegistrationAlreadyExists|HTTP не удается зарегистрировать указанный URL-адрес. Другое приложение уже зарегистрировало данный URL-адрес в HTTP.SYS.|  
 |HttpRegistrationPortInUse|HTTP не удается зарегистрировать указанный URL-адрес - указанный TCP-порт используется другим приложением.|  
 |HttpSendFailure|При выполнении HTTP-запроса для заданного объекта возникла ошибка. Убедитесь, что причиной не является несоответствие привязок безопасности. Также убедитесь, что служба не настроена для SSL.|  

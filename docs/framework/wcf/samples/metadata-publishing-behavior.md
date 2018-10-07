@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, metadata publishing sample
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
-ms.openlocfilehash: c3e26454cc9b29620d80a86df7d7aee131e18200
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b728d1c5a794fa6e0cadef136050d8fa31fb4afe
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197101"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838797"
 ---
 # <a name="metadata-publishing-behavior"></a>Поведение публикации метаданных
 Образец поведения публикации метаданных демонстрирует, как управлять возможностями публикации метаданных службы. Чтобы предотвратить непреднамеренное разглашение потенциально важных метаданных службы, конфигурация по умолчанию для служб Windows Communication Foundation (WCF) отключает публикацию метаданных. Такое расширение функциональности по умолчанию защищено, но это также означает, что при этом невозможно использовать средство импорта метаданных (например, Svcutil.exe) для создания клиентского кода, необходимого для вызова службы, если поведение публикации не включено явно в конфигурации.  
@@ -23,7 +23,7 @@ ms.locfileid: "47197101"
 > [!NOTE]
 >  Процедура настройки и инструкции по построению для данного образца приведены в конце этого раздела.  
   
- Чтобы отобразить метаданные для службы, параметр <xref:System.ServiceModel.Description.ServiceMetadataBehavior> должен быть сконфигурирован в службе. При наличии такого поведения можно публиковать метаданные, конфигурируя конечную точку для предоставления контракта <xref:System.ServiceModel.Description.IMetadataExchange> как реализации протокола WS-MetadataExchange (MEX). Для удобства этому контракту присвоено сокращенное имя конфигурации "IMetadataExchange". В этом образце используется привязка `mexHttpBinding`, являющаяся удобной стандартной привязкой, эквивалентной `wsHttpBinding` с режимом безопасности, которому присвоено значение `None`. Относительный адрес «MEX» используется в конечной точке, которая при разрешении относительно служб базового адреса приводит к созданию адреса конечной точки http://localhost/servicemodelsamples/service.svc/mex. Ниже приводится конфигурация поведения:  
+ Чтобы отобразить метаданные для службы, параметр <xref:System.ServiceModel.Description.ServiceMetadataBehavior> должен быть сконфигурирован в службе. При наличии такого поведения можно публиковать метаданные, конфигурируя конечную точку для предоставления контракта <xref:System.ServiceModel.Description.IMetadataExchange> как реализации протокола WS-MetadataExchange (MEX). Для удобства этому контракту присвоено сокращенное имя конфигурации "IMetadataExchange". В этом образце используется привязка `mexHttpBinding`, являющаяся удобной стандартной привязкой, эквивалентной `wsHttpBinding` с режимом безопасности, которому присвоено значение `None`. Относительный адрес «MEX» используется в конечной точке, которая при разрешении относительно служб базового адреса приводит к созданию адреса конечной точки `http://localhost/servicemodelsamples/service.svc/mex`. Ниже приводится конфигурация поведения:  
   
 ```xml  
 <behaviors>  
@@ -55,7 +55,7 @@ ms.locfileid: "47197101"
           contract="IMetadataExchange" />  
 ```  
   
- Этот образец присваивает свойству <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> логическое значение `true`, а также предоставляет метаданные службы, используя HTTP GET. Чтобы включить конечную точку метаданных HTTP GET, службе должен быть присвоен базовый HTTP-адрес. Для доступа к метаданным используется строка запроса `?wsdl` для базового адреса службы. К примеру, чтобы увидеть WSDL для службы в веб-браузере используется адрес http://localhost/servicemodelsamples/service.svc?wsdl. Кроме того, можно использовать это поведение, чтобы предоставить метаданные по протоколу HTTPS, присваивая свойству <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> логическое значение `true`. Это потребует наличия базового HTTPS-адреса.  
+ Этот образец присваивает свойству <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> логическое значение `true`, а также предоставляет метаданные службы, используя HTTP GET. Чтобы включить конечную точку метаданных HTTP GET, службе должен быть присвоен базовый HTTP-адрес. Для доступа к метаданным используется строка запроса `?wsdl` для базового адреса службы. К примеру, чтобы увидеть WSDL для службы в веб-браузере используется адрес `http://localhost/servicemodelsamples/service.svc?wsdl`. Кроме того, можно использовать это поведение, чтобы предоставить метаданные по протоколу HTTPS, присваивая свойству <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A> логическое значение `true`. Это потребует наличия базового HTTPS-адреса.  
   
  Для доступа к использования конечной точки MEX службы [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "47197101"
   
  Это позволит создать клиент, основанный на метаданных службы.  
   
- Для доступа к метаданных службы, с помощью HTTP GET, введите в браузере http://localhost/servicemodelsamples/service.svc?wsdl.  
+ Для доступа к метаданных службы, с помощью HTTP GET, введите в браузере `http://localhost/servicemodelsamples/service.svc?wsdl`.  
   
  При удалении этого поведения и попытке открыть службу будет получено исключение. Происходит ошибка, поскольку конечная точка, настроенная с контрактом `IMetadataExchange`, не имеет реализации при отсутствии поведения.  
   

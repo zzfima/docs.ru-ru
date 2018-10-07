@@ -2,15 +2,15 @@
 title: Интеграция с System.Web.Routing
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: 2df1ff8230cd79f61fdee971d783544054bd8196
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 3b95b3117941ce7d019b87b00181b2cbac652f43
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48782107"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48843855"
 ---
 # <a name="systemwebrouting-integration"></a>Интеграция с System.Web.Routing
-При размещении службы Windows Communication Foundation (WCF) в Internet Information Service (IIS), необходимо поместить SVC-файла в виртуальном каталоге. Этот SVC-файл указывает фабрику узла службы, которую необходимо использовать, а также класс, реализующий эту службу. При составлении запросов к службе указывается SVC-файла в URI, например: http://contoso.com/EmployeeServce.svc. Для разработчиков служб REST такой тип URI не является оптимальным. URI для служб REST указывают определенный ресурс и обычно не имеют модулей. <xref:System.Web.Routing> Компонент интеграции позволяет размещать службы WCF REST, которая отвечает на URI без расширения. Дополнительные сведения о маршрутизации см. в разделе [маршрутизация ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660).  
+При размещении службы Windows Communication Foundation (WCF) в Internet Information Service (IIS), необходимо поместить SVC-файла в виртуальном каталоге. Этот SVC-файл указывает фабрику узла службы, которую необходимо использовать, а также класс, реализующий эту службу. При составлении запросов к службе указывается SVC-файла в URI, например: `http://contoso.com/EmployeeServce.svc`. Для разработчиков служб REST такой тип URI не является оптимальным. URI для служб REST указывают определенный ресурс и обычно не имеют модулей. <xref:System.Web.Routing> Компонент интеграции позволяет размещать службы WCF REST, которая отвечает на URI без расширения. Дополнительные сведения о маршрутизации см. в разделе [маршрутизация ASP.NET](https://go.microsoft.com/fwlink/?LinkId=184660).  
   
 ## <a name="using-systemwebrouting-integration"></a>Использование интеграции System.Web.Routing  
  Для использования функции интеграции <xref:System.Web.Routing> с помощью класса <xref:System.ServiceModel.Activation.ServiceRoute> создайте один или несколько маршрутов и добавьте их в <xref:System.Web.Routing.RouteTable> в файле Global.asax. Это маршруты указывают относительные URI, по которым отвечает служба. Следующий пример показывает, как это сделать.  

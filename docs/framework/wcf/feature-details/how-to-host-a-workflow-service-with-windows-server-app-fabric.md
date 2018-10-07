@@ -2,19 +2,19 @@
 title: Как разместить службу рабочего процесса с помощью Windows Server App Fabric
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: d71052edaccd34bab7354c93431a260f41647f2b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2c1e4e8763ad9bd65099173c75d272965ac8caa8
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500034"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48840632"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Как разместить службу рабочего процесса с помощью Windows Server App Fabric
 Размещение служб рабочих процессов в фабрике приложений аналогично их размещению в виртуальном каталоге служб IIS/WAS. Разница состоит лишь в предоставлении фабрикой приложений средств для развертывания, наблюдения и управления службами рабочих процессов. В этом разделе используется служба рабочего процесса, созданная в [создания длительные службы рабочего процесса](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Указанный раздел содержит пошаговые инструкции по созданию службы рабочих процессов. В этом разделе объясняется, как разместить службу рабочих процессов с помощью фабрики приложений. Дополнительные сведения о Windows Server App Fabric, см. в разделе [Windows Server App Fabric документации](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Перед выполнением описанных далее шагов убедитесь, что фабрика приложений Windows Server уже установлена.  Для этого откройте диспетчер служб IIS (inetmgr.exe), щелкните имя сервера в **подключений** просмотра щелкните узлы и нажмите кнопку **веб-сайт по умолчанию**. В правой части экрана вы увидите раздел **App Fabric**. Если вы не видите этот раздел (он находится на верхней правой панели), значит фабрика приложений не установлена. Дополнительные сведения об установке Windows Server App Fabric см. в разделе [Установка Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136).  
   
 ### <a name="creating-a-simple-workflow-service"></a>Создание простой службы рабочих процессов  
   
-1.  Откройте [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] и загрузите решение OrderProcessing, созданное в [создания длительные службы рабочего процесса](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md) раздела.  
+1.  Откройте Visual Studio 2012 и загрузите решение OrderProcessing, созданное в [создания длительные службы рабочего процесса](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md) раздела.  
   
 2.  Щелкните правой кнопкой мыши **OrderService** проекта и выберите **свойства** и выберите **Web** вкладки.  
   

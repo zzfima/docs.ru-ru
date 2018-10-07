@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: dda11511904d452a3a5101417f8ab8a33c00204f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 74c3b825bbd51a082f20e8e2009e1ca5f0b35100
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857099"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837158"
 ---
 # <a name="getting-started-sample"></a>Пример для начала работы
 Пример начала показано, как реализовать типовую службу и типовой клиент с помощью Windows Communication Foundation (WCF). Этот образец является основой для всех остальных базовых образцов технологий.  
@@ -141,9 +141,9 @@ public class CalculatorService : ICalculator
   
  Служба предоставляет конечную точку по базовому адресу, который предоставляется узлом IIS или WAS. Привязка настраивается с использованием стандартного объекта <xref:System.ServiceModel.WSHttpBinding>, обеспечивающего взаимодействие по протоколу HTTP и стандартному протоколу веб-служб для адресации и безопасности. Контрактом является интерфейс `ICalculator`, реализуемый службой.  
   
- Настроенный таким образом, служба может осуществляться с http://localhost/servicemodelsamples/service.svc клиентом на одном компьютере. Чтобы к службе могли получить доступ клиенты на удаленных компьютерах, вместо имени localhost необходимо указать полное имя домена.  
+ Настроенный таким образом, служба может осуществляться с `http://localhost/servicemodelsamples/service.svc` клиентом на одном компьютере. Чтобы к службе могли получить доступ клиенты на удаленных компьютерах, вместо имени localhost необходимо указать полное имя домена.  
   
- По умолчанию платформа не предоставляет никаких метаданных. Таким образом, служба включает <xref:System.ServiceModel.Description.ServiceMetadataBehavior> и предоставляет конечную точку метаданных exchange (MEX), по http://localhost/servicemodelsamples/service.svc/mex. Это демонстрируется в следующей конфигурации.  
+ По умолчанию платформа не предоставляет никаких метаданных. Таким образом, служба включает <xref:System.ServiceModel.Description.ServiceMetadataBehavior> и предоставляет конечную точку метаданных exchange (MEX), по `http://localhost/servicemodelsamples/service.svc/mex`. Это демонстрируется в следующей конфигурации.  
   
 ```xaml  
 <system.serviceModel>  

@@ -2,12 +2,12 @@
 title: Повторное размещение конструктора
 ms.date: 03/30/2017
 ms.assetid: b676ad31-5f64-4d84-9a36-b4d7113a2f4d
-ms.openlocfilehash: f8dbe89ec605f3e957b5178eafd2e034e8159dc3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 885590604532fba76fc9ab3f6bcc69e077868403
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028918"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837363"
 ---
 # <a name="designer-rehosting"></a>Повторное размещение конструктора
 Повторное размещение конструктора представляет собой обычный сценарий, предусматривающий размещение поля визуальной разработки рабочего процесса в пользовательском приложении. Наиболее привычным приложением размещения является Visual Studio, однако в целом ряде сценариев может быть полезным отображение конструктора рабочих процессов в приложении.  
@@ -114,7 +114,7 @@ protected override void OnInitialized(EventArgs e)
   
 #### <a name="using-the-sample"></a>Использование образца  
   
-1.  Откройте решение DesignerRehosting.sln в [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+1.  Откройте решение DesignerRehosting.sln в Visual Studio 2010.  
   
 2.  Чтобы скомпилировать и запустить приложение, нажмите клавишу F5.  
   

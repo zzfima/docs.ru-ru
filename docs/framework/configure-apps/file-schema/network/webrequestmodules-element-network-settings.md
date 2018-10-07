@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 34173812f4f6fac940632e23e6641e458250a4ee
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7cd25b980afa067ac78fc081c0a7a8e65a23258b
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028194"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838264"
 ---
 # <a name="ltwebrequestmodulesgt-element-network-settings"></a>&lt;webRequestModules&gt; (сетевые параметры)
 Задает модули, используемые для запроса данных от сетевых узлов.  
@@ -54,7 +54,7 @@ ms.locfileid: "48028194"
 ## <a name="remarks"></a>Примечания  
  Элемент `webRequestModules` регистрирует потомки класса <xref:System.Net.WebRequest>, чтобы обработать запросы информации к сетевым узлам. Модули веб-запросов необходимо реализовать <xref:System.Net.IWebRequestCreate> интерфейс.  
   
- .NET Framework включает модули веб-запросов для URI, который начинается с http://, https:// и file://. Модули по умолчанию можно переопределить только путем регистрации пользовательского модуля в файле конфигурации.  
+ .NET Framework включает модули веб-запросов для URI, которые начинаются с `http://`, `https://`, и `file://`. Модули по умолчанию можно переопределить только путем регистрации пользовательского модуля в файле конфигурации.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  

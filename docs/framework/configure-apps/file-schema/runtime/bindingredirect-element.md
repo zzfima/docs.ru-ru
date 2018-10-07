@@ -12,11 +12,11 @@ ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: 535519c65aba7ce13703bb33a16b09cde84c3f03
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027966"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836437"
 ---
 # <a name="ltbindingredirectgt-element"></a>&lt;bindingRedirect&gt; элемент
 Перенаправляет одну версию сборки на другую.  
@@ -47,13 +47,13 @@ newVersion="new assembly version"/>
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |Нет||  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`assemblyBinding`|Содержит сведения о перенаправлении версии сборки и о расположениях сборок.|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  

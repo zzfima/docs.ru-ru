@@ -8,22 +8,22 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 2b227398af3ea0dfd7cd866f1110ccc1737553c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5bddab91fed0f8267804cdf8506c9a632c50d174
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33495097"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837132"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>Практическое руководство. Настройка локального издателя
 В этом разделе описано, как настроить клиент на использование локального издателя для выданных маркеров.  
   
- Часто при взаимодействии клиента с федеративной службой служба указывает адрес службы маркеров безопасности, выдающей маркеры, которые клиент будет использовать, чтобы федеративная служба могла проверить его подлинность. В некоторых случаях клиент можно настроить для использования *локального издателя*.  
+ Часто при взаимодействии клиента с федеративной службой служба указывает адрес службы маркеров безопасности, выдающей маркеры, которые клиент будет использовать, чтобы федеративная служба могла проверить его подлинность. В некоторых случаях клиент может настроить для использования *локального издателя*.  
   
- Windows Communication Foundation (WCF), локальный издатель используется в случаях, когда адрес издателя федеративной привязки http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous или `null`. В этих случаях необходимо настроить объект <xref:System.ServiceModel.Description.ClientCredentials> с использованием адреса локального издателя и привязки, с помощью которой будет осуществляться взаимодействие с этим издателем.  
+ Windows Communication Foundation (WCF) локальный издатель используется в случаях, когда адрес издателя федеративной привязки `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` или `null`. В этих случаях необходимо настроить объект <xref:System.ServiceModel.Description.ClientCredentials> с использованием адреса локального издателя и привязки, с помощью которой будет осуществляться взаимодействие с этим издателем.  
   
 > [!NOTE]
->  Если <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> свойство `ClientCredentials` имеет значение `true`, не указан адрес локального издателя, а указывает адрес издателя [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) или другие Федеративная привязка является http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self, http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous, или `null`, затем Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] использованы поставщиком.  
+>  Если <xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A> свойство `ClientCredentials` имеет значение `true`, адрес локального издателя не указан, а адрес издателя, задаваемый по [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) или другие Федеративная привязка является `http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`, `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`, или `null`, затем Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] используется издатель.  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>Настройка локального издателя в коде  
   
@@ -61,15 +61,15 @@ ms.locfileid: "33495097"
   
 ### <a name="to-configure-the-local-issuer-in-configuration"></a>Настройка локального издателя с помощью файла конфигурации  
   
-1.  Создание [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) элемента в качестве дочернего элемента [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) элемент, который сам является потомком [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элемента поведения конечной точки.  
+1.  Создание [ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md) как дочерний элемент элемента [ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md) элемент, который сам является дочерним элементом [ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) в поведении конечной точки.  
   
 2.  Задайте в качестве атрибута `address` адрес локального издателя, которые будет принимать запросы маркеров.  
   
 3.  Задайте в качестве атрибутов `binding` и `bindingConfiguration` значения, указывающие на соответствующую привязку, которую следует использовать при взаимодействии с конечной точкой локального издателя.  
   
-4.  Необязательный. Задать [ \<удостоверение >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) элемента в качестве дочернего элемента <`localIssuer`> элемент и укажите сведения об удостоверении для локального издателя.  
+4.  Необязательный. Задайте [ \<удостоверений >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md) как дочерний элемент элемента <`localIssuer`> элемент и укажите сведения об удостоверении локального издателя.  
   
-5.  Необязательный. Задать [ \<заголовки >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) элемента в качестве дочернего элемента <`localIssuer`> элемент и указать дополнительные заголовки, которые необходимы для правильного обращения к локальному издателю.  
+5.  Необязательный. Задайте [ \<заголовки >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) как дочерний элемент элемента <`localIssuer`> элемент и укажите дополнительные заголовки, которые необходимы для правильного обращения к локальному издателю.  
   
 ## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
  Обратите внимание, что если для данной привязки указаны адрес издателя и привязка, локальный издатель не применяется в конечных точках, использующих эту привязку. Клиенты, которые предполагают всегда использовать локальный издатель, должны убедиться, что они не используют такую привязку или что привязка изменена таким образом, что адрес издателя имеет значение `null`.  

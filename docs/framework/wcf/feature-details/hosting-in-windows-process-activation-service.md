@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 0fe38b690d093e5a0bbe90d2b62e56b5d0cb4816
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: d51cd3bcef44c32c24630c1a3a332b2144a41469
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188388"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839434"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Размещение в службе активации процессов Windows
 Служба активации процессов Windows (WAS) управляет активацией и временем существования рабочих процессов, содержащих приложения, размещения служб Windows Communication Foundation (WCF). Модель процесса WAS обобщает модель процесса [!INCLUDE[iis601](../../../../includes/iis601-md.md)] для HTTP-сервера путем устранения зависимости от HTTP. Это позволяет службам WCF использовать как HTTP, так и отличные от HTTP протоколы, такие как Net.TCP, в среде размещения, которая поддерживает активацию на основе сообщений и предоставляет возможность размещать большое количество приложений на данном компьютере.  
@@ -45,8 +45,8 @@ ms.locfileid: "44188388"
   
  Можно также обращаться к службам и ресурсам внутри приложения. Обратиться к ресурсам приложения внутри приложения можно с помощью базового пути к приложению. Например, предположим, что узел на компьютере с именем contoso.com имеет привязки узла для протоколов HTTP и Net.TCP. Также предположим, что узел содержит одно приложение, расположенное в /Billing и предоставляющее службу в GetOrders.svc. Тогда, если бы служба GetOrders.svc предоставляла конечную точку с относительным адресом SecureEndpoint, конечная точка службы предоставлялась бы в двух следующих URI:  
   
- http://contoso.com/Billing/GetOrders.svc/SecureEndpoint  
-net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint  
+- `http://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
+- `net.tcp://contoso.com/Billing/GetOrders.svc/SecureEndpoint`
   
 ## <a name="the-was-runtime"></a>Среда выполнения WAS  
  Приложения организуются в узлы для адресации и управления. В среде выполнения приложения также группируются в пулы приложений. В пуле приложения можно разместить большое количество различных приложений из многих узлов. Все приложения внутри пула приложений имеют общий набор характеристик среды выполнения. Например, они все выполняются в среде CLR (common language runtime) одной и той же версии и имеют одно и то же удостоверение процесса. Каждый пул приложений соответствует экземпляру рабочего процесса (w3wp.exe). Каждое управляемое приложение, выполняемое внутри общего пула приложений, изолировано от других приложений с помощью AppDomain среды CLR.  

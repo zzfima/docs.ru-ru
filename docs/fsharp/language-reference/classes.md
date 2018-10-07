@@ -3,11 +3,11 @@ title: Классы (F#)
 description: 'Узнайте, как F # классы являются типы, представляющие объекты, которые могут иметь свойства, методы и события.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 71cd713d192d28565e879b79b2fc9e0530e5f841
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035244"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48845740"
 ---
 # <a name="classes"></a>Классы
 

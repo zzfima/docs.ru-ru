@@ -5,11 +5,11 @@ ms.assetid: b238fd69-2f62-499c-bea0-b91dfb9204f0
 author: Xansky
 ms.author: mhopkins
 ms.openlocfilehash: 24a9923bc60b0379ee51c04a8e55d83bf262aa50
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032614"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837751"
 ---
 # <a name="ui-automation-specification-and-community-promise"></a>Спецификация модели автоматизации пользовательского интерфейса и обязательство сообщества
 Модели автоматизации пользовательского интерфейса обеспечивает программный доступ к большинству элементов пользовательского интерфейса (UI) на рабочем столе, включение продуктов поддержки специальных возможностей, таких как средства чтения с экрана для предоставления сведений о пользовательском Интерфейсе для конечных пользователей и управлять средствами, отличными от стандартного ввода пользовательского интерфейса .  

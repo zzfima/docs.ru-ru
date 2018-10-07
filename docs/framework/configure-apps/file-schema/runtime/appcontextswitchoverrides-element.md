@@ -11,11 +11,11 @@ ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed2a81c4ec4f679b99f5f5a4d2a2c21270691e93
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778410"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839807"
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; элемент
 Определяет один или несколько коммутаторов, используемых классом <xref:System.AppContext> для предоставления механизма отказа от новых функциональных возможностей.  
@@ -41,7 +41,7 @@ ms.locfileid: "48778410"
   
 ### <a name="value-attribute"></a>значение атрибута  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |«имя = значение»|Имя коммутатора предопределенные вместе с его значением (`true` или `false`). Несколько пар имя значение параметра разделяются точками с запятой («;»). Список имен предопределенных коммутатора, поддерживаемые платформой .NET Framework см. в разделе "Примечания".|  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48778410"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
@@ -62,7 +62,7 @@ ms.locfileid: "48778410"
   
  .NET Framework поддерживает следующие параметры:  
   
-|Имя коммутатора|Описание|Представленные|  
+|Имя коммутатора|Описание:|Представленные|  
 |-----------------|-----------------|----------------|  
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Определяет, использует ли Windows Presentation Foundation это алгоритм для прежних версий для макета элемента управления. Дополнительные сведения см. в разделе [Устранение рисков. Макет WPF](~/docs/framework/migration-guide/mitigation-wpf-layout.md).|.NET Framework 4.6|  
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Определяет, является ли алгоритм по умолчанию, используемый для подписывания частей пакетов PackageDigitalSignatureManager SHA1 или SHA256.|.NET Framework 4.7.1|
