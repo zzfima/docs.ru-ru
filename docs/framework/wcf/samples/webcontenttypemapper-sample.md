@@ -2,12 +2,12 @@
 title: Пример WebContentTypeMapper
 ms.date: 03/30/2017
 ms.assetid: a4fe59e7-44d8-43c6-a1f8-40c45223adca
-ms.openlocfilehash: 91e5cca478521a343f7528f878f114b85eff2d08
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 572bea9fc38668d554ef467be7689ac01b652fb8
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45618536"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847610"
 ---
 # <a name="webcontenttypemapper-sample"></a>Пример WebContentTypeMapper
 В этом примере показано, как сопоставить новые типы содержимого с форматами тела сообщения Windows Communication Foundation (WCF).  
@@ -58,7 +58,7 @@ public class JsonContentTypeMapper : WebContentTypeMapper
   
 2.  Построение решения webcontenttypemappersample.sln, описанное в разделе [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Перейдите к http://localhost/ServiceModelSamples/JCTMClientPage.htm (не открывайте страницу JCTMClientPage.htm в браузере из каталога проекта).  
+3.  Перейдите к `http://localhost/ServiceModelSamples/JCTMClientPage.htm` (не открывайте страницу JCTMClientPage.htm в браузере из каталога проекта).  
   
 > [!IMPORTANT]
 >  Образцы уже могут быть установлены на компьютере. Перед продолжением проверьте следующий каталог (по умолчанию).  

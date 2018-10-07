@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: 5b214a3b3c8d59d27a60b5cee28ea168edb9bf4a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b1a858e88ff27de19e2ebbd69c14060813873c13
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43779777"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847648"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Доступ к фреймам с использованием управляемой объектной модели HTML-документов
 Некоторые HTML-документы состоят из *кадров*, или windows, которые могут содержать другие документы HTML. Использование фреймов упрощает создание HTML-страниц, в которых одна или несколько частей страницы остаются статичными, например панель навигации, а в остальных фреймах содержимое постоянно изменяется.  
@@ -34,7 +34,7 @@ ms.locfileid: "43779777"
 3.  При доступе к тегу `FRAME` или `IFRAME` с помощью свойства <xref:System.Windows.Forms.HtmlWindow.WindowFrameElement%2A> <xref:System.Windows.Forms.HtmlWindow>, коллекции <xref:System.Windows.Forms.HtmlElement.Children%2A> или таких методов, как <xref:System.Windows.Forms.HtmlElementCollection.GetElementsByName%2A> или <xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>, происходит извлечение элемента фрейма. Он представляет статические свойства фрейма, включая URL-адрес, указанный в исходном HTML-файле.  
   
 ## <a name="frames-and-security"></a>Фреймы и безопасность  
- Доступ к фреймам усложняется тем фактом, что управляемая модель HTML DOM реализует меры безопасности, называемые *сценария безопасности между рамками*. Если документ содержит `FRAMESET` с двумя или более `FRAME` в различных доменах, эти `FRAME` не смогут взаимодействовать друг с другом. Другими словами `FRAME` , отображает содержимое с веб-сайт не может получить доступ к `FRAME` , на котором размещается сторонний сайт например http://www.adatum.com/. Безопасность реализуется на уровне класса <xref:System.Windows.Forms.HtmlWindow>. Можно получать общие сведения о размещении другого веб-сайта в `FRAME`, например его URL-адрес, но невозможно получить доступ к его <xref:System.Windows.Forms.HtmlWindow.Document%2A>, изменить размер или расположение `FRAME` или `IFRAME`, в которых он размещен.  
+ Доступ к фреймам усложняется тем фактом, что управляемая модель HTML DOM реализует меры безопасности, называемые *сценария безопасности между рамками*. Если документ содержит `FRAMESET` с двумя или более `FRAME` в различных доменах, эти `FRAME` не смогут взаимодействовать друг с другом. Другими словами `FRAME` , отображает содержимое с веб-сайт не может получить доступ к `FRAME` , на котором размещается сторонний сайт например `http://www.adatum.com/`. Безопасность реализуется на уровне класса <xref:System.Windows.Forms.HtmlWindow>. Можно получать общие сведения о размещении другого веб-сайта в `FRAME`, например его URL-адрес, но невозможно получить доступ к его <xref:System.Windows.Forms.HtmlWindow.Document%2A>, изменить размер или расположение `FRAME` или `IFRAME`, в которых он размещен.  
   
  Это правило также применяется к окнам, которые можно открыть с помощью методов <xref:System.Windows.Forms.HtmlWindow.Open%2A> и <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A>. Если открываемое окно относится к другому домену, отличающемуся от домена страницы, размещенной в элементе управления <xref:System.Windows.Forms.WebBrowser>, то перемещение окна или доступ к его содержимому невозможны. Эти ограничения также применяются принудительно при использовании элемента управления <xref:System.Windows.Forms.WebBrowser> для отображения веб-сайта, который отличается от веб-сайта, на котором развернуто приложение Windows Forms. Если используется технология развертывания [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] для установки приложения с веб-сайта A и используется <xref:System.Windows.Forms.WebBrowser> для отображения веб-сайта Б, то доступ к данным веб-сайта Б будет отсутствовать.  
   

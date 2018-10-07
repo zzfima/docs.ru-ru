@@ -2,12 +2,12 @@
 title: Отслеживание
 ms.date: 03/30/2017
 ms.assetid: afdcd9bd-b462-4b2a-aac7-bebf9c80be81
-ms.openlocfilehash: 9683256585b3076a4bad0398e859d9d5a156f56f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 329dcaab093a4cb177fcba64e4bacbe9c9af4710
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515151"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48845906"
 ---
 # <a name="tracking"></a>Отслеживание
 Этот раздел содержит образцы, демонстрирующие отслеживания в Windows Workflow Foundation (WF) рабочего процесса.  
@@ -20,10 +20,4 @@ ms.locfileid: "33515151"
  Показывает, как включить отслеживание в [!INCLUDE[wf1](../../../../includes/wf1-md.md)] в службе рабочего процесса и создавать события отслеживания в средстве отслеживания событий для Windows (ETW).  
   
  [Отслеживание SQL](../../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  
- Показывает, как создать настраиваемый участник отслеживания SQL, который вносит записи отслеживания базу данных SQL.  
-  
- [Извлечение данных WF с использованием отслеживания](../../../../docs/framework/windows-workflow-foundation/samples/extract-wf-data-using-tracking.md)  
- Показывает, как использовать отслеживание рабочего процесса для извлечения переменных и аргументов рабочего процесса из действий.  
-  
- [Отслеживание с помощью текстового файла](../../../../docs/framework/windows-workflow-foundation/samples/tracking-using-a-text-file.md)  
- Показывает, как расширить отслеживание в [!INCLUDE[wf1](../../../../includes/wf1-md.md)] путем создания настраиваемого участника отслеживания.
+ Показывает, как создать настраиваемый участник отслеживания SQL, который вносит записи отслеживания базу данных SQL.

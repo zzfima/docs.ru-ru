@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: cc81e7ad45c308f5ecf476641dfd65fe47b36098
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 59b3aa87056cc2d32512c8b9ea68c0a6d5935814
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855719"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847416"
 ---
 # <a name="endpoint-addresses"></a>Адреса конечных точек
 С каждой конечной точкой связан адрес, который используется для поиска и идентификации этой конечной точки. Этот адрес в первую очередь включает универсальный код ресурса (URI), задающий расположение конечной точки. Адрес конечной точки представляется в модели программирования Windows Communication Foundation (WCF), <xref:System.ServiceModel.EndpointAddress> класс, который содержит необязательное <xref:System.ServiceModel.EndpointAddress.Identity%2A> свойство, которое позволяет выполнять проверку подлинности конечной точки другими конечными точками, обмена с ней сообщениями, а также набор необязательных <xref:System.ServiceModel.EndpointAddress.Headers%2A> свойства, определяющие другие заголовки SOAP, необходимые для доступа к службе. Необязательные заголовки содержат дополнительную и более подробную информацию для идентификации конечной точки службы и взаимодействия с ней. При передаче данных по каналам связи адрес конечной точки представляется ссылкой на конечную точку WS-Addressing.  
   
 ## <a name="uri-structure-of-an-address"></a>Структура универсального кода ресурса (URI) адреса  
- Универсальный код ресурса (URI) адреса для большинства видов транспорта состоит из четырех частей. Например, четыре части URI http://www.fabrikam.com:322/mathservice.svc/secureEndpoint может быть детализированы следующим образом:  
+ Универсальный код ресурса (URI) адреса для большинства видов транспорта состоит из четырех частей. Например, четыре части URI `http://www.fabrikam.com:322/mathservice.svc/secureEndpoint` может быть детализированы следующим образом:  
   
--   Схема: http:  
+-   Схема: `http:`
   
 -   Компьютер: `www.fabrikam.com`  
   
@@ -56,9 +56,9 @@ ms.locfileid: "43855719"
   
  Например, сайт может содержать следующие базовые адреса:  
   
--   http://payroll.myorg.com/Service.svc  
+- `http://payroll.myorg.com/Service.svc`
   
--   http://shipping.myorg.com/Service.svc  
+- `http://shipping.myorg.com/Service.svc`
   
  Платформа [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] позволяет задать в файле конфигурации фильтр префикса на уровне домена приложения. Это сделать с помощью [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) элемент, который содержит список префиксов. Входящие базовые адреса, предоставляемые службами IIS, фильтруются с использованием необязательно списка префиксов. Если префикс не задан, по умолчанию пропускаются все адреса. При задании префикса разрешается прохождение данных только с соответствующего базового адреса для данной схемы.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "43855719"
 </system.serviceModel>  
 ```  
   
- В приведенном выше примере net.tcp://payroll.myorg.com: 8000 и http://shipping.myorg.com:8000 являются единственными базовыми адресами для соответствующих схем, которые передаются через.  
+ В приведенном выше примере `net.tcp://payroll.myorg.com:8000` и `http://shipping.myorg.com:8000` являются единственными базовыми адресами для соответствующих схем, которые передаются через.  
   
  Элемент `baseAddressPrefixFilter` не поддерживает подстановочные знаки.  
   

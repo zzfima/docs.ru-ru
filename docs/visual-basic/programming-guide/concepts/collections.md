@@ -3,11 +3,11 @@ title: Коллекции (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48032638"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48847468"
 ---
 # <a name="collections-visual-basic"></a>Коллекции (Visual Basic)
 Во многих приложениях требуется создавать группы связанных объектов и управлять ими. Существует два способа группировки объектов: создать массив объектов и создать коллекцию.  
@@ -191,7 +191,7 @@ End Class
   
  В таблице ниже перечислены некоторые из часто используемых классов пространства имен <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|Предоставляет коллекцию пар «ключ-значение», которые упорядочены по ключу.|  
 |<xref:System.Collections.Generic.List%601>|Представляет список объектов, доступных по индексу. Предоставляет методы для поиска по списку, его сортировки и изменения.|  
@@ -217,7 +217,7 @@ End Class
   
  В следующей таблице перечислены некоторые из часто используемых классов пространства имен `System.Collections`:  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |---|---|  
 |<xref:System.Collections.ArrayList>|Представляет массив объектов, размер которого динамически увеличивается по мере необходимости.|  
 |<xref:System.Collections.Hashtable>|Представляет коллекцию пар «ключ-значение», которые упорядочены по хэш-коду ключа.|  

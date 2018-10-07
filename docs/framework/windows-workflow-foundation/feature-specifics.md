@@ -2,12 +2,12 @@
 title: Особенности возможностей Windows Workflow Foundation
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b18c6dd76762f4495ac475cd3dfa4e1995733b59
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6929150f786f0d6b4a5887eb5c0758ebcfdd411c
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44205079"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846010"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Особенности возможностей Windows Workflow Foundation
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] добавляет ряд функциональных возможностей в Windows Workflow Foundation. В этом документе описываются некоторые новые функциональные возможности и приведены подробные сведения о сценариях, в которых они могут оказаться полезными.  
@@ -17,19 +17,11 @@ ms.locfileid: "44205079"
   
 ### <a name="getting-started-with-messaging-activities"></a>Приступая к работе с действиями обмена сообщениями  
   
--   В [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] создайте проект служебного приложения рабочего процесса WCF. На полотне будут расположены <xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.SendReply>.  
+-   В Visual Studio 2012 создайте проект приложения службы рабочего процесса WCF. На полотне будут расположены <xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.SendReply>.  
   
--   Щелкните правой кнопкой мыши проект и выберите **Add Service Reference**.  Пункты существующей веб-службы WSDL и **ОК**.  Постройте проект, чтобы показать созданные действия (реализованные с помощью <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.ReceiveReply>) в вашем инструментарии.  
+-   Щелкните правой кнопкой мыши проект и выберите **Add Service Reference**.  Пункты существующей веб-службы WSDL и **ОК**.  Постройте проект, чтобы показать созданные действия (реализованные с помощью <xref:System.ServiceModel.Activities.Send> и <xref:System.ServiceModel.Activities.ReceiveReply>) в вашем инструментарии.
   
--   Образцы этих действий можно найти в следующих разделах:  
-  
-    -   Basic: [служб](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   Сценарии: [служб](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
--   [Основная документация](https://go.microsoft.com/fwlink/?LinkId=204801)  
-  
--   [Обмен сообщениями документация по конструктору действий](https://go.microsoft.com/fwlink/?LinkId=204802)  
+-   [Документация служб рабочего процесса](../wcf/feature-details/workflow-services.md)
   
 ### <a name="messaging-activities-example-scenario"></a>Пример сценария действий обмена сообщениями  
  Объект `BestPriceFinder` службы обращается к нескольким службам авиалиний, пытаясь найти только лучшие цены билет для определенного маршрута.  Реализации этого сценария необходимо использовать действия сообщений для получения запроса о цене, извлечения цен из внутренних служб и ответа на запрос наилучшей цены.  Это также потребует использования других действий out-of-box Создание бизнес-логику для вычисления наилучшей цены.  
@@ -47,15 +39,11 @@ ms.locfileid: "44205079"
   
 -   Образцы <xref:System.ServiceModel.WorkflowServiceHost> приведены в следующих разделах:  
   
-    -   [Выполнение](../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
+    -   [Выполнение](samples/execution.md)
   
-    -   Basic: [служб](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
+    -   Приложение: [приостановлено управление экземплярами](samples/suspended-instance-management.md)  
   
-    -   Сценарии: [служб](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   Приложение: [приостановлено управление экземплярами](../../../docs/framework/windows-workflow-foundation/samples/suspended-instance-management.md)  
-  
--   [Основная документация по WorkflowServiceHost](https://go.microsoft.com/fwlink/?LinkId=204807)  
+-   [Общие сведения о размещении служб рабочих процессов](../wcf/feature-details/hosting-workflow-services-overview.md)  
   
 ### <a name="workflowservicehost-scenario"></a>Сценарий WorkflowServiceHost  
  Служба BestPriceFinder обращается к нескольким службам авиалиний, пытаясь найти только лучшие цены билет для определенного маршрута.  Реализации этого сценария потребуется разместить рабочий процесс в <xref:System.ServiceModel.WorkflowServiceHost>.  Сообщение действия также служат для получения запроса о цене, извлечения цен из внутренних служб и ответа на запрос наилучшей цены.  
@@ -79,15 +67,9 @@ ms.locfileid: "44205079"
   
 -   Примером сопоставления порции данных с экземпляром службы является корреляция на основе содержимого, сопоставляющая данные (например, идентификатор заказа) с определенным экземпляром рабочего процесса.  
   
-    -   Для любого действия обмена сообщениями щелкните свойство `CorrelationInitializers` и добавьте <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> с помощью переменной <xref:System.ServiceModel.Activities.CorrelationHandle>, созданной ранее. Дважды щелкните нужное свойство сообщения (например, OrderID) в раскрывающемся меню. Установите свойство `CorrelatesWith` в значение переменной <xref:System.ServiceModel.Activities.CorrelationHandle>, определенной выше.  
+    -   Для любого действия обмена сообщениями щелкните свойство `CorrelationInitializers` и добавьте <xref:System.ServiceModel.Activities.QueryCorrelationInitializer> с помощью переменной <xref:System.ServiceModel.Activities.CorrelationHandle>, созданной ранее. Дважды щелкните нужное свойство сообщения (например, OrderID) в раскрывающемся меню. Установите свойство `CorrelatesWith` в значение переменной <xref:System.ServiceModel.Activities.CorrelationHandle>, определенной выше. 
   
--   Образцы:  
-  
-    -   Basic: [служб](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   Сценарии: [служб](../../../docs/framework/windows-workflow-foundation/samples/services.md)  
-  
-    -   [Основная документация по корреляции](https://go.microsoft.com/fwlink/?LinkId=204939)  
+-   [Основная документация по корреляции](../wcf/feature-details/correlation.md)  
   
 ### <a name="correlation-scenario"></a>Сценарий корреляции  
  Рабочий процесс обработки заказов, используется для обработки, создание нового заказа и обновляет существующие заказы, находящиеся в процессе.  Реализации этого сценария потребуется разместить рабочий процесс в <xref:System.ServiceModel.WorkflowServiceHost> и использовать действия обмена сообщениями.  Он также потребует выполнения корреляции на основе `orderId` чтобы убедиться, что при обновлении верному рабочему потоку.  
@@ -155,7 +137,7 @@ ms.locfileid: "44205079"
   
 ### <a name="getting-started"></a>Начало работы  
   
--   В [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] создайте консольное приложение рабочего процесса. В конструкторе рабочих процессов добавьте блок-схему.  
+-   В Visual Studio 2012 создайте консольное приложение рабочего процесса. В конструкторе рабочих процессов добавьте блок-схему.  
   
 -   В блок-схеме используются следующие классы:  
   
@@ -171,9 +153,7 @@ ms.locfileid: "44205079"
   
 -   Образцы:  
   
-    -   [Обработка ошибок в действии блок-схемы с помощью TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
-  
-    -   [Сценарий конечного автомата с использованием сочетания действий FlowChart и Pick](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+    -   [Обработка ошибок в действии блок-схемы с помощью TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md) 
   
     -   [Процесс найма](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
@@ -201,7 +181,7 @@ ms.locfileid: "44205079"
   
 ### <a name="getting-started"></a>Начало работы  
   
--   В [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] создайте консольное приложение рабочего процесса. Добавьте в конструкторе рабочих процессов процедурные действия.  
+-   В Visual Studio 2012 создайте консольное приложение рабочего процесса. Добавьте в конструкторе рабочих процессов процедурные действия.  
   
 -   Образцы:  
   
@@ -226,11 +206,7 @@ ms.locfileid: "44205079"
   
 ### <a name="getting-started"></a>Начало работы  
   
--   В [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] создайте консольное приложение рабочего процесса. Добавьте действие <xref:System.Activities.Statements.InvokeMethod> в конструкторе рабочих процессов и настройте для него метод экземпляра и статический метод.  
-  
--   Образцы:  
-  
-    -   [InvokeMethod](../../../docs/framework/windows-workflow-foundation/samples/invokemethod.md)  
+-   В Visual Studio 2012 создайте консольное приложение рабочего процесса. Добавьте действие <xref:System.Activities.Statements.InvokeMethod> в конструкторе рабочих процессов и настройте для него метод экземпляра и статический метод.  
   
 -   Документация по конструктору: [конструктор действия InvokeMethod](/visualstudio/workflow-designer/invokemethod-activity-designer)  
   
@@ -245,13 +221,9 @@ ms.locfileid: "44205079"
   
 ### <a name="getting-started"></a>Начало работы  
   
--   В [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] создайте консольное приложение рабочего процесса. В конструкторе рабочих процессов добавьте действие <xref:System.Activities.Statements.TryCatch>.  
+-   В Visual Studio 2012 создайте консольное приложение рабочего процесса. В конструкторе рабочих процессов добавьте действие <xref:System.Activities.Statements.TryCatch>.  
   
--   Образцы:  
-  
-    1.  [Обработка ошибок в действии блок-схемы с помощью TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
-  
-    2.  [Использование процедурных действий](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
+-   Пример: [сбоя обработки в действии блок-схема, с помощью TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
 -   Документация по конструктору: [конструкторы действий обработки ошибок](/visualstudio/workflow-designer/error-handling-activity-designers)  
   
@@ -263,7 +235,7 @@ ms.locfileid: "44205079"
   
 ### <a name="getting-started"></a>Начало работы  
   
--   В [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] создайте консольное приложение рабочего процесса. В конструкторе рабочих процессов добавьте действие <xref:System.Activities.Statements.Pick>.  
+-   В Visual Studio 2012 создайте консольное приложение рабочего процесса. В конструкторе рабочих процессов добавьте действие <xref:System.Activities.Statements.Pick>.  
   
 -   Пример: [использование действия Pick](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)  
   
@@ -337,7 +309,7 @@ ms.locfileid: "44205079"
   
 ### <a name="getting-started"></a>Начало работы  
   
-1.  В [!INCLUDE[vs2010](../../../includes/vs2010-md.md)] создайте проект служебного приложения рабочего процесса WCF. Пара <xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.SendReply> будет расположена на полотне для запуска.  
+1.  В Visual Studio 2010 создайте новый проект служебного приложения рабочего процесса WCF. Пара <xref:System.ServiceModel.Activities.Receive> и <xref:System.ServiceModel.Activities.SendReply> будет расположена на полотне для запуска.  
   
 2.  Откройте файл web.config и добавьте поведение отслеживания трассировки событий Windows без профиля.  
   
@@ -358,7 +330,7 @@ ms.locfileid: "44205079"
   
 ### <a name="getting-started"></a>Начало работы  
   
-1.  В [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] создайте рабочий процесс, содержащий неявное или явное действие <xref:System.Activities.Statements.Persist>. Добавьте поведение <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> на узел службы рабочего процесса. Это можно сделать в коде или в файле конфигурации приложения.  
+1.  В Visual Studio 2012, создать рабочий процесс, который содержит явный или неявный <xref:System.Activities.Statements.Persist> действия. Добавьте поведение <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> на узел службы рабочего процесса. Это можно сделать в коде или в файле конфигурации приложения.  
   
 2.  Примеры: [сохраняемости](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
   
