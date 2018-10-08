@@ -3,11 +3,11 @@ title: Действия доступа к базе данных
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
 ms.openlocfilehash: efcdd25ee3e6b86d87d551623b166eab4fa76845
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48777910"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850406"
 ---
 # <a name="database-access-activities"></a>Действия доступа к базе данных
 Действия доступа к базе данных позволяют обращаться к базе данных из рабочего процесса. Эти действия позволяют доступ к базам данных, чтобы вернуть или изменить сведения, а также использовать [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081) для доступа к базе данных.  

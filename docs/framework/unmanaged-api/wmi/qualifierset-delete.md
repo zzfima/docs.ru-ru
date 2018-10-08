@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7ca4cc9fb65d1a4bd8713f969bbda5551ce5a2e2
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579917"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850626"
 ---
 # <a name="qualifiersetdelete-function"></a>Функция QualifierSet_Delete
 Удаляет указанный квалификатор по имени.  
@@ -53,7 +53,7 @@ HRESULT QualifierSet_Delete (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание  |
+|Константа  |Значение  |Описание:  |
 |---------|---------|---------|
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszName` Недопустимый параметр. |
 |`WBEM_E_INVALID_OPERATION` | 0x80041016 | Удаление этот квалификатор является недопустимым. |

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 9f939175a77ff080b37491a36c15edbb8af15933
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: a4a8f33b45fa8433013cfa34fbc55f0db90737c4
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43462468"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850691"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>Общие сведения об элементе управления DataGrid (Windows Forms)
 > [!NOTE]
@@ -90,7 +90,7 @@ ms.locfileid: "43462468"
 |Несколько связанных таблиц|В сетке может отображаться иерархическое представление, с помощью которого можно выбирать таблицы. Кроме того, можно задать отображение в сетке родительской таблицы. Записи в родительской таблице позволяют пользователям переходить к связанным строкам дочерних таблиц.|  
   
 > [!NOTE]
->  Таблицы в наборе данных связываются с помощью <xref:System.Data.DataRelation>.  Также см. в разделе [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" отношения в наборах данных](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) или [отношения в наборах данных](https://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+> Таблицы в наборе данных связываются с помощью <xref:System.Data.DataRelation>. Также см. в разделе [создать связи между наборами данных](/visualstudio/data-tools/relationships-in-datasets).
   
  Когда элемент управления <xref:System.Windows.Forms.DataGrid> отображает таблицу и свойству <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> присвоено значение `true`, данные можно сортировать, щелкая заголовки столбцов. Пользователь также может добавлять строки и редактировать ячейки.  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: da7a6c15c558fc56dbc6a874d4a28c4434f67668
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 0f143f8c023102f44b41e3898f29d18be0083128
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48778709"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48849494"
 ---
 # <a name="ltincludegt-visual-basic"></a>&lt;включить&gt; (Visual Basic)
 Ссылается на другой файл, который описывает типы и члены в исходном коде.  
@@ -37,7 +37,7 @@ ms.locfileid: "48778709"
 ## <a name="remarks"></a>Примечания  
  Используйте `<include>` тег для ссылки на комментарии в другом файле, описывающем типы и члены в исходном коде. Этот способ является альтернативой размещению комментариев документации непосредственно в файле исходного кода.  
   
- `<include>` Тег использует в соответствии с рекомендацией W3C XML Path Language (XPath) версии 1.0. Дополнительные сведения о способах настройки вашего `<include>` доступен в http://www.w3.org/TR/xpath.  
+ `<include>` Тег использует в соответствии с рекомендацией W3C XML Path Language (XPath) версии 1.0. Дополнительные сведения о способах настройки вашего `<include>` использовать, см. в разделе <https://www.w3.org/TR/xpath>.  
   
 ## <a name="example"></a>Пример  
  В этом примере используется `<include>` тег для импорта из файла с именем члена комментарии к документации `commentFile.xml`.  

@@ -2,12 +2,12 @@
 title: 'Шаблоны разработки: публикация-подписка на основе списка'
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 2807cc8cc197ff39417e3b6375ebbd595cf73c54
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: caec9a9aa6de267cb5407ad4a7166701740f9a63
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664700"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850131"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>Шаблоны разработки: публикация-подписка на основе списка
 Этот пример иллюстрирует шаблон публикация-подписка на основе списка, реализован как программа Windows Communication Foundation (WCF).  
@@ -118,7 +118,7 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Запуск образца на том же компьютере  
   
-1.  Тест, что можно получить доступ к службе с помощью браузера, введя следующий адрес: http://localhost/servicemodelsamples/service.svc. Должна отобразиться страница подтверждения.  
+1.  Тест, что можно получить доступ к службе с помощью браузера, введя следующий адрес: `http://localhost/servicemodelsamples/service.svc`. Должна отобразиться страница подтверждения.  
   
 2.  Запустите Client.exe из \client\bin\\, из языковой папке. Действия клиента отображаются в окне консоли клиента. Запустите несколько клиентов.  
   
