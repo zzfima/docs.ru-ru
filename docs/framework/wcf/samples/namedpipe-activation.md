@@ -2,12 +2,12 @@
 title: Активация NamedPipe
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
-ms.openlocfilehash: 97221bfd00fb6b50b63eab11ed82356b002a38de
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5f277d2c72822d8828355d3d728864bedb6dc4f4
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504276"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873366"
 ---
 # <a name="namedpipe-activation"></a>Активация NamedPipe
 Этот пример демонстрирует размещение службы, которая использует службу активации Windows (WAS), чтобы активировать службу, которая взаимодействует через именованные каналы. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) и требует [!INCLUDE[wv](../../../../includes/wv-md.md)] для запуска.  
@@ -196,7 +196,7 @@ Press <ENTER> to terminate client.
         > [!NOTE]
         >  Эта команда представляет собой одну строку текста.  
   
-         Эта команда позволяет приложению/servicemodelsamples, осуществлять доступ к оба http://localhost/servicemodelsamples и по адресу NET.TCP://localhost/servicemodelsamples.  
+         Эта команда позволяет приложению/servicemodelsamples, осуществлять доступ к оба `http://localhost/servicemodelsamples` и `net.tcp://localhost/servicemodelsamples`.  
   
 4.  Чтобы создать выпуск решения на языке C# или Visual Basic .NET, следуйте инструкциям в разделе [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   

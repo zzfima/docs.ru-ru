@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 8aa6900b26bbe9f77fe0802a7929febe5af61269
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48779911"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48872961"
 ---
 # <a name="how-to-create-an-activity"></a>Как создать действие
 
 Действия являются базовой единицей режима работы в [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Логика выполнения действия может быть реализована в управляемом коде или с помощью других действий. В этом разделе показано создание двух действий. Первое действие - простое действие с использованием кода для реализации логики выполнения. Реализация второго действия определяется с помощью других действий. Эти действия используются в следующих шагах учебника.
 
 > [!NOTE]
-> Чтобы скачать завершенную версию учебника, см. в разделе [Windows Workflow Foundation (WF45) - Приступая к работе](https://go.microsoft.com/fwlink/?LinkID=248976).
+> Чтобы скачать завершенную версию учебника, см. раздел [Windows Workflow Foundation (WF45), учебник "Приступая к работе"](https://go.microsoft.com/fwlink/?LinkID=248976).
 
 ## <a name="create-the-activity-library-project"></a>Создание проекта библиотеки действий
 

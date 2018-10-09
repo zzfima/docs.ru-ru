@@ -2,12 +2,12 @@
 title: Политика авторизации
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 78ca42abfd2df56edeeb273fcd8ba585aa16f635
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16549b90692d8061abe729521075e0f248446513
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198323"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873483"
 ---
 # <a name="authorization-policy"></a>Политика авторизации
 
@@ -284,7 +284,7 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 
 Windows Communication Foundation (WCF) предоставляет расширенную модель на основе утверждений для проверки прав доступа. Для контроля прав доступа и проверки, удовлетворяют ли связанные с клиентом удостоверения требованиям, необходимым для доступа к методу службы, используется объект <xref:System.ServiceModel.ServiceAuthorizationManager>.
 
-В целях демонстрации в этом образце показана реализация <xref:System.ServiceModel.ServiceAuthorizationManager> , реализующий <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> метод, чтобы разрешить доступ пользователей к методам на основе утверждений типа http://example.com/claims/allowedoperation , значение которого представляет собой URI действия операции разрешено вызывать.
+В целях демонстрации в этом образце показана реализация <xref:System.ServiceModel.ServiceAuthorizationManager> , реализующий <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> метод, чтобы разрешить доступ пользователей к методам на основе утверждений типа `http://example.com/claims/allowedoperation` , значение которого представляет собой URI действия операции разрешено вызывать.
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager
@@ -460,7 +460,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 1. Запустите Client.exe из *\client\bin*. Действия клиента отображаются в консольном приложении клиента.
 
-  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
 
 ### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах
 
@@ -500,7 +500,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 14. На клиентском компьютере из окна командной строки запустите программу Client.exe.
 
-   Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
+   Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).
 
 ### <a name="clean-up-after-the-sample"></a>Очистка после образца
 

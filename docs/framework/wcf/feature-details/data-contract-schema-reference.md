@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 5eb4caee5c2057e112ed4f5a88f46fa82b1f57cc
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44088041"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873723"
 ---
 # <a name="data-contract-schema-reference"></a>Справочник по схеме контрактов данных
 В данном разделе описывается подмножество схемы XML (XSD), используемое <xref:System.Runtime.Serialization.DataContractSerializer> для описания типов среды CLR, применяемых для сериализации XML.  
@@ -32,7 +32,7 @@ ms.locfileid: "44088041"
   
 ## <a name="general-information"></a>Общие сведения  
   
--   Пространство имен схемы описывается в [схемы XML](https://go.microsoft.com/fwlink/?LinkId=95475). В этом документе используется префикс «xs».  
+-   Пространство имен схемы описывается в разделе [Схема XML](https://go.microsoft.com/fwlink/?LinkId=95475). В этом документе используется префикс «xs».  
   
 -   Атрибуты с пространством имен, отличным от пространства имен схемы, игнорируются.  
   
@@ -47,16 +47,16 @@ ms.locfileid: "44088041"
 |`elementFormDefault`|Должен иметь полное имя. Для того чтобы схема поддерживалась `DataContractSerializer`, все элементы должны иметь полное имя. Это можно сделать, либо присвоив xs:schema/@elementFormDefault «qualified» или установив xs:element/@form до «qualified» в объявлении каждого отдельного элемента.|  
 |`finalDefault`|Не обрабатывается.|  
 |`Id`|Не обрабатывается.|  
-|`targetNamespace`|Поддерживается и сопоставляется пространству имен контракта данных. Если данный атрибут не определен, используется пустое пространство имен. Не может быть зарезервированному пространству имен http://schemas.microsoft.com/2003/10/Serialization/.|  
+|`targetNamespace`|Поддерживается и сопоставляется пространству имен контракта данных. Если данный атрибут не определен, используется пустое пространство имен. Не может быть зарезервированному пространству имен `http://schemas.microsoft.com/2003/10/Serialization/`.|  
 |`version`|Не обрабатывается.|  
   
 ### <a name="xsschema-contents"></a>\<xs:schema >: содержимое  
   
 |Описание|Схема|  
 |--------------|------------|  
-|`include`|Поддерживается. `DataContractSerializer` поддерживает xs:include и xs:import. Однако при загрузке метаданных из локального файла средство Svcutil.exe ограничивает следование ссылкам `xs:include/@schemaLocation` и `xs:import/@location` . В этом случае список файлов схемы должен передаваться по нештатному механизму, а не посредством `include` ; документы схемы, переданные посредством `include`, не учитываются.|  
+|`include`|Поддерживается. `DataContractSerializer` поддерживает xs:include и xs:import. Однако при загрузке метаданных из локального файла средство Svcutil.exe ограничивает следование ссылкам `xs:include/@schemaLocation` и `xs:import/@location`. В этом случае список файлов схемы должен передаваться по нештатному механизму, а не посредством `include` ; документы схемы, переданные посредством `include`, не учитываются.|  
 |`redefine`|Запрещено. Использование `xs:redefine` запрещено `DataContractSerializer` по соображениям безопасности: для `x:redefine` требуется следовать `schemaLocation` . В некоторых случаях Svcutil.exe, использующее DataContract, ограничивает применение `schemaLocation`.|  
-|`import`|Поддерживается. `DataContractSerializer` поддерживает `xs:include` и `xs:import`. Однако при загрузке метаданных из локального файла средство Svcutil.exe ограничивает следование ссылкам `xs:include/@schemaLocation` и `xs:import/@location` . В этом случае список файлов схемы должен передаваться по нештатному механизму, а не посредством `include` ; документы схемы, переданные посредством `include`, не учитываются.|  
+|`import`|Поддерживается. `DataContractSerializer` поддерживает `xs:include` и `xs:import`. Однако при загрузке метаданных из локального файла средство Svcutil.exe ограничивает следование ссылкам `xs:include/@schemaLocation` и `xs:import/@location` . В этом случае список файлов схемы должен передаваться по нештатному механизму, а не посредством `include`; документы схемы, переданные посредством `include`, не учитываются.|  
 |`simpleType`|Поддерживается. См. раздел `xs:simpleType` .|  
 |`complexType`|Поддерживается, сопоставляется контрактам данных. См. раздел `xs:complexType` .|  
 |`group`|Не обрабатывается. `DataContractSerializer` не поддерживает использование `xs:group`, `xs:attributeGroup`и `xs:attribute`. Эти объявления игнорируются как дочерние элементы `xs:schema`, но ссылки на них невозможны из `complexType` или других поддерживаемых конструкторов.|  
@@ -524,7 +524,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>Сопоставление типов ISerializable  
- В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.0 интерфейс `ISerializable` использовался как основной механизм сериализации объектов для сохранения или передачи данных. Существует много типов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , которые реализуют интерфейс `ISerializable` и могут автоматически передаваться между приложениями. `DataContractSerializer` поддерживает классы `ISerializable` . `DataContractSerializer` сопоставляет типы схемы реализации `ISerializable` , отличающиеся только полным именем типа (QName) и фактически являющиеся коллекциями свойств. Например `DataContractSerializer` сопоставляет <xref:System.Exception> к следующему типу XSD в http://schemas.datacontract.org/2004/07/System пространства имен.  
+ В [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] версии 1.0 интерфейс `ISerializable` использовался как основной механизм сериализации объектов для сохранения или передачи данных. Существует много типов [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] , которые реализуют интерфейс `ISerializable` и могут автоматически передаваться между приложениями. `DataContractSerializer` поддерживает классы `ISerializable` . `DataContractSerializer` сопоставляет типы схемы реализации `ISerializable` , отличающиеся только полным именем типа (QName) и фактически являющиеся коллекциями свойств. Например `DataContractSerializer` сопоставляет <xref:System.Exception> к следующему типу XSD в `http://schemas.datacontract.org/2004/07/System` пространства имен.  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -541,7 +541,7 @@ public class Employee : Person
 ## <a name="datacontract-serialization-schema"></a>DataContract - схема сериализации  
  Ряд схем, импортируемых `DataContractSerializer` , использует типы, элементы и атрибуты специального пространства имен сериализации контракта данных.  
   
- http://schemas.microsoft.com/2003/10/Serialization  
+ `http://schemas.microsoft.com/2003/10/Serialization`
   
  Ниже приведен пример полного объявления схемы сериализации контракта данных.  
   

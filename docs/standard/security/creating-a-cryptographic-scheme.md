@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: d40c509f-5a5e-46cc-94cb-a951e9ab6843
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2db6d4229ac777801aff792c86fe0e5e9a1b4994
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 51d07fadcf359c2b44f22ca9868d0f12e24b80c5
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964388"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873127"
 ---
 # <a name="creating-a-cryptographic-scheme"></a>Создание криптографической схемы
 Криптографические компоненты платформы .NET Framework можно объединить для создания различных схем шифрования и расшифровки данных.  
@@ -30,7 +30,7 @@ ms.locfileid: "45964388"
   
 5.  Затем стороны осуществляют взаимодействие с использованием симметричного шифрования.  
   
- Создание криптографической схемы нельзя назвать тривиальной задачей. Дополнительные сведения об использовании криптографии см. в разделе «шифрование» в документации Platform SDK в http://msdn.microsoft.com/library.  
+ Создание криптографической схемы нельзя назвать тривиальной задачей.
   
 ## <a name="see-also"></a>См. также
 

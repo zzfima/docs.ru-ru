@@ -9,14 +9,15 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: e0d703e16ab89243c7f7cf57dc858a0a3889a590
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7a63ff5e070c9986fb5890fbf09fb7d4e8cccc9f
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253264"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873168"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>Практическое руководство. Форматирование элемента управления DataGrid в формах Windows Forms с помощью конструктора
+
 > [!NOTE]
 >  Элемент управления <xref:System.Windows.Forms.DataGridView> заменяет элемент управления <xref:System.Windows.Forms.DataGrid> и расширяет его функциональные возможности; однако при необходимости элемент управления <xref:System.Windows.Forms.DataGrid> можно сохранить для обратной совместимости и использования в будущем. Дополнительные сведения см. в разделе [Различия элементов управления DataGridView и DataGrid в Windows Forms](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md).  
   
@@ -32,7 +33,7 @@ ms.locfileid: "44253264"
   
  На первом этапе форматирования сетки данных, можно задать свойства <xref:System.Windows.Forms.DataGrid> сам. Эти параметры цветов и форматирования составляют основу, из которого затем можно внести изменения в зависимости от данных таблиц и столбцов, отображаемых.  
   
- Следующая процедура требуется **приложения Windows** проекта с формой, содержащей <xref:System.Windows.Forms.DataGrid> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создание проекта приложения Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) и [как: Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). В [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> элемент управления отсутствует в **элементов** по умолчанию. Дополнительные сведения см. в разделе [как: Добавление элементов на панель инструментов](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
+ Следующая процедура требуется **приложения Windows** проекта с формой, содержащей <xref:System.Windows.Forms.DataGrid> элемента управления. Сведения о настройке такого проекта см. в разделе [как: Создание проекта приложения Windows](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) и [как: Добавление элементов управления в Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). В Visual Studio 2005 <xref:System.Windows.Forms.DataGrid> элемент управления отсутствует в **элементов** по умолчанию. Дополнительные сведения см. в разделе [как: Добавление элементов на панель инструментов](https://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
   
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -43,7 +44,7 @@ ms.locfileid: "44253264"
   
 2.  В **свойства** окна, задайте следующие свойства, соответствующим образом.  
   
-    |Свойство.|Описание|  
+    |Свойство.|Описание:|  
     |--------------|-----------------|  
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|`BackColor` Свойство определяет цвет четных строк сетки. При задании <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> цвет, все остальные строки свойству цветом (строки 1, 3, 5 и т. д.).|  
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|Цвет фона четных строк сетки (строки 0, 2, 4, 6 и т. д.).|  
@@ -70,36 +71,37 @@ ms.locfileid: "44253264"
     |<xref:System.Windows.Forms.DataGrid.SelectionForeColor%2A>|При выборе ячейки или строки, это цвет переднего плана.|  
   
     > [!NOTE]
-    >  При настройке цветов элементов управления, это можно сделать элемент управления недоступен из-за выбор неудачных цветов (например, красный и зеленый). Использование цветов, доступных на **системных цветов** палитры модулей, чтобы избежать этой проблемы.  
-  
-     Следующая процедура требуется <xref:System.Windows.Forms.DataGrid> элемент управления привязан к таблице данных. Дополнительные сведения см. в разделе [как: привязка элемента управления DataGrid в Windows Forms к источнику данных](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).  
-  
-### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>Если требуется задать стиль таблицы и столбца таблицы данных во время разработки  
-  
-1.  Выберите <xref:System.Windows.Forms.DataGrid> элемент управления в форме.  
-  
-2.  В **свойства** выберите <xref:System.Windows.Forms.DataGrid.TableStyles%2A> свойство и нажмите кнопку **кнопку с многоточием** (![экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) кнопку.  
-  
-3.  В **редактор коллекции DataGridTableStyle** диалоговом окне щелкните **добавить** , добавляемый в коллекцию стиль таблицы.  
-  
-     С помощью **редактор коллекции DataGridTableStyle**, можно добавить и удалить таблицы стилей, отображения набора и свойства макета и набор сопоставление имен для стилей таблиц.  
-  
-4.  Задайте <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> свойство имя сопоставления для каждого стиля таблицы.  
-  
-     Сопоставление имен используется для указания, следует использовать стиль таблицы.  
-  
-5.  В **редактор коллекции DataGridTableStyle**выберите <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> свойство и нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton ")).  
-  
-6.  В **редактор коллекции DataGridColumnStyle** диалоговое окно, добавьте созданный стиль таблицы стилей столбцов.  
-  
-     С помощью **редактор коллекции DataGridColumnStyle**, можно добавить и удалить стили столбцов, задавать свойства отображения и макета и установить имя сопоставления, и строки форматирования для данных столбцов.  
-  
+    >  При настройке цветов элементов управления, это можно сделать элемент управления недоступен из-за выбор неудачных цветов (например, красный и зеленый). Использование цветов, доступных на **системных цветов** палитры модулей, чтобы избежать этой проблемы.
+
+     Следующая процедура требуется <xref:System.Windows.Forms.DataGrid> элемент управления привязан к таблице данных. Дополнительные сведения см. в разделе [как: привязка элемента управления DataGrid в Windows Forms к источнику данных](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md).
+
+### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>Если требуется задать стиль таблицы и столбца таблицы данных во время разработки
+
+1.  Выберите <xref:System.Windows.Forms.DataGrid> элемент управления в форме.
+
+2.  В **свойства** выберите <xref:System.Windows.Forms.DataGrid.TableStyles%2A> свойство и нажмите кнопку **кнопку с многоточием** (![экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png " vbEllipsesButton")) кнопку.
+
+3.  В **редактор коллекции DataGridTableStyle** диалоговом окне щелкните **добавить** , добавляемый в коллекцию стиль таблицы.
+
+     С помощью **редактор коллекции DataGridTableStyle**, можно добавить и удалить таблицы стилей, отображения набора и свойства макета и набор сопоставление имен для стилей таблиц.
+
+4.  Задайте <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> свойство имя сопоставления для каждого стиля таблицы.
+
+     Сопоставление имен используется для указания, следует использовать стиль таблицы.
+
+5.  В **редактор коллекции DataGridTableStyle**выберите <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> свойство и нажмите кнопку с многоточием (![экрана VisualStudioEllipsesButton](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton ")).
+
+6.  В **редактор коллекции DataGridColumnStyle** диалоговое окно, добавьте созданный стиль таблицы стилей столбцов.
+
+     С помощью **редактор коллекции DataGridColumnStyle**, можно добавить и удалить стили столбцов, задавать свойства отображения и макета и установить имя сопоставления, и строки форматирования для данных столбцов.
+
     > [!NOTE]
-    >  Дополнительные сведения о форматировании строк см. в разделе [типы форматирования](../../../../docs/standard/base-types/formatting-types.md).  
-  
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.GridTableStylesCollection>  
- <xref:System.Windows.Forms.GridColumnStylesCollection>  
- <xref:System.Windows.Forms.DataGrid>  
- [Практическое руководство. Удаление или скрытие столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- [Элемент управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+    >  Дополнительные сведения о форматировании строк см. в разделе [типы форматирования](../../../../docs/standard/base-types/formatting-types.md).
+
+## <a name="see-also"></a>См. также
+
+- <xref:System.Windows.Forms.GridTableStylesCollection>
+- <xref:System.Windows.Forms.GridColumnStylesCollection>
+- <xref:System.Windows.Forms.DataGrid>
+- [Практическое руководство. Удаление или скрытие столбцов элемента управления DataGridView в Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [Элемент управления DataGrid](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
