@@ -10,25 +10,26 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d55b571ad313fae75e1f9a96d7a6b681416d8dbd
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6ab205ad12b60651443e0fc409e890ea93168ebd
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185906"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48848079"
 ---
-# <a name="whats-new-in-the-net-framework"></a>Новые возможности .NET Framework
-<a name="introduction"></a>В этой статье кратко излагаются ключевые новые возможности и усовершенствования в следующих версиях .NET Framework:  
- 
-[.NET Framework 4.7.2](#v472)   
-[.NET Framework 4.7.1](#v471)    
-[.NET Framework 4.7](#v47)   
-[.NET Framework 4.6.2](#v462)   
-[.NET Framework 4.6.1](#v461)   
-[.NET 2015 и .NET Framework 4.6](#v46)   
-[.NET Framework 4.5.2](#v452)   
-[.NET Framework 4.5.1](#v451)   
-[.NET Framework 4,5](#v45)   
+# Новые возможности .NET Framework <a name="introduction"></a>
+
+В этой статье кратко рассматриваются основные новые возможности и усовершенствования в следующих версиях .NET Framework:
+
+- [.NET Framework 4.7.2](#v472)
+- [.NET Framework 4.7.1](#v471)
+- [.NET Framework 4.7](#v47)
+- [.NET Framework 4.6.2](#v462)
+- [.NET Framework 4.6.1](#v461)
+- [.NET 2015 и .NET Framework 4.6](#v46)
+- [.NET Framework 4.5.2](#v452)
+- [.NET Framework 4.5.1](#v451)
+- [.NET Framework 4.5](#v45)
 
 Данная статья не содержит исчерпывающей информации обо всех новых возможностях и может быть изменена. Общие сведения о .NET Framework см. в разделе [Начало работы с .NET Framework](../../../docs/framework/get-started/index.md). Поддерживаемые платформы см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md). Ссылки для загрузки и инструкции по установке см. в разделе [Руководство по установке](../../../docs/framework/install/guide-for-developers.md).
 
@@ -42,7 +43,7 @@ ms.locfileid: "44185906"
 Версия .NET Framework 4.7.2 является следующим шагом развития версий .NET Framework 4.x. Она включает много исправлений и несколько новых возможностей, сохраняя при этом высокую стабильность работы.
 
 ### <a name="downloading-and-installing-the-net-framework-472"></a>Скачивание и установка .NET Framework 4.7.2
- 
+
 .NET Framework 4.7.2 можно скачать здесь:
 
 - [Веб-установщик .NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262)
@@ -51,20 +52,20 @@ ms.locfileid: "44185906"
 
 .NET Framework 4.7.2 можно установить на платформах Windows 10, Windows 8.1 и Windows 7 с пакетом обновления 1 (SP1), а также на соответствующих серверных платформах, начиная с Windows Server 2008 R2 с пакетом обновления 1 (SP1). .NET Framework 4.7.2 можно установить с помощью веб-установщика или автономного установщика. Для большинства пользователей рекомендуется использовать веб-установщик.
 
-Вы можете назначить .NET Framework 4.7.2 в качестве целевой платформы в Visual Studio 2012 (или более поздних версиях), установив [.NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338). 
+Вы можете назначить .NET Framework 4.7.2 в качестве целевой платформы в Visual Studio 2012 (или более поздних версиях), установив [.NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338).
 
 ### <a name="whats-new-in-the-net-framework-472"></a>Новые возможности .NET Framework 4.7.2
 
 .NET Framework 4.7.2 включает новые функции в следующих областях:
 
-- [Ядро](#core472)
+- [Ядро](#core-472)
 - [ASP.NET](#asp-net472)
 - [Сеть](#net472)
 - [SQL](#sql472)
 - [WPF](#wpf472)
-- [ClickOnce](#ClickOnce472)
+- [ClickOnce](#clickonce)
 
-Основной акцент в .NET Framework 4.7.2 по-прежнему сделан на улучшение специальных возможностей, что позволяет приложению предоставлять соответствующую функциональность пользователям технологий с поддержкой специальных возможностей. Сведения об улучшениях специальных возможностей в .NET Framework 4.7.2 см. в разделе [Улучшения специальных возможностей в .NET Framework](whats-new-in-accessibility.md). 
+Основной акцент в .NET Framework 4.7.2 по-прежнему сделан на улучшение специальных возможностей, что позволяет приложению предоставлять соответствующую функциональность пользователям технологий с поддержкой специальных возможностей. Сведения об улучшениях специальных возможностей в .NET Framework 4.7.2 см. в разделе [Улучшения специальных возможностей в .NET Framework](whats-new-in-accessibility.md).
 
 <a name="core-472" />
 
@@ -83,7 +84,7 @@ using (RSA rsa = RSA.Create())
    rsa.ImportParameters(rsaParameters);
    // Other code to execute using the RSA instance.
 }
-``` 
+```
 
 ```vb
 ' Before .NET Framework 4.7.2
@@ -91,7 +92,7 @@ Using rsa = RSA.Create()
    rsa.ImportParameters(rsaParameters)
    ' Other code to execute using the rsa instance.
 End Using
-``` 
+```
 на код, подобный этому:
 ```csharp
 // Starting with .NET Framework 4.7.2
@@ -99,13 +100,13 @@ using (RSA rsa = RSA.Create(rsaParameters))
 {
    // Other code to execute using the rsa instance.
 }
-``` 
+```
 ```vb
 ' Starting with .NET Framework 4.7.2
 Using rsa = RSA.Create(rsaParameters)
    ' Other code to execute using the rsa instance.
 End Using
-``` 
+```
 
 Методы <xref:System.Security.Cryptography.DSA.Create(System.Int32)?displayProperty=nameWithType> и <xref:System.Security.Cryptography.RSA.Create(System.Int32)?displayProperty=nameWithType> позволяют создавать новые ключи <xref:System.Security.Cryptography.DSA> или <xref:System.Security.Cryptography.RSA> с указанным размером. Пример:
 
@@ -114,19 +115,19 @@ using (DSA dsa = DSA.Create(2048))
 {
    // Other code to execute using the dsa instance.
 }
-``` 
+```
 ```vb
 Using dsa = DSA.Create(2048)
    ' Other code to execute using the dsa instance.
 End Using
-``` 
+```
 
 **Конструкторы Rfc2898DeriveBytes принимают имя хэш-алгоритма**
 
 Класс <xref:System.Security.Cryptography.Rfc2898DeriveBytes> содержит три новых конструктора с параметром <xref:System.Security.Cryptography.HashAlgorithmName>, который определяет алгоритм HMAC для использования при создании производных ключей. Вместо SHA-1 разработчикам следует использовать HMAC на основе SHA-2, например SHA-256, как показано в следующем примере:
 
 ```csharp
-private static byte[] DeriveKey(string password, out int iterations, out byte[] salt, 
+private static byte[] DeriveKey(string password, out int iterations, out byte[] salt,
                                 out HashAlgorithmName algorithm)
 {
    iterations = 100000;
@@ -135,16 +136,16 @@ private static byte[] DeriveKey(string password, out int iterations, out byte[] 
    const int SaltSize = 32;
    const int DerivedValueSize = 32;
 
-   using (Rfc2898DeriveBytes pbkdf2 = new Rfc2898DeriveBytes(password, SaltSize, 
+   using (Rfc2898DeriveBytes pbkdf2 = new Rfc2898DeriveBytes(password, SaltSize,
                                                              iterations, algorithm))
    {
       salt = pbkdf2.Salt;
       return pbkdf2.GetBytes(DerivedValueSize);
    }
-} 
+}
 ```
 ```vb
-Private Shared Function DeriveKey(password As String, ByRef iterations As Integer, 
+Private Shared Function DeriveKey(password As String, ByRef iterations As Integer,
                                   ByRef salt AS Byte(), ByRef algorithm As HashAlgorithmName) As Byte()
    iterations = 100000
    algorithm = HashAlgorithmName.SHA256
@@ -156,7 +157,7 @@ Private Shared Function DeriveKey(password As String, ByRef iterations As Intege
       salt = pbkdf2.Salt
       Return pbkdf2.GetBytes(DerivedValueSize)
    End Using
-End Function 
+End Function
 ```
 
 **Поддержка временных ключей**
@@ -192,12 +193,12 @@ Dim cStream = New CryptoStream(stream, transform, mode, leaveOpen:=true)
 
 **Изменения распаковки в DeflateStream**
 
-Начиная с .NET Framework 4.7.2 реализация операций распаковки в классе <xref:System.IO.Compression.DeflateStream> была изменена и теперь использует собственные API Windows по умолчанию. Как правило, это приводит к значительному повышению производительности. 
+Начиная с .NET Framework 4.7.2 реализация операций распаковки в классе <xref:System.IO.Compression.DeflateStream> была изменена и теперь использует собственные API Windows по умолчанию. Как правило, это приводит к значительному повышению производительности.
 
 Поддержка распаковки с помощью API Windows включена по умолчанию для приложений, нацеленных на .NET Framework 4.7.2. Для приложений, которые предназначены для более ранних версий .NET Framework, но выполняются в .NET Framework 4.7.2, новое поведение можно активировать отдельно, добавив следующий [переключатель AppContext](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) в файл конфигурации приложений:
 
 ```xml
-<AppContextSwitchOverrides value="Switch.System.IO.Compression.DoNotUseNativeZipLibraryForDecompression=false" /> 
+<AppContextSwitchOverrides value="Switch.System.IO.Compression.DoNotUseNativeZipLibraryForDecompression=false" />
 ```
 
 **Дополнительные коллекции API**
@@ -205,14 +206,19 @@ Dim cStream = New CryptoStream(stream, transform, mode, leaveOpen:=true)
 В .NET Framework 4.7.2 добавлено несколько новых API для типов <xref:System.Collections.Generic.SortedSet%601> и <xref:System.Collections.Generic.HashSet%601>. Сюда входит следующее.
 
 - Методы `TryGetValue`, которые делают шаблон try, используемый в других типах коллекций, доступным для этих двух типов. Вот эти методы:
-   - [`public bool HashSet<T>.TryGetValue(T equalValue, out T actualValue);](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
-   - [`public bool SortedSet<T>.TryGetValue(T equalValue, out T actualValue);](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+
+   - [public bool HashSet<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+   - [public bool SortedSet<T>.TryGetValue(T equalValue, out T actualValue)](xref:System.Collections.Generic.SortedSet%601.TryGetValue%2A)
+
 - Методы расширения `Enumerable.To*`, которые преобразуют коллекцию в <xref:System.Collections.Generic.HashSet%601>:
-   - [public static HashSet<TSource> ToHashSet<TSource>(this IEnumerable<TSource> source);](xref:System.Linq.Enumerable.ToHashSet%2A)
-   - [public static HashSet<TSource> ToHashSet<TSource>(this IEnumerable<TSource> source, IEqualityComparer<TSource> comparer);](xref:System.Linq.Enumerable.ToHashSet%2A)
+
+   - [public static HashSet<TSource> ToHashSet<TSource>(this IEnumerable<TSource> source)](xref:System.Linq.Enumerable.ToHashSet%2A)
+   - [public static HashSet<TSource> ToHashSet<TSource>(this IEnumerable<TSource> source, IEqualityComparer<TSource> comparer)](xref:System.Linq.Enumerable.ToHashSet%2A)
+
 - Новые конструкторы <xref:System.Collections.Generic.HashSet%601>, которые позволяют задать емкость коллекции и повысить производительность, если размер <xref:System.Collections.Generic.HashSet%601> известен заранее:
+
    - [public HashSet(int capacity)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32))
-   - [public HashSet(int capacity, IEqualityComparer<T> comparer)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32,System.Collections.Generic.IEqualityComparer%7B%600%7D))  
+   - [public HashSet(int capacity, IEqualityComparer<T> comparer)](xref:System.Collections.Generic.HashSet%601.%23ctor(System.Int32,System.Collections.Generic.IEqualityComparer%7B%600%7D))
 
 Класс <xref:System.Collections.Concurrent.ConcurrentDictionary%602> включает новые перегрузки методов <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> и <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>, чтобы извлечь значение из словаря или добавить его, если оно не найдено, а также добавить значение в словарь или обновить его, если оно уже существует.
 
@@ -234,18 +240,18 @@ Public GetOrAdd(Of TArg)(key As TKey, valueFactory As Func(Of TKey, TArg, TValue
 
 **Поддержка внедрения зависимостей в веб-формах**
 
-[Внедрение зависимостей (DI)](/aspnet/core/fundamentals/dependency-injection#what-is-dependency-injection) разрывает связь объектов и их зависимостей, чтобы код объекта не пришлось менять только потому, что изменилась зависимость. При разработке приложений ASP.NET, ориентированных на .NET Framework 4.7.2, вы можете:
+[Внедрение зависимостей (DI)](/aspnet/core/fundamentals/dependency-injection#overview-of-dependency-injection) разрывает связь объектов и их зависимостей, чтобы код объекта не пришлось менять только потому, что изменилась зависимость. При разработке приложений ASP.NET, ориентированных на .NET Framework 4.7.2, вы можете:
 
 - Использовать внедрение на базе метода задания, интерфейса или конструктора в [обработчиках и модулях](https://msdn.microsoft.com/en-us/library/bb398986.aspx), [экземплярах страницы](xref:System.Web.UI.Page) и [пользовательских элементах управления](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) из проектов веб-приложений ASP.NET.
 
 - Использовать внедрение на базе метода задания и интерфейса в [обработчиках и модулях](https://msdn.microsoft.com/en-us/library/bb398986.aspx), [экземплярах страницы](xref:System.Web.UI.Page) и [пользовательских элементах управления](https://msdn.microsoft.com/en-us/library/y6wb1a0e.aspx) из проектов веб-сайтов ASP.NET.
 
-- Подключать другие платформы внедрения зависимостей. 
+- Подключать другие платформы внедрения зависимостей.
 
 **Поддержка файлов cookie SameSite**
 
 [SameSite](https://tools.ietf.org/html/draft-west-first-party-cookies-07) запрещает браузеру отправлять файл cookie вместе с межсайтовым запросом. В .NET Framework 4.7.2 добавлено свойство <xref:System.Web.HttpCookie.SameSite?displayProperty=nameWithType>, значение которого является членом перечисления <xref:System.Web.SameSiteMode?displayProperty=nameWithType>. Если его значение равно <xref:System.Web.SameSiteMode.Strict?displayProperty=nameWithType> или <xref:System.Web.SameSiteMode.Lax?displayProperty=nameWithType>, ASP.NET добавляет атрибут `SameSite` в заголовок set-cookie. Поддержка SameSite действует для объектов <xref:System.Web.HttpCookie>, а также для файлов cookie <xref:System.Web.Security.FormsAuthentication> и <xref:System.Web.SessionState>.
- 
+
 Вы можете задать SameSite для объекта <xref:System.Web.HttpCookie> следующим образом:
 
 ```csharp
@@ -305,7 +311,7 @@ c.SameSite = SameSiteMode.Lax
 
 - <xref:System.Data.SqlClient.SqlConnectionStringBuilder.EnclaveAttestationUrl?displayProperty=nameWithType> — указывает URI для Always Encrypted на основе анклава.
 
-- <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider> — абстрактный класс, из которого происходят все поставщики анклавов. 
+- <xref:System.Data.SqlClient.SqlColumnEncryptionEnclaveProvider> — абстрактный класс, из которого происходят все поставщики анклавов.
 
 - <xref:System.Data.SqlClient.SqlEnclaveSession> — инкапсулирует состояние определенного сеанса анклава.
 
@@ -343,7 +349,6 @@ c.SameSite = SameSiteMode.Lax
 
 Начиная с .NET Framework 4.7.2 помощник по диагностике может найти <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries>, созданный из указанного URI источника. (Эта функция предназначена для использования помощником по диагностике, а не приложением в производственной среде.) Помощник по диагностике, например средство "Изменить и продолжить" в Visual Studio, позволяет пользователям редактировать ResourceDictionary с целью применить изменения к запущенному приложению. Шагом к достижению этого является поиск всех ResourceDictionary, созданных запущенным приложением из редактируемого словаря. Например, приложение может объявить ResourceDictionary, содержимое которого копируется из определенного источника URI:
 
-
 ```xml
 <ResourceDictionary Source="MyRD.xaml">
 ```
@@ -361,7 +366,7 @@ Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagn
 
 **Поиск владельцев ResourceDictionary**
 
-Начиная с .NET Framework 4.7.2 помощник по диагностике может найти владельцев <xref:Windows.UI.Xaml.ResourceDictionary>. (Эта функция предназначена для использования помощником по диагностике, а не приложением в производственной среде.) При каждом изменении <xref:Windows.UI.Xaml.ResourceDictionary> WPF автоматически обнаруживает все ссылки [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md), на которые может повлиять изменение. 
+Начиная с .NET Framework 4.7.2 помощник по диагностике может найти владельцев <xref:Windows.UI.Xaml.ResourceDictionary>. (Эта функция предназначена для использования помощником по диагностике, а не приложением в производственной среде.) При каждом изменении <xref:Windows.UI.Xaml.ResourceDictionary> WPF автоматически обнаруживает все ссылки [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md), на которые может повлиять изменение.
 
 Помощник по диагностике, например средство "Изменить и продолжить" в Visual Studio, может в том числе обрабатывать ссылки [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Первым этапом этого процесса является поиск владельцев словаря; то есть поиск всех объектов, свойство `Resources` которых ссылается на словарь (напрямую или косвенно через свойство <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType>). В поддержку этого этапа в классе <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> реализовано три новых статических метода, по одному для каждого базового типа со свойством `Resources`:
 
@@ -375,13 +380,14 @@ Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagn
 
 **Поиск ссылок StaticResource**
 
-Помощник по диагностике теперь может получать уведомление при разрешении ссылки [StaticResource](../wpf/advanced/staticresource-markup-extension.md). (Эта функция предназначена для использования помощником по диагностике, а не приложением в производственной среде.) Помощник по диагностике, например средство "Изменить и продолжить" в Visual Studio, может обновить все случаи использования ресурса, когда его значение в <xref:Windows.UI.Xaml.ResourceDictionary> меняется. WPF выполняет это автоматически для ссылок [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md), но специально не делает этого для ссылок [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Начиная с .NET Framework 4.7.2 помощник по диагностике может использовать эти уведомления для поиска случаев использования статического ресурса. 
+Помощник по диагностике теперь может получать уведомление при разрешении ссылки [StaticResource](../wpf/advanced/staticresource-markup-extension.md). (Эта функция предназначена для использования помощником по диагностике, а не приложением в производственной среде.) Помощник по диагностике, например средство "Изменить и продолжить" в Visual Studio, может обновить все случаи использования ресурса, когда его значение в <xref:Windows.UI.Xaml.ResourceDictionary> меняется. WPF выполняет это автоматически для ссылок [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md), но специально не делает этого для ссылок [StaticResource](../wpf/advanced/staticresource-markup-extension.md). Начиная с .NET Framework 4.7.2 помощник по диагностике может использовать эти уведомления для поиска случаев использования статического ресурса.
 
 Уведомление реализуется новым событием <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType>:
 
 ```csharp
 public static event EventHandler<StaticResourceResolvedEventArgs> StaticResourceResolved;
 ```
+
 ```vb
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
@@ -403,8 +409,6 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 Событие не происходит (и метод доступа `add` игнорируется), если не включен <xref:System.Windows.Diagnostics.VisualDiagnostics> и не задана переменная среды [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A).
 
-<a name="clickonce472" />
-
 #### <a name="clickonce"></a>ClickOnce
 
 Приложения, совместимые с HDPI, для Windows Forms, Windows Presentation Foundation (WPF) и Visual Studio Tools для Office (VSTO) можно развернуть с помощью ClickOnce. Если в манифесте приложения обнаружена следующая запись, развертывание в .NET Framework 4.7.2 будет успешным:
@@ -422,13 +426,13 @@ public class StaticResourceResolvedEventArgs : EventArgs
 ## <a name="whats-new-in-the-net-framework-471"></a>Новые возможности .NET Framework 4.7.1
 
 .NET Framework 4.7.1 включает новые функции в следующих областях:
- 
+
 - [Ядро](#core471)
 - [Среда CLR](#clr)
 - [Сеть](#net471)
-- [ASP.NET](#asp-net471) 
+- [ASP.NET](#asp-net471)
 
-Кроме того, основной акцент в .NET Framework 4.7.1 сделан на улучшении специальных возможностей, что позволяет приложению предоставлять соответствующую функциональность пользователям технологий с поддержкой специальных возможностей. Сведения об улучшениях специальных возможностей в .NET Framework 4.7.1 см. в разделе [Улучшения специальных возможностей в .NET Framework](whats-new-in-accessibility.md). 
+Кроме того, основной акцент в .NET Framework 4.7.1 сделан на улучшении специальных возможностей, что позволяет приложению предоставлять соответствующую функциональность пользователям технологий с поддержкой специальных возможностей. Сведения об улучшениях специальных возможностей в .NET Framework 4.7.1 см. в разделе [Улучшения специальных возможностей в .NET Framework](whats-new-in-accessibility.md).
 
 <a name="core471" />
 
@@ -442,7 +446,7 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 Построители конфигурации позволяют разработчикам внедрять и динамически создавать параметры конфигурации для приложения во время выполнения. Пользовательские построители конфигурации можно использовать для изменения существующих данных в разделе конфигурации или для создания раздела конфигурации с нуля. Без построителей конфигурации файлы .config являются статическими, а их параметры определяются за некоторое время до запуска приложения.
 
-Чтобы создать пользовательский построитель конфигурации, следует наследовать построитель от абстрактного класса <xref:System.Configuration.ConfigurationBuilder> и переопределить его <xref:System.Configuration.ConfigurationBuilder.ProcessConfigurationSection%2A?displayProperty=nameWithType> и <xref:System.Configuration.ConfigurationBuilder.ProcessRawXml%2A?displayProperty=nameWithType>. Кроме того, построители можно определить в файле конфигурации. Дополнительные сведения см. в разделе о построителях конфигурации в записи блога [.NET Framework 4.7.1 ASP.NET and Configuration Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features) (Возможности .NET Framework 4.7.1 ASP.NET и конфигурации). 
+Чтобы создать пользовательский построитель конфигурации, следует наследовать построитель от абстрактного класса <xref:System.Configuration.ConfigurationBuilder> и переопределить его <xref:System.Configuration.ConfigurationBuilder.ProcessConfigurationSection%2A?displayProperty=nameWithType> и <xref:System.Configuration.ConfigurationBuilder.ProcessRawXml%2A?displayProperty=nameWithType>. Кроме того, построители можно определить в файле конфигурации. Дополнительные сведения см. в разделе о построителях конфигурации в записи блога [.NET Framework 4.7.1 ASP.NET and Configuration Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features) (Возможности .NET Framework 4.7.1 ASP.NET и конфигурации).
 
 **Обнаружение функций во время выполнения**
 
@@ -462,7 +466,7 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 **Повышение производительности сборки мусора**
 
-Изменения функции сборки мусора (GC) в .NET Framework 4.7.1 повышают общую производительность, особенно для выделений кучи больших объектов (LOH). В .NET Framework 4.7.1 для выделений SOH и LOH используются отдельные блокировки, что позволяет выполнять выделения LOH в случае, когда фоновый сборщик мусора очищает SOH. В результате в приложениях с большим количеством операций выделения LOH сократится число конфликтов при блокировках выделений и улучшится производительность. Дополнительные сведения см. в разделе о повышении производительности сборки мусора в записи блога [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/) (Возможности среды выполнения .NET Framework 4.7.1 и компилятора). 
+Изменения функции сборки мусора (GC) в .NET Framework 4.7.1 повышают общую производительность, особенно для выделений кучи больших объектов (LOH). В .NET Framework 4.7.1 для выделений SOH и LOH используются отдельные блокировки, что позволяет выполнять выделения LOH в случае, когда фоновый сборщик мусора очищает SOH. В результате в приложениях с большим количеством операций выделения LOH сократится число конфликтов при блокировках выделений и улучшится производительность. Дополнительные сведения см. в разделе о повышении производительности сборки мусора в записи блога [.NET Framework 4.7.1 Runtime and Compiler Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/) (Возможности среды выполнения .NET Framework 4.7.1 и компилятора).
 
 <a name="net471"/>
 
@@ -478,11 +482,11 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 **Действия выполнения в приложениях ASP.NET**
 
-ASP.NET обрабатывает запросы в предопределенном конвейере, который содержит 23 события. ASP.NET выполняет каждый обработчик событий как действие выполнения. В версиях ASP.NET до .NET Framework 4.7 платформа ASP.NET не может следовать контексту выполнения из-за переключений между машинным и управляемым потоками. Вместо этого ASP.NET выборочно выполняет только <xref:System.Web.HttpContext>. Начиная с .NET Framework 4.7.1, метод <xref:System.Web.HttpApplication.OnExecuteRequestStep(System.Action{System.Web.HttpContextBase,System.Action})?displayProperty=nameWithType> также позволяет использовать модули для восстановления внешних данных. Эта функция предназначена для библиотек, связанных с трассировкой, профилированием, диагностикой, или операций, например тех, которые применяются для в ходе выполнения приложения. Дополнительные сведения см. в разделе о действии выполнения ASP.NET в записи блога [.NET Framework 4.7.1 ASP.NET and Configuration Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features) (Возможности .NET Framework 4.7.1 ASP.NET и конфигурации). 
+ASP.NET обрабатывает запросы в предопределенном конвейере, который содержит 23 события. ASP.NET выполняет каждый обработчик событий как действие выполнения. В версиях ASP.NET до .NET Framework 4.7 платформа ASP.NET не может следовать контексту выполнения из-за переключений между машинным и управляемым потоками. Вместо этого ASP.NET выборочно выполняет только <xref:System.Web.HttpContext>. Начиная с .NET Framework 4.7.1, метод <xref:System.Web.HttpApplication.OnExecuteRequestStep(System.Action{System.Web.HttpContextBase,System.Action})?displayProperty=nameWithType> также позволяет использовать модули для восстановления внешних данных. Эта функция предназначена для библиотек, связанных с трассировкой, профилированием, диагностикой, или операций, например тех, которые применяются для в ходе выполнения приложения. Дополнительные сведения см. в разделе о действии выполнения ASP.NET в записи блога [.NET Framework 4.7.1 ASP.NET and Configuration Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features) (Возможности .NET Framework 4.7.1 ASP.NET и конфигурации).
 
 **Синтаксический анализ HttpCookie ASP.NET**
 
-.NET Framework 4.7.1 содержит новый метод <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType>, который предоставляет стандартный способ создания объекта <xref:System.Web.HttpCookie> из строки и позволяет точно назначать значения cookie, такие как дата окончания срока действия и путь. Дополнительные сведения см. в разделе о синтаксическом анализе HttpCookie ASP.NET в записи блога [.NET Framework 4.7.1 ASP.NET and Configuration Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features) (Возможности .NET Framework 4.7.1 ASP.NET и конфигурации). 
+.NET Framework 4.7.1 содержит новый метод <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType>, который предоставляет стандартный способ создания объекта <xref:System.Web.HttpCookie> из строки и позволяет точно назначать значения cookie, такие как дата окончания срока действия и путь. Дополнительные сведения см. в разделе о синтаксическом анализе HttpCookie ASP.NET в записи блога [.NET Framework 4.7.1 ASP.NET and Configuration Features](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features) (Возможности .NET Framework 4.7.1 ASP.NET и конфигурации).
 
 **Функции хэширования SHA-2 для учетных данных проверки подлинности форм ASP.NET**
 
@@ -554,7 +558,7 @@ ASP.NET в .NET Framework 4.7 включает следующие новые ф
 Начиная с .NET Framework 4.7 в ASP.NET добавляется новый набор интерфейсов API, которые позволяют разработчикам заменить стандартные механизмы кэширования объектов в памяти и мониторинга за использованием памяти в ASP.NET. Разработчики могут переопределить любой из следующих трех компонентов, если их не устраивает стандартная реализация ASP.NET.
 
 - **Хранилище кэша объектов**. В новом разделе конфигурации поставщиков кэша разработчик может подключить новую реализацию кэша объектов для приложения ASP.NET с помощью нового интерфейса **ICacheStoreProvider**.
- 
+
 - **Мониторинг памяти**. Стандартный монитор памяти ASP.NET уведомляет приложения о том, что они приближаются к настроенному для процесса лимиту байтов исключительного пользования, а также о нехватке общей доступной физической памяти на компьютере. Уведомление срабатывает незадолго до достижения ограничения. Для некоторых приложений эти уведомления поступают слишком поздно и не позволяют предпринять никаких разумных действий. Разработчики могут использовать собственные мониторы памяти, чтобы заменить значение по умолчанию с помощью свойства <xref:System.Web.Hosting.ApplicationMonitors.MemoryMonitor%2A?displayProperty=nameWithType>.
 
 - **Реакции на достижение лимита памяти**. По умолчанию ASP.NET пытается обрезать кэш объектов, периодически вызывая функцию <xref:System.GC.Collect%2A?displayProperty=nameWithType> при приближении к лимиту байтов исключительного пользования для процесса. Для некоторых приложений частота вызовов <xref:System.GC.Collect%2A?displayProperty=nameWithType> или размер кэша после обрезки не позволяют обеспечить эффективность работы. Теперь разработчик может изменить или дополнить поведение по умолчанию, назначив собственную реализацию **IObserver** в качестве монитора памяти для приложения.
@@ -571,7 +575,7 @@ ASP.NET в .NET Framework 4.7 включает следующие новые ф
 
 ```xml
 <runtime>
-   <AppContextSwitchOverrides value="Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols=false;Switch.System.Net.DontEnableSchUseStrongCrypto=false" /> 
+   <AppContextSwitchOverrides value="Switch.System.ServiceModel.DisableUsingServicePointManagerSecurityProtocols=false;Switch.System.Net.DontEnableSchUseStrongCrypto=false" />
 </runtime>
 ```
 
@@ -608,7 +612,7 @@ ASP.NET в .NET Framework 4.7 включает следующие новые ф
 
 **Новая реализация интерфейсов API WPF для печати**
 
-API-интерфейсы WPF для печати в классе <xref:System.Printing.PrintQueue?displayProperty=nameWithType> вызывают [API пакета печати документа](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx) Windows вместо устаревших [API печати XPS](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx). Влияние этого изменения на совместимость приложений можно изучить в статье [Изменения целевой платформы в .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md). 
+API-интерфейсы WPF для печати в классе <xref:System.Printing.PrintQueue?displayProperty=nameWithType> вызывают [API пакета печати документа](https://msdn.microsoft.com/library/windows/desktop/hh448418(v=vs.85).aspx) Windows вместо устаревших [API печати XPS](https://msdn.microsoft.com/library/windows/desktop/ff686814(v=vs.85).aspx). Влияние этого изменения на совместимость приложений можно изучить в статье [Изменения целевой платформы в .NET Framework 4.7](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md).
 
 <a name="v462" />
 
@@ -630,7 +634,7 @@ API-интерфейсы WPF для печати в классе <xref:System.Pr
 
 - [Windows Workflow Foundation (WF)](#WF462)
 
-- [ClickOnce](#ClickOnce)
+- [ClickOnce](#clickonce-1)
 
 - [Преобразование приложений Windows Forms и WPF в приложения UWP](#UWPConvert)
 
@@ -639,12 +643,14 @@ API-интерфейсы WPF для печати в классе <xref:System.Pr
 Список новых интерфейсов API, добавленных в .NET Framework 4.6.2, см. в статье [об изменениях API в .NET Framework 4.6.2](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md) на сайте GitHub. Список улучшенных функций и исправленных ошибок в .NET Framework 4.6.2 см. в статье [об изменениях в .NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=708778) на сайте GitHub.  Дополнительные сведения см. в разделе [Объявление о выпуске .NET Framework 4.6.2](https://blogs.msdn.microsoft.com/dotnet/2016/08/02/announcing-net-framework-4-6-2/) в блоге .NET.
 
 <a name="ASPNET462" />
+
 ### <a name="aspnet"></a>ASP.NET
- В [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] в ASP.NET представлены следующие улучшения.
 
- **Улучшена поддержка локализованных сообщений об ошибках в проверяющих элементах управления заметок к данным.**
+В [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] в ASP.NET представлены следующие улучшения.
 
- Модули проверки заметок к данным позволяют выполнять проверки путем добавления одного или нескольких атрибутов к свойству класса. Элемент <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> атрибута определяет текст сообщения об ошибке, если проверка не пройдена. Начиная с [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], в ASP.NET упрощена локализация сообщений об ошибках. Локализация сообщений об ошибках происходит в указанных далее случаях.
+**Улучшена поддержка локализованных сообщений об ошибках в проверяющих элементах управления заметок к данным.**
+
+Модули проверки заметок к данным позволяют выполнять проверки путем добавления одного или нескольких атрибутов к свойству класса. Элемент <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> атрибута определяет текст сообщения об ошибке, если проверка не пройдена. Начиная с [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], в ASP.NET упрощена локализация сообщений об ошибках. Локализация сообщений об ошибках происходит в указанных далее случаях.
 
 1.  В атрибуте проверки указан <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType>.
 
@@ -654,7 +660,7 @@ API-интерфейсы WPF для печати в классе <xref:System.Pr
 
 4.  Имя ключа ресурса является строкой, назначенной атрибуту <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType>, а его значением является локализованное сообщение об ошибке.
 
- Например, следующий атрибут заметки к данным задает сообщение об ошибке для неверной оценки в рамках языка и региональных параметров по умолчанию.
+Например, следующий атрибут заметки к данным задает сообщение об ошибке для неверной оценки в рамках языка и региональных параметров по умолчанию.
 
 ```csharp
 public class RatingInfo
@@ -673,7 +679,7 @@ Public Class RatingInfo
 End Class
 ```
 
- Затем можно создать файл ресурсов DataAnnotation.Localization.fr.resx, ключом в котором является строка сообщения об ошибке, а значением — локализованное сообщение об ошибке. Этот файл должен находиться в папке `App.LocalResources`. Например, ниже приведен ключ и его значение в сообщении об ошибке, локализованном в рамках французского языка и региональных параметров (French (fr)).
+Затем можно создать файл ресурсов DataAnnotation.Localization.fr.resx, ключом в котором является строка сообщения об ошибке, а значением — локализованное сообщение об ошибке. Этот файл должен находиться в папке `App.LocalResources`. Например, ниже приведен ключ и его значение в сообщении об ошибке, локализованном в рамках французского языка и региональных параметров (French (fr)).
 
 | name                                 | Значение                                     |
 | ------------------------------------ | ----------------------------------------- |
@@ -747,7 +753,7 @@ public static byte[] SignDataDsaSha384(byte[] data, X509Certificate2 cert)
 }
 ```
 
-```vb 
+```vb
 Public Shared Function SignDataDsaSha384(data As Byte(), cert As X509Certificate2) As Byte()
     Using DSA As DSA = cert.GetDSAPrivateKey()
         Return DSA.SignData(data, HashAlgorithmName.SHA384)
@@ -755,7 +761,7 @@ Public Shared Function SignDataDsaSha384(data As Byte(), cert As X509Certificate
 End Function
 ```
 
- Можно также вызвать метод расширения <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPublicKey%2A?displayProperty=nameWithType> для проверки подписанных данных, как показано в следующем примере.
+Можно также вызвать метод расширения <xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPublicKey%2A?displayProperty=nameWithType> для проверки подписанных данных, как показано в следующем примере.
 
 ```csharp
 public static bool VerifyDataDsaSha384(byte[] data, byte[] signature, X509Certificate2 cert)
@@ -814,7 +820,7 @@ public static byte[] EncryptDataWithPersistedKey(byte[] data, byte[] iv)
 }
 ```
 
-```vb 
+```vb
 Public Shared Function EncryptDataWithPersistedKey(data As Byte(), iv As Byte()) As Byte()
     Using Aes As Aes = New AesCng("AesDemoKey", CngProvider.MicrosoftSoftwareKeyStorageProvider)
         Aes.IV = iv
@@ -861,7 +867,9 @@ End Function
 
  За счет добавленного нового ключевого слова `PoolBlockingPeriod` вы можете выбирать период времени блокировки, лучше всего подходящий для вашего приложения. К этим значениям относятся следующие.
 
- `Auto` — период блокировки пула для приложения, которое подключается к базе данных SQL Azure, становится неактивным, а для приложения, которое подключается к другому экземпляру SQL Server, наоборот, активируется. Это значение по умолчанию. Если имя конечной точки сервера заканчивается любой из приведенных ниже строк, она считается базой данных SQL Azure.
+`Auto`
+
+Период блокировки пула подключений для приложения, которое подключается к базе данных SQL Azure, отключается, а период блокировки пула подключений для приложения, которое подключается к другому экземпляру SQL Server, включается. Это значение по умолчанию. Если имя конечной точки сервера заканчивается любой из приведенных ниже строк, она считается базой данных SQL Azure.
 
 - .database.windows.net
 
@@ -871,9 +879,13 @@ End Function
 
 - .database.cloudapi.de
 
- `AlwaysBlock` Период блокировки пула подключений всегда включен.
+`AlwaysBlock`
 
- `NeverBlock` Период блокировки пула подключений всегда отключен.
+Период блокировки пула подключений всегда включен.
+
+`NeverBlock`
+
+Период блокировки пула подключений всегда отключен.
 
  **Усовершенствования функции Always Encrypted**
 
@@ -933,7 +945,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
  Например, клиент пытается подключиться к службе, прослушивающей `net.pipe://localhost/Service1`, но другая служба на этом компьютере, запущенная с правами администратора, прослушивает `net.pipe://localhost`. Если этому параметру приложения задать значение `false`, клиент будет пытаться подключиться не к той службе. После установки значения `true` для параметра приложения клиент будет всегда подключаться к наиболее подходящей службе.
 
 > [!NOTE]
->  Клиенты, использующие <xref:System.ServiceModel.NetNamedPipeBinding>, находят службы на основе их базового адреса (если он существует), а не на основе полного адреса конечной точки. Чтобы обеспечить постоянную работу этого параметра, служба должна использовать уникальный базовый адрес.
+> Клиенты, использующие <xref:System.ServiceModel.NetNamedPipeBinding>, находят службы на основе их базового адреса (если он существует), а не на основе полного адреса конечной точки. Чтобы обеспечить постоянную работу этого параметра, служба должна использовать уникальный базовый адрес.
 
  Для активации этого изменения добавьте следующий параметр в файл App.config или Web.config клиентского приложения:
 
@@ -974,9 +986,9 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 ```xaml
 <GroupDescriptions>
-     <PropertyGroupDescription 
-         PropertyName="Age" 
-         CustomSort= 
+     <PropertyGroupDescription
+         PropertyName="Age"
+         CustomSort=
               "{x:Static PropertyGroupDescription.CompareNamesAscending}"/>
      </PropertyGroupDescription>
 </GroupDescriptions>
@@ -1035,10 +1047,10 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 - Конструктор действия FlowChart или другие конструкторы действий рабочих процессов могут отображать все объекты в их расположениях по умолчанию в отличие от значений вложенных свойств.
 
-<a name="ClickOnce" />
 
 ### <a name="clickonce"></a>ClickOnce
- Технология ClickOnce была обновлена для поддержки протоколов TLS 1.1 и TLS 1.2 наряду с уже поддерживаемой версией 1.0. ClickOnce автоматически определяет необходимый протокол. Для включения поддержки протоколов TLS 1.1 и 1.2 в приложении ClickOnce не требуется выполнять дополнительные действия.
+
+Технология ClickOnce была обновлена для поддержки протоколов TLS 1.1 и TLS 1.2 наряду с уже поддерживаемой версией 1.0. ClickOnce автоматически определяет необходимый протокол. Для включения поддержки протоколов TLS 1.1 и 1.2 в приложении ClickOnce не требуется выполнять дополнительные действия.
 
 <a name="UWPConvert" />
 
@@ -1059,7 +1071,8 @@ AppContext.SetSwitch(disableCngCertificates, False)
 <a name="v461" />
 
 ## <a name="whats-new-in-the-net-framework-461"></a>Новые возможности .NET Framework 4.6.1
- В [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] появились новые возможности в следующих областях.
+
+В [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] появились новые возможности в следующих областях.
 
 - [Шифрование](#Crypto)
 
@@ -1073,7 +1086,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
 
 - [NGen](#NGEN461)
 
- Дополнительные сведения о [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] см. в следующих разделах.
+Дополнительные сведения о [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] см. в следующих разделах.
 
 - [Список изменений в .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=622964)
 
@@ -1110,7 +1123,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
  Для доступа к постоянно зашифрованным данным, защищенным с помощью главных ключей столбца, хранящихся в аппаратном модуле безопасности, клиенты должны установить на серверах приложений или клиентских компьютерах предоставленный производителем аппаратного модуля безопасности поставщик служб шифрования или поставщики хранилища ключей CNG.
 
  **Улучшенное поведение при подключении <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> для AlwaysOn**
- 
+
 SqlClient теперь автоматически обеспечивает более быстрое подключение к группе доступности (AG) AlwaysOn. Он прозрачно определяет, подключается ли ваше приложение к группе доступности AlwaysOn в другой подсети, и быстро обнаруживает текущий активный сервер и обеспечивает подключение к этому серверу. В предыдущих версиях строка подключения приложения должна была включать `"MultisubnetFailover=true"` для указания, что это приложение подключается к группе доступности AlwaysOn. При подключении приложения к группе доступности AlwaysOn без установки значения `true` для этого ключевого слова подключения время ожидания может быть превышено. В этом выпуске больше *не* требуется, чтобы приложение устанавливало <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A> в значение `true`. Дополнительные сведения о поддержке SqlClient для групп доступности Always On см. в разделе [Поддержка SqlClient для высокого уровня доступности и аварийного восстановления](../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).
 
 <a name="WPF461" />
@@ -1151,7 +1164,7 @@ SqlClient теперь автоматически обеспечивает бо�
 - Эти файлы считаются доступными только для чтения и не изменяются системой.
 
 > [!NOTE]
->  Эти новые форматы файлов не поддерживаются непосредственно API-интерфейсами проверки орфографии WPF, и настраиваемые словари, передаваемые в WPF в приложениях, должны продолжать использовать LEX-файлы.
+> Эти новые форматы файлов не поддерживаются непосредственно API-интерфейсами проверки орфографии WPF, и настраиваемые словари, передаваемые в WPF в приложениях, должны продолжать использовать LEX-файлы.
 
 **Примеры**
 
@@ -1181,11 +1194,16 @@ SqlClient теперь автоматически обеспечивает бо�
 <a name="Profile461" />
 
 ### <a name="profiling"></a>Профилирование
- Неуправляемый API профилирования был улучшен следующим образом.
 
- Улучшенная поддержка доступа к PDB-файлам в интерфейсе [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md). В ASP.Net 5 сборки все чаще компилируются в памяти с помощью Roslyn. Для разработчиков средств профилирования это означает, что PDB-файлы, которые ранее были сериализованы на диске, могут больше не присутствовать. Средства профилирования часто используют PDB-файлы для сопоставления кода с исходными строками для таких задач, как анализ покрытия кода или построковый анализ производительности. Интерфейс [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md) теперь включает два новых метода, [ICorProfilerInfo7::GetInMemorySymbolsLength](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) и [ICorProfilerInfo7::ReadInMemorySymbols](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md), для предоставления этим средствам профилирования доступа к данным PDB-файлов в памяти. С помощью новых API профилировщик может получить содержимое PDB-файлов в памяти в виде массива байтов, а затем обработать его или сериализовать на диск.
+В API-интерфейс неуправляемого профилирования внесены следующие изменения.
 
- Улучшено инструментирование с использованием интерфейса ICorProfiler. Профилировщики, использующие функциональность ReJit API `ICorProfiler` для динамического инструментирования, теперь могут изменять некоторые метаданные. Ранее такие средства могли инструментировать IL в любое время, но метаданные могли изменяться только во время загрузки модуля. Поскольку IL ссылается на метаданные, это ограничивает типы инструментирования, которое может выполняться. Мы отменили некоторые из этих ограничений, добавив метод [ICorProfilerInfo7::ApplyMetaData](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) для поддержки подмножества правок метаданных после загрузки модуля, в частности путем добавления новых записей `AssemblyRef`, `TypeRef`, `TypeSpec`, `MemberRef`, `MemberSpec` и `UserString`. Это изменение существенно расширяет спектр возможного динамического инструментирования.
+- Улучшена поддержка доступа к PDB-файлам в интерфейсе [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md).
+
+   В ASP.NET Core сборки все чаще компилируются в памяти с использованием Roslyn. Для разработчиков средств профилирования это означает, что PDB-файлы, которые ранее были сериализованы на диске, могут больше не присутствовать. Средства профилирования часто используют PDB-файлы для сопоставления кода с исходными строками для таких задач, как анализ покрытия кода или построковый анализ производительности. Интерфейс [ICorProfilerInfo7](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md) теперь включает два новых метода, [ICorProfilerInfo7::GetInMemorySymbolsLength](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-getinmemorysymbolslength-method.md) и [ICorProfilerInfo7::ReadInMemorySymbols](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-readinmemorysymbols.md), для предоставления этим средствам профилирования доступа к данным PDB-файлов в памяти. С помощью новых API профилировщик может получить содержимое PDB-файлов в памяти в виде массива байтов, а затем обработать его или сериализовать на диск.
+
+- Улучшено инструментирование с использованием интерфейса ICorProfiler.
+
+   Профилировщики, использующие функциональность ReJit API `ICorProfiler` для динамического инструментирования, теперь могут изменять некоторые метаданные. Ранее такие средства могли инструментировать IL в любое время, но метаданные могли изменяться только во время загрузки модуля. Поскольку IL ссылается на метаданные, это ограничивает типы инструментирования, которое может выполняться. Мы отменили некоторые из этих ограничений, добавив метод [ICorProfilerInfo7::ApplyMetaData](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-applymetadata-method.md) для поддержки подмножества правок метаданных после загрузки модуля, в частности путем добавления новых записей `AssemblyRef`, `TypeRef`, `TypeSpec`, `MemberRef`, `MemberSpec` и `UserString`. Это изменение существенно расширяет спектр возможного динамического инструментирования.
 
 <a name="NGEN461" />
 
@@ -1199,13 +1217,13 @@ SqlClient теперь автоматически обеспечивает бо�
 ## <a name="whats-new-in-net-2015"></a>Новые возможности .NET 2015
  В .NET 2015 представлены [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] и .NET Core. Некоторые функции применяются к обеим версиям, а другие — только к [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] или только к [!INCLUDE[net_core](../../../includes/net-core-md.md)].
 
-- **ASP.NET 5**
+- **ASP.NET Core**
 
-     .NET 2015 включает ASP.NET 5 — экономичную реализацию .NET для создания современных облачных приложений. Платформа ASP.NET 5 является модульной, поэтому вы можете включить только те функции, которые нужны в приложении. Она может быть размещена в IIS или резидентно в пользовательском процессе, и вы можете запустить приложения с разными версиями .NET Framework на одном сервере. В нее входит новая система конфигурации среды, предназначенная для развертывания облака.
+     .NET 2015 включает ASP.NET Core — экономичную реализацию .NET для создания современных облачных приложений. Платформа ASP.NET Core является модульной, поэтому вы можете включить только те функции, которые нужны в вашем приложении. Она может быть размещена в IIS или резидентно в пользовательском процессе, и вы можете запустить приложения с разными версиями .NET Framework на одном сервере. В нее входит новая система конфигурации среды, предназначенная для развертывания облака.
 
-     MVC, веб-API и веб-страницы объединены в одну платформу, которая называется MVC 6. Вы создаете приложения ASP.NET 5 с помощью новых средств в Visual Studio 2015. Существующие приложения будут работать на новой платформе .NET Framework; однако, чтобы создать приложение с MVC 6 или SignalR 3, нужно использовать систему проектов в Visual Studio 2015.
+     MVC, веб-API и веб-страницы объединены в одну платформу, которая называется MVC 6. Сборка приложений ASP.NET Core выполняется с помощью инструментов Visual Studio 2015 или более поздних версий. Уже существующие приложения будут работать на новой платформе .NET Framework, однако для сборки приложения, использующего MVC 6 или SignalR 3, необходима система проектов Visual Studio 2015 и последующих выпусков.
 
-     Дополнительные сведения см. в разделе [ASP.NET 5](https://go.microsoft.com/fwlink/?LinkId=518238).
+     См. дополнительные сведения об [ASP.NET Core](http://go.microsoft.com/fwlink/?LinkId=518238).
 
 - **Обновления ASP.NET**
 
@@ -1213,7 +1231,7 @@ SqlClient теперь автоматически обеспечивает бо�
 
          ASP.NET теперь предоставляет простой API на основе задач для асинхронной очистки ответов, <xref:System.Web.HttpResponse.FlushAsync%2A?displayProperty=nameWithType>, который позволяет асинхронно сбрасывать ответы, используя поддержку операторов `async/await` языка программирования.
 
-    - `Model binding supports task-returning methods`
+    - **Привязка модели поддерживает методы, возвращающие задачи**
 
          В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] в ASP.NET добавлена функция привязки модели, которая обеспечивает расширяемый, ориентированный на код подход к операциям с данными CRUD на страницах веб-форм и пользовательских элементов управления. Система привязки модели теперь поддерживает возвращающие <xref:System.Threading.Tasks.Task> методы привязки модели. Эта функция позволяет разработчикам веб-форм сочетать преимущества масштабируемости асинхронного программирования с простотой системы привязки данных при использовании более новых версий моделей ORM, включая Entity Framework.
 
@@ -1236,7 +1254,7 @@ SqlClient теперь автоматически обеспечивает бо�
          Чтобы обеспечить способ использования компонента [PUSH_PROMISE](http://http2.github.io/http2-spec/#PUSH_PROMISE) в приложениях ASP.NET, в класс <xref:System.Web.HttpResponse> добавлен новый метод с двумя перегрузками, <xref:System.Web.HttpResponse.PushPromise%28System.String%29> и <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>.
 
         > [!NOTE]
-        >  Хотя ASP.NET 5 поддерживает HTTP/2, поддержка функции PUSH PROMISE еще не была добавлена.
+        > Хотя ASP.NET Core поддерживает HTTP/2, поддержка функции PUSH PROMISE пока не добавлена.
 
          Всю работу выполняют браузер и веб-сервер (IIS в Windows). Нет необходимости перекладывать нагрузку на пользователей.
 
@@ -1343,16 +1361,16 @@ SqlClient теперь автоматически обеспечивает бо�
          Библиотека должна проверить, объявил ли потребитель значение параметра, а затем выполнить соответствующие действия.
 
         ```csharp
-        if (!AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", out shouldThrow)) 
+        if (!AppContext.TryGetSwitch("Switch.AmazingLib.ThrowOnException", out shouldThrow))
         {
-           // This is the case where the switch value was not set by the application. 
-           // The library can choose to get the value of shouldThrow by other means. 
-           // If no overrides nor default values are specified, the value should be 'false'. 
+           // This is the case where the switch value was not set by the application.
+           // The library can choose to get the value of shouldThrow by other means.
+           // If no overrides nor default values are specified, the value should be 'false'.
            // A false value implies the latest behavior.
         }
 
            // The library can use the value of shouldThrow to throw exceptions or not.
-           if (shouldThrow) 
+           if (shouldThrow)
            {
               // old code
            }
@@ -1474,7 +1492,7 @@ SqlClient теперь автоматически обеспечивает бо�
      Значение по умолчанию — 60 секунд. Если `value` имеет значение 0, внеочередные запросы немедленно отклоняются с созданием ошибки с текстом, который выглядит следующим образом.
 
     ```
-    Operation 'Request3|{http://tempuri.org/}IService' on service instance with identifier '2b0667b6-09c8-4093-9d02-f6c67d534292' cannot be performed at this time. Please ensure that the operations are performed in the correct order and that the binding in use provides ordered delivery guarantees. 
+    Operation 'Request3|{http://tempuri.org/}IService' on service instance with identifier '2b0667b6-09c8-4093-9d02-f6c67d534292' cannot be performed at this time. Please ensure that the operations are performed in the correct order and that the binding in use provides ordered delivery guarantees.
     ```
 
      Это же сообщение отображается при получении сообщения о внеочередной операции в отсутствии закладок без протокола.
@@ -1486,7 +1504,7 @@ SqlClient теперь автоматически обеспечивает бо�
      Теперь можно включить идентификатор распределенной транзакции для транзакций, вызвавших создание исключения, производного от <xref:System.Transactions.TransactionException>. Это можно сделать, добавив следующий ключ в раздел `appSettings` файла app.config:
 
     ```xml
-    <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/> 
+    <add key="Transactions:IncludeDistributedTransactionIdInExceptionMessage" value="true"/>
     ```
 
      Значение по умолчанию — `false`.
@@ -1531,7 +1549,7 @@ SqlClient теперь автоматически обеспечивает бо�
 
      Приложения Windows для Windows 10, ориентированные на [!INCLUDE[net_core](../../../includes/net-core-md.md)] и написанные на языке C# или Visual Basic, могут воспользоваться преимуществами новой технологии, компилирующей приложения в машинный код, а не в IL-код. Они создают приложения, которым присуща более быстрая загрузка и время выполнения. Дополнительные сведения см. в разделе [Компиляция приложений с помощью .NET Native](../../../docs/framework/net-native/index.md). Общие сведения о .NET Native и рассмотрение отличий такой компиляции от компиляции JIT и NGEN, а также ее влияние на код см. в разделе [.NET Native и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md).
 
-     Приложения компилируются в машинный код по умолчанию, если компиляция выполняется с помощью Visual Studio 2015. Дополнительные сведения см. в разделе [Начало работы с .NET Native](../../../docs/framework/net-native/getting-started-with-net-native.md).
+     Приложения по умолчанию компилируются в машинный код при компиляции в Visual Studio 2015 и более поздних версиях. Дополнительные сведения см. в разделе [Начало работы с .NET Native](../../../docs/framework/net-native/getting-started-with-net-native.md).
 
      Для поддержки отладки приложений .NET Native в  интерфейс API отладки неуправляемого кода добавлено несколько новых интерфейсов и перечислений. Дополнительные сведения см. в разделе [Отладка (справочник по неуправляемым API)](../../../docs/framework/unmanaged-api/debugging/index.md).
 
@@ -1553,11 +1571,12 @@ SqlClient теперь автоматически обеспечивает бо�
 
 - **Изменение размеров элементов управления Windows Forms.** Эта функция была расширена. Теперь системный параметр DPI можно использовать для изменения размера компонентов следующих дополнительных элементов управления (например, стрелки, раскрывающей поле со списком):
 
-     <xref:System.Windows.Forms.ComboBox> <xref:System.Windows.Forms.ToolStripComboBox> 
-     <xref:System.Windows.Forms.ToolStripMenuItem> 
-     <xref:System.Windows.Forms.Cursor> 
-     <xref:System.Windows.Forms.DataGridView> 
-     <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
+    - <xref:System.Windows.Forms.ComboBox>
+    - <xref:System.Windows.Forms.ToolStripComboBox>
+    - <xref:System.Windows.Forms.ToolStripMenuItem>
+    - <xref:System.Windows.Forms.Cursor>
+    - <xref:System.Windows.Forms.DataGridView>
+    - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 
      Это функция, включаемая пользователем. Чтобы ее включить, задайте для элемента `EnableWindowsFormsHighDpiAutoResizing` в файле конфигурации приложения (app.config) значение `true`:
 
@@ -1577,13 +1596,23 @@ SqlClient теперь автоматически обеспечивает бо�
 
 - **Усовершенствования профилирования.** Следующие новые неуправляемые API профилирования обеспечивают более надежное профилирование:
 
-     [Структура COR_PRF_ASSEMBLY_REFERENCE_INFO](../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md) [Перечисление COR_PRF_HIGH_MONITOR](../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md) [Метод GetAssemblyReferences](../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md) [Метод GetEventMask2](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md) [Метод SetEventMask2](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md) [Метод AddAssemblyReference](../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)
+    - [Структура COR_PRF_ASSEMBLY_REFERENCE_INFO](../../../docs/framework/unmanaged-api/profiling/cor-prf-assembly-reference-info-structure.md)
+    - [Перечисление COR_PRF_HIGH_MONITOR](../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)
+    - [Метод GetAssemblyReferences](../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-getassemblyreferences-method.md)
+    - [Метод GetEventMask2](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-geteventmask2-method.md)
+    - [Метод SetEventMask2](../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)
+    - [Метод AddAssemblyReference](../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-addassemblyreference-method.md)
 
      Предыдущие реализации `ICorProfiler` поддерживали отложенную загрузку зависимых сборок. Новые API профилирования требуют немедленной доступности для загрузки вставляемых профилировщиком зависимых сборок вместо их загрузки после полной инициализации приложения. Это изменение не влияет на пользователей существующих API `ICorProfiler`.
 
 - **Усовершенствования отладки.** Следующие новые интерфейсы API отладки неуправляемого кода обеспечивают более эффективную интеграцию с профилировщиком. Теперь можно получить доступ к метаданным, вставленным профилировщиком, а также к локальным переменным и коду, созданным запросами компилировщика ReJIT во время отладки дампа.
 
-     [Метод SetWriteableMetadataUpdateMode](../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md) [Метод EnumerateLocalVariablesEx](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md) [Метод GetLocalVariableEx](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md) [Метод GetCodeEx](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md) [Метод GetActiveReJitRequestILCode](../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md) [Метод GetInstrumentedILMap](../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
+    - [Метод SetWriteableMetadataUpdateMode](../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)
+    - [Метод EnumerateLocalVariablesEx](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-enumeratelocalvariablesex-method.md)
+    - [Метод GetLocalVariableEx](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getlocalvariableex-method.md)
+    - [Метод GetCodeEx](../../../docs/framework/unmanaged-api/debugging/icordebugilframe4-getcodeex-method.md)
+    - [Метод GetActiveReJitRequestILCode](../../../docs/framework/unmanaged-api/debugging/icordebugfunction3-getactiverejitrequestilcode-method.md)
+    - [Метод GetInstrumentedILMap](../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-getinstrumentedilmap-method.md)
 
 - **Изменения трассировки событий.** Платформа .NET Framework 4.5.2 поддерживает внепроцессную трассировку действий, основанную на трассировке событий Windows (ETW), для более крупных контактных зон. Это позволяет поставщикам решений автоматического управления питанием (АРМ) предлагать облегченные средства, точно отслеживающие стоимость отдельных запросов и действий в разных потоках.  Эти события вызываются только при включении их контроллерами ETW. Таким образом, изменения не влияют на ранее написанный код ETW или код, который выполняется при отключенной трассировке ETW.
 
@@ -1626,7 +1655,7 @@ SqlClient теперь автоматически обеспечивает бо�
 
  Основные новые функции и улучшения в .NET Framework 4.5.1 включают следующие:
 
-- Автоматическая переадресация привязки для сборок. Начиная с [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], при компиляции приложения, ориентированного на [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], в файл конфигурации приложения можно добавить переадресации привязок, если приложение или его компоненты ссылаются на несколько версий одной и той же сборки. Включить эту функцию также можно для проектов, предназначенных для более ранних версий платформы .NET Framework. Дополнительные сведения см. в разделе [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
+- Автоматическая переадресация привязки для сборок. Начиная с Visual Studio 2013 при компиляции приложения для [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] в файл конфигурации приложения может добавляться переадресация привязок, если приложение или его компоненты ссылаются на несколько версий одной сборки. Включить эту функцию также можно для проектов, предназначенных для более ранних версий платформы .NET Framework. Дополнительные сведения см. в разделе [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md).
 
 - Возможность сбора диагностической информации, чтобы помочь разработчикам повысить производительность серверных и облачных приложений. Дополнительные сведения см. в описании методов <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityId%2A> и <xref:System.Diagnostics.Tracing.EventSource.WriteEventWithRelatedActivityIdCore%2A> класса <xref:System.Diagnostics.Tracing.EventSource>.
 
@@ -1638,8 +1667,9 @@ SqlClient теперь автоматически обеспечивает бо�
 
 - Изменение размеров элементов управления Windows Forms. Системный параметр DPI можно использовать для изменения размера компонентов элементов управления (например, значков, которые отображаются в сетке свойств) путем явного включения с помощью записи в файле конфигурации приложения (app.config) нужного приложения. Эта функция в настоящее время поддерживается для следующих элементов управления Windows Forms:
 
-     <xref:System.Windows.Forms.PropertyGrid> <xref:System.Windows.Forms.TreeView> 
-     Поддерживаются некоторые аспекты <xref:System.Windows.Forms.DataGridView> (дополнительные поддерживаемые элементы управления см. в разделе о [новых возможностях в версии 4.5.2](#v452))
+    - <xref:System.Windows.Forms.PropertyGrid>
+    - <xref:System.Windows.Forms.TreeView>
+    - Поддерживаются некоторые аспекты <xref:System.Windows.Forms.DataGridView> (дополнительные поддерживаемые элементы управления см. в разделе о [новых возможностях в версии 4.5.2](#v452))
 
      Чтобы включить эту функцию, добавьте новый элемент \<appSettings> в файл конфигурации (app.config) и задайте для элемента `EnableWindowsFormsHighDpiAutoResizing` значение `true`:
 
@@ -1649,19 +1679,19 @@ SqlClient теперь автоматически обеспечивает бо�
     </appSettings>
     ```
 
- В число улучшений в области отладки приложений .NET Framework в [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] входят следующие:
+ В процесс отладки приложений .NET Framework в Visual Studio 2013 внесены следующие улучшения.
 
-- Возвращаемые значения в отладчике Visual Studio. При отладке управляемого приложения в [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] в окне "Видимые" отображаются возвращаемые типы и значения для методов. Эти сведения доступны для приложений для настольных систем, приложений для Магазина Windows и приложений Windows Phone. Дополнительные сведения см. в статье [Анализ значений, возвращаемых из вызовов методов](https://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx) в библиотеке MSDN.
+- Возвращаемые значения в отладчике Visual Studio. При отладке управляемого приложения в Visual Studio 2013 в окне "Видимые" отображаются возвращаемые типы и значения для методов. Эти сведения доступны для приложений для настольных систем, приложений для Магазина Windows и приложений Windows Phone. Дополнительные сведения см. в статье [Анализ значений, возвращаемых из вызовов методов](https://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx) в библиотеке MSDN.
 
-- "Изменить и продолжить" для 64-разрядных приложений. [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] поддерживает команду "Изменить и продолжить" для 64-разрядных управляемых приложений для настольных систем, приложений Магазина Windows и приложений Windows Phone. Существующие ограничения остаются действующими и для 32-разрядных, и для 64-разрядных приложений (см. последний раздел статьи [Поддерживаемые изменения кода (C#)](/visualstudio/debugger/supported-code-changes-csharp)).
+- "Изменить и продолжить" для 64-разрядных приложений. Visual Studio 2013 поддерживает действие "Изменить и продолжить" для 64-разрядных управляемых приложений для настольных систем, приложений для Магазина Windows и приложений для Windows Phone. Существующие ограничения остаются действующими и для 32-разрядных, и для 64-разрядных приложений (см. последний раздел статьи [Поддерживаемые изменения кода (C#)](/visualstudio/debugger/supported-code-changes-csharp)).
 
-- Отладка с поддержкой асинхронности. Чтобы упростить отладку асинхронных приложений в [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], в стеке вызовов скрывается код инфраструктуры, предоставляемый компиляторами для поддержки асинхронного программирования, а также цепочки логических родительских кадров, что упрощает прослеживание логики выполнения программы. В окне "Задачи", которое заменяет собой окно "Параллельные задачи", отображаются задачи, относящиеся к определенной точке останова, а также все другие задачи, которые в данный момент активны или запланированы в приложении. Вы можете прочесть об этой возможности в разделе "Отладка с поддержкой асинхронности" [объявления о выходе .NET Framework 4.5.1](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/).
+- Отладка с поддержкой асинхронности. Чтобы упростить отладку асинхронных приложений в Visual Studio 2013, стеке вызовов скрывает код инфраструктуры, предоставляемый компиляторами для поддержки асинхронного программирования, а также цепочки логических родительских кадров, что упрощает прослеживание логики выполнения программы. В окне "Задачи", которое заменяет собой окно "Параллельные задачи", отображаются задачи, относящиеся к определенной точке останова, а также все другие задачи, которые в данный момент активны или запланированы в приложении. Вы можете прочесть об этой возможности в разделе "Отладка с поддержкой асинхронности" [объявления о выходе .NET Framework 4.5.1](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/).
 
-- Усовершенствованная поддержка исключений для компонентов среды выполнения Windows. В [!INCLUDE[win81](../../../includes/win81-md.md)] исключения, возникающие в приложениях для Магазина Windows, сохраняют сведения об ошибке, которая вызвала исключение, даже при переходе через границу языка. Вы можете прочесть об этой возможности в разделе "Разработка приложений для Магазина Windows" [объявления о выходе .NET Framework 4.5.1](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/). 
+- Усовершенствованная поддержка исключений для компонентов среды выполнения Windows. В [!INCLUDE[win81](../../../includes/win81-md.md)] исключения, возникающие в приложениях для Магазина Windows, сохраняют сведения об ошибке, которая вызвала исключение, даже при переходе через границу языка. Вы можете прочесть об этой возможности в разделе "Разработка приложений для Магазина Windows" [объявления о выходе .NET Framework 4.5.1](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/).
 
- Начиная с [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], вы можете использовать [Управляемое средство профильной оптимизации (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) для оптимизации приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], а также приложений для настольных систем.
+ Начиная с Visual Studio 2013 вы можете использовать [Управляемое средство профильной оптимизации (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) для оптимизации классических приложений и приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
 
- Список новых возможностей в ASP.NET 4.5.1 см. в разделе [ASP.NET 4.5.1 и Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkID=309094) на сайте ASP.NET.
+ См. новые возможности ASP.NET 4.5.1 в статье [Заметки о выпуске ASP.NET and Web Tools для Visual Studio 2013](/aspnet/visual-studio/overview/2013/release-notes).
 
  [К началу](#introduction)
 
@@ -1722,7 +1752,7 @@ SqlClient теперь автоматически обеспечивает бо�
 ### <a name="tools"></a>Инструменты
  В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] генератор файлов ресурсов (Resgen.exe) позволяет создать RESW-файл для использования в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] из RESOURCES-файла, внедренного в сборку .NET Framework. Дополнительные сведения см. в разделе [Resgen.exe (генератор файлов ресурсов)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md).
 
- Средство управляемой оптимизации с использованием профиля (Mpgo.exe) позволяет сократить время запуска приложения, улучшить использование памяти (размер рабочего множества) и пропускную способность путем оптимизации сборок машинных образов. Этот инструмент командной строки формирует данные профилирования для сборок машинного образа приложения. См. раздел [Mpgo.exe (инструмент управляемой оптимизации с использованием профиля)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Начиная с [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], можно использовать средство Mpgo.exe для оптимизации приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], а также приложений для настольных систем.
+ Средство управляемой оптимизации с использованием профиля (Mpgo.exe) позволяет сократить время запуска приложения, улучшить использование памяти (размер рабочего множества) и пропускную способность путем оптимизации сборок машинных образов. Этот инструмент командной строки формирует данные профилирования для сборок машинного образа приложения. См. раздел [Mpgo.exe (инструмент управляемой оптимизации с использованием профиля)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md). Начиная с Visual Studio 2013 вы можете использовать Mpgo.exe для оптимизации классических приложений и приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].
 
 <a name="parallel" />
 
@@ -1732,20 +1762,20 @@ SqlClient теперь автоматически обеспечивает бо�
 <a name="web" />
 
 ### <a name="web"></a>Интернет
- В ASP.NET 4.5 и 4.5.1 добавилась привязка модели для Web Forms, поддержка WebSocket, асинхронные обработчики, усовершенствования для повышения производительности и многие другие возможности. Дополнительные сведения см. в следующих ресурсах:
 
-- [ASP.NET 4.5 и Visual Studio 2012](https://msdn.microsoft.com/library/ac9bb7f6-f094-4af7-bad0-acf49a5dbc55) в библиотеке MSDN.
+В ASP.NET 4.5 и 4.5.1 добавилась привязка модели для Web Forms, поддержка WebSocket, асинхронные обработчики, усовершенствования для повышения производительности и многие другие возможности. Дополнительные сведения см. в следующих ресурсах:
 
-- [ASP.NET 4.5.1 и Visual Studio 2013](https://go.microsoft.com/fwlink/?LinkID=309094) на сайте ASP.NET.
+- [ASP.NET 4.5 и Visual Studio 2012](https://msdn.microsoft.com/library/hh420390(v=vs.110).aspx)
 
-<a name="networking" />
+- [Заметки о выпуске ASP.NET and Web Tools для Visual Studio 2013](/aspnet/visual-studio/overview/2013/release-notes)
 
-### <a name="networking"></a>Сетевое взаимодействие
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] предоставляет новый интерфейс программирования для приложений HTTP. Дополнительные сведения см. в описании новых пространств имен <xref:System.Net.Http?displayProperty=nameWithType> и <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
+### <a name="networking-a-namenetworking-"></a>Сеть <a name="networking" />
 
- Также предусмотрена поддержка нового интерфейса программирования для приема и взаимодействия с соединением WebSocket с помощью существующего класса <xref:System.Net.HttpListener> и связанных с ним классов. Дополнительные сведения см. в описании нового пространства имен <xref:System.Net.WebSockets> и класса <xref:System.Net.HttpListener>.
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] предоставляет новый интерфейс программирования для приложений HTTP. Дополнительные сведения см. в описании новых пространств имен <xref:System.Net.Http?displayProperty=nameWithType> и <xref:System.Net.Http.Headers?displayProperty=nameWithType>.
 
- Кроме того, в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] предусмотрены следующие усовершенствования в плане сетевого взаимодействия:
+Также предусмотрена поддержка нового интерфейса программирования для приема и взаимодействия с соединением WebSocket с помощью существующего класса <xref:System.Net.HttpListener> и связанных с ним классов. Дополнительные сведения см. в описании нового пространства имен <xref:System.Net.WebSockets> и класса <xref:System.Net.HttpListener>.
+
+Кроме того, в [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] предусмотрены следующие усовершенствования в плане сетевого взаимодействия:
 
 - RFC-совместимая поддержка URI. Дополнительные сведения см. в описании <xref:System.Uri> и соответствующих классов.
 
@@ -1875,16 +1905,19 @@ SqlClient теперь автоматически обеспечивает бо�
  Дополнительные сведения см. в разделе [Новые возможности Windows Workflow Foundation](https://go.microsoft.com/fwlink/?LinkId=228176).
 
 <a name="tailored" />
-### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
- Приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Подмножество [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или 4.5.1 доступно для разработки приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] для Windows с использованием C# или Visual Basic. Это подмножество называется [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и рассматривается в [обзорной статье](https://go.microsoft.com/fwlink/?LinkId=228491) в Центре разработки для Windows.
 
-<a name="portable" />
-### <a name="portable-class-libraries"></a>Переносимые библиотеки классов
- Проект "Переносимая библиотека классов" в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] (и более поздних версиях) позволяет писать и собирать управляемые сборки, работающие на нескольких платформах .NET Framework. Используя проект "Переносимая библиотека классов", можно выбирать платформы для ориентирования (например, Windows Phone и [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]). Доступные типы и члены в проекте автоматически ограничиваются типами и членами, общими для этих платформ. Дополнительные сведения см. в статье [Переносимая библиотека классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
+### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
+
+Приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] разрабатываются для конкретных форм-факторов и в полной мере используют возможности операционной системы Windows. Подмножество [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или 4.5.1 доступно для разработки приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] для Windows с использованием C# или Visual Basic. Это подмножество называется [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] и рассматривается в [обзорной статье](https://go.microsoft.com/fwlink/?LinkId=228491) в Центре разработки для Windows.
+
+### <a name="portable-class-libraries-a-nameportable-"></a>Переносимые библиотеки классов <a name="portable" />
+
+Проект "Переносимая библиотека классов" для Visual Studio 2012 (и более поздних версий) позволяет писать и собирать управляемые сборки, работающие на нескольких платформах .NET Framework. Используя проект "Переносимая библиотека классов", можно выбирать платформы для ориентирования (например, Windows Phone и [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]). Доступные типы и члены в проекте автоматически ограничиваются типами и членами, общими для этих платформ. Дополнительные сведения см. в статье [Переносимая библиотека классов](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
 ## <a name="see-also"></a>См. также
- [.NET Framework и внештатные выпуски](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)   
- [Улучшения специальных возможностей в .NET Framework](whats-new-in-accessibility.md)   
- [Новые возможности Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)   
- [ASP.NET](/aspnet)   
- [Новые возможности Visual C++](/cpp/what-s-new-for-visual-cpp-in-visual-studio) 
+
+- [.NET Framework и отдельные выпуски](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
+- [Улучшения специальных возможностей в .NET Framework](whats-new-in-accessibility.md)
+- [Новые возможности Visual Studio 2017](/visualstudio/ide/whats-new-in-visual-studio)
+- [ASP.NET](/aspnet)
+- [Новые возможности Visual C++](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
