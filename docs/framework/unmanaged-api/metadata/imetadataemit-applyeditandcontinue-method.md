@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: faa9bc412e67e0e49ee969bd8b246a424fe628a0
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847832"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086274"
 ---
-# <a name="imetadataemitapplyeditandcontinue-method"></a><span data-ttu-id="ca51c-102">Метод IMetaDataEmit::ApplyEditAndContinue</span><span class="sxs-lookup"><span data-stu-id="ca51c-102">IMetaDataEmit::ApplyEditAndContinue Method</span></span>
-<span data-ttu-id="ca51c-103">Обновляет текущую область сборки с изменениями, сделанными в указанные метаданные.</span><span class="sxs-lookup"><span data-stu-id="ca51c-103">Updates the current assembly scope with the changes made in the specified metadata.</span></span>  
+# <a name="imetadataemitapplyeditandcontinue-method"></a><span data-ttu-id="1720b-102">Метод IMetaDataEmit::ApplyEditAndContinue</span><span class="sxs-lookup"><span data-stu-id="1720b-102">IMetaDataEmit::ApplyEditAndContinue Method</span></span>
+<span data-ttu-id="1720b-103">Обновляет текущую область сборки с изменениями, сделанными в указанные метаданные.</span><span class="sxs-lookup"><span data-stu-id="1720b-103">Updates the current assembly scope with the changes made in the specified metadata.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ca51c-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="ca51c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1720b-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1720b-104">Syntax</span></span>  
   
 ```  
 HRESULT ApplyEditAndContinue (   
@@ -35,21 +35,21 @@ HRESULT ApplyEditAndContinue (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ca51c-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="ca51c-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="1720b-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="1720b-105">Parameters</span></span>  
  `pImport`  
- <span data-ttu-id="ca51c-106">\[в\] указатель на [IUnknown](/cpp/atl/iunknown) объект, представляющий дельта метаданных из переносимого исполняемого (PE) файла.</span><span class="sxs-lookup"><span data-stu-id="ca51c-106">\[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.</span></span>
+ <span data-ttu-id="1720b-106">\[в\] указатель на [IUnknown](/cpp/atl/iunknown) объект, представляющий дельта метаданных из переносимого исполняемого (PE) файла.</span><span class="sxs-lookup"><span data-stu-id="1720b-106">\[in\] Pointer to an [IUnknown](/cpp/atl/iunknown) object that represents the delta metadata from the portable executable (PE) file.</span></span>
   
- <span data-ttu-id="ca51c-107">Разностные метаданные — этот блок метаданных, который включает в себя изменения, внесенные в копию модуля фактические метаданные.</span><span class="sxs-lookup"><span data-stu-id="ca51c-107">The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.</span></span>  
+ <span data-ttu-id="1720b-107">Разностные метаданные — этот блок метаданных, который включает в себя изменения, внесенные в копию модуля фактические метаданные.</span><span class="sxs-lookup"><span data-stu-id="1720b-107">The delta metadata is the block of metadata that includes the changes that were made to the copy of the module's actual metadata.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ca51c-108">Требования</span><span class="sxs-lookup"><span data-stu-id="ca51c-108">Requirements</span></span>  
- <span data-ttu-id="ca51c-109">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="ca51c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1720b-108">Требования</span><span class="sxs-lookup"><span data-stu-id="1720b-108">Requirements</span></span>  
+ <span data-ttu-id="1720b-109">**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1720b-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ca51c-110">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="ca51c-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1720b-110">**Заголовок:** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1720b-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="ca51c-111">**Библиотека:** используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="ca51c-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1720b-111">**Библиотека:** используется как ресурс в MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="1720b-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="ca51c-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ca51c-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="1720b-112">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1720b-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ca51c-113">См. также</span><span class="sxs-lookup"><span data-stu-id="ca51c-113">See Also</span></span>  
- [<span data-ttu-id="ca51c-114">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="ca51c-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [<span data-ttu-id="ca51c-115">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="ca51c-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1720b-113">См. также</span><span class="sxs-lookup"><span data-stu-id="1720b-113">See Also</span></span>  
+ [<span data-ttu-id="1720b-114">Интерфейс IMetaDataEmit</span><span class="sxs-lookup"><span data-stu-id="1720b-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
+ [<span data-ttu-id="1720b-115">Интерфейс IMetaDataEmit2</span><span class="sxs-lookup"><span data-stu-id="1720b-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
