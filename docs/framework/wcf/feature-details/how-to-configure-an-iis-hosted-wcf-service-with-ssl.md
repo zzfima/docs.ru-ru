@@ -2,12 +2,12 @@
 title: Как настраивать протокол SSL в службе WCF, размещенной в IIS
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: e739eb47611e5b73e7f1d62191a5aa61ad77abe2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2d6e367748222d7401bec6dc919815399b63b1d9
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493505"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086223"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>Как настраивать протокол SSL в службе WCF, размещенной в IIS
 В этом разделе описано, как настроить размещенную в IIS службу WCF для использования безопасности транспорта HTTP. Для безопасности транспорта HTTP требуется, чтобы SSL-сертификат был зарегистрирован в службах IIS. Если SSL-сертификат не установлен, для создания тестового сертификата можно использовать службы IIS. Затем необходимо добавить SSL-привязку для проекта веб-сайта и установить свойства проверки подлинности веб-сайта. Наконец, необходимо настроить службу WCF на использование протокола HTTPS.  
@@ -20,31 +20,31 @@ ms.locfileid: "33493505"
   
 2.  В окне сертификатов сервера щелкните **создать самозаверяющий сертификат...** Связь.  
   
-     ![Создание самозаверяющего&#45;сертификат со службами IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
+     ![Создание самозаверяющего&#45;сертификата со службами IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
-3.  Введите понятное имя самозаверяющего сертификата и нажмите кнопку **ОК**.  
+3.  Введите понятное имя для самозаверяющего сертификата и нажмите кнопку **ОК**.  
   
-     ![Создать собственное&#45;диалоговое окно сертификата подписи](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
+     ![Создание собственные&#45;диалоговое окно сертификата подписи](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
   
-     Теперь созданный самозаверяющий сертификат сведения отображаются в **сертификаты сервера** окна.  
+     Сведения о только что созданный самозаверяющий сертификат теперь отображаются в **сертификаты сервера** окна.  
   
-     ![Окно сертификата сервера](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")  
+     ![Окно "сертификат сервера"](../../../../docs/framework/wcf/feature-details/media/mg-servercertificatewindow.jpg "mg_ServerCertificateWindow")  
   
      Созданный сертификат устанавливается в хранилище доверенных корневых центров сертификации.  
   
 ### <a name="add-ssl-binding"></a>Добавление привязки SSL  
   
-1.  В диспетчере служб IIS разверните **сайтов** папки и затем **веб-сайт по умолчанию** папки в представлении дерева в левой части экрана.  
+1.  По-прежнему в диспетчер служб IIS, разверните **сайты** папку и затем **Default Web Site** папку в представлении в виде дерева в левой части экрана.  
   
-2.  Нажмите кнопку **привязки...** Связать **действия** раздел в правой верхней части окна.  
+2.  Нажмите кнопку **привязки...** Ссылка в **действия** в правой верхней части окна.  
   
      ![Добавление привязки SSL](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")  
   
-3.  В окне «привязки сайта» выберите **добавить** кнопки.  
+3.  В окне «привязки сайта» щелкните **добавить** кнопки.  
   
-     ![Диалоговое окно привязок сайта](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")  
+     ![Диалоговое окно привязки сайта](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")  
   
-4.  В **Добавление привязки сайта** диалоговое окно, выберите https для типа и понятное имя самозаверяющего сертификата, только что создан.  
+4.  В **Добавление привязки сайта** диалоговом окне выберите https в качестве типа и понятное имя самозаверяющего сертификата, который вы только что создан.  
   
      ![Пример привязки сайта](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")  
   
@@ -52,11 +52,11 @@ ms.locfileid: "33493505"
   
 1.  В диспетчере служб IIS выберите виртуальный каталог, содержащий безопасную службу WCF.  
   
-2.  В центральной области окна выберите **параметры SSL** в разделе IIS.  
+2.  В центральной области окна, выберите **параметры SSL** в разделе IIS.  
   
      ![Параметры SSL для виртуального каталога](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")  
   
-3.  На панели параметров SSL установите **Требовать SSL** флажок и нажмите кнопку **применить** ссылку в **действия** раздел на правую часть экрана.  
+3.  На панели параметров SSL выберите **Требовать SSL** флажок и нажмите кнопку **применить** ссылку в **действия** разделе правой стороны экрана.  
   
      ![Параметры SSL виртуального каталога](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")  
   
@@ -145,7 +145,7 @@ ms.locfileid: "33493505"
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Размещение в службах IIS](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Инструкции по размещению в службах IIS](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [Рекомендации по размещению в службах IIS](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [Размещение в службах IIS с использованием встроенного кода](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)
+* [Размещение в службах IIS](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
+* [Инструкции по размещению в службах IIS](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+* [Рекомендации по размещению в службах IIS](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+* [Размещение в службах IIS с использованием встроенного кода](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)

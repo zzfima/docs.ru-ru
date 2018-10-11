@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
 ms.openlocfilehash: b72c3959b2a42c6a5abc8ef31975d5bdb9ce220e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48781613"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086847"
 ---
 # <a name="endpoint-creation-overview"></a>Общие сведения о создании конечных точек
 Весь обмен данными со службой Windows Communication Foundation (WCF) осуществляется через *конечные точки* службы. Конечные точки предоставляют клиентам доступ к функциям, предлагаемым службой WCF. В данном разделе приводится описание структуры конечной точки и способов определения конечной точки в конфигурации и в коде.  

@@ -3,11 +3,11 @@ title: Коллекции (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 ms.openlocfilehash: 60519de1f580bf1cfa4aa067d4a999b20ea8d54d
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847468"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087379"
 ---
 # <a name="collections-visual-basic"></a>Коллекции (Visual Basic)
 Во многих приложениях требуется создавать группы связанных объектов и управлять ими. Существует два способа группировки объектов: создать массив объектов и создать коллекцию.  
@@ -176,13 +176,13 @@ End Class
   
  В этом разделе описываются следующие часто используемые классы коллекций:  
   
--   Классы <xref:System.Collections.Generic>  
+-   классы <xref:System.Collections.Generic>;  
   
 -   Классы <xref:System.Collections.Concurrent>  
   
--   Классы <xref:System.Collections>  
+-   классы <xref:System.Collections>;  
   
--   Visual Basic `Collection` класса  
+-   класс `Collection` в Visual Basic.  
   
 <a name="BKMK_Generic"></a>
 ### <a name="systemcollectionsgeneric-classes"></a>Классы System.Collections.Generic  
@@ -228,13 +228,13 @@ End Class
 
 <a name="BKMK_VisualBasic"></a> 
 ###  <a name="visual-basic-collection-class"></a>Класс Collection в Visual Basic  
- Можно использовать Visual Basic <xref:Microsoft.VisualBasic.Collection> для доступа к элементу коллекции по числовому индексу или в `String` ключ. Элементы можно добавлять в объект коллекции с указанием или без указания ключа. Если добавить объект без ключа, необходимо использовать его числовой индекс для доступа к нему.  
+ Класс <xref:Microsoft.VisualBasic.Collection> в Visual Basic можно использовать для доступа к элементу коллекции по числовому индексу или ключу `String`. Элементы можно добавлять в объект коллекции с указанием или без указания ключа. Если добавить объект без ключа, необходимо использовать его числовой индекс для доступа к нему.  
   
- В Visual Basic `Collection` класс хранит все свои элементы как тип `Object`, поэтому можно добавить элемент любого типа данных. Нет никакой защиты от добавления неподходящих типов данных.  
+ Класс `Collection` в Visual Basic хранит все свои элементы как тип `Object`, поэтому можно добавить элемент любого типа данных. Нет никакой защиты от добавления неподходящих типов данных.  
   
- При использовании Visual Basic `Collection` класс, первый элемент в коллекции имеет индекс 1. Этим он отличается от классов коллекций платформы .NET Framework, для которых начальный индекс равен 0.  
+ При использовании класса `Collection` в Visual Basic первый элемент в коллекции имеет индекс 1. Этим он отличается от классов коллекций платформы .NET Framework, для которых начальный индекс равен 0.  
   
- По возможности следует использовать универсальные коллекции в <xref:System.Collections.Generic?displayProperty=nameWithType> пространства имен или <xref:System.Collections.Concurrent> пространства имен, а не в Visual Basic `Collection` класса.  
+ Везде, где это возможно, следует использовать универсальные коллекции в пространстве имен <xref:System.Collections.Generic?displayProperty=nameWithType> или пространстве имен <xref:System.Collections.Concurrent> вместо класса `Collection` в Visual Basic.  
   
  Дополнительные сведения см. в разделе <xref:Microsoft.VisualBasic.Collection>.  
   

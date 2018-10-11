@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: 7f698a517fbf72ceafde4a117b4d92dd9d352834
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 689b06e8fbebe490f79ab6c12f144546472a95ff
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964411"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087223"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>Практическое руководство. Определение всплывающих подсказок для элементов управления в Windows Forms во время разработки
 Можно задать <xref:System.Windows.Forms.ToolTip> строку в коде или в конструкторе Windows Forms. Дополнительные сведения о <xref:System.Windows.Forms.ToolTip> компонента, см. в разделе [Общие сведения о компоненте ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md).  
@@ -50,8 +50,33 @@ ms.locfileid: "45964411"
 2.  Выберите элемент управления, который будет отображаться объект ToolTip, или добавьте его в форму.  
   
 3.  В **свойства** окне **во всплывающей подсказке над ToolTip1** значение соответствующую строку текста.  
+
+### <a name="to-remove-a-tooltip-programmatically"></a>Чтобы удалить подсказки программными средствами  
   
+1.  Используйте <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> метод <xref:System.Windows.Forms.ToolTip> компонента.  
+  
+    ```vb  
+    ' In this example, Button1 is the control displaying the ToolTip.  
+    ToolTip1.SetToolTip(Button1, Nothing)  
+    ```  
+  
+    ```csharp  
+    // In this example, button1 is the control displaying the ToolTip.  
+    toolTip1.SetToolTip(button1, null);  
+    ```  
+  
+    ```cpp  
+    // In this example, button1 is the control displaying the ToolTip.  
+    toolTip1->SetToolTip(button1, NULL);  
+    ```  
+  
+### <a name="to-remove-a-tooltip-in-the-designer"></a>Чтобы удалить всплывающей подсказки в конструкторе  
+  
+1.  Выберите элемент управления, который отображает подсказку.  
+  
+2.  В **свойства** окно, удалите текст в **во всплывающей подсказке над ToolTip1**.  
+
 ## <a name="see-also"></a>См. также  
- [Общие сведения об элементе управления ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
- [Практическое руководство. Изменение значения задержки для компонента ToolTip в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
- [Компонент ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)
+- [Общие сведения об элементе управления ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)  
+- [Практическое руководство. Изменение значения задержки для компонента ToolTip в Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
+- [Компонент ToolTip](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)

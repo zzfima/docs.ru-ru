@@ -7,11 +7,11 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 ms.openlocfilehash: 717e38b15767b744816c0a57c97827a1a35c95b3
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847819"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086678"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Сведения о политике конфиденциальности Windows Communication Foundation
 Корпорация Майкрософт стремится защитить конфиденциальные данные конечных пользователей. При построении приложения с помощью Windows Communication Foundation (WCF), версии 3.0, приложение может повлиять на конфиденциальность информации конечных пользователей. Например, приложение может явным образом собирать контактные данные пользователей или запрашивать/отправлять информацию через Интернет на свой веб-сайт. Если в приложение внедряется технология Майкрософт, у этой технологии может быть свое поведение, которое способно повлиять на конфиденциальность данных приложения. WCF не отправляет информацию в корпорацию Майкрософт из приложения, если не решили отправить нам вы или конечный пользователь.  

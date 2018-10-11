@@ -9,29 +9,29 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 author: BrucePerlerMS
-ms.openlocfilehash: dd2c4f32978107a82ce940e0ef984c70f461b2c3
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 6dbf0e2be0a75fccd84a82fe2b3c8ab41762de83
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046739"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49087730"
 ---
 # <a name="how-to-create-a-security-token-service"></a>Практическое руководство. Создание службы маркеров безопасности
 Служба маркеров безопасности реализует протокол, определенный в спецификации WS-Trust. Данный протокол определяет форматы сообщения и шаблоны обмена сообщениями для выпуска, обновления, отмены и проверки маркеров безопасности. Данная служба маркеров безопасности дает одну или несколько из данных возможностей. В данном разделе рассматривается наиболее общий сценарий: реализация выпуска маркера.  
   
 ## <a name="issuing-tokens"></a>Выпуск маркеров  
- WS-Trust определяет форматы сообщения на основе элемента схемы `RequestSecurityToken` языка определения схемы XML (XSD) и элемента схемы XSD `RequestSecurityTokenResponse` для выпуска маркера. Кроме того, WS-Trust определяет связанные универсальные коды ресурса (URI). Действия, связанным с `RequestSecurityToken` сообщение http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue. Действия, связанным с `RequestSecurityTokenResponse` сообщение http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue.  
+ WS-Trust определяет форматы сообщения на основе элемента схемы `RequestSecurityToken` языка определения схемы XML (XSD) и элемента схемы XSD `RequestSecurityTokenResponse` для выпуска маркера. Кроме того, WS-Trust определяет связанные универсальные коды ресурса (URI). Действия, связанным с `RequestSecurityToken` сообщение `http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Issue`. Действия, связанным с `RequestSecurityTokenResponse` сообщение `http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue`.  
   
 ### <a name="request-message-structure"></a>Структура сообщения с запросом  
  Структура сообщения с запросом на выпуск обычно состоит из следующих элементов.  
   
--   Запрос введите URI со значением http://schemas.xmlsoap.org/ws/2005/02/trust/Issue.  
+-   Запрос введите URI со значением `http://schemas.xmlsoap.org/ws/2005/02/trust/Issue`.
   
--   Универсальный код ресурса (URI) типа маркера. Для маркеров Security Assertions Markup Language (SAML) 1.1 Этот URI значение http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1.  
+-   Универсальный код ресурса (URI) типа маркера. Для маркеров Security Assertions Markup Language (SAML) 1.1 Этот URI значение `http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1`.  
   
 -   Значение размера ключа, указывающее количество битов в ключе, связанное с выпущенным маркером.  
   
--   Универсальный код ресурса (URI) типа ключа. Для симметричных ключей, этот URI значение http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey.  
+-   Универсальный код ресурса (URI) типа ключа. Для симметричных ключей, этот URI значение `http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey`.  
   
  Кроме того, может присутствовать несколько других элементов.  
   

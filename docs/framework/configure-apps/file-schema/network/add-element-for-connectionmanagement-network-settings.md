@@ -13,11 +13,11 @@ ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 author: mcleblanc
 ms.author: markl
 ms.openlocfilehash: cdc7e8501f7cf3f5cff4c29ca5b2d004ce7cd5c6
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028385"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086184"
 ---
 # <a name="ltaddgt-element-for-connectionmanagement-network-settings"></a>&lt;Добавление&gt; элемент для connectionManagement (параметры сети)
 Добавляет IP-адрес или DNS-имя в список управления подключениями.  

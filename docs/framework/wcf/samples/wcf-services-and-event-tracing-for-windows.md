@@ -2,12 +2,12 @@
 title: Службы WCF и средство отслеживания событий для Windows
 ms.date: 03/30/2017
 ms.assetid: eda4355d-0bd0-4dc9-80a2-d2c832152272
-ms.openlocfilehash: 26ce5fcb07b06a52f69ad8655adea563c177b055
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6684f6415fa6ee82a59fc9b54911b5c65d6dadb2
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266875"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086587"
 ---
 # <a name="wcf-services-and-event-tracing-for-windows"></a>Службы WCF и средство отслеживания событий для Windows
 Этот образец демонстрирует использование аналитического отслеживания в Windows Communication Foundation (WCF) для передачи событий в Windows (Трассировка событий). Аналитические трассировки — это события, возникающие в ключевых точках стека WCF, позволяющие отлаживать службы WCF в рабочей среде.
@@ -34,7 +34,7 @@ ms.locfileid: "48266875"
 
 5.  В тестовом клиенте WCF, добавьте службу, выбрав **файл**, а затем **добавить службу**.
 
-     Добавьте адрес конечной точки в поле ввода. Значение по умолчанию — http://localhost:1378/Calculator.svc.
+     Добавьте адрес конечной точки в поле ввода. Значение по умолчанию — `http://localhost:1378/Calculator.svc`.
 
 6.  Откройте приложение просмотра событий.
 
