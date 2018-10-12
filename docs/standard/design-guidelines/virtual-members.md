@@ -10,11 +10,11 @@ ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b92b648e7886fb0214238e32eacae2870b470340
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847455"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121069"
 ---
 # <a name="virtual-members"></a>Виртуальные члены
 Виртуальные члены можно переопределить, таким образом изменение поведения подкласса. Они похожи на обратные вызовы с точки зрения расширяемости, которые они выполняют, но они лучше с точки зрения производительности и потребления памяти. Кроме того виртуальные члены показаться более естественной, в сценариях, когда требуется создавать специальный вид существующего типа (специализации).  

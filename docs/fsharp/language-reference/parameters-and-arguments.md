@@ -3,11 +3,11 @@ title: Параметры и аргументы (F#)
 description: 'Сведения о поддержке языка F # для определения параметров и передачи аргументов в функции, методы и свойства.'
 ms.date: 05/16/2016
 ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48263720"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123362"
 ---
 # <a name="parameters-and-arguments"></a>Параметры и аргументы
 

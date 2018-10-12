@@ -1,13 +1,13 @@
 ---
 title: Асинхронное программирование
-ms.date: 03/30/2017
+ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 0c5c3f52f6afa0e1fa48d33167feabeb8d5b76f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0c16fecc9e79f36c122c13909be0eeba848b7c20
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504979"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123661"
 ---
 # <a name="asynchronous-programming"></a>Асинхронное программирование
 
@@ -23,15 +23,16 @@ ms.locfileid: "43504979"
 3.  <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>  
   
  Эти функциональные возможности остаются в SqlClient в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+
+> [!TIP]
+> Начиная с версии [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], больше не нужны эти устаревшие методы `Asynchronous Processing=true` в строке подключения.  
   
- Начиная с [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], эти методы больше не требуют применения `Asynchronous Processing=true` в строке подключения.  
-  
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Функции асинхронного программирования, добавленные в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
+## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Возможности асинхронного программирования, добавленные в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
  Новые функции асинхронного программирования предоставляют простой метод создания асинхронного кода.  
   
- Дополнительные сведения о функции асинхронного программирования, которая была введена в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], см. в следующих разделах:  
+ Дополнительные сведения о возможности асинхронного программирования, которая была введена в [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], см. в следующих разделах:  
   
-- [Асинхронное программирование на языке C#](../../../csharp/async.md)
+- [Асинхронное программирование на C#](../../../csharp/async.md)
 
 - [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
@@ -87,6 +88,9 @@ ms.locfileid: "43504979"
 -   <xref:System.Data.SqlClient.SqlBulkCopy.WriteToServerAsync%2A?displayProperty=nameWithType>  
   
  Другие асинхронные элементы добавлены для поддержки [SqlClient потоковой передачи поддерживает](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md).  
+
+> [!TIP]
+> Новые асинхронные методы не требуют `Asynchronous Processing=true` в строке подключения.  
   
 ### <a name="synchronous-to-asynchronous-connection-open"></a>Открытие синхронного и асинхронного соединения  
  Для использования новой асинхронной функции вы можете обновить существующее приложение. Например, предположим, что приложение имеет синхронный алгоритм соединения и блокирует поток пользовательского интерфейса при каждом его подключении к базе данных, а после подключения приложение вызывает хранимую процедуру, которая указывает другим пользователям БД, кто подключился.  
