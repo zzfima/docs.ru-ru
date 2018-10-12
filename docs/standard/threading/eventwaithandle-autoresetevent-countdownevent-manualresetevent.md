@@ -1,6 +1,6 @@
 ---
 title: EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent
-ms.date: 03/30/2017
+ms.date: 09/14/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - wait handles
@@ -9,40 +9,36 @@ helpviewer_keywords:
 ms.assetid: cd94fc34-ac15-427f-b723-a1240a4fab7d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f61e614696e731a85a030e34aa4356137d9000d
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: be9c858d7c76fdcc1b3e02485eb0b459f4e7555c
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260153"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47205926"
 ---
-# <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a><span data-ttu-id="31849-102">EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent</span><span class="sxs-lookup"><span data-stu-id="31849-102">EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent</span></span>
-<span data-ttu-id="31849-103">Дескрипторы ожидания событий позволяют потокам синхронизировать действия, обмениваясь сигналами и ожидая сигналов друг друга.</span><span class="sxs-lookup"><span data-stu-id="31849-103">Event wait handles allow threads to synchronize activities by signaling each other and by waiting on each other's signals.</span></span> <span data-ttu-id="31849-104">Такие события синхронизации основаны на дескрипторах ожидания Win32 и делятся на два типа: те, которые автоматически сбрасываются при получении сигнала, и те, которые нужно сбрасывать вручную.</span><span class="sxs-lookup"><span data-stu-id="31849-104">These synchronization events are based on Win32 wait handles and can be divided into two types: those that reset automatically when signaled and those that are reset manually.</span></span>  
-  
- <span data-ttu-id="31849-105">Дескрипторы ожидания событий часто бывают полезны в тех же сценариях синхронизации, где используется класс <xref:System.Threading.Monitor>.</span><span class="sxs-lookup"><span data-stu-id="31849-105">Event wait handles are useful in many of the same synchronization scenarios as the <xref:System.Threading.Monitor> class.</span></span> <span data-ttu-id="31849-106">Дескрипторы ожидания событий часто проще использовать, чем методы <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> и <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType>, и они дают больше контроля над передачей сигналов.</span><span class="sxs-lookup"><span data-stu-id="31849-106">Event wait handles are often easier to use than the <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> and <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> methods, and they offer more control over signaling.</span></span> <span data-ttu-id="31849-107">Именованные дескрипторы ожидания событий можно также использовать для синхронизации действий между различными доменами приложений и процессами, в то время как мониторы являются локальными для домена приложения.</span><span class="sxs-lookup"><span data-stu-id="31849-107">Named event wait handles can also be used to synchronize activities across application domains and processes, whereas monitors are local to an application domain.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="31849-108">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="31849-108">In This Section</span></span>  
- [<span data-ttu-id="31849-109">EventWaitHandle</span><span class="sxs-lookup"><span data-stu-id="31849-109">EventWaitHandle</span></span>](../../../docs/standard/threading/eventwaithandle.md)  
- <span data-ttu-id="31849-110">Класс <xref:System.Threading.EventWaitHandle> может представлять локальные или именованные системные события с автоматическим или ручным сбросом.</span><span class="sxs-lookup"><span data-stu-id="31849-110">The <xref:System.Threading.EventWaitHandle> class can represent either automatic or manual reset events and either local events or named system events.</span></span>  
-  
- [<span data-ttu-id="31849-111">AutoResetEvent</span><span class="sxs-lookup"><span data-stu-id="31849-111">AutoResetEvent</span></span>](../../../docs/standard/threading/autoresetevent.md)  
- <span data-ttu-id="31849-112">Класс <xref:System.Threading.AutoResetEvent> является производным от <xref:System.Threading.EventWaitHandle> и представляет локальное событие с автоматическим сбросом.</span><span class="sxs-lookup"><span data-stu-id="31849-112">The <xref:System.Threading.AutoResetEvent> class derives from <xref:System.Threading.EventWaitHandle> and represents a local event that resets automatically.</span></span>  
-  
- [<span data-ttu-id="31849-113">ManualResetEvent and ManualResetEventSlim</span><span class="sxs-lookup"><span data-stu-id="31849-113">ManualResetEvent and ManualResetEventSlim</span></span>](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md)  
- <span data-ttu-id="31849-114">Класс <xref:System.Threading.ManualResetEvent> является производным от <xref:System.Threading.EventWaitHandle> и представляет локальное событие со сбросом вручную.</span><span class="sxs-lookup"><span data-stu-id="31849-114">The <xref:System.Threading.ManualResetEvent> class derives from <xref:System.Threading.EventWaitHandle> and represents a local event that must be reset manually.</span></span> <span data-ttu-id="31849-115">Класс <xref:System.Threading.ManualResetEventSlim> является упрощенной и более быстрой версией, которую можно использовать для событий в одном процессе.</span><span class="sxs-lookup"><span data-stu-id="31849-115">The <xref:System.Threading.ManualResetEventSlim> class is a lightweight, faster version that can be used for events within the same process.</span></span>  
-  
- [<span data-ttu-id="31849-116">CountdownEvent</span><span class="sxs-lookup"><span data-stu-id="31849-116">CountdownEvent</span></span>](../../../docs/standard/threading/countdownevent.md)  
- <span data-ttu-id="31849-117">Класс <xref:System.Threading.CountdownEvent> предоставляет упрощенный способ реализации шаблонов параллельного выполнения ветвлений и соединений в коде, где используются дескрипторы ожидания.</span><span class="sxs-lookup"><span data-stu-id="31849-117">The <xref:System.Threading.CountdownEvent> class provides a simplified way to implement fork/join parallelism patterns in code that uses wait handles.</span></span>  
-  
-## <a name="related-sections"></a><span data-ttu-id="31849-118">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="31849-118">Related Sections</span></span>  
- [<span data-ttu-id="31849-119">Дескрипторы ожидания</span><span class="sxs-lookup"><span data-stu-id="31849-119">Wait Handles</span></span>](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- <span data-ttu-id="31849-120">Класс <xref:System.Threading.WaitHandle> является базовым для классов <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.Semaphore> и <xref:System.Threading.Mutex>.</span><span class="sxs-lookup"><span data-stu-id="31849-120">The <xref:System.Threading.WaitHandle> class is the base class for the <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.Semaphore>, and <xref:System.Threading.Mutex> classes.</span></span> <span data-ttu-id="31849-121">Он содержит статические методы, например <xref:System.Threading.WaitHandle.SignalAndWait%2A> и <xref:System.Threading.WaitHandle.WaitAll%2A>, которые помогают в работе со всеми типами дескрипторов ожидания.</span><span class="sxs-lookup"><span data-stu-id="31849-121">It contains static methods such as <xref:System.Threading.WaitHandle.SignalAndWait%2A> and <xref:System.Threading.WaitHandle.WaitAll%2A> that are useful when working with all types of wait handles.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="31849-122">См. также</span><span class="sxs-lookup"><span data-stu-id="31849-122">See also</span></span>
+# <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a><span data-ttu-id="2f02d-102">EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent</span><span class="sxs-lookup"><span data-stu-id="2f02d-102">EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent</span></span>
 
-- <xref:System.Threading.EventWaitHandle>  
-- <xref:System.Threading.WaitHandle>  
-- <xref:System.Threading.AutoResetEvent>  
-- <xref:System.Threading.ManualResetEvent>  
-- [<span data-ttu-id="31849-123">Объекты и функциональные возможности работы с потоками</span><span class="sxs-lookup"><span data-stu-id="31849-123">Threading Objects and Features</span></span>](../../../docs/standard/threading/threading-objects-and-features.md)  
-- [<span data-ttu-id="31849-124">Основы управляемых потоков</span><span class="sxs-lookup"><span data-stu-id="31849-124">Managed Threading Basics</span></span>](../../../docs/standard/threading/managed-threading-basics.md)
+<span data-ttu-id="2f02d-103">Дескрипторы ожидания событий позволяют потокам синхронизировать действия, обмениваясь сигналами и ожидая сигналов друг друга.</span><span class="sxs-lookup"><span data-stu-id="2f02d-103">Event wait handles allow threads to synchronize activities by signaling each other and by waiting on each other's signals.</span></span> <span data-ttu-id="2f02d-104">Такие события синхронизации основаны на дескрипторах ожидания ОС и делятся на два типа — те, которые автоматически сбрасываются при получении сигнала, и те, которые нужно сбрасывать вручную.</span><span class="sxs-lookup"><span data-stu-id="2f02d-104">These synchronization events are based on operating system wait handles and can be divided into two types: those that reset automatically when signaled and those that are reset manually.</span></span>  
+  
+<span data-ttu-id="2f02d-105">Дескрипторы ожидания событий часто бывают полезны в тех же сценариях синхронизации, где используется класс <xref:System.Threading.Monitor>.</span><span class="sxs-lookup"><span data-stu-id="2f02d-105">Event wait handles are useful in many of the same synchronization scenarios as the <xref:System.Threading.Monitor> class.</span></span> <span data-ttu-id="2f02d-106">Дескрипторы ожидания событий часто проще использовать, чем методы <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> и <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType>, и они дают больше контроля над передачей сигналов.</span><span class="sxs-lookup"><span data-stu-id="2f02d-106">Event wait handles are often easier to use than the <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType> and <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> methods, and they offer more control over signaling.</span></span> <span data-ttu-id="2f02d-107">Именованные дескрипторы ожидания событий можно также использовать для синхронизации действий между различными доменами приложений и процессами, в то время как мониторы являются локальными для домена приложения.</span><span class="sxs-lookup"><span data-stu-id="2f02d-107">Named event wait handles can also be used to synchronize activities across application domains and processes, whereas monitors are local to an application domain.</span></span>  
+  
+## <a name="in-this-section"></a><span data-ttu-id="2f02d-108">Содержание раздела</span><span class="sxs-lookup"><span data-stu-id="2f02d-108">In this section</span></span>
+
+ [<span data-ttu-id="2f02d-109">EventWaitHandle</span><span class="sxs-lookup"><span data-stu-id="2f02d-109">EventWaitHandle</span></span>](eventwaithandle.md)  
+ <span data-ttu-id="2f02d-110">Класс <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> может представлять локальные или именованные системные события с автоматическим или ручным сбросом.</span><span class="sxs-lookup"><span data-stu-id="2f02d-110">The <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> class can represent either automatic or manual reset events and either local events or named system events.</span></span>  
+  
+ [<span data-ttu-id="2f02d-111">AutoResetEvent</span><span class="sxs-lookup"><span data-stu-id="2f02d-111">AutoResetEvent</span></span>](autoresetevent.md)  
+ <span data-ttu-id="2f02d-112">Класс <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType> является производным от <xref:System.Threading.EventWaitHandle> и представляет локальное событие с автоматическим сбросом.</span><span class="sxs-lookup"><span data-stu-id="2f02d-112">The <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType> class derives from <xref:System.Threading.EventWaitHandle> and represents a local event that resets automatically.</span></span>  
+  
+ [<span data-ttu-id="2f02d-113">ManualResetEvent and ManualResetEventSlim</span><span class="sxs-lookup"><span data-stu-id="2f02d-113">ManualResetEvent and ManualResetEventSlim</span></span>](manualresetevent-and-manualreseteventslim.md)  
+ <span data-ttu-id="2f02d-114">Класс <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> является производным от <xref:System.Threading.EventWaitHandle> и представляет локальное событие со сбросом вручную.</span><span class="sxs-lookup"><span data-stu-id="2f02d-114">The <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> class derives from <xref:System.Threading.EventWaitHandle> and represents a local event that must be reset manually.</span></span> <span data-ttu-id="2f02d-115">Класс <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> является упрощенной и более быстрой версией, которую можно использовать для событий в одном процессе.</span><span class="sxs-lookup"><span data-stu-id="2f02d-115">The <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> class is a lightweight, faster version that can be used for events within the same process.</span></span>  
+  
+ [<span data-ttu-id="2f02d-116">CountdownEvent</span><span class="sxs-lookup"><span data-stu-id="2f02d-116">CountdownEvent</span></span>](countdownevent.md)  
+ <span data-ttu-id="2f02d-117">Класс <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> предоставляет упрощенный способ реализации шаблонов параллельного выполнения ветвлений и соединений в коде, где используются дескрипторы ожидания.</span><span class="sxs-lookup"><span data-stu-id="2f02d-117">The <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> class provides a simplified way to implement fork/join parallelism patterns in code that uses wait handles.</span></span>  
+
+## <a name="see-also"></a><span data-ttu-id="2f02d-118">См. также</span><span class="sxs-lookup"><span data-stu-id="2f02d-118">See also</span></span>
+
+- <xref:System.Threading.WaitHandle?displayProperty=nameWithType>
+- <xref:System.Threading.Barrier?displayProperty=nameWithType>
+- [<span data-ttu-id="2f02d-119">Объекты и функциональные возможности работы с потоками</span><span class="sxs-lookup"><span data-stu-id="2f02d-119">Threading objects and features</span></span>](threading-objects-and-features.md)
+- [<span data-ttu-id="2f02d-120">Основы управляемых потоков</span><span class="sxs-lookup"><span data-stu-id="2f02d-120">Managed threading basics</span></span>](managed-threading-basics.md)
