@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: dc5c76cf-7b12-406f-b79c-d1a023ec245d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0501bb2b67c6bbe23c46dc350aedea7d7be09ba1
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: ae8fbb47986e5baaecb919ce79ae384a8427737a
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911735"
+ms.lasthandoff: 09/29/2018
+ms.locfileid: "47231129"
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Маршалинг данных при вызове неуправляемого кода
 Для вызова функций, экспортированных из неуправляемой библиотеки, приложению .NET Framework требуется прототип функции в управляемом коде, представляющий неуправляемую функцию. Чтобы создать прототип, который допускает вызов неуправляемого кода для правильного маршалинга данных, необходимо выполнить указанные ниже действия.  
@@ -46,10 +46,10 @@ ms.locfileid: "42911735"
 |**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32 бита|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|В кодировке ANSI.|  
 |**WCHAR**|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|В кодировке Юникод.|  
-|**LPSTR**|**char \***|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|  
-|**LPCSTR**|**Const char\***|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|  
-|**LPWSTR**|**wchar_t \***|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|  
-|**LPCWSTR**|**Const wchar_t \***|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|  
+|**LPSTR**|**char &ast;**|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|  
+|**LPCSTR**|**Const char &ast;**|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке ANSI.|  
+|**LPWSTR**|**wchar_t &ast;**|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|  
+|**LPCWSTR**|**Const wchar_t &ast;**|<xref:System.String?displayProperty=nameWithType> или <xref:System.Text.StringBuilder?displayProperty=nameWithType>|В кодировке Юникод.|  
 |**FLOAT**|**Float**|<xref:System.Single?displayProperty=nameWithType>|32 бита|  
 |**DOUBLE**|**Double**|<xref:System.Double?displayProperty=nameWithType>|64 бита|  
   

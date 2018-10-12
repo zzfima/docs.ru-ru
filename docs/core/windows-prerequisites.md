@@ -4,12 +4,12 @@ description: Узнайте о том, какие зависимости нео�
 author: mairaw
 ms.author: mairaw
 ms.date: 08/31/2018
-ms.openlocfilehash: 477d303b50495070ba3a3540188deb274dd9f510
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 63c0de2b413f38458dba89506f4070760b3f53f8
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44277251"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "45747472"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Необходимые компоненты для .NET Core в Windows
 
@@ -61,7 +61,7 @@ ms.locfileid: "44277251"
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Необходимые компоненты для Visual Studio 2017
 
-Для разработки приложений .NET Core с помощью пакета SDK для .NET Core вы можете использовать любой редактор. [Visual Studio 2017](#visual-studio-2017) предоставляет интегрированную среду разработки для приложений .NET Core в Windows.
+Для разработки приложений .NET Core с помощью пакета SDK для .NET Core вы можете использовать любой редактор. Visual Studio 2017 предоставляет интегрированную среду разработки для приложений .NET Core в Windows.
 
 Дополнительные сведения об обновлениях Visual Studio 2017 см. в [заметках о выпуске](/visualstudio/releasenotes/vs2017-relnotes).
 

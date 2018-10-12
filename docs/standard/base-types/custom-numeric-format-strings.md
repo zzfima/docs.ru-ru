@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b9cf18c4893b618d16ef24bab83a19154e19a9c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 83f3abb2c77461b74e388dcb421fac6c19a43655
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106532"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47205073"
 ---
 # <a name="custom-numeric-format-strings"></a>Строки настраиваемых числовых форматов
 
@@ -47,13 +47,13 @@ ms.locfileid: "37106532"
 |"‰"|Местозаполнитель промилле|Умножает число на 1000 и вставляет локализованный символ промилле в результирующую строку.<br /><br /> Дополнительные сведения: [Настраиваемый описатель "‰"](#SpecifierPerMille).|0.03697 ("#0.00‰", en-US) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36,97‰|  
 |"E0"<br /><br /> "E+0"<br /><br /> "E-0"<br /><br /> "E0"<br /><br /> "E+0"<br /><br /> "E-0"|Экспоненциальная нотация|Если за этим описателем следует по меньшей мере один ноль (0), результат форматируется с использованием экспоненциальной нотации. Регистр ("E" или "e") определяет регистр символа экспоненты в результирующей строке. Минимальное число цифр экспоненты определяется количеством нулей, стоящих за символом "E" или "e". Знак "+" указывает на то, что перед экспонентой всегда должен ставиться символ знака. Знак "-" указывает на то, что символ знака должен ставиться только в случае, если экспонента имеет отрицательное значение.<br /><br /> Дополнительные сведения: [Настраиваемые описатели "E" и "e"](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
 |"\\"|Escape-символ|Указывает на то, что следующий за ним символ должен рассматриваться как литерал, а не как описатель настраиваемого формата.<br /><br /> Дополнительные сведения: [Escape-символ \\](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
-|'*строка*'<br /><br /> "*строка*"|Разделитель строк-литералов|Указывает на то, что заключенные в разделители символы должны быть скопированы в результирующую строку без изменений.<br/><br/>Дополнительные сведения см. в подразделе [Символьные литералы](#character-literals).|68 ("# ' градусов'") -> 68  градусов<br /><br /> 68 ("# ' градусов'") -> 68 градусов|  
+|'*строка*'<br /><br /> "*строка*"|Разделитель строк-литералов|Указывает на то, что заключенные в разделители символы должны быть скопированы в результирующую строку без изменений.<br/><br/>Дополнительные сведения см. в подразделе [Символьные литералы](#character-literals).|68 ("# ' градусов'") -> 68 градусов<br /><br /> 68 ("# ' градусов'") -> 68 градусов|  
 |;|Разделитель секций|Определяет секции с раздельными строками формата для положительных чисел, отрицательных чисел и нуля.<br /><br /> Дополнительные сведения: [Разделитель секций ";"](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  
 |Другой|Все остальные символы|Символ копируется в результирующую строку без изменений.<br/><br/>Дополнительные сведения см. в подразделе [Символьные литералы](#character-literals).|68 ("# °") -> 68 °|  
   
  В приведенных ниже разделах содержится подробная информация о всех описателях настраиваемого числового формата.  
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-culture-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-partial-note.md)] 
   
 <a name="Specifier0"></a>   
 ## <a name="the-0-custom-specifier"></a>Настраиваемый описатель "0"  
@@ -64,7 +64,7 @@ ms.locfileid: "37106532"
  В следующем примере показано форматирование нескольких значений с помощью строк настраиваемого формата, содержащих нулевые заполнители.  
   
  [!code-cpp[Formatting.Numeric.Custom#1](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#1)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
+ [!code-csharp[Formatting.Numeric.Custom#1](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#1)]
  [!code-vb[Formatting.Numeric.Custom#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#1)]  
   
  [К таблице](#table)  
@@ -80,7 +80,7 @@ ms.locfileid: "37106532"
  В следующем примере показано форматирование нескольких значений с помощью строк настраиваемого формата, содержащих заполнители для цифр.  
   
  [!code-cpp[Formatting.Numeric.Custom#2](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#2)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
+ [!code-csharp[Formatting.Numeric.Custom#2](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#2)]
  [!code-vb[Formatting.Numeric.Custom#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#2)]  
   
  Чтобы получить итоговую строку, в которой отсутствуют цифры или начальные нули заменены пробелами, используйте [функциональность составного форматирования](../../../docs/standard/base-types/composite-formatting.md) и укажите ширину поля, как показано в следующем примере.  
@@ -100,7 +100,7 @@ ms.locfileid: "37106532"
  В следующем примере спецификатор формата "." используется для определения местоположения десятичного разделителя в нескольких выходных строках.  
   
  [!code-cpp[Formatting.Numeric.Custom#3](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#3)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
+ [!code-csharp[Formatting.Numeric.Custom#3](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#3)]
  [!code-vb[Formatting.Numeric.Custom#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#3)]  
   
  [К таблице](#table)  
@@ -120,13 +120,13 @@ ms.locfileid: "37106532"
  В следующем примере демонстрируется использование запятой в качестве разделителя групп.  
   
  [!code-cpp[Formatting.Numeric.Custom#4](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#4)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
+ [!code-csharp[Formatting.Numeric.Custom#4](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#4)]
  [!code-vb[Formatting.Numeric.Custom#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#4)]  
   
  Следующий пример иллюстрирует использование запятой как спецификатора масштабирования числа.  
   
  [!code-cpp[Formatting.Numeric.Custom#5](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#5)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
+ [!code-csharp[Formatting.Numeric.Custom#5](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#5)]
  [!code-vb[Formatting.Numeric.Custom#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#5)]  
   
  [К таблице](#table)  
@@ -138,7 +138,7 @@ ms.locfileid: "37106532"
  В следующем примере определяется несколько строк настраиваемого формата, включающих настраиваемый описатель "%".  
   
  [!code-cpp[Formatting.Numeric.Custom#6](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#6)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
+ [!code-csharp[Formatting.Numeric.Custom#6](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#6)]
  [!code-vb[Formatting.Numeric.Custom#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#6)]  
   
  [К таблице](#table)  
@@ -150,7 +150,7 @@ ms.locfileid: "37106532"
  В следующем примере определяется строка настраиваемого формата, включающая настраиваемый описатель "‰".  
   
  [!code-cpp[Formatting.Numeric.Custom#9](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#9)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
+ [!code-csharp[Formatting.Numeric.Custom#9](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#9)]
  [!code-vb[Formatting.Numeric.Custom#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#9)]  
   
  [К таблице](#table)  
@@ -162,7 +162,7 @@ ms.locfileid: "37106532"
  В следующем примере несколько числовых значений форматируются с помощью спецификаторов экспоненциального представления.  
   
  [!code-cpp[Formatting.Numeric.Custom#7](../../../samples/snippets/cpp/VS_Snippets_CLR/formatting.numeric.custom/cpp/custom.cpp#7)]
- [!code-csharp-interactive[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
+ [!code-csharp[Formatting.Numeric.Custom#7](../../../samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/custom.cs#7)]
  [!code-vb[Formatting.Numeric.Custom#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/Custom.vb#7)]  
   
  [К таблице](#table)  
@@ -235,8 +235,8 @@ ms.locfileid: "37106532"
 
 В следующем примере применяются оба подхода, что позволяет включить зарезервированные символы в настраиваемую строку числового формата.  
   
-     [!code-csharp-interactive[including reserved characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/cs/literal1.cs#1)]
-     [!code-vb[including reserved characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/vb/literal1.vb#1)]  
+ [!code-csharp-interactive[including reserved characters](~/samples/snippets/csharp/VS_Snippets_CLR/formatting.numeric.custom/literal1.cs#1)]
+ [!code-vb[including reserved characters](~/samples/snippets/visualbasic/VS_Snippets_CLR/formatting.numeric.custom/literal1.vb#1)]  
     
 <a name="NotesCustomFormatting"></a>   
 ## <a name="notes"></a>Примечания  
@@ -264,9 +264,10 @@ ms.locfileid: "37106532"
   
  [К таблице](#table)  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
- [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [Практическое руководство. Добавление к числу начальных нулей](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
- [Пример. Служебная программа форматирования для .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Globalization.NumberFormatInfo?displayProperty=nameWithType>  
+- [Типы форматирования](../../../docs/standard/base-types/formatting-types.md)  
+- [Standard Numeric Format Strings](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
+- [Практическое руководство. Добавление к числу начальных нулей](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+- [Пример. Служебная программа форматирования для .NET Framework 4](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

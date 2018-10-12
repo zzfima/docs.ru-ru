@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 748b4170e9e4c0df048c542d06bcb64a56ccf677
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 77269cd9cdb922c1f9576afa93d6599ec7a834e4
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199951"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46562126"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>Выполнение строковых операций, не зависящих от языка и региональных параметров
 Большинство методов .NET Framework, которые выполняют операции со строками с учетом языка и региональных параметров, по умолчанию предоставляют перегрузки, позволяющие явно указать используемые язык и региональные параметры, указав соответствующий параметр <xref:System.Globalization.CultureInfo>. Эти перегрузки позволяют устранить различия в сопоставлении регистров и правилах сортировки, вызванные различием языка и региональных параметров, и получить результаты, которые не зависят от языка и региональных параметров.  
@@ -44,4 +44,5 @@ ms.locfileid: "44199951"
 
 ## <a name="see-also"></a>См. также
 
-- [Сортировка таблиц веса](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Таблицы весовых коэффициентов сортировки (для .NET в ОС Windows)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Таблица параметров сортировки по умолчанию для элементов Юникод (для .NET Core в Linux и macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

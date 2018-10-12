@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67955e2b9d523cdee02f6de548720fdad261ab4d
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: c12444e435fa844095827411ba0e068303163bf4
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43748436"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47201144"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (средство настройки политики управления доступом для кода)
 Программа для настройки политики разграничения доступа кода (Caspol.exe) позволяет пользователям и администраторам изменять политику безопасности на уровне компьютера, пользователя и предприятия.  

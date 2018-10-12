@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f78fff50d1a227061076790ad77f17debe3f690
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: abc53381bf6cc8458b83edf5586b76fe7ed5f303
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743320"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47199902"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>Практическое руководство. Создание ссылки на сборку со строгим именем
 Процесс использования ссылок на типы или ресурсы, находящиеся в сборке со строгим именем, обычно понятен. Создать ссылку можно в момент компиляции (ранняя привязка) или же во время выполнения.  
@@ -68,7 +68,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
  Если же имеется файл открытого ключа, то вместо этого можно использовать следующую команду (обратите внимание на разный регистр символов в параметре командной строки):  
   
- **sn -tp \<** *сборка* **>**  
+ **sn -tp \<** *файл открытого ключа* **>**  
   
 ## <a name="see-also"></a>См. также  
  [Создание и использование сборок со строгими именами](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

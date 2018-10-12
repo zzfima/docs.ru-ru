@@ -4,12 +4,12 @@ description: Различия между существующими файлам
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: d868eb689af1d87ea2adb1f0069345cbb8195af7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1fd264da2863fbeb88900be0f6fe000acac08a09
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45646380"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47216920"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Дополнения к формату CSPROJ для .NET Core
 
@@ -83,11 +83,11 @@ ms.locfileid: "45646380"
 
 Хотя эти изменения csproj значительно упростили файлы проекта, возможно, вы захотите просмотреть полностью развернутый пакет в представлении MSBuild после включения пакета SDK и его целевых объектов. Выполните предварительную обработку проекта, [включив](/visualstudio/msbuild/msbuild-command-line-reference#preprocess) в команду [`dotnet msbuild`](dotnet-msbuild.md) параметр `/pp`. Это позволит просмотреть сведения об импортированных файлах, их источниках, вкладе в сборку без фактического создания проекта:
 
-`dotnet msbuild /pp:fullproject.xml`
+`dotnet msbuild -pp:fullproject.xml`
 
 Если проект имеет несколько требуемых версий .NET Framework, результаты выполнения команды должны касаться только одной из них. Эту версию следует указать в качестве свойства MSBuild:
 
-`dotnet msbuild /p:TargetFramework=netcoreapp2.0 /pp:fullproject.xml`
+`dotnet msbuild -p:TargetFramework=netcoreapp2.0 -pp:fullproject.xml`
 
 ## <a name="additions"></a>Добавления
 
@@ -265,3 +265,37 @@ URL-адрес для изображения размером 64x64 с проз�
 
 ### <a name="nuspecproperties"></a>NuspecProperties
 Список разделенных точками с запятой пар "ключ-значение".
+
+## <a name="assemblyinfo-properties"></a>Свойства AssemblyInfo
+[Атрибуты сборки](../../framework/app-domains/set-assembly-attributes.md), которые обычно содержатся в файле *AssemblyInfo*, теперь автоматически создаются на основе свойств.
+
+### <a name="properties-per-attribute"></a>Свойства каждого атрибута
+
+Каждый атрибут имеет свойства, одно из которых позволяет управлять содержимым атрибута, а другое — отключить создание атрибута, как показано в следующей таблице.
+
+| Атрибут                                                      | Свойство.               | Свойство, используемое для отключения                             |
+|----------------------------------------------------------------|------------------------|-------------------------------------------------|
+| <xref:System.Reflection.AssemblyCompanyAttribute>              | `Company`              | `GenerateAssemblyCompanyAttribute`              |
+| <xref:System.Reflection.AssemblyConfigurationAttribute>        | `Configuration`        | `GenerateAssemblyConfigurationAttribute`        |
+| <xref:System.Reflection.AssemblyCopyrightAttribute>            | `Copyright`            | `GenerateAssemblyCopyrightAttribute`            |
+| <xref:System.Reflection.AssemblyDescriptionAttribute>          | `Description`          | `GenerateAssemblyDescriptionAttribute`          |
+| <xref:System.Reflection.AssemblyFileVersionAttribute>          | `FileVersion`          | `GenerateAssemblyFileVersionAttribute`          |
+| <xref:System.Reflection.AssemblyInformationalVersionAttribute> | `InformationalVersion` | `GenerateAssemblyInformationalVersionAttribute` |
+| <xref:System.Reflection.AssemblyProductAttribute>              | `Product`              | `GenerateAssemblyProductAttribute`              |
+| <xref:System.Reflection.AssemblyTitleAttribute>                | `AssemblyTitle`        | `GenerateAssemblyTitleAttribute`                |
+| <xref:System.Reflection.AssemblyVersionAttribute>              | `AssemblyVersion`      | `GenerateAssemblyVersionAttribute`              |
+| <xref:System.Resources.NeutralResourcesLanguageAttribute>      | `NeutralLanguage`      | `GenerateNeutralResourcesLanguageAttribute`     |
+
+Примечания.
+
+* `AssemblyVersion` и `FileVersion` по умолчанию имеют значение `$(Version)` без суффикса. Например, если для `$(Version)` нужно указать `1.2.3-beta.4`, то значением будет `1.2.3`.
+* По умолчанию для `InformationalVersion` используется значение `$(Version)`.
+* `InformationalVersion` имеет значение `$(SourceRevisionId)`, которое добавляется, если указано свойство. Его можно отключить с помощью `IncludeSourceRevisionInInformationalVersion`.
+* Свойства `Copyright` и `Description` также используются для метаданных NuGet.
+* Свойство `Configuration` является общим для всего процесса сборки, и задается с помощью параметра `--configuration` команд `dotnet`.
+
+### <a name="generateassemblyinfo"></a>GenerateAssemblyInfo 
+Логическое свойство, которое позволяет включить или отключить создание всех свойств AssemblyInfo. Значение по умолчанию — `true`. 
+
+### <a name="generatedassemblyinfofile"></a>GeneratedAssemblyInfoFile 
+Путь к файлу сведений о созданной сборке. По умолчанию это путь к файлу в каталоге объектов `$(IntermediateOutputPath)`.

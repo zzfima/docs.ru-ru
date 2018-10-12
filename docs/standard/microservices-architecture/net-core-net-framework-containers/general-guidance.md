@@ -3,13 +3,13 @@ title: Общие рекомендации
 description: Архитектура микрослужб .NET для контейнерных приложений .NET | Общие рекомендации
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/18/2017
-ms.openlocfilehash: bd654c23cf8a8d0986575642ef25d6864251a4e4
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/11/2018
+ms.openlocfilehash: e77065614423cd2e7fdb51258a8c7650280d0400
+ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37104083"
+ms.lasthandoff: 09/21/2018
+ms.locfileid: "46537830"
 ---
 # <a name="general-guidance"></a>Общие рекомендации
 
@@ -27,7 +27,7 @@ ms.locfileid: "37104083"
 
 Дополнительное преимущество использования .NET Core заключается в том, что можно параллельно запускать версии .NET для приложений на одной и той же машине. Данное преимущество более важно для серверов или виртуальных машин, которые не используют контейнеры, так как контейнеры изолируют версии .NET, нужные приложению. (При условии, что они совместимы с базовой ОС.)
 
-Следует использовать .NET Framework с контейнерами Windows или Linux для контейнерного серверного приложения Docker в следующих случаях.
+.NET Framework для серверных приложений в контейнерах Docker следует использовать в перечисленных ниже случаях.
 
 -   В настоящее время приложение использует .NET Framework и имеет строгие зависимости от Windows.
 
@@ -35,15 +35,15 @@ ms.locfileid: "37104083"
 
 -   Требуются сторонние библиотеки .NET или пакеты NuGet, недоступные для .NET Core.
 
-Использование .NET Framework в Docker может улучшить качество развертывания, сводя к минимуму проблемы развертывания. Данный сценарий [*"подъема и смены"*](https://aka.ms/liftandshiftwithcontainersebook) важен для контейнеризации приложений прежних версий, которые изначально были разработаны с использованием классической платформы .NET Framework, например ASP.NET WebForms, веб-приложений MVC или служб WCF (Windows Communication Foundation).
+Использование .NET Framework в Docker может улучшить качество развертывания, сводя к минимуму проблемы развертывания. Данный [сценарий "подъема и смены"](https://aka.ms/liftandshiftwithcontainersebook) важен для контейнеризации приложений прежних версий, которые изначально были разработаны с использованием классической платформы .NET Framework, например ASP.NET WebForms, веб-приложений MVC или служб WCF (Windows Communication Foundation).
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Электронная книга. Модернизация существующих приложений .NET Framework с помощью Azure и контейнеров Windows**
-    [*https://aka.ms/liftandshiftwithcontainersebook*](https://aka.ms/liftandshiftwithcontainersebook)
+-   **Электронная книга. Модернизация существующих приложений .NET Framework с помощью Azure и контейнеров Windows**  
+    https://aka.ms/liftandshiftwithcontainersebook
 
--   **Примеры приложений. Модернизация веб-приложений ASP.NET прежних версий с помощью контейнеров Windows**
-    [*https://aka.ms/eshopmodernizing*](https://aka.ms/eshopmodernizing)
+-   **Примеры приложений. Модернизация веб-приложений ASP.NET прежних версий с помощью контейнеров Windows**  
+    https://aka.ms/eshopmodernizing
 
 
 >[!div class="step-by-step"]

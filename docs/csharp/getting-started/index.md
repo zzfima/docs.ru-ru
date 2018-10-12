@@ -7,12 +7,12 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
-ms.openlocfilehash: aa34c181073d089d137ac0ef64c85c8fe2772093
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 73bf7ca1f05bd388239d970fcc6e33bf30810111
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45972534"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837897"
 ---
 # <a name="get-started-with-c"></a>Начало работы с C\#
 
@@ -26,7 +26,7 @@ ms.locfileid: "45972534"
 
 * [Создание приложения "Hello World" на C# с помощью .NET Core в Visual Studio 2017](../../core/tutorials/with-visual-studio.md)
 
-   Visual Studio в самой свежей версии Visual Studio 2017 позволяет писать, компилировать, запускать, отлаживать, профилировать и публиковать приложения с помощью интегрированной среды разработки для ОС Windows.
+   Visual Studio 2017, самая свежая версия Visual Studio, позволяет писать, компилировать, запускать, отлаживать, профилировать и публиковать приложения с помощью интегрированной среды разработки для ОС Windows.
 
    Эта статья предлагает вам создать и выполнить простое приложение Hello World, а затем преобразовать его в более интерактивный вариант. Когда вы завершите создание приложения и выполните его, вы сможете на его примере научиться [отлаживать](../../core/tutorials/debugging-with-visual-studio.md) и [публиковать](../../core/tutorials/publishing-with-visual-studio.md) приложения, чтобы выполнять их на любой платформе, поддерживаемой .NET Core.
 

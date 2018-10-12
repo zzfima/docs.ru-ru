@@ -14,6 +14,7 @@
 ### [Составление потоков](composing-streams.md)
 ### [Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows](how-to-convert-between-dotnet-streams-and-winrt-streams.md)
 ## [Асинхронный файловый ввод-вывод](asynchronous-file-i-o.md)
+## [Обработка ошибок ввода-вывода](handling-io-errors.md)
 ## [Изолированное хранилище](isolated-storage.md)
 ### [Типы изоляции](types-of-isolation.md)
 ### [Практическое руководство. Получение хранилищ для изолированного хранения](how-to-obtain-stores-for-isolated-storage.md)

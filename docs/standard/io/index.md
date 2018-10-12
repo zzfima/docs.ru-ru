@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0ffef95c8f9a187d5dac6902462d9747023384d
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6bd0187f831db7fd68272e14c022efb45c8260f2
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45685716"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48025601"
 ---
 # <a name="file-and-stream-io"></a>Файловый и потоковый ввод-вывод
 Файловый и потоковый ввод-вывод относятся к передаче данных с носителя информации или на него. В .NET Framework пространства имен `System.IO` содержат типы, которые обеспечивают как синхронные, так и асинхронные операции чтения и записи для потоков и файлов. Кроме того, эти пространства имен содержат типы, выполняющие сжатие и распаковку файлов, а также типы, которые обеспечивают взаимодействие через каналы и последовательные порты.  
@@ -41,6 +41,8 @@ ms.locfileid: "45685716"
   
 -   <xref:System.IO.Path> предоставляет методы и свойства для обработки строк каталогов межплатформенным способом.  
   
+ При вызове методов для работы с файловой системой следует всегда использовать надежные механизмы обработки исключений. Дополнительные сведения см. в [разделе об обработке ошибок ввода-вывода](handling-io-errors.md).
+ 
  Помимо использования этих классов, пользователи Visual Basic могут использовать методы и свойства, предоставляемые классом <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> для файлового ввода-вывода.  
   
  См. разделы [Практическое руководство. Копирование каталогов](../../../docs/standard/io/how-to-copy-directories.md), [Практическое руководство. Создание списка каталогов](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69) и [Практическое руководство. Перечисление каталогов и файлов](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b1fa907be4571e0a5f95ab798210bedb154e9170
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44264679"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45698566"
 ---
 # <a name="comparing-strings-in-net"></a>Сравнение строк в .NET
 Платформа .NET обеспечивает несколько методов для сравнения значений строк. В таблице ниже перечислены и описаны методы сравнения значений.  
@@ -154,4 +154,5 @@ ms.locfileid: "44264679"
 
 - [Базовые операции со строками в .NET Framework](../../../docs/standard/base-types/basic-string-operations.md)  
 - [Выполнение строковых операций, не зависящих от языка и региональных параметров](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [Сортировка таблиц веса](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Таблицы весовых коэффициентов сортировки (для .NET в Windows)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [Таблица параметров сортировки по умолчанию для элементов Юникод (для .NET Core в Linux и macOS)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

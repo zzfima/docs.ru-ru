@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3dad3e33968b72d199b412c65f04a4079020f78
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a879cce8eb429e2daeaa5db963b3d95d1e944da
+ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33592593"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47171378"
 ---
 # <a name="task-based-asynchronous-programming"></a>Асинхронное программирование на основе задач
 Библиотека параллельных задач (TPL) основана на концепции *задач*, представляющих асинхронные операции. В некотором смысле задача похожа на поток или рабочий элемент <xref:System.Threading.ThreadPool>, но на более высоком уровне абстракции. Термин *параллелизм задач* означает одновременное выполнение одной или нескольких разных задач. Задачи предоставляют два основных преимущества.  
@@ -59,10 +59,10 @@ ms.locfileid: "33592593"
  [!code-csharp[TPL_TaskIntro#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/run1.cs#2)]
  [!code-vb[TPL_TaskIntro#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/run1.vb#2)]  
   
- Для создания и запуска задачи в одной операции можно также использовать метод <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Используйте этот метод, если нет необходимости разделять создание и планирование и требуются дополнительные параметры создания задач или использование определенного планировщика, а также при необходимости передачи дополнительного состояния задаче через ее свойство <xref:System.Threading.Tasks.Task.AsyncState%2A>, как показано в следующем примере.  
+ Для создания и запуска задачи в одной операции можно также использовать метод <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType>. Используйте этот метод, если нет необходимости разделять создание и планирование и требуются дополнительные параметры создания задач или использование определенного планировщика, а также при необходимости передачи дополнительного состояния задаче, которое можно получить через ее свойство <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType>, как показано в следующем примере.  
   
- [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/startnew1.cs#3)]
- [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/startnew1.vb#3)]  
+ [!code-csharp[TPL_TaskIntro#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/asyncstate.cs#23)]
+ [!code-vb[TPL_TaskIntro#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/asyncstate.vb#23)]  
   
  Задачи <xref:System.Threading.Tasks.Task> и <xref:System.Threading.Tasks.Task%601> предоставляют статическое свойство <xref:System.Threading.Tasks.Task.Factory%2A>, возвращающее экземпляр по умолчанию объекта <xref:System.Threading.Tasks.TaskFactory>, чтобы можно было вызвать метод как `Task.Factory.StartNew()`. Кроме того, поскольку в следующем примере задачи относятся к типу <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>, каждая из них имеет открытое свойство <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType>, содержащее результат вычисления. Задачи выполняются асинхронно и могут завершиться в любом порядке. При обращении к свойству <xref:System.Threading.Tasks.Task%601.Result%2A> до завершения вычисления оно блокирует вызывающий поток до тех пор, пока значение не станет доступно.  
   
@@ -267,6 +267,7 @@ ms.locfileid: "33592593"
 |[Параллелизм данных](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Описывает способы использования методов <xref:System.Threading.Tasks.Parallel.For%2A> и <xref:System.Threading.Tasks.Parallel.ForEach%2A> для создания параллельных циклов для данных.|  
 |[Параллельное программирование](../../../docs/standard/parallel-programming/index.md)|Узел верхнего уровня для параллельного программирования в .NET Framework.|  
   
-## <a name="see-also"></a>См. также  
- [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)  
- [Примеры параллельного программирования в .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+## <a name="see-also"></a>См. также
+
+- [Параллельное программирование](../../../docs/standard/parallel-programming/index.md)  
+- [Примеры параллельного программирования в .NET Framework](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

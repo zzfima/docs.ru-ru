@@ -1,38 +1,60 @@
 ---
-title: Таблица форматирования числовых результатов (Справочник по C#)
-ms.date: 07/20/2015
+title: Таблица форматирования числовых результатов (справочник по C#)
+description: Сведения об использовании строк стандартных числовых форматов C#
+ms.date: 09/20/2018
 helpviewer_keywords:
 - formatting [C#]
 - numeric formatting [C#]
 - String.Format method
-- Console.Write method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 8d034955d5d5d31788eafc0c21246451d7fd1f35
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f1cb5b49139cf9661e678cfc0ecc884a2749622
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508203"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47203895"
 ---
-# <a name="formatting-numeric-results-table-c-reference"></a>Таблица форматирования числовых результатов (Справочник по C#)
-Для форматирования результатов можно воспользоваться методом <xref:System.String.Format%2A?displayProperty=nameWithType>, методами <xref:System.Console.Write%2A?displayProperty=nameWithType> или <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, вызывающими `String.Format`, или [интерполяцией строк](../tokens/interpolated.md). Формат задается с помощью строк формата. В следующей таблице приведены поддерживаемые строки стандартных форматов. Строка формата принимает следующую форму: `Axx`, где `A` — описатель формата, а `xx` — описатель точности. Описатель формата управляет типом форматирования, применяемым к числовому значению, а описатель точности управляет количеством значащих цифр или десятичных знаков форматированного результата. Значение описателя точности находится в диапазоне от 0 до 99.  
-  
- Дополнительные сведения о строках стандартных и пользовательских форматов см. в разделе [Типы форматирования](../../../standard/base-types/formatting-types.md).
-  
-|Описатель формата|Описание:|Примеры|Вывод|  
+# <a name="formatting-numeric-results-table-c-reference"></a>Таблица форматирования числовых результатов (справочник по C#)
+
+В следующей таблице приводятся описатели поддерживаемых форматов для форматирования числовых результатов. Форматированный результат в последнем столбце соответствует формату "en-US" (<xref:System.Globalization.CultureInfo>).
+
+|Описатель формата|Описание:|Примеры|Результат|  
 |----------------------|-----------------|--------------|------------|  
-|C или c|Валюта|Console.Write("{0:C}", 2.5);<br /><br /> Console.Write("{0:C}", −2.5);|$2.50<br /><br /> ($2.50)|  
-|D или d|Десятичное число|Console.Write("{0:D5}", 25);|00025|  
-|E или e|Экспоненциальный|Console.Write("{0:E}", 250000);|2.500000E+005|  
-|F или f|С фиксированной запятой|Console.Write("{0:F2}", 25);<br /><br /> Console.Write("{0:F0}", 25);|25.00<br /><br /> 25|  
-|G или g|Общие|Console.Write("{0:G}", 2.5);|2.5|  
-|N или n|Число|Console.Write("{0:N}", 2500000);|2,500,000.00|  
-|X или x|Шестнадцатеричный|Console.Write("{0:X}", 250);<br /><br /> Console.Write("{0:X}", 0xffff);|FA<br /><br /> FFFF|  
-  
+|C или c|Валюта|`string s = $"{2.5:C}";`<br /><br /> `string s = $"{-2.5:C}";`|$2.50<br /><br /> ($2.50)|  
+|D или d|Десятичное число|`string s = $"{25:D5}";`|00025|  
+|E или e|Экспоненциальный|`string s = $"{250000:E2}";`|2.50E+005|  
+|F или f|С фиксированной запятой|`string s = $"{2.5:F2}";`<br /><br /> `string s = $"{2.5:F0}";`|2.50<br /><br /> 3|  
+|G или g|Общие|`string s = $"{2.5:G}";`|2.5|  
+|N или n|Numeric|`string s = $"{2500000:N}";`|2,500,000.00|  
+|P или p|Процент|`string s = $"{0.25:P}";`|25.00%|  
+|R или r|Приемо-передача|`string s = $"{2.5:R}";`|2.5|  
+|X или x|Шестнадцатеричный|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
+
+## <a name="remarks"></a>Примечания
+
+Для создания строки формата используйте описатель формата. Строка формата имеет вид `Axx`:
+
+- где `A` — это описатель формата, который управляет типом форматирования, применяемым к числовому значению;
+- а `xx` — указатель точности, который влияет на количество цифр в форматированном выводе. Значение описателя точности находится в диапазоне от 0 до 99.
+
+Описатели десятичного ("D" или "d") и шестнадцатеричного форматов ("X" или "x") поддерживаются только для целочисленных типов. Описатель формата обратного преобразования ("R" или "r") поддерживается только для типов <xref:System.Single>, <xref:System.Double> и <xref:System.Numerics.BigInteger>.
+
+Строки стандартных числовых форматов поддерживаются в следующих сценариях.
+
+- Некоторые перегрузки метода `ToString` для всех числовых типов. Например, можно задать строку числового формата для методов <xref:System.Int32.ToString%28System.String%29?displayProperty=nameWithType> и <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>.
+
+- [Функция составного форматирования](../../../standard/base-types/composite-formatting.md) .NET, которая поддерживается методом <xref:System.String.Format%2A?displayProperty=nameWithType>, например.
+
+- [Интерполированные строки](../tokens/interpolated.md).
+
+Дополнительные сведения см. в статье [Строки стандартных числовых форматов](../../../standard/base-types/standard-numeric-format-strings.md).
+
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Строки стандартных числовых форматов](../../../standard/base-types/standard-numeric-format-strings.md)  
-- [Справочные таблицы по типам](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [string](../../../csharp/language-reference/keywords/string.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Справочные таблицы по типам](reference-tables-for-types.md)
+- [Типы форматирования](../../../standard/base-types/formatting-types.md)
+- [Составное форматирование](../../../standard/base-types/composite-formatting.md)
+- [Интерполяция строк](../tokens/interpolated.md)
+- [string](string.md)

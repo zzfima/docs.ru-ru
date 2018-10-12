@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 09746f01115a4b6bf3ca54cdc72c6ad936fbaaae
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3fd01e19bc8aad8af709aee2fdaa020d8192d530
+ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042443"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46003819"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Практическое руководство. Реализация компонента, поддерживающего асинхронную модель, основанную на событиях
 Если вы создаете класс и некоторые операции этого класса могут привести к значительным задержкам, подумайте о том, чтобы реализовать для этого класса асинхронные функции с помощью [асинхронной модели на основе событий](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "44042443"
 -   Создайте класс `PrimeNumberCalculator`, производный от <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Определение открытых асинхронных событий и делегатов  
- Этот компонент взаимодействует с клиентами с помощью событий. Событие *имя_метода***Completed** предупреждает клиенты о завершении асинхронной задачи, а событие *имя_метода***ProgressChanged** информирует клиенты о ходе выполнения асинхронной задачи.  
+ Этот компонент взаимодействует с клиентами с помощью событий. Событие _имя_метода_**Completed** предупреждает клиенты о завершении асинхронной задачи, а событие _имя_метода_**ProgressChanged** информирует клиенты о ходе выполнения асинхронной задачи.  
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Чтобы определить асинхронные события для клиентов своего компонента, выполните следующие действия.  
   

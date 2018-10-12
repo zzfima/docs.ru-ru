@@ -4,12 +4,12 @@ description: Общие сведения о процессе переноса и
 author: cartermp
 ms.author: mairaw
 ms.date: 06/20/2016
-ms.openlocfilehash: bf4f50ca915f21cdda6b99ae6bdf9e837eca3ae7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d273b3abe46de59aa55b5b9a531d3c572a065124
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33210086"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48835396"
 ---
 # <a name="porting-to-net-core-from-net-framework"></a>Перенос кода в .NET Core из .NET Framework
 
@@ -27,7 +27,7 @@ ms.locfileid: "33210086"
 
    Это позволит использовать альтернативные интерфейсы API для целевых платформ .NET Framework в случае, если платформа .NET Core не поддерживает определенный интерфейс API.
    
-3. Используйте средство [Анализатор переносимости API](https://github.com/Microsoft/dotnet-apiport/) для анализа сборок и разработки плана переноса на основе результатов.
+3. Используйте средство [Анализатор переносимости .NET](../../standard/analyzers/portability-analyzer.md) для анализа сборок и разработки плана переноса на основе полученных результатов.
 
    Анализатор переносимости API анализирует скомпилированные сборки и создает отчет, в котором приводятся обобщенные сведения о переносимости, а также информация с разбивкой по каждому используемому интерфейсу API, который недоступен в .NET Core.  Этот отчет можно использовать вместе с результатами анализа базы кода для составления плана переноса кода.
    

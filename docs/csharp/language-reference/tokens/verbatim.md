@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dbab5a743b4f9fed759210e8410cd6e3459efac
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 6d6da87159e3ec9184eaa76ad069102204e2fcfc
+ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591403"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47192236"
 ---
 # <a name="-c-reference"></a>@ (справочник по C#)
 
@@ -33,46 +33,9 @@ ms.locfileid: "45591403"
 
    [!code-csharp[verbatim3](../../../../samples/snippets/csharp/language-reference/keywords/verbatim1.cs#3)]
 
-1. Чтобы позволить компилятору различать атрибуты в случае конфликта имен. Атрибут — это тип, производный от <xref:System.Attribute>. Имя его типа, как правило, содержит суффикс **Attribute**, несмотря на то, что компилятор не выполняет это соглашение. Затем на атрибут можно ссылаться в коде либо по его полному имени типа (например, `[InfoAttribute]`), либо по сокращенному имени (например, `[Info]`). Однако если два сокращенных имени типов совпадают и одно имя типа содержит суффикс **Attribute**, а другое — нет, возникает конфликт имен. Например, приведенный ниже код не может быть скомпилирован, так как компилятору не удается определить, какой атрибут — `Info` или `InfoAttribute` — применен к классу `Example`.
+1. Чтобы позволить компилятору различать атрибуты в случае конфликта имен. Атрибут класса, который наследует от <xref:System.Attribute>. Имя его типа, как правило, содержит суффикс **Attribute**, несмотря на то, что компилятор не выполняет это соглашение. Затем на атрибут можно ссылаться в коде либо по его полному имени типа (например, `[InfoAttribute]`), либо по сокращенному имени (например, `[Info]`). Однако если два сокращенных имени типов совпадают и одно имя типа содержит суффикс **Attribute**, а другое — нет, возникает конфликт имен. Например, приведенный ниже код не может быть скомпилирован, так как компилятору не удается определить, какой атрибут — `Info` или `InfoAttribute` — применен к классу `Example`. См. [CS1614](../compiler-messages/cs1614.md) для получения дополнительных сведений.
 
-   ```csharp
-   using System;
-
-   [AttributeUsage(AttributeTargets.Class)]
-   public class Info : Attribute
-   {
-      private string information;
-      
-      public Info(string info)
-      {
-          information = info;
-      }
-   }
-
-   [AttributeUsage(AttributeTargets.Method)]
-   public class InfoAttribute : Attribute
-   {
-      private string information;
-      
-      public InfoAttribute(string info)
-      {
-          information = info;
-      }
-   }
-
-   [Info("A simple executable.")]
-   public class Example
-   {
-      [InfoAttribute("The entry point.")]
-      public static void Main()
-      {
-      }
-   }
-   ```  
-
-   Если для определения атрибута `Info` используется буквальный идентификатор, код компилируется успешно.
-
-   [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim4.cs#1)]
+   [!code-csharp[verbatim4](../../../../samples/snippets/csharp/language-reference/keywords/verbatim2.cs#1)]
 
 ## <a name="see-also"></a>См. также
 
