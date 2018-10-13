@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
 ms.openlocfilehash: b1a858e88ff27de19e2ebbd69c14060813873c13
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847648"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308491"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>Доступ к фреймам с использованием управляемой объектной модели HTML-документов
 Некоторые HTML-документы состоят из *кадров*, или windows, которые могут содержать другие документы HTML. Использование фреймов упрощает создание HTML-страниц, в которых одна или несколько частей страницы остаются статичными, например панель навигации, а в остальных фреймах содержимое постоянно изменяется.  

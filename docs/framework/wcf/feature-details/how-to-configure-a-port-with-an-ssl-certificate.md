@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: e0595bcbd3dcae7977c8734b7d3858df2412c962
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0a2ac22bfb5f84235d34a554df8cc1ad43ddc489
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857632"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308443"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>Практическое руководство. Настройка порта с использованием SSL-сертификата
 При создании резидентной службы Windows Communication Foundation (WCF) с <xref:System.ServiceModel.WSHttpBinding> класса, использующим безопасность транспорта, необходимо также настроить порт с сертификатом X.509. При создании нерезидентной службы можно разместить ее в службах IIS. Дополнительные сведения см. в разделе [безопасности транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md).  
@@ -130,4 +130,4 @@ ms.locfileid: "43857632"
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>См. также  
- [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)
+* [Безопасность транспорта HTTP](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

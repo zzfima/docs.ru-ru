@@ -9,11 +9,11 @@ helpviewer_keywords:
 - cropping images [WPF]
 ms.assetid: c6bba109-c6e7-4cf8-bfe6-9cf8d01bb4fc
 ms.openlocfilehash: 189cb92d581ccc9209ebdb4de18487951d17818a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849624"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308283"
 ---
 # <a name="how-to-crop-an-image"></a>Практическое руководство. Обрезка изображения
 В этом примере показано, как обрезать изображение с помощью <xref:System.Windows.Media.Imaging.CroppedBitmap>.  

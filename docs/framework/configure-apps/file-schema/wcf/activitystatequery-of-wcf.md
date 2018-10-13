@@ -2,21 +2,21 @@
 title: '&lt;activityStateQuery&gt; (WCF)'
 ms.date: 03/30/2017
 ms.assetid: d6cdc04b-6f3a-4097-a623-ee4a1be3b5c4
-ms.openlocfilehash: 6d837946808e0d78e98c9c3010d4690fdfac6fa4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a0dae6b90659bd3f53386459513abf92f25b005b
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754588"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308323"
 ---
 # <a name="ltactivitystatequerygt-of-wcf"></a>&lt;activityStateQuery&gt; (WCF)
-Представляет запрос, используемый для трассировки изменений жизненного цикла действий, составляющих экземпляр рабочего процесса. Например можно хранить список каждый раз завершение действия «Send E-Mail» внутри экземпляра рабочего процесса. Этот запрос необходим, чтобы участник отслеживания мог подписываться на объекты записей состояния действия. Состояния, доступные для подписки, указаны в ActivtyStates.  
+
+Представляет запрос, используемый для трассировки изменений жизненного цикла действий, составляющих экземпляр рабочего процесса. Например можно хранить список всякий раз по завершении действия «Send E-Mail» внутри рабочего процесса. Этот запрос необходим, чтобы участник отслеживания мог подписываться на объекты записей состояния действия. Состояния, доступные для подписки, указаны в ActivtyStates.  
   
- Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).  
-  
- \<system.serviceModel >  
-\<Отслеживание >  
-\<trackingProfile >  
+Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
+
+\<system.serviceModel > \<отслеживания >  
+\<профили > \<trackingProfile >  
 \<рабочий процесс >  
 \<activityStateQueries >  
 \<activityStateQuery >  
@@ -24,11 +24,32 @@ ms.locfileid: "32754588"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<tracking>   <trackingProfile name="Name">       <workflow>          <activityStateQueries>             <activityStateQuery activityName="String" />                <arguments>                   <argument name="String"/>                </arguments>                <states>                   <state name="String"/>                </states>                <variables>                   <variable name="String"/>                </variables>          </activityStateQueries>       </workflow>   </trackingProfile></tracking>  
+<tracking>
+  <profiles>
+    <trackingProfile name="Name">
+      <workflow>
+        <activityStateQueries>
+          <activityStateQuery activityName="String">
+            <arguments>
+              <argument name="String"/>
+            </arguments>
+            <states>
+              <state name="String"/>
+            </states>
+            <variables>
+              <variable name="String"/>
+            </variables>
+          </activityStateQuery>
+        </activityStateQueries>
+      </workflow>
+    </trackingProfile>
+  </profiles>
+</tracking>  
 ```  
   
-## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a>Элементы и атрибуты  
+
+В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
   
@@ -50,8 +71,9 @@ ms.locfileid: "32754588"
 |-------------|-----------------|  
 |[\<faultPropagationQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationquery.md)|Представляет список элементов конфигурации, которые используются для отслеживания запросов на отмену дочернего действия родительским действием. Этот запрос необходим, чтобы участник отслеживания подписался на объекты записей запросов на отмену.|  
   
-## <a name="remarks"></a>Примечания  
- Уникальной возможностью ActivityStateQuery является возможность извлекать данные во время отслеживания выполнения рабочего процесса. Это обеспечивает дополнительный контекст при доступе к записям отслеживания после выполнения. Можно использовать [ \<аргументы >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<состояний >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) и [ \<состояний >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) элементов для извлечения любая переменная или аргумент из любого действия в рабочем процессе. В примере показан запрос состояния действия, который извлекает переменные и аргументы при действия `Closed` записи отслеживания. Переменные и аргументы могут быть извлечены при помощи ActivityStateRecord, поэтому подписка на внутри отслеживания профиля с помощью [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).  
+## <a name="remarks"></a>Примечания
+
+Уникальной возможностью ActivityStateQuery является возможность извлекать данные во время отслеживания выполнения рабочего процесса. Это обеспечивает дополнительный контекст при доступе к записям отслеживания после выполнения. Можно использовать [ \<аргументы >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/arguments.md), [ \<состояний >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) и [ \<состояний >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md) элементов для извлечения любые переменные или аргументы из любого действия в рабочем процессе. В примере показан запрос состояния действия, который извлекает переменные и аргументы при действия `Closed` записи отслеживания. Переменные и аргументы могут быть извлечены при помощи ActivityStateRecord и таким образом подписаны в отслеживания профиля с помощью [ \<activityStateQuery >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/activitystatequery.md).  
   
 ```xml  
 <activityStateQuery activityName="SendEmailActivity">  
@@ -67,8 +89,9 @@ ms.locfileid: "32754588"
 </activityStateQuery>  
 ```  
   
-## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElement>    
- <xref:System.Activities.Tracking.ActivityStateQuery>     
- [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [Профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElement>
+- <xref:System.Activities.Tracking.ActivityStateQuery>
+- [Отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [Профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

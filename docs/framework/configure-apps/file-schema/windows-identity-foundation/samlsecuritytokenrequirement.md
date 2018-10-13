@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 09202d12-88d3-49cc-953b-703bcc1690eb
 author: BrucePerlerMS
 ms.openlocfilehash: c9856dae971691baf9dabe845bdecae90cbc8aa5
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847321"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49314857"
 ---
 # <a name="ltsamlsecuritytokenrequirementgt"></a>&lt;samlSecurityTokenRequirement&gt;
 Предоставляет конфигурацию для <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler> класса <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> класс или класс, производный от любого из этих классов. Представленный <xref:System.IdentityModel.Tokens.SamlSecurityTokenRequirement> класса.  
@@ -46,7 +46,7 @@ ms.locfileid: "48847321"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |mapToWindows|Указывает ли обработчик токенов следует сопоставить маркер проверки в учетную запись Windows с помощью входящего утверждения имени участника-пользователя. Значение по умолчанию — «false».|  
 |issuerCertificateRevocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> Значение, определяющее режим отзыва для сертификата X.509. Значение по умолчанию — «В сети».|  
@@ -56,14 +56,14 @@ ms.locfileid: "48847321"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<nameClaimType >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/nameclaimtype.md)|Задает тип утверждения, указывающее <xref:System.Security.Principal.IIdentity.Name%2A> свойство.|  
 |[\<roleClaimType >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/roleclaimtype.md)|Указывает тип утверждения, определяет тип утверждения роли в коллекции <xref:System.Security.Claims.ClaimsIdentity> объектов, возвращенных <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A> метод из обработчика токенов.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|Добавляет обработчик токенов безопасности в коллекцию обработчиков токенов.|  
   

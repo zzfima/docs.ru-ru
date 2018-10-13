@@ -3,11 +3,11 @@ title: Поставщик маркеров SAML
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
 ms.openlocfilehash: dfd693e262e7566c865d5b9faed5b9e00a8cfec9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845324"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308530"
 ---
 # <a name="saml-token-provider"></a>Поставщик маркеров SAML
 В этом образце демонстрируется, как реализовать пользовательский поставщик маркеров SAML клиента. Поставщик маркеров в Windows Communication Foundation (WCF) используется для передачи учетных данных в инфраструктуру безопасности. Поставщик токенов осуществляет общую проверку цели и выдает соответствующие учетные данные, чтобы инфраструктура безопасности смогла обеспечить защиту сообщения. WCF поставляется с поставщиком токенов учетных данных по умолчанию. WCF поставляется с [!INCLUDE[infocard](../../../../includes/infocard-md.md)] поставщик маркеров. Пользовательские поставщики маркеров полезны в следующих случаях:
@@ -371,7 +371,7 @@ ms.locfileid: "48845324"
   
 3.  Запустите программу Client.exe из каталога \client\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-4.  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах  
   
@@ -393,7 +393,7 @@ ms.locfileid: "48845324"
   
 9. На клиентском компьютере из командной строки запустите программу `Client.exe`.  
   
-10. Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   

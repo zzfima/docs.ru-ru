@@ -4,81 +4,85 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
-ms.openlocfilehash: 4c069699e35880d90e93f032ad6c0dd0202f6ebb
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: d8e001e6c39549b35eee332d0874e6f347b53509
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873535"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49314901"
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;NetTcpBinding&gt;
-Задает безопасную, надежную и оптимизированную привязку, пригодную для обмена данными между компьютерами. По умолчанию создает стек связи среды выполнения с безопасностью Windows для защиты и проверки подлинности сообщений, с протоколом TCP для доставки сообщений, а также с кодированием двоичных сообщений.  
-  
- \<система. ServiceModel >  
+
+Задает безопасную, надежную и оптимизированную привязку, пригодную для обмена данными между компьютерами. По умолчанию создает стек связи среды выполнения с безопасностью Windows для защиты и проверки подлинности сообщений, с протоколом TCP для доставки сообщений, а также с кодированием двоичных сообщений.
+
+\<система. ServiceModel >  
 \<привязки >  
 \<netTcpBinding >  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<netTcpBinding>  
-   <binding   
-      closeTimeout="TimeSpan"  
-      hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"  
-      listenBacklog="Integer"  
-      maxBufferPoolSize="integer"  
-      maxBufferSize="Integer"  
-      maxConnections="Integer"   
-      maxReceivedMessageSize="Integer"  
-      name="string"  
-      openTimeout="TimeSpan"  
-      portSharingEnabled="Boolean"  
-      receiveTimeout="TimeSpan"  
-      sendTimeout="TimeSpan"  
-      transactionFlow="Boolean"   
-      transactionProtocol="OleTransactions/WSAtomicTransactionOctober2004"   
-            transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse"  
-  
-      <reliableSession ordered="Boolean"  
-            inactivityTimeout="TimeSpan"  
-            enabled="Boolean" />  
-      <security mode="None/Transport/Message/Both">  
-            <message clientCredentialType="None/Windows/UserName/Certificate/CardSpace"  
-                defaultProtectionLevel="None/Sign/EncryptAndSign"   
-algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15" />  
-            <transport clientCredentialType="None/Windows/Certificate"  
-                protectionLevel="None/Sign/EncryptAndSign" />  
-      </security>  
-       <readerQuotas             maxArrayLength="Integer"            maxBytesPerRead="Integer"            maxDepth="Integer"             maxNameTableCharCount="Integer"                     maxStringContentLength="Integer" />   </binding>  
-</netTcpBinding>  
+<netTcpBinding>
+  <binding closeTimeout="TimeSpan"  
+           hostNameComparisonMode="StrongWildCard/Exact/WeakWildcard"
+           listenBacklog="Integer"  
+           maxBufferPoolSize="integer"  
+           maxBufferSize="Integer"  
+           maxConnections="Integer"   
+           maxReceivedMessageSize="Integer"  
+           name="string"  
+           openTimeout="TimeSpan"  
+           portSharingEnabled="Boolean"  
+           receiveTimeout="TimeSpan"  
+           sendTimeout="TimeSpan"  
+           transactionFlow="Boolean"   
+           transactionProtocol="OleTransactions/WSAtomicTransactionOctober2004"   
+           transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">
+    <reliableSession ordered="Boolean"  
+                     inactivityTimeout="TimeSpan"  
+                     enabled="Boolean" />
+    <security mode="None/Transport/Message/Both">
+      <message clientCredentialType="None/Windows/UserName/Certificate/CardSpace"  
+               algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15" />
+      <transport clientCredentialType="None/Windows/Certificate"  
+                 protectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+    <readerQuotas maxArrayLength="Integer"     
+                  maxBytesPerRead="Integer"      
+                  maxDepth="Integer" 
+                  maxNameTableCharCount="Integer"
+                  maxStringContentLength="Integer" />
+  </binding>
+</netTcpBinding> 
 ```  
   
-## <a name="attributes-and-elements"></a>Атрибуты и элементы  
- В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
+## <a name="attributes-and-elements"></a>Элементы и атрибуты
+
+В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|closeTimeout|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции закрытия. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:01:00.|  
-|hostnameComparisonMode|Задает режим сравнения имен узлов HTTP для анализа универсальных кодов ресурсов (URI). Это атрибут типа `System.ServiceModel.HostnameComparisonMode`, который указывает, используется ли имя узла для доступа к службе при сравнении по универсальному коду ресурсов (URI). Значение по умолчанию — `StrongWildcard`, при котором имя узла в найденном соответствии не используется.|  
-|listenBacklog|Положительное целое число, указывающее максимальное число каналов, ожидающих принятия прослушивателем. Соединения сверх этого лимита помещаются в очередь и обрабатываются по мере освобождения ресурсов. Атрибут `connectionTimeout` ограничивает время, в течение которого клиент ожидает установления соединения до создания исключения подключения. Значение по умолчанию — 10.|  
-|maxBufferPoolSize|Целое число, задающее максимальный размер буферного пула для этой привязки. Значение по умолчанию - 512 * 1024 байт. Многие элементы Windows Communication Foundation (WCF) используют буферы. При создании буферов и их уничтожении после каждого использования расходуется слишком много ресурсов; при сборке мусора для буферов также расходуется слишком много ресурсов. Буферные пулы позволяют брать буфер из пула, использовать его, а затем возвращать обратно, когда он больше не требуется. Это позволяет избежать излишней нагрузки, связанной с созданием и уничтожением буферов.|  
-|maxBufferSize|Положительное целое число, указывающее максимальный размер буфера, используемого для хранения сообщений в памяти (в байтах).<br /><br /> Если атрибут `transferMode` имеет значение `Buffered`, этот атрибут должен быть равен значению атрибута `maxReceivedMessageSize`.<br /><br /> Если атрибут `transferMode` имеет значение `Streamed`, этот атрибут не может иметь значение большее, чем значение атрибута `maxReceivedMessageSize`, и должен иметь размер, по крайней мере равный размеру заголовков.<br /><br /> Значение по умолчанию — 65536. Для получения дополнительной информации см. <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>.|  
-|maxConnections|Целое число, указывающее максимальное число входящих и исходящих подключений, которые будут созданы/приняты службой. Входящие и исходящие подключения считаются относительно отдельного предела, определенного этим атрибутом.<br /><br /> Входящие соединения сверх указанного предела помещаются в очередь и обрабатываются по мере освобождения ресурсов.<br /><br /> Исходящие соединения сверх указанного предела помещаются в очередь и обрабатываются по мере освобождения ресурсов.<br /><br /> Значение по умолчанию — 10.|  
-|maxReceivedMessageSize|Положительное целое число, задающее, в байтах, максимальный размер сообщения (включая заголовки), которое можно получить по каналу, настроенному с использованием этой привязки. Отправитель сообщения, превышающего это ограничение, получит ошибку SOAP. Получатель отклоняет сообщение и создает запись о событии в журнале трассировки. Значение по умолчанию — 65536.|  
-|имя|Строка, содержащая имя конфигурации привязки. Это значение должно быть уникальным, поскольку оно используется в качестве идентификатора привязки. Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена. Дополнительные сведения о конфигурации по умолчанию и безымянных привязках и поведениях см. в разделе [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
-|openTimeout|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции открытия. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:01:00.|  
-|portSharingEnabled|Логическое значение, определяющее, включено ли совместное использование порта TCP для этого подключения. Если атрибут имеет значение `false`, для каждой привязки используется собственный порт. Этот параметр действителен только для служб, так как он не затрагивает клиенты.|  
-|receiveTimeout|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции получения. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:10:00.|  
-|sendTimeout|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции отправки. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:01:00.|  
-|transactionFlow|Логическое значение, определяющее, поддерживает ли привязка потоковые спецификации WS-Transactions. Значение по умолчанию — `false`.|  
-|transactionProtocol|Указывает протокол транзакций, используемый с данной привязкой. Допустимы следующие значения:<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> Значение по умолчанию - OleTransactions. Это атрибут типа <xref:System.ServiceModel.TransactionProtocol>.|  
-|transferMode|Значение <xref:System.ServiceModel.TransferMode>, которое указывает, следует ли помещать сообщения в буфер или передавать их потоком по запросу или отклику.|  
+|`closeTimeout`|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции закрытия. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:01:00.|  
+|`hostnameComparisonMode`|Задает режим сравнения имен узлов HTTP для анализа универсальных кодов ресурсов (URI). Это атрибут типа `System.ServiceModel.HostnameComparisonMode`, который указывает, используется ли имя узла для доступа к службе при сравнении по универсальному коду ресурсов (URI). Значение по умолчанию — `StrongWildcard`, при котором имя узла в найденном соответствии не используется.|  
+|`listenBacklog`|Положительное целое число, указывающее максимальное число каналов, ожидающих принятия прослушивателем. Соединения сверх этого лимита помещаются в очередь и обрабатываются по мере освобождения ресурсов. Атрибут `connectionTimeout` ограничивает время, в течение которого клиент ожидает установления соединения до создания исключения подключения. Значение по умолчанию — 10.|  
+|`maxBufferPoolSize`|Целое число, задающее максимальный размер буферного пула для этой привязки. Значение по умолчанию - 512 * 1024 байт. Многие элементы Windows Communication Foundation (WCF) используют буферы. При создании буферов и их уничтожении после каждого использования расходуется слишком много ресурсов; при сборке мусора для буферов также расходуется слишком много ресурсов. Буферные пулы позволяют брать буфер из пула, использовать его, а затем возвращать обратно, когда он больше не требуется. Это позволяет избежать излишней нагрузки, связанной с созданием и уничтожением буферов.|  
+|`maxBufferSize`|Положительное целое число, указывающее максимальный размер буфера, используемого для хранения сообщений в памяти (в байтах).<br /><br /> Если атрибут `transferMode` имеет значение `Buffered`, этот атрибут должен быть равен значению атрибута `maxReceivedMessageSize`.<br /><br /> Если атрибут `transferMode` имеет значение `Streamed`, этот атрибут не может иметь значение большее, чем значение атрибута `maxReceivedMessageSize`, и должен иметь размер, по крайней мере равный размеру заголовков.<br /><br /> Значение по умолчанию — 65536. Дополнительные сведения см. в разделе <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.MaxBufferSize%2A>.|  
+|`maxConnections`|Целое число, указывающее максимальное число входящих и исходящих подключений, которые будут созданы/приняты службой. Входящие и исходящие подключения считаются относительно отдельного предела, определенного этим атрибутом.<br /><br /> Входящие соединения сверх указанного предела помещаются в очередь и обрабатываются по мере освобождения ресурсов.<br /><br /> Исходящие соединения сверх указанного предела помещаются в очередь и обрабатываются по мере освобождения ресурсов.<br /><br /> Значение по умолчанию — 10.|  
+|`maxReceivedMessageSize`|Положительное целое число, задающее, в байтах, максимальный размер сообщения (включая заголовки), которое можно получить по каналу, настроенному с использованием этой привязки. Отправитель сообщения, превышающего это ограничение, получит ошибку SOAP. Получатель отклоняет сообщение и создает запись о событии в журнале трассировки. Значение по умолчанию — 65536.|  
+|`name`|Строка, содержащая имя конфигурации привязки. Это значение должно быть уникальным, поскольку оно используется в качестве идентификатора привязки. Начиная с версии [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] для привязок и поведений необязательно задавать имена. Дополнительные сведения о конфигурации по умолчанию и безымянных привязках и поведениях см. в разделе [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md) и [Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).|  
+|`openTimeout`|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции открытия. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:01:00.|  
+|`portSharingEnabled`|Логическое значение, определяющее, включено ли совместное использование порта TCP для этого подключения. Если атрибут имеет значение `false`, для каждой привязки используется собственный порт. Этот параметр действителен только для служб, так как он не затрагивает клиенты.|  
+|`receiveTimeout`|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции получения. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:10:00.|  
+|`sendTimeout`|Значение <xref:System.TimeSpan>, которое задает длительность времени ожидания для завершения операции отправки. Это значение должно быть больше или равно <xref:System.TimeSpan.Zero>. Значение по умолчанию - 00:01:00.|  
+|`transactionFlow`|Логическое значение, определяющее, поддерживает ли привязка потоковые спецификации WS-Transactions. Значение по умолчанию — `false`.|  
+|`transactionProtocol`|Указывает протокол транзакций, используемый с данной привязкой. Допустимы следующие значения:<br /><br /> -OleTransactions<br />-WSAtomicTransactionOctober2004<br /><br /> Значение по умолчанию - OleTransactions. Это атрибут типа <xref:System.ServiceModel.TransactionProtocol>.|  
+|`transferMode`|Значение <xref:System.ServiceModel.TransferMode>, которое указывает, следует ли помещать сообщения в буфер или передавать их потоком по запросу или отклику.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Определяет параметры безопасности привязки. Это элемент типа <xref:System.ServiceModel.Configuration.NetTcpSecurityElement>.|  
 |[\<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
@@ -86,17 +90,19 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
-|[\<привязки >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
+|[\<привязки >](bindings.md)|Этот элемент содержит коллекцию стандартных и пользовательских привязок.|  
   
-## <a name="remarks"></a>Примечания  
- Эта привязка создает стек связи времени выполнения по умолчанию, использующий режим безопасности транспорта, протокол TCP для доставки сообщений, а также кодирование двоичных сообщений. Эта привязка является Windows Communication Foundation (WCF) системные подходит для взаимодействия через интрасеть.  
+## <a name="remarks"></a>Примечания
+
+Эта привязка создает стек связи времени выполнения по умолчанию, использующий режим безопасности транспорта, протокол TCP для доставки сообщений, а также кодирование двоичных сообщений. Эта привязка является Windows Communication Foundation (WCF) системные подходит для взаимодействия через интрасеть.  
   
  Конфигурация по умолчанию для `netTcpBinding` выполняется быстрее, чем конфигурация, предоставленная методом `wsHttpBinding`, он предназначен только для передачи данных WCF. Режим безопасности настраивается с помощью дополнительного атрибута `securityMode`. Использование WS-ReliableMessaging настраивается с использованием дополнительного атрибута `reliableSessionEnabled`. Но по умолчанию надежный обмен сообщениями отключен. В общем случае системные привязки по протоколу HTTP, такие как `wsHttpBinding` и `basicHttpBinding`, настроены на включение основных возможностей по умолчанию, в то время как привязка `netTcpBinding` по умолчанию отключает возможности, так что для получения поддержки, например для спецификаций WS-*, необходимо специально их включить. Это означает, что используемая по умолчанию конфигурация для TCP быстрее при обмене сообщениями между конечными точками, чем конфигурация по умолчанию для привязок HTTP.  
   
-## <a name="example"></a>Пример  
- Привязка задается в файлах конфигурации для клиента и службы. Тип привязки указывается в атрибуте `binding` элемента `<endpoint>`. Если необходимо настроить привязку netTcpBinding и изменить некоторые из ее параметров, необходимо определить конфигурацию привязки. Конечная точка должна ссылаться на конфигурацию привязки с атрибутом `bindingConfiguration`. В следующем примере определяется конфигурация привязки.  
+## <a name="example"></a>Пример
+
+Привязка задается в файлах конфигурации для клиента и службы. Тип привязки указывается в атрибуте `binding` элемента `<endpoint>`. Если необходимо настроить привязку netTcpBinding и изменить некоторые из ее параметров, необходимо определить конфигурацию привязки. Конечная точка должна ссылаться на конфигурацию привязки с атрибутом `bindingConfiguration`. В следующем примере определяется конфигурация привязки.  
   
 ```xml  
 <services>  
@@ -143,9 +149,10 @@ algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.ServiceModel.NetTcpBinding>  
- <xref:System.ServiceModel.Configuration.NetTcpBindingElement>  
- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
+
+- <xref:System.ServiceModel.NetTcpBinding>  
+- <xref:System.ServiceModel.Configuration.NetTcpBindingElement>  
+- [Привязки](../../../../../docs/framework/wcf/bindings.md)  
+- [Настройка привязок, предоставляемых системой](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
+- [Использование привязок для настройки служб и клиентов](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+- [\<Привязка >](../../../../../docs/framework/misc/binding.md)
