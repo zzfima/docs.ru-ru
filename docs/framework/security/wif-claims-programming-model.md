@@ -3,12 +3,12 @@ title: Модель программирования требований WIF
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 95df026684f536a64ffe15f65264c470dff164da
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197569"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316510"
 ---
 # <a name="wif-claims-programming-model"></a>Модель программирования требований WIF
 Для работы с удостоверениями пользователей разработчики на ASP.NET и Windows Communication Foundation (WCF) обычно используют интерфейсы IIdentity и IPrincipal. В .NET 4.5 интегрирована платформа Windows Identity Foundation (WIF), благодаря чему утверждения теперь всегда присутствуют для любого субъекта, как показано на схеме ниже.
@@ -23,7 +23,7 @@ ms.locfileid: "47197569"
 
 - <xref:System.Security.Claims.Claim.Value%2A> содержит значение утверждения в виде строки. Например, адрес электронной почты может быть представлено как «someone@contoso.com».
 
-- <xref:System.Security.Claims.Claim.ValueType%2A> представляет тип значения утверждения. Обычно это универсальный код ресурса (URI). Например, строковый тип представляется как `http://www.w3.org/2001/XMLSchema#string`. Согласно схеме XML тип значения должен быть QName. Чтобы платформа WIF могла вывести допустимое значение QName, это значение должно иметь формат `namespace#format`. Если пространство имен не определено четко, проверка создаваемого кода XML схемой может оказаться невозможной, так как для этого пространства имен может отсутствовать опубликованный XSD-файл. Тип значения по умолчанию — `http://www.w3.org/2001/XMLSchema#string`. См. в разделе [ http://www.w3.org/2001/XMLSchema ](https://go.microsoft.com/fwlink/?LinkId=209155) для хорошо известного значения типов, которые можно использовать без опасений.
+- <xref:System.Security.Claims.Claim.ValueType%2A> представляет тип значения утверждения. Обычно это универсальный код ресурса (URI). Например, строковый тип представляется как `http://www.w3.org/2001/XMLSchema#string`. Согласно схеме XML тип значения должен быть QName. Чтобы платформа WIF могла вывести допустимое значение QName, это значение должно иметь формат `namespace#format`. Если пространство имен не определено четко, проверка создаваемого кода XML схемой может оказаться невозможной, так как для этого пространства имен может отсутствовать опубликованный XSD-файл. Тип значения по умолчанию — `http://www.w3.org/2001/XMLSchema#string`. Сведения о типах хорошо известных значений, которые можно использовать без опасений, см. в разделе [схемы XML W3C](https://www.w3.org/2001/XMLSchema) страницы.
 
 - <xref:System.Security.Claims.Claim.Issuer%2A> — это идентификатор службы маркеров безопасности (STS), выдавшей утверждение. Он может быть представлен в виде URL-адреса службы STS или ее имени, например `https://sts1.contoso.com/sts`.
 

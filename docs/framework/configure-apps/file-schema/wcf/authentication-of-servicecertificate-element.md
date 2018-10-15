@@ -2,18 +2,18 @@
 title: '&lt;authentication&gt; элемента &lt; serviceCertificate&gt;'
 ms.date: 03/30/2017
 ms.assetid: 733b67b4-08a1-4d25-9741-10046f9357ef
-ms.openlocfilehash: 9ef17c8bedf6bcef21a7c59d98a86bb20ad2da80
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 811d54b49d8cd4fddbf196dbb524c5d303805c4f
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752550"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316458"
 ---
 # <a name="ltauthenticationgt-of-ltservicecertificategt-element"></a>&lt;authentication&gt; элемента &lt; serviceCertificate&gt;
 Задает параметры, которые использует прокси клиента для проверки подлинности сертификатов службы, полученных при помощи согласования SSL/TLS.  
   
  \<система. ServiceModel >  
-\<поведения >  
+\<варианты поведения >  
 раздел endpointBehaviors  
 \<поведение >  
 \<clientCredentials >  
@@ -38,7 +38,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
 |customCertificateValidatorType|Строка. Тип и сборка, используемые для проверки пользовательского типа.|  
 |certificateValidationMode|Задает один из трех режимов для проверки учетных данных. Если задано значение `Custom`, также необходимо предоставить customCertificateValidator. Значение по умолчанию — `ChainTrust`.|  
 |revocationMode|Один из режимов, используемых для проверки списков отозванных сертификатов (CRL). Значение по умолчанию — `Online`.|  
-|trustedStoreLocation|Одно из двух местоположений системного хранилища: `LocalMachine` или `CurrentUser`. Данное значение используется при согласовании сертификата службы для клиента. Проверка выполняется для **доверенные лица** хранения в указанном местоположении хранилища. Значение по умолчанию — `CurrentUser`.|  
+|trustedStoreLocation|Одно из двух местоположений системного хранилища: `LocalMachine` или `CurrentUser`. Данное значение используется при согласовании сертификата службы для клиента. Выполнение проверки **доверенные лица** хранения в указанном местоположении хранилища. Значение по умолчанию — `CurrentUser`.|  
   
 ## <a name="customcertificatevalidator-attribute"></a>Атрибут customCertificateValidator  
   
@@ -79,7 +79,7 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
  Атрибут `revocationMode` указывает способ проверки отозванных сертификатов. По умолчанию используется значение `online`, которое указывает, что проверка, является ли сертификат отозванным, будет выполняться автоматически. Дополнительные сведения см. в разделе [работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере выполняется две задачи. Во-первых, указывается сертификат службы для клиента, который должен использоваться при связи по протоколу HTTP с конечными точками, именем домена которых является www.contoso.com. Во-вторых, в этом примере указывается режим отзыва и место хранения, которые используются при проверке подлинности.  
+ В следующем примере выполняется две задачи. Сначала указывается сертификат службы для клиента для использования при взаимодействии с конечными точками, именем домена которых является `www.contoso.com` по протоколу HTTP. Во-вторых, в этом примере указывается режим отзыва и место хранения, которые используются при проверке подлинности.  
   
 ```xml  
 <serviceCertificate>  
@@ -105,6 +105,6 @@ trustedStoreLocation="LocalMachine/CurrentUser" />
  [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Работа с сертификатами](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Практическое руководство. Создание службы, использующей пользовательский проверяющий элемент управления для сертификатов](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)  
- [\<Проверка подлинности >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
+ [\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)  
  [Защита клиентов](../../../../../docs/framework/wcf/securing-clients.md)  
  [Защита служб и клиентов](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

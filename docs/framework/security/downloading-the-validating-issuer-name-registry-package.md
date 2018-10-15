@@ -2,18 +2,18 @@
 title: Загрузка пакета проверки реестра имен поставщиков
 ms.date: 10/10/2018
 ms.assetid: ff8b0014-c5d4-4614-90f0-13fcc0ba777a
-ms.openlocfilehash: 654a513e06f528f617bc19fbc59961c5b0e16049
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 833a0722fdd27df4e488ed7fac99444c6d9b8905
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121160"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316197"
 ---
 # <a name="download-the-validating-issuer-name-registry-package"></a>Загрузка пакета проверки реестра имен поставщиков
 
 В этом разделе демонстрируется, как скачать и использовать средство проверки реестра имен поставщиков (VINR) в проекте.
 
-Средство VINR распространяется в виде пакета NuGet, который добавляет в проект необходимые ссылки и сборки. Если вы еще не установили NuGet, перейдите на веб-сайт [nuget.org](http://nuget.org) и выполните установку. Чтобы просмотреть историю версий этого расширения, перейдите на соответствующую страницу на веб-сайте NuGet: [Средство проверки реестра имен поставщиков Майкрософт](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)
+Средство VINR распространяется в виде пакета NuGet, который добавляет в проект необходимые ссылки и сборки. Если вы еще не установили NuGet, перейдите на веб-сайт [nuget.org](https://nuget.org) и выполните установку. Чтобы просмотреть историю версий этого расширения, перейдите на соответствующую страницу на веб-сайте NuGet: [Средство проверки реестра имен поставщиков Майкрософт](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)
 
 ## <a name="use-the-package-manager-gui"></a>С помощью графического интерфейса диспетчера пакетов
 

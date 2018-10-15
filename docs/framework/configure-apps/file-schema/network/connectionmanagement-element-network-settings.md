@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: bc0b75db5b3f35087df70c9155a1ba3b39ceae4d
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1736dd8fcb308bceee5f100149919ff9ec45510d
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028424"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316328"
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt; (сетевые параметры)
 Задает максимальное число подключений к сетевому узлу.  
@@ -58,7 +58,7 @@ ms.locfileid: "48028424"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- Следующий пример настраивает приложение для использования четырех подключений к серверу www.contoso.com и двух подключений ко всем остальным серверам.  
+ В следующем примере настраивается приложение для использования четырех подключений к серверу `www.contoso.com` и двух подключений ко всем остальным серверам.  
   
 ```xml  
 <configuration>  
