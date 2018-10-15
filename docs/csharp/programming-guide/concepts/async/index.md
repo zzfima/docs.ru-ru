@@ -2,12 +2,12 @@
 title: Асинхронное программирование с использованием ключевых слов Async и Await (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: bd1493319dd7f742158fe7d3e1b286a4900b05b5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7e95010f966119db72a32c21408852d6c3bd6521
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529167"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122842"
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Асинхронное программирование с использованием ключевых слов Async и Await (C#)
 Асинхронное программирование позволяет избежать появления узких мест производительности и увеличить общую скорость реагирования приложения. Однако традиционные методы создания асинхронных приложений могут оказаться сложными, как в плане написания кода, так и в плане отладки и обслуживания.  
@@ -173,7 +173,7 @@ string urlContents = await client.GetStringAsync();
   
 Используйте <xref:System.Threading.Tasks.Task> в качестве возвращаемого типа, если метод не содержит операторов return или содержит оператор return, который не возвращает операнд.  
 
-Начиная с C# 7.0, можно также указать любой другой тип возвращаемого значения при условии, что в нем есть метод `GetAwaiter`. Пример такого типа — <xref:System.Threading.Tasks.ValueTask%601>. Он доступен в NuGet-пакете [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/).
+В C# начиная с версии 7.0 также можно указывать любые другие типы операторов return, при условии, что тип содержит метод `GetAwaiter`. Пример такого типа — <xref:System.Threading.Tasks.ValueTask%601>. Он доступен в NuGet-пакете [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/).
   
  В следующем примере показано объявление и вызов метода, который возвращает <xref:System.Threading.Tasks.Task%601> или <xref:System.Threading.Tasks.Task>.  
   
