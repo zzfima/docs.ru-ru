@@ -2,12 +2,12 @@
 title: Ссылки на объекты
 ms.date: 03/30/2017
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-ms.openlocfilehash: 1aa8b1c9d135186dba9e4da75f0c7cb9297d8e5c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 00caccaeed8cebeec2e053d418ae6a5bf9a12138
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000246"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347748"
 ---
 # <a name="object-references"></a>Ссылки на объекты
 В данном образце показано, как передать объекты по ссылкам между сервером и клиентом. Данном образце используются смоделированные *социальных сетей*. Социальная сеть состоит из класса `Person`, содержащего список друзей, в котором каждый друг является экземпляром класса `Person` с собственным списком друзей. Таким образом создается граф объектов. Служба предоставляет операции для этих социальных сетей.  
@@ -20,7 +20,7 @@ ms.locfileid: "46000246"
 ## <a name="service"></a>Служба  
  К классу `Person` применен атрибут<xref:System.Runtime.Serialization.DataContractAttribute>. Полю <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> присвоено значение `true`, объявляющее его ссылочным типом. Ко всем свойствам применяется атрибут <xref:System.Runtime.Serialization.DataMemberAttribute>.  
   
-```  
+```csharp
 [DataContract(IsReference=true)]  
 public class Person  
 {  
@@ -53,7 +53,7 @@ public class Person
   
  Операция `GetPeopleInNetwork` принимает параметр типа `Person` и возвращает всех людей в сети; то есть всех людей в списке `friends`, друзей друзей и так далее без повторений.  
   
-```  
+```csharp
 public List<Person> GetPeopleInNetwork(Person p)  
 {  
     List<Person> people = new List<Person>();  
@@ -65,7 +65,7 @@ public List<Person> GetPeopleInNetwork(Person p)
   
  Операция `GetMutualFriends` принимает параметр типа `Person` и возвращает всех друзей в списке, которые также имеют этого человека в их списке `friends`.  
   
-```  
+```csharp
 public List<Person> GetMutualFriends(Person p)  
 {  
     List<Person> mutual = new List<Person>();  
@@ -80,7 +80,7 @@ public List<Person> GetMutualFriends(Person p)
   
  Операция `GetCommonFriends` принимает список типа `Person`. Предполагается, что в списке присутствует два объекта `Person`. Операция возвращает список объектов `Person`, находящихся в списках `friends` обоих объектов `Person`, в списке ввода.  
   
-```  
+```csharp
 public List<Person> GetCommonFriends(List<Person> people)  
 {  
     List<Person> common = new List<Person>();  

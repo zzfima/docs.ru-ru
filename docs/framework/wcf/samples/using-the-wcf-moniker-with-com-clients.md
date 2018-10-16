@@ -2,12 +2,12 @@
 title: Использование моникера WCF с клиентами COM
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: f052504648d381d6fb19fb6db0ebb1dd1086ed3c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1deeb125b94bcbab52db522b7304b972c05a28ed
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515723"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49348787"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Использование моникера WCF с клиентами COM
 В этом образце демонстрируется использование моникера службы Windows Communication Foundation (WCF) для интеграции веб-служб в средах разработки на основе COM, таких как Microsoft Office Visual Basic for Applications (Office VBA) или Visual Basic 6.0. Этот образец содержит клиент сервера скриптов Windows (VBS), поддерживающую библиотеку клиента (DLL) и библиотеку службы (DLL), размещенные службами IIS. Служба представляет собой службу калькулятора, а клиент COM вызывает для службы математические операции (сложение, вычитание, умножение и деление). Действия клиента отображаются в окнах сообщений.  
@@ -26,7 +26,7 @@ ms.locfileid: "43515723"
   
  Служба реализует определенный контракт `ICalculator`, как показано в следующем примере кода.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -52,19 +52,19 @@ public interface ICalculator
 ## <a name="typed-contract"></a>Типизированный контракт  
  Чтобы использовать моникер с типизированным контрактом, в COM следует зарегистрировать типы с правильными атрибутами для контракта службы. Во-первых, клиент должен быть создан с помощью [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md). Чтобы создать типизированную учетную запись-посредник, выполните следующую команду из командной строки в каталоге клиента.  
   
-```  
+```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc /out:generatedClient.cs  
 ```  
   
  Этот класс необходимо включить в проект, а проект следует настроить на создание во время компиляции подписанной сборки, видимой для COM. В файле AssemblyInfo.cs необходимо указать следующий атрибут:  
   
-```  
+```csharp
 [assembly: ComVisible(true)]  
 ```  
   
  После создания проекта зарегистрируйте типы, видимые для модели COM, с помощью `regasm`, как показано в следующем примере.  
   
-```  
+```console  
 regasm.exe /tlb:CalcProxy.tlb client.dll  
 ```  
   
@@ -79,7 +79,7 @@ gacutil.exe /i client.dll
   
  Приложение клиента ComCalcClient.vbs использует функцию `GetObject` для создания прокси-сервера для службы с помощью синтаксиса моникера службы для указания адреса, привязки и контракта службы.  
   
-```  
+```vbscript
 Set typedServiceMoniker = GetObject(  
 "service4:address=http://localhost/ServiceModelSamples/service.svc, binding=wsHttpBinding,   
 contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")  
@@ -95,7 +95,7 @@ contractType={9213C6D2-5A6F-3D26-839B-3BA9B82228D3}")
   
  После создания экземпляра прокси-сервера с моникером службы клиентское приложение может вызывать методы для прокси, результатом чего станет вызов инфраструктурой моникера службы соответствующих операций службы.  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(100, 15.99)  
 ```  
@@ -107,7 +107,7 @@ WScript.Echo "Typed service moniker: 100 + 15.99 = " & typedServiceMoniker.Add(1
   
  Приложение клиента ComCalcClient.vbs использует функцию `FileSystemObject` для доступа к локально сохраненному файлу WSDL, затем снова использует функцию `GetObject`, чтобы создать для службы прокси-сервер.  
   
-```  
+```vbscript  
 ' Open the WSDL contract file and read it all into the wsdlContract string  
 Const ForReading = 1  
 Set objFSO = CreateObject("Scripting.FileSystemObject")  
@@ -140,7 +140,7 @@ Set wsdlServiceMoniker = GetObject(wsdlMonikerString)
   
  После создания экземпляра прокси-сервера с моникером службы клиентское приложение может вызывать методы для прокси, результатом чего станет вызов инфраструктурой моникера службы соответствующих операций службы.  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtract(145, 76.54)  
 ```  
@@ -152,7 +152,7 @@ WScript.Echo "WSDL service moniker: 145 - 76.54 = " & wsdlServiceMoniker.Subtrac
   
  Клиентское приложение ComCalcClient.vbs повторно использует функцию `GetObject` для создания прокси-сервера для службы.  
   
-```  
+```vbscript  
 ' Create a string for the service moniker specifying the address to retrieve the service metadata from  
 mexMonikerString = "service4:mexAddress='http://localhost/servicemodelsamples/service.svc/mex'"  
 mexMonikerString = mexMonikerString + ", address='http://localhost/ServiceModelSamples/service.svc'"  
@@ -175,7 +175,7 @@ Set mexServiceMoniker = GetObject(mexMonikerString)
   
  После создания экземпляра прокси-сервера с моникером службы клиентское приложение может вызывать методы для прокси, результатом чего станет вызов инфраструктурой моникера службы соответствующих операций службы.  
   
-```  
+```vbscript  
 ' Call the service operations using the moniker object  
 WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9, 81.25)  
 ```  
@@ -205,7 +205,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 2.  Запустите файл ComCalcClient.vbs из папки \client в языковой папке. Действия клиента отображаются в окнах сообщений.  
   
-3.  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Запуск образца на нескольких компьютерах  
   

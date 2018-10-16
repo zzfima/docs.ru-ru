@@ -2,12 +2,12 @@
 title: Контракт ошибок
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 5b3348f31d239d6bf7e64852ba02010115062669
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 37b977feffd7ce46d2f4bc7b8a4e5dc89d21b137
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003936"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347774"
 ---
 # <a name="fault-contract"></a>Контракт ошибок
 Этот образец демонстрирует передачу информации об ошибке из службы клиенту. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), с помощью некоторых дополнительный код, добавленный в службу для преобразования внутреннего исключения в ошибку. Клиент пытается выполнить операцию деления на ноль для принудительного сбоя службы.  
@@ -17,7 +17,7 @@ ms.locfileid: "46003936"
   
  В контракт калькулятора добавлен атрибут <xref:System.ServiceModel.FaultContractAttribute>, как показано в следующем образце кода.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -35,7 +35,7 @@ public interface ICalculator
   
  Атрибут <xref:System.ServiceModel.FaultContractAttribute> указывает, что операция `Divide` может возвратить сбой типа `MathFault`. Сбой может принадлежать к любому типу, который сериализовать. В данном случае `MathFault` представляет собой следующий контракт данных:  
   
-```  
+```csharp
 [DataContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public class MathFault  
 {      
@@ -60,7 +60,7 @@ public class MathFault
   
  Метод `Divide` вызывает исключение <xref:System.ServiceModel.FaultException%601> при делении на ноль, как показано в следующем образце кода. В результате исключения клиенту отправляется сбой.  
   
-```  
+```csharp
 public int Divide(int n1, int n2)  
 {  
     try  
@@ -79,7 +79,7 @@ public int Divide(int n1, int n2)
   
  Клиентский код принудительно создает ошибку, запрашивая деление не ноль. При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Деление на ноль будет выведено на консоль в виде сбоя. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
-```  
+```console  
 Add(15,3) = 18  
 Subtract(145,76) = 69  
 Multiply(9,81) = 729  
@@ -90,7 +90,7 @@ Press <ENTER> to terminate client.
   
  Клиент выводит сбой, перехватывая соответствующее исключение `FaultException<MathFault>`:  
   
-```  
+```csharp
 catch (FaultException<MathFault> e)  
 {  
     Console.WriteLine("FaultException<MathFault>: Math fault while doing " + e.Detail.operation + ". Problem: " + e.Detail.problemType);  

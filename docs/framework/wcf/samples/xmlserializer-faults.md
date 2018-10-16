@@ -2,12 +2,12 @@
 title: Ошибки XmlSerializer
 ms.date: 03/30/2017
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
-ms.openlocfilehash: 760b88a6682032b8c8915fd0ea657029d2d0444e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 763e2c60e3cd1b2511b229f470a64cdd5a01d5a6
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44040893"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347761"
 ---
 # <a name="xmlserializer-faults"></a>Ошибки XmlSerializer
 В образце контракта сбоя <xref:System.Xml.Serialization.XmlSerializer> показано, как передавать информацию об ошибке из службы клиенту с помощью <xref:System.Xml.Serialization.XmlSerializer>. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), с помощью некоторых дополнительный код, добавленный в службу для преобразования внутреннего исключения в ошибку. Клиент пытается выполнить операцию деления на ноль для принудительного сбоя службы.  
@@ -17,7 +17,7 @@ ms.locfileid: "44040893"
   
  В контракт калькулятора добавлен атрибут <xref:System.ServiceModel.FaultContractAttribute>, как показано в следующем образце кода. Кроме того, <xref:System.ServiceModel.XmlSerializerFormatAttribute> используется для включения сериализации с использованием <xref:System.Xml.Serialization.XmlSerializer>. Свойству <xref:System.ServiceModel.XmlSerializerFormatAttribute.SupportFaults%2A> присвоено значение `true` для этого атрибута, которое инструктирует сериализатор использовать <xref:System.Xml.Serialization.XmlSerializer> для чтения и записи сбоев.  
   
-```  
+```csharp
 [XmlSerializerFormat(SupportFaults=true)]  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  

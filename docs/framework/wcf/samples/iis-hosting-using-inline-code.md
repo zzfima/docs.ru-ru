@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 30e50d39b0edb34bcda1bec6d1848a09eabd34fa
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ebaf524997ae4ed50b28aec53507f843f028bc31
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524941"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49348995"
 ---
 # <a name="iis-hosting-using-inline-code"></a>Размещение в службах IIS с использованием встроенного кода
 Этот образец демонстрирует реализацию службы, размещенной в службах IIS, когда код службы находится в строках файла SVC и компилируется по требованию. Код службы может также быть реализован непосредственно в файлах исходного кода, расположенных в каталоге \App_Code приложения, или он может быть скомпилирован в сборку, развернутую в каталоге \bin. В этом примере такие приемы не демонстрируются.  
@@ -29,7 +29,7 @@ ms.locfileid: "43524941"
   
  В этом примере показана типичная служба, которая реализует контракт, определяющий шаблон взаимодействия "запрос-ответ". Служба размещается в службах IIS, а весь код службы полностью содержится в файле Service.svc. Служба активируется основным приложением и компилируется по требованию при поступлении первого сообщения, отправленного этой службе. Предварительная компиляция не требуется. Служба реализует контракт `ICalculator`, как показано в следующем примере кода:  
   
-```  
+```csharp
 // Define a service contract.  
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
     public interface ICalculator  
@@ -47,9 +47,10 @@ ms.locfileid: "43524941"
   
  Реализация службы выполняет вычисления и возвращает соответствующий результат.  
   
-```  
+```svc
 <%@ServiceHost language=c# Debug="true" Service="Microsoft.ServiceModel.Samples.CalculatorService" %>   
-…  
+```
+```csharp
 // Service class that implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -74,7 +75,7 @@ public class CalculatorService : ICalculator
   
  При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

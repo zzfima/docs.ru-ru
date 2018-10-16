@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: f5c824df43997282d50c9c2a458fb1d854cc160a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d6a05abec36f97094adaac7572f6015b10874442
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862223"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347894"
 ---
 # <a name="option-infer-statement"></a>Option Infer - оператор
 Включает использование локального определения типов при объявлении переменных.  
@@ -50,7 +50,7 @@ IntelliSense при включенном параметре Option Infer
 IntelliSense при отключенном параметре Option Infer  
   
 > [!NOTE]
->  Если переменная объявлена как `Object`, тип времени выполнения может измениться в ходе работы программы. Visual Basic выполняет операции *упаковки-преобразования* и *распаковки* для преобразования между `Object` и типом значения, что замедляет выполнение. Сведения об упаковке и распаковке см. в разделе [спецификация языка Visual Basic](../../../visual-basic/reference/language-specification/index.md).
+>  Если переменная объявлена как `Object`, тип времени выполнения может измениться в ходе работы программы. Visual Basic выполняет операции *упаковки-преобразования* и *распаковки* для преобразования между `Object` и типом значения, что замедляет выполнение. Сведения об упаковке и распаковке см. в разделе [спецификация языка Visual Basic](~/_vblang/spec/conversions.md#value-type-conversions).
   
  Определение типов применяется на уровне процедур и не применяется вне процедур в классах, структурах, модулях и интерфейсах.  
   

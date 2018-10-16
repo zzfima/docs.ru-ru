@@ -13,11 +13,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: 9bd1deea-2a89-4cdc-812c-6dcbb947c391
 ms.openlocfilehash: 9377d889f56049720ab10439582300913f5cbb37
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848029"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347998"
 ---
 # <a name="structure-statement"></a>Оператор Structure
 Объявляет имя структуры и вводит определение переменных, свойств, событий и процедур, которые в структуру.  
@@ -38,10 +38,10 @@ End Structure
 |Термин|Определение|  
 |---|---|  
 |`attributelist`|Необязательный. См. в разделе [список атрибутов](../../../visual-basic/language-reference/statements/attribute-list.md).|  
-|`accessmodifier`|Необязательный. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [защищенные](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Частный защищенный](../../language-reference/modifiers/private-protected.md) <br /><br /> См. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
+|`accessmodifier`|Необязательный. Ниже указаны доступные значения.<br /><br /> -   [Public](../../../visual-basic/language-reference/modifiers/public.md)<br />-   [защищенные](../../../visual-basic/language-reference/modifiers/protected.md)<br />-   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)<br />-   [закрытый](../../../visual-basic/language-reference/modifiers/private.md)<br />- [Protected Friend](../../language-reference/modifiers/protected-friend.md)<br/>- [Частный защищенный](../../language-reference/modifiers/private-protected.md) <br /><br /> См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).|  
 |`Shadows`|Необязательный. См. в разделе [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).|  
 |`Partial`|Необязательный. Указывает частичное определение структуры. См. в разделе [частичного](../../../visual-basic/language-reference/modifiers/partial.md).|  
-|`name`|Обязательно. Имя этой структуры. См. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+|`name`|Обязательно. Имя этой структуры. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
 |`Of`|Необязательный. Указывает, что это структурой универсального типа.|  
 |`typelist`|Требуется при использовании [из](../../../visual-basic/language-reference/statements/of-clause.md) ключевое слово. Список параметров типа для этой структуры. См. в разделе [введите список](../../../visual-basic/language-reference/statements/type-list.md).|  
 |`Implements`|Необязательный. Указывает, что эта структура реализует члены один или несколько интерфейсов. См. в разделе [реализует оператор](../../../visual-basic/language-reference/statements/implements-statement.md).|  
@@ -95,7 +95,7 @@ End Structure
   
 -   **Квалификации.** Код вне структуры нужно уточнить имя члена с именем этой структуры.  
   
-     Если код внутри вложенной структуры делает неопределенную ссылку на элемент программирования, Visual Basic сначала выполняет поиск элемента в вложенной структуры, затем в его содержащей его структуре, и т. д для внешнего содержащего элемента. Дополнительные сведения см. в разделе [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+     Если код внутри вложенной структуры делает неопределенную ссылку на элемент программирования, Visual Basic сначала выполняет поиск элемента в вложенной структуры, затем в его содержащей его структуре, и т. д для внешнего содержащего элемента. Для получения дополнительной информации см. [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 -   **Потребление памяти.** Как и в случае всех составных типов данных, нельзя вычислить безопасно общее потребление памяти структуры путем сложения распределения Номинальное дисковое его членов. Кроме того нельзя рассчитывать на безопасно порядок элементов в памяти: так же, как порядок их объявления. Если вам нужно управлять макетом структуры хранилища, вы можете применить <xref:System.Runtime.InteropServices.StructLayoutAttribute> атрибут `Structure` инструкции.  
   

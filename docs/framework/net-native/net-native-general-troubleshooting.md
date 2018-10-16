@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b53150c90e473e7c4ed32991c43ff0b8ca5b75b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 45a053d2aefa8a295e0e8d52818472647e4ef834
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396289"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347595"
 ---
 # <a name="net-native-general-troubleshooting"></a>Машинный код .NET: Устранение общих неполадок
 В этом разделе описаны способы устранения возможных проблем, с которыми можно столкнуться при разработке приложения с помощью [!INCLUDE[net_native](../../../includes/net-native-md.md)].  
@@ -36,9 +36,9 @@ ms.locfileid: "33396289"
   
      **Разрешение:** исключения возникают из-за того, что .NET Native не предоставил метаданные или код реализации, доступный в противном случае через отражение. (Дополнительные сведения см. в разделе [.NET Native и компиляция](../../../docs/framework/net-native/net-native-and-compilation.md).) Чтобы устранить исключение, необходимо добавить запись в [файл директив среды выполнения (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md), чтобы цепочка инструментов .NET Native могла сделать метаданные или код реализации доступными во время выполнения. Доступны два средства устранения неполадок, которые создадут необходимые записи для добавления в файл директив среды выполнения.  
   
-    -   [Средство устранения неполадок MissingMetadataException](http://dotnet.github.io/native/troubleshooter/type.html) для типов.  
+    -   [Средство устранения неполадок MissingMetadataException](https://dotnet.github.io/native/troubleshooter/type.html) для типов.  
   
-    -   [Средство устранения неполадок MissingMetadataException](http://dotnet.github.io/native/troubleshooter/method.html) для методов.  
+    -   [Средство устранения неполадок MissingMetadataException](https://dotnet.github.io/native/troubleshooter/method.html) для методов.  
   
      Дополнительные сведения см. в разделе [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md).  
   

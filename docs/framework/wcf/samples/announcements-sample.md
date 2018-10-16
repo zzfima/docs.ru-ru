@@ -2,12 +2,12 @@
 title: Образец замечаний
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: a82056844c9ec8f77bce4b0adec481a025894d1f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d03f22b7dd4d9886151e61a2a846f2dc64e661c3
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865726"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347526"
 ---
 # <a name="announcements-sample"></a>Образец замечаний
 Данный образец показывает, как использовать функциональность объявлений возможности обнаружения. Объявления позволяют службам отправлять сообщения объявления, содержащие метаданные службы. По умолчанию отправляется объявление о входе в сеть при запуске службы и объявление о выходе из сети при отключении службы. Эти объявления могут быть многоадресными или отправляться от точки к точке. Этот образец состоит из двух проектов: служба и клиент.  
@@ -15,7 +15,7 @@ ms.locfileid: "43865726"
 ## <a name="service"></a>Служба  
  Данный проект содержит саморазмещаемую службу калькулятора. В методе `Main` создается узел службы, к которому добавляется конечная точка службы. Далее создается поведение <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>. Чтобы включить объявления, к поведению <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> должна быть добавлена конечная точка объявлений. В случае стандартной конечной точки в качестве конечной точки объявления добавляется многоадресная рассылка UDP. При этом объявления рассылаются через общеизвестный адрес UDP.  
   
-```  
+```csharp
 Uri baseAddress = new Uri("http://localhost:8000/" + Guid.NewGuid().ToString());  
   
 // Create a ServiceHost for the CalculatorService type.  
@@ -39,7 +39,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 ## <a name="client"></a>"Клиент";  
  Обратите внимание, что в данном проекте клиент содержит службу <xref:System.ServiceModel.Discovery.AnnouncementService>. Кроме того, для событий зарегистрировано два делегата. Эти события определяют, что делает клиент при получении объявлений о входе и выходе из сети.  
   
-```  
+```csharp
 // Create an AnnouncementService instance  
 AnnouncementService announcementService = new AnnouncementService();  
   
@@ -50,7 +50,7 @@ announcementService.OfflineAnnouncementReceived += OnOfflineEvent;
   
  Методы `OnOnlineEvent` и `OnOfflineEvent` обслуживают соответственно сообщения объявлений о входе и выходе из сети.  
   
-```  
+```csharp
 static void OnOnlineEvent(object sender, AnnouncementEventArgs e)  
 {  
     Console.WriteLine();              

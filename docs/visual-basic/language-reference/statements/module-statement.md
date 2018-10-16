@@ -14,11 +14,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
 ms.openlocfilehash: 5628224a08fe5f12cf2a81b179c4998001174354
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845077"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49349021"
 ---
 # <a name="module-statement"></a>Оператор Module
 Объявляет имя модуля и вводит определение переменных, свойств, событий и процедур, которые включены в модуль.  
@@ -42,10 +42,10 @@ End Module
   
 -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
- См. в разделе [уровни в Visual Basic доступа](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ См. раздел [Access levels in Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `name`  
- Обязательно. Имя этого модуля. См. в разделе [имена объявленных элементов](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Обязательно. Имя этого модуля. См. раздел [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
  `statements`  
  Необязательный. Операторы, которые определяют переменные, свойства, события, процедуры и вложенные типы этого модуля.  
@@ -91,7 +91,7 @@ End Module
   
      Областью для каждого элемента модуля является весь модуль. Обратите внимание, что все элементы претерпевают *повышение типа*, который приводит к их области, повышаются до пространства имен, содержащего модуль. Дополнительные сведения см. в разделе [повышение типа](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md).  
   
--   **Квалификации.** Может быть несколько модулей в проекте, и можно объявить члены с тем же именем в два или несколько модулей. Тем не менее любая ссылка на элемент с именем соответствующего модуля необходимо уточнить, если ссылка находится за пределами этого модуля. Дополнительные сведения см. в разделе [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
+-   **Квалификации.** Может быть несколько модулей в проекте, и можно объявить члены с тем же именем в два или несколько модулей. Тем не менее любая ссылка на элемент с именем соответствующего модуля необходимо уточнить, если ссылка находится за пределами этого модуля. Для получения дополнительной информации см. [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md).  
   
 ## <a name="example"></a>Пример  
  [!code-vb[VbVbalrStatements#69](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/module-statement_1.vb)]  
