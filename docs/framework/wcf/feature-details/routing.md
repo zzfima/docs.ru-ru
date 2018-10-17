@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], routing
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
-ms.openlocfilehash: 065bbb5e20ddf1b26e98934d94c764e83969cc8a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 50b6cb78f5fb20344d5f682d268b6e646c17fb9e
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518908"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49370837"
 ---
 # <a name="routing"></a>Маршрутизация
 В подразделах данного раздела описывается служба маршрутизации. Служба маршрутизации является универсальным, настраиваемым посредником SOAP, позволяющим настраивать маршрутизацию на основе содержимого, задавать привязку протоколов, обрабатывать ошибки связи и динамически обновлять логику маршрутизации во время выполнения.  
@@ -20,7 +20,7 @@ ms.locfileid: "43518908"
  [Служба маршрутизации](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  Общие сведения о возможностях службы маршрутизации.  
   
- [Служба маршрутизации](https://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [Служба маршрутизации](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  Описываются некоторые возможности службы маршрутизации.  
   
  [Введение в маршрутизацию](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

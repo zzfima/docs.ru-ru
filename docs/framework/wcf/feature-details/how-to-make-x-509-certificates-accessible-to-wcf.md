@@ -10,11 +10,11 @@ helpviewer_keywords:
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
 ms.openlocfilehash: 0917569b556c31413b715d75c83a96f3a4b015d7
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579976"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371957"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Практическое руководство. Предоставление доступа к сертификатам X.509 для WCF
 Чтобы сделать сертификат X.509, доступной в Windows Communication Foundation (WCF), код приложения необходимо указать имя хранилища сертификатов и расположение. В некоторых случаях идентификатор процесса должен иметь доступ к файлу, который содержит закрытый ключ, связанный с сертификатом X.509. Чтобы получить закрытый ключ, связанный с сертификатом X.509 в хранилище сертификатов, WCF должно иметь разрешение на это. По умолчанию доступ к закрытому ключу сертификата имеют только владелец и системная учетная запись.  

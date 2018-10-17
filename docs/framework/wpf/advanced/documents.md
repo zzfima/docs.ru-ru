@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 5f8eb4afe53292b2589964f1a745f00d761ee019
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4a0d2b99368dc985c11951089adbabf8e1cdc8b9
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542968"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372152"
 ---
 # <a name="documents"></a>Документы
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет универсальный набор компонентов, позволяющий разработчикам создавать приложения с расширенными свойствами документов и улучшенным интерфейсом чтения. В дополнение к расширенным возможностям и качеству [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] предоставляет также службы упрощенного управления упаковкой, защитой и хранением документов.  
@@ -28,4 +28,4 @@ ms.locfileid: "33542968"
  <xref:System.Windows.Controls.DocumentViewer>  
  <xref:System.Windows.Documents.FlowDocument>  
  <xref:System.Windows.Xps>  
- [isXPS.exe (средство проверки соответствия isXPS)](https://msdn.microsoft.com/library/bfbb433f-7ab6-417a-90f0-71443d76bcb3(v=vs.100))
+ [isXPS.exe (средство проверки соответствия isXPS)](/previous-versions/dotnet/netframework-4.0/aa348104(v=vs.100))

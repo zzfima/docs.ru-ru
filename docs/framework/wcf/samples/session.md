@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
-ms.openlocfilehash: ce91adbb5156eef09221a76773e5a9551f0e8440
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0f6a06bfb9d1e5274df047e45a5042353515e206
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517896"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371672"
 ---
 # <a name="session"></a>Сеанс
 В образце сеанса показано, как реализовать контракт, требующий сеанс. Сеанс обеспечивает контекст для выполнения нескольких операций. Это позволяет службе связать состояние с заданным сеансом, чтобы последующие операции могли использовать состояние предыдущей операции. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует службу калькулятора. Контракт `ICalculator` был изменен, чтобы можно было выполнять набор арифметических операций с сохранением промежуточного результата. Эта функциональность определяется контрактом `ICalculatorSession`. Служба поддерживает состояние клиента во время вызова нескольких операций для вычислений. Клиент может извлечь текущий результат путем вызова метода `Result()` и очистить результат (сделать его равным нулю) путем вызова метода `Clear()`.  
@@ -21,7 +21,7 @@ ms.locfileid: "43517896"
   
  Присвоение свойству <xref:System.ServiceModel.SessionMode> контракта значения `Required` гарантирует, что при предоставлении контракта через определенную привязку привязка будет поддерживать сеансы. Если привязка не поддерживает сеансы, создается исключение. Интерфейс `ICalculatorSession` определяется таким образом, чтобы можно было вызывать одну или более операций, что приводит к изменению текущего результата, как показано в следующем образце кода.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
 public interface ICalculatorSession  
 {  
@@ -42,7 +42,7 @@ public interface ICalculatorSession
   
  Служба использует <xref:System.ServiceModel.InstanceContextMode> поля <xref:System.ServiceModel.InstanceContextMode.PerSession>, чтобы привязать контекст заданного экземпляра службы к каждому входящему сеансу. Это позволяет службе поддерживать промежуточный результат для каждого сеанса в локальной переменной-члене.  
   
-```  
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
 public class CalculatorService : ICalculatorSession  
 {  
@@ -70,7 +70,7 @@ public class CalculatorService : ICalculatorSession
   
  При выполнении образца клиент отправляет на сервер несколько запросов и запрашивает результаты, которые затем отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
-```  
+```console  
 (((0 + 100) - 50) * 17.65) / 2 = 441.25  
 Press <ENTER> to terminate client.  
 ```  

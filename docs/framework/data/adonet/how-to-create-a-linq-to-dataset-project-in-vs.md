@@ -2,12 +2,12 @@
 title: Создание проектов LINQ to DataSet в Visual Studio
 ms.date: 08/15/2018
 ms.assetid: 49ba6cb0-cdd2-4571-aeaa-25bf0f40e9b3
-ms.openlocfilehash: 12544c6b5153a5f6300072d1646f2c119fb255a1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 22763d3b9581d09d7bdda0c09480f8d36bb8e2ec
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515750"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372451"
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Практическое: Создание проектов LINQ to DataSet в Visual Studio
 
@@ -22,7 +22,7 @@ LINQ to DataSet требуются две дополнительные ссыл�
 
 ## <a name="to-enable-linq-to-dataset-functionality"></a>Включение функциональности LINQ to DataSet
 
-Выполните следующие действия, чтобы включить LINQ к функциональным возможностям набора данных в существующем проекте.
+Выполните следующие шаги для включения функциональных возможностей набора данных в существующий проект LINQ.
 
 1. Добавьте ссылки на **System.Core**, **System.Data**, и **System.Data.DataSetExtensions**.
 

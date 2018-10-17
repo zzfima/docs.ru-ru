@@ -2,12 +2,12 @@
 title: Служба AJAX с использованием HTTP POST
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: c102d9d403cefb1bf3d4ab75859a81172895c2e0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: df199b40a4a9ebb9a36cea7234b484273348cd9e
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041113"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372064"
 ---
 # <a name="ajax-service-using-http-post"></a>Служба AJAX с использованием HTTP POST
 В этом примере показано, как использовать Windows Communication Foundation (WCF) для создания [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Asynchronous JavaScript and XML (AJAX) службы, которая использует HTTP POST. Обращаться к службе AJAX можно с использованием кода JavaScript из клиента на основе веб-браузера. Этот пример основан на [базовой службы AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) образец; единственное различие между двумя примерами является использование HTTP POST вместо HTTP GET.  
@@ -33,7 +33,7 @@ public interface ICalculator
 
  Создайте конечную точку AJAX в службе с помощью <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory> точно так же, как в образце базовой службы AJAX.  
   
- В отличие от запросов GET вызывать службы POST из браузера нельзя. Например, перейдя к http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200 возникает ошибка, поскольку служба POST ожидает `n1` и `n2` параметры, которые будут отправляться в теле сообщения — в формате JSON —, а не в URL-адрес.  
+ В отличие от запросов GET вызывать службы POST из браузера нельзя. Например, перейдя к `http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200` возникает ошибка, поскольку служба POST ожидает `n1` и `n2` параметры, которые будут отправляться в теле сообщения в формате JSON, а не в URL-адрес.  
   
  Клиентская веб-страница PostAjaxClientPage.aspx содержит код ASP.NET для вызова службы, когда пользователь нажимает одну из кнопок операций на странице. Служба отвечает так же как и в [базовой службы AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) образца с помощью запроса GET.  
   
@@ -52,6 +52,4 @@ public interface ICalculator
   
 2.  Построение решения PostAjaxService.sln, как описано в разделе [сборка образцов Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Перейдите к http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx (не открывайте страницу PostAjaxClientPage.aspx в браузере из каталога проекта).  
-  
-## <a name="see-also"></a>См. также
+3.  Перейдите к `http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx` (не открывайте страницу PostAjaxClientPage.aspx в браузере из каталога проекта).

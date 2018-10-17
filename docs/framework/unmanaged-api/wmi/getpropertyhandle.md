@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94171b0708c97eb7510e916e451ed03645d706f3
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 2383003012ce1f6adffe0ad78ab614323840496f
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837444"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371008"
 ---
 # <a name="getpropertyhandle-function"></a>Функция GetPropertyHandle
 Возвращает уникальный маркер, определяющий свойство.
@@ -52,7 +52,7 @@ HRESULT GetPropertyHandle (
 [in] Завершающаяся нулем строка кодировке UTF16 знака, содержащее имя свойства.   
 
 `pType`  
-[out] Указатель на [ `CIMTYPE` ](https://msdn.microsoft.com/library/aa386309(v=vs.85).aspx) член перечисления, представляющее тип CIM данного свойства.
+[out] Указатель на [ `CIMTYPE` ](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration) член перечисления, представляющее тип CIM данного свойства.
 
 `pHandle`   
 [out] Указатель на целое число, которое содержит дескриптор свойства.
@@ -61,7 +61,7 @@ HRESULT GetPropertyHandle (
 
 Следующие значения, возвращаемые этой функцией, определяются в *WbemCli.h* файл заголовка, или их можно определить как константы в коде:
 
-|Константа  |Значение  |Описание:  |
+|Константа  |Значение  |Описание  |
 |---------|---------|---------|
 |`WBEM_E_NOT_FOUND` | 0x80041002 | Свойство с указанным именем не найден. |
 |`WBEM_E_INVALID_PARAMETER` | 0x80041008 | Параметр не является допустимым. |

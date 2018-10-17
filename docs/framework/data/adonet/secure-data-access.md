@@ -2,12 +2,12 @@
 title: Безопасный доступ к данным
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 7083f68457aa8f87b01f523abc5742d24bafcbfd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e5bb96a091dcd64f12d086d864643d00c34d8f17
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513791"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372468"
 ---
 # <a name="secure-data-access"></a>Безопасный доступ к данным
 Для записи безопасного кода ADO.NET необходимо понять механизмы безопасности, доступные в базовом хранилище данных или базе данных. Также необходимо рассмотреть влияние на безопасность остальных функций или компонентов, которые может содержать приложение.  
@@ -88,7 +88,7 @@ ms.locfileid: "43513791"
 |Ресурс|Описание|  
 |--------------|-----------------|  
 |[Взаимодействие с неуправляемым кодом](../../../../docs/framework/interop/index.md)|Содержит подразделы, описывающие представление COM-компонентов платформе .NET Framework и представление компонентов .NET Framework объектам COM.|  
-|[Расширенное COM-взаимодействие](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Содержит расширенные подразделы, такие как основные сборки взаимодействия, организация поточной обработки и пользовательская упаковка и передача.|  
+|[Расширенное COM-взаимодействие](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)|Содержит расширенные подразделы, такие как основные сборки взаимодействия, организация поточной обработки и пользовательская упаковка и передача.|  
   
 ## <a name="see-also"></a>См. также  
  [Защита приложений ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
