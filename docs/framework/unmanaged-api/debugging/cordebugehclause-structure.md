@@ -14,11 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 40820a805310786eeb0effd7c5284c1a70a6e70b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 83928696fc7fdfaf2eb944f4cdb9eebecdece0b3
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373699"
 ---
 # <a name="cordebugehclause-structure"></a>Структура CorDebugEHClause
 [Поддерживается в .NET Framework 4.5.2 и более поздних версиях.]  
@@ -52,9 +53,9 @@ typedef struct _CorDebugEHClause {
 |`FilterOffset`|Смещение в байтах от начала тела метода для обработчика исключений на основе фильтра.|  
   
 ## <a name="remarks"></a>Примечания  
- Массив `CoreDebugEHClause` возвращенных значений [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) метод.  
+ Массив `CoreDebugEHClause` возвращаемые значения [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) метод.  
   
- Информация о предложении обработки исключений определяется спецификацией CLI. Дополнительные сведения см. в разделе [стандартные ECMA-355: Common Language Infrastructure (CLI), изд](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Информация о предложении обработки исключений определяется спецификацией CLI. Дополнительные сведения см. в разделе [стандартный ECMA-355: Common Language Infrastructure (CLI), изд. 6](https://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  Поле `flags` может содержать следующие флаги. Обратите внимание, что они не определены в CorDebug.idl или CorDebug.h.  
   
@@ -66,13 +67,13 @@ typedef struct _CorDebugEHClause {
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|Неправильное предложение (предложение `finally`, которое вызывается только при возникновении исключения).|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** CorDebug.idl, CorDebug.h  
   
  **Библиотека:** CorGuids.lib  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Метод GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  

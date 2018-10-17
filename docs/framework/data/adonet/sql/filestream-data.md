@@ -2,12 +2,12 @@
 title: Данные FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: eef03d171d288cb2bc62c3aaa477a95a5ce718c3
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 843aa890ba80ab2816af0726170eacb77f419d50
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176803"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374200"
 ---
 # <a name="filestream-data"></a>Данные FILESTREAM
 Для двоичных данных (BLOB), хранящихся в столбце varbinary(max), появился новый атрибут хранилища FILESTREAM. До появления FILESTREAM для хранения двоичных данных была необходима специальная обработка. Неструктурированные данные, например текстовые документы, изображения и видеоролики, зачастую хранятся вне базы данных, что затрудняет работу с ними.  
@@ -167,17 +167,15 @@ namespace FileStreamTest
 }
 ```  
   
- Другой пример, см. в разделе [способы хранения и получения двоичных данных в столбце файлового потока](http://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  
+ Другой пример, см. в разделе [способы хранения и получения двоичных данных в столбце файлового потока](https://www.codeproject.com/Articles/32216/How-to-store-and-fetch-binary-data-into-a-file-str).  
   
 ## <a name="resources-in-sql-server-books-online"></a>Ресурсы электронной документации по SQL Server  
  Полная документация по FILESTREAM содержится в следующих разделах документации по SQL Server.  
   
 |Раздел|Описание|  
 |-----------|-----------------|  
-|[Проектирование и реализация хранилища FILESTREAM](http://msdn2.microsoft.com/library/bb895234\(SQL.105\).aspx)|Приводятся ссылки на документацию по атрибуту FILESTREAM и связанные с ним разделы.|  
-|[Общие сведения о FILESTREAM](http://msdn2.microsoft.com/library/bb933993\(SQL.105\).aspx)|Приводятся сведения о том, когда необходимо использовать хранилище FILESTREAM; также описывается интеграция ядра СУБД SQL Server и файловой системы NTFS.|  
-|[Приступая к работе с хранилищем FILESTREAM](https://msdn.microsoft.com/library/bb933995\(SQL.105\).aspx)|Описывается включение хранилища FILESTREAM для экземпляра SQL Server, создание базы данных и таблицы, в которой будут храниться данные FILESTREAM, а также работа со строками, содержащими данные FILESTREAM.|  
-|[Использование хранилища FILESTREAM в клиентских приложениях](https://msdn.microsoft.com/library/bb933877\(SQL.105\).aspx)|Описываются функции API-интерфейса Win32, предназначенные для работы с данными FILESTREAM.|  
+|[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|Приводятся сведения о том, когда необходимо использовать хранилище FILESTREAM; также описывается интеграция ядра СУБД SQL Server и файловой системы NTFS.|  
+|[Создание клиентских приложений для данных FILESTREAM](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|Описываются функции API-интерфейса Win32, предназначенные для работы с данными FILESTREAM.|  
 |[FILESTREAM и другими компонентами SQL Server](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|Приводятся общие сведения, рекомендации и ограничения при использовании данных FILESTREAM совместно с другими возможностями SQL Server.|  
   
 ## <a name="see-also"></a>См. также  
@@ -185,4 +183,4 @@ namespace FileStreamTest
  [Извлечение и изменение данных в ADO.NET](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Управление доступом для кода и ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md)  
  [Двоичные данные и данные большого объема SQL Server](../../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [Общие сведения об ADO.NET](../../../../../docs/framework/data/adonet/ado-net-overview.md)

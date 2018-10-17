@@ -2,12 +2,12 @@
 title: Общие сведения о потоках сообщений
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
-ms.openlocfilehash: 73ad66389d8458c0508c7a8cae28f54ca38ed574
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 54ffd8ec2349b2dd54ca61615b2fb1b997d02932
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841986"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372789"
 ---
 # <a name="message-flow-overview"></a>Общие сведения о потоках сообщений
 В распределенной системе со связанными между собой службами необходимо определять причинные взаимоотношения между службами. Понимать, какие из различных компонентов входили в путь потока запроса, необходимо для решения таких важнейших задач, как наблюдения за работоспособностью, устранение неполадок и анализ первопричин. Для поддержки трассировки в различных службах в .NET Framework 4 была добавлена поддержка следующих функций.
@@ -52,13 +52,13 @@ ms.locfileid: "48841986"
 
 8.  В файле Program.cs в клиенте добавьте следующий оператор Using.
 
-    ```
+    ```csharp
     using System.Diagnostics;
     ```
 
 9. В методе Main файла program.cs клиентского проекта задайте распространение идентификатора GUID трассировки в журнале событий.
 
-    ```
+    ```csharp
     Guid guid = Guid.NewGuid();
     Trace.CorrelationManager.ActivityId = guid;
     ```

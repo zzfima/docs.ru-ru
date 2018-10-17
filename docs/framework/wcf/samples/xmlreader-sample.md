@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
-ms.openlocfilehash: ce5c03d7bd169ee166e9444ee070c32df6e2801c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5ac97afd2efc1bb57a81f5cd2d78fed18ca3804d
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520950"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374681"
 ---
 # <a name="xmlreader-sample"></a>Пример XmlReader
 Образец XmlReader демонстрирует обработку тела сообщения с помощью <xref:System.Xml.XmlReader>. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует службу калькулятора. Добавлена дополнительная операция службы `Sum`, которая принимает сообщение, содержащее массив складываемых значений. Служба считывает сообщение с использованием <xref:System.Xml.XmlReader>.  
@@ -19,7 +19,7 @@ ms.locfileid: "43520950"
   
  Интерфейс калькулятора включает в себя операцию службы с именем `Sum`, которая принимает параметр <xref:System.ServiceModel.Channels.Message>, как показано в следующем образце кода.  
   
-```  
+```csharp
 public interface ICalculator  
 {  
     [OperationContract]  
@@ -37,9 +37,10 @@ public interface ICalculator
   
  Для обращения к операции `Sum` клиент сначала создает массив целых чисел, потом создает из этого массива сообщение, а затем вызывает метод `Sum` с использованием созданного сообщения, как показано в следующем образце кода.  
   
-```  
+```csharp
 CalculatorClient client = new CalculatorClient();  
-...  
+//...  
+
 // Call the Sum service operation.  
 int[] values = { 1, 2, 3, 4, 5 };  
 using (new OperationContextScope(client.InnerChannel))  
@@ -54,7 +55,7 @@ using (new OperationContextScope(client.InnerChannel))
   
  В службе реализация операции службы `Sum` получает доступ к телу сообщения с помощью объекта <xref:System.Xml.XmlReader> для итерационной обработки суммируемых значений. Метод <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> вызывается для доступа к телу сообщения, как показано в следующем образце кода.  
   
-```  
+```csharp  
 public int Sum(Message message)  
 {  
     int sum = 0;  
@@ -81,7 +82,7 @@ public int Sum(Message message)
   
  При выполнении образца запросы и отклики операции отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  

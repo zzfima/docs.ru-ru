@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, throttling sample
 - Throttling Sample [Windows Communication Foundation]
 ms.assetid: 40bb3582-8ae9-4410-96f0-6c515bfaf47c
-ms.openlocfilehash: f214e3a5230d6cf16b3bde5d89078160ed95f96f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1337b5d1c4c18700f0722bbb6912e934b2170b01
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519170"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374044"
 ---
 # <a name="throttling"></a>Регулирование
 В образце регулирования демонстрируется использование элементов управления регулированием. Элементы регулирования ограничивают число одновременных вызовов, экземпляров или сеансов, чтобы предотвратить чрезмерное потребление ресурсов. Поведение регулирования задается параметрами файла конфигурации службы. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора.  
@@ -40,7 +40,7 @@ ms.locfileid: "43519170"
   
  Для демонстрации регулирования в методах службы следующим образом определяется время задержки:  
   
-```  
+```csharp
 public double Add(double n1, double n2)  
 {  
     System.Threading.Thread.Sleep(2000);  
@@ -50,7 +50,7 @@ public double Add(double n1, double n2)
   
  При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Методы Add и Subtract выполняются параллельно и методы Multiply и Divide выполняются параллельно, что подтверждает, что параллельно можно выполнять не более двух методов, и является демонстрацией регулирования.  
   
-```  
+```console  
 Press <ENTER> to terminate client.  
 Add(100,15.99)  
 Subtract(145,76.54)  

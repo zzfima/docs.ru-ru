@@ -2,12 +2,12 @@
 title: Атрибут KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 02d151ee322cb2793df6f31e5e4b72dfb1027aec
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d17ded99e08fa4fb99fd87e220045c2869a35805
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522860"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372412"
 ---
 # <a name="knownassemblyattribute"></a>Атрибут KnownAssemblyAttribute
 В этом образце показано, как можно настроить процессы сериализации и десериализации с помощью класса <xref:System.Runtime.Serialization.DataContractResolver>. В этом образце показано, как динамически добавлять известные типы во время сериализации и десериализации.  
@@ -15,7 +15,7 @@ ms.locfileid: "43522860"
 ## <a name="sample-details"></a>Подробные сведения об образце  
  Этот образец состоит из четырех проектов. Один из них соответствует службе, которая будет размещаться службами IIS и определяет следующий контракт службы.  
   
-```  
+```csharp
 // Definition of a service contract.  
 [ServiceContract(Namespace = "http://Microsoft.Samples.KAA")]  
 [KnownAssembly("Types")]  
@@ -40,7 +40,7 @@ public interface IDataContractCalculator
   
  Контракт службы реализован, как показано в следующем примере.  
   
-```  
+```csharp
 // Service class that implements the service contract.  
  public class DataContractCalculatorService : IDataContractCalculator  
  {  
@@ -86,7 +86,7 @@ public interface IDataContractCalculator
   
  Другой проект соответствует клиенту, который сообщается с сервером и вызывает предоставляемые им методы. Определение клиента показано в следующем примере.  
   
-```  
+```csharp  
  // Client implementation code.  
  class Client  
  {  
@@ -193,7 +193,7 @@ public interface IDataContractCalculator
   
  Арбитр `DataContractResolver`, определенный для этого образца, показан в следующем фрагменте кода.  
   
-```  
+```csharp
 public class MyDataContractResolver : DataContractResolver  
     {  
        Dictionary<string, XmlDictionaryString> dictionary = new Dictionary<string, XmlDictionaryString>();  
@@ -277,7 +277,7 @@ public class MyDataContractResolver : DataContractResolver
   
  Библиотека типов, которая используется в этом образце, показана в следующем фрагменте кода.  
   
-```  
+```csharp 
  [DataContract]  
  public class ComplexNumber  
  {  
@@ -324,7 +324,7 @@ public class ComplexNumberWithMagnitude : ComplexNumber
   
  После того, как образец построен и выполнен, клиент должен ожидать получения следующего вывода.  
   
-```  
+```console  
 Add(1 + 2i, 3 + 4i) = 4 + 6i  
 Magnitude: 7.21110255092798  
   

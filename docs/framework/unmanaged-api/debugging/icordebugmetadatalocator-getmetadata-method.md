@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1149a3c3589cec0e952088a772ca036028c58ff5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b905c8bb89e4b163952b9640b53fc3992ba5ca10
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521358"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373888"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>Метод ICorDebugMetaDataLocator::GetMetaData
 Запрашивает у отладчика возврат полного пути к модулю, метаданные которого необходимы для завершения запрошенной отладчиком операции.  
@@ -46,7 +46,7 @@ HRESULT GetMetaData(
  [in] Завершающаяся нулевым байтом строка, представляющая полный путь к файлу. Если полный путь недоступен, имя и расширение файла (*filename*. *расширение*).  
   
  `dwImageTimeStamp`  
- [in] Временная метка из заголовков PE-файла образа. Этот параметр потенциально может использоваться для сервера символов ([SymSrv](https://msdn.microsoft.com/library/cc266470.aspx)) подстановки.  
+ [in] Временная метка из заголовков PE-файла образа. Этот параметр потенциально может использоваться для сервера символов ([SymSrv](/windows/desktop/debug/using-symsrv)) подстановки.  
   
  `dwImageSize`  
  [in] Размер образа из заголовков PE-файла. Этот параметр может использоваться для поиска SymSrv.  

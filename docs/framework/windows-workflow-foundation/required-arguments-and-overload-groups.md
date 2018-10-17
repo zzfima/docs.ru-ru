@@ -2,12 +2,12 @@
 title: Обязательные аргументы и группы перегруженных аргументов
 ms.date: 03/30/2017
 ms.assetid: 4ca3ed06-b9af-4b85-8b70-88c2186aefa3
-ms.openlocfilehash: d25702e573acd9a0815c232cdf6935d6e9651631
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d7cfe00d93f1eede77bcda5881c63843722c9a17
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842077"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374271"
 ---
 # <a name="required-arguments-and-overload-groups"></a>Обязательные аргументы и группы перегруженных аргументов
 Действия можно настроить таким образом, чтобы для их выполнения требовалась привязка определенных аргументов. Атрибут `RequiredArgument` указывает, что для действия необходимы определенные аргументы, а атрибут `OverloadGroup` используется для группирования категорий необходимых аргументов. С помощью атрибутов авторы действий могут реализовать простые или сложные конфигурации проверки правильности действий.  

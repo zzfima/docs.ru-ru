@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 904abff4f3cae5873fe3cc9705dee84f73e2a523
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4b390ea0ffc6551d57a99a54985632135964fb7a
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004514"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374811"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Настройка служб с использованием файлов конфигурации
 Настройка службы Windows Communication Foundation (WCF) с помощью файла конфигурации обеспечивает гибкость предоставления конечной точки и данные поведение службы точке развертывания, а не во время разработки. В этой теме представлено описание основных доступных методов.  

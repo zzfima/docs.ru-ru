@@ -2,12 +2,12 @@
 title: Описание службы
 ms.date: 03/30/2017
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
-ms.openlocfilehash: 1acd82fddd378a379023c7aa46ead2ce36c5b243
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c31edae952b20823945403dd5aebb438bcbf0c11
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003351"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374070"
 ---
 # <a name="service-description"></a>Описание службы
 Образец "Описание службы" показывает, как служба может получать свое описание службы в среде выполнения. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), с помощью дополнительную операцию службы определен возврат значения описательные сведения о службе. Возвращаемые сведения содержат базовые адреса и конечные точки службы. Служба предоставляет эти сведения с помощью классов <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost> и <xref:System.ServiceModel.Description.ServiceDescription>.  
@@ -19,7 +19,7 @@ ms.locfileid: "46003351"
   
  Этот образец содержит модифицированную версию контракта калькулятора под названием `IServiceDescriptionCalculator`. Контракт определяет дополнительную операцию службы с именем `GetServiceDescriptionInfo`, возвращающую клиенту многострочный текст, описывающий базовый адрес или адреса и конечную точку или точки службы.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IServiceDescriptionCalculator  
 {  
@@ -38,7 +38,7 @@ public interface IServiceDescriptionCalculator
   
  Код реализации операции `GetServiceDescriptionInfo` использует класс <xref:System.ServiceModel.Description.ServiceDescription> для перечисления конечных точек службы. Так как у конечных точек службы могут быть относительные адреса, он сначала перечисляет базовые адреса службы. Чтобы вернуть все эти сведения, код получает контекст операции с помощью <xref:System.ServiceModel.OperationContext.Current%2A>. Класс <xref:System.ServiceModel.ServiceHost> и его объект <xref:System.ServiceModel.Description.ServiceDescription> извлекаются из контекста операции. Чтобы перечислить конечные точки службы, код выполняет итерацию коллекции <xref:System.ServiceModel.ServiceHostBase.BaseAddresses%2A> узла службы. Чтобы перечислить служебные конечные точки службы, код выполняет итерацию коллекции конечных точек описания службы.  
   
-```  
+```csharp
 public string GetServiceDescriptionInfo()  
 {  
     string info = "";  
@@ -65,7 +65,7 @@ public string GetServiceDescriptionInfo()
   
  При выполнении образца видны операции калькулятора и сведения службы, возвращаемые операцией `GetServiceDescriptionInfo`. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
-```  
+```console  
 Add(15,3) = 18  
 Subtract(145,76) = 69  
 Multiply(9,81) = 729  

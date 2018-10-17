@@ -2,12 +2,12 @@
 title: Использование Windows Management Instrumentation для диагностики
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: b7c898f1af91f639939e5480687b5967bf57d246
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91d126eb75c9cac2823b756010351dd692b2e24e
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856209"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372711"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Использование Windows Management Instrumentation для диагностики
 Windows Communication Foundation (WCF) предоставляет данные проверки службы во время выполнения через поставщика WCF инструментария управления Windows (WMI).  
@@ -171,7 +171,7 @@ Whoami /user
 ### <a name="using-managed-code"></a>Использование управляемого кода  
  Доступ к удаленным экземплярам WMI также может осуществляться программно с помощью классов, предоставляемых пространством имен <xref:System.Management>. В следующем образце кода показано, как это сделать.  
   
-```  
+```csharp
 String wcfNamespace = String.Format(@"\\{0}\Root\ServiceModel",      
    this.serviceMachineName);  
   

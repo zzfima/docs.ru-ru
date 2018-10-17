@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e38ae4f3-3e3d-42c3-a4b8-db1aa9d84f85
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 046b71a8f1d948a785a15cfc148b93292bf673f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0a89474ddfe3bcde1c44271818b7e3c730469f48
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395532"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372397"
 ---
 # <a name="net-native-and-compilation"></a>Машинный код .NET и компиляция
 Приложения Windows 8.1 и классические приложения Windows, предназначенные для платформы .NET Framework, создаются на определенном языке программирования и компилируются в промежуточный язык (IL). Перед выполнением какого-либо метода в первый раз JIT-компилятор компилирует IL-код в машинный код для локального компьютера. В противоположность этому цепочка инструментов .NET Native преобразует исходный код в машинный код во время компиляции. В этом разделе сравнивается .NET Native с другими технологиями компиляции, доступными для приложений .NET Framework, а также детально рассматривается, как цепочка инструментов .NET Native создает исходный код, что поможет вам понять, почему исключения, возникающие в коде, скомпилированном .NET Native, не возникают в JIT-скомпилированном коде.  
@@ -102,6 +102,6 @@ ms.locfileid: "33395532"
   
 ## <a name="see-also"></a>См. также  
  [Метаданные и компоненты с самоописанием](../../../docs/standard/metadata-and-self-describing-components.md)  
- [Внутри .NET Native (видео Channel 9)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
+ [Внутри .NET Native (видео Channel 9)](https://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
  [Отражение и .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [.NET Native. Устранение общих неполадок](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

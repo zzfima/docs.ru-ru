@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: c3904ad60df3d9d7ce2b58d5911e4e19a2ebb7e3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78c511555065528d1ab34ee3ec9f8859a15bbc61
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193909"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372396"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>Общие сведения об объектах TextPattern и Embedded
 > [!NOTE]
->  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Для получения последних сведений о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], см. в разделе [API автоматизации Windows: модели автоматизации пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
+>  Эта документация предназначена для разработчиков .NET Framework, желающих использовать управляемые классы [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] , заданные в пространстве имен <xref:System.Windows.Automation> . Последние сведения о [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]см. в разделе [API автоматизации Windows. Автоматизация пользовательского интерфейса](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  В этом обзоре описано, как [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] представляет внедренные объекты или дочерние элементы в текстовом документе или контейнере.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "47193909"
   
  Для обхода содержимого текстового диапазона в фоновом режиме применяется ряд шагов для успешного выполнения метода <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> .  
   
-1.  Текстовый диапазон нормализован, т. е. он свернут до вырожденного диапазона в конечной точке <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , что делает конечную точку <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> избыточной. Этот шаг необходим для устранения неоднозначности в случаях, когда текстовый диапазон охватывает <xref:System.Windows.Automation.Text.TextUnit> границы: например, «{U} RL [ http://www.microsoft.com ](https://www.microsoft.com) внедряется в текст» где «{» и «}» — конечные точки диапазона текста.  
+1.  Текстовый диапазон нормализован, т. е. он свернут до вырожденного диапазона в конечной точке <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> , что делает конечную точку <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> избыточной. Этот шаг необходим для устранения неоднозначности в случаях, когда текстовый диапазон охватывает <xref:System.Windows.Automation.Text.TextUnit> границы: например, `{The URL https://www.microsoft.com is embedded in text` где «{» и «}» — конечные точки диапазона текста.  
   
 2.  Результирующий диапазон перемещается в <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> в начало запрошенной границы <xref:System.Windows.Automation.Text.TextUnit> .  
   
@@ -66,22 +66,22 @@ ms.locfileid: "47193909"
   
  } = <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End>  
   
-<a name="Hyperlink"></a>   
 ### <a name="hyperlink"></a>Гиперссылка  
- **Пример 1. Текстовый диапазон, содержащий внедренную текстовую гиперссылку**  
+
+**Пример 1. Текстовый диапазон, содержащий внедренную текстовую гиперссылку**
   
- {URL-адрес [ http://www.microsoft.com ](https://www.microsoft.com) внедряется в текст}.  
+`{The URL https://www.microsoft.com is embedded in text}.`
   
 |Вызываемый метод|Результат|  
 |-------------------|------------|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Возвращает строку «URL-адрес http://www.microsoft.com внедряется в текст».|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|Возвращает строку `The URL https://www.microsoft.com is embedded in text`.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Возвращает внутренний <xref:System.Windows.Automation.AutomationElement> , который охватывает диапазон текста. В этом случае это <xref:System.Windows.Automation.AutomationElement> , представляющий поставщик текста.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий элемент управления гиперссылки.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим методом `GetChildren` .|Возвращает диапазон, представляющий "http://www.microsoft.com«.|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим методом `GetChildren` .|Возвращает диапазон, представляющий "https://www.microsoft.com«.|  
   
  **Пример 2. Текстовый диапазон, частично охватывающий внедренную текстовую гиперссылку**  
   
- URL-адрес `http://{[www]}` внедряется в текст.  
+ URL-адрес `https://{[www]}` внедряется в текст.  
   
 |Вызываемый метод|Результат|  
 |-------------------|------------|  
@@ -89,9 +89,9 @@ ms.locfileid: "47193909"
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|Возвращает внутренний <xref:System.Windows.Automation.AutomationElement> , который охватывает диапазон текста. В этом случае это элемент управления гиперссылки.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|Возвращает, `null` так как диапазон текста не охватывает всю строку URL-адреса.|  
   
- **Пример 3 - текстовый диапазон, частично охватывающий содержимое контейнера текста. Контейнер текста содержит внедренную текстовую гиперссылку, которая не является частью текстового диапазона.**  
+**Пример 3 - текстовый диапазон, частично охватывающий содержимое контейнера текста. Контейнер текста содержит внедренную текстовую гиперссылку, которая не является частью текстового диапазона.**  
   
- {URL} [ http://www.microsoft.com ](https://www.microsoft.com) внедряется в текст.  
+`{The URL} [https://www.microsoft.com](https://www.microsoft.com) is embedded in text.`
   
 |Вызываемый метод|Результат|  
 |-------------------|------------|  
@@ -140,7 +140,7 @@ ms.locfileid: "47193909"
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> с параметрами (0,0)|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий содержимое ячейки таблицы. В этом случае элемент — это текстовый элемент управления.|  
 |<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим методом `GetItem` .|Возвращает диапазон, охватывающий изображение ![Пример внедренного изображения](../../../docs/framework/ui-automation/media/uia-textpattern-embedded-objects-overview-imageexample.PNG "UIA_TextPattern_Embedded_Objects_Overview_ImageExample").|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> для объекта, возвращаемого предыдущим методом `RangeFromChild` .|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий ячейку таблицы. В этом случае элемент — это текстовый элемент управления, поддерживающий TableItemPattern.|  
-|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> для объекта, возвращаемого предыдущим методом `GetEnclosingElement` .|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий таблицу.|  
+|<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> для объекта, возвращаемого предыдущим методом `GetEnclosingElement`.|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий таблицу.|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A> для объекта, возвращаемого предыдущим методом `GetEnclosingElement` .|Возвращает <xref:System.Windows.Automation.AutomationElement> , представляющий поставщик текста.|  
   
  **Пример 2. Получение текстового содержимого ячейки.**  
@@ -148,7 +148,7 @@ ms.locfileid: "47193909"
 |Вызываемый метод|Результат|  
 |-------------------|------------|  
 |<xref:System.Windows.Automation.GridPattern.GetItem%2A> с параметрами (1,1).|Возвращает <xref:System.Windows.Automation.AutomationElement>, представляющий содержимое ячейки таблицы. В этом случае элемент — это текстовый элемент управления.|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> , где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим методом `GetItem` .|Возвращает "Y".|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>, где <xref:System.Windows.Automation.AutomationElement> — это объект, возвращаемый предыдущим методом `GetItem`.|Возвращает "Y".|  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Automation.TextPattern>  

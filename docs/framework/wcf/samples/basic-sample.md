@@ -2,12 +2,12 @@
 title: Базовый образец
 ms.date: 03/30/2017
 ms.assetid: c1910bc1-3d0a-4fa6-b12a-4ed6fe759620
-ms.openlocfilehash: 29edc8acb0293210e66e31660e3215220440fbae
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: c16ad22a63958bd7c7b2b3d94f2c82b5b7db6f65
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580320"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49373954"
 ---
 # <a name="basic-sample"></a>Базовый образец
 В этом образце показано, как сделать службу обнаруживаемой, а также как искать и вызывать обнаруживаемую службу. Этот образец состоит из двух проектов: службы и клиента.
@@ -18,7 +18,7 @@ ms.locfileid: "48580320"
 ## <a name="service"></a>Служба  
  Это простая реализация службы калькулятора. Код обнаружения можно найти в `Main`, где к узлу службы добавляется <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> и добавляется <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>, как показано в следующем примере кода.  
   
-```  
+```csharp
 using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), baseAddress))  
 {  
     serviceHost.AddServiceEndpoint(typeof(ICalculatorService), new   

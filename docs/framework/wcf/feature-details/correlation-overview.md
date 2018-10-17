@@ -2,12 +2,12 @@
 title: Общие сведения о корреляции
 ms.date: 03/30/2017
 ms.assetid: edcc0315-5d26-44d6-a36d-ea554c418e9f
-ms.openlocfilehash: 1f9e4db4002e53af5cdf91ab9d563764495b30d3
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d831452c384e5aede6ede37af7de6e86b6772342
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261252"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372646"
 ---
 # <a name="correlation-overview"></a>Общие сведения о корреляции
 Корреляция - это механизм связи сообщений службы рабочего процесса друг с другом или с состоянием экземпляра приложения, таким как ответ на начальный запрос, или с определенным идентификатором запроса к сохраненному состоянию рабочего процесса обработки запросов. В данном разделе приведены общие сведения о корреляции. В других подразделах этого раздела содержатся дополнительные сведения о каждом из видов корреляции.  
@@ -21,7 +21,7 @@ ms.locfileid: "48261252"
 
 Основанная на протоколе корреляция использует транспортный механизм для связи сообщений друг с другом и с соответствующим экземпляром. Некоторые предоставляемые системой корреляции на основе протокола включают корреляции типа «запрос-ответ» и корреляции на основе контекста. Корреляции «запрос-ответ» используются для сопоставления пары действий обмена сообщениями с операцией двунаправленной формы, например действие <xref:System.ServiceModel.Activities.Send> может составлять пару с действием <xref:System.ServiceModel.Activities.ReceiveReply>, а действие <xref:System.ServiceModel.Activities.Receive> может составлять пару с действием <xref:System.ServiceModel.Activities.SendReply>. В конструкторе рабочих процессов Visual Studio также предоставляет набор шаблонов действия, позволяющих быстро реализовать эту схему. Корреляция на основе контекста основана на механизме обмена контекстом, описанном в [спецификации протокола обмена контекстом .NET](https://go.microsoft.com/fwlink/?LinkID=166059). Для использования корреляции на основе контекста в конечной точке необходимо использовать привязку на основе контекста, например <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding> или <xref:System.ServiceModel.NetTcpContextBinding>.  
   
-Дополнительные сведения о корреляции протокола, см. в разделе [устойчивый дуплекс](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md) и [типа запрос-ответ](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Дополнительные сведения об использовании шаблонов действий конструктора рабочих процессов Visual Studio, см. в разделе [действиями обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Пример кода см. в разделе [NetContextExchangeCorrelation](https://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf) образца.  
+Дополнительные сведения о корреляции протокола, см. в разделе [устойчивый дуплекс](../../../../docs/framework/wcf/feature-details/durable-duplex-correlation.md) и [типа запрос-ответ](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md). Дополнительные сведения об использовании шаблонов действий конструктора рабочих процессов Visual Studio, см. в разделе [действиями обмена сообщениями](../../../../docs/framework/wcf/feature-details/messaging-activities.md). Пример кода см. в разделе [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29) образца.  
   
 ## <a name="content-based-correlation"></a>Корреляция по содержимому
 
@@ -29,4 +29,4 @@ ms.locfileid: "48261252"
   
 ## <a name="see-also"></a>См. также  
 
-- [NetContextExchangeCorrelation](https://msdn.microsoft.com/library/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)
+- [NetContextExchangeCorrelation](/previous-versions/dotnet/netframework-4.0/ee662963%28v%3dvs.100%29)

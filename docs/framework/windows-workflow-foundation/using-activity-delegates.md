@@ -3,11 +3,11 @@ title: Использование делегатов действий
 ms.date: 03/30/2017
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
 ms.openlocfilehash: 7ed4032f8f8070648f8a2f0fcfb386101740f1ad
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580892"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374239"
 ---
 # <a name="using-activity-delegates"></a>Использование делегатов действий
 Делегаты действий позволяют создателям действий предоставлять обратные вызовы с определенными сигнатурами, для которых пользователи действия могут предоставить обработчики, основанные на действиях. Доступны два типа делегатов действия: <xref:System.Activities.ActivityAction%601> используется для определения делегатов действий, которые не возвращают значение, а <xref:System.Activities.ActivityFunc%601> используется для определения делегатов действий, которые возвращают значение.  
@@ -44,7 +44,7 @@ ms.locfileid: "48580892"
  Существует несколько универсальных версий <xref:System.Activities.Statements.InvokeAction%601> и <xref:System.Activities.ActivityAction%601> для передачи одного или нескольких аргументов.  
   
 ## <a name="using-activityfunc"></a>Использование ActivityFunc  
- <xref:System.Activities.ActivityAction%601> используется в случае, когда действие не возвращает результирующего значения, а <xref:System.Activities.ActivityFunc%601> используется, когда результирующее значение возвращается. При создании пользовательского действия, которое определяет действие <xref:System.Activities.ActivityFunc%601>, используйте <xref:System.Activities.Expressions.InvokeFunc%601> для моделирования вызова этого действия <xref:System.Activities.ActivityFunc%601>. В следующем примере определяется действие `WriteFillerText`. Для ввода текста наполнения задается действие <xref:System.Activities.Expressions.InvokeFunc%601>, которое принимает целочисленный аргумент и имеет строковый результат. После извлечения текст наполнения выводится на экран консоли с помощью действия <xref:System.Activities.Statements.WriteLine>.  
+ <xref:System.Activities.ActivityAction%601> используется в случае, когда действие не возвращает результирующего значения, а <xref:System.Activities.ActivityFunc%601> используется, когда результирующее значение возвращается. При создании пользовательского действия, которое определяет действие <xref:System.Activities.ActivityFunc%601>, используйте <xref:System.Activities.Expressions.InvokeFunc%601> для моделирования вызова этого действия <xref:System.Activities.ActivityFunc%601>. В следующем примере определяется действие `WriteFillerText` . Для ввода текста наполнения задается действие <xref:System.Activities.Expressions.InvokeFunc%601>, которое принимает целочисленный аргумент и имеет строковый результат. После извлечения текст наполнения выводится на экран консоли с помощью действия <xref:System.Activities.Statements.WriteLine>.  
   
  [!code-csharp[CFX_ActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#3)]  
   

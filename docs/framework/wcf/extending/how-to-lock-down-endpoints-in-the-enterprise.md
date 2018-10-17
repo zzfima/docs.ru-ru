@@ -2,12 +2,12 @@
 title: Практическое руководство. Блокировка конечных точек в среде предприятия
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 032b69c1fae38576b0374b329f1ab6fe90e2b1a0
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 23264159d30790cd54557509b0bc7c62edc1b5b7
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836928"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49374161"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>Практическое руководство. Блокировка конечных точек в среде предприятия
 Крупным предприятиям часто требуется, чтобы приложения разрабатывались в соответствии с политиками безопасности предприятия. Следующий раздел описывает, как разрабатывать и устанавливать проверяющий элемент конечной точки клиента, который может использоваться для проверки всех клиентских приложений Windows Communication Foundation (WCF), установленного на компьютерах.  
@@ -39,7 +39,7 @@ ms.locfileid: "48836928"
   
 1.  Установите проверяющий элемент конечной точки, используя соответствующую процедуру. На предприятии для этого можно использовать групповую политику или сервер Systems Management Server (SMS).  
   
-2.  Установите сборку со строгим именем в глобальный кэш с помощью [Gacutil.exe (программа глобального кэша сборок)](https://msdn.microsoft.com/library/ex0ss12c\(v=vs.110\).aspx).  
+2.  Установите сборку со строгим именем в глобальный кэш с помощью [Gacutil.exe (программа глобального кэша сборок)](../../../../docs/framework/tools/gacutil-exe-gac-tool.md).  
   
 3.  С помощью типов из пространства имен <xref:System.Configuration?displayProperty=nameWithType> выполните следующие действия.  
   
