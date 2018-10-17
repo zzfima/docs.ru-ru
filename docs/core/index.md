@@ -5,12 +5,12 @@ author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: b302b6fc7e097a811c718d2244f603246cb5c259
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 692d49cc940925f629e55cf5cc103522bd3cbb38
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121042"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49348984"
 ---
 # <a name="net-core-guide"></a>Руководство по .NET Core
 
@@ -18,7 +18,7 @@ ms.locfileid: "49121042"
 
 Дополнительные сведения о среде .NET Core, включая ее характеристики, поддерживаемые языки и платформы, а также основные API-интерфейсы, см. в [этой статье](about.md).
 
-Просмотрите [руководства по .NET Core](tutorials/index.md), чтобы узнать, как создать простое приложение .NET Core. На создание и запуск первого приложения потребуется буквально несколько минут. Если вы хотите опробовать .NET Core в браузере, ознакомьтесь [кратким руководством по C#](https://docs.microsoft.com/dotnet/csharp/quick-starts/numbers-in-csharp).
+Просмотрите [руководства по .NET Core](tutorials/index.md), чтобы узнать, как создать простое приложение .NET Core. На создание и запуск первого приложения потребуется буквально несколько минут. Если вы хотите опробовать .NET Core в браузере, ознакомьтесь [кратким руководством по C#](../csharp/quick-starts/numbers-in-csharp.yml).
 
 ## <a name="download-net-core-21"></a>Скачивание .NET Core 2.1
 

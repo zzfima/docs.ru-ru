@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 9e92c253aa1981065274dc3413f9b8888b5f8849
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a0ec7b1a91dc701093131b8807b25e66d291a746
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500667"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49371927"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Исключения и обработка исключений (Руководство по программированию в C#)
 Функции обработки исключений в языке C# помогают вам справиться с непредвиденными или исключительными проблемами, которые возникают при выполнении программы. Обработка исключений использует ключевые слова `try`, `catch` и `finally` для действий, которые могут оказаться неудачными. Это позволяет обрабатывать ошибки так, как кажется разумным, а также правильно высвобождать ресурсы. Исключения могут создаваться средой выполнения (CLR), платформой .NET Framework, библиотеками сторонних поставщиков или кодом самого приложения. Чтобы создать исключение, используйте ключевое слово `throw`.  
@@ -43,7 +43,7 @@ ms.locfileid: "43500667"
   
 -   Код в блоке `finally` выполняется даже в том случае, если создано исключение. Используйте блок `finally`, чтобы высвободить ресурсы, например закрыть потоки и файлы, которые были открыты внутри блока `try`.  
   
--   Управляемые исключения реализованы в платформе .NET Framework на основе структурированного механизма обработки исключений Win32. Дополнительные сведения см. в статьях [Structured Exception Handling (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) (Структурированная обработка исключений в C и C++) и [A Crash Course on the Depths of Win32 Structured Exception Handling](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm) (Интенсивное погружение в структурированную обработку исключений на платформе Win32).  
+-   Управляемые исключения реализованы в платформе .NET Framework на основе структурированного механизма обработки исключений Win32. Дополнительные сведения см. в статьях [Structured Exception Handling (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) (Структурированная обработка исключений в C и C++) и [A Crash Course on the Depths of Win32 Structured Exception Handling](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm) (Интенсивное погружение в структурированную обработку исключений на платформе Win32).  
   
 ## <a name="related-sections"></a>Связанные разделы  
  Дополнительные сведения об исключениях и обработке исключений вы найдете в следующих статьях:  
