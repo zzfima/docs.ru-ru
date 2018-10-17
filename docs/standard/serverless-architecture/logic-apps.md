@@ -1,0 +1,39 @@
+---
+title: Azure Logic Apps - Бессерверных приложений
+description: Служба Azure Logic Apps позволяют создать автоматических масштабируемых рабочих процессов, для интеграции приложений и данных для облачных служб и локальных систем.
+author: JEREMYLIKNESS
+ms.author: jeliknes
+ms.date: 06/26/2018
+ms.openlocfilehash: 019539f0da1d38259870907c38ed0eb6a62f1929
+ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "49370189"
+---
+# <a name="azure-logic-apps"></a><span data-ttu-id="ae8d3-103">Azure Logic Apps</span><span class="sxs-lookup"><span data-stu-id="ae8d3-103">Azure Logic Apps</span></span>
+
+<span data-ttu-id="ae8d3-104">[Служба Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps) предоставляет механизм бессерверной создавать автоматизированные рабочие процессы для интеграции приложений и данных между облачными службами и локальными системами.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-104">[Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps) provides a serverless engine to build automated workflows to integrate apps and data between cloud services and on-premises systems.</span></span> <span data-ttu-id="ae8d3-105">Можно создавать рабочие процессы, с помощью визуального конструктора.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-105">You build workflows using a visual designer.</span></span> <span data-ttu-id="ae8d3-106">Можно активировать рабочие процессы на основе событий или таймеров и используйте соединители для интеграции приложений и упрощения взаимодействия с бизнес бизнес (B2B).</span><span class="sxs-lookup"><span data-stu-id="ae8d3-106">You can trigger workflows based on events or timers and leverage connectors to integration applications and facilitate business-to-business (B2B) communication.</span></span> <span data-ttu-id="ae8d3-107">Приложения логики легко интегрируется с функциями Azure.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-107">Logic Apps integrates seamlessly with Azure Functions.</span></span>
+
+![Логотип Azure Logic Apps](./media/logic-apps-logo.png)
+
+<span data-ttu-id="ae8d3-109">Приложения логики не ограничиваются только подключения к облачным службам (например, функции) с облачными ресурсами (например, очереди и баз данных).</span><span class="sxs-lookup"><span data-stu-id="ae8d3-109">Logic Apps can do more than just connect your cloud services (like functions) with cloud resources (like queues and databases).</span></span> <span data-ttu-id="ae8d3-110">Также можно управлять в локальной рабочих процессов с помощью локального шлюза.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-110">You can also orchestrate on-premises workflows with the on-premises gateway.</span></span> <span data-ttu-id="ae8d3-111">Например приложение логики можно использовать для активации в локальной хранимую процедуру SQL в ответ на событие облачных или условной логики в рабочем процессе.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-111">For example, you can use the Logic App to trigger an on-premises SQL stored procedure in response to a cloud-based event or conditional logic in your workflow.</span></span> <span data-ttu-id="ae8d3-112">Дополнительные сведения о [подключение к локальным источникам данных с помощью шлюза данных Azure в локальной](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway).</span><span class="sxs-lookup"><span data-stu-id="ae8d3-112">Learn more about [Connecting to on-premises data sources with Azure On-premises Data Gateway](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway).</span></span>
+
+![Архитектура приложений логики](./media/logic-apps-architecture.png)
+
+<span data-ttu-id="ae8d3-114">Как и функции Azure начать выполнение рабочих процессов приложения логики с триггером.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-114">Like Azure Functions, you kick off Logic App workflows with a trigger.</span></span> <span data-ttu-id="ae8d3-115">Существует множество триггеров для на ваш выбор.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-115">There are many triggers for you to choose from.</span></span> <span data-ttu-id="ae8d3-116">Ниже показаны лишь некоторые из наиболее популярных из них из сотен доступных.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-116">The following capture shows just a few of the more popular ones out of hundreds that are available.</span></span>
+
+![Триггеры приложений логики](./media/logic-app-triggers.png)
+
+<span data-ttu-id="ae8d3-118">После запуска приложения, можно использовать визуальный конструктор для создания действия, циклы, условия и действия.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-118">Once the app is triggered, you can use the visual designer to build out steps, loops, conditions, and actions.</span></span> <span data-ttu-id="ae8d3-119">Любые данные, полученные на предыдущем шаге вы можете использовать в последующих шагах.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-119">Any data ingested in a previous step is available for you to use in subsequent steps.</span></span> <span data-ttu-id="ae8d3-120">Следующий рабочий процесс загружает URL-адреса из базы данных CosmosDB.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-120">The following workflow loads URLs from a CosmosDB database.</span></span> <span data-ttu-id="ae8d3-121">Он находит те, которые имеют ряд `t.co` затем ищет их в Twitter.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-121">It finds the ones with a host of `t.co` then searches for them on Twitter.</span></span> <span data-ttu-id="ae8d3-122">При обнаружении соответствующего твитов, обновляет документы соответствующим твиты посредством вызова функции.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-122">If it finds corresponding tweets, it updates the documents with the related tweets by calling a function.</span></span>
+
+![Рабочий процесс приложения логики](./media/logic-app-workflow.png)
+
+<span data-ttu-id="ae8d3-124">Панель мониторинга приложений логики отображает журнала выполняющихся рабочих процессов и ли что каждый запуск завершен, успешно или нет.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-124">The Logic Apps dashboard shows the history of running your workflows and whether each run completed successfully or not.</span></span> <span data-ttu-id="ae8d3-125">Вы можете переходить от конкретного запуска и проверять данные, используемые каждого шага для устранения неполадок.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-125">You can navigate into any given run and inspect the data used by each step for troubleshooting.</span></span> <span data-ttu-id="ae8d3-126">Также Logic Apps предоставляет существующих шаблонов можно изменить и хорошо подходят для сложных корпоративных рабочих процессов.</span><span class="sxs-lookup"><span data-stu-id="ae8d3-126">Logic Apps also provides existing templates you can edit and are well suited for complex enterprise workflows.</span></span>
+
+<span data-ttu-id="ae8d3-127">Дополнительные сведения см. в разделе [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps).</span><span class="sxs-lookup"><span data-stu-id="ae8d3-127">To learn more, see [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps).</span></span>
+
+>[!div class="step-by-step"]
+<span data-ttu-id="ae8d3-128">[Назад](application-insights.md)
+[Вперед](event-grid.md)</span><span class="sxs-lookup"><span data-stu-id="ae8d3-128">[Previous](application-insights.md)
+[Next](event-grid.md)</span></span>
