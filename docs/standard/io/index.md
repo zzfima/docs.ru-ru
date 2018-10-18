@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bd0187f831db7fd68272e14c022efb45c8260f2
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 05c8ad4436cbbe5659c66f16692119fac6593b7f
+ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025601"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49372040"
 ---
 # <a name="file-and-stream-io"></a>Файловый и потоковый ввод-вывод
 Файловый и потоковый ввод-вывод относятся к передаче данных с носителя информации или на него. В .NET Framework пространства имен `System.IO` содержат типы, которые обеспечивают как синхронные, так и асинхронные операции чтения и записи для потоков и файлов. Кроме того, эти пространства имен содержат типы, выполняющие сжатие и распаковку файлов, а также типы, которые обеспечивают взаимодействие через каналы и последовательные порты.  
@@ -122,7 +122,7 @@ ms.locfileid: "48025601"
 ## <a name="isolated-storage"></a>Изолированное хранилище  
  Изолированное хранилище — это механизм хранения данных, обеспечивающий изоляцию и безопасность путем определения стандартизованных способов сопоставления кода с хранимыми данными. Хранилище предоставляет виртуальную файловую систему, изолированную по пользователю, сборке и (необязательно) домену. Изолированное хранилище особенно полезно в том случае, когда приложение не имеет разрешения на доступ к файлам пользователя. Можно сохранить параметры или файлы для приложения таким способом, который контролируется политикой безопасности компьютера.  
   
- Изолированное хранилище недоступно для приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]; вместо этого используйте классы данных приложения в пространстве имен [Windows.Storage](/uwp/api/Windows.Storage). Дополнительные сведения см. в статье [Данные приложения](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) в Центре разработки для Windows.  
+ Изолированное хранилище недоступно для приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Вместо этого используйте классы данных приложения в пространстве имен <xref:Windows.Storage?displayProperty=nameWithType>. Дополнительные сведения см. в разделе [Данные приложения](/previous-versions/windows/apps/hh464917%28v=win.10%29).  
   
  Часто используются следующие классы, реализующие изолированное хранилище:  
   
@@ -139,13 +139,13 @@ ms.locfileid: "48025601"
   
  Следует отметить некоторые важные различия в использовании операций ввода-вывода для приложений в стиле [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]:  
   
--   Специальные типы, относящиеся к операциям с файлами, такие как <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> и <xref:System.IO.DirectoryInfo>, не включены в [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Вместо этого используйте типы в пространстве имен [Windows.Storage](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) [!INCLUDE[wrt](../../../includes/wrt-md.md)], например [StorageFile](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) и [StorageFolder](https://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
+-   Специальные типы, относящиеся к операциям с файлами, такие как <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> и <xref:System.IO.DirectoryInfo>, не включены в [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Вместо этого используйте типы в пространстве имен <xref:Windows.Storage?displayProperty=nameWithType> из [!INCLUDE[wrt](../../../includes/wrt-md.md)], например <xref:Windows.Storage.StorageFile> и <xref:Windows.Storage.StorageFolder>.  
   
 -   Изолированное хранилище недоступно; вместо этого используйте [данные приложения](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Используйте асинхронные методы, такие как <xref:System.IO.Stream.ReadAsync%2A> и <xref:System.IO.Stream.WriteAsync%2A>, чтобы предотвратить блокировку потока пользовательского интерфейса.  
   
--   Типы сжатия на основе пути <xref:System.IO.Compression.ZipFile> и <xref:System.IO.Compression.ZipFileExtensions> недоступны. Вместо этого используйте типы в пространстве имен [Windows.Storage.Compression](https://msdn.microsoft.com/library/windows/apps/windows.storage.compression.aspx).  
+-   Типы сжатия на основе пути <xref:System.IO.Compression.ZipFile> и <xref:System.IO.Compression.ZipFileExtensions> недоступны. Вместо этого используйте типы в пространстве имен <xref:Windows.Storage.Compression?displayProperty=nameWithType>.  
   
  При необходимости можно осуществлять преобразование между потоками .NET Framework и потоками среды выполнения Windows. Дополнительные сведениях см. в статьях [Практическое руководство. Преобразование между потоками .NET Framework и потоками среды выполнения Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) и [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
@@ -164,7 +164,7 @@ ms.locfileid: "48025601"
   
  Содержит список задач ввода-вывода, связанных с файлами, каталогами и потоками, а также ссылки на соответствующее содержимое и примеры для каждой задачи.  
   
--   [Асинхронный файловый ввод-вывод](../../../docs/standard/io/asynchronous-file-i-o.md)  
+-   [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
   
  Описывает преимущества и основные операции асинхронного ввода и вывода.  
   
