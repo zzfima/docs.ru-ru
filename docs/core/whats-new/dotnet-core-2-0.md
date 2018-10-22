@@ -56,7 +56,7 @@ ms.locfileid: "45591767"
 
 ## <a name="language-support"></a>Языковая поддержка
 
-Помимо поддержки C# и F # .NET Core 2.0 также поддерживает Visual Basic.
+Помимо поддержки C# и F# .NET Core 2.0 также поддерживает Visual Basic.
 
 ### <a name="visual-basic"></a>Visual Basic
 
