@@ -2,12 +2,12 @@
 title: Активация TCP
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 0a65e5ca20a11f50133efc90e6da923280a30f46
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1939f611067d65d70849748604e0589a8928b09d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846556"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191172"
 ---
 # <a name="tcp-activation"></a>Активация TCP
 Этот образец демонстрирует размещение службы, использующей службу активации Windows (WAS) для активации службы, которая осуществляет взаимодействие по протоколу net.tcp. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
@@ -28,7 +28,7 @@ ms.locfileid: "48846556"
   
  Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ". Контракт определяется интерфейсом `ICalculator`, который предоставляет математические операции (сложение, вычитание, умножение и деление), как показано ниже в образце кода:  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface ICalculator  
 {  
@@ -45,7 +45,7 @@ public interface ICalculator
   
  Реализация службы выполняет вычисления и возвращает соответствующий результат:  
   
-```  
+```csharp
 // Service class that implements the service contract.  
 public class CalculatorService : ICalculator  
 {  
@@ -129,7 +129,7 @@ public class CalculatorService : ICalculator
   
  При выполнении примера запросы и ответы операций отображаются в окне консоли клиента. Чтобы закрыть клиент, нажмите клавишу ВВОД в окне клиента.  
   
-```  
+```console  
 Add(100,15.99) = 115.99  
 Subtract(145,76.54) = 68.46  
 Multiply(9,81.25) = 731.25  
@@ -160,7 +160,7 @@ Press <ENTER> to terminate client.
   
     1.  Для поддержки активации по net.tcp веб-узел по умолчанию необходимо сначала привязать к порту net.tcp. Сделать это позволяет программа Appcmd.exe, которая устанавливается с набором инструментов управления IIS 7.0. В командной строке с правами администратора выполните следующую команду:  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site" -+bindings.[protocol='net.tcp',bindingInformation='808:*']  
         ```  
   
@@ -169,7 +169,7 @@ Press <ENTER> to terminate client.
   
     2.  Несмотря на то что все приложения в узле имеют общую привязку к протоколу net.tcp, включать поддержку net.tcp можно для каждого приложения отдельно. Для включения протокола net.tcp для приложения /servicemodelsample необходимо выполнить следующую команду из командной строки с правами администратора:  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set app   
         "Default Web Site/servicemodelsamples" /enabledProtocols:http,net.tcp  
         ```  
@@ -187,7 +187,7 @@ Press <ENTER> to terminate client.
   
     1.  Удалите протокол net.tcp из списка разрешенных протоколов, выполнив следующую команду в окне командной строки с правами администратора:  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set app   
         "Default Web Site/servicemodelsamples" /enabledProtocols:http  
         ```  
@@ -197,7 +197,7 @@ Press <ENTER> to terminate client.
   
     2.  Удалите привязку узла к протоколу net.tcp, выполнив следующую команду в окне командной строки с правами администратора:  
   
-        ```  
+        ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
         --bindings.[protocol='net.tcp',bindingInformation='808:*']  
         ```  

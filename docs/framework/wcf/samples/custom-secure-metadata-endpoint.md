@@ -2,13 +2,12 @@
 title: Пользовательская конечная точка защищенных метаданных
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-author: BrucePerlerMS
-ms.openlocfilehash: af3c7ca70ea38a1ee07e077440b3936d83a34d56
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d9c1e8755e32f3d1a38287e2e88d1026c27af1e8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200745"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191237"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>Пользовательская конечная точка защищенных метаданных
 В этом примере демонстрируется, как реализовать службу с защищенной конечной точкой метаданных, использующий одну из привязок не metadata exchange и как настроить [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) или клиенты на извлечение метаданные из такой конечной точки метаданных. Существует две системные привязки для предоставления конечных точек метаданных: mexHttpBinding и mexHttpsBinding. Привязка mexHttpBinding используется для предоставления конечной точки метаданных через HTTP в незащищенном режиме. Привязка mexHttpsBinding используется для предоставления конечной точки метаданных через HTTP в защищенном режиме. В этом образце описывается предоставление защищенной конечной точки метаданных с использованием объекта <xref:System.ServiceModel.WSHttpBinding>. Такой подход следует использовать, если требуется изменить параметры безопасности привязки, но при этом нежелательно использовать протокол HTTPS. При использовании привязки mexHttpsBinding конечная точка метаданных будет защищена, но изменение параметров привязки окажется невозможным.  
@@ -143,7 +142,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 2.  Запустите клиентское приложение из каталога \MetadataResolverClient\bin или \SvcutilClient\bin. Действия клиента отображаются в консольном приложении клиента.  
   
-3.  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+3.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 4.  После завершения работы образца запустите файл Cleanup.bat, чтобы удалить сертификаты. В других образцах обеспечения безопасности используются те же сертификаты.  
   
@@ -169,7 +168,7 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 10. На клиентском компьютере запустите клиент MetadataResolverClient или SvcutilClient из VS.  
   
-    1.  Если клиент и служба не может взаимодействовать, см. в разделе [советы по устранению неполадок](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
+    1.  Если клиенту и службе не удается взаимодействовать, см. раздел [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Очистка после образца  
   

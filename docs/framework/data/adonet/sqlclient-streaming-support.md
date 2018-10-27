@@ -2,17 +2,17 @@
 title: Поддержка потоковой передачи SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: f881318677949f5507c3e1c4a4b5606dd880c396
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c9c7300678b9e285965a3c1b673a92b6f26973e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33364740"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191051"
 ---
 # <a name="sqlclient-streaming-support"></a>Поддержка потоковой передачи SqlClient
-Поддержка SQL Server и приложения потоковой передачи данных (новые возможности [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) поддерживает неструктурированные данные на сервере (документы, изображения и мультимедиа-файлы). База данных SQL Server может хранить большие двоичные объекты (BLOB), но выборки BLOB может потребоваться большой объем памяти.  
+Поддержка SQL Server и приложения потоковой передачи данных (новые возможности [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) поддерживает неструктурированные данные на сервере (документы, изображения и файлы мультимедиа). Базы данных SQL Server можно хранить большие двоичные объекты (BLOB), но выборки BLOB может потребоваться большой объем памяти.  
   
- Поддержка от SQL-сервера потоковой передачи данных упрощает написание приложений, поток данных, не прибегая к полной загрузки данных в память, что приводит к меньшим числом исключений переполнения памяти.  
+ Поддержка SQL Server и обратно потоковой передачи данных упрощает написание приложений, потоковой передачи данных, без необходимости полной загрузки данных в память, приводит к меньшим числом исключений переполнения памяти.  
   
  Поддержка потоковой передачи данных способствует также лучшему масштабированию приложений среднего уровня, особенно в сценариях, в которых бизнес-объекты подключаются к SQL Azure для отправки, получения и обработки больших двоичных объектов.  
   
@@ -22,9 +22,9 @@ ms.locfileid: "33364740"
 >  Элементы, добавленные для поддержки потоков, используются для получения данных из запросов и передачи параметров в запросы и хранимые процедуры. Функциональные возможности потоковой передачи данных позволяют решать задачи в основных сценариях OLTP и в сценариях переноса данных, а также применимы в средах переноса данных на территории предприятия и за его пределами.  
   
 ## <a name="streaming-support-from-sql-server"></a>Поддержка потоковой передачи данных из SQL Server  
- Поддержка потоков из SQL Server реализованы новые возможности <xref:System.Data.Common.DbDataReader> и <xref:System.Data.SqlClient.SqlDataReader> классы для получения <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, и <xref:System.IO.TextReader> объектов и реагирования на них.  Эти классы используются для получения данных из запросов. В результате поддержка потоковой передачи из SQL Server описывает работу сценариев OLTP и применяется к локальным и удаленным сред.  
+ Поддержка потоков из SQL Server реализованы новые возможности <xref:System.Data.Common.DbDataReader> и в <xref:System.Data.SqlClient.SqlDataReader> классы для получения <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, и <xref:System.IO.TextReader> объектов и реагировать на них.  Эти классы используются для получения данных из запросов. Таким образом поддержка потоковой передачи из SQL Server предназначен для сценариев OLTP и применяется к локальным и удаленным сред.  
   
- Были добавлены следующие элементы <xref:System.Data.SqlClient.SqlDataReader> для включения поддержки потоковой передачи данных из SQL Server:  
+ Были добавлены следующие члены <xref:System.Data.SqlClient.SqlDataReader> для включения поддержки потоковой передачи из SQL Server:  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
@@ -38,7 +38,7 @@ ms.locfileid: "33364740"
   
 6.  <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>  
   
- Были добавлены следующие элементы <xref:System.Data.Common.DbDataReader> для включения поддержки потоковой передачи данных из SQL Server:  
+ Были добавлены следующие члены <xref:System.Data.Common.DbDataReader> для включения поддержки потоковой передачи из SQL Server:  
   
 1.  <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>  
   
@@ -47,7 +47,7 @@ ms.locfileid: "33364740"
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
 ## <a name="streaming-support-to-sql-server"></a>Поддержка потоковой передачи данных в SQL Server  
- Поддержка для SQL Server потоковой передачи данных реализованы новые возможности <xref:System.Data.SqlClient.SqlParameter> класса, чтобы он мог принимать и реагировать на <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, и <xref:System.IO.TextReader> объектов. <xref:System.Data.SqlClient.SqlParameter> используется для передачи параметров в запросы и хранимые процедуры.  
+ Поддержка для SQL Server потоковой передачи данных реализованы новые возможности <xref:System.Data.SqlClient.SqlParameter> класса, поэтому он может принимать и реагировать на них <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, и <xref:System.IO.TextReader> объектов. <xref:System.Data.SqlClient.SqlParameter> используется для передачи параметров в запросы и хранимые процедуры.  
   
  Удаление объекта <xref:System.Data.SqlClient.SqlCommand> или вызов <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> должны приводить к отмене любой потоковой операции. Если приложение передает <xref:System.Threading.CancellationToken>, отмена не гарантируется.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "33364740"
   
 -   **XML**  
   
- **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> принимает <xref:System.Data.SqlClient.SqlParameter.Value%2A> из <xref:System.Xml.XmlReader>.  
+ **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> тип будет принимать <xref:System.Data.SqlClient.SqlParameter.Value%2A> из <xref:System.Xml.XmlReader>.  
   
  <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> может принимать значения типа <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader> и <xref:System.IO.Stream>.  
   
@@ -103,7 +103,7 @@ GO
   
 -   Получение данных из SQL Server.  
   
--   Передача больших файлов больших двоичных объектов из одной базы данных SQL Server в другую без нехватки памяти.  
+-   Передача больших файлов (BLOB) из одной базы данных SQL Server в другую без нехватки памяти.  
   
 ```  
 using System;  
@@ -241,7 +241,7 @@ namespace StreamingFromServer {
             Async = true,  
             // Since we will immediately wrap the TextReader we are creating in an XmlReader, we will permit the XmlReader to take care of closing\disposing it  
             CloseInput = true,  
-            // If the Xml you are reading is not a valid document (as per http://msdn.microsoft.com/library/6bts1x50.aspx) you will need to set the conformance level to Fragment  
+            // If the Xml you are reading is not a valid document (as per <https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/6bts1x50(v=vs.100)>) you will need to set the conformance level to Fragment  
             ConformanceLevel = ConformanceLevel.Fragment  
          };  
   
@@ -328,7 +328,7 @@ GO
   
 -   Отмена передачи большого двоичного объекта.  
   
--   Потоковая передача из одного сервера SQL Server к другой с помощью новой асинхронной функции.  
+-   Потоковая передача из одного сервера SQL Server в другой с помощью новой асинхронной возможности.  
   
 ```  
 using System;  
@@ -450,8 +450,8 @@ namespace StreamingToServer {
 }  
 ```  
   
-## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Образец - Потоковая передача из одного сервера SQL Server на другой экземпляр SQL Server  
- В этом примере показано, как асинхронно передавать большой двоичный объект из одного сервера SQL Server на другой, поддержка отмены.  
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Образец - Потоковая передача из одного сервера SQL Server на другой SQL Server  
+ В этом примере показано, как асинхронно передавать большой двоичный объект из одного сервера SQL Server в другой с поддержкой отмены.  
   
 ```  
 using System;  

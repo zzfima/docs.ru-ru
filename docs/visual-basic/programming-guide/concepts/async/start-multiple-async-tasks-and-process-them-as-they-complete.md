@@ -1,15 +1,15 @@
 ---
-title: Запуск нескольких асинхронных задач и их обработка по мере их выполнения (Visual Basic)
+title: Запуск нескольких асинхронных задач и их обработка по мере завершения (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 8f20688e981165c8b2328556e979ad5d5126d5ba
-ms.sourcegitcommit: d8bf4976eafe3289275be3811e7cb721bfff7e1e
+ms.openlocfilehash: 5213162c24660a54de39c119c5ab67a601a77566
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34753374"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191224"
 ---
-# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Запуск нескольких асинхронных задач и их обработка по мере их выполнения (Visual Basic)
+# <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>Запуск нескольких асинхронных задач и их обработка по мере завершения (Visual Basic)
 С помощью <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> можно запускать несколько задач одновременно и обрабатывать их по одной по мере завершения, а не в порядке их запуска.  
   
  В следующем примере используется запрос для создания коллекции задач. Каждая задача загружает содержимое указанного веб-сайта. В каждой итерации цикла while ожидаемый вызов `WhenAny` возвращает задачу из коллекции задач, которая первой завершает свою загрузку. Эта задача удаляется из коллекции и обрабатывается. Цикл выполняется до тех пор, пока в коллекции еще есть задачи.  
@@ -24,7 +24,7 @@ ms.locfileid: "34753374"
   
 2.  В строке меню выберите **Файл**, **Открыть**, **Проект/Решение**.  
   
-3.  В **открыть проект** диалоговое окно, откройте папку, которая содержит пример кода, который можно распаковать и откройте файл решения (SLN) для AsyncFineTuningVB.  
+3.  В **открыть проект** диалоговое окно, откройте папку, которая содержит пример кода, который вы распаковали и затем откройте файл решения (SLN) для AsyncFineTuningVB.  
   
 4.  В **обозревателе решений** откройте контекстное меню проекта **ProcessTasksAsTheyFinish** и выберите команду **Назначить запускаемым проектом**.  
   
@@ -34,10 +34,10 @@ ms.locfileid: "34753374"
   
 6.  Запустите проект несколько раз, чтобы проверить, что загруженные размеры не всегда отображаются в одинаковом порядке.  
   
- Если вы не хотите загрузить проект, можно просмотреть файл MainWindow.xaml.vb в конце этого раздела.  
+ Если вы не хотите загрузить проект, можно открыть этот файл MainWindow.xaml.vb в конце этого раздела.  
   
 ## <a name="building-the-example"></a>Построение примера  
- В этом примере добавляется в код, разработанный в [отмена оставшихся асинхронных задач после одного завершено (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) и использует тот же интерфейс пользователя.  
+ В этом примере добавляется к коду, который был разработан в [отмена оставшихся асинхронных задач после завершения одной из них (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/cancel-remaining-async-tasks-after-one-is-complete.md) и использует тот же пользовательский Интерфейс.  
   
  Для самостоятельной сборки примера шаг за шагом следуйте инструкциям в разделе "Загрузка примера", но выберите **CancelAfterOneTask** как **запускаемый проект**. Добавьте изменения в данном разделе в метод `AccessTheWebAsync` в этом проекте. Изменения помечены звездочками.  
   
@@ -48,7 +48,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
     From url In urlList Select ProcessURLAsync(url, client, ct)  
 ```  
   
- В файле MainWindow.xaml.vb проекта внести следующие изменения в `AccessTheWebAsync` метод.  
+ В файле MainWindow.xaml.vb проекта, внесите следующие изменения в `AccessTheWebAsync` метод.  
   
 -   Выполните запрос, применяя <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> вместо <xref:System.Linq.Enumerable.ToArray%2A>.  
   
@@ -83,7 +83,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
 >  Можно использовать `WhenAny` в цикле, как описано в примере, для решения проблем, которые включают небольшое число задач. Однако когда требуется обработка большого числа задач, другие методы будут более эффективны. Дополнительные сведения и примеры см. в разделе [Обработка задач по мере их завершения](https://blogs.msdn.microsoft.com/pfxteam/2012/08/02/processing-tasks-as-they-complete).  
   
 ## <a name="complete-example"></a>Полный пример  
- Ниже приведен полный текст файла MainWindow.xaml.vb для примера. Звездочками помечаются элементы, добавленные для этого примера.  
+ Следующий код — полный текст файла MainWindow.xaml.vb для примера. Звездочками помечаются элементы, добавленные для этого примера.  
   
  Обратите внимание на то, что необходимо добавить ссылку для <xref:System.Net.Http>.  
   
@@ -180,13 +180,13 @@ Class MainWindow
   
         Dim urls = New List(Of String) From  
             {  
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             }  
         Return urls  
     End Function  

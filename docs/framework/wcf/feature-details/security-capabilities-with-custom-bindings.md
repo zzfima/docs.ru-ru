@@ -2,13 +2,12 @@
 title: Возможности безопасности при использовании пользовательских привязок
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-author: BrucePerlerMS
-ms.openlocfilehash: 35d2477af3dc7ce6fdd075055fff9e687bdc2a60
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c18bec095866c70622c75834e8a4d5fe6a491b08
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196739"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190896"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>Возможности безопасности при использовании пользовательских привязок
 Основные задачи обеспечения безопасности можно выполнить, используя одну из предоставляемых системой привязок. Однако при необходимости в дополнительных элементах управления можно создать пользовательскую привязку с помощью элемента <xref:System.ServiceModel.Channels.SecurityBindingElement>, следуя объяснениям в этом разделе. Дополнительные сведения о пользовательских привязках см. в разделе [пользовательских привязок](../../../../docs/framework/wcf/extending/custom-bindings.md).  

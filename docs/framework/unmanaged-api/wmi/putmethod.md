@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7cdf34ff6ae506ba209300685da3752820b250a2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 98ef688c1136a81a5b57c3fdfee73c53024186e7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516754"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191048"
 ---
 # <a name="putmethod-function"></a>Функция PutMethod
 Создает метод.
@@ -80,11 +80,11 @@ HRESULT PutMethod (
 
 Эта функция создает оболочку для вызова [IWbemClassObject::PutMethod](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-putmethod) метод.
 
-Вызов этого метода поддерживается только в том случае, если `ptr` является определение класса CIM. Метод манипуляции не доступен из [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) указатели, которые указывают на экземпляры CIM.
+Вызов этого метода поддерживается только в том случае, если `ptr` является определение класса CIM. Метод манипуляции не доступен из [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) указатели, которые указывают на экземпляры CIM.
 
 Пользователи не могут создавать методы с именами, начинаться или заканчиваться символом подчеркивания. Этот атрибут зарезервирован для системных классов и свойств.
 
-Для метода `in` и `out` параметры описаны в виде свойств [IWbemClassObject](https://msdn.microsoft.com/library/aa391433%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396) объектов.
+Для метода `in` и `out` параметры описаны в виде свойств [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) объектов.
 
 `[in/out]` Параметра можно определить путем добавления одного свойства обоих объектов, указываемых `pInSignature` и `pOutSignature` параметров. В этом случае свойства одного и того же **идентификатор** значение квалификатора.
 

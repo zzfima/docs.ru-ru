@@ -2,13 +2,12 @@
 title: Проверка безопасности
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-author: BrucePerlerMS
-ms.openlocfilehash: df056287c216b92fa0bcbab2bcbc9bedf799873c
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: 16a12a031845a8898c32ac43bbb2e2a44fd7c7ea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49374460"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190922"
 ---
 # <a name="security-validation"></a>Проверка безопасности
 Этот образец показывает, как с помощью пользовательского поведения проверять службы на компьютере на соответствие определенным условиям. В этом образце службы проверяются с помощью пользовательского поведения путем сканирования каждой конечной точки службы и проверки, содержат ли они безопасные элементы привязки. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md).  
