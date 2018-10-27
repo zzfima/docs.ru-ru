@@ -8,57 +8,55 @@ helpviewer_keywords:
 - authenticationModules element
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 394a686fe07036d6c3ac2bc51fb3503e1ee4a9e6
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 074f2f0cd2c3ac6c6287db08b22ead07afa58fc5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873353"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190818"
 ---
-# <a name="ltauthenticationmodulesgt-element-network-settings"></a><span data-ttu-id="f1e76-102">&lt;authenticationModules&gt; (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="f1e76-102">&lt;authenticationModules&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="f1e76-103">Задает модули, используемые для проверки подлинности сетевых запросов.</span><span class="sxs-lookup"><span data-stu-id="f1e76-103">Specifies modules used to authenticate network requests.</span></span>  
+# <a name="ltauthenticationmodulesgt-element-network-settings"></a><span data-ttu-id="dfa90-102">&lt;authenticationModules&gt; (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="dfa90-102">&lt;authenticationModules&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="dfa90-103">Задает модули, используемые для проверки подлинности сетевых запросов.</span><span class="sxs-lookup"><span data-stu-id="dfa90-103">Specifies modules used to authenticate network requests.</span></span>  
   
- <span data-ttu-id="f1e76-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="f1e76-104">\<configuration></span></span>  
-<span data-ttu-id="f1e76-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="f1e76-105">\<system.net></span></span>  
-<span data-ttu-id="f1e76-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="f1e76-106">\<authenticationModules></span></span>  
+ <span data-ttu-id="dfa90-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="dfa90-104">\<configuration></span></span>  
+<span data-ttu-id="dfa90-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="dfa90-105">\<system.net></span></span>  
+<span data-ttu-id="dfa90-106">\<authenticationModules ></span><span class="sxs-lookup"><span data-stu-id="dfa90-106">\<authenticationModules></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f1e76-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="f1e76-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="dfa90-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="dfa90-107">Syntax</span></span>  
   
 ```xml  
 <authenticationModules>   
 </authenticationModules>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="f1e76-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="f1e76-108">Attributes and Elements</span></span>  
- <span data-ttu-id="f1e76-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="f1e76-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="dfa90-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="dfa90-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="dfa90-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="dfa90-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="f1e76-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="f1e76-110">Attributes</span></span>  
- <span data-ttu-id="f1e76-111">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="f1e76-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="dfa90-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="dfa90-110">Attributes</span></span>  
+ <span data-ttu-id="dfa90-111">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="dfa90-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="f1e76-112">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="f1e76-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="dfa90-112">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="dfa90-112">Child Elements</span></span>  
   
-|<span data-ttu-id="f1e76-113">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="f1e76-113">**Element**</span></span>|<span data-ttu-id="f1e76-114">**Описание**</span><span class="sxs-lookup"><span data-stu-id="f1e76-114">**Description**</span></span>|  
+|<span data-ttu-id="dfa90-113">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="dfa90-113">**Element**</span></span>|<span data-ttu-id="dfa90-114">**Описание**</span><span class="sxs-lookup"><span data-stu-id="dfa90-114">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="f1e76-115">add</span><span class="sxs-lookup"><span data-stu-id="f1e76-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="f1e76-116">Добавляет модуль проверки подлинности в приложение.</span><span class="sxs-lookup"><span data-stu-id="f1e76-116">Adds an authentication module to the application.</span></span>|  
-|[<span data-ttu-id="f1e76-117">clear</span><span class="sxs-lookup"><span data-stu-id="f1e76-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="f1e76-118">Удаляет все модули проверки подлинности из приложения.</span><span class="sxs-lookup"><span data-stu-id="f1e76-118">Clears all authentication modules from the application.</span></span>|  
-|[<span data-ttu-id="f1e76-119">remove</span><span class="sxs-lookup"><span data-stu-id="f1e76-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="f1e76-120">Удаляет модуль проверки подлинности из приложения.</span><span class="sxs-lookup"><span data-stu-id="f1e76-120">Removes an authentication module from the application.</span></span>|  
+|[<span data-ttu-id="dfa90-115">add</span><span class="sxs-lookup"><span data-stu-id="dfa90-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="dfa90-116">Добавляет модуль проверки подлинности в приложение.</span><span class="sxs-lookup"><span data-stu-id="dfa90-116">Adds an authentication module to the application.</span></span>|  
+|[<span data-ttu-id="dfa90-117">clear</span><span class="sxs-lookup"><span data-stu-id="dfa90-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="dfa90-118">Удаляет все модули проверки подлинности из приложения.</span><span class="sxs-lookup"><span data-stu-id="dfa90-118">Clears all authentication modules from the application.</span></span>|  
+|[<span data-ttu-id="dfa90-119">remove</span><span class="sxs-lookup"><span data-stu-id="dfa90-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|<span data-ttu-id="dfa90-120">Удаляет модуль проверки подлинности из приложения.</span><span class="sxs-lookup"><span data-stu-id="dfa90-120">Removes an authentication module from the application.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="f1e76-121">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="f1e76-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="dfa90-121">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="dfa90-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="f1e76-122">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="f1e76-122">**Element**</span></span>|<span data-ttu-id="f1e76-123">**Описание**</span><span class="sxs-lookup"><span data-stu-id="f1e76-123">**Description**</span></span>|  
+|<span data-ttu-id="dfa90-122">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="dfa90-122">**Element**</span></span>|<span data-ttu-id="dfa90-123">**Описание**</span><span class="sxs-lookup"><span data-stu-id="dfa90-123">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="f1e76-124">System.NET</span><span class="sxs-lookup"><span data-stu-id="f1e76-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="f1e76-125">Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.</span><span class="sxs-lookup"><span data-stu-id="f1e76-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
+|[<span data-ttu-id="dfa90-124">System.NET</span><span class="sxs-lookup"><span data-stu-id="dfa90-124">system.net</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|<span data-ttu-id="dfa90-125">Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.</span><span class="sxs-lookup"><span data-stu-id="dfa90-125">Contains settings that specify how the .NET Framework connects to the network.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f1e76-126">Примечания</span><span class="sxs-lookup"><span data-stu-id="f1e76-126">Remarks</span></span>  
- <span data-ttu-id="f1e76-127">`authenticationModule` Элемент определяет модули проверки подлинности, которые выполняют процесс проверки подлинности с сервером.</span><span class="sxs-lookup"><span data-stu-id="f1e76-127">The `authenticationModule` element specifies the authentication modules that conduct the authentication process with a server.</span></span> <span data-ttu-id="f1e76-128">Модуль проверки подлинности должны реализовывать <xref:System.Net.IAuthenticationModule> интерфейс.</span><span class="sxs-lookup"><span data-stu-id="f1e76-128">An authentication module must implement the <xref:System.Net.IAuthenticationModule> interface.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="dfa90-126">Примечания</span><span class="sxs-lookup"><span data-stu-id="dfa90-126">Remarks</span></span>  
+ <span data-ttu-id="dfa90-127">`authenticationModule` Элемент определяет модули проверки подлинности, которые выполняют процесс проверки подлинности с сервером.</span><span class="sxs-lookup"><span data-stu-id="dfa90-127">The `authenticationModule` element specifies the authentication modules that conduct the authentication process with a server.</span></span> <span data-ttu-id="dfa90-128">Модуль проверки подлинности должны реализовывать <xref:System.Net.IAuthenticationModule> интерфейс.</span><span class="sxs-lookup"><span data-stu-id="dfa90-128">An authentication module must implement the <xref:System.Net.IAuthenticationModule> interface.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="f1e76-129">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="f1e76-129">Configuration Files</span></span>  
- <span data-ttu-id="f1e76-130">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="f1e76-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="dfa90-129">Файлы конфигурации</span><span class="sxs-lookup"><span data-stu-id="dfa90-129">Configuration Files</span></span>  
+ <span data-ttu-id="dfa90-130">Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).</span><span class="sxs-lookup"><span data-stu-id="dfa90-130">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f1e76-131">Пример</span><span class="sxs-lookup"><span data-stu-id="f1e76-131">Example</span></span>  
- <span data-ttu-id="f1e76-132">В следующем примере включается модуля проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="f1e76-132">The following example enables an authentication module.</span></span> <span data-ttu-id="f1e76-133">Следует заменить значения для версии и PublicKeyToken правильными значениями для указанного модуля.</span><span class="sxs-lookup"><span data-stu-id="f1e76-133">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
+## <a name="example"></a><span data-ttu-id="dfa90-131">Пример</span><span class="sxs-lookup"><span data-stu-id="dfa90-131">Example</span></span>  
+ <span data-ttu-id="dfa90-132">В следующем примере включается модуля проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="dfa90-132">The following example enables an authentication module.</span></span> <span data-ttu-id="dfa90-133">Следует заменить значения для версии и PublicKeyToken правильными значениями для указанного модуля.</span><span class="sxs-lookup"><span data-stu-id="dfa90-133">You should replace the values for Version and PublicKeyToken with the correct values for the specified module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -71,7 +69,7 @@ ms.locfileid: "48873353"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f1e76-134">См. также</span><span class="sxs-lookup"><span data-stu-id="f1e76-134">See Also</span></span>  
- <xref:System.Net.IAuthenticationModule>  
- <xref:System.Net.AuthenticationManager>  
- [<span data-ttu-id="f1e76-135">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="f1e76-135">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="dfa90-134">См. также</span><span class="sxs-lookup"><span data-stu-id="dfa90-134">See Also</span></span>  
+- <xref:System.Net.IAuthenticationModule>  
+- <xref:System.Net.AuthenticationManager>  
+- [<span data-ttu-id="dfa90-135">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="dfa90-135">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
