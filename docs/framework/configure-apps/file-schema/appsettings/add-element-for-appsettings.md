@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: bcdac76528e7a8b07b56b6fd1d827c3c8072c371
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: e74f0956dd5acebccee87fd6ad8c09b299badffd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086328"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194349"
 ---
 # <a name="add-element-for-appsettings"></a>\<Добавить > элемент для \<appSettings >
 
@@ -34,14 +34,14 @@ ms.locfileid: "49086328"
 
 ## <a name="attributes"></a>Атрибуты
 
-|           | Описание: |
+|           | Описание |
 | --------- | ----------- |
 | **key**   | Обязательный атрибут.<br><br>Указывает имя ключа. |
 | **значение** | Обязательный атрибут.<br><br>Указывает значение ключа. |
 
 ## <a name="parent-element"></a>Родительский элемент
 
-|     | Описание: |
+|     | Описание |
 | --- | ----------- |
 | [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Содержит пользовательские параметры приложения, такие как пути к файлам, URL-адреса XML-веб-служб и другие сведения о пользовательской конфигурации приложения. |
 
@@ -70,4 +70,4 @@ ms.locfileid: "49086328"
 
 ## <a name="see-also"></a>См. также
 
-[Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aaf5103dfee366466ff701ce3669bbabb97233ac
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9359d196ecdaa83d7f5f14c3570392d54691be73
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037473"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195636"
 ---
 # <a name="lttypegt-element-net-native"></a>Элемент &lt;Type&gt; (машинный код .NET)
 Применяет политику выполнения для конкретного типа, например класса или структуры.  
@@ -95,10 +95,10 @@ ms.locfileid: "48037473"
   
  Элемент `<Type>` универсального типа применяет свою политику для всех экземпляров, которые не имеют собственной политики. Политика сконструированных универсальных типов определяется элементом [\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md).  
   
- Если тип является универсальным типом, к его имени добавляется символ апострофа (\`), за которым следует его число универсальных параметров. Например, атрибут `Name` элемента `<Type>` для класса <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> отображается как `Name="System.Collections.Generic.List`1"`.  
+ Если тип является универсальным типом, к его имени добавляется символ апострофа (\`), за которым следует его число универсальных параметров. Например, атрибут `Name` элемента `<Type>` для класса <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> отображается как ``Name="System.Collections.Generic.List`1"``.
   
 ## <a name="example"></a>Пример  
- В следующем примере отражение используется для отображения сведений о полях, свойствах и методах класса <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Переменная `b` в примере является элементом управления [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx). Так как просто извлекаются сведения о типе, доступность метаданных определяется параметром политики `Browse`.  
+ В следующем примере отражение используется для отображения сведений о полях, свойствах и методах класса <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>. Переменная `b` в примере является <xref:Windows.UI.Xaml.Controls.TextBlock> элемента управления. Так как просто извлекаются сведения о типе, доступность метаданных определяется параметром политики `Browse`.  
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48037473"
 ```  
   
 ## <a name="example"></a>Пример  
- В следующем примере отражение используется для получения объекта <xref:System.Reflection.PropertyInfo>, представляющего свойство <xref:System.String.Chars%2A?displayProperty=nameWithType>. Затем он использует метод <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> для извлечения значения седьмого знака в строке и для отображения всех символов в строке. Переменная `b` в примере является элементом управления [TextBlock](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.aspx).  
+ В следующем примере отражение используется для получения объекта <xref:System.Reflection.PropertyInfo>, представляющего свойство <xref:System.String.Chars%2A?displayProperty=nameWithType>. Затем он использует метод <xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> для извлечения значения седьмого знака в строке и для отображения всех символов в строке. Переменная `b` в примере является <xref:Windows.UI.Xaml.Controls.TextBlock> элемента управления.  
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   

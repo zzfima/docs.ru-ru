@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 84640387e6d77e02d3b0d19b73c0d2b20d8d8831
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c3f979d26c7e9c36fc242476ae5b3420b2e7d3ac
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848313"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194089"
 ---
 # <a name="using-message-contracts"></a>Использование контрактов сообщений
 Обычно при создании приложений Windows Communication Foundation (WCF), разработчики особое внимание структур данных и вопросам сериализации и не обязательно вынужденными обращаться с этой структурой сообщений, в которых передаются данные. Для таких приложений создание контрактов данных для параметров или возвращаемых значений представляет собой достаточно простую задачу. (Дополнительные сведения см. в разделе [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md).)  
@@ -22,7 +22,7 @@ ms.locfileid: "48848313"
  В этом разделе рассматривается использование различных атрибутов контрактов сообщений для создания конкретного контракта сообщения для данной операции.  
   
 ## <a name="using-message-contracts-in-operations"></a>Использование контрактов сообщений в операциях  
- WCF поддерживает операции, смоделированные на либо *стиля вызов удаленной процедуры* или *стиля сообщений*. В операции в стиле RPC можно использовать любой сериализуемый тип и иметь в распоряжении функции, доступные локальным вызовам, такие как множественные параметры и параметры `ref` и `out`. В этом стиле выбранная форма сериализации определяет структуру данных в базовые сообщения и сообщения для поддержки операции создаются в среде выполнения WCF. Это позволяет разработчикам, не знакомым с протоколом SOAP и сообщениями SOAP, быстро и просто создавать и использовать приложения служб.  
+ WCF поддерживает операции, смоделированные на либо *стиля вызов удаленной процедуры* или *стиля сообщений*. В операции в стиле RPC можно использовать любой сериализуемый тип и иметь в распоряжении возможности, доступные локальным вызовам, такие как множественные параметры и параметры `ref` и `out`. В этом стиле выбранная форма сериализации определяет структуру данных в базовые сообщения и сообщения для поддержки операции создаются в среде выполнения WCF. Это позволяет разработчикам, не знакомым с протоколом SOAP и сообщениями SOAP, быстро и просто создавать и использовать приложения служб.  
   
  В приведенном ниже примере кода показана операция службы, смоделированная на основе стиля RPC.  
   
@@ -145,8 +145,8 @@ public class BankingTransaction
 ## <a name="controlling-whether-the-soap-body-parts-are-wrapped"></a>Управление заключением разделов тела SOAP-сообщений в оболочку  
  По умолчанию разделы тела SOAP-сообщения сериализуются внутри заключенного в оболочку элемента. Например, в следующем коде показан элемент-оболочка `HelloGreetingMessage`, сформированный из имени типа <xref:System.ServiceModel.MessageContractAttribute> в контракте сообщения для сообщения `HelloGreetingMessage`.  
   
- [!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
- [!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
+[!code-csharp[MessageHeaderAttribute#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/messageheaderattribute/cs/services.cs#3)]
+[!code-vb[MessageHeaderAttribute#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/messageheaderattribute/vb/services.vb#3)]  
   
  Чтобы подавить элемент-оболочку, присвойте свойству <xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> значение `false`. Для управления именем и пространством имен элемента-оболочки используются свойства <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> и <xref:System.ServiceModel.MessageContractAttribute.WrapperNamespace%2A>.  
   

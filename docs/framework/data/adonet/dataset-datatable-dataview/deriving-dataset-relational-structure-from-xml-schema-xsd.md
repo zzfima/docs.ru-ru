@@ -2,17 +2,17 @@
 title: Наследование реляционной структуры набора данных от схемы XML (XSD)
 ms.date: 03/30/2017
 ms.assetid: 8f6cd04d-6197-4bc4-9096-8c51c7e4acae
-ms.openlocfilehash: fd5c41272d3b050427804f08f7387328012065f4
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 76fd0126f32eb2b22a12ee0b67e1f81794ff9445
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504951"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195298"
 ---
 # <a name="deriving-dataset-relational-structure-from-xml-schema-xsd"></a>Наследование реляционной структуры набора данных от схемы XML (XSD)
 В этом разделе приведены общие сведения о построении реляционной схемы `DataSet` на основе документа схемы на языке XSD. Как правило, для каждого `complexType` дочерний элемент элемента схемы, будет создана таблица в `DataSet`. Структура таблицы задается определением сложного типа. Таблицы создаются в `DataSet` для элементов верхнего уровня в схеме. Тем не менее, только создается таблица для верхнего уровня `complexType` элемент при `complexType` элемент вложен в другой `complexType` случае вложенный элемент, в котором `complexType` элемент сопоставлен с `DataTable` в `DataSet`.  
   
- Дополнительные сведения о языке XSD см. в разделе World Wide Web Consortium (W3C) XML Schema Part 0: Primer Recommendation, XML Schema Part 1: Structures Recommendation и XML Schema Part 2: Datatypes Recommendation, расположенный [ http://www.w3.org/ ](http://www.w3.org/TR/).  
+ Дополнительные сведения о языке XSD см. в разделе World Wide Web Consortium (W3C) [XML Schema Part 0: Primer Recommendation](https://www.w3.org/TR/xmlschema-0/), [XML Schema Part 1: Structures Recommendation](https://www.w3.org/TR/xmlschema-1/)и [XML Схема, часть 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/).  
   
  В следующем примере показано XML-схемы где `customers` является дочерним элементом элемента `MyDataSet` элемент, который является **набора данных** элемент.  
   

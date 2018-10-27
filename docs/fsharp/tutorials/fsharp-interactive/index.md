@@ -1,13 +1,13 @@
 ---
 title: Справочник по F# Interactive (fsi.exe)
-description: 'Узнайте, как F # Interactive (fsi.exe) используется для интерактивного запуска кода F # в консоли или для выполнения скриптов F #.'
+description: Узнайте, как F# Interactive (fsi.exe) используется для запуска F# кода в интерактивном режиме в консоли или для выполнения F# сценариев.
 ms.date: 05/16/2016
-ms.openlocfilehash: b16ebcfe361ef50c7c7ba8510f01f6704e62ce3b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 459a2a4ba49ba0f55455797617781d010efecc0b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33564889"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195259"
 ---
 # <a name="interactive-programming-with-f"></a>Интерактивное программирование с помощью F# #
 
@@ -19,7 +19,15 @@ ms.locfileid: "33564889"
 
 F# Interactive (fsi.exe) используется для интерактивного запуска кода F# в консоли или для выполнения скриптов F#. Другими словами, F# interactive выполняет команду REPL (чтение, оценка, цикл печати) для языка F#.
 
-Чтобы открыть F# Interactive из консоли, запустите fsi.exe.  Вы найдете fsi.exe в «c:\Program файлы (x86) \Microsoft SDKs\F#\<версии > \Framework\<версии >\". Дополнительные сведения о доступных параметрах командной строки см. в статье [Параметры F# Interactive](../../language-reference/fsharp-interactive-options.md).
+Чтобы открыть F# Interactive из консоли, запустите fsi.exe.  Вы найдете fsi.exe в:
+
+```console
+C:\Program Files (x86)\Microsoft Visual Studio\2017\<sku>\Common7\IDE\CommonExtensions\Microsoft\FSharp
+```
+
+где `sku` либо `Community`, `Professional`, или `Enterprise`.
+
+Дополнительные сведения о доступных параметрах командной строки см. в статье [Параметры F# Interactive](../../language-reference/fsharp-interactive-options.md).
 
 Чтобы запустить F# Interactive через Visual Studio, нажмите соответствующую кнопку на панели инструментов, обозначенную **F# Interactive**, или используйте сочетание клавиш **CTRL+ALT+F**. После этого откроется интерактивное окно — окно инструментов с запущенным сеансом F# Interactive. Вы также можете выбрать код, который нужно запустить в интерактивном окне, и нажать клавиши **ALT+ВВОД**. F# Interactive откроется в окне инструментов **F# Interactive**. При использовании этого сочетания клавиш, убедитесь, что фокус находится в редактора.
 
@@ -91,5 +99,5 @@ test
 
 |Заголовок|Описание|
 |-----|-----------|
-|[Параметры окна "Интерактивный F#"](../../language-reference/fsharp-interactive-options.md)|Описание синтаксиса командной строки и параметры для F # Interactive, fsi.exe.|
+|[Параметры окна "Интерактивный F#"](../../language-reference/fsharp-interactive-options.md)|Описывает синтаксис командной строки и параметры F# Interactive, fsi.exe.|
 |[Справочные материалы по библиотеке F# Interactive](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Описание функциональных возможностей библиотек, которые доступны при выполнении кода в F# Interactive.|

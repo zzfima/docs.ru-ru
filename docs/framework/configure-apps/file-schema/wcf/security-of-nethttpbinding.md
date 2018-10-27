@@ -2,17 +2,17 @@
 title: '&lt;безопасность&gt; для &lt;netHttpBinding'
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: 912f53a9e0a5d1d145c308dd6f427df05b27c077
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1c8a96759625da858d1491b7af59bf32e7e42a9e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838537"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193855"
 ---
 # <a name="ltsecuritygt-of-ltnethttpbinding"></a>&lt;безопасность&gt; для &lt;netHttpBinding
 Определяет возможности безопасности [ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md).  
   
- \<система. ServiceModel >  
+\<система. ServiceModel >  
 \<привязки >  
 \<netHttpBinding >  
 \<Привязка >  
@@ -39,7 +39,7 @@ ms.locfileid: "48838537"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|режим|Необязательно. Задает тип используемого механизма обеспечения безопасности. Значение по умолчанию — `None`. Этот атрибут имеет тип <!--zz <xref:System.ServiceModel.NetHttpSecurityMode> --> `System.ServiceModel.NetHttpSecurityMode`.|
+|режим|Необязательно. Задает тип используемого механизма обеспечения безопасности. Значение по умолчанию — `None`. Это атрибут типа <xref:System.ServiceModel.BasicHttpSecurityMode>.|
   
 ## <a name="mode-attribute"></a>Атрибут mode  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48838537"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Транспорт >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-nethttpbinding.md)|Определяет параметры безопасности транспорта для базовой службы HTTP. Данный элемент соответствует <xref:System.ServiceModel.HttpTransportSecurity>.|  
 |[\<сообщение >](../../../../../docs/framework/configure-apps/file-schema/wcf/message-of-nethttpbinding.md)|Определяет параметры безопасности сообщений для базовой службы HTTP. Этот элемент соответствует <!--zz <xref:System.ServiceModel.NetHttpMessageSecurity> --> `System.ServiceModel.NetHttpMessageSecurity`.|  

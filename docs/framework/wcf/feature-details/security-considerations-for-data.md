@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-author: BrucePerlerMS
-ms.openlocfilehash: bf3276353473f07f58740a5819226994123efdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6471a8a8e257ea3bb6f26a8041694ef25151ad1a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201157"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195948"
 ---
 # <a name="security-considerations-for-data"></a>Вопросы безопасности для данных
 При работе с данными в Windows Communication Foundation (WCF), необходимо учитывать ряд категорий угроз. В следующей таблице представлен список наиболее важных классов угроз, относящихся к обработке данных. WCF предоставляет средства для борьбы с такими угрозами.  
@@ -206,7 +205,7 @@ ms.locfileid: "47201157"
   
 -   атрибут<xref:System.Runtime.Serialization.KnownTypeAttribute> , примененный к типу;  
   
--   атрибут`KnownTypeAttribute` , указывающий метод, который возвращает список типов;  
+-   атрибут `KnownTypeAttribute`, указывающий метод, который возвращает список типов;  
   
 -   атрибут`ServiceKnownTypeAttribute` .  
   
