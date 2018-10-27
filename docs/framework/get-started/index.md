@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99da0b0367270c4cea470a23ea97f0165a712a9b
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 6d241f0f0c10be4a73c7ac55930e5dd24ef0b1e2
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49349073"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453139"
 ---
 # <a name="get-started-with-the-net-framework"></a>Начало работы с .NET Framework
 
@@ -89,7 +89,7 @@ ms.locfileid: "49349073"
 
 ## <a name="see-also"></a>См. также
 
-[Руководство по .NET Framework](../../../docs/framework/index.md)   
-[Новые возможности](../../../docs/framework/whats-new/index.md)   
-[Браузер API .NET](/dotnet/api/)   
-[Руководство по разработке](../../../docs/framework/development-guide.md)
+- [Руководство по .NET Framework](../../../docs/framework/index.md)   
+- [Новые возможности](../../../docs/framework/whats-new/index.md)   
+- [Браузер API .NET](/dotnet/api/)   
+- [Руководство по разработке](../../../docs/framework/development-guide.md)

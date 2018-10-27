@@ -4,12 +4,12 @@ description: Сведения о принципах работы управле�
 author: bleroy
 ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 0ce64aa266f8e1de2c2cefd366bcbfa3f5cfc8f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518606"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047440"
 ---
 # <a name="net-core-versioning"></a>Управление версиями .NET Core
 
@@ -43,7 +43,7 @@ ms.locfileid: "43518606"
 
 ## <a name="semantic-versioning"></a>Семантическое версионирование
 
-*Среда выполнения* .NET Core в основном использует [семантическое версионирование (SemVer)](http://semver.org/) с шаблоном номера версии `MAJOR.MINOR.PATCH`, различные части которого служат для описания степени и типа изменений.
+*Среда выполнения* .NET Core в основном использует [семантическое версионирование (SemVer)](https://semver.org/) с шаблоном номера версии `MAJOR.MINOR.PATCH`, различные части которого служат для описания степени и типа изменений.
 
 ```
 MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]

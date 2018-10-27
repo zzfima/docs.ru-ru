@@ -4,12 +4,12 @@ description: 'Микрослужбы .NET: архитектура контей�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 38f638b76a38c470daf51cb7be8566feb4b6362f
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121367"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50047706"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Микрослужбы .NET: архитектура контейнерных приложений .NET
 
@@ -27,9 +27,9 @@ ms.locfileid: "49121367"
 
 * Клонировать эталонное приложение [eShopOnContainers на GitHub](https://github.com/dotnet-architecture/eShopOnContainers) или создать для него вилку
  
-* Просмотреть [вводный видеоролик на канале Channel 9](http://aka.ms/microservices-video)
+* Просмотреть [вводный видеоролик на канале Channel 9](https://aka.ms/microservices-video)
 
-* Быстрое знакомство с [архитектурой микрослужб](http://aka.ms/MicroservicesArchitecture)
+* Быстрое знакомство с [архитектурой микрослужб](https://aka.ms/MicroservicesArchitecture)
 
 ## <a name="introduction"></a>Вступление
 

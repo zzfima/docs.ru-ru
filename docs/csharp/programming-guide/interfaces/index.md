@@ -5,12 +5,12 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: fba595cca4d96fc9cd0f0966f45d1668181b2ec9
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+ms.openlocfilehash: 1365b3e0dbc2ae095698b66f2b527301fe474a00
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321409"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454438"
 ---
 # <a name="interfaces-c-programming-guide"></a>Интерфейсы (Руководство по программированию в C#)
 
@@ -36,7 +36,7 @@ ms.locfileid: "46321409"
   
 Если класс (или структура) реализует интерфейс, этот класс (или структура) должен предоставлять реализацию для всех членов, которые определяет этот интерфейс. Сам интерфейс не предоставляет функциональность, которую класс или структура может наследовать таким же образом, как можно наследовать функциональность базового класса. Однако если базовый класс реализует интерфейс, то любой класс, производный от базового класса, наследует эту реализацию.  
   
-В следующем примере показана реализация интерфейса IEquatable<T\>. Реализующий класс `Car` должен предоставлять реализацию метода <xref:System.IEquatable%601.Equals%2A>.  
+В следующем примере показана реализация интерфейса <xref:System.IEquatable%601>. Реализующий класс `Car` должен предоставлять реализацию метода <xref:System.IEquatable%601.Equals%2A>.  
   
 [!code-csharp[csProgGuideInheritance#48](../classes-and-structs/codesnippet/CSharp/interfaces_2.cs)]  
   
