@@ -2,12 +2,12 @@
 title: Вызов службы в стиле REST из службы WCF
 ms.date: 03/30/2017
 ms.assetid: 77df81d8-7f53-4daf-8d2d-bf7996e94d5a
-ms.openlocfilehash: 8f520b1f77b9ca41b9fd2b8d51c1b935ab1e0a87
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be9f15d35ec00ba91a06abf5a0a413b59452270b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33488515"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184248"
 ---
 # <a name="calling-a-rest-style-service-from-a-wcf-service"></a>Вызов службы в стиле REST из службы WCF
 При вызове REST-службы из обычной (на основе SOAP) службы WCF контекст операции в методе службы (со сведениями о входящем запросе) переопределяет контекст, который должен использоваться исходящим запросом. В результате запросы HTTP GET превращаются в запросы HTTP POST. Чтобы заставить службу WCF использовать правильный контекст для вызова REST-службы, создайте новый объект <xref:System.ServiceModel.OperationContextScope> и вызовите REST-службу из области контекста операции. В этом разделе описано создание простого примера, иллюстрирующего данный способ.  
@@ -80,7 +80,7 @@ public class NormalService : INormalInterface
 ```  
   
 ## <a name="create-the-client-proxy-for-the-rest-style-service"></a>Создайте клиентский прокси-класс для REST-службы  
- С помощью <!--zz<xref:System.ServiceModel.ClientBase%60>--> `System.ServiceModel.ClientBase` реализовать прокси клиента. Для каждого вызываемого метода создается и используется для вызова операции новая <xref:System.ServiceModel.OperationContextScope>.  
+ С помощью <xref:System.ServiceModel.ClientBase%601> для реализации прокси клиента. Для каждого вызываемого метода создается и используется для вызова операции новая <xref:System.ServiceModel.OperationContextScope>.  
   
 ```csharp
 public class MyRestClient : ClientBase<IRestInterface>, IRestInterface

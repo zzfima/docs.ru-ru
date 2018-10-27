@@ -2,13 +2,12 @@
 title: Основные понятия безопасности
 ms.date: 03/30/2017
 ms.assetid: 944fa5ca-2c34-4268-8897-e005a61b470d
-author: BrucePerlerMS
-ms.openlocfilehash: 7e3a73f2f8c9a438451191c83e69c1722828d7df
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: cdac8ab2ee257924327cc082a55839903c32f80c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839472"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185593"
 ---
 # <a name="security-concepts"></a>Основные понятия безопасности
 В этом разделе содержится краткое описание понятий, связанных с безопасностью Windows Communication Foundation (WCF).  

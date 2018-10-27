@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27e1433415bdc6303555ab9ae04a20e097248535
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937622"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188824"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Профилировщики CLR и приложений Windows Store
 
@@ -100,7 +100,7 @@ ms.locfileid: "46937622"
 
 - Убедитесь, что библиотека DLL Profiler подписан.
 
-- Сообщите пользователю, что им требуется установить лицензию разработчика на их компьютере под управлением Windows 8 перед использованием средства. Это можно сделать автоматически из Visual Studio, или вручную из командной строки. Дополнительные сведения см. в разделе [получение лицензии разработчика](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx).
+- Сообщите пользователю, что им требуется установить лицензию разработчика на их компьютере под управлением Windows 8 перед использованием средства. Это можно сделать автоматически из Visual Studio, или вручную из командной строки. Дополнительные сведения см. в разделе [получение лицензии разработчика](https://docs.microsoft.com/previous-versions/windows/apps/hh974578(v=win.10)).
 
 **Разрешения файловой системы**
 
@@ -124,7 +124,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 Во-первых стоит спросить пользователя вашего профилировщика, какие приложения Windows Store, чтобы запустить. Для классических приложений возможно отобразит диалоговое окно обзора, и пользователь может найти и выбрать файл .exe. Но Windows Store apps отличаются, и с помощью диалогового окна обзора не имеет смысла. Вместо этого лучше для представления пользователю приложения Windows Store, установленные для этого пользователя выбрать из списка.
 
-Можно использовать [PackageManager класс](https://msdn.microsoft.com/library/windows/apps/windows.management.deployment.packagemanager.aspx) для создания этого списка. `PackageManager` — Это класс среды выполнения Windows, которая доступна для классических приложений, и на самом деле это *только* для классических приложений.
+Можно использовать <xref:Windows.Management.Deployment.PackageManager> класса, необходимо создать этот список. `PackageManager` — Это класс среды выполнения Windows, которая доступна для классических приложений, и на самом деле это *только* для классических приложений.
 
 В следующем примере кода из гипотетической пользовательского интерфейса Profiler, записывается в виде классического приложения в C# yses `PackageManager` для создания списка приложений Windows:
 
@@ -137,7 +137,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 **Указание блока настраиваемой среды**
 
-Новый интерфейс COM, [IPackageDebugSettings](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx), позволяет настроить поведение выполнения в приложение Windows Store, чтобы упростить некоторые виды диагностики. Один из его методов [EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=vs.85\).aspx), позволяет передавать блок среды в приложение Windows Store, при запуске приложения, а также другие полезные эффекты, например, отключение автоматического процесса приостановки. Блок среды важно, потому что это, где необходимо указать переменные среды (`COR_PROFILER`, `COR_ENABLE_PROFILING`, и `COR_PROFILER_PATH)`) используется в среде CLR для загрузки библиотеки DLL Profiler.
+Новый интерфейс COM, [IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings), позволяет настроить поведение выполнения в приложение Windows Store, чтобы упростить некоторые виды диагностики. Один из его методов [EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), позволяет передавать блок среды в приложение Windows Store, при запуске приложения, а также другие полезные эффекты, например, отключение автоматического процесса приостановки. Блок среды важно, потому что это, где необходимо указать переменные среды (`COR_PROFILER`, `COR_ENABLE_PROFILING`, и `COR_PROFILER_PATH)`) используется в среде CLR для загрузки библиотеки DLL Profiler.
 
 Рассмотрим следующий фрагмент кода:
 
@@ -180,7 +180,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
 
 **Запуск приложения Windows Store**
 
-Некоторое время, чтобы запустить приложение Windows Store наконец-то наступило. Если вы уже уже попробовал сделать это самостоятельно, вы могли заметить, [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) не показано, как создать процесс приложения Windows Store. Вместо этого необходимо использовать [IApplicationActivationManager::ActivateApplication](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication) метод. Чтобы сделать это, необходимо получить идентификатор модели пользователя приложения, приложения Windows Store, которое вы начинаете. И это означает, что необходимо сделать немного углубиться помощью манифеста.
+Некоторое время, чтобы запустить приложение Windows Store наконец-то наступило. Если вы уже попробовал сделать это самостоятельно, вы могли заметить, [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) не показано, как создать процесс приложения Windows Store. Вместо этого необходимо использовать [IApplicationActivationManager::ActivateApplication](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-iapplicationactivationmanager-activateapplication) метод. Чтобы сделать это, необходимо получить идентификатор модели пользователя приложения, приложения Windows Store, которое вы начинаете. И это означает, что необходимо сделать немного углубиться помощью манифеста.
 
 Во время прохода пакеты (см. в разделе «Выбор Windows Store для профиля приложения» в [нагрузки запуска](#startup-load) разделе ранее), вам понадобится набор приложений, которые содержатся в манифесте текущего пакета:
 
@@ -221,7 +221,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 **Не забудьте вызвать DisableDebugging**
 
-При вызове [IPackageDebugSettings::EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=VS.85\).aspx), внесенные обещание, которое вы бы очистку после путем вызова [IPackageDebugSettings::DisableDebugging](https://msdn.microsoft.com/library/hh438394\(v=vs.85\).aspx) метод, поэтому не забудьте сделать Когда превышает сеанса профилирования.
+При вызове [IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging), внесенные обещание, которое вы бы очистку после путем вызова [IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging) метод, поэтому не забудьте сделать Когда превышает сеанса профилирования.
 
 ### <a name="attach-load"></a>Присоединение нагрузки
 
@@ -229,7 +229,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 **EnableDebugging**
 
-Как и для запуска загрузки, вызовите [IPackageDebugSettings::EnableDebugging](https://msdn.microsoft.com/library/hh438395\(v=VS.85\).aspx) метод. Это не требуется для передачи блок среды, но требуется один из его других функций: отключение автоматического процесса приостановки. В противном случае, когда пользовательский Интерфейс Profiler вызывает [AttachProfiler](iclrprofiling-attachprofiler-method.md), основное приложение Windows Store может быть приостановлен. На самом деле это скорее всего, если пользователь теперь взаимодействует с помощью пользовательского интерфейса Profiler, и приложение Windows Store не активна на ни на одном экране пользователя. И если Windows Store, приложение приостановлено, он не будет отвечать на любые сигнал, что среда CLR отправляет к нему присоединение Profiler библиотеки DLL.
+Как и для запуска загрузки, вызовите [IPackageDebugSettings::EnableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-enabledebugging) метод. Это не требуется для передачи блок среды, но требуется один из его других функций: отключение автоматического процесса приостановки. В противном случае, когда пользовательский Интерфейс Profiler вызывает [AttachProfiler](iclrprofiling-attachprofiler-method.md), основное приложение Windows Store может быть приостановлен. На самом деле это скорее всего, если пользователь теперь взаимодействует с помощью пользовательского интерфейса Profiler, и приложение Windows Store не активна на ни на одном экране пользователя. И если Windows Store, приложение приостановлено, он не будет отвечать на любые сигнал, что среда CLR отправляет к нему присоединение Profiler библиотеки DLL.
 
 Поэтому нужно будет сделать нечто подобное:
 
@@ -243,7 +243,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */,
 
 **DisableDebugging**
 
-Как всегда, не забудьте вызвать [IPackageDebugSettings::DisableDebugging](https://msdn.microsoft.com/library/hh438394\(v=vs.85\).aspx) после завершения сеанса профилирования.
+Как всегда, не забудьте вызвать [IPackageDebugSettings::DisableDebugging](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ipackagedebugsettings-disabledebugging) после завершения сеанса профилирования.
 
 ## <a name="running-inside-the-windows-store-app"></a>Работает ли он в приложения Windows Store
 
@@ -273,7 +273,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */,
 
 ### <a name="reduced-permissions"></a>Ограниченными разрешениями
 
-Он выходит за рамки этого раздела, чтобы получить список всех способов, которые разрешений для приложения Windows Store отличаются от настольных приложений. Но определенно поведение будет отличаться при каждом DLL Profiler (при загрузке в приложение по сравнению с классического приложения Windows Store) пытается получить доступ к любым ресурсам. В файловой системе — это наиболее распространенный пример. Существуют, но некоторые размещает на диске, который может получить доступ, приложения Windows Store (см. в разделе [доступ и разрешения файлов (приложения для среды выполнения Windows](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)), и библиотеки DLL Profiler будет ограничениями. Тщательно протестируйте код.
+Он выходит за рамки этого раздела, чтобы получить список всех способов, которые разрешений для приложения Windows Store отличаются от настольных приложений. Но определенно поведение будет отличаться при каждом DLL Profiler (при загрузке в приложение по сравнению с классического приложения Windows Store) пытается получить доступ к любым ресурсам. В файловой системе — это наиболее распространенный пример. Существуют, но некоторые размещает на диске, который может получить доступ, приложения Windows Store (см. в разделе [доступ и разрешения файлов (приложения для среды выполнения Windows](https://docs.microsoft.com/previous-versions/windows/apps/hh967755(v=win.10))), и библиотеки DLL Profiler будет ограничениями. Тщательно протестируйте код.
 
 ### <a name="inter-process-communication"></a>Межпроцессное взаимодействие
 
@@ -298,7 +298,7 @@ ApplicationData appData =
 tempDir = appData.TemporaryFolder.Path;
 ```
 
-В то же время библиотека DLL Profiler можно сделать по сути то же самое, хотя его можно более легко получить к [ApplicationData](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.aspx) , используя [ApplicationData.Current](https://msdn.microsoft.com/library/windows/apps/windows.storage.applicationdata.current.aspx) свойство.
+В то же время библиотека DLL Profiler можно сделать по сути то же самое, хотя его можно более легко получить к <xref:Windows.Storage.ApplicationData> , используя [ApplicationData.Current](xref:Windows.Storage.ApplicationData.Current%2A) свойство.
 
 **Посредством событий**
 
@@ -412,8 +412,8 @@ WinMD-файлов, таких как обычные модули содержа
 
 **Приложения для Магазина Windows**
 
-- [Доступ к файлам и разрешения (приложения среды выполнения Windows](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)
+- [Доступ к файлам и разрешения (приложения среды выполнения Windows](https://docs.microsoft.com/previous-versions/windows/apps/hh967755%28v=win.10%29)
 
-- [Получить лицензию разработчика](https://msdn.microsoft.com/library/windows/apps/Hh974578.aspx)
+- [Получить лицензию разработчика](https://docs.microsoft.com/previous-versions/windows/apps/hh974578%28v=win.10%29)
 
-- [Интерфейс IPackageDebugSettings](https://msdn.microsoft.com/library/hh438393\(v=vs.85\).aspx)
+- [Интерфейс IPackageDebugSettings](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ipackagedebugsettings)

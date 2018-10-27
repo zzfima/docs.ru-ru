@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d0da0fd2edae4687ea80b4a23cc82a25ead9cb7b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2f787206c503c047a34383e12c5676296e39c1fe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47208585"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190753"
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;Удалить&gt; элемент для webRequestModules (параметры сети)
 Удаляет пользовательский модуль веб-запросов из приложения.  
@@ -56,13 +54,14 @@ ms.locfileid: "47208585"
 ## <a name="remarks"></a>Примечания  
  `remove` Элемент удаляет зарегистрированный модуль веб-запросов для заданного префикса URI.  
   
- Значение для `prefix` атрибут должен быть из ведущих символов является допустимым URI — например, «http», или "`http://www.contoso.com` «.  
+ Значение для `prefix` атрибут должен быть из ведущих символов является допустимым URI — например, "`http`«, или"`http://www.contoso.com`«.  
   
 ## <a name="configuration-files"></a>Файлы конфигурации  
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере удаляется существующий модуль веб-запросов для HTTP и затем регистрирует нового пользовательского модуля для HTTP-запросов к www.contoso.com.  
+
+В следующем примере удаляется существующий модуль веб-запросов для HTTP и затем регистрирует новый пользовательский модуль веб-запросов для HTTP запрашивает `www.contoso.com`.
   
 ```xml  
 <configuration>  
@@ -79,5 +78,5 @@ ms.locfileid: "47208585"
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Net.WebRequest>  
- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.WebRequest>  
+- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

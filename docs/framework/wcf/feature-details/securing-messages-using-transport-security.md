@@ -2,13 +2,12 @@
 title: Защита сообщений с использованием средств обеспечения безопасности транспорта
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-author: BrucePerlerMS
-ms.openlocfilehash: 1c2eafc4d1b955fe99d1c18314c490d7205b3f29
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 660c3c002f1892a91a5c0eaefb2cc5c16bb460a3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196219"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187758"
 ---
 # <a name="securing-messages-using-transport-security"></a>Защита сообщений с использованием средств обеспечения безопасности транспорта
 В этом разделе рассматривается механизм безопасности транспорта очереди сообщений MSMQ, который может быть использован для защиты сообщений, отправленных в очередь.  

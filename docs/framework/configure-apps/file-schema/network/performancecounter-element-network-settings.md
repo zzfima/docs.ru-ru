@@ -8,14 +8,12 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 259d8e0297025d496b3a10c3ef3ec2b3c96cffaa
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 445b57747bbcb04df0d6bc6b3e90743b8c9600f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48849793"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187080"
 ---
 # <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; (сетевые параметры)
 Включает или отключает счетчики производительности сети.  
@@ -38,7 +36,7 @@ ms.locfileid: "48849793"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание:|  
+|Атрибут|Описание|  
 |---------------|-----------------|  
 |`enabled`|Указывает, включены ли счетчики производительности сети. Значение по умолчанию — `false`.|  
   
@@ -47,7 +45,7 @@ ms.locfileid: "48849793"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[Параметры](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|Настраивает основные параметры сети для пространства имен <xref:System.Net>.|  
   
@@ -76,7 +74,7 @@ ms.locfileid: "48849793"
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
- [Счетчики производительности сети](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)
+- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
+- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
+- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
+- [Счетчики производительности сети](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)

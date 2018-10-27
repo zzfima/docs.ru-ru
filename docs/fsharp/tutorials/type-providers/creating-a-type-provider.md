@@ -2,12 +2,12 @@
 title: 'Учебник: Создание поставщика типов (F #)'
 description: 'Сведения о создании собственных поставщиков типов F # в F # 3.0, изучив несколько поставщиков простого типа, чтобы продемонстрировать основные понятия.'
 ms.date: 05/16/2016
-ms.openlocfilehash: 3c998377b2c3a408d536ef416f3799bf7f04b6bd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c9dedbeed3ee081a6b1e1ffffe843fc962d2c60b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397963"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183923"
 ---
 # <a name="tutorial-create-a-type-provider"></a>Учебник: Создание поставщика типов
 
@@ -353,7 +353,7 @@ t.AddMembersDelayed(fun () ->
           p.AddXmlDocDelayed(fun () -> 
               sprintf "This is StaticProperty%d on NestedType" i)
 
-          yield p ]
+          yield p ]
 
     staticPropsInNestedType)
 
@@ -748,7 +748,7 @@ do ()
 
 - Имена заголовков делятся без единицы измерения или в формате «Имя (единицы)» и не содержать запятые.
 
-- Единицы — все единицы международной Systeme (SI) в качестве [модуль Microsoft.FSharp.Data.UnitSystems.SI.UnitNames (F #)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) модуль определяет.
+- Единицы — все единицы международной системы (SI) в качестве [Microsoft.FSharp.Data.UnitSystems.SI.UnitNames модуля (F#)](https://msdn.microsoft.com/library/3cb43485-11f5-4aa7-a779-558f19d4013b) модуль определяет.
 
 - Единицы просты (например, вести учет), а не составные (например, счетчик в секунду).
 
@@ -1110,7 +1110,7 @@ type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/"
 
 ## <a name="development-tips"></a>Советы по разработке
 
-Следующие советы могут оказаться полезными в процессе разработки.
+Следующие советы могут оказаться полезными во время разработки:
 
 ### <a name="run-two-instances-of-visual-studio"></a>Запустите два экземпляра Visual Studio
 

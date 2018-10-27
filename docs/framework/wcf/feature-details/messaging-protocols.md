@@ -2,12 +2,12 @@
 title: Протоколы обмена сообщениями
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 7d94b917f3d8d2fd7faed28b9320edc240724e0b
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4678980520266879b41bea6e10f075a2df116457
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703015"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183858"
 ---
 # <a name="messaging-protocols"></a>Протоколы обмена сообщениями
 
@@ -47,7 +47,7 @@ ms.locfileid: "46703015"
 
 В этом разделе используются следующие пространства имен XML и связанные с ними префиксы.
 
-| Префикс | Равномерное распределение пространства имен ресурса (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope`| | s12 | `http://www.w3.org/2003/05/soap-envelope`| | wsa | `http://www.w3.org/2004/08/addressing`| | wsam | `http://www.w3.org/2007/05/addressing/metadata`| | wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing`| | wsa10 | `http://www.w3.org/2005/08/addressing`| | wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl`| | xop | `http://www.w3.org/2004/08/xop/include`| | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime`| | dp |`http://schemas.microsoft.com/net/2006/06/duplex`|
+| Префикс | Равномерное распределение пространства имен ресурса (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope` || s12 | `http://www.w3.org/2003/05/soap-envelope` || wsa | `http://www.w3.org/2004/08/addressing` || wsam | `http://www.w3.org/2007/05/addressing/metadata` || wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` || wsa10 | `http://www.w3.org/2005/08/addressing` || wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl` || xop | `http://www.w3.org/2004/08/xop/include` || xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` | | точка распространения |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 и SOAP 1.2
 
@@ -190,20 +190,20 @@ B3221: Если настроена для использования WS-Addressi
 ### <a name="web-services-addressing-faults"></a>Ошибки Web Services Addressing
 R3411: WCF создает следующие ошибки, определенные в WS-Addressing 2004/08.
 
-|Код|Причина|
+| Код | Причина |
 |----------|-----------|
-|`wsa:DestinationUnreachable`|Поступило сообщение со значением `ReplyTo`, отличающимся от адреса ответа, установленного для данного канала; нет конечной точки, ожидающей передачи данных по адресу, указанному в заголовке «To».|
-|`wsa:ActionNotSupported`|Каналы инфраструктуры или диспетчер, связанные с конечной точкой, не распознали действие, указанное в заголовке `Action`.|
+| `wsa:DestinationUnreachable` | Поступило сообщение со значением `ReplyTo`, отличающимся от адреса ответа, установленного для данного канала; нет конечной точки, ожидающей передачи данных по адресу, указанному в заголовке «To». |
+| `wsa:ActionNotSupported` | Каналы инфраструктуры или диспетчер, связанные с конечной точкой, не распознали действие, указанное в заголовке `Action`. |
 
 R3412: WCF создает следующие ошибки, определенные в WS-Addressing 1.0.
 
-|Код|Причина|
+| Код | Причина |
 |----------|-----------|
-|`wsa10:InvalidAddressingHeader`|Дублировать `wsa:To`, `wsa:ReplyTo`, `wsa:From` или `wsa:MessageID`. Дублировать `wsa:RelatesTo` с тем же `RelationshipType`.|
-|`wsa10:MessageAddressingHeaderRequired`|Отсутствует обязательный заголовок адресации.|
-|`wsa10:DestinationUnreachable`|Поступило сообщение со значением `ReplyTo`, отличающимся от адреса ответа, установленного для данного канала. Нет конечной точки, ожидающей передачи данных по адресу, указанному в заголовке «To».|
-|`wsa10:ActionNotSupported`|Действие, указанное в заголовке `Action`, не распознано каналами инфраструктуры или диспетчером, связанным с конечной точкой.|
-|`wsa10:EndpointUnavailable`|Канал надежного обмена сообщениями возвращает эту ошибку, указывающую на то, что конечная точка не обрабатывает последовательность на основании проверки заголовков адресов в сообщении `CreateSequence`.|
+| `wsa10:InvalidAddressingHeader` | Дублировать `wsa:To`, `wsa:ReplyTo`, `wsa:From` или `wsa:MessageID`. Дублировать `wsa:RelatesTo` с тем же `RelationshipType`. |
+| `wsa10:MessageAddressingHeaderRequired` | Отсутствует обязательный заголовок адресации. |
+| `wsa10:DestinationUnreachable` | Поступило сообщение со значением `ReplyTo`, отличающимся от адреса ответа, установленного для данного канала. Нет конечной точки, ожидающей передачи данных по адресу, указанному в заголовке «To». |
+| `wsa10:ActionNotSupported` | Действие, указанное в заголовке `Action`, не распознано каналами инфраструктуры или диспетчером, связанным с конечной точкой. |
+| `wsa10:EndpointUnavailable` | Канал надежного обмена сообщениями возвращает эту ошибку, указывающую на то, что конечная точка не обрабатывает последовательность на основании проверки заголовков адресов в сообщении `CreateSequence`. |
 
 Код в предыдущих таблицах соответствует параметру `FaultCode` в SOAP 1.1 и параметру `SubCode` (с Code=Sender) в SOAP 1.2.
 
@@ -439,7 +439,7 @@ Content-Length: 0
 
 - Полная форма Бэкуса-Наура (BNF) заголовка Content-Type для сообщений MIME указана в RFC 2045, раздел 5.1.
 
-- R4132: заголовок HTTP Content-Type должен иметь параметр type со значением `application/xop+xml`, заключенным в двойные кавычки.
+- R4132: заголовок HTTP Content-Type должен иметь параметр типа со значением `application/xop+xml`, заключенным в двойные кавычки.
 
 Хотя требование использовать двойные кавычки не являются прямыми в RFC 2387, текст обнаруживает, что все параметры типа носителя multipart/related весьма вероятно будут содержать зарезервированные символы, такие как "\@" или «/» и поэтому требует двойных кавычек Помечает.
 

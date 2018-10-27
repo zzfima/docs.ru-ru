@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd0ddda898911da2c96a53d941c4290af9028154
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b54ceb099df15855b6b30b8c28d7d8917a9c71eb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446578"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184953"
 ---
 # <a name="imetadataemitdefinefield-method"></a>Метод IMetaDataEmit::DefineField
 Создает определение для поля с заданной подписью метаданных и получает маркер для этого определения поля.  
@@ -48,19 +48,19 @@ HRESULT DefineField (
  [in] `mdTypeDef` Маркеров для включающего класса или интерфейса.  
   
  `szName`  
- [in] Имя поля в кодировке Юникод.  
+ [in] Имя поля в формате Юникод.  
   
  `dwFieldFlags`  
  [in] Атрибуты поля. Это битовая маска `CorFieldAttr` значения.  
   
  `pvSigBlob`  
- [in] Сигнатура поля в виде большого двоичного ОБЪЕКТА.  
+ [in] Подпись поля как большой двоичный объект.  
   
  `cbSigBlob`  
  [in] Число байт в `pvSigBlob`.  
   
- `dwCPlusTypeFlage`  
- [in] `ELEMENT_TYPE_` *\** Для постоянного значения. Это `CorElementType` значение. Если не определить постоянное значение для поля, используйте `ELEMENT_TYPE_END`.  
+ `dwCPlusTypeFlag`  
+ [in] `ELEMENT_TYPE_` *\** Для постоянного значения. Это `CorElementType` значение. Если не применяется частное определение постоянное значение для поля, используйте `ELEMENT_TYPE_END`.  
   
  `pValue`  
  [in] Постоянное значение для поля.  
@@ -72,13 +72,13 @@ HRESULT DefineField (
  [out] `mdFieldDef` Маркер, назначенный.  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).  
+ **Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** Cor.h  
   
  **Библиотека:** используется как ресурс в MSCorEE.dll  
   
- **Версии платформы .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Версии платформы .NET Framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>См. также  
  [Интерфейс IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  

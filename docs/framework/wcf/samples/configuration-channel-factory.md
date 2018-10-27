@@ -2,12 +2,12 @@
 title: Производство канала настройки
 ms.date: 03/30/2017
 ms.assetid: 3b749493-bd8a-4ccb-893e-5948901a1486
-ms.openlocfilehash: b5dbabf8cdc28cc2beaf343b0377528c6ced1c66
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ec48743deddd52faed31b4a1a0af365909593414
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846296"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187157"
 ---
 # <a name="configuration-channel-factory"></a>Производство канала настройки
 В образце описывается использование <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601>. <xref:System.ServiceModel.Configuration.ConfigurationChannelFactory%601> Обеспечивает возможность централизованного управления настройки клиента WCF. Это также можно использовать в случаях, когда конфигурация выбирается или изменяется после времени загрузки домена приложения.
@@ -22,7 +22,7 @@ ms.locfileid: "48846296"
 
  В следующем коде к клиентскому приложению добавляется пользовательский файл конфигурации.
 
-```
+```csharp
 ExeConfigurationFileMap fileMap = new ExeConfigurationFileMap();
 fileMap.ExeConfigFilename = "Test.config";
 Configuration newConfiguration = ConfigurationManager.OpenMappedExeConfiguration(fileMap, ConfigurationUserLevel.None);

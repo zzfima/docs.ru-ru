@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 3c25ddcfb3a566055afd5e233c2a69b3b7a8c66e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54175e27ca46431299db369f67f02051ef08d0d2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526492"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185200"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>Практическое руководство. Создание объектов Graphics для рисования
 Перед тем как рисовать линии и фигуры, отображать текст или изображения и управлять ими с помощью [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], необходимо создать объект <xref:System.Drawing.Graphics>. <xref:System.Drawing.Graphics> представляет поверхность для рисования [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] и является объектом, который используется для создания графических изображений.  
@@ -39,7 +39,7 @@ ms.locfileid: "33526492"
   
      - или -  
   
--   Создайте объект <xref:System.Drawing.Graphics> из любого объекта, который наследует от <xref:System.Drawing.Image>. Этот подход полезен, когда требуется изменить существующее изображение.  
+-   Создайте объект <xref:System.Drawing.Graphics> из любого объекта, который наследует от <xref:System.Drawing.Image>. Этот подход полезен в тех случаях, когда нужно изменить уже существующий образ.  
   
      В следующих разделах приводятся сведения о каждом из этих процессов.  
   
@@ -145,8 +145,6 @@ ms.locfileid: "33526492"
   
 > [!NOTE]
 >  Вы можете создавать объекты <xref:System.Drawing.Graphics> только из неиндексированных BMP-файлов, например, 16, 24 и 32-разрядных BMP-файлов. Каждый пиксель неиндексированного BMP-файла содержит сведения о цвете, в отличие от пикселей индексированного BMP-файла, содержащих указатели на таблицу цветов.  
-  
--  
   
 ## <a name="drawing-and-manipulating-shapes-and-images"></a>Рисование и изменение фигур и изображений  
  После создания объект <xref:System.Drawing.Graphics> можно использовать для рисования линий и фигур, отрисовки текста, а также показа и изменения изображений. Основные объекты, которые используются с объектами <xref:System.Drawing.Graphics>:  

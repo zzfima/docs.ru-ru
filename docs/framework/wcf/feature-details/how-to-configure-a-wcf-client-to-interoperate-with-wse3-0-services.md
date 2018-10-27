@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: cf50cc9a095f091db6ec7a627536cf1c23a11e70
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 5cbe982049d1df6e2c714ca0b63de0db7577452e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122822"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187313"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>Практическое руководство. Настройка клиента WCF для взаимодействия со службами WSE 3.0
 Клиенты Windows Communication Foundation (WCF) являются уровне линий связи совместимы с Web Services Enhancements 3.0 для служб Microsoft .NET (WSE), если WCF клиенты настроены для использования версии спецификации WS-Addressing от августа 2004 г.  
@@ -25,7 +25,7 @@ ms.locfileid: "49122822"
   
 2.  Создайте класс, представляющий привязку, которая может обмениваться данными с веб-службами WSE 3.0.  
   
-     Следующий класс является частью [взаимодействие с WSE](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41) образца.  
+     Следующий класс является частью [взаимодействие с WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29) образца.  
   
     1.  Создайте класс, производный от класса <xref:System.ServiceModel.Channels.Binding>.  
   
@@ -63,5 +63,5 @@ ms.locfileid: "49122822"
 [!code-vb[c_WCFClientToWSEService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#0)]  
   
 ## <a name="see-also"></a>См. также  
-* <xref:System.ServiceModel.Channels.Binding>  
-* [Взаимодействие с WSE](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ <xref:System.ServiceModel.Channels.Binding>  
+ [Взаимодействие с WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

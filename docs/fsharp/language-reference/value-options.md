@@ -2,12 +2,12 @@
 title: 'Параметры значения (F #)'
 description: 'Дополнительные сведения о типе параметра значения F #, — версии структуры типа параметра.'
 ms.date: 06/16/2018
-ms.openlocfilehash: 5647ef61725401b10a6045b14eef11f5b041e3e9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 978bd1713c16f7c050ccb097cb134973d10ef6f5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041214"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185840"
 ---
 # <a name="value-options"></a>Параметры значения
 
@@ -20,19 +20,14 @@ ms.locfileid: "44041214"
 
 ## <a name="definition"></a>Определение
 
-Значение параметра определяется как [размеченные объединения](discriminated-unions.md#struct-discriminated-unions) , похож на ссылочный тип параметра:
+Значение параметра определяется как [размеченные объединения](discriminated-unions.md#struct-discriminated-unions) подобный вариант в ссылочный тип. Таким образом можно рассматривать его определения:
 
 ```fsharp
 [<StructuralEquality; StructuralComparison>]
-[<CompiledName("FSharpValueOption`1")>]
 [<Struct>]
 type ValueOption<'T> =
-    | ValueNone: 'T voption
-    | ValueSome: 'T -> 'T voption
-
-    member Value : 'T
-
-and 'T voption = ValueOption<'T>
+    | ValueNone
+    | ValueSome of 'T
 ```
 
 Значение параметра соответствует структурного равенства и сравнения. Основное различие является то, что скомпилированный имя, имя типа и регистра имен указать, что не типом значения.

@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 525818309ddc142fdb3ad65ce841ea58c1d635a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc52e3149c213925ea64a8421ee65befeea4161e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33350670"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50184222"
 ---
 # <a name="clear-element-for-appsettings"></a>\<Очистить > элемент для \<appSettings >
 
-Очищает пользовательские параметры приложения.
+Удаляет пользовательские параметры приложения.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
@@ -40,7 +40,7 @@ ms.locfileid: "33350670"
 
 |     | Описание |
 | --- | ----------- |
-| [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Содержит пользовательские параметры приложения, такие как пути к файлам, URL-адреса XML-веб-службы или любые другие пользовательские данные конфигурации приложения. |
+| [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | Содержит пользовательские параметры приложения, такие как пути к файлам, URL-адреса XML-веб-служб или любые другие пользовательские данные конфигурации приложения. |
 
 ## <a name="child-elements"></a>Дочерние элементы
 
@@ -48,7 +48,7 @@ ms.locfileid: "33350670"
 
 ## <a name="example"></a>Пример
 
-Приведенный ниже показано, как очистить настраиваемыми параметрами конфигурации:
+Приведенный ниже показано, как очистить настраиваемые параметры конфигурации:
 
 ```xml
 <appSettings>
@@ -58,4 +58,4 @@ ms.locfileid: "33350670"
 
 ## <a name="see-also"></a>См. также
 
-[Схема файла конфигурации для платформы .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

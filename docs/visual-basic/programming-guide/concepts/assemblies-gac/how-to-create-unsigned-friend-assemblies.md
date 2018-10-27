@@ -1,24 +1,22 @@
 ---
-title: 'Как: создание неподписанных дружественных сборок (Visual Basic)'
+title: 'Практическое: создание неподписанных дружественных сборок (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 5735eb79-9729-4c46-ac1f-537ada3acaa7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 873a5bf235b43b4460a1489a964539c4e4c18de3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5fb2310a5d883e65df0b59b6fe316aa4d4637b7f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643069"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188336"
 ---
-# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Как: создание неподписанных дружественных сборок (Visual Basic)
+# <a name="how-to-create-unsigned-friend-assemblies-visual-basic"></a>Практическое: создание неподписанных дружественных сборок (Visual Basic)
 В этом примере показано использование дружественных сборок с неподписанными сборками.  
   
 ### <a name="to-create-an-assembly-and-a-friend-assembly"></a>Создание сборки и дружественной сборки  
   
 1.  Откройте окно командной строки.  
   
-2.  Создайте файл Visual Basic с именем `friend_signed_A.` , содержащий следующий код. Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_signed_B в качестве дружественной сборки.  
+2.  Создайте файл Visual Basic `friend_signed_A.` , содержащий следующий код. Атрибут <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> используется в коде для объявления friend_signed_B в качестве дружественной сборки.  
   
     ```vb  
     ' friend_unsigned_A.vb  
@@ -50,7 +48,7 @@ ms.locfileid: "33643069"
     vbc -target:library friend_unsigned_A.vb  
     ```  
   
-4.  Создайте файл Visual Basic с именем `friend_unsigned_B` , содержащий следующий код. Так как файл friend_unsigned_A задает friend_unsigned_B в качестве дружественной сборки, код friend_unsigned_B может обращаться к типам и членам `Friend` из friend_unsigned_A.  
+4.  Создайте файл Visual Basic `friend_unsigned_B` , содержащий следующий код. Так как файл friend_unsigned_A задает friend_unsigned_B в качестве дружественной сборки, код friend_unsigned_B может обращаться к типам и членам `Friend` из friend_unsigned_A.  
   
     ```vb  
     ' friend_unsigned_B.vb  
@@ -90,5 +88,5 @@ ms.locfileid: "33643069"
  <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>  
  [Сборки и глобальный кэш сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Дружественные сборки (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/friend-assemblies.md)  
- [Как: Создание подписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
- [Основные понятия о программировании руководства](../../../../visual-basic/programming-guide/concepts/index.md)
+ [Практическое: Создание подписанных дружественных сборок (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-signed-friend-assemblies.md)  
+ [Основные понятия о программировании руководство](../../../../visual-basic/programming-guide/concepts/index.md)
