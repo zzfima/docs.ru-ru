@@ -5,44 +5,43 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-author: BrucePerlerMS
-ms.openlocfilehash: e09f7c8483e1a3ca330bbee995c2d59f9005f207
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: eb165b69e1312363a8cc7c1a3ceea66a422d54f7
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122760"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50048467"
 ---
-# <a name="intranet-unsecured-client-and-service"></a><span data-ttu-id="64a5a-102">Незащищенные интранет-клиент и служба</span><span class="sxs-lookup"><span data-stu-id="64a5a-102">Intranet Unsecured Client and Service</span></span>
-<span data-ttu-id="64a5a-103">На следующем рисунке показана простая служба Windows Communication Foundation (WCF) разработан для предоставления информации о защищенной частной сети для приложения WCF.</span><span class="sxs-lookup"><span data-stu-id="64a5a-103">The following illustration depicts a simple Windows Communication Foundation (WCF) service developed to provide information on a secure private network to a WCF application.</span></span> <span data-ttu-id="64a5a-104">Безопасность не является обязательным, так как данные имеют низкий уровень важности, должен быть в своей основе является защищенной сети или безопасность обеспечивается на уровне ниже инфраструктура WCF.</span><span class="sxs-lookup"><span data-stu-id="64a5a-104">Security is not required because the data is of low importance, the network is expected to be inherently secure, or security is provided by a layer below the WCF infrastructure.</span></span>  
+# <a name="intranet-unsecured-client-and-service"></a><span data-ttu-id="32c67-102">Незащищенные интранет-клиент и служба</span><span class="sxs-lookup"><span data-stu-id="32c67-102">Intranet Unsecured Client and Service</span></span>
+<span data-ttu-id="32c67-103">На следующем рисунке показана простая служба Windows Communication Foundation (WCF) разработан для предоставления информации о защищенной частной сети для приложения WCF.</span><span class="sxs-lookup"><span data-stu-id="32c67-103">The following illustration depicts a simple Windows Communication Foundation (WCF) service developed to provide information on a secure private network to a WCF application.</span></span> <span data-ttu-id="32c67-104">Безопасность не является обязательным, так как данные имеют низкий уровень важности, должен быть в своей основе является защищенной сети или безопасность обеспечивается на уровне ниже инфраструктура WCF.</span><span class="sxs-lookup"><span data-stu-id="32c67-104">Security is not required because the data is of low importance, the network is expected to be inherently secure, or security is provided by a layer below the WCF infrastructure.</span></span>  
   
- <span data-ttu-id="64a5a-105">![Незащищенные интранет-клиент и служба сценария](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")</span><span class="sxs-lookup"><span data-stu-id="64a5a-105">![Intranet unsecured client and service scenario](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")</span></span>  
+ <span data-ttu-id="32c67-105">![Незащищенные интранет-клиент и служба сценария](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")</span><span class="sxs-lookup"><span data-stu-id="32c67-105">![Intranet unsecured client and service scenario](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")</span></span>  
   
-|<span data-ttu-id="64a5a-106">Характеристика</span><span class="sxs-lookup"><span data-stu-id="64a5a-106">Characteristic</span></span>|<span data-ttu-id="64a5a-107">Описание</span><span class="sxs-lookup"><span data-stu-id="64a5a-107">Description</span></span>|  
+|<span data-ttu-id="32c67-106">Характеристика</span><span class="sxs-lookup"><span data-stu-id="32c67-106">Characteristic</span></span>|<span data-ttu-id="32c67-107">Описание</span><span class="sxs-lookup"><span data-stu-id="32c67-107">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="64a5a-108">Режим безопасности</span><span class="sxs-lookup"><span data-stu-id="64a5a-108">Security Mode</span></span>|<span data-ttu-id="64a5a-109">Нет</span><span class="sxs-lookup"><span data-stu-id="64a5a-109">None</span></span>|  
-|<span data-ttu-id="64a5a-110">Transport</span><span class="sxs-lookup"><span data-stu-id="64a5a-110">Transport</span></span>|<span data-ttu-id="64a5a-111">TCP</span><span class="sxs-lookup"><span data-stu-id="64a5a-111">TCP</span></span>|  
-|<span data-ttu-id="64a5a-112">Привязка</span><span class="sxs-lookup"><span data-stu-id="64a5a-112">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
-|<span data-ttu-id="64a5a-113">Взаимодействие</span><span class="sxs-lookup"><span data-stu-id="64a5a-113">Interoperability</span></span>|<span data-ttu-id="64a5a-114">Только WCF</span><span class="sxs-lookup"><span data-stu-id="64a5a-114">WCF only</span></span>|  
-|<span data-ttu-id="64a5a-115">Проверка подлинности</span><span class="sxs-lookup"><span data-stu-id="64a5a-115">Authentication</span></span>|<span data-ttu-id="64a5a-116">Нет</span><span class="sxs-lookup"><span data-stu-id="64a5a-116">None</span></span>|  
-|<span data-ttu-id="64a5a-117">Целостность</span><span class="sxs-lookup"><span data-stu-id="64a5a-117">Integrity</span></span>|<span data-ttu-id="64a5a-118">Нет</span><span class="sxs-lookup"><span data-stu-id="64a5a-118">None</span></span>|  
-|<span data-ttu-id="64a5a-119">Конфиденциальность</span><span class="sxs-lookup"><span data-stu-id="64a5a-119">Confidentiality</span></span>|<span data-ttu-id="64a5a-120">Нет</span><span class="sxs-lookup"><span data-stu-id="64a5a-120">None</span></span>|  
+|<span data-ttu-id="32c67-108">Режим безопасности</span><span class="sxs-lookup"><span data-stu-id="32c67-108">Security Mode</span></span>|<span data-ttu-id="32c67-109">Нет</span><span class="sxs-lookup"><span data-stu-id="32c67-109">None</span></span>|  
+|<span data-ttu-id="32c67-110">Transport</span><span class="sxs-lookup"><span data-stu-id="32c67-110">Transport</span></span>|<span data-ttu-id="32c67-111">TCP</span><span class="sxs-lookup"><span data-stu-id="32c67-111">TCP</span></span>|  
+|<span data-ttu-id="32c67-112">Привязка</span><span class="sxs-lookup"><span data-stu-id="32c67-112">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
+|<span data-ttu-id="32c67-113">Взаимодействие</span><span class="sxs-lookup"><span data-stu-id="32c67-113">Interoperability</span></span>|<span data-ttu-id="32c67-114">Только WCF</span><span class="sxs-lookup"><span data-stu-id="32c67-114">WCF only</span></span>|  
+|<span data-ttu-id="32c67-115">Проверка подлинности</span><span class="sxs-lookup"><span data-stu-id="32c67-115">Authentication</span></span>|<span data-ttu-id="32c67-116">Нет</span><span class="sxs-lookup"><span data-stu-id="32c67-116">None</span></span>|  
+|<span data-ttu-id="32c67-117">Целостность</span><span class="sxs-lookup"><span data-stu-id="32c67-117">Integrity</span></span>|<span data-ttu-id="32c67-118">Нет</span><span class="sxs-lookup"><span data-stu-id="32c67-118">None</span></span>|  
+|<span data-ttu-id="32c67-119">Конфиденциальность</span><span class="sxs-lookup"><span data-stu-id="32c67-119">Confidentiality</span></span>|<span data-ttu-id="32c67-120">Нет</span><span class="sxs-lookup"><span data-stu-id="32c67-120">None</span></span>|  
   
-## <a name="service"></a><span data-ttu-id="64a5a-121">Служба</span><span class="sxs-lookup"><span data-stu-id="64a5a-121">Service</span></span>  
- <span data-ttu-id="64a5a-122">Предполагается, что представленные ниже код и конфигурация выполняются независимо.</span><span class="sxs-lookup"><span data-stu-id="64a5a-122">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="64a5a-123">Выполните одно из следующих действий.</span><span class="sxs-lookup"><span data-stu-id="64a5a-123">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="32c67-121">Служба</span><span class="sxs-lookup"><span data-stu-id="32c67-121">Service</span></span>  
+ <span data-ttu-id="32c67-122">Предполагается, что представленные ниже код и конфигурация выполняются независимо.</span><span class="sxs-lookup"><span data-stu-id="32c67-122">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="32c67-123">Выполните одно из следующих действий.</span><span class="sxs-lookup"><span data-stu-id="32c67-123">Do one of the following:</span></span>  
   
--   <span data-ttu-id="64a5a-124">Создайте автономную службу, используя код без конфигурации.</span><span class="sxs-lookup"><span data-stu-id="64a5a-124">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="32c67-124">Создайте автономную службу, используя код без конфигурации.</span><span class="sxs-lookup"><span data-stu-id="32c67-124">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="64a5a-125">Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.</span><span class="sxs-lookup"><span data-stu-id="64a5a-125">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="32c67-125">Создайте службу, используя предоставленную конфигурацию, но не определяйте конечные точки.</span><span class="sxs-lookup"><span data-stu-id="32c67-125">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="64a5a-126">Код</span><span class="sxs-lookup"><span data-stu-id="64a5a-126">Code</span></span>  
- <span data-ttu-id="64a5a-127">В следующем коде показано создание конечной точки без обеспечения безопасности.</span><span class="sxs-lookup"><span data-stu-id="64a5a-127">The following code shows how to create an endpoint with no security:</span></span>  
+### <a name="code"></a><span data-ttu-id="32c67-126">Код</span><span class="sxs-lookup"><span data-stu-id="32c67-126">Code</span></span>  
+ <span data-ttu-id="32c67-127">В следующем коде показано создание конечной точки без обеспечения безопасности.</span><span class="sxs-lookup"><span data-stu-id="32c67-127">The following code shows how to create an endpoint with no security:</span></span>  
   
  [!code-csharp[C_UnsecuredService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#2)]
  [!code-vb[C_UnsecuredService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#2)]  
   
-### <a name="configuration"></a><span data-ttu-id="64a5a-128">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="64a5a-128">Configuration</span></span>  
- <span data-ttu-id="64a5a-129">В следующем коде настраивается та же конечная точка с использованием конфигурации.</span><span class="sxs-lookup"><span data-stu-id="64a5a-129">The following code sets up the same endpoint using configuration:</span></span>  
+### <a name="configuration"></a><span data-ttu-id="32c67-128">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="32c67-128">Configuration</span></span>  
+ <span data-ttu-id="32c67-129">В следующем коде настраивается та же конечная точка с использованием конфигурации.</span><span class="sxs-lookup"><span data-stu-id="32c67-129">The following code sets up the same endpoint using configuration:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -71,24 +70,24 @@ ms.locfileid: "49122760"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="64a5a-130">Клиент</span><span class="sxs-lookup"><span data-stu-id="64a5a-130">Client</span></span>  
- <span data-ttu-id="64a5a-131">Предполагается, что представленные ниже код и конфигурация выполняются независимо.</span><span class="sxs-lookup"><span data-stu-id="64a5a-131">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="64a5a-132">Выполните одно из следующих действий.</span><span class="sxs-lookup"><span data-stu-id="64a5a-132">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="32c67-130">Клиент</span><span class="sxs-lookup"><span data-stu-id="32c67-130">Client</span></span>  
+ <span data-ttu-id="32c67-131">Предполагается, что представленные ниже код и конфигурация выполняются независимо.</span><span class="sxs-lookup"><span data-stu-id="32c67-131">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="32c67-132">Выполните одно из следующих действий.</span><span class="sxs-lookup"><span data-stu-id="32c67-132">Do one of the following:</span></span>  
   
--   <span data-ttu-id="64a5a-133">Создайте автономный клиент, используя код (и код клиента).</span><span class="sxs-lookup"><span data-stu-id="64a5a-133">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="32c67-133">Создайте автономный клиент, используя код (и код клиента).</span><span class="sxs-lookup"><span data-stu-id="32c67-133">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="64a5a-134">Создайте клиент, который не определяет никаких адресов конечных точек.</span><span class="sxs-lookup"><span data-stu-id="64a5a-134">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="64a5a-135">Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации.</span><span class="sxs-lookup"><span data-stu-id="64a5a-135">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="64a5a-136">Например:</span><span class="sxs-lookup"><span data-stu-id="64a5a-136">For example:</span></span>  
+-   <span data-ttu-id="32c67-134">Создайте клиент, который не определяет никаких адресов конечных точек.</span><span class="sxs-lookup"><span data-stu-id="32c67-134">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="32c67-135">Вместо этого используйте конструктор клиента, который принимает в качестве аргумента имя конфигурации.</span><span class="sxs-lookup"><span data-stu-id="32c67-135">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="32c67-136">Например:</span><span class="sxs-lookup"><span data-stu-id="32c67-136">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="64a5a-137">Код</span><span class="sxs-lookup"><span data-stu-id="64a5a-137">Code</span></span>  
- <span data-ttu-id="64a5a-138">В следующем коде показано базового клиента WCF, который обращается к незащищенной конечной точке по протоколу TCP.</span><span class="sxs-lookup"><span data-stu-id="64a5a-138">The following code shows a basic WCF client that accesses an unsecured endpoint using the TCP protocol.</span></span>  
+### <a name="code"></a><span data-ttu-id="32c67-137">Код</span><span class="sxs-lookup"><span data-stu-id="32c67-137">Code</span></span>  
+ <span data-ttu-id="32c67-138">В следующем коде показано базового клиента WCF, который обращается к незащищенной конечной точке по протоколу TCP.</span><span class="sxs-lookup"><span data-stu-id="32c67-138">The following code shows a basic WCF client that accesses an unsecured endpoint using the TCP protocol.</span></span>  
   
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
   
-### <a name="configuration"></a><span data-ttu-id="64a5a-139">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="64a5a-139">Configuration</span></span>  
- <span data-ttu-id="64a5a-140">Следующий код конфигурации применяется к клиенту.</span><span class="sxs-lookup"><span data-stu-id="64a5a-140">The following configuration code applies to the client:</span></span>  
+### <a name="configuration"></a><span data-ttu-id="32c67-139">Конфигурация</span><span class="sxs-lookup"><span data-stu-id="32c67-139">Configuration</span></span>  
+ <span data-ttu-id="32c67-140">Следующий код конфигурации применяется к клиенту.</span><span class="sxs-lookup"><span data-stu-id="32c67-140">The following configuration code applies to the client:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -113,7 +112,7 @@ ms.locfileid: "49122760"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="64a5a-141">См. также</span><span class="sxs-lookup"><span data-stu-id="64a5a-141">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="32c67-141">См. также</span><span class="sxs-lookup"><span data-stu-id="32c67-141">See Also</span></span>  
  <xref:System.ServiceModel.NetTcpBinding>  
- [<span data-ttu-id="64a5a-142">Общие сведения о безопасности</span><span class="sxs-lookup"><span data-stu-id="64a5a-142">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [<span data-ttu-id="64a5a-143">Модель безопасности для Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="64a5a-143">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+ [<span data-ttu-id="32c67-142">Общие сведения о безопасности</span><span class="sxs-lookup"><span data-stu-id="32c67-142">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)  
+ [<span data-ttu-id="32c67-143">Модель безопасности для Windows Server App Fabric</span><span class="sxs-lookup"><span data-stu-id="32c67-143">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
