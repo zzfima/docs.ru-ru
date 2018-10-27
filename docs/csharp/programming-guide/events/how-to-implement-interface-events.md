@@ -13,7 +13,7 @@ ms.lasthandoff: 09/06/2018
 ms.locfileid: "43863665"
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Практическое руководство. Реализация событий интерфейса (Руководство по программированию в C#)
-[Интерфейс](../../../csharp/language-reference/keywords/interface.md) может объявлять [события](../../../csharp/language-reference/keywords/event.md). Следующий пример демонстрирует реализацию событий интерфейса в классе. По сути правила остаются таким же, как при реализации любого метода или свойства интерфейса.  
+[Интерфейс](../../../csharp/language-reference/keywords/interface.md) может объявлять [события](../../../csharp/language-reference/keywords/event.md). Следующий пример демонстрирует реализацию событий интерфейса в классе. По сути правила остаются такими же, как при реализации любого метода или свойства интерфейса.  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>Реализация событий интерфейса в классе  
   
