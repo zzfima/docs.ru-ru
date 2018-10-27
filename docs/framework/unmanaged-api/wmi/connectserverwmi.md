@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 244df48606f6d971d6b6e246c4f9b73f916cbdcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fa4b789641034b6563b15c52e96cbfdfa13d989a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193818"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50049286"
 ---
 # <a name="connectserverwmi-function"></a>Функция ConnectServerWmi
 Создает подключение через DCOM к пространству имен WMI на указанном компьютере.  
@@ -94,7 +94,7 @@ HRESULT ConnectServerWmi (
   
 ## <a name="remarks"></a>Примечания
 
-Эта функция создает оболочку для вызова [IWbemLocator::ConnectServer](https://msdn.microsoft.com/libraryaa391769%28v=vs.85%29.aspx) метод.
+Эта функция создает оболочку для вызова [IWbemLocator::ConnectServer](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemlocator-connectserver) метод.
 
  Для локального доступа к пространству имен по умолчанию `strNetworkResource` может быть путем простого объекта: «root\default» или "\\.\root\default». Для доступа к пространству имен по умолчанию на удаленном компьютере с использованием сети, COM или совместимые с Microsoft, включают имя компьютера: "\\myserver\root\default». Имя компьютера также может быть DNS-имя или IP-адрес. `ConnectServerWmi` Функции можно также подключиться с компьютерами под управлением IPv6 с помощью IPv6-адрес.
 

@@ -14,16 +14,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ade78154e9911dfe8c837c8667eaca7d3a366431
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
-ms.translationtype: MT
+ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742053"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50046094"
 ---
 # <a name="datamemberlisteditor-class"></a>Класс DataMemberListEditor
 
-Предоставляет раскрывающийся список пользовательский интерфейс для редактирования свойств объектов с привязкой к данным (объекты, имеющие ненулевой `DataSource` свойства), перечисляя все свойства `DataSource` выберите источник значения из объекта.  
+Раскрывающегося списка пользовательский интерфейс для редактирования свойств объектов с привязкой к данным (объекты, имеющие ненулевой `DataSource` свойство), перечисляя все свойства `DataSource` объект, чтобы выбрать источник значения из.  
   
 ## <a name="syntax"></a>Синтаксис
   
@@ -32,18 +32,18 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberListEditor` Класса является внутренним и не предназначены для непосредственного использования в коде.
+> `DataMemberListEditor` Класс является внутренним и не предназначены для использования непосредственно в коде.
 > 
-> В реальном приложении ни при каких обстоятельствах корпорация Майкрософт не поддерживает использование этого класса.
+> Майкрософт не поддерживает использование этого класса в рабочем приложении ни при каких обстоятельствах.
   
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Сборка:** System.Design (в System.Design.dll)  
+**Сборка:** System.Design (в библиотеке System.Design.dll)  
   
-**Версии платформы .NET framework:** доступно с версии 2.0.  
+**Версии платформы .NET framework:** доступно с момента 2.0.  
   
 ## <a name="see-also"></a>См. также
 
-<xref:System.Windows.Forms.Design?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

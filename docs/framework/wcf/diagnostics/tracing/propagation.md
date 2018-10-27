@@ -2,12 +2,12 @@
 title: Распространение
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: f4e92c6dec163d191c507dd80bb0d9dc129c6e96
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 1d5ac743e94edd845650a1b550b3e982929d1b32
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803241"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50033640"
 ---
 # <a name="propagation"></a>Распространение
 В этом разделе описывается распространение действий в модели трассировки Windows Communication Foundation (WCF).  
@@ -21,7 +21,7 @@ ms.locfileid: "33803241"
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing" propagateActivity="true" >  
 ```  
   
- Распространение действий — настраиваемая функция, вызывающая WCF добавить заголовок для исходящих сообщений, включая идентификатор действия из локальной памяти ПОТОКА. Включая этот идентификатор в последующие трассировки на стороне сервера, можно коррелировать действия клиента и сервера.  
+ Распространение действий — настраиваемая функция, вызывающая WCF для добавления заголовков исходящих сообщений, который включает в себя идентификатор действия из локальной памяти ПОТОКА. Включая этот идентификатор в последующие трассировки на стороне сервера, можно коррелировать действия клиента и сервера.  
   
 ## <a name="propagation-definition"></a>Определение распространения  
  Идентификатор gAId действия M распространяется на действие N, если выполняются все следующие условия.  
@@ -44,21 +44,19 @@ ms.locfileid: "33803241"
   
 ```xml  
 <MessageLogTraceRecord>  
-  <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"     
+  <s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope"
                       xmlns:a="http://www.w3.org/2005/08/addressing">  
     <s:Header>  
       <a:Action s:mustUnderstand="1">http://Microsoft.ServiceModel.Samples/ICalculator/Subtract  
       </a:Action>  
       <a:MessageID>urn:uuid:f0091eae-d339-4c7e-9408-ece34602f1ce  
       </a:MessageID>  
-      <ActivityId CorrelationId="f94c6af1-7d5d-4295-b693-4670a8a0ce34"   
-  
+      <ActivityId CorrelationId="f94c6af1-7d5d-4295-b693-4670a8a0ce34"
                xmlns="http://schemas.microsoft.com/2004/09/ServiceModel/Diagnostics">  
         17f59a29-b435-4a15-bf7b-642ffc40eac8  
       </ActivityId>  
       <a:ReplyTo>  
-          <a:Address>http://www.w3.org/2005/08/addressing/anonymous  
-          </a:Address>  
+          <a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address>  
       </a:ReplyTo>  
       <a:To s:mustUnderstand="1">net.tcp://localhost/servicemodelsamples/service</a:To>  
    </s:Header>  

@@ -2,12 +2,12 @@
 title: Аналитическая трассировка WCF
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 9464f2a4c9bc52134e439c98b06ae50c828a14f6
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: a5e4b82bd28cae18f393a4143325623634d4bbaf
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850261"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181661"
 ---
 # <a name="wcf-analytic-tracing"></a>Аналитическая трассировка WCF
 Этот образец демонстрирует способы добавления собственных событий трассировки событий в поток трассировки, которые записывает трассировки событий Windows в Windows Communication Foundation (WCF) [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Аналитически отслеживаемые события предназначены для упрощения добавления видимости в службы без ущерба для производительности. В этом примере показано, как использовать <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> API писать события, которые интегрируются со службами WCF.  
@@ -35,7 +35,7 @@ ms.locfileid: "48850261"
 ## <a name="custom-event-details"></a>Данные пользовательских событий  
  Манифест поставщика событий ETW WCF определяет три события, которые предназначены для выдачи авторами службы WCF в коде службы. В следующей таблице приведена разбивка этих трех событий.  
   
-|событие|Описание:|Идентификатор события|  
+|событие|Описание|Идентификатор события|  
 |-----------|-----------------|--------------|  
 |UserDefinedInformationEventOccurred|Это событие выдается, когда в службе происходит что-то примечательное, что не является проблемой. Например, можно выдать событие после успешного вызова базы данных.|301|  
 |UserDefinedWarningOccurred|Это событие выдается, когда возникает проблема, которая в будущем может привести к сбою. Например, можно выдавать событие предупреждения, когда вызов базы данных завершается неудачей, но удалось выполнить восстановление, переключившись на резервное хранилище данных.|302|  
@@ -53,7 +53,7 @@ ms.locfileid: "48850261"
   
 4.  Запустите тестовый клиент WCF (WcfTestClient.exe).  
   
-     Тестовый клиент WCF (WcfTestClient.exe) расположен в \<Visual Studio 2012, установите-Dir > \Common7\IDE\ WcfTestClient.exe (каталог установки Visual Studio 2012 по умолчанию — C:\Program Files\Microsoft Visual Studio 10.0).  
+     Тестовый клиент WCF (WcfTestClient.exe) расположен в `\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`. Каталог установки Visual Studio 2012 по умолчанию является `C:\Program Files\Microsoft Visual Studio 10.0`.  
   
 5.  В тестовом клиенте WCF, добавьте службу, выбрав **файл**, а затем **добавить службу**.  
   

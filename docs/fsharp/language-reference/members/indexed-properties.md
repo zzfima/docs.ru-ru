@@ -1,58 +1,48 @@
 ---
 title: Индексированные свойства (F#)
-description: 'Дополнительные сведения о F # индексированные свойства, которые являются свойства, предоставляющие доступ через массив к данным упорядоченный.'
-ms.date: 05/16/2016
-ms.openlocfilehash: e56e4e2ea3f35df4c8ec46012357242cb6ce69f3
-ms.sourcegitcommit: 3ab9254890a52a50762995fa6d7d77a00348db7e
+description: Дополнительные сведения о индексированных свойств в F#, разрешающее для доступ через массив к упорядоченных данных.
+ms.date: 10/17/2018
+ms.openlocfilehash: 3dac60eba3d9e7a9c3e76ad7ee051e6b30b88636
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46321370"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452252"
 ---
 # <a name="indexed-properties"></a>Индексированные свойства
 
-*Индексированные свойства* свойства, предоставляющие доступ через массив к упорядочиваются данные. Они бывают трех видов:
-
-* `Item`
-* `Ordinal`
-* `Cardinal`
-
-В F # член должен иметь имя одного из этих трех имен, чтобы предоставить доступ через массив. `IndexerName` используется для представления любой из трех вариантов ниже:
+При определении класс, который абстрагирует упорядоченный данными, иногда бывает полезно предоставить индексированный доступ к этим данным без предоставления базовой реализации. Это делается с помощью `Index` член.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```fsharp
 // Indexed property that has both get and set defined.
-member self-identifier.IndexerName
-    with get(index-variable) =
-        get-function-body
-    and set index-variablesvalue-variables =
-        set-function-body
+member self-identifier.Index
+    with get(index-values) =
+        get-member-body
+    and set index-values values-to-set =
+        set-member-body
 
-// Indexed property that has get only.
-member self-identifier.IndexerName(index-variable) =
-    get-function-body
-
-// Alternative syntax for indexed property with get only
-member self-identifier.IndexerName
-    with get(index-variables) =
-        get-function-body
+// Indexed property with get only
+member self-identifier.Index
+    with get(index-values) =
+        get-member-body
 
 // Indexed property that has set only.
-member self-identifier.IndexerName
-    with set index-variablesvalue-variables = 
-        set-function-body
+member self-identifier.Index
+    with set index-values values-to-set =
+        set-member-body
 ```
 
 ## <a name="remarks"></a>Примечания
 
 Виды выше синтаксисе показано, как определять индексированные свойства, для которых имеются обе `get` и `set` метод, имеют `get` только метод или иметь `set` только метод. Можно также комбинировать синтаксис, показанный для get только и синтаксис, показанный для набора только и получения свойства с get и set. Эта последняя форма позволяет поместить различные модификаторы доступности и атрибуты на get и методы работы с наборами.
 
-Когда *IndexerName* является `Item`, компилятор считает свойство по умолчанию индексированное свойство. Объект *индексированное свойство по умолчанию* — это свойство, можно получить доступ, используя синтаксис, подобный массиву в экземпляре объекта. Например если `obj` — это объект типа, который определяет данное свойство синтаксис `obj.[index]` используется для доступа к свойству.
+С помощью имени `Item`, компилятор считает свойство по умолчанию индексированное свойство. Объект *индексированное свойство по умолчанию* — это свойство, можно получить доступ, используя синтаксис, подобный массиву в экземпляре объекта. Например если `o` — это объект типа, который определяет данное свойство синтаксис `o.[index]` используется для доступа к свойству.
 
-Синтаксис для доступа к не по умолчанию индексированное свойство является предоставление имени свойства и индекс в круглые скобки. Например, если свойство является `Ordinal`, написании `obj.Ordinal(index)` для доступа к нему.
+Синтаксис для доступа к не по умолчанию индексированное свойство является предоставление имени свойства и индекс в круглые скобки, так же, как обычный член. Например если свойство `o` называется `Ordinal`, написании `o.Ordinal(index)` для доступа к нему.
 
-Независимо от того, какая форма используется, следует всегда использовать каррированные для `set` метод по индексированному свойству. Сведения о каррированные функции, см. в разделе [функции](../functions/index.md).
+Независимо от того, какая форма используется следует всегда использовать Каррированная форма для метода set по индексированному свойству. Сведения о каррированные функции, см. в разделе [функции](../functions/index.md).
 
 ## <a name="example"></a>Пример
 
@@ -62,7 +52,7 @@ member self-identifier.IndexerName
 
 ## <a name="output"></a>Вывод
 
-```
+```console
 ONE two three four five six seven eight nine ten
 ONE first two second three third four fourth five fifth six 6th
 seven seventh eight eighth nine ninth ten tenth

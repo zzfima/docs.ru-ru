@@ -19,15 +19,15 @@ helpviewer_keywords:
 - localization [Windows Forms], character sets
 - globalization [Windows Forms], character sets
 ms.assetid: 22e8965d-a712-42b3-8167-3ee346bd70f9
-ms.openlocfilehash: 9257a6b725839d8f433988ab76c4ce9ae349d950
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 1b1ac50bde87b22c3ce9ff7524edbf8750976788
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36208606"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183117"
 ---
 # <a name="encoding-and-windows-forms-globalization"></a>Кодировка и глобализация Windows Forms
-Приложения Windows Forms полностью поддерживают Юникод, т. е. каждый символ представлен уникальным числом независимо от платформы, программы или языка. Дополнительные сведения о Юникоде см. в разделе [веб-сайте консорциума Юникода](http://www.unicode.org).  
+Приложения Windows Forms полностью поддерживают Юникод, т. е. каждый символ представлен уникальным числом независимо от платформы, программы или языка. Дополнительные сведения о Юникоде см. в разделе [веб-узел консорциума Юникода](https://www.unicode.org).  
   
 ## <a name="benefits-of-unicode"></a>Преимущества Юникода  
  В число преимуществ форм с поддержкой Юникода входит возможность работать с языками, поддерживаемыми только Юникодом, например хинди. Кроме того, можно работать с несколькими языками в одной форме. В Юникоде все символы занимают два байта, поэтому для представления двухбайтовых символов не требуется специальных усилий. Также можно написать единый код, который будет работать на всех платформах. Это отличается от предыдущих версий Visual Basic, где требовалось писать разный код для разных платформ, таких как Windows NT и [!INCLUDE[win98](../../../../includes/win98-md.md)].  

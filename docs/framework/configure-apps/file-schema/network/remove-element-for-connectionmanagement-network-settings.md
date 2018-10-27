@@ -10,14 +10,12 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d249cc412a1638e62b57b4976adc23fdf8f36e80
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024588"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181557"
 ---
 # <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;Удалить&gt; элемент для connectionManagement (параметры сети)
 Удаляет IP-адрес или DNS-имя из списка управления подключениями.  
@@ -62,7 +60,7 @@ ms.locfileid: "48024588"
  Этот элемент может использоваться в файле конфигурации приложения или в файле конфигурации компьютера (Machine.config).  
   
 ## <a name="example"></a>Пример  
- В следующем примере удаляет все записи списка управления подключением www.adventure-works.com сервера и затем настраивает приложение для использования четырех подключений к серверу www.contoso.com и двух подключений ко всем остальным серверам.  
+ В следующем примере удаляются все записи списка управления подключением для сервера `www.adventure-works.com` , а затем настраивает приложение для использования четырех подключений к серверу `www.contoso.com` и двух подключений ко всем остальным серверам.  
   
 ```xml  
 <configuration>  
@@ -77,6 +75,6 @@ ms.locfileid: "48024588"
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Net.ServicePoint>  
- <xref:System.Net.ServicePointManager>  
- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.ServicePoint>  
+- <xref:System.Net.ServicePointManager>  
+- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 82e657e91e586d7fe409646ea4fb8946c026e84c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a53493d666cb16fcc9b407ca3a46072afa306b97
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424343"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182480"
 ---
 # <a name="isymunmanagedencupdategetlocalvariables-method"></a>Метод ISymUnmanagedENCUpdate::GetLocalVariables
 Возвращает локальные переменные.  
@@ -38,7 +38,7 @@ HRESULT GetLocalVariables(
     [out] ULONG        *pceltFetched);  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+## <a name="parameters"></a>Параметры  
  `mdMethodToken`  
  [in] Токен метаданных метода.  
   
@@ -46,10 +46,10 @@ HRESULT GetLocalVariables(
  [in] Объект `ULONG` указывает размер `rgLocals` параметра.  
   
  `rgLocals`  
- [out] Возвращаемый массив <!--zz<xref:ISymUnmanagedVariable>--> `ISymUnmanagedVariable` экземпляров.  
+ [out] Возвращаемый массив [ISymUnmanagedVariable](isymunmanagedvariable-interface.md) экземпляров.  
   
  `pceltFetched`  
- [out] Указатель на `ULONG` , получающий размер `rgLocals` буфера, должны содержать локальные переменные.  
+ [out] Указатель на `ULONG` , получающий размер `rgLocals` буфера, необходимый для "Локальные".  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Значение S_OK, если метод выполнен успешно; в противном случае — значение E_FAIL или другим кодом ошибки.  

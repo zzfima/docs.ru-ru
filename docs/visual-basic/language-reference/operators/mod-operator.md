@@ -12,14 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 456c19fc8e28517a0662b58e338028e1c75cd8c8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a04a294d5505180a41edeba4643d25667a301c1d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424406"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50170813"
 ---
 # <a name="mod-operator-visual-basic"></a>Оператор Mod (Visual Basic)
 Делит два числа и возвращает только остаток.  
@@ -90,7 +88,7 @@ End Module
  При работе с числами с плавающей запятой, помните, что они не всегда имеют точное десятичное представление в памяти. Это может привести к непредвиденным результатам определенных операций, таких как сравнения значений и `Mod` оператор. Дополнительные сведения см. в разделе [Устранение неполадок типы данных](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md).  
   
 ## <a name="overloading"></a>Перегрузка  
- `Mod` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение. Если код применяет `Mod` к экземпляру класса или структуры, которая включает в себя такие перегрузки, убедитесь, что его переопределенное. Дополнительные сведения см. в разделе [процедуры оператора](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
+ `Mod` Оператор может быть *перегружены*, что означает, что класс или структура может переопределить его поведение. Если код применяет `Mod` к экземпляру класса или структуры, которая включает в себя такие перегрузки, убедитесь, что его переопределенное. Для получения дополнительной информации см. [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере используется `Mod` оператор деления двух чисел и возвращает только остаток. Если оба числа число с плавающей запятой, результатом является числом с плавающей запятой, представляющее остаток.  

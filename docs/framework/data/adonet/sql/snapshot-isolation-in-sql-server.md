@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43ae5dd3-50f5-43a8-8d01-e37a61664176
-ms.openlocfilehash: 52c5dba1a21b0e8d8e5af1dc159941e5f4b4aa5f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d2683ead92eb4e76494e3e23bff1c688578a316d
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970077"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50034303"
 ---
 # <a name="snapshot-isolation-in-sql-server"></a>Изоляция снимков в SQL Server
 Изоляция моментального снимка приводит к повышению параллелизма для приложений OLTP.  
@@ -24,7 +24,7 @@ ms.locfileid: "45970077"
   
  Перед использованием в транзакциях изоляция моментального снимка должна быть включена путем установки параметра базы данных ALLOW_SNAPSHOT_ISOLATION в значение ON. Это приводит к активизации механизма сохранения версий строк во временной базе данных (**tempdb**). Необходимо включить изоляцию моментального снимка в каждой использующей ее базе данных с помощью инструкции ALTER DATABASE языка Transact-SQL. В этом отношении изоляция моментального снимка отличается от традиционных уровней изоляции READ COMMITTED, REPEATABLE READ, SERIALIZABLE и READ UNCOMMITTED, которые не требуют настройки конфигурации. Следующие инструкции активируют изоляцию моментального снимка и заменяют поведение по умолчанию READ COMMITTED на SNAPSHOT:  
   
-```  
+```sql  
 ALTER DATABASE MyDatabase  
 SET ALLOW_SNAPSHOT_ISOLATION ON  
   
@@ -49,7 +49,7 @@ SET READ_COMMITTED_SNAPSHOT ON
   
 -   SERIALIZABLE является самым строгим уровнем изоляции, поскольку при его использовании блокируются целые диапазоны ключей и блокировки сохраняются до завершения транзакции. Он включает в себя уровень изоляции REPEATABLE READ и добавляет ограничение, согласно которому до завершения транзакции другие транзакции не могут вставлять новые строки в диапазоны строк, чтение которых осуществляется в данной транзакции.  
   
- Дополнительные сведения см. в разделе «Уровни изоляции» электронной документации по SQL Server.  
+ Дополнительные сведения см. [блокировки транзакций и руководство по управление версиями строк](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide).  
   
 ### <a name="snapshot-isolation-level-extensions"></a>Расширения уровня изоляции моментального снимка  
  SQL Server предоставляет расширения уровней изоляции стандарта SQL-92 путем представления уровня изоляции SNAPSHOT и дополнительных изменений в READ COMMITTED. Уровень изоляции READ_COMMITTED_SNAPSHOT может прозрачно заменять READ COMMITTED для всех транзакций.  
@@ -132,7 +132,7 @@ SqlTransaction sqlTran =
 ### <a name="using-lock-hints-with-snapshot-isolation"></a>Использование подсказок блокировок с изоляцией моментального снимка  
  В предыдущем примере первая транзакция выбирает данные, а вторая их обновляет до завершения первой, что вызывает конфликт обновления, когда первая транзакция пытается обновить ту же строку. Вероятность возникновения конфликтов обновления в продолжительных транзакциях моментального снимка можно снизить, задавая подсказки блокировок при запуске транзакции. Следующая инструкция SELECT использует подсказку UPDLOCK для блокировки выбранных строк:  
   
-```  
+```sql  
 SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)   
   WHERE PriKey BETWEEN 1 AND 3  
 ```  
@@ -143,4 +143,5 @@ SELECT * FROM TestSnapshotUpdate WITH (UPDLOCK)
   
 ## <a name="see-also"></a>См. также  
  [SQL Server и ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)
+ [Управляемые поставщики ADO.NET и Центр разработчиков DataSet](https://go.microsoft.com/fwlink/?LinkId=217917)      
+ [Руководство по управление версиями строк и блокировке транзакций](/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)

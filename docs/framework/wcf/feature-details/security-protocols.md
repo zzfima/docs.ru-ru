@@ -4,13 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-author: BrucePerlerMS
-ms.openlocfilehash: bfb8f3b8d824c1a3324b1d01edc9a087c0cf4abd
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 5adacbc0332d104d025ea1b888b580d34fee804e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841893"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50045893"
 ---
 # <a name="security-protocols"></a>Протоколы безопасности
 Протоколы WS-Security предоставляют механизмы обеспечения безопасности веб-служб, охватывающие все существующие требования к безопасности обмена сообщениями на предприятии. В этом разделе подробно описано, Windows Communication Foundation (WCF) (реализованный в <xref:System.ServiceModel.Channels.SecurityBindingElement>) для следующих протоколов ws-security.  
@@ -137,7 +136,7 @@ ms.locfileid: "48841893"
 ## <a name="2-common-message-security-parameters"></a>2. Общие параметры безопасности сообщений  
   
 ### <a name="21-timestamp"></a>2.1 TimeStamp  
- Наличие отметки времени определяется с помощью свойства <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> класса <xref:System.ServiceModel.Channels.SecurityBindingElement>. WCF timestamp всегда сериализуется с wsse: создан и wsse: срок действия истекает поля. Если используется подписывание, wsse:TimeStamp всегда подписывается.  
+ Наличие метки времени определяется с помощью свойства <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> класса <xref:System.ServiceModel.Channels.SecurityBindingElement>. WCF timestamp всегда сериализуется с wsse: создан и wsse: срок действия истекает поля. Если используется подписывание, wsse:TimeStamp всегда подписывается.  
   
 ### <a name="22-protection-order"></a>2.2. Порядок защиты  
  WCF поддерживает порядки защиты сообщений «Подпись перед шифрованием» и «Шифрование перед подписью» (Security Policy 1.2). По ряду причин рекомендуется использовать порядок «подпись перед шифрованием», в том числе по следующим причинам: если не используется механизм WS-Security 1.1 SignatureConfirmation, сообщения, защищенные в порядке «шифрование перед подписью», подвержены атакам подмены подписи и при подписывании зашифрованного содержимого сложнее производить аудит.  

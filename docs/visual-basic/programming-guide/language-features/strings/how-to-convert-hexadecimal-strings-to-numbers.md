@@ -8,32 +8,30 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: af0e6c1e30c116709ed98240de7bf3471fa842d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 65184bbb742ad549a8398d55dc7bdeed05a9d973
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648646"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50048558"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Практическое руководство. Преобразование шестнадцатеричных строк в числа (Visual Basic)
 Этот пример преобразует шестнадцатеричную строку в целое число, используя <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> метод.  
   
-## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Чтобы преобразовать число в шестнадцатеричную строку  
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Для преобразования шестнадцатеричной строки в число  
   
--   Использование <xref:System.Convert.ToInt32(System.String,System.Int32)> метода для преобразования в base-16 в целое число.  
+-   Используйте <xref:System.Convert.ToInt32(System.String,System.Int32)> метод преобразуемое число, представленное в base-16 в целое число.  
   
-     Первый аргумент <xref:System.Convert.ToInt32(System.String,System.Int32)> метод является строка для преобразования. Второй аргумент описывает, какая база, число, представленное в; шестнадцатеричное является основанием 16.  
+     Первый аргумент <xref:System.Convert.ToInt32(System.String,System.Int32)> метод является строка для преобразования. Второй аргумент описывает базовый номер выражается в; шестнадцатеричное является основанием 16.  
   
      [!code-vb[HexConversion](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
 
-- Обратите внимание, что шестнадцатеричная строка имеет следующие ограничения:
+- Обратите внимание на то, что шестнадцатеричная строка имеет следующие ограничения:
 
-   - Оно не может включать `&h` префикс.
-   - Оно не может включать `_` разделитель групп.
+   - Он не может включать `&h` префикс.
+   - Он не может включать `_` разделитель разрядов.
 
-   Если префикс или цифровой разделитель отсутствует, вызов <xref:System.Convert.ToInt32(System.String,System.Int32)> вызывает исключение <xref:System.FormatException>.
+   Если префикс или разделителя разрядов отсутствует, вызов <xref:System.Convert.ToInt32(System.String,System.Int32)> вызывает метод <xref:System.FormatException>.
 
 ## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  

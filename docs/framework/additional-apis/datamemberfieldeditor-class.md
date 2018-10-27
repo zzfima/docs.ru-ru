@@ -14,16 +14,16 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ca28c0c440ea67716244670e2b636a3099987e1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5146b0756d1aace14a294436a38b8d0e3e689c76
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741884"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452957"
 ---
 # <a name="datamemberfieldeditor-class"></a>Класс DataMemberFieldEditor
 
-Предоставляет пользовательский интерфейс для редактирования свойств объектов с привязкой к данным, перечисляя все свойства `DataSource` выберите источник значения из объекта.  
+Предоставляет пользовательский интерфейс для редактирования свойств объектов с привязкой к данным, перечисляя все свойства `DataSource` объект, чтобы выбрать значение источника.  
   
 ## <a name="syntax"></a>Синтаксис
   
@@ -32,18 +32,18 @@ internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberFieldEditor` Класса является внутренним и не предназначены для непосредственного использования в коде.
+> `DataMemberFieldEditor` Класс является внутренним и не предназначены для использования непосредственно в коде.
 > 
-> В реальном приложении ни при каких обстоятельствах корпорация Майкрософт не поддерживает использование этого класса.
+> Майкрософт не поддерживает использование этого класса в рабочем приложении ни при каких обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Windows.Forms.Design?displayProperty=nameWithType>  
   
-**Сборка:** System.Design (в System.Design.dll)  
+**Сборка:** System.Design (в библиотеке System.Design.dll)  
   
-**Версии платформы .NET framework:** доступно с версии 2.0.  
+**Версии платформы .NET framework:** доступно с момента 2.0.  
   
 ## <a name="see-also"></a>См. также
 
-<xref:System.Windows.Forms.Design?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.Design?displayProperty=nameWithType>

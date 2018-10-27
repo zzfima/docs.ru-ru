@@ -3,11 +3,11 @@ title: Обработка ошибок
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
 ms.openlocfilehash: 548d93e63440e256ddb54c3ca792a49817c9b059
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372246"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452853"
 ---
 # <a name="error-handling"></a>Обработка ошибок
 ## <a name="error-handling-in-windows-communication-foundation"></a>Обработка ошибок в Windows Communication Foundation  

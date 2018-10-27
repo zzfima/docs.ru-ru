@@ -3,11 +3,11 @@ title: Свойства (F#)
 description: 'Сведения о свойствах F #, которые являются членами, которые представляют значения, связанные с объектом.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266588"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50043651"
 ---
 # <a name="properties"></a>Свойства
 
