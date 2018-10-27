@@ -2,117 +2,117 @@
 title: Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
-ms.openlocfilehash: e00798a5e591ed8621cd0b5dbb4adfd1d41989bd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8998ed715306402f4d8cc98be82cbb8e4aac3f8e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736300"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194167"
 ---
-# <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a><span data-ttu-id="9a39b-102">Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a39b-102">Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)</span></span>
-<span data-ttu-id="9a39b-103">Возможности Async и Await упрощают создание асинхронных программ.</span><span class="sxs-lookup"><span data-stu-id="9a39b-103">You can write asynchronous programs more easily and intuitively by using async/await features.</span></span> <span data-ttu-id="9a39b-104">Можно написать асинхронный код, который выглядит как синхронный, и позволить компилятору обрабатывать трудные функции обратного вызова и продолжения, которые обычно включает асинхронный код.</span><span class="sxs-lookup"><span data-stu-id="9a39b-104">You can write asynchronous code that looks like synchronous code and let the compiler handle the difficult callback functions and continuations that asynchronous code usually entails.</span></span>  
+# <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a><span data-ttu-id="519b7-102">Пошаговое руководство. Получение доступа к Интернету с помощью модификатора Async и оператора Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="519b7-102">Walkthrough: Accessing the Web by Using Async and Await (Visual Basic)</span></span>
+<span data-ttu-id="519b7-103">Возможности Async и Await упрощают создание асинхронных программ.</span><span class="sxs-lookup"><span data-stu-id="519b7-103">You can write asynchronous programs more easily and intuitively by using async/await features.</span></span> <span data-ttu-id="519b7-104">Можно написать асинхронный код, который выглядит как синхронный, и позволить компилятору обрабатывать трудные функции обратного вызова и продолжения, которые обычно включает асинхронный код.</span><span class="sxs-lookup"><span data-stu-id="519b7-104">You can write asynchronous code that looks like synchronous code and let the compiler handle the difficult callback functions and continuations that asynchronous code usually entails.</span></span>  
   
- <span data-ttu-id="9a39b-105">Дополнительные сведения о возможности Async см. в разделе [асинхронное программирование с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).</span><span class="sxs-lookup"><span data-stu-id="9a39b-105">For more information about the Async feature, see [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).</span></span>  
+ <span data-ttu-id="519b7-105">Дополнительные сведения о возможности Async см. в разделе [асинхронное программирование с использованием Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).</span><span class="sxs-lookup"><span data-stu-id="519b7-105">For more information about the Async feature, see [Asynchronous Programming with Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md).</span></span>  
   
- <span data-ttu-id="9a39b-106">Это пошаговое руководство начинается с создания синхронного приложения Windows Presentation Foundation (WPF), которое суммирует число байтов в списке веб-сайтов.</span><span class="sxs-lookup"><span data-stu-id="9a39b-106">This walkthrough starts with a synchronous Windows Presentation Foundation (WPF) application that sums the number of bytes in a list of websites.</span></span> <span data-ttu-id="9a39b-107">Затем в рамках руководства приложение преобразуется в асинхронное решение с помощью новых возможностей.</span><span class="sxs-lookup"><span data-stu-id="9a39b-107">The walkthrough then converts the application to an asynchronous solution by using the new features.</span></span>  
+ <span data-ttu-id="519b7-106">Это пошаговое руководство начинается с создания синхронного приложения Windows Presentation Foundation (WPF), которое суммирует число байтов в списке веб-сайтов.</span><span class="sxs-lookup"><span data-stu-id="519b7-106">This walkthrough starts with a synchronous Windows Presentation Foundation (WPF) application that sums the number of bytes in a list of websites.</span></span> <span data-ttu-id="519b7-107">Затем в рамках руководства приложение преобразуется в асинхронное решение с помощью новых возможностей.</span><span class="sxs-lookup"><span data-stu-id="519b7-107">The walkthrough then converts the application to an asynchronous solution by using the new features.</span></span>  
   
- <span data-ttu-id="9a39b-108">Если вы не хотите создавать приложение самостоятельно, вы можете скачать пример "Пример Async. Пошаговое руководство по доступу к интернету (C# и Visual Basic)" со страницы [примеров кода для разработчиков](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).</span><span class="sxs-lookup"><span data-stu-id="9a39b-108">If you don't want to build the applications yourself, you can download "Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)" from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).</span></span>  
+ <span data-ttu-id="519b7-108">Если вы не хотите создавать приложение самостоятельно, вы можете скачать пример "Пример Async. Пошаговое руководство по доступу к интернету (C# и Visual Basic)" со страницы [примеров кода для разработчиков](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).</span><span class="sxs-lookup"><span data-stu-id="519b7-108">If you don't want to build the applications yourself, you can download "Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)" from [Developer Code Samples](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f).</span></span>  
   
- <span data-ttu-id="9a39b-109">В этом пошаговом руководстве выполняются следующие задачи.</span><span class="sxs-lookup"><span data-stu-id="9a39b-109">In this walkthrough, you complete the following tasks:</span></span>  
+ <span data-ttu-id="519b7-109">В этом пошаговом руководстве выполняются следующие задачи.</span><span class="sxs-lookup"><span data-stu-id="519b7-109">In this walkthrough, you complete the following tasks:</span></span>  
   
--   [<span data-ttu-id="9a39b-110">Создание приложения WPF</span><span class="sxs-lookup"><span data-stu-id="9a39b-110">To create a WPF application</span></span>](#CreateWPFApp)  
+-   [<span data-ttu-id="519b7-110">Создание приложения WPF</span><span class="sxs-lookup"><span data-stu-id="519b7-110">To create a WPF application</span></span>](#CreateWPFApp)  
   
--   [<span data-ttu-id="9a39b-111">Разработка простого окна MainWindow WPF</span><span class="sxs-lookup"><span data-stu-id="9a39b-111">To design a simple WPF MainWindow</span></span>](#MainWindow)  
+-   [<span data-ttu-id="519b7-111">Разработка простого окна MainWindow WPF</span><span class="sxs-lookup"><span data-stu-id="519b7-111">To design a simple WPF MainWindow</span></span>](#MainWindow)  
   
--   [<span data-ttu-id="9a39b-112">Добавление ссылки</span><span class="sxs-lookup"><span data-stu-id="9a39b-112">To add a reference</span></span>](#AddRef)  
+-   [<span data-ttu-id="519b7-112">Добавление ссылки</span><span class="sxs-lookup"><span data-stu-id="519b7-112">To add a reference</span></span>](#AddRef)  
   
--   [<span data-ttu-id="9a39b-113">Добавление необходимых операторов Imports</span><span class="sxs-lookup"><span data-stu-id="9a39b-113">To add necessary Imports statements</span></span>](#ImportsState)  
+-   [<span data-ttu-id="519b7-113">Добавление необходимых операторов Imports</span><span class="sxs-lookup"><span data-stu-id="519b7-113">To add necessary Imports statements</span></span>](#ImportsState)  
   
--   [<span data-ttu-id="9a39b-114">Создание синхронного приложения</span><span class="sxs-lookup"><span data-stu-id="9a39b-114">To create a synchronous application</span></span>](#synchronous)  
+-   [<span data-ttu-id="519b7-114">Создание синхронного приложения</span><span class="sxs-lookup"><span data-stu-id="519b7-114">To create a synchronous application</span></span>](#synchronous)  
   
--   [<span data-ttu-id="9a39b-115">Тестирование синхронного решения</span><span class="sxs-lookup"><span data-stu-id="9a39b-115">To test the synchronous solution</span></span>](#testSynch)  
+-   [<span data-ttu-id="519b7-115">Тестирование синхронного решения</span><span class="sxs-lookup"><span data-stu-id="519b7-115">To test the synchronous solution</span></span>](#testSynch)  
   
--   [<span data-ttu-id="9a39b-116">Преобразование GetURLContents в асинхронный метод</span><span class="sxs-lookup"><span data-stu-id="9a39b-116">To convert GetURLContents to an asynchronous method</span></span>](#GetURLContents)  
+-   [<span data-ttu-id="519b7-116">Преобразование GetURLContents в асинхронный метод</span><span class="sxs-lookup"><span data-stu-id="519b7-116">To convert GetURLContents to an asynchronous method</span></span>](#GetURLContents)  
   
--   [<span data-ttu-id="9a39b-117">Преобразование SumPageSizes в асинхронный метод</span><span class="sxs-lookup"><span data-stu-id="9a39b-117">To convert SumPageSizes to an asynchronous method</span></span>](#SumPageSizes)  
+-   [<span data-ttu-id="519b7-117">Преобразование SumPageSizes в асинхронный метод</span><span class="sxs-lookup"><span data-stu-id="519b7-117">To convert SumPageSizes to an asynchronous method</span></span>](#SumPageSizes)  
   
--   [<span data-ttu-id="9a39b-118">Преобразование startButton_Click в асинхронный метод</span><span class="sxs-lookup"><span data-stu-id="9a39b-118">To convert startButton_Click to an asynchronous method</span></span>](#startButton)  
+-   [<span data-ttu-id="519b7-118">Преобразование startButton_Click в асинхронный метод</span><span class="sxs-lookup"><span data-stu-id="519b7-118">To convert startButton_Click to an asynchronous method</span></span>](#startButton)  
   
--   [<span data-ttu-id="9a39b-119">Тестирование асинхронного решения</span><span class="sxs-lookup"><span data-stu-id="9a39b-119">To test the asynchronous solution</span></span>](#testAsynch)  
+-   [<span data-ttu-id="519b7-119">Тестирование асинхронного решения</span><span class="sxs-lookup"><span data-stu-id="519b7-119">To test the asynchronous solution</span></span>](#testAsynch)  
   
--   [<span data-ttu-id="9a39b-120">Замена метода GetURLContentsAsync методом .NET Framework</span><span class="sxs-lookup"><span data-stu-id="9a39b-120">To replace method GetURLContentsAsync with a .NET Framework method</span></span>](#GetURLContentsAsync)  
+-   [<span data-ttu-id="519b7-120">Замена метода GetURLContentsAsync методом .NET Framework</span><span class="sxs-lookup"><span data-stu-id="519b7-120">To replace method GetURLContentsAsync with a .NET Framework method</span></span>](#GetURLContentsAsync)  
   
--   [<span data-ttu-id="9a39b-121">Пример</span><span class="sxs-lookup"><span data-stu-id="9a39b-121">Example</span></span>](#BKMK_CompleteCodeExamples)  
+-   [<span data-ttu-id="519b7-121">Пример</span><span class="sxs-lookup"><span data-stu-id="519b7-121">Example</span></span>](#BKMK_CompleteCodeExamples)  
   
-## <a name="prerequisites"></a><span data-ttu-id="9a39b-122">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="9a39b-122">Prerequisites</span></span>  
- <span data-ttu-id="9a39b-123">На компьютере должна быть установлена среда Visual Studio 2012 или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="9a39b-123">Visual Studio 2012 or later must be installed on your computer.</span></span> <span data-ttu-id="9a39b-124">Дополнительные сведения см. на [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkId=235233).</span><span class="sxs-lookup"><span data-stu-id="9a39b-124">For more information, see the [Microsoft website](https://go.microsoft.com/fwlink/?LinkId=235233).</span></span>  
+## <a name="prerequisites"></a><span data-ttu-id="519b7-122">Предварительные требования</span><span class="sxs-lookup"><span data-stu-id="519b7-122">Prerequisites</span></span>  
+ <span data-ttu-id="519b7-123">На компьютере должна быть установлена среда Visual Studio 2012 или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="519b7-123">Visual Studio 2012 or later must be installed on your computer.</span></span> <span data-ttu-id="519b7-124">Дополнительные сведения см. на [веб-сайте Майкрософт](https://go.microsoft.com/fwlink/?LinkId=235233).</span><span class="sxs-lookup"><span data-stu-id="519b7-124">For more information, see the [Microsoft website](https://go.microsoft.com/fwlink/?LinkId=235233).</span></span>  
   
-###  <a name="CreateWPFApp"></a> <span data-ttu-id="9a39b-125">Создание приложения WPF</span><span class="sxs-lookup"><span data-stu-id="9a39b-125">To create a WPF application</span></span>  
+###  <a name="CreateWPFApp"></a> <span data-ttu-id="519b7-125">Создание приложения WPF</span><span class="sxs-lookup"><span data-stu-id="519b7-125">To create a WPF application</span></span>  
   
-1.  <span data-ttu-id="9a39b-126">Запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="9a39b-126">Start Visual Studio.</span></span>  
+1.  <span data-ttu-id="519b7-126">Запустите Visual Studio.</span><span class="sxs-lookup"><span data-stu-id="519b7-126">Start Visual Studio.</span></span>  
   
-2.  <span data-ttu-id="9a39b-127">В строке меню выберите **Файл**, **Создать**, **Проект**.</span><span class="sxs-lookup"><span data-stu-id="9a39b-127">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
+2.  <span data-ttu-id="519b7-127">В строке меню выберите **Файл**, **Создать**, **Проект**.</span><span class="sxs-lookup"><span data-stu-id="519b7-127">On the menu bar, choose **File**, **New**, **Project**.</span></span>  
   
-     <span data-ttu-id="9a39b-128">Откроется диалоговое окно **Новый проект** .</span><span class="sxs-lookup"><span data-stu-id="9a39b-128">The **New Project** dialog box opens.</span></span>  
+     <span data-ttu-id="519b7-128">Откроется диалоговое окно **Новый проект** .</span><span class="sxs-lookup"><span data-stu-id="519b7-128">The **New Project** dialog box opens.</span></span>  
   
-3.  <span data-ttu-id="9a39b-129">В **установленные шаблоны** области, выберите Visual Basic, а затем выберите **приложение WPF** в списке типов проектов.</span><span class="sxs-lookup"><span data-stu-id="9a39b-129">In the **Installed Templates** pane, choose Visual Basic, and then choose **WPF Application** from the list of project types.</span></span>  
+3.  <span data-ttu-id="519b7-129">В **установленные шаблоны** области, выберите Visual Basic, а затем выберите **приложение WPF** в списке типов проектов.</span><span class="sxs-lookup"><span data-stu-id="519b7-129">In the **Installed Templates** pane, choose Visual Basic, and then choose **WPF Application** from the list of project types.</span></span>  
   
-4.  <span data-ttu-id="9a39b-130">В текстовом поле **Имя** введите `AsyncExampleWPF` и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="9a39b-130">In the **Name** text box, enter `AsyncExampleWPF`, and then choose the **OK** button.</span></span>  
+4.  <span data-ttu-id="519b7-130">В текстовом поле **Имя** введите `AsyncExampleWPF` и нажмите кнопку **ОК**.</span><span class="sxs-lookup"><span data-stu-id="519b7-130">In the **Name** text box, enter `AsyncExampleWPF`, and then choose the **OK** button.</span></span>  
   
-     <span data-ttu-id="9a39b-131">В **обозревателе решений** появится новый проект.</span><span class="sxs-lookup"><span data-stu-id="9a39b-131">The new project appears in **Solution Explorer**.</span></span>  
+     <span data-ttu-id="519b7-131">В **обозревателе решений** появится новый проект.</span><span class="sxs-lookup"><span data-stu-id="519b7-131">The new project appears in **Solution Explorer**.</span></span>  
   
 ##  <a name="BKMK_DesignWPFMainWin"></a>   
-###  <a name="MainWindow"></a> <span data-ttu-id="9a39b-132">Разработка простого окна MainWindow WPF</span><span class="sxs-lookup"><span data-stu-id="9a39b-132">To design a simple WPF MainWindow</span></span>  
+###  <a name="MainWindow"></a> <span data-ttu-id="519b7-132">Разработка простого окна MainWindow WPF</span><span class="sxs-lookup"><span data-stu-id="519b7-132">To design a simple WPF MainWindow</span></span>  
   
-1.  <span data-ttu-id="9a39b-133">В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .</span><span class="sxs-lookup"><span data-stu-id="9a39b-133">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
+1.  <span data-ttu-id="519b7-133">В редакторе кода Visual Studio перейдите на вкладку **MainWindow.xaml** .</span><span class="sxs-lookup"><span data-stu-id="519b7-133">In the Visual Studio Code Editor, choose the **MainWindow.xaml** tab.</span></span>  
   
-2.  <span data-ttu-id="9a39b-134">Если окно **Панель элементов** не отображается, в меню **Вид** выберите пункт **Панель элементов**.</span><span class="sxs-lookup"><span data-stu-id="9a39b-134">If the **Toolbox** window isn’t visible, open the **View** menu, and then choose **Toolbox**.</span></span>  
+2.  <span data-ttu-id="519b7-134">Если окно **Панель элементов** не отображается, в меню **Вид** выберите пункт **Панель элементов**.</span><span class="sxs-lookup"><span data-stu-id="519b7-134">If the **Toolbox** window isn’t visible, open the **View** menu, and then choose **Toolbox**.</span></span>  
   
-3.  <span data-ttu-id="9a39b-135">Добавьте элементы управления **Button** и **TextBox** в окно **MainWindow**.</span><span class="sxs-lookup"><span data-stu-id="9a39b-135">Add a **Button** control and a **TextBox** control to the **MainWindow** window.</span></span>  
+3.  <span data-ttu-id="519b7-135">Добавьте элементы управления **Button** и **TextBox** в окно **MainWindow**.</span><span class="sxs-lookup"><span data-stu-id="519b7-135">Add a **Button** control and a **TextBox** control to the **MainWindow** window.</span></span>  
   
-4.  <span data-ttu-id="9a39b-136">Выделите элемент управления **TextBox** и в окне **Свойства** задайте указанные ниже значения.</span><span class="sxs-lookup"><span data-stu-id="9a39b-136">Highlight the **TextBox** control and, in the **Properties** window, set the following values:</span></span>  
+4.  <span data-ttu-id="519b7-136">Выделите элемент управления **TextBox** и в окне **Свойства** задайте указанные ниже значения.</span><span class="sxs-lookup"><span data-stu-id="519b7-136">Highlight the **TextBox** control and, in the **Properties** window, set the following values:</span></span>  
   
-    -   <span data-ttu-id="9a39b-137">Задайте для свойства **Имя** значение `resultsTextBox`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-137">Set the **Name** property to `resultsTextBox`.</span></span>  
+    -   <span data-ttu-id="519b7-137">Задайте для свойства **Имя** значение `resultsTextBox`.</span><span class="sxs-lookup"><span data-stu-id="519b7-137">Set the **Name** property to `resultsTextBox`.</span></span>  
   
-    -   <span data-ttu-id="9a39b-138">Задайте для свойства **Высота** значение 250.</span><span class="sxs-lookup"><span data-stu-id="9a39b-138">Set the **Height** property to 250.</span></span>  
+    -   <span data-ttu-id="519b7-138">Задайте для свойства **Высота** значение 250.</span><span class="sxs-lookup"><span data-stu-id="519b7-138">Set the **Height** property to 250.</span></span>  
   
-    -   <span data-ttu-id="9a39b-139">Задайте для свойства **Ширина** значение 500.</span><span class="sxs-lookup"><span data-stu-id="9a39b-139">Set the **Width** property to 500.</span></span>  
+    -   <span data-ttu-id="519b7-139">Задайте для свойства **Ширина** значение 500.</span><span class="sxs-lookup"><span data-stu-id="519b7-139">Set the **Width** property to 500.</span></span>  
   
-    -   <span data-ttu-id="9a39b-140">На вкладке **Текст** укажите моноширинный шрифт, например Lucida Console или Global Monospace.</span><span class="sxs-lookup"><span data-stu-id="9a39b-140">On the **Text** tab, specify a monospaced font, such as Lucida Console or Global Monospace.</span></span>  
+    -   <span data-ttu-id="519b7-140">На вкладке **Текст** укажите моноширинный шрифт, например Lucida Console или Global Monospace.</span><span class="sxs-lookup"><span data-stu-id="519b7-140">On the **Text** tab, specify a monospaced font, such as Lucida Console or Global Monospace.</span></span>  
   
-5.  <span data-ttu-id="9a39b-141">Выделите элемент управления **Button** и в окне **Свойства** задайте указанные ниже значения.</span><span class="sxs-lookup"><span data-stu-id="9a39b-141">Highlight the **Button** control and, in the **Properties** window, set the following values:</span></span>  
+5.  <span data-ttu-id="519b7-141">Выделите элемент управления **Button** и в окне **Свойства** задайте указанные ниже значения.</span><span class="sxs-lookup"><span data-stu-id="519b7-141">Highlight the **Button** control and, in the **Properties** window, set the following values:</span></span>  
   
-    -   <span data-ttu-id="9a39b-142">Задайте для свойства **Имя** значение `startButton`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-142">Set the **Name** property to `startButton`.</span></span>  
+    -   <span data-ttu-id="519b7-142">Задайте для свойства **Имя** значение `startButton`.</span><span class="sxs-lookup"><span data-stu-id="519b7-142">Set the **Name** property to `startButton`.</span></span>  
   
-    -   <span data-ttu-id="9a39b-143">Измените значение свойства **Содержимое** с **Button** на **Start**.</span><span class="sxs-lookup"><span data-stu-id="9a39b-143">Change the value of the **Content** property from **Button** to **Start**.</span></span>  
+    -   <span data-ttu-id="519b7-143">Измените значение свойства **Содержимое** с **Button** на **Start**.</span><span class="sxs-lookup"><span data-stu-id="519b7-143">Change the value of the **Content** property from **Button** to **Start**.</span></span>  
   
-6.  <span data-ttu-id="9a39b-144">Поместите текстовое поле и кнопку так, чтобы оба элемента управления отображались в окне **MainWindow**.</span><span class="sxs-lookup"><span data-stu-id="9a39b-144">Position the text box and the button so that both appear in the **MainWindow** window.</span></span>  
+6.  <span data-ttu-id="519b7-144">Поместите текстовое поле и кнопку так, чтобы оба элемента управления отображались в окне **MainWindow**.</span><span class="sxs-lookup"><span data-stu-id="519b7-144">Position the text box and the button so that both appear in the **MainWindow** window.</span></span>  
   
-     <span data-ttu-id="9a39b-145">Дополнительные сведения о конструкторе XAML WPF см. в разделе [Создание пользовательского интерфейса с помощью конструктора XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="9a39b-145">For more information about the WPF XAML Designer, see [Creating a UI by using XAML Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span></span>  
+     <span data-ttu-id="519b7-145">Дополнительные сведения о конструкторе XAML WPF см. в разделе [Создание пользовательского интерфейса с помощью конструктора XAML](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span><span class="sxs-lookup"><span data-stu-id="519b7-145">For more information about the WPF XAML Designer, see [Creating a UI by using XAML Designer](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio).</span></span>  
   
 ##  <a name="BKMK_AddReference"></a>   
-###  <a name="AddRef"></a> <span data-ttu-id="9a39b-146">Добавление ссылки</span><span class="sxs-lookup"><span data-stu-id="9a39b-146">To add a reference</span></span>  
+###  <a name="AddRef"></a> <span data-ttu-id="519b7-146">Добавление ссылки</span><span class="sxs-lookup"><span data-stu-id="519b7-146">To add a reference</span></span>  
   
-1.  <span data-ttu-id="9a39b-147">В **обозревателе решений** выделите имя проекта.</span><span class="sxs-lookup"><span data-stu-id="9a39b-147">In **Solution Explorer**, highlight your project's name.</span></span>  
+1.  <span data-ttu-id="519b7-147">В **обозревателе решений** выделите имя проекта.</span><span class="sxs-lookup"><span data-stu-id="519b7-147">In **Solution Explorer**, highlight your project's name.</span></span>  
   
-2.  <span data-ttu-id="9a39b-148">В строке меню выберите **Проект**, **Добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="9a39b-148">On the menu bar, choose **Project**, **Add Reference**.</span></span>  
+2.  <span data-ttu-id="519b7-148">В строке меню выберите **Проект**, **Добавить ссылку**.</span><span class="sxs-lookup"><span data-stu-id="519b7-148">On the menu bar, choose **Project**, **Add Reference**.</span></span>  
   
-     <span data-ttu-id="9a39b-149">Откроется диалоговое окно **Диспетчер ссылок**.</span><span class="sxs-lookup"><span data-stu-id="9a39b-149">The **Reference Manager** dialog box appears.</span></span>  
+     <span data-ttu-id="519b7-149">Откроется диалоговое окно **Диспетчер ссылок**.</span><span class="sxs-lookup"><span data-stu-id="519b7-149">The **Reference Manager** dialog box appears.</span></span>  
   
-3.  <span data-ttu-id="9a39b-150">Вверху диалогового окна убедитесь в том, что проект предназначен для платформы .NET Framework 4.5 или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="9a39b-150">At the top of the dialog box, verify that your project is targeting the .NET Framework 4.5 or higher.</span></span>  
+3.  <span data-ttu-id="519b7-150">Вверху диалогового окна убедитесь в том, что проект предназначен для платформы .NET Framework 4.5 или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="519b7-150">At the top of the dialog box, verify that your project is targeting the .NET Framework 4.5 or higher.</span></span>  
   
-4.  <span data-ttu-id="9a39b-151">В области **Сборки** выберите **Платформа**, если этот вариант еще не выбран.</span><span class="sxs-lookup"><span data-stu-id="9a39b-151">In the **Assemblies** area, choose **Framework** if it isn’t already chosen.</span></span>  
+4.  <span data-ttu-id="519b7-151">В области **Сборки** выберите **Платформа**, если этот вариант еще не выбран.</span><span class="sxs-lookup"><span data-stu-id="519b7-151">In the **Assemblies** area, choose **Framework** if it isn’t already chosen.</span></span>  
   
-5.  <span data-ttu-id="9a39b-152">В списке имен установите флажок **System.Net.Http**.</span><span class="sxs-lookup"><span data-stu-id="9a39b-152">In the list of names, select the **System.Net.Http** check box.</span></span>  
+5.  <span data-ttu-id="519b7-152">В списке имен установите флажок **System.Net.Http**.</span><span class="sxs-lookup"><span data-stu-id="519b7-152">In the list of names, select the **System.Net.Http** check box.</span></span>  
   
-6.  <span data-ttu-id="9a39b-153">Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="9a39b-153">Choose the **OK** button to close the dialog box.</span></span>  
+6.  <span data-ttu-id="519b7-153">Нажмите кнопку **ОК**, чтобы закрыть диалоговое окно.</span><span class="sxs-lookup"><span data-stu-id="519b7-153">Choose the **OK** button to close the dialog box.</span></span>  
   
 ##  <a name="BKMK_AddStatesandDirs"></a>   
-###  <a name="ImportsState"></a> <span data-ttu-id="9a39b-154">Добавление необходимых операторов Imports</span><span class="sxs-lookup"><span data-stu-id="9a39b-154">To add necessary Imports statements</span></span>  
+###  <a name="ImportsState"></a> <span data-ttu-id="519b7-154">Добавление необходимых операторов Imports</span><span class="sxs-lookup"><span data-stu-id="519b7-154">To add necessary Imports statements</span></span>  
   
-1.  <span data-ttu-id="9a39b-155">В **обозревателе решений**, откройте контекстное меню для MainWindow.xaml.vb и затем выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="9a39b-155">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.</span></span>  
+1.  <span data-ttu-id="519b7-155">В **обозревателе решений**, откройте контекстное меню для MainWindow.xaml.vb и затем выберите **Просмотр кода**.</span><span class="sxs-lookup"><span data-stu-id="519b7-155">In **Solution Explorer**, open the shortcut menu for MainWindow.xaml.vb, and then choose **View Code**.</span></span>  
   
-2.  <span data-ttu-id="9a39b-156">Добавьте следующий `Imports` инструкций в верхней части файла кода, если они еще не существуют.</span><span class="sxs-lookup"><span data-stu-id="9a39b-156">Add the following `Imports` statements at the top of the code file if they’re not already present.</span></span>  
+2.  <span data-ttu-id="519b7-156">Добавьте следующий `Imports` инструкций в верхней части файла кода, если они еще не существуют.</span><span class="sxs-lookup"><span data-stu-id="519b7-156">Add the following `Imports` statements at the top of the code file if they’re not already present.</span></span>  
   
     ```vb  
     Imports System.Net.Http  
@@ -121,11 +121,11 @@ ms.locfileid: "43736300"
     ```  
   
 ##  <a name="BKMK_CreatSynchApp"></a>   
-###  <a name="synchronous"></a> <span data-ttu-id="9a39b-157">Создание синхронного приложения</span><span class="sxs-lookup"><span data-stu-id="9a39b-157">To create a synchronous application</span></span>  
+###  <a name="synchronous"></a> <span data-ttu-id="519b7-157">Создание синхронного приложения</span><span class="sxs-lookup"><span data-stu-id="519b7-157">To create a synchronous application</span></span>  
   
-1.  <span data-ttu-id="9a39b-158">В окне конструктора для MainWindow.xaml дважды щелкните **запустить** кнопку, чтобы создать `startButton_Click` обработчик событий в файле MainWindow.xaml.vb.</span><span class="sxs-lookup"><span data-stu-id="9a39b-158">In the design window, MainWindow.xaml, double-click the **Start** button to create the `startButton_Click` event handler in MainWindow.xaml.vb.</span></span>  
+1.  <span data-ttu-id="519b7-158">В окне конструктора для MainWindow.xaml дважды щелкните **запустить** кнопку, чтобы создать `startButton_Click` обработчик событий в файле MainWindow.xaml.vb.</span><span class="sxs-lookup"><span data-stu-id="519b7-158">In the design window, MainWindow.xaml, double-click the **Start** button to create the `startButton_Click` event handler in MainWindow.xaml.vb.</span></span>  
   
-2.  <span data-ttu-id="9a39b-159">В файле MainWindow.xaml.vb, скопируйте следующий код в текст `startButton_Click`:</span><span class="sxs-lookup"><span data-stu-id="9a39b-159">In MainWindow.xaml.vb, copy the following code into the body of `startButton_Click`:</span></span>  
+2.  <span data-ttu-id="519b7-159">В файле MainWindow.xaml.vb, скопируйте следующий код в текст `startButton_Click`:</span><span class="sxs-lookup"><span data-stu-id="519b7-159">In MainWindow.xaml.vb, copy the following code into the body of `startButton_Click`:</span></span>  
   
     ```vb  
     resultsTextBox.Clear()  
@@ -133,19 +133,19 @@ ms.locfileid: "43736300"
     resultsTextBox.Text &= vbCrLf & "Control returned to startButton_Click."  
     ```  
   
-     <span data-ttu-id="9a39b-160">Код вызывает метод, который управляет приложением `SumPageSizes` и выводит на экран сообщение, когда элемент управления возвращается к `startButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-160">The code calls the method that drives the application, `SumPageSizes`, and displays a message when control returns to `startButton_Click`.</span></span>  
+     <span data-ttu-id="519b7-160">Код вызывает метод, который управляет приложением `SumPageSizes` и выводит на экран сообщение, когда элемент управления возвращается к `startButton_Click`.</span><span class="sxs-lookup"><span data-stu-id="519b7-160">The code calls the method that drives the application, `SumPageSizes`, and displays a message when control returns to `startButton_Click`.</span></span>  
   
-3.  <span data-ttu-id="9a39b-161">Код для синхронного решения содержит следующие четыре метода:</span><span class="sxs-lookup"><span data-stu-id="9a39b-161">The code for the synchronous solution contains the following four methods:</span></span>  
+3.  <span data-ttu-id="519b7-161">Код для синхронного решения содержит следующие четыре метода:</span><span class="sxs-lookup"><span data-stu-id="519b7-161">The code for the synchronous solution contains the following four methods:</span></span>  
   
-    -   <span data-ttu-id="9a39b-162">`SumPageSizes`, который получает список URL-адресов веб-страниц из `SetUpURLList`, а затем вызывает метод `GetURLContents` и `DisplayResults` для обработки каждого URL-адреса;</span><span class="sxs-lookup"><span data-stu-id="9a39b-162">`SumPageSizes`, which gets a list of webpage URLs from `SetUpURLList` and then calls `GetURLContents` and `DisplayResults` to process each URL.</span></span>  
+    -   <span data-ttu-id="519b7-162">`SumPageSizes`, который получает список URL-адресов веб-страниц из `SetUpURLList`, а затем вызывает метод `GetURLContents` и `DisplayResults` для обработки каждого URL-адреса;</span><span class="sxs-lookup"><span data-stu-id="519b7-162">`SumPageSizes`, which gets a list of webpage URLs from `SetUpURLList` and then calls `GetURLContents` and `DisplayResults` to process each URL.</span></span>  
   
-    -   <span data-ttu-id="9a39b-163">`SetUpURLList`, который создает и возвращает список веб-адресов;</span><span class="sxs-lookup"><span data-stu-id="9a39b-163">`SetUpURLList`, which makes and returns a list of web addresses.</span></span>  
+    -   <span data-ttu-id="519b7-163">`SetUpURLList`, который создает и возвращает список веб-адресов;</span><span class="sxs-lookup"><span data-stu-id="519b7-163">`SetUpURLList`, which makes and returns a list of web addresses.</span></span>  
   
-    -   <span data-ttu-id="9a39b-164">`GetURLContents`, который загружает содержимое каждого веб-сайта и возвращает содержимое в виде массива байтов;</span><span class="sxs-lookup"><span data-stu-id="9a39b-164">`GetURLContents`, which downloads the contents of each website and returns the contents as a byte array.</span></span>  
+    -   <span data-ttu-id="519b7-164">`GetURLContents`, который загружает содержимое каждого веб-сайта и возвращает содержимое в виде массива байтов;</span><span class="sxs-lookup"><span data-stu-id="519b7-164">`GetURLContents`, which downloads the contents of each website and returns the contents as a byte array.</span></span>  
   
-    -   <span data-ttu-id="9a39b-165">`DisplayResults`, который показывает число байтов в массиве байтов для каждого URL-адреса.</span><span class="sxs-lookup"><span data-stu-id="9a39b-165">`DisplayResults`, which displays  the number of bytes in the byte array for each URL.</span></span>  
+    -   <span data-ttu-id="519b7-165">`DisplayResults`, который показывает число байтов в массиве байтов для каждого URL-адреса.</span><span class="sxs-lookup"><span data-stu-id="519b7-165">`DisplayResults`, which displays  the number of bytes in the byte array for each URL.</span></span>  
   
-     <span data-ttu-id="9a39b-166">Скопируйте следующие четыре метода, а затем вставьте их в разделе `startButton_Click` обработчик событий в файле MainWindow.xaml.vb:</span><span class="sxs-lookup"><span data-stu-id="9a39b-166">Copy the following four methods, and then paste them under the `startButton_Click` event handler in MainWindow.xaml.vb:</span></span>  
+     <span data-ttu-id="519b7-166">Скопируйте следующие четыре метода, а затем вставьте их в разделе `startButton_Click` обработчик событий в файле MainWindow.xaml.vb:</span><span class="sxs-lookup"><span data-stu-id="519b7-166">Copy the following four methods, and then paste them under the `startButton_Click` event handler in MainWindow.xaml.vb:</span></span>  
   
     ```vb  
     Private Sub SumPageSizes()  
@@ -172,16 +172,16 @@ ms.locfileid: "43736300"
   
         Dim urls = New List(Of String) From  
             {  
-                "http://msdn.microsoft.com/library/windows/apps/br211380.aspx",  
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/hh290136.aspx",  
-                "http://msdn.microsoft.com/library/ee256749.aspx",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/hh290136.aspx",  
+                "https://msdn.microsoft.com/library/ee256749.aspx",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             }  
         Return urls  
     End Function  
@@ -215,18 +215,18 @@ ms.locfileid: "43736300"
         ' is designed to be used with a monospaced font, such as  
         ' Lucida Console or Global Monospace.  
         Dim bytes = content.Length  
-        ' Strip off the "http://".  
-        Dim displayURL = url.Replace("http://", "")  
+        ' Strip off the "https://".  
+        Dim displayURL = url.Replace("https://", "")  
         resultsTextBox.Text &= String.Format(vbCrLf & "{0,-58} {1,8}", displayURL, bytes)  
     End Sub  
     ```  
   
 ##  <a name="BKMK_TestSynchSol"></a>   
-###  <a name="testSynch"></a> <span data-ttu-id="9a39b-167">Тестирование синхронного решения</span><span class="sxs-lookup"><span data-stu-id="9a39b-167">To test the synchronous solution</span></span>  
+###  <a name="testSynch"></a> <span data-ttu-id="519b7-167">Тестирование синхронного решения</span><span class="sxs-lookup"><span data-stu-id="519b7-167">To test the synchronous solution</span></span>  
   
-1.  <span data-ttu-id="9a39b-168">Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .</span><span class="sxs-lookup"><span data-stu-id="9a39b-168">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
+1.  <span data-ttu-id="519b7-168">Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .</span><span class="sxs-lookup"><span data-stu-id="519b7-168">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-     <span data-ttu-id="9a39b-169">Программа должна выдать результаты, похожие на следующий список.</span><span class="sxs-lookup"><span data-stu-id="9a39b-169">Output that resembles the following list should appear.</span></span>  
+     <span data-ttu-id="519b7-169">Программа должна выдать результаты, похожие на следующий список.</span><span class="sxs-lookup"><span data-stu-id="519b7-169">Output that resembles the following list should appear.</span></span>  
   
     ```  
     msdn.microsoft.com/library/windows/apps/br211380.aspx        383832  
@@ -245,56 +245,56 @@ ms.locfileid: "43736300"
     Control returned to startButton_Click.  
     ```  
   
-     <span data-ttu-id="9a39b-170">Обратите внимание, что вывод результатов на экран занимает несколько секунд.</span><span class="sxs-lookup"><span data-stu-id="9a39b-170">Notice that it takes a few seconds to display the counts.</span></span> <span data-ttu-id="9a39b-171">В течение этого времени поток пользовательского интерфейса заблокирован, пока он ожидает загрузку запрошенных ресурсов.</span><span class="sxs-lookup"><span data-stu-id="9a39b-171">During that time, the UI thread is blocked while it waits for requested resources to download.</span></span> <span data-ttu-id="9a39b-172">Соответственно, после нажатия кнопки **Start** окно нельзя перемещать, разворачивать, сворачивать или даже закрывать.</span><span class="sxs-lookup"><span data-stu-id="9a39b-172">As a result, you can't move, maximize, minimize, or even close the display window after you choose the  **Start** button.</span></span> <span data-ttu-id="9a39b-173">Эти действия будут завершаться сбоем, пока не появятся результаты подсчета.</span><span class="sxs-lookup"><span data-stu-id="9a39b-173">These efforts fail until the byte counts start to appear.</span></span> <span data-ttu-id="9a39b-174">Если веб-сайт не отвечает, вы не можете определить, на каком сайте произошел сбой.</span><span class="sxs-lookup"><span data-stu-id="9a39b-174">If a website isn’t responding, you have no indication of which site failed.</span></span> <span data-ttu-id="9a39b-175">Трудно даже остановить ожидание и закрыть программу.</span><span class="sxs-lookup"><span data-stu-id="9a39b-175">It is difficult even to stop waiting and close the program.</span></span>  
+     <span data-ttu-id="519b7-170">Обратите внимание, что вывод результатов на экран занимает несколько секунд.</span><span class="sxs-lookup"><span data-stu-id="519b7-170">Notice that it takes a few seconds to display the counts.</span></span> <span data-ttu-id="519b7-171">В течение этого времени поток пользовательского интерфейса заблокирован, пока он ожидает загрузку запрошенных ресурсов.</span><span class="sxs-lookup"><span data-stu-id="519b7-171">During that time, the UI thread is blocked while it waits for requested resources to download.</span></span> <span data-ttu-id="519b7-172">Соответственно, после нажатия кнопки **Start** окно нельзя перемещать, разворачивать, сворачивать или даже закрывать.</span><span class="sxs-lookup"><span data-stu-id="519b7-172">As a result, you can't move, maximize, minimize, or even close the display window after you choose the  **Start** button.</span></span> <span data-ttu-id="519b7-173">Эти действия будут завершаться сбоем, пока не появятся результаты подсчета.</span><span class="sxs-lookup"><span data-stu-id="519b7-173">These efforts fail until the byte counts start to appear.</span></span> <span data-ttu-id="519b7-174">Если веб-сайт не отвечает, вы не можете определить, на каком сайте произошел сбой.</span><span class="sxs-lookup"><span data-stu-id="519b7-174">If a website isn’t responding, you have no indication of which site failed.</span></span> <span data-ttu-id="519b7-175">Трудно даже остановить ожидание и закрыть программу.</span><span class="sxs-lookup"><span data-stu-id="519b7-175">It is difficult even to stop waiting and close the program.</span></span>  
   
 ##  <a name="BKMK_ConvertGtBtArr"></a>   
-###  <a name="GetURLContents"></a> <span data-ttu-id="9a39b-176">Преобразование GetURLContents в асинхронный метод</span><span class="sxs-lookup"><span data-stu-id="9a39b-176">To convert GetURLContents to an asynchronous method</span></span>  
+###  <a name="GetURLContents"></a> <span data-ttu-id="519b7-176">Преобразование GetURLContents в асинхронный метод</span><span class="sxs-lookup"><span data-stu-id="519b7-176">To convert GetURLContents to an asynchronous method</span></span>  
   
-1.  <span data-ttu-id="9a39b-177">Чтобы преобразовать синхронное решение в асинхронное, лучше всего начать с метода `GetURLContents`, поскольку вызовы метода <xref:System.Net.HttpWebRequest> <xref:System.Net.HttpWebRequest.GetResponse%2A> и метода <xref:System.IO.Stream> <xref:System.IO.Stream.CopyTo%2A> выполняются, когда приложение подключается к Интернету.</span><span class="sxs-lookup"><span data-stu-id="9a39b-177">To convert the synchronous solution to an asynchronous solution, the best place to start is in `GetURLContents` because the calls to the <xref:System.Net.HttpWebRequest> method <xref:System.Net.HttpWebRequest.GetResponse%2A> and to the <xref:System.IO.Stream> method <xref:System.IO.Stream.CopyTo%2A> are where the application accesses the web.</span></span> <span data-ttu-id="9a39b-178">Платформа .NET Framework упрощает преобразование путем предоставления асинхронных версий этих методов.</span><span class="sxs-lookup"><span data-stu-id="9a39b-178">The .NET Framework makes the conversion easy by supplying asynchronous versions of both methods.</span></span>  
+1.  <span data-ttu-id="519b7-177">Чтобы преобразовать синхронное решение в асинхронное, лучше всего начать с метода `GetURLContents`, поскольку вызовы метода <xref:System.Net.HttpWebRequest> <xref:System.Net.HttpWebRequest.GetResponse%2A> и метода <xref:System.IO.Stream> <xref:System.IO.Stream.CopyTo%2A> выполняются, когда приложение подключается к Интернету.</span><span class="sxs-lookup"><span data-stu-id="519b7-177">To convert the synchronous solution to an asynchronous solution, the best place to start is in `GetURLContents` because the calls to the <xref:System.Net.HttpWebRequest> method <xref:System.Net.HttpWebRequest.GetResponse%2A> and to the <xref:System.IO.Stream> method <xref:System.IO.Stream.CopyTo%2A> are where the application accesses the web.</span></span> <span data-ttu-id="519b7-178">Платформа .NET Framework упрощает преобразование путем предоставления асинхронных версий этих методов.</span><span class="sxs-lookup"><span data-stu-id="519b7-178">The .NET Framework makes the conversion easy by supplying asynchronous versions of both methods.</span></span>  
   
-     <span data-ttu-id="9a39b-179">Дополнительные сведения о методах, которые используются в `GetURLContents`, см. в разделе <xref:System.Net.WebRequest>.</span><span class="sxs-lookup"><span data-stu-id="9a39b-179">For more information about the methods that are used in `GetURLContents`, see <xref:System.Net.WebRequest>.</span></span>  
+     <span data-ttu-id="519b7-179">Дополнительные сведения о методах, которые используются в `GetURLContents`, см. в разделе <xref:System.Net.WebRequest>.</span><span class="sxs-lookup"><span data-stu-id="519b7-179">For more information about the methods that are used in `GetURLContents`, see <xref:System.Net.WebRequest>.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="9a39b-180">По мере выполнения шагов в этом пошаговом руководстве возникают различные ошибки компилятора.</span><span class="sxs-lookup"><span data-stu-id="9a39b-180">As you follow the steps in this walkthrough, several compiler errors appear.</span></span> <span data-ttu-id="9a39b-181">Их можно игнорировать и продолжить процедуры пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="9a39b-181">You can ignore them and continue with the walkthrough.</span></span>  
+    >  <span data-ttu-id="519b7-180">По мере выполнения шагов в этом пошаговом руководстве возникают различные ошибки компилятора.</span><span class="sxs-lookup"><span data-stu-id="519b7-180">As you follow the steps in this walkthrough, several compiler errors appear.</span></span> <span data-ttu-id="519b7-181">Их можно игнорировать и продолжить процедуры пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="519b7-181">You can ignore them and continue with the walkthrough.</span></span>  
   
-     <span data-ttu-id="9a39b-182">Измените метод, который вызывается в третьей строке `GetURLContents` из `GetResponse`, асинхронным методом <xref:System.Net.WebRequest.GetResponseAsync%2A>, основанным на задачах.</span><span class="sxs-lookup"><span data-stu-id="9a39b-182">Change the method that's called in the third line of `GetURLContents` from `GetResponse` to the asynchronous, task-based <xref:System.Net.WebRequest.GetResponseAsync%2A> method.</span></span>  
+     <span data-ttu-id="519b7-182">Измените метод, который вызывается в третьей строке `GetURLContents` из `GetResponse`, асинхронным методом <xref:System.Net.WebRequest.GetResponseAsync%2A>, основанным на задачах.</span><span class="sxs-lookup"><span data-stu-id="519b7-182">Change the method that's called in the third line of `GetURLContents` from `GetResponse` to the asynchronous, task-based <xref:System.Net.WebRequest.GetResponseAsync%2A> method.</span></span>  
   
     ```vb  
     Using response As WebResponse = webReq.GetResponseAsync()  
     ```  
   
-2.  <span data-ttu-id="9a39b-183">`GetResponseAsync` возвращает значение типа <xref:System.Threading.Tasks.Task%601>.</span><span class="sxs-lookup"><span data-stu-id="9a39b-183">`GetResponseAsync` returns a <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="9a39b-184">В этом случае *переменная, возвращаемая задачей*, `TResult`, имеет тип <xref:System.Net.WebResponse>.</span><span class="sxs-lookup"><span data-stu-id="9a39b-184">In this case, the *task return variable*, `TResult`, has type <xref:System.Net.WebResponse>.</span></span> <span data-ttu-id="9a39b-185">Задача является обещанием создать фактический объект `WebResponse` после загрузки запрошенных данных и выполнения задачи до завершения.</span><span class="sxs-lookup"><span data-stu-id="9a39b-185">The task is a promise to produce an actual `WebResponse` object after the requested data has been downloaded and the task has run to completion.</span></span>  
+2.  <span data-ttu-id="519b7-183">`GetResponseAsync` возвращает значение типа <xref:System.Threading.Tasks.Task%601>.</span><span class="sxs-lookup"><span data-stu-id="519b7-183">`GetResponseAsync` returns a <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="519b7-184">В этом случае *переменная, возвращаемая задачей*, `TResult`, имеет тип <xref:System.Net.WebResponse>.</span><span class="sxs-lookup"><span data-stu-id="519b7-184">In this case, the *task return variable*, `TResult`, has type <xref:System.Net.WebResponse>.</span></span> <span data-ttu-id="519b7-185">Задача является обещанием создать фактический объект `WebResponse` после загрузки запрошенных данных и выполнения задачи до завершения.</span><span class="sxs-lookup"><span data-stu-id="519b7-185">The task is a promise to produce an actual `WebResponse` object after the requested data has been downloaded and the task has run to completion.</span></span>  
   
-     <span data-ttu-id="9a39b-186">Для получения `WebResponse` значения из задачи, применить [Await](../../../../visual-basic/language-reference/operators/await-operator.md) оператор для вызова `GetResponseAsync`, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="9a39b-186">To retrieve the `WebResponse` value from the task, apply an [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator to the call to `GetResponseAsync`, as the following code shows.</span></span>  
+     <span data-ttu-id="519b7-186">Для получения `WebResponse` значения из задачи, применить [Await](../../../../visual-basic/language-reference/operators/await-operator.md) оператор для вызова `GetResponseAsync`, как показано в следующем коде.</span><span class="sxs-lookup"><span data-stu-id="519b7-186">To retrieve the `WebResponse` value from the task, apply an [Await](../../../../visual-basic/language-reference/operators/await-operator.md) operator to the call to `GetResponseAsync`, as the following code shows.</span></span>  
   
     ```vb  
     Using response As WebResponse = Await webReq.GetResponseAsync()  
     ```  
   
-     <span data-ttu-id="9a39b-187">Оператор `Await` приостанавливает выполнение текущего метода `GetURLContents`, пока не будет завершена ожидаемая задача.</span><span class="sxs-lookup"><span data-stu-id="9a39b-187">The `Await` operator suspends the execution of the current method, `GetURLContents`, until the awaited task is complete.</span></span> <span data-ttu-id="9a39b-188">На это время управление возвращается вызывающему объекту текущего метода.</span><span class="sxs-lookup"><span data-stu-id="9a39b-188">In the meantime, control returns to the caller of the current method.</span></span> <span data-ttu-id="9a39b-189">В этом примере текущим методом является `GetURLContents`, а вызывающим объектом — `SumPageSizes`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-189">In this example, the current method is `GetURLContents`, and the caller is `SumPageSizes`.</span></span> <span data-ttu-id="9a39b-190">После завершения задачи создается обещанный объект `WebResponse` в качестве значения ожидаемой задачи, который присваивается переменной `response`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-190">When the task is finished, the promised `WebResponse` object is produced as the value of the awaited task and assigned to the variable `response`.</span></span>  
+     <span data-ttu-id="519b7-187">Оператор `Await` приостанавливает выполнение текущего метода `GetURLContents`, пока не будет завершена ожидаемая задача.</span><span class="sxs-lookup"><span data-stu-id="519b7-187">The `Await` operator suspends the execution of the current method, `GetURLContents`, until the awaited task is complete.</span></span> <span data-ttu-id="519b7-188">На это время управление возвращается вызывающему объекту текущего метода.</span><span class="sxs-lookup"><span data-stu-id="519b7-188">In the meantime, control returns to the caller of the current method.</span></span> <span data-ttu-id="519b7-189">В этом примере текущим методом является `GetURLContents`, а вызывающим объектом — `SumPageSizes`.</span><span class="sxs-lookup"><span data-stu-id="519b7-189">In this example, the current method is `GetURLContents`, and the caller is `SumPageSizes`.</span></span> <span data-ttu-id="519b7-190">После завершения задачи создается обещанный объект `WebResponse` в качестве значения ожидаемой задачи, который присваивается переменной `response`.</span><span class="sxs-lookup"><span data-stu-id="519b7-190">When the task is finished, the promised `WebResponse` object is produced as the value of the awaited task and assigned to the variable `response`.</span></span>  
   
-     <span data-ttu-id="9a39b-191">Предыдущий оператор можно разделить на следующие два оператора для уточнения выполняемых операций.</span><span class="sxs-lookup"><span data-stu-id="9a39b-191">The previous statement can be separated into the following two statements to clarify what happens.</span></span>  
+     <span data-ttu-id="519b7-191">Предыдущий оператор можно разделить на следующие два оператора для уточнения выполняемых операций.</span><span class="sxs-lookup"><span data-stu-id="519b7-191">The previous statement can be separated into the following two statements to clarify what happens.</span></span>  
   
     ```vb  
     'Dim responseTask As Task(Of WebResponse) = webReq.GetResponseAsync()  
     'Using response As WebResponse = Await responseTask  
     ```  
   
-     <span data-ttu-id="9a39b-192">Вызов `webReq.GetResponseAsync` возвращает `Task(Of WebResponse)` или `Task<WebResponse>`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-192">The call to `webReq.GetResponseAsync` returns a `Task(Of WebResponse)` or `Task<WebResponse>`.</span></span> <span data-ttu-id="9a39b-193">Затем `Await` оператор применяется к задаче для получения `WebResponse` значение.</span><span class="sxs-lookup"><span data-stu-id="9a39b-193">Then an `Await` operator is applied to the task to retrieve the `WebResponse` value.</span></span>  
+     <span data-ttu-id="519b7-192">Вызов `webReq.GetResponseAsync` возвращает `Task(Of WebResponse)` или `Task<WebResponse>`.</span><span class="sxs-lookup"><span data-stu-id="519b7-192">The call to `webReq.GetResponseAsync` returns a `Task(Of WebResponse)` or `Task<WebResponse>`.</span></span> <span data-ttu-id="519b7-193">Затем `Await` оператор применяется к задаче для получения `WebResponse` значение.</span><span class="sxs-lookup"><span data-stu-id="519b7-193">Then an `Await` operator is applied to the task to retrieve the `WebResponse` value.</span></span>  
   
-     <span data-ttu-id="9a39b-194">Если асинхронный метод выполняет какие-то действия, это не зависит от выполнения задачи, метод может продолжать свои действия между выполнениями этих двух операторов: после вызова асинхронного метода и перед применением оператора await.</span><span class="sxs-lookup"><span data-stu-id="9a39b-194">If your async method has work to do that doesn’t depend on the completion of the task, the method can continue with that work between these two statements, after the call to the async method and before the await operator is applied.</span></span> <span data-ttu-id="9a39b-195">Примеры, см. в разделе [как: сделать нескольких веб-запросов в параллельном режиме с помощью Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) и [как: расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span><span class="sxs-lookup"><span data-stu-id="9a39b-195">For examples, see [How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) and [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span></span>  
+     <span data-ttu-id="519b7-194">Если асинхронный метод выполняет какие-то действия, это не зависит от выполнения задачи, метод может продолжать свои действия между выполнениями этих двух операторов: после вызова асинхронного метода и перед применением оператора await.</span><span class="sxs-lookup"><span data-stu-id="519b7-194">If your async method has work to do that doesn’t depend on the completion of the task, the method can continue with that work between these two statements, after the call to the async method and before the await operator is applied.</span></span> <span data-ttu-id="519b7-195">Примеры, см. в разделе [как: сделать нескольких веб-запросов в параллельном режиме с помощью Async и Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) и [как: расширение Async пошагового руководства с использованием метода Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span><span class="sxs-lookup"><span data-stu-id="519b7-195">For examples, see [How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) and [How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).</span></span>  
   
-3.  <span data-ttu-id="9a39b-196">Из-за добавления оператора `Await` в предыдущем шаге возникает ошибка компилятора.</span><span class="sxs-lookup"><span data-stu-id="9a39b-196">Because you added the `Await` operator in the previous step, a compiler error occurs.</span></span> <span data-ttu-id="9a39b-197">Оператор может использоваться только в методах, которые помечены атрибутом [Async](../../../../visual-basic/language-reference/modifiers/async.md) модификатор.</span><span class="sxs-lookup"><span data-stu-id="9a39b-197">The operator can be used only in methods that are marked with the [Async](../../../../visual-basic/language-reference/modifiers/async.md) modifier.</span></span> <span data-ttu-id="9a39b-198">Пропустите ошибку, повторяя действия по замене вызова `CopyTo` вызовом метода `CopyToAsync`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-198">Ignore the error while you repeat the conversion steps to replace the call to `CopyTo` with a call to `CopyToAsync`.</span></span>  
+3.  <span data-ttu-id="519b7-196">Из-за добавления оператора `Await` в предыдущем шаге возникает ошибка компилятора.</span><span class="sxs-lookup"><span data-stu-id="519b7-196">Because you added the `Await` operator in the previous step, a compiler error occurs.</span></span> <span data-ttu-id="519b7-197">Оператор может использоваться только в методах, которые помечены атрибутом [Async](../../../../visual-basic/language-reference/modifiers/async.md) модификатор.</span><span class="sxs-lookup"><span data-stu-id="519b7-197">The operator can be used only in methods that are marked with the [Async](../../../../visual-basic/language-reference/modifiers/async.md) modifier.</span></span> <span data-ttu-id="519b7-198">Пропустите ошибку, повторяя действия по замене вызова `CopyTo` вызовом метода `CopyToAsync`.</span><span class="sxs-lookup"><span data-stu-id="519b7-198">Ignore the error while you repeat the conversion steps to replace the call to `CopyTo` with a call to `CopyToAsync`.</span></span>  
   
-    -   <span data-ttu-id="9a39b-199">Измените имя метода, вызывающего <xref:System.IO.Stream.CopyToAsync%2A>.</span><span class="sxs-lookup"><span data-stu-id="9a39b-199">Change the name of the method that’s called to <xref:System.IO.Stream.CopyToAsync%2A>.</span></span>  
+    -   <span data-ttu-id="519b7-199">Измените имя метода, вызывающего <xref:System.IO.Stream.CopyToAsync%2A>.</span><span class="sxs-lookup"><span data-stu-id="519b7-199">Change the name of the method that’s called to <xref:System.IO.Stream.CopyToAsync%2A>.</span></span>  
   
-    -   <span data-ttu-id="9a39b-200">Метод `CopyTo` или `CopyToAsync` копирует байты в свой аргумент `content` и не возвращает осмысленное значение.</span><span class="sxs-lookup"><span data-stu-id="9a39b-200">The `CopyTo` or `CopyToAsync` method copies bytes to its argument, `content`, and doesn’t return a meaningful value.</span></span> <span data-ttu-id="9a39b-201">В синхронной версии вызов метода `CopyTo` — это просто оператор, который не возвращает значение.</span><span class="sxs-lookup"><span data-stu-id="9a39b-201">In the synchronous version, the call to `CopyTo` is a simple statement that doesn't return a value.</span></span> <span data-ttu-id="9a39b-202">Асинхронная версия — `CopyToAsync` — возвращает <xref:System.Threading.Tasks.Task>.</span><span class="sxs-lookup"><span data-stu-id="9a39b-202">The asynchronous version, `CopyToAsync`, returns a <xref:System.Threading.Tasks.Task>.</span></span> <span data-ttu-id="9a39b-203">Задача работает как Task(void) и позволяет ожидать метод.</span><span class="sxs-lookup"><span data-stu-id="9a39b-203">The task functions like "Task(void)" and enables the method to be awaited.</span></span> <span data-ttu-id="9a39b-204">Примените `Await` или `await` к вызову `CopyToAsync`, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="9a39b-204">Apply `Await` or `await` to the call to `CopyToAsync`, as the following code shows.</span></span>  
+    -   <span data-ttu-id="519b7-200">Метод `CopyTo` или `CopyToAsync` копирует байты в свой аргумент `content` и не возвращает осмысленное значение.</span><span class="sxs-lookup"><span data-stu-id="519b7-200">The `CopyTo` or `CopyToAsync` method copies bytes to its argument, `content`, and doesn’t return a meaningful value.</span></span> <span data-ttu-id="519b7-201">В синхронной версии вызов метода `CopyTo` — это просто оператор, который не возвращает значение.</span><span class="sxs-lookup"><span data-stu-id="519b7-201">In the synchronous version, the call to `CopyTo` is a simple statement that doesn't return a value.</span></span> <span data-ttu-id="519b7-202">Асинхронная версия — `CopyToAsync` — возвращает <xref:System.Threading.Tasks.Task>.</span><span class="sxs-lookup"><span data-stu-id="519b7-202">The asynchronous version, `CopyToAsync`, returns a <xref:System.Threading.Tasks.Task>.</span></span> <span data-ttu-id="519b7-203">Задача работает как Task(void) и позволяет ожидать метод.</span><span class="sxs-lookup"><span data-stu-id="519b7-203">The task functions like "Task(void)" and enables the method to be awaited.</span></span> <span data-ttu-id="519b7-204">Примените `Await` или `await` к вызову `CopyToAsync`, как показано в следующем примере кода.</span><span class="sxs-lookup"><span data-stu-id="519b7-204">Apply `Await` or `await` to the call to `CopyToAsync`, as the following code shows.</span></span>  
   
         ```vb  
         Await responseStream.CopyToAsync(content)  
         ```  
   
-         <span data-ttu-id="9a39b-205">Предыдущий оператор сокращает две следующие строки кода.</span><span class="sxs-lookup"><span data-stu-id="9a39b-205">The previous statement abbreviates the following two lines of code.</span></span>  
+         <span data-ttu-id="519b7-205">Предыдущий оператор сокращает две следующие строки кода.</span><span class="sxs-lookup"><span data-stu-id="519b7-205">The previous statement abbreviates the following two lines of code.</span></span>  
   
         ```vb  
         ' CopyToAsync returns a Task, not a Task<T>.  
@@ -305,46 +305,46 @@ ms.locfileid: "43736300"
         'Await copyTask  
         ```  
   
-4.  <span data-ttu-id="9a39b-206">Все, что остается сделать в `GetURLContents`, — это изменить подпись метода.</span><span class="sxs-lookup"><span data-stu-id="9a39b-206">All that remains to be done in `GetURLContents` is to adjust the method signature.</span></span> <span data-ttu-id="9a39b-207">Можно использовать `Await` оператор только в методах, которые помечены атрибутом [Async](../../../../visual-basic/language-reference/modifiers/async.md) модификатор.</span><span class="sxs-lookup"><span data-stu-id="9a39b-207">You can use the `Await` operator only in methods that are marked with the [Async](../../../../visual-basic/language-reference/modifiers/async.md) modifier.</span></span> <span data-ttu-id="9a39b-208">Добавьте модификатор, чтобы пометить метод как *асинхронный*, как показано в приведенном ниже примере кода.</span><span class="sxs-lookup"><span data-stu-id="9a39b-208">Add the modifier to mark the method as an *async method*, as the following code shows.</span></span>  
+4.  <span data-ttu-id="519b7-206">Все, что остается сделать в `GetURLContents`, — это изменить подпись метода.</span><span class="sxs-lookup"><span data-stu-id="519b7-206">All that remains to be done in `GetURLContents` is to adjust the method signature.</span></span> <span data-ttu-id="519b7-207">Можно использовать `Await` оператор только в методах, которые помечены атрибутом [Async](../../../../visual-basic/language-reference/modifiers/async.md) модификатор.</span><span class="sxs-lookup"><span data-stu-id="519b7-207">You can use the `Await` operator only in methods that are marked with the [Async](../../../../visual-basic/language-reference/modifiers/async.md) modifier.</span></span> <span data-ttu-id="519b7-208">Добавьте модификатор, чтобы пометить метод как *асинхронный*, как показано в приведенном ниже примере кода.</span><span class="sxs-lookup"><span data-stu-id="519b7-208">Add the modifier to mark the method as an *async method*, as the following code shows.</span></span>  
   
     ```vb  
     Private Async Function GetURLContents(url As String) As Byte()  
     ```  
   
-5.  <span data-ttu-id="9a39b-209">Тип возвращаемого значения асинхронного метода может быть только <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>.</span><span class="sxs-lookup"><span data-stu-id="9a39b-209">The return type of an async method can only be <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="9a39b-210">В Visual Basic метод должен являться функцией `Function`, возвращающей `Task` или `Task(Of T)`, либо он должен быть `Sub`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-210">In Visual Basic, the method must be a `Function` that returns a `Task` or a `Task(Of T)`, or the method must be a `Sub`.</span></span> <span data-ttu-id="9a39b-211">Как правило `Sub` метод используется только в асинхронном обработчике событий, где `Sub` является обязательным.</span><span class="sxs-lookup"><span data-stu-id="9a39b-211">Typically, a `Sub` method  is used only in an async event handler, where `Sub` is required.</span></span> <span data-ttu-id="9a39b-212">В других случаях используется `Task(T)` Если завершенный метод имеет [возвращают](../../../../visual-basic/language-reference/statements/return-statement.md) инструкцию, которая возвращает значение типа T, или использовании `Task` Если завершенный метод не возвращает осмысленное значение.</span><span class="sxs-lookup"><span data-stu-id="9a39b-212">In other cases, you use `Task(T)` if the completed method has a [Return](../../../../visual-basic/language-reference/statements/return-statement.md) statement that returns a value of type T, and you use `Task` if the completed method doesn’t return a meaningful value.</span></span>  
+5.  <span data-ttu-id="519b7-209">Тип возвращаемого значения асинхронного метода может быть только <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>.</span><span class="sxs-lookup"><span data-stu-id="519b7-209">The return type of an async method can only be <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>.</span></span> <span data-ttu-id="519b7-210">В Visual Basic метод должен являться функцией `Function`, возвращающей `Task` или `Task(Of T)`, либо он должен быть `Sub`.</span><span class="sxs-lookup"><span data-stu-id="519b7-210">In Visual Basic, the method must be a `Function` that returns a `Task` or a `Task(Of T)`, or the method must be a `Sub`.</span></span> <span data-ttu-id="519b7-211">Как правило `Sub` метод используется только в асинхронном обработчике событий, где `Sub` является обязательным.</span><span class="sxs-lookup"><span data-stu-id="519b7-211">Typically, a `Sub` method  is used only in an async event handler, where `Sub` is required.</span></span> <span data-ttu-id="519b7-212">В других случаях используется `Task(T)` Если завершенный метод имеет [возвращают](../../../../visual-basic/language-reference/statements/return-statement.md) инструкцию, которая возвращает значение типа T, или использовании `Task` Если завершенный метод не возвращает осмысленное значение.</span><span class="sxs-lookup"><span data-stu-id="519b7-212">In other cases, you use `Task(T)` if the completed method has a [Return](../../../../visual-basic/language-reference/statements/return-statement.md) statement that returns a value of type T, and you use `Task` if the completed method doesn’t return a meaningful value.</span></span>  
   
-     <span data-ttu-id="9a39b-213">Дополнительные сведения см. в разделе [асинхронные типы возвращаемых значений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span><span class="sxs-lookup"><span data-stu-id="9a39b-213">For more information, see [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span></span>  
+     <span data-ttu-id="519b7-213">Дополнительные сведения см. в разделе [асинхронные типы возвращаемых значений (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span><span class="sxs-lookup"><span data-stu-id="519b7-213">For more information, see [Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md).</span></span>  
   
-     <span data-ttu-id="9a39b-214">Метод `GetURLContents` имеет оператор return, который возвращает массив байтов.</span><span class="sxs-lookup"><span data-stu-id="9a39b-214">Method `GetURLContents` has a return statement, and the statement returns a byte array.</span></span> <span data-ttu-id="9a39b-215">Таким образом, тип возвращаемого значения асинхронной версии — Task(T), где T — массив байтов.</span><span class="sxs-lookup"><span data-stu-id="9a39b-215">Therefore, the return type of the async version is Task(T), where T is a byte array.</span></span> <span data-ttu-id="9a39b-216">Внесите следующие изменения в подпись метода.</span><span class="sxs-lookup"><span data-stu-id="9a39b-216">Make the following changes in the method signature:</span></span>  
+     <span data-ttu-id="519b7-214">Метод `GetURLContents` имеет оператор return, который возвращает массив байтов.</span><span class="sxs-lookup"><span data-stu-id="519b7-214">Method `GetURLContents` has a return statement, and the statement returns a byte array.</span></span> <span data-ttu-id="519b7-215">Таким образом, тип возвращаемого значения асинхронной версии — Task(T), где T — массив байтов.</span><span class="sxs-lookup"><span data-stu-id="519b7-215">Therefore, the return type of the async version is Task(T), where T is a byte array.</span></span> <span data-ttu-id="519b7-216">Внесите следующие изменения в подпись метода.</span><span class="sxs-lookup"><span data-stu-id="519b7-216">Make the following changes in the method signature:</span></span>  
   
-    -   <span data-ttu-id="9a39b-217">Измените тип возвращаемого значения на `Task(Of Byte())`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-217">Change the return type to `Task(Of Byte())`.</span></span>  
+    -   <span data-ttu-id="519b7-217">Измените тип возвращаемого значения на `Task(Of Byte())`.</span><span class="sxs-lookup"><span data-stu-id="519b7-217">Change the return type to `Task(Of Byte())`.</span></span>  
   
-    -   <span data-ttu-id="9a39b-218">По соглашению об именовании асинхронные методы имеют имена, заканчивающиеся на Async, поэтому переименуйте метод в `GetURLContentsAsync`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-218">By convention, asynchronous methods have names that end in "Async," so rename the method `GetURLContentsAsync`.</span></span>  
+    -   <span data-ttu-id="519b7-218">По соглашению об именовании асинхронные методы имеют имена, заканчивающиеся на Async, поэтому переименуйте метод в `GetURLContentsAsync`.</span><span class="sxs-lookup"><span data-stu-id="519b7-218">By convention, asynchronous methods have names that end in "Async," so rename the method `GetURLContentsAsync`.</span></span>  
   
-     <span data-ttu-id="9a39b-219">В следующем примере кода показаны эти изменения.</span><span class="sxs-lookup"><span data-stu-id="9a39b-219">The following code shows these changes.</span></span>  
+     <span data-ttu-id="519b7-219">В следующем примере кода показаны эти изменения.</span><span class="sxs-lookup"><span data-stu-id="519b7-219">The following code shows these changes.</span></span>  
   
     ```vb  
     Private Async Function GetURLContentsAsync(url As String) As Task(Of Byte())  
     ```  
   
-     <span data-ttu-id="9a39b-220">После внесения этих изменений преобразование `GetURLContents` в асинхронный метод завершено.</span><span class="sxs-lookup"><span data-stu-id="9a39b-220">With those few changes, the conversion of `GetURLContents` to an asynchronous method is complete.</span></span>  
+     <span data-ttu-id="519b7-220">После внесения этих изменений преобразование `GetURLContents` в асинхронный метод завершено.</span><span class="sxs-lookup"><span data-stu-id="519b7-220">With those few changes, the conversion of `GetURLContents` to an asynchronous method is complete.</span></span>  
   
 ##  <a name="BKMK_ConvertSumPagSzs"></a>   
-###  <a name="SumPageSizes"></a> <span data-ttu-id="9a39b-221">Преобразование SumPageSizes в асинхронный метод</span><span class="sxs-lookup"><span data-stu-id="9a39b-221">To convert SumPageSizes to an asynchronous method</span></span>  
+###  <a name="SumPageSizes"></a> <span data-ttu-id="519b7-221">Преобразование SumPageSizes в асинхронный метод</span><span class="sxs-lookup"><span data-stu-id="519b7-221">To convert SumPageSizes to an asynchronous method</span></span>  
   
-1.  <span data-ttu-id="9a39b-222">Повторите шаги из предыдущей процедуры для `SumPageSizes`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-222">Repeat the steps from the previous procedure for `SumPageSizes`.</span></span> <span data-ttu-id="9a39b-223">Во-первых, преобразуйте вызов метода `GetURLContents` в вызов асинхронного метода.</span><span class="sxs-lookup"><span data-stu-id="9a39b-223">First, change the call to `GetURLContents` to an asynchronous call.</span></span>  
+1.  <span data-ttu-id="519b7-222">Повторите шаги из предыдущей процедуры для `SumPageSizes`.</span><span class="sxs-lookup"><span data-stu-id="519b7-222">Repeat the steps from the previous procedure for `SumPageSizes`.</span></span> <span data-ttu-id="519b7-223">Во-первых, преобразуйте вызов метода `GetURLContents` в вызов асинхронного метода.</span><span class="sxs-lookup"><span data-stu-id="519b7-223">First, change the call to `GetURLContents` to an asynchronous call.</span></span>  
   
-    -   <span data-ttu-id="9a39b-224">Измените имя вызываемого метода с `GetURLContents` на `GetURLContentsAsync`, если это еще не сделано.</span><span class="sxs-lookup"><span data-stu-id="9a39b-224">Change the name of the method that’s called from `GetURLContents` to `GetURLContentsAsync`, if you haven't already done so.</span></span>  
+    -   <span data-ttu-id="519b7-224">Измените имя вызываемого метода с `GetURLContents` на `GetURLContentsAsync`, если это еще не сделано.</span><span class="sxs-lookup"><span data-stu-id="519b7-224">Change the name of the method that’s called from `GetURLContents` to `GetURLContentsAsync`, if you haven't already done so.</span></span>  
   
-    -   <span data-ttu-id="9a39b-225">Примените оператор `Await` к задаче, возвращаемой методом `GetURLContentsAsync`, для получения значения байтового массива.</span><span class="sxs-lookup"><span data-stu-id="9a39b-225">Apply `Await` to the task that `GetURLContentsAsync` returns to obtain the byte array value.</span></span>  
+    -   <span data-ttu-id="519b7-225">Примените оператор `Await` к задаче, возвращаемой методом `GetURLContentsAsync`, для получения значения байтового массива.</span><span class="sxs-lookup"><span data-stu-id="519b7-225">Apply `Await` to the task that `GetURLContentsAsync` returns to obtain the byte array value.</span></span>  
   
-     <span data-ttu-id="9a39b-226">В следующем примере кода показаны эти изменения.</span><span class="sxs-lookup"><span data-stu-id="9a39b-226">The following code shows these changes.</span></span>  
+     <span data-ttu-id="519b7-226">В следующем примере кода показаны эти изменения.</span><span class="sxs-lookup"><span data-stu-id="519b7-226">The following code shows these changes.</span></span>  
   
     ```vb  
     Dim urlContents As Byte() = Await GetURLContentsAsync(url)  
     ```  
   
-     <span data-ttu-id="9a39b-227">Предыдущее назначение сокращает две следующие строки кода.</span><span class="sxs-lookup"><span data-stu-id="9a39b-227">The previous assignment abbreviates the following two lines of code.</span></span>  
+     <span data-ttu-id="519b7-227">Предыдущее назначение сокращает две следующие строки кода.</span><span class="sxs-lookup"><span data-stu-id="519b7-227">The previous assignment abbreviates the following two lines of code.</span></span>  
   
     ```vb  
     ' GetURLContentsAsync returns a task. At completion, the task   
@@ -353,32 +353,32 @@ ms.locfileid: "43736300"
     'Dim urlContents As Byte() = Await getContentsTask  
     ```  
   
-2.  <span data-ttu-id="9a39b-228">Внесите следующие изменения в подпись метода.</span><span class="sxs-lookup"><span data-stu-id="9a39b-228">Make the following changes in the method's signature:</span></span>  
+2.  <span data-ttu-id="519b7-228">Внесите следующие изменения в подпись метода.</span><span class="sxs-lookup"><span data-stu-id="519b7-228">Make the following changes in the method's signature:</span></span>  
   
-    -   <span data-ttu-id="9a39b-229">Пометьте метод модификатором `Async`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-229">Mark the method with the `Async` modifier.</span></span>  
+    -   <span data-ttu-id="519b7-229">Пометьте метод модификатором `Async`.</span><span class="sxs-lookup"><span data-stu-id="519b7-229">Mark the method with the `Async` modifier.</span></span>  
   
-    -   <span data-ttu-id="9a39b-230">Добавьте в имя метода Async.</span><span class="sxs-lookup"><span data-stu-id="9a39b-230">Add "Async" to the method name.</span></span>  
+    -   <span data-ttu-id="519b7-230">Добавьте в имя метода Async.</span><span class="sxs-lookup"><span data-stu-id="519b7-230">Add "Async" to the method name.</span></span>  
   
-    -   <span data-ttu-id="9a39b-231">В этот раз нет возвращаемой переменной задачи T, поскольку `SumPageSizesAsync` не возвращает значение для T. (В этом методе нет оператора `Return`.) Тем не менее метод должен возвращать `Task`, чтобы для него можно было задать ожидание.</span><span class="sxs-lookup"><span data-stu-id="9a39b-231">There is no task return variable, T, this time because `SumPageSizesAsync` doesn’t return a value for T. (The method has no `Return` statement.) However, the method must return a `Task` to be awaitable.</span></span> <span data-ttu-id="9a39b-232">Таким образом, измените тип метода из `Sub` для `Function`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-232">Therefore, change the method type from `Sub` to `Function`.</span></span> <span data-ttu-id="9a39b-233">Тип значения, возвращаемого функцией, — `Task`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-233">The return type of the function is `Task`.</span></span>  
+    -   <span data-ttu-id="519b7-231">В этот раз нет возвращаемой переменной задачи T, поскольку `SumPageSizesAsync` не возвращает значение для T. (В этом методе нет оператора `Return`.) Тем не менее метод должен возвращать `Task`, чтобы для него можно было задать ожидание.</span><span class="sxs-lookup"><span data-stu-id="519b7-231">There is no task return variable, T, this time because `SumPageSizesAsync` doesn’t return a value for T. (The method has no `Return` statement.) However, the method must return a `Task` to be awaitable.</span></span> <span data-ttu-id="519b7-232">Таким образом, измените тип метода из `Sub` для `Function`.</span><span class="sxs-lookup"><span data-stu-id="519b7-232">Therefore, change the method type from `Sub` to `Function`.</span></span> <span data-ttu-id="519b7-233">Тип значения, возвращаемого функцией, — `Task`.</span><span class="sxs-lookup"><span data-stu-id="519b7-233">The return type of the function is `Task`.</span></span>  
   
-     <span data-ttu-id="9a39b-234">В следующем примере кода показаны эти изменения.</span><span class="sxs-lookup"><span data-stu-id="9a39b-234">The following code shows these changes.</span></span>  
+     <span data-ttu-id="519b7-234">В следующем примере кода показаны эти изменения.</span><span class="sxs-lookup"><span data-stu-id="519b7-234">The following code shows these changes.</span></span>  
   
     ```vb  
     Private Async Function SumPageSizesAsync() As Task  
     ```  
   
-     <span data-ttu-id="9a39b-235">Преобразование `SumPageSizes` в `SumPageSizesAsync` завершено.</span><span class="sxs-lookup"><span data-stu-id="9a39b-235">The conversion of `SumPageSizes` to `SumPageSizesAsync` is complete.</span></span>  
+     <span data-ttu-id="519b7-235">Преобразование `SumPageSizes` в `SumPageSizesAsync` завершено.</span><span class="sxs-lookup"><span data-stu-id="519b7-235">The conversion of `SumPageSizes` to `SumPageSizesAsync` is complete.</span></span>  
   
 ##  <a name="BKMK_Cnvrtbttn1"></a>   
-###  <a name="startButton"></a> <span data-ttu-id="9a39b-236">Преобразование startButton_Click в асинхронный метод</span><span class="sxs-lookup"><span data-stu-id="9a39b-236">To convert startButton_Click to an asynchronous method</span></span>  
+###  <a name="startButton"></a> <span data-ttu-id="519b7-236">Преобразование startButton_Click в асинхронный метод</span><span class="sxs-lookup"><span data-stu-id="519b7-236">To convert startButton_Click to an asynchronous method</span></span>  
   
-1.  <span data-ttu-id="9a39b-237">В обработчике событий измените имя вызываемого метода с `SumPageSizes` на `SumPageSizesAsync`, если это еще не сделано.</span><span class="sxs-lookup"><span data-stu-id="9a39b-237">In the event handler, change the name of the called method from `SumPageSizes` to `SumPageSizesAsync`, if you haven’t already done so.</span></span>  
+1.  <span data-ttu-id="519b7-237">В обработчике событий измените имя вызываемого метода с `SumPageSizes` на `SumPageSizesAsync`, если это еще не сделано.</span><span class="sxs-lookup"><span data-stu-id="519b7-237">In the event handler, change the name of the called method from `SumPageSizes` to `SumPageSizesAsync`, if you haven’t already done so.</span></span>  
   
-2.  <span data-ttu-id="9a39b-238">Поскольку `SumPageSizesAsync` является асинхронным методом, измените код в обработчике событий для ожидания результата.</span><span class="sxs-lookup"><span data-stu-id="9a39b-238">Because `SumPageSizesAsync` is an async method, change the code in the event handler to await the result.</span></span>  
+2.  <span data-ttu-id="519b7-238">Поскольку `SumPageSizesAsync` является асинхронным методом, измените код в обработчике событий для ожидания результата.</span><span class="sxs-lookup"><span data-stu-id="519b7-238">Because `SumPageSizesAsync` is an async method, change the code in the event handler to await the result.</span></span>  
   
-     <span data-ttu-id="9a39b-239">Вызов `SumPageSizesAsync` отражает вызов `CopyToAsync` в `GetURLContentsAsync`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-239">The call to `SumPageSizesAsync` mirrors the call to `CopyToAsync` in `GetURLContentsAsync`.</span></span> <span data-ttu-id="9a39b-240">Вызов возвращает `Task`, а не `Task(T)`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-240">The call returns a `Task`, not a `Task(T)`.</span></span>  
+     <span data-ttu-id="519b7-239">Вызов `SumPageSizesAsync` отражает вызов `CopyToAsync` в `GetURLContentsAsync`.</span><span class="sxs-lookup"><span data-stu-id="519b7-239">The call to `SumPageSizesAsync` mirrors the call to `CopyToAsync` in `GetURLContentsAsync`.</span></span> <span data-ttu-id="519b7-240">Вызов возвращает `Task`, а не `Task(T)`.</span><span class="sxs-lookup"><span data-stu-id="519b7-240">The call returns a `Task`, not a `Task(T)`.</span></span>  
   
-     <span data-ttu-id="9a39b-241">Как и в предыдущих процедурах, вызов можно преобразовать, используя один или два оператора.</span><span class="sxs-lookup"><span data-stu-id="9a39b-241">As in previous procedures, you can convert the call by using one statement or two statements.</span></span> <span data-ttu-id="9a39b-242">В следующем примере кода показаны эти изменения.</span><span class="sxs-lookup"><span data-stu-id="9a39b-242">The following code shows these changes.</span></span>  
+     <span data-ttu-id="519b7-241">Как и в предыдущих процедурах, вызов можно преобразовать, используя один или два оператора.</span><span class="sxs-lookup"><span data-stu-id="519b7-241">As in previous procedures, you can convert the call by using one statement or two statements.</span></span> <span data-ttu-id="519b7-242">В следующем примере кода показаны эти изменения.</span><span class="sxs-lookup"><span data-stu-id="519b7-242">The following code shows these changes.</span></span>  
   
     ```vb  
     '' One-step async call.  
@@ -389,49 +389,49 @@ ms.locfileid: "43736300"
     'Await sumTask  
     ```  
   
-3.  <span data-ttu-id="9a39b-243">Чтобы предотвратить случайное повторное введение операции, добавьте следующий оператор в верхней части `startButton_Click`, чтобы отключить кнопку **Start**.</span><span class="sxs-lookup"><span data-stu-id="9a39b-243">To prevent accidentally reentering the operation, add the following statement at the top of `startButton_Click` to disable the **Start** button.</span></span>  
+3.  <span data-ttu-id="519b7-243">Чтобы предотвратить случайное повторное введение операции, добавьте следующий оператор в верхней части `startButton_Click`, чтобы отключить кнопку **Start**.</span><span class="sxs-lookup"><span data-stu-id="519b7-243">To prevent accidentally reentering the operation, add the following statement at the top of `startButton_Click` to disable the **Start** button.</span></span>  
   
     ```vb  
     ' Disable the button until the operation is complete.  
     startButton.IsEnabled = False  
     ```  
   
-     <span data-ttu-id="9a39b-244">Можно снова включить кнопку в конце обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="9a39b-244">You can reenable the button at the end of the event handler.</span></span>  
+     <span data-ttu-id="519b7-244">Можно снова включить кнопку в конце обработчика событий.</span><span class="sxs-lookup"><span data-stu-id="519b7-244">You can reenable the button at the end of the event handler.</span></span>  
   
     ```vb  
     ' Reenable the button in case you want to run the operation again.  
     startButton.IsEnabled = True  
     ```  
   
-     <span data-ttu-id="9a39b-245">Дополнительные сведения о повторном входе см. в разделе [обработка повторного входа в асинхронных приложениях (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).</span><span class="sxs-lookup"><span data-stu-id="9a39b-245">For more information about reentrancy, see [Handling Reentrancy in Async Apps (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).</span></span>  
+     <span data-ttu-id="519b7-245">Дополнительные сведения о повторном входе см. в разделе [обработка повторного входа в асинхронных приложениях (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).</span><span class="sxs-lookup"><span data-stu-id="519b7-245">For more information about reentrancy, see [Handling Reentrancy in Async Apps (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md).</span></span>  
   
-4.  <span data-ttu-id="9a39b-246">Наконец, добавьте модификатор `Async` в объявление, чтобы обработчик событий мог ожидать `SumPagSizesAsync`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-246">Finally, add the `Async` modifier to the declaration so that the event handler can await `SumPagSizesAsync`.</span></span>  
+4.  <span data-ttu-id="519b7-246">Наконец, добавьте модификатор `Async` в объявление, чтобы обработчик событий мог ожидать `SumPagSizesAsync`.</span><span class="sxs-lookup"><span data-stu-id="519b7-246">Finally, add the `Async` modifier to the declaration so that the event handler can await `SumPagSizesAsync`.</span></span>  
   
     ```vb  
     Async Sub startButton_Click(sender As Object, e As RoutedEventArgs) Handles startButton.Click  
     ```  
   
-     <span data-ttu-id="9a39b-247">Как правило, имена обработчиков событий не изменяются.</span><span class="sxs-lookup"><span data-stu-id="9a39b-247">Typically, the names of event handlers aren’t changed.</span></span> <span data-ttu-id="9a39b-248">Тип возвращаемого значения не изменяется на `Task` поскольку обработчики событий должны быть `Sub` процедуры в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="9a39b-248">The return type isn’t changed to `Task` because event handlers must be `Sub` procedures in Visual Basic.</span></span>  
+     <span data-ttu-id="519b7-247">Как правило, имена обработчиков событий не изменяются.</span><span class="sxs-lookup"><span data-stu-id="519b7-247">Typically, the names of event handlers aren’t changed.</span></span> <span data-ttu-id="519b7-248">Тип возвращаемого значения не изменяется на `Task` поскольку обработчики событий должны быть `Sub` процедуры в Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="519b7-248">The return type isn’t changed to `Task` because event handlers must be `Sub` procedures in Visual Basic.</span></span>  
   
-     <span data-ttu-id="9a39b-249">Преобразование проекта из синхронного в асинхронный завершено.</span><span class="sxs-lookup"><span data-stu-id="9a39b-249">The conversion of the project from synchronous to asynchronous processing is complete.</span></span>  
+     <span data-ttu-id="519b7-249">Преобразование проекта из синхронного в асинхронный завершено.</span><span class="sxs-lookup"><span data-stu-id="519b7-249">The conversion of the project from synchronous to asynchronous processing is complete.</span></span>  
   
 ##  <a name="BKMK_testAsynchSolution"></a>   
-###  <a name="testAsynch"></a> <span data-ttu-id="9a39b-250">Тестирование асинхронного решения</span><span class="sxs-lookup"><span data-stu-id="9a39b-250">To test the asynchronous solution</span></span>  
+###  <a name="testAsynch"></a> <span data-ttu-id="519b7-250">Тестирование асинхронного решения</span><span class="sxs-lookup"><span data-stu-id="519b7-250">To test the asynchronous solution</span></span>  
   
-1.  <span data-ttu-id="9a39b-251">Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .</span><span class="sxs-lookup"><span data-stu-id="9a39b-251">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
+1.  <span data-ttu-id="519b7-251">Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .</span><span class="sxs-lookup"><span data-stu-id="519b7-251">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-2.  <span data-ttu-id="9a39b-252">Появившиеся результаты должны напоминать результаты синхронного решения.</span><span class="sxs-lookup"><span data-stu-id="9a39b-252">Output that resembles the output of the synchronous solution should appear.</span></span> <span data-ttu-id="9a39b-253">Однако имеются следующие различия.</span><span class="sxs-lookup"><span data-stu-id="9a39b-253">However, notice the following differences.</span></span>  
+2.  <span data-ttu-id="519b7-252">Появившиеся результаты должны напоминать результаты синхронного решения.</span><span class="sxs-lookup"><span data-stu-id="519b7-252">Output that resembles the output of the synchronous solution should appear.</span></span> <span data-ttu-id="519b7-253">Однако имеются следующие различия.</span><span class="sxs-lookup"><span data-stu-id="519b7-253">However, notice the following differences.</span></span>  
   
-    -   <span data-ttu-id="9a39b-254">Все результаты не отображаются одновременно после завершения обработки.</span><span class="sxs-lookup"><span data-stu-id="9a39b-254">The results don’t all occur at the same time, after the processing is complete.</span></span> <span data-ttu-id="9a39b-255">Например, обе программы содержат строку в `startButton_Click`, которая очищает текстовое поле.</span><span class="sxs-lookup"><span data-stu-id="9a39b-255">For example, both programs contain a line in `startButton_Click` that clears the text box.</span></span> <span data-ttu-id="9a39b-256">Ее цель состоит в том, чтобы очистить текстовое поле между запусками при нажатии кнопки **Start** во второй раз после появления одного набора результатов.</span><span class="sxs-lookup"><span data-stu-id="9a39b-256">The intent is to clear the text box between runs if you choose the **Start** button for a second time, after one set of results has appeared.</span></span> <span data-ttu-id="9a39b-257">В синхронной версии текстовое поле очищается перед отображением данных во второй раз, после завершения загрузки и высвобождения потока пользовательского интерфейса для выполнения других операций.</span><span class="sxs-lookup"><span data-stu-id="9a39b-257">In the synchronous version, the text box is cleared just before the counts appear for the second time, when the downloads are completed and the UI thread is free to do other work.</span></span> <span data-ttu-id="9a39b-258">В асинхронной версии текстовое поле очищается сразу же после нажатия кнопки **Start**.</span><span class="sxs-lookup"><span data-stu-id="9a39b-258">In the asynchronous version, the text box clears immediately after you choose the **Start** button.</span></span>  
+    -   <span data-ttu-id="519b7-254">Все результаты не отображаются одновременно после завершения обработки.</span><span class="sxs-lookup"><span data-stu-id="519b7-254">The results don’t all occur at the same time, after the processing is complete.</span></span> <span data-ttu-id="519b7-255">Например, обе программы содержат строку в `startButton_Click`, которая очищает текстовое поле.</span><span class="sxs-lookup"><span data-stu-id="519b7-255">For example, both programs contain a line in `startButton_Click` that clears the text box.</span></span> <span data-ttu-id="519b7-256">Ее цель состоит в том, чтобы очистить текстовое поле между запусками при нажатии кнопки **Start** во второй раз после появления одного набора результатов.</span><span class="sxs-lookup"><span data-stu-id="519b7-256">The intent is to clear the text box between runs if you choose the **Start** button for a second time, after one set of results has appeared.</span></span> <span data-ttu-id="519b7-257">В синхронной версии текстовое поле очищается перед отображением данных во второй раз, после завершения загрузки и высвобождения потока пользовательского интерфейса для выполнения других операций.</span><span class="sxs-lookup"><span data-stu-id="519b7-257">In the synchronous version, the text box is cleared just before the counts appear for the second time, when the downloads are completed and the UI thread is free to do other work.</span></span> <span data-ttu-id="519b7-258">В асинхронной версии текстовое поле очищается сразу же после нажатия кнопки **Start**.</span><span class="sxs-lookup"><span data-stu-id="519b7-258">In the asynchronous version, the text box clears immediately after you choose the **Start** button.</span></span>  
   
-    -   <span data-ttu-id="9a39b-259">И что самое главное, поток пользовательского интерфейса не блокируется во время загрузки.</span><span class="sxs-lookup"><span data-stu-id="9a39b-259">Most importantly, the UI thread isn’t blocked during the downloads.</span></span> <span data-ttu-id="9a39b-260">Можно перемещать окно или изменять его размер во время загрузки, подсчета и отображения веб-ресурсов.</span><span class="sxs-lookup"><span data-stu-id="9a39b-260">You can move or resize the window while the web resources are being downloaded, counted, and displayed.</span></span> <span data-ttu-id="9a39b-261">Если один из веб-сайтов работает медленно или не отвечает, можно отменить операцию, нажав кнопку **Закрыть** (красный крестик в правом верхнем углу окна).</span><span class="sxs-lookup"><span data-stu-id="9a39b-261">If one of the websites is slow or not responding, you can cancel the operation by choosing the **Close** button (the x in the red field in the upper-right corner).</span></span>  
+    -   <span data-ttu-id="519b7-259">И что самое главное, поток пользовательского интерфейса не блокируется во время загрузки.</span><span class="sxs-lookup"><span data-stu-id="519b7-259">Most importantly, the UI thread isn’t blocked during the downloads.</span></span> <span data-ttu-id="519b7-260">Можно перемещать окно или изменять его размер во время загрузки, подсчета и отображения веб-ресурсов.</span><span class="sxs-lookup"><span data-stu-id="519b7-260">You can move or resize the window while the web resources are being downloaded, counted, and displayed.</span></span> <span data-ttu-id="519b7-261">Если один из веб-сайтов работает медленно или не отвечает, можно отменить операцию, нажав кнопку **Закрыть** (красный крестик в правом верхнем углу окна).</span><span class="sxs-lookup"><span data-stu-id="519b7-261">If one of the websites is slow or not responding, you can cancel the operation by choosing the **Close** button (the x in the red field in the upper-right corner).</span></span>  
   
 ##  <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
-###  <a name="GetURLContentsAsync"></a> <span data-ttu-id="9a39b-262">Замена GetURLContentsAsync методом .NET Framework</span><span class="sxs-lookup"><span data-stu-id="9a39b-262">To replace method GetURLContentsAsync with a .NET Framework method</span></span>  
+###  <a name="GetURLContentsAsync"></a> <span data-ttu-id="519b7-262">Замена GetURLContentsAsync методом .NET Framework</span><span class="sxs-lookup"><span data-stu-id="519b7-262">To replace method GetURLContentsAsync with a .NET Framework method</span></span>  
   
-1.  <span data-ttu-id="9a39b-263">Платформа .NET Framework 4.5 предоставляет много асинхронных методов, которые вы можете использовать.</span><span class="sxs-lookup"><span data-stu-id="9a39b-263">The .NET Framework 4.5 provides many async methods that you can use.</span></span> <span data-ttu-id="9a39b-264">Один из них, метод <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> <xref:System.Net.Http.HttpClient>, выполняет именно те операции, которые требуются для данного пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="9a39b-264">One of them, the <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, does just what you need for this walkthrough.</span></span> <span data-ttu-id="9a39b-265">Его можно использовать вместо метода `GetURLContentsAsync`, созданного в предыдущей процедуре.</span><span class="sxs-lookup"><span data-stu-id="9a39b-265">You can use it instead of the `GetURLContentsAsync` method that you created in an earlier procedure.</span></span>  
+1.  <span data-ttu-id="519b7-263">Платформа .NET Framework 4.5 предоставляет много асинхронных методов, которые вы можете использовать.</span><span class="sxs-lookup"><span data-stu-id="519b7-263">The .NET Framework 4.5 provides many async methods that you can use.</span></span> <span data-ttu-id="519b7-264">Один из них, метод <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> <xref:System.Net.Http.HttpClient>, выполняет именно те операции, которые требуются для данного пошагового руководства.</span><span class="sxs-lookup"><span data-stu-id="519b7-264">One of them, the <xref:System.Net.Http.HttpClient> method <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29>, does just what you need for this walkthrough.</span></span> <span data-ttu-id="519b7-265">Его можно использовать вместо метода `GetURLContentsAsync`, созданного в предыдущей процедуре.</span><span class="sxs-lookup"><span data-stu-id="519b7-265">You can use it instead of the `GetURLContentsAsync` method that you created in an earlier procedure.</span></span>  
   
-     <span data-ttu-id="9a39b-266">Первым шагом является создание объекта `HttpClient` в методе `SumPageSizesAsync`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-266">The first step is to create an `HttpClient` object in method `SumPageSizesAsync`.</span></span> <span data-ttu-id="9a39b-267">Добавьте следующее объявление в начале метода.</span><span class="sxs-lookup"><span data-stu-id="9a39b-267">Add the following declaration at the start of the method.</span></span>  
+     <span data-ttu-id="519b7-266">Первым шагом является создание объекта `HttpClient` в методе `SumPageSizesAsync`.</span><span class="sxs-lookup"><span data-stu-id="519b7-266">The first step is to create an `HttpClient` object in method `SumPageSizesAsync`.</span></span> <span data-ttu-id="519b7-267">Добавьте следующее объявление в начале метода.</span><span class="sxs-lookup"><span data-stu-id="519b7-267">Add the following declaration at the start of the method.</span></span>  
   
     ```vb  
     ' Declare an HttpClient object and increase the buffer size. The  
@@ -440,20 +440,20 @@ ms.locfileid: "43736300"
         New HttpClient() With {.MaxResponseContentBufferSize = 1000000}  
     ```  
   
-2.  <span data-ttu-id="9a39b-268">В `SumPageSizesAsync,` замените вызов метода `GetURLContentsAsync` вызовом метода `HttpClient`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-268">In `SumPageSizesAsync,` replace the call to your `GetURLContentsAsync` method with a call to the `HttpClient` method.</span></span>  
+2.  <span data-ttu-id="519b7-268">В `SumPageSizesAsync,` замените вызов метода `GetURLContentsAsync` вызовом метода `HttpClient`.</span><span class="sxs-lookup"><span data-stu-id="519b7-268">In `SumPageSizesAsync,` replace the call to your `GetURLContentsAsync` method with a call to the `HttpClient` method.</span></span>  
   
     ```vb  
     Dim urlContents As Byte() = Await client.GetByteArrayAsync(url)  
     ```  
   
-3.  <span data-ttu-id="9a39b-269">Удалите или прокомментируйте метод `GetURLContentsAsync`, который вы написали.</span><span class="sxs-lookup"><span data-stu-id="9a39b-269">Remove or comment out the `GetURLContentsAsync` method that you wrote.</span></span>  
+3.  <span data-ttu-id="519b7-269">Удалите или прокомментируйте метод `GetURLContentsAsync`, который вы написали.</span><span class="sxs-lookup"><span data-stu-id="519b7-269">Remove or comment out the `GetURLContentsAsync` method that you wrote.</span></span>  
   
-4.  <span data-ttu-id="9a39b-270">Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .</span><span class="sxs-lookup"><span data-stu-id="9a39b-270">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
+4.  <span data-ttu-id="519b7-270">Нажмите клавишу F5, чтобы запустить программу, а затем нажмите кнопку **Start** .</span><span class="sxs-lookup"><span data-stu-id="519b7-270">Choose the F5 key to run the program, and then choose the **Start** button.</span></span>  
   
-     <span data-ttu-id="9a39b-271">Поведение этой версии проекта должно соответствовать поведению, которое описывается в процедуре "Тестирование асинхронного решения"; при этом с вашей стороны требуется даже меньше усилий.</span><span class="sxs-lookup"><span data-stu-id="9a39b-271">The behavior of this version of the project should match the behavior that the "To test the asynchronous solution" procedure describes but with even less effort from you.</span></span>  
+     <span data-ttu-id="519b7-271">Поведение этой версии проекта должно соответствовать поведению, которое описывается в процедуре "Тестирование асинхронного решения"; при этом с вашей стороны требуется даже меньше усилий.</span><span class="sxs-lookup"><span data-stu-id="519b7-271">The behavior of this version of the project should match the behavior that the "To test the asynchronous solution" procedure describes but with even less effort from you.</span></span>  
   
-##  <a name="BKMK_CompleteCodeExamples"></a> <span data-ttu-id="9a39b-272">Пример</span><span class="sxs-lookup"><span data-stu-id="9a39b-272">Example</span></span>  
- <span data-ttu-id="9a39b-273">Следующий код содержит полный пример преобразования решения из синхронного в асинхронное с помощью написанного вами асинхронного метода `GetURLContentsAsync`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-273">The following code contains the full example of the conversion from a synchronous to an asynchronous solution by using the asynchronous `GetURLContentsAsync` method that you wrote.</span></span> <span data-ttu-id="9a39b-274">Обратите внимание, что он очень напоминает исходное синхронное решение.</span><span class="sxs-lookup"><span data-stu-id="9a39b-274">Notice that it strongly resembles the original, synchronous solution.</span></span>  
+##  <a name="BKMK_CompleteCodeExamples"></a> <span data-ttu-id="519b7-272">Пример</span><span class="sxs-lookup"><span data-stu-id="519b7-272">Example</span></span>  
+ <span data-ttu-id="519b7-273">Следующий код содержит полный пример преобразования решения из синхронного в асинхронное с помощью написанного вами асинхронного метода `GetURLContentsAsync`.</span><span class="sxs-lookup"><span data-stu-id="519b7-273">The following code contains the full example of the conversion from a synchronous to an asynchronous solution by using the asynchronous `GetURLContentsAsync` method that you wrote.</span></span> <span data-ttu-id="519b7-274">Обратите внимание, что он очень напоминает исходное синхронное решение.</span><span class="sxs-lookup"><span data-stu-id="519b7-274">Notice that it strongly resembles the original, synchronous solution.</span></span>  
   
 ```vb  
 ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -515,16 +515,16 @@ Class MainWindow
   
         Dim urls = New List(Of String) From  
             {  
-                "http://msdn.microsoft.com/library/windows/apps/br211380.aspx",  
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/hh290136.aspx",  
-                "http://msdn.microsoft.com/library/ee256749.aspx",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/hh290136.aspx",  
+                "https://msdn.microsoft.com/library/ee256749.aspx",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             }  
         Return urls  
     End Function  
@@ -572,15 +572,15 @@ Class MainWindow
         ' is designed to be used with a monospaced font, such as  
         ' Lucida Console or Global Monospace.  
         Dim bytes = content.Length  
-        ' Strip off the "http://".  
-        Dim displayURL = url.Replace("http://", "")  
+        ' Strip off the "https://".  
+        Dim displayURL = url.Replace("https://", "")  
         resultsTextBox.Text &= String.Format(vbCrLf & "{0,-58} {1,8}", displayURL, bytes)  
     End Sub  
   
 End Class  
 ```  
   
- <span data-ttu-id="9a39b-275">Следующий код содержит полный пример решения, использующего метод `HttpClient`, `GetByteArrayAsync`.</span><span class="sxs-lookup"><span data-stu-id="9a39b-275">The following code contains the full example of the solution that uses the `HttpClient` method, `GetByteArrayAsync`.</span></span>  
+ <span data-ttu-id="519b7-275">Следующий код содержит полный пример решения, использующего метод `HttpClient`, `GetByteArrayAsync`.</span><span class="sxs-lookup"><span data-stu-id="519b7-275">The following code contains the full example of the solution that uses the `HttpClient` method, `GetByteArrayAsync`.</span></span>  
   
 ```vb  
 ' Add the following Imports statements, and add a reference for System.Net.Http.  
@@ -645,16 +645,16 @@ Class MainWindow
   
         Dim urls = New List(Of String) From  
             {  
-                "http://msdn.microsoft.com/library/windows/apps/br211380.aspx",  
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/hh290136.aspx",  
-                "http://msdn.microsoft.com/library/ee256749.aspx",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/hh290136.aspx",  
+                "https://msdn.microsoft.com/library/ee256749.aspx",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             }  
         Return urls  
     End Function  
@@ -665,20 +665,20 @@ Class MainWindow
         ' is designed to be used with a monospaced font, such as  
         ' Lucida Console or Global Monospace.  
         Dim bytes = content.Length  
-        ' Strip off the "http://".  
-        Dim displayURL = url.Replace("http://", "")  
+        ' Strip off the "https://".  
+        Dim displayURL = url.Replace("https://", "")  
         resultsTextBox.Text &= String.Format(vbCrLf & "{0,-58} {1,8}", displayURL, bytes)  
     End Sub  
   
 End Class  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9a39b-276">См. также</span><span class="sxs-lookup"><span data-stu-id="9a39b-276">See Also</span></span>  
- [<span data-ttu-id="9a39b-277">Пример асинхронности. Пошаговое руководство "Доступ к сети" (C# и Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a39b-277">Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)</span></span>](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)  
- [<span data-ttu-id="9a39b-278">Оператор Await</span><span class="sxs-lookup"><span data-stu-id="9a39b-278">Await Operator</span></span>](../../../../visual-basic/language-reference/operators/await-operator.md)  
- [<span data-ttu-id="9a39b-279">Async</span><span class="sxs-lookup"><span data-stu-id="9a39b-279">Async</span></span>](../../../../visual-basic/language-reference/modifiers/async.md)  
- [<span data-ttu-id="9a39b-280">Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9a39b-280">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- <span data-ttu-id="9a39b-281">[Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений Async (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="9a39b-281">[Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)</span></span>  
- [<span data-ttu-id="9a39b-282">Асинхронное программирование на основе задач (TAP)</span><span class="sxs-lookup"><span data-stu-id="9a39b-282">Task-based Asynchronous Programming (TAP)</span></span>](https://go.microsoft.com/fwlink/?LinkId=204847)  
- <span data-ttu-id="9a39b-283">[How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Практическое руководство. Расширение пошагового руководства по асинхронным процедурам с использованием метода Task.WhenAll (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="9a39b-283">[How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)</span></span>  
- <span data-ttu-id="9a39b-284">[How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) (Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="9a39b-284">[How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)</span></span>
+## <a name="see-also"></a><span data-ttu-id="519b7-276">См. также</span><span class="sxs-lookup"><span data-stu-id="519b7-276">See Also</span></span>  
+ [<span data-ttu-id="519b7-277">Пример асинхронности. Пошаговое руководство "Доступ к сети" (C# и Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="519b7-277">Async Sample: Accessing the Web Walkthrough (C# and Visual Basic)</span></span>](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)  
+ [<span data-ttu-id="519b7-278">Оператор Await</span><span class="sxs-lookup"><span data-stu-id="519b7-278">Await Operator</span></span>](../../../../visual-basic/language-reference/operators/await-operator.md)  
+ [<span data-ttu-id="519b7-279">Async</span><span class="sxs-lookup"><span data-stu-id="519b7-279">Async</span></span>](../../../../visual-basic/language-reference/modifiers/async.md)  
+ [<span data-ttu-id="519b7-280">Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="519b7-280">Asynchronous Programming with Async and Await (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/async/index.md)  
+ <span data-ttu-id="519b7-281">[Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md) (Типы возвращаемых значений Async (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="519b7-281">[Async Return Types (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)</span></span>  
+ [<span data-ttu-id="519b7-282">Асинхронное программирование на основе задач (TAP)</span><span class="sxs-lookup"><span data-stu-id="519b7-282">Task-based Asynchronous Programming (TAP)</span></span>](https://go.microsoft.com/fwlink/?LinkId=204847)  
+ <span data-ttu-id="519b7-283">[How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md) (Практическое руководство. Расширение пошагового руководства по асинхронным процедурам с использованием метода Task.WhenAll (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="519b7-283">[How to: Extend the Async Walkthrough by Using Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)</span></span>  
+ <span data-ttu-id="519b7-284">[How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md) (Практическое руководство. Параллельное выполнение нескольких веб-запросов с использованием Async и Await (Visual Basic))</span><span class="sxs-lookup"><span data-stu-id="519b7-284">[How to: Make Multiple Web Requests in Parallel by Using Async and Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)</span></span>
