@@ -7,13 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message security [WCF], programming overview
 ms.assetid: 739ec222-4eda-4cc9-a470-67e64a7a3f10
-author: BrucePerlerMS
-ms.openlocfilehash: a32c49aebaf1ec856dd464ec4526ae744fa34013
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 1cb18f1be8e418ace4c9f9f71b7f97ac37ff8074
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48847793"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193894"
 ---
 # <a name="programming-wcf-security"></a>Программирование безопасности WCF
 В этом разделе описаны основные задачи программирования, используемый для создания безопасного приложения Windows Communication Foundation (WCF). В этом разделе рассматриваются только проверки подлинности, конфиденциальность и целостность, которые в совокупности называются *безопасность передачи*. В этом разделе не рассматривается авторизация (Управление доступом к ресурсам и службам); сведения об авторизации см. в разделе [авторизации](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md).  

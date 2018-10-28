@@ -2,12 +2,12 @@
 title: 'Установка F #'
 description: 'Сведения об установке F # об используемой среде.'
 ms.date: 08/28/2018
-ms.openlocfilehash: 909e1c07ff7f6d52db77a987639d1c749146fdca
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d53ecdcba5411db62208cb683a0fad795711b77c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120938"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193907"
 ---
 # <a name="install-f"></a>Установка F # #
 
@@ -33,7 +33,7 @@ F # по умолчанию устанавливается в [Visual Studio д�
 
 ### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
-[Mono](http://www.mono-project.com) используется для [F # Interactive](../tutorials/fsharp-interactive/index.md) поддержки. Самый простой способ установить Mono в macOS — с помощью Homebrew. Просто введите следующую команду в окне терминала:
+[Mono](https://www.mono-project.com) используется для [F # Interactive](../tutorials/fsharp-interactive/index.md) поддержки. Самый простой способ установить Mono в macOS — с помощью Homebrew. Просто введите следующую команду в окне терминала:
 
 ```console
 brew install mono

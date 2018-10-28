@@ -1,17 +1,15 @@
 ---
-title: 'Как: Создание и использование сборок с помощью командной строки (Visual Basic)'
+title: 'Практическое: Создание и использование сборок с помощью командной строки (Visual Basic)'
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c02f694da4e03b666fa88ea6db8ddb2db4c9637d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b9d3c45168020f22f7e263fdf59454e3789dd9e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643293"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194661"
 ---
-# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Как: Создание и использование сборок с помощью командной строки (Visual Basic)
+# <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>Практическое: Создание и использование сборок с помощью командной строки (Visual Basic)
 Сборка (или библиотека динамической компоновки (DLL)) связывается с программой во время выполнения. Сборка и использование библиотеки DLL рассматривается в следующем сценарии:  
   
 -   `MathLibrary.DLL`. Файл библиотеки с методами, вызываемыми во время выполнения. В этом примере библиотека DLL содержит два метода: `Add` и `Multiply`.  
@@ -83,7 +81,7 @@ End Module
   
  Этот файл содержит алгоритм, использующий методы DLL `Add` и `Multiply`. Алгоритм начинается с разбора аргументов, введенных в командной строке: `num1` и `num2`. Затем он вычисляет сумму с помощью метода `Add` в классе `AddClass` и результат с помощью метода `Multiply` в классе `MultiplyClass`.  
   
- Обратите внимание, что `Imports` инструкции в начале файла позволяет использовать неполные имена классов для ссылки на методы DLL во время компиляции, как показано ниже:  
+ Обратите внимание, что `Imports` инструкции в начале файла позволяет использовать неполные имена классов для ссылки на методы DLL во время компиляции, следующим образом:  
   
 ```vb  
 MultiplyClass.Multiply(num1, num2)  
@@ -107,7 +105,7 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- [-Target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) параметр компилятора сообщает компилятору библиотеку DLL, а не является EXE-файлом. [-Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) параметр компилятора, за которым следует имя файла используется для указания имени файла DLL. В противном случае компилятор использует первый файл (`Add.vb`) в качестве имени библиотеки DLL.  
+ [-Target (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md) параметр компилятора предписывает компилятору создать библиотеку DLL вместо exe-файла. [-Out (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md) параметр компилятора, за которым следует имя файла используется для указания имени файла библиотеки DLL. В противном случае компилятор использует первый файл (`Add.vb`) в качестве имени библиотеки DLL.  
   
  Для сборки исполняемого файла `TestCode.exe` служит следующая строка команд:  
   
@@ -115,7 +113,7 @@ vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb
 vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb  
 ```  
   
- **-Out** параметр компилятора указывает компилятору EXE-файл и задает имя выходного файла (`TestCode.exe`). Этот параметр компилятора является необязательным. [-Ссылке (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) указывает параметр компилятора DLL-файл или файлы, используемые этой программой.  
+ **-Out** параметр компилятора предписывает компилятору создать exe-файл и задает имя выходного файла (`TestCode.exe`). Этот параметр компилятора является необязательным. [-Ссылке (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) параметр компилятора указывает DLL-файл или файлы, используемые этой программой.  
   
  Дополнительные сведения о построении из командной строки см. в разделе и [построение из командной строки](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md).  
   

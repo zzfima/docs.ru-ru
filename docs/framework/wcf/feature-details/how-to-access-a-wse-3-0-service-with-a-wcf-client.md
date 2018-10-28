@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
-ms.openlocfilehash: 2e01d3de6ee7b415c7b3f18a20e840b8ec4ab9b6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3de4bb4546d3ee20e961ecf5a9d130e8e6c713a8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698449"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193816"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Практическое руководство. Обращение к службе WSE 3.0 с помощью клиента WCF
 Клиенты Windows Communication Foundation (WCF) — уровне линий связи совместимы с Web Services Enhancements (WSE) 3.0 для служб Microsoft .NET, если WCF клиенты настроены для использования версии спецификации WS-Addressing от августа 2004 г. Тем не менее, службы WSE 3.0 не поддерживают протокол exchange (MEX) метаданных, поэтому при использовании [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) для создания класса клиента WCF, не применяются параметры безопасности в созданный Клиент WCF. Таким образом, необходимо указать параметры безопасности, служба WSE 3.0 требует после создания клиента WCF.  
@@ -27,7 +27,7 @@ ms.locfileid: "45698449"
   
 2.  Создайте класс, представляющий привязку, которая может обмениваться данными с веб-службами WSE 3.0.  
   
-     Следующий класс является частью [взаимодействие с WSE](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41) пример:  
+     Следующий класс является частью [взаимодействие с WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29) пример:  
   
     1.  Создайте класс, производный от класса <xref:System.ServiceModel.Channels.Binding>.  
   
@@ -64,4 +64,4 @@ ms.locfileid: "45698449"
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Channels.Binding>  
- [Взаимодействие с WSE](https://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ [Взаимодействие с WSE](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)
