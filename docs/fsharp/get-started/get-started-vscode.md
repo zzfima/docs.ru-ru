@@ -2,12 +2,12 @@
 title: 'Начало работы с F # в Visual Studio Code'
 description: 'Сведения об использовании F # с помощью Visual Studio Code и Ionide suite подключаемого модуля.'
 ms.date: 05/28/2018
-ms.openlocfilehash: 1afe985a4fe73d18b1e47b071b119c15a4672022
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: e962be2796cf0d6eb90d459730659e492f864716
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874355"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192672"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Начало работы с F # в Visual Studio Code
 
@@ -19,7 +19,7 @@ ms.locfileid: "37874355"
 
 Чтобы создать проект F #, откройте Visual Studio Code в новую папку (можно назвать ее любым).
 
-Затем откройте результатом выполнения команды (**представление > результатом выполнения команды**) и введите следующую команду:
+Затем откройте палитру команд (**представление > палитру команд**) и введите следующую команду:
 
 ```
 > F# new project

@@ -1,5 +1,5 @@
 ---
-title: К сожалению, мы не хотите&#39;t имеют подробные сведения об этой ошибке Visual Basic
+title: К сожалению, мы кое&#39;t имеют сведения об этой ошибке Visual Basic
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30234
@@ -3044,14 +3044,14 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 413765a6feebab3be8196552d11ade30bce28496
-ms.sourcegitcommit: 2ad7d06f4f469b5d8a5280ac0e0289a81867fc8e
+ms.openlocfilehash: e3d3ac14c51ef5665aba0879a85e03e662174e68
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35231467"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192789"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>К сожалению, мы не хотите&#39;t имеют подробные сведения об этой ошибке Visual Basic
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>К сожалению, мы кое&#39;t имеют сведения об этой ошибке Visual Basic
 Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Также можно обратиться с вопросом к другим разработчикам на следующих форумах:  
   
  [Язык Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
@@ -3066,7 +3066,7 @@ ms.locfileid: "35231467"
  [Общие вопросы Visual Basic](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
  Форум для вопросов о и проблемы, связанные с Visual Basic, которые не обсуждаются на других форумах.  
   
- [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
+ [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  
  Форум для вопросов о и проблемы, связанные с Visual Basic.  
   
  См. также:  

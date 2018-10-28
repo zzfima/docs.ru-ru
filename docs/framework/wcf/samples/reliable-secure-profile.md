@@ -2,13 +2,12 @@
 title: Надежный защищенный профиль
 ms.date: 03/30/2017
 ms.assetid: 921edc41-e91b-40f9-bde9-b6148b633e61
-author: BrucePerlerMS
-ms.openlocfilehash: 8bb7c6f9835fc7c0926e918563f85a28281f8a89
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 98e12e2cbe57313981c863307d3bb65ce88f6589
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073571"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194622"
 ---
 # <a name="reliable-secure-profile"></a>Надежный защищенный профиль
 В этом примере показано использование WCF и [надежным защищенным профилем](https://go.microsoft.com/fwlink/?LinkId=178140) (RSP). Этот образец демонстрирует реализацию [Make Connection](https://go.microsoft.com/fwlink/?LinkId=178141) защищенным каналом позволяет создать надежную защищенную привязку канала, который может быть задан, надежный обмен сообщениями и при необходимости, основанный на спецификации RSP.  

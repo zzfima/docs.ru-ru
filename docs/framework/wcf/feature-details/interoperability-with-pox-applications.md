@@ -3,11 +3,11 @@ title: Взаимодействие с приложениями POX
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
 ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372180"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192646"
 ---
 # <a name="interoperability-with-pox-applications"></a>Взаимодействие с приложениями POX
 

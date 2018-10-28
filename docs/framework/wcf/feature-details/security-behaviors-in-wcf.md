@@ -2,13 +2,12 @@
 title: Поведения безопасности в WCF
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-author: BrucePerlerMS
-ms.openlocfilehash: d995ce4c37084cb8641199ec7dfa826b65e02b65
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 221e9cb23e05378b68e4b53bc9d678c119738af5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841408"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192906"
 ---
 # <a name="security-behaviors-in-wcf"></a>Поведения безопасности в WCF
 В Windows Communication Foundation (WCF), поведения изменяют поведение времени выполнения на уровне службы или на уровне конечной точки. (Дополнительные сведения о поведениях в целом, см. в разделе [указание поведения службы во время выполнения](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md).) *Поведения безопасности* позволяют управлять учетными данными, проверкой подлинности, авторизацией и журналами аудита. Поведения можно использовать путем программирования или через конфигурацию. В этом разделе основное внимание уделяется настройке следующих поведений, связанных с функциями безопасности:  
