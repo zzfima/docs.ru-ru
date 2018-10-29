@@ -2,12 +2,12 @@
 title: Поддержка кэширования для веб-служб HTTP WCF
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-ms.openlocfilehash: ef7a03a9e4c6e188e3c7a000fc4a6050e678556d
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 6c601b19a0b3b9b3eddbd686c316ce7e2cdf7778
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453298"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196808"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Поддержка кэширования для веб-служб HTTP WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] позволяет использовать декларативный механизм кэширования уже доступен в ASP.NET, в службах WCF Web HTTP. Это позволяет кэшировать ответы от операций службы WCF Web HTTP. Когда пользователь отправляет инструкцию HTTP GET службе, настроенной для кэширования, ASP.NET отправляет обратно кэшированный ответ, метод службы при этом не вызывается. По истечении срока действия кэш в следующий раз, когда пользователь отправит инструкцию HTTP GET, будет вызван метод службы и ответ будет снова кэширован. Дополнительные сведения о кэшировании ASP.NET см. в разделе [Общие сведения о кэшировании ASP.NET](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -15,7 +15,7 @@ ms.locfileid: "49453298"
 ## <a name="basic-web-http-service-caching"></a>Кэширование базовой службы Web HTTP  
  Чтобы включить кэширование службы WEB http, необходимо сначала включить совместимость с ASP.NET, применив к службе атрибут <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> и установив <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> для <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> или <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
   
- В [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] вводится новый атрибут <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, который позволяет указать имя профиля кэша. Этот атрибут применяется к операции службы. В следующем примере атрибут <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> применяется к службе для включения совместимости с ASP.NET, а операция `GetCustomer` настраивается для кэширования. <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute` Атрибут указывает профиль кэша, который содержит параметры кэша для использования.  
+ В [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] вводится новый атрибут <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>, который позволяет указать имя профиля кэша. Этот атрибут применяется к операции службы. В следующем примере атрибут <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> применяется к службе для включения совместимости с ASP.NET, а операция `GetCustomer` настраивается для кэширования. Атрибут <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> задает профиль кэширования, содержащий используемые параметры кэширования.  
   
 ```csharp
 [ServiceContract] 

@@ -3,11 +3,11 @@ title: Данные FILESTREAM
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
 ms.openlocfilehash: 843aa890ba80ab2816af0726170eacb77f419d50
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50047986"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197032"
 ---
 # <a name="filestream-data"></a>Данные FILESTREAM
 Для двоичных данных (BLOB), хранящихся в столбце varbinary(max), появился новый атрибут хранилища FILESTREAM. До появления FILESTREAM для хранения двоичных данных была необходима специальная обработка. Неструктурированные данные, например текстовые документы, изображения и видеоролики, зачастую хранятся вне базы данных, что затрудняет работу с ними.  

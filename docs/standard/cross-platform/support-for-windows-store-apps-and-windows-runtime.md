@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18bd35495d1cb7cfffe39efa8f7313b75c7f5378
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 0476fe7ed731dbb2c6b86cff3255673ecee6f98d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261567"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198462"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Поддержка приложений для Магазина Windows и среды выполнения Windows в .NET Framework
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] поддерживает несколько способов разработки программного обеспечения для [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Эти способы можно разделить на три категории.
@@ -25,7 +25,7 @@ ms.locfileid: "48261567"
 
 -   Разработка библиотек классов для использования в приложениях [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], создаваемых с помощью .NET Framework.
 
--   Разработка компонентов [!INCLUDE[wrt](../../../includes/wrt-md.md)], упакованных в файлы WinMD, которые можно использовать в любом языке программирования, поддерживающем [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Например, см. в разделе [создание компонентов среды выполнения Windows на C# и Visual Basic](https://msdn.microsoft.com/library/windows/apps/br230301(v=VS.110).aspx).
+-   Разработка компонентов [!INCLUDE[wrt](../../../includes/wrt-md.md)], упакованных в файлы WinMD, которые можно использовать в любом языке программирования, поддерживающем [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Например, см. в разделе [создание компонентов среды выполнения Windows на C# и Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
  В этом разделе кратко описана поддержка, которую платформа .NET Framework предоставляет для всех трех категорий, и описываются сценарии для компонентов [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Первый раздел содержит основные сведения о связи между .NET Framework и [!INCLUDE[wrt](../../../includes/wrt-md.md)], и рассматривает некоторые странности, с которыми вы можете столкнуться в системе справки и интегрированной среды разработки. [Второй раздел](#WindowsRuntimeComponents) описываются сценарии разработки [!INCLUDE[wrt](../../../includes/wrt-md.md)] компонентов.
 
@@ -84,7 +84,7 @@ ms.locfileid: "48261567"
 
  Представление интерфейсов в управляемом коде влияет на представление типов, реализующих эти интерфейсы. Например, класс `PropertySet` реализует `IMap<K, V>`, который представлен в управляемом коде как `IDictionary<TKey, TValue>`. `PropertySet` представляет себя как реализующего `IDictionary<TKey, TValue>` вместо `IMap<K, V>`, поэтому в управляемом коде у него присутствует метод `Add`, который ведет себя как метод `Add` в словарях .NET Framework. А метода `Insert` у этого типа нет.
 
- Дополнительные сведения об использовании платформы .NET Framework для создания [!INCLUDE[wrt](../../../includes/wrt-md.md)] компонента и пошаговое руководство, которое демонстрирует использование этого компонента с JavaScript, см. в разделе [создание компонентов среды выполнения Windows на C# и Visual Basic](https://msdn.microsoft.com/library/windows/apps/br230301%28v=VS.110%29.aspx).
+ Дополнительные сведения об использовании платформы .NET Framework для создания [!INCLUDE[wrt](../../../includes/wrt-md.md)] компонента и пошаговое руководство, которое демонстрирует использование этого компонента с JavaScript, см. в разделе [создание компонентов среды выполнения Windows на C# и Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic).
 
 ### <a name="primitive-types"></a>Типы-примитивы
  Для удобного использования [!INCLUDE[wrt](../../../includes/wrt-md.md)] в управляемом коде вместо простых типов [!INCLUDE[wrt](../../../includes/wrt-md.md)] в коде отображаются простые типы платформы .NET Framework. В .NET Framework у простых типов, таких как структура `Int32`, имеется множество полезных свойств и методов, например метод `Int32.TryParse`. Напротив, простые типы и структуры в [!INCLUDE[wrt](../../../includes/wrt-md.md)] имеют только поля. При использовании простых типов в управляемом коде они представляются как типы платформы .NET Framework, и можно как обычно использовать свойства и методы типов платформы .NET Framework. В следующем списке приводятся сводные данные.
@@ -149,6 +149,6 @@ ms.locfileid: "48261567"
 |[Общие сведения о платформе .NET для приложений Магазина Windows](https://msdn.microsoft.com/library/windows/apps/br230302(v=VS.110).aspx)|Описывает типы и члены платформы .NET Framework, которые можно использовать для создания приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] и компонентов [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (В Центре разработки для Windows.)|
 |[Схема создания приложений Windows Store, с помощью C# или Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))|Предоставляет основные ресурсы, помогающие начать разрабатывать приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] с помощью C# или Visual Basic, а также многие разделы краткого руководства, правила и рекомендации. (В Центре разработки для Windows.)|
 |[Как и инструкции (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))|Предоставляет основные ресурсы, помогающие начать разрабатывать приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] с помощью C# или Visual Basic, а также многие разделы краткого руководства, правила и рекомендации. (В Центре разработки для Windows.)|
-|[Создание компонентов среды выполнения Windows в C# и Visual Basic](https://msdn.microsoft.com/library/windows/apps/br230301%28v=VS.110%29.aspx)|Описывает процесс создания компонента [!INCLUDE[wrt](../../../includes/wrt-md.md)] с помощью платформы .NET Framework, объясняет, как использовать его как часть приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], созданного для Windows с использованием JavaScript, а также описывает процесс отладки с помощью Visual Studio. (В Центре разработки для Windows.)|
+|[Создание компонентов среды выполнения Windows в C# и Visual Basic](/windows/uwp/winrt-components/creating-windows-runtime-components-in-csharp-and-visual-basic)|Описывает процесс создания компонента [!INCLUDE[wrt](../../../includes/wrt-md.md)] с помощью платформы .NET Framework, объясняет, как использовать его как часть приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)], созданного для Windows с использованием JavaScript, а также описывает процесс отладки с помощью Visual Studio. (В Центре разработки для Windows.)|
 |[Ссылка на среды выполнения Windows](/uwp/api/)|Справочная документация по [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (В Центре разработки для Windows.)|
 |[Передача URI в среду выполнения Windows](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|Описывает проблемы, которые могут возникнуть при передаче адреса URI из управляемого кода в [!INCLUDE[wrt](../../../includes/wrt-md.md)], а также содержит сведения о способах их устранения.|

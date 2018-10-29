@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
 ms.openlocfilehash: 321c4ba8659bd2226fff96e74e81ef24f0077c3d
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50049338"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200918"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Пошаговое руководство. Создание содержимого Direct3D9 для размещения в WPF
 В этом пошаговом руководстве демонстрируется создание содержимого Direct3D9 для размещения в приложении Windows Presentation Foundation (WPF). Дополнительные сведения о размещении содержимого Direct3D9 в WPF-приложениях, см. в разделе [взаимодействие WPF и Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).
