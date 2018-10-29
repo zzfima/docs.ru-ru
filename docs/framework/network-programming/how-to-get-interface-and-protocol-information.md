@@ -4,19 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: ae4eb38c72a7f7629cea0f8137a4337553457808
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fec8fd294c0408bfb16df1c5cfa1f3a96c1f28ee
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200910"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202622"
 ---
-# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="3208d-102">Практическое руководство. Получение информации об интерфейсах и протоколах</span><span class="sxs-lookup"><span data-stu-id="3208d-102">How to: Get Interface and Protocol Information</span></span>
-<span data-ttu-id="3208d-103">В этом примере показано, как считать статистику TCP сетевого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="3208d-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
+# <a name="how-to-get-interface-and-protocol-information"></a><span data-ttu-id="3754f-102">Практическое руководство. Получение информации об интерфейсах и протоколах</span><span class="sxs-lookup"><span data-stu-id="3754f-102">How to: Get Interface and Protocol Information</span></span>
+<span data-ttu-id="3754f-103">В этом примере показано, как считать статистику TCP сетевого интерфейса.</span><span class="sxs-lookup"><span data-stu-id="3754f-103">This sample shows how to read the TCP statistics of a network interface.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="3208d-104">Пример</span><span class="sxs-lookup"><span data-stu-id="3208d-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="3754f-104">Пример</span><span class="sxs-lookup"><span data-stu-id="3754f-104">Example</span></span>  
   
 ```  
 public static void ShowTcpStatistics(NetworkInterfaceComponent version)  
@@ -71,7 +69,7 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="3208d-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="3208d-105">Compiling the Code</span></span>  
- <span data-ttu-id="3208d-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="3208d-106">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="3754f-105">Компиляция кода</span><span class="sxs-lookup"><span data-stu-id="3754f-105">Compiling the Code</span></span>  
+ <span data-ttu-id="3754f-106">Для этого примера требуются:</span><span class="sxs-lookup"><span data-stu-id="3754f-106">This example requires:</span></span>  
   
--   <span data-ttu-id="3208d-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="3208d-107">References to the **System.Net** namespace.</span></span>
+-   <span data-ttu-id="3754f-107">Ссылки на пространство имен **System.Net**.</span><span class="sxs-lookup"><span data-stu-id="3754f-107">References to the **System.Net** namespace.</span></span>
