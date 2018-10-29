@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 49b787ff-2741-4836-ad51-c3017dc592d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baa66f11404e2cee83b4d4b32ba02544c9438d7f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7dab1474454f8169d8d0d80413c6fb95677fb4bf
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392513"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453401"
 ---
 # <a name="attributed-programming-model-overview-mef"></a>Общие сведения о модели атрибутивного программирования (MEF)
 В Managed Extensibility Framework (MEF) *модель программирования* представляет собой определенный способ задания набора концептуальных объектов, с которыми MEF работает. Такие концептуальные объекты включают в себя части, импорты и экспорты. MEF использует их, но не указывает, как они должны быть представлены. Это делает возможным применение широкого спектра моделей программирования, включая настраиваемые.  
@@ -144,7 +144,7 @@ End Class
 public class MyAddin  
 {  
     //Explicitly specifying a generic type.  
-    [Export(typeof(Func<int, string>)]  
+    [Export(typeof(Func<int, string>))]  
     public string DoSomething(int TheParam);  
 }  
 ```  
@@ -957,5 +957,5 @@ public class PartSeven
  `IPartImportsSatisfiedNotification` содержит один метод с именем `OnImportsSatisfied`. Этот метод вызывается контейнером композиции для любых частей, реализующих интерфейс, когда композиция уже завершена, а импорты части готовы к использованию. Части создаются подсистемой композиции для заполнения импортов других частей. До установки импортов части вы не можете выполнять никакую инициализацию, которая основана на импортированных значениях в конструкторе частей или выполняет операции с ними, если только эти значения не были указаны в качестве необходимых условий с помощью атрибута `ImportingConstructor` . В общем случае этот метод является предпочтительным, но иногда внедрение конструктора может быть недоступно. В таких ситуациях инициализацию можно выполнить в `OnImportsSatisfied`, при этом часть должна реализовать `IPartImportsSatisfiedNotification`.  
   
 ## <a name="see-also"></a>См. также  
- [Видео канала 9. Open Up Your Applications with the Managed Extensibility Framework (Раскройте потенциал своих приложений с помощью Managed Extensibility Framework)](http://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
- [Видео канала 9. Managed Extensibility Framework (MEF) 2.0](http://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)
+ [Видео канала 9. Open Up Your Applications with the Managed Extensibility Framework (Раскройте потенциал своих приложений с помощью Managed Extensibility Framework)](https://channel9.msdn.com/events/TechEd/NorthAmerica/2009/DTL328)  
+ [Видео канала 9. Managed Extensibility Framework (MEF) 2.0](https://channel9.msdn.com/posts/NET-45-Oleg-Lvovitch-and-Kevin-Ransom-Managed-Extensibility-Framework-MEF-20)

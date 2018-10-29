@@ -4,12 +4,12 @@ description: Сведения о скриптах dotnet-install, которые
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ea14424297dcf1dab8711197bee1d3b3e19879c1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004014"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837080"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Справка по скриптам dotnet-install
 
@@ -33,8 +33,8 @@ Mac OS и Linux:
 
 Мы рекомендуем использовать стабильную версию, размещенную на [основном веб-сайте .NET Core](https://dot.net). Прямые пути к скриптам:
 
-* https://dot.net/v1/dotnet-install.sh (Bash, UNIX);
-* https://dot.net/v1/dotnet-install.ps1 (Powershell, Windows).
+* <https://dot.net/v1/dotnet-install.sh> (Bash, UNIX);
+* <https://dot.net/v1/dotnet-install.ps1> (Powershell, Windows).
 
 Их основное назначение — помощь в сценариях автоматизации и при установках без прав администратора. Существует два скрипта. Один — скрипт PowerShell, который работает в Windows. Второй — bash-скрипт, который выполняется в Linux и macOS. Оба скрипта выполняют одни и те же функции. Так как bash-скрипт также считывает параметры PowerShell, их можно использовать с этим скриптом в системах Linux и macOS.
 

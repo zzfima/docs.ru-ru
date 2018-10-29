@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a30fe0aac4bfacc71137474837b95371e7d85b09
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 21dd9926684f51412384235d7b3af1aac280957a
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501804"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50035752"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>Ошибки инициализации платформы .NET Framework. Управление взаимодействием с пользователем
 Система активации среды CLR определяет версию среды CLR, которая будет использоваться для выполнения управляемого кода приложения. В некоторых случаях система активации может не найти версию среды CLR для загрузки. Эта ситуация обычно возникает в том случае, если приложение требует версии среды CLR, которая недопустима или не установлена на данном компьютере. Если запрошенная версия не найдена, то система активации среды CLR получает код ошибки HRESULT из вызванных функции или интерфейса и может отобразить сообщение об ошибке для пользователя, запустившего приложение. В этой статье приводится список кодов HRESULT и объясняется, как можно запретить отображение сообщения об ошибке.  
@@ -87,7 +87,7 @@ ms.locfileid: "43501804"
  Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ведение журналов активации среды CLR было улучшено для включения записи журнала, которые записывают, когда и почему было отображено сообщение об ошибке инициализации. Дополнительные сведения см. в разделе [Практическое руководство. Отладка проблем при активации CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md).  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [Практическое руководство. Настройка приложения для поддержки платформы .NET Framework 4 или 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
- [Практическое руководство. Решение проблем при активации среды CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
- [Установка .NET Framework 3.5 на Windows 10, Windows 8.1 и Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md)
+- [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [Практическое руководство. Настройка приложения для поддержки платформы .NET Framework 4 или 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
+- [Практическое руководство. Решение проблем при активации среды CLR](../../../docs/framework/deployment/how-to-debug-clr-activation-issues.md)  
+- [Установка .NET Framework 3.5 на Windows 10, Windows 8.1 и Windows 8](../../../docs/framework/install/dotnet-35-windows-10.md)

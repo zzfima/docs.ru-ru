@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91fc7cf6ea66952fa5770ce73ecb1a8c129a9a2d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 19c4b030e8b44bed5377827d016127b4a574f5ee
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743918"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50183754"
 ---
 # <a name="assembly-location"></a>Расположение сборки
 От места расположения сборки зависит, сможет ли среда CLR найти сборку по ссылке на нее. Это расположение также определяет возможность совместного использования сборки вместе с другими сборками. Для развертывания сборки можно использовать следующие расположения.  
@@ -30,7 +30,7 @@ ms.locfileid: "32743918"
      Сборка, развернутая на HTTP-сервере, должна иметь строгое имя; в разделе базы кода файла конфигурации приложения должно присутствовать указание на сборку.  
   
 ## <a name="see-also"></a>См. также  
- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)  
- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)  
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)  
+- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)

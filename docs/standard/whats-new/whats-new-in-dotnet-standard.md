@@ -6,12 +6,12 @@ ms.date: 04/12/2018
 ms.technology: dotnet-standard
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c99f59478b61bd382d6bf9529d2921407cc70bc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 19353bd068e3b04bc3d852c1e22db9c97ebef628
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253160"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48583169"
 ---
 # <a name="whats-new-in-the-net-standard"></a>Новые возможности .NET Standard
 
@@ -55,7 +55,7 @@ ms.locfileid: "44253160"
 
 ### <a name="support-for-net-framework-libraries"></a>Поддержка библиотек .NET Framework
 
-Практически все библиотеки предназначены для .NET Framework, а не .NET Standard. Но при этом большая часть вызовов в этих библиотеках направлена к интерфейсам API .NET Standard 2.0. Начиная с .NET Standard 2.0 библиотеки .NET Framework доступны из библиотек .NET Standard через [оболочку совместимости](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-20/README.md#assembly-unification). Этот уровень совместимости прозрачен для разработчиков, то есть от них не требуется никаких действий, чтобы пользоваться библиотеками .NET Framework.
+Практически все библиотеки предназначены для .NET Framework, а не .NET Standard. Но при этом большая часть вызовов в этих библиотеках направлена к интерфейсам API .NET Standard 2.0. Начиная с .NET Standard 2.0 библиотеки .NET Framework доступны из библиотек .NET Standard через [оболочку совместимости](https://github.com/dotnet/standard/blob/master/docs/planning/netstandard-2.0/README.md#assembly-unification). Этот уровень совместимости прозрачен для разработчиков, то есть от них не требуется никаких действий, чтобы пользоваться библиотеками .NET Framework.
 
 Действует только одно требование: API, вызываемые библиотекой классов .NET Framework, должны быть включены в .NET Standard 2.0.
 

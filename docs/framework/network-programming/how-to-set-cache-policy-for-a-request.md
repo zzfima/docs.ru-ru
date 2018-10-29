@@ -7,17 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 03ddcbacf7de3753ca74c398e585447b2d769cd6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f2e3e7ccc16dc24cf79574f8607245b66ea53cb1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47210631"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190662"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>Практическое руководство. Задание политики кэширования для запроса
-В следующем примере показана установка политики кэширования для запроса. В качестве входных данных для этого примера используется URI, например http://www.contoso.com/.  
+В следующем примере показана установка политики кэширования для запроса. В качестве входных данных для этого примера используется URI, например `http://www.contoso.com/`.  
   
 ## <a name="example"></a>Пример  
  В следующем примере кода создается политика кэширования, которая разрешает использовать запрашиваемый ресурс из кэша, если ресурс находился в кэше не более одного дня. В примере выводится сообщение, которое указывает, использовался ли ресурс из кэша, например `"The response was retrieved from the cache : False."`, а затем выводится название ресурса. Для выполнения запроса может использоваться любой кэш между клиентом и сервером.  

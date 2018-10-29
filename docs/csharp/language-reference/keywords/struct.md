@@ -7,49 +7,53 @@ helpviewer_keywords:
 - struct keyword [C#]
 - structs [C#], struct keyword
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 7931da2e5f5c493b54eb1f33a1d6f57b38592f6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 46cf0b66a50685a717818fe762ad4f1de36d6156
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530196"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50185749"
 ---
 # <a name="struct-c-reference"></a>struct (справочник по C#)
-Тип `struct` представляет собой тип значения, который обычно используется для инкапсуляции небольших групп связанных переменных, например координат прямоугольника или характеристик элемента в инвентаризации. В следующем примере показано простое объявление структуры:  
-  
-```csharp  
-public struct Book  
-{  
-    public decimal price;  
-    public string title;  
-    public string author;  
-}  
-```  
-  
-## <a name="remarks"></a>Примечания  
- Структуры также могут содержать [конструкторы](../../../csharp/programming-guide/classes-and-structs/constructors.md), [константы](../../../csharp/programming-guide/classes-and-structs/constants.md), [поля](../../../csharp/programming-guide/classes-and-structs/fields.md), [методы](../../../csharp/programming-guide/classes-and-structs/methods.md), [свойства](../../../csharp/programming-guide/classes-and-structs/properties.md), [индексаторы](../../../csharp/programming-guide/indexers/index.md), [операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md), [события](../../../csharp/programming-guide/events/index.md) и [вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md), хотя, если требуется несколько таких членов, тип необходимо заменить классом.  
-  
- Примеры см. в разделе [Использование структур](../../../csharp/programming-guide/classes-and-structs/using-structs.md).  
-  
- Структуры могут реализовать интерфейс, но не могут наследоваться из другой структуры. По этой причине члены структуры не могут объявляться как `protected`.  
-  
- Дополнительные сведения см. в разделе [Структуры](../../../csharp/programming-guide/classes-and-structs/structs.md).  
-  
-## <a name="examples"></a>Примеры  
- Примеры и дополнительные сведения см. в разделе [Использование структур](../../../csharp/programming-guide/classes-and-structs/using-structs.md).  
-  
-## <a name="c-language-specification"></a>Спецификация языка C#  
- Примеры см. в разделе [Использование структур](../../../csharp/programming-guide/classes-and-structs/using-structs.md).  
-  
+
+Тип `struct` представляет собой тип значения, который обычно используется для инкапсуляции небольших групп связанных переменных, например координат прямоугольника или характеристик элемента в инвентаризации. В следующем примере показано простое объявление структуры:
+
+```csharp
+public struct Book
+{
+    public decimal price;
+    public string title;
+    public string author;
+}
+```
+
+## <a name="remarks"></a>Примечания
+
+Структуры также могут содержать [конструкторы](../../programming-guide/classes-and-structs/constructors.md), [константы](../../programming-guide/classes-and-structs/constants.md), [поля](../../programming-guide/classes-and-structs/fields.md), [методы](../../programming-guide/classes-and-structs/methods.md), [свойства](../../programming-guide/classes-and-structs/properties.md), [индексаторы](../../programming-guide/indexers/index.md), [операторы](../../programming-guide/statements-expressions-operators/operators.md), [события](../../programming-guide/events/index.md) и [вложенные типы](../../programming-guide/classes-and-structs/nested-types.md), хотя, если требуется несколько таких членов, тип необходимо заменить классом.
+
+Примеры см. в разделе [Использование структур](../../programming-guide/classes-and-structs/using-structs.md).
+
+Структуры могут реализовать интерфейс, но не могут наследоваться из другой структуры. По этой причине члены структуры не могут объявляться как `protected`.
+
+Дополнительные сведения см. в разделе [Структуры](../../programming-guide/classes-and-structs/structs.md).
+
+## <a name="examples"></a>Примеры
+
+Примеры и дополнительные сведения см. в разделе [Использование структур](../../programming-guide/classes-and-structs/using-structs.md).
+
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+Примеры см. в разделе [Использование структур](../../programming-guide/classes-and-structs/using-structs.md).
+
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
-- [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md)  
-- [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [Типы](../../../csharp/language-reference/keywords/types.md)  
-- [Типы значений](../../../csharp/language-reference/keywords/value-types.md)  
-- [class](../../../csharp/language-reference/keywords/class.md)  
-- [interface](../../../csharp/language-reference/keywords/interface.md)  
-- [Классы и структуры](../../../csharp/programming-guide/classes-and-structs/index.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](index.md)
+- [Таблица значений по умолчанию](default-values-table.md)
+- [Таблица встроенных типов](built-in-types-table.md)
+- [Типы](types.md)
+- [Типы значений](value-types.md)
+- [class](class.md)
+- [interface](interface.md)
+- [Классы и структуры](../../programming-guide/classes-and-structs/index.md)

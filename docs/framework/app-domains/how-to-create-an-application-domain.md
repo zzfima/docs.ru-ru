@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c579c97e273e7d3e149e04f7aa7670313663b617
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 95e5bdbeda4f6faff33467233e28d9dd6bc01d1c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751784"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186937"
 ---
 # <a name="how-to-create-an-application-domain"></a>Практическое руководство. Создание домена приложения
 Хост-приложение CLR автоматически создает домены приложений в нужный момент. Но можно создать собственные домены приложений и загрузить их в те сборки, которыми требуется управлять отдельно. Кроме того, домены приложений можно создать из доменов, выполняющих код.  
@@ -30,5 +30,5 @@ ms.locfileid: "32751784"
  [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>См. также  
- [Программирование с использованием доменов приложений](application-domains.md#programming-with-application-domains)  
- [Использование доменов приложений](../../../docs/framework/app-domains/use.md)
+- [Программирование с использованием доменов приложений](application-domains.md#programming-with-application-domains)  
+- [Использование доменов приложений](../../../docs/framework/app-domains/use.md)

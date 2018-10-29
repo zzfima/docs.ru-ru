@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 07/30/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8241b3afb518acf237c7b6181085e19576e5ce2f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 05ec296c4c8210c63c7c1b5ce63ef598ca6ac719
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43778473"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838082"
 ---
 # <a name="globaljson-overview"></a>Обзор global.json
 
@@ -96,12 +96,12 @@ dotnet new globaljson --sdk-version 2.1.300
 ## <a name="troubleshooting-build-warnings"></a>Устранение неполадок с оповещениями сборки
 
 > [!WARNING]
-> Вы работаете с предварительной версией пакета SDK для .NET Core. Версию пакета SDK можно указать в файле global.json в текущем проекте. Дополнительные сведения см. на странице https://go.microsoft.com/fwlink/?linkid=869452
+> Вы работаете с предварительной версией пакета SDK для .NET Core. Версию пакета SDK можно указать в файле global.json в текущем проекте. Дополнительные сведения см. на странице <https://go.microsoft.com/fwlink/?linkid=869452>
 
 Это предупреждение означает, что проект компилируется с помощью предварительной версии пакета SDK для .NET Core, как описано в разделе [Правила сопоставления](#matching-rules). Версии пакета SDK для .NET Core имеют гарантированное качество. Но если вы не хотите использовать предварительную версию, добавьте файл *global.json* в структуру иерархии проекта, чтобы указать нужную версию пакета SDK, и с помощью `dotnet --list-sdks` убедитесь, что эта версия установлена на вашем компьютере. Чтобы использовать новую версию после ее выпуска, удалите файл *global.json* или внесите в него изменения.
 
 > [!WARNING]
-> Запускаемый проект '{startupProject}' нацелен на версию платформы '.NETCoreApp' '{targetFrameworkVersion}'. Эта версия средств командной строки .NET Entity Framework Core поддерживает только версию 2.0 или более позднюю. Сведения об использовании более старой версии средств см. в разделе https://go.microsoft.com/fwlink/?linkid=871254
+> Запускаемый проект '{startupProject}' нацелен на версию платформы '.NETCoreApp' '{targetFrameworkVersion}'. Эта версия средств командной строки .NET Entity Framework Core поддерживает только версию 2.0 или более позднюю. Сведения об использовании более старой версии средств см. в разделе <https://go.microsoft.com/fwlink/?linkid=871254>
 
 Начиная с пакета SDK для .NET Core 2.1 (v. 2.1.300) команда `dotnet ef` включена в пакет SDK. Это предупреждение означает, что проект предназначен для EF Core 1.0 или 1.1, которые несовместимы с пакетом SDK для .NET Core 2.1 и более поздних версий. Чтобы скомпилировать проект, установите на компьютере пакет SDK для .NET Core 2.0 (v. 2.1.201) или более ранней версии на вашем компьютере и определите необходимую версию пакета SDK с помощью файла *global.json*. Дополнительные сведения о команде `dotnet ef` см. в разделе [Утилиты командной строки для EF Core .NET](/ef/core/miscellaneous/cli/dotnet).
 

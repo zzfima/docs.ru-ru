@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6f754a2a66187ac94d31d0d5a3a665c969652d26
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861628"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846517"
 ---
 # <a name="how-to-configure-client-application-services"></a>Практическое руководство. Настройка служб клиентских приложений
 Этот раздел описывает использование **конструктора проектов** Visual Studio для активации и настройки служб клиентского приложения. Эти службы позволяют проверять подлинность пользователей, извлекать роли пользователей и параметры из существующей службы приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]. После настройки можно получить доступ к включенным службам в коде приложения, как описано в разделе [Общие сведения о службах клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Дополнительные сведения о службах приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] см. в разделе [Общие сведения о службах приложений ASP.NET](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
- Включать и настраивать службы клиентских приложений можно на странице **Службы** в **конструкторе проектов**. Изменения значений в файле проекта App.config вносятся на странице **Службы**. Открыть **конструктор проектов** можно с помощью команды **Свойства** в меню **Проект**. Дополнительные сведения о странице **Службы** см. в разделе [Страница "Службы" в конструкторе проектов](https://msdn.microsoft.com/library/bb398109).  
+ Включать и настраивать службы клиентских приложений можно на странице **Службы** в **конструкторе проектов**. Изменения значений в файле проекта App.config вносятся на странице **Службы**. Открыть **конструктор проектов** можно с помощью команды **Свойства** в меню **Проект**. Дополнительные сведения о странице **Службы** см. в разделе [Страница "Службы" в конструкторе проектов](/visualstudio/ide/reference/services-page-project-designer).  
   
  В следующей процедуре описывается базовая настройка служб клиентских приложений. Расширенные параметры настройки описаны в дальнейших разделах.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "43861628"
 ## <a name="see-also"></a>См. также  
  [Службы клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [Общие сведения о службах клиентских приложений](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
- [Страница "Службы" в конструкторе проектов](https://msdn.microsoft.com/library/bb398109)  
+ [Страница "Службы" в конструкторе проектов](/visualstudio/ide/reference/services-page-project-designer)  
  [Диалоговое окно "Дополнительные параметры служб"](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
  [Практическое руководство. Реализация входа пользователя с помощью служб клиентских приложений](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [Пошаговое руководство. Использование служб клиентских приложений](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  

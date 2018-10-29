@@ -13,11 +13,11 @@ ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47205136"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836288"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>Другие конструкции в регулярных выражениях
 Регулярные выражения в .NET поддерживают три различные языковые конструкции. Одна позволяет включать или отключать определенные параметры соответствия в середине шаблона регулярного выражения. Оставшиеся две позволяют включать комментарии в регулярное выражение.  
@@ -42,7 +42,7 @@ ms.locfileid: "47205136"
  Любое изменение параметров регулярных выражений, заданное конструкцией `(?imnsx-imnsx)`, остается в силе до конца содержащей ее группы.  
   
 > [!NOTE]
->  Конструкция группирования `(?imnsx-imnsx:`*subexpression*`)` предоставляет для части выражения одинаковые функциональные возможности. Дополнительные сведения см. в разделе [Конструкции группировки](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
+>  Конструкция группирования `(?imnsx-imnsx:`*subexpression*`)` предоставляет для части выражения одинаковые функциональные возможности. Для получения дополнительной информации см. [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md).  
   
  В следующем примере параметры `i`, `n` и `x` используются для отключения учета регистра и включения явных захватов, а также для пропуска пробелов в шаблоне в середине регулярного выражения.  
   

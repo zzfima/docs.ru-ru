@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c6f58ef5bd96d8a74ce27bb53acd36af005c335
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8a40d77f58d6a614f874e12f118f89f25f149e55
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33356793"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180652"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>Выполнение приложений интранета с полным доверием
 Начиная с платформы .NET Framework версии 3.5 с пакетом обновления 1 (SP1) приложения и их сборки библиотек можно запускать как сборки с полным доверием из сетевой папки. В сборки, загружаемые из папки в интрасети, автоматически добавляется свидетельство зоны <xref:System.Security.SecurityZone.MyComputer>. Это свидетельство дает таким сборкам тот же набор разрешений (обычно это полное доверие), которым обладают сборки, расположенные на компьютере. Эта функция не относится к приложениям ClickOnce и к приложениям, предназначенным для запуска на узле.  
@@ -35,4 +35,4 @@ ms.locfileid: "33356793"
 -   На 64-разрядных компьютерах создайте подраздел в разделе HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework системного реестра. Используйте имя параметра LegacyMyComputerZone и значение 1 типа DWORD. Создайте аналогичный подраздел в разделе HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework.  
   
 ## <a name="see-also"></a>См. также  
- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)

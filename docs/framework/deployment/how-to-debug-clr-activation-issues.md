@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b78d917b95e06a14b74c812bf92107476ad17212
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 89724e9a322f2f28dbe5d18ae697acbdd0a32d8e
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33390368"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041626"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Практическое руководство. Отладка проблем при активации CLR
 При возникновении проблем при попытке запустить приложение с правильной версией среды CLR можно просматривать и отлаживать журналы активации среды CLR. Эти журналы могут быть очень полезными при выявлении основной причины проблемы активации, когда приложение или загружает не ту версию среды CLR, которую ожидалось, или вообще не загружает среду CLR. В статье [Ошибки инициализации платформы .NET Framework. Управление взаимодействием с пользователем](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) рассматривается случай, когда среда CLR не была найдена.  
@@ -117,5 +117,5 @@ ms.locfileid: "33390368"
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Развертывание](../../../docs/framework/deployment/index.md)  
- [Практическое руководство. Настройка приложения для поддержки платформы .NET Framework 4 или 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [Развертывание](../../../docs/framework/deployment/index.md)  
+- [Практическое руководство. Настройка приложения для поддержки платформы .NET Framework 4 или 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)

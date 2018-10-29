@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f8ed5cce3e0c9e22679f54b13c84ea422f2100d
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251068"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453454"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Обнаружение сборок в среде выполнения
 Для успешного развертывания приложения .NET Framework необходимо понимать, как среда CLR обнаруживает сборки, из которых состоит приложение, и выполняет привязку к ним. По умолчанию среда выполнения пытается выполнить привязку к той самой версии сборки, с помощью которой было создано приложение. Это поведение по умолчанию можно переопределить с помощью параметров файла конфигурации.  
@@ -215,7 +215,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Имя сборки, на которую указывает ссылка: myAssembly  
   
--   Корневой каталог приложения: http://www.code.microsoft.com  
+-   Корневой каталог приложения: `http://www.code.microsoft.com`  
   
 -   Значение элемента [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) в файле конфигурации: bin  
   
@@ -223,13 +223,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  Среда выполнения проверяет следующие URL-адреса:  
   
- http://www.code.microsoft.com/de/myAssembly.dll  
+ `http://www.code.microsoft.com/de/myAssembly.dll`
   
- http://www.code.microsoft.com/de/myAssembly/myAssembly.dll  
+ `http://www.code.microsoft.com/de/myAssembly/myAssembly.dll`
   
- http://www.code.microsoft.com/bin/de/myAssembly.dll  
+ `http://www.code.microsoft.com/bin/de/myAssembly.dll`
   
- http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll  
+ `http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll`
   
 ##### <a name="multiple-assemblies-with-the-same-name"></a>Несколько сборок с одинаковыми именами  
  В примере ниже показано, как настроить несколько сборок с одинаковыми именами.  
@@ -245,8 +245,8 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>Другие проверяемые расположения  
  Расположение сборки также может быть установлено с помощью текущего контекста привязки. Это часто происходит при использовании метода <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> и в сценариях COM-взаимодействия. Если сборка использует метод <xref:System.Reflection.Assembly.LoadFrom%2A> для ссылки на другую сборку, расположение вызывающей сборки считается подсказкой для поиска расположения сборки, на которую задана ссылка. Если удается найти совпадение, эта сборка загружается. Если совпадение не найдено, среда выполнения продолжает поиск в соответствии с семантикой, а затем запрашивает установщик Windows о предоставлении сборки. Если не удается предоставить сборку, соответствующую запросу привязки, создается исключение. Это исключение <xref:System.TypeLoadException> в управляемом коде, если была задана ссылка на тип, или <xref:System.IO.FileNotFoundException> , если загружаемая сборка не найдена.  
   
- Например, если сборка Assembly1 ссылается на сборку Assembly2 и сборка Assembly1 была скачана с адреса http://www.code.microsoft.com/utils, это расположение считается подсказкой для поиска Assembly2.dll. После этого среда выполнения проверяет наличие сборки в http://www.code.microsoft.com/utils/Assembly2.dll и http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Если сборка Assembly2 не обнаружена ни в одном из этих расположений, среда выполнения отправляет запрос установщику Windows.  
+ Например, если сборка Assembly1 ссылается на сборку Assembly2 и сборка Assembly1 была скачана с адреса `http://www.code.microsoft.com/utils`, это расположение считается подсказкой для поиска Assembly2.dll. После этого среда выполнения проверяет наличие сборки в `http://www.code.microsoft.com/utils/Assembly2.dll` и `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`. Если сборка Assembly2 не обнаружена ни в одном из этих расположений, среда выполнения отправляет запрос установщику Windows.  
   
 ## <a name="see-also"></a>См. также  
- [Рекомендации для загрузки сборок](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- [Развертывание](../../../docs/framework/deployment/index.md)
+- [Рекомендации для загрузки сборок](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+- [Развертывание](../../../docs/framework/deployment/index.md)

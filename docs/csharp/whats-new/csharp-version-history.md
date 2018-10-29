@@ -3,12 +3,12 @@ title: История языка C# (руководство по C#)
 description: На что был похож этот язык в ранних версиях и во что он превратился сейчас?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504417"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316263"
 ---
 # <a name="the-history-of-c"></a>История языка C# #
 
@@ -145,10 +145,10 @@ C# версии 3.0 был выпущен в конце 2007 года вмест
 
 Сейчас последним основным номером версии для C# является 7.0. В этой версии получили развитие некоторые функции из версии C# 6.0, однако компилятор в виде службы отсутствует. Ниже приведены некоторые из новых функций:
 
-- [Переменные Out](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
+- [Переменные Out](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
 - [Кортежи и деконструкция](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [Сопоставление шаблонов](./csharp-7.md#pattern-matching)
-- [Локальные функции](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [Локальные функции](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
 - [Расширенные элементы, воплощающие выражение](./csharp-7.md#more-expression-bodied-members)
 - [Локальные переменные и возвращаемые значения Ref](./csharp-7.md#ref-locals-and-returns)
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 348ae651-ccda-4f13-8eda-19e8337e9438
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fb06555f18c13f87347a5a76e6f4a3060777f02
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 44fcded298f33a420a505900f618c1c67f4b9b6f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744071"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50180066"
 ---
 # <a name="how-to-obtain-type-and-member-information-from-an-assembly"></a>Практическое руководство. Получение сведений о типах и членах из сборки
 Пространство имен <xref:System.Reflection> содержит много методов для получения сведений из сборки. В этом разделе демонстрируется один из них. Дополнительные сведения см. в разделе [Общие сведения об отражении](../../../docs/framework/reflection-and-codedom/reflection.md).  
@@ -29,5 +29,6 @@ ms.locfileid: "32744071"
  [!code-vb[Conceptual.Types.ViewInfo#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source6.vb#8)]  
   
 ## <a name="see-also"></a>См. также  
- [Программирование с использованием доменов приложений](./application-domains.md#programming-with-application-domains) [Отражение](../../../docs/framework/reflection-and-codedom/reflection.md)  
- [Использование доменов приложений](../../../docs/framework/app-domains/use.md)
+- [Программирование с использованием доменов приложений](./application-domains.md#programming-with-application-domains)
+- [Отражение](../../../docs/framework/reflection-and-codedom/reflection.md)  
+- [Использование доменов приложений](../../../docs/framework/app-domains/use.md)

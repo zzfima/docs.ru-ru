@@ -11,11 +11,11 @@ ms.assetid: 6a600fe5-3af3-4c64-82da-10a0a8e2d79b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 65492beb888da1986f456d3fd000fc02f340f3c4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398710"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121107"
 ---
 # <a name="weak-references"></a>Слабые ссылки
 Сборщик мусора не может собрать объект, используемый приложением, пока код приложения взаимодействует с этим объектом. Говорят, что приложение имеет строгую ссылку на объект.  

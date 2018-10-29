@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 5e53e0a3578c19b09f5327f444d1a5c013ad4cd9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106581"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194076"
 ---
 # <a name="subscribing-to-events"></a>Подписка на события
 
@@ -152,7 +152,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 В следующем коде показано, как можно создать одну транзакцию с несколькими объектами DbContext — один контекст связан с исходными обновляемыми данными, а второй — с таблицей IntegrationEventLog.
 
-Обратите внимание, что транзакция в приведенном ниже примере кода не будет устойчивой, если при выполнении кода возникнут проблемы с подключением к базе данных. Это может произойти в облачных системах, таких как база данных SQL Azure, которые могут перемещать базы данных между серверами. Реализация устойчивых транзакций в нескольких контекстах описана в разделе [Реализация устойчивых SQL-соединений с платформой Entity Framework Core](#implementing_resilient_EFCore_SQL_conns).
+Обратите внимание, что транзакция в приведенном ниже примере кода не будет устойчивой, если при выполнении кода возникнут проблемы с подключением к базе данных. Это может произойти в облачных системах, таких как база данных SQL Azure, которые могут перемещать базы данных между серверами. Реализация устойчивых транзакций в нескольких контекстах описана в разделе [Реализация устойчивых SQL-соединений с платформой Entity Framework Core](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md).
 
 Чтобы было понятнее, в следующем примере показан весь процесс в одном фрагменте кода. Но в приложении eShopOnContainers для простоты выполнен рефакторинг и разделение этой логики на несколько классов.
 
@@ -183,7 +183,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
   catalogItem = productToUpdate; 
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if !(raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent) 
   {
       await _catalogContext.SaveChangesAsync();
   }
@@ -317,7 +317,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
 -   **Ветвление eShopOnContainers с использованием NServiceBus (Particular Software)**
-    [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
+    [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
 -   **Обмен сообщениями на основе событий**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
@@ -326,7 +326,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 -   **Канал публикации и подписки**
-    [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+    [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **Взаимодействие между ограниченными контекстами**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)

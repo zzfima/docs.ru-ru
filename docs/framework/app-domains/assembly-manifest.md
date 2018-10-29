@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8e40fab9-549d-4731-aec2-ffa47a382de0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0f5d8e2e465e9dfa64a57c5ec7b99001f768492
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a0b68eaefcd2901f9cf05d491459b18f94a2614a
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753655"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49415074"
 ---
 # <a name="assembly-manifest"></a>Манифест сборки
 Любая сборка, статическая или динамическая, содержит коллекцию данных с описанием того, как ее элементы связаны друг с другом. Эти метаданные содержатся в манифесте сборки. Манифест сборки содержит все метаданные, необходимые для задания требований сборки к версиям и удостоверения безопасности, а также все метаданные, необходимые для определения области действия сборки и разрешения ссылок на ресурсы и классы. Манифест сборки может храниться в PE-файле (EXE или DLL) с кодом MSIL или же в отдельном PE-файле, содержащем только данные манифеста.  
@@ -55,7 +55,7 @@ ms.locfileid: "32753655"
  С помощью задания атрибутов сборки в коде можно добавить или изменить некоторые данные в манифесте сборки. Можно изменить данные о версии и информационные атрибуты, включая сведения о товарном знаке, авторском праве, продукте, компании и информационной версии. Полный список атрибутов сборки см. в разделе [Настройка атрибутов сборки](../../../docs/framework/app-domains/set-assembly-attributes.md).  
   
 ## <a name="see-also"></a>См. также  
- [Содержимое сборок](../../../docs/framework/app-domains/assembly-contents.md)  
- [Управление версиями сборок](../../../docs/framework/app-domains/assembly-versioning.md)  
- [Создание вспомогательных сборок](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
- [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [Содержимое сборок](../../../docs/framework/app-domains/assembly-contents.md)  
+- [Управление версиями сборок](../../../docs/framework/app-domains/assembly-versioning.md)  
+- [Создание вспомогательных сборок](../../../docs/framework/resources/creating-satellite-assemblies-for-desktop-apps.md)  
+- [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)

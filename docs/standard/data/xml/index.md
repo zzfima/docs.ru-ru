@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f286d0f64478bfc46ca207086e4a6b918ee47b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b5c774d566766936ebe043f264040ce26b8e9e3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576094"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202963"
 ---
 # <a name="xml-documents-and-data"></a>XML-документы и данные
 Платформа .NET Framework имеет всеобъемлющий и интегрированный набор классов, с помощью которых можно легко создавать приложения, использующие XML. Классы из следующих пространств имен поддерживают синтаксический анализ и запись XML-кода, изменение XML-данных в памяти, проверку данных и преобразование XSLT.  
@@ -35,7 +35,7 @@ ms.locfileid: "33576094"
   
 -   Схемы из класса <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> поддерживают рекомендации W3C [Схема XML. Часть 1. Структуры](https://www.w3.org/TR/xmlschema-1/) и [Схема XML. Часть 2. Типы данных](https://www.w3.org/TR/xmlschema-2/).  
   
--   Классы в пространстве имен <xref:System.Xml.Xsl?displayProperty=nameWithType> поддерживают преобразования XSLT, соответствующие рекомендациям [W3C XSLT 1.0](http://www.w3.org/TR/xslt).  
+-   Классы в пространстве имен <xref:System.Xml.Xsl?displayProperty=nameWithType> поддерживают преобразования XSLT, соответствующие рекомендациям [W3C XSLT 1.0](https://www.w3.org/TR/xslt).  
   
  Классы XML в платформе .NET Framework предоставляют следующие преимущества.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "33576094"
  Описывает использование класса <xref:System.Xml.XmlNamespaceManager> для хранения и ведения информации о пространствах имен.  
   
  [Поддержка типов в классах System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
- Описывает сопоставление типов данных XML с типами CLR, преобразование типов данных XML и другие функции по работе с типами, которые есть в классах <xref:System.Xml>.  
+ Описывает сопоставление типов данных XML с типами CLR, преобразование типов данных XML и другие возможности по работе с типами, которые есть в классах <xref:System.Xml>.  
   
 ## <a name="related-sections"></a>Связанные разделы  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  

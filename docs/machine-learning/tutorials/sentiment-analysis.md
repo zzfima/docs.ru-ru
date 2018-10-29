@@ -4,12 +4,12 @@ description: На примере двоичной классификации с 
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7d2935fafe9dbad28205c8a896d97d80474a686f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fd0a1ad246c6d50db35e3d0f0332a82b256902c1
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47436145"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453168"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Руководство. Использование ML.NET для анализа тональности методом двоичной классификации
 
@@ -175,11 +175,11 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 ## <a name="ingest-the-data"></a>Прием данных
 
-Инициализируйте новый экземпляр <xref:Microsoft.ML.LearningPipeline>, который будет содержать процедуры загрузки, обработки данных, присвоения признаков и саму модель. Добавьте следующий код в первую строку метода `Train`:
+Инициализируйте новый экземпляр <xref:Microsoft.ML.Legacy.LearningPipeline>, который будет содержать процедуры загрузки, обработки данных, присвоения признаков и саму модель. Добавьте следующий код в первую строку метода `Train`:
 
 [!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
 
-Объект <xref:Microsoft.ML.Data.TextLoader> является первой частью конвейера. Этот объект загружает файл с обучающими данными.
+Объект <xref:Microsoft.ML.Legacy.Data.TextLoader> является первой частью конвейера. Этот объект загружает файл с обучающими данными.
 
 [!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
 
@@ -187,13 +187,13 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 Предварительная обработка и очистка данных — это очень важные задачи, которые нужно выполнить перед использованием набора данных для машинного обучения. Необработанные данные часто содержат много шума, недостаточно надежны и в них могут быть пропуски. Использование данных напрямую без этих задач моделирования может дать неправильные результаты. Конвейеры преобразования ML.NET позволяют создать пользовательский набор преобразований и применить их к данным перед началом обучения или проверки. Основной целью преобразования является присвоение признаков. Конвейер преобразования хорош тем, что вам достаточно лишь преобразовать определение конвейера и сохранить его, чтобы автоматически применить к тестовым данным.
 
-Примените <xref:Microsoft.ML.Transforms.TextFeaturizer>, чтобы преобразовать столбец `SentimentText` в [числовой вектор](../resources/glossary.md#numerical-feature-vector), который называется `Features` в алгоритмах машинного обучения. Это этап предварительной обработки и присвоения признаков. Дополнительные компоненты из ML.NET могут дать более точные результаты для вашей модели. Добавьте `TextFeaturizer` в конвейер на следующей строке кода:
+Примените <xref:Microsoft.ML.Legacy.Transforms.TextFeaturizer>, чтобы преобразовать столбец `SentimentText` в [числовой вектор](../resources/glossary.md#numerical-feature-vector), который называется `Features` в алгоритмах машинного обучения. Это этап предварительной обработки и присвоения признаков. Дополнительные компоненты из ML.NET могут дать более точные результаты для вашей модели. Добавьте `TextFeaturizer` в конвейер на следующей строке кода:
 
 [!code-csharp[TextFeaturizer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizer to the pipeline")]
 
 ## <a name="choose-a-learning-algorithm"></a>Выбор алгоритма обучения
 
-Объект <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier> представляет собой средство обучения по дереву принятия решений, которое мы применим для нашего конвейера. Как и на шаге присвоения признаков, разные средства обучения из ML.NET и разные параметры для них позволяют получить разные результаты. Для настройки результатов можно установить [гиперпараметры](../resources/glossary.md#hyperparameter), например <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumTrees>, <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumLeaves> или <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs>. Гиперпараметры устанавливаются до того, как на модель повлияет что-то другое, и различаются для разных моделей. Они позволяют настроить дерево принятия решений, но большие значения могут отрицательно повлиять на производительность.
+Объект <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier> представляет собой средство обучения по дереву принятия решений, которое мы применим для нашего конвейера. Как и на шаге присвоения признаков, разные средства обучения из ML.NET и разные параметры для них позволяют получить разные результаты. Для настройки результатов можно установить [гиперпараметры](../resources/glossary.md#hyperparameter), например <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumTrees>, <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumLeaves> или <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs>. Гиперпараметры устанавливаются до того, как на модель повлияет что-то другое, и различаются для разных моделей. Они позволяют настроить дерево принятия решений, но большие значения могут отрицательно повлиять на производительность.
 
 Добавьте следующий код в метод `Train`:
 
@@ -201,7 +201,7 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 ## <a name="train-the-model"></a>Обучение модели
 
-Обучения модели <xref:Microsoft.ML.PredictionModel%602> выполняется по набору данных, который вы ранее скачали и преобразовали. `pipeline.Train<SentimentData, SentimentPrediction>()` обучает конвейер (загружает данные, обучает средство присвоения признаков и средство обучения). Эксперимент не выполняется, пока этот процесс не закончится.
+Обучения модели <xref:Microsoft.ML.Legacy.PredictionModel%602> выполняется по набору данных, который вы ранее скачали и преобразовали. `pipeline.Train<SentimentData, SentimentPrediction>()` обучает конвейер (загружает данные, обучает средство присвоения признаков и средство обучения). Эксперимент не выполняется, пока этот процесс не закончится.
 
 Добавьте следующий код в метод `Train`:
 
@@ -239,15 +239,15 @@ public static void Evaluate(PredictionModel<SentimentData, SentimentPrediction> 
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
 
-Класс <xref:Microsoft.ML.Data.TextLoader> загружает новый тестовый набор данных с той же схемой. С помощью этого набора данных вы можете оценить модели для проверки ее качества. Добавьте следующий код в метод `Evaluate`:
+Класс <xref:Microsoft.ML.Legacy.Data.TextLoader> загружает новый тестовый набор данных с той же схемой. С помощью этого набора данных вы можете оценить модели для проверки ее качества. Добавьте следующий код в метод `Evaluate`:
 
 [!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
 
-Объект <xref:Microsoft.ML.Models.BinaryClassificationEvaluator> вычисляет метрики качества для `PredictionModel` на основе указанного набора данных. Чтобы просмотреть эти метрики, добавьте средство оценки в следующей строке метода `Evaluate`, используя следующий код:
+Объект <xref:Microsoft.ML.Legacy.Models.BinaryClassificationEvaluator> вычисляет метрики качества для `PredictionModel` на основе указанного набора данных. Чтобы просмотреть эти метрики, добавьте средство оценки в следующей строке метода `Evaluate`, используя следующий код:
 
 [!code-csharp[BinaryEvaluator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#14 "Create the binary evaluator")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationMetrics> содержит общие метрики, вычисляемые с помощью средств оценки двоичной классификации. Чтобы отобразить их для оценки качества модели, сначала метрики необходимо получить. Добавьте следующий код:
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics> содержит общие метрики, вычисляемые с помощью средств оценки двоичной классификации. Чтобы отобразить их для оценки качества модели, сначала метрики необходимо получить. Добавьте следующий код:
 
 [!code-csharp[CreateMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#15 "Evaluate the model and create metrics")]
 
@@ -283,7 +283,7 @@ public static void Predict(PredictionModel<SentimentData, SentimentPrediction> m
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for predictions")]
 
-Теперь у вас есть готовая модель, и ее можно использовать для прогнозирования положительной или отрицательной тональности по данным комментариев с помощью метода <xref:Microsoft.ML.PredictionModel.Predict%2A?displayProperty=nameWithType>. Чтобы получить прогноз, примените `Predict` для новых данных. Обратите внимание, что входные данные имеют строковый формат, а модель выполняет присвоение признаков. Конвейер синхронизируется во время обучения и прогнозирования. Вам не нужно писать для прогнозирования отдельный код предварительной обработки и присвоения признаков. Кроме того, этот API выполняет как пакетное, так и разовое прогнозирование.
+Теперь у вас есть готовая модель, и ее можно использовать для прогнозирования положительной или отрицательной тональности по данным комментариев с помощью метода <xref:Microsoft.ML.Legacy.PredictionModel.Predict%2A?displayProperty=nameWithType>. Чтобы получить прогноз, примените `Predict` для новых данных. Обратите внимание, что входные данные имеют строковый формат, а модель выполняет присвоение признаков. Конвейер синхронизируется во время обучения и прогнозирования. Вам не нужно писать для прогнозирования отдельный код предварительной обработки и присвоения признаков. Кроме того, этот API выполняет как пакетное, так и разовое прогнозирование.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create predictions of sentiments")]
 

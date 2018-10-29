@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
 ms.openlocfilehash: 3f8dfff59acaa10fa99874dde2eb6eb6ed04e8fb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47399941"
+ms.lasthandoff: 10/02/2018
+ms.locfileid: "48035952"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Практическое руководство. Отладка приложений служб Windows
 Служба должна запускаться из диспетчера управления службами, а не из Visual Studio. Поэтому, процесс отладки службы сложнее, чем отладка приложений Visual Studio других типов. Для отладки службы необходимо запустить службу, а затем подключить отладчик к процессу, в котором она выполняется. Приложение можно отлаживать с помощью всех стандартных средств отладки Visual Studio.  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45f8ad3bd9226ffd821fc792cdd4d0a6dac1a414
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744633"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191068"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Практическое руководство. Подписание сборки строгим именем
 Существует несколько способов подписать сборку строгим именем:  
@@ -98,9 +98,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание и использование сборок со строгими именами](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [Практическое руководство. Создание пары открытого и закрытого ключей](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
- [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Отложенная подпись сборки](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- [Управление сборками и подписывание манифестов](/visualstudio/ide/managing-assembly-and-manifest-signing)  
- [Страница "Подписывание" в конструкторе проектов](https://msdn.microsoft.com/library/0k50fs3b)
+- [Создание и использование сборок со строгими именами](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [Практическое руководство. Создание пары открытого и закрытого ключей](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+- [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+- [Отложенная подпись сборки](../../../docs/framework/app-domains/delay-sign-assembly.md)  
+- [Управление сборками и подписывание манифестов](/visualstudio/ide/managing-assembly-and-manifest-signing)  
+- [Страница "Подписывание" в конструкторе проектов](/visualstudio/ide/reference/signing-page-project-designer)

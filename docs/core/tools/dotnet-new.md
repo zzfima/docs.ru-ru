@@ -3,13 +3,13 @@ title: Команда dotnet new — интерфейс командной ст
 description: Команда dotnet new создает проекты .NET Core на основе указанного шаблона.
 author: mairaw
 ms.author: mairaw
-ms.date: 07/31/2018
-ms.openlocfilehash: 396c4ddf09854fa4582226bdb1422f8c929e459b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/24/2018
+ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47208637"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188210"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -65,27 +65,27 @@ dotnet new [-h|--help]
 
 Команда содержит список шаблонов по умолчанию. Используйте `dotnet new -l`, чтобы получить список доступных шаблонов. В приведенной ниже таблице представлены шаблоны, которые устанавливаются вместе с пакетом SDK для .NET Core 2.1.300. Язык по умолчанию для шаблона указан внутри квадратных скобок.
 
-|Описание шаблона                          | Имя шаблона   | Языки     |
-|----------------------------------------------|-----------------|---------------|
-| Консольное приложение                          | `console`       | [C#], F#, VB  |
-| Библиотека классов                                | `classlib`      | [C#], F#, VB  |
-| Проект модульного теста                            | `mstest`        | [C#], F#, VB  |
-| Проект теста xUnit                           | `xunit`         | [C#], F#, VB  |
-| Страница Razor                                   | `page`          | [C#]          |
-| MVC ViewImports                              | `viewimports`   | [C#]          |
-| MVC ViewStart                                | `viewstart`     | [C#]          |
-| Пустой ASP.NET Core                           | `web`           | [C#], F#      |
-| Веб-приложение ASP.NET Core (Model-View-Controller) | `mvc`           | [C#], F#      |
-| Веб-приложение ASP.NET Core                         | `razor`         | [C#]          |
-| ASP.NET Core с Angular                    | `angular`       | [C#]          |
-| ASP.NET Core с React.js                   | `react`         | [C#]          |
-| ASP.NET Core с React.js и Redux         | `reactredux`    | [C#]          |
-| Веб-API ASP.NET Core                         | `webapi`        | [C#], F#      |
-| Библиотека классов Razor                          | `razorclasslib` | [C#]          |
-| Файл global.json                             | `globaljson`    |               |
-| Конфигурация NuGet                                 | `nugetconfig`   |               |
-| Веб-конфигурация                                   | `webconfig`     |               |
-| Файл решения                                | `sln`           |               |
+|Описание шаблона                          | Имя шаблона    | Языки     |
+|----------------------------------------------|------------------|---------------|
+| Консольное приложение                          | `console`        | [C#], F#, VB  |
+| Библиотека классов                                | `classlib`       | [C#], F#, VB  |
+| Проект модульного теста                            | `mstest`         | [C#], F#, VB  |
+| Проект теста xUnit                           | `xunit`          | [C#], F#, VB  |
+| Страница Razor                                   | `page`           | [C#]          |
+| MVC ViewImports                              | `viewimports`    | [C#]          |
+| MVC ViewStart                                | `viewstart`      | [C#]          |
+| Пустой ASP.NET Core                           | `web`            | [C#], F#      |
+| Веб-приложение ASP.NET Core (Model-View-Controller) | `mvc`            | [C#], F#      |
+| Веб-приложение ASP.NET Core                         | `razor`, `webapp`| [C#]          |
+| ASP.NET Core с Angular                    | `angular`        | [C#]          |
+| ASP.NET Core с React.js                   | `react`          | [C#]          |
+| ASP.NET Core с React.js и Redux         | `reactredux`     | [C#]          |
+| Веб-API ASP.NET Core                         | `webapi`         | [C#], F#      |
+| Библиотека классов Razor                          | `razorclasslib`  | [C#]          |
+| Файл global.json                             | `globaljson`     |               |
+| Конфигурация NuGet                                 | `nugetconfig`    |               |
+| Веб-конфигурация                                   | `webconfig`      |               |
+| Файл решения                                | `sln`            |               |
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 22bb2117e7b78596e1fb6af63584f51b066564c9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 948961d19518343c1f8ee14cd48dc33ec72cf23d
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208241"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49478930"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>Таблица явных числовых преобразований (Справочник по C#)
 
@@ -61,7 +61,7 @@ ms.locfileid: "47208241"
   
 - При преобразовании из `decimal` в `float` или `double` значение `decimal` округляется до ближайшего значения `double` или `float`.  
   
- Дополнительные сведения о явных преобразованиях см. в разделе [Явные преобразования](/dotnet/csharp/language-reference/language-specification/conversions#explicit-conversions) в [спецификации языка C#](../language-specification/index.md).
+ Дополнительные сведения о явных преобразованиях см. в разделе [Явные преобразования](~/_csharplang/spec/conversions.md#explicit-conversions) в [спецификации языка C#](../language-specification/index.md).
   
 ## <a name="see-also"></a>См. также
 

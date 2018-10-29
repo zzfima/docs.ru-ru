@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47456029"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189697"
 ---
 # <a name="net-architectural-components"></a>Архитектурные компоненты .NET
 
@@ -63,7 +63,7 @@ Mono обычно используется с JIT-компилятором, но
 
 UWP представляет собой реализацию .NET, которая используется для создания современных приложений Windows с поддержкой сенсорного ввода и программного обеспечения для Интернета вещей (IoT). Она предназначена для объединения различных типов устройств, которые могут потребоваться, включая ПК, планшеты, планшетофоны, телефоны и даже Xbox. UWP предоставляет много служб, таких как централизованный магазин приложений, среда выполнения (AppContainer) и набор API-интерфейсов Windows для использования вместо Win32 (WinRT). Приложения могут быть написаны на C++, C#, VB.NET и JavaScript. При использовании C# и VB.NET API-интерфейсы .NET предоставляются .NET Core.
 
-Дополнительные сведения о UWP см. в разделе [Введение в работу с универсальной платформой Windows](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide).
+Дополнительные сведения о UWP см. в разделе [Введение в работу с универсальной платформой Windows](/windows/uwp/get-started/universal-application-platform-guide).
 
 ## <a name="net-runtimes"></a>Среды выполнения .NET
 
