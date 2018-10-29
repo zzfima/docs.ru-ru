@@ -2,21 +2,20 @@
 title: System.ServiceModel.Security.SecurityTokenProviderOpened
 ms.date: 03/30/2017
 ms.assetid: b8222922-35d9-4361-8bc0-d360164a9266
-author: BrucePerlerMS
-ms.openlocfilehash: 179a27b34e12d9dbefe721c8b4325861e6b9334b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 86351d40c04da425eb5c09daac4946b51173d738
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396787"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198137"
 ---
-# <a name="systemservicemodelsecuritysecuritytokenprovideropened"></a><span data-ttu-id="539f5-102">System.ServiceModel.Security.SecurityTokenProviderOpened</span><span class="sxs-lookup"><span data-stu-id="539f5-102">System.ServiceModel.Security.SecurityTokenProviderOpened</span></span>
-<span data-ttu-id="539f5-103">System.ServiceModel.Security.SecurityTokenProviderOpened</span><span class="sxs-lookup"><span data-stu-id="539f5-103">System.ServiceModel.Security.SecurityTokenProviderOpened</span></span>  
+# <a name="systemservicemodelsecuritysecuritytokenprovideropened"></a><span data-ttu-id="b9076-102">System.ServiceModel.Security.SecurityTokenProviderOpened</span><span class="sxs-lookup"><span data-stu-id="b9076-102">System.ServiceModel.Security.SecurityTokenProviderOpened</span></span>
+<span data-ttu-id="b9076-103">System.ServiceModel.Security.SecurityTokenProviderOpened</span><span class="sxs-lookup"><span data-stu-id="b9076-103">System.ServiceModel.Security.SecurityTokenProviderOpened</span></span>  
   
-## <a name="description"></a><span data-ttu-id="539f5-104">Описание</span><span class="sxs-lookup"><span data-stu-id="539f5-104">Description</span></span>  
- <span data-ttu-id="539f5-105">Поставщик маркеров безопасности был открыт.</span><span class="sxs-lookup"><span data-stu-id="539f5-105">A security token provider was opened.</span></span>  
+## <a name="description"></a><span data-ttu-id="b9076-104">Описание</span><span class="sxs-lookup"><span data-stu-id="b9076-104">Description</span></span>  
+ <span data-ttu-id="b9076-105">Поставщик маркеров безопасности был открыт.</span><span class="sxs-lookup"><span data-stu-id="b9076-105">A security token provider was opened.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="539f5-106">См. также</span><span class="sxs-lookup"><span data-stu-id="539f5-106">See Also</span></span>  
- [<span data-ttu-id="539f5-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="539f5-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="539f5-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="539f5-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="539f5-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="539f5-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="b9076-106">См. также</span><span class="sxs-lookup"><span data-stu-id="b9076-106">See Also</span></span>  
+ [<span data-ttu-id="b9076-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="b9076-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="b9076-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="b9076-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="b9076-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="b9076-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

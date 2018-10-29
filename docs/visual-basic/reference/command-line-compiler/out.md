@@ -7,44 +7,44 @@ helpviewer_keywords:
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
 ms.openlocfilehash: b619505f6e87efd1c3b18e1bed2862d3467984a7
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041093"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199933"
 ---
-# <a name="-out-visual-basic"></a><span data-ttu-id="a5357-102">-out (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a5357-102">-out (Visual Basic)</span></span>
-<span data-ttu-id="a5357-103">Задает имя выходного файла.</span><span class="sxs-lookup"><span data-stu-id="a5357-103">Specifies the name of the output file.</span></span>  
+# <a name="-out-visual-basic"></a><span data-ttu-id="fb282-102">-out (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fb282-102">-out (Visual Basic)</span></span>
+<span data-ttu-id="fb282-103">Задает имя выходного файла.</span><span class="sxs-lookup"><span data-stu-id="fb282-103">Specifies the name of the output file.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5357-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a5357-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fb282-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fb282-104">Syntax</span></span>  
   
 ```  
 -out:filename  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="a5357-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="a5357-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="fb282-105">Аргументы</span><span class="sxs-lookup"><span data-stu-id="fb282-105">Arguments</span></span>  
   
-|<span data-ttu-id="a5357-106">Термин</span><span class="sxs-lookup"><span data-stu-id="a5357-106">Term</span></span>|<span data-ttu-id="a5357-107">Определение</span><span class="sxs-lookup"><span data-stu-id="a5357-107">Definition</span></span>|  
+|<span data-ttu-id="fb282-106">Термин</span><span class="sxs-lookup"><span data-stu-id="fb282-106">Term</span></span>|<span data-ttu-id="fb282-107">Определение</span><span class="sxs-lookup"><span data-stu-id="fb282-107">Definition</span></span>|  
 |---|---|  
-|`filename`|<span data-ttu-id="a5357-108">Обязательно.</span><span class="sxs-lookup"><span data-stu-id="a5357-108">Required.</span></span> <span data-ttu-id="a5357-109">Создает имя выходного файла компилятора.</span><span class="sxs-lookup"><span data-stu-id="a5357-109">The name of the output file the compiler creates.</span></span> <span data-ttu-id="a5357-110">Если имя файла содержит пробел, заключите имя в кавычки (» «).</span><span class="sxs-lookup"><span data-stu-id="a5357-110">If the file name contains a space, enclose the name in quotation marks (" ").</span></span>|  
+|`filename`|<span data-ttu-id="fb282-108">Обязательно.</span><span class="sxs-lookup"><span data-stu-id="fb282-108">Required.</span></span> <span data-ttu-id="fb282-109">Создает имя выходного файла компилятора.</span><span class="sxs-lookup"><span data-stu-id="fb282-109">The name of the output file the compiler creates.</span></span> <span data-ttu-id="fb282-110">Если имя файла содержит пробел, заключите имя в кавычки (» «).</span><span class="sxs-lookup"><span data-stu-id="fb282-110">If the file name contains a space, enclose the name in quotation marks (" ").</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="a5357-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="a5357-111">Remarks</span></span>  
- <span data-ttu-id="a5357-112">Укажите полное имя и расширение файла для создания.</span><span class="sxs-lookup"><span data-stu-id="a5357-112">Specify the full name and extension of the file to create.</span></span> <span data-ttu-id="a5357-113">Если этого не сделать, файл .exe принимает его имя из исходного кода файла, содержащего `Sub Main` процедуры и DLL-файла — имя первого файла исходного кода.</span><span class="sxs-lookup"><span data-stu-id="a5357-113">If you do not, the .exe file takes its name from the source-code file containing the `Sub Main` procedure, and the .dll file takes its name from the first source-code file.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fb282-111">Примечания</span><span class="sxs-lookup"><span data-stu-id="fb282-111">Remarks</span></span>  
+ <span data-ttu-id="fb282-112">Укажите полное имя и расширение файла для создания.</span><span class="sxs-lookup"><span data-stu-id="fb282-112">Specify the full name and extension of the file to create.</span></span> <span data-ttu-id="fb282-113">Если этого не сделать, файл .exe принимает его имя из исходного кода файла, содержащего `Sub Main` процедуры и DLL-файла — имя первого файла исходного кода.</span><span class="sxs-lookup"><span data-stu-id="fb282-113">If you do not, the .exe file takes its name from the source-code file containing the `Sub Main` procedure, and the .dll file takes its name from the first source-code file.</span></span>  
   
- <span data-ttu-id="a5357-114">Если указать имя файла без расширения .exe или .dll, компилятор автоматически добавляет расширение, в зависимости от значения, указанные для `-target` параметр компилятора.</span><span class="sxs-lookup"><span data-stu-id="a5357-114">If you specify a file name without an .exe or .dll extension, the compiler automatically adds the extension for you, depending on the value specified for the `-target` compiler option.</span></span>  
+ <span data-ttu-id="fb282-114">Если указать имя файла без расширения .exe или .dll, компилятор автоматически добавляет расширение, в зависимости от значения, указанные для `-target` параметр компилятора.</span><span class="sxs-lookup"><span data-stu-id="fb282-114">If you specify a file name without an .exe or .dll extension, the compiler automatically adds the extension for you, depending on the value specified for the `-target` compiler option.</span></span>  
   
-|<span data-ttu-id="a5357-115">Чтобы задать - out в среде разработки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="a5357-115">To set -out in the Visual Studio integrated development environment</span></span>|  
+|<span data-ttu-id="fb282-115">Чтобы задать - out в среде разработки Visual Studio</span><span class="sxs-lookup"><span data-stu-id="fb282-115">To set -out in the Visual Studio integrated development environment</span></span>|  
 |---|  
-|<span data-ttu-id="a5357-116">1.  Выберите проект в **Обозревателе решений**.</span><span class="sxs-lookup"><span data-stu-id="a5357-116">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="a5357-117">В меню **Проект** выберите пункт **Свойства**.</span><span class="sxs-lookup"><span data-stu-id="a5357-117">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="a5357-118">2.  Перейдите на вкладку **Приложение** .</span><span class="sxs-lookup"><span data-stu-id="a5357-118">2.  Click the **Application** tab.</span></span><br /><span data-ttu-id="a5357-119">3.  Измените значение в **имя сборки** поле.</span><span class="sxs-lookup"><span data-stu-id="a5357-119">3.  Modify the value in the **Assembly Name** box.</span></span>|  
+|<span data-ttu-id="fb282-116">1.  Выберите проект в **Обозревателе решений**.</span><span class="sxs-lookup"><span data-stu-id="fb282-116">1.  Have a project selected in **Solution Explorer**.</span></span> <span data-ttu-id="fb282-117">В меню **Проект** выберите пункт **Свойства**.</span><span class="sxs-lookup"><span data-stu-id="fb282-117">On the **Project** menu, click **Properties**.</span></span> <br /><span data-ttu-id="fb282-118">2.  Перейдите на вкладку **Приложение** .</span><span class="sxs-lookup"><span data-stu-id="fb282-118">2.  Click the **Application** tab.</span></span><br /><span data-ttu-id="fb282-119">3.  Измените значение в **имя сборки** поле.</span><span class="sxs-lookup"><span data-stu-id="fb282-119">3.  Modify the value in the **Assembly Name** box.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="a5357-120">Пример</span><span class="sxs-lookup"><span data-stu-id="a5357-120">Example</span></span>  
- <span data-ttu-id="a5357-121">Следующий код компилирует `T2.vb` и создает выходной файл `T2.exe`.</span><span class="sxs-lookup"><span data-stu-id="a5357-121">The following code compiles `T2.vb` and creates output file `T2.exe`.</span></span>  
+## <a name="example"></a><span data-ttu-id="fb282-120">Пример</span><span class="sxs-lookup"><span data-stu-id="fb282-120">Example</span></span>  
+ <span data-ttu-id="fb282-121">Следующий код компилирует `T2.vb` и создает выходной файл `T2.exe`.</span><span class="sxs-lookup"><span data-stu-id="fb282-121">The following code compiles `T2.vb` and creates output file `T2.exe`.</span></span>  
   
 ```console
 vbc t2.vb -out:t3.exe  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="a5357-122">См. также</span><span class="sxs-lookup"><span data-stu-id="a5357-122">See Also</span></span>  
- [<span data-ttu-id="a5357-123">Компилятор Visual Basic с интерфейсом командной строки</span><span class="sxs-lookup"><span data-stu-id="a5357-123">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
- [<span data-ttu-id="a5357-124">-target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a5357-124">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)  
- [<span data-ttu-id="a5357-125">Примеры командных строк компиляции</span><span class="sxs-lookup"><span data-stu-id="a5357-125">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="fb282-122">См. также</span><span class="sxs-lookup"><span data-stu-id="fb282-122">See Also</span></span>  
+ [<span data-ttu-id="fb282-123">Компилятор Visual Basic с интерфейсом командной строки</span><span class="sxs-lookup"><span data-stu-id="fb282-123">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)  
+ [<span data-ttu-id="fb282-124">-target (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fb282-124">-target (Visual Basic)</span></span>](../../../visual-basic/reference/command-line-compiler/target.md)  
+ [<span data-ttu-id="fb282-125">Примеры командных строк компиляции</span><span class="sxs-lookup"><span data-stu-id="fb282-125">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

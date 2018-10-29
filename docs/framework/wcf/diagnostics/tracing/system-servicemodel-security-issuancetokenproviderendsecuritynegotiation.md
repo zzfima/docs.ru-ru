@@ -2,21 +2,20 @@
 title: System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation
 ms.date: 03/30/2017
 ms.assetid: 44a0b49e-fbd7-4649-a29a-1d1a6cd36a90
-author: BrucePerlerMS
-ms.openlocfilehash: 9a567d51b8c9ebaeea734a1b0cb6ac00bb0a3310
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6dfd3cfc8a99baa7359e4b8159199031001a15ec
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197920"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198280"
 ---
-# <a name="systemservicemodelsecurityissuancetokenproviderendsecuritynegotiation"></a><span data-ttu-id="ec52f-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="ec52f-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>
-<span data-ttu-id="ec52f-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="ec52f-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>  
+# <a name="systemservicemodelsecurityissuancetokenproviderendsecuritynegotiation"></a><span data-ttu-id="21291-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="21291-102">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>
+<span data-ttu-id="21291-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span><span class="sxs-lookup"><span data-stu-id="21291-103">System.ServiceModel.Security.IssuanceTokenProviderEndSecurityNegotiation</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ec52f-104">Описание</span><span class="sxs-lookup"><span data-stu-id="ec52f-104">Description</span></span>  
- <span data-ttu-id="ec52f-105">IssuanceTokenProvider завершил согласование безопасности.</span><span class="sxs-lookup"><span data-stu-id="ec52f-105">The IssuanceTokenProvider has completed the security negotiation.</span></span>  
+## <a name="description"></a><span data-ttu-id="21291-104">Описание</span><span class="sxs-lookup"><span data-stu-id="21291-104">Description</span></span>  
+ <span data-ttu-id="21291-105">IssuanceTokenProvider завершил согласование безопасности.</span><span class="sxs-lookup"><span data-stu-id="21291-105">The IssuanceTokenProvider has completed the security negotiation.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec52f-106">См. также</span><span class="sxs-lookup"><span data-stu-id="ec52f-106">See Also</span></span>  
- [<span data-ttu-id="ec52f-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="ec52f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="ec52f-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="ec52f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="ec52f-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="ec52f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="21291-106">См. также</span><span class="sxs-lookup"><span data-stu-id="21291-106">See Also</span></span>  
+ [<span data-ttu-id="21291-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="21291-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="21291-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="21291-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="21291-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="21291-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
