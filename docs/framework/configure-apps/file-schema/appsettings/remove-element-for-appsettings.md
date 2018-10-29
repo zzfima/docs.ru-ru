@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 21fedf064596979dbfb4190d9956da616295af3c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e9b79a8319b320289f43adac5a82ef22fa5e32b0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752121"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199699"
 ---
-# <a name="remove-element-for-appsettings"></a>\<Удалите > элемент для \<appSettings >
+# <a name="remove-element-for-appsettings"></a>\<Удалить > элемент для \<appSettings >
 
 Удаляет пользовательские параметры приложения.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Удалите >**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<Удалить >**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -60,4 +60,4 @@ ms.locfileid: "32752121"
 
 ## <a name="see-also"></a>См. также
 
-[Схема файла конфигурации для платформы .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+- [Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
