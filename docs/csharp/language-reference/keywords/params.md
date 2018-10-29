@@ -9,35 +9,35 @@ helpviewer_keywords:
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
 ms.openlocfilehash: 089e31f3aad12c2303619e2a1998d0d6a5a0ad86
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47208780"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48844102"
 ---
-# <a name="params-c-reference"></a><span data-ttu-id="04234-102">params (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="04234-102">params (C# Reference)</span></span>
+# <a name="params-c-reference"></a><span data-ttu-id="5a465-102">params (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="5a465-102">params (C# Reference)</span></span>
 
-<span data-ttu-id="04234-103">С помощью ключевого слова `params` можно указать [параметр метода](method-parameters.md), принимающий переменное число аргументов.</span><span class="sxs-lookup"><span data-stu-id="04234-103">By using the `params` keyword, you can specify a [method parameter](method-parameters.md) that takes a variable number of arguments.</span></span>
+<span data-ttu-id="5a465-103">С помощью ключевого слова `params` можно указать [параметр метода](method-parameters.md), принимающий переменное число аргументов.</span><span class="sxs-lookup"><span data-stu-id="5a465-103">By using the `params` keyword, you can specify a [method parameter](method-parameters.md) that takes a variable number of arguments.</span></span>
 
-<span data-ttu-id="04234-104">Можно отправить список аргументов типа, указанного в объявлении параметра, с разделителями-запятыми, или массив аргументов указанного типа.</span><span class="sxs-lookup"><span data-stu-id="04234-104">You can send a comma-separated list of arguments of the type specified in the parameter declaration or an array of arguments of the specified type.</span></span> <span data-ttu-id="04234-105">Можно также не отправлять аргументы.</span><span class="sxs-lookup"><span data-stu-id="04234-105">You also can send no arguments.</span></span> <span data-ttu-id="04234-106">Если аргументы не отправляются, длина списка `params` равна нулю.</span><span class="sxs-lookup"><span data-stu-id="04234-106">If you send no arguments, the length of the `params` list is zero.</span></span>
+<span data-ttu-id="5a465-104">Можно отправить список аргументов типа, указанного в объявлении параметра, с разделителями-запятыми, или массив аргументов указанного типа.</span><span class="sxs-lookup"><span data-stu-id="5a465-104">You can send a comma-separated list of arguments of the type specified in the parameter declaration or an array of arguments of the specified type.</span></span> <span data-ttu-id="5a465-105">Можно также не отправлять аргументы.</span><span class="sxs-lookup"><span data-stu-id="5a465-105">You also can send no arguments.</span></span> <span data-ttu-id="5a465-106">Если аргументы не отправляются, длина списка `params` равна нулю.</span><span class="sxs-lookup"><span data-stu-id="5a465-106">If you send no arguments, the length of the `params` list is zero.</span></span>
 
-<span data-ttu-id="04234-107">В объявлении метода после ключевого слова `params` дополнительные параметры не допускаются, и в объявлении метода допускается только одно ключевое слово `params`.</span><span class="sxs-lookup"><span data-stu-id="04234-107">No additional parameters are permitted after the `params` keyword in a method declaration, and only one `params` keyword is permitted in a method declaration.</span></span>
+<span data-ttu-id="5a465-107">В объявлении метода после ключевого слова `params` дополнительные параметры не допускаются, и в объявлении метода допускается только одно ключевое слово `params`.</span><span class="sxs-lookup"><span data-stu-id="5a465-107">No additional parameters are permitted after the `params` keyword in a method declaration, and only one `params` keyword is permitted in a method declaration.</span></span>
 
-<span data-ttu-id="04234-108">Объявленный тип параметра `params` должен быть одномерным массивом, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="04234-108">The declared type of the `params` parameter must be a single-dimensional array, as the following example shows.</span></span> <span data-ttu-id="04234-109">В противном случае возникает ошибка компилятора [CS0225](../../misc/cs0225.md).</span><span class="sxs-lookup"><span data-stu-id="04234-109">Otherwise, a compiler error [CS0225](../../misc/cs0225.md) occurs.</span></span>
+<span data-ttu-id="5a465-108">Объявленный тип параметра `params` должен быть одномерным массивом, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="5a465-108">The declared type of the `params` parameter must be a single-dimensional array, as the following example shows.</span></span> <span data-ttu-id="5a465-109">В противном случае возникает ошибка компилятора [CS0225](../../misc/cs0225.md).</span><span class="sxs-lookup"><span data-stu-id="5a465-109">Otherwise, a compiler error [CS0225](../../misc/cs0225.md) occurs.</span></span>
 
-## <a name="example"></a><span data-ttu-id="04234-110">Пример</span><span class="sxs-lookup"><span data-stu-id="04234-110">Example</span></span>
+## <a name="example"></a><span data-ttu-id="5a465-110">Пример</span><span class="sxs-lookup"><span data-stu-id="5a465-110">Example</span></span>
 
-<span data-ttu-id="04234-111">В следующем примере показаны различные способы оправки аргументов параметру `params`.</span><span class="sxs-lookup"><span data-stu-id="04234-111">The following example demonstrates various ways in which arguments can be sent to a `params` parameter.</span></span>
+<span data-ttu-id="5a465-111">В следующем примере показаны различные способы оправки аргументов параметру `params`.</span><span class="sxs-lookup"><span data-stu-id="5a465-111">The following example demonstrates various ways in which arguments can be sent to a `params` parameter.</span></span>
 
 [!code-csharp[csrefKeywordsMethodParams#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsMethodParams/CS/csrefKeywordsMethodParams.cs#5)] 
 
-## <a name="c-language-specification"></a><span data-ttu-id="04234-112">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="04234-112">C# language specification</span></span>
+## <a name="c-language-specification"></a><span data-ttu-id="5a465-112">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="5a465-112">C# language specification</span></span>
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a><span data-ttu-id="04234-113">См. также</span><span class="sxs-lookup"><span data-stu-id="04234-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a465-113">См. также</span><span class="sxs-lookup"><span data-stu-id="5a465-113">See also</span></span>
 
-- [<span data-ttu-id="04234-114">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="04234-114">C# Reference</span></span>](../index.md)
-- [<span data-ttu-id="04234-115">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="04234-115">C# Programming Guide</span></span>](../../programming-guide/index.md)
-- [<span data-ttu-id="04234-116">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="04234-116">C# Keywords</span></span>](index.md)
-- [<span data-ttu-id="04234-117">Параметры методов</span><span class="sxs-lookup"><span data-stu-id="04234-117">Method Parameters</span></span>](method-parameters.md)
+- [<span data-ttu-id="5a465-114">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="5a465-114">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="5a465-115">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="5a465-115">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="5a465-116">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="5a465-116">C# Keywords</span></span>](index.md)
+- [<span data-ttu-id="5a465-117">Параметры методов</span><span class="sxs-lookup"><span data-stu-id="5a465-117">Method Parameters</span></span>](method-parameters.md)
