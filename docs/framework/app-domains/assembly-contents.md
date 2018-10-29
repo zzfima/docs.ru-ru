@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38c0081e5677ca65e8c730c7199ebac5d4c86261
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1aed7e1e9e85f746c4b55b10c59dd82e85565b00
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741832"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194843"
 ---
 # <a name="assembly-contents"></a>Содержимое сборок
 В общем случае статическая сборка может состоять из четырех элементов.  
@@ -49,6 +49,6 @@ ms.locfileid: "32741832"
  При проектировании исходного кода необходимо принять определенные решения о способе разделения функций приложения между одним или несколькими файлами. При проектировании кода .NET Framework необходимо принять аналогичные решения о способе разделения функций между одной или несколькими сборками.  
   
 ## <a name="see-also"></a>См. также  
- [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Манифест сборки](../../../docs/framework/app-domains/assembly-manifest.md)  
- [Вопросы безопасности сборок](../../../docs/framework/app-domains/assembly-security-considerations.md)
+- [Сборки в среде CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [Манифест сборки](../../../docs/framework/app-domains/assembly-manifest.md)  
+- [Вопросы безопасности сборок](../../../docs/framework/app-domains/assembly-security-considerations.md)

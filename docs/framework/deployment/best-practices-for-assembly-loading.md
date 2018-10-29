@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b05ec604f8493ba773d9de9af19acc70c023b8bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394157"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201586"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Рекомендации для загрузки сборок
 В этой статье рассматриваются способы избежания проблем с идентификацией типов, способных привести к исключениям <xref:System.InvalidCastException>, <xref:System.MissingMethodException> и другим ошибкам. В статье рассматриваются следующие рекомендации:  
@@ -164,9 +164,10 @@ ms.locfileid: "33394157"
   
  Обратите внимание, что для загрузки таких сборок можно использовать метод <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>. Так как они теперь расположены в пути поиска, они будут загружены в контексте загрузки по умолчанию, а не в контексте, из которого ведется загрузка. Тем не менее рекомендуется перейти к использованию метода <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> и полных отображаемых имен сборок, чтобы гарантировать, что всегда используются только правильные их версии.  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>  
- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>  
- [Надстройки и расширения среды](../../../docs/framework/add-ins/index.md)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
+- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
+- [Надстройки и расширения среды](../../../docs/framework/add-ins/index.md)

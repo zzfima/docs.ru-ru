@@ -17,14 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f4ab27a8e6cc5bd38620148b130823070e5102fa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 386b9d3cf0342784c09ed8fc7a815a242924b068
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198453"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194960"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Использование асинхронных сокетов клиента
 Асинхронный сокет клиента не приостанавливает работу приложения на то время, пока выполняются сетевые операции. Вместо этого он использует стандартную модель асинхронного программирования .NET Framework для обработки операций сетевого подключения в одном потоке, пока приложение продолжает работу в изначальном потоке. Асинхронные сокеты подходят для приложений, которые интенсивно используют сеть или не могут ждать, пока сетевые операции завершатся.  

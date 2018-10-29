@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4457bd6d5efd7404cdba6c5fbdbffa9f9eb62141
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 87346b28ff98c453949fe31aea4d0ef1880b0095
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743993"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192635"
 ---
 # <a name="delay-signing-an-assembly"></a>Отложенная подпись сборки
 Организация может располагать тщательно оберегаемой парой ключей, повседневный доступ к которой разработчикам не предоставляется. Открытый ключ часто является доступным, но доступ к закрытому ключу предоставляется лишь отдельным лицам. При разработке сборок со строгими именами каждая сборка, в которой имеется ссылка на другую сборку со строгим именем, должна содержать маркер открытого ключа, использованного для присвоения строгого имени второй сборке. Данный подход требует, чтобы открытый ключ был доступен во время процесса разработки.  
@@ -73,7 +73,7 @@ ms.locfileid: "32743993"
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)  
- [Практическое руководство. Создание пары открытого и закрытого ключей](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
- [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Практическое руководство. Создание пары открытого и закрытого ключей](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+- [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)

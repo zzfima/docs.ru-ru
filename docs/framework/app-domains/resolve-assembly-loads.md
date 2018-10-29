@@ -14,11 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5099e549-f4fd-49fb-a290-549edd456c6a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b1f814b8492120002013a8752caf96ba34785d6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bdd610ade931bedc9ee387b65b18efd1909ef58b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202215"
 ---
 # <a name="resolving-assembly-loads"></a>разрешение загрузки сборок
 В .NET Framework имеется событие <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> для приложений, требующих дополнительного управления загрузкой сборок. Обрабатывая это событие, приложение может загружать сборку в контекст загрузки не из каталогов, где обычно осуществляется поиск, выбирать, какую из версий сборки загрузить, создавать динамическую сборку и возвращать ее и многое другое. В этом разделе описывается использование события <xref:System.AppDomain.AssemblyResolve>.  
@@ -80,5 +81,5 @@ ms.lasthandoff: 05/03/2018
  [!code-vb[AssemblyResolveRecursive#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/assemblyresolverecursive/vb/example.vb#1)]  
   
 ## <a name="see-also"></a>См. также  
- [Рекомендации для загрузки сборок](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- [Использование доменов приложений](../../../docs/framework/app-domains/use.md)
+- [Рекомендации для загрузки сборок](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+- [Использование доменов приложений](../../../docs/framework/app-domains/use.md)

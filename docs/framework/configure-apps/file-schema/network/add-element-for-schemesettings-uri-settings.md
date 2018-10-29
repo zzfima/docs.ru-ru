@@ -2,12 +2,12 @@
 title: '&lt;Добавление&gt; элемент для schemeSettings (параметры Uri)'
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 266686007f9e2b00bcfc3222d4380aee64d0098e
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 07bcaf470c68a4d400057b0fe19e96524b2859cb
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50044636"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205182"
 ---
 # <a name="ltaddgt-element-for-schemesettings-uri-settings"></a>&lt;Добавление&gt; элемент для schemeSettings (параметры Uri)
 Добавляет параметр схемы для имени схемы.  
@@ -82,10 +82,10 @@ ms.locfileid: "50044636"
 ```  
   
 ## <a name="see-also"></a>См. также  
- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
- <xref:System.Uri?displayProperty=nameWithType>  
- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
+- <xref:System.Uri?displayProperty=nameWithType>  
+- [Схема параметров сети](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

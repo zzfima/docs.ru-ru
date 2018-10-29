@@ -15,14 +15,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - positions [.NET Framework], granting
 ms.assetid: d51ad8cb-03ae-4a51-bfcd-cfcf6b98afa9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2aa7d54ae88a6dacf61488515a8ba3f13c54405e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b5767f4e16e691fec5714f98114b3ed9d5692a50
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47200897"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205091"
 ---
 # <a name="web-and-socket-permissions"></a>Веб-разрешения и разрешения сокетов
 Безопасность приложений, использующих пространство имен <xref:System.Net>, в Интернете обеспечивается классами <xref:System.Net.WebPermission> и <xref:System.Net.SocketPermission>. Класс **WebPermission** определяет право приложения на запрос данных из универсального кода ресурса (URI) или предоставления кода URI в Интернете. Класс **SocketPermission** определяет право приложения на использование <xref:System.Net.Sockets.Socket> для приема данных через локальный порт или на связь с удаленными устройствами с помощью транспортного протокола по другому адресу в соответствии с узлом, номером порта и транспортным протоколом сокета.  

@@ -4,12 +4,12 @@ description: Узнайте, как запускать существующее 
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: f5a38ac63db969a58e920ea79bf4bf10bcfcf64f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bf21357efc234ea99836b190ce34c70f2644ea6a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193334"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200578"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Запуск консольных приложений в контейнерах Windows
 
@@ -46,7 +46,7 @@ ms.locfileid: "47193334"
 Контейнеры Windows поддерживаются в [Windows 10 Anniversary Update](https://www.microsoft.com/en-us/software-download/windows10/) и [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server).
 
 > [!NOTE]
->При использовании Windows Server 2016 контейнеры необходимо включить вручную, так как установщик Docker для Windows этот компонент не включает. Убедитесь, что в операционной системе применены все обновления, и выполните инструкции из статьи [Развертывание узла контейнера](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment), чтобы установить контейнеры и компоненты Docker.
+>При использовании Windows Server 2016 контейнеры необходимо включить вручную, так как установщик Docker для Windows этот компонент не включает. Убедитесь, что в операционной системе применены все обновления, и выполните инструкции из статьи [Развертывание узла контейнера](/virtualization/windowscontainers/deploy-containers/deploy-containers-on-server), чтобы установить контейнеры и компоненты Docker.
 
 Контейнеры Windows поддерживаются в Docker для Windows 1.12 Beta 26 или более поздней версии. По умолчанию Docker включает контейнеры Linux. Переключитесь на контейнеры Windows. Для этого щелкните правой кнопкой мыши значок Docker в панели задач и выберите **Переключиться на контейнеры Windows**. Docker запустит процесс изменения и, возможно, потребуется перезагрузить компьютер.
 

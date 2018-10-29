@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: f0219919-1f02-4588-8704-327a62fd91f1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e0fbf40c6af63cfabe7b35e2bdf3e0998761b801
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5a104b6c755eb0b97f11e577fb3eeb182e465fe4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505126"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200827"
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework (клиентский профиль)
 Клиентский профиль .NET — это подмножество платформы .NET Framework, которое предоставлялось с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] и более ранними версиями и было оптимизировано для клиентских приложений. .NET Framework — это платформа разработки для Windows, Windows Phone и Microsoft Azure, которая включает в себя управляемую среду выполнения приложений и библиотеку классов .NET Framework. В [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] и более ранних версиях предоставлялось два варианта развертывания: полная платформа .NET Framework и клиентский профиль. Клиентский профиль позволял ускорить развертывание и уменьшить установочные пакеты приложений по сравнению с полной платформой .NET Framework.  
   
  Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], доступен только полный распространяемый пакет. Оптимизации, предоставляемые платформой [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], такие как меньший размер загружаемых файлов и повышенная скорость развертывания, исключили необходимость в отдельном пакете. Один распространяемый пакет упрощает процесс установки и параметры развертывания приложения.  
   
- Но если приложение предназначено для .NET Framework 4 или 3.5 и вы хотите больше узнать о клиентском профиле и его использовании, см. раздел [Клиентский профиль .NET Framework](https://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx) в документации по платформе .NET Framework 4.  
+ Но если приложение предназначено для .NET Framework 4 или 3.5 и вы хотите больше узнать о клиентском профиле и его использовании, см. раздел [Клиентский профиль .NET Framework](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29) в документации по платформе .NET Framework 4.  
   
  При установке [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] клиентский профиль платформы .NET Framework 4 обновляется до полной версии платформы .NET Framework. Сведения об установке [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md).  
   
 ## <a name="see-also"></a>См. также  
- [Клиентский профиль .NET Framework (.NET Framework 4)](https://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)  
- [Обзор настройки для различных версий в Visual Studio](https://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)  
- [Устранение неполадок, связанных с настройкой для определенных версий платформы .NET Framework](https://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)  
- [Практическое руководство. Определение целевой версии .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
+- [Клиентский профиль .NET Framework (.NET Framework 4)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc656912%28v=vs.100%29)  
+- [Обзор настройки для различных версий в Visual Studio](/visualstudio/ide/visual-studio-multi-targeting-overview)  
+- [Устранение неполадок, связанных с настройкой для определенных версий платформы .NET Framework](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)  
+- [Практическое руководство. Определение целевой версии .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)

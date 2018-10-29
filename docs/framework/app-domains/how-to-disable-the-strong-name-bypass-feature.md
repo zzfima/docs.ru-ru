@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9604969ea073b07af0eca8d481f5459ee15d099
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 628bc1f89e5e09b47c70e39e107987753697cdb4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742423"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198332"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>Практическое руководство. Отключение функции пропуска строгих имен
 Начиная с версии .NET Framework 3.5 с пакетом обновления 1 (SP1), подписи строгого имени не проходили проверку при загрузке сборки в объект <xref:System.AppDomain> с полным доверием, например в `MyComputer` по умолчанию для зоны <xref:System.AppDomain>. Это называется возможностью обхода строгих имен. В среде с полным доверием всегда успешно обрабатываются запросы <xref:System.Security.Permissions.StrongNameIdentityPermission> для подписанных сборок с полным доверием независимо от их подписи. Единственное исключение связано с тем, что сборка должна иметь полное доверие, потому что полное доверие имеет ее зона. Так как в этом случае наличие строгого имени не является решающим фактором, смысла в проверке подписи нет. Пропуск проверки подписей строгого имени позволяет значительно повысить производительность приложения.  
@@ -54,6 +54,6 @@ ms.locfileid: "32742423"
 >  Функцию проверки строгих имен можно включать и отключать на уровне приложения, если пропуск строгих имен включен на уровне компьютера. Если функция пропуска на уровне компьютера отключена, строгие имена будут проверяться для всех приложений и пропустить проверку для отдельного приложения будет невозможно.  
   
 ## <a name="see-also"></a>См. также  
- [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [Элемент \<bypassTrustedAppStrongNames>](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)  
- [Создание и использование сборок со строгими именами](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Sn.exe (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+- [Элемент \<bypassTrustedAppStrongNames>](../../../docs/framework/configure-apps/file-schema/runtime/bypasstrustedappstrongnames-element.md)  
+- [Создание и использование сборок со строгими именами](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

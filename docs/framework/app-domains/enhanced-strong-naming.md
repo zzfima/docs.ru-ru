@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 659f9ffa8ebb10b34300167e9183f60568279513
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b33bb37758236c0dcce1fced2e7e7c6cf493ab34
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44187176"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192594"
 ---
 # <a name="enhanced-strong-naming"></a>Усовершенствованное строгое именование
 Подпись строгого имени — это механизм идентификации сборок в .NET Framework. Это цифровая подпись с открытым ключом, которая обычно используется для проверки целостности данных, передаваемых от инициатора (подписывающего) к получателю (проверяющему). Эта подпись используется в виде уникального идентификатора сборки и гарантирует, что ссылки на сборку не являются неоднозначными. Подписывание сборки является частью процесса сборки, что затем проверяется при ее загрузке.  
@@ -134,4 +134,4 @@ ms.locfileid: "44187176"
     ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание и использование сборок со строгими именами](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [Создание и использование сборок со строгими именами](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

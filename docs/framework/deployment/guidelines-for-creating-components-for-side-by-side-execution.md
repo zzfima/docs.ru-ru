@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f45e68d9d340d857bc25b3848bd687e46fd73c52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2cedcb20ba12e7c362c60d33dfedfa1882eaa7e7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391037"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198501"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Рекомендации по созданию компонентов для параллельного выполнения
 Выполните эти общие рекомендации для создания управляемых приложений или компонентов для параллельного выполнения.  
@@ -63,5 +63,5 @@ ms.locfileid: "33391037"
  [Средство глобального кэша сборок (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) позволяет заменить сборку, если более новым является только номер версии файла. Установщик обычно переустанавливает сборку только в том случае, если номер версии сборки больше.   
   
 ## <a name="see-also"></a>См. также  
- [Параллельное выполнение](../../../docs/framework/deployment/side-by-side-execution.md)  
- [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Параллельное выполнение](../../../docs/framework/deployment/side-by-side-execution.md)  
+- [Практическое руководство. Включение и отключение автоматического перенаправления привязки](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

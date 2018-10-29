@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c27bdb75ef9950d0b2b32f742b38e141cf4981b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: bec27165d1bfd6a501ba8b96a1eb133276fe7269
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991588"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197955"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] — это распространяемый пакет среды выполнения. Если вы разрабатываете приложения для данной версии платформы .NET Framework, можно включить (присоединить к цепочке) установку [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] в качестве необходимого компонента при установке приложения. Для создания специальной или универсальной процедуры установки может потребоваться автоматический запуск и отслеживание процесса установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] с одновременным отображением собственного представления хода выполнения установки. Для включения отслеживания в автоматическом режиме установка [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], которая может находиться под наблюдением, определяет протокол с помощью сегмента памяти ввода-вывода (MMIO) для связи с вашей установкой (наблюдателем или формирователем цепочки). Этот протокол определяет способ, которым формирователь цепочки получает информацию о ходе выполнения, получает подробные результаты, отвечает на сообщения и отменяет установку [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  
@@ -310,5 +310,5 @@ ms.locfileid: "45991588"
  Типовой сервер создает случайное имя файла MMIO, создает файл (как показано в предыдущем примере кода в `Server::CreateSection`) и запускает распространяемый пакет с помощью метода `CreateProcess`, передавая имя канала с параметром `-pipe someFileSectionName`. Сервер должен реализовать методы `OnProgress`, `Send` и `Finished` с кодом, характерным для пользовательского интерфейса приложения.  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [Развертывание](../../../docs/framework/deployment/index.md)
+- [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [Развертывание](../../../docs/framework/deployment/index.md)

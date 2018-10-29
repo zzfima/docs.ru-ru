@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 98ddbdb9-66b1-4080-92ad-51f5c447fcf8
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 1f78f98f94daa51c17a1294285e13dfddd457106
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5f863aa61058e87a7911bab3b02c3ba345419596
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47230973"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193608"
 ---
 # <a name="how-to-register-a-custom-protocol-using-webrequest"></a>Практическое руководство. Регистрация пользовательского протокола с помощью WebRequest
 В этом примере показано, как зарегистрировать класс для конкретного протокола, который определен в другом месте. В этом примере `CustomWebRequestCreator` — пользовательский объект, который реализует метод **Create**, возвращающий объект `CustomWebRequest`. В примере кода предполагается, что вы написали код `CustomWebRequest`, который реализует пользовательский протокол.  

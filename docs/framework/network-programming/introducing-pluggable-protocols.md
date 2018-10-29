@@ -22,14 +22,12 @@ helpviewer_keywords:
 - server identifiers
 - scheme identifiers
 ms.assetid: 4b48e22d-e4e5-48f0-be80-d549bda97415
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 7fcc3c78192866ecbcefe03573d3e253ac6b6138
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a0a50af2d773a9489d9e908b751ba2035b9ba626
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198427"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194024"
 ---
 # <a name="introducing-pluggable-protocols"></a>Введение в подключаемые протоколы
 Microsoft .NET Framework обеспечивает многоуровневую, расширяемую и управляемую реализацию служб Интернета, которую можно легко и быстро интегрировать в приложения. Классы доступа к Интернету в пространствах имен <xref:System.Net> и <xref:System.Net.Sockets> можно использовать для реализации веб-приложений и интернет-приложений.  

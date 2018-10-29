@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: be434d7d-9c0d-46e7-8392-58a9b542d11d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b0ef0072e6e9a1e9f4a28d6e19894f301fe3fc0
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 75c782cbe7a45c05212c99448df6e8536a17f38d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864804"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202739"
 ---
 # <a name="cert2spcexe-software-publisher-certificate-test-tool"></a>Cert2spc.exe (средство проверки сертификата издателя программного обеспечения)
-Программа для проверки сертификата издателя программного обеспечения служит для создания сертификата издателя программного обеспечения (SPC) из одного или нескольких сертификатов X.509. Программа Cert2spc.exe используется только для тестирования. Действительный сертификат SPC можно получить в центрах сертификации, таких как VeriSign и Thawte. Дополнительные сведения о создании сертификатов X.509 см. в разделе [Makecert.exe (средство создания сертификатов)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d).  
+Программа для проверки сертификата издателя программного обеспечения служит для создания сертификата издателя программного обеспечения (SPC) из одного или нескольких сертификатов X.509. Программа Cert2spc.exe используется только для тестирования. Действительный сертификат SPC можно получить в центрах сертификации, таких как VeriSign и Thawte. Дополнительные сведения о создании сертификатов X.509 см. в разделе [Makecert.exe (средство создания сертификатов)](/windows/desktop/SecCrypto/makecert).  
   
  Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -57,5 +57,5 @@ cert2spc oneCertificate.cer twoCertificate.cer mySPCFile.spc
   
 ## <a name="see-also"></a>См. также  
  [Инструменты](../../../docs/framework/tools/index.md)  
- [Makecert.exe (средство создания сертификатов)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe (средство создания сертификатов)](/windows/desktop/SecCrypto/makecert)  
  [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

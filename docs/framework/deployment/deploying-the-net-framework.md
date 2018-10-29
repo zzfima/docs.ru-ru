@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa204b9ac604cd4e0f2c1ae75e872f6bb5cdaf22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac17993a4980e96cbd05fc2523567138e7b56262
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391411"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196446"
 ---
 # <a name="deploying-the-net-framework"></a>Развертывание .NET Framework
 В этом разделе документации по платформе .NET Framework предоставлены сведения для разработчиков, которые хотят установить платформу .NET Framework для своих приложений, и для разработчиков, которые хотят развернуть платформу .NET Framework по сети. В ней также рассмотрены вопросы активации и перезапуска, связанные с развертыванием, и описано, как отслеживать ход установки .NET Framework.  
@@ -37,4 +37,4 @@ ms.locfileid: "33391411"
  В этой статье объясняется, как просматривать и отлаживать журналы активации среды CLR, чтобы решить проблемы, с которыми вы можете столкнуться при настройке запуска приложения с необходимой версией CLR.  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по разработке](../../../docs/framework/development-guide.md)
+- [Руководство по разработке](../../../docs/framework/development-guide.md)

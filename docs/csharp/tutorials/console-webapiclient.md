@@ -3,12 +3,12 @@ title: Создание клиента REST с использованием .NET
 description: Это руководство раскроет для вас некоторые возможности .NET Core и языка C#.
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 13466b717d0676c2db5edf4c98a4ead3e673b96c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 521c6edfa7163219ea86c6fb8444bc95859c9aa1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397925"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199920"
 ---
 # <a name="rest-client"></a>Клиент REST
 
@@ -57,7 +57,7 @@ ms.locfileid: "47397925"
 После внесения этих изменений снова запустите команду `dotnet restore` ([см. примечание](#dotnet-restore-note)), чтобы установить в системе нужный пакет.
 
 ## <a name="making-web-requests"></a>Выполнение веб-запросов
-Теперь вы готовы получать данные из Интернета. В этом приложении вы будете считывать информацию из [API GitHub](https://developer.github.com/v3/). Давайте, например, получим информацию о проектах под зонтичным брендом [.NET Foundation](http://www.dotnetfoundation.org/). Для начала вам нужно составить запрос к API GitHub для получения информации о проектах. Используемая конечная точка: [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Вы будете получать все данные об этих проектах, поэтому используйте запрос HTTP GET.
+Теперь вы готовы получать данные из Интернета. В этом приложении вы будете считывать информацию из [API GitHub](https://developer.github.com/v3/). Давайте, например, получим информацию о проектах под зонтичным брендом [.NET Foundation](https://www.dotnetfoundation.org/). Для начала вам нужно составить запрос к API GitHub для получения информации о проектах. Используемая конечная точка: [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Вы будете получать все данные об этих проектах, поэтому используйте запрос HTTP GET.
 Браузер также использует запросы HTTP GET, поэтому вы можете указать этот URL-адрес в адресной строке браузера и увидеть, какие сведения вы будете получать и обрабатывать.
 
 Для выполнения веб-запросов используется класс <xref:System.Net.Http.HttpClient>. Как и все современные API-интерфейсы .NET, <xref:System.Net.Http.HttpClient> поддерживает для API-интерфейсов длительного выполнения только асинхронные методы.

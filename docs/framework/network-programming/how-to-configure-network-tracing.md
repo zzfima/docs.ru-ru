@@ -11,14 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4b8fa55375de5057eca92591cbf4d9da628a3f85
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 257f417fa573577ca8e8ceb4edc9c4f481af1f72
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47193810"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50192451"
 ---
 # <a name="how-to-configure-network-tracing"></a>Практическое руководство. Настройка трассировки сети
 Файл конфигурации приложения или компьютера содержит параметры, которые определяют формат и содержимое данных трассировки сети. Перед выполнением этой процедуры убедитесь, что трассировка включена. Сведения о том, как включить трассировку сети, см. в разделе [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -102,4 +100,4 @@ ms.locfileid: "47193810"
  [Интерпретация трассировки сети](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [Трассировка сети в .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
  [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [Введение. Подготовка к инструментированию и трассировка](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [Трассировка и инструментирование приложений](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
