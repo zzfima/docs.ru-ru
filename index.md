@@ -6,18 +6,18 @@ title: Документация по .NET
 description: Сведения об использовании .NET для создания различных приложений на любой платформе с помощью C#, Visual Basic и F#. Ознакомьтесь со справочником по API, образцами кода, учебниками и другими материалами.
 ms.custom: updateeachrelease
 ms.date: 06/21/2018
-ms.openlocfilehash: dd07b771f267eb2c022b1e0b8de02aca5b0c7a5c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 658c464cd7871306c7172e06c7041517ccea5ffe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837473"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183585"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="/dotnet/csharp/quick-starts">
+                <a href="/dotnet/csharp/tutorials/intro-to-csharp/">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -172,7 +172,7 @@ ms.locfileid: "48837473"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">Руководство по языку C#</a></h3>
-                                                <p><a href="/dotnet/csharp/quick-starts">Краткие руководства</a></p>
+                                                <p><a href="/dotnet/csharp/tutorials/intro-to-csharp">Изучение C#</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">Начало работы</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">Обзор языка C#</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">Справочник по языку C#</a></p>
