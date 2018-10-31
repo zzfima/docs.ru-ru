@@ -21,11 +21,11 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1fe0ead93d1ff2b7867a52d80cf812e2850ea7b3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47210129"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836301"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Практическое руководство. Проверка строк на соответствие формату электронной почты
 В следующем примере регулярное выражение используется, чтобы проверить, имеет ли строка допустимый формат адреса электронной почты.  
@@ -82,7 +82,7 @@ csc /t:library RegexUtilities.cs
 vbc /t:library RegexUtilities.vb  
 ```  
   
- Вы также можете использовать метод <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType>, чтобы включить это регулярное выражение в библиотеку регулярных выражений.  
+ Вы также можете использовать метод <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> , чтобы включить это регулярное выражение в библиотеку регулярных выражений.  
   
  Если они используются в библиотеке регулярных выражений, их можно вызывать с помощью кода, например, следующим образом:  
   
