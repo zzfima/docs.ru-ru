@@ -3,10 +3,10 @@ title: 'Byrefs (F #)'
 description: 'Дополнительные сведения о byref и типов, схожих byref в F #, которые используются для программирования низкого уровня.'
 ms.date: 09/02/2018
 ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "48836885"
 ---
 # <a name="byrefs"></a>Byrefs

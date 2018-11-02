@@ -3,10 +3,10 @@ title: Идентификаторы Source Line, File и Path (F#)
 description: 'Узнайте, как использовать встроенные идентификатор значения F #, которые позволяют получить доступ к номер строки источника, каталог и имя файла в коде.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 14f710d1412c3420ec627dc30216ba2e89f16bcd
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "43865131"
 ---
 # <a name="source-line-file-and-path-identifiers"></a>Идентификаторы Source Line, File и Path

@@ -3,10 +3,10 @@ title: 'Сведения о вызывающем объекте (F #)'
 description: Описывает, как использовать информационные атрибуты аргумента вызывающего объекта, чтобы получить сведения о вызывающем объекте из метода.
 ms.date: 04/25/2017
 ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "47216374"
 ---
 # <a name="caller-information"></a>Сведения о вызывающем объекте

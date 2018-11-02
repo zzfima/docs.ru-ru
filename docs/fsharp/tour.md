@@ -2,12 +2,12 @@
 title: Обзор языка F#
 description: Изучите некоторые из ключевых особенностей языке этого учебника с образцами кода F#.
 ms.date: 02/28/2018
-ms.openlocfilehash: d129e2312ae3da64f04b3bbb0bbd0b4d77aad36e
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 7a512b5fead8de69f025e791b6086c60dbfc1b24
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924525"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50235717"
 ---
 # <a name="tour-of-f"></a>Обзор языка F# #
 
@@ -193,6 +193,6 @@ F# также имеет полную поддержку для классов .
 
 Теперь, когда вы увидели некоторые из основных функций языка, можно приступать к записи вашей первой программы на F#!  Ознакомьтесь с [Приступая к работе](tutorials/getting-started/index.md) чтобы узнать, как настроить среду разработки и написать код.
 
-Следующие шаги для получения дополнительных сведений может быть любым, но мы рекомендуем [функции как значения первого класса](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Programming in F#](introduction-to-functional-programming/index.md)--> успешной работы с основными механизмами функциональное программирование.  Это будут важное значение для построения надежных программ на языке F#.
+Следующие шаги для получения дополнительных сведений может быть любым, но мы рекомендуем [введение в функциональное программирование в F# ](introduction-to-functional-programming/index.md) успешной работы с основными механизмами функциональное программирование.  Это будут важное значение для построения надежных программ на языке F#.
 
 Кроме того, ознакомьтесь с [Справочник по языку F#](language-reference/index.md) чтобы увидеть полный набор концептуальное содержимое на F#.

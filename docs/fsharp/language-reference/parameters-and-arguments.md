@@ -2,12 +2,12 @@
 title: Параметры и аргументы (F#)
 description: 'Сведения о поддержке языка F # для определения параметров и передачи аргументов в функции, методы и свойства.'
 ms.date: 05/16/2016
-ms.openlocfilehash: a1e2a70ca560bbb09d2cd10f47485cbe5c5e029d
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6ccef89fe411096ed66f481dd4ae2d91259fe1c4
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123362"
+ms.lasthandoff: 11/02/2018
+ms.locfileid: "50744461"
 ---
 # <a name="parameters-and-arguments"></a>Параметры и аргументы
 
@@ -111,6 +111,8 @@ let angle (Polar(_, theta)) = theta
 
 Можно указать необязательный параметр для метода, используя знак вопроса перед именем параметра. Необязательные параметры интерпретируются как тип параметра в F #, поэтому их можно запросить его обычным образом, что запрашиваются типы параметров, с помощью `match` выражение с `Some` и `None`. Необязательные параметры можно использовать только для членов, не для функций, созданных с помощью `let` привязки.
 
+Можно передать существующий необязательных значений метода по имени параметра, такие как `?arg=None` или `?arg=Some(3)` или `?arg=arg`. Это может быть полезно, когда построение метод, который передает необязательные аргументы другому методу.
+
 Можно также использовать функцию `defaultArg`, который устанавливает значение по умолчанию для необязательного аргумента. `defaultArg` Функция принимает необязательный параметр в качестве первого аргумента и значение по умолчанию в качестве второго.
 
 Следующий пример иллюстрирует использование необязательных параметров.
@@ -123,7 +125,29 @@ let angle (Polar(_, theta)) = theta
 Baud Rate: 9600 Duplex: Full Parity: false
 Baud Rate: 4800 Duplex: Half Parity: false
 Baud Rate: 300 Duplex: Half Parity: true
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 9600 Duplex: Full Parity: false
+Baud Rate: 4800 Duplex: Half Parity: false
 ```
+
+В рамках C# и взаимодействие Visual Basic, можно использовать атрибуты `[<Optional; DefaultParameterValue<(...)>]` в F#, таким образом, чтобы вызывающие объекты будут видеть аргумента как необязательные. Это эквивалентно определения аргумента как необязательные в C# как в `MyMethod(int i = 3)`.
+
+```fsharp
+open System
+open System.Runtime.InteropServices
+type C = 
+    static member Foo([<Optional; DefaultParameterValue("Hello world")>] message) =
+        printfn "%s" message
+```
+
+Значение, заданное в качестве аргумента `DefaultParameterValue` должен совпадать с типом параметра, т. е. следующие не допускается:
+
+```fsharp
+type C =
+    static member Wrong([<Optional; DefaultParameterValue("string")>] i:int) = ()
+```
+
+В этом случае компилятор создает предупреждение и будет полностью игнорировать оба атрибута. Обратите внимание, что значение по умолчанию `null` должен быть аннотацией типа, как в противном случае компилятор выводит неверный тип, т. е. `[<Optional; DefaultParameterValue(null:obj)>] o:obj`.
 
 ## <a name="passing-by-reference"></a>Передача по ссылке
 

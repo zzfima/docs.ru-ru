@@ -1,12 +1,12 @@
 ---
 title: Обработка исключений (F#)
-description: 'Основы обработки исключений в языке F # и ссылки на исключение при обработке выражения и функции.'
+description: Основы обработки исключений в F# и ссылки на исключение, обработка выражения и функции.
 ms.date: 05/16/2016
 ms.openlocfilehash: fc89feb0d21bc823cb105e435413f8309cd6174c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 11/02/2018
 ms.locfileid: "33564330"
 ---
 # <a name="exception-handling"></a>Обработка исключений
