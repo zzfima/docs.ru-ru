@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c26f4602623e1eb8979ef08c5d14404cc84e031
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0185d79d8663d552378248f0e021a7fee8f0522
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502219"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189723"
 ---
 # <a name="formatting-types-in-net"></a>Типы форматирования в .NET
 <a name="Introduction"></a> Форматирование — это процесс преобразования экземпляра класса, структуры или значения перечисления в строковое представление. Результирующая строка затем демонстрируется пользователям или десериализуется для последующего восстановления значения с исходным типом данных. Преобразование может быть связано с рядом проблем:  
@@ -86,7 +86,7 @@ ms.locfileid: "43502219"
 ## <a name="formatting-in-net"></a>Форматирование в .NET  
  Основной механизм форматирования — это используемая по умолчанию реализация метода <xref:System.Object.ToString%2A?displayProperty=nameWithType>, описанная ниже в подразделе [Форматирование по умолчанию с помощью метода ToString](#DefaultToString). При этом платформа .NET предоставляет несколько способов изменения и расширения имеющихся по умолчанию возможностей форматирования. В число этих требований входят следующие:  
   
--   Переопределение метода <xref:System.Object.ToString%2A?displayProperty=nameWithType>, позволяющее определить настраиваемое строковое представление значения объекта. Дополнительные сведения см. ниже в подразделе [Переопределение метода ToString](#OverrideToString) .  
+-   Переопределение метода <xref:System.Object.ToString%2A?displayProperty=nameWithType> , позволяющее определить настраиваемое строковое представление значения объекта. Дополнительные сведения см. ниже в подразделе [Переопределение метода ToString](#OverrideToString) .  
   
 -   Определение описателей формата, позволяющих использовать несколько видов строкового представления значения объекта. Например, описатель формата "X" в следующем операторе позволяет преобразовать целое число в шестнадцатеричное строковое представление.  
   
@@ -120,12 +120,12 @@ ms.locfileid: "43502219"
  [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]  
   
 > [!WARNING]
->  Начиная с [!INCLUDE[win81](../../../includes/win81-md.md)] [!INCLUDE[wrt](../../../includes/wrt-md.md)] включает интерфейс [IStringable](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.aspx) с единственным методом [IStringable.ToString](https://msdn.microsoft.com/library/windows/apps/windows.foundation.istringable.tostring.aspx), который обеспечивает поддержку форматирования по умолчанию. Однако рекомендуется, чтобы управляемые типы не реализовывали интерфейс `IStringable` . Дополнительные сведения см. в подразделе "[!INCLUDE[wrt](../../../includes/wrt-md.md)] и интерфейс `IStringable`" справочных сведений о методе <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
+>  Начиная с [!INCLUDE[win81](../../../includes/win81-md.md)], [!INCLUDE[wrt](../../../includes/wrt-md.md)] включает интерфейс <xref:Windows.Foundation.IStringable> с единственным методом [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A), который обеспечивает поддержку форматирования по умолчанию. Однако рекомендуется, чтобы управляемые типы не реализовывали интерфейс `IStringable` . Дополнительные сведения см. в подразделе "[!INCLUDE[wrt](../../../includes/wrt-md.md)] и интерфейс `IStringable`" справочных сведений о методе <xref:System.Object.ToString%2A?displayProperty=nameWithType>.  
   
- Поскольку производными от <xref:System.Object>являются все типы, кроме интерфейсов, данная функциональность автоматически присутствует в пользовательских классах и структурах. Тем не менее метод `ToString` по умолчанию обладает весьма ограниченной функциональностью: хотя метод позволяет определить имя типа, никаких сведений об экземпляре типа он не предоставляет. Для формирования строкового представления объекта, позволяющего получить сведения о конкретном объекте, следует переопределить метод `ToString` .  
+ Поскольку производными от <xref:System.Object>являются все типы, кроме интерфейсов, данная функциональность автоматически присутствует в пользовательских классах и структурах. Тем не менее метод `ToString` по умолчанию обладает весьма ограниченной функциональностью: хотя метод позволяет определить имя типа, никаких сведений об экземпляре типа он не предоставляет. Для формирования строкового представления объекта, позволяющего получить сведения о конкретном объекте, следует переопределить метод `ToString`.  
   
 > [!NOTE]
->  Структуры наследуют от типа <xref:System.ValueType>, который также является наследником <xref:System.Object>. Хотя в <xref:System.ValueType> метод <xref:System.Object.ToString%2A?displayProperty=nameWithType> переопределен, его реализация идентична базовой.  
+>  Структуры наследуют от типа <xref:System.ValueType>, который также является наследником <xref:System.Object>. Хотя в <xref:System.ValueType> метод <xref:System.Object.ToString%2A?displayProperty=nameWithType>переопределен, его реализация идентична базовой.  
   
  [К началу](#Introduction)  
   
@@ -276,7 +276,7 @@ ms.locfileid: "43502219"
   
  Метод <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> является методом обратного вызова. При вызове перегрузки метода `ToString` , имеющей параметр <xref:System.IFormatProvider> , вызывается метод <xref:System.IFormatProvider.GetFormat%2A> соответствующего объекта <xref:System.IFormatProvider> . Метод <xref:System.IFormatProvider.GetFormat%2A> должен вернуть в метод `formatType` объект, способный предоставить необходимые сведения о форматировании и соответствующий параметру `ToString` .  
   
- Многие методы форматирования и преобразования строк имеют параметр типа <xref:System.IFormatProvider>, но во многих случаях значение параметра игнорируется при вызове метода. В следующей таблице перечислены некоторые методы форматирования, использующие этот параметр. Для каждого метода также указывается тип объекта <xref:System.Type>, передаваемого в метод <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType>.  
+ Многие методы форматирования и преобразования строк имеют параметр типа <xref:System.IFormatProvider>, но во многих случаях значение параметра игнорируется при вызове метода. В следующей таблице перечислены некоторые методы форматирования, использующие этот параметр. Для каждого метода также указывается тип объекта <xref:System.Type> , передаваемого в метод <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> .  
   
 |Метод|Тип параметра `formatType`|  
 |------------|------------------------------------|  
@@ -294,7 +294,7 @@ ms.locfileid: "43502219"
   
 -   <xref:System.Globalization.NumberFormatInfo>: класс, предоставляющий сведения о форматировании числовых значений для конкретного языка и региональных параметров. Реализация метода <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> в этом классе возвращает его экземпляр.  
   
--   <xref:System.Globalization.CultureInfo>. Реализация метода <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> в этом классе возвращает объект <xref:System.Globalization.NumberFormatInfo>, предоставляющий сведения о форматировании числовых значений, либо объект <xref:System.Globalization.DateTimeFormatInfo>, предоставляющий сведения о форматировании значений даты и времени.  
+-   <xref:System.Globalization.CultureInfo>. Реализация метода <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> в этом классе возвращает объект <xref:System.Globalization.NumberFormatInfo> , предоставляющий сведения о форматировании числовых значений, либо объект <xref:System.Globalization.DateTimeFormatInfo> , предоставляющий сведения о форматировании значений даты и времени.  
   
  Также можно реализовать пользовательский поставщик форматирования, позволяющий заменить любой из этих классов. При этом пользовательская реализация метода <xref:System.IFormatProvider.GetFormat%2A> , рассчитанная на предоставление сведений о форматировании для метода `ToString` , должна возвращать объект одного из типов, перечисленных в приведенной выше таблице.  
   
@@ -302,12 +302,12 @@ ms.locfileid: "43502219"
   
 <a name="numericCulture"></a>   
 ### <a name="culture-sensitive-formatting-of-numeric-values"></a>Форматирование числовых значений, зависящее от языка и региональных параметров  
- По умолчанию форматирование числовых значений зависит от языка и региональных параметров. Если не указать язык и региональные параметры при вызове метода форматирования, используются соглашения о форматировании текущего языка и региональных параметров. Это продемонстрировано в следующем примере, который изменяет текущие язык и региональные параметры четыре раза, а затем вызывает метод <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType>. В каждом случае результирующая строка отражает соглашения о форматировании текущих языка и региональных параметров. Это происходит потому, что методы `ToString` и `ToString(String)` создают оболочки для вызовов метода `ToString(String, IFormatProvider)` каждого числового типа.  
+ По умолчанию форматирование числовых значений зависит от языка и региональных параметров. Если не указать язык и региональные параметры при вызове метода форматирования, используются соглашения о форматировании текущего языка и региональных параметров. Это продемонстрировано в следующем примере, который изменяет текущие язык и региональные параметры четыре раза, а затем вызывает метод <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> . В каждом случае результирующая строка отражает соглашения о форматировании текущих языка и региональных параметров. Это происходит потому, что методы `ToString` и `ToString(String)` создают оболочки для вызовов метода `ToString(String, IFormatProvider)` каждого числового типа.  
   
  [!code-csharp[Conceptual.Formatting.Overview#19](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific3.cs#19)]
  [!code-vb[Conceptual.Formatting.Overview#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific3.vb#19)]  
   
- Отформатировать числовое значение для определенных языка и региональных параметров также можно путем вызова перегрузки метода `ToString` , которая имеет параметр `provider` , и передачи ей одного из следующих объектов:  
+ Отформатировать числовое значение для определенных языка и региональных параметров также можно путем вызова перегрузки метода `ToString`, которая имеет параметр `provider`, и передачи ей одного из следующих объектов:  
   
 -   объекта <xref:System.Globalization.CultureInfo> , представляющего язык и региональные параметры, соглашения о форматировании которых требуется использовать. Его метод <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> возвращает значение свойства <xref:System.Globalization.CultureInfo.NumberFormat%2A?displayProperty=nameWithType>, которое является объектом <xref:System.Globalization.NumberFormatInfo>, предоставляющим сведения о форматировании в соответствии с языком и региональными параметрами для числовых значений;  
   
@@ -320,14 +320,14 @@ ms.locfileid: "43502219"
   
 <a name="dateCulture"></a>   
 ### <a name="culture-sensitive-formatting-of-date-and-time-values"></a>Форматирование значений даты и времени, зависящее от языка и региональных параметров  
- По умолчанию форматирование значений даты и времени зависит от языка и региональных параметров. Если не указать язык и региональные параметры при вызове метода форматирования, используются соглашения о форматировании текущего языка и региональных параметров. Это продемонстрировано в следующем примере, который изменяет текущие язык и региональные параметры четыре раза, а затем вызывает метод <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>. В каждом случае результирующая строка отражает соглашения о форматировании текущих языка и региональных параметров. Это происходит потому, что методы <xref:System.DateTime.ToString?displayProperty=nameWithType>, <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType> и <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> создают оболочки для вызовов методов <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> и <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType>.  
+ По умолчанию форматирование значений даты и времени зависит от языка и региональных параметров. Если не указать язык и региональные параметры при вызове метода форматирования, используются соглашения о форматировании текущего языка и региональных параметров. Это продемонстрировано в следующем примере, который изменяет текущие язык и региональные параметры четыре раза, а затем вызывает метод <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> . В каждом случае результирующая строка отражает соглашения о форматировании текущих языка и региональных параметров. Это происходит потому, что методы <xref:System.DateTime.ToString?displayProperty=nameWithType>, <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType>, <xref:System.DateTimeOffset.ToString?displayProperty=nameWithType>и <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> создают оболочки для вызовов методов <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> и <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> .  
   
  [!code-csharp[Conceptual.Formatting.Overview#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/culturespecific1.cs#17)]
  [!code-vb[Conceptual.Formatting.Overview#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/culturespecific1.vb#17)]  
   
  Форматировать значения даты и времени для определенных языка и региональных параметров также можно путем вызова перегрузки методов <xref:System.DateTime.ToString%2A?displayProperty=nameWithType> или <xref:System.DateTimeOffset.ToString%2A?displayProperty=nameWithType>, которая имеет параметр `provider`, и передачи ей одного из следующих объектов:  
   
--   объекта <xref:System.Globalization.CultureInfo> , представляющего язык и региональные параметры, соглашения о форматировании которых требуется использовать. Его метод <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> возвращает значение свойства <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType>, которое является объектом <xref:System.Globalization.DateTimeFormatInfo>, предоставляющим сведения о форматировании в соответствии с языком и региональными параметрами для значений даты и времени;  
+-   объекта <xref:System.Globalization.CultureInfo>, представляющего язык и региональные параметры, соглашения о форматировании которых требуется использовать. Его метод <xref:System.Globalization.CultureInfo.GetFormat%2A?displayProperty=nameWithType> возвращает значение свойства <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> , которое является объектом <xref:System.Globalization.DateTimeFormatInfo> , предоставляющим сведения о форматировании в соответствии с языком и региональными параметрами для значений даты и времени;  
   
 -   объекта <xref:System.Globalization.DateTimeFormatInfo> , определяющего соглашения о форматировании для используемых языка и региональных параметров. Метод <xref:System.Globalization.DateTimeFormatInfo.GetFormat%2A> этого класса возвращает экземпляр его самого.  
   
@@ -344,7 +344,7 @@ ms.locfileid: "43502219"
   
 -   Поддержка строковых преобразований с помощью класса <xref:System.Convert> . При вызове методов <xref:System.Convert.ToString%28System.Object%29?displayProperty=nameWithType> и <xref:System.Convert.ToString%28System.Object%2CSystem.IFormatProvider%29?displayProperty=nameWithType> автоматически вызывается пользовательская реализация <xref:System.IFormattable>.  
   
--   Поддержка составного форматирования. Если для форматирования пользовательского типа используется элемент форматирования, включающий строку формата, то среда CLR автоматически вызывает пользовательскую реализацию <xref:System.IFormattable> , передавая ей строку формата. Дополнительные сведения о составном форматировании с помощью таких методов, как <xref:System.String.Format%2A?displayProperty=nameWithType> или <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, см. в подразделе [Составное форматирование](#CompositeFormatting).  
+-   Поддержка составного форматирования. Если для форматирования пользовательского типа используется элемент форматирования, включающий строку формата, то среда CLR автоматически вызывает пользовательскую реализацию <xref:System.IFormattable> , передавая ей строку формата. Дополнительные сведения о составном форматировании с помощью таких методов, как <xref:System.String.Format%2A?displayProperty=nameWithType> или <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, см. в подразделе [Составное форматирование](#CompositeFormatting) .  
   
  В следующем примере определяется класс `Temperature` , реализующий интерфейс <xref:System.IFormattable> . Он поддерживает описатели формата "C" и "G", позволяющие отобразить значение температуры в градусах Цельсия, описатель формата "F", позволяющий отобразить значение температуры в градусах Фаренгейта, и описатель формата "K", позволяющий отобразить значение температуры в градусах Кельвина.  
   
@@ -382,7 +382,7 @@ ms.locfileid: "43502219"
   
 <a name="Custom"></a>   
 ## <a name="custom-formatting-with-icustomformatter"></a>Настраиваемое форматирование с использованием интерфейса ICustomFormatter  
- У двух методов составного форматирования — <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> и <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> — также имеется параметр, задающий поставщик форматирования, поддерживающий настраиваемое форматирование. При вызове какого-либо из этих методов форматирования объект <xref:System.Type> , представляющий интерфейс <xref:System.ICustomFormatter> , передается методу <xref:System.IFormatProvider.GetFormat%2A> поставщика форматирования. Метод <xref:System.IFormatProvider.GetFormat%2A> должен вернуть реализацию <xref:System.ICustomFormatter> , поддерживающую настраиваемое форматирование.  
+ У двух методов составного форматирования — <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> и <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>— также имеется параметр, задающий поставщик форматирования, поддерживающий настраиваемое форматирование. При вызове какого-либо из этих методов форматирования объект <xref:System.Type> , представляющий интерфейс <xref:System.ICustomFormatter> , передается методу <xref:System.IFormatProvider.GetFormat%2A> поставщика форматирования. Метод <xref:System.IFormatProvider.GetFormat%2A> должен вернуть реализацию <xref:System.ICustomFormatter> , поддерживающую настраиваемое форматирование.  
   
  Единственный метод интерфейса <xref:System.ICustomFormatter> , который называется <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>, автоматически вызывается методом составного форматирования по одному разу для каждого элемента форматирования в строке составного формата. У метода <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> есть три параметра: строка формата, представляющая аргумент `formatString` в элементе форматирования, сам форматируемый объект и объект <xref:System.IFormatProvider> , предоставляющий услуги форматирования. Обычно класс, реализующий интерфейс <xref:System.ICustomFormatter> , также реализует интерфейс <xref:System.IFormatProvider>, поэтому в таком случае последний параметр будет ссылкой на сам класс настраиваемого форматирования. Метод возвращает настраиваемое строковое представление объекта, который нужно было отформатировать. Если методу не удается отформатировать объект, он должен вернуть пустую ссылку (`Nothing` в Visual Basic).  
   
@@ -391,7 +391,7 @@ ms.locfileid: "43502219"
  [!code-csharp[Conceptual.Formatting.Overview#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#15)]
  [!code-vb[Conceptual.Formatting.Overview#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#15)]  
   
- В следующем примере класс `ByteByByteFormatter` используется для форматирования целочисленных значений. Обратите внимание, что метод <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> вызывается во втором вызове метода <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> несколько раз, а в третьем вызове метода используется поставщик по умолчанию <xref:System.Globalization.NumberFormatInfo>, поскольку метод `ByteByByteFormatter.Format` не распознает строку формата "N0" и возвращает пустую ссылку (`Nothing` в Visual Basic).  
+ В следующем примере класс `ByteByByteFormatter` используется для форматирования целочисленных значений. Обратите внимание, что метод <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> вызывается во втором вызове метода <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> несколько раз и что в третьем вызове метода используется поставщик <xref:System.Globalization.NumberFormatInfo> по умолчанию, поскольку метод`ByteByByteFormatter.Format` не распознает строку формата "N0" и возвращает пустую ссылку (`Nothing` в Visual Basic).  
   
  [!code-csharp[Conceptual.Formatting.Overview#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/icustomformatter1.cs#16)]
  [!code-vb[Conceptual.Formatting.Overview#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/icustomformatter1.vb#16)]  

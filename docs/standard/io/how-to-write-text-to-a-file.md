@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc8082175047271c92f9a9a17a49534ffc9546a9
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9c637d9842c05f47bfcaa0431dd2f9f1ee29cc09
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677153"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50181242"
 ---
 # <a name="how-to-write-text-to-a-file"></a>Практическое руководство. Запись текста в файл
 В этом разделе показаны различные способы, которыми можно записать текст в файл для приложений .NET Framework или приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Для записи текста в файл обычно используются следующие классы и методы.  
@@ -27,7 +27,7 @@ ms.locfileid: "45677153"
   
 -   <xref:System.IO.File> — используется с приложениями .NET Framework. Он предоставляет статические методы для записи текста в файл, такие как <xref:System.IO.File.WriteAllLines%2A> и <xref:System.IO.File.WriteAllText%2A>, или для добавления текста в файл (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> или <xref:System.IO.File.AppendText%2A>).  
   
--   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) — для использования с приложениями [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . Он содержит асинхронные методы для записи текста в файл ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) или [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)) или добавления текста в файл ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) или [AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)).  
+-   <xref:Windows.Storage.FileIO> — для использования с приложениями [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]. Он содержит асинхронные методы для записи текста в файл (<xref:Windows.Storage.FileIO.WriteLinesAsync%2A> или <xref:Windows.Storage.FileIO.WriteTextAsync%2A>) либо для добавления текста в файл (<xref:Windows.Storage.FileIO.AppendLinesAsync%2A> или <xref:Windows.Storage.FileIO.AppendTextAsync%2A>).  
 
 - <xref:System.IO.Path> — для использования со строками, содержащими сведения о пути к файлу или каталогу. Он содержит метод <xref:System.IO.Path.Combine%2A>, который позволяет объединять строки для создания пути к файлу или каталогу.
 
@@ -59,7 +59,7 @@ ms.locfileid: "45677153"
  [!code-vb[Conceptual.BasicIO.TextFiles#WriteFile](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.basicio.textfiles/vb/source.vb#writefile)]  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как асинхронно записать введенные пользователем данные в текстовый файл в приложении [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . По соображениям безопасности для открытия файла из [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] приложения обычно требуется использование элемента управления [FileOpenPicker](https://msdn.microsoft.com/library/windows/apps/windows.storage.pickers.fileopenpicker.aspx). В этом примере `FileOpenPicker` фильтруется для отображения текстовых файлов.  
+ В следующем примере показано, как асинхронно записать введенные пользователем данные в текстовый файл в приложении [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] . По соображениям безопасности для открытия файла из приложения [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] обычно требуется использование элемента управления <xref:Windows.Storage.Pickers.FileOpenPicker>. В этом примере `FileOpenPicker` фильтруется для отображения текстовых файлов.  
   
 ```xaml  
 <Page  

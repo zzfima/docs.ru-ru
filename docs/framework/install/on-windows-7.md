@@ -5,12 +5,12 @@ description: Сведения об установке платформы .NET Fr
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 828680c0591f9603d14c57dd9e82fe1f3970ede3
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 091fb93f26695df01f2f95fdec7ed168d96ba90d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861875"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200763"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Установка .NET Framework в Windows 7 с пакетом обновления 1 (SP1) и Windows Server 2008 R2
 
@@ -18,7 +18,7 @@ ms.locfileid: "43861875"
 
 ![Не удалось запустить это приложение.](./media/this-application-could-not-be-started.png)
 
-Эти инструкции помогут вам установить необходимые версии .NET Framework. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) является самой новой версией. Она поддерживается в Windows 7 с пакетом обновления 1 (SP1) и Windows Server 2008 R2 и входит в состав [обновления Windows 10 за апрель 2018 г.](https://www.microsoft.com/software-download/windows10)
+Эти инструкции помогут вам установить необходимые версии .NET Framework. [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) является самой новой версией. Эта платформа поддерживается в Windows 7 с пакетом обновления 1 (SP1) и Windows Server 2008 R2, а также включена в [обновление Windows 10 за октябрь 2018 г.](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) и [обновление Windows 10 за апрель 2018 г.](https://www.microsoft.com/software-download/windows10)
 
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 

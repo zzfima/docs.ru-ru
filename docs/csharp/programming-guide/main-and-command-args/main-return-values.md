@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 8ac0d70458d7c3762ae9dc5fc90058f0caafc4ab
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ea63bedd207a9904a5f6aa656ed19469394290fa
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44184932"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205221"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Значения, возвращаемые методом Main() (Руководство по программированию на C#)
 
@@ -25,7 +25,7 @@ ms.locfileid: "44184932"
 
 ## <a name="example"></a>Пример
 
-В этом примере используются средства командной строки [.NET Core](../../../core/index.md). Если вы не знакомы со средствами командной строки .NET Core, можете обратиться к [этому руководству по началу работы](../../../core/tutorials/using-with-xplat-cli.md).
+В этом примере используются средства командной строки [.NET Core](../../../core/index.md). Если вы не знакомы со средствами командной строки .NET Core, можете обратиться к [этому руководству по началу работы](../../../core/tutorials/using-with-xplat-cli.md).
 
 Измените метод `Main` в файле *program.cs* следующим образом:
 

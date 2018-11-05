@@ -4,12 +4,12 @@ description: HttpClientFactory — это проверенная фабрика
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 6fd30a9358ca9c07b2a6e2ec591e4c5d7db54ccb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f2be3daf1b04613fa8afc1d17cbcbca2d338e062
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513217"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347933"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Использование HttpClientFactory для реализации устойчивых HTTP-запросов
 
@@ -21,7 +21,7 @@ ms.locfileid: "43513217"
 
 Первая проблема в том, что, хотя этот класс и является одноразовым, лучше не использовать его с инструкцией `using`, поскольку даже при ликвидации объекта `HttpClient` базовый сокет не освобождается сразу, что может привести к исчерпанию сокетов. Дополнительные сведения об этой проблеме см. в записи блога [Неправильное использование HttpClient и нарушение стабильной работы программного обеспечения](https://aspnetmonsters.com/2016/08/2016-08-27-httpclientwrong/).
 
-Таким образом, создается один экземпляр `HttpClient`, которые будет использоваться повторно на протяжении всего жизненного цикла приложения. Создание экземпляра класса `HttpClient` для каждого запроса будет сокращать количество доступных сокетов при больших нагрузках. В результате будут возникать ошибки `SocketException`. Возможные способы решения этой проблемы основаны на создании объекта `HttpClient` в виде класса-одиночки или статического класса, как описано в этой [статье Майкрософт об использовании HttpClient](https://docs.microsoft.com/en-us/dotnet/csharp/tutorials/console-webapiclient). 
+Таким образом, создается один экземпляр `HttpClient`, которые будет использоваться повторно на протяжении всего жизненного цикла приложения. Создание экземпляра класса `HttpClient` для каждого запроса будет сокращать количество доступных сокетов при больших нагрузках. В результате будут возникать ошибки `SocketException`. Возможные способы решения этой проблемы основаны на создании объекта `HttpClient` в виде класса-одиночки или статического класса, как описано в этой [статье Майкрософт об использовании HttpClient](https://docs.microsoft.com/dotnet/csharp/tutorials/console-webapiclient). 
 
 Но есть еще одна проблема с `HttpClient`, которая может возникнуть, когда вы используете его как класс-одиночку или статический объект. В этом случае класс-одиночка или статический класс `HttpClient` не учитывает изменения в DNS, как описано в этой [проблеме в репозитории GitHub по .NET Core](https://github.com/dotnet/corefx/issues/11224). 
 
@@ -71,7 +71,7 @@ services.AddHttpClient<IOrderingService, OrderingService>();
 
 ### <a name="httpclient-lifetimes"></a>Время существования HttpClient
 
-Каждый раз, когда вы получаете объект `HttpClient` из IHttpClientFactory, возвращается новый экземпляр `HttpClient`. У вас будет HttpMessageHandler ** для каждого именованного или типизированного клиента. `HttpClientFactory` будет объединять в пул все экземпляры HttpMessageHandler, созданные фабрикой, чтобы уменьшить потребление ресурсов. Экземпляр HttpMessageHandler можно использовать повторно из пула при создании нового экземпляра `HttpClient`, если его время существования еще не истекло.
+Каждый раз, когда вы получаете объект `HttpClient` из IHttpClientFactory, возвращается новый экземпляр `HttpClient`. У вас будет HttpMessageHandler ** для каждого именованного или типизированного клиента. `IHttpClientFactory` будет объединять в пул все экземпляры HttpMessageHandler, созданные фабрикой, чтобы уменьшить потребление ресурсов. Экземпляр HttpMessageHandler можно использовать повторно из пула при создании нового экземпляра `HttpClient`, если его время существования еще не истекло.
 
 Создание пулов обработчиков желательно, поскольку каждый обработчик обычно управляет собственными базовыми HTTP-подключениями. Создание лишних обработчиков может привести к задержке подключения. Некоторые обработчики поддерживают подключения открытыми в течение неопределенного периода, что может помешать обработчику отреагировать на изменения DNS.
 
@@ -155,7 +155,7 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
 -   **Использование HttpClientFactory в .NET Core 2.1**
-    [*https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
+    [*https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1*](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1)
 
 
 -   **Репозиторий GitHub HttpClientFactory**

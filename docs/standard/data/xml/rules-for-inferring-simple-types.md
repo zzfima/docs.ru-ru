@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd5426de388ba2c7a22d66ce01d56a3139e36e38
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2477b55f38167cc3497979d073f74d441a06f96d
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615317"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123583"
 ---
 # <a name="rules-for-inferring-simple-types"></a>Правила выведения простых типов
 Описывает, как класс <xref:System.Xml.Schema.XmlSchemaInference> выводит тип данных для атрибутов и элементов.  
@@ -65,8 +65,9 @@ ms.locfileid: "45615317"
   
  При обнаружении первого значения `attr2` тип `attr2` выводится как `unsignedByte` на основе значения `0`. При обнаружении второго значения `attr2` тип повышается до `string` на основе текущего выведенного типа `unsignedByte` и текущего значения `true`, потому что класс <xref:System.Xml.Schema.XmlSchemaInference> не учитывает предыдущие значения при повышении выводимого типа. Однако если оба экземпляра `attr2` были обнаружены в одном XML-документе, а не в двух различных XML-документах, как показано выше, то `attr2` выведется как `boolean`.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Игнорируемые атрибуты из пространства имен http://www.w3.org/2001/XMLSchema-instance  
- Далее перечислены атрибуты схемы, которые не обрабатываются при выведении схемы.  
+### <a name="ignored-attributes-from-the-httpswwww3org2001xmlschema-instance-namespace"></a>Игнорируемые атрибуты из пространства имен <https://www.w3.org/2001/XMLSchema-instance>
+
+Далее перечислены атрибуты схемы, которые не обрабатываются при выведении схемы.  
   
 |Атрибут|Описание:|  
 |---------------|-----------------|  

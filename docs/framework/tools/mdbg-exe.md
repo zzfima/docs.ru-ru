@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: be32659a270cd7c6b7e3551594934926eabf0d31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2861d2364d2c29d15b25911524ef28aa78130913
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399773"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202924"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (отладчик командной строки для .NET Framework)
 Отладчик командной строки для платформы NET Framework помогает разработчикам программ и приложений в поиске и исправлении ошибок в программах, работающих в среде CLR платформы .NET Framework. Этот инструмент использует отладочный API-интерфейс среды выполнения. Программа MDbg.exe может использоваться только для отладки управляемого кода, отладка неуправляемого кода не поддерживается.  
   
- Это средство можно получить с помощью NuGet. Сведения по установке см. в разделе [MDbg 0.1.0](http://www.nuget.org/packages/MDbg/0.1.0). Для запуска средства используйте консоль диспетчера пакетов. Дополнительные сведения том, как использовать консоль диспетчера пакетов, см. в разделе [Использование консоли диспетчера пакетов](http://docs.nuget.org/docs/start-here/Using-the-Package-Manager-Console).  
+Это средство можно получить с помощью NuGet. Сведения по установке см. в разделе [MDbg 0.1.0](https://www.nuget.org/packages/MDbg/0.1.0). Для запуска средства используйте консоль диспетчера пакетов. Дополнительные сведения см. в статье об использовании [консоли диспетчера пакетов](/nuget/tools/package-manager-console).
   
- В командной строке диспетчера пакетов введите следующее:  
+В командной строке диспетчера пакетов введите следующее:  
   
 ## <a name="syntax"></a>Синтаксис  
   

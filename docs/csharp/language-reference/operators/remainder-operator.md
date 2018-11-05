@@ -7,16 +7,18 @@ helpviewer_keywords:
 - remainder operator [C#]
 - '% operator [C#]'
 ms.assetid: 3b74f4f9-fd9c-45e7-84fa-c8d71a0dfad7
-ms.openlocfilehash: 9cd2f7ad3856feb34667686979c942ecb21887c2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cd6d49b69d40f3b45aae060d46b58632dc8448f8
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45645922"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50041262"
 ---
 # <a name="-operator-c-reference"></a>Оператор % (Справочник по C#)
 
-Оператор остатка `%` вычисляет остаток от деления первого операнда на второй. Определяемые пользователем типы могут [перегружать](../keywords/operator.md) оператор `%`. Когда `%` перегружается, [оператор присваивания остатка](remainder-assignment-operator.md) `%=` также неявно перегружается.
+Оператор остатка `%` вычисляет остаток от деления первого операнда на второй.
+
+Определяемые пользователем типы могут [перегружать](../keywords/operator.md) оператор `%`. Когда `%` перегружается, [оператор присваивания остатка](remainder-assignment-operator.md) `%=` также неявно перегружается.
 
 Все числовые типы поддерживают оператор остатка.
 
@@ -33,7 +35,7 @@ ms.locfileid: "45645922"
 - знак `z`, если отлично от нуля, совпадает со знаком `x`;
 - абсолютное значение `z` является значением, произведенным `|x| - n * |y|`, где `n` — это наибольшее возможное целое число, которое меньше или равно `|x| / |y|`, а `|x|` и `|y|` являются абсолютными значениями `x` и `y` соответственно.
 
-Сведения о поведение оператора `%` в случае неконечных операндов см. в разделе [Оператор остатка](/dotnet/csharp/language-reference/language-specification/expressions#remainder-operator) в [спецификации языка C#](/dotnet/csharp/language-reference/language-specification/index).
+Сведения о поведение оператора `%` в случае неконечных операндов см. в разделе [Оператор остатка](~/_csharplang/spec/expressions.md#remainder-operator) [спецификации языка C#](../language-specification/index.md).
 
 > [!NOTE]
 > Этот метод вычисления остатка аналогичен тому, который использовался для целочисленных операндов, но отличается от IEEE 754. Если вам нужна операция остатка, которая соответствует IEEE 754, используйте метод <xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType>.

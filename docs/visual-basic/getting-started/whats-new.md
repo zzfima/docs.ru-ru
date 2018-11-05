@@ -1,6 +1,6 @@
 ---
 title: Новые возможности Visual Basic
-ms.date: 02/15/2018
+ms.date: 10/04/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,18 +8,16 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae29553b6a431c3f20f0e5e34614842946532a9b
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925615"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194063"
 ---
 # <a name="whats-new-for-visual-basic"></a>Новые возможности Visual Basic
 
-В этой статье перечислены названия основных возможностей в каждой версии Visual Basic с подробными описаниями новых и усовершенствованных возможностей в последней версии этого языка программирования.
+В этой статье перечислены названия основных возможностей в каждой версии Visual Basic, а также подробно описаны новые и усовершенствованные возможности в самых поздних версиях этого языка программирования.
   
 ## <a name="current-version"></a>Текущая версия
 
@@ -69,6 +67,10 @@ Visual Basic/Visual Studio .NET 2002
 ```vb
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
+
+[Модификатор доступа к члену `Private Protected`](../language-reference/modifiers/private-protected.md)
+
+Это новое сочетание ключевых слов определяет член, доступный для всех членов содержащего его класса, а также типы, производные от содержащего член класса, но только в том случае, если они присутствуют и в сборке, содержащей член. Так как структуры нельзя наследовать, `Private Protected` можно применять только к членам класса.
 
 **Начальный шестнадцатеричный/двоичный/восьмеричный разделитель**
 
@@ -153,7 +155,7 @@ Dim number As Integer = &H_C305_F860
 [Интерполяция строк](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  Для создания строк можно использовать выражения интерполяции строк.  Интерполированное строковое выражение выглядит как шаблонная строка, которая содержит выражения.  Интерполированную строку проще понять с точки зрения аргументов, чем [составное форматирование](../../standard/base-types/composite-format.md).  
   
-[Доступ к членам и индексация с проверкой на значение NULL](../../csharp/language-reference/operators/null-conditional-operators.md)  
+[Доступ к членам и индексация с проверкой на значение NULL](../language-reference/operators/null-conditional-operators.md)  
 Прежде чем осуществлять доступ к элементу (`?.`) или выполнять операцию с индексом (`?[]`), можно протестировать значение null в очень простой синтаксической конструкции.  Эти операторы позволяют писать меньше кода для проверок значений null, особенно если речь идет о внедрении в структуры данных.  Если левый операнд или объектная ссылка имеет значение null, операция также возвращает значение null.  
   
 [Многострочные строковые литералы](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  

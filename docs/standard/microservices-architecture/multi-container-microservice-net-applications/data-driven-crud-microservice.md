@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: b443f1b066d3c8ef0e798206510616aace32b377
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bba0b93ee7e68ae0320460c6a45ab252ac34c326
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45617147"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873505"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Создание простой микрослужбы CRUD на основе данных
 
@@ -393,7 +393,7 @@ public class Startup
   http://<your-root-url>/swagger/
 ```
 
-Ранее вы видели произведенный пользовательский интерфейс, созданный Swashbuckle для URL-адреса, такого как http://&lt;your-root-url&gt;/swagger/ui. На рисунке 8-9 показано, как можно тестировать любой метод API.
+Вы ранее видели пользовательский интерфейс, созданный Swashbuckle и доступный по URL-адресу, например `http://<your-root-url>/swagger/ui`. На рисунке 8-9 показано, как можно тестировать любой метод API.
 
 ![](./media/image10.png)
 

@@ -2,7 +2,7 @@
 title: Требования к системе для .NET Framework
 description: Определите требования к оборудованию, операционной системе и программному обеспечению для установки .NET Framework 4.5 и более поздних версий.
 ms.custom: updateeachrelease
-ms.date: 04/10/2018
+ms.date: 10/01/2018
 helpviewer_keywords:
 - software requirements
 - .NET Framework, system requirements
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 909b9369aba6b22899ae3fe7ac15eb470c5c2697
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e9d1c6dff4a1a8722a2ca196763756336d512631
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509182"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203947"
 ---
 # <a name="net-framework-system-requirements"></a>Требования к системе для .NET Framework
 
@@ -26,6 +26,8 @@ ms.locfileid: "43509182"
 * .NET Framework 4.5.1 и ее точечные выпуски (4.5.1 и 4.5.2);
 * .NET Framework 4.6 и ее точечные выпуски (4.6.1 и 4.6.2);
 * .NET Framework 4.7 и ее доработанный выпуск (4.7.1 и 4.7.2).
+
+Сведения о более ранних версиях .NET Framework, чем 4.5, см. в статье [Версии и зависимости платформы .NET Framework](../migration-guide/versions-and-dependencies.md).
 
 Для сред разработки, позволяющих разрабатывать приложения для платформы .NET Framework, существует отдельный набор требований.
 
@@ -53,6 +55,7 @@ ms.locfileid: "43509182"
 
 | Операционная система | Поддерживаемые выпуски | Предустановлена с операционной системой | Может устанавливаться отдельно |
 | ---------------- | ------------------ | ------------------------ | ---------------------- |
+| Обновление Windows 10 за октябрь 2018 г. | 32- и 64-разрядные версии | .NET Framework 4.7.2 |--|
 | Обновление Windows 10 за апрель 2018 г. | 32- и 64-разрядные версии | .NET Framework 4.7.2 |--|
 | Windows 10 Fall Creators Update | 32- и 64-разрядные версии | .NET Framework 4.7.1 | .NET Framework 4.7.2 |
 | Обновление Windows 10 Creators Update | 32- и 64-разрядные версии | .NET Framework 4.7 | .NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2 | 
@@ -105,6 +108,6 @@ ms.locfileid: "43509182"
 
 ## <a name="see-also"></a>См. также
 
-[Руководство по установке](../../../docs/framework/install/index.md)   
-[Начало работы](../../../docs/framework/get-started/index.md)   
-[Устранение неполадок с заблокированными установками и удалениями .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)
+- [Руководство по установке](../../../docs/framework/install/index.md)   
+- [Начало работы](../../../docs/framework/get-started/index.md)   
+- [Устранение неполадок с заблокированными установками и удалениями .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)

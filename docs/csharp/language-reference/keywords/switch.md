@@ -12,26 +12,26 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 08b63d67b6175d18bee1317cc8908d876fbb4039
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b23c43ebdb8d4277344949a18b1bc999b27d60e9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47193740"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188616"
 ---
 # <a name="switch-c-reference"></a>switch (справочник по C#)
 
 `switch` — это оператор выбора, который выбирает для выполнения один *раздел switch* из списка кандидатов, сравнивая их с *выражением соответствия*.
 
-[!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
+[!code-csharp[switch#1](~/samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]
 
 Оператор `switch` часто используется вместо конструкции [if-else](if-else.md), если одно выражение проверяется на соответствие трем или больше условиям. Например, следующий оператор `switch` определяет, имеет ли переменная типа `Color` одно из трех значений:
 
-[!code-csharp[switch#3](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
+[!code-csharp[switch#3](~/samples/snippets/csharp/language-reference/keywords/switch/switch3.cs#1)]
 
 Это эквивалентно следующему примеру, в котором используется конструкция `if` - `else`.
 
-[!code-csharp[switch#3a](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
+[!code-csharp[switch#3a](~/samples/snippets/csharp/language-reference/keywords/switch/switch3a.cs#1)]
 
 ## <a name="the-match-expression"></a>Выражение соответствия
 
@@ -98,7 +98,7 @@ switch (caseSwitch)
 
 - изменив порядок разделов switch;
 
-- вставив предложение </a name="when">when</a> в метку `case`.
+- используя [предложение when](#when) в метке `case`.
 
 ## <a name="the-default-case"></a>Метка case `default`
 
@@ -171,11 +171,11 @@ case null:
 
 В следующем примере шаблон типа используется для предоставления сведений о различные видах коллекций типов.
 
-[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
+[!code-csharp[type-pattern#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
 Без сопоставления шаблонов этот код может быть написан следующим образом. При использовании шаблона типа создается более лаконичный и удобочитаемый код, причем проверять результат преобразования (`null`) или выполнять повторное приведение не требуется.
 
-[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
+[!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
 ## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> Оператор `case` и предложение `when`
 
@@ -183,13 +183,13 @@ case null:
 
 В следующем примере определяется базовый класс `Shape`, класс `Rectangle`, производный от `Shape`, и класс `Square`, производный от `Rectangle`. Предложение `when` используется в нем для того, чтобы `ShowShapeInfo` обрабатывал объект `Rectangle`, которому назначена такая же длина и ширина, как у объекта `Square`, даже если он не был инициализирован как объект `Square`. Метод не пытается отобразить сведения ни об объекте со значением `null`, ни о форме с нулевой областью.
 
-[!code-csharp[switch#8](../../../../samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
+[!code-csharp[when-clause#1](~/samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
 
 Обратите внимание на то, что предложение `when` в этом примере, проверяющее, имеет ли объект `Shape` значение `null`, не выполняется. Правильный шаблон пути для проверки на наличие значения `null` — `case null:`.
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-Дополнительные сведения см. в разделе [Оператор switch](/dotnet/csharp/language-reference/language-specification/statements#the-switch-statement) в статье [Спецификации языка C#](../language-specification/index.md). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
+Дополнительные сведения см. в разделе [Оператор switch](~/_csharplang/spec/statements.md#the-switch-statement) в статье [Спецификации языка C#](../language-specification/index.md). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
 
 ## <a name="see-also"></a>См. также
 

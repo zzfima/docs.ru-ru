@@ -159,15 +159,15 @@ helpviewer_keywords:
 ms.assetid: 8271973c-deba-47a6-8e5e-04ce63f146ad
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f051af9284ddbf583e5454f7bdc106a061489d3c
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 95d971003a28ec411b3734009bcb978c630cb811
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44075465"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48873791"
 ---
 # <a name="winmdexpexe-error-messages"></a>Сообщения об ошибках Winmdexp.exe
-Процесс сборки вызывает программу [Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) при использовании шаблона **[!INCLUDE[wrt](../../../includes/wrt-md.md)] Компонент** в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], поэтому сообщения об ошибках Winmdexp.exe отображаются в **Списке ошибок**. Программа Winmdexp.exe работает в модуле, который компилируется с параметром `/target:winmdobj`. Поскольку в качестве входных данных этой программе требуется скомпилированный модуль, в случае сбоя компиляции сообщения об ошибках Winmdexp.exe не отображаются.  
+Процесс сборки вызывает программу [Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) при использовании шаблона **Компонент [!INCLUDE[wrt](../../../includes/wrt-md.md)]** в Visual Studio 2012, поэтому сообщения об ошибках Winmdexp.exe отображаются в **Списке ошибок**. Программа Winmdexp.exe работает в модуле, который компилируется с параметром `/target:winmdobj`. Поскольку в качестве входных данных этой программе требуется скомпилированный модуль, в случае сбоя компиляции сообщения об ошибках Winmdexp.exe не отображаются.  
   
  Сообщения об ошибках предназначены для размещения в них всех сведений, необходимых для диагностики состояний ошибок, о которых они сообщают. Но для решения некоторых проблем требуется больше информации, чем может содержать сообщение. Дополнительные сведения см. в статье [Диагностика состояний ошибки компонентов среды выполнения Windows](https://go.microsoft.com/fwlink/p/?LinkId=251127) в Центре разработки для Windows.  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-ms.openlocfilehash: b800848fc3cefb1f82fb5822007bc670c1684363
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: d09ad4b1f518ac6f4c42dffd4b3ca17249b95700
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43788932"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194323"
 ---
 # <a name="walkthrough-using-client-application-services"></a>Пошаговое руководство. Использование служб клиентских приложений
 В этой статье описывается создание приложения Windows, в котором для проверки подлинности пользователей и извлечения их ролей и параметров используются службы клиентских приложений.  
@@ -35,9 +35,8 @@ ms.locfileid: "43788932"
 -   Включение автономного режима. Вы создадите флажок, с помощью которого пользователи смогут указывать состояние своего подключения. Указанное значение будет использоваться, чтобы определить, будут ли поставщики служб клиентских приложений использовать данные из локального кэша вместо доступа к своим веб-службам. При переходе приложения в режим "В сети" будет выполняться повторная проверка подлинности текущего пользователя.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
- Ниже приведен компонент, необходимый для выполнения данного пошагового руководства.  
-  
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
+
+Для выполнения шагов, описанных в этом руководстве, вам понадобится Visual Studio.
   
 ## <a name="creating-the-client-application"></a>Создание клиентского приложения  
  В первую очередь следует создать проект Windows Forms. В этом пошаговом руководстве используется проект Windows Forms, поскольку с подобными проектами знакомо большинство разработчиков. Приведенные инструкции также актуальны для проектов Windows Presentation Foundation (WPF).  
@@ -328,7 +327,7 @@ ms.locfileid: "43788932"
   
      [!code-vb[ClientApplicationServices#110](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Class1.vb#110)]  
   
-9. Установите курсор после кода интерфейса `IClientformsAuthenticationCredentialsProvider`и нажмите клавишу ВВОД, чтобы создать метод `GetCredentials` .  
+9. Установите курсор после кода интерфейса `IClientformsAuthenticationCredentialsProvider` и нажмите клавишу ВВОД, чтобы создать метод `GetCredentials`.  
   
 10. Найдите код, с помощью которого реализуется метод <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> , и замените его на приведенный ниже.  
   
@@ -389,7 +388,7 @@ ms.locfileid: "43788932"
      [!code-csharp[ClientApplicationServices#030](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#030)]
      [!code-vb[ClientApplicationServices#030](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#030)]  
   
- В случае успешной проверки подлинности поставщик проверки подлинности клиента назначает свойство <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> экземпляру класса <xref:System.Web.ClientServices.ClientRolePrincipal>. Этот класс реализует метод <xref:System.Security.Principal.IPrincipal.IsInRole%2A> — функции делегируются заданному поставщику ролей. Как и ранее, в коде приложения не требуются прямые ссылки на поставщика услуг.  
+ В случае успешной проверки подлинности поставщик проверки подлинности клиента назначает свойство <xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> экземпляру класса <xref:System.Web.ClientServices.ClientRolePrincipal> . Этот класс реализует метод <xref:System.Security.Principal.IPrincipal.IsInRole%2A> — функции делегируются заданному поставщику ролей. Как и ранее, в коде приложения не требуются прямые ссылки на поставщика услуг.  
   
  Теперь вы можете запустить приложение и войти в систему с именем пользователя "employee", чтобы убедиться, что кнопка не отображается. После этого попробуйте войти с именем "manager" — кнопка должна отображаться.  
   

@@ -21,14 +21,12 @@ helpviewer_keywords:
 - network resources, configuring Internet applications
 - Internet, default proxy
 ms.assetid: bb707c72-eed2-4a82-8800-c9e68df2fd4f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: d2f3f015689510237142572f230b53ba7bd393ca
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bdc63064d3f0d809c196e77a890ba697f9d4deea
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47237050"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197240"
 ---
 # <a name="configuring-internet-applications"></a>Настройка веб-приложений
 [Элемент \<system.Net> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) содержит сведения о конфигурации сети для приложений. С помощью [элемента \<system.Net> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md) можно задавать прокси-серверы, устанавливать параметры управления подключениями и включать в приложение пользовательские модули проверки подлинности и запросов.  
@@ -37,7 +35,7 @@ ms.locfileid: "47237050"
   
  Важно отметить, что параметры Microsoft Internet Explorer объединены с параметрами конфигурации, причем последние имеют приоритет.  
   
- В следующем примере устанавливается адрес прокси-сервера по умолчанию http://proxyserver, а также указывается, что прокси-сервер не должен использоваться локальными адресами и все запросы к серверам в домене contoso.com должны направляться в обход прокси-сервера.  
+ В следующем примере устанавливается адрес прокси-сервера по умолчанию `http://proxyserver`, а также указывается, что прокси-сервер не должен использоваться локальными адресами и все запросы к серверам в домене contoso.com должны направляться в обход прокси-сервера.  
   
 ```xml  
 <configuration>  
@@ -56,7 +54,7 @@ ms.locfileid: "47237050"
 </configuration>  
 ```  
   
- [Элемент \<connectionManagement> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) задает число постоянных подключений, которые могут устанавливаться к конкретному серверу или ко всем остальным серверам. В следующем примере показано приложение, которое использует два постоянных подключения к серверу www.contoso.com, четыре постоянных подключения к серверу с IP-адресом 192.168.1.2, а также одно постоянное подключение ко всем остальным серверам.  
+ [Элемент \<connectionManagement> (сетевые параметры)](../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md) задает число постоянных подключений, которые могут устанавливаться к конкретному серверу или ко всем остальным серверам. В следующем примере показано приложение, которое использует два постоянных подключения к серверу `www.contoso.com`, четыре постоянных подключения к серверу с IP-адресом 192.168.1.2, а также одно постоянное подключение ко всем остальным серверам.  
   
 ```xml  
 <configuration>  

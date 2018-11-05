@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e98862aba937724c799adef597260a06ed495f6
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e7d7f791fbc68a526f428f4f79d9b379a23ca771
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44199769"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199491"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Классы Semaphore и SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> Класс представляет собой именованный (общесистемный) или локальный семафор. Он является тонкой оболочкой вокруг объекта семафора Win32. Семафоры Win32 являются семафорами счета, которые могут быть использованы для управления доступом к пулу ресурсов.  
@@ -25,7 +25,7 @@ ms.locfileid: "44199769"
  <xref:System.Threading.SemaphoreSlim> Класс представляет упрощенный, быстрый семафор, который можно использовать для ожидания внутри одного процесса, когда предполагается, что времена ожидания будут очень короткими. <xref:System.Threading.SemaphoreSlim>использует максимально примитивы синхронизации, предоставляемые общеязыковой среды выполнения (CLR). Тем не менее, он также предоставляет неактивно инициализированные дескрипторы ожидания на основе ядра при необходимости поддержки ожидания для нескольких семафоров. <xref:System.Threading.SemaphoreSlim>также поддерживает использование токенов отмены, но не поддерживает именованные семафоры или использование дескриптора ожидания для синхронизации.  
   
 ## <a name="managing-a-limited-resource"></a>Управление ограниченным ресурсом  
- Потоки входили в семафор посредством вызова метода <xref:System.Threading.WaitHandle.WaitOne%2A>, который наследуется от класса <xref:System.Threading.WaitHandle> , в случае объекта <xref:System.Threading.Semaphore?displayProperty=nameWithType>или метода <xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType> или <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType>в случае объекта <xref:System.Threading.SemaphoreSlim>. По возвращении вызова счетчик на семафоре уменьшается на единицу. При запросе потоком записи счетчик равен нулю, поток блокируется. Потоки освобождают семафор посредством вызова метода <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType> или <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType>, заблокированные потоки разрешено вводить. Для входа блокированных потоков в семафор нет гарантированного порядка, например first-in, first-out (FIFO) или последним поступил — первым обслужен (LIFO).  
+ Потоки входят в семафор посредством вызова метода <xref:System.Threading.WaitHandle.WaitOne%2A>, который наследуется от класса <xref:System.Threading.WaitHandle>, в случае объекта <xref:System.Threading.Semaphore?displayProperty=nameWithType> либо метода <xref:System.Threading.SemaphoreSlim.Wait%2A?displayProperty=nameWithType> или <xref:System.Threading.SemaphoreSlim.WaitAsync%2A?displayProperty=nameWithType> в случае объекта <xref:System.Threading.SemaphoreSlim>. По возвращении вызова счетчик на семафоре уменьшается на единицу. При запросе потоком записи счетчик равен нулю, поток блокируется. Потоки освобождают семафор посредством вызова метода <xref:System.Threading.Semaphore.Release%2A?displayProperty=nameWithType> или <xref:System.Threading.SemaphoreSlim.Release%2A?displayProperty=nameWithType>, заблокированные потоки разрешено вводить. Для входа блокированных потоков в семафор нет гарантированного порядка, например first-in, first-out (FIFO) или последним поступил — первым обслужен (LIFO).  
   
  Поток может войти в семафор несколько раз, многократно вызывая метод <xref:System.Threading.Semaphore?displayProperty=nameWithType> объекта <xref:System.Threading.WaitHandle.WaitOne%2A> или метод  <xref:System.Threading.SemaphoreSlim> объекта<xref:System.Threading.SemaphoreSlim.Wait%2A>. Чтобы освободить семафор, поток может либо вызвать метод перегрузки <xref:System.Threading.Semaphore.Release?displayProperty=nameWithType> или <xref:System.Threading.SemaphoreSlim.Release?displayProperty=nameWithType> одинаковое количество раз, либо вызвать метод перегрузки <xref:System.Threading.Semaphore.Release%28System.Int32%29?displayProperty=nameWithType> или <xref:System.Threading.SemaphoreSlim.Release%28System.Int32%29?displayProperty=nameWithType> и указать количество освобождаемых записей.  
   

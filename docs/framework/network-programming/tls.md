@@ -1,7 +1,7 @@
 ---
 title: Рекомендации по использованию протокола TLS с .NET Framework
 description: В этой статье приводятся рекомендации по использованию протокола TLS с .NET Framework
-ms.date: 03/15/2018
+ms.date: 10/22/2018
 helpviewer_keywords:
 - sending data, Internet security
 - protocols, Internet security
@@ -12,17 +12,16 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-author: blowdart
-ms.openlocfilehash: 96d37934b5e852b69c692bb1606d2998dac6f63a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9cb7dbdfb1ad221e00823d8d55e7fd3c52cabe8b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424484"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194141"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Рекомендации по использованию протокола TLS с .NET Framework
 
-Протокол TLS — это отраслевой стандарт, предназначенный для защиты конфиденциальности информации, передаваемой через Интернет. [TLS 1.2](https://tools.ietf.org/html/rfc5246) — это последняя версия стандарта, в которой предоставлены улучшенные функции безопасности по сравнению с предыдущими версиями. В будущем на смену TLS 1.2 придет версия [TLS 1.3](https://tools.ietf.org/html/draft-ietf-tls-tls13-22). В этой статье приводятся рекомендации по защите приложений .NET Framework, в которых используется протокол TLS.
+Протокол TLS — это отраслевой стандарт, предназначенный для защиты конфиденциальности информации, передаваемой через Интернет. [TLS 1.2](https://tools.ietf.org/html/rfc5246) — это стандарт, в котором предоставлены улучшенные функции безопасности по сравнению с предыдущими версиями. В будущем TLS 1.2 будет заменен новой версией стандарта [TLS 1.3](https://tools.ietf.org/html/rfc8446) с более высокой скоростью и улучшенными возможностями безопасности. В этой статье приводятся рекомендации по защите приложений .NET Framework, в которых используется протокол TLS.
 
 Чтобы обеспечить безопасность приложений .NET Framework, **не** указывайте версию TLS в коде. Приложения .NET Framework должны использовать ту версию TLS, которую поддерживает операционная система.
 
@@ -278,7 +277,7 @@ Windows Registry Editor Version 5.00
 | Windows Server 2008 | Для поддержки TLS 1.2 и TLS 1.1 требуется обновить систему. Дополнительные сведения см. в статье [Update to add support for TLS 1.1 and TLS 1.2 in Windows Server 2008 SP2](https://support.microsoft.com/help/4019276/update-to-add-support-for-tls-1-1-and-tls-1-2-in-windows-server-2008-s) (Обновление для добавления поддержки TLS 1.1 и TLS 1.2 в Windows Server 2008 с пакетом обновления 2 (SP2)). |
 | Windows Vista | Не поддерживается. |
 
-Сведения о том, какие версии протоколов TLS или SSL включены в версиях Windows, см. в статье [Protocols in TLS/SSL (Schannel SSP)](https://msdn.microsoft.com/library/windows/desktop/mt808159) (Протоколы TLS и SSL (поставщик службы безопасности Schannel))
+Сведения о том, какие версии протоколов TLS или SSL включены в версиях Windows, см. в статье [Protocols in TLS/SSL (Schannel SSP)](/windows/desktop/SecAuthN/protocols-in-tls-ssl--schannel-ssp-) (Протоколы TLS и SSL (поставщик службы безопасности Schannel))
 
 **Требования для поддержки TLS 1.2 на платформе .NET Framework 3.5**
 
@@ -305,6 +304,6 @@ Windows Registry Editor Version 5.00
 
 ### <a name="azure-guest-os-registry-settings"></a>Параметры реестра для гостевой ОС Azure
 
-В образе гостевой ОС Azure для [облачных служб Azure](https://azure.microsoft.com/services/cloud-services/) в разделе реестра для `SchUseStrongCrypto` уже задано значение 1. Дополнительные сведения см. в разделе [SchUseStrongCrypto](#schusestrongcrypto).
+В образе гостевой ОС Azure семейства 5 для [облачных служб Azure](https://azure.microsoft.com/services/cloud-services/) в разделе реестра для `SchUseStrongCrypto` уже задано значение 1. Дополнительные сведения см. в разделе [SchUseStrongCrypto](#schusestrongcrypto).
 
 Задайте в разделе реестра для [SystemDefaultTlsVersions](#systemdefaulttlsversions) значение 1. Сведения см. в разделе [Настройка безопасности в реестре Windows](#configuring-security-via-the-windows-registry).

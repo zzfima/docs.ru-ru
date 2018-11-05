@@ -5,12 +5,12 @@ author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: b7c7b8d16463cd66eb8a0a5e383dd3763af323d8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f456bbe771608258307673337693c1e8a5c45f39
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857197"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454373"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Установка платформы .NET Framework в Windows 10 и Windows Server 2016
 
@@ -23,6 +23,8 @@ ms.locfileid: "43857197"
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 Платформа .NET Framework 4.7.2 входит в состав:
+
+* [Обновление Windows 10 за октябрь 2018 г.](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 * [Обновления Windows 10 за апрель 2018 г.](https://www.microsoft.com/software-download/windows10)
 

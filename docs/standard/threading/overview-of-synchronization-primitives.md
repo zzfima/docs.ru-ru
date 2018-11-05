@@ -1,180 +1,149 @@
 ---
-title: Обзор примитивов синхронизации
-ms.date: 03/30/2017
+title: Общие сведения о примитивах синхронизации
+description: Узнайте о том, как с помощью примитивов синхронизации потоков .NET синхронизировать доступ к общему ресурсу или управлять взаимодействием потоков
+ms.date: 10/01/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - synchronization, threads
-- threading [.NET Framework],synchronizing threads
+- threading [.NET],synchronizing threads
 - managed threading
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37abcb6b3a8fdf4ef91d5e946a97db7ca1428ce8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47204603"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201602"
 ---
-# <a name="overview-of-synchronization-primitives"></a>Обзор примитивов синхронизации
-<a name="top"></a> Платформа .NET Framework предоставляет ряд примитивов синхронизации для управления взаимодействием потоков и предотвращения состояний гонки. Их можно условно разделить на три категории: блокировка, сигнал и блокированные операции.  
-  
- Эти категории точно не определены: некоторые механизмы синхронизации имеют признаки нескольких категорий; события, которые освобождают по одному потоку за раз, функционируют как блокировки; снятие любой блокировки может быть воспринято как сигнал, а блокированные операции могут быть использованы для создания блокировок. Однако эти категории все же полезны.  
-  
- Важно помнить, что синхронизация потоков выполняется совместно. Если хотя бы один поток обходит механизм синхронизации и получает доступ напрямую к защищенному ресурсу, такой механизм синхронизации не может считаться эффективным.  
-  
- Обзор включает следующие разделы.  
-  
--   [Блокировка](#locking)  
-  
--   [Сигнальный NaN](#signaling)  
-  
--   [Типы упрощенной синхронизации](#lightweight_synchronization_types)  
-  
--   [SpinWait](#spinwait)  
-  
--   [Блокируемые операции](#interlocked_operations)  
-  
-<a name="locking"></a>   
-## <a name="locking"></a>Блокировка  
- Блокировки предоставляют единовременное управление ресурсом одному потоку или определенному количеству потоков. Поток, запрашивающий монопольную блокировку, если блокировка уже используется, блокируется до того момента, как блокировка станет доступной.  
-  
-### <a name="exclusive-locks"></a>Монопольные блокировки  
- Самым простым способом блокировки является оператор `lock` в C# и оператор `SyncLock` в Visual Basic, который управляет доступом к блоку кода. Как правило, этот блок называется критической секцией. Оператор `lock` реализуется с помощью методов <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> и <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>. Он использует блок `try…finally` для снятия блокировки.  
-  
- В целом, использование оператора `lock` или `SyncLock` для защиты небольших блоков кода, включающих не более одного метода, является лучшим способом использовать класс <xref:System.Threading.Monitor>. Несмотря на все свои возможности, класс <xref:System.Threading.Monitor> подвержен потере блокировок и взаимоблокировок.  
-  
-#### <a name="monitor-class"></a>Класс Monitor  
- Класс <xref:System.Threading.Monitor> предоставляет дополнительные возможности, которые можно использовать вместе с оператором `lock`.  
-  
--   Метод <xref:System.Threading.Monitor.TryEnter%2A> позволяет через указанное время разблокировать поток, который заблокирован в ожидании предоставления ресурса. Он возвращает логическое значение, указывающее на успешность выполнения или сбой, которое можно использовать для выявления и устранения возможных взаимоблокировок.  
-  
--   Метод <xref:System.Threading.Monitor.Wait%2A> вызывается потоком в критической секции. Он отдает управление ресурсом и блокирует поток до тех пор, пока ресурс снова станет доступным.  
-  
--   Методы <xref:System.Threading.Monitor.Pulse%2A> и <xref:System.Threading.Monitor.PulseAll%2A> разрешают потоку, который должен снять блокировку или вызвать метод <xref:System.Threading.Monitor.Wait%2A>, поместить один или несколько потоков в очередь готовности, чтобы они могли получить блокировку.  
-  
- Время ожидания для перегрузок метода <xref:System.Threading.Monitor.Wait%2A> позволяет ожидающим потокам перейти в очередь готовности.  
-  
- Класс <xref:System.Threading.Monitor> может предоставить блокировку в нескольких доменах приложений, если объект, используемый для блокировки, является производным от <xref:System.MarshalByRefObject>.  
-  
- Класс <xref:System.Threading.Monitor> реализует сходство потоков. То есть поток, вошедший в этот класс, должен выйти посредством вызова метода <xref:System.Threading.Monitor.Exit%2A> или <xref:System.Threading.Monitor.Wait%2A>.  
-  
- Класс <xref:System.Threading.Monitor> не поддерживает создание экземпляров. Его методы являются статическими (`Shared` в Visual Basic) и работают с созданным экземпляром заблокированного объекта.  
-  
- Обзор концепции см. в разделе [Мониторы](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db).  
-  
-#### <a name="mutex-class"></a>Класс Mutex  
- Потоки запрашивают <xref:System.Threading.Mutex> путем вызова перегрузки его метода <xref:System.Threading.WaitHandle.WaitOne%2A>. Перегрузки со временем ожидания предоставляются для освобождения потоков после определенного времени ожидания. В отличие от класса <xref:System.Threading.Monitor> мьютекс может быть или локальным, или глобальным. Глобальные мьютексы, также называемые именованными мьютексами, видны в операционной системе и могут использоваться для синхронизации потоков в различных доменах приложений или процессах. Локальные мьютексы происходят от <xref:System.MarshalByRefObject> и могут использоваться за границами домена приложения.  
-  
- Кроме того, <xref:System.Threading.Mutex> происходит от <xref:System.Threading.WaitHandle>, что означает возможность его использования в сигнальных механизмах, предоставленных <xref:System.Threading.WaitHandle>, таких как методы <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> и <xref:System.Threading.WaitHandle.SignalAndWait%2A>.  
-  
- Как и класс <xref:System.Threading.Monitor>, класс <xref:System.Threading.Mutex> поддерживает сходство потоков. В отличие от <xref:System.Threading.Monitor> класс <xref:System.Threading.Mutex> поддерживает создание экземпляров.  
-  
- Обзор концепции см. в разделе [Объекты Mutex](../../../docs/standard/threading/mutexes.md).  
-  
-#### <a name="spinlock-class"></a>Класс SpinLock  
- Начиная с [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], класс <xref:System.Threading.SpinLock> можно использовать в тех случаях, когда накладные расходы от применения <xref:System.Threading.Monitor> ухудшают быстродействие. Когда объект <xref:System.Threading.SpinLock> обнаруживает блокированную критическую секцию, он просто входит в цикл, пока блокировка не станет доступной. Если блокировка сохраняется в течение очень короткого времени, вхождение в цикл может обеспечить лучшее быстродействие, чем блокировка. Но если блокировка сохраняется дольше нескольких десятков тактов процессора, <xref:System.Threading.SpinLock> работает так же хорошо, как и <xref:System.Threading.Monitor>, но использует больше тактов процессора и, таким образом, может понизить быстродействие других потоков или процессов.  
-  
-### <a name="other-locks"></a>Другие блокировки  
- Блокировки не обязательно должны быть монопольными. Часто бывает полезным разрешить одновременный доступ к ресурсу ограниченному количеству потоков. Семафоры и блокировки чтения и записи предназначены для управления доступом к ресурсу в пуле.  
-  
-#### <a name="readerwriterlock-class"></a>Класс ReaderWriterLock  
- Класс <xref:System.Threading.ReaderWriterLockSlim> предназначен для тех случаев, когда поток, изменяющий данные, (модуль записи) должен иметь монопольный доступ к ресурсу. Если модуль записи не активен, любое количество модулей чтения может получить доступ к ресурсу (например, путем вызова метода <xref:System.Threading.ReaderWriterLockSlim.EnterReadLock%2A>). Если поток запрашивает монопольный доступ (например, путем вызова метода <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A>), последующие запросы модуля чтения блокируются до того момента, как все существующие модули чтения не освободят блокировку, а модуль записи не установит и не снимет блокировку.  
-  
- Класс <xref:System.Threading.ReaderWriterLockSlim> реализует сходство потоков.  
-  
- Обзор концепции см. в разделе [Блокировки чтения и записи](../../../docs/standard/threading/reader-writer-locks.md).  
-  
-#### <a name="semaphore-class"></a>Semaphore - класс  
- Класс <xref:System.Threading.Semaphore> разрешает доступ к ресурсу определенному количеству потоков. Дополнительные потоки, запрашивающие ресурс, блокируются до освобождения потоком семафора.  
-  
- Как и класс <xref:System.Threading.Mutex>, класс <xref:System.Threading.Semaphore> является производным от класса <xref:System.Threading.WaitHandle>. Кроме того, как и класс <xref:System.Threading.Mutex>, класс <xref:System.Threading.Semaphore> может быть локальным или глобальным. Он может использоваться за пределами границ домена приложения.  
-  
- В отличие от классов <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> и <xref:System.Threading.ReaderWriterLock>, класс <xref:System.Threading.Semaphore> не поддерживает сходство потоков. Это означает, что его можно использовать в сценариях, в которых один поток получает семафор, а другой поток освобождает его.  
-  
- Обзор концепции см. в разделе [Класс Semaphore](../../../docs/standard/threading/semaphore-and-semaphoreslim.md).  
-  
- <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> — это упрощенный семафор для синхронизации в границах одного процесса.  
-  
- [К началу](#top)  
-  
-<a name="signaling"></a>   
-## <a name="signaling"></a>Сигнальный NaN  
- Самым простым способом ожидания сигнала от другого потока является вызов метода <xref:System.Threading.Thread.Join%2A>, который блокирует поток до завершения другого потока. У метода <xref:System.Threading.Thread.Join%2A> есть две перегрузки, которые позволяют блокированному потоку освободиться от ожидания по истечении заданного времени.  
-  
- Дескрипторы ожидания предоставляют более полный набор возможностей ожидания и сигнализации.  
-  
-### <a name="wait-handles"></a>Дескрипторы ожидания  
- Дескрипторы ожидания являются производными от класса <xref:System.Threading.WaitHandle>, который, в свою очередь, является производным от <xref:System.MarshalByRefObject>. Поэтому дескрипторы ожидания можно использовать для синхронизации действий потоков за границами доменов приложений.  
-  
- Потоки блокируются при дескрипторах ожидания посредством вызова метода экземпляра <xref:System.Threading.WaitHandle.WaitOne%2A> или одного из статических методов <xref:System.Threading.WaitHandle.WaitAll%2A>, <xref:System.Threading.WaitHandle.WaitAny%2A> или <xref:System.Threading.WaitHandle.SignalAndWait%2A>. Способ их освобождения зависит от того, какой метод был вызван, а также от типа дескрипторов ожидания.  
-  
- Обзор концепции см. в разделе [Дескрипторы ожидания](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489).  
-  
-#### <a name="event-wait-handles"></a>Дескрипторы ожидания событий  
- Дескрипторы ожидания событий включают класс <xref:System.Threading.EventWaitHandle> и его производные классы <xref:System.Threading.AutoResetEvent> и <xref:System.Threading.ManualResetEvent>. Потоки освобождаются от дескриптора ожидания событий, если этот дескриптор получает сигнал посредством вызова метода <xref:System.Threading.EventWaitHandle.Set%2A> или с помощью метода <xref:System.Threading.WaitHandle.SignalAndWait%2A>.  
-  
- Дескрипторы ожидания событий или сбрасывают себя автоматически, как турникет, разрешающий только один поток при каждом сигнале, или должны быть сброшены вручную, как ворота, которые закрыты до получения сигнала, а затем открыты, пока их кто-нибудь не закроет. В соответствии с их именами классы <xref:System.Threading.AutoResetEvent> и <xref:System.Threading.ManualResetEvent> представляют соответственно первый и второй подходы. <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> — это упрощенное событие для синхронизации в границах одного процесса.  
-  
- Дескриптор <xref:System.Threading.EventWaitHandle> может представлять любой тип события и может быть локальным или глобальным. Производные классы <xref:System.Threading.AutoResetEvent> и <xref:System.Threading.ManualResetEvent> всегда являются локальными.  
-  
- Дескрипторы ожидания событий не поддерживают сходство потоков. Любой поток может подать сигнал дескриптору ожидания событий.  
-  
- Обзор концепции см. в разделе [EventWaitHandle, AutoResetEvent и ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md).  
-  
-#### <a name="mutex-and-semaphore-classes"></a>Классы Mutex и Semaphore  
- Так как классы <xref:System.Threading.Mutex> и <xref:System.Threading.Semaphore> являются производными от класса <xref:System.Threading.WaitHandle>, они могут использоваться со статическими методами класса <xref:System.Threading.WaitHandle>. Например, поток может использовать метод <xref:System.Threading.WaitHandle.WaitAll%2A> для ожидания выполнения всех трех условий: подан сигнал дескриптору <xref:System.Threading.EventWaitHandle>, освобожден мьютекс <xref:System.Threading.Mutex> и сброшен семафор <xref:System.Threading.Semaphore>. Также поток может использовать метод <xref:System.Threading.WaitHandle.WaitAny%2A> для ожидания выполнения одного из этих условий.  
-  
- Для классов <xref:System.Threading.Mutex> и <xref:System.Threading.Semaphore> получение сигнала означает освобождение. Если в качестве первого аргумента метода <xref:System.Threading.WaitHandle.SignalAndWait%2A> используется любой из этих типов, он освобождается. В случае класса <xref:System.Threading.Mutex>, поддерживающего сходство потоков, исключение создается, если вызывающий поток не имеет собственного мьютекса. Как отмечалось ранее, семафоры не поддерживают сходство потоков.  
-  
-#### <a name="barrier"></a>Барьер  
- Класс <xref:System.Threading.Barrier> предоставляет способ циклической синхронизации нескольких потоков, позволяющий заблокировать их все в одной точке и дождаться завершения всех остальных потоков. Барьер полезен, когда одному или нескольким потокам для перехода к следующему этапу алгоритма требуются результаты выполнения другого потока. Дополнительные сведения см. в разделе [Барьер](../../../docs/standard/threading/barrier.md).  
-  
- [К началу](#top)  
-  
-<a name="lightweight_synchronization_types"></a>   
-## <a name="lightweight-synchronization-types"></a>Типы упрощенной синхронизации  
- Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], можно использовать примитивы синхронизации, обеспечивающие высокое быстродействие путем предотвращения по возможности ресурсоемкого использования объектов ядра Win32, таких как дескрипторы ожидания. Обычно эти типы следует использовать при небольшом времени ожидания и только после того, как исходные типы синхронизации были испытаны и признаны негодными. Эти упрощенные типы нельзя использовать в сценариях, требующих взаимодействия между процессами.  
-  
--   Семафор <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> является упрощенной версией семафора <xref:System.Threading.Semaphore?displayProperty=nameWithType>.  
-  
--   Семафор <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> является упрощенной версией семафора <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>.  
-  
--   Класс <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> представляет событие, возникающее, когда его счетчик становится равным нулю.  
-  
--   Барьер <xref:System.Threading.Barrier?displayProperty=nameWithType> позволяет синхронизировать друг с другом несколько потоков без управления со стороны главного потока. Барьер не позволяет каждому из потоков продолжить выполнение, пока все потоки не достигнут заданной точки.  
-  
- [К началу](#top)  
-  
-<a name="spinwait"></a>   
-## <a name="spinwait"></a>SpinWait  
- Начиная с [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], вы можете использовать структуру <xref:System.Threading.SpinWait?displayProperty=nameWithType> в тех случаях, когда потоку нужно дождаться возникновения события или выполнения условия, но фактическое время ожидания будет меньше периода, требуемого для применения дескриптора ожидания или других способов блокировки текущего потока. Используя <xref:System.Threading.SpinWait>, можно задать короткий интервал времени для цикла ожидания, а затем вернуть управление (например, с помощью ожидания или спящего режима), только если условие не было выполнено в течение заданного времени.  
-  
- [К началу](#top)  
-  
-<a name="interlocked_operations"></a>   
-## <a name="interlocked-operations"></a>Блокируемые операции  
- Блокируемые операции — это простые атомарные операции, выполняемые в области памяти статическими методами класса <xref:System.Threading.Interlocked>. Эти атомарные операции включают добавление, увеличение и уменьшение, обмен, условный обмен в зависимости от сравнения, а также операции чтения для 64-разрядных значений на 32-разрядных платформах.  
-  
+# <a name="overview-of-synchronization-primitives"></a>Общие сведения о примитивах синхронизации
+
+Платформа .NET предоставляет ряд типов для синхронизации доступа к общему ресурсу или координации взаимодействия потоков.
+
+> [!IMPORTANT]
+> С помощью одного экземпляра примитива синхронизации можно обеспечить защиту при каждом обращении к общему ресурсу. Можно использовать несколько экземпляров примитивов синхронизации, чтобы защитить доступ к ресурсу или некоторым частям кода, имеющим непосредственный доступ к ресурсу. При этом несколько потоков смогут обращаться к ресурсу одновременно.
+
+## <a name="waithandle-class-and-lightweight-synchronization-types"></a>Класс WaitHandle и типы упрощенной синхронизации
+
+Несколько примитивов синхронизации .NET являются производными от класса <xref:System.Threading.WaitHandle?displayProperty=nameWithType>, который инкапсулирует собственный дескриптор операционной системы синхронизации и использует механизм сигнализации для взаимодействия потоков. К ним относятся такие классы:
+
+- <xref:System.Threading.Mutex?displayProperty=nameWithType>, который предоставляет монопольный доступ к общему ресурсу. Если мьютексом не владеет ни один поток, сообщается состояние мьютекса.
+- <xref:System.Threading.Semaphore?displayProperty=nameWithType>, ограничивающий число потоков, которые могут одновременно обращаться к ресурсу или пулу ресурсов. Состояние семафора становится сигнальным, когда это число становится больше нуля, и несигнальным, когда равно нулю.
+- <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>, который представляет событие синхронизации потоков и может быть в сигнальном или несигнальном состоянии.
+- <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType>, который является производным от <xref:System.Threading.EventWaitHandle> и при получении сигнала автоматически сбрасывается в сигнальное состояние после освобождения одиночного потока в состоянии ожидания.
+- <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>, который является производным от <xref:System.Threading.EventWaitHandle> и при получении сигнала остается в сигнальном состоянии до вызова метода <xref:System.Threading.EventWaitHandle.Reset%2A>.
+
+Так как <xref:System.Threading.WaitHandle> наследует <xref:System.MarshalByRefObject?displayProperty=nameWithType>, в .NET Framework эти типы можно использовать для синхронизации действий потоков за пределами доменов приложений.
+
+В .NET Framework и .NET Core некоторые из этих типов могут быть именованными дескрипторами синхронизации системы, которые видны в операционной системе и могут использоваться для синхронизации между процессами:
+
+- <xref:System.Threading.Mutex> (.NET Framework и .NET Core);
+- <xref:System.Threading.Semaphore> (.NET Framework и .NET Core в Windows);
+- <xref:System.Threading.EventWaitHandle> (.NET Framework и .NET Core в Windows).
+
+Дополнительные сведения см. в справочной документации по API <xref:System.Threading.WaitHandle>.
+
+Типы упрощенной синхронизации не основаны на дескрипторах базовой операционной системы и обычно обеспечивают лучшее быстродействие. Тем не менее они не могут использоваться для внутрипроцессной синхронизации. Эти типы можно использовать для синхронизации потоков в одном приложении.
+
+Некоторые из них являются альтернативой типам, производным от <xref:System.Threading.WaitHandle>. Например, <xref:System.Threading.SemaphoreSlim> является упрощенной альтернативой <xref:System.Threading.Semaphore>.
+
+## <a name="synchronization-of-access-to-a-shared-resource"></a>Синхронизация доступа к общему ресурсу
+
+Платформа .NET предоставляет ряд примитивов синхронизации для управления доступом нескольких потоков к общему ресурсу.
+
+### <a name="monitor-class"></a>Monitor - класс
+
+Класс <xref:System.Threading.Monitor?displayProperty=nameWithType> предоставляет монопольный доступ к общему ресурсу, блокируя или разблокируя объект, определяющий ресурс. Во время блокировки поток, удерживающий блокировку, может снова поставить и снять блокировку. Любой другой поток не может получить блокировку, и метод <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> ожидает снятия блокировки. Метод <xref:System.Threading.Monitor.Enter%2A> получает снятую блокировку. Можно также использовать метод <xref:System.Threading.Monitor.TryEnter%2A?displayProperty=nameWithType>, чтобы задать количество времени, в течение которого поток пытается получить блокировку. Так как класс <xref:System.Threading.Monitor> реализует привязку потока, поток, который получил блокировку, должен снять ее, вызвав метод <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType>.
+
+Можно координировать взаимодействие потоков, которые получают блокировку для одного и того же объекта, с помощью методов <xref:System.Threading.Monitor.Wait%2A?displayProperty=nameWithType>, <xref:System.Threading.Monitor.Pulse%2A?displayProperty=nameWithType> и <xref:System.Threading.Monitor.PulseAll%2A?displayProperty=nameWithType>.
+
+Дополнительные сведения см. в справочной документации по API <xref:System.Threading.Monitor>.
+
 > [!NOTE]
->  Гарантия атомарности ограничена отдельными операциями. Если необходимо выполнить несколько операций в одном блоке, следует использовать более весомые механизмы синхронизации.  
+> С помощью операторов [lock](../../csharp/language-reference/keywords/lock-statement.md) в C# и [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) в Visual Basic можно синхронизировать доступ к общему ресурсу вместо использования класса <xref:System.Threading.Monitor> напрямую. Эти операторы реализуются с помощью методов <xref:System.Threading.Monitor.Enter%2A>, <xref:System.Threading.Monitor.Exit%2A> и блока `try…finally`, обеспечивающих постоянное снятие полученной блокировки.
+
+### <a name="mutex-class"></a>Mutex - класс
+
+Как и <xref:System.Threading.Mutex?displayProperty=nameWithType>, класс <xref:System.Threading.Monitor> предоставляет монопольный доступ к общему ресурсу. С помощью вызова одной из перегрузок метода [Mutex.WaitOne](<xref:System.Threading.WaitHandle.WaitOne%2A?displayProperty=nameWithType>) можно запросить владение мьютексом. Как и <xref:System.Threading.Monitor>, <xref:System.Threading.Mutex> реализует привязку потока и поток, который получил мьютекс, должен освободить его, вызвав метод <xref:System.Threading.Mutex.ReleaseMutex%2A?displayProperty=nameWithType>.
+
+В отличие от <xref:System.Threading.Monitor>, класс <xref:System.Threading.Mutex> может использоваться для внутрипроцессной синхронизации. Для этого нужно использовать именованный мьютекс, который виден в операционной системе. Чтобы создать экземпляр именованного мьютекса, используйте [конструктор Mutex](<xref:System.Threading.Mutex.%23ctor%2A>), который задает имя. Также можно вызвать метод <xref:System.Threading.Mutex.OpenExisting%2A?displayProperty=nameWithType>, чтобы открыть существующий именованный системный мьютекс.
   
- Несмотря на то что ни одна из этих операций не является блокировкой или сигналом, они могут использоваться для создания блокировок и сигналов. Так как блокируемые операции являются собственными операциями ОС Windows, они выполняются очень быстро.  
+Дополнительные сведения см. в статье о [мьютексах](mutexes.md) и справочной документации по API <xref:System.Threading.Mutex>.
+
+### <a name="spinlock-structure"></a>Структура SpinLock
+
+Структура <xref:System.Threading.SpinLock?displayProperty=nameWithType>, например <xref:System.Threading.Monitor>, предоставляет монопольный доступ к общему ресурсу на основе доступности блокировки. Когда <xref:System.Threading.SpinLock> пытается получить блокировку, которая недоступна, этот примитив будет ожидать в цикле, постоянно проверяя возможность получения блокировки.
+
+Дополнительные сведения о преимуществах и недостатках использования SpinLock см. в статье о [SpinLock](spinlock.md) и справочной документации по API <xref:System.Threading.SpinLock>.
+
+### <a name="readerwriterlockslim-class"></a>Класс ReaderWriterLockSlim
+
+Класс <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> предоставляет монопольный доступ к общему ресурсу для записи и обеспечивает одновременный доступ к ресурсу для чтения нескольким потокам. Можно использовать <xref:System.Threading.ReaderWriterLockSlim> для синхронизации доступа к общей структуре данных, поддерживающей потокобезопасные операции чтения, но требующей монопольного доступа для выполнения операции записи. Если поток запрашивает монопольный доступ (например, путем вызова метода <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType>), последующие запросы модуля чтения блокируются, пока все существующие модули чтения не освободят блокировку, а модуль записи не получит и не снимет блокировку.
   
- Блокируемые операции можно использовать с энергонезависимой памятью для написания приложений, демонстрирующих эффективную параллельную работу без блокировок. Но для них требуется сложное низкоуровневое программирование, поэтому для большинства задач оптимальным выбором оказываются простые блокировки.  
-  
- Обзор концепции см. в разделе [Блокируемые операции](../../../docs/standard/threading/interlocked-operations.md).  
-  
+Дополнительные сведения см. в статье о [блокировках модулей чтения и записи](reader-writer-locks.md) и справочной документации по API <xref:System.Threading.ReaderWriterLockSlim>.
+
+### <a name="semaphore-and-semaphoreslim-classes"></a>Классы Semaphore и SemaphoreSlim
+
+Классы <xref:System.Threading.Semaphore?displayProperty=nameWithType> и <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> ограничивают число потоков, которые могут одновременно обращаться к ресурсу или пулу ресурсов. Дополнительные потоки, запрашивающие ресурс, ожидают освобождения семафора любым из потоков. Так как семафор не реализует привязку потока, поток может занять семафор, а другой поток может его освободить.
+
+<xref:System.Threading.SemaphoreSlim> — это упрощенная альтернатива<xref:System.Threading.Semaphore>, которую можно использовать для синхронизации в рамках одного процесса.
+
+В Windows можно использовать <xref:System.Threading.Semaphore> для внутрипроцессной синхронизации. Для этого необходимо создать экземпляр <xref:System.Threading.Semaphore>, выполняющий роль именованного системного семафора. Это можно сделать с помощью [конструкторов Semaphore](<xref:System.Threading.Semaphore.%23ctor%2A>), которые задают имя или метод <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType>. <xref:System.Threading.SemaphoreSlim> не поддерживает именованные системные семафоры.
+
+Дополнительные сведения см. в статье о [классах Semaphore и SemaphoreSlim](semaphore-and-semaphoreslim.md) и справочной документации по API <xref:System.Threading.Semaphore> или <xref:System.Threading.SemaphoreSlim>.
+
+## <a name="thread-interaction-or-signaling"></a>Взаимодействие потоков или сигнализация
+
+Взаимодействие потоков (или сигнализация потоков) означает, что поток должен ждать уведомления или сигнала от одного или нескольких потоков, чтобы продолжить. Например, если поток A вызывает метод <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> потока B, поток А блокируется до завершения потока B. Примитивы синхронизации, описанные в предыдущем разделе, реализуют другой механизм сигнализации: снятие блокировки потоком является сигналом другому потоку о возможности продолжать исполнение, получив блокировку.
+
+В этом разделе описываются дополнительные сигнальные конструкции, предоставляемые .NET.
+
+### <a name="eventwaithandle-autoresetevent-manualresetevent-and-manualreseteventslim-classes"></a>Классы EventWaitHandle, AutoResetEvent и ManualResetEvent
+
+Класс <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType> представляет событие синхронизации потока.
+
+Событие синхронизации может находиться в сигнальном или несигнальном состоянии. Если состояние события несигнальное, поток, который вызывает перегрузку события <xref:System.Threading.WaitHandle.WaitOne%2A?>, будет заблокирован, пока состояние события не станет сигнальным. Метод <xref:System.Threading.EventWaitHandle.Set%2A?displayProperty=nameWithType> задает сигнальное состояние события.
+
+Поведение <xref:System.Threading.EventWaitHandle> после получения сигнала зависит от его режима сброса:
+
+- <xref:System.Threading.EventWaitHandle>, созданный с помощью флага <xref:System.Threading.EventResetMode.AutoReset?displayProperty=nameWithType>, автоматически сбрасывается после освобождения одного потока в состоянии ожидания. Это похоже на турникет, пропускающий только один поток каждый раз, когда он переводится в сигнальное состояние. Такое поведение характерно для класса <xref:System.Threading.AutoResetEvent?displayProperty=nameWithType>, наследующего <xref:System.Threading.EventWaitHandle>.
+- <xref:System.Threading.EventWaitHandle>, созданный с помощью флага <xref:System.Threading.EventResetMode.ManualReset?displayProperty=nameWithType>, находится в сигнальном состоянии, пока не будет вызван его метод <xref:System.Threading.EventWaitHandle.Reset%2A>. Это как ворота, которые закрыты до получения сигнала и остающиеся затем открытыми, пока кто-нибудь их не закроет. Такое поведение характерно для класса <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType>, наследующего <xref:System.Threading.EventWaitHandle>. Класс <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> является упрощенной альтернативой <xref:System.Threading.ManualResetEvent>.
+
+В Windows можно использовать <xref:System.Threading.EventWaitHandle> для синхронизации между процессами. Для этого необходимо создать экземпляр <xref:System.Threading.EventWaitHandle>, выполняющий роль именованного системного события синхронизации. Это можно сделать с помощью [конструкторов EventWaitHandle](<xref:System.Threading.EventWaitHandle.%23ctor%2A>), которые задают имя или метод <xref:System.Threading.EventWaitHandle.OpenExisting%2A?displayProperty=nameWithType>.
+
+Дополнительные сведения см. в статьях об [EventWaitHandle](eventwaithandle.md), [AutoResetEvent](autoresetevent.md) и [классах ManualResetEvent и ManualResetEventSlim](manualresetevent-and-manualreseteventslim.md). Справочные сведения об API см. здесь: <xref:System.Threading.EventWaitHandle>, <xref:System.Threading.AutoResetEvent>, <xref:System.Threading.ManualResetEvent> и <xref:System.Threading.ManualResetEventSlim>.
+
+### <a name="countdownevent-class"></a>Класс CountdownEvent
+
+Класс <xref:System.Threading.CountdownEvent?displayProperty=nameWithType> представляет событие, возникающее, когда его счетчик имеет значение ноль. Когда <xref:System.Threading.CountdownEvent.CurrentCount?displayProperty=nameWithType> не равен нулю, поток, который вызывает <xref:System.Threading.CountdownEvent.Wait%2A?displayProperty=nameWithType>, блокируется. Вызовите <xref:System.Threading.CountdownEvent.Signal%2A?displayProperty=nameWithType>, чтобы уменьшить значение счетчика события.
+
+В отличие от <xref:System.Threading.ManualResetEvent> или <xref:System.Threading.ManualResetEventSlim>, которые позволяют разблокировать несколько потоков с помощью сигнала от одного потока, <xref:System.Threading.CountdownEvent> может разблокировать один или несколько потоков с помощью сигналов от нескольких потоков.
+
+Дополнительные сведения см. в статье о [CountdownEvent](countdownevent.md) и справочной документации по API <xref:System.Threading.CountdownEvent>.
+
+### <a name="barrier-class"></a>Класс Barrier
+
+Класс <xref:System.Threading.Barrier?displayProperty=nameWithType> представляет барьер выполнения потоков. Поток, который вызывает метод <xref:System.Threading.Barrier.SignalAndWait%2A?displayProperty=nameWithType>, сообщает, что он достиг барьера и ожидает, пока другие участвующие потоки не достигнут барьера. Когда все участвующие потоки достигают барьера, их выполнение продолжается, а барьер сбрасывается и может использоваться повторно.
+
+Можно использовать <xref:System.Threading.Barrier>, если одному или нескольким потокам требуются результаты других потоков для перехода к следующему этапу вычисления.
+
+Дополнительные сведения см. в статье о [Barrier](barrier.md) и справочной документации по API <xref:System.Threading.Barrier>.
+
+## <a name="interlocked-class"></a>Interlocked - класс
+
+Класс <xref:System.Threading.Interlocked?displayProperty=nameWithType> предоставляет статические методы, которые выполняют простые атомарные операции над переменной. К этим атомарным операциям относится добавление, инкремент и декремент, обмен и условный обмен, зависящий от сравнения, а также операция чтения 64-разрядного целого числа.
+
+Дополнительные сведения см. в статье о [блокируемых операциях](interlocked-operations.md) и справочной документации по API <xref:System.Threading.Interlocked>.
+
+## <a name="spinwait-structure"></a>Структура SpinWait
+
+Структура <xref:System.Threading.SpinWait?displayProperty=nameWithType> обеспечивает поддержку ожидания спин-блокировки. Ее можно использовать, когда потоку нужно дождаться возникновения события или выполнения условия, но фактическое время ожидания будет меньше периода, требуемого для применения дескриптора ожидания или других способов блокировки потока. Используя <xref:System.Threading.SpinWait>, можно задать короткий интервал времени для цикла ожидания, а затем вернуть управление (например, с помощью ожидания или спящего режима), только если условие не было выполнено в течение заданного времени.
+
+Дополнительные сведения см. в статье о [SpinWait](spinwait.md) и справочной документации по API <xref:System.Threading.SpinWait>.
+
 ## <a name="see-also"></a>См. также
 
-- [Синхронизация данных для многопоточности](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
-- [Мониторы](https://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
-- [Мьютексы](../../../docs/standard/threading/mutexes.md)  
-- [Классы Semaphore и SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
-- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
-- [Дескрипторы ожидания](https://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
-- [Блокируемые операции](../../../docs/standard/threading/interlocked-operations.md)  
-- [Блокировки чтения и записи](../../../docs/standard/threading/reader-writer-locks.md)  
-- [Barrier](../../../docs/standard/threading/barrier.md)  
-- [SpinWait](../../../docs/standard/threading/spinwait.md)  
-- [SpinLock](../../../docs/standard/threading/spinlock.md)
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- [Потокобезопасные коллекции](../collections/thread-safe/index.md)
+- [Объекты и функциональные возможности работы с потоками](threading-objects-and-features.md)

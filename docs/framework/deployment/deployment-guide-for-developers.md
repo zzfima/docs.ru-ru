@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47643dfa6eda67c93c54d19da41d705a78c27d8c
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 3f6ad77f93236b524e1cd22bf895312920ca4eec
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484757"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453480"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>Руководство по развертыванию .NET Framework для разработчиков
 В этом разделе приводятся сведения для разработчиков, которые планируют установить любую версию платформы с NET Framework 4.5 по [!INCLUDE[net_current](../../../includes/net-current-version.md)] вместе со своими приложениями.
@@ -51,13 +51,13 @@ ms.locfileid: "43484757"
 
 - Для установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и ее точечных выпусков требуются права администратора.
 
-- Платформа [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] входит в состав [!INCLUDE[win8](../../../includes/win8-md.md)] и [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], поэтому развертывать ее вместе с приложением на этих операционных системах не нужно. Аналогично, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] входит в состав [!INCLUDE[win81](../../../includes/win81-md.md)] и Windows Server 2012 R2. Платформа .NET Framework 4.5.2 не включена ни в какую операционную систему. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] входит в состав Windows 10, [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] — в состав ноябрьского обновления Windows Update 10, [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] — в состав юбилейного обновления Windows 10 Anniversary Update.  .NET Framework 4.7 входит в состав обновления Windows 10 Creators Update, .NET Framework 4.7.1 — в состав Windows 10 Fall Creators Update, а .NET Framework 4.7.2 — в обновление Windows 10 за апрель 2018 г. Полный список требований к оборудованию и программному обеспечению см. в разделе [Требования к системе для .NET Framework](../../../docs/framework/get-started/system-requirements.md).
+- Платформа [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] входит в состав [!INCLUDE[win8](../../../includes/win8-md.md)] и [!INCLUDE[winserver8](../../../includes/winserver8-md.md)], поэтому развертывать ее вместе с приложением на этих операционных системах не нужно. Аналогично, [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] входит в состав [!INCLUDE[win81](../../../includes/win81-md.md)] и Windows Server 2012 R2. Платформа .NET Framework 4.5.2 не включена ни в какую операционную систему. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] входит в состав Windows 10, [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] — в состав ноябрьского обновления Windows Update 10, [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] — в состав юбилейного обновления Windows 10 Anniversary Update.  .NET Framework 4.7 входит в состав обновления Windows 10 Creators Update, .NET Framework 4.7.1 — в состав Windows 10 Fall Creators Update, а .NET Framework 4.7.2 — в обновления Windows 10 за октябрь и за апрель 2018 г. Полный список требований к оборудованию и программному обеспечению см. в разделе [Требования к системе для .NET Framework](../../../docs/framework/get-started/system-requirements.md).
 
 - Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]пользователи могут просматривать список запущенных приложений .NET Framework во время установки и легко закрывать их. Это помогает избежать перезапуска системы, вызываемого установкой .NET Framework. См. раздел [Уменьшение перезапусков системы](../../../docs/framework/deployment/reducing-system-restarts.md).
 
 - При удалении [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или одного из вспомогательных выпусков этой платформы также удаляются более ранние файлы [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] . Если требуется вернуться к [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], необходимо переустановить приложение со всеми обновлениями. (См. раздел [Установка платформы .NET Framework 4](https://msdn.microsoft.com/library/5a4x27ek\(v=vs.100\).aspx).)
 
-- Распространяемый пакет платформы .NET Framework 4.5 был обновлен 9 октября 2012 г., чтобы устранить проблему, связанную с неправильной отметкой времени в цифровом сертификате, которая вызывала преждевременное истечение срока действия цифровой подписи в файлах, создаваемых и подписываемых Microsoft. Если вы ранее установили распространяемый пакет платформы .NET Framework 4.5 от 16 августа 2012 г., рекомендуется обновить установленную копию до последнего распространяемого пакета из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/p/?LinkId=245484). Дополнительные сведения об этой проблеме см. в статье [Советы по безопасности (Microsoft) (2749655)](https://technet.microsoft.com/security/advisory/2749655).
+- Распространяемый пакет платформы .NET Framework 4.5 был обновлен 9 октября 2012 г., чтобы устранить проблему, связанную с неправильной отметкой времени в цифровом сертификате, которая вызывала преждевременное истечение срока действия цифровой подписи в файлах, создаваемых и подписываемых Microsoft. Если вы ранее установили распространяемый пакет платформы .NET Framework 4.5 от 16 августа 2012 г., рекомендуется обновить установленную копию до последнего распространяемого пакета из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/p/?LinkId=245484). Дополнительные сведения об этой проблеме см. в статье [Советы по безопасности (Microsoft) (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655).
 
  Сведения о способах развертывания платформы .NET Framework и ее системных зависимостей по сети см. в разделе [Руководство по развертыванию для администраторов](../../../docs/framework/deployment/guide-for-administrators.md).
 
@@ -247,8 +247,9 @@ dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage Contoso
 
 |Версия|Значение DWORD "Release"|
 |-------------|--------------------------------|
+|Платформа .NET Framework 4.7.2, установленная в Windows 10 с обновлением за октябрь 2018 г.|461814|
 |Платформа .NET Framework 4.7.2, установленная в Windows 10 с обновлением за апрель 2018 г. и в Windows Server, версия 1803|461808|
-|Платформа .NET Framework 4.7.2, установленная на остальных версиях ОС, кроме Windows 10 с обновлением за апрель 2018 г. и Windows Server, версия 1803|461814|
+|Платформа .NET Framework 4.7.2, установленная на остальных версиях ОС, кроме Windows 10 с обновлением за октябрь 2018 г., Windows 10 с обновлением за апрель 2018 г. и Windows Server, версия 1803|461814|
 |Платформа .NET Framework 4.7.1, установленная в Windows 10 Fall Creators Update и в Windows Server, версия 1709|461308|
 |Платформа .NET Framework 4.7.1, установленная на остальных версиях ОС, кроме Windows 10 Fall Creators Update и Windows Server, версия 1709|461310|
 |.NET Framework 4.7 установлена в обновлении Windows 10 Creators Update|460798|
@@ -287,7 +288,7 @@ Type: DWORD
 
 - [Языковые пакеты .NET Framework 4.7](https://go.microsoft.com/fwlink/p/?LinkId=825306)
 
-- [Языковые пакеты .NET Framework 4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604)
+- [Языковые пакеты .NET Framework 4.6.2](https://go.microsoft.com/fwlink/p/?LinkId=780604)
 
 - [Языковые пакеты .NET Framework 4.6.1](https://go.microsoft.com/fwlink/p/?LinkId=671747)
 
@@ -403,9 +404,9 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 |3082|Испанский (Испания, современная сортировка)|es|
 
 ## <a name="see-also"></a>См. также
- [Руководство по развертыванию для администраторов](../../../docs/framework/deployment/guide-for-administrators.md)  
- [Требования к системе](../../../docs/framework/get-started/system-requirements.md)  
- [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)  
- [Устранение неполадок с заблокированными установками и удалениями .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
- [Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
- [Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+- [Руководство по развертыванию для администраторов](../../../docs/framework/deployment/guide-for-administrators.md)  
+- [Требования к системе](../../../docs/framework/get-started/system-requirements.md)  
+- [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)  
+- [Устранение неполадок с заблокированными установками и удалениями .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+- [Уменьшение числа перезагрузок при установке платформы .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
+- [Практическое руководство. Получение хода выполнения установщика .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c12444e435fa844095827411ba0e068303163bf4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cfb1e29229393b44c193c4e88005ebc350dbcc6f
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201144"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086860"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (средство настройки политики управления доступом для кода)
 Программа для настройки политики разграничения доступа кода (Caspol.exe) позволяет пользователям и администраторам изменять политику безопасности на уровне компьютера, пользователя и предприятия.  
@@ -90,7 +90,7 @@ caspol [options]
 |**-pub** {**-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string*}|Задает код указанного издателя программного обеспечения, определенного файлом сертификата, подписью файла или шестнадцатеричным представлением сертификата X509. Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>.|  
 |**-site** *website*|Задает код с указанным исходным веб-сайтом. Пример:<br /><br /> `-site** www.proseware.com`<br /><br /> Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>.|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|Задает код с указанным строгим именем (определяется по имени файла), имя сборки в виде строкового значения и версию сборки в формате *основная*.*вспомогательная*.*сборка*.*редакция*. Пример:<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>.|  
-|**-url** *URL*|Задает код, полученный с указанного URL-адреса. URL-адрес должен включать протокол, например http:// или ftp://. При необходимости задать несколько сборок с определенного URL-адреса используется подстановочный знак (\*). **Примечание**. Ввиду возможности указывать URL-адрес несколькими способами применение URL-адреса в качестве условия членства нельзя считать безопасным способом идентификации кода. Там, где это возможно, используйте условие членства строгого имени, условие членства издателя или условие членства хэша. <br /><br /> Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
+|**-url** *URL*|Задает код, полученный с указанного URL-адреса. URL-адрес должен включать протокол, например `http://` или `ftp://`. При необходимости задать несколько сборок с определенного URL-адреса используется подстановочный знак (\*). **Примечание**. Ввиду возможности указывать URL-адрес несколькими способами применение URL-адреса в качестве условия членства нельзя считать безопасным способом идентификации кода. Там, где это возможно, используйте условие членства строгого имени, условие членства издателя или условие членства хэша. <br /><br /> Дополнительные сведения об этом условии членства см. в разделе <xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>.|  
 |**-zone** *zonename*|Задает код с указанной исходной зоной. Аргумент *zonename* может принимать одно из следующих значений: **MyComputer**, **Intranet**, **Trusted**, **Internet** или **Untrusted**. Дополнительные сведения об этом условии членства см. в разделе с описанием класса <xref:System.Security.Policy.ZoneMembershipCondition>.|  
   
  Аргумент *flags*, который может использоваться с параметрами **-addgroup** и **-chggroup**, определяется с использованием одного из следующих аргументов.  

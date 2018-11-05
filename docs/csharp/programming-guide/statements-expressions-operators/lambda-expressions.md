@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 47e066f8eb7402fedabc70cf1e3b4a1bb974ff62
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c00d28a5339eccda6f45234c70802f014e00ee60
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504696"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316276"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Лямбда-выражения (Руководство по программированию в C#)
 
@@ -78,7 +78,7 @@ namespace ConsoleApplication1
 ```csharp
 (int x, string s) => s.Length > x
 ```
- Типы входных параметров должны быть либо полностью явными, либо полностью неявными; в противном случае C# создает ошибку компилятора [CS0748](../../misc/cs0748.md).
+ Для входных параметров нужно задать либо все типы в явном виде, либо все типы в неявном. В противном случае компилятор C# выдает ошибку [CS0748](../../misc/cs0748.md).
 
  Нулевое количество входных параметров задается пустыми скобками:  
   

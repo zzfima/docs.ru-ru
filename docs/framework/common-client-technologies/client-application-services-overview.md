@@ -5,15 +5,15 @@ helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-ms.openlocfilehash: 55d96039f430bece3cda6136d63dbf287e8fc744
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fda9c47f6c446369e0cd774a61375a06825e772f
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515386"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836982"
 ---
 # <a name="client-application-services-overview"></a>Общие сведения о службах клиентских приложений
-Службы клиентских приложений предоставляют упрощенный доступ к службам входа, ролей и профилей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] из приложений Windows Forms и Windows Presentation Foundation (WPF). Службы приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] включены в расширения Microsoft ASP.NET 2.0 AJAX, которые входят в состав [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] и [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Эти службы позволяют нескольким веб-приложениям и приложениям Windows использовать сведения о пользователе и функции управления пользователями с одного сервера.  
+Службы клиентских приложений предоставляют упрощенный доступ к службам входа, ролей и профилей [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] из приложений Windows Forms и Windows Presentation Foundation (WPF). Службы приложений [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] включены в расширения Microsoft ASP.NET 2.0 AJAX, которые входят в состав Visual Studio 2008 и [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Эти службы позволяют нескольким веб-приложениям и приложениям Windows использовать сведения о пользователе и функции управления пользователями с одного сервера.  
   
  В службы клиентских приложений входят поставщики клиентских служб, которые подключаются к модели расширяемости веб-служб, предоставляя следующие функции для приложений Windows.  
   

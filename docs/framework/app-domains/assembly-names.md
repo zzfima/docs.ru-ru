@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8f8c2c90-f15d-400e-87e7-a757e4f04d0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e1ab9609fe6b2c1e232f188db8306fc05828285
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6447593ba81e4512afaf2b5798fcec00b755e63c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744139"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50184789"
 ---
 # <a name="assembly-names"></a>Имена сборок
 Имя сборки хранится в метаданных и в значительной степени влияет на ее область определения и использование в приложениях. Сборки со строгим именем имеют полное имя, в состав которого входит имя сборки, язык и региональные параметры, открытый ключ и номер версии. Оно часто называется отображаемым именем; у загружаемых сборок его можно получить через свойство <xref:System.Reflection.Assembly.FullName%2A>.  
@@ -58,9 +58,9 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  Если сборка со строгим именем помещается в глобальный кэш сборок, то имя файла сборки должно соответствовать имени сборки (без учета расширения файла — например EXE или DLL). Так, если имя файла сборки — myAssembly.dll, то именем сборки должно быть myAssembly. Имена закрытых сборок, развертываемых только в корневом каталоге приложения, могут отличаться от соответствующих файловых имен.  
   
 ## <a name="see-also"></a>См. также  
- [Практическое руководство. Определение полного имени сборки](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)  
- [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)  
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Практическое руководство. Определение полного имени сборки](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+- [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)  
+- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)

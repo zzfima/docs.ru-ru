@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: edc34eaa7704d788ff4b63328a2b6c0622d17e13
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 8d78549d2822ad6c660fae39d458a98f23eca390
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502926"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199895"
 ---
 # <a name="install-the-net-framework-for-developers"></a>Установка .NET Framework для разработчиков
 
@@ -37,7 +37,7 @@ ms.locfileid: "43502926"
 
 |Версия платформы .NET Framework|Установка для разработчиков|Установка распространяемого пакета|Поддержка платформ|
 |----------------------------|----------------------------|----------------------------------|----------------------|
-|**4.7.2**|[NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Веб-установщик центра загрузки 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Автономный установщик центра загрузки 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)|Входит в состав: <br/>Обновление Windows 10 за апрель 2018 г.<br /><br /> Можно установить в:<br/> <br/>Windows 10 Fall Creators Update<br/>Обновление Windows 10 Creators Update <br /> Юбилейное обновление Windows 10 Anniversary Update<br /> Windows 8.1 и более ранней версии<br /> Windows Server, версия 1709 и более ранние<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))||
+|**4.7.2**|[NET Framework 4.7.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=874338)|[Веб-установщик центра загрузки 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>[Автономный установщик центра загрузки 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)|Входит в состав: <br/>Обновление Windows 10 за октябрь 2018 г.<br/>Обновление Windows 10 за апрель 2018 г.<br /><br /> Можно установить в:<br/> <br/>Windows 10 Fall Creators Update<br/>Обновление Windows 10 Creators Update <br /> Юбилейное обновление Windows 10 Anniversary Update<br /> Windows 8.1 и более ранней версии<br /> Windows Server, версия 1709 и более ранние<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))||
 |**4.7.1**|[NET Framework 4.7.1 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=852105)|[Страница загрузки веб-установщика 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Страница загрузки автономного установщика 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852107)|Входит в состав: <br/>Windows 10 Fall Creators Update<br/>Windows Server, версия 1709<br /><br /> Можно установить в:<br/> Обновление Windows 10 Creators Update <br /> Юбилейное обновление Windows 10 Anniversary Update<br /> Windows 8.1 и более ранней версии<br /> Windows Server 2016 и более ранние версии<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))||
 |**4.7**|[NET Framework 4.7 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=825319)|[Страница загрузки веб-установщика 4.7](https://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Страница загрузки автономного установщика 4.7](https://go.microsoft.com/fwlink/?LinkId=825303)|Входит в состав: <br/>Обновление Windows 10 Creators Update<br /><br /> Можно установить в:<br /> Юбилейное обновление Windows 10 Anniversary Update<br /> Windows 8.1 и более ранней версии<br /> Windows Server 2016 и более ранние версии<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))||
 |**4.6.2**|[NET Framework 4.6.2 Developer Pack](https://go.microsoft.com/fwlink/?LinkId=780617)|[Страница загрузки веб-установщика 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [Страница загрузки автономного установщика 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780601)|Входит в состав: <br /> Юбилейное обновление Windows 10 Anniversary Update<br /><br /> Можно установить в:<br /> Ноябрьское обновление Windows 10 <br/> Windows 10 <br /> Windows 8.1 и более ранней версии<br /> Windows Server 2012 R2 и более ранней версии<br /> (полный список см. в разделе [Требования к системе](~/docs/framework/get-started/system-requirements.md))|
@@ -154,7 +154,7 @@ ms.locfileid: "43502926"
 
 - Для установки платформы [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], ее доработанных выпусков, .NET Framework 4.6 и ее доработанных выпусков или .NET Framework 4.7 и ее доработанных выпусков требуются права администратора.
 
-- Распространяемый пакет платформы .NET Framework 4.5 был обновлен 9 октября 2012 г., чтобы устранить проблему, связанную с неправильной отметкой времени в цифровом сертификате, которая вызывала преждевременное истечение срока действия цифровой подписи в файлах, создаваемых и подписываемых Microsoft. Если вы ранее установили распространяемый пакет платформы .NET Framework 4.5 от 16 августа 2012 г., рекомендуется обновить установленную копию до последнего распространяемого пакета из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/p/?LinkId=245484). Дополнительные сведения об этой проблеме см. в статье [Советы по безопасности (Майкрософт) (2749655)](https://technet.microsoft.com/security/advisory/2749655) и [статье базы знаний 2770445](https://support.microsoft.com/kb/2770445).
+- Распространяемый пакет платформы .NET Framework 4.5 был обновлен 9 октября 2012 г., чтобы устранить проблему, связанную с неправильной отметкой времени в цифровом сертификате, которая вызывала преждевременное истечение срока действия цифровой подписи в файлах, создаваемых и подписываемых Microsoft. Если вы ранее установили распространяемый пакет платформы .NET Framework 4.5 от 16 августа 2012 г., рекомендуется обновить установленную копию до последнего распространяемого пакета из [Центра загрузки Майкрософт](https://go.microsoft.com/fwlink/p/?LinkId=245484). Дополнительные сведения об этой проблеме см. в статье [Советы по безопасности (Майкрософт) (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655) и [статье базы знаний 2770445](https://support.microsoft.com/kb/2770445).
 
 ## <a name="to-install-language-packs"></a>Установка языковых пакетов
 
@@ -171,7 +171,7 @@ ms.locfileid: "43502926"
 
     - [Языковые пакеты .NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkID=825306)
 
-    - [Языковые пакеты .NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkID=780604)
+    - [Языковые пакеты .NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkID=780604)
 
     - [Языковые пакеты .NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkID=671747)
 

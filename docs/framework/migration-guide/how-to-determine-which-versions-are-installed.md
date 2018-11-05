@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1874d5512f04f22b9c53bdc9e92d0c96e45d21c8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7a8fc72735c5e45fb87c503272871fc687bacd3e
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199727"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453246"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Практическое руководство. Определение установленных версий платформы .NET Framework
 
@@ -97,7 +97,7 @@ ms.locfileid: "47199727"
     |В юбилейном обновлении Windows 10 и Windows Server 2016: 394802<br /><br /> Во всех других версиях ОС: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |Только в обновлении Windows 10 Creators Update: 460798<br/><br/> Во всех других версиях ОС: 460805 | .NET Framework 4.7 |
     |Только в Windows 10 Fall Creators Update: 461308<br/><br/> Во всех других версиях ОС: 461310 | .NET Framework 4.7.1 |
-    |Только в обновлении Windows 10 за апрель 2018: 461808<br/><br/> Во всех других версиях ОС: 461814| .NET Framework 4.7.2 |
+    |Только в обновлении Windows 10 за октябрь 2018 года: 461814<br/><br/> Только в обновлении Windows 10 за апрель 2018: 461808<br/><br/> Во всех других версиях ОС: 461814| .NET Framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Поиск версий .NET Framework путем отправки запроса в реестр (.NET Framework 1–4)
@@ -148,8 +148,9 @@ ms.locfileid: "47199727"
     |Платформа .NET Framework 4.7, установленная во всех остальных версиях ОС Windows|460805|
     |Платформа .NET Framework 4.7.1 установлена в обновлении Windows 10 Creators Update|461308|
     |Платформа .NET Framework 4.7.1, установленная во всех остальных версиях ОС Windows|461310|
+    |Платформа .NET Framework 4.7.2, установленная в Windows 10 с обновлением за октябрь 2018 г.|461814|
     |Платформа .NET Framework 4.7.2, установленная в Windows 10 с обновлением за апрель 2018 г.|461808|
-    |Платформа .NET Framework 4.7.2, установленная во всех остальных версиях ОС Windows|461814|
+    |Платформа .NET Framework 4.7.2, установленная в Windows 10 Fall Creators Update и более ранних версиях ОС|461814|
     
      В следующем примере проверяется значение `Release` в реестре, чтобы определить, установлена ли [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] или более поздняя версия .NET Framework.
 

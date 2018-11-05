@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: 7667770e-d163-4ad6-a303-085cf73db2f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9cb7807fbfc1fbaf039fd7aef04331210dfa7cfa
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 39b7228de775f4dc92e932731ad9967315437e6e
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089939"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121120"
 ---
 # <a name="mef-for-net-for-windows-store-apps"></a>Managed Extensibility Framework для .NET: приложения из магазина Windows Store
 Пространство имен <xref:System.Composition?displayProperty=nameWithType> и его дочерние пространства содержат типы для разработки расширяемых приложений для [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] с использованием Managed Extensibility Framework (MEF). Эти пространства имен являются частью подмножества [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] для операционной системы [!INCLUDE[win8](../../../includes/win8-md.md)].  
   
- Они не входят в состав основной библиотеки классов, распространяемой с платформой .NET Framework. Чтобы установить эти пространства имен, откройте проект в [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], выберите в меню **Проект** пункт **Управление пакетами NuGet** и найдите в Интернете пакет Microsoft.Composition.  
+ Они не входят в состав основной библиотеки классов, распространяемой с платформой .NET Framework. Чтобы установить эти пространства имен, откройте проект в Visual Studio, выберите пункт **Управление пакетами NuGet** в меню **Проект** и найдите в Интернете пакет Microsoft.Composition.  
   
 -   <xref:System.Composition?displayProperty=nameWithType> предоставляет классы, которые составляют ядро MEF для приложений [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)].  
   

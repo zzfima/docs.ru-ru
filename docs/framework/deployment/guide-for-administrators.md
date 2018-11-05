@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f56ccbf549ce8f1750ba0bf9cf4a945007694258
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502370"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195688"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Руководство по развертыванию .NET Framework для администраторов
 В этой статье представлено пошаговое описание развертывания администратором платформы [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и системных зависимостей в сети с помощью Microsoft System Center Configuration Manager. В рамках этой статьи предполагается, что все целевые клиентские компьютеры соответствуют минимальным требованиям для .NET Framework. Список требований к программному обеспечению и оборудованию для установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md).  
@@ -37,16 +37,16 @@ ms.locfileid: "43502370"
 ## <a name="the-deployment-process"></a>Процесс развертывания  
  После создания инфраструктуры поддержки распространяемый пакет .NET Framework можно развернуть на компьютерах сети с помощью System Center 2012 Configuration Manager. Построение инфраструктуры включает в себя создание и определение пяти основных областей: коллекции, пакет и программа для программного обеспечения, точки распространения и развертывания.  
   
--   **Коллекции** — группы ресурсов Configuration Manager, такие как пользователи, группы пользователей или компьютеры, на которых развертывается .NET Framework. Дополнительные сведения см. в статье [Коллекции в Configuration Manager](https://technet.microsoft.com/library/gg682169.aspx) в библиотеке документации по Configuration Manager.  
+-   **Коллекции** — группы ресурсов Configuration Manager, такие как пользователи, группы пользователей или компьютеры, на которых развертывается .NET Framework. Дополнительные сведения см. в статье [Общие сведения о коллекциях в System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) в библиотеке документации по Configuration Manager.  
   
--   **Пакеты и программы** обычно представляют программные приложения, которые подлежат установке на клиентском компьютере. Сюда также могут относиться отдельные файлы, обновления и даже отдельные команды. Дополнительные сведения см. в статье [Пакеты и программы в Configuration Manager](https://technet.microsoft.com/library/gg699369.aspx) в библиотеке документации по Configuration Manager.  
+-   **Пакеты и программы** обычно представляют программные приложения, которые подлежат установке на клиентском компьютере. Сюда также могут относиться отдельные файлы, обновления и даже отдельные команды. Дополнительные сведения см. в статье [Пакеты и программы в System Center Configuration Manager](https://docs.microsoft.com/sccm/apps/deploy-use/packages-and-programs) в библиотеке документации по Configuration Manager.  
   
--   **Точки распространения** — роли системы сайта Configuration Manager, где хранятся файлы, необходимые для работы программного обеспечения на клиентских компьютерах. Когда клиент Configuration Manager получает и обрабатывает развертывание программного обеспечения, он связывается с точкой распространения для загрузки содержимого, связанного с программным обеспечением, и запуска процесса установки. Дополнительные сведения см. в статье [Введение в управление содержимым с помощью Configuration Manager](https://technet.microsoft.com/library/gg682083.aspx) в библиотеке документации по Configuration Manager.  
+-   **Точки распространения** — роли системы сайта Configuration Manager, где хранятся файлы, необходимые для работы программного обеспечения на клиентских компьютерах. Когда клиент Configuration Manager получает и обрабатывает развертывание программного обеспечения, он связывается с точкой распространения для загрузки содержимого, связанного с программным обеспечением, и запуска процесса установки. Дополнительные сведения см. в статье [Основные принципы управления содержимым в Configuration Manager](https://docs.microsoft.com/sccm/core/plan-design/hierarchy/fundamental-concepts-for-content-management) в библиотеке документации по Configuration Manager.  
   
--   **Развертывания** сообщают подходящим членам целевой коллекции о необходимости установить программный пакет. Дополнительные сведения см. в статье [Развертывание приложений в Configuration Manager](https://technet.microsoft.com/library/gg682082.aspx) в библиотеке документации по Configuration Manager.  
+-   **Развертывания** сообщают подходящим членам целевой коллекции о необходимости установить программный пакет. 
   
 > [!IMPORTANT]
->  Процедуры в этом разделе содержат обычные параметры для создания и развертывания пакета и программы и могут не охватывать все возможные настройки. Другие варианты развертывания Configuration Manager см. в [библиотеке документации по Configuration Manager](https://technet.microsoft.com/library/gg682041.aspx).  
+>  Процедуры в этом разделе содержат обычные параметры для создания и развертывания пакета и программы и могут не охватывать все возможные настройки. Другие варианты развертывания Configuration Manager см. в [библиотеке документации по Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg682041%28v=technet.10%29).  
   
 <a name="deploying_in_a_test_environment"></a>   
 ## <a name="deploying-the-net-framework"></a>Развертывание .NET Framework  
@@ -62,7 +62,7 @@ ms.locfileid: "43502370"
   
 <a name="creating_a_collection"></a>   
 ### <a name="create-a-collection"></a>Создание коллекции  
- На этом этапе необходимо выбрать компьютеры, на которых будет выполнено развертывание пакета и программы, и объединить их в коллекцию устройств. Для создания коллекции в Configuration Manager можно использовать правила непосредственного членства (где необходимо вручную указать членов коллекции) или правила запросов (где Configuration Manager определяет членов коллекции на основе заданных критериев). Дополнительные сведения о правилах членства, включая правила непосредственного членства и правила запросов, см. в статье [Введение в коллекции в Configuration Manager](https://technet.microsoft.com/library/gg682177.aspx) в библиотеке документации по Configuration Manager.  
+ На этом этапе необходимо выбрать компьютеры, на которых будет выполнено развертывание пакета и программы, и объединить их в коллекцию устройств. Для создания коллекции в Configuration Manager можно использовать правила непосредственного членства (где необходимо вручную указать членов коллекции) или правила запросов (где Configuration Manager определяет членов коллекции на основе заданных критериев). Дополнительные сведения о правилах членства, включая правила непосредственного членства и правила запросов, см. в статье [Общие сведения о коллекциях в System Center Configuration Manager](https://docs.microsoft.com/sccm/core/clients/manage/collections/introduction-to-collections) в библиотеке документации по Configuration Manager.  
   
  Создание коллекции  
   
@@ -83,8 +83,6 @@ ms.locfileid: "43502370"
 8.  На странице **Выделите ресурсы** установите флажок для каждого компьютера, на котором вы хотите развернуть .NET Framework. Нажмите кнопку **Далее**, после чего завершите работу мастера.  
   
 9. На странице **Правила членства в коллекции** **мастера создания коллекций устройств** нажмите кнопку **Далее**, после чего завершите работу мастера.  
-  
- Дополнительные сведения о коллекциях см. в статье [Коллекции в Configuration Manager](https://technet.microsoft.com/library/bb693730.aspx) в библиотеке документации по Configuration Manager.  
   
 <a name="creating_a_package"></a>   
 ### <a name="create-a-package-and-program-for-the-net-framework-redistributable-package"></a>Создание пакета и программы для распространяемого пакета .NET Framework  
@@ -154,7 +152,7 @@ ms.locfileid: "43502370"
   
 8.  Завершите работу мастера.  
   
- Теперь пакет содержит все сведения, необходимые для автоматического развертывания платформы .NET Framework 4.5. Перед развертыванием пакета и программы убедитесь, что она была установлена в точке распространения; см. раздел "Мониторинг содержимого" в статье [Использование и отслеживание управления содержимым в Configuration Manager](https://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) в библиотеке документации по Configuration Manager.  
+ Теперь пакет содержит все сведения, необходимые для автоматического развертывания платформы .NET Framework 4.5. Перед развертыванием пакета и программы убедитесь, что она установлена в точке распространения (см. раздел "Мониторинг состояния содержимого" в статье [Мониторинг содержимого, распространенного с помощью System Center Configuration Manager](https://docs.microsoft.com/sccm/core/servers/deploy/configure/monitor-content-you-have-distributed) в библиотеке документации по Configuration Manager).  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Развертывание пакета  
@@ -193,27 +191,27 @@ ms.locfileid: "43502370"
   
  **Active Directory, DNS, DHCP**  
   
--   [Доменные службы Active Directory для Windows Server 2008](https://technet.microsoft.com/library/dd378891.aspx)  
+-   [Active Directory Domain Services](/windows/desktop/ad/active-directory-domain-services) (Доменные службы Active Directory)  
   
--   [DNS-сервер](https://technet.microsoft.com/library/cc732997.aspx)  
+-   [Domain Name System (DNS)](/windows-server/networking/dns/dns-top) (Служба доменных имен (DNS))  
   
--   [DHCP-сервер](https://technet.microsoft.com/library/cc896553.aspx)  
+-   [Dynamic Host Configuration Protocol (DHCP)](/windows-server/networking/technologies/dhcp/dhcp-top) (Протокол DHCP)  
   
  **SQL Server 2008**  
   
--   [Установка SQL Server 2008 (видеоматериал по SQL Server)](https://technet.microsoft.com/library/dd299415.aspx)  
+-   [Установка SQL Server 2008 (видеоматериал по SQL Server)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/dd299415%28v=sql.100%29)  
   
 -   [Обзор безопасности SQL Server 2008 для администраторов баз данных](https://download.microsoft.com/download/a/c/d/acd8e043-d69b-4f09-bc9e-4168b65aaa71/SQL2008SecurityOverviewforAdmins.docx)  
   
  **System Center 2012 Configuration Manager (точка управления, точка распространения)**  
   
--   [Администрирование сайтов для System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg681983.aspx)  
+-   [Администрирование сайтов для System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
 -   [Планирование и развертывание одного сайта Configuration Manager](https://technet.microsoft.com/library/bb680961.aspx)  
   
  **Клиент System Center 2012 Configuration Manager для компьютеров под управлением Windows**  
   
--   [Развертывание клиентов для System Center 2012 Configuration Manager](https://technet.microsoft.com/library/gg699391.aspx)  
+-   [Развертывание клиентов для System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg699391%28v=technet.10%29)  
   
 <a name="troubleshooting"></a>   
 ## <a name="troubleshooting"></a>Устранение неполадок  
@@ -248,18 +246,18 @@ ms.locfileid: "43502370"
 <a name="additional_error_codes"></a>   
 ### <a name="download-error-codes"></a>Коды ошибок загрузки  
   
--   [Коды ошибок Background Intelligent Transfer Service (BITS)](https://msdn.microsoft.com/library/aa362823.aspx)  
+-   [Коды ошибок Background Intelligent Transfer Service (BITS)](/windows/desktop/Bits/bits-return-values)  
   
--   [Коды ошибок моникера URL](https://msdn.microsoft.com/library/ms775145.aspx)  
+-   [Коды ошибок моникера URL](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775145%28v=vs.85%29)  
   
 -   [Коды ошибок WinHttp](/windows/desktop/WinHttp/error-messages)  
   
  Другие коды ошибок  
   
--   [Коды ошибок установщика Windows](https://msdn.microsoft.com/library/aa368542.aspx)  
+-   [Коды ошибок установщика Windows](/windows/desktop/msi/error-codes)  
   
--   [Коды результатов агента обновления Windows](https://technet.microsoft.com/library/cc720442.aspx)  
+-   [Коды результатов агента обновления Windows](/security-updates/WindowsUpdateServices/18127055)  
   
 ## <a name="see-also"></a>См. также  
- [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [Требования к системе](../../../docs/framework/get-started/system-requirements.md)
+- [Руководство по развертыванию для разработчиков](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
+- [Требования к системе](../../../docs/framework/get-started/system-requirements.md)

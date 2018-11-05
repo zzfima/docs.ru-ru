@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dfe3fdbf71918a7ed2b6dccca24f58688bc14f2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: cdbbf3138cad0a2fae311bf03476eebba23b7320
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003091"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202911"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Куча больших объектов в системах Windows
 
@@ -74,7 +74,7 @@ ms.locfileid: "46003091"
 
   Это типичный случай. Как правило, сборка мусора происходит в связи с распределениями в управляемой куче.
 
-- вызывается метод <xref:System.GC.Collect%2A?displayProperty=nameWithType>.
+- вызывается метод <xref:System.GC.Collect%2A?displayProperty=nameWithType> .
 
   Если вызывается метод <xref:System.GC.Collect?displayProperty=nameWithType> без параметров или другая перегрузка передается <xref:System.GC.MaxGeneration?displayProperty=nameWithType> как аргумент, сборка мусора в куче больших объектов происходит одновременно со сборкой мусора в управляемой куче.
 
@@ -164,7 +164,7 @@ ms.locfileid: "46003091"
 > [!NOTE]
 > Рекомендуется использовать события трассировки событий Windows вместо счетчиков производительности, так как трассировка событий Windows предоставляет гораздо больше сведений.
 
-### <a name="etw"></a>трассировка событий Windows
+### <a name="etw-events"></a>ETW-события
 
 Сборщик мусора предоставляет широкий набор событий трассировки событий Windows, помогая разобраться в функциях кучи. В следующих записях блога описывается, как собирать и интерпретировать события сборки мусора с помощью трассировки событий Windows:
 
@@ -204,7 +204,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 ### <a name="a-debugger"></a>Отладчик
 
-Если у вас есть только дамп памяти и вам нужно увидеть, какие объекты находятся в куче, можно использовать [расширение отладчика SoS](http://msdn2.microsoft.com/ms404370.aspx), предоставляемое .NET.
+Если у вас есть только дамп памяти и вам нужно увидеть, какие объекты находятся в куче, можно использовать [расширение отладчика SoS](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md), предоставляемое .NET.
 
 > [!NOTE]
 > Команды отладки, описанные в этом разделе, применимы к [отладчикам Windows](https://www.microsoft.com/whdc/devtools/debugging/default.mspx).

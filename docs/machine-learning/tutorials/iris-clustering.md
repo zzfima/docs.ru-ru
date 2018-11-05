@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 46db9dc7ff425c483f1a9f61da5e806e598b16d5
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37937169"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453194"
 ---
 # <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>Руководство. Использование ML.NET для кластеризации ирисов
 
@@ -138,19 +138,19 @@ private static PredictionModel<IrisData, ClusterPrediction> Train()
 
 [!code-csharp[Add step to load data](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#6)]
 
-Следующий шаг — объединить все столбцы признаков в столбце **Features** с помощью класса преобразования <xref:Microsoft.ML.Transforms.ColumnConcatenator>. По умолчанию алгоритм обучения обрабатывает только признаки, представленные в столбце **Features**. Добавьте следующий код:
+Следующий шаг — объединить все столбцы признаков в столбце **Features** с помощью класса преобразования <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator>. По умолчанию алгоритм обучения обрабатывает только признаки, представленные в столбце **Features**. Добавьте следующий код:
 
 [!code-csharp[Add step to concatenate columns](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#7)]
 
 ## <a name="choose-a-learning-algorithm"></a>Выбор алгоритма обучения
 
-После добавления данных в конвейер и их преобразования в правильный входной формат выберите алгоритм обучения (**средство обучения**). Алгоритм обучения осуществляет обучение модели. ML.NET предоставляет средство обучения <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer>, которое реализует [алгоритм k-средних](https://en.wikipedia.org/wiki/K-means_clustering) с улучшенным методом для выбора начальных центроидов кластера.
+После добавления данных в конвейер и их преобразования в правильный входной формат выберите алгоритм обучения (**средство обучения**). Алгоритм обучения осуществляет обучение модели. ML.NET предоставляет средство обучения <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer>, которое реализует [алгоритм k-средних](https://en.wikipedia.org/wiki/K-means_clustering) с улучшенным методом для выбора начальных центроидов кластера.
 
 Добавьте следующий код в метод `Train` после кода обработки данных, который вы добавили на предыдущем шаге:
 
 [!code-csharp[Add a learner step](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#8)]
 
-Используйте свойство <xref:Microsoft.ML.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType>, чтобы указать число кластеров. В приведенном выше коде указано, что набор данных нужно разделить на три кластера.
+Используйте свойство <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType>, чтобы указать число кластеров. В приведенном выше коде указано, что набор данных нужно разделить на три кластера.
 
 ## <a name="train-the-model"></a>Обучение модели
 

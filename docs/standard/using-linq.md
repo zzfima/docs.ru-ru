@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 4e6e361666b6b6ae36b7d4bf02af55a379c8e16e
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 8ce7f39d78006765a49bbd4e3d46c611761a4bd1
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087034"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181739"
 ---
 # <a name="linq-language-integrated-query"></a>Встроенный язык запросов LINQ
 
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   И, наконец, расширенный пример: определение равенства значений свойств двух экземпляров одного типа (взят и изменен на основе [этой записи на сайте StackOverflow](http://stackoverflow.com/a/844855)):
+*   И, наконец, расширенный пример: определение равенства значений свойств двух экземпляров одного типа (взят и изменен на основе [этой записи на сайте StackOverflow](https://stackoverflow.com/a/844855)):
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -224,7 +224,7 @@ public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params st
 
 ## <a name="plinq"></a>PLINQ
 
-PLINQ или параллельный LINQ — это механизм параллельного выполнения выражений LINQ. Другими словами, регулярные выражения LINQ можно просто распараллелить между любым количеством потоков. Это выполняется путем вызова `AsParallel()`, предшествующего выражению.
+PLINQ или параллельный LINQ — это механизм параллельного выполнения выражений LINQ. Другими словами, обычное выражение LINQ можно легко распараллелить между любым количеством потоков. Это выполняется путем вызова `AsParallel()`, предшествующего выражению.
 
 Рассмотрим следующий пример.
 

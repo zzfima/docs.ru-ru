@@ -1,6 +1,6 @@
 ---
 title: + Оператор (ссылка C#)
-ms.date: 07/20/2015
+ms.date: 10/22/2018
 f1_keywords:
 - +_CSharpKeyword
 helpviewer_keywords:
@@ -8,34 +8,57 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae2774d96bc50afa271fffdea445e640e68c3647
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232388"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192308"
 ---
 # <a name="-operator-c-reference"></a>Оператор + (справочник по C#)
-Оператор `+` может функционировать как унарный или как бинарный оператор.  
-  
-## <a name="remarks"></a>Примечания  
- Унарные операторы `+` предварительно определены для всех числовых типов. Результатом использования унарного оператора `+` для числового типа является просто значение операнда.  
-  
- Бинарные операторы `+` предварительно определены для числовых и строковых типов. Для числовых типов оператор "+" вычисляет сумму двух его операндов. Если один или оба операнда имеют строковый тип, оператор "+" сцепляет строковые представления операндов.  
-  
- Для типов делегатов также используется бинарный оператор `+`, который выполняет сцепление делегатов.  
-  
- Пользовательские типы могут перегружать унарный оператор `+` и бинарный оператор `+`. Операции с целыми типами обычно разрешены и для перечислений. Дополнительные сведения см. в разделе [operator (справочник по C#)](../../../csharp/language-reference/keywords/operator.md).  
-  
-## <a name="example"></a>Пример  
- [!code-csharp[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-operator_1.cs)]  
-  
-## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Оператор `+` поддерживается в двух формах: унарный оператор сложения или бинарный оператор сложения.
+
+Пользовательские типы могут [перегружать](../keywords/operator.md) унарный и бинарный операторы `+`. При перегрузке бинарного оператора `+` неявно перегружается и соответствующий [оператор присвоения сложения](addition-assignment-operator.md) `+=`.
+
+## <a name="unary-plus-operator"></a>Оператор унарного сложения
+
+Унарный оператор `+` возвращает значение полученного операнда. Он поддерживается всеми числовыми типами данных.
+
+## <a name="numeric-addition"></a>Арифметическое сложение
+
+Для числовых типов оператор `+` вычисляет сумму двух операндов:
+
+[!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
+
+## <a name="string-concatenation"></a>Объединение строк
+
+Если один или оба операнда имеют тип [string](../keywords/string.md), оператор `+` сцепляет строковые представления этих операндов.
+
+[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddStrings)]
+
+В C#, начиная с версии 6, реализован более удобный способ форматирования строк, который называется [интерполяция строк](../tokens/interpolated.md):
+
+[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#UseStringInterpolation)]
+
+## <a name="delegate-combination"></a>Объединение делегатов
+
+Для типов [делегата](../keywords/delegate.md) оператор `+` возвращает новый экземпляр делегата, при вызове которого вызывается сначала первый, а затем второй операнд. Если какой-либо из операндов имеет значение `null`, оператор `+` возвращает значение другого операнда (это тоже может быть `null`). Следующий пример демонстрирует объединение делегатов с помощью оператора `+`:
+
+[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
+
+См. дополнительные сведения о [типах делегатов](../../programming-guide/delegates/index.md).
+
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+См. дополнительные сведения об [унарном операторе сложение](~/_csharplang/spec/expressions.md#unary-plus-operator) и [операторе сложения](~/_csharplang/spec/expressions.md#addition-operator) в [спецификации языка C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Операторы в C#](../../../csharp/language-reference/operators/index.md)  
-- [operator (справочник по C#)](../../../csharp/language-reference/keywords/operator.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Операторы в C#](index.md)
+- [Интерполяция строк](../tokens/interpolated.md)
+- [Практическое руководство. Сцепка нескольких строк](../../how-to/concatenate-multiple-strings.md)
+- [Делегаты](../../programming-guide/delegates/index.md)
+- [Операторы checked и unchecked](../keywords/checked-and-unchecked.md)

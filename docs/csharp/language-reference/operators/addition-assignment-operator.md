@@ -1,46 +1,52 @@
 ---
 title: Оператор += (справочник по C#)
-ms.date: 07/20/2015
+ms.date: 10/22/2018
 f1_keywords:
 - +=_CSharpKeyword
 helpviewer_keywords:
 - += operator [C#]
 - addition assignment operator (+=) [C#]
+- event subscription [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
-ms.openlocfilehash: bd0997ec5b7d79a41e01f9c2b17533293e412c1e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ee335e3e2e7d352d4e26b802bad2b08a05c666ab
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857511"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192035"
 ---
 # <a name="-operator-c-reference"></a>Оператор += (справочник по C#)
-Оператор присваивания сложения.  
-  
-## <a name="remarks"></a>Примечания  
- Выражение, использующее оператор присваивания `+=`, такое как  
-  
-```csharp  
-x += y  
+
+Оператор присваивания сложения.
+
+Выражение, использующее оператор `+=`, такое как  
+
+```csharp
+x += y
 ```  
-  
- эквивалентно  
-  
-```csharp  
-x = x + y  
+
+эквивалентно  
+
+```csharp
+x = x + y
 ```  
+
+за исключением того, что `x` вычисляется только один раз.
   
- за исключением того, что `x` вычисляется только один раз. Значение [оператора +](../../../csharp/language-reference/operators/addition-operator.md) зависит от типов операндов `x` и `y` (сложение для числовых операндов, объединение для строковых операндов и т. д.).  
-  
- Оператор `+=` нельзя перегружать напрямую, однако пользовательские типы могут перегружать [оператор +](../../../csharp/language-reference/operators/addition-operator.md) (см. [operator](../../../csharp/language-reference/keywords/operator.md)).  
-  
- Оператор `+=` также позволяет указать метод, который будет вызываться в ответ на событие. Такие методы называются обработчиками событий. Использование оператора `+=` в таком контексте называется *подпиской на событие*. Дополнительные сведения см. в разделах [Практическое руководство. Подписка и отмена подписки на события](../../../csharp/programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md) и [Делегаты](../../../csharp/programming-guide/delegates/index.md).  
-  
-## <a name="example"></a>Пример  
- [!code-csharp[csRefOperators#35](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-assignment-operator_1.cs)]  
+Для числовых типов [оператор сложения](addition-operator.md) `+` вычисляет сумму операндов. Если один или оба операнда имеют [строковый](../keywords/string.md) тип, оператор сцепляет строковые представления операндов. Для типов делегатов оператор `+` возвращает новый экземпляр делегата, который представляет собой комбинацию операндов.
+
+Если определяемый пользователем тип [перегружает](../keywords/operator.md) [оператор сложения](addition-operator.md) `+`, оператор присваивания сложения `+=` неявно перегружается.
+
+Можно также использовать оператор `+=`, который позволяет указать метод обработчика событий при подписке на [событие](../keywords/event.md). Дополнительные сведения см. в разделе [Практическое руководство. Подписка и отмена подписки на события](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+
+В следующем примере иллюстрируется использование оператора `+=`.
+
+[!code-csharp-interactive[+= examples](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddAndAssign)]
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Операторы в C#](../../../csharp/language-reference/operators/index.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Операторы в C#](index.md)
+- [События](../../programming-guide/events/index.md)
+- [Делегаты](../../programming-guide/delegates/index.md)

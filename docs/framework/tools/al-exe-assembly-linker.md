@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a9789669f6d896bfbaf4ccf5cbd0eccdd710980
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b4fe4c4f89056ae57c3516149a41a5a3bea4fcd2
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399721"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48848022"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (компоновщик сборок)
 
 Компоновщик сборок создает файл с манифестом сборки из одного или нескольких файлов, являющихся модулями или файлами ресурсов. Модуль — это файл промежуточного языка (IL) без манифеста сборки.
 
 > [!NOTE]
-> Начиная с [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)], компиляторы C# и Visual Basic автоматически внедряют манифест Win32 в сборку. Дополнительные сведения см. в разделе [/win32manifest (параметры компилятора C#)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
+> Начиная с Visual Studio 2008, компиляторы C# и Visual Basic автоматически внедряют манифест Win32 в сборку. Дополнительные сведения см. в разделе [/win32manifest (параметры компилятора C#)](~/docs/csharp/language-reference/compiler-options/win32manifest-compiler-option.md).
 
 Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).
 
@@ -69,7 +69,7 @@ al sources options
 |**/platform:** `text`|Ограничивает платформы, на которых может работать этот код: x86, Itanium, x64, anycpu (по умолчанию) или anycpu32bitpreferred.|
 |**/prod[uct]:** `text`|Задает строковое значение поля **Product** в сборке. Если значение параметра `text` содержит пробел, строку следует заключить в двойные кавычки (""). Эта строка является настраиваемым атрибутом сборки и доступна для просмотра с отражением.<br /><br /> Если параметр **/win32res** не указан, элемент **/product** будет отображаться в проводнике как ресурс Win32 **Product Name**.<br /><br /> Если вместо текста указана пустая строка, ресурс Win32 **Product Name** отображается в виде одного пробела.<br /><br /> Если параметр **/win32res** задан, параметр **/product** не повлияет на сведения о ресурсах Win32.<br /><br /> Этот параметр можно также указать в исходном коде любого модуля CIL в качестве настраиваемого атрибута (<xref:System.Reflection.AssemblyProductAttribute>).|
 |**/productv[ersion]:** `text`|Задает строковое значение поля **Product Version** в сборке. Если значение параметра `text` содержит пробел, строку следует заключить в двойные кавычки (""). Эта строка является настраиваемым атрибутом сборки и доступна для просмотра с отражением.<br /><br /> Если параметр **/win32res** не указан, элемент **/productversion** будет использоваться в качестве ресурса Win32 **Product Version**. Если параметр **/productversion** не указан, ресурс Win32 **Product Version** будет взят из ресурса Win32 **File Version**.<br /><br /> Если параметр **/win32res** задан, параметр **/productversion** не повлияет на сведения о ресурсах Win32.<br /><br /> Этот параметр можно также указать в исходном коде любого модуля CIL в качестве настраиваемого атрибута (<xref:System.Reflection.AssemblyInformationalVersionAttribute>).|
-|**/t[arget]:** `lib[rary]` &#124; `exe` &#124; `win[exe]`|Задает формат выходного файла: `lib[rary]` (библиотека кода), `exe` (консольное приложение) или `win[exe]` (приложение Windows). Значение по умолчанию — `lib[rary]`.|
+|**/t[arget]:** `lib[rary]` &#124; `exe` &#124; `win[exe]`|Задает формат выходного файла: `lib[rary]` (библиотека кода), `exe` (консольное приложение) или `win[exe]` (приложение Windows). Значение по умолчанию — `lib[rary]`.|
 |**/template:** `filename`|Задает сборку `filename`, от которой требуется унаследовать все метаданные сборки, кроме поля языка и региональных параметров.<br /><br /> Сборка, созданная с помощью параметра **/template**, является вспомогательной.|
 |**/title:** `text`|Задает строковое значение поля **Title** в сборке. Если значение параметра `text` содержит пробел, строку следует заключить в двойные кавычки (""). Эта строка является настраиваемым атрибутом сборки и доступна для просмотра с отражением.<br /><br /> Если параметр **/win32res** не указан, значение параметра **/title** отображается в проводнике как ресурс Win32 **Description**, используемый оболочкой в качестве понятного имени приложения. Он также отображается в подменю **Открыть с помощью** контекстного меню типов файлов, поддерживаемых несколькими приложениями.<br /><br /> Если вместо текста указана пустая строка, ресурс Win32 **Description** отображается в виде одного пробела.<br /><br /> Если параметр **/win32res** задан, параметр **/title** не повлияет на сведения о ресурсах Win32.<br /><br /> Этот параметр можно также указать в исходном коде любого модуля CIL в качестве настраиваемого атрибута (<xref:System.Reflection.AssemblyTitleAttribute>).|
 |**/trade[mark]:** `text`|Задает строковое значение поля **Trademark** в сборке. Если значение параметра `text` содержит пробел, строку следует заключить в двойные кавычки (""). Эта строка является настраиваемым атрибутом сборки и доступна для просмотра с отражением.<br /><br /> Если параметр **/win32res** не указан, элемент **/trademark** будет отображаться в проводнике как ресурс Win32 **Trademark**.<br /><br /> Если вместо текста указана пустая строка, ресурс Win32 **Trademark** отображается в виде одного пробела.<br /><br /> Если параметр **/win32res** задан, параметр **/trademark** не повлияет на сведения о ресурсах Win32.<br /><br /> Этот параметр можно также указать в исходном коде любого модуля CIL в качестве настраиваемого атрибута (<xref:System.Reflection.AssemblyTrademarkAttribute>).|
@@ -174,9 +174,9 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 ```
 
 ## <a name="see-also"></a>См. также
- 
-[Инструменты](../../../docs/framework/tools/index.md)  
-[*Sn.exe* (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
-[*Gacutil.exe* (программа глобального кэша сборок)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
-[Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)  
-[Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+
+- [Инструменты](../../../docs/framework/tools/index.md)
+- [*Sn.exe* (средство строгих имен)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
+- [*Gacutil.exe* (программа глобального кэша сборок)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)
+- [Программирование с использованием сборок](../../../docs/framework/app-domains/programming-with-assemblies.md)
+- [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

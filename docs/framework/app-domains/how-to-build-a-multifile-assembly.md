@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 261c5583-8a76-412d-bda7-9b8ee3b131e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 916db7ec9bee0c85db1f2fcf4db7a9f8a61f9be3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3072be4e870b64edcea32bb7159db8c64c50d840
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744087"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183104"
 ---
 # <a name="how-to-build-a-multifile-assembly"></a>Практическое руководство. Создание многофайловой сборки
 В этой статье рассматривается порядок создания многофайловой сборки и приводится код, иллюстрирующий каждый шаг процедуры.  
@@ -88,7 +88,7 @@ ms.locfileid: "32744087"
   
      В этой команде в аргументах *имя модуля* задаются имена всех модулей, которые будут включены в сборку. В параметре **/main:** указывается имя метода, являющегося точкой входа сборки. В параметре **/out:** задается имя выходного файла, содержащего метаданные сборки. В параметре **/target:** указывается, что сборка является исполняемым файлом консольного приложения (EXE), исполняемым файлом Windows (WIN) или же файлом библиотеки (LIB).  
   
-     В следующем примере средство Al.exe создает сборку, являющуюся консольным приложением с именем `myAssembly.exe`. Приложение состоит из двух модулей с именами `Client.netmodule` и `Stringer.netmodule` и исполняемого файла с именем `myAssembly.exe,`, который содержит только метаданные сборки. Точкой входа сборки является метод `Main` класса `MainClientApp`, который находится в библиотеке`Client.dll`.  
+     В следующем примере средство Al.exe создает сборку, являющуюся консольным приложением с именем `myAssembly.exe`. Приложение состоит из двух модулей с именами `Client.netmodule` и `Stringer.netmodule`, а также исполняемого файла с именем `myAssembly.exe,`, который содержит только метаданные сборки. Точкой входа сборки является метод `Main` класса `MainClientApp`, который находится в библиотеке`Client.dll`.  
   
     ```  
     al Client.netmodule Stringer.netmodule /main:MainClientApp.Main /out:myAssembly.exe /target:exe   
@@ -97,7 +97,7 @@ ms.locfileid: "32744087"
      Для проверки содержимого сборки или определения, является ли файл сборкой или модулем, можно использовать средство [MSIL Disassembler (Ildasm.exe)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)  
- [Практическое руководство. Просмотр содержимого сборок](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Многофайловые сборки](../../../docs/framework/app-domains/multifile-assemblies.md)
+- [Создание сборок](../../../docs/framework/app-domains/create-assemblies.md)  
+- [Практическое руководство. Просмотр содержимого сборок](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
+- [Обнаружение сборок в среде выполнения](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Многофайловые сборки](../../../docs/framework/app-domains/multifile-assemblies.md)

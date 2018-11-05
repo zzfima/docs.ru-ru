@@ -8,14 +8,12 @@ helpviewer_keywords:
 - Internet Protocol version 6, improvements
 - Internet Protocol version 6
 ms.assetid: e6fa8ebd-010a-4c48-a5ec-a5102c53c06f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: fc7aa27c07946b3a3da7e1ede8adaea30c06e58f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6f956a8dc3e899012144ccf266a7cbe1c5f9dab4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201014"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50200011"
 ---
 # <a name="internet-protocol-version-6"></a>протокол IP версии 6
 Протокол IP версии 6 (IPv6) — это новый набор стандартных протоколов для сетевого уровня Интернета. IPv6 позволяет устранить множество проблем текущей версии набора интернет-протоколов (известного как IPv4), связанных с нехваткой адресов, безопасностью, автоматической настройкой, расширяемостью и т. д. IPv6 расширяет возможности Интернета для активации новых видов приложений, включая приложения для одноранговой сети и мобильных устройств. Ниже приведены основные проблемы текущего протокола IPv4.  
@@ -47,7 +45,7 @@ ms.locfileid: "47201014"
  Дополнительные сведения см. в разделах [Адресация IPv6](../../../docs/framework/network-programming/ipv6-addressing.md), [Маршрутизация IPv6](../../../docs/framework/network-programming/ipv6-routing.md), [Автоматическая настройка IPv6](../../../docs/framework/network-programming/ipv6-auto-configuration.md), [Включение и отключение IPv6](../../../docs/framework/network-programming/enabling-and-disabling-ipv6.md) и [Практическое руководство. Изменение файла конфигурации компьютера для включения поддержки IPv6](../../../docs/framework/network-programming/how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md).  
   
 ## <a name="references"></a>Ссылки  
- Ниже перечислен ряд документов RFC, которые можно найти на сайте Internet Engineering Task Force ([http://www.ietf.org](http://www.ietf.org/)):  
+ Ниже перечислен ряд документов RFC, которые можно найти на веб-сайте [IETF](https://www.ietf.org/):  
   
 -   RFC 1287, Towards the Future Internet Architecture.  
   
@@ -57,9 +55,9 @@ ms.locfileid: "47201014"
   
 -   RFC 2374, An IPv6 Aggregatable Global Unicast Address Format.  
   
- Сведения, относящиеся к IPv6, можно также найти в [разделе о IPv6 на сайте Technet](https://go.microsoft.com/fwlink/?LinkID=179658).  
+ Сведения, относящиеся к IP версии 6, можно также найти в [этом разделе](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd379498%28v=ws.10%29).  
   
 ## <a name="see-also"></a>См. также  
- [Пример сокетов IPv6](https://msdn.microsoft.com/library/ms180981(v=vs.85).aspx)  
+ [Пример сокетов IPv6](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms180981%28v=vs.85%29)  
  [Примеры сетевого программирования](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Сокеты](../../../docs/framework/network-programming/sockets.md)

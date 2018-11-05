@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ranges of floating-point types [C#]
 - types [C#], floating-point types
 ms.assetid: da886cc5-e01e-4f62-b3ec-6428c8f7a102
-ms.openlocfilehash: 804e6529e67785ed5bcdb0db9efaeccb6b3a1a61
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c292303d1cf0b72d05ae6269d63a27555d2458b5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45679548"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200474"
 ---
 # <a name="floating-point-types-table-c-reference"></a>Таблица типов с плавающей запятой (справочник по C#)
 
@@ -20,8 +20,8 @@ ms.locfileid: "45679548"
   
 |Тип|Приблизительный диапазон значений|Точность|  
 |----------|-----------------------|---------------|  
-|[float](float.md)|От ±1,5 x 10<sup>−45</sup> до ±3,4 x 10<sup>38</sup>|7 знака|  
-|[double](double.md)|от ±5,0 × 10<sup>−324</sup> до ±1,7 × 10<sup>308</sup>|15–16 знаков|  
+|[float](float.md)|От ±1,5 x 10<sup>−45</sup> до ±3,4 x 10<sup>38</sup>|6–9 цифр|  
+|[double](double.md)|от ±5,0 × 10<sup>−324</sup> до ±1,7 × 10<sup>308</sup>|15–17 цифр|  
 |[decimal](decimal.md)|от ±1,0 x 10<sup>-28</sup> до ±7,9228 x 10<sup>28</sup>|28-29 знаков|  
   
 ## <a name="see-also"></a>См. также

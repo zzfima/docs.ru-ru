@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: aab939af29849ceeef76d6f61b3d4f59d701094c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 25175e2a4409d53be412ae72be5af1c07c3ec68d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105466"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199669"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Управление микрослужбами и многоконтейнерными приложениями для обеспечения высокого уровня масштабируемости и доступности
 
@@ -39,7 +39,7 @@ ms.locfileid: "37105466"
 
 Kubernetes
 
-![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image24.png)
+![Логотип Kubernetes](./media/image24.png)
 
 > Kubernetes — это решение с открытым кодом, которое предоставляет широкий ряд возможностей: от организации инфраструктуры кластера и планирования контейнеров до оркестрации. Оно позволяет автоматизировать развертывание, масштабирование и выполнение операций с контейнерами приложений в кластерах узлов.
 >
@@ -49,7 +49,7 @@ Kubernetes
 
 Docker Swarm
 
-![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image25.png)
+![Логотип Docker Swarm](./media/image25.png)
 
 > Docker Swarm позволяет объединять контейнеры Docker в кластеры и планировать их работу. С помощью Swarm можно превратить пул узлов Docker в единый виртуальный узел Docker. Клиенты могут выполнять запросы API к Swarm так же, как к узлам, благодаря чему Swarm упрощает масштабирование приложений в нескольких узлах.
 >
@@ -59,7 +59,7 @@ Docker Swarm
 
 Mesosphere DC/OS
 
-![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image26.png)
+![Логотип Mesosphere DC/OS](./media/image26.png)
 
 > Mesosphere Enterprise DC/OS (на основе Apache Mesos) — это готовая к использованию в рабочей среде платформа для выполнения контейнеров и распределенных приложений.
 >
@@ -69,11 +69,11 @@ Mesosphere DC/OS
 
 Azure Service Fabric
 
-![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image27.png)
+![Логотип Azure Service Fabric](./media/image27.png)
 
-> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) — это платформа микрослужб от корпорации Майкрософт, которая предназначена для создания приложений. Она позволяет [оркестрировать](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) службы и создавать кластеры компьютеров. Службы в Service Fabric могут развертываться как контейнеры или как обычные процессы. Кроме того, в рамках одного приложения или кластера можно сочетать службы в процессах и службы в контейнерах.
+> [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) — это платформа микрослужб от корпорации Майкрософт, которая предназначена для создания приложений. Она позволяет  [управлять](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction)  службами и создавать кластеры компьютеров. Службы в Service Fabric могут развертываться как контейнеры или как обычные процессы. Кроме того, в рамках одного приложения или кластера можно сочетать службы в процессах и службы в контейнерах.
 >
-> Service Fabric предоставляет дополнительные перспективные [модели программирования Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework), такие как [службы с отслеживанием состояния](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) и [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+> Service Fabric предоставляет дополнительные перспективные  [модели программирования Service Fabric ](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework), такие как [службы с отслеживанием состояния](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) и [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 >
 > Решение Service Fabric является зрелым в Windows (годы развития) и менее зрелым в Linux. 
 > С 2017 года в Service Fabric поддерживаются как контейнеры Linux, так и контейнеры Windows.

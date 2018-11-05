@@ -4,12 +4,12 @@ description: Дополнительные сведения о .NET Core.
 author: richlander
 ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: d9943246b683c8fd892e7bc5fd09a10b72e31a5f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: fc4b76df8b71865b14caf27c7e21906cccc88d07
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "48252228"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197657"
 ---
 # <a name="about-net-core"></a>Сведения о .NET Core
 
@@ -18,33 +18,28 @@ ms.locfileid: "48252228"
 - **Кроссплатформенность.** Поддержка [операционных систем](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) Windows, macOS и Linux.
 - **Согласованность между архитектурами.** Одинаковое выполнение кода на различных архитектурах, включая x64, x86 и ARM.
 - **Программы командной строки.** Удобные инструменты для локальной разработки и сценариев непрерывной интеграции.
-- **Гибкая разработка.** Может включаться в приложение или устанавливаться параллельно на уровне пользователя или компьютера. Возможность использования с [контейнерами Docker](docker/index.md).
+- **Гибкая разработка**: может включаться в приложение или устанавливаться параллельно на уровне пользователя или компьютера. Возможность использования с [контейнерами Docker](docker/index.md).
 - **Совместимость.** Платформа .NET Core совместима с .NET Framework, Xamarin и Mono благодаря [.NET Standard](../standard/net-standard.md).
 - **Открытый исходный код**: платформа .NET Core имеет открытый исходный код и распространяется по лицензиям MIT и Apache 2. .NET Core является проектом [.NET Foundation](https://dotnetfoundation.org/).
 - **Поддержка от Майкрософт.** Корпорация Майкрософт предоставляет [поддержку .NET Core](https://www.microsoft.com/net/core/support/).
 
 ## <a name="languages"></a>Языки
 
-.NET Core позволяет создавать приложения и библиотеки на языках C#, Visual Basic и F#. Эти языки уже интегрированы или могут быть интегрированы в ваши любимые текстовые редакторы и интегрированные среды разработки, такие как [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text и Vim. Интеграция возможна во многом благодаря участникам проектов [OmniSharp](http://www.omnisharp.net/) и [Ionide](http://ionide.io).
+.NET Core позволяет создавать приложения и библиотеки на языках C#, Visual Basic и F#. Эти языки уже интегрированы или могут быть интегрированы в ваши любимые текстовые редакторы и интегрированные среды разработки, такие как [Visual Studio](https://visualstudio.microsoft.com/vs/), [Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp), Sublime Text и Vim. Интеграция возможна во многом благодаря участникам проектов [OmniSharp](https://www.omnisharp.net/) и [Ionide](http://ionide.io).
 
 ## <a name="apis"></a>API - интерфейсы
 
 .NET Core предоставляет API-интерфейсы для множества сценариев, в некоторых из которых используются:
 
-- Примитивные типы, такие как [bool][bool] и [int][int].
+- Примитивные типы, такие как [bool](../csharp/language-reference/keywords/bool.md) и [int](../csharp/language-reference/keywords/int.md).
 - Коллекции, такие как <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> и <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.
 - Служебные типы, такие как <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> и <xref:System.IO.FileStream?displayProperty=nameWithType>.
-- Типы данных, такие как <xref:System.Data.DataSet?displayProperty=nameWithType> и [DbSet][dbset].
-- Высокопроизводительные типы, такие как <xref:System.Numerics.Vector?displayProperty=nameWithType> и [Pipelines][pipelines].
+- Типы данных, такие как <xref:System.Data.DataSet?displayProperty=nameWithType> и [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/).
+- Высокопроизводительные типы, такие как <xref:System.Numerics.Vector?displayProperty=nameWithType> и[ Pipelines](https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/).
 
 Благодаря поддержке спецификации [.NET Standard](../standard/net-standard.md) платформа .NET Core совместима с .NET Framework и API-интерфейсами Mono.
 
-[bool]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/bool
-[int]: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/int
-[pipelines]: https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/
-[dbset]: https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/
-
-## <a name="frameworks"></a>Платформы
+## <a name="frameworks"></a>Инфраструктуры
 
 На основе .NET Core было создано множество платформ:
 
@@ -54,7 +49,7 @@ ms.locfileid: "48252228"
 
 ## <a name="composition"></a>Композиция
 
-.NET Core состоит из перечисленных ниже компонентов:
+.NET Core состоит из перечисленных ниже компонентов.
 
 - [Среда выполнения .NET Core](https://github.com/dotnet/coreclr) предоставляет систему типов, функции загрузки сборок, сборщик мусора, собственные функции взаимодействия и другие базовые службы. [Библиотеки платформы .NET Core](https://github.com/dotnet/corefx) предоставляют примитивные типы данных, типы компоновки приложений и базовые служебные программы.
 - [Среда выполнения ASP.NET](https://github.com/aspnet/home) предоставляет платформу для создания современных облачных приложений, подключенных к Интернету: веб-приложений, приложений Интернета вещей, серверной части мобильных решений и многого другого.
@@ -111,7 +106,7 @@ ms.locfileid: "48252228"
 
 ### <a name="comparison-with-mono"></a>Сравнение с Mono
 
-[Mono](http://www.mono-project.com/) — это первая кроссплатформенная реализация .NET с [открытым исходным кодом](https://github.com/mono/mono), которая была представлена в 2004 году. Ее можно считать аналогом .NET Framework, предоставляемым сообществом. Команда проекта Mono использовала открытые [стандарты .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (в частности, ECMA 335), опубликованные корпорацией Майкрософт, для предоставления совместимой реализации.
+[Mono](https://www.mono-project.com/) — это первая кроссплатформенная реализация .NET с [открытым исходным кодом](https://github.com/mono/mono), которая была представлена в 2004 году. Ее можно считать аналогом .NET Framework, предоставляемым сообществом. Команда проекта Mono использовала открытые [стандарты .NET](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (в частности, ECMA 335), опубликованные корпорацией Майкрософт, для предоставления совместимой реализации.
 
 Основные различия между .NET Core и Mono
 

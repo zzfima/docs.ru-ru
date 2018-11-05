@@ -4,12 +4,12 @@ description: Рекомендации по использованию реали
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: dbb5bd21d2fa43167a9624be2baec3f591d10920
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 01e7222ccd4a764f75481e58d4ac305daadfe1a8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864966"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202241"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Выбор между .NET Core и .NET Framework для серверных приложений
 
@@ -87,7 +87,7 @@ ms.locfileid: "43864966"
 
 * Приложения веб-форм ASP.NET. Веб-формы ASP.NET доступны только в среде .NET Framework. ASP.NET Core не может использоваться для веб-форм ASP.NET. Добавление веб-форм ASP.NET в среду .NET Core не планируется.
 
-* Приложения веб-страниц ASP.NET. Веб-страницы ASP.NET не добавлены в среду ASP.NET Core. [Страницы Razor](/aspnet/core/mvc/razor-pages/) ASP.NET Core имеют много общего с веб-страницами.
+* Приложения веб-страниц ASP.NET. Веб-страницы ASP.NET не добавлены в среду ASP.NET Core. 
 
 * Реализация служб WCF. Хотя в среду .NET Core и добавлена [библиотека клиента WCF](https://github.com/dotnet/wcf), позволяющая использовать службы WCF, сервер WCF можно реализовать только в среде .NET Framework. Этот сценарий не входит в текущий план для .NET Core, но он будет рассмотрен в будущем.
 
@@ -104,6 +104,7 @@ ms.locfileid: "43864966"
 ## <a name="see-also"></a>См. также
 
 * [Выбор между ASP.NET и ASP.NET Core](/aspnet/core/choose-aspnet-framework)
+* [ASP.NET Core с целевой платформой .NET Framework](/aspnet/core#aspnet-core-targeting-net-framework)
 * [Целевые платформы](frameworks.md)
 * [Руководство по .NET Core](../core/index.md)  
 * [Перенос кода в .NET Core из .NET Framework](../core/porting/index.md)  

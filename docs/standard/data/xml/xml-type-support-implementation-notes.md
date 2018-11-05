@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 51066ab6fb0fa4749befdd0f94790fa45a7ab5cf
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 73f786c8f1080d0046889958e8b3bd3165870569
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44191070"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187456"
 ---
 # <a name="xml-type-support-implementation-notes"></a>Примечания по реализации поддержки типов XML
 В этом разделе описываются определенные детали реализации, которые следует знать.  
@@ -27,14 +27,14 @@ ms.locfileid: "44191070"
  Ниже описывается ряд несоответствий, которые могут возникать между типами данных CLR и XML, и о том, как они преодолеваются.  
   
 > [!NOTE]
->  Префикс `xs` сопоставляется с http://www.w3.org/2001/XMLSchema и URI пространства имен.  
+> Префикс `xs` сопоставляется с <https://www.w3.org/2001/XMLSchema> и URI пространства имен.
   
 ### <a name="systemtimespan-and-xsduration"></a>System.TimeSpan и xs:duration  
  Тип `xs:duration` частично упорядочен в том смысле, что в нем представлены некоторые значения длительности, отличные друг от друга, но эквивалентные. Это означает, что для типа `xs:duration` значение 1 месяц (P1M) меньше чем 32 дня (P32D), больше чем 27 дней (P27D) и эквивалентно 28, 29 или 30 дням.  
   
  Класс <xref:System.TimeSpan> не поддерживает такое частичное упорядочение. Он предполагает использование определенного числа дней для 1 года и для 1 месяца: 365 дней и 30 дней соответственно.  
   
- Дополнительные сведения о типе `xs:duration` см. в документе "Рекомендация W3C по схемам XML. Часть 2. Типы данных" по адресу http://www.w3.org/TR/xmlschema-2/.  
+ Дополнительные сведения о типе `xs:duration` см. в документе W3C [XML Schema Part 2: Datatypes Recommendation](https://www.w3.org/TR/xmlschema-2/) (Рекомендация W3C по схемам XML. Часть 2. Типы данных).
   
 ### <a name="xstime-gregorian-date-types-and-systemdatetime"></a>Типы данных xs:time, григорианского календаря и System.DateTime  
  Когда значение `xs:time` сопоставляется с объектом <xref:System.DateTime>, поле <xref:System.DateTime.MinValue> используется для инициализации свойств даты объекта <xref:System.DateTime> (таких как <xref:System.DateTime.Year%2A>, <xref:System.DateTime.Month%2A> и <xref:System.DateTime.Day%2A>) наименьшим из возможных значений <xref:System.DateTime>.  

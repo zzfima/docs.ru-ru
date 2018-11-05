@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c8a619021f8e398c5c3dfc974b9130ecacb44d4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4f4f73ec60283e1ddf0fee0beaa76bdb68124698
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410037"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122783"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (генератор файлов ресурсов)
 Генератор файлов ресурсов (Resgen.exe) преобразует текстовые файлы (TXT или RESTEXT) и файлы ресурсов на основе XML (RESX) в двоичные файлы среды CLR (RESOURCES), которые можно внедрить в двоичный исполняемый файл среды выполнения или вспомогательную сборку. (См. раздел [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -319,7 +319,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
 -   Свойство `static` (C#) или `Shared` (Visual Basic) и свойство `ResourceManager` только для чтения, которое возвращает экземпляр <xref:System.Resources.ResourceManager>, который управляет ресурсом со строгой типизацией.  
   
--   Статическое свойство `Culture`, с помощью которого можно задать язык и региональные параметры, используемые для извлечения ресурсов. По умолчанию его значение задано как `null`, то есть для пользовательского интерфейса используются текущий язык и региональные параметры.  
+-   Статическое свойство `Culture`, с помощью которого можно задать язык и региональные параметры, используемые для извлечения ресурсов. По умолчанию его значение равно `null`, то есть для пользовательского интерфейса используются текущий язык и региональные параметры.  
   
 -   Одно свойство `static` (C#) или `Shared` (Visual Basic) и свойство только для чтения для каждого ресурса в RESOURCES-файле. Имя свойства является именем ресурса.  
   

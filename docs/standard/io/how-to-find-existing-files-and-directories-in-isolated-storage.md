@@ -19,15 +19,16 @@ helpviewer_keywords:
 ms.assetid: eb28458a-6161-4e7a-9ada-30ef93761b5c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 09c112374458b70a464291e898e9a880c8679773
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9fd5bc2a8db8d98791cdd1a75b007555226c050b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47398960"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202098"
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Практическое руководство. Поиск существующих файлов и каталоги в изолированном хранилище
-Чтобы выполнить поиск по каталогу в изолированном хранилище, используйте метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>. Этот метод принимает строку, которая представляет шаблон для поиска. В шаблоне поиска вы можете использовать как одиночные (?), так и многосимвольные (*) подстановочные знаки, но они должны находиться только в последней части имени. Например, допустимой строкой для поиска является `directory1/*ect*`, но не `*ect*/directory2`.  
+
+Чтобы выполнить поиск по каталогу в изолированном хранилище, используйте метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType>. Этот метод принимает строку, которая представляет шаблон для поиска. В шаблоне поиска вы можете использовать как одиночные (?), так и многосимвольные (\*) подстановочные знаки, но они должны находиться только в последней части имени. Например, допустимой строкой для поиска является `directory1/*ect*`, но не `*ect*/directory2`.  
   
  Чтобы выполнить поиск файла, используйте метод <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A?displayProperty=nameWithType>. Ограничение на использование подстановочных знаков в строках для поиска, которое задано для <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A>, применяется и к <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetFileNames%2A>.  
   
