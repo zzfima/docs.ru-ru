@@ -1,6 +1,6 @@
 ---
 title: Исключения. Функция failwith (F#)
-description: 'Узнайте, как функция «failwith» создает исключение F #.'
+description: Узнайте, как функция «failwith» создает исключение F#.
 ms.date: 05/16/2016
 ms.openlocfilehash: 69a2eb69e0157d3bde8cb8884cb0ae960634dddc
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
@@ -11,7 +11,7 @@ ms.locfileid: "43863433"
 ---
 # <a name="exceptions-the-failwith-function"></a>Исключения. Функция failwith
 
-`failwith` Функция создает исключение F #.
+`failwith` Функция создает исключение F#.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,7 +23,7 @@ failwith error-message-string
 
 *Строку сообщения об* в предыдущем синтаксисе является строковым литералом или значением типа `string`. Он становится `Message` свойство исключения.
 
-Исключение, создаваемое `failwith` — `System.Exception` исключение, которое представляет собой ссылку с именем `Failure` в коде F #. Следующий код иллюстрирует использование `failwith` для создания исключения.
+Исключение, создаваемое `failwith` — `System.Exception` исключение, которое представляет собой ссылку с именем `Failure` в коде F#. Следующий код иллюстрирует использование `failwith` для создания исключения.
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6001.fs)]
 
