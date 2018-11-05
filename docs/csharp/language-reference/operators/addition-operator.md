@@ -1,6 +1,6 @@
 ---
 title: + Оператор (ссылка C#)
-ms.date: 07/20/2015
+ms.date: 10/22/2018
 f1_keywords:
 - +_CSharpKeyword
 helpviewer_keywords:
@@ -8,34 +8,57 @@ helpviewer_keywords:
 - concatenation operator [C#]
 - addition operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: b49694bc8937c58bd295f0f8e57c378802d0dfb9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ae2774d96bc50afa271fffdea445e640e68c3647
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232388"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192308"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="2671a-102">Оператор + (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="2671a-102">+ Operator (C# Reference)</span></span>
-<span data-ttu-id="2671a-103">Оператор `+` может функционировать как унарный или как бинарный оператор.</span><span class="sxs-lookup"><span data-stu-id="2671a-103">The `+` operator can function as either a unary or a binary operator.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="2671a-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="2671a-104">Remarks</span></span>  
- <span data-ttu-id="2671a-105">Унарные операторы `+` предварительно определены для всех числовых типов.</span><span class="sxs-lookup"><span data-stu-id="2671a-105">Unary `+` operators are predefined for all numeric types.</span></span> <span data-ttu-id="2671a-106">Результатом использования унарного оператора `+` для числового типа является просто значение операнда.</span><span class="sxs-lookup"><span data-stu-id="2671a-106">The result of a unary `+` operation on a numeric type is just the value of the operand.</span></span>  
-  
- <span data-ttu-id="2671a-107">Бинарные операторы `+` предварительно определены для числовых и строковых типов.</span><span class="sxs-lookup"><span data-stu-id="2671a-107">Binary `+` operators are predefined for numeric and string types.</span></span> <span data-ttu-id="2671a-108">Для числовых типов оператор "+" вычисляет сумму двух его операндов.</span><span class="sxs-lookup"><span data-stu-id="2671a-108">For numeric types, + computes the sum of its two operands.</span></span> <span data-ttu-id="2671a-109">Если один или оба операнда имеют строковый тип, оператор "+" сцепляет строковые представления операндов.</span><span class="sxs-lookup"><span data-stu-id="2671a-109">When one or both operands are of type string, + concatenates the string representations of the operands.</span></span>  
-  
- <span data-ttu-id="2671a-110">Для типов делегатов также используется бинарный оператор `+`, который выполняет сцепление делегатов.</span><span class="sxs-lookup"><span data-stu-id="2671a-110">Delegate types also provide a binary `+` operator, which performs delegate concatenation.</span></span>  
-  
- <span data-ttu-id="2671a-111">Пользовательские типы могут перегружать унарный оператор `+` и бинарный оператор `+`.</span><span class="sxs-lookup"><span data-stu-id="2671a-111">User-defined types can overload the unary `+` and binary `+` operators.</span></span> <span data-ttu-id="2671a-112">Операции с целыми типами обычно разрешены и для перечислений.</span><span class="sxs-lookup"><span data-stu-id="2671a-112">Operations on integral types are generally allowed on enumeration.</span></span> <span data-ttu-id="2671a-113">Дополнительные сведения см. в разделе [operator (справочник по C#)](../../../csharp/language-reference/keywords/operator.md).</span><span class="sxs-lookup"><span data-stu-id="2671a-113">For more information, see [operator (C# Reference)](../../../csharp/language-reference/keywords/operator.md).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="2671a-114">Пример</span><span class="sxs-lookup"><span data-stu-id="2671a-114">Example</span></span>  
- [!code-csharp[csRefOperators#28](../../../csharp/language-reference/operators/codesnippet/CSharp/addition-operator_1.cs)]  
-  
-## <a name="c-language-specification"></a><span data-ttu-id="2671a-115">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="2671a-115">C# Language Specification</span></span>  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
-## <a name="see-also"></a><span data-ttu-id="2671a-116">См. также</span><span class="sxs-lookup"><span data-stu-id="2671a-116">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="adff1-102">Оператор + (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="adff1-102">+ Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="2671a-117">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="2671a-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="2671a-118">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="2671a-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="2671a-119">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="2671a-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)  
-- [<span data-ttu-id="2671a-120">operator (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="2671a-120">operator (C# Reference)</span></span>](../../../csharp/language-reference/keywords/operator.md)
+<span data-ttu-id="adff1-103">Оператор `+` поддерживается в двух формах: унарный оператор сложения или бинарный оператор сложения.</span><span class="sxs-lookup"><span data-stu-id="adff1-103">The `+` operator is supported in two forms: a unary plus operator or a binary addition operator.</span></span>
+
+<span data-ttu-id="adff1-104">Пользовательские типы могут [перегружать](../keywords/operator.md) унарный и бинарный операторы `+`.</span><span class="sxs-lookup"><span data-stu-id="adff1-104">User-defined types can [overload](../keywords/operator.md) the unary and binary `+` operators.</span></span> <span data-ttu-id="adff1-105">При перегрузке бинарного оператора `+` неявно перегружается и соответствующий [оператор присвоения сложения](addition-assignment-operator.md) `+=`.</span><span class="sxs-lookup"><span data-stu-id="adff1-105">When a binary `+` operator is overloaded, the [addition assignment operator](addition-assignment-operator.md) `+=` is also implicitly overloaded.</span></span>
+
+## <a name="unary-plus-operator"></a><span data-ttu-id="adff1-106">Оператор унарного сложения</span><span class="sxs-lookup"><span data-stu-id="adff1-106">Unary plus operator</span></span>
+
+<span data-ttu-id="adff1-107">Унарный оператор `+` возвращает значение полученного операнда.</span><span class="sxs-lookup"><span data-stu-id="adff1-107">The unary `+` operator returns the value of its operand.</span></span> <span data-ttu-id="adff1-108">Он поддерживается всеми числовыми типами данных.</span><span class="sxs-lookup"><span data-stu-id="adff1-108">It's supported by all numeric types.</span></span>
+
+## <a name="numeric-addition"></a><span data-ttu-id="adff1-109">Арифметическое сложение</span><span class="sxs-lookup"><span data-stu-id="adff1-109">Numeric addition</span></span>
+
+<span data-ttu-id="adff1-110">Для числовых типов оператор `+` вычисляет сумму двух операндов:</span><span class="sxs-lookup"><span data-stu-id="adff1-110">For numeric types, the `+` operator computes the sum of its operands:</span></span>
+
+[!code-csharp-interactive[numeric addition](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddNumerics)]
+
+## <a name="string-concatenation"></a><span data-ttu-id="adff1-111">Объединение строк</span><span class="sxs-lookup"><span data-stu-id="adff1-111">String concatenation</span></span>
+
+<span data-ttu-id="adff1-112">Если один или оба операнда имеют тип [string](../keywords/string.md), оператор `+` сцепляет строковые представления этих операндов.</span><span class="sxs-lookup"><span data-stu-id="adff1-112">When one or both operands are of type [string](../keywords/string.md), the `+` operator concatenates the string representations of its operands:</span></span>
+
+[!code-csharp-interactive[string concatenation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddStrings)]
+
+<span data-ttu-id="adff1-113">В C#, начиная с версии 6, реализован более удобный способ форматирования строк, который называется [интерполяция строк](../tokens/interpolated.md):</span><span class="sxs-lookup"><span data-stu-id="adff1-113">Starting with C# 6, [string interpolation](../tokens/interpolated.md) provides a more convenient way to format strings:</span></span>
+
+[!code-csharp-interactive[string interpolation](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#UseStringInterpolation)]
+
+## <a name="delegate-combination"></a><span data-ttu-id="adff1-114">Объединение делегатов</span><span class="sxs-lookup"><span data-stu-id="adff1-114">Delegate combination</span></span>
+
+<span data-ttu-id="adff1-115">Для типов [делегата](../keywords/delegate.md) оператор `+` возвращает новый экземпляр делегата, при вызове которого вызывается сначала первый, а затем второй операнд.</span><span class="sxs-lookup"><span data-stu-id="adff1-115">For [delegate](../keywords/delegate.md) types, the `+` operator returns a new delegate instance that, when invoked, invokes the first operand and then invokes the second operand.</span></span> <span data-ttu-id="adff1-116">Если какой-либо из операндов имеет значение `null`, оператор `+` возвращает значение другого операнда (это тоже может быть `null`).</span><span class="sxs-lookup"><span data-stu-id="adff1-116">If any of the operands is `null`, the `+` operator returns the value of another operand (which also might be `null`).</span></span> <span data-ttu-id="adff1-117">Следующий пример демонстрирует объединение делегатов с помощью оператора `+`:</span><span class="sxs-lookup"><span data-stu-id="adff1-117">The following example shows how delegates can be combined with the `+` operator:</span></span>
+
+[!code-csharp-interactive[delegate combination](~/samples/snippets/csharp/language-reference/operators/AdditionExamples.cs#AddDelegates)]
+
+<span data-ttu-id="adff1-118">См. дополнительные сведения о [типах делегатов](../../programming-guide/delegates/index.md).</span><span class="sxs-lookup"><span data-stu-id="adff1-118">For more information about delegate types, see [Delegates](../../programming-guide/delegates/index.md).</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="adff1-119">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="adff1-119">C# language specification</span></span>
+
+<span data-ttu-id="adff1-120">См. дополнительные сведения об [унарном операторе сложение](~/_csharplang/spec/expressions.md#unary-plus-operator) и [операторе сложения](~/_csharplang/spec/expressions.md#addition-operator) в [спецификации языка C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="adff1-120">For more information, see the [Unary plus operator](~/_csharplang/spec/expressions.md#unary-plus-operator) and [Addition operator](~/_csharplang/spec/expressions.md#addition-operator) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="adff1-121">См. также</span><span class="sxs-lookup"><span data-stu-id="adff1-121">See also</span></span>
+
+- [<span data-ttu-id="adff1-122">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="adff1-122">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="adff1-123">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="adff1-123">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="adff1-124">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="adff1-124">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="adff1-125">Интерполяция строк</span><span class="sxs-lookup"><span data-stu-id="adff1-125">String interpolation</span></span>](../tokens/interpolated.md)
+- [<span data-ttu-id="adff1-126">Практическое руководство. Сцепка нескольких строк</span><span class="sxs-lookup"><span data-stu-id="adff1-126">How to: Concatenate Multiple Strings</span></span>](../../how-to/concatenate-multiple-strings.md)
+- [<span data-ttu-id="adff1-127">Делегаты</span><span class="sxs-lookup"><span data-stu-id="adff1-127">Delegates</span></span>](../../programming-guide/delegates/index.md)
+- [<span data-ttu-id="adff1-128">Операторы checked и unchecked</span><span class="sxs-lookup"><span data-stu-id="adff1-128">Checked and unchecked</span></span>](../keywords/checked-and-unchecked.md)
