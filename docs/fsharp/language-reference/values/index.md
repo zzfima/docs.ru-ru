@@ -1,6 +1,6 @@
 ---
 title: Значения (F#)
-description: Узнайте, как значения в F# являются величинами, имеющими конкретный тип.
+description: 'Узнайте, как значения в F # являются величинами, имеющими конкретный тип.'
 ms.date: 05/16/2016
 ms.openlocfilehash: f645481ce8395c11ae920aee06cbf07955aeb684
 ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2

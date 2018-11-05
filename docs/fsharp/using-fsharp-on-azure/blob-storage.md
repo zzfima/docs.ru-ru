@@ -1,5 +1,5 @@
 ---
-title: Начало работы с хранилищем BLOB-объектов Azure, с помощью F#
+title: 'Начало работы с хранилищем BLOB-объектов Azure, с помощью F #'
 description: Store неструктурированных данных в облаке в хранилище BLOB-объектов Azure.
 author: sylvanc
 ms.date: 09/20/2016
@@ -10,11 +10,11 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "44037286"
 ---
-# <a name="get-started-with-azure-blob-storage-using-f"></a>Начало работы с хранилищем BLOB-объектов Azure, с помощью F# #
+# <a name="get-started-with-azure-blob-storage-using-f"></a>Начало работы с хранилищем BLOB-объектов Azure, с помощью F # #
 
 Хранилище BLOB-объектов Azure — это служба, которая сохраняет неструктурированные данные в облаке в виде BLOB-объектов. В хранилище BLOB-объектов можно хранить любые типы текстовых или двоичных данных, таких как документы, файлы мультимедиа или установщики приложений. Хранилище BLOB-объектов также называют хранилищем объектов.
 
-В этой статье показано, как выполнять типовые задачи с помощью хранилища BLOB-объектов. Примеры написаны с помощью F# с помощью клиентской библиотеки хранилища Azure для .NET. Задачи, описанные включают как отправка, список, скачивание и удаление больших двоичных объектов.
+В этой статье показано, как выполнять типовые задачи с помощью хранилища BLOB-объектов. Примеры написаны с помощью F # с помощью клиентской библиотеки хранилища Azure для .NET. Задачи, описанные включают как отправка, список, скачивание и удаление больших двоичных объектов.
 
 Общие сведения о хранилище BLOB-объектов, см. в разделе [руководство по .NET для хранилища BLOB-объектов](/azure/storage/storage-dotnet-how-to-use-blobs).
 
@@ -22,9 +22,9 @@ ms.locfileid: "44037286"
 
 Чтобы использовать это руководство, необходимо сначала [создать учетную запись хранения](/azure/storage/storage-create-storage-account). Вам также потребуется ключ доступа к хранилищу для этой учетной записи.
 
-## <a name="create-an-f-script-and-start-f-interactive"></a>Создать скрипт F# и начала F#, интерактивный
+## <a name="create-an-f-script-and-start-f-interactive"></a>Создать скрипт F # и начала F #, интерактивный
 
-Примеры в этой статье можно использовать в F# приложение или скрипт F#. Чтобы создать скрипт F#, создайте файл с `.fsx` расширение, например `blobs.fsx`, в среде разработки F#.
+Примеры в этой статье можно использовать в F # приложение или скрипт F #. Чтобы создать скрипт F #, создайте файл с `.fsx` расширение, например `blobs.fsx`, в среде разработки F #.
 
 Затем используйте [диспетчера пакетов](package-management.md) например [Paket](https://fsprojects.github.io/Paket/) или [NuGet](https://www.nuget.org/) установка `WindowsAzure.Storage` и `Microsoft.WindowsAzure.ConfigurationManager` пакетов и справочник по `WindowsAzure.Storage.dll` и `Microsoft.WindowsAzure.Configuration.dll` в скрипт с помощью `#r` директива.
 
@@ -230,8 +230,8 @@ Block blob of length 505623: https://<accountname>.blob.core.windows.net/photos/
 Теперь, когда вы узнали основные сведения о хранилище BLOB-объектов, используйте следующие ссылки для получения дополнительных сведений.
 
 ### <a name="tools"></a>Инструменты
-- [F# AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) поставщик типов F#, который может использоваться для просмотра ресурсов BLOB-объектов, таблиц и хранилища очередей Azure и легко применить с ними операции CRUD.
-- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) F# API для использования службы хранилища таблиц Microsoft Azure
+- [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) поставщик типов F #, который может использоваться для просмотра ресурсов BLOB-объектов, таблиц и хранилища очередей Azure и легко применить с ними операции CRUD.
+- [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) F # API для использования службы хранилища таблиц Microsoft Azure
 - [Обозреватель хранилищ Microsoft Azure (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer) — это бесплатное автономное приложение от корпорации Майкрософт, который позволяет визуально работать с данными из хранилища Azure в Windows, OS X и Linux.
 
 ### <a name="blob-storage-reference"></a>Справочник по хранилища BLOB-объектов
