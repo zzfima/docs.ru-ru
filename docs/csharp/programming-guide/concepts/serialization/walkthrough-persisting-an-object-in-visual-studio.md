@@ -1,12 +1,12 @@
 ---
 title: Пошаговое руководство. Сохранение объекта с помощью C#
 ms.date: 04/26/2018
-ms.openlocfilehash: c3cff57f008eb524c2d2bec406431e4c41dca617
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 85c447ae43086cc789338e77555b7400a523662a
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47231497"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086081"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>Пошаговое руководство. Сохранение объекта с помощью C# #
 
@@ -28,6 +28,8 @@ ms.locfileid: "47231497"
 
 > [!TIP]
 > Нужно ли устанавливать редактор кода? Попробуйте использовать [Visual Studio](https://visualstudio.com/downloads).
+
+* Этот пример требует C# версии 7.3. См. [сведения о выборе версии языка C#](../../../language-reference/configure-language-version.md). 
 
 Можно просмотреть образец кода онлайн [в репозитории GitHub с примерами .NET](https://github.com/dotnet/samples/tree/master/csharp/serialization).
 

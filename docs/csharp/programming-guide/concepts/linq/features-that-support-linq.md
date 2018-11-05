@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: c617b2d7b56618867fe92cbe1d9ee04aa4c3ab64
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 51cc24fd8054b87b6c92a02450420a9c4abef525
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45653204"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50191094"
 ---
 # <a name="c-features-that-support-linq"></a>Возможности C#, поддерживающие LINQ
 В следующем разделе приведены новые конструкции языка, представленные в C# 3.0. Несмотря на то, что эти новые возможности в некоторой степени используются с запросами [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)], они не ограничиваются [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] и могут использоваться в любом контексте, где они будут целесообразны.  
@@ -47,13 +47,26 @@ var query = from str in stringArray
 ```csharp  
 Customer cust = new Customer { Name = "Mike", Phone = "555-1212" };  
 ```  
-  
- Дополнительные сведения см. в разделе [Инициализаторы объектов и коллекций](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md).  
-  
+Продолжим рассматривать класс `Customer`. Предположим, что есть источник данных с именем `IncomingOrders` и что для каждого заказа с большим значением `OrderSize` нужно создавать класс `Customer` на основе этого заказа. Можно выполнить запрос LINQ для этого источника данных и использовать инициализацию объекта, чтобы заполнить коллекцию:
+```csharp
+var newLargeOrderCustomers = from o in IncomingOrders
+                            where o.OrderSize > 5
+                            select new Customer { Name = o.Name, Phone = o.Phone };
+```
+У источника данных может быть больше скрытых свойств, чем у класса `Customer`, такого как `OrderSize`. Но инициализация объекта позволяет преобразовать данные, возвращаемые по запросу, в требуемый тип. Мы выберем данные, соответствующие нашему классу. В результате мы заполнили `IEnumerable` новыми классами `Customer`, как и требовалось. Приведенный выше код также можно представить в синтаксисе метода LINQ:
+```csharp
+var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
+```
+ Дополнительные сведения:
+ 
+ - [Инициализаторы объектов и коллекций](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
+
+ - [Синтаксис выражений запроса для стандартных операторов запроса](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+
 ## <a name="anonymous-types"></a>Анонимные типы  
  Анонимный тип создается компилятором, и имя типа доступно только компилятору. Анонимные типы обеспечивают удобный способ временной группировки набора свойств в результатах запроса без необходимости определения отдельного именованного типа. Анонимные типы инициализируются с помощью нового выражения и инициализатора объектов, как показано ниже:  
   
-```  
+```csharp
 select new {name = cust.Name, phone = cust.Phone};  
 ```  
   
@@ -73,17 +86,8 @@ select new {name = cust.Name, phone = cust.Phone};
   
 -   [Лямбда-выражения](../../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
   
--   [Деревья выражений (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-  
-## <a name="auto-implemented-properties"></a>Автоматически реализуемые свойства  
- Свойства, которые реализуются автоматически, упрощают объявление свойств. При объявлении свойства, как показано в следующем примере, компилятор создает закрытое анонимное резервное поле, которое может быть доступно только через методы задания и получения свойства.  
-  
-```csharp  
-public string Name {get; set;}  
-```  
-  
- Дополнительные сведения см. в разделе [Автоматически реализуемые свойства](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
-  
+-   [Expression Trees (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md) (Деревья выражений (C#))  
+   
 ## <a name="see-also"></a>См. также
 
 - [LINQ (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)

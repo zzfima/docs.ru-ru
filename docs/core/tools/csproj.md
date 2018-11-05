@@ -4,12 +4,12 @@ description: Различия между существующими файлам
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
-ms.openlocfilehash: 1fd264da2863fbeb88900be0f6fe000acac08a09
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3de168b8cebeb435a45861138aea26580663c135
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47216920"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203960"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Дополнения к формату CSPROJ для .NET Core
 
@@ -72,7 +72,7 @@ ms.locfileid: "47216920"
 Чтобы отключить **все неявные стандартные маски**, можно задать для свойства `<EnableDefaultItems>` значение `false`, как в следующем примере:
 ```xml
 <PropertyGroup>
-    <EnableDefaultItems>false</EnableDefaultItems>
+    <EnableDefaultItems>false</EnableDefaultItems>
 </PropertyGroup>
 ```
 
@@ -92,10 +92,11 @@ ms.locfileid: "47216920"
 ## <a name="additions"></a>Добавления
 
 ### <a name="sdk-attribute"></a>Атрибут Sdk 
-Элемент `<Project>` файла *CSPROJ* имеет новый атрибут `Sdk`. `Sdk` определяет, какой пакет SDK будет использоваться проектом. Пакет SDK, согласно описанию в [документе о слоях](cli-msbuild-architecture.md), является набором [задач](/visualstudio/msbuild/msbuild-tasks) и [целевых объектов](/visualstudio/msbuild/msbuild-targets) MSBuild, способным выполнять сборку кода .NET Core. Мы предоставляем два основных пакета SDK с инструментами для .NET Core:
+Элемент `<Project>` файла *CSPROJ* имеет новый атрибут `Sdk`. `Sdk` определяет, какой пакет SDK будет использоваться проектом. Пакет SDK, согласно описанию в [документе о слоях](cli-msbuild-architecture.md), является набором [задач](/visualstudio/msbuild/msbuild-tasks) и [целевых объектов](/visualstudio/msbuild/msbuild-targets) MSBuild, способным выполнять сборку кода .NET Core. Мы предоставляем три основных пакета SDK с инструментами для .NET Core:
 
 1. пакет SDK для .NET Core с идентификатором `Microsoft.NET.Sdk`;
-2. веб-пакет SDK для .NET Core с идентификатором `Microsoft.NET.Sdk.Web`.
+2. веб-пакет SDK для .NET Core с идентификатором `Microsoft.NET.Sdk.Web`;
+3. пакет SDK для библиотеки классов Razor для .NET Core с идентификатором `Microsoft.NET.Sdk.Razor`.
 
 Чтобы использовать инструменты и выполнять сборку кода .NET Core, в качестве значения атрибута `Sdk` в элементе `<Project>` нужно задать один из этих идентификаторов. 
 
@@ -112,9 +113,9 @@ ms.locfileid: "47216920"
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets и PrivateAssets
 Атрибут `IncludeAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, следует использовать. 
 
-Атрибут `ExcludeAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, не следует использовать.
+Атрибут `ExcludeAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, не следует использовать.
 
-Атрибут `PrivateAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, следует использовать. Но они не должны передаваться в следующий проект. 
+Атрибут `PrivateAssets` указывает, какие ресурсы пакета, указанные `<PackageReference>`, следует использовать, но не следует передавать в следующий проект. 
 
 > [!NOTE]
 > `PrivateAssets` эквивалентен элементу *project.json*/*xproj* `SuppressParent`.

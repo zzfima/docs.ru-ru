@@ -4,12 +4,12 @@ description: Команда dotnet-sln предоставляет удобный
 author: mairaw
 ms.author: mairaw
 ms.date: 06/13/2018
-ms.openlocfilehash: 65ae402ef5519863886c8cf833598f5314b4bdad
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 2651e8e14ad43f41354b8165179f95f65e732f4c
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207820"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49121225"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -95,3 +95,6 @@ dotnet new sln
 Удаление нескольких проектов C# из решения с помощью шаблона глобализации:
 
 `dotnet sln todo.sln remove **/*.csproj`
+
+> [!NOTE]
+> Глобализация — это скорее функция командной оболочки, а не функция CLI. Чтобы успешно развернуть файлы, нужно использовать оболочку, которая поддерживает глобализацию. Дополнительные сведения о глобализации см. в разделе [Википедии](https://en.wikipedia.org/wiki/Glob_(programming)).

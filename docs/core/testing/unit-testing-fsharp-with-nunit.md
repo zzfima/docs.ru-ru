@@ -2,25 +2,34 @@
 title: Модульное тестирование библиотек F# в .NET Core с использованием dotnet-test и NUnit
 description: Сведения о концепциях модульного тестирования для F# в .NET Core в рамках пошаговой процедуры по созданию примера решения с помощью команды dotnet-test и NUnit.
 author: rprouse
-ms.date: 12/01/2017
+ms.date: 10/04/2018
 dev_langs:
 - fsharp
-ms.openlocfilehash: c5653463ce43ab8660753aa03ef79ba10f339fac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adadfc0358814f4600255aac7076f9ba6fbb4feb
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215762"
+ms.lasthandoff: 10/13/2018
+ms.locfileid: "49308434"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Модульное тестирование библиотек F# в .NET Core с использованием dotnet-test и NUnit
 
 Этот учебник описывает пошаговую процедуру по созданию примера решения для изучения концепций модульного тестирования. Если при изучении учебника вы предпочитаете использовать готовое решение, [просмотрите или скачайте пример кода](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp-nunit/) перед началом работы. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
+## <a name="prerequisites"></a>Предварительные требования 
+- [Пакет SDK для .NET Core 2.1 (версия 2.1.400)](https://www.microsoft.com/net/download) или более поздней версии. 
+- Текстовый редактор или редактор кода по вашему выбору.
+
 ## <a name="creating-the-source-project"></a>Создание исходного проекта
 
 Откройте окно оболочки. Создайте каталог с именем *unit-testing-with-fsharp* для хранения решения.
-В этом каталоге выполните команду выполните команду [`dotnet new sln`](../tools/dotnet-new.md), чтобы создать решение. Это упрощает управление библиотекой классов и проектом модульного теста.
-В каталоге решения создайте каталог *MathService*. Актуальная структура каталогов и файлов приведена ниже:
+В этом каталоге выполните следующую команду, чтобы создать файл решения для библиотеки классов и тестового проекта:
+
+```console
+dotnet new sln
+```
+
+Затем создайте каталог *MathService*. Ниже приведена актуальная структура каталогов и файлов:
 
 ```
 /unit-testing-with-fsharp
@@ -28,22 +37,24 @@ ms.locfileid: "33215762"
     /MathService
 ```
 
-Чтобы создать исходный проект, перейдите в каталог *MathService* и выполните команду [`dotnet new classlib -lang F#`](../tools/dotnet-new.md).  Чтобы использовать разработку на основе тестирования (TDD), требуется создать сбойную реализацию службы вычислений:
+Перейдите к каталогу *MathService* и выполните следующую команду, чтобы создать исходный проект:
+
+```console
+dotnet new classlib -lang F#
+```
+
+Чтобы использовать разработку на основе тестирования (TDD), требуется создать реализацию службы вычислений со сбоем:
 
 ```fsharp
 module MyMath =
     let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
-Вернитесь в каталог *unit-testing-with-fsharp*. Чтобы добавить проект библиотеки классов в решение, выполните команду [`dotnet sln add .\MathService\MathService.fsproj`](../tools/dotnet-sln.md).
+Вернитесь в каталог *unit-testing-with-fsharp*. Чтобы добавить проект библиотеки классов в решение, выполните следующую команду:
 
-## <a name="install-the-nunit-project-template"></a>Установка шаблона проекта NUnit
-
-Перед созданием тестового проекта необходимо установить шаблоны тестовых проектов NUnit. Это действие необходимо выполнить только один раз на каждом компьютере разработчика, где создаются новые проекты NUnit. Для установки шаблонов NUnit выполните [`dotnet new -i NUnit3.DotNetNew.Template`](../tools/dotnet-new.md).
-
- ```
- dotnet new -i NUnit3.DotNetNew.Template
- ```
+```console
+dotnet sln add .\MathService\MathService.fsproj
+```
 
 ## <a name="creating-the-test-project"></a>Создание тестового проекта
 
@@ -58,7 +69,13 @@ module MyMath =
     /MathService.Tests
 ```
 
-Перейдите в каталог *MathService.Tests* и создайте проект с помощью [`dotnet new nunit -lang F#`](../tools/dotnet-new.md). При этом создается тестовый проект, который использует NUnit в качестве среды тестирования. Созданный шаблон настраивает средство выполнения тестов в файле *MathServiceTests.fsproj*:
+Перейдите к каталогу *MathService.Tests* и создайте проект, выполнив следующую команду:
+
+```console
+dotnet new nunit -lang F#
+```
+
+При этом создается тестовый проект, который использует NUnit в качестве среды тестирования. Созданный шаблон настраивает средство выполнения тестов в файле *MathServiceTests.fsproj*:
 
 ```xml
 <ItemGroup>
@@ -70,7 +87,7 @@ module MyMath =
 
 Тестовый проект требует других пакетов для создания и выполнения модульных тестов. Команда `dotnet new` на предыдущем шаге добавляет NUnit и адаптер тестирования NUnit. Теперь добавьте в проект библиотеку классов `MathService` в качестве еще одной зависимости. Используйте команду [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```
+```console
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
@@ -86,14 +103,18 @@ dotnet add reference ../MathService/MathService.fsproj
         MathService.fsproj
     /MathService.Tests
         Test Source Files
-        MathServiceTests.fsproj
+        MathService.Tests.fsproj
 ```
 
-Выполните команду [`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`](../tools/dotnet-sln.md) в каталоге *unit-testing-with-fsharp*.
+Выполните следующую команду в каталоге *unit-testing-with-fsharp*:
+
+```console
+dotnet sln add .\MathService.Tests\MathService.Tests.fsproj
+```
 
 ## <a name="creating-the-first-test"></a>Создание первого теста
 
-Подход TDD предполагает создание теста, который завершается ошибкой, обеспечение его успешного выполнения и повтор этого процесса. Откройте файл *Tests.fs* и добавьте следующий код:
+Подход TDD предполагает создание теста, который завершается ошибкой, обеспечение его успешного выполнения и повтор этого процесса. Откройте файл *UnitTest1.fs* и добавьте следующий код:
 
 ```fsharp
 namespace MathService.Tests
@@ -129,14 +150,14 @@ member this.TestEvenSequence() =
 
 Обратите внимание, что последовательность `expected` преобразована в список. Платформа NUnit зависит от многих стандартных типов .NET. Эта зависимость означает, что ваш открытый интерфейс и ожидаемые результаты поддерживают интерфейс <xref:System.Collections.ICollection>, а не <xref:System.Collections.IEnumerable>.
 
-Когда вы запустите этот тест, он завершится сбоем. Вы еще не создали реализацию. Чтобы тест был пройден, напишите простейший код в классе `Mathservice`, который работает:
+Когда вы запустите этот тест, он завершится сбоем. Вы еще не создали реализацию. Чтобы этот тест прошел успешно, напишите простейший код в классе *Library.fs* в своем рабочем проекте MathService:
 
 ```csharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```
 
-В каталоге *unit-testing-with-fsharp* снова выполните команду `dotnet test`. Команда `dotnet test` запускает сборку для проекта `MathService` и затем для проекта `MathService.Tests`. После сборки обоих проектов она запускает этот отдельный тест. Он выполняется.
+В каталоге *unit-testing-with-fsharp* снова выполните команду `dotnet test`. Команда `dotnet test` запускает сборку для проекта `MathService` и затем для проекта `MathService.Tests`. После сборки обоих проектов команда позволяет запустить ваши тесты. Теперь два теста пройдены.
 
 ## <a name="completing-the-requirements"></a>Выполнение требований
 

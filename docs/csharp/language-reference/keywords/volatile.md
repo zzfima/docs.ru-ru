@@ -1,56 +1,58 @@
 ---
 title: volatile (Справочник по C#)
-ms.date: 07/20/2015
+ms.date: 10/24/2018
 f1_keywords:
 - volatile_CSharpKeyword
 - volatile
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: be7e081b18702710c00b5b86a9bc152800f0cf3d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9950bb0e32787306dc34e2c006099332c06bda2b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526223"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199972"
 ---
 # <a name="volatile-c-reference"></a>volatile (Справочник по C#)
-Ключевое слово `volatile` означает, что поле может изменить несколько потоков, выполняемых одновременно. Поля, объявленные `volatile`, не участвуют в оптимизации компилятора, предполагающей доступ для одного потока. Эти ограничения гарантируют, что все потоки будут видеть временные записи, выполняемые другим потоком, в порядке выполнения. Нет никакой гарантии единого общего прядка временных записей во всех потоках выполнения.  
+
+Ключевое слово `volatile` означает, что поле может изменить несколько потоков, выполняемых одновременно. Компилятор, среда выполнения или даже аппаратное обеспечение могут изменять порядок операций чтения и записи в расположения в памяти для повышения производительности. К полям, которые объявлены как `volatile`, такие оптимизации не применяются. Добавление модификатора `volatile` гарантирует, что все потоки будут видеть временные записи, выполняемые другим потоком, в порядке их выполнения. Нет никакой гарантии единого общего прядка временных записей во всех потоках выполнения.
   
- Обычно модификатор `volatile` используется для поля, к которому обращаются несколько потоков; при этом для сериализации доступа оператор [lock](../../../csharp/language-reference/keywords/lock-statement.md) не применяется.  
+Ключевое слово `volatile` может применяться к полям следующих типов:  
   
- Ключевое слово `volatile` может применяться к полям следующих типов:  
+- Ссылочные типы.  
+- Типы указателей (в небезопасном контексте). Несмотря на то, что сам указатель может быть изменяемым, объект, на который он указывает, должен быть постоянным. Другими словами, объявить указатель на изменяемый объект невозможно.  
+- Простые типы, например `sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `char`, `float` и `bool`.  
+- Тип `enum` с одним из следующих базовых типов: `byte`, `sbyte`, `short`, `ushort`, `int` или `uint`.  
+- Параметры универсального типа называются ссылочными типами.
+- <xref:System.IntPtr> и <xref:System.UIntPtr>.  
+
+Другие типы, включая `double` и `long`, нельзя снабдить модификатором `volatile`, потому что для них не гарантируется атомарность операций чтения и записи. Чтобы защитить многопотоковый доступ к полям таких типов, используйте члены класса <xref:System.Threading.Interlocked> или защиту доступа с помощью инструкции [`lock`](lock-statement.md).
+
+Ключевое слово volatile можно применять только к полям `class` или `struct`. Локальные переменные не могут объявляться как `volatile`.
   
--   Ссылочные типы.  
+## <a name="example"></a>Пример
+
+В следующем примере показано, как объявить переменную поля открытого типа `volatile`.  
   
--   Типы указателей (в небезопасном контексте). Несмотря на то, что сам указатель может быть изменяемым, объект, на который он указывает, должен быть постоянным. Другими словами, объявить указатель на изменяемый объект невозможно.  
+[!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
+
+Следующий пример демонстрирует создание вспомогательного или рабочего потока и его применение для выполнения обработки параллельно с обработкой основного потока. Дополнительные сведения о многопоточности см. в разделах [Управляемая поточность](../../../standard/threading/index.md) и [Работа с потоками (C#)](../../programming-guide/concepts/threading/index.md).  
   
--   Типы: sbyte, byte, short, ushort, int, uint, char, float и bool.  
-  
--   Тип перечисления с одним из следующих базовых типов: byte, sbyte, short, ushort, int или uint.  
-  
--   Параметры универсального типа называются ссылочными типами.  
-  
--   <xref:System.IntPtr> и <xref:System.UIntPtr>.  
-  
- Ключевое слово volatile можно применять только к полям класса или структуры. Локальные переменные не могут объявляться как `volatile`.  
-  
-## <a name="example"></a>Пример  
- В следующем примере показано, как объявить переменную поля открытого типа `volatile`.  
-  
- [!code-csharp[csrefKeywordsModifiers#24](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_1.cs)]  
-  
-## <a name="example"></a>Пример  
- Следующий пример демонстрирует создание вспомогательного или рабочего потока и его применение для выполнения обработки параллельно с обработкой основного потока. Дополнительные сведения о многопоточности см. в разделах [Управляемая поточность](../../../standard/threading/index.md) и [Работа с потоками (C#)](../../programming-guide/concepts/threading/index.md).  
-  
- [!code-csharp[csProgGuideThreading#1](../../../csharp/language-reference/keywords/codesnippet/CSharp/volatile_2.cs)]  
-  
-## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
+
+Добавив модификатор `volatile` к объявлению `_shouldStop`, вы всегда получите одинаковые результаты (как показано в приведенном выше фрагменте кода). Но если член `_shouldStop` не имеет этого модификатора, поведение будет непредсказуемым. Метод `DoWork` может оптимизировать доступ к членам, что приведет к чтению устаревших данных. В условиях многопоточного программирования невозможно прогнозировать число операций чтения устаревших данных. При каждом запуске программы результаты могут отличаться.
+
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
-- [Модификаторы](../../../csharp/language-reference/keywords/modifiers.md)
+- [Спецификация языка C#: ключевое слово volatile](../../../../_csharplang/spec/classes.md#volatile-fields)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](index.md)
+- [Модификаторы](modifiers.md)
+- [Оператор lock](lock-statement.md)
+- Класс <xref:System.Threading.Interlocked>

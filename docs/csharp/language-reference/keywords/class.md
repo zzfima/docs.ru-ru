@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - class keyword [C#]
 ms.assetid: b95d8815-de18-4c3f-a8cc-a0a53bdf8690
-ms.openlocfilehash: 52ca30fe29025e637005b95ebc14fce8f320e8f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 3f30fb473b486efc8381faa9076b98763935b0ae
+ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084758"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49086068"
 ---
 # <a name="class-c-reference"></a>класс (Справочник по C#)
 
@@ -39,7 +39,7 @@ class TestClass
 
 Классы, объявленные непосредственно в пространстве имен и не вложенные в другие классы, могут быть [открытыми](../../../csharp/language-reference/keywords/public.md) или [внутренними](../../../csharp/language-reference/keywords/internal.md). По умолчанию классы являются `internal`.
 
-Члены класса, включая вложенные классы, могут иметь следующие модификаторы доступа: [public](../../../csharp/language-reference/keywords/public.md), `protected internal`, [protected](../../../csharp/language-reference/keywords/protected.md), [internal](../../../csharp/language-reference/keywords/internal.md), [private](../../../csharp/language-reference/keywords/private.md) или `private protected`. По умолчанию члены являются [закрытыми](../../../csharp/language-reference/keywords/private.md).
+Члены класса, включая вложенные классы, могут объявляться с типом доступа [public](public.md), [protected internal](protected-internal.md), [protected](protected.md), [internal](internal.md), [private](private.md) или [private protected](private-protected.md). По умолчанию члены имеют тип доступа `private`.
 
 Дополнительные сведения см. в статье [Модификаторы доступа](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md).
 

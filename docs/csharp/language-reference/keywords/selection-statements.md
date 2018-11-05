@@ -1,34 +1,35 @@
 ---
-title: Инструкции выбора (Справочник по C#)
+title: Операторы выбора (Справочник по C#)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
-ms.openlocfilehash: da3132a82e2cb0b3aaa55fbe82898414ebd31c12
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b4575884acc63489f3e40bd040257a9c6bca5df9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47204379"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50181424"
 ---
-# <a name="selection-statements-c-reference"></a>Инструкции выбора (Справочник по C#)
-Оператор выбора позволяет программе передать управление определенному потоку команд в зависимости от выполнения условия `true`.  
-  
- В операторах выбора могут использоваться следующие ключевые слова:  
-  
--   [if](../../../csharp/language-reference/keywords/if-else.md)  
-  
--   [else](../../../csharp/language-reference/keywords/if-else.md)  
-  
--   [switch](../../../csharp/language-reference/keywords/switch.md)  
-  
--   [case](../../../csharp/language-reference/keywords/switch.md)  
-  
--   [default](../../../csharp/language-reference/keywords/switch.md)  
+# <a name="selection-statements-c-reference"></a>Операторы выбора (Справочник по C#)
+
+Оператор выбора позволяет программе передать управление определенному потоку команд в зависимости от выполнения условия `true`.
+
+В операторах выбора могут использоваться следующие ключевые слова:
+
+- [if](if-else.md)
+
+- [else](if-else.md)
+
+- [switch](switch.md)
+
+- [case](switch.md)
+
+- [default](switch.md)
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
-- [Ключевые слова операторов](../../../csharp/language-reference/keywords/statement-keywords.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](index.md)
+- [Ключевые слова операторов](statement-keywords.md)

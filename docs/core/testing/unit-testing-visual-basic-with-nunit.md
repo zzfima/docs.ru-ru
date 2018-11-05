@@ -2,23 +2,33 @@
 title: Модульное тестирование .NET Core в Visual Basic с использованием dotnet test и NUnit
 description: Сведения о концепциях модульного тестирования в .NET Core в рамках пошаговой процедуры по созданию примера Visual Basic решения с помощью NUnit.
 author: rprouse
-ms.date: 12/01/2017
+ms.date: 10/04/2018
 dev_langs:
 - vb
-ms.openlocfilehash: 552b60dd3937abc413c1b4410213948f3b509526
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bed43ac6b6f918b1ee45715101f9142c1add777f
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33217780"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836932"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Модульное тестирование библиотек .NET Core в Visual Basic с использованием dotnet test и NUnit
 
 Этот учебник описывает пошаговую процедуру по созданию примера решения для изучения концепций модульного тестирования. Если при изучении учебника вы предпочитаете использовать готовое решение, [просмотрите или скачайте пример кода](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/) перед началом работы. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
+## <a name="prerequisites"></a>Предварительные требования 
+- [Пакет SDK для .NET Core 2.1 (версия 2.1.400)](https://www.microsoft.com/net/download) или более поздней версии. 
+- Текстовый редактор или редактор кода по вашему выбору.
+
 ## <a name="creating-the-source-project"></a>Создание исходного проекта
 
-Откройте окно оболочки. Создайте каталог с именем *unit-testing-vb-nunit* для хранения решения. В этом каталоге выполните команду выполните команду [`dotnet new sln`](../tools/dotnet-new.md), чтобы создать решение. Этот метод упрощает управление библиотекой классов и проектом модульного теста. В каталоге решения создайте каталог *PrimeService*. На данный момент структура каталогов и файлов выглядит следующим образом:
+Откройте окно оболочки. Создайте каталог с именем *unit-testing-vb-nunit* для хранения решения. В этом каталоге выполните следующую команду, чтобы создать файл решения для библиотеки классов и тестового проекта:
+
+```console
+dotnet new sln
+```
+
+Затем создайте каталог *PrimeService*. Ниже приведена актуальная структура файлов:
 
 ```
 /unit-testing-vb-nunit
@@ -26,7 +36,13 @@ ms.locfileid: "33217780"
     /PrimeService
 ```
 
-Перейдите в каталог *PrimeService* и выполните команду [`dotnet new classlib -lang VB`](../tools/dotnet-new.md), чтобы создать исходный проект. Переименуйте *Class1.VB* в *PrimeService.VB*. Чтобы использовать разработку на основе тестирования (TDD), требуется создать сбойную реализацию класса `PrimeService`:
+Перейдите в каталог *PrimeService* и выполните следующую команду, чтобы создать исходный проект:
+
+```console
+dotnet new classlib -lang VB
+```
+
+Переименуйте *Class1.VB* в *PrimeService.VB*. Чтобы использовать разработку на основе тестирования (TDD), требуется создать сбойную реализацию класса `PrimeService`:
 
 ```vb
 Imports System
@@ -40,15 +56,11 @@ Namespace Prime.Services
 End Namespace
 ```
 
-Вернитесь в каталог *unit-testing-vb-using-stest*. Чтобы добавить проект библиотеки классов в решение, выполните команду [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md).
+Вернитесь в каталог *unit-testing-vb-using-stest*. Чтобы добавить проект библиотеки классов в решение, выполните следующую команду:
 
-## <a name="install-the-nunit-project-template"></a>Установка шаблона проекта NUnit
-
-Перед созданием тестового проекта необходимо установить шаблоны тестовых проектов NUnit. Это действие необходимо выполнить только один раз на каждом компьютере разработчика, где создаются новые проекты NUnit. Для установки шаблонов NUnit выполните [`dotnet new -i NUnit3.DotNetNew.Template`](../tools/dotnet-new.md).
-
- ```
- dotnet new -i NUnit3.DotNetNew.Template
- ```
+```console
+dotnet sln add .\PrimeService\PrimeService.vbproj
+```
 
 ## <a name="creating-the-test-project"></a>Создание тестового проекта
 
@@ -63,19 +75,19 @@ End Namespace
     /PrimeService.Tests
 ```
 
-Перейдите в каталог *PrimeService.Tests* и создайте проект с помощью [`dotnet new nunit -lang VB`](../tools/dotnet-new.md). Эта команда создает тестовый проект, использующий NUnit в качестве библиотеки тестов. Созданный шаблон настраивает средство выполнения тестов в файле *PrimeServiceTests.vbproj*:
+Перейдите в каталог *PrimeService.Tests* и создайте проект, выполнив следующую команду:
 
-```xml
-<ItemGroup>
-  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
-  <PackageReference Include="NUnit" Version="3.9.0" />
-  <PackageReference Include="NUnit3TestAdapter" Version="3.9.0" />
-</ItemGroup>
+```console
+dotnet new nunit -lang VB
 ```
+
+Команда [dotnet new](../tools/dotnet-new.md) создает тестовый проект, который использует NUnit в качестве библиотеки тестов. Созданный шаблон позволяет настроить средство выполнения тестов в файле *PrimeServiceTests.vbproj*:
+
+[!code-xml[Packages](~/samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService.Tests.vbproj#Packages)]
 
 Тестовый проект требует других пакетов для создания и выполнения модульных тестов. Команда `dotnet new` на предыдущем шаге добавляет NUnit и адаптер тестирования NUnit. Теперь добавьте в проект библиотеку классов `PrimeService` в качестве еще одной зависимости. Используйте команду [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
-```
+```console
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
@@ -91,14 +103,18 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
         PrimeService.vbproj
     /PrimeService.Tests
         Test Source Files
-        PrimeServiceTests.vbproj
+        PrimeService.Tests.vbproj
 ```
 
-Выполните команду [`dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj`](../tools/dotnet-sln.md) в каталоге *unit-testing-vb-nunit*.
+Выполните следующую команду в каталоге *unit-testing-vb-nunit*:
+
+```console
+dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
+```
 
 ## <a name="creating-the-first-test"></a>Создание первого теста
 
-Подход TDD предполагает создание теста, который завершается ошибкой, обеспечение его успешного выполнения и повтор этого процесса. Удалите файл *UnitTest1.vb* из каталога *PrimeService.Tests* и создайте файл Visual Basic с именем *PrimeService_IsPrimeShould.VB*. Добавьте следующий код:
+Подход TDD предполагает создание теста, который завершается ошибкой, обеспечение его успешного выполнения и повтор этого процесса. В каталоге *PrimeService.Tests* переименуйте файл *UnitTest1.vb* в *PrimeService_IsPrimeShould.VB* и замените его содержимое следующим кодом:
 
 ```vb
 Imports NUnit.Framework
@@ -142,7 +158,7 @@ End Function
 
 [!code-vb[Sample_TestCode](../../../samples/core/getting-started/unit-testing-vb-nunit/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-Выполните команду `dotnet test`, и два из этих тестов завершаются ошибкой. Для успешного выполнения всех тестов нужно изменить предложение `if` в начале метода:
+Выполните команду `dotnet test`, и два из этих тестов завершаются ошибкой. Для успешного выполнения всех тестов нужно изменить предложение `if` в начале метода `Main` в файле *PrimeServices.cs*:
 
 ```vb
 if candidate < 2

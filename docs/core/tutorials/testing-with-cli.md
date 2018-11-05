@@ -4,12 +4,12 @@ description: В этом учебнике объясняется, как упо�
 author: cartermp
 ms.author: mairaw
 ms.date: 09/10/2018
-ms.openlocfilehash: 8131e51577bcad9191c0cacb61317fa146bf476d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9984b4f43ca8c09cc0948cad7e6c176127384361
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47235391"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49415228"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Организация и тестирование проектов с использованием командной строки .NET Core
 

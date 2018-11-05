@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: f5fd156ba25352fb1f816349c5e130267f7da8c2
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: e4a4d58f154116974c7314e84f625b338cbfe204
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925848"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50038309"
 ---
 # <a name="methods"></a>Методы #
 
@@ -114,7 +114,7 @@ ms.locfileid: "42925848"
 <a name="byref"></a>
 ### <a name="passing-parameters-by-reference"></a>Передача параметров по ссылке ###
 
-Параметр передается по ссылке, если нужно изменить значение аргумента в методе и сохранить это изменение после того, как управление вернется вызывающему методу. Для передачи параметра по ссылке используйте ключевое слово [`ref`](language-reference/keywords/ref.md) или [`out`](language-reference/keywords/out-parameter-modifier.md). Можно также передать значение по ссылке, чтобы предотвратить копирование, и при этом запретить внесение изменений с помощью ключевого слова [`in`](language-reference/keywords/in-parameter-modifier.md).
+Параметр передается по ссылке, когда нужно изменить значение аргумента в методе и сохранить это изменение после того, как управление вернется вызывающему методу. Для передачи параметра по ссылке используйте ключевое слово [`ref`](language-reference/keywords/ref.md) или [`out`](language-reference/keywords/out-parameter-modifier.md). Можно также передать значение по ссылке, чтобы предотвратить копирование, и при этом запретить внесение изменений с помощью ключевого слова [`in`](language-reference/keywords/in-parameter-modifier.md).
 
 Следующий пример идентичен предыдущему за тем исключением, что значение передается в метод `ModifyValue` по ссылке. Если значение параметра в методе `ModifyValue` будет изменено, при возвращении управления вызывающему объекту это изменение не сохранится.
 

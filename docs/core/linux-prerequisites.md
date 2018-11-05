@@ -4,12 +4,12 @@ description: Поддерживаемые версии Linux и зависимо
 author: jralexander
 ms.author: johalex
 ms.date: 08/20/2018
-ms.openlocfilehash: d0e5b203dc8e1ec6807f28de7d910c74a2ffe665
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4939dfb642c2aef9da593a193f42334f1d57e067
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506853"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842272"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Необходимые компоненты для .NET Core в Linux
 
@@ -35,8 +35,8 @@ ms.locfileid: "43506853"
 * CentOS 7 — 64-разрядная версия (`x86_64` или `amd64`); 
 * Oracle Linux 7 — 64-разрядная версия (`x86_64` или `amd64`); 
 * Fedora 28, 27 — 64-разрядная версия (`x86_64` или `amd64`); 
-* Debian 9 (64-разрядная версия, ARM32), 8.7 или более поздней версии — 64-разрядная версия (`x86_64` или `amd64`);
-* Ubuntu 18.04 (64-разрядная версия, ARM32), 16.04, 14.04 — 64-разрядная версия (`x86_64` или `amd64`);
+* Debian 9 (64-разрядная версия, версия `arm32`), а также версия 8.7 или более поздние для 64-разрядных платформ — (`x86_64` или `amd64`)
+* Ubuntu 18.04 (64-разрядная версия, версия `arm32`), а также версии 16.04 и 14.04 для 64-разрядных платформ (`x86_64` или `amd64`)
 * Linux Mint 18, 17 — 64-разрядная версия (`x86_64` или `amd64`);
 * openSUSE 42.3 или более поздней версии — 64-разрядная версия (`x86_64` или `amd64`);
 * SUSE Enterprise Linux (SLES) 12 с пакетом обновления 2 (SP2) или более поздней версии — 64-разрядная версия (`x86_64` или `amd64`);

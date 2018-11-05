@@ -12,12 +12,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 2009b3620bc4874520221a4ea847222feafca01b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2758a724b7e1e410fd1e1ba262db451b7f994164
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251736"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196993"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ — интерполяция строк (справочник по C#)
 
@@ -86,7 +86,7 @@ ms.locfileid: "44251736"
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-Если вы не знакомы с интерполяцией строк, ознакомьтесь с кратким руководством [по интерполяции строк в C#](../../quick-starts/interpolated-strings.yml). Дополнительные сведения см. в руководстве [Интерполяция строк в C#](../../tutorials/string-interpolation.md).
+Если вы не знакомы с интерполяцией строк, ознакомьтесь с интерактивным руководством [по интерполяции строк в C#](../../tutorials/intro-to-csharp/interpolated-strings.yml). Руководство [по интерполяции строк в C#](../../tutorials/string-interpolation.md) можно также изучить, используя локальный компьютер.
 
 ## <a name="see-also"></a>См. также
 

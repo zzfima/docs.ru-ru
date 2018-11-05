@@ -2,12 +2,12 @@
 title: Создание деревьев XML в C# (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 98bad6bfc3b563b39f9e58eadbff673f202646c1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9fb03800f04a3c0615fa5b7fc44eb078e224eebc
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502288"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452421"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>Создание деревьев XML на языке C# (LINQ to XML)
 В этом разделе размещены сведения о создании XML-деревьев при помощи языка C#.  
@@ -168,7 +168,23 @@ Console.WriteLine(contacts);
   </Contact>  
 </Contacts>  
 ```  
+
+### <a name="creating-an-xelement-with-an-xattribute"></a>Создание элемента XElement с атрибутом XAttribute
+ Если передать экземпляр класса <xref:System.Xml.Linq.XAttribute> как аргумент содержимого, конструктор создаст элемент с атрибутом:
+
+```csharp  
+XElement phone = new XElement("Phone",  
+    new XAttribute("Type", "Home"),  
+    "555-555-5555");  
+Console.WriteLine(phone);  
+```  
   
+ В этом примере выводятся следующие данные:  
+  
+```xml  
+<Phone Type="Home">555-555-5555</Phone>
+```   
+
 ### <a name="creating-an-empty-element"></a>Создание пустого элемента  
  Чтобы создать пустой элемент <xref:System.Xml.Linq.XElement>, нужно просто не передавать никакого содержимого в конструктор. На следующем примере показано создание пустого элемента:  
   

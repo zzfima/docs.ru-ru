@@ -3,12 +3,12 @@ title: Начало работы с синтаксическими преобр�
 description: Введение в обходы, отправка запросов и прохождение деревьев синтаксиса.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47400794"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49122588"
 ---
 # <a name="get-started-with-syntax-transformation"></a>Начало работы с синтаксическими преобразованиями
 
@@ -120,7 +120,7 @@ public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatem
 ```
 
 > [!NOTE]
-> Многие API-интерфейсы Roslyn объявляют типы возвращаемых значений, которые являются базовыми классами для фактически возвращаемых типов среды выполнения. Во многих сценариях один тип узла может полностью заменяться другим типом или даже удаляться. В этом примере метод <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> возвращает <xref:Microsoft.CodeAnalysis.SyntaxNode>, а не тип, производный от <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>. Этот модуль записи возвращает новый узел <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>, основанный на существующем узле.
+> Многие API-интерфейсы Roslyn объявляют типы возвращаемых значений, которые являются базовыми классами для фактически возвращаемых типов среды выполнения. Во многих сценариях один тип узла может быть заменен другим типом или даже удален. В этом примере метод <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> возвращает <xref:Microsoft.CodeAnalysis.SyntaxNode>, а не тип, производный от <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>. Этот модуль записи возвращает новый узел <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>, основанный на существующем узле.
 
 В этом кратком руководстве рассматриваются объявления локальных переменных. Вы можете добавить в пример кода другие объявления, например циклов `foreach`, циклов `for`, выражений LINQ и лямбда-выражений. Также этот модуль записи преобразует объявления только в простейшем формате:
 
