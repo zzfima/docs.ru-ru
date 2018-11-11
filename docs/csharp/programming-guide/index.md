@@ -9,17 +9,17 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: a145e3e1b73db6fdfbc5f1408231e78f55b559d1
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 3827ebfe401938e4fa1b530672352123ae2ac826
+ms.sourcegitcommit: 0fbd677fcdc5bf46c4d827f492eaaa970edc07b6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45515142"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235743"
 ---
 # <a name="c-programming-guide"></a>Руководство по программированию на C#
 Этот раздел содержит подробные сведения о ключевых функциях языка C# и возможностях, которые платформа .NET Framework предоставляет для C#.  
   
- В текстах этого раздела обычно предполагается, что вы уже знакомы с языком C# и общими концепциями программирования. Если вы не знакомы с программированием или с языком C#, вам помогут [краткие руководства по C#](../quick-starts/index.md) и интерактивное руководство [по началу работы с C#](https://www.microsoft.com/net/tutorials/csharp/getting-started), которые не требуют знаний программирования.  
+ В текстах этого раздела обычно предполагается, что вы уже знакомы с языком C# и общими концепциями программирования. Если вы раньше никогда не программировали или не работали с языком C#, рекомендуем посмотреть руководства [Знакомство с C#](../tutorials/intro-to-csharp/index.md) или интерактивное руководство [Начало работы с C#](https://www.microsoft.com/net/tutorials/csharp/getting-started), которые не требуют знаний программирования.  
   
  Сведения о ключевых словах, операторах и директивах препроцессора см. в [справочнике по C#](../../csharp/language-reference/index.md). Сведения о спецификации языка C# размещены в статье [Спецификации языка C#](../../csharp/language-reference/language-specification/index.md).  
   

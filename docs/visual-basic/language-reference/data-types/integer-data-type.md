@@ -21,12 +21,12 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: 989ce803849aa2dff9fc5c38a38bb356c937a945
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c349104ed566e9a663afe01da3838f0167dc74e
+ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193868"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50982767"
 ---
 # <a name="integer-data-type-visual-basic"></a>Тип данных Integer (Visual Basic)
 Содержит 32-разрядные (4-байтовые) целые числа со знаком в диапазоне от -2 147 483 648 до 2 147 483 647.  
@@ -59,7 +59,7 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Числовые литералы могут содержать `I` [символ типа](../../programming-guide\language-features\data-types/type-characters.md) для обозначения `Integer` тип данных, как показано в следующем примере.
+Числовые литералы могут содержать `I` [символ типа](../../programming-guide/language-features/data-types/type-characters.md) для обозначения `Integer` тип данных, как показано в следующем примере.
 
 ```vb
 Dim number = &H_035826I
