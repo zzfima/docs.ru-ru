@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: ff483c9b555fdf394d11626536c28e7e07516d05
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: ae141b3d60a9968ee3fe59474e32a174bdb77e3b
+ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404636"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50757456"
 ---
 # <a name="common-web-application-architectures"></a>Общие архитектуры веб-приложений
 
@@ -97,7 +97,7 @@ ms.locfileid: "37404636"
 
 ## <a name="clean-architecture"></a>Чистая архитектура
 
-Приложения, использующие принципы инверсии зависимостей и проблемно-ориентированного проектирования, имеют схожую архитектуру. На протяжении многих лет она носила самые разные названия. Сначала это была шестигранная архитектура, на смену которой пришла архитектура портов и адаптеров. На современном этапе она называется [многослойной](http://jeffreypalermo.com/blog/the-onion-architecture-part-1/) или [чистой](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) архитектурой. В этой электронной книге используется термин "чистая архитектура".
+Приложения, использующие принципы инверсии зависимостей и проблемно-ориентированного проектирования, имеют схожую архитектуру. На протяжении многих лет она носила самые разные названия. Сначала это была шестигранная архитектура, на смену которой пришла архитектура портов и адаптеров. На современном этапе она называется [многослойной](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/) или [чистой](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html) архитектурой. В этой электронной книге используется термин "чистая архитектура".
 
 > [!NOTE]
 > Термин "чистая архитектура" может применяться к приложениям, независимо от того, соблюдались ли при их создании принципы проблемно-ориентированного проектирования. Если да, то такое сочетание носит название чистой проблемно-ориентированной архитектуры.
@@ -307,7 +307,7 @@ ENTRYPOINT ["dotnet", "Microsoft.eShopWeb.RazorPages.dll"]
 > - **Чистая архитектура**  
 >   <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Многослойная архитектура**  
->   <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
+>   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **Шаблон репозитория**  
 >   <https://deviq.com/repository-pattern/>
 > - **Пример решения с чистой архитектурой**  
