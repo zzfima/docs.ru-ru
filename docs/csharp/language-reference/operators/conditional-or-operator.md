@@ -1,6 +1,6 @@
 ---
 title: Оператор || (Справочник по C#)
-ms.date: 07/20/2015
+ms.date: 11/06/2018
 f1_keywords:
 - '||_CSharpKeyword'
 helpviewer_keywords:
@@ -8,40 +8,34 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: 58e5fd72a3748e7af0894093fc461c4efb543608
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: a391078372e4ec0a3882bed4515733adedffb547
+ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "42925544"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="23033-102">Оператор || (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="23033-102">|| Operator (C# Reference)</span></span>
-<span data-ttu-id="23033-103">Оператор условного ИЛИ (`||`) выполняет логическую операцию ИЛИ со всеми своими операндами типа `bool`.</span><span class="sxs-lookup"><span data-stu-id="23033-103">The conditional-OR operator (`||`) performs a logical-OR of its `bool` operands.</span></span> <span data-ttu-id="23033-104">Если результатом первого операнда является значение `true`, второй операнд не вычисляется.</span><span class="sxs-lookup"><span data-stu-id="23033-104">If the first operand evaluates to `true`, the second operand isn't evaluated.</span></span> <span data-ttu-id="23033-105">Если первый операнд имеет значение `false`, второй оператор будет определять итоговое значение выражения ИЛИ (`true` или `false`).</span><span class="sxs-lookup"><span data-stu-id="23033-105">If the first operand evaluates to `false`, the second operator determines whether the OR expression as a whole evaluates to `true` or `false`.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="23033-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="23033-106">Remarks</span></span>  
- <span data-ttu-id="23033-107">Операция</span><span class="sxs-lookup"><span data-stu-id="23033-107">The operation</span></span>  
-  
-```csharp  
-x || y  
-```  
-  
- <span data-ttu-id="23033-108">соответствует операции</span><span class="sxs-lookup"><span data-stu-id="23033-108">corresponds to the operation</span></span>  
-  
-```csharp  
-x | y  
-```  
-  
- <span data-ttu-id="23033-109">кроме случаев, когда `x` имеет значение `true`. В таких ситуациях `y` не вычисляется, поскольку операция ИЛИ будет возвращать значение `true` независимо от значения `y`.</span><span class="sxs-lookup"><span data-stu-id="23033-109">except that if `x` is `true`, `y` is not evaluated because the OR operation is `true` regardless of the value of `y`.</span></span> <span data-ttu-id="23033-110">Это называется сокращенным вычислением.</span><span class="sxs-lookup"><span data-stu-id="23033-110">This concept is known as "short-circuit" evaluation.</span></span>  
-  
- <span data-ttu-id="23033-111">Оператор условного ИЛИ не может быть перегружен, но перегрузки регулярных логических операторов и операторов [true](../../../csharp/language-reference/keywords/true.md) и [false](../../../csharp/language-reference/keywords/false.md) могут, с некоторыми ограничениями, считаться перегрузками условных логических операторов.</span><span class="sxs-lookup"><span data-stu-id="23033-111">The conditional-OR operator cannot be overloaded, but overloads of the regular logical operators and the [true](../../../csharp/language-reference/keywords/true.md) and [false](../../../csharp/language-reference/keywords/false.md) operators are, with certain restrictions, also considered to be overloads of the conditional logical operators.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="23033-112">Пример</span><span class="sxs-lookup"><span data-stu-id="23033-112">Example</span></span>  
- <span data-ttu-id="23033-113">В следующих примерах в выражении, использующем оператор `||`, вычисляется только первый операнд.</span><span class="sxs-lookup"><span data-stu-id="23033-113">In the following examples, the expression that uses `||` evaluates only the first operand.</span></span> <span data-ttu-id="23033-114">В выражении с оператором `|` вычисляются оба операнда.</span><span class="sxs-lookup"><span data-stu-id="23033-114">The expression that uses `|` evaluates both operands.</span></span> <span data-ttu-id="23033-115">Во втором примере в случае вычисления обоих операндов возникает исключение времени выполнения.</span><span class="sxs-lookup"><span data-stu-id="23033-115">In the second example, a run-time exception occurs if both operands are evaluated.</span></span>  
-  
- [!code-csharp[csRefOperators#52](../../../csharp/language-reference/operators/codesnippet/CSharp/conditional-or-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="23033-116">См. также</span><span class="sxs-lookup"><span data-stu-id="23033-116">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="dd34f-102">Оператор || (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="dd34f-102">|| Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="23033-117">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="23033-117">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="23033-118">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="23033-118">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="23033-119">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="23033-119">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="dd34f-103">Условный логический оператор ИЛИ `||`, также известный как "сокращенный" логический оператор ИЛИ, вычисляет логическое ИЛИ операндов типа [bool](../keywords/bool.md).</span><span class="sxs-lookup"><span data-stu-id="dd34f-103">The conditional logical OR operator `||`, also known as the "short-circuiting" logical OR operator, computes the logical OR of its [bool](../keywords/bool.md) operands.</span></span> <span data-ttu-id="dd34f-104">Результат операции `x || y` принимает значение `true`, если хотя бы один из операторов `x` или `y` имеет значение `true`.</span><span class="sxs-lookup"><span data-stu-id="dd34f-104">The result of `x || y` is `true` if either `x` or `y` evaluates to `true`.</span></span> <span data-ttu-id="dd34f-105">В противном случае результат будет `false`.</span><span class="sxs-lookup"><span data-stu-id="dd34f-105">Otherwise, the result is `false`.</span></span> <span data-ttu-id="dd34f-106">Если результатом первого операнда является значение `true`, второй операнд не вычисляется, и результат принимает значение `true`.</span><span class="sxs-lookup"><span data-stu-id="dd34f-106">If the first operand evaluates to `true`, the second operand is not evaluated and the result of operation is `true`.</span></span> <span data-ttu-id="dd34f-107">В следующем примере продемонстрировано такое поведение.</span><span class="sxs-lookup"><span data-stu-id="dd34f-107">The following example demonstrates that behavior:</span></span>
+
+[!code-csharp-interactive[conditional logical OR](~/samples/snippets/csharp/language-reference/operators/ConditionalLogicalOperatorsExamples.cs#Or)]
+
+<span data-ttu-id="dd34f-108">[Логический оператор ИЛИ](or-operator.md) `|` также вычисляет логическое ИЛИ операндов типа `bool`, но он всегда вычисляет оба операнда.</span><span class="sxs-lookup"><span data-stu-id="dd34f-108">The [logical OR operator](or-operator.md) `|` also computes the logical OR of its `bool` operands, but always evaluates both operands.</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="dd34f-109">Возможность перегрузки оператора</span><span class="sxs-lookup"><span data-stu-id="dd34f-109">Operator overloadability</span></span>
+
+<span data-ttu-id="dd34f-110">Определяемый пользователем тип не может перегружать условный логический оператор ИЛИ.</span><span class="sxs-lookup"><span data-stu-id="dd34f-110">A user-defined type cannot overload the conditional logical OR operator.</span></span> <span data-ttu-id="dd34f-111">Тем не менее, если определяемый пользователем тип каким-либо образом перегружает операторы [логическое ИЛИ](or-operator.md), [true](../keywords/true-operator.md) и [false](../keywords/false-operator.md), то операция `||` может быть применена для операндов этого типа.</span><span class="sxs-lookup"><span data-stu-id="dd34f-111">However, if a user-defined type overloads the [logical OR](or-operator.md), [true](../keywords/true-operator.md), and [false](../keywords/false-operator.md) operators in a certain way, the `||` operation can be evaluated for the operands of that type.</span></span> <span data-ttu-id="dd34f-112">Дополнительные сведения см. в разделе [Пользовательские условные логические операторы](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) в [Спецификации языка C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="dd34f-112">For more information, see the [User-defined conditional logical operators](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="dd34f-113">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="dd34f-113">C# language specification</span></span>
+
+<span data-ttu-id="dd34f-114">Дополнительные сведения см. в разделе [Условные логические операторы](~/_csharplang/spec/expressions.md#conditional-logical-operators) в [Спецификации языка C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="dd34f-114">For more information, see the [Conditional logical operators](~/_csharplang/spec/expressions.md#conditional-logical-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="dd34f-115">См. также</span><span class="sxs-lookup"><span data-stu-id="dd34f-115">See also</span></span>
+
+- [<span data-ttu-id="dd34f-116">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="dd34f-116">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="dd34f-117">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="dd34f-117">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="dd34f-118">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="dd34f-118">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="dd34f-119">Оператор &&</span><span class="sxs-lookup"><span data-stu-id="dd34f-119">&& operator</span></span>](conditional-and-operator.md)
+- [<span data-ttu-id="dd34f-120">Оператор !</span><span class="sxs-lookup"><span data-stu-id="dd34f-120">! operator</span></span>](logical-negation-operator.md)
+- [<span data-ttu-id="dd34f-121">Оператор |</span><span class="sxs-lookup"><span data-stu-id="dd34f-121">| operator</span></span>](or-operator.md)
