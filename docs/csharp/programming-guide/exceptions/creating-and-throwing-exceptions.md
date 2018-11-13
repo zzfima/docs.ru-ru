@@ -7,11 +7,11 @@ helpviewer_keywords:
 - exceptions [C#], creating
 - exceptions [C#], throwing
 ms.assetid: 6bbba495-a115-4c6d-90cc-1f4d7b5f39e2
-ms.openlocfilehash: 2e792a230ccead5d9a73f9b78a83d57738c31085
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 43d566fed4e2963489da0b7a11c78a54740b7ab1
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
+ms.lasthandoff: 11/07/2018
 ms.locfileid: "44260075"
 ---
 # <a name="creating-and-throwing-exceptions-c-programming-guide"></a>Создание и генерация исключений (Руководство по программированию C#)
@@ -62,11 +62,12 @@ ms.locfileid: "44260075"
  Новые свойства следует добавлять к классу исключений только в том случае, если данные в них могут помочь в разрешении исключения. При добавлении новых свойств в производный класс исключений метод `ToString()` необходимо переопределить так, чтобы он возвращал добавленные сведения.  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+
+Дополнительные сведения см. в разделах [Исключения](~/_csharplang/spec/exceptions.md) и [Оператор throw](~/_csharplang/spec/statements.md#the-throw-statement) в [Спецификации языка C#](../../language-reference/language-specification/index.md). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
   
 ## <a name="see-also"></a>См. также
 
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
 - [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)  
-- [Иерархия исключений](https://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
+- [Иерархия исключений](../../../standard/exceptions/index.md)  
 - [Обработка исключений](../../../csharp/programming-guide/exceptions/exception-handling.md)

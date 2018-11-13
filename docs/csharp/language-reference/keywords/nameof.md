@@ -5,12 +5,12 @@ f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 726abfd903f37826a247e6e98c0d11f230447550
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 01c87f8d63264aa342b04b8d3fcfc7e6f38db44b
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035257"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744374"
 ---
 # <a name="nameof-c-reference"></a>nameof (справочник по C#)
 
@@ -131,8 +131,9 @@ class C {
  Сведения о сигнатурах, например "`Method1 (str, str)`", получить невозможно.  Чтобы это сделать, можно использовать выражение (`Expression e = () => A.B.Method1("s1", "s2")`) и извлечь MemberInfo из результирующего дерева выражения.  
   
 ## <a name="language-specifications"></a>Спецификации языков  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Дополнительные сведения см. в разделе [Выражения Nameof](~/_csharplang/spec/expressions.md#nameof-expressions) в [Спецификации языка C#](../language-specification/index.md). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
+ 
 ## <a name="see-also"></a>См. также
 
 - [Справочник по C#](../../../csharp/language-reference/index.md)  

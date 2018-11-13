@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - typeof keyword [C#]
 ms.assetid: 0c08d880-515e-46bb-8cd2-48b8dd62c08d
-ms.openlocfilehash: 2493e78fd0782eebee17afd979e1c429339d0a3f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: aff7462f0df938a8e96cca33155489bee4891da0
+ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529212"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "50744448"
 ---
 # <a name="typeof-c-reference"></a>typeof (справочник по C#)
 Позволяет получить объект `System.Type` для типа. Выражение `typeof` принимает следующую форму:  
@@ -44,8 +44,9 @@ System.Type type = i.GetType();
  [!code-csharp[csrefKeywordsOperator#13](../../../csharp/language-reference/keywords/codesnippet/CSharp/typeof_2.cs)]  
   
 ## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+
+Дополнительные сведения см. в разделе [Оператор typeof](~/_csharplang/spec/expressions.md#the-typeof-operator) в [Спецификации языка C#](../language-specification/index.md). Спецификация языка является предписывающим источником информации о синтаксисе и использовании языка C#.
+ 
 ## <a name="see-also"></a>См. также
 
 - <xref:System.Type?displayProperty=nameWithType>  

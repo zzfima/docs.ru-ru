@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f646927d4ddf88ae117f6cacafc2e42df4e3abee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
+ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195688"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50744591"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Руководство по развертыванию .NET Framework для администраторов
 В этой статье представлено пошаговое описание развертывания администратором платформы [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и системных зависимостей в сети с помощью Microsoft System Center Configuration Manager. В рамках этой статьи предполагается, что все целевые клиентские компьютеры соответствуют минимальным требованиям для .NET Framework. Список требований к программному обеспечению и оборудованию для установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md).  
@@ -176,8 +176,8 @@ ms.locfileid: "50195688"
   
 9. На странице **Взаимодействие с пользователем** оставьте значения по умолчанию и нажмите кнопку **Далее**.  
   
-    > [!WARNING]
-    >  В вашей рабочей среде могут использоваться политики, требующие выбора других параметров для расписания развертывания. Сведения об этих параметрах см. в статье [Свойства имени объявления: вкладка "Расписание"](https://technet.microsoft.com/library/bb694016.aspx) в библиотеке TechNet.  
+> [!WARNING]
+> В вашей рабочей среде могут использоваться политики, требующие выбора других параметров для расписания развертывания. Сведения об этих параметрах см. в статье [Свойства имени объявления: вкладка "Расписание"](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb694016%28v=technet.10%29).
   
 10. На странице **Точки распространения** оставьте значения по умолчанию и нажмите кнопку **Далее**.  
   
@@ -207,7 +207,7 @@ ms.locfileid: "50195688"
   
 -   [Администрирование сайтов для System Center 2012 Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/system-center-2012-R2/gg681983%28v=technet.10%29)  
   
--   [Планирование и развертывание одного сайта Configuration Manager](https://technet.microsoft.com/library/bb680961.aspx)  
+-   [Планирование и развертывание одного сайта Configuration Manager](https://docs.microsoft.com/previous-versions/system-center/configuration-manager-2007/bb680961%28v=technet.10%29)  
   
  **Клиент System Center 2012 Configuration Manager для компьютеров под управлением Windows**  
   
