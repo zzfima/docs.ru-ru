@@ -7,7 +7,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "25726541"
 ---
-# <a name="f-tutorials"></a><span data-ttu-id="85c4a-101">Учебники по F#</span><span class="sxs-lookup"><span data-stu-id="85c4a-101">F# Tutorials</span></span>
+# <a name="f-tutorials"></a><span data-ttu-id="ffe86-101">Учебники по F#</span><span class="sxs-lookup"><span data-stu-id="ffe86-101">F# Tutorials</span></span>
 
 > [!NOTE]
-<span data-ttu-id="85c4a-102">Работа над этим документом все еще ведется.</span><span class="sxs-lookup"><span data-stu-id="85c4a-102">This is still in-progress.</span></span>
+<span data-ttu-id="ffe86-102">Работа над этим документом все еще ведется.</span><span class="sxs-lookup"><span data-stu-id="ffe86-102">This is still in-progress.</span></span>

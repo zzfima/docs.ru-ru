@@ -7,7 +7,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/02/2018
 ms.locfileid: "25726591"
 ---
-# <a name="asynchronous-and-concurrent-programming-in-f"></a><span data-ttu-id="fca3e-101">Асинхронное и параллельное программирование вF#</span><span class="sxs-lookup"><span data-stu-id="fca3e-101">Asynchronous and Concurrent Programming in F#</span></span> #
+# <a name="asynchronous-and-concurrent-programming-in-f"></a><span data-ttu-id="9a5e7-101">Асинхронное и параллельное программирование вF#</span><span class="sxs-lookup"><span data-stu-id="9a5e7-101">Asynchronous and Concurrent Programming in F#</span></span> #
 
 > [!NOTE]
-<span data-ttu-id="fca3e-102">Работа над этим документом все еще ведется.</span><span class="sxs-lookup"><span data-stu-id="fca3e-102">This is still in-progress.</span></span>
+<span data-ttu-id="9a5e7-102">Работа над этим документом все еще ведется.</span><span class="sxs-lookup"><span data-stu-id="9a5e7-102">This is still in-progress.</span></span>
