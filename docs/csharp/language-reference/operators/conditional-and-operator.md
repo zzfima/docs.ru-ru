@@ -36,5 +36,5 @@ ms.locfileid: "43529239"
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Операторы в C#](index.md)
 - [Оператор ||](conditional-or-operator.md)
-- [Оператор !](logical-negation-operator.md)
+- [Оператор \!](logical-negation-operator.md)
 - [Оператор &](and-operator.md)
