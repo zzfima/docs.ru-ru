@@ -2,11 +2,11 @@
 title: Пользовательские кодировщики
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: cd8b9172278ce5bcca2965872d697b03698bd850
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 036cbff9046df2d1179c5cc0921dd8d89757558b
+ms.sourcegitcommit: 8145ad08288bf141d68e3256cb1f7a3ad842ca33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 11/22/2018
 ms.locfileid: "50034392"
 ---
 # <a name="custom-encoders"></a>Пользовательские кодировщики
@@ -60,7 +60,7 @@ ms.locfileid: "50034392"
  Помимо обработки ключей динамического словаря, буферизированные сообщения, связанные с сеансом, принимаются уникальным способом. Вместо создания средства чтения над документом и его обработки в двоичном кодировании используется внутренний класс `MessagePatterns` для разбора двоичного потока. Идея состоит в том, что большинство сообщений имеют определенный набор заголовков, представляемых в определенном порядке при формировании платформой WCF. Система шаблонов разделяет сообщение на части на основании ожиданий. В случае успешного выполнения она инициализирует объект <xref:System.ServiceModel.Channels.MessageHeaders> без анализа XML. В противном случае она возвращается к стандартному методу.  
   
 ### <a name="mtom-encoding"></a>Кодирование MTOM  
- <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`> Класс имеет дополнительное свойство конфигурации <<!--zz xref:System.ServiceModel.Channels.MTOMMessageEncodingBindingElement --> `System.ServiceModel.Channels.MTOMMessageEncodingBindingElement`.MaxBufferSize%2A>. Оно задает верхнюю границу объема данных, который можно помещать в буфер во время чтения сообщения. Может возникнуть необходимость в буферизации XML Information Set (Infoset) или других частей MIME, чтобы повторно собрать все части MIME в одно сообщение.  
+ Класс <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> имеет дополнительное свойство конфигурации <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A>. Оно задает верхнюю границу объема данных, который можно помещать в буфер во время чтения сообщения. Может возникнуть необходимость в буферизации XML Information Set (Infoset) или других частей MIME, чтобы повторно собрать все части MIME в одно сообщение.  
   
  Для правильной работы с HTTP внутренний класс кодировщика сообщений MTOM предоставляет несколько интерфейсов API для метода `GetContentType` (который также является внутренним) и метода `WriteMessage`, который является открытым и может быть переопределен. Чтобы значения в заголовках HTTP соответствовали значениям в заголовках MIME, необходимо обеспечить более широкие возможности взаимодействия.  
   
