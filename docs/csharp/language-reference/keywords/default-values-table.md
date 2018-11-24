@@ -62,7 +62,7 @@ int a = default;
 int a = new int();
 ```
 
-Значение по умолчанию любого [ссылочного типа](reference-types.md) — `null`. Значение по умолчанию для [типа, допускающего значение null](../../programming-guide/nullable-types/index.md), — это экземпляр, свойство которого имеет значение <xref:System.Nullable%601.HasValue%2A>, а свойство `false` не определено <xref:System.Nullable%601.Value%2A>.
+Значение по умолчанию любого [ссылочного типа](reference-types.md) — `null`. Значение по умолчанию для [типа, допускающего значение null](../../programming-guide/nullable-types/index.md), — это экземпляр, свойство <xref:System.Nullable%601.HasValue%2A> которого имеет значение `false`, а свойство <xref:System.Nullable%601.Value%2A> не определено.
 
 ## <a name="see-also"></a>См. также
 
