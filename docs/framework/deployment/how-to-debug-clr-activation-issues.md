@@ -7,11 +7,11 @@ ms.assetid: 4fe17546-d56e-4344-a930-6d8e4a545914
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 89724e9a322f2f28dbe5d18ae697acbdd0a32d8e
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744474"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296728"
 ---
 # <a name="how-to-debug-clr-activation-issues"></a>Практическое руководство. Отладка проблем при активации CLR
 При возникновении проблем при попытке запустить приложение с правильной версией среды CLR можно просматривать и отлаживать журналы активации среды CLR. Эти журналы могут быть очень полезными при выявлении основной причины проблемы активации, когда приложение или загружает не ту версию среды CLR, которую ожидалось, или вообще не загружает среду CLR. В статье [Ошибки инициализации платформы .NET Framework. Управление взаимодействием с пользователем](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md) рассматривается случай, когда среда CLR не была найдена.  

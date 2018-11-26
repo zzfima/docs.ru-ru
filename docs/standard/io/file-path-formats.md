@@ -2,19 +2,18 @@
 title: Форматы путей к файлам в системах Windows
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
-ms.topic: article
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05146467f321a3c83f3637e2eecc4c7c42dc4ba0
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51214198"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296832"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Форматы путей к файлам в системах Windows
 
@@ -90,8 +89,8 @@ UNC-пути всегда должны быть полными. Они могу�
 
    Для UNC-путей существует специальная ссылка, которая называется `UNC`. Пример:
 
-      `\\.\UNC\Server\Share\Test\Foo.txt`
-      `\\?\UNC\Server\Share\Test\Foo.txt`
+  `\\.\UNC\Server\Share\Test\Foo.txt`  
+  `\\?\UNC\Server\Share\Test\Foo.txt`
 
     Для UNC-путей к устройствам часть сервера или общего сетевого ресурса образует том. Например, в пути `\\?\server1\e:\utilities\\filecomparer\` часть server1\utilities представляет сервер или общий сетевой ресурс. Это важно при вызове такого метода, как <xref:System.IO.Path.GetFullPath(System.String,System.String)?displayProperty=nameWithType> с сегментами с относительным путем к каталогу, поскольку переход дальше тома невозможен. 
 
@@ -114,7 +113,7 @@ UNC-пути всегда должны быть полными. Они могу�
 - Вычисляются относительные компоненты каталога (`.` для текущего и `..` для родительского каталога).
 - Удаляются некоторые символы.
 
-Нормализация осуществляется неявно, но при необходимости вы можете выполнить ее явно, вызвав метод <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, который создает оболочку для вызова [GetFullPathName() function](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx). Также можно вызвать [GetFullPathName() function](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).aspx) Windows напрямую с помощью P/Invoke. Кроме того, можно вызвать 
+Нормализация осуществляется неявно, но при необходимости вы можете выполнить ее явно, вызвав метод <xref:System.IO.Path.GetFullPath%2A?displayProperty=nameWithType>, который создает оболочку для вызова [функции GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea). Также можно вызвать [функцию GetFullPathName()](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) Windows напрямую с помощью P/Invoke.
 
 ### <a name="identifying-the-path"></a>Идентификация пути
 
