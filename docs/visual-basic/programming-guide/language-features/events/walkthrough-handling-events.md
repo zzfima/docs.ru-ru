@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 35680c7476f48ca11ac4ddeda208c46c6b36c724
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fe797885a9063a19efc3f35da9cdf62d7f271693
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192004"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297170"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Пошаговое руководство. Обработка событий (Visual Basic)
 Это второе из двух разделов, которые демонстрируют, как работать с событиями. Первый раздел [Пошаговое руководство: объявление и создание событий](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), показано, как объявлять и создавать события. Чтобы показать, как обрабатывать события при их возникновении в этом разделе используется форма и класс из предыдущего примера.  
@@ -45,7 +45,7 @@ ms.locfileid: "44192004"
     > [!NOTE]
     >  **Редактор кода** может быть полезным, но не обязательно для вставки новых обработчиков событий. В этом пошаговом руководстве более прямолинеен в просто скопируйте обработчики событий непосредственно в код.  
   
-3.  Добавьте следующий код в обработчик событий `mWidget_PercentDone`.  
+3.  Добавьте следующий код в обработчик событий `mWidget_PercentDone` .  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_2.vb)]  
   
@@ -76,7 +76,7 @@ ms.locfileid: "44192004"
   
 #### <a name="to-call-the-longtask-method"></a>Чтобы вызвать метод LongTask  
   
--   Добавьте следующий код в обработчик событий `Button1_Click`.  
+-   Добавьте следующий код в обработчик событий `Button1_Click` .  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_5.vb)]  
   
@@ -95,7 +95,7 @@ ms.locfileid: "44192004"
 3.  Нажмите кнопку **отменить** кнопку, чтобы остановить задачу. Обратите внимание, что внешний вид **отменить** сразу после нажатия кнопки не изменяется. `Click` Событие не происходит до `My.Application.DoEvents` оператор разрешает обработку событий.  
   
     > [!NOTE]
-    >  `My.Application.DoEvents` Метод отличается от обработки событий в точно так же, как и форму. Например, в этом пошаговом руководстве, необходимо нажать кнопку **отменить** дважды кнопку. Чтобы разрешить форме обрабатывать события напрямую, можно использовать многопоточность. Дополнительные сведения см. в разделе [работа с потоками](../../../../visual-basic/programming-guide/concepts/threading/index.md).
+    >  `My.Application.DoEvents` Метод отличается от обработки событий в точно так же, как и форму. Например, в этом пошаговом руководстве, необходимо нажать кнопку **отменить** дважды кнопку. Чтобы разрешить форме обрабатывать события напрямую, можно использовать многопоточность. Дополнительные сведения см. в разделе [управляемых потоков](../../../../standard/threading/index.md).
   
  Может оказаться полезным выполнить программу, нажав клавишу F11 и пошагово выполнять код строки за раз. Очевидно, что можно увидеть, как начинается выполнение `LongTask`и вкратце повторно вводит `Form1` каждый раз `PercentDone` события.  
   

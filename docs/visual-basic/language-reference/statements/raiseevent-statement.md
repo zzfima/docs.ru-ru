@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ef4dce290a7a7f6340b15aa4083cd40518e37d0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507396"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296871"
 ---
 # <a name="raiseevent-statement"></a>Оператор RaiseEvent
 Вызывает событие, объявленное на уровне модуля в классе, форме или документа.  
@@ -73,7 +73,7 @@ RaiseEvent eventname[( argumentlist )]
  Нажмите клавишу F5 для запуска примера и нажмите кнопку с надписью **запустить**. Первое текстовое поле начинает обратный отсчет. По истечении всего времени (10 секунд) в первом текстовом поле отображается надпись Done.  
   
 > [!NOTE]
->  `My.Application.DoEvents` Метод отличается от обработки событий в точно так же, как и форму. Чтобы разрешить форме обрабатывать события напрямую, можно использовать многопоточность. Дополнительные сведения см. в разделе [работа с потоками](../../programming-guide/concepts/threading/index.md).  
+>  `My.Application.DoEvents` Метод отличается от обработки событий в точно так же, как и форму. Чтобы разрешить форме обрабатывать события напрямую, можно использовать многопоточность. Дополнительные сведения см. в разделе [управляемых потоков](../../../standard/threading/index.md).  
   
 ## <a name="see-also"></a>См. также  
  [События](../../../visual-basic/programming-guide/language-features/events/index.md)  
