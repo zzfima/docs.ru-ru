@@ -2,12 +2,12 @@
 title: Основные понятия программирования (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
-ms.openlocfilehash: f71e05e05e3d027b6190142e8062ea3caf95edb7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 216b23a30e8b1d58777fbccbf2956ae91534951b
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45615928"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296572"
 ---
 # <a name="programming-concepts-c"></a>Основные понятия программирования (C#)
 Этот раздел описывает концепции программирования на языке C#.  
@@ -28,7 +28,6 @@ ms.locfileid: "45615928"
 |[Объектно ориентированное программирование (C#)](../../../csharp/programming-guide/concepts/object-oriented-programming.md)|Описывает распространенные концепции объектно-ориентированного программирования, такие как инкапсуляция, наследование и полиморфизм.|  
 |[Reflection (C#)](../../../csharp/programming-guide/concepts/reflection.md) (Отражение (C#))|Объясняет, как использовать отражение для динамического создания экземпляра типа, привязки типа к существующему объекту, а также получения типа из существующего объекта и вызова его методов или доступа к его полям и свойствам.|  
 |[Сериализация (C#)](../../../csharp/programming-guide/concepts/serialization/index.md)|Описывает основные концепции двоичной сериализации, XML-сериализации и SOAP-сериализации.|  
-|[Threading (C#)](../../../csharp/programming-guide/concepts/threading/index.md) (Работа с потоками (C#))|Предоставляет общие сведения о потоковой модели .NET и демонстрирует создание кода, который выполняет несколько задач одновременно, что позволяет повысить производительность и скорости ответа приложений.|  
   
 ## <a name="related-sections"></a>Связанные разделы  
   

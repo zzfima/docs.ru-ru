@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual C# documentation
 - C# language
 - Visual C#
-ms.openlocfilehash: 32da68206e2415d42df9cc820ff1ca2814fbf58f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5b0f3cc4a090e3479489285631a8d13b8b134c56
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195844"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296754"
 ---
 # <a name="c-guide"></a>Руководство по языку C#
 
@@ -32,19 +32,19 @@ ms.locfileid: "50195844"
 
 Руководство по C# состоит из семи разделов. Вы можете читать их по порядку или переходить сразу к тому, что вас больше интересует. Некоторые разделы посвящены языку программирования. Другие описывают комплексные сценарии и демонстрируют разные типы программ, которые можно создать с помощью C# и .NET Framework.
 
-* [Начало работы](getting-started/index.md).
+* [Начало работы](getting-started/index.md)
   * В этом разделе описано, что вам нужно установить для создания среды разработки C# на вашей платформе. Несколько статей в этом разделе описывают процесс создания первой программы на C# в разных поддерживаемых средах.
 
 * [Ознакомительные руководства по C#](tutorials/intro-to-csharp/index.md).
   * Ознакомительные руководства по C# — это интерактивные руководства для разработчиков, которые делают первые шаги на поприще разработке. С помощью этих руководств вы сможете изучить C# прямо в браузере с помощью интерфейса REPL (read–eval–print loop — цикл "чтение — вычисление — вывод"). По завершении интерактивных занятий вы можете пройти их еще раз уже на компьютере, чтобы усовершенствовать навыки написания кода.
 
-* [Руководства](tutorials/index.md).
+* [Учебники](tutorials/index.md)
   * В этом разделе представлен широкий спектр комплексных сценариев с подробным описанием и готовым кодом. Здесь рассказывается, какие средства лучше использовать и почему, какие возможности C# лучше подходят для разных сценариев. Также в разделе приведены шаблоны решений для распространенных задач. Если вы предпочитаете учиться по готовому коду, то этот раздел как раз для вас. Вы можете скачать любой из примеров кода и испытать его в собственной среде.
 
-* [Обзор языка C#](tour-of-csharp/index.md).
+* [Обзор языка C#](tour-of-csharp/index.md)
   * В этом разделе приведено краткое описание языка программирования. Здесь описаны элементы программ на C# и возможности, которые дает этот язык. В разделе приведены небольшие примеры для всех элементов синтаксиса C#, а также рассматриваются основные понятия языка C#.
 
-* [Новые возможности C#](whats-new/index.md).
+* [Новые возможности C#](whats-new/index.md)
   * Обзор новых возможностей, добавленных в последние выпуски языка, и обзор истории языка C#.
 
 <!--
@@ -52,20 +52,20 @@ ms.locfileid: "50195844"
   * The .NET Compiler Platform SDK enables you to write components that analyze code, and suggest or make improvements to that code. In this section, you'll learn how the APIs are organized, and how you can create code that enables rules and practices for your team. You'll also see samples, end-to-end scenarios, and links to other libraries with more examples using these APIs.
 -->
 
-* [Руководство по программированию на C#](../csharp/programming-guide/index.md).
+* [Руководство по программированию на C#](../csharp/programming-guide/index.md)
   * Сведения и практические примеры способов использования конструкций языка C#.
 
-* [Пошаговые руководства](../csharp/walkthroughs.md).
+* [Пошаговые руководства](../csharp/walkthroughs.md)
   * Приведены ссылки на пошаговые руководства по написанию программ, использующих C#, и дано краткое описание каждого пошагового руководства.
 
-* [Справочник по языку](language-reference/index.md).
+* [Справочник по языку](language-reference/index.md)
   * Этот раздел содержит справочные материалы по языку C#. Они помогут составить представление о синтаксисе и семантике C#. Здесь также приведены справочные сведения о типах, операторах, атрибутах, директивах препроцессора, а также о параметрах, ошибках и предупреждениях компилятора.
 
-* [Спецификация языка C#](../csharp/language-reference/language-specification/index.md).
+* [Спецификация языка C#](../csharp/language-reference/language-specification/index.md)
   * Ссылки на последнюю версию спецификации C#.
 
 ## <a name="see-also"></a>См. также
 
 * [Начало работы с Visual C# и Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)  
-* [Разработка .NET](https://msdn.microsoft.com/library/ff361664)  
+* [Руководство по .NET](../standard/index.md)  
 * [Примеры C#](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=C%23&f%5B0%5D.Text=C%23)  
