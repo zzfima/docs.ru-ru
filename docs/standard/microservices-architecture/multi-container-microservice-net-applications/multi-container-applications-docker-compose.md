@@ -1,28 +1,28 @@
 ---
 title: Определение многоконтейнерного приложения с помощью docker-compose.yml
-description: Архитектура микрослужб .NET для контейнерных приложений .NET | Определение многоконтейнерного приложения с помощью docker-compose.yml
+description: Архитектура микрослужб .NET для контейнерных приложений .NET | Указание состава микрослужб для многоконтейнерного приложения с помощью docker-compose.yml.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/30/2017
-ms.openlocfilehash: d1c4166129716ccbbc86855e38d631f493b82290
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.date: 10/02/2018
+ms.openlocfilehash: 9ce8d64dbd481d30c6687b8747b2091733ea76db
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937609"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297183"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Определение многоконтейнерного приложения с помощью docker-compose.yml 
 
-В данном руководстве файл [docker-compose.yml](https://docs.docker.com/compose/compose-file/) был представлен в разделе [Шаг 4. Определение служб в файле docker-compose.yml при сборке многоконтейнерного приложения Docker](#step4_define_svcs_in_docker_compose_yml). Тем не менее существуют дополнительные способы использования файлов docker-compose, которые стоит изучить более подробно.
+В данном руководстве файл [docker-compose.yml](https://docs.docker.com/compose/compose-file/) был представлен в разделе [Шаг 4. Определение служб в файле docker-compose.yml при сборке многоконтейнерного приложения Docker](../docker-application-development-process/docker-app-development-workflow.md#step-4-define-your-services-in-docker-composeyml-when-building-a-multi-container-docker-application). Тем не менее существуют дополнительные способы использования файлов docker-compose, которые стоит изучить более подробно.
 
 Например, в файле docker-compose.yml вы можете явно описать, как следует развертывать ваше многоконтейнерное приложение. При необходимости также можно описать, как вы планируете собирать свои пользовательские образы Docker. (Пользовательские образы Docker можно также собрать с помощью Docker CLI.)
 
-В сущности, вы определяете каждый из контейнеров, которые планируете развернуть, и конкретные характеристики для каждого развертывания контейнера. Создав файл описания многоконтейнерного развертывания, вы можете развернуть все решение в одном действии, управляемом командой CLI [docker-compose up](https://docs.docker.com/compose/overview/), или развернуть решение прозрачно из Visual Studio. В противном случае придется использовать Docker CLI, чтобы разворачивать контейнер за контейнером в несколько этапов с помощью команды docker run из командной строки. Таким образом, для каждой службы, определенной в файле docker-compose.yml, необходимо указать ровно один образ или сборку. Остальные ключи являются необязательными и соответствуют своим аналогам в командной строке docker run.
+В сущности, вы определяете каждый из контейнеров, которые планируете развернуть, и конкретные характеристики для каждого развертывания контейнера. Создав файл описания многоконтейнерного развертывания, вы можете развернуть все решение в одном действии, управляемом командой CLI [docker-compose up](https://docs.docker.com/compose/overview/), или развернуть решение прозрачно из Visual Studio. В противном случае придется использовать Docker CLI, чтобы разворачивать контейнер за контейнером в несколько этапов с помощью команды `docker run` из командной строки. Таким образом, для каждой службы, определенной в файле docker-compose.yml, необходимо указать ровно один образ или сборку. Остальные ключи являются необязательными и соответствуют своим аналогам в командной строке `docker run`.
 
 В следующем примере кода YAML представлено определение возможно глобального, но единственного файла docker-compose.yml для примера eShopOnContainers. Это ненастоящий файл docker-compose из eShopOnContainers. Это упрощенная и объединенная в один файл версия, представляющая не лучший способ работы с файлами docker-compose, как будет показано ниже.
 
 ```yml
-version: '2'
+version: '3.4'
 
 services:
   webmvc:
@@ -84,19 +84,16 @@ services:
     image: redis
 ```
 
-Корневой ключ в этом файле — services. Под этим ключом определяются службы, которые требуется развернуть и запустить при выполнении команды docker-compose или при развертывании из Visual Studio с помощью этого файла docker-compose.yml. В данном случае в файле docker-compose.yml определено несколько служб, как показано в следующем списке.
+Корневой ключ в этом файле — services. Под этим ключом определяются службы, которые требуется развернуть и запустить при выполнении команды `docker-compose up` или при развертывании из Visual Studio с помощью этого файла docker-compose.yml. В данном случае в файле docker-compose.yml определено несколько служб, как показано в следующей таблице.
 
--   webmvc — контейнер, включающий приложение MVC ASP.NET Core и использующий микрослужбы из C\# на стороне сервера.
-
--   catalog.api — контейнер, включающий микрослужбу Catalog веб-API ASP.NET Core.
-
--   ordering.api — контейнер, включающий микрослужбу Ordering веб-API ASP.NET Core.
-
--   sql.data — контейнер, запускающий SQL Server для Linux, в котором содержатся базы данных микрослужб.
-
--   basket.api — контейнер с микрослужбой Basket веб-API ASP.NET.
-
--   basket.data — контейнер, запускающий службу кэша REDIS, с базой данных basket в качестве кэша REDIS.
+| Имя службы | Описание: |
+|--------------|-------------|
+| webmvc       | Контейнер, включающий приложение MVC ASP.NET Core и использующий микрослужбы из C\# на стороне сервера.|
+| catalog.api  | Контейнер, включающий микрослужбу Catalog веб-API ASP.NET Core. |
+| ordering.api | Контейнер, включающий микрослужбу Ordering веб-API ASP.NET Core. |
+| sql.data     | Контейнер, запускающий SQL Server для Linux, в котором содержатся базы данных микрослужб. |
+| basket.api   | Контейнер с микрослужбой Basket веб-API ASP.NET. |
+| basket.data  | Контейнер, запускающий службу кэша REDIS, с базой данных basket в качестве кэша REDIS. |
 
 ### <a name="a-simple-web-service-api-container"></a>Простой контейнер API веб-службы
 
@@ -120,7 +117,7 @@ services:
 
 Эта контейнерная служба имеет следующую базовую конфигурацию.
 
--   Она основывается на пользовательском образе eshop/catalog.api. Проще говоря, в файле не задан ключ build:. Это означает, что образ должен быть предварительно создан (с помощью команды docker build) или загружен (с помощью команды docker pull) из любого реестра Docker.
+-   Она основывается на пользовательском образе eshop/catalog.api. Проще говоря, в файле не задан ключ build:. Это означает, что образ должен быть предварительно создан (с помощью команды docker build) или скачан (с помощью команды docker pull) из любого реестра Docker.
 
 -   Она определяет переменную среды с именем ConnectionString со строкой подключения, которая должна использоваться Entity Framework для доступа к экземпляру SQL Server, содержащему модель данных каталога. В данном случае в одном контейнере SQL Server содержатся несколько баз данных. Поэтому на компьютере разработки потребуется меньше памяти для Docker. Однако можно было бы также развернуть по одному контейнеру SQL Server для каждой базы данных микрослужбы.
 
@@ -140,7 +137,7 @@ services:
 
 ### <a name="using-docker-compose-files-to-target-multiple-environments"></a>Использование файлов docker-compose для нескольких сред
 
-Файлы docker-compose.yml являются файлами определения и могут использоваться несколькими инфраструктурами, которые распознают этот формат. Самый простой инструмент — это команда docker-compose, но с этим файлом могут работать и другие инструменты, такие как оркестраторы (например, Docker Swarm).
+Файлы docker-compose.yml являются файлами определения и могут использоваться несколькими инфраструктурами, которые распознают этот формат. Самым простым средством является команда docker-compose.
 
 Таким образом, используя команду docker-compose, вы можете реализовать следующие основные сценарии.
 
@@ -148,7 +145,7 @@ services:
 
 При разработке приложений важно иметь возможность запускать приложение в изолированной среде разработки. Можно создать такую среду с помощью команды CLI docker-compose или использовать Visual Studio, в котором команда docker-compose применяется внутренним образом.
 
-Файл docker-compose.yml позволяет настраивать и документировать все зависимости служб вашего приложения (другие службы, кэш, базы данных, очереди и т. п.). С помощью команды CLI docker-compose вы можете создавать и запускать один или несколько контейнеров для каждой зависимости одной командой (docker-compose up).
+Файл docker-compose.yml позволяет настраивать и документировать все зависимости служб вашего приложения (другие службы, кэш, базы данных, очереди и т. п.). С помощью команды CLI docker-compose вы можете создавать и запускать один или несколько контейнеров для каждой зависимости одной командой (docker-compose up).
 
 Файлы docker-compose.yml — это файлы конфигурации, интерпретированные подсистемой Docker, но они также служат в качестве удобных файлов документирования сведений о составе вашего многоконтейнерного приложения.
 
@@ -159,16 +156,16 @@ services:
 Используя Docker Compose, можно очень просто создавать и уничтожать такую изолированную среду с помощью нескольких команд, выполненных в командной строке, или скриптов; например, с помощью следующих команд:
 
 ```
-docker-compose up -d
+docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
 ./run_unit_tests
-docker-compose down
+docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
 ```
 
 #### <a name="production-deployments"></a>Рабочие развертывания
 
-Команду Compose можно также использовать для развертывания в удаленной подсистеме Docker. Типичный случай — развертывание на один экземпляр узла Docker (такой как рабочая виртуальная машина или сервер с установленной [машиной Docker](https://docs.docker.com/machine/overview/)). Но это также может быть весь кластер [Docker Swarm](https://docs.docker.com/swarm/overview/), поскольку кластеры тоже совместимы с файлами docker-compose.yml.
+Команду Compose можно также использовать для развертывания в удаленной подсистеме Docker. Типичный случай — развертывание на один экземпляр узла Docker (такой как рабочая виртуальная машина или сервер с установленной [машиной Docker](https://docs.docker.com/machine/overview/)).
 
-При использовании любых других оркестраторов (Azure Service Fabric, Mesos DC/OS, Kubernetes и т. п.) может потребоваться добавить параметры настройки и конфигурации метаданных, аналогичные имеющимся в файле docker-compose.yml, но в формате, необходимом для этого другого оркестратора.
+При использовании любых других оркестраторов (Azure Service Fabric, Kubernetes и т. п.) может потребоваться добавить параметры настройки и конфигурации метаданных, аналогичные имеющимся в файле docker-compose.yml, но в формате, необходимом для этого другого оркестратора.
 
 В любом случае docker-compose является удобным инструментом и форматом метаданных для рабочих процессов развертывания, тестирования и работы, хотя рабочий процесс работы может отличаться в зависимости от используемого оркестратора.
 
@@ -180,13 +177,13 @@ docker-compose down
 
 Вы можете использовать единственный файл docker-compose.yml, как показано в упрощенных примерах, приведенных в предыдущих разделах. Однако для большинства приложений это не рекомендуется.
 
-По умолчанию Compose читает два файла, docker-compose.yml и дополнительный файл docker-compose.override.yml. Как показано на рисунке 8-11, если вы работаете в Visual Studio и включаете поддержку Docker, Visual Studio при этом создает дополнительный файл docker-compose.ci.build.yml для использования из конвейеров CI/CD, как в Azure DevOps Services.
+По умолчанию Compose читает два файла, docker-compose.yml и дополнительный файл docker-compose.override.yml. Как показано на рисунке 6-11, если вы работаете в Visual Studio и включаете поддержку Docker, Visual Studio при этом создает дополнительный файл docker-compose.vs.debug.g.yml для отладки приложения, вы можете просмотреть этот файл в папке obj\\Docker\\ в главной папке решения.
 
-![](./media/image12.png)
+![Структура файла проекта docker-compose: .dockerignore — для пропуска файлов; docker-compose.yml — для создания микрослужб; docker-compose.override.yml — для настройки среды микрослужб.](./media/image12.png)
 
-**Рис. 8-11**. Файлы docker-compose в Visual Studio 2017
+**Рис. 6-11**. Файлы docker-compose в Visual Studio 2017
 
-Файлы docker-compose можно изменить в любом редакторе, например в Visual Studio Code или Sublime, и запустить приложение с помощью команды docker-compose up.
+Файлы docker-compose можно изменить в любом редакторе, например в Visual Studio Code или Sublime, и запустить приложение с помощью команды docker-compose up.
 
 По определению файл docker-compose.yml содержит базовую конфигурацию и другие статические параметры. Это означает, что конфигурация службы не должна изменяться в зависимости от целевой среды развертывания.
 
@@ -194,23 +191,23 @@ docker-compose down
 
 #### <a name="targeting-multiple-environments"></a>Планирование нескольких сред
 
-Распространенный вариант использования заключается в том, что определяется несколько файлов compose, чтобы можно было планировать несколько сред, таких как рабочая среда, промежуточная среда, среда CI или среда разработки. Для поддержки этих разных сред можно разделить конфигурацию Compose на несколько файлов, как показано на рисунке 8-12.
+Распространенный вариант использования заключается в том, что определяется несколько файлов compose, чтобы можно было планировать несколько сред, таких как рабочая среда, промежуточная среда, среда CI или среда разработки. Для поддержки этих разных сред можно разделить конфигурацию Compose на несколько файлов, как показано на рисунке 6-12.
 
-![](./media/image13.png)
+![Вы можете сочетать несколько файлов docker-compose*.fml для обработки разных сред.](./media/image13.png)
 
-**Рис. 8-12**. Несколько файлов docker-compose, переопределяющих значения в базовом файле docker-compose.yml
+**Рис. 6-12**. Несколько файлов docker-compose, переопределяющих значения в базовом файле docker-compose.yml
 
-Вы начинаете с базового файла docker-compose.yml. Этот базовый файл должен содержать базовые или статические параметры конфигурации, которые не изменяются в зависимости от среды. Например, eShopOnContainers имеет в качестве базового файла следующий файл docker-compose.yml.
+Вы начинаете с базового файла docker-compose.yml. Этот базовый файл должен содержать базовые или статические параметры конфигурации, которые не изменяются в зависимости от среды. Например, eShopOnContainers имеет в качестве базового файла следующий файл docker-compose.yml (упрощен путем уменьшения числа служб).
 
 ```yml
 #docker-compose.yml (Base)
-version: '3'
+version: '3.4'
 services:
   basket.api:
     image: eshop/basket.api:${TAG:-latest}
     build:
-      context: ./src/Services/Basket/Basket.API
-      dockerfile: Dockerfile    
+      context: .
+      dockerfile: src/Services/Basket/Basket.API/Dockerfile    
     depends_on:
       - basket.data
       - identity.api
@@ -219,8 +216,8 @@ services:
   catalog.api:
     image: eshop/catalog.api:${TAG:-latest}
     build:
-      context: ./src/Services/Catalog/Catalog.API
-      dockerfile: Dockerfile    
+      context: .
+      dockerfile: src/Services/Catalog/Catalog.API/Dockerfile    
     depends_on:
       - sql.data
       - rabbitmq
@@ -228,8 +225,8 @@ services:
   marketing.api:
     image: eshop/marketing.api:${TAG:-latest}
     build:
-      context: ./src/Services/Marketing/Marketing.API
-      dockerfile: Dockerfile    
+      context: .
+      dockerfile: src/Services/Marketing/Marketing.API/Dockerfile    
     depends_on:
       - sql.data
       - nosql.data
@@ -239,8 +236,8 @@ services:
   webmvc:
     image: eshop/webmvc:${TAG:-latest}
     build:
-      context: ./src/Web/WebMVC
-      dockerfile: Dockerfile    
+      context: .
+      dockerfile: src/Web/WebMVC/Dockerfile    
     depends_on:
       - catalog.api
       - ordering.api
@@ -280,7 +277,7 @@ services:
 
 ```yml
 #docker-compose.override.yml (Extended config for DEVELOPMENT env.)
-version: '3'
+version: '3.4'
 
 services: 
 # Simplified number of services here: 
@@ -308,7 +305,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
-      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5101/api/v1/catalog/items/[0]/pic/}   
+      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5202/api/v1/catalog/items/[0]/pic/}   
       - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
       - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
       - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}         
@@ -350,18 +347,16 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
-      - CatalogUrl=http://catalog.api
-      - OrderingUrl=http://ordering.api
-      - BasketUrl=http://basket.api
-      - LocationsUrl=http://locations.api
+      - PurchaseUrl=http://webshoppingapigw
       - IdentityUrl=http://10.0.75.1:5105
-      - MarketingUrl=http://marketing.api                                                    
+      - MarketingUrl=http://webmarketingapigw
       - CatalogUrlHC=http://catalog.api/hc
       - OrderingUrlHC=http://ordering.api/hc
-      - IdentityUrlHC=http://identity.api/hc     
+      - IdentityUrlHC=http://identity.api/hc
       - BasketUrlHC=http://basket.api/hc
       - MarketingUrlHC=http://marketing.api/hc
       - PaymentUrlHC=http://payment.api/hc
+      - SignalrHubUrl=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5202
       - UseCustomizationData=True
       - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
       - OrchestratorType=${ORCHESTRATOR_TYPE}
@@ -370,9 +365,8 @@ services:
       - "5100:80"
   sql.data:
     environment:
-      - MSSQL_SA_PASSWORD=Pass@word
+      - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
-      - MSSQL_PID=Developer
     ports:
       - "5433:1433"
   nosql.data:
@@ -390,7 +384,7 @@ services:
 
 В этом примере конфигурация переопределения для среды разработки представляет некоторые порты для узла, задает переменные среды с URL-адресами перенаправления, а также указывает строки подключения для среды разработки. Все эти параметры предназначены только для среды разработки.
 
-При выполнении команды `docker-compose up` (или запуске ее из Visual Studio) эта команда считывает переопределения автоматически, как если бы оба файла были объединены.
+При выполнении команды `docker-compose up` (или запуске ее из Visual Studio) эта команда считывает переопределения автоматически, как если бы оба файла были объединены.
 
 Предположим, что требуется другой файл Compose для рабочей среды, с другими значениями конфигурации, портами или строками подключения. Вы можете создать другой файл переопределения, например с именем `docker-compose.prod.yml`, содержащий другие параметры и переменные среды.  Этот файл может храниться в другом репозитории Git или управляться и защищаться другой группой.
 
@@ -404,7 +398,7 @@ docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
 
 #### <a name="using-environment-variables-in-docker-compose-files"></a>Использование переменных среды в файлах docker-compose
 
-Удобно, особенно в рабочих средах, иметь возможность получать сведения о конфигурации из переменных среды, как показано в предыдущих примерах. Ссылки на переменные среды в файлах docker-compose делаются с помощью синтаксиса \${MY\_VAR}. Следующая строка из файла docker-compose.prod.yml показывает, как ссылаться на значение переменной среды.
+Удобно, особенно в рабочих средах, иметь возможность получать сведения о конфигурации из переменных среды, как показано в предыдущих примерах. Вы можете сослаться на переменную среды в файлах docker-compose делаются с помощью синтаксиса ${MY\_VAR}. Следующая строка из файла docker-compose.prod.yml показывает, как ссылаться на значение переменной среды.
 
 ```yml
 IdentityUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5105
@@ -422,16 +416,16 @@ ESHOP_EXTERNAL_DNS_NAME_OR_IP=localhost
 ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 ```
 
-Для команды docker-compose необходимо, чтобы каждая строка в ENV-файле была в формате &lt;переменная&gt;=&lt;значение&gt;.
+Для команды docker-compose необходимо, чтобы каждая строка в ENV-файле была в формате \<переменная\>=\<значение\>.
 
 Обратите внимание, что значения, установленные в среде выполнения, всегда переопределяют значения, определенные в ENV-файле. Аналогичным образом значения, переданные с помощью аргументов командной строки, тоже переопределяют значения по умолчанию, заданные в ENV-файле.
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Общие сведения о Docker Compose**
+-   **Общие сведения о Docker Compose** <br/>
     [*https://docs.docker.com/compose/overview/*](https://docs.docker.com/compose/overview/)
 
--   **Несколько файлов Compose**
+-   **Несколько файлов Compose** <br/>
     [*https://docs.docker.com/compose/extends/\#multiple-compose-files*](https://docs.docker.com/compose/extends/#multiple-compose-files)
 
 ### <a name="building-optimized-aspnet-core-docker-images"></a>Создание оптимизированных образов Docker ASP.NET Core
@@ -440,112 +434,41 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 ```
 FROM microsoft/dotnet
-
 WORKDIR /app
-
 ENV ASPNETCORE_URLS http://+:80
-
 EXPOSE 80
-
 COPY . .
-
 RUN dotnet restore
-
 ENTRYPOINT ["dotnet", "run"]
 ```
 
 Такой Dockerfile будет работать. Тем не менее вы можете существенно оптимизировать ваши образы, особенно образы рабочей среды.
 
-В модели контейнера и микрослужб вы постоянно запускаете контейнеры. Обычно контейнеры используются таким образом, чтобы не перезапускать спящий контейнер, так как контейнер является одноразовым. Оркестраторы (такие как Docker Swarm, Kubernetes, DCOS и Azure Service Fabric) просто создают новые экземпляры образов. Это означает, что вам нужно будет выполнить оптимизацию путем предварительной компиляции приложения во время его сборки, чтобы ускорить процесс создания экземпляра. Когда контейнер запускается, он должен быть готов к выполнению. Не следует выполнять восстановление и компиляцию во время выполнения с помощью команд dotnet restore и dotnet build из dotnet CLI, как показано в нескольких записях блога о .NET Core и Docker.
+В модели контейнера и микрослужб вы постоянно запускаете контейнеры. Обычно контейнеры используются таким образом, чтобы не перезапускать спящий контейнер, так как контейнер является одноразовым. Оркестраторы (такие как Kubernetes и Azure Service Fabric) просто создают экземпляры образов. Это означает, что вам нужно будет выполнить оптимизацию путем предварительной компиляции приложения во время его сборки, чтобы ускорить процесс создания экземпляра. Когда контейнер запускается, он должен быть готов к выполнению. Не следует выполнять восстановление и компиляцию во время выполнения с помощью команд `dotnet restore` и `dotnet build` из dotnet CLI, как показано в нескольких записях блога о .NET Core и Docker.
 
-Команда .NET выполняет важнейшую работу, чтобы сделать .NET Core и ASP.NET Core платформой, оптимизированной для работы с контейнерами. .NET Core является не только облегченной платформой с небольшим объемом памяти; команда .NET работала над производительностью при запуске и создала несколько оптимизированных образов Docker, таких как образ [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/), доступный в [Центре Docker](https://hub.docker.com/r/microsoft/aspnetcore/), в сравнении с обычными образами [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) или [microsoft/nanoserver](https://github.com/dotnet/dotnet-docker/blob/master/1.0/nanoserver/runtime/Dockerfile). Образ [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) обеспечивает автоматическую настройку aspnetcore\_urls в порт 80 и кэш pre-ngend сборок; оба эти параметра приводят к ускорению запуска.
+Команда .NET выполняет важнейшую работу, чтобы сделать .NET Core и ASP.NET Core платформой, оптимизированной для работы с контейнерами. .NET Core является не только облегченной платформой с небольшим объемом памяти; команда разработчиков сконцентрировалась на оптимизированных образах Docker для трех основных сценариев и опубликовала их в реестре центра Docker по адресу <span class="underline">microsoft/dotnet</span>, начиная с версии 2.1:
+
+1.  **Разработка**: здесь приоритетной является возможность быстрой интеграции и отладки изменений, а размер вторичен.
+
+2.  **Сборка**: здесь приоритетным направлением является компиляция приложения, включая двоичные файлы и другие зависимости для их оптимизации.
+
+3.  **Рабочая среда**: здесь основное внимание уделяется быстрому развертыванию и запуску контейнеров, поэтому эти образы ограничены двоичными файлами и содержимым, необходимым для запуска приложения.
+
+Для достижения этой цели команда разработчиков .NET предоставляет три базовых варианта по адресу [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (в центре Docker):
+
+1.  **sdk**: для сценариев разработки и сборки.
+2.  **runtime**: для сценария рабочей среды.
+3.  **runtime-deps**: для сценария рабочей среды у [автономных приложений](https://docs.microsoft.com/dotnet/core/deploying/index#self-contained-deployments-scd).
+
+Образы среды выполнения также обеспечивают автоматическую настройку aspnetcore\_urls на порт 80 и кэш pre-ngend сборок, что позволяет ускорить запуск.
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Создание оптимизированных образов Docker в ASP.NET Core**
+-   **Создание оптимизированных образов Docker в ASP.NET Core** <br/>
     [*https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/*](https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/)
 
-### <a name="building-the-application-from-a-build-ci-container"></a>Сборка приложения из контейнера сборки (CI)
-
-Другим преимуществом Docker является возможность сборки приложения из предварительно настроенного контейнера, как показано на рисунке 8-13, так что не требуется создавать компьютер сборки или виртуальную машину для сборки приложения. Вы можете воспользоваться этим контейнером сборки или протестировать его, запустив его на компьютере разработки. Но еще интереснее то, что можно использовать один и тот же контейнер сборки из конвейера CI (непрерывной интеграции).
-
-![](./media/image14.png)
-
-**Рис. 8-13**. Контейнер сборки Docker, компилирующий двоичные файлы .NET 
-
-Для этого сценария мы предоставляем образ [microsoft/aspnetcore-build](https://hub.docker.com/r/microsoft/aspnetcore-build/), который можно использовать для компиляции и сборки приложений ASP.NET Core. Результат помещается в образ на основе образа [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/), который представляет собой оптимизированный образ среды выполнения, как указано выше.
-
-Образ aspnetcore-build содержит все необходимое для компиляции приложения ASP.NET Core, включая .NET Core, пакет SDK ASP.NET, npm, Bower, Gulp и т. д.
-
-Эти зависимости необходимы во время сборки. Но мы не хотим переносить их с приложением в среду выполнения, так как это сделает образ излишне большим. В приложении eShopOnContainers можно собрать приложение из контейнера, просто выполнив следующую команду docker-compose.
-
-```
-  docker-compose -f docker-compose.ci.build.yml up
-```
-
-На рисунке 8-14 показана эта команда, которая выполняется из командной строки.
-
-![](./media/image15.png)
-
-**Рис. 8-14**. Сборка приложения .NET из контейнера
-
-Как можно видеть, выполняется контейнер ci-build\_1. Это основывается на образе aspnetcore-build, чтобы можно было выполнять компиляцию и сборку всего приложения из этого контейнера, а не с ПК. Вот почему на самом деле сборка и компиляция проектов .NET Core выполняется в Linux — потому что этот контейнер выполняется на узле Docker Linux по умолчанию.
-
-Файл [docker-compose.ci.build.yml](https://github.com/dotnet/eShopOnContainers/blob/master/docker-compose.ci.build.yml) для этого образа (часть eShopOnContainers) содержит следующий код. Вы видите, что он запускает контейнер сборки с помощью образа [microsoft/aspnetcore-build](https://hub.docker.com/r/microsoft/aspnetcore-build/).
-
-```yml
-version: '3'
-
-services:
-
-  ci-build:
-
-    image: microsoft/aspnetcore-build:2.0
-
-    volumes:
-      - .:/src
-
-    working_dir: /src
-
-    command: /bin/bash -c "pushd ./src/Web/WebSPA && npm rebuild node-sass && popd && dotnet restore ./eShopOnContainers-ServicesAndWebApps.sln && dotnet publish ./eShopOnContainers-ServicesAndWebApps.sln -c Release -o ./obj/Docker/publish"
-
-```
-
-* Начиная с **.NET Core 2.0**, команда `dotnet restore` выполняется автоматически при выполнении команды `dotnet publish`.
-
-Когда контейнер сборки запустился и начал работать, он выполняет команды dotnet restore и dotnet publish пакета SDK .NET для всех проектов в решении, чтобы скомпилировать биты .NET. В данном случае, поскольку приложение eShopOnContainers также имеет SPA на основе TypeScript и Angular для клиентского кода, ему, в свою очередь, необходимо проверить зависимости JavaScript с помощью команды npm, но это действие не связано с битами .NET.
-
-Команда dotnet publish выполняет сборку и публикует скомпилированные выходные данные в каждой папке проекта в папку ../obj/Docker/publish, как показано на рисунке 8-15.
-
-![](./media/image16.png)
-
-**Рис. 8-15**. Двоичные файлы, созданные командой dotnet publish
-
-#### <a name="creating-the-docker-images-from-the-cli"></a>Создание образов Docker из CLI
-
-После публикации выходных данных приложения в связанных папках (в каждом проекте) следующий шаг заключается в фактическом создании образов Docker. Для этого используются команды docker-compose build и docker-compose up, как показано на рисунке 8-16.
-
-![](./media/image17.png)
-
-**Рис. 8-16**. Создание образов Docker и запуск контейнеров
-
-На рисунке 8-17 показано, как выполняется команда docker-compose build.
-
-![](./media/image18.png)
-
-**Рис. 8-17**. Создание образов Docker с помощью команды docker-compose build
-
-Различие между командами docker-compose build и docker-compose up состоит в том, что команда docker-compose up и создает, и запускает образы.
-
-При использовании Visual Studio все эти действия выполняются внутренним образом. Visual Studio компилирует приложение .NET, создает образы Docker и развертывает контейнеры в узле Docker. Visual Studio предлагает дополнительные функциональные возможности, такие как возможность отладки контейнеров, работающих в Docker, непосредственно из Visual Studio.
-
-Общий вывод заключается в том, что вы можете выполнять сборку приложения таким же образом, каким должен выполнять его сборку ваш конвейер CI/CD — из контейнера, а не с локального компьютера. После создания образов остается только запустить эти образы Docker с помощью команды docker-compose up.
-
-#### <a name="additional-resources"></a>Дополнительные ресурсы
-
--   **Создание битов в контейнере. Настройка решения eShopOnContainers в среде Windows CLI (dotnet CLI, Docker CLI и VS Code)**
-    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
-
+-   **Создание образов Docker для приложений .NET Core** <br/>
+    [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
 
 >[!div class="step-by-step"]
 [Назад](data-driven-crud-microservice.md)

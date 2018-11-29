@@ -6,41 +6,43 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: f8184b87fc62f378fe72138733f87de924da60f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3fb926683de90516bcf67d99026a0134d82cb683
+ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574568"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52296949"
 ---
 # <a name="delegates-and-lambdas"></a>Делегаты и лямбда-выражения
 
 Делегаты определяют тип, указывающий конкретную сигнатуру метода. Метод (статический или экземпляр), удовлетворяющий сигнатуре, можно присвоить переменной этого типа и затем вызвать напрямую (с соответствующими аргументами) или передать в качестве аргумента другому методу и затем вызвать. В следующем примере показано использование делегата.
 
 ```csharp
+using System;
+using System.Linq;
+
 public class Program
 {
+    public delegate string Reverse(string s);
 
-  public delegate string Reverse(string s);
+    static string ReverseString(string s)
+    {
+        return new string(s.Reverse().ToArray());
+    }
 
-  static string ReverseString(string s)
-  {
-      return new string(s.Reverse().ToArray());
-  }
+    static void Main(string[] args)
+    {
+        Reverse rev = ReverseString;
 
-  static void Main(string[] args)
-  {
-      Reverse rev = ReverseString;
-
-      Console.WriteLine(rev("a string"));
-  }
+        Console.WriteLine(rev("a string"));
+    }
 }
 ```
 
-*   В строке 4 мы создаем тип делегата для определенной сигнатуры. В данном случае это метод, принимающий и возвращающий строковый параметр.
-*   В строке 6 мы определяем реализацию делегата, указав метод с точно такой же сигнатурой.
-*   В строке 13 метод назначается типу, который соответствует делегату `Reverse`.
-*   Наконец, в строке 15 мы вызываем делегат, передав строку для обращения.
+* В строке `public delegate string Reverse(string s);` создается тип делегата для определенной сигнатуры. В данном случае это метод, принимающий и возвращающий строковый параметр.
+* Метод `static string ReverseString(string s)`, имеющий такую же сигнатуру, как и определенный тип делегата, реализует этот делегат.
+* Строка `Reverse rev = ReverseString;` показывает, что метод можно назначить переменной соответствующего типа делегата.
+* Строка `Console.WriteLine(rev("a string"));` показывает, как использовать переменную типа делегата для вызова этого делегата.
 
 Чтобы упростить процесс разработки, платформа .NET содержит набор типов делегата, которые программисты могут повторно использовать, не создавая новые. Это `Func<>`, `Action<>` и `Predicate<>`, которые можно использовать в различных участках API-интерфейсов .NET без необходимости определения новых типов делегата. Безусловно между ними существуют некоторые различия, которые легко определить по сигнатурам. Это связано с их назначением:
 
@@ -51,56 +53,60 @@ public class Program
 Теперь можно обратиться к приведенному выше примеру и переписать его, используя делегат `Func<>` вместо пользовательского типа. При этом работа программы не изменится.
 
 ```csharp
+using System;
+using System.Linq;
+
 public class Program
 {
+    static string ReverseString(string s)
+    {
+        return new string(s.Reverse().ToArray());
+    }
 
-  static string ReverseString(string s)
-  {
-      return new string(s.Reverse().ToArray());
-  }
+    static void Main(string[] args)
+    {
+        Func<string, string> rev = ReverseString;
 
-  static void Main(string[] args)
-  {
-      Func<string, string> rev = ReverseString;
-
-      Console.WriteLine(rev("a string"));
-  }
+        Console.WriteLine(rev("a string"));
+    }
 }
 ```
 
-В этом простом примере определение метода за пределами метода Main() может показаться излишним. Это вызвано тем, что в .NET Framework 2.0 введена концепция **анонимных делегатов**. С их помощью можно создавать "встроенные" делегаты без указания дополнительного типа или метода. Вы просто встраиваете определение делегата там, где это необходимо.
+В этом простом примере определение метода за пределами метода `Main` может показаться излишним. Это вызвано тем, что в .NET Framework 2.0 введена концепция **анонимных делегатов**. С их помощью можно создавать "встроенные" делегаты без указания дополнительного типа или метода. Вы просто встраиваете определение делегата там, где это необходимо.
 
 Например, мы собираемся использовать анонимный делегат, чтобы отфильтровать только четные числа из списка и вывести их на консоль.
 
 ```csharp
+using System;
+using System.Collections.Generic;
+
 public class Program
 {
-
-  public static void Main(string[] args)
-  {
-    List<int> list = new List<int>();
-
-    for (int i = 1; i <= 100; i++)
+    public static void Main(string[] args)
     {
-        list.Add(i);
-    }
+        List<int> list = new List<int>();
 
-    List<int> result = list.FindAll(
-      delegate(int no)
-      {
-          return (no%2 == 0);
-      }
-    );
+        for (int i = 1; i <= 100; i++)
+        {
+            list.Add(i);
+        }
 
-    foreach (var item in result)
-    {
-        Console.WriteLine(item);
+        List<int> result = list.FindAll(
+          delegate (int no)
+          {
+              return (no % 2 == 0);
+          }
+        );
+
+        foreach (var item in result)
+        {
+            Console.WriteLine(item);
+        }
     }
-  }
 }
 ```
 
-Обратите внимание на выделенные строки. Как видно, тело делегата представляет собой набор выражений, как в любом другом делегате. Но вместо использования отдельного определения мы описали его _напрямую_ в нашем вызове метода `FindAll()` с типом `List<T>`.
+Как видно, тело делегата представляет собой набор выражений, как в любом другом делегате. Но вместо использования отдельного определения мы описали его _напрямую_ в нашем вызове метода <xref:System.Collections.Generic.List%601.FindAll%2A?displayProperty=nameWithType>.
 
 Однако даже при таком подходе остается довольно много кода, от которого можно избавиться. Как раз для этого и могут пригодиться **лямбда-выражения**.
 
@@ -109,29 +115,31 @@ public class Program
 Поскольку лямбда-выражение представляет собой просто еще один способ указания делегата, можно переписать приведенный выше пример, чтобы использовать лямбда-выражение вместо анонимного делегата.
 
 ```csharp
+using System;
+using System.Collections.Generic;
+
 public class Program
 {
-
-  public static void Main(string[] args)
-  {
-    List<int> list = new List<int>();
-
-    for (int i = 1; i <= 100; i++)
+    public static void Main(string[] args)
     {
-        list.Add(i);
-    }
+        List<int> list = new List<int>();
 
-    List<int> result = list.FindAll(i => i % 2 == 0);
+        for (int i = 1; i <= 100; i++)
+        {
+            list.Add(i);
+        }
 
-    foreach (var item in result)
-    {
-        Console.WriteLine(item);
+        List<int> result = list.FindAll(i => i % 2 == 0);
+
+        foreach (var item in result)
+        {
+            Console.WriteLine(item);
+        }
     }
-  }
 }
 ```
 
-Если взглянуть на выделенные строки, можно увидеть, как выглядит лямбда-выражение. Повторим, что это просто **очень** удобный синтаксис для использования делегатов, сам принцип действия аналогичен анонимному делегату.
+В предыдущем примере используется лямбда-выражение `i => i % 2 == 0`. Повторим, что это просто **очень** удобный синтаксис для использования делегатов, сам принцип действия аналогичен анонимному делегату.
 
 Лямбда-выражения — это обычные делегаты, поэтому их без проблем можно использовать в качестве обработчика событий, как показано в следующем фрагменте кода.
 
