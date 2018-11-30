@@ -2,12 +2,12 @@
 title: Размеченные объединения (F#)
 description: Сведения об использовании F# размеченные объединения.
 ms.date: 05/16/2016
-ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: f833539f2e31ffc6db4182bdbd2088e6dc2bb2cc
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43788127"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52672251"
 ---
 # <a name="discriminated-unions"></a>Размеченные объединения
 
@@ -51,7 +51,7 @@ let prism = Prism(5., 2.0, height = 3.0)
 
 Этот код показывает, что вы можете использовать именованные поля в инициализации или можно полагаться на упорядочивание полей в объявлении и просто предоставить значения для каждого поля, в свою очередь. Вызов конструктора для `rect` в предыдущем коде использует именованные поля, но вызов конструктора для `circ` использует порядок. Вы можете совместно использовать упорядоченные и именованные поля, как конструирование `prism`.
 
-`option` Тип — это простое размеченное объединение из основной библиотеки F#. `option` Тип объявляется следующим образом.
+`option` Тип — это простое размеченное объединение в F# основной библиотеки. `option` Тип объявляется следующим образом.
 
 ```fsharp
 // The option type is a discriminated union.
@@ -84,7 +84,7 @@ let getShapeHeight shape =
 
 ### <a name="unwrapping-discriminated-unions"></a>Распаковки размеченные объединения
 
-В F# размеченные объединения, часто используются в модели предметной области для упаковки одного типа. Это можно легко извлечь базового значения с помощью сопоставления шаблонов, а также. Не нужно использовать выражение match для одного объекта:
+В F# размеченные объединения часто используются в модели предметной области для упаковки одного типа. Это можно легко извлечь базового значения с помощью сопоставления шаблонов, а также. Не нужно использовать выражение match для одного объекта:
 
 ```fsharp
 let ([UnionCaseName] [values]) = [UnionValue]
@@ -95,15 +95,23 @@ let ([UnionCaseName] [values]) = [UnionValue]
 ```fsharp
 type ShaderProgram = | ShaderProgram of id:int
 
-let someMethodUsingShaderProgram shaderProgram =
+let someFunctionUsingShaderProgram shaderProgram =
     let (ShaderProgram id) = shaderProgram
     // Use the unwrapped value
-    ..
+    ...
+```
+
+Сопоставление шаблонов также допускается непосредственно в виде параметров, поэтому можно снять оболочку с одного варианта:
+
+```fsharp
+let someFunctionUsingShaderProgram (ShaderProgram id) =
+    // Use the unwrapped value
+    ...
 ```
 
 ## <a name="struct-discriminated-unions"></a>Размеченные объединения
 
-Начиная с F# 4.1, может также представлять размеченные объединения как структуры.  Это делается с помощью `[<Struct>]` атрибута.
+Начиная с F# 4.1, может также представлять размеченные объединения, как структуры.  Это делается с помощью `[<Struct>]` атрибута.
 
 ```fsharp
 [<Struct>]

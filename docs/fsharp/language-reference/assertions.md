@@ -1,13 +1,13 @@
 ---
 title: Проверочные утверждения (F#)
-description: Узнайте, как использовать выражение «assert» как средство отладки для тестирования выражений в языке F#.
+description: Узнайте, как использовать выражение «assert» как средство отладки для тестирования выражения в F# языка программирования.
 ms.date: 05/16/2016
-ms.openlocfilehash: 85b1e839bfd19bada48b7f1821d15ddd8fa77754
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: fbaf038f08cfc74e6cb262c110322dc586813c0c
+ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48842480"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52671928"
 ---
 # <a name="assertions"></a>Утверждения
 
@@ -27,10 +27,10 @@ assert condition
 
 Проверка утверждений действует только при компиляции в режиме отладки. то есть если константа `DEBUG` определен. В системе проектов, по умолчанию `DEBUG` констант определена в конфигурации отладки, но не в конфигурации выпуска.
 
-Сбой проверочного утверждения не может быть перехвачено с помощью обработки исключений F#.
+Сбой проверочного утверждения не может быть перехвачено с помощью F# обработки исключений.
 
->[!NOTE]
-`assert` Функции разрешается в <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.
+> [!NOTE]
+> `assert` Функции разрешается в <xref:System.Diagnostics.Debug.Assert*?displayProperty=nameWithType>.
 
 ## <a name="example"></a>Пример
 
