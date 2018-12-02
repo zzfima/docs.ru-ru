@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: a2fe2c325377ec49f89199ad2e36c950ebab6a24
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 17dabb143a1948cbcfa748b4c3bbcff5a57d2c24
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50757352"
+ms.lasthandoff: 12/02/2018
+ms.locfileid: "52743273"
 ---
 # <a name="monolithic-applications"></a>Монолитные приложения
 
@@ -69,7 +69,6 @@ ms.locfileid: "50757352"
 
 Рис. 4-4 также показано, что поток публикации отправляет образ через реестр контейнеров, который может быть реестр контейнеров Azure (реестр практически к вашим развертываниям в Azure и защищенных с помощью групп Azure Active Directory и учетных записей) или другой реестр Docker как и реестры Docker Hub или локально.
 
-
 >[!div class="step-by-step"]
-[Назад](common-container-design-principles.md)
-[Вперед](state-and-data-in-docker-applications.md)
+>[Назад](common-container-design-principles.md)
+>[Вперед](state-and-data-in-docker-applications.md)
