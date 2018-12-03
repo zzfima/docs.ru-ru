@@ -4,12 +4,12 @@ description: Узнайте, как сделать выбор между тра�
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 40b17d07b008c2a3a9457bffc26b612e6b5c9fe5
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: abeee719c15263fea04a3bcf80a6e41c43b640d2
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404153"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745307"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Выбор между традиционными веб-приложениями и одностраничными приложениями
 
@@ -73,7 +73,7 @@ ms.locfileid: "37404153"
 > - **Angular**  
 >   <https://angular.io>
 > - **Сравнение платформ JavaScript**  
->   <https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/>
+>   <https://jsreport.io/the-ultimate-guide-to-javascript-frameworks/>
 
 **В вашем приложении должен предоставляться API для других внутренних или общедоступных клиентов**
 
@@ -91,5 +91,5 @@ ms.locfileid: "37404153"
 | Сложный полнофункциональный пользовательский интерфейс            | **Ограниченное**             | **Хорошо подходит**             |
 
 >[!div class="step-by-step"]
-[Назад](modern-web-applications-characteristics.md)
-[Вперед](architectural-principles.md)
+>[Назад](modern-web-applications-characteristics.md)
+>[Вперед](architectural-principles.md)
