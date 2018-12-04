@@ -1,15 +1,15 @@
 ---
 title: Устойчивость и высокий уровень доступности в микрослужбах
-description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Устойчивость и высокий уровень доступности в микрослужбах
+description: Микрослужбы должны разрабатываться таким образом, чтобы выдерживать временные сбои сети и зависимостей и сохранять устойчивость для достижения высокого уровня доступности.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 19657c35e6640558526bf390b81eb08220821a4c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: cbfff525c977c8dc11503a9f230c3ede6f0d6f37
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106321"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52745333"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Устойчивость и высокий уровень доступности в микрослужбах
 
@@ -19,7 +19,7 @@ ms.locfileid: "37106321"
 
 Проблемы устойчивости актуальны и для других ситуаций, например, если сбой происходит во время обновления приложения. Микрослужба, работающая с системой развертывания, должна определить, может ли она перейти к новой версии или лучше откатиться до предыдущей версии для сохранения состояния. Необходимо подумать, достаточно ли доступных компьютеров для обновления или как восстановить предыдущие версии микрослужбы. Микрослужба должна передавать сведения о своей работоспособности, чтобы все приложение и оркестратор могли принимать эти решения.
 
-Кроме того,устойчивость связана с поведением облачных систем. Как уже упоминалось, облачная система должна принимать сбои и пытаться восстановиться автоматически. Например, в случае сбоя сети или контейнера клиентские приложения или клиентские службы должны иметь стратегию для повторной отправки сообщений или запросов, поскольку, как правило, сбои в облаке являются частичными. В этом руководстве в разделе [Реализации устойчивых приложений](#implementing_resilient_apps) рассказывается, как обрабатывать частичные сбои. Там описываются такие методы, как повторная попытка с экспоненциальной задержкой или шаблон размыкателя цепи в .NET Core с использованием библиотек, например [Polly](https://github.com/App-vNext/Polly), где содержится целый ряд политик для обработки таких сбоев.
+Кроме того,устойчивость связана с поведением облачных систем. Как уже упоминалось, облачная система должна принимать сбои и пытаться восстановиться автоматически. Например, в случае сбоя сети или контейнера клиентские приложения или клиентские службы должны иметь стратегию для повторной отправки сообщений или запросов, поскольку, как правило, сбои в облаке являются частичными. В этом руководстве в разделе [Реализации устойчивых приложений](../implement-resilient-applications/index.md) рассказывается, как обрабатывать частичные сбои. Там описываются такие методы, как повторная попытка с экспоненциальной задержкой или шаблон размыкателя цепи в .NET Core с использованием библиотек, например [Polly](https://github.com/App-vNext/Polly), где содержится целый ряд политик для обработки таких сбоев.
 
 ## <a name="health-management-and-diagnostics-in-microservices"></a>Управление работоспособностью и диагностика микрослужб
 
@@ -29,7 +29,12 @@ ms.locfileid: "37106321"
 
 Работоспособность отличается от диагностики. Работоспособность связана с отчетами микрослужбы о своем текущем состоянии для принятия необходимых мер. Хороший пример — работа с механизмами обновления и развертывания для поддержания доступности. И хотя служба может утратить работоспособность в результате аварийного завершения процесса или перезагрузки компьютера, она по-прежнему может сохранять свою функциональность. Вы только усугубите ситуацию, если выполните обновление. Рекомендуется сначала провести расследование и дать микрослужбе время на восстановление. События работоспособности от микрослужбы помогают принимать обоснованные решения и, по сути, создавать самовосстанавливающиеся службы.
 
-В разделе "Выполнение проверок работоспособности в службах ASP.NET Core" объясняется, как использовать библиотеку ASP.NET HealthChecks в микрослужбах, чтобы они сообщали о своем состоянии службе мониторинга и можно было принять необходимые меры.
+В разделе [Выполнение проверок работоспособности в службах ASP.NET Core](../implement-resilient-applications/monitor-app-health.md#implementing-health-checks-in-aspnet-core-services) объясняется, как использовать библиотеку ASP.NET HealthChecks в микрослужбах, чтобы они сообщали о своем состоянии службе мониторинга и можно было принять необходимые меры.
+
+Кроме того, вы можете использовать отличную библиотеку открытого исходного кода под названием Beat Pulse, доступную на [GitHub](https://github.com/Xabaril/BeatPulse) и в качестве [пакета NuGet](https://www.nuget.org/packages/BeatPulse/). Эта библиотека также выполняет проверки работоспособности и обрабатывает два вида проверок:
+
+- **Жизнеспособность**: проверяет, что микрослужбы находятся в активном состоянии, то есть могут принимать запросы и отвечать. 
+- **Готовность**: проверяет готовность зависимостей микрослужбы (база данных, службы очередей, т. д.), чтобы микрослужба выполняла поставленные задачи. 
 
 ### <a name="using-diagnostics-and-logs-event-streams"></a>Использование потоков диагностики и записи событий
 
@@ -37,13 +42,13 @@ ms.locfileid: "37106321"
 
 В монолитных серверных приложениях можно просто записывать журналы в файл на диске (файл журнала), а затем анализировать его с помощью любого инструмента. Поскольку приложение выполняется на фиксированном сервере или виртуальной машине, анализировать последовательность событий обычно не слишком сложно. Но в распределенных приложениях, где несколько служб выполняется на многих узлах в кластере оркестратора, сопоставить распределенные события бывает непросто.
 
-Приложение на основе микрослужб не должно пытаться самостоятельно сохранить поток вывода событий или файлов журнала или хотя бы управлять маршрутизацией событий в центральное хранилище. Оно должно быть прозрачным, то есть каждый процесс должен просто записывать поток события в стандартный поток вывода, который будет поступать в инфраструктуру среды выполнения, где оно запущено. Пример маршрутизатора потока событий — [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), который собирает потоки событий из нескольких источников и публикует их в систему вывода. Это может быть стандартный поток вывода для среды разработки или облачных систем, например [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (для локальных приложений) и [система диагностики Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Существуют надежные сторонние платформы и инструменты анализа журналов, которые могут выполнять поиск, выводить предупреждения, составлять отчеты и отслеживать журналы, даже в режиме реального времени, например [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Приложение на основе микрослужб не должно пытаться самостоятельно сохранить поток вывода событий или файлов журнала или хотя бы управлять маршрутизацией событий в центральное хранилище. Оно должно быть прозрачным, то есть каждый процесс должен просто записывать поток событий в стандартный поток вывода, который будет поступать в инфраструктуру среды выполнения, где оно запущено. Пример маршрутизатора потока событий — [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), который собирает потоки событий из нескольких источников и публикует их в систему вывода. Это может быть стандартный поток вывода для среды разработки или облачных систем, например [Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (для локальных приложений) и [система диагностики Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Существуют надежные сторонние платформы и инструменты анализа журналов, которые могут выполнять поиск, выводить предупреждения, составлять отчеты и отслеживать журналы, даже в режиме реального времени, например [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Оркестраторы, управляющие сведениями о работоспособности и диагностике
 
 При создании приложения на основе микрослужб вы имеете дело со сложной структурой. Разумеется, с одной микрослужбой работать просто, но все усложняется при наличии десятков и сотен типов и тысяч экземпляров микрослужб. Недостаточно просто создать архитектуру микрослужб — необходимо обеспечить высокую доступность, адресуемость, устойчивость, работоспособность и диагностику, если вы хотите получить стабильную и слаженную систему.
 
-![](./media/image22.png)
+![Оркестраторы предоставляют вспомогательную платформу для запуска микрослужб.](./media/image22.png)
 
 **Рис. 4-22**. Платформа микрослужб необходима для управления работоспособностью приложения
 
@@ -53,30 +58,27 @@ ms.locfileid: "37106321"
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **The Twelve-Factor App. XI. Logs: Treat logs as event streams**
-    [*https://12factor.net/logs*](https://12factor.net/logs)
+- **The Twelve-Factor App. XI. Журналы. Журналы потоков как потоки событий** \
+  [*https://12factor.net/logs*](https://12factor.net/logs)
 
--   **Microsoft Diagnostic EventFlow Library.** Репозиторий GitHub.
+- Репозиторий GitHub **Microsoft Diagnostic EventFlow Library**. \
+  [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
 
-    [*https://github.com/Azure/diagnostics-eventflow*](https://github.com/Azure/diagnostics-eventflow)
+- **Система диагностики Azure** \
+  [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
 
--   **Система диагностики Azure**
-    [*https://docs.microsoft.com/azure/azure-diagnostics*](https://docs.microsoft.com/azure/azure-diagnostics)
+- **Подключение компьютеров Windows к службе Log Analytics в Azure** \
+  [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **Подключение компьютеров Windows к службе Log Analytics в Azure**
-    [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+- **Запись нужных данных: использование блока приложения семантического ведения журнала** \
+  [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
--   **Logging What You Mean: Using the Semantic Logging Application Block**
-    [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
+- Официальный сайт **Splunk**. \
+  [*https://www.splunk.com/*](https://www.splunk.com/)
 
--   **Splunk.** Официальный сайт
-    [*https://www.splunk.com/*](https://www.splunk.com/)
-
--   **EventSource Class**. Интерфейс API для трассировки событий Windows [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
-
-
-
+- **EventSource Class** Интерфейс API для трассировки событий Windows (ETW) \
+  [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource)
 
 >[!div class="step-by-step"]
-[Назад](microservice-based-composite-ui-shape-layout.md)
-[Вперед](scalable-available-multi-container-microservice-applications.md)
+>[Назад](microservice-based-composite-ui-shape-layout.md)
+>[Вперед](scalable-available-multi-container-microservice-applications.md)
