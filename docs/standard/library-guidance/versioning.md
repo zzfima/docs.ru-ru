@@ -4,12 +4,12 @@ description: Рекомендации по использованию систе
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: f95c8ade1f91af5c13184b839b327c9397c6fe5a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187862"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144563"
 ---
 # <a name="versioning"></a>Управление версиями
 
@@ -35,7 +35,7 @@ ms.locfileid: "50187862"
 
 Так как версия пакета NuGet встречается разработчикам чаще всего, мы рекомендуем обновлять ее с использованием [Семантического версионирования](https://semver.org/) (SemVer). SemVer указывает на значимость изменений, реализованных в очередном выпуске, помогая разработчикам правильно выбрать версию для использования. Например, переход от версии `1.0` к `2.0` указывает на наличие потенциальных критических изменений.
 
-**✔️ ДОПУСТИМО.** Попробуйте использовать [SemVer 2.0.0](https://semver.org/) для управления версиями пакета NuGet.
+**✔️ CONSIDER** Использование [SemVer 2.0.0](https://semver.org/) для управления версиями пакета NuGet.
 
 **✔️ РЕКОМЕНДУЕТСЯ.** Используйте версию пакета NuGet в общедоступной документации, так как именно этот номер версии пользователи будут видеть чаще всего.
 
@@ -97,5 +97,5 @@ ms.locfileid: "50187862"
 > Разрешите SourceLink автоматически создавать этот номер версии из метаданных NuGet и системы управления версиями.
 
 >[!div class="step-by-step"]
-[Назад](./publish-nuget-package.md)
-[Вперед](./breaking-changes.md)
+>[Назад](publish-nuget-package.md)
+>[Вперед](breaking-changes.md)

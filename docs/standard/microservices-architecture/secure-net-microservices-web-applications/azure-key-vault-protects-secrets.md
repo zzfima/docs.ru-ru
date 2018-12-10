@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 5738b81c90c886aff48451742881807dc09a9ff9
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cbe893dcdd71f0ce8bf8a26a8502d6c0b3a0dedb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863991"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151152"
 ---
 # <a name="using-azure-key-vault-to-protect-secrets-at-production-time"></a>Использование Azure Key Vault для защиты секретов в рабочей среде
 
@@ -75,5 +75,5 @@ var kvClient = new KeyVaultClient(new KeyVaultClient.AuthenticationCallback(asyn
     [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
 
 >[!div class="step-by-step"]
-[Назад](developer-app-secrets-storage.md)
-[Вперед](../key-takeaways.md)
+>[Назад](developer-app-secrets-storage.md)
+>[Вперед](../key-takeaways.md)

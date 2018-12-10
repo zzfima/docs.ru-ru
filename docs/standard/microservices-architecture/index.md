@@ -4,12 +4,12 @@ description: 'Микрослужбы .NET: архитектура контей�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 7113a229726368a65f4372b14c28da1165c22eee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8304e4d0b06e7137c42e669191c4e9f0dd946dbb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193920"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152686"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>Микрослужбы .NET: архитектура контейнерных приложений .NET
 
@@ -179,6 +179,5 @@ Mac и macOS являются товарными знаками Apple Inc.
 
 Все другие наименования и логотипы являются собственностью своих законных владельцев.
 
-
 >[!div class="step-by-step"]
-[Вперед](container-docker-introduction/index.md)
+>[Вперед](container-docker-introduction/index.md)

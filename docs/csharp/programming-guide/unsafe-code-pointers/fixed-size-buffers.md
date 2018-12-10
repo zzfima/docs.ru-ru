@@ -6,11 +6,11 @@ helpviewer_keywords:
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
 ms.openlocfilehash: 134a219acd02caa2b16c5a6e8716c3245579ecca
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744006"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148521"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>Буферы фиксированного размера (Руководство по программированию на C#)
 
@@ -32,7 +32,7 @@ private fixed char name[30];
 
 [!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
 
-Размер массива из 128 элементов `char` составляет 256 байт. В буферах типа [char](../../language-reference/keywords/char.md) фиксированного размера на один символ всегда приходится два байта независимо от кодировки. Это справедливо даже в том случае, когда буферы char маршалируются в методы API или структуры с `CharSet = CharSet.Auto` или `CharSet = CharSet.Ansi`. Дополнительные сведения см. в разделе <xref:System.Runtime.InteropServices.CharSet>.
+Размер массива из 128 элементов `char` составляет 256 байт. В буферах типа [char](../../language-reference/keywords/char.md) фиксированного размера на один символ всегда приходится два байта независимо от кодировки. Это справедливо даже в том случае, когда буферы char маршалируются в методы API или структуры с `CharSet = CharSet.Auto` или `CharSet = CharSet.Ansi`. Для получения дополнительной информации см. <xref:System.Runtime.InteropServices.CharSet>.
 
 В предыдущем примере демонстрировался доступ к полям `fixed` без закрепления в памяти, доступный в C#, начиная с версии 7.3.
 

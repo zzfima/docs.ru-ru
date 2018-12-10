@@ -4,12 +4,12 @@ description: Общие сведения о различиях между лог
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: fe3833a4b65317e2ebbeb562e19b473ff0374ddd
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: e8ed375899637d06db8eb9b12a0e1cb0c05591f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296130"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129926"
 ---
 # <a name="logical-architecture-versus-physical-architecture"></a>Логическая и физическая архитектура
 
@@ -36,5 +36,5 @@ ms.locfileid: "52296130"
 Короче говоря, логическая архитектура микрослужб не всегда должна совпадать с архитектурой физического развертывания. Каждый раз, когда в этом руководстве упоминается микрослужба, имеется в виду бизнес-микрослужба или логическая микрослужба, которой могут соответствовать одна или несколько (физических) служб. В большинстве случаев это будет одна служба, но их может быть и больше.
 
 >[!div class="step-by-step"]
-[Назад](data-sovereignty-per-microservice.md)
-[Вперед](distributed-data-management.md)
+>[Назад](data-sovereignty-per-microservice.md)
+>[Вперед](distributed-data-management.md)

@@ -4,12 +4,12 @@ description: Узнайте, как запускать существующее 
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: bf21357efc234ea99836b190ce34c70f2644ea6a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 379e0814d7d254935ef23a483d5e0f9163babcd1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200578"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145284"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Запуск консольных приложений в контейнерах Windows
 
@@ -59,7 +59,7 @@ ms.locfileid: "50200578"
 
 В вызове `Invoke-MSBuild` `OutputPath` имеет значение **publish**, а `Configuration` — значение **Release**. 
 
-```
+```powershell
 function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
     Invoke-Expression "$MSBuildPath $MSBuildParameters"
 }
@@ -133,7 +133,7 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 
 Чтобы запустить его, откройте PowerShell и выполните следующую команду:
 
-```
+```powershell
 .\run.ps1 "Is this easy or what?"
 ```
 

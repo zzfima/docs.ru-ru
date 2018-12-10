@@ -3,12 +3,12 @@ title: Структуры в C#. Краткий обзор языка C#
 description: Основная информация о типах значений C# под названием структуры
 ms.date: 08/10/2016
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 2b1870713b488f706f5f3a54413461052173bab6
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 6b165dd040213b33f91d1baf1b0fb4909101666d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49323101"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53142740"
 ---
 # <a name="structs"></a>Структуры
 
@@ -35,5 +35,5 @@ ms.locfileid: "49323101"
 Предыдущий пример демонстрирует два ограничения, действующие для структур. Во-первых, копирование структуры целиком обычно менее эффективно, чем копирование ссылки на объект, поэтому присваивание и передача в качестве параметра потребует больше затрат для структур, чем для ссылочных типов. Во-вторых, вы не можете создавать ссылки на структуры (за исключением параметров `in`, `ref` и `out`), что в некоторых ситуациях мешает их применять.
 
 >[!div class="step-by-step"]
-[Назад](classes-and-objects.md)
-[Вперед](arrays.md)
+>[Назад](classes-and-objects.md)
+>[Вперед](arrays.md)

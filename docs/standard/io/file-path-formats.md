@@ -2,18 +2,21 @@
 title: Форматы путей к файлам в системах Windows
 ms.date: 06/28/2018
 ms.technology: dotnet-standard
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b79ff1991f1d9b803b0c35b4ae9565f70de0b56
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: 1ac96ac86fb3ebf35af9176a025f0a5f71451f88
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296832"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144862"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Форматы путей к файлам в системах Windows
 
@@ -203,30 +206,14 @@ UNC-пути всегда должны быть полными. Они могу�
 ```csharp
 Directory.Create("TeStDiReCtOrY");
 ```
+
+```vb
+Directory.Create("TeStDiReCtOrY")
+```
+
 создает каталог с именем TeStDiReCtOrY. Если переименовать каталог или файл так, чтобы изменился регистр символов, в имени будет отражен регистр, используемый в момент переименования. Например, следующий код переименовывает файл test.txt в Test.txt:
 
-```csharp
-using System;
-using System.IO;
-
-class Example
-{
-   public static void Main()
-   {
-      var fi = new FileInfo(@".\test.txt");
-      fi.MoveTo(@".\Test.txt");
-   }
-}
-``` 
-```vb
-Imports System.IO
-
-Module Example
-   Public Sub Main()
-      Dim fi As New FileInfo(".\test.txt")
-      fi.MoveTo(".\Test.txt")
-   End Sub
-End Module
-```
+[!code-csharp[case-and-renaming](~/samples/snippets/standard/io/file-names/cs/rename.cs)]
+[!code-vb[case-and-renaming](~/samples/snippets/standard/io/file-names/vb/rename.vb)]
 
 Тем не менее при сравнении имен каталогов и файлов регистр символов не учитывается. Если выполнить поиск файла с именем "test.txt", API файловой системы .NET будут игнорировать регистр символов при сравнении. Таким образом, при поиске файла "test.txt" совпадения будут возвращены для файлов Test.txt, TEST.TXT, test.TXT, а также любых других их вариантов с различным сочетанием букв в верхнем и нижнем регистре.

@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: ac82f6d506213614c7a4079e0f55f798f26a6550
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ba15258be8caa1a5ed800cef0ebe832aa7328252
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874407"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146122"
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Стратегии для обработки частичного сбоя
 
@@ -44,7 +44,6 @@ ms.locfileid: "37874407"
 -   **Обработка временных сбоев**
     <https://docs.microsoft.com/azure/architecture/best-practices/transient-faults>
 
-
 >[!div class="step-by-step"]
-[Назад](handle-partial-failure.md)
-[Вперед](implement-retries-exponential-backoff.md)
+>[Назад](handle-partial-failure.md)
+>[Вперед](implement-retries-exponential-backoff.md)

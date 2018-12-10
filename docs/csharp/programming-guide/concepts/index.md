@@ -3,11 +3,11 @@ title: Основные понятия программирования (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
 ms.openlocfilehash: 216b23a30e8b1d58777fbccbf2956ae91534951b
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296572"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143198"
 ---
 # <a name="programming-concepts-c"></a>Основные понятия программирования (C#)
 Этот раздел описывает концепции программирования на языке C#.  

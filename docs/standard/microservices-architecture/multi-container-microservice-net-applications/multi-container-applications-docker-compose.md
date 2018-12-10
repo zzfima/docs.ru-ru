@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 9ce8d64dbd481d30c6687b8747b2091733ea76db
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.openlocfilehash: dc9149cb1a17e3af66abd995fd2a2196109e0e05
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297183"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145258"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Определение многоконтейнерного приложения с помощью docker-compose.yml 
 
@@ -86,7 +86,7 @@ services:
 
 Корневой ключ в этом файле — services. Под этим ключом определяются службы, которые требуется развернуть и запустить при выполнении команды `docker-compose up` или при развертывании из Visual Studio с помощью этого файла docker-compose.yml. В данном случае в файле docker-compose.yml определено несколько служб, как показано в следующей таблице.
 
-| Имя службы | Описание: |
+| Имя службы | Описание |
 |--------------|-------------|
 | webmvc       | Контейнер, включающий приложение MVC ASP.NET Core и использующий микрослужбы из C\# на стороне сервера.|
 | catalog.api  | Контейнер, включающий микрослужбу Catalog веб-API ASP.NET Core. |
@@ -471,5 +471,5 @@ ENTRYPOINT ["dotnet", "run"]
     [*https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/en-us/dotnet/core/docker/building-net-docker-images)
 
 >[!div class="step-by-step"]
-[Назад](data-driven-crud-microservice.md)
-[Вперед](database-server-container.md)
+>[Назад](data-driven-crud-microservice.md)
+>[Вперед](database-server-container.md)

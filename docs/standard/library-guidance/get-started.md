@@ -4,12 +4,12 @@ description: Начало работы по созданию библиотек 
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: 6377e3fe606bf7603b418decdd0e3f9d2de6a510
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 05466de1469fc765570b8250301e8404cd5df173
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201247"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145729"
 ---
 # <a name="get-started"></a>Начало работы
 
@@ -46,5 +46,5 @@ SourceLink является отличным средством, которое 
 При разработке библиотеки .NET очень важно сохранять правильный баланс между стабильностью для существующих пользователей и возможностью реализации новых функций. Узнайте, какие бывают виды критических изменений и как правильно добавлять новые функции с сохранением обратной совместимости.
 
 >[!div class="step-by-step"]
-[Назад](./index.md)
-[Вперед](./cross-platform-targeting.md)
+>[Назад](index.md)
+>[Вперед](cross-platform-targeting.md)

@@ -1,15 +1,13 @@
 ---
 title: Команда dotnet help — CLI .NET Core
 description: Команда dotnet help выводит более подробную документацию из Интернета для указанной команды.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: ed152717e32ffb294f5d5bd8e5eb74d55e33e506
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 12/04/2018
+ms.openlocfilehash: 60d1cc706ca5c78fa3be877bd679888181213e88
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696602"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152179"
 ---
 # <a name="dotnet-help-reference"></a>Справочник по команде dotnet help
 
@@ -23,24 +21,26 @@ ms.locfileid: "34696602"
 
 `dotnet help <COMMAND_NAME> [-h|--help]`
 
-## <a name="description"></a>Описание:
+## <a name="description"></a>Описание
 
 Команда `dotnet help` открывает страницу сайта docs.microsoft.com с подробной справочной информацией об указанной команде.
 
 ## <a name="arguments"></a>Аргументы
 
-`COMMAND_NAME`
+* **`COMMAND_NAME`**
 
-Имя команды интерфейса командной строки .NET Core. Список допустимых команд интерфейса командной строки см. в разделе [Команды CLI](index.md#cli-commands).
+  Имя команды интерфейса командной строки .NET Core. Список допустимых команд интерфейса командной строки см. в разделе [Команды CLI](index.md#cli-commands).
 
 ## <a name="options"></a>Параметры
 
-`-h|--help`
+* **`-h|--help`**
 
-Выводит краткую справку по команде.
+  Выводит краткую справку по команде.
 
 ## <a name="examples"></a>Примеры
 
-Открывает страницу документации по команде[dotnet new](dotnet-new.md):
+* Открывает страницу документации по команде[dotnet new](dotnet-new.md):
 
-`dotnet help new`
+  ```console
+  dotnet help new
+  ```

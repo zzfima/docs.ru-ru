@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Visual C#, C# language specification
 - language specification [C#]
 ms.assetid: e5d5a5cc-636b-4bff-b9c8-a8edc6207c22
-ms.openlocfilehash: 976282ab51ec3e9990161abf2dd089798bd949dd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0a108e9e625fed3801c283c84a58ea0b503101ff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529878"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147968"
 ---
 # <a name="c-60-draft-language-specification"></a>Предварительная спецификация C# 6.0
 
 Спецификация C# — это нормативный источник, где описываются синтаксис и возможности использования C#. Она содержит подробные сведения обо всех аспектах языка, включая многие моменты, которые не раскрываются в документации по C#.
 
-Версия 5.0 спецификации выпущена в декабре 2017 г. как [Стандарт ECMA-334, 5-й выпуск](https://www.ecma-international.org/publications/files/ECMA-ST/Ecma-334.pdf).
+Версия 5.0 спецификации выпущена в декабре 2017 г. как [Стандарт ECMA-334, 5-й выпуск](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf).
 
 Версия спецификации 6.0 не была утверждена как стандартная. Этот сайт содержит [*предварительную* спецификацию C# 6.0](../../../../_csharplang/spec/introduction.md). Она создана на основе файлов Markdown, содержащихся в [репозитории dotnet/csharplang](https://github.com/dotnet/csharplang/blob/master/spec/README.md) на GitHub.
 
@@ -31,4 +31,4 @@ ms.locfileid: "43529878"
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 
 >[!div class="step-by-step"]
-[Вперед](../../../../_csharplang/spec/introduction.md)
+>[Вперед](../../../../_csharplang/spec/introduction.md)

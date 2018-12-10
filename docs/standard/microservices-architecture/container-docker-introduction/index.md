@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: bc99bbfc3adee4cdc7008a91f42659ebcaa7a1b1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: cf86640456af03d4c44f537fe1ff3282521f2200
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45658435"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147955"
 ---
 # <a name="introduction-to-containers-and-docker"></a>Общие сведения о контейнерах и Docker
 
@@ -29,7 +29,6 @@ ms.locfileid: "45658435"
 
 Иными словами, контейнеры предоставляют такие преимущества, как изоляция, переносимость, гибкость, масштабируемость и контроль, на протяжении всего жизненного цикла приложения. Самым важным преимуществом является изоляция среды разработки от рабочей среды.
 
-
 >[!div class="step-by-step"]
-[Назад](../index.md)
-[Вперед](docker-defined.md)
+>[Назад](../index.md)
+>[Вперед](docker-defined.md)

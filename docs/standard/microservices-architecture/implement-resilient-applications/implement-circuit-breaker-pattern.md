@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 08467184f40611888a05c3aa1fa4783b73c6b8ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453156"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147272"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>Реализация шаблона размыкателя цепи
 
@@ -146,14 +146,11 @@ public class CartController : Controller
 
 Наконец, еще одной возможностью для `CircuitBreakerPolicy` является использование методов `Isolate` (размыкает цепь и сохраняет ее в таком состоянии) и `Reset` (снова замыкает цепь). Таким образом, можно создать служебную конечную точку HTTP, которая напрямую вызывает методы Isolate и Reset политики.  Такую конечную точку HTTP с надлежащей защитой можно также использовать в рабочей среде для временной изоляции подчиненной системы, например, если ее необходимо обновить. Кроме того, с ее помощью можно размыкать цепь вручную для защиты подчиненной системы, если есть подозрения на ее неисправность.
 
-
 ## <a name="additional-resources"></a>Дополнительные ресурсы
-
 
 -   **Шаблон размыкателя цепи**
     [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker)
 
-
 >[!div class="step-by-step"]
-[Назад](implement-http-call-retries-exponential-backoff-polly.md)
-[Вперед](monitor-app-health.md)
+>[Назад](implement-http-call-retries-exponential-backoff-polly.md)
+>[Вперед](monitor-app-health.md)

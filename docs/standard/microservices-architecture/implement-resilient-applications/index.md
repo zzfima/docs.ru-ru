@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: dc0db8f0cdfa77bcca467c3c632b3d93de8851d8
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: ec79221f0238d61f1ca1b2b7c58b1e16be7f4df4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37875129"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130798"
 ---
 # <a name="implementing-resilient-applications"></a>Реализация устойчивых приложений
 
@@ -21,7 +21,6 @@ ms.locfileid: "37875129"
 
 Многие отдельные компоненты приложения также должны включать функции мониторинга работоспособности. Следуя рекомендациям этой главы, можно создать приложение, которое будет продолжать работать, несмотря на временные простои или небольшие неисправности, возникающие в сложных и облачных развертываниях.
 
-
 >[!div class="step-by-step"]
-[Назад](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
-[Вперед](handle-partial-failure.md)
+>[Назад](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[Вперед](handle-partial-failure.md)

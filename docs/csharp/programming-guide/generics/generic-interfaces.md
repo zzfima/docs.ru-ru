@@ -6,11 +6,11 @@ helpviewer_keywords:
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
 ms.openlocfilehash: 4c7449568ff250c8de521e7afb71178536f52657
-ms.sourcegitcommit: 4bca8f7e172fd019ef437a4803bf5895c6bc4781
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "50980779"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129809"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>Универсальные интерфейсы. (Руководство по программированию на C#)
 Часто требуется определить интерфейсы для универсальных классов коллекций или для универсальных классов, представляющих элементы коллекции. Для универсальных классов предпочтительнее использовать универсальные интерфейсы, такие как <xref:System.IComparable%601>, вместо <xref:System.IComparable>, поскольку это позволяет избежать выполнения операция упаковки-преобразования и распаковки-преобразования для типов значений. В библиотеке классов .NET Framework в пространстве имен <xref:System.Collections.Generic> определяется несколько универсальных интерфейсов для работы с классами коллекций.  

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - application protocols, UDP
 ms.assetid: d5c3477a-e798-454c-a890-738ba14c5707
 ms.openlocfilehash: 40cf14936fef7c29f00112a143203ced605f482b
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296819"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126567"
 ---
 # <a name="using-udp-services"></a>Использование служб UDP
 Класс <xref:System.Net.Sockets.UdpClient> взаимодействует с сетевыми службами по протоколу UDP. Методы и свойства класса <xref:System.Net.Sockets.UdpClient> абстрагируют сведения о создании <xref:System.Net.Sockets.Socket> для запроса и получения данных по протоколу UDP.

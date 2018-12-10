@@ -4,15 +4,15 @@ ms.date: 03/06/2018
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: bc31ae202ccbfee467dc0f6fa2cf515c751825ed
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 58654133b7bd7197502ec1550bc78c99aeb0bf0e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837884"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155305"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>Модификатор параметров out (справочник по C#)
-Ключевое `out` инициирует передачу аргументов по ссылке. Оно схоже с ключевым словом [ref](ref.md) за исключением того, что при использовании `ref` перед передачей переменную необходимо инициализировать. Оно также похоже на ключевое слово [in](in-parameter-modifier.md) за исключением того, что `in` не позволяет вызываемому методу изменять значение аргумента. Для применения параметра `out` определение метода и метод вызова должны явно использовать ключевое слово `out`. Пример:  
+Ключевое `out` инициирует передачу аргументов по ссылке. Оно схоже с ключевым словом [ref](ref.md) за исключением того, что при использовании `ref` перед передачей переменную необходимо инициализировать. Оно также похоже на ключевое слово [in](in-parameter-modifier.md) за исключением того, что `in` не позволяет вызываемому методу изменять значение аргумента. Для применения параметра `out` определение метода и метод вызова должны явно использовать ключевое слово `out`. Например:  
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#1)]  
 
@@ -53,7 +53,7 @@ class CS0663_Example
   
 [!code-csharp-interactive[cs-out-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/OutParameterModifier.cs#3)]  
 
- [Шаблон Try](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods.md) предполагает возврат значения типа `bool`, указывающего на результат выполнения операции (успешно или неудачно), и значения, полученного в результате операции, в аргументе `out`. Этот шаблон используется несколькими методами анализа, например методом [DateTime.TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)).
+ [Шаблон Try](/visualstudio/code-quality/ca1021-avoid-out-parameters#try-pattern-methods) предполагает возврат значения типа `bool`, указывающего на результат выполнения операции (успешно или неудачно), и значения, полученного в результате операции, в аргументе `out`. Этот шаблон используется несколькими методами анализа, например методом [DateTime.TryParse](xref:System.DateTime.TryParse(System.String,System.DateTime@)).
    
 ## <a name="calling-a-method-with-an-out-argument"></a>Вызов метода с аргументом `out`
 

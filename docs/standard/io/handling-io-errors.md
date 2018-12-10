@@ -2,7 +2,9 @@
 title: Обработка ошибок ввода-вывода в .NET
 ms.date: 08/27/2018
 ms.technology: dotnet-standard
-ms.topic: article
+dev_langs:
+- csharp
+- vb
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
@@ -11,12 +13,12 @@ ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 50dee427913e1ec94a06f1202966bb0f7f5f2099
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46696421"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126879"
 ---
 # <a name="handling-io-errors-in-net"></a>Обработка ошибок ввода-вывода в .NET
 
@@ -71,7 +73,7 @@ ms.locfileid: "46696421"
 
 В случае с <xref:System.IO.IOException> дополнительные сведения об ошибке можно получить из свойства [IOException.HResult](xref:System.Exception.HResult). Чтобы преобразовать значение HResult в код ошибки Win32, отбросьте верхние 16 бит из 32-разрядного значения. В приведенной ниже таблице перечислены коды ошибок, которые могут быть заключены в <xref:System.IO.IOException>.
 
-| HResult | Константа | Описание: |
+| HResult | Константа | Описание |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | Отсутствует имя файла, или файл или каталог уже используется. |
 | ERROR_FILE_EXISTS | 80 | Файл уже существует. |

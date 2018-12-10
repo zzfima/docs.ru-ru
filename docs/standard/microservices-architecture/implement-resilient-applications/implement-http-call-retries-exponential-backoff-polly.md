@@ -4,12 +4,12 @@ description: Узнайте, как обрабатывать сбои HTTP-за�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/10/2018
-ms.openlocfilehash: c16f4c0f2ef09f346c8b46ff8089883cedcf0c7e
-ms.sourcegitcommit: 59b51cd7c95c75be85bd6ef715e9ef8c85720bac
+ms.openlocfilehash: 78de1440721e83459e455f5c31d10e52a1d3b1b6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/06/2018
-ms.locfileid: "37874901"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143991"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>Реализация повторных попыток вызова HTTP с экспоненциальной выдержкой с помощью HttpClientFactory и политик Polly
 
@@ -85,8 +85,6 @@ Policy
 
     [*https://brooker.co.za/blog/2015/03/21/backoff.html*](https://brooker.co.za/blog/2015/03/21/backoff.html)
 
-
-
 >[!div class="step-by-step"]
-[Назад](explore-custom-http-call-retries-exponential-backoff.md)
-[Вперед](implement-circuit-breaker-pattern.md)
+>[Назад](explore-custom-http-call-retries-exponential-backoff.md)
+>[Вперед](implement-circuit-breaker-pattern.md)

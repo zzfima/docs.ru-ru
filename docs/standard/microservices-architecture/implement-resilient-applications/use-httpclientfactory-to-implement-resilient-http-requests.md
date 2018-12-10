@@ -4,12 +4,12 @@ description: HttpClientFactory — это проверенная фабрика
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: f2be3daf1b04613fa8afc1d17cbcbca2d338e062
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347933"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145115"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Использование HttpClientFactory для реализации устойчивых HTTP-запросов
 
@@ -162,7 +162,6 @@ namespace Microsoft.eShopOnContainers.WebMVC.Controllers
 
     [*https://github.com/aspnet/HttpClientFactory*](https://github.com/aspnet/HttpClientFactory)
 
-
-
 >[!div class="step-by-step"]
-[Назад] (explore-custom-http-call-retries-exponential-backoff.md) [Далее] (implement-http-call-retries-exponential-backoff-polly.md)
+>[Назад](explore-custom-http-call-retries-exponential-backoff.md)
+>[Вперед](implement-http-call-retries-exponential-backoff-polly.md)

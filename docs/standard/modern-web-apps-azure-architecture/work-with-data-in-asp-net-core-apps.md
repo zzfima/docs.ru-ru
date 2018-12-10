@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 069bfacd1ae08b5c84d6e304b2f12f18e1eecb22
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: efadf3a0d216197b05d6cd4cfe94ee3eb24bb18e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49122855"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147178"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Работа с данными в приложениях ASP.NET Core
 
@@ -440,5 +440,5 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 Кэширование может значительно повысить производительность веб-страниц, которые постоянно запрашивают одни и те же значения из базы данных. Обязательно измеряйте производительность доступа к данным и страниц перед применением кэширования и используйте кэширование только при необходимости. Кэширование потребляет ресурсы памяти веб-сервера и увеличивает сложность приложения, поэтому очень важно не внедрять оптимизацию с помощью этой методики преждевременно.
 
 >[!div class="step-by-step"]
-[Назад](develop-asp-net-core-mvc-apps.md)
-[Вперед](test-asp-net-core-mvc-apps.md)
+>[Назад](develop-asp-net-core-mvc-apps.md)
+>[Вперед](test-asp-net-core-mvc-apps.md)

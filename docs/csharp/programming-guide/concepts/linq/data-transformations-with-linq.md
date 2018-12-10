@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: cbb4583d7eceb1410450cd9c953c3431f25dd60b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a4060017a2d3d352b3db70b1d364eb14ec1e94ce
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513456"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147441"
 ---
 # <a name="data-transformations-with-linq-c"></a>Преобразования данных с помощью LINQ (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] предназначен не только для получения данных. Это эффективный инструмент для их преобразования. С помощью запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] можно использовать исходную последовательность в качестве входных данных и изменять ее различными способами для создания новой выходной последовательности. Можно изменить саму последовательность, не изменяя элементы, с помощью сортировки и группировки. Однако самой интересной функцией запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] можно назвать возможность создания новых типов. Это выполняется в предложении [select](../../../../csharp/language-reference/keywords/select-clause.md). Например, можно выполнить следующие задачи.  
@@ -46,14 +46,14 @@ ms.locfileid: "43513456"
   
 1.  Выбор только одного члена исходного элемента с помощью операции dot. В следующем примере предполагается, что объект `Customer` содержит несколько открытых свойств, включая строку с именем `City`. При выполнении этот запрос создаст выходную последовательность строк.  
   
-    ```  
+    ```csharp
     var query = from cust in Customers  
                 select cust.City;  
     ```  
   
 2.  Для создания элементов, содержащих более одного свойства исходного элемента, можно использовать инициализатор объектов с именованным объектом или анонимным типом. В следующем примере показано использование анонимного типа для инкапсуляции двух свойств из каждого элемента `Customer`:  
   
-    ```  
+    ```csharp
     var query = from cust in Customer  
                 select new {Name = cust.Name, City = cust.City};  
     ```  

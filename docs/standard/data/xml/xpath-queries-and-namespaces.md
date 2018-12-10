@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b11ac80b671c345768da23d2b51d2333c228aaeb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: be15acb98c20a61be2d88133ee3070fb1c09d70e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003738"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155331"
 ---
 # <a name="xpath-queries-and-namespaces"></a>Запросы XPath и пространства имен
 Запросы XPath учитывают наличие пространств имен в XML-документе и могут использовать префиксы пространств имен для дополнения имен элементов и атрибутов. Добавление префикса пространства имен к именам элементов и атрибутов ограничивает набор узлов, возвращаемых запросом XPath, лишь теми узлами, которые принадлежат к определенному пространству имен.  
@@ -41,7 +41,7 @@ ms.locfileid: "46003738"
  В следующем XML-документе используется пространство имен по умолчанию с пустым префиксом, чтобы объявить пространство имен `http://www.contoso.com/books`.  
   
 ```xml  
-<books xmlns="http://www.example.com/books">  
+<books xmlns="http://www.contoso.com/books">  
     <book>  
         <title>Title</title>  
         <author>Author Name</author>  

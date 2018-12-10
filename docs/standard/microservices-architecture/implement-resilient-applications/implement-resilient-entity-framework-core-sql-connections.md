@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/08/2018
-ms.openlocfilehash: 59db9cdb894f76f54e77732be47dc6140a594121
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0df375737c0e079baba426f3c97b95edcb9aca75
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47231418"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127190"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>Реализация устойчивых SQL-подключений Entity Framework Core
 
@@ -94,5 +94,5 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem
     <https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/>
 
 >[!div class="step-by-step"]
-[Назад](implement-retries-exponential-backoff.md)
-[Вперед](explore-custom-http-call-retries-exponential-backoff.md)
+>[Назад](implement-retries-exponential-backoff.md)
+>[Вперед](explore-custom-http-call-retries-exponential-backoff.md)

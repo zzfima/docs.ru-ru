@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
-ms.openlocfilehash: 61bc9ca6fed8f5249dcb125619aa1b07f290ba7e
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 7736c1fe4cb1a2a4553ba36cecceab37e2fe90c4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106883"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144472"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Процесс разработки для приложений на основе Docker
 
@@ -44,7 +44,6 @@ ms.locfileid: "37106883"
 
 Как уже упоминалось в предыдущих разделах этого руководства, при разработке приложений .NET, помещенных в контейнеры Docker, можно использовать .NET Framework, .NET Core или проект Mono с открытым кодом. При разработке приложений на основе контейнеров Linux или Windows можно использовать язык C\#, F\# или Visual Basic в зависимости от применяемой платформы .NET. Дополнительные сведения о языках .NET см. в записи блога [Стратегия .NET в отношении языков](https://blogs.msdn.microsoft.com/dotnet/2017/02/01/the-net-language-strategy/).
 
-
 >[!div class="step-by-step"]
-[Назад](../architect-microservice-container-applications/using-azure-service-fabric.md)
-[Вперед](docker-app-development-workflow.md)
+>[Назад](../architect-microservice-container-applications/using-azure-service-fabric.md)
+>[Вперед](docker-app-development-workflow.md)

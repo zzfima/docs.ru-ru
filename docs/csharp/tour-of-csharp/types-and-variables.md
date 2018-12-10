@@ -3,12 +3,12 @@ title: Типы и переменные в C#. Краткий обзор язы�
 description: Сведения о типах и об объявлении переменных в C#
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 752ff490ec91919dc54539c3e39f6d0c527d6260
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 34b724dff17feb699d797e9ed9aea25d85d8c5a9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352139"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129523"
 ---
 # <a name="types-and-variables"></a>Типы и переменные
 
@@ -116,5 +116,5 @@ C# поддерживает одно- и многомерные массивы �
     - Ссылка `null` или ссылка на экземпляр совместимого типа делегата
 
 >[!div class="step-by-step"]
-[Назад](program-structure.md)
-[Вперед](expressions.md)
+>[Назад](program-structure.md)
+>[Вперед](expressions.md)

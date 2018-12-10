@@ -5,12 +5,12 @@ description: Сведения об установке платформы .NET Fr
 author: rlander
 ms.author: mairaw
 ms.date: 04/10/2018
-ms.openlocfilehash: 2304e8e2865c00ef480cc3d595195248db3f4d2a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ffb05ea480775a2e284e76b5ff72cc70c5a4f977
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196548"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155055"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Установка .NET Framework в Windows 8 и Windows Server 2012
 
@@ -23,7 +23,7 @@ ms.locfileid: "50196548"
 ## <a name="net-framework-472"></a>.NET Framework 4.7.2
 
 > [!div class="button"]
-[Загрузить .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [Загрузить .NET Framework 4.7.2](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
 
 Платформа .NET Framework 4.7.2 поддерживается в Windows Server 2012. Она не поддерживается в Windows 8.
 

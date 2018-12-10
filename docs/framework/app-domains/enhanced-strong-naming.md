@@ -8,11 +8,11 @@ ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b33bb37758236c0dcce1fced2e7e7c6cf493ab34
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192594"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128639"
 ---
 # <a name="enhanced-strong-naming"></a>Усовершенствованное строгое именование
 Подпись строгого имени — это механизм идентификации сборок в .NET Framework. Это цифровая подпись с открытым ключом, которая обычно используется для проверки целостности данных, передаваемых от инициатора (подписывающего) к получателю (проверяющему). Эта подпись используется в виде уникального идентификатора сборки и гарантирует, что ссылки на сборку не являются неоднозначными. Подписывание сборки является частью процесса сборки, что затем проверяется при ее загрузке.  

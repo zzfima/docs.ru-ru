@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 6/28/2018
-ms.openlocfilehash: 2e0938fc67e02a52b99158b2ff07b9f32464e674
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 675ecc0dc6a90f3a4ab42861d850ed43a6c10bad
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404442"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146606"
 ---
 # <a name="architectural-principles"></a>Архитектурные принципы
 
@@ -116,5 +116,5 @@ ms.locfileid: "37404442"
 > <https://martinfowler.com/bliki/BoundedContext.html>
 
 >[!div class="step-by-step"]
-[Назад](choose-between-traditional-web-and-single-page-apps.md)
-[Вперед](common-web-application-architectures.md)
+>[Назад](choose-between-traditional-web-and-single-page-apps.md)
+>[Вперед](common-web-application-architectures.md)

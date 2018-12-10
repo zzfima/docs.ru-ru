@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
 - object equivalence [C#]
-- Equals method [C#] , overriding
+- Equals method [C#], overriding
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 365aa5a71eb3d07a79920f565a66fcac67de0b42
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 8abcace9c648ba2132d2b6849ae1c9d347d6fd29
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042625"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126787"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Практическое руководство. Определение равенства значений для типа (Руководство по программированию на C#)
 При определении класса или структуры необходимо решить, имеет ли смысл создавать пользовательское определение равенства значений (или эквивалентности) для этого типа. Обычно правила определения равенства реализуются, если объекты этого типа будут добавляться в коллекции или если они в первую очередь предназначены для хранения набора полей или свойств. В основу определения равенства значений можно положить сравнение всех полей и свойств в типе или только их части. Но в любом случае (как для классов, так и для структур) реализация должна соответствовать следующим пяти гарантиям равенства.  

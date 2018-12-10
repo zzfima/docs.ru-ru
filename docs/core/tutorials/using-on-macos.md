@@ -4,25 +4,25 @@ description: В этом документе приводится обзор де
 author: bleroy
 ms.author: mairaw
 ms.date: 03/23/2017
-ms.openlocfilehash: 5a4b2734137f59b29535f302dd17fb94329d676f
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 0e089ff093ee76dbf9c1accda4145bd8b8fc82e6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245597"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127593"
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Начало работы с .NET Core в Mac OS
 
 В этом документе приводится обзор действий и рабочего процесса для создания решения .NET Core для macOS. Вы узнаете, как создавать проекты и модульные тесты, использовать средства отладки и включать библиотеки сторонних разработчиков с помощью [NuGet](https://www.nuget.org/).
 
 > [!NOTE]
-> В этой статье используется [Visual Studio Code](http://code.visualstudio.com) для macOS.
+> В этой статье используется [Visual Studio Code](https://code.visualstudio.com) для macOS.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
 Установите [пакета SDK для .NET Core](https://www.microsoft.com/net/core). Пакет SDK для .NET Core содержит последний выпуск платформы и среды выполнения .NET Core.
 
-Установите [Visual Studio Code](http://code.visualstudio.com). В ходе этой статьи вы также установите расширения Visual Studio Code, которые улучшат возможности разработки .NET Core.
+Установите [Visual Studio Code](https://code.visualstudio.com). В ходе этой статьи вы также установите расширения Visual Studio Code, которые улучшат возможности разработки .NET Core.
 
 Установите расширение C# для Visual Studio Code. Для этого откройте Visual Studio Code и нажмите клавишу <kbd>F1</kbd>, чтобы открыть палитру Visual Studio Code. Введите команду **ext install**, чтобы просмотреть список расширений. Выберите расширение C#. Перезапустите Visual Studio Code, чтобы включить расширение. Дополнительные сведения см. в [документации по расширению C# для Visual Studio Code](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
 

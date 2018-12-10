@@ -19,11 +19,11 @@ helpviewer_keywords:
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
 ms.openlocfilehash: 812fbd0a3f12f9b44e419986b5f3198d95d1e3a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199647"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147415"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>Трассировка сети в .NET Framework
 Трассировка сети в .NET Framework предоставляет доступ к сведениям о вызовах методов и о сетевом трафике, созданном управляемым приложением. Эта возможность полезна для отладки приложений на стадии разработки, а также для анализа развернутых приложений. Выходные данные трассировки сети можно настраивать с целью поддержки различных сценариев использования во время разработки и в производственной среде.  

@@ -4,12 +4,12 @@ description: Рекомендации по использованию строг
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/16/2018
-ms.openlocfilehash: 6f5743c7a8c6fdbdcdcf3aa80d2f92f2e04621f2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99905a795c4cdb3c79884716b39ed4e38cfe39d6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201456"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129003"
 ---
 # <a name="strong-naming"></a>Строгое именование
 
@@ -66,10 +66,10 @@ ms.locfileid: "50201456"
 
 > Изменение указанного для сборки ключа строгого именования изменяет идентификатор сборки и нарушает работу любого скомпилированного кода, который использует эту сборку. См. сведения о [критических изменениях на уровне двоичного кода](./breaking-changes.md#binary-breaking-change).
 
-**❌ НЕЛЬЗЯ.** Не публикуйте версии библиотеки со строгим и нестрогим именем. Например, `Contoso.Api` и `Contoso.Api.StrongNamed`.
+**❌ DO NOT** Публикация версий библиотеки со строгим и нестрогим именем. Например, `Contoso.Api` и `Contoso.Api.StrongNamed`.
 
 > Публикация двух вариантов пакета приводит к рассогласованию всей экосистемы разработки. Кроме того, если некоторому приложению потребуются оба варианта этого пакета, могут возникать конфликты имен. Платформа .NET рассматривает такие пакеты как разные типы из разных сборок.
 
 >[!div class="step-by-step"]
-[Назад](./cross-platform-targeting.md)
-[Вперед](./nuget.md)
+>[Назад](cross-platform-targeting.md)
+>[Вперед](nuget.md)

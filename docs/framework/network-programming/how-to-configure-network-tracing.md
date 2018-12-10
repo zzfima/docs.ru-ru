@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: 257f417fa573577ca8e8ceb4edc9c4f481af1f72
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6b1a61ac7566f624f44480ffed2337dba5e51ca2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50192451"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143367"
 ---
 # <a name="how-to-configure-network-tracing"></a>Практическое руководство. Настройка трассировки сети
 Файл конфигурации приложения или компьютера содержит параметры, которые определяют формат и содержимое данных трассировки сети. Перед выполнением этой процедуры убедитесь, что трассировка включена. Сведения о том, как включить трассировку сети, см. в разделе [Включение трассировки сети](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -69,7 +69,8 @@ ms.locfileid: "50192451"
         <sharedListeners>  
           <add name="System.Net"  
             type="System.Diagnostics.TextWriterTraceListener"  
-            initializeData="network.log"  
+            initializeData="network.log"
+            traceOutputOptions="ProcessId, DateTime" 
           />  
         </sharedListeners>  
         <trace autoflush="true"/>  

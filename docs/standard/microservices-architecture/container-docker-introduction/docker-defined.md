@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 08/31/2018
-ms.openlocfilehash: 63f3714fce317d915b65075922b323f2aa5061f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0493e7c08a742abed26ff00ce84b9d77da73ea63
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185931"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153869"
 ---
 # <a name="what-is-docker"></a>Что такое Docker?
 
@@ -83,5 +83,5 @@ Docker предоставляет версию [Docker Community Edition (CE)](h
 Соответственно, роль "компьютера" здесь выполняет контейнер, в который устанавливается жесткий диск этого образа. Контейнер, как и обычный компьютер, можно включать и отключать.
 
 >[!div class="step-by-step"]
-[Назад](index.md)
-[Вперед](docker-terminology.md)
+>[Назад](index.md)
+>[Вперед](docker-terminology.md)

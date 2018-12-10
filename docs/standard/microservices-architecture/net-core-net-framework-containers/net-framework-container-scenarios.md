@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 128801fbe49a3f7618b1cedc814b7663d57df624
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1a91f645aa6f9ce8652fb18243c2e2775abe87d1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195337"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128756"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Выбор .NET Framework для контейнеров Docker
 
@@ -65,9 +65,6 @@ ms.locfileid: "50195337"
 -   **Общие сведения о компонентах .NET**  
     [https://docs.microsoft.com/dotnet/standard/components](../../components.md)
 
-
-
-
 >[!div class="step-by-step"]
-[Назад](net-core-container-scenarios.md)
-[Вперед](container-framework-choice-factors.md)
+>[Назад](net-core-container-scenarios.md)
+>[Вперед](container-framework-choice-factors.md)

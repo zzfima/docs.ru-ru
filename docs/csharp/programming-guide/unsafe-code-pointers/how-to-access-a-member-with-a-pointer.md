@@ -5,11 +5,11 @@ helpviewer_keywords:
 - pointers [C#], member access
 ms.assetid: 1e998498-8c85-4a78-8ce2-4d8c20f08342
 ms.openlocfilehash: b51239be8da8c45aa2d7f1ff0700884c43c07299
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52671977"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130850"
 ---
 # <a name="how-to-access-a-member-with-a-pointer-c-programming-guide"></a>Практическое руководство. Доступ к члену с использованием указателя (Руководство по программированию в C#)
 Чтобы получить доступ к члену или структуре, которые объявлены в небезопасном контексте, можно использовать оператор доступа к члену, как показано в следующем примере, где `p` — это указатель на [структуру](../../../csharp/language-reference/keywords/struct.md), содержащую член `x`.  

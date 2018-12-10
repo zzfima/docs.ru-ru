@@ -2,12 +2,12 @@
 title: Практическое руководство. Управление типом проекции (C#)
 ms.date: 07/20/2015
 ms.assetid: e4db6b7e-4cc9-4c8f-af85-94acf32aa348
-ms.openlocfilehash: 8296420a89753771b97c9ca7a489cb686d2df8b5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4aea9fd07ff2a128da9be0a17e5f70a25c9f3853
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45595715"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146567"
 ---
 # <a name="how-to-control-the-type-of-a-projection-c"></a>Практическое руководство. Управление типом проекции (C#)
 Проекция - это процесс, включающий выбор одного набора данных, его фильтрацию, изменение его формы и даже изменение его типа. Почти все выражения запросов выполняют операции проекции. Результатом вычисления почти всех выражений, представленных в этом разделе, должен быть элемент <xref:System.Collections.Generic.IEnumerable%601> <xref:System.Xml.Linq.XElement>, но пользователь может управлять типом проекции для создания коллекций других типов. В настоящем разделе показано, как это делается.  
@@ -38,7 +38,7 @@ public class Customer
   
     public override string ToString()  
     {  
-        return String.Format("{0}:{1}:{2}", this.customerID, this.companyName, this.contactName);  
+        return $"{this.customerID}:{this.companyName}:{this.contactName}";
     }  
 }  
   

@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для упако�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: fa5efd3c2478965ef01efc39b57918ec2d35962a
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b283916d6ae4d19fdc6a4f7976a3adbb66d26b2c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873379"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143413"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Выбор .NET Core для контейнеров Docker
 
@@ -53,7 +53,6 @@ ms.locfileid: "48873379"
 
 Это особенно важно для архитектур микрослужб, где могут выполняться сотни микрослужб (контейнеров). Образы ASP.NET Core (основанные на среде выполнения .NET Core) на Windows Nano или Linux позволяют запустить систему с гораздо меньшим количеством серверов или виртуальных машин и, в конечном счете, снизить затраты на инфраструктуру и размещение.
 
-
 >[!div class="step-by-step"]
-[Назад](general-guidance.md)
-[Вперед](net-framework-container-scenarios.md)
+>[Назад](general-guidance.md)
+>[Вперед](net-framework-container-scenarios.md)

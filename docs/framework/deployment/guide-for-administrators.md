@@ -8,11 +8,11 @@ ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 844e9e53c752be0c993255fc356ade1723109b39
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744591"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129822"
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>Руководство по развертыванию .NET Framework для администраторов
 В этой статье представлено пошаговое описание развертывания администратором платформы [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и системных зависимостей в сети с помощью Microsoft System Center Configuration Manager. В рамках этой статьи предполагается, что все целевые клиентские компьютеры соответствуют минимальным требованиям для .NET Framework. Список требований к программному обеспечению и оборудованию для установки [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] см. в разделе [Требования к системе](../../../docs/framework/get-started/system-requirements.md).  
@@ -122,7 +122,7 @@ ms.locfileid: "50744591"
   
  В следующей таблице описываются параметры командной строки, указанные на шаге 7.  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**/q**|Включает автоматический режим. Ввод данных пользователем необязателен, вывод не отображается.|  
 |**/norestart**|Запрещает программе установки автоматически перезагружать компьютер. При использовании этого параметра Configuration Manager должен обрабатывать перезагрузку компьютера.|  
