@@ -4,18 +4,18 @@ description: Сведения о загрузке данных из нескол
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: c9b34bd6bcbac62e9f9c33226f5d0feb41168392
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672412"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150736"
 ---
-# <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a><span data-ttu-id="95078-103">Загрузка данных из нескольких файлов для обработки с помощью машинного обучения — ML.NET</span><span class="sxs-lookup"><span data-stu-id="95078-103">Load data from multiple files for machine learning processing - ML.NET</span></span>
+# <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a><span data-ttu-id="385dd-103">Загрузка данных из нескольких файлов для обработки с помощью машинного обучения — ML.NET</span><span class="sxs-lookup"><span data-stu-id="385dd-103">Load data from multiple files for machine learning processing - ML.NET</span></span>
 
-<span data-ttu-id="95078-104">Используйте `TextLoader` и укажите массив файлов для метода `Read`.</span><span class="sxs-lookup"><span data-stu-id="95078-104">Use the `TextLoader`, and specify an array of files to the `Read` method.</span></span> <span data-ttu-id="95078-105">У файлов должна быть одинаковая схема (одни и те же количество и тип столбцов):</span><span class="sxs-lookup"><span data-stu-id="95078-105">The files must have the same schema (same number and type of columns):</span></span>
+<span data-ttu-id="385dd-104">Используйте `TextLoader` и укажите массив файлов для метода `Read`.</span><span class="sxs-lookup"><span data-stu-id="385dd-104">Use the `TextLoader`, and specify an array of files to the `Read` method.</span></span> <span data-ttu-id="385dd-105">У файлов должна быть одинаковая схема (одни и те же количество и тип столбцов):</span><span class="sxs-lookup"><span data-stu-id="385dd-105">The files must have the same schema (same number and type of columns):</span></span>
 
-* [<span data-ttu-id="95078-106">Образец файла1</span><span class="sxs-lookup"><span data-stu-id="95078-106">Example file1</span></span>](https://github.com/dotnet/machinelearning/blob/e3a34ae6ae1b25ac96faa0317308703ce943ff95/test/data/adult.train)
-* [<span data-ttu-id="95078-107">Образец файла2</span><span class="sxs-lookup"><span data-stu-id="95078-107">Example file2</span></span>](https://github.com/dotnet/machinelearning/blob/e3a34ae6ae1b25ac96faa0317308703ce943ff95/test/data/adult.test)
+* [<span data-ttu-id="385dd-106">Образец файла1</span><span class="sxs-lookup"><span data-stu-id="385dd-106">Example file1</span></span>](https://github.com/dotnet/machinelearning/blob/e3a34ae6ae1b25ac96faa0317308703ce943ff95/test/data/adult.train)
+* [<span data-ttu-id="385dd-107">Образец файла2</span><span class="sxs-lookup"><span data-stu-id="385dd-107">Example file2</span></span>](https://github.com/dotnet/machinelearning/blob/e3a34ae6ae1b25ac96faa0317308703ce943ff95/test/data/adult.test)
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 

@@ -4,19 +4,19 @@ description: Сведения о том, как обучить модель ма
 ms.date: 11/07/2018
 ms.custom: mvc,how-to
 ms.openlocfilehash: 41b99415d736b6583a8d43434c031e677e6f3ac8
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297581"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145966"
 ---
-# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="b48d1-103">Обучение модели машинного обучения с помощью перекрестной проверки — ML.NET</span><span class="sxs-lookup"><span data-stu-id="b48d1-103">Train a machine learning model using cross-validation - ML.NET</span></span>
+# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="c1b0f-103">Обучение модели машинного обучения с помощью перекрестной проверки — ML.NET</span><span class="sxs-lookup"><span data-stu-id="c1b0f-103">Train a machine learning model using cross-validation - ML.NET</span></span>
 
-<span data-ttu-id="b48d1-104">[Перекрестная проверка](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) является полезной методикой для приложений машинного обучения.</span><span class="sxs-lookup"><span data-stu-id="b48d1-104">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="b48d1-105">Она помогает оценить вариативность качества модели между разными выполнениями, а также избавляет от необходимости извлекать отдельный набор тестов для оценки.</span><span class="sxs-lookup"><span data-stu-id="b48d1-105">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
+<span data-ttu-id="c1b0f-104">[Перекрестная проверка](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) является полезной методикой для приложений машинного обучения.</span><span class="sxs-lookup"><span data-stu-id="c1b0f-104">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="c1b0f-105">Она помогает оценить вариативность качества модели между разными выполнениями, а также избавляет от необходимости извлекать отдельный набор тестов для оценки.</span><span class="sxs-lookup"><span data-stu-id="c1b0f-105">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
 
-<span data-ttu-id="b48d1-106">ML.NET автоматически применяет правильное присвоение признаков (при условии, что вся предобработка производится на одном конвейере обучения), после чего можно использовать концепцию "стратифицированного столбца", чтобы предотвратить разделение связанных примеров.</span><span class="sxs-lookup"><span data-stu-id="b48d1-106">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
+<span data-ttu-id="c1b0f-106">ML.NET автоматически применяет правильное присвоение признаков (при условии, что вся предобработка производится на одном конвейере обучения), после чего можно использовать концепцию "стратифицированного столбца", чтобы предотвратить разделение связанных примеров.</span><span class="sxs-lookup"><span data-stu-id="c1b0f-106">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
 
-<span data-ttu-id="b48d1-107">Ниже приведен пример обучения на основе набора данных по ирисам с использованием рандомизированного разделения учебных и тестовых данных как 90/10 и 5-кратной перекрестной проверки:</span><span class="sxs-lookup"><span data-stu-id="b48d1-107">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
+<span data-ttu-id="c1b0f-107">Ниже приведен пример обучения на основе набора данных по ирисам с использованием рандомизированного разделения учебных и тестовых данных как 90/10 и 5-кратной перекрестной проверки:</span><span class="sxs-lookup"><span data-stu-id="c1b0f-107">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
