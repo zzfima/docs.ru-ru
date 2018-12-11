@@ -1,15 +1,15 @@
 ---
-title: 'Планирование перехода на платформу Windows Communication Foundation: упрощение будущей миграции'
+title: 'Планирование перехода на платформу Windows Communication Foundation: Упрощение будущей миграции'
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: 171a31b375eae4c032849c2a1c2090f5d9ff856f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 306ffbae86058a2caad70d3788fb7bb4e7998eec
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837405"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129588"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Планирование перехода на платформу Windows Communication Foundation: упрощение будущей миграции
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Планирование перехода на платформу Windows Communication Foundation: Упрощение будущей миграции
 Чтобы упростить миграцию в будущем новых приложений ASP.NET на платформу WCF, выполните выше рекомендаций, а также следующие рекомендации.  
   
 ## <a name="protocols"></a>Протоколы  
@@ -36,7 +36,7 @@ ms.locfileid: "48837405"
   
 -   Обеспечьте явные имена для операций службы, используя параметр `MessageName` атрибута <xref:System.Web.Services.WebMethodAttribute>.  
   
-    ```  
+    ```csharp  
     [WebMethod(MessageName="ExplicitName")]  
     string Echo(string input);  
     ```  
@@ -47,7 +47,7 @@ ms.locfileid: "48837405"
   
 -   Используйте атрибут <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute>, чтобы обеспечить явные значения для заголовков SOAPAction HTTP, по которым запросы HTTP будут направляться в методы.  
   
-    ```  
+    ```csharp  
     [WebMethod]  
     [SoapDocumentMethod(RequestElementName="ExplicitAction")]  
     string Echo(string input);  
@@ -63,7 +63,7 @@ ms.locfileid: "48837405"
 ## <a name="exception-handling"></a>Обработка исключений  
  При разработке структур типов данных, которые должны передаваться и приниматься службой, разработайте также структуры для представления различных типов исключений, которые могут происходить в службе и подлежать передаче клиенту.  
   
-```  
+```csharp  
 [Serializable]  
 [XmlRoot(  
      Namespace="ExplicitNamespace", IsNullable=true)]  
@@ -84,7 +84,7 @@ ms.locfileid: "48837405"
   
  Предоставьте таким классам возможность сериализовать себя в XML:  
   
-```  
+```csharp  
 public XmlNode ToXML()  
 {  
      XmlSerializer serializer = new XmlSerializer(  
@@ -103,7 +103,7 @@ public XmlNode ToXML()
   
  Затем классы могут использоваться для предоставления сведений в отношении явно вызванных экземпляров <xref:System.Web.Services.Protocols.SoapException>:  
   
-```  
+```csharp  
 AnctipatedException exception = new AnticipatedException();  
 exception.AnticipatedExceptionInformation = "…";  
 throw new SoapException(  
@@ -113,7 +113,7 @@ throw new SoapException(
      exception.ToXML());  
 ```  
   
- Эти классы исключений можно будет легко многократно использовать с WCF<xref:System.ServiceModel.FaultException%601> класс, чтобы создать новое исключение `FaultException<AnticipatedException>(anticipatedException);`  
+ Эти классы исключений можно будет легко многократно использовать с WCF <xref:System.ServiceModel.FaultException%601> класс, чтобы создать новое исключение `FaultException<AnticipatedException>(anticipatedException);`  
   
 ## <a name="security"></a>Безопасность  
  Ниже приведены некоторые рекомендации по безопасности.  
@@ -125,4 +125,4 @@ throw new SoapException(
 -   Не принимайте во внимание использование поставщиков ролей ASP.NET 2.0 для авторизации доступа к ресурсам службы.  
   
 ## <a name="see-also"></a>См. также  
- [Планирование перехода на платформу Windows Communication Foundation: упрощение будущей интеграции](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+ [Планирование перехода на платформу Windows Communication Foundation: Упрощение будущей интеграции](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)

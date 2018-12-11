@@ -1,6 +1,6 @@
 ---
 title: Правила разработки исключений
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - exceptions [.NET Framework], design guidelines
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - errors [.NET Framework], exceptions
 - reporting errors
 ms.assetid: bc177b2f-7528-4ae4-83db-aacfb04b86d0
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 51cc5296a7b3f6d75b5e56d6bbc74330fa147848
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+author: KrzysztofCwalina
+ms.openlocfilehash: 60c3d25138c224f5eabf44d06b6c9a8373eb5f96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48030659"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153203"
 ---
 # <a name="design-guidelines-for-exceptions"></a>Правила разработки исключений
 Обработка исключений имеет множество преимуществ перед отчеты об ошибках на основе возвращаемого значения. Хорошей платформы разработки помогает реализовать преимущества исключения разработчик приложения. В этом разделе описаны преимущества исключения и представлены рекомендации по эффективному использованию.  
@@ -26,7 +25,7 @@ ms.locfileid: "48030659"
  [Исключения и производительность](../../../docs/standard/design-guidelines/exceptions-and-performance.md)  
  *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
   
- *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*  
+ *Перепечатано разрешением Пирсона для образовательных учреждений, Inc. из [рекомендации по разработке Framework: Условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Кшиштов Квалина и Брэд Абрамс, опубликованных 22 октября 2008 г., издательство Addison-Wesley Professional как части цикла разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также
 

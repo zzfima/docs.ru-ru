@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
 ms.openlocfilehash: f8bd0f3eed8599f7f9e316df8274e8204a69c48f
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297456"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149904"
 ---
 # <a name="arrays-in-visual-basic"></a>Массивы в Visual Basic
 
@@ -126,7 +126,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[nested-type-inference](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/create-array.vb#6)]
 
-Дополнительные примеры можно найти в статье [How to: Initialize an Array Variable in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md) (Практическое руководство. Инициализация переменной массива в Visual Basic).
+Дополнительные примеры см. в разделе [как: Инициализация переменной массива в Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md).
 
 ## <a name="iterating-through-an-array"></a>Перебор массива
 
@@ -299,9 +299,9 @@ Dim arrZ(-1) As String
 |Термин|Определение|
 |----------|----------------|
 |[Array Dimensions in Visual Basic](../../language-features/arrays/array-dimensions.md)|Объяснение ранга и измерений в массиве.|
-|[How to: Initialize an Array Variable in Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md) (Практическое руководство. Инициализация переменной массива в Visual Basic)|Описывается заполнение массивов начальными значениями.|
-|[How to: Sort An Array in Visual Basic](../../language-features/arrays/how-to-sort-an-array.md) (Практическое руководство. Сортировка массива в Visual Basic)|Показано, как сортировать элементы массива в алфавитном порядке.|
-|[Практическое руководство. Присвоение одного массива другому](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Описываются правила и действия для присвоения массива другой переменной массива.|
+|[Инструкции: Инициализация переменной массива в Visual Basic](../../language-features/arrays/how-to-initialize-an-array-variable.md)|Описывается заполнение массивов начальными значениями.|
+|[Инструкции: Сортировка массива в Visual Basic](../../language-features/arrays/how-to-sort-an-array.md)|Показано, как сортировать элементы массива в алфавитном порядке.|
+|[Инструкции: Присвоение одного массива другому](../../language-features/arrays/how-to-assign-one-array-to-another-array.md)|Описываются правила и действия для присвоения массива другой переменной массива.|
 |[Устранение неполадок, связанных с массивами](../../language-features/arrays/troubleshooting-arrays.md)|Рассматриваются некоторые общие проблемы, возникающие при работе с массивами.|
 
 ## <a name="see-also"></a>См. также

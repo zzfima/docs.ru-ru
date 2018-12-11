@@ -1,15 +1,15 @@
 ---
-title: Пошаговое руководство. Создание кода SQL
+title: Пошаговое руководство. Создание SQL
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
 ms.openlocfilehash: cbc400671e5194494772580e77316af07b5669ff
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672021"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149046"
 ---
-# <a name="walkthrough-sql-generation"></a>Пошаговое руководство. Создание кода SQL
+# <a name="walkthrough-sql-generation"></a>Пошаговое руководство. Создание SQL
 В этом разделе показано, как происходит создание кода SQL в [образец поставщика](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0). В следующем запросе Entity SQL используется модель, которая прилагается к образцу поставщика.  
   
 ```  
@@ -105,7 +105,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
    ) AS [Join3] ON [Extent1].[ProductID] = [Join3].[ProductID]  
 ```  
   
-## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Первый этап формирования кода SQL: обход дерева выражений  
+## <a name="first-phase-of-sql-generation-visiting-the-expression-tree"></a>Первый этап формирования SQL: Обход дерева выражения  
  На следующем рисунке показано начальное пустое состояние посетителя.  В рамках данного раздела описываются только свойства, требуемые для наглядности пошагового руководства.  
   
  ![Схема](../../../../../docs/framework/data/adonet/ef/media/430180f5-4fb9-4bc3-8589-d566512d9703.gif "430180f5-4fb9-4bc3-8589-d566512d9703")  
@@ -136,7 +136,7 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Схема](../../../../../docs/framework/data/adonet/ef/media/1ec61ed3-fcdd-4649-9089-24385be7e423.gif "1ec61ed3-fcdd-4649-9089-24385be7e423")  
   
- Для Join3 IsParentAJoin возвращает значение false, требует начать новую инструкцию SqlSelectStatement (SelectStatement1) и передать ее в стек. Обработка продолжается, как и с предыдущими соединениями, новая область передается в стек, и проводится обработка дочерних элементов. Область (Extent3) является левым дочерним элементом, а соединение (Join2) - правым, которое также требует начать новую инструкцию SqlSelectStatement: SelectStatement2. Дочерние элементы Join2 также являются областями, и они собраны в инструкции SelectStatement2.  
+ Для Join3 IsParentAJoin возвращает значение false, требует начать новую инструкцию SqlSelectStatement (SelectStatement1) и передать ее в стек. Обработка продолжается, как и с предыдущими соединениями, новая область передается в стек, и проводится обработка дочерних элементов. Область (Extent3) является левым дочерним и правый дочерний элемент — это соединение (Join2), которое также требует начать новую инструкцию SqlSelectStatement: SelectStatement2. Дочерние элементы Join2 также являются областями, и они собраны в инструкции SelectStatement2.  
   
  Состояние посетителя после посещения Join2, но перед выполнением последующей обработки (ProcessJoinInputResult) показано на следующем рисунке.  
   
@@ -192,7 +192,7 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 " )", " AS ", <joinSymbol_Join3>, " ON ", , , <symbol_Extent1>, ".", "[ProductID]", " = ", , <joinSymbol_Join3>, ".", <symbol_ProductID>  
 ```  
   
-### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Второй этап формирования SQL: создание строковой команды  
+### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>Второй этап формирования SQL: Создание строковой команды  
  На втором этапе создаются фактические имена символов. Внимание уделяется только символам, представляющим столбцы под названиями «OrderID», поскольку в данном случае необходимо разрешить конфликт. Они выделены в инструкции SqlSelectStatement. Следует отметить, что показанные на рисунке суффиксы служат только для того, чтобы подчеркнуть наличие разных экземпляров, но не для представления новых имен, поскольку на этой стадии им еще не были приписаны окончательные имена (возможно, отличные от исходных).  
   
  В первую очередь необходимо переименовать символ <symbol_OrderID>. Ему присваивается новое имя «OrderID1», 1 отмечается как последний использованный суффикс для «OrderID», а символ отмечается как не требующий переименования. Затем отыскивается первый случай использования <symbol_OrderID_2>. Он переименовывается с использованием следующего свободного суффикса («OrderID2») и вновь отмечается как не требующий переименования, чтобы при следующем использовании оно не производилось. Это делается и для <symbol_OrderID_3>.  

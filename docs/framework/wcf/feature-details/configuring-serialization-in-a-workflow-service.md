@@ -2,12 +2,12 @@
 title: Настройка сериализации в службе рабочего процесса
 ms.date: 03/30/2017
 ms.assetid: aa70b290-a2ee-4c3c-90ea-d0a7665096ae
-ms.openlocfilehash: 67d8807e5ff45db2e8662586861d969e14ceaa8d
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 63a5860bd428fd4ce7fe01d7901427c85b2d5609
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583714"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154116"
 ---
 # <a name="configuring-serialization-in-a-workflow-service"></a>Настройка сериализации в службе рабочего процесса
 Службы рабочего процесса — это службы Windows Communication Foundation (WCF), поэтому возможность использовать либо <xref:System.Runtime.Serialization.DataContractSerializer> (по умолчанию) или <xref:System.Xml.Serialization.XmlSerializer>. При написании кода служб, отличных от служб рабочих процессов, тип используемого сериализатора задается применительно к контракту службы или операции. При создании служб рабочих процессов WCF не указать эти контракты в коде, но вместо этого они формируются во время выполнения выводом контракта. Дополнительные сведения об определении контракта см. в разделе [использование контрактов в рабочем процессе](../../../../docs/framework/wcf/feature-details/using-contracts-in-workflow.md).  Сериализатор определяется с помощью свойства <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>. Оно задается в конструкторе, как показано на следующем рисунке.  
@@ -16,7 +16,7 @@ ms.locfileid: "48583714"
   
  Сериализатор можно также задать в коде, как показано в следующем примере.  
   
-```  
+```csharp  
 Receive approveExpense = new Receive  
             {  
                 OperationName = "ApproveExpense",  

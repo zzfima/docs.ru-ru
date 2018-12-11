@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e1ba65194c49f76bb5c29ed28b1b038c02cf1a59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3ee575cacbc51fc910770cca145a4280f97b66db
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393085"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144444"
 ---
 # <a name="loadfromcontext-mda"></a>Помощник по отладке управляемого кода loadFromContext
 Помощник по отладке управляемого кода (MDA) `loadFromContext` активируется при загрузке сборки в контекст `LoadFrom`. Эта ситуация может возникнуть в результате вызова метода <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> или других аналогичных методов.  
@@ -55,7 +55,7 @@ ms.locfileid: "33393085"
 ## <a name="example"></a>Пример  
  В следующем примере кода показана ситуация, которая может привести к запуску помощника по отладке управляемого кода:  
   
-```  
+```csharp
 using System.Reflection;  
 namespace ConsoleApplication1  
 {  

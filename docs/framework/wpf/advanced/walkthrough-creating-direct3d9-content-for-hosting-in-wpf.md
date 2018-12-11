@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 321c4ba8659bd2226fff96e74e81ef24f0077c3d
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 192036836dfb010274944006feea44e5d81ff4e3
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200918"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53168758"
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Пошаговое руководство. Создание содержимого Direct3D9 для размещения в WPF
 В этом пошаговом руководстве демонстрируется создание содержимого Direct3D9 для размещения в приложении Windows Presentation Foundation (WPF). Дополнительные сведения о размещении содержимого Direct3D9 в WPF-приложениях, см. в разделе [взаимодействие WPF и Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).
@@ -30,7 +30,7 @@ ms.locfileid: "50200918"
 
 -   Visual Studio 2010.
 
--   Позже 9or DirectX SDK.
+-   DirectX SDK, 9 или более поздней версии.
 
 ## <a name="creating-the-direct3d9-project"></a>Создание проекта Direct3D9
  Первый шаг — создание и настройка проекта Direct3D9.
@@ -137,7 +137,7 @@ ms.locfileid: "50200918"
 
 ## <a name="next-steps"></a>Следующие шаги
 
--   Размещение содержимого Direct3D9 в WPF-приложение. Дополнительные сведения см. в разделе [Пошаговое руководство: размещение Direct3D9 содержимого в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md).
+-   Размещение содержимого Direct3D9 в WPF-приложение. Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение содержимого Direct3D9 в WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md).
 
 ## <a name="see-also"></a>См. также
 

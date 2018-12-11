@@ -3,11 +3,11 @@ title: Тестовый клиент WCF (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: 4e3531b91382c4d47aed73198bd8dd954ae4ca1f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181596"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149007"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Тестовый клиент WCF (WcfTestClient.exe)
 Тестовый клиент Windows Communication Foundation (WCF) (WcfTestClient.exe) — это средство с графическим Интерфейсом, позволяющий пользователю вводить тестовые параметры, отправлять их в службу и просматривать ответную службы. Он предоставляет удобный способ тестирования в сочетании с узла службы WCF служб.  
@@ -136,7 +136,7 @@ ms.locfileid: "50181596"
 ## <a name="features-supported-by-wcf-test-client"></a>Возможности, поддерживаемые тестовым клиентом WCF  
  Ниже приведен список функций, поддерживаемых тестовым клиентом WCF:  
   
--   Вызов службы: запрос/ответ и одностороннее сообщение.  
+-   Вызов службы: Запрос-ответ и одностороннее сообщение.  
   
 -   Привязки: все привязки, поддерживаемые программой Svcutil.exe.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "50181596"
   
 -   Безопасность: [!INCLUDE[infocard](../../../includes/infocard-md.md)], сертификат, имя пользователя/пароль.  
   
--   Привязки: WSFederationbinding, любые контекстные привязки, привязка Https, WebHttpbinding (поддержка ответных сообщений Json).  
+-   Привязки: WSFederationbinding, любые контекстные привязки и привязка Https, WebHttpbinding (поддержка ответных сообщений Json).  
   
 ## <a name="closing-wcf-test-client"></a>Закрытие тестового клиента WCF  
  Тестовый клиент WCF можно закрыть следующими способами:  

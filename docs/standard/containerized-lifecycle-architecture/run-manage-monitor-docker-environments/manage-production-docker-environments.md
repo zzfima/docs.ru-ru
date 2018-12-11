@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3bafdd9f6a6aa4f850fd28b6315e68c643d1f8c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f968b5199f838e35f336dfa8c7d15aa9e5298951
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202859"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147299"
 ---
 # <a name="manage-production-docker-environments"></a>Управление рабочими средами Docker
 
@@ -23,7 +23,7 @@ ms.locfileid: "50202859"
 
 В таблице 6-1 перечислены стандартные инструменты управления, относящиеся к их оркестраторы, планировщики и кластеризации платформы.
 
-Средства управления Docker таблица 6-1.
+Таблица 6-1. Средства управления docker
 
 
 | Средства управления      | Описание           | Связанные оркестраторов |
@@ -44,7 +44,6 @@ ms.locfileid: "50202859"
 
 -   [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) — это средство пользовательского интерфейса в Интернете, получить сведения и определенных операций в кластере Service Fabric, с точки зрения узлы или виртуальные машины и службы приложений и с точки зрения.
 
-
 >[!div class="step-by-step"]
-[Назад](run-microservices-based-applications-in-production.md)
-[Вперед](monitor-containerized-application-services.md)
+>[Назад](run-microservices-based-applications-in-production.md)
+>[Вперед](monitor-containerized-application-services.md)
