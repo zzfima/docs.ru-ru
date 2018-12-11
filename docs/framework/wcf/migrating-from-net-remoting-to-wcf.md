@@ -2,12 +2,12 @@
 title: Перенос из .NET на платформу WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 91cbfa33c6645fbc0a8d9b513e3a59799114a710
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cca303cf9b906fd395e594111fae808ae4ab6435
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200102"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245682"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Перенос из .NET на платформу WCF
 В этой статье описан процесс переноса приложения с переходом от использования удаленного взаимодействия .NET к использованию Windows Communication Foundation (WCF). В ней сравниваются сходные принципы работы с этими продуктами и описывается выполнение некоторых наиболее распространенных сценариев удаленного взаимодействия в WCF.  
@@ -89,8 +89,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
     serviceHost.AddServiceEndpoint(typeof(IWCFServer), binding, baseAddress);  
     serviceHost.Open();  
   
-    Console.WriteLine(String.Format("The WCF server is ready at {0}.",  
-                                    baseAddress));  
+    Console.WriteLine($"The WCF server is ready at {baseAddress}.");
     Console.WriteLine("Press <ENTER> to terminate service...");  
     Console.WriteLine();  
     Console.ReadLine();  
@@ -102,7 +101,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
  Существуют различные способы настройки и размещения служб WCF. Это лишь один пример размещения, называемый «резидентным размещением». Дополнительные сведения см. в следующих разделах:  
   
--   [Практическое руководство. Определение контракта службы](how-to-define-a-wcf-service-contract.md)  
+-   [Практическое руководство: Определите контракт службы](how-to-define-a-wcf-service-contract.md)  
   
 -   [Настройка служб с использованием файлов конфигурации](configuring-services-using-configuration-files.md)  
   
@@ -121,8 +120,7 @@ RemotingServer server = (RemotingServer)Activator.GetObject(
                             "tcp://localhost:8080/RemotingServer");  
   
 RemotingCustomer customer = server.GetCustomer(42);  
-Console.WriteLine(String.Format("Customer {0} {1} received.",   
-                                 customer.FirstName, customer.LastName));  
+Console.WriteLine($"Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
  Экземпляр RemotingServer, возвращаемый Activator.GetObject(), называется «прозрачным прокси-сервером». Он реализует открытый API для типа RemotingServer на стороне клиента, но все методы вызова объекта-сервера выполняются в рамках другого процесса или на другом компьютере.  
@@ -139,15 +137,14 @@ ChannelFactory<IWCFServer> channelFactory =
 IWCFServer server = channelFactory.CreateChannel();  
   
 Customer customer = server.GetCustomer(42);  
-Console.WriteLine(String.Format("  Customer {0} {1} received.",  
-                    customer.FirstName, customer.LastName));  
+Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
 ```  
   
  Это пример программирования на уровне канала, так как он обладает максимальным сходством с примером удаленного взаимодействия. Также доступно в **Add Service Reference** подход в Visual Studio, который создает код для упрощения программирования клиента. Дополнительные сведения см. в следующих разделах:  
   
 -   [Программирование клиентов на уровне канала](./extending/client-channel-level-programming.md)  
   
--   [Практическое: Добавление, обновление или удаление ссылки на службу](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
+-   [Практическое руководство: Добавление, обновление или удаление ссылки на службу](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
 ### <a name="serialization-usage"></a>Использование сериализации  
  Удаленное взаимодействие .NET и WCF используют сериализацию для передачи объектов между клиентом и сервером, но они отличаются в следующих важных аспектах.  
@@ -269,8 +266,7 @@ try
 }  
 catch (FaultException<CustomerServiceFault> fault)  
 {  
-    Console.WriteLine(String.Format("Fault received: {0}",  
-    fault.Detail.ErrorMessage));  
+    Console.WriteLine($"Fault received: {fault.Detail.ErrorMessage}");
 }  
 ```  
   
@@ -307,7 +303,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **Создайте контракт ошибок (необязательно).** Создайте типы, которыми будут обмениваться сервер и клиент при возникновении ошибок. Отметьте эти типы атрибутами [DataContract] и [DataMember], чтобы обеспечить возможность их сериализации. Для всех операций службы, отмеченных атрибутом [OperationContract], также задайте атрибут [FaultContract], чтобы указать, какие ошибки они могут возвращать.  
   
--   **Настройте и разместите службу.** После создания контракта службы необходимо настроить привязку для предоставления службы в конечной точке. Дополнительные сведения см. в разделе [конечные точки: адреса, привязки и контракты](./feature-details/endpoints-addresses-bindings-and-contracts.md).  
+-   **Настройте и разместите службу.** После создания контракта службы необходимо настроить привязку для предоставления службы в конечной точке. Дополнительные сведения см. в разделе [конечные точки: Адреса, привязки и контракты](./feature-details/endpoints-addresses-bindings-and-contracts.md).  
   
  После переноса приложения удаленного взаимодействия на платформу WCF необходимо удалить зависимости от решения удаленного взаимодействия .NET. Это позволит удалить какие-либо уязвимости удаленного взаимодействия из приложения. Вот эти шаги.  
   
@@ -451,13 +447,12 @@ public class RemotingServer : MarshalByRefObject
        new ChannelFactory<ICustomerService>("customerservice");  
    ICustomerService service = factory.CreateChannel();  
    Customer customer = service.GetCustomer(42);  
-   Console.WriteLine(String.Format("  Customer {0} {1} received.",  
-           customer.FirstName, customer.LastName));  
+   Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received.");
    ```  
   
  Объекты, возвращаемые WCF с сервера на клиент, всегда передаются по значению. Объекты представляют собой десериализованные копии данных, отправленных сервером. Клиент может вызывать методы в этих локальных копиях без опасности вызова серверного кода в ходе обратных вызовов.  
   
-#### <a name="scenario-2-server-returns-an-object-by-reference"></a>Сценарий 2. Служба возвращает объект по ссылке  
+#### <a name="scenario-2-server-returns-an-object-by-reference"></a>Сценарий 2. Сервер возвращает объект по ссылке  
  В этом сценарии показана ситуация, когда сервер предоставляет объект клиенту по ссылке. В удаленном взаимодействии .NET эта операция обрабатывается автоматически для любого типа, производного от MarshalByRefObject, который сериализуется по ссылке. Примером такого сценария является разрешение нескольким клиентам иметь независимые объекты, связанные с сеансами, на стороне сервера. Как упоминалось ранее, объекты, возвращаемые службой WCF, всегда передаются по значению, поэтому прямой эквивалент объектов, передаваемых по ссылке, отсутствует, но существует возможность реализации метода, сходного с семантикой возвращения по ссылке, с использованием объекта <xref:System.ServiceModel.EndpointAddress10>. Это сериализуемый объект, передаваемый по значению, с помощью которого клиент может получить на сервере объект, переданный по ссылке в рамках сеанса. Это обеспечивает возможность реализации сценария, при котором различные клиенты обладают независимыми объектами, связанными с сеансами, на стороне сервера.  
   
 1.  Сначала необходимо определить контракт службы WCF, соответствующий самому объекту, связанному с сеансами.  
@@ -657,7 +652,7 @@ public class RemotingServer : MarshalByRefObject
    CustomerId = 43,   
    AccountId = 99};  
    bool success = service.UpdateCustomer(customer);  
-   Console.WriteLine(String.Format("  Server returned {0}.", success));  
+   Console.WriteLine($"  Server returned {success}.");
    ```  
   
      Объект Customer будет сериализован и отправлен на сервер, где он десериализуется в новую копию этого объекта.  

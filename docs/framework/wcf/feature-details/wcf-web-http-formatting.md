@@ -1,15 +1,15 @@
 ---
-title: Форматирование WCF Web HTTP
+title: WCF Web HTTP форматирование
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: abbfc74f33ddb676c8ac85eb712757615a2972ab
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3a5164cb6271c8fd1d67b3c59fd35705d997f9fe
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33505171"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238446"
 ---
-# <a name="wcf-web-http-formatting"></a>Форматирование WCF Web HTTP
+# <a name="wcf-web-http-formatting"></a>WCF Web HTTP форматирование
 Модель веб-программирования HTTP WCF позволяет динамически определять лучший формат возвращаемого ответа операции службы. Поддерживается два метода для определения формата: автоматический и явный.  
   
 ## <a name="automatic-formatting"></a>Автоматическое форматирование  
@@ -23,7 +23,7 @@ ms.locfileid: "33505171"
   
 4.  Параметр формата по умолчанию в WebHttpBehavior.  
   
- Если сообщение запроса содержит заголовок Accept для типа, который он поддерживает выполняет инфраструктуры Windows Communication Foundation (WCF). Если заголовок `Accept` указывает приоритеты типов носителей, то они учитываются. Если в заголовке `Accept` не найден подходящий формат, используется тип содержимого сообщения запроса. Если не указан подходящий тип содержимого, используется параметр формата по умолчанию для операции. Формат по умолчанию задается с помощью параметра `ResponseFormat` атрибутов <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute>. Если не указан формат по умолчанию для операции, используется значение свойства <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. Автоматическое форматирование основано на свойстве <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Если это свойство имеет значение `true`, то инфраструктура WCF определяет лучший формат для использования. Автоматический выбор формата отключен по умолчанию в целях обратной совместимости. Автоматический выбор формата можно включить программно или через конфигурацию. В следующем примере показано включение автоматического выбора формата в коде.  
+ Если сообщение запроса содержит заголовок Accept инфраструктуре Windows Communication Foundation (WCF) выполняет поиск поддерживаемого им типа. Если заголовок `Accept` указывает приоритеты типов носителей, то они учитываются. Если в заголовке `Accept` не найден подходящий формат, используется тип содержимого сообщения запроса. Если не указан подходящий тип содержимого, используется параметр формата по умолчанию для операции. Формат по умолчанию задается с помощью параметра `ResponseFormat` атрибутов <xref:System.ServiceModel.Web.WebGetAttribute> и <xref:System.ServiceModel.Web.WebInvokeAttribute>. Если не указан формат по умолчанию для операции, используется значение свойства <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A>. Автоматическое форматирование основано на свойстве <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A>. Если это свойство имеет значение `true`, то инфраструктура WCF определяет лучший формат для использования. Автоматический выбор формата отключен по умолчанию в целях обратной совместимости. Автоматический выбор формата можно включить программно или через конфигурацию. В следующем примере показано включение автоматического выбора формата в коде.  
   
 ```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract     
@@ -101,22 +101,22 @@ public class Service : IService
     [WebGet]  
      public string EchoWithGet(string s)  
     {  
-         // if a format query string parameter has been specified, set the response format to that. If no such  
-         // query string parameter exists the Accept header will be used  
+        // if a format query string parameter has been specified, set the response format to that. If no such
+        // query string parameter exists the Accept header will be used
         string formatQueryStringValue = WebOperationContext.Current.IncomingRequest.UriTemplateMatch.QueryParameters["format"];  
         if (!string.IsNullOrEmpty(formatQueryStringValue))  
         {  
-             if (formatQueryStringValue.Equals("xml", System.StringComparison.OrdinalIgnoreCase))  
-             {  
-                  WebOperationContext.Current.OutgoingResponse.Format = WebMessageFormat.Xml;  
-             }  
-             else if (formatQueryStringValue.Equals("json", System.StringComparison.OrdinalIgnoreCase))  
+            if (formatQueryStringValue.Equals("xml", System.StringComparison.OrdinalIgnoreCase))  
+            {
+                WebOperationContext.Current.OutgoingResponse.Format = WebMessageFormat.Xml;
+            }
+            else if (formatQueryStringValue.Equals("json", System.StringComparison.OrdinalIgnoreCase))  
             {  
                 WebOperationContext.Current.OutgoingResponse.Format = WebMessageFormat.Json;  
             }  
             else  
             {  
-                 throw new WebFaultException<string>(string.Format("Unsupported format '{0}'", formatQueryStringValue), HttpStatusCode.BadRequest);  
+                throw new WebFaultException<string>($"Unsupported format '{formatQueryStringValue}'",   HttpStatusCode.BadRequest);
             }  
         }  
         return "You said " + s;  
