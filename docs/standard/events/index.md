@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b6f65241-e0ad-4590-a99f-200ce741bb1f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f5d106dd3b7b9a7a0aeedca86e63a6fccbb1cc27
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9572a203336aa32f1a37a834b99bf0dac35c7f1c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44192488"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127931"
 ---
 # <a name="handling-and-raising-events"></a>Обработка и вызов событий
 События на платформе .NET Framework основаны на модели делегата. Модель делегата соответствует шаблону разработки наблюдателя, который позволяет подписчику зарегистрироваться у поставщика и получать от него уведомления. Отправитель события отправляет уведомление о событии, а приемник событий получает уведомление и определяет ответ на него. В этом разделе описываются основные компоненты модели делегата, использование событий в приложениях и реализация событий в коде.  
@@ -80,7 +80,7 @@ ms.locfileid: "44192488"
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание:|  
+|Заголовок|Описание|  
 |-----------|-----------------|  
 |[Практическое руководство. Вызов и прием событий](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Содержит примеры вызова и приема событий.|  
 |[Практическое руководство. Обработка нескольких событий с помощью их свойств](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Показывает, как использовать свойства событий для обработки нескольких событий.|  

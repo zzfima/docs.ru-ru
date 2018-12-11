@@ -1,15 +1,16 @@
 ---
-title: Ресурсы по ML.NET
+title: Ресурсы по машинному обучению. Использование ML.NET
 description: Следующие ресурсы по ML.NET помогут вам создавать специализированные решения на базе искусственного интеллекта и интегрировать их в свои .NET-приложения.
+ms.custom: seodec18
 ms.date: 07/27/2018
-ms.openlocfilehash: cea0f8fe30e01340c5eb671f39f28a6cbf33884c
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 98c89e921e24a0007c165d0a77e2abc34a4c8518
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798040"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152223"
 ---
-# <a name="mlnet-resources"></a>Ресурсы по ML.NET
+# <a name="machine-learning-resources---mlnet"></a>Ресурсы по машинному обучению. Использование ML.NET
 
 Следующие ресурсы по [ML.NET](../index.md) могут помочь вам в создании специализированных решений на базе искусственного интеллекта и их интеграции в ваши .NET-приложения.
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: c4011092a6c605137053b544d4b9f14cce2fdb4c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c5431e5141b1b4b1981f4a1399ca11939fe7dc45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002818"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151120"
 ---
 # <a name="namespaces-c-programming-guide"></a>Пространства имен (Руководство по программированию в C#)
 
@@ -38,8 +38,8 @@ ms.locfileid: "46002818"
   
 - Они помогают упорядочивать проекты с большим объемом кода.  
 - Они разделяются оператором `.`.  
-- `using directive` позволяет не указывать название пространства имен для каждого класса.  
-- Пространство имен `global` является "корневым": `global::System` всегда будет ссылаться на пространство имен `System` в .NET Framework.  
+- Директива `using` позволяет не указывать название пространства имен для каждого класса.  
+- Пространство имен `global` является корневым: `global::System` всегда будет ссылаться на пространство имен <xref:System> в .NET.  
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
@@ -56,4 +56,3 @@ ms.locfileid: "46002818"
 - [Директива using](../../language-reference/keywords/using-directive.md)  
 - [Оператор ::](../../language-reference/operators/namespace-alias-qualifer.md)  
 - [. Оператор](../../language-reference/operators/member-access-operator.md)
->>>>>>> Добавление правил именования идентификаторов

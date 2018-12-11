@@ -1,15 +1,15 @@
 ---
-title: Руководство по библиотекам с открытым исходным кодом
+title: Руководство по библиотекам .NET с открытым кодом
 description: Рекомендации для разработчиков по созданию высококачественных библиотек .NET.
 author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
-ms.openlocfilehash: ca95cb5ba1ebf27464397b7850ac02aabded1a5b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188629"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128074"
 ---
 # <a name="open-source-library-guidance"></a>Руководство по библиотекам с открытым исходным кодом
 
@@ -31,7 +31,7 @@ ms.locfileid: "50188629"
 
 В каждой статье приводится список рекомендаций таких типов: **Do**, **Consider**, **Avoid** и **Do not**. Тип рекомендации свидетельствует о том, насколько строго следует придерживаться рекомендации.
 
-Рекомендациям **Do** нужно следовать практически всегда. Пример:
+Рекомендациям **Do** нужно следовать практически всегда. Например:
 
 **✔️ DO** Распространение библиотеки с помощью пакета NuGet.
 
@@ -48,4 +48,4 @@ ms.locfileid: "50188629"
 **❌ DO NOT** Публикация версий библиотеки со строгим и нестрогим именем. Например, `Contoso.Api` и `Contoso.Api.StrongNamed`.
 
 >[!div class="step-by-step"]
-[Вперед](./get-started.md)
+>[Вперед](get-started.md)

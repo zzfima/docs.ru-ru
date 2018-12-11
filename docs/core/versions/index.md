@@ -1,17 +1,17 @@
 ---
-title: Управление версиями .NET Core
-description: Сведения о принципах работы управления версиями в .NET Core.
+title: Управление версиями среды выполнения пакета SDK для .NET Core
+description: В этой статье описано, как осуществляется управление версиями среды выполнения и пакета SDK для .NET Core.
 author: bleroy
-ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: 54b09a6b74b2cf213cea781dec95a413ac2ad059
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188473"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170721"
 ---
-# <a name="net-core-versioning"></a>Управление версиями .NET Core
+# <a name="overview-of-how-net-core-is-versioned"></a>Общие сведения об управлении версиями в .NET Core
 
 Под термином .NET Core понимается среда выполнения .NET Core и пакет SDK для .NET Core, который содержит средства, необходимые вам для разработки приложений. Пакеты SDK для .NET Core предназначены для работы с любыми предыдущими версиями среды выполнения .NET Core. В этой статье приводятся сведения о нумерации версий среды выполнения и пакетов SDK. Описание номеров версий .NET Standard можно найти в статье с вводными сведениями о [.NET Standard](../../standard/net-standard.md#net-implementation-support).
 
