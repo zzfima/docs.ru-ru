@@ -1,6 +1,6 @@
 ---
 title: Защищенные члены
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - members [.NET Framework], protected
@@ -10,31 +10,30 @@ helpviewer_keywords:
 - unsealed classes
 - customizing class behavior
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4574dffc3f9dd1b60d655bfde33a4ddc1a81d350
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+author: KrzysztofCwalina
+ms.openlocfilehash: f0ad21f0a5b869332223d96991dd0a7bebeba420
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199743"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149358"
 ---
-# <a name="protected-members"></a><span data-ttu-id="d68d2-102">Защищенные члены</span><span class="sxs-lookup"><span data-stu-id="d68d2-102">Protected Members</span></span>
-<span data-ttu-id="d68d2-103">Защищенные члены сами по себе не предоставляют все расширения, но они могут сделать расширяемости через подклассы более мощные.</span><span class="sxs-lookup"><span data-stu-id="d68d2-103">Protected members by themselves do not provide any extensibility, but they can make extensibility through subclassing more powerful.</span></span> <span data-ttu-id="d68d2-104">Они могут использоваться для предоставления Дополнительные параметры настройки без усложнять основной открытый интерфейс.</span><span class="sxs-lookup"><span data-stu-id="d68d2-104">They can be used to expose advanced customization options without unnecessarily complicating the main public interface.</span></span>  
+# <a name="protected-members"></a><span data-ttu-id="bc9c3-102">Защищенные члены</span><span class="sxs-lookup"><span data-stu-id="bc9c3-102">Protected Members</span></span>
+<span data-ttu-id="bc9c3-103">Защищенные члены сами по себе не предоставляют все расширения, но они могут сделать расширяемости через подклассы более мощные.</span><span class="sxs-lookup"><span data-stu-id="bc9c3-103">Protected members by themselves do not provide any extensibility, but they can make extensibility through subclassing more powerful.</span></span> <span data-ttu-id="bc9c3-104">Они могут использоваться для предоставления Дополнительные параметры настройки без усложнять основной открытый интерфейс.</span><span class="sxs-lookup"><span data-stu-id="bc9c3-104">They can be used to expose advanced customization options without unnecessarily complicating the main public interface.</span></span>  
   
- <span data-ttu-id="d68d2-105">Конструкторы Framework нужно очень осторожно защищенные члены, поскольку имя «защищен» можно предоставить ложное чувство защищенности.</span><span class="sxs-lookup"><span data-stu-id="d68d2-105">Framework designers need to be careful with protected members because the name "protected" can give a false sense of security.</span></span> <span data-ttu-id="d68d2-106">Любой пользователь может подкласс Незапечатанный класс и доступ к защищенным членам, и поэтому те же защитных приемы программирования, используемый для открытых членов применяются к защищенным членам.</span><span class="sxs-lookup"><span data-stu-id="d68d2-106">Anyone is able to subclass an unsealed class and access protected members, and so all the same defensive coding practices used for public members apply to protected members.</span></span>  
+ <span data-ttu-id="bc9c3-105">Конструкторы Framework нужно очень осторожно защищенные члены, поскольку имя «защищен» можно предоставить ложное чувство защищенности.</span><span class="sxs-lookup"><span data-stu-id="bc9c3-105">Framework designers need to be careful with protected members because the name "protected" can give a false sense of security.</span></span> <span data-ttu-id="bc9c3-106">Любой пользователь может подкласс Незапечатанный класс и доступ к защищенным членам, и поэтому те же защитных приемы программирования, используемый для открытых членов применяются к защищенным членам.</span><span class="sxs-lookup"><span data-stu-id="bc9c3-106">Anyone is able to subclass an unsealed class and access protected members, and so all the same defensive coding practices used for public members apply to protected members.</span></span>  
   
- <span data-ttu-id="d68d2-107">**✓ CONSIDER** с помощью защищенные члены для расширенной настройки.</span><span class="sxs-lookup"><span data-stu-id="d68d2-107">**✓ CONSIDER** using protected members for advanced customization.</span></span>  
+ <span data-ttu-id="bc9c3-107">**✓ CONSIDER** с помощью защищенные члены для расширенной настройки.</span><span class="sxs-lookup"><span data-stu-id="bc9c3-107">**✓ CONSIDER** using protected members for advanced customization.</span></span>  
   
- <span data-ttu-id="d68d2-108">**✓ DO** обрабатывать защищенные члены незапечатанных классов как открытые с целью анализа безопасности, документацию и совместимости.</span><span class="sxs-lookup"><span data-stu-id="d68d2-108">**✓ DO** treat protected members in unsealed classes as public for the purpose of security, documentation, and compatibility analysis.</span></span>  
+ <span data-ttu-id="bc9c3-108">**✓ DO** обрабатывать защищенные члены незапечатанных классов как открытые с целью анализа безопасности, документацию и совместимости.</span><span class="sxs-lookup"><span data-stu-id="bc9c3-108">**✓ DO** treat protected members in unsealed classes as public for the purpose of security, documentation, and compatibility analysis.</span></span>  
   
- <span data-ttu-id="d68d2-109">Любой пользователь может наследовать от класса и доступа к защищенным членам.</span><span class="sxs-lookup"><span data-stu-id="d68d2-109">Anyone can inherit from a class and access the protected members.</span></span>  
+ <span data-ttu-id="bc9c3-109">Любой пользователь может наследовать от класса и доступа к защищенным членам.</span><span class="sxs-lookup"><span data-stu-id="bc9c3-109">Anyone can inherit from a class and access the protected members.</span></span>  
   
- <span data-ttu-id="d68d2-110">*Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*</span><span class="sxs-lookup"><span data-stu-id="d68d2-110">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
+ <span data-ttu-id="bc9c3-110">*Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*</span><span class="sxs-lookup"><span data-stu-id="bc9c3-110">*Portions © 2005, 2009 Microsoft Corporation. All rights reserved.*</span></span>  
   
- <span data-ttu-id="d68d2-111">*Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="d68d2-111">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
+ <span data-ttu-id="bc9c3-111">*Перепечатано разрешением Пирсона для образовательных учреждений, Inc. из [рекомендации по разработке Framework: Условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Кшиштов Квалина и Брэд Абрамс, опубликованных 22 октября 2008 г., издательство Addison-Wesley Professional как части цикла разработки Microsoft Windows.*</span><span class="sxs-lookup"><span data-stu-id="bc9c3-111">*Reprinted by permission of Pearson Education, Inc. from [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) by Krzysztof Cwalina and Brad Abrams, published Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d68d2-112">См. также</span><span class="sxs-lookup"><span data-stu-id="d68d2-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bc9c3-112">См. также</span><span class="sxs-lookup"><span data-stu-id="bc9c3-112">See also</span></span>
 
-- [<span data-ttu-id="d68d2-113">Рекомендации по проектированию на основе Framework</span><span class="sxs-lookup"><span data-stu-id="d68d2-113">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
-- [<span data-ttu-id="d68d2-114">Разработка с обеспечением расширяемости</span><span class="sxs-lookup"><span data-stu-id="d68d2-114">Designing for Extensibility</span></span>](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
+- [<span data-ttu-id="bc9c3-113">Рекомендации по проектированию на основе Framework</span><span class="sxs-lookup"><span data-stu-id="bc9c3-113">Framework Design Guidelines</span></span>](../../../docs/standard/design-guidelines/index.md)  
+- [<span data-ttu-id="bc9c3-114">Разработка с обеспечением расширяемости</span><span class="sxs-lookup"><span data-stu-id="bc9c3-114">Designing for Extensibility</span></span>](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
