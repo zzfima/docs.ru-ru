@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement
+title: Как выполнить Создание пользовательской привязки с использованием элемента SecurityBindingElement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: df40d8dbd5af9acf9e9484ee7694df2bba7ad9f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181138"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155253"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>Как выполнить Создание пользовательской привязки с использованием элемента SecurityBindingElement
 Windows Communication Foundation (WCF) включает в себя несколько предоставляемых системой привязок, которые можно настроить, но не предоставляют полную гибкость при настройке все параметры безопасности, которые поддерживает WCF. В этом разделе описывается создание пользовательской привязки непосредственно из отдельных элементов привязки с рассмотрением некоторых из параметров безопасности, которые могут быть заданы при создании такой привязки. Дополнительные сведения о создании пользовательских привязок см. в разделе [расширение привязок](../../../../docs/framework/wcf/extending/extending-bindings.md).  
   
 > [!WARNING]
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) включает в себя нескол
   
  В противоположность этому при создании пользовательской привязки потребуется создать и настроить элементы привязки и создать из этих элементов объект <xref:System.ServiceModel.Channels.CustomBinding>.  
   
- Для этого необходимо добавить отдельные элементы привязки в коллекцию, представляемую экземпляром класса <xref:System.ServiceModel.Channels.BindingElementCollection>, а затем задать свойство `Elements` класса `CustomBinding` равным этому объекту. Добавлять элементы привязки необходимо в следующем порядке: Transaction Flow, Reliable Session, Security, Composite Duplex, One-way, Stream Security, Message Encoding и Transport. Обратите внимание, что все перечисленные элементы привязки являются обязательными для каждой привязки.  
+ Для этого необходимо добавить отдельные элементы привязки в коллекцию, представляемую экземпляром класса <xref:System.ServiceModel.Channels.BindingElementCollection>, а затем задать свойство `Elements` класса `CustomBinding` равным этому объекту. Элементы привязки необходимо добавить в следующем порядке: Поток транзакций, надежный сеанс, безопасности, составной дуплексный канал, односторонней связи, Stream Security, кодирование сообщений и транспорта. Обратите внимание, что все перечисленные элементы привязки являются обязательными для каждой привязки.  
   
 ## <a name="securitybindingelement"></a>SecurityBindingElement  
  С безопасностью уровня сообщений связаны три элемента привязки; все они наследуются от класса <xref:System.ServiceModel.Channels.SecurityBindingElement>. Эти три элемента называются <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> и <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>. Элемент <xref:System.ServiceModel.Channels.TransportSecurityBindingElement> используется для обеспечения смешанного режима безопасности. Другие два элемента используются, когда безопасность обеспечивается уровнем сообщений.  

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-ms.openlocfilehash: e633c7cdd105125fc5fb595566d15cf5f5fe4e6f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ad0045f926b05b6a73dd64089290f4b8937004ca
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845623"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150996"
 ---
 # <a name="dataadapter-parameters"></a>Параметры DataAdapter
 Класс <xref:System.Data.Common.DbDataAdapter> имеет четыре свойства, которые служат для получения данных из источника данных и обновления данных в нем: свойство <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> возвращает данные из источника данных, а свойства <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>, <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> и <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> используются для управления изменениями в источнике данных. Свойство `SelectCommand` должно быть установлено до вызова метода `Fill` объекта `DataAdapter`. Свойства `InsertCommand`, `UpdateCommand` или `DeleteCommand` должны быть установлены до вызова метода `Update` объекта `DataAdapter` в зависимости от того, какие изменения были сделаны в данных в <xref:System.Data.DataTable>. Например, если добавлены строки, свойство `InsertCommand` должно быть установлено перед вызовом метода `Update`. Если метод `Update` обрабатывает вставленную, обновленную или удаленную строку, `DataAdapter` использует соответствующее свойство `Command` для обработки действия. Текущие данные об измененной строке передаются в объект `Command` через коллекцию `Parameters`.  
   
  При обновлении строки в источнике данных вызывается инструкция UPDATE, которая использует уникальный идентификатор для идентификации строки обновляемой таблицы. Уникальным идентификатором обычно является значение поля первичного ключа. Инструкция UPDATE использует параметры, содержащие и уникальный идентификатор, и столбцы и обновляемые значения, как показано в следующей инструкции Transact-SQL.  
   
-```  
+```sql
 UPDATE Customers SET CompanyName = @CompanyName   
   WHERE CustomerID = @CustomerID  
 ```  
@@ -27,7 +27,7 @@ UPDATE Customers SET CompanyName = @CompanyName
   
  В этом примере Visual Basic `CompanyName` обновляется значение `@CompanyName` для строки где `CustomerID` равен значению `@CustomerID` параметра. Параметры получают данные из измененной строки, используя <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> свойство <xref:System.Data.SqlClient.SqlParameter> объекта. Далее представлены параметры для предыдущего образца инструкции UPDATE. В коде предполагается, что переменная `adapter` представляет действительный объект <xref:System.Data.SqlClient.SqlDataAdapter>.  
   
-```  
+```vb
 adapter.Parameters.Add( _  
   "@CompanyName", SqlDbType.NChar, 15, "CompanyName")  
 Dim parameter As SqlParameter = _  

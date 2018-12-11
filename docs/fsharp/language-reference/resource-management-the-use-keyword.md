@@ -1,15 +1,15 @@
 ---
-title: 'Управление ресурсами: ключевое слово use (F#)'
+title: 'Управление ресурсами: Ключевое слово use (F#)'
 description: Дополнительные сведения о F# ключевое слово «use» и функция «using», которые позволяют управлять инициализацией и освобождением ресурсов.
 ms.date: 05/16/2016
 ms.openlocfilehash: 300fb4113019f676625f75541d117458eab3f6ab
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296884"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147636"
 ---
-# <a name="resource-management-the-use-keyword"></a>Управление ресурсами: ключевое слово use
+# <a name="resource-management-the-use-keyword"></a>Управление ресурсами: Ключевое слово use
 
 В этом разделе описывается ключевое слово `use` и `using` функции, которые позволяют управлять инициализацией и освобождением ресурсов.
 

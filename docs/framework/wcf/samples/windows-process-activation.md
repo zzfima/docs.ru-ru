@@ -2,12 +2,12 @@
 title: Активация Windows
 ms.date: 03/30/2017
 ms.assetid: 37b79642-1e6f-44b3-9777-98af57443bfa
-ms.openlocfilehash: fcfca1d58b7672cd9bcc7f8ba9afa861d140e3b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bcac3a9860dd03ed048bc27969fa1e1f070e788a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501524"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154795"
 ---
 # <a name="windows-process-activation"></a>Активация Windows
 В этом разделе приведены образцы, демонстрирующие включение службы с помощью сетевых протоколов.  
@@ -18,3 +18,6 @@ ms.locfileid: "33501524"
   
  [Активация TCP](../../../../docs/framework/wcf/samples/tcp-activation.md)  
  Демонстрирует размещение службы, использующей службу активации Windows (WAS) для активации службы, которая осуществляет взаимодействие по протоколу net.tcp.
+
+ [Активация MSMQ](../../../../docs/framework/wcf/samples/msmq-activation.md)  
+ Демонстрирует размещение службы, использующей службы активации процессов Windows (WAS) для активации службы, которая осуществляет взаимодействие по протоколу net.msmq.

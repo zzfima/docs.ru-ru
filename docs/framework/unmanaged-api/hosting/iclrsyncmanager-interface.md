@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ede896cdb93217fcfba9d66ed7102bcc1ba762e9
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041834"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129328"
 ---
 # <a name="iclrsyncmanager-interface"></a>Интерфейс ICLRSyncManager
 Определяет методы, позволяющие узла для получения сведений о запрошенных задач и для выявления взаимоблокировок в реализации синхронизации.  
@@ -36,11 +36,11 @@ ms.locfileid: "50041834"
 |[Метод GetRWLockOwnerNext](iclrsyncmanager-getrwlockownernext-method.md)|Получает следующую задачу, ожидающую текущей блокировки чтения и записи.|  
   
 ## <a name="requirements"></a>Требования  
- **Платформы:** см. раздел [требования к системе](../../get-started/system-requirements.md).  
+ **Платформы:** См. раздел [Требования к системе](../../get-started/system-requirements.md).  
   
  **Заголовок:** MSCorEE.h  
   
- **Библиотека:** включена как ресурс в MSCorEE.dll  
+ **Библиотека:** Включена как ресурс в MSCorEE.dll  
   
  **Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

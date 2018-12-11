@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 18e6cb1fb5f496b66c89cb8e009a67894b8a76ad
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 003bf794f5427e7b2f10d1e04fd27605b980cdfe
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123154"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126306"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Запуск составных и на базе микрослужб приложений в производственной среде
 
@@ -33,7 +33,6 @@ ms.locfileid: "49123154"
 
 Возможности, предоставляемые оркестраторы и планировщиков очень сложны для разработки и создания с нуля, и поэтому обычно следует сделать использование оркестрации решений, предлагаемых поставщиками.
 
-
 >[!div class="step-by-step"]
-[Назад](index.md)
-[Вперед](manage-production-docker-environments.md)
+>[Назад](index.md)
+>[Вперед](manage-production-docker-environments.md)

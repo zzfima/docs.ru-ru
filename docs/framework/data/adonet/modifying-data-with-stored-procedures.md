@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
-ms.openlocfilehash: c975913ab5df9c2e7f792ed73f8c5d20bdca1c5a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c868528edbccfeb32e6aca02c92b87d51bb0b829
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526889"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144771"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>Изменение данных с помощью хранимых процедур
 Хранимые процедуры могут принимать данные в виде входных параметров и возвращать их в виде выходных параметров, результирующих наборов или возвращаемых значений. Образец, приведенный ниже, показывает, как ADO.NET отправляет и получает входные и выходные параметры, а также возвращаемые значения. Пример добавляет в таблицу новую запись, где столбец первичного ключа является столбцом идентификаторов в базе данных SQL Server.  
@@ -21,7 +21,7 @@ ms.locfileid: "43526889"
 ## <a name="example"></a>Пример  
  Образец использует следующую хранимую процедуру для вставки новой категории в **Northwind** **категории** таблицы. Хранимая процедура принимает значение **CategoryName** столбец в качестве входного параметра и использует SCOPE_IDENTITY() функцию для получения нового значения поля идентификатора **CategoryID**и вернуть его в выходном параметре. Инструкция RETURN использует @@ROWCOUNT функция возвращает количество вставленных строк.  
   
-```  
+```sql
 CREATE PROCEDURE dbo.InsertCategory  
   @CategoryName nvarchar(15),  
   @Identity int OUT  

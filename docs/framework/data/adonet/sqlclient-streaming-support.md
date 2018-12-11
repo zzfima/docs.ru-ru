@@ -2,12 +2,12 @@
 title: Поддержка потоковой передачи SqlClient
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 7c9c7300678b9e285965a3c1b673a92b6f26973e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a393274a7cf40b01399c5909c2d5ec4097ec9310
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191051"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152894"
 ---
 # <a name="sqlclient-streaming-support"></a>Поддержка потоковой передачи SqlClient
 Поддержка SQL Server и приложения потоковой передачи данных (новые возможности [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) поддерживает неструктурированные данные на сервере (документы, изображения и файлы мультимедиа). Базы данных SQL Server можно хранить большие двоичные объекты (BLOB), но выборки BLOB может потребоваться большой объем памяти.  
@@ -76,7 +76,7 @@ ms.locfileid: "50191051"
 ## <a name="sample----streaming-from-sql-server"></a>Образец - Потоковая передача из SQL Server  
  Выполните следующие шаги [!INCLUDE[tsql](../../../../includes/tsql-md.md)], чтобы построить образец базы данных.  
   
-```  
+```sql
 CREATE DATABASE [Demo]  
 GO  
 USE [Demo]  
@@ -105,7 +105,7 @@ GO
   
 -   Передача больших файлов (BLOB) из одной базы данных SQL Server в другую без нехватки памяти.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -297,7 +297,7 @@ namespace StreamingFromServer {
 ## <a name="sample----streaming-to-sql-server"></a>Образец - Потоковая передача в SQL Server  
  Выполните следующие шаги [!INCLUDE[tsql](../../../../includes/tsql-md.md)], чтобы построить образец базы данных.  
   
-```  
+```sql
 CREATE DATABASE [Demo2]  
 GO  
 USE [Demo2]  
@@ -330,7 +330,7 @@ GO
   
 -   Потоковая передача из одного сервера SQL Server в другой с помощью новой асинхронной возможности.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  
@@ -453,7 +453,7 @@ namespace StreamingToServer {
 ## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Образец - Потоковая передача из одного сервера SQL Server на другой SQL Server  
  В этом примере показано, как асинхронно передавать большой двоичный объект из одного сервера SQL Server в другой с поддержкой отмены.  
   
-```  
+```csharp
 using System;  
 using System.Data;  
 using System.Data.SqlClient;  

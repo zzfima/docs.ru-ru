@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, specifications
 - specifications, Visual Basic
 ms.assetid: 42c30017-19d0-442e-87a2-850b66ddc3df
-ms.openlocfilehash: 6708ad107a2ee5b4ba2896d811c103ed49b476b8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: afba7e742c665712ec41d62e8248e81d3b0d74cc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45970777"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153323"
 ---
 # <a name="visual-basic-language-specification"></a>Спецификация языка Visual Basic
 Спецификация языка Visual Basic — это полномочный источник ответы на все вопросы о Visual Basic грамматике и синтаксисе. Она содержит подробные сведения о языке, включая многие моменты, не охваченных в справочной документации Visual Basic.  
@@ -26,4 +26,4 @@ ms.locfileid: "45970777"
  [Справочник по языку Visual Basic](../../../visual-basic/language-reference/index.md)
 
 >[!div class="step-by-step"]
-[Вперед](../../../../_vblang/spec/introduction.md)
+>[Вперед](../../../../_vblang/spec/introduction.md)

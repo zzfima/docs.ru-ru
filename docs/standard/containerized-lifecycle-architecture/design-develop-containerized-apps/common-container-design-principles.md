@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 3af174279e8b6f56a10413817b05ef68cfcabea5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8aa388c7c19f532829d64208a48b6e556e43d802
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202182"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152881"
 ---
 # <a name="common-container-design-principles"></a>Общие принципы проектирования контейнеров
 
@@ -21,7 +21,6 @@ ms.locfileid: "50202182"
 
 Вы можете обнаружить ситуацию, в которой несколько процессов, запущенных в одном контейнере. В любом документе архитектура никогда нет «никогда», ни постоянное значение «всегда». Распространенный шаблон для сценариев, требующих несколько процессов, является использование [контролер](http://supervisord.org/).
 
-
 >[!div class="step-by-step"]
-[Назад](design-docker-applications.md)
-[Вперед](monolithic-applications.md)
+>[Назад](design-docker-applications.md)
+>[Вперед](monolithic-applications.md)

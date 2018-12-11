@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание службы маркеров безопасности
+title: Как выполнить Создание службы маркеров безопасности
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
 ms.openlocfilehash: 5926216135429d235593aaf77ee0d29b0bacd8fa
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50036506"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143913"
 ---
-# <a name="how-to-create-a-security-token-service"></a>Практическое руководство. Создание службы маркеров безопасности
+# <a name="how-to-create-a-security-token-service"></a>Как выполнить Создание службы маркеров безопасности
 Служба маркеров безопасности реализует протокол, определенный в спецификации WS-Trust. Данный протокол определяет форматы сообщения и шаблоны обмена сообщениями для выпуска, обновления, отмены и проверки маркеров безопасности. Данная служба маркеров безопасности дает одну или несколько из данных возможностей. В данном разделе рассматривается наиболее общий сценарий: реализация выпуска маркера.  
   
 ## <a name="issuing-tokens"></a>Выпуск маркеров  

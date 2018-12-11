@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 4ec2ba884f0f60182dd59bb6a4491e223f43ce1a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: badab8200a4b10fdc13987dfe39ebfebd4d1f7cf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196620"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143172"
 ---
 # <a name="ltoidmapgt-element"></a>&lt;oidMap&gt; элемент
 Содержит сопоставления идентификатора объекта ASN.1 с классами.  
@@ -76,8 +76,8 @@ ms.locfileid: "47196620"
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [Службы криптографии](../../../../../docs/standard/security/cryptographic-services.md)  
- [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [Отображение идентификаторов объектов на криптографические алгоритмы](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Схема параметров шифрования](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
+- [Настройка криптографических классов](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+- [Отображение идентификаторов объектов на криптографические алгоритмы](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)

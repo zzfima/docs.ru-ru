@@ -2,12 +2,12 @@
 title: Передача по элементу тела сообщения
 ms.date: 03/30/2017
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-ms.openlocfilehash: 449c153092d80bb457a2059b80158ea665bfc645
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 58d505770a495e5e423104b9fb912d088ca56f86
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43396382"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143164"
 ---
 # <a name="dispatch-by-body-element"></a>Передача по элементу тела сообщения
 В образце демонстрируется реализация альтернативного алгоритма для присвоения операциям входящих сообщений.  
@@ -20,7 +20,7 @@ ms.locfileid: "43396382"
   
  Конструктор класса ожидает словарь, который заполняется парами `XmlQualifiedName` и строками, в котором полные имена указывают имя первого дочернего элемента тела SOAP, а строки указывают на имя соответствующей операции. `defaultOperationName` - это имя операции, которая принимает все сообщения, которые не были найдены в этом словаре.  
   
-```  
+```csharp
 class DispatchByBodyElementOperationSelector : IDispatchOperationSelector  
 {  
     Dictionary<XmlQualifiedName, string> dispatchDictionary;  
@@ -31,13 +31,14 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
         this.dispatchDictionary = dispatchDictionary;  
         this.defaultOperationName = defaultOperationName;  
     }  
+}
 ```  
   
  Реализации <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> являются очень простыми в построении, так как есть только один метод в интерфейсе: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Этот метод отвечает за проверку входящих сообщений и возврат строки, которая равна имени метода контракта службы для текущей конечной точки.  
   
  В этом образце селектор операций приобретает класс <xref:System.Xml.XmlDictionaryReader> для тела входящего сообщения, используя метод <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. Этот метод уже расположил средство чтения на первом дочернем элементе тела сообщения, поэтому достаточно получить имя текущего элемента, универсальный код ресурса (URI) пространства имен и объединить их в `XmlQualifiedName`, чтобы затем использовать для поиска соответствующей операции в словаре, хранящемся в селекторе операций.  
   
-```  
+```csharp
 public string SelectOperation(ref System.ServiceModel.Channels.Message message)  
 {  
     XmlDictionaryReader bodyReader = message.GetReaderAtBodyContents();  
@@ -57,7 +58,7 @@ public string SelectOperation(ref System.ServiceModel.Channels.Message message)
   
  Доступ к телу сообщения с помощью метода <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> или любого другого метода, который обеспечивает доступ к содержимому тела сообщения, приводит к тому, что сообщение помечается как "read", то есть дальнейшая обработка сообщения является недопустимой. Поэтому селектор операций создает копию входящего сообщения с помощью метода, который показан в следующем коде. Поскольку позиция средства чтения не изменялась во время проверки, новое созданное сообщение может ссылаться на нее. В это сообщение также копируются свойства и заголовки сообщения, результаты которого являются точной копией исходного сообщения.  
   
-```  
+```csharp
 private Message CreateMessageCopy(Message message,   
                                      XmlDictionaryReader body)  
 {  
@@ -77,7 +78,7 @@ private Message CreateMessageCopy(Message message,
   
  Для краткости следующий фрагмент кода показывает только реализацию метода <xref:System.ServiceModel.Description.IContractBehavior.ApplyDispatchBehavior%2A>, который оказывает результирующее воздействие на изменение конфигурации для диспетчера в этом образце. Другие методы не показаны, поскольку они возвращаются вызывающему объекту без выполнения какой-либо работы.  
   
-```  
+```csharp
 [AttributeUsage(AttributeTargets.Class|AttributeTargets.Interface)]  
 class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior  
 {  
@@ -92,7 +93,7 @@ class DispatchByBodyElementBehaviorAttribute : Attribute, IContractBehavior
   
  Как только словарь заполняется, с использованием этой информации строится новый селектор `DispatchByBodyElementOperationSelector` и задается как селектор операций для данной среды выполнения распределения.  
   
-```  
+```csharp
 public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.DispatchRuntime dispatchRuntime)  
 {  
     Dictionary<XmlQualifiedName,string> dispatchDictionary =   
@@ -123,7 +124,7 @@ public void ApplyDispatchBehavior(ContractDescription contractDescription, Servi
   
  Поскольку селектор операции при направлении принимает во внимание только элемент тела сообщений и игнорирует заголовок "Действие", требуется указать среде выполнения не проверять заголовок "Действие" возвращаемых ответов путем присвоения подстановочного знака "*" свойству `ReplyAction` класса <xref:System.ServiceModel.OperationContractAttribute>. Кроме того, он может иметь операцию по умолчанию, имеющий свойство «Действие» присвоен подстановочный знак "\*«. Операция по умолчанию получает все сообщения, которые не могут быть отправлены и не имеют `DispatchBodyElementAttribute`.  
   
-```  
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples"),  
                             DispatchByBodyElementBehavior]  
 public interface IDispatchedByBody  

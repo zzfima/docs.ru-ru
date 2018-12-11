@@ -2,12 +2,12 @@
 title: Универсальные шаблоны (F#)
 description: Сведения об использовании F# универсальные функции и типы, которые позволяют писать код, который работает с множеством типов без повторения кода.
 ms.date: 05/16/2016
-ms.openlocfilehash: fc061f19c6c7fa737f7ca05aae83fd42c0010b37
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7eae69bc0286bff4997c6399c7417bde119c2204
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44084966"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147009"
 ---
 # <a name="generics"></a>Универсальные шаблоны
 
@@ -71,8 +71,8 @@ type type-name<type-parameters> type-definition
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
->[!NOTE]
-Сослаться на универсальный тип по имени можно двумя способами. Например, `list<int>` и `int list` представляют два способа сослаться на универсальный тип `list` с одним аргументом типа `int`. Последняя форма обычно используется только со встроенными типами F#, такими как `list` и `option`. При наличии нескольких аргументов типа обычно используется синтаксис `Dictionary<int, string>`, но можно также использовать синтаксис `(int, string) Dictionary`.
+> [!NOTE]
+> Сослаться на универсальный тип по имени можно двумя способами. Например, `list<int>` и `int list` представляют два способа сослаться на универсальный тип `list` с одним аргументом типа `int`. Последняя форма обычно используется только со встроенными типами F#, такими как `list` и `option`. При наличии нескольких аргументов типа обычно используется синтаксис `Dictionary<int, string>`, но можно также использовать синтаксис `(int, string) Dictionary`.
 
 ## <a name="wildcards-as-type-arguments"></a>Подстановочные знаки как аргументы типа
 

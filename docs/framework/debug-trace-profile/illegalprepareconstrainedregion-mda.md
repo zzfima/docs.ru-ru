@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 59a2b7f7ed855cd6b7d363ea5d4723c7d7b8d629
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4623e8060b93c9331c99f9713598e177b6807472
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386357"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131317"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>illegalPrepareConstrainedRegion MDA
 Помощник по отладке управляемого кода (MDA) `illegalPrepareConstrainedRegion` запускается, если сразу же после вызова метода <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> не следует инструкция `try` обработчика исключений. Это ограничение используется на уровне MSIL, поэтому между вызовом и `try` можно размещать текст, не приводящий к созданию кода, например комментарии.  
@@ -24,7 +24,7 @@ ms.locfileid: "33386357"
  Область ограниченного выполнения, которая никогда не рассматривается в виде такой области, но представляет собой простой блок обработки исключений (`finally` или `catch`). Поэтому эта область не запускается в случае нехватки памяти или прерывания потока.  
   
 ## <a name="cause"></a>Причина  
- Вы не следуете шаблону подготовки для области ограниченного выполнения.  Это ошибка. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Используется, чтобы пометить обработчики исключений, как введение CER в вызове метода их `catch` / `finally` / `fault` / `filter` непосредственно перед должен использоваться блоки `try` инструкции.  
+ Вы не следуете шаблону подготовки для области ограниченного выполнения.  Это ошибка. <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> Вызов метода, используемую для обозначения обработчиков исключений, ограниченного выполнения в их `catch` / `finally` / `fault` / `filter` блоки, которые должны использоваться сразу перед `try` инструкции.  
   
 ## <a name="resolution"></a>Решение  
  Убедитесь, что вызов метода <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> выполняется непосредственно перед инструкцией `try`.  
@@ -48,7 +48,7 @@ ms.locfileid: "33386357"
 ## <a name="example"></a>Пример  
  В следующем примере кода показан шаблон, который запускает этот помощник по отладке управляемого кода.  
   
-```  
+```csharp
 void MethodWithInvalidPCR()  
 {  
     RuntimeHelpers.PrepareConstrainedRegions();  

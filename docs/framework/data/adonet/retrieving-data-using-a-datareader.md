@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: d3c59b667c05be083e44de8cc3e7e44d50fefc71
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: c97c30d77551f519777afa6efd31d507b3f21851
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43516795"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155357"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>Извлечение данных с помощью объекта DataReader
 Для получения данных с помощью **DataReader**, создайте экземпляр **команда** объекта, а затем создайте **DataReader** путем вызова **Command.ExecuteReader**  для получения строк из источника данных. **DataReader** предоставляет небуферизованный поток данных, позволяющий процедурам последовательно обрабатывать результаты из источника данных. **DataReader** хорошо подходит при извлечении больших объемов данных, поскольку данные не кэшируются в памяти.
@@ -144,7 +144,7 @@ using (OleDbConnection connection = new OleDbConnection(
   
  Например, рассмотрим следующий пакет и текст пакета Oracle.  
   
-```  
+```sql
 CREATE OR REPLACE PACKAGE CURSPKG AS   
   TYPE T_CURSOR IS REF CURSOR;   
   PROCEDURE OPEN_TWO_CURSORS (EMPCURSOR OUT T_CURSOR,   

@@ -1,16 +1,16 @@
 ---
-title: 'Конечная точка: количество сбоев при проверке безопасности и проверке подлинности в секунду'
+title: 'Конечная точка: Количество сбоев при проверке безопасности и проверке подлинности в секунду'
 ms.date: 03/30/2017
 ms.assetid: 89a70b90-d7e4-4b03-9b84-4dc88ce3d605
 ms.openlocfilehash: 43886f79585fb9a63eeb51360cc869365c100a1d
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744240"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129055"
 ---
-# <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>Конечная точка: количество сбоев при проверке безопасности и проверке подлинности в секунду
-Имя счетчика: Security Validation and Authentication Failures Per Second  
+# <a name="endpoint-security-validation-and-authentication-failures-per-second"></a>Конечная точка: Количество сбоев при проверке безопасности и проверке подлинности в секунду
+Имя счетчика: Количество сбоев при проверке безопасности и проверке подлинности в секунду  
   
 ## <a name="description"></a>Описание  
  Значение этого счетчика увеличивается всякий раз, когда сообщение отклоняется из-за проблемы безопасности, не относящейся к счетчику "Security Calls Not Authorized". К таким проблемам относятся следующие.  

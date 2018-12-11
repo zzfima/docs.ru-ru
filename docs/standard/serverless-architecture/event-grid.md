@@ -4,12 +4,12 @@ description: Сетка событий Azure — это бессерверное
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b2507da61cbea3b4bdc51c6eecfe4d784737e924
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 240542014a34235aea9fd0f8162748749f23eacf
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49370208"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143666"
 ---
 # <a name="event-grid"></a>"Сетка событий"
 
@@ -142,5 +142,5 @@ Azure предоставляет несколько служб обмена со
 * [Работа с прокси функций Azure](https://docs.microsoft.com/azure/azure-functions/functions-proxies)
 
 >[!div class="step-by-step"]
-[Назад](logic-apps.md)
-[Вперед](durable-azure-functions.md)
+>[Назад](logic-apps.md)
+>[Вперед](durable-azure-functions.md)

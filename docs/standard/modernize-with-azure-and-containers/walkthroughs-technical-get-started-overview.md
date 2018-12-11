@@ -4,12 +4,12 @@ description: Модернизация существующих приложен�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c23acc16698446bc07c0047b68186e21c2ceb2d
-ms.sourcegitcommit: e42d09e5966dd9fd02847d3e7eeb4ec0877069f8
+ms.openlocfilehash: f5a9d0c7c1c45a6afca390e93384af4c8386fe09
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49372855"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150594"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>Пошаговые руководства и Технический обзор работы
 
@@ -36,7 +36,7 @@ ms.locfileid: "49372855"
 - **Развертывание приложений на базе контейнеров Windows в Azure Service Fabric**
 
 
-## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Пошаговое руководство 1: Обзор eShop работоспособности приложений прежних версий
+## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Пошаговое руководство 1. Обзор приложений прежних версий eShop
 
 ### <a name="technical-walkthrough-availability"></a>Доступность техническим руководством
 
@@ -55,7 +55,7 @@ ms.locfileid: "49372855"
 
 Основная цель этого пошагового руководства, достаточно ознакомиться с этими приложениями и с их кода и конфигурации. Можно настроить приложения, создавать и использовать фиктивные данные без использования базы данных SQL, для целей тестирования. Это необязательная конфигурация основана на внедрение зависимостей, несвязанно.
 
-### <a name="scenario-1-aspnet-web-apps"></a>Сценарий 1: Веб-приложений ASP.NET
+### <a name="scenario-1-aspnet-web-apps"></a>Сценарий 1. Веб-приложений ASP.NET
 
 На рисунке ниже показан простой сценарий исходного устаревших веб-приложений ASP.NET.
 
@@ -70,7 +70,7 @@ ms.locfileid: "49372855"
 
 Зависимости в ASP.NET 4.x или более ранних версий (либо для MVC или веб-форм) означает, что эти приложения не будут работать на .NET Core, если код полностью переписан с помощью ASP.NET Core MVC. 
 
-### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Сценарий 2: Служба WCF и клиентское приложение WinForms (3-уровневое приложение)
+### <a name="scenario-2-wcf-service-and-winforms-client-app-3-tier-app"></a>Сценарий 2. Служба WCF и клиентское приложение WinForms (3-уровневое приложение)
 
 На рисунке ниже показан простой сценарий исходного 3-уровневого приложения прежних версий.
 
@@ -79,7 +79,7 @@ ms.locfileid: "49372855"
 
 ### <a name="benefits"></a>Преимущества
 
-Преимущества в этом пошаговом руководстве просты: просто ознакомиться с кодом и начального приложения.
+Преимущества в этом пошаговом руководстве, просты: Просто ознакомиться с кодом и начального приложения.
 
 ### <a name="next-steps"></a>Следующие шаги
 
@@ -89,7 +89,7 @@ ms.locfileid: "49372855"
   - [Обзор базовая служба WCF и «устаревшего» приложение WinForms (3-уровневой)](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 
-## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Пошаговое руководство 2: Контейнеризовать существующие приложения .NET с контейнерами Windows
+## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Пошаговое руководство 2. Контейнеризация существующие приложения .NET с контейнерами Windows
 
 ### <a name="overview"></a>Обзор
 
@@ -107,7 +107,7 @@ ms.locfileid: "49372855"
 
 В этом пошаговом руководстве рассматриваются инструменты Visual Studio 2017 для Docker подхода, но эти два подхода довольно похожи отношении с помощью файлов Dockerfile.
 
-### <a name="scenario-1-containerized-aspnet-web-apps"></a>Сценарий 1: Контейнерных ASP.NET веб-приложений
+### <a name="scenario-1-containerized-aspnet-web-apps"></a>Сценарий 1. Контейнерные веб-приложений ASP.NET
 
 На следующем рисунке показан сценарий для контейнерных eShop устаревших веб-приложений, приложений.
 
@@ -115,7 +115,7 @@ ms.locfileid: "49372855"
 >
 
 
-### <a name="scenario-2-containerized-wcf-service"></a>Сценарий 2: Службы WCF контейнерных
+### <a name="scenario-2-containerized-wcf-service"></a>Сценарий 2. Контейнерная служба WCF
 
 На следующем рисунке показан сценарий для трехуровневого приложения с контейнерная служба WCF. 
 
@@ -141,7 +141,7 @@ ms.locfileid: "49372855"
 
 
 
-## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>Пошаговое руководство 3: Развертывание приложения на базе контейнеров Windows в виртуальных машинах Azure
+## <a name="walkthrough-3-deploy-your-windows-containers-based-app-to-azure-vms"></a>Пошаговое руководство 3. Развертывание приложения на базе контейнеров Windows в виртуальных машинах Azure
 
 ### <a name="technical-walkthrough-availability"></a>Доступность техническим руководством
 
@@ -159,19 +159,19 @@ ms.locfileid: "49372855"
 
 В этом пошаговом руководстве рассматриваются несколько сценариев.
 
-#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Сценарий а. развертывание на виртуальных машинах Azure из dev ПК через подключение подсистемы Docker
+#### <a name="scenario-a-deploy-to-an-azure-vm-from-a-dev-pc-through-docker-engine-connection"></a>Сценарий а. Развертывание виртуальной Машины Azure из dev ПК через подключение подсистемы Docker
 
 ![Развертывание виртуальной Машины Azure из dev ПК через подключение к подсистеме Docker](./media/image5-4.png)
 
 > **Рис. 5-4.** Развертывание виртуальной Машины Azure из dev ПК через подключение к подсистеме Docker
 
-#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Сценарий б: развертывание на виртуальной Машине Azure через реестр Docker
+#### <a name="scenario-b-deploy-to-an-azure-vm-through-a-docker-registry"></a>Сценарий б Развертывание на виртуальной Машине Azure через реестр Docker
 
 ![Развертывание на виртуальной Машине Azure через реестр Docker](./media/image5-5.png)
 
 > **Рис. 5-5.** Развертывание на виртуальной Машине Azure через реестр Docker
 
-#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Сценарий C: развертывание на виртуальных машинах Azure из конвейеров CI/CD в службах Azure DevOps
+#### <a name="scenario-c-deploy-to-an-azure-vm-from-cicd-pipelines-in-azure-devops-services"></a>Сценарий C: Развертывание виртуальной Машины Azure из конвейеров CI/CD в службах Azure DevOps
 
 ![Развертывание виртуальной Машины Azure из конвейеров CI/CD в службах Azure DevOps](./media/image5-6.png)
 
@@ -193,7 +193,7 @@ Azure в настоящее время предоставляет виртуал
 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
-## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>Пошаговое руководство 4: Развертывание приложений на базе контейнеров Windows в экземпляры контейнеров Azure (ACI)
+## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>Пошаговое руководство 4. Развертывание приложений на базе контейнеров Windows в экземпляры контейнеров Azure (ACI)
 
 ### <a name="technical-walkthrough-availability"></a>Доступность техническим руководством
 
@@ -232,7 +232,7 @@ Azure в настоящее время предоставляет виртуал
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
 
 
-## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>Пошаговое руководство. 5: Развертывание приложений на базе контейнеров Windows в Kubernetes в службе контейнеров Azure
+## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>Пошаговое руководство. 5. Развертывание приложений на базе контейнеров Windows в Kubernetes в службе контейнеров Azure
 
 ### <a name="technical-walkthrough-availability"></a>Доступность техническим руководством
 
@@ -254,13 +254,13 @@ Azure в настоящее время предоставляет виртуал
 
 ### <a name="scenarios"></a>Сценарии
 
-#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Сценарий а. развертывание непосредственно в кластер Kubernetes из среды разработки
+#### <a name="scenario-a-deploy-directly-to-a-kubernetes-cluster-from-a-dev-environment"></a>Сценарий а. Развертывание непосредственно в кластер Kubernetes из среды разработки
 
 ![Развертывание непосредственно в кластере Kubernetes из среды разработки](./media/image5-7.png)
 
 > **Рис. 5-7.** Развертывание непосредственно в кластере Kubernetes из среды разработки
 
-#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Сценарий б: развертывание в кластере Kubernetes из непрерывной Интеграции и Развертывания конвейеров в службах Azure DevOps
+#### <a name="scenario-b-deploy-to-a-kubernetes-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Сценарий б Развертывание кластера Kubernetes из конвейеров CI/CD в службах Azure DevOps
 
 ![Развертывание кластера Kubernetes из конвейеров CI/CD в службах Azure DevOps](./media/image5-8.png)
 
@@ -292,7 +292,7 @@ Azure в настоящее время предоставляет виртуал
 
 Это содержимое более подробный обзор на вики-сайте GitHub: [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
-## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Пошаговое руководство. 6: Развертывание приложений на базе контейнеров Windows в Azure Service Fabric
+## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>Пошаговое руководство. 6. Развертывание приложений на базе контейнеров Windows в Azure Service Fabric
 
 ### <a name="technical-walkthrough-availability"></a>Доступность техническим руководством
 
@@ -314,13 +314,13 @@ Azure в настоящее время предоставляет виртуал
 
 ### <a name="scenarios"></a>Сценарии
 
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Сценарий а. развертывание непосредственно в кластер Service Fabric из среды разработки
+#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>Сценарий а. Развертывание непосредственно в кластер Service Fabric из среды разработки
 
 ![Развертывание непосредственно в кластере Service Fabric из среды разработки](./media/image5-9.png)
 
 > **Рис. 5-9.** Развертывание непосредственно в кластере Service Fabric из среды разработки
 
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Сценарий б: развертывание кластера Service Fabric из непрерывной Интеграции и Развертывания конвейеров в службах Azure DevOps
+### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>Сценарий б Развертывание кластера Service Fabric из конвейеров CI/CD в службах Azure DevOps
 
 ![Развертывание кластера Service Fabric из конвейеров CI/CD в службах Azure DevOps](./media/image5-10.png)
 
@@ -367,5 +367,5 @@ Azure Service Fabric обеспечивает переносимость как 
 [https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
 >[!div class="step-by-step"]
-[Назад](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
-[Вперед](conclusions.md)
+>[Назад](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)
+>[Вперед](conclusions.md)

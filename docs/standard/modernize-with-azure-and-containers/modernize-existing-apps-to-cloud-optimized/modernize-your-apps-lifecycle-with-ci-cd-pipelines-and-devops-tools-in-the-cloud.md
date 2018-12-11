@@ -4,12 +4,12 @@ description: Модернизация существующих приложен�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: c4d3eaa50f6c7645c954ca65bf42c6c1eab3a68d
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c4eeb5606d3ea93b76efee58ddfecae0abbbd743
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47070790"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128184"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>Модернизация жизненного цикла приложений с помощью конвейеров непрерывной Интеграции и Развертывания и инструменты DevOps в облаке
 
@@ -36,5 +36,5 @@ ms.locfileid: "47070790"
 > **Рис. 4-12.** Azure конвейере непрерывного развертывания службы DevOps, развертывание в кластер Kubernetes
 
 >[!div class="step-by-step"]
-[Назад](modernize-your-apps-with-monitoring-and-telemetry.md)
-[Вперед](migrate-to-hybrid-cloud-scenarios.md)
+>[Назад](modernize-your-apps-with-monitoring-and-telemetry.md)
+>[Вперед](migrate-to-hybrid-cloud-scenarios.md)

@@ -3,11 +3,11 @@ title: Объектно ориентированного программиро�
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
 ms.openlocfilehash: 058d8b932e50f784d4a5cefa9fadfb31953687f0
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297092"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153934"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>Объектно ориентированного программирования (Visual Basic)
 
@@ -173,7 +173,7 @@ Class SampleClass
 End Class
 ```
 
-Дополнительные сведения см. в разделе: [время жизни объекта: как объекты и уничтожение](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
+Дополнительные сведения: [Время существования: Как создаются и удаляются объекты](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md).
 
 #### <a name="destructors"></a>Деструкторы
 
@@ -293,7 +293,7 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-Дополнительные сведения см. в разделе [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
+Дополнительные сведения: [Анонимные типы](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md).
 
 ## <a name="inheritance"></a>Наследование
 

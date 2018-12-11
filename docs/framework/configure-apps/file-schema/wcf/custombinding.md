@@ -2,12 +2,12 @@
 title: '&lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
-ms.openlocfilehash: 741f195a78c1716b95d8d4d88594207708ce6289
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: c927ba59ccdb6e5a717fcaccde9294845a2c41cc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123830"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153908"
 ---
 # <a name="ltcustombindinggt"></a>&lt;customBinding&gt;
 Обеспечивает пользователю полный контроль над стеком обмена сообщениями.  
@@ -290,9 +290,8 @@ ms.locfileid: "49123830"
   
  Кроме того, можно определить собственные элементы привязки и вставить их между любыми из приведенных выше заданных уровней.  
   
- Дополнительные сведения об использовании пользовательской привязки для изменения привязки, предоставляемой системой, см. в разделе [как: изменение привязки, предоставляемые системой](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
-  
-1.  
+ Дополнительные сведения об использовании пользовательской привязки для изменения привязки, предоставляемой системой, см. в разделе [как: Настройка привязки, предоставляемой системой](../../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md).  
+    
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Channels.Binding>  

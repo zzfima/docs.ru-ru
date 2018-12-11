@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9643a2d2ea0967b8cf6d8e18ce2e9073ae583f71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d73c299231a588a5ae0b252dd2b5a0a834685f2d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387040"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150671"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 Помощник по отладке управляемого кода (MDA) `jitCompilationStart` активируется, чтобы сообщить о том, что JIT-компилятор начал компиляцию функции.  
@@ -39,7 +39,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>Конфигурация  
- Приведенный ниже файл конфигурации содержит различные фильтры, которые можно применять, чтобы отфильтровать методы, о которых будет сообщено при их первой JIT-компиляции. Можно указать, что необходимо сообщать о всех методах, установив значение атрибута имени равным *.  
+ Приведенный ниже файл конфигурации содержит различные фильтры, которые можно применять, чтобы отфильтровать методы, о которых будет сообщено при их первой JIT-компиляции. Можно указать, что все методы возвратить значение атрибута имени для \*.  
   
 ```xml  
 <mdaConfig>  
@@ -62,7 +62,7 @@ method name="Test!ns2.C0::m"
 ## <a name="example"></a>Пример  
  Приведенный ниже пример кода предназначен для использования с предыдущим файлом конфигурации.  
   
-```  
+```csharp
 using System;  
 using System.Reflection;  
 using System.Runtime.CompilerServices;  

@@ -1,20 +1,19 @@
 ---
 title: Виртуальные члены
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - overridable members
 - virtual members
 - members [.NET Framework], virtual
 ms.assetid: 8ff4eb97-0364-43ec-8a02-934b5cd94d19
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b92b648e7886fb0214238e32eacae2870b470340
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+author: KrzysztofCwalina
+ms.openlocfilehash: 1719e9843252c25d1e799471330c6cb08211245b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121069"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128936"
 ---
 # <a name="virtual-members"></a>Виртуальные члены
 Виртуальные члены можно переопределить, таким образом изменение поведения подкласса. Они похожи на обратные вызовы с точки зрения расширяемости, которые они выполняют, но они лучше с точки зрения производительности и потребления памяти. Кроме того виртуальные члены показаться более естественной, в сценариях, когда требуется создавать специальный вид существующего типа (специализации).  
@@ -37,7 +36,7 @@ ms.locfileid: "49121069"
   
  *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
   
- *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*  
+ *Перепечатано разрешением Пирсона для образовательных учреждений, Inc. из [рекомендации по разработке Framework: Условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Кшиштов Квалина и Брэд Абрамс, опубликованных 22 октября 2008 г., издательство Addison-Wesley Professional как части цикла разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также
 

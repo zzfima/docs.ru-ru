@@ -3,11 +3,11 @@ title: Одностороннее взаимодействие
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
 ms.openlocfilehash: 9a8af4bcdc76afd96ada595a7234cbc5e0250dfc
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296702"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155201"
 ---
 # <a name="one-way"></a>Одностороннее взаимодействие
 В этом образце демонстрируется контакт службы с односторонними операциями службы. Клиент не ожидает завершения операций службы, как это происходит в случае двусторонних операций службы. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) и использует `wsHttpBinding` привязки. В данном образце служба представляет собой резидентное консольное приложение, позволяющее наблюдать за тем, как служба получает и обрабатывает запросы. Клиент также является консольным приложением.  

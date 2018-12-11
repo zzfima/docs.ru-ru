@@ -1,16 +1,16 @@
 ---
-title: Практическое руководство. Проверка или изменение сообщений на клиенте
+title: Как выполнить Проверка или изменение сообщений на стороне клиента
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
-ms.openlocfilehash: 6cd0f39494006bf51b7c4bb55afcc112ec08aadb
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: 06a5cae9abd77e45b0590ea7b87a24fc7bb314ff
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804174"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144394"
 ---
-# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Практическое руководство. Проверка или изменение сообщений на клиенте
-Может проверять или изменять входящие или исходящие сообщения между клиентом WCF путем реализации <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> и их вставка в среду выполнения клиента. Дополнительные сведения см. в разделе [расширение клиентов](../../../../docs/framework/wcf/extending/extending-clients.md). Эквивалентную функцию в службе выполняет интерфейс <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Полный пример кода см. [инспекторы сообщений](../../../../docs/framework/wcf/samples/message-inspectors.md) образца.  
+# <a name="how-to-inspect-or-modify-messages-on-the-client"></a>Как выполнить Проверка или изменение сообщений на стороне клиента
+Вы может проверять или изменять входящие или исходящие сообщения между клиентом WCF путем реализации <xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> и его вставки в среду выполнения клиента. Дополнительные сведения см. в разделе [расширение клиентов](../../../../docs/framework/wcf/extending/extending-clients.md). Эквивалентную возможность в службе выполняет интерфейс <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>. Полный пример кода см. в разделе [инспекторы сообщений](../../../../docs/framework/wcf/samples/message-inspectors.md) образца.  
   
 ### <a name="to-inspect-or-modify-messages"></a>Проверка или изменение сообщений  
   
@@ -102,7 +102,8 @@ public class SimpleBehaviorExtensionElement : BehaviorExtensionElement
     <system.serviceModel>  
         <client>  
             <endpoint address="http://localhost:8080/SimpleService/"   
-                      binding="wsHttpBinding"  
+                      binding="wsHttpBinding"
+                      behaviorConfiguration="clientInspectorsAdded"
                       contract="ServiceReference1.IService1"  
                       name="WSHttpBinding_IService1"/>  
         </client>  

@@ -1,6 +1,6 @@
 ---
 title: Создание приложения WPF в Visual Studio
-ms.date: 04/12/2018
+ms.date: 10/26/2018
 dev_langs:
 - csharp
 - vb
@@ -11,16 +11,16 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 1a9c82a0bca25fa1242b29393e41e6eb4ce7f3b9
-ms.sourcegitcommit: f513a91160b3fec289dd06646d0d6f81f8fcf910
+ms.openlocfilehash: 6ea5997906c0bf34de67a6a125552d2b2c4e1a43
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46007260"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150749"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Пошаговое руководство. Создание первого классического приложения WPF
 
-В этой статье показано, как разработать простое приложение Windows Presentation Foundation (WPF), которое включает элементы, которые являются общими для большинства приложений WPF: разметку расширяемого языка разметки приложений (XAML), кода, определения приложения элементы управления, макет, привязку данных и стили.
+В этой статье показано, как разработать простое приложение Windows Presentation Foundation (WPF), которое включает элементы, которые являются общими для большинства приложений WPF: Расширяемый язык разметки приложений (XAML) разметки, кода, определения приложений, элементы управления, макет, привязки данных и стили.
 
 В этом пошаговом руководстве включает следующие шаги:
 
@@ -43,7 +43,7 @@ ms.locfileid: "46007260"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- Visual Studio 2012 или более поздней версии (Эта статья основана на Visual Studio 2017)
+- Visual Studio 2017 или более поздней версии
 
    Дополнительные сведения об установке последней версии Visual Studio, см. в разделе [установка Visual Studio](/visualstudio/install/install-visual-studio).
 
@@ -57,7 +57,7 @@ ms.locfileid: "46007260"
 
       **Новый проект** откроется диалоговое окно.
 
-   2. В разделе **установленные** категории, разверните **Visual C#** или **Visual Basic** узел, а затем выберите **классический рабочий стол Windows**.
+   2. В разделе **установленные** категории, разверните **Visual C#**  или **Visual Basic** узел, а затем выберите **Windows Desktop**.
 
    3. Выберите **приложение WPF (.NET Framework)** шаблона. Введите имя **`ExpenseIt`** , а затем выберите **ОК**.
 
@@ -66,7 +66,7 @@ ms.locfileid: "46007260"
       Visual Studio создаст проект и открывает конструктор для окна приложения по умолчанию с именем **MainWindow.xaml**.
 
    > [!NOTE]
-   > В этом пошаговом руководстве использует <xref:System.Windows.Controls.DataGrid> элемент управления, доступных в .NET Framework 4 и более поздних версиях. Быть в том, что проект предназначен для .NET Framework 4 или более поздней версии. Дополнительные сведения см. в [практическом руководстве по настройке конкретной версии .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+   > В этом пошаговом руководстве использует <xref:System.Windows.Controls.DataGrid> элемент управления, доступных в .NET Framework 4 и более поздних версиях. Быть в том, что проект предназначен для .NET Framework 4 или более поздней версии. Дополнительные сведения см. в разделе [Как Определение целевой версии платформы .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 2. Откройте *Application.xaml* (Visual Basic) или *App.xaml* (C#).
 
@@ -254,7 +254,7 @@ ms.locfileid: "46007260"
 
     [!code-xaml[ExpenseIt#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt3/ExpenseItHome.xaml#8)]
 
-    <xref:System.Windows.Controls.RowDefinition.Height%2A> Двух строк имеет значение <xref:System.Windows.GridLength.Auto%2A>, что означает, что строки имеют размер базового содержимого в строках. Значение по умолчанию <xref:System.Windows.Controls.RowDefinition.Height%2A> является <xref:System.Windows.GridUnitType.Star> изменения размера, это означает, что высота строки — это взвешенная пропорция доступного пространства. Например, если две строки имеют <xref:System.Windows.Controls.RowDefinition.Height%2A> из «*», каждый из них имеет высоту, половина доступного пространства.
+    <xref:System.Windows.Controls.RowDefinition.Height%2A> Двух строк имеет значение <xref:System.Windows.GridLength.Auto%2A>, означающее, что размер строки на основе содержимого в строках. Значение по умолчанию <xref:System.Windows.Controls.RowDefinition.Height%2A> является <xref:System.Windows.GridUnitType.Star> изменения размера, это означает, что высота строки — это взвешенная пропорция доступного пространства. Например, если две строки имеют <xref:System.Windows.Controls.RowDefinition.Height%2A> из «*», каждый из них имеет высоту, половина доступного пространства.
 
     Ваш <xref:System.Windows.Controls.Grid> теперь должен выглядеть как следующий XAML:
 
@@ -327,7 +327,7 @@ ms.locfileid: "46007260"
 
 1. Откройте *`ExpenseItHome.xaml`*.
 
-2. Добавить <xref:System.Windows.Controls.Primitives.ButtonBase.Click> в обработчике событий <xref:System.Windows.Controls.Button> элемент. Дополнительные сведения см. в разделе [как: создание простого обработчика событий](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
+2. Добавить <xref:System.Windows.Controls.Primitives.ButtonBase.Click> в обработчике событий <xref:System.Windows.Controls.Button> элемент. Дополнительные сведения см. в разделе [Как Создание простого обработчика событий](https://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).
 
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -353,7 +353,7 @@ ms.locfileid: "46007260"
 3. Выполните сборку и запуск приложения.
 
     > [!NOTE]
-    > Если отобразится сообщение об ошибке, <xref:System.Windows.Controls.DataGrid> не найден или не существует, убедитесь, что ваш проект предназначен для .NET Framework 4 или более поздней версии. Дополнительные сведения см. в [практическом руководстве по настройке конкретной версии .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
+    > Если отобразится сообщение об ошибке, <xref:System.Windows.Controls.DataGrid> не найден или не существует, убедитесь, что ваш проект предназначен для .NET Framework 4 или более поздней версии. Дополнительные сведения см. в разделе [Как Определение целевой версии платформы .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).
 
 4. Выберите **представление** кнопки.
 
@@ -375,17 +375,17 @@ ms.locfileid: "46007260"
 
     Этот код XAML добавляет следующие стили:
 
-    - `headerTextStyle`для форматирования заголовка страницы <xref:System.Windows.Controls.Label>;
+    - `headerTextStyle`: Для форматирования заголовка страницы <xref:System.Windows.Controls.Label>.
 
-    - `labelStyle`для форматирования элементов управления <xref:System.Windows.Controls.Label> ;
+    - `labelStyle`: Для форматирования <xref:System.Windows.Controls.Label> элементов управления.
 
-    - `columnHeaderStyle`для форматирования <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>;
+    - `columnHeaderStyle`: Для форматирования <xref:System.Windows.Controls.Primitives.DataGridColumnHeader>.
 
-    - `listHeaderStyle`для форматирования элементов управления <xref:System.Windows.Controls.Border> заголовков списка;
+    - `listHeaderStyle`: Форматирование заголовка списка <xref:System.Windows.Controls.Border> элементов управления.
 
-    - `listHeaderTextStyle`Для форматирования заголовка списка <xref:System.Windows.Controls.Label>.
+    - `listHeaderTextStyle`: Форматирование заголовка списка <xref:System.Windows.Controls.Label>.
 
-    - `buttonStyle`Для форматирования <xref:System.Windows.Controls.Button> на `ExpenseItHome.xaml`.
+    - `buttonStyle`: Для форматирования <xref:System.Windows.Controls.Button> на `ExpenseItHome.xaml`.
 
     Обратите внимание на то, что стили представляют собой ресурсы и являются дочерними <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> элемент свойства. Здесь стили применяются ко всем элементам в приложении. Пример использования ресурсов в приложении .NET Framework, см. в разделе [использование ресурсов приложения](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md).
 

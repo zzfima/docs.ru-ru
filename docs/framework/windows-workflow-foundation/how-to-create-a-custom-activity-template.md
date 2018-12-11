@@ -1,15 +1,15 @@
 ---
-title: Как создать шаблон настраиваемого действия
+title: Как выполнить Создание настраиваемого шаблона действий
 ms.date: 03/30/2017
 ms.assetid: 6760a5cc-6eb8-465f-b4fa-f89b39539429
 ms.openlocfilehash: 87acf0d084154c9c3e5cbc97da4af9821709f0a5
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50044844"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131447"
 ---
-# <a name="how-to-create-a-custom-activity-template"></a>Как создать шаблон настраиваемого действия
+# <a name="how-to-create-a-custom-activity-template"></a>Как выполнить Создание настраиваемого шаблона действий
 
 Настраиваемые шаблоны действий служат для настройки конфигурации действий, в том числе настраиваемых составных действий, чтобы позволяет не создавать отдельно каждое действие и не настраивать все свойства и другие параметры вручную. Эти настраиваемые шаблоны могут быть сделаны доступными в **элементов** на [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] или в повторно размещенном конструкторе, из которого пользователи могут перетащить их в предварительно настроенную область конструктора. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] поставляется с хорошими примерами таких шаблонов: [конструктора шаблонов SendAndReceiveReply](/visualstudio/workflow-designer/sendandreceivereply-template-designer) и [конструктора шаблонов ReceiveAndSendReply](/visualstudio/workflow-designer/receiveandsendreply-template-designer) в [конструкторы действий обмена сообщениями](/visualstudio/workflow-designer/messaging-activity-designers) категории.
 

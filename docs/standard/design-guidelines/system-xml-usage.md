@@ -1,16 +1,15 @@
 ---
 title: Использование System.Xml
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 82302f0d-a621-4c6f-b57d-999bd61f21a6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c3eb01e1050bc78d2b31de19a8a728af92777e8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+author: KrzysztofCwalina
+ms.openlocfilehash: fb0e1d3dc851f9726905dc375d50cf211dba8400
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863391"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149547"
 ---
 # <a name="systemxml-usage"></a>Использование System.Xml
 В этом разделе рассказывается об использовании нескольких типов, которая находится в <xref:System.Xml?displayProperty=nameWithType> пространства имен, который может использоваться для представления XML-данных.  
@@ -25,7 +24,7 @@ ms.locfileid: "43863391"
   
  *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
   
- *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*  
+ *Перепечатано разрешением Пирсона для образовательных учреждений, Inc. из [рекомендации по разработке Framework: Условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Кшиштов Квалина и Брэд Абрамс, опубликованных 22 октября 2008 г., издательство Addison-Wesley Professional как части цикла разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также
 

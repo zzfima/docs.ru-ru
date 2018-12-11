@@ -23,11 +23,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296455"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151318"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>Передача аргументов по позиции и по имени (Visual Basic)
 При вызове `Sub` или `Function` процедуру, вы можете передавать аргументы *по позиции* — в порядке, в котором они появляются в определении процедуры, или их можно передать *по имени*, без учета.  
@@ -64,7 +64,7 @@ ms.locfileid: "52296455"
   
  В приведенном выше примере не лишнюю запятую необходим отмечающая пропущенный аргумент `age` аргумента, так как `birth` передается по имени.  
   
-В версиях Visual Basic до версии 15.5 Если аргументы перепутаны позиции и имя, позиционные аргументы должны быть первой. Когда необходимо указать аргумент по имени, все остальные аргументы должны все передаваться по имени.  Например, следующий вызов `Display` метод отображает ошибку компилятора [BC30241: ожидается именованный аргумент](../../../misc/bc30241.md).
+В версиях Visual Basic до версии 15.5 Если аргументы перепутаны позиции и имя, позиционные аргументы должны быть первой. Когда необходимо указать аргумент по имени, все остальные аргументы должны все передаваться по имени.  Например, следующий вызов `Display` метод отображает ошибку компилятора [BC30241: Ожидается именованный аргумент](../../../misc/bc30241.md).
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 
@@ -97,7 +97,7 @@ ms.locfileid: "52296455"
 ## <a name="see-also"></a>См. также  
  [Процедуры](./index.md)  
  [Параметры и аргументы процедуры](./procedure-parameters-and-arguments.md)  
- [Практическое руководство. Передача аргументов в процедуру](./how-to-pass-arguments-to-a-procedure.md)  
+ [Инструкции: Передача аргументов в процедуру](./how-to-pass-arguments-to-a-procedure.md)  
  [Передача аргументов по значению и по ссылке](./passing-arguments-by-value-and-by-reference.md)  
  [Необязательные параметры](./optional-parameters.md)  
  [Массивы параметров](./parameter-arrays.md)  

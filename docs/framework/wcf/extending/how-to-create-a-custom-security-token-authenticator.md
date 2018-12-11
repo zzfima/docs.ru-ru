@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
 ms.openlocfilehash: 2a6fc82b21d8530214923bdadcad7f52da947c82
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50088823"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149267"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>Практическое: создать структуру проверки подлинности маркеров безопасности
 В этом разделе показано, как создать пользовательскую структуру проверки подлинности маркеров безопасности и интегрировать ее с пользовательским диспетчером маркеров безопасности. Структура проверки подлинности маркеров безопасности проверяет содержимое маркера безопасности, которым снабжается входящее сообщение. В случае успешной проверки структура проверки подлинности возвращает коллекцию экземпляров <xref:System.IdentityModel.Policy.IAuthorizationPolicy>, которая при вычислении возвращает набор утверждений.  
   
- Чтобы использовать средство проверки подлинности маркеров безопасности в Windows Communication Foundation (WCF), необходимо сначала создать пользовательских учетных данных и безопасности реализации диспетчера маркеров. Дополнительные сведения о создании пользовательских учетных данных и обеспечения безопасности диспетчер маркеров см. в разделе [Пошаговое руководство: Создание пользовательского клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Дополнительные сведения об учетных данных, диспетчер маркеров безопасности и классы поставщика и структуры проверки подлинности см. в разделе [архитектуры безопасности](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
+ Чтобы использовать средство проверки подлинности маркеров безопасности в Windows Communication Foundation (WCF), необходимо сначала создать пользовательских учетных данных и безопасности реализации диспетчера маркеров. Дополнительные сведения о создании пользовательских учетных данных и обеспечения безопасности диспетчер маркеров см. в разделе [Пошаговое руководство: Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md). Дополнительные сведения об учетных данных, диспетчер маркеров безопасности и классы поставщика и структуры проверки подлинности см. в разделе [архитектуры безопасности](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f).  
   
 ## <a name="procedures"></a>Процедуры  
   
@@ -47,7 +47,7 @@ ms.locfileid: "50088823"
      [!code-csharp[c_CustomTokenAuthenticator#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenauthenticator/cs/source.cs#3)]
      [!code-vb[c_CustomTokenAuthenticator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#3)]  
 
- [Пошаговое руководство: Создание пользовательского клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) описывается создание пользовательских учетных данных и безопасности пользовательский диспетчер маркеров. Для использования созданной здесь пользовательской структуры проверки подлинности маркеров безопасности реализация диспетчера маркеров безопасности изменяется таким образом, чтобы возвращать из метода <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> пользовательскую структуру проверки подлинности. Метод возвращает структуру проверки подлинности, когда ему передается соответствующее требование маркера безопасности.  
+ [Пошаговое руководство. Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md) описывается создание пользовательских учетных данных и безопасности пользовательский диспетчер маркеров. Для использования созданной здесь пользовательской структуры проверки подлинности маркеров безопасности реализация диспетчера маркеров безопасности изменяется таким образом, чтобы возвращать из метода <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> пользовательскую структуру проверки подлинности. Метод возвращает структуру проверки подлинности, когда ему передается соответствующее требование маркера безопасности.  
   
 #### <a name="to-integrate-a-custom-security-token-authenticator-with-a-custom-security-token-manager"></a>Интеграция пользовательской структуры проверки подлинности маркеров безопасности с пользовательским диспетчером маркеров безопасности  
   
@@ -63,6 +63,6 @@ ms.locfileid: "50088823"
  <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>  
  <xref:System.IdentityModel.Selectors.SecurityTokenManager>  
  <xref:System.IdentityModel.Tokens.UserNameSecurityToken>  
- [Пошаговое руководство. Создание пользовательских учетных данных для клиента и службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
- [Практическое руководство. Создание пользовательского поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+ [Пошаговое руководство. Создание пользовательских клиента и учетные данные службы](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)  
+ [Инструкции: Создание поставщика маркеров безопасности](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
  [Архитектура безопасности](https://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

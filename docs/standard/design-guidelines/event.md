@@ -1,6 +1,6 @@
 ---
 title: Разработка событий
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - pre-events
@@ -10,14 +10,13 @@ helpviewer_keywords:
 - post-events
 - signatures, event handling
 ms.assetid: 67b3c6e2-6a8f-480d-a78f-ebeeaca1b95a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b257da73d33fae54ef464e9dd69906316b87fd88
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+author: KrzysztofCwalina
+ms.openlocfilehash: 54f98b3c685b77ecb9fe659522c599662aa8243c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261372"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129094"
 ---
 # <a name="event-design"></a>Разработка событий
 События являются наиболее часто используемые формой обратные вызовы (конструкции, которые позволяют framework для вызова пользовательского кода). Другие механизмы обратного вызова участием делегатов, виртуальные члены и основанная на интерфейсах подключаемых модулей. Данные из исследований об удобстве использования, указывают, что большинство разработчиков удобнее работать с помощью событий, чем они при использовании других методов обратного вызова. События хорошо интегрированы с Visual Studio и многих языков.  
@@ -69,7 +68,7 @@ ms.locfileid: "48261372"
   
  *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
   
- *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*  
+ *Перепечатано разрешением Пирсона для образовательных учреждений, Inc. из [рекомендации по разработке Framework: Условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Кшиштов Квалина и Брэд Абрамс, опубликованных 22 октября 2008 г., издательство Addison-Wesley Professional как части цикла разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также
 

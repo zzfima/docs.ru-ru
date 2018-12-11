@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: a3b5805808ce2e84e7713f07694464b75d83a391
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 7b237d43cce9f17ea7e893188dac943bb996c752
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562285"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148916"
 ---
 # <a name="listview-overview"></a>Общие сведения об элементе управления ListView
 <xref:System.Windows.Controls.ListView> Управления предоставляет инфраструктуру для отображения набора элементов данных в различных макетах или представлениях. Например, у пользователя может возникнуть необходимость в отображении элементов данных в таблице, а также в сортировке ее столбцов.  
@@ -75,13 +75,11 @@ ms.locfileid: "46562285"
 ## <a name="sharing-the-same-view-mode"></a>Совместное использование одного режима представления  
  Два <xref:System.Windows.Controls.ListView> элементы управления не могут совместно использовать один и тот же режим представления, в то же время. Если вы попытаетесь использовать тот же режим представления с более чем одним <xref:System.Windows.Controls.ListView> управления, возникает исключение.  
   
- Чтобы указать режим представления, который может одновременно использоваться более чем одной <xref:System.Windows.Controls.ListView>, используйте шаблоны или стили. Пример определения представления в виде <xref:System.Windows.FrameworkElement.Resources%2A>, см. в разделе [ListView пример представления](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Чтобы указать режим представления, который может одновременно использоваться более чем одной <xref:System.Windows.Controls.ListView>, используйте шаблоны или стили.
   
 <a name="CreatingaCustomView"></a>   
 ## <a name="creating-a-custom-view-mode"></a>Создание пользовательского режима представления  
- Настраиваемые представления, такие как <xref:System.Windows.Controls.GridView> являются производными от <xref:System.Windows.Controls.ViewBase> абстрактный класс, который предоставляет средства для отображения элементов данных, которые отображаются в виде <xref:System.Windows.Controls.ListViewItem> объектов.  
-  
- Пример пользовательского режима представления см. в разделе [Пример ListView с возможностью нескольких представлений](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Настраиваемые представления, такие как <xref:System.Windows.Controls.GridView> являются производными от <xref:System.Windows.Controls.ViewBase> абстрактный класс, который предоставляет средства для отображения элементов данных, которые отображаются в виде <xref:System.Windows.Controls.ListViewItem> объектов.    
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Controls.GridView>  

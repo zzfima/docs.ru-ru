@@ -1,15 +1,15 @@
 ---
-title: 'Планирование перехода на платформу Windows Communication Foundation: упрощение будущей интеграции'
+title: 'Планирование перехода на платформу Windows Communication Foundation: Упрощение будущей интеграции'
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
 ms.openlocfilehash: f4cc450b04fd05d390a1f41f3d14c19f4b23be29
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296498"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155149"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Планирование перехода на платформу Windows Communication Foundation: упрощение будущей интеграции
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Планирование перехода на платформу Windows Communication Foundation: Упрощение будущей интеграции
 Если вы используете ASP.NET уже сегодня и ожидается в будущем с помощью WCF, этот раздел содержит рекомендации, чтобы убедиться, что новый веб-служб ASP.NET будет работать хорошо вместе с приложениями WCF.  
   
 ## <a name="general-recommendations"></a>Основные рекомендации  
@@ -44,4 +44,4 @@ public interface IEcho
  Избегайте использования параметров проверки подлинности, предусмотренных в службах IIS. Клиенты WCF не поддерживают их. Если службу необходимо защитить, используйте параметры, предоставляемые WCF, так как эти параметры обеспечивают больше возможностей и основаны на стандартных протоколах.  
   
 ## <a name="see-also"></a>См. также  
- [Планирование перехода на платформу Windows Communication Foundation: упрощение будущей миграции](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+ [Планирование перехода на платформу Windows Communication Foundation: Упрощение будущей миграции](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

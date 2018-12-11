@@ -4,12 +4,12 @@ description: Устойчивые функции Azure расширения ср
 author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
-ms.openlocfilehash: 03197ad57813b8132fe592f4e555c6a35edbd9bd
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 8ad354e1708eb88f016130f8235f534b967eb122
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49370197"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147311"
 ---
 # <a name="durable-azure-functions"></a>Устойчивых функций Azure
 
@@ -101,5 +101,5 @@ public static bool CheckAndReserveInventory([ActivityTrigger] DurableActivityCon
 * [Управление экземплярами в устойчивых функциях](https://docs.microsoft.com/azure/azure-functions/durable-functions-instance-management)
 
 >[!div class="step-by-step"]
-[Назад](event-grid.md)
-[Вперед](orchestration-patterns.md)
+>[Назад](event-grid.md)
+>[Вперед](orchestration-patterns.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <settings> element
 ms.assetid: 189ce989-c39b-427d-b004-6b82a668b931
 ms.openlocfilehash: 87a944eca6ea4158f15c9911c6b13fd4d3c0921d
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672362"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151204"
 ---
 # <a name="ltsettingsgt-element-network-settings"></a>&lt;Параметры&gt; (сетевые параметры)
 Настраивает основные параметры сети для пространства имен <xref:System.Net?displayProperty=nameWithType>.  
@@ -44,7 +44,7 @@ ms.locfileid: "52672362"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[httpListener](../../../../../docs/framework/configure-apps/file-schema/network/httplistener-element-network-settings.md)|Настраивает параметры, используемые <xref:System.Net.HttpListener> класса.|  
 |[httpWebRequest](../../../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md)|Настраивает параметры веб-запроса.|  
@@ -56,7 +56,7 @@ ms.locfileid: "52672362"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[System.NET](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|Содержит параметры сети, определяющие способ подключения .NET Framework к Интернету.|  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
-ms.openlocfilehash: e1071261f45c56655f8e6fb5fec6fccb08fd13c6
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a8767ca492a514f3ee7a2d4688858282ec706ef7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584303"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150840"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>Создание команд с помощью построителей CommandBuilder
 Если свойство `SelectCommand` задается динамически во время выполнения, например при помощи средства запроса, принимающего от пользователя текстовые команды, то во время разработки нельзя задавать соответствующие свойства `InsertCommand`, `UpdateCommand` или `DeleteCommand`. Если <xref:System.Data.DataTable> сопоставляется с одной таблицей базы данных или создается из нее, то можно воспользоваться преимуществом объекта <xref:System.Data.Common.DbCommandBuilder> для автоматического создания сущностей `DeleteCommand`, `InsertCommand` и `UpdateCommand` объекта <xref:System.Data.Common.DbDataAdapter>.  
@@ -82,9 +82,13 @@ builder.QuoteSuffix = "]";
   
  Следующий пример кода записывает в консоль автоматически созданную команду UPDATE.  
   
-```  
+```vb
 Console.WriteLine(builder.GetUpdateCommand().CommandText)  
-```  
+```
+
+```csharp
+Console.WriteLine(builder.GetUpdateCommand().CommandText);
+```
   
  В следующем примере повторно создается таблица `Customers` из набора данных `custDS`. **RefreshSchema** метод вызывается для обновления автоматически созданные команды с помощью этого новые сведения о столбце.  
   

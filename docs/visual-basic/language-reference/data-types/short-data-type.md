@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: c8085c0911cfe83a3ca56c03cfda5689b9338680
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: dce345e049a1b89b85a340b8e9078f39882a45fb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193517"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148523"
 ---
 # <a name="short-data-type-visual-basic"></a>Тип данных Short (Visual Basic)
 Содержит знаком 16-разрядных целых чисел (2-байтовое), которые могут меняться в диапазоне от-32 768 до 32 767.  
@@ -54,7 +54,7 @@ Dim number As Short = &H_3264
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-Числовые литералы могут содержать `S` [символ типа](../../programming-guide\language-features\data-types/type-characters.md) для обозначения `Short` тип данных, как показано в следующем примере.
+Числовые литералы могут содержать `S` [символ типа](../../programming-guide/language-features/data-types/type-characters.md) для обозначения `Short` тип данных, как показано в следующем примере.
 
 ```vb
 Dim number = &H_3264S

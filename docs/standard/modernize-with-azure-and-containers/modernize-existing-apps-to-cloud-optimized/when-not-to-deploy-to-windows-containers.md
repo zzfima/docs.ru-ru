@@ -1,42 +1,42 @@
 ---
-title: Когда не следует развернуть контейнеры Windows
-description: Модернизировать существующие приложения .NET с контейнерами Windows и облако Azure | Когда не следует развернуть контейнеры Windows
+title: Когда не следует развертывать контейнеры Windows в
+description: Модернизация существующих приложений .NET с помощью облака Azure и Windows контейнерах | Когда не следует развертывать контейнеры Windows в
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 819f32955ff019414bef8820d17d272eddc11bf8
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 940e94b45dcfb4e301b095cbe4ef5bcaf6752c4c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33957964"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129900"
 ---
-# <a name="when-not-to-deploy-to-windows-containers"></a>Когда не следует развернуть контейнеры Windows
+# <a name="when-not-to-deploy-to-windows-containers"></a>Когда не следует развертывать контейнеры Windows в
 
-Некоторые технологии Windows не поддерживаются в контейнерах Windows. В таких случаях необходимо для миграции виртуальных машин стандартов, обычно с просто Windows и служб IIS.
+Некоторые технологии Windows не поддерживаются в контейнерах Windows. В таком случае необходимо перенести на виртуальные машины стандартов, обычно с помощью только Windows и IIS.
 
-Не поддерживается в контейнерах Windows, по состоянию на май 2018 случаи: 
+Случаи, не поддерживается в контейнерах Windows, по состоянию на май 2018 г.: 
 
--   Очередь сообщений (MSMQ) в настоящее время доступна только в зависимости от версии Windows Server v1803 контейнерах Windows, но не в предыдущих версиях. 
+-   Очереди сообщений (Майкрософт) в настоящее время доступна только в зависимости от версии Windows Server v1803 контейнерах Windows, но не в предыдущих выпусках. 
 
-    -   [Форум по запросу UserVoice](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/15719031-create-base-container-image-with-msmq-server)
+    -   [Запрос на форуме UserVoice](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/15719031-create-base-container-image-with-msmq-server)
 
     -   [Дискуссионный форум](https://social.msdn.microsoft.com/Forums/bce99a7d-aa60-44fa-a348-450855650810/msmqserver-is-it-supported?forum=windowscontainers)
 
 -   Координатор распределенных транзакций (MSDTC) в настоящее время не поддерживается в контейнерах Windows.
 
-    -   [Проблема GitHub](https://github.com/MicrosoftDocs/Virtualization-Documentation/issues/494)
+    -   [На сайте github](https://github.com/MicrosoftDocs/Virtualization-Documentation/issues/494)
 
 -   В настоящее время Microsoft Office не поддерживает контейнеры.
 
-    -   [Форум по запросу UserVoice](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/19686220-provide-office-support-for-containers)
+    -   [Запрос на форуме UserVoice](https://windowsserver.uservoice.com/forums/304624-containers/suggestions/19686220-provide-office-support-for-containers)
 
--   Пользовательский Интерфейс приложения (приложения для клиента с с графическим пользовательским интерфейсом), не поддерживаемые сценарии.
+-   Пользовательский Интерфейс приложений (клиентских приложений с интерфейсом пользователя visual) не описаны поддерживаемые сценарии.
 
--   Роли Windows инфраструктуры (DNS, DHCP-, DC, NTP, печать, файловым сервером, IAM т. д.), не поддерживаемые сценарии.
+-   Инфраструктурные роли Windows (DNS, DHCP, Округ Колумбия, NTP, печати, файловый сервер, IAM и т.д.), не поддерживаемые сценарии.
 
 
-Дополнительные сценарии не поддерживаются и запросы от сообщества см. на форуме UserVoice для контейнеров Windows: <https://windowsserver.uservoice.com/forums/304624-containers>.
+Дополнительные сценарии не поддерживаются и запросы от сообщества, см. на форуме UserVoice для контейнеров Windows: <https://windowsserver.uservoice.com/forums/304624-containers>.
 
 ### <a name="additional-resources"></a>Дополнительные ресурсы
 
@@ -45,5 +45,5 @@ ms.locfileid: "33957964"
     [https://docs.microsoft.com/azure/virtual-machines/windows/containers](https://docs.microsoft.com/azure/virtual-machines/windows/containers)
 
 >[!div class="step-by-step"]
-[Назад](deploy-existing-net-apps-as-windows-containers.md)
-[Вперед](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)
+>[Назад](deploy-existing-net-apps-as-windows-containers.md)
+>[Вперед](when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md)

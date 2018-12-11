@@ -8,11 +8,11 @@ ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cb0d058cd1ade65bfdc966819c0c41d9c1a9750
-ms.sourcegitcommit: 7f7664837d35320a0bad3f7e4ecd68d6624633b2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52672125"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155097"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows Forms добавьте элемент конфигурации
 
@@ -39,7 +39,7 @@ ms.locfileid: "52672125"
 
 ### <a name="key-attribute-names-and-associated-values"></a>`key` имена атрибутов и связанных значений
 
-| Имя в `key` | Значения | Описание: |
+| Имя в `key` | Значения | Описание |
 | ---------- | ------ | ----------- |
 | «AnchorLayout.DisableSinglePassControlScaling» | «true»&#124;«false» | Указывает, являются ли привязанные элементы управления масштабируется за один проход. «true», чтобы отключить единый передать масштабирование; в противном случае — значение false. См. в разделе «Pass одним масштабирование» ["Примечания"](#Remarks) Дополнительные сведения. |
 | «DpiAwareness» | «PerMonitorV2»&#124;«false» | Указывает, является ли приложение поддерживает определение DPI. Ключ «PerMonitorV2» для поддержки поддержка DPI; в противном случае ему присвоено значение «false». Поддержка DPI является дополнительной функции; Чтобы воспользоваться преимуществами поддержка высокого Разрешения Windows Forms, необходимо задать его значение для «PerMonitorV2». См. в разделе ["Примечания"](#remarks) Дополнительные сведения. |
@@ -57,7 +57,7 @@ ms.locfileid: "52672125"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-| Элемент | Описание: |
+| Элемент | Описание |
 | ------- | ----------- |
 | [`<System.Windows.Forms.ApplicationConfigurationSection>`](../../../../../docs/framework/configure-apps/file-schema/winforms/index.md) | Настраивает Поддержка новых функций приложения Windows Forms. |
 

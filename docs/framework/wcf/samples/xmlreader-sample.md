@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
 ms.openlocfilehash: 5ac97afd2efc1bb57a81f5cd2d78fed18ca3804d
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50039261"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149306"
 ---
 # <a name="xmlreader-sample"></a>Пример XmlReader
 Образец XmlReader демонстрирует обработку тела сообщения с помощью <xref:System.Xml.XmlReader>. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md), который реализует службу калькулятора. Добавлена дополнительная операция службы `Sum`, которая принимает сообщение, содержащее массив складываемых значений. Служба считывает сообщение с использованием <xref:System.Xml.XmlReader>.  

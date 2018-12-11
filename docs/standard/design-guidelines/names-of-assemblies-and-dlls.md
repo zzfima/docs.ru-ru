@@ -1,6 +1,6 @@
 ---
 title: Имена сборок и библиотек DLL
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], DLLs
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - assemblies [.NET Framework], names
 - DLLs, names
 ms.assetid: e800b610-31b4-4949-9c14-cb60e9f254be
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 97bd152cff53fb1c2edb107b6d6b34bd91ca1c49
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 8e20d77c20be8dc74723117f3b0910ecc2090ef7
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972063"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130979"
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Имена сборок и библиотек DLL
 Сборка является единицей развертывания и удостоверение для управляемого кода программы. Несмотря на то, что сборки могут охватывать один или несколько файлов, обычно сборки взаимно-однозначное сопоставление с библиотекой DLL. Таким образом в этом разделе описывается только DLL соглашения об именовании, которые затем можно сопоставить с соглашения об именовании сборок.  
@@ -34,7 +33,7 @@ ms.locfileid: "45972063"
   
  *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
   
- *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*  
+ *Перепечатано разрешением Пирсона для образовательных учреждений, Inc. из [рекомендации по разработке Framework: Условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Кшиштов Квалина и Брэд Абрамс, опубликованных 22 октября 2008 г., издательство Addison-Wesley Professional как части цикла разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также
 

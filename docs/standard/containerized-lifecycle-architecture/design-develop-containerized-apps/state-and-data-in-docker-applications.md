@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 9b048beb0eb913fc6587dcc639a16df8153c550b
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7454b25cdb1bede87c6f0bd179fcabd489922263
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123232"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154181"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Состояние и данные в приложениях Docker
 
@@ -39,7 +39,7 @@ Docker используется функция, называемая *оверл
 
 ![](./media/image5.png)
 
-Рис. 4-5: тома данных и внешние источники данных для контейнеров приложений или контейнеров
+Рис. 4-5. Тома данных и внешние источники данных для контейнеров приложений или контейнеров
 
 Из-за невозможности управлять данными контейнеров, работающих на разных физических узлах, рекомендуется не использовать тома для бизнес-данных Если узел Docker — основных узлов и виртуальных Машин, так как при использовании контейнеров Docker в orchestrator контейнеры должны быть перемещается из одного на другой узел в рамках оптимизации, которые будут произведены методом кластера.
 
@@ -49,7 +49,6 @@ Docker используется функция, называемая *оверл
 
 Удаленные источники данных и кэшей база данных SQL, DocumentDB или удаленного кэша как Redis будет таким же, как разработке без контейнеров. Это один из способов предпочтительным и проверенные, для хранения данных бизнес-приложений.
 
-
 >[!div class="step-by-step"]
-[Назад](monolithic-applications.md)
-[Вперед](soa-applications.md)
+>[Назад](monolithic-applications.md)
+>[Вперед](soa-applications.md)

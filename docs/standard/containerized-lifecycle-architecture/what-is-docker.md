@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
-ms.openlocfilehash: 056fb613c078cc407380060dc11890406ac8cffd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 360a404e38651b78acc3a52d8102a4dae71f3e30
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197682"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152726"
 ---
 # <a name="what-is-docker"></a>Что такое Docker?
 
@@ -17,7 +17,7 @@ ms.locfileid: "50197682"
 
 ![](./media/image2.png)
 
-Рис 1-2 — Docker развертывает контейнеры на всех уровнях гибридного облака
+Рис. 1-2. Docker развертывает контейнеры на всех уровнях гибридного облака
 
 Контейнеры образов Docker работают в исходном формате в Linux и Windows. Тем не менее образы Windows может выполняться только на узлах Windows и образы Linux может выполняться только на узлах Linux, то есть на сервере узла или виртуальной Машины.
 
@@ -49,9 +49,8 @@ Docker предоставляет версию [Docker Community Edition (CE)](h
 
 ![](./media/image3.png)
 
-Рис. 1-3: сравнение традиционных виртуальных машин к контейнерам Docker
-
+Рис. 1-3. Сравнение традиционных виртуальных машин к контейнерам Docker
 
 >[!div class="step-by-step"]
-[Назад](index.md)
-[Вперед](docker-terminology.md)
+>[Назад](index.md)
+>[Вперед](docker-terminology.md)

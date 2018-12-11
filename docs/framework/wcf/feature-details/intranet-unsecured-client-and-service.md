@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
 ms.openlocfilehash: eb165b69e1312363a8cc7c1a3ceea66a422d54f7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200115"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143471"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>Незащищенные интранет-клиент и служба
 На следующем рисунке показана простая служба Windows Communication Foundation (WCF) разработан для предоставления информации о защищенной частной сети для приложения WCF. Безопасность не является обязательным, так как данные имеют низкий уровень важности, должен быть в своей основе является защищенной сети или безопасность обеспечивается на уровне ниже инфраструктура WCF.  

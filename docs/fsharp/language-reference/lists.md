@@ -3,11 +3,11 @@ title: Списки (F#)
 description: Дополнительные сведения о F# списки, упорядоченная, неизменная серия элементов одного типа.
 ms.date: 05/16/2016
 ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297508"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152751"
 ---
 # <a name="lists"></a>Списки
 
@@ -62,7 +62,7 @@ ms.locfileid: "52297508"
 
 Тип списка поддерживает следующие свойства.
 
-|Свойство|Тип|Описание:|
+|Свойство|Тип|Описание|
 |--------|----|-----------|
 |[HEAD](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|Первый элемент|
 |[пустой](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Статическое свойство, которое возвращает пустой список соответствующего типа.|

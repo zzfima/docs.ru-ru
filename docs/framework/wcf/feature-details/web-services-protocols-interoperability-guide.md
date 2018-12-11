@@ -3,11 +3,11 @@ title: Руководство по взаимодействию по прото�
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 9aeceff9dc2b714016d2f7c379e538d885489bb9
-ms.sourcegitcommit: 5fd80619c760fa8c25d33a6f5661247cb65da465
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50744552"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53154350"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Руководство по взаимодействию по протоколам веб-служб
 Windows Communication Foundation (WCF) реализует ряд протоколов веб-служб. Многие из этих протоколов предусматривают ряд параметров и точек расширяемости, оставляемых на усмотрение реализующего субъекта. Этот раздел содержит список протоколов веб-служб, реализуемых WCF. В остальных подразделах содержатся подробности о реализации каждого поддерживаемого протокола.  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) реализует ряд протоко�
 |-----------------------------|----------|  
 |HTTP 1.1|[RFC 2616](https://go.microsoft.com/fwlink/?LinkId=90372)|  
 |Привязка SOAP 1.1 HTTP|[Simple Object Access Protocol (SOAP) 1.1](https://go.microsoft.com/fwlink/?LinkId=90520), раздел 7|  
-|Привязка SOAP 1,2 HTTP|[SOAP версии 1.2 Part 2: Adjuncts (Second Edition)](https://go.microsoft.com/fwlink/?LinkId=95329), раздел 7|  
+|Привязка SOAP 1,2 HTTP|[SOAP версии 1.2, часть 2: Дополнения (второе издание)](https://go.microsoft.com/fwlink/?LinkId=95329), раздел 7|  
   
  Элементы привязки <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> и <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> поддерживают спецификации, приведенные в следующей таблице.  
   
@@ -53,13 +53,13 @@ Windows Communication Foundation (WCF) реализует ряд протоко�
   
 |Спецификация/документ|Ссылка|  
 |-----------------------------|----------|  
-|WSS: SOAP Message Security 1,0|[Web Services Security: SOAP Message Security 1,0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
+|WSS: Безопасность сообщений SOAP 1.0|[Безопасность веб-служб: Безопасность сообщений SOAP 1.0](https://go.microsoft.com/fwlink/?LinkId=94684)|  
 |WSS: Username Token Profile 1.0|[Профиль UsernameToken безопасности 1.0 веб-служб](https://go.microsoft.com/fwlink/?LinkId=95334)<br /><br /> Требовать Password/@Type= PasswordText (по умолчанию)|  
-|WSS: X.509 Token Profile 1.0|[Web Services Security профиль маркера сертификата X.509](https://go.microsoft.com/fwlink/?LinkId=95335)|  
-|WSS: SAML 1.1 Token Profile 1,0|[Безопасности веб-служб: Профиль маркера SAML](https://go.microsoft.com/fwlink/?LinkId=96693)|  
-|WSS: SOAP Message Security 1.1|[Web Services Security: SOAP Message Security 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
+|WSS: X.509 Token Profile 1,0|[Web Services Security профиль маркера сертификата X.509](https://go.microsoft.com/fwlink/?LinkId=95335)|  
+|WSS: SAML 1.1 Token Profile 1,0|[Безопасность веб-служб: Профиль маркера SAML](https://go.microsoft.com/fwlink/?LinkId=96693)|  
+|WSS: Безопасность сообщений SOAP 1.1|[Безопасность веб-служб: Безопасность сообщений SOAP 1.1](https://go.microsoft.com/fwlink/?LinkId=91240)|  
 |WSS Username Token Profile 1.1|[Профиль UsernameToken безопасности 1.1 веб-служб](https://go.microsoft.com/fwlink/?LinkId=95331)<br /><br /> не реализуется получение производного ключа на основе пароля;<br /><br /> Требовать Password/@Type= PasswordText (по умолчанию)|  
-|WSS: X509 Token Profile 1.1|[Web Services Security профиль маркера сертификата X.509 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
+|WSS: X509 token Profile 1.1|[Web Services Security профиль маркера сертификата X.509 1.1](https://go.microsoft.com/fwlink/?LinkId=95332)|  
 |WSS: Kerberos Token Profile 1.1|[Web Services Security Kerberos Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=95333)|  
 |WSS: SAML 1.1 Token Profile 1.1|[Web Services Security SAML Token Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=96694)|  
 |WS-Secure Conversation|[Язык безопасного диалога веб-служб](https://go.microsoft.com/fwlink/?LinkId=95317)|  
@@ -78,7 +78,7 @@ Windows Communication Foundation (WCF) реализует ряд протоко�
   
 -   [Схема XML, часть 1: Структуры, второе издание](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML Schema Part 2: Типы данных Second Edition](https://go.microsoft.com/fwlink/?LinkId=40138)  
+-   [XML Schema Part 2: Типы данных, второе издание](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
 -   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   

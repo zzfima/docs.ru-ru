@@ -4,12 +4,12 @@ description: Учитесь бессерверные вычисления с п�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: c38d1c6c4e04f3fa38946c97af5d94758b3ed6f7
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "49370205"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153791"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>Без сервера бизнес-сценариев и вариантов использования
 
@@ -27,7 +27,7 @@ ms.locfileid: "49370205"
 
 ![Коллекция автоматических изображений](./media/automated-image-gallery.png)
 
-Полный репозиторий и инструкциями по созданию приложения логики доступны здесь: [связующий сетки событий](https://github.com/JeremyLikness/Event-Grid-Glue).
+Полный репозиторий и инструкциями по созданию приложения логики доступны здесь: [Связующий сетки событий](https://github.com/JeremyLikness/Event-Grid-Glue).
 
 ## <a name="cross-platform-mobile-client-using-xamarinforms-and-functions"></a>Кросс платформенных мобильного клиента с помощью Xamarin.Forms и функций
 
@@ -55,7 +55,7 @@ ms.locfileid: "49370205"
 
 Прокси-сервер предоставляет одну конечную точку API, которая обновляется для перенаправления отдельных запросов, так как они перемещаются в бессерверных функций.
 
-Можно просмотреть видео, в котором последовательно описывается перенос всей: [Lift- and -shift с помощью бессерверных функций Azure](https://channel9.msdn.com/Events/Connect/2017/E102). Доступ к коду пример: [собственное приложение](https://github.com/JeremyLikness/bring-own-app-connect-17).
+Вы можете просмотреть видео, в котором последовательно описывается перенос всего: [Lift- and -shift с помощью бессерверных функций Azure](https://channel9.msdn.com/Events/Connect/2017/E102). Доступ в примере кода: [Использование собственных приложений](https://github.com/JeremyLikness/bring-own-app-connect-17).
 
 ## <a name="parse-a-csv-file-and-insert-into-a-database"></a>Анализировать файлы CSV и вставить в базу данных
 
@@ -77,7 +77,7 @@ ms.locfileid: "49370205"
 
 ![Пример Power BI](./media/power-bi-example.png)
 
-Репозиторий shortener полная компоновка с инструкциями можно найти здесь: [бессерверной URL shortener](https://github.com/jeremylikness/serverless-url-shortener). Сведения о упрощенную версию: [хранилища Azure для бессерверных приложений .NET в минутах](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
+Репозиторий shortener полная компоновка с инструкциями можно найти здесь: [Бессерверные URL shortener](https://github.com/jeremylikness/serverless-url-shortener). Читайте о упрощенную версию здесь: [Служба хранилища Azure для бессерверных приложений .NET в минутах](https://blogs.msdn.microsoft.com/webdev/2018/01/25/azure-storage-for-serverless-net-apps-in-minutes/).
 
 ## <a name="verify-device-connectivity-using-a-ping"></a>Проверьте подключение устройства с помощью проверки связи
 
@@ -98,5 +98,5 @@ ms.locfileid: "49370205"
 * [Бессерверные URL shortener](https://github.com/jeremylikness/serverless-url-shortener)
 
 >[!div class="step-by-step"]
-[Назад](orchestration-patterns.md)
-[Вперед](serverless-conclusion.md)
+>[Назад](orchestration-patterns.md)
+>[Вперед](serverless-conclusion.md)

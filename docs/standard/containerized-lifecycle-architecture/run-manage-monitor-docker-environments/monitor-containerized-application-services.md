@@ -4,12 +4,12 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 4bdc4470624ce6e905ab858a2bd8b607c8d3d646
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5630bfcc3173def670e2fa780d28024799b7c2a1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47232928"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153929"
 ---
 # <a name="monitor-containerized-application-services"></a>Мониторинг служб контейнерных приложений
 
@@ -25,7 +25,7 @@ ms.locfileid: "47232928"
 
 ![пример](./media/image1.png)
 
-Рис. 6-1: Application Insights, мониторинг узлов Docker и контейнеры
+Рис. 6-1. Application Insights, мониторинг узлов Docker и контейнеры
 
 При запуске [образ Application Insights Docker](https://hub.docker.com/r/microsoft/applicationinsights/) на узле Docker, можно воспользоваться преимуществами следующих:
 
@@ -60,7 +60,7 @@ ms.locfileid: "47232928"
 
 ![](./media/image2.png)
 
-Рис. 6-2: сведения о контейнерах Docker, представленной в Operations Management Suite
+Рис. 6-2. Сведения о контейнерах Docker, представленной в Operations Management Suite
 
 Application Insights и Operations Management Suite сосредоточиться на мониторинга действий; Тем не менее Application Insights больше фокусируется на наблюдение за приложениями сами благодаря этот пакет SDK в приложение. Тем не менее Operations Management Suite гораздо больше фокусируется на инфраструктуре вокруг узлов, а также он предлагает глубокий анализ журналов в масштабе то же время предоставляя системе очень гибкий управляемых данными поиска и запроса.
 
@@ -90,12 +90,12 @@ Application Insights и Operations Management Suite сосредоточитьс
 
 ![DockerPerfMetricsView](./media/image3.png){width = «5.78625 in» height = «3,25 in»}
 
-Рис. 6-3: метрики производительности узлов Docker, представленной в Operations Management Suite
+Рис. 6-3. Метрики производительности узлов Docker, представленной в Operations Management Suite
 
 Сохранение запросов также — это стандартная функция в Operations Management Suite, которая помогает сохранять запросы, оказавшиеся полезными и трендов в вашей системе.
 
 **Дополнительные сведения о** для поиска сведений об установке и настройке Docker решение для контейнеров в [Operations Management Suite](https://microsoft.com/oms), перейдите в меню <https://docs.microsoft.com/azure/log-analytics/log-analytics-containers>.
 
 >[!div class="step-by-step"]
-[Назад](manage-production-docker-environments.md)
-[Вперед](../key-takeaways/index.md)
+>[Назад](manage-production-docker-environments.md)
+>[Вперед](../key-takeaways/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: c43505497b947004ffb282346459967579d52375
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e02c80f4c1fdacbfdcb50ed57d89cc9df1f277f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44199548"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126407"
 ---
 # <a name="xaml-resources"></a>Ресурсы XAML
 Ресурс — это объект, который можно повторно использовать в разных местах приложения. Примерами ресурсов являются кисти и стили. В этом обзоре описывается использование ресурсов в [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Можно также создать и доступ к ресурсам с помощью кода или попеременно между кодом и [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Дополнительные сведения см. в разделе [ресурсы и код](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -147,7 +147,7 @@ ms.locfileid: "44199548"
   
  Что стиля на самом деле есть ключ: неявный ключ `typeof(` <xref:System.Windows.Controls.Button> `)`. В разметке, можно указать <xref:System.Windows.Style.TargetType%2A> непосредственно в качестве типа имени (или при необходимости можно использовать [{x: Type...}](../../../../docs/framework/xaml-services/x-type-markup-extension.md) для возврата <xref:System.Type>.  
   
- Через механизмах стилей темы по умолчанию, используемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], что стиль будет применен как стиль среды выполнения для <xref:System.Windows.Controls.Button> на странице, несмотря на то что <xref:System.Windows.Controls.Button> сам пытается задать его <xref:System.Windows.FrameworkElement.Style%2A> свойство или конкретного ресурса ссылка на стиль. Стиль, определенный на странице, находится в последовательности подстановки раньше, чем стиль словаря темы, и использует тот же ключ, что и стиль словаря темы. Вы можете просто указать `<Button>Hello</Button>` в любом месте страницы и стиль, определенный с помощью <xref:System.Windows.Style.TargetType%2A> из `Button` будет применен к этой кнопке. Если требуется, можно по-прежнему явно ключ стиля с тем же значением типа, как <xref:System.Windows.Style.TargetType%2A>для ясности в разметке, но это не является обязательным.  
+ Через механизмах стилей темы по умолчанию, используемые [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], что стиль будет применен как стиль среды выполнения для <xref:System.Windows.Controls.Button> на странице, несмотря на то что <xref:System.Windows.Controls.Button> сам пытается задать его <xref:System.Windows.FrameworkElement.Style%2A> свойство или конкретного ресурса ссылка на стиль. Стиль, определенный на странице, находится в последовательности подстановки, чем стиль словаря темы, используя тот же ключ, который имеет стиль словаря темы. Вы можете просто указать `<Button>Hello</Button>` в любом месте страницы и стиль, определенный с помощью <xref:System.Windows.Style.TargetType%2A> из `Button` будет применен к этой кнопке. Если требуется, можно по-прежнему явно ключ стиля с тем же значением типа, как <xref:System.Windows.Style.TargetType%2A>для ясности в разметке, но это не является обязательным.  
   
  Неявные ключи для стилей не применяются к элементу управления, если <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> — `true` (также Обратите внимание, что <xref:System.Windows.FrameworkElement.OverridesDefaultStyle%2A> может быть задан как часть собственного поведения для класса элемента управления, а не явным образом в экземпляре элемента управления). Кроме того, чтобы поддерживать неявные ключи для производных классов, элемент управления необходимо переопределить <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> (все существующие элементы управления, предоставляемые как часть [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] этого). Дополнительные сведения о стилях, темах и разработке элементов управления см. в разделе [рекомендации по разработке элементов](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md).  
   

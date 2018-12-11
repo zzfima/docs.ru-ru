@@ -2,12 +2,12 @@
 title: Общие сведения об Entity Framework
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: 35eb3b1503c8754752662aef0c5101251d60d49c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a6649744c4ad719c760ebc6ce5d97b51815c8ee6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216946"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145797"
 ---
 # <a name="entity-framework-overview"></a>Общие сведения об Entity Framework
 
@@ -26,11 +26,11 @@ ms.locfileid: "47216946"
 
  При работе со средствами работы с моделью EDM концептуальная модель, модель хранения и сопоставление между ними выражены в схемах на основе XML и определены в файлах с именами с соответствующими расширениями.
 
--   Язык CSDL определяет концептуальную модель. CSDL — это [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]в реализации [модели EDM](../../../../../docs/framework/data/adonet/entity-data-model.md). Расширение файла - CSDL.
+- Язык CSDL определяет концептуальную модель. CSDL — это [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]в реализации [модели EDM](../../../../../docs/framework/data/adonet/entity-data-model.md). Расширение файла - CSDL.
 
--   Язык SSDL определяет модель хранения данных, которая также называется логической моделью. Расширение файла - SSDL.
+- Язык SSDL определяет модель хранения данных, которая также называется логической моделью. Расширение файла - SSDL.
 
--   Язык MSL определяет сопоставление модели хранения и концептуальной модели. Расширение файла - MSL.
+- Язык MSL определяет сопоставление модели хранения и концептуальной модели. Расширение файла - MSL.
 
 Модель хранения и сопоставления при необходимости могут быть изменены без изменения концептуальной модели, классов данных и кода приложения. Модели хранения зависят от поставщика, поэтому можно работать с согласованной концептуальной моделью через различные источники данных.
 
@@ -45,9 +45,9 @@ ms.locfileid: "47216946"
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] — это не просто еще одно средство объектно-реляционного сопоставления. Она предоставляет приложениям возможность чтения и изменения данных, представленных в виде сущностей и связей в концептуальной модели. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] использует данные в модели и файлах сопоставления для преобразования запросов объектов к типам сущностей, представленным в концептуальной модели, в запросы, зависящие от источника данных. Результаты запросов преобразуются в объекты, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] управляет. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Предоставляет следующие способы выполнения запросов к концептуальной модели и возврата объектов:
 
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Обеспечивает поддержку Language-Integrated Query (LINQ) для выполнения запросов к типам сущностей, которые определены в концептуальной модели. Дополнительные сведения см. в разделе [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
+- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Обеспечивает поддержку Language-Integrated Query (LINQ) для выполнения запросов к типам сущностей, которые определены в концептуальной модели. Дополнительные сведения см. в разделе [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
 
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Независимый от хранилища диалект SQL, который работает непосредственно с сущностями в концептуальной модели, которая поддерживает [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] основные понятия. [!INCLUDE[esql](../../../../../includes/esql-md.md)] используется, и с запросами объектов и запросы, которые выполняются с помощью поставщика EntityClient. Дополнительные сведения см. в разделе [Общие сведения об Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Независимый от хранилища диалект SQL, который работает непосредственно с сущностями в концептуальной модели, которая поддерживает [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] основные понятия. [!INCLUDE[esql](../../../../../includes/esql-md.md)] используется, и с запросами объектов и запросы, которые выполняются с помощью поставщика EntityClient. Дополнительные сведения см. в разделе [Общие сведения об Entity SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).
 
 Платформа [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] включает в себя поставщик данных EntityClient. Поставщик управляет соединениями, переводит запросы сущностей в запросы, зависящие от источника данных, и возвращает модуль чтения данных, который используется [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] для материализации данных сущности в виде объектов. Если материализация объектов не требуется, поставщик EntityClient может использоваться как обычная [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] поставщика данных, позволяя приложениям выполнять [!INCLUDE[esql](../../../../../includes/esql-md.md)] запросы и использовать средство чтения возвращаемых данных только для чтения. Дополнительные сведения см. в разделе [поставщик EntityClient для Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
@@ -71,7 +71,7 @@ ms.locfileid: "47216946"
 
 Дополнительные сведения о [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], см. в разделе:
 
-[Приступая к работе](../../../../../docs/framework/data/adonet/ef/getting-started.md) — предоставляет сведения о том, как начать работу и быстром запуске при помощи [быстрого запуска](https://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675), который показывает, как создать простое [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] приложения.
+[Приступая к работе](../../../../../docs/framework/data/adonet/ef/getting-started.md) — предоставляет сведения о том, как начать работу и быстром запуске при помощи [быстрого запуска](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399182(v=vs.100)), который показывает, как создать простое [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] приложения.
 
 [Терминология платформы Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md) -определяет многие термины, представленные в модели EDM и [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] и используются в [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] документации.
 

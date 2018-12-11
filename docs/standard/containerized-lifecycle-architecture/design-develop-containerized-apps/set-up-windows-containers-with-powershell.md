@@ -1,21 +1,21 @@
 ---
-title: Использование команд Windows PowerShell в DockerFile для установки контейнеры Windows (Docker standard на основе)
+title: Использование команд Windows PowerShell в DockerFile для настройки контейнеров Windows (на основе стандарта Docker)
 description: Жизненный цикл контейнерного приложения Docker на основе платформы и средств Майкрософт
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
-ms.openlocfilehash: d68378a12a16dd4072b381f00241e781b40c3e16
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 5e85beea0efbee6a2b6594e3a49d705505a36e1c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105554"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149397"
 ---
-# <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>Использование команд Windows PowerShell в DockerFile для установки контейнеры Windows (Docker standard на основе)
+# <a name="using-windows-powershell-commands-in-a-dockerfile-to-set-up-windows-containers-docker-standard-based"></a>Использование команд Windows PowerShell в DockerFile для настройки контейнеров Windows (на основе стандарта Docker)
 
-С [контейнеры Windows](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview), можно преобразовать существующие приложения Windows для образов Docker и развертывать их с помощью тех же средств, что и остальная часть экосистеме Docker.
+С помощью [контейнеры Windows](/virtualization/windowscontainers/about/index), можно преобразовать существующие приложения Windows для образов Docker и развертывать их с помощью тех же средств, что и остальную часть экосистемы Docker.
 
-Чтобы использовать контейнеры Windows, необходимо просто создавать команды Windows PowerShell в DockerFile, как показано в следующем примере:
+Чтобы использовать контейнеры Windows, необходимо просто написать команды Windows PowerShell в DockerFile, как показано в следующем примере:
 
 ```
 FROM microsoft/windowsservercore
@@ -24,14 +24,14 @@ RUN powershell -Command Add-WindowsFeature Web-Server
 CMD [ "ping", "localhost", "-t" ]
 ```
 
-В этом случае мы используем Windows PowerShell для установки базового образа Windows Server Core, а также службы IIS.
+В этом случае мы используем Windows PowerShell для установки базового образа Windows Server Core, а также служб IIS.
 
-Аналогичным образом, можно также выполнить команды Windows PowerShell для настройки дополнительных компонентов, как традиционные ASP.NET 4.x и .NET 4.6 или любые другие программное обеспечение Windows, как показано ниже:
+Аналогичным образом, вы также может использовать команды Windows PowerShell для настройки дополнительных компонентов, таких как традиционные модели ASP.NET 4.x и .NET 4.6 или любое другое Windows программное обеспечение, как показано ниже:
 
 ```
 RUN powershell add-windowsfeature web-asp-net45
 ```
 
 >[!div class="step-by-step"]
-[Назад](visual-studio-tools-for-docker.md)
-[Вперед](../docker-devops-workflow/index.md)
+>[Назад](visual-studio-tools-for-docker.md)
+>[Вперед](../docker-devops-workflow/index.md)

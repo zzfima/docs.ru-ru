@@ -4,16 +4,16 @@ description: Жизненный цикл контейнерного прилож
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: 24a4e826ece691a6a1221b39c164bba2eef8a059
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 3783bdde100aa83bd7fbbc2a0f2ee616ef9a729d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646250"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148638"
 ---
 # <a name="key-takeaways"></a>Главные выводы
 
--   Решения на основе контейнеров предоставляют важные преимущества с точки зрения сокращения расходов, так как контейнеры позволяют устранять проблемы, вызванные отсутствием зависимостей в производственной среде, таким образом значительно повышая эффективность рабочих операций DevOps.
+-   Решения на основе контейнеров предоставляют важные преимущества экономию затрат, так как контейнеры позволяют устранять проблемы, вызванные отсутствием зависимостей в производственной среде, таким образом, значительно улучшение рабочих операций DevOps .
 
 -   Docker становится стандартом де-факто в области контейнеризации приложений. Это решение поддерживается большинством крупных поставщиков в экосистемах Windows и Linux, включая Майкрософт. В будущем Docker можно будет встретить в любом центре обработки данных как в облаке, так и в локальной среде.
 
@@ -26,4 +26,4 @@ ms.locfileid: "45646250"
 Службы Azure DevOps значительно упрощает функционирование среды DevOps предназначенной для сред Docker из конвейеров непрерывного развертывания, включая простые среды Docker или более сложные оркестраторы микрослужб и контейнеров на основе Azure.
 
 >[!div class="step-by-step"]
-[Назад](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)
+>[Назад](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

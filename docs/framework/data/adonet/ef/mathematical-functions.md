@@ -2,12 +2,12 @@
 title: Математические функции
 ms.date: 03/30/2017
 ms.assetid: b040c7cb-156d-40f2-9152-61065b18148c
-ms.openlocfilehash: e6c58d781d7138f8295f2d0a2f0db110ad4b1dd6
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 63f83532c399f77e268913da3198327345b9c2ee
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837314"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143679"
 ---
 # <a name="mathematical-functions"></a>Математические функции
 
@@ -19,7 +19,7 @@ ms.locfileid: "48837314"
 
 **Аргументы**
 
-`expression`: значение типа `Int32`, `Int64`, `Double` или `Decimal`.
+`expression`: `Int32`, `Int64`, `Double`, Или `Decimal`.
 
 **Возвращаемое значение**
 
@@ -35,7 +35,7 @@ ms.locfileid: "48837314"
 
 **Аргументы**
 
-`expression`: Тип `Double`.
+`expression`: ОБЪЕКТ `Double`.
 
 **Возвращаемое значение**
 
@@ -51,7 +51,7 @@ ms.locfileid: "48837314"
 
 **Аргументы**
 
-`expression`: Тип `Double`.
+`expression`: ОБЪЕКТ `Double`.
 
 **Возвращаемое значение**
 
@@ -67,7 +67,7 @@ ms.locfileid: "48837314"
 
 **Аргументы**
 
-`expression`: Тип `Double`.
+`expression`: ОБЪЕКТ `Double`.
 
 **Возвращаемое значение**
 
@@ -83,7 +83,7 @@ ms.locfileid: "48837314"
 
 **Аргументы**
 
-`expression`: Тип `Double`.
+`expression`: ОБЪЕКТ `Double`.
 
 **Возвращаемое значение**
 
@@ -99,7 +99,7 @@ ms.locfileid: "48837314"
 
 **Аргументы**
 
-`expression`: значение типа `Int32`, `Int64`, `Double` или `Decimal`.
+`expression`: `Int32`, `Int64`, `Double`, Или `Decimal`.
 
 **Возвращаемое значение**
 
@@ -116,7 +116,7 @@ ms.locfileid: "48837314"
 
 **Аргументы** 
 
-`expression`: Тип `Double`. 
+`expression`: ОБЪЕКТ `Double`. 
 
 **Возвращаемое значение** 
 
@@ -132,7 +132,7 @@ ms.locfileid: "48837314"
 
 **Аргументы** 
 
-`expression`: Тип `Double`. 
+`expression`: ОБЪЕКТ `Double`. 
 
 **Возвращаемое значение** 
 
@@ -148,7 +148,7 @@ ms.locfileid: "48837314"
 
 **Аргументы** 
 
-`expression`: значение типа `Int32`, `Int64`, `Double` или `Decimal`. 
+`expression`: `Int32`, `Int64`, `Double`, Или `Decimal`. 
 
 **Возвращаемое значение** 
 
@@ -164,7 +164,7 @@ ms.locfileid: "48837314"
 
 **Аргументы** 
 
-`expression`: Тип `Double`. 
+`expression`: ОБЪЕКТ `Double`. 
 
 **Возвращаемое значение** 
 
@@ -178,7 +178,7 @@ ms.locfileid: "48837314"
 
 **Аргументы** 
 
-`expression`: Тип `Double`. 
+`expression`: ОБЪЕКТ `Double`. 
 
 **Возвращаемое значение** 
 
@@ -195,7 +195,7 @@ ms.locfileid: "48837314"
 
 **Аргументы** 
 
-`expression`: Тип `Double`. 
+`expression`: ОБЪЕКТ `Double`. 
 
 **Возвращаемое значение** 
 
@@ -211,7 +211,7 @@ ms.locfileid: "48837314"
 
 **Аргументы** 
 
-`expression`: Тип `Double`. 
+`expression`: ОБЪЕКТ `Double`. 
 
 **Возвращаемое значение** 
 
@@ -258,7 +258,7 @@ ms.locfileid: "48837314"
 
 **Аргументы** 
 
-`expression`: значение типа `Int32`, `Int64`, `Double` или `Decimal`. 
+`expression`: `Int32`, `Int64`, `Double`, Или `Decimal`. 
 
 **Возвращаемое значение** 
 
@@ -294,7 +294,7 @@ ms.locfileid: "48837314"
 |--|--|
 |`numeric_expression`| `Int32`, `Int64`, `Double`, Или `Decimal`. 
 |`length`| Значение типа `Int32`, указывающее точность, до которой должно быть округлено значение аргумента `numeric_expression`. Если аргумент `length` является положительным числом, значение `numeric_expression` округляется до числа десятичных разрядов, указанных аргументом `length`. Если аргумент `length` является отрицательным числом, значение `numeric_expression` округляется слева от десятичной запятой, как указано аргументом `length`.|
-|`function` | Необязательный. `Int32` , Представляющий тип выполняемой операции. Если функция указан или имеет значение 0 (по умолчанию), `numeric_expression` округляется. Если значение, отличное от указано значение 0, `numeric_expression` усекается. |
+|`function` | Необязательный параметр. `Int32` , Представляющий тип выполняемой операции. Если функция указан или имеет значение 0 (по умолчанию), `numeric_expression` округляется. Если значение, отличное от указано значение 0, `numeric_expression` усекается. |
 
 **Возвращаемое значение** 
 
@@ -326,7 +326,7 @@ ms.locfileid: "48837314"
 
 **Аргументы** 
 
-`expression`: Тип `Double`. 
+`expression`: ОБЪЕКТ `Double`. 
 
 **Возвращаемое значение** 
 
@@ -340,7 +340,7 @@ ms.locfileid: "48837314"
 
 **Аргументы** 
 
-`expression`: Тип `Double`. 
+`expression`: ОБЪЕКТ `Double`. 
 
 **Возвращаемое значение** 
 
@@ -354,7 +354,7 @@ ms.locfileid: "48837314"
 
 **Аргументы** 
 
-`expression`: Тип `Double`. 
+`expression`: ОБЪЕКТ `Double`. 
 
 **Возвращаемое значение** 
 
@@ -384,8 +384,8 @@ ms.locfileid: "48837314"
 
 Дополнительные сведения о математических функциях, поддерживаемых SqlClient, см. в документации к версии SQL Server, указанной в манифесте поставщика SqlClient.  
   
-**SQL Server 2005:** [математические функции (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
-**SQL Server 2008:** [математические функции (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
-**SQL Server 2012 и более поздних версий:** [математические функции (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
+**SQL Server 2005:** [Математические функции (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms177516(v=sql.90))  
+**SQL Server 2008** [Математические функции (Transact-SQL)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms177516(v=sql.100))  
+**SQL Server 2012 и более поздних версий:** [Математические функции (Transact-SQL)](/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-2017)   
 
  [Функции SqlClient для Entity Framework](sqlclient-for-ef-functions.md)

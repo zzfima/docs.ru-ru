@@ -1,16 +1,16 @@
 ---
-title: '&lt;точка udpDiscoveryEndpoint&gt;'
+title: '&lt;UdpDiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f485329-2771-43bc-88de-df8f2faa3bb7
-ms.openlocfilehash: 95c6550352d8f100c8674c2e7f630fcf55da01e2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 01808594d54d5c79a6530bc7f6a03b66dde7ee99
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767626"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144758"
 ---
-# <a name="ltudpdiscoveryendpointgt"></a>&lt;точка udpDiscoveryEndpoint&gt;
-Этот элемент конфигурации указывает стандартную конечную точку, которая стандартно используется для операций обнаружения через привязку для многоадресной рассылки UDP. Эта конечная точка имеет фиксированный контракт и поддерживает две версии протокола WS-Discovery. Кроме того, она имеет фиксированную привязку UDP и значение адреса по умолчанию в соответствии со спецификациями WS-Discovery (WS-Discovery от апреля 2005 или WS-Discovery версии 1.1).  
+# <a name="ltudpdiscoveryendpointgt"></a>&lt;UdpDiscoveryEndpoint&gt;
+Этот элемент конфигурации указывает стандартную конечную точку, которая стандартно используется для операций обнаружения через привязку для многоадресной рассылки UDP. Эта конечная точка имеет фиксированный контракт и поддерживает две версии протокола WS-Discovery. Кроме того, она имеет фиксированную привязку UDP и значение адреса по умолчанию, как определено в спецификациях WS-Discovery (WS-Discovery от апреля 2005 или WS-Discovery версии 1.1).  
   
  \<система. ServiceModel >  
 \<standardEndpoints >  

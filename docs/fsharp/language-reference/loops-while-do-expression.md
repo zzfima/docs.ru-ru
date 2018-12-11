@@ -2,12 +2,12 @@
 title: 'Циклы: выражение while...do (F#)'
 description: См. в разделе как while... сделать выражение используется для выполнения итерации (в цикле), пока заданное условие теста истинно.
 ms.date: 05/16/2016
-ms.openlocfilehash: 5cf4461669221f91cb50e238c25494f03a10bbc2
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 43e2098ad6c7f103babc2471aebe987040feb989
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45664713"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127281"
 ---
 # <a name="loops-whiledo-expression"></a>Циклы: выражение while...do
 
@@ -35,11 +35,11 @@ while test-expression do
 Found a 10!
 ```
 
->[!NOTE]
-Можно использовать `while...do` в выражениях последовательности и другие вычисления выражения, в этом случае настроенную версию `while...do` используется выражение. Дополнительные сведения см. в разделе [последовательностей](sequences.md), [асинхронные рабочие потоки](asynchronous-workflows.md), и [выражения вычисления](computation-expressions.md).
+> [!NOTE]
+> Можно использовать `while...do` в выражениях последовательности и другие вычисления выражения, в этом случае настроенную версию `while...do` используется выражение. Дополнительные сведения см. в разделе [последовательностей](sequences.md), [асинхронные рабочие потоки](asynchronous-workflows.md), и [выражения вычисления](computation-expressions.md).
 
 ## <a name="see-also"></a>См. также
 
 - [Справочник по языку F#](index.md)
-- [Циклы: выражение `for...in`](loops-for-in-expression.md)
-- [Циклы: выражение `for...to`](loops-for-to-expression.md)
+- [Циклы. `for...in` Выражение](loops-for-in-expression.md)
+- [Циклы. `for...to` Выражение](loops-for-to-expression.md)

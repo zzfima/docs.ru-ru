@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: a809dbc34d08fc864f6cfe8263489ab52ce41e35
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8719ffc458297191514cfe65714d5b6dd862dd60
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183806"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143627"
 ---
 # <a name="adonet-code-examples"></a>Примеры кода ADO.NET
 В листингах кода, приведенных в данном разделе, демонстрируется извлечение данных из базы данных с помощью следующих технологий ADO.NET.
@@ -63,7 +63,7 @@ ms.locfileid: "50183806"
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
 ## <a name="entity-framework-examples"></a>Примеры Entity Framework
-В приведенных ниже листингах кода демонстрируется извлечение данных из источника данных путем выполнения запросов к сущностям модели EDM. В этих примерах используется [модель Northwind](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638). Дополнительные сведения см. в разделе [Обзор Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).
+В приведенных ниже листингах кода демонстрируется извлечение данных из источника данных путем выполнения запросов к сущностям модели EDM. Этих примерах используется модель, основанная на образце базы данных "Борей". Дополнительные сведения о платформе Entity Framework см. в разделе [Обзор Entity Framework](../../../../docs/framework/data/adonet/ef/overview.md).
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
 В данном примере кода запрос LINQ используется для возврата данных в виде объектов Categories, которые проецируются в анонимный тип, содержащий только свойства CategoryID и CategoryName. Дополнительные сведения см. в разделе [LINQ to Entities Обзор](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).
@@ -348,5 +348,5 @@ End Class
  [Извлечение и изменение данных в ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Создание приложений для работы с данными](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
  [Запрос модели EDM (задачи Entity Framework)](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [Практическое: выполнение запроса, возвращающего объекты анонимного типа](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
+ [Инструкции: Выполнение запроса, возвращающего объекты анонимного типа](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
  [Центр разработчиков наборов данных и управляемых поставщиков ADO.NET](https://go.microsoft.com/fwlink/?LinkId=217917)  

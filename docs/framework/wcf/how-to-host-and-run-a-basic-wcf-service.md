@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Размещение и запуск базовой службы Windows Communication Foundation
+title: Как выполнить Размещение и запуск службы основные Windows Communication Foundation
 ms.date: 09/14/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: b79c3246b7c12a3a99a5c68586387fc30573dcb6
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 710ccd69d7b0f8cd8cd3e04729fd952308a3fb4a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562298"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129380"
 ---
-# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Практическое руководство. Размещение и запуск базовой службы Windows Communication Foundation
+# <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Как выполнить Размещение и запуск службы основные Windows Communication Foundation
 
 Это третья из шести задач, необходимых для создания приложения Windows Communication Foundation (WCF). Общие сведения обо всех шести задачах можно получить в разделе [Учебник по началу работы](../../../docs/framework/wcf/getting-started-tutorial.md).
 
@@ -149,7 +149,7 @@ End Module
 
 **Шаг 4** — включите обмен метаданными. Клиенты могут использовать обмен метаданными для создания прокси-объектов, которые будут использоваться для вызова операции службы. Для поддержки обмена метаданными создайте экземпляр <xref:System.ServiceModel.Description.ServiceMetadataBehavior>, установите для свойства <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> значение `true`, добавьте поведение в коллекцию <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  -->`System.ServiceModel.ServiceHost.Behaviors%2A` экземпляра <xref:System.ServiceModel.ServiceHost>.
 
-**Шаг 5** — откройте <xref:System.ServiceModel.ServiceHost> для прослушивания входящих сообщений. Обратите внимание, что код ожидает, пока пользователь не нажмет ENTER. Если этого не сделать, то приложение немедленно закроется и служба завершит работу. Также обратите внимание, что используется блок try/catch. После создания экземпляра <xref:System.ServiceModel.ServiceHost> другой код находится в блоке try/catch. Дополнительные сведения о перехвате исключений, формируемых системой безопасности <xref:System.ServiceModel.ServiceHost>, см. в разделе [Предотвращение проблем при использовании операторов](../../../docs/framework/wcf/samples/avoiding-problems-with-the-using-statement.md).
+**Шаг 5** — откройте <xref:System.ServiceModel.ServiceHost> для прослушивания входящих сообщений. Обратите внимание, что код ожидает, пока пользователь не нажмет ENTER. Если этого не сделать, то приложение немедленно закроется и служба завершит работу. Также обратите внимание, что используется блок try/catch. После создания экземпляра <xref:System.ServiceModel.ServiceHost> другой код находится в блоке try/catch. Дополнительные сведения о перехвате исключений, создаваемых <xref:System.ServiceModel.ServiceHost>, см. в разделе [используйте Close и Abort для освобождения ресурсов клиента WCF](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
 
 > [!IMPORTANT]
 > Измените файл App.config в GettingStartedLib, чтобы отразить изменения, внесенные в код:
@@ -403,7 +403,7 @@ End Module
 Сейчас служба запущена. В следующей задаче вы создадите клиента WCF.
 
 > [!div class="nextstepaction"]
-> [Практическое: создание клиента WCF](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+> [Инструкции: Создание клиента WCF](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 
 Сведения об устранении неполадок см. в разделе [Устранение неполадок, связанных с руководством по началу работы](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).
 

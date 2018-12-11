@@ -1,16 +1,15 @@
 ---
 title: Рекомендации по использованию коллекций
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: 12f086ac92b449e074b9d39a563a20a3ebf2ff26
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964849"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145586"
 ---
 # <a name="guidelines-for-collections"></a>Рекомендации по использованию коллекций
 Можно рассматривать как коллекцию любого типа, разработанные специально для того, для использования группы объектов, с некоторыми общими характеристиками. Это почти всегда требуется для таких типов, для реализации <xref:System.Collections.IEnumerable> или <xref:System.Collections.Generic.IEnumerable%601>, поэтому в этом разделе мы учитываем только типы, реализовав один или оба этих интерфейса, как коллекции.  
@@ -109,7 +108,7 @@ ms.locfileid: "45964849"
  **X DO NOT** наследовать от неуниверсальных коллекций базовый, такие как `CollectionBase`. Используйте `Collection<T>`, `ReadOnlyCollection<T>`, и `KeyedCollection<TKey,TItem>` вместо этого.  
   
 ### <a name="naming-custom-collections"></a>Именование пользовательских коллекций  
- Коллекции (типы, реализующие `IEnumerable`) создаются в основном по двум причинам: (1), чтобы создать новую структуру данных с помощью операций, зависящих от структуры и часто различаются по быстродействию чем существующие структуры данных (например, <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) и (2) для создания специализированных коллекции для хранения определенный набор элементов (например, <xref:System.Collections.Specialized.StringCollection>). Структуры данных чаще всего используются в внутренней реализации приложений и библиотек. Специализированные коллекции главным образом должны быть предоставлены в API (как свойства и типы параметров).  
+ Коллекции (типы, реализующие `IEnumerable`) создаются в основном по двум причинам: (1) чтобы создать новую структуру данных с помощью операций, зависящих от структуры и часто различаются по быстродействию чем существующие структуры данных (например, <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>) и (2) для создания специализированных коллекции для Удерживая определенный набор элементов (например, <xref:System.Collections.Specialized.StringCollection>). Структуры данных чаще всего используются в внутренней реализации приложений и библиотек. Специализированные коллекции главным образом должны быть предоставлены в API (как свойства и типы параметров).  
   
  **✓ DO** используйте суффикс «Словарь» в именах реализации абстракций `IDictionary` или `IDictionary<TKey,TValue>`.  
   
@@ -127,7 +126,7 @@ ms.locfileid: "45964849"
   
  *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
   
- *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*  
+ *Перепечатано разрешением Пирсона для образовательных учреждений, Inc. из [рекомендации по разработке Framework: Условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Кшиштов Квалина и Брэд Абрамс, опубликованных 22 октября 2008 г., издательство Addison-Wesley Professional как части цикла разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также
 

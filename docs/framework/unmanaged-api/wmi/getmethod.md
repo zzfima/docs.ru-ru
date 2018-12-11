@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a913de0ff20fba51295fd8282b58e3953be9bba2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 133e056663b208f2a0d12f05f31daaca95676dc5
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43773963"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152322"
 ---
 # <a name="getmethod-function"></a>Функция GetMethod
 Получает сведения об указанном методе.
@@ -77,10 +77,10 @@ HRESULT GetMethod (
 
 Можно установить Windows Management [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject) указатель на `null` Если у метода нет входные параметры.
 
-В `ppInSignature` и `ppOutSignature` описывают входным и выходным параметрами, соответственно, в виде свойств `IWbemClassObject` экземпляр системного класса [_Parameters](/windows/desktop/WmiSdk/--parameters). Свойства в `ppInsignature` именуются **Param *** n*, где *n* позиция параметра в сигнатуре метода (такие как `Param1`, `Param2`и т. д.). Свойства в `ppOutSignature` также называются **Param *** n*, и возвращаемое значение называется **ReturnValue**. Дополнительные сведения и пример см. в разделе [IWbemClassObject::GetMethod метод](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
+В `ppInSignature` и `ppOutSignature` описывают входным и выходным параметрами, соответственно, в виде свойств `IWbemClassObject` экземпляр системного класса [_Parameters](/windows/desktop/WmiSdk/--parameters). Свойства в `ppInsignature` именуются `Param` *n*, где *n* позиция параметра в сигнатуре метода (такие как `Param1`, `Param2`и т. д.). Свойства в `ppOutSignature` также называются `Param` *n*, и возвращаемое значение имеет имя `ReturnValue`. Дополнительные сведения и пример см. в разделе [IWbemClassObject::GetMethod метод](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getmethod).
 
 ## <a name="requirements"></a>Требования  
-**Платформы:** см. раздел [требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
+**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).  
   
  **Заголовок:** WMINet_Utils.idl  
   

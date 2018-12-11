@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Использование TraceSource и фильтров с прослушивателями трассировки
+title: Как выполнить Использование TraceSource и фильтров с прослушивателями трассировки
 ms.date: 03/30/2017
 helpviewer_keywords:
 - initializing trace listeners
@@ -16,23 +16,23 @@ helpviewer_keywords:
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c7a912386d93e727a1f4cd2253ad06be76ae3385
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bc81e1e13f942f5db4fec5cc607264d499b63629
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388346"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146083"
 ---
-# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Практическое руководство. Использование TraceSource и фильтров с прослушивателями трассировки
+# <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>Как выполнить Использование TraceSource и фильтров с прослушивателями трассировки
 Одной из новых функций в платформе .NET Framework версии 2.0 является расширенная система трассировки. Основное условие осталось неизменным: сообщения трассировки отправляются через переключатели к прослушивателям, которые передают данные соответствующему выходному носителю. Для версии 2.0 основное отличие заключается в том, что трассировку можно инициировать через экземпляры класса <xref:System.Diagnostics.TraceSource>. Класс <xref:System.Diagnostics.TraceSource> представляет собой улучшенную систему трассировки и может использоваться вместо статических методов более старых классов трассировки <xref:System.Diagnostics.Trace> и <xref:System.Diagnostics.Debug>. Знакомые классы <xref:System.Diagnostics.Trace> и <xref:System.Diagnostics.Debug> сохранены, но для трассировки рекомендуется использовать класс <xref:System.Diagnostics.TraceSource>.  
   
- В этом разделе описано использование <xref:System.Diagnostics.TraceSource> вместе с файлом конфигурации приложения.  Возможно, хотя и не рекомендуется, выполнять трассировку с помощью <xref:System.Diagnostics.TraceSource> без использования файла конфигурации. Сведения о трассировке без использования файла конфигурации см. в разделе [Практическое руководство. Создание и инициализация источников трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
+ В этом разделе описано использование <xref:System.Diagnostics.TraceSource> вместе с файлом конфигурации приложения.  Возможно, хотя и не рекомендуется, выполнять трассировку с помощью <xref:System.Diagnostics.TraceSource> без использования файла конфигурации. Сведения о трассировке без файла конфигурации см. в разделе [как: Создание и инициализация источников трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md).  
   
 ### <a name="to-create-and-initialize-your-trace-source"></a>Создание и инициализация источника трассировки  
   
 1.  Первый шаг для инструментирования приложения с трассировкой — создание источника трассировки. В крупных проектах с различными компонентами можно создать отдельный источник трассировки для каждого компонента. Рекомендуется использовать имя приложения в качестве имени источника трассировки. Это поможет различить отдельные трассировки. В следующем коде создается новый источник трассировки (`mySource)`) и вызывается метод (`Activity1`), отслеживающий события.  Сообщения трассировки записываются прослушивателем трассировки по умолчанию.  
   
-    ```  
+    ```csharp
     using System;  
     using System.Diagnostics;  
     using System.Threading;  
@@ -101,7 +101,7 @@ ms.locfileid: "33388346"
   
 1.  Файл конфигурации инициализирует настройки для источника трассировки во время инициализации приложения. Чтобы изменить эти параметры, необходимо изменить файл конфигурации и перезапустить приложение или обновить приложение программными средствами с помощью метода <xref:System.Diagnostics.Trace.Refresh%2A?displayProperty=nameWithType>. Приложение может динамически изменить набор свойств с помощью файла конфигурации, чтобы переопределить любые настройки, заданные пользователем.  Например, может потребоваться, чтобы важные сообщения всегда отправлялись в текстовый файл, независимо от текущих параметров конфигурации.  
   
-    ```  
+    ```csharp
     using System;  
     using System.Diagnostics;  
     using System.Threading;  
@@ -168,5 +168,5 @@ ms.locfileid: "33388346"
  <xref:System.Diagnostics.TextWriterTraceListener>  
  <xref:System.Diagnostics.ConsoleTraceListener>  
  <xref:System.Diagnostics.EventTypeFilter>  
- [Практическое руководство. Создание и инициализация источников трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
+ [Инструкции: Создание и инициализация источников трассировки](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)  
  [Прослушиватели трассировки](../../../docs/framework/debug-trace-profile/trace-listeners.md)

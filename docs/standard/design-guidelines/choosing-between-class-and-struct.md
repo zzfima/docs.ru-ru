@@ -1,6 +1,6 @@
 ---
 title: Выбор между классом и структурой
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - class library design guidelines [.NET Framework], structures
@@ -12,14 +12,13 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7590d5628f4951a8c7c2199f0e954007ed9fa962
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+author: KrzysztofCwalina
+ms.openlocfilehash: 650acf0efaa88120678819b77b03fab61107c630
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50757430"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131330"
 ---
 # <a name="choosing-between-class-and-struct"></a>Выбор между классом и структурой
 Одним из основных проектных решений, каждый конструктор framework сталкивается является разработки типом, как класс (ссылочного типа) или как структура (тип значения). При этом важно хорошо понимать различия в поведении ссылочных типов и типов значений.  
@@ -52,7 +51,7 @@ ms.locfileid: "50757430"
   
  *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
   
- *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*  
+ *Перепечатано разрешением Пирсона для образовательных учреждений, Inc. из [рекомендации по разработке Framework: Условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Кшиштов Квалина и Брэд Абрамс, опубликованных 22 октября 2008 г., издательство Addison-Wesley Professional как части цикла разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также
 

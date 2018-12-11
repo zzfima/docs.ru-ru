@@ -4,12 +4,12 @@ description: Рабочий процесс "Жизненный цикл конт
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
-ms.openlocfilehash: d313cb8ff6762eba6534ca20b214063315a456f0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: a78b6cbae88dcc39d7452a67a2bc5239135dedf9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086597"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128444"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Рабочий процесс DevOps для приложения Docker с использованием средств Майкрософт
 
@@ -21,7 +21,7 @@ Microsoft Visual Studio, службам DevOps в Azure, Team Foundation Server 
 
 С помощью шаблонов в Microsoft Azure разработчики и тест-инженеры могут легко и быстро подготавливать среды разработки и тестирования на базе Docker.
 
-Многозадачность бизнеса и потребности в масштабируемости приводят к неуклонному усложнению процесса разработки контейнерных приложений. Хорошим примером являются приложения на основе архитектур микрослужб. Для достижения успеха в таких условиях проект должен автоматизировать весь жизненный цикл — не только сборку и развертывание, но и управление версиями, и сбор данных телеметрии. Azure DevOps Services и Azure предоставляют следующие возможности:
+Многозадачность бизнеса и потребности в масштабируемости приводят к неуклонному усложнению процесса разработки контейнерных приложений. Хорошим примером являются приложения на основе архитектур микрослужб. Для достижения успеха в такой среде, проект должен автоматизировать весь жизненный цикл — не только сборки и развертывания, но он также управление версиями, и сбор данных телеметрии. Azure DevOps Services и Azure предоставляют следующие возможности:
 
 -   Azure DevOps Services и Team Foundation Server для управления исходным кодом (на основе Git или системы управления версиями Team Foundation), гибкого планирования (Agile, Scrum и CMMI, поддерживаются), непрерывная Интеграция, управление выпусками и другие инструменты для команд гибкой разработки.
 
@@ -33,7 +33,6 @@ Microsoft Visual Studio, службам DevOps в Azure, Team Foundation Server 
 
 -   Организации могут легко создавать контейнеры Docker из частных образов, хранящихся в реестре контейнеров Azure вместе с любыми зависимостями от компонентов Azure (данные, PaaS и т. д.), используя шаблоны Azure Resource Manager и хорошо знакомые инструменты.
 
-
 >[!div class="step-by-step"]
-[Назад](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
-[Вперед](docker-application-outer-loop-devops-workflow.md)
+>[Назад](../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md)
+>[Вперед](docker-application-outer-loop-devops-workflow.md)

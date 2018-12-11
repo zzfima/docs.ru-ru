@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Защита конечных точек метаданных
+title: Как выполнить Защита конечных точек метаданных
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 ms.openlocfilehash: e6fbaabb97e4a8de3e4bdbcc0c105b6cf999c0d5
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50037591"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152194"
 ---
-# <a name="how-to-secure-metadata-endpoints"></a>Практическое руководство. Защита конечных точек метаданных
+# <a name="how-to-secure-metadata-endpoints"></a>Как выполнить Защита конечных точек метаданных
 Метаданные для службы могут содержать конфиденциальные сведения о приложении, которые могут быть использованы злоумышленником. Потребителям службы может также потребоваться безопасный механизм получения метаданных о службе. Поэтому необходимо время от времени публиковать метаданные с помощью защищенной конечной точки.  
   
  Конечные точки метаданных обычно обеспечивается с помощью стандартных механизмов безопасности определены в Windows Communication Foundation (WCF) для защиты конечных точек приложений. (Дополнительные сведения см. в разделе [Общие сведения о безопасности](../../../../docs/framework/wcf/feature-details/security-overview.md).)  
@@ -96,7 +96,7 @@ ms.locfileid: "50037591"
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior>  
  <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>  
- [Практическое руководство. Настройка порта с использованием SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Инструкции: Настройка порта с помощью SSL-сертификата](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  [Работа с сертификатами](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  [Вопросы безопасности при использовании метаданных](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)  
  [Защита служб и клиентов](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

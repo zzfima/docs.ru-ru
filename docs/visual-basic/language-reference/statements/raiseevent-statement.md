@@ -11,11 +11,11 @@ helpviewer_keywords:
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
 ms.openlocfilehash: ba4c05b3ef69d180f43ac3b90aa8fd6dee9c80fb
-ms.sourcegitcommit: 35316b768394e56087483cde93f854ba607b63bc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52296871"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143302"
 ---
 # <a name="raiseevent-statement"></a>Оператор RaiseEvent
 Вызывает событие, объявленное на уровне модуля в классе, форме или документа.  
@@ -28,10 +28,10 @@ RaiseEvent eventname[( argumentlist )]
   
 ## <a name="parts"></a>Части  
  `eventname`  
- Обязательно. Имя события.  
+ Обязательный. Имя события.  
   
  `argumentlist`  
- Необязательный. Разделенный запятыми список переменных, массивов или выражения. `argumentlist` Аргумент должен быть заключен в круглые скобки. Если аргументы не используются, скобки должен быть опущен.  
+ Необязательный параметр. Разделенный запятыми список переменных, массивов или выражения. `argumentlist` Аргумент должен быть заключен в круглые скобки. Если аргументы не используются, скобки должен быть опущен.  
   
 ## <a name="remarks"></a>Примечания  
  Необходимая `eventname` является имя события, объявленного в модуле. Следует правилам именования переменных Visual Basic.  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 486c3c44b69c69a472b7405b6c14f9d27a29d756
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c2cb99a1bda8223ddece4b4aff4a87d95357d90e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387524"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153700"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 Помощник по отладке управляемого кода `openGenericCERCall` активируется, чтобы предупредить о том, что граф области ограниченного выполнения (CER) с переменными универсального типа в корневом методе обрабатывается во время JIT-компиляции или генерации образа в машинном коде и при этом как минимум одна из переменных универсального типа представляет собой тип ссылки на объект.  
@@ -64,7 +64,7 @@ ms.locfileid: "33387524"
 ## <a name="example"></a>Пример  
  Код в области ограниченного выполнения не выполняется.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Runtime.CompilerServices;  

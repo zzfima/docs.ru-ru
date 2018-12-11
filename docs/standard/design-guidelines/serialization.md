@@ -1,16 +1,15 @@
 ---
 title: Serialization1
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fd66f8d8589baaa6fc5e22ce0b68beafac916fdf
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: 3e21251710a44764bd06fbce83f97288b6925bc2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087122"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155110"
 ---
 # <a name="serialization"></a>Сериализация
 Сериализацией называется процесс преобразования объекта в формат, который можно легко сохранять или передавать. Например можно сериализовать объект, передать его по Интернету с помощью протокола HTTP, а также десериализовать его на целевой машине.  
@@ -85,14 +84,14 @@ ms.locfileid: "44087122"
   
  **✓ DO** защищенный конструктор сериализации и предоставляют два параметра типизированных и именованных точно так, как показано в примере ниже.  
   
-```  
+```csharp
 [Serializable]  
 public class Person : ISerializable {  
     protected Person(SerializationInfo info, StreamingContext context) {  
         ...  
     }  
 }  
-```  
+```
   
  **✓ DO** реализовать `ISerializable` члены явным образом.  
   
@@ -100,7 +99,7 @@ public class Person : ISerializable {
   
  *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
   
- *Перепечатано с разрешения Pearson Education, Inc. из книги [Инфраструктура программных проектов. Соглашения, идиомы и шаблоны для многократно используемых библиотек .NET (2-е издание)](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619), авторы: Кржиштоф Цвалина (Krzysztof Cwalina) и Брэд Абрамс (Brad Abrams). Книга опубликована 22 октября 2008 г. издательством Addison-Wesley Professional в рамках серии, посвященной разработке для Microsoft Windows.*  
+ *Перепечатано разрешением Пирсона для образовательных учреждений, Inc. из [рекомендации по разработке Framework: Условные обозначения, стили и шаблоны для библиотеки .NET для повторного использования, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Кшиштов Квалина и Брэд Абрамс, опубликованных 22 октября 2008 г., издательство Addison-Wesley Professional как части цикла разработки Microsoft Windows.*  
   
 ## <a name="see-also"></a>См. также
 

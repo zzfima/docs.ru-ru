@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 2b0d7968ce2cf8f326004c9e564cb2e7912c1a0a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 2d82aed13e185b2957a22f097b60e12265a5f190
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025614"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128210"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt; элемент для &lt;среды выполнения&gt;
 Содержит идентификационные сведения о сборке.  
@@ -52,10 +52,10 @@ culture="assembly culture"/>
   
 |Значение|Описание|  
 |-----------|-----------------|  
-|`amd64`|Только для 64-разрядных процессоров AMD.|  
-|`ia64`|Только для 64-разрядных процессоров Intel.|  
-|`msil`|Нейтральный по отношению к процессору и количество бит на слово|  
-|`x86`|Для 32-разрядных процессоров Intel, собственным или в Windows в среде Windows (WOW) на 64-разрядной платформе.|  
+|`amd64`|AMD x86 64 только для архитектуры.|  
+|`ia64`|Только архитектуру Intel Itanium.|  
+|`msil`|Нейтральный по отношению к процессору и количество бит на слово.|  
+|`x86`|32-разрядный x86 процессора, собственным или в Windows в среде Windows (WOW) на 64-разрядной платформе.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
