@@ -41,7 +41,7 @@ ms.locfileid: "48836301"
 |`(.+)`|Совпадение с одним или несколькими вхождениями любого символа. Это вторая группа записи.|  
 |`$`|Совпадение должно заканчиваться в конце строки.|  
   
- Доменное имя вместе с символом @ передается методу `DomainMapper` , который использует класс <xref:System.Globalization.IdnMapping> для преобразования символов Юникода, находящихся вне диапазона символов US-ASCII, в формат Punycode. Метод также устанавливает флаг `invalid` в значение `True`, если метод <xref:System.Globalization.IdnMapping.GetAscii%2A?displayProperty=nameWithType> находит какие-либо недопустимые символы в доменном имени. Метод возвращает доменное имя в формате Punycode, которому предшествует символ "@", методу `IsValidEmail` .  
+ Доменное имя вместе с символом @ передается методу `DomainMapper` , который использует класс <xref:System.Globalization.IdnMapping> для преобразования символов Юникода, находящихся вне диапазона символов US-ASCII, в формат Punycode. Метод также устанавливает флаг `invalid` в значение `True`, если метод <xref:System.Globalization.IdnMapping.GetAscii%2A?displayProperty=nameWithType> находит какие-либо недопустимые символы в доменном имени. Метод возвращает доменное имя в формате Punycode, которому предшествует символ @, методу `IsValidEmail` .  
   
  Метод `IsValidEmail` затем вызывает метод <xref:System.Text.RegularExpressions.Regex.IsMatch%28System.String%2CSystem.String%29?displayProperty=nameWithType>, чтобы убедиться, что адрес соответствует шаблону регулярного выражения.  
   
