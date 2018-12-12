@@ -1,17 +1,18 @@
 ---
-title: Исключения и обработка исключений (Руководство по программированию в C#)
+title: Руководство по программированию на C#. Исключения и обработка исключений
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#]
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: 6cacf3cc613ffb23c6656d5d5718064a91b777a6
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: a617e8921bed3bb4513ecce738064d502af7995b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50744227"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236847"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Исключения и обработка исключений (Руководство по программированию в C#)
 Функции обработки исключений в языке C# помогают вам справиться с непредвиденными или исключительными проблемами, которые возникают при выполнении программы. Обработка исключений использует ключевые слова `try`, `catch` и `finally` для действий, которые могут оказаться неудачными. Это позволяет обрабатывать ошибки так, как кажется разумным, а также правильно высвобождать ресурсы. Исключения могут создаваться средой выполнения (CLR), платформой .NET Framework, библиотеками сторонних поставщиков или кодом самого приложения. Чтобы создать исключение, используйте ключевое слово `throw`.  
@@ -56,7 +57,7 @@ ms.locfileid: "50744227"
   
 -   [Исключения, создаваемые компилятором](../../../csharp/programming-guide/exceptions/compiler-generated-exceptions.md)  
   
--   [Практическое руководство. Обработка исключений с помощью блока try-catch (Руководство по программированию на C#)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
+-   [Практическое руководство. Руководство по программированию на C#. Обработка исключений с помощью блока try-catch](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
   
 -   [Практическое руководство. Выполнение кода очистки с использованием блока finally](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   

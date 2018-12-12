@@ -1,16 +1,17 @@
 ---
-title: Интерфейсы (Руководство по программированию в C#)
+title: Руководство по программированию на C#. Интерфейсы
+ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: ce4580f9fab80cc85a281786d5de262d8de7a679
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 33e3feb874b8ddb13788a2a3a2bb69a199335e54
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181518"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245445"
 ---
 # <a name="interfaces-c-programming-guide"></a>Интерфейсы (Руководство по программированию в C#)
 
@@ -61,17 +62,17 @@ ms.locfileid: "50181518"
 [Явная реализация интерфейса](explicit-interface-implementation.md)  
  В этом разделе объясняется, как создать член класса, который относится к интерфейсу.  
   
- [Практическое руководство. Явная реализация членов интерфейса](how-to-explicitly-implement-interface-members.md)  
+ [Практическое руководство. Явная реализация элементов интерфейса](how-to-explicitly-implement-interface-members.md)  
  В этом разделе содержится пример явной реализации членов интерфейсов.  
   
- [Практическое руководство. Явная реализация членов двух интерфейсов](how-to-explicitly-implement-members-of-two-interfaces.md)  
+ [Практическое руководство. Явная реализация элементов двух интерфейсов](how-to-explicitly-implement-members-of-two-interfaces.md)  
  В этом разделе содержится пример явной реализации членов интерфейсов с помощью наследования.  
   
 ##  <a name="BKMK_RelatedSections"></a> Связанные разделы
 
 - [Свойства интерфейса](../classes-and-structs/interface-properties.md)  
 - [Индексаторы в интерфейсах](../indexers/indexers-in-interfaces.md)  
-- [Практическое руководство. Реализация событий интерфейса](../events/how-to-implement-interface-events.md)  
+- [Практическое руководство.  Реализация событий интерфейса](../events/how-to-implement-interface-events.md)  
 - [Классы и структуры](../classes-and-structs/index.md)  
 - [Наследование](../classes-and-structs/inheritance.md)  
 - [Методы](../classes-and-structs/methods.md)  
@@ -83,7 +84,7 @@ ms.locfileid: "50181518"
   
 ## <a name="featured-book-chapter"></a>Важная глава книги
 
-Глава [Интерфейсы](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) в документе [Изучение C# 3.0: овладение основными понятиями C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
+[Интерфейсы](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652489%28v%3Dorm.10%29) в [изучении C# 3.0. Овладение основными понятиями C# 3.0](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ff652493%28v%253dorm.10%29)
 
 ## <a name="see-also"></a>См. также
 

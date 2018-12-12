@@ -1,5 +1,6 @@
 ---
-title: Классы и структуры (Руководство по программированию в C#)
+title: Руководство по программированию на C#. Классы и структуры
+ms.custom: seodec18
 description: Описание использования классов и структур в C#.
 ms.date: 01/17/2016
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 8860b519ece14a13e2a3350d299aa67598eadcc2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9380a06b733546cdf5af959868fcdfdcc7189ded
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513989"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242559"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>Классы и структуры (Руководство по программированию в C#)
 Классы и структуры являются двумя основными конструкциями системы общих типов CTS, используемой в платформе .NET Framework. Оба они являются структурами данных, которые инкапсулируют набор данных и поведений в одной логической сущности. Данные и поведение являются *членами* класса или структуры. К ним относятся методы, свойства, события и другие элементы, которые описаны далее в этой статье.  
@@ -59,7 +60,7 @@ ms.locfileid: "43513989"
   
 -   [Индексаторы](../../../csharp/programming-guide/indexers/index.md)  
   
--   [Операторы](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+-   [Инструкции](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 -   [Вложенные типы](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
@@ -93,7 +94,7 @@ ms.locfileid: "43513989"
  В некоторых ситуациях нет смысла или пользы создавать именованный класс, например при заполнении списка структурами данных, которые не будут сохраняться или передаваться другому методу. В таких случаях можно использовать анонимные типы. Дополнительные сведения см. в статье [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
   
 ### <a name="extension-methods"></a>Методы расширения  
- Вы можете "расширить" класс, даже не создавая производного класса. Для этого можно создать отдельный тип и вызывать его методы так, как если бы они принадлежали исходному типу. Дополнительные сведения см. в статье [Методы расширения](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
+ Вы можете "расширить" класс, даже не создавая производного класса. Для этого можно создать отдельный тип и вызывать его методы так, как если бы они принадлежали исходному типу. Дополнительные сведения см. в разделе [Методы расширения](../../../csharp/programming-guide/classes-and-structs/extension-methods.md).  
   
 ### <a name="implicitly-typed-local-variables"></a>Неявно типизированные локальные переменные  
  Внутри метода класса или структуры можно использовать неявное типизирование, чтобы компилятор самостоятельно определял правильный тип во время компиляции. Дополнительные сведения см. в статье [Implicitly Typed Local Variables](../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md) (Неявно типизированные локальные переменные).  

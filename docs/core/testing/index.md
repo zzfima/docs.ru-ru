@@ -1,16 +1,16 @@
 ---
 title: Модульное тестирование в .NET Core и .NET Standard
-description: Модульное тестирование в проектах .NET Core и .NET Standard.
+description: В этой статье представлен краткий обзор модульного тестирования для проектов .NET Core и .NET Standard.
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
-ms.openlocfilehash: b63b2706a9a97413a7166c87ae25cbe964e4610b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3fdacd5beb2c6cbfc631d58e99a8741f7a6b233c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170019"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243987"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Модульное тестирование в .NET Core и .NET Standard
 
@@ -30,6 +30,8 @@ ms.locfileid: "53170019"
 > Команда ASP.NET следует [этим соглашениям](https://github.com/aspnet/Home/wiki/Engineering-guidelines#unit-tests-and-functional-tests), чтобы разработчики могли придумать понятные имена тестовых классов и методов.
 
 Попробуйте не создавать зависимости в инфраструктуре при написании модульных тестов. Из-за этого тесты выполняются медленно и нестабильно. Зависимости следует использовать в интеграционных тестах. Чтобы избежать появления зависимостей в коде приложения, следуйте [принципу явных зависимостей](https://deviq.com/explicit-dependencies-principle/) и используйте [внедрение зависимостей](/aspnet/core/fundamentals/dependency-injection). Вы также можете разместить модульные тесты в отдельном проекте, не содержащем интеграционных тестов. Это гарантирует отсутствие в проекте модульного теста ссылок на пакеты инфраструктуры или зависимостей от них.
+
+## <a name="next-steps"></a>Следующие шаги
 
 Дополнительные сведения о модульном тестировании в проектах .NET Core.
 

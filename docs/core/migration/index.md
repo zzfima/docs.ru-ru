@@ -2,14 +2,14 @@
 title: Перенос .NET Core из project.json
 description: Сведения о переносе старого проекта .NET Core с использованием project.json
 author: blackdwarf
-ms.author: mairaw
 ms.date: 07/19/2017
-ms.openlocfilehash: 47d9cab48d83581afb9deb2fd91c4c9a6dc85201
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 40a0aaf9d687a580b83e11811effad458f708a85
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143289"
+ms.locfileid: "53170695"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>Перенос проектов .NET Core из project.json
 
@@ -60,7 +60,7 @@ Visual Studio выполнит перенос для выбранных прое
 
 ### <a name="common-issues"></a>Распространенные проблемы
 
-- Если вы получили сообщение об ошибке: "Исполняемый файл, соответствующий команде dotnet-migrate, не найден", выполните следующие действия:
+- Если вы получили сообщение об ошибке следующего содержания: "Исполняемый файл, соответствующий команде dotnet-migrate, не найден", сделайте следующее.
 
 Выполните команду `dotnet --version`, чтобы просмотреть используемую версию интерфейса. [`dotnet migrate`](../tools/dotnet-migrate.md) требует использования интерфейса командной строки .NET Core версии RC3 или более поздней версии.
 Вы также получите эту ошибку, если в текущем или родительском каталоге есть файл *global.json* и версия `sdk` установлена в более раннюю.

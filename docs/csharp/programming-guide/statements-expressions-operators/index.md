@@ -1,5 +1,6 @@
 ---
-title: Операторы и выражения (Руководство по программированию на C#)
+title: Руководство по программированию на C#. Операторы и выражения
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expressions [C#]
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - C# language, expressions
 - statements [C#]
 ms.assetid: 20f8469d-5a6a-4084-ad90-0856b7e97e45
-ms.openlocfilehash: 1085de3447bd6101fcccf6cae7b37afac24d37f1
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1bb710637922e8fee09fd9424cddd1170cb495c4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45971277"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237211"
 ---
 # <a name="statements-expressions-and-operators-c-programming-guide"></a>Операторы и выражения (Руководство по программированию на C#)
 Код приложения на C# состоит из операторов, которые включают ключевые слова, выражения и символьные операторы. В этом разделе содержатся сведения об этих базовых элементах программы на C#.  
@@ -27,7 +28,7 @@ ms.locfileid: "45971277"
   
     -   [Элементы, воплощающие выражение](expression-bodied-members.md)
  
--   [Операторы](operators.md)  
+-   [Инструкции](operators.md)  
   
 -   [Анонимные функции](anonymous-functions.md)  
   
@@ -37,7 +38,7 @@ ms.locfileid: "45971277"
   
     -   [Использование операторов преобразования](using-conversion-operators.md)  
   
-    -   [Практическое руководство. Реализация определенных пользователем преобразований между структурами](how-to-implement-user-defined-conversions-between-structs.md)  
+    -   [Практическое руководство. Реализация определяемых пользователем преобразований между структурами](how-to-implement-user-defined-conversions-between-structs.md)  
   
 -   [Сравнения на равенство](equality-comparisons.md)  
   

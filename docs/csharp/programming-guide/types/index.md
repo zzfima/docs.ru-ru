@@ -1,5 +1,6 @@
 ---
-title: Типы (Руководство по программированию на C#)
+title: Руководство по программированию на C#. Типы
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - value types [C#]
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ba019d4104ec6669ef07b608f40fc1489c994cbf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 74362642a57bcdffc51a447ef044dc899cc83b71
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525492"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237225"
 ---
 # <a name="types-c-programming-guide"></a>Типы (Руководство по программированию на C#)
 ## <a name="types-variables-and-values"></a>Типы, переменные и значения  
@@ -111,7 +112,7 @@ char c = 'Z';
  
  [!code-csharp[csProgGuideTypes#44](../../../csharp/programming-guide/nullable-types/codesnippet/CSharp/index_5.cs)]  
   
- Константа `System.IO.FileMode.Create` имеет значение 2. Поскольку имена намного лучше воспринимаются человеком при изучении исходного кода, мы рекомендуем всегда использовать перечисления вместо литеральных числовых констант. Дополнительные сведения см. в разделе <xref:System.IO.FileMode?displayProperty=nameWithType>.  
+ Константа `System.IO.FileMode.Create` имеет значение 2. Поскольку имена намного лучше воспринимаются человеком при изучении исходного кода, мы рекомендуем всегда использовать перечисления вместо литеральных числовых констант. Для получения дополнительной информации см. <xref:System.IO.FileMode?displayProperty=nameWithType>.  
   
  Все перечисления наследуют от <xref:System.Enum?displayProperty=nameWithType>, который наследует от <xref:System.ValueType?displayProperty=nameWithType>. К перечислениям применимы все те же правила, что к структурам. Дополнительные сведения см. в статье [Enumeration Types](../../../csharp/programming-guide/enumeration-types.md) (Типы перечислений).  
   
