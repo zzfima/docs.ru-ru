@@ -6,12 +6,12 @@ title: Документация по .NET
 description: Сведения об использовании .NET для создания различных приложений на любой платформе с помощью C#, Visual Basic и F#. Ознакомьтесь со справочником по API, образцами кода, учебниками и другими материалами.
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: b53abcb46589a012c5bcf2eff901846074004d09
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1eb9f263c26dd86873df1320f77c3944e9bfd7d2
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240259"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286511"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -498,10 +498,8 @@ ms.locfileid: "53240259"
                         <a href="#desktop">Классические приложения</a>
                         <ul id="desktop" class="cardsC">
                             <li>
-<<<<<<< HEAD <a href="https://msdn.microsoft.com/library/windows/apps/dn609832.aspx">
-=======
                                 <a href="/uwp">
->>>>>>> master <div class="cardSize">
+                                    <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
                                                 <div class="cardImageOuter">
