@@ -2,12 +2,12 @@
 title: F#рекомендации по форматированию кода
 description: Дополнительные сведения, касающиеся форматирования F# кода.
 ms.date: 11/26/2018
-ms.openlocfilehash: 993ba8d42570d92789a9fc1967b8185b45643d56
-ms.sourcegitcommit: 2151690e10d91545e2c20d6b5ad222c162b6b83d
+ms.openlocfilehash: edaa8c8b759377e71fcba705b30e8af9a8c2a716
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "43858009"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286550"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#рекомендации по форматированию кода
 
@@ -343,16 +343,23 @@ type PostalAddress =
     }
 ```
 
-Поместив токен открывающий в той же строке, а также маркер закрытия в новой строке также допустимо, но имейте в виду, что вам нужно использовать [подробный синтаксис](../language-reference/verbose-syntax.md) для определения элементов ( `with` ключевое слово):
+Помещение открывающей маркер на новую строку и закрытия токен в новой строке является рекомендуемое в том случае, если вы объявляете реализации интерфейса или элементы в записи:
 
 ```fsharp
-//  OK, but verbose syntax required
-type PostalAddress = { 
-    Address: string
-    City: string
-    Zip: string
-} with
+// Declaring additional members on PostalAddress
+type PostalAddress =
+    { 
+        Address: string
+        City: string
+        Zip: string
+    } with
     member x.ZipAndCity = sprintf "%s %s" x.Zip x.City
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
 ```
 
 ## <a name="formatting-records"></a>Форматирование записей
@@ -371,27 +378,51 @@ let rainbow =
       Lackeys = ["Zippy"; "George"; "Bungle"] }
 ```
 
-Поместив токен открывающий в той же строке, а также маркер закрытия в новой строке также очень мило:
+Поместив открывающий маркера в новой строке, с вкладками содержимое более чем одну область, и токен закрытия в новой строке рекомендуемое в том случае, если вы являетесь:
+
+* Перемещение записей в коде с помощью отступов для разных областей
+* Их по конвейеру в функцию
 
 ```fsharp
-let rainbow = {
-    Boss1 = "Jeffrey"
-    Boss2 = "Jeffrey"
-    Boss3 = "Jeffrey"
-    Boss4 = "Jeffrey"
-    Boss5 = "Jeffrey"
-    Boss6 = "Jeffrey"
-    Boss7 = "Jeffrey"
-    Boss8 = "Jeffrey"
-    Lackeys = ["Zippy"; "George"; "Bungle"]
-}
+let rainbow =
+    {
+        Boss1 = "Jeffrey"
+        Boss2 = "Jeffrey"
+        Boss3 = "Jeffrey"
+        Boss4 = "Jeffrey"
+        Boss5 = "Jeffrey"
+        Boss6 = "Jeffrey"
+        Boss7 = "Jeffrey"
+        Boss8 = "Jeffrey"
+        Lackeys = ["Zippy"; "George"; "Bungle"]
+    }
+    
+type MyRecord =
+    {
+        SomeField : int
+    }
+    interface IMyInterface
+
+let foo a =
+    a
+    |> Option.map (fun x ->
+        {
+            MyField = x
+        })
 ```
 
 Те же правила применяются для элементов списка и массива.
 
 ## <a name="formatting-lists-and-arrays"></a>Форматирование, списки и массивы
 
-Запись `x :: l` с пробелы вокруг `::` оператор (`::` инфиксные оператор, поэтому окружен пробелами) и `[1; 2; 3]` (`;` — разделитель, следовательно, разделенных пробелами).
+Запись `x :: l` с пробелы вокруг `::` оператор (`::` инфиксные оператор, поэтому окружен пробелами).
+
+Список и массивов, объявленных в одной строке должны иметь пробел после открывающей скобки и перед закрывающей скобкой:
+
+```fsharp
+let xs = [ 1; 2; 3 ]
+let ys = [| 1; 2; 3; |]
+```
 
 Всегда используйте по крайней мере один пробел между двумя операторами distinct стиле фигурную скобку. Например, оставьте пробел между `[` и `{`.
 
@@ -414,18 +445,21 @@ let rainbow = {
 Списки и массивы, которые разбиты на несколько строк выполните аналогичные правила, как записи.
 
 ```fsharp
-let pascalsTriangle = [|
-    [|1|]
-    [|1; 1|]
-    [|1; 2; 1|]
-    [|1; 3; 3; 1|]
-    [|1; 4; 6; 4; 1|]
-    [|1; 5; 10; 10; 5; 1|]
-    [|1; 6; 15; 20; 15; 6; 1|]
-    [|1; 7; 21; 35; 35; 21; 7; 1|]
-    [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
-|]
+let pascalsTriangle =
+    [|
+        [|1|]
+        [|1; 1|]
+        [|1; 2; 1|]
+        [|1; 3; 3; 1|]
+        [|1; 4; 6; 4; 1|]
+        [|1; 5; 10; 10; 5; 1|]
+        [|1; 6; 15; 20; 15; 6; 1|]
+        [|1; 7; 21; 35; 35; 21; 7; 1|]
+        [|1; 8; 28; 56; 70; 56; 28; 8; 1|]
+    |]
 ```
+
+И с помощью записей объявление на строке открывающие и закрывающие скобки будут упрощают перемещение кода вокруг и передачи по конвейеру в функцию.
 
 ## <a name="formatting-if-expressions"></a>Если форматирования выражения
 

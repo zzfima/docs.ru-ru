@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 055c7db652426651dd3c2a74825a11e305d939f1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b6f759523acab1a248b92c69b95227b878696bbf
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183910"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286589"
 ---
 # <a name="working-with-calendars"></a>Работа с календарями
 
@@ -137,6 +137,9 @@ ms.locfileid: "50183910"
 
 В календарях даты обычно разделены на эры. Тем не менее <xref:System.Globalization.Calendar> классы в .NET не поддерживают каждый эры, определяемых календаря и большая часть <xref:System.Globalization.Calendar> классы поддерживают только одну эру. Только классы <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar> поддерживают несколько эр.
 
+> [!IMPORTANT]
+>  В новой эре <xref:System.Globlalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar> начинается с 1 мая 2019 г. Это изменение затрагивает все приложения, использующие эти календари. См. в разделе [обработка новая эра японского календаря в .NET](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/) Дополнительные сведения и определить, влияет ли приложений. См. в разделе [подготовить приложение для изменения японской эры](~/windows/uwp/design/globalizing/japanese-era-change) сведения о тестировании приложений на Windows для обеспечения их готовность к работе изменение эры.
+
 ### <a name="eras-and-era-names"></a>Эры и названия эр
 
 В .NET, целые числа, обозначающие эры, поддерживаемые реализацией конкретного календаря, хранятся в обратном порядке в <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> массива. Текущая эра хранится с индексом 0, а для классов <xref:System.Globalization.Calendar>, поддерживающих несколько эр, каждый последующий индекс обозначает предыдущую эру. Статическое свойство <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> определяет индекс текущей эры в массиве <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>; это константа, значение которой всегда ноль. Отдельные классы <xref:System.Globalization.Calendar> также включают статические поля, возвращающие значение текущей эры. Они перечислены в следующей таблице.
@@ -193,5 +196,5 @@ ms.locfileid: "50183910"
 
 ## <a name="see-also"></a>См. также
 
-* [Практическое: отображение дат в календарях, отличных от григорианского](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-* [Пример: Календарную неделю диапазона служебной программы](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+* [Практическое руководство. Отображение дат в календарях, отличных от григорианского](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
+* [Пример: Служебная программа диапазон неделя календаря](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
