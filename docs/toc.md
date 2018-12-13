@@ -128,7 +128,6 @@
 ### [Модульное тестирование публикуемых выходных данных](core/testing/unit-testing-published-output.md)
 ### [Live Unit Testing в проектах .NET Core с использованием Visual Studio](/visualstudio/test/live-unit-testing-start)
 ## [Управление версиями](core/versions/index.md)
-### [Журнал версий .NET Core](core/versions/version-history.md)
 ### [Выбор версии .NET Core](core/versions/selection.md)
 ### [Удаление устаревших сред выполнения и SDK](core/versions/remove-runtime-sdk-versions.md)
 ## [Каталог идентификаторов сред выполнения](core/rid-catalog.md)
