@@ -2,51 +2,56 @@
 title: Необходимые компоненты для .NET Core в Mac
 description: Поддерживаемые версии macOS и зависимости .NET Core для разработки, развертывания и запуска приложений .NET Core на компьютерах с macOS.
 author: guardrex
-ms.author: mairaw
-ms.date: 10/03/2018
-ms.openlocfilehash: b5b3c6ea90a2cc4487e849af468d324b645834af
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.author: adegeo
+ms.date: 12/03/2018
+ms.openlocfilehash: b2ab86b7eb9faeab8d4a4cac92b361f64517f638
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584082"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145634"
 ---
-# <a name="prerequisites-for-net-core-on-macos"></a><span data-ttu-id="b6bbb-103">Необходимые компоненты для .NET Core в macOS</span><span class="sxs-lookup"><span data-stu-id="b6bbb-103">Prerequisites for .NET Core on macOS</span></span>
+# <a name="prerequisites-for-net-core-on-macos"></a><span data-ttu-id="ce557-103">Необходимые компоненты для .NET Core в macOS</span><span class="sxs-lookup"><span data-stu-id="ce557-103">Prerequisites for .NET Core on macOS</span></span>
 
-<span data-ttu-id="b6bbb-104">Эта статья описывает поддерживаемые версии macOS и зависимости .NET Core, необходимые для разработки, развертывания и запуска приложений .NET Core на компьютерах с macOS.</span><span class="sxs-lookup"><span data-stu-id="b6bbb-104">This article shows you the supported macOS versions and .NET Core dependencies that you need to develop, deploy, and run .NET Core applications on macOS machines.</span></span> <span data-ttu-id="b6bbb-105">Есть три разных способа для использования приведенных ниже поддерживаемых версий ОС и зависимостей при разработке приложений .NET Core на Mac: в [командной строке с помощью привычного вам редактора](tutorials/using-with-xplat-cli.md), в [Visual Studio Code](https://code.visualstudio.com/) и в [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/).</span><span class="sxs-lookup"><span data-stu-id="b6bbb-105">The supported OS versions and dependencies that follow apply to the three ways of developing .NET Core apps on a Mac: via the [command-line with your favorite editor](tutorials/using-with-xplat-cli.md), [Visual Studio Code](https://code.visualstudio.com/), and [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/).</span></span>
+<span data-ttu-id="ce557-104">Эта статья описывает поддерживаемые версии macOS и зависимости .NET Core, необходимые для разработки, развертывания и запуска приложений .NET Core на компьютерах с macOS.</span><span class="sxs-lookup"><span data-stu-id="ce557-104">This article shows you the supported macOS versions and .NET Core dependencies that you need to develop, deploy, and run .NET Core applications on macOS machines.</span></span> <span data-ttu-id="ce557-105">Есть три разных способа для использования приведенных ниже поддерживаемых версий ОС и зависимостей при разработке приложений .NET Core на Mac: в [командной строке с помощью привычного вам редактора](tutorials/using-with-xplat-cli.md), в [Visual Studio Code](https://code.visualstudio.com/) и в [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/).</span><span class="sxs-lookup"><span data-stu-id="ce557-105">The supported OS versions and dependencies that follow apply to the three ways of developing .NET Core apps on a Mac: via the [command-line with your favorite editor](tutorials/using-with-xplat-cli.md), [Visual Studio Code](https://code.visualstudio.com/), and [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/).</span></span>
 
-## <a name="supported-macos-versions"></a><span data-ttu-id="b6bbb-106">Поддерживаемые версии macOS</span><span class="sxs-lookup"><span data-stu-id="b6bbb-106">Supported macOS versions</span></span>
+## <a name="supported-macos-versions"></a><span data-ttu-id="ce557-106">Поддерживаемые версии macOS</span><span class="sxs-lookup"><span data-stu-id="ce557-106">Supported macOS versions</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="b6bbb-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="b6bbb-107">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="ce557-107">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="ce557-107">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-<span data-ttu-id="b6bbb-108">Платформа .NET Core 2.x поддерживается на устройствах под управлением следующих версий macOS:</span><span class="sxs-lookup"><span data-stu-id="b6bbb-108">.NET Core 2.x is supported on the following versions of macOS:</span></span>
+<span data-ttu-id="ce557-108">Платформа .NET Core 2.x поддерживается на устройствах под управлением следующих версий macOS:</span><span class="sxs-lookup"><span data-stu-id="ce557-108">.NET Core 2.x is supported on the following versions of macOS:</span></span>
 
-* <span data-ttu-id="b6bbb-109">macOS 10.12 "Sierra" и более поздних версий</span><span class="sxs-lookup"><span data-stu-id="b6bbb-109">macOS 10.12 "Sierra" and later versions</span></span>
+* <span data-ttu-id="ce557-109">macOS 10.12 "Sierra" и более поздних версий</span><span class="sxs-lookup"><span data-stu-id="ce557-109">macOS 10.12 "Sierra" and later versions</span></span>
 
-<span data-ttu-id="b6bbb-110">Полный список операционных систем, поддерживаемых .NET Core 2.x, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на странице [Версии ОС, поддерживаемые .NET Core 2.x](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).</span><span class="sxs-lookup"><span data-stu-id="b6bbb-110">See [.NET Core 2.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) for the complete list of .NET Core 2.x supported operating systems, out of support OS versions, and lifecycle policy links.</span></span>
+<span data-ttu-id="ce557-110">Полный список операционных систем, дистрибутивов, версий, поддерживаемых .NET Core 2.1 и .NET Core 2.2, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на соответствующих страницах для [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) и [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).</span><span class="sxs-lookup"><span data-stu-id="ce557-110">See [.NET Core 2.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) and [.NET Core 2.2 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) for the complete list of .NET Core 2.1 and .NET Core 2.2 supported operating systems, distributions and versions, out of support OS versions, and lifecycle policy links.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="b6bbb-111">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="b6bbb-111">.NET Core 1.x</span></span>](#tab/netcore1x)
+<span data-ttu-id="ce557-111">Ознакомьтесь с дополнительными сведениями и воспользуйтесь ссылками для скачивания для [.NET Core 2.2](https://www.microsoft.com/net/download/dotnet-core/2.2) или [.NET Core 2.1](https://www.microsoft.com/net/download/dotnet-core/2.1).</span><span class="sxs-lookup"><span data-stu-id="ce557-111">For download links and more information, see [.NET Core 2.2 downloads](https://www.microsoft.com/net/download/dotnet-core/2.2) or [.NET Core 2.1 downloads](https://www.microsoft.com/net/download/dotnet-core/2.1).</span></span>
 
-<span data-ttu-id="b6bbb-112">Платформа .NET Core 1.x поддерживается на устройствах под управлением следующих версий macOS:</span><span class="sxs-lookup"><span data-stu-id="b6bbb-112">.NET Core 1.x is supported on the following versions of macOS:</span></span>
 
-* <span data-ttu-id="b6bbb-113">macOS 10.12 "Sierra"</span><span class="sxs-lookup"><span data-stu-id="b6bbb-113">macOS 10.12 "Sierra"</span></span>
-* <span data-ttu-id="b6bbb-114">macOS 10.11 "El Capitan"</span><span class="sxs-lookup"><span data-stu-id="b6bbb-114">macOS 10.11 "El Capitan"</span></span>
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="ce557-112">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="ce557-112">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-<span data-ttu-id="b6bbb-115">Полный список операционных систем, поддерживаемых .NET Core 1.x, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на странице [Версии ОС, поддерживаемые .NET Core 1.x](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md).</span><span class="sxs-lookup"><span data-stu-id="b6bbb-115">See [.NET Core 1.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) for the complete list of .NET Core 1.x supported operating systems, out of support OS versions, and lifecycle policy links.</span></span>
+<span data-ttu-id="ce557-113">Платформа .NET Core 1.x поддерживается на устройствах под управлением следующих версий macOS:</span><span class="sxs-lookup"><span data-stu-id="ce557-113">.NET Core 1.x is supported on the following versions of macOS:</span></span>
+
+* <span data-ttu-id="ce557-114">macOS 10.12 "Sierra"</span><span class="sxs-lookup"><span data-stu-id="ce557-114">macOS 10.12 "Sierra"</span></span>
+* <span data-ttu-id="ce557-115">macOS 10.11 "El Capitan"</span><span class="sxs-lookup"><span data-stu-id="ce557-115">macOS 10.11 "El Capitan"</span></span>
+
+<span data-ttu-id="ce557-116">Полный список операционных систем, дистрибутивов, версий, поддерживаемых .NET Core 1.1 и .NET Core 1.0, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на соответствующих страницах для [.NET Core 1.1](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md) и [.NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md).</span><span class="sxs-lookup"><span data-stu-id="ce557-116">See [.NET Core 1.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md) and [.NET Core 1.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md) for the complete list of .NET Core 1.1 and .NET Core 1.0 supported operating systems, distributions and versions, out of support OS versions, and lifecycle policy links.</span></span>
+
+<span data-ttu-id="ce557-117">Ознакомьтесь с дополнительными сведениями и воспользуйтесь ссылками для скачивания для [.NET Core 1.1](https://www.microsoft.com/net/download/dotnet-core/1.1) или [.NET Core 1.0](https://www.microsoft.com/net/download/dotnet-core/1.0).</span><span class="sxs-lookup"><span data-stu-id="ce557-117">For download links and more information, see [.NET Core 1.1 downloads](https://www.microsoft.com/net/download/dotnet-core/1.1) or [.NET Core 1.0 downloads](https://www.microsoft.com/net/download/dotnet-core/1.0).</span></span>
 
 ---
 
-## <a name="net-core-dependencies"></a><span data-ttu-id="b6bbb-116">Зависимости .NET Core</span><span class="sxs-lookup"><span data-stu-id="b6bbb-116">.NET Core dependencies</span></span>
+## <a name="net-core-dependencies"></a><span data-ttu-id="ce557-118">Зависимости .NET Core</span><span class="sxs-lookup"><span data-stu-id="ce557-118">.NET Core dependencies</span></span>
 
-# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="b6bbb-117">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="b6bbb-117">.NET Core 2.x</span></span>](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[<span data-ttu-id="ce557-119">.NET Core 2.x</span><span class="sxs-lookup"><span data-stu-id="ce557-119">.NET Core 2.x</span></span>](#tab/netcore2x)
 
-<span data-ttu-id="b6bbb-118">Скачайте и установите пакет SDK для .NET Core со страницы [Загрузки .NET](https://www.microsoft.com/net/download/core).</span><span class="sxs-lookup"><span data-stu-id="b6bbb-118">Download and install the .NET Core SDK from [.NET Downloads](https://www.microsoft.com/net/download/core).</span></span> <span data-ttu-id="b6bbb-119">При возникновении проблем с установкой в macOS обратитесь к разделу с описанием [известных проблем](https://github.com/dotnet/core/tree/master/release-notes/2.1), соответствующему установленной версии.</span><span class="sxs-lookup"><span data-stu-id="b6bbb-119">If you have problems with the installation on macOS, consult the [Known issues](https://github.com/dotnet/core/tree/master/release-notes/2.1) topic for the version you have installed.</span></span>
+<span data-ttu-id="ce557-120">Скачайте и установите пакет SDK для .NET Core со страницы [Загрузки .NET](https://www.microsoft.com/net/download/core).</span><span class="sxs-lookup"><span data-stu-id="ce557-120">Download and install the .NET Core SDK from [.NET Downloads](https://www.microsoft.com/net/download/core).</span></span> <span data-ttu-id="ce557-121">При возникновении проблем с установкой в macOS обратитесь к разделу с описанием [известных проблем](https://github.com/dotnet/core/tree/master/release-notes/2.1), соответствующему установленной версии.</span><span class="sxs-lookup"><span data-stu-id="ce557-121">If you have problems with the installation on macOS, consult the [Known issues](https://github.com/dotnet/core/tree/master/release-notes/2.1) topic for the version you have installed.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="b6bbb-120">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="b6bbb-120">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="ce557-122">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="ce557-122">.NET Core 1.x</span></span>](#tab/netcore1x)
 
-<span data-ttu-id="b6bbb-121">**.NET Core 1.x**</span><span class="sxs-lookup"><span data-stu-id="b6bbb-121">**.NET Core 1.x**</span></span>
+<span data-ttu-id="ce557-123">**.NET Core 1.x**</span><span class="sxs-lookup"><span data-stu-id="ce557-123">**.NET Core 1.x**</span></span>
 
-<span data-ttu-id="b6bbb-122">При выполнении в macOS платформе .NET Core 1.x требуется OpenSSL.</span><span class="sxs-lookup"><span data-stu-id="b6bbb-122">.NET Core 1.x requires OpenSSL when running on macOS.</span></span> <span data-ttu-id="b6bbb-123">Легко получить OpenSSL можно с помощью диспетчера пакетов [Homebrew ("brew")](https://brew.sh/) для macOS.</span><span class="sxs-lookup"><span data-stu-id="b6bbb-123">An easy way to obtain OpenSSL is by using the [Homebrew ("brew")](https://brew.sh/) package manager for macOS.</span></span> <span data-ttu-id="b6bbb-124">После установки *brew* установите OpenSSL, выполнив следующие команды в окне терминала (аналог командной строки):</span><span class="sxs-lookup"><span data-stu-id="b6bbb-124">After installing *brew*, install OpenSSL by executing the following commands at a Terminal (command) prompt:</span></span>
+<span data-ttu-id="ce557-124">При выполнении в macOS платформе .NET Core 1.x требуется OpenSSL.</span><span class="sxs-lookup"><span data-stu-id="ce557-124">.NET Core 1.x requires OpenSSL when running on macOS.</span></span> <span data-ttu-id="ce557-125">Легко получить OpenSSL можно с помощью диспетчера пакетов [Homebrew ("brew")](https://brew.sh/) для macOS.</span><span class="sxs-lookup"><span data-stu-id="ce557-125">An easy way to obtain OpenSSL is by using the [Homebrew ("brew")](https://brew.sh/) package manager for macOS.</span></span> <span data-ttu-id="ce557-126">После установки *brew* установите OpenSSL, выполнив следующие команды в окне терминала (аналог командной строки):</span><span class="sxs-lookup"><span data-stu-id="ce557-126">After installing *brew*, install OpenSSL by executing the following commands at a Terminal (command) prompt:</span></span>
 
 ```console
 brew update
@@ -56,17 +61,17 @@ ln -s /usr/local/opt/openssl/lib/libcrypto.1.0.0.dylib /usr/local/lib/
 ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 ```
 
-<span data-ttu-id="b6bbb-125">Скачайте и установите пакет SDK для .NET Core со страницы [Загрузки .NET](https://www.microsoft.com/net/download/core).</span><span class="sxs-lookup"><span data-stu-id="b6bbb-125">Download and install the .NET Core SDK from [.NET Downloads](https://www.microsoft.com/net/download/core).</span></span> <span data-ttu-id="b6bbb-126">При возникновении проблем с установкой в macOS см. к разделы с описанием [известных проблем в версии 1.0.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) и [в версии 1.0.1](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md).</span><span class="sxs-lookup"><span data-stu-id="b6bbb-126">If you have problems with the installation on macOS, consult the [1.0.0 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) and [1.0.1 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) topics.</span></span>
+<span data-ttu-id="ce557-127">Скачайте и установите пакет SDK для .NET Core со страницы [Загрузки .NET](https://www.microsoft.com/net/download/core).</span><span class="sxs-lookup"><span data-stu-id="ce557-127">Download and install the .NET Core SDK from [.NET Downloads](https://www.microsoft.com/net/download/core).</span></span> <span data-ttu-id="ce557-128">При возникновении проблем с установкой в macOS см. к разделы с описанием [известных проблем в версии 1.0.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) и [в версии 1.0.1](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md).</span><span class="sxs-lookup"><span data-stu-id="ce557-128">If you have problems with the installation on macOS, consult the [1.0.0 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.0-known-issues.md) and [1.0.1 Known Issues](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0.1-known-issues.md) topics.</span></span>
 
 ---
 
-## <a name="increase-the-maximum-open-file-limit-net-core-versions-before-net-core-sdk-202"></a><span data-ttu-id="b6bbb-127">Увеличение максимального лимита на число открытых файлов (версии .NET Core до версии пакета SDK для .NET Core 2.0.2)</span><span class="sxs-lookup"><span data-stu-id="b6bbb-127">Increase the maximum open file limit (.NET Core versions before .NET Core SDK 2.0.2)</span></span> 
+## <a name="increase-the-maximum-open-file-limit-net-core-versions-before-net-core-sdk-202"></a><span data-ttu-id="ce557-129">Увеличение максимального лимита на число открытых файлов (версии .NET Core до версии пакета SDK для .NET Core 2.0.2)</span><span class="sxs-lookup"><span data-stu-id="ce557-129">Increase the maximum open file limit (.NET Core versions before .NET Core SDK 2.0.2)</span></span> 
 
-<span data-ttu-id="b6bbb-128">В прежних версиях .NET Core (до версии пакета SDK для .NET Core 2.0.2) лимит на число открытых файлов, используемый по умолчанию в macOS, может оказаться недостаточным для некоторых рабочих нагрузок .NET Core, таких как восстановление проектов или выполнение модульных тестов.</span><span class="sxs-lookup"><span data-stu-id="b6bbb-128">In older .NET Core versions (before .NET Core SDK 2.0.2), the default open file limit on macOS may not be sufficient for some .NET Core workloads, such as restoring projects or running unit tests.</span></span>
+<span data-ttu-id="ce557-130">В прежних версиях .NET Core (до версии пакета SDK для .NET Core 2.0.2) лимит на число открытых файлов, используемый по умолчанию в macOS, может оказаться недостаточным для некоторых рабочих нагрузок .NET Core, таких как восстановление проектов или выполнение модульных тестов.</span><span class="sxs-lookup"><span data-stu-id="ce557-130">In older .NET Core versions (before .NET Core SDK 2.0.2), the default open file limit on macOS may not be sufficient for some .NET Core workloads, such as restoring projects or running unit tests.</span></span>
 
-<span data-ttu-id="b6bbb-129">Этот лимит можно увеличить, выполнив следующие действия:</span><span class="sxs-lookup"><span data-stu-id="b6bbb-129">You can increase this limit by following these steps:</span></span>
+<span data-ttu-id="ce557-131">Этот лимит можно увеличить, выполнив следующие действия:</span><span class="sxs-lookup"><span data-stu-id="ce557-131">You can increase this limit by following these steps:</span></span>
 
-1. <span data-ttu-id="b6bbb-130">В текстовом редакторе создайте файл _/Library/LaunchDaemons/limit.maxfiles.plist_ и сохраните его со следующим содержимым:</span><span class="sxs-lookup"><span data-stu-id="b6bbb-130">Using a text editor, create a new file _/Library/LaunchDaemons/limit.maxfiles.plist_, and save the file with this content:</span></span>
+1. <span data-ttu-id="ce557-132">В текстовом редакторе создайте файл _/Library/LaunchDaemons/limit.maxfiles.plist_ и сохраните его со следующим содержимым:</span><span class="sxs-lookup"><span data-stu-id="ce557-132">Using a text editor, create a new file _/Library/LaunchDaemons/limit.maxfiles.plist_, and save the file with this content:</span></span>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -92,21 +97,21 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 </plist>
 ```
 
-2. <span data-ttu-id="b6bbb-131">В окне терминала выполните следующую команду:</span><span class="sxs-lookup"><span data-stu-id="b6bbb-131">In a terminal window, run the following command:</span></span>
+2. <span data-ttu-id="ce557-133">В окне терминала выполните следующую команду:</span><span class="sxs-lookup"><span data-stu-id="ce557-133">In a terminal window, run the following command:</span></span>
 
-```console
-echo 'ulimit -n 2048' | sudo tee -a /etc/profile
-```
+   ```console
+   echo 'ulimit -n 2048' | sudo tee -a /etc/profile
+   ```
 
-3. <span data-ttu-id="b6bbb-132">Перезагрузите Mac, чтобы применить эти параметры.</span><span class="sxs-lookup"><span data-stu-id="b6bbb-132">Reboot your Mac to apply these settings.</span></span>
+3. <span data-ttu-id="ce557-134">Перезагрузите Mac, чтобы применить эти параметры.</span><span class="sxs-lookup"><span data-stu-id="ce557-134">Reboot your Mac to apply these settings.</span></span>
 
-## <a name="visual-studio-for-mac"></a><span data-ttu-id="b6bbb-133">Visual Studio для Mac</span><span class="sxs-lookup"><span data-stu-id="b6bbb-133">Visual Studio for Mac</span></span>
+## <a name="visual-studio-for-mac"></a><span data-ttu-id="ce557-135">Visual Studio для Mac</span><span class="sxs-lookup"><span data-stu-id="ce557-135">Visual Studio for Mac</span></span>
 
-<span data-ttu-id="b6bbb-134">Для разработки приложений .NET Core с помощью пакета SDK для .NET Core вы можете использовать любой редактор.</span><span class="sxs-lookup"><span data-stu-id="b6bbb-134">You can use any editor to develop .NET Core applications using the .NET Core SDK.</span></span> <span data-ttu-id="b6bbb-135">Если же вы хотите разрабатывать приложения .NET Core в интегрированной среде разработки Mac, можно использовать [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/).</span><span class="sxs-lookup"><span data-stu-id="b6bbb-135">However, if you want to develop .NET Core applications on a Mac in an integrated development environment, you can use [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/).</span></span> 
+<span data-ttu-id="ce557-136">Для разработки приложений .NET Core с помощью пакета SDK для .NET Core вы можете использовать любой редактор.</span><span class="sxs-lookup"><span data-stu-id="ce557-136">You can use any editor to develop .NET Core applications using the .NET Core SDK.</span></span> <span data-ttu-id="ce557-137">Если же вы хотите разрабатывать приложения .NET Core в интегрированной среде разработки Mac, можно использовать [Visual Studio для Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/).</span><span class="sxs-lookup"><span data-stu-id="ce557-137">However, if you want to develop .NET Core applications on a Mac in an integrated development environment, you can use [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/).</span></span> 
 
-<span data-ttu-id="b6bbb-136">Чтобы разрабатывать приложения .NET Core в macOS с помощью Visual Studio для Mac, нужны следующие компоненты:</span><span class="sxs-lookup"><span data-stu-id="b6bbb-136">.NET Core development on macOS with Visual Studio for Mac requires:</span></span>
+<span data-ttu-id="ce557-138">Чтобы разрабатывать приложения .NET Core в macOS с помощью Visual Studio для Mac, нужны следующие компоненты:</span><span class="sxs-lookup"><span data-stu-id="ce557-138">.NET Core development on macOS with Visual Studio for Mac requires:</span></span>
 
-* <span data-ttu-id="b6bbb-137">Поддерживаемая версия операционной системы macOS</span><span class="sxs-lookup"><span data-stu-id="b6bbb-137">A supported version of the macOS operating system</span></span>
-* <span data-ttu-id="b6bbb-138">OpenSSL (Только .NET Core 1.x. .NET Core 2.x использует службы безопасности, по умолчанию доступные в macOS.)</span><span class="sxs-lookup"><span data-stu-id="b6bbb-138">OpenSSL (.NET Core 1.x only; .NET Core 2.x uses security services available natively in macOS)</span></span>
-* <span data-ttu-id="b6bbb-139">Пакет SDK .NET Core для Mac</span><span class="sxs-lookup"><span data-stu-id="b6bbb-139">.NET Core SDK for Mac</span></span>
-* [<span data-ttu-id="b6bbb-140">Visual Studio для Mac</span><span class="sxs-lookup"><span data-stu-id="b6bbb-140">Visual Studio for Mac</span></span>](https://visualstudio.microsoft.com/vs/visual-studio-mac/)
+* <span data-ttu-id="ce557-139">Поддерживаемая версия операционной системы macOS</span><span class="sxs-lookup"><span data-stu-id="ce557-139">A supported version of the macOS operating system</span></span>
+* <span data-ttu-id="ce557-140">OpenSSL (Только .NET Core 1.x. .NET Core 2.x использует службы безопасности, по умолчанию доступные в macOS.)</span><span class="sxs-lookup"><span data-stu-id="ce557-140">OpenSSL (.NET Core 1.x only; .NET Core 2.x uses security services available natively in macOS)</span></span>
+* <span data-ttu-id="ce557-141">Пакет SDK .NET Core для Mac</span><span class="sxs-lookup"><span data-stu-id="ce557-141">.NET Core SDK for Mac</span></span>
+* [<span data-ttu-id="ce557-142">Visual Studio для Mac</span><span class="sxs-lookup"><span data-stu-id="ce557-142">Visual Studio for Mac</span></span>](https://visualstudio.microsoft.com/vs/visual-studio-mac/)

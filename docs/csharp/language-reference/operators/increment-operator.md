@@ -1,34 +1,53 @@
 ---
 title: Оператор ++ (справочник по C#)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - ++_CSharpKeyword
 helpviewer_keywords:
 - increment operator (++) [C#]
 - ++ operator [C#]
 ms.assetid: e9dec353-070b-44fb-98ed-eb8fdf753feb
-ms.openlocfilehash: a52f614ce1bbfb8e9d9be686b277c1e69f6f9d35
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b29f4f1ab00c0f8026f118cb72b090e3b728bfc5
+ms.sourcegitcommit: 6ae7cdd0437a32884556dd4826ca90e957b7a4e3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
+ms.lasthandoff: 12/06/2018
 ms.locfileid: "48030474"
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="6d2b2-102">Оператор ++ (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="6d2b2-102">++ Operator (C# Reference)</span></span>
-<span data-ttu-id="6d2b2-103">Оператор инкремента (`++`) увеличивает операнд на 1.</span><span class="sxs-lookup"><span data-stu-id="6d2b2-103">The increment operator (`++`) increments its operand by 1.</span></span> <span data-ttu-id="6d2b2-104">Оператор инкремента может находиться перед своим операндом или после него: `++variable` и `variable++`.</span><span class="sxs-lookup"><span data-stu-id="6d2b2-104">The increment operator can appear before or after its operand: `++variable` and `variable++`.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="6d2b2-105">Примечания</span><span class="sxs-lookup"><span data-stu-id="6d2b2-105">Remarks</span></span>  
- <span data-ttu-id="6d2b2-106">Первый случай — это операция префиксного инкремента.</span><span class="sxs-lookup"><span data-stu-id="6d2b2-106">The first form is a prefix increment operation.</span></span> <span data-ttu-id="6d2b2-107">Результатом операции является значение операнда после его увеличения.</span><span class="sxs-lookup"><span data-stu-id="6d2b2-107">The result of the operation is the value of the operand after it has been incremented.</span></span>  
-  
- <span data-ttu-id="6d2b2-108">Второй случай — это операция постфиксного инкремента.</span><span class="sxs-lookup"><span data-stu-id="6d2b2-108">The second form is a postfix increment operation.</span></span> <span data-ttu-id="6d2b2-109">Результатом операции является значение операнда до его увеличения.</span><span class="sxs-lookup"><span data-stu-id="6d2b2-109">The result of the operation is the value of the operand before it has been incremented.</span></span>  
-  
- <span data-ttu-id="6d2b2-110">Числовые типы и типы перечислений имеют предварительно определенные операторы инкремента.</span><span class="sxs-lookup"><span data-stu-id="6d2b2-110">Numeric and enumeration types have predefined increment operators.</span></span> <span data-ttu-id="6d2b2-111">Определяемые пользователем типы могут перегружать оператор `++` .</span><span class="sxs-lookup"><span data-stu-id="6d2b2-111">User-defined types can overload the `++` operator.</span></span> <span data-ttu-id="6d2b2-112">Операции с целыми типами обычно разрешены и для перечислений.</span><span class="sxs-lookup"><span data-stu-id="6d2b2-112">Operations on integral types are generally allowed on enumeration.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="6d2b2-113">Пример</span><span class="sxs-lookup"><span data-stu-id="6d2b2-113">Example</span></span>  
- [!code-csharp[csRefOperators#3](../../../csharp/language-reference/operators/codesnippet/CSharp/increment-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="6d2b2-114">См. также</span><span class="sxs-lookup"><span data-stu-id="6d2b2-114">See Also</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="a6b18-102">Оператор ++ (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="a6b18-102">++ Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="6d2b2-115">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="6d2b2-115">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="6d2b2-116">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="6d2b2-116">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="6d2b2-117">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="6d2b2-117">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="a6b18-103">Оператор инкремента `++` увеличивает операнд на 1.</span><span class="sxs-lookup"><span data-stu-id="a6b18-103">The unary increment operator `++` increments its operand by 1.</span></span> <span data-ttu-id="a6b18-104">Он поддерживается в двух формах: постфиксный оператор инкремента и `x++` префиксный оператор инкремента `++x`.</span><span class="sxs-lookup"><span data-stu-id="a6b18-104">It's supported in two forms: the postfix increment operator, `x++`, and the prefix increment operator, `++x`.</span></span>
+
+## <a name="postfix-increment-operator"></a><span data-ttu-id="a6b18-105">Постфиксный оператор приращения</span><span class="sxs-lookup"><span data-stu-id="a6b18-105">Postfix increment operator</span></span>
+
+<span data-ttu-id="a6b18-106">Результатом `x++` является значение `x` *перед* выполнением операции, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="a6b18-106">The result of `x++` is the value of `x` *before* the operation, as the following example shows:</span></span>
+
+[!code-csharp-interactive[postfix increment](~/samples/snippets/csharp/language-reference/operators/DecrementAndIncrementExamples.cs#PostfixIncrement)]
+
+## <a name="prefix-increment-operator"></a><span data-ttu-id="a6b18-107">Префиксный оператор инкремента</span><span class="sxs-lookup"><span data-stu-id="a6b18-107">Prefix increment operator</span></span>
+
+<span data-ttu-id="a6b18-108">Результатом `++x` является значение `x` *после* выполнения операции, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="a6b18-108">The result of `++x` is the value of `x` *after* the operation, as the following example shows:</span></span>
+
+[!code-csharp-interactive[prefix increment](~/samples/snippets/csharp/language-reference/operators/DecrementAndIncrementExamples.cs#PrefixIncrement)]
+
+## <a name="remarks"></a><span data-ttu-id="a6b18-109">Примечания</span><span class="sxs-lookup"><span data-stu-id="a6b18-109">Remarks</span></span>
+
+<span data-ttu-id="a6b18-110">Оператор инкремента является стандартным для всех [целочисленных типов](../keywords/integral-types-table.md) (включая тип [char](../keywords/char.md)), [типы с плавающей запятой](../keywords/floating-point-types-table.md) и любой тип [enum](../keywords/enum.md).</span><span class="sxs-lookup"><span data-stu-id="a6b18-110">The increment operator is predefined for all [integral types](../keywords/integral-types-table.md) (including the [char](../keywords/char.md) type), [floating-point types](../keywords/floating-point-types-table.md), and any [enum](../keywords/enum.md) type.</span></span>
+
+<span data-ttu-id="a6b18-111">Операндом оператора инкремента должна быть переменная, [свойство](../../programming-guide/classes-and-structs/properties.md) или [индексатор](../../../csharp/programming-guide/indexers/index.md).</span><span class="sxs-lookup"><span data-stu-id="a6b18-111">An operand of the increment operator must be a variable, a [property](../../programming-guide/classes-and-structs/properties.md) access, or an [indexer](../../../csharp/programming-guide/indexers/index.md) access.</span></span>
+
+## <a name="operator-overloadability"></a><span data-ttu-id="a6b18-112">Возможность перегрузки оператора</span><span class="sxs-lookup"><span data-stu-id="a6b18-112">Operator overloadability</span></span>
+
+<span data-ttu-id="a6b18-113">Определяемые пользователем типы могут [перегружать](../keywords/operator.md) оператор `++`.</span><span class="sxs-lookup"><span data-stu-id="a6b18-113">User-defined types can [overload](../keywords/operator.md) the `++` operator.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="a6b18-114">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="a6b18-114">C# language specification</span></span>
+
+<span data-ttu-id="a6b18-115">Дополнительные сведения см. в разделе о [постфиксных](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators) и [префиксных](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators) операторах инкремента и декремента в [спецификации языка C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="a6b18-115">For more information, see the [Postfix increment and decrement operators](~/_csharplang/spec/expressions.md#postfix-increment-and-decrement-operators) and [Prefix increment and decrement operators](~/_csharplang/spec/expressions.md#prefix-increment-and-decrement-operators) sections of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="a6b18-116">См. также</span><span class="sxs-lookup"><span data-stu-id="a6b18-116">See also</span></span>
+
+- [<span data-ttu-id="a6b18-117">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="a6b18-117">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="a6b18-118">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="a6b18-118">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="a6b18-119">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="a6b18-119">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="a6b18-120">Оператор --</span><span class="sxs-lookup"><span data-stu-id="a6b18-120">-- Operator</span></span>](decrement-operator.md)
+- [<span data-ttu-id="a6b18-121">Практическое руководство. Увеличение и уменьшение указателей</span><span class="sxs-lookup"><span data-stu-id="a6b18-121">How to: increment and decrement pointers</span></span>](../../programming-guide/unsafe-code-pointers/how-to-increment-and-decrement-pointers.md)

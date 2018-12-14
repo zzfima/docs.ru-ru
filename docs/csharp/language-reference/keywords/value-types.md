@@ -1,6 +1,6 @@
 ---
-title: Типы значений (Справочник по C#)
-ms.date: 07/20/2015
+title: Типы значений (справочник по C#)
+ms.date: 11/26/2018
 f1_keywords:
 - cs.valuetypes
 helpviewer_keywords:
@@ -8,101 +8,105 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 3bbaea9247d975c27ed6f49dedb749312f675296
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: baf0db751cd70d50d4cf440626dd405b01c8d7ad
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526467"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147727"
 ---
-# <a name="value-types-c-reference"></a><span data-ttu-id="12464-102">Типы значений (Справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="12464-102">Value Types (C# Reference)</span></span>
-<span data-ttu-id="12464-103">Типы значений относятся к двум основным категориям:</span><span class="sxs-lookup"><span data-stu-id="12464-103">The value types consist of two main categories:</span></span>  
+# <a name="value-types-c-reference"></a><span data-ttu-id="4bcc3-102">Типы значений (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="4bcc3-102">Value types (C# Reference)</span></span>
+
+<span data-ttu-id="4bcc3-103">Существует два типа значений:</span><span class="sxs-lookup"><span data-stu-id="4bcc3-103">There are two kinds of value types:</span></span>
+
+- [<span data-ttu-id="4bcc3-104">Структуры</span><span class="sxs-lookup"><span data-stu-id="4bcc3-104">Structs</span></span>](struct.md)
+
+- [<span data-ttu-id="4bcc3-105">Перечисления</span><span class="sxs-lookup"><span data-stu-id="4bcc3-105">Enumerations</span></span>](enum.md)
+
+## <a name="main-features-of-value-types"></a><span data-ttu-id="4bcc3-106">Основные возможности типов значений</span><span class="sxs-lookup"><span data-stu-id="4bcc3-106">Main features of value types</span></span>
+
+<span data-ttu-id="4bcc3-107">Переменная типа значения содержит значение типа.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-107">A variable of a value type contains a value of the type.</span></span> <span data-ttu-id="4bcc3-108">Например, переменная типа `int` может содержать значение `42`.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-108">For example, a variable of the `int` type might contain the value `42`.</span></span> <span data-ttu-id="4bcc3-109">Это отличается от переменной ссылочного типа, которая содержит ссылку на экземпляр типа, также известный как объект.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-109">This differs from a variable of a reference type, which contains a reference to an instance of the type, also known as an object.</span></span> <span data-ttu-id="4bcc3-110">Когда вы присваиваете новое значение переменной типа значения, это значение копируется.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-110">When you assign a new value to a variable of a value type, that value is copied.</span></span> <span data-ttu-id="4bcc3-111">Когда вы присваиваете новое значение переменной ссылочного типа, копируется не сам объект, а ссылка на него.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-111">When you assign a new value to a variable of a reference type, the reference is copied, not the object itself.</span></span>
+
+<span data-ttu-id="4bcc3-112">Все типы значения являются неявными производными от <xref:System.ValueType?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-112">All value types are derived implicitly from the <xref:System.ValueType?displayProperty=nameWithType>.</span></span>  
   
--   [<span data-ttu-id="12464-104">Структуры</span><span class="sxs-lookup"><span data-stu-id="12464-104">Structs</span></span>](../../../csharp/language-reference/keywords/struct.md)  
+<span data-ttu-id="4bcc3-113">В отличие от ссылочных типов, создать новый производный от типа значения тип нельзя.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-113">Unlike with reference types, you cannot derive a new type from a value type.</span></span> <span data-ttu-id="4bcc3-114">Тем не менее, как и ссылочные типы, структуры могут реализовывать интерфейсы.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-114">However, like reference types, structs can implement interfaces.</span></span>  
   
--   [<span data-ttu-id="12464-105">Перечисления</span><span class="sxs-lookup"><span data-stu-id="12464-105">Enumerations</span></span>](../../../csharp/language-reference/keywords/enum.md)  
+<span data-ttu-id="4bcc3-115">Переменные типа значения не могут иметь значение `null` по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-115">Value type variables cannot be `null` by default.</span></span> <span data-ttu-id="4bcc3-116">Однако переменные соответствующих [типов, допускающих значение null](../../../csharp/programming-guide/nullable-types/index.md), могут иметь значение `null`.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-116">However, variables of the corresponding [nullable types](../../../csharp/programming-guide/nullable-types/index.md) can be `null`.</span></span>
   
- <span data-ttu-id="12464-106">Структуры делятся на следующие категории:</span><span class="sxs-lookup"><span data-stu-id="12464-106">Structs fall into these categories:</span></span>  
+<span data-ttu-id="4bcc3-117">Каждый тип значения имеет неявный конструктор по умолчанию, который инициализирует значение по умолчанию для этого типа.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-117">Each value type has an implicit default constructor that initializes the default value of that type.</span></span> <span data-ttu-id="4bcc3-118">Дополнительные сведения о значениях по умолчанию для типов значений см. в разделе [Таблица значений по умолчанию (справочник по C#)](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="4bcc3-118">For information about default values of value types, see [Default values table](default-values-table.md).</span></span>  
   
--   <span data-ttu-id="12464-107">Числовые типы</span><span class="sxs-lookup"><span data-stu-id="12464-107">Numeric types</span></span>  
+## <a name="simple-types"></a><span data-ttu-id="4bcc3-119">Простые типы</span><span class="sxs-lookup"><span data-stu-id="4bcc3-119">Simple types</span></span>
+
+<span data-ttu-id="4bcc3-120">*Простые типы* — это набор предопределенных типов структур, предоставленных C#, который содержит следующие типы:</span><span class="sxs-lookup"><span data-stu-id="4bcc3-120">The *simple types* are a set of predefined struct types provided by C# and comprise the following types:</span></span>
+
+- <span data-ttu-id="4bcc3-121">[Целочисленные типы](integral-types-table.md): типы целого числа и тип [char](char.md).</span><span class="sxs-lookup"><span data-stu-id="4bcc3-121">[Integral types](integral-types-table.md): integer numeric types and the [char](char.md) type</span></span>
+- [<span data-ttu-id="4bcc3-122">Типы с плавающей запятой</span><span class="sxs-lookup"><span data-stu-id="4bcc3-122">Floating-point types</span></span>](floating-point-types-table.md)
+- [<span data-ttu-id="4bcc3-123">bool</span><span class="sxs-lookup"><span data-stu-id="4bcc3-123">bool</span></span>](bool.md)
+
+<span data-ttu-id="4bcc3-124">Простые типы определяются с помощью ключевых слов, но эти ключевые слова являются просто псевдонимами для предопределенных типов структур в пространстве имен <xref:System>.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-124">The simple types are identified through keywords, but these keywords are simply aliases for predefined struct types in the <xref:System> namespace.</span></span> <span data-ttu-id="4bcc3-125">Например, [int](int.md) является псевдонимом типа <xref:System.Int32?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-125">For example, [int](int.md) is an alias of <xref:System.Int32?displayProperty=nameWithType>.</span></span> <span data-ttu-id="4bcc3-126">Полный список псевдонимов см. в разделе [Таблица встроенных типов (Справочник по C#)](built-in-types-table.md).</span><span class="sxs-lookup"><span data-stu-id="4bcc3-126">For a complete list of aliases, see [Built-in types table](built-in-types-table.md).</span></span>
+
+<span data-ttu-id="4bcc3-127">Простые типы отличаются от других типов структур тем, что они разрешают некоторые дополнительные операции:</span><span class="sxs-lookup"><span data-stu-id="4bcc3-127">The simple types differ from other struct types in that they permit certain additional operations:</span></span>
+
+- <span data-ttu-id="4bcc3-128">Простые типы можно инициализировать с помощью литералов.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-128">Simple types can be initialized by using literals.</span></span> <span data-ttu-id="4bcc3-129">Например, `'A'` — это литерал типа `char`, а `2001` — литерал типа `int`.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-129">For example, `'A'` is a literal of the type `char` and `2001` is a literal of the type `int`.</span></span>
+
+- <span data-ttu-id="4bcc3-130">Константы простых типов можно объявить с помощью ключевого слова [const](const.md).</span><span class="sxs-lookup"><span data-stu-id="4bcc3-130">You can declare constants of the simple types with the [const](const.md) keyword.</span></span> <span data-ttu-id="4bcc3-131">Невозможно иметь константы других типов структур.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-131">It's not possible to have constants of other struct types.</span></span>
+
+- <span data-ttu-id="4bcc3-132">Константные выражения, операнды которых являются константами простого типа, вычисляются во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-132">Constant expressions, whose operands are all simple type constants, are evaluated at compile time.</span></span>
+
+<span data-ttu-id="4bcc3-133">Дополнительные сведения см. в разделе [Простые типы](~/_csharplang/spec/types.md#simple-types) статьи [Предварительная спецификация C# 6.0](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="4bcc3-133">For more information, see the [Simple types](~/_csharplang/spec/types.md#simple-types) section of the [C# language specification](../language-specification/index.md).</span></span>
   
-    -   [<span data-ttu-id="12464-108">Целочисленные типы</span><span class="sxs-lookup"><span data-stu-id="12464-108">Integral types</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
-  
-    -   [<span data-ttu-id="12464-109">Типы с плавающей запятой</span><span class="sxs-lookup"><span data-stu-id="12464-109">Floating-point types</span></span>](../../../csharp/language-reference/keywords/floating-point-types-table.md)  
-  
--   [<span data-ttu-id="12464-110">bool</span><span class="sxs-lookup"><span data-stu-id="12464-110">bool</span></span>](../../../csharp/language-reference/keywords/bool.md)  
-  
--   <span data-ttu-id="12464-111">Определяемые пользователем структуры.</span><span class="sxs-lookup"><span data-stu-id="12464-111">User defined structs.</span></span>  
-  
-## <a name="main-features-of-value-types"></a><span data-ttu-id="12464-112">Основные возможности типов значений</span><span class="sxs-lookup"><span data-stu-id="12464-112">Main Features of Value Types</span></span>  
- <span data-ttu-id="12464-113">Переменные, основанные на типах значений, непосредственно содержат значения.</span><span class="sxs-lookup"><span data-stu-id="12464-113">Variables that are based on value types directly contain values.</span></span> <span data-ttu-id="12464-114">Если присвоить одну переменную типа значения другой, в нее будет скопировано содержащееся в исходной переменной значение.</span><span class="sxs-lookup"><span data-stu-id="12464-114">Assigning one value type variable to another copies the contained value.</span></span> <span data-ttu-id="12464-115">В этом заключается отличие от присвоения переменных ссылочного типа, при котором копируется не сам объект, а ссылка на него.</span><span class="sxs-lookup"><span data-stu-id="12464-115">This differs from the assignment of reference type variables, which copies a reference to the object but not the object itself.</span></span>  
-  
- <span data-ttu-id="12464-116">Все типы значения являются неявными производными от <xref:System.ValueType?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="12464-116">All value types are derived implicitly from the <xref:System.ValueType?displayProperty=nameWithType>.</span></span>  
-  
- <span data-ttu-id="12464-117">В отличие от ссылочных типов, создать новый производный от типа значения тип нельзя.</span><span class="sxs-lookup"><span data-stu-id="12464-117">Unlike with reference types, you cannot derive a new type from a value type.</span></span> <span data-ttu-id="12464-118">Тем не менее, как и ссылочные типы, структуры могут реализовывать интерфейсы.</span><span class="sxs-lookup"><span data-stu-id="12464-118">However, like reference types, structs can implement interfaces.</span></span>  
-  
- <span data-ttu-id="12464-119">В отличие от ссылочных типов, тип значения не может содержать значение `null`.</span><span class="sxs-lookup"><span data-stu-id="12464-119">Unlike reference types, a value type cannot contain the `null` value.</span></span> <span data-ttu-id="12464-120">Тем не менее с помощью [типов, допускающих значение null](../../../csharp/programming-guide/nullable-types/index.md), можно присваивать типы значений значениям `null`.</span><span class="sxs-lookup"><span data-stu-id="12464-120">However, the [nullable types](../../../csharp/programming-guide/nullable-types/index.md) feature does allow for value types to be assigned to `null`.</span></span>  
-  
- <span data-ttu-id="12464-121">Каждый тип значения имеет неявный конструктор по умолчанию, который инициализирует значение по умолчанию для этого типа.</span><span class="sxs-lookup"><span data-stu-id="12464-121">Each value type has an implicit default constructor that initializes the default value of that type.</span></span> <span data-ttu-id="12464-122">Дополнительные сведения о значениях по умолчанию для типов значений см. в разделе [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="12464-122">For information about default values of value types, see [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span>  
-  
-## <a name="main-features-of-simple-types"></a><span data-ttu-id="12464-123">Основные возможности простых типов</span><span class="sxs-lookup"><span data-stu-id="12464-123">Main Features of Simple Types</span></span>  
- <span data-ttu-id="12464-124">Все простые типы, реализованные в языке C#, являются псевдонимами системных типов платформы .NET.</span><span class="sxs-lookup"><span data-stu-id="12464-124">All of the simple types -- those integral to the C# language -- are aliases of the .NET Framework System types.</span></span> <span data-ttu-id="12464-125">Например, [int](../../../csharp/language-reference/keywords/int.md) является псевдонимом типа <xref:System.Int32?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="12464-125">For example, [int](../../../csharp/language-reference/keywords/int.md) is an alias of <xref:System.Int32?displayProperty=nameWithType>.</span></span> <span data-ttu-id="12464-126">Полный список псевдонимов см. в разделе [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md).</span><span class="sxs-lookup"><span data-stu-id="12464-126">For a complete list of aliases, see [Built-In Types Table](../../../csharp/language-reference/keywords/built-in-types-table.md).</span></span>  
-  
- <span data-ttu-id="12464-127">Константные выражения, операнды которых являются константами простого типа, вычисляются во время компиляции.</span><span class="sxs-lookup"><span data-stu-id="12464-127">Constant expressions, whose operands are all simple type constants, are evaluated at compilation time.</span></span>  
-  
- <span data-ttu-id="12464-128">Простые типы можно инициализировать с помощью литералов.</span><span class="sxs-lookup"><span data-stu-id="12464-128">Simple types can be initialized by using literals.</span></span> <span data-ttu-id="12464-129">Например, "A" — это литерал типа `char`, а "2001" — литерал типа `int`.</span><span class="sxs-lookup"><span data-stu-id="12464-129">For example, 'A' is a literal of the type `char` and 2001 is a literal of the type `int`.</span></span>  
-  
-## <a name="initializing-value-types"></a><span data-ttu-id="12464-130">Инициализация типов значений</span><span class="sxs-lookup"><span data-stu-id="12464-130">Initializing Value Types</span></span>  
- <span data-ttu-id="12464-131">В языке C# локальные переменные необходимо инициализировать перед использованием.</span><span class="sxs-lookup"><span data-stu-id="12464-131">Local variables in C# must be initialized before they are used.</span></span> <span data-ttu-id="12464-132">Например, можно объявить локальную переменную без инициализации, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="12464-132">For example, you might declare a local variable without initialization as in the following example:</span></span>  
+## <a name="initializing-value-types"></a><span data-ttu-id="4bcc3-134">Инициализация типов значений</span><span class="sxs-lookup"><span data-stu-id="4bcc3-134">Initializing value types</span></span>
+
+ <span data-ttu-id="4bcc3-135">В языке C# локальные переменные необходимо инициализировать перед использованием.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-135">Local variables in C# must be initialized before they are used.</span></span> <span data-ttu-id="4bcc3-136">Например, можно объявить локальную переменную без инициализации, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="4bcc3-136">For example, you might declare a local variable without initialization as in the following example:</span></span>  
   
 ```csharp  
 int myInt;  
 ```  
   
- <span data-ttu-id="12464-133">Тем не менее использовать ее до инициализации нельзя.</span><span class="sxs-lookup"><span data-stu-id="12464-133">You cannot use it before you initialize it.</span></span> <span data-ttu-id="12464-134">Для инициализации локальной переменной можно использовать следующую инструкцию:</span><span class="sxs-lookup"><span data-stu-id="12464-134">You can initialize it using the following statement:</span></span>  
+ <span data-ttu-id="4bcc3-137">Тем не менее использовать ее до инициализации нельзя.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-137">You cannot use it before you initialize it.</span></span> <span data-ttu-id="4bcc3-138">Для инициализации локальной переменной можно использовать следующую инструкцию:</span><span class="sxs-lookup"><span data-stu-id="4bcc3-138">You can initialize it using the following statement:</span></span>  
   
 ```csharp  
 myInt = new int();  // Invoke default constructor for int type.  
 ```  
   
- <span data-ttu-id="12464-135">Эта инструкция эквивалентна следующей:</span><span class="sxs-lookup"><span data-stu-id="12464-135">This statement is equivalent to the following statement:</span></span>  
+ <span data-ttu-id="4bcc3-139">Эта инструкция эквивалентна следующей:</span><span class="sxs-lookup"><span data-stu-id="4bcc3-139">This statement is equivalent to the following statement:</span></span>  
   
 ```csharp  
 myInt = 0;         // Assign an initial value, 0 in this example.  
 ```  
   
- <span data-ttu-id="12464-136">При необходимости объявление и инициализация могут быть выполнены в одной инструкции, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="12464-136">You can, of course, have the declaration and the initialization in the same statement as in the following examples:</span></span>  
+ <span data-ttu-id="4bcc3-140">При необходимости объявление и инициализация могут быть выполнены в одной инструкции, как показано в следующем примере:</span><span class="sxs-lookup"><span data-stu-id="4bcc3-140">You can, of course, have the declaration and the initialization in the same statement as in the following examples:</span></span>  
   
 ```csharp  
 int myInt = new int();  
 ```  
   
- <span data-ttu-id="12464-137">– или –</span><span class="sxs-lookup"><span data-stu-id="12464-137">–or–</span></span>  
+ <span data-ttu-id="4bcc3-141">– или –</span><span class="sxs-lookup"><span data-stu-id="4bcc3-141">–or–</span></span>  
   
 ```csharp  
 int myInt = 0;  
 ```  
   
- <span data-ttu-id="12464-138">Инструкция [new](../../../csharp/language-reference/keywords/new.md) вызывает конструктор по умолчанию для конкретного типа и присваивает переменной значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="12464-138">Using the [new](../../../csharp/language-reference/keywords/new.md) operator calls the default constructor of the specific type and assigns the default value to the variable.</span></span> <span data-ttu-id="12464-139">В предыдущем примере конструктор по умолчанию присваивает значение `0` переменной `myInt`.</span><span class="sxs-lookup"><span data-stu-id="12464-139">In the preceding example, the default constructor assigned the value `0` to `myInt`.</span></span> <span data-ttu-id="12464-140">Дополнительные сведения о значениях, присваиваемых путем вызова конструктора по умолчанию, см. в разделе [Таблица значений по умолчанию](../../../csharp/language-reference/keywords/default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="12464-140">For more information about values assigned by calling default constructors, see [Default Values Table](../../../csharp/language-reference/keywords/default-values-table.md).</span></span>  
+ <span data-ttu-id="4bcc3-142">Инструкция [new](new.md) вызывает конструктор по умолчанию для конкретного типа и присваивает переменной значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-142">Using the [new](new.md) operator calls the default constructor of the specific type and assigns the default value to the variable.</span></span> <span data-ttu-id="4bcc3-143">В предыдущем примере конструктор по умолчанию присваивает значение `0` переменной `myInt`.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-143">In the preceding example, the default constructor assigned the value `0` to `myInt`.</span></span> <span data-ttu-id="4bcc3-144">Дополнительные сведения о значениях, присваиваемых путем вызова конструктора по умолчанию, см. в разделе [Таблица значений по умолчанию (справочник по C#)](default-values-table.md).</span><span class="sxs-lookup"><span data-stu-id="4bcc3-144">For more information about values assigned by calling default constructors, see [Default values table](default-values-table.md).</span></span>  
   
- <span data-ttu-id="12464-141">Для определяемых пользователем типов инструкция [new](../../../csharp/language-reference/keywords/new.md) вызывает конструктор по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="12464-141">With user-defined types, use [new](../../../csharp/language-reference/keywords/new.md) to invoke the default constructor.</span></span> <span data-ttu-id="12464-142">Например, следующая инструкция вызывает конструктор по умолчанию для структуры `Point`:</span><span class="sxs-lookup"><span data-stu-id="12464-142">For example, the following statement invokes the default constructor of the `Point` struct:</span></span>  
+ <span data-ttu-id="4bcc3-145">Для определяемых пользователем типов инструкция [new](new.md) вызывает конструктор по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-145">With user-defined types, use [new](new.md) to invoke the default constructor.</span></span> <span data-ttu-id="4bcc3-146">Например, следующая инструкция вызывает конструктор по умолчанию для структуры `Point`:</span><span class="sxs-lookup"><span data-stu-id="4bcc3-146">For example, the following statement invokes the default constructor of the `Point` struct:</span></span>  
   
 ```csharp  
 Point p = new Point(); // Invoke default constructor for the struct.  
 ```  
   
- <span data-ttu-id="12464-143">После этого вызова структура считается определенно присвоенной, то есть все ее элементы будут инициализированы и получат значения по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="12464-143">After this call, the struct is considered to be definitely assigned; that is, all its members are initialized to their default values.</span></span>  
+ <span data-ttu-id="4bcc3-147">После этого вызова структура считается определенно присвоенной, то есть все ее элементы будут инициализированы и получат значения по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="4bcc3-147">After this call, the struct is considered to be definitely assigned; that is, all its members are initialized to their default values.</span></span>  
   
- <span data-ttu-id="12464-144">Дополнительные сведения об операторе new см. в [этом разделе](../../../csharp/language-reference/keywords/new.md).</span><span class="sxs-lookup"><span data-stu-id="12464-144">For more information about the new operator, see [new](../../../csharp/language-reference/keywords/new.md).</span></span>  
+ <span data-ttu-id="4bcc3-148">Дополнительные сведения об операторе `new` см. в разделе [new (справочник по C#)](new.md).</span><span class="sxs-lookup"><span data-stu-id="4bcc3-148">For more information about the `new` operator, see [new](new.md).</span></span>  
   
- <span data-ttu-id="12464-145">Дополнительные сведения о форматировании выходных данных числовых типов см. в разделе [Таблица форматирования числовых результатов](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).</span><span class="sxs-lookup"><span data-stu-id="12464-145">For information about formatting the output of numeric types, see [Formatting Numeric Results Table](../../../csharp/language-reference/keywords/formatting-numeric-results-table.md).</span></span>  
+ <span data-ttu-id="4bcc3-149">Дополнительные сведения о форматировании выходных данных числовых типов см. в разделе [Таблица форматирования числовых результатов (справочник по C#)](formatting-numeric-results-table.md).</span><span class="sxs-lookup"><span data-stu-id="4bcc3-149">For information about formatting the output of numeric types, see [Formatting numeric results table](formatting-numeric-results-table.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="12464-146">См. также</span><span class="sxs-lookup"><span data-stu-id="12464-146">See Also</span></span>
+## <a name="see-also"></a><span data-ttu-id="4bcc3-150">См. также</span><span class="sxs-lookup"><span data-stu-id="4bcc3-150">See also</span></span>
 
-- [<span data-ttu-id="12464-147">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="12464-147">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="12464-148">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="12464-148">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="12464-149">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="12464-149">C# Keywords</span></span>](../../../csharp/language-reference/keywords/index.md)  
-- [<span data-ttu-id="12464-150">Типы</span><span class="sxs-lookup"><span data-stu-id="12464-150">Types</span></span>](../../../csharp/language-reference/keywords/types.md)  
-- [<span data-ttu-id="12464-151">Справочные таблицы по типам</span><span class="sxs-lookup"><span data-stu-id="12464-151">Reference Tables for Types</span></span>](../../../csharp/language-reference/keywords/reference-tables-for-types.md)  
-- [<span data-ttu-id="12464-152">Ссылочные типы</span><span class="sxs-lookup"><span data-stu-id="12464-152">Reference Types</span></span>](../../../csharp/language-reference/keywords/reference-types.md)  
-- [<span data-ttu-id="12464-153">Типы, допускающие значения NULL</span><span class="sxs-lookup"><span data-stu-id="12464-153">Nullable types</span></span>](../../programming-guide/nullable-types/index.md)  
+- [<span data-ttu-id="4bcc3-151">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="4bcc3-151">C# Reference</span></span>](../index.md)  
+- [<span data-ttu-id="4bcc3-152">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="4bcc3-152">C# Programming Guide</span></span>](../../programming-guide/index.md)  
+- [<span data-ttu-id="4bcc3-153">Ключевые слова в C#</span><span class="sxs-lookup"><span data-stu-id="4bcc3-153">C# Keywords</span></span>](index.md)  
+- [<span data-ttu-id="4bcc3-154">Типы</span><span class="sxs-lookup"><span data-stu-id="4bcc3-154">Types</span></span>](types.md)  
+- [<span data-ttu-id="4bcc3-155">Справочные таблицы по типам</span><span class="sxs-lookup"><span data-stu-id="4bcc3-155">Reference tables for types</span></span>](reference-tables-for-types.md)  
+- [<span data-ttu-id="4bcc3-156">Ссылочные типы</span><span class="sxs-lookup"><span data-stu-id="4bcc3-156">Reference Types</span></span>](reference-types.md)  
+- [<span data-ttu-id="4bcc3-157">Типы, допускающие значения NULL</span><span class="sxs-lookup"><span data-stu-id="4bcc3-157">Nullable types</span></span>](../../programming-guide/nullable-types/index.md)  
