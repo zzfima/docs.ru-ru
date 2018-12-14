@@ -2,14 +2,14 @@
 title: Необходимые компоненты для .NET Core в Mac
 description: Поддерживаемые версии macOS и зависимости .NET Core для разработки, развертывания и запуска приложений .NET Core на компьютерах с macOS.
 author: guardrex
-ms.author: mairaw
-ms.date: 10/03/2018
-ms.openlocfilehash: b5b3c6ea90a2cc4487e849af468d324b645834af
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.author: adegeo
+ms.date: 12/03/2018
+ms.openlocfilehash: b2ab86b7eb9faeab8d4a4cac92b361f64517f638
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584082"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145634"
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Необходимые компоненты для .NET Core в macOS
 
@@ -23,7 +23,10 @@ ms.locfileid: "48584082"
 
 * macOS 10.12 "Sierra" и более поздних версий
 
-Полный список операционных систем, поддерживаемых .NET Core 2.x, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на странице [Версии ОС, поддерживаемые .NET Core 2.x](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md).
+Полный список операционных систем, дистрибутивов, версий, поддерживаемых .NET Core 2.1 и .NET Core 2.2, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на соответствующих страницах для [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) и [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md).
+
+Ознакомьтесь с дополнительными сведениями и воспользуйтесь ссылками для скачивания для [.NET Core 2.2](https://www.microsoft.com/net/download/dotnet-core/2.2) или [.NET Core 2.1](https://www.microsoft.com/net/download/dotnet-core/2.1).
+
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
@@ -32,7 +35,9 @@ ms.locfileid: "48584082"
 * macOS 10.12 "Sierra"
 * macOS 10.11 "El Capitan"
 
-Полный список операционных систем, поддерживаемых .NET Core 1.x, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на странице [Версии ОС, поддерживаемые .NET Core 1.x](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md).
+Полный список операционных систем, дистрибутивов, версий, поддерживаемых .NET Core 1.1 и .NET Core 1.0, неподдерживаемых версий ОС, а также ссылки на политики жизненного цикла см. на соответствующих страницах для [.NET Core 1.1](https://github.com/dotnet/core/blob/master/release-notes/1.1/1.1.md) и [.NET Core 1.0](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md).
+
+Ознакомьтесь с дополнительными сведениями и воспользуйтесь ссылками для скачивания для [.NET Core 1.1](https://www.microsoft.com/net/download/dotnet-core/1.1) или [.NET Core 1.0](https://www.microsoft.com/net/download/dotnet-core/1.0).
 
 ---
 
@@ -94,9 +99,9 @@ ln -s /usr/local/opt/openssl/lib/libssl.1.0.0.dylib /usr/local/lib/
 
 2. В окне терминала выполните следующую команду:
 
-```console
-echo 'ulimit -n 2048' | sudo tee -a /etc/profile
-```
+   ```console
+   echo 'ulimit -n 2048' | sudo tee -a /etc/profile
+   ```
 
 3. Перезагрузите Mac, чтобы применить эти параметры.
 

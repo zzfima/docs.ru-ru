@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: d09ce4ea972a3064298eebdf0b8b80999ee8441e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b50d3b571afb3128c973baaf7d7178da705382bd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397547"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146174"
 ---
 # <a name="readonly-c-reference"></a>readonly (Справочник по C#)
 
@@ -44,7 +44,7 @@ public readonly int y = 5;
 Эти контексты конструктора являются единственными, в которых можно передавать поле `readonly` в качестве параметра [out](out-parameter-modifier.md) или [ref](ref.md).
 
 > [!NOTE]
-> Ключевое слово `readonly` отличается от ключевого слова [const](const.md). Поле `const` может быть инициализировано только при объявлении поля. Поле `readonly` может быть инициализировано при объявлении или в конструкторе. Таким образом, поля `readonly` могут иметь разные значения в зависимости от использованного конструктора. К тому же, в то время как поле `const` является константой во время компиляции, поле `readonly` можно использовать для констант во время выполнения, как в следующем примере:
+> Ключевое слово `readonly` отличается от ключевого слова [const](const.md). Поле `const` может быть инициализировано только при объявлении поля. Поле `readonly` может быть назначено несколько раз в объявлении поля или в любом конструкторе. Таким образом, поля `readonly` могут иметь разные значения в зависимости от использованного конструктора. К тому же, в то время как поле `const` является константой во время компиляции, поле `readonly` можно использовать для констант во время выполнения, как в следующем примере:
 
 ```csharp
 public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;

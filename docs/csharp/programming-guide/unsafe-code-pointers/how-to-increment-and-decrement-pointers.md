@@ -1,21 +1,22 @@
 ---
-title: Практическое руководство. Увеличение и уменьшение указателей (Руководство по программированию в C#)
+title: Практическое руководство. Увеличение и уменьшение указателей (руководство по программированию на C#)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], increment and decrement
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
-ms.openlocfilehash: 39cefc5dcebf1331a5e0ac0fadb8284e9041eb27
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c75432d88a1e96742573a6e69a4e035066a387c4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44206475"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128340"
 ---
-# <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>Практическое руководство. Увеличение и уменьшение указателей (Руководство по программированию в C#)
-С помощью операторов инкремента и декремента (`++` и `--`) можно изменить расположение указателя на тип на величину [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`)*. Выражения инкремента или декремента имеют следующий вид:  
+# <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>Практическое руководство. Увеличение и уменьшение указателей (руководство по программированию на C#)
+
+С помощью операторов инкремента и декремента (`++` и `--`) можно изменить расположение указателя типа `pointer-type*` на `sizeof(pointer-type)`. Выражения инкремента или декремента имеют следующий вид:  
   
-```  
+```csharp
 ++p;  
 p++;  
 --p;  
@@ -24,9 +25,9 @@ p--;
   
  Операторы инкремента и декремента можно применять к указателям любого типа, за исключением типа `void*`.  
   
- В результате применения оператора инкремента к указателю типа `pointer-type` добавляется [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) к адресу, который содержится в переменной указателя.  
+ В результате применения оператора инкремента к указателю типа `pointer-type*` к адресу, который содержится в переменной указателя, добавляется `sizeof(pointer-type)`.  
   
- В результате применения оператора декремента к указателю типа `pointer-type` вычитается `sizeof` (`pointer-type`) из адреса, который содержится в переменной указателя.  
+ В результате применения оператора декремента к указателю типа `pointer-type*` из адреса, который содержится в переменной указателя, вычитается `sizeof(pointer-type)`.  
   
  Исключения не создаются, если операция переполняет домен указателя, а результат зависит от реализации.  
   
@@ -54,3 +55,4 @@ p--;
 - [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
 - [Оператор fixed](../../../csharp/language-reference/keywords/fixed-statement.md)  
 - [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)
+- [sizeof](../../../csharp/language-reference/keywords/sizeof.md)

@@ -1,19 +1,20 @@
 ---
-title: Перенос в .NET Core — использование пакета обеспечения совместимости Windows
+title: Перенос кода в .NET Core с помощью пакета обеспечения совместимости Windows
 description: Сведения о пакете обеспечения совместимости Windows и его использовании для переноса существующего кода .NET Framework на .NET Core
 author: terrajobst
 ms.author: mairaw
 ms.date: 11/13/2017
-ms.openlocfilehash: 51b96d7828285964c1b0cbb835b8eb5ed92c47d6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.custom: seodec18
+ms.openlocfilehash: 42c2c2a0b9b00436fa5c17d3825c720561b3f122
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566177"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144615"
 ---
-# <a name="using-the-windows-compatibility-pack"></a>Использование пакета обеспечения совместимости Windows
+# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Перенос кода в .NET Core с помощью пакета обеспечения совместимости Windows
 
-Одной из наиболее распространенных проблем, с которыми сталкиваются разработчики при переносе существующего кода в .NET Core, является зависимость от API и технологий, которые существуют только в .NET Framework. *Пакет обеспечения совместимости Windows* предоставляет многие из этих технологий, чтобы значительно расширить возможности сборки приложений .NET Core и библиотек .NET Standard для существующего кода.
+Часто проблемы при переносе существующего кода в .NET Core связаны с зависимостями от API и технологий, которые доступны только в .NET Framework. *Пакет обеспечения совместимости Windows* предоставляет многие из этих технологий. Это значительно упрощает создание приложений .NET Core и библиотек .NET Standard.
 
 Этот пакет является логическим [расширением платформы .NET Standard 2.0](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support), который значительно расширяет набор API, в результате чего существующий код компилируется практически без изменений. Но для обеспечения согласованности .NET Standard ("это набор API, предоставляемых всеми реализациями .NET") он не включает технологии, которые не могут работать на всех платформах, таких как реестр, инструментарий управления Windows (WMI) или API порождения отражения.
 

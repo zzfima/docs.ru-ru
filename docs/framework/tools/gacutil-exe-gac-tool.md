@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 98423e6c103f7eb93b4bfa35ef19b6551c0df0e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 806ccb1d33d9a7b66c740099864decd651c9213f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399598"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144888"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (программа глобального кэша сборок)
 С помощью программы глобального кэша сборок можно просматривать содержимое глобального кэша сборок и кэша загрузки, а также управлять им.  
@@ -47,7 +47,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |*assemblyPath*|Имя файла, содержащего манифест сборки.|  
 |*assemblyListFile*|Путь к текстовому файлу ANSI, в котором перечислены устанавливаемые или удаляемые сборки. Чтобы использовать текстовый файл для установки сборок, укажите путь к каждой сборке в отдельной строке файла. Программа интерпретирует относительные пути относительно расположения *assemblyListFile*. Чтобы использовать текстовый файл для удаления сборок, укажите в нем полное имя каждой сборки в отдельной строке. Примеры содержимого списка *assemblyListFile* приведены ниже в этом разделе.|  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**/cdl**|Удаляет содержимое кэша загрузки.|  
 |**/f**|Чтобы принудительно переустановить сборку, укажите этот параметр с ключом **/i** или **/il**. Если сборка с этим именем уже существует в глобальном кэше сборок, она будет перезаписана.|  
@@ -93,7 +93,23 @@ myAssembly1,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab
 myAssembly2,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 myAssembly3,Version=1.1.0.0,Culture=en,PublicKeyToken=874e23ab874e23ab  
 ```  
-  
+
+> [!NOTE]
+>  Попытка установить сборку с именем, количество символов в котором превышает 79 и 91 символ (включая расширение файла), может привести к следующей ошибке:
+> ```
+> Failure adding assembly to the cache:   The file name is too long.
+> ```
+> Это вызвано тем, что Gacutil.exe конструирует путь длиной до числа символов, определяемого значением MAX_PATH. Этот путь состоит из следующих элементов:
+> - GAC Root — 34 символа (например, `C:\Windows\Microsoft.NET\assembly\`);
+> - Architecture — 7 или 9 символов (например, `GAC_32\`, `GAC_64\`, `GAC_MSIL`);
+> - AssemblyName — до 91 символа в зависимости от размера других элементов (например, `System.Xml.Linq\`);
+> - AssemblyInfo — 31–48 символов или больше, включая:
+>   - Framework — 5 символов (например, `v4.0_`);
+>   - AssemblyVersion — 8–24 символа (например, `9.0.1000.0_`);
+>   - AssemblyLanguage — 1–8 символов (например, `de_`, `sr-Cyrl_`);
+>   - PublicKey — 17 символов (например, `31bf3856ad364e35\`);
+> - DllFileName — до 91+4 символа (например, `<AssemblyName>.dll`).
+
 ## <a name="examples"></a>Примеры  
  Следующая команда устанавливает сборку `mydll.dll` в глобальный кэш сборок.  
   

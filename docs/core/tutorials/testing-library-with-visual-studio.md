@@ -1,19 +1,21 @@
 ---
 title: Тестирование библиотеки классов с помощью .NET Core в Visual Studio 2017
-description: Сведения о тестировании библиотеки классов, написанной на языке C#, с помощью Visual Studio 2017
+description: Создайте проект модульного теста для библиотеки классов .NET Core. Проверьте правильность работы библиотеки классов .NET Core с помощью модульных тестов.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 04fef4f84658b3a8b82e4e71b62c3bab8537424d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom:
+- vs-dotnet
+- seodoc18
+ms.openlocfilehash: e3b13126833e49681661e8834ce9f3d8a6c1133e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990977"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144901"
 ---
 # <a name="testing-a-class-library-with-net-core-in-visual-studio-2017"></a>Тестирование библиотеки классов с помощью .NET Core в Visual Studio 2017
 
@@ -52,7 +54,7 @@ ms.locfileid: "45990977"
 1. В диалоговом окне **Диспетчер ссылок** разверните узел **Проекты** и установите флажок рядом с пунктом **StringLibrary**. Добавление ссылки на сборку `StringLibrary` позволяет компилятору находить методы **StringLibrary**. Нажмите кнопку **OK**. Это действие добавляет ссылку на ваш проект библиотеки классов (`StringLibrary`).
 
    ![Диспетчер ссылок](./media/testing-library-with-visual-studio/referencemanager.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. В **обозревателе решений** откройте контекстное меню для узла решения **ClassLibraryProjects** и выберите **Добавить** > **Новый проект**.
 
 1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual Basic**. Выберите узел **.NET Core**, а затем — шаблон проекта **Проект теста MSTest (.NET Core)**. В текстовом поле **Имя** введите имя проекта StringLibraryTest. Нажмите кнопку **ОК**, чтобы создать проект модульного теста.
@@ -116,7 +118,7 @@ ms.locfileid: "45990977"
 1. В строке меню выберите **Файл** > **Сохранить UnitTest1.cs как**. В диалоговом окне **Сохранить файл как** щелкните стрелку рядом с кнопкой **Сохранить** и выберите вариант **Сохранить с кодировкой**.
 
    ![Диалоговое окно "Сохранить файл как"](./media/testing-library-with-visual-studio/savefileas.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic) 
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
 1. В окне кода *UnitTest1.vb* замените отображаемый код на следующий текст:
 
     [!CODE-vb[Test#1](../../../samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]

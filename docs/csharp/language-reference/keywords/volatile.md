@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: 9950bb0e32787306dc34e2c006099332c06bda2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd81c0c36cb88b971539e843e3e1f2096a73d40e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199972"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152788"
 ---
 # <a name="volatile-c-reference"></a>volatile (Справочник по C#)
 
@@ -29,7 +29,7 @@ ms.locfileid: "50199972"
 
 Другие типы, включая `double` и `long`, нельзя снабдить модификатором `volatile`, потому что для них не гарантируется атомарность операций чтения и записи. Чтобы защитить многопотоковый доступ к полям таких типов, используйте члены класса <xref:System.Threading.Interlocked> или защиту доступа с помощью инструкции [`lock`](lock-statement.md).
 
-Ключевое слово volatile можно применять только к полям `class` или `struct`. Локальные переменные не могут объявляться как `volatile`.
+Ключевое слово `volatile` можно применять только к полям `class` или `struct`. Локальные переменные не могут объявляться как `volatile`.
   
 ## <a name="example"></a>Пример
 
@@ -37,7 +37,7 @@ ms.locfileid: "50199972"
   
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Declaration)]
 
-Следующий пример демонстрирует создание вспомогательного или рабочего потока и его применение для выполнения обработки параллельно с обработкой основного потока. Дополнительные сведения о многопоточности см. в разделах [Управляемая поточность](../../../standard/threading/index.md) и [Работа с потоками (C#)](../../programming-guide/concepts/threading/index.md).  
+Следующий пример демонстрирует создание вспомогательного или рабочего потока и его применение для выполнения обработки параллельно с обработкой основного потока. Дополнительные сведения о многопоточности см. в разделе [Управляемая поточность](../../../standard/threading/index.md).
   
 [!code-csharp[declareVolatile](~/samples/snippets/csharp/language-reference/keywords/volatile/Program.cs#Volatile)]
 

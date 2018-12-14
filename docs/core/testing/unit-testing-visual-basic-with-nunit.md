@@ -5,19 +5,20 @@ author: rprouse
 ms.date: 10/04/2018
 dev_langs:
 - vb
-ms.openlocfilehash: bed43ac6b6f918b1ee45715101f9142c1add777f
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1cfca0939d4c4055aece69cae066c365cd2a1dc0
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836932"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143575"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>Модульное тестирование библиотек .NET Core в Visual Basic с использованием dotnet test и NUnit
 
 Этот учебник описывает пошаговую процедуру по созданию примера решения для изучения концепций модульного тестирования. Если при изучении учебника вы предпочитаете использовать готовое решение, [просмотрите или скачайте пример кода](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/) перед началом работы. Инструкции по загрузке см. в разделе [Просмотр и скачивание примеров](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
-## <a name="prerequisites"></a>Предварительные требования 
-- [Пакет SDK для .NET Core 2.1 (версия 2.1.400)](https://www.microsoft.com/net/download) или более поздней версии. 
+## <a name="prerequisites"></a>Предварительные требования
+
+- [Пакет SDK для .NET Core 2.1](https://www.microsoft.com/net/download) или более поздней версии.
 - Текстовый редактор или редактор кода по вашему выбору.
 
 ## <a name="creating-the-source-project"></a>Создание исходного проекта

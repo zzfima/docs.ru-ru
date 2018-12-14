@@ -1,19 +1,19 @@
 ---
 title: Применение библиотеки .NET Standard в Visual Studio 2017
-description: Информация о том, как вызывать члены библиотеки классов в Visual Studio 2017.
+description: Создайте приложение .NET Core, которое вызывает члены из другой библиотеки классов, в Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/05/2018
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52ec46c23bb928b49f034270ed1d510d1acf992e
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 424933f4d221492b3127d0b847249821fee86b10
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45518169"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147324"
 ---
 # <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Применение библиотеки .NET Standard в Visual Studio 2017
 
@@ -57,7 +57,7 @@ ms.locfileid: "45518169"
 1. При необходимости можно изменить режим на панели инструментов, чтобы скомпилировать **отладочную** версию проекта `ShowCase`. Скомпилируйте и запустите программу, нажав зеленую стрелку на кнопке **ShowCase**.
 
    ![Изображение](./media/consuming-library-with-visual-studio/toolbar.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Откройте решение `ClassLibraryProjects`, созданное в рамках статьи [Создание библиотеки классов на Visual Basic с помощью .NET Core в Visual Studio 2017](vb-library-with-visual-studio.md). В **обозревателе решений** щелкните правой кнопкой мыши решение **ClassLibraryProjects** и в контекстном меню выберите **Добавить** > **Новый проект**.
 
 1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual Basic**, выберите узел **.NET Core**, а затем — шаблон проекта **Консольное приложение (.NET Core)**. В текстовом поле **Имя** введите "ShowCase", а затем нажмите кнопку **ОК**.

@@ -1,15 +1,13 @@
 ---
 title: Команда dotnet pack — CLI .NET Core
 description: Команда dotnet pack создает пакеты NuGet для проекта .NET Core.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/29/2018
-ms.openlocfilehash: 434f1c97af24d1417cd79edd52b63814fd4c6512
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/04/2018
+ms.openlocfilehash: 77770e715ef11595e8c95bb40be960138cd7ec61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840481"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149605"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -49,65 +47,65 @@ dotnet pack [-h|--help]
 
 ## <a name="arguments"></a>Аргументы
 
-`PROJECT`
+* **`PROJECT`**
 
-Упаковываемый проект. Это путь к файлу [CSPROJ](csproj.md) или каталогу. Если значение не задано, по умолчанию используется текущий каталог.
+  Упаковываемый проект. Это путь к файлу [CSPROJ](csproj.md) или каталогу. Если значение не задано, по умолчанию используется текущий каталог.
 
 ## <a name="options"></a>Параметры
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
+  Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
 
-`--force`
+* **`--force`**
 
-Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Указание этого флага дает тот же результат, что удаление файла *project.assets.json*.
+  Принудительное разрешение всех зависимостей, даже если последнее восстановление прошло успешно. Указание этого флага дает тот же результат, что удаление файла *project.assets.json*.
 
-`-h|--help`
+* **`-h|--help`**
 
-Выводит краткую справку по команде.
+  Выводит краткую справку по команде.
 
-`--include-source`
+* **`--include-source`**
 
-Включает исходные файлы в пакет NuGet. Исходные файлы включены в папку `src` пакета `nupkg`.
+  Включает исходные файлы в пакет NuGet. Исходные файлы включены в папку `src` пакета `nupkg`.
 
-`--include-symbols`
+* **`--include-symbols`**
 
-Создает символы `nupkg`.
+  Создает символы `nupkg`.
 
-`--no-build`
+* **`--no-build`**
 
-Не выполняет сборку проекта перед упаковкой. Он также неявно задает флаг `--no-restore`.
+  Не выполняет сборку проекта перед упаковкой. Он также неявно задает флаг `--no-restore`.
 
-`--no-dependencies`
+* **`--no-dependencies`**
 
-Межпроектные ссылки игнорируются, и восстанавливается только корневой проект.
+  Межпроектные ссылки игнорируются, и восстанавливается только корневой проект.
 
-`--no-restore`
+* **`--no-restore`**
 
-Не выполняет неявное восстановление при выполнении команды.
+  Не выполняет неявное восстановление при выполнении команды.
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-Собранные пакеты помещаются в указанный каталог.
+  Собранные пакеты помещаются в указанный каталог.
 
-`--runtime <RUNTIME_IDENTIFIER>`
+* **`--runtime <RUNTIME_IDENTIFIER>`**
 
-Задает целевую среду выполнения для восстановления пакетов. Список идентификаторов сред выполнения (RID) см. в [каталоге RID](../rid-catalog.md).
+  Задает целевую среду выполнения для восстановления пакетов. Список идентификаторов сред выполнения (RID) см. в [каталоге RID](../rid-catalog.md).
 
-`-s|--serviceable`
+* **`-s|--serviceable`**
 
-Задает флаг "подлежит обслуживанию" в пакете. Дополнительные сведения см. в записи блога о том, что [.NET 4.5.1 поддерживает обновления системы безопасности Майкрософт для библиотек .NET NuGet](https://aka.ms/nupkgservicing).
+  Задает флаг "подлежит обслуживанию" в пакете. Дополнительные сведения см. в записи блога о том, что [.NET 4.5.1 поддерживает обновления системы безопасности Майкрософт для библиотек .NET NuGet](https://aka.ms/nupkgservicing).
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-Определяет значение для свойства `$(VersionSuffix)` MSBuild в проекте.
+  Определяет значение для свойства `$(VersionSuffix)` MSBuild в проекте.
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+  Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
 
 > [!NOTE]
 > Веб-проекты по умолчанию не упаковываются. Чтобы переопределить такое поведение по умолчанию, добавьте следующее свойство в файл с расширением *.csproj*:
@@ -119,74 +117,96 @@ dotnet pack [-h|--help]
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-`-c|--configuration {Debug|Release}`
+* **`-c|--configuration {Debug|Release}`**
 
-Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
+  Определяет конфигурацию сборки. Значение по умолчанию — `Debug`.
 
-`-h|--help`
+* **`-h|--help`**
 
-Выводит краткую справку по команде.
+  Выводит краткую справку по команде.
 
-`--include-source`
+* **`--include-source`**
 
-Включает исходные файлы в пакет NuGet. Исходные файлы включены в папку `src` пакета `nupkg`.
+  Включает исходные файлы в пакет NuGet. Исходные файлы включены в папку `src` пакета `nupkg`.
 
-`--include-symbols`
+* **`--include-symbols`**
 
-Создает символы `nupkg`.
+  Создает символы `nupkg`.
 
-`--no-build`
+* **`--no-build`**
 
-Не выполняет сборку проекта перед упаковкой.
+  Не выполняет сборку проекта перед упаковкой.
 
-`-o|--output <OUTPUT_DIRECTORY>`
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-Собранные пакеты помещаются в указанный каталог.
+  Собранные пакеты помещаются в указанный каталог.
 
-`-s|--serviceable`
+* **`-s|--serviceable`**
 
-Задает флаг "подлежит обслуживанию" в пакете. Дополнительные сведения см. в записи блога о том, что [.NET 4.5.1 поддерживает обновления системы безопасности Майкрософт для библиотек .NET NuGet](https://aka.ms/nupkgservicing).
+  Задает флаг "подлежит обслуживанию" в пакете. Дополнительные сведения см. в записи блога о том, что [.NET 4.5.1 поддерживает обновления системы безопасности Майкрософт для библиотек .NET NuGet](https://aka.ms/nupkgservicing).
 
-`--version-suffix <VERSION_SUFFIX>`
+* **`--version-suffix <VERSION_SUFFIX>`**
 
-Определяет значение для свойства `$(VersionSuffix)` MSBuild в проекте.
+  Определяет значение для свойства `$(VersionSuffix)` MSBuild в проекте.
 
-`-v|--verbosity <LEVEL>`
+* **`-v|--verbosity <LEVEL>`**
 
-Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+  Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
 
 ---
 
 ## <a name="examples"></a>Примеры
 
-Упаковка проекта в текущем каталоге:
+* Упаковка проекта в текущем каталоге:
 
-`dotnet pack`
+  ```console
+  dotnet pack
+  ```
 
-Упаковка проекта `app1`:
+* Упаковка проекта `app1`:
 
-`dotnet pack ~/projects/app1/project.csproj`
+  ```console
+  dotnet pack ~/projects/app1/project.csproj
+  ```
 
-Упаковка проекта в текущем каталоге; полученные пакеты помещаются в папку `nupkgs`:
+* Упаковка проекта в текущем каталоге; полученные пакеты помещаются в папку `nupkgs`:
 
-`dotnet pack --output nupkgs`
+  ```console
+  dotnet pack --output nupkgs
+  ```
 
-Упаковка проекта в текущем каталоге в папку `nupkgs` и пропуск этапа сборки:
+* Упаковка проекта в текущем каталоге в папку `nupkgs` и пропуск этапа сборки:
 
-`dotnet pack --no-build --output nupkgs`
+  ```console
+  dotnet pack --no-build --output nupkgs
+  ```
 
-Если суффикс версии пакета в файле *CSPROJ* настроен как `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`, упаковка текущего проекта и обновление версии полученных пакетов с использованием указанного суффикса:
+* Если суффикс версии пакета в файле *CSPROJ* настроен как `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`, упаковка текущего проекта и обновление версии полученных пакетов с использованием указанного суффикса:
 
-`dotnet pack --version-suffix "ci-1234"`
+  ```console
+  dotnet pack --version-suffix "ci-1234"
+  ```
 
-Устанавливает версию пакета в `2.1.0` с использованием свойства MSBuild `PackageVersion`:
+* Устанавливает версию пакета в `2.1.0` с использованием свойства MSBuild `PackageVersion`:
 
-`dotnet pack -p:PackageVersion=2.1.0`
+  ```console
+  dotnet pack -p:PackageVersion=2.1.0
+  ```
 
-Упакуйте проект для [требуемой версии .NET Framework](../../standard/frameworks.md):
+* Упакуйте проект для [требуемой версии .NET Framework](../../standard/frameworks.md):
 
-`dotnet pack -p:TargetFrameworks=net45`
+  ```console
+  dotnet pack -p:TargetFrameworks=net45
+  ```
 
-Упакуйте проект и используйте определенную среду выполнения (Windows 10) для операции восстановления (пакет SDK для .NET Core 2.0 и более поздних версий).
+* Упакуйте проект и используйте определенную среду выполнения (Windows 10) для операции восстановления (пакет SDK для .NET Core 2.0 и более поздних версий).
 
-`dotnet pack --runtime win10-x64`
+  ```console
+  dotnet pack --runtime win10-x64
+  ```
+
+* Упакуйте проект с помощью [NUSPEC-файла](https://docs.microsoft.com/nuget/reference/msbuild-targets#packing-using-a-nuspec).
+
+  ```console
+  dotnet pack  ~/projects/app1/project.csproj /p:NuspecFile=~/projects/app1/project.nuspec /p:NuspecBasePath=~/projects/app1/nuget
+  ```

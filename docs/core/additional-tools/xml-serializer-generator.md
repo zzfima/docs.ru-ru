@@ -1,17 +1,17 @@
 ---
-title: Использование генератора XML-сериализатора Майкрософт в .NET Core
-description: Обзор генератора XML-сериализатора Майкрософт.
+title: Генератор XML-сериализатора Майкрософт в .NET Core
+description: Обзор генератора XML-сериализатора Майкрософт. Чтобы создать сборку сериализации XML для типов, содержащихся в проекте, используйте генератор XML-сериализатора.
 author: mlacouture
 ms.author: johalex
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 98d85821784757db903c97e240c55a3d7bb656d5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 3712ac35a9e08b04a0f555642f43055e9e6232e2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214560"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151763"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>Использование генератора XML-сериализатора Майкрософт в .NET Core
 
@@ -30,7 +30,7 @@ ms.locfileid: "33214560"
 
 Для работы с этим руководством вам понадобится следующее:
 
-* Установите [пакет SDK для .NET Core 2.1.3 или более поздней версии](https://www.microsoft.com/net/download).
+* Установите [пакет SDK для .NET Core 2.1 или более поздней версии](https://www.microsoft.com/net/download).
 * Установите любой привычный для вас редактор кода, если еще не сделали этого.
 
 > [!TIP]

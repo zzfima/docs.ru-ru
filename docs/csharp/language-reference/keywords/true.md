@@ -7,22 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - true keyword [C#]
 ms.assetid: 7d0adcdb-02e9-478c-8c84-2e671d4acef3
-ms.openlocfilehash: 41d689c4a781999a939a578e8ac3c85f594ece45
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 59c5aeeb7023cf05de9f13f4393a5d6df771dace
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530214"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130524"
 ---
 # <a name="true-c-reference"></a>true (Справочник по C#)
-Используется в качестве перегруженного оператора или литерала:  
-  
- [Оператор true](../../../csharp/language-reference/keywords/true-operator.md)  
-  
- [Литерал true](../../../csharp/language-reference/keywords/true-literal.md)  
-  
+
+Используется в качестве перегруженного оператора или литерала:
+
+- [Оператор true](true-operator.md)
+- [Литерал true](true-literal.md)
+
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](index.md)
+- [false](false.md)

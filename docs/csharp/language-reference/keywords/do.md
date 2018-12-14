@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - do keyword [C#]
 ms.assetid: 50725f79-9ba6-4898-aa78-6e331568a1bb
-ms.openlocfilehash: 89c13f5b547c13052e229ff6eb3a39ae5babce41
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4dd5f4034bcd60b714071eb7eb9518e66ac0c848
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994472"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129029"
 ---
 # <a name="do-c-reference"></a>do (Справочник по C#)
 
@@ -32,13 +32,12 @@ ms.locfileid: "45994472"
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Дополнительные сведения см. в разделе [Оператор do](~/_csharplang/spec/statements.md#the-do-statement) в документации [Предварительная спецификация C# 6.0](../language-specification/index.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../index.md)  
-- [Руководство по программированию на C#](../../programming-guide/index.md)  
-- [Ключевые слова в C#](index.md)  
-- [Оператор do-while (C)](/cpp/cpp/do-while-statement-cpp)  
-- [Операторы итерации](iteration-statements.md)  
-- [Оператор while](while.md)  
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](index.md)
+- [Операторы итерации](iteration-statements.md)
+- [Оператор while](while.md)

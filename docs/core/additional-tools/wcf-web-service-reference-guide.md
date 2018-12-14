@@ -1,18 +1,18 @@
 ---
-title: Инструмент Microsoft WCF Web Service Reference Provider
+title: Добавление инструмента WCF Web Service Reference — .NET Core
 description: Обзор инструмента Microsoft WCF Web Service Reference Provider, который расширяет функциональные возможности проектов .NET Core и ASP.NET Core аналогично функции "Добавление ссылки на службу" для проектов .NET Framework.
 author: mlacouture
 ms.author: johalex
 ms.date: 04/19/2018
-ms.custom: mvc
-ms.openlocfilehash: 416ca4dbedcf6e610aa5307c87934c0cb18be749
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: mvc, seodec18
+ms.openlocfilehash: a1c5f389a5928a34ce1cbf13b2ef27a95b18d031
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33215382"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148786"
 ---
-# <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Инструмент Microsoft WCF Web Service Reference Provider
+# <a name="use-the-wcf-web-service-reference-provider-tool"></a>Использование инструмента WCF Web Service Reference Provider
 
 В течение многих лет разработчики на Visual Studio оставались довольны той производительностью, которую обеспечивал инструмент [**Добавление ссылки на службу**](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference), когда их проектам .NET Framework требовался доступ к веб-службам.  Инструмент **WCF Web Service Reference** представляет собой расширение подключенной службы Visual Studio, предоставляющее такие функции, как "Добавление ссылки на службу", проектам .NET Core и ASP.NET Core. Инструмент извлекает метаданные веб-службы в текущем решении, в сетевом расположении или из файла WSDL, а затем создает совместимый с .NET Core исходный файл, содержащий прокси-код клиента Windows Communication Foundation (WCF), который можно использовать для доступа к веб-службе.
 
@@ -37,11 +37,11 @@ ms.locfileid: "33215382"
 
 Отображается страница **Подключенные службы**, как показано на следующем рисунке:
 
-![Вкладка "Подключенные службы"](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
+![Вкладка подключенных служб в Visual Studio для .NET Core](./media/wcf-web-service-reference-guide/wcfcs-ConnectedServicesPage.png)
 
 2. На странице **Подключенные службы** выберите **Microsoft WCF Web Service Reference Provider**. Открывается мастер **Настройка ссылки на веб-службу WCF**:
 
-![Вкладка "Конечная точка службы"](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
+![Вкладка конечных точек служб в Visual Studio для .NET Core](./media/wcf-web-service-reference-guide/wcfcs-ServiceEndpointPage.png)
 
 3. Выберите службу.
 
@@ -58,7 +58,7 @@ ms.locfileid: "33215382"
 
 4. Форма **Параметры типа данных** позволяет уточнить созданные параметры конфигурации для ссылок на службу:
 
-![Вкладка "Параметры типа данных"](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
+![Вкладка параметров типов данных в Visual Studio для .NET Core](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
 
 > [!NOTE]
 > Параметр **Повторно использовать типы в сборках, на которые есть ссылки** удобен, когда типы данных, необходимые для создания кода ссылки на службу, определены в одной из сборок, на которые ссылается проект.  Важно использовать эти существующие типы данных повторно, чтобы избежать конфликта типов во время компиляции или проблем во время выполнения.
@@ -74,7 +74,7 @@ ms.locfileid: "33215382"
 * формирует код для ссылок на службы в файле с именем *reference.cs* и добавляет его в узел **Подключенные службы** проекта; 
 * обновляет файл проекта (CSPROJ-файл) с использованием ссылок на пакеты NuGet, необходимых для компиляции и запуска на целевой платформе.
 
-![Окно хода выполнения](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
+![Окно хода выполнения в Visual Studio](./media/wcf-web-service-reference-guide/wcfcs-ProgressWindow.png)
 
 После завершения этих процессов можно создать экземпляр сформированного типа клиента WCF и вызвать операции службы.
 

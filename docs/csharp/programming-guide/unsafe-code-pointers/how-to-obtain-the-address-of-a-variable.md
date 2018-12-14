@@ -6,14 +6,15 @@ helpviewer_keywords:
 - pointers [C#], & operator
 - pointer expressions [C#], address-of operator
 ms.assetid: 44fe2cd9-a64f-4ef5-be2a-09ce807c0182
-ms.openlocfilehash: 40a7ac34a4e68df7aa316adc3cbd1999d975eabe
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bb752306bcdb630d652d331e95a765aee6afac3d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43741884"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150944"
 ---
 # <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a>Практическое руководство. Получение адреса переменной (Руководство по программированию на C#)
+
 Чтобы получить адрес унарного выражения, при вычислении которого получается фиксированная переменная, используйте оператор address-of `&`:  
   
 ```csharp  

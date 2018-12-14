@@ -1,29 +1,29 @@
 ---
-title: Арифметические операции над указателями (Руководство по программированию в C#)
+title: Арифметические операции с указателями (руководство по программированию на C#)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: 3694699466f7a200eecd5eef85f60fa19f9584a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 91e621e7cddce50e97b061ecd7d77dae6f7ef3cb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862307"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129952"
 ---
-# <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Арифметические операции над указателями (Руководство по программированию в C#)
-В этом разделе рассматривается использование арифметических операторов `+` и **-** для управления указателями.  
+# <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Арифметические операции с указателями (руководство по программированию на C#)
+В этом разделе рассматривается использование арифметических операторов `+` и `-` для управления указателями.  
   
 > [!NOTE]
 >  Выполнение арифметических операций с указателями void невозможно.  
   
 ## <a name="adding-and-subtracting-numeric-values-to-or-from-pointers"></a>Добавление числовых значений в указатели и вычитание из них  
- Можно добавить значение `n` типа [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) или [ulong](../../../csharp/language-reference/keywords/ulong.md) в указатель, `p`, любого типа, за исключением `void*`. Результат `p+n` — это указатель, полученный при добавлении `n * sizeof(p) to the address of p`. Аналогичным образом, `p-n` является указателем, полученным в результате вычитания `n * sizeof(p)` из адреса `p`.  
+ Можно добавить значение `n` типа [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md) или [ulong](../../../csharp/language-reference/keywords/ulong.md) в указатель. Если `p` — это указатель типа `pointer-type*`, результат `p+n` будет указателем, полученным при добавлении `n * sizeof(pointer-type)` к адресу `p`. Аналогичным образом, `p-n` является указателем, полученным в результате вычитания `n * sizeof(pointer-type)` из адреса `p`.  
   
 ## <a name="subtracting-pointers"></a>Вычитание указателей  
  Также можно вычитать указатели одного типа. Результат всегда имеет тип `long`. Например, если `p1` и `p2` являются указателями типа `pointer-type*`, то результатом выражения `p1-p2` будет:  
   
- `((long)p1 - (long)p2)/sizeof(pointer_type)`  
+ `((long)p1 - (long)p2)/sizeof(pointer-type)`  
   
  Исключения не создаются, если арифметическая операция переполняет домен указателя, а результат зависит от реализации.  
   

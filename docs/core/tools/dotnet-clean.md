@@ -1,15 +1,13 @@
 ---
 title: Команда dotnet clean — CLI .NET Core
 description: Команда dotnet clean очищает текущий каталог.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 5553e4b4423a2d824c05caf7114c47b5f1c20477
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.date: 12/04/2018
+ms.openlocfilehash: 9930d2905f234e7125f27367cda36aa85ae23b87
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988339"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144459"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -21,17 +19,10 @@ ms.locfileid: "45988339"
 
 ## <a name="synopsis"></a>Краткий обзор
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
 dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
-dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-v|--verbosity]
-dotnet clean [-h|--help]
-```
----
 
 ## <a name="description"></a>Описание:
 
@@ -45,62 +36,40 @@ dotnet clean [-h|--help]
 
 ## <a name="options"></a>Параметры
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+* **`-c|--configuration {Debug|Release}`**
 
-`-c|--configuration {Debug|Release}`
+  Определяет конфигурацию сборки. Значение по умолчанию — `Debug`. Этот параметр требуется при очистке только в том случае, если вы указали его во время сборки.
 
-Определяет конфигурацию сборки. Значение по умолчанию — `Debug`. Этот параметр требуется при очистке только в том случае, если вы указали его во время сборки.
+* **`-f|--framework <FRAMEWORK>`**
 
-`-f|--framework <FRAMEWORK>`
+  [Платформа](../../standard/frameworks.md), указанная во время сборки. Платформа должна быть определена в [файле проекта](csproj.md). Если вы указали платформу во время сборки, нужно указать ее эту платформу при очистке.
 
-[Платформа](../../standard/frameworks.md), указанная во время сборки. Платформа должна быть определена в [файле проекта](csproj.md). Если вы указали платформу во время сборки, нужно указать ее эту платформу при очистке.
+* **`-h|--help`**
 
-`-h|--help`
+  Выводит краткую справку по команде.
 
-Выводит краткую справку по команде.
+* **`-o|--output <OUTPUT_DIRECTORY>`**
 
-`-o|--output <OUTPUT_DIRECTORY>`
+  Каталог, куда помещаются выходные данные сборки. Укажите параметр `-f|--framework <FRAMEWORK>` с параметром выходного каталога, если задали платформу при сборке проекта.
 
-Каталог, куда помещаются выходные данные сборки. Укажите параметр `-f|--framework <FRAMEWORK>` с параметром выходного каталога, если задали платформу при сборке проекта.
+* **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-`-r|--runtime <RUNTIME_IDENTIFIER>`
+  Очищает выходную папку указанной среды выполнения. Используется, если было создано [автономное развертывание](../deploying/index.md#self-contained-deployments-scd). Параметр доступен, начиная с пакета SDK для .NET Core 2.0.
 
-Очищает выходную папку указанной среды выполнения. Используется, если было создано [автономное развертывание](../deploying/index.md#self-contained-deployments-scd).
+* **`-v|--verbosity <LEVEL>`**
 
-`-v|--verbosity <LEVEL>`
-
-Задает уровень детализации команды. Допустимые уровни: q[uiet], m[inimal], n[ormal], d[etailed] и diag[nostic].
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-`-c|--configuration {Debug|Release}`
-
-Определяет конфигурацию сборки. Значение по умолчанию — `Debug`. Этот параметр требуется при очистке только в том случае, если вы указали его во время сборки.
-
-`-f|--framework <FRAMEWORK>`
-
-[Платформа](../../standard/frameworks.md), указанная во время сборки. Платформа должна быть определена в [файле проекта](csproj.md). Если вы указали платформу во время сборки, нужно указать ее эту платформу при очистке.
-
-`-h|--help`
-
-Выводит краткую справку по команде.
-
-`-o|--output <OUTPUT_DIRECTORY>`
-
-Каталог, куда помещаются выходные данные сборки. Укажите параметр `-f|--framework <FRAMEWORK>` с параметром выходного каталога, если задали платформу при сборке проекта.
-
-`-v|--verbosity <LEVEL>`
-
-Задает уровень детализации команды. Допустимые уровни: q[uiet], m[inimal], n[ormal], d[etailed] и diag[nostic].
-
----
+  Задает уровень детализации команды. Допустимые уровни: q[uiet], m[inimal], n[ormal], d[etailed] и diag[nostic].
 
 ## <a name="examples"></a>Примеры
 
-Очистите сборку проекта по умолчанию:
+* Очистите сборку проекта по умолчанию:
 
-`dotnet clean`
+  ```console
+  dotnet clean
+  ```
 
-Очистите сборку проекта с помощью конфигурации выпуска:
+* Очистите сборку проекта с помощью конфигурации выпуска:
 
-`dotnet clean --configuration Release`
+  ```console
+  dotnet clean --configuration Release
+  ```

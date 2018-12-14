@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 9165a388122eeda5ca0499c6d75c2266780a6004
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
+ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
+ms.lasthandoff: 12/04/2018
 ms.locfileid: "50195974"
 ---
 # <a name="ref-c-reference"></a>ref (Справочник по C#)
@@ -82,7 +82,7 @@ class CS0663_Example
 public ref decimal GetCurrentPrice()
 ```
 
-- Между токеном `return` и переменной, возвращенной в инструкции `return` в методе. Пример:
+- Между токеном `return` и переменной, возвращенной в инструкции `return` в методе. Например:
 
 ```csharp
 return ref DecimalArray[0];
@@ -92,7 +92,7 @@ return ref DecimalArray[0];
 
 Вызываемый метод может также объявить возвращаемое значение `ref readonly`, чтобы возвращать значения по ссылке, и запретить вызывающему коду изменять возвращенное значение. Вызывающий метод может обойтись без копирования возвращаемого значения, сохраняя его в локальной переменной [ref readonly](#ref-readonly-locals).
 
-Пример см. в разделе [Пример использования возвращаемых ссылочных значений и ссылочных локальных переменных](#a-ref-returns-and-ref-locals-example)
+Пример см. в разделе [Пример использования возвращаемых ссылочных значений и ссылочных локальных переменных](#a-ref-returns-and-ref-locals-example).
 
 ## <a name="ref-locals"></a>Ссылочные локальные переменные
 
@@ -113,6 +113,8 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ```
 
 Обратите внимание, что в обоих примерах ключевое слово `ref` необходимо использовать в обоих местах. В противном случае возникает ошибка компилятора CS8172, "Невозможно инициализировать значением переменную по ссылке".
+
+Начиная с версии C# 7.3, переменная итерации инструкции `foreach` может иметь вид локальной ссылочной переменной или локальной ссылочной переменной только для чтения. Дополнительные сведения см. в статье, посвященной [инструкции foreach](foreach-in.md).
 
 ## <a name="ref-readonly-locals"></a>Ссылочные локальные переменные только для чтения
 
@@ -152,6 +154,9 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 ## <a name="see-also"></a>См. также
 
 - [Написание безопасного и эффективного кода](../../write-safe-efficient-code.md)  
+- [Возвращаемые значения ref и локальные переменные ref](../../programming-guide/classes-and-structs/ref-returns.md)
+- [Условное выражение REF](../operators/conditional-operator.md#conditional-ref-expression)
+- [Ссылочный оператор присваивания](../operators/assignment-operator.md#ref-assignment-operator)
 - [Передача параметров](../../programming-guide/classes-and-structs/passing-parameters.md)  
 - [Параметры методов](method-parameters.md)  
 - [Справочник по C#](../index.md)  

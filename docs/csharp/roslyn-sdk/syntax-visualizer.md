@@ -3,12 +3,12 @@ title: Изучение кода с помощью визуализатора с
 description: Визуализатор синтаксиса предоставляет визуальное средство для изучения моделей, создаваемых для кода пакетом SDK .NET Compiler Platform.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 97a058eed8c0babebd3a41ec91875bef83ac3527
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 9b283f656b5c468a2270abe9818a89218ce63d16
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45750210"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143570"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Изучение кода с помощью визуализатора синтаксиса Roslyn в Visual Studio
 
@@ -32,7 +32,7 @@ ms.locfileid: "45750210"
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Визуализация дерева синтаксиса C#](media/syntax-visualizer/visualize-csharp.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 ![Визуализация дерева синтаксиса VB](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
@@ -62,7 +62,7 @@ ms.locfileid: "45750210"
 Визуализатор отображает графическое представление поддерева, корнем которого является выбранный элемент. Повторите эти шаги для узла **MethodDeclaration**, соответствующего методу `Main()` в примере C#. Визуализатор отображает граф синтаксиса, который выглядит следующим образом:
 
 ![Просмотр графа синтаксиса C#](media/syntax-visualizer/csharp-syntax-graph.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
 Попробуйте сделать то же самое для узла **SubBlock**, соответствующего методу `Main()` в предыдущем примере VB. Визуализатор отображает граф синтаксиса, который выглядит следующим образом:
 
@@ -128,7 +128,7 @@ End Module
 
 Приведенные выше примеры VB можно легко воспроизвести в C#. Введите `using C = System.Console;` вместо `Imports C = System.Console` для псевдонима. Выполнение описанных выше действий в C# приводит к аналогичным результатам в окне визуализатора.
 
-Операции семантической проверки доступны только на узлах. Они недоступны для токенов или дополнительной информации. Не все узлы имеют значимые семантические сведения для изучения. Если узел не содержит значимой семантической информации, при выборе элемента **View * Symbol (if any)** (Просмотреть символ * (при наличии)) отображается пустая сетка свойств.
+Операции семантической проверки доступны только на узлах. Они недоступны для токенов или дополнительной информации. Не все узлы имеют значимые семантические сведения для изучения. Если узел не содержит значимой семантической информации, при выборе элемента **View \* Symbol (if any)** (Просмотреть символ * (при наличии) отображается пустая сетка свойств.
 
 Подробнее об API для выполнения семантического анализа см. в обзорном документе [Работа с семантикой](work-with-semantics.md).
 

@@ -1,17 +1,18 @@
 ---
-title: Размещение .NET Core
-description: Размещение среды выполнения .NET Core из машинного кода
+title: Написание пользовательского хост-приложения среды выполнения .NET Core
+description: Узнайте, как разместить среду выполнения .NET Core из машинного кода для поддержки сложных сценариев, требующих управления ее работой.
 author: mjrousos
 ms.author: mairaw
-ms.date: 2/3/2017
-ms.openlocfilehash: 96f51c8480bf75b1d7f824a8c87d2cdd6c7f9dd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.date: 02/03/2017
+ms.custom: seodec18
+ms.openlocfilehash: 7e30536a27408c529743ef623aa1bb837c327f96
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218610"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146963"
 ---
-# <a name="hosting-net-core"></a>Размещение .NET Core
+# <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>Написание пользовательского хост-приложения NET Core для управления средой выполнения .NET из машинного кода
 
 Как и весь управляемый код, приложения .NET Core выполняются основным приложением. Основное приложение отвечает за запуск среды выполнения (включая такие компоненты, как JIT и сборщик мусора), создание доменов приложений и вызов управляемых точек входа.
 
@@ -82,7 +83,6 @@ hr = runtimeHost->Start();
 *  `APP_NI_PATHS` Этот список очень похож на APP_PATHS, за исключением того, что он обозначает пути для поиска образов в машинном коде.
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` Это свойство представляет собой список путей, по которым загрузчик ищет собственные библиотеки DLL, вызываемые через p/invoke.
 *  `PLATFORM_RESOURCE_ROOTS` Этот список содержит пути для поиска вспомогательных сборок ресурсов (в подкаталогах для конкретных языков и региональных параметров).
-*  `AppDomainCompatSwitch` Эта строка указывает, какие аспекты совместимости следует использовать для сборок без явного моникера целевой платформы (атрибут уровня сборки, показывающий, для какой платформы предназначена сборка). В общем случае здесь следует установить значение `"UseLatestBehaviorWhenTFMNotSpecified"`, но некоторым основным приложениям могут потребоваться более старые аспекты совместимости с Silverlight или Windows Phone.
 
 В нашем [простом примере основного приложения](https://github.com/dotnet/samples/tree/master/core/hosting) эти свойства настроены следующим образом:
 

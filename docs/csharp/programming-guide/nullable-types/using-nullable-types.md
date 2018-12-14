@@ -5,12 +5,12 @@ ms.date: 08/02/2018
 helpviewer_keywords:
 - nullable types [C#], about nullable types
 ms.assetid: 0bacbe72-ce15-4b14-83e1-9c14e6380c28
-ms.openlocfilehash: 8ef875aee8c40f60472df52c19d1c1f2c73e95e8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9c9ab5c3ca1dd49f011bf9c980945fa9da0d8cfc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515441"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148357"
 ---
 # <a name="using-nullable-types-c-programming-guide"></a>Использование допускающих значение NULL типов (руководство по программированию на C#)
 
@@ -20,7 +20,7 @@ ms.locfileid: "43515441"
   
 ## <a name="declaration-and-assignment"></a>Назначение и объявление
 
-Поскольку тип значения может быть неявно преобразован в соответствующий тип, допускающий значение NULL, вы назначаете значение такому типу так же, как его базовому типу значения. Вы также можете присвоить значение `null`.  Пример:
+Поскольку тип значения может быть неявно преобразован в соответствующий тип, допускающий значение NULL, вы назначаете значение такому типу так же, как его базовому типу значения. Вы также можете присвоить значение `null`.  Например:
   
 [!code-csharp[declare and assign](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#1)]
 
@@ -52,7 +52,7 @@ ms.locfileid: "43515441"
 
 Используйте метод <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>, если значение, которое будет использоваться, когда значение типа, допускающего значение NULL, равно NULL, должно быть значением по умолчанию базового типа.
   
-Вы можете явно привести тип, допускающий значение NULL, к типу, не допускающему значение NULL. Пример:  
+Вы можете явно привести тип, допускающий значение NULL, к типу, не допускающему значение NULL. Например:  
   
 [!code-csharp[explicit cast](../../../../samples/snippets/csharp/programming-guide/nullable-types/NullableTypesUsage.cs#6)]
 

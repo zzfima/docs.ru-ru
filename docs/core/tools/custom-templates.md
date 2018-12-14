@@ -4,12 +4,12 @@ description: Сведения о пользовательских шаблона
 author: guardrex
 ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: 5cb160683ad373f1192945163495bf3e7957567b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4e5dd11df8204d86009b0ece108ef877dc54f23e
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525971"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126267"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Пользовательские шаблоны для команды dotnet new
 
@@ -81,7 +81,7 @@ dotnet new -l
 
 Содержимое папки проекта вместе с файлом *.template.config/template.json* помещаются в папку *content*. Рядом с папкой *content* добавьте [файл *NUSPEC*](/nuget/create-packages/creating-a-package), который представляет собой XML-файл манифеста, описывающий содержимое пакета и управляющий процессом создания пакета NuGet. Внутри элемента **\<packageTypes>** в файле *NUSPEC* добавьте элемент **\<packageType>** с атрибутом `name`, имеющим значение `Template`. Папка *content* и файл *NUSPEC* должны находиться в одном каталоге. В таблице ниже приведен минимальный набор элементов файла *NUSPEC*, необходимых для создания шаблона как пакета NuGet.
 
-| Элемент            | Тип   | Описание: |
+| Элемент            | Тип   | Описание |
 | ------------------ | ------ | ----------- |
 | **\<authors>**     | string | Разделенный запятыми список авторов пакетов, совпадающих с именами профилей на сайте nuget.org. Авторы отображаются в коллекции NuGet на сайте nuget.org и используются для перекрестных ссылок на пакеты тех же авторов. |
 | **\<description>** | string | Подробное описание пакета для отображения пользовательского интерфейса. |
@@ -129,7 +129,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-local-nupkg-file"></a>Удаление шаблона из локального файла NUPKG
 
-Если необходимо удалить шаблон, не пытайтесь использовать путь к файлу *NUPKG*. *Попытка удалить шаблон с помощью команды `dotnet new -u <PATH_TO_NUPKG_FILE>` завершится сбоем.* Ссылайтесь на пакет по `id`.
+Чтобы удалить шаблон, не пытайтесь использовать путь к файлу *NUPKG*. Попытка удалить шаблон с помощью команды `dotnet new -u <PATH_TO_NUPKG_FILE>` завершится сбоем. Ссылайтесь на пакет по `id`.
 
 ```console
 dotnet new -u <NUGET_PACKAGE_ID>
@@ -137,7 +137,7 @@ dotnet new -u <NUGET_PACKAGE_ID>
 
 ### <a name="to-uninstall-a-template-from-a-file-system-directory"></a>Удаление шаблона из каталога в файловой системе
 
-`FILE_SYSTEM_DIRECTORY` — это папка проекта, содержащая проект и папку *.template.config*.
+`FILE_SYSTEM_DIRECTORY` — это папка проекта, содержащая проект и папку *.template.config*. Нужно предоставить абсолютный путь. Попытка удалить шаблон с помощью команды относительного пути завершится сбоем. Дополнительные сведения см. в статье [dotnet new](dotnet-new.md).
 
 ```console
 dotnet new -u <FILE_SYSTEM_DIRECTORY>
@@ -153,8 +153,8 @@ dotnet new <TEMPLATE>
 
 ## <a name="see-also"></a>См. также
 
-* [Создание пользовательского шаблона для команды dotnet new (учебник)](../tutorials/create-custom-template.md)  
-* [Вики-сайт, посвященный репозиторию dotnet/templating в GitHub](https://github.com/dotnet/templating/wiki)  
-* [Репозиторий dotnet/dotnet-template-samples в GitHub](https://github.com/dotnet/dotnet-template-samples)  
-* [Создание собственных шаблонов для команды dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)  
-* [Схема *template.json* в хранилище схем JSON](http://json.schemastore.org/template)  
+* [Создание пользовательского шаблона для команды dotnet new (учебник)](../tutorials/create-custom-template.md)
+* [Вики-сайт, посвященный репозиторию dotnet/templating в GitHub](https://github.com/dotnet/templating/wiki)
+* [Репозиторий dotnet/dotnet-template-samples в GitHub](https://github.com/dotnet/dotnet-template-samples)
+* [Создание собственных шаблонов для команды dotnet new](https://blogs.msdn.microsoft.com/dotnet/2017/04/02/how-to-create-your-own-templates-for-dotnet-new/)
+* [Схема *template.json* в хранилище схем JSON](http://json.schemastore.org/template)

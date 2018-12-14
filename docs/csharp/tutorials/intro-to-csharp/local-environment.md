@@ -2,12 +2,12 @@
 title: Знакомство со средствами разработки. Вводное руководство по C#
 description: Эта статья содержит базовое описание средств разработки, которые вы будете использовать для создания приложений C# и .NET на локальном компьютере.
 ms.date: 10/23/2018
-ms.openlocfilehash: ec7e55fbf2a89a8ec45db956fc575edeb2283f56
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cf5bf68c1497bf62826656aa9cd2bd981128d3a2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200193"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129991"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>Знакомство со средствами разработки для .NET
 
@@ -22,7 +22,7 @@ ms.locfileid: "50200193"
 
 Выполните команду [`dotnet build`](../../../core/tools/dotnet-build.md), чтобы создать исполняемый файл. Затем запустите исполняемый файла с помощью команды [`dotnet run`](../../../core/tools/dotnet-run.md).
 
-## <a name="pick-your-turorial"></a>Выбор руководства
+## <a name="pick-your-tutorial"></a>Выбор руководства
 
 Вы можете начать изучение с любого из следующих руководств:
 

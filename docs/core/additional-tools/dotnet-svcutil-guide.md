@@ -1,17 +1,18 @@
 ---
-title: Средство Microsoft WCF dotnet-svcutil
+title: Обзор средства WCF svcutil для .NET Core
 description: Обзор инструмента Microsoft WCF dotnet-svcutil, который расширяет функциональные возможности проектов .NET Core и ASP.NET Core аналогично инструменту WCF svcutil для проектов .NET Framework.
 author: mlacouture
 ms.author: jralexander
 ms.date: 08/20/2018
-ms.openlocfilehash: bb4d8e5f3997318b720535b0f1e07fc33d13338a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 7372d88a9c1d77ec0b77e9d82fe5b24ebc357a74
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511890"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126020"
 ---
-# <a name="microsoft-wcf-dotnet-svcutil-tool"></a>Средство Microsoft WCF dotnet-svcutil
+# <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>Средство WCF dotnet-svcutil для .NET Core
 
 Средство WCF (Windows Communication Foundation) **dotnet-svcutil** — это средство .NET Core CLI, которое извлекает метаданные веб-службы в сетевом расположении или из WSDL-файла, а затем создает класс WCF, содержащий клиентские методы прокси-сервера, который используется для доступа к операциям веб-службы.
 
@@ -24,7 +25,7 @@ ms.locfileid: "43511890"
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-* [Пакет SDK для .NET Core](https://www.microsoft.com/net/download) 1.0.4 или более поздней версии
+* [Пакет SDK для .NET Core](https://dotnet.microsoft.com/download) 1.0.4 или более поздней версии
 * Любой редактор кода
 
 ## <a name="getting-started"></a>Начало работы

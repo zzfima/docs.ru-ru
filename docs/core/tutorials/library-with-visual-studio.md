@@ -1,18 +1,18 @@
 ---
-title: Создание библиотеки классов .NET Standard с помощью C# и .NET Core в Visual Studio 2017
+title: Создание библиотеки классов .NET Standard на C# с помощью Visual Studio 2017
 description: Сведения о создании библиотеки классов .NET Standard, написанной на языке C#, с помощью Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 101cb8b9134f7e64e5489f5bc7abb6a9570d2131
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 2af688057dbb3724ea03818157368ff0b54f0cf2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638825"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144585"
 ---
-# <a name="building-a-class-library-with-c-and-net-core-in-visual-studio-2017"></a>Создание библиотеки классов с помощью C# и .NET Core в Visual Studio 2017
+# <a name="build-a-net-standard-class-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Создание библиотеки классов .NET Standard с помощью C# и пакета SDK для .NET Core в Visual Studio 2017
 
 *Библиотека классов* определяет типы и методы, которые могут быть вызваны из любого приложения. Библиотеку классов, предназначенную для .NET Standard 2.0, можно вызывать из любой реализации .NET, которая поддерживает эту версию .NET Standard. Когда вы завершите создание библиотеки классов, вы сможете по своему усмотрению распространять ее как независимый компонент или включить в состав одного или нескольких приложений.
 

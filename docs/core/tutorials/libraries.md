@@ -1,15 +1,16 @@
 ---
 title: Разработка библиотек с помощью кроссплатформенных средств
-description: Узнайте, как создавать библиотеки для .NET с помощью программ командной строки .NET Core.
+description: Узнайте, как создавать библиотеки для .NET Core с помощью инструментов .NET Core CLI. Вы создадите библиотеку, которая поддерживает несколько платформ.
 author: cartermp
 ms.author: mairaw
 ms.date: 05/01/2017
-ms.openlocfilehash: a6db7a15c484122600afd54814d19ea11bd1abc1
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.custom: seodec18
+ms.openlocfilehash: a8028883b3424588d0fb926dcb73f400a8c620dc
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256200"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148539"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>Разработка библиотек с помощью кроссплатформенных средств
 
@@ -19,9 +20,9 @@ ms.locfileid: "43256200"
 
 На компьютере должны быть установлены [пакет SDK и интерфейс CLI для .NET Core ](https://www.microsoft.com/net/core).
 
-При работе с разделами, в которых используются различные версии .NET Framework, на компьютере с ОС Windows должна быть установлена платформа [.NET Framework](http://getdotnet.azurewebsites.net/).
+При работе с разделами, в которых используются различные версии .NET Framework, на компьютере с ОС Windows должна быть установлена платформа [.NET Framework](https://dotnet.microsoft.com).
 
-Кроме того, если необходимо поддерживать целевые платформы .NET Framework предыдущих версий, требуется установить пакеты нацеливания и пакеты для разработчиков, предназначенные для предыдущих версий платформы, со [страницы целевых платформ .NET](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html). См. таблицу ниже.
+Кроме того, если необходимо поддерживать целевые платформы .NET Framework предыдущих версий, требуется установить целевые пакеты и пакеты для разработчиков, предназначенные для предыдущих версий платформы, со [страницы с доступными для скачивания архивами для .NET](https://dotnet.microsoft.com/download/archives). См. таблицу ниже.
 
 | Версия платформы .NET Framework | Скачиваемые компоненты                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -39,7 +40,7 @@ ms.locfileid: "43256200"
 
 В этом разделе есть таблица, в которой версии .NET Standard сопоставляются с различными реализациями:
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
 
 Вот что значит эта таблица в контексте создания библиотеки:
 
@@ -136,7 +137,7 @@ ms.locfileid: "43256200"
 
 Система сборки распознает следующие символы препроцессора, используемые в директивах `#if`:
 
-[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+[!INCLUDE [Preprocessor symbols](../../../includes/preprocessor-symbols.md)]
 
 Ниже приведен пример использования условной компиляции для каждого целевого объекта:
 
@@ -167,7 +168,7 @@ namespace MultitargetLib
         // .NET Framework 4.0 does not have async/await
         public string GetDotNetCount()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             var uri = new Uri(url);
 
@@ -187,7 +188,7 @@ namespace MultitargetLib
         // .NET 4.5+ can use async/await!
         public async Task<string> GetDotNetCountAsync()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             // HttpClient is thread-safe, so no need to explicitly lock here
             var result = await _client.GetStringAsync(url);
@@ -213,7 +214,7 @@ netstandard1.4/
 
 ## <a name="how-to-test-libraries-on-net-core"></a>Тестирование библиотек в .NET Core
 
-Необходимо иметь возможность тестирования проектов на различных платформах. Вы можете использовать [xUnit](http://xunit.github.io/) или MSTest без дополнительной настройки. Обе платформы тестирования идеально подходят для модульного тестирования библиотеки в .NET Core. Настройка тестовых проектов для решения зависит от [его структуры](#structuring-a-solution). В следующем примере предполагается, что каталог с тестами и каталог с исходным кодом находятся в одном и том же каталоге верхнего уровня.
+Необходимо иметь возможность тестирования проектов на различных платформах. Вы можете использовать [xUnit](https://xunit.github.io/) или MSTest без дополнительной настройки. Обе платформы тестирования идеально подходят для модульного тестирования библиотеки в .NET Core. Настройка тестовых проектов для решения зависит от [его структуры](#structuring-a-solution). В следующем примере предполагается, что каталог с тестами и каталог с исходным кодом находятся в одном и том же каталоге верхнего уровня.
 
 > [!NOTE]
 > В этом примере используются некоторые [команды интерфейса командной строки .NET Core](../tools/index.md). Дополнительные сведения см. в разделах [dotnet new](../tools/dotnet-new.md) и [dotnet sln](../tools/dotnet-sln.md).
@@ -253,7 +254,7 @@ netstandard1.4/
    dotnet build
    ```
 
-   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. Убедитесь, что xUnit запущен, выполнив команду `dotnet test`. Если вы решили использовать MSTest, запустите средство запуска консоли MSTest вместо xUnit.
     

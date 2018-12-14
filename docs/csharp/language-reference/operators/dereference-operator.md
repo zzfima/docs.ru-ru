@@ -1,44 +1,50 @@
 ---
 title: Оператор -&gt; (справочник по C#)
-ms.date: 07/20/2015
+ms.date: 11/26/2018
 f1_keywords:
 - ->_CSharpKeyword
 helpviewer_keywords:
 - member access operator (->) [C#]
 - -> operator [C#]
 ms.assetid: e39ccdc1-f1ff-4a92-bf1d-ac2c8c11316a
-ms.openlocfilehash: fb95e508ce1339868723bcc3178851e8c1355c1f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 178724ede105d809bd812461121a38d5a0e90517
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609532"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53144134"
 ---
 # <a name="-gt-operator-c-reference"></a>Оператор -&gt; (справочник по C#)
-Оператор `->` объединяет операции разыменования указателя и доступа к члену.  
-  
-## <a name="remarks"></a>Примечания  
- Выражение в формате  
-  
-```csharp  
-x->y  
-```  
-  
- (где `x` — это указатель типа `T*` и `y` — это член `T`) эквивалентно  
-  
-```csharp  
-(*x).y  
-```  
-  
- Оператор `->` можно использовать только в коде, который помечен как [unsafe](../../../csharp/language-reference/keywords/unsafe.md).  
-  
- Оператор `->` перегрузить нельзя.  
-  
-## <a name="example"></a>Пример  
- [!code-csharp[csRefOperators#15](../../../csharp/language-reference/operators/codesnippet/CSharp/dereference-operator_1.cs)]  
-  
+
+Оператор доступа `->` к элементу с использованием указателя объединяет косвенное обращение к указателю и доступ к элементу.
+
+Если `x` — это указатель типа `T*`, `y` — доступный элемент `T`, выражение формы будет
+
+```csharp
+x->y
+```
+
+эквивалентно
+
+```csharp
+(*x).y
+```
+
+Для оператора `->` требуется [небезопасный](../keywords/unsafe.md) контекст.
+
+Дополнительные сведения см. в [практическом руководстве по получению доступа к элементу с использованием указателя](../../programming-guide/unsafe-code-pointers/how-to-access-a-member-with-a-pointer.md).
+
+## <a name="operator-overloadability"></a>Возможность перегрузки оператора
+
+Оператор `->` перегрузить нельзя.
+
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+Дополнительные сведения см. в разделе о [получении доступа к элементу](~/_csharplang/spec/unsafe-code.md#pointer-member-access) в [спецификации языка C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Операторы в C#](../../../csharp/language-reference/operators/index.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Операторы в C#](index.md)
+- [Типы указателей](../../programming-guide/unsafe-code-pointers/pointer-types.md)

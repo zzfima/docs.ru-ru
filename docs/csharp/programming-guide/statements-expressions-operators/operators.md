@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 025510782551c058c3b80eff3045138476e031b9
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bf453d5770967f26999b8537339f1b690646b97d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514189"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150977"
 ---
 # <a name="operators-c-programming-guide"></a>Операторы (Руководство по программированию на C#)
 В языке C# *оператор* — это элемент программы, который применяется для одного или нескольких *операндов* в выражении или инструкции. Операторы, в которых используется один операнд, например оператор инкремента (`++`) или `new`, называются *унарными* . Операторы, в которых используются два операнда, например арифметические операторы (`+`,`-`,`*`,`/`), называются *бинарными* . Для одного оператора — условного (`?:`) — используются три операнда, и такой оператор является единственным троичным оператором в C#.  
@@ -68,7 +68,7 @@ ms.locfileid: "43514189"
   
  **Мультипликативные операторы**  
   
-|Выражение|Описание:|  
+|Выражение|Описание|  
 |----------------|-----------------|  
 |[*](../../../csharp/language-reference/operators/multiplication-operator.md)|Умножение|  
 |[/](../../../csharp/language-reference/operators/division-operator.md)|Деление|  
@@ -108,7 +108,7 @@ ms.locfileid: "43514189"
   
  **Логические, условные операторы и NULL-операторы**  
   
-|Категория|Выражение|Описание:|  
+|Категория|Выражение|Описание|  
 |--------------|----------------|-----------------|  
 |Логическое И|x [&](../../../csharp/language-reference/operators/and-operator.md) y|Поразрядное И для операндов целочисленного типа, логическое И для операндов логического типа|  
 |Логическое исключающее ИЛИ|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|Поразрядное исключающее ИЛИ для операндов целочисленного типа, логическое исключающее ИЛИ для операндов логического типа|  
@@ -120,7 +120,7 @@ ms.locfileid: "43514189"
   
  **Операторы присваивания и анонимные операторы**  
   
-|Выражение|Описание:|  
+|Выражение|Описание|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|Назначение|  
 |x op= y|Составное присваивание. Поддерживает следующие операторы: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md).|  

@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: Ветви и циклы в C#
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 7edc39e6b9d45a0f6707adf48199c9a096b8992d
-  ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+  ms.openlocfilehash: d29fae5aa5a34d7a8e91e53f2005178740464827
+  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 10/28/2018
-  ms.locfileid: "50198586"
+  ms.lasthandoff: 12/10/2018
+  ms.locfileid: "53131252"
 items:
 - durationInMinutes: 1
   content: >
@@ -63,7 +63,7 @@ items:
 
     int c = 2;
 
-    int d = (a  + b) * c;
+    int d = (a + b) * c;
 
     Console.WriteLine(d);
 
@@ -200,4 +200,19 @@ items:
     > [!NOTE]
 
     > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
-- content: "Вы выполнили задачи интерактивного руководства \"Числа в C#\". \n\nТеперь можно продолжить работу с этими руководствами в собственной среде разработки. Вы можете ознакомиться с основами [локальной разработки](local-environment.md), а затем выбрать руководство. Можно непосредственно перейти к следующему руководству или заново пройти руководство по [числам в C# ](numbers-in-csharp-local.md).\n\nДополнительные сведения о числах в C# см. в следующих статьях:\n\n[Таблица целых типов](../../language-reference/keywords/integral-types-table.md)   \n[Таблица типов с плавающей запятой](../../language-reference/keywords/floating-point-types-table.md)   \n[Таблица встроенных типов](../../language-reference/keywords/built-in-types-table.md)   \n[Таблица неявных числовых преобразований](../../language-reference/keywords/implicit-numeric-conversions-table.md)   \n[Таблица явных числовых преобразований](../../language-reference/keywords/explicit-numeric-conversions-table.md)"
+- content: >-
+    Вы выполнили все задачи в интерактивном руководстве "Числа в C#". Вы можете выбрать ссылку **Ветви и циклы** ниже, чтобы запустить следующее интерактивное руководство, либо посетить [сайт .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), чтобы скачать пакет SDK для .NET Core, создать проект на своем компьютере и продолжить написание кода. На шаге "Продолжение обучения" вы вернетесь к этим учебникам.
+
+
+    Дополнительные сведения о числах в C# см. в следующих статьях:
+
+
+    - [Таблица целых типов](../../language-reference/keywords/integral-types-table.md)
+
+    - [Таблица типов с плавающей запятой](../../language-reference/keywords/floating-point-types-table.md)
+
+    - [Таблица встроенных типов](../../language-reference/keywords/built-in-types-table.md)
+
+    - [Таблица неявных числовых преобразований](../../language-reference/keywords/implicit-numeric-conversions-table.md)
+
+    - [Таблица явных числовых преобразований](../../language-reference/keywords/explicit-numeric-conversions-table.md)

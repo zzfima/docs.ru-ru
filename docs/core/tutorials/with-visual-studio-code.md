@@ -3,13 +3,13 @@ title: Начало работы с C# и Visual Studio Code — руковод
 description: Узнайте, как создать и отладить в Visual Studio Code свое первое приложение .NET Core на языке C#.
 author: kendrahavens
 ms.author: mairaw
-ms.date: 09/27/2017
-ms.openlocfilehash: 74fdd9ce122482a027931405cc9a94011a9c13bb
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 12/05/2018
+ms.openlocfilehash: fde2d8a324f3435438a4a92843a9d5b7b0def443
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192587"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129601"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Начало работы с C# и Visual Studio Code
 
@@ -81,12 +81,56 @@ ms.locfileid: "50192587"
 6. Чтобы начать отладку, нажмите клавишу <kbd>F5</kbd> или щелкните зеленую стрелку. Отладчик останавливает выполнение программы, когда достигнет точки останова, которую вы только что установили.
     * Во время отладки вы можете просматривать локальные переменные в верхней левой области или в консоли отладки.
 
-    ![Запуск и отладка](media/with-visual-studio-code/rundebug.png)
+7. Выберите синюю стрелку в верхней части, чтобы продолжить отладку, или выберите красный квадрат в верхней части, чтобы остановить процесс.
 
-7. Выберите зеленую стрелку в верхней части, чтобы продолжить отладку, или выберите красный квадрат в верхней части, чтобы остановить процесс.
+    ![Запуск и отладка](media/with-visual-studio-code/rundebug.png)
 
 > [!TIP]
 > Дополнительные сведения и советы по отладке .NET Core в Visual Studio Code с помощью OmniSharp см. в разделе [Инструкции по настройке отладчика .NET Core](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md).
+
+## <a name="add-a-class"></a>Добавление класса
+
+1. Чтобы добавить новый класс, щелкните правой кнопкой мыши в обозревателе VSCode и выберите **Новый файл**. Так вы добавите новый файл в папку, открытую в VSCode.
+2. Назовите файл `Class1.cs`. Необходимо сохранить его с расширением `.cs`, чтобы он распознавался как файл С#.
+3. Добавьте приведенный ниже код для создания класса. Включите правильное пространство имен, на которое будет создана ссылка из файла `Program.cs`.
+``` csharp
+using System;
+
+namespace HelloWorld
+{
+    public class Class1
+    {
+        public string ReturnMessage()
+        {
+            return "Happy coding!";
+        }
+    }
+}
+```
+
+4. Вызовите новый класс из метода main в `Program.cs`, добавив приведенный ниже код.
+
+```csharp
+using System;
+
+namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Class1 c1 = new Class1();
+            Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
+        }
+    }
+}
+```
+
+5. Сохраните изменения и снова запустите программу. Должно отобразиться новое сообщение с добавленной строкой.
+```console
+> dotnet run
+Hello World! Happy coding!
+```
 
 ## <a name="faq"></a>часто задаваемые вопросы
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 675e6b7fa925fe1822c2fc321d79afd13b5e4c51
-ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
+ms.openlocfilehash: 417a8cefbc9bc7544ae1156992e6e6c549fb828f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347687"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53128626"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in (справочник по C#)
 
@@ -22,6 +22,8 @@ ms.locfileid: "49347687"
 
 - включает открытый метод `GetEnumerator` без параметров со следующим типом возвращаемого значения: класс, структура или тип интерфейса;
 - тип возвращаемого значения метода `GetEnumerator` должен содержать открытое свойство `Current` и открытый метод `MoveNext` без параметров с типом возвращаемого значения <xref:System.Boolean>.
+
+Начиная с версии C# 7.3, если свойство перечислителя `Current` возвращает [ссылочное возвращаемое значение](ref.md#reference-return-values) (`ref T`, где `T` — это тип элемента коллекции), вы можете объявить переменную итерации с модификатором `ref` или `ref readonly`.
 
 В любой момент в блоке операторов `foreach` вы можете прервать цикл с помощью оператора [break](break.md) или перейти к следующей итерации в цикле с помощью оператора [continue](continue.md). Также можно выйти из цикла `foreach` с помощью операторов [goto](goto.md), [return](return.md) или [throw](throw.md).
 
@@ -37,20 +39,19 @@ ms.locfileid: "49347687"
 
 [!code-csharp-interactive[span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#2)]
 
-Начиная с версии C# 7.3, если свойство перечислителя `Current` возвращает [ссылочное возвращаемое значение](../../programming-guide/classes-and-structs/ref-returns.md) (`ref T`, где `T` — это тип элемента коллекции), вы можете объявить переменную итерации с модификатором `ref` или `ref readonly`. В следующем примере с помощью переменной итерации `ref` устанавливается значение каждого элемента в массиве stackalloc. В версии `ref readonly` выполняется перебор коллекции для печати всех значений. В объявлении `readonly` используется неявное объявление локальной переменной. Неявные объявления переменных могут использоваться с объявлениями `ref` или `ref readonly`, так же как и явно типизированные объявления переменных.
+В следующем примере с помощью переменной итерации `ref` устанавливается значение каждого элемента в массиве stackalloc. В версии `ref readonly` выполняется перебор коллекции для печати всех значений. В объявлении `readonly` используется неявное объявление локальной переменной. Неявные объявления переменных могут использоваться с объявлениями `ref` или `ref readonly`, так же как и явно типизированные объявления переменных.
 
 [!code-csharp-interactive[ref span example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#RefSpan)]
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Дополнительные сведения см. в разделе [Оператор foreach](~/_csharplang/spec/statements.md#the-foreach-statement) в документации [Предварительная спецификация C# 6.0](../language-specification/index.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Оператор foreach (спецификация языка C#)](~/_csharplang/spec/statements.md#the-foreach-statement)
-- [Использование оператора foreach с массивами](../../programming-guide/arrays/using-foreach-with-arrays.md)
-- [for](for.md)
-- [Операторы итерации](iteration-statements.md)
-- [Ключевые слова в C#](index.md)
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Ключевые слова в C#](index.md)
+- [Операторы итерации](iteration-statements.md)
+- [Использование оператора foreach с массивами](../../programming-guide/arrays/using-foreach-with-arrays.md)
+- [Оператор for](for.md)

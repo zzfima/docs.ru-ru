@@ -1,15 +1,13 @@
 ---
 title: Скрипты dotnet-install
 description: Сведения о скриптах dotnet-install, которые служат для установки средств CLI .NET Core и общей среды выполнения.
-author: blackdwarf
-ms.author: mairaw
-ms.date: 09/11/2017
-ms.openlocfilehash: ea14424297dcf1dab8711197bee1d3b3e19879c1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 11/15/2018
+ms.openlocfilehash: 0f565fee3e4ff4bec65bd196f635e9e9601485c2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837080"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148334"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Справка по скриптам dotnet-install
 
@@ -21,13 +19,13 @@ ms.locfileid: "48837080"
 
 Windows:
 
-`dotnet-install.ps1 [-Channel] [-Version] [-InstallDir] [-Architecture] [-SharedRuntime] [-DryRun] [-NoPath] [-AzureFeed] [-ProxyAddress] [--Verbose] [--Help]`
+`dotnet-install.ps1 [-Channel] [-Version] [-InstallDir] [-Architecture] [-SharedRuntime] [-Runtime] [-DryRun] [-NoPath] [-Verbose] [-AzureFeed] [-UncachedFeed] [-NoCdn] [-FeedCredential] [-ProxyAddress] [-ProxyUseDefaultCredentials] [-SkipNonVersionedFiles] [-Help]`
 
 Mac OS и Linux:
 
-`dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--shared-runtime] [--dry-run] [--no-path] [--azure-feed] [--verbose] [--help]`
+`dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential] [--runtime-id] [--skip-non-versioned-files] [--help]`
 
-## <a name="description"></a>Описание:
+## <a name="description"></a>Описание
 
 Скрипты `dotnet-install` используются для установки пакета SDK для .NET Core без прав администратора. Этот пакет включает общую среду выполнения и средства .NET Core CLI.
 
@@ -36,7 +34,7 @@ Mac OS и Linux:
 * <https://dot.net/v1/dotnet-install.sh> (Bash, UNIX);
 * <https://dot.net/v1/dotnet-install.ps1> (Powershell, Windows).
 
-Их основное назначение — помощь в сценариях автоматизации и при установках без прав администратора. Существует два скрипта. Один — скрипт PowerShell, который работает в Windows. Второй — bash-скрипт, который выполняется в Linux и macOS. Оба скрипта выполняют одни и те же функции. Так как bash-скрипт также считывает параметры PowerShell, их можно использовать с этим скриптом в системах Linux и macOS.
+Их основное назначение — помощь в сценариях автоматизации и при установках без прав администратора. Имеются два скрипта: один для PowerShell (работает в Windows), а второй — bash-скрипт, который работает в Linux и macOS. Оба скрипта выполняют одни и те же функции. Так как bash-скрипт также считывает параметры PowerShell, их можно использовать с этим скриптом в системах Linux и macOS.
 
 Скрипты установки скачивают файл ZIP или TAR из места сборки CLI, а затем осуществляют установку в расположении по умолчанию или расположении, заданном параметром `-InstallDir|--install-dir`. По умолчанию скрипты установки скачивают и устанавливают пакет SDK. Если вы хотите получить только общую среду выполнения, укажите аргумент `--shared-runtime`.
 
@@ -48,104 +46,157 @@ Mac OS и Linux:
 
 ## <a name="options"></a>Параметры
 
-`-Channel <CHANNEL>`
+* **`-Channel <CHANNEL>`**
 
-Указывает исходный канал для установки. Допустимые значения:
+  Указывает исходный канал для установки. Допустимые значения:
 
-- `Current` — текущий выпуск.
-- `LTS` — канал долгосрочной поддержки (текущий поддерживаемый выпуск).
-- Версия из двух частей в формате X.Y, который представляет конкретный выпуск (например, `2.0` или `1.0`).
-- Имя ветви [например, `release/2.0.0`, `release/2.0.0-preview2` или `master` для последней из ветви `master` ("суперсовременные" ночные выпуски)].
+  * `Current` — самый последний выпуск.
+  * `LTS` — канал долгосрочной поддержки (самый последний поддерживаемый выпуск).
+  * Версия из двух частей в формате X.Y, который представляет конкретный выпуск (например, `2.0` или `1.0`).
+  * Имя ветви. Например, `release/2.0.0`, `release/2.0.0-preview2` или `master` (для ночных выпусков).
 
-Значение по умолчанию — `LTS`. Дополнительные сведения о каналах поддержки .NET см. в документе [.NET Core Support Lifecycle](https://www.microsoft.com/net/core/support) (Жизненный цикл поддержки .NET Core).
+  Значение по умолчанию — `LTS`. Дополнительные сведения о каналах поддержки .NET см. на странице о [политике поддержки .NET](https://www.microsoft.com/net/platform/support-policy#dotnet-core).
 
-`-Version <VERSION>`
+* **`-Version <VERSION>`**
 
-Представляет определенную версию сборки. Допустимые значения:
+  Представляет определенную версию сборки. Допустимые значения:
 
-- `latest` — последняя сборка в канале (используется с параметром `-Channel`).
-- `coherent` — последняя согласованная сборка в канале. Использует последние сочетания стабильных пакетов. (Используется с параметрами `-Channel` имени ветви.)
-- Версия из трех частей в формате X.Y.Z, который представляет определенную версию сборки. Заменяет параметр `-Channel`. Пример: `2.0.0-preview2-006120`
+  * `latest` — последняя сборка в канале (используется с параметром `-Channel`).
+  * `coherent` — последняя согласованная сборка в канале. Использует последние сочетания стабильных пакетов. (Используется с параметрами `-Channel` имени ветви.)
+  * Версия из трех частей в формате X.Y.Z, который представляет определенную версию сборки. Заменяет параметр `-Channel`. Например, `2.0.0-preview2-006120`.
 
-Если значение не указано, для параметра `-Version` по умолчанию используется значение `latest`.
+  Если не указано, `-Version` по умолчанию принимает значение `latest`.
 
-`-InstallDir <DIRECTORY>`
+* **`-InstallDir <DIRECTORY>`**
 
-Указывает путь установки. Если такого пути нет, создается каталог. Значение по умолчанию — *%LocalAppData%\.dotnet*. Обратите внимание, что двоичные файлы помещаются непосредственно в каталог.
+  Указывает путь установки. Если такого пути нет, создается каталог. Значение по умолчанию — *%LocalAppData%\Microsoft\dotnet*. Двоичные файлы помещаются непосредственно в этот каталог.
 
-`-Architecture <ARCHITECTURE>`
+* **`-Architecture <ARCHITECTURE>`**
 
-Архитектура устанавливаемых двоичных файлов .NET Core. Допустимые значения: `auto`, `x64` и `x86`. Значение по умолчанию — `auto`, представляющее текущую используемую архитектуру ОС.
+  Архитектура устанавливаемых двоичных файлов .NET Core. Допустимые значения: `auto`, `x64` и `x86`. Значение по умолчанию — `auto`, представляющее текущую используемую архитектуру ОС.
 
-`-SharedRuntime`
+* **`-SharedRuntime`**
 
-Если параметр задан, он ограничивает установку общей средой выполнения. Установка всего пакета SDK не выполняется.
+  > [!NOTE]
+  > Этот параметр является устаревшим и может быть удален в будущей версии скрипта. Вместо этого рекомендуется использовать параметр `Runtime`.
 
-`-DryRun`
+  Устанавливаются только двоичные файлы общей среды выполнения; в противном случае устанавливается весь пакет SDK. Это эквивалентно указанию `-Runtime dotnet`.
 
-Если значение задано, скрипт не будет выполнять установку. Вместо этого отобразится командная строка для согласованной установки запрошенной в настоящее время версии CLI .NET Core. Например, если указать версию `latest`, он отображает ссылку для определенной версии, чтобы эту команду можно было детерминировано использовать в скрипте сборки. Кроме того, он отображает расположение двоичного файла, если вы хотите выполнить скачивание или установку самостоятельно.
+* **`-Runtime <RUNTIME>`**
 
-`-NoPath`
+  Устанавливается только общая среда выполнения, а не весь пакет SDK. Допустимые значения:
 
-Если значение задано, префикс и каталог установки не экспортируются в путь текущего сеанса. По умолчанию скрипт изменит значение PATH, благодаря этому средства CLI становятся доступными сразу после установки.
+  * `dotnet` — общая среда выполнения `Microsoft.NETCore.App`.
+  * `aspnetcore` — общая среда выполнения `Microsoft.AspNetCore.App`.
 
-`-AzureFeed`
+* **`-DryRun`**
 
-Указывает URL-адрес для веб-канала Azure этого установщика. Изменять это значение не рекомендуется. Значение по умолчанию — `https://dotnetcli.azureedge.net/dotnet`.
+  Если задано, скрипт не будет выполнять установку. Вместо этого отобразится командная строка для согласованной установки запрошенной в настоящее время версии .NET Core CLI. Например, если указать версию `latest`, он отображает ссылку для определенной версии, чтобы эту команду можно было детерминировано использовать в скрипте сборки. Кроме того, он отображает расположение двоичного файла, если вы хотите выполнить скачивание или установку самостоятельно.
 
-`-ProxyAddress`
+* **`-NoPath`**
 
-Если значение задано, установщик использует прокси-сервер для выполнения веб-запросов. (Доступно только для Windows.)
+  Если значение задано, папка установки не экспортируется в путь текущего сеанса. По умолчанию скрипт изменит значение PATH, благодаря этому средства CLI становятся доступными сразу после установки.
 
-`--verbose`
+* **`-Verbose`**
 
-Отображение сведений о диагностике.
+  Отображает сведения о диагностике.
 
-`--help`
+* **`-AzureFeed`**
 
-Выводит справку для скрипта.
+  Указывает URL-адрес для веб-канала Azure этого установщика. Изменять это значение не рекомендуется. Значение по умолчанию — `https://dotnetcli.azureedge.net/dotnet`.
+
+* **`-UncachedFeed`**
+
+  Позволяет изменять URL-адрес некэшированного веб-канала, используемого этим установщиком. Изменять это значение не рекомендуется.
+
+* **`-NoCdn`**
+
+  Отключает загрузку из [сети доставки содержимого Microsoft Azure (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) и напрямую использует некэшированный веб-канал.
+
+* **`-FeedCredential`**
+
+  Используется в качестве строки запроса для добавления в веб-канал Azure. Позволяет изменять URL-адрес для использования учетных записей хранилища BLOB-объектов, не являющихся общедоступными.
+
+* **`-ProxyAddress`**
+
+  Если значение задано, установщик использует прокси-сервер для выполнения веб-запросов. (Доступно только для Windows.)
+
+* **`ProxyUseDefaultCredentials`**
+
+  Если задано, установщик использует учетные данные текущего пользователя при использовании адреса прокси-сервера. (Доступно только для Windows.)
+
+* **`-SkipNonVersionedFiles`**
+
+  Пропускает установку файлов без версии, таких как *dotnet.exe*, если они уже существуют.
+
+* **`-Help`**
+
+  Выводит справку для скрипта.
 
 ## <a name="examples"></a>Примеры
 
-Установка последней версии с долгосрочной поддержкой (LTS) в расположение по умолчанию:
+* Установка последней версии с долгосрочной поддержкой (LTS) в расположение по умолчанию:
 
-Windows:
+  Windows:
 
-`./dotnet-install.ps1 -Channel LTS`
+  ```powershell
+  ./dotnet-install.ps1 -Channel LTS
+  ```
 
-Mac OS и Linux:
+  Mac OS и Linux:
 
-`./dotnet-install.sh --channel LTS`
+  ```bash
+  ./dotnet-install.sh --channel LTS
+  ```
 
-Установка последней версии из канала версии 2.0 в указанное расположение:
+* Установка последней версии из канала версии 2.0 в указанное расположение:
 
-Windows:
+  Windows:
 
-`./dotnet-install.ps1 -Channel 2.0 -InstallDir C:\cli`
+  ```powershell
+  ./dotnet-install.ps1 -Channel 2.0 -InstallDir C:\cli
+  ```
 
-Mac OS и Linux:
+  Mac OS и Linux:
 
-`./dotnet-install.sh --channel 2.0 --install-dir ~/cli`
+  ```bash
+  ./dotnet-install.sh --channel 2.0 --install-dir ~/cli
+  ```
 
-Установка общей среды выполнения версии 1.1.0:
+* Установка общей среды выполнения версии 1.1.0:
 
-Windows:
+  Windows:
 
-`./dotnet-install.ps1 -SharedRuntime -Version 1.1.0`
+  ```powershell
+  ./dotnet-install.ps1 -SharedRuntime -Version 1.1.0
+  ```
 
-Mac OS и Linux:
+  Mac OS и Linux:
 
-`./dotnet-install.sh --shared-runtime --version 1.1.0`
+  ```bash
+  ./dotnet-install.sh --shared-runtime --version 1.1.0
+  ```
 
-Получите скрипт и установите однострочные примеры для интерфейса командной строки .NET Core:
+* Получите и установите скрипт версии 2.1.2 за корпоративным прокси-сервером (только для Windows):
 
-Windows:
+  ```powershell
+  Invoke-WebRequest 'https://dot.net/v1/dotnet-install.ps1' -Proxy $env:HTTP_PROXY -ProxyUseDefaultCredentials -OutFile 'dotnet-install.ps1';
+  ./dotnet-install.ps1 -InstallDir '~/.dotnet' -Version '2.1.2' -ProxyAddress $env:HTTP_PROXY -ProxyUseDefaultCredentials;
+  ```
 
-`@powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"`
+* Получите скрипт и установите однострочные примеры для интерфейса командной строки .NET Core:
 
-Mac OS и Linux:
+  Windows:
 
-`curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>`
+  ```powershell
+  @powershell -NoProfile -ExecutionPolicy unrestricted -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; &([scriptblock]::Create((Invoke-WebRequest -useb 'https://dot.net/v1/dotnet-install.ps1'))) <additional install-script args>"
+  ```
+
+  Mac OS и Linux:
+
+  ```bash
+  curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
+  ```
 
 ## <a name="see-also"></a>См. также
 

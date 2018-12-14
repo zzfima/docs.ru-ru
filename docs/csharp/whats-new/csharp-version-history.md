@@ -3,12 +3,12 @@ title: История языка C# (руководство по C#)
 description: На что был похож этот язык в ранних версиях и во что он превратился сейчас?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: e58f719031cc614f728226232c09f54f6b874475
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316263"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145336"
 ---
 # <a name="the-history-of-c"></a>История языка C# #
 
@@ -33,7 +33,7 @@ ms.locfileid: "49316263"
 - [Выражения](../programming-guide/statements-expressions-operators/expressions.md)
 - [Операторы](../programming-guide/statements-expressions-operators/statements.md)
 - [Атрибуты](../programming-guide/concepts/attributes/index.md)
-- Литералы
+- [Литералы](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>Версия для C# 1.2
 
@@ -72,9 +72,9 @@ C# версии 3.0 был выпущен в конце 2007 года вмест
 - [Автоматически реализуемые свойства](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Анонимные типы](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Выражения запросов](../linq/query-expression-basics.md)
-- [Лямбда-выражение](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
-- [Деревья выражений](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
-- [Методы расширения](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
+- [Лямбда-выражения](../lambda-expressions.md)
+- [Деревья выражений](../expression-trees.md)
+- [Методы расширения](../programming-guide/classes-and-structs/extension-methods.md)
 - [Неявно типизированные локальные переменные](../language-reference/keywords/var.md)
 - [Разделяемые методы](../language-reference/keywords/partial-method.md)
 - [Инициализаторы объектов и коллекций](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
@@ -96,7 +96,7 @@ C# версии 3.0 был выпущен в конце 2007 года вмест
 - [Динамическая привязка](../language-reference/keywords/dynamic.md)
 - [Именованные/дополнительные аргументы](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [Универсальная ковариантность и контравариантность](../../standard/generics/covariance-and-contravariance.md)
-- [Внедренные типы взаимодействия](https://stackoverflow.com/questions/20514240/whats-the-difference-setting-embed-interop-types-true-and-false-in-visual-studi)
+- [Внедренные типы взаимодействия](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
 Внедренные типы взаимодействия помогли сделать развертывание более удобным. Универсальная ковариантность и контравариантность расширяют возможности применения универсальных шаблонов, однако эти функции несколько академичны и высоко оценены авторами, создающими платформы и библиотеки. Именованные и дополнительные параметры позволяют избавиться от многих перегрузок методов и сделать работу более удобной. Однако ни одна из этих функций не является кардинальным изменением.
 
@@ -123,13 +123,13 @@ C# версии 3.0 был выпущен в конце 2007 года вмест
 
 Версии 3.0 и 5.0 добавили в объектно-ориентированный язык C# несколько впечатляющих возможностей. Версия 6.0 отступает от проторенного пути по реализации уникальных возможностей и концентрируется на предоставлении незначительных функций, с которыми программирование на C# становится гораздо эффективнее. Вот некоторые из них:
 
-- [Статические импорты](../language-reference/keywords/using-static.md)
-- [Фильтры исключений](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)
-- [Инициализаторы свойств](http://geekswithblogs.net/WinAZ/archive/2015/06/30/whatrsquos-new-in-c-6.0-auto-property-initializers.aspx)
-- [Элементы, воплощающие выражение](https://lostechies.com/jimmybogard/2015/12/17/c-6-feature-review-expression-bodied-function-members/)
-- [Null-распространитель](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
-- [Интерполяция строк](../language-reference/tokens/interpolated.md)
-- [Оператор nameof](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
+- [Статические импорты](./csharp-6.md#using-static)
+- [Фильтры исключений](./csharp-6.md#exception-filters)
+- [Инициализаторы автосвойств](./csharp-6.md#auto-property-initializers)
+- [Элементы, воплощающие выражение](./csharp-6.md#expression-bodied-function-members)
+- [Null-распространитель](./csharp-6.md#null-conditional-operators)
+- [Интерполяция строк](./csharp-6.md#string-interpolation)
+- [Оператор nameof](./csharp-6.md#the-nameof-expression)
 - [Инициализаторы индекса](csharp-6.md#index-initializers)
 
 Другие новые возможности:
@@ -145,20 +145,19 @@ C# версии 3.0 был выпущен в конце 2007 года вмест
 
 Сейчас последним основным номером версии для C# является 7.0. В этой версии получили развитие некоторые функции из версии C# 6.0, однако компилятор в виде службы отсутствует. Ниже приведены некоторые из новых функций:
 
-- [Переменные Out](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
-- [Кортежи и деконструкция](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
+- [Переменные Out](./csharp-7.md#out-variables)
+- [Кортежи и деконструкция](./csharp-7.md#tuples)
 - [Сопоставление шаблонов](./csharp-7.md#pattern-matching)
-- [Локальные функции](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [Локальные функции](./csharp-7.md#local-functions)
 - [Расширенные элементы, воплощающие выражение](./csharp-7.md#more-expression-bodied-members)
 - [Локальные переменные и возвращаемые значения Ref](./csharp-7.md#ref-locals-and-returns)
 
 Другие возможности:
 
-- [Операции удаления](../discards.md)
-- [Двоичные литералы](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/binary-literals.md)
-- [Разделители между цифрами](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/digit-separators.md)
-- Возвращаемые ссылочные значения и локальные переменные
-- [Выражения throw](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
+- [Операции удаления](./csharp-7.md#discards)
+- [Двоичные литералы и цифровые разделители](./csharp-7.md#numeric-literal-syntax-improvements)
+- [Возвращаемые ссылочные значения и ссылочные локальные переменные](./csharp-7.md#ref-locals-and-returns)
+- [Выражения throw](./csharp-7.md#throw-expressions)
 
 Все это предоставляет разработчиком множество новых возможностей и позволяет писать более понятный код. Важным аспектом является доработка объявления переменных путем использования ключевого слова `out` и поддержки нескольких возвращаемых значений благодаря кортежу.
 

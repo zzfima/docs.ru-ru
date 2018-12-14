@@ -7,12 +7,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 7ca7554c81b7e8b54665700869c4f7788ebc3dbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: deae39781b000aa8e08fa3bda29519d280aadb79
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511949"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53147389"
 ---
 # <a name="await-c-reference"></a>await (Справочник по C#)
 Оператор `await` применяется к задаче в асинхронном методе для вставки точки приостановки выполнения метода до завершения выполнения ожидаемой задачи. Задача представляет выполняющуюся работу.  
@@ -65,7 +65,7 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await2.cs)]  
 
-Поскольку использование ключевых слов `async` и `await` в точках входа приложения не поддерживается, атрибут `async` нельзя применить к методу `Main`, а также нельзя реализовать ожидание вызова метода `GetPageLengthsAsync`. Чтобы реализовать ожидание методом `Main` завершения асинхронной операции, можно извлечь значение свойства <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType>. Для задач, которые не возвращают значение, можно вызвать метод <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>. 
+В предыдущем примере используется C# 7.1 с поддержкой [ метода `async` `Main`](../../programming-guide/main-and-command-args/index.md). Так как более ранние версии C# не поддерживают точки входа приложения, которые возвращают <xref:System.Threading.Tasks.Task> или <xref:System.Threading.Tasks.Task%601>, нельзя применить модификатор `async` к методу `Main` и реализовать ожидание вызова метода `GetPageLengthsAsync`. В этом случае вы можете извлечь значение свойства <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType>, чтобы обеспечить ожидание методом `Main` завершения асинхронной операции. Для задач, которые не возвращают значение, можно вызвать метод <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>. Ознакомьтесь со сведениями о том, [как выбрать версию языка C#](../configure-language-version.md).
 
 ## <a name="see-also"></a>См. также  
 - [Асинхронное программирование с использованием ключевых слов async и await](../../../csharp/programming-guide/concepts/async/index.md)   

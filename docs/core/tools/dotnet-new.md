@@ -4,12 +4,12 @@ description: Команда dotnet new создает проекты .NET Core �
 author: mairaw
 ms.author: mairaw
 ms.date: 10/24/2018
-ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a8d486f569f31d68d5659ac6a80d615474ef2506
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188210"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53131486"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -49,7 +49,7 @@ dotnet new [-h|--help]
 
 ---
 
-## <a name="description"></a>Описание:
+## <a name="description"></a>Описание
 
 Команда `dotnet new` предоставляет удобный способ инициализации проекта .NET Core.
 
@@ -71,6 +71,7 @@ dotnet new [-h|--help]
 | Библиотека классов                                | `classlib`       | [C#], F#, VB  |
 | Проект модульного теста                            | `mstest`         | [C#], F#, VB  |
 | Проект теста xUnit                           | `xunit`          | [C#], F#, VB  |
+| Проект теста NUnit                           | `nunit`          | [C#], F#, VB  |
 | Страница Razor                                   | `page`           | [C#]          |
 | MVC ViewImports                              | `viewimports`    | [C#]          |
 | MVC ViewStart                                | `viewstart`      | [C#]          |

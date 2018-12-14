@@ -1,22 +1,23 @@
 ---
-title: Развертывание приложений .NET Core с помощью средств интерфейса командной строки
-description: Сведения о развертывании приложений .NET Core с помощью средств интерфейса командной строки (CLI)
+title: Развертывание приложений .NET Core с помощью средств командной строки (CLI)
+description: Научитесь развертыванию приложений .NET Core с помощью средств командной строки (CLI)
 author: rpetrusha
 ms.author: ronpet
 ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 05460174e9b8472a2862c829cd58b72aec26b549
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454453"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151100"
 ---
-# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>Развертывание приложений .NET Core с помощью средств командной строки (CLI)
+# <a name="deploy-net-core-apps-with-command-line-interface-cli-tools"></a>Развертывание приложений .NET Core с помощью средств командной строки (CLI)
 
-Приложение .NET Core можно развернуть как *развертывание, зависящее от платформы*, которое содержит двоичные файлы приложений, но зависит от наличия .NET Core в целевой системе, или как *автономное развертывание*, которое содержит и приложение, и двоичные файлы .NET Core. Общие сведения см. в разделе [Развертывание приложений .NET Core](index.md).
+Развертывание приложений .NET Core может быть или *развертыванием, зависящим от платформы*, которое содержит двоичные файлы приложений, но зависит от наличия .NET Core в целевой системе, или *автономным развертыванием*, которое содержит и приложение, и двоичные файлы .NET Core. Общие сведения см. в разделе [Развертывание приложений .NET Core](index.md).
 
 В разделах ниже содержатся сведения об использовании [средств интерфейса командной строки .NET Core](../tools/index.md) для создания следующих типов развертывания:
 

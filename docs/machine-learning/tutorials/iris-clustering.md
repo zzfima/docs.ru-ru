@@ -1,19 +1,19 @@
 ---
-title: Использование ML.NET для кластеризации ирисов
+title: Кластеризация цветков ириса с помощью задачи машинного обучения по кластеризации — ML.NET
 description: Сведения об использовании ML.NET при кластеризации
 author: pkulikov
 ms.author: johalex
 ms.date: 07/02/2018
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: bb41fd317507c14b46aea94e1ce576e390932a65
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: mvc, seodec18
+ms.openlocfilehash: 5bd73c774f60466daaf52215c34e7e17b5f5cc9c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453194"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145637"
 ---
-# <a name="tutorial-use-mlnet-to-cluster-iris-flowers-clustering"></a>Руководство. Использование ML.NET для кластеризации ирисов
+# <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Кластеризация цветков ириса с помощью задачи машинного обучения по кластеризации в ML.NET
 
 > [!NOTE]
 > В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).

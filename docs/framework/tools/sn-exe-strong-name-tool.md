@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5169a0d0c28be4337bb57f8bcc70e78b40e4fa9e
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: 213c27a4ddfa6134c4aaa8a76c71309a6496998d
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270478"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53151141"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (средство строгих имен)
 Программа строгих имен (Sn.exe) позволяет подписывать сборки [строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md). Программа Sn.exe предусматривает параметры для управления ключами, создания подписи и ее проверки.  
@@ -28,9 +28,9 @@ ms.locfileid: "36270478"
  Дополнительные сведения о строгом именовании и сборках со строгими именами см. в разделах [Сборки со строгими именами](../../../docs/framework/app-domains/strong-named-assemblies.md) и [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).  
   
  Программа строгих имен автоматически устанавливается вместе с Visual Studio. Программу можно запустить из командной строки разработчика (или из командной строки Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
-  
+
 > [!NOTE]
->  На 64-разрядных компьютерах можно запустить 32-разрядную версию программы Sn.exe через командную строку Visual Studio и 64-разрядную версию через командную строку Visual Studio x64 Win64.  
+>  На 64-разрядных компьютерах можно запустить 32-разрядную версию программы Sn.exe через командную строку Visual Studio и 64-разрядную версию через командную строку Visual Studio x64 Win64. 
   
  В командной строке введите следующее.  
   
@@ -42,7 +42,7 @@ sn [-quiet][option [parameter(s)]]
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**-a** *identityKeyPairFile* *signaturePublicKeyFile*|Создает данные <xref:System.Reflection.AssemblySignatureKeyAttribute> для переноса из файла ключа удостоверения в ключ подписи.|  
 |**-ac** *identityPublicKeyFile* *identityKeyPairContainer* *signaturePublicKeyFile*|Создает данные <xref:System.Reflection.AssemblySignatureKeyAttribute> для переноса из контейнера ключей ключа удостоверения в ключ подписи.|  
@@ -85,6 +85,8 @@ sn [-quiet][option [parameter(s)]]
 > [!NOTE]
 >  Для параметров (например, -**Vr)**, которые осуществляют запись в защищенные ресурсы, такие как реестр, программу SN.exe следует запускать от имени администратора.  
   
+Средство строгих имен поддерживает пары открытого и закрытого ключей, созданные с помощью идентификатора алгоритма `AT_SIGNATURE`. При использовании пар открытого и закрытого ключей, созданных с помощью алгоритма `AT_KEYEXCHANGE`, возникает ошибка. 
+
 ## <a name="examples"></a>Примеры  
  Следующая команда создает новую пару случайных ключей, которая сохраняется в файле `keyPair.snk`.  
   

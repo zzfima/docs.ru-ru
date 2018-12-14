@@ -1,23 +1,32 @@
 ---
-title: Удаление среды выполнения .NET и пакета SDK
-description: Инструкции по удалению среды выполнения .NET Core и компонентов пакета SDK для Windows, Mac и Linux
+title: Удаление среды выполнения .NET Core и пакета SDK
+description: В этой статье объясняется, как определить установленные в текущее время версии среды выполнения .NET Core и пакета SDK и как затем удалить их в Windows, Mac и Linux.
 ms.date: 07/28/2018
 author: billwagner
 ms.author: wiwagn
-ms.openlocfilehash: 1806d1af3b10e44ccc2eff788d8958ca976fe85b
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: seodec18
+ms.openlocfilehash: 6204a28200f1db6350e695a9ab29502c46c25590
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45989817"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129705"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>Как удалить среду выполнения .NET Core и пакет SDK
 
 По мере установки обновленных версий среды выполнения и пакета SDK .NET Core может потребоваться удалить устаревшие версии .NET Core с вашего компьютера. При удалении более ранних версий среды выполнения может измениться среда выполнения, выбранная для запуска приложений общей платформы, как описано в статье [Выбор версии .NET Core](selection.md).
 
+## <a name="should-i-remove-a-version"></a>Нужно ли удалять версию
+
+[Выбор версии .NET Core](selection.md) и совместимость среды выполнения .NET Core для различных обновлений обеспечивает безопасное удаление предыдущих версий. Обновления среды выполнения .NET Core совместимы в пределах основной версии, например 1.x или 2.x. Кроме того, более поздние выпуски пакета SDK для .NET Core обычно позволяют создавать приложения, совместимые с предыдущими версиями среды выполнения.
+
+Как правило, требуется только последняя версия пакета SDK и последняя версия исправлений для сред выполнения, необходимых для вашего приложения. К тем случаям, в которых сохраняются старые версии пакетов SDK или сред выполнения, относится поддержка приложений на основе **project.json**. Если у приложения есть конкретные причины, по котором оно должно использовать ранние версии пакета SDK или среды выполнения, вы можете безопасно удалить старые версии.
+
+## <a name="determine-what-is-installed"></a>Определите компоненты, которые нужно установить
+
 Начиная с .NET Core 2.1 можно определить версии пакета SDK и среды выполнения, установленных на вашем компьютере, с помощью команд в .NET CLI.  Чтобы просмотреть список пакетов SDK, установленных на вашем компьютере, выполните команду [`dotnet --list-sdks`](../tools/dotnet.md#options). Чтобы просмотреть список сред выполнения, установленных на вашем компьютере, выполните команду [`dotnet --list-runtimes`](../tools/dotnet.md#options). Ниже приведены типичные выходные данные для Windows, macOS и Linux:
 
-# <a name="windowstabwindows"></a>[Windows](#tab/Windows)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 ```console
 C:\> dotnet --list-sdks
@@ -55,7 +64,7 @@ Microsoft.NETCore.App 2.1.1 [C:\Program Files\dotnet\shared\Microsoft.NETCore.Ap
 Microsoft.NETCore.App 2.1.2 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
 ```
 
-# <a name="linuxtablinux"></a>[Linux](#tab/Linux)
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 ```console
 $ dotnet --list-sdks
@@ -89,7 +98,7 @@ Microsoft.NETCore.App 2.1.0 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 Microsoft.NETCore.App 2.1.1 [/usr/share/dotnet/shared/Microsoft.NETCore.App]
 ```
 
-# <a name="macostabmacos"></a>[macOS](#tab/macOS)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 ```console
 $ dotnet --list-sdks
@@ -127,7 +136,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ## <a name="uninstalling-net-core"></a>Удаление .NET Core
 
-# <a name="windowstabwindows"></a>[Windows](#tab/Windows)
+# <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 Для удаления версий среды выполнения и пакета SDK .NET Core используется диалоговое окно **Установка и удаление программ** Windows. На следующем рисунке показано диалоговое окно **Установка и удаление программ** с несколькими установленными версиями среды выполнения и пакета SDK .NET.
 
@@ -135,7 +144,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 Выберите все версии, которые необходимо удалить, и нажмите кнопку **Удалить**.
 
-# <a name="linuxtablinux"></a>[Linux](#tab/Linux)
+# <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 В Linux есть несколько вариантов удаления .NET Core (пакета SDK или среды выполнения). Лучший способ удаления .NET Core — выполнить действие, противоположное тому, которое использовалось при установке .NET Core. Конкретные действия зависят от выбранного дистрибутива и метода установки.
 
@@ -178,7 +187,7 @@ sudo rm -rf /usr/share/dotnet/host/fxr/1.0.1
 
 Родительские каталоги для пакета SDK и среды выполнения указаны в выходных данных команд `dotnet --list-sdks` и `dotnet --list-runtimes`, как показано в приведенной выше таблице.
 
-# <a name="macostabmacos"></a>[macOS](#tab/macOS)
+# <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 На компьютерах Mac необходимо отдельно удалить пакеты SDK и среды выполнения, удалив каталог, содержащий эту версию. Например, чтобы удалить пакет SDK и среду выполнения версии 1.0.1, можно использовать следующие команды Bash:
 
@@ -190,7 +199,5 @@ sudo rm -rf /usr/local/share/dotnet/host/fxr/1.0.1
 ```
 
 Родительские каталоги для пакета SDK и среды выполнения указаны в выходных данных команд `dotnet --list-sdks` и `dotnet --list-runtimes`, как показано в приведенной выше таблице.
-
-Начиная с .NET Core 2.1 удалять пакет SDK для .NET Core при его обновлении с помощью диспетчера пакетов не нужно. Диспетчер пакетов `update` или команды `refresh` автоматически удалят старую версию после успешной установки более новой версии.
 
 ---

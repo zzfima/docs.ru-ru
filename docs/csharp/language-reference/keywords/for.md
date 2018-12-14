@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: c6ef926d6fb2c79b7b7f71c3b24b86a7ab057c88
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6584889f527e1459090bea322720f0cd8d9694f6
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511732"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53149241"
 ---
 # <a name="for-c-reference"></a>for (справочник по C#)
 
@@ -105,14 +105,12 @@ i++
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+Дополнительные сведения см. в разделе [Оператор for](~/_csharplang/spec/statements.md#the-for-statement) в документации [Предварительная спецификация C# 6.0](../language-specification/index.md).
 
 ## <a name="see-also"></a>См. также
 
-- [Оператор for (спецификация языка C#)](/dotnet/csharp/language-reference/language-specification/statements#the-for-statement)
 - [Справочник по C#](../index.md)
 - [Руководство по программированию на C#](../../programming-guide/index.md)
 - [Ключевые слова в C#](index.md)
-- [foreach, in](foreach-in.md)
-- [Оператор for (C++)](/cpp/cpp/for-statement-cpp)
 - [Операторы итерации](iteration-statements.md)
+- [foreach, in](foreach-in.md)

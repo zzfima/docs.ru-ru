@@ -1,17 +1,18 @@
 ---
-title: Выбор версии .NET Core
-description: Узнайте, как .NET Core находит и выбирает версии среды выполнения для вашей программы.
+title: Выбор версии .NET Core для использования
+description: Узнайте, как .NET Core автоматически находит и выбирает версии среды выполнения для вашей программы. Кроме того, в этой статье объясняется, как принудительно применить определенную версию.
 author: billwagner
 ms.author: wiwagn
 ms.date: 06/27/2018
-ms.openlocfilehash: 5f6ec628a93dd349b003dfc9b89f84ff7a93a05a
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 3e9a60221a5769d124bcc137d9401367a7713abb
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841544"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127242"
 ---
-# <a name="net-core-version-selection"></a>Выбор версии .NET Core
+# <a name="select-the-net-core-version-to-use"></a>Выбор версии .NET Core для использования
 
 [!INCLUDE [topic-appliesto-net-core-2plus](../../../includes/topic-appliesto-net-core-2plus.md)]
 
@@ -80,7 +81,7 @@ ms.locfileid: "48841544"
 
 ## <a name="framework-dependent-apps-roll-forward"></a>Накат платформозависимых приложений
 
-Вы запускаете приложение из источника с помощью [`dotnet run`](../tools/dotnet-run.md). `dotnet run` собирает и запускает приложение. Исполняемый файл `dotnet` является **узлом** для приложения в средах разработки.
+Если вы запускаете приложение из источника с [`dotnet run`](../tools/dotnet-run.md) из [**зависящего от платформы развертывания**](../deploying/index.md#framework-dependent-deployments-fdd) с использованием [`dotnet myapp.dll`](../tools/dotnet.md#description) или из [**зависящего от платформы исполняемого файла**](../deploying/index.md#framework-dependent-executables-fde) с использованием`myapp.exe`, исполняемый файл `dotnet` будет **узлом** для приложения.
 
 Узел выбирает версию с последними исправлениями, установленную на компьютере. Например, если вы указали `netcoreapp2.0` в файле проекта, а `2.0.4` является последней установленной версией среды выполнения .NET, будет использоваться среда выполнения `2.0.4`.
 

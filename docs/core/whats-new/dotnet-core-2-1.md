@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/10/2018
-ms.openlocfilehash: bf14e21ec4d390d8ab753bfa45533442ff4f6e68
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7d8c89793f26ab07917e71832d5f3511d9b1aa5a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120951"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127554"
 ---
 # <a name="whats-new-in-net-core-21"></a>Новые возможности .NET Core 2.1
 
@@ -69,7 +69,7 @@ ms.locfileid: "49120951"
 
 .NET Core 2.1 поддерживает *глобальные инструменты*, то есть специальные средства, которые доступны глобально из командной строки. Модель расширяемости в предыдущих версиях .NET Core предоставляла пользовательские средства только отдельно для каждого проекта с использованием [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools).
 
-Чтобы установить глобальные инструменты, выполните команду [dotnet tool install](../tools/dotnet-tool-install.md). Пример:
+Чтобы установить глобальные инструменты, выполните команду [dotnet tool install](../tools/dotnet-tool-install.md). Например:
 
 ```console
 dotnet tool install -g dotnetsay
@@ -79,7 +79,7 @@ dotnet tool install -g dotnetsay
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>Управление инструментами с помощью команды `dotnet tool`
 
-В пакете SDK для .NET Core 2.1 (2.1.300) все действия с инструментами выполняются с помощью команды `dotnet tool`. Доступны следующие параметры.
+В пакете SDK для .NET Core 2.1 все действия с инструментами выполняются с помощью команды `dotnet tool`. Доступны следующие параметры.
 
 - [`dotnet tool install`](../tools/dotnet-tool-install.md) устанавливает инструмент.
 

@@ -1,26 +1,27 @@
 ---
-title: Перенос кода в .NET Core — анализ зависимостей сторонних разработчиков
-description: Научитесь анализировать зависимости сторонних разработчиков, чтобы перенести свой проект из .NET Framework в .NET Core.
+title: Анализ зависимостей для переноса кода в .NET Core
+description: Научитесь анализировать внешние зависимости, чтобы перенести свой проект из .NET Framework в .NET Core.
 author: cartermp
 ms.author: mairaw
-ms.date: 02/15/2018
-ms.openlocfilehash: 06d8d36d8369680c54af4d16513b2b871b57079c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.date: 12/04/2018
+ms.custom: seodec18
+ms.openlocfilehash: 7d18d4c52a37878e160f71aeea4cfd00045fe6b4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46001006"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146879"
 ---
-# <a name="analyze-your-third-party-dependencies"></a>Анализ зависимостей сторонних разработчиков
+# <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Анализ зависимостей для переноса кода в .NET Core
 
-Если вы хотите перенести свой код в .NET Core или .NET Standard, то сначала нужно проанализировать зависимости сторонних разработчиков. Зависимости сторонних разработчиков — это [пакеты NuGet](#analyze-referenced-nuget-packages-on-your-project) или [DLL](#analyze-dependencies-that-arent-nuget-packages), на которые вы ссылаетесь в своем проекте. Оцените каждую зависимость и составьте резервный план в отношении зависимостей, которые не совместимы с .NET Core. В этой статье показано, как определить совместимость зависимости с .NET Core.
+Для переноса кода в .NET Core или .NET Standard требуется понимать свои зависимости. Внешние зависимости — это несобираемые вами [пакеты NuGet](#analyze-referenced-nuget-packages-on-your-project) или [библиотеки DLL](#analyze-dependencies-that-arent-nuget-packages), на которые вы ссылаетесь в своем проекте. Оцените каждую зависимость и составьте план на непредвиденные случаи в отношении тех зависимостей, которые не совместимы с .NET Core. В этой статье показано, как определить совместимость зависимости с .NET Core.
 
-## <a name="analyze-referenced-nuget-packages-in-your-project"></a>Анализ упоминаемых посредством ссылки пакетов NuGet в вашем проекте
+## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>Анализ упоминаемых посредством ссылки пакетов NuGet в вашем проекте
 
 Если в своем проекте вы ссылаетесь на пакеты NuGet, необходимо проверить, совместимы ли они с .NET Core.
 Этого можно добиться двумя способами:
 
-* [С помощью приложения "Обозреватель пакетов NuGet"](#analyze-nuget-packages-using-nuget-package-explorer) (наиболее надежный способ).
+* [С помощью приложения обозревателя пакетов NuGet](#analyze-nuget-packages-using-nuget-package-explorer).
 * [С помощью сайта nuget.org](#analyze-nuget-packages-using-nugetorg).
 
 Если анализ пакетов покажет, что они не совместимы с .NET Core и предназначены только для использования с .NET Framework, можно проверить, поможет ли выполнить перенос [режим совместимости .NET Framework](#net-framework-compatibility-mode).
@@ -52,6 +53,7 @@ netcoreapp1.0
 netcoreapp1.1
 netcoreapp2.0
 netcoreapp2.1
+netcoreapp2.2
 portable-net45-win8
 portable-win8-wpa8
 portable-net451-win81
@@ -63,24 +65,6 @@ portable-net45-win8-wpa8-wpa81
 > [!IMPORTANT]
 > При просмотре поддерживаемых пакетом моникеров TFM обратите внимание, что, несмотря на совместимость, `netcoreapp*` предназначен только для проектов .NET Core, но не для проектов .NET Standard.
 > Библиотека, предназначенная только для `netcoreapp*`, но не для `netstandard*`, может использоваться только другими приложениями .NET Core.
-
-Есть также ряд устаревших моникеров TFM из предварительных версий .NET Core, которые также могут быть совместимыми:
-
-```
-dnxcore50
-dotnet5.0
-dotnet5.1
-dotnet5.2
-dotnet5.3
-dotnet5.4
-dotnet5.5
-```
-
-Несмотря на то, что эти моникеры TFM, скорее всего, будут работать с вашим кодом, гарантии совместимости отсутствуют. Пакеты с этими моникерами TFM были созданы с использованием предварительных версий пакетов .NET Core. Обратите внимание, будут ли обновляться пакеты, использующие эти TFM, для использования в .NET Standard и когда это произойдет.
-
-> [!NOTE]
-> Чтобы использовать пакет, предназначенный для традиционной библиотеки PCL или предварительной версии .NET Core, необходимо использовать в файле проекта элемент MSBuild `PackageTargetFallback`.
-> Дополнительные сведения об этом элементе MSBuild см. в разделе [`PackageTargetFallback`](../tools/csproj.md#packagetargetfallback).
 
 ### <a name="analyze-nuget-packages-using-nugetorg"></a>Анализ пакетов NuGet с помощью сайта nuget.org
 
@@ -109,6 +93,12 @@ dotnet5.5
 ```
 
 Дополнительные сведения о том, как отключить предупреждения компилятора в Visual Studio, см. в разделе [Подавление предупреждений для пакетов NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages).
+
+### <a name="port-your-packages-to-packagereference"></a>Перенос собственных пакетов в `PackageReference`
+
+[PackageReference](/nuget/consume-packages/package-references-in-project-files) используется в .NET Core для указания зависимостей пакета. Если вы указываете пакеты с помощью файла [packages.config](/nuget/reference/packages-config), вам нужно будет преобразовать его в `PackageReference`.
+
+Дополнительные сведения см. в статье [Перенос из packages.config в PackageReference](/nuget/reference/migrate-packages-config-to-package-reference).
 
 ### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>Что делать, если зависимость пакета NuGet не работает в .NET Core
 

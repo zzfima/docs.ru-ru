@@ -3,14 +3,14 @@ title: Обзор global.json
 description: Узнайте, как использовать файл global.json, чтобы задать версию пакета SDK для .NET Core при выполнении команд .NET Core CLI.
 author: mairaw
 ms.author: mairaw
-ms.date: 07/30/2018
+ms.date: 12/03/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 05ec296c4c8210c63c7c1b5ce63ef598ca6ac719
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7cb118c16460ed593d210f5e816b2a6fd5af2ee3
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838082"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150867"
 ---
 # <a name="globaljson-overview"></a>Обзор global.json
 
@@ -46,14 +46,14 @@ ms.locfileid: "48838082"
 ```json
 {
   "sdk": {
-    "version": "2.1.300"
+    "version": "2.2.100"
   }
 }
 ```
 
 ## <a name="globaljson-and-the-net-core-cli"></a>global.json и .NET Core CLI
 
-Полезно знать, какие версии доступны, чтобы задать нужную в файле *global.json*. Полный список поддерживаемых доступных пакетов SDK вы найдете на сайте [Загрузки .NET](https://www.microsoft.com/net/download/all). Начиная с .NET Core SDK 2.1 можно выполнить следующую команду, чтобы проверить, какие версии пакета SDK уже установлены на вашем компьютере:
+Полезно знать, какие версии доступны, чтобы задать нужную в файле *global.json*. Полный список поддерживаемых доступных пакетов SDK вы найдете на сайте [Загрузки .NET](https://www.microsoft.com/net/download/all). Начиная с пакета SDK для .NET Core 2.1 можно выполнить следующую команду, чтобы проверить, какие версии пакета SDK уже установлены на вашем компьютере:
 
 ```console
 dotnet --list-sdks
@@ -64,7 +64,7 @@ dotnet --list-sdks
 Вы можете создать новый файл *global.json* в текущем каталоге, выполнив команду [dotnet new](dotnet-new.md), как в следующем примере:
 
 ```console
-dotnet new globaljson --sdk-version 2.1.300
+dotnet new globaljson --sdk-version 2.2.100
 ```
 
 ## <a name="matching-rules"></a>Правила сопоставления
@@ -103,8 +103,8 @@ dotnet new globaljson --sdk-version 2.1.300
 > [!WARNING]
 > Запускаемый проект '{startupProject}' нацелен на версию платформы '.NETCoreApp' '{targetFrameworkVersion}'. Эта версия средств командной строки .NET Entity Framework Core поддерживает только версию 2.0 или более позднюю. Сведения об использовании более старой версии средств см. в разделе <https://go.microsoft.com/fwlink/?linkid=871254>
 
-Начиная с пакета SDK для .NET Core 2.1 (v. 2.1.300) команда `dotnet ef` включена в пакет SDK. Это предупреждение означает, что проект предназначен для EF Core 1.0 или 1.1, которые несовместимы с пакетом SDK для .NET Core 2.1 и более поздних версий. Чтобы скомпилировать проект, установите на компьютере пакет SDK для .NET Core 2.0 (v. 2.1.201) или более ранней версии на вашем компьютере и определите необходимую версию пакета SDK с помощью файла *global.json*. Дополнительные сведения о команде `dotnet ef` см. в разделе [Утилиты командной строки для EF Core .NET](/ef/core/miscellaneous/cli/dotnet).
+Начиная с пакета SDK для .NET Core 2.1 (версия 2.1.300) поддерживается команда `dotnet ef`. Это предупреждение означает, что проект предназначен для EF Core 1.0 или 1.1, которые несовместимы с пакетом SDK для .NET Core 2.1 и более поздних версий. Чтобы скомпилировать проект, установите пакет SDK для .NET Core 2.0 (версия 2.1.201) или более ранней версии на своем компьютере и определите необходимую версию пакета SDK с помощью файла *global.json*. Дополнительные сведения о команде `dotnet ef` см. в разделе [Утилиты командной строки для EF Core .NET](/ef/core/miscellaneous/cli/dotnet).
 
 ## <a name="see-also"></a>См. также
 
-* [Как разрешаются пакеты SDK проекта](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
+- [Как разрешаются пакеты SDK проекта](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

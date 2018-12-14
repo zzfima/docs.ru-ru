@@ -1,18 +1,18 @@
 ---
-title: Создание приложения Hello World на C# с помощью .NET Core в Visual Studio 2017
+title: Создание приложения Hello World на C# с помощью .NET Core в Visual Studio 2017
 description: Узнайте, как создать простое консольное приложение .NET Core на C# с помощью Visual Studio 2017.
 author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
-ms.custom: vs-dotnet
-ms.openlocfilehash: 031c0a433391fbe4cdd40f6ce648f476787baf48
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: 9b28c1523196650c30a54ccaa86fe23ed60e96f9
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003026"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53129627"
 ---
-# <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Создание приложения Hello World на C# с помощью .NET Core в Visual Studio 2017
+# <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Создание приложения Hello World на C# с помощью пакета SDK для .NET Core в Visual Studio 2017
 
 В этой статье содержится пошаговое описание процессов сборки, отладки и публикации простого консольного приложения .NET Core на C# с помощью Visual Studio 2017. Visual Studio 2017 предоставляет полнофункциональную среду для разработки приложений .NET Core. Если само приложение не имеет зависимостей от конкретной платформы, его можно выполнять на любой официально поддерживаемой платформе .NET Core и в любой системе, в которой установлена .NET Core.
 
