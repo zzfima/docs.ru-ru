@@ -1,5 +1,6 @@
 ---
-title: Базовые операции со строками в .NET Framework
+title: Базовые операции со строками в .NET
+description: Дополнительные сведения о базовых операциях, которые можно выполнять со строками.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,41 +9,42 @@ helpviewer_keywords:
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f7692251a00c712f93b649d4cd6fc153bb248f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seadec18
+ms.openlocfilehash: 8621e79ad6e305f3859dc269965ecd216081f695
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567488"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150684"
 ---
-# <a name="basic-string-operations-in-net"></a><span data-ttu-id="da720-102">Базовые операции со строками в .NET</span><span class="sxs-lookup"><span data-stu-id="da720-102">Basic String Operations in .NET</span></span>
-<span data-ttu-id="da720-103">Многие приложения взаимодействуют с пользователями, формируя сообщения, основанные на данных, введенных пользователями.</span><span class="sxs-lookup"><span data-stu-id="da720-103">Applications often respond to users by constructing messages based on user input.</span></span> <span data-ttu-id="da720-104">Например, веб-узлы зачастую приветствуют вошедших пользователей персональным приветствием, содержащим его имя.</span><span class="sxs-lookup"><span data-stu-id="da720-104">For example, it is not uncommon for Web sites to respond to a newly logged-on user with a specialized greeting that includes the user's name.</span></span> <span data-ttu-id="da720-105">Ряд методов в классах <xref:System.String?displayProperty=nameWithType> и <xref:System.Text.StringBuilder?displayProperty=nameWithType> позволяют динамически создавать настраиваемые строки для отображения в пользовательском интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="da720-105">Several methods in the <xref:System.String?displayProperty=nameWithType> and <xref:System.Text.StringBuilder?displayProperty=nameWithType> classes allow you to dynamically construct custom strings to display in your user interface.</span></span> <span data-ttu-id="da720-106">С помощью этих методов также можно выполнять базовые операции со строками — например, создание новых строк из байтовых массивов, сравнение значений строк и изменение существующих строк.</span><span class="sxs-lookup"><span data-stu-id="da720-106">These methods also help you perform a number of basic string operations like creating new strings from arrays of bytes, comparing the values of strings, and modifying existing strings.</span></span>  
+# <a name="basic-string-operations-in-net"></a><span data-ttu-id="44372-103">Базовые операции со строками в .NET</span><span class="sxs-lookup"><span data-stu-id="44372-103">Basic String Operations in .NET</span></span>
+<span data-ttu-id="44372-104">Многие приложения взаимодействуют с пользователями, формируя сообщения, основанные на данных, введенных пользователями.</span><span class="sxs-lookup"><span data-stu-id="44372-104">Applications often respond to users by constructing messages based on user input.</span></span> <span data-ttu-id="44372-105">Например, веб-узлы зачастую приветствуют вошедших пользователей персональным приветствием, содержащим его имя.</span><span class="sxs-lookup"><span data-stu-id="44372-105">For example, it is not uncommon for Web sites to respond to a newly logged-on user with a specialized greeting that includes the user's name.</span></span> <span data-ttu-id="44372-106">Ряд методов в классах <xref:System.String?displayProperty=nameWithType> и <xref:System.Text.StringBuilder?displayProperty=nameWithType> позволяют динамически создавать настраиваемые строки для отображения в пользовательском интерфейсе.</span><span class="sxs-lookup"><span data-stu-id="44372-106">Several methods in the <xref:System.String?displayProperty=nameWithType> and <xref:System.Text.StringBuilder?displayProperty=nameWithType> classes allow you to dynamically construct custom strings to display in your user interface.</span></span> <span data-ttu-id="44372-107">С помощью этих методов также можно выполнять базовые операции со строками — например, создание новых строк из байтовых массивов, сравнение значений строк и изменение существующих строк.</span><span class="sxs-lookup"><span data-stu-id="44372-107">These methods also help you perform a number of basic string operations like creating new strings from arrays of bytes, comparing the values of strings, and modifying existing strings.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="da720-107">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="da720-107">In This Section</span></span>  
- [<span data-ttu-id="da720-108">Создание строк</span><span class="sxs-lookup"><span data-stu-id="da720-108">Creating New Strings</span></span>](../../../docs/standard/base-types/creating-new.md)  
- <span data-ttu-id="da720-109">Описывает основные способы комбинирования строк и преобразования объектов в строки.</span><span class="sxs-lookup"><span data-stu-id="da720-109">Describes basic ways to convert objects into strings and to combine strings.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="44372-108">В этом разделе</span><span class="sxs-lookup"><span data-stu-id="44372-108">In This Section</span></span>  
+ [<span data-ttu-id="44372-109">Создание строк</span><span class="sxs-lookup"><span data-stu-id="44372-109">Creating New Strings</span></span>](../../../docs/standard/base-types/creating-new.md)  
+ <span data-ttu-id="44372-110">Описывает основные способы комбинирования строк и преобразования объектов в строки.</span><span class="sxs-lookup"><span data-stu-id="44372-110">Describes basic ways to convert objects into strings and to combine strings.</span></span>  
   
- [<span data-ttu-id="da720-110">Сокращение и удаление знаков</span><span class="sxs-lookup"><span data-stu-id="da720-110">Trimming and Removing Characters</span></span>](../../../docs/standard/base-types/trimming.md)  
- <span data-ttu-id="da720-111">Описывает способы сокращения строк и удаления символов из строки.</span><span class="sxs-lookup"><span data-stu-id="da720-111">Describes how to trim or remove characters in a string.</span></span>  
+ [<span data-ttu-id="44372-111">Сокращение и удаление знаков</span><span class="sxs-lookup"><span data-stu-id="44372-111">Trimming and Removing Characters</span></span>](../../../docs/standard/base-types/trimming.md)  
+ <span data-ttu-id="44372-112">Описывает способы сокращения строк и удаления символов из строки.</span><span class="sxs-lookup"><span data-stu-id="44372-112">Describes how to trim or remove characters in a string.</span></span>  
   
- [<span data-ttu-id="da720-112">Заполнение строк</span><span class="sxs-lookup"><span data-stu-id="da720-112">Padding Strings</span></span>](../../../docs/standard/base-types/padding.md)  
- <span data-ttu-id="da720-113">Описывает способы вставки символов или пробелов в строку.</span><span class="sxs-lookup"><span data-stu-id="da720-113">Describes how to insert characters or empty spaces into a string.</span></span>  
+ [<span data-ttu-id="44372-113">Заполнение строк</span><span class="sxs-lookup"><span data-stu-id="44372-113">Padding Strings</span></span>](../../../docs/standard/base-types/padding.md)  
+ <span data-ttu-id="44372-114">Описывает способы вставки символов или пробелов в строку.</span><span class="sxs-lookup"><span data-stu-id="44372-114">Describes how to insert characters or empty spaces into a string.</span></span>  
   
- [<span data-ttu-id="da720-114">Сравнение строк в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="da720-114">Comparing Strings</span></span>](../../../docs/standard/base-types/comparing.md)  
- <span data-ttu-id="da720-115">Описывает сравнение содержимого двух или более строк.</span><span class="sxs-lookup"><span data-stu-id="da720-115">Describes how to compare the contents of two or more strings.</span></span>  
+ [<span data-ttu-id="44372-115">Сравнение строк в .NET Framework</span><span class="sxs-lookup"><span data-stu-id="44372-115">Comparing Strings</span></span>](../../../docs/standard/base-types/comparing.md)  
+ <span data-ttu-id="44372-116">Описывает сравнение содержимого двух или более строк.</span><span class="sxs-lookup"><span data-stu-id="44372-116">Describes how to compare the contents of two or more strings.</span></span>  
   
- [<span data-ttu-id="da720-116">Смена регистра</span><span class="sxs-lookup"><span data-stu-id="da720-116">Changing Case</span></span>](../../../docs/standard/base-types/changing-case.md)  
- <span data-ttu-id="da720-117">Описывает изменение регистра для символов в строке.</span><span class="sxs-lookup"><span data-stu-id="da720-117">Describes how to change the case of characters within a string.</span></span>  
+ [<span data-ttu-id="44372-117">Смена регистра</span><span class="sxs-lookup"><span data-stu-id="44372-117">Changing Case</span></span>](../../../docs/standard/base-types/changing-case.md)  
+ <span data-ttu-id="44372-118">Описывает изменение регистра для символов в строке.</span><span class="sxs-lookup"><span data-stu-id="44372-118">Describes how to change the case of characters within a string.</span></span>  
   
- <span data-ttu-id="da720-118">[Using the StringBuilder class](../../../docs/standard/base-types/stringbuilder.md) (Использование класса StringBuilder)</span><span class="sxs-lookup"><span data-stu-id="da720-118">[Using the StringBuilder Class](../../../docs/standard/base-types/stringbuilder.md)</span></span>  
- <span data-ttu-id="da720-119">Описывает создание и изменение динамических строковых объектов с помощью класса <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="da720-119">Describes how to create and modify dynamic string objects with the <xref:System.Text.StringBuilder> class.</span></span>  
+ <span data-ttu-id="44372-119">[Using the StringBuilder class](../../../docs/standard/base-types/stringbuilder.md) (Использование класса StringBuilder)</span><span class="sxs-lookup"><span data-stu-id="44372-119">[Using the StringBuilder Class](../../../docs/standard/base-types/stringbuilder.md)</span></span>  
+ <span data-ttu-id="44372-120">Описывает создание и изменение динамических строковых объектов с помощью класса <xref:System.Text.StringBuilder>.</span><span class="sxs-lookup"><span data-stu-id="44372-120">Describes how to create and modify dynamic string objects with the <xref:System.Text.StringBuilder> class.</span></span>  
   
- [<span data-ttu-id="da720-120">Практическое руководство. Выполнение базовых операций со строками</span><span class="sxs-lookup"><span data-stu-id="da720-120">How to: Perform Basic String Manipulations</span></span>](../../../docs/standard/base-types/basic-manipulations.md)  
- <span data-ttu-id="da720-121">Демонстрирует использование основных строковых операций.</span><span class="sxs-lookup"><span data-stu-id="da720-121">Demonstrates the use of basic string operations.</span></span>  
+ [<span data-ttu-id="44372-121">Практическое руководство. Выполнение базовых операций со строками</span><span class="sxs-lookup"><span data-stu-id="44372-121">How to: Perform Basic String Manipulations</span></span>](../../../docs/standard/base-types/basic-manipulations.md)  
+ <span data-ttu-id="44372-122">Демонстрирует использование основных строковых операций.</span><span class="sxs-lookup"><span data-stu-id="44372-122">Demonstrates the use of basic string operations.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="da720-122">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="da720-122">Related Sections</span></span>  
- [<span data-ttu-id="da720-123">Преобразование типов в .NET</span><span class="sxs-lookup"><span data-stu-id="da720-123">Type Conversion in .NET</span></span>](../../../docs/standard/base-types/type-conversion.md)  
- <span data-ttu-id="da720-124">Описывает преобразование одних типов в другие.</span><span class="sxs-lookup"><span data-stu-id="da720-124">Describes how to convert one type into another type.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="44372-123">Связанные разделы</span><span class="sxs-lookup"><span data-stu-id="44372-123">Related Sections</span></span>  
+ [<span data-ttu-id="44372-124">Преобразование типов в .NET</span><span class="sxs-lookup"><span data-stu-id="44372-124">Type Conversion in .NET</span></span>](../../../docs/standard/base-types/type-conversion.md)  
+ <span data-ttu-id="44372-125">Описывает преобразование одних типов в другие.</span><span class="sxs-lookup"><span data-stu-id="44372-125">Describes how to convert one type into another type.</span></span>  
   
- [<span data-ttu-id="da720-125">Типы форматирования</span><span class="sxs-lookup"><span data-stu-id="da720-125">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
- <span data-ttu-id="da720-126">Описывает форматирование строк с использованием описателей формата.</span><span class="sxs-lookup"><span data-stu-id="da720-126">Describes how to format strings using format specifiers.</span></span>
+ [<span data-ttu-id="44372-126">Типы форматирования</span><span class="sxs-lookup"><span data-stu-id="44372-126">Formatting Types</span></span>](../../../docs/standard/base-types/formatting-types.md)  
+ <span data-ttu-id="44372-127">Описывает форматирование строк с использованием описателей формата.</span><span class="sxs-lookup"><span data-stu-id="44372-127">Describes how to format strings using format specifiers.</span></span>
