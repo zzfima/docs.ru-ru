@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: c978f79571494d9b716df4e8a42e7f40d20766f6
-ms.sourcegitcommit: 869b5832b667915ac4a5dd8c86b1109ed26b6c08
+ms.openlocfilehash: 5ce95d84782f02df1a4f9f362629bab776a8060c
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/28/2018
-ms.locfileid: "39332964"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155029"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Основы файлового ввода-вывода и файловой системы в .NET Framework (Visual Basic)
 Классы в пространстве имен <xref:System.IO> используются для работы с дисками, файлами и каталогами.  
@@ -32,7 +32,7 @@ ms.locfileid: "39332964"
 ## <a name="stream-operations"></a>Потоковые операции  
  Данные, содержащиеся в потоке, могут поступать из памяти, файла или сокета TCP/IP. Потоки имеют основные операции, которые могут быть применены к ним:  
   
--   Чтение. Вы можете выполнять чтение из потока, передавая данные в структуру данных, например строку или массив байтов.  
+-   **Чтение**. Вы можете выполнять чтение из потока, передавая данные в структуру данных, например строку или массив байтов.  
   
 -   **Запись**. Вы можете выполнять запись в поток, передавая данные из источника данных в поток.  
   
@@ -101,5 +101,5 @@ ms.locfileid: "39332964"
 ## <a name="see-also"></a>См. также  
  [Составление потоков](../../../../standard/io/composing-streams.md)  
  [Файловый и потоковый ввод-вывод](../../../../standard/io/index.md)  
- [Асинхронный файловый ввод-вывод](../../../../standard/io/asynchronous-file-i-o.md)  
+ [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)  
  [Классы, используемые при файловом вводе-выводе в .NET Framework, и файловая система (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

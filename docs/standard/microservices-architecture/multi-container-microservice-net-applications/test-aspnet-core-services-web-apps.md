@@ -1,15 +1,15 @@
 ---
 title: Тестирование служб и веб-приложений ASP.NET Core
-description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Тестирование служб и веб-приложений ASP.NET Core
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Архитектура тестирования служб и веб-приложений ASP.NET Core в контейнерах.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 12/11/2017
-ms.openlocfilehash: 2702a273ade0e58ba93d556cfd1ecc5531027f93
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/02/2018
+ms.openlocfilehash: 67989dc9651745ce0bd9ee9bbcbde1af0b7bc452
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232863"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53148032"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Тестирование служб и веб-приложений ASP.NET Core
 
@@ -23,13 +23,13 @@ ms.locfileid: "47232863"
 
 -   Функциональные тесты для каждой микрослужбы. Позволяют проверить правильность работы приложения с точки зрения пользователя.
 
--   Тесты служб. Позволяют проверить, были ли протестированы варианты сквозного использования служб, включая одновременное тестирование нескольких служб. Для такого тестирования необходимо сначала подготовить среду. В данном случае это означает запуск служб (например, с помощью docker-compose up).
+-   Тесты служб. Позволяют проверить, были ли протестированы варианты сквозного использования служб, включая одновременное тестирование нескольких служб. Для такого тестирования необходимо сначала подготовить среду. В данном случае это означает запуск служб (например, с помощью docker-compose up).
 
 ### <a name="implementing-unit-tests-for-aspnet-core-web-apis"></a>Реализация модульных тестов для веб-API ASP.NET Core
 
 Модульное тестирование — это тестирование части приложения изолированно от его инфраструктуры и зависимостей. При модульном тестировании логики контроллера проверяется только содержимое отдельного действия или метода, а работа его зависимостей и самой платформы в целом не проверяется. Модульные тесты не выявляют проблемы с взаимодействием между компонентами. Для этого предназначены интеграционные тесты.
 
-Выполняя модульное тестирование действий контроллера, следует сосредоточиться только на этих действиях. В рамках модульного тестирования контроллера не учитываются такие аспекты, как фильтрация, маршрутизация и привязка модели. Благодаря их узкой направленности модульные тесты, как правило, проще создавать, а выполняются они быстрее. Правильно составленный набор модульных тестов можно выполнять часто без значительных затрат.
+Выполняя модульное тестирование действий контроллера, следует сосредоточиться только на этих действиях. Модульное тестирование контроллера не учитывает такие аспекты, как фильтры, маршрутизация и привязка модели (сопоставление данных запроса с ViewModel или DTO). Благодаря их узкой направленности модульные тесты, как правило, проще создавать, а выполняются они быстрее. Правильно составленный набор модульных тестов можно выполнять часто без значительных затрат.
 
 Модульные тесты реализуются на основе платформ тестирования, таких как xUnit.net MSTest, Moq и NUnit. Для примера приложения eShopOnContainers мы используем xUnit.
 
@@ -37,19 +37,26 @@ ms.locfileid: "47232863"
 
 ```csharp
 [Fact]
-public void Add_new_Order_raises_new_event()
+public async Task Get_order_detail_success()
 {
-    // Arrange
-    var street = " FakeStreet ";
-    var city = "FakeCity";
-    // Other variables omitted for brevity ...
-    // Act
-    var fakeOrder = new Order(new Address(street, city, state, country, zipcode),
-        cardTypeId, cardNumber,
-        cardSecurityNumber, cardHolderName,
-        cardExpiration);
-    // Assert
-    Assert.Equal(fakeOrder.DomainEvents.Count, expectedResult);
+    //Arrange
+    var fakeOrderId = "12";
+    var fakeOrder = GetFakeOrder();
+ 
+    //...
+
+    //Act
+    var orderController = new OrderController(
+        _orderServiceMock.Object, 
+        _basketServiceMock.Object, 
+        _identityParserMock.Object);
+
+    orderController.ControllerContext.HttpContext = _contextMock.Object;
+    var actionResult = await orderController.Detail(fakeOrderId);
+ 
+    //Assert
+    var viewResult = Assert.IsType<ViewResult>(actionResult);
+    Assert.IsAssignableFrom<Order>(viewResult.ViewData.Model);
 }
 ```
 
@@ -63,7 +70,7 @@ public void Add_new_Order_raises_new_event()
 
 Так как при интеграционном тестировании отрабатывается значительно больший, чем при модульном тестировании, объем кода, а также из-за того, что при этом затрагивается инфраструктура элементов, такие тесты обычно выполняются на порядки медленнее, чем модульные тесты. Поэтому рекомендуется ограничить количество интеграционных тестов.
 
-Платформа ASP.NET Core содержит встроенный веб-сервер тестирования, который можно использовать для обработки HTTP-запросов без нагрузки на сеть. Это позволяет выполнять тесты быстрее, чем при работе с реальными веб-серверами. Веб-сервер тестирования доступен в компоненте NuGet как Microsoft.AspNetCore.TestHost. Его можно добавлять в проекты интеграционного тестирования и использовать для размещения приложений ASP.NET Core.
+Платформа ASP.NET Core содержит встроенный веб-сервер тестирования, который можно использовать для обработки HTTP-запросов без нагрузки на сеть. Это позволяет выполнять тесты быстрее, чем при работе с реальными веб-серверами. Веб-сервер тестирования (TestServer) доступен в компоненте NuGet как Microsoft.AspNetCore.TestHost. Его можно добавлять в проекты интеграционного тестирования и использовать для размещения приложений ASP.NET Core.
 
 Как можно видеть в следующем коде, при создании интеграционных тестов для контроллеров ASP.NET Core создается экземпляр контроллера на сервере тестирования. Это похоже на HTTP-запрос, но выполняется быстрее.
 
@@ -96,33 +103,111 @@ public class PrimeWebDefaultRequestShould
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Стив Смит (Steve Smith). Тестирование контроллеров** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](/aspnet/core/mvc/controllers/testing)
+-   **Стив Смит (Steve Smith). Тестирование контроллеров** (ASP.NET Core) <br/>
+    [*https://docs.microsoft.com/aspnet/core/mvc/controllers/testing*](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
 
--   **Стив Смит (Steve Smith). Тестирование интеграции** (ASP.NET Core) [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](/aspnet/core/test/integration-tests)
+-   **Стив Смит (Steve Smith). Тестирование интеграции** (ASP.NET Core) <br/>
+    [*https://docs.microsoft.com/aspnet/core/test/integration-tests*](https://docs.microsoft.com/aspnet/core/test/integration-tests)
 
--   **Модульное тестирование в .NET Core с помощью команды dotnet test**
-    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](../../../core/testing/unit-testing-with-dotnet-test.md)
+-   **Модульное тестирование в .NET Core с помощью команды dotnet test** <br/>
+    [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
 
--   **xUnit.net**. Официальный сайт
+-   **xUnit.net**. Официальный сайт <br/>
     [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **Основные сведения о модульных тестах.**
+-   **Основные сведения о модульных тестах**. <br/>
     [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
--   **Moq**. Репозиторий GitHub.
+-   **Moq**. Репозиторий GitHub. <br/>
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
 
--   **NUnit**. Официальный сайт
+-   **NUnit**. Официальный сайт <br/>
     [*https://www.nunit.org/*](https://www.nunit.org/)
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>Реализация тестов служб в приложении с несколькими контейнерами 
 
-Как уже упоминалось, при тестировании приложения с несколькими контейнерами необходимо, чтобы все микрослужбы были запущены на узле Docker или в кластере контейнера. Для выполнения сквозного тестирования служб, включающего в себя множество операций, затрагивающих несколько микрослужб, требуется развертывание и запуск всего приложения на узле Docker с помощью docker-compose up (или аналогичного механизма, если используется оркестратор). После запуска приложения и всех его служб вы можете выполнять сквозное интеграционное и функциональное тестирование.
+Как уже упоминалось, при тестировании приложения с несколькими контейнерами необходимо, чтобы все микрослужбы были запущены на узле Docker или в кластере контейнера. Для выполнения сквозного тестирования служб, включающего в себя множество операций, затрагивающих несколько микрослужб, требуется развертывание и запуск всего приложения на узле Docker с помощью docker-compose up (или аналогичного механизма, если используется оркестратор). После запуска приложения и всех его служб вы можете выполнять сквозное интеграционное и функциональное тестирование.
 
-Здесь можно использовать несколько методов. В файле docker compose.yml, который используется для развертывания приложения (или аналогичном ему, например, docker-compose.ci.build.yml), на уровне решения можно развернуть точку входа, чтобы можно было использовать [тест dotnet](../../../core/tools/dotnet-test.md). Можно также использовать другой файл Compose, который будет запускать ваши тесты в целевом образе. Используя другой файл Compose для интеграционного тестирования, включающего в себя микрослужбы и базы данных в контейнерах, можно гарантировать, что соответствующие данные будут всегда переведены в исходное состояние перед выполнением тестов.
+Здесь можно использовать несколько методов. В файле docker-compose.yml, который используется для развертывания приложения, на уровне решения можно развернуть точку входа, чтобы можно было использовать [тест dotnet](https://docs.microsoft.com/dotnet/articles/core/tools/dotnet-test). Можно также использовать другой файл Compose, который будет запускать ваши тесты в целевом образе. Используя другой файл Compose для интеграционного тестирования, включающего в себя микрослужбы и базы данных в контейнерах, можно гарантировать, что соответствующие данные будут всегда переведены в исходное состояние перед выполнением тестов.
 
 После того как приложение Compose будет установлено и запущено, вы сможете воспользоваться преимуществами точек останова и исключений, если используется Visual Studio. Интеграционные тесты можно выполнять автоматически в конвейере непрерывной интеграции Azure DevOps Services или в любой другой системе CI/CD, которая поддерживает контейнеры Docker.
 
+## <a name="testing-in-eshoponcontainers"></a>Тестирование в eShopOnContainers
+
+Тесты для примера приложения (eShopOnContainers) были недавно реструктуризованы, и теперь существует четыре категории:
+
+1.  **модульные** тесты, обычные старые модульные тесты, содержащиеся в проектах **{MicroserviceName}.UnitTests**;
+
+2.  **функциональные и интеграционные тесты микрослужб** с тестовыми случаями, включающими инфраструктуру для каждой микрослужбы, но изолированные от других и содержащиеся в проектах **{MicroserviceName}.FunctionalTests**;
+
+3.  **функциональные и интеграционные тесты приложений**, ориентированные на интеграцию микрослужб, с тестовыми случаями, которые воздействуют на несколько микрослужб (содержатся в проекте **Application.FunctionalTests**);
+
+4.  **нагрузочные тесты**, ориентированные на время отклика для каждой микрослужбы. Эти тесты содержатся в проекте **LoadTest**, и для их выполнения требуется Visual Studio 2017 Enterprise Edition.
+
+Модульные и интеграционные тесты микрослужб содержатся в папке test, а тесты приложений и нагрузочные тесты содержатся в папке test в папке решения, как показано на рис. 6-25.
+
+![Структура тестов в eShopOnContainers: каждая служба имеет папку test, которая содержит модульные и функциональные тесты. В папке решения test содержатся функциональные и нагрузочные тесты уровня приложения.](./media/image42.png)
+
+**Рис. 6-25**. Структура папок тестов в eShopOnContainers
+
+Функциональные и интеграционные тесты микрослужбы и приложения выполняются из Visual Studio с помощью обычного средства запуска тестов. При этом сначала нужно запустить необходимые службы инфраструктуры с помощью набора файлов docker-compose, содержащихся в папке test решения:
+
+**docker-compose-test.yml**
+
+```yml
+version: '3.4'
+
+services:
+  redis.data:
+    image: redis:alpine
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+  sql.data:
+    image: microsoft/mssql-server-linux:2017-latest
+  nosql.data:
+    image: mongo
+```
+
+**docker-compose-test.override.yml**
+
+```yml
+version: '3.4'
+
+services:
+  redis.data:
+    ports:
+      - "6379:6379"
+  rabbitmq:
+    ports:
+      - "15672:15672"
+      - "5672:5672" 
+  sql.data:
+    environment:
+      - SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+    ports:
+      - "5433:1433"
+  nosql.data:
+    ports:
+      - "27017:27017"
+```
+
+Таким образом, для запуска функциональных и интеграционных тестов необходимо сначала выполнить следующую команду из папки test решения:
+
+``` console
+docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
+```
+
+Как видите, эти файлы docker-compose всего лишь запускают микрослужбы Redis, RabitMQ, SQL Server и MongoDB.
+
+### <a name="additionl-resources"></a>Дополнительные ресурсы
+
+-   **Файл сведений тестов** в репозитории eShopOnContainers на сайте GitHub <br/>
+    [*https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test*](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
+
+-   **Файл сведений нагрузочных тестов** в репозитории eShopOnContainers на сайте GitHub <br/>
+    [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
+
 >[!div class="step-by-step"]
-[Назад](subscribe-events.md)
-[Вперед](../microservice-ddd-cqrs-patterns/index.md)
+>[Назад](subscribe-events.md)
+>[Вперед](background-tasks-with-ihostedservice.md)

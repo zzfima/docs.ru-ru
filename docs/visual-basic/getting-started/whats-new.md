@@ -1,6 +1,6 @@
 ---
 title: Новые возможности Visual Basic
-ms.date: 10/04/2018
+ms.date: 10/24/2018
 f1_keywords:
 - VB.StartPage.WhatsNew
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 5c7786bd0dc8789d156959dcf94ac6bf8f4fb906
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e77dca6f87e5039f4aa668a8e08ec112c9eb1b9b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194063"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146161"
 ---
 # <a name="whats-new-for-visual-basic"></a>Новые возможности Visual Basic
 
@@ -21,10 +21,13 @@ ms.locfileid: "50194063"
   
 ## <a name="current-version"></a>Текущая версия
 
-Visual Basic 15.5 / Visual Studio 2017 версии 15.5  
-Описание новых функций см. в статье [Visual Basic 15.5](#visual-basic-155)
+Visual Basic 15.8/Visual Studio 2017 версии 15.8  
+Описание новых функций см. в статье [Visual Basic 15.8](#visual-basic-158)
 
 ## <a name="previous-versions"></a>Предыдущие версии
+
+Visual Basic 15.5 / Visual Studio 2017 версии 15.5  
+Описание новых функций см. в статье [Visual Basic 15.5](#visual-basic-155)
 
 Visual Basic 15.3 / Visual Studio 2017 версии 15.3  
 Описание новых функций см. в статье [Visual Basic 15.3](#visual-basic-153)
@@ -55,6 +58,39 @@ Visual Basic/Visual Studio .NET 2003
 
 Visual Basic/Visual Studio .NET 2002   
 Первый выпуск Visual Basic .NET
+
+## <a name="visual-basic-158"></a>Visual Basic 15.8
+
+**Оптимизированное преобразование чисел с плавающей запятой в целые числа**
+
+В предыдущих версиях Visual Basic преобразование значений [Double](../language-reference/data-types/double-data-type.md) и [Single](../language-reference/data-types/single-data-type.md) в целые числа обеспечивало относительно низкую производительность. Visual Basic 15.8 значительно повышает производительность преобразования чисел с плавающей запятой в целые числа, когда вы передаете значение, возвращаемое любым из следующих методов одной из [встроенных функций преобразования целого числа в Visual Basic](../language-reference/functions/type-conversion-functions.md) (CByte, CShort, CInt, CLng, CSByte, CUShort, CUInt, CULng), или когда значение, возвращаемое любым из следующих методов, неявно приводится к целочисленному типу, когда для [Option Strict](~/docs/visual-basic/language-reference/statements/option-strict-statement.md) задано значение `Off`:
+
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Fix(System.Single)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Double)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Object)?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Conversion.Int(System.Single)?displayProperty=nameWithType>
+- <xref:System.Math.Ceiling(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Floor(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Round(System.Double)?displayProperty=nameWithType>
+- <xref:System.Math.Truncate(System.Double)?displayProperty=nameWithType>
+
+Эта оптимизация позволяет коду выполняться быстрее — до двух раз быстрее для кода, который выполняет большое количество преобразований в целочисленные типы. В следующем примере показано несколько простых вызовов методов, которые затрагивает эта оптимизация:
+
+```vb
+Dim s As Single = 173.7619
+Dim d As Double = s 
+
+Dim i1 As Integer = CInt(Fix(s))               ' Result: 173
+Dim b1 As Byte = CByte(Int(d))                 ' Result: 173
+Dim s1 AS Short = CShort(Math.Truncate(s))     ' Result: 173
+Dim i2 As Integer = CInt(Math.Ceiling(d))      ' Result: 174
+Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
+
+```
+
+Обратите внимание, что значения с плавающей запятой усекаются, а не округляются.
 
 ## <a name="visual-basic-155"></a>Visual Basic 15.5
 

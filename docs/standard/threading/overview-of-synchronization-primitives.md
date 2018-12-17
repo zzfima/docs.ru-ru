@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b782bcb8-da6a-4c6a-805f-2eb46d504309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4d1010069e9d95488a99133f949ca112dc08f0e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 37ab502277cb413a116aa1301d1127f700097a45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201602"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53146580"
 ---
 # <a name="overview-of-synchronization-primitives"></a>Общие сведения о примитивах синхронизации
 
@@ -79,9 +79,9 @@ ms.locfileid: "50201602"
 
 ### <a name="readerwriterlockslim-class"></a>Класс ReaderWriterLockSlim
 
-Класс <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> предоставляет монопольный доступ к общему ресурсу для записи и обеспечивает одновременный доступ к ресурсу для чтения нескольким потокам. Можно использовать <xref:System.Threading.ReaderWriterLockSlim> для синхронизации доступа к общей структуре данных, поддерживающей потокобезопасные операции чтения, но требующей монопольного доступа для выполнения операции записи. Если поток запрашивает монопольный доступ (например, путем вызова метода <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType>), последующие запросы модуля чтения блокируются, пока все существующие модули чтения не освободят блокировку, а модуль записи не получит и не снимет блокировку.
+Класс <xref:System.Threading.ReaderWriterLockSlim?displayProperty=nameWithType> предоставляет монопольный доступ к общему ресурсу для записи и обеспечивает одновременный доступ к ресурсу для чтения нескольким потокам. Можно использовать <xref:System.Threading.ReaderWriterLockSlim> для синхронизации доступа к общей структуре данных, поддерживающей потокобезопасные операции чтения, но требующей монопольного доступа для выполнения операции записи. Если поток запрашивает монопольный доступ (например, путем вызова метода <xref:System.Threading.ReaderWriterLockSlim.EnterWriteLock%2A?displayProperty=nameWithType>), последующие запросы модуля чтения и записи блокируются, пока все существующие модули чтения не освободят блокировку, а модуль записи не получит и не снимет блокировку.
   
-Дополнительные сведения см. в статье о [блокировках модулей чтения и записи](reader-writer-locks.md) и справочной документации по API <xref:System.Threading.ReaderWriterLockSlim>.
+Дополнительные сведения см. в справочной документации по API <xref:System.Threading.ReaderWriterLockSlim>.
 
 ### <a name="semaphore-and-semaphoreslim-classes"></a>Классы Semaphore и SemaphoreSlim
 
@@ -134,7 +134,7 @@ ms.locfileid: "50201602"
 
 Класс <xref:System.Threading.Interlocked?displayProperty=nameWithType> предоставляет статические методы, которые выполняют простые атомарные операции над переменной. К этим атомарным операциям относится добавление, инкремент и декремент, обмен и условный обмен, зависящий от сравнения, а также операция чтения 64-разрядного целого числа.
 
-Дополнительные сведения см. в статье о [блокируемых операциях](interlocked-operations.md) и справочной документации по API <xref:System.Threading.Interlocked>.
+Дополнительные сведения см. в справочной документации по API <xref:System.Threading.Interlocked>.
 
 ## <a name="spinwait-structure"></a>Структура SpinWait
 

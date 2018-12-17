@@ -1,31 +1,31 @@
 ---
 title: Проектирование проверок на уровне модели предметной области
-description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Проектирование проверок на уровне модели предметной области
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Ключевые понятия проверок на уровне модели предметной области.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 6ff325bb062da2ebff815fc847d2247707a0bf7f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: f348e1dbb65f37f625c1dec243364af683c99b8a
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188057"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53153687"
 ---
-# <a name="designing-validations-in-the-domain-model-layer"></a>Проектирование проверок на уровне модели предметной области
+# <a name="design-validations-in-the-domain-model-layer"></a>Проектирование проверок на уровне модели предметной области
 
 В DDD правила проверки можно рассматривать как инварианты. Главной задачей агрегата является применение инвариантов в изменениях состояния для всех сущностей внутри него.
 
 Сущности предметной области всегда должны быть допустимыми. Существует определенное количество инвариантов для объекта, которые всегда должны быть истинными. Например, для объекта позиции заказа всегда должно быть указано количество в виде положительного целого числа, а также название и цена изделия. Таким образом, за применение инвариантов отвечают сущности предметной области (особенно для корня агрегата), а право на существование имеет только допустимый объект сущности. Инвариантные правила выражаются в виде контрактов. При их нарушении вызываются исключения или выводятся уведомления.
 
-Это обуславливается тем, что возникает множество ошибок, поскольку объекты находятся в состоянии, в котором они никогда не должны быть. Далее приводится объяснение Грега Янга (Greg Young) в рамках [онлайн-обсуждения](https://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/).
+Это обуславливается тем, что возникает множество ошибок, поскольку объекты находятся в состоянии, в котором они никогда не должны быть. Далее приводится объяснение Грега Янга (Greg Young) в рамках [онлайн-обсуждения](https://jeffreypalermo.com/2009/05/the-fallacy-of-the-always-valid-entity/).
 
 Предположим, что у нас есть служба SendUserCreationEmailService, принимающая UserProfile... Как в этой службе можно рационализировать тот момент, что имя имеет ненулевое значение? Нужно выполнять еще одну проверку? Или, что более вероятно, вы просто игнорируете проверку и надеетесь на лучшее — вы надеетесь, что до отправки вам проверку выполнил кто-то другой. Конечно, в рамках разработки на уровне тестирования один из первых создаваемых тестов должен проверять следующее условие: если сообщение отправляется клиенту с пустым именем, должна возникнуть ошибка. Но как только мы начинаем писать эти виды тестов снова и снова, мы понимаем, что если бы мы не разрешили использовать имя с пустым значением, всех этих тестов не было бы.
 
-## <a name="implementing-validations-in-the-domain-model-layer"></a>Реализация проверок на уровне модели предметной области
+## <a name="implement-validations-in-the-domain-model-layer"></a>Реализация проверок на уровне модели предметной области
 
 Как правило, проверки обычно реализуются в конструкторах сущностей предметной области или в методах, которые могут обновлять сущность. Существует несколько способов реализации проверки, например проверка данных и вызов исключений, если проверка завершается ошибкой. Есть более сложные схемы, например использование шаблона спецификации для проверок и шаблона уведомления для возвращения коллекции ошибок вместо возвращения исключений, возникающих при каждой проверке.
 
-### <a name="validating-conditions-and-throwing-exceptions"></a>Проверка условий и создание исключений
+### <a name="validate-conditions-and-throw-exceptions"></a>Проверка условий и создание исключений
 
 В следующем примере кода показан простейший способ проверки сущности предметной области путем создания исключения. В конце этого раздела приводятся ссылки на более сложные реализации на основе шаблонов, которые обсуждались ранее.
 
@@ -53,51 +53,29 @@ public void SetAddress(string line1, string line2,
 
 Аналогичный подход можно использовать в конструкторе сущности, когда вызывается исключение для проверки допустимости сущности после ее создания.
 
-### <a name="using-validation-attributes-in-the-model-based-on-data-annotations"></a>Использование атрибутов проверки атрибутов в модели на основе заметок к данным
+### <a name="use-validation-attributes-in-the-model-based-on-data-annotations"></a>Использование атрибутов проверки в модели на основе заметок к данным
 
-Следующий подход заключается в использовании атрибутов проверки на основании заметок к данным. Атрибуты проверки — это способ настройки проверки модели таким образом, чтобы она по существу была похожа на проверку полей в таблицах базы данных. Сюда входят ограничения, например назначение типов данных или обязательных полей. Другие виды проверок включают в себя применение шаблонов к данным, таких как номера кредитных карт, номера телефонов или адреса электронной почты, для реализации бизнес-правил. Атрибуты проверки упрощают применение требований.
+Заметки к данным, например атрибуты Required или MaxLength, можно использовать для настройки свойств полей базы данных EF Core, как подробно описывается в разделе [Сопоставление таблиц](infrastructure-persistence-layer-implemenation-entity-framework-core.md#table-mapping), но [они больше не работают для проверки сущностей в EF Core](https://github.com/aspnet/EntityFrameworkCore/issues/3680) (как и метод <xref:System.ComponentModel.DataAnnotations.IValidatableObject.Validate%2A?displayProperty=nameWithType>), как это было с версии EF 4.x в .NET Framework.
 
-Однако, как показано в следующем коде, этот подход может быть слишком интрузивным для модели DDD, так как он принимает зависимость от ModelState.IsValid из Microsoft.AspNetCore.Mvc.ModelState, который следует вызывать из контроллеров MVC. Проверка модели проводится перед вызовом каждого действия контроллера. Метод действия отвечает за проверку результата вызова метода ModelState.IsValid и соответствующую реакцию. Решение о его использовании зависит от того, насколько тесно модель должна быть связана с этой инфраструктурой.
+Заметки к данным и интерфейс <xref:System.ComponentModel.DataAnnotations.IValidatableObject> по-прежнему можно использовать для проверки модели во время привязки модели, до вызова действий контроллера, как обычно, но эта модель должна быть моделью представления или DTO, а это забота MVC или API, а не модели предметной области.
 
-```csharp
-using System.ComponentModel.DataAnnotations;
-// Other using statements ...
-// Entity is a custom base class which has the ID
-public class Product : Entity
-{
-    [Required]
-    [StringLength(100)]
-    public string Title { get; private set; }
+Учитывая это принципиальное различие, вы по-прежнему можете использовать заметки к данным и `IValidatableObject` в классе сущности для проверки, если ваши действия получают параметр объекта класса сущности, что не рекомендуется. В этом случае проверка будет проведена после привязки модели, непосредственно перед вызовом действия, и вы можете проверить свойство ModelState.IsValid контроллера для проверки результата, но повторим: это происходит в контроллере, не до сохранения объекта сущности в DbContext, как это было с версии EF 4.x.
 
-    [Required]
-    [Range(0, 999.99)]
-    public decimal Price { get; private set; }
+Можно реализовать пользовательскую проверку в классе сущности с помощью заметок к данным и метода `IValidatableObject.Validate` путем переопределения метода SaveChanges для DbContext.
 
-    [Required]
-    [VintageProduct(1970)]
-    [DataType(DataType.Date)]
-    public DateTime ReleaseDate { get; private set; }
+Вы видите пример реализации для проверки сущностей `IValidatableObject` в [этом комментарии на GitHub](https://github.com/aspnet/EntityFrameworkCore/issues/3680#issuecomment-155502539). Этот пример не выполняет проверки на основе атрибутов, но их легко реализовать с помощью отражения в том же переопределении.
 
-    [Required]
-    [StringLength(1000)]
-    public string Description { get; private set; }
-
-    // Constructor...
-    // Additional methods for entity logic and constructor...
-}
-```
-
-Однако с точки зрения DDD наилучшая оптимизация модели предметной области достигается за счет использования исключений в методах поведения сущности или при реализации шаблонов спецификации и уведомления для применения правил проверки. Системы проверок, такие как заметки к данным в ASP.NET Core, или другие системы, такие как FluentValidation, предъявляют требование к вызову платформы приложений. Например, при вызове метода ModelState.IsValid в заметках к данным необходимо вызвать контроллеры ASP.NET.
+Однако с точки зрения DDD наилучшая оптимизация модели предметной области достигается за счет использования исключений в методах поведения сущности или при реализации шаблонов спецификации и уведомления для применения правил проверки.
 
 Заметки к данным целесообразно использовать на уровне приложения в классах ViewModel (а не в сущностях предметной области), которые будут принимать входные данные, чтобы осуществлять проверку модели на уровне пользовательского интерфейса. Однако это не должно происходить при исключении проверки в модели предметной области.
 
-### <a name="validating-entities-by-implementing-the-specification-pattern-and-the-notification-pattern"></a>Проверка сущностей путем реализации шаблона спецификации и шаблона уведомлений
+### <a name="validate-entities-by-implementing-the-specification-pattern-and-the-notification-pattern"></a>Проверка сущностей путем реализации шаблона спецификации и шаблона уведомлений
 
 Наконец, более сложный подход к реализации проверок в модели предметной области заключается в реализации шаблона спецификации вместе с шаблоном уведомления, как описано в некоторых приведенных далее дополнительных ресурсах.
 
 Следует отметить, что можно использовать только один из этих шаблонов. Например, можно выполнять проверки вручную с помощью операторов управления и применять шаблон уведомления для сбора и возвращения списка ошибок, обнаруженных при проверке.
 
-### <a name="using-deferred-validation-in-the-domain"></a>Использование отложенной проверки в предметной области
+### <a name="use-deferred-validation-in-the-domain"></a>Использование отложенной проверки в предметной области
 
 Существуют различные методы обработки отложенных проверок в предметной области. Вон Вернон (Vaughn Vernon) рассматривает их в своей книге [Implementing Domain-Driven Design](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577) (Реализация разработки на основе предметной области) в разделе, посвященном проверке.
 
@@ -109,28 +87,27 @@ public class Product : Entity
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Рэйчел Аппель (Rachel Appel). Общие сведения о проверке модели в ASP.NET Core MVC**
-    [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
+- **Рэйчел Аппель (Rachel Appel). Общие сведения о проверке модели в ASP.NET Core MVC** \
+  [*https://docs.microsoft.com/aspnet/core/mvc/models/validation*](https://docs.microsoft.com/aspnet/core/mvc/models/validation)
 
--   **Рик Андерсон (Rick Anderson). Добавление проверки**
-    [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+- **Рик Андерсон (Rick Anderson). Добавление проверки** \
+  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
--   **Мартин Фоулер (Martin Fowler). Замена исключений уведомлениями в проверках**
-    [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
+- **Мартин Фоулер (Martin Fowler). Замена исключений уведомлениями в проверках** \
+  [*https://martinfowler.com/articles/replaceThrowWithNotification.html*](https://martinfowler.com/articles/replaceThrowWithNotification.html)
 
--   **Спецификация и шаблоны уведомлений**
-    [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
+- **Спецификация и шаблоны уведомлений** \
+  [*https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns*](https://www.codeproject.com/Tips/790758/Specification-and-Notification-Patterns)
 
--   **Лев Городинский (Lev Gorodinski). Проверка в проблемно-ориентированном программировании (DDD)**
-    [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
+- **Лев Городинский (Lev Gorodinski). Проверка в проблемно-ориентированном программировании (DDD)** \
+  [*http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/*](http://gorodinski.com/blog/2012/05/19/validation-in-domain-driven-design-ddd/)
 
--   **Колин Джек (Colin Jack) Проверка модели предметной области**
-    [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
+- **Колин Джек (Colin Jack) Проверка модели предметной области** \
+  [*http://colinjack.blogspot.com/2008/03/domain-model-validation.html*](http://colinjack.blogspot.com/2008/03/domain-model-validation.html)
 
--   **Джимми Богард (Jimmy Bogard). Проверка в мире DDD**
-    [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
-
+- **Джимми Богард (Jimmy Bogard). Проверка в мире DDD** \
+  [*https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/*](https://lostechies.com/jimmybogard/2009/02/15/validation-in-a-ddd-world/)
 
 >[!div class="step-by-step"]
-[Назад](enumeration-classes-over-enum-types.md)
-[Вперед](client-side-validation.md)
+>[Назад](enumeration-classes-over-enum-types.md)
+>[Вперед](client-side-validation.md)

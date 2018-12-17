@@ -1,5 +1,6 @@
 ---
 title: Рекомендации по использованию строк в .NET
+description: Узнайте, как эффективно использовать строки в приложениях .NET.
 ms.date: 09/13/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,12 +20,13 @@ helpviewer_keywords:
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6114553c6bcdac8521c80c10f470d4c38b15e738
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.custom: seodec18
+ms.openlocfilehash: f5ed250df1c8d4d96dee5a0561f952193078ddda
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080342"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150983"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>Рекомендации по использованию строк в .NET
 <a name="top"></a> .NET предоставляет широкие возможности для разработки локализованных и глобализованных приложений и позволяет легко применять правила для текущего или какого-то определенного языка и региональных параметров при выполнении типичных операций, таких как сортировка и отображение строк. Однако сортировка и сравнение строк не всегда выполняется с учетом языка и региональных параметров. Например, строки, которые используются внутри приложения, как правило, должны обрабатываться одинаково независимо от выбранного языка и региональных параметров. Если независимые от языка и региональных параметров строковые данные, такие как теги XML, теги HTML, имена пользователей, пути к файлам и имена системных объектов, интерпретируются как зависимые от языка и региональных параметров, в коде приложения могут возникать незначительные ошибки, может наблюдаться низкая производительность, а в некоторых случаях и проблемы безопасности.  
@@ -85,7 +87,7 @@ ms.locfileid: "47080342"
 ## <a name="specifying-string-comparisons-explicitly"></a>Явное задание сравнений строк  
  Большинство методов обработки строк в .NET являются перегруженными. Как правило, одна или несколько перегрузок принимают настройки по умолчанию, а другие — нет и вместо этого определяют требуемый точный способ сравнения и обработки строк. Большинство методов, не использующих значения по умолчанию, включают параметр типа <xref:System.StringComparison>, который представляет собой перечисление, явно задающее правила сравнения строк по языку, региональным параметрам и регистру. В следующей таблице описаны элементы перечисления <xref:System.StringComparison> .  
   
-|Элемент StringComparison|Описание:|  
+|Элемент StringComparison|Описание|  
 |-----------------------------|-----------------|  
 |<xref:System.StringComparison.CurrentCulture>|Выполняет сравнение с учетом регистра, используя текущий язык и региональные параметры.|  
 |<xref:System.StringComparison.CurrentCultureIgnoreCase>|Выполняет сравнение без учета регистра, используя текущий язык и региональные параметры.|  
@@ -144,15 +146,15 @@ ms.locfileid: "47080342"
   
 -   Перегрузки <xref:System.String.Compare%2A?displayProperty=nameWithType>, не включающие параметр <xref:System.StringComparison>.  
   
--   Перегрузки <xref:System.String.CompareTo%2A?displayProperty=nameWithType>.  
+-   Перегрузки<xref:System.String.CompareTo%2A?displayProperty=nameWithType> .  
   
--   Метод <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> по умолчанию и метод <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> с параметром `null`<xref:System.Globalization.CultureInfo>.  
+-   Метод по умолчанию <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> и метод <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> с параметром `null`<xref:System.Globalization.CultureInfo> .  
   
--   Метод <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> по умолчанию и метод <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> с параметром `null`<xref:System.Globalization.CultureInfo>.  
+-   Метод по умолчанию <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> и метод <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> с параметром `null`<xref:System.Globalization.CultureInfo> .  
   
--   Перегрузки <xref:System.String.IndexOf%2A?displayProperty=nameWithType>, принимающие в качестве параметра поиска <xref:System.String> и не имеющие параметра <xref:System.StringComparison>.  
+-   Перегрузки<xref:System.String.IndexOf%2A?displayProperty=nameWithType> , принимающие в качестве параметра поиска <xref:System.String> и не имеющие параметра <xref:System.StringComparison> .  
   
--   Перегрузки <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType>, принимающие в качестве параметра поиска <xref:System.String> и не имеющие параметра <xref:System.StringComparison>.  
+-   Перегрузки<xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> , принимающие в качестве параметра поиска <xref:System.String> и не имеющие параметра <xref:System.StringComparison> .  
   
  В любом случае рекомендуется вызвать перегрузку, имеющую параметр <xref:System.StringComparison> , чтобы сделать назначение вызова метода очевидным.  
   
@@ -242,7 +244,7 @@ ms.locfileid: "47080342"
 |----------|--------------|-----------------------------------------------------|  
 |Внутренние идентификаторы с учетом регистра<br /><br /> Идентификаторы с учетом регистра в таких стандартах, как XML и HTTP.<br /><br /> Параметры безопасности с учетом регистра.|Нелингвистические идентификаторы с точным соответствием байтов.|<xref:System.StringComparison.Ordinal>|  
 |Внутренние идентификаторы без учета регистра.<br /><br /> Идентификаторы без учета регистра в таких стандартах, как XML и HTTP.<br /><br /> Пути к файлам.<br /><br /> Ключи реестра и значения.<br /><br /> Переменные среды.<br /><br /> Идентификаторы ресурсов (например, имена дескрипторов).<br /><br /> Параметры безопасности без учета регистра.|Нелингвистический идентификатор, в котором регистр не учитывается; особенно данные, хранящиеся в большинстве системных служб Windows.|<xref:System.StringComparison.OrdinalIgnoreCase>|  
-|Некоторые сохраненные лингвистически релевантные данные.<br /><br /> Отображение лингвистических данных, требующее фиксированного порядка сортировки.|Лингвистически релевантные данные без учета языка и региональных параметров.|<xref:System.StringComparison.InvariantCulture><br /><br /> - или -<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
+|Некоторые сохраненные лингвистически релевантные данные.<br /><br /> Отображение лингвистических данных, требующее фиксированного порядка сортировки.|Лингвистически релевантные данные без учета языка и региональных параметров.|<xref:System.StringComparison.InvariantCulture><br /><br /> -или-<br /><br /> <xref:System.StringComparison.InvariantCultureIgnoreCase>|  
 |Данные, отображаемые пользователю.<br /><br /> Пользовательский ввод в большинстве случаев.|Данные, требующие местных лингвистических правил.|<xref:System.StringComparison.CurrentCulture><br /><br /> - или -<br /><br /> <xref:System.StringComparison.CurrentCultureIgnoreCase>|  
   
  [К началу](#top)  
@@ -254,7 +256,7 @@ ms.locfileid: "47080342"
 ### <a name="stringcompare"></a>String.Compare  
  Интерпретация по умолчанию: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  
   
- Поскольку эта операция наиболее тесно связана с интерпретацией строк, необходимо изучить все экземпляры вызовов этого метода, чтобы определить, должны ли строки интерпретироваться с учетом текущего языка и региональных параметров, либо их нужно (символически) отделить от языка и региональных параметров. Обычно выбирается последнее, и тогда должно использоваться сравнение <xref:System.StringComparison.Ordinal?displayProperty=nameWithType>.  
+ Поскольку эта операция наиболее тесно связана с интерпретацией строк, необходимо изучить все экземпляры вызовов этого метода, чтобы определить, должны ли строки интерпретироваться с учетом текущего языка и региональных параметров, либо их нужно (символически) отделить от языка и региональных параметров. Обычно выбирается последнее, и тогда должно использоваться сравнение <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> .  
   
  Класс <xref:System.Globalization.CompareInfo?displayProperty=nameWithType>, возвращаемый свойством <xref:System.Globalization.CultureInfo.CompareInfo%2A?displayProperty=nameWithType>, также включает метод <xref:System.Globalization.CompareInfo.Compare%2A>, предоставляющий большое количество соответствующих параметров (порядковый, игнорирование пробела, игнорирование типа каны и т. д.) посредством перечисления флага <xref:System.Globalization.CompareOptions>.  
   
@@ -305,17 +307,17 @@ ms.locfileid: "47080342"
 ## <a name="methods-that-perform-string-comparison-indirectly"></a>Методы, выполняющие сравнение строк опосредованно  
  Некоторые нестроковые методы, основным назначением которых является сравнение строк, используют тип <xref:System.StringComparer> . Класс <xref:System.StringComparer> включает шесть статических свойств, возвращающих экземпляры <xref:System.StringComparer>, методы <xref:System.StringComparer.Compare%2A?displayProperty=nameWithType> которых выполняют следующие типы сравнения строк.  
   
--   Сравнения строк с учетом языка и региональных параметров с использованием текущего языка и региональных параметров. Этот объект <xref:System.StringComparer> возвращается свойством <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType>.  
+-   Сравнения строк с учетом языка и региональных параметров с использованием текущего языка и региональных параметров. Этот объект <xref:System.StringComparer> возвращается свойством <xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType> .  
   
--   Сравнение без учета регистра с использованием текущего языка и региональных параметров. Этот объект <xref:System.StringComparer> возвращается свойством <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType>.  
+-   Сравнение без учета регистра с использованием текущего языка и региональных параметров. Этот объект <xref:System.StringComparer> возвращается свойством <xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType> .  
   
--   Сравнения без учета языка и региональных параметров с использованием правил сравнения слов инвариантного языка. Этот объект <xref:System.StringComparer> возвращается свойством <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType>.  
+-   Сравнения без учета языка и региональных параметров с использованием правил сравнения слов инвариантного языка. Этот объект <xref:System.StringComparer> возвращается свойством <xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType> .  
   
 -   Сравнения без учета регистра, языка и региональных параметров с использованием правил сравнения слов инвариантного языка. Этот объект <xref:System.StringComparer> возвращается свойством <xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType>.  
   
--   Порядковое сравнение. Этот объект <xref:System.StringComparer> возвращается свойством <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType>.  
+-   Порядковое сравнение. Этот объект <xref:System.StringComparer> возвращается свойством <xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> .  
   
--   Порядковое сравнение без учета регистра. Этот объект <xref:System.StringComparer> возвращается свойством <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType>.  
+-   Порядковое сравнение без учета регистра. Этот объект <xref:System.StringComparer> возвращается свойством <xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> .  
   
 ### <a name="arraysort-and-arraybinarysearch"></a>Array.Sort и Array.BinarySearch  
  Интерпретация по умолчанию: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>.  

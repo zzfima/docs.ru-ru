@@ -1,15 +1,15 @@
 ---
 title: Возможность адресации микрослужб и реестр служб
-description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Возможность адресации микрослужб и реестр служб
+description: Понимание роли реестров образов контейнера в архитектуре микрослужб.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: ec0617c5a5c1861f3596e12f3d7a7017a448239e
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.date: 09/20/2018
+ms.openlocfilehash: 60afb2e06c0c9a37104a82a74de016da5c134a61
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865571"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53145849"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>Возможность адресации микрослужб и реестр служб
 
@@ -17,22 +17,21 @@ ms.locfileid: "43865571"
 
 [Шаблон реестра служб](https://microservices.io/patterns/service-registry.html) является ключевым элементом обнаружения служб. Он представляет собой базу данных, содержащую сетевые расположения экземпляров служб. Реестр служб должен обладать высокой доступностью и быть актуальным. Клиенты могут кэшировать сетевые расположения, полученные из реестра служб. Однако эти сведения со временем устаревают, и в результате клиенты больше не могут обнаружить экземпляры служб. Поэтому реестр служб представляет собой кластер серверов, которые используют протокол репликации для обеспечения согласованности.
 
-В некоторых средах развертывания микрослужб (называемых кластерами и рассматриваемых далее) функция обнаружения служб встроена. Например, в среде Службы контейнеров Azure регистрацию и отмену регистрации экземпляров служб могут осуществлять службы Kubernetes и DC/OS с Marathon. Они также запускают прокси-сервер в каждом узле кластера, который выступает в роли маршрутизатора обнаружения на стороне сервера. Еще одним примером может служить платформа Azure Service Fabric, которая также предоставляет реестр служб посредством входящей в ее состав службы именования.
+В некоторых средах развертывания микрослужб (называемых кластерами и рассматриваемых далее) функция обнаружения служб встроена. Например, служба контейнеров Azure в среде Kubernetes (AKS) обрабатывает регистрацию и отмену регистрации экземпляров служб. Она также запускает прокси-сервер в каждом узле кластера, который выступает в роли маршрутизатора обнаружения на стороне сервера. Еще одним примером может служить платформа Azure Service Fabric, которая также предоставляет реестр служб посредством входящей в ее состав службы именования.
 
 Обратите внимание на то, что по своему назначению реестр служб пересекается с шаблоном шлюза API, который помогает решать аналогичную проблему. Например, [обратный прокси-сервер Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy) является вариантом реализации шлюза API, основанным на службе именования Service Fabric, который помогает преобразовывать адреса в расположения внутренних служб.
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Крис Ричардсон (Chris Richardson). Шаблон: реестр служб**
-    *https://microservices.io/patterns/service-registry.html*
+- **Крис Ричардсон (Chris Richardson). Шаблон: реестр служб** \
+  [*https://microservices.io/patterns/service-registry.html*](https://microservices.io/patterns/service-registry.html)
 
--   **Auth0. Реестр служб**
-    [*https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/*](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
+- **Auth0. Реестр служб** \
+  [*https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/*](https://auth0.com/blog/an-introduction-to-microservices-part-3-the-service-registry/)
 
--   **Габриэль Шенкер (Gabriel Schenker). Обнаружение служб**
-    [*https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/*](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
-
+- **Габриэль Шенкер (Gabriel Schenker). Обнаружение служб** \
+  [*https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/*](https://lostechies.com/gabrielschenker/2016/01/27/service-discovery/)
 
 >[!div class="step-by-step"]
-[Назад](maintain-microservice-apis.md)
-[Вперед](microservice-based-composite-ui-shape-layout.md)
+>[Назад](maintain-microservice-apis.md)
+>[Вперед](microservice-based-composite-ui-shape-layout.md)

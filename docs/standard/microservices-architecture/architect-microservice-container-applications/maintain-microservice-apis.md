@@ -1,15 +1,15 @@
 ---
 title: Создание, развитие и управление версиями API-интерфейсов и контрактов микрослужб
-description: Архитектура микрослужб .NET для контейнерных приложений .NET | Создание, развитие и управление версиями API-интерфейсов и контрактов микрослужб
+description: Создание API микрослужбы и контрактов с учетом развития и управления версиями из-за изменения потребностей.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: a2ec577a12cf677c2ec5e20a6f3e862911c82fbb
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 09/20/2018
+ms.openlocfilehash: 5d3e031217159a695b67f67859b8cf412a4419c2
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105697"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152543"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Создание, развитие и управление версиями API-интерфейсов и контрактов микрослужб
 
@@ -27,16 +27,15 @@ API микрослужбы представляет собой контракт 
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Скотт Ханселман (Scott Hanselman). Упрощение управления версиями веб-API ASP.NET Core с поддержкой REST**
-    <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
+- **Скотт Ханселман (Scott Hanselman). Упрощение управления версиями веб-API ASP.NET Core с поддержкой REST** \
+  [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Управление версиями веб-API с поддержкой REST**
-    [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+- **Управление версиями веб-API с поддержкой REST** \
+  [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
--   **Рой Филдинг (Roy Fielding). Управление версиями, гипермедиа и REST**
-    <https://www.infoq.com/articles/roy-fielding-on-versioning>
-
+- **Рой Филдинг (Roy Fielding). Управление версиями, гипермедиа и REST** \
+  [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 >[!div class="step-by-step"]
-[Назад](asynchronous-message-based-communication.md)
-[Вперед](microservices-addressability-service-registry.md)
+>[Назад](asynchronous-message-based-communication.md)
+>[Вперед](microservices-addressability-service-registry.md)

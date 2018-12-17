@@ -1,6 +1,6 @@
 ---
 title: Составное форматирование
-ms.date: 03/30/2017
+ms.date: 10/26/2018
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -15,31 +15,34 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 17ec17d3b90dc7248d1497be1f7d31a324ad10b2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 60ccf478e974e24b437aa75bc9452033bd19a00f
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397937"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53126865"
 ---
 # <a name="composite-formatting"></a>Составное форматирование
+
 В качестве входных данных для составного форматирования в .NET используется список объектов и строка составного формата. Строка составного формата состоит из фиксированного текста, в который включены индексированные местозаполнители, которые называются элементами форматирования и соответствуют объектам из списка. Операция форматирования создает результирующую строку, состоящую из исходного фиксированного текста, в который включено строковое представление объектов из списка.  
   
- Функция составного форматирования поддерживается следующими методами:  
+> [!IMPORTANT]
+> Вместо использования строк составного формата можно использовать *интерполированные строки*, если их поддерживает язык и языковая версия, которые вы используете. Интерполированная строка — это строка, которая содержит *интерполированные выражения*. Каждое интерполированное выражение завершается значением выражения и включается в строку результатов, если строка назначена. Дополнительные сведения см. в разделе [Интерполяция строк (справочник по C#)](../../csharp/language-reference/tokens/interpolated.md) и [Интерполированные строки (справочник по Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md).
+
+Возможность составного форматирования поддерживается следующими методами:  
   
--   Метод <xref:System.String.Format%2A?displayProperty=nameWithType>, который возвращает отформатированную результирующую строку.  
+- Метод <xref:System.String.Format%2A?displayProperty=nameWithType>, который возвращает отформатированную результирующую строку.  
   
--   Метод <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, который добавляет отформатированную результирующую строку в объект <xref:System.Text.StringBuilder>.  
+- Метод <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType>, который добавляет отформатированную результирующую строку в объект <xref:System.Text.StringBuilder>.   
+- Некоторые перегруженные версии метода <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, которые отображают отформатированную результирующую строку в консоли.  
   
--   Некоторые перегруженные версии метода <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, которые отображают отформатированную результирующую строку в консоли.  
+- Некоторые перегруженные версии метода <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>, которые записывают отформатированную результирующую строку в поток или файл. Классы, производные от <xref:System.IO.TextWriter>, например <xref:System.IO.StreamWriter> и <xref:System.Web.UI.HtmlTextWriter>, также поддерживают эту функцию.  
   
--   Некоторые перегруженные версии метода <xref:System.IO.TextWriter.WriteLine%2A?displayProperty=nameWithType>, которые записывают отформатированную результирующую строку в поток или файл. Классы, производные от <xref:System.IO.TextWriter>, например <xref:System.IO.StreamWriter> и <xref:System.Web.UI.HtmlTextWriter>, также поддерживают эту функцию.  
+- Метод <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, который выводит отформатированное сообщение в прослушиватели трассировки.  
   
--   Метод <xref:System.Diagnostics.Debug.WriteLine%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, который выводит отформатированное сообщение в прослушиватели трассировки.  
+- Методы <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> и <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, которые выводят отформатированные сообщения в прослушиватели трассировки.  
   
--   Методы <xref:System.Diagnostics.Trace.TraceError%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, <xref:System.Diagnostics.Trace.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> и <xref:System.Diagnostics.Trace.TraceWarning%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, которые выводят отформатированные сообщения в прослушиватели трассировки.  
-  
--   Метод <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, который записывает информационный метод в прослушиватели трассировки.  
+- Метод <xref:System.Diagnostics.TraceSource.TraceInformation%28System.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>, который записывает информационный метод в прослушиватели трассировки.  
   
 ## <a name="composite-format-string"></a>Строка составного формата  
  Строка составного формата и список объектов используются в качестве аргументов методов, поддерживающих составное форматирование. Строка составного формата состоит из блоков фиксированного текста числом от нуля и больше, перемежаемых одним или несколькими элементами форматирования. Фиксированным текстом может являться произвольная строка, а каждый элемент форматирования должен соответствовать объекту или упакованной структуре из списка. В ходе составного форматирования создается новая результирующая строка, в которой все элементы форматирования заменены на строковое представление соответствующих объектов из списка.  

@@ -1,5 +1,6 @@
 ---
-title: Привязки в регулярных выражениях
+title: Привязки в регулярных выражениях .NET
+description: Узнайте, как использовать привязки в шаблонах регулярных выражений.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ae07afa2ad2110591139d395ffd8e8cfa5e2347
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.custom: seodec18
+ms.openlocfilehash: d5d07dd290a857a0c6dbfcd9074d8d16ff47e6cd
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085190"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53155042"
 ---
 # <a name="anchors-in-regular-expressions"></a>Привязки в регулярных выражениях
 <a name="top"></a> Привязки (или атомарные утверждения нулевой ширины) указывают положение в строке, где должно быть найдено соответствие. При использовании привязки в выражении поиска обработчик регулярных выражений не проходит по строке и не потребляет символы; он ищет соответствия только в заданном местоположении. Например, `^` указывает, что соответствие должно начаться в начале строки. Таким образом, регулярное выражение `^http:` находит соответствие для http, только если этот элемент находится в начале строки. В таблице ниже перечислены привязки, поддерживаемые регулярными выражениями в .NET.  
   
-|Привязка|Описание:|  
+|Привязка|Описание|  
 |------------|-----------------|  
 |`^`|По умолчанию соответствие должно обнаруживаться в начале строки. В многострочном режиме соответствие должно обнаруживаться в начале линии. Дополнительные сведения см. в разделе [Начало строки](#Start).|  
 |`$`|По умолчанию соответствие должно обнаруживаться в конце строки или перед символом `\n` в конце строки. В многострочном режиме соответствие должно обнаруживаться в конце линии или перед символом `\n` в конце линии. Дополнительные сведения см. в разделе [Конец строки](#End).|  
@@ -46,7 +48,7 @@ ms.locfileid: "44085190"
   
 -   При вызове перегрузки <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29> удается найти только первую подстроку в строке ввода, которая соответствует шаблону регулярного выражения.  
   
--   Вызов перегрузки <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> с параметром `options`, имеющим значение <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, позволяет найти все пять подстрок.  
+-   Вызов перегрузки <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29> с параметром `options` , имеющим значение <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> , позволяет найти все пять подстрок.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/startofstring1.cs#1)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/startofstring1.vb#1)]  
@@ -73,7 +75,7 @@ ms.locfileid: "44085190"
   
  Если используется символ `$` с параметром <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, соответствие также может иметь место в конце строки. Обратите внимание, что `$` соответствует `\n` , но не соответствует `\r\n` (комбинации символов возврата и перевода строки каретки или CR/LF). Чтобы сопоставить комбинацию символов CR/LF, включите `\r?$` в шаблон регулярного выражения.  
   
- В следующем примере добавляется привязка `$` к шаблону регулярного выражения, используемого в примере из раздела [Начало строки](#Start) . При использовании с исходной входной строкой, которая включает пять строк текста, методу <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> не удается найти соответствие, потому что конец первой строки не соответствует шаблону `$`. Если исходная входная строка разбивается на массив строк, методу <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> удается найти соответствие для каждой из пяти строк. Если метод <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> вызывается с параметром `options`, для которого задано значение <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, соответствия не найдены, потому что шаблон регулярного выражения не учитывает элемент возврата каретки (\u+000D). Однако изменение шаблона регулярного выражения (замена `$` последовательностью `\r?$`) приведет к тому, что вызов метода <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> с параметром `options`, равным <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, позволит снова найти пять соответствий.  
+ В следующем примере добавляется привязка `$` к шаблону регулярного выражения, используемого в примере из раздела [Начало строки](#Start) . При использовании с исходной входной строкой, которая включает пять строк текста, методу <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> не удается найти соответствие, потому что конец первой строки не соответствует шаблону `$` . Если исходная входная строка разбивается на массив строк, методу <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%29?displayProperty=nameWithType> удается найти соответствие для каждой из пяти строк. Если метод <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> вызывается с параметром `options`, для которого задано значение <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>, соответствия не найдены, потому что шаблон регулярного выражения не учитывает элемент возврата каретки (\u+000D). Однако изменение шаблона регулярного выражения (замена `$` последовательностью `\r?$`) приведет к тому, что вызов метода <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> с параметром `options` , равным <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> , позволит снова найти пять соответствий.  
   
  [!code-csharp[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.assertions/cs/endofstring1.cs#2)]
  [!code-vb[Conceptual.RegEx.Language.Assertions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.assertions/vb/endofstring1.vb#2)]  
@@ -82,7 +84,7 @@ ms.locfileid: "44085190"
   
 <a name="StartOnly"></a>   
 ## <a name="start-of-string-only-a"></a>Только начало строки: \A  
- Привязка `\A` указывает, что соответствие должно находиться в начале входной строки. Она идентична привязке `^` с той разницей, что `\A` игнорирует параметр <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType>. Следовательно, можно найти соответствие только для начала первой строки в многострочной входной строке.  
+ Привязка `\A` указывает, что соответствие должно находиться в начале входной строки. Она идентична привязке `^` с той разницей, что `\A` игнорирует параметр <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> . Следовательно, можно найти соответствие только для начала первой строки в многострочной входной строке.  
   
  Следующий пример похож на примеры для привязок `^` и `$` . В нем привязка `\A` используется в регулярном выражении, которое извлекает сведения о годах, в течение которых существовали некоторые профессиональные бейсбольные команды. Входная строка включает пять строк. При вызове метода <xref:System.Text.RegularExpressions.Regex.Matches%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> удается найти только первую подстроку во входной строке, которая соответствует шаблону регулярного выражения. Как показано в примере, параметр <xref:System.Text.RegularExpressions.RegexOptions.Multiline> не оказывает никакого влияния.  
   
@@ -126,7 +128,7 @@ ms.locfileid: "44085190"
   
  Возможные интерпретации регулярного выражения `\G(\w+\s?\w*),?` показаны в следующей таблице.  
   
-|Шаблон|Описание:|  
+|Шаблон|Описание|  
 |-------------|-----------------|  
 |`\G`|Начать сопоставление там, где закончилось последнее соответствие.|  
 |`\w+`|Совпадение с одним или несколькими символами слова.|  
@@ -168,7 +170,7 @@ ms.locfileid: "44085190"
   
  Возможные интерпретации шаблона регулярного выражения показаны в следующей таблице.  
   
-|Шаблон|Описание:|  
+|Шаблон|Описание|  
 |-------------|-----------------|  
 |`\B`|Совпадение не должно начинаться на границе слова.|  
 |`qu`|Совпадение с подстрокой qu.|  

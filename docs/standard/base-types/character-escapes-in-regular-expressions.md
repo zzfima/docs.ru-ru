@@ -1,5 +1,6 @@
 ---
-title: Escape-знаки в регулярных выражениях
+title: Escape-символы в регулярных выражениях .NET
+description: Дополнительные сведения о специальных символах и escape-символах в регулярных выражениях .NET.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -16,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b390b1d3d935ad045d59dd6b3d2e42cdbe82dd7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.custom: seodec18
+ms.openlocfilehash: 2643e6ec1edf9cd69d7530def1e2605e1af20de4
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837171"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53152371"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Escape-знаки в регулярных выражениях
 Обратная косая черта (\\) в регулярном выражении может означать следующее.  
@@ -61,7 +63,7 @@ ms.locfileid: "48837171"
   
  Возможные интерпретации регулярного выражения `\G(.+)[\t|\u007c](.+)\r?\n` показаны в следующей таблице.  
   
-|Шаблон|Описание:|  
+|Шаблон|Описание|  
 |-------------|-----------------|  
 |`\G`|Начать сопоставление там, где закончилось последнее соответствие.|  
 |`(.+)`|Сопоставление любого символа один или более раз. Это первая группа записи.|  

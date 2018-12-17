@@ -1,33 +1,32 @@
 ---
 title: Использование сервера баз данных, работающего в качестве контейнера
-description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Использование сервера баз данных, работающего в качестве контейнера
+description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Использование сервера баз данных, работающего в качестве контейнера? Только для разработки! Давайте поймем, почему.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 10/30/2017
-ms.openlocfilehash: 42b0bf43ace00b1eb4b48c39604b89ea76c99220
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/02/2018
+ms.openlocfilehash: 347e6d36b7e838082f47d39c5ae67c219ec11d45
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106153"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53127723"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Использование сервера баз данных, работающего в качестве контейнера
 
-Базы данных (SQL Server, PostgreSQL, MySQL и т. д.) можно размещать на обычных отдельных серверах, локальных кластерах или службах PaaS в облаке, например Azure SQL DB. Но в средах разработки и тестирования удобнее использовать базы данных в виде контейнеров — так у вас нет внешней зависимости, и вы можете запустить все приложение по команде docker-compose. При размещении баз данных в контейнерах легче проводить интеграционные тесты, ведь база данных запускается в контейнере и всегда заполняется одинаковыми демонстрационными данными, так что тестирование становится более предсказуемым.
+Базы данных (SQL Server, PostgreSQL, MySQL и т. д.) можно размещать на обычных отдельных серверах, локальных кластерах или службах PaaS в облаке, например Azure SQL DB. Но в средах разработки и тестирования удобнее использовать базы данных в виде контейнеров — так у вас нет внешней зависимости, и вы можете запустить все приложение по команде `docker-compose up`. При размещении баз данных в контейнерах легче проводить интеграционные тесты, ведь база данных запускается в контейнере и всегда заполняется одинаковыми демонстрационными данными, так что тестирование становится более предсказуемым.
 
 ### <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>SQL Server, запущенный в качестве контейнера с базой данных для микрослужб
 
 В eShopOnContainers существует контейнер с именем sql.data, определенный в файле [docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml), который запускает SQL Server для Linux со всеми базами данных на SQL Server, необходимыми для микрослужб. (Вы можете использовать один контейнер SQL Server для каждой базы данных, но придется выделить для Docker больше памяти.) Важно отметить, что каждая микрослужба владеет связанными с ней данными, в данном случае — базой данных SQL. Но базы данных могут находиться где угодно.
 
-Контейнер SQL Server в примере приложения настроен со следующим кодом YAML в файле docker-compose.yml, который выполняется по команде docker-compose up. Обратите внимание, что код YAML содержит консолидированные сведения о конфигурации из общего файла docker-compose.yml и файла docker-compose.override.yml. (В обычной ситуации вы отделяете параметры среды от базовой или статической информации, связанной с образом SQL Server.)
+Контейнер SQL Server в примере приложения настроен со следующим кодом YAML в файле docker-compose.yml, который выполняется по команде `docker-compose up`. Обратите внимание, что код YAML содержит консолидированные сведения о конфигурации из общего файла docker-compose.yml и файла docker-compose.override.yml. (В обычной ситуации вы отделяете параметры среды от базовой или статической информации, связанной с образом SQL Server.)
 
 ```yml
   sql.data:
-    image: microsoft/mssql-server-linux
+    image: microsoft/mssql-server-linux:2017-latest
     environment:
-      - MSSQL_SA_PASSWORD=Pass@word
+      - SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
-      - MSSQL_PID=Developer
     ports:
       - "5434:1433"
 ```
@@ -35,10 +34,10 @@ ms.locfileid: "37106153"
 Аналогичным образом, вместо `docker-compose` используйте следующую команду `docker run` для запуска контейнера:
 
 ```
-  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD= your@password' -p 1433:1433 -d microsoft/mssql-server-linux
+  docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Pass@word' -p 5433:1433 -d microsoft/mssql-server-linux:2017-latest
 ```
 
-Но если вы развертываете приложение с несколькими контейнерами, например eShopOnContainers, удобнее использовать команду docker-compose up, чтобы развернуть все необходимые контейнеры для приложения.
+Но если вы развертываете приложение с несколькими контейнерами, например eShopOnContainers, удобнее использовать команду `docker-compose up`, чтобы развернуть все необходимые контейнеры для приложения.
 
 Когда вы запускаете этот контейнер SQL Server впервые, он инициализирует SQL Server с помощью указанного вами пароля. После запуска SQL Server в качестве контейнера вы можете обновить базу данных через обычное подключение SQL, например SQL Server Management Studio, Visual Studio или код C\#.
 
@@ -48,10 +47,10 @@ ms.locfileid: "37106153"
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Запуск образа SQL Server Docker в Linux, Mac или Windows**
+-   **Запуск образа SQL Server Docker в Linux, Mac или Windows** <br/>
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker*](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker)
 
--   **Подключения и запросы к SQL Server на Linux с помощью sqlcmd**
+-   **Подключения и запросы к SQL Server на Linux с помощью sqlcmd** <br/>
     [*https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd*](https://docs.microsoft.com/sql/linux/sql-server-linux-connect-and-query-sqlcmd)
 
 ### <a name="seeding-with-test-data-on-web-application-startup"></a>Заполнение тестовыми данными при запуске веб-приложения
@@ -166,7 +165,7 @@ public class Startup
 
 Redis предоставляет образ Docker с Redis. Этот образ доступен в центре Docker по URL-адресу:
 
-<https://hub.docker.com/_/redis/>
+[https://hub.docker.com/_/redis/](https://hub.docker.com/_/redis/)
 
 Вы можете запустить контейнер Docker Redis напрямую, выполнив следующую команду Docker CLI в командной строке:
 
@@ -199,7 +198,8 @@ Redis предоставляет образ Docker с Redis. Этот образ
       - EventBusConnection=rabbitmq
 ```
 
+Как упоминалось ранее, имя микрослужбы "basket.data" разрешается с помощью DNS внутренней сети docker.
 
 >[!div class="step-by-step"]
-[Назад](multi-container-applications-docker-compose.md)
-[Вперед](integration-event-based-microservice-communications.md)
+>[Назад](multi-container-applications-docker-compose.md)
+>[Вперед](integration-event-based-microservice-communications.md)

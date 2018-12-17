@@ -1,19 +1,19 @@
 ---
 title: Проектирование модели предметной области микрослужбы
-description: Архитектура микрослужб .NET для контейнерных приложений .NET | Проектирование модели предметной области микрослужбы
+description: Архитектура микрослужб .NET для контейнерных приложений .NET | Ключевые понятия при разработке модели предметной области, ориентированной на DDD.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 11/09/2017
-ms.openlocfilehash: 9a54679fc28bb2adf803a38fe5e43f67048a4cfd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.date: 10/08/2018
+ms.openlocfilehash: d98d0f0fee0692bb447779e7f62750931a9773ba
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048480"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143621"
 ---
-# <a name="designing-a-microservice-domain-model"></a>Проектирование модели предметной области микрослужбы
+# <a name="design-a-microservice-domain-model"></a>Проектирование модели предметной области микрослужбы
 
-*Определение одной расширенной модели предметной области для каждой бизнес-микрослужбы или ограниченного контекста*
+*Определите одну расширенную модель предметной области для каждой бизнес-микрослужбы или ограниченного контекста.*
 
 Ваша цель состоит в создании одной целостной модели предметной области для каждой бизнес-микрослужбы или ограниченного контекста (BC). Однако следует помнить, что BC или бизнес-микрослужба иногда может состоять из нескольких физических служб, совместно использующих одну модель предметной области. Модель предметной области должна определять правила, поведение, бизнес-язык и ограничения для одного ограниченного контекста или бизнес-микрослужбы, которая его представляет.
 
@@ -23,7 +23,7 @@ ms.locfileid: "50048480"
 
 *Идентификатор сущности может пересекать несколько микрослужб или ограниченных контекстов.*
 
-Один и тот же идентификатор (хотя и не та же сущность) может быть смоделирован в нескольких ограниченных контекстах или микрослужбах. Однако это не означает, что в нескольких ограниченных контекстах будет реализована одна и та же сущность с теми же атрибутами и логикой. Вместо этого атрибуты и поведение сущностей в каждом ограниченном контексте находятся в рамках требований предметной области каждого конкретного ограниченного контекста.
+Один и тот же идентификатор (то есть то же значение `Id`, хотя и необязательно та же сущность предметной области) может быть смоделирован в нескольких ограниченных контекстах или микрослужбах. Однако это не означает, что в нескольких ограниченных контекстах будет реализована одна и та же сущность с теми же атрибутами и логикой. Вместо этого атрибуты и поведение сущностей в каждом ограниченном контексте находятся в рамках требований предметной области каждого конкретного ограниченного контекста.
 
 Например, сущность "покупатель" может иметь большинство атрибутов человека, определенных в сущности "пользователь" в микрослужбе профиля или идентификации, включая идентификатор пользователя. Но сущность "покупатель" в микрослужбе заказов может иметь меньше атрибутов, так как только некоторые данные покупателя связаны с обработкой заказа. Контекст каждой микрослужбы или ограниченного контекста влияет на его модель предметной области.
 
@@ -31,11 +31,11 @@ ms.locfileid: "50048480"
 
 Сущность предметной области в DDD должна реализовывать логику предметной области или поведение, связанное с данными этой сущности (объекта, доступного в памяти). Например, в рамках класса сущности заказа должна быть задана бизнес-логика и операции, реализованные как методы для таких задач, как добавление позиции заказа, проверка данных и итоговый расчет. Методы сущности обеспечивают инварианты и правила сущности вместо определения этих правил как распределенных на уровне приложения.
 
-На рисунке 9-8 показана сущность предметной области, реализующая не только атрибуты данных, но также и операции или методы с логикой, связанной с предметной областью.
+На рис. 7-8 показана сущность предметной области, реализующая не только атрибуты данных, но также и операции или методы с логикой, связанной с предметной областью.
 
-![](./media/image9.png)
+![Сущность модели предметной области реализует поведение через методы, то есть это не "слабая" модель.](./media/image9.png)
 
-**Рис. 9-8**. Пример структуры сущности предметной области, реализующей данные и поведение
+**Рис. 7-8**. Пример структуры сущности предметной области, реализующей данные и поведение
 
 Конечно, иногда у вас могут быть сущности, не реализующие никакую логику в рамках класса сущностей. Это может произойти в дочерних сущностях в агрегате, если дочерняя сущность не имеет никакой специальной логики, так как большая часть логики определяется в корне агрегата. При наличии сложной микрослужбы со значительным объемом логики, реализуемой в классах службы вместо сущностей предметной области, вы рискуете попасть в слабую модель предметной области, что объясняется в следующем разделе.
 
@@ -57,15 +57,14 @@ ms.locfileid: "50048480"
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **DevIQ. Сущность предметной области**
-    [*https://deviq.com/entity/*](https://deviq.com/entity/)
+- **DevIQ. Сущность предметной области** \
+  [*https://deviq.com/entity/*](https://deviq.com/entity/)
 
--   **Мартин Фоулер (Martin Fowler). Модель предметной области**
-    [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
+- **Мартин Фоулер (Martin Fowler). Модель предметной области** \
+  [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
 
--   **Мартин Фоулер (Martin Fowler). Слабая модель предметной области**
-
-    <https://martinfowler.com/bliki/AnemicDomainModel.html>
+- **Мартин Фоулер (Martin Fowler). Слабая модель предметной области** \
+  [*https://martinfowler.com/bliki/AnemicDomainModel.html*](https://martinfowler.com/bliki/AnemicDomainModel.html)
 
 ### <a name="the-value-object-pattern"></a>Шаблон объекта значения
 
@@ -79,18 +78,20 @@ ms.locfileid: "50048480"
 
 Объектами значений трудно управлять в реляционных базах данных и моделях ORM, таких как EF, тогда как в документоориентированных базах данных их гораздо проще реализовать и использовать.
 
+EF Core 2.0 включает функцию [Принадлежащие сущности](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting), которая упрощает обработку объектов значений, как мы далее рассмотрим подробно.
+
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Мартин Фоулер (Martin Fowler). Шаблон объекта значения**
-    [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+- **Мартин Фоулер (Martin Fowler). Шаблон объекта значения**
+  [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
 
--   **Объект значения**
-    [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
+- **Объект значения**
+  [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
 
--   **Объекты значения при разработке на основе тестирования**
-    [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+- **Объекты значения при разработке на основе тестирования**
+  [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Эрик Эванс (Eric Evans). Предметно-ориентированное проектирование (DDD). Структуризация сложных программных систем.** (Книга, в которой рассматриваются объекты значений) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Эрик Эванс (Eric Evans). Предметно-ориентированное проектирование (DDD). Структуризация сложных программных систем.** (Книга, в которой рассматриваются объекты значений) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>Шаблон агрегата
 
@@ -106,13 +107,13 @@ ms.locfileid: "50048480"
 
 Цель корня агрегата заключается в обеспечении согласованности агрегата; он должен быть единственной точкой входа для обновлений агрегата с помощью методов или операций в классе корня агрегата. Изменения сущностей в агрегате должны происходить только через корень агрегата. Это защитник согласованности агрегата, учитывающий все инварианты и правила целостности, соблюдение которых может требоваться в агрегате. Если изменить дочернюю сущность или объект значения независимо, корень агрегата не сможет обеспечить правильное состояние агрегата. Это было бы похоже на стол с оторванной ножкой. Обеспечение согласованности является главной задачей корня агрегата.
 
-На рисунке 9-9 показаны примеры агрегатов, например агрегат "покупатель", содержащий одну сущность (корень агрегата Buyer). Агрегат "заказ" содержит несколько сущностей и объект значения.
+На рис. 7-9 показаны примеры агрегатов, например агрегат "покупатель", содержащий одну сущность (корень агрегации Buyer). Агрегат "заказ" содержит несколько сущностей и объект значения.
 
-![](./media/image10.png)
+![Модель предметной области DDD состоит из агрегатов, агрегат может иметь только одну сущность или несколько сущностей, а также включать объекты значений.](./media/image10.png)
 
-**Рис. 9-9**. Пример агрегатов с одной или несколькими сущностями
+**Рис. 7-9**. Пример агрегатов с одной или несколькими сущностями
 
-Обратите внимание, что агрегат Buyer может иметь дополнительные дочерние сущности в зависимости от предметной области, как, например, в микрослужбе заказов в эталонном приложении eShopOnContainers. На рисунке 9-9 просто показан случай, в котором покупатель состоит из одной сущности, в качестве примера агрегата, содержащего только корень агрегата.
+Обратите внимание, что агрегат Buyer может иметь дополнительные дочерние сущности в зависимости от предметной области, как, например, в микрослужбе заказов в эталонном приложении eShopOnContainers. На рис. 7-9 просто показан случай, в котором покупатель состоит из одной сущности, в качестве примера агрегата, содержащего только корень агрегации.
 
 Для поддержки разделения агрегатов и сохранения четких границ между ними рекомендуется в модели предметной области DDD запретить прямой переход между агрегатами и иметь только поле внешнего ключа (FK), как реализовано в [модели предметной области микрослужбы заказов](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs) в приложении eShopOnContainers. Сущность Order имеет только поле FK для покупателя, и в ней отсутствует свойство навигации EF Core, как показано в следующем коде:
 
@@ -133,24 +134,24 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Вон Вернон (Vaughn Vernon). Эффективное агрегатное проектирование. Часть I. Моделирование одного агрегата**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+- **Вон Вернон (Vaughn Vernon). Эффективное агрегатное проектирование. Часть I. Моделирование одного агрегата** \
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_COMMUNITY\_ESSAY\_AGGREGATES\_PART\_1.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
--   **Вон Вернон (Vaughn Vernon). Эффективное агрегатное проектирование. Часть II. Организация совместной работы агрегатов**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
+- **Вон Вернон (Vaughn Vernon). Эффективное агрегатное проектирование. Часть II. Организация совместной работы агрегатов** \
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf)
 
--   **Вон Вернон (Vaughn Vernon). Эффективное агрегатное проектирование. Часть III. Получение аналитических сведений путем обнаружения**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
+- **Вон Вернон (Vaughn Vernon). Эффективное агрегатное проектирование. Часть III. Получение аналитических сведений путем обнаружения** \
+  [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf)
 
--   **Сергей Грибняк (Sergey Grybniak). Тактические конструктивные шаблоны DDD**
-    [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+- **Сергей Грибняк (Sergey Grybniak). Тактические конструктивные шаблоны DDD** \
+  [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
--   **Крис Ричардсон (Chris Richardson). Разработка транзакционных микрослужб с помощью агрегатов**
-    [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+- **Крис Ричардсон (Chris Richardson). Разработка транзакционных микрослужб с помощью агрегатов** \
+  [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ. Шаблон агрегата**
-    [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
+- **DevIQ. Шаблон агрегата** \
+  [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
 
 >[!div class="step-by-step"]
-[Назад](ddd-oriented-microservice.md)
-[Вперед](net-core-microservice-domain-model.md)
+>[Назад](ddd-oriented-microservice.md)
+>[Вперед](net-core-microservice-domain-model.md)

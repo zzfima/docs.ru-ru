@@ -1,5 +1,6 @@
 ---
-title: Базовые операции со строками в .NET Framework
+title: Базовые операции со строками в .NET
+description: Дополнительные сведения о базовых операциях, которые можно выполнять со строками.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,13 @@ helpviewer_keywords:
 ms.assetid: 8133d357-90b5-4b62-9927-43323d99b6b6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f7692251a00c712f93b649d4cd6fc153bb248f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seadec18
+ms.openlocfilehash: 8621e79ad6e305f3859dc269965ecd216081f695
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567488"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53150684"
 ---
 # <a name="basic-string-operations-in-net"></a>Базовые операции со строками в .NET
 Многие приложения взаимодействуют с пользователями, формируя сообщения, основанные на данных, введенных пользователями. Например, веб-узлы зачастую приветствуют вошедших пользователей персональным приветствием, содержащим его имя. Ряд методов в классах <xref:System.String?displayProperty=nameWithType> и <xref:System.Text.StringBuilder?displayProperty=nameWithType> позволяют динамически создавать настраиваемые строки для отображения в пользовательском интерфейсе. С помощью этих методов также можно выполнять базовые операции со строками — например, создание новых строк из байтовых массивов, сравнение значений строк и изменение существующих строк.  

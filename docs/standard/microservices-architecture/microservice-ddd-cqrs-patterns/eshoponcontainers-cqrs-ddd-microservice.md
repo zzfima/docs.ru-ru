@@ -1,17 +1,17 @@
 ---
 title: Применение подходов CQRS и CQS в микрослужбе DDD в eShopOnContainers
-description: Архитектура микрослужб .NET для контейнерных приложений .NET | Применение подходов CQRS и CQS в микрослужбе DDD в eShopOnContainers
+description: Архитектура микрослужб .NET для контейнерных приложений .NET | Реализация CQRS в микрослужбе заказов в eShopOnContainers.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: fdca8d38157d5c5b62bd077e5d715ca22ac9780f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.date: 10/08/2018
+ms.openlocfilehash: 5e6c79cb538d108bba4f3915f93240d9320293c1
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106753"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53143640"
 ---
-# <a name="applying-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Применение подходов CQRS и CQS в микрослужбе DDD в eShopOnContainers
+# <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>Применение подходов CQRS и CQS в микрослужбе DDD в eShopOnContainers
 
 Проект микрослужбы заказов эталонного приложения eShopOnContainers построен на принципах CQRS. Однако в нем применяется простейший подход, который просто разделяет запросы и команды и использует одну и ту же базу данных для обоих действий.
 
@@ -23,7 +23,7 @@ ms.locfileid: "37106753"
 
 Одним из таких шаблонов является шаблон агрегата, который мы подробно рассмотрим в последующих разделах. Вкратце, в шаблоне агрегата (Aggregate) многие объекты предметной области обрабатываются как единое целое в результате их связей в предметной области. В запросах не всегда удается извлечь преимущества из этого шаблона; он может увеличить сложность логики запроса. В запросах только на чтение вы не получите никаких преимуществ от обработки нескольких объектов как единого агрегата. Вы получите только сложность.
 
-Как показано на рисунке 9-2, в данном руководстве предлагается использовать шаблоны DDD только в области транзакций или обновлений вашей микрослужбы (то есть в том, что инициируется командами). Для запросов можно использовать более простой подход, и согласно концепции CQRS их следует отделить от команд.
+Как показано на рис. 7-2, в данном руководстве предлагается использовать шаблоны DDD только в области транзакций или обновлений вашей микрослужбы (то есть в том, что инициируется командами). Для запросов можно использовать более простой подход, и согласно концепции CQRS их следует отделить от команд.
 
 Для реализации "стороны запросов" вы можете выбирать между подходами, включая полнофункциональные ORM, например EF Core, проекции AutoMapper, хранимые процедуры, представления, материализованные представления и micro ORM.
 
@@ -41,28 +41,27 @@ ms.locfileid: "37106753"
 
 ####  <a name="additional-resources"></a>Дополнительные ресурсы
 
--   **Мартин Фоулер (Martin Fowler). CQRS**
-    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
+- **Мартин Фоулер (Martin Fowler). CQRS** \
+  [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
--   **Грег Янг (Greg Young). CQS и CQRS**
-    [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
+- **Грег Янг (Greg Young). CQS и CQRS** \
+  [*http://codebetter.com/gregyoung/2009/08/13/command-query-separation/*](http://codebetter.com/gregyoung/2009/08/13/command-query-separation/)
 
--   **Грег Янг (Greg Young). Документы по CQRS **
-    [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
+- **Грег Янг (Greg Young). Документы по CQRS**  \
+  [*https://cqrs.files.wordpress.com/2010/11/cqrs\_documents.pdf*](https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf)
 
--   **Грег Янг (Greg Young). CQRS, пользовательские интерфейсы на основе задач и источники событий**
-    [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
+- **Грег Янг (Greg Young). CQRS, пользовательские интерфейсы на основе задач и источники событий** \
+  [*http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/*](http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/)
 
--   **Уди Дахан (Udi Dahan). Пояснения к CQRS**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **Уди Дахан (Udi Dahan). Пояснения к CQRS** \
+  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **CQRS**
-    [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+- **CQRS** \
+  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Источники событий (ES)**
-    [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
-
+- **Источники событий (ES)** \
+  [*http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/*](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/)
 
 >[!div class="step-by-step"]
-[Назад](apply-simplified-microservice-cqrs-ddd-patterns.md)
-[Вперед](cqrs-microservice-reads.md)
+>[Назад](apply-simplified-microservice-cqrs-ddd-patterns.md)
+>[Вперед](cqrs-microservice-reads.md)

@@ -1,19 +1,19 @@
 ---
 title: Проверка на стороне клиента (проверка на уровнях представления)
-description: Архитектура микрослужб .NET для упакованных в контейнеры приложений .NET | Проверка на стороне клиента (проверка на уровнях представления)
+description: Архитектура микрослужб .NET для контейнерных приложений .NET | Ключевые понятия проверки на стороне клиента.
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
-ms.openlocfilehash: 70a1f716797e03acdcbf1c58d4b0302449d98fa9
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.date: 10/08/2018
+ms.openlocfilehash: 3ec8ca932924c1b1b6750dd30750e3c1e56b7538
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582428"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130082"
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Проверка на стороне клиента (проверка на уровнях представления)
 
-Даже если источником истины является модель предметной области и в конечном итоге необходимо проводить проверки на этом уровне, проверку можно выполнить как на уровне модели предметной области (на сервере), так и на стороне клиента.
+Даже если источником истины является модель предметной области и в конечном итоге необходимо проводить проверки на этом уровне, проверку можно выполнить как на уровне модели предметной области (на сервере), так и на уровне интерфейса пользователя (на клиенте).
 
 Проверка на стороне клиента очень удобна для пользователей. Она экономит время, которое в противном случае тратилось бы на круговой путь к серверу, в результате которого выдавались бы ошибки проверки. С точки зрения бизнеса даже доли секунды, умножаемые в сотни раз каждый день, позволяют значительно сократить расходуемое время, деньги и усилия. Простая и немедленная проверка позволяет пользователям работать эффективнее и повышает точность входных и выходных данных.
 
@@ -29,27 +29,27 @@ ms.locfileid: "48582428"
 
 ### <a name="validation-in-xamarin-mobile-apps"></a>Проверка в мобильных приложениях Xamarin
 
--   **Проверка текстового ввода и отображение ошибок**
-    [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
+- **Проверка текстового ввода и отображение ошибок** \
+  [*https://developer.xamarin.com/recipes/ios/standard\_controls/text\_field/validate\_input/*](https://developer.xamarin.com/recipes/ios/standard_controls/text_field/validate_input/)
 
--   **Ответный вызов проверки**
-    [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
+- **Ответный вызов проверки** \
+  [*https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/*](https://developer.xamarin.com/samples/xamarin-forms/XAML/ValidationCallback/)
 
 ### <a name="validation-in-aspnet-core-apps"></a>Проверка в приложениях ASP.NET Core
 
--   **Рик Андерсон (Rick Anderson). Добавление проверки**
-    [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
+- **Рик Андерсон (Rick Anderson). Добавление проверки** \
+  [*https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation*](https://docs.microsoft.com/aspnet/core/tutorials/first-mvc-app/validation)
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Проверка в веб-приложениях SPA (Angular 2, TypeScript, JavaScript)
 
--   **Адо Кукич (Ado Kukic). Проверка форм Angular 2**
-    [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+- **Адо Кукич (Ado Kukic). Проверка форм Angular 2** \
+  [*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Проверка форм**
-    [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
+- **Проверка форм** \
+  [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
--   **Проверка.** Документация Breeze.
-    [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
+- **Проверка.** Документация Breeze. \
+  [*https://breeze.github.io/doc-js/validation.html*](https://breeze.github.io/doc-js/validation.html)
 
 Подытожим основные принципы проверки:
 
@@ -59,10 +59,8 @@ ms.locfileid: "48582428"
 
 - Если необходимо создать несколько связанных объектов, например агрегат, и они будут допустимы только после создания всех объектов, используйте шаблон "фабрика".
 
-- Платформы проверки лучше использовать на определенных уровнях, например на уровне представления или уровне приложения или службы, но не на уровне модели предметной области, поскольку потребуется надежная зависимость от платформы инфраструктуры.
-
 - В большинстве случаев избыточная проверка на стороне клиента уместна, ведь приложение может действовать на опережение.
 
 >[!div class="step-by-step"]
-[Назад](domain-model-layer-validations.md)
-[Вперед](domain-events-design-implementation.md)
+>[Назад](domain-model-layer-validations.md)
+>[Вперед](domain-events-design-implementation.md)
