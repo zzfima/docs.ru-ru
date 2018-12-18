@@ -1,5 +1,6 @@
 ---
-title: Предложение from (справочник по C#)
+title: Справочник по C#. Предложение from
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - from_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - from clause [C#]
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
-ms.openlocfilehash: 9af24d9c2a99a9c763c6ad3aac9895e7dddcf8ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ab0602f9ed353cf3959516e285086ab5af98c9f8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129042"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236808"
 ---
 # <a name="from-clause-c-reference"></a>Предложение from (справочник по C#)
 
@@ -31,7 +32,7 @@ ms.locfileid: "53129042"
 
 ## <a name="the-range-variable"></a>Переменная диапазона
 
-Компилятор выводит тип переменной диапазона, если источник данных реализует <xref:System.Collections.Generic.IEnumerable%601>. Например, если источник данных имеет тип `IEnumerable<Customer>`, выводится переменная диапазона `Customer`. Явно задавать тип необходимо только в том случае, если источник имеет не являющийся универсальным тип `IEnumerable`, например <xref:System.Collections.ArrayList>. Дополнительные сведения см. в разделе [Практическое руководство. Выполнение запроса к ArrayList с помощью LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
+Компилятор выводит тип переменной диапазона, если источник данных реализует <xref:System.Collections.Generic.IEnumerable%601>. Например, если источник данных имеет тип `IEnumerable<Customer>`, выводится переменная диапазона `Customer`. Явно задавать тип необходимо только в том случае, если источник имеет не являющийся универсальным тип `IEnumerable`, например <xref:System.Collections.ArrayList>. Дополнительные сведения см. в разделе [Как выполнять запросы к ArrayList с помощью LINQ](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md).
 
 В предыдущем примере `num` выводится к типу `int`. Поскольку переменная диапазона строго типизирована, вы можете использовать ее в вызовах методов и других операциях. Например, вместо кода `select num` можно использовать запись `select num.ToString()`, в результате чего выражение запроса будет возвращать последовательность строк вместо целых чисел. Также можно использовать запись `select num + 10`, в результате чего выражение будет возвращать последовательность 14, 11, 13, 12, 10. Дополнительные сведения см. в разделе [Предложение select](select-clause.md).
 

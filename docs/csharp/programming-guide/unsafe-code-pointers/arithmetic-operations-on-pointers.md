@@ -1,15 +1,16 @@
 ---
-title: Арифметические операции с указателями (руководство по программированию на C#)
+title: Руководство по программированию на C#. Арифметические операции с указателями
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pointers [C#], arithmetic operations
 ms.assetid: d4f0b623-827e-45ce-8649-cfcebc8692aa
-ms.openlocfilehash: 91e621e7cddce50e97b061ecd7d77dae6f7ef3cb
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 94e5d3fbf250f8b99560f83e14c063142ac7ad29
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129952"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242104"
 ---
 # <a name="arithmetic-operations-on-pointers-c-programming-guide"></a>Арифметические операции с указателями (руководство по программированию на C#)
 В этом разделе рассматривается использование арифметических операторов `+` и `-` для управления указателями.  

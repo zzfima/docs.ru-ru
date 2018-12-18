@@ -1,5 +1,6 @@
 ---
-title: Статические классы и члены статических классов (Руководство по программированию в C#)
+title: Руководство по программированию на C#. Статические классы и члены статических классов
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, static members
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 6709344002ebc433c8d13d9cfa48a179fae9991b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ef1b5262e8cb9906fb0e0d0e8cfef9257f1223a4
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125997"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243206"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Статические классы и члены статических классов (Руководство по программированию в C#)
 [Статический](../../../csharp/language-reference/keywords/static.md) класс в основном такой же, как и нестатический класс, но имеется одно отличие: нельзя создавать экземпляры статического класса. Другими словами, нельзя использовать ключевое слово [new](../../../csharp/language-reference/keywords/new.md) для создания переменной типа класса. Поскольку нет переменной экземпляра, доступ к членам статического класса осуществляется с использованием самого имени класса. Например, если имеется статический класс, называемый `UtilityClass`, имеющий открытый метод с именем `MethodA`, вызов метода выполняется, как показано в следующем примере:  

@@ -1,17 +1,18 @@
 ---
-title: Операторы (Руководство по программированию на C#)
+title: Руководство по программированию на C#. Операторы
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [C#]
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: bf453d5770967f26999b8537339f1b690646b97d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e9518dcf2a9facfdc46c2f6245184ea2da95b819
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150977"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239005"
 ---
 # <a name="operators-c-programming-guide"></a>Операторы (Руководство по программированию на C#)
 В языке C# *оператор* — это элемент программы, который применяется для одного или нескольких *операндов* в выражении или инструкции. Операторы, в которых используется один операнд, например оператор инкремента (`++`) или `new`, называются *унарными* . Операторы, в которых используются два операнда, например арифметические операторы (`+`,`-`,`*`,`/`), называются *бинарными* . Для одного оператора — условного (`?:`) — используются три операнда, и такой оператор является единственным троичным оператором в C#.  
@@ -56,7 +57,7 @@ ms.locfileid: "53150977"
   
  **Унарные операторы**  
   
-|Выражение|Описание:|  
+|Выражение|Описание|  
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|идентификации|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|Отрицание|  
@@ -76,7 +77,7 @@ ms.locfileid: "53150977"
   
  **Аддитивные операторы**  
   
-|Выражение|Описание:|  
+|Выражение|Описание|  
 |----------------|-----------------|  
 |x [+](../../../csharp/language-reference/operators/addition-operator.md) y|Сложение, объединение строк, объединение делегатов|  
 |x [-](../../../csharp/language-reference/operators/subtraction-operator.md) y|Вычитание, удаление делегатов|  
@@ -120,7 +121,7 @@ ms.locfileid: "53150977"
   
  **Операторы присваивания и анонимные операторы**  
   
-|Выражение|Описание|  
+|Выражение|Описание:|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|Назначение|  
 |x op= y|Составное присваивание. Поддерживает следующие операторы: [+=](../../../csharp/language-reference/operators/addition-assignment-operator.md), [-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md), [*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md), [/=](../../../csharp/language-reference/operators/division-assignment-operator.md), [%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md), [&=](../../../csharp/language-reference/operators/and-assignment-operator.md), [&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md), [^=](../../../csharp/language-reference/operators/xor-assignment-operator.md), [<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md), [>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md).|  

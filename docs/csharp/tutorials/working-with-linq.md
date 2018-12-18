@@ -3,18 +3,18 @@ title: Работа с LINQ
 description: В этом руководстве мы научим вас создавать последовательности с помощью LINQ, создавать методы для использования в запросах LINQ, а также различать упреждающее и отложенное вычисление.
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 02456ed0d545aa0740f70d96c25b24ee9bc5120c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b7faa75234dec62be63e96c0f15f97c6d2aa4c99
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126322"
+ms.locfileid: "53170812"
 ---
 # <a name="working-with-linq"></a>Работа с LINQ
 
 ## <a name="introduction"></a>Вступление
 
-Это руководство раскроет для вас некоторые возможности .NET Core и языка C#. Вы узнаете:
+В этом руководстве описаны возможности .NET Core и C#. Вы узнаете:
 
 *   как создать последовательности с помощью LINQ;
 *   как написать методы, которые можно применять в запросах LINQ;

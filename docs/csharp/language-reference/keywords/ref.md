@@ -1,5 +1,6 @@
 ---
-title: Ключевое слово ref (справочник по C#)
+title: Справочник по C#. Ключевое слово ref
+ms.custom: seodec18
 ms.date: 10/24/2018
 f1_keywords:
 - ref_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 99d02ca33025a5f80ff8fafde84447ba3df9f42a
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 187d2fb7399195c544bae59927d66e9853df5fa0
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "50195974"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236327"
 ---
 # <a name="ref-c-reference"></a>ref (Справочник по C#)
 
@@ -62,7 +63,7 @@ class CS0663_Example
 - Асинхронные методы, которые определяются с помощью модификатора [async](async.md).  
 - Методы итератора, которые включают оператор [yield return](yield.md) или `yield break`.  
 
-## <a name="passing-an-argument-by-reference-an-example"></a>Пример передачи аргументов по ссылке
+## <a name="passing-an-argument-by-reference-an-example"></a>Передача аргументов по ссылке. Пример
 
 В предыдущих примерах типы значений передаются по ссылке. Также можно использовать ключевое слово `ref` для передачи ссылочных типов по ссылке. Передача ссылочного типа по ссылке позволяет вызываемому методу заменять объект, на который указывает ссылочный параметр в вызывающем объекте. Место хранения объекта передается методу в качестве значения ссылочного параметра. Если изменить место хранения параметра (с указанием на новый объект), необходимо изменить место хранения, на который ссылается вызывающий объект. В следующем примере экземпляр ссылочного типа передается как параметр `ref`.
   
