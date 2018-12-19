@@ -1,25 +1,26 @@
 ---
-title: Универсальные типы и отражение (Руководство по программированию в C#)
+title: Руководство по программированию на C#. Универсальные типы и отражение
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-ms.openlocfilehash: 9bbf08161162c2d0776a066098e40b57a415da6d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 752c44bcd4ded82fb2144dca684482f30371b6aa
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187141"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244943"
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Универсальные типы и отражение (Руководство по программированию в C#)
 Поскольку среда CLR имеет доступ к данным универсальных типов во время выполнения, вы можете использовать отражение для получения сведений об универсальных типах точно так же, как и для неуниверсальных типов. Дополнительные сведения см. в разделе [Универсальные типы во время выполнения](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
   
- В [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] в класс <xref:System.Type> добавлено несколько новых членов для поддержки данных времени выполнения для универсальных типов. Дополнительные сведения о том, как использовать эти методы и свойства, см. в документации по этим классам. Пространство имен <xref:System.Reflection.Emit> также содержит новые члены, которые поддерживают универсальные типы. См. статью [Практическое руководство. Определение универсального типа с порождаемым отражением](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md).  
+ В [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] в класс <xref:System.Type> добавлено несколько новых членов для поддержки данных времени выполнения для универсальных типов. Дополнительные сведения о том, как использовать эти методы и свойства, см. в документации по этим классам. Пространство имен <xref:System.Reflection.Emit> также содержит новые члены, которые поддерживают универсальные типы. См. практическое руководство по [ Определение универсального типа с порождаемым отражением](../../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)  
   
  Список неизменяемых условий для терминов, используемых в отражении универсальных типов, см. в примечаниях к описанию свойства <xref:System.Type.IsGenericType%2A>.  
   
-|Имя члена System.Type|Описание:|  
+|Имя члена System.Type|Описание|  
 |-----------------------------|-----------------|  
 |<xref:System.Type.IsGenericType%2A>|Возвращает значение true, если тип является универсальным.|  
 |<xref:System.Type.GetGenericArguments%2A>|Возвращает массив объектов `Type`, которые представляют аргументы типа, предоставленные для создаваемого типа, или параметры определения универсального типа.|  

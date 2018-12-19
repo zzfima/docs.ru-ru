@@ -1,5 +1,6 @@
 ---
-title: $ — интерполяция строк (справочник по C#)
+title: Справочник по C#. $ — интерполяция строк
+ms.custom: seodec18
 description: Интерполяция строк предоставляет более понятный и удобный синтаксис для форматирования строковых выходных данных, чем традиционное составное форматирование строк.
 ms.date: 03/26/2018
 f1_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 2758a724b7e1e410fd1e1ba262db451b7f994164
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b6cac2b31f9ec1fd4775d4ed2ec2e9382502a0cc
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196993"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244808"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ — интерполяция строк (справочник по C#)
 
@@ -39,7 +40,7 @@ ms.locfileid: "50196993"
 
 Элементы в квадратных скобках являются необязательными. Каждый из элементов описан в таблице ниже:
 
-|Элемент|Описание:|
+|Элемент|Описание|
 |-------------|-----------------|
 |`interpolatedExpression`|Выражение, создающее форматируемый результат. Строковым представлением результата `null` является <xref:System.String.Empty?displayProperty=nameWithType>.|
 |`alignment`|Константное выражение, значение которого определяет минимальное число символов в строковом представлении результата интерполированного выражения. Если оно положительное, строковое представление выравнивается по правому краю, если отрицательное — по левому краю. Дополнительные сведения см. в разделе [Компонент выравнивания](../../../standard/base-types/composite-formatting.md#alignment-component).|

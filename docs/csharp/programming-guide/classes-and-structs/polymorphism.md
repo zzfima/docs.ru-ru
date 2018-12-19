@@ -1,16 +1,17 @@
 ---
-title: Полиморфизм (Руководство по программированию на C#)
+title: Руководство по программированию на C#. Полиморфизм
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 25192d57955d15c5707816ee6c4a515893891507
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 489fdf87f973de6137587fc2280ef0fa72ab78ba
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523397"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286459"
 ---
 # <a name="polymorphism-c-programming-guide"></a>Полиморфизм (Руководство по программированию на C#)
 Полиморфизм часто называется третьим столпом объектно-ориентированного программирования после инкапсуляции и наследования. Полиморфизм — слово греческого происхождения, означающее "многообразие форм" и имеющее несколько аспектов.  
@@ -96,8 +97,7 @@ ms.locfileid: "43523397"
   
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
+- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
 - [Наследование](../../../csharp/programming-guide/classes-and-structs/inheritance.md)  
 - [Абстрактные и запечатанные классы и члены классов](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)  
 - [Методы](../../../csharp/programming-guide/classes-and-structs/methods.md)  

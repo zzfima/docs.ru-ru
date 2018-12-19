@@ -1,5 +1,6 @@
 ---
-title: Оператор || (Справочник по C#)
+title: Справочник по C#. Оператор ||
+ms.custom: seodec18
 ms.date: 11/06/2018
 f1_keywords:
 - '||_CSharpKeyword'
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - conditional-OR operator (||) [C#]
 - '|| operator [C#]'
 ms.assetid: 7d442d8e-400d-421f-b4d2-034bf82bcbdc
-ms.openlocfilehash: a391078372e4ec0a3882bed4515733adedffb547
-ms.sourcegitcommit: b5cd9d5d3b75a5537fc9ad8a3f085f0bb1845ee0
+ms.openlocfilehash: f4bb7ada12fbcebcb90fb7cd22d6e6bccad5fb57
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "42925544"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244574"
 ---
 # <a name="-operator-c-reference"></a>Оператор || (Справочник по C#)
 
@@ -25,7 +26,7 @@ ms.locfileid: "42925544"
 
 ## <a name="operator-overloadability"></a>Возможность перегрузки оператора
 
-Определяемый пользователем тип не может перегружать условный логический оператор ИЛИ. Тем не менее, если определяемый пользователем тип каким-либо образом перегружает операторы [логическое ИЛИ](or-operator.md), [true](../keywords/true-operator.md) и [false](../keywords/false-operator.md), то операция `||` может быть применена для операндов этого типа. Дополнительные сведения см. в разделе [Пользовательские условные логические операторы](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) в [Спецификации языка C#](../language-specification/index.md).
+Определяемый пользователем тип не может перегружать условный логический оператор ИЛИ. Тем не менее, если определяемый пользователем тип каким-либо образом перегружает операторы [логическое OR](or-operator.md), [true и false](../keywords/true-false-operators.md), то операция `||` может быть применена для операндов этого типа. Дополнительные сведения см. в разделе [Пользовательские условные логические операторы](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators) в [Спецификации языка C#](../language-specification/index.md).
 
 ## <a name="c-language-specification"></a>Спецификация языка C#
 

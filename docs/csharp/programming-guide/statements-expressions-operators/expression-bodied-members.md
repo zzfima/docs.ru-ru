@@ -1,17 +1,18 @@
 ---
-title: Члены, воплощающие выражения (руководство по C#)
+title: Руководство по программированию на C#. Элементы, воплощающие выражения
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e58afadae78d3f6b15a8e859edc8d554d84c393
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 36f71352dca584c107af4f45850ce21bb016ba01
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42911910"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238121"
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Члены, воплощающие выражения (руководство по программированию на C#)
 Определения тела выражений позволяют предоставлять реализацию члена самым быстрым и удобочитаемым способом. Определение тела выражения можно использовать, когда логика для любого поддерживаемого члена, такого как метод или свойство, состоит из одного выражения. Определение тела выражения имеет следующий общий синтаксис:

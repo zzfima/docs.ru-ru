@@ -1,16 +1,17 @@
 ---
-title: Статические конструкторы (Руководство по программированию в C#)
+title: Руководство по программированию на C#. Статические конструкторы
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - static constructors [C#]
 - constructors [C#], static
 ms.assetid: 151ec95e-3c4d-4ed7-885d-95b7a3be2e7d
-ms.openlocfilehash: 22be72547e96c66df3be115dac30a16559b23659
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fabcbb084a74334a7a1bcddb9a04cc6705caeb29
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502772"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53234933"
 ---
 # <a name="static-constructors-c-programming-guide"></a>Статические конструкторы (Руководство по программированию в C#)
 Статический конструктор используется для инициализации любых [статических](../../../csharp/language-reference/keywords/static.md) данных или для выполнения определенного действия, которое требуется выполнить только один раз. Он вызывается автоматически перед созданием первого экземпляра или ссылкой на какие-либо статические члены.  

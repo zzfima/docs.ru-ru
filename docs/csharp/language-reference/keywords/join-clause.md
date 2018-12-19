@@ -1,5 +1,6 @@
 ---
-title: Предложение join (Справочник по C#)
+title: Справочник по C#. Предложение join
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - join
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: dee11c1ab754e515c69f330a5919776cbcb1e775
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c9052b4b0f1feac5aa56a7fe6745745f1afb5740
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237167"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236288"
 ---
 # <a name="join-clause-c-reference"></a>Предложение join (Справочник по C#)
 
@@ -73,7 +74,7 @@ ms.locfileid: "47237167"
 
 В выражении запроса [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] операции соединения выполняются для коллекций объектов. Коллекции объектов нельзя "соединять" точно так же, как две реляционные таблицы. В [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] явные предложения `join` требуются, только если две исходные последовательности не связаны каким-либо отношением. При работе с [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] таблицы внешних ключей представлены в объектной модели как свойства основной таблицы. Например, в базе данных Northwind таблица Customer имеет связь типа "внешний ключ" с таблицей Orders. При сопоставлении таблиц с объектной моделью класс Customer имеет свойство Orders, содержащий коллекцию заказов, связанных с клиентом. Фактически соединение уже выполнено автоматически.
 
-Дополнительные сведения о создании запросов по связанным таблицам в контексте [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] см. в разделе [Практическое руководство. Сопоставление связей баз данных](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
+Дополнительные сведения о создании запросов по связанным таблицам в контексте [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] см. в статье [Практическое руководство. Сопоставление связей баз данных](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md).
 
 ## <a name="composite-keys"></a>Составные ключи
 

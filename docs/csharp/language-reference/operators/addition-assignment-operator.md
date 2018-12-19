@@ -1,5 +1,6 @@
 ---
-title: Оператор += (справочник по C#)
+title: Оператор +=. Справочник по C#
+ms.custom: seodec18
 ms.date: 10/29/2018
 f1_keywords:
 - +=_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - addition assignment operator (+=) [C#]
 - event subscription [C#]
 ms.assetid: 9cdf97e6-331d-492b-85e1-3ec3171484e9
-ms.openlocfilehash: ac9330e283cb58ae4e0ee7b644aa2c22bdf64c46
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 5d48f2fe53a9bb6f781f8d35f1e0983bcaa30f88
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50192035"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240935"
 ---
 # <a name="-operator-c-reference"></a>Оператор += (справочник по C#)
 
@@ -35,7 +36,7 @@ x = x + y
   
 Для числовых типов [оператор сложения](addition-operator.md) `+` вычисляет сумму операндов. Если один или оба операнда имеют [строковый](../keywords/string.md) тип, оператор сцепляет строковые представления операндов. Для типов делегатов оператор `+` возвращает новый экземпляр делегата, который представляет собой комбинацию операндов.
 
-Можно также использовать оператор `+=`, который позволяет указать метод обработчика событий при подписке на [событие](../keywords/event.md). Дополнительные сведения см. в разделе [Практическое руководство. Подписка и отмена подписки на события](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
+Можно также использовать оператор `+=`, который позволяет указать метод обработчика событий при подписке на [событие](../keywords/event.md). Дополнительные сведения см. в разделе [Как подписке и отмене подписки на события](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md).
 
 В следующем примере иллюстрируется использование оператора `+=`.
 

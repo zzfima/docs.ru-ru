@@ -1,15 +1,16 @@
 ---
-title: Ограничения на использование уровней доступности (справочник по C#)
+title: Справочник по C#. Ограничения на использование уровней доступности
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 2bcf2b12d1aa1488e6d3e46f5b37ac9535b138dd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ef1c0a93da2a53f1e199627fb7f83894d01e714a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47208845"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239333"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>Ограничения на использование уровней доступности (справочник по C#)
 
@@ -33,7 +34,7 @@ public class MyClass: BaseClass {...} // Error
 |[Свойства](../../programming-guide/classes-and-structs/properties.md)|Тип свойства должен иметь по крайней мере такой же уровень доступности, как и само свойство.|
 |[События](../../programming-guide/events/index.md)|Тип события должен иметь по крайней мере такой же уровень доступности, как и само событие.|
 |[Индексаторы](../../programming-guide/indexers/index.md)|Тип и типы параметров для индексатора должны иметь по крайней мере такой же уровень доступности, как и сам индексатор.|
-|[Операторы](../../programming-guide/statements-expressions-operators/operators.md)|Тип возвращаемого значения и типы параметров для оператора должны иметь по крайней мере такой же уровень доступности, как и сам оператор.|
+|[Инструкции](../../programming-guide/statements-expressions-operators/operators.md)|Тип возвращаемого значения и типы параметров для оператора должны иметь по крайней мере такой же уровень доступности, как и сам оператор.|
 |[Конструкторы](../../programming-guide/classes-and-structs/constructors.md)|Типы параметров для конструктора должны иметь по крайней мере такой же уровень доступности, как и сам конструктор.|
 
 ## <a name="example"></a>Пример

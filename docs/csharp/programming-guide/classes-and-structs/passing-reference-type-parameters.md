@@ -1,16 +1,17 @@
 ---
-title: Передача параметров ссылочного типа (Руководство по программированию в C#)
+title: Руководство по программированию на C#. Передача параметров ссылочного типа
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - method parameters [C#], reference types
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
-ms.openlocfilehash: d577754e8cb686c40172abd6c0bbd00bc481f737
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: faf9222d7850b9859f4bc61eb2a0bbe8f4b5bbc1
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582506"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243637"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>Передача параметров ссылочного типа (Руководство по программированию в C#)
 Переменная [ссылочного типа](../../../csharp/language-reference/keywords/reference-types.md) содержит не сами данные, а ссылку на них. При передаче параметра ссылочного типа по значению можно изменять данные, относящиеся к объекту, на который указывает ссылка, например, значение члена класса. Тем не менее изменить значение самой ссылки невозможно. Например, вы не можете использовать одну и ту же ссылку для выделения памяти для нового класса и его создания вне этого метода. Для этого необходимо передать параметр с использованием ключевого слова [ref](../../../csharp/language-reference/keywords/ref.md) или [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md). В следующих примерах мы для простоты используем `ref`.  

@@ -1,15 +1,16 @@
 ---
-title: Использование конструкторов (Руководство по программированию на C#)
+title: Руководство по программированию на C#. Использование конструкторов
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: d10b0de0a3811e615297b31d2d9c8934c9338078
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 1924e218f151a86b0524df6f3c91bdbe78131922
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "43529024"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236171"
 ---
 # <a name="using-constructors-c-programming-guide"></a>Использование конструкторов (Руководство по программированию на C#)
 Каждый раз, когда создается [класс](../../../csharp/language-reference/keywords/class.md) или [структура](../../../csharp/language-reference/keywords/struct.md), вызывается конструктор. Конструкторы имеют имя, совпадающее с именем класса или структуры, и обычно инициализируют члены данных нового объекта.  
@@ -53,7 +54,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  В связи с этим вызывать конструктор по умолчанию для типа значения необязательно.  
   
- Оба класса и `structs` могут определять конструкторы, принимающие параметры. Конструкторы, принимающие параметры, необходимо вызывать с помощью оператора `new` или [base](../../../csharp/language-reference/keywords/base.md). Классы и `structs` могут определять также несколько конструкторов; для определения конструктора по умолчанию ни один их них не требуется. Пример:  
+ Оба класса и `structs` могут определять конструкторы, принимающие параметры. Конструкторы, принимающие параметры, необходимо вызывать с помощью оператора `new` или [base](../../../csharp/language-reference/keywords/base.md). Классы и `structs` могут определять также несколько конструкторов; для определения конструктора по умолчанию ни один их них не требуется. Например:  
   
  [!code-csharp[csProgGuideObjects#54](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_3.cs)]  
   
@@ -61,7 +62,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
  [!code-csharp[csProgGuideObjects#55](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_4.cs)]  
   
- Конструктор может использовать ключевое слово `base` для вызова конструктора базового класса. Пример:  
+ Конструктор может использовать ключевое слово `base` для вызова конструктора базового класса. Например:  
   
  [!code-csharp[csProgGuideObjects#56](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/using-constructors_5.cs)]  
   

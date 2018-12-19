@@ -1,16 +1,17 @@
 ---
-title: Перегружаемые операторы (руководство по программированию в C#)
+title: Руководство по программированию на C#. Перегружаемые операторы
+ms.custom: seodec18
 ms.date: 08/27/2018
 helpviewer_keywords:
 - C# language, operator overloading
 - operator overloading [C#]
 ms.assetid: 390d9d01-79fc-40ab-9ed3-0bf448da1b6a
-ms.openlocfilehash: f819e94fd532c10478ac39da9485126aa4380dd5
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b993c7873cdce60ae03e872b842f8265900442fd
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583104"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238984"
 ---
 # <a name="overloadable-operators-c-programming-guide"></a>Перегружаемые операторы (руководство по программированию в C#)
 
@@ -36,6 +37,6 @@ C# позволяет пользовательским типам перегру
 
 - [Руководство по программированию на C#](../index.md)
 - [Инструкции, выражения и операторы](index.md)
-- [Операторы](operators.md)
+- [Инструкции](operators.md)
 - [Операторы в C#](../../language-reference/operators/index.md)  
 - [Почему перегруженные операторы всегда являются статическими в C#?](https://blogs.msdn.microsoft.com/ericlippert/2007/05/14/why-are-overloaded-operators-always-static-in-c/)

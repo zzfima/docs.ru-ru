@@ -1,19 +1,20 @@
 ---
-title: Практическое руководство. Использование псевдонима глобального пространства имен (Руководство по программированию на C#)
+title: Как выполнить Руководство по программированию на C#. Использование псевдонима глобального пространства имен
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - aliases [C#]
 - namespaces [C#], global namespace qualifier
 - global namespace [C#]
 ms.assetid: 98a1d89b-3c5a-44f7-8400-c4a3c0ec22a9
-ms.openlocfilehash: c15271abb55cb29a200185e4b512a76a4913d848
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 19d8d20ae630573b44399f8f5c5351f02b9fb1df
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "44514622"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236613"
 ---
-# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Практическое руководство. Использование псевдонима глобального пространства имен (Руководство по программированию на C#)
+# <a name="how-to-use-the-global-namespace-alias-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Использование псевдонима глобального пространства имен
 Возможность доступа к члену в глобальном [пространстве имен](../../../csharp/language-reference/keywords/namespace.md) полезна в тех случаях, когда член может быть скрыт другой сущностью с таким же именем.  
   
  Например, в следующем коде `Console` разрешается в `TestApp.Console` вместо типа `Console` в пространстве имен <xref:System>.  
@@ -50,5 +51,5 @@ ms.locfileid: "44514622"
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
 - [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)  
 - [. Оператор](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [Оператор ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [:: Оператор](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern](../../../csharp/language-reference/keywords/extern.md)

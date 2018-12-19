@@ -1,5 +1,6 @@
 ---
-title: '&lt;include&gt; (руководство по программированию на C#)'
+title: Руководство по программированию на C#. &lt;include&gt;
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 854c8b61fa8164bccfc9451f2f163dab4a56388f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 05c671f029e9597db05fe2104424545d0ee2b98f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48035192"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239424"
 ---
 # <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt; (руководство по программированию на C#)
 ## <a name="syntax"></a>Синтаксис  

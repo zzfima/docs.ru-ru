@@ -1,17 +1,18 @@
 ---
-title: Практическое руководство. Использование лямбда-выражений в запросах (Руководство по программированию на C#)
+title: Как выполнить Руководство по программированию на C#. Использование лямбда-выражений в запросах
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - lambda expressions [C#], in LINQ
 ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
-ms.openlocfilehash: 1632466aaa29cb79f053bd3ac2ca42e8b03ea89c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9b8adfde95cd2122136cb75e97b4113ee1d80cf9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506488"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238810"
 ---
-# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Практическое руководство. Использование лямбда-выражений в запросах (Руководство по программированию на C#)
+# <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Использование лямбда-выражений в запросах
 Использовать лямбда-выражения непосредственно в синтаксисе запросов нельзя, однако их включают в вызовы методов, а те, в свою очередь, могут содержаться в выражениях запросов. Фактически некоторые операции запросов могут быть выражены только в синтаксисе методов. Дополнительные сведения о различиях между синтаксисом запросов и синтаксисом методов см. в разделе [Синтаксис запросов и синтаксис методов в LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="example"></a>Пример  
@@ -27,7 +28,7 @@ ms.locfileid: "43506488"
  [!code-csharp[csProgGuideLINQ#2](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-lambda-expressions-in-a-query_2.cs)]  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Чтобы выполнить этот код, скопируйте и вставьте метод в `StudentClass`, описанный в документе [Практическое руководство. Запрос коллекции объектов](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md), а затем вызовите его из метода `Main`.  
+ Чтобы выполнить этот код, скопируйте и вставьте метод в `StudentClass`, описанный в практическом руководстве по [ созданию запроса коллекции объектов](../../../csharp/programming-guide/linq-query-expressions/how-to-query-a-collection-of-objects.md), и вызовите его из метода `Main`.  
   
 ## <a name="see-also"></a>См. также
 

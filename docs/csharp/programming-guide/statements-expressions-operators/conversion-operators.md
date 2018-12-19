@@ -1,5 +1,6 @@
 ---
-title: Операторы преобразования (Руководство по программированию в C#)
+title: Руководство по программированию на C#. Операторы преобразования
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, conversion operators
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: cbf6a83d43a1b3a69e82a35d5d0875f62422cd3f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: a55a2148ce161deca79d8ba8e64a217e474f0284
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44183318"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236821"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>Операторы преобразования (Руководство по программированию в C#)
 Разработчики на C# могут объявлять преобразования классов или структур в другие классы, структуры или базовые типы и обратно. Преобразования определяются как операторы и называются по имени типа, в который осуществляется преобразование. В качестве содержащего типа должен выступать либо тип преобразуемого аргумента, либо тип результата преобразования, но не оба эти типа.  
@@ -35,7 +36,7 @@ ms.locfileid: "44183318"
   
 -   [Приведение и преобразование типов](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
   
--   [Практическое руководство. Реализация определенных пользователем преобразований между структурами](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+-   [Практическое руководство. Реализация определяемых пользователем преобразований между структурами](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
   
 -   [explicit](../../../csharp/language-reference/keywords/explicit.md)  
   

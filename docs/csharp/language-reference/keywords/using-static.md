@@ -1,17 +1,18 @@
 ---
-title: Директива using static (справочник по C#)
+title: Справочник по C#. Директива using static
+ms.custom: seodec18
 ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04e7368a6b6a4453f2dd07c7afdc0bffa7473ed1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c17f74fc16e8c9774086c5270a66e9e9d7cc425b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506676"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237783"
 ---
 # <a name="using-static-directive-c-reference"></a>Директива using static (справочник по C#)
 
@@ -21,7 +22,7 @@ ms.locfileid: "43506676"
 using static <fully-qualified-type-name>;
 ```
 
-здесь *полное имя типа* — это имя типа, на статические члены и вложенные типы которого можно ссылаться, не указывая имя типа. Если полное имя (полное имя пространства имен вместе с именем типа) не указано, C# создает ошибку компилятора [CS0246](../compiler-messages/cs0246.md): "Тип или пространство имен 'type/namespace' не найдены (отсутствует директива using или ссылка сборки)".
+здесь *полное имя типа* — это имя типа, на статические члены и вложенные типы которого можно ссылаться, не указывая имя типа. Если полное имя (полное имя пространства имен вместе с именем типа) не указано, C# создает ошибку компилятора [CS0246](../compiler-messages/cs0246.md) с сообщением о том, что не удается найти имя типа или пространства имен (type/namespace), так как, возможно, пропущена директива using или ссылка на сборку.
 
 Директива `using static` применяется к каждому типу, у которого есть статические члены (или вложенные типы), даже если при этом у него также имеются члены экземпляров. При этом для вызова членов экземпляров можно использовать только экземпляр типа.
 

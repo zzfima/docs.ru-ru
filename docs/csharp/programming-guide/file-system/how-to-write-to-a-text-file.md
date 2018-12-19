@@ -1,5 +1,6 @@
 ---
-title: Практическое руководство. Запись в текстовый файл (Руководство по программированию на C#)
+title: Как выполнить Руководство по программированию на C#. Запись в текстовый файл
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - TextWriter.WriteLine
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-ms.openlocfilehash: ca08651bfce1a92f65a3e6fec7da3411a22bffb2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e753f10acd33234d7f5e0c1a4203125ab880e2ae
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43780079"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237146"
 ---
-# <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Практическое руководство. Запись в текстовый файл (Руководство по программированию на C#)
+# <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Запись в текстовый файл
 В этих примерах показаны различные способы записи текста в файл. В первых двух примерах используются удобные статические методы класса <xref:System.IO.File?displayProperty=nameWithType> для записи каждого элемента любого объекта `IEnumerable<string>` и строки в текстовый файл. В примере 3 показано, как добавить текст в файл, если необходимо обрабатывать отдельно каждую строку по мере ее записи в файл. В примерах 1–3 перезаписывается все существующее содержимое файла, а в примере 4 показано, как добавить текст в существующий файл.  
   
  Все эти примеры записывают строковые литералы в файлы. Чтобы отформатировать записываемый в файл текст, воспользуйтесь методом <xref:System.String.Format%2A> или функцией [интерполяции строк](../../../csharp/language-reference/tokens/interpolated.md) C#.  

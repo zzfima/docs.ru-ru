@@ -1,17 +1,18 @@
 ---
-title: Ключевое слово stackalloc (Справочник по C#)
+title: Справочник по C#. Ключевое слово stackalloc
+ms.custom: seodec18
 ms.date: 04/12/2018
 f1_keywords:
 - stackalloc_CSharpKeyword
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 16b2933423599e985ce57257595d67026dba93ca
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 31fdbacb01d1f6052c86d40c0bffc903130f216c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184534"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53245513"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (Справочник по C#)
 

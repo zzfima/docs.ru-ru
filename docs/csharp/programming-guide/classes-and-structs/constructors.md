@@ -1,17 +1,18 @@
 ---
-title: Конструкторы (Руководство по программированию на C#)
+title: Руководство по программированию на C#. Конструкторы
+ms.custom: seodec18
 ms.date: 05/05/2017
 helpviewer_keywords:
 - constructors [C#]
 - classes [C#], constructors
 - C# language, constructors
 ms.assetid: df2e2e9d-7998-418b-8e7d-890c17ff6c95
-ms.openlocfilehash: 3d07fe5f6164885a994838376887edccc260e291
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 79b000952ed03e5dc28d1c33bd2cba14708fb26a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45593963"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235336"
 ---
 # <a name="constructors-c-programming-guide"></a>Конструкторы (Руководство по программированию на C#)
 Каждый раз, когда создается [класс](../../../csharp/language-reference/keywords/class.md) или [структура](../../../csharp/language-reference/keywords/struct.md), вызывается конструктор. Класс или структура может иметь несколько конструкторов, принимающих различные аргументы. Конструкторы позволяют программисту задавать значения по умолчанию, ограничивать число установок и писать код, который является гибким и удобным для чтения. Дополнительные сведения и примеры см. в разделах [Использование конструкторов](../../../csharp/programming-guide/classes-and-structs/using-constructors.md) и [Конструкторы экземпляров](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md).  
@@ -53,7 +54,7 @@ ms.locfileid: "45593963"
   
  [Статические конструкторы](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
   
- [Практическое руководство. Создание конструктора копии](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
+ [Практическое руководство. Создание конструктора копий](../../../csharp/programming-guide/classes-and-structs/how-to-write-a-copy-constructor.md)  
   
 ## <a name="see-also"></a>См. также
 

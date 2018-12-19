@@ -1,15 +1,16 @@
 ---
-title: Использование структур (Руководство по программированию на C#)
+title: Руководство по программированию на C#. Использование структур
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - structs [C#], using
 ms.assetid: cea4a459-9eb9-442b-8d08-490e0797ba38
-ms.openlocfilehash: ed21bf44ebcc84a20bb228f9ba152e7348abc015
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b1e1405941cf9076e88aee5689ed933724727bb2
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521441"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237107"
 ---
 # <a name="using-structs-c-programming-guide"></a>Использование структур (Руководство по программированию на C#)
 Тип `struct` подходит для представления простых объектов, таких как `Point`, `Rectangle`и `Color`. Хотя point удобно представить в виде [класса](../../../csharp/language-reference/keywords/class.md) с [автоматически реализуемыми свойствами](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), в некоторых сценариях [структура](../../../csharp/language-reference/keywords/struct.md) может оказаться более эффективной. Например, при объявлении массива из 1000 объектов `Point` потребуется выделить дополнительную память для ссылки на каждый объект. В этом случае использование структуры будет более экономичным вариантом. Поскольку [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] содержит объект с именем <xref:System.Drawing.Point>, структура в этом примере называется CoOrds.  
@@ -32,7 +33,7 @@ ms.locfileid: "43521441"
   
 ## <a name="example-1"></a>Пример 1  
   
-### <a name="description"></a>Описание:  
+### <a name="description"></a>Описание  
  В этом примере показана инициализация `struct` с использованием конструктора по умолчанию и параметризованного конструктора.  
   
 ### <a name="code"></a>Код  

@@ -1,16 +1,17 @@
 ---
-title: Использование типа dynamic (руководство по программированию на C#)
+title: Руководство по программированию на C#. Использование типа dynamic
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: b1ea9240da66b77723c002c6527135339af9e352
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7c4e2aac613397fbd44f4594f96ddebfb75d0c3f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "43502537"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243763"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>Использование типа dynamic (руководство по программированию на C#)
 
@@ -73,9 +74,9 @@ ms.locfileid: "43502537"
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[dynamic](../../language-reference/keywords/dynamic.md)|Описывает применение ключевого слова `dynamic`.|
 |[Общие сведения о среде DLR](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|Содержит общие сведения о среде DLR — среде выполнения, которая добавляет в общую среду языковой среды исполнения (CLR) набор служб для динамических языков.|
 |[Пошаговое руководство. Создание и использование динамических объектов](walkthrough-creating-and-using-dynamic-objects.md)|Содержит пошаговые инструкции по созданию пользовательских динамических объектов и проекта, который обращается к библиотеке `IronPython`.|
-|[Практическое руководство. Доступ к объектам взаимодействия Office с помощью функций языка Visual C# 2010](../interop/how-to-access-office-onterop-objects.md)|Содержит сведения о создании проекта с использованием именованных и необязательных аргументов, типа `dynamic` и других усовершенствований, которые упрощают доступ к объектам Office API.|
+|[Практическое руководство. Доступ к объектам взаимодействия Office с помощью функций языка Visual C#](../interop/how-to-access-office-onterop-objects.md)|Содержит сведения о создании проекта с использованием именованных и необязательных аргументов, типа `dynamic` и других усовершенствований, которые упрощают доступ к объектам Office API.|

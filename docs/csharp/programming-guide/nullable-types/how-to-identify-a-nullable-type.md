@@ -1,18 +1,19 @@
 ---
-title: Практическое руководство. Идентификация типа, допускающего значение NULL (руководство по программированию на C#)
+title: Как выполнить Руководство по программированию на C#. Идентификация типа, допускающего значение NULL
+ms.custom: seodec18
 description: Узнайте, как определить, что тип допускает значение NULL или экземпляр принадлежит типу, допускающему значение NULL
 ms.date: 09/24/2018
 helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
-ms.openlocfilehash: f9957568d3c68f60cc9286718be9f5a496f876e6
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 88c8c9d881719bd1d09a8879112b26d1c484f827
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261346"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53240272"
 ---
-# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Практическое руководство. Идентификация типа, допускающего значение NULL (руководство по программированию на C#)
+# <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Идентификация типа, допускающего значение NULL
 
 В следующем примере, показано, как определить, представляет ли экземпляр <xref:System.Type?displayProperty=nameWithType> закрытый универсальный тип, допускающий значение null, т. е. тип <xref:System.Nullable%601?displayProperty=nameWithType> с указанным параметром типа `T`:
 

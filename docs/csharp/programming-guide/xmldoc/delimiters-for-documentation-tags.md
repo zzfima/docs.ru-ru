@@ -1,17 +1,18 @@
 ---
-title: Разделители для тегов в документации (Руководство по программированию на C#)
+title: Руководство по программированию на C#. Разделители для тегов в документации
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - XML [C#], delimiters
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: 06bd997e6862bc1f86ad2e3b2afbbb5afac78d9c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ce6b23edb10733de3134b5233413de8b535c11ac
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217260"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235297"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>Разделители для тегов в документации (Руководство по программированию на C#)
 Для создания комментариев в документах XML необходимо использовать разделители, по которым компилятор определяет начало и конец комментария. С тегами в XML-документации можно использовать следующие виды разделителей:  

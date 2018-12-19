@@ -1,5 +1,6 @@
 ---
-title: Hello World – Создаем первую программу (Руководство по программированию на C#)
+title: Руководство по программированию на C#. Создание первой программы Hello World
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.program
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - examples [C#], Hello World
 - Hello World example [C#]
 ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
-ms.openlocfilehash: 90f0ec6b88a2822cb3429948681c76c70f3d3f18
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 40c869d267dcabf4bd209b2ee86085f899a93231
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45593053"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236392"
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Hello World – Создаем первую программу (Руководство по программированию на C#)
 В следующей процедуре создается версия традиционной программы "Hello World!" в C#. Программа отображает строку `Hello World!`  
@@ -78,7 +79,7 @@ ms.locfileid: "45593053"
   
  Параметр `args` метода `Main` является массивом значений типа `string`, который содержит аргументы командной строки, используемые для вызова программы. В отличие от C++, массив не содержит имя исполняемого файла (EXE).  
   
- Дополнительные сведения об использовании командной строки см. в примерах в разделах [Main() и аргументы командной строки](../../../csharp/programming-guide/main-and-command-args/index.md) и [Практическое руководство. Создание и использование сборок с помощью командной строки](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
+ Дополнительные сведения об использовании командной строки см. в примерах в описании [Main() и аргументов командной строки](../../../csharp/programming-guide/main-and-command-args/index.md) и практическом руководстве по [ созданию и использованию сборок с помощью командной строки](../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md).  
   
  Вызов <xref:System.Console.ReadKey%2A> в конце метода `Main` предотвращает закрытие окна консоли, чтобы вы успели прочитать выходные данные, когда запускаете программу в режиме отладки с помощью клавиши F5.  
   
@@ -110,7 +111,7 @@ ms.locfileid: "45593053"
   
     -   Включите сборки из командной строки из стандартного окна командной строки.  
   
-         См. раздел [Практическое руководство. Настройка переменных среды для командной строки Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
+         См. практическое руководство по [ настройке переменных среды для командной строки Visual Studio](../../../csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md).  
   
 3.  В окне командной строки перейдите к папке, содержащей файл `Hello.cs`.  
   

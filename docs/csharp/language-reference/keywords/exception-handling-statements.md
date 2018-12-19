@@ -1,15 +1,16 @@
 ---
-title: Операторы обработки исключений (Справочник по C#)
+title: Справочник по C#. Операторы обработки исключений
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - keywords [C#], exception handling
 ms.assetid: 6d0323a3-3164-411c-9b84-a3606bd0e13c
-ms.openlocfilehash: 1d48981e0d36053fce1249b27cd15551ed59dc91
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 835bc0a0ac8bdabccddc12f0b7d3eaec4ecd3dee
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025137"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243157"
 ---
 # <a name="exception-handling-statements-c-reference"></a>Операторы обработки исключений (Справочник по C#)
 Язык C# обеспечивает встроенную поддержку для обработки нестандартных ситуаций, называемых исключениями, которые могут происходить во время выполнения программы. Эти исключения обрабатываются кодом, выходящим за пределы обычного потока управления.  
@@ -29,5 +30,5 @@ ms.locfileid: "48025137"
 - [Справочник по C#](../../../csharp/language-reference/index.md)  
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
 - [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)  
-- [Ключевые слова операторов](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [Ключевые слова инструкций](../../../csharp/language-reference/keywords/statement-keywords.md)  
 - [Исключения и обработка исключений](../../../csharp/programming-guide/exceptions/index.md)

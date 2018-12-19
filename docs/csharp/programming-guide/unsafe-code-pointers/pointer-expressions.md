@@ -1,16 +1,17 @@
 ---
-title: Выражения указателей (Руководство по программированию на C#)
+title: Руководство по программированию на C#. Выражения указателей
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - expressions [C#], pointer types
 - pointer expressions [C#]
 ms.assetid: 3e7d9db3-20e9-4493-9c99-53c3214d19e5
-ms.openlocfilehash: a45557ab2cdcc17bc32f5183f6320be1819c6bcb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 253646330e8717c14d432eac17e300196ad19dfa
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520891"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235760"
 ---
 # <a name="pointer-expressions-c-programming-guide"></a>Выражения указателей (Руководство по программированию на C#)
 В этом разделе описываются следующие выражения указателей:  

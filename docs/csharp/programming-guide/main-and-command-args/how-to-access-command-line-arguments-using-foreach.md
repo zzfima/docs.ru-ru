@@ -1,17 +1,18 @@
 ---
-title: Практическое руководство. Доступ к аргументам командной строки с помощью оператора foreach (Руководство по программированию на C#)
+title: Как выполнить Руководство по программированию на C#. Доступ к аргументам командной строки с помощью оператора foreach
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 89c3e335-3f5b-4e24-8c5a-b8036561fe8a
-ms.openlocfilehash: 811ee09aec7afac70f3f2c2fe5fb002232935028
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 79c798bb6ec16fc639d37defc40da5af770e5bba
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511340"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242442"
 ---
-# <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>Практическое руководство. Доступ к аргументам командной строки с помощью оператора foreach (Руководство по программированию на C#)
+# <a name="how-to-access-command-line-arguments-using-foreach-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Доступ к аргументам командной строки с помощью оператора foreach
 Другим методом итерации всех элементов массива является использование оператора [foreach](../../../csharp/language-reference/keywords/foreach-in.md), как показано в приведенном ниже примере. Оператор `foreach` можно использовать для итерации всех элементов массива, класса коллекции .NET Framework либо любого класса или структуры, реализующих интерфейс <xref:System.Collections.IEnumerable>.  
   
 > [!NOTE]

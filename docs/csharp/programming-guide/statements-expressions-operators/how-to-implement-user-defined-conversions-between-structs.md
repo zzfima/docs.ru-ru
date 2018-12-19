@@ -1,17 +1,18 @@
 ---
-title: Практическое руководство. Реализация определенных пользователем преобразований между структурами (Руководство по программированию на C#)
+title: Как выполнить Руководство по программированию на C#. Реализация определенных пользователем преобразований между структурами
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user-defined conversions [C#]
 ms.assetid: 97839aef-8fbc-40d5-9769-6b569bc2710b
-ms.openlocfilehash: cff85d60c1b59f4d1ca028f8fc02fee5728fa3d6
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 85345203982679c0ab8dc9a6ae899312204c3230
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46696656"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241578"
 ---
-# <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>Практическое руководство. Реализация определенных пользователем преобразований между структурами (Руководство по программированию на C#)
+# <a name="how-to-implement-user-defined-conversions-between-structs-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Реализация определенных пользователем преобразований между структурами
 В этом примере определяются две структуры (`RomanNumeral` и `BinaryNumeral`) и демонстрируются преобразования между ними.  
   
 ## <a name="example"></a>Пример  

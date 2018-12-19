@@ -1,5 +1,6 @@
 ---
-title: Общие сведения о взаимодействии. (Руководство по программированию в C#)
+title: Руководство по программированию на C#. Общие сведения о взаимодействии
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - COM interop
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: d19f238136ed4ce1eb9b9821ef12c6305c06e429
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 1be7184a37e98e72118065de262d1484476d1cb8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150041"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238677"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Общие сведения о взаимодействии. (Руководство по программированию в C#)
 В этом разделе описываются способы включения взаимодействия между управляемым кодом C# и неуправляемым кодом.  
@@ -21,7 +22,7 @@ ms.locfileid: "53150041"
 ## <a name="platform-invoke"></a>Вызов неуправляемого кода  
  *Вызов неуправляемого кода* — это служба, позволяющая управляемому коду вызывать неуправляемые функции, реализованные в библиотеках динамической компоновки (DLL), например функции библиотек Microsoft Win32 API. Он обнаруживает и вызывает экспортированную функцию и при необходимости маршалирует ее аргументы (целые числа, строки, массивы, структуры и так далее) через границы взаимодействия.  
   
- Дополнительные сведения см. в разделах [Использование неуправляемых функций DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md) и [Практическое руководство. Использование вызова неуправляемого кода для воспроизведения звукового файла](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).  
+ Дополнительные сведения см. в статьях [Использование неуправляемых функций DLL](../../../framework/interop/consuming-unmanaged-dll-functions.md) и [Руководство по программированию на C#. Использование вызова неуправляемого кода для воспроизведения звукового файла](../../../csharp/programming-guide/interop/how-to-use-platform-invoke-to-play-a-wave-file.md).  
   
 > [!NOTE]
 >  [Среда CLR](../../../standard/clr.md) управляет доступом к системным ресурсам. Вызов неуправляемого кода, который находится вне среды CLR, обходит этот механизм защиты и таким образом представляет угрозу безопасности. Например, неуправляемый код может обращаться к ресурсам в неуправляемом коде напрямую, минуя механизмы обеспечения безопасности среды CLR. Дополнительные сведения см. в разделе [Безопасность в .NET](../../../standard/security/index.md).  

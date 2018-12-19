@@ -1,19 +1,20 @@
 ---
-title: Практическое руководство. Подписка и отмена подписки на события (Руководство по программированию в C#)
+title: Как выполнить Руководство по программированию на C#. Подписка и отмена подписки на события
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: e27473ca34f634f4a3125a2e87e6d0ef918a6f9d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 89647687c73cdb9b81625b830f0c9a77f1c67d13
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999144"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241091"
 ---
-# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Практическое руководство. Подписка и отмена подписки на события (Руководство по программированию в C#)
+# <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Подписка и отмена подписки на события
 Необходимость подписки на событие, опубликованное другим классом, может возникнуть, когда требуется написать пользовательский код, вызываемый при инициировании такого события. Например, можно подписаться на событие кнопки `click`, чтобы приложение выполняло некоторое действие при нажатии пользователем кнопки.  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Подписка на события в интегрированной среде разработки Visual Studio  
@@ -69,7 +70,7 @@ ms.locfileid: "45999144"
     }  
     ```  
   
-     Дополнительные сведения см. в разделе [Практическое руководство. Использование лямбда-выражений вне LINQ](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).  
+     Дополнительные сведения см. в разделе [ Руководство по программированию на C#. Использование лямбда-выражений вне LINQ](../../../csharp/programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).  
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>Подписка на события с помощью анонимного метода  
   
@@ -102,6 +103,6 @@ ms.locfileid: "45999144"
 
 - [События](../../../csharp/programming-guide/events/index.md)  
 - [event](../../../csharp/language-reference/keywords/event.md)  
-- [Практическое руководство. Публикация событий, соответствующих рекомендациям для .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+- [Практическое руководство. Публикация событий в соответствии с руководствами по .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
 - [Оператор -= (справочник по C#)](../../language-reference/operators/subtraction-assignment-operator.md)  
 - [Оператор +=](../../../csharp/language-reference/operators/addition-assignment-operator.md)

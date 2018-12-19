@@ -1,16 +1,17 @@
 ---
-title: Одномерные массивы (Руководство по программированию на C#)
+title: Руководство по программированию на C#. Одномерные массивы
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - single-dimensional arrays [C#]
 - arrays [C#], single-dimensional
 ms.assetid: 2cec1196-1de0-49d2-baf2-c607c33310e8
-ms.openlocfilehash: c2f26fd74a596ada21eef578e58c9cd8e0305d6c
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: e9243ff8b55970ebab6ecbe42cb3ed8ebcaecfe3
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027132"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238576"
 ---
 # <a name="single-dimensional-arrays-c-programming-guide"></a>Одномерные массивы (Руководство по программированию на C#)
 
@@ -20,13 +21,13 @@ ms.locfileid: "48027132"
   
  Этот массив содержит элементы с `array[0]` по `array[4]`. С помощью оператора [new](../../../csharp/language-reference/keywords/new.md) можно создать массив и инициализировать его элементы, используя значения по умолчанию. В этом примере при инициализации всем элементам массива присваиваются нулевые значения.  
   
- Таким же образом можно объявить массив, в котором хранятся строковые элементы. Пример:  
+ Таким же образом можно объявить массив, в котором хранятся строковые элементы. Например:  
   
  [!code-csharp[csProgGuideArrays#5](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_2.cs)]  
   
 ## <a name="array-initialization"></a>Инициализация массива
 
- Массив можно инициализировать при объявлении. В этом случае не требуется спецификатор ранга, поскольку он уже задается по числу элементов в списке инициализации. Пример:  
+ Массив можно инициализировать при объявлении. В этом случае не требуется спецификатор ранга, поскольку он уже задается по числу элементов в списке инициализации. Например:  
   
  [!code-csharp[csProgGuideArrays#6](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_3.cs)]  
   
@@ -38,7 +39,7 @@ ms.locfileid: "48027132"
   
  [!code-csharp[csProgGuideArrays#8](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_5.cs)]  
   
- Переменную массива можно объявить без инициализации, однако при присвоении массива этой переменной необходимо использовать оператор `new`. Пример:  
+ Переменную массива можно объявить без инициализации, однако при присвоении массива этой переменной необходимо использовать оператор `new`. Например:  
   
  [!code-csharp[csProgGuideArrays#9](../../../csharp/programming-guide/arrays/codesnippet/CSharp/single-dimensional-arrays_6.cs)]  
   

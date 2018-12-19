@@ -1,5 +1,6 @@
 ---
-title: Предложение group (Справочник по C#)
+title: Справочник по C#. Предложение group
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - group
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 8b2516b4e5b418e560d5763d8e551d2ab7646da3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6c28f9f4cdcb2ec2d84f299dddb13dc821c1739a
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584355"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53238173"
 ---
 # <a name="group-clause-c-reference"></a>Предложение group (Справочник по C#)
 
@@ -53,7 +54,7 @@ ms.locfileid: "48584355"
 
 ### <a name="grouping-by-numeric-range"></a>Группировка по числовому диапазону
 
-В следующем примере с помощью выражения создаются числовые ключи групп, обозначающие диапазоны значений в выборке. Обратите внимание на удобное использование [let](let-clause.md) для хранения результатов вызова метода, чтобы в предложении `group` не приходилось вызывать метод дважды. Дополнительные сведения о безопасном использовании методов в выражениях запросов см. в разделе [Практическое руководство. Обработка исключений в выражениях запросов](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
+В следующем примере с помощью выражения создаются числовые ключи групп, обозначающие диапазоны значений в выборке. Обратите внимание на удобное использование [let](let-clause.md) для хранения результатов вызова метода, чтобы в предложении `group` не приходилось вызывать метод дважды. Дополнительные сведения о безопасном использовании методов в выражениях запросов см. в практическом руководстве по [ обработке исключений в выражениях запросов](../../programming-guide/linq-query-expressions/how-to-handle-exceptions-in-query-expressions.md).
 
 [!code-csharp[cscsrefQueryKeywords#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#15)]
 
@@ -65,7 +66,7 @@ ms.locfileid: "48584355"
 group person by new {name = person.surname, city = person.city};
 ```
 
-Если требуется передать переменную запроса другому методу, следует использовать именованные типы. Создайте особый класс, используя автоматически реализуемые свойства для ключей, а затем переопределите методы <xref:System.Object.Equals%2A> и <xref:System.Object.GetHashCode%2A>. Можно также воспользоваться структурой, чтобы избежать необходимости переопределять эти методы. Дополнительные сведения см. в разделах [Практическое руководство. Реализация облегченного класса с автоматически реализуемыми свойствами](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) и [Практическое руководство. Запрос повторяющихся файлов в дереве каталогов](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). В последней статье имеется пример кода, демонстрирующий использование составных ключей с именованным типом.
+Если требуется передать переменную запроса другому методу, следует использовать именованные типы. Создайте особый класс, используя автоматически реализуемые свойства для ключей, а затем переопределите методы <xref:System.Object.Equals%2A> и <xref:System.Object.GetHashCode%2A>. Можно также воспользоваться структурой, чтобы избежать необходимости переопределять эти методы. Дополнительные сведения см. в практическом руководстве по [ реализации облегченного класса с автоматически реализуемыми свойствами](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) и [ выполнению запросов повторяющихся файлов в дереве каталогов](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md). В последней статье имеется пример кода, демонстрирующий использование составных ключей с именованным типом.
 
 ## <a name="example"></a>Пример
 

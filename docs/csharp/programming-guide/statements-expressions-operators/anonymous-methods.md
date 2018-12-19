@@ -1,17 +1,18 @@
 ---
-title: Анонимные методы (Руководство по программированию в C#)
+title: Руководство по программированию на C#. Анонимные методы
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous methods [C#]
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: 26d4b7f46783b9aa41035775928a4fe322d0af44
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6f7eb71b6208b1991044b770a3c42cc05d8fb721
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506661"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53243986"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Анонимные методы (Руководство по программированию в C#)
 В версиях языка C# до 2.0 объявить [делегат](../../../csharp/language-reference/keywords/delegate.md) можно было только с помощью [именованных методов](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). В версии C# 2.0 были представлены анонимные методы, в версии C# 3.0 и более поздних замененные лямбда-выражениями, которые теперь рекомендуется использовать для написания встроенного кода. Тем не менее сведения об анонимных методах из этого раздела также относятся и к лямбда-выражениям. В одном случае анонимные методы реализуют функциональные возможности, недоступные при использовании лямбда-выражений. При использовании анонимных методов можно опустить список параметров. Это значит, что анонимный метод может быть преобразован в делегаты с различными сигнатурами. При работе с лямбда-выражениями это невозможно. Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  

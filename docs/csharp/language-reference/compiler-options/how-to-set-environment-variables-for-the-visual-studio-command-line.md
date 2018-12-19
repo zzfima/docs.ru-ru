@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Настройка переменных среды для командной строки Visual Studio
+title: Как выполнить Настройка переменных среды для командной строки Visual Studio
 ms.date: 09/29/2017
 f1_keywords:
 - cs.build.commandline
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: 77375e428fe0563c0b533ca97abd21070e850682
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 3563f668dfd4610e1c5cd7d7f8633943c654f193
+ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857853"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53286446"
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Практическое руководство. Настройка переменных среды для командной строки Visual Studio
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>Как выполнить Настройка переменных среды для командной строки Visual Studio
 
-Файл VsDevCmd.bat задает переменные среды для поддержки построения из командной строки. Дополнительные сведения о файле VsDevCmd.bat см. в [статье базы знаний Q248802](https://support.microsoft.com/help/248802/you-receive-the-out-of-environment-space-error-message-when-you-execut).  
+Файл VsDevCmd.bat задает переменные среды для поддержки построения из командной строки.
 
 > [!NOTE]
 > В состав Visual Studio 2017 включен новый файл VsDevCmd.bat. В Visual Studio 2015 и более ранних версий для этих целей использовался файл VSVARS32.bat. Этот файл располагался в каталоге \Program Files\Microsoft Visual Studio\\*Version*\Common7\Tools или Program Files (x86)\Microsoft Visual Studio\\*Version*\Common7\Tools.
@@ -41,7 +41,14 @@ ms.locfileid: "43857853"
   
     > [!CAUTION]
     >  Файл VsDevCmd.bat может иметь отличия на разных компьютерах. Не заменяйте отсутствующий или поврежденный файл VsDevCmd.bat файлом VsDevCmd.bat с другого компьютера. Вместо этого повторите установку, чтобы заменить отсутствующий файл.  
-  
+
+### <a name="available-options-for-vsdevcmdbat"></a>Доступные параметры для VsDevCmd.BAT
+
+Чтобы просмотреть доступные параметры для VsDevCmd.BAT, выполните команду с параметром `-help`:
+```console
+VsDevCmd.bat -help
+```
+
 ## <a name="see-also"></a>См. также  
 
 - [Сборка из командной строки с помощью csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

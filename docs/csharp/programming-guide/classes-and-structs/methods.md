@@ -1,16 +1,17 @@
 ---
-title: Методы (Руководство по программированию на C#)
+title: Методы. Руководство по программированию на C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: f719dd010f2910a12b22fac10ae92f1a6bfe8438
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: df2d7837217f4267f95ed73948a4eb479cc035c1
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43741836"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244418"
 ---
 # <a name="methods-c-programming-guide"></a>Методы (Руководство по программированию на C#)
 Метод — это блок кода, содержащий ряд инструкций. Программа инициирует выполнение инструкций, вызывая метод и указывая все аргументы, необходимые для этого метода. В C# все инструкции выполняются в контексте метода. Метод Main является точкой входа для каждого приложения C#, и он вызывается общеязыковой средой выполнения (CLR) при запуске программы.  
@@ -34,7 +35,7 @@ ms.locfileid: "43741836"
  [!code-csharp[csProgGuideObjects#41](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_2.cs)]  
   
 ## <a name="method-parameters-vs-arguments"></a>Параметры методов и Аргументы  
- Определение метода задает имена и типы всех необходимых параметров. Когда вызывающий код вызывает метод, он предоставляет конкретные значения, называемые аргументами, для каждого параметра. Аргументы должны быть совместимы с типом параметра, но имя аргумента (если есть), используемое в вызывающем коде, не обязательно должно совпадать с именем параметра, указанным в методе. Пример:  
+ Определение метода задает имена и типы всех необходимых параметров. Когда вызывающий код вызывает метод, он предоставляет конкретные значения, называемые аргументами, для каждого параметра. Аргументы должны быть совместимы с типом параметра, но имя аргумента (если есть), используемое в вызывающем коде, не обязательно должно совпадать с именем параметра, указанным в методе. Например:  
   
  [!code-csharp[csProgGuideObjects#74](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_3.cs)]  
   
@@ -125,7 +126,7 @@ public static void FillMatrix(int[,] matrix)
   
  [!code-csharp[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
   
- Асинхронный метод не может объявить все параметры [ref](../../../csharp/language-reference/keywords/ref.md) или [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md), но может вызвать методы, которые имеют такие параметры.  
+ Асинхронный метод не может объявить все параметры [ref](../../../csharp/language-reference/keywords/ref.md) или [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) , но может вызывать методы, которые имеют такие параметры.  
   
  Дополнительные сведения об асинхронных методах см. в разделах [Асинхронное программирование с использованием ключевых слов async и await](../../../csharp/programming-guide/concepts/async/index.md), [Поток управления в асинхронных программах](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) и [Асинхронные типы возврата](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   

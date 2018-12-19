@@ -1,5 +1,6 @@
 ---
-title: Практическое руководство. Определение равенства значений для типа (Руководство по программированию на C#)
+title: Как выполнить Руководство по программированию на C#. Определение равенства значений для типа
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - overriding Equals method [C#]
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: 8abcace9c648ba2132d2b6849ae1c9d347d6fd29
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a2d71994647e50afc8d343725e639b6e9d24831f
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126787"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244431"
 ---
-# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Практическое руководство. Определение равенства значений для типа (Руководство по программированию на C#)
+# <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Определение равенства значений для типа
 При определении класса или структуры необходимо решить, имеет ли смысл создавать пользовательское определение равенства значений (или эквивалентности) для этого типа. Обычно правила определения равенства реализуются, если объекты этого типа будут добавляться в коллекции или если они в первую очередь предназначены для хранения набора полей или свойств. В основу определения равенства значений можно положить сравнение всех полей и свойств в типе или только их части. Но в любом случае (как для классов, так и для структур) реализация должна соответствовать следующим пяти гарантиям равенства.  
   
 1.  `x.Equals(x)` возвращает `true`. Это называется свойством рефлексивности.  
@@ -36,11 +37,11 @@ ms.locfileid: "53126787"
   
 2.  Реализуйте интерфейс <xref:System.IEquatable%601?displayProperty=nameWithType>, предоставив метод `Equals` для конкретного типа. Именно на этом этапе происходит фактическое сравнение значений. Например, функцию равенства можно определить путем сравнения только одного из двух полей в типе. Не вызывайте исключения из `Equals`. Только для классов: этот метод должен проверять только те поля, которые объявлены в классе. Он должен вызывать метод `base.Equals` для проверки полей в базовом классе. (Не делайте этого, если тип наследуется напрямую от <xref:System.Object>, поскольку реализация <xref:System.Object> для <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> выполняет проверку равенства ссылок.)  
   
-3.  Рекомендуется (хотя это и не обязательно) перегрузить операторы [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) и [!=](../../../csharp/language-reference/operators/not-equal-operator.md).  
+3.  Необязательно, но рекомендуется: перегрузите операторы [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) и [!=](../../../csharp/language-reference/operators/not-equal-operator.md).  
   
 4.  Переопределите <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType> таким образом, чтобы два объекта с равными значениями создавали одинаковый хэш-код.  
   
-5.  Необязательно. Для поддержки определений "больше" и "меньше" реализуйте для типа интерфейс <xref:System.IComparable%601>, а также перегрузите операторы [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) и [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md).  
+5.  Необязательные: Для поддержки определений "больше" и "меньше" реализуйте для типа интерфейс <xref:System.IComparable%601>, а также перегрузите операторы [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) и [>=](../../../csharp/language-reference/operators/greater-than-equal-operator.md).  
   
  В первом из приведенных ниже примеров показана реализация класса. Во втором примере показана реализация структуры.  
   

@@ -1,5 +1,6 @@
 ---
-title: Практическое руководство. Использование вызова неуправляемого кода для воспроизведения звукового файла (Руководство по программированию на C#)
+title: Как выполнить Руководство по программированию на C#. Использование вызова неуправляемого кода для воспроизведения звукового файла
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - platform invoke, sound files
@@ -7,14 +8,14 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: a83d0a11aacac3676aa78d9952f24f505949d24c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 101cd6fa044e181cf6f993fbea642c9dffe04008
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522557"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236860"
 ---
-# <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Практическое руководство. Использование вызова неуправляемого кода для воспроизведения звукового файла (Руководство по программированию на C#)
+# <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Использование вызова неуправляемого кода для воспроизведения звукового файла
 В следующем примере кода C# показано, как использовать службы вызова неуправляемого кода для воспроизведения звуковых WAV-файлов в операционной системе Windows.  
   
 ## <a name="example"></a>Пример  

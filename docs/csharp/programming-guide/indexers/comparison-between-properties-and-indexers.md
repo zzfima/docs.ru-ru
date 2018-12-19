@@ -1,16 +1,17 @@
 ---
-title: Сравнение свойств и индексаторов (Руководство по программированию в C#)
+title: Руководство по программированию на C#. Сравнение свойств и индексаторов
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - properties [C#], vs. indexers
 - indexers [C#], vs. properties
 ms.assetid: 3358a89f-44a0-4a4d-bf8c-07237a90af39
-ms.openlocfilehash: 3a78b97f2cac1f2c49be03bc351d9b6f4b6438e6
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 053eb7ee0fe9333f049e5b4f8a8e709e42aa2119
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861446"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53234465"
 ---
 # <a name="comparison-between-properties-and-indexers-c-programming-guide"></a>Сравнение свойств и индексаторов (Руководство по программированию в C#)
 Индексаторы подобны свойствам. К методам доступа индексаторов применяются те же правила, которые определены для методов доступа к свойствам, за исключением различий, показанных в следующей таблице.  

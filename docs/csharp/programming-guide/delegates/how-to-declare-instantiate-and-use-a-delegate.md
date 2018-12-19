@@ -1,17 +1,18 @@
 ---
-title: Практическое руководство. Объявление, создание экземпляра и использование делегата (руководство по программированию в C#)
+title: Как выполнить Руководство по программированию на C#. Объявление, создание экземпляра и использование делегата
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
-ms.openlocfilehash: 6c53d7572074db44976494e5eed596bf95aaf456
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: bc9fc81a74d438aca57779fa565fdbeba3968087
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858864"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237068"
 ---
-# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Практическое руководство. Объявление, создание экземпляра и использование делегата (руководство по программированию в C#)
+# <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Объявление, создание экземпляра и использование делегата
 В C# 1.0 и более поздних версий делегаты можно объявлять так, как показано в следующем примере.  
   
  [!code-csharp[csProgGuideDelegates#13](../../../csharp/programming-guide/delegates/codesnippet/CSharp/how-to-declare-instantiate-and-use-a-delegate_1.cs)]  
@@ -63,7 +64,7 @@ ms.locfileid: "43858864"
   
      После создания делегата невозможно изменить метод, с которым он связан. Объекты делегатов являются неизменяемыми.  
   
--   Использование делегатов.  
+-   Использование делегатов  
   
      Обычно после создания объекта делегата он передается в другой код, который будет использовать этот делегат. Для вызова объекта делегата используется имя этого объекта, за которым следуют параметризованные аргументы, которые нужно передать делегату. Ниже показан пример использования делегата.  
   

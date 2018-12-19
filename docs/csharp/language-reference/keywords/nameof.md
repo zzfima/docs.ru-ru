@@ -1,16 +1,17 @@
 ---
-title: nameof (справочник по C#)
+title: nameof. Справочник по C#
+ms.custom: seodec18
 ms.date: 06/16/2017
 f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 01c87f8d63264aa342b04b8d3fcfc7e6f38db44b
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 61c0744168a6fef0f8c8cfb589602e7aeff0c48b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "50744374"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241498"
 ---
 # <a name="nameof-c-reference"></a>nameof (справочник по C#)
 
@@ -108,7 +109,7 @@ class Test {
   
  Так как аргумент должен быть синтаксическим выражением, существует несколько запрещенных элементов, которые не следует перечислять.  Ниже приведены те элементы, которые могут приводить к ошибкам: предопределенные типы (например, `int` или `void`), типы, допускающие значение NULL (`Point?`), типы массивов (`Customer[,]`), типы указателей (`Buffer*`), полный псевдоним (`A::B`) и несвязанные универсальные типы (`Dictionary<,>`), символы предварительной обработки (`DEBUG`) и метки (`loop:`).  
   
- Если необходимо получить полное имя, можно использовать выражение `typeof` вместе с `nameof`.  Пример:
+ Если необходимо получить полное имя, можно использовать выражение `typeof` вместе с `nameof`.  Например:
 ```csharp  
 class C {
     void f(int i) {  

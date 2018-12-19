@@ -1,19 +1,20 @@
 ---
-title: Практическое руководство. Обработка исключений с помощью блока try-catch (руководство по программированию на C#)
+title: Как выполнить Руководство по программированию на C#. Обработка исключений с помощью блока try-catch
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - exception handling [C#], try/catch blocks
 - exceptions [C#], try/catch blocks
 - try/catch blocks [C#]
 ms.assetid: ca8e3773-980e-4767-8633-7408540e9818
-ms.openlocfilehash: 74503c510007b132a7bbb14da7eade4c379b2179
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: db83eca52b204df1bb8273e94ae8664e61175aa7
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856587"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53244942"
 ---
-# <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Практическое руководство. Обработка исключений с помощью блока try-catch (Руководство по программированию на C#)
+# <a name="how-to-handle-an-exception-using-trycatch-c-programming-guide"></a>Как выполнить Руководство по программированию на C#. Обработка исключений с помощью блока try-catch
 Блок [try-catch-](../../../csharp/language-reference/keywords/try-catch.md) предназначен для перехвата и обработки исключений, происходящих в исполняемом коде. Некоторые исключения могут обрабатываться в блоке `catch`, и проблема решается без повторного создания исключения. Но в большинстве случаев на этом этапе можно только проверить, что создано подходящее исключение.  
   
 ## <a name="example"></a>Пример  

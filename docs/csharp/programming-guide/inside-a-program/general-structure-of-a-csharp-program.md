@@ -1,15 +1,16 @@
 ---
-title: Общая структура программы на C# (Руководство по программированию на C#)
+title: Руководство по программированию на C#. Общая структура программы на C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, program structure
 ms.assetid: 5ae964a5-0ef0-40fe-88fb-6d1793371d0d
-ms.openlocfilehash: 3e2718d932506f261ea32e7289a3191bca7c22e8
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: a9e20d0020b82973fb95e422c30f87421adedd5c
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "45698160"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236899"
 ---
 # <a name="general-structure-of-a-c-program-c-programming-guide"></a>Общая структура программы на C# (Руководство по программированию на C#)
 Программа на языке C# может состоять из одного или нескольких файлов. Каждый файл может содержать нуль или несколько пространств имен. Пространство имен может содержать типы, такие как классы, структуры, интерфейсы, перечисления и делегаты, а также другие пространства имен. Ниже приведена структура программы на C#, содержащей все эти элементы.  

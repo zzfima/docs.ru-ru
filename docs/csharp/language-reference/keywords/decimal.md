@@ -1,5 +1,6 @@
 ---
-title: Ключевое слово decimal (справочник по C#)
+title: Справочник по C#. Ключевое слово decimal
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - decimal_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - decimal keyword [C#]
 ms.assetid: b6522132-b5ee-4be3-ad13-3adfdb7de7a1
-ms.openlocfilehash: c9d40238ca4c34238d5663185f93afbce73195cf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f26d812d8f4da8fae73ebbaee15441cd88860d04
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506523"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53239463"
 ---
 # <a name="decimal-c-reference"></a>decimal (Справочник по C#)
 
@@ -42,7 +43,7 @@ decimal myMoney = 300.5m;
 decimal myMoney = 300;
 ```
 
-Неявное преобразование между другими типами с плавающей запятой и типом `decimal` отсутствует, поэтому для преобразования между этими двумя типами следует использовать приведение. Пример:
+Неявное преобразование между другими типами с плавающей запятой и типом `decimal` отсутствует, поэтому для преобразования между этими двумя типами следует использовать приведение. Например:
 
 ```csharp
 decimal myMoney = 99.9m;
@@ -104,4 +105,4 @@ Console.WriteLine((double)dec + dub);
 - [Таблица встроенных типов](../../../csharp/language-reference/keywords/built-in-types-table.md)  
 - [Таблица неявных числовых преобразований](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
 - [Таблица явных числовых преобразований](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [Строки стандартных числовых форматов](../../../standard/base-types/standard-numeric-format-strings.md)
+- [Standard Numeric Format Strings](../../../standard/base-types/standard-numeric-format-strings.md)

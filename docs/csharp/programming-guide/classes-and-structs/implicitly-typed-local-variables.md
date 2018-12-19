@@ -1,16 +1,17 @@
 ---
-title: Неявно типизированные локальные переменные (Руководство по программированию в C#)
+title: Руководство по программированию на C#. Неявно типизированные локальные переменные
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 2e678886162196c3a0fe4762bf766596cdc02225
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 68c0ff055c91f4f1deca6fcfada0f14577439731
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501407"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53237016"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>Неявно типизированные локальные переменные (Руководство по программированию в C#)
 Локальные переменные можно объявлять без указания конкретного типа. Ключевое слово `var` указывает, что компилятор должен вывести тип переменной из выражения справа от оператора инициализации. Выведенный тип может быть встроенным, анонимным, определяемым пользователем либо типом, определяемым в библиотеке классов .NET Framework. Дополнительные сведения об инициализации массивов с `var` см. в разделе [Неявно типизированные массивы](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md).  
@@ -43,7 +44,7 @@ ms.locfileid: "43501407"
     using (var file = new StreamReader("C:\\myfile.txt")) {...}  
     ```  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Использование явно введенных локальных переменных и массивов в выражении запроса](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).  
+ Дополнительные сведения см. в разделе [ Руководство по программированию на C#. Использование явно введенных локальных переменных и массивов в выражении запроса](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md).  
   
 ## <a name="var-and-anonymous-types"></a>Переменная var и анонимные типы  
  Во многих случаях переменная `var` не является обязательной и предназначена только для синтаксического удобства. Тем не менее если переменная инициализируется с помощью анонимного типа и вам потребуется доступ к свойствам объекта на более позднем этапе, ее необходимо объявить как `var`. Это — распространенный сценарий в выражениях запросов [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]. Дополнительные сведения см. в разделе [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md).  
@@ -77,7 +78,7 @@ ms.locfileid: "43501407"
 
 - [Справочник по C#](../../../csharp/language-reference/index.md)  
 - [Неявно типизированные массивы](../../../csharp/programming-guide/arrays/implicitly-typed-arrays.md)  
-- [Практическое руководство. Использование явно введенных локальных переменных и массивов в выражении запроса](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)  
+- [Руководство по программированию на C#. Использование явно введенных локальных переменных и массивов в выражении запроса](../../../csharp/programming-guide/classes-and-structs/how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md)  
 - [Анонимные типы](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
 - [Инициализаторы объектов и коллекций](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
 - [var](../../../csharp/language-reference/keywords/var.md)  

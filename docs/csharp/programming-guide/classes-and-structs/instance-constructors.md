@@ -1,16 +1,17 @@
 ---
-title: Конструкторы экземпляров (Руководство по программированию в C#)
+title: Руководство по программированию на C#. Конструкторы экземпляров
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], instance constructors
 - instance constructors [C#]
 ms.assetid: 24663779-c1e5-4af4-a942-ca554e4c542d
-ms.openlocfilehash: cd7105ec61e5c878dc148c30b27706b1eda3ae72
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5cc7c06a763c4b274b154afc581e495a7e2aa09b
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530383"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53241659"
 ---
 # <a name="instance-constructors-c-programming-guide"></a>Конструкторы экземпляров (Руководство по программированию в C#)
 Конструкторы экземпляров используются для создания и инициализации переменных члена экземпляра, если создание объекта [class](../../../csharp/language-reference/keywords/class.md) осуществляется с помощью выражения [new](../../../csharp/language-reference/keywords/new.md). Для инициализации класса [static](../../../csharp/language-reference/keywords/static.md) или статических переменных в нестатическом классе необходимо определить статический конструктор. Дополнительные сведения см. в разделе [Статические конструкторы](../../../csharp/programming-guide/classes-and-structs/static-constructors.md).  

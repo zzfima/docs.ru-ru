@@ -1,5 +1,6 @@
 ---
-title: Использование пространств имен (Руководство по программированию в C#)
+title: Руководство по программированию на C#. Использование пространств имен
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - cs.names
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 81876d1818a6e82764e4aea0ae2b6f9e091f0ba3
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d29de118e928522dcc3a4b4ab32fe2d2c4d1f2f9
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123401"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235789"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>Использование пространств имен (Руководство по программированию в C#)
 Пространства имен часто используются в программировании на C# двумя способами. Первый способ — платформа .NET Framework использует пространства имен для упорядочения множества ее классов. Второй способ — объявление собственных пространств имен поможет вам контролировать область имен классов и методов в более крупных проектах.  
@@ -65,7 +66,7 @@ ms.locfileid: "49123401"
   
  В общем случае следует использовать `::` для ссылки на псевдоним пространства имен или `global::` для ссылки на глобальное пространство имен, а также `.` для определения типов или элементов.  
   
- Использование `::` с псевдонимом, ссылающимся на тип вместо пространства имен, будет ошибкой. Пример:  
+ Использование `::` с псевдонимом, ссылающимся на тип вместо пространства имен, будет ошибкой. Например:  
   
  [!code-csharp[csProgGuideNamespaces#11](../../../csharp/programming-guide/namespaces/codesnippet/CSharp/using-namespaces_8.cs)]  
   
@@ -85,7 +86,7 @@ ms.locfileid: "49123401"
   
  Этот код будет работать, однако если впоследствии определить тип с именем `Alias`, выражение `Alias.` будет связываться с этим типом. Используя выражение `Alias::Exception`, вы гарантируете, что `Alias` будет обрабатываться как псевдоним пространства имен и не будет ошибочно связываться с типом.  
   
- В разделе [Практическое руководство. Использование псевдонима глобального пространства имен](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) приводятся дополнительные сведения об использовании псевдонима `global`.  
+ В разделе [Использование псевдонима глобального пространства имен. Использование псевдонима глобального пространства имен](../../../csharp/programming-guide/namespaces/how-to-use-the-global-namespace-alias.md) приводятся дополнительные сведения об использовании псевдонима `global`.  
   
 ## <a name="see-also"></a>См. также
 
@@ -93,5 +94,5 @@ ms.locfileid: "49123401"
 - [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)  
 - [Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)  
 - [. Оператор](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [Оператор ::](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
+- [:: Оператор](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
 - [extern](../../../csharp/language-reference/keywords/extern.md)

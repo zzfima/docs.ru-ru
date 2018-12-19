@@ -1,5 +1,6 @@
 ---
-title: Оператор ^ (Справочник по C#)
+title: Оператор ^. Справочник по C#
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - ^_CSharpKeyword
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise exclusive OR operator [C#]
 ms.assetid: b09bc815-570f-4db6-a637-5b4ed99d014a
-ms.openlocfilehash: b1333f9d06e2804029550e6364a225558e096431
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: f6f09f197502af1bc38bcdef97dd1db0ad9c7c08
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925302"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53236951"
 ---
 # <a name="-operator-c-reference"></a>Оператор ^ (Справочник по C#)
 Бинарные операторы `^` предварительно определены для целочисленных типов и типа `bool`. Для целочисленных типов оператор `^` выполняет побитовую операцию исключающего ИЛИ для всех своих операндов. Для операндов типа `bool` оператор `^` выполняет логическую операцию исключающего ИЛИ для всех своих операндов. Таким образом, значение `true` возвращается только тогда, когда только один из операндов имеет значение `true`.  
