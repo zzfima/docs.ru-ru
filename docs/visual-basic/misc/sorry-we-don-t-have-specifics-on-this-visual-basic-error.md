@@ -1,5 +1,5 @@
 ---
-title: К сожалению, мы кое&#39;t имеют сведения об этой ошибке Visual Basic
+title: Подробные сведения об этой ошибке Visual Basic отсутствуют.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30234
@@ -3044,14 +3044,14 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: e3d3ac14c51ef5665aba0879a85e03e662174e68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a3af5e519b263b5b151640ac9c3d0576905eddb9
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192789"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53781743"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>К сожалению, мы кое&#39;t имеют сведения об этой ошибке Visual Basic
+# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>Подробные сведения об этой ошибке Visual Basic отсутствуют.
 Подробные сведения об этой ошибке отсутствуют. Можно выполнить поиск по номеру ошибки и тексту сообщения об ошибке в Интернете. Также можно обратиться с вопросом к другим разработчикам на следующих форумах:  
   
  [Язык Visual Basic](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  

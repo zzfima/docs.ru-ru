@@ -1,18 +1,18 @@
 ---
-title: Размерности массивов не соответствуют алгоритмам, заданным в &#39;VBFixedArray&#39; атрибута
+title: Размерности массивов не совпадают с размерностями, заданными атрибутом VBFixedArray
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_ArrayDimensionsDontMatch
 ms.assetid: 71809e3b-8147-4314-9c4c-e4a5bc9a5530
-ms.openlocfilehash: 75ce46a0ba73a64cfed1fe62d2981a95490e355b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7c7909f80de6d8a18b0ef06f1b15113fca610b38
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599295"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53770251"
 ---
-# <a name="array-dimensions-do-not-match-those-specified-in-the-39vbfixedarray39-attribute"></a>Размерности массивов не соответствуют алгоритмам, заданным в &#39;VBFixedArray&#39; атрибута
-Размерность массива не соответствует размерности, указанной в атрибуте `VBFixedArray` .  
+# <a name="array-dimensions-do-not-match-those-specified-in-the-vbfixedarray-attribute"></a>Размерности массивов не совпадают с размерностями, заданными атрибутом VBFixedArray
+Размерность массива не соответствует размерности, указанной в атрибуте `VBFixedArray`.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   

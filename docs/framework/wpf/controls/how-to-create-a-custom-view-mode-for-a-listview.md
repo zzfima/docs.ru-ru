@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Создание пользовательского режима представления для ListView
+title: Как выполнить Создание пользовательского режима представления для ListView
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-ms.openlocfilehash: 239fb2e9a364bd0265ff7cf644ee296878280cf3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d39f8829e7bdc89c05cda0f586298518908683f5
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081812"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613028"
 ---
-# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Практическое руководство. Создание пользовательского режима представления для ListView
+# <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>Как выполнить Создание пользовательского режима представления для ListView
 В этом примере показано, как можно создавать пользовательские <xref:System.Windows.Controls.ListView.View%2A> режим для <xref:System.Windows.Controls.ListView> элемента управления.  
   
 ## <a name="example"></a>Пример  
@@ -40,7 +40,7 @@ ms.locfileid: "44081812"
  [!code-csharp[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml.cs#listviewtileviewmode)]
  [!code-vb[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/window1.xaml.vb#listviewtileviewmode)]  
   
- Полный пример см. в разделе [ListView пример представления](https://go.microsoft.com/fwlink/?LinkID=160013).  
+ Полный пример см. в разделе [ListView с несколькими представлениями (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp) или [ListView с помощью нескольких Views(Visual Basic)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Windows.Controls.ListView>  
