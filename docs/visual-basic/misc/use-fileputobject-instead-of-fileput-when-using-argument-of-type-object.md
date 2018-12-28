@@ -1,18 +1,18 @@
 ---
-title: Используйте &#39;FilePutObject&#39; вместо &#39;FilePut&#39; при использовании аргумента типа &#39;объекта&#39;
+title: При использовании аргумента с типом Object применяйте FilePutObject вместо FilePut
 ms.date: 07/20/2015
 f1_keywords:
 - vbrUseFilePutObject
 ms.assetid: d207b9b7-5898-4c13-8b03-9feefac5f726
-ms.openlocfilehash: 529352d98c175981c20861205ce04c8a2ebcdca9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df7d7c54992984bcb1684e41f60ae8361a3aed03
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641132"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53774229"
 ---
-# <a name="use-39fileputobject39-instead-of-39fileput39-when-using-argument-of-type-39object39"></a>Используйте &#39;FilePutObject&#39; вместо &#39;FilePut&#39; при использовании аргумента типа &#39;объекта&#39;
-`FilePut` Метод включает аргумент типа `Object`. Чтобы избежать неоднозначности, следует использовать`FilePutObject` вместо `FilePut` .  
+# <a name="use-fileputobject-instead-of-fileput-when-using-argument-of-type-object"></a>При использовании аргумента с типом Object применяйте FilePutObject вместо FilePut
+Метод `FilePut` включает аргумент типа `Object`. Чтобы избежать неоднозначности, следует использовать`FilePutObject` вместо `FilePut` .  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   

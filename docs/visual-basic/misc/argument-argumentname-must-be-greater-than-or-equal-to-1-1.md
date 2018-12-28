@@ -1,17 +1,17 @@
 ---
-title: Аргумент &#39; &lt;имя_аргумента&gt; &#39; должно быть больше или равен -1
+title: Аргумент "&lt;имя_аргумента&gt;" должно быть больше или равно-1
 ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_GEMinusOne1
 ms.assetid: 4bdbef4c-6eff-4fab-a1d0-cb176d5f8798
-ms.openlocfilehash: 19b84286b3b1d57c515d1a6be6679f0473ea6103
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2e3de1e76f6bf6c6e7e06a362fee1fa20266119
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600650"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53783875"
 ---
-# <a name="argument-39ltargumentnamegt39-must-be-greater-than-or-equal-to--1"></a>Аргумент &#39; &lt;имя_аргумента&gt; &#39; должно быть больше или равен -1
+# <a name="argument-ltargumentnamegt-must-be-greater-than-or-equal-to--1"></a>Аргумент "&lt;имя_аргумента&gt;" должно быть больше или равно-1
 Значение аргумента меньше -1.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

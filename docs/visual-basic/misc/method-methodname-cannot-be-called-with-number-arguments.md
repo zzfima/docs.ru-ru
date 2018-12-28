@@ -1,17 +1,17 @@
 ---
-title: Метод &#39; &lt;имя_метода&gt; &#39; не может вызываться с &lt;номер&gt; аргументов
+title: Метод "&lt;имя_метода&gt;" не может вызываться с &lt;номер&gt; аргументы
 ms.date: 07/20/2015
 f1_keywords:
 - vbrNoMethodTakingXArguments2
 ms.assetid: 23260199-b6a4-469f-b75f-4a3d8d25e2cc
-ms.openlocfilehash: acfdf407527bf505173b520b673162ac3fae76a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: be5088a339b874408160b4df4f059e8b9a91143c
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33636123"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53764583"
 ---
-# <a name="method-39ltmethodnamegt39-cannot-be-called-with-ltnumbergt-arguments"></a>Метод &#39; &lt;имя_метода&gt; &#39; не может вызываться с &lt;номер&gt; аргументов
+# <a name="method-ltmethodnamegt-cannot-be-called-with-ltnumbergt-arguments"></a>Метод "&lt;имя_метода&gt;" не может вызываться с &lt;номер&gt; аргументы
 Вызов метода содержит неверное число аргументов.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

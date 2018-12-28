@@ -1,13 +1,13 @@
 ---
-title: 'Исключения: функция raise (F#)'
-description: Узнайте, как используется функция F# «raise» указывает, что ошибку или исключительную ситуацию.
+title: 'Исключения: функция raise'
+description: Узнайте, как F# «raise» функция используется для указания, что произошло ошибку или исключительную ситуацию.
 ms.date: 05/16/2016
-ms.openlocfilehash: 537d274659d29404380bfdd56310ac267372bb98
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 87773ead7773c62a325c7e7ff105c729e10dd69c
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43778263"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610155"
 ---
 # <a name="exceptions-the-raise-function"></a>Исключения: функция raise
 
@@ -37,7 +37,7 @@ raise (expression)
 
 - [Обработка исключений](index.md)
 - [Типы исключения](exception-types.md)
-- [Исключения: выражение `try...with`](the-try-with-expression.md)
-- [Исключения: выражение `try...finally`](the-try-finally-expression.md)
-- [Исключения: функция `failwith`](the-failwith-function.md)
-- [Исключения: функция `invalidArg`](the-invalidArg-function.md)
+- [Исключения. `try...with` Выражение](the-try-with-expression.md)
+- [Исключения. `try...finally` Выражение](the-try-finally-expression.md)
+- [Исключения. `failwith` Функции](the-failwith-function.md)
+- [Исключения. `invalidArg` Функции](the-invalidArg-function.md)

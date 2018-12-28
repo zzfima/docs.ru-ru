@@ -1,17 +1,17 @@
 ---
-title: Ни один из доступных перегруженных &#39; &lt;имя_метода&gt; &#39; может вызываться с этими аргументами без преобразования с сужением
+title: Нет доступных перегруженных "&lt;имя_метода&gt;" может вызываться с этими аргументами без преобразования с сужением
 ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousMatch_NarrowingConversion1
 ms.assetid: 2fdbadb9-8ef1-404a-a2ed-ce5f5e55cfcb
-ms.openlocfilehash: 49656a88d485615160f65caa0cc94f36b8d081fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3714269ba58f83b465940f90acdfcaa4873e39a7
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33636187"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53773124"
 ---
-# <a name="no-accessible-overloaded-39ltmethodnamegt39-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a>Ни один из доступных перегруженных &#39; &lt;имя_метода&gt; &#39; может вызываться с этими аргументами без преобразования с сужением
+# <a name="no-accessible-overloaded-ltmethodnamegt-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a>Нет доступных перегруженных "&lt;имя_метода&gt;" может вызываться с этими аргументами без преобразования с сужением
 Вызван перегруженный метод, однако ни один метод не может быть сопоставлен со списком предоставленных аргументов без сужающего преобразования.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

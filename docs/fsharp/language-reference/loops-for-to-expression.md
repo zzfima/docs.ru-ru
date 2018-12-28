@@ -1,13 +1,13 @@
 ---
-title: Циклы. Выражение for...to (F#)
+title: Циклы. Выражение for...to
 description: См. в разделе как F# for... выражение используется для итерации в цикле по диапазону значений переменной цикла.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 041e98fa4bcc140aa3cd699f6ed35bf52c8b4175
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43800473"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612326"
 ---
 # <a name="loops-forto-expression"></a>Циклы. Выражение for...to
 
@@ -39,5 +39,5 @@ for identifier = start [ to | downto ] finish do
 ## <a name="see-also"></a>См. также
 
 - [Справочник по языку F#](index.md)
-- [Циклы: выражение `for...in`](loops-for-in-expression.md)
-- [Циклы: выражение `while...do`](loops-while-do-expression.md)
+- [Циклы. `for...in` Выражение](loops-for-in-expression.md)
+- [Циклы. `while...do` Выражение](loops-while-do-expression.md)

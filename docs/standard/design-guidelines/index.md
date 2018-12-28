@@ -8,12 +8,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
 author: KrzysztofCwalina
-ms.openlocfilehash: 736069926a2a3fdc4856a51c5226f725b22c1d5f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2317ed0dbe8a6e69452ac0721ffed1b9da50a907
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147610"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396933"
 ---
 # <a name="framework-design-guidelines"></a>Рекомендации по разработке платформы
 Этот раздел содержит рекомендации по проектированию библиотек, которые расширяют и взаимодействовать с .NET Framework. Цель — помочь разработчикам библиотек обеспечить API согласованности и удобства использования, предоставляя унифицированную модель программирования, не зависящий от языка программирования, используемая для разработки. Рекомендуется следовать этим рекомендациям по проектированию при разработке классов и компонентов, расширяющих возможности .NET Framework. Несогласованные библиотеки конструктора отрицательно влияет на производительность и не рекомендует внедрения.  
@@ -42,7 +42,7 @@ ms.locfileid: "53147610"
  Описывает правила с помощью распространенных типов, таких как массивы, атрибуты и коллекции, поддержка сериализации и перегрузка операторов равенства.  
   
  [Обычные шаблоны разработки](../../../docs/standard/design-guidelines/common-design-patterns.md)  
- Рекомендации по выбору и реализация свойства зависимостей и шаблон dispose.  
+ Рекомендации по выбору и реализация свойства зависимостей.  
   
  *Фрагменты: © Корпорация Майкрософт (Microsoft Corporation), 2005, 2009. Все права защищены.*  
   
@@ -50,6 +50,6 @@ ms.locfileid: "53147610"
   
 ## <a name="see-also"></a>См. также
 
-- [Обзор набора средств Visual Studio для Unity](../../../docs/framework/get-started/overview.md)  
+- [Обзор](../../../docs/framework/get-started/overview.md)  
 - [Путеводитель по .NET Framework](https://msdn.microsoft.com/library/0b46b7c6-9163-4f99-8e58-0d1ee7da8c67)  
 - [Руководство по разработке](../../../docs/framework/development-guide.md)

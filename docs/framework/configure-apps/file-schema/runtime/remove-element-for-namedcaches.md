@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: f885416629ae58949cc688f4e6fbd41e77e872aa
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: d31caf88e1376025484ed6d65d5277c015e70b5e
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838225"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613743"
 ---
 # <a name="ltremovegt-element-for-ltnamedcachesgt"></a>&lt;Удалить&gt; элемент для &lt;namedCaches&gt;
 Удаляет элемент именованного кэша из коллекции `namedCaches` для кэша памяти.  
@@ -53,4 +53,4 @@ ms.locfileid: "48838225"
  `remove` Приводит к удалению `namedCache` запись из коллекции именованных кэшей для кэша памяти.  
   
 ## <a name="see-also"></a>См. также  
- [\<namedCaches > (параметры кэша)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > (параметры кэша)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

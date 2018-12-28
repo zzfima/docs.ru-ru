@@ -1,13 +1,13 @@
 ---
-title: Сведения о вызывающем объекте (F#)
+title: Сведения о вызывающем объекте
 description: Описывает, как использовать информационные атрибуты аргумента вызывающего объекта, чтобы получить сведения о вызывающем объекте из метода.
 ms.date: 04/25/2017
-ms.openlocfilehash: 0f2f4b16804d9156d234cc29d1f72ebe80a5b556
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 9c6b2a92a15e12d016a153b401f166c8fd1efe93
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "47216374"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613821"
 ---
 # <a name="caller-information"></a>Сведения о вызывающем объекте
 
@@ -15,7 +15,7 @@ ms.locfileid: "47216374"
 
 Для получения этих сведений используются атрибуты, которые применяются к необязательным параметрам, каждый из которых имеет значение по умолчанию. В следующей таблице перечислены информационные атрибуты вызывающего объекта, которые определены в [System.Runtime.CompilerServices](/dotnet/api/system.runtime.compilerservices) пространство имен:
 
-|Атрибут|Описание|Тип|
+|Атрибут|Описание:|Тип|
 |---------|-----------|----|
 |[CallerFilePath](/dotnet/api/system.runtime.compilerservices.callerfilepathattribute)|Полный путь исходного файла, содержащего вызывающий объект. Это путь к файлу во время компиляции.|`String`
 |[CallerLineNumber](/dotnet/api/system.runtime.compilerservices.callerlinenumberattribute)|Номер строки в исходном файле, в которой вызывается метод.|`Integer`|
@@ -72,6 +72,6 @@ type Tracer() =
 
 ## <a name="see-also"></a>См. также
 
-- [Атрибуты](attributes.md)  
-- [Именованные аргументы](parameters-and-arguments.md#named-arguments)  
-- [Необязательные параметры](parameters-and-arguments.md#optional-parameters)  
+- [Атрибуты](attributes.md)
+- [Именованные аргументы](parameters-and-arguments.md#named-arguments)
+- [Необязательные параметры](parameters-and-arguments.md#optional-parameters)

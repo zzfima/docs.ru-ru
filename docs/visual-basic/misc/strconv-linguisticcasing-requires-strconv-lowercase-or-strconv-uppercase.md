@@ -1,17 +1,17 @@
 ---
-title: '&#39;Для StrConv.LinguisticCasing&#39; требует &#39;StrConv.LowerCase&#39; или &#39;StrConv.UpperCase&#39;'
+title: Для "StrConv.LinguisticCasing" требуется "StrConv.LowerCase" или "StrConv.UpperCase"
 ms.date: 07/20/2015
 f1_keywords:
 - vbrLinguisticRequirements
 ms.assetid: 99cdb11d-9488-460b-84fb-a27f43da8be4
-ms.openlocfilehash: fc117c6b8993619e0610d5f51287e0fd0369729f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4ba166d499e722fcebba2a0f2d751bcfe2857304
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45741856"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53770550"
 ---
-# <a name="39strconvlinguisticcasing39-requires-39strconvlowercase39-or-39strconvuppercase39"></a>&#39;Для StrConv.LinguisticCasing&#39; требует &#39;StrConv.LowerCase&#39; или &#39;StrConv.UpperCase&#39;
+# <a name="strconvlinguisticcasing-requires-strconvlowercase-or-strconvuppercase"></a>Для "StrConv.LinguisticCasing" требуется "StrConv.LowerCase" или "StrConv.UpperCase"
 Вы попытались использовать функцию `StrConv.LinguisticCasing`, что допустимо только в сочетании с функцией `StrConv.LowerCase` или `StrConv.UpperCase`.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  

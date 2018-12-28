@@ -1,17 +1,18 @@
 ---
-title: Аргумент &#39;доступа&#39; является недопустимым. Допустимыми значениями для режима Input являются &#39;OpenAccess.Read&#39; и &#39;OpenAccess.Default&#39;
+title: Недопустимый аргумент Access. Допустимыми значениями для режима Input являются OpenAccess.Read и OpenAccess.Default.
 ms.date: 07/20/2015
 f1_keywords:
 - vbrFileSystem_IllegalInputAccess
 ms.assetid: 60929c62-b9dc-4a9c-9363-2325238f744d
-ms.openlocfilehash: b093294fbcbaa2dc5260e975cbcb44804d523eb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8e501559d9a477340dfcdc2713697decc9598b43
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779178"
 ---
-# <a name="argument-39access39-is-not-valid-valid-values-for-input-mode-are-39openaccessread39-and-39openaccessdefault39"></a>Аргумент &#39;доступа&#39; является недопустимым. Допустимыми значениями для режима Input являются &#39;OpenAccess.Read&#39; и &#39;OpenAccess.Default&#39;
-Значение доступа недопустимо в режиме `Input` .  
+# <a name="argument-access-is-not-valid-valid-values-for-input-mode-are-openaccessread-and-openaccessdefault"></a>Недопустимый аргумент Access. Допустимыми значениями для режима Input являются OpenAccess.Read и OpenAccess.Default.
+Значение доступа недопустимо в режиме `Input`.  
   
 ## <a name="to-correct-this-error"></a>Исправление ошибки  
   
