@@ -1,13 +1,13 @@
 ---
-title: Выражения вычисления (F#)
+title: Выражения вычисления
 description: Узнайте, как создать удобный синтаксис для записи вычислений F# , может быть виртуализированного и комбинированные с помощью управления привязок и конструкций потока.
 ms.date: 07/27/2018
-ms.openlocfilehash: b1fee11f68e99e53d19b47bef9eca6298cce2f45
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 79159146e24dc50f851c29e3cf7fffe892c6d196
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169850"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610701"
 ---
 # <a name="computation-expressions"></a>Выражения вычисления
 

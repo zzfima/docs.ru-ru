@@ -1,13 +1,13 @@
 ---
-title: Массивы (F#)
+title: Массивы
 description: Узнайте, как создать и использовать массивы в F# языка программирования.
 ms.date: 05/16/2016
-ms.openlocfilehash: 0f72718988ee401631c53b74f02948030e83aac1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9670f2a61ed5c254493806501120552be9caecdf
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129978"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614562"
 ---
 # <a name="arrays"></a>Массивы
 
@@ -418,4 +418,4 @@ Found an element 4096 with square root 64 and cube root 16.
 ## <a name="see-also"></a>См. также
 
 - [Справочник по языку F#](index.md)
-- [F#; Типы](fsharp-types.md)
+- [Типы языка F#](fsharp-types.md)

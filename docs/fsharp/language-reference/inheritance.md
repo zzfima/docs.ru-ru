@@ -1,13 +1,13 @@
 ---
-title: Наследование (F#)
-description: Узнайте, как определить отношения наследования F#, с помощью ключевого слова «наследовать».
+title: Наследование
+description: Сведения об указании F# связи наследования с помощью ключевого слова «наследовать».
 ms.date: 05/16/2016
-ms.openlocfilehash: e4d79244fb9bada5db0c5c4c7179d4bfe6e21f3d
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 775ee52039caf4c4ab65f82fa21d4e536135a12a
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43864473"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610142"
 ---
 # <a name="inheritance"></a>Наследование
 
@@ -62,7 +62,7 @@ override [self-identifier].[method-name] [argument-list] = [method-body]
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2602.fs)]
 
-В случае несколько конструкторов можно использовать следующий код. В первой строке конструкторов производных классов `inherit` предложение, а также поля отображаются как явные поля, объявленные с `val` ключевое слово. Дополнительные сведения см. в разделе [явные поля: `val` ключевое слово](members/explicit-fields-the-val-keyword.md).
+В случае несколько конструкторов можно использовать следующий код. В первой строке конструкторов производных классов `inherit` предложение, а также поля отображаются как явные поля, объявленные с `val` ключевое слово. Дополнительные сведения см. в разделе [явные поля: `val` Ключевое слово](members/explicit-fields-the-val-keyword.md).
 
 ```fsharp
 type BaseClass =

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6f759523acab1a248b92c69b95227b878696bbf
-ms.sourcegitcommit: d6e419f9d9cd7e8f21ebf5acde6d016c16332579
+ms.openlocfilehash: b3cb060d46703e41c4751c92d8a35e0ff7f72976
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53286589"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396959"
 ---
 # <a name="working-with-calendars"></a>Работа с календарями
 
@@ -138,7 +138,7 @@ ms.locfileid: "53286589"
 В календарях даты обычно разделены на эры. Тем не менее <xref:System.Globalization.Calendar> классы в .NET не поддерживают каждый эры, определяемых календаря и большая часть <xref:System.Globalization.Calendar> классы поддерживают только одну эру. Только классы <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar> поддерживают несколько эр.
 
 > [!IMPORTANT]
->  В новой эре <xref:System.Globlalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar> начинается с 1 мая 2019 г. Это изменение затрагивает все приложения, использующие эти календари. См. в разделе [обработка новая эра японского календаря в .NET](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/) Дополнительные сведения и определить, влияет ли приложений. См. в разделе [подготовить приложение для изменения японской эры](~/windows/uwp/design/globalizing/japanese-era-change) сведения о тестировании приложений на Windows для обеспечения их готовность к работе изменение эры.
+>  Новая эра в <xref:System.Globalization.JapaneseCalendar> и <xref:System.Globalization.JapaneseLunisolarCalendar> начинается с 1 мая 2019 г. Это изменение затрагивает все приложения, использующие эти календари. Из раздела [Обработка новой эры по японскому календарю в .NET](https://blogs.msdn.microsoft.com/dotnet/2018/11/14/handling-a-new-era-in-the-japanese-calendar-in-net/) можно почерпнуть дополнительные сведения, а также узнать, затронуты ли ваши приложения этим изменением. См. в разделе [подготовить приложение для изменения японской эры](/windows/uwp/design/globalizing/japanese-era-change) сведения о тестировании приложений на Windows для обеспечения их готовность к работе изменение эры.
 
 ### <a name="eras-and-era-names"></a>Эры и названия эр
 
@@ -197,4 +197,4 @@ ms.locfileid: "53286589"
 ## <a name="see-also"></a>См. также
 
 * [Практическое руководство. Отображение дат в календарях, отличных от григорианского](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-* [Пример: Служебная программа диапазон неделя календаря](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+* [Пример. Служебная программа диапазон неделя календаря](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)

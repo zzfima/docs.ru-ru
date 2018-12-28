@@ -1,13 +1,13 @@
 ---
-title: Списки (F#)
+title: Списки
 description: Дополнительные сведения о F# списки, упорядоченная, неизменная серия элементов одного типа.
 ms.date: 05/16/2016
-ms.openlocfilehash: f7b9054226a1dd004ac78673a059bd1c35e325a5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cc4e292280cca0dca37f69cf5a46ec2822d08d5c
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152751"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656340"
 ---
 # <a name="lists"></a>Списки
 
@@ -62,7 +62,7 @@ ms.locfileid: "53152751"
 
 Тип списка поддерживает следующие свойства.
 
-|Свойство|Тип|Описание|
+|Свойство|Тип|Описание:|
 |--------|----|-----------|
 |[HEAD](https://msdn.microsoft.com/library/5f9414fd-6bdb-470a-8b72-40016db30740)|`'T`|Первый элемент|
 |[пустой](https://msdn.microsoft.com/library/44406ecb-1918-4d32-b32a-ca1f69840386)|`'T list`|Статическое свойство, которое возвращает пустой список соответствующего типа.|
@@ -70,6 +70,7 @@ ms.locfileid: "53152751"
 |[Элемент](https://msdn.microsoft.com/library/bdb2553a-0e54-4ff8-baed-ab1aac8f5dae)|`'T`|Элемент с указанным индексом (начинается с нуля).|
 |[Длина](https://msdn.microsoft.com/library/25f715c8-9daa-4c4d-a6c7-26772f9dab4d)|`int`|Количество элементов|
 |[заключительный фрагмент](https://msdn.microsoft.com/library/2a6f8eb9-dc32-41aa-8b62-2baffaface91)|`'T list`|Список без первого элемента|
+
 Ниже приведены некоторые примеры использования данных свойств.
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1307.fs)]

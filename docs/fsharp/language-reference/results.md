@@ -1,13 +1,13 @@
 ---
-title: Результаты (F#)
-description: Узнайте, как использовать тип F# «Результат», которые помогут вам создавать ошибкам кода.
+title: Результаты
+description: Сведения об использовании F# введите «Результат», которые помогут вам создавать ошибкам кода.
 ms.date: 04/24/2017
-ms.openlocfilehash: a7ce2e1f6b8c6a32d99a2feaf9547c4b67b152b8
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8b419412b406018a21f2c23103c8193fec8766f2
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44213044"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612716"
 ---
 # <a name="results"></a>Результаты
 
@@ -27,9 +27,9 @@ type Result<'T,'TError> =
 
 ## <a name="remarks"></a>Примечания
 
-Обратите внимание, что тип результата — [размеченные объединения](discriminated-unions.md#struct-discriminated-unions), который является другая технология, представленная в F# 4.1.  Здесь применяется семантика структурного равенства.
+Обратите внимание, что тип результата — [размеченные объединения](discriminated-unions.md#struct-discriminated-unions), который впервые появился в еще одна функция F# 4.1.  Здесь применяется семантика структурного равенства.
 
-`Result` Тип обычно используется в результата вычисления обработки ошибок, который часто называется [железнодорожных ориентированное программирование](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) в сообществе F#.  Ниже приведен упрощенный пример этот подход.
+`Result` Тип обычно используется в результата вычисления обработки ошибок, который часто называется [железнодорожных ориентированное программирование](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/posts/recipe-part2.html) в F# сообщества.  Ниже приведен упрощенный пример этот подход.
 
 ```fsharp
 // Define a simple type which has fields that can be validated

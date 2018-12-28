@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: ea01a858-65da-4348-800f-5e3df59d4d79
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 17043cdd4bcabf2e5e14c7b9c31b8c1747d2c866
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: dd521e3afa7584cadb28829028a5ecfd1cb55a92
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47171950"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612307"
 ---
 # <a name="ltcleargt-element-for-ltnamedcachesgt"></a>&lt;Очистить&gt; элемент для &lt;namedCaches&gt;
 Очищает все `namedCache` записей в `namedCaches` коллекции для кэша памяти.  
@@ -45,7 +45,7 @@ ms.locfileid: "47171950"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|Содержит коллекцию параметров конфигурации для именованного <xref:System.Runtime.Caching.MemoryCache> экземпляров.|  
   
@@ -53,4 +53,4 @@ ms.locfileid: "47171950"
  `clear` Элемент очищает все `namedCache` записей в коллекции именованных кэшей для кэша памяти. Можно использовать `clear` элемент, прежде чем использовать `add` элемент, чтобы добавить новую запись именованного кэша, чтобы быть уверенным, никакие другие именованные кэши в коллекции.  
   
 ## <a name="see-also"></a>См. также  
- [\<namedCaches > (параметры кэша)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > (параметры кэша)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

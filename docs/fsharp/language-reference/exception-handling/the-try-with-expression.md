@@ -1,13 +1,13 @@
 ---
-title: 'Исключения: Выражение try... with (F#)'
+title: 'Исключения: Выражение try...with'
 description: Сведения об использовании F# «try... with» выражение для обработки исключений.
 ms.date: 05/16/2016
-ms.openlocfilehash: 946cf56f7abc4bd5e3a9f9acc52b868bd6c7f84a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 742e0b595525c69b83a55682c3c8b9b650326ac7
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127411"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614432"
 ---
 # <a name="exceptions-the-trywith-expression"></a>Исключения: Выражение try...with
 
@@ -36,7 +36,7 @@ with
 
 Другие шаблоны можно использовать для фильтрации по типу исключения и другие условия; в следующей таблице приведены параметры.
 
-|Шаблон|Описание|
+|Шаблон|Описание:|
 |-------|-----------|
 |:? *Тип исключения*|Совпадает с указанным типом исключения .NET.|
 |:? *Тип исключения* как *идентификатор*|Совпадает с указанным типом исключения .NET, но дает исключение именованное значение.|

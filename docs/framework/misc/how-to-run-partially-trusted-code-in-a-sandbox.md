@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде
+title: Как выполнить Выполнение частично доверенного кода в изолированной среде
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05ab0874c980d9e6138ae2bfd720c6d89628613c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5728bac27ae7de649806a3e026bb16560fffefa
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33393277"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613223"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Практическое руководство. Выполнение не вполне безопасного кода в изолированной среде
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>Как выполнить Выполнение частично доверенного кода в изолированной среде
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  Изолирование в песочнице — это способ запуска кода в ограниченной среде безопасности, ограничивающей разрешения доступа, предоставленные коду. Например, если имеется управляемая библиотека, полученная из источника с неполным доверием, не следует запускать ее как полностью доверенную. Вместо этого следует поместить код в "песочницу", которая ограничивает разрешения кода, которые необходимы ему по вашему мнению (например, <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>).  
@@ -30,7 +30,7 @@ ms.locfileid: "33393277"
   
  Перегрузка имеет следующую подпись:  
   
-```  
+```csharp
 AppDomain.CreateDomain( string friendlyName,  
                         Evidence securityInfo,  
                         AppDomainSetup info,  
@@ -50,7 +50,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 1.  Создайте набор разрешений, которые нужно предоставить ненадежному приложению. Минимальное разрешение, которое можно предоставить, — <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>. Кроме того, можно предоставить дополнительные разрешения, которые, по вашему мнению, будут безопасными для ненадежного кода, например разрешение <xref:System.Security.Permissions.IsolatedStorageFilePermission>. Во фрагменте кода ниже показано создание набора разрешений, в котором содержится только одно разрешение <xref:System.Security.Permissions.SecurityPermissionFlag.Execution>.  
   
-    ```  
+    ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
     permSet.AddPermission(new SecurityPermission(SecurityPermissionFlag.Execution));  
     ```  
@@ -67,7 +67,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 2.  Подпишите сборку, которая содержит размещающий класс (в этом примере это класс `Sandboxer`), вызывающий ненадежный код. Добавьте объект <xref:System.Security.Policy.StrongName>, используемый для подписания сборки, в массив <xref:System.Security.Policy.StrongName> в параметре `fullTrustAssemblies` вызова метода <xref:System.AppDomain.CreateDomain%2A>. Чтобы разрешить выполнение кода с частичным доверием или предложить службы приложению с частичным доверием, нужно запустить размещающий класс как полностью доверенный. Ниже показано, как читается строгое имя <xref:System.Security.Policy.StrongName> сборки.  
   
-    ```  
+    ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
     ```  
   
@@ -75,7 +75,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 3.  Инициализируйте параметр <xref:System.AppDomainSetup> метода <xref:System.AppDomain.CreateDomain%2A>. С помощью этого параметра можно управлять многими настройками нового домена <xref:System.AppDomain>. Свойство <xref:System.AppDomainSetup.ApplicationBase%2A> является важной настройкой и должно отличаться от свойства <xref:System.AppDomainSetup.ApplicationBase%2A> домена <xref:System.AppDomain> основного приложения. Если значения <xref:System.AppDomainSetup.ApplicationBase%2A> совпадают, частично доверенное приложение может заставить основное приложение загрузить (как полностью доверенное) определяемое им исключение, тем самым создав угрозу безопасности. Это еще одна причина, по которой не рекомендуется выполнять перехват исключения. Чтобы снизить риск злоумышленного использования, необходимо задать для основного и изолированного приложений разные базовые папки.  
   
-    ```  
+    ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
@@ -84,7 +84,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      Подпись этого метода следующая:  
   
-    ```  
+    ```csharp
     public static AppDomain CreateDomain(string friendlyName,   
         Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet,   
         params StrongName[] fullTrustAssemblies)  
@@ -102,7 +102,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     -   Для создания домена приложения используйте следующий код:  
   
-    ```  
+    ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
@@ -118,7 +118,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     -   Во-вторых, при работе в режиме полного доверия (<xref:System.Security.CodeAccessPermission.Assert%2A>) можно использовать для создания экземпляра критически важного класса метод <xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>. (Это происходит при условии, что сборка не имеет маркеров прозрачности и загружается как полностью доверенная.) Поэтому нужно следить за тем, чтобы при использовании этой функции создавался только доверенный код. Кроме того, мы рекомендуем создавать в новом домене приложения только экземпляры полностью доверенных классов.  
   
-    ```  
+    ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
     newDomain, typeof(Sandboxer).Assembly.ManifestModule.FullyQualifiedName,  
            typeof(Sandboxer).FullName );  
@@ -126,53 +126,53 @@ AppDomain.CreateDomain( string friendlyName,
   
      Обратите внимание, что для создания экземпляра класса в новом домене класс должен расширять класс <xref:System.MarshalByRefObject>.  
   
-    ```  
+    ```csharp
     class Sandboxer:MarshalByRefObject  
     ```  
   
 6.  Распакуйте новый экземпляр домена в ссылку в этом домене. Эта ссылка используется для выполнения ненадежного кода.  
   
-    ```  
+    ```csharp
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
 7.  Вызовите метод `ExecuteUntrustedCode` в созданном экземпляре класса `Sandboxer`.  
   
-    ```  
+    ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
     ```  
   
      Этот вызов выполняется в изолированном домене приложения, который имеет ограниченные разрешения.  
   
-    ```  
+    ```csharp
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
+    {  
+        //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
+        //you can use Assembly.EntryPoint to get to the entry point in an executable.  
+        MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
+        try  
         {  
-            //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
-            //you can use Assembly.EntryPoint to get to the entry point in an executable.  
-            MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
-            try  
-            {  
-                // Invoke the method.  
-                target.Invoke(null, parameters);  
-            }  
-            catch (Exception ex)  
-            {  
-            //When information is obtained from a SecurityException extra information is provided if it is   
-            //accessed in full-trust.  
-                (new PermissionSet(PermissionState.Unrestricted)).Assert();  
-                Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
-    CodeAccessPermission.RevertAssert();  
-                Console.ReadLine();  
-            }  
+            // Invoke the method.  
+            target.Invoke(null, parameters);  
         }  
+        catch (Exception ex)  
+        {  
+        //When information is obtained from a SecurityException extra information is provided if it is   
+        //accessed in full-trust.  
+            new PermissionSet(PermissionState.Unrestricted).Assert();  
+            Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
+            CodeAccessPermission.RevertAssert();  
+            Console.ReadLine();  
+        }  
+    }  
     ```  
   
      <xref:System.Reflection> используется для получения дескриптора метода в сборке с частичным доверием. Этот дескриптор можно использовать для безопасного выполнения кода с минимальными разрешениями.  
   
      В предыдущем коде обратите внимание на метод <xref:System.Security.PermissionSet.Assert%2A> для получения разрешения с полным доверием перед печатью <xref:System.Security.SecurityException>.  
   
-    ```  
-    new PermissionSet(PermissionState.Unrestricted)).Assert()  
+    ```csharp
+    new PermissionSet(PermissionState.Unrestricted).Assert()  
     ```  
   
      Утверждение с полным доверием используется для получения расширенной информации из <xref:System.Security.SecurityException>. Если не используется утверждение <xref:System.Security.PermissionSet.Assert%2A>, метод <xref:System.Security.SecurityException.ToString%2A> исключения <xref:System.Security.SecurityException> обнаружит наличие в стеке кода с частичным доверием и ограничит возвращенные сведения. Если бы код с частичным доверием мог считать эти сведения, создалась бы угроза безопасности. Во избежание этого разрешение <xref:System.Security.Permissions.UIPermission> не предоставляется. Утверждения полного доверия нужно использовать очень осторожно и только в том случае, если вы уверены, что уровень разрешений кода с частичным доверием не повысится до уровня полного доверия. Как правило, не следует вызывать код без полного доверия в той же функции и после вызова утверждения полного доверия. Рекомендуется всегда отменять утверждение после завершения его использования.  
@@ -180,7 +180,7 @@ AppDomain.CreateDomain( string friendlyName,
 ## <a name="example"></a>Пример  
  В примере ниже реализуется процедура, описанная в предыдущем подразделе. В этом примере проект с именем `Sandboxer` в решении Visual Studio содержит проект с именем `UntrustedCode`, реализующий класс `UntrustedClass`. В этом сценарии предполагается, что загружена библиотечная сборка, содержащая метод, который должен вернуть значение `true` или `false`, указывающее, является ли предоставленное число числом Фибоначчи. Вместо этого метод пытается считать файл с компьютера. В примере кода ниже показан ненадежный код.  
   
-```  
+```csharp
 using System;  
 using System.IO;  
 namespace UntrustedCode  
@@ -200,7 +200,7 @@ namespace UntrustedCode
   
  В примере ниже показан код приложения `Sandboxer`, выполняющий ненадежный код.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
@@ -264,7 +264,7 @@ class Sandboxer : MarshalByRefObject
         {  
             // When we print informations from a SecurityException extra information can be printed if we are   
             //calling it with a full-trust stack.  
-            (new PermissionSet(PermissionState.Unrestricted)).Assert();  
+            new PermissionSet(PermissionState.Unrestricted).Assert();  
             Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
             CodeAccessPermission.RevertAssert();  
             Console.ReadLine();  

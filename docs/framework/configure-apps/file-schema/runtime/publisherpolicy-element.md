@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2cc3b7220fe34f5dc049a3da71b160a88f82fdb1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4c81b403fa4d633428946d36960d5df32df76d21
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746102"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613782"
 ---
 # <a name="ltpublisherpolicygt-element"></a>&lt;publisherPolicy&gt; элемент
 Указывает, применяет ли среда выполнения политику издателя.  
@@ -39,15 +39,15 @@ ms.locfileid: "32746102"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
-|`apply`|Указывает, будет ли применяться политика издателя.|  
+|`apply`|Указывает, следует ли применять политики издателя.|  
   
 ## <a name="apply-attribute"></a>Применение атрибута  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
-|`yes`|Применяет политику издателя. Этот параметр используется по умолчанию.|  
+|`yes`|Политика издателя применяется. Этот параметр используется по умолчанию.|  
 |`no`|Политика издателя не применяется.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
@@ -55,17 +55,17 @@ ms.locfileid: "32746102"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
   
 ## <a name="remarks"></a>Примечания  
- Если разработчик компонентов выпускает новую версию сборки, поставщика могут включать политики издателя, приложения, использующие старую версию, теперь будут использовать новую версию. Чтобы указать, будет ли применяться политика издателя для определенной сборки, поместите  **\<publisherPolicy >** элемент в  **\<dependentAssembly >** элемента.  
+ Когда разработчик компонентов выпускает новую версию сборки, поставщика можно включить политики издателя, чтобы приложения, использующие старую версию теперь использовать новую версию. Чтобы указать, следует ли применять политику издателя для определенной сборки, поместите  **\<publisherPolicy >** элемент в  **\<dependentAssembly >** элемент.  
   
- Значение по умолчанию для **применить** атрибут **Да**. Установка **применить** атрибут **не** переопределит все предыдущие **Да** параметры для сборки.  
+ По умолчанию **применить** атрибут **Да**. Установка **применить** атрибут **не** переопределит все предыдущие **Да** параметры для сборки.  
   
- Требуется разрешение для приложения, чтобы явно игнорировать политику издателя с помощью [ \<исполняемым = «no» / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) в файле конфигурации приложения. Разрешение можно получить, установив <xref:System.Security.Permissions.SecurityPermissionFlag> флаг <xref:System.Security.Permissions.SecurityPermission>. Дополнительные сведения см. в разделе [разрешение безопасности перенаправления привязки сборок](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
+ Требуется разрешение для приложения, чтобы явно игнорировать политику издателя с помощью [ \<исполняемым = «no» / >](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) элемент в файле конфигурации приложения. Разрешение, задав <xref:System.Security.Permissions.SecurityPermissionFlag> флаг <xref:System.Security.Permissions.SecurityPermission>. Дополнительные сведения см. в разделе [разрешение безопасности перенаправления привязки сборки](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере производится отключение политики издателя для сборки, `myAssembly`.  
@@ -86,7 +86,7 @@ ms.locfileid: "32746102"
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Обнаружение сборок в среде выполнения](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
- [Перенаправление версий сборки](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Обнаружение сборок в среде выполнения](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+- [Перенаправление версий сборки](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

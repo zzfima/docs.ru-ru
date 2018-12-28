@@ -1,13 +1,13 @@
 ---
-title: Выражения запросов (F#)
+title: Выражения запросов
 description: Дополнительные сведения о поддержке выражения запроса LINQ в F# языка программирования.
 ms.date: 05/16/2016
-ms.openlocfilehash: 00398e7cb8876f9bbe11606b7a1024da9d2c35f3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e4a36305b607f573c29744f50a841be078c8061f
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143770"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611377"
 ---
 # <a name="query-expressions"></a>Выражения запросов
 
@@ -84,7 +84,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 <table style="width:100%">
   <tr>
     <th>Оператор</th>
-    <th>Описание</th>
+    <th>Описание:</th>
   </tr>
   <tr>
   <td><code>contains</code></td>

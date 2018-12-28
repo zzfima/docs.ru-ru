@@ -1,13 +1,13 @@
 ---
-title: События (F#)
+title: События
 description: Узнайте, как F# события позволяют связывать вызовы функций с действиями пользователя, которые важны при программировании GUI.
 ms.date: 05/16/2016
-ms.openlocfilehash: 82cde0e1df980a2ae204ad0923f4bac0769f0831
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
+ms.openlocfilehash: 38eb15e59611d018b6005f64a957c9275ec931a4
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745346"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612170"
 ---
 # <a name="events"></a>События
 
@@ -179,7 +179,7 @@ Application.Run(appForm)
 
 - [Члены](index.md)
 - [Обработка и вызов событий](../../../../docs/standard/events/index.md)
-- [Лямбда-выражения: `fun` ключевое слово](../functions/lambda-expressions-the-fun-keyword.md)
+- [Лямбда-выражения: Ключевое слово `fun`](../functions/lambda-expressions-the-fun-keyword.md)
 - [Модуль Control.Event](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control.Event&#60;'T&#62; класса](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 - [Control.Event&#60;«Делегат» Args&#62; класса](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

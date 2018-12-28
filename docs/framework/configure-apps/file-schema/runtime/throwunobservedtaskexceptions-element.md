@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f72bedbaaf0b15ade7ff6b7b8c3edcdfd3fda6d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: edf3fd9a4561677813adbfb970a9d6be43d7c83d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749430"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612586"
 ---
 # <a name="ltthrowunobservedtaskexceptionsgt-element"></a>&lt;ThrowUnobservedTaskExceptions&gt; элемент
 Определяет, будут ли необработанные исключения задачи завершать выполняющийся процесс.  
@@ -38,40 +38,40 @@ ms.locfileid: "32749430"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`enabled`|Обязательный атрибут.<br /><br /> Указывает, будут ли необработанные исключения задачи завершать выполняющийся процесс.|  
+|`enabled`|Обязательный атрибут.<br /><br /> Указывает, должно ли прекратиться выполняющегося процесса необработанные исключения задачи.|  
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
-|`false`|Не завершает выполняющийся процесс для необработанное исключение задачи. Это значение по умолчанию.|  
-|`true`|Завершает выполняющийся процесс для необработанное исключение задачи.|  
+|`false`|Не прекращает выполнение запущенного процесса для необработанное исключение задачи. Это значение по умолчанию.|  
+|`true`|Завершает работу выполняющегося процесса для необработанное исключение задачи.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Отсутствует.  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
 |||  
   
 ## <a name="remarks"></a>Примечания  
- Если исключение, связанное со <xref:System.Threading.Tasks.Task> не было соблюдено, имеется не <xref:System.Threading.Tasks.Task.Wait%2A> операции родительского не подключен и <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> свойство не было прочитано рассматривается как непредвиденное исключение задачи.  
+ Если возникает исключение, с которым связан <xref:System.Threading.Tasks.Task> не было соблюдено, существует не <xref:System.Threading.Tasks.Task.Wait%2A> операции, родительский не подключен и <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> свойство не было считано, будет считаться непредвиденное исключение задачи.  
   
- В [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], по умолчанию, если <xref:System.Threading.Tasks.Task> , имеет непредвиденное исключение сбора мусора, метод завершения создает исключение и завершает процесс. Завершение процесса определяется временем сбора мусора и завершения.  
+ В [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], по по умолчанию, если <xref:System.Threading.Tasks.Task> , имеет непредвиденное исключение удаляется сборщиком мусора, метод завершения создает исключение и завершает процесс. Завершение процесса определяется временем мусора и финализация.  
   
- Чтобы упростить разработчикам в создании асинхронного кода на основе задач, [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] изменяет это поведение по умолчанию для непредвиденное исключений. Ненаблюдаемые исключения по-прежнему вызывать <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> событие, но по умолчанию не завершает процесс. Вместо этого исключение игнорируется после возникновения события независимо от того, обнаруживает ли обработчик событий, исключение.  
+ Чтобы облегчить разработчикам писать асинхронный код, основанный на задачах, [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] изменяет это поведение по умолчанию для исключений без наблюдения. Ненаблюдаемые исключения по-прежнему вызывать <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> событие, но по умолчанию не завершает процесс. Вместо этого исключение игнорируется после события, независимо от того, обнаруживает ли обработчик событий, исключение.  
   
- В [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], можно использовать [ \<ThrowUnobservedTaskExceptions > элемент](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) в файле конфигурации приложения, чтобы включить [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] поведение создания исключения.  
+ В [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], можно использовать [ \<ThrowUnobservedTaskExceptions > элемент](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) в файле конфигурации приложения для включения [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] поведение возникновения исключения.  
   
- Можно также задать поведение исключения в одной из следующих способов:  
+ Можно также указать поведение исключений в одном из следующих способов:  
   
--   Задав переменную среды `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
+-   Переменной среды `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
   
--   Задав значение DWORD реестра значение ThrowUnobservedTaskExceptions = 1 в реестр\\. Ключ NETFramework.  
+-   Установив реестра DWORD значение ThrowUnobservedTaskExceptions = 1 в HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\. Ключ NETFramework.  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано включение возникновение исключений в задачах с помощью файла конфигурации приложения.  
@@ -85,11 +85,11 @@ ms.locfileid: "32749430"
 ```  
   
 ## <a name="example"></a>Пример  
- В следующем примере показано, как непредвиденное исключение из задачи. Код должен выполняться как выпущено для правильной работы программы.  
+ В следующем примере показано, как непредвиденное исключение из задачи. Код должен выполняться как выпущенные программы работать правильно.  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)

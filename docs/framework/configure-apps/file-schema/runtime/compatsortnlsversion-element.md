@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e78106c4df2e1c414d00f18871566dd5906c54f2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a9d505dd7433978e3a5908757a1d9569fe31f49b
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745712"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614419"
 ---
 # <a name="ltcompatsortnlsversiongt-element"></a>&lt;CompatSortNLSVersion&gt; элемент
 Указывает, что при операциях сравнения строк среда выполнения должна использовать устаревший порядок сортировки.  
@@ -42,7 +42,7 @@ ms.locfileid: "32745712"
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |4096|Код языка, представляющий альтернативный порядок сортировки. В этом случае 4096 представляет порядок сортировки [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] и более ранних версий.|  
   
@@ -51,13 +51,13 @@ ms.locfileid: "32745712"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о параметрах инициализации среды выполнения.|  
   
 ## <a name="remarks"></a>Примечания  
- Поскольку операции сравнения строк, сортировка и регистр символов, выполняемые <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> класса в [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] соответствуют стандарту Unicode 5.1, результаты методы сравнения строк, таких как <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> и <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> могут отличаться от предыдущие версии платформы .NET Framework. Если приложение зависит от устаревшего поведения, можно восстановить правила сравнения и сортировки строк, используемые в [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] и более ранних версиях, включив в файл конфигурации приложения элемент `<CompatSortNLSVersion>`.  
+ Поскольку сравнения строк, сортировки и операций регистр выполняется с <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> в класс [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] соответствуют стандарту Unicode 5.1, результаты методы сравнения строк, таких как <xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> и <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> может отличаться от предыдущих версий платформы .NET Framework. Если приложение зависит от устаревшего поведения, можно восстановить правила сравнения и сортировки строк, используемые в [!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] и более ранних версиях, включив в файл конфигурации приложения элемент `<CompatSortNLSVersion>`.  
   
 > [!IMPORTANT]
 >  Для восстановления устаревших правил сравнения и сортировки строк также требуется, чтобы в локальной системе была доступна библиотека динамической компоновки sort00001000.dll.  
@@ -94,5 +94,5 @@ sta equals a in the sort order.
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)

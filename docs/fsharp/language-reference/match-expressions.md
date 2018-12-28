@@ -1,13 +1,13 @@
 ---
-title: Выражения Match (F#)
-description: Узнайте, как выражение соответствия F# позволяет управлять ветвлением основывается на сравнении выражения с набором шаблонов.
+title: Выражения Match
+description: Узнайте, как F# выражение соответствия позволяет управлять ветвлением основывается на сравнении выражения с набором шаблонов.
 ms.date: 04/19/2018
-ms.openlocfilehash: e4cb82f20fe82bff562736557c2346562c557f59
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44221848"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611572"
 ---
 # <a name="match-expressions"></a>Выражения Match
 
@@ -43,7 +43,7 @@ fun arg ->
     | ...
 ```
 
-Дополнительные сведения о лямбда-выражениях см. в разделе [лямбда-выражения: `fun` ключевое слово](functions/lambda-expressions-the-fun-keyword.md).
+Дополнительные сведения о лямбда-выражениях см. в разделе [лямбда-выражения: `fun` Ключевое слово](functions/lambda-expressions-the-fun-keyword.md).
 
 Полный набор шаблонов должны охватывать все возможные сочетания входной переменной. Часто, используйте шаблон подстановочного знака (`_`) как последний шаблон в соответствии с любой ранее несопоставленных входных значений.
 
@@ -82,6 +82,6 @@ foo() // returns 42
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по языку F#](index.md)  
-- [Активные шаблоны](active-patterns.md)  
-- [Соответствие шаблону](pattern-matching.md)  
+- [Справочник по языку F#](index.md)
+- [Активные шаблоны](active-patterns.md)
+- [Соответствие шаблону](pattern-matching.md)

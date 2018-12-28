@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: cea4d187-6398-4da4-af09-c1abc6a349c1
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 2d82aed13e185b2957a22f097b60e12265a5f190
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b32e0da554622eb84b5569b5a1db04447fdc2940
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128210"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612560"
 ---
 # <a name="ltassemblyidentitygt-element-for-ltruntimegt"></a>&lt;assemblyIdentity&gt; элемент для &lt;среды выполнения&gt;
 Содержит идентификационные сведения о сборке.  
@@ -50,7 +50,7 @@ culture="assembly culture"/>
   
 ## <a name="processorarchitecture-attribute"></a>processorArchitecture атрибут  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`amd64`|AMD x86 64 только для архитектуры.|  
 |`ia64`|Только архитектуру Intel Itanium.|  
@@ -62,7 +62,7 @@ culture="assembly culture"/>
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`assemblyBinding`|Содержит сведения о перенаправлении версии сборки и о расположениях сборок.|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
@@ -122,6 +122,6 @@ culture="assembly culture"/>
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Перенаправление версий сборки](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+- [Схема параметров среды выполнения](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
+- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
+- [Перенаправление версий сборки](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

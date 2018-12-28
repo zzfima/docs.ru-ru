@@ -1,13 +1,13 @@
 ---
-title: 'Циклы: выражение for...in (F#)'
+title: 'Циклы: выражение for...in'
 description: См. в разделе как F# for... в выражении циклов конструкция используется для итерации по совпадениям с шаблоном в перечислимой коллекции.
 ms.date: 05/16/2016
-ms.openlocfilehash: c4fba1f1dea3993cafa2e37ad0f32d9fb2eed85a
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "48027238"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614414"
 ---
 # <a name="loops-forin-expression"></a>Циклы: выражение for...in
 
@@ -136,5 +136,5 @@ Number of elements in list1: 5
 ## <a name="see-also"></a>См. также
 
 - [Справочник по языку F#](index.md)
-- [Циклы: выражение `for...to`](loops-for-to-expression.md)
-- [Циклы: выражение `while...do`](loops-while-do-expression.md)
+- [Циклы. `for...to` Выражение](loops-for-to-expression.md)
+- [Циклы. `while...do` Выражение](loops-while-do-expression.md)

@@ -1,15 +1,15 @@
 ---
-title: 'Исключения: функция invalidArg (F#)'
-description: Узнайте, как функция «invalidArg» F# создает исключение аргумента.
+title: 'Исключения: Функция invalidArg'
+description: Узнайте, как F# «invalidArg» функция создает исключение аргумента.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8bf65fae9392a88205e3cdec8b7d7a3ff42f8416
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 7fd8d48b80970dbbafc0c23a478b4ccf3490f3ee
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "44180323"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613340"
 ---
-# <a name="exceptions-the-invalidarg-function"></a>Исключения: функция invalidArg
+# <a name="exceptions-the-invalidarg-function"></a>Исключения: Функция invalidArg
 
 `invalidArg` Функция создает исключение аргумента.
 
@@ -39,7 +39,7 @@ System.ArgumentException: Month parameter out of range.
 
 - [Обработка исключений](index.md)
 - [Типы исключения](exception-types.md)
-- [Исключения: выражение `try...with`](the-try-with-expression.md)
-- [Исключения: выражение `try...finally`](the-try-finally-expression.md)
+- [Исключения. `try...with` Выражение](the-try-with-expression.md)
+- [Исключения. `try...finally` Выражение](the-try-finally-expression.md)
 - [Исключения: функция `raise`](the-raise-function.md)
-- [Исключения: функция `failwith`](the-failwith-function.md)
+- [Исключения. `failwith` Функции](the-failwith-function.md)

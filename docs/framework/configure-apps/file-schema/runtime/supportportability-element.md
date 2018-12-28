@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4a0332a642f9377eed2769ea5aedb1be85853274
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 74d6852d14eec234b787ca0e852c333391a7b329
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122768"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53614289"
 ---
 # <a name="ltsupportportabilitygt-element"></a>&lt;supportPortability&gt; элемент
 Указывает, что приложение может ссылаться на ту же сборку в двух различных реализациях .NET Framework, отключая поведение по умолчанию, которое рассматривает сборки как эквивалент для переносимости приложения.  
@@ -33,14 +33,14 @@ ms.locfileid: "49122768"
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |PKT|Обязательный атрибут.<br /><br /> Указывает токен открытого ключа затрагиваемой сборки в виде строки.|  
 |enabled|Необязательный атрибут.<br /><br /> Указывает, следует ли включить поддержку для обеспечения переносимости между реализациями заданной сборки .NET Framework.|  
   
 ## <a name="enabled-attribute"></a>Атрибут enabled  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |true|Включите поддержку для обеспечения переносимости между реализациями заданной сборки .NET Framework. Это значение по умолчанию.|  
 |False|Отключите поддержку переносимости между реализациями заданной сборки .NET Framework. Это позволяет приложению иметь ссылки на несколько реализаций заданной сборки.|  
@@ -50,7 +50,7 @@ ms.locfileid: "49122768"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |`configuration`|Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.|  
 |`runtime`|Содержит сведения о привязке сборок и сборке мусора.|  
@@ -79,5 +79,5 @@ ms.locfileid: "49122768"
 ```  
   
 ## <a name="see-also"></a>См. также  
- [/ appconfig (параметры компилятора C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)  
- [Общие сведения об унификации сборок .NET framework](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)
+- [/ appconfig (параметры компилятора C#)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)  
+- [Общие сведения об унификации сборок .NET framework](https://msdn.microsoft.com/library/8d8cc65e-031d-463b-bde3-2c6dc2e3bc48)

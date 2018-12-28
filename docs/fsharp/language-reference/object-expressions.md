@@ -1,13 +1,13 @@
 ---
-title: Выражения объекта (F#)
-description: Узнайте, как использовать объектов выражений F#, если вы хотите избежать дополнительного кода и затраты, необходимые для создания нового именованного типа.
+title: Выражения объекта
+description: Сведения об использовании F# выражения объекта, если вы хотите избежать дополнительного кода и накладные расходы, необходимые для создания нового именованного типа.
 ms.date: 05/16/2016
-ms.openlocfilehash: 1a971044d680d3bf5a6fff38affdaf001d5403b4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: cb15983543fde2459c589b3de2554575d73db686
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "43865466"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53613925"
 ---
 # <a name="object-expressions"></a>Выражения объекта
 
