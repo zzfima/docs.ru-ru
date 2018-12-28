@@ -1,30 +1,30 @@
 ---
-title: Внешние функции (F#)
-description: Сведения о поддержке языка F# для вызова функций в машинном коде.
+title: Внешние функции
+description: Дополнительные сведения о F# языковая поддержка для вызова функций в машинном коде.
 ms.date: 05/16/2016
-ms.openlocfilehash: db0d3362d867b07b333951f3380c6735ff471d5e
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: 86ea78844fb812361233f8360c377465d83be203
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45973109"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611735"
 ---
-# <a name="external-functions"></a><span data-ttu-id="2968c-103">Внешние функции</span><span class="sxs-lookup"><span data-stu-id="2968c-103">External Functions</span></span>
+# <a name="external-functions"></a><span data-ttu-id="9db04-103">Внешние функции</span><span class="sxs-lookup"><span data-stu-id="9db04-103">External Functions</span></span>
 
-<span data-ttu-id="2968c-104">В этом разделе описывается поддержка языка F# для вызова функций в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="2968c-104">This topic describes F# language support for calling functions in native code.</span></span>
+<span data-ttu-id="9db04-104">В этом разделе описывается F# языковая поддержка для вызова функций в машинном коде.</span><span class="sxs-lookup"><span data-stu-id="9db04-104">This topic describes F# language support for calling functions in native code.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="2968c-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="2968c-105">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="9db04-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="9db04-105">Syntax</span></span>
 
 ```fsharp
 [<DllImport( arguments )>]
 extern declaration
 ```
 
-## <a name="remarks"></a><span data-ttu-id="2968c-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="2968c-106">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="9db04-106">Примечания</span><span class="sxs-lookup"><span data-stu-id="9db04-106">Remarks</span></span>
 
-<span data-ttu-id="2968c-107">В приведенном выше синтаксисе *аргументы* представляет аргументы, передаваемые `System.Runtime.InteropServices.DllImportAttribute` атрибута.</span><span class="sxs-lookup"><span data-stu-id="2968c-107">In the previous syntax, *arguments* represents arguments that are supplied to the `System.Runtime.InteropServices.DllImportAttribute` attribute.</span></span> <span data-ttu-id="2968c-108">Первым аргументом является строка, представляющая имя библиотеки DLL, содержащий данную функцию, без расширения DLL.</span><span class="sxs-lookup"><span data-stu-id="2968c-108">The first argument is a string that represents the name of the DLL that contains this function, without the .dll extension.</span></span> <span data-ttu-id="2968c-109">Дополнительные аргументы, которые могут быть представлены для всех открытых свойств `System.Runtime.InteropServices.DllImportAttribute` класса, например соглашение о вызовах.</span><span class="sxs-lookup"><span data-stu-id="2968c-109">Additional arguments can be supplied for any of the public properties of the `System.Runtime.InteropServices.DllImportAttribute` class, such as the calling convention.</span></span>
+<span data-ttu-id="9db04-107">В приведенном выше синтаксисе *аргументы* представляет аргументы, передаваемые `System.Runtime.InteropServices.DllImportAttribute` атрибута.</span><span class="sxs-lookup"><span data-stu-id="9db04-107">In the previous syntax, *arguments* represents arguments that are supplied to the `System.Runtime.InteropServices.DllImportAttribute` attribute.</span></span> <span data-ttu-id="9db04-108">Первым аргументом является строка, представляющая имя библиотеки DLL, содержащий данную функцию, без расширения DLL.</span><span class="sxs-lookup"><span data-stu-id="9db04-108">The first argument is a string that represents the name of the DLL that contains this function, without the .dll extension.</span></span> <span data-ttu-id="9db04-109">Дополнительные аргументы, которые могут быть представлены для всех открытых свойств `System.Runtime.InteropServices.DllImportAttribute` класса, например соглашение о вызовах.</span><span class="sxs-lookup"><span data-stu-id="9db04-109">Additional arguments can be supplied for any of the public properties of the `System.Runtime.InteropServices.DllImportAttribute` class, such as the calling convention.</span></span>
 
-<span data-ttu-id="2968c-110">Предположим, что у вас есть собственный библиотеки DLL на C++, содержащий следующую экспортированную функцию.</span><span class="sxs-lookup"><span data-stu-id="2968c-110">Assume you have a native C++ DLL that contains the following exported function.</span></span>
+<span data-ttu-id="9db04-110">Предположим, что у вас есть собственный библиотеки DLL на C++, содержащий следующую экспортированную функцию.</span><span class="sxs-lookup"><span data-stu-id="9db04-110">Assume you have a native C++ DLL that contains the following exported function.</span></span>
 
 ```cpp
 #include <stdio.h>
@@ -34,7 +34,7 @@ extern "C" void __declspec(dllexport) HelloWorld()
 }
 ```
 
-<span data-ttu-id="2968c-111">Эту функцию можно вызвать из F#, используя следующий код.</span><span class="sxs-lookup"><span data-stu-id="2968c-111">You can call this function from F# by using the following code.</span></span>
+<span data-ttu-id="9db04-111">Вы сможете вызвать эту функцию из F# , используя следующий код.</span><span class="sxs-lookup"><span data-stu-id="9db04-111">You can call this function from F# by using the following code.</span></span>
 
 ```fsharp
 open System.Runtime.InteropServices
@@ -46,8 +46,8 @@ module InteropWithNative =
 InteropWithNative.HelloWorld()
 ```
 
-<span data-ttu-id="2968c-112">Взаимодействие с машинным кодом называется *неуправляемого* и входит в состав среды CLR.</span><span class="sxs-lookup"><span data-stu-id="2968c-112">Interoperability with native code is referred to as *platform invoke* and is a feature of the CLR.</span></span> <span data-ttu-id="2968c-113">Дополнительные сведения см. в разделе [Взаимодействие с неуправляемым кодом](../../../../docs/framework/interop/index.md).</span><span class="sxs-lookup"><span data-stu-id="2968c-113">For more information, see [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md).</span></span> <span data-ttu-id="2968c-114">Информация в этом разделе применима к F#.</span><span class="sxs-lookup"><span data-stu-id="2968c-114">The information in that section is applicable to F#.</span></span>
+<span data-ttu-id="9db04-112">Взаимодействие с машинным кодом называется *неуправляемого* и входит в состав среды CLR.</span><span class="sxs-lookup"><span data-stu-id="9db04-112">Interoperability with native code is referred to as *platform invoke* and is a feature of the CLR.</span></span> <span data-ttu-id="9db04-113">Дополнительные сведения см. в разделе [Взаимодействие с неуправляемым кодом](../../../../docs/framework/interop/index.md).</span><span class="sxs-lookup"><span data-stu-id="9db04-113">For more information, see [Interoperating with Unmanaged Code](../../../../docs/framework/interop/index.md).</span></span> <span data-ttu-id="9db04-114">Информация в этом разделе применима к F#.</span><span class="sxs-lookup"><span data-stu-id="9db04-114">The information in that section is applicable to F#.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="2968c-115">См. также</span><span class="sxs-lookup"><span data-stu-id="2968c-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="9db04-115">См. также</span><span class="sxs-lookup"><span data-stu-id="9db04-115">See also</span></span>
 
-- [<span data-ttu-id="2968c-116">Функции</span><span class="sxs-lookup"><span data-stu-id="2968c-116">Functions</span></span>](index.md)
+- [<span data-ttu-id="9db04-116">Функции</span><span class="sxs-lookup"><span data-stu-id="9db04-116">Functions</span></span>](index.md)
