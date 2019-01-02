@@ -2,13 +2,13 @@
 title: Глоссарий по машинному обучению — ML.NET
 description: Глоссарий содержит подборку важных терминов по машинному обучению, которые будут полезны при создании пользовательских моделей с помощью ML.NET.
 ms.custom: seodec18
-ms.date: 12/06/2018
-ms.openlocfilehash: 4db28a62fccca2e8bedc9f48485a61b6f4ab1801
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/20/2018
+ms.openlocfilehash: ac0671bbecda93c411d3be82c789f53beb10fbca
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150580"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53760397"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>Глоссарий важных терминов по машинному обучению
 
@@ -24,8 +24,6 @@ ms.locfileid: "53150580"
 
 В контексте [двоичной классификации](#binary-classification) это метрика оценки, обозначающая площадь под кривой, которая соотносит количество истинных положительных результатов (по оси Y) и ложных положительных результатов (по оси X). Значения находятся в диапазоне от 0,5 (наихудший) до 1 (наилучший). Также эта метрика называется площадью под ROC-кривой (кривой соотношений правильного и ложного обнаружения). Дополнительные сведения см. в [статье о ROC-кривой](https://en.wikipedia.org/wiki/Receiver_operating_characteristic) в Википедии.
 
-Соответствующий API ML.NET: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.Auc?displayProperty=nameWithType>.
-
 ## <a name="binary-classification"></a>Двоичная классификация
 
 Сценарий [классификации](#classification), в котором значение [метки](#label) может быть только одним из двух классов. Дополнительные сведения см. в разделе [Двоичная классификация](tasks.md#binary-classification) в теме [Задачи машинного обучения](tasks.md).
@@ -37,8 +35,6 @@ ms.locfileid: "53150580"
 ## <a name="coefficient-of-determination"></a>Коэффициент детерминации
 
 В контексте [регрессии](#regression) это метрика оценки, которая позволяет понять, насколько хорошо данные соответствуют модели. Значение находится в диапазоне от 0 до 1. Значение 0 означает, что данные полностью случайны или по другим причинам не могут соответствовать модели. Значение 1 означает, что модель идеально соответствует этим данным. Эту метрику часто обозначают как r<sup>2</sup>, R<sup>2</sup> или R-квадрат.
-
-Соответствующий API ML.NET: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.RSquared?displayProperty=nameWithType>.
 
 ## <a name="feature"></a>Функция
 
@@ -52,8 +48,6 @@ ms.locfileid: "53150580"
 
 В контексте [классификации](#classification) это метрика оценки, которая сопоставляет [точность](#precision) и [полноту](#recall).
 
-Соответствующий API ML.NET: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.F1Score?displayProperty=nameWithType>.
-
 ## <a name="hyperparameter"></a>Гиперпараметр
 
 Параметр алгоритма машинного обучения. В качестве примера можно привести число деревьев, которые изучаются в лесе решений или размер шага в алгоритме градиентного спуска. Значения *гиперпараметров* устанавливаются еще до обучения модели и они управляют процессом поиска параметров для функции прогнозирования, например точек сравнения в дереве принятия решений или весов в модели линейной регрессии. Дополнительные сведения см. в [статье о гиперпараметрах](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning)) в Википедии.
@@ -66,13 +60,9 @@ ms.locfileid: "53150580"
 
 В контексте [классификации](#classification) это метрика оценки, которая характеризующий точность классификатора. Чем меньше логарифмические потери, тем точнее классификатор.
 
-Соответствующий API ML.NET: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.LogLoss?displayProperty=nameWithType>.
-
 ## <a name="mean-absolute-error-mae"></a>Средняя абсолютная погрешность
 
 В контексте [регрессии](#regression) это метрика оценки, которая усредняет все ошибки модели, где ошибкой модели считается это расстояние между прогнозируемым и правильным значениями [метки](#label).
-
-Соответствующий API ML.NET: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.L1?displayProperty=nameWithType>.
 
 ## <a name="model"></a>Модель
 
@@ -104,8 +94,6 @@ ms.locfileid: "53150580"
 
 В контексте [классификации](#classification) полнота класса обозначает количество элементов, правильно отнесенных к некоторому классу, деленное на общее число элементов, реально относящихся к этому классу.
 
-Соответствующий API ML.NET: <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.NegativeRecall?displayProperty=nameWithType>, <xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics.PositiveRecall?displayProperty=nameWithType>.
-
 ## <a name="regression"></a>Возвращение
 
 Задача [контролируемого машинного обучения](#supervised-machine-learning), которая выводит реальное значение, например в формате двойной точности. В качестве примера можно привести прогнозирование цен на акции. Дополнительные сведения см. в разделе [Регрессия](tasks.md#regression) в теме [Задачи машинного обучения](tasks.md).
@@ -121,8 +109,6 @@ ms.locfileid: "53150580"
 ## <a name="root-of-mean-squared-error-rmse"></a>Корень среднеквадратичной погрешности
 
 В контексте [регрессии](#regression) это метрика оценки, вычисляемая как квадратный корень из среднего значения квадратов погрешностей.
-
-Соответствующий API ML.NET: <xref:Microsoft.ML.Legacy.Models.RegressionMetrics.Rms?displayProperty=nameWithType>.
 
 ## <a name="supervised-machine-learning"></a>Контролируемое машинное обучение
 

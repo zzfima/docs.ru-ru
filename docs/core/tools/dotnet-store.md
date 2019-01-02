@@ -2,14 +2,14 @@
 title: Команда dotnet store
 description: Команда dotnet store сохраняет указанные сборки в хранилище пакетов среды выполнения.
 author: bleroy
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: a12738d0cc8edcbb65d5b6fab6e7c8b209b0f4b5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: seodec18
+ms.openlocfilehash: db1af95150a8949f218169b2999c92c00ac94d56
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029899"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170734"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -23,7 +23,7 @@ ms.locfileid: "48029899"
 
 `dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]`
 
-## <a name="description"></a>Описание:
+## <a name="description"></a>Описание
 
 `dotnet store` — сохраняет указанные сборки в [хранилище пакетов среды выполнения](../deploying/runtime-store.md). По умолчанию сборки оптимизируются для целевой среды выполнения и платформы. Дополнительные сведения см. в разделе, посвященном [хранилищу пакетов среды выполнения](../deploying/runtime-store.md).
 
