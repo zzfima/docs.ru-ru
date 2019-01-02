@@ -2,14 +2,13 @@
 title: Пользовательские шаблоны для команды dotnet new
 description: Сведения о пользовательских шаблонах для проектов или файлов .NET любых типов.
 author: guardrex
-ms.author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: 4e5dd11df8204d86009b0ece108ef877dc54f23e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 60ae9a6f0af7e75ba721a739ec51d77c59d7792e
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126267"
+ms.locfileid: "53169425"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>Пользовательские шаблоны для команды dotnet new
 
@@ -43,7 +42,7 @@ ms.locfileid: "53126267"
 
 Файл *template.json* размещается в папке *.template.config* в корневом каталоге шаблона. Он предоставляет сведения о конфигурации модулю шаблонов. В приведенной ниже таблице приведены элементы конфигурации, которые необходимы и достаточны для создания работающего шаблона.
 
-| Член            | Тип          | Описание: |
+| Член            | Тип          | Описание |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | Схема JSON для файла *template.json*. Редакторы, поддерживающие схемы JSON, обеспечивают возможности редактирования JSON при указании схемы. Например, в [Visual Studio Code](https://code.visualstudio.com/) требуется, чтобы этот элемент включал поддержку IntelliSense. Используйте значение `http://json.schemastore.org/template`. |
 | `author`          | string        | Автор шаблона. |

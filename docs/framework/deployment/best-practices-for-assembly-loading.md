@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7f7aa8a57fce9382cb67327e69048c2b05bb99da
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201586"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53397050"
 ---
 # <a name="best-practices-for-assembly-loading"></a>Рекомендации для загрузки сборок
 В этой статье рассматриваются способы избежания проблем с идентификацией типов, способных привести к исключениям <xref:System.InvalidCastException>, <xref:System.MissingMethodException> и другим ошибкам. В статье рассматриваются следующие рекомендации:  
@@ -44,7 +44,7 @@ ms.locfileid: "50201586"
   
 -   Контекст, из которого ведется загрузка, содержит сборки из расположений, в которых загрузчик не ведет поиск. Например, надстройки могут устанавливаться в каталоге, не относящемся к пути приложения. К примерам методов, которые выполняют загрузку по указанному пути, относятся методы <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>, <xref:System.AppDomain.CreateInstanceFrom%2A?displayProperty=nameWithType> и <xref:System.AppDomain.ExecuteAssembly%2A?displayProperty=nameWithType>.  
   
--   Контекст только для отражения содержит сборки, загружаемые с помощью методов <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> и <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. Код, загруженный в этом контексте, не может быть выполнен, поэтому далее он не рассматривается. Дополнительные сведения см. в разделе [Практическое руководство. Загрузка сборок в контекст, предназначенный только для отражения](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
+-   Контекст только для отражения содержит сборки, загружаемые с помощью методов <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A> и <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A>. Код, загруженный в этом контексте, не может быть выполнен, поэтому далее он не рассматривается. Дополнительные сведения см. в разделе [Как Загрузка сборок в контекст, предназначенный только для отражения](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md).  
   
 -   В случае создания временной динамической сборки с помощью эмиссии отражения сборка не попадет ни в один контекст. Кроме того, большинство сборок, загружаемых с помощью метода <xref:System.Reflection.Assembly.LoadFile%2A>, загружаются без контекста, а сборки, загружаемые из байтовых массивов, также загружаются без контекста, если только их идентификаторы (после применения политики) не указывают на то, что они расположены в глобальном кэше сборок.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "50201586"
  Если перенести все сборки в путь поиска сборок невозможно, рассмотрите альтернативы: использование модели надстроек платформы .NET Framework, размещение сборок в глобальном кэше сборок или создание доменов приложения.  
   
 ### <a name="consider-using-the-net-framework-add-in-model"></a>Использование модели надстроек платформы .NET Framework  
- При использовании контекста, из которого ведется загрузка, для реализации надстроек, которые обычно устанавливаются вне базовой папки приложения, используйте модель надстроек платформы .NET Framework. Она обеспечивает изоляцию на уровне доменов приложений и процессов, не требуя самостоятельно управлять доменами приложений. Сведения о модели надстроек см. в разделе [Надстройки и расширения среды](../../../docs/framework/add-ins/index.md).  
+ При использовании контекста, из которого ведется загрузка, для реализации надстроек, которые обычно устанавливаются вне базовой папки приложения, используйте модель надстроек платформы .NET Framework. Она обеспечивает изоляцию на уровне доменов приложений и процессов, не требуя самостоятельно управлять доменами приложений. Сведения о модели надстроек см. в разделе [Надстройки и расширения среды](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100)).  
   
 ### <a name="consider-using-the-global-assembly-cache"></a>Использование глобального кэша сборок  
  Разместив сборки в глобальном кэше сборок, можно использовать общий путь для сборок, находящихся вне базовой папки приложения, не теряя преимуществ контекста загрузки по умолчанию и не сталкиваясь с недостатками других контекстов.  
@@ -170,4 +170,3 @@ ms.locfileid: "50201586"
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
 - <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
-- [Надстройки и расширения среды](../../../docs/framework/add-ins/index.md)

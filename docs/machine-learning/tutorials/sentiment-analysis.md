@@ -1,17 +1,17 @@
 ---
 title: Использование ML.NET для анализа тональности методом двоичной классификации
 description: На примере двоичной классификации с использованием ML.NET вы сможете узнать, как использовать прогнозирование тональности для выбора соответствующих действий.
-ms.date: 11/06/2018
+ms.date: 12/20/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: cffce6258685502191e1dd33ef8282d664ea2d4c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 90f3b79226b16ac1ea4cbbe49ce07d95a138323b
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149657"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53779144"
 ---
-# <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Руководство. Использование ML.NET для анализа тональности методом двоичной классификации
+# <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Учебник. Использование ML.NET для анализа тональности методом двоичной классификации
 
 > [!NOTE]
 > В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
@@ -122,7 +122,7 @@ ms.locfileid: "53149657"
 * `_trainDataPath` содержит путь к набору данных, используемому для обучения модели;
 * `_testDataPath` содержит путь к набору данных, используемому для оценки модели;
 * `_modelPath` содержит путь, по которому сохраняется обученная модель.
-* `_reader` представляет собой <xref:Microsoft.ML.Runtime.Data.TextLoader>, используемый для загрузки и преобразования наборов данных.
+* `_textLoader` представляет собой <xref:Microsoft.ML.Runtime.Data.TextLoader>, используемый для загрузки и преобразования наборов данных.
 
 Добавьте следующий код в строку прямо перед методом `Main`, чтобы указать эти пути и переменную `_textLoader`:
 
@@ -216,7 +216,7 @@ ms.locfileid: "53149657"
 
 ## <a name="train-the-model"></a>Обучение модели
 
-Обучения модели <xref:Microsoft.ML.Runtime.Data.TransformerChain%601> выполняется по набору данных, который вы ранее скачали и преобразовали. После определения средства оценки вы обучите модель с помощью <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A>, предоставляя уже загруженные данные для обучения. В результате возвращается модель, необходимая для выполнения прогнозов. `pipeline.Fit()` обучает конвейер и возвращает `Transformer` на основе переданного типа `DataView`. Эксперимент не выполняется, пока этот процесс не закончится.
+Обучения модели <xref:Microsoft.ML.Data.TransformerChain%601> выполняется по набору данных, который вы ранее скачали и преобразовали. После определения средства оценки вы обучите модель с помощью <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A>, предоставляя уже загруженные данные для обучения. В результате возвращается модель, необходимая для выполнения прогнозов. `pipeline.Fit()` обучает конвейер и возвращает `Transformer` на основе переданного типа `DataView`. Эксперимент не выполняется, пока этот процесс не закончится.
 
 Добавьте следующий код в метод `Train`:
 

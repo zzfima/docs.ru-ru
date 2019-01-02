@@ -2,14 +2,14 @@
 title: Управление зависимостями в средствах .NET Core
 description: Сведения об управлении зависимостями с помощью средств .NET Core.
 author: blackdwarf
-ms.author: mairaw
 ms.date: 03/06/2017
-ms.openlocfilehash: cbeb9ad17932f6abaf14333a71fab2b4b8fd099c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.custom: seodec18
+ms.openlocfilehash: 2dd8ebd2cddcb1eea9d9a04a931d9bfb4c428ea3
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086078"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169065"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>Управление зависимостями с помощью пакета SDK для .NET Core 1.0
 

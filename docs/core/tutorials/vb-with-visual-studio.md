@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 612de47c4d40d1272eb330a0343302109040f434
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e743cb496aca101b4594435c86e48951870cf8ef
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149385"
+ms.locfileid: "53170032"
 ---
 # <a name="build-a-net-core-visual-basic-hello-world-application-in-visual-studio-2017"></a>Создание приложения .NET Core Hello World на Visual Basic в Visual Studio 2017
 
@@ -30,11 +30,11 @@ ms.locfileid: "53149385"
 
 1. Запустите Visual Studio 2017. Выберите **Файл** > **Создать** > **Проект** в меню. В диалоговом окне *Новый проект* * выберите узел **Visual Basic**, а затем — узел **.NET Core**. Выберите шаблон проекта **Консольное приложение (.NET Core)**. В текстовом поле **Имя** введите "HelloWorld". Нажмите кнопку **OK**.
 
-   ![Диалоговое окно создания проекта, в котором выбран шаблон проекта консольного приложения](./media/vb-with-visual-studio/new-project.png)
+   ![Диалоговое окно создания проекта, в котором выбран шаблон проекта консольного приложения](./media/vb-with-visual-studio/visual-studio-new-project.png)
    
 1. Visual Studio использует шаблон для создания проекта. Шаблон консольного приложения Visual Basic для .NET Core автоматически определяет класс `Program` с одним методом `Main`, который принимает в качестве аргумента массив <xref:System.String>. `Main` — точка входа в приложение. Это метод, который автоматически вызывается средой выполнения при запуске приложения. Все аргументы, предоставленные в командной строке при запуске приложения, доступны через массив *args*.
 
-   ![Visual Studio и новый проект Hello World](./media/vb-with-visual-studio/devenv.png)
+   ![Visual Studio и новый проект Hello World](./media/vb-with-visual-studio/visual-studio-main-window.png)
 
    Этот шаблон создает простое приложение Hello World. Он вызывает метод <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> для отображения литеральной строки "Hello World!" в окне консоли. Запустите программу в режиме отладки, нажав на панели инструментов кнопку **HelloWorld** с зеленой стрелкой. Окно консоли появится на короткое время и затем сразу же закроется. Это происходит потому, что метод `Main` и приложение в целом завершаются сразу же, как только будет выполнена единственная инструкция в методе `Main`.
 
@@ -50,7 +50,7 @@ ms.locfileid: "53149385"
 
 1. Запустите программу, нажав кнопку **HelloWorld** с зеленой стрелкой на панели инструментов.
 
-   ![Окно консоли с приложением Hello World и надписью "Чтобы продолжить, нажмите любую клавишу"](./media/with-visual-studio/helloworld1.png)
+   ![Окно консоли с приложением Hello World и надписью "Чтобы продолжить, нажмите любую клавишу"](./media/with-visual-studio/hello-world-console.png)
 
 1. Для закрытия консольного окна нажмите любую клавишу.
 
@@ -64,7 +64,7 @@ ms.locfileid: "53149385"
 
    Этот код заменяет существующие операторы <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>, <xref:System.Console.Write%2A?displayProperty=nameWithType> и <xref:System.Console.ReadKey%2A?displayProperty=nameWithType>.
 
-   ![Файл программы Visual Studio с обновленным методом Main](./media/vb-with-visual-studio/codewindow.png)
+   ![Файл программы Visual Studio с обновленным методом Main](./media/vb-with-visual-studio/visual-basic-code-window.png)
 
    Теперь код выдает строку "What is your name?" (Как вас зовут?) в окно консоли и ожидает, чтобы пользователь ввел строку текста и нажал клавишу ВВОД. Приложение сохраняет полученную строку в переменной с именем `name`. Оно также получает значение свойства <xref:System.DateTime.Now?displayProperty=nameWithType>, которое содержит текущее локальное время, и присваивает его переменной с именем `currentDate`. Наконец, с помощью [интерполированной строки](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) эти значения выводятся в окно консоли.
 
@@ -72,7 +72,7 @@ ms.locfileid: "53149385"
 
 1. Запустите программу в режиме отладки, выбрав на панели инструментов кнопку с зеленой стрелкой, нажав клавишу F5 или выбрав пункт меню **Отладка** > **Начать отладку**. В ответ на приглашение в командной строке введите имя и нажмите клавишу ВВОД.
 
-   ![Окно консоли с измененными выходными данными программы](./media/with-visual-studio/helloworld2.png)
+   ![Окно консоли с измененными выходными данными программы](./media/with-visual-studio/hello-world-update.png)
 
 1. Для закрытия консольного окна нажмите любую клавишу.
 

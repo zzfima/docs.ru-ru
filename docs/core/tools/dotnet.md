@@ -1,15 +1,13 @@
 ---
-title: Команда dotnet — CLI .NET Core
+title: Команда dotnet
 description: Сведения о команде dotnet (универсальном драйвере для средств CLI .NET Core) и ее использовании.
-author: mairaw
-ms.author: mairaw
 ms.date: 06/04/2018
-ms.openlocfilehash: 53e8f8bab1cbaabaa7926aa68197c18843b0b637
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 081f295cc71c3cd46de465efb12f131e7b2d36d9
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615581"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170859"
 ---
 # <a name="dotnet-command"></a>Команда dotnet
 
@@ -38,7 +36,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 ```
 ---
 
-## <a name="description"></a>Описание:
+## <a name="description"></a>Описание
 
 `dotnet` — это средство для управления исходным кодом .NET и двоичными объектами. Он предоставляет команды, выполняющие определенные задачи, такие как [`dotnet build`](dotnet-build.md) и [`dotnet run`](dotnet-run.md). Каждая команда определяет свои аргументы. Введите `--help` после каждой команды для доступа к краткой справочной документации.
 
