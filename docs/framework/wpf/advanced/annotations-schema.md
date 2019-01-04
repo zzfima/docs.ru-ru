@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Microsoft Annotations Framework [WPF]
 - documents [WPF], annotations
 ms.assetid: a893442b-e220-4603-bf6a-b01fefcb4b37
-ms.openlocfilehash: e463a087516dc45cb4bd879c77aef6fbeba2b546
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d2f3fa70673c7ae5819346ab152b74acf93a164c
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542019"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029844"
 ---
 # <a name="annotations-schema"></a>Схема примечаний
 В этом разделе описывается определение схемы XML (XSD), используемое структурой заметок для сохранения и извлечения данных заметок пользователей.  
@@ -24,13 +24,13 @@ ms.locfileid: "33542019"
   
 -   базовая схема XML-заметок (базовая схема).  
   
- Основная схема определяет первичный XML-структуру <xref:System.Windows.Annotations.Annotation>.  Большая часть XML-элементов, определенных в схеме Core соответствуют типам в <xref:System.Windows.Annotations> пространства имен.  Основная схема предоставляет три точки расширения, в которых приложения могут добавлять собственные XML-данные.  Эти точки расширения включают <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>и «Содержимое».  (Элементы содержимого представлены в виде <xref:System.Xml.XmlElement> список.)  
+ Основная схема определяет первичную XML-структуру <xref:System.Windows.Annotations.Annotation>.  Большая часть XML-элементов, определенных в основной схеме соответствуют типам в <xref:System.Windows.Annotations> пространства имен.  Основная схема предоставляет три точки расширения, в которых приложения могут добавлять собственные XML-данные.  Эти точки расширения включают <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>и «Содержимое».  (Элементы содержимого представлены в виде <xref:System.Xml.XmlElement> списка.)  
   
- Базовая схема, описанная в этом разделе определяет расширения для <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>и типы содержимого, включая с первоначального выпуска Windows Presentation Foundation (WPF).  
+ Базовая схема, описанная в этом разделе, определяет расширения для <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>и типы содержимого, включая в первоначальном выпуске Windows Presentation Foundation (WPF).  
   
 <a name="CoreSchema"></a>   
 ## <a name="annotations-xml-core-schema"></a>Основная схема XML-заметок  
- Основная схема XML примечаний определяет XML-структуру, которая используется для хранения <xref:System.Windows.Annotations.Annotation> объектов.  
+ Основная схема XML заметок определяет структуру XML, которая используется для хранения <xref:System.Windows.Annotations.Annotation> объектов.  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -182,7 +182,7 @@ ms.locfileid: "33542019"
   
 <a name="BaseSchema"></a>   
 ## <a name="annotations-xml-base-schema"></a>Базовая схема XML-заметок  
- Базовая схема определяет структуру XML для трех абстрактных элементов, определенных в схеме Core – <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, и <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.  
+ Базовая схема определяет структуру XML для трех абстрактных элементов, определенных в основной схеме: <xref:System.Windows.Annotations.Annotation.Authors%2A>, <xref:System.Windows.Annotations.ContentLocatorPart>, и <xref:System.Windows.Annotations.AnnotationResource.Contents%2A>.  
   
 ```xml  
 <xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified"  
@@ -429,11 +429,11 @@ ms.locfileid: "33542019"
     </xsd:complexContent>  
   </xsd:complexType>  
   
-  <-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
-  *  page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
-  *   conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
-  *   page are the coordinates defined in the FixedTextRange.  
-  *   Example of a PageNumber ContentLocatorPart:  
+  <!-- PageNumber element substitutes ContentLocatorPart and is used to locate a  
+  *    page in a FixedDocument.  PageNumber ContentLocatorPart is used in  
+  *    conjunction with the FixedTextRange ContentLocatorPart and it shows on with  
+  *    page are the coordinates defined in the FixedTextRange.  
+  *    Example of a PageNumber ContentLocatorPart:  
   *     
   *       <anb:PageNumber>  
   *         <anc:Item Name="Value" Value="1" />  
@@ -464,8 +464,8 @@ ms.locfileid: "33542019"
   <xsd:element name="Text" type="anb:TextContentType"  
                substitutionGroup="anc:Content"/>  
   
-  <-- Ink – contains XAML representing Sticky Note ink.  
-  *   Used in annotations of type InkStickyNote. -->  
+  <!-- Ink – contains XAML representing Sticky Note ink.  
+  *    Used in annotations of type InkStickyNote. -->  
   <xsd:complexType name="InkContentType">  
     <!-- See XAML schema for Ink content -->  
   </xsd:complexType>  
@@ -493,7 +493,7 @@ ms.locfileid: "33542019"
   
 <a name="SampleXML"></a>   
 ## <a name="sample-xml-produced-by-annotations-xmlstreamstore"></a>Пример XML-кода, созданный классом XmlStreamStore Annotations  
- Кодом XML ниже показан результат выполнения заметки <xref:System.Windows.Annotations.Storage.XmlStreamStore> и организация образец файла, который содержит три заметки - выделения текста-записки и манипулятор заметки рукописного ввода.  
+ XML, ниже показан результат выполнения заметки <xref:System.Windows.Annotations.Storage.XmlStreamStore> и организацию примера файла, который содержит три заметки: выделение текста-записки и рукописную записку.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

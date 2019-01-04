@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: 8b31ebc846992f51484ae058ce05d9aa12590372
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bca5942985ca5a0af8ce504565506cda8c396d16
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195194"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029935"
 ---
 # <a name="message-security-anonymous"></a>Безопасность сообщений с возможностью анонимного доступа
 Образец Anonymous безопасности сообщения показано, как реализовать приложение, Windows Communication Foundation (WCF), использующей безопасность уровня сообщений без проверки подлинности клиента, но с требованием проверки подлинности сервера с использованием сертификата X.509 сервера сертификат. Все сообщения приложений, которыми обмениваются служба и клиент, подписываются и шифруются. Этот образец основан на [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md) образца. Этот образец содержит консольную программу клиента (EXE) и библиотеку службы (DLL), размещаемую в службах IIS. Служба реализует контракт, определяющий шаблон взаимодействия "запрос-ответ".
@@ -42,10 +42,9 @@ public class CalculatorService : ICalculator
 
   <bindings>
     <wsHttpBinding>
-     <!--
-     <!--This configuration defines the security mode as Message and-->
-     <!--the clientCredentialType as None. This mode provides -- >
-     <!--server authentication only using the service certificate.-->
+     <!-- This configuration defines the security mode as Message and -->
+     <!-- the clientCredentialType as None. This mode provides -->
+     <!-- server authentication only using the service certificate. -->
 
      <binding>
        <security mode="Message">
@@ -238,6 +237,6 @@ Press <ENTER> to terminate client.
 -   После завершения работы образца запустите в папке образцов файл Cleanup.bat.  
   
 > [!NOTE]
->  Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. При запуске примеров Windows Communication Foundation (WCF), которые используют сертификаты на компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище CurrentUser - trustedpeople. Для этого воспользуйтесь следующей командой: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>`. Пример: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`
+>  Этот скрипт не удаляет сертификаты службы на клиенте при запуске образца на нескольких компьютерах. При запуске примеров Windows Communication Foundation (WCF), которые используют сертификаты на компьютерах, обязательно удалите сертификаты службы, которые были установлены в хранилище CurrentUser - trustedpeople. Чтобы сделать это, используйте следующую команду: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` Например: `certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com.`
 
 ## <a name="see-also"></a>См. также

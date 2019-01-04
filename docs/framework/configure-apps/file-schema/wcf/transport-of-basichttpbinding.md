@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; для &lt;basicHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: f4e37281539106fef93dc4ab566d94d781c39d29
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 01fe2bc98326e3cef2b3df8bdf4aa03055df5e65
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48845681"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030338"
 ---
 # <a name="lttransportgt-of-ltbasichttpbindinggt"></a>&lt;transport&gt; для &lt;basicHttpBinding&gt;
 Определяет свойства, которые управляют параметрами проверки подлинности для транспорта HTTP.  
@@ -67,8 +67,8 @@ ms.locfileid: "48845681"
 |Значение|Описание|  
 |-----------|-----------------|  
 |Нет|-Сообщения не защищены во время передачи.|  
-|Basic|Задает обычную проверку подлинности, как определено документом RFC 2617, который посвящен проверке подлинности HTTP, обычной проверке и дайджест-проверке подлинности.|  
-|Digest|Задает дайджест-проверку подлинности, как определено документом RFC 2617, который посвящен проверке подлинности HTTP, обычной проверке и дайджест-проверке подлинности.|  
+|Basic|Задает обычную проверку подлинности, как определено документом RFC 2617 – проверка подлинности HTTP: Основные и дайджест-проверка подлинности.|  
+|Digest|Задает дайджест-проверки подлинности, как определено документом RFC 2617 – проверка подлинности HTTP: Основные и дайджест-проверка подлинности.|  
 |Ntlm|Задает проверку подлинности NTLM, если это возможно и если не удается выполнить проверку подлинности Windows.|  
 |Windows|Задает встроенную проверку подлинности Windows.|  
 |Сертификат|Выполняет проверку подлинности клиента с использованием сертификата. Такая возможность действует, только если атрибут `Mode` родительского элемента `security` имеет значение Transport, и не действует, если этот атрибут имеет значение TransportCredentialOnly.|  
@@ -99,8 +99,8 @@ ms.locfileid: "48845681"
    </services>  
     <bindings>  
         <basicHttpBinding>  
-        <!-- Configure basicHttpBinding with Transport security -- >  
-        <!-- mode and clientCredentialType set to None.-->  
+        <!-- Configure basicHttpBinding with Transport security -->  
+        <!-- mode and clientCredentialType set to None. -->  
            <binding name="Binding1">  
                <security mode="Transport">  
                    <transport clientCredentialType="None"  

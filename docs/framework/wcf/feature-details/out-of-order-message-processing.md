@@ -2,15 +2,15 @@
 title: Обработка неупорядоченных сообщений
 ms.date: 03/30/2017
 ms.assetid: 33fc62a5-5d59-461c-a37a-0e1b51ac763d
-ms.openlocfilehash: a7839b60dbad7919a644c196a1c63f6bc46fb5d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3beca8d73788d177d07868d7169d8aea3ecd8e80
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33492949"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029950"
 ---
 # <a name="out-of-order-message-processing"></a>Обработка неупорядоченных сообщений
-Службы рабочих процессов могут зависеть от порядка отправки сообщений. Служба рабочих процессов содержит одно или несколько действий <xref:System.ServiceModel.Activities.Receive>. Каждое из этих действий <xref:System.ServiceModel.Activities.Receive> рассчитано на определенное сообщение. Поскольку доставка данных не гарантируется, отправляемые клиентами сообщения могут задерживаться и доставляться в порядке, на который служба рабочих процессов не рассчитана. Реализация службы рабочих процессов, которая не требует отправки сообщений в определенном порядке, обычно осуществляется с использованием параллельных действий. В результате усложнения протокола приложения рабочий процесс также слишком быстро становится сложным.  Из неупорядоченные сообщения обработки функций в Windows Communication Foundation (WCF) позволяет создавать рабочий процесс, исключив сложности реализации вложенных параллельных действий. Обработка сообщений из внеочередной поддерживается только каналами, поддерживающими <xref:System.ServiceModel.Channels.ReceiveContext> например привязки WCF MSMQ.  
+Службы рабочих процессов могут зависеть от порядка отправки сообщений. Служба рабочих процессов содержит одно или несколько действий <xref:System.ServiceModel.Activities.Receive>. Каждое из этих действий <xref:System.ServiceModel.Activities.Receive> рассчитано на определенное сообщение. Поскольку доставка данных не гарантируется, отправляемые клиентами сообщения могут задерживаться и доставляться в порядке, на который служба рабочих процессов не рассчитана. Реализация службы рабочих процессов, которая не требует отправки сообщений в определенном порядке, обычно осуществляется с использованием параллельных действий. В результате усложнения протокола приложения рабочий процесс также слишком быстро становится сложным.  Из неупорядоченные сообщения, обработке функции в Windows Communication Foundation (WCF) позволяет создавать такой рабочий процесс исключив сложности реализации вложенных параллельных действий. Обработка сообщений из неупорядоченные поддерживается только каналами, поддерживающими <xref:System.ServiceModel.Channels.ReceiveContext> например привязок WCF MSMQ.  
   
 ## <a name="enabling-out-of-order-message-processing"></a>Реализация обработки внеочередных сообщений  
  Чтобы включить обработку внеочередных сообщений, в WorkflowService установите свойство <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> в значение `true`. В следующем примере кода показана установка свойства <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> в коде.  
@@ -30,7 +30,7 @@ WorkflowService service = new WorkflowService
 ```xaml  
 // Xaml: Opt-in to Buffered Receive processing...  
 <WorkflowService AllowBufferedReceive="True">  
-   <!—the actual children activities -->  
+   <!--the actual children activities -->  
 </Sequence>  
 ```  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 88fb1a17-6ac9-4b57-8028-193aec1f727c
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: c4c96b874456297ede61c96e46fee8d90ebcafb6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 67c94eeaa295b19e99f870780f555baff936889f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123622"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030131"
 ---
 # <a name="redirecting-assembly-versions"></a>Перенаправление версий сборки
 
@@ -142,11 +142,11 @@ ms.locfileid: "49123622"
 
 ```xml
 <assemblyBinding xmlns="..." appliesTo="v3.5 ">
-  <!—.NET Framework version 3.5 redirects here -->
+  <!--.NET Framework version 3.5 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="..." appliesTo="v4.0.30319">
-  <!—.NET Framework version 4.0 redirects here -->
+  <!--.NET Framework version 4.0 redirects here -->
 </assemblyBinding>
 
 <assemblyBinding xmlns="...">

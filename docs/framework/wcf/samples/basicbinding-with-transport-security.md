@@ -2,12 +2,12 @@
 title: BasicBinding с обеспечением безопасности транспорта
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: d3d1aa9b4ee35e4ef96f1494ee79b3e60bba50a4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a1e08b2fd97f7eee8903de8c396e6eacd9e7184e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195714"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030247"
 ---
 # <a name="basicbinding-with-transport-security"></a>BasicBinding с обеспечением безопасности транспорта
 Этот образец демонстрирует использование безопасности транспорта SSL с использованием основной привязки. Этот образец основан на [Приступая к работе](../../../../docs/framework/wcf/samples/getting-started-sample.md) , реализующем службу калькулятора.  
@@ -42,8 +42,8 @@ ms.locfileid: "50195714"
    </services>  
   <bindings>  
     <basicHttpBinding>  
-      <!-- Configure basicHttpBinding with Transport security -- >  
-      <!-- mode and clientCredentialType set to None.-->  
+      <!-- Configure basicHttpBinding with Transport security -->  
+      <!-- mode and clientCredentialType set to None. -->  
       <binding name="Binding1">  
         <security mode="Transport">  
           <transport clientCredentialType="None"/>  

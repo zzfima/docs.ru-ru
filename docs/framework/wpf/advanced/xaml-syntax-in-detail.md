@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: eabb9c84824a4604319a346612e84563abaf2b76
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 31f9e31d7cd91f9f89e131a7b506cf1a53fce7e4
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43485733"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030299"
 ---
 # <a name="xaml-syntax-in-detail"></a>Подробное описание синтаксиса XAML
 В этом разделе определяются термины, которые используются для описания элементов синтаксиса XAML. Эти термины часто используются в оставшейся части этой документации, в документации по WPF, в частности, так и для других платформ, использующих XAML или основные понятия XAML, включаемые поддержки языка XAML на уровне System.Xaml. Этот раздел расширяет базовую терминологию, представленную в разделе [Обзор XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -288,7 +288,7 @@ ms.locfileid: "43485733"
   
 <a name="optional_and_nonrecommended_xaml_usages"></a>   
 ## <a name="optional-and-nonrecommended-xaml-usages"></a>Данные об использовании необязательно и нежелательные XAML  
- В следующих разделах описаны случаи использования XAML, которые технически поддерживаются процессорами XAML, однако создают уровень детализации или другие эстетически проблемы, мешающие XAML-файлов, оставшихся в удобное для восприятия, когда к разработке приложений, содержащих источники XAML .  
+ В следующих разделах использований XAML, которые технически поддерживаются процессорами XAML, однако создают уровень детализации или другие эстетически проблемы, мешающие осталось удобное для восприятия, при разработке приложений, которые содержат XAML источников файлов XAML.  
   
 ### <a name="optional-property-element-usages"></a>Необязательное использование элемента свойства  
  Необязательное использование элемента свойства относится явное объявление свойств содержимого элементов, обработчик XAML рассматривает как неявные. Например, при объявлении содержимое <xref:System.Windows.Controls.Menu>, вы можете явно объявить <xref:System.Windows.Controls.ItemsControl.Items%2A> коллекцию <xref:System.Windows.Controls.Menu> как `<Menu.Items>` тега элемента свойства и поместить каждый <xref:System.Windows.Controls.MenuItem> в `<Menu.Items>`, а чем использование неявных поведение обработчика XAML, все дочерние элементы <xref:System.Windows.Controls.Menu> должно быть <xref:System.Windows.Controls.MenuItem> и помещаются в <xref:System.Windows.Controls.ItemsControl.Items%2A> коллекции. Иногда необязательное использование помогает визуально уточнить структуру объектов, представленных в разметке. Или иногда использовании явные свойства элемента можно избежать разметки, технически функциональной, но визуально вызывает путаницу, таких как вложенные расширения разметки в значении атрибута.  
@@ -317,7 +317,7 @@ ms.locfileid: "43485733"
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о языке XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Возможности пространства имен языка XAML (x:)](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [Пространства имен XAML (x:) Возможности языка](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [Расширения XAML WPF](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
  [Общие сведения о свойствах зависимости](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [TypeConverters и XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  

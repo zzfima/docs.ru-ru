@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Создание службы WCF, обменивающейся данными через WebSockets
+title: Как выполнить Создание службы WCF, обменивающейся данными через WebSockets
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: a9b3ae8d8dcac7844e241fa668e1199669d216e6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bd9b1be3751d499ee3c6ee38ff4cee0e12046e6a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196204"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030585"
 ---
-# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Практическое руководство. Создание службы WCF, обменивающейся данными через WebSockets
+# <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>Как выполнить Создание службы WCF, обменивающейся данными через WebSockets
 Службы и клиенты WCF могут использовать привязку <xref:System.ServiceModel.NetHttpBinding> для обмена данными через WebSockets.  WebSockets будет использоваться в тех случаях, когда <xref:System.ServiceModel.NetHttpBinding> распознает, что в контракте службы определен контракт обратного вызова. В этом разделе описано, как реализовать службу WCF и клиент, использующий <xref:System.ServiceModel.NetHttpBinding> для обмена данными через WebSockets.  
   
 ### <a name="define-the-service"></a>Определение службы  
@@ -295,7 +295,7 @@ namespace Client
 ```  
   
 ```xml  
-<!—App.config -->  
+<!--App.config -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
     <startup>   

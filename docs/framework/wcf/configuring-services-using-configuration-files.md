@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-ms.openlocfilehash: 11d24bec46cfb190fe1a7c2a7b9ac78ac4d5e799
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a38b4202ba3402c2dff3884c1560752d0353e0ba
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200866"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029675"
 ---
 # <a name="configuring-services-using-configuration-files"></a>Настройка служб с использованием файлов конфигурации
 Настройка службы Windows Communication Foundation (WCF) с помощью файла конфигурации обеспечивает гибкость предоставления конечной точки и данные поведение службы точке развертывания, а не во время разработки. В этой теме представлено описание основных доступных методов.  
@@ -21,7 +21,7 @@ ms.locfileid: "50200866"
 > [!IMPORTANT]
 >  При развертывании сценариев параллельного выполнения, в которых развернуты две различные версии службы, необходимо указывать частичные имена сборок, на которые ссылаются файлы конфигурации. Это связано с тем, что файл конфигурации совместно используется всеми версиями службы, которые могут выполняться под управлением различных версий платформы .NET Framework.  
   
-## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Web.config и App.config  
+## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Файл Web.config и App.config  
  WCF использует систему конфигурации System.Configuration [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  При настройке службы в Visual Studio, используйте для указания параметров в файле Web.config или в файл App.config. Выбор имени файла конфигурации определяется выбранной для службы средой размещения. Если служба размещается с помощью IIS, используйте файл Web.config. Если служба размещается с помощью другой среды размещения, используйте файл App.config.  
@@ -37,7 +37,7 @@ ms.locfileid: "50200866"
 <system.ServiceModel>  
   
    <services>  
-   <!—- Define the service endpoints. This section is optional in the new  
+   <!-- Define the service endpoints. This section is optional in the new  
     default configuration model in .NET Framework 4. -->  
       <service>  
          <endpoint/>  
@@ -126,7 +126,7 @@ ms.locfileid: "50200866"
     <basicHttpBinding>  
      <binding name="myBindingConfiguration1" closeTimeout="00:01:00" />  
      <binding name="myBindingConfiguration2" closeTimeout="00:02:00" />  
-     <binding closeTimeout="00:03:00" />  <!—- Default binding for basicHttpBinding -->  
+     <binding closeTimeout="00:03:00" />  <!-- Default binding for basicHttpBinding -->  
     </basicHttpBinding>  
      </bindings>  
      <services>  

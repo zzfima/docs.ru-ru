@@ -3,12 +3,12 @@ title: WIF и веб-фермы
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: f65e10fa44c9d245bc7d275ac0e1d8fe914bae0b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8d1d3d67dd578957b5d7f4dc70cd2710143b699d
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199467"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029467"
 ---
 # <a name="wif-and-web-farms"></a>WIF и веб-фермы
 Если вы используете Windows Identity Foundation (WIF) для защиты ресурсов приложения проверяющей стороны, развернутого в веб-ферме, необходимо выполнить определенные действия, чтобы платформа WIF могла обрабатывать токены от экземпляров этого приложения, работающих на разных компьютерах в ферме. Обработка включает в себя проверку подписей токенов сеансов, шифрование и расшифровку токенов сеансов, их кэширование, а также обнаружение повторно используемых маркеров безопасности.  
@@ -45,7 +45,7 @@ ms.locfileid: "47199467"
     ```xml  
     <caches>  
       <sessionSecurityTokenCache type="MyCacheLibrary.MySharedSessionSecurityTokenCache, MyCacheLibrary">  
-        <!—optional child configuration elements, if implemented by the derived class -->  
+        <!--optional child configuration elements, if implemented by the derived class -->  
       </sessionSecurityTokenCache>  
     </caches>  
     ```  

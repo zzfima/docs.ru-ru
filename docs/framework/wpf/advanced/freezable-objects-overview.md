@@ -9,12 +9,12 @@ helpviewer_keywords:
 - unfreezing Freezable objects [WPF]
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
-ms.openlocfilehash: a1006816168e405d0d79786b8430b802f1ec0928
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a4c0a137da74b276b1238d500057ce96756a1ae1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45999446"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030377"
 ---
 # <a name="freezable-objects-overview"></a>Общие сведения об объектах класса Freezable
 В этом разделе описывается, как эффективно использовать и создавать <xref:System.Windows.Freezable> объекты, которые предоставляют специальные функции, которые могут помочь повысить производительность приложения. Объекты freezable примеры кисти, перья, преобразования, геометрии и анимации.  
@@ -126,7 +126,7 @@ mc:Ignorable="PresentationOptions"
   
 -   Потокобезопасность: зафиксированный <xref:System.Windows.Freezable> может использоваться несколькими потоками.  
   
--   Подробные уведомления об изменениях: в отличие от других <xref:System.Windows.DependencyObject>s, объектах класса Freezable предоставить уведомление об изменениях, при изменении значений вложенных свойств.  
+-   Подробные уведомления об изменениях: В отличие от других <xref:System.Windows.DependencyObject>s, объектах класса Freezable предоставить уведомление об изменениях, при изменении значений вложенных свойств.  
   
 -   Удобное клонирование: Freezable класс уже реализовал несколько методов, которые обеспечивают большую глубину клонирования.  
   
@@ -154,7 +154,7 @@ mc:Ignorable="PresentationOptions"
   
 -   Вызовите <xref:System.Windows.Freezable.WritePostscript%2A> метод перед выходом из методов, которые записывают на данные-члены не свойство зависимости.  
   
- Если класс содержит члены данных зависимостей свойства, которые являются <xref:System.Windows.DependencyObject> объектов, необходимо также вызвать <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> метод каждый раз при изменении на их значений, даже если вы изменяете член `null`.  
+ Если класс содержит члены данных зависимостей свойства, которые являются <xref:System.Windows.DependencyObject> объектов, необходимо также вызвать <xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> метод каждый раз при изменении одного из их значения, даже если вы изменяете член `null`.  
   
 > [!NOTE]
 >  Очень важно, что началом реализации каждого <xref:System.Windows.Freezable> метод можно переопределить с помощью вызова к базовой реализации.  

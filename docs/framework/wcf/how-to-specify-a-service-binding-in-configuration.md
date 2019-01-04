@@ -1,25 +1,25 @@
 ---
-title: Практическое руководство. Задание привязки службы в конфигурации
+title: Как выполнить Указание привязки службы в конфигурации
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 4dd990975bcaad7c8789065dd1b17aba4bf36852
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1d9a6d0a556613576a14c600aa72d3f4524cdc3e
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500003"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029636"
 ---
-# <a name="how-to-specify-a-service-binding-in-configuration"></a>Практическое руководство. Задание привязки службы в конфигурации
-В этом примере контракт `ICalculator` определен для базовой службы калькулятора, служба реализуется в классе `CalculatorService`, а затем ее конечная точка настраивается в файле Web.config с указанием того, что служба использует класс <xref:System.ServiceModel.BasicHttpBinding>. Описание того, как настроить эту службу с помощью кода, вместо конфигурации см. в разделе [как: Укажите привязку службы в коде](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
+# <a name="how-to-specify-a-service-binding-in-configuration"></a>Как выполнить Указание привязки службы в конфигурации
+В этом примере контракт `ICalculator` определен для базовой службы калькулятора, служба реализуется в классе `CalculatorService`, а затем ее конечная точка настраивается в файле Web.config с указанием того, что служба использует класс <xref:System.ServiceModel.BasicHttpBinding>. Описание способов настройки этой службы с помощью кода вместо файла конфигурации, см. в разделе [как: Указание привязки службы в коде](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  
   
  В большинстве случаев рекомендуется указывать привязку и адрес декларативно в конфигурации, а не принудительно в коде. Как правило, определять конечные точки в коде непрактично, поскольку привязки и адреса для развернутой службы чаще всего отличаются от привязок и адресов, используемых в процессе разработки службы. В общем случае, если не указывать привязку и адрес в коде, их можно изменять без повторной компиляции или повторного развертывания приложения.  
   
- Все следующие действия по настройке может выполняться с помощью [средство редактирования конфигурации (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
+ Все перечисленные ниже этапы конфигурации можно выполнить с помощью программы [средство редактирования конфигурации (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md).  
   
- Исходная копия в этом примере в разделе [BasicBinding](../../../docs/framework/wcf/samples/basicbinding.md).  
+ Копию исходного кода в этом примере, см. в разделе [basicbinding обеспечением](../../../docs/framework/wcf/samples/basicbinding.md).  
   
 ### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>Указание привязки BasicHttpBinding, используемой для настройки службы  
   
@@ -45,18 +45,18 @@ ms.locfileid: "33500003"
         <services>  
           <service name=" CalculatorService" >  
             <endpoint   
-            <-- Leave the address blank to be populated by default-->  
-            <--from the hosting environment,in this case IIS, so -->  
-            <-- the address will just be that of the IIS Virtual -->  
-            <--Directory.-->  
+            <!-- Leave the address blank to be populated by default -->  
+            <!-- from the hosting environment,in this case IIS, so -->  
+            <!-- the address will just be that of the IIS Virtual -->  
+            <!-- Directory. -->  
                 address=""   
-            <--Specify the binding type -->  
+            <!-- Specify the binding type -->  
                 binding="wsHttpBinding"  
-            <--Specify the binding configuration name for that -->  
-            <--binding type. This is optional but useful if you  -->  
-            <--want to modify the properties of the binding. -->  
-            <--The bindingConfiguration name Binding1 is defined  -->  
-            <--below in the bindings element.  -->  
+            <!-- Specify the binding configuration name for that -->  
+            <!-- binding type. This is optional but useful if you -->  
+            <!-- want to modify the properties of the binding. -->  
+            <!-- The bindingConfiguration name Binding1 is defined -->  
+            <!-- below in the bindings element. -->  
                 bindingConfiguration="Binding1"  
                 contract="ICalculator" />  
           </service>  
@@ -64,8 +64,8 @@ ms.locfileid: "33500003"
         <bindings>  
           <wsHttpBinding>  
             <binding name="Binding1">  
-              <-- Binding property values can be modified here. -->  
-              <--See the next procedure. -->  
+              <!-- Binding property values can be modified here. -->  
+              <!-- See the next procedure. -->  
             </binding>  
           </wsHttpBinding>  
        </bindings>  
@@ -81,7 +81,7 @@ ms.locfileid: "33500003"
   
 ### <a name="to-modify-the-default-values-of-the-binding-properties"></a>Изменение значений по умолчанию для свойств привязки  
   
-1.  Чтобы изменить одно из значений свойства по умолчанию для <xref:System.ServiceModel.WSHttpBinding>, создайте новое имя конфигурации привязки - `<binding name="Binding1">` — в [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемент и задать новые значения для атрибутов Привязка этого элемента привязки. Например, чтобы изменить значения по умолчанию для времени ожидания при открытии и закрытии с 1 минуты на 2 минуты, добавьте следующие строки в файл конфигурации.  
+1.  Для изменения одного из значений свойств по умолчанию <xref:System.ServiceModel.WSHttpBinding>, создайте новое имя конфигурации привязки - `<binding name="Binding1">` , в [ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) элемент и задать новые значения для атрибутов привязка в этом элементе привязки. Например, чтобы изменить значения по умолчанию для времени ожидания при открытии и закрытии с 1 минуты на 2 минуты, добавьте следующие строки в файл конфигурации.  
   
     ```xml  
     <wsHttpBinding>  

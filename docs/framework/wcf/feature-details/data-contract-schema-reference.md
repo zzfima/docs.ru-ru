@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 33661061e1a5db4f7826c1a8eca188f8c782b58f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c4e2939c0868bc452496c2b8c4435b5ef316e573
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873723"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030533"
 ---
 # <a name="data-contract-schema-reference"></a>Справочник по схеме контрактов данных
 В данном разделе описывается подмножество схемы XML (XSD), используемое <xref:System.Runtime.Serialization.DataContractSerializer> для описания типов среды CLR, применяемых для сериализации XML.  
@@ -290,15 +290,14 @@ ms.locfileid: "48873723"
   
  В следующем коде показан класс перечисления C#.  
   
-```  
+```csharp  
 public enum MyEnum  
 {  
-   first = 3,  
-   second = 4,  
-   third =5  
+  first = 3,  
+  second = 4,  
+  third =5  
+}  
 ```  
-  
- }  
   
  `DataContractSerializer`сопоставляет этот класс следующей схеме. Если значения перечисления начинаются с 1, блоки `xs:annotation` не создаются.  
   
@@ -349,7 +348,7 @@ public enum MyEnum
   
  В следующем коде показана установка флагов для типа перечисления.  
   
-```  
+```csharp  
 [Flags]  
 public enum AuthFlags  
 {    
@@ -402,7 +401,7 @@ rialization/">64</EnumerationValue>
   
  В следующем коде показан пример контракта данных.  
   
-```  
+```csharp  
 [DataContract]  
 public class Person  
 {  
@@ -619,7 +618,7 @@ public class Employee : Person
 ## <a name="importing-non-datacontract-schemas"></a>Импорт схем, отличных от DataContract  
  В`DataContractSerializer` имеется функция `ImportXmlTypes` , которая выполняет импорт схем, не соответствующих профилю XSD `DataContractSerializer` (см. свойство <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> ). Если задать этому параметру значение `true` , типы схемы, не удовлетворяющие требованиям, будут приняты и сопоставлены следующей реализации; <xref:System.Xml.Serialization.IXmlSerializable> упакует массив <xref:System.Xml.XmlNode> (отличается только имя класса).  
   
-```  
+```csharp  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  
 [System.Xml.Serialization.XmlSchemaProviderAttribute("ExportSchema")]  
 [System.Xml.Serialization.XmlRootAttribute(IsNullable=false)]  

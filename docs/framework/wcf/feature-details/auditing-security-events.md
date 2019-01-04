@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 70bd756c9de2cf6ffb43479b0b28a6d51340f905
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fd6852e5381a5e57bc911203b110d189d23a9e9d
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198086"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030572"
 ---
 # <a name="auditing-security-events"></a>Аудит событий безопасности
 Приложения, созданные с помощью Windows Communication Foundation (WCF) можно регистрировать события безопасности (либо успех, сбой или оба) с помощью функции аудита. События записываются в журнал системных событий Windows, и их можно просматривать при помощи средства просмотра событий.  
@@ -28,7 +28,7 @@ ms.locfileid: "50198086"
  Вы можете проверить результаты аудита обеих уровней успех или ошибка, которая называется *поведением аудита*.  
   
 ## <a name="audit-log-location"></a>Расположение журнала аудита  
- После определения уровня и поведения аудита, вы (или администратор) можете задать расположение журнала аудита. Доступны три варианта: журнал по умолчанию, журнал приложения и журнал безопасности. Если задан журнал по умолчанию, фактический журнал зависит от используемой системы и от того, поддерживает ли система запись в журнал безопасности. Дополнительные сведения см. в подразделе «Операционная система» далее в этом разделе.  
+ После определения уровня и поведения аудита, вы (или администратор) можете задать расположение журнала аудита. Включают три значения: По умолчанию, приложения и безопасности. Если задан журнал по умолчанию, фактический журнал зависит от используемой системы и от того, поддерживает ли система запись в журнал безопасности. Дополнительные сведения см. в подразделе «Операционная система» далее в этом разделе.  
   
  Для записи в журнал безопасности требуются привилегии `SeAuditPrivilege`. По умолчанию этой привилегией обладают только учетные записи Local System и Network Service. Для управления функциями `read` и `delete` журнала безопасности требуются привилегии `SeSecurityPrivilege`. По умолчанию эту привилегию имеют только администраторы.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "50198086"
 ### <a name="auditing-classes"></a>Классы аудита  
  В приведенной ниже таблице описаны классы и свойства, используемые для программирования поведения аудита.  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>|Позволяет задавать параметры аудита в виде поведения службы.|  
 |<xref:System.ServiceModel.AuditLogLocation>|Перечисление для задания журнала, в который требуется производить запись. Предусмотрены значения Default, Application и Security. Если выбрано значение Default, фактическое расположение журнала определяется операционной системой. См. подраздел "Выбор журнала приложения или журнала безопасности" ниже в этом разделе.|  
@@ -51,7 +51,7 @@ ms.locfileid: "50198086"
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|Задает тип событий авторизации службы для аудита на уровне службы. Предусмотрены варианты `None`, `Failure`, `Success` и `SuccessOrFailure`.|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|Задает, что происходит с запросом клиента в случае сбоя аудита. Например, если служба пытается произвести запись в журнал безопасности, но не имеет привилегий `SeAuditPrivilege`. Значение по умолчанию `true` означает, что сбои игнорируются и запрос клиента обрабатывается обычным образом.|  
   
- Пример настройки приложения для записи событий аудита, см. в разделе [как: аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
+ Пример настройки приложения для записи событий аудита, см. в разделе [как: Аудит событий безопасности](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md).  
   
 ### <a name="configuration"></a>Конфигурация  
  Можно также использовать конфигурации для задания поведения аудита, добавив [ \<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) под [ \<поведения >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md). Необходимо добавить элемент в разделе [ \<поведение >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) как показано в следующем коде.  
@@ -61,7 +61,7 @@ ms.locfileid: "50198086"
   <system.serviceModel>  
     <behaviors>  
       <behavior>  
-        <!— auditLogLocation="Application" or "Security" -—>  
+        <!-- auditLogLocation="Application" or "Security" -->  
         <serviceSecurityAudit  
                   auditLogLocation="Application"  
                   suppressAuditFailure="true"  
