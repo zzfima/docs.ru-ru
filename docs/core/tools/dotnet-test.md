@@ -1,27 +1,25 @@
 ---
-title: Команда dotnet test — CLI .NET Core
+title: Команда dotnet test
 description: Команда dotnet test служит для выполнения модульных тестов в проекте.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 73b1d832b855798dd053187bbb24e8fb989fedf1
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 2cfe96b24e5f46ae679c970a1df028d38ebf6037
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "46696460"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170860"
 ---
-# <a name="dotnet-test"></a><span data-ttu-id="0916e-103">dotnet test</span><span class="sxs-lookup"><span data-stu-id="0916e-103">dotnet test</span></span>
+# <a name="dotnet-test"></a><span data-ttu-id="025d1-103">dotnet test</span><span class="sxs-lookup"><span data-stu-id="025d1-103">dotnet test</span></span>
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a><span data-ttu-id="0916e-104">name</span><span class="sxs-lookup"><span data-stu-id="0916e-104">Name</span></span>
+## <a name="name"></a><span data-ttu-id="025d1-104">name</span><span class="sxs-lookup"><span data-stu-id="025d1-104">Name</span></span>
 
-<span data-ttu-id="0916e-105">`dotnet test` — драйвер тестов .NET, используемый для проведения модульных тестов.</span><span class="sxs-lookup"><span data-stu-id="0916e-105">`dotnet test` - .NET test driver used to execute unit tests.</span></span>
+<span data-ttu-id="025d1-105">`dotnet test` — драйвер тестов .NET, используемый для проведения модульных тестов.</span><span class="sxs-lookup"><span data-stu-id="025d1-105">`dotnet test` - .NET test driver used to execute unit tests.</span></span>
 
-## <a name="synopsis"></a><span data-ttu-id="0916e-106">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="0916e-106">Synopsis</span></span>
+## <a name="synopsis"></a><span data-ttu-id="025d1-106">Краткий обзор</span><span class="sxs-lookup"><span data-stu-id="025d1-106">Synopsis</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="0916e-107">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="0916e-107">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="025d1-107">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="025d1-107">.NET Core 2.1</span></span>](#tab/netcore21)
 
 ```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
@@ -31,7 +29,7 @@ dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] 
 dotnet test [-h|--help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="0916e-108">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="0916e-108">.NET Core 2.0</span></span>](#tab/netcore20)
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="025d1-108">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="025d1-108">.NET Core 2.0</span></span>](#tab/netcore20)
 
 ```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
@@ -40,7 +38,7 @@ dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect
 dotnet test [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="0916e-109">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="0916e-109">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="025d1-109">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="025d1-109">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 ```console
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
@@ -50,261 +48,261 @@ dotnet test [-h|--help]
 
 ---
 
-## <a name="description"></a><span data-ttu-id="0916e-110">Описание:</span><span class="sxs-lookup"><span data-stu-id="0916e-110">Description</span></span>
+## <a name="description"></a><span data-ttu-id="025d1-110">Описание</span><span class="sxs-lookup"><span data-stu-id="025d1-110">Description</span></span>
 
-<span data-ttu-id="0916e-111">Команда `dotnet test` служит для выполнения модульных тестов в проекте.</span><span class="sxs-lookup"><span data-stu-id="0916e-111">The `dotnet test` command is used to execute unit tests in a given project.</span></span> <span data-ttu-id="0916e-112">Команда `dotnet test` запускает консольное приложение средства выполнения тестов, указанное для проекта.</span><span class="sxs-lookup"><span data-stu-id="0916e-112">The `dotnet test` command launches the test runner console application specified for a project.</span></span> <span data-ttu-id="0916e-113">Средство выполнения тестов запускает тесты, определенные для платформы модульного тестирования (например, MSTest, NUnit или xUnit) и сообщает об успешном или неудачном выполнении каждого из них.</span><span class="sxs-lookup"><span data-stu-id="0916e-113">The test runner executes the tests defined for a unit test framework (for example, MSTest, NUnit, or xUnit) and reports the success or failure of each test.</span></span> <span data-ttu-id="0916e-114">Если все тесты выполнены успешно, средство выполнения тестов возвращает код 0. Если же любой тест завершается с ошибкой, средство выполнения возвращает 1.</span><span class="sxs-lookup"><span data-stu-id="0916e-114">If all tests are successful, the test runner returns 0 as an exit code; otherwise if any test fails, it returns 1.</span></span> <span data-ttu-id="0916e-115">Средство выполнения тестов и библиотека модульных тестов упаковываются в пакеты NuGet и восстанавливаются как обычные зависимости проекта.</span><span class="sxs-lookup"><span data-stu-id="0916e-115">The test runner and the unit test library are packaged as NuGet packages and are restored as ordinary dependencies for the project.</span></span>
+<span data-ttu-id="025d1-111">Команда `dotnet test` служит для выполнения модульных тестов в проекте.</span><span class="sxs-lookup"><span data-stu-id="025d1-111">The `dotnet test` command is used to execute unit tests in a given project.</span></span> <span data-ttu-id="025d1-112">Команда `dotnet test` запускает консольное приложение средства выполнения тестов, указанное для проекта.</span><span class="sxs-lookup"><span data-stu-id="025d1-112">The `dotnet test` command launches the test runner console application specified for a project.</span></span> <span data-ttu-id="025d1-113">Средство выполнения тестов запускает тесты, определенные для платформы модульного тестирования (например, MSTest, NUnit или xUnit) и сообщает об успешном или неудачном выполнении каждого из них.</span><span class="sxs-lookup"><span data-stu-id="025d1-113">The test runner executes the tests defined for a unit test framework (for example, MSTest, NUnit, or xUnit) and reports the success or failure of each test.</span></span> <span data-ttu-id="025d1-114">Если все тесты выполнены успешно, средство выполнения тестов возвращает код 0. Если же любой тест завершается с ошибкой, средство выполнения возвращает 1.</span><span class="sxs-lookup"><span data-stu-id="025d1-114">If all tests are successful, the test runner returns 0 as an exit code; otherwise if any test fails, it returns 1.</span></span> <span data-ttu-id="025d1-115">Средство выполнения тестов и библиотека модульных тестов упаковываются в пакеты NuGet и восстанавливаются как обычные зависимости проекта.</span><span class="sxs-lookup"><span data-stu-id="025d1-115">The test runner and the unit test library are packaged as NuGet packages and are restored as ordinary dependencies for the project.</span></span>
 
-<span data-ttu-id="0916e-116">Тестовый проект указывает средство выполнения тестов с помощью обычного элемента `<PackageReference>`, как показано в следующем примере файла проекта:</span><span class="sxs-lookup"><span data-stu-id="0916e-116">Test projects specify the test runner using an ordinary `<PackageReference>` element, as seen in the following sample project file:</span></span>
+<span data-ttu-id="025d1-116">Тестовый проект указывает средство выполнения тестов с помощью обычного элемента `<PackageReference>`, как показано в следующем примере файла проекта:</span><span class="sxs-lookup"><span data-stu-id="025d1-116">Test projects specify the test runner using an ordinary `<PackageReference>` element, as seen in the following sample project file:</span></span>
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
-## <a name="arguments"></a><span data-ttu-id="0916e-117">Аргументы</span><span class="sxs-lookup"><span data-stu-id="0916e-117">Arguments</span></span>
+## <a name="arguments"></a><span data-ttu-id="025d1-117">Аргументы</span><span class="sxs-lookup"><span data-stu-id="025d1-117">Arguments</span></span>
 
 `PROJECT`
 
-<span data-ttu-id="0916e-118">Путь к тестовому проекту.</span><span class="sxs-lookup"><span data-stu-id="0916e-118">Path to the test project.</span></span> <span data-ttu-id="0916e-119">Если значение не задано, по умолчанию используется текущий каталог.</span><span class="sxs-lookup"><span data-stu-id="0916e-119">If not specified, it defaults to current directory.</span></span>
+<span data-ttu-id="025d1-118">Путь к тестовому проекту.</span><span class="sxs-lookup"><span data-stu-id="025d1-118">Path to the test project.</span></span> <span data-ttu-id="025d1-119">Если значение не задано, по умолчанию используется текущий каталог.</span><span class="sxs-lookup"><span data-stu-id="025d1-119">If not specified, it defaults to current directory.</span></span>
 
-## <a name="options"></a><span data-ttu-id="0916e-120">Параметры</span><span class="sxs-lookup"><span data-stu-id="0916e-120">Options</span></span>
+## <a name="options"></a><span data-ttu-id="025d1-120">Параметры</span><span class="sxs-lookup"><span data-stu-id="025d1-120">Options</span></span>
 
-# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="0916e-121">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="0916e-121">.NET Core 2.1</span></span>](#tab/netcore21)
+# <a name="net-core-21tabnetcore21"></a>[<span data-ttu-id="025d1-121">.NET Core 2.1</span><span class="sxs-lookup"><span data-stu-id="025d1-121">.NET Core 2.1</span></span>](#tab/netcore21)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-<span data-ttu-id="0916e-122">Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске.</span><span class="sxs-lookup"><span data-stu-id="0916e-122">Use the custom test adapters from the specified path in the test run.</span></span>
+<span data-ttu-id="025d1-122">Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске.</span><span class="sxs-lookup"><span data-stu-id="025d1-122">Use the custom test adapters from the specified path in the test run.</span></span>
 
 `--blame`
 
-<span data-ttu-id="0916e-123">Выполнение тестов в режиме обвинения.</span><span class="sxs-lookup"><span data-stu-id="0916e-123">Runs the tests in blame mode.</span></span> <span data-ttu-id="0916e-124">Этот параметр полезен при изоляции проблемных тестов, которые приводят к аварийному завершению хоста для тестов.</span><span class="sxs-lookup"><span data-stu-id="0916e-124">This option is helpful in isolating the problematic tests causing test host to crash.</span></span> <span data-ttu-id="0916e-125">Он создает в текущем каталоге выходной файл *Sequence.xml*, который записывает порядок выполнения тестов перед сбоем.</span><span class="sxs-lookup"><span data-stu-id="0916e-125">It creates an output file in the current directory as *Sequence.xml* that captures the order of tests execution before the crash.</span></span>
+<span data-ttu-id="025d1-123">Выполнение тестов в режиме обвинения.</span><span class="sxs-lookup"><span data-stu-id="025d1-123">Runs the tests in blame mode.</span></span> <span data-ttu-id="025d1-124">Этот параметр полезен при изоляции проблемных тестов, которые приводят к аварийному завершению хоста для тестов.</span><span class="sxs-lookup"><span data-stu-id="025d1-124">This option is helpful in isolating the problematic tests causing test host to crash.</span></span> <span data-ttu-id="025d1-125">Он создает в текущем каталоге выходной файл *Sequence.xml*, который записывает порядок выполнения тестов перед сбоем.</span><span class="sxs-lookup"><span data-stu-id="025d1-125">It creates an output file in the current directory as *Sequence.xml* that captures the order of tests execution before the crash.</span></span>
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="0916e-126">Определяет конфигурацию сборки.</span><span class="sxs-lookup"><span data-stu-id="0916e-126">Defines the build configuration.</span></span> <span data-ttu-id="0916e-127">Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="0916e-127">The default value is `Debug`, but your project's configuration could override this default SDK setting.</span></span>
+<span data-ttu-id="025d1-126">Определяет конфигурацию сборки.</span><span class="sxs-lookup"><span data-stu-id="025d1-126">Defines the build configuration.</span></span> <span data-ttu-id="025d1-127">Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="025d1-127">The default value is `Debug`, but your project's configuration could override this default SDK setting.</span></span>
 
 `--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
 
-<span data-ttu-id="0916e-128">Включает сборщик данных для тестового запуска.</span><span class="sxs-lookup"><span data-stu-id="0916e-128">Enables data collector for the test run.</span></span> <span data-ttu-id="0916e-129">Дополнительные сведения см. в разделе [Мониторинг и анализ тестового запуска](https://aka.ms/vstest-collect).</span><span class="sxs-lookup"><span data-stu-id="0916e-129">For more information, see [Monitor and analyze test run](https://aka.ms/vstest-collect).</span></span>
+<span data-ttu-id="025d1-128">Включает сборщик данных для тестового запуска.</span><span class="sxs-lookup"><span data-stu-id="025d1-128">Enables data collector for the test run.</span></span> <span data-ttu-id="025d1-129">Дополнительные сведения см. в разделе [Мониторинг и анализ тестового запуска](https://aka.ms/vstest-collect).</span><span class="sxs-lookup"><span data-stu-id="025d1-129">For more information, see [Monitor and analyze test run](https://aka.ms/vstest-collect).</span></span>
 
 `-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
 
-<span data-ttu-id="0916e-130">Включает режим диагностики для платформы тестирования и записывает диагностические сообщения в указанный файл.</span><span class="sxs-lookup"><span data-stu-id="0916e-130">Enables diagnostic mode for the test platform and write diagnostic messages to the specified file.</span></span>
+<span data-ttu-id="025d1-130">Включает режим диагностики для платформы тестирования и записывает диагностические сообщения в указанный файл.</span><span class="sxs-lookup"><span data-stu-id="025d1-130">Enables diagnostic mode for the test platform and write diagnostic messages to the specified file.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="0916e-131">Ищет тестовые двоичные файлы для определенной [платформы](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="0916e-131">Looks for test binaries for a specific [framework](../../standard/frameworks.md).</span></span>
+<span data-ttu-id="025d1-131">Ищет тестовые двоичные файлы для определенной [платформы](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="025d1-131">Looks for test binaries for a specific [framework](../../standard/frameworks.md).</span></span>
 
 `--filter <EXPRESSION>`
 
-<span data-ttu-id="0916e-132">Фильтрует тесты в текущем проекте с помощью заданного выражения.</span><span class="sxs-lookup"><span data-stu-id="0916e-132">Filters out tests in the current project using the given expression.</span></span> <span data-ttu-id="0916e-133">Дополнительные сведения см. в разделе [Сведения о параметре "Фильтр"](#filter-option-details).</span><span class="sxs-lookup"><span data-stu-id="0916e-133">For more information, see the [Filter option details](#filter-option-details) section.</span></span> <span data-ttu-id="0916e-134">Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье [Выполнение выборочных модульных тестов](../testing/selective-unit-tests.md).</span><span class="sxs-lookup"><span data-stu-id="0916e-134">For more information and examples on how to use selective unit test filtering, see [Running selective unit tests](../testing/selective-unit-tests.md).</span></span>
+<span data-ttu-id="025d1-132">Фильтрует тесты в текущем проекте с помощью заданного выражения.</span><span class="sxs-lookup"><span data-stu-id="025d1-132">Filters out tests in the current project using the given expression.</span></span> <span data-ttu-id="025d1-133">Дополнительные сведения см. в разделе [Сведения о параметре "Фильтр"](#filter-option-details).</span><span class="sxs-lookup"><span data-stu-id="025d1-133">For more information, see the [Filter option details](#filter-option-details) section.</span></span> <span data-ttu-id="025d1-134">Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье [Выполнение выборочных модульных тестов](../testing/selective-unit-tests.md).</span><span class="sxs-lookup"><span data-stu-id="025d1-134">For more information and examples on how to use selective unit test filtering, see [Running selective unit tests](../testing/selective-unit-tests.md).</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="0916e-135">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="0916e-135">Prints out a short help for the command.</span></span>
+<span data-ttu-id="025d1-135">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="025d1-135">Prints out a short help for the command.</span></span>
 
 `-l|--logger <LoggerUri/FriendlyName>`
 
-<span data-ttu-id="0916e-136">Указывает средство ведения журнала для результатов тестирования.</span><span class="sxs-lookup"><span data-stu-id="0916e-136">Specifies a logger for test results.</span></span>
+<span data-ttu-id="025d1-136">Указывает средство ведения журнала для результатов тестирования.</span><span class="sxs-lookup"><span data-stu-id="025d1-136">Specifies a logger for test results.</span></span>
 
 `--no-build`
 
-<span data-ttu-id="0916e-137">Не выполняет сборку тестового проекта перед запуском.</span><span class="sxs-lookup"><span data-stu-id="0916e-137">Doesn't build the test project before running it.</span></span> <span data-ttu-id="0916e-138">Он также неявно задает флаг `--no-restore`.</span><span class="sxs-lookup"><span data-stu-id="0916e-138">It also implicit sets the `--no-restore` flag.</span></span>
+<span data-ttu-id="025d1-137">Не выполняет сборку тестового проекта перед запуском.</span><span class="sxs-lookup"><span data-stu-id="025d1-137">Doesn't build the test project before running it.</span></span> <span data-ttu-id="025d1-138">Он также неявно задает флаг `--no-restore`.</span><span class="sxs-lookup"><span data-stu-id="025d1-138">It also implicit sets the `--no-restore` flag.</span></span>
 
 `--no-restore`
 
-<span data-ttu-id="0916e-139">Не выполняет неявное восстановление при выполнении команды.</span><span class="sxs-lookup"><span data-stu-id="0916e-139">Doesn't execute an implicit restore when running the command.</span></span>
+<span data-ttu-id="025d1-139">Не выполняет неявное восстановление при выполнении команды.</span><span class="sxs-lookup"><span data-stu-id="025d1-139">Doesn't execute an implicit restore when running the command.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="0916e-140">Каталог, в котором выполняется поиск двоичных файлов для выполнения.</span><span class="sxs-lookup"><span data-stu-id="0916e-140">Directory in which to find the binaries to run.</span></span>
+<span data-ttu-id="025d1-140">Каталог, в котором выполняется поиск двоичных файлов для выполнения.</span><span class="sxs-lookup"><span data-stu-id="025d1-140">Directory in which to find the binaries to run.</span></span>
 
 `-r|--results-directory <PATH>`
 
-<span data-ttu-id="0916e-141">Каталог для сохранения результатов тестов.</span><span class="sxs-lookup"><span data-stu-id="0916e-141">The directory where the test results are going to be placed.</span></span> <span data-ttu-id="0916e-142">Если указанный каталог не существует, он создается.</span><span class="sxs-lookup"><span data-stu-id="0916e-142">If the specified directory doesn't exist, it's created.</span></span>
+<span data-ttu-id="025d1-141">Каталог для сохранения результатов тестов.</span><span class="sxs-lookup"><span data-stu-id="025d1-141">The directory where the test results are going to be placed.</span></span> <span data-ttu-id="025d1-142">Если указанный каталог не существует, он создается.</span><span class="sxs-lookup"><span data-stu-id="025d1-142">If the specified directory doesn't exist, it's created.</span></span>
 
 `-s|--settings <SETTINGS_FILE>`
 
-<span data-ttu-id="0916e-143">Параметры, используемые при выполнении тестов.</span><span class="sxs-lookup"><span data-stu-id="0916e-143">Settings to use when running tests.</span></span>
+<span data-ttu-id="025d1-143">Параметры, используемые при выполнении тестов.</span><span class="sxs-lookup"><span data-stu-id="025d1-143">Settings to use when running tests.</span></span>
 
 `-t|--list-tests`
 
-<span data-ttu-id="0916e-144">Отображение списка всех обнаруженных тестов в текущем проекте.</span><span class="sxs-lookup"><span data-stu-id="0916e-144">List all of the discovered tests in the current project.</span></span>
+<span data-ttu-id="025d1-144">Отображение списка всех обнаруженных тестов в текущем проекте.</span><span class="sxs-lookup"><span data-stu-id="025d1-144">List all of the discovered tests in the current project.</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="0916e-145">Задает уровень детализации команды.</span><span class="sxs-lookup"><span data-stu-id="0916e-145">Sets the verbosity level of the command.</span></span> <span data-ttu-id="0916e-146">Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="0916e-146">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="025d1-145">Задает уровень детализации команды.</span><span class="sxs-lookup"><span data-stu-id="025d1-145">Sets the verbosity level of the command.</span></span> <span data-ttu-id="025d1-146">Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="025d1-146">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 `RunSettings arguments`
 
-<span data-ttu-id="0916e-147">Аргументы, передаваемые в качестве конфигураций RunSettings для теста.</span><span class="sxs-lookup"><span data-stu-id="0916e-147">Arguments passed as RunSettings configurations for the test.</span></span> <span data-ttu-id="0916e-148">Аргументы задаются в виде пар `[name]=[value]` после "-- " (обратите внимание на пробел после --).</span><span class="sxs-lookup"><span data-stu-id="0916e-148">Arguments are specified as `[name]=[value]` pairs after "-- " (note the space after --).</span></span> <span data-ttu-id="0916e-149">Несколько пар `[name]=[value]` разделяются пробелами.</span><span class="sxs-lookup"><span data-stu-id="0916e-149">A space is used to separate multiple `[name]=[value]` pairs.</span></span>
+<span data-ttu-id="025d1-147">Аргументы, передаваемые в качестве конфигураций RunSettings для теста.</span><span class="sxs-lookup"><span data-stu-id="025d1-147">Arguments passed as RunSettings configurations for the test.</span></span> <span data-ttu-id="025d1-148">Аргументы задаются в виде пар `[name]=[value]` после "-- " (обратите внимание на пробел после --).</span><span class="sxs-lookup"><span data-stu-id="025d1-148">Arguments are specified as `[name]=[value]` pairs after "-- " (note the space after --).</span></span> <span data-ttu-id="025d1-149">Несколько пар `[name]=[value]` разделяются пробелами.</span><span class="sxs-lookup"><span data-stu-id="025d1-149">A space is used to separate multiple `[name]=[value]` pairs.</span></span>
 
-<span data-ttu-id="0916e-150">Пример: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`</span><span class="sxs-lookup"><span data-stu-id="0916e-150">Example: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`</span></span>
+<span data-ttu-id="025d1-150">Пример: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`</span><span class="sxs-lookup"><span data-stu-id="025d1-150">Example: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`</span></span>
 
-<span data-ttu-id="0916e-151">Дополнительные сведения о RunSettings см. в статье о [передаче аргументов RunSettings в командной строке](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).</span><span class="sxs-lookup"><span data-stu-id="0916e-151">For more information about RunSettings, see [vstest.console.exe: Passing RunSettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).</span></span>
+<span data-ttu-id="025d1-151">Дополнительные сведения о RunSettings см. в статье о [передаче аргументов RunSettings в командной строке](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).</span><span class="sxs-lookup"><span data-stu-id="025d1-151">For more information about RunSettings, see [vstest.console.exe: Passing RunSettings args](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md).</span></span>
 
-# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="0916e-152">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="0916e-152">.NET Core 2.0</span></span>](#tab/netcore20)
+# <a name="net-core-20tabnetcore20"></a>[<span data-ttu-id="025d1-152">.NET Core 2.0</span><span class="sxs-lookup"><span data-stu-id="025d1-152">.NET Core 2.0</span></span>](#tab/netcore20)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-<span data-ttu-id="0916e-153">Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске.</span><span class="sxs-lookup"><span data-stu-id="0916e-153">Use the custom test adapters from the specified path in the test run.</span></span>
+<span data-ttu-id="025d1-153">Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске.</span><span class="sxs-lookup"><span data-stu-id="025d1-153">Use the custom test adapters from the specified path in the test run.</span></span>
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="0916e-154">Определяет конфигурацию сборки.</span><span class="sxs-lookup"><span data-stu-id="0916e-154">Defines the build configuration.</span></span> <span data-ttu-id="0916e-155">Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="0916e-155">The default value is `Debug`, but your project's configuration could override this default SDK setting.</span></span>
+<span data-ttu-id="025d1-154">Определяет конфигурацию сборки.</span><span class="sxs-lookup"><span data-stu-id="025d1-154">Defines the build configuration.</span></span> <span data-ttu-id="025d1-155">Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="025d1-155">The default value is `Debug`, but your project's configuration could override this default SDK setting.</span></span>
 
 `--collect <DATA_COLLECTOR_FRIENDLY_NAME>`
 
-<span data-ttu-id="0916e-156">Включает сборщик данных для тестового запуска.</span><span class="sxs-lookup"><span data-stu-id="0916e-156">Enables data collector for the test run.</span></span> <span data-ttu-id="0916e-157">Дополнительные сведения см. в разделе [Мониторинг и анализ тестового запуска](https://aka.ms/vstest-collect).</span><span class="sxs-lookup"><span data-stu-id="0916e-157">For more information, see [Monitor and analyze test run](https://aka.ms/vstest-collect).</span></span>
+<span data-ttu-id="025d1-156">Включает сборщик данных для тестового запуска.</span><span class="sxs-lookup"><span data-stu-id="025d1-156">Enables data collector for the test run.</span></span> <span data-ttu-id="025d1-157">Дополнительные сведения см. в разделе [Мониторинг и анализ тестового запуска](https://aka.ms/vstest-collect).</span><span class="sxs-lookup"><span data-stu-id="025d1-157">For more information, see [Monitor and analyze test run](https://aka.ms/vstest-collect).</span></span>
 
 `-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
 
-<span data-ttu-id="0916e-158">Включает режим диагностики для платформы тестирования и записывает диагностические сообщения в указанный файл.</span><span class="sxs-lookup"><span data-stu-id="0916e-158">Enables diagnostic mode for the test platform and write diagnostic messages to the specified file.</span></span>
+<span data-ttu-id="025d1-158">Включает режим диагностики для платформы тестирования и записывает диагностические сообщения в указанный файл.</span><span class="sxs-lookup"><span data-stu-id="025d1-158">Enables diagnostic mode for the test platform and write diagnostic messages to the specified file.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="0916e-159">Ищет тестовые двоичные файлы для определенной [платформы](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="0916e-159">Looks for test binaries for a specific [framework](../../standard/frameworks.md).</span></span>
+<span data-ttu-id="025d1-159">Ищет тестовые двоичные файлы для определенной [платформы](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="025d1-159">Looks for test binaries for a specific [framework](../../standard/frameworks.md).</span></span>
 
 `--filter <EXPRESSION>`
 
-<span data-ttu-id="0916e-160">Фильтрует тесты в текущем проекте с помощью заданного выражения.</span><span class="sxs-lookup"><span data-stu-id="0916e-160">Filters out tests in the current project using the given expression.</span></span> <span data-ttu-id="0916e-161">Дополнительные сведения см. в разделе [Сведения о параметре "Фильтр"](#filter-option-details).</span><span class="sxs-lookup"><span data-stu-id="0916e-161">For more information, see the [Filter option details](#filter-option-details) section.</span></span> <span data-ttu-id="0916e-162">Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье [Выполнение выборочных модульных тестов](../testing/selective-unit-tests.md).</span><span class="sxs-lookup"><span data-stu-id="0916e-162">For more information and examples on how to use selective unit test filtering, see [Running selective unit tests](../testing/selective-unit-tests.md).</span></span>
+<span data-ttu-id="025d1-160">Фильтрует тесты в текущем проекте с помощью заданного выражения.</span><span class="sxs-lookup"><span data-stu-id="025d1-160">Filters out tests in the current project using the given expression.</span></span> <span data-ttu-id="025d1-161">Дополнительные сведения см. в разделе [Сведения о параметре "Фильтр"](#filter-option-details).</span><span class="sxs-lookup"><span data-stu-id="025d1-161">For more information, see the [Filter option details](#filter-option-details) section.</span></span> <span data-ttu-id="025d1-162">Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье [Выполнение выборочных модульных тестов](../testing/selective-unit-tests.md).</span><span class="sxs-lookup"><span data-stu-id="025d1-162">For more information and examples on how to use selective unit test filtering, see [Running selective unit tests](../testing/selective-unit-tests.md).</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="0916e-163">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="0916e-163">Prints out a short help for the command.</span></span>
+<span data-ttu-id="025d1-163">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="025d1-163">Prints out a short help for the command.</span></span>
 
 `-l|--logger <LoggerUri/FriendlyName>`
 
-<span data-ttu-id="0916e-164">Указывает средство ведения журнала для результатов тестирования.</span><span class="sxs-lookup"><span data-stu-id="0916e-164">Specifies a logger for test results.</span></span>
+<span data-ttu-id="025d1-164">Указывает средство ведения журнала для результатов тестирования.</span><span class="sxs-lookup"><span data-stu-id="025d1-164">Specifies a logger for test results.</span></span>
 
 `--no-build`
 
-<span data-ttu-id="0916e-165">Не выполняет сборку тестового проекта перед запуском.</span><span class="sxs-lookup"><span data-stu-id="0916e-165">Doesn't build the test project before running it.</span></span> <span data-ttu-id="0916e-166">Он также неявно задает флаг `--no-restore`.</span><span class="sxs-lookup"><span data-stu-id="0916e-166">It also implicit sets the `--no-restore` flag.</span></span>
+<span data-ttu-id="025d1-165">Не выполняет сборку тестового проекта перед запуском.</span><span class="sxs-lookup"><span data-stu-id="025d1-165">Doesn't build the test project before running it.</span></span> <span data-ttu-id="025d1-166">Он также неявно задает флаг `--no-restore`.</span><span class="sxs-lookup"><span data-stu-id="025d1-166">It also implicit sets the `--no-restore` flag.</span></span>
 
 `--no-restore`
 
-<span data-ttu-id="0916e-167">Не выполняет неявное восстановление при выполнении команды.</span><span class="sxs-lookup"><span data-stu-id="0916e-167">Doesn't execute an implicit restore when running the command.</span></span>
+<span data-ttu-id="025d1-167">Не выполняет неявное восстановление при выполнении команды.</span><span class="sxs-lookup"><span data-stu-id="025d1-167">Doesn't execute an implicit restore when running the command.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="0916e-168">Каталог, в котором выполняется поиск двоичных файлов для выполнения.</span><span class="sxs-lookup"><span data-stu-id="0916e-168">Directory in which to find the binaries to run.</span></span>
+<span data-ttu-id="025d1-168">Каталог, в котором выполняется поиск двоичных файлов для выполнения.</span><span class="sxs-lookup"><span data-stu-id="025d1-168">Directory in which to find the binaries to run.</span></span>
 
 `-r|--results-directory <PATH>`
 
-<span data-ttu-id="0916e-169">Каталог для сохранения результатов тестов.</span><span class="sxs-lookup"><span data-stu-id="0916e-169">The directory where the test results are going to be placed.</span></span> <span data-ttu-id="0916e-170">Если указанный каталог не существует, он создается.</span><span class="sxs-lookup"><span data-stu-id="0916e-170">If the specified directory doesn't exist, it's created.</span></span>
+<span data-ttu-id="025d1-169">Каталог для сохранения результатов тестов.</span><span class="sxs-lookup"><span data-stu-id="025d1-169">The directory where the test results are going to be placed.</span></span> <span data-ttu-id="025d1-170">Если указанный каталог не существует, он создается.</span><span class="sxs-lookup"><span data-stu-id="025d1-170">If the specified directory doesn't exist, it's created.</span></span>
 
 `-s|--settings <SETTINGS_FILE>`
 
-<span data-ttu-id="0916e-171">Параметры, используемые при выполнении тестов.</span><span class="sxs-lookup"><span data-stu-id="0916e-171">Settings to use when running tests.</span></span>
+<span data-ttu-id="025d1-171">Параметры, используемые при выполнении тестов.</span><span class="sxs-lookup"><span data-stu-id="025d1-171">Settings to use when running tests.</span></span>
 
 `-t|--list-tests`
 
-<span data-ttu-id="0916e-172">Отображение списка всех обнаруженных тестов в текущем проекте.</span><span class="sxs-lookup"><span data-stu-id="0916e-172">List all of the discovered tests in the current project.</span></span>
+<span data-ttu-id="025d1-172">Отображение списка всех обнаруженных тестов в текущем проекте.</span><span class="sxs-lookup"><span data-stu-id="025d1-172">List all of the discovered tests in the current project.</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="0916e-173">Задает уровень детализации команды.</span><span class="sxs-lookup"><span data-stu-id="0916e-173">Sets the verbosity level of the command.</span></span> <span data-ttu-id="0916e-174">Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="0916e-174">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="025d1-173">Задает уровень детализации команды.</span><span class="sxs-lookup"><span data-stu-id="025d1-173">Sets the verbosity level of the command.</span></span> <span data-ttu-id="025d1-174">Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="025d1-174">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
-# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="0916e-175">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="0916e-175">.NET Core 1.x</span></span>](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[<span data-ttu-id="025d1-175">.NET Core 1.x</span><span class="sxs-lookup"><span data-stu-id="025d1-175">.NET Core 1.x</span></span>](#tab/netcore1x)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
-<span data-ttu-id="0916e-176">Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске.</span><span class="sxs-lookup"><span data-stu-id="0916e-176">Use the custom test adapters from the specified path in the test run.</span></span>
+<span data-ttu-id="025d1-176">Используйте пользовательские адаптеры теста из указанного пути в тестовом запуске.</span><span class="sxs-lookup"><span data-stu-id="025d1-176">Use the custom test adapters from the specified path in the test run.</span></span>
 
 `-c|--configuration {Debug|Release}`
 
-<span data-ttu-id="0916e-177">Определяет конфигурацию сборки.</span><span class="sxs-lookup"><span data-stu-id="0916e-177">Defines the build configuration.</span></span> <span data-ttu-id="0916e-178">Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="0916e-178">The default value is `Debug`, but your project's configuration could override this default SDK setting.</span></span>
+<span data-ttu-id="025d1-177">Определяет конфигурацию сборки.</span><span class="sxs-lookup"><span data-stu-id="025d1-177">Defines the build configuration.</span></span> <span data-ttu-id="025d1-178">Значение по умолчанию — `Debug`, но конфигурация проекта может переопределить этот параметр SDK по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="025d1-178">The default value is `Debug`, but your project's configuration could override this default SDK setting.</span></span>
 
 `-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`
 
-<span data-ttu-id="0916e-179">Включает режим диагностики для платформы тестирования и записывает диагностические сообщения в указанный файл.</span><span class="sxs-lookup"><span data-stu-id="0916e-179">Enables diagnostic mode for the test platform and write diagnostic messages to the specified file.</span></span>
+<span data-ttu-id="025d1-179">Включает режим диагностики для платформы тестирования и записывает диагностические сообщения в указанный файл.</span><span class="sxs-lookup"><span data-stu-id="025d1-179">Enables diagnostic mode for the test platform and write diagnostic messages to the specified file.</span></span>
 
 `-f|--framework <FRAMEWORK>`
 
-<span data-ttu-id="0916e-180">Ищет тестовые двоичные файлы для определенной [платформы](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="0916e-180">Looks for test binaries for a specific [framework](../../standard/frameworks.md).</span></span>
+<span data-ttu-id="025d1-180">Ищет тестовые двоичные файлы для определенной [платформы](../../standard/frameworks.md).</span><span class="sxs-lookup"><span data-stu-id="025d1-180">Looks for test binaries for a specific [framework](../../standard/frameworks.md).</span></span>
 
 `--filter <EXPRESSION>`
 
-<span data-ttu-id="0916e-181">Фильтрует тесты в текущем проекте с помощью заданного выражения.</span><span class="sxs-lookup"><span data-stu-id="0916e-181">Filters out tests in the current project using the given expression.</span></span> <span data-ttu-id="0916e-182">Дополнительные сведения см. в разделе [Сведения о параметре "Фильтр"](#filter-option-details).</span><span class="sxs-lookup"><span data-stu-id="0916e-182">For more information, see the [Filter option details](#filter-option-details) section.</span></span> <span data-ttu-id="0916e-183">Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье [Выполнение выборочных модульных тестов](../testing/selective-unit-tests.md).</span><span class="sxs-lookup"><span data-stu-id="0916e-183">For more information and examples on how to use selective unit test filtering, see [Running selective unit tests](../testing/selective-unit-tests.md).</span></span>
+<span data-ttu-id="025d1-181">Фильтрует тесты в текущем проекте с помощью заданного выражения.</span><span class="sxs-lookup"><span data-stu-id="025d1-181">Filters out tests in the current project using the given expression.</span></span> <span data-ttu-id="025d1-182">Дополнительные сведения см. в разделе [Сведения о параметре "Фильтр"](#filter-option-details).</span><span class="sxs-lookup"><span data-stu-id="025d1-182">For more information, see the [Filter option details](#filter-option-details) section.</span></span> <span data-ttu-id="025d1-183">Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье [Выполнение выборочных модульных тестов](../testing/selective-unit-tests.md).</span><span class="sxs-lookup"><span data-stu-id="025d1-183">For more information and examples on how to use selective unit test filtering, see [Running selective unit tests](../testing/selective-unit-tests.md).</span></span>
 
 `-h|--help`
 
-<span data-ttu-id="0916e-184">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="0916e-184">Prints out a short help for the command.</span></span>
+<span data-ttu-id="025d1-184">Выводит краткую справку по команде.</span><span class="sxs-lookup"><span data-stu-id="025d1-184">Prints out a short help for the command.</span></span>
 
 `-l|--logger <LoggerUri/FriendlyName>`
 
-<span data-ttu-id="0916e-185">Указывает средство ведения журнала для результатов тестирования.</span><span class="sxs-lookup"><span data-stu-id="0916e-185">Specifies a logger for test results.</span></span>
+<span data-ttu-id="025d1-185">Указывает средство ведения журнала для результатов тестирования.</span><span class="sxs-lookup"><span data-stu-id="025d1-185">Specifies a logger for test results.</span></span>
 
 `--no-build`
 
-<span data-ttu-id="0916e-186">Не выполняет сборку тестового проекта перед запуском.</span><span class="sxs-lookup"><span data-stu-id="0916e-186">Doesn't build the test project before running it.</span></span>
+<span data-ttu-id="025d1-186">Не выполняет сборку тестового проекта перед запуском.</span><span class="sxs-lookup"><span data-stu-id="025d1-186">Doesn't build the test project before running it.</span></span>
 
 `-o|--output <OUTPUT_DIRECTORY>`
 
-<span data-ttu-id="0916e-187">Каталог, в котором выполняется поиск двоичных файлов для выполнения.</span><span class="sxs-lookup"><span data-stu-id="0916e-187">Directory in which to find the binaries to run.</span></span>
+<span data-ttu-id="025d1-187">Каталог, в котором выполняется поиск двоичных файлов для выполнения.</span><span class="sxs-lookup"><span data-stu-id="025d1-187">Directory in which to find the binaries to run.</span></span>
 
 `-s|--settings <SETTINGS_FILE>`
 
-<span data-ttu-id="0916e-188">Параметры, используемые при выполнении тестов.</span><span class="sxs-lookup"><span data-stu-id="0916e-188">Settings to use when running tests.</span></span>
+<span data-ttu-id="025d1-188">Параметры, используемые при выполнении тестов.</span><span class="sxs-lookup"><span data-stu-id="025d1-188">Settings to use when running tests.</span></span>
 
 `-t|--list-tests`
 
-<span data-ttu-id="0916e-189">Отображение списка всех обнаруженных тестов в текущем проекте.</span><span class="sxs-lookup"><span data-stu-id="0916e-189">List all of the discovered tests in the current project.</span></span>
+<span data-ttu-id="025d1-189">Отображение списка всех обнаруженных тестов в текущем проекте.</span><span class="sxs-lookup"><span data-stu-id="025d1-189">List all of the discovered tests in the current project.</span></span>
 
 `-v|--verbosity <LEVEL>`
 
-<span data-ttu-id="0916e-190">Задает уровень детализации команды.</span><span class="sxs-lookup"><span data-stu-id="0916e-190">Sets the verbosity level of the command.</span></span> <span data-ttu-id="0916e-191">Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="0916e-191">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
+<span data-ttu-id="025d1-190">Задает уровень детализации команды.</span><span class="sxs-lookup"><span data-stu-id="025d1-190">Sets the verbosity level of the command.</span></span> <span data-ttu-id="025d1-191">Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.</span><span class="sxs-lookup"><span data-stu-id="025d1-191">Allowed values are `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, and `diag[nostic]`.</span></span>
 
 ---
 
-## <a name="examples"></a><span data-ttu-id="0916e-192">Примеры</span><span class="sxs-lookup"><span data-stu-id="0916e-192">Examples</span></span>
+## <a name="examples"></a><span data-ttu-id="025d1-192">Примеры</span><span class="sxs-lookup"><span data-stu-id="025d1-192">Examples</span></span>
 
-<span data-ttu-id="0916e-193">Выполнение тестов в проекте в текущем каталоге:</span><span class="sxs-lookup"><span data-stu-id="0916e-193">Run the tests in the project in the current directory:</span></span>
+<span data-ttu-id="025d1-193">Выполнение тестов в проекте в текущем каталоге:</span><span class="sxs-lookup"><span data-stu-id="025d1-193">Run the tests in the project in the current directory:</span></span>
 
 `dotnet test`
 
-<span data-ttu-id="0916e-194">Выполнение тестов в проекте `test1`:</span><span class="sxs-lookup"><span data-stu-id="0916e-194">Run the tests in the `test1` project:</span></span>
+<span data-ttu-id="025d1-194">Выполнение тестов в проекте `test1`:</span><span class="sxs-lookup"><span data-stu-id="025d1-194">Run the tests in the `test1` project:</span></span>
 
 `dotnet test ~/projects/test1/test1.csproj`
 
-<span data-ttu-id="0916e-195">Выполнение тестов в проекте в текущем каталоге и создание файл результатов теста в формате trx:</span><span class="sxs-lookup"><span data-stu-id="0916e-195">Run the tests in the project in the current directory and generate a test results file in the trx format:</span></span>
+<span data-ttu-id="025d1-195">Выполнение тестов в проекте в текущем каталоге и создание файл результатов теста в формате trx:</span><span class="sxs-lookup"><span data-stu-id="025d1-195">Run the tests in the project in the current directory and generate a test results file in the trx format:</span></span>
 
 `dotnet test --logger:trx`
 
-## <a name="filter-option-details"></a><span data-ttu-id="0916e-196">Сведения о параметре "Фильтр"</span><span class="sxs-lookup"><span data-stu-id="0916e-196">Filter option details</span></span>
+## <a name="filter-option-details"></a><span data-ttu-id="025d1-196">Сведения о параметре "Фильтр"</span><span class="sxs-lookup"><span data-stu-id="025d1-196">Filter option details</span></span>
 
 `--filter <EXPRESSION>`
 
-<span data-ttu-id="0916e-197">Параметр `<Expression>` имеет следующий формат: `<property><operator><value>[|&<Expression>]`.</span><span class="sxs-lookup"><span data-stu-id="0916e-197">`<Expression>` has the format `<property><operator><value>[|&<Expression>]`.</span></span>
+<span data-ttu-id="025d1-197">Параметр `<Expression>` имеет следующий формат: `<property><operator><value>[|&<Expression>]`.</span><span class="sxs-lookup"><span data-stu-id="025d1-197">`<Expression>` has the format `<property><operator><value>[|&<Expression>]`.</span></span>
 
-<span data-ttu-id="0916e-198">`<property>` — это атрибут `Test Case`.</span><span class="sxs-lookup"><span data-stu-id="0916e-198">`<property>` is an attribute of the `Test Case`.</span></span> <span data-ttu-id="0916e-199">Ниже приведены свойства, поддерживаемые популярными платформами модульных тестов.</span><span class="sxs-lookup"><span data-stu-id="0916e-199">The following are the properties supported by popular unit test frameworks:</span></span>
+<span data-ttu-id="025d1-198">`<property>` — это атрибут `Test Case`.</span><span class="sxs-lookup"><span data-stu-id="025d1-198">`<property>` is an attribute of the `Test Case`.</span></span> <span data-ttu-id="025d1-199">Ниже приведены свойства, поддерживаемые популярными платформами модульных тестов.</span><span class="sxs-lookup"><span data-stu-id="025d1-199">The following are the properties supported by popular unit test frameworks:</span></span>
 
-| <span data-ttu-id="0916e-200">Тестовая платформа</span><span class="sxs-lookup"><span data-stu-id="0916e-200">Test Framework</span></span> | <span data-ttu-id="0916e-201">Поддерживаемые свойства</span><span class="sxs-lookup"><span data-stu-id="0916e-201">Supported properties</span></span>                                                                                      |
+| <span data-ttu-id="025d1-200">Тестовая платформа</span><span class="sxs-lookup"><span data-stu-id="025d1-200">Test Framework</span></span> | <span data-ttu-id="025d1-201">Поддерживаемые свойства</span><span class="sxs-lookup"><span data-stu-id="025d1-201">Supported properties</span></span>                                                                                      |
 | -------------- | --------------------------------------------------------------------------------------------------------- |
-| <span data-ttu-id="0916e-202">MSTest</span><span class="sxs-lookup"><span data-stu-id="0916e-202">MSTest</span></span>         | <ul><li><span data-ttu-id="0916e-203">FullyQualifiedName</span><span class="sxs-lookup"><span data-stu-id="0916e-203">FullyQualifiedName</span></span></li><li><span data-ttu-id="0916e-204">name</span><span class="sxs-lookup"><span data-stu-id="0916e-204">Name</span></span></li><li><span data-ttu-id="0916e-205">ClassName</span><span class="sxs-lookup"><span data-stu-id="0916e-205">ClassName</span></span></li><li><span data-ttu-id="0916e-206">Приоритет</span><span class="sxs-lookup"><span data-stu-id="0916e-206">Priority</span></span></li><li><span data-ttu-id="0916e-207">TestCategory</span><span class="sxs-lookup"><span data-stu-id="0916e-207">TestCategory</span></span></li></ul> |
-| <span data-ttu-id="0916e-208">xUnit</span><span class="sxs-lookup"><span data-stu-id="0916e-208">xUnit</span></span>          | <ul><li><span data-ttu-id="0916e-209">FullyQualifiedName</span><span class="sxs-lookup"><span data-stu-id="0916e-209">FullyQualifiedName</span></span></li><li><span data-ttu-id="0916e-210">DisplayName</span><span class="sxs-lookup"><span data-stu-id="0916e-210">DisplayName</span></span></li><li><span data-ttu-id="0916e-211">Признаки</span><span class="sxs-lookup"><span data-stu-id="0916e-211">Traits</span></span></li></ul>                                   |
+| <span data-ttu-id="025d1-202">MSTest</span><span class="sxs-lookup"><span data-stu-id="025d1-202">MSTest</span></span>         | <ul><li><span data-ttu-id="025d1-203">FullyQualifiedName</span><span class="sxs-lookup"><span data-stu-id="025d1-203">FullyQualifiedName</span></span></li><li><span data-ttu-id="025d1-204">name</span><span class="sxs-lookup"><span data-stu-id="025d1-204">Name</span></span></li><li><span data-ttu-id="025d1-205">ClassName</span><span class="sxs-lookup"><span data-stu-id="025d1-205">ClassName</span></span></li><li><span data-ttu-id="025d1-206">Приоритет</span><span class="sxs-lookup"><span data-stu-id="025d1-206">Priority</span></span></li><li><span data-ttu-id="025d1-207">TestCategory</span><span class="sxs-lookup"><span data-stu-id="025d1-207">TestCategory</span></span></li></ul> |
+| <span data-ttu-id="025d1-208">xUnit</span><span class="sxs-lookup"><span data-stu-id="025d1-208">xUnit</span></span>          | <ul><li><span data-ttu-id="025d1-209">FullyQualifiedName</span><span class="sxs-lookup"><span data-stu-id="025d1-209">FullyQualifiedName</span></span></li><li><span data-ttu-id="025d1-210">DisplayName</span><span class="sxs-lookup"><span data-stu-id="025d1-210">DisplayName</span></span></li><li><span data-ttu-id="025d1-211">Признаки</span><span class="sxs-lookup"><span data-stu-id="025d1-211">Traits</span></span></li></ul>                                   |
 
-<span data-ttu-id="0916e-212">`<operator>` описывает связь между свойством и значением:</span><span class="sxs-lookup"><span data-stu-id="0916e-212">The `<operator>` describes the relationship between the property and the value:</span></span>
+<span data-ttu-id="025d1-212">`<operator>` описывает связь между свойством и значением:</span><span class="sxs-lookup"><span data-stu-id="025d1-212">The `<operator>` describes the relationship between the property and the value:</span></span>
 
-| <span data-ttu-id="0916e-213">Оператор</span><span class="sxs-lookup"><span data-stu-id="0916e-213">Operator</span></span> | <span data-ttu-id="0916e-214">Функция</span><span class="sxs-lookup"><span data-stu-id="0916e-214">Function</span></span>        |
+| <span data-ttu-id="025d1-213">Оператор</span><span class="sxs-lookup"><span data-stu-id="025d1-213">Operator</span></span> | <span data-ttu-id="025d1-214">Функция</span><span class="sxs-lookup"><span data-stu-id="025d1-214">Function</span></span>        |
 | :------: | --------------- |
-| `=`      | <span data-ttu-id="0916e-215">Точное соответствие</span><span class="sxs-lookup"><span data-stu-id="0916e-215">Exact match</span></span>     |
-| `!=`     | <span data-ttu-id="0916e-216">Неточное соответствие</span><span class="sxs-lookup"><span data-stu-id="0916e-216">Not exact match</span></span> |
-| `~`      | <span data-ttu-id="0916e-217">Содержит</span><span class="sxs-lookup"><span data-stu-id="0916e-217">Contains</span></span>        |
+| `=`      | <span data-ttu-id="025d1-215">Точное соответствие</span><span class="sxs-lookup"><span data-stu-id="025d1-215">Exact match</span></span>     |
+| `!=`     | <span data-ttu-id="025d1-216">Неточное соответствие</span><span class="sxs-lookup"><span data-stu-id="025d1-216">Not exact match</span></span> |
+| `~`      | <span data-ttu-id="025d1-217">Содержит</span><span class="sxs-lookup"><span data-stu-id="025d1-217">Contains</span></span>        |
 
-<span data-ttu-id="0916e-218">`<value>` — это строка.</span><span class="sxs-lookup"><span data-stu-id="0916e-218">`<value>` is a string.</span></span> <span data-ttu-id="0916e-219">Поиск выполняется без учета регистра.</span><span class="sxs-lookup"><span data-stu-id="0916e-219">All the lookups are case insensitive.</span></span>
+<span data-ttu-id="025d1-218">`<value>` — это строка.</span><span class="sxs-lookup"><span data-stu-id="025d1-218">`<value>` is a string.</span></span> <span data-ttu-id="025d1-219">Поиск выполняется без учета регистра.</span><span class="sxs-lookup"><span data-stu-id="025d1-219">All the lookups are case insensitive.</span></span>
 
-<span data-ttu-id="0916e-220">Выражение без `<operator>` автоматически считается функцией `contains` для свойства `FullyQualifiedName` (например, `dotnet test --filter xyz` совпадает с `dotnet test --filter FullyQualifiedName~xyz`).</span><span class="sxs-lookup"><span data-stu-id="0916e-220">An expression without an `<operator>` is automatically considered as a `contains` on `FullyQualifiedName` property (for example, `dotnet test --filter xyz` is same as `dotnet test --filter FullyQualifiedName~xyz`).</span></span>
+<span data-ttu-id="025d1-220">Выражение без `<operator>` автоматически считается функцией `contains` для свойства `FullyQualifiedName` (например, `dotnet test --filter xyz` совпадает с `dotnet test --filter FullyQualifiedName~xyz`).</span><span class="sxs-lookup"><span data-stu-id="025d1-220">An expression without an `<operator>` is automatically considered as a `contains` on `FullyQualifiedName` property (for example, `dotnet test --filter xyz` is same as `dotnet test --filter FullyQualifiedName~xyz`).</span></span>
 
-<span data-ttu-id="0916e-221">Выражения можно объединять с условными операторами.</span><span class="sxs-lookup"><span data-stu-id="0916e-221">Expressions can be joined with conditional operators:</span></span>
+<span data-ttu-id="025d1-221">Выражения можно объединять с условными операторами.</span><span class="sxs-lookup"><span data-stu-id="025d1-221">Expressions can be joined with conditional operators:</span></span>
 
-| <span data-ttu-id="0916e-222">Оператор</span><span class="sxs-lookup"><span data-stu-id="0916e-222">Operator</span></span>            | <span data-ttu-id="0916e-223">Функция</span><span class="sxs-lookup"><span data-stu-id="0916e-223">Function</span></span> |
+| <span data-ttu-id="025d1-222">Оператор</span><span class="sxs-lookup"><span data-stu-id="025d1-222">Operator</span></span>            | <span data-ttu-id="025d1-223">Функция</span><span class="sxs-lookup"><span data-stu-id="025d1-223">Function</span></span> |
 | ------------------- | -------- |
-| <code>&#124;</code> | <span data-ttu-id="0916e-224">OR</span><span class="sxs-lookup"><span data-stu-id="0916e-224">OR</span></span>       |
-| `&`                 | <span data-ttu-id="0916e-225">AND</span><span class="sxs-lookup"><span data-stu-id="0916e-225">AND</span></span>      |
+| <code>&#124;</code> | <span data-ttu-id="025d1-224">OR</span><span class="sxs-lookup"><span data-stu-id="025d1-224">OR</span></span>       |
+| `&`                 | <span data-ttu-id="025d1-225">AND</span><span class="sxs-lookup"><span data-stu-id="025d1-225">AND</span></span>      |
 
-<span data-ttu-id="0916e-226">При использовании условных операторов выражения можно заключать в скобки (например, `(Name~TestMethod1) | (Name~TestMethod2)`).</span><span class="sxs-lookup"><span data-stu-id="0916e-226">You can enclose expressions in parenthesis when using conditional operators (for example, `(Name~TestMethod1) | (Name~TestMethod2)`).</span></span>
+<span data-ttu-id="025d1-226">При использовании условных операторов выражения можно заключать в скобки (например, `(Name~TestMethod1) | (Name~TestMethod2)`).</span><span class="sxs-lookup"><span data-stu-id="025d1-226">You can enclose expressions in parenthesis when using conditional operators (for example, `(Name~TestMethod1) | (Name~TestMethod2)`).</span></span>
 
-<span data-ttu-id="0916e-227">Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье [Выполнение выборочных модульных тестов](../testing/selective-unit-tests.md).</span><span class="sxs-lookup"><span data-stu-id="0916e-227">For more information and examples on how to use selective unit test filtering, see [Running selective unit tests](../testing/selective-unit-tests.md).</span></span>
+<span data-ttu-id="025d1-227">Дополнительные сведения и примеры использования фильтрации при выборочном модульном тестировании см. в статье [Выполнение выборочных модульных тестов](../testing/selective-unit-tests.md).</span><span class="sxs-lookup"><span data-stu-id="025d1-227">For more information and examples on how to use selective unit test filtering, see [Running selective unit tests](../testing/selective-unit-tests.md).</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="0916e-228">См. также</span><span class="sxs-lookup"><span data-stu-id="0916e-228">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="025d1-228">См. также</span><span class="sxs-lookup"><span data-stu-id="025d1-228">See also</span></span>
 
-* [<span data-ttu-id="0916e-229">Платформы и целевые объекты</span><span class="sxs-lookup"><span data-stu-id="0916e-229">Frameworks and Targets</span></span>](../../standard/frameworks.md)  
-* [<span data-ttu-id="0916e-230">Каталог идентификаторов сред выполнения (RID) в .NET Core</span><span class="sxs-lookup"><span data-stu-id="0916e-230">.NET Core Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)
+* [<span data-ttu-id="025d1-229">Платформы и целевые объекты</span><span class="sxs-lookup"><span data-stu-id="025d1-229">Frameworks and Targets</span></span>](../../standard/frameworks.md)  
+* [<span data-ttu-id="025d1-230">Каталог идентификаторов сред выполнения (RID) в .NET Core</span><span class="sxs-lookup"><span data-stu-id="025d1-230">.NET Core Runtime IDentifier (RID) catalog</span></span>](../rid-catalog.md)
