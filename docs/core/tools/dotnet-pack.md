@@ -1,13 +1,13 @@
 ---
-title: Команда dotnet pack — CLI .NET Core
+title: Команда dotnet pack
 description: Команда dotnet pack создает пакеты NuGet для проекта .NET Core.
 ms.date: 12/04/2018
-ms.openlocfilehash: 77770e715ef11595e8c95bb40be960138cd7ec61
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ca88dd4c7dfd45c9295043cd2352ba6bdf5464af
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149605"
+ms.locfileid: "53170097"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -33,7 +33,7 @@ dotnet pack [-h|--help]
 ```
 ---
 
-## <a name="description"></a>Описание:
+## <a name="description"></a>Описание
 
 Команда `dotnet pack` выполняет сборку проекта и создает пакеты NuGet. Результат выполнения команды — пакет NuGet. При наличии параметра `--include-symbols` создается другой пакет, содержащий отладочные символы.
 

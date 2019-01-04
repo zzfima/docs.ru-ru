@@ -1,15 +1,13 @@
 ---
-title: Команда dotnet tool update — .NET Core CLI
+title: Команда dotnet tool update
 description: Команда dotnet tool update обновляет указанное глобальное средство .NET Core на вашем компьютере.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 90b0dc91f74d890420dc7185642aa89100cadba8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 2716f7f88ffe364bebacf970d7152f5509edc888
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069397"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169746"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -27,7 +25,7 @@ dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v
 dotnet tool update <-h|--help>
 ```
 
-## <a name="description"></a>Описание:
+## <a name="description"></a>Описание
 
 Команда `dotnet tool update` предоставляет способ обновления глобального средства .NET Core на компьютере до последней стабильной версии пакета. Команда удаляет и повторно устанавливает средство, эффективно обновляя его. Чтобы использовать эту команду, укажите, что хотите обновить средство из установки уровня пользователя с помощью параметра `--global`, или укажите путь к месту установки средства с помощью параметра `--tool-path`.
 

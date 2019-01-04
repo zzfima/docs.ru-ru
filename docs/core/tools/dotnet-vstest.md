@@ -1,15 +1,14 @@
 ---
-title: Команда dotnet vstest — CLI .NET Core
+title: Команда dotnet vstest
 description: Команда dotnet vstest выполняет сборку проекта и всех его зависимостей.
 author: guardrex
-ms.author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: 84b9d9eebfbf20fefe8153dd3ae9bec0f34986c8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: cafd862f6107be9173aad6d610cf6f8fd62e1489
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696342"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169032"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -42,7 +41,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 ```
 ---
 
-## <a name="description"></a>Описание:
+## <a name="description"></a>Описание
 
 Команда `dotnet-vstest` запускает приложение командной строки `VSTest.Console` для выполнения автоматического модульного тестирования и закодированных тестов пользовательского интерфейса.
 

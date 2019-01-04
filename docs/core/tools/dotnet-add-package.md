@@ -1,13 +1,13 @@
 ---
-title: Команда dotnet add package — CLI .NET Core
+title: Команда dotnet add package
 description: Команду dotnet add package удобно использовать для добавления ссылки на пакет NuGet в проект.
 ms.date: 12/04/2018
-ms.openlocfilehash: 8227e5a86a888f850304e8b94f46c7d31779653f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 159b208feafb82e267629ea47dcef02d6b575055
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150827"
+ms.locfileid: "53170006"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -21,7 +21,7 @@ ms.locfileid: "53150827"
 
 `dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
 
-## <a name="description"></a>Описание:
+## <a name="description"></a>Описание
 
 Команда `dotnet add package` предоставляет удобный способ для добавления ссылки на пакет в файл проекта. После запуска этой команды выполняется проверка совместимости, чтобы убедиться, что пакет совместим со всеми платформами в проекте. Если проверка проходит успешно, в файл проекта добавляется элемент `<PackageReference>` и выполняется команда [dotnet restore](dotnet-restore.md).
 

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 424933f4d221492b3127d0b847249821fee86b10
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ccf8d33b1017c3def137de7daec4373bfeec6305
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147324"
+ms.locfileid: "53168906"
 ---
 # <a name="consuming-a-net-standard-library-in-visual-studio-2017"></a>Применение библиотеки .NET Standard в Visual Studio 2017
 
@@ -32,19 +32,19 @@ ms.locfileid: "53147324"
 
 1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual C#**, выберите узел **.NET Core**, а затем — шаблон проекта **Консольное приложение (.NET Core)**. В текстовом поле **Имя** введите "ShowCase", а затем нажмите кнопку **ОК**.
 
-   ![Диалоговое окно "Добавление нового проекта"](./media/consuming-library-with-visual-studio/addnewproject.png)
+   ![Диалоговое окно "Добавление нового проекта" в Visual Studio (C#)](./media/consuming-library-with-visual-studio/add-new-project-dialog.png)
 
-1. В окне **Обозреватель решений** щелкните правой кнопкой мыши проект **ShowCase** и выберите команду **Назначить запускаемым проектом**. 
+1. В окне **Обозреватель решений** щелкните правой кнопкой мыши проект **ShowCase** и выберите команду **Назначить запускаемым проектом**.
 
-   ![Контекстное меню проекта ShowCase](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![Контекстное меню проекта с пунктом "Назначить запускаемым проектом" в Visual Studio (C#)](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. Изначально у этого проекта нет доступа к библиотеке классов. Чтобы позволить приложению вызывать методы из библиотеки классов, создайте ссылку на библиотеку классов. В окне **Обозреватель решений** щелкните правой кнопкой мыши узел **Зависимости** проекта `ShowCase` и выберите команду **Добавить ссылку**.
 
-   ![Контекстное меню "Зависимости" проекта ShowCase](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Контекстное меню проекта с пунктом "Добавить ссылку" в Visual Studio (C#)](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. В диалоговом окне **Диспетчер ссылок** выберите проект библиотеки классов **StringLibrary**, а затем нажмите кнопку **ОК**.
 
-   ![Диспетчер ссылок](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Диалоговое окно "Диспетчер ссылок" в Visual Studio (C#)](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. В окне кода замените весь код файла *Program.cs* следующим текстом:
 
@@ -56,25 +56,25 @@ ms.locfileid: "53147324"
 
 1. При необходимости можно изменить режим на панели инструментов, чтобы скомпилировать **отладочную** версию проекта `ShowCase`. Скомпилируйте и запустите программу, нажав зеленую стрелку на кнопке **ShowCase**.
 
-   ![Изображение](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![Панель инструментов проекта в Visual Studio с кнопкой отладки (C#)](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 1. Откройте решение `ClassLibraryProjects`, созданное в рамках статьи [Создание библиотеки классов на Visual Basic с помощью .NET Core в Visual Studio 2017](vb-library-with-visual-studio.md). В **обозревателе решений** щелкните правой кнопкой мыши решение **ClassLibraryProjects** и в контекстном меню выберите **Добавить** > **Новый проект**.
 
 1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual Basic**, выберите узел **.NET Core**, а затем — шаблон проекта **Консольное приложение (.NET Core)**. В текстовом поле **Имя** введите "ShowCase", а затем нажмите кнопку **ОК**.
 
-   ![Диалоговое окно "Добавление нового проекта"](./media/consuming-library-with-visual-studio/vb-addnewproject.png)
+   ![Диалоговое окно "Добавление нового проекта" в Visual Studio (Visual Basic)](./media/consuming-library-with-visual-studio/add-new-vb-project-dialog.png)
 
 1. В окне **Обозреватель решений** щелкните правой кнопкой мыши проект **ShowCase** и выберите команду **Назначить запускаемым проектом**. 
 
-   ![Контекстное меню проекта ShowCase](./media/consuming-library-with-visual-studio/setstartupproject.png)
+   ![Контекстное меню проекта с пунктом "Назначить запускаемым проектом" в Visual Studio (Visual Basic)](./media/consuming-library-with-visual-studio/set-startup-project-context-menu.png)
 
 1. Изначально у этого проекта нет доступа к библиотеке классов. Чтобы позволить приложению вызывать методы из библиотеки классов, создайте ссылку на библиотеку классов. В окне **Обозреватель решений** щелкните правой кнопкой мыши узел **Зависимости** проекта `ShowCase` и выберите команду **Добавить ссылку**.
 
-   ![Контекстное меню "Зависимости" проекта ShowCase](./media/consuming-library-with-visual-studio/addreference.png)
+   ![Контекстное меню проекта с пунктом "Добавить ссылку" в Visual Studio (Visual Basic)](./media/consuming-library-with-visual-studio/add-reference-context-menu.png)
 
 1. В диалоговом окне **Диспетчер ссылок** выберите проект библиотеки классов **StringLibrary**, а затем нажмите кнопку **ОК**.
 
-   ![Диспетчер ссылок](./media/consuming-library-with-visual-studio/referencemanager.png)
+   ![Диалоговое окно "Диспетчер ссылок" в Visual Studio (Visual Basic)](./media/consuming-library-with-visual-studio/manage-project-references.png)
 
 1. В окне кода замените весь код файла *Program.vb* следующим текстом:
 
@@ -86,7 +86,7 @@ ms.locfileid: "53147324"
 
 1. При необходимости можно изменить режим на панели инструментов, чтобы скомпилировать **отладочную** версию проекта `ShowCase`. Скомпилируйте и запустите программу, нажав зеленую стрелку на кнопке **ShowCase**.
 
-   ![Изображение](./media/consuming-library-with-visual-studio/toolbar.png)
+   ![Режим отладки на панели инструментов (Visual Basic)](./media/consuming-library-with-visual-studio/visual-studio-project-toolbar.png)
 ---
 
 Чтобы отладить и опубликовать приложение, которое использует эту библиотеку, выполните действия из статей [Отладка приложения Hello World в Visual Studio 2017](debugging-with-visual-studio.md) и [Публикация приложения Hello World в Visual Studio 2017](publishing-with-visual-studio.md).

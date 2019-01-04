@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 08/07/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 2af688057dbb3724ea03818157368ff0b54f0cf2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0c98f8c8fc4847570964d8d4ea8deb221164441d
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144585"
+ms.locfileid: "53168940"
 ---
 # <a name="build-a-net-standard-class-library-with-c-and-the-net-core-sdk-in-visual-studio-2017"></a>Создание библиотеки классов .NET Standard с помощью C# и пакета SDK для .NET Core в Visual Studio 2017
 
@@ -29,7 +29,7 @@ ms.locfileid: "53144585"
 
 1. В диалоговом окне **Новый проект** разверните узел **Другие типы проектов** и выберите **Решения Visual Studio**. Присвойте решению имя ClassLibraryProjects и нажмите кнопку **ОК**.
 
-   ![Диалоговое окно создания проекта](./media/library-with-visual-studio/newproject.png)
+   ![Диалоговое окно создания проекта с выделенным новым решением](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>Создание проекта для библиотеки классов
 
@@ -39,15 +39,15 @@ ms.locfileid: "53144585"
 
 1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual C#**, выберите узел **.NET Standard**, а затем — шаблон проекта **Библиотека классов (.NET Standard)**. В текстовом поле **Имя** введите имя проекта StringLibrary. Нажмите **ОК**, чтобы создать проект библиотеки классов.
 
-   ![Диалоговое окно "Добавление нового проекта"](./media/library-with-visual-studio/libproject.png)
+   ![Диалоговое окно добавления нового проекта библиотеки](./media/library-with-visual-studio/add-new-library-project.png)
 
    Окно кода затем откроется в среде разработки Visual Studio.
 
-   ![Окно приложения Visual Studio, отображающее код шаблона библиотеки классов по умолчанию](./media/library-with-visual-studio/stringlibrary.png)
+   ![Окно приложения Visual Studio, отображающее код шаблона библиотеки классов по умолчанию](./media/library-with-visual-studio/string-library-project.png)
 
 1. Проверьте, предназначена ли библиотека для правильной версии .NET Standard. В **обозревателе решений** щелкните проект библиотеки правой кнопкой мыши и выберите пункт **Свойства**. В текстовом поле **Целевая платформа** указано, что целевой платформой является .NET Standard 2.0.
 
-   ![Свойства проекта для библиотеки классов](./media/library-with-visual-studio/properties.png)
+   ![Свойства проекта для библиотеки классов](./media/library-with-visual-studio/library-project-properties.png)
 
 1. Замените код, отображаемый в окне кода, следующим текстом, а затем сохраните файл.
 
@@ -57,7 +57,7 @@ ms.locfileid: "53144585"
 
 1. В строке меню выберите **Сборка** > **Собрать решение**. Проект должен скомпилироваться без ошибок.
 
-   ![Область вывода, показывающая успешное завершение сборки](./media/library-with-visual-studio/buildsucceeds.png)
+   ![Область вывода, показывающая успешное завершение сборки](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 ## <a name="next-step"></a>Дальнейшие действия
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1c6e1db7d1edacfd0ce8770b9cc7b7f3f9c8ca2a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 7bfa35b8361f154fcbaa2ea7d7f8ddff5321003d
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025325"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610441"
 ---
 # <a name="asynchronous-file-io"></a>Асинхронный файловый ввод-вывод
 
@@ -40,7 +40,7 @@ ms.locfileid: "48025325"
 
 - Оператор`Await` (Visual Basic) или `await` (C#), который применяется к результату асинхронного метода.
 
-Для реализации операций асинхронного ввода-вывода используйте эти ключевые слова в сочетании с асинхронными методами, как показано в следующих примерах. Дополнительные сведения см. в разделе [Асинхронное программирование с использованием ключевых слов async и await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7).
+Для реализации операций асинхронного ввода-вывода используйте эти ключевые слова в сочетании с асинхронными методами, как показано в следующих примерах. Дополнительные сведения см. в статье [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../../csharp/programming-guide/concepts/async/index.md) или статье [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md).
 
 Следующий пример демонстрирует использование двух объектов <xref:System.IO.FileStream> для асинхронного копирования файлов из одного каталога в другой. Обратите внимание, что обработчик событий <xref:System.Web.UI.WebControls.Button.Click> для элемента управления <xref:System.Windows.Controls.Button> помечается с помощью модификатора `async` , так как вызывает асинхронный метод.
 
@@ -62,5 +62,6 @@ ms.locfileid: "48025325"
 ## <a name="see-also"></a>См. также
 
 - <xref:System.IO.Stream>
-- [Файловый и потоковый ввод-вывод](../../../docs/standard/io/index.md)
-- [Асинхронное программирование с использованием ключевых слов Async и Await](https://msdn.microsoft.com/library/db854f91-ccef-4035-ae4d-0911fde808c7)
+- [Файловый и потоковый ввод-вывод](index.md)
+- [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../../csharp/programming-guide/concepts/async/index.md)
+- [Асинхронное программирование с использованием ключевых слов Async и Await (Visual Basic)](../../visual-basic/programming-guide/concepts/async/index.md)

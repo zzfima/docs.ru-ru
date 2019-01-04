@@ -2,14 +2,14 @@
 title: Создание пользовательского шаблона для команды dotnet new
 description: В этом учебнике вы узнаете, как создать пользовательский шаблон для команды dotnet new.
 author: guardrex
-ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: 2377d894bcbf54a9c96eae1093d891080e6d11c5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 63f8c8a4d029285a02255637c8a79358e5ef0095
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516657"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53169740"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Создание пользовательского шаблона для команды dotnet new
 
@@ -64,11 +64,11 @@ ms.locfileid: "43516657"
 1. Скопируйте содержимое папки проекта вместе с файлом *.template.config/template.json* помещаются в созданную папку *content*.
 1. Рядом с папкой *content* добавьте [файл *NUSPEC*](/nuget/create-packages/creating-a-package). Файл NUSPEC представляет собой XML-файл манифеста, описывающий содержимое пакета и управляющий процессом создания пакета NuGet.
 
-   ![Структура каталогов пакета NuGet](./media/create-custom-template/nugetdirectorylayout.png)
+   ![Структура каталогов пакета NuGet](./media/create-custom-template/nuget-directory-layout.png)
 
 1. Внутри элемента **\<packageTypes>** в файле *NUSPEC* добавьте элемент **\<packageType>** с атрибутом `name`, имеющим значение `Template`. Папка *content* и файл *NUSPEC* должны находиться в одном каталоге. В таблице ниже приведен минимальный набор элементов файла *NUSPEC*, необходимых для создания шаблона как пакета NuGet.
 
-   | Элемент            | Тип   | Описание: |
+   | Элемент            | Тип   | Описание |
    | ------------------ | ------ | ----------- |
    | **\<authors>**     | string | Разделенный запятыми список авторов пакетов, совпадающих с именами профилей на сайте nuget.org. Авторы отображаются в коллекции NuGet на сайте nuget.org и используются для перекрестных ссылок на пакеты тех же авторов. |
    | **\<description>** | string | Подробное описание пакета для отображения пользовательского интерфейса. |
@@ -136,7 +136,7 @@ dotnet new -i NUnit3.DotNetNew.Template
 
 Если вывести список шаблонов с помощью команды `dotnet new -l`, в нем будет присутствовать элемент *NUnit 3 Test Project* с коротким именем *nunit*. Шаблон готов к использованию в следующем разделе.
 
-![Окно консоли с шаблоном NUnit в списке установленных шаблонов](./media/create-custom-template/nunit1.png)
+![Окно консоли с шаблоном NUnit и другими шаблонами](./media/create-custom-template/nunit-template-console-window.png)
 
 ### <a name="create-a-project-from-the-template"></a>Создание проекта на основе шаблона
 
@@ -148,7 +148,7 @@ dotnet new nunit
 
 В консоли показано, что проект создан и что его пакеты восстановлены. После выполнения команды проект готов к использованию.
 
-![Окно консоли с выходными данными команды dotnet new, создающей проект NUnit и восстанавливающей зависимости проекта](./media/create-custom-template/nunit2.png)
+![Окно консоли с результатом выполнения команды dotnet new nunit и восстановленными зависимостями проекта](./media/create-custom-template/dotnet-new-nunit-console-output.png)
 
 ### <a name="to-uninstall-a-template-from-a-nuget-package-stored-at-nugetorg"></a>Удаление шаблона из пакета NuGet, хранящегося на сайте nuget.org
 

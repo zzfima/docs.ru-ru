@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b77775fdc7f552e6433e6364f153c5bde32d9e0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 890ce1e9a23d57121cd714252444e5ff1caa6b19
+ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151048"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53396881"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Практическое руководство. Определение установленных версий платформы .NET Framework
 
@@ -39,7 +39,7 @@ ms.locfileid: "53151048"
  [Использование средства Clrver](#clr_a)  
  [Использование кода для отправки запроса в класс System.Environment](#clr_b)  
   
- Сведения об обнаружении установленных обновлений для каждой версии платформы .NET Framework см. в разделе [Практическое руководство. Определение установленных платформ .NET Framework](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md). Сведения об установке .NET Framework см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md).  
+ Сведения об определении установленных обновлений для каждой версии платформы .NET Framework см. в статье [Практическое руководство. Определение установленных обновлений и исправлений безопасности платформы .NET Framework](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md). Сведения об установке .NET Framework см. в разделе [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md).  
   
 <a name="net_a"></a>   
 ## <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>Поиск версий .NET Framework путем просмотра реестра (.NET Framework 1–4)  
@@ -92,12 +92,12 @@ ms.locfileid: "53151048"
     |378675|Платформа .NET Framework 4.5.1, установленная с Windows 8.1 или Windows Server 2012 R2|
     |378758|Платформа .NET Framework 4.5.1, установленная в Windows 8, Windows 7 с пакетом обновления 1 (SP1) или Windows Vista с пакетом обновления 2 (SP2)|
     |379893|.NET Framework 4.5.2|
-    |Только в системах Windows 10: 393295<br /><br /> Во всех других версиях ОС: 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
-    |Только в системах Windows 10 с ноябрьским обновлением: 394254<br /><br /> Во всех других версиях ОС: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |В юбилейном обновлении Windows 10 и Windows Server 2016: 394802<br /><br /> Во всех других версиях ОС: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
-    |Только в обновлении Windows 10 Creators Update: 460798<br/><br/> Во всех других версиях ОС: 460805 | .NET Framework 4.7 |
-    |Только в Windows 10 Fall Creators Update: 461308<br/><br/> Во всех других версиях ОС: 461310 | .NET Framework 4.7.1 |
-    |Только в обновлении Windows 10 за октябрь 2018 года: 461814<br/><br/> Только в обновлении Windows 10 за апрель 2018: 461808<br/><br/> Во всех других версиях ОС: 461814| .NET Framework 4.7.2 |
+    |Только в системах Windows 10: 393295<br /><br /> Во всех остальных версиях ОС: 393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
+    |Только в системах Windows 10 с ноябрьским обновлением: 394254<br /><br /> Во всех остальных версиях ОС: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
+    |В юбилейном обновлении Windows 10 и Windows Server 2016: 394802<br /><br /> Во всех остальных версиях ОС: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
+    |Только в обновлении Windows 10 Creators Update: 460798<br/><br/> Во всех остальных версиях ОС: 460805 | .NET Framework 4.7 |
+    |Только в Windows 10 Fall Creators Update: 461308<br/><br/> Во всех остальных версиях ОС: 461310 | .NET Framework 4.7.1 |
+    |Только в обновлении Windows 10 за апрель 2018 г.: 461808<br/><br/> Во всех остальных версиях ОС, включая обновление Windows 10 за октябрь 2018 г.: 461814| .NET Framework 4.7.2 |
     
 <a name="net_c"></a> 
 ## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Поиск версий .NET Framework путем отправки запроса в реестр (.NET Framework 1–4)
@@ -230,6 +230,6 @@ ms.locfileid: "53151048"
 
 ## <a name="see-also"></a>См. также
 
-[Практическое руководство. Определение установленных обновлений платформы .NET Framework](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
+[Практическое руководство. Определение установленных обновлений и исправлений безопасности платформы .NET Framework](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
 [Установка .NET Framework для разработчиков](../../../docs/framework/install/guide-for-developers.md)  
 [Версии и зависимости](~/docs/framework/migration-guide/versions-and-dependencies.md)  

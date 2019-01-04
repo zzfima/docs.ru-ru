@@ -4,12 +4,12 @@ description: HttpClientFactory — это проверенная фабрика
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 07ea85509b86eadd2c85dfe59ace674e2faae9a3
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0ae4dadd6921a71217b50757ede19b8d54910185
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145115"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611039"
 ---
 # <a name="use-httpclientfactory-to-implement-resilient-http-requests"></a>Использование HttpClientFactory для реализации устойчивых HTTP-запросов
 
@@ -71,7 +71,7 @@ services.AddHttpClient<IOrderingService, OrderingService>();
 
 ### <a name="httpclient-lifetimes"></a>Время существования HttpClient
 
-Каждый раз, когда вы получаете объект `HttpClient` из IHttpClientFactory, возвращается новый экземпляр `HttpClient`. У вас будет HttpMessageHandler ** для каждого именованного или типизированного клиента. `IHttpClientFactory` будет объединять в пул все экземпляры HttpMessageHandler, созданные фабрикой, чтобы уменьшить потребление ресурсов. Экземпляр HttpMessageHandler можно использовать повторно из пула при создании нового экземпляра `HttpClient`, если его время существования еще не истекло.
+Каждый раз, когда вы получаете объект `HttpClient` из IHttpClientFactory, возвращается новый экземпляр `HttpClient`. У вас будет **HttpMessageHandler** для каждого именованного или типизированного клиента. `IHttpClientFactory` будет объединять в пул все экземпляры HttpMessageHandler, созданные фабрикой, чтобы уменьшить потребление ресурсов. Экземпляр HttpMessageHandler можно использовать повторно из пула при создании нового экземпляра `HttpClient`, если его время существования еще не истекло.
 
 Создание пулов обработчиков желательно, поскольку каждый обработчик обычно управляет собственными базовыми HTTP-подключениями. Создание лишних обработчиков может привести к задержке подключения. Некоторые обработчики поддерживают подключения открытыми в течение неопределенного периода, что может помешать обработчику отреагировать на изменения DNS.
 

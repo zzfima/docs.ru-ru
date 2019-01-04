@@ -3,17 +3,17 @@ title: Кластеризация цветков ириса с помощью з
 description: Сведения об использовании ML.NET при кластеризации
 author: pkulikov
 ms.author: johalex
-ms.date: 07/02/2018
+ms.date: 12/17/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 5bd73c774f60466daaf52215c34e7e17b5f5cc9c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 012cea471c69f66ad9a61db858b4575606b31f74
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145637"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656327"
 ---
-# <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Кластеризация цветков ириса с помощью задачи машинного обучения по кластеризации в ML.NET
+# <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Учебник. Кластеризация цветков ириса с помощью задачи машинного обучения по кластеризации в ML.NET
 
 > [!NOTE]
 > В этом разделе описано, как использовать платформу ML.NET, которая сейчас доступна в режиме предварительной версии. Этот материал может быть изменен. Дополнительные сведения см. в [обзоре ML.NET](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).
@@ -44,7 +44,7 @@ ms.locfileid: "53145637"
 
 ## <a name="create-a-console-application"></a>Создание консольного приложения
 
-1. Откройте Visual Studio 2017. Выберите **Файл** > **Создать** > **Проект** в меню. В диалоговом окне **Новый проект** выберите узел **Visual C#**, а затем — узел **.NET Core**. Выберите шаблон проекта **Консольное приложение (.NET Core)**. В текстовом поле **Имя** введите "IrisClustering", а затем нажмите кнопку **OK**.
+1. Откройте Visual Studio 2017. Выберите **Файл** > **Создать** > **Проект** в меню. В диалоговом окне **Новый проект** выберите узел **Visual C#**, а затем — узел **.NET Core**. Выберите шаблон проекта **Консольное приложение (.NET Core)**. В текстовом поле **Имя** введите "IrisFlowerClustering", а затем нажмите кнопку **OK**.
 
 1. Создайте каталог с именем *Data* в папке проекта, чтобы хранить в нем наборы данных и файлы модели:
 
@@ -78,11 +78,11 @@ ms.locfileid: "53145637"
 1. В диалоговом окне **Добавление нового элемента** выберите **Класс** и измените значение поля **Имя** на *IrisData.cs*. Теперь нажмите кнопку **Добавить**.
 1. Добавьте следующую директиву `using` в новый файл:
 
-   [!code-csharp[Add necessary usings](../../../samples/machine-learning/tutorials/IrisClustering/IrisData.cs#1)]
+   [!code-csharp[Add necessary usings](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#Usings)]
 
 Удалите из файла *IrisData.cs* существующее определение класса и добавьте следующий код, который определяет классы `IrisData` и `ClusterPrediction`:
 
-[!code-csharp[Define data classes](../../../samples/machine-learning/tutorials/IrisClustering/IrisData.cs#2)]
+[!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
 Класс `IrisData` содержит входные данные и определения для каждого признака в наборе данных. Используйте атрибут [Column](xref:Microsoft.ML.Runtime.Api.ColumnAttribute), чтобы указать индексы исходных столбцов в файле набора данных.
 
@@ -103,78 +103,66 @@ ms.locfileid: "53145637"
 
 Добавьте прямо перед методом `Main` следующий код, чтобы указать эти пути.
 
-[!code-csharp[Initialize paths](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#1)]
+[!code-csharp[Initialize paths](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Paths)]
 
 Чтобы этот код компилировался, добавьте следующие директивы `using` вверху файла *Program.cs*.
 
-[!code-csharp[Add usings for paths](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#2)]
+[!code-csharp[Add usings for paths](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#UsingsForPaths)]
 
-## <a name="create-a-learning-pipeline"></a>Создание конвейера обучения
+## <a name="create-ml-context"></a>Создание контекста машинного обучения ML
 
 Добавьте дополнительные директивы `using` в начало файла *Program.cs*.
 
-[!code-csharp[Add Microsoft.ML usings](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#3)]
+[!code-csharp[Add Microsoft.ML usings](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#MLUsings)]
 
-В методе `Main` замените `Console.WriteLine("Hello World!")` следующим кодом:
+В методе `Main` замените строку `Console.WriteLine("Hello World!");` следующим кодом:
 
-[!code-csharp[Call the Train method](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#4)]
+[!code-csharp[Create ML context](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateContext)]
 
-Метод `Train` обучает модель. Создайте этот метод сразу под методом `Main`, используя следующий код:
+Класс <xref:Microsoft.ML.MLContext?displayProperty=nameWithType> представляет среду машинного обучения и предоставляет механизмы для ведения журнала и точек входа для загрузки данных, обучения модели, прогнозирования и других задач. Концептуально это сопоставимо с использованием `DbContext` в Entity Framework.
 
-```csharp
-private static PredictionModel<IrisData, ClusterPrediction> Train()
-{
+## <a name="setup-data-loading"></a>Настройка загрузки данных
 
-}
-```
+Добавьте следующий код к методу `Main` для настройки способа загрузки данных:
 
-Конвейер обучения загружает все данные и алгоритмы, необходимые для обучения модели. Добавьте в метод `Train` следующий код:
+[!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-[!code-csharp[Initialize pipeline](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#5)]
+Обратите внимание, что имена столбцов и индексы соответствуют схеме, определяемой классом `IrisData`. Значение <xref:Microsoft.ML.Runtime.Data.DataKind.R4?displayProperty=nameWithType> задает тип `float`.
 
-## <a name="load-and-transform-data"></a>Загрузка и преобразование данных
+Используйте созданный экземпляр <xref:Microsoft.ML.Runtime.Data.TextLoader>, чтобы создать экземпляр <xref:Microsoft.ML.Runtime.Data.IDataView>, который представляет источник данных для набора данных для обучения:
 
-Сначала нужно загрузить набор данных для обучения. В нашем случае набор данных для обучения хранится в текстовом файле, путь к которому задан в поле `_dataPath`. Для разделения столбцов в этом файле используется запятая (","). Добавьте в метод `Train` следующий код:
+[!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 
-[!code-csharp[Add step to load data](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#6)]
+## <a name="create-a-learning-pipeline"></a>Создание конвейера обучения
 
-Следующий шаг — объединить все столбцы признаков в столбце **Features** с помощью класса преобразования <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator>. По умолчанию алгоритм обучения обрабатывает только признаки, представленные в столбце **Features**. Добавьте следующий код:
+В этом руководстве настройка конвейера обучения задач кластеризации состоит из следующих двух шагов:
 
-[!code-csharp[Add step to concatenate columns](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#7)]
+- объедините загруженные столбцы в один столбец **Функции**, который используется тренером кластеризации;
+- используйте тренер <xref:Microsoft.ML.Trainers.KMeans.KMeansPlusPlusTrainer> для обучения модели с помощью алгоритма кластеризации k-means++.
 
-## <a name="choose-a-learning-algorithm"></a>Выбор алгоритма обучения
+Добавьте следующий код в метод `Main`:
 
-После добавления данных в конвейер и их преобразования в правильный входной формат выберите алгоритм обучения (**средство обучения**). Алгоритм обучения осуществляет обучение модели. ML.NET предоставляет средство обучения <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer>, которое реализует [алгоритм k-средних](https://en.wikipedia.org/wiki/K-means_clustering) с улучшенным методом для выбора начальных центроидов кластера.
+[!code-csharp[Create pipeline](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreatePipeline)]
 
-Добавьте следующий код в метод `Train` после кода обработки данных, который вы добавили на предыдущем шаге:
-
-[!code-csharp[Add a learner step](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#8)]
-
-Используйте свойство <xref:Microsoft.ML.Legacy.Trainers.KMeansPlusPlusClusterer.K?displayProperty=nameWithType>, чтобы указать число кластеров. В приведенном выше коде указано, что набор данных нужно разделить на три кластера.
+В этом коде указано, что набор данных нужно разделить на три кластера.
 
 ## <a name="train-the-model"></a>Обучение модели
 
-Выполнив действия в предыдущих разделах, вы подготовили конвейер для обучения, но пока ничего не было сделано. Метод `pipeline.Train<TInput, TOutput>` создает модель, которая принимает экземпляр типа `TInput` и возвращает экземпляр типа `TOutput`. Добавьте в метод `Train` следующий код:
+Выполнив действия в предыдущих разделах, вы подготовили конвейер для обучения, но пока ничего не было сделано. Добавьте следующую строку к методу `Main`, чтобы выполнить загрузку данных и обучение модели:
 
-[!code-csharp[Train the model and return](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#9)]
+[!code-csharp[Train the model](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#TrainModel)]
 
 ### <a name="save-the-model"></a>Сохранение модели
 
-На этом этапе у вас есть модель, которую можно интегрировать с любыми существующими или новыми приложениями .NET. Чтобы сохранить модель в ZIP-файл, добавьте следующий код в метод `Main` под вызовом метода `Train`:
+На этом этапе у вас есть модель, которую можно интегрировать с любыми существующими или новыми приложениями .NET. Чтобы сохранить модель в ZIP-файл, добавьте к методу `Main` следующий код:
 
-[!code-csharp[Save the model](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#10)]
-
-Использование `await` в методе `Main` означает, что метод `Main` должен включать модификатор `async` и возвращать `Task`:
-
-[!code-csharp[Make the Main method async](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#11)]
-
-Также добавьте следующую директиву `using` в самое начало файла *Program.cs*:
-
-[!code-csharp[Add System.Threading.Tasks using](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#12)]
-
-Так как метод `async Main` реализован только в C# версии 7.1, а для этого проекта по умолчанию устанавливается версия языка C# 7.0, необходимо изменить версию до C# 7.1 или выше. Для этого в **обозревателе решений** щелкните узел проекта правой кнопкой мыши и выберите пункт **Свойства**. Откройте вкладку **Сборка** и нажмите на кнопку **Дополнительно**. В раскрывающемся списке выберите **C# 7.1** (или более позднюю версию). Нажмите кнопку **OK**.
+[!code-csharp[Save the model](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SaveModel)]
 
 ## <a name="use-the-model-for-predictions"></a>Использование модели для прогнозирования
+
+Чтобы получить прогноз, используйте класс <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602>, который принимает экземпляры входного типа через конвейер преобразователя и создает экземпляры выходного типа. Добавьте следующую строку к методу `Main` для создания экземпляра этого класса:
+
+[!code-csharp[Create predictor](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Predictor)]
 
 Создание класса `TestIrisData` для размещения тестовых экземпляров данных:
 
@@ -182,24 +170,24 @@ private static PredictionModel<IrisData, ClusterPrediction> Train()
 1. В диалоговом окне **Добавление нового элемента** выберите **Класс** и измените значение поля **Имя** на *TestIrisData.cs*. Теперь нажмите кнопку **Добавить**.
 1. Измените класс, чтобы он был статическим, как показано в следующем примере:
 
-   [!code-csharp[Make class static](../../../samples/machine-learning/tutorials/IrisClustering/TestIrisData.cs#1)]
+   [!code-csharp[Make class static](~/samples/machine-learning/tutorials/IrisFlowerClustering/TestIrisData.cs#Static)]
 
 В этом руководстве представлен один экземпляр данных ирисов в этом классе. Вы можете добавить другие сценарии и поэкспериментировать с этой моделью. Добавьте в класс `TestIrisData` следующий код:
 
-[!code-csharp[Test data](../../../samples/machine-learning/tutorials/IrisClustering/TestIrisData.cs#2)]
+[!code-csharp[Test data](~/samples/machine-learning/tutorials/IrisFlowerClustering/TestIrisData.cs#TestData)]
 
 Чтобы узнать, к какому кластеру принадлежит указанный элемент, вернитесь к файлу *Program.cs* и добавьте следующий код в метод `Main`:
 
-[!code-csharp[Predict and output results](../../../samples/machine-learning/tutorials/IrisClustering/Program.cs#13)]
+[!code-csharp[Predict and output results](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#PredictionExample)]
 
-Запустите программу, чтобы узнать, какой кластер содержит указанный экземпляр данных и квадрат расстояния от этого экземпляра до центроидов кластера. Результаты выполнения должны выглядеть примерно так, как показано ниже. Во время обработки конвейер может вывести предупреждения или сообщения об обработке. Для удобства они удалены из следующих выходных данных.
+Запустите программу, чтобы узнать, какой кластер содержит указанный экземпляр данных и квадрат расстояния от этого экземпляра до центроидов кластера. Результаты выполнения должны выглядеть примерно так:
 
 ```text
 Cluster: 2
-Distances: 0.4192338 0.0008847713 0.9660053
+Distances: 11.69127 0.02159119 25.59896
 ```
 
-Поздравляем! Вы успешно создали модель машинного обучения для кластеризации ирисов и использовали ее для прогнозирования. Исходный код для этого руководства можно найти в репозитории GitHub [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/IrisClustering).
+Поздравляем! Вы успешно создали модель машинного обучения для кластеризации ирисов и использовали ее для прогнозирования. Исходный код для этого руководства можно найти в репозитории GitHub [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/IrisFlowerClustering).
 
 ## <a name="next-steps"></a>Следующие шаги
 

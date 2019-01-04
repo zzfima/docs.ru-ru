@@ -1,15 +1,15 @@
 ---
-title: Использование пакета SDK и средств .NET Core при непрерывной интеграции (CI) — .NET Core CLI
+title: Использование пакета SDK и средств .NET Core при непрерывной интеграции (CI)
 description: Сведения об использовании пакета SDK для .NET Core и входящих в него средств на сервере сборки.
 author: guardrex
 ms.date: 05/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 7891430654b416a2b55fa837f276d991b56370cc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4c651983bb900d000de37a0e413ef9ab0f7893c9
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131395"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53611559"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Использование пакета SDK и средств .NET Core при непрерывной интеграции (CI)
 
@@ -124,7 +124,7 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 Средство [Travis CI](https://travis-ci.org/) можно настроить, чтобы установить пакет SDK для .NET Core с помощью языка `csharp` и ключа `dotnet`. Дополнительные сведения см. в официальной документации Travis CI по [созданию проектов C#, F# или Visual Basic](https://docs.travis-ci.com/user/languages/csharp/). Обратите внимание, что при доступе к сведениям сообщества Travis CI идентификатор языка `language: csharp` работает для всех языков .NET, в том числе F# и Mono.
 
-Travis CI выполняет в *матрице сборки* как задания macOS, так и задания Linux. Вы можете указать сочетание среды выполнения, окружения, а также исключений и включений, чтобы охватить свои сочетания сборки приложения. Дополнительные сведения см. в [примере .travis.yml](https://github.com/dotnet/docs/blob/master/.travis.yml) и статье о [настройке сборки](https://docs.travis-ci.com/user/customizing-the-build) в документации по Travis CI. Средства на основе MSBuild включают среды выполнения LTS (1.0.x) и текущие среды выполнения (1.1.x). Установив этот пакет SDK, вы получите все необходимые компоненты сборки.
+Travis CI выполняет в *матрице сборки* как задания macOS, так и задания Linux. Вы можете указать сочетание среды выполнения, окружения, а также исключений и включений, чтобы охватить свои сочетания сборки приложения. Дополнительные сведения см. в статье о [настройке сборки](https://docs.travis-ci.com/user/customizing-the-build) в документации по Travis CI. Средства на основе MSBuild включают среды выполнения LTS (1.0.x) и текущие среды выполнения (1.1.x). Установив этот пакет SDK, вы получите все необходимые компоненты сборки.
 
 ### <a name="appveyor"></a>AppVeyor
 
@@ -161,7 +161,7 @@ install:
 
    ![Добавление шага сборки](./media/using-ci-with-cli/add-build-step.png)
 
-1. После этого откроется **каталог задач**. В нем содержатся задачи, используемые в сборке. Так как у вас есть скрипт, нажмите кнопку **Добавить** рядом с параметром **PowerShell: Запуск скрипта PowerShell**.
+1. После этого откроется **каталог задач**. В нем содержатся задачи, используемые в сборке. Так как у вас есть скрипт, нажмите кнопку **Add** (Добавить) рядом с параметром **PowerShell: Run a PowerShell script** (PowerShell: Запуск скрипта PowerShell).
 
    ![Добавление этапа сценария PowerShell](./media/using-ci-with-cli/add-powershell-script.png)
 

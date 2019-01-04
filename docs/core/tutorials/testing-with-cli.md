@@ -2,14 +2,14 @@
 title: Организация и тестирование проектов с использованием командной строки .NET Core
 description: В этом учебнике объясняется, как упорядочить и протестировать проекты .NET Core из командной строки.
 author: cartermp
-ms.author: mairaw
 ms.date: 09/10/2018
-ms.openlocfilehash: 9984b4f43ca8c09cc0948cad7e6c176127384361
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: 9ca9cd1b392912b01ed5ac37d0617d582b993ae8
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49415228"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53242729"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Организация и тестирование проектов с использованием командной строки .NET Core
 
@@ -103,19 +103,19 @@ Meow!
 
 Проект `NewTypes` развернут, и вы упорядочили типы, связанные с животными, в отдельную папку. Теперь давайте создадим тестовый проект и напишем тесты с помощью платформы тестирования [xUnit](https://xunit.github.io/). Модульное тестирование позволяет автоматически проверять правильную работу типов домашних животных.
 
-Создайте папку *test*, а внутри нее — папку *NewTypesTests*. В командной строке перейдите в каталог *NewTypesTests* и выполните команду `dotnet new xunit`. Эта команда создает два файла: *NewTypesTests.csproj* и *UnitTest1.cs*.
+Вернитесь в папку *src*, создайте папку *test*, а внутри нее — папку *NewTypesTests*. В командной строке перейдите в каталог *NewTypesTests* и выполните команду `dotnet new xunit`. Эта команда создает два файла: *NewTypesTests.csproj* и *UnitTest1.cs*.
 
 Сейчас в тестовом проекте нельзя проверять типы в `NewTypes`. Для этого необходимо добавить в проект `NewTypes` ссылку на проект. Чтобы добавить ссылку на проект, выполните команду [`dotnet add reference`](../tools/dotnet-add-reference.md):
 
 ```
-dotnet add reference ../../src/NewTypes/NewTypes.csproj
+dotnet add reference ../../NewTypes/NewTypes.csproj
 ```
 
-Также можно добавить ссылку на проект вручную. Для этого добавьте узел `<ItemGroup>` в проект *NewTypesTests.csproj*:
+Также можно добавить ссылку на проект вручную. Для этого добавьте узел `<ItemGroup>` в файл *NewTypesTests.csproj*:
 
 ```xml
 <ItemGroup>
-  <ProjectReference Include="../../src/NewTypes/NewTypes.csproj" />
+  <ProjectReference Include="../../NewTypes/NewTypes.csproj" />
 </ItemGroup>
 ```
 

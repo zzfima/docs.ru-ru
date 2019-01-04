@@ -3,13 +3,13 @@ title: Управление версиями и библиотеки .NET
 description: Рекомендации по использованию системы управления версиями для библиотек .NET.
 author: jamesnk
 ms.author: mairaw
-ms.date: 10/02/2018
-ms.openlocfilehash: bacd3891c2fc15a1084f952ca913cf99b6d087dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 12/10/2018
+ms.openlocfilehash: e47b8a5ccad7c57d125e16f6e1d37fb91de31161
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144563"
+ms.locfileid: "53169603"
 ---
 # <a name="versioning"></a>Управление версиями
 
@@ -77,12 +77,13 @@ ms.locfileid: "53144563"
 
 ![Проводник Windows](./media/versioning/win-properties.png "Windows Explorer")
 
-> [!NOTE]
-> Если этот номер версии не соответствует формату `Major.Minor.Build.Revision`, появляется оповещение об ошибке. Его можно игнорировать.
-
 **✔️ ДОПУСТИМО.** Вы можете использовать номер сборки непрерывной интеграции в качестве номера редакции AssemblyFileVersion.
 
 > Например, если вы создаете версию проекта 1.0.0, а номер сборки непрерывной интеграции имеет значение 99, параметр AssemblyFileVersion получит значение 1.0.0.99.
+
+**✔️ ИСПОЛЬЗУЙТЕ** формат `Major.Minor.Build.Revision` для версии файла.
+
+> Версия файла никогда не применяется в .NET, но [в Windows ожидается версия файла](/windows/desktop/menurc/versioninfo-resource) в формате `Major.Minor.Build.Revision`. Если версия не соответствует этому формату, появляется предупреждение.
 
 ### <a name="assembly-informational-version"></a>Информационная версия сборки
 
@@ -91,6 +92,9 @@ ms.locfileid: "53144563"
 ```xml
 <AssemblyInformationalVersion>The quick brown fox jumped over the lazy dog.</AssemblyInformationalVersion>
 ```
+
+> [!NOTE]
+> В более ранних версиях Visual Studio отображается предупреждение сборки, если эта версия не соответствует формату `Major.Minor.Build.Revision`. Его можно игнорировать.
 
 **❌ НЕЖЕЛАТЕЛЬНО.** Не указывайте самостоятельно информационную версию сборки.
 

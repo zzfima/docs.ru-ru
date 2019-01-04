@@ -2,15 +2,14 @@
 title: Перенос библиотек в .NET Core
 description: Узнайте, как перенести проекты библиотеки из .NET Framework в .NET Core.
 author: cartermp
-ms.author: mairaw
 ms.date: 07/14/2017
 ms.custom: seodec18
-ms.openlocfilehash: 2701027ce606c215ca9c2bd4bc665bc0600342dc
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 4002f7d0f98398163df1c4d02ff0e157584c2655
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143588"
+ms.locfileid: "53169702"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>Перенос библиотек .NET Framework в .NET Core
 
@@ -60,7 +59,7 @@ ms.locfileid: "53143588"
 
 Для взаимодействия между процессами вместо удаленного взаимодействия можно применять механизмы межпроцессного взаимодействия (IPC), например пространство имен <xref:System.IO.Pipes> или класс <xref:System.IO.MemoryMappedFiles.MemoryMappedFile>.
 
-Для взаимодействия между компьютерами в качестве альтернативы можно использовать сетевое решение, желательно протокол на основе обычного текста с низкими издержками, например HTTP. Еще один вариант — [веб-сервер Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), используемый платформой ASP.NET Core. Кроме того, для сценариев взаимодействия между компьютерами по сети можно использовать пространство имен <xref:System.Net.Sockets>. Другие варианты см. в разделе об обмене сообщениями статьи [.NET Open Source Developer Projects](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging) (Проекты разработки с открытым кодом в .NET).
+Для взаимодействия между компьютерами в качестве альтернативы можно использовать сетевое решение, желательно протокол на основе обычного текста с низкими издержками, например HTTP. Еще один вариант — [веб-сервер Kestrel](https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel), используемый платформой ASP.NET Core. Кроме того, для сценариев взаимодействия между компьютерами по сети можно использовать пространство имен <xref:System.Net.Sockets>. Другие варианты см. в разделе об обмене сообщениями статьи [.NET Open Source Developer Projects ](https://github.com/Microsoft/dotnet/blob/master/dotnet-developer-projects.md#messaging) (Проекты разработки с открытым кодом в .NET).
 
 ### <a name="code-access-security-cas"></a>CAS (Code Access Security — безопасность доступа кода)
 

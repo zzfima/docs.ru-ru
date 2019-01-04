@@ -1,13 +1,13 @@
 ---
-title: Команда dotnet clean — CLI .NET Core
+title: Команда dotnet clean
 description: Команда dotnet clean очищает текущий каталог.
 ms.date: 12/04/2018
-ms.openlocfilehash: 9930d2905f234e7125f27367cda36aa85ae23b87
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144459"
+ms.locfileid: "53169863"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -24,7 +24,7 @@ dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r
 dotnet clean [-h|--help]
 ```
 
-## <a name="description"></a>Описание:
+## <a name="description"></a>Описание
 
 Команда `dotnet clean` очищает выходные данные предыдущей сборки. Она реализуется как [целевой объект MSBuild](/visualstudio/msbuild/msbuild-targets), поэтому при выполнении команды проект получает оценку. Очищаются только выходные данные, созданные во время сборки. Очищаются папки с промежуточными (*obj*) и окончательными выходными данными (*bin*).
 

@@ -1,15 +1,13 @@
 ---
-title: Команда dotnet test — CLI .NET Core
+title: Команда dotnet test
 description: Команда dotnet test служит для выполнения модульных тестов в проекте.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 73b1d832b855798dd053187bbb24e8fb989fedf1
-ms.sourcegitcommit: 3b1cb8467bd73dee854b604e306c0e7e3882d91a
+ms.openlocfilehash: 2cfe96b24e5f46ae679c970a1df028d38ebf6037
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "46696460"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170860"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -50,7 +48,7 @@ dotnet test [-h|--help]
 
 ---
 
-## <a name="description"></a>Описание:
+## <a name="description"></a>Описание
 
 Команда `dotnet test` служит для выполнения модульных тестов в проекте. Команда `dotnet test` запускает консольное приложение средства выполнения тестов, указанное для проекта. Средство выполнения тестов запускает тесты, определенные для платформы модульного тестирования (например, MSTest, NUnit или xUnit) и сообщает об успешном или неудачном выполнении каждого из них. Если все тесты выполнены успешно, средство выполнения тестов возвращает код 0. Если же любой тест завершается с ошибкой, средство выполнения возвращает 1. Средство выполнения тестов и библиотека модульных тестов упаковываются в пакеты NuGet и восстанавливаются как обычные зависимости проекта.
 

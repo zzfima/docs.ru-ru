@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: fa1387eba60b4bf181df254e00bb3fdbe55bdaf6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 04d866c0615d299fe3df72553bafce2514a1c121
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144706"
+ms.locfileid: "53168836"
 ---
 # <a name="build-a-class-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Создание библиотеки классов с помощью Visual Basic и пакета SDK для .NET Core в Visual Studio 2017
 
@@ -31,7 +31,7 @@ ms.locfileid: "53144706"
 
 1. В диалоговом окне **Новый проект** разверните узел **Другие типы проектов** и выберите **Решения Visual Studio**. Присвойте решению имя ClassLibraryProjects и нажмите кнопку **ОК**.
 
-   ![Диалоговое окно создания проекта](./media/library-with-visual-studio/newproject.png)
+   ![Visual Studio создает диалоговое окно нового проекта тестирования](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>Создание проекта для библиотеки классов
 
@@ -41,15 +41,15 @@ ms.locfileid: "53144706"
 
 1. В диалоговом окне **Добавление нового проекта** разверните узел **Visual Basic**, выберите узел **.NET Standard**, а затем — шаблон проекта **Библиотека классов (.NET Standard)**. В текстовом поле **Имя** введите имя проекта StringLibrary. Нажмите **ОК**, чтобы создать проект библиотеки классов.
 
-   ![Диалоговое окно "Добавление нового проекта"](./media/vb-library-with-visual-studio/libproject.png)
+   ![Visual Studio создает диалоговое окно добавления нового проекта библиотеки](./media/vb-library-with-visual-studio/create-new-library-project.png)
 
    Окно кода затем откроется в среде разработки Visual Studio. 
  
-   ![Окно приложения Visual Studio, отображающее код шаблона библиотеки классов по умолчанию](./media/vb-library-with-visual-studio/stringlibrary.png)
+   ![Окно приложения Visual Studio, отображающее код шаблона библиотеки классов по умолчанию](./media/vb-library-with-visual-studio/visual-studio-library.png)
 
 1. Проверьте, предназначена ли библиотека для правильной версии .NET Standard. В **обозревателе решений** щелкните проект библиотеки правой кнопкой мыши и выберите пункт **Свойства**. В текстовом поле **Целевая платформа** указано, что целевой платформой является .NET Standard 2.0.
 
-   ![Свойства проекта для библиотеки классов](./media/library-with-visual-studio/properties.png)
+   ![Свойства проекта для библиотеки классов](./media/library-with-visual-studio/library-project-properties.png)
 
 1. Кроме того, в диалоговом окне **Свойства** удалите текст в поле **Корневое пространство имен**. Для каждого проекта Visual Basic автоматически создает пространство имен, соответствующее имени проекта. Все пространства имен, определяемые в файлах с исходным кодом, являются родительскими по отношению к этому пространству имен. Нам необходимо определить пространство имен верхнего уровня с помощью ключевого слова [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md).
   
@@ -61,7 +61,7 @@ ms.locfileid: "53144706"
 
 1. В строке меню выберите **Сборка** > **Собрать решение**. Проект должен скомпилироваться без ошибок.
 
-   ![Область вывода, показывающая успешное завершение сборки](./media/library-with-visual-studio/buildsucceeds.png)
+   ![Область вывода, показывающая успешное завершение сборки](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 
 

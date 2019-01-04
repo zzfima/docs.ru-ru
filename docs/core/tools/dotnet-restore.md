@@ -1,15 +1,13 @@
 ---
-title: Команда dotnet restore — CLI .NET Core
+title: Команда dotnet restore
 description: Вы узнаете, как восстановить зависимости и связанные с проектом средства при помощи команды dotnet restore.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 504a0621beb8aea961133d2cc6d287ce17051c1c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6f54671fcd1c17d2466d5a38027e02da5e7494e9
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127333"
+ms.locfileid: "53170786"
 ---
 # <a name="dotnet-restore"></a>dotnet restore
 
@@ -35,7 +33,7 @@ dotnet restore [-h|--help]
 ```
 ---
 
-## <a name="description"></a>Описание:
+## <a name="description"></a>Описание
 
 Команда `dotnet restore` использует NuGet для восстановления зависимостей, а также связанных с проектом средств, которые указаны в файле проекта. По умолчанию восстановление зависимостей и средств производится параллельно.
 
@@ -164,6 +162,8 @@ dotnet restore [-h|--help]
 `--verbosity <LEVEL>`
 
 Задает уровень детализации команды. Допустимые значения: `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]` и `diag[nostic]`.
+
+---
 
 ## <a name="examples"></a>Примеры
 

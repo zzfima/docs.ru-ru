@@ -1,65 +1,89 @@
 ---
-title: Преобразование данных в ML.NET
-description: Ознакомьтесь с различными преобразованиями данных, которые поддерживаются в ML.NET.
+title: Преобразование данных машинного обучения в ML.NET
+description: Изучите компоненты проектирования признаков, поддерживаемые в ML.NET.
 author: JRAlexander
-ms.date: 10/16/2018
-ms.openlocfilehash: c169319937dac13747935e451952bd75d4cc174d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.date: 12/14/2018
+ms.openlocfilehash: 72e4077151d35b9bff661c28c9a20626098a5c69
+ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143952"
+ms.lasthandoff: 12/17/2018
+ms.locfileid: "53451096"
 ---
-# <a name="data-transforms-in-mlnet"></a>Преобразование данных в ML.NET
+# <a name="machine-learning-data-transforms---mlnet"></a>Преобразование данных машинного обучения в ML.NET
 
-В следующих таблицах представлены сведения о всех преобразованиях данных, которые поддерживаются в ML.NET (выберите тип преобразования данных для перехода к соответствующей таблице):
-
-* [Категориальные](#categorical)
-* [Объединение и разделение](#combiners-and-segregators)
-* [Выбор признака](#feature-selection)
-* [Создатели признаков](#featurizers)
-* [Анализ меток](#label-parsing)
-* [Отсутствующие значения](#missing-values)
-* [Нормализация](#normalization)
-* [Фильтры строк](#row-filters)
-* [Схема](#schema)
-* [Обработка текста и создание признаков](#text-processing-and-featurization)
-* [Прочее](#miscellaneous)
+В следующих таблицах содержатся сведения обо всех преобразованиях данных, поддерживаемых в ML.NET.
 
 > [!NOTE]
 > ML.NET сейчас находится на этапе предварительной версии. В настоящее время поддерживаются не все преобразования данных. Чтобы отправить запрос на определенное преобразование, создайте заявку [в репозитории GitHub dotnet/machinelearning](https://github.com/dotnet/machinelearning/issues).
-
-## <a name="categorical"></a>Категориальные
-
-| Transform | Определение |
-| --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.CategoricalHashOneHotVectorizer> | Кодирует категориальную переменную на основе хэша. |
-| <xref:Microsoft.ML.Legacy.Transforms.CategoricalOneHotVectorizer> | Кодирует категориальную переменную прямым кодированием на основе словаря терминов. |
 
 ## <a name="combiners-and-segregators"></a>Объединение и разделение
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.CombinerByContiguousGroupId> | Группирует значения скалярного столбца в вектор на основе идентификатора смежной группы. |
+| <xref:Microsoft.ML.Transforms.GroupTransform> | Группирует значения скалярного столбца в вектор на основе идентификатора смежной группы. |
 | <xref:Microsoft.ML.Legacy.Transforms.FeatureCombiner> | Объединяет все признаки в один столбец признаков. |
 | <xref:Microsoft.ML.Legacy.Transforms.ManyHeterogeneousModelCombiner> | Объединяет последовательность TransformModels и PredictorModel в единую модель PredictorModel. |
 | <xref:Microsoft.ML.Legacy.Transforms.ModelCombiner> | Объединяет последовательность TransformModels в одну модель. |
 | <xref:Microsoft.ML.Legacy.Transforms.Segregator> | Разделяет столбцы векторов на последовательности строк; операция, противоположная группированию. |
 | <xref:Microsoft.ML.Legacy.Transforms.TwoHeterogeneousModelCombiner> | Объединяет TransformModel и PredictorModel в единую модель PredictorModel. |
+| <xref:Microsoft.ML.Transforms.UngroupTransform> | Разделяет столбцы векторов на последовательности строк; операция, обратная группированию. |
 
-## <a name="feature-selection"></a>Выбор признаков
-
-| Transform | Определение |
-| --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.FeatureSelectorByCount> | Выбирает слоты, для которых число значений не по умолчанию не меньше порогового значения. |
-| <xref:Microsoft.ML.Legacy.Transforms.FeatureSelectorByMutualInformation> | Выбирает первые k слотов из всех указанных столбцов, упорядоченных по общей информации, с помощью столбца метки. |
-
-## <a name="featurizers"></a>Создатели признаков
+## <a name="conversions"></a>Преобразования 
 
 | Transform | Определение |
 | --- | --- |
+| <xref:Microsoft.ML.Transforms.Conversions.HashingTransformer> | Хэширует либо однозначные, либо векторные столбцы. Для векторных столбцов каждый слот хэшируется отдельно. Хэшировать можно текстовые значения или значения ключей. |
 | <xref:Microsoft.ML.Legacy.Transforms.HashConverter> | Преобразует значения столбца в хэш-коды. Это преобразование принимает числовые и текстовые входные данные в столбцах с одиночными и векторными значениями. |
-| <xref:Microsoft.ML.Legacy.Transforms.TreeLeafFeaturizer> | Обучает совокупность деревьев или загружает ее из файла, а затем сопоставляет вектор числовых признаков с тремя выходными данными: 1. Вектор, содержащий выходные данные отдельного дерева в совокупности. 2. Вектор, указывающий листья, на которые приходится вектор признаков в совокупности деревьев. 3. Вектор, указывающий пути, на которые приходится вектор признаков в совокупности деревьев. Если указаны файл модели и средство обучения, вектор будет использовать файл модели. Если не указано ни то, ни другое, вектор будет обучать модель FastTree по умолчанию. Это позволяет обрабатывать ключевые метки путем обучения модели регрессии в направлении к необязательно перемещенным индексам. |
+| <xref:Microsoft.ML.Transforms.Conversions.HashJoiningTransform> | Преобразует значения нескольких столбцов в хэш-коды. Это преобразование принимает числовые и текстовые входные данные в столбцах с одиночными и векторными значениями. |
+| <xref:Microsoft.ML.Transforms.Conversions.KeyToBinaryVectorMappingTransformer> | Преобразует ключ в двоичный векторный столбец. |
+| <xref:Microsoft.ML.Transforms.Conversions.KeyToValueMappingTransformer > | Использует метаданные KeyValues для сопоставления индексов ключей с соответствующими значениями в метаданных KeyValues. |
+| <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | Преобразует ключ в векторный столбец. |
+| <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | Изменяет базовый тип столбца при условии, что тип может быть преобразован. |
+| <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | Преобразует входные значения (слова, числа и др.) для индексации в словаре. |
+
+
+## <a name="deep-learning"></a>Глубокое обучение
+
+| Transform | Определение |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.OnnxTransform> | Предоставляет данные для существующей модели ONNX и возвращает оценку (прогноз). |
+| <xref:Microsoft.ML.Transforms.TensorFlowTransform> | Оценка с помощью предварительно обученной модели TensorFlow или повторного обучения модели TensorFlow. |
+
+## <a name="feature-extraction"></a>Признак извлечения
+
+| Transform | Определение |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | Удаляет указанный список стоп-слов, сравнивая отдельные токены (сравнение без учета регистра) со стоп-словами.| 
+| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageGrayscaleTransform> | Преобразует один или несколько столбцов ImageType в представление того же изображения в оттенках серого.|
+| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageLoaderTransform> | Загружает один или несколько столбцов ReadOnlyMemory как ImageType. |
+| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImagePixelExtractorTransform> | Преобразует один или несколько столбцов ImageType в векторное представление.|
+| <xref:Microsoft.ML.Runtime.ImageAnalytics.ImageResizerTransform> | Изменяет размер одного или нескольких столбцов ImageType до заданной высоты и ширины.|
+| <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | Реализует LightLDA — современную реализацию латентного размещения Дирихле.|
+| <xref:Microsoft.ML.Transforms.LoadTransform> | Загружает определенные преобразования из указанного файла модели. Позволяет выборочное преобразование из сериализованной цепочки или применить предварительно обученное преобразование к другому (но все еще совместимому) представлению данных. |
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | Создает контейнер n-грамм (ряд последовательных значений длиной 1-n) в заданном векторе ключей. Для этого создает словарь n-грамм и использует идентификатор в словаре как индекс в контейнере. | 
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | Превращает коллекцию размеченного текста (вектор ReadOnlyMemory) или векторы ключей в векторы числовых признаков. Векторы признаков — это число n-грамм (ряд последовательных токенов-слов или ключей длиной 1-n). | 
+| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | Превращает коллекцию размеченного текста (вектор ReadOnlyMemory) в векторы числовых признаков с помощью хэширования. | 
+| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | Создает контейнер n-грамм (ряд последовательных слов длиной 1-n) в заданном тексте. | 
+| <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | Преобразует категориальное значение в массив индикатора путем создания словаря категорий на основе данных и использования идентификатора в словаре в качестве индекса в массиве. |
+| <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | Вычисляет проекцию вектора признаков на подпространство низкого ранга. |
+| <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | Использует предварительно обученную модель тональности для оценки входных строк. |
+| <xref:Microsoft.ML.Transforms.Text.StopWordsRemovingTransformer> | Удаляет зависящий от языка список стоп-слов (наиболее распространенных слов) путем сравнения отдельных токенов (сравнение без учета регистра) со стоп-словами. |
+| <xref:Microsoft.ML.Transforms.Categorical.TermLookupTransformer> | Сопоставляет столбцы текстовых значений с новыми столбцами с помощью набора данных карты, предоставленного через его аргументы. |
+| <xref:Microsoft.ML.Transforms.Text.WordBagBuildingTransformer> | Создает контейнер n-грамм (ряд последовательных слов) в заданном тексте. Для этого создает словарь n-грамм и использует идентификатор в словаре как индекс в контейнере. |
+| <xref:Microsoft.ML.Transforms.Text.WordHashBagProducingTransformer> | Создает контейнер n-грамм (ряд последовательных слов длиной 1-n) в заданном тексте. Для этого хэширует каждую n-грамму и использует хэш-значения в качестве индекса в контейнере. |
+| <xref:Microsoft.ML.Transforms.Text.WordTokenizingTransformer> | Разбивает текст на слова, используя символ или символы разделителя. |
+
+
+## <a name="image-model-featurizers"></a>Модель изображения средства присвоения признаков
+
+| Transform | Определение |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.AlexNetExtension> | Это применяемый с <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> метод расширения для использования предварительно обученной модели [AlexNet](https://en.wikipedia.org/wiki/AlexNet). NuGet, содержащий это расширение, также обязательно содержит файл двоичной модели. | 
+| <xref:Microsoft.ML.Transforms.ResNet18Extension> | Это применяемый с <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> метод расширения для использования предварительно обученной модели ResNet18. NuGet, содержащий это расширение, также обязательно содержит файл двоичной модели. |
+| <xref:Microsoft.ML.Transforms.ResNet50Extension> | Это применяемый с <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> метод расширения для использования предварительно обученной модели ResNet50. NuGet, содержащий это расширение, также обязательно содержит файл двоичной модели. |
+| <xref:Microsoft.ML.Transforms.ResNet101Extension> | Это применяемый с <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> метод расширения для использования предварительно обученной модели ResNet101. NuGet, содержащий это расширение, также обязательно содержит файл двоичной модели. |
 
 ## <a name="label-parsing"></a>Анализ меток
 
@@ -67,7 +91,8 @@ ms.locfileid: "53143952"
 | --- | --- |
 | <xref:Microsoft.ML.Legacy.Transforms.Dictionarizer> | Преобразует входные значения (слова, числа и др.) для индексации в словаре. |
 | <xref:Microsoft.ML.Legacy.Transforms.LabelColumnKeyBooleanConverter> | Преобразует метку в ключ или bool (при необходимости), чтобы сделать ее пригодной для классификации. |
-| <xref:Microsoft.ML.Legacy.Transforms.LabelIndicator> | Переназначение метки, используемое OVA. |
+| <xref:Microsoft.ML.Transforms.LabelConvertTransform> |  Преобразует метки. |
+| <xref:Microsoft.ML.Transforms.LabelIndicatorTransform> | Преобразует многоклассовые метки в двоичные метки True, False, в основном для использования с OVA.|
 | <xref:Microsoft.ML.Legacy.Transforms.LabelToFloatConverter> | Преобразует метку в число с плавающей запятой, чтобы сделать ее пригодной для регрессии. |
 | <xref:Microsoft.ML.Legacy.Transforms.PredictedLabelColumnOriginalValueConverter> | Преобразует спрогнозированный столбец меток в исходные значения, если он не имеет тип bool. |
 
@@ -75,68 +100,92 @@ ms.locfileid: "53143952"
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValueHandler> | Обрабатывает отсутствующие значения, заменяя их на значение по умолчанию или на среднее, минимальное или максимальное значение (только для столбцов без текста). Столбец индикаторов при необходимости можно объединить, если тип входного столбца является числовым. |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValueIndicator> | Создает выходной столбец с логическими данными с тем же числом слотов, что и входной столбец, где выходное значение равно true, если значение во входном столбце отсутствует. |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValuesDropper> | Удаляет NA из векторных столбцов. |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValuesRowDropper> | Отфильтровывает строки, содержащие отсутствующие значения. |
-| <xref:Microsoft.ML.Legacy.Transforms.MissingValueSubstitutor> | Создает выходной столбец того же типа и размера, что и входной столбец, где отсутствующие значения заменяются значением по умолчанию или средним, минимальным или максимальным значением (только для столбцов без текста). |
+| <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | Удаляет отсутствующие значения из столбцов. |
+| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Создает выходной столбец с логическими данными с тем же числом слотов, что и входной столбец, где выходное значение равно true, если значение во входном столбце отсутствует. |
+| <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | Обрабатывает отсутствующие значения, заменяя их на значение по умолчанию или на среднее, минимальное или максимальное значение (только для столбцов без текста). |
+| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Создает выходной столбец с логическими данными с тем же числом слотов, что и входной столбец, где выходное значение равно true, если значение во входном столбце отсутствует. |
 
 ## <a name="normalization"></a>Нормализация
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.BinNormalizer> | Значения присваиваются в ячейки одинаковой плотности, и значение сопоставляется со своим параметром bin_number / number_of_bins. |
-| <xref:Microsoft.ML.Legacy.Transforms.ConditionalNormalizer> | Нормализует столбцы только при необходимости. |
-| <xref:Microsoft.ML.Legacy.Transforms.GlobalContrastNormalizer> | Выполняет глобальную нормализацию разницы на входных значениях: Y = (s * X – M) / D, где s — это масштаб, M — среднее значение, а D — норма L2 или стандартное отклонение. | 
-| <xref:Microsoft.ML.Legacy.Transforms.LogMeanVarianceNormalizer> | Нормализует данные с учетом вычисленного среднего значения и отклонения логарифма данных. |
-| <xref:Microsoft.ML.Legacy.Transforms.LpNormalizer> | Нормализует векторы (строки) по отдельности, изменяя их масштаб и приводя его к норме (L2, L1 или LInf). Выполняет следующую операцию для вектора X: Y = (X – M) / D, где M является средним значением и D — это норма L2, L1 или LInf. |
-| <xref:Microsoft.ML.Legacy.Transforms.MeanVarianceNormalizer> | Нормализует данные с учетом вычисленного среднего значения и отклонения данных. |
-| <xref:Microsoft.ML.Legacy.Transforms.MinMaxNormalizer> | Нормализует данные с учетом минимальных и максимальных значений данных. |
+| <xref:Microsoft.ML.Transforms.Projections.LpNormalizingTransformer> | Преобразование нормализации Lp-Norm (векторное или на уровне строки). |
+| <xref:Microsoft.ML.Transforms.Normalizers.MeanVarDblAggregator> | Вычисляет среднее значение и дисперсию для столбца с векторным значением. Оно отслеживает текущее среднее значение и M2 (сумма квадратов различия значений от среднего значения), количество значений NaN и ненулевых значений элементов. |
+| <xref:Microsoft.ML.Transforms.Normalizers.MeanVarSngAggregator> | Вычисляет среднее значение и дисперсию для столбца с векторным значением. Оно отслеживает текущее среднее значение и M2 (сумма квадратов различия значений от среднего значения), количество значений NaN и ненулевых значений элементов. |
+| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxDblAggregator> | Отслеживает min, max, количество неразреженных значений (vCount) и количество вызовов ProcessValue() (trainCount) для столбца с векторным значением. |
+| <xref:Microsoft.ML.Transforms.Normalizers.MinMaxSngAggregator> | Отслеживает min, max, количество неразреженных значений (vCount) и количество вызовов ProcessValue() (trainCount) для столбца с векторным значением. |
+| <xref:Microsoft.ML.Transforms.Normalizers.NormalizeTransform> | Стандартизирует диапазоны признаков. |
+| <xref:Microsoft.ML.Transforms.Normalizers.NormalizingTransformer> |Стандартизирует диапазоны признаков. |
+
+## <a name="onnx"></a>Onnx
+
+| Transform | Определение |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.OnnxTransform> | Вычисляет предварительно обученные модели ONNX, которые используют стандарт ONNX версии 1.2 |
+
+## <a name="preprocessing"></a>Предварительная обработка
+| Transform | Определение |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.BootstrapSamplingTransformer> | Составляет приблизительную выборку начальной загрузки с помощью выборки Пуассона. |
+| <xref:Microsoft.ML.Transforms.Projections.RandomFourierFeaturizingTransformer> | Создает случайный признак Фурье. |
+| <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | Создатель маркеров на основе символов, который рассматривает текст как последовательность символов. |
+| <xref:Microsoft.ML.Transforms.Projections.VectorWhiteningTransformer> | Упрощает оптимизацию для определения весовых коэффициентов. |
 
 ## <a name="row-filters"></a>Фильтры строк
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.RowRangeFilter> | Фильтрует представление данных в столбце типа Single, Double или Key (смежные). Сохраняет значения, которые находятся в указанном диапазоне минимума и максимума. Значения, не являющиеся числами, всегда отфильтровываются. Если входное значение имеет тип Key, минимум и максимум рассчитываются как процент от количества значений. |
-| <xref:Microsoft.ML.Legacy.Transforms.RowSkipAndTakeFilter> | Позволяет ограничить входные данные подмножеством строк с необязательным смещением. Может использоваться для разбиения данных по страницам. |
-| <xref:Microsoft.ML.Legacy.Transforms.RowSkipFilter> | Позволяет ограничить входные данные до подмножества строк, пропуская несколько строк. |
-| <xref:Microsoft.ML.Legacy.Transforms.RowTakeFilter> | Позволяет ограничить входные данные до подмножества строк, взяв первые N строк. |
+| <xref:Microsoft.ML.Transforms.RowShufflingTransformer> | Перемешивает случайную попытку курсора, используя пул с заданным количеством строк.  |
+| <xref:Microsoft.ML.Transforms.SkipFilter> | Позволяет ограничить входные данные до подмножества строк, пропуская несколько строк. |
+| <xref:Microsoft.ML.Transforms.SkipTakeFilter> | Позволяет ограничить входные данные подмножеством строк с необязательным смещением. Может использоваться для разбиения данных по страницам. При создании с помощью SkipTakeFilter.SkipArguments работает как `SkipFilter`.
+| <xref:Microsoft.ML.Transforms.TakeFilter> | Позволяет ограничить входные данные до подмножества строк, взяв первые N строк. |
+
 
 ## <a name="schema"></a>Схема
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnConcatenator> | Объединяет два столбца с одним типом элемента. |
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnCopier> | Дублирует столбцы из набора данных.|
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnDropper> | Удаляет столбцы из набора данных. |
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnSelector> | Выбирает набор столбцов, удаляя остальные. |
-| <xref:Microsoft.ML.Legacy.Transforms.ColumnTypeConverter> | Преобразует столбец в другой тип с использованием стандартных преобразований. |
+| <xref:Microsoft.ML.Transforms.ColumnCopyingTransformer> | Дублирует столбцы из набора данных.|
+| <xref:Microsoft.ML.Transforms.ColumnSelectingTransformer> | Выбирает набор столбцов для удаления или сохранения заданного ввода. |
+| <xref:Microsoft.ML.Transforms.FeatureSelection.SlotsDroppingTransformer> | Удаляет слоты из столбцов.|
 | <xref:Microsoft.ML.Legacy.Transforms.KeyToTextConverter> | KeyToValueTransform использует метаданные KeyValues для сопоставления индексов ключей с соответствующими значениями в метаданных KeyValues. |
-| <xref:Microsoft.ML.Legacy.Transforms.NGramTranslator> | Создает контейнер n-грамм (ряд последовательных значений длиной 1-n) в заданном векторе ключей. Для этого создает словарь n-грамм и использует идентификатор в словаре как индекс в контейнере. | 
-| <xref:Microsoft.ML.Legacy.Transforms.OptionalColumnCreator> | Если исходный столбец не существует после десериализации, создает столбец с правильным типом и значениями по умолчанию. |
+| <xref:Microsoft.ML.Transforms.OptionalColumnTransform> | Создает новый столбец с указанным типом и значениями по умолчанию. |
+| <xref:Microsoft.ML.Transforms.RangeFilter> | Фильтрует представление данных в столбце типа Single, Double или Key (смежные). Сохраняет значения, которые находятся в указанном диапазоне минимума и максимума. Значения, не являющиеся числами, всегда отфильтровываются. Если входное значение имеет тип Key, минимум и максимум рассчитываются как процент от количества значений. |
+
+## <a name="tensorflow"></a>TensorFlow
+
+| Transform | Определение |
+| --- | --- |
+| <xref:Microsoft.ML.Transforms.TensorFlowTransform> | Либо вычисляет предварительно обученную модель TensorFlow, либо повторно обучает ее. |
 
 ## <a name="text-processing-and-featurization"></a>Обработка текста и создание признаков
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.CharacterTokenizer> | Создатель маркеров на основе символов, который рассматривает текст как последовательность символов. |
-| <xref:Microsoft.ML.Legacy.Transforms.TextFeaturizer> | Преобразование, которое превращает коллекцию текстовых документов в векторы числовых признаков. Векторы признаков — это нормализованное число n-грамм (слово и (или) символ) в определенном тексте с созданными маркерами. |
-| <xref:Microsoft.ML.Legacy.Transforms.TextToKeyConverter> | Преобразует входные значения (слова, числа и др.) для индексации в словаре. |
-| <xref:Microsoft.ML.Legacy.Transforms.WordEmbeddings> | Преобразование, которое превращает векторы маркеров текста в числовые векторы с помощью предварительно обученной модели. Дополнительные сведения об этом методе см. на странице Википедии [Векторное представление слов](https://en.wikipedia.org/wiki/Word_embedding). |
-| <xref:Microsoft.ML.Legacy.Transforms.WordTokenizer> | Входные данные для этого преобразования — текст, а выходные данные — вектор текста, содержащий слова (маркеры) в исходном тексте. В качестве разделителя используется пробел, но можно указать любой другой символ (или несколько символов). |
+| <xref:Microsoft.ML.Transforms.Text.TextNormalizingTransformer> | Преобразование нормализации текста, которое позволяет нормализовать регистр текста, удалить диакритические знаки, знаки пунктуации и (или) цифры. Преобразование обрабатывает ввод текста, а также вектор токенов или текста (вектор ReadOnlyMemory). |
+| <xref:Microsoft.ML.Transforms.Text.TokenizingByCharactersTransformer> | Создатель маркеров на основе символов, который рассматривает текст как последовательность символов. |
+
+## <a name="time-series"></a>Временной ряд
+
+| Transform | Определение |
+| --- | --- |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.ExponentialAverageTransform> | Принимает взвешенное среднее значение: ExpAvg(y_t) = a * y_t + (1-a) * ExpAvg(y_(t-1)). |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidChangePointDetector> | Реализует преобразование обнаружения точки изменения для последовательности i.i.d. (случайная выборка) на основе адаптивной ядерной оценки плотности и мартингалов. |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.IidSpikeDetector> | Реализует преобразование обнаружения пиков для последовательности i.i.d. (случайная выборка) на основе адаптивной ядерной оценки плотности. |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.MovingAverageTransform> | Предоставляет взвешенное среднее значение скользящего окна. |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PercentileThresholdTransform> | Решает, принадлежит ли текущее значение временного ряда к процентиле верхних значений скользящего окна. |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.PValueTransform> | Вычисляет эмпирическое значение вероятности текущего значения ряда на основе других значений в скользящем окне. |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SlidingWindowTransform> | Выводит скользящее окно на временной ряд типа Single. |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaChangePointDetector> | Реализует преобразование обнаружения точки изменения на основе моделирования сингулярного спектра временного ряда. |
+| <xref:Microsoft.ML.Runtime.TimeSeriesProcessing.SsaSpikeDetector> | Реализует преобразование обнаружения пиков на основе моделирования сингулярного спектра временного ряда. |
 
 ## <a name="miscellaneous"></a>Прочее
 
 | Transform | Определение |
 | --- | --- |
-| <xref:Microsoft.ML.Legacy.Transforms.ApproximateBootstrapSampler> | Составляет приблизительную выборку начальной загрузки. |
-| <xref:Microsoft.ML.Legacy.Transforms.BinaryPredictionScoreColumnsRenamer> | Для двоичного прогнозирования переименовывает столбцы PredictedLabel и Score, чтобы включить в них имя положительного класса.|
-| <xref:Microsoft.ML.Legacy.Transforms.DataCache> | Выполняет кэширование с помощью указанного параметра. |
-| <xref:Microsoft.ML.Legacy.Transforms.DatasetScorer> | Оценивает набор данных с помощью модели прогнозирования. |
-| <xref:Microsoft.ML.Legacy.Transforms.DatasetTransformScorer> | Оценивает набор данных с помощью модели преобразования. |
-| <xref:Microsoft.ML.Legacy.Transforms.NoOperation> | Ничего не делает. |
-| <xref:Microsoft.ML.Legacy.Transforms.RandomNumberGenerator> | Добавляет столбец с созданной последовательностью чисел. |
-| <xref:Microsoft.ML.Legacy.Transforms.ScoreColumnSelector> | Выбирает только последние столбцы оценки и дополнительные столбцы, указанные в аргументах. |
-| <xref:Microsoft.ML.Legacy.Transforms.Scorer> | Превращает модель прогнозирования в модель преобразования. |
-| <xref:Microsoft.ML.Legacy.Transforms.SentimentAnalyzer> | Использует предварительно обученную модель тональности для оценки входных строк. |
-| <xref:Microsoft.ML.Legacy.Transforms.TrainTestDatasetSplitter> | Разделяет набор данных на наборы обучения и тестирования. |
+| <xref:Microsoft.ML.Transforms.CompositeTransformer> | Создает составной DataTransform. |
+| <xref:Microsoft.ML.Transforms.CustomMappingTransformer%602> | Формирует дополнительные столбцы для предоставленного `IDataView`. Оно не меняет количество строк и его можно увидеть в результате применения функции пользователя к каждой строке входных данных.|
+| <xref:Microsoft.ML.Transforms.GenerateNumberTransform> | Добавляет столбец с созданной последовательностью чисел. |
+| <xref:Microsoft.ML.Transforms.ProduceIdTransform> | Создает столбец с идентификатором курсора в качестве столбца. |
+| <xref:Microsoft.ML.Transforms.RandomNumberGenerator> | Генерирует случайное число. |
+| <xref:Microsoft.ML.Transforms.ScoringTransformer> | Объединяет информацию из нескольких моделей прогнозирования для создания новой модели в конвейере, используя оценки из уже обученной модели. |

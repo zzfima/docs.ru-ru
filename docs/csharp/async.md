@@ -1,15 +1,16 @@
 ---
-title: Асинхронное программирование
+title: Асинхронное программирование на C#
 description: Сведения о модели асинхронного программирования на уровне языка C#, которая реализуется в .NET Core.
 author: cartermp
 ms.date: 06/20/2016
 ms.assetid: b878c34c-a78f-419e-a594-a2b44fa521a4
-ms.openlocfilehash: 12ecadb3fa3c6760af4884626f68b47ead2754d5
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.custom: seodec18
+ms.openlocfilehash: 231cbbde7c908c3d63d3ff0f59cf3d797e8b9543
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126501"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53612131"
 ---
 # <a name="asynchronous-programming"></a>Асинхронное программирование
 
@@ -264,5 +265,5 @@ public static async Task<User[]> GetUsersAsync(IEnumerable<int> userIds)
 ## <a name="other-resources"></a>Другие ресурсы
 
 * В статье [Подробный обзор асинхронного программирования](../standard/async-in-depth.md) приводятся дополнительные сведения о принципах работы задач.
-* [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](../csharp/programming-guide/concepts/async/index.md)
+* [Асинхронное программирование с использованием ключевых слов Async и Await (C#)](./programming-guide/concepts/async/index.md)
 * Эпизод [Six Essential Tips for Async](https://channel9.msdn.com/Series/Three-Essential-Tips-for-Async) (Шесть важных советов по асинхронному программированию) с Лусианом Вышиком (Lucian Wischik) — это отличный ресурс по асинхронному программированию.

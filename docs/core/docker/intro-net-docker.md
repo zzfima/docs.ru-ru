@@ -1,16 +1,14 @@
 ---
-title: Общие сведения о Docker — .NET Core
+title: Введение в Docker
 description: Эта статья содержит общие сведения об использовании Docker в контексте приложения .NET Core.
-author: jralexander
-ms.author: johalex
 ms.date: 11/06/2017
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 1655d4652c4e9b48c48a2a22c2a1bf6cdd459088
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 54bad8fcb34e46700fedf508bbc84ad846b05d76
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148890"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656171"
 ---
 # <a name="introduction-to-net-and-docker"></a>Введение в .NET и Docker
 

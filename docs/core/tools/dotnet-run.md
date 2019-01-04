@@ -1,15 +1,13 @@
 ---
-title: Команда dotnet run — CLI .NET Core
+title: Команда dotnet run
 description: Команда dotnet run — это удобное средство для запуска приложения из исходного кода.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: f560e6f795f00488818647a4b5c711dcf9d59dcd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: effca44db19e512a01f858e7a149e3fc4fe076a2
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235498"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53170253"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -40,7 +38,7 @@ dotnet run [-h|--help]
 ```
 ---
 
-## <a name="description"></a>Описание:
+## <a name="description"></a>Описание
 
 `dotnet run` — это удобное средство для запуска приложения из исходного кода одной командой. Это полезно для быстрой последовательной разработки из командной строки. В отношении сборки кода эта команда зависима от команды [`dotnet build`](dotnet-build.md). Любые требования к сборке, например, то, что проект сначала нужно восстановить, применяются и к `dotnet run`.
 

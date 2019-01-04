@@ -2,25 +2,24 @@
 title: Сведения о .NET Core
 description: Дополнительные сведения о .NET Core.
 author: richlander
-ms.author: mairaw
 ms.date: 08/01/2018
-ms.openlocfilehash: 93619fce58a3b3aa94e6c14fc7cfeb1b0bf48272
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
+ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126982"
+ms.locfileid: "53170409"
 ---
 # <a name="about-net-core"></a>Сведения о .NET Core
 
 .NET Core обладает следующими характеристиками:
 
 - **Кроссплатформенность.** Поддержка [операционных систем](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md) Windows, macOS и Linux.
-- **Согласованность между архитектурами.** Одинаковое выполнение кода на различных архитектурах, включая x64, x86 и ARM.
-- **Программы командной строки.** Удобные инструменты для локальной разработки и сценариев непрерывной интеграции.
-- **Гибкая разработка**: может включаться в приложение или устанавливаться параллельно на уровне пользователя или компьютера. Возможность использования с [контейнерами Docker](docker/index.md).
+- **Согласованность между архитектурами.** Одинаковое выполнение кода в различных архитектурах, включая x64, x86 и ARM.
+- **Программы командной строки.**  Удобные инструменты для локальной разработки и сценариев непрерывной интеграции.
+- **Гибкая разработка.** Может включаться в приложение или устанавливаться параллельно на уровне пользователя или компьютера. Возможность использования с [контейнерами Docker](docker/index.md).
 - **Совместимость.** Платформа .NET Core совместима с .NET Framework, Xamarin и Mono благодаря [.NET Standard](../standard/net-standard.md).
-- **Открытый исходный код**: платформа .NET Core имеет открытый исходный код и распространяется по лицензиям MIT и Apache 2. .NET Core является проектом [.NET Foundation](https://dotnetfoundation.org/).
+- **Открытый код.** Платформа .NET Core имеет открытый код и распространяется по лицензиям MIT и Apache 2. .NET Core является проектом [.NET Foundation](https://dotnetfoundation.org/).
 - **Поддержка от Майкрософт.** Корпорация Майкрософт предоставляет [поддержку .NET Core](https://www.microsoft.com/net/core/support/).
 
 ## <a name="languages"></a>Языки
