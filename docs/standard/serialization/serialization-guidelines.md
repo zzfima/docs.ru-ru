@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: b47be45f00ee03d400383dd45dc6776cff3f816d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2a372ba995f409fc3dd12492e21af80b93d20b8c
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742505"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058598"
 ---
 # <a name="serialization-guidelines"></a>Правила сериализации
 В настоящем документе перечислены рекомендации, которые следует учитывать при разработке сериализуемого API.  
@@ -99,7 +99,7 @@ ms.locfileid: "45742505"
   
 1.  Необходимо ИЗБЕГАТЬ разработки типов специально для XML-сериализации, за исключением случаев, когда необходим контроль над формой создаваемого XML-кода. Эта технология сериализации была заменена сериализацией контракта данных, описанной в предыдущем разделе.  
   
-     Другими словами, не следует применять атрибуты из пространства имен <xref:System.Runtime.Serialization> к новым типам, если только этот тип не планируется использовать с XML-сериализацией. В следующем примере описано использование **System.Xml.Serialization** для управления формой создаваемого XML-кода.  
+     Другими словами, не следует применять атрибуты из пространства имен <xref:System.Xml.Serialization> к новым типам, если только этот тип не планируется использовать с XML-сериализацией. В следующем примере описано использование **System.Xml.Serialization** для управления формой создаваемого XML-кода.  
   
      [!code-csharp[SerializationGuidelines#6](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#6)]
      [!code-vb[SerializationGuidelines#6](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#6)]  
