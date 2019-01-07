@@ -2,12 +2,12 @@
 title: Асинхронные типы возвращаемых значений (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 3d3c7d610dd1287d2c7284a5edd9c92810a74dba
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 3dfc0c0505d827009dd3d179453869d3af6ab210
+ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48036244"
+ms.lasthandoff: 12/22/2018
+ms.locfileid: "53774593"
 ---
 # <a name="async-return-types-c"></a>Асинхронные типы возвращаемых значений (C#)
 Асинхронные методы могут иметь следующие типы возвращаемых значений:
@@ -33,7 +33,7 @@ ms.locfileid: "48036244"
 
 При вызове `GetLeisureHours` из выражения await в методе `ShowTodaysInfo` это выражение await извлекает целочисленное значение (значение `leisureHours`), хранящееся в задаче, которая возвращается методом `GetLeisureHours`. Дополнительные сведения о выражениях await см. в разделе [await](../../../../csharp/language-reference/keywords/await.md).  
   
-Чтобы лучше понять, как это происходит, отделите вызов метода `GetLeisureHours` от применения `await`, как показано в следующем коде. Вызов метода `GetLeisureHours`, который не ожидается немедленно, возвращает `Task<int>`, как и следовало ожидать из объявления метода. В данном примере эта задача назначается переменной `infoTask`. Поскольку `infoTask` является <xref:System.Threading.Tasks.Task%601>, она содержит свойство <xref:System.Threading.Tasks.Task%601.Result> типа `TResult`. В этом примере `TResult` представляет собой целочисленный тип. Если выражение `await` применяется к `infoTask`, выражение await вычисляется как содержимое свойства <xref:System.Threading.Tasks.Task%601.Result%2A> объекта `infoTask`. Это значение присваивается переменной `ret`.  
+Чтобы лучше понять, как это происходит, отделите вызов метода `GetLeisureHours` от применения `await`, как показано в следующем коде. Вызов метода `GetLeisureHours`, который не ожидается немедленно, возвращает `Task<int>`, как и следовало ожидать из объявления метода. В данном примере эта задача назначается переменной `integerTask`. Поскольку `integerTask` является <xref:System.Threading.Tasks.Task%601>, она содержит свойство <xref:System.Threading.Tasks.Task%601.Result> типа `TResult`. В этом примере `TResult` представляет собой целочисленный тип. Если выражение `await` применяется к `integerTask`, выражение await вычисляется как содержимое свойства <xref:System.Threading.Tasks.Task%601.Result%2A> объекта `integerTask`. Это значение присваивается переменной `ret`.  
   
 > [!IMPORTANT]
 >  Свойство <xref:System.Threading.Tasks.Task%601.Result%2A> является блокирующим свойством. При попытке доступа к нему до завершения его задачи поток, который в текущий момент активен, блокируется до того момента, пока задача не будет завершена, а ее значение не станет доступным. В большинстве случаев следует получать доступ к этому значению с помощью `await` вместо прямого обращения к свойству. <br/> В предыдущем примере извлекалось значение свойства <xref:System.Threading.Tasks.Task%601.Result%2A> для блокировки основного потока. Это позволяет закончить выполнение метода `ShowTodaysInfo` до того, как завершится работа приложения.  
@@ -77,10 +77,10 @@ ms.locfileid: "48036244"
   
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>   
-- [Walkthrough: Accessing the Web by Using async and await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) (Пошаговое руководство. Обращение к веб-сайтам с помощью async и await в C#)   
-- [Поток управления в асинхронных программах (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
+- [Пошаговое руководство: Доступ к Интернету с помощью модификатора Async и оператора Await в C#](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
+- [Control Flow in Async Programs (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md) (Поток управления в асинхронных программах C#)   
 - [async](../../../../csharp/language-reference/keywords/async.md)   
 - [await](../../../../csharp/language-reference/keywords/await.md)

@@ -4,12 +4,12 @@ description: .NET Core — это модульная высокопроизв�
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: ffa58600bea1f5514b25c18aa00e6d36679f2fd9
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170281"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030286"
 ---
 # <a name="net-core-guide"></a>Руководство по .NET Core
 
@@ -19,15 +19,15 @@ ms.locfileid: "53170281"
 
 Просмотрите [руководства по .NET Core](tutorials/index.md), чтобы узнать, как создать простое приложение .NET Core. На создание и запуск первого приложения потребуется буквально несколько минут. Если вы хотите попробовать поработать с .NET Core в браузере, перейдите на страницу онлайн-руководства [Числа в C#](../csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml).
 
-## <a name="download-net-core-21"></a>Скачивание .NET Core 2.1
+## <a name="download-net-core-22"></a>Скачать .NET Core 2.2
 
-Скачайте [пакет SDK для .NET Core 2.1](https://www.microsoft.com/net/download), чтобы опробовать .NET Core на компьютере под управлением Windows, macOS или Linux. Если вы предпочитаете использовать контейнеры Docker, посетите страницу [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/).
+Скачайте [пакет SDK для .NET Core 2.2](https://www.microsoft.com/net/download), чтобы опробовать .NET Core на компьютере под управлением Windows, macOS или Linux. Если вы предпочитаете использовать контейнеры Docker, посетите страницу [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/).
 
 Если вам нужна другая версия .NET Core, все версии доступны на [странице скачиваемых файлов .NET Core](https://www.microsoft.com/net/download/archives).
 
-## <a name="net-core-21"></a>.NET Core 2.1
+## <a name="net-core-22"></a>.NET Core 2.2
 
-[.NET Core 2.1](whats-new/dotnet-core-2-1.md) — последняя версия .NET Core. Новые возможности включают в себя глобальные средства, высокопроизводительные интерфейсы API (например, <xref:System.Span%601?displayProperty=nameWithType>), многоуровневую JIT-компиляцию, улучшение производительности [сборки](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1/) и [выполнения](https://blogs.msdn.microsoft.com/dotnet/2018/04/18/performance-improvements-in-net-core-2-1/), а также поддержку Alpine и ARM32.
+[.NET Core 2.2](whats-new/dotnet-core-2-2.md) — самая новая версия .NET Core. Ее новые возможности: развертывание с учетом платформ, перехватчики при запуске, проверка подлинности AAD в Azure SQL и поддержка Windows ARM32.
 
 ## <a name="create-your-first-application"></a>Создание первого приложения
 

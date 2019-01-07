@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 73cd8b703fe30e622a849fa20e33b529ea3db61d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cb47d1c7eecebca42a65557b61d782a76266c2f
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127450"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030182"
 ---
 # <a name="methods"></a>Методы #
 
@@ -197,10 +197,7 @@ ms.locfileid: "53127450"
 public (string, string, string, int) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -208,8 +205,7 @@ public (string, string, string, int) GetPersonalInfo(string id)
 
 ```csharp
 var person = GetPersonalInfo("111111111")
-if (person != null)
-   Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
+Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
 ```
 
 Имена могут также назначаться элементам кортежа в определении типа кортежа. В следующих примерах демонстрируется альтернативная версия метода `GetPersonalInfo`, в котором используются именованные элементы:
@@ -218,10 +214,7 @@ if (person != null)
 public (string FName, string MName, string LName, int Age) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -229,8 +222,7 @@ public (string FName, string MName, string LName, int Age) GetPersonalInfo(strin
 
 ```csharp
 var person = GetPersonalInfo("111111111");
-if (person != null)
-   Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
+Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 ```
 
 Если в качестве аргумента метод получает массив, а затем изменяет значение отдельных элементов, он может не возвращать массив, однако при желании вы можете это изменить для соблюдения правильного стиля или модели передачи значений.  Это связано с тем, что C# передает все ссылочные типы по значению, а значением ссылки на массив является указатель на массив. В следующем примере изменения в содержимом массива `values`, сделанные в методе `DoubleValues`, может отслеживать любой код, имеющий ссылку на этот массив.

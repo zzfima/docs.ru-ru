@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 11/06/2018
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 36da24f0cd2d2b9c4884101d97026307174f4130
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 630cbcac954b9fcda67eef38f54241a81b831fc3
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236353"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030260"
 ---
 # <a name="tutorial-predict-new-york-taxi-fares-using-a-regression-learner-with-mlnet"></a>Учебник. Прогнозирование платы за проезд в такси в Нью-Йорке с помощью алгоритма обучения регрессии с использованием ML.NET
 
@@ -99,7 +99,9 @@ ms.locfileid: "53236353"
 
 ## <a name="define-data-and-model-paths"></a>Определение путей к данным и модели
 
-Добавьте следующие новые операторы `using` в начало файла *Program.cs*: [!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
+Добавьте следующие новые операторы `using` в начало файла *Program.cs*:
+
+[!code-csharp[AddUsings](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#1 "Add necessary usings")]
 
 Необходимо создать три поля, которые будут содержать пути к файлам с наборами данных и к файлу для сохранения модели, а также глобальную переменную для `TextLoader`:
 

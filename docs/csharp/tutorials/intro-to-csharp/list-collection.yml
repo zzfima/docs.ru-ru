@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 1d4ae646dfc4c96db77bee69d0b7fe0876cce85d
-  ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+  ms.openlocfilehash: 0de2cc0434087797b9411075a98cc11dd598ed81
+  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
   ms.translationtype: HT
   ms.contentlocale: ru-RU
-  ms.lasthandoff: 12/10/2018
-  ms.locfileid: "53129016"
+  ms.lasthandoff: 01/04/2019
+  ms.locfileid: "54029493"
 items:
 - durationInMinutes: 1
   content: >
@@ -197,7 +197,35 @@ items:
     > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
 - title: Выполнение задачи
   durationInMinutes: 3
-  content: "В результате получилось нечто подобное?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nПри каждой итерации цикла суммируются два последних целых числа в списке. Полученное значение добавляется в список. Цикл повторяется, пока в список не будут добавлены 20 элементов.\n\n> [!NOTE]\n> Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).\n"
+  content: >
+    В результате получилось нечто подобное?
+
+
+    ```csharp
+
+    var fibonacciNumbers = new List<int> {1, 1};
+
+
+    while (fibonacciNumbers.Count < 20)
+
+    {
+        var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+        var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+        fibonacciNumbers.Add(previous + previous2);
+    }
+
+    foreach(var item in fibonacciNumbers)
+        Console.WriteLine(item);
+    ```
+
+
+    При каждой итерации цикла суммируются два последних целых числа в списке. Полученное значение добавляется в список. Цикл повторяется, пока в список не будут добавлены 20 элементов.
+
+
+    > [!NOTE]
+
+    > Этот онлайн-интерфейс для написания кода находится на этапе предварительной версии. При возникновении проблем сообщите о них на странице [репозитория dotnet/try](https://github.com/dotnet/try/issues).
 - content: >-
     Вы выполнили все задачи в интерактивном руководстве. Это последний документ из серии интерактивных вводных руководств по C#. Вы можете скачать пакет SDK для .NET Core на [сайте .NET](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial), создать проект на своем компьютере и продолжать писать код. На шаге "Продолжение обучения" вы вернетесь к этим учебникам, чтобы создавать проекты на своем компьютере.
 
