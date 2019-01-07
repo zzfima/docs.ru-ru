@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77a9863b4fb44bbe8142175a032bb052ee99cdae
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 09f2886173bd3a80691b78a6e3ea71b034ebe34a
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53779390"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030403"
 ---
 # <a name="regular-expression-language---quick-reference"></a>Элементы языка регулярных выражений — краткий справочник
 <a name="top"></a> Регулярное выражение — это шаблон, который обработчик регулярных выражений пытается сопоставить с введенным текстом. Шаблон состоит из односимвольных или многосимвольных литералов, операторов или конструкций.  См. краткое описание [регулярных выражений .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -176,7 +176,7 @@ ms.locfileid: "53779390"
 |`${` *имя* `}`|Замещает часть строки, соответствующую именованной группе *name*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|"один два"|"два один"|  
 |`$$`|Подставляет литерал "$".|`\b(\d+)\s?USD`|`$$$1`|"103 USD"|"$103"|  
 |`$&`|Замещает копией полного соответствия.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
-|<code>$`</code>|Замещает весь текст входной строки до соответствия.|`B+`|<code>$`</code>|"AABBCC"|"AAAACC"|  
+|``$` ``|Замещает весь текст входной строки до соответствия.|`B+`|``$` ``|"AABBCC"|"AAAACC"|  
 |`$'`|Замещает весь текст входной строки после соответствия.|`B+`|`$'`|"AABBCC"|"AACCCC"|  
 |`$+`|Замещает последнюю захваченную группу.|`B+(C+)`|`$+`|"AABBCCDD"|"AACCDD"|  
 |`$_`|Замещает всю входную строку.|`B+`|`$_`|"AABBCC"|"AAAABBCCCC"|  

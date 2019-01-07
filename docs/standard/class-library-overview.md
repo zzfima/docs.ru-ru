@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: acc51287a8c670da63d0ec421aa232864ea91c2b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b00d08f43874518e117739d4a9502bf9463db5c1
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185853"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54029883"
 ---
 # <a name="net-class-library-overview"></a>Обзор библиотеки классов .NET
 
@@ -86,7 +86,7 @@ ms.locfileid: "50185853"
   
  В следующей таблице перечислены базовые типы, предоставляемые в .NET, кратко описывается каждый тип и указывается соответствующий тип в Visual Basic, C#, C++ и F#.  
   
-|Категория|Имя класса|Описание:|Тип данных в Visual Basic|Тип данных в C#|Тип данных С++/CLI|Тип данных F#|  
+|Категория|Имя класса|Описание|Тип данных в Visual Basic|Тип данных в C#|Тип данных С++/CLI|Тип данных F#|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Целое число|<xref:System.Byte>|8-разрядное целое число без знака.|**Byte**|**byte**|**unsigned char**|**byte**|  
 ||<xref:System.SByte>|8-битовое целое число со знаком.<br /><br /> Не является CLS-совместимым.|**SByte**|**sbyte**|**char**<br /> - или -<br /> **signed** **char**|**sbyte**|  
@@ -113,5 +113,5 @@ ms.locfileid: "50185853"
 ## <a name="see-also"></a>См. также
 
 - [Система общих типов CTS](../../docs/standard/base-types/common-type-system.md)  
-- [Браузер API .NET](https://docs.microsoft.com/dotnet/api)  
-- [Обзор набора средств Visual Studio для Unity](../../docs/framework/get-started/overview.md)
+- [Браузер API .NET](../../api/index.md)  
+- [Обзор](../../docs/framework/get-started/overview.md)
