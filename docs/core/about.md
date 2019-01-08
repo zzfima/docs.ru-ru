@@ -3,12 +3,12 @@ title: Сведения о .NET Core
 description: Дополнительные сведения о .NET Core.
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 39381a44332cbd920fdd2cb5f6707be4fcb6bcfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: c9247a33d59571c10dc59e91968c2b1c60006a50
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170409"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058559"
 ---
 # <a name="about-net-core"></a>Сведения о .NET Core
 
@@ -95,7 +95,7 @@ ms.locfileid: "53170409"
 
 Основные различия между .NET Core и .NET Framework
 
-- **Модели приложений** — .NET Core поддерживает не все модели приложений платформы .NET Framework. В частности, она не поддерживает веб-формы ASP.NET и MVC. Было объявлено, что [.NET Core 3 будет поддерживать WPF и Windows Forms](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
+- **Модели приложений** — .NET Core поддерживает не все модели приложений платформы .NET Framework. В частности, не поддерживаются веб-формы ASP.NET и ASP.NET MVC, однако поддерживается ASP.NET Core MVC. Было объявлено, что [.NET Core 3 будет поддерживать WPF и Windows Forms](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/).
 - **API-интерфейсы** — .NET Core включает обширное подмножество библиотеки базовых классов .NET Framework с отличающейся организацией кода (другие имена сборок и ключевые отличия в членах, предоставляемых для типов). Из-за этих различий в некоторых случаях необходимы изменения при портировании исходного кода на .NET Core (см. [microsoft/dotnet-apiport](https://github.com/microsoft/dotnet-apiport)). .NET Core реализует спецификацию API [.NET Standard](../standard/net-standard.md).
 - **Подсистемы**. Платформа .NET Core реализует подмножество подсистем .NET Framework с целью упрощения реализации и модели программирования. Например, управление доступом для кода (CAS) не поддерживается, а отражение поддерживается.
 - **Платформы**. Платформа .NET Framework поддерживает Windows и Windows Server, в то время как .NET Core также поддерживает Mac OS и Linux.
