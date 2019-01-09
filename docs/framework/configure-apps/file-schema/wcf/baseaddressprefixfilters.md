@@ -2,30 +2,30 @@
 title: '&lt;baseAddressPrefixFilters&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8cab2a9a-c51f-4283-bb60-2ad0c274fd46
-ms.openlocfilehash: 9ac0c756f611c877ca689f12e5fe365026924f1d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 04579980201b397e7ed92f55ffcb19e54de18aaa
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358545"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149232"
 ---
 # <a name="ltbaseaddressprefixfiltersgt"></a>&lt;baseAddressPrefixFilters&gt;
-Представляет коллекцию параметров, которые элементы, которые задают пройти фильтры, предоставляющие механизм выбора соответствующих привязок служб Internet Information Services (IIS), при размещении приложения Windows Communication Foundation (WCF) в службах IIS.  
+Представляет коллекцию конфигурации, которые элементы, которые задают пройти фильтров, которые обеспечивают механизм для выбора необходимых привязок служб Internet Information Services (IIS), при размещении приложения Windows Communication Foundation (WCF) в службах IIS.  
   
 > [!WARNING]
->  \<baseAddressPrefixFilters > не распознает «localhost», используйте полное имя компьютера.  
+>  \<baseAddressPrefixFilters > не распознает «localhost», вместо этого используйте полное имя компьютера.  
   
  \<система. ServiceModel >  
-\<ServiceHostingEnvironment >  
+\<serviceHostingEnvironment >  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<serviceHostingEnvironment>  
-     <baseAddressPrefixFilters>  
-        <add prefix="string"/>  
-     </baseAddressPrefixFilters>  
-</serviceHostingEnvironment>  
+<serviceHostingEnvironment>
+  <baseAddressPrefixFilters>
+    <add prefix="String" />
+   </baseAddressPrefixFilters>
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -36,7 +36,7 @@ ms.locfileid: "33358545"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-baseaddressprefixfilter.md)|Добавляет элемент конфигурации, который задает префиксный фильтр для базовых адресов, используемых узлом службы.|  
   
@@ -51,7 +51,7 @@ ms.locfileid: "33358545"
   
  Веб-узлы IIS являются контейнерами виртуальных приложений, содержащими виртуальные каталоги. Доступ к приложению на узле можно осуществлять через одну или несколько привязок службы IIS. Привязки IIS предоставляют два блока данных: протокол привязки и данные привязки. Протокол привязки (например, HTTP) определяет схему, посредством которой осуществляется связь, а данные привязки (например, IP-адрес, порт, заголовок узла) содержат сведения, используемые для доступа к узлу.  
   
- IIS поддерживает задание нескольких привязок IIS для каждого узла, что позволяет использовать несколько базовых адресов для каждой схемы. Поскольку размещаемая на узле службы WCF допускает привязку только к одному базовому адресу для каждой схемы, можно использовать функцию префиксного фильтра, чтобы выбирать необходимые базовые адреса размещенной службы. Входящие базовые адреса, предоставляемые IIS, фильтруются с использованием дополнительного фильтра списка префиксов.  
+ IIS поддерживает задание нескольких привязок IIS для каждого узла, что позволяет использовать несколько базовых адресов для каждой схемы. Так как служба WCF, размещаемая на узле разрешает привязку только к одному базовому адресу для каждой схемы, чтобы выбрать необходимый базовый адрес размещенной службы можно использовать возможность префиксного фильтра. Входящие базовые адреса, предоставляемые IIS, фильтруются с использованием дополнительного фильтра списка префиксов.  
   
  Например, узел может содержать следующие базовые адреса.  
   
@@ -63,14 +63,14 @@ http://test2.fabrikam.com/Service.svc
  Для задания префиксного фильтра на уровне домена приложений можно использовать следующий файл конфигурации.  
   
 ```xml  
-<system.serviceModel>  
-  <serviceHostingEnvironment>  
-     <baseAddressPrefixFilters>  
-        <add prefix="net.tcp://test1.fabrikam.com:8000"/>  
-        <add prefix="http://test2.fabrikam.com:9000"/>  
-    </baseAddressPrefixFilters>  
-  </serviceHostingEnvironment>  
-</system.serviceModel>  
+<system.serviceModel>
+  <serviceHostingEnvironment>
+    <baseAddressPrefixFilters>
+      <add prefix="net.tcp://test1.fabrikam.com:8000" />
+      <add prefix="http://test2.fabrikam.com:9000" />
+    </baseAddressPrefixFilters>
+  </serviceHostingEnvironment>
+</system.serviceModel>
 ```  
   
  В этом примере `net.tcp://test1.fabrikam.com:8000` и `http://test2.fabrikam.com:9000` являются единственными базовыми адресами для соответствующих схем, которые могут пропускаться.  

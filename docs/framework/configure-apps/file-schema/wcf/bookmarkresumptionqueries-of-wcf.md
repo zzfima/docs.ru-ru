@@ -2,15 +2,15 @@
 title: '&lt;bookmarkResumptionQueries&gt; (WCF)'
 ms.date: 03/30/2017
 ms.assetid: ed086712-1dc7-4932-a592-d1116a0155f3
-ms.openlocfilehash: d2b3365f3793c114003bbd9b9da664448bbac243
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ba8c98557a859f4bd37b9aaca80a44c393429da4
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147656"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146086"
 ---
 # <a name="ltbookmarkresumptionqueriesgt-of-wcf"></a>&lt;bookmarkResumptionQueries&gt; (WCF)
-
+  
 Представляет коллекцию запросов, используемых для отслеживания возобновления чтения с закладок в экземпляре рабочего процесса. Этот запрос необходим, чтобы участник отслеживания мог подписываться на записи о возобновлении чтения с закладок.  
   
 Дополнительные сведения о запросах профиля отслеживания см. в разделе [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).
@@ -25,7 +25,7 @@ ms.locfileid: "53147656"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -36,26 +36,26 @@ ms.locfileid: "53147656"
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
-```
-
-## <a name="attributes-and-elements"></a>Элементы и атрибуты
-
+</tracking>
+```  
+  
+## <a name="attributes-and-elements"></a>Элементы и атрибуты  
+  
 В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
-### <a name="attributes"></a>Атрибуты
-
+### <a name="attributes"></a>Атрибуты  
+  
 Отсутствует.  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<bookmarkResumptionQuery >](bookmarkresumptionquery-of-wcf.md)|Запрос, используемый для отслеживания возобновления закладки в экземпляре рабочего процесса. Этот запрос необходим, чтобы участник отслеживания мог подписываться на записи о возобновлении чтения с закладок.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<рабочий процесс >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|Элемент конфигурации, содержащий все запросы для определенного рабочего процесса, обозначенного свойством `activityDefinitionId`.|  
   

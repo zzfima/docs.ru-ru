@@ -2,12 +2,12 @@
 title: '&lt;bindingExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: f99b38ede66dbecb44f9e8e67f921943071672ca
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c2b097926ac21dda6a86e1e21958e15c9b63b1c4
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750779"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148439"
 ---
 # <a name="ltbindingextensionsgt"></a>&lt;bindingExtensions&gt;
 В этом разделе описывается использование пользовательской привязки из файла конфигурации компьютера или приложения. Добавить пользовательскую привязку в эту коллекцию можно с помощью ключевого слова `add`, установив атрибут `type` элемента равным пользовательской привязке, а атрибут `name` равным имени пользовательской привязки.  
@@ -17,14 +17,15 @@ ms.locfileid: "32750779"
  В следующем примере элемент `add` и атрибут `name` используются для добавления расширения привязки в раздел `bindingElementExtensions` файла конфигурации.  
   
 ```xml  
-<system.serviceModel>  
-    <extensions>  
-        <bindingExtensions>  
-           <add name="MyBinding" type="Microsoft.ServiceModel.Samples.MyBinding, MyBinding,  
-                Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />  
-        </bindingExtensions>  
-    </extensions>  
-</system.serviceModel>  
+<system.serviceModel>
+  <extensions>
+    <bindingExtensions>
+      <add name="MyBinding"
+           type="Microsoft.ServiceModel.Samples.MyBinding, MyBinding,
+                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </bindingExtensions>
+  </extensions>
+</system.serviceModel>
 ```  
   
  Чтобы добавить в элемент возможность настройки, пользователю следует записать и зарегистрировать элемент `bindingSection`. Дополнительные сведения об этом см. в документации по <xref:System.Configuration>.  
@@ -32,11 +33,12 @@ ms.locfileid: "32750779"
  После определения элемента и его типа конфигурации расширение может быть использовано конечной точкой, как показано в следующем примере.  
   
 ```xml  
-<services>  
-    <service name="MyService">  
-        <endpoint address="myAddress" binding="MyBinding" />  
-    </service>  
-</services>  
+<services>
+  <service name="MyService">
+    <endpoint address="myAddress"
+              binding="MyBinding" />
+  </service>
+</services>
 ```  
   
 ## <a name="see-also"></a>См. также  

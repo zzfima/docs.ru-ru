@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5146b0756d1aace14a294436a38b8d0e3e689c76
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 898da3136bef51d0f8541da3829e55598b16781c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452957"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145713"
 ---
 # <a name="datamemberfieldeditor-class"></a>Класс DataMemberFieldEditor
 
@@ -32,7 +32,7 @@ internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberFieldEditor` Класс является внутренним и не предназначены для использования непосредственно в коде.
+> `DataMemberFieldEditor` Класс является внутренним и не предназначен для непосредственного использования в коде.
 > 
 > Майкрософт не поддерживает использование этого класса в рабочем приложении ни при каких обстоятельствах.
 
@@ -42,7 +42,7 @@ internal class DataMemberFieldEditor : UITypeEditor
   
 **Сборка:** System.Design (в библиотеке System.Design.dll)  
   
-**Версии платформы .NET framework:** доступно с момента 2.0.  
+**Версии платформы .NET framework:** Доступно с версии 2.0.  
   
 ## <a name="see-also"></a>См. также
 

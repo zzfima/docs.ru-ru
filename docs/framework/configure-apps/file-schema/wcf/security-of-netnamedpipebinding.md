@@ -2,12 +2,12 @@
 title: '&lt;security&gt; для &lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: 4a80a8337a5b98ff30de60afbe4438e0d91b946b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0079cb9e62abed42a36b67fed935f883473ebbb8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185684"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147828"
 ---
 # <a name="ltsecuritygt-of-ltnetnamedpipebindinggt"></a>&lt;security&gt; для &lt;netNamedPipeBinding&gt;
 Определяет параметры безопасности для привязки.  
@@ -21,13 +21,13 @@ ms.locfileid: "50185684"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<netNamedPipeBinding>  
-      <binding>  
-            <security mode="None/Transport">  
-                        <transport protectionLevel="None/Sign/EncryptAndSign" />  
-            </security>  
-      </binding>  
-</netNamedPipeBinding>  
+<netNamedPipeBinding>
+  <binding>
+    <security mode="None/Transport">
+      <transport protectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+  </binding>
+</netNamedPipeBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -37,7 +37,7 @@ ms.locfileid: "50185684"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|режим|Задает тип системы безопасности, применяемой к этой привязке. Допустимы следующие значения:<br /><br /> -None: Режим безопасности отключен.<br />-Transport: Безопасность обеспечивается с помощью базовых функций безопасности транспорта. Этот режим позволяет контролировать уровень защиты.<br />-Значение по умолчанию — транспорта. Это атрибут типа <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
+|режим|Задает тип системы безопасности, применяемой к этой привязке. Допустимы следующие значения:<br /><br /> -None: Режим безопасности отключен.<br />-Транспорта: Безопасность обеспечивается с помощью базовых функций безопасности транспорта. Этот режим позволяет контролировать уровень защиты.<br />-Значение по умолчанию — транспорта. Это атрибут типа <xref:System.ServiceModel.NetNamedPipeSecurityMode>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   

@@ -2,12 +2,12 @@
 title: '&lt;trackingProfile&gt; (WCF)'
 ms.date: 10/08/2018
 ms.assetid: 09b651c2-c0d2-4850-a101-b0e009a1dc3a
-ms.openlocfilehash: bb6a99de0125100d5a604276aad82379b5ff34c4
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a50e0e566bf0f605defeb7158817b37aa8c4047d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454386"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147906"
 ---
 # <a name="lttrackingprofilegt-of-wcf"></a>&lt;trackingProfile&gt; (WCF)
 Представляет раздел конфигурации для создания подписки на записи в участнике отслеживания отслеживания рабочего процесса. Профиль отслеживания содержит запросы отслеживания, позволяющие участнику отслеживания подписываться на события рабочего процесса, формируемые во время выполнения при изменении состояния экземпляра рабочего процесса. Запросы, заданные в разделе профиля отслеживания, определяют виды событий, возвращаемых подпиской.  
@@ -19,27 +19,27 @@ ms.locfileid: "49454386"
 \<trackingProfile >  
   
 ## <a name="syntax"></a>Синтаксис  
-
-```xml
+  
+```xml  
 <system.serviceModel>
   <tracking>
     <profiles>
       <trackingProfile name="String">
         <workflow activityDefinitionId="String">
           <activityScheduledQueries>
-            <activityScheduledQuery activityName="String" 
+            <activityScheduledQuery activityName="String"
                                     childActivityName="String" />
           </activityScheduledQueries>
           <activityStateQueries>
             <activityStateQuery activityName="String">
               <arguments>
-                <argument name="String"/>
+                <argument name="String" />
               </arguments>
               <states>
-                <state name="String"/>
+                <state name="String" />
               </states>
               <variables>
-                <variable name="String"/>
+                <variable name="String" />
               </variables>
             </activityStateQuery>
           </activityStateQueries>
@@ -47,16 +47,16 @@ ms.locfileid: "49454386"
             <bookmarkResumptionQuery name="String" />
           </bookmarkResumptionQueries>
           <cancelRequestedQueries>
-            <cancelRequestedQuery activityName="String" 
-                                childActivityName="String"/>
+            <cancelRequestedQuery activityName="String"
+                                  childActivityName="String" />
           </cancelRequestedQueries>
           <customTrackingQueries>
-            <customTrackingQuery activityName="String" 
-                                 name="String"/>
+            <customTrackingQuery activityName="String"
+                                 name="String" />
           </customTrackingQueries>
           <faultPropagationQueries>
-            <faultPropagationQuery faultSourceActivityName="String" 
-                                   faultHandlerActivityName="String"/>
+            <faultPropagationQuery faultSourceActivityName="String"
+                                   faultHandlerActivityName="String" />
           </faultPropagationQueries>
           <stateMachineStateQueries>
             <stateMachineStateQuery activityName="String" />
@@ -104,7 +104,7 @@ ms.locfileid: "49454386"
   
 В следующем примере показано профиль отслеживания в файле конфигурации, который позволяет участнику отслеживания подписаться на `Started` и `Completed` событий рабочего процесса.  
   
-```xml
+```xml  
 <system.serviceModel>
   <tracking>
     <profiles>
@@ -113,8 +113,8 @@ ms.locfileid: "49454386"
           <workflowInstanceQueries>
             <workflowInstanceQuery>
               <states>
-                <state name="Started"/>
-                <state name="Completed"/>
+                <state name="Started" />
+                <state name="Completed" />
               </states>
             </workflowInstanceQuery>
           </workflowInstanceQueries>

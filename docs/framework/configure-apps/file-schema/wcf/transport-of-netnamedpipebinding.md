@@ -2,12 +2,12 @@
 title: '&lt;transport&gt; для &lt;netNamedPipeBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: d9eff52d-4bde-4586-b56a-b0ec24611f8d
-ms.openlocfilehash: c42132f774257589b9020248188ee8d972eb92ba
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1624b93344e50b0406d314e285ce94786ba6dadc
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837054"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148985"
 ---
 # <a name="lttransportgt-of-ltnetnamedpipebindinggt"></a>&lt;transport&gt; для &lt;netNamedPipeBinding&gt;
 Определяет параметры безопасности транспорта для именованного канала.  
@@ -22,13 +22,13 @@ ms.locfileid: "48837054"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<netNamedPipeBinding>  
-   <binding>  
-      <security mode="None/Transport">  
-            <transport protectionLevel="None/Sign/EncryptAndSign" />  
-      </security>  
-   </binding>  
-</netNamedPipeBinding>  
+<netNamedPipeBinding>
+  <binding>
+    <security mode="None/Transport">
+      <transport protectionLevel="None/Sign/EncryptAndSign" />
+    </security>
+  </binding>
+</netNamedPipeBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -38,7 +38,7 @@ ms.locfileid: "48837054"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|protectionLevel|Определяет уровень защиты именованного канала. Подпись сообщений уменьшает риск подделки сообщения сторонними лицами при его передаче. Шифрование обеспечивает конфиденциальность на уровне данных во время транспортировки. Допустимы следующие значения:<br /><br /> -None: Без защиты.<br />-Sign: Сообщения подписываются.<br />-EncryptAndSign: Сообщения шифруются и подписываются.<br /><br /> Значение по умолчанию - EncryptAndSign.|  
+|protectionLevel|Определяет уровень защиты именованного канала. Подпись сообщений уменьшает риск подделки сообщения сторонними лицами при его передаче. Шифрование обеспечивает конфиденциальность на уровне данных во время транспортировки. Допустимы следующие значения:<br /><br /> -None: Нет защиты.<br />-Входа: Сообщения подписываются.<br />-EncryptAndSign: Сообщения шифруются и подписываются.<br /><br /> Значение по умолчанию - EncryptAndSign.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  

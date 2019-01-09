@@ -12,16 +12,16 @@ api_type:
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 7423136ab8e04c076e3e5e33efdf010f36d02242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ed1fce1d16f9ddbe3a3ede91fecb1a3ca6b3d407
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33349637"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146541"
 ---
 # <a name="connection-class"></a>Класс Connection
 
-`Connection` Ответов сервера анализирует класс очереди запросов и конвейера запросов.
+`Connection` Ответы сервера анализирует класс запросов в очереди и конвейер запросов.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -30,14 +30,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> `Connection` Класса является внутренним и не предназначены для непосредственного использования в коде.
+> `Connection` Класс является внутренним и не предназначен для непосредственного использования в коде.
 > 
-> В реальном приложении ни при каких обстоятельствах корпорация Майкрософт не поддерживает использование этого класса.
+> Майкрософт не поддерживает использование этого класса в рабочем приложении ни при каких обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Net>
 
-**Сборка:** системы (в System.dll)
+**Сборка:** Системы (в System.dll)
 
-**Версии платформы .NET framework:** доступно с версии 2.0.
+**Версии платформы .NET framework:** Доступно с версии 2.0.

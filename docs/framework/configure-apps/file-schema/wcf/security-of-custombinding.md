@@ -2,12 +2,12 @@
 title: '&lt;security&gt; для &lt;customBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
-ms.openlocfilehash: eb8cd4172a83d618f3fd83519a8d9d2f4c864067
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d0a14af56f888c5c4c2c3924625f2e6d45ed2eeb
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128961"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146255"
 ---
 # <a name="ltsecuritygt-of-ltcustombindinggt"></a>&lt;security&gt; для &lt;customBinding&gt;
 Задает параметры безопасности для пользовательской привязки.  
@@ -21,25 +21,23 @@ ms.locfileid: "53128961"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<security   
-   allowSerializedSigningTokenOnReply="Boolean"  
-   authenticationMode="AuthenticationMode"  
-      defaultAlgorithmSuite="SecurityAlgorithmSuite"  
-   includeTimestamp="Boolean"  
-      requireDerivedKeys="Boolean"  
-   keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"   
-messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/EncryptBeforeSign"  
-      messageSecurityVersion="WSSecurityJan2004/WSSecurityXXX2005"  
-   requireDerivedKeys="Boolean"  
-   requireSecurityContextCancellation="Boolean"  
-   requireSignatureConfirmation="Boolean"  
-      securityHeaderLayout=  
-              "Strict/Lax/LaxTimestampFirst/LaxTimestampLast">  
-   <issuedTokenParameters />  
-   <localClientSettings />  
-   <localServiceSettings />  
-   <secureConversationBootstrap />  
-</security>  
+<security allowSerializedSigningTokenOnReply="Boolean"
+          authenticationMode="AuthenticationMode"
+          defaultAlgorithmSuite="SecurityAlgorithmSuite"
+          includeTimestamp="Boolean"
+          requireDerivedKeys="Boolean"
+          keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"
+          messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/EncryptBeforeSign"
+          messageSecurityVersion="WSSecurityJan2004/WSSecurityXXX2005"
+          requireDerivedKeys="Boolean"
+          requireSecurityContextCancellation="Boolean"
+          requireSignatureConfirmation="Boolean"
+          securityHeaderLayout="Strict/Lax/LaxTimestampFirst/LaxTimestampLast">
+   <issuedTokenParameters />
+   <localClientSettings />
+   <localServiceSettings />
+   <secureConversationBootstrap />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -90,7 +88,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Определяет текущий выданный маркер. Это элемент типа <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
 |[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Задает параметры безопасности локального клиента для этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
@@ -114,57 +112,58 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
  Кроме того, пользовательская привязка использует безопасность сообщений с типом учетных данных Windows, который является типом учетных данных по умолчанию. Это достигается путем [безопасности](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) элемента привязки. Если доступен механизм проверки подлинности Kerberos, то проверка подлинности как клиента, так и службы выполняется с использованием безопасности уровня сообщений. Если механизм проверки подлинности Kerberos недоступен, используется проверка подлинности NTLM. NTLM выполняет проверку подлинности клиента при подключении к службе, но не выполняет проверку подлинности службы при подключении к клиенту. [Безопасности](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md) элемент привязки настроен на использование `SecureConversation` authenticationType, который приводит к созданию сеанса безопасности клиента и службы. Это требуется для обеспечения работы дуплексного контракта службы. Дополнительные сведения о выполнении этого примера см. в разделе [пользовательской привязки безопасностью](../../../../../docs/framework/wcf/samples/custom-binding-security.md).  
   
 ```xml  
-<configuration>  
-  <system.serviceModel>  
-    <services>  
-      <service   
-          name="Microsoft.ServiceModel.Samples.CalculatorService"  
-          behaviorConfiguration="CalculatorServiceBehavior">  
-        <host>  
-          <baseAddresses>  
-            <!-- use following base address -->  
-            <add baseAddress="net.tcp://localhost:8000/ServiceModelSamples/Service"/>  
-          </baseAddresses>  
-        </host>  
-        <endpoint address=""  
-                    binding="customBinding"  
-                    bindingConfiguration="Binding1"   
-                    contract="Microsoft.ServiceModel.Samples.ICalculatorDuplex" />  
-        <!-- the mex endpoint is exposed at net.tcp://localhost:8000/ServiceModelSamples/service/mex -->  
-        <endpoint address="mex"  
-                  binding="mexTcpBinding"  
-                  contract="IMetadataExchange" />  
-      </service>  
-    </services>  
-  
-    <bindings>  
-      <!-- configure a custom binding -->  
-      <customBinding>  
-        <binding name="Binding1">  
-          <security authenticationMode="SecureConversation"  
-                     requireSecurityContextCancellation="true">  
-          </security>  
-          <textMessageEncoding messageVersion="Soap12WSAddressing10" writeEncoding="utf-8"/>  
-          <sslStreamSecurity requireClientCertificate="false"/>  
-          <tcpTransport/>  
-        </binding>  
-      </customBinding>  
-    </bindings>  
-  
-    <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->  
-    <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="CalculatorServiceBehavior">  
-          <serviceMetadata />  
-          <serviceDebug includeExceptionDetailInFaults="False" />  
-          <serviceCredentials>  
-            <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName"/>  
-          </serviceCredentials>  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
-  </system.serviceModel>  
-</configuration>  
+<configuration>
+  <system.serviceModel>
+    <services>
+      <service name="Microsoft.ServiceModel.Samples.CalculatorService"
+               behaviorConfiguration="CalculatorServiceBehavior">
+        <host>
+          <baseAddresses>
+            <!-- use following base address -->
+            <add baseAddress="net.tcp://localhost:8000/ServiceModelSamples/Service"/>
+          </baseAddresses>
+        </host>
+        <endpoint address=""
+                  binding="customBinding"
+                  bindingConfiguration="Binding1"
+                  contract="Microsoft.ServiceModel.Samples.ICalculatorDuplex" />
+        <!-- the mex endpoint is exposed at net.tcp://localhost:8000/ServiceModelSamples/service/mex -->
+        <endpoint address="mex"
+                  binding="mexTcpBinding"
+                  contract="IMetadataExchange" />
+      </service>
+    </services>
+    <bindings>
+      <!-- configure a custom binding -->
+      <customBinding>
+        <binding name="Binding1">
+          <security authenticationMode="SecureConversation"
+                    requireSecurityContextCancellation="true">
+          </security>
+          <textMessageEncoding messageVersion="Soap12WSAddressing10"
+                               writeEncoding="utf-8" />
+          <sslStreamSecurity requireClientCertificate="false" />
+          <tcpTransport />
+        </binding>
+      </customBinding>
+    </bindings>
+    <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="CalculatorServiceBehavior">
+          <serviceMetadata />
+          <serviceDebug includeExceptionDetailInFaults="False" />
+          <serviceCredentials>
+            <serviceCertificate findValue="localhost"
+                                storeLocation="LocalMachine"
+                                storeName="My"
+                                x509FindType="FindBySubjectName" />
+          </serviceCredentials>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>См. также  
@@ -175,5 +174,5 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
  [Расширение привязок](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Пользовательские привязки](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
  [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [Инструкции: Создание пользовательской привязки с использованием элемента SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [Практическое руководство. Создание пользовательской привязки с использованием элемента SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  [Безопасность пользовательской привязки](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

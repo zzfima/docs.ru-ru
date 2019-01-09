@@ -1,18 +1,18 @@
 ---
-title: '&lt;ServicePrincipalName&gt;'
+title: '&lt;servicePrincipalName&gt;'
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
-ms.openlocfilehash: e5c1f5a6986d57d20180560b12f5c7c5540a590d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a22a905744980d0b370023e6236734a9bb0d6357
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750730"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150647"
 ---
-# <a name="ltserviceprincipalnamegt"></a>&lt;ServicePrincipalName&gt;
+# <a name="ltserviceprincipalnamegt"></a>&lt;servicePrincipalName&gt;
 Указывает идентификацию службы по имени субъекта-службы (SPN).  
   
- Дополнительные сведения о настройке имени участника-службы см. в разделе [службы удостоверений и проверки подлинности](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
+ Дополнительные сведения о настройке SPN см. в разделе [службы идентификации и проверки подлинности](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
  \<удостоверение >  
 \<servicePrincipalName >  
@@ -20,7 +20,7 @@ ms.locfileid: "32750730"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<servicePrincipalName value = "String" />  
+<servicePrincipalName value="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -37,12 +37,12 @@ ms.locfileid: "32750730"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<удостоверение >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Задает удостоверение службы, подлинность которой должна быть проверена клиентом.|  
   
 ## <a name="remarks"></a>Примечания  
- Защищенный клиент Windows Communication Foundation (WCF), подключающийся к конечной точке с использованием этого удостоверения использует SPN при выполнении проверки подлинности SSPI с конечной точкой.  
+ Защищенный клиент Windows Communication Foundation (WCF), который подключается к конечной точке с использованием этого удостоверения использует SPN при выполнении проверки подлинности SSPI с конечной точкой.  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Configuration.IdentityElement>  

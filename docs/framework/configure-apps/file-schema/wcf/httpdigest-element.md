@@ -2,12 +2,12 @@
 title: Элемент &lt;httpDigest&gt;
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: 4f3edb4a525429bfc55c4e4cfaffbfc5726dcef8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2211c593090d697ae07350fcf7ac491b9d23e2d0
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521991"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150145"
 ---
 # <a name="lthttpdigestgt-element"></a>Элемент &lt;httpDigest&gt;
 Задает учетные данные, используемые для дайджест-проверки подлинности клиента при подключении к службе.  
@@ -22,7 +22,7 @@ ms.locfileid: "43521991"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<digest impersonationLevel="Identification/Impersonation/Delegation/Anonymous/None" />  
+<digest impersonationLevel="Identification/Impersonation/Delegation/Anonymous/None" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -32,14 +32,14 @@ ms.locfileid: "43521991"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|`impersonationLevel`|Задает параметры олицетворения, сообщаемые клиентом серверу. Режим олицетворения, выбираемый клиентом, не задается принудительно для сервера. Допустимы следующие значения:<br /><br /> -Идентификация: Сервер может получать удостоверение и привилегии клиента, но не может олицетворять клиента.<br />-Impersonation: Сервер может олицетворять контекст безопасности клиента в локальной системе.<br />-Delegation: Сервер может олицетворять контекст безопасности клиента в удаленных системах.<br />-Anonymous: Сервер не может олицетворять или идентифицировать клиента.<br />-None: Уровень олицетворения не назначается.<br /><br /> Значение по умолчанию - Identification. Это атрибут типа <xref:System.Security.Principal.TokenImpersonationLevel>.|  
+|`impersonationLevel`|Задает параметры олицетворения, сообщаемые клиентом серверу. Режим олицетворения, выбираемый клиентом, не задается принудительно для сервера. Допустимы следующие значения:<br /><br /> -Идентификация: Сервер может получать удостоверение и привилегии клиента, но не может олицетворять клиента.<br />-Олицетворения: Сервер может олицетворять контекст безопасности клиента в локальной системе.<br />-Делегирование: Сервер может олицетворять контекст безопасности клиента в удаленных системах.<br />-Анонимный: Сервер не может олицетворять или идентифицировать клиента.<br />-None: Уровень олицетворения не назначается.<br /><br /> Значение по умолчанию - Identification. Это атрибут типа <xref:System.Security.Principal.TokenImpersonationLevel>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.|  
   

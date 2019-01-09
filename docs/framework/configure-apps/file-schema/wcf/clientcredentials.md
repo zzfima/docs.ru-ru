@@ -1,19 +1,19 @@
 ---
-title: '&lt;clientCredentials&gt;'
+title: '&lt;ClientCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: 5e2dc6c2737b06d76bad6cfc51531b9ca9e02ca5
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3f70a4e6e27507c3820e1b67f49664e538ac736f
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753245"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145754"
 ---
-# <a name="ltclientcredentialsgt"></a>&lt;clientCredentials&gt;
+# <a name="ltclientcredentialsgt"></a>&lt;ClientCredentials&gt;
 Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.  
   
  \<система. ServiceModel >  
-\<поведения >  
+\<варианты поведения >  
 \<endpointBehaviors >  
 \<поведение >  
 \<clientCredentials >  
@@ -21,21 +21,21 @@ ms.locfileid: "32753245"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<clientCredentials type="String"  
-      supportInteractive="Boolean" >  
-   <clientCertificate>  
-   </clientCertificate>  
-   <digest>  
-   </digest>  
-   <isuedToken>  
-   </isuedToken>  
-   <peer>  
-   </peer>  
-   <serviceCertificate>  
-   </serviceCertificate>  
-   <windowsAuthentication>  
-   </windowsAuthentication>  
-</clientCredentials>  
+<clientCredentials type="String"
+                   supportInteractive="Boolean" >
+  <clientCertificate>
+  </clientCertificate>
+  <digest>
+  </digest>
+  <isuedToken>
+  </isuedToken>
+  <peer>
+  </peer>
+  <serviceCertificate>
+  </serviceCertificate>
+  <windowsAuthentication>
+  </windowsAuthentication>
+</clientCredentials>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -50,7 +50,7 @@ ms.locfileid: "32753245"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<clientCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)|Задает сертификат, используемый для проверки подлинности клиента при подключении к службе. Это элемент типа <xref:System.ServiceModel.Configuration.X509InitiatorCertificateClientElement>.|  
 |[\<httpDigest >](../../../../../docs/framework/configure-apps/file-schema/wcf/httpdigest-element.md)|Задает хэш-код, используемый для проверки подлинности клиента при подключении к службе. Это элемент типа <xref:System.ServiceModel.Configuration.HttpDigestClientElement>.|  

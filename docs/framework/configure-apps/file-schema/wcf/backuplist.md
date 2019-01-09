@@ -1,16 +1,16 @@
 ---
-title: '&lt;backupList&gt;'
+title: '&lt;BackupList&gt;'
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: 6684dcc485ef1ee2c3e5501f2fbc43898e172958
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1a6a7ac42b379dd8fb2ba80cf6a3a38998c26a59
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747298"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146554"
 ---
-# <a name="ltbackuplistgt"></a>&lt;backupList&gt;
-Представляет раздел конфигурации для определения резервного списка, в котором перечислен набор конечных точек, которые вы хотите службе маршрутизации в случае, если основная конечная точка становится недоступной. Если первая конечная точка в списке недоступна, то служба маршрутизации автоматически переключается на следующую точку в списке.  Этот метод позволяет быстро повысить надежность приложения, не реализуя в клиентском приложении обработку сложных схем и не задавая расположение всех служб.  
+# <a name="ltbackuplistgt"></a>&lt;BackupList&gt;
+Представляет раздел конфигурации для определения резервного списка, который перечисляет набор конечных точек, которые вы хотите использовать служба маршрутизации в случае, если основная конечная точка становится недоступной. Если первая конечная точка в списке недоступна, то служба маршрутизации автоматически переключается на следующую точку в списке.  Этот метод позволяет быстро повысить надежность приложения, не реализуя в клиентском приложении обработку сложных схем и не задавая расположение всех служб.  
   
  \<system.serviceModel >  
 \<Маршрутизация >  
@@ -19,10 +19,16 @@ ms.locfileid: "32747298"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```xml 
-   <routing>  <backupLists>    <backupList name="String">      <add endpointName="String" />    </backupList>    </backupLists></routing>  
-```
-
+```xml  
+<routing>
+  <backupLists>
+    <backupList name="String">
+      <add endpointName="String" />
+    </backupList>
+  </backupLists>
+</routing>
+```  
+  
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
  В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
@@ -34,13 +40,13 @@ ms.locfileid: "32747298"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<filter>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)||  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Маршрутизация >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|Список резервных конечных точек.|  
   
@@ -49,20 +55,22 @@ ms.locfileid: "32747298"
   
  Если отправка в основную конечную точку в списке в `endpointName` атрибут [ \<Добавить >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-entries.md) завершается ошибкой с исключением связи, служба маршрутизации попытается отправить сообщение в первую конечную точку в этом раздел конфигурации. Если эта отправка также приведет к возникновению исключения связи, служба маршрутизации попытается отправить сообщение в следующую точку, указанную в этом разделе, пока отправка не завершится успешно или не возвратит ошибку, не связанную с исключением связи, либо пока ошибки не будут возвращены для всех конечных точек из коллекции.  
   
- В следующем примере Если отправка в основную конечную точку с именем «Назначение» возвращает исключение связи, служба попытается отправить сообщение «сообщения». Если эта попытка также возвращает исключение связи, то служба маршрутизации попытается отправить сообщение в следующую конечную точку в коллекции.  
+ В следующем примере Если отправка в основную конечную точку с именем «Destination» возвращает исключение связи, служба попытается отправить сообщение в alternateServiceQueue «». Если эта попытка также возвращает исключение связи, то служба маршрутизации попытается отправить сообщение в следующую конечную точку в коллекции.  
   
 ```xml  
-<filterTables>  
-     <filterTable name="filterTable1">  
-          <add filterName="MatchAllFilter1" endpointName="Destination" backupList="backupEndpointList"/>  
-     </filterTable>  
-</filterTables>  
-<backupLists>  
-     <backupList name="backupEndpointList">  
-          <add endpointName="backupServiceQueue" />  
-          <add endpointName="alternateServiceQueue" />  
-     </backupList>  
-</backupLists>  
+<filterTables>
+  <filterTable name="filterTable1">
+    <add filterName="MatchAllFilter1"
+         endpointName="Destination"
+         backupList="backupEndpointList" />
+  </filterTable>
+</filterTables>
+<backupLists>
+  <backupList name="backupEndpointList">
+    <add endpointName="backupServiceQueue" />
+    <add endpointName="alternateServiceQueue" />
+  </backupList>
+</backupLists>
 ```  
   
 ## <a name="see-also"></a>См. также  

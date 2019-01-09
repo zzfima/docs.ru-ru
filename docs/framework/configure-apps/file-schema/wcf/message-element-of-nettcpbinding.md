@@ -2,12 +2,12 @@
 title: Элемент &lt;message&gt; &lt;netTcpBinding&gt;
 ms.date: 03/30/2017
 ms.assetid: 1d71edd9-c085-4c2e-b6d3-980c313366f9
-ms.openlocfilehash: 21c14c64648540eb7b6ecf00b0a37e6fc2800031
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7af8cd9d36b56093eee2b53873c0fe0775a33430
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839070"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146164"
 ---
 # <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>Элемент &lt;message&gt; &lt;netTcpBinding&gt;
 Определяет тип требований безопасности уровня сообщений для конечной точки, настроенной с [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
@@ -22,9 +22,8 @@ ms.locfileid: "48839070"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<message   
-      algorithmSuite=System.Servicemodel.Security.SecurityAlgorithmsuite  
-    clientCredentialType="None/Windows/UserName/Certificate/IssuedToken"/>  
+<message algorithmSuite="System.Servicemodel.Security.SecurityAlgorithmsuite"
+         clientCredentialType="None/Windows/UserName/Certificate/IssuedToken" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -73,7 +72,7 @@ ms.locfileid: "48839070"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание:|  
+|Элемент|Описание|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Определяет возможности безопасности для элемента <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   

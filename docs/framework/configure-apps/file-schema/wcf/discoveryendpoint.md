@@ -1,34 +1,34 @@
 ---
-title: '&lt;конечной точки discoveryEndpoint&gt;'
+title: '&lt;DiscoveryEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: fae2f48b-a635-4e4b-859d-a1432ac37e1c
-ms.openlocfilehash: 6a352fbfced08001f76dceaff283d6bca25f56f9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ab00a80904cdcd2844a44c154edb2e424633427b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747402"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145384"
 ---
-# <a name="ltdiscoveryendpointgt"></a>&lt;конечной точки discoveryEndpoint&gt;
+# <a name="ltdiscoveryendpointgt"></a>&lt;DiscoveryEndpoint&gt;
 
 Этот элемент конфигурации определяет стандартную конечную точку с фиксированным контрактом обнаружения. При добавлении в конфигурацию службы указывает, где необходимо следить за появлением сообщений обнаружения. При добавлении в клиентскую конфигурацию указывает, куда необходимо отправлять запросы обнаружения.  
   
 \<system.serviceModel >  
 \<standardEndpoints >  
   
-## <a name="syntax"></a>Синтаксис
-
-```xml
+## <a name="syntax"></a>Синтаксис  
+  
+```xml  
 <system.serviceModel>
   <standardEndpoints>
     <discoveryEndpoint>
-      <standardEndpoint discoveryMode="Adhoc/Managed" 
-                        discoveryVersion="WSDiscovery11/WSDiscoveryApril2005" 
-                        maxResponseDelay="Timespan" 
+      <standardEndpoint discoveryMode="Adhoc/Managed"
+                        discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
+                        maxResponseDelay="Timespan"
                         name="String" />
     </discoveryEndpoint>
   </standardEndpoints>
-</system.serviceModel>  
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Элементы и атрибуты
@@ -50,7 +50,7 @@ ms.locfileid: "32747402"
   
 ### <a name="parent-elements"></a>Родительские элементы
 
-| Элемент | Описание |  
+| Элемент | Описание: |  
 | ------- | ----------- |  
 | [\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md) | Коллекция стандартных конечных точек, одно или несколько свойств которых (адрес, привязка, контракт) являются фиксированными. |  
   
@@ -60,27 +60,27 @@ ms.locfileid: "32747402"
   
 Конфигурация стандартной конечной точки определена для каждой службы и не может совместно использоваться между службами. Если нужно использовать такую же конечную точку обнаружения для другой службы, следует добавить такую же конфигурацию в раздел этой службы.  
   
-```xml
-<services>  
+```xml  
+<services>
   <service name="CalculatorService"
            behaviorConfiguration="CalculatorServiceBehavior">
-    <endpoint binding="basicHttpBinding" 
-              address="calculator" 
-              contract="ICalculatorService" />  
-    <endpoint name="peerNetDiscovery"  
-              binding="peerTcpBinding"  
-              address="net.p2p://discoveryMesh/multicast"  
-              kind="discoveryEndpoint"  
-              endpointConfiguration="peerTcpDiscoveryEndpointConfiguration"  
-              bindingConfiguration="discoveryPeerTcpBindingConfig" />      
-  </service>  
-</services>  
-<standardEndpoints>  
-  <discoveryEndpoint>  
-    <standardEndpoint name="peerTcpDiscoveryEndpointConfiguration"                         
-                      version="WSDiscoveryApril2005" />  
-  </discoveryEndpoint>  
-</standardEndpoints>  
+    <endpoint binding="basicHttpBinding"
+              address="calculator"
+              contract="ICalculatorService" />
+    <endpoint name="peerNetDiscovery"
+              binding="peerTcpBinding"
+              address="net.p2p://discoveryMesh/multicast"
+              kind="discoveryEndpoint"
+              endpointConfiguration="peerTcpDiscoveryEndpointConfiguration"
+              bindingConfiguration="discoveryPeerTcpBindingConfig" />
+  </service>
+</services>
+<standardEndpoints>
+  <discoveryEndpoint>
+    <standardEndpoint name="peerTcpDiscoveryEndpointConfiguration"
+                      version="WSDiscoveryApril2005" />
+  </discoveryEndpoint>
+</standardEndpoints>
 ```  
   
 ## <a name="see-also"></a>См. также

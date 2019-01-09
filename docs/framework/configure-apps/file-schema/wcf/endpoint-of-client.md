@@ -2,12 +2,12 @@
 title: '&lt;endpoint&gt; для &lt;client&gt;'
 ms.date: 03/30/2017
 ms.assetid: de6238ae-bbf8-48e9-a1b5-e24c0bea8afa
-ms.openlocfilehash: f9a69483ab058823fd419edc84868e801b91d2c9
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 47b3599ed2d0868fcbc4a04a28936bcfe1c9c3f1
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748065"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147009"
 ---
 # <a name="ltendpointgt-of-ltclientgt"></a>&lt;endpoint&gt; для &lt;client&gt;
 Задает свойства контракта, привязки и адреса конечной точки канала, которая используется клиентами для подключения к конечным точкам службы на сервере.  
@@ -19,13 +19,15 @@ ms.locfileid: "32748065"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<endpoint address="String"  
-   behaviorConfiguration="String"  
-   binding="String"  
-   bindingConfiguration="String"  
-   contract="String"   endpointConfiguration="String"   kind="String"  
-   name="String"  
-</endpoint>  
+<endpoint address="String"
+          behaviorConfiguration="String"
+          binding="String"
+          bindingConfiguration="String"
+          contract="String"
+          endpointConfiguration="String"
+          kind="String"
+          name="String">
+</endpoint>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -46,7 +48,7 @@ ms.locfileid: "32748065"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<заголовки >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Коллекция заголовков адреса.|  
 |[\<удостоверение >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Удостоверение, обеспечивающее проверку подлинности конечной точки другими конечными точками, которые обмениваются с ней сообщениями.|  
@@ -61,12 +63,12 @@ ms.locfileid: "32748065"
  Далее приведен пример конфигурации конечной точки канала.  
   
 ```xml  
-<endpoint address="/HelloWorld/"  
-    bindingConfiguration="usingDefaults"  
-    name="MyBinding"  
-    binding="customBinding"  
-    contract="HelloWorld">  
-</endpoint>  
+<endpoint address="/HelloWorld/"
+          bindingConfiguration="usingDefaults"
+          name="MyBinding"
+          binding="customBinding"
+          contract="HelloWorld">
+</endpoint>
 ```  
   
 ## <a name="see-also"></a>См. также  

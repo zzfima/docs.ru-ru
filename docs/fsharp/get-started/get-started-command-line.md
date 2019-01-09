@@ -1,17 +1,17 @@
 ---
-title: Начало работы с F# с помощью средства командной строки
-description: Узнайте, как создать простое решение для нескольких проектов F# с помощью интерфейса командной строки .NET Core в любой операционной системе (Windows, macOs или Linux).
+title: Начало работы с F# с программами командной строки
+description: Узнайте, как создать простой многопроектное решение на платформе F# с помощью интерфейса командной строки .NET Core в любой операционной системе (Windows, macOs или Linux).
 ms.date: 03/26/2018
-ms.openlocfilehash: 8a82970f33c8bbe1b8cdd8fb6499b59b16d3cbf3
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.openlocfilehash: bc9b223fcf133ffe8b19d5284dcbd3c14a426235
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "45673913"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152103"
 ---
-# <a name="get-started-with-f-with-the-net-core-cli"></a>Начало работы с F# с помощью интерфейса командной строки .NET Core
+# <a name="get-started-with-f-with-the-net-core-cli"></a>Начало работы с F# с .NET Core CLI
 
-В этой статье рассматриваются, как вы можете начать работу с F# в любой операционной системе (Windows, macOS или Linux) с помощью интерфейса командной строки .NET Core. Проходит построение многопроектное решение с использованием библиотеки классов, которая вызывается коллекцией консольное приложение.
+В этой статье описывается, как вы можете начать работу с F# в любой операционной системе (Windows, macOS или Linux) с помощью интерфейса командной строки .NET Core. Проходит построение многопроектное решение с использованием библиотеки классов, которая вызывается коллекцией консольное приложение.
 
 ## <a name="prerequisites"></a>Предварительные требования
 
@@ -131,7 +131,7 @@ dotnet add src/App/App.fsproj reference src/Library/Library.fsproj
 dotnet sln add src/App/App.fsproj
 ```
 
-Восстановление зависимостей NuGet, `dotnet restore` ([см. Примечание](#dotnet-restore-note)) и запустите `dotnet build` для сборки проекта.
+Восстановление зависимостей NuGet, `dotnet restore` и запустите `dotnet build` для сборки проекта.
 
 Перейдите в каталог `src/App` консоли проекта и запустить проект передачи `Hello World` как аргументы:
 
@@ -151,4 +151,4 @@ I used to be World but now I'm ""World"" thanks to JSON.NET!
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Затем ознакомьтесь [обзор языка F#](../tour.md) Дополнительные сведения о различных функциях, F#.
+Затем ознакомьтесь [примером F# ](../tour.md) Дополнительные сведения о различных F# функции.

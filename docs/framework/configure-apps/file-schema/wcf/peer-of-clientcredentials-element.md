@@ -2,12 +2,12 @@
 title: '&lt;peer&gt; элемент для элемента &lt;clientCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 505bd987-0042-4622-b68e-94f439729d53
-ms.openlocfilehash: 9d63aaaa6404b791559d1288730098075f1fd8eb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9846a25a8df165f51290aa8a26f907d40b6b159f
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504487"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150569"
 ---
 # <a name="ltpeergt-of-ltclientcredentialsgt-element"></a>&lt;peer&gt; элемент для элемента &lt;clientCredentials&gt;
 Задает учетные данные, используемые при проверке подлинности одноранговых клиентов.  
@@ -22,11 +22,11 @@ ms.locfileid: "43504487"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<peer>  
-  <certificate/>  
-  <peerAuthentication/>  
-  <messageSenderAuthentication/>  
-</peer>  
+<peer>
+  <certificate />
+  <peerAuthentication />
+  <messageSenderAuthentication />
+</peer>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -37,7 +37,7 @@ ms.locfileid: "43504487"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<сертификат >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)|Задает сертификат X.509, используемый для подписи и шифрования сообщений для клиентов одноранговых сетей. .|  
 |[\<peerAuthentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)|Задает параметры проверки подлинности для одноранговых клиентов.|  
@@ -45,7 +45,7 @@ ms.locfileid: "43504487"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|Задает учетные данные, используемые для проверки подлинности клиента при подключении к службе.|  
   

@@ -2,12 +2,12 @@
 title: '&lt;reliableSession&gt;'
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: 6b8049e2c493a652405a93eed68f05438819aecb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 56cc48cd93020f37ac73b7f6b89130fdd1a3f7db
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751445"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150608"
 ---
 # <a name="ltreliablesessiongt"></a>&lt;reliableSession&gt;
 Определяет параметры протокола WS-Reliable Messaging. Когда этот элемент добавляется к пользовательской привязке, получаемый канал может поддерживать гарантии доставки только один раз.  
@@ -21,14 +21,14 @@ ms.locfileid: "32751445"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<reliableSession acknowledgementInterval="TimeSpan"  
-        flowControlEnabled="Boolean"   
-    inactivityTimeout="TimeSpan"  
-    maxPendingChannels="Integer"  
-    maxRetryCount="Integer"   
-        maxTransferWindowSize="Integer"  
-    reliableMessagingVersion="Default/WSReliableMessagingFebruary2005/WSReliableMessaging11"  
-    ordered="Boolean" />  
+<reliableSession acknowledgementInterval="TimeSpan"
+                 flowControlEnabled="Boolean"
+                 inactivityTimeout="TimeSpan"
+                 maxPendingChannels="Integer"
+                 maxRetryCount="Integer"
+                 maxTransferWindowSize="Integer"
+                 reliableMessagingVersion="Default/WSReliableMessagingFebruary2005/WSReliableMessaging11"
+                 ordered="Boolean" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -40,7 +40,7 @@ ms.locfileid: "32751445"
 |---------------|-----------------|  
 |acknowledgementInterval|Атрибут <xref:System.TimeSpan> задает максимальный временной интервал, в течение которого канал ожидает перед отправлением уведомления о сообщениях, которые уже приняты к этому времени. Значение по умолчанию - 00:00:0.2.|  
 |flowControlEnabled|Логическое значение, которое указывает, активировано ли расширенное управление потоком, то есть собственная реализация Microsoft управления потоком для WS-Reliable Messaging. Значение по умолчанию — `true`.|  
-|inactivityTimeout|Атрибут <xref:System.TimeSpan> указывает максимальную длительность, в течение которой канал позволяет другим участникам соединения не отправлять никаких сообщений, до закрытия канала с ошибкой. Значение по умолчанию - 00:10:00.<br /><br /> Под активностью канала понимается получение сообщений от приложения или инфраструктуры. Данное свойство задает максимальный промежуток времени, в течение которого поддерживается неактивный сеанс. Если период неактивности превышает установленное ограничение, сеанс прерывается инфраструктурой, и канал закрывается с ошибкой. **Примечание:** нет необходимости приложение может периодически отправлять сообщения, чтобы поддерживать соединение.|  
+|inactivityTimeout|Атрибут <xref:System.TimeSpan> указывает максимальную длительность, в течение которой канал позволяет другим участникам соединения не отправлять никаких сообщений, до закрытия канала с ошибкой. Значение по умолчанию - 00:10:00.<br /><br /> Под активностью канала понимается получение сообщений от приложения или инфраструктуры. Данное свойство задает максимальный промежуток времени, в течение которого поддерживается неактивный сеанс. Если период неактивности превышает установленное ограничение, сеанс прерывается инфраструктурой, и канал закрывается с ошибкой. **Примечание.**  Приложению не требуется периодически отправлять сообщения, чтобы поддерживать соединение.|  
 |maxPendingChannels|Целое число, задающее максимальное число каналов, ожидающих принятия на прослушивателе. Это значение должно быть в диапазоне от 1 до 16 384 включительно. Значение по умолчанию — 4.<br /><br /> Каналы находятся в режиме ожидания перед принятием. По достижении этого предела каналы больше не создаются. Вместо этого они переводятся в режим ожидания до тех пор, пока их число не снизится (по мере принятия ожидающих каналов). Этот предел задается отдельно для каждой фабрики.<br /><br /> Когда достигается пороговое значение и удаленное приложение пытается установить новый надежный сеанс, запрос отклоняется, и открытая операция, инициировавшая запрос, завершается с ошибкой. Данное ограничение не действует в отношении числа ожидающих исходящих каналов.|  
 |maxRetryCount|Целое число, которое определяет максимальное количество попыток повторной передачи надежным каналом сообщения, для которого не было получено подтверждение приема. Повторная передача осуществляется посредством вызова функции Send в основном канале.<br /><br /> Значение должно быть больше нуля. Значение по умолчанию — 8.<br /><br /> Значение должно целым числом больше нуля. Если подтверждение приема не будет получено после последней попытки повторной передачи, канал закрывается с ошибкой.<br /><br /> Сообщение считается переданным, если получатель подтвердил получение этого сообщения, отправив соответствующее подтверждение отправителю.<br /><br /> Если для переданного сообщения уведомление не было получено в течение отведенного времени, инфраструктура автоматически передает сообщение повторно. Количество попыток, предпринимаемых инфраструктурой для повторной передачи сообщения, не превышает того значения, которое задано данным свойством. Если подтверждение приема не будет получено после последней попытки повторной передачи, канал закрывается с ошибкой.<br /><br /> Инфраструктура использует алгоритм с экспоненциальной задержкой для определения времени повторной передачи на основании вычисленного среднего значения времени кругового пути. Задержка перед первой попыткой повторной передачи составляет 1 секунду, однако для каждой последующей попытки время задержки удваивается. Таким образом, временной интервал между первой и последней попытками составляет около 8,5 минут. Время первой повторной передачи определяется с учетом вычисленного значением времени кругового пути, соответственно изменяется общая длительность всех задержек. Это позволяет динамически адаптировать время между попытками повторной передачи в соответствии с условиями сети.|  
 |maxTransferWindowSize|Целое число, задающее максимальный размер буфера. Допустимые значения находятся в диапазоне от 1 до 4096 включительно.<br /><br /> Для клиента данный атрибут определяет максимальный размер буфера, используемого надежным каналом для хранения сообщений, получение которых еще не подтверждено получателем. Единицей квоты является одно сообщение. Если буфер полон, дальнейшее выполнение операций SEND блокируется.<br /><br /> Для получателя этот атрибут определяет максимальный размер буфера, используемого каналом для хранения входящих сообщений, которые еще не переданы приложению. Если буфер заполнен, поступающие сообщения автоматически отбрасываются получателем и требуют повторной передачи со стороны клиента.|  
@@ -67,56 +67,56 @@ ms.locfileid: "32751445"
  В следующем примере показано, как настраивать пользовательскую привязку с различными элементами транспорта и кодирования сообщений, а именно: с обеспечением надежных сеансов, которые поддерживают состояние клиента и задают гарантии соблюдения очередности доставки сообщений. Эта функция настраивается в файлах конфигурации приложения для клиента и службы. В следующем примере демонстрируется конфигурация службы.  
   
 ```xml  
-<?xml version="1.0" encoding="utf-8" ?>  
-<configuration>  
-  <system.serviceModel>  
-    <services>  
-      <service   
-          name="Microsoft.ServiceModel.Samples.CalculatorService"  
-          behaviorConfiguration="CalculatorServiceBehavior">  
-        <!-- This endpoint is exposed at the base address provided by host: http://localhost/servicemodelsamples/service.svc  -->  
-        <!-- specify customBinding binding and a binding configuration to use -->  
-        <endpoint address=""  
-                  binding="customBinding"  
-                  bindingConfiguration="Binding1"   
-                  contract="Microsoft.ServiceModel.Samples.ICalculator" />  
-        <!-- The mex endpoint is exposed at http://localhost/servicemodelsamples/service.svc/mex -->  
-        <endpoint address="mex"  
-                  binding="mexHttpBinding"  
-                  contract="IMetadataExchange" />  
-      </service>  
-    </services>  
-  
-    <!-- custom binding configuration - configures HTTP transport, reliable sessions -->  
-    <bindings>  
-      <customBinding>  
-        <binding name="Binding1">  
-          <reliableSession />  
-          <security authenticationMode="SecureConversation"  
-                     requireSecurityContextCancellation="true">  
-          </security>  
-          <compositeDuplex />  
-          <oneWay />  
-          <textMessageEncoding messageVersion="Soap12WSAddressing10" writeEncoding="utf-8" />  
-          <httpTransport authenticationScheme="Anonymous" bypassProxyOnLocal="false"  
-                        hostNameComparisonMode="StrongWildcard"   
-                        proxyAuthenticationScheme="Anonymous" realm=""   
-                        useDefaultWebProxy="true" />  
-        </binding>  
-      </customBinding>  
-    </bindings>  
-  
-    <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->  
-    <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="CalculatorServiceBehavior">  
-          <serviceMetadata httpGetEnabled="True"/>  
-          <serviceDebug includeExceptionDetailInFaults="False" />  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
-  </system.serviceModel>  
-</configuration>  
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <system.serviceModel>
+    <services>
+      <service name="Microsoft.ServiceModel.Samples.CalculatorService"
+               behaviorConfiguration="CalculatorServiceBehavior">
+        <!-- This endpoint is exposed at the base address provided by host: http://localhost/servicemodelsamples/service.svc -->
+        <!-- specify customBinding binding and a binding configuration to use -->
+        <endpoint address=""
+                  binding="customBinding"
+                  bindingConfiguration="Binding1"
+                  contract="Microsoft.ServiceModel.Samples.ICalculator" />
+        <!-- The mex endpoint is exposed at http://localhost/servicemodelsamples/service.svc/mex -->
+        <endpoint address="mex"
+                  binding="mexHttpBinding"
+                  contract="IMetadataExchange" />
+      </service>
+    </services>
+    <!-- custom binding configuration - configures HTTP transport, reliable sessions -->
+    <bindings>
+      <customBinding>
+        <binding name="Binding1">
+          <reliableSession />
+          <security authenticationMode="SecureConversation"
+                    requireSecurityContextCancellation="true">
+          </security>
+          <compositeDuplex />
+          <oneWay />
+          <textMessageEncoding messageVersion="Soap12WSAddressing10"
+                               writeEncoding="utf-8" />
+          <httpTransport authenticationScheme="Anonymous"
+                         bypassProxyOnLocal="false"
+                         hostNameComparisonMode="StrongWildcard"
+                         proxyAuthenticationScheme="Anonymous"
+                         realm=""
+                         useDefaultWebProxy="true" />
+        </binding>
+      </customBinding>
+    </bindings>
+    <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="CalculatorServiceBehavior">
+          <serviceMetadata httpGetEnabled="True" />
+          <serviceDebug includeExceptionDetailInFaults="False" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+  </system.serviceModel>
+</configuration>
 ```  
   
 ## <a name="see-also"></a>См. также  

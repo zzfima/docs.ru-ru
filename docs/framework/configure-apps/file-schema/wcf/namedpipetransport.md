@@ -2,12 +2,12 @@
 title: '&lt;namedPipeTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: 652cb551fb318d43d4284dbee48aeb994f056692
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bf9229411143345847247f36de07b5c014d3f259
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32746801"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149604"
 ---
 # <a name="ltnamedpipetransportgt"></a>&lt;namedPipeTransport&gt;
 Задает транспорт, принуждающий канал передавать сообщения с использованием именованных каналов, когда он включается в пользовательскую привязку.  
@@ -20,22 +20,22 @@ ms.locfileid: "32746801"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```xml
-<namedPipeTransport channelInitializationTimeout="TimeSpan"   
-                    connectionBufferSize="Integer"   
-                    hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"  
-                    manualAddressing="Boolean"   
-                    maxBufferPoolSize="Integer"  
-                    maxBufferSize="Integer"  
-                    maxOutputDelay="TimeSpan"  
-                    maxPendingAccepts="Integer"   
-                    maxPendingConnections="Integer"  
-                    maxReceivedMessageSize="Integer"   
-                    transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">  
-  <connectionPoolSettings groupName="String" 
-                          idleTimeout"TimeSpan"  
-                          maxOutboundConnectionsPerEndpopint="Integer" />  
-</namedPipeTransport>  
+```xml  
+<namedPipeTransport channelInitializationTimeout="TimeSpan"
+                    connectionBufferSize="Integer"
+                    hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"
+                    manualAddressing="Boolean"
+                    maxBufferPoolSize="Integer"
+                    maxBufferSize="Integer"
+                    maxOutputDelay="TimeSpan"
+                    maxPendingAccepts="Integer"
+                    maxPendingConnections="Integer"
+                    maxReceivedMessageSize="Integer"
+                    transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse">
+  <connectionPoolSettings groupName="String"
+                          idleTimeout="TimeSpan"
+                          maxOutboundConnectionsPerEndpopint="Integer" />
+</namedPipeTransport>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -46,20 +46,20 @@ ms.locfileid: "32746801"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
-|ChannelInitializationTimeout|Возвращает или задает <xref:System.TimeSpan> , определяет максимальное время, канал может находиться в состоянии инициализации перед отключением.|  
+|ChannelInitializationTimeout|Возвращает или задает <xref:System.TimeSpan> , определяет максимальное время канал может находиться в состоянии инициализации перед отключением.|  
 |ConnectionBufferSize|Возвращает или задает размер буфера, используемого для передачи фрагмента сериализованного сообщения от клиента серверу по сети.|  
 |hostNameComparisonMode|Возвращает или задает значение, указывающее, используется ли имя узла для доступа к службе при сопоставлении по универсальному коду ресурса (URI).|  
 |manualAddressing|Возвращает или задает значение, показывающее, требуется ли создание адреса сообщения вручную.|  
-|maxBufferPoolSize|Возвращает или задает максимальный размер в байтах, буферных пулов, используемых транспортом.|  
+|maxBufferPoolSize|Получает или задает максимальный размер в байтах, буферных пулов, используемых транспортом.|  
 |maxBufferSize|Возвращает или задает максимальный размер используемого буфера. Для потоковых сообщений это значение не должно быть меньше максимального возможного размера заголовков сообщения, считываемых в режиме буферизации.|  
 |maxOutputDelay|Возвращает или задает максимальный промежуток времени, в течение которого фрагмент сообщения или все сообщение может оставаться в буфере перед отправкой.|  
-|maxPendingAccepts|Возвращает или задает максимальное число каналов, служба может иметь ожидание прослушивателя для обработки входящих подключений к службе.|  
+|maxPendingAccepts|Возвращает или задает максимальное число каналов, служба может иметь ожидающих на прослушивателе для обработки входящих подключений к службе.|  
 |maxPendingConnections|Возвращает или задает максимальное число подключений, ожидающих распределения в службе.|  
 |maxReceivedMessageSize|Возвращает и задает максимально допустимый размер сообщения, в байтах, которые могут быть получены.|  
 |transferMode|Возвращает или задает значение, указывающее, следует ли помещать сообщения в буфер или передавать их потоком с использованием транспорта, ориентированного на подключение.|  
-|[\<connectionPoolSettings > для \<namedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|Задает дополнительные параметры пула подключений для привязки именованного канала.|  
+|[\<connectionPoolSettings > из \<namedPipeTransport >](../../../../../docs/framework/configure-apps/file-schema/wcf/connectionpoolsettings.md)|Задает дополнительные параметры пула подключений для привязки именованного канала.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   

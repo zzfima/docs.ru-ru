@@ -2,18 +2,18 @@
 title: '&lt;add&gt; для &lt;authorizationPolicies&gt;'
 ms.date: 03/30/2017
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-ms.openlocfilehash: 008f465134860141293776130ebd75cd39120f5e
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5f4afe0a0a72d7f45dd0ed38cbcc7a0d89d17d44
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753958"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148465"
 ---
 # <a name="ltaddgt-of-ltauthorizationpoliciesgt"></a>&lt;add&gt; для &lt;authorizationPolicies&gt;
 Задает политику авторизации для преобразования требований.  
   
  \<система. ServiceModel >  
-\<поведения >  
+\<варианты поведения >  
 \<поведение >  
 \<serviceAuthorization >  
 \<authorizationPolicies >  
@@ -22,9 +22,9 @@ ms.locfileid: "32753958"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<authorizationPolicies>  
-   <add policyType="String" />  
-</authorizationPolicies>  
+<authorizationPolicies>
+  <add policyType="String" />
+</authorizationPolicies>
 ```  
   
 ## <a name="type"></a>Тип  
@@ -44,12 +44,12 @@ ms.locfileid: "32753958"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<authorizationPolicies >](../../../../../docs/framework/configure-apps/file-schema/wcf/authorizationpolicies.md)|Задает коллекцию типов политики авторизации.|  
   
 ## <a name="remarks"></a>Примечания  
- Каждая политика авторизации содержит один обязательный атрибут `policyType`, который имеет строковый тип. Данный атрибут определяет политику авторизации, которая позволяет преобразовывать один набор входных требований в другой набор требований. В зависимости от этого может быть предоставлено управление доступом или отказано в предоставлении управления доступом. Дополнительные сведения о работе политику авторизации см. в разделе <xref:System.IdentityModel.Policy.IAuthorizationPolicy> и [политика авторизации](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
+ Каждая политика авторизации содержит один обязательный атрибут `policyType`, который имеет строковый тип. Данный атрибут определяет политику авторизации, которая позволяет преобразовывать один набор входных требований в другой набор требований. В зависимости от этого может быть предоставлено управление доступом или отказано в предоставлении управления доступом. Дополнительные сведения о работе политики авторизации см. в разделе <xref:System.IdentityModel.Policy.IAuthorizationPolicy> и [политики авторизации](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>  

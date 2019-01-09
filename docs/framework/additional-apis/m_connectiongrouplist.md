@@ -12,16 +12,16 @@ api_type:
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 25caec18f7d2c51f03028b52c1a4957bb1cd2589
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a764c74dc0927094675b0f5e0916a4ad29f04250
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742371"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151167"
 ---
 # <a name="servicepointmconnectiongrouplist-field"></a>ServicePoint.m\_ConnectionGroupList поля
 
-`ServicePoint.m_ConnectionGroupList` — <xref:System.Collections.Hashtable> групп соединения каждого поддерживая подключение для <xref:System.Net.ServicePoint>в URI.
+`ServicePoint.m_ConnectionGroupList` — <xref:System.Collections.Hashtable> подключения групп, каждая поддерживая подключение для <xref:System.Net.ServicePoint>в URI.
 
 ## <a name="syntax"></a>Синтаксис
   
@@ -30,14 +30,14 @@ private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> `ServicePoint.m_ConnectionGroupList` Поля является закрытым и не предназначены для непосредственного использования в коде.
+> `ServicePoint.m_ConnectionGroupList` Поле является закрытым и не предназначен для непосредственного использования в коде.
 > 
-> Корпорация Майкрософт не поддерживает использование этого поля в реальном приложении ни при каких обстоятельствах.
+> Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Net>
 
-**Сборка:** системы (в System.dll)
+**Сборка:** Системы (в System.dll)
 
-**Версии платформы .NET framework:** доступно с версии 2.0.
+**Версии платформы .NET framework:** Доступно с версии 2.0.

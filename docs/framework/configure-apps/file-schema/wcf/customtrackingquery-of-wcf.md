@@ -2,12 +2,12 @@
 title: '&lt;customTrackingQuery&gt; (WCF)'
 ms.date: 03/30/2017
 ms.assetid: 164446ae-8440-4b67-b217-6786cfae1e01
-ms.openlocfilehash: e13064afbd9f5dbc8d7216eb384001e1e005785c
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 234703e677f838dcdccdf857ba38b8729d25a488
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316237"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146385"
 ---
 # <a name="ltcustomtrackingquerygt-of-wcf"></a>&lt;customTrackingQuery&gt; (WCF)
 
@@ -25,7 +25,7 @@ ms.locfileid: "49316237"
   
 ## <a name="syntax"></a>Синтаксис  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -38,15 +38,15 @@ ms.locfileid: "49316237"
     </trackingProfile>
   </profiles>
 </tracking>
-```
-
+```  
+  
 ## <a name="attributes-and-elements"></a>Элементы и атрибуты  
 
 В следующих разделах описаны атрибуты, дочерние и родительские элементы.  
   
 ### <a name="attributes"></a>Атрибуты  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |`activityName`|Строка, задающая имя действия, сформировавшего запись отслеживания.|  
 |`name`|Строка, задающая имя выдаваемой пользовательской записи отслеживания.|  
@@ -57,7 +57,7 @@ ms.locfileid: "49316237"
 
 ### <a name="parent-elements"></a>Родительские элементы
 
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<customTrackingQueries >](customtrackingqueries-of-wcf.md)|Представляет коллекцию запросов, используемых для отслеживания событий, определенных в действиях кода.|
   

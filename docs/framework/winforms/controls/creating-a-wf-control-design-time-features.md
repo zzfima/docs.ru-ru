@@ -1,5 +1,5 @@
 ---
-title: 'Пошаговое руководство: Создание элемента управления Windows Forms, в котором используются преимущества возможностей Visual Studio, применяемых во время разработки'
+title: Пошаговое руководство. Создание элемента управления Windows Forms, используются преимущества функций Visual Studio во время разработки
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: aa30842ca72bb50767513cf387f59e29e40574e8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cb102ec9b3a7eb4673f42c2ca5ad876e049ff59c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865869"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146281"
 ---
-# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Пошаговое руководство: Создание элемента управления Windows Forms, в котором используются преимущества возможностей Visual Studio, применяемых во время разработки
+# <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Пошаговое руководство. Создание элемента управления Windows Forms, используются преимущества функций Visual Studio во время разработки
 Среда разработки для пользовательского элемента управления можно улучшить путем создания пользовательских сопоставленный конструктор.  
   
  В этом пошаговом руководстве описывается создание пользовательского конструктора для пользовательского элемента управления. Вы реализуете `MarqueeControl` тип и связанный класс конструктора, называется `MarqueeControlRootDesigner`.  
@@ -60,7 +60,7 @@ ms.locfileid: "43865869"
   
  ![Порядок MarqueeControl](../../../../docs/framework/winforms/controls/media/demomarqueecontrol.gif "DemoMarqueeControl")  
   
- Полный пример кода, см. в разделе [как: создание Windows Forms элемента управления, принимает преимуществ разработки функций](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
+ Полный пример кода, см. в разделе [как: Создание элемента управления Windows Forms, используются преимущества функций разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120)).  
   
 > [!NOTE]
 >  Отображаемые диалоговые окна и команды меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
@@ -84,18 +84,18 @@ ms.locfileid: "43865869"
   
 1.  Добавьте проект библиотеки элементов управления Windows Forms в решение. Назовите проект «MarqueeControlLibrary.»  
   
-2.  С помощью **обозревателе решений**, удалите элемент управления проекта по умолчанию, удаляя исходный файл с именем «UserControl1.cs» или «UserControl1.vb» в зависимости от выбранного языка. Дополнительные сведения см. в разделе [NIB: Практическое: удаление, Delete и исключить элементы](https://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+2.  С помощью **обозревателе решений**, удалите элемент управления проекта по умолчанию, удаляя исходный файл с именем «UserControl1.cs» или «UserControl1.vb» в зависимости от выбранного языка. Дополнительные сведения см. в разделе [Как Удалить, удаление и исключить элементы](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100)).  
   
 3.  Добавьте новый <xref:System.Windows.Forms.UserControl> элемент `MarqueeControlLibrary` проекта. Предоставить новый исходный файл базовым именем «MarqueeControl.»  
   
-4.  С помощью **обозревателе решений**, создайте новую папку в `MarqueeControlLibrary` проекта. Дополнительные сведения см. в разделе [NIB: Практическое: Добавление новых элементов проекта](https://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Назовите новую папку «Design».  
+4.  С помощью **обозревателе решений**, создайте новую папку в `MarqueeControlLibrary` проекта. Дополнительные сведения см. в разделе [Как Добавление новых элементов проекта](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100)). Назовите новую папку «Design».  
   
 5.  Щелкните правой кнопкой мыши **разработки** папку и добавьте новый класс. Присвойте файлу источника, базовым именем «MarqueeControlRootDesigner.»  
   
 6.  Необходимо использовать типы из сборки System.Design, поэтому добавьте этот справочник, чтобы `MarqueeControlLibrary` проекта.  
   
     > [!NOTE]
-    >  Чтобы использовать сборки System.Design, ваш проект должен быть предназначен для полной версии платформы .NET Framework, а не клиентский профиль .NET Framework. Чтобы изменить целевую платформу, см. в разделе [как: Определение целевой версии платформы .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).  
+    >  Чтобы использовать сборки System.Design, ваш проект должен быть предназначен для полной версии платформы .NET Framework, а не клиентский профиль .NET Framework. Чтобы изменить целевую платформу, см. в разделе [как: определить целевую версию .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework).  
   
 ## <a name="referencing-the-custom-control-project"></a>Ссылки на проект пользовательского элемента управления  
  Вы воспользуетесь `MarqueeControlTest` проекта для тестирования пользовательского элемента управления. Тестовый проект узнает об пользовательского элемента управления при добавлении в проект ссылку на `MarqueeControlLibrary` сборки.  
@@ -168,7 +168,7 @@ using MarqueeControlLibrary;
 5.  Выполните построение проекта.  
   
 ## <a name="setting-up-the-project-for-design-time-debugging"></a>Настройка проекта для отладки во время разработки  
- При разработке пользовательского взаимодействия во время разработки, его будет необходимо отлаживать элементы управления и компоненты. Есть простой способ настроить проект для отладки во время разработки. Дополнительные сведения см. в разделе [Пошаговое руководство: Отладка элементов управления Windows Forms Custom во время разработки](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
+ При разработке пользовательского взаимодействия во время разработки, его будет необходимо отлаживать элементы управления и компоненты. Есть простой способ настроить проект для отладки во время разработки. Дополнительные сведения см. в разделе [Пошаговое руководство: Отладка пользовательских Windows Forms элементы управления во время разработки](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md).  
   
 #### <a name="to-set-up-the-project-for-design-time-debugging"></a>Чтобы настроить проект для отладки во время разработки  
   
@@ -211,7 +211,7 @@ using MarqueeControlLibrary;
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#260](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#260)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#260](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#260)]  
   
-2.  Переопределите метод <xref:System.Windows.Forms.Control.OnLayout%2A>.  
+2.  Переопределите метод <xref:System.Windows.Forms.Control.OnLayout%2A> .  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#270](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueecontrol.cs#270)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#270](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrol.vb#270)]  
@@ -459,7 +459,7 @@ using MarqueeControlLibrary;
 ## <a name="adding-designer-verbs-to-your-custom-designer"></a>Добавление команд конструктора в пользовательский конструктор  
  Команда конструктора является команды меню, связанная с обработчиком событий. Команды конструктора, добавляемые в контекстное меню компонента во время разработки. Дополнительные сведения см. в разделе <xref:System.ComponentModel.Design.DesignerVerb>.  
   
- Вы добавите две команды в конструкторы: **запуска теста** и **Остановить тест**. Эти команды можно просмотреть его поведение во время выполнения `MarqueeControl` во время разработки. Эти команды будут добавлены к `MarqueeControlRootDesigner`.  
+ Вы добавите две команды в конструкторы: **Запуск теста** и **остановить тестовый**. Эти команды можно просмотреть его поведение во время выполнения `MarqueeControl` во время разработки. Эти команды будут добавлены к `MarqueeControlRootDesigner`.  
   
  При **запуска теста** — вызывается, обработчик событий команды вызовет `StartMarquee` метод `MarqueeControl`. При **Остановить тест** будет вызван, будет вызывать обработчик событий команды `StopMarquee` метод `MarqueeControl`. Реализация `StartMarquee` и `StopMarquee` методы вызывать эти методы в элементах управления, которые реализуют `IMarqueeWidget`, поэтому любые содержащиеся `IMarqueeWidget` элементы управления также будет участвовать в тесте.  
   
@@ -476,7 +476,7 @@ using MarqueeControlLibrary;
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#590](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueecontrolrootdesigner.vb#590)]  
   
 ## <a name="creating-a-custom-uitypeeditor"></a>Создание пользовательского редактора UITypeEditor  
- При создании пользовательского взаимодействия во время разработки для пользователей, часто желательно изменить взаимодействие с окном свойств. Это можно сделать, создав <xref:System.Drawing.Design.UITypeEditor>. Дополнительные сведения см. в разделе [как: Создание редактора типов пользовательского интерфейса](https://msdn.microsoft.com/library/292c6e33-8d85-4012-9b51-05835a6f6dfd).  
+ При создании пользовательского взаимодействия во время разработки для пользователей, часто желательно изменить взаимодействие с окном свойств. Это можно сделать, создав <xref:System.Drawing.Design.UITypeEditor>. Дополнительные сведения см. в разделе [Как Создание редактора типов пользовательского интерфейса](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fd3kt7d5(v=vs.120)).  
   
  `MarqueeBorder` Элемент управления предоставляет несколько свойств в окне «Свойства». Два из этих свойств `MarqueeSpinDirection` и `MarqueeLightShape` , представлены перечислениями. Чтобы проиллюстрировать использование редактора типов пользовательского интерфейса, `MarqueeLightShape` свойство будет иметь сопоставленный <xref:System.Drawing.Design.UITypeEditor> класса.  
   
@@ -494,12 +494,12 @@ using MarqueeControlLibrary;
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#92](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#92)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#92](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#92)]  
   
-4.  Переопределите метод <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>. Эта реализация возвращает <xref:System.Drawing.Design.UITypeEditorEditStyle.DropDown>, который среда разработки способ отображения `LightShapeEditor`.  
+4.  Переопределите метод <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A> . Эта реализация возвращает <xref:System.Drawing.Design.UITypeEditorEditStyle.DropDown>, который среда разработки способ отображения `LightShapeEditor`.  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#93](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#93)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#93](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#93)]  
   
-5.  Переопределите метод <xref:System.Drawing.Design.UITypeEditor.EditValue%2A>. Эта реализация запрашивает среду проектирования для <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> объекта. Если успешно, он создает `LightShapeSelectionControl`. <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A> Метод вызывается для запуска `LightShapeEditor`. Возвращаемое значение из этого вызова возвращается в среду разработки.  
+5.  Переопределите метод <xref:System.Drawing.Design.UITypeEditor.EditValue%2A> . Эта реализация запрашивает среду проектирования для <xref:System.Windows.Forms.Design.IWindowsFormsEditorService> объекта. Если успешно, он создает `LightShapeSelectionControl`. <xref:System.Windows.Forms.Design.IWindowsFormsEditorService.DropDownControl%2A> Метод вызывается для запуска `LightShapeEditor`. Возвращаемое значение из этого вызова возвращается в среду разработки.  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#94](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborder.cs#94)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#94](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborder.vb#94)]  
@@ -561,7 +561,7 @@ private IWindowsFormsEditorService editorService;
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#360](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#360)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#360](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#360)]  
   
-6.  Переопределите метод <xref:System.Windows.Forms.Control.OnPaint%2A>. Эта реализация будет рисовать квадрат с заливкой и круг. Он также выделяет выбранное значение путем рисования границы вокруг одной формы или другого.  
+6.  Переопределите метод <xref:System.Windows.Forms.Control.OnPaint%2A> . Эта реализация будет рисовать квадрат с заливкой и круг. Он также выделяет выбранное значение путем рисования границы вокруг одной формы или другого.  
   
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#380](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#380)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#380](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#380)]  
@@ -628,19 +628,19 @@ private void stopButton_Click(object sender, System.EventArgs e)
   
 -   Дальнейшая настройка поведения во время разработки. Попробуйте затенить больше свойств, чем <xref:System.Windows.Forms.Control.Enabled%2A> и <xref:System.Windows.Forms.Control.Visible%2A>, и можно добавить новые свойства. Добавьте новые команды конструктора для упрощения общих задач, таких как закрепление дочерних элементов управления.  
   
--   Лицензии `MarqueeControl`. Дополнительные сведения см. в разделе [как: лицензии компонентов и элементов управления](https://msdn.microsoft.com/library/8e66c1ed-a445-4b26-8185-990b6e2bbd57).  
+-   Лицензии `MarqueeControl`. Дополнительные сведения см. в разделе [Как Лицензирование компонентов и элементов управления](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120)).  
   
 -   Контролировать порядок сериализации элементов управления и способ создания кода для них. Дополнительные сведения см. в разделе [динамического кода Создание и компиляция исходного](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md).  
   
-## <a name="see-also"></a>См. также  
- <xref:System.Windows.Forms.UserControl>  
- <xref:System.Windows.Forms.Design.ParentControlDesigner>  
- <xref:System.Windows.Forms.Design.DocumentDesigner>  
- <xref:System.ComponentModel.Design.IRootDesigner>  
- <xref:System.ComponentModel.Design.DesignerVerb>  
- <xref:System.Drawing.Design.UITypeEditor>  
- <xref:System.ComponentModel.BackgroundWorker>  
- [Практическое руководство. Создание элемента управления Windows Forms, в котором используются преимущества функций, применяемых во время разработки](https://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c)  
- [Расширения поддержки времени разработки](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [Пользовательские конструкторы](https://msdn.microsoft.com/library/ca11988e-d38e-44d8-a05d-71362ae7844d)  
- [Библиотека .NET фигуры: Пример конструктора](http://windowsforms.net/articles/shapedesigner.aspx)
+## <a name="see-also"></a>См. также
+
+- <xref:System.Windows.Forms.UserControl>
+- <xref:System.Windows.Forms.Design.ParentControlDesigner>
+- <xref:System.Windows.Forms.Design.DocumentDesigner>
+- <xref:System.ComponentModel.Design.IRootDesigner>
+- <xref:System.ComponentModel.Design.DesignerVerb> 
+- <xref:System.Drawing.Design.UITypeEditor>
+- <xref:System.ComponentModel.BackgroundWorker>
+- [Практическое руководство. Создание элемента управления Windows Forms, используются преимущества функций времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [Расширения поддержки времени разработки](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120)) 
+- [Пользовательские конструкторы](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h51z5c0x(v=vs.120))

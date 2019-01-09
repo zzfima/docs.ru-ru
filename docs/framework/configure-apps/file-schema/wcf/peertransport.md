@@ -2,12 +2,12 @@
 title: '&lt;peerTransport&gt;'
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
-ms.openlocfilehash: df192c6a602aa073f48fab4229b4be3fbeb2349d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 76c100c0ec793d6dc4e7e5385f9dcf4521d0039e
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748624"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151947"
 ---
 # <a name="ltpeertransportgt"></a>&lt;peerTransport&gt;
 Определяет одноранговый транспорт для пользовательской привязки.  
@@ -21,14 +21,13 @@ ms.locfileid: "32748624"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<peerTransport   
-    listenIpAddress="String"  
-    maxBufferPoolSize="Integer"  
-    maxReceivedMessageSize="Integer"  
-    port="Integer"  
-        <security>  
-    </security>  
-/>  
+<peerTransport listenIpAddress="String"
+               maxBufferPoolSize="Integer"
+               maxReceivedMessageSize="Integer"
+               port="Integer">
+  <security>
+  </security>
+</peerTransport>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -45,13 +44,13 @@ ms.locfileid: "32748624"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|Определяет параметры безопасности для данного транспорта. Это элемент типа <xref:System.ServiceModel.Configuration.PeerSecurityElement>.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   

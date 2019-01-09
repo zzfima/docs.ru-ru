@@ -2,12 +2,12 @@
 title: '&lt;endpointDiscovery&gt;'
 ms.date: 03/30/2017
 ms.assetid: 70812717-888a-4748-9640-0df6715ff029
-ms.openlocfilehash: 0dde8150632c5d8a7bcea3dbeffe70b380d3a322
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 58bab9aef2e20d762c303e8b698214125531a136
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183845"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150920"
 ---
 # <a name="ltendpointdiscoverygt"></a>&lt;endpointDiscovery&gt;
 Указывает различные параметры обнаружения для конечной точки, такие как возможность обнаружения, области и любые пользовательские модули для ее метаданных.  
@@ -32,7 +32,7 @@ ms.locfileid: "50183845"
       </endpointDiscovery>
     </behavior>
   </endpointBehaviors>
-</behaviors>  
+</behaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -46,7 +46,7 @@ ms.locfileid: "50183845"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<области >](../../../../../docs/framework/configure-apps/file-schema/wcf/scopes.md)|Коллекция URI областей для этой конечной точки. С одной конечной точкой можно связать несколько URI областей.|  
 |[\<расширения >](../../../../../docs/framework/configure-apps/file-schema/wcf/extensions.md) [из \<endpointDiscovery >]|Коллекция элементов XML, позволяющая указывать пользовательские метаданные, публикуемые для конечной точки.|  
@@ -54,7 +54,7 @@ ms.locfileid: "50183845"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
 |||  
@@ -68,40 +68,40 @@ ms.locfileid: "50183845"
  В следующем примере конфигурации определены области фильтрации и метаданные расширения, которые будут опубликованы для конечной точки.  
   
 ```xml  
-<services>  
-  <service name="CalculatorService"  
-           behaviorConfiguration="CalculatorServiceBehavior">  
-     <endpoint binding="basicHttpBinding"  
-              address="calculator"  
-              contract="ICalculatorService"  
-              behaviorConfiguration="calculatorEndpointBehavior" />  
-  </service>  
-</services>  
-<behaviors>  
-  <serviceBehaviors>  
-    <behavior name="CalculatorServiceBehavior">  
-      <serviceDiscovery />  
-    </behavior>  
-  </serviceBehaviors>  
-  <endpointBehaviors>  
-    <behavior name="calculatorEndpointBehavior">  
-      <endpointDiscovery enabled="true">  
-        <scopes>  
-          <add scope="http://contoso/test1"/>  
-          <add scope="http://contoso/test2"/>  
-        </scopes>  
-        <extensions>  
-          <e:Publisher xmlns:e="http://example.org">  
-            <e:Name>The Example Organization</e:Name>  
-            <e:Address>One Example Way, ExampleTown, EX 12345</e:Address>  
-            <e:Contact>support@example.org</e:Contact>  
-          </e:Publisher>  
-          <AnotherCustomMetadata>Custom Metadata</AnotherCustomMetadata>  
-        </extensions>  
-      </endpointDiscovery>  
-    </behavior>  
-  </endpointBehaviors>  
-</behaviors>  
+<services>
+  <service name="CalculatorService"
+           behaviorConfiguration="CalculatorServiceBehavior">
+    <endpoint binding="basicHttpBinding"
+              address="calculator"
+              contract="ICalculatorService"
+              behaviorConfiguration="calculatorEndpointBehavior" />
+  </service>
+</services>
+<behaviors>
+  <serviceBehaviors>
+    <behavior name="CalculatorServiceBehavior">
+      <serviceDiscovery />
+    </behavior>
+  </serviceBehaviors>
+  <endpointBehaviors>
+    <behavior name="calculatorEndpointBehavior">
+      <endpointDiscovery enabled="true">
+        <scopes>
+          <add scope="http://contoso/test1" />
+          <add scope="http://contoso/test2" />
+        </scopes>
+        <extensions>
+          <e:Publisher xmlns:e="http://example.org">
+            <e:Name>The Example Organization</e:Name>
+            <e:Address>One Example Way, ExampleTown, EX 12345</e:Address>
+            <e:Contact>support@example.org</e:Contact>
+          </e:Publisher>
+          <AnotherCustomMetadata>Custom Metadata</AnotherCustomMetadata>
+        </extensions>
+      </endpointDiscovery>
+    </behavior>
+  </endpointBehaviors>
+</behaviors>
 ```  
   
 ## <a name="see-also"></a>См. также  

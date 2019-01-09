@@ -2,12 +2,12 @@
 title: '&lt;sslStreamSecurity&gt;'
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: ecc67c2b3972ccb5bc8a1fe9ae9b400292642d53
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b081a577280f4f2a52ef3b5ece76f519f9701faa
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184495"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145111"
 ---
 # <a name="ltsslstreamsecuritygt"></a>&lt;sslStreamSecurity&gt;
 Предоставляет пользовательский элемент привязки, поддерживающий безопасность канала с помощью потока SSL.  
@@ -21,7 +21,8 @@ ms.locfileid: "50184495"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<sslStreamSecurity requireClientCertificate="Boolean"      sslProtocols="Ssl3|Tls|Tls11|Tls12" />  
+<sslStreamSecurity requireClientCertificate="Boolean"
+                   sslProtocols="Ssl3|Tls|Tls11|Tls12" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -39,7 +40,7 @@ ms.locfileid: "50184495"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   

@@ -2,33 +2,36 @@
 title: Элемент &lt;endpoint&gt;
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: ef436acca40eaac135a54042b62abd76ec55febf
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: ea95e2d16027869778e99cb217d5ea4f7ba7d21a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749508"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147490"
 ---
 # <a name="ltendpointgt-element"></a>Элемент &lt;endpoint&gt;
 Задает свойства привязки, контракта и адреса для конечной точки службы, которая используется для предоставления доступа к службам.  
   
  \<система. ServiceModel >  
-\<Служба >  
+\<службы >  
 \<Конечная точка >  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<endpoint address="String"  
-   behaviorConfiguration="String"  
-   binding="String"  
-   bindingConfiguration="String"  
-   bindingName="String"  
-   bindingNamespace="String"  
-   contract="String"  
-   endpointConfiguration="String"   isSystemEndpoint="Boolean"   kind="String"   listenUriMode="Explicit/Unique"  
-   listenUri="Uri"  
-</endpoint>  
+<endpoint address="String"
+          behaviorConfiguration="String"
+          binding="String"
+          bindingConfiguration="String"
+          bindingName="String"
+          bindingNamespace="String"
+          contract="String"
+          endpointConfiguration="String"
+          isSystemEndpoint="Boolean"
+          kind="String"
+          listenUriMode="Explicit/Unique"
+          listenUri="Uri">
+</endpoint>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -48,43 +51,42 @@ ms.locfileid: "32749508"
 |endpointConfiguration|Строка, указывающая имя стандартной конечной точки, задаваемой атрибутом `kind`, который ссылается на дополнительные сведения конфигурации этой конечной точки. Такое же имя должно быть задано в разделе `<standardEndpoints>`.|  
 |isSystemEndpoint|Логическое значение, указывающее, является ли конечная точка конечной точкой инфраструктуры.|  
 |kind|Строка, указывающая тип применяемой стандартной конечной точки. Этот тип должен быть зарегистрирован в разделе `<extensions>` или в файле machine.config. Если ничего не указано, будет создана обычная конечная точка службы.|  
-|listenUriMode|Указывает способ обработки транспортом значения `ListenUri`, предоставленного для ожидания передачи данных службой. Допустимы следующие значения:<br /><br /> -Явные<br />-Уникальный<br /><br /> Значение по умолчанию - Explicit.|  
+|listenUriMode|Указывает способ обработки транспортом значения `ListenUri`, предоставленного для ожидания передачи данных службой. Допустимы следующие значения:<br /><br /> -Явные<br />-Unique<br /><br /> Значение по умолчанию - Explicit.|  
 |listenUri|Строка, указывающая URI, по которому конечная точка службы ожидает передачи данных. Значение по умолчанию - пустая строка.|  
 |имя|Необязательный атрибут. Строка, указывающая имя конечной точки службы. По умолчанию используется объединение имени привязки и имя описания контракта. Службы могут иметь несколько конечных точек, поэтому атрибут конечной точки `name` отличается от имени службы.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<заголовки >](../../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)|Коллекция заголовков адреса.|  
 |[\<удостоверение >](../../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)|Удостоверение, обеспечивающее проверку подлинности конечной точки другими конечными точками, которые обмениваются с ней сообщениями.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
-|[\<Служба >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Раздел конфигурации, определяющий список конечных точек, к которым может подключаться клиент.|  
+|[\<службы >](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|Раздел конфигурации, определяющий список конечных точек, к которым может подключаться клиент.|  
   
 ## <a name="example"></a>Пример  
  Ниже приведен пример конфигурации конечной точки службы.  
   
 ```xml  
-<endpoint   
-    address="/HelloWorld/"  
-    bindingConfiguration="usingDefaults"  
-    bindingName="MyBinding"  
-    binding="customBinding"  
-    contract="HelloWorld">  
-    <Headers>  
-       <Region xmlns="http://tempuri.org/">EastCoast</Region>  
-       <Member xmlns="http://tempuri.org/">Gold</Member>  
-    </Headers>  
-</endpoint>  
+<endpoint address="/HelloWorld/"
+          bindingConfiguration="usingDefaults"
+          bindingName="MyBinding"
+          binding="customBinding"
+          contract="HelloWorld">
+  <headers>
+    <region xmlns="http://tempuri.org/">EastCoast</region>
+    <member xmlns="http://tempuri.org/">Gold</member>
+  </headers>
+</endpoint>
 ```  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Configuration.ServiceEndpointElement>  
  <xref:System.ServiceModel.EndpointAddress>  
  <xref:System.ServiceModel.Description.ServiceEndpoint>  
- [Конечные точки: адреса, привязки и контракты](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [Практическое руководство. Создание конечной точки службы в конфигурации](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+ [Конечные точки: Адреса, привязки и контракты](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Практическое руководство. Создать конечную точку службы в конфигурации](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

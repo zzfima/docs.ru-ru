@@ -2,18 +2,18 @@
 title: Элемент &lt;issuerChannelBehaviors&gt;
 ms.date: 03/30/2017
 ms.assetid: f7378673-8e9b-45b2-98d1-cf5dccdd8c40
-ms.openlocfilehash: 7e5b8ace06a224db3abcc6b9d0ec87ccbc1a6a77
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 49a149975e406376a00ddeb43fd30f4c4834a0a0
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747061"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146814"
 ---
 # <a name="ltissuerchannelbehaviorsgt-element"></a>Элемент &lt;issuerChannelBehaviors&gt;
-Содержит коллекцию поведений конечной точки клиента Windows Communication Foundation (WCF), (определенных в конфигурации) для использования при взаимодействии с заданными службами маркеров. Не могут содержать заданные поведения [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элементов.  
+Содержит коллекцию поведений конечной точки клиента "Windows Communication Foundation (WCF)" (определенных в конфигурации) для использования при взаимодействии с заданными службами маркеров безопасности. Определенным поведениям не могут содержать [ \<clientCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md) элементов.  
   
  \<система. ServiceModel >  
-\<поведения >  
+\<варианты поведения >  
 раздел endpointBehaviors  
 \<поведение >  
 \<clientCredentials >  
@@ -23,10 +23,10 @@ ms.locfileid: "32747061"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<issuerChannelBehaviors>  
-      <add behaviorConfiguraton="string"  
-                issuerAddress="string" />  
-</issuerChannelBehaviors>  
+<issuerChannelBehaviors>
+  <add behaviorConfiguraton="string"
+       issuerAddress="string" />
+</issuerChannelBehaviors>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -37,13 +37,13 @@ ms.locfileid: "32747061"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-issuerchannelbehaviors.md)|Добавляет поведение в коллекцию.|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<issuedToken >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)|Задает пользовательский маркер, используемый для проверки подлинности клиента при подключении к службе.|  
   
