@@ -1,31 +1,44 @@
 ---
 title: Оператор &gt;=. Справочник по C#
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 12/18/2018
 f1_keywords:
 - '>=_CSharpKeyword'
 helpviewer_keywords:
 - greater than or equal to operator (>=) [C#]
 - '>= operator [C#]'
 ms.assetid: 0db4dcaf-56a3-4884-a7ad-35f64978a58d
-ms.openlocfilehash: 9bea9034d2998a589fefca19f41444c9aced6e13
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 34437742d33cff97e53c6dfb163df083e80d41f3
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237718"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53655937"
 ---
-# <a name="gt-operator-c-reference"></a><span data-ttu-id="b72b2-102">Оператор &gt;= (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="b72b2-102">&gt;= Operator (C# Reference)</span></span>
-<span data-ttu-id="b72b2-103">Все числовые типы и типы перечисления определяют оператор отношения "больше или равно" (`>=`), который возвращает `true`, если первый операнд больше второго или равен ему. В противном случае возвращается `false`.</span><span class="sxs-lookup"><span data-stu-id="b72b2-103">All numeric and enumeration types define a "greater than or equal" relational operator, `>=` that returns `true` if the first operand is greater than or equal to the second, `false` otherwise.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="b72b2-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="b72b2-104">Remarks</span></span>  
- <span data-ttu-id="b72b2-105">Определяемые пользователем типы могут перегружать оператор `>=`.</span><span class="sxs-lookup"><span data-stu-id="b72b2-105">User-defined types can overload the `>=` operator.</span></span> <span data-ttu-id="b72b2-106">Дополнительные сведения см. в статье [operator](../../../csharp/language-reference/keywords/operator.md).</span><span class="sxs-lookup"><span data-stu-id="b72b2-106">For more information, see [operator](../../../csharp/language-reference/keywords/operator.md).</span></span> <span data-ttu-id="b72b2-107">В случае перегрузки `>=` также необходимо перегружать [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md).</span><span class="sxs-lookup"><span data-stu-id="b72b2-107">If `>=` is overloaded, [<=](../../../csharp/language-reference/operators/less-than-equal-operator.md) must also be overloaded.</span></span> <span data-ttu-id="b72b2-108">Операции с целыми типами обычно разрешены и для перечислений.</span><span class="sxs-lookup"><span data-stu-id="b72b2-108">Operations on integral types are generally allowed on enumeration.</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="b72b2-109">Пример</span><span class="sxs-lookup"><span data-stu-id="b72b2-109">Example</span></span>  
- [!code-csharp[csRefOperators#39](../../../csharp/language-reference/operators/codesnippet/CSharp/greater-than-equal-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="b72b2-110">См. также</span><span class="sxs-lookup"><span data-stu-id="b72b2-110">See Also</span></span>
+# <a name="gt-operator-c-reference"></a><span data-ttu-id="5e178-102">Оператор &gt;= (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="5e178-102">&gt;= Operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="b72b2-111">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="b72b2-111">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="b72b2-112">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="b72b2-112">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="b72b2-113">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="b72b2-113">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="5e178-103">Оператор отношения "больше или равно" `>=` возвращает `true`, если его первый операнд больше или равен второму. В противном случае возвращается `false`.</span><span class="sxs-lookup"><span data-stu-id="5e178-103">The "greater than or equal" relational operator `>=` returns `true` if its first operand is greater than or equal to its second operand, `false` otherwise.</span></span> <span data-ttu-id="5e178-104">Оператор `>=` поддерживают все числовые типы и типы перечисления.</span><span class="sxs-lookup"><span data-stu-id="5e178-104">All numeric and  enumeration types support the `>=` operator.</span></span> <span data-ttu-id="5e178-105">Если операнды имеют одинаковый тип [enum](../keywords/enum.md), сравниваются соответствующие значения базового целочисленного типа.</span><span class="sxs-lookup"><span data-stu-id="5e178-105">For operands of the same [enum](../keywords/enum.md) type, the corresponding values of the underlying integral type are compared.</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="5e178-106">Если для операторов отношения `==`, `>`, `<`, `>=` и `<=` любой из операндов не является числом (<xref:System.Double.NaN?displayProperty=nameWithType> или <xref:System.Single.NaN?displayProperty=nameWithType>), результат операции имеет значение `false`.</span><span class="sxs-lookup"><span data-stu-id="5e178-106">For relational operators `==`, `>`, `<`, `>=`, and `<=`, if any of the operands is not a number (<xref:System.Double.NaN?displayProperty=nameWithType> or <xref:System.Single.NaN?displayProperty=nameWithType>) the result of operation is `false`.</span></span> <span data-ttu-id="5e178-107">Это означает, что значение `NaN` не больше, не меньше и не равно любому другому значению `double` (или `float`).</span><span class="sxs-lookup"><span data-stu-id="5e178-107">That means that the `NaN` value is neither greater than, less than, nor equal to any other `double` (or `float`) value.</span></span> <span data-ttu-id="5e178-108">Дополнительные сведения и примеры см. в справочных статьях по <xref:System.Double.NaN?displayProperty=nameWithType> или <xref:System.Single.NaN?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="5e178-108">For more information and examples, see the <xref:System.Double.NaN?displayProperty=nameWithType> or <xref:System.Single.NaN?displayProperty=nameWithType> reference article.</span></span>
+
+<span data-ttu-id="5e178-109">В следующем примере иллюстрируется использование оператора `>=`.</span><span class="sxs-lookup"><span data-stu-id="5e178-109">The following example demonstrates the usage of the `>=` operator:</span></span>
+
+[!code-csharp-interactive[greater than or equal example](~/samples/snippets/csharp/language-reference/operators/GreaterAndLessOperatorsExamples.cs#GreaterOrEqual)]
+
+## <a name="operator-overloadability"></a><span data-ttu-id="5e178-110">Возможность перегрузки оператора</span><span class="sxs-lookup"><span data-stu-id="5e178-110">Operator overloadability</span></span>
+
+<span data-ttu-id="5e178-111">Определяемые пользователем типы могут [перегружать](../keywords/operator.md) оператор `>=`.</span><span class="sxs-lookup"><span data-stu-id="5e178-111">User-defined types can [overload](../keywords/operator.md) the `>=` operator.</span></span> <span data-ttu-id="5e178-112">Если тип перегружает оператор "больше или равно" `>=`, он также должен перегружать [оператор "меньше или равно"](less-than-equal-operator.md) `<=`.</span><span class="sxs-lookup"><span data-stu-id="5e178-112">If a type overloads the "greater than or equal" operator `>=`, it must also overload the ["less than or equal" operator](less-than-equal-operator.md) `<=`.</span></span>
+
+## <a name="c-language-specification"></a><span data-ttu-id="5e178-113">Спецификация языка C#</span><span class="sxs-lookup"><span data-stu-id="5e178-113">C# language specification</span></span>
+
+<span data-ttu-id="5e178-114">Дополнительные сведения см. в разделе [Операторы отношения и проверки типа](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) в статье по [спецификации языка C#](../language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="5e178-114">For more information, see the [Relational and type-testing operators](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) section of the [C# language specification](../language-specification/index.md).</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="5e178-115">См. также</span><span class="sxs-lookup"><span data-stu-id="5e178-115">See also</span></span>
+
+- [<span data-ttu-id="5e178-116">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="5e178-116">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="5e178-117">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="5e178-117">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="5e178-118">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="5e178-118">C# Operators</span></span>](index.md)
+- [<span data-ttu-id="5e178-119">Оператор ></span><span class="sxs-lookup"><span data-stu-id="5e178-119">> Operator</span></span>](greater-than-operator.md)
+- [<span data-ttu-id="5e178-120">Оператор ==</span><span class="sxs-lookup"><span data-stu-id="5e178-120">== Operator</span></span>](equality-comparison-operator.md)
+- <xref:System.IComparable%601?displayProperty=nameWithType>
