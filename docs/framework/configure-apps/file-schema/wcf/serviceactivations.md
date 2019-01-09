@@ -2,71 +2,71 @@
 title: '&lt;serviceActivations&gt;'
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
-ms.openlocfilehash: c62f2bd1a34aca31ea9f9d5de17840f2967b269c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 82422716482eafe996534e3bf1a94b4c7a604a6d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748533"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145124"
 ---
-# <a name="ltserviceactivationsgt"></a><span data-ttu-id="043df-102">&lt;serviceActivations&gt;</span><span class="sxs-lookup"><span data-stu-id="043df-102">&lt;serviceActivations&gt;</span></span>
-<span data-ttu-id="043df-103">Элемент конфигурации, позволяющий добавлять параметры, определяющие параметры активации виртуальной службы, которые сопоставляются с типами службы Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="043df-103">A configuration element that allows you to add settings that define virtual service activation settings that map to your Windows Communication Foundation (WCF) service types.</span></span> <span data-ttu-id="043df-104">Это позволяет активировать службы, расположенные в WAS/IIS, без SVC-файла.</span><span class="sxs-lookup"><span data-stu-id="043df-104">This makes it possible to activate services hosted in WAS/IIS without an .svc file.</span></span>  
+# <a name="ltserviceactivationsgt"></a><span data-ttu-id="28437-102">&lt;serviceActivations&gt;</span><span class="sxs-lookup"><span data-stu-id="28437-102">&lt;serviceActivations&gt;</span></span>
+<span data-ttu-id="28437-103">Элемент конфигурации, позволяющий добавлять параметры, определяющие параметры активации виртуальной службы, которые сопоставляются с типами службы Windows Communication Foundation (WCF).</span><span class="sxs-lookup"><span data-stu-id="28437-103">A configuration element that allows you to add settings that define virtual service activation settings that map to your Windows Communication Foundation (WCF) service types.</span></span> <span data-ttu-id="28437-104">Это позволяет активировать службы, расположенные в WAS/IIS, без SVC-файла.</span><span class="sxs-lookup"><span data-stu-id="28437-104">This makes it possible to activate services hosted in WAS/IIS without an .svc file.</span></span>  
   
- <span data-ttu-id="043df-105">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="043df-105">\<system.ServiceModel></span></span>  
-<span data-ttu-id="043df-106">\<serviceHostingEnvironment ></span><span class="sxs-lookup"><span data-stu-id="043df-106">\<serviceHostingEnvironment></span></span>  
-<span data-ttu-id="043df-107">\<serviceActivations ></span><span class="sxs-lookup"><span data-stu-id="043df-107">\<serviceActivations></span></span>  
+ <span data-ttu-id="28437-105">\<система. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="28437-105">\<system.ServiceModel></span></span>  
+<span data-ttu-id="28437-106">\<serviceHostingEnvironment ></span><span class="sxs-lookup"><span data-stu-id="28437-106">\<serviceHostingEnvironment></span></span>  
+<span data-ttu-id="28437-107">\<serviceActivations ></span><span class="sxs-lookup"><span data-stu-id="28437-107">\<serviceActivations></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="043df-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="043df-108">Syntax</span></span>  
-  
-```xml  
-<serviceHostingEnvironment>   
-   <serviceActivations>  
-      <add factory="String"  
-           service="String"/>  
-   </serviceActivations>  
-</serviceHostingEnvironment>  
-```  
-  
-## <a name="attributes-and-elements"></a><span data-ttu-id="043df-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="043df-109">Attributes and Elements</span></span>  
- <span data-ttu-id="043df-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="043df-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
-  
-### <a name="attributes"></a><span data-ttu-id="043df-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="043df-111">Attributes</span></span>  
- <span data-ttu-id="043df-112">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="043df-112">None.</span></span>  
-  
-### <a name="child-elements"></a><span data-ttu-id="043df-113">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="043df-113">Child Elements</span></span>  
-  
-|<span data-ttu-id="043df-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="043df-114">Element</span></span>|<span data-ttu-id="043df-115">Описание</span><span class="sxs-lookup"><span data-stu-id="043df-115">Description</span></span>|  
-|-------------|-----------------|  
-|[<span data-ttu-id="043df-116">\<add></span><span class="sxs-lookup"><span data-stu-id="043df-116">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-serviceactivations.md)|<span data-ttu-id="043df-117">Добавляет элемент конфигурации, который задает активацию приложения службы.</span><span class="sxs-lookup"><span data-stu-id="043df-117">Adds a configuration element that specifies the activation of a service application.</span></span>|  
-  
-### <a name="parent-elements"></a><span data-ttu-id="043df-118">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="043df-118">Parent Elements</span></span>  
-  
-|<span data-ttu-id="043df-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="043df-119">Element</span></span>|<span data-ttu-id="043df-120">Описание</span><span class="sxs-lookup"><span data-stu-id="043df-120">Description</span></span>|  
-|-------------|-----------------|  
-|[<span data-ttu-id="043df-121">\<serviceHostingEnvironment ></span><span class="sxs-lookup"><span data-stu-id="043df-121">\<serviceHostingEnvironment></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|<span data-ttu-id="043df-122">Определяет, какой тип среда размещения служб создает для конкретного транспорта.</span><span class="sxs-lookup"><span data-stu-id="043df-122">Defines the type the service hosting environment instantiates for a particular transport.</span></span>|  
-  
-## <a name="remarks"></a><span data-ttu-id="043df-123">Примечания</span><span class="sxs-lookup"><span data-stu-id="043df-123">Remarks</span></span>  
- <span data-ttu-id="043df-124">В следующем примере показано, как настроить параметры активации в файле web.config.</span><span class="sxs-lookup"><span data-stu-id="043df-124">The following example shows how to configure activation settings within your web.config file.</span></span>  
+## <a name="syntax"></a><span data-ttu-id="28437-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="28437-108">Syntax</span></span>  
   
 ```xml  
-<configuration>  
-  <system.serviceModel>  
-    <serviceHostingEnvironment>  
-      <serviceActivations>  
-        <add service="GreetingService"/>  
-      </serviceActivations>  
-    </serviceHostingEnvironment>  
-  </system.serviceModel>  
-</configuration>  
+<serviceHostingEnvironment>
+  <serviceActivations>
+    <add factory="String"
+         service="String" />
+  </serviceActivations>
+</serviceHostingEnvironment>
 ```  
   
- <span data-ttu-id="043df-125">Использование этой конфигурации позволяет активировать GreetingService без SVC-файла.</span><span class="sxs-lookup"><span data-stu-id="043df-125">Using this configuration, you can activate the GreetingService without using an .svc file.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="28437-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="28437-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="28437-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="28437-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
- <span data-ttu-id="043df-126">Следует отметить, что `<serviceHostingEnvironment>` является конфигурацией на уровне приложения.</span><span class="sxs-lookup"><span data-stu-id="043df-126">Note that `<serviceHostingEnvironment>` is an application level configuration.</span></span> <span data-ttu-id="043df-127">Необходимо разместить файл `web.config`, содержащий конфигурацию в корневом каталоге виртуального приложения.</span><span class="sxs-lookup"><span data-stu-id="043df-127">You have to place the `web.config` containing the configuration under the root of the virtual Application.</span></span> <span data-ttu-id="043df-128">Помимо этого, `serviceHostingEnvironment` является наследуемым разделом machinetoApplication.</span><span class="sxs-lookup"><span data-stu-id="043df-128">In addition, `serviceHostingEnvironment` is a machinetoApplication inheritable section.</span></span> <span data-ttu-id="043df-129">Если зарегистрировать одну службу в корневом каталоге компьютера, каждая служба в приложении унаследует эту службу.</span><span class="sxs-lookup"><span data-stu-id="043df-129">If you register a single service in the root of the machine, every service in the application will inherit this service.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="28437-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="28437-111">Attributes</span></span>  
+ <span data-ttu-id="28437-112">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="28437-112">None.</span></span>  
   
- <span data-ttu-id="043df-130">Активация на основе конфигурации поддерживает активацию как по протоколу HTTP, так и по протоколу, отличному от HTTP.</span><span class="sxs-lookup"><span data-stu-id="043df-130">Configuration-based activation supports activation over both http and non-http protocol.</span></span> <span data-ttu-id="043df-131">Требует расширений в relatativeAddress, т.е. SVC, XOML или XAMLX.</span><span class="sxs-lookup"><span data-stu-id="043df-131">It requires extensions in the relatativeAddress i.e. .svc, .xoml or .xamlx.</span></span> <span data-ttu-id="043df-132">Можно сопоставить пользовательские расширения с известными поставщиками buildProvider, что впоследствии позволит активировать службу через любое расширение.</span><span class="sxs-lookup"><span data-stu-id="043df-132">You can map your own extensions to the know buildProviders, which will then enable you to activate service over any extension.</span></span> <span data-ttu-id="043df-133">При возникновении конфликта раздел `<serviceActivations>` переопределяет записи в SVC-файле.</span><span class="sxs-lookup"><span data-stu-id="043df-133">Upon conflict, the `<serviceActivations>` section overrides .svc registrations.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="28437-113">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="28437-113">Child Elements</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="043df-134">См. также</span><span class="sxs-lookup"><span data-stu-id="043df-134">See Also</span></span>  
+|<span data-ttu-id="28437-114">Элемент</span><span class="sxs-lookup"><span data-stu-id="28437-114">Element</span></span>|<span data-ttu-id="28437-115">Описание:</span><span class="sxs-lookup"><span data-stu-id="28437-115">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="28437-116">\<add></span><span class="sxs-lookup"><span data-stu-id="28437-116">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-serviceactivations.md)|<span data-ttu-id="28437-117">Добавляет элемент конфигурации, который задает активацию приложения службы.</span><span class="sxs-lookup"><span data-stu-id="28437-117">Adds a configuration element that specifies the activation of a service application.</span></span>|  
+  
+### <a name="parent-elements"></a><span data-ttu-id="28437-118">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="28437-118">Parent Elements</span></span>  
+  
+|<span data-ttu-id="28437-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="28437-119">Element</span></span>|<span data-ttu-id="28437-120">Описание:</span><span class="sxs-lookup"><span data-stu-id="28437-120">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="28437-121">\<serviceHostingEnvironment ></span><span class="sxs-lookup"><span data-stu-id="28437-121">\<serviceHostingEnvironment></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)|<span data-ttu-id="28437-122">Определяет, какой тип среда размещения служб создает для конкретного транспорта.</span><span class="sxs-lookup"><span data-stu-id="28437-122">Defines the type the service hosting environment instantiates for a particular transport.</span></span>|  
+  
+## <a name="remarks"></a><span data-ttu-id="28437-123">Примечания</span><span class="sxs-lookup"><span data-stu-id="28437-123">Remarks</span></span>  
+ <span data-ttu-id="28437-124">В следующем примере показано, как настроить параметры активации в файле web.config.</span><span class="sxs-lookup"><span data-stu-id="28437-124">The following example shows how to configure activation settings within your web.config file.</span></span>  
+  
+```xml  
+<configuration>
+  <system.serviceModel>
+    <serviceHostingEnvironment>
+      <serviceActivations>
+        <add service="GreetingService" />
+      </serviceActivations>
+    </serviceHostingEnvironment>
+  </system.serviceModel>
+</configuration>
+```  
+  
+ <span data-ttu-id="28437-125">Использование этой конфигурации позволяет активировать GreetingService без SVC-файла.</span><span class="sxs-lookup"><span data-stu-id="28437-125">Using this configuration, you can activate the GreetingService without using an .svc file.</span></span>  
+  
+ <span data-ttu-id="28437-126">Следует отметить, что `<serviceHostingEnvironment>` является конфигурацией на уровне приложения.</span><span class="sxs-lookup"><span data-stu-id="28437-126">Note that `<serviceHostingEnvironment>` is an application level configuration.</span></span> <span data-ttu-id="28437-127">Необходимо разместить файл `web.config`, содержащий конфигурацию в корневом каталоге виртуального приложения.</span><span class="sxs-lookup"><span data-stu-id="28437-127">You have to place the `web.config` containing the configuration under the root of the virtual Application.</span></span> <span data-ttu-id="28437-128">Помимо этого, `serviceHostingEnvironment` является наследуемым разделом machinetoApplication.</span><span class="sxs-lookup"><span data-stu-id="28437-128">In addition, `serviceHostingEnvironment` is a machinetoApplication inheritable section.</span></span> <span data-ttu-id="28437-129">Если зарегистрировать одну службу в корневом каталоге компьютера, каждая служба в приложении унаследует эту службу.</span><span class="sxs-lookup"><span data-stu-id="28437-129">If you register a single service in the root of the machine, every service in the application will inherit this service.</span></span>  
+  
+ <span data-ttu-id="28437-130">Активация на основе конфигурации поддерживает активацию как по протоколу HTTP, так и по протоколу, отличному от HTTP.</span><span class="sxs-lookup"><span data-stu-id="28437-130">Configuration-based activation supports activation over both http and non-http protocol.</span></span> <span data-ttu-id="28437-131">Требует расширений в relatativeAddress, т.е. SVC, XOML или XAMLX.</span><span class="sxs-lookup"><span data-stu-id="28437-131">It requires extensions in the relatativeAddress i.e. .svc, .xoml or .xamlx.</span></span> <span data-ttu-id="28437-132">Можно сопоставить пользовательские расширения с известными поставщиками buildProvider, что впоследствии позволит активировать службу через любое расширение.</span><span class="sxs-lookup"><span data-stu-id="28437-132">You can map your own extensions to the know buildProviders, which will then enable you to activate service over any extension.</span></span> <span data-ttu-id="28437-133">При возникновении конфликта раздел `<serviceActivations>` переопределяет записи в SVC-файле.</span><span class="sxs-lookup"><span data-stu-id="28437-133">Upon conflict, the `<serviceActivations>` section overrides .svc registrations.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="28437-134">См. также</span><span class="sxs-lookup"><span data-stu-id="28437-134">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ServiceActivationElementCollection>  
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>
