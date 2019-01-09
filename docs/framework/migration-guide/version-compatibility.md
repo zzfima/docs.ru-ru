@@ -34,7 +34,7 @@ ms.locfileid: "48845545"
 </configuration>  
 ```  
   
- Дополнительные сведения см. в разделе [Практическое руководство. Настройка в приложении поддержки .NET Framework 4 или 4](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).  
+ Дополнительные сведения см. в разделе [Практическое руководство. Настройка в приложении поддержки .NET Framework 4 или 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md).  
   
 ## <a name="version-compatibility-for-components"></a>Совместимость версий компонентов  
  Приложение может определять версию платформы .NET Framework, в которой оно запускается, однако компонент не может. Компоненты и библиотеки классов загружаются в контексте конкретного приложения и, следовательно, автоматически запускаются в той версии .NET Framework, в которой запускается это приложение.  
