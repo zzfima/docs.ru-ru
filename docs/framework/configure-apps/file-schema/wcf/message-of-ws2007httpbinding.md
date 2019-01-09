@@ -2,12 +2,12 @@
 title: '&lt;message&gt; для &lt;ws2007HttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 9ffd8db6-84a8-4b38-a9fe-2cb1a87a1c97
-ms.openlocfilehash: d3b8b2bae4b28b58a24e32cc1e6927d0ed940af1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: efd2edd96e695216f8c31128b6cf670668cd0da8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873194"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148504"
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;message&gt; для &lt;ws2007HttpBinding&gt;
 Определяет параметры безопасности уровня сообщений для [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) элемент.  
@@ -22,18 +22,17 @@ ms.locfileid: "48873194"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<ws2007HttpBinding>  
- <binding >  
-  <security>  
-   <message clientCredentialType =  
-    "None/Windows/UserName/Certificate/IssuedToken"  
-    establishSecurityContext="Boolean"  
-    negotiateServiceCredential="Boolean"  
-    algorithmSuite= Enumeration. See algorithmSuite Attribute below.  
-    defaultProtectionLevel="None/Sign/EncryptionAndSign" />  
-  </security>  
- </binding>  
-</ws2007HttpBinding>  
+<ws2007HttpBinding>
+  <binding>
+    <security>
+      <message clientCredentialType="None/Windows/UserName/Certificate/IssuedToken"
+               establishSecurityContext="Boolean"
+               negotiateServiceCredential="Boolean"
+               algorithmSuite="Enumeration. See algorithmSuite Attribute below."
+               defaultProtectionLevel="None/Sign/EncryptionAndSign" />
+    </security>
+  </binding>
+</ws2007HttpBinding>
 ```  
   
 ## <a name="type"></a>Тип  

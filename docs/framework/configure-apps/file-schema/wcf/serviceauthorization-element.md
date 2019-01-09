@@ -2,18 +2,18 @@
 title: Элемент &lt;serviceAuthorization&gt;
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
-ms.openlocfilehash: cd5cb072f424927615b6e87d9193a9c200a8c48b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6c69d10eb2f6cdf4546dd5895d196723417f5494
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751458"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146008"
 ---
 # <a name="ltserviceauthorizationgt-element"></a>Элемент &lt;serviceAuthorization&gt;
 Задает параметры авторизации доступа к операциям службы.  
   
  \<система. ServiceModel >  
-\<поведения >  
+\<варианты поведения >  
 \<serviceBehaviors >  
 \<поведение >  
 \<serviceAuthorization >  
@@ -21,15 +21,14 @@ ms.locfileid: "32751458"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<serviceAuthorization  
-     impersonateCallerForAllOperations="Boolean"  
-      principalPermissionMode="None/UseWindowsGroups/UseAspNetRoles/Custom"  
-      roleProviderName="String"  
-      serviceAuthorizationManagerType="String" />  
-      <authorizationPolicies>  
-         <add policyType="String" />  
-      </authorizationPolicies>  
-</serviceAuthorization>  
+<serviceAuthorization impersonateCallerForAllOperations="Boolean"
+                      principalPermissionMode="None/UseWindowsGroups/UseAspNetRoles/Custom"
+                      roleProviderName="String"
+                      serviceAuthorizationManagerType="String">
+  <authorizationPolicies>
+    <add policyType="String" />
+  </authorizationPolicies>
+</serviceAuthorization>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -40,7 +39,7 @@ ms.locfileid: "32751458"
 |Атрибут|Описание|  
 |---------------|-----------------|  
 |impersonateCallerForAllOperations|Логическое значение, которое определяет, должны ли все операции службы олицетворять вызывающий объект. Значение по умолчанию — `false`.<br /><br /> Если конкретная операция службы олицетворяет вызывающий объект, контекст потока переключается на контекст вызывающего объекта перед выполнением указанной службы.|  
-|principalPermissionMode|Определяет участников, используемых для выполнения операций на сервере. В эти значения входят:<br /><br /> — None<br />-«Usewindowsgroups»<br />-UseAspNetRoles<br />-Custom<br /><br /> Значение по умолчанию - «UseWindowsGroups». Это значение типа <xref:System.ServiceModel.Description.PrincipalPermissionMode>. Дополнительные сведения об использовании этого атрибута см. в разделе [как: ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
+|principalPermissionMode|Определяет участников, используемых для выполнения операций на сервере. В эти значения входят:<br /><br /> -None<br />-UseWindowsGroups<br />-UseAspNetRoles<br />-Custom<br /><br /> Значение по умолчанию - «UseWindowsGroups». Это значение типа <xref:System.ServiceModel.Description.PrincipalPermissionMode>. Дополнительные сведения об использовании этого атрибута см. в разделе [как: Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md).|  
 |roleProviderName|Строка, указывающая имя поставщика роли, который предоставляет сведения о роли для приложения Windows Communication Foundation (WCF). Значение по умолчанию - пустая строка.|  
 |ServiceAuthorizationManagerType|Строка, содержащая имя типа диспетчера авторизации служб. Дополнительные сведения см. в разделе <xref:System.ServiceModel.ServiceAuthorizationManager>.|  
   
@@ -52,7 +51,7 @@ ms.locfileid: "32751458"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Содержит коллекцию параметров для поведения службы.|  
   
@@ -62,40 +61,39 @@ ms.locfileid: "32751458"
  Атрибут `principalPermissionMode` указывает группы пользователей, которые следует использовать при авторизации использования защищенного метода. Значение по умолчанию - `UseWindowsGroups`. Оно указывает, что при попытке доступа к ресурсу поиск удостоверения выполняется в таких группах Windows, как «Администраторы» или «Пользователи». Можно также указать `UseAspNetRoles` для использования поставщика пользовательской роли, который настроен в \<system.web > элемента, как показано в следующем коде.  
   
 ```xml  
-<system.web>  
-  <membership defaultProvider="SqlProvider"   
-   userIsOnlineTimeWindow="15">  
-     <providers>  
-       <clear />  
-       <add   
-          name="SqlProvider"   
-          type="System.Web.Security.SqlMembershipProvider"   
-          connectionStringName="SqlConn"  
-          applicationName="MembershipProvider"  
-          enablePasswordRetrieval="false"  
-          enablePasswordReset="false"  
-          requiresQuestionAndAnswer="false"  
-          requiresUniqueEmail="true"  
-          passwordFormat="Hashed" />  
-     </providers>  
-   </membership>  
-  <!-- Other configuration code not shown.-->  
-</system.web>  
+<system.web>
+  <membership defaultProvider="SqlProvider"
+              userIsOnlineTimeWindow="15">
+    <providers>
+      <clear />
+      <add name="SqlProvider"
+           type="System.Web.Security.SqlMembershipProvider"
+           connectionStringName="SqlConn"
+           applicationName="MembershipProvider"
+           enablePasswordRetrieval="false"
+           enablePasswordReset="false"
+           requiresQuestionAndAnswer="false"
+           requiresUniqueEmail="true"
+           passwordFormat="Hashed" />
+    </providers>
+  </membership>
+  <!-- Other configuration code not shown. -->
+</system.web>
 ```  
   
  В следующем примере показано использование элемента `roleProviderName` с атрибутом `principalPermissionMode`.  
   
 ```xml  
-<behaviors>  
-   <behavior name="ServiceBehaviour">  
-     <serviceAuthorization principalPermissionMode ="UseAspNetRoles"   
-                           roleProviderName ="SqlProvider" />  
-   </behavior>   
-<!-- Other configuration code not shown. -->  
-</behaviors>  
+<behaviors>
+  <behavior name="ServiceBehaviour">
+    <serviceAuthorization principalPermissionMode ="UseAspNetRoles"
+                          roleProviderName ="SqlProvider" />
+  </behavior>
+  <!-- Other configuration code not shown. -->
+</behaviors>
 ```  
   
- Подробный пример использования этого элемента конфигурации см. в разделе [авторизации доступа к операциям службы](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md) и [политика авторизации](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
+ Подробный пример использования этого элемента конфигурации, см. в разделе [авторизации доступа к операциям службы](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md) и [политики авторизации](../../../../../docs/framework/wcf/samples/authorization-policy.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>  
@@ -103,5 +101,5 @@ ms.locfileid: "32751458"
  [Поведения безопасности](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)  
  [Авторизация доступа к операциям службы](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)  
  [Практическое руководство. Создание пользовательского диспетчера авторизации для службы](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ [Практическое руководство. Ограничение доступа с использованием класса PrincipalPermissionAttribute](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  [Политика авторизации](../../../../../docs/framework/wcf/samples/authorization-policy.md)

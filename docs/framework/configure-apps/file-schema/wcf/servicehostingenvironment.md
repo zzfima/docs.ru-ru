@@ -2,35 +2,37 @@
 title: '&lt;serviceHostingEnvironment&gt;'
 ms.date: 03/30/2017
 ms.assetid: 4f8a7c4f-e735-4987-979a-b74fcdae2652
-ms.openlocfilehash: 1d9edec2c5bbddefe575952d591416353d603d33
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: eee81f774382bf9bac3caaada0ae144e933cb630
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354324"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150322"
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Этот элемент определяет тип, который среда размещения служб создает для определенного транспорта. Если этот элемент является пустым, используется тип, применяемый по умолчанию. Этот элемент может применяться только на уровне файлов конфигурации приложения или компьютера.  
   
  \<система. ServiceModel >  
-\<ServiceHostingEnvironment >  
+\<serviceHostingEnvironment >  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<serviceHostingEnvironment aspNetCompatibilityEnabled="Boolean" 
-                           minFreeMemoryPercentageToActivateService="Integer" 
+<serviceHostingEnvironment aspNetCompatibilityEnabled="Boolean"
+                           minFreeMemoryPercentageToActivateService="Integer"
                            multipleSiteBindingsEnabled="Boolean">
   <baseAddressPrefixFilters>
     <add prefix="string" />
   </baseAddressPrefixFilters>
   <serviceActivations>
-    <add factory="String" service="String" />
+    <add factory="String"
+         service="String" />
   </serviceActivations>
   <transportConfigurationTypes>
-    <add name="String" transportConfigurationType="String" />
+    <add name="String"
+         transportConfigurationType="String" />
   </transportConfigurationTypes>
-</serviceHostingEnvironment>  
+</serviceHostingEnvironment>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -40,13 +42,13 @@ ms.locfileid: "33354324"
   
 |Атрибут|Описание|  
 |---------------|-----------------|  
-|aspNetCompatibilityEnabled|Логическое значение, указывающее, включен ли режим совместимости ASP.NET для текущего приложения. Значение по умолчанию — `false`.<br /><br /> Если значение этого атрибута `true`, запросы к службам Windows Communication Foundation (WCF) проходят через конвейер ASP.NET HTTP, и обмен данными по протоколам, отличным от HTTP запрещена. Дополнительные сведения см. в разделе [службы WCF и ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
-|minFreeMemoryPercentageToActivateService|Целое число, указывающее минимальный объем свободной памяти, который должен быть доступен системе перед активацией службы WCF. **Предупреждение:** указания этого атрибута вместе с частичным доверием в файле web.config службы WCF, приведет к <xref:System.Security.SecurityException> при запуске службы.|  
-|multipleSiteBindingsEnabled|Логическое значение, которое определяет, разрешается ли использование нескольких привязок IIS для одного узла.<br /><br /> Службы IIS состоят из веб-узлов, являющихся контейнерами виртуальных приложений, содержащих виртуальные каталоги. Доступ к приложению на узле можно осуществлять через одну или несколько привязок IIS. Привязка IIS предоставляет два блока данных: протокол привязки и данные привязки. Протокол привязки определяет схему, посредством которой осуществляется связь, а данные привязки содержат сведения, используемые для доступа к узлу. Примером протокола привязки является HTTP, в котором данные привязки могут содержать IP-адрес, порт, заголовок узла и т. п.<br /><br /> IIS поддерживает задание нескольких привязок IIS для каждого узла, что позволяет использовать несколько базовых адресов для каждой схемы. Тем не менее службы Windows Communication Foundation (WCF), размещаемая на узле разрешает привязку только к одному базовому адресу для каждой схемы.<br /><br /> Чтобы включить несколько привязок IIS для каждого узла для службы Windows Communication Foundation (WCF), установите этому атрибуту значение `true`. Следует иметь в виду, что привязки к нескольким узлам поддерживаются только в протоколе HTTP. Адрес конечной точки в файле конфигурации должен быть полным URI.|  
+|aspNetCompatibilityEnabled|Логическое значение, указывающее, включен ли режим совместимости ASP.NET для текущего приложения. Значение по умолчанию — `false`.<br /><br /> Если этот атрибут имеет значение `true`, запросы к службам Windows Communication Foundation (WCF), проходят через конвейер ASP.NET HTTP, и обмен данными по протоколам, отличным от HTTP запрещена. Дополнительные сведения см. в разделе [службы WCF и ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md).|  
+|minFreeMemoryPercentageToActivateService|Целое число, указывающее минимальный объем свободной памяти, который должен быть доступен системе перед активацией службы WCF. **Внимание!**  Указание этого атрибута вместе с частичным доверием в файле web.config службы WCF, приведет к <xref:System.Security.SecurityException> при запуске службы.|  
+|multipleSiteBindingsEnabled|Логическое значение, которое определяет, разрешается ли использование нескольких привязок IIS для одного узла.<br /><br /> Службы IIS состоят из веб-узлов, являющихся контейнерами виртуальных приложений, содержащих виртуальные каталоги. Доступ к приложению на узле можно осуществлять через одну или несколько привязок IIS. Привязка IIS предоставляет два блока данных: протокол привязки и данные привязки. Протокол привязки определяет схему, посредством которой осуществляется связь, а данные привязки содержат сведения, используемые для доступа к узлу. Примером протокола привязки является HTTP, в котором данные привязки могут содержать IP-адрес, порт, заголовок узла и т. п.<br /><br /> IIS поддерживает задание нескольких привязок IIS для каждого узла, что позволяет использовать несколько базовых адресов для каждой схемы. Тем не менее службы Windows Communication Foundation (WCF), размещенной на узле разрешает привязку только одному базовому адресу для каждой схемы.<br /><br /> Чтобы включить несколько привязок IIS для каждого узла для службы Windows Communication Foundation (WCF), установите значение `true`. Следует иметь в виду, что привязки к нескольким узлам поддерживаются только в протоколе HTTP. Адрес конечной точки в файле конфигурации должен быть полным URI.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<baseAddressPrefixFilters >](../../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md)|Коллекция элементов конфигурации, которые задают префиксные фильтры для базовых адресов, используемых узлом службы.|  
 |[\<serviceActivations >](../../../../../docs/framework/configure-apps/file-schema/wcf/serviceactivations.md)|Раздел конфигурации, в котором описываются параметры активации.|  
@@ -87,7 +89,7 @@ ms.locfileid: "33354324"
 ## <a name="code"></a>Код  
   
 ```xml  
-<serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>  
+<serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>
 ```  
   
 ## <a name="see-also"></a>См. также  

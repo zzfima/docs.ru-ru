@@ -2,18 +2,18 @@
 title: '&lt;webHttp&gt;'
 ms.date: 03/30/2017
 ms.assetid: 1f9d0754-d41e-44ce-a298-e51cb3096c64
-ms.openlocfilehash: 1dce767d1cb6705084f0776b8ba8a168031fcb04
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 9ba54dc1744751efe4efad04f829cccce1244e0d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767496"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145683"
 ---
 # <a name="ltwebhttpgt"></a>&lt;webHttp&gt;
-Данный элемент задает <xref:System.ServiceModel.Description.WebHttpBehavior> на конечной точке в конфигурации. Такое поведение, при использовании в сочетании с [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) Стандартная привязка включает модель веб-программирования для службы Windows Communication Foundation (WCF).  
+Данный элемент задает <xref:System.ServiceModel.Description.WebHttpBehavior> на конечной точке в конфигурации. Это поведение, при использовании в сочетании с [ \<webHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttpbinding.md) стандартной привязки включает модель веб-программирования для службы Windows Communication Foundation (WCF).  
   
  \<система. ServiceModel >  
-\<поведения >  
+\<варианты поведения >  
 \<endpointBehaviors >  
 \<поведение >  
 \<webHttp >  
@@ -21,7 +21,7 @@ ms.locfileid: "32767496"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<webHttp />  
+<webHttp />
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -34,7 +34,7 @@ ms.locfileid: "32767496"
 |automaticFormatSelectionEnabled|Если это свойство имеет значение `true`, то инфраструктура WCF определяет лучший формат для использования. Автоматический выбор формата отключен по умолчанию в целях обратной совместимости. Автоматический выбор формата можно включить программно или через конфигурацию.|  
 |defaultBodyStyle|Задает стиль по умолчанию для текста возвращаемых сообщений. Дополнительные сведения см. в разделе <xref:System.ServiceModel.Web.WebMessageBodyStyle> и [WCF Web HTTP форматирование](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).|  
 |defaultOutgoingResponseFormat|Определяет формат ответа по умолчанию для исходящих сообщений. Дополнительные сведения см. в разделе [WCF Web HTTP форматирование](../../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md).|  
-|faultExceptionEnabled|Возвращает или задает флаг, указывающий, будет ли создаваться исключение FaultException при возникновении внутренней ошибки сервера (код состояния HTTP: 500).|  
+|faultExceptionEnabled|Получает или задает флаг, указывающий, будет ли создаваться исключение FaultException при возникновении внутренней ошибки сервера (код состояния HTTP: 500).|  
 |helpEnabled|Возвращает или задает значение, определяющее, будет ли включена страница справки.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  

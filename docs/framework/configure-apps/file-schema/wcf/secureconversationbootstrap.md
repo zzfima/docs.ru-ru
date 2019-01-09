@@ -2,12 +2,12 @@
 title: '&lt;secureConversationBootstrap&gt;'
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
-ms.openlocfilehash: a1b739ac8af87340a693d88bac0a379f0c3a447a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a923ca5d695b1b0b8f5362320b11f39f5153e9c8
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197773"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148517"
 ---
 # <a name="ltsecureconversationbootstrapgt"></a>&lt;secureConversationBootstrap&gt;
 Задает значения по умолчанию, используемые для инициализации службы безопасного обмена данными.  
@@ -22,20 +22,19 @@ ms.locfileid: "50197773"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<secureConversationBootstrap  
-   allowSerializedSigningTokenOnReply="Boolean"  
-   authenticationMode="AuthenticationMode"  
-   defaultAlgorithmSuite="SecurityAlgorithmSuite"  
-   includeTimestamp="Boolean"  
-   requireDerivedKeys="Boolean"  
-   keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"   
-messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/EncryptBeforeSign"  
-   messageSecurityVersion="WSSecurityJan2004/WSSecurityXXX2005"  
-   requireDerivedKeys="Boolean"  
-   requireSecurityContextCancellation="Boolean"  
-   requireSignatureConfirmation="Boolean" >  
-   securityHeaderLayout="Strict/Lax/LaxTimestampFirst/LaxTimestampLast"  
-   includeTimestamp="Boolean" />  
+<secureConversationBootstrap allowSerializedSigningTokenOnReply="Boolean"
+                             authenticationMode="AuthenticationMode"
+                             defaultAlgorithmSuite="SecurityAlgorithmSuite"
+                             includeTimestamp="Boolean"
+                             requireDerivedKeys="Boolean"
+                             keyEntropyMode="ClientEntropy/ServerEntropy/CombinedEntropy"
+                             messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/EncryptBeforeSign"
+                             messageSecurityVersion="WSSecurityJan2004/WSSecurityXXX2005"
+                             requireDerivedKeys="Boolean"
+                             requireSecurityContextCancellation="Boolean"
+                             requireSignatureConfirmation="Boolean"
+                             securityHeaderLayout="Strict/Lax/LaxTimestampFirst/LaxTimestampLast"
+                             includeTimestamp="Boolean" />
 ```  
   
 ## <a name="type"></a>Тип  
@@ -53,16 +52,16 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
 |`defaultAlgorithmSuite`|Набор алгоритмов безопасности содержит различные алгоритмы, такие как Canonicalization, Digest, KeyWrap, Signature, Encryption и KeyDerivation. Каждый из наборов алгоритмов безопасности определяет значения для этих различных параметров. Данные алгоритмы обеспечивают безопасность на уровне сообщений.<br /><br /> Этот атрибут используется при работе с другой платформой, которая использует набор алгоритмов, отличный от набора по умолчанию. При внесении изменений в параметры настройки необходимо знать о сильных и слабых сторонах соответствующих алгоритмов. Это атрибут типа <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>. Значение по умолчанию — `Basic256`.|  
 |`includeTimestamp`|Логическое значение, определяющее, включается ли в каждое сообщение отметка времени. Значение по умолчанию — `true`.|  
 |`keyEntropyMode`|Указывает способ вычисления ключей для защиты сообщений. Ключи могут быть основаны только на данных ключа клиента, только на данных ключа службы или на сочетании обоих типов данных. Допустимые значения:<br /><br /> -ClientEntropy: Сеансовый ключ основывается на клиент предоставляет материал ключа.<br />-ServerEntropy: Сеансовый ключ основывается на службу, предоставляемую материал ключа.<br />-CombinedEntropy: Сеансовый ключ основывается на клиент и служба, предоставляемая материала.<br /><br /> Значение по умолчанию - CombinedEntropy.<br /><br /> Это атрибут типа <xref:System.ServiceModel.Security.SecurityKeyEntropyMode>.|  
-|`messageProtectionOrder`|Определяет порядок, в котором к сообщению применяются алгоритмы безопасности уровня сообщения. Допустимы следующие значения:<br /><br /> — SignBeforeEncrypt: Сначала войти, а затем зашифровать.<br />-SignBeforeEncryptAndEncryptSignature: Подпись, шифрование и шифрование сигнатуры.<br />-EncryptBeforeSign: Сначала шифрование, затем подпись.<br /><br /> SignBeforeEncryptAndEncryptSignature - значение по умолчанию, если используются взаимные сертификаты и WS-Security 1.1.  SignBeforeEncrypt - значение по умолчанию, если используется WS-Security 1.0.<br /><br /> Это атрибут типа <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
+|`messageProtectionOrder`|Определяет порядок, в котором к сообщению применяются алгоритмы безопасности уровня сообщения. Допустимы следующие значения:<br /><br /> — SignBeforeEncrypt: Сначала войти, а затем зашифровать.<br />-SignBeforeEncryptAndEncryptSignature: Войдите, зашифровать и шифрование сигнатуры.<br />-EncryptBeforeSign: Сначала шифрование, затем входа.<br /><br /> SignBeforeEncryptAndEncryptSignature - значение по умолчанию, если используются взаимные сертификаты и WS-Security 1.1.  SignBeforeEncrypt - значение по умолчанию, если используется WS-Security 1.0.<br /><br /> Это атрибут типа <xref:System.ServiceModel.Security.MessageProtectionOrder>.|  
 |`messageSecurityVersion`|Задает используемую версию WS-Security. Допустимы следующие значения:<br /><br /> -WSSecurityJan2004<br />-WSSecurityXXX2005<br /><br /> Значение по умолчанию - WSSecurityXXX2005. Это атрибут типа <xref:System.ServiceModel.MessageSecurityVersion>.|  
 |`requireDerivedKeys`|Логическое значение, которое указывает, могут ли ключи быть производными от исходных ключей проверки. Значение по умолчанию — `true`.|  
 |`requireSecurityContextCancellation`|Логическое значение, определяющее, следует ли закрывать и завершать контекст безопасности, когда он больше не нужен. Значение по умолчанию — `true`.|  
 |`requireSignatureConfirmation`|Логическое значение, определяющее, включено ли подтверждение сигнатуры WS-Security. Если установлено значение `true`, то сигнатуры сообщений подтверждаются респондентом. Значение по умолчанию — `false`.<br /><br /> Подтверждение сигнатуры используется для подтверждения того, что служба отвечает, получив запрос полностью.|  
-|`securityHeaderLayout`|Определяет порядок расположения элементов в заголовке безопасности. Допустимые значения:<br /><br /> -Strict. Элементы добавляются в заголовок безопасности в соответствии с общим принципом "объявить перед использованием".<br />-Слабую. Элементы добавляются в заголовок безопасности в любом порядке, отвечающем требованиям безопасности сообщений WSS: SOAP.<br />-LaxWithTimestampFirst. Элементы добавляются в заголовок безопасности в любом порядке, который соответствует требованиям безопасности сообщений WSS: SOAP, за исключением того, что первым элементом в заголовке безопасности должен быть wsse:Timestamp.<br />-LaxWithTimestampLast. Элементы добавляются в заголовок безопасности в любом порядке, который соответствует требованиям безопасности сообщений WSS: SOAP, за исключением того, что последним элементом в заголовке безопасности должен быть wsse:Timestamp.<br /><br /> Значение по умолчанию - Strict.<br /><br /> Это элемент типа <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
+|`securityHeaderLayout`|Определяет порядок расположения элементов в заголовке безопасности. Допустимые значения:<br /><br /> -Strict. Элементы добавляются в заголовок безопасности в соответствии с общим принципом "объявить перед использованием".<br />-Слабую. Элементы добавляются в заголовок безопасности в любом порядке, отвечающем WSS: Безопасность сообщений SOAP.<br />-LaxWithTimestampFirst. Элементы добавляются в заголовок безопасности в любом порядке, отвечающем WSS: Безопасность сообщений SOAP, за исключением того, что первым элементом в заголовке безопасности должен быть элемент wsse: timestamp.<br />-LaxWithTimestampLast. Элементы добавляются в заголовок безопасности в любом порядке, отвечающем WSS: Безопасность сообщений SOAP, за исключением того, что последним элементом в заголовке безопасности должен быть элемент wsse: timestamp.<br /><br /> Значение по умолчанию - Strict.<br /><br /> Это элемент типа <xref:System.ServiceModel.Channels.SecurityHeaderLayout>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Определяет текущий выданный маркер. Это элемент типа <xref:System.ServiceModel.Configuration.IssuedTokenParametersElement>.|  
 |[\<localClientSettings >](../../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)|Задает параметры безопасности локального клиента для этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>.|  
@@ -70,7 +69,7 @@ messageProtectionOrder="SignBeforeEncrypt/SignBeforeEncryptAndEncryptSignature/E
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|Задает параметры безопасности для пользовательской привязки.|  
   

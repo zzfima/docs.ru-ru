@@ -2,24 +2,24 @@
 title: '&lt;allowAccounts&gt;'
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: 097112a8b54467843554047882e55b62d7813c0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61310d530cfec2862fb64155777cd0e88132f748
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352881"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145943"
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
-Содержит коллекцию элементов конфигурации, которые задают пользователя учетные записи для процессов, на которых размещаются службы Windows Communication Foundation (WCF) и имеют доступ к совместно используемой службе.  
+Содержит коллекцию элементов конфигурации, задающих учетные записи пользователей для процессов, на которых размещены службы Windows Communication Foundation (WCF) и предоставляется доступ на подключение к общей службы.  
   
  \<system.serviceModel.activation >  
   
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<allowAccounts>  
-   <add securityIdentifier="String"/>  
-</allowAccounts>  
+<allowAccounts>
+  <add securityIdentifier="String" />
+</allowAccounts>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -30,9 +30,9 @@ ms.locfileid: "33352881"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|Добавляет учетную запись пользователя для процессов служб WCF, которые имеют доступ к службе управления доступом|  
+|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|Добавляет учетную запись пользователя для процессов размещения служб WCF, которые предоставляются доступ при подключении к службе управления доступом|  
   
 ### <a name="parent-elements"></a>Родительские элементы  
   

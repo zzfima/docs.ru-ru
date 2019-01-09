@@ -1,16 +1,16 @@
 ---
-title: '&lt;announcementEndpoint&gt;'
+title: '&lt;AnnouncementEndpoint&gt;'
 ms.date: 03/30/2017
 ms.assetid: 034b7c69-a770-4502-8cef-38007bbcd025
-ms.openlocfilehash: 15d60cd277b77fd52b2b77bfcdf4d0da1de7167a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe278da539af59a32edf5a626461dbec0ba3887d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351830"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151648"
 ---
-# <a name="ltannouncementendpointgt"></a>&lt;announcementEndpoint&gt;
-Этот элемент конфигурации определяет стандартную конечную точку с фиксированным контрактом объявления. Служба может также объявлять свою доступность путем отправки сообщения в режимах «в сети» и «не в сети» соответственно при открытии и закрытии службы. Службы Windows Communication Foundation (WCF) задает конечные точки объявлений в [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) элемент и использует AnnouncementClient для выполнения объявления. Клиент, вызывающий должен прослушивать заявление от другой службы фактически работает как служба WCF; Таким образом, вы должны настроить конечные точки объявлений для этого клиента в [ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) раздела.  
+# <a name="ltannouncementendpointgt"></a>&lt;AnnouncementEndpoint&gt;
+Этот элемент конфигурации определяет стандартную конечную точку с фиксированным контрактом объявления. Служба может также объявлять свою доступность путем отправки сообщения в режимах «в сети» и «не в сети» соответственно при открытии и закрытии службы. Служба Windows Communication Foundation (WCF) указывает конечные точки объявления в [ \<serviceDiscovery >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicediscovery.md) элемент и использует AnnouncementClient для выполнения объявлений. Клиент, ожидающий объявления от другой службы прослушивания фактически выступает в качестве службы WCF; Таким образом вы должны настроить конечные точки объявления для этого клиента в [ \<services >](../../../../../docs/framework/configure-apps/file-schema/wcf/services.md) раздел.  
   
 \<система. ServiceModel >  
 \<standardEndpoints >  
@@ -18,15 +18,15 @@ ms.locfileid: "33351830"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<system.serviceModel>  
+<system.serviceModel>
   <standardEndpoints>
     <announcementEndpoint>
-      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005" 
-                        maxAnnouncementDelay="Timespan" 
+      <standardEndpoint discoveryVersion="WSDiscovery11/WSDiscoveryApril2005"
+                        maxAnnouncementDelay="Timespan"
                         name="String" />
     </announcementEndpoint>
-  </standardEndpoints>  
-</system.serviceModel>  
+  </standardEndpoints>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -45,7 +45,7 @@ ms.locfileid: "33351830"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<standardEndpoints >](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|Коллекция стандартных конечных точек, одно или несколько свойств которых (адрес, привязка, контракт) являются фиксированными.|  
   
@@ -53,29 +53,29 @@ ms.locfileid: "33351830"
  В следующем примере показано прослушивание клиентом сообщений с объявлениями по протоколам http и peernet.  
   
 ```xml  
-<services>  
-  <service name="ServiceAnnouncementListener">  
-    <endpoint name="httpAnnouncementEndpoint"  
-              kind="announcementEndpoint"  
-              binding="basicHttpBinding"  
-              address="announcements" />  
-    <endpoint name="peerNetAnnouncementEndpoint"  
-              kind="announcementEndpoint"  
-              binding="peerTcpBinding"  
-              address="net.p2p://discoveryMesh/multicast"  
-              bindingConfiguration="discoveryPeerTcpBindingConfig" />  
-  ...  
-  </service>  
-</services>  
-  
-<standardEndpoints>  
-  <announcementEndpoint>  
-    <standardEndpoint name="httpAnnouncementEndpoint"                         
-                      version="WSDiscoveryApril2005" />  
-    <standardEndpoint name="peerNetAnnouncementEndpoint"                         
-                      version="WSDiscoveryApril2005" />  
-   </announcementEndpoint>  
-</standardEndpoints>  
+<services>
+  <service name="ServiceAnnouncementListener">
+    <endpoint name="httpAnnouncementEndpoint"
+              kind="announcementEndpoint"
+              binding="basicHttpBinding"
+              address="announcements" />
+    <endpoint name="peerNetAnnouncementEndpoint"
+              kind="announcementEndpoint"
+              binding="peerTcpBinding"
+              address="net.p2p://discoveryMesh/multicast"
+              bindingConfiguration="discoveryPeerTcpBindingConfig" />
+  ...
+  </service>
+</services>
+
+<standardEndpoints>
+  <announcementEndpoint>
+    <standardEndpoint name="httpAnnouncementEndpoint"
+                      version="WSDiscoveryApril2005" />
+    <standardEndpoint name="peerNetAnnouncementEndpoint"
+                      version="WSDiscoveryApril2005" />
+  </announcementEndpoint>
+</standardEndpoints>
 ```  
   
 ## <a name="see-also"></a>См. также  

@@ -2,12 +2,12 @@
 title: '&lt;textMessageEncoding&gt;'
 ms.date: 03/30/2017
 ms.assetid: e6d834d0-356e-45eb-b530-bbefbb9ec3f0
-ms.openlocfilehash: e684c21c0b1360a9b270214ebe7b3ad00b42657f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 0ee50a4b5adeede2dd531ba734ac9fb420f3b713
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861964"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150244"
 ---
 # <a name="lttextmessageencodinggt"></a>&lt;textMessageEncoding&gt;
 Указывает кодировку символов и управление версиями сообщений для текстовых сообщений XML.  
@@ -21,10 +21,10 @@ ms.locfileid: "43861964"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<textMessageEncoding maxReadPoolSize="Integer"  
-   maxWritePoolSize="Integer"  
-   messageVersion="Soap11Addressing10/Soap12Addressing10"  
-      writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />  
+<textMessageEncoding maxReadPoolSize="Integer"
+                     maxWritePoolSize="Integer"
+                     messageVersion="Soap11Addressing10/Soap12Addressing10"
+                     writeEncoding="UnicodeFffeTextEncoding/Utf16TextEncoding/Utf8TextEncoding" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -41,7 +41,7 @@ ms.locfileid: "43861964"
   
 ### <a name="child-elements"></a>Дочерние элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<readerQuotas >](https://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Определяет ограничения по сложности сообщений SOAP, которые могут обрабатываться конечными точками, настроенными с использованием этой привязки. Это элемент типа <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
@@ -52,17 +52,17 @@ ms.locfileid: "43861964"
 |[\<Привязка >](../../../../../docs/framework/misc/binding.md)|Определяет все возможности пользовательской привязки.|  
   
 ## <a name="remarks"></a>Примечания  
- Кодирование — это процесс преобразования сообщения в последовательность байтов. Декодирование представляет собой обратный процесс. В Windows Communication Foundation (WCF) имеется три типа кодирования для сообщений SOAP: Text, Binary и MTOM.  
+ Кодирование — это процесс преобразования сообщения в последовательность байтов. Декодирование представляет собой обратный процесс. Windows Communication Foundation (WCF) включает в себя три типа кодирования для сообщений SOAP: Текст, двоичное кодирование и механизм оптимизации передачи сообщений (MTOM).  
   
  Кодировка текста, представленная элементом `textMessageEncoding`, дает наибольшие возможности взаимодействия, но является наименее эффективной для сообщений XML.  Кодировщик текста создает текстовые сообщения в сети. Сообщения, созданные этим кодировщиком, подходят для взаимодействия на базе +WS-*. Веб-служба или клиент веб-службы в общем могут понимать XML в текстовом виде. Однако передача больших блоков двоичных данных в виде текста является наименее эффективным методом для кодировки сообщений XML.  
   
 ## <a name="example"></a>Пример  
   
 ```xml  
-<textMessageEncoding maxReadPoolSize="211"  
-    maxWritePoolSize="2132"  
-    messageVersion="Soap12Addressing10"  
-    textEncoding="utf-8" />  
+<textMessageEncoding maxReadPoolSize="211"
+                     maxWritePoolSize="2132"
+                     messageVersion="Soap12Addressing10"
+                     textEncoding="utf-8" />
 ```  
   
 ## <a name="see-also"></a>См. также  

@@ -2,12 +2,12 @@
 title: '&lt;DNS&gt;'
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: 2f5b9d5e1bc57230adbb32664e9ae15d3c71d46f
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 10fe4c63b08459914a16b2c736c1a454c6914a0b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862482"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54145306"
 ---
 # <a name="ltdnsgt"></a>&lt;DNS&gt;
 Задает ожидаемое удостоверение сервера. Удостоверение является действительным для режима проверки подлинности сертификата X509, если сертификат сервера содержит DNS с тем же самым значением. Оно также действительно для режима проверки подлинности Windows, если SPN имеет такое же значение.  
@@ -20,7 +20,7 @@ ms.locfileid: "43862482"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<dns value = "String" />  
+<dns value = "String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -45,9 +45,9 @@ ms.locfileid: "43862482"
  В следующем коде конфигурации задается значение сервера DNS сертификата X.509, используемого для проверки подлинности сервера.  
   
 ```xml  
-<identity>  
-  <dns value = "www.cohowinery.com" />  
-</identity>  
+<identity>
+  <dns value = "www.cohowinery.com" />
+</identity>
 ```  
   
 ## <a name="see-also"></a>См. также  

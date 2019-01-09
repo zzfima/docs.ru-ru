@@ -12,16 +12,16 @@ api_type:
 ms.assetid: bd58e91c-4e35-4866-9d55-75ff58c3ed73
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 84a2a7f572517aec72161817cb719057618de445
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4e42cf5747362f2257a2d777de918721181a8280
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753629"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148361"
 ---
 # <a name="httpwebrequestautoredirects-field"></a>HttpWebRequest. \_AutoRedirects поля
 
-`HttpWebRequest._AutoRedirects` — <xref:System.Int32> , которое отражает количество переадресаций, внесенные в это <xref:System.Net.HttpWebRequest>.
+`HttpWebRequest._AutoRedirects` — <xref:System.Int32> , отражающий количество переадресаций, внесенные для данного <xref:System.Net.HttpWebRequest>.
 
 ## <a name="syntax"></a>Синтаксис  
   
@@ -30,14 +30,14 @@ private int _AutoRedirects
 ```
 
 > [!WARNING]
-> `HttpWebRequest._AutoRedirects` Поле является внутренним и не предназначены для непосредственного использования в коде.
+> `HttpWebRequest._AutoRedirects` Поле является внутренним и не предназначен для непосредственного использования в коде.
 > 
-> Корпорация Майкрософт не поддерживает использование этого поля в реальном приложении ни при каких обстоятельствах.
+> Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.
 
 ## <a name="requirements"></a>Требования
 
 **Пространство имен:** <xref:System.Net>
 
-**Сборка:** системы (в System.dll)
+**Сборка:** Системы (в System.dll)
 
-**Версии платформы .NET framework:** доступно с версии 2.0.
+**Версии платформы .NET framework:** Доступно с версии 2.0.

@@ -1,19 +1,19 @@
 ---
-title: '&lt;serviceCredentials&gt;'
+title: '&lt;ServiceCredentials&gt;'
 ms.date: 03/30/2017
 ms.assetid: 96db336c-4f7a-4193-81a5-910b8ffd804f
-ms.openlocfilehash: a3d63e3d01c009834717a80a9ed9536fd1bdf838
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b9e32509a5e182301455eaf0e602a03c51fbc23a
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750405"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54150777"
 ---
-# <a name="ltservicecredentialsgt"></a>&lt;serviceCredentials&gt;
+# <a name="ltservicecredentialsgt"></a>&lt;ServiceCredentials&gt;
 Задает учетные данные, используемые при проверке подлинности службы, а также параметры, относящиеся к проверке учетных данных клиента.  
   
  \<система. ServiceModel >  
-\<поведения >  
+\<варианты поведения >  
 \<serviceBehaviors >  
 \<поведение >  
 \<serviceCredentials >  
@@ -21,22 +21,22 @@ ms.locfileid: "32750405"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<serviceCredentials type="String">  
-   <clientCertificate>  
-   </clientCertificate>  
-   <issuedTokenAuthentication>  
-   </issuedTokenAuthentication>  
-   <peer>  
-   </peer>  
-   <secureConversationAuthentication>  
-   </secureConversationAuthentication>  
-   <serviceCertificate>  
-   </serviceCertificate>  
-   <userNameAuthentication>  
-   </userNameAuthentication>  
-   <windowsAuthentication>  
-   </windowsAuthentication>  
-</serviceCredentials>  
+<serviceCredentials type="String">
+  <clientCertificate>
+  </clientCertificate>
+  <issuedTokenAuthentication>
+  </issuedTokenAuthentication>
+  <peer>
+  </peer>
+  <secureConversationAuthentication>
+  </secureConversationAuthentication>
+  <serviceCertificate>
+  </serviceCertificate>
+  <userNameAuthentication>
+  </userNameAuthentication>
+  <windowsAuthentication>
+  </windowsAuthentication>
+</serviceCredentials>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -62,7 +62,7 @@ ms.locfileid: "32750405"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<поведение >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Указывает элемент поведения.|  
   

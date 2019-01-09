@@ -2,12 +2,12 @@
 title: '&lt;message&gt; для &lt;netMsmqBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
-ms.openlocfilehash: 124d53ae24b627c35863fda4cd8f404057978f1e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 06346ba50b68f43cb2c3f9c92a37a432339126d1
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838511"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54151024"
 ---
 # <a name="ltmessagegt-of-ltnetmsmqbindinggt"></a>&lt;message&gt; для &lt;netMsmqBinding&gt;
 Определяет параметры безопасности сообщений SOAP для данной привязки `netMsmqBinding`.  
@@ -22,14 +22,14 @@ ms.locfileid: "48838511"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<netMsmqBinding>  
-    <binding>  
-      <security>  
-         <message   
-                      algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-            clientCredentialType="None/Windows/UserName/Certificate/CardSpace" />  
-    </security>  
-</netMsmqBinding>  
+<netMsmqBinding>
+  <binding>
+    <security>
+      <message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+               clientCredentialType="None/Windows/UserName/Certificate/CardSpace" />
+    </security>
+  </binding>
+</netMsmqBinding>
 ```  
   
 ## <a name="attributes-and-elements"></a>Атрибуты и элементы  
@@ -40,7 +40,7 @@ ms.locfileid: "48838511"
 |Атрибут|Описание|  
 |---------------|-----------------|  
 |algorithmSuite|Задает алгоритмы шифрования сообщений и ключей, которые используются для обеспечения безопасности на уровне сообщений для сообщений, которые отправляются с помощью транспорта MSMQ.<br /><br /> Значение по умолчанию — `Aes256`. Это атрибут типа <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>.|  
-|clientCredentialType|Задает тип учетных данных, используемых при проверке подлинности клиента для сообщений, которые отправляются с помощью транспорта MSMQ. Допустимы следующие значения:<br /><br /> -None: Данное значение позволяет службе взаимодействовать с анонимными клиентами. Как для службы, так и для клиента учетные данные не требуются.<br />-Windows: Благодаря этому обмен сообщениями SOAP быть в контексте прошедшего проверку подлинности учетных данных Windows. В этом случае всегда выполняется проверка подлинности на основе Kerberos.<br />-UserName: Данное значение позволяет службе требовать проверку подлинности клиента с помощью имени пользователя. В этом случае учетные данные должны быть определены с помощью `clientCredentials` поведение **осторожность:** Windows Communication Foundation (WCF) не поддерживает отправку хэш-кода или создание ключей, с помощью пароля и использование таких ключей для пароля безопасность сообщений. Таким образом WCF обеспечивает безопасность обмена при использовании учетных данных UserName. В данном режиме требуется, чтобы сертификат службы был указан на стороне клиента при помощи поведения `clientCredential` и при помощи `serviceCertificate`. <br /><br /> -Certificate: Данное значение позволяет службе требовать проверки подлинности клиента с помощью сертификата. В этом случае учетные данные клиента должны быть определены с помощью поведения `clientCredentials`. Учетные данные службы в данном случае должны быть определены с помощью поведения `clientCredentials`, которому задается значение `serviceCertificate`.<br />-CardSpace: Данное значение позволяет службе требовать проверки подлинности клиента с помощью CardSpace. Необходимо определить `serviceCertiifcate` в поведении `clientCredential`.<br /><br /> Значение по умолчанию — `Windows`. Это атрибут типа <xref:System.ServiceModel.MessageCredentialType>.|  
+|clientCredentialType|Задает тип учетных данных, используемых при проверке подлинности клиента для сообщений, которые отправляются с помощью транспорта MSMQ. Допустимы следующие значения:<br /><br /> -None: Данный атрибут позволяет службе взаимодействовать с анонимными клиентами. Как для службы, так и для клиента учетные данные не требуются.<br />-Windows: Это позволяет проводить проверку подлинности учетных данных Windows обмен сообщениями SOAP. В этом случае всегда выполняется проверка подлинности на основе Kerberos.<br />-UserName: Это позволяет службе запрашивать проверку подлинности клиента с помощью имени пользователя. В этом случае учетные данные должны быть определены с помощью `clientCredentials` поведение **осторожность:**  Windows Communication Foundation (WCF) не поддерживает передачу хэш-кода пароля или получение ключей с помощью пароля и использование таких ключей для обеспечения безопасности сообщений. Таким образом WCF обеспечивает безопасность обмена при использовании учетных данных UserName. В данном режиме требуется, чтобы сертификат службы был указан на стороне клиента при помощи поведения `clientCredential` и при помощи `serviceCertificate`. <br /><br /> -Сертификат: Это позволяет службе требовать проверки подлинности клиента с помощью сертификата. В этом случае учетные данные клиента должны быть определены с помощью поведения `clientCredentials`. Учетные данные службы в данном случае должны быть определены с помощью поведения `clientCredentials`, которому задается значение `serviceCertificate`.<br />-CardSpace: Это позволяет службе требовать проверки подлинности клиента с помощью CardSpace. Необходимо определить `serviceCertiifcate` в поведении `clientCredential`.<br /><br /> Значение по умолчанию — `Windows`. Это атрибут типа <xref:System.ServiceModel.MessageCredentialType>.|  
   
 ### <a name="child-elements"></a>Дочерние элементы  
  Нет  

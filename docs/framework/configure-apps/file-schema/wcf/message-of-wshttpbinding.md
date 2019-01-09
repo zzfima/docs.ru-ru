@@ -2,12 +2,12 @@
 title: '&lt;message&gt; для &lt;wsHttpBinding&gt;'
 ms.date: 03/30/2017
 ms.assetid: 621abbde-590b-454d-90ac-68dc3c69c720
-ms.openlocfilehash: db0825d0abe05564d040903304d8654fa75ed0ee
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28ea1cad77b5a35fa16c98b816c1c82de71bd7cb
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126228"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147776"
 ---
 # <a name="ltmessagegt-of-ltwshttpbindinggt"></a>&lt;message&gt; для &lt;wsHttpBinding&gt;
 Определяет параметры безопасности уровня сообщений для [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).  
@@ -22,11 +22,10 @@ ms.locfileid: "53126228"
 ## <a name="syntax"></a>Синтаксис  
   
 ```xml  
-<message   
-   algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"  
-   clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"  
-   establishSecurityContext="Boolean"  
-   negotiateServiceCredential="Boolean" />  
+<message algorithmSuite="Basic128/Basic192/Basic256/Basic128Rsa15/Basic256Rsa15/TripleDes/TripleDesRsa15/Basic128Sha256/Basic192Sha256/TripleDesSha256/Basic128Sha256Rsa15/Basic192Sha256Rsa15/Basic256Sha256Rsa15/TripleDesSha256Rsa15"
+         clientCredentialType="Certificate/IssuedToken/None/UserName/Windows"
+         establishSecurityContext="Boolean"
+         negotiateServiceCredential="Boolean" />
 ```  
   
 ## <a name="type"></a>Тип  
@@ -80,7 +79,7 @@ ms.locfileid: "53126228"
   
 ### <a name="parent-elements"></a>Родительские элементы  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |[\<Безопасность >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|Определяет параметры безопасности для [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md).|  
   
