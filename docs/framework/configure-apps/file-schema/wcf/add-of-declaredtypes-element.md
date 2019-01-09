@@ -7,76 +7,76 @@ helpviewer_keywords:
 - DataContractSerializer
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
-ms.openlocfilehash: 90eaf11ce8b9e3675a23ed3875680b03f149b56b
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 587c70a7b583c99e66eebac4055415e1e6a635b2
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754123"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146112"
 ---
-# <a name="ltaddgt-of-ltdeclaredtypesgt-element"></a><span data-ttu-id="0cd4a-102">&lt; add&gt; элемента &lt;declaredTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="0cd4a-102">&lt;add&gt; of &lt;declaredTypes&gt; Element</span></span>
-<span data-ttu-id="0cd4a-103">Добавляет тип, используемый <xref:System.Runtime.Serialization.DataContractSerializer> во время десериализации.</span><span class="sxs-lookup"><span data-stu-id="0cd4a-103">Adds a type used by the <xref:System.Runtime.Serialization.DataContractSerializer> during deserialization.</span></span> <span data-ttu-id="0cd4a-104">В каждый объявленный тип включены известные типы, которые будут возвращены как поле или свойство объявленного типа.</span><span class="sxs-lookup"><span data-stu-id="0cd4a-104">Each declared type includes the known types that will be returned as a field or property of the declared type.</span></span>  
+# <a name="ltaddgt-of-ltdeclaredtypesgt-element"></a><span data-ttu-id="c3ee2-102">&lt; add&gt; элемента &lt;declaredTypes&gt;</span><span class="sxs-lookup"><span data-stu-id="c3ee2-102">&lt;add&gt; of &lt;declaredTypes&gt; Element</span></span>
+<span data-ttu-id="c3ee2-103">Добавляет тип, используемый <xref:System.Runtime.Serialization.DataContractSerializer> во время десериализации.</span><span class="sxs-lookup"><span data-stu-id="c3ee2-103">Adds a type used by the <xref:System.Runtime.Serialization.DataContractSerializer> during deserialization.</span></span> <span data-ttu-id="c3ee2-104">В каждый объявленный тип включены известные типы, которые будут возвращены как поле или свойство объявленного типа.</span><span class="sxs-lookup"><span data-stu-id="c3ee2-104">Each declared type includes the known types that will be returned as a field or property of the declared type.</span></span>  
   
- <span data-ttu-id="0cd4a-105">system.runtime.serialization</span><span class="sxs-lookup"><span data-stu-id="0cd4a-105">system.runtime.serialization</span></span>  
-<span data-ttu-id="0cd4a-106">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="0cd4a-106">\<dataContractSerializer></span></span>  
-<span data-ttu-id="0cd4a-107">\<declaredTypes ></span><span class="sxs-lookup"><span data-stu-id="0cd4a-107">\<declaredTypes></span></span>  
-<span data-ttu-id="0cd4a-108">\<Добавить > из \<declaredTypes ></span><span class="sxs-lookup"><span data-stu-id="0cd4a-108">\<add> of \<declaredTypes></span></span>  
+ <span data-ttu-id="c3ee2-105">system.runtime.serialization</span><span class="sxs-lookup"><span data-stu-id="c3ee2-105">system.runtime.serialization</span></span>  
+<span data-ttu-id="c3ee2-106">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="c3ee2-106">\<dataContractSerializer></span></span>  
+<span data-ttu-id="c3ee2-107">\<declaredTypes ></span><span class="sxs-lookup"><span data-stu-id="c3ee2-107">\<declaredTypes></span></span>  
+<span data-ttu-id="c3ee2-108">\<Добавить > из \<declaredTypes ></span><span class="sxs-lookup"><span data-stu-id="c3ee2-108">\<add> of \<declaredTypes></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0cd4a-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0cd4a-109">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c3ee2-109">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c3ee2-109">Syntax</span></span>  
   
 ```xml  
-<add type="String">  
-   <knownType type="String">  
-       <parameter index="Integer"  
-                  type="String" />  
-   </knownType>  
-</add>  
+<add type="String">
+  <knownType type="String">
+    <parameter index="Integer"
+               type="String" />
+  </knownType>
+</add>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0cd4a-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="0cd4a-110">Attributes and Elements</span></span>  
- <span data-ttu-id="0cd4a-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="0cd4a-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="c3ee2-110">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="c3ee2-110">Attributes and Elements</span></span>  
+ <span data-ttu-id="c3ee2-111">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="c3ee2-111">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0cd4a-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="0cd4a-112">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="c3ee2-112">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="c3ee2-112">Attributes</span></span>  
   
-|<span data-ttu-id="0cd4a-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="0cd4a-113">Attribute</span></span>|<span data-ttu-id="0cd4a-114">Описание</span><span class="sxs-lookup"><span data-stu-id="0cd4a-114">Description</span></span>|  
+|<span data-ttu-id="c3ee2-113">Атрибут</span><span class="sxs-lookup"><span data-stu-id="c3ee2-113">Attribute</span></span>|<span data-ttu-id="c3ee2-114">Описание</span><span class="sxs-lookup"><span data-stu-id="c3ee2-114">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="0cd4a-115">тип</span><span class="sxs-lookup"><span data-stu-id="0cd4a-115">type</span></span>|<span data-ttu-id="0cd4a-116">Обязательный строковый атрибут.</span><span class="sxs-lookup"><span data-stu-id="0cd4a-116">Required string attribute.</span></span><br /><br /> <span data-ttu-id="0cd4a-117">Задает имя типа (в том числе пространство имен), имя сборки, номер версии, язык и региональные параметры и маркер открытого ключа.</span><span class="sxs-lookup"><span data-stu-id="0cd4a-117">Specifies the type name (including namespace), assembly name, version number, culture, and public key token.</span></span>|  
+|<span data-ttu-id="c3ee2-115">тип</span><span class="sxs-lookup"><span data-stu-id="c3ee2-115">type</span></span>|<span data-ttu-id="c3ee2-116">Обязательный строковый атрибут.</span><span class="sxs-lookup"><span data-stu-id="c3ee2-116">Required string attribute.</span></span><br /><br /> <span data-ttu-id="c3ee2-117">Задает имя типа (в том числе пространство имен), имя сборки, номер версии, язык и региональные параметры и маркер открытого ключа.</span><span class="sxs-lookup"><span data-stu-id="c3ee2-117">Specifies the type name (including namespace), assembly name, version number, culture, and public key token.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="0cd4a-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="0cd4a-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="c3ee2-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="c3ee2-118">Child Elements</span></span>  
   
-|<span data-ttu-id="0cd4a-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="0cd4a-119">Element</span></span>|<span data-ttu-id="0cd4a-120">Описание</span><span class="sxs-lookup"><span data-stu-id="0cd4a-120">Description</span></span>|  
+|<span data-ttu-id="c3ee2-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="c3ee2-119">Element</span></span>|<span data-ttu-id="c3ee2-120">Описание:</span><span class="sxs-lookup"><span data-stu-id="c3ee2-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="0cd4a-121">\<knownType ></span><span class="sxs-lookup"><span data-stu-id="0cd4a-121">\<knownType></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|<span data-ttu-id="0cd4a-122">Задает известный тип для добавляемого объявленного типа.</span><span class="sxs-lookup"><span data-stu-id="0cd4a-122">Specifies the known type for the declared type that is being added.</span></span> <span data-ttu-id="0cd4a-123">Если объявленный тип является универсальным типом, необходимо также добавить элемент параметра к элементу `<knownType>`, чтобы указать, какой универсальный параметр будет использоваться для возвращения известного типа.</span><span class="sxs-lookup"><span data-stu-id="0cd4a-123">If the declared type is a generic type, then you must also add a parameter element to the `<knownType>` element to specify which generic parameter is used to return the known type.</span></span>|  
+|[<span data-ttu-id="c3ee2-121">\<knownType ></span><span class="sxs-lookup"><span data-stu-id="c3ee2-121">\<knownType></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/knowntype.md)|<span data-ttu-id="c3ee2-122">Задает известный тип для добавляемого объявленного типа.</span><span class="sxs-lookup"><span data-stu-id="c3ee2-122">Specifies the known type for the declared type that is being added.</span></span> <span data-ttu-id="c3ee2-123">Если объявленный тип является универсальным типом, необходимо также добавить элемент параметра к элементу `<knownType>`, чтобы указать, какой универсальный параметр будет использоваться для возвращения известного типа.</span><span class="sxs-lookup"><span data-stu-id="c3ee2-123">If the declared type is a generic type, then you must also add a parameter element to the `<knownType>` element to specify which generic parameter is used to return the known type.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="0cd4a-124">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="0cd4a-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="c3ee2-124">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="c3ee2-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="0cd4a-125">Элемент</span><span class="sxs-lookup"><span data-stu-id="0cd4a-125">Element</span></span>|<span data-ttu-id="0cd4a-126">Описание</span><span class="sxs-lookup"><span data-stu-id="0cd4a-126">Description</span></span>|  
+|<span data-ttu-id="c3ee2-125">Элемент</span><span class="sxs-lookup"><span data-stu-id="c3ee2-125">Element</span></span>|<span data-ttu-id="c3ee2-126">Описание</span><span class="sxs-lookup"><span data-stu-id="c3ee2-126">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="0cd4a-127">\<declaredTypes ></span><span class="sxs-lookup"><span data-stu-id="0cd4a-127">\<declaredTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|<span data-ttu-id="0cd4a-128">Содержит типы, для которых необходимы известные типы во время десериализации с помощью <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="0cd4a-128">Contains the types that require known types during deserialization by the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
+|[<span data-ttu-id="c3ee2-127">\<declaredTypes ></span><span class="sxs-lookup"><span data-stu-id="c3ee2-127">\<declaredTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/declaredtypes.md)|<span data-ttu-id="c3ee2-128">Содержит типы, для которых необходимы известные типы во время десериализации с помощью <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="c3ee2-128">Contains the types that require known types during deserialization by the <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="0cd4a-129">Примечания</span><span class="sxs-lookup"><span data-stu-id="0cd4a-129">Remarks</span></span>  
- <span data-ttu-id="0cd4a-130">Дополнительные сведения об известных типах см. в разделе [известные типы контрактов данных](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) и <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="0cd4a-130">For more information about known types, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) and <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c3ee2-129">Примечания</span><span class="sxs-lookup"><span data-stu-id="c3ee2-129">Remarks</span></span>  
+ <span data-ttu-id="c3ee2-130">Дополнительные сведения об известных типах см. в разделе [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) и <xref:System.Runtime.Serialization.DataContractSerializer>.</span><span class="sxs-lookup"><span data-stu-id="c3ee2-130">For more information about known types, see [Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md) and <xref:System.Runtime.Serialization.DataContractSerializer>.</span></span>  
   
- <span data-ttu-id="0cd4a-131">В разделе [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) пример использования этого элемента.</span><span class="sxs-lookup"><span data-stu-id="0cd4a-131">See the [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) for an example of using this element.</span></span>  
+ <span data-ttu-id="c3ee2-131">См. в разделе [ \<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) пример использования этого элемента.</span><span class="sxs-lookup"><span data-stu-id="c3ee2-131">See the [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md) for an example of using this element.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="0cd4a-132">При добавлении типа <xref:System.Object> как `<declaredType>` возникает <xref:System.Configuration.ConfigurationErrorsException>.</span><span class="sxs-lookup"><span data-stu-id="0cd4a-132">If you add the <xref:System.Object> type as a `<declaredType>`, a <xref:System.Configuration.ConfigurationErrorsException> is thrown.</span></span> <span data-ttu-id="0cd4a-133">Это обусловлено тем, что тип <xref:System.Object> нельзя использовать как объявленный тип в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="0cd4a-133">This is because the <xref:System.Object> type cannot be used as a declared type in configuration.</span></span>  
+>  <span data-ttu-id="c3ee2-132">При добавлении типа <xref:System.Object> как `<declaredType>` возникает <xref:System.Configuration.ConfigurationErrorsException>.</span><span class="sxs-lookup"><span data-stu-id="c3ee2-132">If you add the <xref:System.Object> type as a `<declaredType>`, a <xref:System.Configuration.ConfigurationErrorsException> is thrown.</span></span> <span data-ttu-id="c3ee2-133">Это обусловлено тем, что тип <xref:System.Object> нельзя использовать как объявленный тип в конфигурации.</span><span class="sxs-lookup"><span data-stu-id="c3ee2-133">This is because the <xref:System.Object> type cannot be used as a declared type in configuration.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0cd4a-134">Пример</span><span class="sxs-lookup"><span data-stu-id="0cd4a-134">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="c3ee2-134">Пример</span><span class="sxs-lookup"><span data-stu-id="c3ee2-134">Example</span></span>  
   
 ```xml  
-<add type="MyCompany.Library.Shape,   
-           MyAssembly, Version=2.0.0.0, Culture=neutral,  
-           PublicKeyToken=XXXXXX, processorArchitecture=MSIL">  
-           <knownType type="MyCompany.Library.Circle,   
-                      MyAssembly, Version=2.0.0.0, Culture=neutral,  
-                      PublicKeyToken=XXXXXX,  
-                      processorArchitecture=MSIL"/>  
-</add>  
+<add type="MyCompany.Library.Shape,
+           MyAssembly, Version=2.0.0.0, Culture=neutral,
+           PublicKeyToken=XXXXXX, processorArchitecture=MSIL">
+  <knownType type="MyCompany.Library.Circle,
+                   MyAssembly, Version=2.0.0.0, Culture=neutral,
+                   PublicKeyToken=XXXXXX,
+                   processorArchitecture=MSIL" />
+</add>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0cd4a-135">См. также</span><span class="sxs-lookup"><span data-stu-id="0cd4a-135">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="c3ee2-135">См. также</span><span class="sxs-lookup"><span data-stu-id="c3ee2-135">See Also</span></span>  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
- [<span data-ttu-id="0cd4a-136">Известные типы контрактов данных</span><span class="sxs-lookup"><span data-stu-id="0cd4a-136">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
- [<span data-ttu-id="0cd4a-137">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="0cd4a-137">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
- [<span data-ttu-id="0cd4a-138">\<Добавить > из \<declaredTypes ></span><span class="sxs-lookup"><span data-stu-id="0cd4a-138">\<add> of \<declaredTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+ [<span data-ttu-id="c3ee2-136">Известные типы контрактов данных</span><span class="sxs-lookup"><span data-stu-id="c3ee2-136">Data Contract Known Types</span></span>](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)  
+ [<span data-ttu-id="c3ee2-137">\<dataContractSerializer ></span><span class="sxs-lookup"><span data-stu-id="c3ee2-137">\<dataContractSerializer></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)  
+ [<span data-ttu-id="c3ee2-138">\<Добавить > из \<declaredTypes ></span><span class="sxs-lookup"><span data-stu-id="c3ee2-138">\<add> of \<declaredTypes></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

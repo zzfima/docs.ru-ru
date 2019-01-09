@@ -2,36 +2,36 @@
 title: '&lt;tracking&gt; (WCF)'
 ms.date: 03/30/2017
 ms.assetid: 70cfaf24-a91c-4e56-ac47-d2ed87a963b3
-ms.openlocfilehash: e033b569502bba795b5dcd1abdf9f68a726fac21
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7162d66917660a8730f851811643723cd398147c
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121310"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54146736"
 ---
-# <a name="lttrackinggt-of-wcf"></a><span data-ttu-id="83461-102">&lt;tracking&gt; (WCF)</span><span class="sxs-lookup"><span data-stu-id="83461-102">&lt;tracking&gt; of WCF</span></span>
-<span data-ttu-id="83461-103">Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="83461-103">Represents a configuration section for defining tracking settings for a workflow service.</span></span>  
+# <a name="lttrackinggt-of-wcf"></a><span data-ttu-id="bf309-102">&lt;tracking&gt; (WCF)</span><span class="sxs-lookup"><span data-stu-id="bf309-102">&lt;tracking&gt; of WCF</span></span>
+<span data-ttu-id="bf309-103">Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="bf309-103">Represents a configuration section for defining tracking settings for a workflow service.</span></span>  
   
- <span data-ttu-id="83461-104">Дополнительные сведения об отслеживании рабочих процессов и его конфигурации, см. в разделе [отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) и [Настройка отслеживания для рабочего процесса](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="83461-104">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>  
+ <span data-ttu-id="bf309-104">Дополнительные сведения об отслеживании рабочих процессов и его конфигурации, см. в разделе [отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) и [Настройка отслеживания для рабочего процесса](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span><span class="sxs-lookup"><span data-stu-id="bf309-104">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Configuring Tracking for a Workflow](../../../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md).</span></span>  
   
- <span data-ttu-id="83461-105">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="83461-105">\<system.serviceModel></span></span>  
-<span data-ttu-id="83461-106">\<Отслеживание ></span><span class="sxs-lookup"><span data-stu-id="83461-106">\<tracking></span></span>  
+ <span data-ttu-id="bf309-105">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="bf309-105">\<system.serviceModel></span></span>  
+<span data-ttu-id="bf309-106">\<Отслеживание ></span><span class="sxs-lookup"><span data-stu-id="bf309-106">\<tracking></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="83461-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="83461-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="bf309-107">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="bf309-107">Syntax</span></span>  
   
-```xml
+```xml  
 <system.serviceModel>
   <tracking>
     <participants>
-      <add name="String" 
-           profileName="String" 
+      <add name="String"
+           profileName="String"
            type="String" />
     </participants>
     <profiles>
       <trackingProfile name="String">
         <workflow activityDefinitionId="String">
           <activityScheduledQueries>
-            <activityScheduledQuery activityName="String"       
+            <activityScheduledQuery activityName="String"
                                     childActivityName="String"/>
           </activityScheduledQueries>
           <activityStateQueries>
@@ -50,15 +50,15 @@ ms.locfileid: "49121310"
             <bookmarkResumptionQuery name="String" />
           </bookmarkResumptionQueries>
           <cancelRequestQueries>
-            <cancelRequestQuery activityName="String" 
+            <cancelRequestQuery activityName="String"
                                 childActivityName="String"/>
           </cancelRequestQueries>
           <customTrackingQueries>
-            <customTrackingQuery activityName="String" 
+            <customTrackingQuery activityName="String"
                                  name="String"/>
           </customTrackingQueries>
           <faultPropagationQueries>
-            <faultPropagationQuery activityName="String" 
+            <faultPropagationQuery activityName="String"
                                    faultHandlerActivityName="String"/>
           </faultPropagationQueries>
           <workflowInstanceQueries>
@@ -72,31 +72,31 @@ ms.locfileid: "49121310"
       </trackingProfile>
     </profiles>
   </tracking>
-</system.serviceModel>   
-```
+</system.serviceModel>
+```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="83461-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="83461-108">Attributes and Elements</span></span>  
- <span data-ttu-id="83461-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="83461-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="bf309-108">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="bf309-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="bf309-109">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="bf309-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="83461-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="83461-110">Attributes</span></span>  
- <span data-ttu-id="83461-111">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="83461-111">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="bf309-110">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="bf309-110">Attributes</span></span>  
+ <span data-ttu-id="bf309-111">Отсутствует.</span><span class="sxs-lookup"><span data-stu-id="bf309-111">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="83461-112">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="83461-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="bf309-112">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="bf309-112">Child Elements</span></span>  
   
-|<span data-ttu-id="83461-113">Элемент</span><span class="sxs-lookup"><span data-stu-id="83461-113">Element</span></span>|<span data-ttu-id="83461-114">Описание</span><span class="sxs-lookup"><span data-stu-id="83461-114">Description</span></span>|  
+|<span data-ttu-id="bf309-113">Элемент</span><span class="sxs-lookup"><span data-stu-id="bf309-113">Element</span></span>|<span data-ttu-id="bf309-114">Описание</span><span class="sxs-lookup"><span data-stu-id="bf309-114">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="83461-115">\<Участники ></span><span class="sxs-lookup"><span data-stu-id="83461-115">\<participants></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|<span data-ttu-id="83461-116">Коллекция элементов конфигурации, которые определяют участников, подписки на записи отслеживания.</span><span class="sxs-lookup"><span data-stu-id="83461-116">A collection of configuration elements defining participants that subscribe to tracking records.</span></span> <span data-ttu-id="83461-117">Участники содержат логику обработки полезных данных из записей отслеживания (например, они могут записать данные в файл).</span><span class="sxs-lookup"><span data-stu-id="83461-117">The tracking participants contain the logic to process the payload from the tracking records (for example, they could choose to write to a file).</span></span>|  
-|[<span data-ttu-id="83461-118">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="83461-118">\<trackingProfile></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|<span data-ttu-id="83461-119">Профиль отслеживания для фильтрации записей отслеживания, выдаваемых экземпляром рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="83461-119">A tracking profile to filter tracking records emitted from a workflow instance.</span></span>|  
+|[<span data-ttu-id="bf309-115">\<Участники ></span><span class="sxs-lookup"><span data-stu-id="bf309-115">\<participants></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|<span data-ttu-id="bf309-116">Коллекция элементов конфигурации, которые определяют участников, подписки на записи отслеживания.</span><span class="sxs-lookup"><span data-stu-id="bf309-116">A collection of configuration elements defining participants that subscribe to tracking records.</span></span> <span data-ttu-id="bf309-117">Участники содержат логику обработки полезных данных из записей отслеживания (например, они могут записать данные в файл).</span><span class="sxs-lookup"><span data-stu-id="bf309-117">The tracking participants contain the logic to process the payload from the tracking records (for example, they could choose to write to a file).</span></span>|  
+|[<span data-ttu-id="bf309-118">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="bf309-118">\<trackingProfile></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/trackingprofile.md)|<span data-ttu-id="bf309-119">Профиль отслеживания для фильтрации записей отслеживания, выдаваемых экземпляром рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="bf309-119">A tracking profile to filter tracking records emitted from a workflow instance.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="83461-120">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="83461-120">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="bf309-120">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="bf309-120">Parent Elements</span></span>  
   
-|<span data-ttu-id="83461-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="83461-121">Element</span></span>|<span data-ttu-id="83461-122">Описание</span><span class="sxs-lookup"><span data-stu-id="83461-122">Description</span></span>|  
+|<span data-ttu-id="bf309-121">Элемент</span><span class="sxs-lookup"><span data-stu-id="bf309-121">Element</span></span>|<span data-ttu-id="bf309-122">Описание</span><span class="sxs-lookup"><span data-stu-id="bf309-122">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="83461-123">system.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="83461-123">system.ServiceModel</span></span>|<span data-ttu-id="83461-124">Корневой элемент всех элементов конфигурации рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="83461-124">The root element of all workflow configuration elements.</span></span>|  
+|<span data-ttu-id="bf309-123">system.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="bf309-123">system.ServiceModel</span></span>|<span data-ttu-id="bf309-124">Корневой элемент всех элементов конфигурации рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="bf309-124">The root element of all workflow configuration elements.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="83461-125">Примечания</span><span class="sxs-lookup"><span data-stu-id="83461-125">Remarks</span></span>  
- <span data-ttu-id="83461-126">Отслеживание позволяет исследовать выполнение рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="83461-126">Tracking provides you with the ability to examine the execution of a workflow.</span></span> <span data-ttu-id="83461-127">Инфраструктура отслеживания рабочего процесса инструментирует процесс таким образом, что выдаются записи, отражающие ключевые события выполнения.</span><span class="sxs-lookup"><span data-stu-id="83461-127">The workflow tracking infrastructure instruments a workflow to emit records reflecting key events during the execution.</span></span> <span data-ttu-id="83461-128">Например, записи отслеживания создаются при запуске и завершении экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="83461-128">For example, when a workflow instance starts or completes tracking records are emitted.</span></span> <span data-ttu-id="83461-129">Отслеживание также позволяет извлекать важные бизнес-данные, связанные с переменными рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="83461-129">Tracking can also extract business relevant data associated with the workflow variables.</span></span> <span data-ttu-id="83461-130">Например, если рабочий процесс представляет собой систему обработки заказов, то вместе с записью отслеживания можно извлечь идентификатор заказа.</span><span class="sxs-lookup"><span data-stu-id="83461-130">For example, if the workflow represents an order processing system the order id can be extracted along with the tracking record.</span></span> <span data-ttu-id="83461-131">В общем, функции отслеживания WF обеспечивают диагностику и анализ исполнения рабочих задач.</span><span class="sxs-lookup"><span data-stu-id="83461-131">In general, enabling WF tracking facilitates diagnostics or business analytics over a workflow execution.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="bf309-125">Примечания</span><span class="sxs-lookup"><span data-stu-id="bf309-125">Remarks</span></span>  
+ <span data-ttu-id="bf309-126">Отслеживание позволяет исследовать выполнение рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="bf309-126">Tracking provides you with the ability to examine the execution of a workflow.</span></span> <span data-ttu-id="bf309-127">Инфраструктура отслеживания рабочего процесса инструментирует процесс таким образом, что выдаются записи, отражающие ключевые события выполнения.</span><span class="sxs-lookup"><span data-stu-id="bf309-127">The workflow tracking infrastructure instruments a workflow to emit records reflecting key events during the execution.</span></span> <span data-ttu-id="bf309-128">Например, записи отслеживания создаются при запуске и завершении экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="bf309-128">For example, when a workflow instance starts or completes tracking records are emitted.</span></span> <span data-ttu-id="bf309-129">Отслеживание также позволяет извлекать важные бизнес-данные, связанные с переменными рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="bf309-129">Tracking can also extract business relevant data associated with the workflow variables.</span></span> <span data-ttu-id="bf309-130">Например, если рабочий процесс представляет собой систему обработки заказов, то вместе с записью отслеживания можно извлечь идентификатор заказа.</span><span class="sxs-lookup"><span data-stu-id="bf309-130">For example, if the workflow represents an order processing system the order id can be extracted along with the tracking record.</span></span> <span data-ttu-id="bf309-131">В общем, функции отслеживания WF обеспечивают диагностику и анализ исполнения рабочих задач.</span><span class="sxs-lookup"><span data-stu-id="bf309-131">In general, enabling WF tracking facilitates diagnostics or business analytics over a workflow execution.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83461-132">См. также</span><span class="sxs-lookup"><span data-stu-id="83461-132">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="bf309-132">См. также</span><span class="sxs-lookup"><span data-stu-id="bf309-132">See Also</span></span>  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>       
- [<span data-ttu-id="83461-133">Отслеживание и трассировка рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="83461-133">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+ [<span data-ttu-id="bf309-133">Отслеживание и трассировка рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="bf309-133">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

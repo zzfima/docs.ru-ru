@@ -12,32 +12,32 @@ api_type:
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 5844f8d63aa5646bfd7860dc0407528fb2eaf329
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c9162e123c1167e3aa1be26ddd37279c088acc89
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753343"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54149167"
 ---
-# <a name="connectiongroupmconnectionlist-field"></a><span data-ttu-id="fcca1-102">ConnectionGroup.m\_ConnectionList поля</span><span class="sxs-lookup"><span data-stu-id="fcca1-102">ConnectionGroup.m\_ConnectionList Field</span></span>
+# <a name="connectiongroupmconnectionlist-field"></a><span data-ttu-id="82335-102">ConnectionGroup.m\_ConnectionList поля</span><span class="sxs-lookup"><span data-stu-id="82335-102">ConnectionGroup.m\_ConnectionList Field</span></span>
 
-<span data-ttu-id="fcca1-103">`ConnectionGroup.m_ConnectionList` — <xref:System.Collections.ArrayList> объектов соединения, обслуживаемых одним и тем же URI и общего ресурса одинаковые значения для некоторых других свойств, такие как срок действия и проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="fcca1-103">`ConnectionGroup.m_ConnectionList` is an <xref:System.Collections.ArrayList> of connection objects that serves the same URI and share the same values for some other properties like expiration and authentication.</span></span>
+<span data-ttu-id="82335-103">`ConnectionGroup.m_ConnectionList` является <xref:System.Collections.ArrayList> объектов подключения, обслуживаемые одним и тем же URI и общего ресурса одинаковые значения для некоторых других свойств, такие как срок действия и проверки подлинности.</span><span class="sxs-lookup"><span data-stu-id="82335-103">`ConnectionGroup.m_ConnectionList` is an <xref:System.Collections.ArrayList> of connection objects that serves the same URI and share the same values for some other properties like expiration and authentication.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="fcca1-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="fcca1-104">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="82335-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="82335-104">Syntax</span></span>
   
 ```csharp  
 private ArrayList m_ConnectionList
 ```
 
 > [!WARNING]
-> <span data-ttu-id="fcca1-105">`ConnectionGroup.m_ConnectionList` Поля является закрытым и не предназначены для непосредственного использования в коде.</span><span class="sxs-lookup"><span data-stu-id="fcca1-105">The `ConnectionGroup.m_ConnectionList` field is private and not meant to be used directly in your code.</span></span>
+> <span data-ttu-id="82335-105">`ConnectionGroup.m_ConnectionList` Поле является закрытым и не предназначен для непосредственного использования в коде.</span><span class="sxs-lookup"><span data-stu-id="82335-105">The `ConnectionGroup.m_ConnectionList` field is private and is not meant to be used directly in your code.</span></span>
 > 
-> <span data-ttu-id="fcca1-106">Корпорация Майкрософт не поддерживает использование этого поля в реальном приложении ни при каких обстоятельствах.</span><span class="sxs-lookup"><span data-stu-id="fcca1-106">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
+> <span data-ttu-id="82335-106">Майкрософт не поддерживает использование этого поля в рабочем приложении ни при каких обстоятельствах.</span><span class="sxs-lookup"><span data-stu-id="82335-106">Microsoft does not support the use of this field in a production application under any circumstance.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="fcca1-107">Требования</span><span class="sxs-lookup"><span data-stu-id="fcca1-107">Requirements</span></span>
+## <a name="requirements"></a><span data-ttu-id="82335-107">Требования</span><span class="sxs-lookup"><span data-stu-id="82335-107">Requirements</span></span>
 
-<span data-ttu-id="fcca1-108">**Пространство имен:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="fcca1-108">**Namespace:** <xref:System.Net></span></span>
+<span data-ttu-id="82335-108">**Пространство имен:** <xref:System.Net></span><span class="sxs-lookup"><span data-stu-id="82335-108">**Namespace:** <xref:System.Net></span></span>
 
-<span data-ttu-id="fcca1-109">**Сборка:** системы (в System.dll)</span><span class="sxs-lookup"><span data-stu-id="fcca1-109">**Assembly:** System (in System.dll)</span></span>
+<span data-ttu-id="82335-109">**Сборка:** Системы (в System.dll)</span><span class="sxs-lookup"><span data-stu-id="82335-109">**Assembly:** System (in System.dll)</span></span>
 
-<span data-ttu-id="fcca1-110">**Версии платформы .NET framework:** доступно с версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="fcca1-110">**.NET Framework versions:** Available since 2.0.</span></span>
+<span data-ttu-id="82335-110">**Версии платформы .NET framework:** Доступно с версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="82335-110">**.NET Framework versions:** Available since 2.0.</span></span>

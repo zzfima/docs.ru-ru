@@ -2,44 +2,44 @@
 title: '&lt;trackingProfile&gt; (WCF)'
 ms.date: 10/08/2018
 ms.assetid: 09b651c2-c0d2-4850-a101-b0e009a1dc3a
-ms.openlocfilehash: bb6a99de0125100d5a604276aad82379b5ff34c4
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: a50e0e566bf0f605defeb7158817b37aa8c4047d
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454386"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54147906"
 ---
-# <a name="lttrackingprofilegt-of-wcf"></a><span data-ttu-id="39bbe-102">&lt;trackingProfile&gt; (WCF)</span><span class="sxs-lookup"><span data-stu-id="39bbe-102">&lt;trackingProfile&gt; of WCF</span></span>
-<span data-ttu-id="39bbe-103">Представляет раздел конфигурации для создания подписки на записи в участнике отслеживания отслеживания рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="39bbe-103">Represents a configuration section for creating a subscription to workflow tracking records in a tracking participant.</span></span> <span data-ttu-id="39bbe-104">Профиль отслеживания содержит запросы отслеживания, позволяющие участнику отслеживания подписываться на события рабочего процесса, формируемые во время выполнения при изменении состояния экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="39bbe-104">A tracking profile contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="39bbe-105">Запросы, заданные в разделе профиля отслеживания, определяют виды событий, возвращаемых подпиской.</span><span class="sxs-lookup"><span data-stu-id="39bbe-105">The queries defined within the tracking profile section define the kinds of events that are returned by the subscription.</span></span>  
+# <a name="lttrackingprofilegt-of-wcf"></a><span data-ttu-id="1ab1c-102">&lt;trackingProfile&gt; (WCF)</span><span class="sxs-lookup"><span data-stu-id="1ab1c-102">&lt;trackingProfile&gt; of WCF</span></span>
+<span data-ttu-id="1ab1c-103">Представляет раздел конфигурации для создания подписки на записи в участнике отслеживания отслеживания рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="1ab1c-103">Represents a configuration section for creating a subscription to workflow tracking records in a tracking participant.</span></span> <span data-ttu-id="1ab1c-104">Профиль отслеживания содержит запросы отслеживания, позволяющие участнику отслеживания подписываться на события рабочего процесса, формируемые во время выполнения при изменении состояния экземпляра рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="1ab1c-104">A tracking profile contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="1ab1c-105">Запросы, заданные в разделе профиля отслеживания, определяют виды событий, возвращаемых подпиской.</span><span class="sxs-lookup"><span data-stu-id="1ab1c-105">The queries defined within the tracking profile section define the kinds of events that are returned by the subscription.</span></span>  
   
- <span data-ttu-id="39bbe-106">Дополнительные сведения об отслеживании рабочих процессов и его конфигурации, см. в разделе [отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) и [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="39bbe-106">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
+ <span data-ttu-id="1ab1c-106">Дополнительные сведения об отслеживании рабочих процессов и его конфигурации, см. в разделе [отслеживание и трассировка рабочих процессов](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) и [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="1ab1c-106">For more information in workflow tracking and its configuration, see [Workflow Tracking and Tracing](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md) and [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>  
   
- <span data-ttu-id="39bbe-107">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="39bbe-107">\<system.serviceModel></span></span>  
-<span data-ttu-id="39bbe-108">\<Отслеживание ></span><span class="sxs-lookup"><span data-stu-id="39bbe-108">\<tracking></span></span>  
-<span data-ttu-id="39bbe-109">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="39bbe-109">\<trackingProfile></span></span>  
+ <span data-ttu-id="1ab1c-107">\<system.serviceModel ></span><span class="sxs-lookup"><span data-stu-id="1ab1c-107">\<system.serviceModel></span></span>  
+<span data-ttu-id="1ab1c-108">\<Отслеживание ></span><span class="sxs-lookup"><span data-stu-id="1ab1c-108">\<tracking></span></span>  
+<span data-ttu-id="1ab1c-109">\<trackingProfile ></span><span class="sxs-lookup"><span data-stu-id="1ab1c-109">\<trackingProfile></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="39bbe-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="39bbe-110">Syntax</span></span>  
-
-```xml
+## <a name="syntax"></a><span data-ttu-id="1ab1c-110">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1ab1c-110">Syntax</span></span>  
+  
+```xml  
 <system.serviceModel>
   <tracking>
     <profiles>
       <trackingProfile name="String">
         <workflow activityDefinitionId="String">
           <activityScheduledQueries>
-            <activityScheduledQuery activityName="String" 
+            <activityScheduledQuery activityName="String"
                                     childActivityName="String" />
           </activityScheduledQueries>
           <activityStateQueries>
             <activityStateQuery activityName="String">
               <arguments>
-                <argument name="String"/>
+                <argument name="String" />
               </arguments>
               <states>
-                <state name="String"/>
+                <state name="String" />
               </states>
               <variables>
-                <variable name="String"/>
+                <variable name="String" />
               </variables>
             </activityStateQuery>
           </activityStateQueries>
@@ -47,16 +47,16 @@ ms.locfileid: "49454386"
             <bookmarkResumptionQuery name="String" />
           </bookmarkResumptionQueries>
           <cancelRequestedQueries>
-            <cancelRequestedQuery activityName="String" 
-                                childActivityName="String"/>
+            <cancelRequestedQuery activityName="String"
+                                  childActivityName="String" />
           </cancelRequestedQueries>
           <customTrackingQueries>
-            <customTrackingQuery activityName="String" 
-                                 name="String"/>
+            <customTrackingQuery activityName="String"
+                                 name="String" />
           </customTrackingQueries>
           <faultPropagationQueries>
-            <faultPropagationQuery faultSourceActivityName="String" 
-                                   faultHandlerActivityName="String"/>
+            <faultPropagationQuery faultSourceActivityName="String"
+                                   faultHandlerActivityName="String" />
           </faultPropagationQueries>
           <stateMachineStateQueries>
             <stateMachineStateQuery activityName="String" />
@@ -75,36 +75,36 @@ ms.locfileid: "49454386"
 </system.serviceModel>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="39bbe-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="39bbe-111">Attributes and Elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1ab1c-111">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="1ab1c-111">Attributes and Elements</span></span>  
 
-<span data-ttu-id="39bbe-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="39bbe-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
+<span data-ttu-id="1ab1c-112">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="1ab1c-112">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="39bbe-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="39bbe-113">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="1ab1c-113">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="1ab1c-113">Attributes</span></span>  
   
-|<span data-ttu-id="39bbe-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="39bbe-114">Attribute</span></span>|<span data-ttu-id="39bbe-115">Описание</span><span class="sxs-lookup"><span data-stu-id="39bbe-115">Description</span></span>|  
+|<span data-ttu-id="1ab1c-114">Атрибут</span><span class="sxs-lookup"><span data-stu-id="1ab1c-114">Attribute</span></span>|<span data-ttu-id="1ab1c-115">Описание</span><span class="sxs-lookup"><span data-stu-id="1ab1c-115">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="39bbe-116">имя</span><span class="sxs-lookup"><span data-stu-id="39bbe-116">name</span></span>|<span data-ttu-id="39bbe-117">Строка, задающая имя профиля отслеживания.</span><span class="sxs-lookup"><span data-stu-id="39bbe-117">A string that specifies the name of the tracking profile.</span></span>|  
+|<span data-ttu-id="1ab1c-116">имя</span><span class="sxs-lookup"><span data-stu-id="1ab1c-116">name</span></span>|<span data-ttu-id="1ab1c-117">Строка, задающая имя профиля отслеживания.</span><span class="sxs-lookup"><span data-stu-id="1ab1c-117">A string that specifies the name of the tracking profile.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="39bbe-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="39bbe-118">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="1ab1c-118">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="1ab1c-118">Child Elements</span></span>  
   
-|<span data-ttu-id="39bbe-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="39bbe-119">Element</span></span>|<span data-ttu-id="39bbe-120">Описание</span><span class="sxs-lookup"><span data-stu-id="39bbe-120">Description</span></span>|  
+|<span data-ttu-id="1ab1c-119">Элемент</span><span class="sxs-lookup"><span data-stu-id="1ab1c-119">Element</span></span>|<span data-ttu-id="1ab1c-120">Описание</span><span class="sxs-lookup"><span data-stu-id="1ab1c-120">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="39bbe-121">\<Участники ></span><span class="sxs-lookup"><span data-stu-id="39bbe-121">\<participants></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|<span data-ttu-id="39bbe-122">Элемент конфигурации, содержащий все запросы для определенного рабочего процесса, обозначенного свойством <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="39bbe-122">A configuration element that contains all queries for a specific workflow identified by the <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId?displayProperty=nameWithType> property.</span></span>|  
+|[<span data-ttu-id="1ab1c-121">\<Участники ></span><span class="sxs-lookup"><span data-stu-id="1ab1c-121">\<participants></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md)|<span data-ttu-id="1ab1c-122">Элемент конфигурации, содержащий все запросы для определенного рабочего процесса, обозначенного свойством <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId?displayProperty=nameWithType>.</span><span class="sxs-lookup"><span data-stu-id="1ab1c-122">A configuration element that contains all queries for a specific workflow identified by the <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId?displayProperty=nameWithType> property.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="39bbe-123">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="39bbe-123">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="1ab1c-123">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="1ab1c-123">Parent Elements</span></span>  
   
-|<span data-ttu-id="39bbe-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="39bbe-124">Element</span></span>|<span data-ttu-id="39bbe-125">Описание</span><span class="sxs-lookup"><span data-stu-id="39bbe-125">Description</span></span>|  
+|<span data-ttu-id="1ab1c-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="1ab1c-124">Element</span></span>|<span data-ttu-id="1ab1c-125">Описание</span><span class="sxs-lookup"><span data-stu-id="1ab1c-125">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="39bbe-126">\<Отслеживание ></span><span class="sxs-lookup"><span data-stu-id="39bbe-126">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="39bbe-127">Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="39bbe-127">Represents a configuration section for defining tracking settings for a workflow service.</span></span>|  
+|[<span data-ttu-id="1ab1c-126">\<Отслеживание ></span><span class="sxs-lookup"><span data-stu-id="1ab1c-126">\<tracking></span></span>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/tracking.md)|<span data-ttu-id="1ab1c-127">Представляет раздел конфигурации для определения настроек отслеживания для службы рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="1ab1c-127">Represents a configuration section for defining tracking settings for a workflow service.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="39bbe-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="39bbe-128">Remarks</span></span>  
- <span data-ttu-id="39bbe-129">Профиль отслеживания содержит запросы отслеживания, которые позволяют участнику подписываться на события рабочего потока, создаваемые при изменении состояния экземпляра рабочего процесса в ходе выполнения.</span><span class="sxs-lookup"><span data-stu-id="39bbe-129">Tracking profiles contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="39bbe-130">Исходя из потребностей, можно написать профиль с низкой детализацией, который будет подписан на небольшой набор изменений состояния высокого уровня в рабочем процессе.</span><span class="sxs-lookup"><span data-stu-id="39bbe-130">Depending on your monitoring requirements you may write a profile that is very coarse, which subscribes to a small set of high-level state changes on a workflow.</span></span> <span data-ttu-id="39bbe-131">И наоборот, можно создать очень детальный профиль, результирующие события которого будут достаточно подробными для последующего воспроизведения всего процесса выполнения.</span><span class="sxs-lookup"><span data-stu-id="39bbe-131">Conversely, you may create a very specific profile whose resulting events are rich enough to reconstruct a detailed execution flow later.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1ab1c-128">Примечания</span><span class="sxs-lookup"><span data-stu-id="1ab1c-128">Remarks</span></span>  
+ <span data-ttu-id="1ab1c-129">Профиль отслеживания содержит запросы отслеживания, которые позволяют участнику подписываться на события рабочего потока, создаваемые при изменении состояния экземпляра рабочего процесса в ходе выполнения.</span><span class="sxs-lookup"><span data-stu-id="1ab1c-129">Tracking profiles contains tracking queries that permit a tracking participant to subscribe to workflow events that are emitted when the state of a workflow instance changes at runtime.</span></span> <span data-ttu-id="1ab1c-130">Исходя из потребностей, можно написать профиль с низкой детализацией, который будет подписан на небольшой набор изменений состояния высокого уровня в рабочем процессе.</span><span class="sxs-lookup"><span data-stu-id="1ab1c-130">Depending on your monitoring requirements you may write a profile that is very coarse, which subscribes to a small set of high-level state changes on a workflow.</span></span> <span data-ttu-id="1ab1c-131">И наоборот, можно создать очень детальный профиль, результирующие события которого будут достаточно подробными для последующего воспроизведения всего процесса выполнения.</span><span class="sxs-lookup"><span data-stu-id="1ab1c-131">Conversely, you may create a very specific profile whose resulting events are rich enough to reconstruct a detailed execution flow later.</span></span>  
   
- <span data-ttu-id="39bbe-132">Профили отслеживания структурированы в форме объявляющих подписок на записи отслеживания, которые позволяют выполнять запросы к среде выполнения рабочего процесса в отношении определенных записей отслеживания.</span><span class="sxs-lookup"><span data-stu-id="39bbe-132">Tracking profiles are structured as declarative subscriptions for tracking records that allow you to query the workflow runtime for specific tracking records.</span></span> <span data-ttu-id="39bbe-133">Существует множество типов запросов, которые позволяют подписаться на различные классы <xref:System.Activities.Tracking.TrackingRecord> объектов.</span><span class="sxs-lookup"><span data-stu-id="39bbe-133">There are a handful of query types that allow you subscribe to different classes of <xref:System.Activities.Tracking.TrackingRecord> objects.</span></span> <span data-ttu-id="39bbe-134">Полный список запросов, см. в разделе [ \<участников >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md) и [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="39bbe-134">For a complete list of queries, see [\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md) and [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>
+ <span data-ttu-id="1ab1c-132">Профили отслеживания структурированы в форме объявляющих подписок на записи отслеживания, которые позволяют выполнять запросы к среде выполнения рабочего процесса в отношении определенных записей отслеживания.</span><span class="sxs-lookup"><span data-stu-id="1ab1c-132">Tracking profiles are structured as declarative subscriptions for tracking records that allow you to query the workflow runtime for specific tracking records.</span></span> <span data-ttu-id="1ab1c-133">Существует множество типов запросов, которые позволяют подписаться на различные классы <xref:System.Activities.Tracking.TrackingRecord> объектов.</span><span class="sxs-lookup"><span data-stu-id="1ab1c-133">There are a handful of query types that allow you subscribe to different classes of <xref:System.Activities.Tracking.TrackingRecord> objects.</span></span> <span data-ttu-id="1ab1c-134">Полный список запросов, см. в разделе [ \<участников >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md) и [профили отслеживания](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span><span class="sxs-lookup"><span data-stu-id="1ab1c-134">For a complete list of queries, see [\<participants>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/participants.md) and [Tracking Profiles](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md).</span></span>
   
-<span data-ttu-id="39bbe-135">В следующем примере показано профиль отслеживания в файле конфигурации, который позволяет участнику отслеживания подписаться на `Started` и `Completed` событий рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="39bbe-135">The following example shows a tracking profile in a configuration file that allows a tracking participant to subscribe to the `Started` and `Completed` workflow events.</span></span>  
+<span data-ttu-id="1ab1c-135">В следующем примере показано профиль отслеживания в файле конфигурации, который позволяет участнику отслеживания подписаться на `Started` и `Completed` событий рабочего процесса.</span><span class="sxs-lookup"><span data-stu-id="1ab1c-135">The following example shows a tracking profile in a configuration file that allows a tracking participant to subscribe to the `Started` and `Completed` workflow events.</span></span>  
   
-```xml
+```xml  
 <system.serviceModel>
   <tracking>
     <profiles>
@@ -113,8 +113,8 @@ ms.locfileid: "49454386"
           <workflowInstanceQueries>
             <workflowInstanceQuery>
               <states>
-                <state name="Started"/>
-                <state name="Completed"/>
+                <state name="Started" />
+                <state name="Completed" />
               </states>
             </workflowInstanceQuery>
           </workflowInstanceQueries>
@@ -125,9 +125,9 @@ ms.locfileid: "49454386"
 </system.serviceModel>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="39bbe-136">См. также</span><span class="sxs-lookup"><span data-stu-id="39bbe-136">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ab1c-136">См. также</span><span class="sxs-lookup"><span data-stu-id="1ab1c-136">See also</span></span>
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileElement>  
 - <xref:System.Activities.Tracking.TrackingProfile>  
-- [<span data-ttu-id="39bbe-137">Отслеживание и трассировка рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="39bbe-137">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
-- [<span data-ttu-id="39bbe-138">Профили отслеживания</span><span class="sxs-lookup"><span data-stu-id="39bbe-138">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [<span data-ttu-id="1ab1c-137">Отслеживание и трассировка рабочих процессов</span><span class="sxs-lookup"><span data-stu-id="1ab1c-137">Workflow Tracking and Tracing</span></span>](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+- [<span data-ttu-id="1ab1c-138">Профили отслеживания</span><span class="sxs-lookup"><span data-stu-id="1ab1c-138">Tracking Profiles</span></span>](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

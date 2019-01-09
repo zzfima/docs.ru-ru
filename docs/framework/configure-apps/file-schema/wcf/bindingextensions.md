@@ -2,42 +2,44 @@
 title: '&lt;bindingExtensions&gt;'
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: f99b38ede66dbecb44f9e8e67f921943071672ca
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c2b097926ac21dda6a86e1e21958e15c9b63b1c4
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32750779"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54148439"
 ---
-# <a name="ltbindingextensionsgt"></a><span data-ttu-id="86d22-102">&lt;bindingExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="86d22-102">&lt;bindingExtensions&gt;</span></span>
-<span data-ttu-id="86d22-103">В этом разделе описывается использование пользовательской привязки из файла конфигурации компьютера или приложения.</span><span class="sxs-lookup"><span data-stu-id="86d22-103">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="86d22-104">Добавить пользовательскую привязку в эту коллекцию можно с помощью ключевого слова `add`, установив атрибут `type` элемента равным пользовательской привязке, а атрибут `name` равным имени пользовательской привязки.</span><span class="sxs-lookup"><span data-stu-id="86d22-104">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  
+# <a name="ltbindingextensionsgt"></a><span data-ttu-id="1d723-102">&lt;bindingExtensions&gt;</span><span class="sxs-lookup"><span data-stu-id="1d723-102">&lt;bindingExtensions&gt;</span></span>
+<span data-ttu-id="1d723-103">В этом разделе описывается использование пользовательской привязки из файла конфигурации компьютера или приложения.</span><span class="sxs-lookup"><span data-stu-id="1d723-103">This section enables the use of a user defined binding from a machine or application configuration file.</span></span> <span data-ttu-id="1d723-104">Добавить пользовательскую привязку в эту коллекцию можно с помощью ключевого слова `add`, установив атрибут `type` элемента равным пользовательской привязке, а атрибут `name` равным имени пользовательской привязки.</span><span class="sxs-lookup"><span data-stu-id="1d723-104">You can add a user defined binding to this collection by using the `add` keyword, and setting the `type` attribute of the element to a user defined binding, as well as the `name` attribute to the name of the user defined binding.</span></span>  
   
- <span data-ttu-id="86d22-105">Расширения привязки позволяют пользователю создавать привязки для использования в составе конфигурации конечной точки.</span><span class="sxs-lookup"><span data-stu-id="86d22-105">Binding extensions enable the user to create user-defined bindings for use as part an endpoint configuration.</span></span> <span data-ttu-id="86d22-106">Ну уровне программирования расширение привязки представляет собой тип, реализующий абстрактный класс <xref:System.ServiceModel.Channels.Binding>.</span><span class="sxs-lookup"><span data-stu-id="86d22-106">Programmatically, a binding extension is a type that implements the abstract class <xref:System.ServiceModel.Channels.Binding>.</span></span>  
+ <span data-ttu-id="1d723-105">Расширения привязки позволяют пользователю создавать привязки для использования в составе конфигурации конечной точки.</span><span class="sxs-lookup"><span data-stu-id="1d723-105">Binding extensions enable the user to create user-defined bindings for use as part an endpoint configuration.</span></span> <span data-ttu-id="1d723-106">Ну уровне программирования расширение привязки представляет собой тип, реализующий абстрактный класс <xref:System.ServiceModel.Channels.Binding>.</span><span class="sxs-lookup"><span data-stu-id="1d723-106">Programmatically, a binding extension is a type that implements the abstract class <xref:System.ServiceModel.Channels.Binding>.</span></span>  
   
- <span data-ttu-id="86d22-107">В следующем примере элемент `add` и атрибут `name` используются для добавления расширения привязки в раздел `bindingElementExtensions` файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="86d22-107">The following example uses the `add` element, as well as the `name` attribute to add a binding extension to the `bindingElementExtensions` section of the configuration file.</span></span>  
-  
-```xml  
-<system.serviceModel>  
-    <extensions>  
-        <bindingExtensions>  
-           <add name="MyBinding" type="Microsoft.ServiceModel.Samples.MyBinding, MyBinding,  
-                Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />  
-        </bindingExtensions>  
-    </extensions>  
-</system.serviceModel>  
-```  
-  
- <span data-ttu-id="86d22-108">Чтобы добавить в элемент возможность настройки, пользователю следует записать и зарегистрировать элемент `bindingSection`.</span><span class="sxs-lookup"><span data-stu-id="86d22-108">To add configuration abilities to the element, the user needs to write and register a `bindingSection` element.</span></span> <span data-ttu-id="86d22-109">Дополнительные сведения об этом см. в документации по <xref:System.Configuration>.</span><span class="sxs-lookup"><span data-stu-id="86d22-109">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
-  
- <span data-ttu-id="86d22-110">После определения элемента и его типа конфигурации расширение может быть использовано конечной точкой, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="86d22-110">After the element and its configuration type are defined, the extension can be used as part of an endpoint as shown in the following example.</span></span>  
+ <span data-ttu-id="1d723-107">В следующем примере элемент `add` и атрибут `name` используются для добавления расширения привязки в раздел `bindingElementExtensions` файла конфигурации.</span><span class="sxs-lookup"><span data-stu-id="1d723-107">The following example uses the `add` element, as well as the `name` attribute to add a binding extension to the `bindingElementExtensions` section of the configuration file.</span></span>  
   
 ```xml  
-<services>  
-    <service name="MyService">  
-        <endpoint address="myAddress" binding="MyBinding" />  
-    </service>  
-</services>  
+<system.serviceModel>
+  <extensions>
+    <bindingExtensions>
+      <add name="MyBinding"
+           type="Microsoft.ServiceModel.Samples.MyBinding, MyBinding,
+                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+    </bindingExtensions>
+  </extensions>
+</system.serviceModel>
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="86d22-111">См. также</span><span class="sxs-lookup"><span data-stu-id="86d22-111">See Also</span></span>  
- [<span data-ttu-id="86d22-112">Расширение привязок</span><span class="sxs-lookup"><span data-stu-id="86d22-112">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+ <span data-ttu-id="1d723-108">Чтобы добавить в элемент возможность настройки, пользователю следует записать и зарегистрировать элемент `bindingSection`.</span><span class="sxs-lookup"><span data-stu-id="1d723-108">To add configuration abilities to the element, the user needs to write and register a `bindingSection` element.</span></span> <span data-ttu-id="1d723-109">Дополнительные сведения об этом см. в документации по <xref:System.Configuration>.</span><span class="sxs-lookup"><span data-stu-id="1d723-109">For more information on this, see the <xref:System.Configuration> documentation.</span></span>  
+  
+ <span data-ttu-id="1d723-110">После определения элемента и его типа конфигурации расширение может быть использовано конечной точкой, как показано в следующем примере.</span><span class="sxs-lookup"><span data-stu-id="1d723-110">After the element and its configuration type are defined, the extension can be used as part of an endpoint as shown in the following example.</span></span>  
+  
+```xml  
+<services>
+  <service name="MyService">
+    <endpoint address="myAddress"
+              binding="MyBinding" />
+  </service>
+</services>
+```  
+  
+## <a name="see-also"></a><span data-ttu-id="1d723-111">См. также</span><span class="sxs-lookup"><span data-stu-id="1d723-111">See Also</span></span>  
+ [<span data-ttu-id="1d723-112">Расширение привязок</span><span class="sxs-lookup"><span data-stu-id="1d723-112">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
