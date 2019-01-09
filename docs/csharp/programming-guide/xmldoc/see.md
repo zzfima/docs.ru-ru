@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: 1e799c975fe21dd2dd0354a9d658a271ded5fc2c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 63476ff77f1a8286730f29149bb5b6b87779f144
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235695"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058416"
 ---
 # <a name="ltseegt-c-programming-guide"></a>&lt;see&gt; (руководство по программированию на C#)
 ## <a name="syntax"></a>Синтаксис  
@@ -27,7 +27,7 @@ ms.locfileid: "53235695"
   
 #### <a name="parameters"></a>Параметры  
  cref = "`member`"  
- Ссылка на член или поле, которые доступны для вызова из текущей среды компиляции. Компилятор проверяет существование указанного элемента кода и передает имя элемента `member` в выходных данных XML. Имя *члена* заключается в двойные кавычки (" ").  
+ Ссылка на член или поле, которые доступны для вызова из текущей среды компиляции. Компилятор проверяет, существует ли элемент кода, и передает `member` в имя элемента в выходных XML-данных. *member* необходимо заключать в двойные кавычки (" ").  
   
 ## <a name="remarks"></a>Примечания  
  Тег \<see> позволяет задать ссылку из текста. С помощью тега [\<seealso>](../../../csharp/programming-guide/xmldoc/seealso.md) можно указать, что текст должен быть размещен в разделе "См. также". Используйте [cref Attribute](../../../csharp/programming-guide/xmldoc/cref-attribute.md) для создания внутренних гиперссылок на страницы документации для элементов кода.  
@@ -38,7 +38,7 @@ ms.locfileid: "53235695"
   
  [!code-csharp[csProgGuideDocComments#12](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/see_1.cs)]  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
 - [Рекомендуемые теги для комментариев документации](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

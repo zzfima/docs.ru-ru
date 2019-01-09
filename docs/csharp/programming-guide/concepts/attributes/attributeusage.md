@@ -1,18 +1,18 @@
 ---
 title: AttributeUsage (C#)
 ms.date: 04/25/2018
-ms.openlocfilehash: 37657a0611180d5b4c48b3e1778d33861afa5a74
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 081a8f6edcddd5e87d3d9750b91ff42a72b92886
+ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500576"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53656353"
 ---
 # <a name="attributeusage-c"></a>AttributeUsage (C#)
 
 Определяет, как можно использовать пользовательский класс атрибутов. <xref:System.AttributeUsageAttribute> — это атрибут, примененный к определениям настраиваемого атрибута. С помощью атрибута `AttributeUsage` можно контролировать:
 
-- Какой атрибут элементов программы можно применить. Если вы не ограничены в использовании, атрибут можно применить к любому из следующих элементов программы:
+- Какой атрибут элементов программы можно применить. Если вы не ограничите использование, атрибут можно применить к любому из следующих элементов программы:
   - сборка
   - module
   - поле
@@ -49,7 +49,7 @@ ms.locfileid: "43500576"
 
 В этом случае `MultiUseAttribute` можно применять несколько раз, так как `AllowMultiple` имеет значение `true`. Для применения нескольких атрибутов допускаются оба показанных формата.
 
-Если <xref:System.AttributeUsageAttribute.Inherited> — `false`, атрибут не наследуется классами, производными от класса атрибутов. Пример:
+Если <xref:System.AttributeUsageAttribute.Inherited> — `false`, атрибут не наследуется классами, производными от класса атрибутов. Например:
 
 [!code-csharp[Create and use an attribute that can be applied multiple times](../../../../../samples/snippets/csharp/attributes/NonInheritedAttribute.cs#1)]
 
@@ -79,7 +79,7 @@ ThirdAttribute
 SecondAttribute
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.Attribute>  
 - <xref:System.Reflection>  

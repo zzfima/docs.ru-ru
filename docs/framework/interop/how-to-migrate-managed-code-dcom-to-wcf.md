@@ -1,17 +1,17 @@
 ---
-title: Практическое руководство. Миграция DCOM с управляемым кодов в WCF
+title: Как выполнить Миграция DCOM с управляемым кодом в WCF
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 187bff7c75ba2a0887e3c5728a484a9231936511
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 202737692bae14ada229ee2c92a6630a3ed71344
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392750"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030078"
 ---
-# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Практическое руководство. Миграция DCOM с управляемым кодов в WCF
+# <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>Как выполнить Миграция DCOM с управляемым кодом в WCF
 Для вызовов управляемого кода между серверами и клиентами в распределенной среде рекомендуется использовать технологию Windows Communication Foundation (WCF), а не модель DCOM, из соображений безопасности. В этом разделе описывается, как перенести код из DCOM в WCF в перечисленных ниже ситуациях.  
   
 -   Удаленная служба возвращает клиенту объект по значению.  
@@ -27,7 +27,7 @@ ms.locfileid: "33392750"
 ## <a name="dcom-example-code"></a>Пример кода DCOM  
  Для этих сценариев интерфейсы DCOM, проиллюстрированные с помощью WCF, имеют приведенную ниже структуру.  
   
-```  
+```csharp  
 [ComVisible(true)]  
 [Guid("AA9C4CDB-55EA-4413-90D2-843F1A49E6E6")]  
 public interface IRemoteService  
@@ -51,7 +51,7 @@ public class Customer
 ## <a name="the-service-returns-an-object-by-value"></a>Служба возвращает объект по значению  
  В этом сценарии выполняется вызов службы, а ее метод возвращает объект, который передается по значению с сервера клиенту. Такой сценарий представляет приведенный ниже вызов COM.  
   
-```  
+```csharp  
 public interface IRemoteService  
 {  
     Customer GetObjectByValue();  
@@ -60,10 +60,10 @@ public interface IRemoteService
   
  В этом случае клиент получает из удаленной службы десериализованную копию объекта. Клиент может взаимодействовать с этой локальной копией, не выполняя обратные вызовы в службу.  Иными словами, клиент получает гарантию, что при вызове методов применительно к локальной копии служба не будет задействована никоим образом. WCF всегда возвращает объекты из службы по значению, поэтому ниже описывается создание стандартной службы WCF.  
   
-### <a name="step-1-define-the-wcf-service-interface"></a>Шаг 1. Определение интерфейса службы WCF  
+### <a name="step-1-define-the-wcf-service-interface"></a>Шаг 1. Определение интерфейса службы WCF  
  Определите открытый интерфейс для службы WCF и пометьте его атрибутом [<xref:System.ServiceModel.ServiceContractAttribute>].  Пометьте атрибутом [<xref:System.ServiceModel.OperationContractAttribute>] методы, к которым необходимо предоставить доступ клиентам. В примере ниже показано использование этих атрибутов для определения интерфейса на стороне сервера и методов интерфейса, которые может вызывать клиент. Метод, используемый в этом сценарии, выделен полужирным шрифтом.  
   
-```  
+```csharp  
 using System.Runtime.Serialization;  
 using System.ServiceModel;  
 using System.ServiceModel.Web;   
@@ -79,12 +79,12 @@ public interface ICustomerManager
 }  
 ```  
   
-### <a name="step-2-define-the-data-contract"></a>Шаг 2. Определение контракта данных  
- Далее следует создать для службы контракт данных, описывающий то, как будет происходить обмен данными между службой и клиентами.  Классы, описываемые в контракте данных, следует пометить атрибутом [<xref:System.Runtime.Serialization.DataContractAttribute>]. Отдельные свойства или поля, которые должны быть доступны как клиенту, так и серверу, следует пометить атрибутом [<xref:System.Runtime.Serialization.DataMemberAttribute>]. Чтобы разрешить использование типов, производных от класса в контракте данных, их следует указать с помощью атрибута [<xref:System.Runtime.Serialization.KnownTypeAttribute>]. WCF сериализует и десериализует только те типы, которые входят в интерфейс службы или определены как известные. При попытке использовать неизвестный тип возникнет исключение.  
+### <a name="step-2-define-the-data-contract"></a>Шаг 2. Определение контракта данных  
+ Далее следует создать для службы контракт данных, описывающий то, как будет происходить обмен данными между службой и клиентами.  Классы, описываемые в контракте данных, следует пометить атрибутом [<xref:System.Runtime.Serialization.DataContractAttribute>]. Отдельные свойства или поля, которые должны быть видны и для клиента, и для сервера, отмечаются атрибутом [<xref:System.Runtime.Serialization.DataMemberAttribute>]. Чтобы разрешить использование типов, производных от класса, в контракте данных, их следует указать с помощью атрибута [<xref:System.Runtime.Serialization.KnownTypeAttribute>]. WCF сериализует и десериализует только те типы, которые входят в интерфейс службы или определены как известные. При попытке использовать неизвестный тип возникнет исключение.  
   
  Дополнительные сведения о контрактах данных см. в разделе [Контракты данных](../../../docs/framework/wcf/samples/data-contracts.md).  
   
-```  
+```csharp  
 [DataContract]  
 [KnownType(typeof(PremiumCustomer))]  
 public class Customer  
@@ -124,7 +124,7 @@ public class Address
 ### <a name="step-3-implement-the-wcf-service"></a>Шаг 3. Реализация службы WCF  
  Далее следует реализовать класс службы WCF, который реализует интерфейс, определенный в предыдущем шаге.  
   
-```  
+```csharp  
 public class CustomerService: ICustomerManager    
 {  
     public void StoreCustomer(Customer customer)  
@@ -138,7 +138,7 @@ public class CustomerService: ICustomerManager
 }  
 ```  
   
-### <a name="step-4-configure-the-service-and-the-client"></a>Шаг 4. Настройка службы и клиента  
+### <a name="step-4-configure-the-service-and-the-client"></a>Шаг 4. Настройка службы и клиента  
  Для запуска службы WCF необходимо объявить конечную точку, предоставляющую доступ к интерфейсу службы по определенному URL-адресу с помощью определенной привязки WCF. Привязка определяет транспорт, кодировку и протокол, используемые для обмена данными между клиентами и сервером. Привязки обычно добавляются в файл конфигурации проекта службы (web.config). Ниже приведен пример записи привязки для службы.  
   
 ```xml  
@@ -169,18 +169,18 @@ public class CustomerService: ICustomerManager
 </configuration>  
 ```  
   
-### <a name="step-5-run-the-service"></a>Шаг 5. Запуск службы  
+### <a name="step-5-run-the-service"></a>Шаг 5. Запуск службы  
  Наконец, вы можете произвести резидентное размещение в консольном приложении, добавив в приложение службы приведенные ниже строки и запустив его. Дополнительные сведения о других способах размещения приложения службы WCF см. в разделе [Размещение служб](../../../docs/framework/wcf/hosting-services.md).  
   
-```  
+```csharp  
 ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
 customerServiceHost.Open();  
 ```  
   
-### <a name="step-6-call-the-service-from-the-client"></a>Шаг 6. Вызов службы из клиента  
+### <a name="step-6-call-the-service-from-the-client"></a>Шаг 6. Вызов службы из клиента  
  Для вызова службы из клиента нужно создать для нее фабрику каналов, а затем запросить канал, чтобы получить возможность вызывать метод `GetCustomer` непосредственно из клиента. Канал реализует интерфейс службы и отвечает за базовую логику запросов и ответов.  Возвращаемое значение метода представляет собой десериализованную копию ответа службы.  
   
-```  
+```csharp  
 ChannelFactory<ICustomerManager> factory =   
      new ChannelFactory<ICustomerManager>("customermanager");  
 ICustomerManager service = factory.CreateChannel();  
@@ -192,7 +192,7 @@ Customer customer = service.GetCustomer("Mary", "Smith");
   
  Такой сценарий представляет приведенный ниже вызов метода COM.  
   
-```  
+```csharp  
 public interface IRemoteService  
 {  
     void SendObjectByValue(Customer customer);  
@@ -201,7 +201,7 @@ public interface IRemoteService
   
  В этом сценарии используется тот же интерфейс службы и тот же контракт данных, что и в первом примере. Кроме того, клиент и служба настраиваются точно так же. В этом примере для отправки объекта создается и запускается канал аналогичным образом. Однако в этом примере вы создадите клиент, который вызывает службу, передавая объект по значению. Метод службы, который клиент вызывает в контракте службы, выделен полужирным шрифтом.  
   
-```  
+```csharp  
 [ServiceContract]  
 public interface ICustomerManager  
 {  
@@ -217,7 +217,7 @@ public interface ICustomerManager
   
  Объект customer будет сериализован и отправлен в службу, где он десериализуется в новую копию этого объекта.  Любые методы этого объекта, вызываемые службой, будут выполняться только локально на сервере. Важно отметить, что этот код иллюстрирует отправку производного типа (`PremiumCustomer`).  Контракт службы ожидает объекта `Customer`, но в контракте данных службы используется атрибут [<xref:System.Runtime.Serialization.KnownTypeAttribute>], указывающий, что объект `PremiumCustomer` также допустим.  Попытка сериализации или десериализации любого другого типа посредством этого интерфейса службы WCF завершится ошибкой.  
   
-```  
+```csharp  
 PremiumCustomer customer = new PremiumCustomer();  
 customer.Firstname = "John";  
 customer.Lastname = "Doe";  
@@ -243,19 +243,19 @@ customerManager.StoreCustomer(customer);
   
  Этот сценарий представлен приведенным ниже методом DCOM.  
   
-```  
+```csharp  
 public interface IRemoteService  
 {  
     IRemoteObject GetObjectByReference();  
 }  
 ```  
   
-### <a name="step-1-define-the-sessionful-wcf-service-interface-and-implementation"></a>Шаг 1. Определение интерфейса сеанса службы WCF и его реализация  
+### <a name="step-1-define-the-sessionful-wcf-service-interface-and-implementation"></a>Шаг 1. Определение интерфейса сеанса службы WCF и его реализация  
  Сначала определите интерфейс службы WCF, содержащий объект сеанса.  
   
  В этом коде объект сеанса помечен атрибутом `ServiceContract`, который определяет его как обычный интерфейс службы WCF.  Кроме того, свойству <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> присвоено значение, указывающее, что это будет служба сеанса.  
   
-```  
+```csharp  
 [ServiceContract(SessionMode = SessionMode.Allowed)]  
 public interface ISessionBoundObject  
 {  
@@ -271,7 +271,7 @@ public interface ISessionBoundObject
   
  Служба помечена атрибутом [ServiceBehavior], а ее свойству InstanceContextMode присвоено значение InstanceContextMode.PerSessions, указывающее, что для каждого сеанса должен создаваться уникальный экземпляр этого типа.  
   
-```  
+```csharp  
 [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
     public class MySessionBoundObject : ISessionBoundObject  
     {  
@@ -290,10 +290,10 @@ public interface ISessionBoundObject
     }  
 ```  
   
-### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a>Шаг 2. Определение службы фабрики WCF для объекта сеанса  
+### <a name="step-2-define-the-wcf-factory-service-for-the-sessionful-object"></a>Шаг 2. Определение службы фабрики WCF для объекта сеанса  
  Необходимо определить и реализовать службу, создающую объект сеанса. В следующем примере кода показано, как это сделать: Этот код создает еще одну службу WCF, которая возвращает объект <xref:System.ServiceModel.EndpointAddress10>.  Это сериализуемая форма конечной точки, с помощью которой можно создать объект сеанса.  
   
-```  
+```csharp  
 [ServiceContract]  
     public interface ISessionBoundFactory  
     {  
@@ -304,7 +304,7 @@ public interface ISessionBoundObject
   
  Ниже показана реализация этой службы. Эта реализация поддерживает единственную фабрику каналов для создания объектов сеанса.  При вызове метода `GetInstanceAddress` создается канал и объект <xref:System.ServiceModel.EndpointAddress10>, указывающий на удаленный адрес, связанный с этим каналом.   <xref:System.ServiceModel.EndpointAddress10> — это тип данных, который можно вернуть клиенту по значению.  
   
-```  
+```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
     {  
         public static ChannelFactory<ISessionBoundObject> _factory =   
@@ -359,7 +359,7 @@ public class SessionBoundFactory : ISessionBoundFactory
   
  Добавьте приведенные ниже строки в консольное приложение для резидентного размещения службы и запустите приложение.  
   
-```  
+```csharp  
 ServiceHost factoryHost = new ServiceHost(typeof(SessionBoundFactory));  
 factoryHost.Open();  
   
@@ -368,7 +368,7 @@ typeof(MySessionBoundObject));
 sessionBoundServiceHost.Open();  
 ```  
   
-### <a name="step-4-configure-the-client-and-call-the-service"></a>Шаг 4. Настройка клиента и вызов службы  
+### <a name="step-4-configure-the-client-and-call-the-service"></a>Шаг 4. Настройка клиента и вызов службы  
  Настройте клиент так, чтобы он мог связываться со службами WCF, добавив указанные ниже записи в файл конфигурации приложения проекта (app.config).  
   
 ```xml  
@@ -398,7 +398,7 @@ sessionBoundServiceHost.Open();
   
 4.  вызов методов `SetCurrentValue` и `GetCurrentValue` для демонстрации того, что в рамках нескольких вызовов используется один и тот же экземпляр объекта.  
   
-```  
+```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
         new ChannelFactory<ISessionBoundFactory>("factory");  
   
@@ -421,7 +421,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Базовое программирование для WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
  [Проектирование и реализация служб](../../../docs/framework/wcf/designing-and-implementing-services.md)  
  [Создание клиентов](../../../docs/framework/wcf/building-clients.md)  

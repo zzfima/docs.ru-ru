@@ -4,12 +4,12 @@ description: Разработка современных веб-приложен
 author: ardalis
 ms.author: wiwagn
 ms.date: 06/28/2018
-ms.openlocfilehash: 7459173f21bd5219c2aa7b994ac2b2b44857375f
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: aed0ba4621eab91dd47df9ef760fdf8c39ff1103
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152787"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058507"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Разработка приложений MVC ASP.NET Core
 
@@ -69,13 +69,13 @@ public class ProductsController : Controller
 > ### <a name="references--mapping-requests-to-responses"></a>Ссылки — сопоставление запросов с ответами
 >
 > - **Маршрутизация к действиям контроллера**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
 > - **Привязка модели**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/model-binding>
 > - **Проверка модели**
-> <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
+ > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
 > - **Фильтры**
-> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
+ > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 
 ## <a name="working-with-dependencies"></a>Работа с зависимостями
 
@@ -213,7 +213,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 Рис. 7-2. Выполнение запроса через фильтры и конвейер обработки запросов.
 
-Фильтры обычно реализуются в виде атрибутов, поэтому их можно применять к контроллерам или действиям. При добавлении таким способом фильтры, задаваемые на уровне действия, переопределяют (или используют в качестве основы) фильтры уровня контроллера, которые, в свою очередь, переопределяют глобальные фильтры. Например, атрибут \[Route\] может использоваться для создания маршрутов между контроллерами и действиями. Аналогичным образом можно настроить авторизацию на уровне контроллера и затем переопределить ее для отдельных действий, как показано в следующем примере:
+Фильтры обычно реализуются в виде атрибутов, поэтому их можно применять к контроллерам или действиям (или даже глобально). При добавлении таким способом фильтры, задаваемые на уровне действия, переопределяют (или используют в качестве основы) фильтры уровня контроллера, которые, в свою очередь, переопределяют глобальные фильтры. Например, атрибут \[Route\] может использоваться для создания маршрутов между контроллерами и действиями. Аналогичным образом можно настроить авторизацию на уровне контроллера и затем переопределить ее для отдельных действий, как показано в следующем примере:
 
 ```csharp
 [Authorize]
@@ -282,7 +282,7 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 > - **Области**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN Magazine — срезы функций для ASP.NET Core MVC**  
- > <https://msdn.microsoft.com/magazine/mt763233.aspx>
+>   <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Фильтры**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN — фильтры MVC для ASP.NET Core в реальном мире**  

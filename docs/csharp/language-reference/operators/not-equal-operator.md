@@ -1,7 +1,7 @@
 ---
 title: Справочник по C#. Оператор !=
 ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 12/14/2018
 f1_keywords:
 - '!=_CSharpKeyword'
 helpviewer_keywords:
@@ -9,26 +9,32 @@ helpviewer_keywords:
 - not equals operator (!=) [C#]
 - '!= operator [C#]'
 ms.assetid: eeff7a4e-ad6f-462d-9f8d-49e9b91c6c97
-ms.openlocfilehash: 15f1b5930117e608644a58343fb855562f36b21c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 939b5664dba4345e62a43fb2f8d4d5379659d6aa
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237822"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610181"
 ---
 # <a name="-operator-c-reference"></a>Оператор != (справочник по C#)
-Оператор неравенства (`!=`) возвращает значение false, если его операнды равны. В противном случае возвращается значение true. Операторы неравенства предопределены для всех типов, включая строки и объекты. Определяемые пользователем типы могут перегружать оператор `!=`.  
-  
-## <a name="remarks"></a>Примечания  
- Для предопределенных типов значений оператор неравенства (`!=`) возвращает значение true, если значения его операндов отличаются, и false в любых остальных случаях. Для ссылочных типов (кроме `string`) оператор `!=` возвращает значение true, если два его операнда ссылаются на разные объекты. Для типа `string` оператор `!=` сравнивает значения строк.  
-  
- Определяемые пользователем типы значений могут вызвать перегрузку оператора `!=` (см. раздел [operator](../../../csharp/language-reference/keywords/operator.md)). Это справедливо и для определяемых пользователем ссылочных типов, хотя оператор `!=` по умолчанию действует описанным выше способом и для предопределенных, и для определяемых пользователем ссылочных типов. В случае перегрузки `!=` также необходимо перегружать [==](../../../csharp/language-reference/operators/equality-comparison-operator.md). Операции с целыми типами обычно разрешены и для перечислений.  
-  
-## <a name="example"></a>Пример  
- [!code-csharp[csRefOperators#33](../../../csharp/language-reference/operators/codesnippet/CSharp/not-equal-operator_1.cs)]  
-  
+
+Оператор неравенства `!=` возвращает значение `true`, если его операнды не равны. В противном случае возвращается значение `false`. Для операндов [встроенных типов](../keywords/built-in-types-table.md) выражение `x != y` дает тот же результат, что и выражение `!(x == y)`. Дополнительные сведения см. в статье [Оператор ==](equality-comparison-operator.md).
+
+В следующем примере иллюстрируется использование оператора `!=`.
+
+[!code-csharp-interactive[non-equality examples](~/samples/snippets/csharp/language-reference/operators/EqualityAndNonEqualityExamples.cs#NonEquality)]
+
+## <a name="operator-overloadability"></a>Возможность перегрузки оператора
+
+Определяемые пользователем типы могут [перегружать](../keywords/operator.md) оператор `!=`. Если тип перегружает оператор неравенства `!=`, он также должен перегружать [оператор равенства](equality-comparison-operator.md) `==`.
+
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+Дополнительные сведения см. в разделе [Операторы отношения и проверки типа](~/_csharplang/spec/expressions.md#relational-and-type-testing-operators) в статье по [спецификации языка C#](../language-specification/index.md).
+
 ## <a name="see-also"></a>См. также
 
-- [Справочник по C#](../../../csharp/language-reference/index.md)  
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-- [Операторы в C#](../../../csharp/language-reference/operators/index.md)
+- [Справочник по C#](../index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+- [Операторы в C#](index.md)
+- [Сравнения на равенство](../../programming-guide/statements-expressions-operators/equality-comparisons.md)

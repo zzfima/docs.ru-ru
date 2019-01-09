@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: fb2da0d37a3c72941e9ffdac52a6fdf24ec71b3a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 220e43ed6aadbcc443f4cf06310fe12e970abcf2
+ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149592"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54030429"
 ---
 # <a name="best-practices-for-exceptions"></a>Лучшие методики обработки исключений
 
@@ -24,7 +24,7 @@ ms.locfileid: "53149592"
 
 Используйте блоки `try`/`catch`, выделив с их помощью код, который потенциально может явиться источником исключения, ***таким образом*** можно будет выполнить восстановление кода после возникновения этого исключения. В блоках `catch` следует всегда упорядочивать исключения от более производных к менее производным. Все исключения, производные от <xref:System.Exception>. Более производные исключения не обрабатываются предложением catch, которому предшествует предложение catch для базового класса исключения. Если ваш код не удается восстановить после возникновения исключения, не перехватывайте это исключение. Включите методы выше по стеку вызовов для восстановления по мере возможности.
 
-Очистите ресурсы, выделенные с помощью инструкций `using` или блоков `finally`. Рекомендуется использовать инструкции `using` для автоматической очистки ресурсов при возникновении исключений. Используйте блоки `finally`, чтобы очистить ресурсы, которые не реализуют <xref:System.IDisposable>. Код в предложении `finally` почти всегда выполняется, даже при возникновении исключения.
+Очистите ресурсы, выделенные с помощью инструкций `using` или блоков `finally`. Рекомендуется использовать инструкции `using` для автоматической очистки ресурсов при возникновении исключений. Используйте блоки `finally`, чтобы очистить ресурсы, которые не реализуют <xref:System.IDisposable>. Код в предложении `finally` выполняется почти всегда — даже при возникновении исключений.
 
 ## <a name="handle-common-conditions-without-throwing-exceptions"></a>Обработка общих условий без выдачи исключений
 
@@ -70,7 +70,7 @@ ms.locfileid: "53149592"
 
 ## <a name="end-exception-class-names-with-the-word-exception"></a>Завершайте имена классов исключений словом `Exception`
 
-Если требуется пользовательское исключение, присвойте ему соответствующее имя и сделайте его производным от класса <xref:System.Exception>. Пример:
+Если требуется пользовательское исключение, присвойте ему соответствующее имя и сделайте его производным от класса <xref:System.Exception>. Например:
 
 [!code-cpp[Conceptual.Exception.Handling#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.exception.handling/cpp/source.cpp#4)]
 [!code-csharp[Conceptual.Exception.Handling#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.exception.handling/cs/source.cs#4)]
@@ -86,7 +86,7 @@ ms.locfileid: "53149592"
   
 * <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>, принимающий строковое сообщение и внутреннее исключение.  
   
-Пример см. в разделе [Практическое руководство. Создание пользовательских исключений](how-to-create-user-defined-exceptions.md).
+Пример см. в статье [Практическое руководство. Создание пользовательских исключений](how-to-create-user-defined-exceptions.md).
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>Обеспечение доступности данных об исключении при удаленном выполнении кода
 

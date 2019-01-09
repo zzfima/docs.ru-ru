@@ -8,12 +8,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: 98774a0f7ad86e43178c6d0216e29e7b4767f3f2
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ab6506e619c675ddd68237c4ddca870e9e14098f
+ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235258"
+ms.lasthandoff: 01/05/2019
+ms.locfileid: "54058468"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>Таблица неявных числовых преобразований (Справочник по C#)
 
@@ -23,14 +23,14 @@ ms.locfileid: "53235258"
 |----------|--------|  
 |[sbyte](sbyte.md)|`short`, `int`, `long`, `float`, `double` или `decimal`|  
 |[byte](byte.md)|`short`, `ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`|  
+|[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`|  
 |[short](short.md)|`int`, `long`, `float`, `double` или `decimal`|  
 |[ushort](ushort.md)|`int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`|  
 |[int](int.md)|`long`, `float`, `double` или `decimal`|  
 |[uint](uint.md)|`long`, `ulong`, `float`, `double` или `decimal`|  
 |[long](long.md)|`float`, `double`или `decimal`|  
-|[char](char.md)|`ushort`, `int`, `uint`, `long`, `ulong`, `float`, `double` или `decimal`|  
-|[float](float.md)|`double`|  
 |[ulong](ulong.md)|`float`, `double`или `decimal`|  
+|[float](float.md)|`double`|  
   
 ## <a name="remarks"></a>Примечания  
 
@@ -38,9 +38,11 @@ ms.locfileid: "53235258"
 
 - При преобразовании из `int`, `uint`, `long` или `ulong` в `float` и из `long` или `ulong` в `double` может быть потеряна точность, но не величина.  
   
-- Не поддерживается неявное преобразование в тип `char`.  
+- Не поддерживается неявное преобразование в типы `char`, `byte` и `sbyte`.  
+
+- Не поддерживается неявное преобразование из типов `char`, `double` и `decimal`.
   
-- Не поддерживается неявное преобразование между типами `float` и `double` и типом `decimal`.  
+- Не поддерживается неявное преобразование между типом `decimal` и типами `float` или `double`.  
   
 - Значение константного выражения типа `int` (например, значение, представленное целочисленным литералом) может быть преобразовано в `sbyte`, `byte`, `short`, `ushort`, `uint` или `ulong`, если оно находится в диапазоне конечного типа.
 

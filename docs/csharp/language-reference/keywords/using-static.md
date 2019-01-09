@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c17f74fc16e8c9774086c5270a66e9e9d7cc425b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 29610a77eadf587162731b5bddbcc4bbe7fa0714
+ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237783"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53610532"
 ---
 # <a name="using-static-directive-c-reference"></a>Директива using static (справочник по C#)
 
@@ -29,34 +29,34 @@ using static <fully-qualified-type-name>;
 Директива `using static` была представлена в C# версии 6.
 
 ## <a name="remarks"></a>Примечания
- 
+
 Обычно при вызове статического члена необходимо указать имя типа и имя нужного члена. Повторный ввод одного и того же имени типа для вызова относящихся к нему элементов может сделать код слишком длинным и сложным. Например, следующее определение класса `Circle` ссылается на ряд членов класса <xref:System.Math>.
-  
-[!code-csharp[using-static#1](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static1.cs#1)]
+
+[!code-csharp[using-static#1](~/samples/snippets/csharp/language-reference/keywords/using/using-static1.cs#1)]
 
 Поскольку явно ссылаться на класс <xref:System.Math> при каждой ссылке на член не требуется, директива `using static` создает гораздо более понятный код:
 
-[!code-csharp[using-static#2](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
+[!code-csharp[using-static#2](~/samples/snippets/csharp/language-reference/keywords/using/using-static2.cs#1)]
 
-`using static` импортирует только доступные статические члены и вложенные типы, объявленные в указанном типе.  Унаследованные члены не импортируются.  Можно импортировать из любого именованного типа с помощью директивы using static, включая модули Visual Basic.  Если функции F# верхнего уровня отображаются в метаданных как статические члены именованного типа, имя которого является допустимым идентификатором C#, то эти функции F# можно импортировать.  
-  
- `using static` делает методы расширения, объявленные в указанном типе, доступными для поиска метода расширения.  Тем не менее имена методов расширения не импортируются в область для неквалифицированной ссылки в коде.  
-  
- Методы с тем же именем, импортированные из различных типов разными директивами `using static` в том же блоке компиляции или пространстве имен, формируют группу методов.  Разрешение перегрузки в этих группах методов соответствует обычным правилам языка C#.  
-  
+`using static` импортирует только доступные статические члены и вложенные типы, объявленные в указанном типе.  Унаследованные члены не импортируются.  Можно импортировать из любого именованного типа с помощью директивы using static, включая модули Visual Basic.  Если функции F# верхнего уровня отображаются в метаданных как статические члены именованного типа, имя которого является допустимым идентификатором C#, то эти функции F# можно импортировать.
+
+ `using static` делает методы расширения, объявленные в указанном типе, доступными для поиска метода расширения.  Тем не менее имена методов расширения не импортируются в область для неквалифицированной ссылки в коде.
+
+ Методы с тем же именем, импортированные из различных типов разными директивами `using static` в том же блоке компиляции или пространстве имен, формируют группу методов.  Разрешение перегрузки в этих группах методов соответствует обычным правилам языка C#.
+
 ## <a name="example"></a>Пример
 
 В следующем примере директива `using static` используется для того, чтобы доступ к статическим членам классов <xref:System.Console>, <xref:System.Math> и <xref:System.String> можно было получать, не указывая имя типа.
 
-[!code-csharp[using-static#3](../../../../samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
+[!code-csharp[using-static#3](~/samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
 В этом примере директива `using static` может также применяться к типу <xref:System.Double>. В этом случае вызвать метод <xref:System.Double.TryParse(System.String,System.Double@)>, не указав имя типа, было бы возможно. При этом код становится менее понятным, поскольку появляется необходимость проверять операторы `using static` и определять, какой метод числового типа `TryParse` вызывается.
 
 ## <a name="see-also"></a>См. также
 
 - [Директива using](using-directive.md)
-- [Справочник по C#](../../../csharp/language-reference/index.md)
-- [Ключевые слова в C#](../../../csharp/language-reference/keywords/index.md)
-- [Использование пространств имен](../../../csharp/programming-guide/namespaces/using-namespaces.md)
-- [Ключевые слова, используемые для пространств имен](../../../csharp/language-reference/keywords/namespace-keywords.md)
-- [Пространства имен](../../../csharp/programming-guide/namespaces/index.md)
+- [Справочник по C#](../index.md)
+- [Ключевые слова в C#](index.md)
+- [Использование пространств имен](../../programming-guide/namespaces/using-namespaces.md)
+- [Ключевые слова, используемые для пространств имен](namespace-keywords.md)
+- [Пространства имен](../../programming-guide/namespaces/index.md)
