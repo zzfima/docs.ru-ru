@@ -245,6 +245,7 @@
 ##### [Интерполяция строк](csharp/tutorials/intro-to-csharp/interpolated-strings-local.md)
 ##### [Коллекция списков](csharp/tutorials/intro-to-csharp/arrays-and-collections.md)
 ##### [Общие сведения о классах](csharp/tutorials/intro-to-csharp/introduction-to-classes.md)
+### [Обзор C# 6](csharp/tutorials/exploration/csharp-6.yml)
 ### [Использование ссылочных типов, допускающих значение NULL](csharp/tutorials/nullable-reference-types.md)
 ### [Консольное приложение](csharp/tutorials/console-teleprompter.md)
 ### [Клиент REST](csharp/tutorials/console-webapiclient.md)
