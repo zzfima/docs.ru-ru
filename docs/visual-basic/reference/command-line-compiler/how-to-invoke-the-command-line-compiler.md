@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Вызов компилятора командной строки (Visual Basic)
+title: Как выполнить Вызов компилятора командной строки (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - command-line arguments
@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Visual Basic compiler, starting
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
-ms.openlocfilehash: 0b835bb5654574a5aa6f32eede1e942b11e7dcb0
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d2d193f8c3d483ff87fe719919982e8c3473ec0b
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42932158"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221847"
 ---
-# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Практическое руководство. Вызов компилятора командной строки (Visual Basic)
-Можно вызвать компилятор командной строки, введя имя соответствующего исполняемого файла в командной строке, также называется командной строки MS-DOS. При компиляции из командной строки Windows по умолчанию, необходимо ввести полный путь к исполняемому файлу. Чтобы переопределить это поведение по умолчанию, можно использовать командную строку Visual Studio, или изменить переменную среды PATH. Оба позволяют компилировать из любого каталога, просто введя его имя.  
+# <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>Как выполнить Вызов компилятора командной строки (Visual Basic)
+Можно вызвать компилятор командной строки, введя имя соответствующего исполняемого файла в командной строке, также называется командной строки MS-DOS. При компиляции из командной строки Windows по умолчанию, необходимо ввести полный путь к исполняемому файлу. Чтобы переопределить это поведение по умолчанию, можно использовать командную строку разработчика для Visual Studio, или изменить переменную среды PATH. Оба позволяют компилировать из любого каталога, просто введя его имя.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-### <a name="to-invoke-the-compiler-using-the-visual-studio-command-prompt"></a>Для вызова компилятора, с помощью командной строки Visual Studio  
+### <a name="to-invoke-the-compiler-using-the-developer-command-prompt-for-visual-studio"></a>Для вызова компилятора, с помощью командной строки разработчика для Visual Studio  
   
 1.  Откройте папку средств Visual Studio программы в группе программ Microsoft Visual Studio.  
   
-2.  Командная строка Visual Studio можно использовать для доступа к компилятору из любого каталога на компьютере, если установлена среда Visual Studio.  
+2.  Командная строка разработчика для Visual Studio можно использовать для доступа к компилятору из любого каталога на компьютере, если установлена среда Visual Studio.  
   
-3.  Вызовите командную строку Visual Studio.  
+3.  Вызовите командную строку разработчика для Visual Studio.  
   
 4.  В командной строке введите `vbc.exe` *sourceFileName* и нажмите клавишу ВВОД.  
   

@@ -2,18 +2,18 @@
 title: Инструкции по установке сертификата сервера в службах IIS
 ms.date: 03/30/2017
 ms.assetid: 11281490-d2ac-4324-8f33-e7714611a34b
-ms.openlocfilehash: ae1f90a68acc4b1217c46a6570031a88e60c6e88
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a89d907b9be25c83a74f0c5d60d184637552f297
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838252"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221106"
 ---
 # <a name="internet-information-services-iis-server-certificate-installation-instructions"></a>Инструкции по установке сертификата сервера в службах IIS
 Чтобы запускать примеры, которые безопасным образом взаимодействуют со службами IIS, необходимо создать и установить сертификат сервера.  
   
 ## <a name="step-1-creating-certificates"></a>Шаг 1. Создание сертификатов  
- Чтобы создать сертификат для своего компьютера, откройте командную строку Visual Studio с правами администратора и запустите файл Setup.bat, входящий в состав каждого из образцов, где используется безопасный обмен данными с IIS. Перед запуском пакетного файла убедитесь, что путь включает папку, содержащую программу Makecert.exe. Следующая команда служит для создания сертификата в файле Setup.bat.  
+ Чтобы создать сертификат для компьютера, откройте командную строку разработчика для Visual Studio с правами администратора и запустите файл Setup.bat, входящий в состав каждого из образцов, которые используют безопасное взаимодействие со службами IIS. Перед запуском пакетного файла убедитесь, что путь включает папку, содержащую программу Makecert.exe. Следующая команда служит для создания сертификата в файле Setup.bat.  
   
 ```  
 makecert -sr LocalMachine -ss My -n CN=ServiceModelSamples-HTTPS-Server -sky exchange -sk ServiceModelSamples-HTTPS-Key  

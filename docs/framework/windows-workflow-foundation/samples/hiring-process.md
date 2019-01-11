@@ -2,12 +2,12 @@
 title: Процесс найма
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 41f5508ea5805581282389e0731a00dde7796bc0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 0420a174705c12384509bf1d8022d664d7cb354e
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520642"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223225"
 ---
 # <a name="hiring-process"></a>Процесс найма
 Этот образец демонстрирует, как реализовать бизнес-процесс, используя действия обмена сообщениями и два рабочих процесса, размещенные как службы рабочих процессов. Эти рабочие процессы входят в ИT-инфраструктуру вымышленной компании Contoso, Inc.  
@@ -131,13 +131,13 @@ ms.locfileid: "43520642"
 ## <a name="data-storage"></a>Хранилище данных  
  Данные хранятся в базе данных SQL Server `ContosoHR` (скрипт для создания этой базы данных находится в папке `DbSetup`). Экземпляры рабочего процесса хранятся в базе данных SQL Server `InstanceStore` (скрипт для создания хранилища экземпляров является частью распространения [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]).  
   
- Обе базы данных создаются путем запуска скрипта Setup.cmd из командной строки Visual Studio.  
+ Обе базы данных создаются путем запуска скрипта Setup.cmd из командной строки разработчика для Visual Studio.  
   
 ## <a name="running-the-sample"></a>Выполнение образца  
   
 #### <a name="to-create-the-databases"></a>Создание баз данных  
   
-1.  Откройте командную строку Visual Studio.  
+1.  Откройте командную строку разработчика для Visual Studio.  
   
 2.  Перейдите в папку образца.  
   

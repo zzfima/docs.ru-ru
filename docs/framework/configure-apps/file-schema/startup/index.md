@@ -8,22 +8,24 @@ helpviewer_keywords:
 ms.assetid: 03de6972-442a-4648-9f3e-efa654e3b949
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 4cdf6a051552ab1effd9c4d9c783297a62602f7a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0a03438968f487f574606f415fb9d43223030038
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47204928"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222159"
 ---
 # <a name="startup-settings-schema"></a>Схема параметров запуска
+
 Параметры запуска определяют версию среды CLR, в которой должно выполняться приложение.  
   
 |Элемент|Описание|  
 |-------------|-----------------|  
-|[\<requiredRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|Указывает, что приложение поддерживает только версию 1.0 среды CLR. Приложения, созданные с помощью среды выполнения версии 1.1, должны использовать элемент **\<supportedRuntime>**.|  
-|[\<supportedRuntime>](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)|Указывает, какие версии среды CLR поддерживает приложение.|  
-|[\<startup>](../../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)|Содержит элементы **\<requiredRuntime>** и **\<supportedRuntime>**.|  
+|[\<requiredRuntime>](requiredruntime-element.md)|Указывает, что приложение поддерживает только версию 1.0 среды CLR. Приложения, созданные с помощью среды выполнения версии 1.1, должны использовать элемент **\<supportedRuntime>**.|  
+|[\<supportedRuntime>](supportedruntime-element.md)|Указывает, какие версии среды CLR поддерживает приложение.|  
+|[\<startup>](startup-element.md)|Содержит элементы **\<requiredRuntime>** и **\<supportedRuntime>**.|  
   
-## <a name="see-also"></a>См. также  
- [Схема файла конфигурации](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver> Указание используемой версии среды выполнения](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)
+## <a name="see-also"></a>См. также
+
+- [Схема файла конфигурации](../index.md)  
+- [Практическое руководство. Настройка приложения для поддержки .NET Framework 4 или более поздней версии](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
