@@ -11,88 +11,93 @@ helpviewer_keywords:
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 7dfa196ad6aa71dd22bcb9bbd5a0857cccb819c5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 82ee7b163efcefae0f2a169b74d29ea4c9f5398a
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201081"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222744"
 ---
-# <a name="ltstartupgt-element"></a><span data-ttu-id="cecbe-102">&lt;запуска&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="cecbe-102">&lt;startup&gt; Element</span></span>
-<span data-ttu-id="cecbe-103">Указывает информация запуска среды CLR.</span><span class="sxs-lookup"><span data-stu-id="cecbe-103">Specifies common language runtime startup information.</span></span>  
-  
- <span data-ttu-id="cecbe-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="cecbe-104">\<configuration></span></span>  
-<span data-ttu-id="cecbe-105">\<Startup ></span><span class="sxs-lookup"><span data-stu-id="cecbe-105">\<startup></span></span>  
-  
-## <a name="syntax"></a><span data-ttu-id="cecbe-106">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="cecbe-106">Syntax</span></span>  
-  
-```xml  
-<startup useLegacyV2RuntimeActivationPolicy="true|false" >   
-</startup>  
-```  
-  
-## <a name="attributes-and-elements"></a><span data-ttu-id="cecbe-107">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="cecbe-107">Attributes and Elements</span></span>  
- <span data-ttu-id="cecbe-108">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="cecbe-108">The following sections describe attributes, child elements, and parent elements.</span></span>  
-  
-### <a name="attributes"></a><span data-ttu-id="cecbe-109">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="cecbe-109">Attributes</span></span>  
-  
-|<span data-ttu-id="cecbe-110">Атрибут</span><span class="sxs-lookup"><span data-stu-id="cecbe-110">Attribute</span></span>|<span data-ttu-id="cecbe-111">Описание</span><span class="sxs-lookup"><span data-stu-id="cecbe-111">Description</span></span>|  
-|---------------|-----------------|  
-|`useLegacyV2RuntimeActivationPolicy`|<span data-ttu-id="cecbe-112">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="cecbe-112">Optional attribute.</span></span><br /><br /> <span data-ttu-id="cecbe-113">Указывает, следует ли включить [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] политике активации среды выполнения или использовать [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] политике активации.</span><span class="sxs-lookup"><span data-stu-id="cecbe-113">Specifies whether to enable the [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] runtime activation policy or to use the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] activation policy.</span></span>|  
-  
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a><span data-ttu-id="cecbe-114">Атрибут useLegacyV2RuntimeActivationPolicy</span><span class="sxs-lookup"><span data-stu-id="cecbe-114">useLegacyV2RuntimeActivationPolicy Attribute</span></span>  
-  
-|<span data-ttu-id="cecbe-115">Значение</span><span class="sxs-lookup"><span data-stu-id="cecbe-115">Value</span></span>|<span data-ttu-id="cecbe-116">Описание</span><span class="sxs-lookup"><span data-stu-id="cecbe-116">Description</span></span>|  
-|-----------|-----------------|  
-|`true`|<span data-ttu-id="cecbe-117">Включить [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] политике активации среды выполнения для выбранной среды выполнения, используемого для привязки методы активации старой среды выполнения (таких как [функция CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)) в среду выполнения, выбранный из файла конфигурации вместо ограничивая их в среде CLR версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="cecbe-117">Enable [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] runtime activation policy for the chosen runtime, which is to bind legacy runtime activation techniques (such as the [CorBindToRuntimeEx function](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)) to the runtime chosen from the configuration file instead of capping them at CLR version 2.0.</span></span> <span data-ttu-id="cecbe-118">Таким образом Если вы выбрали CLR версии 4 или более поздней версии из файла конфигурации, смешанных сборок, созданных в более ранних версиях платформы .NET Framework, загружаются с выбранной версией среды CLR.</span><span class="sxs-lookup"><span data-stu-id="cecbe-118">Thus, if CLR version 4 or later is chosen from the configuration file, mixed-mode assemblies created with earlier versions of the .NET Framework are loaded with the chosen CLR version.</span></span> <span data-ttu-id="cecbe-119">Установка этого значения предотвращает CLR версии 1.1 или среду CLR версии 2.0 загрузку в одном процессе, эффективно отключение функции-process side-by-side.</span><span class="sxs-lookup"><span data-stu-id="cecbe-119">Setting this value prevents CLR version 1.1 or CLR version 2.0 from loading into the same process, effectively disabling the in-process side-by-side feature.</span></span>|  
-|`false`|<span data-ttu-id="cecbe-120">Использовать политику активации по умолчанию для [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] и более поздней версии, чтобы разрешить старой среды выполнения методов активации для загрузки в процесс среды CLR версии 1.1 или 2.0.</span><span class="sxs-lookup"><span data-stu-id="cecbe-120">Use the default activation policy for the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] and later, which is to allow legacy runtime activation techniques to load CLR version 1.1 or 2.0 into the process.</span></span> <span data-ttu-id="cecbe-121">Установка этого значения предотвращает смешанной сборки от загрузки в .NET Framework 4 или более поздней версии, если они были созданы с помощью .NET Framework 4 или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="cecbe-121">Setting this value prevents mixed-mode assemblies from loading into the .NET Framework 4 or later unless they were built with the .NET Framework 4 or later.</span></span> <span data-ttu-id="cecbe-122">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="cecbe-122">This value is the default.</span></span>|  
-  
-### <a name="child-elements"></a><span data-ttu-id="cecbe-123">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="cecbe-123">Child Elements</span></span>  
-  
-|<span data-ttu-id="cecbe-124">Элемент</span><span class="sxs-lookup"><span data-stu-id="cecbe-124">Element</span></span>|<span data-ttu-id="cecbe-125">Описание</span><span class="sxs-lookup"><span data-stu-id="cecbe-125">Description</span></span>|  
-|-------------|-----------------|  
-|[<span data-ttu-id="cecbe-126">\<requiredRuntime></span><span class="sxs-lookup"><span data-stu-id="cecbe-126">\<requiredRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md)|<span data-ttu-id="cecbe-127">Указывает, что приложение поддерживает только версию 1.0 среды CLR.</span><span class="sxs-lookup"><span data-stu-id="cecbe-127">Specifies that the application supports only version 1.0 of the common language runtime.</span></span> <span data-ttu-id="cecbe-128">Приложения, созданные с помощью среды выполнения версии 1.1 или более поздней, должны использовать  **\<supportedRuntime >** элемент.</span><span class="sxs-lookup"><span data-stu-id="cecbe-128">Applications built with runtime version 1.1 or later should use the **\<supportedRuntime>** element.</span></span>|  
-|[<span data-ttu-id="cecbe-129">\<supportedRuntime></span><span class="sxs-lookup"><span data-stu-id="cecbe-129">\<supportedRuntime></span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)|<span data-ttu-id="cecbe-130">Указывает, какие версии среды CLR поддерживает приложение.</span><span class="sxs-lookup"><span data-stu-id="cecbe-130">Specifies which versions of the common language runtime the application supports.</span></span>|  
-  
-### <a name="parent-elements"></a><span data-ttu-id="cecbe-131">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="cecbe-131">Parent Elements</span></span>  
-  
-|<span data-ttu-id="cecbe-132">Элемент</span><span class="sxs-lookup"><span data-stu-id="cecbe-132">Element</span></span>|<span data-ttu-id="cecbe-133">Описание</span><span class="sxs-lookup"><span data-stu-id="cecbe-133">Description</span></span>|  
-|-------------|-----------------|  
-|`configuration`|<span data-ttu-id="cecbe-134">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="cecbe-134">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|  
-  
-## <a name="remarks"></a><span data-ttu-id="cecbe-135">Примечания</span><span class="sxs-lookup"><span data-stu-id="cecbe-135">Remarks</span></span>  
- <span data-ttu-id="cecbe-136">**\<SupportedRuntime >** элемент должен использоваться всеми приложениями, собранными с применением версии 1.1 или более поздней версии среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="cecbe-136">The **\<supportedRuntime>** element should be used by all applications built using version 1.1 or later of the runtime.</span></span> <span data-ttu-id="cecbe-137">Приложения, созданные для поддержки только версии 1.0 среды выполнения, должны использовать  **\<requiredRuntime >** элемент.</span><span class="sxs-lookup"><span data-stu-id="cecbe-137">Applications built to support only version 1.0 of the runtime must use the **\<requiredRuntime>** element.</span></span>  
-  
- <span data-ttu-id="cecbe-138">Код запуска для приложения, размещенного в Internet Explorer не учитывает  **\<startup >** элемент и его дочерние элементы.</span><span class="sxs-lookup"><span data-stu-id="cecbe-138">The startup code for an application hosted in Microsoft Internet Explorer ignores the **\<startup>** element and its child elements.</span></span>  
-  
-## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a><span data-ttu-id="cecbe-139">Атрибут useLegacyV2RuntimeActivationPolicy</span><span class="sxs-lookup"><span data-stu-id="cecbe-139">The useLegacyV2RuntimeActivationPolicy Attribute</span></span>  
- <span data-ttu-id="cecbe-140">Этот атрибут полезен, если приложение использует устаревшие активации пути, такие как [функция CorBindToRuntimeEx](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), и нужно, чтобы эти пути для активации версии 4 среды CLR вместо более ранней версии, или если приложение созданные с помощью [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] , но имеет зависимость от сборки смешанного режима, созданных с помощью более ранней версии платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="cecbe-140">This attribute is useful if your application uses legacy activation paths, such as the [CorBindToRuntimeEx function](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), and you want those paths to activate version 4 of the CLR instead of an earlier version, or if your application is built with the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] but has a dependency on a mixed-mode assembly built with an earlier version of the .NET Framework.</span></span> <span data-ttu-id="cecbe-141">В этих сценариях, задать для атрибута `true`.</span><span class="sxs-lookup"><span data-stu-id="cecbe-141">In those scenarios, set the attribute to `true`.</span></span>  
-  
+# <a name="ltstartupgt-element"></a><span data-ttu-id="a5404-102">&lt;запуска&gt; элемент</span><span class="sxs-lookup"><span data-stu-id="a5404-102">&lt;startup&gt; element</span></span>
+
+<span data-ttu-id="a5404-103">Указывает информация запуска среды CLR.</span><span class="sxs-lookup"><span data-stu-id="a5404-103">Specifies common language runtime startup information.</span></span>
+
+ <span data-ttu-id="a5404-104">\<Конфигурация > \<startup ></span><span class="sxs-lookup"><span data-stu-id="a5404-104">\<configuration> \<startup></span></span>
+
+## <a name="syntax"></a><span data-ttu-id="a5404-105">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="a5404-105">Syntax</span></span>
+
+```xml
+<startup useLegacyV2RuntimeActivationPolicy="true|false" > 
+</startup>
+```
+
+## <a name="attributes-and-elements"></a><span data-ttu-id="a5404-106">Элементы и атрибуты</span><span class="sxs-lookup"><span data-stu-id="a5404-106">Attributes and elements</span></span>
+
+ <span data-ttu-id="a5404-107">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="a5404-107">The following sections describe attributes, child elements, and parent elements.</span></span>
+
+### <a name="attributes"></a><span data-ttu-id="a5404-108">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="a5404-108">Attributes</span></span>
+
+|<span data-ttu-id="a5404-109">Атрибут</span><span class="sxs-lookup"><span data-stu-id="a5404-109">Attribute</span></span>|<span data-ttu-id="a5404-110">Описание</span><span class="sxs-lookup"><span data-stu-id="a5404-110">Description</span></span>|
+|---------------|-----------------|
+|`useLegacyV2RuntimeActivationPolicy`|<span data-ttu-id="a5404-111">Необязательный атрибут.</span><span class="sxs-lookup"><span data-stu-id="a5404-111">Optional attribute.</span></span><br /><br /> <span data-ttu-id="a5404-112">Указывает, следует ли включить [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] политике активации среды выполнения или использовать [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] политике активации.</span><span class="sxs-lookup"><span data-stu-id="a5404-112">Specifies whether to enable the [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] runtime activation policy or to use the [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] activation policy.</span></span>|
+
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a><span data-ttu-id="a5404-113">атрибут useLegacyV2RuntimeActivationPolicy</span><span class="sxs-lookup"><span data-stu-id="a5404-113">useLegacyV2RuntimeActivationPolicy attribute</span></span>
+
+|<span data-ttu-id="a5404-114">Значение</span><span class="sxs-lookup"><span data-stu-id="a5404-114">Value</span></span>|<span data-ttu-id="a5404-115">Описание:</span><span class="sxs-lookup"><span data-stu-id="a5404-115">Description</span></span>|
+|-----------|-----------------|
+|`true`|<span data-ttu-id="a5404-116">Включить [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] политике активации среды выполнения для выбранной среды выполнения, используемого для привязки методы активации старой среды выполнения (таких как [функция CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) в среду выполнения, выбранный из файла конфигурации вместо ограничивая их в среде CLR версии 2.0.</span><span class="sxs-lookup"><span data-stu-id="a5404-116">Enable [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] runtime activation policy for the chosen runtime, which is to bind legacy runtime activation techniques (such as the [CorBindToRuntimeEx function](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)) to the runtime chosen from the configuration file instead of capping them at CLR version 2.0.</span></span> <span data-ttu-id="a5404-117">Таким образом Если вы выбрали CLR версии 4 или более поздней версии из файла конфигурации, смешанных сборок, созданных в более ранних версиях платформы .NET Framework, загружаются с выбранной версией среды CLR.</span><span class="sxs-lookup"><span data-stu-id="a5404-117">Thus, if CLR version 4 or later is chosen from the configuration file, mixed-mode assemblies created with earlier versions of the .NET Framework are loaded with the chosen CLR version.</span></span> <span data-ttu-id="a5404-118">Установка этого значения предотвращает CLR версии 1.1 или среду CLR версии 2.0 загрузку в одном процессе, эффективно отключение функции-process side-by-side.</span><span class="sxs-lookup"><span data-stu-id="a5404-118">Setting this value prevents CLR version 1.1 or CLR version 2.0 from loading into the same process, effectively disabling the in-process side-by-side feature.</span></span>|
+|`false`|<span data-ttu-id="a5404-119">Использовать политику активации по умолчанию для [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] и более поздней версии, чтобы разрешить старой среды выполнения методов активации для загрузки в процесс среды CLR версии 1.1 или 2.0.</span><span class="sxs-lookup"><span data-stu-id="a5404-119">Use the default activation policy for the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] and later, which is to allow legacy runtime activation techniques to load CLR version 1.1 or 2.0 into the process.</span></span> <span data-ttu-id="a5404-120">Установка этого значения предотвращает смешанной сборки от загрузки в .NET Framework 4 или более поздней версии, если они были созданы с помощью .NET Framework 4 или более поздней версии.</span><span class="sxs-lookup"><span data-stu-id="a5404-120">Setting this value prevents mixed-mode assemblies from loading into the .NET Framework 4 or later unless they were built with the .NET Framework 4 or later.</span></span> <span data-ttu-id="a5404-121">Это значение по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="a5404-121">This value is the default.</span></span>|
+
+### <a name="child-elements"></a><span data-ttu-id="a5404-122">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="a5404-122">Child elements</span></span>
+
+|<span data-ttu-id="a5404-123">Элемент</span><span class="sxs-lookup"><span data-stu-id="a5404-123">Element</span></span>|<span data-ttu-id="a5404-124">Описание:</span><span class="sxs-lookup"><span data-stu-id="a5404-124">Description</span></span>|
+|-------------|-----------------|
+|[<span data-ttu-id="a5404-125">\<requiredRuntime></span><span class="sxs-lookup"><span data-stu-id="a5404-125">\<requiredRuntime></span></span>](requiredruntime-element.md)|<span data-ttu-id="a5404-126">Указывает, что приложение поддерживает только версию 1.0 среды CLR.</span><span class="sxs-lookup"><span data-stu-id="a5404-126">Specifies that the application supports only version 1.0 of the common language runtime.</span></span> <span data-ttu-id="a5404-127">Приложения, созданные с помощью среды выполнения версии 1.1 или более поздней, должны использовать  **\<supportedRuntime >** элемент.</span><span class="sxs-lookup"><span data-stu-id="a5404-127">Applications built with runtime version 1.1 or later should use the **\<supportedRuntime>** element.</span></span>|
+|[<span data-ttu-id="a5404-128">\<supportedRuntime></span><span class="sxs-lookup"><span data-stu-id="a5404-128">\<supportedRuntime></span></span>](supportedruntime-element.md)|<span data-ttu-id="a5404-129">Указывает, какие версии среды CLR поддерживает приложение.</span><span class="sxs-lookup"><span data-stu-id="a5404-129">Specifies which versions of the common language runtime the application supports.</span></span>|
+
+### <a name="parent-elements"></a><span data-ttu-id="a5404-130">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="a5404-130">Parent elements</span></span>
+
+|<span data-ttu-id="a5404-131">Элемент</span><span class="sxs-lookup"><span data-stu-id="a5404-131">Element</span></span>|<span data-ttu-id="a5404-132">Описание</span><span class="sxs-lookup"><span data-stu-id="a5404-132">Description</span></span>|
+|-------------|-----------------|
+|`configuration`|<span data-ttu-id="a5404-133">Корневой элемент в любом файле конфигурации, используемом средой CLR и приложениями .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a5404-133">The root element in every configuration file used by the common language runtime and .NET Framework applications.</span></span>|
+
+## <a name="remarks"></a><span data-ttu-id="a5404-134">Примечания</span><span class="sxs-lookup"><span data-stu-id="a5404-134">Remarks</span></span>
+
+ <span data-ttu-id="a5404-135"> *\*\<SupportedRuntime >** элемент должен использоваться всеми приложениями, собранными с применением версии 1.1 или более поздней версии среды выполнения.</span><span class="sxs-lookup"><span data-stu-id="a5404-135">The **\<supportedRuntime>** element should be used by all applications built using version 1.1 or later of the runtime.</span></span> <span data-ttu-id="a5404-136">Приложения, созданные для поддержки только версии 1.0 среды выполнения, должны использовать  **\<requiredRuntime >** элемент.</span><span class="sxs-lookup"><span data-stu-id="a5404-136">Applications built to support only version 1.0 of the runtime must use the **\<requiredRuntime>** element.</span></span>
+
+ <span data-ttu-id="a5404-137">Код запуска для приложения, размещенного в Internet Explorer не учитывает  **\<startup >** элемент и его дочерние элементы.</span><span class="sxs-lookup"><span data-stu-id="a5404-137">The startup code for an application hosted in Microsoft Internet Explorer ignores the **\<startup>** element and its child elements.</span></span>
+
+## <a name="the-uselegacyv2runtimeactivationpolicy-attribute"></a><span data-ttu-id="a5404-138">Атрибут useLegacyV2RuntimeActivationPolicy</span><span class="sxs-lookup"><span data-stu-id="a5404-138">The useLegacyV2RuntimeActivationPolicy attribute</span></span>
+
+ <span data-ttu-id="a5404-139">Этот атрибут полезен, если приложение использует устаревшие активации пути, такие как [функция CorBindToRuntimeEx](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), и нужно, чтобы эти пути для активации версии 4 среды CLR вместо более ранней версии, или если приложение созданные с помощью [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] , но имеет зависимость от сборки смешанного режима, созданных с помощью более ранней версии платформы .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="a5404-139">This attribute is useful if your application uses legacy activation paths, such as the [CorBindToRuntimeEx function](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md), and you want those paths to activate version 4 of the CLR instead of an earlier version, or if your application is built with the [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] but has a dependency on a mixed-mode assembly built with an earlier version of the .NET Framework.</span></span> <span data-ttu-id="a5404-140">В этих сценариях, задать для атрибута `true`.</span><span class="sxs-lookup"><span data-stu-id="a5404-140">In those scenarios, set the attribute to `true`.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="cecbe-142">Присвоение атрибуту `true` предотвращает загрузку в одном процессе, эффективно отключение функции-process side-by-side CLR версии 1.1 или среду CLR версии 2.0 (см. в разделе [Side-by-Side выполнение для COM-взаимодействия](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).</span><span class="sxs-lookup"><span data-stu-id="cecbe-142">Setting the attribute to `true` prevents CLR version 1.1 or CLR version 2.0 from loading into the same process, effectively disabling the in-process side-by-side feature (see [Side-by-Side Execution for COM Interop](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="cecbe-143">Пример</span><span class="sxs-lookup"><span data-stu-id="cecbe-143">Example</span></span>  
- <span data-ttu-id="cecbe-144">Приведенный ниже показано, как указать версию среды выполнения в файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="cecbe-144">The following example shows how to specify the runtime version in a configuration file.</span></span>  
-  
-```xml  
-<!-- When used with version 1.0 of the .NET Framework runtime -->  
-<configuration>  
-   <startup>  
-      <requiredRuntime version="v1.0.3705" safemode="true"/>  
-   </startup>  
-</configuration>  
-<!-- When used with version 1.1 (or later) of the runtime -->  
-<configuration>  
-   <startup>  
-      <supportedRuntime version="v1.1.4322"/>  
-      <supportedRuntime version="v1.0.3705"/>  
-   </startup>  
-</configuration>  
-```  
-  
-## <a name="see-also"></a><span data-ttu-id="cecbe-145">См. также</span><span class="sxs-lookup"><span data-stu-id="cecbe-145">See Also</span></span>  
- [<span data-ttu-id="cecbe-146">Схема параметров запуска</span><span class="sxs-lookup"><span data-stu-id="cecbe-146">Startup Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
- [<span data-ttu-id="cecbe-147">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="cecbe-147">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [<span data-ttu-id="cecbe-148">\<PaveOver> Указание используемой версии среды выполнения</span><span class="sxs-lookup"><span data-stu-id="cecbe-148">\<PaveOver> Specifying Which Runtime Version to Use</span></span>](https://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
- [<span data-ttu-id="cecbe-149">Выполнение Side-by-Side COM-взаимодействия</span><span class="sxs-lookup"><span data-stu-id="cecbe-149">Side-by-Side Execution for COM Interop</span></span>](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
- [<span data-ttu-id="cecbe-150">Внутрипроцессное параллельное выполнение</span><span class="sxs-lookup"><span data-stu-id="cecbe-150">In-Process Side-by-Side Execution</span></span>](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)
+> <span data-ttu-id="a5404-141">Присвоение атрибуту `true` предотвращает загрузку в одном процессе, эффективно отключение функции-process side-by-side CLR версии 1.1 или среду CLR версии 2.0 (см. в разделе [Side-by-Side выполнение для COM-взаимодействия](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).</span><span class="sxs-lookup"><span data-stu-id="a5404-141">Setting the attribute to `true` prevents CLR version 1.1 or CLR version 2.0 from loading into the same process, effectively disabling the in-process side-by-side feature (see [Side-by-Side Execution for COM Interop](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).</span></span>
+
+## <a name="example"></a><span data-ttu-id="a5404-142">Пример</span><span class="sxs-lookup"><span data-stu-id="a5404-142">Example</span></span>
+
+ <span data-ttu-id="a5404-143">Приведенный ниже показано, как указать версию среды выполнения в файле конфигурации.</span><span class="sxs-lookup"><span data-stu-id="a5404-143">The following example shows how to specify the runtime version in a configuration file.</span></span>
+
+```xml
+<!-- When used with version 1.0 of the .NET Framework runtime -->
+<configuration>
+   <startup>
+      <requiredRuntime version="v1.0.3705" safemode="true"/>
+   </startup>
+</configuration>
+<!-- When used with version 1.1 (or later) of the runtime -->
+<configuration>
+   <startup>
+      <supportedRuntime version="v1.1.4322"/>
+      <supportedRuntime version="v1.0.3705"/>
+   </startup>
+</configuration>
+```
+
+## <a name="see-also"></a><span data-ttu-id="a5404-144">См. также</span><span class="sxs-lookup"><span data-stu-id="a5404-144">See also</span></span>
+
+- [<span data-ttu-id="a5404-145">Схема параметров запуска</span><span class="sxs-lookup"><span data-stu-id="a5404-145">Startup Settings Schema</span></span>](index.md)
+- [<span data-ttu-id="a5404-146">Схема файла конфигурации</span><span class="sxs-lookup"><span data-stu-id="a5404-146">Configuration File Schema</span></span>](../index.md)
+- [<span data-ttu-id="a5404-147">Практическое руководство. Настройка приложения для поддержки .NET Framework 4 или более поздней версии</span><span class="sxs-lookup"><span data-stu-id="a5404-147">How to: Configure an app to support .NET Framework 4 or later versions</span></span>](../../../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)
+- [<span data-ttu-id="a5404-148">Выполнение Side-by-Side COM-взаимодействия</span><span class="sxs-lookup"><span data-stu-id="a5404-148">Side-by-Side Execution for COM Interop</span></span>](https://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)
+- [<span data-ttu-id="a5404-149">Внутрипроцессное параллельное выполнение</span><span class="sxs-lookup"><span data-stu-id="a5404-149">In-Process Side-by-Side Execution</span></span>](../../../deployment/in-process-side-by-side-execution.md)
