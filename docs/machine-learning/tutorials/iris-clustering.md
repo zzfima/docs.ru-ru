@@ -3,15 +3,15 @@ title: Кластеризация цветков ириса с помощью з
 description: Сведения об использовании ML.NET при кластеризации
 author: pkulikov
 ms.author: johalex
-ms.date: 12/17/2018
+ms.date: 01/11/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 012cea471c69f66ad9a61db858b4575606b31f74
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: ab888a2cd9469d5ce0131ba2b17f7c134cf2855c
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656327"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249077"
 ---
 # <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>Учебник. Кластеризация цветков ириса с помощью задачи машинного обучения по кластеризации в ML.NET
 
@@ -56,7 +56,7 @@ ms.locfileid: "53656327"
 
 ## <a name="prepare-the-data"></a>Подготовка данных
 
-1. Скачайте набор данных [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) и сохраните его в папке *Data*, созданной на предыдущем шаге. Дополнительные сведения о наборе данных ирисов см. на странице Википедии [Ирисы Фишера](https://en.wikipedia.org/wiki/Iris_flower_data_set) и на странице [Набор данных ирисов](http://archive.ics.uci.edu/ml/datasets/Iris), который является источником набора данных.
+1. Скачайте набор данных [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) и сохраните его в папке *Data*, созданной на предыдущем шаге. Дополнительные сведения о наборе данных ирисов см. на странице Википедии [Ирисы Фишера](https://en.wikipedia.org/wiki/Iris_flower_data_set) и на странице [Набор данных ирисов](https://archive.ics.uci.edu/ml/datasets/Iris), который является источником набора данных.
 
 1. В **Обозревателе решений** щелкните правой кнопкой мыши файл *iris.data* и выберите **Свойства**. В разделе **Дополнительно** для параметра **Копировать в выходной каталог** установите значение **Копировать более позднюю версию**.
 
@@ -84,9 +84,9 @@ ms.locfileid: "53656327"
 
 [!code-csharp[Define data classes](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#ClassDefinitions)]
 
-Класс `IrisData` содержит входные данные и определения для каждого признака в наборе данных. Используйте атрибут [Column](xref:Microsoft.ML.Runtime.Api.ColumnAttribute), чтобы указать индексы исходных столбцов в файле набора данных.
+Класс `IrisData` содержит входные данные и определения для каждого признака в наборе данных. Используйте атрибут [Column](xref:Microsoft.ML.Data.ColumnAttribute), чтобы указать индексы исходных столбцов в файле набора данных.
 
-Класс `ClusterPrediction` представляет выходные данные модели кластеризации, примененные к экземпляру `IrisData`. Используйте атрибут [ColumnName](xref:Microsoft.ML.Runtime.Api.ColumnNameAttribute), чтобы привязать поля `PredictedClusterId` и `Distances` к столбцам **PredictedLabel** и **Score** соответственно. В случае задачи кластеризации эти столбцы означают следующее:
+Класс `ClusterPrediction` представляет выходные данные модели кластеризации, примененные к экземпляру `IrisData`. Используйте атрибут [ColumnName](xref:Microsoft.ML.Data.ColumnNameAttribute), чтобы привязать поля `PredictedClusterId` и `Distances` к столбцам **PredictedLabel** и **Score** соответственно. В случае задачи кластеризации эти столбцы означают следующее:
 
 - Столбец **PredictedLabel** содержит идентификатор прогнозируемого кластера.
 - Столбец **Score** содержит массив с квадратом Евклидовых расстояний до центроидов кластера. Длина массива равна числу кластеров.
@@ -127,9 +127,9 @@ ms.locfileid: "53656327"
 
 [!code-csharp[Create text loader](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#SetupTextLoader)]
 
-Обратите внимание, что имена столбцов и индексы соответствуют схеме, определяемой классом `IrisData`. Значение <xref:Microsoft.ML.Runtime.Data.DataKind.R4?displayProperty=nameWithType> задает тип `float`.
+Обратите внимание, что имена столбцов и индексы соответствуют схеме, определяемой классом `IrisData`. Значение <xref:Microsoft.ML.Data.DataKind.R4?displayProperty=nameWithType> задает тип `float`.
 
-Используйте созданный экземпляр <xref:Microsoft.ML.Runtime.Data.TextLoader>, чтобы создать экземпляр <xref:Microsoft.ML.Runtime.Data.IDataView>, который представляет источник данных для набора данных для обучения:
+Используйте созданный экземпляр <xref:Microsoft.ML.Data.TextLoader>, чтобы создать экземпляр <xref:Microsoft.ML.Data.IDataView>, который представляет источник данных для набора данных для обучения:
 
 [!code-csharp[Create IDataView](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#CreateDataView)]
 
@@ -160,7 +160,7 @@ ms.locfileid: "53656327"
 
 ## <a name="use-the-model-for-predictions"></a>Использование модели для прогнозирования
 
-Чтобы получить прогноз, используйте класс <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602>, который принимает экземпляры входного типа через конвейер преобразователя и создает экземпляры выходного типа. Добавьте следующую строку к методу `Main` для создания экземпляра этого класса:
+Чтобы получить прогноз, используйте класс <xref:Microsoft.ML.PredictionEngine%602>, который принимает экземпляры входного типа через конвейер преобразователя и создает экземпляры выходного типа. Добавьте следующую строку к методу `Main` для создания экземпляра этого класса:
 
 [!code-csharp[Create predictor](~/samples/machine-learning/tutorials/IrisFlowerClustering/Program.cs#Predictor)]
 

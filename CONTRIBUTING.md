@@ -140,7 +140,7 @@
 
 ## <a name="contributor-license-agreement"></a>Лицензионное соглашение с участником
 
-Перед введением запроса на вытягивание нужно подписать [Лицензионное соглашение с участником (CLA) .NET Foundation](https://cla.dotnetfoundation.org). Это нужно сделать всего один раз для проектов в .NET Foundation. Дополнительные сведения о [Лицензионных соглашениях с участником (CLA)](http://en.wikipedia.org/wiki/Contributor_License_Agreement) см. в Википедии.
+Перед введением запроса на вытягивание нужно подписать [Лицензионное соглашение с участником (CLA) .NET Foundation](https://cla.dotnetfoundation.org). Это нужно сделать всего один раз для проектов в .NET Foundation. Дополнительные сведения о [Лицензионных соглашениях с участником (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) см. в Википедии.
 
 Соглашение: [net-foundation-contribution-license-agreement.pdf](https://github.com/dotnet/home/blob/master/guidance/net-foundation-contribution-license-agreement.pdf).
 

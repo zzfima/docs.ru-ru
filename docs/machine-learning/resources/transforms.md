@@ -4,12 +4,12 @@ description: Изучите компоненты проектирования п
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 72e4077151d35b9bff661c28c9a20626098a5c69
-ms.sourcegitcommit: 882a2f56bf6afdcb40d468e4ae9371296822b68c
+ms.openlocfilehash: c311aa59426b716ffcd2c53e890d2e3e380360a7
+ms.sourcegitcommit: 81bd16c7435a8c9183d2a7e878a2a5eff7d04584
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53451096"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249129"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>Преобразование данных машинного обучения в ML.NET
 
@@ -103,7 +103,6 @@ ms.locfileid: "53451096"
 | <xref:Microsoft.ML.Transforms.MissingValueDroppingTransformer> | Удаляет отсутствующие значения из столбцов. |
 | <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Создает выходной столбец с логическими данными с тем же числом слотов, что и входной столбец, где выходное значение равно true, если значение во входном столбце отсутствует. |
 | <xref:Microsoft.ML.Transforms.MissingValueReplacingTransformer> | Обрабатывает отсутствующие значения, заменяя их на значение по умолчанию или на среднее, минимальное или максимальное значение (только для столбцов без текста). |
-| <xref:Microsoft.ML.Transforms.MissingValueIndicatorTransform> | Создает выходной столбец с логическими данными с тем же числом слотов, что и входной столбец, где выходное значение равно true, если значение во входном столбце отсутствует. |
 
 ## <a name="normalization"></a>Нормализация
 

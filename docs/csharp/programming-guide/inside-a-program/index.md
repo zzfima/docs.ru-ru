@@ -1,39 +1,45 @@
 ---
-title: Структура программы C#
+title: Структура программы C#
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# language, about C# program
 - Visual C#, program structure
 ms.assetid: 9551354b-33f0-4e11-bbf0-1a35e3702b22
-ms.openlocfilehash: a39a7dd3ebdbb7483f0b69169c8e00382f581788
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: dc4cb8aa63d4a63325e887e134fcda6aeb9d27fa
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252900"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221119"
 ---
-# <a name="inside-a-c-program"></a>Структура программы C#
-В этом разделе описывается общая структура программы на C# и приводится стандартный пример Hello, World!  
-  
-## <a name="in-this-section"></a>В этом разделе  
-  
--   [Hello World — создаем первую программу](../../../csharp/programming-guide/inside-a-program/hello-world-your-first-program.md)  
-  
--   [Общая структура программы C#](../../../csharp/programming-guide/inside-a-program/general-structure-of-a-csharp-program.md)  
-  
-## <a name="related-sections"></a>Связанные разделы  
-  
--   [Начало работы с C#](../../../csharp/getting-started/index.md)  
-  
--   [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)  
-  
--   [Справочник по C#](../../../csharp/language-reference/index.md)  
-  
--   [\<paveover>Примеры приложений на C#](https://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
-  
-## <a name="c-language-specification"></a>Спецификация языка C#  
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
-  
+# <a name="inside-a-c-program"></a>Структура программы C#
+
+В этом разделе описывается общая структура программы на C# и приводится стандартный пример Hello, World!
+
+## <a name="in-this-section"></a>Содержание раздела
+
+- [Hello World — создаем первую программу](hello-world-your-first-program.md)
+
+- [Общая структура программы C#](general-structure-of-a-csharp-program.md)
+
+- [Имена идентификаторов](identifier-names.md)
+
+- [Соглашения о написании кода на C#](coding-conventions.md)
+
+## <a name="related-sections"></a>Связанные разделы
+
+- [Начало работы с C#](../../getting-started/index.md)
+
+- [Руководство по программированию на C#](../../programming-guide/index.md)
+
+- [Справочник по C#](../../language-reference/index.md)
+
+- [Примеры и руководства](../../../samples-and-tutorials/index.md)
+
+## <a name="c-language-specification"></a>Спецификация языка C#
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+
 ## <a name="see-also"></a>См. также
 
-- [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)
+- [Руководство по программированию на C#](../../programming-guide/index.md)

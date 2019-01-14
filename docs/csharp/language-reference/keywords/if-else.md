@@ -11,16 +11,16 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: 86a7a7aa480cec6fcaf8142a4d41e4cd188d9b80
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ccb783d8d478b14078ab6fe09f12e480c12ac06b
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242208"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084775"
 ---
 # <a name="if-else-c-reference"></a>if-else (Справочник по C#)
 
-Оператор `if` определяет, какой оператор будет выполняться при выполнения условия, заданного логическим выражением. В приведенном ниже примере переменной `bool` типа `result` присваивается значение `true` , а затем она проверяется оператором `if` . В результате получается `The variable is set to true.`.
+Оператор `if` определяет, какой оператор будет выполняться при выполнения условия, заданного логическим выражением. В приведенном ниже примере переменной `bool` типа `condition` присваивается значение `true` , а затем она проверяется оператором `if` . В результате получается `The variable is set to true.`.
 
 [!code-csharp[csrefKeywordsSelection#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#1)]
 
@@ -58,7 +58,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#2)]
 
-Если вместо этого нужно, чтобы `Result2` получался, когда значение `(m > 10)` равно false, можно указать такую связь с помощью фигурных скобок для задания начала и конца вложенного оператора `if`, как показано в приведенном ниже примере.
+Если вместо этого нужно, чтобы `Result2` получался, когда значение `(m > 10)` равно false, можно указать такую связь с помощью фигурных скобок для задания начала и конца вложенного оператора `if` , как показано в приведенном ниже примере.
 
 [!code-csharp[csrefKeywordsSelection#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#3)]
 

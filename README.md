@@ -10,7 +10,7 @@
 
 Мы приветствуем ваш вклад в улучшение и дополнение документации по .NET. Чтобы внести свой вклад, ознакомьтесь с предложениями в разделе [Проекты для участников сообщества .NET](https://github.com/dotnet/docs/projects/35). В [руководстве для участников](CONTRIBUTING.md) приведены инструкции по используемым процедурам. Вы также можете проверить [список проблем](https://github.com/dotnet/docs/issues) и найти задачи, которые вас интересуют.
 
-Мы ожидаем, что [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) и [Unity](http://docs.unity3d.com/Manual/index.html) также будут использовать эту документацию.
+Мы ожидаем, что [Xamarin](https://docs.microsoft.com/xamarin), [Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) и [Unity](https://docs.unity3d.com/Manual/index.html) также будут использовать эту документацию.
 
 Ожидаемое поведение в нашем сообществе определяется правилами поведения Contributor Covenant, принятыми в этом проекте.
 Дополнительные сведения см. в разделе [Правила поведения .NET Foundation](https://dotnetfoundation.org/code-of-conduct).
