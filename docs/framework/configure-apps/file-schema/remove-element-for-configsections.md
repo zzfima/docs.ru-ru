@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 6555981edeb6f7f088fb12c710d0146cf58d5be1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 11a930120c375616d73faae68a6d6807c2f633cb
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32752420"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307231"
 ---
-# <a name="remove-element-for-configsections"></a>\<Удалите > элемент для \<configSections >
+# <a name="remove-element-for-configsections"></a>\<Удалить > элемент для \<configSections >
 
 Удаляет предварительно определенный раздел или группу разделов.
 
 [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
 &nbsp;&nbsp;[**\<configSections >**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<Удалите >**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<Удалить >**
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -42,19 +42,19 @@ ms.locfileid: "32752420"
 | --- | ----------- |
 | [**\<configSections >** элемент](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | Содержит раздел конфигурации и пространства имен объявления. |
 
-# <a name="child-elements"></a>Дочерние элементы
+## <a name="child-elements"></a>Дочерние элементы
 
 Нет
 
 ## <a name="remarks"></a>Примечания
 
-Можно использовать  **\<удалить >** элемента, который требуется удалить разделы и группы разделов из приложения, которые были определены на высоком уровне в иерархии файлов конфигурации.
+Можно использовать  **\<удалить >** элемент нужно удалить разделы и группы разделов из приложения, которые были определены на более высоком уровне в иерархии файла конфигурации.
 
 ## <a name="example"></a>Пример
 
 В следующем примере показано, как использовать  **\<удалить >** элемент в файле конфигурации приложения для удаления раздела, ранее определенные в файле конфигурации компьютера.
 
-В коде следующего файла конфигурации компьютера объявляется раздел  **\<sampleSection >**:
+В коде следующего файла конфигурации компьютера объявляет разделе  **\<sampleSection >**:
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +69,7 @@ ms.locfileid: "32752420"
 </configuration>
 ```
 
-В коде следующего файла конфигурации приложения удаляет  **\<sampleSection >** раздела. После удаления приложение не может получить параметры в  **\<sampleSection >**.
+В коде следующего файла конфигурации приложения удаляет  **\<sampleSection >** раздел. После удаления приложения не удается получить параметры в  **\<sampleSection >**.
 
 ```xml
 <!-- Application configuration file -->
@@ -82,8 +82,8 @@ ms.locfileid: "32752420"
 
 ## <a name="configuration-file"></a>файл конфигурации
 
-Этот элемент может использоваться в файле конфигурации приложения, файле конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые находятся не на уровне папки приложения.
+Этот элемент может использоваться в файле конфигурации приложения, файл конфигурации компьютера (*Machine.config*), и *Web.config* файлы, которые не на уровне каталога приложения.
 
 ## <a name="see-also"></a>См. также
 
-[Схема файла конфигурации для платформы .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)
+[Схема файла конфигурации для .NET Framework](~/docs/framework/configure-apps/file-schema/index.md)

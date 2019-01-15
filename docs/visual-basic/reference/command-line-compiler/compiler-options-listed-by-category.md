@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 2723104de8a583dc09f2fcfdd91a4119c5dec6d9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 55127a1a4afd8a677ef72d79ebf00debc15404e7
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200970"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307556"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Параметры компилятора Visual Basic, упорядоченные по категориям
 Компилятор командной строки Visual Basic предоставляется в качестве альтернативы компиляции программ из Интегрированной среды разработки Visual Studio. Ниже приведен список параметров компилятора командной строки Visual Basic, отсортированных по функциональной категории.  
@@ -124,10 +124,10 @@ ms.locfileid: "50200970"
 |[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|Указывает, что компилятор должен выполнять компиляцию без ссылки на библиотеку времени выполнения Visual Basic или со ссылкой на конкретную библиотеку времени выполнения.|  
 |[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|Определяет пользовательский файл манифеста приложения Win32 для внедрения в переносимый исполняемый файл проекта (PE-файл).|  
 |`-parallel[+&#124;-]`|Указывает, следует ли использовать параллельную сборку (+).|  
-|`-checksumalgorithm:<alg>`|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Поддерживаемые значения: SHA1 (по умолчанию) или SHA256.|  
+|`-checksumalgorithm:<alg>`|Указывает алгоритм для расчета контрольной суммы файла источника, хранящегося в PDB.  Поддерживаемые значения:: SHA1 (по умолчанию) или SHA256.|  
   
 ## <a name="see-also"></a>См. также  
  [Параметры компилятора Visual Basic в алфавитном порядке](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- [Знакомство с конструктором проектов](https://msdn.microsoft.com/en-us/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
+ [Знакомство с конструктором проектов](https://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
  [Параметры компилятора C# в алфавитном порядке](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [Параметры компилятора C#, упорядоченные по категориям](../../../csharp/language-reference/compiler-options/listed-by-category.md)
