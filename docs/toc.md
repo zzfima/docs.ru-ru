@@ -205,7 +205,6 @@
 ### [Специальные возможности](framework/ui-automation/)
 ### [Данные и моделирование](framework/data/)
 ### [Клиентские приложения](framework/develop-client-apps.md)
-#### [Общие клиентские технологии](framework/common-client-technologies/)
 #### [Windows Presentation Foundation](framework/wpf/)
 #### [Windows Forms](framework/winforms/)
 ### [Сервисноориентированные приложения с WCF](framework/wcf/)
