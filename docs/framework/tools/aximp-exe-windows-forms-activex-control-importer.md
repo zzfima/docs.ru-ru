@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: befc4484324fb28b0fe55ef49f038712bc81e913
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71e06f8e42e4ca6da80286c9aa329ee99b02fcf4
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409597"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222146"
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (программа импорта элементов ActiveX форм Windows)
 Программа для импорта элементов управления ActiveX преобразует определения типов в библиотеке типов COM для элемента управления ActiveX в элемент управления Windows Forms.  
@@ -24,7 +24,7 @@ ms.locfileid: "33409597"
   
  Чтобы разместить элемент управления ActiveX, необходимо создать элемент управления-оболочку, производный от <xref:System.Windows.Forms.AxHost>. Этот элемент управления-оболочка содержит экземпляр базового элемента управления ActiveX. Оболочка может взаимодействовать с элементом управления ActiveX, но выглядит как элемент управления Windows Forms. Созданный элемент управления размещает элемент управления ActiveX и представляет его свойства, методы и события как свои собственные.  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  В командной строке введите следующее.  
   
@@ -36,11 +36,11 @@ aximp [options]{file.dll | file.ocx}
   
 ## <a name="remarks"></a>Примечания  
   
-|Аргумент|Описание:|  
+|Аргумент|Описание|  
 |--------------|-----------------|  
 |*file*|Имя исходного файла, содержащего преобразуемый элемент управления ActiveX. Аргумент файла должен иметь расширение DLL или OCX.|  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |`/delaysign`|Указывает программе Aximp.exe подписывать полученный элемент управления отложенной подписью. Этот параметр необходимо задавать вместе с параметром `/keycontainer:`, `/keyfile:` или `/publickey:`. Дополнительные сведения о процессе отложенной подписи см. в разделе [Отложенная подпись сборки](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
 |`/help`|Отображает синтаксис команд и параметров программы.|  
@@ -59,7 +59,7 @@ aximp [options]{file.dll | file.ocx}
   
  Прокси среды CLR для типов COM: *progid*.dll  
   
- Прокси Windows Forms для элементов управления ActiveX (где Ax означает ActiveX): Ax*progid*.dll  
+ Прокси Windows Forms для элементов управления ActiveX (Ax обозначает ActiveX): Ax*progid*.dll  
   
 > [!NOTE]
 >  Если имя члена элемента управления ActiveX совпадает с именем, заданным в .NET Framework, к имени члена при создании производного класса AxHost программа Aximp.exe добавит префикс "Ctl". Например, если элемент управления ActiveX содержит член с именем "Layout", в производном классе "AxHost" он будет переименован в "CtlLayout", так как в .NET Framework задано событие "Layout".  
@@ -79,6 +79,6 @@ aximp [options]{file.dll | file.ocx}
 aximp c:\systemroot\system32\msdxm.ocx  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Инструменты](../../../docs/framework/tools/index.md)  
  [Ildasm.exe (дизассемблер IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

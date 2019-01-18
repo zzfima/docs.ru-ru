@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec7e498e0f0634d4f0e104247b430fb591f702ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8cd7826581a8750d0c5bc87b6223d51eb2b6cce2
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410151"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221951"
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (инструмент для установки)
 Программа для установки является программой командной строки, с помощью которой можно устанавливать и удалять ресурсы сервера путем выполнения компонентов установщика в соответствующих сборках. Эта программа работает совместно с классами в пространстве имен <xref:System.Configuration.Install>.  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  В командной строке введите следующее.  
   
@@ -37,14 +37,14 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
   
 #### <a name="parameters"></a>Параметры  
   
-|Аргумент|Описание:|  
+|Аргумент|Описание|  
 |--------------|-----------------|  
 |`assembly`|Имя файла сборки, в которой должны выполняться компоненты установщика. Пропустите этот параметр, если указывается строгое имя сборки с помощью параметра `/AssemblyName`.|  
   
 <a name="options"></a>   
 ## <a name="options"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |`/h[elp]`<br /><br /> - или -<br /><br /> `/?`|Отображает синтаксис команд и параметров программы.|  
 |`/help` *сборка*<br /><br /> - или -<br /><br /> `/?` *сборка*|Отображает дополнительные параметры, распознаваемые отдельными установщиками в пределах указанной сборки, вместе с синтаксисом команд и параметров для программы InstallUtil.exe. Этот параметр добавляет текст, возвращенный каждым свойством компонента установщика <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType>, в текст справки программы InstallUtil.exe.|  
@@ -161,7 +161,7 @@ installutil /LogFile= /email=admin@mycompany.com myAssembly.exe
 installutil /LogFile=myLog.InstallLog myAssembly.exe /LogFile=myTestLog.InstallLog myTestAssembly.exe  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  <xref:System.Configuration.Install>  
  [Инструменты](../../../docs/framework/tools/index.md)  
  [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

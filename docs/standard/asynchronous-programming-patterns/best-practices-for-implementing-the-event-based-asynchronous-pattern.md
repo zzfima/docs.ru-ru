@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: e50f455ab83b0b057f8ce3c32f874e6856632d70
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 37575ff080fca1514e4fd6e4e22243227c529dd2
+ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836963"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54084957"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Рекомендации по реализации асинхронной модели, основанной на событиях
 Асинхронная модель на основе событий является эффективным средством для обеспечения асинхронной работы в классах на базе привычной семантики делегатов и событий. Чтобы внедрить асинхронную модель на основе событий, необходимо выполнить определенные требования относительно поведения. В следующих разделах описываются требования и рекомендации, которые следует учитывать при реализации класса, поддерживающего асинхронную модель на основе событий.  
@@ -73,7 +73,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   Если класс поддерживает несколько одновременных вызовов, предоставьте разработчику возможность отслеживать каждый вызов по отдельности, определив перегрузку <em>имя_метода</em>**Async**, которая принимает объект состояния или идентификатор задачи в параметре с именем `userSuppliedState`. Этот параметр должен всегда стоять последним в сигнатуре метода <em>имя_метода</em>**Async**.  
   
--   Если класс определяет перегрузку <em>имя_метода</em>**Async**, которая принимает параметр с объектом состояния или идентификатором задачи, обязательно отслеживайте время существования операции с этим идентификатором задачи и возвращайте его в завершающий обработчик. Можно использовать доступные вспомогательные классы. Дополнительные сведения об управлении параллелизмом см. в [практическом руководстве по реализации компонента, поддерживающего асинхронную модель на основе событий](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+-   Если класс определяет перегрузку <em>имя_метода</em>**Async**, которая принимает параметр с объектом состояния или идентификатором задачи, обязательно отслеживайте время существования операции с этим идентификатором задачи и возвращайте его в завершающий обработчик. Можно использовать доступные вспомогательные классы. Дополнительные сведения об управлении параллелизмом см. в разделе [Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 -   Если класс определяет метод <em>имя_метода</em>**Async** без параметра состояния и не поддерживает несколько одновременных вызовов, обязательно создавайте исключение <xref:System.InvalidOperationException> при любой попытке вызова <em>имя_метода</em>**Async** до завершения предыдущего вызова <em>имя_метода</em>**Async**.  
   
@@ -127,7 +127,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 > [!NOTE]
 >  Вы можете не соблюдать эти правила, если хотите явно нарушить политику модели приложения, но при этом воспользоваться другими преимуществами асинхронной модели на основе событий. Например, вам может понадобиться, чтобы класс, работающий в Windows Forms, был со свободным потоком. Вы можете создать класс со свободным потоком, если разработчики осознают накладываемые этим ограничения. Консольные приложения не синхронизируют выполнение вызовов <xref:System.ComponentModel.AsyncOperation.Post%2A>. Это может вызвать беспорядочное возникновение событий `ProgressChanged`. Если вы хотите получить сериализованное выполнение вызовов <xref:System.ComponentModel.AsyncOperation.Post%2A>, реализуйте и установите класс <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType>.  
   
- Дополнительные сведения об использовании <xref:System.ComponentModel.AsyncOperation> и <xref:System.ComponentModel.AsyncOperationManager> для поддержки асинхронных операций см. в [практическом руководстве по реализации компонента, поддерживающего асинхронную модель на основе событий](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+ Дополнительные сведения об использовании <xref:System.ComponentModel.AsyncOperation> и <xref:System.ComponentModel.AsyncOperationManager> для включения асинхронных операций см. в разделе [Практическое руководство. Реализация компонента, поддерживающего асинхронную модель на основе событий](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="guidelines"></a>Рекомендации  
   

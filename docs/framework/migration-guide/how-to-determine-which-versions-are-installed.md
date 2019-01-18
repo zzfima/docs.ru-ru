@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение установленных версий платформы .NET Framework
+title: Как выполнить Определение установленных версий платформы .NET Framework
 ms.date: 04/10/2018
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 890ce1e9a23d57121cd714252444e5ff1caa6b19
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: d1a0ee772618b89d3b8cf6efc9400e3dcf4804da
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396881"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223186"
 ---
-# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Практическое руководство. Определение установленных версий платформы .NET Framework
+# <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Как выполнить Определение установленных версий платформы .NET Framework
 
 На компьютере можно установить и запустить несколько версий платформы .NET Framework. При разработке или развертывании приложения могут потребоваться сведения о том, какие версии .NET Framework установлены на компьютере пользователя. Учтите, что платформа .NET Framework состоит из основных компонентов, версии которым присваиваются отдельно:  
   
@@ -197,7 +197,7 @@ ms.locfileid: "53396881"
 
 - Для определения версий среды CLR, установленных на компьютере, можно использовать инструмент CLR Version (Clrver.exe).
 
-     В командной строке Visual Studio введите `clrver`. Выходные данные этой команды выглядят примерно следующим образом:
+     Запустите командную строку разработчика Visual Studio и введите `clrver`. Выходные данные этой команды выглядят примерно следующим образом:
 
     ```
     Versions installed on the machine:

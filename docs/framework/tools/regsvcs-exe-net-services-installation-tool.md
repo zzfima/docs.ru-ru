@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3de5b196d6ec35febe4ba30f7ac41bacacf884cd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: df81293a00ad79892618c71a901cea30efe766ec
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529112"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221314"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (программа установки служб .NET)
 Программа установки служб .NET выполняет следующие действия.  
@@ -27,7 +27,7 @@ ms.locfileid: "43529112"
   
 -   Настраивает службы, которые были программно добавлены в создаваемый класс.  
   
- Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  В командной строке введите следующее.  
   
@@ -41,11 +41,11 @@ ms.locfileid: "43529112"
   
 #### <a name="parameters"></a>Параметры  
   
-|Аргумент|Описание:|  
+|Аргумент|Описание|  
 |--------------|-----------------|  
 |*assemblyFile.dll*|Исходный файл сборки. Сборка должна быть подписана с использованием строгого имени. Дополнительные сведения см. в разделе [Подпись сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md).|  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**/appdir:** *path*|Определяет корневой каталог приложения.|  
 |**/appname:** *applicationName*|Задает имя приложения COM+, которое следует найти или создать.|  
@@ -86,7 +86,7 @@ regsvcs /appname:myTargetApp myTest.dll
 regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Инструменты](../../../docs/framework/tools/index.md)  
  [Практическое руководство. Подписание сборки строгим именем](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
  [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -10,16 +10,17 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c9b8d0680a50d9945bef0d03d10e45750fc49a1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 29dd8ae38e2635f92c5be2b4d856f03a2e3e5767
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221522"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (средство изолированного хранилища)
 Программа изолированного хранилища выводит список или удаляет все существующие хранилища для текущего пользователя.  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  В командной строке введите следующее.  
   
@@ -31,7 +32,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**/h**[**elp**]|Отображает синтаксис команд и параметров программы.|  
 |**/list**|Отображает все существующие хранилища для текущего пользователя. В их число включаются хранилища для всех приложений или сборок, выполненных данным пользователем.|  
@@ -59,7 +60,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
   
  Управление программой Storeadm.exe не зависит от того, включен ли режим перемещения для пользователя. При запуске программы без параметров все действия применяются к локальному хранилищу. При запуске программы с параметром **/roaming** все действия будут применяться к перемещаемому хранилищу. При запуске программы с параметром **/machine** все действия применяются к хранилищу компьютера.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Инструменты](../../../docs/framework/tools/index.md)  
  [Изолированное хранилище](../../../docs/standard/io/isolated-storage.md)  
  [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

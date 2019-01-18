@@ -12,17 +12,17 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d28c5e817e415e08c3a58c840e52cdfcbe286997
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dfb73f6637be96d7994a808b8d9a2c77c2896838
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409832"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221730"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (программа экспорта библиотек типов)
 Программа импорта библиотек типов преобразует определения типов, содержащиеся в библиотеке типов COM, в эквивалентные определения сборки среды CLR. Tlbimp.exe выводит двоичный файл (сборку), содержащий метаданные среды выполнения для типов, определенных в исходной библиотеке типов. Этот файл можно просмотреть с помощью таких средств, как [Ildasm.exe](ildasm-exe-il-disassembler.md).  
   
- Это средство автоматически устанавливается с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).  
+ Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](developer-command-prompt-for-vs.md).  
   
  В командной строке введите следующее.  
   
@@ -34,11 +34,11 @@ tlbimp tlbFile [options]
   
 #### <a name="parameters"></a>Параметры  
   
-|Аргумент|Описание:|  
+|Аргумент|Описание|  
 |--------------|-----------------|  
 |*tlbFile*|Имя любого файла, содержащего библиотеку типов COM.|  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |**/asmversion:** *номер_версии*|Задает номер версии создаваемой сборки. Аргумент *номер_версии* задается в формате *главная.вспомогательная.сборка.редакция*.|  
 |**/company:** `companyinformation`|Добавляет сведения об организации в выходную сборку.|  
@@ -125,7 +125,7 @@ bool SomeMethod();
 void SomeMethod(out bool x);  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Инструменты](index.md)  
  [Tlbexp.exe (программа экспорта библиотек типов)](tlbexp-exe-type-library-exporter.md)  
  [Импорт библиотеки типов в виде сборки](../interop/importing-a-type-library-as-an-assembly.md)  

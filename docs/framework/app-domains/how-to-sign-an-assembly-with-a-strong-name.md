@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Подписание сборки строгим именем
+title: Как выполнить Подписание сборки строгим именем
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c7edfc7cf3a55dc8d789b20540af6a4ad9b91299
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191068"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221262"
 ---
-# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Практическое руководство. Подписание сборки строгим именем
+# <a name="how-to-sign-an-assembly-with-a-strong-name"></a>Как выполнить Подписание сборки строгим именем
 Существует несколько способов подписать сборку строгим именем:  
   
 -   С использованием **Подписывание** в диалоговом окне **Свойства** проекта в Visual Studio. Это самый простой и удобный способ подписать сборку строгим именем.  
@@ -31,7 +31,7 @@ ms.locfileid: "50191068"
   
 -   С использованием параметров компилятора.  
   
- Для подписи сборки строгим именем необходимо иметь пару ключей шифрования. Дополнительные сведения о создании пары ключей смотрите в разделе [Практическое руководство. Создание пары открытого и закрытого ключей](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
+ Для подписи сборки строгим именем необходимо иметь пару ключей шифрования. Дополнительные сведения о создании пары ключей см. в разделе [Практическое руководство. Создание пары открытого и закрытого ключей](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md).  
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-visual-studio"></a>Создание и подпись сборки строгим именем с помощью Visual Studio  
   
@@ -45,7 +45,7 @@ ms.locfileid: "50191068"
   
 ### <a name="to-create-and-sign-an-assembly-with-a-strong-name-by-using-the-assembly-linker"></a>Создание и подпись сборки строгим именем с помощью компоновщика сборок  
   
--   В [командной строке Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md) введите следующую команду:  
+-   В [командной строке разработчика для Visual Studio](../../../docs/framework/tools/developer-command-prompt-for-vs.md) введите следующую команду:  
   
      **al** **/out:**\<*assemblyName*> *\<moduleName>* **/keyfile:**\<*keyfileName*>  
   
@@ -97,7 +97,7 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     csc /t:library UtilityLibrary.cs /keyfile:sgKey.snk  
     ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
 - [Создание и использование сборок со строгими именами](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
 - [Практическое руководство. Создание пары открытого и закрытого ключей](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
 - [Al.exe (компоновщик сборок)](../../../docs/framework/tools/al-exe-assembly-linker.md)  

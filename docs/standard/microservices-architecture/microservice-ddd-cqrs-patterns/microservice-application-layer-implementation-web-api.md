@@ -4,12 +4,12 @@ description: Архитектура микрослужб .NET для конте�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 332829d30f10dde49727c63e9e80a91f24e1123a
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d37660d3e2a7640383347071adfe969325ddd77b
+ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53151191"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54152116"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Реализация прикладного уровня для микрослужб с помощью веб-API
 
@@ -19,7 +19,7 @@ ms.locfileid: "53151191"
 
 Например, код прикладного уровня для микрослужбы размещения заказов реализуется непосредственно в рамках проекта **Ordering.API** (проекта веб-интерфейса API ASP.NET Core), как показано на рис. 7-23.
 
-![Представление обозревателя решений для микрослужбы Ordering.API, показывающее вложенные папки в папке приложений: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries и Validations.](./media/image20.png)
+![Представление обозревателя решений для микрослужбы Ordering.API, показывающее вложенные папки в папке приложения: Behaviors, Commands, DomainEventHandlers, IntegrationEvents, Models, Queries и Validations.](./media/image20.png)
 
 **Рис. 7-23**. Прикладной уровень в проекте веб-интерфейса API ASP.NET Core Ordering.API
 
@@ -397,7 +397,7 @@ public class CreateOrderCommandHandler
 #### <a name="additional-resources"></a>Дополнительные ресурсы
 
 - **Марк Симанн (Mark Seemann). Граничный слой приложения не является объектно-ориентированным** \
-  [*http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](http://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+  [*https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/*](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
 
 - **Команды и события** \
   [*http://cqrs.nu/Faq/commands-and-events*](http://cqrs.nu/Faq/commands-and-events)
@@ -812,7 +812,7 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 - **CQRS с MediatR и AutoMapper** \
   [*https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/*](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
 
-- **Сажаем контроллеры на диету: запросы POST и команды.** \
+- **Сажаем контроллеры на диету: запросы POST и команды**. \
   [*https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/*](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
 
 - **Обеспечение сквозной функциональности с помощью конвейера медиатора** \

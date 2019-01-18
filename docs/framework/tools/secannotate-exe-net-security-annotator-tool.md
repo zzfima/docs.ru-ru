@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d00fb16ac5b71c8fb8f8560f68d20f1f33987d7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: be9100f49fcf6ed2926489e8346123eb7c3cfc70
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44195391"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221353"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (средство создания заметок безопасности .NET)
 Средство создания заметок безопасности .NET Security Annotator (SecAnnotate.exe) — это приложение командной строки, определяющее части `SecurityCritical` и `SecuritySafeCritical` одной или нескольких сборок.  
   
  Расширение Visual Studio [Security Annotator](https://go.microsoft.com/fwlink/?LinkId=198007) обеспечивает графический пользовательский интерфейс для программы SecAnnotate.exe и позволяет запускать эту программу из Visual Studio.  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  В командной строке введите следующий текст, где *параметры* описаны в следующем разделе, а *сборки* состоят из одного имени сборок или нескольких, разделенных пробелами.  
   
@@ -31,7 +31,7 @@ SecAnnotate.exe [parameters] [assemblies]
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание:|  
+|Параметр|Описание|  
 |------------|-----------------|  
 |`/a`<br /><br /> или<br /><br /> `/showstatistics`|Показывает статистику использования прозрачности в анализируемых сборках.|  
 |`/d:` *каталог*<br /><br /> или<br /><br /> `/referencedir:` *каталог*|Указывает каталог для поиска зависимых сборок во время создания заметок.|  

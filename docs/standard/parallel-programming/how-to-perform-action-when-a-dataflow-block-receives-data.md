@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Выполнение действий при получении данных блоком потоков данных
+title: Как выполнить Выполнение действий при получении данных блоком потоков данных
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd5963fee985633d843cc60f521b66000b84e55e
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 369559feca4edab6de587a3494588973e0c2e1b7
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44217195"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54221067"
 ---
-# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Практическое руководство. Выполнение действий при получении данных блоком потоков данных
+# <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Как выполнить Выполнение действий при получении данных блоком потоков данных
 Типы *блоков выполнения потоков данных* вызывают предоставленный пользователем делегат при получении данных. Классы <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> являются типами блоков выполнения потока данных. При предоставлении рабочей функции блоку выполнения потока данных можно использовать ключевое слово `delegate` (`Sub` в Visual Basic), <xref:System.Action%601>, <xref:System.Func%602> или лямбда-выражение. В этом документе описано, как использовать <xref:System.Func%602> и лямбда-выражения для выполнения действий в блоках выполнения.  
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "44217195"
  В разделе "Сводка о типах делегатов" документации по [потокам данных](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) перечислены типы делегатов, которые можно предоставлять объектам <xref:System.Threading.Tasks.Dataflow.ActionBlock%601>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> и <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602>. В таблице также указано, работает ли делегат данного типа синхронно или асинхронно.  
   
 ## <a name="compiling-the-code"></a>Компиляция кода  
- Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` для Visual Basic), затем выполните в окне командной строки Visual Studio следующую команду.  
+ Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `DataflowExecutionBlocks.cs` (`DataflowExecutionBlocks.vb` для Visual Basic), затем выполните в окне командной строки разработчика для Visual Studio следующую команду.  
   
  Visual C#  
   

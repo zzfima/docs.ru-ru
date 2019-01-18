@@ -3,12 +3,12 @@ title: Интерполяция строк в C#
 description: Узнайте, как включить форматированные результаты выражения в строку результатов в C# с интерполяцией строк.
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 1a5d451f6fef926f0f142c7f09f564ce95618b39
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ef4358ff61cde43998fc0dc4ba174dc0f06bc2bd
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188642"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222497"
 ---
 # <a name="string-interpolation-in-c"></a>Интерполяция строк в C# #
 
@@ -31,6 +31,8 @@ ms.locfileid: "50188642"
 ```
 
 Во время компиляции интерполированная строка обычно преобразуется в вызов метода <xref:System.String.Format%2A?displayProperty=nameWithType>. Так вы сможете использовать все возможности функции [составного форматирования строки](../../standard/base-types/composite-formatting.md) при работе с интерполированными строками.
+
+Компилятор может заменить <xref:System.String.Format%2A?displayProperty=nameWithType> на <xref:System.String.Concat%2A?displayProperty=nameWithType>, если проанализированное поведение будет эквивалентно объединению.
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>Как указать строку формата для интерполированного выражения
 
@@ -106,7 +108,7 @@ ms.locfileid: "50188642"
 
 В этом руководстве описаны распространенные сценарии использования интерполяции строк. Дополнительные сведения об интерполяции строк см. в разделе [Интерполяция строк](../language-reference/tokens/interpolated.md). Дополнительные сведения о форматировании типов в .NET см. в разделах [Типы форматирования в .NET](../../standard/base-types/formatting-types.md) и [Составное форматирование](../../standard/base-types/composite-formatting.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - <xref:System.String.Format%2A?displayProperty=nameWithType>  
 - <xref:System.FormattableString?displayProperty=nameWithType>  

@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44a21426bd4fea8bbb42801d59c6590f2ee0aee8
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 434d5dd002124033f6d7cf5104d87264ee9c0388
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49121393"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222224"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (средство экспорта метаданных среды выполнения Windows)
 Программа экспорта метаданных (Winmdexp.exe) [!INCLUDE[wrt](../../../includes/wrt-md.md)] преобразует модуль .NET Framework в файл, содержащий метаданные [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Несмотря на то что сборки .NET Framework и файлы метаданных [!INCLUDE[wrt](../../../includes/wrt-md.md)] используют один и тот же физический формат, существуют различия в содержимом таблиц метаданных, то есть сборки .NET Framework невозможно автоматически использовать как компоненты [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Процесс преобразования модуля .NET Framework в компонент [!INCLUDE[wrt](../../../includes/wrt-md.md)] называется *экспортированием*. В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] и [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] конечный файл метаданных Windows (WINMD) содержит и метаданные, и реализацию.  
   
  При использовании шаблона **Компонент [!INCLUDE[wrt](../../../includes/wrt-md.md)]** из **Microsoft Store** для C# и Visual Basic в Visual Studio 2013 или Visual Studio 2012 компилятор должен создать WINMDOBJ-файл, а на последующих этапах сборки вызывается программа Winmdexp.exe, чтобы экспортировать WINMDOBJ-файл в WINMD-файл. Это рекомендуемый способ создания компонента [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Если над процессом построения требуется больший контроль по сравнению со средой Visual Studio, программу Winmdexp.exe следует вызывать напрямую.  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  В командной строке введите следующее.  
   
@@ -31,7 +31,7 @@ winmdexp [options] winmdmodule
   
 #### <a name="parameters"></a>Параметры  
   
-|Аргумент или параметр|Описание:|  
+|Аргумент или параметр|Описание|  
 |------------------------|-----------------|  
 |`winmdmodule`|Задает экспортируемый модуль (WINMDOBJ). Допускается только один модуль. Чтобы создать этот модуль, следует использовать параметр компилятора `/target` с целевым объектом `winmdobj`. См. статью [/target:winmdobj (параметры компилятора C#)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) или [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md).|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Задает выходной файл документации XML, который создаст программа Winmdexp.exe. В [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] выходной файл совпадает со входным файлом XML документации.|  
@@ -50,7 +50,7 @@ winmdexp [options] winmdmodule
   
  Платформа .NET Framework упрощает программирование в [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] и делает его более естественным при создании приложений [!INCLUDE[wrt](../../../includes/wrt-md.md)] или компонентов [!INCLUDE[wrt](../../../includes/wrt-md.md)] на C# или Visual Basic. Это рассматривается в статье [Поддержка платформы .NET Framework для приложений Магазина Windows и среды выполнения Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md). Во время разработки некоторые часто используемые типы [!INCLUDE[wrt](../../../includes/wrt-md.md)] сопоставляются с типами .NET Framework. Программа Winmdexp.exe позволяет упростить такой процесс и создает рабочую область API, в которой используются соответствующие типы [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Например, типы, полученные из интерфейса <xref:System.Collections.Generic.IList%601>, сопоставляются с типами, полученными из интерфейса [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Поддержка платформы .NET Framework для приложений магазина Windows и среды выполнения Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
  [Создание компонентов среды выполнения Windows в C# и Visual Basic](https://go.microsoft.com/fwlink/p/?LinkID=238313)  
  [Сообщения об ошибках Winmdexp.exe](../../../docs/framework/tools/winmdexp-exe-error-messages.md)  

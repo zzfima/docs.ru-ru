@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f4f73ec60283e1ddf0fee0beaa76bdb68124698
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 7b3d28b7af96dde30117ec952355958ca75ae559
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122783"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54223173"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (генератор файлов ресурсов)
 Генератор файлов ресурсов (Resgen.exe) преобразует текстовые файлы (TXT или RESTEXT) и файлы ресурсов на основе XML (RESX) в двоичные файлы среды CLR (RESOURCES), которые можно внедрить в двоичный исполняемый файл среды выполнения или вспомогательную сборку. (См. раздел [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md).)  
@@ -55,7 +55,7 @@ resgen /?
   
  При использовании программы Resgen.exe для создания двоичных RESOURCES-файлов можно воспользоваться языковым компилятором, чтобы внедрить двоичные файлы в исполняемые сборки, или [Компоновщиком сборок (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md), чтобы скомпилировать их во вспомогательные сборки.  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Эта программа автоматически устанавливается вместе с Visual Studio. Чтобы применить этот инструмент, воспользуйтесь командной строкой разработчика для Visual Studio (или командной строкой Visual Studio в Windows 7). Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  В командной строке введите следующее.  
   
@@ -71,7 +71,7 @@ resgen filename.extension [outputDirectory]
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр или ключ|Описание:|  
+|Параметр или ключ|Описание|  
 |-------------------------|-----------------|  
 |`/define:` *symbol1*[, *symbol2*,...]|Начиная с [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], поддерживается условная компиляция в файлы ресурсов на основе текста (TXT или RESTEXT). Если *symbol* соответствует символу, включенному во входной текстовый файл в конструкции `#ifdef`, соответствующий строковый ресурс включается в RESOURCES-файл. Если входной текстовый файл содержит оператор `#if !` с символом, который не определен ключом `/define`, соответствующий строковый ресурс включается в файл ресурсов.<br /><br /> Параметр `/define` игнорируется, если он применяется для нетекстовых файлов. В символах учитывается регистр.<br /><br /> Дополнительные сведения об этом параметре см. в разделе [Условная компиляция ресурсов](#Conditional) ниже.|  
 |`useSourcePath`|Задает использование текущего каталога входного файла для разрешения относительных путей к файлам.|  
@@ -329,7 +329,7 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
 resgen StringResources.txt /str:vb,,StringResources   
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Инструменты](../../../docs/framework/tools/index.md)  
  [Ресурсы в приложениях для настольных систем](../../../docs/framework/resources/index.md)  
  [Создание файлов ресурсов](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e32fa443-0778-4cc3-bf36-5c8ea297d296
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73fa08f92a4572a501be65f05e8141c349cc003e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17e8e00afd759a3408ca54930c15d0b8797ff947
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400215"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222341"
 ---
 # <a name="fuslogvwexe-assembly-binding-log-viewer"></a>Fuslogvw.exe (средство просмотра журнала привязки сборок)
 Средство просмотра журнала привязки сборок выводит подробные сведения об ошибках привязки сборок. Эта информация поможет определить причину, по которой .NET Framework не находит сборку во время выполнения. Ошибки обычно вызваны развертыванием сборки в неверном расположении, использованием машинного образа, который более не является допустимым, а также несовпадением версий или языков и региональных параметров. Если среде CLR не удается найти сборку, обычно в приложении отображается исключение <xref:System.TypeLoadException>.  
@@ -24,7 +24,7 @@ ms.locfileid: "33400215"
 > [!IMPORTANT]
 >  Средство просмотра Fuslogvw.exe необходимо запускать с правами администратора.  
   
- Эта программа автоматически устанавливается вместе с Visual Studio. Запускайте его из командной строки разработчика (или командной строки Visual Studio в Windows 7), используя учетные данные администратора. Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
+ Эта программа автоматически устанавливается вместе с Visual Studio. Запускайте его из командной строки разработчика для Visual Studio (или командной строки в Windows 7), используя учетные данные администратора. Дополнительные сведения см. в разделе [Командные строки](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
  В командной строке введите следующее.  
   
@@ -228,7 +228,7 @@ Discarding native image.
     > [!NOTE]
     >  Это поле активно только в Windows 8 или более поздней версии.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  <xref:System.TypeLoadException>  
  [Инструменты](../../../docs/framework/tools/index.md)  
  [Глобальный кэш сборок](../../../docs/framework/app-domains/gac.md)  

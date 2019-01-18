@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb3f50459eeafcbb9f4882e56fb08b2001a35fb3
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0367b4224b49377d8d17045e044976e1c511a8ed
+ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042376"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54222111"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Пошаговое руководство. Повышение эффективности с помощью BatchBlock и BatchedJoinBlock
 Библиотека потоков данных TPL предоставляет классы <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> и <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType>, чтобы пользователь мог получать и помещать в буфер данные из одного или нескольких источников и затем передавать эти помещенные в буфер данные в виде одной коллекции. Этот механизм пакетной обработки полезен при сборе данных из одного или нескольких источников и дальнейшей обработке различных элементов данных в пакетном режиме. Например, рассмотрим приложение, использующее поток данных для вставки записей в базу данных. Эта операция может быть эффективнее, если несколько элементов добавляются одновременно, а не последовательно по одному. В этом документе описано, как использовать класс <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> для увеличения эффективности подобных операций вставки в базу данных. Также здесь приводится способ использования класса <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> для перехвата и результатов, и всех исключений, возникающих при выполнении программой считывания из базы данных.
@@ -30,7 +30,7 @@ ms.locfileid: "44042376"
 2.  Убедитесь, что на вашем компьютере есть копия базы данных Northwind, Northwind.sdf. Этот файл обычно находится в папке %Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.  
   
     > [!IMPORTANT]
-    >  В некоторых версиях Windows вы не сможете подключиться к Northwind.sdf, если Visual Studio работает не в режиме администратора. Для подключения к Northwind.sdf запустите Visual Studio или командную строку Visual Studio в режиме **Запуск от имени администратора**.  
+    >  В некоторых версиях Windows вы не сможете подключиться к Northwind.sdf, если Visual Studio работает не в режиме администратора. Для подключения к Northwind.sdf запустите Visual Studio или командную строку разработчика для Visual Studio в режиме **Запуск от имени администратора**.  
   
  Это пошаговое руководство содержит следующие разделы:  
   
