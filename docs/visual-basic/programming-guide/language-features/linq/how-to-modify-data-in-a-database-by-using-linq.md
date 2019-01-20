@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Изменение данных в базе данных с помощью LINQ (Visual Basic)
+title: Как выполнить Изменение данных в базе данных с помощью LINQ (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - inserting rows [LINQ to SQL]
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], data changes in database
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: cf52635f-0c1b-46c3-aff1-bdf181cf19b1
-ms.openlocfilehash: 02aaf2924c6230615d7d1cbcceac72265419b541
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1b957fb7524b7eaf46bf321713196e90bae66b6c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520692"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415212"
 ---
-# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Практическое руководство. Изменение данных в базе данных с помощью LINQ (Visual Basic)
+# <a name="how-to-modify-data-in-a-database-by-using-linq-visual-basic"></a>Как выполнить Изменение данных в базе данных с помощью LINQ (Visual Basic)
 Запросы Language-Integrated Query (LINQ) упрощают доступ к данным базы данных и измените значения в базе данных.  
   
  В примере показан способ создания нового приложения, которое извлекает и обновляет сведения в базе данных SQL Server.  
@@ -122,7 +122,10 @@ ms.locfileid: "43520692"
       Dim updateCust = (From cust In db.Customers   
                         Where cust.CustomerID = "JILLF").ToList()(0)  
   
-      updateCust.ContactName = "Jill Shrader"  
+      updateCust.ContactName = "Jill Shrader"
+      updateCust.Country = "Wales"
+      updateCust.CompanyName = "Red Yonder Airlines"
+      updateCust.City = "Cardiff"
   
       Try  
         db.SubmitChanges()  
@@ -162,4 +165,4 @@ ms.locfileid: "43520692"
  [Запросы](../../../../visual-basic/language-reference/queries/index.md)  
  [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  [Методы DataContext (реляционный конструктор объектов)](/visualstudio/data-tools/datacontext-methods-o-r-designer)  
- [Практическое руководство. Назначение хранимых процедур для выполнения обновления, вставки и удаления (реляционный конструктор объектов)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)
+ [Практическое руководство. Назначение хранимых процедур для выполнения обновлений, вставок и удалений (реляционный конструктор объектов)](https://msdn.microsoft.com/library/e88224ab-ff61-4a3a-b6b8-6f3694546cac)

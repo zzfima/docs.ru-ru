@@ -1,25 +1,25 @@
 ---
-title: Как создать рабочий процесс блок-схемы
+title: Как выполнить Создать рабочий процесс блок-схема
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 185d7aea-68a6-4bd8-adde-45050f33170a
-ms.openlocfilehash: 185d46d041ee342962c624ad6a3592e5a426cc6e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e508a29e3c3dffce467eb60f2f702ea06fa4992a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502155"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415251"
 ---
-# <a name="how-to-create-a-flowchart-workflow"></a>Как создать рабочий процесс блок-схемы
+# <a name="how-to-create-a-flowchart-workflow"></a>Как выполнить Создать рабочий процесс блок-схема
 Рабочие процессы могут создаваться как из встроенных, так и из пользовательских действий. В этом разделе действия по созданию рабочего процесса, который использует как встроенные действия, например <xref:System.Activities.Statements.Flowchart> действия и пользовательские действия из предыдущего [как: Создание действия](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) раздела. Рабочий процесс моделирует игру по угадыванию числа.  
   
 > [!NOTE]
 >  Каждый раздел в учебнике «Приступая к работе» построен на основе предыдущих разделов. Для изучения этого раздела, необходимо сначала выполнить [как: Создание действия](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
   
 > [!NOTE]
->  Чтобы скачать завершенную версию учебника, см. в разделе [Windows Workflow Foundation (WF45) - Приступая к работе](https://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Чтобы скачать завершенную версию учебника, см. раздел [Windows Workflow Foundation (WF45), учебник "Приступая к работе"](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ### <a name="to-create-the-workflow"></a>Создание рабочего процесса  
   
@@ -148,7 +148,7 @@ ms.locfileid: "43502155"
   
 1.  Чтобы построить решение, нажмите CTRL+SHIFT+B.  
   
-     Для указания о том, как запустить рабочий процесс, см. следующий раздел, [как: запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Если вы уже выполнили [как: запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) шаг с другим стилем рабочего процесса и планируете запустить его с помощью рабочего процесса блок-схема, начиная с этого шага, сразу перейти к [построение и запуск приложения](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication)раздел [как: запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
+     Для указания о том, как запустить рабочий процесс, см. следующий раздел, [как: Запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md). Если вы уже выполнили [как: Запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) шаг с другим стилем рабочего процесса и планируете запустить его с помощью рабочего процесса блок-схема, начиная с этого шага, сразу перейти к [построение и запуск приложения](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md#BKMK_ToRunTheApplication) раздел [как: Запуск рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md).  
   
 ## <a name="see-also"></a>См. также  
  <xref:System.Activities.Statements.Flowchart>  

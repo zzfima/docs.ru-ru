@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Указание имени альтернативного элемента для потока XML
+title: Как выполнить Указание имени альтернативного элемента для XML Stream
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,18 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: 8cb6a66f9fc7a67ae99574e783fd889537b9b11a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f2dd56111bbc0ace76c2b71d208f1b753a2119b8
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582378"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415095"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Практическое руководство. Указание имени альтернативного элемента для потока XML
-[Пример кода](#cpconoverridingserializationofclasseswithxmlattributeoverridesclassanchor1)  
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>Как выполнить Указание имени альтернативного элемента для XML Stream
   
- Используя [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), можно создать несколько потоков XML с одним и тем же набором классов. Это может понадобиться, поскольку для двух разных XML-веб-служб требуется одинаковая основная информация с незначительными различиями. Допустим, две веб-службы XML обрабатывают заказы на книги, и поэтому для каждой из них требуются номера ISBN. Одна служба использует тег \<ISBN>, а другая — тег \<BookID>. Имеется класс с именем `Book`, содержащий поле с именем `ISBN`. При сериализации экземпляра класса `Book` имя члена (ISBN) будет по умолчанию использоваться в качестве имени элемента для тега. Первая XML-веб-служба работает, как и предполагалось. Но чтобы отправить поток XML во вторую XML-веб-службу, необходимо переопределить сериализацию, чтобы именем элемента для тега стало `BookID`.  
+Используя [XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx), можно создать несколько потоков XML с одним и тем же набором классов. Это может понадобиться, поскольку для двух разных XML-веб-служб требуется одинаковая основная информация с незначительными различиями. Допустим, две веб-службы XML обрабатывают заказы на книги, и поэтому для каждой из них требуются номера ISBN. Одна служба использует тег \<ISBN>, а другая — тег \<BookID>. Имеется класс с именем `Book`, содержащий поле с именем `ISBN`. При сериализации экземпляра класса `Book` имя члена (ISBN) будет по умолчанию использоваться в качестве имени элемента для тега. Первая XML-веб-служба работает, как и предполагалось. Но чтобы отправить поток XML во вторую XML-веб-службу, необходимо переопределить сериализацию, чтобы именем элемента для тега стало `BookID`.  
   
-### <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Создание потока XML с именем альтернативного элемента  
+## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>Создание потока XML с именем альтернативного элемента  
   
 1.  Создайте экземпляр класса <xref:System.Xml.Serialization.XmlElementAttribute>.  
   

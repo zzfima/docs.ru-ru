@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: b6297c26-7624-4431-8af4-14112d07bcd5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 991e333c53101a2be2a8a19d3960c3d0879619be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8b6d00d17615769a5d03d58e0eda5af62ca58368
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409936"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415966"
 ---
 # <a name="debugging-interfaces"></a>Интерфейсы отладки
 В этом разделе описываются неуправляемые интерфейсы отладки, управляющие отладкой программы, выполняемой в среде CLR.  
@@ -32,13 +32,13 @@ ms.locfileid: "33409936"
  Подкласс `ICLRDataTarget`, используемый уровнем служб доступа к данным с целью управления областями виртуальной памяти в целевом процессе.  
   
  [Интерфейс ICLRDataTarget3](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget3-interface.md)  
- Подкласс [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) , предоставляющий доступ к информации об исключении.  
+ Подкласс [ICLRDataTarget2](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md) , обеспечивающий доступ к сведениям об исключении.  
   
  [Интерфейс ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)  
  Предоставляет методы, обрабатывающие загрузку и выгрузку модулей для отладки.  
   
  [Интерфейс ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)  
- Включает в себя [метод ProvideLibrary](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md) метод, получающий интерфейс обратного вызова, который позволяет среды выполнения от версии библиотеки отладки находить и загружать по требованию библиотеки поставщика.  
+ Включает в себя [метод ProvideLibrary](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-providelibrary-method.md) метод, получающий интерфейс обратного вызова, который позволяет библиотеки отладки конкретной версии среды выполнения, находить и загружать по мере необходимости поставщика библиотеки.  
   
  [Интерфейс ICLRMetadataLocator](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)  
  Интерфейс, используемый уровнем служб доступа к данным для определения местонахождения метаданных сборок в целевом процессе.  
@@ -56,7 +56,7 @@ ms.locfileid: "33409936"
  Предоставляет методы для работы с типами [!INCLUDE[wrt](../../../../includes/wrt-md.md)] в домене приложения. Этот интерфейс является расширением интерфейса `ICorDebugAppDomain` и `ICorDebugAppDomain2`.  
   
  [Интерфейс ICorDebugAppDomain4](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain4-interface.md)  
- Логически расширяет [ICorDebugAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md) интерфейс для получения управляемого объекта из вызываемой оболочки COM.  
+ Логически расширяет [ICorDebugAppDomain](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain-interface.md) интерфейса для получения управляемого объекта из вызываемой оболочки COM.  
   
  [Интерфейс1 ICorDebugAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-interface.md)  
  Предоставляет метод, возвращающий заданное число значений `ICorDebugAppDomain`, начиная со следующего расположения в перечислении.  
@@ -71,7 +71,7 @@ ms.locfileid: "33409936"
  Представляет сборку. Этот интерфейс является расширением интерфейса `ICorDebugAssembly`.  
   
  [Интерфейс ICorDebugAssembly3](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly3-interface.md)  
- Логически расширяет [ICorDebugAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md) интерфейс для обеспечения поддержки контейнерных сборок и их вложенных сборок. **Этот параметр доступен только в .NET Native.**  
+ Логически расширяет [ICorDebugAssembly](../../../../docs/framework/unmanaged-api/debugging/icordebugassembly-interface.md) интерфейса для обеспечения поддержки контейнерных сборок и их вложенных сборок. **Доступно только в .NET Native.**  
   
  [Интерфейс1 ICorDebugAssemblyEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugassemblyenum-interface.md)  
  Реализует методы `ICorDebugEnum` и выполняет перечисление массивов `ICorDebugAssembly`.  
@@ -128,13 +128,13 @@ ms.locfileid: "33409936"
  Предоставляет интерфейс обратного вызова, обеспечивающий доступ к конкретному целевому процессу.  
   
  [Интерфейс ICorDebugDataTarget2](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)  
- Логически расширяет [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) интерфейса. **Этот параметр доступен только в .NET Native.**  
+ Логически расширяет [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) интерфейс. **Доступно только в .NET Native.**  
   
  [Интерфейс ICorDebugDataTarget3](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget3-interface.md)  
- Логически расширяет [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) интерфейс для предоставления сведений о загруженных модулях. **Этот параметр доступен только в .NET Native.**  
+ Логически расширяет [ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md) интерфейс для предоставления сведений о загруженных модулях. **Доступно только в .NET Native.**  
   
  [Интерфейс ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)  
- Определяет базовый интерфейс, из которого возникают все события отладки `ICorDebug`. **Этот параметр доступен только в .NET Native.**  
+ Определяет базовый интерфейс, из которого возникают все события отладки `ICorDebug`. **Доступно только в .NET Native.**  
   
  [Интерфейс ICorDebugEditAndContinueErrorInfo](../../../../docs/framework/unmanaged-api/debugging/icordebugeditandcontinueerrorinfo-interface.md)  
  Является устаревшей. Не следует использовать данный интерфейс.  
@@ -155,13 +155,13 @@ ms.locfileid: "33409936"
  Расширяет интерфейс `ICorDebugEval` для предоставления поддержки универсальных типов.  
   
  [Интерфейс ICorDebugExceptionDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)  
- Расширяет [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) интерфейс для поддержки событий исключения. **Этот параметр доступен только в .NET Native.**  
+ Расширяет [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) интерфейс для поддержки событий исключения. **Доступно только в .NET Native.**  
   
  [Интерфейс ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
  Предоставляет перечислитель для сведений стека вызовов, встроенных в объект исключения.  
   
  [Интерфейс ICorDebugExceptionObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-interface.md)  
- Расширяет [ICorDebugObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-interface.md) интерфейс для предоставления сведений трассировки стека из управляемого объекта исключения.  
+ Расширяет [ICorDebugObjectValue](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-interface.md) интерфейс, чтобы предоставить сведения о трассировке стека из управляемого объекта исключения.  
   
  [Интерфейс1ICorDebugFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-interface.md)  
  Представляет кадр текущего стека.  
@@ -212,7 +212,7 @@ ms.locfileid: "33409936"
  Представляет сегмент кода промежуточного языка.  
   
  [Интерфейс ICorDebugILCode2](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)  
- Логически расширяет [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) смещений интерфейс предоставлять методы, возвращающие маркер для подписи локальной переменной функции и инструментированного профилировщиком промежуточного языка (IL), которые отображаются в исходный метод IL смещения.  
+ Логически расширяет [ICorDebugILCode](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md) интерфейс, чтобы предоставить методы, возвращающие маркер для подписи локальной переменной функции и сопоставлены инструментированного профилировщиком промежуточного языка (IL) смещений в исходный метод IL смещения.  
   
  [Интерфейс1 ICorDebugILFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-interface.md)  
  Предоставляет кадр стека кода MSIL.  
@@ -227,7 +227,7 @@ ms.locfileid: "33409936"
  Предоставляет методы, обеспечивающие доступ к локальным переменным и коду в кадре стека кода промежуточного языка. Параметр показывает, имеет ли отладчик доступ к переменным и коду, добавленным в инструментарий ReJIT профилировщика.  
   
  [Интерфейс ICorDebugInstanceFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebuginstancefieldsymbol-interface.md)  
- Представляет сведения отладочного символа для поля экземпляра. **Этот параметр доступен только в .NET Native.**  
+ Представляет сведения отладочного символа для поля экземпляра. **Доступно только в .NET Native.**  
   
  [Интерфейс1 ICorDebugInternalFrame](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-interface.md)  
  Задает типы кадров для отладчика.  
@@ -236,7 +236,7 @@ ms.locfileid: "33409936"
  Предоставляет сведения о внутренних кадрах, включая стековый адрес и положение относительно [ICorDebugFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugframe-interface.md) объектов.  
   
  [Интерфейс ICorDebugLoadedModule](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)  
- Предоставляет сведения о загруженном модуле. **Этот параметр доступен только в .NET Native.**  
+ Предоставляет сведения о загруженном модуле. **Доступно только в .NET Native.**  
   
  [Интерфейс ICorDebugManagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)  
  Предоставляет методы для обработки обратных вызовов отладчика.  
@@ -251,10 +251,10 @@ ms.locfileid: "33409936"
  Представляет сообщение управляемого помощника по отладке (MDA).  
   
  [Интерфейс ICorDebugMemoryBuffer](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)  
- Представляет буфер в памяти. **Этот параметр доступен только в .NET Native.**  
+ Представляет буфер в памяти. **Доступно только в .NET Native.**  
   
  [Интерфейс ICorDebugMergedAssemblyRecord](../../../../docs/framework/unmanaged-api/debugging/icordebugmergedassemblyrecord-interface.md)  
- Предоставляет сведения о сборке после слияния. **Этот параметр доступен только в .NET Native.**  
+ Предоставляет сведения о сборке после слияния. **Доступно только в .NET Native.**  
   
  [Интерфейс ICorDebugMetaDataLocator](../../../../docs/framework/unmanaged-api/debugging/icordebugmetadatalocator-interface.md)  
  Предоставляет сведения о метаданных для отладчика.  
@@ -272,7 +272,7 @@ ms.locfileid: "33409936"
  Расширяет интерфейс `ICorDebugBreakpoint` для предоставления доступа к указанным модулям.  
   
  [Интерфейс ICorDebugModuleDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-interface.md)  
- Расширяет [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) интерфейс для поддержки событий на уровне модуля. **Этот параметр доступен только в .NET Native.**  
+ Расширяет [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md) интерфейс для поддержки событий на уровне модуля. **Доступно только в .NET Native.**  
   
  [Интерфейс1 ICorDebugModuleEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduleenum-interface.md)  
  Реализует методы `ICorDebugEnum` и выполняет перечисление массивов `ICorDebugModule`.  
@@ -305,16 +305,16 @@ ms.locfileid: "33409936"
  Управляет пользовательскими уведомлениями отладчика.  
   
  [Интерфейс ICorDebugProcess5](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- Расширяет [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md) локальный интерфейс для поддержки доступа к управляемой куче, для предоставления сведений о сборке мусора управляемых объектов и для определения, является ли отладчику загружать образы из приложения кэш образов в машинном коде.  
+ Расширяет [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md) локального интерфейса для поддержки доступа к управляемой куче, для предоставления сведений о сборке мусора управляемых объектов и для определения, загружает ли отладчик образы из приложения кэш образов в машинном коде.  
   
  [Интерфейс ICorDebugProcess6](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)  
- Логически расширяет [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md) интерфейс, чтобы включить такие возможности как декодирование событий управляемой отладки, которые кодируются в события отладки собственных исключений и разделение виртуальных модулей. **Этот параметр доступен только в .NET Native.**  
+ Логически расширяет [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md) интерфейс для включения функции, такие как декодирование событий управляемой отладки, которые кодируются в события отладки собственных исключений и разделение виртуальных модулей. **Доступно только в .NET Native.**  
   
  [Интерфейс ICorDebugProcess7](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-interface.md)  
  Предоставляет метод, который настраивает отладчик для обработки обновлений находящихся в памяти метаданных в целевом процессе.  
   
  [Интерфейс ICorDebugProcess8](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess8-interface.md)  
- Логически расширяет [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md) интерфейс для включения или отключения определенных типов [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) обратных вызовов исключения.  
+ Логически расширяет [ICorDebugProcess](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-interface.md) интерфейс, чтобы включить или отключить определенные виды [ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md) обратных вызовов исключения.  
   
  [Интерфейс1 ICorDebugProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-interface.md)  
  Реализует методы `ICorDebugEnum` и выполняет перечисление массивов `ICorDebugProcess`.  
@@ -341,7 +341,7 @@ ms.locfileid: "33409936"
  Обеспечивает методы для получения управляемых методов или кадров в стеке потока.  
   
  [Интерфейс ICorDebugStaticFieldSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)  
- Представляет сведения отладочного символа для статического поля. **Этот параметр доступен только в .NET Native.**  
+ Представляет сведения отладочного символа для статического поля. **Доступно только в .NET Native.**  
   
  [Интерфейс1 ICorDebugStepper](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-interface.md)  
  Представляет предпринимаемый отладчиком шаг при выполнении кода, служащий идентификатором на промежутке между подачей команды и ее завершением, а также предоставляет возможность отмены шага.  
@@ -356,10 +356,10 @@ ms.locfileid: "33409936"
  Подкласс `ICorDebugHeapValue`, применяемый к строковым значениям.  
   
  [Интерфейс ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)  
- Предоставляет методы, которые могут использоваться для получения сведений об отладочных символах. **Этот параметр доступен только в .NET Native.**  
+ Предоставляет методы, которые могут использоваться для получения сведений об отладочных символах. **Доступно только в .NET Native.**  
   
  [Интерфейс ICorDebugSymbolProvider2](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)  
- Логически расширяет [ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md) интерфейс для получения дополнительных символов отладки. **Этот параметр доступен только в .NET Native.**  
+ Логически расширяет [ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md) интерфейс для извлечения дополнительных символов отладки. **Доступно только в .NET Native.**  
   
  [Интерфейс1 ICorDebugThread](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-interface.md)  
  Представляет поток в процессе. Время существования экземпляра `ICorDebugThread` равно времени существования потока, который он представляет.  
@@ -380,7 +380,7 @@ ms.locfileid: "33409936"
  Представляет тип, который может быть базовым или сложным (иными словами, пользовательским). Если тип универсален, интерфейс `ICorDebugType` представляет универсальный тип с экземплярами.  
   
  [Интерфейс ICorDebugType2](../../../../docs/framework/unmanaged-api/debugging/icordebugtype2-interface.md)  
- Расширяет [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) интерфейс для извлечения идентификатора типа для базового типа или сложного типа (определяемый пользователем).  
+ Расширяет [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) интерфейс для извлечения идентификатора типа базового типа или сложного типа (определяемый пользователем).  
   
  [Интерфейс1 ICorDebugTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-interface.md)  
  Реализует методы `ICorDebugEnum` и выполняет перечисление массивов `ICorDebugType`.  
@@ -388,19 +388,19 @@ ms.locfileid: "33409936"
  [Интерфейс ICorDebugUnmanagedCallback](../../../../docs/framework/unmanaged-api/debugging/icordebugunmanagedcallback-interface.md)  
  Предоставляет уведомление о событиях машинного кода, которые не связаны непосредственно со средой CLR.  
   
- «ICorDebugValue»  
+ "ICorDebugValue"  
  Представляет значение для записи или чтения в отлаживаемом процессе.  
   
- «ICorDebugValue2»  
+ "ICorDebugValue2"  
  Расширяет интерфейс `ICorDebugValue` для предоставления поддержки интерфейса `ICorDebugType`.  
   
  [Интерфейс ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)  
- Расширяет интерфейсы «ICorDebugValue» и «ICorDebugValue2» для обеспечения поддержки массивов, размер которых превышает 2 ГБ.  
+ Расширяет интерфейс «ICorDebugValue» и «ICorDebugValue2» для обеспечения поддержки массивов, размер которых превышает 2 ГБ.  
   
- «ICorDebugValueBreakpoint»  
+ "ICorDebugValueBreakpoint"  
  Расширяет интерфейс `ICorDebugBreakpoint` для обеспечения доступа к указанным значениям.  
   
- «ICorDebugValueEnum»  
+ "ICorDebugValueEnum"  
  Реализует методы `ICorDebugEnum` и выполняет перечисление массивов `ICorDebugValue`.  
   
  [Интерфейс ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)  
@@ -410,10 +410,10 @@ ms.locfileid: "33409936"
  Предоставляет перечислитель для локальных переменных и аргументов в функции.  
   
  [Интерфейс ICorDebugVariableSymbol](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablesymbol-interface.md)  
- Извлекает сведения отладочного символа для статического поля. **Этот параметр доступен только в .NET Native.**  
+ Извлекает сведения отладочного символа для статического поля. **Доступно только в .NET Native.**  
   
  [Интерфейс ICorDebugVirtualUnwinder](../../../../docs/framework/unmanaged-api/debugging/icordebugvirtualunwinder-interface.md)  
- Предоставляет методы, помогающие очистить стек. **Этот параметр доступен только в .NET Native.**  
+ Предоставляет методы, помогающие очистить стек. **Доступно только в .NET Native.**  
   
  [Интерфейс ICorPublish](../../../../docs/framework/unmanaged-api/debugging/icorpublish-interface.md)  
  Служит универсальным интерфейсом для процессов публикации.  
@@ -432,6 +432,16 @@ ms.locfileid: "33409936"
   
  [Интерфейс ICorPublishProcessEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-interface.md)  
  Предоставляет методы, выполняющие перебор коллекции объектов `ICorPublishProcess`.  
+
+ [Интерфейс ISOSDacInterface](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md) предоставляет вспомогательные методы для доступа к данным из `SOS`.
+
+ [Интерфейс IXCLRDataMethodDefinition](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md) предоставляет методы для запроса на получение сведений об определении метода.
+ 
+ [Интерфейс IXCLRDataMethodInstance](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md) предоставляет методы для запроса на получение сведений о экземпляра метода.
+ 
+ [Интерфейс IXCLRDataModule](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md) предоставляет методы для запроса на получение сведений о загруженном модуле.
+ 
+ [Интерфейс IXCLRDataProcess](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md) предоставляет методы для запроса на получение сведений о процессе.
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Коклассы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  

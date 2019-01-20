@@ -2,12 +2,12 @@
 title: F#рекомендации по проектированию компонентов
 description: Дополнительные рекомендации для записи F# компоненты, предназначенный для использования другими вызывающими объектами.
 ms.date: 05/14/2018
-ms.openlocfilehash: bc8d4908912c4630f649ba30593d43a557278efa
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d72bfac1de5a57d5cce86f996f144af4bc181463
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145677"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415641"
 ---
 # <a name="f-component-design-guidelines"></a>F#рекомендации по проектированию компонентов
 
@@ -47,7 +47,7 @@ XML-документации в открытых API убедитесь, что 
 type Point =
 
     /// Computes the distance between this point and another
-    member DistanceTo : otherPoint:Point -> float
+    member DistanceTo: otherPoint:Point -> float
 ```
 
 С помощью комментариев XML краткая форма (`/// comment`), или стандартные XML-комментариев (`///<summary>comment</summary>`).
@@ -84,7 +84,7 @@ type Point =
 | Параметры | camelCase | Существительное |  Имя типа, преобразование, диапазон | |
 | Разрешить значения (внутренний) | camelCase или PascalCase | Существительное-глагол |  getValue myTable |
 | Разрешить значения (внешний) | camelCase или PascalCase | Существительное глагол  | List.map Dates.Today | привязки let значения часто являются открытыми, при использовании традиционных функциональные шаблоны разработки. Тем не менее обычно используется PascalCase, когда идентификатор может использоваться в других языках .NET. |
-| Свойство  | PascalCase  | Существительное / прилагательными  | IsEndOfFile, BackColor  | Логические свойства обычно использование является и могут и должны быть выразил, как и в IsEndOfFile, не IsNotEndOfFile.
+| Свойство.  | PascalCase  | Существительное / прилагательными  | IsEndOfFile, BackColor  | Логические свойства обычно использование является и могут и должны быть выразил, как и в IsEndOfFile, не IsNotEndOfFile.
 
 #### <a name="avoid-abbreviations"></a>Избегать сокращений
 
@@ -191,16 +191,16 @@ type Counter() =
 
 ```fsharp
 type Serializer =
-    abstract Serialize<'T> : preserveRefEq: bool -> value: 'T -> string
-    abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
+    abstract Serialize<'T>: preserveRefEq: bool -> value: 'T -> string
+    abstract Deserialize<'T>: preserveRefEq: bool -> pickle: string -> 'T
 ```
 
 В ссылке к:
 
 ```fsharp
 type Serializer<'T> = {
-    Serialize : bool -> 'T -> string
-    Deserialize : bool -> string -> 'T
+    Serialize: bool -> 'T -> string
+    Deserialize: bool -> string -> 'T
 }
 ```
 
@@ -243,13 +243,13 @@ module CollectionType =
 Иногда классы используются для моделирования математической конструкции, такие как векторы. Если домен моделируемой содержит хорошо известных операторов, определяя их в качестве членов, встроенные в класс полезен.
 
 ```fsharp
-type Vector(x:float) =
+type Vector(x: float) =
 
     member v.X = x
 
-    static member (*) (vector:Vector, scalar:float) = Vector(vector.X * scalar)
+    static member (*) (vector: Vector, scalar: float) = Vector(vector.X * scalar)
 
-    static member (+) (vector1:Vector, vector2:Vector) = Vector(vector1.X + vector2.X)
+    static member (+) (vector1: Vector, vector2: Vector) = Vector(vector1.X + vector2.X)
 
 let v = Vector(5.0)
 
@@ -306,7 +306,7 @@ type Logger() =
 Вот хороший пример использования в возвращаемом типе кортежа:
 
 ```fsharp
-val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
+val divrem: BigInteger -> BigInteger -> BigInteger * BigInteger
 ```
 
 Для возврата типов, содержащих множество компонентов или там, где компоненты связаны с одной идентифицировать сущности, рассмотрите возможность использования именованного типа вместо кортежа.
@@ -317,9 +317,9 @@ val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
 
 ```fsharp
 type SomeType =
-    member this.Compute(x:int) : int =
+    member this.Compute(x:int): int =
         ...
-    member this.AsyncCompute(x:int) : Async<int> =
+    member this.AsyncCompute(x:int): Async<int> =
         ...
 
 type System.ServiceModel.Channels.IInputChannel with
@@ -508,8 +508,8 @@ F#:
 ```fsharp
 [<NoEquality; NoComparison>]
 type MyRecord =
-    { FirstThing : int
-        SecondThing : string }
+    { FirstThing: int
+        SecondThing: string }
 ```
 
 C#:
@@ -574,7 +574,7 @@ type MyBadType() =
     [<CLIEvent>]
     member this.MyEvent = myEv.Publish
 
-type MyEventArgs(x:int) =
+type MyEventArgs(x: int) =
     inherit System.EventArgs()
     member this.X = x
 
@@ -596,7 +596,7 @@ type MyGoodType() =
 /// A type in a component designed for use from other .NET languages
 type MyType() =
 
-    let compute (x: int) : Async<int> = async { ... }
+    let compute (x: int): Async<int> = async { ... }
 
     member this.ComputeAsync(x) = compute x |> Async.StartAsTask
 ```
@@ -606,7 +606,7 @@ type MyType() =
 ```fsharp
 /// A type in a component designed for use from other .NET languages
 type MyType() =
-    let compute(x:int) : Async<int> = async { ... }
+    let compute(x: int): Async<int> = async { ... }
     member this.ComputeAsTask(x, cancellationToken) = Async.StartAsTask(compute x, cancellationToken)
 ```
 
@@ -617,14 +617,14 @@ type MyType() =
 Вместо этого:
 
 ```fsharp
-member this.Transform(f:int->int) =
+member this.Transform(f: int->int) =
     ...
 ```
 
 Выполните следующее.
 
 ```fsharp
-member this.Transform(f:Func<int,int>) =
+member this.Transform(f: Func<int,int>) =
     ...
 ```
 
@@ -639,18 +639,18 @@ F# Тип функции отображается как `class FSharpFunc<T,U>`
 ```fsharp
 member this.ReturnOption() = Some 3
 
-member this.ReturnBoolAndOut(outVal : byref<int>) =
+member this.ReturnBoolAndOut(outVal: byref<int>) =
     outVal <- 3
     true
 
-member this.ParamOption(x : int, y : int option) =
+member this.ParamOption(x: int, y: int option) =
     match y with
     | Some y2 -> x + y2
     | None -> x
 
-member this.ParamOverload(x : int) = x
+member this.ParamOverload(x: int) = x
 
-member this.ParamOverload(x : int, y : int) = x + y
+member this.ParamOverload(x: int, y: int) = x + y
 ```
 
 #### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>Использовать интерфейс коллекции .NET типы IEnumerable\<T\> и IDictionary\<ключ, значение\> для параметров и возвращаемых значений
@@ -660,14 +660,14 @@ member this.ParamOverload(x : int, y : int) = x + y
 Вместо F# перечислены:
 
 ```fsharp
-member this.PrintNames(names : string list) =
+member this.PrintNames(names: string list) =
     ...
 ```
 
 Используйте F# последовательности:
 
 ```fsharp
-member this.PrintNames(names : seq<string>) =
+member this.PrintNames(names: seq<string>) =
     ...
 ```
 
@@ -678,13 +678,13 @@ member this.PrintNames(names : seq<string>) =
 ```fsharp
 ✔ member this.NoArguments() = 3
 
-✔ member this.ReturnVoid(x : int) = ()
+✔ member this.ReturnVoid(x: int) = ()
 ```
 
 Это неправильный:
 
 ```fsharp
-member this.WrongUnit( x:unit, z:int) = ((), ())
+member this.WrongUnit( x: unit, z: int) = ((), ())
 ```
 
 #### <a name="check-for-null-values-on-vanilla-net-api-boundaries"></a>Проверять наличие значений null по границам стандартный API для .NET

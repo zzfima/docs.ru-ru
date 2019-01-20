@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 173ba2c2-ab34-49ae-b6a8-e5c49882bf05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6c7415920d34fc231bf82dd00199c7e01eec7a73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 23aa619d666f2e0b9eb67ab4cf8d4f92761865d3
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408116"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415329"
 ---
 # <a name="debugging-structures"></a>Структуры отладки
 В этом разделе описаны неуправляемые структуры, которые использует API отладки.  
@@ -35,7 +35,7 @@ ms.locfileid: "33408116"
  Представляет сведения о кадре стека из объекта исключения.  
   
  [Структура CorDebugExceptionObjectStackFrame](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionobjectstackframe-structure.md)  
- Maps [!INCLUDE[wrt](../../../../includes/wrt-md.md)] с соответствующим [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) объекта.  
+ Maps [!INCLUDE[wrt](../../../../includes/wrt-md.md)] Соответствующим [ICorDebugType](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-interface.md) объекта.  
   
  COR_ACTIVE_FUNCTION  
  Содержит сведения о функциях, которые в данный момент активны в кадрах потока.  
@@ -77,7 +77,14 @@ ms.locfileid: "33408116"
  Содержит стандартный номер версии среды CLR, состоящий из четырех частей.  
   
  [Структура StackTrace_SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)  
- Обеспечивает простой контекст, который может использоваться вместо полной структуры `CONTEXT`.  
+ Обеспечивает простой контекст, который может использоваться вместо полной структуры `CONTEXT`.
+
+ [Структура CLRDATA_ADDRESS_RANGE](../../../../docs/framework/unmanaged-api/debugging/clrdata-address-range-structure.md) определяет диапазон адресов.
+ 
+ [Структура CLRDATA_IL_ADDRESS_MAP](../../../../docs/framework/unmanaged-api/debugging/clrdata-il-address-map-structure.md) определяет инструкцию IL для сопоставления адресов
+ 
+ [Структура DacpGetModuleAddress](../../../../docs/framework/unmanaged-api/debugging/dacpgetmoduleaddress-structure.md) определяет контейнер для запроса адрес модуля.
+
   
 ## <a name="related-sections"></a>Связанные разделы  
  [Коклассы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  

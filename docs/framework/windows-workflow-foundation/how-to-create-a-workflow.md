@@ -1,28 +1,28 @@
 ---
-title: 'How to: Create a Workflow'
+title: Как выполнить создать рабочий процесс
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
-ms.openlocfilehash: adaa322d4129f56abcad4fd848204ee373e907bd
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e54dcc240a12100650bacbc355895a043c68c117
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502488"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415667"
 ---
-# <a name="how-to-create-a-workflow"></a>How to: Create a Workflow
-Рабочие процессы могут создаваться как из встроенных, так и из пользовательских действий. В этом разделе, в этом разделе рассматривается последовательность создания рабочего процесса, который использует как встроенные действия, например <xref:System.Activities.Statements.Flowchart> действия и пользовательские действия из предыдущего [как: Создание действия](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) раздела. Рабочий процесс моделирует игру по угадыванию числа. Для завершения учебника требуется только один из подразделов в этом разделе. Необходимо выбрать стиль, который вас интересует, и выполнить шаг. Однако при необходимости можно завершить все подразделы.  
+# <a name="how-to-create-a-workflow"></a>Как выполнить создать рабочий процесс
+Рабочие процессы могут создаваться как из встроенных, так и из пользовательских действий. В подразделах этого раздела шаг по созданию рабочего процесса, который использует как встроенные действия, например <xref:System.Activities.Statements.Flowchart> действия и пользовательские действия из предыдущего [как: Создание действия](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) раздела. Рабочий процесс моделирует игру по угадыванию числа. Для завершения учебника требуется только один из подразделов в этом разделе. Необходимо выбрать стиль, который вас интересует, и выполнить шаг. Однако при необходимости можно завершить все подразделы.  
   
 > [!NOTE]
 >  Каждый раздел в учебнике «Приступая к работе» построен на основе предыдущих разделов. Для изучения этого раздела, необходимо сначала выполнить [как: Создание действия](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md).  
   
 > [!NOTE]
->  Чтобы скачать завершенную версию учебника, см. в разделе [Windows Workflow Foundation (WF45) - Приступая к работе](https://go.microsoft.com/fwlink/?LinkID=248976).  
+>  Чтобы скачать завершенную версию учебника, см. раздел [Windows Workflow Foundation (WF45), учебник "Приступая к работе"](https://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Создание последовательного рабочего процесса](../../../docs/framework/windows-workflow-foundation/how-to-create-a-sequential-workflow.md)  
  Описывает, как создать последовательный рабочий процесс с помощью действия <xref:System.Activities.Statements.Sequence>.  
   
- [Практическое руководство. Создание рабочего процесса c блок-схемой](../../../docs/framework/windows-workflow-foundation/how-to-create-a-flowchart-workflow.md)  
+ [Практическое руководство. Создать рабочий процесс блок-схема](../../../docs/framework/windows-workflow-foundation/how-to-create-a-flowchart-workflow.md)  
  Описывает, как создать рабочий процесс блок-схемы с помощью действия <xref:System.Activities.Statements.Flowchart>.  
   
  [Практическое руководство. Создание рабочего процесса конечного автомата](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  

@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: 3af9f584-f1b4-4154-aeaa-8fce7c9f8b50
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b81e7c2ffabdee78af34d00c48fb29c7525dea08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5edd6dfb3dac05ce4614c43949f2ec4c19b5f742
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410472"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415953"
 ---
 # <a name="debugging-enumerations"></a>Перечисления отладки
 В этом разделе описываются неуправляемые перечисления, которые использует API отладки.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Перечисление CLR_DEBUGGING_PROCESS_FLAGS](../../../../docs/framework/unmanaged-api/debugging/clr-debugging-process-flags-enumeration.md)  
- Предоставляет значения, которые используются в [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) метод.  
+ Предоставляет значения, используемые [ICLRDebugging::OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md) метод.  
   
  [Перечисление CLRDataEnumMemoryFlags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)  
  Указывает области памяти вызов [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) должен включать метод.  
@@ -44,7 +44,7 @@ ms.locfileid: "33410472"
  Предоставляет дополнительные параметры отладки, которые могут использоваться в вызове [ICorDebug::CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md) метод.  
   
  [Перечисление CorDebugDebugEventKind](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)  
- Указывает тип события, сведения о которых декодирует [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) метод.  
+ Указывает тип события, сведения о котором декодируется [DecodeEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-decodeevent-method.md) метод.  
   
  [Перечисление CorDebugDecodeEventFlagsWindows](../../../../docs/framework/unmanaged-api/debugging/cordebugdecodeeventflagswindows-enumeration.md)  
  Предоставляет дополнительную информацию о событиях отладки на платформе Windows.  
@@ -83,7 +83,7 @@ ms.locfileid: "33410472"
  Содержит значения, которые влияют на поведение управляемого JIT-компилятора.  
   
  [Перечисление CorDebugJITCompilerFlagsDeprecated](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflagsdeprecated-enumeration.md)  
- Является устаревшей. Используйте `CORDEBUG_JIT_DEFAULT` членом [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) перечисления вместо него.  
+ Является устаревшей. Используйте `CORDEBUG_JIT_DEFAULT` членом [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) перечисления вместо этого.  
   
  CorDebugMappingResult  
  Предоставляет сведения о том, как было получено значение указателя инструкций.  
@@ -95,7 +95,7 @@ ms.locfileid: "33410472"
  Предоставляет значение, который определяет, загружает ли отладчик образы в машинном коде (NGen) из кэша образов в машинном коде.  
   
  [Перечисление CorDebugPlatform](../../../../docs/framework/unmanaged-api/debugging/cordebugplatform-enumeration.md)  
- Предоставляет значения целевой платформы, которые используются в [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) метод.  
+ Предоставляет значения целевой платформы, используемые [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) метод.  
   
  [Перечисление CorDebugRecordFormat](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)  
  Описывает формат данных в массиве байтов, который содержит информацию о событии отладки собственного исключения.  
@@ -137,8 +137,10 @@ ms.locfileid: "33410472"
  Указывает тип собственного расположение переменной.  
   
  [Перечисление WriteableMetadataUpdateMode](../../../../docs/framework/unmanaged-api/debugging/writeablemetadataupdatemode-enumeration.md)  
- Предоставляет значения, указывающие, будут ли видны в отладчике обновления копии метаданных в памяти.  
-  
+ Предоставляет значения, указывающие, будут ли видны в отладчике обновления копии метаданных в памяти. 
+
+ [Перечисление ClrDataSourceType](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md) предоставляет значения, которые используются в структуре CLRDATA_IL_ADDRESS_MAP.
+
 ## <a name="related-sections"></a>Связанные разделы  
  [Коклассы отладки](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
   

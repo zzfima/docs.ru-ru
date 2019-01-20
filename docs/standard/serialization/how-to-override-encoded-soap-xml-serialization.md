@@ -1,23 +1,22 @@
 ---
-title: Практическое руководство. Переопределение сериализации XML с кодировкой SOAP
+title: Как выполнить Переопределение сериализации XML с кодировкой SOAP
 ms.date: 03/30/2017
 helpviewer_keywords:
 - overriding XML serialization
 - SOAP, overriding encoded XML serialization
 ms.assetid: d0791df8-04e3-46b4-a6be-fe0ed09267e8
-ms.openlocfilehash: 721a27b4bba239f0d22a24e0e159ef36b742d1b7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7deec91f605555cff94fa882c887a4adf97db58a
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003780"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415069"
 ---
-# <a name="how-to-override-encoded-soap-xml-serialization"></a>Практическое руководство. Переопределение сериализации XML с кодировкой SOAP
-[Пример кода](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
+# <a name="how-to-override-encoded-soap-xml-serialization"></a>Как выполнить Переопределение сериализации XML с кодировкой SOAP
   
- Процесс переопределения сериализации XML объектов как сообщений SOAP аналогичен процессу переопределения стандартной сериализации XML. Сведения о том, как переопределить стандартную сериализацию XML, см. в разделе [Практическое руководство. Указание имени альтернативного элемента для потока XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
+ Процесс переопределения сериализации XML объектов как сообщений SOAP аналогичен процессу переопределения стандартной сериализации XML. Дополнительные сведения о переопределении стандартной XML-сериализации см. в разделе [как: Указание имени альтернативного элемента для XML Stream](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
   
-### <a name="to-override-serialization-of-objects-as-soap-messages"></a>Переопределение сериализации объектов как сообщений SOAP  
+## <a name="to-override-serialization-of-objects-as-soap-messages"></a>Переопределение сериализации объектов как сообщений SOAP  
   
 1.  Создайте экземпляр класса <xref:System.Xml.Serialization.SoapAttributeOverrides>.  
   
@@ -285,4 +284,4 @@ public class Run
 - [Сериализация XML с использованием XML-веб-служб](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
 - [Практическое руководство. Сериализация объекта](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
 - [Практическое руководство. Десериализация объекта](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
-- [Практическое руководство. Сериализация объекта как потока XML с кодировкой SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [Практическое руководство. Сериализация объекта как Stream XML с кодировкой SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

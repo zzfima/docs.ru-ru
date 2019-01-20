@@ -2,12 +2,12 @@
 title: Перенос из .NET на платформу WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: cca303cf9b906fd395e594111fae808ae4ab6435
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 1ebab76d63ae3328b158f1c03a61d2e2b3cbd8f9
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245682"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415979"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Перенос из .NET на платформу WCF
 В этой статье описан процесс переноса приложения с переходом от использования удаленного взаимодействия .NET к использованию Windows Communication Foundation (WCF). В ней сравниваются сходные принципы работы с этими продуктами и описывается выполнение некоторых наиболее распространенных сценариев удаленного взаимодействия в WCF.  
@@ -101,7 +101,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
  Существуют различные способы настройки и размещения служб WCF. Это лишь один пример размещения, называемый «резидентным размещением». Дополнительные сведения см. в следующих разделах:  
   
--   [Практическое руководство: Определите контракт службы](how-to-define-a-wcf-service-contract.md)  
+-   [Практическое руководство. Определите контракт службы](how-to-define-a-wcf-service-contract.md)  
   
 -   [Настройка служб с использованием файлов конфигурации](configuring-services-using-configuration-files.md)  
   
@@ -144,7 +144,7 @@ Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received
   
 -   [Программирование клиентов на уровне канала](./extending/client-channel-level-programming.md)  
   
--   [Практическое руководство: Добавление, обновление или удаление ссылки на службу](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
+-   [Практическое руководство. Добавление, обновление или удаление ссылки на службу](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
 ### <a name="serialization-usage"></a>Использование сериализации  
  Удаленное взаимодействие .NET и WCF используют сериализацию для передачи объектов между клиентом и сервером, но они отличаются в следующих важных аспектах.  
@@ -307,9 +307,9 @@ catch (FaultException<CustomerServiceFault> fault)
   
  После переноса приложения удаленного взаимодействия на платформу WCF необходимо удалить зависимости от решения удаленного взаимодействия .NET. Это позволит удалить какие-либо уязвимости удаленного взаимодействия из приложения. Вот эти шаги.  
   
--   **Прекратите использование MarshalByRefObject.** Тип MarshalByRefObject существует только для решения удаленного взаимодействия и не используется в WCF. Все типы приложений с вложенным классом MarshalByRefObject должны быть удалены или изменены. Тип MarshalByRefObject существует только для решения удаленного взаимодействия и не используется в WCF. Все типы приложений с вложенным классом MarshalByRefObject должны быть удалены или изменены.  
+-   **Прекратите использование MarshalByRefObject.** Тип MarshalByRefObject существует только для решения удаленного взаимодействия и не используется в WCF. Все типы приложений с вложенным классом MarshalByRefObject должны быть удалены или изменены.  
   
--   **Прекратите использование [Serializable] и ISerializable.** Атрибут [Serializable] и интерфейс ISerializable изначально были разработаны для сериализации типов в доверенных средах, и они используются при удаленном взаимодействии. При сериализации WCF используются типы с атрибутом [DataContract] и [DataMember]. Типы данных, используемых приложением, следует изменить таким образом, чтобы использовать [DataContract] и отказаться от использования ISerializable или [Serializable]. Атрибут [Serializable] и интерфейс ISerializable изначально были разработаны для сериализации типов в доверенных средах, и они используются при удаленном взаимодействии. При сериализации WCF используются типы с атрибутом [DataContract] и [DataMember]. Типы данных, используемых приложением, следует изменить таким образом, чтобы использовать [DataContract] и отказаться от использования ISerializable или [Serializable].  
+-   **Прекратите использование [Serializable] и ISerializable.** Атрибут [Serializable] и интерфейс ISerializable изначально были разработаны для сериализации типов в доверенных средах, и они используются при удаленном взаимодействии. При сериализации WCF используются типы с атрибутом [DataContract] и [DataMember]. Типы данных, используемых приложением, следует изменить таким образом, чтобы использовать [DataContract] и отказаться от использования ISerializable или [Serializable].  
   
 ### <a name="migration-scenarios"></a>Сценарии миграции  
  Теперь давайте рассмотрим выполнение следующих распространенных сценариев удаленного взаимодействия в WCF.  
