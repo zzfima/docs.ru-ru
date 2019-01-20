@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 12/03/2018
 ms.custom: seodec18
-ms.openlocfilehash: bba4a76364f2951cabc3dde9866019459e9b3f06
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: bb520d852462b0bc12df46fd178d09da36b7ccfe
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53144719"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415693"
 ---
 # <a name="net-core-application-deployment"></a>Развертывание приложений .NET Core
 
@@ -94,12 +94,7 @@ ms.locfileid: "53144719"
 
 ## <a name="step-by-step-examples"></a>Примеры с пошаговыми инструкциями
 
-Пошаговые примеры развертывания приложений .NET Core с помощью средств командной строки см. в [этой статье](deploy-with-cli.md). Пошаговые примеры развертывания приложений .NET Core с помощью Visual Studio см. в [этой статье](deploy-with-vs.md). Каждая из статей содержит примеры следующих развертываний:
-
-- развертывание, зависящее от платформы;
-- развертывание, зависящее от платформы, с зависимостями сторонних разработчиков;
-- автономное развертывание;
-- Автономное развертывание с зависимостями сторонних разработчиков
+Пошаговые примеры развертывания приложений .NET Core с помощью средств командной строки см. в [этой статье](deploy-with-cli.md). Пошаговые примеры развертывания приложений .NET Core с помощью Visual Studio см. в [этой статье](deploy-with-vs.md). 
 
 ## <a name="see-also"></a>См. также
 
