@@ -4,16 +4,16 @@ description: Научитесь анализировать внешние зав
 author: cartermp
 ms.date: 12/04/2018
 ms.custom: seodec18
-ms.openlocfilehash: dce8e6cd4986b15cf926154b378964db4beef398
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 6451099bfc7f3afa5c9c1585862403a0a9fb2186
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170331"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415225"
 ---
 # <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>Анализ зависимостей для переноса кода в .NET Core
 
-Для переноса кода в .NET Core или .NET Standard требуется понимать свои зависимости. Внешние зависимости — это несобираемые вами [пакеты NuGet](#analyze-referenced-nuget-packages-on-your-project) или [библиотеки DLL](#analyze-dependencies-that-arent-nuget-packages), на которые вы ссылаетесь в своем проекте. Оцените каждую зависимость и составьте план на непредвиденные случаи в отношении тех зависимостей, которые не совместимы с .NET Core. В этой статье показано, как определить совместимость зависимости с .NET Core.
+Для переноса кода в .NET Core или .NET Standard требуется понимать свои зависимости. Внешние зависимости — это несобираемые вами [пакеты NuGet](#analyze-referenced-nuget-packages-in-your-projects) или [библиотеки DLL](#analyze-dependencies-that-arent-nuget-packages), на которые вы ссылаетесь в своем проекте. Оцените каждую зависимость и составьте план на непредвиденные случаи в отношении тех зависимостей, которые не совместимы с .NET Core. В этой статье показано, как определить совместимость зависимости с .NET Core.
 
 ## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>Анализ упоминаемых посредством ссылки пакетов NuGet в вашем проекте
 
@@ -77,7 +77,7 @@ portable-net45-win8-wpa8-wpa81
 
 Начиная с .NET Standard 2.0, доступен режим совместимости .NET Framework. Этот режим совместимости позволяет проектам .NET Standard и .NET Core ссылаться на библиотеки .NET Framework. Создание ссылок на библиотеки .NET Framework не работает для всех проектов, например, если библиотека использует API WPF, то делает возможным разблокировку множества сценариев переноса.
 
-Ссылаясь в своем проекте на пакеты NuGet, предназначенные для .NET Framework, например [Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections), вы получаете предупреждение об откате пакета ([NU1701](/nuget/reference/errors-and-warnings#nu1701)), как в следующем примере:
+Ссылаясь в своем проекте на пакеты NuGet, предназначенные для .NET Framework, например [Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections), вы получаете предупреждение об откате пакета ([NU1701](/nuget/reference/errors-and-warnings/nu1701)), как в следующем примере:
 
 `NU1701: Package ‘Huitian.PowerCollections 1.0.0’ was restored using ‘.NETFramework,Version=v4.6.1’ instead of the project target framework ‘.NETStandard,Version=v2.0’. This package may not be fully compatible with your project.`
 
@@ -91,7 +91,7 @@ portable-net45-win8-wpa8-wpa81
 </ItemGroup>
 ```
 
-Дополнительные сведения о том, как отключить предупреждения компилятора в Visual Studio, см. в разделе [Подавление предупреждений для пакетов NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages).
+Дополнительные сведения о том, как отключить предупреждения компилятора в Visual Studio, см. в разделе [Подавление предупреждений для пакетов NuGet](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages).
 
 ### <a name="port-your-packages-to-packagereference"></a>Перенос собственных пакетов в `PackageReference`
 

@@ -1,15 +1,15 @@
 ---
 title: Использование ML.NET для анализа тональности методом двоичной классификации
 description: На примере двоичной классификации с использованием ML.NET вы сможете узнать, как использовать прогнозирование тональности для выбора соответствующих действий.
-ms.date: 12/20/2018
+ms.date: 01/15/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: c6ef4da7f429b92591c90daa3fb06f367d8a578a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: bf4e5f00371cba1e6546903a1d27e833b0e57271
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030169"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362903"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>Учебник. Использование ML.NET для анализа тональности методом двоичной классификации
 
@@ -122,7 +122,7 @@ ms.locfileid: "54030169"
 * `_trainDataPath` содержит путь к набору данных, используемому для обучения модели;
 * `_testDataPath` содержит путь к набору данных, используемому для оценки модели;
 * `_modelPath` содержит путь, по которому сохраняется обученная модель.
-* `_textLoader` представляет собой <xref:Microsoft.ML.Runtime.Data.TextLoader>, используемый для загрузки и преобразования наборов данных.
+* `_textLoader` представляет собой <xref:Microsoft.ML.Data.TextLoader>, используемый для загрузки и преобразования наборов данных.
 
 Добавьте следующий код в строку прямо перед методом `Main`, чтобы указать эти пути и переменную `_textLoader`:
 
@@ -152,10 +152,10 @@ ms.locfileid: "54030169"
 
 [!code-csharp[CreateMLContext](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#3 "Create the ML Context")]
 
-Затем, чтобы настроить загрузку данных, инициализируйте глобальную переменную `_textLoader` для повторного использования.  Обратите внимание, что вы используете `TextReader`. При создании `TextLoader` с использованием `TextReader` вы передаете необходимый контекст и класс <xref:Microsoft.ML.Runtime.Data.TextLoader.Arguments>, который включает настройку.
+Затем, чтобы настроить загрузку данных, инициализируйте глобальную переменную `_textLoader` для повторного использования.  Обратите внимание, что вы используете `TextReader`. При создании `TextLoader` с использованием `TextReader` вы передаете необходимый контекст и класс <xref:Microsoft.ML.Data.TextLoader.Arguments>, который включает настройку.
 
- Укажите схему данных, передав в загрузчик массив объектов <xref:Microsoft.ML.Runtime.Data.TextLoader.Column>, содержащий имена всех столбцов и их типы. Вы определили схему данных ранее при создании класса `SentimentData`. Для нашей схемы первый столбец (метка) — это <xref:System.Boolean> (прогноз), а второй столбец (SentimentText) — это функция текстового или строкового типа, используемая для прогнозирования тональности.
-Класс `TextReader` возвращает полностью инициализированный <xref:Microsoft.ML.Runtime.Data.TextLoader>.  
+ Укажите схему данных, передав в загрузчик массив объектов <xref:Microsoft.ML.Data.TextLoader.Column>, содержащий имена всех столбцов и их типы. Вы определили схему данных ранее при создании класса `SentimentData`. Для нашей схемы первый столбец (метка) — это <xref:System.Boolean> (прогноз), а второй столбец (SentimentText) — это функция текстового или строкового типа, используемая для прогнозирования тональности.
+Класс `TextReader` возвращает полностью инициализированный <xref:Microsoft.ML.Data.TextLoader>.  
 
 Чтобы инициализировать глобальную переменную `_textLoader` и повторно использовать ее для необходимых наборов данных, добавьте следующий код после инициализации `mlContext`:
 
@@ -186,7 +186,7 @@ ms.locfileid: "54030169"
 
 ## <a name="load-the-data"></a>Загрузка данных
 
-Вы загрузите данные с использованием глобальной переменной `_textLoader` с параметром `dataPath`. В результате возвратится <xref:Microsoft.ML.Runtime.Data.IDataView>. Точно так же как входные и выходные данные `Transforms`, `DataView` является основным типом конвейера данных, сравнимым с `IEnumerable` для `LINQ`.
+Вы загрузите данные с использованием глобальной переменной `_textLoader` с параметром `dataPath`. В результате возвратится <xref:Microsoft.ML.Data.IDataView>. Точно так же как входные и выходные данные `Transforms`, `DataView` является основным типом конвейера данных, сравнимым с `IEnumerable` для `LINQ`.
 
 В ML.NET данные аналогичны представлению SQL. Они схематизированы, неоднородны, и к ним применено отложенное вычисление. Объект является первой частью конвейера. Он загружает данные. Для этого руководства он загружает набор данных с комментариями и соответствующей токсичной или нетоксичной тональностью. Это позволяет создать и обучить модель.
 
@@ -200,7 +200,7 @@ ms.locfileid: "54030169"
 
 Конвейеры преобразования ML.NET создают пользовательский набор преобразований, которые применяются к данным перед началом обучения или проверки. Основной целью преобразования является [присвоение признаков](../resources/glossary.md#feature-engineering). Алгоритмы Машинного обучения определяют данные с [присвоенными признаками](../resources/glossary.md#feature), поэтому следующим шагом является преобразование текстовых данных в формат, который распознают наши алгоритмы Машинного обучения. Этот формат — [числовой вектор](../resources/glossary.md#numerical-feature-vector).
 
-Далее вызовите `mlContext.Transforms.Text.FeaturizeText`, который преобразовывает текстовый столбец (`SentimentText`) в числовой вектор под названием `Features`, используемый в алгоритмах Машинного обучения. Это вызов программы-оболочки, возвращающий <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601>, который фактически будет конвейером. Присвойте ему имя `pipeline`, так как затем вы добавите обучающую систему в `EstimatorChain`. Добавьте следующую строку кода:
+Далее вызовите `mlContext.Transforms.Text.FeaturizeText`, который преобразовывает текстовый столбец (`SentimentText`) в числовой вектор под названием `Features`, используемый в алгоритмах Машинного обучения. Это вызов программы-оболочки, возвращающий <xref:Microsoft.ML.Data.EstimatorChain%601>, который фактически будет конвейером. Присвойте ему имя `pipeline`, так как затем вы добавите обучающую систему в `EstimatorChain`. Добавьте следующую строку кода:
 
 [!code-csharp[TextFeaturizingEstimator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizingEstimator")]
 
@@ -216,7 +216,7 @@ ms.locfileid: "54030169"
 
 ## <a name="train-the-model"></a>Обучение модели
 
-Обучения модели <xref:Microsoft.ML.Data.TransformerChain%601> выполняется по набору данных, который вы ранее скачали и преобразовали. После определения средства оценки вы обучите модель с помощью <xref:Microsoft.ML.Runtime.Data.EstimatorChain%601.Fit%2A>, предоставляя уже загруженные данные для обучения. В результате возвращается модель, необходимая для выполнения прогнозов. `pipeline.Fit()` обучает конвейер и возвращает `Transformer` на основе переданного типа `DataView`. Эксперимент не выполняется, пока этот процесс не закончится.
+Обучения модели <xref:Microsoft.ML.Data.TransformerChain%601> выполняется по набору данных, который вы ранее скачали и преобразовали. После определения средства оценки вы обучите модель с помощью <xref:Microsoft.ML.Data.EstimatorChain`1.Fit*>, предоставляя уже загруженные данные для обучения. В результате возвращается модель, необходимая для выполнения прогнозов. `pipeline.Fit()` обучает конвейер и возвращает `Transformer` на основе переданного типа `DataView`. Эксперимент не выполняется, пока этот процесс не закончится.
 
 Добавьте следующий код в метод `Train`:
 
@@ -268,7 +268,7 @@ public static void Evaluate(MLContext mlContext, ITransformer model)
 
 [!code-csharp[DisplayMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#15 "Display selected metrics")]
 
-Чтобы сохранить модель в ZIP-файл, для вызова метода `SaveModelAsFile` добавьте в качестве следующей строки в `TrainFinalModel` приведенный ниже код:
+Чтобы сохранить модель в ZIP-файл, для вызова метода `SaveModelAsFile` добавьте в качестве следующей строки в `Evaluate` приведенный ниже код:
 
 [!code-csharp[SaveModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#23 "Save the model")]
 
@@ -287,7 +287,7 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 
 * сохранение модели в качестве ZIP-файла.
 
-Далее создайте метод для сохранения модели, чтобы ее можно было использовать повторно, а также применять в других приложениях. `ITransformer` содержит метод <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.Runtime.IHostEnvironment,System.IO.Stream)>, который принимает глобальное поле `_modelPath`, и <xref:System.IO.Stream>. Чтобы сохранить модель в качестве ZIP-файла, мы создадим `FileStream` непосредственно перед вызовом метода `SaveTo`. В качестве следующей строки в методе `SaveModelAsFile` добавьте приведенный ниже код:
+Далее создайте метод для сохранения модели, чтобы ее можно было использовать повторно, а также применять в других приложениях. `ITransformer` содержит метод <xref:Microsoft.ML.Data.TransformerChain%601.SaveTo(Microsoft.ML.IHostEnvironment,System.IO.Stream)>, который принимает глобальное поле `_modelPath`, и <xref:System.IO.Stream>. Чтобы сохранить модель в качестве ZIP-файла, мы создадим `FileStream` непосредственно перед вызовом метода `SaveTo`. В качестве следующей строки в методе `SaveModelAsFile` добавьте приведенный ниже код:
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#24 "Add the SaveTo Method")]
 
@@ -319,16 +319,16 @@ private static void Predict(MLContext mlContext, ITransformer model)
 
 [!code-csharp[CallPredict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#16 "Call the Predict method")]
 
-Несмотря на то что `model` представляет собой `transformer`, который обрабатывает многочисленные строки данных, достаточно распространенным сценарием рабочей среды является прогнозирование на основе отдельных примеров. <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602> — это программа-оболочка, возвращаемая из метода `MakePredictionFunction`. Давайте добавим следующий код в качестве первой строки в методе `Predict` для создания PredictionFunction:
+Несмотря на то что `model` представляет собой `transformer`, который обрабатывает многочисленные строки данных, достаточно распространенным сценарием рабочей среды является прогнозирование на основе отдельных примеров. <xref:Microsoft.ML.PredictionEngine%602> — это программа-оболочка, возвращаемая из метода `CreatePredictionEngine`. Давайте добавим следующий код в качестве первой строки в методе `Predict` для создания `PredictionFunction`:
 
-[!code-csharp[MakePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
+[!code-csharp[CreatePredictionFunction](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#17 "Create the PredictionFunction")]
   
 Добавьте комментарий для проверки прогнозирования обученной модели в методе `Predict`, создав экземпляр `SentimentData`:
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for single prediction")]
 
 
- Это можно использовать для прогнозирования токсичной или нетоксичной тональности одного экземпляра данных комментария. Чтобы получить прогноз, примените <xref:Microsoft.ML.Runtime.Data.PredictionFunction%602.Predict(%600)> для данных. Обратите внимание, что входные данные имеют строковый формат, а модель выполняет присвоение признаков. Конвейер синхронизируется во время обучения и прогнозирования. Вам не нужно писать для прогнозирования отдельный код предварительной обработки и присвоения признаков. Кроме того, этот API выполняет как пакетное, так и разовое прогнозирование.
+ Это можно использовать для прогнозирования токсичной или нетоксичной тональности одного экземпляра данных комментария. Чтобы получить прогноз, примените <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> для данных. Обратите внимание, что входные данные имеют строковый формат, а модель выполняет присвоение признаков. Конвейер синхронизируется во время обучения и прогнозирования. Вам не нужно писать для прогнозирования отдельный код предварительной обработки и присвоения признаков. Кроме того, этот API выполняет как пакетное, так и разовое прогнозирование.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create a prediction of sentiment")]
 
@@ -368,7 +368,7 @@ public static void PredictWithModelLoadedFromFile(MLContext mlContext)
 
 [!code-csharp[LoadTheModel](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#27 "Load the model")]
 
-Теперь у вас есть готовая модель, и ее можно использовать для прогнозирования токсичной или нетоксичной тональности по данным комментариев с помощью метода <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Runtime.Data.IDataView)>. Чтобы получить прогноз, примените `Predict` для новых данных. Обратите внимание, что входные данные имеют строковый формат, а модель выполняет присвоение признаков. Конвейер синхронизируется во время обучения и прогнозирования. Вам не нужно писать для прогнозирования отдельный код предварительной обработки и присвоения признаков. Кроме того, этот API выполняет как пакетное, так и разовое прогнозирование. Добавьте в метод `PredictWithModelLoadedFromFile` приведенный ниже код для прогнозирования:
+Теперь у вас есть готовая модель, и ее можно использовать для прогнозирования токсичной или нетоксичной тональности по данным комментариев с помощью метода <xref:Microsoft.ML.Core.Data.ITransformer.Transform(Microsoft.ML.Data.IDataView)>. Чтобы получить прогноз, примените `Predict` для новых данных. Обратите внимание, что входные данные имеют строковый формат, а модель выполняет присвоение признаков. Конвейер синхронизируется во время обучения и прогнозирования. Вам не нужно писать для прогнозирования отдельный код предварительной обработки и присвоения признаков. Кроме того, этот API выполняет как пакетное, так и разовое прогнозирование. Добавьте в метод `PredictWithModelLoadedFromFile` приведенный ниже код для прогнозирования:
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#28 "Create predictions of sentiments")]
 
@@ -413,7 +413,7 @@ Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.529704
 
 The model is saved to: C:\Tutorial\SentimentAnalysis\bin\Debug\netcoreapp2.0\Data\Model.zip
 
-=============== Prediction Test of loaded model with a multiple samples ===============
+=============== Prediction Test of loaded model with a multiple sample ===============
 
 Sentiment: This is a very rude movie | Prediction: Toxic | Probability: 0.4585565
 Sentiment: He is the best, and the article should say that. | Prediction: Not Toxic | Probability: 0.9924279

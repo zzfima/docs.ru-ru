@@ -3,12 +3,12 @@ title: Определение важности признаков моделей
 description: Сведения об определении важности признаков моделей с помощью средства Permutation Feature Importance в ML.NET
 ms.date: 12/04/2018
 ms.custom: mvc,how-to
-ms.openlocfilehash: 4b93e085dbb99e7f6f5a0a839b863aad1c69c7ba
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: ebad89aaee1155d7c116b8536307756227dced31
+ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53156572"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54307114"
 ---
 # <a name="determine-the-feature-importance-of-models-with-permutation-feature-importance-in-mlnet"></a>Определение важности признаков моделей с помощью средства Permutation Feature Importance в ML.NET
 
@@ -33,6 +33,6 @@ for (int i = 0; i < featureNames.Length; i++)
   Console.WriteLine($"{featureNames[i]}\t{permutationMetrics[i].rSquared:G4}");
 ```
 
-Пример анализа важности признака модели с помощью PFI приведен на [сайте GitHub в репозитории dotnet/machinelearning](https://github.com/dotnet/machinelearning/blob/master/docs/samples/Microsoft.ML.Samples/Dynamic/PermutationFeatureImportance.cs).
+Пример анализа важности признака модели с помощью PFI приведен на [сайте GitHub в репозитории dotnet/machinelearning](https://github.com/dotnet/machinelearning/tree/master/docs/samples/Microsoft.ML.Samples/Dynamic/PermutationFeatureImportance).
 
 /* Необязательно случайные, это могут быть переставленные значения в наборе примеров.

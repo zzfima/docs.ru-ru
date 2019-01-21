@@ -1,13 +1,13 @@
 ---
 title: Скрипты dotnet-install
 description: Сведения о скриптах dotnet-install, которые служат для установки средств CLI .NET Core и общей среды выполнения.
-ms.date: 11/15/2018
-ms.openlocfilehash: 0f565fee3e4ff4bec65bd196f635e9e9601485c2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.date: 01/16/2019
+ms.openlocfilehash: 5b266d484aae482d79674660417a834f03d53e4c
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148334"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54362835"
 ---
 # <a name="dotnet-install-scripts-reference"></a>Справка по скриптам dotnet-install
 
@@ -73,7 +73,7 @@ Mac OS и Linux:
 
 * **`-Architecture <ARCHITECTURE>`**
 
-  Архитектура устанавливаемых двоичных файлов .NET Core. Допустимые значения: `auto`, `x64` и `x86`. Значение по умолчанию — `auto`, представляющее текущую используемую архитектуру ОС.
+  Архитектура устанавливаемых двоичных файлов .NET Core. Допустимые значения: `<auto>`, `amd64`, `x64`, `x86`, `arm64` и `arm`. Значение по умолчанию — `<auto>`, представляющее текущую используемую архитектуру ОС.
 
 * **`-SharedRuntime`**
 
