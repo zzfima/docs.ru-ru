@@ -4,13 +4,13 @@ description: Сведения о рекомендуемых методиках �
 author: BillWagner
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.technology: dotnet
-ms.openlocfilehash: e63f7043b2dfdbe367ed2cbfba13bc6985c1ead6
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.technology: dotnet-ebooks
+ms.openlocfilehash: cb96b56eb6ad76fc8809e46c86277a96fa7b85c8
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404178"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415875"
 ---
 # <a name="net-architecture-guidance"></a>Руководство по архитектуре .NET
 
@@ -30,6 +30,6 @@ ms.locfileid: "37404178"
 
 В этом руководстве приводятся общие сведения о разработке приложений на основе микрослужб и управлении ими с помощью контейнеров. В нем рассматриваются подходы к проектированию и реализации архитектуры с помощью .NET Core и контейнеров Docker.
 
-## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[Бессерверные приложения: архитектура, шаблоны и реализация в Azure](serverless-architecture/index.md)
+## <a name="serverless-apps-architecture-patterns-and-azure-implementationserverless-architectureindexmd"></a>[Бессерверные приложения. Архитектура, шаблоны и реализация в Azure](serverless-architecture/index.md)
 
 Это руководство по созданию бессерверных приложений с примерами в Azure. В нем рассматриваются различные архитектуры и подходы к проектированию, преимущества и проблемы бессерверной архитектуры, сценарии и варианты использования для бессерверных приложений.

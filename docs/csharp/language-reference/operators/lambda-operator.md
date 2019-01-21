@@ -8,18 +8,18 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: c193a91eaffe2e56a5df2afa8d66989981123a48
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8641757d9252c88cf30595cec06d27b964e4d95c
+ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238797"
+ms.lasthandoff: 01/19/2019
+ms.locfileid: "54415290"
 ---
 # <a name="gt-operator-c-reference"></a>Оператор =&gt; (справочник по C#)
 
 Оператор `=>` можно использовать в C# двумя способами:
 
-- Как [лямбда-оператор](#lamba-operator) в [лямбда-выражении](../../lambda-expressions.md) он разграничивает входные переменные из тела лямбда-выражения.
+- Как [лямбда-оператор](#lambda-operator) в [лямбда-выражении](../../lambda-expressions.md) он разграничивает входные переменные из тела лямбда-выражения.
  
 - В [определении тела выражения](#expression-body-definition) он разграничивает имя члена и реализацию члена. 
 
@@ -111,7 +111,7 @@ public override string ToString()
 ```
 Дополнительную информацию об определениях тела выражения см. в разделе [Элементы, воплощающие выражения](../../programming-guide/statements-expressions-operators/expression-bodied-members.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 - [Справочник по C#](../../../csharp/language-reference/index.md)   
 - [Руководство по программированию на C#](../../../csharp/programming-guide/index.md)   
