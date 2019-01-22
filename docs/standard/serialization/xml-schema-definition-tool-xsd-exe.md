@@ -2,12 +2,12 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: ebbbe763ecfc4aeac338d0eb88ee785a4f637456
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a7824f0f39820b186b654aa4369dc068134d6a0d
+ms.sourcegitcommit: 42522983167b52852e1a20c87d57a1f63215f9bd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54148608"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443659"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 Инструмент определения схемы XML (Xsd.exe) создает схему XML или классы CLR из файлов XDR, XML и XSD либо из классов в сборке среды выполнения.  
@@ -45,7 +45,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |Параметр|Описание:|  
 |------------|-----------------|  
 |**/c\[лассы\]**|Создает классы, соответствующие указанной схеме. Чтобы считать данные XML в объект, используйте метод <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType>.|  
-|**/d**[**ataset**]|Создает классы, которые являются производными класса <xref:System.Data.DataSet> и соответствуют указанной схеме. Чтобы считать данные XML в производный класс, используйте метод <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType>.|  
+|**/d[ataset]**|Создает классы, которые являются производными класса <xref:System.Data.DataSet> и соответствуют указанной схеме. Чтобы считать данные XML в производный класс, используйте метод <xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType>.|  
   
  Для файлов XSD также можно указать любой из следующих параметров.  
   
@@ -117,7 +117,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 ```  
  Для элемента `\<generateSchemas>` следует указать только один из следующих параметров.  
   
-|Элемент|Описание|  
+|Элемент|Описание:|  
 |-------------|-----------------|  
 |\<assembly>|Определяет сборку, из которой создается схема.|  
 |\<type>|Определяет тип, найденный в сборке, для которого создается схема.|  
