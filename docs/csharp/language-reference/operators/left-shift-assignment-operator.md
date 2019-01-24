@@ -1,5 +1,5 @@
 ---
-title: Оператор &lt;&lt;=. Справочник по C#
+title: Справочник по C#. Оператор &lt;&lt;=
 ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
@@ -8,38 +8,41 @@ helpviewer_keywords:
 - <<= operator (left-shift assignment) [C#]
 - left shift assignment operator (<<=) [C#]
 ms.assetid: 3bc99c78-1edb-4827-86fc-bce6c3048871
-ms.openlocfilehash: f49c6360d6fee3f6d612aee51446545f25cd7d18
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4513c4b78dea3e8102c72a43249b4a44ffa2421d
+ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239177"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54333256"
 ---
-# <a name="ltlt-operator-c-reference"></a><span data-ttu-id="b82eb-102">Оператор &lt;&lt;= (справочник по C#)</span><span class="sxs-lookup"><span data-stu-id="b82eb-102">&lt;&lt;= Operator (C# Reference)</span></span>
-<span data-ttu-id="b82eb-103">Оператор присваивания сдвига влево.</span><span class="sxs-lookup"><span data-stu-id="b82eb-103">The left-shift assignment operator.</span></span>  
-  
-## <a name="remarks"></a><span data-ttu-id="b82eb-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="b82eb-104">Remarks</span></span>  
- <span data-ttu-id="b82eb-105">Выражение в формате</span><span class="sxs-lookup"><span data-stu-id="b82eb-105">An expression of the form</span></span>  
-  
-```csharp  
-x <<= y  
-```  
-  
- <span data-ttu-id="b82eb-106">вычисляется как</span><span class="sxs-lookup"><span data-stu-id="b82eb-106">is evaluated as</span></span>  
-  
-```csharp  
-x = x << y  
-```  
-  
- <span data-ttu-id="b82eb-107">за исключением того, что `x` вычисляется только один раз.</span><span class="sxs-lookup"><span data-stu-id="b82eb-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="b82eb-108">[Оператор <<](../../../csharp/language-reference/operators/left-shift-operator.md) сдвигает `x` влево на число битов, заданное в `y`.</span><span class="sxs-lookup"><span data-stu-id="b82eb-108">The [<< operator](../../../csharp/language-reference/operators/left-shift-operator.md) shifts `x` left by the number of bits specified by `y`.</span></span>  
-  
- <span data-ttu-id="b82eb-109">Оператор `<<=` нельзя перегружать напрямую, однако пользовательские типы могут перегружать [оператор <<](../../../csharp/language-reference/operators/left-shift-operator.md) (см. [оператор](../../../csharp/language-reference/keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="b82eb-109">The `<<=` operator cannot be overloaded directly, but user-defined types can overload the [<< operator](../../../csharp/language-reference/operators/left-shift-operator.md) (see [operator](../../../csharp/language-reference/keywords/operator.md)).</span></span>  
-  
-## <a name="example"></a><span data-ttu-id="b82eb-110">Пример</span><span class="sxs-lookup"><span data-stu-id="b82eb-110">Example</span></span>  
- [!code-csharp[csRefOperators#12](../../../csharp/language-reference/operators/codesnippet/CSharp/left-shift-assignment-operator_1.cs)]  
-  
-## <a name="see-also"></a><span data-ttu-id="b82eb-111">См. также</span><span class="sxs-lookup"><span data-stu-id="b82eb-111">See Also</span></span>
+# <a name="ltlt-operator-c-reference"></a><span data-ttu-id="c4e86-102">Справочник по C#. Оператор &lt;&lt;=</span><span class="sxs-lookup"><span data-stu-id="c4e86-102">&lt;&lt;= operator (C# Reference)</span></span>
 
-- [<span data-ttu-id="b82eb-112">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="b82eb-112">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
-- [<span data-ttu-id="b82eb-113">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="b82eb-113">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
-- [<span data-ttu-id="b82eb-114">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="b82eb-114">C# Operators</span></span>](../../../csharp/language-reference/operators/index.md)
+<span data-ttu-id="c4e86-103">Оператор присваивания сдвига влево.</span><span class="sxs-lookup"><span data-stu-id="c4e86-103">The left-shift assignment operator.</span></span>
+
+## <a name="remarks"></a><span data-ttu-id="c4e86-104">Примечания</span><span class="sxs-lookup"><span data-stu-id="c4e86-104">Remarks</span></span>
+
+<span data-ttu-id="c4e86-105">Выражение в формате</span><span class="sxs-lookup"><span data-stu-id="c4e86-105">An expression of the form</span></span>
+
+```csharp
+x <<= y
+```
+
+<span data-ttu-id="c4e86-106">вычисляется как</span><span class="sxs-lookup"><span data-stu-id="c4e86-106">is evaluated as</span></span>
+
+```csharp
+x = x << y
+```
+
+<span data-ttu-id="c4e86-107">за исключением того, что `x` вычисляется только один раз.</span><span class="sxs-lookup"><span data-stu-id="c4e86-107">except that `x` is only evaluated once.</span></span> <span data-ttu-id="c4e86-108">[Оператор <<](left-shift-operator.md) сдвигает `x` влево на число битов, заданное в `y`.</span><span class="sxs-lookup"><span data-stu-id="c4e86-108">The [<< operator](left-shift-operator.md) shifts `x` left by the number of bits specified by `y`.</span></span>
+
+<span data-ttu-id="c4e86-109">Оператор `<<=` нельзя перегружать напрямую, однако пользовательские типы могут перегружать [оператор <<](left-shift-operator.md) (см. [оператор](../keywords/operator.md)).</span><span class="sxs-lookup"><span data-stu-id="c4e86-109">The `<<=` operator cannot be overloaded directly, but user-defined types can overload the [<< operator](left-shift-operator.md) (see [operator](../keywords/operator.md)).</span></span>
+
+## <a name="example"></a><span data-ttu-id="c4e86-110">Пример</span><span class="sxs-lookup"><span data-stu-id="c4e86-110">Example</span></span>
+
+[!code-csharp[csRefOperators#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefOperators/CS/csrefOperators.cs#12)]
+
+## <a name="see-also"></a><span data-ttu-id="c4e86-111">См. также</span><span class="sxs-lookup"><span data-stu-id="c4e86-111">See also</span></span>
+
+- [<span data-ttu-id="c4e86-112">Справочник по C#</span><span class="sxs-lookup"><span data-stu-id="c4e86-112">C# Reference</span></span>](../index.md)
+- [<span data-ttu-id="c4e86-113">Руководство по программированию на C#</span><span class="sxs-lookup"><span data-stu-id="c4e86-113">C# Programming Guide</span></span>](../../programming-guide/index.md)
+- [<span data-ttu-id="c4e86-114">Операторы в C#</span><span class="sxs-lookup"><span data-stu-id="c4e86-114">C# Operators</span></span>](index.md)
