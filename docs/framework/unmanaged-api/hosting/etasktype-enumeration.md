@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8609857f142000245aef4326c8ef7490e6d4c95
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 59fdc3d4682fe3c1967c8153043dc1bfe0668c35
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430600"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54610543"
 ---
-# <a name="etasktype-enumeration"></a><span data-ttu-id="254a4-102">Перечисление ETaskType</span><span class="sxs-lookup"><span data-stu-id="254a4-102">ETaskType Enumeration</span></span>
-<span data-ttu-id="254a4-103">Содержит значения, указывающие тип задачи, представленного либо [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) или [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) интерфейса.</span><span class="sxs-lookup"><span data-stu-id="254a4-103">Contains values that indicate the type of task that is represented by either an [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) or an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.</span></span>  
+# <a name="etasktype-enumeration"></a><span data-ttu-id="c8302-102">Перечисление ETaskType</span><span class="sxs-lookup"><span data-stu-id="c8302-102">ETaskType Enumeration</span></span>
+<span data-ttu-id="c8302-103">Содержит значения, указывающие тип задачи, представленного либо [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) или [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) интерфейс.</span><span class="sxs-lookup"><span data-stu-id="c8302-103">Contains values that indicate the type of task that is represented by either an [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md) or an [IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md) interface.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="254a4-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="254a4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c8302-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="c8302-104">Syntax</span></span>  
   
 ```  
 typedef enum ETaskType {  
@@ -44,30 +44,30 @@ typedef enum ETaskType {
 } ETaskType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="254a4-105">Участники</span><span class="sxs-lookup"><span data-stu-id="254a4-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="c8302-105">Участники</span><span class="sxs-lookup"><span data-stu-id="c8302-105">Members</span></span>  
   
-|<span data-ttu-id="254a4-106">Член</span><span class="sxs-lookup"><span data-stu-id="254a4-106">Member</span></span>|<span data-ttu-id="254a4-107">Описание</span><span class="sxs-lookup"><span data-stu-id="254a4-107">Description</span></span>|  
+|<span data-ttu-id="c8302-106">Член</span><span class="sxs-lookup"><span data-stu-id="c8302-106">Member</span></span>|<span data-ttu-id="c8302-107">Описание:</span><span class="sxs-lookup"><span data-stu-id="c8302-107">Description</span></span>|  
 |------------|-----------------|  
-|`TT_ADUNLOAD`|<span data-ttu-id="254a4-108">Интерфейс представляет задачу выгрузки домена приложения.</span><span class="sxs-lookup"><span data-stu-id="254a4-108">The interface represents an application domain unloading task.</span></span>|  
-|`TT_DEBUGGERHELPER`|<span data-ttu-id="254a4-109">Интерфейс представляет вспомогательную задачу отладчика.</span><span class="sxs-lookup"><span data-stu-id="254a4-109">The interface represents a debugger helper task.</span></span>|  
-|`TT_FINALIZER`|<span data-ttu-id="254a4-110">Интерфейс представляет задачу метода завершения.</span><span class="sxs-lookup"><span data-stu-id="254a4-110">The interface represents a finalizer task.</span></span>|  
-|`TT_GC`|<span data-ttu-id="254a4-111">Интерфейс представляет задачу сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="254a4-111">The interface represents a garbage collection task.</span></span>|  
-|`TT_THREADPOOL_GATE`|<span data-ttu-id="254a4-112">Интерфейс представляет задачу потока логического.</span><span class="sxs-lookup"><span data-stu-id="254a4-112">The interface represents a gate thread task.</span></span>|  
-|`TT_THREADPOOL_IOCOMPLETION`|<span data-ttu-id="254a4-113">Интерфейс представляет задачу потока ввода-вывода или задачу потока порта завершения.</span><span class="sxs-lookup"><span data-stu-id="254a4-113">The interface represents an I/O thread task or a completion port thread task.</span></span>|  
-|`TT_THREADPOOL_TIMER`|<span data-ttu-id="254a4-114">Интерфейс представляет задачу потока таймера.</span><span class="sxs-lookup"><span data-stu-id="254a4-114">The interface represents a timer thread task.</span></span>|  
-|`TT_THREADPOOL_WAIT`|<span data-ttu-id="254a4-115">Интерфейс представляет задачу потока ожидания.</span><span class="sxs-lookup"><span data-stu-id="254a4-115">The interface represents a wait thread task.</span></span>|  
-|`TT_THREADPOOL_WORKER`|<span data-ttu-id="254a4-116">Интерфейс представляет задачу рабочего потока.</span><span class="sxs-lookup"><span data-stu-id="254a4-116">The interface represents a worker thread task.</span></span>|  
-|`TT_UNKNOWN`|<span data-ttu-id="254a4-117">Задача неизвестна.</span><span class="sxs-lookup"><span data-stu-id="254a4-117">The task is unknown.</span></span>|  
-|`TT_USER`|<span data-ttu-id="254a4-118">Интерфейс представляет задачу пользователя.</span><span class="sxs-lookup"><span data-stu-id="254a4-118">The interface represents a user task.</span></span>|  
+|`TT_ADUNLOAD`|<span data-ttu-id="c8302-108">Интерфейс представляет задачу выгрузки домена приложения.</span><span class="sxs-lookup"><span data-stu-id="c8302-108">The interface represents an application domain unloading task.</span></span>|  
+|`TT_DEBUGGERHELPER`|<span data-ttu-id="c8302-109">Интерфейс представляет вспомогательную задачу отладчика.</span><span class="sxs-lookup"><span data-stu-id="c8302-109">The interface represents a debugger helper task.</span></span>|  
+|`TT_FINALIZER`|<span data-ttu-id="c8302-110">Интерфейс представляет задачу метода завершения.</span><span class="sxs-lookup"><span data-stu-id="c8302-110">The interface represents a finalizer task.</span></span>|  
+|`TT_GC`|<span data-ttu-id="c8302-111">Интерфейс представляет задачу сборки мусора.</span><span class="sxs-lookup"><span data-stu-id="c8302-111">The interface represents a garbage collection task.</span></span>|  
+|`TT_THREADPOOL_GATE`|<span data-ttu-id="c8302-112">Интерфейс представляет задачу потока логического.</span><span class="sxs-lookup"><span data-stu-id="c8302-112">The interface represents a gate thread task.</span></span>|  
+|`TT_THREADPOOL_IOCOMPLETION`|<span data-ttu-id="c8302-113">Интерфейс представляет задачу потока ввода-вывода или задачу потока порта завершения.</span><span class="sxs-lookup"><span data-stu-id="c8302-113">The interface represents an I/O thread task or a completion port thread task.</span></span>|  
+|`TT_THREADPOOL_TIMER`|<span data-ttu-id="c8302-114">Интерфейс представляет задачу потока таймера.</span><span class="sxs-lookup"><span data-stu-id="c8302-114">The interface represents a timer thread task.</span></span>|  
+|`TT_THREADPOOL_WAIT`|<span data-ttu-id="c8302-115">Интерфейс представляет задачу потока ожидания.</span><span class="sxs-lookup"><span data-stu-id="c8302-115">The interface represents a wait thread task.</span></span>|  
+|`TT_THREADPOOL_WORKER`|<span data-ttu-id="c8302-116">Интерфейс представляет задачу рабочего потока.</span><span class="sxs-lookup"><span data-stu-id="c8302-116">The interface represents a worker thread task.</span></span>|  
+|`TT_UNKNOWN`|<span data-ttu-id="c8302-117">Задача неизвестна.</span><span class="sxs-lookup"><span data-stu-id="c8302-117">The task is unknown.</span></span>|  
+|`TT_USER`|<span data-ttu-id="c8302-118">Интерфейс представляет задачу пользователя.</span><span class="sxs-lookup"><span data-stu-id="c8302-118">The interface represents a user task.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="254a4-119">Требования</span><span class="sxs-lookup"><span data-stu-id="254a4-119">Requirements</span></span>  
- <span data-ttu-id="254a4-120">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="254a4-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c8302-119">Требования</span><span class="sxs-lookup"><span data-stu-id="c8302-119">Requirements</span></span>  
+ <span data-ttu-id="c8302-120">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="c8302-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="254a4-121">**Заголовок:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="254a4-121">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="c8302-121">**Заголовок.** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c8302-121">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="254a4-122">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="254a4-122">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="c8302-122">**Библиотека:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c8302-122">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="254a4-123">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="254a4-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="c8302-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8302-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="254a4-124">См. также</span><span class="sxs-lookup"><span data-stu-id="254a4-124">See Also</span></span>  
- [<span data-ttu-id="254a4-125">Размещение перечислений</span><span class="sxs-lookup"><span data-stu-id="254a4-125">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="c8302-124">См. также</span><span class="sxs-lookup"><span data-stu-id="c8302-124">See also</span></span>
+- [<span data-ttu-id="c8302-125">Размещение перечислений</span><span class="sxs-lookup"><span data-stu-id="c8302-125">Hosting Enumerations</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

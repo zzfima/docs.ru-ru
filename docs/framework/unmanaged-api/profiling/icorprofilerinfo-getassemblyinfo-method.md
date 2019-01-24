@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e3579020ce268cd59a091e685fae2e97b3191c55
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2b8211e46b1a46d15befba17a52cd626d91f95fd
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456127"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54616788"
 ---
-# <a name="icorprofilerinfogetassemblyinfo-method"></a><span data-ttu-id="1acde-102">Метод ICorProfilerInfo::GetAssemblyInfo</span><span class="sxs-lookup"><span data-stu-id="1acde-102">ICorProfilerInfo::GetAssemblyInfo Method</span></span>
-<span data-ttu-id="1acde-103">Принимает идентификатор сборки и возвращает имя сборки, а также идентификатор ее модуля манифеста.</span><span class="sxs-lookup"><span data-stu-id="1acde-103">Accepts an assembly ID, and returns the assembly's name and the ID of its manifest module.</span></span>  
+# <a name="icorprofilerinfogetassemblyinfo-method"></a><span data-ttu-id="203da-102">Метод ICorProfilerInfo::GetAssemblyInfo</span><span class="sxs-lookup"><span data-stu-id="203da-102">ICorProfilerInfo::GetAssemblyInfo Method</span></span>
+<span data-ttu-id="203da-103">Принимает идентификатор сборки и возвращает имя сборки, а также идентификатор ее модуля манифеста.</span><span class="sxs-lookup"><span data-stu-id="203da-103">Accepts an assembly ID, and returns the assembly's name and the ID of its manifest module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1acde-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="1acde-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="203da-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="203da-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssemblyInfo(  
@@ -40,40 +40,40 @@ HRESULT GetAssemblyInfo(
     [out] ModuleID    *pModuleId);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1acde-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="1acde-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="203da-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="203da-105">Parameters</span></span>  
  `assemblyId`  
- <span data-ttu-id="1acde-106">[in] Идентификатор сборки.</span><span class="sxs-lookup"><span data-stu-id="1acde-106">[in] The identifier of the assembly.</span></span>  
+ <span data-ttu-id="203da-106">[in] Идентификатор сборки.</span><span class="sxs-lookup"><span data-stu-id="203da-106">[in] The identifier of the assembly.</span></span>  
   
  `cchName`  
- <span data-ttu-id="1acde-107">[in] Длина `szName` в символах.</span><span class="sxs-lookup"><span data-stu-id="1acde-107">[in] The length, in characters, of `szName`.</span></span>  
+ <span data-ttu-id="203da-107">[in] Длина `szName` в символах.</span><span class="sxs-lookup"><span data-stu-id="203da-107">[in] The length, in characters, of `szName`.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="1acde-108">[out] Указатель на общую длину имени сборки в символах.</span><span class="sxs-lookup"><span data-stu-id="1acde-108">[out] A pointer to the total character length of the assembly's name.</span></span>  
+ <span data-ttu-id="203da-108">[out] Указатель на общую длину имени сборки в символах.</span><span class="sxs-lookup"><span data-stu-id="203da-108">[out] A pointer to the total character length of the assembly's name.</span></span>  
   
  `szName`  
- <span data-ttu-id="1acde-109">[out] Буфер расширенных символов, предоставленный вызывающим объектом.</span><span class="sxs-lookup"><span data-stu-id="1acde-109">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="1acde-110">Когда функция возвращает значение, оно содержит имя сборки.</span><span class="sxs-lookup"><span data-stu-id="1acde-110">When the function returns, it will contain the assembly's name.</span></span>  
+ <span data-ttu-id="203da-109">[out] Буфер расширенных символов, предоставленный вызывающим объектом.</span><span class="sxs-lookup"><span data-stu-id="203da-109">[out] A caller-provided wide character buffer.</span></span> <span data-ttu-id="203da-110">Когда функция возвращает значение, оно содержит имя сборки.</span><span class="sxs-lookup"><span data-stu-id="203da-110">When the function returns, it will contain the assembly's name.</span></span>  
   
  `pAppDomainId`  
- <span data-ttu-id="1acde-111">[out] Указатель на идентификатор домена приложения, содержащего эту сборку.</span><span class="sxs-lookup"><span data-stu-id="1acde-111">[out] A pointer to the ID of the application domain that contains the assembly.</span></span>  
+ <span data-ttu-id="203da-111">[out] Указатель на идентификатор домена приложения, содержащего эту сборку.</span><span class="sxs-lookup"><span data-stu-id="203da-111">[out] A pointer to the ID of the application domain that contains the assembly.</span></span>  
   
  `pModuleId`  
- <span data-ttu-id="1acde-112">[out] Указатель на идентификатор модуля манифеста сборки.</span><span class="sxs-lookup"><span data-stu-id="1acde-112">[out] A pointer to the ID of the assembly's manifest module.</span></span>  
+ <span data-ttu-id="203da-112">[out] Указатель на идентификатор модуля манифеста сборки.</span><span class="sxs-lookup"><span data-stu-id="203da-112">[out] A pointer to the ID of the assembly's manifest module.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1acde-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="1acde-113">Remarks</span></span>  
- <span data-ttu-id="1acde-114">После возврата этого метода необходимо убедиться, что буфер `szName` был достаточно велик, чтобы вместить в себя полное имя сборки.</span><span class="sxs-lookup"><span data-stu-id="1acde-114">After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the assembly.</span></span> <span data-ttu-id="1acde-115">Для этого сравните значение, на которое указывает параметр `pcchName`, со значением параметра `cchName`.</span><span class="sxs-lookup"><span data-stu-id="1acde-115">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="1acde-116">Если параметр `pcchName` указывает на значение, превышающее значение `cchName`, выделите буфер `szName` большего размера, обновите параметр `cchName`, задав новый, больший размер, и вызовите метод `GetAssemblyInfo` снова.</span><span class="sxs-lookup"><span data-stu-id="1acde-116">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAssemblyInfo` again.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="203da-113">Примечания</span><span class="sxs-lookup"><span data-stu-id="203da-113">Remarks</span></span>  
+ <span data-ttu-id="203da-114">После возврата этого метода необходимо убедиться, что буфер `szName` был достаточно велик, чтобы вместить в себя полное имя сборки.</span><span class="sxs-lookup"><span data-stu-id="203da-114">After this method returns, you must verify that the `szName` buffer was large enough to contain the full name of the assembly.</span></span> <span data-ttu-id="203da-115">Для этого сравните значение, на которое указывает параметр `pcchName`, со значением параметра `cchName`.</span><span class="sxs-lookup"><span data-stu-id="203da-115">To do this, compare the value that `pcchName` points to with the value of the `cchName` parameter.</span></span> <span data-ttu-id="203da-116">Если параметр `pcchName` указывает на значение, превышающее значение `cchName`, выделите буфер `szName` большего размера, обновите параметр `cchName`, задав новый, больший размер, и вызовите метод `GetAssemblyInfo` снова.</span><span class="sxs-lookup"><span data-stu-id="203da-116">If `pcchName` points to a value that is larger than `cchName`, allocate a larger `szName` buffer, update `cchName` with the new, larger size, and call `GetAssemblyInfo` again.</span></span>  
   
- <span data-ttu-id="1acde-117">Кроме того, сначала можно вызвать метод `GetAssemblyInfo` с буфером `szName` нулевой длины для получения правильного размера буфера.</span><span class="sxs-lookup"><span data-stu-id="1acde-117">Alternatively, you can first call `GetAssemblyInfo` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="1acde-118">Затем можно настроить размер буфера, исходя из значения, возвращенного в `pcchName`, и вызвать метод `GetAssemblyInfo` снова.</span><span class="sxs-lookup"><span data-stu-id="1acde-118">You can then adjust the buffer size based on the value returned in `pcchName` and call `GetAssemblyInfo` again.</span></span>  
+ <span data-ttu-id="203da-117">Кроме того, сначала можно вызвать метод `GetAssemblyInfo` с буфером `szName` нулевой длины для получения правильного размера буфера.</span><span class="sxs-lookup"><span data-stu-id="203da-117">Alternatively, you can first call `GetAssemblyInfo` with a zero-length `szName` buffer to obtain the correct buffer size.</span></span> <span data-ttu-id="203da-118">Затем можно настроить размер буфера, исходя из значения, возвращенного в `pcchName`, и вызвать метод `GetAssemblyInfo` снова.</span><span class="sxs-lookup"><span data-stu-id="203da-118">You can then adjust the buffer size based on the value returned in `pcchName` and call `GetAssemblyInfo` again.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1acde-119">Требования</span><span class="sxs-lookup"><span data-stu-id="1acde-119">Requirements</span></span>  
- <span data-ttu-id="1acde-120">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="1acde-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="203da-119">Требования</span><span class="sxs-lookup"><span data-stu-id="203da-119">Requirements</span></span>  
+ <span data-ttu-id="203da-120">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="203da-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1acde-121">**Заголовок:** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="1acde-121">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="203da-121">**Заголовок.** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="203da-121">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="1acde-122">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1acde-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="203da-122">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="203da-122">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1acde-123">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1acde-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="203da-123">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="203da-123">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1acde-124">См. также</span><span class="sxs-lookup"><span data-stu-id="1acde-124">See Also</span></span>  
- [<span data-ttu-id="1acde-125">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="1acde-125">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [<span data-ttu-id="1acde-126">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="1acde-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [<span data-ttu-id="1acde-127">Профилирование</span><span class="sxs-lookup"><span data-stu-id="1acde-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="203da-124">См. также</span><span class="sxs-lookup"><span data-stu-id="203da-124">See also</span></span>
+- [<span data-ttu-id="203da-125">Интерфейс ICorProfilerInfo</span><span class="sxs-lookup"><span data-stu-id="203da-125">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="203da-126">Интерфейсы профилирования</span><span class="sxs-lookup"><span data-stu-id="203da-126">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="203da-127">Профилирование</span><span class="sxs-lookup"><span data-stu-id="203da-127">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

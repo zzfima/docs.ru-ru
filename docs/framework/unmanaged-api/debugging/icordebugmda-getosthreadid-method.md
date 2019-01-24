@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20833624b4b853a1a56964e11a25f446c6b39053
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e67e3bc3477e078a4f1d963cdd768676503dc953
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414717"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54607667"
 ---
-# <a name="icordebugmdagetosthreadid-method"></a><span data-ttu-id="7085e-102">Метод ICorDebugMDA::GetOSThreadId</span><span class="sxs-lookup"><span data-stu-id="7085e-102">ICorDebugMDA::GetOSThreadId Method</span></span>
-<span data-ttu-id="7085e-103">Получает идентификатор потока операционной системы (ОС), на котором помощник по отладке управляемого (кода MDA), представленного параметром [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) выполняется.</span><span class="sxs-lookup"><span data-stu-id="7085e-103">Gets the operating system (OS) thread identifier upon which the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) is executing.</span></span>  
+# <a name="icordebugmdagetosthreadid-method"></a><span data-ttu-id="abac9-102">Метод ICorDebugMDA::GetOSThreadId</span><span class="sxs-lookup"><span data-stu-id="abac9-102">ICorDebugMDA::GetOSThreadId Method</span></span>
+<span data-ttu-id="abac9-103">Получает идентификатор потока операционной системы (ОС), на котором помощник по отладке управляемого (кода MDA), представленного [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) выполняется.</span><span class="sxs-lookup"><span data-stu-id="abac9-103">Gets the operating system (OS) thread identifier upon which the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) is executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7085e-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="7085e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="abac9-104">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="abac9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetOSThreadId (  
@@ -35,22 +35,22 @@ HRESULT GetOSThreadId (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7085e-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="7085e-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="abac9-105">Параметры</span><span class="sxs-lookup"><span data-stu-id="abac9-105">Parameters</span></span>  
  `pOsTid`  
- <span data-ttu-id="7085e-106">[out] Указатель на идентификатор потока операционной системы.</span><span class="sxs-lookup"><span data-stu-id="7085e-106">[out] A pointer to the OS thread identifier.</span></span>  
+ <span data-ttu-id="abac9-106">[out] Указатель на идентификатор потока операционной системы.</span><span class="sxs-lookup"><span data-stu-id="abac9-106">[out] A pointer to the OS thread identifier.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7085e-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="7085e-107">Remarks</span></span>  
- <span data-ttu-id="7085e-108">Чтобы допускать ситуации, в которых MDA вызывается в собственном потоке или в управляемом потоке, который еще не вошел в управляемом коде, вместо ICorDebugThread используется потоке операционной системы.</span><span class="sxs-lookup"><span data-stu-id="7085e-108">The OS thread is used instead of an ICorDebugThread to allow for situations in which an MDA is fired either on a native thread or on a managed thread that has not yet entered managed code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="abac9-107">Примечания</span><span class="sxs-lookup"><span data-stu-id="abac9-107">Remarks</span></span>  
+ <span data-ttu-id="abac9-108">Поток операционной системы используется вместо ICorDebugThread, чтобы допускать ситуации, в которых MDA вызывается в собственном потоке или в управляемом потоке, который еще не вошел в управляемый код.</span><span class="sxs-lookup"><span data-stu-id="abac9-108">The OS thread is used instead of an ICorDebugThread to allow for situations in which an MDA is fired either on a native thread or on a managed thread that has not yet entered managed code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7085e-109">Требования</span><span class="sxs-lookup"><span data-stu-id="7085e-109">Requirements</span></span>  
- <span data-ttu-id="7085e-110">**Платформы:** разделе [требования к системе для](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7085e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="abac9-109">Требования</span><span class="sxs-lookup"><span data-stu-id="abac9-109">Requirements</span></span>  
+ <span data-ttu-id="abac9-110">**Платформы:** См. раздел [Требования к системе](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="abac9-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7085e-111">**Заголовок:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7085e-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="abac9-111">**Заголовок.** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="abac9-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7085e-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7085e-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="abac9-112">**Библиотека:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="abac9-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7085e-113">**Версии платформы .NET framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7085e-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="abac9-113">**Версии платформы .NET Framework:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="abac9-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7085e-114">См. также</span><span class="sxs-lookup"><span data-stu-id="7085e-114">See Also</span></span>  
- [<span data-ttu-id="7085e-115">Интерфейс ICorDebugMDA</span><span class="sxs-lookup"><span data-stu-id="7085e-115">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)  
- [<span data-ttu-id="7085e-116">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="7085e-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a><span data-ttu-id="abac9-114">См. также</span><span class="sxs-lookup"><span data-stu-id="abac9-114">See also</span></span>
+- [<span data-ttu-id="abac9-115">Интерфейс ICorDebugMDA</span><span class="sxs-lookup"><span data-stu-id="abac9-115">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [<span data-ttu-id="abac9-116">Диагностика ошибок посредством помощников по отладке управляемого кода</span><span class="sxs-lookup"><span data-stu-id="abac9-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

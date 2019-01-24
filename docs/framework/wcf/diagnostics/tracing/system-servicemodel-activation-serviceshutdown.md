@@ -1,32 +1,21 @@
 ---
 title: System.ServiceModel.Activation.ServiceShutdown
-ms.custom: 
 ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
-ms.topic: article
 ms.assetid: fc356855-f996-4c0d-9ff9-503103803d91
-caps.latest.revision: "4"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9100aa0dd0d910b203718991b119925a6fc1d7cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d7e35f1c7ef166b0ab8b2d27b7da36476430c90
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54597623"
 ---
-# <a name="systemservicemodelactivationserviceshutdown"></a><span data-ttu-id="9d2bc-102">System.ServiceModel.Activation.ServiceShutdown</span><span class="sxs-lookup"><span data-stu-id="9d2bc-102">System.ServiceModel.Activation.ServiceShutdown</span></span>
-<span data-ttu-id="9d2bc-103">System.ServiceModel.Activation.ServiceShutdown</span><span class="sxs-lookup"><span data-stu-id="9d2bc-103">System.ServiceModel.Activation.ServiceShutdown</span></span>  
+# <a name="systemservicemodelactivationserviceshutdown"></a><span data-ttu-id="9a33b-102">System.ServiceModel.Activation.ServiceShutdown</span><span class="sxs-lookup"><span data-stu-id="9a33b-102">System.ServiceModel.Activation.ServiceShutdown</span></span>
+<span data-ttu-id="9a33b-103">System.ServiceModel.Activation.ServiceShutdown</span><span class="sxs-lookup"><span data-stu-id="9a33b-103">System.ServiceModel.Activation.ServiceShutdown</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9d2bc-104">Описание</span><span class="sxs-lookup"><span data-stu-id="9d2bc-104">Description</span></span>  
- <span data-ttu-id="9d2bc-105">Получен запрос на завершение работы этой службы.</span><span class="sxs-lookup"><span data-stu-id="9d2bc-105">A request to shutdown the service was received.</span></span>  
+## <a name="description"></a><span data-ttu-id="9a33b-104">Описание</span><span class="sxs-lookup"><span data-stu-id="9a33b-104">Description</span></span>  
+ <span data-ttu-id="9a33b-105">Получен запрос на завершение работы этой службы.</span><span class="sxs-lookup"><span data-stu-id="9a33b-105">A request to shutdown the service was received.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9d2bc-106">См. также</span><span class="sxs-lookup"><span data-stu-id="9d2bc-106">See Also</span></span>  
- [<span data-ttu-id="9d2bc-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="9d2bc-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="9d2bc-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="9d2bc-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="9d2bc-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="9d2bc-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9a33b-106">См. также</span><span class="sxs-lookup"><span data-stu-id="9a33b-106">See also</span></span>
+- [<span data-ttu-id="9a33b-107">Трассировка</span><span class="sxs-lookup"><span data-stu-id="9a33b-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="9a33b-108">Использование трассировки для устранения неполадок приложения</span><span class="sxs-lookup"><span data-stu-id="9a33b-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="9a33b-109">Администрирование и диагностика</span><span class="sxs-lookup"><span data-stu-id="9a33b-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
