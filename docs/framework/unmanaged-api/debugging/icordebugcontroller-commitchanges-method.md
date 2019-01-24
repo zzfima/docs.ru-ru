@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed8c616fd71855f3c2313cee0b9fee3ba31babd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e1af7bfa321313ee8d3e7e72ffd5703a8ced561e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415179"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744769"
 ---
-# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="65f4c-102">Метод ICorDebugController::CommitChanges</span><span class="sxs-lookup"><span data-stu-id="65f4c-102">ICorDebugController::CommitChanges Method</span></span>
-<span data-ttu-id="65f4c-103">`CommitChanges` устарел.</span><span class="sxs-lookup"><span data-stu-id="65f4c-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="65f4c-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="65f4c-104">Do not call this method.</span></span>  
+# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="dffe0-102">Метод ICorDebugController::CommitChanges</span><span class="sxs-lookup"><span data-stu-id="dffe0-102">ICorDebugController::CommitChanges Method</span></span>
+<span data-ttu-id="dffe0-103">`CommitChanges` устарел.</span><span class="sxs-lookup"><span data-stu-id="dffe0-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="dffe0-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="dffe0-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65f4c-105">См. также</span><span class="sxs-lookup"><span data-stu-id="65f4c-105">See Also</span></span>  
- 
+## <a name="see-also"></a><span data-ttu-id="dffe0-105">См. также</span><span class="sxs-lookup"><span data-stu-id="dffe0-105">See also</span></span>
+

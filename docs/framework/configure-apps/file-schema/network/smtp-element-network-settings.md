@@ -8,59 +8,59 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 362c5ba479c845a8183fe705e72ea3a12fb7a94c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4a2947594f5adc9cc4c11471e133c6a4f2662a50
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195649"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54638019"
 ---
-# <a name="ltsmtpgt-element-network-settings"></a><span data-ttu-id="0345f-102">&lt;SMTP&gt; (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="0345f-102">&lt;smtp&gt; Element (Network Settings)</span></span>
-<span data-ttu-id="0345f-103">Настраивает формат и способ доставки и адрес отправителя для отправки сообщений электронной почты.</span><span class="sxs-lookup"><span data-stu-id="0345f-103">Configures the delivery format, delivery method, and from address for sending emails.</span></span>  
+# <a name="ltsmtpgt-element-network-settings"></a><span data-ttu-id="e5fa4-102">&lt;SMTP&gt; (сетевые параметры)</span><span class="sxs-lookup"><span data-stu-id="e5fa4-102">&lt;smtp&gt; Element (Network Settings)</span></span>
+<span data-ttu-id="e5fa4-103">Настраивает формат и способ доставки и адрес отправителя для отправки сообщений электронной почты.</span><span class="sxs-lookup"><span data-stu-id="e5fa4-103">Configures the delivery format, delivery method, and from address for sending emails.</span></span>  
   
- <span data-ttu-id="0345f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="0345f-104">\<configuration></span></span>  
-<span data-ttu-id="0345f-105">\<System.NET ></span><span class="sxs-lookup"><span data-stu-id="0345f-105">\<system.net></span></span>  
-<span data-ttu-id="0345f-106">\<mailSettings ></span><span class="sxs-lookup"><span data-stu-id="0345f-106">\<mailSettings></span></span>  
-<span data-ttu-id="0345f-107">\<SMTP ></span><span class="sxs-lookup"><span data-stu-id="0345f-107">\<smtp></span></span>  
+ <span data-ttu-id="e5fa4-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="e5fa4-104">\<configuration></span></span>  
+<span data-ttu-id="e5fa4-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="e5fa4-105">\<system.net></span></span>  
+<span data-ttu-id="e5fa4-106">\<mailSettings ></span><span class="sxs-lookup"><span data-stu-id="e5fa4-106">\<mailSettings></span></span>  
+<span data-ttu-id="e5fa4-107">\<SMTP ></span><span class="sxs-lookup"><span data-stu-id="e5fa4-107">\<smtp></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0345f-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="0345f-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e5fa4-108">Синтаксис</span><span class="sxs-lookup"><span data-stu-id="e5fa4-108">Syntax</span></span>  
   
 ```xml  
-      <smtp  
-        deliveryFormat="format"   
-        deliveryMethod="method"   
-        from="from address">
-          <specifiedPickupDirectory> … </ specifiedPickupDirectory >  
-          <network> … </network>  
-      </smtp>  
+<smtp  
+  deliveryFormat="format"  
+  deliveryMethod="method"  
+  from="from address">
+    <specifiedPickupDirectory>...</specifiedPickupDirectory>  
+    <network>...</network>  
+</smtp>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="0345f-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="0345f-109">Attributes and Elements</span></span>  
- <span data-ttu-id="0345f-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="0345f-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="e5fa4-109">Атрибуты и элементы</span><span class="sxs-lookup"><span data-stu-id="e5fa4-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="e5fa4-110">В следующих разделах описаны атрибуты, дочерние и родительские элементы.</span><span class="sxs-lookup"><span data-stu-id="e5fa4-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="0345f-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="0345f-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="e5fa4-111">Атрибуты</span><span class="sxs-lookup"><span data-stu-id="e5fa4-111">Attributes</span></span>  
   
-|<span data-ttu-id="0345f-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="0345f-112">Attribute</span></span>|<span data-ttu-id="0345f-113">Описание</span><span class="sxs-lookup"><span data-stu-id="0345f-113">Description</span></span>|  
+|<span data-ttu-id="e5fa4-112">Атрибут</span><span class="sxs-lookup"><span data-stu-id="e5fa4-112">Attribute</span></span>|<span data-ttu-id="e5fa4-113">Описание</span><span class="sxs-lookup"><span data-stu-id="e5fa4-113">Description</span></span>|  
 |---------------|-----------------|  
-|`deliveryFormat`|<span data-ttu-id="0345f-114">Задает формат доставки для исходящих сообщений электронной почты.</span><span class="sxs-lookup"><span data-stu-id="0345f-114">Specifies the delivery format for outgoing emails.</span></span> <span data-ttu-id="0345f-115">Допустимые значения: SevenBit и International.</span><span class="sxs-lookup"><span data-stu-id="0345f-115">Acceptable values are SevenBit and International.</span></span>|  
-|`deliveryMethod`|<span data-ttu-id="0345f-116">Задает метод доставки для сообщений электронной почты.</span><span class="sxs-lookup"><span data-stu-id="0345f-116">Specifies the delivery method for emails.</span></span> <span data-ttu-id="0345f-117">Допустимые значения: сети, PickupDirectoryFromIis и SpecifiedPickupDirectory.</span><span class="sxs-lookup"><span data-stu-id="0345f-117">Acceptable values are Network, PickupDirectoryFromIis, and SpecifiedPickupDirectory.</span></span>|  
-|`from`|<span data-ttu-id="0345f-118">Указывает адрес отправителя для исходящих сообщений электронной почты.</span><span class="sxs-lookup"><span data-stu-id="0345f-118">Specifies the from address for outgoing emails.</span></span>|  
+|`deliveryFormat`|<span data-ttu-id="e5fa4-114">Задает формат доставки для исходящих сообщений электронной почты.</span><span class="sxs-lookup"><span data-stu-id="e5fa4-114">Specifies the delivery format for outgoing emails.</span></span> <span data-ttu-id="e5fa4-115">Допустимые значения: SevenBit и International.</span><span class="sxs-lookup"><span data-stu-id="e5fa4-115">Acceptable values are SevenBit and International.</span></span>|  
+|`deliveryMethod`|<span data-ttu-id="e5fa4-116">Задает метод доставки для сообщений электронной почты.</span><span class="sxs-lookup"><span data-stu-id="e5fa4-116">Specifies the delivery method for emails.</span></span> <span data-ttu-id="e5fa4-117">Допустимые значения: сети, PickupDirectoryFromIis и SpecifiedPickupDirectory.</span><span class="sxs-lookup"><span data-stu-id="e5fa4-117">Acceptable values are Network, PickupDirectoryFromIis, and SpecifiedPickupDirectory.</span></span>|  
+|`from`|<span data-ttu-id="e5fa4-118">Указывает адрес отправителя для исходящих сообщений электронной почты.</span><span class="sxs-lookup"><span data-stu-id="e5fa4-118">Specifies the from address for outgoing emails.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="0345f-119">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="0345f-119">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="e5fa4-119">Дочерние элементы</span><span class="sxs-lookup"><span data-stu-id="e5fa4-119">Child Elements</span></span>  
   
-|<span data-ttu-id="0345f-120">Атрибут</span><span class="sxs-lookup"><span data-stu-id="0345f-120">Attribute</span></span>|<span data-ttu-id="0345f-121">Описание</span><span class="sxs-lookup"><span data-stu-id="0345f-121">Description</span></span>|  
+|<span data-ttu-id="e5fa4-120">Атрибут</span><span class="sxs-lookup"><span data-stu-id="e5fa4-120">Attribute</span></span>|<span data-ttu-id="e5fa4-121">Описание:</span><span class="sxs-lookup"><span data-stu-id="e5fa4-121">Description</span></span>|  
 |---------------|-----------------|  
-|`specifiedPickupDirectory`|<span data-ttu-id="0345f-122">Настраивает локальный каталог для сервера транспортного протокола SMTP (Simple Mail).</span><span class="sxs-lookup"><span data-stu-id="0345f-122">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>|  
-|`network`|<span data-ttu-id="0345f-123">Настройка сетевых параметров для внешнего сервера SMTP.</span><span class="sxs-lookup"><span data-stu-id="0345f-123">Configures the network options for an external SMTP server.</span></span>|  
+|`specifiedPickupDirectory`|<span data-ttu-id="e5fa4-122">Настраивает локальный каталог для сервера транспортного протокола SMTP (Simple Mail).</span><span class="sxs-lookup"><span data-stu-id="e5fa4-122">Configures the local directory for a Simple Mail Transport Protocol (SMTP) server.</span></span>|  
+|`network`|<span data-ttu-id="e5fa4-123">Настройка сетевых параметров для внешнего сервера SMTP.</span><span class="sxs-lookup"><span data-stu-id="e5fa4-123">Configures the network options for an external SMTP server.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="0345f-124">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="0345f-124">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="e5fa4-124">Родительские элементы</span><span class="sxs-lookup"><span data-stu-id="e5fa4-124">Parent Elements</span></span>  
   
-|<span data-ttu-id="0345f-125">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="0345f-125">**Element**</span></span>|<span data-ttu-id="0345f-126">**Описание**</span><span class="sxs-lookup"><span data-stu-id="0345f-126">**Description**</span></span>|  
+|<span data-ttu-id="e5fa4-125">**Элемент**</span><span class="sxs-lookup"><span data-stu-id="e5fa4-125">**Element**</span></span>|<span data-ttu-id="e5fa4-126">**Описание**</span><span class="sxs-lookup"><span data-stu-id="e5fa4-126">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="0345f-127">Элемент \<mailSettings> (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="0345f-127">\<mailSettings> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="0345f-128">Настраивает параметры отправки сообщений.</span><span class="sxs-lookup"><span data-stu-id="0345f-128">Configures mail sending options.</span></span>|  
+|[<span data-ttu-id="e5fa4-127">Элемент \<mailSettings> (параметры сети)</span><span class="sxs-lookup"><span data-stu-id="e5fa4-127">\<mailSettings> Element (Network Settings)</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|<span data-ttu-id="e5fa4-128">Настраивает параметры отправки сообщений.</span><span class="sxs-lookup"><span data-stu-id="e5fa4-128">Configures mail sending options.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="0345f-129">Пример</span><span class="sxs-lookup"><span data-stu-id="0345f-129">Example</span></span>  
- <span data-ttu-id="0345f-130">Следующий пример указывает соответствующие параметры SMTP для отправки электронной почты, используя сетевые учетные данные по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="0345f-130">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
+## <a name="example"></a><span data-ttu-id="e5fa4-129">Пример</span><span class="sxs-lookup"><span data-stu-id="e5fa4-129">Example</span></span>  
+ <span data-ttu-id="e5fa4-130">Следующий пример указывает соответствующие параметры SMTP для отправки электронной почты, используя сетевые учетные данные по умолчанию.</span><span class="sxs-lookup"><span data-stu-id="e5fa4-130">The following example specifies the appropriate SMTP parameters to send email using the default network credentials.</span></span>  
   
 ```xml  
 <configuration>  
@@ -78,9 +78,9 @@ ms.locfileid: "50195649"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0345f-131">См. также</span><span class="sxs-lookup"><span data-stu-id="0345f-131">See Also</span></span>  
-- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>  
-- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>  
-- <xref:System.Net.Mail.SmtpDeliveryFormat>  
-- <xref:System.Net.Mail.SmtpDeliveryMethod>  
-- [<span data-ttu-id="0345f-132">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="0345f-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a><span data-ttu-id="e5fa4-131">См. также</span><span class="sxs-lookup"><span data-stu-id="e5fa4-131">See also</span></span>
+- <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
+- <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
+- <xref:System.Net.Mail.SmtpDeliveryFormat>
+- <xref:System.Net.Mail.SmtpDeliveryMethod>
+- [<span data-ttu-id="e5fa4-132">Схема параметров сети</span><span class="sxs-lookup"><span data-stu-id="e5fa4-132">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

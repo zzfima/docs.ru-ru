@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74b0fc10b7d838265a6ccd9e2581f67a432f2c9e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 56273146670dc2f4efde06a2f96e755f6fb86d99
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417801"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54712759"
 ---
-# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="e2108-102">Метод ICorDebugEditAndContinueErrorInfo::GetString</span><span class="sxs-lookup"><span data-stu-id="e2108-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
-<span data-ttu-id="e2108-103">`GetString` устарел.</span><span class="sxs-lookup"><span data-stu-id="e2108-103">`GetString` is obsolete.</span></span> <span data-ttu-id="e2108-104">Не вызывайте этот метод.</span><span class="sxs-lookup"><span data-stu-id="e2108-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogetstring-method"></a><span data-ttu-id="0813e-102">Метод ICorDebugEditAndContinueErrorInfo::GetString</span><span class="sxs-lookup"><span data-stu-id="0813e-102">ICorDebugEditAndContinueErrorInfo::GetString Method</span></span>
+<span data-ttu-id="0813e-103">`GetString` устарел.</span><span class="sxs-lookup"><span data-stu-id="0813e-103">`GetString` is obsolete.</span></span> <span data-ttu-id="0813e-104">Этот метод не вызывается.</span><span class="sxs-lookup"><span data-stu-id="0813e-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e2108-105">См. также</span><span class="sxs-lookup"><span data-stu-id="e2108-105">See Also</span></span>  
- [<span data-ttu-id="e2108-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="e2108-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="0813e-105">См. также</span><span class="sxs-lookup"><span data-stu-id="0813e-105">See also</span></span>
+- [<span data-ttu-id="0813e-106">Интерфейсы отладки</span><span class="sxs-lookup"><span data-stu-id="0813e-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
