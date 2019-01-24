@@ -13,12 +13,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: 81118b9e97f320bffdbb58e5e1a2859052c4cee5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dbcd0625cdbcd06affc495ca29972c6c183c10f3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602534"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54582117"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 Указывает, что свойство или процедура переопределяет свойство или процедуру с идентичным названием, унаследованную от базового класса.  
@@ -31,7 +31,7 @@ ms.locfileid: "33602534"
   
 -   **Комбинированные модификаторы.** Невозможно указать `Overrides` вместе с `Shadows` или `Shared` в одном объявлении. Так как переопределяемый элемент является неявно переопределяемым, нельзя объединять `Overridable` с `Overrides`.  
   
--   **Соответствие сигнатур.** Подпись этого объявления должна точно соответствовать *подписи* свойства или процедуры, которую она переопределяет. Это означает, что списки параметров должны содержать одинаковое число параметров, в том же порядке и с теми же типами данных.  
+-   **Соответствие сигнатур.** Сигнатура этого объявления должна точно соответствовать *подпись* свойства или процедуры, который он переопределяет. Это означает, что списки параметров должны содержать одинаковое число параметров, в том же порядке и с теми же типами данных.  
   
      Помимо сигнатуры, для объявления переопределения должны также совпадать следующие элементы:  
   
@@ -45,7 +45,7 @@ ms.locfileid: "33602534"
   
     -   Модификатор уровня доступа (такие как [открытый](../../../visual-basic/language-reference/modifiers/public.md))  
   
-    -   Передачи каждого параметра ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))  
+    -   Механизм каждого параметра передачи ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md) или [ByRef](../../../visual-basic/language-reference/modifiers/byref.md))  
   
     -   списки ограничений для каждого типа параметра универсальной процедуры.  
   
@@ -61,11 +61,11 @@ ms.locfileid: "33602534"
   
  [Оператор Sub](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>См. также  
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
- [Переопределяемые](../../../visual-basic/language-reference/modifiers/overridable.md)  
- [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)  
- [Сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)  
- [Универсальные типы в Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [Список типов](../../../visual-basic/language-reference/statements/type-list.md)
+## <a name="see-also"></a>См. также
+- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
+- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
+- [Переопределяемые](../../../visual-basic/language-reference/modifiers/overridable.md)
+- [Ключевые слова](../../../visual-basic/language-reference/keywords/index.md)
+- [Сокрытие в Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Список типов](../../../visual-basic/language-reference/statements/type-list.md)
